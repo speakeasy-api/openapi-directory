@@ -34,27 +34,28 @@ public class Shippingsettings {
     /**
      * Retrieves and updates the shipping settings of multiple accounts in a single request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentShippingsettingsCustombatchResponse contentShippingsettingsCustombatch(org.openapis.openapi.models.operations.ContentShippingsettingsCustombatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentShippingsettingsCustombatchResponse contentShippingsettingsCustombatch(org.openapis.openapi.models.operations.ContentShippingsettingsCustombatchRequest request, org.openapis.openapi.models.operations.ContentShippingsettingsCustombatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/shippingsettings/batch");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "shippingsettingsCustomBatchRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentShippingsettingsCustombatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentShippingsettingsCustombatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,25 +82,26 @@ public class Shippingsettings {
     /**
      * Retrieves the shipping settings of the account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentShippingsettingsGetResponse contentShippingsettingsGet(org.openapis.openapi.models.operations.ContentShippingsettingsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentShippingsettingsGetResponse contentShippingsettingsGet(org.openapis.openapi.models.operations.ContentShippingsettingsGetRequest request, org.openapis.openapi.models.operations.ContentShippingsettingsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentShippingsettingsGetPathParams.class, baseUrl, "/{merchantId}/shippingsettings/{accountId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentShippingsettingsGetRequest.class, baseUrl, "/{merchantId}/shippingsettings/{accountId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentShippingsettingsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentShippingsettingsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,25 +128,26 @@ public class Shippingsettings {
     /**
      * Retrieves supported carriers and carrier services for an account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentShippingsettingsGetsupportedcarriersResponse contentShippingsettingsGetsupportedcarriers(org.openapis.openapi.models.operations.ContentShippingsettingsGetsupportedcarriersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentShippingsettingsGetsupportedcarriersResponse contentShippingsettingsGetsupportedcarriers(org.openapis.openapi.models.operations.ContentShippingsettingsGetsupportedcarriersRequest request, org.openapis.openapi.models.operations.ContentShippingsettingsGetsupportedcarriersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentShippingsettingsGetsupportedcarriersPathParams.class, baseUrl, "/{merchantId}/supportedCarriers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentShippingsettingsGetsupportedcarriersRequest.class, baseUrl, "/{merchantId}/supportedCarriers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentShippingsettingsGetsupportedcarriersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentShippingsettingsGetsupportedcarriersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,25 +174,26 @@ public class Shippingsettings {
     /**
      * Retrieves supported holidays for an account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentShippingsettingsGetsupportedholidaysResponse contentShippingsettingsGetsupportedholidays(org.openapis.openapi.models.operations.ContentShippingsettingsGetsupportedholidaysRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentShippingsettingsGetsupportedholidaysResponse contentShippingsettingsGetsupportedholidays(org.openapis.openapi.models.operations.ContentShippingsettingsGetsupportedholidaysRequest request, org.openapis.openapi.models.operations.ContentShippingsettingsGetsupportedholidaysSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentShippingsettingsGetsupportedholidaysPathParams.class, baseUrl, "/{merchantId}/supportedHolidays", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentShippingsettingsGetsupportedholidaysRequest.class, baseUrl, "/{merchantId}/supportedHolidays", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentShippingsettingsGetsupportedholidaysQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentShippingsettingsGetsupportedholidaysRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -216,25 +220,26 @@ public class Shippingsettings {
     /**
      * Retrieves supported pickup services for an account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentShippingsettingsGetsupportedpickupservicesResponse contentShippingsettingsGetsupportedpickupservices(org.openapis.openapi.models.operations.ContentShippingsettingsGetsupportedpickupservicesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentShippingsettingsGetsupportedpickupservicesResponse contentShippingsettingsGetsupportedpickupservices(org.openapis.openapi.models.operations.ContentShippingsettingsGetsupportedpickupservicesRequest request, org.openapis.openapi.models.operations.ContentShippingsettingsGetsupportedpickupservicesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentShippingsettingsGetsupportedpickupservicesPathParams.class, baseUrl, "/{merchantId}/supportedPickupServices", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentShippingsettingsGetsupportedpickupservicesRequest.class, baseUrl, "/{merchantId}/supportedPickupServices", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentShippingsettingsGetsupportedpickupservicesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentShippingsettingsGetsupportedpickupservicesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -261,25 +266,26 @@ public class Shippingsettings {
     /**
      * Lists the shipping settings of the sub-accounts in your Merchant Center account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentShippingsettingsListResponse contentShippingsettingsList(org.openapis.openapi.models.operations.ContentShippingsettingsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentShippingsettingsListResponse contentShippingsettingsList(org.openapis.openapi.models.operations.ContentShippingsettingsListRequest request, org.openapis.openapi.models.operations.ContentShippingsettingsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentShippingsettingsListPathParams.class, baseUrl, "/{merchantId}/shippingsettings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentShippingsettingsListRequest.class, baseUrl, "/{merchantId}/shippingsettings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentShippingsettingsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentShippingsettingsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -306,27 +312,28 @@ public class Shippingsettings {
     /**
      * Updates the shipping settings of the account. Any fields that are not provided are deleted from the resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentShippingsettingsUpdateResponse contentShippingsettingsUpdate(org.openapis.openapi.models.operations.ContentShippingsettingsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentShippingsettingsUpdateResponse contentShippingsettingsUpdate(org.openapis.openapi.models.operations.ContentShippingsettingsUpdateRequest request, org.openapis.openapi.models.operations.ContentShippingsettingsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentShippingsettingsUpdatePathParams.class, baseUrl, "/{merchantId}/shippingsettings/{accountId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentShippingsettingsUpdateRequest.class, baseUrl, "/{merchantId}/shippingsettings/{accountId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "shippingSettings", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentShippingsettingsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentShippingsettingsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

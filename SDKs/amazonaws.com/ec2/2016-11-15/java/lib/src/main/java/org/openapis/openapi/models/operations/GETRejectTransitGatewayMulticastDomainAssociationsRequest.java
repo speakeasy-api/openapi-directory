@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRejectTransitGatewayMulticastDomainAssociationsRequest {
-    
-    public GETRejectTransitGatewayMulticastDomainAssociationsQueryParams queryParams;
-    public GETRejectTransitGatewayMulticastDomainAssociationsRequest withQueryParams(GETRejectTransitGatewayMulticastDomainAssociationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETRejectTransitGatewayMulticastDomainAssociationsActionEnum action;
+    public GETRejectTransitGatewayMulticastDomainAssociationsRequest withAction(GETRejectTransitGatewayMulticastDomainAssociationsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETRejectTransitGatewayMulticastDomainAssociationsRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
     
-    public GETRejectTransitGatewayMulticastDomainAssociationsHeaders headers;
-    public GETRejectTransitGatewayMulticastDomainAssociationsRequest withHeaders(GETRejectTransitGatewayMulticastDomainAssociationsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The IDs of the subnets to associate with the transit gateway multicast domain.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SubnetIds")
+    public String[] subnetIds;
+    public GETRejectTransitGatewayMulticastDomainAssociationsRequest withSubnetIds(String[] subnetIds) {
+        this.subnetIds = subnetIds;
+        return this;
+    }
+    
+    /**
+     * The ID of the transit gateway attachment.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TransitGatewayAttachmentId")
+    public String transitGatewayAttachmentId;
+    public GETRejectTransitGatewayMulticastDomainAssociationsRequest withTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
+        this.transitGatewayAttachmentId = transitGatewayAttachmentId;
+        return this;
+    }
+    
+    /**
+     * The ID of the transit gateway multicast domain.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TransitGatewayMulticastDomainId")
+    public String transitGatewayMulticastDomainId;
+    public GETRejectTransitGatewayMulticastDomainAssociationsRequest withTransitGatewayMulticastDomainId(String transitGatewayMulticastDomainId) {
+        this.transitGatewayMulticastDomainId = transitGatewayMulticastDomainId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETRejectTransitGatewayMulticastDomainAssociationsVersionEnum version;
+    public GETRejectTransitGatewayMulticastDomainAssociationsRequest withVersion(GETRejectTransitGatewayMulticastDomainAssociationsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETRejectTransitGatewayMulticastDomainAssociationsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETRejectTransitGatewayMulticastDomainAssociationsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETRejectTransitGatewayMulticastDomainAssociationsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETRejectTransitGatewayMulticastDomainAssociationsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETRejectTransitGatewayMulticastDomainAssociationsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETRejectTransitGatewayMulticastDomainAssociationsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETRejectTransitGatewayMulticastDomainAssociationsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

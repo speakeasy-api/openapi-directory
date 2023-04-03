@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WebinarPollCreateRequest {
-    
-    public WebinarPollCreatePathParams pathParams;
-    public WebinarPollCreateRequest withPathParams(WebinarPollCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Webinar poll object
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public WebinarPollCreatePoll request;
-    public WebinarPollCreateRequest withRequest(WebinarPollCreatePoll request) {
-        this.request = request;
+    public WebinarPollCreatePoll requestBody;
+    public WebinarPollCreateRequest withRequestBody(WebinarPollCreatePoll requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public WebinarPollCreateSecurity security;
-    public WebinarPollCreateRequest withSecurity(WebinarPollCreateSecurity security) {
-        this.security = security;
+    /**
+     * The webinar ID in "**long**" format(represented as int64 data type in JSON). 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webinarId")
+    public Long webinarId;
+    public WebinarPollCreateRequest withWebinarId(Long webinarId) {
+        this.webinarId = webinarId;
         return this;
     }
     

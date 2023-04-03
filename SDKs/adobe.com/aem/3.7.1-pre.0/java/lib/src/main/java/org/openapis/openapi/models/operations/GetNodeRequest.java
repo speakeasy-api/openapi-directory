@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNodeRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public GetNodeRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
     
-    public GetNodePathParams pathParams;
-    public GetNodeRequest withPathParams(GetNodePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
+    public String path;
+    public GetNodeRequest withPath(String path) {
+        this.path = path;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UnfreezeUserAccountRequest {
-    
-    public UnfreezeUserAccountPathParams pathParams;
-    public UnfreezeUserAccountRequest withPathParams(UnfreezeUserAccountPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * User ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public Long userId;
+    public UnfreezeUserAccountRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

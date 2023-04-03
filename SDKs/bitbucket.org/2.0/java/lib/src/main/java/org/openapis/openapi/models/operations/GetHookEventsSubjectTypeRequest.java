@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetHookEventsSubjectTypeRequest {
-    
-    public GetHookEventsSubjectTypePathParams pathParams;
-    public GetHookEventsSubjectTypeRequest withPathParams(GetHookEventsSubjectTypePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetHookEventsSubjectTypeSecurity security;
-    public GetHookEventsSubjectTypeRequest withSecurity(GetHookEventsSubjectTypeSecurity security) {
-        this.security = security;
+    /**
+     * A resource or subject type.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subject_type")
+    public GetHookEventsSubjectTypeSubjectTypeEnum subjectType;
+    public GetHookEventsSubjectTypeRequest withSubjectType(GetHookEventsSubjectTypeSubjectTypeEnum subjectType) {
+        this.subjectType = subjectType;
         return this;
     }
     

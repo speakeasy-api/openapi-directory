@@ -68,10 +68,21 @@ public class UrbanDelivery {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConfirmCarbonOffsetResponse confirmCarbonOffset(org.openapis.openapi.models.operations.ConfirmCarbonOffsetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ConfirmCarbonOffsetResponse confirmCarbonOffset(org.openapis.openapi.models.operations.ConfirmCarbonOffsetRequestBody request) throws Exception {
+        return this.confirmCarbonOffset(request, null);
+    }
+
+    /**
+     * confirmCarbonOffset
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ConfirmCarbonOffsetResponse confirmCarbonOffset(org.openapis.openapi.models.operations.ConfirmCarbonOffsetRequestBody request, String serverURL) throws Exception {
         String baseUrl = CONFIRM_CARBON_OFFSET_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/urbanDelivery/confirmCarbonOffset");
@@ -106,10 +117,21 @@ public class UrbanDelivery {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConfirmPaymentResponse confirmPayment(org.openapis.openapi.models.operations.ConfirmPaymentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ConfirmPaymentResponse confirmPayment(org.openapis.openapi.models.operations.ConfirmPaymentRequestBody request) throws Exception {
+        return this.confirmPayment(request, null);
+    }
+
+    /**
+     * confirmPayment
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ConfirmPaymentResponse confirmPayment(org.openapis.openapi.models.operations.ConfirmPaymentRequestBody request, String serverURL) throws Exception {
         String baseUrl = CONFIRM_PAYMENT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/urbanDelivery/confirmPayment");
@@ -144,10 +166,21 @@ public class UrbanDelivery {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConfirmPaymentOfTransactionResponse confirmPaymentOfTransaction(org.openapis.openapi.models.operations.ConfirmPaymentOfTransactionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ConfirmPaymentOfTransactionResponse confirmPaymentOfTransaction(org.openapis.openapi.models.operations.ConfirmPaymentOfTransactionRequestBody request) throws Exception {
+        return this.confirmPaymentOfTransaction(request, null);
+    }
+
+    /**
+     * confirmTransaction
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ConfirmPaymentOfTransactionResponse confirmPaymentOfTransaction(org.openapis.openapi.models.operations.ConfirmPaymentOfTransactionRequestBody request, String serverURL) throws Exception {
         String baseUrl = CONFIRM_PAYMENT_OF_TRANSACTION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/urbanDelivery/confirmTransaction");
@@ -182,10 +215,21 @@ public class UrbanDelivery {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConfirmsPlantingResponse confirmsPlanting(org.openapis.openapi.models.operations.ConfirmsPlantingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ConfirmsPlantingResponse confirmsPlanting(org.openapis.openapi.models.operations.ConfirmsPlantingRequestBody request) throws Exception {
+        return this.confirmsPlanting(request, null);
+    }
+
+    /**
+     * confirmPlanting
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ConfirmsPlantingResponse confirmsPlanting(org.openapis.openapi.models.operations.ConfirmsPlantingRequestBody request, String serverURL) throws Exception {
         String baseUrl = CONFIRMS_PLANTING_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/urbanDelivery/confirmPlanting");
@@ -220,10 +264,21 @@ public class UrbanDelivery {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UrbanDeliveryResponse urbanDelivery(org.openapis.openapi.models.operations.UrbanDeliveryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UrbanDeliveryResponse urbanDelivery(org.openapis.openapi.models.operations.UrbanDeliveryRequestBody request) throws Exception {
+        return this.urbanDelivery(request, null);
+    }
+
+    /**
+     * urbanDelivery
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UrbanDeliveryResponse urbanDelivery(org.openapis.openapi.models.operations.UrbanDeliveryRequestBody request, String serverURL) throws Exception {
         String baseUrl = URBAN_DELIVERY_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/urbanDelivery");

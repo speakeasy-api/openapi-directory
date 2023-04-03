@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETStrainTypeDiffUsingGETRequest {
+    /**
+     * dateFromYYYYMMDD
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dateFromYYYYMMDD")
+    public String dateFromYYYYMMDD;
+    public GETStrainTypeDiffUsingGETRequest withDateFromYYYYMMDD(String dateFromYYYYMMDD) {
+        this.dateFromYYYYMMDD = dateFromYYYYMMDD;
+        return this;
+    }
     
-    public GETStrainTypeDiffUsingGETPathParams pathParams;
-    public GETStrainTypeDiffUsingGETRequest withPathParams(GETStrainTypeDiffUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * dateToYYYYMMDD
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dateToYYYYMMDD")
+    public String dateToYYYYMMDD;
+    public GETStrainTypeDiffUsingGETRequest withDateToYYYYMMDD(String dateToYYYYMMDD) {
+        this.dateToYYYYMMDD = dateToYYYYMMDD;
+        return this;
+    }
+    
+    /**
+     * speciesTypeKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=speciesTypeKey")
+    public Integer speciesTypeKey;
+    public GETStrainTypeDiffUsingGETRequest withSpeciesTypeKey(Integer speciesTypeKey) {
+        this.speciesTypeKey = speciesTypeKey;
         return this;
     }
     

@@ -4,20 +4,38 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPlaylistsRequest {
-    
-    public GetPlaylistsQueryParams queryParams;
-    public GetPlaylistsRequest withQueryParams(GetPlaylistsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Get API Key on listennotes.com/api
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-ListenAPI-Key")
+    public String xListenAPIKey;
+    public GetPlaylistsRequest withXListenAPIKey(String xListenAPIKey) {
+        this.xListenAPIKey = xListenAPIKey;
         return this;
     }
     
+    /**
+     * Page number of playlists.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetPlaylistsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetPlaylistsHeaders headers;
-    public GetPlaylistsRequest withHeaders(GetPlaylistsHeaders headers) {
-        this.headers = headers;
+    /**
+     * How do you want to sort playlists?
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetPlaylistsSortEnum sort;
+    public GetPlaylistsRequest withSort(GetPlaylistsSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

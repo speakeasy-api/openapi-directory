@@ -34,25 +34,26 @@ public class PublicDelegatedPrefixes {
     /**
      * Lists all PublicDelegatedPrefix resources owned by the specific project across all scopes.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesAggregatedListResponse computePublicDelegatedPrefixesAggregatedList(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesAggregatedListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesAggregatedListResponse computePublicDelegatedPrefixesAggregatedList(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesAggregatedListRequest request, org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesAggregatedListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesAggregatedListPathParams.class, baseUrl, "/projects/{project}/aggregated/publicDelegatedPrefixes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesAggregatedListRequest.class, baseUrl, "/projects/{project}/aggregated/publicDelegatedPrefixes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesAggregatedListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesAggregatedListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class PublicDelegatedPrefixes {
     /**
      * Announces the specified PublicDelegatedPrefix in the given region.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesAnnounceResponse computePublicDelegatedPrefixesAnnounce(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesAnnounceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesAnnounceResponse computePublicDelegatedPrefixesAnnounce(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesAnnounceRequest request, org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesAnnounceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesAnnouncePathParams.class, baseUrl, "/projects/{project}/regions/{region}/publicDelegatedPrefixes/{publicDelegatedPrefix}/announce", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesAnnounceRequest.class, baseUrl, "/projects/{project}/regions/{region}/publicDelegatedPrefixes/{publicDelegatedPrefix}/announce", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesAnnounceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesAnnounceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,25 +126,26 @@ public class PublicDelegatedPrefixes {
     /**
      * Deletes the specified PublicDelegatedPrefix in the given region.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesDeleteResponse computePublicDelegatedPrefixesDelete(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesDeleteResponse computePublicDelegatedPrefixesDelete(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesDeleteRequest request, org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesDeletePathParams.class, baseUrl, "/projects/{project}/regions/{region}/publicDelegatedPrefixes/{publicDelegatedPrefix}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesDeleteRequest.class, baseUrl, "/projects/{project}/regions/{region}/publicDelegatedPrefixes/{publicDelegatedPrefix}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -169,25 +172,26 @@ public class PublicDelegatedPrefixes {
     /**
      * Returns the specified PublicDelegatedPrefix resource in the given region.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesGetResponse computePublicDelegatedPrefixesGet(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesGetResponse computePublicDelegatedPrefixesGet(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesGetRequest request, org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesGetPathParams.class, baseUrl, "/projects/{project}/regions/{region}/publicDelegatedPrefixes/{publicDelegatedPrefix}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesGetRequest.class, baseUrl, "/projects/{project}/regions/{region}/publicDelegatedPrefixes/{publicDelegatedPrefix}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -214,27 +218,28 @@ public class PublicDelegatedPrefixes {
     /**
      * Creates a PublicDelegatedPrefix in the specified project in the given region using the parameters that are included in the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesInsertResponse computePublicDelegatedPrefixesInsert(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesInsertResponse computePublicDelegatedPrefixesInsert(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesInsertRequest request, org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesInsertPathParams.class, baseUrl, "/projects/{project}/regions/{region}/publicDelegatedPrefixes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesInsertRequest.class, baseUrl, "/projects/{project}/regions/{region}/publicDelegatedPrefixes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "publicDelegatedPrefix", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -261,25 +266,26 @@ public class PublicDelegatedPrefixes {
     /**
      * Lists the PublicDelegatedPrefixes for a project in the given region.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesListResponse computePublicDelegatedPrefixesList(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesListResponse computePublicDelegatedPrefixesList(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesListRequest request, org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesListPathParams.class, baseUrl, "/projects/{project}/regions/{region}/publicDelegatedPrefixes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesListRequest.class, baseUrl, "/projects/{project}/regions/{region}/publicDelegatedPrefixes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -306,27 +312,28 @@ public class PublicDelegatedPrefixes {
     /**
      * Patches the specified PublicDelegatedPrefix resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesPatchResponse computePublicDelegatedPrefixesPatch(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesPatchResponse computePublicDelegatedPrefixesPatch(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesPatchRequest request, org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesPatchPathParams.class, baseUrl, "/projects/{project}/regions/{region}/publicDelegatedPrefixes/{publicDelegatedPrefix}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesPatchRequest.class, baseUrl, "/projects/{project}/regions/{region}/publicDelegatedPrefixes/{publicDelegatedPrefix}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "publicDelegatedPrefix1", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -353,25 +360,26 @@ public class PublicDelegatedPrefixes {
     /**
      * Withdraws the specified PublicDelegatedPrefix in the given region.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesWithdrawResponse computePublicDelegatedPrefixesWithdraw(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesWithdrawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesWithdrawResponse computePublicDelegatedPrefixesWithdraw(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesWithdrawRequest request, org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesWithdrawSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesWithdrawPathParams.class, baseUrl, "/projects/{project}/regions/{region}/publicDelegatedPrefixes/{publicDelegatedPrefix}/withdraw", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesWithdrawRequest.class, baseUrl, "/projects/{project}/regions/{region}/publicDelegatedPrefixes/{publicDelegatedPrefix}/withdraw", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesWithdrawQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesWithdrawRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

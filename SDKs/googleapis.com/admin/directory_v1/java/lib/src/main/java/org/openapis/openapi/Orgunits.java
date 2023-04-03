@@ -34,25 +34,26 @@ public class Orgunits {
     /**
      * Removes an organizational unit.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DirectoryOrgunitsDeleteResponse directoryOrgunitsDelete(org.openapis.openapi.models.operations.DirectoryOrgunitsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DirectoryOrgunitsDeleteResponse directoryOrgunitsDelete(org.openapis.openapi.models.operations.DirectoryOrgunitsDeleteRequest request, org.openapis.openapi.models.operations.DirectoryOrgunitsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryOrgunitsDeletePathParams.class, baseUrl, "/admin/directory/v1/customer/{customerId}/orgunits/{orgUnitPath}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryOrgunitsDeleteRequest.class, baseUrl, "/admin/directory/v1/customer/{customerId}/orgunits/{orgUnitPath}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryOrgunitsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryOrgunitsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -73,25 +74,26 @@ public class Orgunits {
     /**
      * Retrieves an organizational unit.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DirectoryOrgunitsGetResponse directoryOrgunitsGet(org.openapis.openapi.models.operations.DirectoryOrgunitsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DirectoryOrgunitsGetResponse directoryOrgunitsGet(org.openapis.openapi.models.operations.DirectoryOrgunitsGetRequest request, org.openapis.openapi.models.operations.DirectoryOrgunitsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryOrgunitsGetPathParams.class, baseUrl, "/admin/directory/v1/customer/{customerId}/orgunits/{orgUnitPath}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryOrgunitsGetRequest.class, baseUrl, "/admin/directory/v1/customer/{customerId}/orgunits/{orgUnitPath}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryOrgunitsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryOrgunitsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -118,27 +120,28 @@ public class Orgunits {
     /**
      * Adds an organizational unit.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DirectoryOrgunitsInsertResponse directoryOrgunitsInsert(org.openapis.openapi.models.operations.DirectoryOrgunitsInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DirectoryOrgunitsInsertResponse directoryOrgunitsInsert(org.openapis.openapi.models.operations.DirectoryOrgunitsInsertRequest request, org.openapis.openapi.models.operations.DirectoryOrgunitsInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryOrgunitsInsertPathParams.class, baseUrl, "/admin/directory/v1/customer/{customerId}/orgunits", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryOrgunitsInsertRequest.class, baseUrl, "/admin/directory/v1/customer/{customerId}/orgunits", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "orgUnit", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryOrgunitsInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryOrgunitsInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -165,25 +168,26 @@ public class Orgunits {
     /**
      * Retrieves a list of all organizational units for an account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DirectoryOrgunitsListResponse directoryOrgunitsList(org.openapis.openapi.models.operations.DirectoryOrgunitsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DirectoryOrgunitsListResponse directoryOrgunitsList(org.openapis.openapi.models.operations.DirectoryOrgunitsListRequest request, org.openapis.openapi.models.operations.DirectoryOrgunitsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryOrgunitsListPathParams.class, baseUrl, "/admin/directory/v1/customer/{customerId}/orgunits", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryOrgunitsListRequest.class, baseUrl, "/admin/directory/v1/customer/{customerId}/orgunits", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryOrgunitsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryOrgunitsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -210,27 +214,28 @@ public class Orgunits {
     /**
      * Updates an organizational unit. This method supports [patch semantics](/admin-sdk/directory/v1/guides/performance#patch)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DirectoryOrgunitsPatchResponse directoryOrgunitsPatch(org.openapis.openapi.models.operations.DirectoryOrgunitsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DirectoryOrgunitsPatchResponse directoryOrgunitsPatch(org.openapis.openapi.models.operations.DirectoryOrgunitsPatchRequest request, org.openapis.openapi.models.operations.DirectoryOrgunitsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryOrgunitsPatchPathParams.class, baseUrl, "/admin/directory/v1/customer/{customerId}/orgunits/{orgUnitPath}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryOrgunitsPatchRequest.class, baseUrl, "/admin/directory/v1/customer/{customerId}/orgunits/{orgUnitPath}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "orgUnit", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryOrgunitsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryOrgunitsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -257,27 +262,28 @@ public class Orgunits {
     /**
      * Updates an organizational unit.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DirectoryOrgunitsUpdateResponse directoryOrgunitsUpdate(org.openapis.openapi.models.operations.DirectoryOrgunitsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DirectoryOrgunitsUpdateResponse directoryOrgunitsUpdate(org.openapis.openapi.models.operations.DirectoryOrgunitsUpdateRequest request, org.openapis.openapi.models.operations.DirectoryOrgunitsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryOrgunitsUpdatePathParams.class, baseUrl, "/admin/directory/v1/customer/{customerId}/orgunits/{orgUnitPath}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryOrgunitsUpdateRequest.class, baseUrl, "/admin/directory/v1/customer/{customerId}/orgunits/{orgUnitPath}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "orgUnit", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryOrgunitsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryOrgunitsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -32,15 +32,12 @@ lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/SearchSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/SearchMatchModeEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/SearchQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/SearchRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SearchResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/SearchperpackageSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/SearchperpackageMatchModeEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/SearchperpackageQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/SearchperpackageRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SearchperpackageResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/SearchResult.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKey.java
 lib/src/main/java/org/openapis/openapi/models/shared/PackageSearchResult.java
 USAGE.md

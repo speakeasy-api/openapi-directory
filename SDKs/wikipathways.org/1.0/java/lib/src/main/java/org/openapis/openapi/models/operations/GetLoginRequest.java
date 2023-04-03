@@ -4,13 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLoginRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public GetLoginFormatEnum format;
+    public GetLoginRequest withFormat(GetLoginFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public GetLoginQueryParams queryParams;
-    public GetLoginRequest withQueryParams(GetLoginQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The usernameset_include_path(get_include_path().PATH_SEPARATOR.realpath('../includes').PATH_SEPARATOR.realpath('../').PATH_SEPARATOR);
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public GetLoginRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * The password
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pass")
+    public String pass;
+    public GetLoginRequest withPass(String pass) {
+        this.pass = pass;
         return this;
     }
     

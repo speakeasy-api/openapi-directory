@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NetworkRequest {
-    
-    public NetworkQueryParams queryParams;
-    public NetworkRequest withQueryParams(NetworkQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Height above ground level in metres
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public Integer alt;
+    public NetworkRequest withAlt(Integer alt) {
+        this.alt = alt;
         return this;
     }
     
+    /**
+     * Latitude in decimal degrees
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lat")
+    public Float lat;
+    public NetworkRequest withLat(Float lat) {
+        this.lat = lat;
+        return this;
+    }
     
-    public NetworkSecurity security;
-    public NetworkRequest withSecurity(NetworkSecurity security) {
-        this.security = security;
+    /**
+     * Longitude in decimal degrees
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lon")
+    public Float lon;
+    public NetworkRequest withLon(Float lon) {
+        this.lon = lon;
+        return this;
+    }
+    
+    /**
+     * Super layer name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nam")
+    public String nam;
+    public NetworkRequest withNam(String nam) {
+        this.nam = nam;
+        return this;
+    }
+    
+    /**
+     * Network name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=net")
+    public String net;
+    public NetworkRequest withNet(String net) {
+        this.net = net;
+        return this;
+    }
+    
+    /**
+     * Receiver gain in dBi
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rxg")
+    public Float rxg;
+    public NetworkRequest withRxg(Float rxg) {
+        this.rxg = rxg;
         return this;
     }
     

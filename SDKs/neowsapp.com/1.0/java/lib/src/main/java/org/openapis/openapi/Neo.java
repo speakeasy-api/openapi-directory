@@ -48,7 +48,7 @@ public class Neo {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BrowseNearEarthObjectsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BrowseNearEarthObjectsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -89,7 +89,7 @@ public class Neo {
      */
     public org.openapis.openapi.models.operations.RetrieveNearEarthObjectByIdResponse retrieveNearEarthObjectById(org.openapis.openapi.models.operations.RetrieveNearEarthObjectByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveNearEarthObjectByIdPathParams.class, baseUrl, "/rest/v1/neo/{asteroid_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveNearEarthObjectByIdRequest.class, baseUrl, "/rest/v1/neo/{asteroid_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchAuthorizedConnectAppRequest {
-    
-    public FetchAuthorizedConnectAppPathParams pathParams;
-    public FetchAuthorizedConnectAppRequest withPathParams(FetchAuthorizedConnectAppPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the AuthorizedConnectApp resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public FetchAuthorizedConnectAppRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public FetchAuthorizedConnectAppSecurity security;
-    public FetchAuthorizedConnectAppRequest withSecurity(FetchAuthorizedConnectAppSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchAuthorizedConnectAppRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Connect App to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConnectAppSid")
+    public String connectAppSid;
+    public FetchAuthorizedConnectAppRequest withConnectAppSid(String connectAppSid) {
+        this.connectAppSid = connectAppSid;
         return this;
     }
     

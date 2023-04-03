@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FileUploadRequest {
-    
-    public FileUploadQueryParams queryParams;
-    public FileUploadRequest withQueryParams(FileUploadQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public FileUploadRequestBody request;
-    public FileUploadRequest withRequest(FileUploadRequestBody request) {
-        this.request = request;
+    public FileUploadRequestBody requestBody;
+    public FileUploadRequest withRequestBody(FileUploadRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Customer ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=c")
+    public Long c;
+    public FileUploadRequest withC(Long c) {
+        this.c = c;
+        return this;
+    }
     
-    public FileUploadSecurity security;
-    public FileUploadRequest withSecurity(FileUploadSecurity security) {
-        this.security = security;
+    /**
+     * If true, the server returns the extracted document that was indexed
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=d")
+    public Boolean d;
+    public FileUploadRequest withD(Boolean d) {
+        this.d = d;
+        return this;
+    }
+    
+    /**
+     * Corpus ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=o")
+    public Long o;
+    public FileUploadRequest withO(Long o) {
+        this.o = o;
         return this;
     }
     

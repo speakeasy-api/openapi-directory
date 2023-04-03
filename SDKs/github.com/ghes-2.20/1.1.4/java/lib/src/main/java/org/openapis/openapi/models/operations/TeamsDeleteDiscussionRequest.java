@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsDeleteDiscussionRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=discussion_number")
+    public Long discussionNumber;
+    public TeamsDeleteDiscussionRequest withDiscussionNumber(Long discussionNumber) {
+        this.discussionNumber = discussionNumber;
+        return this;
+    }
     
-    public TeamsDeleteDiscussionPathParams pathParams;
-    public TeamsDeleteDiscussionRequest withPathParams(TeamsDeleteDiscussionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
+    public Long teamId;
+    public TeamsDeleteDiscussionRequest withTeamId(Long teamId) {
+        this.teamId = teamId;
         return this;
     }
     

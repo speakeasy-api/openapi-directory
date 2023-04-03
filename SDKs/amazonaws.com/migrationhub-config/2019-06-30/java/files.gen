@@ -30,16 +30,12 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/CreateHomeRegionControlXAmzTargetEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/CreateHomeRegionControlHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateHomeRegionControlRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateHomeRegionControlResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/DescribeHomeRegionControlsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DescribeHomeRegionControlsXAmzTargetEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/DescribeHomeRegionControlsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/DescribeHomeRegionControlsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DescribeHomeRegionControlsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetHomeRegionXAmzTargetEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetHomeRegionHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetHomeRegionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetHomeRegionResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateHomeRegionControlResult.java
@@ -50,6 +46,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/CreateHomeRegionControlRequ
 lib/src/main/java/org/openapis/openapi/models/shared/DescribeHomeRegionControlsResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/DescribeHomeRegionControlsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetHomeRegionResult.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeHmac.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

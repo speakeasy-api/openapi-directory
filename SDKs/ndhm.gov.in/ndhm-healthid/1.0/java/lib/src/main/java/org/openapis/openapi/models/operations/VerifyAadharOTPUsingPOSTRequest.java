@@ -7,10 +7,10 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VerifyAadharOTPUsingPOSTRequest {
-    
-    public VerifyAadharOtpUsingPOSTHeaders headers;
-    public VerifyAadharOTPUsingPOSTRequest withHeaders(VerifyAadharOtpUsingPOSTHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public VerifyAadharOTPUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
@@ -18,16 +18,9 @@ public class VerifyAadharOTPUsingPOSTRequest {
      * verifyAadharOtpRequest
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateAccountWithAadhaarOtp request;
-    public VerifyAadharOTPUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.CreateAccountWithAadhaarOtp request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public VerifyAadharOTPUsingPOSTSecurity security;
-    public VerifyAadharOTPUsingPOSTRequest withSecurity(VerifyAadharOTPUsingPOSTSecurity security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.CreateAccountWithAadhaarOtp createAccountWithAadhaarOtp;
+    public VerifyAadharOTPUsingPOSTRequest withCreateAccountWithAadhaarOtp(org.openapis.openapi.models.shared.CreateAccountWithAadhaarOtp createAccountWithAadhaarOtp) {
+        this.createAccountWithAadhaarOtp = createAccountWithAadhaarOtp;
         return this;
     }
     

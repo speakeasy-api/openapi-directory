@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTaskScanDataRequest {
-    
-    public GetTaskScanDataPathParams pathParams;
-    public GetTaskScanDataRequest withPathParams(GetTaskScanDataPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetTaskScanDataSecurity security;
-    public GetTaskScanDataRequest withSecurity(GetTaskScanDataSecurity security) {
-        this.security = security;
+    /**
+     * UUID of the task
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=task_id")
+    public String taskId;
+    public GetTaskScanDataRequest withTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
     

@@ -7,10 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EditSettingsRequest {
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public EditSettingsRequest withAccept(String accept) {
+        this.accept = accept;
+        return this;
+    }
     
-    public EditSettingsHeaders headers;
-    public EditSettingsRequest withHeaders(EditSettingsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public EditSettingsRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
@@ -18,9 +31,9 @@ public class EditSettingsRequest {
      * Request body
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Settings request;
-    public EditSettingsRequest withRequest(org.openapis.openapi.models.shared.Settings request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Settings settings;
+    public EditSettingsRequest withSettings(org.openapis.openapi.models.shared.Settings settings) {
+        this.settings = settings;
         return this;
     }
     

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRepostsTracksTrackIdRequest {
-    
-    public DeleteRepostsTracksTrackIdPathParams pathParams;
-    public DeleteRepostsTracksTrackIdRequest withPathParams(DeleteRepostsTracksTrackIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteRepostsTracksTrackIdSecurity security;
-    public DeleteRepostsTracksTrackIdRequest withSecurity(DeleteRepostsTracksTrackIdSecurity security) {
-        this.security = security;
+    /**
+     * SoundCloud Track id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=track_id")
+    public Long trackId;
+    public DeleteRepostsTracksTrackIdRequest withTrackId(Long trackId) {
+        this.trackId = trackId;
         return this;
     }
     

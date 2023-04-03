@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsEventPropertiesRequest {
-    
-    public AnalyticsEventPropertiesPathParams pathParams;
-    public AnalyticsEventPropertiesRequest withPathParams(AnalyticsEventPropertiesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public AnalyticsEventPropertiesRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * The id of the event.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=event_name")
+    public String eventName;
+    public AnalyticsEventPropertiesRequest withEventName(String eventName) {
+        this.eventName = eventName;
+        return this;
+    }
     
-    public AnalyticsEventPropertiesSecurity security;
-    public AnalyticsEventPropertiesRequest withSecurity(AnalyticsEventPropertiesSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public AnalyticsEventPropertiesRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

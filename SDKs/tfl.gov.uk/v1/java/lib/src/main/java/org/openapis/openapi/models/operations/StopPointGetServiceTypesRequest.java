@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopPointGetServiceTypesRequest {
+    /**
+     * The Naptan id of the stop
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public StopPointGetServiceTypesRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public StopPointGetServiceTypesQueryParams queryParams;
-    public StopPointGetServiceTypesRequest withQueryParams(StopPointGetServiceTypesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The lines which contain the given Naptan id (all lines relevant to the given stoppoint if empty)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lineIds")
+    public String[] lineIds;
+    public StopPointGetServiceTypesRequest withLineIds(String[] lineIds) {
+        this.lineIds = lineIds;
+        return this;
+    }
+    
+    /**
+     * The modes which the lines are relevant to (all if empty)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modes")
+    public String[] modes;
+    public StopPointGetServiceTypesRequest withModes(String[] modes) {
+        this.modes = modes;
         return this;
     }
     

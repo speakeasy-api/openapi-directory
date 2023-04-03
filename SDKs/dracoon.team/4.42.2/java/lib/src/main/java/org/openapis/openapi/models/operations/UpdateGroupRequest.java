@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateGroupRequest {
-    
-    public UpdateGroupPathParams pathParams;
-    public UpdateGroupRequest withPathParams(UpdateGroupPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateGroupHeaders headers;
-    public UpdateGroupRequest withHeaders(UpdateGroupHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateGroupRequest request;
-    public UpdateGroupRequest withRequest(org.openapis.openapi.models.shared.UpdateGroupRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateGroupRequest updateGroupRequest;
+    public UpdateGroupRequest withUpdateGroupRequest(org.openapis.openapi.models.shared.UpdateGroupRequest updateGroupRequest) {
+        this.updateGroupRequest = updateGroupRequest;
+        return this;
+    }
+    
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public UpdateGroupRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
+        return this;
+    }
+    
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public UpdateGroupXSdsDateFormatEnum xSdsDateFormat;
+    public UpdateGroupRequest withXSdsDateFormat(UpdateGroupXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
+        return this;
+    }
+    
+    /**
+     * Group ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public Long groupId;
+    public UpdateGroupRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
         return this;
     }
     

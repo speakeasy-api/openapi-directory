@@ -7,17 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoEditReleaseAttachmentRequest {
-    
-    public RepoEditReleaseAttachmentPathParams pathParams;
-    public RepoEditReleaseAttachmentRequest withPathParams(RepoEditReleaseAttachmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.EditAttachmentOptions editAttachmentOptions;
+    public RepoEditReleaseAttachmentRequest withEditAttachmentOptions(org.openapis.openapi.models.shared.EditAttachmentOptions editAttachmentOptions) {
+        this.editAttachmentOptions = editAttachmentOptions;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.EditAttachmentOptions request;
-    public RepoEditReleaseAttachmentRequest withRequest(org.openapis.openapi.models.shared.EditAttachmentOptions request) {
-        this.request = request;
+    /**
+     * id of the attachment to edit
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=attachment_id")
+    public Long attachmentId;
+    public RepoEditReleaseAttachmentRequest withAttachmentId(Long attachmentId) {
+        this.attachmentId = attachmentId;
+        return this;
+    }
+    
+    /**
+     * id of the release
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public RepoEditReleaseAttachmentRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoEditReleaseAttachmentRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoEditReleaseAttachmentRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

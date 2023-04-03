@@ -4,27 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TrainProjectRequest {
-    
-    public TrainProjectPathParams pathParams;
-    public TrainProjectRequest withPathParams(TrainProjectPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API key.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
+    public String trainingKey;
+    public TrainProjectRequest withTrainingKey(String trainingKey) {
+        this.trainingKey = trainingKey;
         return this;
     }
     
-    
-    public TrainProjectQueryParams queryParams;
-    public TrainProjectRequest withQueryParams(TrainProjectQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Whether to force train even if dataset and configuration does not change (default: false).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=forceTrain")
+    public Boolean forceTrain;
+    public TrainProjectRequest withForceTrain(Boolean forceTrain) {
+        this.forceTrain = forceTrain;
         return this;
     }
     
+    /**
+     * The email address to send notification to when training finishes (default: null).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=notificationEmailAddress")
+    public String notificationEmailAddress;
+    public TrainProjectRequest withNotificationEmailAddress(String notificationEmailAddress) {
+        this.notificationEmailAddress = notificationEmailAddress;
+        return this;
+    }
     
-    public TrainProjectHeaders headers;
-    public TrainProjectRequest withHeaders(TrainProjectHeaders headers) {
-        this.headers = headers;
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public TrainProjectRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    /**
+     * The number of hours reserved as budget for training (if applicable).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reservedBudgetInHours")
+    public Integer reservedBudgetInHours;
+    public TrainProjectRequest withReservedBudgetInHours(Integer reservedBudgetInHours) {
+        this.reservedBudgetInHours = reservedBudgetInHours;
+        return this;
+    }
+    
+    /**
+     * The type of training to use to train the project (default: Regular).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=trainingType")
+    public TrainProjectTrainingTypeEnum trainingType;
+    public TrainProjectRequest withTrainingType(TrainProjectTrainingTypeEnum trainingType) {
+        this.trainingType = trainingType;
         return this;
     }
     

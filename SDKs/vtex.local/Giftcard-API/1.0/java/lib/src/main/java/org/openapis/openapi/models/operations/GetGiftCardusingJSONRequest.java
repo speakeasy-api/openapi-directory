@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGiftCardusingJSONRequest {
+    /**
+     * Media type(s) that is/are acceptable for the response. Default value for payment provider protocol is application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetGiftCardusingJSONRequest withAccept(String accept) {
+        this.accept = accept;
+        return this;
+    }
     
-    public GetGiftCardusingJSONHeaders headers;
-    public GetGiftCardusingJSONRequest withHeaders(GetGiftCardusingJSONHeaders headers) {
-        this.headers = headers;
+    /**
+     * The Media type of the body of the request. Default value for payment provider protocol is application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetGiftCardusingJSONRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GetGiftCardusingJSONRequest request;
-    public GetGiftCardusingJSONRequest withRequest(org.openapis.openapi.models.shared.GetGiftCardusingJSONRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GetGiftCardusingJSONRequest getGiftCardusingJSONRequest;
+    public GetGiftCardusingJSONRequest withGetGiftCardusingJSONRequest(org.openapis.openapi.models.shared.GetGiftCardusingJSONRequest getGiftCardusingJSONRequest) {
+        this.getGiftCardusingJSONRequest = getGiftCardusingJSONRequest;
+        return this;
+    }
+    
+    /**
+     * PaginationB control.B ThisB queryB variableB mustB followB theB formatB _resources={from}-{to}_.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=REST-Range")
+    public String restRange;
+    public GetGiftCardusingJSONRequest withRESTRange(String restRange) {
+        this.restRange = restRange;
         return this;
     }
     

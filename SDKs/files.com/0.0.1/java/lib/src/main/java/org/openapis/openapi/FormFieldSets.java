@@ -43,7 +43,7 @@ public class FormFieldSets {
      */
     public org.openapis.openapi.models.operations.DeleteFormFieldSetsIdResponse deleteFormFieldSetsId(org.openapis.openapi.models.operations.DeleteFormFieldSetsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteFormFieldSetsIdPathParams.class, baseUrl, "/form_field_sets/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteFormFieldSetsIdRequest.class, baseUrl, "/form_field_sets/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -82,7 +82,7 @@ public class FormFieldSets {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFormFieldSetsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFormFieldSetsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -123,7 +123,7 @@ public class FormFieldSets {
      */
     public org.openapis.openapi.models.operations.GetFormFieldSetsIdResponse getFormFieldSetsId(org.openapis.openapi.models.operations.GetFormFieldSetsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFormFieldSetsIdPathParams.class, baseUrl, "/form_field_sets/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFormFieldSetsIdRequest.class, baseUrl, "/form_field_sets/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -164,12 +164,12 @@ public class FormFieldSets {
      */
     public org.openapis.openapi.models.operations.PatchFormFieldSetsIdResponse patchFormFieldSetsId(org.openapis.openapi.models.operations.PatchFormFieldSetsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchFormFieldSetsIdPathParams.class, baseUrl, "/form_field_sets/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchFormFieldSetsIdRequest.class, baseUrl, "/form_field_sets/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "patchFormFieldSets", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -208,7 +208,7 @@ public class FormFieldSets {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostFormFieldSetsResponse postFormFieldSets(org.openapis.openapi.models.operations.PostFormFieldSetsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostFormFieldSetsResponse postFormFieldSets(org.openapis.openapi.models.shared.PostFormFieldSets request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/form_field_sets");
         

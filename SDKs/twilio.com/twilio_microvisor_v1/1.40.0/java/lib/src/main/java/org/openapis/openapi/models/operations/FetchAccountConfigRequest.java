@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchAccountConfigRequest {
-    
-    public FetchAccountConfigPathParams pathParams;
-    public FetchAccountConfigRequest withPathParams(FetchAccountConfigPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchAccountConfigSecurity security;
-    public FetchAccountConfigRequest withSecurity(FetchAccountConfigSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchAccountConfigRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The config key; up to 100 characters.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Key")
+    public String key;
+    public FetchAccountConfigRequest withKey(String key) {
+        this.key = key;
         return this;
     }
     

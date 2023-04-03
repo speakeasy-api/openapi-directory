@@ -4,20 +4,130 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyClusterMaintenanceRequest {
-    
-    public GETModifyClusterMaintenanceQueryParams queryParams;
-    public GETModifyClusterMaintenanceRequest withQueryParams(GETModifyClusterMaintenanceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyClusterMaintenanceActionEnum action;
+    public GETModifyClusterMaintenanceRequest withAction(GETModifyClusterMaintenanceActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * A unique identifier for the cluster.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
+    public String clusterIdentifier;
+    public GETModifyClusterMaintenanceRequest withClusterIdentifier(String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+        return this;
+    }
     
-    public GETModifyClusterMaintenanceHeaders headers;
-    public GETModifyClusterMaintenanceRequest withHeaders(GETModifyClusterMaintenanceHeaders headers) {
-        this.headers = headers;
+    /**
+     * A boolean indicating whether to enable the deferred maintenance window. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DeferMaintenance")
+    public Boolean deferMaintenance;
+    public GETModifyClusterMaintenanceRequest withDeferMaintenance(Boolean deferMaintenance) {
+        this.deferMaintenance = deferMaintenance;
+        return this;
+    }
+    
+    /**
+     * An integer indicating the duration of the maintenance window in days. If you specify a duration, you can't specify an end time. The duration must be 45 days or less.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DeferMaintenanceDuration")
+    public Long deferMaintenanceDuration;
+    public GETModifyClusterMaintenanceRequest withDeferMaintenanceDuration(Long deferMaintenanceDuration) {
+        this.deferMaintenanceDuration = deferMaintenanceDuration;
+        return this;
+    }
+    
+    /**
+     * A timestamp indicating end time for the deferred maintenance window. If you specify an end time, you can't specify a duration.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DeferMaintenanceEndTime")
+    public OffsetDateTime deferMaintenanceEndTime;
+    public GETModifyClusterMaintenanceRequest withDeferMaintenanceEndTime(OffsetDateTime deferMaintenanceEndTime) {
+        this.deferMaintenanceEndTime = deferMaintenanceEndTime;
+        return this;
+    }
+    
+    /**
+     * A unique identifier for the deferred maintenance window.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DeferMaintenanceIdentifier")
+    public String deferMaintenanceIdentifier;
+    public GETModifyClusterMaintenanceRequest withDeferMaintenanceIdentifier(String deferMaintenanceIdentifier) {
+        this.deferMaintenanceIdentifier = deferMaintenanceIdentifier;
+        return this;
+    }
+    
+    /**
+     * A timestamp indicating the start time for the deferred maintenance window.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DeferMaintenanceStartTime")
+    public OffsetDateTime deferMaintenanceStartTime;
+    public GETModifyClusterMaintenanceRequest withDeferMaintenanceStartTime(OffsetDateTime deferMaintenanceStartTime) {
+        this.deferMaintenanceStartTime = deferMaintenanceStartTime;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyClusterMaintenanceVersionEnum version;
+    public GETModifyClusterMaintenanceRequest withVersion(GETModifyClusterMaintenanceVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyClusterMaintenanceRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyClusterMaintenanceRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyClusterMaintenanceRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyClusterMaintenanceRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyClusterMaintenanceRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyClusterMaintenanceRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyClusterMaintenanceRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

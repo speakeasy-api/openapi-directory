@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchAs2StationsIdRequest {
-    
-    public PatchAs2StationsIdPathParams pathParams;
-    public PatchAs2StationsIdRequest withPathParams(PatchAs2StationsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public PatchAs2StationsIdRequestBody requestBody;
+    public PatchAs2StationsIdRequest withRequestBody(PatchAs2StationsIdRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PatchAs2StationsIdRequestBody request;
-    public PatchAs2StationsIdRequest withRequest(PatchAs2StationsIdRequestBody request) {
-        this.request = request;
+    /**
+     * As2 Station ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PatchAs2StationsIdRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

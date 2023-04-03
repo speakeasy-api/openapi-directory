@@ -7,24 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SendaChatMessageRequest {
-    
-    public SendaChatMessagePathParams pathParams;
-    public SendaChatMessageRequest withPathParams(SendaChatMessagePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public SendaChatMessageApplicationJSON request;
-    public SendaChatMessageRequest withRequest(SendaChatMessageApplicationJSON request) {
-        this.request = request;
+    public SendaChatMessageApplicationJSON requestBody;
+    public SendaChatMessageRequest withRequestBody(SendaChatMessageApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public SendaChatMessageSecurity security;
-    public SendaChatMessageRequest withSecurity(SendaChatMessageSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public SendaChatMessageRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

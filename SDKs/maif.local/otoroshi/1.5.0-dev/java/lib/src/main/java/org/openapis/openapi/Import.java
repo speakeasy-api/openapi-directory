@@ -37,11 +37,10 @@ public class Import {
     /**
      * Export the full state of Otoroshi
      * Export the full state of Otoroshi
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FullExportResponse fullExport(org.openapis.openapi.models.operations.FullExportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FullExportResponse fullExport() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/otoroshi.json");
         
@@ -50,8 +49,7 @@ public class Import {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -80,10 +78,11 @@ public class Import {
      * Import the full state of Otoroshi
      * Import the full state of Otoroshi
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FullImportResponse fullImport(org.openapis.openapi.models.operations.FullImportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FullImportResponse fullImport(org.openapis.openapi.models.shared.ImportExport request, org.openapis.openapi.models.operations.FullImportSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/otoroshi.json");
         
@@ -94,7 +93,7 @@ public class Import {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,10 +123,11 @@ public class Import {
      * Import the full state of Otoroshi as a file
      * Import the full state of Otoroshi as a file
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FullImportFromFileResponse fullImportFromFile(org.openapis.openapi.models.operations.FullImportFromFileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FullImportFromFileResponse fullImportFromFile(org.openapis.openapi.models.shared.ImportExport request, org.openapis.openapi.models.operations.FullImportFromFileSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/import");
         
@@ -138,7 +138,7 @@ public class Import {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

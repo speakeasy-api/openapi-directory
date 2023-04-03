@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSpotListRequest {
-    
-    public UpdateSpotListPathParams pathParams;
-    public UpdateSpotListRequest withPathParams(UpdateSpotListPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * A JSON object containing spot list information
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SpotListInput request;
-    public UpdateSpotListRequest withRequest(org.openapis.openapi.models.shared.SpotListInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SpotListInput spotListInput;
+    public UpdateSpotListRequest withSpotListInput(org.openapis.openapi.models.shared.SpotListInput spotListInput) {
+        this.spotListInput = spotListInput;
+        return this;
+    }
+    
+    /**
+     * Unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UpdateSpotListRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

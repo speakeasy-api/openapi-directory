@@ -7,10 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NewRequest {
-    
-    public NewPathParams pathParams;
-    public NewRequest withPathParams(NewPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Primary IP
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=IP")
+    public String ip;
+    public NewRequest withIp(String ip) {
+        this.ip = ip;
         return this;
     }
     
@@ -18,9 +21,19 @@ public class NewRequest {
      * Created agent object
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Triplet[] request;
-    public NewRequest withRequest(org.openapis.openapi.models.shared.Triplet[] request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Triplet[] requestBody;
+    public NewRequest withRequestBody(org.openapis.openapi.models.shared.Triplet[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Agent to return the primary IP
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public NewRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMaskRequest {
-    
-    public GetMaskPathParams pathParams;
-    public GetMaskRequest withPathParams(GetMaskPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to return the primary interface
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Long agentNum;
+    public GetMaskRequest withAgentNum(Long agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

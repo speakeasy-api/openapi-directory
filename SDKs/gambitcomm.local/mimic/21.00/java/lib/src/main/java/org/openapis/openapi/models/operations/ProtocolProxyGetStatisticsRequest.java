@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolProxyGetStatisticsRequest {
-    
-    public ProtocolProxyGetStatisticsPathParams pathParams;
-    public ProtocolProxyGetStatisticsRequest withPathParams(ProtocolProxyGetStatisticsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to show PROXY statistics
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolProxyGetStatisticsRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

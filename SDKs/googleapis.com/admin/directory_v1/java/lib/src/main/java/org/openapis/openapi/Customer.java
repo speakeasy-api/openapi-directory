@@ -34,25 +34,26 @@ public class Customer {
     /**
      * Gets command data a specific command issued to the device.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdminCustomerDevicesChromeosCommandsGetResponse adminCustomerDevicesChromeosCommandsGet(org.openapis.openapi.models.operations.AdminCustomerDevicesChromeosCommandsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdminCustomerDevicesChromeosCommandsGetResponse adminCustomerDevicesChromeosCommandsGet(org.openapis.openapi.models.operations.AdminCustomerDevicesChromeosCommandsGetRequest request, org.openapis.openapi.models.operations.AdminCustomerDevicesChromeosCommandsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminCustomerDevicesChromeosCommandsGetPathParams.class, baseUrl, "/admin/directory/v1/customer/{customerId}/devices/chromeos/{deviceId}/commands/{commandId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminCustomerDevicesChromeosCommandsGetRequest.class, baseUrl, "/admin/directory/v1/customer/{customerId}/devices/chromeos/{deviceId}/commands/{commandId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminCustomerDevicesChromeosCommandsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminCustomerDevicesChromeosCommandsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,27 +80,28 @@ public class Customer {
     /**
      * Issues a command for the device to execute.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdminCustomerDevicesChromeosIssueCommandResponse adminCustomerDevicesChromeosIssueCommand(org.openapis.openapi.models.operations.AdminCustomerDevicesChromeosIssueCommandRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdminCustomerDevicesChromeosIssueCommandResponse adminCustomerDevicesChromeosIssueCommand(org.openapis.openapi.models.operations.AdminCustomerDevicesChromeosIssueCommandRequest request, org.openapis.openapi.models.operations.AdminCustomerDevicesChromeosIssueCommandSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminCustomerDevicesChromeosIssueCommandPathParams.class, baseUrl, "/admin/directory/v1/customer/{customerId}/devices/chromeos/{deviceId}:issueCommand", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminCustomerDevicesChromeosIssueCommandRequest.class, baseUrl, "/admin/directory/v1/customer/{customerId}/devices/chromeos/{deviceId}:issueCommand", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "directoryChromeosdevicesIssueCommandRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminCustomerDevicesChromeosIssueCommandQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminCustomerDevicesChromeosIssueCommandRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

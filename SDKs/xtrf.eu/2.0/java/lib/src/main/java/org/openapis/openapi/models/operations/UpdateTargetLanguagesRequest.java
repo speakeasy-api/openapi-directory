@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateTargetLanguagesRequest {
-    
-    public UpdateTargetLanguagesPathParams pathParams;
-    public UpdateTargetLanguagesRequest withPathParams(UpdateTargetLanguagesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated target languages for a project.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TargetLanguagesDTO request;
-    public UpdateTargetLanguagesRequest withRequest(org.openapis.openapi.models.shared.TargetLanguagesDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TargetLanguagesDTO targetLanguagesDTO;
+    public UpdateTargetLanguagesRequest withTargetLanguagesDTO(org.openapis.openapi.models.shared.TargetLanguagesDTO targetLanguagesDTO) {
+        this.targetLanguagesDTO = targetLanguagesDTO;
+        return this;
+    }
+    
+    /**
+     * project's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public UpdateTargetLanguagesRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

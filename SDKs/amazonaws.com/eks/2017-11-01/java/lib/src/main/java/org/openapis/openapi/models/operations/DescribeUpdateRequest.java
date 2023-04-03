@@ -4,27 +4,95 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeUpdateRequest {
-    
-    public DescribeUpdatePathParams pathParams;
-    public DescribeUpdateRequest withPathParams(DescribeUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DescribeUpdateRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public DescribeUpdateQueryParams queryParams;
-    public DescribeUpdateRequest withQueryParams(DescribeUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DescribeUpdateRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DescribeUpdateRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public DescribeUpdateHeaders headers;
-    public DescribeUpdateRequest withHeaders(DescribeUpdateHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DescribeUpdateRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DescribeUpdateRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DescribeUpdateRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DescribeUpdateRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The name of the add-on. The name must match one of the names returned by &lt;a href="https://docs.aws.amazon.com/eks/latest/APIReference/API_ListAddons.html"&gt; &lt;code&gt;ListAddons&lt;/code&gt; &lt;/a&gt;. This parameter is required if the update is an add-on update.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=addonName")
+    public String addonName;
+    public DescribeUpdateRequest withAddonName(String addonName) {
+        this.addonName = addonName;
+        return this;
+    }
+    
+    /**
+     * The name of the Amazon EKS cluster associated with the update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public DescribeUpdateRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * The name of the Amazon EKS node group associated with the update. This parameter is required if the update is a node group update.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nodegroupName")
+    public String nodegroupName;
+    public DescribeUpdateRequest withNodegroupName(String nodegroupName) {
+        this.nodegroupName = nodegroupName;
+        return this;
+    }
+    
+    /**
+     * The ID of the update to describe.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=updateId")
+    public String updateId;
+    public DescribeUpdateRequest withUpdateId(String updateId) {
+        this.updateId = updateId;
         return this;
     }
     

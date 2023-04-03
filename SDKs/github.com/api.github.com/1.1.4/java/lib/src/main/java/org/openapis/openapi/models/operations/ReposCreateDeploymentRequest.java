@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposCreateDeploymentRequest {
-    
-    public ReposCreateDeploymentPathParams pathParams;
-    public ReposCreateDeploymentRequest withPathParams(ReposCreateDeploymentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ReposCreateDeploymentRequestBody requestBody;
+    public ReposCreateDeploymentRequest withRequestBody(ReposCreateDeploymentRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ReposCreateDeploymentRequestBody request;
-    public ReposCreateDeploymentRequest withRequest(ReposCreateDeploymentRequestBody request) {
-        this.request = request;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposCreateDeploymentRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposCreateDeploymentRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

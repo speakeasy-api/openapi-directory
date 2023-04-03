@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddressCleanseRequest {
-    
-    public AddressCleanseQueryParams queryParams;
-    public AddressCleanseRequest withQueryParams(AddressCleanseQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public AddressCleanseRequestBody requestBody;
+    public AddressCleanseRequest withRequestBody(AddressCleanseRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public AddressCleanseRequestBody request;
-    public AddressCleanseRequest withRequest(AddressCleanseRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=api_key")
+    public String apiKey;
+    public AddressCleanseRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     

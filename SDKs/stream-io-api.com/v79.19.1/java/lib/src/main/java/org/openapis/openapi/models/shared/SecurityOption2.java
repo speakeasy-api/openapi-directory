@@ -7,16 +7,16 @@ package org.openapis.openapi.models.shared;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SecurityOption2 {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query")
-    public SchemeAPIKey apiKey;
-    public SecurityOption2 withApiKey(SchemeAPIKey apiKey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=api_key")
+    public String apiKey;
+    public SecurityOption2 withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public SchemeStreamAuthType streamAuthType;
-    public SecurityOption2 withStreamAuthType(SchemeStreamAuthType streamAuthType) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Stream-Auth-Type")
+    public String streamAuthType;
+    public SecurityOption2 withStreamAuthType(String streamAuthType) {
         this.streamAuthType = streamAuthType;
         return this;
     }

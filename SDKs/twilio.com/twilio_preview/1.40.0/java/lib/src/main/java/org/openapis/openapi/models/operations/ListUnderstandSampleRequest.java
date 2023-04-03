@@ -4,34 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListUnderstandSampleRequest {
-    
-    public ListUnderstandSamplePathParams pathParams;
-    public ListUnderstandSampleRequest withPathParams(ListUnderstandSamplePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique ID of the Assistant.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public ListUnderstandSampleRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
-    
-    public ListUnderstandSampleQueryParams queryParams;
-    public ListUnderstandSampleRequest withQueryParams(ListUnderstandSampleQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * An ISO language-country string of the sample.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Language")
+    public String language;
+    public ListUnderstandSampleRequest withLanguage(String language) {
+        this.language = language;
         return this;
     }
     
-    
-    public ListUnderstandSampleSecurity security;
-    public ListUnderstandSampleRequest withSecurity(ListUnderstandSampleSecurity security) {
-        this.security = security;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListUnderstandSampleRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListUnderstandSampleRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public String serverURL;
-    public ListUnderstandSampleRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListUnderstandSampleRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * The unique ID of the Task associated with this Sample.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TaskSid")
+    public String taskSid;
+    public ListUnderstandSampleRequest withTaskSid(String taskSid) {
+        this.taskSid = taskSid;
         return this;
     }
     

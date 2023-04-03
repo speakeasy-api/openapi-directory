@@ -46,7 +46,7 @@ public class Attachments {
      */
     public org.openapis.openapi.models.operations.RetrieveattachmentResponse retrieveattachment(org.openapis.openapi.models.operations.RetrieveattachmentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveattachmentPathParams.class, baseUrl, "/api/dataentities/{acronym}/documents/{id}/{field}/attachments/{file-name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveattachmentRequest.class, baseUrl, "/api/dataentities/{acronym}/documents/{id}/{field}/attachments/{file-name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -84,12 +84,12 @@ public class Attachments {
      */
     public org.openapis.openapi.models.operations.SaveattachmentResponse saveattachment(org.openapis.openapi.models.operations.SaveattachmentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SaveattachmentPathParams.class, baseUrl, "/api/dataentities/{acronym}/documents/{id}/{field}/attachments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SaveattachmentRequest.class, baseUrl, "/api/dataentities/{acronym}/documents/{id}/{field}/attachments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         req.setBody(serializedRequestBody);
         
         

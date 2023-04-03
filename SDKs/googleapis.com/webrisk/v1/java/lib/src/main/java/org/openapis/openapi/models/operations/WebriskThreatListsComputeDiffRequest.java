@@ -4,20 +4,166 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WebriskThreatListsComputeDiffRequest {
-    
-    public WebriskThreatListsComputeDiffQueryParams queryParams;
-    public WebriskThreatListsComputeDiffRequest withQueryParams(WebriskThreatListsComputeDiffQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public WebriskThreatListsComputeDiffRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public WebriskThreatListsComputeDiffRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public WebriskThreatListsComputeDiffSecurity security;
-    public WebriskThreatListsComputeDiffRequest withSecurity(WebriskThreatListsComputeDiffSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public WebriskThreatListsComputeDiffRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public WebriskThreatListsComputeDiffRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Sets the maximum number of entries that the client is willing to have in the local database. This should be a power of 2 between 2**10 and 2**20. If zero, no database size limit is set.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=constraints.maxDatabaseEntries")
+    public Long constraintsMaxDatabaseEntries;
+    public WebriskThreatListsComputeDiffRequest withConstraintsMaxDatabaseEntries(Long constraintsMaxDatabaseEntries) {
+        this.constraintsMaxDatabaseEntries = constraintsMaxDatabaseEntries;
+        return this;
+    }
+    
+    /**
+     * The maximum size in number of entries. The diff will not contain more entries than this value. This should be a power of 2 between 2**10 and 2**20. If zero, no diff size limit is set.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=constraints.maxDiffEntries")
+    public Long constraintsMaxDiffEntries;
+    public WebriskThreatListsComputeDiffRequest withConstraintsMaxDiffEntries(Long constraintsMaxDiffEntries) {
+        this.constraintsMaxDiffEntries = constraintsMaxDiffEntries;
+        return this;
+    }
+    
+    /**
+     * The compression types supported by the client.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=constraints.supportedCompressions")
+    public WebriskThreatListsComputeDiffConstraintsSupportedCompressionsEnum[] constraintsSupportedCompressions;
+    public WebriskThreatListsComputeDiffRequest withConstraintsSupportedCompressions(WebriskThreatListsComputeDiffConstraintsSupportedCompressionsEnum[] constraintsSupportedCompressions) {
+        this.constraintsSupportedCompressions = constraintsSupportedCompressions;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public WebriskThreatListsComputeDiffRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public WebriskThreatListsComputeDiffRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public WebriskThreatListsComputeDiffRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public WebriskThreatListsComputeDiffRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public WebriskThreatListsComputeDiffRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Required. The threat list to update. Only a single ThreatType should be specified per request. If you want to handle multiple ThreatTypes, you must make one request per ThreatType.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=threatType")
+    public WebriskThreatListsComputeDiffThreatTypeEnum threatType;
+    public WebriskThreatListsComputeDiffRequest withThreatType(WebriskThreatListsComputeDiffThreatTypeEnum threatType) {
+        this.threatType = threatType;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public WebriskThreatListsComputeDiffRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public WebriskThreatListsComputeDiffRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
+        return this;
+    }
+    
+    /**
+     * The current version token of the client for the requested list (the client version that was received from the last successful diff). If the client does not have a version token (this is the first time calling ComputeThreatListDiff), this may be left empty and a full database snapshot will be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=versionToken")
+    public String versionToken;
+    public WebriskThreatListsComputeDiffRequest withVersionToken(String versionToken) {
+        this.versionToken = versionToken;
         return this;
     }
     

@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetListingCarFsboIdRequest {
-    
-    public GetListingCarFsboIdPathParams pathParams;
-    public GetListingCarFsboIdRequest withPathParams(GetListingCarFsboIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The API Authentication Key. Mandatory with all API calls.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetListingCarFsboIdRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    /**
+     * Flag on whether to include api_key in response API urls (if any)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=append_api_key")
+    public Boolean appendApiKey;
+    public GetListingCarFsboIdRequest withAppendApiKey(Boolean appendApiKey) {
+        this.appendApiKey = appendApiKey;
+        return this;
+    }
     
-    public GetListingCarFsboIdQueryParams queryParams;
-    public GetListingCarFsboIdRequest withQueryParams(GetListingCarFsboIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Listing id to get all the listing attributes
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetListingCarFsboIdRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * To include_relevant_links. Default is true
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_relevant_links")
+    public Boolean includeRelevantLinks;
+    public GetListingCarFsboIdRequest withIncludeRelevantLinks(Boolean includeRelevantLinks) {
+        this.includeRelevantLinks = includeRelevantLinks;
         return this;
     }
     

@@ -4,27 +4,226 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DfareportingBillingProfilesListRequest {
-    
-    public DfareportingBillingProfilesListPathParams pathParams;
-    public DfareportingBillingProfilesListRequest withPathParams(DfareportingBillingProfilesListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public DfareportingBillingProfilesListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public DfareportingBillingProfilesListQueryParams queryParams;
-    public DfareportingBillingProfilesListRequest withQueryParams(DfareportingBillingProfilesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public DfareportingBillingProfilesListRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DfareportingBillingProfilesListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public DfareportingBillingProfilesListSecurity security;
-    public DfareportingBillingProfilesListRequest withSecurity(DfareportingBillingProfilesListSecurity security) {
-        this.security = security;
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public DfareportingBillingProfilesListRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Select only billing profile with currency.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currency_code")
+    public String currencyCode;
+    public DfareportingBillingProfilesListRequest withCurrencyCode(String currencyCode) {
+        this.currencyCode = currencyCode;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DfareportingBillingProfilesListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Select only billing profile with these IDs.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids")
+    public String[] ids;
+    public DfareportingBillingProfilesListRequest withIds(String[] ids) {
+        this.ids = ids;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DfareportingBillingProfilesListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Maximum number of results to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public DfareportingBillingProfilesListRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * Allows searching for billing profiles by name. Wildcards (*) are allowed. For example, "profile*2020" will return objects with names like "profile June 2020", "profile April 2020", or simply "profile 2020". Most of the searches also add wildcards implicitly at the start and the end of the search string. For example, a search string of "profile" will match objects with name "my profile", "profile 2021", or simply "profile".
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public DfareportingBillingProfilesListRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DfareportingBillingProfilesListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Select only billing profile which is suggested for the currency_code &amp; subaccount_id using the Billing Suggestion API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onlySuggestion")
+    public Boolean onlySuggestion;
+    public DfareportingBillingProfilesListRequest withOnlySuggestion(Boolean onlySuggestion) {
+        this.onlySuggestion = onlySuggestion;
+        return this;
+    }
+    
+    /**
+     * Value of the nextPageToken from the previous result page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public DfareportingBillingProfilesListRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DfareportingBillingProfilesListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * User profile ID associated with this request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
+    public String profileId;
+    public DfareportingBillingProfilesListRequest withProfileId(String profileId) {
+        this.profileId = profileId;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DfareportingBillingProfilesListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Field by which to sort the list.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortField")
+    public DfareportingBillingProfilesListSortFieldEnum sortField;
+    public DfareportingBillingProfilesListRequest withSortField(DfareportingBillingProfilesListSortFieldEnum sortField) {
+        this.sortField = sortField;
+        return this;
+    }
+    
+    /**
+     * Order of sorted results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortOrder")
+    public DfareportingBillingProfilesListSortOrderEnum sortOrder;
+    public DfareportingBillingProfilesListRequest withSortOrder(DfareportingBillingProfilesListSortOrderEnum sortOrder) {
+        this.sortOrder = sortOrder;
+        return this;
+    }
+    
+    /**
+     * Select only billing profile with the specified status.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public DfareportingBillingProfilesListStatusEnum[] status;
+    public DfareportingBillingProfilesListRequest withStatus(DfareportingBillingProfilesListStatusEnum[] status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * Select only billing profile with the specified subaccount.When only_suggestion is true, only a single subaccount_id is supported.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subaccountIds")
+    public String[] subaccountIds;
+    public DfareportingBillingProfilesListRequest withSubaccountIds(String[] subaccountIds) {
+        this.subaccountIds = subaccountIds;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public DfareportingBillingProfilesListRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public DfareportingBillingProfilesListRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

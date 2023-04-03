@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateAuthorUsingGETRequest {
-    
-    public CreateAuthorUsingGETQueryParams queryParams;
-    public CreateAuthorUsingGETRequest withQueryParams(CreateAuthorUsingGETQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public CreateAuthorUsingGETRequest withName(String name) {
+        this.name = name;
         return this;
     }
     

@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CompareFacesXAmzTargetEnum;
-import org.openapis.openapi.models.operations.CompareFacesHeaders;
 import org.openapis.openapi.models.operations.CompareFacesRequest;
 import org.openapis.openapi.models.operations.CompareFacesResponse;
 import org.openapis.openapi.models.shared.CompareFacesRequest;
@@ -31,44 +30,40 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CompareFacesRequest req = new CompareFacesRequest() {{
-                headers = new CompareFacesHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "RekognitionService.CompareFaces";
-                }};
-                request = new CompareFacesRequest() {{
-                    qualityFilter = "HIGH";
-                    similarityThreshold = 4236.55;
+                compareFacesRequest = new CompareFacesRequest() {{
+                    qualityFilter = "LOW";
+                    similarityThreshold = 5928.45;
                     sourceImage = new Image() {{
-                        bytes = "error";
+                        bytes = "distinctio";
                         s3Object = new S3Object() {{
-                            bucket = "deserunt";
-                            name = "suscipit";
-                            version = "iure";
+                            bucket = "quibusdam";
+                            name = "unde";
+                            version = "nulla";
                         }};
                     }};
                     targetImage = new Image() {{
-                        bytes = "magnam";
+                        bytes = "corrupti";
                         s3Object = new S3Object() {{
-                            bucket = "debitis";
-                            name = "ipsa";
-                            version = "delectus";
+                            bucket = "illum";
+                            name = "vel";
+                            version = "error";
                         }};
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "deserunt";
+                xAmzContentSha256 = "suscipit";
+                xAmzCredential = "iure";
+                xAmzDate = "magnam";
+                xAmzSecurityToken = "debitis";
+                xAmzSignature = "ipsa";
+                xAmzSignedHeaders = "delectus";
+                xAmzTarget = "RekognitionService.CompareFaces";
+            }}            
 
             CompareFacesResponse res = sdk.compareFaces(req);
 
@@ -82,7 +77,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

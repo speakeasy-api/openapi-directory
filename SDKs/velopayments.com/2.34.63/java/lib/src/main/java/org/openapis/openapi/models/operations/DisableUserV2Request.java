@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisableUserV2Request {
-    
-    public DisableUserV2PathParams pathParams;
-    public DisableUserV2Request withPathParams(DisableUserV2PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The UUID of the User.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public DisableUserV2Request withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

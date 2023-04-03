@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPartnersStoresJsonRequest {
+    /**
+     * Partner authentication token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=auth_token")
+    public String authToken;
+    public GetPartnersStoresJsonRequest withAuthToken(String authToken) {
+        this.authToken = authToken;
+        return this;
+    }
     
-    public GetPartnersStoresJsonQueryParams queryParams;
-    public GetPartnersStoresJsonRequest withQueryParams(GetPartnersStoresJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Statistics start date. Should be in format 'Y-m-d'.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
+    public String from;
+    public GetPartnersStoresJsonRequest withFrom(String from) {
+        this.from = from;
+        return this;
+    }
+    
+    /**
+     * List page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetPartnersStoresJsonRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Partner code.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=partner_code")
+    public String partnerCode;
+    public GetPartnersStoresJsonRequest withPartnerCode(String partnerCode) {
+        this.partnerCode = partnerCode;
+        return this;
+    }
+    
+    /**
+     * Statistics end date. Should be in format 'Y-m-d'.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
+    public String to;
+    public GetPartnersStoresJsonRequest withTo(String to) {
+        this.to = to;
         return this;
     }
     

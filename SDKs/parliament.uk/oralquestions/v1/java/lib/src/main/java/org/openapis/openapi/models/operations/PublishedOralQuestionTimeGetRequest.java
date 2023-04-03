@@ -4,13 +4,87 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PublishedOralQuestionTimeGetRequest {
+    /**
+     * Which answering body is to respond. A list of answering bodies can be found &lt;a target="_blank" href="http://data.parliament.uk/membersdataplatform/services/mnis/referencedata/AnsweringBodies/"&gt;here&lt;/a&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.answeringBodyIds")
+    public Integer[] parametersAnsweringBodyIds;
+    public PublishedOralQuestionTimeGetRequest withParametersAnsweringBodyIds(Integer[] parametersAnsweringBodyIds) {
+        this.parametersAnsweringBodyIds = parametersAnsweringBodyIds;
+        return this;
+    }
     
-    public PublishedOralQuestionTimeGetQueryParams queryParams;
-    public PublishedOralQuestionTimeGetRequest withQueryParams(PublishedOralQuestionTimeGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Oral Questions Time where the answering date has been set on or before the date provided. Date format YYYY-MM-DD.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.answeringDateEnd")
+    public OffsetDateTime parametersAnsweringDateEnd;
+    public PublishedOralQuestionTimeGetRequest withParametersAnsweringDateEnd(OffsetDateTime parametersAnsweringDateEnd) {
+        this.parametersAnsweringDateEnd = parametersAnsweringDateEnd;
+        return this;
+    }
+    
+    /**
+     * Oral Questions Time where the answering date has been set on or after the date provided. Date format YYYY-MM-DD.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.answeringDateStart")
+    public OffsetDateTime parametersAnsweringDateStart;
+    public PublishedOralQuestionTimeGetRequest withParametersAnsweringDateStart(OffsetDateTime parametersAnsweringDateStart) {
+        this.parametersAnsweringDateStart = parametersAnsweringDateStart;
+        return this;
+    }
+    
+    /**
+     * Oral Questions Time where the deadline date has been set on or before the date provided. Date format YYYY-MM-DD.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.deadlineDateEnd")
+    public OffsetDateTime parametersDeadlineDateEnd;
+    public PublishedOralQuestionTimeGetRequest withParametersDeadlineDateEnd(OffsetDateTime parametersDeadlineDateEnd) {
+        this.parametersDeadlineDateEnd = parametersDeadlineDateEnd;
+        return this;
+    }
+    
+    /**
+     * Oral Questions Time where the deadline date has been set on or after the date provided. Date format YYYY-MM-DD.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.deadlineDateStart")
+    public OffsetDateTime parametersDeadlineDateStart;
+    public PublishedOralQuestionTimeGetRequest withParametersDeadlineDateStart(OffsetDateTime parametersDeadlineDateStart) {
+        this.parametersDeadlineDateStart = parametersDeadlineDateStart;
+        return this;
+    }
+    
+    /**
+     * Identifier of the OQT
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.oralQuestionTimeId")
+    public Integer parametersOralQuestionTimeId;
+    public PublishedOralQuestionTimeGetRequest withParametersOralQuestionTimeId(Integer parametersOralQuestionTimeId) {
+        this.parametersOralQuestionTimeId = parametersOralQuestionTimeId;
+        return this;
+    }
+    
+    /**
+     * The number of records to skip from the first, default is 0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.skip")
+    public Integer parametersSkip;
+    public PublishedOralQuestionTimeGetRequest withParametersSkip(Integer parametersSkip) {
+        this.parametersSkip = parametersSkip;
+        return this;
+    }
+    
+    /**
+     * The number of records to return, default is 25, maximum is 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.take")
+    public Integer parametersTake;
+    public PublishedOralQuestionTimeGetRequest withParametersTake(Integer parametersTake) {
+        this.parametersTake = parametersTake;
         return this;
     }
     

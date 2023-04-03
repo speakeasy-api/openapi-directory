@@ -18,10 +18,9 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesCreateSecurity;
-import org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesCreatePathParams;
-import org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesCreateQueryParams;
 import org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesCreateRequest;
 import org.openapis.openapi.models.operations.ClouddeployProjectsLocationsDeliveryPipelinesCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.DeliveryPipelineInput;
 import org.openapis.openapi.models.shared.SerialPipeline;
 import org.openapis.openapi.models.shared.Stage;
@@ -40,10 +39,7 @@ import org.openapis.openapi.models.shared.PipelineCondition;
 import org.openapis.openapi.models.shared.TargetsTypeCondition;
 import org.openapis.openapi.models.shared.TargetsPresentCondition;
 import org.openapis.openapi.models.shared.PipelineReadyCondition;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -52,212 +48,133 @@ public class Application {
                 .build();
 
             ClouddeployProjectsLocationsDeliveryPipelinesCreateRequest req = new ClouddeployProjectsLocationsDeliveryPipelinesCreateRequest() {{
-                security = new ClouddeployProjectsLocationsDeliveryPipelinesCreateSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new ClouddeployProjectsLocationsDeliveryPipelinesCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new ClouddeployProjectsLocationsDeliveryPipelinesCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    deliveryPipelineId = "nulla";
-                    fields = "corrupti";
-                    key = "illum";
-                    oauthToken = "vel";
-                    prettyPrint = false;
-                    quotaUser = "error";
-                    requestId = "deserunt";
-                    uploadType = "suscipit";
-                    uploadProtocol = "iure";
-                    validateOnly = false;
-                }};
-                request = new DeliveryPipelineInput() {{
+                dollarXgafv = "2";
+                deliveryPipelineInput = new DeliveryPipelineInput() {{
                     annotations = new java.util.HashMap<String, String>() {{
-                        put("debitis", "ipsa");
-                        put("delectus", "tempora");
+                        put("distinctio", "quibusdam");
+                        put("unde", "nulla");
+                        put("corrupti", "illum");
                     }};
                     condition = new PipelineCondition() {{
                         pipelineReadyCondition = new PipelineReadyCondition() {{
                             status = false;
-                            updateTime = "suscipit";
+                            updateTime = "vel";
                         }};
                         targetsPresentCondition = new TargetsPresentCondition() {{
                             missingTargets = new String[]{{
-                                add("minus"),
-                                add("placeat"),
+                                add("deserunt"),
+                                add("suscipit"),
+                                add("iure"),
                             }};
                             status = false;
-                            updateTime = "voluptatum";
+                            updateTime = "magnam";
                         }};
                         targetsTypeCondition = new TargetsTypeCondition() {{
-                            errorDetails = "iusto";
+                            errorDetails = "debitis";
                             status = false;
                         }};
                     }};
-                    description = "excepturi";
-                    etag = "nisi";
+                    description = "ipsa";
+                    etag = "delectus";
                     labels = new java.util.HashMap<String, String>() {{
-                        put("temporibus", "ab");
-                        put("quis", "veritatis");
-                        put("deserunt", "perferendis");
-                        put("ipsam", "repellendus");
+                        put("suscipit", "molestiae");
+                        put("minus", "placeat");
                     }};
-                    name = "sapiente";
+                    name = "voluptatum";
                     serialPipeline = new SerialPipeline() {{
                         stages = new org.openapis.openapi.models.shared.Stage[]{{
                             add(new Stage() {{
                                 profiles = new String[]{{
-                                    add("at"),
+                                    add("nisi"),
+                                    add("recusandae"),
+                                    add("temporibus"),
                                 }};
                                 strategy = new Strategy() {{
                                     canary = new Canary() {{
                                         canaryDeployment = new CanaryDeployment() {{
                                             percentages = new Integer[]{{
-                                                add(978619),
-                                                add(473608),
-                                                add(799159),
-                                                add(800911),
+                                                add(337396),
                                             }};
                                             verify = false;
                                         }};
                                         customCanaryDeployment = new CustomCanaryDeployment() {{
                                             phaseConfigs = new org.openapis.openapi.models.shared.PhaseConfig[]{{
                                                 add(new PhaseConfig() {{
-                                                    percentage = 520478;
-                                                    phaseId = "porro";
+                                                    percentage = 648172;
+                                                    phaseId = "perferendis";
                                                     profiles = new String[]{{
-                                                        add("dicta"),
-                                                        add("nam"),
-                                                        add("officia"),
+                                                        add("repellendus"),
+                                                        add("sapiente"),
                                                     }};
                                                     verify = false;
                                                 }}),
+                                            }};
+                                        }};
+                                        runtimeConfig = new RuntimeConfig() {{
+                                            cloudRun = new CloudRunConfig() {{
+                                                automaticTrafficControl = false;
+                                            }};
+                                            kubernetes = new KubernetesConfig() {{
+                                                gatewayServiceMesh = new GatewayServiceMesh() {{
+                                                    deployment = "quo";
+                                                    httpRoute = "odit";
+                                                    service = "at";
+                                                }};
+                                                serviceNetworking = new ServiceNetworking() {{
+                                                    deployment = "at";
+                                                    service = "maiores";
+                                                }};
+                                            }};
+                                        }};
+                                    }};
+                                    standard = new Standard() {{
+                                        verify = false;
+                                    }};
+                                }};
+                                targetId = "molestiae";
+                            }}),
+                            add(new Stage() {{
+                                profiles = new String[]{{
+                                    add("quod"),
+                                    add("esse"),
+                                    add("totam"),
+                                    add("porro"),
+                                }};
+                                strategy = new Strategy() {{
+                                    canary = new Canary() {{
+                                        canaryDeployment = new CanaryDeployment() {{
+                                            percentages = new Integer[]{{
+                                                add(118274),
+                                                add(720633),
+                                                add(639921),
+                                            }};
+                                            verify = false;
+                                        }};
+                                        customCanaryDeployment = new CustomCanaryDeployment() {{
+                                            phaseConfigs = new org.openapis.openapi.models.shared.PhaseConfig[]{{
                                                 add(new PhaseConfig() {{
-                                                    percentage = 582020;
-                                                    phaseId = "fugit";
+                                                    percentage = 143353;
+                                                    phaseId = "deleniti";
                                                     profiles = new String[]{{
-                                                        add("hic"),
                                                         add("optio"),
                                                         add("totam"),
-                                                    }};
-                                                    verify = false;
-                                                }}),
-                                            }};
-                                        }};
-                                        runtimeConfig = new RuntimeConfig() {{
-                                            cloudRun = new CloudRunConfig() {{
-                                                automaticTrafficControl = false;
-                                            }};
-                                            kubernetes = new KubernetesConfig() {{
-                                                gatewayServiceMesh = new GatewayServiceMesh() {{
-                                                    deployment = "beatae";
-                                                    httpRoute = "commodi";
-                                                    service = "molestiae";
-                                                }};
-                                                serviceNetworking = new ServiceNetworking() {{
-                                                    deployment = "modi";
-                                                    service = "qui";
-                                                }};
-                                            }};
-                                        }};
-                                    }};
-                                    standard = new Standard() {{
-                                        verify = false;
-                                    }};
-                                }};
-                                targetId = "impedit";
-                            }}),
-                            add(new Stage() {{
-                                profiles = new String[]{{
-                                    add("esse"),
-                                    add("ipsum"),
-                                    add("excepturi"),
-                                }};
-                                strategy = new Strategy() {{
-                                    canary = new Canary() {{
-                                        canaryDeployment = new CanaryDeployment() {{
-                                            percentages = new Integer[]{{
-                                                add(18789),
-                                            }};
-                                            verify = false;
-                                        }};
-                                        customCanaryDeployment = new CustomCanaryDeployment() {{
-                                            phaseConfigs = new org.openapis.openapi.models.shared.PhaseConfig[]{{
-                                                add(new PhaseConfig() {{
-                                                    percentage = 617636;
-                                                    phaseId = "sed";
-                                                    profiles = new String[]{{
-                                                        add("dolor"),
-                                                        add("natus"),
-                                                        add("laboriosam"),
+                                                        add("beatae"),
+                                                        add("commodi"),
                                                     }};
                                                     verify = false;
                                                 }}),
                                                 add(new PhaseConfig() {{
-                                                    percentage = 943749;
-                                                    phaseId = "saepe";
+                                                    percentage = 473600;
+                                                    phaseId = "modi";
                                                     profiles = new String[]{{
-                                                        add("in"),
-                                                        add("corporis"),
-                                                        add("iste"),
+                                                        add("impedit"),
                                                     }};
                                                     verify = false;
                                                 }}),
-                                            }};
-                                        }};
-                                        runtimeConfig = new RuntimeConfig() {{
-                                            cloudRun = new CloudRunConfig() {{
-                                                automaticTrafficControl = false;
-                                            }};
-                                            kubernetes = new KubernetesConfig() {{
-                                                gatewayServiceMesh = new GatewayServiceMesh() {{
-                                                    deployment = "iure";
-                                                    httpRoute = "saepe";
-                                                    service = "quidem";
-                                                }};
-                                                serviceNetworking = new ServiceNetworking() {{
-                                                    deployment = "architecto";
-                                                    service = "ipsa";
-                                                }};
-                                            }};
-                                        }};
-                                    }};
-                                    standard = new Standard() {{
-                                        verify = false;
-                                    }};
-                                }};
-                                targetId = "reiciendis";
-                            }}),
-                            add(new Stage() {{
-                                profiles = new String[]{{
-                                    add("mollitia"),
-                                    add("laborum"),
-                                    add("dolores"),
-                                }};
-                                strategy = new Strategy() {{
-                                    canary = new Canary() {{
-                                        canaryDeployment = new CanaryDeployment() {{
-                                            percentages = new Integer[]{{
-                                                add(358152),
-                                            }};
-                                            verify = false;
-                                        }};
-                                        customCanaryDeployment = new CustomCanaryDeployment() {{
-                                            phaseConfigs = new org.openapis.openapi.models.shared.PhaseConfig[]{{
                                                 add(new PhaseConfig() {{
-                                                    percentage = 750686;
-                                                    phaseId = "enim";
+                                                    percentage = 736918;
+                                                    phaseId = "esse";
                                                     profiles = new String[]{{
-                                                        add("nemo"),
-                                                        add("minima"),
                                                         add("excepturi"),
                                                     }};
                                                     verify = false;
@@ -270,13 +187,13 @@ public class Application {
                                             }};
                                             kubernetes = new KubernetesConfig() {{
                                                 gatewayServiceMesh = new GatewayServiceMesh() {{
-                                                    deployment = "accusantium";
-                                                    httpRoute = "iure";
-                                                    service = "culpa";
+                                                    deployment = "aspernatur";
+                                                    httpRoute = "perferendis";
+                                                    service = "ad";
                                                 }};
                                                 serviceNetworking = new ServiceNetworking() {{
-                                                    deployment = "doloribus";
-                                                    service = "sapiente";
+                                                    deployment = "natus";
+                                                    service = "sed";
                                                 }};
                                             }};
                                         }};
@@ -285,78 +202,32 @@ public class Application {
                                         verify = false;
                                     }};
                                 }};
-                                targetId = "architecto";
-                            }}),
-                            add(new Stage() {{
-                                profiles = new String[]{{
-                                    add("dolorem"),
-                                    add("culpa"),
-                                    add("consequuntur"),
-                                }};
-                                strategy = new Strategy() {{
-                                    canary = new Canary() {{
-                                        canaryDeployment = new CanaryDeployment() {{
-                                            percentages = new Integer[]{{
-                                                add(653108),
-                                                add(581850),
-                                                add(253291),
-                                                add(414369),
-                                            }};
-                                            verify = false;
-                                        }};
-                                        customCanaryDeployment = new CustomCanaryDeployment() {{
-                                            phaseConfigs = new org.openapis.openapi.models.shared.PhaseConfig[]{{
-                                                add(new PhaseConfig() {{
-                                                    percentage = 474697;
-                                                    phaseId = "velit";
-                                                    profiles = new String[]{{
-                                                        add("quia"),
-                                                        add("quis"),
-                                                        add("vitae"),
-                                                    }};
-                                                    verify = false;
-                                                }}),
-                                                add(new PhaseConfig() {{
-                                                    percentage = 674752;
-                                                    phaseId = "animi";
-                                                    profiles = new String[]{{
-                                                        add("odit"),
-                                                        add("quo"),
-                                                    }};
-                                                    verify = false;
-                                                }}),
-                                            }};
-                                        }};
-                                        runtimeConfig = new RuntimeConfig() {{
-                                            cloudRun = new CloudRunConfig() {{
-                                                automaticTrafficControl = false;
-                                            }};
-                                            kubernetes = new KubernetesConfig() {{
-                                                gatewayServiceMesh = new GatewayServiceMesh() {{
-                                                    deployment = "sequi";
-                                                    httpRoute = "tenetur";
-                                                    service = "ipsam";
-                                                }};
-                                                serviceNetworking = new ServiceNetworking() {{
-                                                    deployment = "id";
-                                                    service = "possimus";
-                                                }};
-                                            }};
-                                        }};
-                                    }};
-                                    standard = new Standard() {{
-                                        verify = false;
-                                    }};
-                                }};
-                                targetId = "aut";
+                                targetId = "iste";
                             }}),
                         }};
                     }};
                     suspended = false;
                 }};
-            }};            
+                accessToken = "dolor";
+                alt = "media";
+                callback = "laboriosam";
+                deliveryPipelineId = "hic";
+                fields = "saepe";
+                key = "fuga";
+                oauthToken = "in";
+                parent = "corporis";
+                prettyPrint = false;
+                quotaUser = "iste";
+                requestId = "iure";
+                uploadType = "saepe";
+                uploadProtocol = "quidem";
+                validateOnly = false;
+            }}            
 
-            ClouddeployProjectsLocationsDeliveryPipelinesCreateResponse res = sdk.projects.clouddeployProjectsLocationsDeliveryPipelinesCreate(req);
+            ClouddeployProjectsLocationsDeliveryPipelinesCreateResponse res = sdk.projects.clouddeployProjectsLocationsDeliveryPipelinesCreate(req, new ClouddeployProjectsLocationsDeliveryPipelinesCreateSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.operation.isPresent()) {
                 // handle response
@@ -368,7 +239,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### projects

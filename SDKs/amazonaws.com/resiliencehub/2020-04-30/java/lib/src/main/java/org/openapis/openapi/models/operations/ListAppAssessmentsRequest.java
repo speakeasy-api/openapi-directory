@@ -4,20 +4,135 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListAppAssessmentsRequest {
-    
-    public ListAppAssessmentsQueryParams queryParams;
-    public ListAppAssessmentsRequest withQueryParams(ListAppAssessmentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListAppAssessmentsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListAppAssessmentsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public ListAppAssessmentsHeaders headers;
-    public ListAppAssessmentsRequest withHeaders(ListAppAssessmentsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListAppAssessmentsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListAppAssessmentsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListAppAssessmentsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListAppAssessmentsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListAppAssessmentsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:&lt;code&gt;partition&lt;/code&gt;:resiliencehub:&lt;code&gt;region&lt;/code&gt;:&lt;code&gt;account&lt;/code&gt;:app/&lt;code&gt;app-id&lt;/code&gt;. For more information about ARNs, see &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt; Amazon Resource Names (ARNs)&lt;/a&gt; in the &lt;i&gt;AWS General Reference&lt;/i&gt; guide.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appArn")
+    public String appArn;
+    public ListAppAssessmentsRequest withAppArn(String appArn) {
+        this.appArn = appArn;
+        return this;
+    }
+    
+    /**
+     * The name for the assessment.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assessmentName")
+    public String assessmentName;
+    public ListAppAssessmentsRequest withAssessmentName(String assessmentName) {
+        this.assessmentName = assessmentName;
+        return this;
+    }
+    
+    /**
+     * The current status of the assessment for the resiliency policy.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assessmentStatus")
+    public org.openapis.openapi.models.shared.AssessmentStatusEnum[] assessmentStatus;
+    public ListAppAssessmentsRequest withAssessmentStatus(org.openapis.openapi.models.shared.AssessmentStatusEnum[] assessmentStatus) {
+        this.assessmentStatus = assessmentStatus;
+        return this;
+    }
+    
+    /**
+     * The current status of compliance for the resiliency policy.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=complianceStatus")
+    public ListAppAssessmentsComplianceStatusEnum complianceStatus;
+    public ListAppAssessmentsRequest withComplianceStatus(ListAppAssessmentsComplianceStatusEnum complianceStatus) {
+        this.complianceStatus = complianceStatus;
+        return this;
+    }
+    
+    /**
+     * Specifies the entity that invoked a specific assessment, either a &lt;code&gt;User&lt;/code&gt; or the &lt;code&gt;System&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=invoker")
+    public ListAppAssessmentsInvokerEnum invoker;
+    public ListAppAssessmentsRequest withInvoker(ListAppAssessmentsInvokerEnum invoker) {
+        this.invoker = invoker;
+        return this;
+    }
+    
+    /**
+     * The maximum number of results to include in the response. If more results exist than the specified &lt;code&gt;MaxResults&lt;/code&gt; value, a token is included in the response so that the remaining results can be retrieved.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public ListAppAssessmentsRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * Null, or the token from a previous call to get the next set of results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
+    public String nextToken;
+    public ListAppAssessmentsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * The default is to sort by ascending &lt;b&gt;startTime&lt;/b&gt;. To sort by descending &lt;b&gt;startTime&lt;/b&gt;, set reverseOrder to &lt;code&gt;true&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reverseOrder")
+    public Boolean reverseOrder;
+    public ListAppAssessmentsRequest withReverseOrder(Boolean reverseOrder) {
+        this.reverseOrder = reverseOrder;
         return this;
     }
     

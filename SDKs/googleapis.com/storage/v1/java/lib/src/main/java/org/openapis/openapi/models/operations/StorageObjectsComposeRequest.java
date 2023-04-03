@@ -7,31 +7,160 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StorageObjectsComposeRequest {
-    
-    public StorageObjectsComposePathParams pathParams;
-    public StorageObjectsComposeRequest withPathParams(StorageObjectsComposePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public StorageObjectsComposeQueryParams queryParams;
-    public StorageObjectsComposeRequest withQueryParams(StorageObjectsComposeQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ComposeRequest request;
-    public StorageObjectsComposeRequest withRequest(org.openapis.openapi.models.shared.ComposeRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ComposeRequest composeRequest;
+    public StorageObjectsComposeRequest withComposeRequest(org.openapis.openapi.models.shared.ComposeRequest composeRequest) {
+        this.composeRequest = composeRequest;
         return this;
     }
     
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public StorageObjectsComposeRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public StorageObjectsComposeSecurity security;
-    public StorageObjectsComposeRequest withSecurity(StorageObjectsComposeSecurity security) {
-        this.security = security;
+    /**
+     * Name of the bucket containing the source objects. The destination object is stored in this bucket.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destinationBucket")
+    public String destinationBucket;
+    public StorageObjectsComposeRequest withDestinationBucket(String destinationBucket) {
+        this.destinationBucket = destinationBucket;
+        return this;
+    }
+    
+    /**
+     * Name of the new object. For information about how to URL encode object names to be path safe, see Encoding URI Path Parts.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destinationObject")
+    public String destinationObject;
+    public StorageObjectsComposeRequest withDestinationObject(String destinationObject) {
+        this.destinationObject = destinationObject;
+        return this;
+    }
+    
+    /**
+     * Apply a predefined set of access controls to the destination object.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destinationPredefinedAcl")
+    public StorageObjectsComposeDestinationPredefinedACLEnum destinationPredefinedAcl;
+    public StorageObjectsComposeRequest withDestinationPredefinedAcl(StorageObjectsComposeDestinationPredefinedACLEnum destinationPredefinedAcl) {
+        this.destinationPredefinedAcl = destinationPredefinedAcl;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public StorageObjectsComposeRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Makes the operation conditional on whether the object's current generation matches the given value. Setting to 0 makes the operation succeed only if there are no live versions of the object.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifGenerationMatch")
+    public String ifGenerationMatch;
+    public StorageObjectsComposeRequest withIfGenerationMatch(String ifGenerationMatch) {
+        this.ifGenerationMatch = ifGenerationMatch;
+        return this;
+    }
+    
+    /**
+     * Makes the operation conditional on whether the object's current metageneration matches the given value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifMetagenerationMatch")
+    public String ifMetagenerationMatch;
+    public StorageObjectsComposeRequest withIfMetagenerationMatch(String ifMetagenerationMatch) {
+        this.ifMetagenerationMatch = ifMetagenerationMatch;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public StorageObjectsComposeRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Resource name of the Cloud KMS key, of the form projects/my-project/locations/global/keyRings/my-kr/cryptoKeys/my-key, that will be used to encrypt the object. Overrides the object metadata's kms_key_name value, if any.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=kmsKeyName")
+    public String kmsKeyName;
+    public StorageObjectsComposeRequest withKmsKeyName(String kmsKeyName) {
+        this.kmsKeyName = kmsKeyName;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public StorageObjectsComposeRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public StorageObjectsComposeRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public StorageObjectsComposeRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "media", "multipart", "resumable").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public StorageObjectsComposeRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public StorageObjectsComposeRequest withUserIp(String userIp) {
+        this.userIp = userIp;
+        return this;
+    }
+    
+    /**
+     * The project to be billed for this request. Required for Requester Pays buckets.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userProject")
+    public String userProject;
+    public StorageObjectsComposeRequest withUserProject(String userProject) {
+        this.userProject = userProject;
         return this;
     }
     

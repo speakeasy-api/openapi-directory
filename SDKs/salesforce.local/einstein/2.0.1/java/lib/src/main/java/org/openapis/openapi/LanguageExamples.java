@@ -39,25 +39,26 @@ public class LanguageExamples {
      * Get All Examples
      * Returns all the examples for the specified dataset,
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetExamplesResponse getExamples(org.openapis.openapi.models.operations.GetExamplesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetExamplesResponse getExamples(org.openapis.openapi.models.operations.GetExamplesRequest request, org.openapis.openapi.models.operations.GetExamplesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetExamplesPathParams.class, baseUrl, "/v2/language/datasets/{datasetId}/examples", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetExamplesRequest.class, baseUrl, "/v2/language/datasets/{datasetId}/examples", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetExamplesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetExamplesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -85,10 +86,11 @@ public class LanguageExamples {
      * Get All Examples for Label
      * Returns all the examples for the specified label. Returns both uploaded examples and feedback examples.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetExamplesByLabelResponse getExamplesByLabel(org.openapis.openapi.models.operations.GetExamplesByLabelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetExamplesByLabelResponse getExamplesByLabel(org.openapis.openapi.models.operations.GetExamplesByLabelRequest request, org.openapis.openapi.models.operations.GetExamplesByLabelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/language/examples");
         
@@ -96,14 +98,14 @@ public class LanguageExamples {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetExamplesByLabelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetExamplesByLabelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -131,10 +133,11 @@ public class LanguageExamples {
      * Create a Feedback Example
      * Adds a feedback example to the dataset associated with the specified model.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProvideFeedbackResponse provideFeedback(org.openapis.openapi.models.operations.ProvideFeedbackRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProvideFeedbackResponse provideFeedback(org.openapis.openapi.models.operations.ProvideFeedbackRequestBody request, org.openapis.openapi.models.operations.ProvideFeedbackSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/language/feedback");
         
@@ -145,7 +148,7 @@ public class LanguageExamples {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -173,21 +176,22 @@ public class LanguageExamples {
      * Create Examples From a File
      * Adds examples from a .csv, .tsv, or .json file to a dataset.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateDatasetAsyncResponse updateDatasetAsync(org.openapis.openapi.models.operations.UpdateDatasetAsyncRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateDatasetAsyncResponse updateDatasetAsync(org.openapis.openapi.models.operations.UpdateDatasetAsyncRequest request, org.openapis.openapi.models.operations.UpdateDatasetAsyncSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDatasetAsyncPathParams.class, baseUrl, "/v2/language/datasets/{datasetId}/upload", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDatasetAsyncRequest.class, baseUrl, "/v2/language/datasets/{datasetId}/upload", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ClearTranslationCacheRequest {
-    
-    public ClearTranslationCachePathParams pathParams;
-    public ClearTranslationCacheRequest withPathParams(ClearTranslationCachePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Continuous Project File ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=file_id")
+    public Long fileId;
+    public ClearTranslationCacheRequest withFileId(Long fileId) {
+        this.fileId = fileId;
         return this;
     }
     
+    /**
+     * Locale
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
+    public String locale;
+    public ClearTranslationCacheRequest withLocale(String locale) {
+        this.locale = locale;
+        return this;
+    }
     
-    public ClearTranslationCacheQueryParams queryParams;
-    public ClearTranslationCacheRequest withQueryParams(ClearTranslationCacheQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public Long projectId;
+    public ClearTranslationCacheRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     

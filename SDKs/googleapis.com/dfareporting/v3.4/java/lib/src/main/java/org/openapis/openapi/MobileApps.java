@@ -33,25 +33,26 @@ public class MobileApps {
     /**
      * Gets one mobile app by ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingMobileAppsGetResponse dfareportingMobileAppsGet(org.openapis.openapi.models.operations.DfareportingMobileAppsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingMobileAppsGetResponse dfareportingMobileAppsGet(org.openapis.openapi.models.operations.DfareportingMobileAppsGetRequest request, org.openapis.openapi.models.operations.DfareportingMobileAppsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingMobileAppsGetPathParams.class, baseUrl, "/userprofiles/{profileId}/mobileApps/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingMobileAppsGetRequest.class, baseUrl, "/userprofiles/{profileId}/mobileApps/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingMobileAppsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingMobileAppsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,25 +79,26 @@ public class MobileApps {
     /**
      * Retrieves list of available mobile apps.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingMobileAppsListResponse dfareportingMobileAppsList(org.openapis.openapi.models.operations.DfareportingMobileAppsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingMobileAppsListResponse dfareportingMobileAppsList(org.openapis.openapi.models.operations.DfareportingMobileAppsListRequest request, org.openapis.openapi.models.operations.DfareportingMobileAppsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingMobileAppsListPathParams.class, baseUrl, "/userprofiles/{profileId}/mobileApps", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingMobileAppsListRequest.class, baseUrl, "/userprofiles/{profileId}/mobileApps", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingMobileAppsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingMobileAppsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

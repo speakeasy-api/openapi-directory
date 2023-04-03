@@ -7,31 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateInteractionChannelParticipantRequest {
+    /**
+     * The Channel Sid for this Participant.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChannelSid")
+    public String channelSid;
+    public UpdateInteractionChannelParticipantRequest withChannelSid(String channelSid) {
+        this.channelSid = channelSid;
+        return this;
+    }
     
-    public UpdateInteractionChannelParticipantPathParams pathParams;
-    public UpdateInteractionChannelParticipantRequest withPathParams(UpdateInteractionChannelParticipantPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The Interaction Sid for this channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=InteractionSid")
+    public String interactionSid;
+    public UpdateInteractionChannelParticipantRequest withInteractionSid(String interactionSid) {
+        this.interactionSid = interactionSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateInteractionChannelParticipantUpdateInteractionChannelParticipantRequest request;
-    public UpdateInteractionChannelParticipantRequest withRequest(UpdateInteractionChannelParticipantUpdateInteractionChannelParticipantRequest request) {
-        this.request = request;
+    public UpdateInteractionChannelParticipantUpdateInteractionChannelParticipantRequest requestBody;
+    public UpdateInteractionChannelParticipantRequest withRequestBody(UpdateInteractionChannelParticipantUpdateInteractionChannelParticipantRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateInteractionChannelParticipantSecurity security;
-    public UpdateInteractionChannelParticipantRequest withSecurity(UpdateInteractionChannelParticipantSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateInteractionChannelParticipantRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique string created by Twilio to identify an Interaction Channel resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateInteractionChannelParticipantRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

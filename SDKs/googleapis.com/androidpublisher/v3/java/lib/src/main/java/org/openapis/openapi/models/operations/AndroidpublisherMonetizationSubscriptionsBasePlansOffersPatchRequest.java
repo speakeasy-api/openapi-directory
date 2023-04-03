@@ -7,31 +7,180 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchRequest {
-    
-    public AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchPathParams pathParams;
-    public AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchRequest withPathParams(AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchQueryParams queryParams;
-    public AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchRequest withQueryParams(AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SubscriptionOfferInput request;
-    public AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchRequest withRequest(org.openapis.openapi.models.shared.SubscriptionOfferInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SubscriptionOfferInput subscriptionOfferInput;
+    public AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchRequest withSubscriptionOfferInput(org.openapis.openapi.models.shared.SubscriptionOfferInput subscriptionOfferInput) {
+        this.subscriptionOfferInput = subscriptionOfferInput;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchSecurity security;
-    public AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchRequest withSecurity(AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * Required. Immutable. The ID of the base plan to which this offer is an extension.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=basePlanId")
+    public String basePlanId;
+    public AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchRequest withBasePlanId(String basePlanId) {
+        this.basePlanId = basePlanId;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Required. Immutable. Unique ID of this subscription offer. Must be unique within the base plan.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offerId")
+    public String offerId;
+    public AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchRequest withOfferId(String offerId) {
+        this.offerId = offerId;
+        return this;
+    }
+    
+    /**
+     * Required. Immutable. The package name of the app the parent subscription belongs to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=packageName")
+    public String packageName;
+    public AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchRequest withPackageName(String packageName) {
+        this.packageName = packageName;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Required. Immutable. The ID of the parent subscription this offer belongs to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
+    public String productId;
+    public AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchRequest withProductId(String productId) {
+        this.productId = productId;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Required. A string representing version of the available regions being used for the specified resource. The current version is 2022/02.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=regionsVersion.version")
+    public String regionsVersionVersion;
+    public AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchRequest withRegionsVersionVersion(String regionsVersionVersion) {
+        this.regionsVersionVersion = regionsVersionVersion;
+        return this;
+    }
+    
+    /**
+     * Required. The list of fields to be updated.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updateMask")
+    public String updateMask;
+    public AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchRequest withUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public AndroidpublisherMonetizationSubscriptionsBasePlansOffersPatchRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

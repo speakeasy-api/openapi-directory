@@ -41,13 +41,13 @@ public class CashReceipts {
      */
     public org.openapis.openapi.models.operations.CashReceiptsDeleteResponse cashReceiptsDelete(org.openapis.openapi.models.operations.CashReceiptsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CashReceiptsDeletePathParams.class, baseUrl, "/v1/cashReceipts/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CashReceiptsDeleteRequest.class, baseUrl, "/v1/cashReceipts/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CashReceiptsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CashReceiptsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -120,7 +120,7 @@ public class CashReceipts {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CashReceiptsPostResponse cashReceiptsPost(org.openapis.openapi.models.operations.CashReceiptsPostRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CashReceiptsPostResponse cashReceiptsPost(org.openapis.openapi.models.shared.CashReceiptDto request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/cashReceipts");
         
@@ -163,7 +163,7 @@ public class CashReceipts {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CashReceiptsProcessBatchResponse cashReceiptsProcessBatch(org.openapis.openapi.models.operations.CashReceiptsProcessBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CashReceiptsProcessBatchResponse cashReceiptsProcessBatch(org.openapis.openapi.models.shared.BatchItemCashReceiptDto[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/cashReceipts/batch");
         
@@ -208,12 +208,12 @@ public class CashReceipts {
      */
     public org.openapis.openapi.models.operations.CashReceiptsPutResponse cashReceiptsPut(org.openapis.openapi.models.operations.CashReceiptsPutRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CashReceiptsPutPathParams.class, baseUrl, "/v1/cashReceipts/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CashReceiptsPutRequest.class, baseUrl, "/v1/cashReceipts/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "cashReceiptDto", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -251,7 +251,7 @@ public class CashReceipts {
      */
     public org.openapis.openapi.models.operations.GetV1CashReceiptsIdResponse getV1CashReceiptsId(org.openapis.openapi.models.operations.GetV1CashReceiptsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV1CashReceiptsIdPathParams.class, baseUrl, "/v1/cashReceipts/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV1CashReceiptsIdRequest.class, baseUrl, "/v1/cashReceipts/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

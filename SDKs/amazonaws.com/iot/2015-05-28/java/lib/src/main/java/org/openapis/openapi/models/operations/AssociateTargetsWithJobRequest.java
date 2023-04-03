@@ -7,31 +7,79 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AssociateTargetsWithJobRequest {
-    
-    public AssociateTargetsWithJobPathParams pathParams;
-    public AssociateTargetsWithJobRequest withPathParams(AssociateTargetsWithJobPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AssociateTargetsWithJobQueryParams queryParams;
-    public AssociateTargetsWithJobRequest withQueryParams(AssociateTargetsWithJobQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public AssociateTargetsWithJobHeaders headers;
-    public AssociateTargetsWithJobRequest withHeaders(AssociateTargetsWithJobHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public AssociateTargetsWithJobRequestBody request;
-    public AssociateTargetsWithJobRequest withRequest(AssociateTargetsWithJobRequestBody request) {
-        this.request = request;
+    public AssociateTargetsWithJobRequestBody requestBody;
+    public AssociateTargetsWithJobRequest withRequestBody(AssociateTargetsWithJobRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public AssociateTargetsWithJobRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public AssociateTargetsWithJobRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public AssociateTargetsWithJobRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public AssociateTargetsWithJobRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public AssociateTargetsWithJobRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public AssociateTargetsWithJobRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public AssociateTargetsWithJobRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The unique identifier you assigned to this job when it was created.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
+    public String jobId;
+    public AssociateTargetsWithJobRequest withJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The namespace used to indicate that a job is a customer-managed job.&lt;/p&gt; &lt;p&gt;When you specify a value for this parameter, Amazon Web Services IoT Core sends jobs notifications to MQTT topics that contain the value in the following format.&lt;/p&gt; &lt;p&gt; &lt;code&gt;$aws/things/&lt;i&gt;THING_NAME&lt;/i&gt;/jobs/&lt;i&gt;JOB_ID&lt;/i&gt;/notify-namespace-&lt;i&gt;NAMESPACE_ID&lt;/i&gt;/&lt;/code&gt; &lt;/p&gt; &lt;note&gt; &lt;p&gt;The &lt;code&gt;namespaceId&lt;/code&gt; feature is in public preview.&lt;/p&gt; &lt;/note&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=namespaceId")
+    public String namespaceId;
+    public AssociateTargetsWithJobRequest withNamespaceId(String namespaceId) {
+        this.namespaceId = namespaceId;
         return this;
     }
     

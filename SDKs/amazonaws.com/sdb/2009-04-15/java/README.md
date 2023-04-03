@@ -19,7 +19,6 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GETCreateDomainActionEnum;
 import org.openapis.openapi.models.operations.GETCreateDomainVersionEnum;
-import org.openapis.openapi.models.operations.GETCreateDomainQueryParams;
 import org.openapis.openapi.models.operations.GETCreateDomainRequest;
 import org.openapis.openapi.models.operations.GETCreateDomainResponse;
 
@@ -28,24 +27,20 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GETCreateDomainRequest req = new GETCreateDomainRequest() {{
-                queryParams = new GETCreateDomainQueryParams() {{
-                    awsAccessKeyId = "corrupti";
-                    action = "CreateDomain";
-                    domainName = "provident";
-                    signature = "distinctio";
-                    signatureMethod = "quibusdam";
-                    signatureVersion = "unde";
-                    timestamp = "nulla";
-                    version = "2009-04-15";
-                }};
-            }};            
+                awsAccessKeyId = "corrupti";
+                action = "CreateDomain";
+                domainName = "provident";
+                signature = "distinctio";
+                signatureMethod = "quibusdam";
+                signatureVersion = "unde";
+                timestamp = "nulla";
+                version = "2009-04-15";
+            }}            
 
             GETCreateDomainResponse res = sdk.getCreateDomain(req);
 
@@ -59,7 +54,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

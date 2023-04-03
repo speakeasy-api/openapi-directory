@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegenerateWebhookTokenRequest {
-    
-    public RegenerateWebhookTokenPathParams pathParams;
-    public RegenerateWebhookTokenRequest withPathParams(RegenerateWebhookTokenPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Access token required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-access-token")
+    public String evAccessToken;
+    public RegenerateWebhookTokenRequest withEvAccessToken(String evAccessToken) {
+        this.evAccessToken = evAccessToken;
         return this;
     }
     
+    /**
+     * API key required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-api-key")
+    public String evApiKey;
+    public RegenerateWebhookTokenRequest withEvApiKey(String evApiKey) {
+        this.evApiKey = evApiKey;
+        return this;
+    }
     
-    public RegenerateWebhookTokenHeaders headers;
-    public RegenerateWebhookTokenRequest withHeaders(RegenerateWebhookTokenHeaders headers) {
-        this.headers = headers;
+    /**
+     * Webhook ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public RegenerateWebhookTokenRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

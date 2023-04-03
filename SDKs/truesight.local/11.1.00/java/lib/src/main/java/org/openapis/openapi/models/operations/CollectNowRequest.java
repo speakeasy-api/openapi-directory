@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CollectNowRequest {
-    
-    public CollectNowPathParams pathParams;
-    public CollectNowRequest withPathParams(CollectNowPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the device.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deviceId")
+    public Integer deviceId;
+    public CollectNowRequest withDeviceId(Integer deviceId) {
+        this.deviceId = deviceId;
         return this;
     }
     
-    
-    public CollectNowQueryParams queryParams;
-    public CollectNowRequest withQueryParams(CollectNowQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The Monitor Class of the device.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=monitorClass")
+    public String monitorClass;
+    public CollectNowRequest withMonitorClass(String monitorClass) {
+        this.monitorClass = monitorClass;
         return this;
     }
     

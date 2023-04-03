@@ -7,31 +7,27 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDeployedDevicesKeyRequest {
-    
-    public UpdateDeployedDevicesKeyPathParams pathParams;
-    public UpdateDeployedDevicesKeyRequest withPathParams(UpdateDeployedDevicesKeyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FleetSid")
+    public String fleetSid;
+    public UpdateDeployedDevicesKeyRequest withFleetSid(String fleetSid) {
+        this.fleetSid = fleetSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateDeployedDevicesKeyUpdateDeployedDevicesKeyRequest request;
-    public UpdateDeployedDevicesKeyRequest withRequest(UpdateDeployedDevicesKeyUpdateDeployedDevicesKeyRequest request) {
-        this.request = request;
+    public UpdateDeployedDevicesKeyUpdateDeployedDevicesKeyRequest requestBody;
+    public UpdateDeployedDevicesKeyRequest withRequestBody(UpdateDeployedDevicesKeyUpdateDeployedDevicesKeyRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateDeployedDevicesKeySecurity security;
-    public UpdateDeployedDevicesKeyRequest withSecurity(UpdateDeployedDevicesKeySecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateDeployedDevicesKeyRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Provides a 34 character string that uniquely identifies the requested Key credential resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateDeployedDevicesKeyRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

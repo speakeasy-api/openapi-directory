@@ -37,7 +37,7 @@ public class Ontology {
      */
     public org.openapis.openapi.models.operations.GETOntDagsUsingGETResponse getOntDagsUsingGET(org.openapis.openapi.models.operations.GETOntDagsUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETOntDagsUsingGETPathParams.class, baseUrl, "/ontology/ont/{accId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETOntDagsUsingGETRequest.class, baseUrl, "/ontology/ont/{accId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -76,7 +76,7 @@ public class Ontology {
      */
     public org.openapis.openapi.models.operations.GETTermUsingGETResponse getTermUsingGET(org.openapis.openapi.models.operations.GETTermUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETTermUsingGETPathParams.class, baseUrl, "/ontology/term/{accId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETTermUsingGETRequest.class, baseUrl, "/ontology/term/{accId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -115,7 +115,7 @@ public class Ontology {
      */
     public org.openapis.openapi.models.operations.IsDescendantOfUsingGETResponse isDescendantOfUsingGET(org.openapis.openapi.models.operations.IsDescendantOfUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IsDescendantOfUsingGETPathParams.class, baseUrl, "/ontology/term/{accId1}/{accId2}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IsDescendantOfUsingGETRequest.class, baseUrl, "/ontology/term/{accId1}/{accId2}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

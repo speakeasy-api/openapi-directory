@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProjectArticlesRequest {
-    
-    public ProjectArticlesPathParams pathParams;
-    public ProjectArticlesRequest withPathParams(ProjectArticlesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Project Unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public Long projectId;
+    public ProjectArticlesRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     

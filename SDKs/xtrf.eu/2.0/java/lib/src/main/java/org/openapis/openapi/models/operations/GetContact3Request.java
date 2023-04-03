@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContact3Request {
-    
-    public GetContact3PathParams pathParams;
-    public GetContact3Request withPathParams(GetContact3PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * provider's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=providerId")
+    public Long providerId;
+    public GetContact3Request withProviderId(Long providerId) {
+        this.providerId = providerId;
         return this;
     }
     

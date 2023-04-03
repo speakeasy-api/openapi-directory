@@ -46,7 +46,7 @@ public class PlacementGroups {
      */
     public org.openapis.openapi.models.operations.DeletePlacementGroupsIdResponse deletePlacementGroupsId(org.openapis.openapi.models.operations.DeletePlacementGroupsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePlacementGroupsIdPathParams.class, baseUrl, "/placement_groups/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePlacementGroupsIdRequest.class, baseUrl, "/placement_groups/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -85,7 +85,7 @@ public class PlacementGroups {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPlacementGroupsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPlacementGroupsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -124,7 +124,7 @@ public class PlacementGroups {
      */
     public org.openapis.openapi.models.operations.GetPlacementGroupsIdResponse getPlacementGroupsId(org.openapis.openapi.models.operations.GetPlacementGroupsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPlacementGroupsIdPathParams.class, baseUrl, "/placement_groups/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPlacementGroupsIdRequest.class, baseUrl, "/placement_groups/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -162,7 +162,7 @@ public class PlacementGroups {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPlacementGroupsResponse postPlacementGroups(org.openapis.openapi.models.operations.PostPlacementGroupsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPlacementGroupsResponse postPlacementGroups(org.openapis.openapi.models.operations.PostPlacementGroupsCreatePlacementGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/placement_groups");
         
@@ -210,12 +210,12 @@ public class PlacementGroups {
      */
     public org.openapis.openapi.models.operations.PutPlacementGroupsIdResponse putPlacementGroupsId(org.openapis.openapi.models.operations.PutPlacementGroupsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutPlacementGroupsIdPathParams.class, baseUrl, "/placement_groups/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutPlacementGroupsIdRequest.class, baseUrl, "/placement_groups/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

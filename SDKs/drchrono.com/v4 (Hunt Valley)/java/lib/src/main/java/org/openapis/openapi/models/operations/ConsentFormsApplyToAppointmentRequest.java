@@ -4,27 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConsentFormsApplyToAppointmentRequest {
-    
-    public ConsentFormsApplyToAppointmentPathParams pathParams;
-    public ConsentFormsApplyToAppointmentRequest withPathParams(ConsentFormsApplyToAppointmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public ConsentFormsApplyToAppointmentRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     
-    
-    public ConsentFormsApplyToAppointmentQueryParams queryParams;
-    public ConsentFormsApplyToAppointmentRequest withQueryParams(ConsentFormsApplyToAppointmentQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ConsentFormsApplyToAppointmentSecurity security;
-    public ConsentFormsApplyToAppointmentRequest withSecurity(ConsentFormsApplyToAppointmentSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public ConsentFormsApplyToAppointmentRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

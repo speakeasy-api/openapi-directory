@@ -44,7 +44,7 @@ public class Outlets {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OutletsGetAllOutletsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OutletsGetAllOutletsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -112,13 +112,13 @@ public class Outlets {
      */
     public org.openapis.openapi.models.operations.OutletsGetOutletsByGeolocationResponse outletsGetOutletsByGeolocation(org.openapis.openapi.models.operations.OutletsGetOutletsByGeolocationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OutletsGetOutletsByGeolocationPathParams.class, baseUrl, "/v3/outlets/location/{latitude},{longitude}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OutletsGetOutletsByGeolocationRequest.class, baseUrl, "/v3/outlets/location/{latitude},{longitude}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OutletsGetOutletsByGeolocationQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OutletsGetOutletsByGeolocationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

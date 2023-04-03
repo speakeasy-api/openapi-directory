@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGenesBySpeciesUsingGETRequest {
-    
-    public GETGenesBySpeciesUsingGETPathParams pathParams;
-    public GETGenesBySpeciesUsingGETRequest withPathParams(GETGenesBySpeciesUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A list of RGD species type keys can be found in the lookup service
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=speciesTypeKey")
+    public Integer speciesTypeKey;
+    public GETGenesBySpeciesUsingGETRequest withSpeciesTypeKey(Integer speciesTypeKey) {
+        this.speciesTypeKey = speciesTypeKey;
         return this;
     }
     

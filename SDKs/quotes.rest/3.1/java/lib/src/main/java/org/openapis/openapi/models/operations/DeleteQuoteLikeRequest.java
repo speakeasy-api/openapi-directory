@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteQuoteLikeRequest {
-    
-    public DeleteQuoteLikeQueryParams queryParams;
-    public DeleteQuoteLikeRequest withQueryParams(DeleteQuoteLikeQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public DeleteQuoteLikeSecurity security;
-    public DeleteQuoteLikeRequest withSecurity(DeleteQuoteLikeSecurity security) {
-        this.security = security;
+    /**
+     * Quote ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quote_id")
+    public String quoteId;
+    public DeleteQuoteLikeRequest withQuoteId(String quoteId) {
+        this.quoteId = quoteId;
         return this;
     }
     

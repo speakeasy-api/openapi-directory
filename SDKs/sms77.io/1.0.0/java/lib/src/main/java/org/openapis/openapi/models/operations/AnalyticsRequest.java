@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsRequest {
+    /**
+     * End date of the statistics in the format YYYY-MM-DD. By default, the current day.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
+    public String end;
+    public AnalyticsRequest withEnd(String end) {
+        this.end = end;
+        return this;
+    }
     
-    public AnalyticsQueryParams queryParams;
-    public AnalyticsRequest withQueryParams(AnalyticsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Defines the grouping of the data.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group_by")
+    public AnalyticsGroupByEnum groupBy;
+    public AnalyticsRequest withGroupBy(AnalyticsGroupByEnum groupBy) {
+        this.groupBy = groupBy;
+        return this;
+    }
+    
+    /**
+     * Shows only data of a specific label.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=label")
+    public String label;
+    public AnalyticsRequest withLabel(String label) {
+        this.label = label;
+        return this;
+    }
+    
+    /**
+     * Start date of the statistics in the format YYYY-MM-DD. By default, the date of 30 days ago is set.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public String start;
+    public AnalyticsRequest withStart(String start) {
+        this.start = start;
+        return this;
+    }
+    
+    /**
+     * Receive the data only for the main account, all your (sub-)accounts or only for specific subaccounts.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subaccounts")
+    public String subaccounts;
+    public AnalyticsRequest withSubaccounts(String subaccounts) {
+        this.subaccounts = subaccounts;
         return this;
     }
     

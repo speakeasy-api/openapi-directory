@@ -161,23 +161,36 @@ public class SDK {
     /**
      * Fetch the Inbound Processing Region assigned to a phone number.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchPhoneNumberResponse fetchPhoneNumber(org.openapis.openapi.models.operations.FetchPhoneNumberRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchPhoneNumberResponse fetchPhoneNumber(org.openapis.openapi.models.operations.FetchPhoneNumberRequest request, org.openapis.openapi.models.operations.FetchPhoneNumberSecurity security) throws Exception {
+        return this.fetchPhoneNumber(request, security, null);
+    }
+
+    /**
+     * Fetch the Inbound Processing Region assigned to a phone number.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchPhoneNumberResponse fetchPhoneNumber(org.openapis.openapi.models.operations.FetchPhoneNumberRequest request, org.openapis.openapi.models.operations.FetchPhoneNumberSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_PHONE_NUMBER_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchPhoneNumberPathParams.class, baseUrl, "/v2/PhoneNumbers/{PhoneNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchPhoneNumberRequest.class, baseUrl, "/v2/PhoneNumbers/{PhoneNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -201,20 +214,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.FetchSipDomainResponse fetchSipDomain(org.openapis.openapi.models.operations.FetchSipDomainRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchSipDomainResponse fetchSipDomain(org.openapis.openapi.models.operations.FetchSipDomainRequest request, org.openapis.openapi.models.operations.FetchSipDomainSecurity security) throws Exception {
+        return this.fetchSipDomain(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.FetchSipDomainResponse fetchSipDomain(org.openapis.openapi.models.operations.FetchSipDomainRequest request, org.openapis.openapi.models.operations.FetchSipDomainSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_SIP_DOMAIN_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchSipDomainPathParams.class, baseUrl, "/v2/SipDomains/{SipDomain}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchSipDomainRequest.class, baseUrl, "/v2/SipDomains/{SipDomain}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -241,23 +258,36 @@ public class SDK {
     /**
      * Fetch the Inbound Processing Region assigned to a SIP Trunk.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchTrunksResponse fetchTrunks(org.openapis.openapi.models.operations.FetchTrunksRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchTrunksResponse fetchTrunks(org.openapis.openapi.models.operations.FetchTrunksRequest request, org.openapis.openapi.models.operations.FetchTrunksSecurity security) throws Exception {
+        return this.fetchTrunks(request, security, null);
+    }
+
+    /**
+     * Fetch the Inbound Processing Region assigned to a SIP Trunk.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchTrunksResponse fetchTrunks(org.openapis.openapi.models.operations.FetchTrunksRequest request, org.openapis.openapi.models.operations.FetchTrunksSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_TRUNKS_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchTrunksPathParams.class, baseUrl, "/v2/Trunks/{SipTrunkDomain}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchTrunksRequest.class, baseUrl, "/v2/Trunks/{SipTrunkDomain}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -284,25 +314,38 @@ public class SDK {
     /**
      * Assign an Inbound Processing Region to a phone number.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdatePhoneNumberResponse updatePhoneNumber(org.openapis.openapi.models.operations.UpdatePhoneNumberRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdatePhoneNumberResponse updatePhoneNumber(org.openapis.openapi.models.operations.UpdatePhoneNumberRequest request, org.openapis.openapi.models.operations.UpdatePhoneNumberSecurity security) throws Exception {
+        return this.updatePhoneNumber(request, security, null);
+    }
+
+    /**
+     * Assign an Inbound Processing Region to a phone number.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdatePhoneNumberResponse updatePhoneNumber(org.openapis.openapi.models.operations.UpdatePhoneNumberRequest request, org.openapis.openapi.models.operations.UpdatePhoneNumberSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_PHONE_NUMBER_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePhoneNumberPathParams.class, baseUrl, "/v2/PhoneNumbers/{PhoneNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePhoneNumberRequest.class, baseUrl, "/v2/PhoneNumbers/{PhoneNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -326,22 +369,26 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.UpdateSipDomainResponse updateSipDomain(org.openapis.openapi.models.operations.UpdateSipDomainRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateSipDomainResponse updateSipDomain(org.openapis.openapi.models.operations.UpdateSipDomainRequest request, org.openapis.openapi.models.operations.UpdateSipDomainSecurity security) throws Exception {
+        return this.updateSipDomain(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.UpdateSipDomainResponse updateSipDomain(org.openapis.openapi.models.operations.UpdateSipDomainRequest request, org.openapis.openapi.models.operations.UpdateSipDomainSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_SIP_DOMAIN_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSipDomainPathParams.class, baseUrl, "/v2/SipDomains/{SipDomain}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSipDomainRequest.class, baseUrl, "/v2/SipDomains/{SipDomain}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -368,25 +415,38 @@ public class SDK {
     /**
      * Assign an Inbound Processing Region to a SIP Trunk
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateTrunksResponse updateTrunks(org.openapis.openapi.models.operations.UpdateTrunksRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateTrunksResponse updateTrunks(org.openapis.openapi.models.operations.UpdateTrunksRequest request, org.openapis.openapi.models.operations.UpdateTrunksSecurity security) throws Exception {
+        return this.updateTrunks(request, security, null);
+    }
+
+    /**
+     * Assign an Inbound Processing Region to a SIP Trunk
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateTrunksResponse updateTrunks(org.openapis.openapi.models.operations.UpdateTrunksRequest request, org.openapis.openapi.models.operations.UpdateTrunksSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_TRUNKS_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateTrunksPathParams.class, baseUrl, "/v2/Trunks/{SipTrunkDomain}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateTrunksRequest.class, baseUrl, "/v2/Trunks/{SipTrunkDomain}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

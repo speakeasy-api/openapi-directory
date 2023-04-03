@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSettingValueBySdkkeyRequest {
-    
-    public GetSettingValueBySdkkeyPathParams pathParams;
-    public GetSettingValueBySdkkeyRequest withPathParams(GetSettingValueBySdkkeyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ConfigCat SDK Key. (https://app.configcat.com/sdkkey)
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-CONFIGCAT-SDKKEY")
+    public String xConfigcatSdkkey;
+    public GetSettingValueBySdkkeyRequest withXConfigcatSdkkey(String xConfigcatSdkkey) {
+        this.xConfigcatSdkkey = xConfigcatSdkkey;
         return this;
     }
     
-    
-    public GetSettingValueBySdkkeyHeaders headers;
-    public GetSettingValueBySdkkeyRequest withHeaders(GetSettingValueBySdkkeyHeaders headers) {
-        this.headers = headers;
+    /**
+     * The key or id of the Setting.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=settingKeyOrId")
+    public String settingKeyOrId;
+    public GetSettingValueBySdkkeyRequest withSettingKeyOrId(String settingKeyOrId) {
+        this.settingKeyOrId = settingKeyOrId;
         return this;
     }
     

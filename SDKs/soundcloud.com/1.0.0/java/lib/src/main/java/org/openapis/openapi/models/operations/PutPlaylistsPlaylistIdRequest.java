@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutPlaylistsPlaylistIdRequest {
-    
-    public PutPlaylistsPlaylistIdPathParams pathParams;
-    public PutPlaylistsPlaylistIdRequest withPathParams(PutPlaylistsPlaylistIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Playlist payload
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateUpdatePlaylistRequest request;
-    public PutPlaylistsPlaylistIdRequest withRequest(org.openapis.openapi.models.shared.CreateUpdatePlaylistRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CreateUpdatePlaylistRequest createUpdatePlaylistRequest;
+    public PutPlaylistsPlaylistIdRequest withCreateUpdatePlaylistRequest(org.openapis.openapi.models.shared.CreateUpdatePlaylistRequest createUpdatePlaylistRequest) {
+        this.createUpdatePlaylistRequest = createUpdatePlaylistRequest;
         return this;
     }
     
-    
-    public PutPlaylistsPlaylistIdSecurity security;
-    public PutPlaylistsPlaylistIdRequest withSecurity(PutPlaylistsPlaylistIdSecurity security) {
-        this.security = security;
+    /**
+     * SoundCloud playlist id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=playlist_id")
+    public Long playlistId;
+    public PutPlaylistsPlaylistIdRequest withPlaylistId(Long playlistId) {
+        this.playlistId = playlistId;
         return this;
     }
     

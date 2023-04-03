@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExportConfigurationsPartialUpdateSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeAPIToken apiToken;
-    public ExportConfigurationsPartialUpdateSecurity withAPIToken(org.openapis.openapi.models.shared.SchemeAPIToken apiToken) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-API-Token")
+    public String apiToken;
+    public ExportConfigurationsPartialUpdateSecurity withAPIToken(String apiToken) {
         this.apiToken = apiToken;
         return this;
     }

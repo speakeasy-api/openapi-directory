@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EditAgentRequest {
-    
-    public EditAgentPathParams pathParams;
-    public EditAgentRequest withPathParams(EditAgentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.AgentEditRequest agentEditRequest;
+    public EditAgentRequest withAgentEditRequest(org.openapis.openapi.models.shared.AgentEditRequest agentEditRequest) {
+        this.agentEditRequest = agentEditRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AgentEditRequest request;
-    public EditAgentRequest withRequest(org.openapis.openapi.models.shared.AgentEditRequest request) {
-        this.request = request;
+    /**
+     * The unique identifier of the agent in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agent_id")
+    public String agentId;
+    public EditAgentRequest withAgentId(String agentId) {
+        this.agentId = agentId;
+        return this;
+    }
+    
+    /**
+     * The current version identifier of the agent
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public String version;
+    public EditAgentRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

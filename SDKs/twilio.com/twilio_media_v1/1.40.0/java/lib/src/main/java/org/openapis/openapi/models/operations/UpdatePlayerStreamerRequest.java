@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePlayerStreamerRequest {
-    
-    public UpdatePlayerStreamerPathParams pathParams;
-    public UpdatePlayerStreamerRequest withPathParams(UpdatePlayerStreamerPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdatePlayerStreamerUpdatePlayerStreamerRequest request;
-    public UpdatePlayerStreamerRequest withRequest(UpdatePlayerStreamerUpdatePlayerStreamerRequest request) {
-        this.request = request;
+    public UpdatePlayerStreamerUpdatePlayerStreamerRequest requestBody;
+    public UpdatePlayerStreamerRequest withRequestBody(UpdatePlayerStreamerUpdatePlayerStreamerRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdatePlayerStreamerSecurity security;
-    public UpdatePlayerStreamerRequest withSecurity(UpdatePlayerStreamerSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdatePlayerStreamerRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the PlayerStreamer resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdatePlayerStreamerRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

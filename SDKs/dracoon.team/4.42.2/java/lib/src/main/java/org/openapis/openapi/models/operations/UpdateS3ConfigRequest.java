@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateS3ConfigRequest {
-    
-    public UpdateS3ConfigHeaders headers;
-    public UpdateS3ConfigRequest withHeaders(UpdateS3ConfigHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.S3ConfigUpdateRequest s3ConfigUpdateRequest;
+    public UpdateS3ConfigRequest withS3ConfigUpdateRequest(org.openapis.openapi.models.shared.S3ConfigUpdateRequest s3ConfigUpdateRequest) {
+        this.s3ConfigUpdateRequest = s3ConfigUpdateRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.S3ConfigUpdateRequest request;
-    public UpdateS3ConfigRequest withRequest(org.openapis.openapi.models.shared.S3ConfigUpdateRequest request) {
-        this.request = request;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public UpdateS3ConfigRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     

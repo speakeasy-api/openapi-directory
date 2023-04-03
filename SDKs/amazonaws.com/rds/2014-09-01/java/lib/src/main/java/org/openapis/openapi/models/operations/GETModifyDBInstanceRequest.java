@@ -4,20 +4,216 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyDBInstanceRequest {
-    
-    public GETModifyDBInstanceQueryParams queryParams;
-    public GETModifyDBInstanceRequest withQueryParams(GETModifyDBInstanceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyDBInstanceActionEnum action;
+    public GETModifyDBInstanceRequest withAction(GETModifyDBInstanceActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AllocatedStorage")
+    public Long allocatedStorage;
+    public GETModifyDBInstanceRequest withAllocatedStorage(Long allocatedStorage) {
+        this.allocatedStorage = allocatedStorage;
+        return this;
+    }
     
-    public GETModifyDBInstanceHeaders headers;
-    public GETModifyDBInstanceRequest withHeaders(GETModifyDBInstanceHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AllowMajorVersionUpgrade")
+    public Boolean allowMajorVersionUpgrade;
+    public GETModifyDBInstanceRequest withAllowMajorVersionUpgrade(Boolean allowMajorVersionUpgrade) {
+        this.allowMajorVersionUpgrade = allowMajorVersionUpgrade;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ApplyImmediately")
+    public Boolean applyImmediately;
+    public GETModifyDBInstanceRequest withApplyImmediately(Boolean applyImmediately) {
+        this.applyImmediately = applyImmediately;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutoMinorVersionUpgrade")
+    public Boolean autoMinorVersionUpgrade;
+    public GETModifyDBInstanceRequest withAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
+        this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=BackupRetentionPeriod")
+    public Long backupRetentionPeriod;
+    public GETModifyDBInstanceRequest withBackupRetentionPeriod(Long backupRetentionPeriod) {
+        this.backupRetentionPeriod = backupRetentionPeriod;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBInstanceClass")
+    public String dbInstanceClass;
+    public GETModifyDBInstanceRequest withDBInstanceClass(String dbInstanceClass) {
+        this.dbInstanceClass = dbInstanceClass;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBInstanceIdentifier")
+    public String dbInstanceIdentifier;
+    public GETModifyDBInstanceRequest withDBInstanceIdentifier(String dbInstanceIdentifier) {
+        this.dbInstanceIdentifier = dbInstanceIdentifier;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBParameterGroupName")
+    public String dbParameterGroupName;
+    public GETModifyDBInstanceRequest withDBParameterGroupName(String dbParameterGroupName) {
+        this.dbParameterGroupName = dbParameterGroupName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBSecurityGroups")
+    public String[] dbSecurityGroups;
+    public GETModifyDBInstanceRequest withDBSecurityGroups(String[] dbSecurityGroups) {
+        this.dbSecurityGroups = dbSecurityGroups;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EngineVersion")
+    public String engineVersion;
+    public GETModifyDBInstanceRequest withEngineVersion(String engineVersion) {
+        this.engineVersion = engineVersion;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Iops")
+    public Long iops;
+    public GETModifyDBInstanceRequest withIops(Long iops) {
+        this.iops = iops;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MasterUserPassword")
+    public String masterUserPassword;
+    public GETModifyDBInstanceRequest withMasterUserPassword(String masterUserPassword) {
+        this.masterUserPassword = masterUserPassword;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MultiAZ")
+    public Boolean multiAZ;
+    public GETModifyDBInstanceRequest withMultiAZ(Boolean multiAZ) {
+        this.multiAZ = multiAZ;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NewDBInstanceIdentifier")
+    public String newDBInstanceIdentifier;
+    public GETModifyDBInstanceRequest withNewDBInstanceIdentifier(String newDBInstanceIdentifier) {
+        this.newDBInstanceIdentifier = newDBInstanceIdentifier;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OptionGroupName")
+    public String optionGroupName;
+    public GETModifyDBInstanceRequest withOptionGroupName(String optionGroupName) {
+        this.optionGroupName = optionGroupName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PreferredBackupWindow")
+    public String preferredBackupWindow;
+    public GETModifyDBInstanceRequest withPreferredBackupWindow(String preferredBackupWindow) {
+        this.preferredBackupWindow = preferredBackupWindow;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PreferredMaintenanceWindow")
+    public String preferredMaintenanceWindow;
+    public GETModifyDBInstanceRequest withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
+        this.preferredMaintenanceWindow = preferredMaintenanceWindow;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StorageType")
+    public String storageType;
+    public GETModifyDBInstanceRequest withStorageType(String storageType) {
+        this.storageType = storageType;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TdeCredentialArn")
+    public String tdeCredentialArn;
+    public GETModifyDBInstanceRequest withTdeCredentialArn(String tdeCredentialArn) {
+        this.tdeCredentialArn = tdeCredentialArn;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TdeCredentialPassword")
+    public String tdeCredentialPassword;
+    public GETModifyDBInstanceRequest withTdeCredentialPassword(String tdeCredentialPassword) {
+        this.tdeCredentialPassword = tdeCredentialPassword;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyDBInstanceVersionEnum version;
+    public GETModifyDBInstanceRequest withVersion(GETModifyDBInstanceVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcSecurityGroupIds")
+    public String[] vpcSecurityGroupIds;
+    public GETModifyDBInstanceRequest withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
+        this.vpcSecurityGroupIds = vpcSecurityGroupIds;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyDBInstanceRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyDBInstanceRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyDBInstanceRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyDBInstanceRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyDBInstanceRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyDBInstanceRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyDBInstanceRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

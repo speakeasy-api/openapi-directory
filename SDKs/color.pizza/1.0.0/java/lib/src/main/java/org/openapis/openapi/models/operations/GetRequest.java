@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRequest {
+    /**
+     * The name of the color name list to use
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=list")
+    public org.openapis.openapi.models.shared.PossibleListsEnum list;
+    public GetRequest withList(org.openapis.openapi.models.shared.PossibleListsEnum list) {
+        this.list = list;
+        return this;
+    }
     
-    public GetQueryParams queryParams;
-    public GetRequest withQueryParams(GetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Allow duplicate names or not
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=noduplicates")
+    public Boolean noduplicates;
+    public GetRequest withNoduplicates(Boolean noduplicates) {
+        this.noduplicates = noduplicates;
+        return this;
+    }
+    
+    /**
+     * The hex values of the colors to retrieve without '#'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=values")
+    public String values;
+    public GetRequest withValues(String values) {
+        this.values = values;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupV2GetGroupByNameRequest {
+    /**
+     * Exact name of the group to find.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupName")
+    public String groupName;
+    public GroupV2GetGroupByNameRequest withGroupName(String groupName) {
+        this.groupName = groupName;
+        return this;
+    }
     
-    public GroupV2GetGroupByNamePathParams pathParams;
-    public GroupV2GetGroupByNameRequest withPathParams(GroupV2GetGroupByNamePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Type of group to find.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupType")
+    public Integer groupType;
+    public GroupV2GetGroupByNameRequest withGroupType(Integer groupType) {
+        this.groupType = groupType;
         return this;
     }
     

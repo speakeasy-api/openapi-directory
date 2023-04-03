@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsGetSubscriptionPlanForAccountStubbedRequest {
-    
-    public AppsGetSubscriptionPlanForAccountStubbedPathParams pathParams;
-    public AppsGetSubscriptionPlanForAccountStubbedRequest withPathParams(AppsGetSubscriptionPlanForAccountStubbedPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * account_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account_id")
+    public Long accountId;
+    public AppsGetSubscriptionPlanForAccountStubbedRequest withAccountId(Long accountId) {
+        this.accountId = accountId;
         return this;
     }
     

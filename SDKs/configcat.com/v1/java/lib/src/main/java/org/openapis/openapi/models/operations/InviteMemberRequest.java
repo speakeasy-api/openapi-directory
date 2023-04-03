@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InviteMemberRequest {
-    
-    public InviteMemberPathParams pathParams;
-    public InviteMemberRequest withPathParams(InviteMemberPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.InviteMembersRequest inviteMembersRequest;
+    public InviteMemberRequest withInviteMembersRequest(org.openapis.openapi.models.shared.InviteMembersRequest inviteMembersRequest) {
+        this.inviteMembersRequest = inviteMembersRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.InviteMembersRequest request;
-    public InviteMemberRequest withRequest(org.openapis.openapi.models.shared.InviteMembersRequest request) {
-        this.request = request;
+    /**
+     * The identifier of the Product.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
+    public String productId;
+    public InviteMemberRequest withProductId(String productId) {
+        this.productId = productId;
         return this;
     }
     

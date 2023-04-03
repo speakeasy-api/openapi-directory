@@ -4,20 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MigrationsGetStatusForAuthenticatedUserRequest {
-    
-    public MigrationsGetStatusForAuthenticatedUserPathParams pathParams;
-    public MigrationsGetStatusForAuthenticatedUserRequest withPathParams(MigrationsGetStatusForAuthenticatedUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude")
+    public String[] exclude;
+    public MigrationsGetStatusForAuthenticatedUserRequest withExclude(String[] exclude) {
+        this.exclude = exclude;
         return this;
     }
     
-    
-    public MigrationsGetStatusForAuthenticatedUserQueryParams queryParams;
-    public MigrationsGetStatusForAuthenticatedUserRequest withQueryParams(MigrationsGetStatusForAuthenticatedUserQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The unique identifier of the migration.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=migration_id")
+    public Long migrationId;
+    public MigrationsGetStatusForAuthenticatedUserRequest withMigrationId(Long migrationId) {
+        this.migrationId = migrationId;
         return this;
     }
     

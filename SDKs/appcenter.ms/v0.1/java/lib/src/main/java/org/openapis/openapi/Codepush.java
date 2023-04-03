@@ -90,7 +90,7 @@ public class Codepush {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CodePushAcquisitionUpdateCheckQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CodePushAcquisitionUpdateCheckRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -134,7 +134,7 @@ public class Codepush {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CodePushAcquisitionUpdateDeployStatusResponse codePushAcquisitionUpdateDeployStatus(org.openapis.openapi.models.operations.CodePushAcquisitionUpdateDeployStatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CodePushAcquisitionUpdateDeployStatusResponse codePushAcquisitionUpdateDeployStatus(org.openapis.openapi.models.operations.CodePushAcquisitionUpdateDeployStatusRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/public/codepush/report_status/deploy");
         
@@ -179,7 +179,7 @@ public class Codepush {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CodePushAcquisitionUpdateDownloadStatusResponse codePushAcquisitionUpdateDownloadStatus(org.openapis.openapi.models.operations.CodePushAcquisitionUpdateDownloadStatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CodePushAcquisitionUpdateDownloadStatusResponse codePushAcquisitionUpdateDownloadStatus(org.openapis.openapi.models.operations.CodePushAcquisitionUpdateDownloadStatusRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/public/codepush/report_status/download");
         
@@ -221,19 +221,20 @@ public class Codepush {
     /**
      * Gets all releases metrics for specified Deployment
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CodePushDeploymentMetricsGetResponse codePushDeploymentMetricsGet(org.openapis.openapi.models.operations.CodePushDeploymentMetricsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CodePushDeploymentMetricsGetResponse codePushDeploymentMetricsGet(org.openapis.openapi.models.operations.CodePushDeploymentMetricsGetRequest request, org.openapis.openapi.models.operations.CodePushDeploymentMetricsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodePushDeploymentMetricsGetPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}/metrics", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodePushDeploymentMetricsGetRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}/metrics", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -268,21 +269,22 @@ public class Codepush {
     /**
      * Rollback the latest or a specific release for an app deployment
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CodePushDeploymentReleaseRollbackResponse codePushDeploymentReleaseRollback(org.openapis.openapi.models.operations.CodePushDeploymentReleaseRollbackRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CodePushDeploymentReleaseRollbackResponse codePushDeploymentReleaseRollback(org.openapis.openapi.models.operations.CodePushDeploymentReleaseRollbackRequest request, org.openapis.openapi.models.operations.CodePushDeploymentReleaseRollbackSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodePushDeploymentReleaseRollbackPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}/rollback_release", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodePushDeploymentReleaseRollbackRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}/rollback_release", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -317,24 +319,25 @@ public class Codepush {
     /**
      * Create a new CodePush release for the specified deployment
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CodePushDeploymentReleasesCreateResponse codePushDeploymentReleasesCreate(org.openapis.openapi.models.operations.CodePushDeploymentReleasesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CodePushDeploymentReleasesCreateResponse codePushDeploymentReleasesCreate(org.openapis.openapi.models.operations.CodePushDeploymentReleasesCreateRequest request, org.openapis.openapi.models.operations.CodePushDeploymentReleasesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodePushDeploymentReleasesCreatePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}/releases", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodePushDeploymentReleasesCreateRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}/releases", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -369,19 +372,20 @@ public class Codepush {
     /**
      * Clears a Deployment of releases
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CodePushDeploymentReleasesDeleteResponse codePushDeploymentReleasesDelete(org.openapis.openapi.models.operations.CodePushDeploymentReleasesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CodePushDeploymentReleasesDeleteResponse codePushDeploymentReleasesDelete(org.openapis.openapi.models.operations.CodePushDeploymentReleasesDeleteRequest request, org.openapis.openapi.models.operations.CodePushDeploymentReleasesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodePushDeploymentReleasesDeletePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}/releases", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodePushDeploymentReleasesDeleteRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}/releases", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -410,19 +414,20 @@ public class Codepush {
     /**
      * Gets the history of releases on a Deployment
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CodePushDeploymentReleasesGetResponse codePushDeploymentReleasesGet(org.openapis.openapi.models.operations.CodePushDeploymentReleasesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CodePushDeploymentReleasesGetResponse codePushDeploymentReleasesGet(org.openapis.openapi.models.operations.CodePushDeploymentReleasesGetRequest request, org.openapis.openapi.models.operations.CodePushDeploymentReleasesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodePushDeploymentReleasesGetPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}/releases", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodePushDeploymentReleasesGetRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}/releases", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -457,19 +462,20 @@ public class Codepush {
     /**
      * Create a new CodePush release upload for the specified deployment
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CodePushDeploymentUploadCreateResponse codePushDeploymentUploadCreate(org.openapis.openapi.models.operations.CodePushDeploymentUploadCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CodePushDeploymentUploadCreateResponse codePushDeploymentUploadCreate(org.openapis.openapi.models.operations.CodePushDeploymentUploadCreateRequest request, org.openapis.openapi.models.operations.CodePushDeploymentUploadCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodePushDeploymentUploadCreatePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}/uploads", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodePushDeploymentUploadCreateRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}/uploads", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -504,24 +510,25 @@ public class Codepush {
     /**
      * Creates a CodePush Deployment for the given app
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CodePushDeploymentsCreateResponse codePushDeploymentsCreate(org.openapis.openapi.models.operations.CodePushDeploymentsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CodePushDeploymentsCreateResponse codePushDeploymentsCreate(org.openapis.openapi.models.operations.CodePushDeploymentsCreateRequest request, org.openapis.openapi.models.operations.CodePushDeploymentsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodePushDeploymentsCreatePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/deployments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodePushDeploymentsCreateRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/deployments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -556,21 +563,22 @@ public class Codepush {
     /**
      * Deletes a CodePush Deployment for the given app
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CodePushDeploymentsDeleteResponse codePushDeploymentsDelete(org.openapis.openapi.models.operations.CodePushDeploymentsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CodePushDeploymentsDeleteResponse codePushDeploymentsDelete(org.openapis.openapi.models.operations.CodePushDeploymentsDeleteRequest request, org.openapis.openapi.models.operations.CodePushDeploymentsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodePushDeploymentsDeletePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodePushDeploymentsDeleteRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -599,19 +607,20 @@ public class Codepush {
     /**
      * Gets a CodePush Deployment for the given app
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CodePushDeploymentsGetResponse codePushDeploymentsGet(org.openapis.openapi.models.operations.CodePushDeploymentsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CodePushDeploymentsGetResponse codePushDeploymentsGet(org.openapis.openapi.models.operations.CodePushDeploymentsGetRequest request, org.openapis.openapi.models.operations.CodePushDeploymentsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodePushDeploymentsGetPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodePushDeploymentsGetRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -646,19 +655,20 @@ public class Codepush {
     /**
      * Gets a list of CodePush deployments for the given app
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CodePushDeploymentsListResponse codePushDeploymentsList(org.openapis.openapi.models.operations.CodePushDeploymentsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CodePushDeploymentsListResponse codePushDeploymentsList(org.openapis.openapi.models.operations.CodePushDeploymentsListRequest request, org.openapis.openapi.models.operations.CodePushDeploymentsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodePushDeploymentsListPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/deployments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodePushDeploymentsListRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/deployments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -693,21 +703,22 @@ public class Codepush {
     /**
      * Promote one release (default latest one) from one deployment to another
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CodePushDeploymentsPromoteResponse codePushDeploymentsPromote(org.openapis.openapi.models.operations.CodePushDeploymentsPromoteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CodePushDeploymentsPromoteResponse codePushDeploymentsPromote(org.openapis.openapi.models.operations.CodePushDeploymentsPromoteRequest request, org.openapis.openapi.models.operations.CodePushDeploymentsPromoteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodePushDeploymentsPromotePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}/promote_release/{promote_deployment_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodePushDeploymentsPromoteRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}/promote_release/{promote_deployment_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -742,24 +753,25 @@ public class Codepush {
     /**
      * Modifies a CodePush Deployment for the given app
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CodePushDeploymentsUpdateResponse codePushDeploymentsUpdate(org.openapis.openapi.models.operations.CodePushDeploymentsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CodePushDeploymentsUpdateResponse codePushDeploymentsUpdate(org.openapis.openapi.models.operations.CodePushDeploymentsUpdateRequest request, org.openapis.openapi.models.operations.CodePushDeploymentsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodePushDeploymentsUpdatePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodePushDeploymentsUpdateRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -788,24 +800,25 @@ public class Codepush {
     /**
      * Modifies a CodePush release metadata under the given Deployment
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeploymentReleasesUpdateResponse deploymentReleasesUpdate(org.openapis.openapi.models.operations.DeploymentReleasesUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeploymentReleasesUpdateResponse deploymentReleasesUpdate(org.openapis.openapi.models.operations.DeploymentReleasesUpdateRequest request, org.openapis.openapi.models.operations.DeploymentReleasesUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentReleasesUpdatePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}/releases/{release_label}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentReleasesUpdateRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/deployments/{deployment_name}/releases/{release_label}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -842,10 +855,11 @@ public class Codepush {
     /**
      * Check for updates
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LegacyCodePushAcquisitionUpdateCheckResponse legacyCodePushAcquisitionUpdateCheck(org.openapis.openapi.models.operations.LegacyCodePushAcquisitionUpdateCheckRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LegacyCodePushAcquisitionUpdateCheckResponse legacyCodePushAcquisitionUpdateCheck(org.openapis.openapi.models.operations.LegacyCodePushAcquisitionUpdateCheckRequest request, org.openapis.openapi.models.operations.LegacyCodePushAcquisitionUpdateCheckSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/legacy/updateCheck");
         
@@ -853,14 +867,14 @@ public class Codepush {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LegacyCodePushAcquisitionUpdateCheckQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LegacyCodePushAcquisitionUpdateCheckRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -895,10 +909,11 @@ public class Codepush {
     /**
      * Report download of specified release
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LegacyCodePushAcquisitionUpdateDownloadStatusResponse legacyCodePushAcquisitionUpdateDownloadStatus(org.openapis.openapi.models.operations.LegacyCodePushAcquisitionUpdateDownloadStatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LegacyCodePushAcquisitionUpdateDownloadStatusResponse legacyCodePushAcquisitionUpdateDownloadStatus(org.openapis.openapi.models.operations.LegacyCodePushAcquisitionUpdateDownloadStatusRequestBody request, org.openapis.openapi.models.operations.LegacyCodePushAcquisitionUpdateDownloadStatusSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/legacy/reportStatus/download");
         
@@ -912,7 +927,7 @@ public class Codepush {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -941,10 +956,11 @@ public class Codepush {
     /**
      * Report deploy of specified release
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LegacyCodePushAcquisitionUpdateInstallsStatusResponse legacyCodePushAcquisitionUpdateInstallsStatus(org.openapis.openapi.models.operations.LegacyCodePushAcquisitionUpdateInstallsStatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LegacyCodePushAcquisitionUpdateInstallsStatusResponse legacyCodePushAcquisitionUpdateInstallsStatus(org.openapis.openapi.models.operations.LegacyCodePushAcquisitionUpdateInstallsStatusRequestBody request, org.openapis.openapi.models.operations.LegacyCodePushAcquisitionUpdateInstallsStatusSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/legacy/reportStatus/deploy");
         
@@ -958,7 +974,7 @@ public class Codepush {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,20 +4,57 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSetupV1ResourcesIdBlocksRequest {
-    
-    public GetSetupV1ResourcesIdBlocksPathParams pathParams;
-    public GetSetupV1ResourcesIdBlocksRequest withPathParams(GetSetupV1ResourcesIdBlocksPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * YYYY-MM-DD, filter on/before endDate
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
+    public OffsetDateTime endDate;
+    public GetSetupV1ResourcesIdBlocksRequest withEndDate(OffsetDateTime endDate) {
+        this.endDate = endDate;
         return this;
     }
     
+    /**
+     * id of resource to list blocks for
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSetupV1ResourcesIdBlocksRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetSetupV1ResourcesIdBlocksQueryParams queryParams;
-    public GetSetupV1ResourcesIdBlocksRequest withQueryParams(GetSetupV1ResourcesIdBlocksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page limit default 20, max 100
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetSetupV1ResourcesIdBlocksRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Starting row of page, default 0
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public GetSetupV1ResourcesIdBlocksRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * YYYY-MM-DD, filter blocks on/after startDate
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
+    public OffsetDateTime startDate;
+    public GetSetupV1ResourcesIdBlocksRequest withStartDate(OffsetDateTime startDate) {
+        this.startDate = startDate;
         return this;
     }
     

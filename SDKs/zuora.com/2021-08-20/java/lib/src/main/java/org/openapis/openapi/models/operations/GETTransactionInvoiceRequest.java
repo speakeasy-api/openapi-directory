@@ -4,27 +4,52 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETTransactionInvoiceRequest {
-    
-    public GETTransactionInvoicePathParams pathParams;
-    public GETTransactionInvoiceRequest withPathParams(GETTransactionInvoicePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Entity-Ids")
+    public String zuoraEntityIds;
+    public GETTransactionInvoiceRequest withZuoraEntityIds(String zuoraEntityIds) {
+        this.zuoraEntityIds = zuoraEntityIds;
         return this;
     }
     
-    
-    public GETTransactionInvoiceQueryParams queryParams;
-    public GETTransactionInvoiceRequest withQueryParams(GETTransactionInvoiceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+     * 
+     * The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Track-Id")
+    public String zuoraTrackId;
+    public GETTransactionInvoiceRequest withZuoraTrackId(String zuoraTrackId) {
+        this.zuoraTrackId = zuoraTrackId;
         return this;
     }
     
+    /**
+     * Account number or account ID.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account-key")
+    public String accountKey;
+    public GETTransactionInvoiceRequest withAccountKey(String accountKey) {
+        this.accountKey = accountKey;
+        return this;
+    }
     
-    public GETTransactionInvoiceHeaders headers;
-    public GETTransactionInvoiceRequest withHeaders(GETTransactionInvoiceHeaders headers) {
-        this.headers = headers;
+    /**
+     * Number of rows returned per page.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public GETTransactionInvoiceRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

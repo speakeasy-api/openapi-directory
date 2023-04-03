@@ -4,20 +4,29 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TaxonomyCategoriesRequest {
-    
-    public TaxonomyCategoriesQueryParams queryParams;
-    public TaxonomyCategoriesRequest withQueryParams(TaxonomyCategoriesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public TaxonomyCategoriesRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
-    
-    public TaxonomyCategoriesHeaders headers;
-    public TaxonomyCategoriesRequest withHeaders(TaxonomyCategoriesHeaders headers) {
-        this.headers = headers;
+    /**
+     * **unique numeric identifier** of the destination to enquire about (optional)
+     * - `destinationId` is returned by [/taxonomy/destinations](#operation/taxonomyDestinations)
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destId")
+    public Long destId;
+    public TaxonomyCategoriesRequest withDestId(Long destId) {
+        this.destId = destId;
         return this;
     }
     

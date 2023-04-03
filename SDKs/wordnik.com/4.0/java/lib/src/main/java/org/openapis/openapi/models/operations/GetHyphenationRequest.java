@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetHyphenationRequest {
-    
-    public GetHyphenationPathParams pathParams;
-    public GetHyphenationRequest withPathParams(GetHyphenationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Maximum number of results to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetHyphenationRequest withLimit(Integer limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * Get from a single dictionary. Valid options: ahd-5, century, wiktionary, webster, and wordnet.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sourceDictionary")
+    public GetHyphenationSourceDictionaryEnum sourceDictionary;
+    public GetHyphenationRequest withSourceDictionary(GetHyphenationSourceDictionaryEnum sourceDictionary) {
+        this.sourceDictionary = sourceDictionary;
+        return this;
+    }
     
-    public GetHyphenationQueryParams queryParams;
-    public GetHyphenationRequest withQueryParams(GetHyphenationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * If true will try to return a correct word root ('cats' -&gt; 'cat'). If false returns exactly what was requested.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=useCanonical")
+    public GetHyphenationUseCanonicalEnum useCanonical;
+    public GetHyphenationRequest withUseCanonical(GetHyphenationUseCanonicalEnum useCanonical) {
+        this.useCanonical = useCanonical;
+        return this;
+    }
+    
+    /**
+     * Word to get syllables for
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=word")
+    public String word;
+    public GetHyphenationRequest withWord(String word) {
+        this.word = word;
         return this;
     }
     

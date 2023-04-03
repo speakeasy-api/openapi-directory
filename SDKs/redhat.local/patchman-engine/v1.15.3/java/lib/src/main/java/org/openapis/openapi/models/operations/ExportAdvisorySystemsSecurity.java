@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExportAdvisorySystemsSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeRhIdentity rhIdentity;
-    public ExportAdvisorySystemsSecurity withRhIdentity(org.openapis.openapi.models.shared.SchemeRhIdentity rhIdentity) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=x-rh-identity")
+    public String rhIdentity;
+    public ExportAdvisorySystemsSecurity withRhIdentity(String rhIdentity) {
         this.rhIdentity = rhIdentity;
         return this;
     }

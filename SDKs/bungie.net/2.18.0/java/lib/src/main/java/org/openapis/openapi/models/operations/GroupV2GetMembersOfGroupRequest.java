@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupV2GetMembersOfGroupRequest {
-    
-    public GroupV2GetMembersOfGroupPathParams pathParams;
-    public GroupV2GetMembersOfGroupRequest withPathParams(GroupV2GetMembersOfGroupPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Page number (starting with 1). Each page has a fixed size of 50 items per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currentpage")
+    public Integer currentpage;
+    public GroupV2GetMembersOfGroupRequest withCurrentpage(Integer currentpage) {
+        this.currentpage = currentpage;
         return this;
     }
     
+    /**
+     * The ID of the group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public Long groupId;
+    public GroupV2GetMembersOfGroupRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
+        return this;
+    }
     
-    public GroupV2GetMembersOfGroupQueryParams queryParams;
-    public GroupV2GetMembersOfGroupRequest withQueryParams(GroupV2GetMembersOfGroupQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter out other member types. Use None for all members.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=memberType")
+    public Integer memberType;
+    public GroupV2GetMembersOfGroupRequest withMemberType(Integer memberType) {
+        this.memberType = memberType;
+        return this;
+    }
+    
+    /**
+     * The name fragment upon which a search should be executed for members with matching display or unique names.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nameSearch")
+    public String nameSearch;
+    public GroupV2GetMembersOfGroupRequest withNameSearch(String nameSearch) {
+        this.nameSearch = nameSearch;
         return this;
     }
     

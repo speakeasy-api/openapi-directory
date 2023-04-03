@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCallRecordingByNameRequest {
-    
-    public GetCallRecordingByNamePathParams pathParams;
-    public GetCallRecordingByNameRequest withPathParams(GetCallRecordingByNamePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public GetCallRecordingByNameRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     
-    
-    public GetCallRecordingByNameQueryParams queryParams;
-    public GetCallRecordingByNameRequest withQueryParams(GetCallRecordingByNameQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * An id of a call
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetCallRecordingByNameRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetCallRecordingByNameSecurity security;
-    public GetCallRecordingByNameRequest withSecurity(GetCallRecordingByNameSecurity security) {
-        this.security = security;
+    /**
+     * A name of a recording
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public GetCallRecordingByNameRequest withName(String name) {
+        this.name = name;
         return this;
     }
     

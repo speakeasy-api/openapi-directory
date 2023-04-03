@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutBillingDetailsRequest {
-    
-    public PutBillingDetailsPathParams pathParams;
-    public PutBillingDetailsRequest withPathParams(PutBillingDetailsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * billingDetails
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.BillingDetailsModel request;
-    public PutBillingDetailsRequest withRequest(org.openapis.openapi.models.shared.BillingDetailsModel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.BillingDetailsModel billingDetailsModel;
+    public PutBillingDetailsRequest withBillingDetailsModel(org.openapis.openapi.models.shared.BillingDetailsModel billingDetailsModel) {
+        this.billingDetailsModel = billingDetailsModel;
+        return this;
+    }
+    
+    /**
+     * apiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public PutBillingDetailsRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     

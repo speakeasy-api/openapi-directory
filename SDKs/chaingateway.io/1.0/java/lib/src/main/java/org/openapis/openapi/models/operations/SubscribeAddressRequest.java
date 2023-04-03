@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SubscribeAddressRequest {
-    
-    public SubscribeAddressHeaders headers;
-    public SubscribeAddressRequest withHeaders(SubscribeAddressHeaders headers) {
-        this.headers = headers;
+    /**
+     * API Key
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public SubscribeAddressRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SubscribeAddressRequest request;
-    public SubscribeAddressRequest withRequest(org.openapis.openapi.models.shared.SubscribeAddressRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SubscribeAddressRequest subscribeAddressRequest;
+    public SubscribeAddressRequest withSubscribeAddressRequest(org.openapis.openapi.models.shared.SubscribeAddressRequest subscribeAddressRequest) {
+        this.subscribeAddressRequest = subscribeAddressRequest;
         return this;
     }
     

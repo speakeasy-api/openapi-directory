@@ -7,24 +7,31 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateConfigRequest {
-    
-    public UpdateConfigPathParams pathParams;
-    public UpdateConfigRequest withPathParams(UpdateConfigPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateConfigQueryParams queryParams;
-    public UpdateConfigRequest withQueryParams(UpdateConfigQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ConfigUpdateParam request;
-    public UpdateConfigRequest withRequest(org.openapis.openapi.models.shared.ConfigUpdateParam request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ConfigUpdateParam configUpdateParam;
+    public UpdateConfigRequest withConfigUpdateParam(org.openapis.openapi.models.shared.ConfigUpdateParam configUpdateParam) {
+        this.configUpdateParam = configUpdateParam;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=config")
+    public String config;
+    public UpdateConfigRequest withConfig(String config) {
+        this.config = config;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
+    public String key;
+    public UpdateConfigRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=user_token")
+    public String userToken;
+    public UpdateConfigRequest withUserToken(String userToken) {
+        this.userToken = userToken;
         return this;
     }
     

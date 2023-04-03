@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.GetProductInfoPathParams;
 import org.openapis.openapi.models.operations.GetProductInfoRequest;
 import org.openapis.openapi.models.operations.GetProductInfoResponse;
 
@@ -26,17 +25,13 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    apiKeyAuth = new SchemeAPIKeyAuth() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    apiKeyAuth = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GetProductInfoRequest req = new GetProductInfoRequest() {{
-                pathParams = new GetProductInfoPathParams() {{
-                    code = "corrupti";
-                }};
-            }};            
+                code = "corrupti";
+            }}            
 
             GetProductInfoResponse res = sdk.product.getProductInfo(req);
 
@@ -50,7 +45,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### product

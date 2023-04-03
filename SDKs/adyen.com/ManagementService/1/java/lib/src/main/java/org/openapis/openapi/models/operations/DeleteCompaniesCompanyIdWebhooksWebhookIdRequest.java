@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCompaniesCompanyIdWebhooksWebhookIdRequest {
-    
-    public DeleteCompaniesCompanyIdWebhooksWebhookIdPathParams pathParams;
-    public DeleteCompaniesCompanyIdWebhooksWebhookIdRequest withPathParams(DeleteCompaniesCompanyIdWebhooksWebhookIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the company account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public DeleteCompaniesCompanyIdWebhooksWebhookIdRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
         return this;
     }
     
-    
-    public DeleteCompaniesCompanyIdWebhooksWebhookIdSecurity security;
-    public DeleteCompaniesCompanyIdWebhooksWebhookIdRequest withSecurity(DeleteCompaniesCompanyIdWebhooksWebhookIdSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the webhook configuration.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webhookId")
+    public String webhookId;
+    public DeleteCompaniesCompanyIdWebhooksWebhookIdRequest withWebhookId(String webhookId) {
+        this.webhookId = webhookId;
         return this;
     }
     

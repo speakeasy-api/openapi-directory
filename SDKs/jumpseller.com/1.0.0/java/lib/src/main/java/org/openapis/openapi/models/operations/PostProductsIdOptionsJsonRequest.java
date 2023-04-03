@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostProductsIdOptionsJsonRequest {
-    
-    public PostProductsIdOptionsJsonPathParams pathParams;
-    public PostProductsIdOptionsJsonRequest withPathParams(PostProductsIdOptionsJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostProductsIdOptionsJsonQueryParams queryParams;
-    public PostProductsIdOptionsJsonRequest withQueryParams(PostProductsIdOptionsJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Product Option parameters.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ProductOptionEdit request;
-    public PostProductsIdOptionsJsonRequest withRequest(org.openapis.openapi.models.shared.ProductOptionEdit request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ProductOptionEdit productOptionEdit;
+    public PostProductsIdOptionsJsonRequest withProductOptionEdit(org.openapis.openapi.models.shared.ProductOptionEdit productOptionEdit) {
+        this.productOptionEdit = productOptionEdit;
+        return this;
+    }
+    
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public PostProductsIdOptionsJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
+        return this;
+    }
+    
+    /**
+     * Id of the Product
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PostProductsIdOptionsJsonRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public PostProductsIdOptionsJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

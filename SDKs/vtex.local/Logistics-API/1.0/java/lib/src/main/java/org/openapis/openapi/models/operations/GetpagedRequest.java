@@ -4,20 +4,47 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetpagedRequest {
-    
-    public GetpagedQueryParams queryParams;
-    public GetpagedRequest withQueryParams(GetpagedQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetpagedRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetpagedRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetpagedHeaders headers;
-    public GetpagedRequest withHeaders(GetpagedHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keyword")
+    public String keyword;
+    public GetpagedRequest withKeyword(String keyword) {
+        this.keyword = keyword;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public String page;
+    public GetpagedRequest withPage(String page) {
+        this.page = page;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public String pageSize;
+    public GetpagedRequest withPageSize(String pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

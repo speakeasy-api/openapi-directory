@@ -38,19 +38,20 @@ public class Segments {
     /**
      * Deletes the segment with the given ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteApiV2SegmentsIdResponse deleteApiV2SegmentsId(org.openapis.openapi.models.operations.DeleteApiV2SegmentsIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteApiV2SegmentsIdResponse deleteApiV2SegmentsId(org.openapis.openapi.models.operations.DeleteApiV2SegmentsIdRequest request, org.openapis.openapi.models.operations.DeleteApiV2SegmentsIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteApiV2SegmentsIdPathParams.class, baseUrl, "/api/v2/segments/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteApiV2SegmentsIdRequest.class, baseUrl, "/api/v2/segments/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,10 +80,11 @@ public class Segments {
     /**
      * Returns the segments matching the query parameters.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV2SegmentsResponse getApiV2Segments(org.openapis.openapi.models.operations.GetApiV2SegmentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApiV2SegmentsResponse getApiV2Segments(org.openapis.openapi.models.operations.GetApiV2SegmentsRequest request, org.openapis.openapi.models.operations.GetApiV2SegmentsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v2/segments");
         
@@ -90,14 +92,14 @@ public class Segments {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApiV2SegmentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApiV2SegmentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -132,19 +134,20 @@ public class Segments {
     /**
      * Returns the segment matching the given ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV2SegmentsIdResponse getApiV2SegmentsId(org.openapis.openapi.models.operations.GetApiV2SegmentsIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApiV2SegmentsIdResponse getApiV2SegmentsId(org.openapis.openapi.models.operations.GetApiV2SegmentsIdRequest request, org.openapis.openapi.models.operations.GetApiV2SegmentsIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV2SegmentsIdPathParams.class, baseUrl, "/api/v2/segments/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV2SegmentsIdRequest.class, baseUrl, "/api/v2/segments/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -179,19 +182,20 @@ public class Segments {
     /**
      * UNDER DEVELOPMENT - Returns the audio content segment matching the given ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV2SegmentsIdContentResponse getApiV2SegmentsIdContent(org.openapis.openapi.models.operations.GetApiV2SegmentsIdContentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApiV2SegmentsIdContentResponse getApiV2SegmentsIdContent(org.openapis.openapi.models.operations.GetApiV2SegmentsIdContentRequest request, org.openapis.openapi.models.operations.GetApiV2SegmentsIdContentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV2SegmentsIdContentPathParams.class, baseUrl, "/api/v2/segments/{id}/content", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV2SegmentsIdContentRequest.class, baseUrl, "/api/v2/segments/{id}/content", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -219,10 +223,11 @@ public class Segments {
     /**
      * Creates a new segment.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostApiV2SegmentsResponse postApiV2Segments(org.openapis.openapi.models.operations.PostApiV2SegmentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostApiV2SegmentsResponse postApiV2Segments(org.openapis.openapi.models.operations.PostApiV2SegmentsRequestBody request, org.openapis.openapi.models.operations.PostApiV2SegmentsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v2/segments");
         
@@ -233,7 +238,7 @@ public class Segments {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

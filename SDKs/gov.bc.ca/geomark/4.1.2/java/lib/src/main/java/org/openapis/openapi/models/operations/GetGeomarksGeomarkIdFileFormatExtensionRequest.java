@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGeomarksGeomarkIdFileFormatExtensionRequest {
-    
-    public GetGeomarksGeomarkIdFileFormatExtensionPathParams pathParams;
-    public GetGeomarksGeomarkIdFileFormatExtensionRequest withPathParams(GetGeomarksGeomarkIdFileFormatExtensionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The file format name extension used to represent the geomark download.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileFormatExtension")
+    public GetGeomarksGeomarkIdFileFormatExtensionFileFormatExtensionEnum fileFormatExtension;
+    public GetGeomarksGeomarkIdFileFormatExtensionRequest withFileFormatExtension(GetGeomarksGeomarkIdFileFormatExtensionFileFormatExtensionEnum fileFormatExtension) {
+        this.fileFormatExtension = fileFormatExtension;
         return this;
     }
     
+    /**
+     * The unique identifier for the geomark.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=geomarkId")
+    public String geomarkId;
+    public GetGeomarksGeomarkIdFileFormatExtensionRequest withGeomarkId(String geomarkId) {
+        this.geomarkId = geomarkId;
+        return this;
+    }
     
-    public GetGeomarksGeomarkIdFileFormatExtensionQueryParams queryParams;
-    public GetGeomarksGeomarkIdFileFormatExtensionRequest withQueryParams(GetGeomarksGeomarkIdFileFormatExtensionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The srid of the coordinate system the geometry should be converted to.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=srid")
+    public GetGeomarksGeomarkIdFileFormatExtensionSridEnum srid;
+    public GetGeomarksGeomarkIdFileFormatExtensionRequest withSrid(GetGeomarksGeomarkIdFileFormatExtensionSridEnum srid) {
+        this.srid = srid;
         return this;
     }
     

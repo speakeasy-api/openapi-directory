@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RandomGifRequest {
+    /**
+     * Filters results by specified rating.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rating")
+    public String rating;
+    public RandomGifRequest withRating(String rating) {
+        this.rating = rating;
+        return this;
+    }
     
-    public RandomGifQueryParams queryParams;
-    public RandomGifRequest withQueryParams(RandomGifQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filters results by specified tag.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
+    public String tag;
+    public RandomGifRequest withTag(String tag) {
+        this.tag = tag;
         return this;
     }
     

@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTrackRequest {
-    
-    public GetTrackPathParams pathParams;
-    public GetTrackRequest withPathParams(GetTrackPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Audio track ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetTrackRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetTrackQueryParams queryParams;
-    public GetTrackRequest withQueryParams(GetTrackQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The ID of the search that is related to this request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_id")
+    public String searchId;
+    public GetTrackRequest withSearchId(String searchId) {
+        this.searchId = searchId;
         return this;
     }
     
-    
-    public GetTrackSecurity security;
-    public GetTrackRequest withSecurity(GetTrackSecurity security) {
-        this.security = security;
+    /**
+     * Amount of detail to render in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
+    public GetTrackViewEnum view;
+    public GetTrackRequest withView(GetTrackViewEnum view) {
+        this.view = view;
         return this;
     }
     

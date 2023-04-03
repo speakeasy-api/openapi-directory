@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05LinksLinkOnConfirmRawRequest {
-    
-    public PostV05LinksLinkOnConfirmRawHeaders headers;
-    public PostV05LinksLinkOnConfirmRawRequest withHeaders(PostV05LinksLinkOnConfirmRawHeaders headers) {
-        this.headers = headers;
+    /**
+     * Access token which was issued after successful login with gateway auth server.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostV05LinksLinkOnConfirmRawRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/xml")
-    public byte[] request;
-    public PostV05LinksLinkOnConfirmRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public PostV05LinksLinkOnConfirmRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

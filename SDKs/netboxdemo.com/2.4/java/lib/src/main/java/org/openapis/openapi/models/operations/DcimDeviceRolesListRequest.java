@@ -4,13 +4,54 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimDeviceRolesListRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=color")
+    public String color;
+    public DcimDeviceRolesListRequest withColor(String color) {
+        this.color = color;
+        return this;
+    }
     
-    public DcimDeviceRolesListQueryParams queryParams;
-    public DcimDeviceRolesListRequest withQueryParams(DcimDeviceRolesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public DcimDeviceRolesListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public DcimDeviceRolesListRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public DcimDeviceRolesListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug")
+    public String slug;
+    public DcimDeviceRolesListRequest withSlug(String slug) {
+        this.slug = slug;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vm_role")
+    public String vmRole;
+    public DcimDeviceRolesListRequest withVmRole(String vmRole) {
+        this.vmRole = vmRole;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPrefixExpandRequest {
-    
-    public GetPrefixExpandPathParams pathParams;
-    public GetPrefixExpandRequest withPathParams(GetPrefixExpandPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of entity to be contracted to URI, e.g "MGI:1"
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetPrefixExpandRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SalesEntriesPutRequest {
-    
-    public SalesEntriesPutPathParams pathParams;
-    public SalesEntriesPutRequest withPathParams(SalesEntriesPutPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Information of Sales Entry to update.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SalesEntryDto request;
-    public SalesEntriesPutRequest withRequest(org.openapis.openapi.models.shared.SalesEntryDto request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SalesEntryDto salesEntryDto;
+    public SalesEntriesPutRequest withSalesEntryDto(org.openapis.openapi.models.shared.SalesEntryDto salesEntryDto) {
+        this.salesEntryDto = salesEntryDto;
+        return this;
+    }
+    
+    /**
+     * Id of Sales Entry to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public SalesEntriesPutRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

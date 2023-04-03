@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePermissionGroupRequest {
-    
-    public UpdatePermissionGroupPathParams pathParams;
-    public UpdatePermissionGroupRequest withPathParams(UpdatePermissionGroupPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.UpdatePermissionGroupRequest updatePermissionGroupRequest;
+    public UpdatePermissionGroupRequest withUpdatePermissionGroupRequest(org.openapis.openapi.models.shared.UpdatePermissionGroupRequest updatePermissionGroupRequest) {
+        this.updatePermissionGroupRequest = updatePermissionGroupRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdatePermissionGroupRequest request;
-    public UpdatePermissionGroupRequest withRequest(org.openapis.openapi.models.shared.UpdatePermissionGroupRequest request) {
-        this.request = request;
+    /**
+     * The identifier of the Permission Group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=permissionGroupId")
+    public Long permissionGroupId;
+    public UpdatePermissionGroupRequest withPermissionGroupId(Long permissionGroupId) {
+        this.permissionGroupId = permissionGroupId;
         return this;
     }
     

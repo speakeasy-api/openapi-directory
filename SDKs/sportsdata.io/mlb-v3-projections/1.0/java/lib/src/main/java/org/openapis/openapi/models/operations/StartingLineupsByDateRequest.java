@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StartingLineupsByDateRequest {
+    /**
+     * The date of the slates.
+     * &lt;br&gt;Examples: &lt;code&gt;2017-JUL-31&lt;/code&gt;, &lt;code&gt;2017-SEP-01&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=date")
+    public String date;
+    public StartingLineupsByDateRequest withDate(String date) {
+        this.date = date;
+        return this;
+    }
     
-    public StartingLineupsByDatePathParams pathParams;
-    public StartingLineupsByDateRequest withPathParams(StartingLineupsByDatePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public StartingLineupsByDateFormatEnum format;
+    public StartingLineupsByDateRequest withFormat(StartingLineupsByDateFormatEnum format) {
+        this.format = format;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCallQoSRequest {
-    
-    public GetCallQoSPathParams pathParams;
-    public GetCallQoSRequest withPathParams(GetCallQoSPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the call.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=callId")
+    public String callId;
+    public GetCallQoSRequest withCallId(String callId) {
+        this.callId = callId;
         return this;
     }
     

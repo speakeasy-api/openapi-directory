@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeletePartnerRequest {
-    
-    public GETDeletePartnerQueryParams queryParams;
-    public GETDeletePartnerRequest withQueryParams(GETDeletePartnerQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The Amazon Web Services account ID that owns the cluster.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AccountId")
+    public String accountId;
+    public GETDeletePartnerRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDeletePartnerActionEnum action;
+    public GETDeletePartnerRequest withAction(GETDeletePartnerActionEnum action) {
+        this.action = action;
+        return this;
+    }
     
-    public GETDeletePartnerHeaders headers;
-    public GETDeletePartnerRequest withHeaders(GETDeletePartnerHeaders headers) {
-        this.headers = headers;
+    /**
+     * The cluster identifier of the cluster that receives data from the partner.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
+    public String clusterIdentifier;
+    public GETDeletePartnerRequest withClusterIdentifier(String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+        return this;
+    }
+    
+    /**
+     * The name of the database that receives data from the partner.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DatabaseName")
+    public String databaseName;
+    public GETDeletePartnerRequest withDatabaseName(String databaseName) {
+        this.databaseName = databaseName;
+        return this;
+    }
+    
+    /**
+     * The name of the partner that is authorized to send data.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PartnerName")
+    public String partnerName;
+    public GETDeletePartnerRequest withPartnerName(String partnerName) {
+        this.partnerName = partnerName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDeletePartnerVersionEnum version;
+    public GETDeletePartnerRequest withVersion(GETDeletePartnerVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDeletePartnerRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDeletePartnerRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDeletePartnerRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDeletePartnerRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDeletePartnerRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDeletePartnerRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDeletePartnerRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

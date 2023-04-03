@@ -4,34 +4,37 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSyncSyncMapItemRequest {
-    
-    public DeleteSyncSyncMapItemPathParams pathParams;
-    public DeleteSyncSyncMapItemRequest withPathParams(DeleteSyncSyncMapItemPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The If-Match HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
+    public String ifMatch;
+    public DeleteSyncSyncMapItemRequest withIfMatch(String ifMatch) {
+        this.ifMatch = ifMatch;
         return this;
     }
     
-    
-    public DeleteSyncSyncMapItemHeaders headers;
-    public DeleteSyncSyncMapItemRequest withHeaders(DeleteSyncSyncMapItemHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Key")
+    public String key;
+    public DeleteSyncSyncMapItemRequest withKey(String key) {
+        this.key = key;
         return this;
     }
     
-    
-    public DeleteSyncSyncMapItemSecurity security;
-    public DeleteSyncSyncMapItemRequest withSecurity(DeleteSyncSyncMapItemSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=MapSid")
+    public String mapSid;
+    public DeleteSyncSyncMapItemRequest withMapSid(String mapSid) {
+        this.mapSid = mapSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public DeleteSyncSyncMapItemRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public DeleteSyncSyncMapItemRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

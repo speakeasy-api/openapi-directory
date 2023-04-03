@@ -4,27 +4,64 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ErrorsGroupCountsPerDayRequest {
-    
-    public ErrorsGroupCountsPerDayPathParams pathParams;
-    public ErrorsGroupCountsPerDayRequest withPathParams(ErrorsGroupCountsPerDayPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public ErrorsGroupCountsPerDayRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public ErrorsGroupCountsPerDayQueryParams queryParams;
-    public ErrorsGroupCountsPerDayRequest withQueryParams(ErrorsGroupCountsPerDayQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Last date time in data in ISO 8601 date time format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
+    public OffsetDateTime end;
+    public ErrorsGroupCountsPerDayRequest withEnd(OffsetDateTime end) {
+        this.end = end;
         return this;
     }
     
+    /**
+     * The id of the error group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=errorGroupId")
+    public String errorGroupId;
+    public ErrorsGroupCountsPerDayRequest withErrorGroupId(String errorGroupId) {
+        this.errorGroupId = errorGroupId;
+        return this;
+    }
     
-    public ErrorsGroupCountsPerDaySecurity security;
-    public ErrorsGroupCountsPerDayRequest withSecurity(ErrorsGroupCountsPerDaySecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public ErrorsGroupCountsPerDayRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
+    
+    /**
+     * Start date time in data in ISO 8601 date time format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public OffsetDateTime start;
+    public ErrorsGroupCountsPerDayRequest withStart(OffsetDateTime start) {
+        this.start = start;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
+    public String version;
+    public ErrorsGroupCountsPerDayRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

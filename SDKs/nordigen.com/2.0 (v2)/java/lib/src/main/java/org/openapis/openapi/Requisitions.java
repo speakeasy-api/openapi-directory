@@ -41,7 +41,7 @@ public class Requisitions {
      */
     public org.openapis.openapi.models.operations.DeleteRequisitionByIdV2Response deleteRequisitionByIdV2(org.openapis.openapi.models.operations.DeleteRequisitionByIdV2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRequisitionByIdV2PathParams.class, baseUrl, "/api/v2/requisitions/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRequisitionByIdV2Request.class, baseUrl, "/api/v2/requisitions/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -104,7 +104,7 @@ public class Requisitions {
      */
     public org.openapis.openapi.models.operations.RequisitionByIdResponse requisitionById(org.openapis.openapi.models.operations.RequisitionByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RequisitionByIdPathParams.class, baseUrl, "/api/v2/requisitions/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RequisitionByIdRequest.class, baseUrl, "/api/v2/requisitions/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -173,7 +173,7 @@ public class Requisitions {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RequisitionCreatedResponse requisitionCreated(org.openapis.openapi.models.operations.RequisitionCreatedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RequisitionCreatedResponse requisitionCreated(org.openapis.openapi.models.shared.RequisitionV2Request request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v2/requisitions/");
         
@@ -257,7 +257,7 @@ public class Requisitions {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetrieveAllRequisitionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetrieveAllRequisitionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

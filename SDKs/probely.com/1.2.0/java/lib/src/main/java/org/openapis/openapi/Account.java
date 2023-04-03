@@ -125,7 +125,7 @@ public class Account {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchBillingResponse patchBilling(org.openapis.openapi.models.operations.PatchBillingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchBillingResponse patchBilling(org.openapis.openapi.models.shared.Billing request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/billing/");
         
@@ -185,7 +185,7 @@ public class Account {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostBillingActionsResponse postBillingActions(org.openapis.openapi.models.operations.PostBillingActionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostBillingActionsResponse postBillingActions(String[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/billing/actions/");
         
@@ -229,7 +229,7 @@ public class Account {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostBillingEstimateResponse postBillingEstimate(org.openapis.openapi.models.operations.PostBillingEstimateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostBillingEstimateResponse postBillingEstimate(org.openapis.openapi.models.shared.SubscriptionInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/billing/estimate/");
         
@@ -297,7 +297,7 @@ public class Account {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostBillingSubscribeResponse postBillingSubscribe(org.openapis.openapi.models.operations.PostBillingSubscribeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostBillingSubscribeResponse postBillingSubscribe(org.openapis.openapi.models.shared.SubscriptionInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/billing/subscribe/");
         
@@ -365,7 +365,7 @@ public class Account {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostTargetActionsResponse postTargetActions(org.openapis.openapi.models.operations.PostTargetActionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostTargetActionsResponse postTargetActions(String[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/target-actions/");
         
@@ -409,7 +409,7 @@ public class Account {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutBillingResponse putBilling(org.openapis.openapi.models.operations.PutBillingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutBillingResponse putBilling(org.openapis.openapi.models.shared.Billing request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/billing/");
         

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUserWatchingRequest {
-    
-    public GetUserWatchingQueryParams queryParams;
-    public GetUserWatchingRequest withQueryParams(GetUserWatchingQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The BBC-id cookie value
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=identity_cookie")
+    public Double identityCookie;
+    public GetUserWatchingRequest withIdentityCookie(Double identityCookie) {
+        this.identityCookie = identityCookie;
         return this;
     }
     

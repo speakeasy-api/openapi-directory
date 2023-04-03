@@ -7,34 +7,83 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeNodeReimageRequest {
-    
-    public ComputeNodeReimagePathParams pathParams;
-    public ComputeNodeReimageRequest withPathParams(ComputeNodeReimagePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ComputeNodeReimageQueryParams queryParams;
-    public ComputeNodeReimageRequest withQueryParams(ComputeNodeReimageQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ComputeNodeReimageHeaders headers;
-    public ComputeNodeReimageRequest withHeaders(ComputeNodeReimageHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * The parameters for the request.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.NodeReimageParameter request;
-    public ComputeNodeReimageRequest withRequest(org.openapis.openapi.models.shared.NodeReimageParameter request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.NodeReimageParameter nodeReimageParameter;
+    public ComputeNodeReimageRequest withNodeReimageParameter(org.openapis.openapi.models.shared.NodeReimageParameter nodeReimageParameter) {
+        this.nodeReimageParameter = nodeReimageParameter;
+        return this;
+    }
+    
+    /**
+     * Client API Version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public ComputeNodeReimageRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
+    
+    /**
+     * Caller generated request identity, in the form of a GUID with no decoration such as curly braces e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
+    public String clientRequestId;
+    public ComputeNodeReimageRequest withClientRequestId(String clientRequestId) {
+        this.clientRequestId = clientRequestId;
+        return this;
+    }
+    
+    /**
+     * The id of the compute node that you want to restart.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=nodeId")
+    public String nodeId;
+    public ComputeNodeReimageRequest withNodeId(String nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
+    
+    /**
+     * The time the request was issued. If not specified, this header will be automatically populated with the current system clock time.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
+    public String ocpDate;
+    public ComputeNodeReimageRequest withOcpDate(String ocpDate) {
+        this.ocpDate = ocpDate;
+        return this;
+    }
+    
+    /**
+     * The id of the pool that contains the compute node.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=poolId")
+    public String poolId;
+    public ComputeNodeReimageRequest withPoolId(String poolId) {
+        this.poolId = poolId;
+        return this;
+    }
+    
+    /**
+     * Specifies if the server should return the client-request-id identifier in the response.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
+    public Boolean returnClientRequestId;
+    public ComputeNodeReimageRequest withReturnClientRequestId(Boolean returnClientRequestId) {
+        this.returnClientRequestId = returnClientRequestId;
+        return this;
+    }
+    
+    /**
+     * Sets the maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
+    public Integer timeout;
+    public ComputeNodeReimageRequest withTimeout(Integer timeout) {
+        this.timeout = timeout;
         return this;
     }
     

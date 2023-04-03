@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAZoomRoomRequest {
-    
-    public DeleteAZoomRoomPathParams pathParams;
-    public DeleteAZoomRoomRequest withPathParams(DeleteAZoomRoomPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteAZoomRoomSecurity security;
-    public DeleteAZoomRoomRequest withSecurity(DeleteAZoomRoomSecurity security) {
-        this.security = security;
+    /**
+     * Unique Identifier of a Zoom Room.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=roomId")
+    public String roomId;
+    public DeleteAZoomRoomRequest withRoomId(String roomId) {
+        this.roomId = roomId;
         return this;
     }
     

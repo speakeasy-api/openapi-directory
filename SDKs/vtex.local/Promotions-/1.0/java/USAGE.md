@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CalculatediscountsandtaxesBundlesHeaders;
 import org.openapis.openapi.models.operations.CalculatediscountsandtaxesBundlesRequest;
 import org.openapis.openapi.models.operations.CalculatediscountsandtaxesBundlesResponse;
 import org.openapis.openapi.models.shared.CalculatediscountsandtaxesBundlesRequest;
@@ -16,35 +15,31 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    appKey = new SchemeAppKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                    appToken = new SchemeAppToken() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    appKey = "YOUR_API_KEY_HERE";
+                    appToken = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CalculatediscountsandtaxesBundlesRequest req = new CalculatediscountsandtaxesBundlesRequest() {{
-                headers = new CalculatediscountsandtaxesBundlesHeaders() {{
-                    accept = "corrupti";
-                    contentType = "provident";
-                }};
-                request = new CalculatediscountsandtaxesBundlesRequest() {{
+                accept = "corrupti";
+                calculatediscountsandtaxesBundlesRequest = new CalculatediscountsandtaxesBundlesRequest() {{
                     isShoppingCart = false;
                     items = new org.openapis.openapi.models.shared.Item[]{{
                         add(new Item() {{
-                            id = "quibusdam";
-                            index = 602763;
+                            id = "distinctio";
+                            index = 844266;
                             isGift = false;
                             logisticsInfos = new String[]{{
+                                add("nulla"),
                                 add("corrupti"),
                                 add("illum"),
-                                add("vel"),
-                                add("error"),
                             }};
-                            measurementUnit = "deserunt";
+                            measurementUnit = "vel";
                             params = new org.openapis.openapi.models.shared.Param[]{{
+                                add(new Param() {{
+                                    name = "deserunt";
+                                    value = "suscipit";
+                                }}),
                                 add(new Param() {{
                                     name = "iure";
                                     value = "magnam";
@@ -175,7 +170,8 @@ public class Application {
                     profileId = "enim";
                     salesChannel = "omnis";
                 }};
-            }};            
+                contentType = "nemo";
+            }}            
 
             CalculatediscountsandtaxesBundlesResponse res = sdk.bundles.calculatediscountsandtaxesBundles(req);
 

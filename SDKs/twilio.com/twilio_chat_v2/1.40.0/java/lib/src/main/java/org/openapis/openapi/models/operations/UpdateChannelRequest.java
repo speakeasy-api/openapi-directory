@@ -7,38 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateChannelRequest {
-    
-    public UpdateChannelPathParams pathParams;
-    public UpdateChannelRequest withPathParams(UpdateChannelPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateChannelHeaders headers;
-    public UpdateChannelRequest withHeaders(UpdateChannelHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateChannelUpdateChannelRequest request;
-    public UpdateChannelRequest withRequest(UpdateChannelUpdateChannelRequest request) {
-        this.request = request;
+    public UpdateChannelUpdateChannelRequest requestBody;
+    public UpdateChannelRequest withRequestBody(UpdateChannelUpdateChannelRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateChannelSecurity security;
-    public UpdateChannelRequest withSecurity(UpdateChannelSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to update the Channel resource in.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public UpdateChannelRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
+    /**
+     * The SID of the Channel resource to update. This value can be either the `sid` or the `unique_name` of the Channel resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateChannelRequest withSid(String sid) {
+        this.sid = sid;
+        return this;
+    }
     
-    public String serverURL;
-    public UpdateChannelRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The X-Twilio-Webhook-Enabled HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Twilio-Webhook-Enabled")
+    public org.openapis.openapi.models.shared.ChannelEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled;
+    public UpdateChannelRequest withXTwilioWebhookEnabled(org.openapis.openapi.models.shared.ChannelEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled) {
+        this.xTwilioWebhookEnabled = xTwilioWebhookEnabled;
         return this;
     }
     

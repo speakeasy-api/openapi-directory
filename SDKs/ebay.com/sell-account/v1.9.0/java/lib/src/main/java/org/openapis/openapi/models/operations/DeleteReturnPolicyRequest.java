@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteReturnPolicyRequest {
-    
-    public DeleteReturnPolicyPathParams pathParams;
-    public DeleteReturnPolicyRequest withPathParams(DeleteReturnPolicyPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteReturnPolicySecurity security;
-    public DeleteReturnPolicyRequest withSecurity(DeleteReturnPolicySecurity security) {
-        this.security = security;
+    /**
+     * This path parameter specifies the ID of the return policy you want to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=return_policy_id")
+    public String returnPolicyId;
+    public DeleteReturnPolicyRequest withReturnPolicyId(String returnPolicyId) {
+        this.returnPolicyId = returnPolicyId;
         return this;
     }
     

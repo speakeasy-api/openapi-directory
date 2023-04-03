@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssuesGetEventRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=event_id")
+    public Long eventId;
+    public IssuesGetEventRequest withEventId(Long eventId) {
+        this.eventId = eventId;
+        return this;
+    }
     
-    public IssuesGetEventPathParams pathParams;
-    public IssuesGetEventRequest withPathParams(IssuesGetEventPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssuesGetEventRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssuesGetEventRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

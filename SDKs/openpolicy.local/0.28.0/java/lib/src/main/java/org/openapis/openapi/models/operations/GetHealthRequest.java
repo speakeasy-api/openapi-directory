@@ -4,13 +4,28 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetHealthRequest {
+    /**
+     * Reports on bundle activation status (useful for 'ready' checks at startup).
+     * 
+     * This includes any discovery bundles or bundles defined in the loaded discovery configuration.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bundles")
+    public Boolean bundles;
+    public GetHealthRequest withBundles(Boolean bundles) {
+        this.bundles = bundles;
+        return this;
+    }
     
-    public GetHealthQueryParams queryParams;
-    public GetHealthRequest withQueryParams(GetHealthQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Reports on plugin status
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=plugins")
+    public Boolean plugins;
+    public GetHealthRequest withPlugins(Boolean plugins) {
+        this.plugins = plugins;
         return this;
     }
     

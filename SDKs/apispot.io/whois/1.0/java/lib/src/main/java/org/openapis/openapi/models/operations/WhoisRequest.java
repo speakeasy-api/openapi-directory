@@ -4,20 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WhoisRequest {
-    
-    public WhoisPathParams pathParams;
-    public WhoisRequest withPathParams(WhoisPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Domain
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domain")
+    public String domain;
+    public WhoisRequest withDomain(String domain) {
+        this.domain = domain;
         return this;
     }
     
-    
-    public WhoisQueryParams queryParams;
-    public WhoisRequest withQueryParams(WhoisQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public WhoisFormatEnum format;
+    public WhoisRequest withFormat(WhoisFormatEnum format) {
+        this.format = format;
         return this;
     }
     

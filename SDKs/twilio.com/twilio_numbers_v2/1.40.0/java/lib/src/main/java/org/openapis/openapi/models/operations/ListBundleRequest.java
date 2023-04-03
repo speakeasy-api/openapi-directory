@@ -4,27 +4,147 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListBundleRequest {
-    
-    public ListBundleQueryParams queryParams;
-    public ListBundleRequest withQueryParams(ListBundleQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The string that you assigned to describe the resource. The column can contain 255 variable characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FriendlyName")
+    public String friendlyName;
+    public ListBundleRequest withFriendlyName(String friendlyName) {
+        this.friendlyName = friendlyName;
         return this;
     }
     
-    
-    public ListBundleSecurity security;
-    public ListBundleRequest withSecurity(ListBundleSecurity security) {
-        this.security = security;
+    /**
+     * Indicates that the Bundle is a valid Bundle until a specified expiration date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HasValidUntilDate")
+    public Boolean hasValidUntilDate;
+    public ListBundleRequest withHasValidUntilDate(Boolean hasValidUntilDate) {
+        this.hasValidUntilDate = hasValidUntilDate;
         return this;
     }
     
+    /**
+     * The 2-digit [ISO country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) of the Bundle's phone number country ownership request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=IsoCountry")
+    public String isoCountry;
+    public ListBundleRequest withIsoCountry(String isoCountry) {
+        this.isoCountry = isoCountry;
+        return this;
+    }
     
-    public String serverURL;
-    public ListBundleRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The type of phone number of the Bundle's ownership request. Can be `local`, `mobile`, `national`, or `tollfree`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NumberType")
+    public String numberType;
+    public ListBundleRequest withNumberType(String numberType) {
+        this.numberType = numberType;
+        return this;
+    }
+    
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListBundleRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListBundleRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListBundleRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * The unique string of a [Regulation resource](https://www.twilio.com/docs/phone-numbers/regulatory/api/regulations) that is associated to the Bundle resource.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RegulationSid")
+    public String regulationSid;
+    public ListBundleRequest withRegulationSid(String regulationSid) {
+        this.regulationSid = regulationSid;
+        return this;
+    }
+    
+    /**
+     * Can be `valid-until` or `date-updated`. Defaults to `date-created`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SortBy")
+    public org.openapis.openapi.models.shared.BundleEnumSortByEnum sortBy;
+    public ListBundleRequest withSortBy(org.openapis.openapi.models.shared.BundleEnumSortByEnum sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    
+    /**
+     * Default is `DESC`. Can be `ASC` or `DESC`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SortDirection")
+    public org.openapis.openapi.models.shared.BundleEnumSortDirectionEnum sortDirection;
+    public ListBundleRequest withSortDirection(org.openapis.openapi.models.shared.BundleEnumSortDirectionEnum sortDirection) {
+        this.sortDirection = sortDirection;
+        return this;
+    }
+    
+    /**
+     * The verification status of the Bundle resource. Please refer to [Bundle Statuses](https://www.twilio.com/docs/phone-numbers/regulatory/api/bundles#bundle-statuses) for more details.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Status")
+    public org.openapis.openapi.models.shared.BundleEnumStatusEnum status;
+    public ListBundleRequest withStatus(org.openapis.openapi.models.shared.BundleEnumStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * Date to filter Bundles having their `valid_until_date` before or after the specified date. Can be `ValidUntilDate&gt;=` or `ValidUntilDate&lt;=`. Both can be used in conjunction as well. [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) is the acceptable date format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ValidUntilDate")
+    public OffsetDateTime validUntilDate;
+    public ListBundleRequest withValidUntilDate(OffsetDateTime validUntilDate) {
+        this.validUntilDate = validUntilDate;
+        return this;
+    }
+    
+    /**
+     * Date to filter Bundles having their `valid_until_date` before or after the specified date. Can be `ValidUntilDate&gt;=` or `ValidUntilDate&lt;=`. Both can be used in conjunction as well. [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) is the acceptable date format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ValidUntilDate<")
+    public OffsetDateTime validUntilDateLessThan;
+    public ListBundleRequest withValidUntilDateLessThan(OffsetDateTime validUntilDateLessThan) {
+        this.validUntilDateLessThan = validUntilDateLessThan;
+        return this;
+    }
+    
+    /**
+     * Date to filter Bundles having their `valid_until_date` before or after the specified date. Can be `ValidUntilDate&gt;=` or `ValidUntilDate&lt;=`. Both can be used in conjunction as well. [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) is the acceptable date format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ValidUntilDate>")
+    public OffsetDateTime validUntilDateGreaterThan;
+    public ListBundleRequest withValidUntilDateGreaterThan(OffsetDateTime validUntilDateGreaterThan) {
+        this.validUntilDateGreaterThan = validUntilDateGreaterThan;
         return this;
     }
     

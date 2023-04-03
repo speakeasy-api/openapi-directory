@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DriverDetailsRequest {
+    /**
+     * Unique FantasyData Driver ID.
+     * Example:&lt;code&gt;80000268&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=driverid")
+    public String driverid;
+    public DriverDetailsRequest withDriverid(String driverid) {
+        this.driverid = driverid;
+        return this;
+    }
     
-    public DriverDetailsPathParams pathParams;
-    public DriverDetailsRequest withPathParams(DriverDetailsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public DriverDetailsFormatEnum format;
+    public DriverDetailsRequest withFormat(DriverDetailsFormatEnum format) {
+        this.format = format;
         return this;
     }
     

@@ -7,10 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddOrUpdateSensitiveDataRequest {
+    /**
+     * Company Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public AddOrUpdateSensitiveDataRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
+        return this;
+    }
     
-    public AddOrUpdateSensitiveDataPathParams pathParams;
-    public AddOrUpdateSensitiveDataRequest withPathParams(AddOrUpdateSensitiveDataPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Employee Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=employeeId")
+    public String employeeId;
+    public AddOrUpdateSensitiveDataRequest withEmployeeId(String employeeId) {
+        this.employeeId = employeeId;
         return this;
     }
     
@@ -18,16 +31,9 @@ public class AddOrUpdateSensitiveDataRequest {
      * Sensitive Data Model
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SensitiveData request;
-    public AddOrUpdateSensitiveDataRequest withRequest(org.openapis.openapi.models.shared.SensitiveData request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public AddOrUpdateSensitiveDataSecurity security;
-    public AddOrUpdateSensitiveDataRequest withSecurity(AddOrUpdateSensitiveDataSecurity security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.SensitiveData sensitiveData;
+    public AddOrUpdateSensitiveDataRequest withSensitiveData(org.openapis.openapi.models.shared.SensitiveData sensitiveData) {
+        this.sensitiveData = sensitiveData;
         return this;
     }
     

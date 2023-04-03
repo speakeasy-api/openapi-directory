@@ -4,27 +4,75 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AssociateUserSettingsRequest {
-    
-    public AssociateUserSettingsPathParams pathParams;
-    public AssociateUserSettingsRequest withPathParams(AssociateUserSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public AssociateUserSettingsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public AssociateUserSettingsQueryParams queryParams;
-    public AssociateUserSettingsRequest withQueryParams(AssociateUserSettingsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public AssociateUserSettingsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public AssociateUserSettingsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public AssociateUserSettingsHeaders headers;
-    public AssociateUserSettingsRequest withHeaders(AssociateUserSettingsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public AssociateUserSettingsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public AssociateUserSettingsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public AssociateUserSettingsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public AssociateUserSettingsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The ARN of the web portal.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=portalArn")
+    public String portalArn;
+    public AssociateUserSettingsRequest withPortalArn(String portalArn) {
+        this.portalArn = portalArn;
+        return this;
+    }
+    
+    /**
+     * The ARN of the user settings.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userSettingsArn")
+    public String userSettingsArn;
+    public AssociateUserSettingsRequest withUserSettingsArn(String userSettingsArn) {
+        this.userSettingsArn = userSettingsArn;
         return this;
     }
     

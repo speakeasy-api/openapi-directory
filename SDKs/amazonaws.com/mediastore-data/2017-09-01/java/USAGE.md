@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.DeleteObjectPathParams;
-import org.openapis.openapi.models.operations.DeleteObjectHeaders;
 import org.openapis.openapi.models.operations.DeleteObjectRequest;
 import org.openapis.openapi.models.operations.DeleteObjectResponse;
 
@@ -14,26 +12,20 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             DeleteObjectRequest req = new DeleteObjectRequest() {{
-                pathParams = new DeleteObjectPathParams() {{
-                    path = "corrupti";
-                }};
-                headers = new DeleteObjectHeaders() {{
-                    xAmzAlgorithm = "provident";
-                    xAmzContentSha256 = "distinctio";
-                    xAmzCredential = "quibusdam";
-                    xAmzDate = "unde";
-                    xAmzSecurityToken = "nulla";
-                    xAmzSignature = "corrupti";
-                    xAmzSignedHeaders = "illum";
-                }};
-            }};            
+                path = "corrupti";
+                xAmzAlgorithm = "provident";
+                xAmzContentSha256 = "distinctio";
+                xAmzCredential = "quibusdam";
+                xAmzDate = "unde";
+                xAmzSecurityToken = "nulla";
+                xAmzSignature = "corrupti";
+                xAmzSignedHeaders = "illum";
+            }}            
 
             DeleteObjectResponse res = sdk.deleteObject(req);
 

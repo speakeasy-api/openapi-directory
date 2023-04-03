@@ -43,7 +43,7 @@ public class Fleet {
      */
     public org.openapis.openapi.models.operations.GetFleetFleetnameResponse getFleetFleetname(org.openapis.openapi.models.operations.GetFleetFleetnameRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFleetFleetnamePathParams.class, baseUrl, "/fleet/{fleetname}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFleetFleetnameRequest.class, baseUrl, "/fleet/{fleetname}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

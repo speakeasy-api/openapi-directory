@@ -4,20 +4,37 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsclustersRequest {
-    
-    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsclustersPathParams pathParams;
-    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsclustersRequest withPathParams(GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsclustersPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsclustersRequest withExpand(String expand) {
+        this.expand = expand;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_account")
+    public Long idAccount;
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsclustersRequest withIdAccount(Long idAccount) {
+        this.idAccount = idAccount;
+        return this;
+    }
     
-    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsclustersQueryParams queryParams;
-    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsclustersRequest withQueryParams(GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsclustersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connection")
+    public Long idConnection;
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsclustersRequest withIdConnection(Long idConnection) {
+        this.idConnection = idConnection;
+        return this;
+    }
+    
+    /**
+     * Hint: you can use 'me' or 'all'
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
+    public String idUser;
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsclustersRequest withIdUser(String idUser) {
+        this.idUser = idUser;
         return this;
     }
     

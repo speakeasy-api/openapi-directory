@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteWorkspaceRequest {
-    
-    public DeleteWorkspacePathParams pathParams;
-    public DeleteWorkspaceRequest withPathParams(DeleteWorkspacePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteWorkspaceSecurity security;
-    public DeleteWorkspaceRequest withSecurity(DeleteWorkspaceSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteWorkspaceRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Workspace resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteWorkspaceRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

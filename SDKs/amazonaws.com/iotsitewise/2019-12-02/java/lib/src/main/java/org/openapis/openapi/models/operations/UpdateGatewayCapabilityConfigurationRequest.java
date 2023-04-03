@@ -7,24 +7,69 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateGatewayCapabilityConfigurationRequest {
-    
-    public UpdateGatewayCapabilityConfigurationPathParams pathParams;
-    public UpdateGatewayCapabilityConfigurationRequest withPathParams(UpdateGatewayCapabilityConfigurationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateGatewayCapabilityConfigurationHeaders headers;
-    public UpdateGatewayCapabilityConfigurationRequest withHeaders(UpdateGatewayCapabilityConfigurationHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateGatewayCapabilityConfigurationRequestBody request;
-    public UpdateGatewayCapabilityConfigurationRequest withRequest(UpdateGatewayCapabilityConfigurationRequestBody request) {
-        this.request = request;
+    public UpdateGatewayCapabilityConfigurationRequestBody requestBody;
+    public UpdateGatewayCapabilityConfigurationRequest withRequestBody(UpdateGatewayCapabilityConfigurationRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public UpdateGatewayCapabilityConfigurationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public UpdateGatewayCapabilityConfigurationRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public UpdateGatewayCapabilityConfigurationRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public UpdateGatewayCapabilityConfigurationRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public UpdateGatewayCapabilityConfigurationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public UpdateGatewayCapabilityConfigurationRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public UpdateGatewayCapabilityConfigurationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The ID of the gateway to be updated.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=gatewayId")
+    public String gatewayId;
+    public UpdateGatewayCapabilityConfigurationRequest withGatewayId(String gatewayId) {
+        this.gatewayId = gatewayId;
         return this;
     }
     

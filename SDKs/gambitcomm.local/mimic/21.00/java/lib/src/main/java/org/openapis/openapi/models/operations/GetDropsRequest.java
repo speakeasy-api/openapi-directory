@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDropsRequest {
-    
-    public GetDropsPathParams pathParams;
-    public GetDropsRequest withPathParams(GetDropsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to return the drop rate
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public GetDropsRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

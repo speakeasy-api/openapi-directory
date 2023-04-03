@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteDocumentRequest {
-    
-    public DeleteDocumentPathParams pathParams;
-    public DeleteDocumentRequest withPathParams(DeleteDocumentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Document resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public DeleteDocumentRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public DeleteDocumentSecurity security;
-    public DeleteDocumentRequest withSecurity(DeleteDocumentSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteDocumentRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Document resource to delete. Can be the Document resource's `sid` or its `unique_name`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteDocumentRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

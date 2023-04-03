@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteConfigurationAddressRequest {
-    
-    public DeleteConfigurationAddressPathParams pathParams;
-    public DeleteConfigurationAddressRequest withPathParams(DeleteConfigurationAddressPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteConfigurationAddressSecurity security;
-    public DeleteConfigurationAddressRequest withSecurity(DeleteConfigurationAddressSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteConfigurationAddressRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Address Configuration resource. This value can be either the `sid` or the `address` of the configuration
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteConfigurationAddressRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

@@ -47,7 +47,7 @@ public class ActionDetailsCallInstructions {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV2ActionDetailsCallInstructionsJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV2ActionDetailsCallInstructionsJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -86,7 +86,7 @@ public class ActionDetailsCallInstructions {
      */
     public org.openapis.openapi.models.operations.GetV2ActionDetailsCallInstructionsIdJsonResponse getV2ActionDetailsCallInstructionsIdJson(org.openapis.openapi.models.operations.GetV2ActionDetailsCallInstructionsIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2ActionDetailsCallInstructionsIdJsonPathParams.class, baseUrl, "/v2/action_details/call_instructions/{id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2ActionDetailsCallInstructionsIdJsonRequest.class, baseUrl, "/v2/action_details/call_instructions/{id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

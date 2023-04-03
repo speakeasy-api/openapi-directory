@@ -4,20 +4,117 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTracksRequest {
-    
-    public GetTracksQueryParams queryParams;
-    public GetTracksRequest withQueryParams(GetTracksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filters content by level of access the user (logged in or anonymous) has to the track. The result list will include only tracks with the specified access. Include all options if you'd like to see all possible tracks. See `Track#access` schema for more details.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=access")
+    public org.openapis.openapi.models.shared.AccessEnum[] access;
+    public GetTracksRequest withAccess(org.openapis.openapi.models.shared.AccessEnum[] access) {
+        this.access = access;
         return this;
     }
     
+    /**
+     * Return tracks with a specified bpm[from], bpm[to]
+     */
+    @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=bpm")
+    public org.openapis.openapi.models.shared.Bpm bpm;
+    public GetTracksRequest withBpm(org.openapis.openapi.models.shared.Bpm bpm) {
+        this.bpm = bpm;
+        return this;
+    }
     
-    public GetTracksSecurity security;
-    public GetTracksRequest withSecurity(GetTracksSecurity security) {
-        this.security = security;
+    /**
+     * (yyyy-mm-dd hh:mm:ss) return tracks created within the specified dates
+     */
+    @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=created_at")
+    public org.openapis.openapi.models.shared.CreatedAt createdAt;
+    public GetTracksRequest withCreatedAt(org.openapis.openapi.models.shared.CreatedAt createdAt) {
+        this.createdAt = createdAt;
+        return this;
+    }
+    
+    /**
+     * Return tracks within a specified duration range
+     */
+    @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=duration")
+    public org.openapis.openapi.models.shared.Duration duration;
+    public GetTracksRequest withDuration(org.openapis.openapi.models.shared.Duration duration) {
+        this.duration = duration;
+        return this;
+    }
+    
+    /**
+     * A comma separated list of genres
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=genres")
+    public String genres;
+    public GetTracksRequest withGenres(String genres) {
+        this.genres = genres;
+        return this;
+    }
+    
+    /**
+     * A comma separated list of track ids to filter on
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids")
+    public String ids;
+    public GetTracksRequest withIds(String ids) {
+        this.ids = ids;
+        return this;
+    }
+    
+    /**
+     * Number of results to return in the collection.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetTracksRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Returns paginated collection of items (recommended, returning a list without pagination is deprecated and should not be used)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=linked_partitioning")
+    public Boolean linkedPartitioning;
+    public GetTracksRequest withLinkedPartitioning(Boolean linkedPartitioning) {
+        this.linkedPartitioning = linkedPartitioning;
+        return this;
+    }
+    
+    /**
+     * Offset of first result. Deprecated, use `linked_partitioning` instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetTracksRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public GetTracksRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    /**
+     * A comma separated list of tags
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
+    public String tags;
+    public GetTracksRequest withTags(String tags) {
+        this.tags = tags;
         return this;
     }
     

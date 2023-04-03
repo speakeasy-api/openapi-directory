@@ -4,13 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRealmUsersIdCredentialsCredentialIdRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=credentialId")
+    public String credentialId;
+    public DeleteRealmUsersIdCredentialsCredentialIdRequest withCredentialId(String credentialId) {
+        this.credentialId = credentialId;
+        return this;
+    }
     
-    public DeleteRealmUsersIdCredentialsCredentialIdPathParams pathParams;
-    public DeleteRealmUsersIdCredentialsCredentialIdRequest withPathParams(DeleteRealmUsersIdCredentialsCredentialIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * User id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteRealmUsersIdCredentialsCredentialIdRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public DeleteRealmUsersIdCredentialsCredentialIdRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

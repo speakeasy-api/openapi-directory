@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETBatchModifyClusterSnapshotsRequest {
-    
-    public GETBatchModifyClusterSnapshotsQueryParams queryParams;
-    public GETBatchModifyClusterSnapshotsRequest withQueryParams(GETBatchModifyClusterSnapshotsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETBatchModifyClusterSnapshotsActionEnum action;
+    public GETBatchModifyClusterSnapshotsRequest withAction(GETBatchModifyClusterSnapshotsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * A boolean value indicating whether to override an exception if the retention period has passed. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Force")
+    public Boolean force;
+    public GETBatchModifyClusterSnapshotsRequest withForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
     
-    public GETBatchModifyClusterSnapshotsHeaders headers;
-    public GETBatchModifyClusterSnapshotsRequest withHeaders(GETBatchModifyClusterSnapshotsHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The number of days that a manual snapshot is retained. If you specify the value -1, the manual snapshot is retained indefinitely.&lt;/p&gt; &lt;p&gt;The number must be either -1 or an integer between 1 and 3,653.&lt;/p&gt; &lt;p&gt;If you decrease the manual snapshot retention period from its current value, existing manual snapshots that fall outside of the new retention period will return an error. If you want to suppress the errors and delete the snapshots, use the force option. &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ManualSnapshotRetentionPeriod")
+    public Long manualSnapshotRetentionPeriod;
+    public GETBatchModifyClusterSnapshotsRequest withManualSnapshotRetentionPeriod(Long manualSnapshotRetentionPeriod) {
+        this.manualSnapshotRetentionPeriod = manualSnapshotRetentionPeriod;
+        return this;
+    }
+    
+    /**
+     * A list of snapshot identifiers you want to modify.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SnapshotIdentifierList")
+    public String[] snapshotIdentifierList;
+    public GETBatchModifyClusterSnapshotsRequest withSnapshotIdentifierList(String[] snapshotIdentifierList) {
+        this.snapshotIdentifierList = snapshotIdentifierList;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETBatchModifyClusterSnapshotsVersionEnum version;
+    public GETBatchModifyClusterSnapshotsRequest withVersion(GETBatchModifyClusterSnapshotsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETBatchModifyClusterSnapshotsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETBatchModifyClusterSnapshotsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETBatchModifyClusterSnapshotsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETBatchModifyClusterSnapshotsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETBatchModifyClusterSnapshotsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETBatchModifyClusterSnapshotsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETBatchModifyClusterSnapshotsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

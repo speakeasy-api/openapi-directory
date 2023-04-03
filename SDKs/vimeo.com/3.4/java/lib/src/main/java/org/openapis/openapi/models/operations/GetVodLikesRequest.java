@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVodLikesRequest {
-    
-    public GetVodLikesPathParams pathParams;
-    public GetVodLikesRequest withPathParams(GetVodLikesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The sort direction of the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public GetVodLikesDirectionEnum direction;
+    public GetVodLikesRequest withDirection(GetVodLikesDirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
+    /**
+     * The attribute by which to filter the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public GetVodLikesFilterEnum filter;
+    public GetVodLikesRequest withFilter(GetVodLikesFilterEnum filter) {
+        this.filter = filter;
+        return this;
+    }
     
-    public GetVodLikesQueryParams queryParams;
-    public GetVodLikesRequest withQueryParams(GetVodLikesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The ID of the On Demand page.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ondemand_id")
+    public Double ondemandId;
+    public GetVodLikesRequest withOndemandId(Double ondemandId) {
+        this.ondemandId = ondemandId;
+        return this;
+    }
+    
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetVodLikesRequest withPage(Double page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetVodLikesRequest withPerPage(Double perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The way to sort the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetVodLikesSortEnum sort;
+    public GetVodLikesRequest withSort(GetVodLikesSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

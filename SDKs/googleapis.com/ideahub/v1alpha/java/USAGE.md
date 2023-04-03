@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.IdeahubIdeasListQueryParams;
 import org.openapis.openapi.models.operations.IdeahubIdeasListRequest;
 import org.openapis.openapi.models.operations.IdeahubIdeasListResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -17,25 +16,23 @@ public class Application {
                 .build();
 
             IdeahubIdeasListRequest req = new IdeahubIdeasListRequest() {{
-                queryParams = new IdeahubIdeasListQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "provident";
-                    alt = "proto";
-                    callback = "quibusdam";
-                    fields = "unde";
-                    filter = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    orderBy = "vel";
-                    pageSize = 623564;
-                    pageToken = "deserunt";
-                    parent = "suscipit";
-                    prettyPrint = false;
-                    quotaUser = "iure";
-                    uploadType = "magnam";
-                    uploadProtocol = "debitis";
-                }};
-            }};            
+                dollarXgafv = "2";
+                accessToken = "provident";
+                alt = "proto";
+                callback = "quibusdam";
+                fields = "unde";
+                filter = "nulla";
+                key = "corrupti";
+                oauthToken = "illum";
+                orderBy = "vel";
+                pageSize = 623564;
+                pageToken = "deserunt";
+                parent = "suscipit";
+                prettyPrint = false;
+                quotaUser = "iure";
+                uploadType = "magnam";
+                uploadProtocol = "debitis";
+            }}            
 
             IdeahubIdeasListResponse res = sdk.ideas.ideahubIdeasList(req);
 

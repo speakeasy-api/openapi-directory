@@ -39,7 +39,7 @@ public class TestnetNtp1 {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestnetBroadcastTxResponse testnetBroadcastTx(org.openapis.openapi.models.operations.TestnetBroadcastTxRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestnetBroadcastTxResponse testnetBroadcastTx(org.openapis.openapi.models.shared.BroadcastTxRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/testnet/ntp1/broadcast");
         
@@ -92,7 +92,7 @@ public class TestnetNtp1 {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestnetBurnTokenResponse testnetBurnToken(org.openapis.openapi.models.operations.TestnetBurnTokenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestnetBurnTokenResponse testnetBurnToken(org.openapis.openapi.models.shared.BurnTokenRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/testnet/ntp1/burntoken");
         
@@ -147,7 +147,7 @@ public class TestnetNtp1 {
      */
     public org.openapis.openapi.models.operations.TestnetGetAddressInfoResponse testnetGetAddressInfo(org.openapis.openapi.models.operations.TestnetGetAddressInfoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestnetGetAddressInfoPathParams.class, baseUrl, "/testnet/ntp1/addressinfo/{address}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestnetGetAddressInfoRequest.class, baseUrl, "/testnet/ntp1/addressinfo/{address}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -195,7 +195,7 @@ public class TestnetNtp1 {
      */
     public org.openapis.openapi.models.operations.TestnetGetTokenHoldersResponse testnetGetTokenHolders(org.openapis.openapi.models.operations.TestnetGetTokenHoldersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestnetGetTokenHoldersPathParams.class, baseUrl, "/testnet/ntp1/stakeholders/{tokenid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestnetGetTokenHoldersRequest.class, baseUrl, "/testnet/ntp1/stakeholders/{tokenid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -243,7 +243,7 @@ public class TestnetNtp1 {
      */
     public org.openapis.openapi.models.operations.TestnetGetTokenIdResponse testnetGetTokenId(org.openapis.openapi.models.operations.TestnetGetTokenIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestnetGetTokenIdPathParams.class, baseUrl, "/testnet/ntp1/tokenid/{tokensymbol}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestnetGetTokenIdRequest.class, baseUrl, "/testnet/ntp1/tokenid/{tokensymbol}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -283,13 +283,13 @@ public class TestnetNtp1 {
      */
     public org.openapis.openapi.models.operations.TestnetGetTokenMetadataResponse testnetGetTokenMetadata(org.openapis.openapi.models.operations.TestnetGetTokenMetadataRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestnetGetTokenMetadataPathParams.class, baseUrl, "/testnet/ntp1/tokenmetadata/{tokenid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestnetGetTokenMetadataRequest.class, baseUrl, "/testnet/ntp1/tokenmetadata/{tokenid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TestnetGetTokenMetadataQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TestnetGetTokenMetadataRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -337,13 +337,13 @@ public class TestnetNtp1 {
      */
     public org.openapis.openapi.models.operations.TestnetGetTokenMetadataOfUtxoResponse testnetGetTokenMetadataOfUtxo(org.openapis.openapi.models.operations.TestnetGetTokenMetadataOfUtxoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestnetGetTokenMetadataOfUtxoPathParams.class, baseUrl, "/testnet/ntp1/tokenmetadata/{tokenid}/{utxo}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestnetGetTokenMetadataOfUtxoRequest.class, baseUrl, "/testnet/ntp1/tokenmetadata/{tokenid}/{utxo}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TestnetGetTokenMetadataOfUtxoQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TestnetGetTokenMetadataOfUtxoRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -391,7 +391,7 @@ public class TestnetNtp1 {
      */
     public org.openapis.openapi.models.operations.TestnetGetTransactionInfoResponse testnetGetTransactionInfo(org.openapis.openapi.models.operations.TestnetGetTransactionInfoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestnetGetTransactionInfoPathParams.class, baseUrl, "/testnet/ntp1/transactioninfo/{txid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestnetGetTransactionInfoRequest.class, baseUrl, "/testnet/ntp1/transactioninfo/{txid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -437,7 +437,7 @@ public class TestnetNtp1 {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestnetIssueTokenResponse testnetIssueToken(org.openapis.openapi.models.operations.TestnetIssueTokenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestnetIssueTokenResponse testnetIssueToken(org.openapis.openapi.models.shared.IssueTokenRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/testnet/ntp1/issue");
         
@@ -490,7 +490,7 @@ public class TestnetNtp1 {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestnetSendTokenResponse testnetSendToken(org.openapis.openapi.models.operations.TestnetSendTokenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestnetSendTokenResponse testnetSendToken(org.openapis.openapi.models.shared.SendTokenRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/testnet/ntp1/sendtoken");
         

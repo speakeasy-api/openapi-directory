@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCustomFields5Request {
-    
-    public GetCustomFields5PathParams pathParams;
-    public GetCustomFields5Request withPathParams(GetCustomFields5PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * project's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public GetCustomFields5Request withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContainersFloatingIpsRequest {
-    
-    public GetContainersFloatingIpsQueryParams queryParams;
-    public GetContainersFloatingIpsRequest withQueryParams(GetContainersFloatingIpsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The unique ID of your organization space where you want to create or work with your containers. Run `cf space &lt;space_name&gt; --guid`, where `&lt;space_name&gt;` is the name of your space, to retrieve your space ID.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Project-Id")
+    public String xAuthProjectId;
+    public GetContainersFloatingIpsRequest withXAuthProjectId(String xAuthProjectId) {
+        this.xAuthProjectId = xAuthProjectId;
         return this;
     }
     
+    /**
+     * The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Token")
+    public String xAuthToken;
+    public GetContainersFloatingIpsRequest withXAuthToken(String xAuthToken) {
+        this.xAuthToken = xAuthToken;
+        return this;
+    }
     
-    public GetContainersFloatingIpsHeaders headers;
-    public GetContainersFloatingIpsRequest withHeaders(GetContainersFloatingIpsHeaders headers) {
-        this.headers = headers;
+    /**
+     * If this option is set to `all=1`, `all=True`, or `all=true`, all public IP addresses that are allocated to a space are returned. If this option is set to `all=0`, `all=False`, or `all=false`, only available public IP addresses that are allocated but not bound to a container are returned. By default, only available public IP addresses are returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=all")
+    public Boolean all;
+    public GetContainersFloatingIpsRequest withAll(Boolean all) {
+        this.all = all;
         return this;
     }
     

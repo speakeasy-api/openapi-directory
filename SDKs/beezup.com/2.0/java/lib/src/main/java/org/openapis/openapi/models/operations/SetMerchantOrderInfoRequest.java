@@ -7,17 +7,37 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetMerchantOrderInfoRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public Integer accountId;
+    public SetMerchantOrderInfoRequest withAccountId(Integer accountId) {
+        this.accountId = accountId;
+        return this;
+    }
     
-    public SetMerchantOrderInfoPathParams pathParams;
-    public SetMerchantOrderInfoRequest withPathParams(SetMerchantOrderInfoPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The BeezUP Order identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=beezUPOrderId")
+    public String beezUPOrderId;
+    public SetMerchantOrderInfoRequest withBeezUPOrderId(String beezUPOrderId) {
+        this.beezUPOrderId = beezUPOrderId;
+        return this;
+    }
+    
+    /**
+     * The marketplace technical code
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=marketplaceTechnicalCode")
+    public String marketplaceTechnicalCode;
+    public SetMerchantOrderInfoRequest withMarketplaceTechnicalCode(String marketplaceTechnicalCode) {
+        this.marketplaceTechnicalCode = marketplaceTechnicalCode;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SetMerchantOrderInfoRequest request;
-    public SetMerchantOrderInfoRequest withRequest(org.openapis.openapi.models.shared.SetMerchantOrderInfoRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SetMerchantOrderInfoRequest setMerchantOrderInfoRequest;
+    public SetMerchantOrderInfoRequest withSetMerchantOrderInfoRequest(org.openapis.openapi.models.shared.SetMerchantOrderInfoRequest setMerchantOrderInfoRequest) {
+        this.setMerchantOrderInfoRequest = setMerchantOrderInfoRequest;
         return this;
     }
     

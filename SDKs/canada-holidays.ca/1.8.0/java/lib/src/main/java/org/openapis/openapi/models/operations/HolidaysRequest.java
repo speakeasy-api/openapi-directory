@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class HolidaysRequest {
+    /**
+     * A boolean parameter. If true or 1, will return only federal holidays. If false or 0, will return no federal holidays.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=federal")
+    public HolidaysFederalEnum federal;
+    public HolidaysRequest withFederal(HolidaysFederalEnum federal) {
+        this.federal = federal;
+        return this;
+    }
     
-    public HolidaysQueryParams queryParams;
-    public HolidaysRequest withQueryParams(HolidaysQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A boolean parameter. If false or 0 (default), will return only legislated holidays. If true or 1, will return optional holidays from Alberta and BC.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=optional")
+    public HolidaysOptionalEnum optional;
+    public HolidaysRequest withOptional(HolidaysOptionalEnum optional) {
+        this.optional = optional;
+        return this;
+    }
+    
+    /**
+     * A calendar year
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public Long year;
+    public HolidaysRequest withYear(Long year) {
+        this.year = year;
         return this;
     }
     

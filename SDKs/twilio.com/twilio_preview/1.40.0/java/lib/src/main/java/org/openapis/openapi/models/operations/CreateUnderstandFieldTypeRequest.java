@@ -7,31 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateUnderstandFieldTypeRequest {
-    
-    public CreateUnderstandFieldTypePathParams pathParams;
-    public CreateUnderstandFieldTypeRequest withPathParams(CreateUnderstandFieldTypePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public CreateUnderstandFieldTypeRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateUnderstandFieldTypeCreateUnderstandFieldTypeRequest request;
-    public CreateUnderstandFieldTypeRequest withRequest(CreateUnderstandFieldTypeCreateUnderstandFieldTypeRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateUnderstandFieldTypeSecurity security;
-    public CreateUnderstandFieldTypeRequest withSecurity(CreateUnderstandFieldTypeSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateUnderstandFieldTypeRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateUnderstandFieldTypeCreateUnderstandFieldTypeRequest requestBody;
+    public CreateUnderstandFieldTypeRequest withRequestBody(CreateUnderstandFieldTypeCreateUnderstandFieldTypeRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

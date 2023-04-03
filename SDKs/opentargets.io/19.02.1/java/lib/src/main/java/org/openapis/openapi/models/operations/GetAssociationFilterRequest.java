@@ -4,13 +4,211 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAssociationFilterRequest {
+    /**
+     * Data source to consider.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=datasource")
+    public String datasource;
+    public GetAssociationFilterRequest withDatasource(String datasource) {
+        this.datasource = datasource;
+        return this;
+    }
     
-    public GetAssociationFilterQueryParams queryParams;
-    public GetAssociationFilterRequest withQueryParams(GetAssociationFilterQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Type of data structure to return. Can be 'full', 'simple', 'ids', or 'count'.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=datastructure")
+    public String datastructure;
+    public GetAssociationFilterRequest withDatastructure(String datastructure) {
+        this.datastructure = datastructure;
+        return this;
+    }
+    
+    /**
+     * Data type to consider.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=datatype")
+    public String datatype;
+    public GetAssociationFilterRequest withDatatype(String datatype) {
+        this.datatype = datatype;
+        return this;
+    }
+    
+    /**
+     * If `true`, it returns associations that have at least one direct evidence connecting the target and the disease. If `false` it only returns associations for which there is no direct evidence connecting the target and the disease, but only evidence connecting the target to a children of the disease in the EFO ontology.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direct")
+    public Boolean direct;
+    public GetAssociationFilterRequest withDirect(Boolean direct) {
+        this.direct = direct;
+        return this;
+    }
+    
+    /**
+     * An EFO code listed as disease.id.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=disease")
+    public String disease;
+    public GetAssociationFilterRequest withDisease(String disease) {
+        this.disease = disease;
+        return this;
+    }
+    
+    /**
+     * Returns facets
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=facets")
+    public Boolean facets;
+    public GetAssociationFilterRequest withFacets(Boolean facets) {
+        this.facets = facets;
+        return this;
+    }
+    
+    /**
+     * Fields you want to retrieve. This will get priority over the data structure requested.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public GetAssociationFilterRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Format to get the data back. Can be 'json', 'xml', 'tab' or 'csv'. **Note** that this option can only be used when calling the API directly and will not work in this page. The response here will always be JSON.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public String format;
+    public GetAssociationFilterRequest withFormat(String format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * How many initial results should be skipped. Defaults to 0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
+    public Double from;
+    public GetAssociationFilterRequest withFrom(Double from) {
+        this.from = from;
+        return this;
+    }
+    
+    /**
+     * A Reactome pathway identifier (returning only those targets linked to the specified pathway).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pathway")
+    public String pathway;
+    public GetAssociationFilterRequest withPathway(String pathway) {
+        this.pathway = pathway;
+        return this;
+    }
+    
+    /**
+     * Filter by maximum score value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scorevalue_max")
+    public Float scorevalueMax;
+    public GetAssociationFilterRequest withScorevalueMax(Float scorevalueMax) {
+        this.scorevalueMax = scorevalueMax;
+        return this;
+    }
+    
+    /**
+     * Filter by minimum score value. The default is 0, but using 0.2 is a good trade-off to filter lower quality data points.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scorevalue_min")
+    public Float scorevalueMin;
+    public GetAssociationFilterRequest withScorevalueMin(Float scorevalueMin) {
+        this.scorevalueMin = scorevalueMin;
+        return this;
+    }
+    
+    /**
+     * Score types to apply the score value min and max filters. The default is `overall`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scorevalue_types")
+    public String scorevalueTypes;
+    public GetAssociationFilterRequest withScorevalueTypes(String scorevalueTypes) {
+        this.scorevalueTypes = scorevalueTypes;
+        return this;
+    }
+    
+    /**
+     * Restrict the filtered results to those matching the passed string. The matching is done with a
+     * phrase match prefix.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public GetAssociationFilterRequest withSearch(String search) {
+        this.search = search;
+        return this;
+    }
+    
+    /**
+     * Maximum amount of results to return. Defaults to 10, max is 10000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
+    public Double size;
+    public GetAssociationFilterRequest withSize(Double size) {
+        this.size = size;
+        return this;
+    }
+    
+    /**
+     * Sort by the given score type. Defaults to 'overall' and descending order. Use '~' prefix to do ascending
+     * order e.g. '~overall'. You will call a data type score like: 'datatypes.literature', and a data source as
+     * 'datasources.gwas'. Supports multiple entries.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetAssociationFilterRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * A target identifier listed as target.id.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=target")
+    public String target;
+    public GetAssociationFilterRequest withTarget(String target) {
+        this.target = target;
+        return this;
+    }
+    
+    /**
+     * A ChEMBL target class identifier (returning only those targets belonging to the specified class).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=target_class")
+    public String targetClass;
+    public GetAssociationFilterRequest withTargetClass(String targetClass) {
+        this.targetClass = targetClass;
+        return this;
+    }
+    
+    /**
+     * An EFO code of a therapeutic area.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=therapeutic_area")
+    public String therapeuticArea;
+    public GetAssociationFilterRequest withTherapeuticArea(String therapeuticArea) {
+        this.therapeuticArea = therapeuticArea;
+        return this;
+    }
+    
+    /**
+     * A UniProt keyword (meaning all the targets linked to that keyword).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uniprotkw")
+    public String uniprotkw;
+    public GetAssociationFilterRequest withUniprotkw(String uniprotkw) {
+        this.uniprotkw = uniprotkw;
         return this;
     }
     

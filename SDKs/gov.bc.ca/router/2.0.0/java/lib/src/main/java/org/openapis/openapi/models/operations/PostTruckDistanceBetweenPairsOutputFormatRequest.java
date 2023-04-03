@@ -4,20 +4,117 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostTruckDistanceBetweenPairsOutputFormatRequest {
-    
-    public PostTruckDistanceBetweenPairsOutputFormatPathParams pathParams;
-    public PostTruckDistanceBetweenPairsOutputFormatRequest withPathParams(PostTruckDistanceBetweenPairsOutputFormatPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * If true, route starts and ends on same side of road as start and end points.Default is false.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=correctSide")
+    public Boolean correctSide;
+    public PostTruckDistanceBetweenPairsOutputFormatRequest withCorrectSide(Boolean correctSide) {
+        this.correctSide = correctSide;
         return this;
     }
     
+    /**
+     * Routing criteria to optimize (e.g., shortest, fastest). Default is shortest.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=criteria")
+    public PostTruckDistanceBetweenPairsOutputFormatCriteriaEnum criteria;
+    public PostTruckDistanceBetweenPairsOutputFormatRequest withCriteria(PostTruckDistanceBetweenPairsOutputFormatCriteriaEnum criteria) {
+        this.criteria = criteria;
+        return this;
+    }
     
-    public PostTruckDistanceBetweenPairsOutputFormatQueryParams queryParams;
-    public PostTruckDistanceBetweenPairsOutputFormatRequest withQueryParams(PostTruckDistanceBetweenPairsOutputFormatQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * departure date and time in internet timestamp notation as defined in RFC 3339, section 5.6 (e.g., 2019-02-28T11:36:00-08:00);&lt;br&gt; Ignored if time-dependency modules are disabled
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=departure")
+    public OffsetDateTime departure;
+    public PostTruckDistanceBetweenPairsOutputFormatRequest withDeparture(OffsetDateTime departure) {
+        this.departure = departure;
+        return this;
+    }
+    
+    /**
+     * A comma-separated list of time-related modules to disable (e.g., sc,tf,ev,td).&lt;br&gt;&lt;br&gt;Module names include:&lt;br&gt; sc \u2013 ferry schedules; disabled by default; disabled by default and only suitable for demos&lt;br&gt;tf \u2013 historic traffic congestion; disabled by default and only suitable for demos&lt;br&gt;ev \u2013 road events; disabled by default and only suitable for demos&lt;br&gt;td \u2013 time-dependency; disabling this disables sc, tf, and ev modules&lt;br&gt;tr \u2013 turn restrictions; if td is disabled, time-dependent turn restrictions are ignored&lt;br&gt;tc - turn costs (e.g., left turns take longer than right turns)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=disable")
+    public String disable;
+    public PostTruckDistanceBetweenPairsOutputFormatRequest withDisable(String disable) {
+        this.disable = disable;
+        return this;
+    }
+    
+    /**
+     * distance unit of measure (e.g., km, mi). Default is km.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=distanceUnit")
+    public PostTruckDistanceBetweenPairsOutputFormatDistanceUnitEnum distanceUnit;
+    public PostTruckDistanceBetweenPairsOutputFormatRequest withDistanceUnit(PostTruckDistanceBetweenPairsOutputFormatDistanceUnitEnum distanceUnit) {
+        this.distanceUnit = distanceUnit;
+        return this;
+    }
+    
+    /**
+     * A comma-separated list of origin points.  See &lt;a href=https://github.com/bcgov/ols-router/blob/gh-pages/glossary.md#fromPoints target='_blank'&gt;fromPoints&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromPoints")
+    public String fromPoints;
+    public PostTruckDistanceBetweenPairsOutputFormatRequest withFromPoints(String fromPoints) {
+        this.fromPoints = fromPoints;
+        return this;
+    }
+    
+    /**
+     * The maximum number of pairs to return for each toPoint.  Pairs are ordered by distance/time from fromPoint. For example, given 1 fromPoint, and 10 toPoints, and maxPairs=1 , return the nearest toPoint to the fromPoint. Given 3 fromPoints and 10 toPoints, maxPairs=3 means return the 3 nearest toPoints to each fromPoint.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxPairs")
+    public Long maxPairs;
+    public PostTruckDistanceBetweenPairsOutputFormatRequest withMaxPairs(Long maxPairs) {
+        this.maxPairs = maxPairs;
+        return this;
+    }
+    
+    /**
+     * Format of representation
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=outputFormat")
+    public PostTruckDistanceBetweenPairsOutputFormatOutputFormatEnum outputFormat;
+    public PostTruckDistanceBetweenPairsOutputFormatRequest withOutputFormat(PostTruckDistanceBetweenPairsOutputFormatOutputFormatEnum outputFormat) {
+        this.outputFormat = outputFormat;
+        return this;
+    }
+    
+    /**
+     * The EPSG code of the spatial reference system (SRS) to use for output geometries. See &lt;a href=https://github.com/bcgov/ols-router/blob/gh-pages/glossary.md#outputSRS target="_blank"&gt;outputSRS&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputSRS")
+    public PostTruckDistanceBetweenPairsOutputFormatOutputSrsEnum outputSRS;
+    public PostTruckDistanceBetweenPairsOutputFormatRequest withOutputSRS(PostTruckDistanceBetweenPairsOutputFormatOutputSrsEnum outputSRS) {
+        this.outputSRS = outputSRS;
+        return this;
+    }
+    
+    /**
+     * Route description (e.g., Shortest route from 1002 Johnson St, Victoria to 1105 Royal Ave,New Westminster)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=routeDescription")
+    public String routeDescription;
+    public PostTruckDistanceBetweenPairsOutputFormatRequest withRouteDescription(String routeDescription) {
+        this.routeDescription = routeDescription;
+        return this;
+    }
+    
+    /**
+     * A comma-separated list of destination points. See &lt;a href=https://github.com/bcgov/ols-router/blob/gh-pages/glossary.md#toPoints target='_blank'&gt;toPoints&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toPoints")
+    public String toPoints;
+    public PostTruckDistanceBetweenPairsOutputFormatRequest withToPoints(String toPoints) {
+        this.toPoints = toPoints;
         return this;
     }
     

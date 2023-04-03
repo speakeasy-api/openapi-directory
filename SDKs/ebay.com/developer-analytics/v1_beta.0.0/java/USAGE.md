@@ -5,10 +5,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GetRateLimitsSecurity;
-import org.openapis.openapi.models.operations.GetRateLimitsQueryParams;
 import org.openapis.openapi.models.operations.GetRateLimitsRequest;
 import org.openapis.openapi.models.operations.GetRateLimitsResponse;
-import org.openapis.openapi.models.shared.SchemeAPIAuth;
 
 public class Application {
     public static void main(String[] args) {
@@ -17,18 +15,13 @@ public class Application {
                 .build();
 
             GetRateLimitsRequest req = new GetRateLimitsRequest() {{
-                security = new GetRateLimitsSecurity() {{
-                    apiAuth = new SchemeAPIAuth() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                queryParams = new GetRateLimitsQueryParams() {{
-                    apiContext = "corrupti";
-                    apiName = "provident";
-                }};
-            }};            
+                apiContext = "corrupti";
+                apiName = "provident";
+            }}            
 
-            GetRateLimitsResponse res = sdk.rateLimit.getRateLimits(req);
+            GetRateLimitsResponse res = sdk.rateLimit.getRateLimits(req, new GetRateLimitsSecurity() {{
+                apiAuth = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.rateLimitsResponse.isPresent()) {
                 // handle response

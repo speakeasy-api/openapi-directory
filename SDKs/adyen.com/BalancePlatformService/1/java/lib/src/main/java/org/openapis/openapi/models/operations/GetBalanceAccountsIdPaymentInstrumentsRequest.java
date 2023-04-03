@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBalanceAccountsIdPaymentInstrumentsRequest {
-    
-    public GetBalanceAccountsIdPaymentInstrumentsPathParams pathParams;
-    public GetBalanceAccountsIdPaymentInstrumentsRequest withPathParams(GetBalanceAccountsIdPaymentInstrumentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the balance account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetBalanceAccountsIdPaymentInstrumentsRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetBalanceAccountsIdPaymentInstrumentsQueryParams queryParams;
-    public GetBalanceAccountsIdPaymentInstrumentsRequest withQueryParams(GetBalanceAccountsIdPaymentInstrumentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of items returned per page, maximum 100 items. By default, the response returns 10 items per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetBalanceAccountsIdPaymentInstrumentsRequest withLimit(Integer limit) {
+        this.limit = limit;
         return this;
     }
     
-    
-    public GetBalanceAccountsIdPaymentInstrumentsSecurity security;
-    public GetBalanceAccountsIdPaymentInstrumentsRequest withSecurity(GetBalanceAccountsIdPaymentInstrumentsSecurity security) {
-        this.security = security;
+    /**
+     * The number of items that you want to skip.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public GetBalanceAccountsIdPaymentInstrumentsRequest withOffset(Integer offset) {
+        this.offset = offset;
         return this;
     }
     

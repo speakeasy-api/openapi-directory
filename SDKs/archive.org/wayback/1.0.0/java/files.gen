@@ -29,7 +29,6 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/GetWaybackV1AvailableQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetWaybackV1AvailableRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetWaybackV1AvailableResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Error.java

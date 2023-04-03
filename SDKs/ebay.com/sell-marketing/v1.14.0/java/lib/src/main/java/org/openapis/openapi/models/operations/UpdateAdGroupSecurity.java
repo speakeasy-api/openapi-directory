@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateAdGroupSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeAPIAuth apiAuth;
-    public UpdateAdGroupSecurity withApiAuth(org.openapis.openapi.models.shared.SchemeAPIAuth apiAuth) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String apiAuth;
+    public UpdateAdGroupSecurity withApiAuth(String apiAuth) {
         this.apiAuth = apiAuth;
         return this;
     }

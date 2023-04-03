@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SubmitCommentMultipartRequest {
-    
-    public SubmitCommentMultipartPathParams pathParams;
-    public SubmitCommentMultipartRequest withPathParams(SubmitCommentMultipartPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public org.openapis.openapi.models.shared.Comment1 comment1;
+    public SubmitCommentMultipartRequest withComment1(org.openapis.openapi.models.shared.Comment1 comment1) {
+        this.comment1 = comment1;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public org.openapis.openapi.models.shared.Comment1 request;
-    public SubmitCommentMultipartRequest withRequest(org.openapis.openapi.models.shared.Comment1 request) {
-        this.request = request;
+    /**
+     * Activity ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=activityId")
+    public Long activityId;
+    public SubmitCommentMultipartRequest withActivityId(Long activityId) {
+        this.activityId = activityId;
+        return this;
+    }
+    
+    /**
+     * Project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public Long projectId;
+    public SubmitCommentMultipartRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     

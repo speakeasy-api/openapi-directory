@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostGroupsGroupIdUsersRequest {
-    
-    public PostGroupsGroupIdUsersPathParams pathParams;
-    public PostGroupsGroupIdUsersRequest withPathParams(PostGroupsGroupIdUsersPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public PostGroupsGroupIdUsersRequestBody requestBody;
+    public PostGroupsGroupIdUsersRequest withRequestBody(PostGroupsGroupIdUsersRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PostGroupsGroupIdUsersRequestBody request;
-    public PostGroupsGroupIdUsersRequest withRequest(PostGroupsGroupIdUsersRequestBody request) {
-        this.request = request;
+    /**
+     * Group ID to associate this user with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public Integer groupId;
+    public PostGroupsGroupIdUsersRequest withGroupId(Integer groupId) {
+        this.groupId = groupId;
         return this;
     }
     

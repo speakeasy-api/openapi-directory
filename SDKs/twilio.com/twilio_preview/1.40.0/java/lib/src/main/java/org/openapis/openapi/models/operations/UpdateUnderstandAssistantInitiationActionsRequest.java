@@ -7,31 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateUnderstandAssistantInitiationActionsRequest {
-    
-    public UpdateUnderstandAssistantInitiationActionsPathParams pathParams;
-    public UpdateUnderstandAssistantInitiationActionsRequest withPathParams(UpdateUnderstandAssistantInitiationActionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public UpdateUnderstandAssistantInitiationActionsRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateUnderstandAssistantInitiationActionsUpdateUnderstandAssistantInitiationActionsRequest request;
-    public UpdateUnderstandAssistantInitiationActionsRequest withRequest(UpdateUnderstandAssistantInitiationActionsUpdateUnderstandAssistantInitiationActionsRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public UpdateUnderstandAssistantInitiationActionsSecurity security;
-    public UpdateUnderstandAssistantInitiationActionsRequest withSecurity(UpdateUnderstandAssistantInitiationActionsSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateUnderstandAssistantInitiationActionsRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public UpdateUnderstandAssistantInitiationActionsUpdateUnderstandAssistantInitiationActionsRequest requestBody;
+    public UpdateUnderstandAssistantInitiationActionsRequest withRequestBody(UpdateUnderstandAssistantInitiationActionsUpdateUnderstandAssistantInitiationActionsRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

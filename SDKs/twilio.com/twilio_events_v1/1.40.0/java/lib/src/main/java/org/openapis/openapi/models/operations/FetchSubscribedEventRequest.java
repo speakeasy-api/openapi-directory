@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchSubscribedEventRequest {
-    
-    public FetchSubscribedEventPathParams pathParams;
-    public FetchSubscribedEventRequest withPathParams(FetchSubscribedEventPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique SID identifier of the Subscription.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=SubscriptionSid")
+    public String subscriptionSid;
+    public FetchSubscribedEventRequest withSubscriptionSid(String subscriptionSid) {
+        this.subscriptionSid = subscriptionSid;
         return this;
     }
     
-    
-    public FetchSubscribedEventSecurity security;
-    public FetchSubscribedEventRequest withSecurity(FetchSubscribedEventSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchSubscribedEventRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Type of event being subscribed to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Type")
+    public String type;
+    public FetchSubscribedEventRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

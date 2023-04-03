@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SalesCreditNotesPutRequest {
-    
-    public SalesCreditNotesPutPathParams pathParams;
-    public SalesCreditNotesPutRequest withPathParams(SalesCreditNotesPutPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Information of Sales Credit Note to update.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SalesInvoiceCreditNoteDto request;
-    public SalesCreditNotesPutRequest withRequest(org.openapis.openapi.models.shared.SalesInvoiceCreditNoteDto request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SalesInvoiceCreditNoteDto salesInvoiceCreditNoteDto;
+    public SalesCreditNotesPutRequest withSalesInvoiceCreditNoteDto(org.openapis.openapi.models.shared.SalesInvoiceCreditNoteDto salesInvoiceCreditNoteDto) {
+        this.salesInvoiceCreditNoteDto = salesInvoiceCreditNoteDto;
+        return this;
+    }
+    
+    /**
+     * Id of Sales Credit Note to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public SalesCreditNotesPutRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

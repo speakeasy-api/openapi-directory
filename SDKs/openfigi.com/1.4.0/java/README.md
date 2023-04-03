@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GetMappingValuesKeyKeyEnum;
-import org.openapis.openapi.models.operations.GetMappingValuesKeyPathParams;
 import org.openapis.openapi.models.operations.GetMappingValuesKeyRequest;
 import org.openapis.openapi.models.operations.GetMappingValuesKeyResponse;
 
@@ -27,17 +26,13 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    apiKeyAuth = new SchemeAPIKeyAuth() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    apiKeyAuth = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GetMappingValuesKeyRequest req = new GetMappingValuesKeyRequest() {{
-                pathParams = new GetMappingValuesKeyPathParams() {{
-                    key = "currency";
-                }};
-            }};            
+                key = "currency";
+            }}            
 
             GetMappingValuesKeyResponse res = sdk.getMappingValuesKey(req);
 
@@ -51,7 +46,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

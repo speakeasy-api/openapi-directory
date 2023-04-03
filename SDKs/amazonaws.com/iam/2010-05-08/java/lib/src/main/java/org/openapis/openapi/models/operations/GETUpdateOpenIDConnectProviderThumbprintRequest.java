@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETUpdateOpenIDConnectProviderThumbprintRequest {
-    
-    public GETUpdateOpenIDConnectProviderThumbprintQueryParams queryParams;
-    public GETUpdateOpenIDConnectProviderThumbprintRequest withQueryParams(GETUpdateOpenIDConnectProviderThumbprintQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETUpdateOpenIDConnectProviderThumbprintActionEnum action;
+    public GETUpdateOpenIDConnectProviderThumbprintRequest withAction(GETUpdateOpenIDConnectProviderThumbprintActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The Amazon Resource Name (ARN) of the IAM OIDC provider resource object for which you want to update the thumbprint. You can get a list of OIDC provider ARNs by using the &lt;a&gt;ListOpenIDConnectProviders&lt;/a&gt; operation.&lt;/p&gt; &lt;p&gt;For more information about ARNs, see &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt;Amazon Resource Names (ARNs)&lt;/a&gt; in the &lt;i&gt;Amazon Web Services General Reference&lt;/i&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OpenIDConnectProviderArn")
+    public String openIDConnectProviderArn;
+    public GETUpdateOpenIDConnectProviderThumbprintRequest withOpenIDConnectProviderArn(String openIDConnectProviderArn) {
+        this.openIDConnectProviderArn = openIDConnectProviderArn;
+        return this;
+    }
     
-    public GETUpdateOpenIDConnectProviderThumbprintHeaders headers;
-    public GETUpdateOpenIDConnectProviderThumbprintRequest withHeaders(GETUpdateOpenIDConnectProviderThumbprintHeaders headers) {
-        this.headers = headers;
+    /**
+     * A list of certificate thumbprints that are associated with the specified IAM OpenID Connect provider. For more information, see &lt;a&gt;CreateOpenIDConnectProvider&lt;/a&gt;. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ThumbprintList")
+    public String[] thumbprintList;
+    public GETUpdateOpenIDConnectProviderThumbprintRequest withThumbprintList(String[] thumbprintList) {
+        this.thumbprintList = thumbprintList;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETUpdateOpenIDConnectProviderThumbprintVersionEnum version;
+    public GETUpdateOpenIDConnectProviderThumbprintRequest withVersion(GETUpdateOpenIDConnectProviderThumbprintVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETUpdateOpenIDConnectProviderThumbprintRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETUpdateOpenIDConnectProviderThumbprintRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETUpdateOpenIDConnectProviderThumbprintRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETUpdateOpenIDConnectProviderThumbprintRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETUpdateOpenIDConnectProviderThumbprintRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETUpdateOpenIDConnectProviderThumbprintRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETUpdateOpenIDConnectProviderThumbprintRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFlowsRequest {
-    
-    public GetFlowsQueryParams queryParams;
-    public GetFlowsRequest withQueryParams(GetFlowsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * cursor from previous response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public GetFlowsRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
+    /**
+     * end time for query in epoch seconds
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_time")
+    public Double endTime;
+    public GetFlowsRequest withEndTime(Double endTime) {
+        this.endTime = endTime;
+        return this;
+    }
     
-    public GetFlowsSecurity security;
-    public GetFlowsRequest withSecurity(GetFlowsSecurity security) {
-        this.security = security;
+    /**
+     * page size of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
+    public Double size;
+    public GetFlowsRequest withSize(Double size) {
+        this.size = size;
+        return this;
+    }
+    
+    /**
+     * start time for query in epoch seconds
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_time")
+    public Double startTime;
+    public GetFlowsRequest withStartTime(Double startTime) {
+        this.startTime = startTime;
         return this;
     }
     

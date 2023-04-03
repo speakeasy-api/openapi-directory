@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2GetLinkedProfilesRequest {
-    
-    public Destiny2GetLinkedProfilesPathParams pathParams;
-    public Destiny2GetLinkedProfilesRequest withPathParams(Destiny2GetLinkedProfilesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * (optional) if set to 'true', all memberships regardless of whether they're obscured by overrides will be returned. Normal privacy restrictions on account linking will still apply no matter what.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=getAllMemberships")
+    public Boolean getAllMemberships;
+    public Destiny2GetLinkedProfilesRequest withGetAllMemberships(Boolean getAllMemberships) {
+        this.getAllMemberships = getAllMemberships;
         return this;
     }
     
+    /**
+     * The ID of the membership whose linked Destiny accounts you want returned. Make sure your membership ID matches its Membership Type: don't pass us a PSN membership ID and the XBox membership type, it's not going to work!
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipId")
+    public Long membershipId;
+    public Destiny2GetLinkedProfilesRequest withMembershipId(Long membershipId) {
+        this.membershipId = membershipId;
+        return this;
+    }
     
-    public Destiny2GetLinkedProfilesQueryParams queryParams;
-    public Destiny2GetLinkedProfilesRequest withQueryParams(Destiny2GetLinkedProfilesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The type for the membership whose linked Destiny accounts you want returned.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
+    public Integer membershipType;
+    public Destiny2GetLinkedProfilesRequest withMembershipType(Integer membershipType) {
+        this.membershipType = membershipType;
         return this;
     }
     

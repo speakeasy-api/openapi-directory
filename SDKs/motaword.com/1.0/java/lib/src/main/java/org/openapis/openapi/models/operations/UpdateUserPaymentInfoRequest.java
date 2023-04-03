@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateUserPaymentInfoRequest {
-    
-    public UpdateUserPaymentInfoPathParams pathParams;
-    public UpdateUserPaymentInfoRequest withPathParams(UpdateUserPaymentInfoPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.PaymentInfo paymentInfo;
+    public UpdateUserPaymentInfoRequest withPaymentInfo(org.openapis.openapi.models.shared.PaymentInfo paymentInfo) {
+        this.paymentInfo = paymentInfo;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PaymentInfo request;
-    public UpdateUserPaymentInfoRequest withRequest(org.openapis.openapi.models.shared.PaymentInfo request) {
-        this.request = request;
+    /**
+     * User ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public Long userId;
+    public UpdateUserPaymentInfoRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

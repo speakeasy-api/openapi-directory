@@ -32,16 +32,11 @@ lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetGlobalwinescoresLatestColorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetGlobalwinescoresLatestOrderingEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetGlobalwinescoresLatestQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetGlobalwinescoresLatestHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetGlobalwinescoresLatestRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetGlobalwinescoresLatestResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListHistoricalGWSColorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListHistoricalGWSOrderingEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListHistoricalGWSQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListHistoricalGWSHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListHistoricalGWSRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListHistoricalGWSResponse.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeTokenAuthentication.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

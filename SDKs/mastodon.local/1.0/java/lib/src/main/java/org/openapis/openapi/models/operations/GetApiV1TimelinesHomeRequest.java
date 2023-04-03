@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1TimelinesHomeRequest {
-    
-    public GetApiV1TimelinesHomeQueryParams queryParams;
-    public GetApiV1TimelinesHomeRequest withQueryParams(GetApiV1TimelinesHomeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Max number of results to return. Defaults to 20.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetApiV1TimelinesHomeRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * Show only local statuses? Defaults to false.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=local")
+    public Boolean local;
+    public GetApiV1TimelinesHomeRequest withLocal(Boolean local) {
+        this.local = local;
+        return this;
+    }
     
-    public GetApiV1TimelinesHomeSecurity security;
-    public GetApiV1TimelinesHomeRequest withSecurity(GetApiV1TimelinesHomeSecurity security) {
-        this.security = security;
+    /**
+     * Return results older than ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_id")
+    public String maxId;
+    public GetApiV1TimelinesHomeRequest withMaxId(String maxId) {
+        this.maxId = maxId;
+        return this;
+    }
+    
+    /**
+     * Return results immediately newer than ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_id")
+    public String minId;
+    public GetApiV1TimelinesHomeRequest withMinId(String minId) {
+        this.minId = minId;
+        return this;
+    }
+    
+    /**
+     * Return results newer than ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since_id")
+    public String sinceId;
+    public GetApiV1TimelinesHomeRequest withSinceId(String sinceId) {
+        this.sinceId = sinceId;
         return this;
     }
     

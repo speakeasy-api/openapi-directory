@@ -7,24 +7,86 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListClosedWorkflowExecutionsRequest {
-    
-    public ListClosedWorkflowExecutionsQueryParams queryParams;
-    public ListClosedWorkflowExecutionsRequest withQueryParams(ListClosedWorkflowExecutionsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ListClosedWorkflowExecutionsHeaders headers;
-    public ListClosedWorkflowExecutionsRequest withHeaders(ListClosedWorkflowExecutionsHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ListClosedWorkflowExecutionsInput request;
-    public ListClosedWorkflowExecutionsRequest withRequest(org.openapis.openapi.models.shared.ListClosedWorkflowExecutionsInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ListClosedWorkflowExecutionsInput listClosedWorkflowExecutionsInput;
+    public ListClosedWorkflowExecutionsRequest withListClosedWorkflowExecutionsInput(org.openapis.openapi.models.shared.ListClosedWorkflowExecutionsInput listClosedWorkflowExecutionsInput) {
+        this.listClosedWorkflowExecutionsInput = listClosedWorkflowExecutionsInput;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListClosedWorkflowExecutionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListClosedWorkflowExecutionsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListClosedWorkflowExecutionsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListClosedWorkflowExecutionsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListClosedWorkflowExecutionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListClosedWorkflowExecutionsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListClosedWorkflowExecutionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public ListClosedWorkflowExecutionsXAmzTargetEnum xAmzTarget;
+    public ListClosedWorkflowExecutionsRequest withXAmzTarget(ListClosedWorkflowExecutionsXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
+        return this;
+    }
+    
+    /**
+     * Pagination limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maximumPageSize")
+    public String maximumPageSize;
+    public ListClosedWorkflowExecutionsRequest withMaximumPageSize(String maximumPageSize) {
+        this.maximumPageSize = maximumPageSize;
+        return this;
+    }
+    
+    /**
+     * Pagination token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextPageToken")
+    public String nextPageToken;
+    public ListClosedWorkflowExecutionsRequest withNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
         return this;
     }
     

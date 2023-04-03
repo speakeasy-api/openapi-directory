@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BulkUpdateAdsBidByInventoryReferenceRequest {
-    
-    public BulkUpdateAdsBidByInventoryReferencePathParams pathParams;
-    public BulkUpdateAdsBidByInventoryReferenceRequest withPathParams(BulkUpdateAdsBidByInventoryReferencePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * This request object defines the fields for the &lt;b&gt;BulkCreateAdsByInventoryReference&lt;/b&gt; request.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.BulkCreateAdsByInventoryReferenceRequest request;
-    public BulkUpdateAdsBidByInventoryReferenceRequest withRequest(org.openapis.openapi.models.shared.BulkCreateAdsByInventoryReferenceRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.BulkCreateAdsByInventoryReferenceRequest bulkCreateAdsByInventoryReferenceRequest;
+    public BulkUpdateAdsBidByInventoryReferenceRequest withBulkCreateAdsByInventoryReferenceRequest(org.openapis.openapi.models.shared.BulkCreateAdsByInventoryReferenceRequest bulkCreateAdsByInventoryReferenceRequest) {
+        this.bulkCreateAdsByInventoryReferenceRequest = bulkCreateAdsByInventoryReferenceRequest;
         return this;
     }
     
-    
-    public BulkUpdateAdsBidByInventoryReferenceSecurity security;
-    public BulkUpdateAdsBidByInventoryReferenceRequest withSecurity(BulkUpdateAdsBidByInventoryReferenceSecurity security) {
-        this.security = security;
+    /**
+     * A unique eBay-assigned ID for an ad campaign that's generated when a campaign is created. Get a seller's campaign IDs by calling &lt;a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns"&gt;getCampaigns&lt;/a&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=campaign_id")
+    public String campaignId;
+    public BulkUpdateAdsBidByInventoryReferenceRequest withCampaignId(String campaignId) {
+        this.campaignId = campaignId;
         return this;
     }
     

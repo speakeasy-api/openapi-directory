@@ -35,19 +35,20 @@ public class BankAccounts {
      * Returns details of a [BankAccount](https://developer.squareup.com/reference/square_2021-08-18/objects/BankAccount)
      * linked to a Square account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetBankAccountResponse getBankAccount(org.openapis.openapi.models.operations.GetBankAccountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetBankAccountResponse getBankAccount(org.openapis.openapi.models.operations.GetBankAccountRequest request, org.openapis.openapi.models.operations.GetBankAccountSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBankAccountPathParams.class, baseUrl, "/v2/bank-accounts/{bank_account_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBankAccountRequest.class, baseUrl, "/v2/bank-accounts/{bank_account_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -75,19 +76,20 @@ public class BankAccounts {
      * GetBankAccountByV1Id
      * Returns details of a [BankAccount](https://developer.squareup.com/reference/square_2021-08-18/objects/BankAccount) identified by V1 bank account ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetBankAccountByV1IdResponse getBankAccountByV1Id(org.openapis.openapi.models.operations.GetBankAccountByV1IdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetBankAccountByV1IdResponse getBankAccountByV1Id(org.openapis.openapi.models.operations.GetBankAccountByV1IdRequest request, org.openapis.openapi.models.operations.GetBankAccountByV1IdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBankAccountByV1IdPathParams.class, baseUrl, "/v2/bank-accounts/by-v1-id/{v1_bank_account_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBankAccountByV1IdRequest.class, baseUrl, "/v2/bank-accounts/by-v1-id/{v1_bank_account_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -115,10 +117,11 @@ public class BankAccounts {
      * ListBankAccounts
      * Returns a list of [BankAccount](https://developer.squareup.com/reference/square_2021-08-18/objects/BankAccount) objects linked to a Square account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListBankAccountsResponse listBankAccounts(org.openapis.openapi.models.operations.ListBankAccountsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListBankAccountsResponse listBankAccounts(org.openapis.openapi.models.operations.ListBankAccountsRequest request, org.openapis.openapi.models.operations.ListBankAccountsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/bank-accounts");
         
@@ -126,14 +129,14 @@ public class BankAccounts {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListBankAccountsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListBankAccountsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

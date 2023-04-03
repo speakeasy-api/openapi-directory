@@ -135,7 +135,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/SendMessageRequestBody2
 lib/src/main/java/org/openapis/openapi/models/operations/SendMessageRequestBody1TextChannelEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SendMessageRequestBody1TextMessageTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SendMessageRequestBody1Text.java
-lib/src/main/java/org/openapis/openapi/models/operations/SendMessageRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SendMessage202ApplicationJSON5.java
 lib/src/main/java/org/openapis/openapi/models/operations/SendMessage202ApplicationJSON4.java
 lib/src/main/java/org/openapis/openapi/models/operations/SendMessage202ApplicationJSON3.java
@@ -158,7 +157,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/ErrorThrottled.java
 lib/src/main/java/org/openapis/openapi/models/shared/ErrorPaymentRequired.java
 lib/src/main/java/org/openapis/openapi/models/shared/ErrorInternal.java
 lib/src/main/java/org/openapis/openapi/models/shared/SchemeBasicAuth.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeBearerAuth.java
 lib/src/main/java/org/openapis/openapi/models/shared/MessageStatusSMSChannelEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/MessageStatusSMSError.java
 lib/src/main/java/org/openapis/openapi/models/shared/MessageStatusSMSStatusEnum.java
@@ -193,5 +191,4 @@ lib/src/main/java/org/openapis/openapi/models/shared/MessageStatusViberUsageCurr
 lib/src/main/java/org/openapis/openapi/models/shared/MessageStatusViberUsage.java
 lib/src/main/java/org/openapis/openapi/models/shared/MessageStatusViber.java
 lib/src/main/java/org/openapis/openapi/models/callbacks/SendMessageMessageStatusResponse.java
-lib/src/main/java/org/openapis/openapi/models/callbacks/SendMessageMessageStatusRequest.java
 USAGE.md

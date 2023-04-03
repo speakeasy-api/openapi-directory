@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CompleteFileUploadByTokenRequest {
-    
-    public CompleteFileUploadByTokenPathParams pathParams;
-    public CompleteFileUploadByTokenRequest withPathParams(CompleteFileUploadByTokenPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CompleteFileUploadByTokenHeaders headers;
-    public CompleteFileUploadByTokenRequest withHeaders(CompleteFileUploadByTokenHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CompleteUploadRequest request;
-    public CompleteFileUploadByTokenRequest withRequest(org.openapis.openapi.models.shared.CompleteUploadRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CompleteUploadRequest completeUploadRequest;
+    public CompleteFileUploadByTokenRequest withCompleteUploadRequest(org.openapis.openapi.models.shared.CompleteUploadRequest completeUploadRequest) {
+        this.completeUploadRequest = completeUploadRequest;
+        return this;
+    }
+    
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public CompleteFileUploadByTokenXSdsDateFormatEnum xSdsDateFormat;
+    public CompleteFileUploadByTokenRequest withXSdsDateFormat(CompleteFileUploadByTokenXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
+        return this;
+    }
+    
+    /**
+     * Upload token
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=token")
+    public String token;
+    public CompleteFileUploadByTokenRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

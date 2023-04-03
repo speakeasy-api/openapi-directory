@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MeetingregistrantdeleteRequest {
-    
-    public MeetingregistrantdeletePathParams pathParams;
-    public MeetingregistrantdeleteRequest withPathParams(MeetingregistrantdeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The meeting ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=meetingId")
+    public Long meetingId;
+    public MeetingregistrantdeleteRequest withMeetingId(Long meetingId) {
+        this.meetingId = meetingId;
         return this;
     }
     
+    /**
+     * The meeting occurence ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=occurrence_id")
+    public String occurrenceId;
+    public MeetingregistrantdeleteRequest withOccurrenceId(String occurrenceId) {
+        this.occurrenceId = occurrenceId;
+        return this;
+    }
     
-    public MeetingregistrantdeleteQueryParams queryParams;
-    public MeetingregistrantdeleteRequest withQueryParams(MeetingregistrantdeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The meeting registrant ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=registrantId")
+    public String registrantId;
+    public MeetingregistrantdeleteRequest withRegistrantId(String registrantId) {
+        this.registrantId = registrantId;
         return this;
     }
     

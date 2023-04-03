@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteV2SavedListViewsIdJsonRequest {
-    
-    public DeleteV2SavedListViewsIdJsonPathParams pathParams;
-    public DeleteV2SavedListViewsIdJsonRequest withPathParams(DeleteV2SavedListViewsIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Saved List View ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteV2SavedListViewsIdJsonRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

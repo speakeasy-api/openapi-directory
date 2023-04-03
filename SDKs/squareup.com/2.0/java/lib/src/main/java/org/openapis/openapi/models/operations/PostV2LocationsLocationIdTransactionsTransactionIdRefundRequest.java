@@ -7,29 +7,35 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV2LocationsLocationIdTransactionsTransactionIdRefundRequest {
-    
-    public PostV2LocationsLocationIdTransactionsTransactionIdRefundPathParams pathParams;
-    public PostV2LocationsLocationIdTransactionsTransactionIdRefundRequest withPathParams(PostV2LocationsLocationIdTransactionsTransactionIdRefundPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * An object containing the fields to POST for the request.
      * 
      * See the corresponding object definition for field details.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateRefundRequest request;
-    public PostV2LocationsLocationIdTransactionsTransactionIdRefundRequest withRequest(org.openapis.openapi.models.shared.CreateRefundRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CreateRefundRequest createRefundRequest;
+    public PostV2LocationsLocationIdTransactionsTransactionIdRefundRequest withCreateRefundRequest(org.openapis.openapi.models.shared.CreateRefundRequest createRefundRequest) {
+        this.createRefundRequest = createRefundRequest;
         return this;
     }
     
+    /**
+     * The ID of the original transaction's associated location.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
+    public String locationId;
+    public PostV2LocationsLocationIdTransactionsTransactionIdRefundRequest withLocationId(String locationId) {
+        this.locationId = locationId;
+        return this;
+    }
     
-    public PostV2LocationsLocationIdTransactionsTransactionIdRefundSecurity security;
-    public PostV2LocationsLocationIdTransactionsTransactionIdRefundRequest withSecurity(PostV2LocationsLocationIdTransactionsTransactionIdRefundSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the original transaction that includes the tender to refund.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transaction_id")
+    public String transactionId;
+    public PostV2LocationsLocationIdTransactionsTransactionIdRefundRequest withTransactionId(String transactionId) {
+        this.transactionId = transactionId;
         return this;
     }
     

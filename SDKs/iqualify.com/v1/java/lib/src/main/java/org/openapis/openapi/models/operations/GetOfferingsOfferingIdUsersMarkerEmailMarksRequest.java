@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOfferingsOfferingIdUsersMarkerEmailMarksRequest {
+    /**
+     * marker's email
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=markerEmail")
+    public String markerEmail;
+    public GetOfferingsOfferingIdUsersMarkerEmailMarksRequest withMarkerEmail(String markerEmail) {
+        this.markerEmail = markerEmail;
+        return this;
+    }
     
-    public GetOfferingsOfferingIdUsersMarkerEmailMarksPathParams pathParams;
-    public GetOfferingsOfferingIdUsersMarkerEmailMarksRequest withPathParams(GetOfferingsOfferingIdUsersMarkerEmailMarksPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * offering's id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offeringId")
+    public String offeringId;
+    public GetOfferingsOfferingIdUsersMarkerEmailMarksRequest withOfferingId(String offeringId) {
+        this.offeringId = offeringId;
         return this;
     }
     

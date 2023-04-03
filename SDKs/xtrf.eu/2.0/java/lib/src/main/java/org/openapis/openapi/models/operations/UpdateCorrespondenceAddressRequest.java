@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCorrespondenceAddressRequest {
-    
-    public UpdateCorrespondenceAddressPathParams pathParams;
-    public UpdateCorrespondenceAddressRequest withPathParams(UpdateCorrespondenceAddressPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated address of a given client.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AddressDTO request;
-    public UpdateCorrespondenceAddressRequest withRequest(org.openapis.openapi.models.shared.AddressDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AddressDTO addressDTO;
+    public UpdateCorrespondenceAddressRequest withAddressDTO(org.openapis.openapi.models.shared.AddressDTO addressDTO) {
+        this.addressDTO = addressDTO;
+        return this;
+    }
+    
+    /**
+     * client's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customerId")
+    public Long customerId;
+    public UpdateCorrespondenceAddressRequest withCustomerId(Long customerId) {
+        this.customerId = customerId;
         return this;
     }
     

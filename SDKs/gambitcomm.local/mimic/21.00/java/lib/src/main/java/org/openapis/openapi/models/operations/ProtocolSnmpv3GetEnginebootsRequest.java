@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolSnmpv3GetEnginebootsRequest {
-    
-    public ProtocolSnmpv3GetEnginebootsPathParams pathParams;
-    public ProtocolSnmpv3GetEnginebootsRequest withPathParams(ProtocolSnmpv3GetEnginebootsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to show the SNMPv3 engine
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolSnmpv3GetEnginebootsRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

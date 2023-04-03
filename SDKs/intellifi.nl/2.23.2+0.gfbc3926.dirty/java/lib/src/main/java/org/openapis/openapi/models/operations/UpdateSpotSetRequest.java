@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSpotSetRequest {
-    
-    public UpdateSpotSetPathParams pathParams;
-    public UpdateSpotSetRequest withPathParams(UpdateSpotSetPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * A JSON object containing spotset information
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SpotSetUpdate request;
-    public UpdateSpotSetRequest withRequest(org.openapis.openapi.models.shared.SpotSetUpdate request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SpotSetUpdate spotSetUpdate;
+    public UpdateSpotSetRequest withSpotSetUpdate(org.openapis.openapi.models.shared.SpotSetUpdate spotSetUpdate) {
+        this.spotSetUpdate = spotSetUpdate;
+        return this;
+    }
+    
+    /**
+     * Unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UpdateSpotSetRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Unique spot set identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=setId")
+    public String setId;
+    public UpdateSpotSetRequest withSetId(String setId) {
+        this.setId = setId;
         return this;
     }
     

@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CreateKeyspaceXAmzTargetEnum;
-import org.openapis.openapi.models.operations.CreateKeyspaceHeaders;
 import org.openapis.openapi.models.operations.CreateKeyspaceRequest;
 import org.openapis.openapi.models.operations.CreateKeyspaceResponse;
 import org.openapis.openapi.models.shared.CreateKeyspaceRequest;
@@ -16,37 +15,37 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateKeyspaceRequest req = new CreateKeyspaceRequest() {{
-                headers = new CreateKeyspaceHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "KeyspacesService.CreateKeyspace";
-                }};
-                request = new CreateKeyspaceRequest() {{
-                    keyspaceName = "illum";
+                createKeyspaceRequest = new CreateKeyspaceRequest() {{
+                    keyspaceName = "corrupti";
                     tags = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            key = "error";
-                            value = "deserunt";
+                            key = "distinctio";
+                            value = "quibusdam";
                         }}),
                         add(new Tag() {{
-                            key = "suscipit";
-                            value = "iure";
+                            key = "unde";
+                            value = "nulla";
+                        }}),
+                        add(new Tag() {{
+                            key = "corrupti";
+                            value = "illum";
                         }}),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "vel";
+                xAmzContentSha256 = "error";
+                xAmzCredential = "deserunt";
+                xAmzDate = "suscipit";
+                xAmzSecurityToken = "iure";
+                xAmzSignature = "magnam";
+                xAmzSignedHeaders = "debitis";
+                xAmzTarget = "KeyspacesService.CreateKeyspace";
+            }}            
 
             CreateKeyspaceResponse res = sdk.createKeyspace(req);
 

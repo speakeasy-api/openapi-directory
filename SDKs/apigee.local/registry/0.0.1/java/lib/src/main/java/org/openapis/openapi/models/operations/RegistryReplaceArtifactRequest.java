@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryReplaceArtifactRequest {
-    
-    public RegistryReplaceArtifactPathParams pathParams;
-    public RegistryReplaceArtifactRequest withPathParams(RegistryReplaceArtifactPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ArtifactInput artifactInput;
+    public RegistryReplaceArtifactRequest withArtifactInput(org.openapis.openapi.models.shared.ArtifactInput artifactInput) {
+        this.artifactInput = artifactInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ArtifactInput request;
-    public RegistryReplaceArtifactRequest withRequest(org.openapis.openapi.models.shared.ArtifactInput request) {
-        this.request = request;
+    /**
+     * The artifact id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifact")
+    public String artifact;
+    public RegistryReplaceArtifactRequest withArtifact(String artifact) {
+        this.artifact = artifact;
+        return this;
+    }
+    
+    /**
+     * The location id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
+    public String location;
+    public RegistryReplaceArtifactRequest withLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public RegistryReplaceArtifactRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

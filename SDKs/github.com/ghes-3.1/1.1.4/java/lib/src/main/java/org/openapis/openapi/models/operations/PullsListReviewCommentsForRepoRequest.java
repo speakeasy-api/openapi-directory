@@ -4,20 +4,74 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PullsListReviewCommentsForRepoRequest {
-    
-    public PullsListReviewCommentsForRepoPathParams pathParams;
-    public PullsListReviewCommentsForRepoRequest withPathParams(PullsListReviewCommentsForRepoPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Can be either `asc` or `desc`. Ignored without `sort` parameter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public PullsListReviewCommentsForRepoDirectionEnum direction;
+    public PullsListReviewCommentsForRepoRequest withDirection(PullsListReviewCommentsForRepoDirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public PullsListReviewCommentsForRepoRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public PullsListReviewCommentsForRepoQueryParams queryParams;
-    public PullsListReviewCommentsForRepoRequest withQueryParams(PullsListReviewCommentsForRepoQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public PullsListReviewCommentsForRepoRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public PullsListReviewCommentsForRepoRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public PullsListReviewCommentsForRepoRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * Only show notifications updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public OffsetDateTime since;
+    public PullsListReviewCommentsForRepoRequest withSince(OffsetDateTime since) {
+        this.since = since;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public PullsListReviewCommentsForRepoSortEnum sort;
+    public PullsListReviewCommentsForRepoRequest withSort(PullsListReviewCommentsForRepoSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

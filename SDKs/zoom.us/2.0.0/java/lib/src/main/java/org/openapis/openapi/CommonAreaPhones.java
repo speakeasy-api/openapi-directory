@@ -43,10 +43,11 @@ public class CommonAreaPhones {
      * 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddCommonAreaPhoneResponse addCommonAreaPhone(org.openapis.openapi.models.operations.AddCommonAreaPhoneRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddCommonAreaPhoneResponse addCommonAreaPhone(org.openapis.openapi.models.operations.AddCommonAreaPhoneRequestBody request, org.openapis.openapi.models.operations.AddCommonAreaPhoneSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/phone/common_area_phones");
         
@@ -57,7 +58,7 @@ public class CommonAreaPhones {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -99,19 +100,20 @@ public class CommonAreaPhones {
      * 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteCommonAreaPhoneResponse deleteCommonAreaPhone(org.openapis.openapi.models.operations.DeleteCommonAreaPhoneRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteCommonAreaPhoneResponse deleteCommonAreaPhone(org.openapis.openapi.models.operations.DeleteCommonAreaPhoneRequest request, org.openapis.openapi.models.operations.DeleteCommonAreaPhoneSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCommonAreaPhonePathParams.class, baseUrl, "/phone/common_area_phones/{commonAreaPhoneId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCommonAreaPhoneRequest.class, baseUrl, "/phone/common_area_phones/{commonAreaPhoneId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -153,19 +155,20 @@ public class CommonAreaPhones {
      * 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetACommonAreaPhoneResponse getACommonAreaPhone(org.openapis.openapi.models.operations.GetACommonAreaPhoneRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetACommonAreaPhoneResponse getACommonAreaPhone(org.openapis.openapi.models.operations.GetACommonAreaPhoneRequest request, org.openapis.openapi.models.operations.GetACommonAreaPhoneSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetACommonAreaPhonePathParams.class, baseUrl, "/phone/common_area_phones/{commonAreaPhoneId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetACommonAreaPhoneRequest.class, baseUrl, "/phone/common_area_phones/{commonAreaPhoneId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -206,10 +209,11 @@ public class CommonAreaPhones {
      * 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListCommonAreaPhonesResponse listCommonAreaPhones(org.openapis.openapi.models.operations.ListCommonAreaPhonesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListCommonAreaPhonesResponse listCommonAreaPhones(org.openapis.openapi.models.operations.ListCommonAreaPhonesRequest request, org.openapis.openapi.models.operations.ListCommonAreaPhonesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/phone/common_area_phones");
         
@@ -217,14 +221,14 @@ public class CommonAreaPhones {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCommonAreaPhonesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCommonAreaPhonesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -264,21 +268,22 @@ public class CommonAreaPhones {
      * 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateCommonAreaPhoneResponse updateCommonAreaPhone(org.openapis.openapi.models.operations.UpdateCommonAreaPhoneRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateCommonAreaPhoneResponse updateCommonAreaPhone(org.openapis.openapi.models.operations.UpdateCommonAreaPhoneRequest request, org.openapis.openapi.models.operations.UpdateCommonAreaPhoneSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCommonAreaPhonePathParams.class, baseUrl, "/phone/common_area_phones/{commonAreaPhoneId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCommonAreaPhoneRequest.class, baseUrl, "/phone/common_area_phones/{commonAreaPhoneId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

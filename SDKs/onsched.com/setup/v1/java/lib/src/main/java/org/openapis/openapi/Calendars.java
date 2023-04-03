@@ -41,7 +41,7 @@ public class Calendars {
      */
     public org.openapis.openapi.models.operations.DeleteSetupV1CalendarsBlockIdResponse deleteSetupV1CalendarsBlockId(org.openapis.openapi.models.operations.DeleteSetupV1CalendarsBlockIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1CalendarsBlockIdPathParams.class, baseUrl, "/setup/v1/calendars/block/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1CalendarsBlockIdRequest.class, baseUrl, "/setup/v1/calendars/block/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -81,7 +81,7 @@ public class Calendars {
      */
     public org.openapis.openapi.models.operations.DeleteSetupV1CalendarsIdResponse deleteSetupV1CalendarsId(org.openapis.openapi.models.operations.DeleteSetupV1CalendarsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1CalendarsIdPathParams.class, baseUrl, "/setup/v1/calendars/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1CalendarsIdRequest.class, baseUrl, "/setup/v1/calendars/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -127,7 +127,7 @@ public class Calendars {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1CalendarsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1CalendarsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -167,7 +167,7 @@ public class Calendars {
      */
     public org.openapis.openapi.models.operations.GetSetupV1CalendarsBlocksIdResponse getSetupV1CalendarsBlocksId(org.openapis.openapi.models.operations.GetSetupV1CalendarsBlocksIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1CalendarsBlocksIdPathParams.class, baseUrl, "/setup/v1/calendars/blocks/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1CalendarsBlocksIdRequest.class, baseUrl, "/setup/v1/calendars/blocks/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -207,7 +207,7 @@ public class Calendars {
      */
     public org.openapis.openapi.models.operations.GetSetupV1CalendarsIdResponse getSetupV1CalendarsId(org.openapis.openapi.models.operations.GetSetupV1CalendarsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1CalendarsIdPathParams.class, baseUrl, "/setup/v1/calendars/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1CalendarsIdRequest.class, baseUrl, "/setup/v1/calendars/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -247,13 +247,13 @@ public class Calendars {
      */
     public org.openapis.openapi.models.operations.GetSetupV1CalendarsIdBlocksResponse getSetupV1CalendarsIdBlocks(org.openapis.openapi.models.operations.GetSetupV1CalendarsIdBlocksRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1CalendarsIdBlocksPathParams.class, baseUrl, "/setup/v1/calendars/{id}/blocks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1CalendarsIdBlocksRequest.class, baseUrl, "/setup/v1/calendars/{id}/blocks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1CalendarsIdBlocksQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1CalendarsIdBlocksRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -295,13 +295,13 @@ public class Calendars {
      */
     public org.openapis.openapi.models.operations.GetSetupV1CalendarsIdServicesResponse getSetupV1CalendarsIdServices(org.openapis.openapi.models.operations.GetSetupV1CalendarsIdServicesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1CalendarsIdServicesPathParams.class, baseUrl, "/setup/v1/calendars/{id}/services", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1CalendarsIdServicesRequest.class, baseUrl, "/setup/v1/calendars/{id}/services", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1CalendarsIdServicesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1CalendarsIdServicesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -341,7 +341,7 @@ public class Calendars {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSetupV1CalendarsResponse postSetupV1Calendars(org.openapis.openapi.models.operations.PostSetupV1CalendarsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSetupV1CalendarsResponse postSetupV1Calendars(org.openapis.openapi.models.shared.ScheduleInputModel request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/setup/v1/calendars");
         
@@ -402,12 +402,12 @@ public class Calendars {
      */
     public org.openapis.openapi.models.operations.PostSetupV1CalendarsIdBlockResponse postSetupV1CalendarsIdBlock(org.openapis.openapi.models.operations.PostSetupV1CalendarsIdBlockRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSetupV1CalendarsIdBlockPathParams.class, baseUrl, "/setup/v1/calendars/{id}/block", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSetupV1CalendarsIdBlockRequest.class, baseUrl, "/setup/v1/calendars/{id}/block", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "calendarBlockInputModel", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -444,12 +444,12 @@ public class Calendars {
      */
     public org.openapis.openapi.models.operations.PutSetupV1CalendarsBlockIdResponse putSetupV1CalendarsBlockId(org.openapis.openapi.models.operations.PutSetupV1CalendarsBlockIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1CalendarsBlockIdPathParams.class, baseUrl, "/setup/v1/calendars/block/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1CalendarsBlockIdRequest.class, baseUrl, "/setup/v1/calendars/block/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "calendarBlockUpdateModel", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -486,12 +486,12 @@ public class Calendars {
      */
     public org.openapis.openapi.models.operations.PutSetupV1CalendarsIdResponse putSetupV1CalendarsId(org.openapis.openapi.models.operations.PutSetupV1CalendarsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1CalendarsIdPathParams.class, baseUrl, "/setup/v1/calendars/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1CalendarsIdRequest.class, baseUrl, "/setup/v1/calendars/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "scheduleUpdateModel", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -528,7 +528,7 @@ public class Calendars {
      */
     public org.openapis.openapi.models.operations.PutSetupV1CalendarsIdRecoverResponse putSetupV1CalendarsIdRecover(org.openapis.openapi.models.operations.PutSetupV1CalendarsIdRecoverRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1CalendarsIdRecoverPathParams.class, baseUrl, "/setup/v1/calendars/{id}/recover", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1CalendarsIdRecoverRequest.class, baseUrl, "/setup/v1/calendars/{id}/recover", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

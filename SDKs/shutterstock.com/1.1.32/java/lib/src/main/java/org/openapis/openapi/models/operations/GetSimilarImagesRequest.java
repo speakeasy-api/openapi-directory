@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSimilarImagesRequest {
-    
-    public GetSimilarImagesQueryParams queryParams;
-    public GetSimilarImagesRequest withQueryParams(GetSimilarImagesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The asset ID or upload ID to find similar images for
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=asset_id")
+    public String assetId;
+    public GetSimilarImagesRequest withAssetId(String assetId) {
+        this.assetId = assetId;
         return this;
     }
     
+    /**
+     * Language for the keywords and categories in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public org.openapis.openapi.models.shared.LanguageEnum language;
+    public GetSimilarImagesRequest withLanguage(org.openapis.openapi.models.shared.LanguageEnum language) {
+        this.language = language;
+        return this;
+    }
     
-    public GetSimilarImagesSecurity security;
-    public GetSimilarImagesRequest withSecurity(GetSimilarImagesSecurity security) {
-        this.security = security;
+    /**
+     * Show only images with the specified license
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
+    public GetSimilarImagesLicenseEnum[] license;
+    public GetSimilarImagesRequest withLicense(GetSimilarImagesLicenseEnum[] license) {
+        this.license = license;
+        return this;
+    }
+    
+    /**
+     * Page number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetSimilarImagesRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Number of results per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetSimilarImagesRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Enable or disable safe search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=safe")
+    public Boolean safe;
+    public GetSimilarImagesRequest withSafe(Boolean safe) {
+        this.safe = safe;
+        return this;
+    }
+    
+    /**
+     * Amount of detail to render in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
+    public GetSimilarImagesViewEnum view;
+    public GetSimilarImagesRequest withView(GetSimilarImagesViewEnum view) {
+        this.view = view;
         return this;
     }
     

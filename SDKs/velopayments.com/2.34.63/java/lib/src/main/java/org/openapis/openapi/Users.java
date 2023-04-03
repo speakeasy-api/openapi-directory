@@ -42,7 +42,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.DeleteUserByIdV2Response deleteUserByIdV2(org.openapis.openapi.models.operations.DeleteUserByIdV2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserByIdV2PathParams.class, baseUrl, "/v2/users/{userId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserByIdV2Request.class, baseUrl, "/v2/users/{userId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -104,7 +104,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.DisableUserV2Response disableUserV2(org.openapis.openapi.models.operations.DisableUserV2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisableUserV2PathParams.class, baseUrl, "/v2/users/{userId}/disable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisableUserV2Request.class, baseUrl, "/v2/users/{userId}/disable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -175,7 +175,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.EnableUserV2Response enableUserV2(org.openapis.openapi.models.operations.EnableUserV2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnableUserV2PathParams.class, baseUrl, "/v2/users/{userId}/enable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnableUserV2Request.class, baseUrl, "/v2/users/{userId}/enable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -298,7 +298,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.GetUserByIdV2Response getUserByIdV2(org.openapis.openapi.models.operations.GetUserByIdV2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserByIdV2PathParams.class, baseUrl, "/v2/users/{userId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserByIdV2Request.class, baseUrl, "/v2/users/{userId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -361,7 +361,7 @@ public class Users {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.InviteUserResponse inviteUser(org.openapis.openapi.models.operations.InviteUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.InviteUserResponse inviteUser(org.openapis.openapi.models.shared.InviteUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/users/invite");
         
@@ -448,7 +448,7 @@ public class Users {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListUsersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListUsersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -514,7 +514,7 @@ public class Users {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RegisterSmsResponse registerSms(org.openapis.openapi.models.operations.RegisterSmsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RegisterSmsResponse registerSms(org.openapis.openapi.models.shared.RegisterSmsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/users/registration/sms");
         
@@ -582,12 +582,12 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.ResendTokenResponse resendToken(org.openapis.openapi.models.operations.ResendTokenRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ResendTokenPathParams.class, baseUrl, "/v2/users/{userId}/tokens", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ResendTokenRequest.class, baseUrl, "/v2/users/{userId}/tokens", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "resendTokenRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -646,12 +646,12 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.RoleUpdateResponse roleUpdate(org.openapis.openapi.models.operations.RoleUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RoleUpdatePathParams.class, baseUrl, "/v2/users/{userId}/roleUpdate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RoleUpdateRequest.class, baseUrl, "/v2/users/{userId}/roleUpdate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "roleUpdateRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -718,7 +718,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.UnlockUserV2Response unlockUserV2(org.openapis.openapi.models.operations.UnlockUserV2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnlockUserV2PathParams.class, baseUrl, "/v2/users/{userId}/unlock", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnlockUserV2Request.class, baseUrl, "/v2/users/{userId}/unlock", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -786,12 +786,12 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.UnregisterMFAResponse unregisterMFA(org.openapis.openapi.models.operations.UnregisterMFARequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnregisterMFAPathParams.class, baseUrl, "/v2/users/{userId}/mfa/unregister", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnregisterMFARequest.class, baseUrl, "/v2/users/{userId}/mfa/unregister", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "unregisterMFARequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -864,13 +864,13 @@ public class Users {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "selfMFATypeUnregisterRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -929,7 +929,7 @@ public class Users {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdatePasswordSelfResponse updatePasswordSelf(org.openapis.openapi.models.operations.UpdatePasswordSelfRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdatePasswordSelfResponse updatePasswordSelf(org.openapis.openapi.models.shared.SelfUpdatePasswordRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/users/self/password");
         
@@ -996,12 +996,12 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.UserDetailsUpdateResponse userDetailsUpdate(org.openapis.openapi.models.operations.UserDetailsUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UserDetailsUpdatePathParams.class, baseUrl, "/v2/users/{userId}/userDetailsUpdate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UserDetailsUpdateRequest.class, baseUrl, "/v2/users/{userId}/userDetailsUpdate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "userDetailsUpdateRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1075,7 +1075,7 @@ public class Users {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UserDetailsUpdateForSelfResponse userDetailsUpdateForSelf(org.openapis.openapi.models.operations.UserDetailsUpdateForSelfRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UserDetailsUpdateForSelfResponse userDetailsUpdateForSelf(org.openapis.openapi.models.shared.PayeeUserSelfUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/users/self/userDetailsUpdate");
         
@@ -1147,7 +1147,7 @@ public class Users {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ValidatePasswordSelfResponse validatePasswordSelf(org.openapis.openapi.models.operations.ValidatePasswordSelfRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ValidatePasswordSelfResponse validatePasswordSelf(org.openapis.openapi.models.shared.PasswordRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/users/self/password/validate");
         

@@ -4,27 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReminderProfilesPartialUpdateRequest {
-    
-    public ReminderProfilesPartialUpdatePathParams pathParams;
-    public ReminderProfilesPartialUpdateRequest withPathParams(ReminderProfilesPartialUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public ReminderProfilesPartialUpdateRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     
-    
-    public ReminderProfilesPartialUpdateQueryParams queryParams;
-    public ReminderProfilesPartialUpdateRequest withQueryParams(ReminderProfilesPartialUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ReminderProfilesPartialUpdateSecurity security;
-    public ReminderProfilesPartialUpdateRequest withSecurity(ReminderProfilesPartialUpdateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public ReminderProfilesPartialUpdateRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

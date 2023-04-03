@@ -33,25 +33,26 @@ public class Manifests {
     /**
      * Gets information about a specific manifest.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeploymentmanagerManifestsGetResponse deploymentmanagerManifestsGet(org.openapis.openapi.models.operations.DeploymentmanagerManifestsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeploymentmanagerManifestsGetResponse deploymentmanagerManifestsGet(org.openapis.openapi.models.operations.DeploymentmanagerManifestsGetRequest request, org.openapis.openapi.models.operations.DeploymentmanagerManifestsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerManifestsGetPathParams.class, baseUrl, "/deploymentmanager/v2/projects/{project}/global/deployments/{deployment}/manifests/{manifest}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerManifestsGetRequest.class, baseUrl, "/deploymentmanager/v2/projects/{project}/global/deployments/{deployment}/manifests/{manifest}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerManifestsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerManifestsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,25 +79,26 @@ public class Manifests {
     /**
      * Lists all manifests for a given deployment.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeploymentmanagerManifestsListResponse deploymentmanagerManifestsList(org.openapis.openapi.models.operations.DeploymentmanagerManifestsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeploymentmanagerManifestsListResponse deploymentmanagerManifestsList(org.openapis.openapi.models.operations.DeploymentmanagerManifestsListRequest request, org.openapis.openapi.models.operations.DeploymentmanagerManifestsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerManifestsListPathParams.class, baseUrl, "/deploymentmanager/v2/projects/{project}/global/deployments/{deployment}/manifests", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerManifestsListRequest.class, baseUrl, "/deploymentmanager/v2/projects/{project}/global/deployments/{deployment}/manifests", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerManifestsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerManifestsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

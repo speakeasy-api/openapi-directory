@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddInternalNumbersRequest {
-    
-    public AddInternalNumbersPathParams pathParams;
-    public AddInternalNumbersRequest withPathParams(AddInternalNumbersPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public AddInternalNumbersApplicationJSON requestBody;
+    public AddInternalNumbersRequest withRequestBody(AddInternalNumbersApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public AddInternalNumbersApplicationJSON request;
-    public AddInternalNumbersRequest withRequest(AddInternalNumbersApplicationJSON request) {
-        this.request = request;
+    /**
+     * Unique identifier of the account.&lt;br&gt;To add internal numbers to a sub account, provide the account ID of the sub account in the `accountId` path parameter. To add internal numbers to a master account, provide `me` as the value of the `accountId` path parameter.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public AddInternalNumbersRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     

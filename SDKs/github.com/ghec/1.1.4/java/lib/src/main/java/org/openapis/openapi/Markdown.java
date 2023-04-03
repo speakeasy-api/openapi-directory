@@ -40,7 +40,7 @@ public class Markdown {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MarkdownRenderResponse markdownRender(org.openapis.openapi.models.operations.MarkdownRenderRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MarkdownRenderResponse markdownRender(org.openapis.openapi.models.operations.MarkdownRenderRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/markdown");
         
@@ -88,7 +88,7 @@ public class Markdown {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MarkdownRenderRawResponse markdownRenderRaw(org.openapis.openapi.models.operations.MarkdownRenderRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MarkdownRenderRawResponse markdownRenderRaw(String request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/markdown/raw");
         

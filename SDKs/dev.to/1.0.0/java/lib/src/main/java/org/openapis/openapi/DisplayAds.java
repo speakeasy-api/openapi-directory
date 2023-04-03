@@ -69,7 +69,7 @@ public class DisplayAds {
      */
     public org.openapis.openapi.models.operations.GetApiDisplayAdsIdResponse getApiDisplayAdsId(org.openapis.openapi.models.operations.GetApiDisplayAdsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiDisplayAdsIdPathParams.class, baseUrl, "/api/display_ads/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiDisplayAdsIdRequest.class, baseUrl, "/api/display_ads/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -101,7 +101,7 @@ public class DisplayAds {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostApiDisplayAdsResponse postApiDisplayAds(org.openapis.openapi.models.operations.PostApiDisplayAdsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostApiDisplayAdsResponse postApiDisplayAds(org.openapis.openapi.models.operations.PostApiDisplayAdsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/display_ads");
         
@@ -139,12 +139,12 @@ public class DisplayAds {
      */
     public org.openapis.openapi.models.operations.PutApiDisplayAdsIdResponse putApiDisplayAdsId(org.openapis.openapi.models.operations.PutApiDisplayAdsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutApiDisplayAdsIdPathParams.class, baseUrl, "/api/display_ads/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutApiDisplayAdsIdRequest.class, baseUrl, "/api/display_ads/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -175,7 +175,7 @@ public class DisplayAds {
      */
     public org.openapis.openapi.models.operations.PutApiDisplayAdsIdUnpublishResponse putApiDisplayAdsIdUnpublish(org.openapis.openapi.models.operations.PutApiDisplayAdsIdUnpublishRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutApiDisplayAdsIdUnpublishPathParams.class, baseUrl, "/api/display_ads/{id}/unpublish", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutApiDisplayAdsIdUnpublishRequest.class, baseUrl, "/api/display_ads/{id}/unpublish", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

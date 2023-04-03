@@ -7,17 +7,66 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AttachManagedPolicyToPermissionSetRequest {
-    
-    public AttachManagedPolicyToPermissionSetHeaders headers;
-    public AttachManagedPolicyToPermissionSetRequest withHeaders(AttachManagedPolicyToPermissionSetHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.AttachManagedPolicyToPermissionSetRequest attachManagedPolicyToPermissionSetRequest;
+    public AttachManagedPolicyToPermissionSetRequest withAttachManagedPolicyToPermissionSetRequest(org.openapis.openapi.models.shared.AttachManagedPolicyToPermissionSetRequest attachManagedPolicyToPermissionSetRequest) {
+        this.attachManagedPolicyToPermissionSetRequest = attachManagedPolicyToPermissionSetRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AttachManagedPolicyToPermissionSetRequest request;
-    public AttachManagedPolicyToPermissionSetRequest withRequest(org.openapis.openapi.models.shared.AttachManagedPolicyToPermissionSetRequest request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public AttachManagedPolicyToPermissionSetRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public AttachManagedPolicyToPermissionSetRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public AttachManagedPolicyToPermissionSetRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public AttachManagedPolicyToPermissionSetRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public AttachManagedPolicyToPermissionSetRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public AttachManagedPolicyToPermissionSetRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public AttachManagedPolicyToPermissionSetRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public AttachManagedPolicyToPermissionSetXAmzTargetEnum xAmzTarget;
+    public AttachManagedPolicyToPermissionSetRequest withXAmzTarget(AttachManagedPolicyToPermissionSetXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
         return this;
     }
     

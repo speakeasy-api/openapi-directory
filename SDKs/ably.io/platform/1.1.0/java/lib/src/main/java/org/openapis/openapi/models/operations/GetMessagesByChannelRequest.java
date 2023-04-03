@@ -4,27 +4,64 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMessagesByChannelRequest {
-    
-    public GetMessagesByChannelPathParams pathParams;
-    public GetMessagesByChannelRequest withPathParams(GetMessagesByChannelPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The version of the API you wish to use.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Ably-Version")
+    public String xAblyVersion;
+    public GetMessagesByChannelRequest withXAblyVersion(String xAblyVersion) {
+        this.xAblyVersion = xAblyVersion;
         return this;
     }
     
-    
-    public GetMessagesByChannelQueryParams queryParams;
-    public GetMessagesByChannelRequest withQueryParams(GetMessagesByChannelQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The [Channel's ID](https://www.ably.io/documentation/rest/channels).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel_id")
+    public String channelId;
+    public GetMessagesByChannelRequest withChannelId(String channelId) {
+        this.channelId = channelId;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public org.openapis.openapi.models.shared.FilterDirectionEnum direction;
+    public GetMessagesByChannelRequest withDirection(org.openapis.openapi.models.shared.FilterDirectionEnum direction) {
+        this.direction = direction;
+        return this;
+    }
     
-    public GetMessagesByChannelHeaders headers;
-    public GetMessagesByChannelRequest withHeaders(GetMessagesByChannelHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
+    public String end;
+    public GetMessagesByChannelRequest withEnd(String end) {
+        this.end = end;
+        return this;
+    }
+    
+    /**
+     * The response format you would like
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public org.openapis.openapi.models.shared.ResponseFormatEnum format;
+    public GetMessagesByChannelRequest withFormat(org.openapis.openapi.models.shared.ResponseFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetMessagesByChannelRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public String start;
+    public GetMessagesByChannelRequest withStart(String start) {
+        this.start = start;
         return this;
     }
     

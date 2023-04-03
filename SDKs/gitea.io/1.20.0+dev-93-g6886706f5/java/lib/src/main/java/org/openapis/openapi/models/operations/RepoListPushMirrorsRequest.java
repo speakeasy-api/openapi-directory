@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoListPushMirrorsRequest {
-    
-    public RepoListPushMirrorsPathParams pathParams;
-    public RepoListPushMirrorsRequest withPathParams(RepoListPushMirrorsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * page size of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public RepoListPushMirrorsRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoListPushMirrorsRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public RepoListPushMirrorsQueryParams queryParams;
-    public RepoListPushMirrorsRequest withQueryParams(RepoListPushMirrorsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * page number of results to return (1-based)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public RepoListPushMirrorsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoListPushMirrorsRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

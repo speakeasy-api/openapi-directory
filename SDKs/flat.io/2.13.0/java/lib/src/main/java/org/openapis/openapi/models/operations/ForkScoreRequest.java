@@ -7,31 +7,32 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ForkScoreRequest {
-    
-    public ForkScorePathParams pathParams;
-    public ForkScoreRequest withPathParams(ForkScorePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ForkScoreQueryParams queryParams;
-    public ForkScoreRequest withQueryParams(ForkScoreQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ScoreFork request;
-    public ForkScoreRequest withRequest(org.openapis.openapi.models.shared.ScoreFork request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ScoreFork scoreFork;
+    public ForkScoreRequest withScoreFork(org.openapis.openapi.models.shared.ScoreFork scoreFork) {
+        this.scoreFork = scoreFork;
         return this;
     }
     
+    /**
+     * Unique identifier of the score document. This can be a Flat Score unique identifier (i.e. `ScoreDetails.id`) or, if the score is also a Google Drive file, the Drive file unique identifier prefixed with `drive-` (e.g. `drive-0B000000000`).
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=score")
+    public String score;
+    public ForkScoreRequest withScore(String score) {
+        this.score = score;
+        return this;
+    }
     
-    public ForkScoreSecurity security;
-    public ForkScoreRequest withSecurity(ForkScoreSecurity security) {
-        this.security = security;
+    /**
+     * This sharing key must be specified to access to a score or collection with a `privacy` mode set to `privateLink` and the current user is not a collaborator of the document.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sharingKey")
+    public String sharingKey;
+    public ForkScoreRequest withSharingKey(String sharingKey) {
+        this.sharingKey = sharingKey;
         return this;
     }
     

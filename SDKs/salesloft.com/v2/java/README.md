@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetV2AccountStagesJsonQueryParams;
 import org.openapis.openapi.models.operations.GetV2AccountStagesJsonRequest;
 import org.openapis.openapi.models.operations.GetV2AccountStagesJsonResponse;
 
@@ -28,24 +27,22 @@ public class Application {
                 .build();
 
             GetV2AccountStagesJsonRequest req = new GetV2AccountStagesJsonRequest() {{
-                queryParams = new GetV2AccountStagesJsonQueryParams() {{
-                    ids = new Long[]{{
-                        add(592845),
-                        add(715190),
-                        add(844266),
-                    }};
-                    includePagingCounts = false;
-                    limitPagingCounts = false;
-                    page = 602763;
-                    perPage = 857946;
-                    sortBy = "corrupti";
-                    sortDirection = "illum";
-                    updatedAt = new String[]{{
-                        add("error"),
-                        add("deserunt"),
-                    }};
+                ids = new Long[]{{
+                    add(592845),
+                    add(715190),
+                    add(844266),
                 }};
-            }};            
+                includePagingCounts = false;
+                limitPagingCounts = false;
+                page = 602763;
+                perPage = 857946;
+                sortBy = "corrupti";
+                sortDirection = "illum";
+                updatedAt = new String[]{{
+                    add("error"),
+                    add("deserunt"),
+                }};
+            }}            
 
             GetV2AccountStagesJsonResponse res = sdk.accountStages.getV2AccountStagesJson(req);
 
@@ -59,7 +56,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### accountStages

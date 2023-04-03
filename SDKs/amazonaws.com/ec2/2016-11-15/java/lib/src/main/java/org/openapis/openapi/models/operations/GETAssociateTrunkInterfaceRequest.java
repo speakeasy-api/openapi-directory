@@ -4,20 +4,129 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAssociateTrunkInterfaceRequest {
-    
-    public GETAssociateTrunkInterfaceQueryParams queryParams;
-    public GETAssociateTrunkInterfaceRequest withQueryParams(GETAssociateTrunkInterfaceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETAssociateTrunkInterfaceActionEnum action;
+    public GETAssociateTrunkInterfaceRequest withAction(GETAssociateTrunkInterfaceActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The ID of the branch network interface.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=BranchInterfaceId")
+    public String branchInterfaceId;
+    public GETAssociateTrunkInterfaceRequest withBranchInterfaceId(String branchInterfaceId) {
+        this.branchInterfaceId = branchInterfaceId;
+        return this;
+    }
     
-    public GETAssociateTrunkInterfaceHeaders headers;
-    public GETAssociateTrunkInterfaceRequest withHeaders(GETAssociateTrunkInterfaceHeaders headers) {
-        this.headers = headers;
+    /**
+     * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more information, see &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Run_Instance_Idempotency.html"&gt;How to Ensure Idempotency&lt;/a&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClientToken")
+    public String clientToken;
+    public GETAssociateTrunkInterfaceRequest withClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETAssociateTrunkInterfaceRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    /**
+     * The application key. This applies to the GRE protocol.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GreKey")
+    public Long greKey;
+    public GETAssociateTrunkInterfaceRequest withGreKey(Long greKey) {
+        this.greKey = greKey;
+        return this;
+    }
+    
+    /**
+     * The ID of the trunk network interface.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TrunkInterfaceId")
+    public String trunkInterfaceId;
+    public GETAssociateTrunkInterfaceRequest withTrunkInterfaceId(String trunkInterfaceId) {
+        this.trunkInterfaceId = trunkInterfaceId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETAssociateTrunkInterfaceVersionEnum version;
+    public GETAssociateTrunkInterfaceRequest withVersion(GETAssociateTrunkInterfaceVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    /**
+     * The ID of the VLAN. This applies to the VLAN protocol.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VlanId")
+    public Long vlanId;
+    public GETAssociateTrunkInterfaceRequest withVlanId(Long vlanId) {
+        this.vlanId = vlanId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETAssociateTrunkInterfaceRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETAssociateTrunkInterfaceRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETAssociateTrunkInterfaceRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETAssociateTrunkInterfaceRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETAssociateTrunkInterfaceRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETAssociateTrunkInterfaceRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETAssociateTrunkInterfaceRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

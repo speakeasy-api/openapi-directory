@@ -4,20 +4,186 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PeoplePeopleListDirectoryPeopleRequest {
-    
-    public PeoplePeopleListDirectoryPeopleQueryParams queryParams;
-    public PeoplePeopleListDirectoryPeopleRequest withQueryParams(PeoplePeopleListDirectoryPeopleQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public PeoplePeopleListDirectoryPeopleRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public PeoplePeopleListDirectoryPeopleRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public PeoplePeopleListDirectoryPeopleSecurity security;
-    public PeoplePeopleListDirectoryPeopleRequest withSecurity(PeoplePeopleListDirectoryPeopleSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public PeoplePeopleListDirectoryPeopleRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public PeoplePeopleListDirectoryPeopleRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public PeoplePeopleListDirectoryPeopleRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public PeoplePeopleListDirectoryPeopleRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Optional. Additional data to merge into the directory sources if they are connected through verified join keys such as email addresses or phone numbers.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mergeSources")
+    public PeoplePeopleListDirectoryPeopleMergeSourcesEnum[] mergeSources;
+    public PeoplePeopleListDirectoryPeopleRequest withMergeSources(PeoplePeopleListDirectoryPeopleMergeSourcesEnum[] mergeSources) {
+        this.mergeSources = mergeSources;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public PeoplePeopleListDirectoryPeopleRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Optional. The number of people to include in the response. Valid values are between 1 and 1000, inclusive. Defaults to 100 if not set or set to 0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public PeoplePeopleListDirectoryPeopleRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * Optional. A page token, received from a previous response `next_page_token`. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `people.listDirectoryPeople` must match the first call that provided the page token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public PeoplePeopleListDirectoryPeopleRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public PeoplePeopleListDirectoryPeopleRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public PeoplePeopleListDirectoryPeopleRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Required. A field mask to restrict which fields on each person are returned. Multiple fields can be specified by separating them with commas. Valid values are: * addresses * ageRanges * biographies * birthdays * calendarUrls * clientData * coverPhotos * emailAddresses * events * externalIds * genders * imClients * interests * locales * locations * memberships * metadata * miscKeywords * names * nicknames * occupations * organizations * phoneNumbers * photos * relations * sipAddresses * skills * urls * userDefined
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=readMask")
+    public String readMask;
+    public PeoplePeopleListDirectoryPeopleRequest withReadMask(String readMask) {
+        this.readMask = readMask;
+        return this;
+    }
+    
+    /**
+     * Optional. Whether the response should return `next_sync_token`. It can be used to get incremental changes since the last request by setting it on the request `sync_token`. More details about sync behavior at `people.listDirectoryPeople`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestSyncToken")
+    public Boolean requestSyncToken;
+    public PeoplePeopleListDirectoryPeopleRequest withRequestSyncToken(Boolean requestSyncToken) {
+        this.requestSyncToken = requestSyncToken;
+        return this;
+    }
+    
+    /**
+     * Required. Directory sources to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sources")
+    public PeoplePeopleListDirectoryPeopleSourcesEnum[] sources;
+    public PeoplePeopleListDirectoryPeopleRequest withSources(PeoplePeopleListDirectoryPeopleSourcesEnum[] sources) {
+        this.sources = sources;
+        return this;
+    }
+    
+    /**
+     * Optional. A sync token, received from a previous response `next_sync_token` Provide this to retrieve only the resources changed since the last request. When syncing, all other parameters provided to `people.listDirectoryPeople` must match the first call that provided the sync token. More details about sync behavior at `people.listDirectoryPeople`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=syncToken")
+    public String syncToken;
+    public PeoplePeopleListDirectoryPeopleRequest withSyncToken(String syncToken) {
+        this.syncToken = syncToken;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public PeoplePeopleListDirectoryPeopleRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public PeoplePeopleListDirectoryPeopleRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

@@ -7,27 +7,37 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest {
-    
-    public PostRepositoriesWorkspaceRepoSlugBranchRestrictionsPathParams pathParams;
-    public PostRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest withPathParams(PostRepositoriesWorkspaceRepoSlugBranchRestrictionsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The new rule
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public PostRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public PostRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public PostRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
     
-    public PostRepositoriesWorkspaceRepoSlugBranchRestrictionsSecurity security;
-    public PostRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest withSecurity(PostRepositoriesWorkspaceRepoSlugBranchRestrictionsSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public PostRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

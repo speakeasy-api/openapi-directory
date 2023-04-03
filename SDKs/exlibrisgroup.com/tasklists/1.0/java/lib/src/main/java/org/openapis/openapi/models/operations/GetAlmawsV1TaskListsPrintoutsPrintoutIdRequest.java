@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAlmawsV1TaskListsPrintoutsPrintoutIdRequest {
-    
-    public GetAlmawsV1TaskListsPrintoutsPrintoutIdPathParams pathParams;
-    public GetAlmawsV1TaskListsPrintoutsPrintoutIdRequest withPathParams(GetAlmawsV1TaskListsPrintoutsPrintoutIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The Printout ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=printout_id")
+    public String printoutId;
+    public GetAlmawsV1TaskListsPrintoutsPrintoutIdRequest withPrintoutId(String printoutId) {
+        this.printoutId = printoutId;
         return this;
     }
     

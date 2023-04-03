@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletePipelineVariableForTeamRequest {
+    /**
+     * The account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public DeletePipelineVariableForTeamRequest withUsername(String username) {
+        this.username = username;
+        return this;
+    }
     
-    public DeletePipelineVariableForTeamPathParams pathParams;
-    public DeletePipelineVariableForTeamRequest withPathParams(DeletePipelineVariableForTeamPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The UUID of the variable to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=variable_uuid")
+    public String variableUuid;
+    public DeletePipelineVariableForTeamRequest withVariableUuid(String variableUuid) {
+        this.variableUuid = variableUuid;
         return this;
     }
     

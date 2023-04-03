@@ -39,18 +39,18 @@ public class Transaction {
      */
     public org.openapis.openapi.models.operations.CancelGiftCardTransactionResponse cancelGiftCardTransaction(org.openapis.openapi.models.operations.CancelGiftCardTransactionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelGiftCardTransactionPathParams.class, baseUrl, "/giftcards/{giftCardID}/transactions/{transactionID}/cancellations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelGiftCardTransactionRequest.class, baseUrl, "/giftcards/{giftCardID}/transactions/{transactionID}/cancellations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "cancelGiftCardTransactionRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -92,15 +92,15 @@ public class Transaction {
      */
     public org.openapis.openapi.models.operations.CreateGiftCardTransactionResponse createGiftCardTransaction(org.openapis.openapi.models.operations.CreateGiftCardTransactionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateGiftCardTransactionPathParams.class, baseUrl, "/giftcards/{giftCardID}/transactions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateGiftCardTransactionRequest.class, baseUrl, "/giftcards/{giftCardID}/transactions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createGiftCardTransactionRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -141,13 +141,13 @@ public class Transaction {
      */
     public org.openapis.openapi.models.operations.GetGiftCardTransactionbyIDResponse getGiftCardTransactionbyID(org.openapis.openapi.models.operations.GetGiftCardTransactionbyIDRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGiftCardTransactionbyIDPathParams.class, baseUrl, "/giftcards/{giftCardID}/transactions/{transactionID}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGiftCardTransactionbyIDRequest.class, baseUrl, "/giftcards/{giftCardID}/transactions/{transactionID}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -189,13 +189,13 @@ public class Transaction {
      */
     public org.openapis.openapi.models.operations.GetGiftCardTransactionsResponse getGiftCardTransactions(org.openapis.openapi.models.operations.GetGiftCardTransactionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGiftCardTransactionsPathParams.class, baseUrl, "/giftcards/{giftCardID}/transactions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGiftCardTransactionsRequest.class, baseUrl, "/giftcards/{giftCardID}/transactions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -237,13 +237,13 @@ public class Transaction {
      */
     public org.openapis.openapi.models.operations.GetTransactionAuthorizationsResponse getTransactionAuthorizations(org.openapis.openapi.models.operations.GetTransactionAuthorizationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTransactionAuthorizationsPathParams.class, baseUrl, "/giftcards/{giftCardID}/transactions/{transactionID}/authorization", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTransactionAuthorizationsRequest.class, baseUrl, "/giftcards/{giftCardID}/transactions/{transactionID}/authorization", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -285,13 +285,13 @@ public class Transaction {
      */
     public org.openapis.openapi.models.operations.GetTransactionCancellationsResponse getTransactionCancellations(org.openapis.openapi.models.operations.GetTransactionCancellationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTransactionCancellationsPathParams.class, baseUrl, "/giftcards/{giftCardID}/transactions/{transactionID}/cancellations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTransactionCancellationsRequest.class, baseUrl, "/giftcards/{giftCardID}/transactions/{transactionID}/cancellations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -333,13 +333,13 @@ public class Transaction {
      */
     public org.openapis.openapi.models.operations.GetTransactionSettlementsResponse getTransactionSettlements(org.openapis.openapi.models.operations.GetTransactionSettlementsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTransactionSettlementsPathParams.class, baseUrl, "/giftcards/{giftCardID}/transactions/{transactionID}/settlements", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTransactionSettlementsRequest.class, baseUrl, "/giftcards/{giftCardID}/transactions/{transactionID}/settlements", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -381,18 +381,18 @@ public class Transaction {
      */
     public org.openapis.openapi.models.operations.SettleGiftCardTransactionResponse settleGiftCardTransaction(org.openapis.openapi.models.operations.SettleGiftCardTransactionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SettleGiftCardTransactionPathParams.class, baseUrl, "/giftcards/{giftCardID}/transactions/{transactionID}/settlements", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SettleGiftCardTransactionRequest.class, baseUrl, "/giftcards/{giftCardID}/transactions/{transactionID}/settlements", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "settleGiftCardTransactionRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

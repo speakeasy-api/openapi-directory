@@ -7,10 +7,10 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ResendAadharOTPUsingPOSTRequest {
-    
-    public ResendAadharOTPUsingPOSTHeaders headers;
-    public ResendAadharOTPUsingPOSTRequest withHeaders(ResendAadharOTPUsingPOSTHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public ResendAadharOTPUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
@@ -18,16 +18,9 @@ public class ResendAadharOTPUsingPOSTRequest {
      * request
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ResendOTPRequest request;
-    public ResendAadharOTPUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.ResendOTPRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public ResendAadharOTPUsingPOSTSecurity security;
-    public ResendAadharOTPUsingPOSTRequest withSecurity(ResendAadharOTPUsingPOSTSecurity security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.ResendOTPRequest resendOTPRequest;
+    public ResendAadharOTPUsingPOSTRequest withResendOTPRequest(org.openapis.openapi.models.shared.ResendOTPRequest resendOTPRequest) {
+        this.resendOTPRequest = resendOTPRequest;
         return this;
     }
     

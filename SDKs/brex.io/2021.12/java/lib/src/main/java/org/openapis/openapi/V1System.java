@@ -35,11 +35,10 @@ public class V1System {
     /**
      * Returns the health information for the official business registers based on usage.
      * Returns the health information for the official business registers based on usage.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.HealthCheckResponse healthCheck(org.openapis.openapi.models.operations.HealthCheckRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.HealthCheckResponse healthCheck() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/system/health");
         
@@ -48,8 +47,7 @@ public class V1System {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -83,11 +81,10 @@ public class V1System {
     /**
      * Returns a list of countries
      * Retrieve the list of all currently enabled countries
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SystemCountriesResponse systemCountries(org.openapis.openapi.models.operations.SystemCountriesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SystemCountriesResponse systemCountries() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/system/countries");
         
@@ -96,8 +93,7 @@ public class V1System {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -131,11 +127,10 @@ public class V1System {
     /**
      * Returns a list of products with prices
      * Retrieve pricing rules for your subscription plan
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SystemPricelistResponse systemPricelist(org.openapis.openapi.models.operations.SystemPricelistRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SystemPricelistResponse systemPricelist() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/system/pricelist");
         
@@ -144,8 +139,7 @@ public class V1System {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");

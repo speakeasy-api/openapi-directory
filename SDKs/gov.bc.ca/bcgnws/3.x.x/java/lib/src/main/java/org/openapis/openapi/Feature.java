@@ -35,7 +35,7 @@ public class Feature {
      */
     public org.openapis.openapi.models.operations.GetFeaturesFeatureIdResponse getFeaturesFeatureId(org.openapis.openapi.models.operations.GetFeaturesFeatureIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFeaturesFeatureIdPathParams.class, baseUrl, "/features/{featureId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFeaturesFeatureIdRequest.class, baseUrl, "/features/{featureId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

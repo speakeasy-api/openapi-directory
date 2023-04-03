@@ -4,13 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisruptionsGetAllDisruptionsRequest {
+    /**
+     * Your developer id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
+    public String devid;
+    public DisruptionsGetAllDisruptionsRequest withDevid(String devid) {
+        this.devid = devid;
+        return this;
+    }
     
-    public DisruptionsGetAllDisruptionsQueryParams queryParams;
-    public DisruptionsGetAllDisruptionsRequest withQueryParams(DisruptionsGetAllDisruptionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter by disruption_mode; values returned via v3/disruptions/modes API
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=disruption_modes")
+    public DisruptionsGetAllDisruptionsDisruptionModesEnum[] disruptionModes;
+    public DisruptionsGetAllDisruptionsRequest withDisruptionModes(DisruptionsGetAllDisruptionsDisruptionModesEnum[] disruptionModes) {
+        this.disruptionModes = disruptionModes;
+        return this;
+    }
+    
+    /**
+     * Filter by status of disruption
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=disruption_status")
+    public DisruptionsGetAllDisruptionsDisruptionStatusEnum disruptionStatus;
+    public DisruptionsGetAllDisruptionsRequest withDisruptionStatus(DisruptionsGetAllDisruptionsDisruptionStatusEnum disruptionStatus) {
+        this.disruptionStatus = disruptionStatus;
+        return this;
+    }
+    
+    /**
+     * Filter by route_type; values returned via RouteTypes API
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=route_types")
+    public DisruptionsGetAllDisruptionsRouteTypesEnum[] routeTypes;
+    public DisruptionsGetAllDisruptionsRequest withRouteTypes(DisruptionsGetAllDisruptionsRouteTypesEnum[] routeTypes) {
+        this.routeTypes = routeTypes;
+        return this;
+    }
+    
+    /**
+     * Authentication signature for request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
+    public String signature;
+    public DisruptionsGetAllDisruptionsRequest withSignature(String signature) {
+        this.signature = signature;
+        return this;
+    }
+    
+    /**
+     * Please ignore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public DisruptionsGetAllDisruptionsRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

@@ -34,7 +34,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RatcrSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/RatcrRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/RatcrRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RatcrRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/RatcrRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Ratcr504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Ratcr504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Ratcr504ApplicationJSON.java
@@ -68,6 +67,4 @@ lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsen
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsent.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaSignature.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchema.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKey.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeClientID.java
 USAGE.md

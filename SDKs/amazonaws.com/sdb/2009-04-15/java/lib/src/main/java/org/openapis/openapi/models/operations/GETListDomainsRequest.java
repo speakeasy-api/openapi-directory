@@ -4,13 +4,75 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETListDomainsRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AWSAccessKeyId")
+    public String awsAccessKeyId;
+    public GETListDomainsRequest withAWSAccessKeyId(String awsAccessKeyId) {
+        this.awsAccessKeyId = awsAccessKeyId;
+        return this;
+    }
     
-    public GETListDomainsQueryParams queryParams;
-    public GETListDomainsRequest withQueryParams(GETListDomainsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETListDomainsActionEnum action;
+    public GETListDomainsRequest withAction(GETListDomainsActionEnum action) {
+        this.action = action;
+        return this;
+    }
+    
+    /**
+     * The maximum number of domain names you want returned. The range is 1 to 100. The default setting is 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxNumberOfDomains")
+    public Long maxNumberOfDomains;
+    public GETListDomainsRequest withMaxNumberOfDomains(Long maxNumberOfDomains) {
+        this.maxNumberOfDomains = maxNumberOfDomains;
+        return this;
+    }
+    
+    /**
+     * A string informing Amazon SimpleDB where to start the next list of domain names.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public GETListDomainsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Signature")
+    public String signature;
+    public GETListDomainsRequest withSignature(String signature) {
+        this.signature = signature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureMethod")
+    public String signatureMethod;
+    public GETListDomainsRequest withSignatureMethod(String signatureMethod) {
+        this.signatureMethod = signatureMethod;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureVersion")
+    public String signatureVersion;
+    public GETListDomainsRequest withSignatureVersion(String signatureVersion) {
+        this.signatureVersion = signatureVersion;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Timestamp")
+    public String timestamp;
+    public GETListDomainsRequest withTimestamp(String timestamp) {
+        this.timestamp = timestamp;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETListDomainsVersionEnum version;
+    public GETListDomainsRequest withVersion(GETListDomainsVersionEnum version) {
+        this.version = version;
         return this;
     }
     

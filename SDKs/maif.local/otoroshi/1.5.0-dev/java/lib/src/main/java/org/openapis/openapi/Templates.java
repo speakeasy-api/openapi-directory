@@ -35,11 +35,10 @@ public class Templates {
     /**
      * Get a template of an Otoroshi Api Key
      * Get a template of an Otoroshi Api Key. The generated entity is not persisted
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.InitiateApiKeyResponse initiateApiKey(org.openapis.openapi.models.operations.InitiateApiKeyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.InitiateApiKeyResponse initiateApiKey() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/new/apikey");
         
@@ -48,8 +47,7 @@ public class Templates {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -77,11 +75,10 @@ public class Templates {
     /**
      * Get a template of an Otoroshi service descriptor
      * Get a template of an Otoroshi service descriptor. The generated entity is not persisted
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.InitiateServiceResponse initiateService(org.openapis.openapi.models.operations.InitiateServiceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.InitiateServiceResponse initiateService() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/new/service");
         
@@ -90,8 +87,7 @@ public class Templates {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -119,11 +115,10 @@ public class Templates {
     /**
      * Get a template of an Otoroshi service group
      * Get a template of an Otoroshi service group. The generated entity is not persisted
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.InitiateServiceGroupResponse initiateServiceGroup(org.openapis.openapi.models.operations.InitiateServiceGroupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.InitiateServiceGroupResponse initiateServiceGroup() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/new/group");
         
@@ -132,8 +127,7 @@ public class Templates {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");

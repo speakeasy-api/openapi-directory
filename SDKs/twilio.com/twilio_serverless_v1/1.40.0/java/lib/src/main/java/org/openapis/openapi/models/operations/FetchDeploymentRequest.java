@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchDeploymentRequest {
-    
-    public FetchDeploymentPathParams pathParams;
-    public FetchDeploymentRequest withPathParams(FetchDeploymentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Environment used by the Deployment to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EnvironmentSid")
+    public String environmentSid;
+    public FetchDeploymentRequest withEnvironmentSid(String environmentSid) {
+        this.environmentSid = environmentSid;
         return this;
     }
     
-    
-    public FetchDeploymentSecurity security;
-    public FetchDeploymentRequest withSecurity(FetchDeploymentSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the Service to fetch the Deployment resource from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public FetchDeploymentRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public FetchDeploymentRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID that identifies the Deployment resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchDeploymentRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

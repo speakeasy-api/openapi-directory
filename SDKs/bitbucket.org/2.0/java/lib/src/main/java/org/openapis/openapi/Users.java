@@ -39,11 +39,10 @@ public class Users {
     /**
      * Get current user
      * Returns the currently logged in user.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetUserResponse getUser(org.openapis.openapi.models.operations.GetUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetUserResponse getUser() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/user");
         
@@ -52,8 +51,7 @@ public class Users {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -88,11 +86,10 @@ public class Users {
      * List email addresses for current user
      * Returns all the authenticated user's email addresses. Both
      * confirmed and unconfirmed.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetUserEmailsResponse getUserEmails(org.openapis.openapi.models.operations.GetUserEmailsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetUserEmailsResponse getUserEmails() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/user/emails");
         
@@ -101,8 +98,7 @@ public class Users {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -133,19 +129,20 @@ public class Users {
      * Details describe whether the address has been confirmed by the user and
      * whether it is the user's primary address or not.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetUserEmailsEmailResponse getUserEmailsEmail(org.openapis.openapi.models.operations.GetUserEmailsEmailRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetUserEmailsEmailResponse getUserEmailsEmail(org.openapis.openapi.models.operations.GetUserEmailsEmailRequest request, org.openapis.openapi.models.operations.GetUserEmailsEmailSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserEmailsEmailPathParams.class, baseUrl, "/user/emails/{email}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserEmailsEmailRequest.class, baseUrl, "/user/emails/{email}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -179,19 +176,20 @@ public class Users {
      * Note that the user object returned by this operation is changing significantly, due to privacy changes.
      * See the [announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-changes-gdpr/#changes-to-bitbucket-user-objects) for details.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetUsersSelectedUserResponse getUsersSelectedUser(org.openapis.openapi.models.operations.GetUsersSelectedUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetUsersSelectedUserResponse getUsersSelectedUser(org.openapis.openapi.models.operations.GetUsersSelectedUserRequest request, org.openapis.openapi.models.operations.GetUsersSelectedUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersSelectedUserPathParams.class, baseUrl, "/users/{selected_user}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersSelectedUserRequest.class, baseUrl, "/users/{selected_user}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

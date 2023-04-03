@@ -4,27 +4,48 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TaskTemplatesReadRequest {
-    
-    public TaskTemplatesReadPathParams pathParams;
-    public TaskTemplatesReadRequest withPathParams(TaskTemplatesReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assignee_group")
+    public Long assigneeGroup;
+    public TaskTemplatesReadRequest withAssigneeGroup(Long assigneeGroup) {
+        this.assigneeGroup = assigneeGroup;
         return this;
     }
     
-    
-    public TaskTemplatesReadQueryParams queryParams;
-    public TaskTemplatesReadRequest withQueryParams(TaskTemplatesReadQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assignee_user")
+    public Long assigneeUser;
+    public TaskTemplatesReadRequest withAssigneeUser(Long assigneeUser) {
+        this.assigneeUser = assigneeUser;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
+    public Long category;
+    public TaskTemplatesReadRequest withCategory(Long category) {
+        this.category = category;
+        return this;
+    }
     
-    public TaskTemplatesReadSecurity security;
-    public TaskTemplatesReadRequest withSecurity(TaskTemplatesReadSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public TaskTemplatesReadRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public TaskTemplatesReadRequest withSince(String since) {
+        this.since = since;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public Long status;
+    public TaskTemplatesReadRequest withStatus(Long status) {
+        this.status = status;
         return this;
     }
     

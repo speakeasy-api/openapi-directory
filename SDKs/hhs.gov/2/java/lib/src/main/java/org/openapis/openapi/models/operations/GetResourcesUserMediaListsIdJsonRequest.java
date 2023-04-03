@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetResourcesUserMediaListsIdJsonRequest {
-    
-    public GetResourcesUserMediaListsIdJsonPathParams pathParams;
-    public GetResourcesUserMediaListsIdJsonRequest withPathParams(GetResourcesUserMediaListsIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Method used to render an html request. Accepts one: [mv, list, feed]
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=displayMethod")
+    public String displayMethod;
+    public GetResourcesUserMediaListsIdJsonRequest withDisplayMethod(String displayMethod) {
+        this.displayMethod = displayMethod;
         return this;
     }
     
-    
-    public GetResourcesUserMediaListsIdJsonQueryParams queryParams;
-    public GetResourcesUserMediaListsIdJsonRequest withQueryParams(GetResourcesUserMediaListsIdJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The id of the record to look up
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetResourcesUserMediaListsIdJsonRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

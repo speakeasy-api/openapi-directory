@@ -7,24 +7,79 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateGroupVersionRequest {
-    
-    public CreateGroupVersionPathParams pathParams;
-    public CreateGroupVersionRequest withPathParams(CreateGroupVersionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CreateGroupVersionHeaders headers;
-    public CreateGroupVersionRequest withHeaders(CreateGroupVersionHeaders headers) {
-        this.headers = headers;
+    /**
+     * The ID of the Greengrass group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=GroupId")
+    public String groupId;
+    public CreateGroupVersionRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateGroupVersionRequestBody request;
-    public CreateGroupVersionRequest withRequest(CreateGroupVersionRequestBody request) {
-        this.request = request;
+    public CreateGroupVersionRequestBody requestBody;
+    public CreateGroupVersionRequest withRequestBody(CreateGroupVersionRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public CreateGroupVersionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public CreateGroupVersionRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public CreateGroupVersionRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public CreateGroupVersionRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public CreateGroupVersionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public CreateGroupVersionRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public CreateGroupVersionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * A client token used to correlate requests and responses.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amzn-Client-Token")
+    public String xAmznClientToken;
+    public CreateGroupVersionRequest withXAmznClientToken(String xAmznClientToken) {
+        this.xAmznClientToken = xAmznClientToken;
         return this;
     }
     

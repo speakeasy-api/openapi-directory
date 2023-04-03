@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBankAccountRequest {
+    /**
+     * The unique identifier of the application in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=application_id")
+    public String applicationId;
+    public GetBankAccountRequest withApplicationId(String applicationId) {
+        this.applicationId = applicationId;
+        return this;
+    }
     
-    public GetBankAccountPathParams pathParams;
-    public GetBankAccountRequest withPathParams(GetBankAccountPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the bank account in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bank_account_id")
+    public String bankAccountId;
+    public GetBankAccountRequest withBankAccountId(String bankAccountId) {
+        this.bankAccountId = bankAccountId;
         return this;
     }
     

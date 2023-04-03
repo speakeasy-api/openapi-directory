@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWorkgroupListRequest {
+    /**
+     * Workgroup Name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=workgroup_name")
+    public String workgroupName;
+    public GetWorkgroupListRequest withWorkgroupName(String workgroupName) {
+        this.workgroupName = workgroupName;
+        return this;
+    }
     
-    public GetWorkgroupListQueryParams queryParams;
-    public GetWorkgroupListRequest withQueryParams(GetWorkgroupListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * 1000001 for Buyer, 1000002 for supplier, 1000003 for agent, 1000004 for Broker/Outsourcer and 1000005 for Partner
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=workgroup_types")
+    public String[] workgroupTypes;
+    public GetWorkgroupListRequest withWorkgroupTypes(String[] workgroupTypes) {
+        this.workgroupTypes = workgroupTypes;
         return this;
     }
     

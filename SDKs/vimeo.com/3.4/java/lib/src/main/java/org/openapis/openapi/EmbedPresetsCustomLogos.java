@@ -32,19 +32,20 @@ public class EmbedPresetsCustomLogos {
     /**
      * Add a custom logo
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateCustomLogoResponse createCustomLogo(org.openapis.openapi.models.operations.CreateCustomLogoRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateCustomLogoResponse createCustomLogo(org.openapis.openapi.models.operations.CreateCustomLogoRequest request, org.openapis.openapi.models.operations.CreateCustomLogoSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateCustomLogoPathParams.class, baseUrl, "/users/{user_id}/customlogos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateCustomLogoRequest.class, baseUrl, "/users/{user_id}/customlogos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,11 +79,10 @@ public class EmbedPresetsCustomLogos {
 
     /**
      * Add a custom logo
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateCustomLogoAlt1Response createCustomLogoAlt1(org.openapis.openapi.models.operations.CreateCustomLogoAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateCustomLogoAlt1Response createCustomLogoAlt1() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me/customlogos");
         
@@ -91,7 +91,7 @@ public class EmbedPresetsCustomLogos {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = this._securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -131,7 +131,7 @@ public class EmbedPresetsCustomLogos {
      */
     public org.openapis.openapi.models.operations.GetCustomLogoResponse getCustomLogo(org.openapis.openapi.models.operations.GetCustomLogoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomLogoPathParams.class, baseUrl, "/users/{user_id}/customlogos/{logo_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomLogoRequest.class, baseUrl, "/users/{user_id}/customlogos/{logo_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -178,7 +178,7 @@ public class EmbedPresetsCustomLogos {
      */
     public org.openapis.openapi.models.operations.GetCustomLogoAlt1Response getCustomLogoAlt1(org.openapis.openapi.models.operations.GetCustomLogoAlt1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomLogoAlt1PathParams.class, baseUrl, "/me/customlogos/{logo_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomLogoAlt1Request.class, baseUrl, "/me/customlogos/{logo_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -225,7 +225,7 @@ public class EmbedPresetsCustomLogos {
      */
     public org.openapis.openapi.models.operations.GetCustomLogosResponse getCustomLogos(org.openapis.openapi.models.operations.GetCustomLogosRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomLogosPathParams.class, baseUrl, "/users/{user_id}/customlogos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomLogosRequest.class, baseUrl, "/users/{user_id}/customlogos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

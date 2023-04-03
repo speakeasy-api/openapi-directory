@@ -227,7 +227,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.CrawlResponse crawl(org.openapis.openapi.models.operations.CrawlRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CrawlPathParams.class, baseUrl, "/v1/crawl/{query}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CrawlRequest.class, baseUrl, "/v1/crawl/{query}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -326,7 +326,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.ImagesResponse images(org.openapis.openapi.models.operations.ImagesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImagesPathParams.class, baseUrl, "/v1/images/{query}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImagesRequest.class, baseUrl, "/v1/images/{query}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -382,7 +382,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.NewsResponse news(org.openapis.openapi.models.operations.NewsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NewsPathParams.class, baseUrl, "/v1/news/{query}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NewsRequest.class, baseUrl, "/v1/news/{query}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -440,7 +440,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.SearchResponse search(org.openapis.openapi.models.operations.SearchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SearchPathParams.class, baseUrl, "/v1/search/{query}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SearchRequest.class, baseUrl, "/v1/search/{query}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -496,7 +496,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SerpResponse serp(org.openapis.openapi.models.operations.SerpRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SerpResponse serp(org.openapis.openapi.models.shared.SerpData request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/serp/");
         

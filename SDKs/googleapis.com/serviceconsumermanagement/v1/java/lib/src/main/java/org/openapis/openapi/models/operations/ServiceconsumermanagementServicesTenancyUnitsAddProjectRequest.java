@@ -7,31 +7,130 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ServiceconsumermanagementServicesTenancyUnitsAddProjectRequest {
-    
-    public ServiceconsumermanagementServicesTenancyUnitsAddProjectPathParams pathParams;
-    public ServiceconsumermanagementServicesTenancyUnitsAddProjectRequest withPathParams(ServiceconsumermanagementServicesTenancyUnitsAddProjectPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ServiceconsumermanagementServicesTenancyUnitsAddProjectQueryParams queryParams;
-    public ServiceconsumermanagementServicesTenancyUnitsAddProjectRequest withQueryParams(ServiceconsumermanagementServicesTenancyUnitsAddProjectQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public ServiceconsumermanagementServicesTenancyUnitsAddProjectRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AddTenantProjectRequest request;
-    public ServiceconsumermanagementServicesTenancyUnitsAddProjectRequest withRequest(org.openapis.openapi.models.shared.AddTenantProjectRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AddTenantProjectRequest addTenantProjectRequest;
+    public ServiceconsumermanagementServicesTenancyUnitsAddProjectRequest withAddTenantProjectRequest(org.openapis.openapi.models.shared.AddTenantProjectRequest addTenantProjectRequest) {
+        this.addTenantProjectRequest = addTenantProjectRequest;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public ServiceconsumermanagementServicesTenancyUnitsAddProjectRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public ServiceconsumermanagementServicesTenancyUnitsAddProjectSecurity security;
-    public ServiceconsumermanagementServicesTenancyUnitsAddProjectRequest withSecurity(ServiceconsumermanagementServicesTenancyUnitsAddProjectSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public ServiceconsumermanagementServicesTenancyUnitsAddProjectRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public ServiceconsumermanagementServicesTenancyUnitsAddProjectRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public ServiceconsumermanagementServicesTenancyUnitsAddProjectRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public ServiceconsumermanagementServicesTenancyUnitsAddProjectRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public ServiceconsumermanagementServicesTenancyUnitsAddProjectRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Required. Name of the tenancy unit. Such as 'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public ServiceconsumermanagementServicesTenancyUnitsAddProjectRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public ServiceconsumermanagementServicesTenancyUnitsAddProjectRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public ServiceconsumermanagementServicesTenancyUnitsAddProjectRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public ServiceconsumermanagementServicesTenancyUnitsAddProjectRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public ServiceconsumermanagementServicesTenancyUnitsAddProjectRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

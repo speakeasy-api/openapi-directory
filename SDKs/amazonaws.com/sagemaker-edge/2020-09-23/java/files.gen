@@ -29,15 +29,12 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/GetDeploymentsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetDeploymentsRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetDeploymentsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetDeploymentsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetDeviceRegistrationHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetDeviceRegistrationRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetDeviceRegistrationRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetDeviceRegistrationResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/SendHeartbeatHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/SendHeartbeatRequestBodyDeploymentResult.java
 lib/src/main/java/org/openapis/openapi/models/operations/SendHeartbeatRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/SendHeartbeatRequest.java
@@ -55,6 +52,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/Model.java
 lib/src/main/java/org/openapis/openapi/models/shared/EdgeMetric.java
 lib/src/main/java/org/openapis/openapi/models/shared/DeploymentModel.java
 lib/src/main/java/org/openapis/openapi/models/shared/DeploymentStatusEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeHmac.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

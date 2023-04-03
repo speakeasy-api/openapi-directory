@@ -4,27 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdRequest {
-    
-    public GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdPathParams pathParams;
-    public GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdRequest withPathParams(GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * version id of the base Screenshot Test
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=base_version_id")
+    public Long baseVersionId;
+    public GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdRequest withBaseVersionId(Long baseVersionId) {
+        this.baseVersionId = baseVersionId;
         return this;
     }
     
-    
-    public GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdQueryParams queryParams;
-    public GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdRequest withQueryParams(GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Name of callback method for JSONP requests.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdRequest withCallback(String callback) {
+        this.callback = callback;
         return this;
     }
     
+    /**
+     * The format of the returned data. Possible values are "json" or "jsonp".
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public String format;
+    public GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdRequest withFormat(String format) {
+        this.format = format;
+        return this;
+    }
     
-    public GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdSecurity security;
-    public GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdRequest withSecurity(GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdSecurity security) {
-        this.security = security;
+    /**
+     * test id of the target Screenshot Test
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=target_screenshot_test_id")
+    public Long targetScreenshotTestId;
+    public GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdRequest withTargetScreenshotTestId(Long targetScreenshotTestId) {
+        this.targetScreenshotTestId = targetScreenshotTestId;
+        return this;
+    }
+    
+    /**
+     * version id of the target Screenshot Test
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=target_version_id")
+    public Long targetVersionId;
+    public GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdRequest withTargetVersionId(Long targetVersionId) {
+        this.targetVersionId = targetVersionId;
+        return this;
+    }
+    
+    /**
+     * Used as the basis for detecting box model differences in element positioning and dimensions that should be flagged and reported back to the comparison results. The default is 30px which is a good basis for finding notable layout differences.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tolerance")
+    public Double tolerance;
+    public GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdRequest withTolerance(Double tolerance) {
+        this.tolerance = tolerance;
         return this;
     }
     

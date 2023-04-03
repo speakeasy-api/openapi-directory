@@ -7,24 +7,34 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutUsersIdUserCategoriesFullIdFullRequest {
-    
-    public PutUsersIdUserCategoriesFullIdFullPathParams pathParams;
-    public PutUsersIdUserCategoriesFullIdFullRequest withPathParams(PutUsersIdUserCategoriesFullIdFullPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutUsersIdUserCategoriesFullIdFullQueryParams queryParams;
-    public PutUsersIdUserCategoriesFullIdFullRequest withQueryParams(PutUsersIdUserCategoriesFullIdFullQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PutUsersIdUserCategoriesFullIdFullRequestBody request;
-    public PutUsersIdUserCategoriesFullIdFullRequest withRequest(PutUsersIdUserCategoriesFullIdFullRequestBody request) {
-        this.request = request;
+    public PutUsersIdUserCategoriesFullIdFullRequestBody requestBody;
+    public PutUsersIdUserCategoriesFullIdFullRequest withRequestBody(PutUsersIdUserCategoriesFullIdFullRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public PutUsersIdUserCategoriesFullIdFullRequest withExpand(String expand) {
+        this.expand = expand;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_full")
+    public Long idFull;
+    public PutUsersIdUserCategoriesFullIdFullRequest withIdFull(Long idFull) {
+        this.idFull = idFull;
+        return this;
+    }
+    
+    /**
+     * Hint: you can use 'me' or 'all'
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
+    public String idUser;
+    public PutUsersIdUserCategoriesFullIdFullRequest withIdUser(String idUser) {
+        this.idUser = idUser;
         return this;
     }
     

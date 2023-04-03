@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateWebhookRequest {
-    
-    public UpdateWebhookPathParams pathParams;
-    public UpdateWebhookRequest withPathParams(UpdateWebhookPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateWebhookHeaders headers;
-    public UpdateWebhookRequest withHeaders(UpdateWebhookHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateWebhookUpdateWebhookRequestBody request;
-    public UpdateWebhookRequest withRequest(UpdateWebhookUpdateWebhookRequestBody request) {
-        this.request = request;
+    public UpdateWebhookUpdateWebhookRequestBody requestBody;
+    public UpdateWebhookRequest withRequestBody(UpdateWebhookUpdateWebhookRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Access token required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-access-token")
+    public String evAccessToken;
+    public UpdateWebhookRequest withEvAccessToken(String evAccessToken) {
+        this.evAccessToken = evAccessToken;
+        return this;
+    }
+    
+    /**
+     * API key required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-api-key")
+    public String evApiKey;
+    public UpdateWebhookRequest withEvApiKey(String evApiKey) {
+        this.evApiKey = evApiKey;
+        return this;
+    }
+    
+    /**
+     * Webhook endpoint ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public UpdateWebhookRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

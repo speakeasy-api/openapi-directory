@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDownloadSharesRequest {
-    
-    public UpdateDownloadSharesHeaders headers;
-    public UpdateDownloadSharesRequest withHeaders(UpdateDownloadSharesHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.UpdateDownloadSharesBulkRequest updateDownloadSharesBulkRequest;
+    public UpdateDownloadSharesRequest withUpdateDownloadSharesBulkRequest(org.openapis.openapi.models.shared.UpdateDownloadSharesBulkRequest updateDownloadSharesBulkRequest) {
+        this.updateDownloadSharesBulkRequest = updateDownloadSharesBulkRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateDownloadSharesBulkRequest request;
-    public UpdateDownloadSharesRequest withRequest(org.openapis.openapi.models.shared.UpdateDownloadSharesBulkRequest request) {
-        this.request = request;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public UpdateDownloadSharesRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     

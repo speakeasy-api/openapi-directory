@@ -40,15 +40,15 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksCreateResponse mybusinessplaceactionsLocationsPlaceActionLinksCreate(org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksCreatePathParams.class, baseUrl, "/v1/{parent}/placeActionLinks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksCreateRequest.class, baseUrl, "/v1/{parent}/placeActionLinks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "placeActionLinkInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -86,13 +86,13 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksDeleteResponse mybusinessplaceactionsLocationsPlaceActionLinksDelete(org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksDeletePathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksDeleteRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -130,13 +130,13 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksGetResponse mybusinessplaceactionsLocationsPlaceActionLinksGet(org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksGetPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksGetRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -174,13 +174,13 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksListResponse mybusinessplaceactionsLocationsPlaceActionLinksList(org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksListPathParams.class, baseUrl, "/v1/{parent}/placeActionLinks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksListRequest.class, baseUrl, "/v1/{parent}/placeActionLinks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -218,15 +218,15 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksPatchResponse mybusinessplaceactionsLocationsPlaceActionLinksPatch(org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksPatchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksPatchPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksPatchRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "placeActionLinkInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

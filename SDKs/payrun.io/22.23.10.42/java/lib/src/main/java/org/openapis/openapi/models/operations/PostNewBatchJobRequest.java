@@ -7,10 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostNewBatchJobRequest {
+    /**
+     * The version of the api to target. Omit or set as &amp;apos;default&amp;apos; to target the current api version.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Version")
+    public String apiVersion;
+    public PostNewBatchJobRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
     
-    public PostNewBatchJobHeaders headers;
-    public PostNewBatchJobRequest withHeaders(PostNewBatchJobHeaders headers) {
-        this.headers = headers;
+    /**
+     * The OAuth 1 authorization header. &amp;apos;Auto&amp;apos; enables auto complete.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostNewBatchJobRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
@@ -18,9 +31,9 @@ public class PostNewBatchJobRequest {
      * The the batch job instruction object.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.BatchJobInstruction request;
-    public PostNewBatchJobRequest withRequest(org.openapis.openapi.models.shared.BatchJobInstruction request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.BatchJobInstruction batchJobInstruction;
+    public PostNewBatchJobRequest withBatchJobInstruction(org.openapis.openapi.models.shared.BatchJobInstruction batchJobInstruction) {
+        this.batchJobInstruction = batchJobInstruction;
         return this;
     }
     

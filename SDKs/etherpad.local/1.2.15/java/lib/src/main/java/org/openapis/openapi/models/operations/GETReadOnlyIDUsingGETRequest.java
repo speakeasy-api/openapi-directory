@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETReadOnlyIDUsingGETRequest {
-    
-    public GETReadOnlyIDUsingGETQueryParams queryParams;
-    public GETReadOnlyIDUsingGETRequest withQueryParams(GETReadOnlyIDUsingGETQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=padID")
+    public String padID;
+    public GETReadOnlyIDUsingGETRequest withPadID(String padID) {
+        this.padID = padID;
         return this;
     }
     

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteApiV1FeaturedTagsIdRequest {
-    
-    public DeleteApiV1FeaturedTagsIdPathParams pathParams;
-    public DeleteApiV1FeaturedTagsIdRequest withPathParams(DeleteApiV1FeaturedTagsIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteApiV1FeaturedTagsIdSecurity security;
-    public DeleteApiV1FeaturedTagsIdRequest withSecurity(DeleteApiV1FeaturedTagsIdSecurity security) {
-        this.security = security;
+    /**
+     * The id of the FeaturedTag to be unfeatured.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteApiV1FeaturedTagsIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

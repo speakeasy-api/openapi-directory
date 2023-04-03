@@ -33,10 +33,11 @@ public class RateLimit {
     /**
      * This method retrieves the call limit and utilization data for an application. The data is retrieved for all RESTful APIs and the legacy Trading API.  &lt;br&gt;&lt;br&gt;The response from &lt;b&gt;getRateLimits&lt;/b&gt; includes a list of the applicable resources and the "call limit", or quota, that is set for each resource. In addition to quota information, the response also includes the number of remaining calls available before the limit is reached, the time remaining before the quota resets, and the length of the "time window" to which the quota applies.  &lt;br&gt;&lt;br&gt;By default, this method returns utilization data for all RESTful API and the legacy Trading API resources. Use the &lt;b&gt;api_name&lt;/b&gt; and &lt;b&gt;api_context&lt;/b&gt; query parameters to filter the response to only the desired APIs.  &lt;br&gt;&lt;br&gt;For more on call limits, see &lt;a href="https://developer.ebay.com/support/app-check " target="_blank"&gt;Compatible Application Check&lt;/a&gt;.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRateLimitsResponse getRateLimits(org.openapis.openapi.models.operations.GetRateLimitsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRateLimitsResponse getRateLimits(org.openapis.openapi.models.operations.GetRateLimitsRequest request, org.openapis.openapi.models.operations.GetRateLimitsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/rate_limit/");
         
@@ -44,14 +45,14 @@ public class RateLimit {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRateLimitsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRateLimitsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

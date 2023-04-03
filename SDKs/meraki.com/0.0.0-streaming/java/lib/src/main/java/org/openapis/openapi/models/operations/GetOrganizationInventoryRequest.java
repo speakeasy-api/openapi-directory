@@ -4,20 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationInventoryRequest {
-    
-    public GetOrganizationInventoryPathParams pathParams;
-    public GetOrganizationInventoryRequest withPathParams(GetOrganizationInventoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * When this parameter is true, each entity in the response will include the license expiration date of the device (if any). Only applies to organizations that are on the per-device licensing model. Defaults to false.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeLicenseInfo")
+    public Boolean includeLicenseInfo;
+    public GetOrganizationInventoryRequest withIncludeLicenseInfo(Boolean includeLicenseInfo) {
+        this.includeLicenseInfo = includeLicenseInfo;
         return this;
     }
     
-    
-    public GetOrganizationInventoryQueryParams queryParams;
-    public GetOrganizationInventoryRequest withQueryParams(GetOrganizationInventoryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public GetOrganizationInventoryRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

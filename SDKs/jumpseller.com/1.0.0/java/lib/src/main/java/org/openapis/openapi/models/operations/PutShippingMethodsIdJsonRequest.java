@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutShippingMethodsIdJsonRequest {
-    
-    public PutShippingMethodsIdJsonPathParams pathParams;
-    public PutShippingMethodsIdJsonRequest withPathParams(PutShippingMethodsIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutShippingMethodsIdJsonQueryParams queryParams;
-    public PutShippingMethodsIdJsonRequest withQueryParams(PutShippingMethodsIdJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Shipping Method parameters.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ShippingMethodEdit request;
-    public PutShippingMethodsIdJsonRequest withRequest(org.openapis.openapi.models.shared.ShippingMethodEdit request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ShippingMethodEdit shippingMethodEdit;
+    public PutShippingMethodsIdJsonRequest withShippingMethodEdit(org.openapis.openapi.models.shared.ShippingMethodEdit shippingMethodEdit) {
+        this.shippingMethodEdit = shippingMethodEdit;
+        return this;
+    }
+    
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public PutShippingMethodsIdJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
+        return this;
+    }
+    
+    /**
+     * Id of the Shipping Method
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PutShippingMethodsIdJsonRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public PutShippingMethodsIdJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LandlordControllerGetRentArrearsRequest {
-    
-    public LandlordControllerGetRentArrearsPathParams pathParams;
-    public LandlordControllerGetRentArrearsRequest withPathParams(LandlordControllerGetRentArrearsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique client short-name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
+    public String shortName;
+    public LandlordControllerGetRentArrearsRequest withShortName(String shortName) {
+        this.shortName = shortName;
         return this;
     }
     
-    
-    public LandlordControllerGetRentArrearsQueryParams queryParams;
-    public LandlordControllerGetRentArrearsRequest withQueryParams(LandlordControllerGetRentArrearsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The login token returned from the /session POST call
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public LandlordControllerGetRentArrearsRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

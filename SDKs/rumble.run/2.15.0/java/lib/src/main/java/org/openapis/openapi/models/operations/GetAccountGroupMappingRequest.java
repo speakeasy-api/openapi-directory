@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountGroupMappingRequest {
-    
-    public GetAccountGroupMappingPathParams pathParams;
-    public GetAccountGroupMappingRequest withPathParams(GetAccountGroupMappingPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetAccountGroupMappingSecurity security;
-    public GetAccountGroupMappingRequest withSecurity(GetAccountGroupMappingSecurity security) {
-        this.security = security;
+    /**
+     * UUID of the SSO group mapping
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_mapping_id")
+    public String groupMappingId;
+    public GetAccountGroupMappingRequest withGroupMappingId(String groupMappingId) {
+        this.groupMappingId = groupMappingId;
         return this;
     }
     

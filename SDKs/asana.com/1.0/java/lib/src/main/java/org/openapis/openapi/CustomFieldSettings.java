@@ -42,13 +42,13 @@ public class CustomFieldSettings {
      */
     public org.openapis.openapi.models.operations.GetCustomFieldSettingsForPortfolioResponse getCustomFieldSettingsForPortfolio(org.openapis.openapi.models.operations.GetCustomFieldSettingsForPortfolioRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomFieldSettingsForPortfolioPathParams.class, baseUrl, "/portfolios/{portfolio_gid}/custom_field_settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomFieldSettingsForPortfolioRequest.class, baseUrl, "/portfolios/{portfolio_gid}/custom_field_settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCustomFieldSettingsForPortfolioQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCustomFieldSettingsForPortfolioRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -96,13 +96,13 @@ public class CustomFieldSettings {
      */
     public org.openapis.openapi.models.operations.GetCustomFieldSettingsForProjectResponse getCustomFieldSettingsForProject(org.openapis.openapi.models.operations.GetCustomFieldSettingsForProjectRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomFieldSettingsForProjectPathParams.class, baseUrl, "/projects/{project_gid}/custom_field_settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomFieldSettingsForProjectRequest.class, baseUrl, "/projects/{project_gid}/custom_field_settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCustomFieldSettingsForProjectQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCustomFieldSettingsForProjectRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

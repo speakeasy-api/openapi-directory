@@ -33,10 +33,11 @@ public class Billing {
     /**
      * Aggregated Billing Information for the requesting user and the organizations in which the user is an admin.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BillingAggregatedInformationGetAllResponse billingAggregatedInformationGetAll(org.openapis.openapi.models.operations.BillingAggregatedInformationGetAllRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BillingAggregatedInformationGetAllResponse billingAggregatedInformationGetAll(org.openapis.openapi.models.operations.BillingAggregatedInformationGetAllRequest request, org.openapis.openapi.models.operations.BillingAggregatedInformationGetAllSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/billing/allAccountsAggregated");
         
@@ -44,14 +45,14 @@ public class Billing {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BillingAggregatedInformationGetAllQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BillingAggregatedInformationGetAllRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -86,25 +87,26 @@ public class Billing {
     /**
      * Aggregated Billing Information for owner of a given app.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BillingAggregatedInformationGetByAppResponse billingAggregatedInformationGetByApp(org.openapis.openapi.models.operations.BillingAggregatedInformationGetByAppRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BillingAggregatedInformationGetByAppResponse billingAggregatedInformationGetByApp(org.openapis.openapi.models.operations.BillingAggregatedInformationGetByAppRequest request, org.openapis.openapi.models.operations.BillingAggregatedInformationGetByAppSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingAggregatedInformationGetByAppPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/billing/aggregated", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingAggregatedInformationGetByAppRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/billing/aggregated", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BillingAggregatedInformationGetByAppQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BillingAggregatedInformationGetByAppRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -139,25 +141,26 @@ public class Billing {
     /**
      * Aggregated Billing Information for a given Organization.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BillingAggregatedInformationGetForOrgResponse billingAggregatedInformationGetForOrg(org.openapis.openapi.models.operations.BillingAggregatedInformationGetForOrgRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BillingAggregatedInformationGetForOrgResponse billingAggregatedInformationGetForOrg(org.openapis.openapi.models.operations.BillingAggregatedInformationGetForOrgRequest request, org.openapis.openapi.models.operations.BillingAggregatedInformationGetForOrgSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingAggregatedInformationGetForOrgPathParams.class, baseUrl, "/v0.1/orgs/{orgName}/billing/aggregated", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BillingAggregatedInformationGetForOrgRequest.class, baseUrl, "/v0.1/orgs/{orgName}/billing/aggregated", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BillingAggregatedInformationGetForOrgQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BillingAggregatedInformationGetForOrgRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

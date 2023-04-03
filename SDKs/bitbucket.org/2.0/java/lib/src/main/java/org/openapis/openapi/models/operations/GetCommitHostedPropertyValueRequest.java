@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCommitHostedPropertyValueRequest {
+    /**
+     * The key of the Connect app.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_key")
+    public String appKey;
+    public GetCommitHostedPropertyValueRequest withAppKey(String appKey) {
+        this.appKey = appKey;
+        return this;
+    }
     
-    public GetCommitHostedPropertyValuePathParams pathParams;
-    public GetCommitHostedPropertyValueRequest withPathParams(GetCommitHostedPropertyValuePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The commit.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commit")
+    public String commit;
+    public GetCommitHostedPropertyValueRequest withCommit(String commit) {
+        this.commit = commit;
+        return this;
+    }
+    
+    /**
+     * The name of the property.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=property_name")
+    public String propertyName;
+    public GetCommitHostedPropertyValueRequest withPropertyName(String propertyName) {
+        this.propertyName = propertyName;
+        return this;
+    }
+    
+    /**
+     * The repository.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public GetCommitHostedPropertyValueRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
+    
+    /**
+     * The repository container; either the workspace slug or the UUID in curly braces.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetCommitHostedPropertyValueRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

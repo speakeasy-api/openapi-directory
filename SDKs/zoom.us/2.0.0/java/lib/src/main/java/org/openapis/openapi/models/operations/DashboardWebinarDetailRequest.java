@@ -4,27 +4,28 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DashboardWebinarDetailRequest {
-    
-    public DashboardWebinarDetailPathParams pathParams;
-    public DashboardWebinarDetailRequest withPathParams(DashboardWebinarDetailPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The webinar type.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public DashboardWebinarDetailTypeEnum type;
+    public DashboardWebinarDetailRequest withType(DashboardWebinarDetailTypeEnum type) {
+        this.type = type;
         return this;
     }
     
-    
-    public DashboardWebinarDetailQueryParams queryParams;
-    public DashboardWebinarDetailRequest withQueryParams(DashboardWebinarDetailQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public DashboardWebinarDetailSecurity security;
-    public DashboardWebinarDetailRequest withSecurity(DashboardWebinarDetailSecurity security) {
-        this.security = security;
+    /**
+     * The webinar ID or the webinar UUID.  If a webinar ID is provided in the request instead of a UUID, the response will be for the latest webinar instance.
+     * 
+     * If a UUID starts with "/" or contains "//" (example: "/ajXp112QmuoKj4854875==\"), you must **double encode** the UUID before making an API request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webinarId")
+    public String webinarId;
+    public DashboardWebinarDetailRequest withWebinarId(String webinarId) {
+        this.webinarId = webinarId;
         return this;
     }
     

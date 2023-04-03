@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationAdaptivePolicyGroupsRequest {
-    
-    public GetOrganizationAdaptivePolicyGroupsPathParams pathParams;
-    public GetOrganizationAdaptivePolicyGroupsRequest withPathParams(GetOrganizationAdaptivePolicyGroupsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public GetOrganizationAdaptivePolicyGroupsRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

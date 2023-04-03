@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistrationSchemaReadRequest {
-    
-    public RegistrationSchemaReadPathParams pathParams;
-    public RegistrationSchemaReadRequest withPathParams(RegistrationSchemaReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the Registration Schema example `6176c9d45e01f100091d4f94`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=registration_schema_id")
+    public String registrationSchemaId;
+    public RegistrationSchemaReadRequest withRegistrationSchemaId(String registrationSchemaId) {
+        this.registrationSchemaId = registrationSchemaId;
         return this;
     }
     

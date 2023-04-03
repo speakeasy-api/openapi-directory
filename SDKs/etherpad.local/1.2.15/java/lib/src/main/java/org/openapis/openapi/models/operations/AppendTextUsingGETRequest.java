@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppendTextUsingGETRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=padID")
+    public String padID;
+    public AppendTextUsingGETRequest withPadID(String padID) {
+        this.padID = padID;
+        return this;
+    }
     
-    public AppendTextUsingGETQueryParams queryParams;
-    public AppendTextUsingGETRequest withQueryParams(AppendTextUsingGETQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
+    public String text;
+    public AppendTextUsingGETRequest withText(String text) {
+        this.text = text;
         return this;
     }
     

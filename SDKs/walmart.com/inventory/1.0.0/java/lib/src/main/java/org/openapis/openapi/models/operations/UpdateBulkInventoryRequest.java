@@ -7,24 +7,70 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateBulkInventoryRequest {
-    
-    public UpdateBulkInventoryQueryParams queryParams;
-    public UpdateBulkInventoryRequest withQueryParams(UpdateBulkInventoryQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public UpdateBulkInventoryHeaders headers;
-    public UpdateBulkInventoryRequest withHeaders(UpdateBulkInventoryHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public UpdateBulkInventoryRequestBody request;
-    public UpdateBulkInventoryRequest withRequest(UpdateBulkInventoryRequestBody request) {
-        this.request = request;
+    public UpdateBulkInventoryRequestBody requestBody;
+    public UpdateBulkInventoryRequest withRequestBody(UpdateBulkInventoryRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * A unique ID to track the consumer request by channel. Use the Consumer Channel Type received during onboarding
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_CONSUMER.CHANNEL.TYPE")
+    public String wmConsumerChannelType;
+    public UpdateBulkInventoryRequest withWmConsumerChannelType(String wmConsumerChannelType) {
+        this.wmConsumerChannelType = wmConsumerChannelType;
+        return this;
+    }
+    
+    /**
+     * A unique ID which identifies each API call and used to track and debug issues; use a random generated GUID for this ID
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_QOS.CORRELATION_ID")
+    public String wmQosCorrelationId;
+    public UpdateBulkInventoryRequest withWmQosCorrelationId(String wmQosCorrelationId) {
+        this.wmQosCorrelationId = wmQosCorrelationId;
+        return this;
+    }
+    
+    /**
+     * The access token retrieved in the Token API call
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_SEC.ACCESS_TOKEN")
+    public String wmSecAccessToken;
+    public UpdateBulkInventoryRequest withWmSecAccessToken(String wmSecAccessToken) {
+        this.wmSecAccessToken = wmSecAccessToken;
+        return this;
+    }
+    
+    /**
+     * Walmart Service Name
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_SVC.NAME")
+    public String wmSvcName;
+    public UpdateBulkInventoryRequest withWmSvcName(String wmSvcName) {
+        this.wmSvcName = wmSvcName;
+        return this;
+    }
+    
+    /**
+     * The feed Type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=feedType")
+    public UpdateBulkInventoryFeedTypeEnum feedType;
+    public UpdateBulkInventoryRequest withFeedType(UpdateBulkInventoryFeedTypeEnum feedType) {
+        this.feedType = feedType;
+        return this;
+    }
+    
+    /**
+     * The shipNode for which the inventory is to be updated. Not required in case of Multi Node Inventory Update Feed (feedType=MP_INVENTORY)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=shipNode")
+    public String shipNode;
+    public UpdateBulkInventoryRequest withShipNode(String shipNode) {
+        this.shipNode = shipNode;
         return this;
     }
     

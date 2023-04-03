@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2PhoneNumbersCallerIdsJsonRequest {
-    
-    public GetV2PhoneNumbersCallerIdsJsonQueryParams queryParams;
-    public GetV2PhoneNumbersCallerIdsJsonRequest withQueryParams(GetV2PhoneNumbersCallerIdsJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * E.164 Phone Number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=phone_number")
+    public String phoneNumber;
+    public GetV2PhoneNumbersCallerIdsJsonRequest withPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
         return this;
     }
     

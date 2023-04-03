@@ -34,7 +34,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PodocSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/PodocRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/PodocRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/PodocRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/PodocRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Podoc504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Podoc504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Podoc504ApplicationJSON.java
@@ -68,6 +67,4 @@ lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsen
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsent.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaSignature.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchema.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKey.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeClientID.java
 USAGE.md

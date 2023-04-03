@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteBreakTypeRequest {
-    
-    public DeleteBreakTypePathParams pathParams;
-    public DeleteBreakTypeRequest withPathParams(DeleteBreakTypePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteBreakTypeSecurity security;
-    public DeleteBreakTypeRequest withSecurity(DeleteBreakTypeSecurity security) {
-        this.security = security;
+    /**
+     * The UUID for the `BreakType` being deleted.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteBreakTypeRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

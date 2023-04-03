@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAdvertisingEligibilityRequest {
-    
-    public GetAdvertisingEligibilityQueryParams queryParams;
-    public GetAdvertisingEligibilityRequest withQueryParams(GetAdvertisingEligibilityQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The unique identifier of the eBay marketplace for which the seller eligibility status shall be checked.&lt;br /&gt;&lt;br /&gt;&lt;span class="tablenote"&gt;&lt;b&gt;Note:&lt;/b&gt; This value is case-sensitive.&lt;/span&gt;
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
+    public String xEbayCMarketplaceId;
+    public GetAdvertisingEligibilityRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
+        this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
     }
     
-    
-    public GetAdvertisingEligibilityHeaders headers;
-    public GetAdvertisingEligibilityRequest withHeaders(GetAdvertisingEligibilityHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetAdvertisingEligibilitySecurity security;
-    public GetAdvertisingEligibilityRequest withSecurity(GetAdvertisingEligibilitySecurity security) {
-        this.security = security;
+    /**
+     * A comma-separated list of eBay advertising programs.&lt;br /&gt;&lt;br /&gt;&lt;span class="tablenote"&gt;&lt;b&gt;Tip:&lt;/b&gt; See the &lt;a href="/api-docs/sell/account/types/plser:AdvertisingProgramEnum"&gt; AdvertisingProgramEnum&lt;/a&gt; type for possible values.&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;If no programs are specified, the results will be returned for all programs.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=program_types")
+    public String programTypes;
+    public GetAdvertisingEligibilityRequest withProgramTypes(String programTypes) {
+        this.programTypes = programTypes;
         return this;
     }
     

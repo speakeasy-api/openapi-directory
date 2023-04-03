@@ -4,20 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAutomationV4ActionsAppIdDefinitionIdArchiveRequest {
-    
-    public DeleteAutomationV4ActionsAppIdDefinitionIdArchivePathParams pathParams;
-    public DeleteAutomationV4ActionsAppIdDefinitionIdArchiveRequest withPathParams(DeleteAutomationV4ActionsAppIdDefinitionIdArchivePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
+    public Integer appId;
+    public DeleteAutomationV4ActionsAppIdDefinitionIdArchiveRequest withAppId(Integer appId) {
+        this.appId = appId;
         return this;
     }
     
-    
-    public DeleteAutomationV4ActionsAppIdDefinitionIdArchiveSecurity security;
-    public DeleteAutomationV4ActionsAppIdDefinitionIdArchiveRequest withSecurity(DeleteAutomationV4ActionsAppIdDefinitionIdArchiveSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the custom workflow action.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=definitionId")
+    public String definitionId;
+    public DeleteAutomationV4ActionsAppIdDefinitionIdArchiveRequest withDefinitionId(String definitionId) {
+        this.definitionId = definitionId;
         return this;
     }
     

@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteWebhooksIdWebhookRequest {
-    
-    public DeleteWebhooksIdWebhookPathParams pathParams;
-    public DeleteWebhooksIdWebhookRequest withPathParams(DeleteWebhooksIdWebhookPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public DeleteWebhooksIdWebhookRequest withExpand(String expand) {
+        this.expand = expand;
         return this;
     }
     
-    
-    public DeleteWebhooksIdWebhookQueryParams queryParams;
-    public DeleteWebhooksIdWebhookRequest withQueryParams(DeleteWebhooksIdWebhookQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_webhook")
+    public Long idWebhook;
+    public DeleteWebhooksIdWebhookRequest withIdWebhook(Long idWebhook) {
+        this.idWebhook = idWebhook;
         return this;
     }
     

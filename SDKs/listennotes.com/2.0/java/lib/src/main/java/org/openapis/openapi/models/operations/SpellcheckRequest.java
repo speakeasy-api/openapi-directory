@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SpellcheckRequest {
-    
-    public SpellcheckQueryParams queryParams;
-    public SpellcheckRequest withQueryParams(SpellcheckQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Get API Key on listennotes.com/api
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-ListenAPI-Key")
+    public String xListenAPIKey;
+    public SpellcheckRequest withXListenAPIKey(String xListenAPIKey) {
+        this.xListenAPIKey = xListenAPIKey;
         return this;
     }
     
-    
-    public SpellcheckHeaders headers;
-    public SpellcheckRequest withHeaders(SpellcheckHeaders headers) {
-        this.headers = headers;
+    /**
+     * Search term, e.g., person, place, topic...
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public SpellcheckRequest withQ(String q) {
+        this.q = q;
         return this;
     }
     

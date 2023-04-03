@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoCreateTagJsonRequest {
-    
-    public RepoCreateTagJsonPathParams pathParams;
-    public RepoCreateTagJsonRequest withPathParams(RepoCreateTagJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateTagOption createTagOption;
+    public RepoCreateTagJsonRequest withCreateTagOption(org.openapis.openapi.models.shared.CreateTagOption createTagOption) {
+        this.createTagOption = createTagOption;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateTagOption request;
-    public RepoCreateTagJsonRequest withRequest(org.openapis.openapi.models.shared.CreateTagOption request) {
-        this.request = request;
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoCreateTagJsonRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoCreateTagJsonRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

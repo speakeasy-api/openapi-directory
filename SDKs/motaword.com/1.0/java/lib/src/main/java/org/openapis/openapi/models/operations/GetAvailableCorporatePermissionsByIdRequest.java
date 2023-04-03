@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAvailableCorporatePermissionsByIdRequest {
-    
-    public GetAvailableCorporatePermissionsByIdPathParams pathParams;
-    public GetAvailableCorporatePermissionsByIdRequest withPathParams(GetAvailableCorporatePermissionsByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Corporate ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=corporateId")
+    public Long corporateId;
+    public GetAvailableCorporatePermissionsByIdRequest withCorporateId(Long corporateId) {
+        this.corporateId = corporateId;
         return this;
     }
     

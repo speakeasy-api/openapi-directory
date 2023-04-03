@@ -34,19 +34,20 @@ public class Platform {
      * Get a balance platform
      * Returns a balance platform.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetBalancePlatformsIdResponse getBalancePlatformsId(org.openapis.openapi.models.operations.GetBalancePlatformsIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetBalancePlatformsIdResponse getBalancePlatformsId(org.openapis.openapi.models.operations.GetBalancePlatformsIdRequest request, org.openapis.openapi.models.operations.GetBalancePlatformsIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBalancePlatformsIdPathParams.class, baseUrl, "/balancePlatforms/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBalancePlatformsIdRequest.class, baseUrl, "/balancePlatforms/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -84,25 +85,26 @@ public class Platform {
      * 
      * For example, to limit the page to 5 account holders and to skip the first 20, use `/balancePlatforms/{id}/accountHolders?limit=5&amp;offset=20`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetBalancePlatformsIdAccountHoldersResponse getBalancePlatformsIdAccountHolders(org.openapis.openapi.models.operations.GetBalancePlatformsIdAccountHoldersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetBalancePlatformsIdAccountHoldersResponse getBalancePlatformsIdAccountHolders(org.openapis.openapi.models.operations.GetBalancePlatformsIdAccountHoldersRequest request, org.openapis.openapi.models.operations.GetBalancePlatformsIdAccountHoldersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBalancePlatformsIdAccountHoldersPathParams.class, baseUrl, "/balancePlatforms/{id}/accountHolders", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBalancePlatformsIdAccountHoldersRequest.class, baseUrl, "/balancePlatforms/{id}/accountHolders", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBalancePlatformsIdAccountHoldersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBalancePlatformsIdAccountHoldersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

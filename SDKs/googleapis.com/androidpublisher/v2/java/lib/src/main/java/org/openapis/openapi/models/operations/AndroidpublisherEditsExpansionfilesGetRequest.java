@@ -4,27 +4,113 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AndroidpublisherEditsExpansionfilesGetRequest {
-    
-    public AndroidpublisherEditsExpansionfilesGetPathParams pathParams;
-    public AndroidpublisherEditsExpansionfilesGetRequest withPathParams(AndroidpublisherEditsExpansionfilesGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AndroidpublisherEditsExpansionfilesGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
         return this;
     }
     
-    
-    public AndroidpublisherEditsExpansionfilesGetQueryParams queryParams;
-    public AndroidpublisherEditsExpansionfilesGetRequest withQueryParams(AndroidpublisherEditsExpansionfilesGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The version code of the APK whose Expansion File configuration is being read or modified.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apkVersionCode")
+    public Long apkVersionCode;
+    public AndroidpublisherEditsExpansionfilesGetRequest withApkVersionCode(Long apkVersionCode) {
+        this.apkVersionCode = apkVersionCode;
         return this;
     }
     
+    /**
+     * Unique identifier for this edit.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=editId")
+    public String editId;
+    public AndroidpublisherEditsExpansionfilesGetRequest withEditId(String editId) {
+        this.editId = editId;
+        return this;
+    }
     
-    public AndroidpublisherEditsExpansionfilesGetSecurity security;
-    public AndroidpublisherEditsExpansionfilesGetRequest withSecurity(AndroidpublisherEditsExpansionfilesGetSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=expansionFileType")
+    public AndroidpublisherEditsExpansionfilesGetExpansionFileTypeEnum expansionFileType;
+    public AndroidpublisherEditsExpansionfilesGetRequest withExpansionFileType(AndroidpublisherEditsExpansionfilesGetExpansionFileTypeEnum expansionFileType) {
+        this.expansionFileType = expansionFileType;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AndroidpublisherEditsExpansionfilesGetRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AndroidpublisherEditsExpansionfilesGetRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AndroidpublisherEditsExpansionfilesGetRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=packageName")
+    public String packageName;
+    public AndroidpublisherEditsExpansionfilesGetRequest withPackageName(String packageName) {
+        this.packageName = packageName;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AndroidpublisherEditsExpansionfilesGetRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AndroidpublisherEditsExpansionfilesGetRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public AndroidpublisherEditsExpansionfilesGetRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

@@ -38,7 +38,7 @@ public class SecurityCenters {
      */
     public org.openapis.openapi.models.operations.GetNetworkSmDeviceSecurityCentersResponse getNetworkSmDeviceSecurityCenters(org.openapis.openapi.models.operations.GetNetworkSmDeviceSecurityCentersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSmDeviceSecurityCentersPathParams.class, baseUrl, "/networks/{networkId}/sm/devices/{deviceId}/securityCenters", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSmDeviceSecurityCentersRequest.class, baseUrl, "/networks/{networkId}/sm/devices/{deviceId}/securityCenters", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

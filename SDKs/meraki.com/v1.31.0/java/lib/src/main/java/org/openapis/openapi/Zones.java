@@ -40,13 +40,13 @@ public class Zones {
      */
     public org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsZoneHistoryResponse getDeviceCameraAnalyticsZoneHistory(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsZoneHistoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsZoneHistoryPathParams.class, baseUrl, "/devices/{serial}/camera/analytics/zones/{zoneId}/history", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsZoneHistoryRequest.class, baseUrl, "/devices/{serial}/camera/analytics/zones/{zoneId}/history", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsZoneHistoryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsZoneHistoryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -86,7 +86,7 @@ public class Zones {
      */
     public org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsZonesResponse getDeviceCameraAnalyticsZones(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsZonesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsZonesPathParams.class, baseUrl, "/devices/{serial}/camera/analytics/zones", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsZonesRequest.class, baseUrl, "/devices/{serial}/camera/analytics/zones", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetpersonshomeRequest {
-    
-    public SetpersonshomeQueryParams queryParams;
-    public SetpersonshomeRequest withQueryParams(SetpersonshomeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * ID of the Home you're interested in
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=home_id")
+    public String homeId;
+    public SetpersonshomeRequest withHomeId(String homeId) {
+        this.homeId = homeId;
         return this;
     }
     
-    
-    public SetpersonshomeSecurity security;
-    public SetpersonshomeRequest withSecurity(SetpersonshomeSecurity security) {
-        this.security = security;
+    /**
+     * List of persons IDs
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=person_ids")
+    public String personIds;
+    public SetpersonshomeRequest withPersonIds(String personIds) {
+        this.personIds = personIds;
         return this;
     }
     

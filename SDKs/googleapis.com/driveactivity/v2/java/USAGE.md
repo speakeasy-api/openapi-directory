@@ -7,15 +7,12 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.operations.DriveactivityActivityQuerySecurityOption1;
 import org.openapis.openapi.models.operations.DriveactivityActivityQuerySecurityOption2;
 import org.openapis.openapi.models.operations.DriveactivityActivityQuerySecurity;
-import org.openapis.openapi.models.operations.DriveactivityActivityQueryQueryParams;
 import org.openapis.openapi.models.operations.DriveactivityActivityQueryRequest;
 import org.openapis.openapi.models.operations.DriveactivityActivityQueryResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.QueryDriveActivityRequest;
 import org.openapis.openapi.models.shared.ConsolidationStrategy;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -24,51 +21,44 @@ public class Application {
                 .build();
 
             DriveactivityActivityQueryRequest req = new DriveactivityActivityQueryRequest() {{
-                security = new DriveactivityActivityQuerySecurity() {{
-                    option1 = new DriveactivityActivityQuerySecurityOption1() {{
-                        oauth2 = new SchemeOauth2() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                        oauth2c = new SchemeOauth2c() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                    }};
-                }};
-                queryParams = new DriveactivityActivityQueryQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "provident";
-                    alt = "proto";
-                    callback = "quibusdam";
-                    fields = "unde";
-                    key = "nulla";
-                    oauthToken = "corrupti";
-                    prettyPrint = false;
-                    quotaUser = "illum";
-                    uploadType = "vel";
-                    uploadProtocol = "error";
-                }};
-                request = new QueryDriveActivityRequest() {{
-                    ancestorName = "deserunt";
+                dollarXgafv = "2";
+                queryDriveActivityRequest = new QueryDriveActivityRequest() {{
+                    ancestorName = "provident";
                     consolidationStrategy = new ConsolidationStrategy() {{
                         legacy = new java.util.HashMap<String, Object>() {{
+                            put("quibusdam", "unde");
+                            put("nulla", "corrupti");
+                            put("illum", "vel");
+                        }};
+                        none = new java.util.HashMap<String, Object>() {{
+                            put("deserunt", "suscipit");
                             put("iure", "magnam");
                             put("debitis", "ipsa");
                         }};
-                        none = new java.util.HashMap<String, Object>() {{
-                            put("tempora", "suscipit");
-                            put("molestiae", "minus");
-                            put("placeat", "voluptatum");
-                            put("iusto", "excepturi");
-                        }};
                     }};
-                    filter = "nisi";
-                    itemName = "recusandae";
-                    pageSize = 836079;
-                    pageToken = "ab";
+                    filter = "delectus";
+                    itemName = "tempora";
+                    pageSize = 383441;
+                    pageToken = "molestiae";
                 }};
-            }};            
+                accessToken = "minus";
+                alt = "proto";
+                callback = "voluptatum";
+                fields = "iusto";
+                key = "excepturi";
+                oauthToken = "nisi";
+                prettyPrint = false;
+                quotaUser = "recusandae";
+                uploadType = "temporibus";
+                uploadProtocol = "ab";
+            }}            
 
-            DriveactivityActivityQueryResponse res = sdk.activity.driveactivityActivityQuery(req);
+            DriveactivityActivityQueryResponse res = sdk.activity.driveactivityActivityQuery(req, new DriveactivityActivityQuerySecurity() {{
+                option1 = new DriveactivityActivityQuerySecurityOption1() {{
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                }};
+            }});
 
             if (res.queryDriveActivityResponse.isPresent()) {
                 // handle response

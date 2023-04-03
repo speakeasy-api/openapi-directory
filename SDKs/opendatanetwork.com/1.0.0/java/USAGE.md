@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.CreateAMapQueryParams;
-import org.openapis.openapi.models.operations.CreateAMapHeaders;
 import org.openapis.openapi.models.operations.CreateAMapRequest;
 import org.openapis.openapi.models.operations.CreateAMapResponse;
 
@@ -16,16 +14,12 @@ public class Application {
                 .build();
 
             CreateAMapRequest req = new CreateAMapRequest() {{
-                queryParams = new CreateAMapQueryParams() {{
-                    appToken = "corrupti";
-                    constraint = "provident";
-                    entityId = "distinctio";
-                    variable = "quibusdam";
-                }};
-                headers = new CreateAMapHeaders() {{
-                    xAppToken = "unde";
-                }};
-            }};            
+                xAppToken = "corrupti";
+                appToken = "provident";
+                constraint = "distinctio";
+                entityId = "quibusdam";
+                variable = "unde";
+            }}            
 
             CreateAMapResponse res = sdk.createAMap(req);
 

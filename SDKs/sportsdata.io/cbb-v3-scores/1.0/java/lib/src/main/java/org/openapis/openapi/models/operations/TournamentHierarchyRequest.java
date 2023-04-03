@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TournamentHierarchyRequest {
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public TournamentHierarchyFormatEnum format;
+    public TournamentHierarchyRequest withFormat(TournamentHierarchyFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public TournamentHierarchyPathParams pathParams;
-    public TournamentHierarchyRequest withPathParams(TournamentHierarchyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Year of the season (with optional season type).&lt;br&gt;Examples: &lt;code&gt;2018&lt;/code&gt;, &lt;code&gt;2018POST&lt;/code&gt;, &lt;code&gt;2019&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=season")
+    public String season;
+    public TournamentHierarchyRequest withSeason(String season) {
+        this.season = season;
         return this;
     }
     

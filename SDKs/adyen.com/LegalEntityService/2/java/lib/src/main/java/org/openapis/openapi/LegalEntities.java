@@ -34,19 +34,20 @@ public class LegalEntities {
      * Get a legal entity
      * Returns a legal entity.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetLegalEntitiesIdResponse getLegalEntitiesId(org.openapis.openapi.models.operations.GetLegalEntitiesIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetLegalEntitiesIdResponse getLegalEntitiesId(org.openapis.openapi.models.operations.GetLegalEntitiesIdRequest request, org.openapis.openapi.models.operations.GetLegalEntitiesIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLegalEntitiesIdPathParams.class, baseUrl, "/legalEntities/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLegalEntitiesIdRequest.class, baseUrl, "/legalEntities/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,19 +83,20 @@ public class LegalEntities {
      * Get all business lines under a legal entity
      * Returns the business lines owned by a legal entity.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetLegalEntitiesIdBusinessLinesResponse getLegalEntitiesIdBusinessLines(org.openapis.openapi.models.operations.GetLegalEntitiesIdBusinessLinesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetLegalEntitiesIdBusinessLinesResponse getLegalEntitiesIdBusinessLines(org.openapis.openapi.models.operations.GetLegalEntitiesIdBusinessLinesRequest request, org.openapis.openapi.models.operations.GetLegalEntitiesIdBusinessLinesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLegalEntitiesIdBusinessLinesPathParams.class, baseUrl, "/legalEntities/{id}/businessLines", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLegalEntitiesIdBusinessLinesRequest.class, baseUrl, "/legalEntities/{id}/businessLines", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -132,21 +134,22 @@ public class LegalEntities {
      * 
      *  &gt;To change the legal entity type, include only the new `type` in your request. To update the `entityAssociations` array, you need to replace the entire array. For example, if the array has 3 entries and you want to remove 1 entry, you need to PATCH the resource with the remaining 2 entries.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchLegalEntitiesIdResponse patchLegalEntitiesId(org.openapis.openapi.models.operations.PatchLegalEntitiesIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchLegalEntitiesIdResponse patchLegalEntitiesId(org.openapis.openapi.models.operations.PatchLegalEntitiesIdRequest request, org.openapis.openapi.models.operations.PatchLegalEntitiesIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchLegalEntitiesIdPathParams.class, baseUrl, "/legalEntities/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchLegalEntitiesIdRequest.class, baseUrl, "/legalEntities/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "legalEntityInfoInput", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -186,10 +189,11 @@ public class LegalEntities {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostLegalEntitiesResponse postLegalEntities(org.openapis.openapi.models.operations.PostLegalEntitiesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostLegalEntitiesResponse postLegalEntities(org.openapis.openapi.models.shared.LegalEntityInfoRequiredTypeInput request, org.openapis.openapi.models.operations.PostLegalEntitiesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/legalEntities");
         
@@ -200,7 +204,7 @@ public class LegalEntities {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

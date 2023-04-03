@@ -4,20 +4,79 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETStopDBInstanceAutomatedBackupsReplicationRequest {
-    
-    public GETStopDBInstanceAutomatedBackupsReplicationQueryParams queryParams;
-    public GETStopDBInstanceAutomatedBackupsReplicationRequest withQueryParams(GETStopDBInstanceAutomatedBackupsReplicationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETStopDBInstanceAutomatedBackupsReplicationActionEnum action;
+    public GETStopDBInstanceAutomatedBackupsReplicationRequest withAction(GETStopDBInstanceAutomatedBackupsReplicationActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The Amazon Resource Name (ARN) of the source DB instance for which to stop replicating automate backups, for example, &lt;code&gt;arn:aws:rds:us-west-2:123456789012:db:mydatabase&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SourceDBInstanceArn")
+    public String sourceDBInstanceArn;
+    public GETStopDBInstanceAutomatedBackupsReplicationRequest withSourceDBInstanceArn(String sourceDBInstanceArn) {
+        this.sourceDBInstanceArn = sourceDBInstanceArn;
+        return this;
+    }
     
-    public GETStopDBInstanceAutomatedBackupsReplicationHeaders headers;
-    public GETStopDBInstanceAutomatedBackupsReplicationRequest withHeaders(GETStopDBInstanceAutomatedBackupsReplicationHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETStopDBInstanceAutomatedBackupsReplicationVersionEnum version;
+    public GETStopDBInstanceAutomatedBackupsReplicationRequest withVersion(GETStopDBInstanceAutomatedBackupsReplicationVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETStopDBInstanceAutomatedBackupsReplicationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETStopDBInstanceAutomatedBackupsReplicationRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETStopDBInstanceAutomatedBackupsReplicationRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETStopDBInstanceAutomatedBackupsReplicationRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETStopDBInstanceAutomatedBackupsReplicationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETStopDBInstanceAutomatedBackupsReplicationRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETStopDBInstanceAutomatedBackupsReplicationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

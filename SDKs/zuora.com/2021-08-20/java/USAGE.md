@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.DELETEAccountingCodePathParams;
-import org.openapis.openapi.models.operations.DELETEAccountingCodeHeaders;
 import org.openapis.openapi.models.operations.DELETEAccountingCodeRequest;
 import org.openapis.openapi.models.operations.DELETEAccountingCodeResponse;
 
@@ -16,14 +14,10 @@ public class Application {
                 .build();
 
             DELETEAccountingCodeRequest req = new DELETEAccountingCodeRequest() {{
-                pathParams = new DELETEAccountingCodePathParams() {{
-                    acId = "corrupti";
-                }};
-                headers = new DELETEAccountingCodeHeaders() {{
-                    zuoraEntityIds = "provident";
-                    zuoraTrackId = "distinctio";
-                }};
-            }};            
+                zuoraEntityIds = "corrupti";
+                zuoraTrackId = "provident";
+                acId = "distinctio";
+            }}            
 
             DELETEAccountingCodeResponse res = sdk.accountingCodes.deleteAccountingCode(req);
 

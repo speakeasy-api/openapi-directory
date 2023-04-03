@@ -36,10 +36,11 @@ public class Reviewing {
      * 
      * To cancel a payout, use the `/declineThirdParty` endpoint.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostConfirmThirdPartyResponse postConfirmThirdParty(org.openapis.openapi.models.operations.PostConfirmThirdPartyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostConfirmThirdPartyResponse postConfirmThirdParty(org.openapis.openapi.models.shared.ModifyRequest request, org.openapis.openapi.models.operations.PostConfirmThirdPartySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/confirmThirdParty");
         
@@ -50,7 +51,7 @@ public class Reviewing {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -88,10 +89,11 @@ public class Reviewing {
      * 
      * To confirm and send a payout, use the `/confirmThirdParty` endpoint.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostDeclineThirdPartyResponse postDeclineThirdParty(org.openapis.openapi.models.operations.PostDeclineThirdPartyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostDeclineThirdPartyResponse postDeclineThirdParty(org.openapis.openapi.models.shared.ModifyRequest request, org.openapis.openapi.models.operations.PostDeclineThirdPartySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/declineThirdParty");
         
@@ -102,7 +104,7 @@ public class Reviewing {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

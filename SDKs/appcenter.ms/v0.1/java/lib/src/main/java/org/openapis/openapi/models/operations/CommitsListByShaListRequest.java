@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CommitsListByShaListRequest {
-    
-    public CommitsListByShaListPathParams pathParams;
-    public CommitsListByShaListRequest withPathParams(CommitsListByShaListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public CommitsListByShaListRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public CommitsListByShaListQueryParams queryParams;
-    public CommitsListByShaListRequest withQueryParams(CommitsListByShaListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A collection of commit SHAs comma-delimited
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=hashes")
+    public String[] hashes;
+    public CommitsListByShaListRequest withHashes(String[] hashes) {
+        this.hashes = hashes;
         return this;
     }
     
-    
-    public CommitsListByShaListSecurity security;
-    public CommitsListByShaListRequest withSecurity(CommitsListByShaListSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public CommitsListByShaListRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

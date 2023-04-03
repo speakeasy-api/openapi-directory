@@ -34,27 +34,28 @@ public class RegionNetworkFirewallPolicies {
     /**
      * Inserts an association for the specified network firewall policy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesAddAssociationResponse computeRegionNetworkFirewallPoliciesAddAssociation(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesAddAssociationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesAddAssociationResponse computeRegionNetworkFirewallPoliciesAddAssociation(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesAddAssociationRequest request, org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesAddAssociationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesAddAssociationPathParams.class, baseUrl, "/projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}/addAssociation", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesAddAssociationRequest.class, baseUrl, "/projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}/addAssociation", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "firewallPolicyAssociation", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesAddAssociationQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesAddAssociationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,27 +82,28 @@ public class RegionNetworkFirewallPolicies {
     /**
      * Inserts a rule into a network firewall policy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesAddRuleResponse computeRegionNetworkFirewallPoliciesAddRule(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesAddRuleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesAddRuleResponse computeRegionNetworkFirewallPoliciesAddRule(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesAddRuleRequest request, org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesAddRuleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesAddRulePathParams.class, baseUrl, "/projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}/addRule", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesAddRuleRequest.class, baseUrl, "/projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}/addRule", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "firewallPolicyRule", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesAddRuleQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesAddRuleRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -128,25 +130,26 @@ public class RegionNetworkFirewallPolicies {
     /**
      * Copies rules to the specified network firewall policy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesCloneRulesResponse computeRegionNetworkFirewallPoliciesCloneRules(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesCloneRulesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesCloneRulesResponse computeRegionNetworkFirewallPoliciesCloneRules(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesCloneRulesRequest request, org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesCloneRulesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesCloneRulesPathParams.class, baseUrl, "/projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}/cloneRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesCloneRulesRequest.class, baseUrl, "/projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}/cloneRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesCloneRulesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesCloneRulesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -173,25 +176,26 @@ public class RegionNetworkFirewallPolicies {
     /**
      * Deletes the specified network firewall policy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesDeleteResponse computeRegionNetworkFirewallPoliciesDelete(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesDeleteResponse computeRegionNetworkFirewallPoliciesDelete(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesDeleteRequest request, org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesDeletePathParams.class, baseUrl, "/projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesDeleteRequest.class, baseUrl, "/projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -218,25 +222,26 @@ public class RegionNetworkFirewallPolicies {
     /**
      * Returns the specified network firewall policy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetResponse computeRegionNetworkFirewallPoliciesGet(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetResponse computeRegionNetworkFirewallPoliciesGet(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetRequest request, org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetPathParams.class, baseUrl, "/projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetRequest.class, baseUrl, "/projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -263,25 +268,26 @@ public class RegionNetworkFirewallPolicies {
     /**
      * Gets an association with the specified name.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetAssociationResponse computeRegionNetworkFirewallPoliciesGetAssociation(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetAssociationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetAssociationResponse computeRegionNetworkFirewallPoliciesGetAssociation(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetAssociationRequest request, org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetAssociationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetAssociationPathParams.class, baseUrl, "/projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}/getAssociation", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetAssociationRequest.class, baseUrl, "/projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}/getAssociation", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetAssociationQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetAssociationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -308,25 +314,26 @@ public class RegionNetworkFirewallPolicies {
     /**
      * Returns the effective firewalls on a given network.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetEffectiveFirewallsResponse computeRegionNetworkFirewallPoliciesGetEffectiveFirewalls(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetEffectiveFirewallsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetEffectiveFirewallsResponse computeRegionNetworkFirewallPoliciesGetEffectiveFirewalls(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetEffectiveFirewallsRequest request, org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetEffectiveFirewallsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetEffectiveFirewallsPathParams.class, baseUrl, "/projects/{project}/regions/{region}/firewallPolicies/getEffectiveFirewalls", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetEffectiveFirewallsRequest.class, baseUrl, "/projects/{project}/regions/{region}/firewallPolicies/getEffectiveFirewalls", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetEffectiveFirewallsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetEffectiveFirewallsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -353,25 +360,26 @@ public class RegionNetworkFirewallPolicies {
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetIamPolicyResponse computeRegionNetworkFirewallPoliciesGetIamPolicy(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetIamPolicyResponse computeRegionNetworkFirewallPoliciesGetIamPolicy(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetIamPolicyRequest request, org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetIamPolicyPathParams.class, baseUrl, "/projects/{project}/regions/{region}/firewallPolicies/{resource}/getIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetIamPolicyRequest.class, baseUrl, "/projects/{project}/regions/{region}/firewallPolicies/{resource}/getIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -398,25 +406,26 @@ public class RegionNetworkFirewallPolicies {
     /**
      * Gets a rule of the specified priority.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetRuleResponse computeRegionNetworkFirewallPoliciesGetRule(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetRuleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetRuleResponse computeRegionNetworkFirewallPoliciesGetRule(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetRuleRequest request, org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetRuleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetRulePathParams.class, baseUrl, "/projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}/getRule", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetRuleRequest.class, baseUrl, "/projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}/getRule", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetRuleQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesGetRuleRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -443,27 +452,28 @@ public class RegionNetworkFirewallPolicies {
     /**
      * Creates a new network firewall policy in the specified project and region.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesInsertResponse computeRegionNetworkFirewallPoliciesInsert(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesInsertResponse computeRegionNetworkFirewallPoliciesInsert(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesInsertRequest request, org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesInsertPathParams.class, baseUrl, "/projects/{project}/regions/{region}/firewallPolicies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesInsertRequest.class, baseUrl, "/projects/{project}/regions/{region}/firewallPolicies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "firewallPolicy", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -490,25 +500,26 @@ public class RegionNetworkFirewallPolicies {
     /**
      * Lists all the network firewall policies that have been configured for the specified project in the given region.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesListResponse computeRegionNetworkFirewallPoliciesList(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesListResponse computeRegionNetworkFirewallPoliciesList(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesListRequest request, org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesListPathParams.class, baseUrl, "/projects/{project}/regions/{region}/firewallPolicies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesListRequest.class, baseUrl, "/projects/{project}/regions/{region}/firewallPolicies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -535,27 +546,28 @@ public class RegionNetworkFirewallPolicies {
     /**
      * Patches the specified network firewall policy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesPatchResponse computeRegionNetworkFirewallPoliciesPatch(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesPatchResponse computeRegionNetworkFirewallPoliciesPatch(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesPatchRequest request, org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesPatchPathParams.class, baseUrl, "/projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesPatchRequest.class, baseUrl, "/projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "firewallPolicy1", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -582,27 +594,28 @@ public class RegionNetworkFirewallPolicies {
     /**
      * Patches a rule of the specified priority.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesPatchRuleResponse computeRegionNetworkFirewallPoliciesPatchRule(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesPatchRuleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesPatchRuleResponse computeRegionNetworkFirewallPoliciesPatchRule(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesPatchRuleRequest request, org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesPatchRuleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesPatchRulePathParams.class, baseUrl, "/projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}/patchRule", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesPatchRuleRequest.class, baseUrl, "/projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}/patchRule", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "firewallPolicyRule", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesPatchRuleQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesPatchRuleRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -629,25 +642,26 @@ public class RegionNetworkFirewallPolicies {
     /**
      * Removes an association for the specified network firewall policy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesRemoveAssociationResponse computeRegionNetworkFirewallPoliciesRemoveAssociation(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesRemoveAssociationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesRemoveAssociationResponse computeRegionNetworkFirewallPoliciesRemoveAssociation(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesRemoveAssociationRequest request, org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesRemoveAssociationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesRemoveAssociationPathParams.class, baseUrl, "/projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}/removeAssociation", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesRemoveAssociationRequest.class, baseUrl, "/projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}/removeAssociation", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesRemoveAssociationQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesRemoveAssociationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -674,25 +688,26 @@ public class RegionNetworkFirewallPolicies {
     /**
      * Deletes a rule of the specified priority.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesRemoveRuleResponse computeRegionNetworkFirewallPoliciesRemoveRule(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesRemoveRuleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesRemoveRuleResponse computeRegionNetworkFirewallPoliciesRemoveRule(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesRemoveRuleRequest request, org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesRemoveRuleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesRemoveRulePathParams.class, baseUrl, "/projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}/removeRule", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesRemoveRuleRequest.class, baseUrl, "/projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}/removeRule", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesRemoveRuleQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesRemoveRuleRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -719,27 +734,28 @@ public class RegionNetworkFirewallPolicies {
     /**
      * Sets the access control policy on the specified resource. Replaces any existing policy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesSetIamPolicyResponse computeRegionNetworkFirewallPoliciesSetIamPolicy(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesSetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesSetIamPolicyResponse computeRegionNetworkFirewallPoliciesSetIamPolicy(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesSetIamPolicyRequest request, org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesSetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesSetIamPolicyPathParams.class, baseUrl, "/projects/{project}/regions/{region}/firewallPolicies/{resource}/setIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesSetIamPolicyRequest.class, baseUrl, "/projects/{project}/regions/{region}/firewallPolicies/{resource}/setIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "regionSetPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesSetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesSetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -766,27 +782,28 @@ public class RegionNetworkFirewallPolicies {
     /**
      * Returns permissions that a caller has on the specified resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesTestIamPermissionsResponse computeRegionNetworkFirewallPoliciesTestIamPermissions(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesTestIamPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesTestIamPermissionsResponse computeRegionNetworkFirewallPoliciesTestIamPermissions(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesTestIamPermissionsRequest request, org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesTestIamPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesTestIamPermissionsPathParams.class, baseUrl, "/projects/{project}/regions/{region}/firewallPolicies/{resource}/testIamPermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesTestIamPermissionsRequest.class, baseUrl, "/projects/{project}/regions/{region}/firewallPolicies/{resource}/testIamPermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesTestIamPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNetworkFirewallPoliciesTestIamPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

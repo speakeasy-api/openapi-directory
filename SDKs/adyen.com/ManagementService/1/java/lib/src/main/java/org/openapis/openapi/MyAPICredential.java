@@ -37,19 +37,20 @@ public class MyAPICredential {
      * 
      * You can make this request with any of the Management API roles.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteMeAllowedOriginsOriginIdResponse deleteMeAllowedOriginsOriginId(org.openapis.openapi.models.operations.DeleteMeAllowedOriginsOriginIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteMeAllowedOriginsOriginIdResponse deleteMeAllowedOriginsOriginId(org.openapis.openapi.models.operations.DeleteMeAllowedOriginsOriginIdRequest request, org.openapis.openapi.models.operations.DeleteMeAllowedOriginsOriginIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteMeAllowedOriginsOriginIdPathParams.class, baseUrl, "/me/allowedOrigins/{originId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteMeAllowedOriginsOriginIdRequest.class, baseUrl, "/me/allowedOrigins/{originId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -80,11 +81,10 @@ public class MyAPICredential {
      * Returns your [API credential](https://docs.adyen.com/development-resources/api-credentials) details based on the API Key you used in the request.
      * 
      * You can make this request with any of the Management API roles.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMeResponse getMe(org.openapis.openapi.models.operations.GetMeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMeResponse getMe() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me");
         
@@ -93,8 +93,7 @@ public class MyAPICredential {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -130,11 +129,10 @@ public class MyAPICredential {
      * Returns the list of [allowed origins](https://docs.adyen.com/development-resources/client-side-authentication#allowed-origins) of your [API credential](https://docs.adyen.com/development-resources/api-credentials) based on the API key you used in the request.
      * 
      * You can make this request with any of the Management API roles.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMeAllowedOriginsResponse getMeAllowedOrigins(org.openapis.openapi.models.operations.GetMeAllowedOriginsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMeAllowedOriginsResponse getMeAllowedOrigins() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me/allowedOrigins");
         
@@ -143,8 +141,7 @@ public class MyAPICredential {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -182,19 +179,20 @@ public class MyAPICredential {
      * 
      * You can make this request with any of the Management API roles.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMeAllowedOriginsOriginIdResponse getMeAllowedOriginsOriginId(org.openapis.openapi.models.operations.GetMeAllowedOriginsOriginIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMeAllowedOriginsOriginIdResponse getMeAllowedOriginsOriginId(org.openapis.openapi.models.operations.GetMeAllowedOriginsOriginIdRequest request, org.openapis.openapi.models.operations.GetMeAllowedOriginsOriginIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMeAllowedOriginsOriginIdPathParams.class, baseUrl, "/me/allowedOrigins/{originId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMeAllowedOriginsOriginIdRequest.class, baseUrl, "/me/allowedOrigins/{originId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -233,10 +231,11 @@ public class MyAPICredential {
      * 
      * You can make this request with any of the Management API roles.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostMeAllowedOriginsResponse postMeAllowedOrigins(org.openapis.openapi.models.operations.PostMeAllowedOriginsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostMeAllowedOriginsResponse postMeAllowedOrigins(org.openapis.openapi.models.shared.CreateAllowedOriginRequest request, org.openapis.openapi.models.operations.PostMeAllowedOriginsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me/allowedOrigins");
         
@@ -247,7 +246,7 @@ public class MyAPICredential {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

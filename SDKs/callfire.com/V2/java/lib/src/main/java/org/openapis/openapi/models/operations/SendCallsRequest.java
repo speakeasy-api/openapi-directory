@@ -7,13 +7,6 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SendCallsRequest {
-    
-    public SendCallsQueryParams queryParams;
-    public SendCallsRequest withQueryParams(SendCallsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * An array of CallRecipient objects. 
      * Limitations:
@@ -21,16 +14,89 @@ public class SendCallsRequest {
      * 
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CallRecipient[] request;
-    public SendCallsRequest withRequest(org.openapis.openapi.models.shared.CallRecipient[] request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CallRecipient[] requestBody;
+    public SendCallsRequest withRequestBody(org.openapis.openapi.models.shared.CallRecipient[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Specifies a campaignId to send calls quickly on a previously created campaign
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=campaignId")
+    public Long campaignId;
+    public SendCallsRequest withCampaignId(Long campaignId) {
+        this.campaignId = campaignId;
+        return this;
+    }
     
-    public SendCallsSecurity security;
-    public SendCallsRequest withSecurity(SendCallsSecurity security) {
-        this.security = security;
+    /**
+     * Text to be turned into a sound, this text will be played when the phone is answered. Parameter can be overridden for any particular CallRecipient
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=defaultLiveMessage")
+    public String defaultLiveMessage;
+    public SendCallsRequest withDefaultLiveMessage(String defaultLiveMessage) {
+        this.defaultLiveMessage = defaultLiveMessage;
+        return this;
+    }
+    
+    /**
+     * Id of sound file to play if phone is answered. Parameter can be overridden for any particular CallRecipient
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=defaultLiveMessageSoundId")
+    public Long defaultLiveMessageSoundId;
+    public SendCallsRequest withDefaultLiveMessageSoundId(Long defaultLiveMessageSoundId) {
+        this.defaultLiveMessageSoundId = defaultLiveMessageSoundId;
+        return this;
+    }
+    
+    /**
+     * Text to be turned into a sound, this text will be played when answering machine is detected. Parameter can be overridden for any particular CallRecipient
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=defaultMachineMessage")
+    public String defaultMachineMessage;
+    public SendCallsRequest withDefaultMachineMessage(String defaultMachineMessage) {
+        this.defaultMachineMessage = defaultMachineMessage;
+        return this;
+    }
+    
+    /**
+     * An id of a sound file to play if answering machine is detected. Parameter can be overridden for any particular CallRecipient
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=defaultMachineMessageSoundId")
+    public Long defaultMachineMessageSoundId;
+    public SendCallsRequest withDefaultMachineMessageSoundId(Long defaultMachineMessageSoundId) {
+        this.defaultMachineMessageSoundId = defaultMachineMessageSoundId;
+        return this;
+    }
+    
+    /**
+     * The voice set by default for all text-to-speech messages defined in CallRecipient objects or as default *Message properties
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=defaultVoice")
+    public SendCallsDefaultVoiceEnum defaultVoice;
+    public SendCallsRequest withDefaultVoice(SendCallsDefaultVoiceEnum defaultVoice) {
+        this.defaultVoice = defaultVoice;
+        return this;
+    }
+    
+    /**
+     * Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public SendCallsRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Turns on strict validation for recipients. System will reply with BAD_REQUEST(400) if strictValidation = true and one of numbers didn't pass validation
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=strictValidation")
+    public Boolean strictValidation;
+    public SendCallsRequest withStrictValidation(Boolean strictValidation) {
+        this.strictValidation = strictValidation;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDeviceEnergyUsageRequest {
-    
-    public GetDeviceEnergyUsagePathParams pathParams;
-    public GetDeviceEnergyUsageRequest withPathParams(GetDeviceEnergyUsagePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Subdivision of the period for which you wish to retrieve energy usage data.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=basis")
+    public GetDeviceEnergyUsageBasisEnum basis;
+    public GetDeviceEnergyUsageRequest withBasis(GetDeviceEnergyUsageBasisEnum basis) {
+        this.basis = basis;
         return this;
     }
     
+    /**
+     * The ID of the device.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deviceId")
+    public Integer deviceId;
+    public GetDeviceEnergyUsageRequest withDeviceId(Integer deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
     
-    public GetDeviceEnergyUsageQueryParams queryParams;
-    public GetDeviceEnergyUsageRequest withQueryParams(GetDeviceEnergyUsageQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The period for which you wish to retrieve energy usage data.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rollPeriod")
+    public GetDeviceEnergyUsageRollPeriodEnum rollPeriod;
+    public GetDeviceEnergyUsageRequest withRollPeriod(GetDeviceEnergyUsageRollPeriodEnum rollPeriod) {
+        this.rollPeriod = rollPeriod;
         return this;
     }
     

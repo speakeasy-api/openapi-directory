@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteJsappsCodeJsonRequest {
-    
-    public DeleteJsappsCodeJsonPathParams pathParams;
-    public DeleteJsappsCodeJsonRequest withPathParams(DeleteJsappsCodeJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public DeleteJsappsCodeJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
         return this;
     }
     
+    /**
+     * Code of the App
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=code")
+    public String code;
+    public DeleteJsappsCodeJsonRequest withCode(String code) {
+        this.code = code;
+        return this;
+    }
     
-    public DeleteJsappsCodeJsonQueryParams queryParams;
-    public DeleteJsappsCodeJsonRequest withQueryParams(DeleteJsappsCodeJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public DeleteJsappsCodeJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

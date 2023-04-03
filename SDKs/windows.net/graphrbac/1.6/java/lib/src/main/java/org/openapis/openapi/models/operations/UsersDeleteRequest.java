@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UsersDeleteRequest {
-    
-    public UsersDeletePathParams pathParams;
-    public UsersDeleteRequest withPathParams(UsersDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Client API version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public UsersDeleteRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
+    /**
+     * The tenant ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tenantID")
+    public String tenantID;
+    public UsersDeleteRequest withTenantID(String tenantID) {
+        this.tenantID = tenantID;
+        return this;
+    }
     
-    public UsersDeleteQueryParams queryParams;
-    public UsersDeleteRequest withQueryParams(UsersDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The object ID or principal name of the user to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=upnOrObjectId")
+    public String upnOrObjectId;
+    public UsersDeleteRequest withUpnOrObjectId(String upnOrObjectId) {
+        this.upnOrObjectId = upnOrObjectId;
         return this;
     }
     

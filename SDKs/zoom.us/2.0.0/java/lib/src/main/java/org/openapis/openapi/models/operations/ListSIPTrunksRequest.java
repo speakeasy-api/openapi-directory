@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSIPTrunksRequest {
-    
-    public ListSIPTrunksPathParams pathParams;
-    public ListSIPTrunksRequest withPathParams(ListSIPTrunksPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique Identifier of the Account. To retrieve SIP trunks assigned to a sub account, provide the account ID of the sub account in the as the value of this field. To retrieve SIP trunks of a master account, provide `me` as the value of this field.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public ListSIPTrunksRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     

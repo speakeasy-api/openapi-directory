@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountInstitutionCurationsRequest {
-    
-    public AccountInstitutionCurationsQueryParams queryParams;
-    public AccountInstitutionCurationsRequest withQueryParams(AccountInstitutionCurationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Retrieve the reviews for this article
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=article_id")
+    public Long articleId;
+    public AccountInstitutionCurationsRequest withArticleId(Long articleId) {
+        this.articleId = articleId;
         return this;
     }
     
+    /**
+     * Filter by the group ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group_id")
+    public Long groupId;
+    public AccountInstitutionCurationsRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
+        return this;
+    }
     
-    public AccountInstitutionCurationsSecurity security;
-    public AccountInstitutionCurationsRequest withSecurity(AccountInstitutionCurationsSecurity security) {
-        this.security = security;
+    /**
+     * Number of results included on a page. Used for pagination with query
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public AccountInstitutionCurationsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Where to start the listing(the offset of the first result). Used for pagination with limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public AccountInstitutionCurationsRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Filter by the status of the review
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public AccountInstitutionCurationsStatusEnum status;
+    public AccountInstitutionCurationsRequest withStatus(AccountInstitutionCurationsStatusEnum status) {
+        this.status = status;
         return this;
     }
     

@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostApiV1DonationsCreateRequest {
-    
-    public PostApiV1DonationsCreateQueryParams queryParams;
-    public PostApiV1DonationsCreateRequest withQueryParams(PostApiV1DonationsCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The amount of the donation in cents.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=amount")
+    public String amount;
+    public PostApiV1DonationsCreateRequest withAmount(String amount) {
+        this.amount = amount;
         return this;
     }
     
+    /**
+     * Source of the donation funds. If you are collecting payment from your customer for the donation, use `customer`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=funding_source")
+    public PostApiV1DonationsCreateFundingSourceEnum fundingSource;
+    public PostApiV1DonationsCreateRequest withFundingSource(PostApiV1DonationsCreateFundingSourceEnum fundingSource) {
+        this.fundingSource = fundingSource;
+        return this;
+    }
     
-    public PostApiV1DonationsCreateSecurity security;
-    public PostApiV1DonationsCreateRequest withSecurity(PostApiV1DonationsCreateSecurity security) {
-        this.security = security;
+    /**
+     * The id of a nonprofit from the CHANGE network.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nonprofit_id")
+    public String nonprofitId;
+    public PostApiV1DonationsCreateRequest withNonprofitId(String nonprofitId) {
+        this.nonprofitId = nonprofitId;
+        return this;
+    }
+    
+    /**
+     * The customer's zip code. Provide this to unlock geographic insights.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=zip_code")
+    public String zipCode;
+    public PostApiV1DonationsCreateRequest withZipCode(String zipCode) {
+        this.zipCode = zipCode;
         return this;
     }
     

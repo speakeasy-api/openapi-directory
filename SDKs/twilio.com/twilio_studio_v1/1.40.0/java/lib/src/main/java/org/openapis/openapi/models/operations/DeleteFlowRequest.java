@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteFlowRequest {
-    
-    public DeleteFlowPathParams pathParams;
-    public DeleteFlowRequest withPathParams(DeleteFlowPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteFlowSecurity security;
-    public DeleteFlowRequest withSecurity(DeleteFlowSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteFlowRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Flow resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteFlowRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

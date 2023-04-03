@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1AccountsIdFollowersRequest {
-    
-    public GetApiV1AccountsIdFollowersPathParams pathParams;
-    public GetApiV1AccountsIdFollowersRequest withPathParams(GetApiV1AccountsIdFollowersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the account in the database
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetApiV1AccountsIdFollowersRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetApiV1AccountsIdFollowersQueryParams queryParams;
-    public GetApiV1AccountsIdFollowersRequest withQueryParams(GetApiV1AccountsIdFollowersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Maximum number of results to return. Defaults to 40.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetApiV1AccountsIdFollowersRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * Internal parameter. Use HTTP `Link` header for pagination.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_id")
+    public String maxId;
+    public GetApiV1AccountsIdFollowersRequest withMaxId(String maxId) {
+        this.maxId = maxId;
+        return this;
+    }
     
-    public GetApiV1AccountsIdFollowersSecurity security;
-    public GetApiV1AccountsIdFollowersRequest withSecurity(GetApiV1AccountsIdFollowersSecurity security) {
-        this.security = security;
+    /**
+     * Internal parameter. Use HTTP `Link` header for pagination.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since_id")
+    public String sinceId;
+    public GetApiV1AccountsIdFollowersRequest withSinceId(String sinceId) {
+        this.sinceId = sinceId;
         return this;
     }
     

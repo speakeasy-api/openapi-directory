@@ -4,27 +4,126 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCallLogsRequest {
-    
-    public GetCallLogsPathParams pathParams;
-    public GetCallLogsRequest withPathParams(GetCallLogsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The Vonage Business Cloud account ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account_id")
+    public String accountId;
+    public GetCallLogsRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
-    
-    public GetCallLogsQueryParams queryParams;
-    public GetCallLogsRequest withQueryParams(GetCallLogsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter by destination user
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destination_user")
+    public String destinationUser;
+    public GetCallLogsRequest withDestinationUser(String destinationUser) {
+        this.destinationUser = destinationUser;
         return this;
     }
     
+    /**
+     * Filter by call direction.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public GetCallLogsDirectionEnum direction;
+    public GetCallLogsRequest withDirection(GetCallLogsDirectionEnum direction) {
+        this.direction = direction;
+        return this;
+    }
     
-    public GetCallLogsSecurity security;
-    public GetCallLogsRequest withSecurity(GetCallLogsSecurity security) {
-        this.security = security;
+    /**
+     * Filter records by end date (greater equal or equal to)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end:gte")
+    public String endGte;
+    public GetCallLogsRequest withEndGte(String endGte) {
+        this.endGte = endGte;
+        return this;
+    }
+    
+    /**
+     * Filter records by end date (less equal or equal to)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end:lte")
+    public String endLte;
+    public GetCallLogsRequest withEndLte(String endLte) {
+        this.endLte = endLte;
+        return this;
+    }
+    
+    /**
+     * Filter by source number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
+    public String from;
+    public GetCallLogsRequest withFrom(String from) {
+        this.from = from;
+        return this;
+    }
+    
+    /**
+     * Current page number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetCallLogsRequest withPage(Double page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Number of records per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Double pageSize;
+    public GetCallLogsRequest withPageSize(Double pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * Filter by source user
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source_user")
+    public String sourceUser;
+    public GetCallLogsRequest withSourceUser(String sourceUser) {
+        this.sourceUser = sourceUser;
+        return this;
+    }
+    
+    /**
+     * Filter records by start date (greater equal or equal to)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start:gte")
+    public String startGte;
+    public GetCallLogsRequest withStartGte(String startGte) {
+        this.startGte = startGte;
+        return this;
+    }
+    
+    /**
+     * Filter records by start date (less equal or equal to)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start:lte")
+    public String startLte;
+    public GetCallLogsRequest withStartLte(String startLte) {
+        this.startLte = startLte;
+        return this;
+    }
+    
+    /**
+     * Filter by called number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
+    public String to;
+    public GetCallLogsRequest withTo(String to) {
+        this.to = to;
         return this;
     }
     

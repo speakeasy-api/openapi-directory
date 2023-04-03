@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsDeleteActionsCacheByKeyRequest {
-    
-    public ActionsDeleteActionsCacheByKeyPathParams pathParams;
-    public ActionsDeleteActionsCacheByKeyRequest withPathParams(ActionsDeleteActionsCacheByKeyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A key for identifying the cache.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public ActionsDeleteActionsCacheByKeyRequest withKey(String key) {
+        this.key = key;
         return this;
     }
     
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ActionsDeleteActionsCacheByKeyRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public ActionsDeleteActionsCacheByKeyQueryParams queryParams;
-    public ActionsDeleteActionsCacheByKeyRequest withQueryParams(ActionsDeleteActionsCacheByKeyQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/&lt;branch name&gt;` or simply `&lt;branch name&gt;`. To reference a pull request use `refs/pull/&lt;number&gt;/merge`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ref")
+    public String ref;
+    public ActionsDeleteActionsCacheByKeyRequest withRef(String ref) {
+        this.ref = ref;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ActionsDeleteActionsCacheByKeyRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

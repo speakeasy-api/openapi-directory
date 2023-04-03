@@ -30,7 +30,7 @@ public class TokenBurnController {
 
     public org.openapis.openapi.models.operations.GetBurningTransactionResponse getBurningTransaction(org.openapis.openapi.models.operations.GetBurningTransactionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBurningTransactionPathParams.class, baseUrl, "/mosaik/tokenburn/get/{uuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBurningTransactionRequest.class, baseUrl, "/mosaik/tokenburn/get/{uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -146,7 +146,7 @@ public class TokenBurnController {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PrepareTransactionResponse prepareTransaction(org.openapis.openapi.models.operations.PrepareTransactionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrepareTransactionResponse prepareTransaction(java.util.Map<String, java.util.Map<String, Object>> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/mosaik/tokenburn/prepare");
         

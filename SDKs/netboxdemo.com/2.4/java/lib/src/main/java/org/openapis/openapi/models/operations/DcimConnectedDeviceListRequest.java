@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimConnectedDeviceListRequest {
+    /**
+     * The name of the peer device
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=peer_device")
+    public String peerDevice;
+    public DcimConnectedDeviceListRequest withPeerDevice(String peerDevice) {
+        this.peerDevice = peerDevice;
+        return this;
+    }
     
-    public DcimConnectedDeviceListQueryParams queryParams;
-    public DcimConnectedDeviceListRequest withQueryParams(DcimConnectedDeviceListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The name of the peer interface
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=peer_interface")
+    public String peerInterface;
+    public DcimConnectedDeviceListRequest withPeerInterface(String peerInterface) {
+        this.peerInterface = peerInterface;
         return this;
     }
     

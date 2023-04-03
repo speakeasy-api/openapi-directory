@@ -4,20 +4,102 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAuditLogEventsRequest {
-    
-    public GetAuditLogEventsPathParams pathParams;
-    public GetAuditLogEventsRequest withPathParams(GetAuditLogEventsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filter to events triggered by the actor with this ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=actor_gid")
+    public String actorGid;
+    public GetAuditLogEventsRequest withActorGid(String actorGid) {
+        this.actorGid = actorGid;
         return this;
     }
     
+    /**
+     * Filter to events with an actor of this type.
+     * This only needs to be included if querying for actor types without an ID. If `actor_gid` is included, this should be excluded.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=actor_type")
+    public org.openapis.openapi.models.shared.AuditLogActorTypeEnum actorType;
+    public GetAuditLogEventsRequest withActorType(org.openapis.openapi.models.shared.AuditLogActorTypeEnum actorType) {
+        this.actorType = actorType;
+        return this;
+    }
     
-    public GetAuditLogEventsQueryParams queryParams;
-    public GetAuditLogEventsRequest withQueryParams(GetAuditLogEventsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter to events created before this time (exclusive).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_at")
+    public OffsetDateTime endAt;
+    public GetAuditLogEventsRequest withEndAt(OffsetDateTime endAt) {
+        this.endAt = endAt;
+        return this;
+    }
+    
+    /**
+     * Filter to events of this type.
+     * Refer to the [Supported AuditLogEvents](/docs/supported-auditlogevents) for a full list of values.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=event_type")
+    public String eventType;
+    public GetAuditLogEventsRequest withEventType(String eventType) {
+        this.eventType = eventType;
+        return this;
+    }
+    
+    /**
+     * Results per page.
+     * The number of objects to return per page. The value must be between 1 and 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetAuditLogEventsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Offset token.
+     * An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.
+     * 'Note: You can only pass in an offset that was returned to you via a previously paginated request.'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public String offset;
+    public GetAuditLogEventsRequest withOffset(String offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Filter to events with this resource ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resource_gid")
+    public String resourceGid;
+    public GetAuditLogEventsRequest withResourceGid(String resourceGid) {
+        this.resourceGid = resourceGid;
+        return this;
+    }
+    
+    /**
+     * Filter to events created after this time (inclusive).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_at")
+    public OffsetDateTime startAt;
+    public GetAuditLogEventsRequest withStartAt(OffsetDateTime startAt) {
+        this.startAt = startAt;
+        return this;
+    }
+    
+    /**
+     * Globally unique identifier for the workspace or organization.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_gid")
+    public String workspaceGid;
+    public GetAuditLogEventsRequest withWorkspaceGid(String workspaceGid) {
+        this.workspaceGid = workspaceGid;
         return this;
     }
     

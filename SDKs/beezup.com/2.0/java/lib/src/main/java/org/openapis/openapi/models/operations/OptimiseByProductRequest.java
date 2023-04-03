@@ -7,20 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OptimiseByProductRequest {
-    
-    public OptimiseByProductPathParams pathParams;
-    public OptimiseByProductRequest withPathParams(OptimiseByProductPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The channel identifier list concerned by this optimisation
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public String[] request;
-    public OptimiseByProductRequest withRequest(String[] request) {
-        this.request = request;
+    public String[] requestBody;
+    public OptimiseByProductRequest withRequestBody(String[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=actionName")
+    public org.openapis.openapi.models.shared.OptimisationActionNameGeneralParametersEnum actionName;
+    public OptimiseByProductRequest withActionName(org.openapis.openapi.models.shared.OptimisationActionNameGeneralParametersEnum actionName) {
+        this.actionName = actionName;
+        return this;
+    }
+    
+    /**
+     * The product identifier concerned by this optimisation
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
+    public String productId;
+    public OptimiseByProductRequest withProductId(String productId) {
+        this.productId = productId;
+        return this;
+    }
+    
+    /**
+     * Your store identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public OptimiseByProductRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

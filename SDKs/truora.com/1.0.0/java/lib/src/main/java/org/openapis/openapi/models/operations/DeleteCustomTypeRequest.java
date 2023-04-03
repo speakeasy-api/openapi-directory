@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCustomTypeRequest {
-    
-    public DeleteCustomTypeQueryParams queryParams;
-    public DeleteCustomTypeRequest withQueryParams(DeleteCustomTypeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Country where the custom type is valid
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public DeleteCustomTypeCountryEnum country;
+    public DeleteCustomTypeRequest withCountry(DeleteCustomTypeCountryEnum country) {
+        this.country = country;
         return this;
     }
     
-    
-    public DeleteCustomTypeSecurity security;
-    public DeleteCustomTypeRequest withSecurity(DeleteCustomTypeSecurity security) {
-        this.security = security;
+    /**
+     * Name of the custom type to be deleted
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public DeleteCustomTypeRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

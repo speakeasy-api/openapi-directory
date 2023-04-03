@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccidentStatsGetRequest {
-    
-    public AccidentStatsGetPathParams pathParams;
-    public AccidentStatsGetRequest withPathParams(AccidentStatsGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The year for which to filter the accidents on.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=year")
+    public Integer year;
+    public AccidentStatsGetRequest withYear(Integer year) {
+        this.year = year;
         return this;
     }
     

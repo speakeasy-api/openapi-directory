@@ -40,7 +40,7 @@ public class Servers {
      */
     public org.openapis.openapi.models.operations.DownloadFileResponse downloadFile(org.openapis.openapi.models.operations.DownloadFileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadFilePathParams.class, baseUrl, "/api/gen/download/{fileId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadFileRequest.class, baseUrl, "/api/gen/download/{fileId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,12 +80,12 @@ public class Servers {
      */
     public org.openapis.openapi.models.operations.GenerateServerForLanguageResponse generateServerForLanguage(org.openapis.openapi.models.operations.GenerateServerForLanguageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GenerateServerForLanguagePathParams.class, baseUrl, "/api/gen/servers/{framework}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GenerateServerForLanguageRequest.class, baseUrl, "/api/gen/servers/{framework}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "generatorInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -124,7 +124,7 @@ public class Servers {
      */
     public org.openapis.openapi.models.operations.GetServerOptionsResponse getServerOptions(org.openapis.openapi.models.operations.GetServerOptionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetServerOptionsPathParams.class, baseUrl, "/api/gen/servers/{framework}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetServerOptionsRequest.class, baseUrl, "/api/gen/servers/{framework}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -35,27 +35,28 @@ public class Texts {
      * Add batches to a text broadcast
      * Allows adding an extra batches to an already created text broadcast campaign. The batches which being  added pass the CallFire validation process (unlike in the recipients version of this API). That is why using of a scrubDuplicates flag remove duplicates from your batch. Batches may be added as a contact list id, a list of contact ids, or a list of numbers
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddTextBroadcastBatchResponse addTextBroadcastBatch(org.openapis.openapi.models.operations.AddTextBroadcastBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddTextBroadcastBatchResponse addTextBroadcastBatch(org.openapis.openapi.models.operations.AddTextBroadcastBatchRequest request, org.openapis.openapi.models.operations.AddTextBroadcastBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddTextBroadcastBatchPathParams.class, baseUrl, "/texts/broadcasts/{id}/batches", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddTextBroadcastBatchRequest.class, baseUrl, "/texts/broadcasts/{id}/batches", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "batchRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AddTextBroadcastBatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AddTextBroadcastBatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -91,27 +92,28 @@ public class Texts {
      * Add recipients to a text broadcast
      * Use this API to add recipients to a text broadcast which is already created. Post a list of Recipient objects to be immediately added to the text broadcast campaign. These contacts will not go through validation process, and will be acted upon as they are added. Recipients may be added as a list of contact ids, or list of numbers
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddTextBroadcastRecipientsResponse addTextBroadcastRecipients(org.openapis.openapi.models.operations.AddTextBroadcastRecipientsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddTextBroadcastRecipientsResponse addTextBroadcastRecipients(org.openapis.openapi.models.operations.AddTextBroadcastRecipientsRequest request, org.openapis.openapi.models.operations.AddTextBroadcastRecipientsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddTextBroadcastRecipientsPathParams.class, baseUrl, "/texts/broadcasts/{id}/recipients", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddTextBroadcastRecipientsRequest.class, baseUrl, "/texts/broadcasts/{id}/recipients", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AddTextBroadcastRecipientsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AddTextBroadcastRecipientsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -147,19 +149,20 @@ public class Texts {
      * Archive text broadcast
      * Archives a text broadcast (and hides it in the search results)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ArchiveTextBroadcastResponse archiveTextBroadcast(org.openapis.openapi.models.operations.ArchiveTextBroadcastRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ArchiveTextBroadcastResponse archiveTextBroadcast(org.openapis.openapi.models.operations.ArchiveTextBroadcastRequest request, org.openapis.openapi.models.operations.ArchiveTextBroadcastSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArchiveTextBroadcastPathParams.class, baseUrl, "/texts/broadcasts/{id}/archive", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArchiveTextBroadcastRequest.class, baseUrl, "/texts/broadcasts/{id}/archive", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -187,10 +190,11 @@ public class Texts {
      * Create an auto reply
      * CallFire gives you possibility to set up auto reply messages for your numbers and keywords. You can set a general auto reply for anyone who texts your number, keyword, and/or include a text to match, so that the auto reply would be sent only to those who text the matched text
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateTextAutoReplyResponse createTextAutoReply(org.openapis.openapi.models.operations.CreateTextAutoReplyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateTextAutoReplyResponse createTextAutoReply(org.openapis.openapi.models.shared.TextAutoReply request, org.openapis.openapi.models.operations.CreateTextAutoReplySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/texts/auto-replys");
         
@@ -201,7 +205,7 @@ public class Texts {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -237,27 +241,28 @@ public class Texts {
      * Create a text broadcast
      * Creates a text broadcast campaign using the Text Broadcast API. Send a TextBroadcast object in the message body to detail a text broadcast campaign. A campaign can be created without contacts and with bare minimum configuration, but contacts have to be added further on to use the campaign. It supports scheduling, retry logic, pattern-based messages.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateTextBroadcastResponse createTextBroadcast(org.openapis.openapi.models.operations.CreateTextBroadcastRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateTextBroadcastResponse createTextBroadcast(org.openapis.openapi.models.operations.CreateTextBroadcastRequest request, org.openapis.openapi.models.operations.CreateTextBroadcastSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/texts/broadcasts");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "textBroadcastInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CreateTextBroadcastQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CreateTextBroadcastRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -293,19 +298,20 @@ public class Texts {
      * Delete an auto reply
      * Deletes a text auto reply and removes the configuration. Can not delete a TextAutoReply which is currently active for a campaign
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteTextAutoReplyResponse deleteTextAutoReply(org.openapis.openapi.models.operations.DeleteTextAutoReplyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteTextAutoReplyResponse deleteTextAutoReply(org.openapis.openapi.models.operations.DeleteTextAutoReplyRequest request, org.openapis.openapi.models.operations.DeleteTextAutoReplySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteTextAutoReplyPathParams.class, baseUrl, "/texts/auto-replys/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteTextAutoReplyRequest.class, baseUrl, "/texts/auto-replys/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -333,10 +339,11 @@ public class Texts {
      * Find auto replies
      * Find all text autoreplies created by user. Returns a paged list of TextAutoReply
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindTextAutoReplysResponse findTextAutoReplys(org.openapis.openapi.models.operations.FindTextAutoReplysRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FindTextAutoReplysResponse findTextAutoReplys(org.openapis.openapi.models.operations.FindTextAutoReplysRequest request, org.openapis.openapi.models.operations.FindTextAutoReplysSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/texts/auto-replys");
         
@@ -344,14 +351,14 @@ public class Texts {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindTextAutoReplysQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindTextAutoReplysRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -387,10 +394,11 @@ public class Texts {
      * Find text broadcasts
      * Searches for all text broadcasts created by user. Can query on label, name, and the current running status of the campaign. Returns a paged list of text broadcasts
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindTextBroadcastsResponse findTextBroadcasts(org.openapis.openapi.models.operations.FindTextBroadcastsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FindTextBroadcastsResponse findTextBroadcasts(org.openapis.openapi.models.operations.FindTextBroadcastsRequest request, org.openapis.openapi.models.operations.FindTextBroadcastsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/texts/broadcasts");
         
@@ -398,14 +406,14 @@ public class Texts {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindTextBroadcastsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindTextBroadcastsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -441,10 +449,11 @@ public class Texts {
      * Find texts
      * Searches for texts sent or received by user. Use "campaignId=0" parameter to query for all texts sent through the POST /texts API. See [call states and results](https://developers.callfire.com/results-responses-errors.html)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindTextsResponse findTexts(org.openapis.openapi.models.operations.FindTextsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FindTextsResponse findTexts(org.openapis.openapi.models.operations.FindTextsRequest request, org.openapis.openapi.models.operations.FindTextsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/texts");
         
@@ -452,14 +461,14 @@ public class Texts {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindTextsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindTextsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -495,25 +504,26 @@ public class Texts {
      * Find a specific text
      * Returns a single Text instance for a given text id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTextResponse getText(org.openapis.openapi.models.operations.GetTextRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTextResponse getText(org.openapis.openapi.models.operations.GetTextRequest request, org.openapis.openapi.models.operations.GetTextSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTextPathParams.class, baseUrl, "/texts/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTextRequest.class, baseUrl, "/texts/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTextQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTextRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -549,25 +559,26 @@ public class Texts {
      * Find a specific auto reply
      * Returns a single TextAutoReply instance for a given text auto reply id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTextAutoReplyResponse getTextAutoReply(org.openapis.openapi.models.operations.GetTextAutoReplyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTextAutoReplyResponse getTextAutoReply(org.openapis.openapi.models.operations.GetTextAutoReplyRequest request, org.openapis.openapi.models.operations.GetTextAutoReplySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTextAutoReplyPathParams.class, baseUrl, "/texts/auto-replys/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTextAutoReplyRequest.class, baseUrl, "/texts/auto-replys/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTextAutoReplyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTextAutoReplyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -603,25 +614,26 @@ public class Texts {
      * Find a specific text broadcast
      * Returns a single TextBroadcast instance for a given text broadcast id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTextBroadcastResponse getTextBroadcast(org.openapis.openapi.models.operations.GetTextBroadcastRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTextBroadcastResponse getTextBroadcast(org.openapis.openapi.models.operations.GetTextBroadcastRequest request, org.openapis.openapi.models.operations.GetTextBroadcastSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTextBroadcastPathParams.class, baseUrl, "/texts/broadcasts/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTextBroadcastRequest.class, baseUrl, "/texts/broadcasts/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTextBroadcastQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTextBroadcastRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -657,25 +669,26 @@ public class Texts {
      * Find batches in a text broadcast
      * This endpoint will enable the user to page through all of the batches for a particular text broadcast campaign
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTextBroadcastBatchesResponse getTextBroadcastBatches(org.openapis.openapi.models.operations.GetTextBroadcastBatchesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTextBroadcastBatchesResponse getTextBroadcastBatches(org.openapis.openapi.models.operations.GetTextBroadcastBatchesRequest request, org.openapis.openapi.models.operations.GetTextBroadcastBatchesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTextBroadcastBatchesPathParams.class, baseUrl, "/texts/broadcasts/{id}/batches", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTextBroadcastBatchesRequest.class, baseUrl, "/texts/broadcasts/{id}/batches", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTextBroadcastBatchesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTextBroadcastBatchesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -711,25 +724,26 @@ public class Texts {
      * Get statistics on text broadcast
      * Returns the broadcast statistics. Example: total number of the sent/received actions, total cost, number of remaining outbound actions, error count, etc
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTextBroadcastStatsResponse getTextBroadcastStats(org.openapis.openapi.models.operations.GetTextBroadcastStatsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTextBroadcastStatsResponse getTextBroadcastStats(org.openapis.openapi.models.operations.GetTextBroadcastStatsRequest request, org.openapis.openapi.models.operations.GetTextBroadcastStatsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTextBroadcastStatsPathParams.class, baseUrl, "/texts/broadcasts/{id}/stats", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTextBroadcastStatsRequest.class, baseUrl, "/texts/broadcasts/{id}/stats", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTextBroadcastStatsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTextBroadcastStatsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -765,25 +779,26 @@ public class Texts {
      * Find texts in a text broadcast
      * This endpoint will enable the user to page through all of the texts for a particular text broadcast campaign
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTextBroadcastTextsResponse getTextBroadcastTexts(org.openapis.openapi.models.operations.GetTextBroadcastTextsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTextBroadcastTextsResponse getTextBroadcastTexts(org.openapis.openapi.models.operations.GetTextBroadcastTextsRequest request, org.openapis.openapi.models.operations.GetTextBroadcastTextsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTextBroadcastTextsPathParams.class, baseUrl, "/texts/broadcasts/{id}/texts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTextBroadcastTextsRequest.class, baseUrl, "/texts/broadcasts/{id}/texts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTextBroadcastTextsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTextBroadcastTextsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -819,27 +834,28 @@ public class Texts {
      * Send texts
      * Use the /texts API to send individual texts quickly. By default all texts are going out from CallFire's dedicated short code. Example: 67076, 818818 etc
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SendTextsResponse sendTexts(org.openapis.openapi.models.operations.SendTextsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SendTextsResponse sendTexts(org.openapis.openapi.models.operations.SendTextsRequest request, org.openapis.openapi.models.operations.SendTextsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/texts");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SendTextsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SendTextsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -875,19 +891,20 @@ public class Texts {
      * Start text broadcast
      * Starts a text broadcast
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StartTextBroadcastResponse startTextBroadcast(org.openapis.openapi.models.operations.StartTextBroadcastRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StartTextBroadcastResponse startTextBroadcast(org.openapis.openapi.models.operations.StartTextBroadcastRequest request, org.openapis.openapi.models.operations.StartTextBroadcastSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StartTextBroadcastPathParams.class, baseUrl, "/texts/broadcasts/{id}/start", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StartTextBroadcastRequest.class, baseUrl, "/texts/broadcasts/{id}/start", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -915,19 +932,20 @@ public class Texts {
      * Stop text broadcast
      * Stops a text broadcast
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StopTextBroadcastResponse stopTextBroadcast(org.openapis.openapi.models.operations.StopTextBroadcastRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StopTextBroadcastResponse stopTextBroadcast(org.openapis.openapi.models.operations.StopTextBroadcastRequest request, org.openapis.openapi.models.operations.StopTextBroadcastSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopTextBroadcastPathParams.class, baseUrl, "/texts/broadcasts/{id}/stop", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopTextBroadcastRequest.class, baseUrl, "/texts/broadcasts/{id}/stop", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -955,27 +973,28 @@ public class Texts {
      * Disable/enable undialed recipients in broadcast
      * This operation lets the user to disable/enable undialed contacts in created broadcast
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ToggleTextBroadcastRecipientsStatusResponse toggleTextBroadcastRecipientsStatus(org.openapis.openapi.models.operations.ToggleTextBroadcastRecipientsStatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ToggleTextBroadcastRecipientsStatusResponse toggleTextBroadcastRecipientsStatus(org.openapis.openapi.models.operations.ToggleTextBroadcastRecipientsStatusRequest request, org.openapis.openapi.models.operations.ToggleTextBroadcastRecipientsStatusSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToggleTextBroadcastRecipientsStatusPathParams.class, baseUrl, "/texts/broadcasts/{id}/toggleRecipientsStatus", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToggleTextBroadcastRecipientsStatusRequest.class, baseUrl, "/texts/broadcasts/{id}/toggleRecipientsStatus", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToggleTextBroadcastRecipientsStatusQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToggleTextBroadcastRecipientsStatusRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1003,27 +1022,28 @@ public class Texts {
      * Update a text broadcast
      * Allows modifying the configuration of existing text broadcast campaign. See TextBroadcast for more information on what can/can't be updated on this API
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateTextBroadcastResponse updateTextBroadcast(org.openapis.openapi.models.operations.UpdateTextBroadcastRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateTextBroadcastResponse updateTextBroadcast(org.openapis.openapi.models.operations.UpdateTextBroadcastRequest request, org.openapis.openapi.models.operations.UpdateTextBroadcastSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateTextBroadcastPathParams.class, baseUrl, "/texts/broadcasts/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateTextBroadcastRequest.class, baseUrl, "/texts/broadcasts/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "textBroadcastInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UpdateTextBroadcastQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UpdateTextBroadcastRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETStrainsByPositionUsingGETRequest {
+    /**
+     * Chromosome
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=chr")
+    public String chr;
+    public GETStrainsByPositionUsingGETRequest withChr(String chr) {
+        this.chr = chr;
+        return this;
+    }
     
-    public GETStrainsByPositionUsingGETPathParams pathParams;
-    public GETStrainsByPositionUsingGETRequest withPathParams(GETStrainsByPositionUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * RGD Map Key (available through lookup service)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mapKey")
+    public Integer mapKey;
+    public GETStrainsByPositionUsingGETRequest withMapKey(Integer mapKey) {
+        this.mapKey = mapKey;
+        return this;
+    }
+    
+    /**
+     * Start Position
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=start")
+    public Long start;
+    public GETStrainsByPositionUsingGETRequest withStart(Long start) {
+        this.start = start;
+        return this;
+    }
+    
+    /**
+     * Stop Position
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=stop")
+    public Long stop;
+    public GETStrainsByPositionUsingGETRequest withStop(Long stop) {
+        this.stop = stop;
         return this;
     }
     

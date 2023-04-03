@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETContinueUpdateRollbackRequest {
-    
-    public GETContinueUpdateRollbackQueryParams queryParams;
-    public GETContinueUpdateRollbackRequest withQueryParams(GETContinueUpdateRollbackQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETContinueUpdateRollbackActionEnum action;
+    public GETContinueUpdateRollbackRequest withAction(GETContinueUpdateRollbackActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * A unique identifier for this &lt;code&gt;ContinueUpdateRollback&lt;/code&gt; request. Specify this token if you plan to retry requests so that CloudFormationknows that you're not attempting to continue the rollback to a stack with the same name. You might retry &lt;code&gt;ContinueUpdateRollback&lt;/code&gt; requests to ensure that CloudFormation successfully received them.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClientRequestToken")
+    public String clientRequestToken;
+    public GETContinueUpdateRollbackRequest withClientRequestToken(String clientRequestToken) {
+        this.clientRequestToken = clientRequestToken;
+        return this;
+    }
     
-    public GETContinueUpdateRollbackHeaders headers;
-    public GETContinueUpdateRollbackRequest withHeaders(GETContinueUpdateRollbackHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;A list of the logical IDs of the resources that CloudFormation skips during the continue update rollback operation. You can specify only resources that are in the &lt;code&gt;UPDATE_FAILED&lt;/code&gt; state because a rollback failed. You can't specify resources that are in the &lt;code&gt;UPDATE_FAILED&lt;/code&gt; state for other reasons, for example, because an update was canceled. To check why a resource update failed, use the &lt;a&gt;DescribeStackResources&lt;/a&gt; action, and view the resource status reason.&lt;/p&gt; &lt;important&gt; &lt;p&gt;Specify this property to skip rolling back resources that CloudFormation can't successfully roll back. We recommend that you &lt;a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/troubleshooting.html#troubleshooting-errors-update-rollback-failed"&gt; troubleshoot&lt;/a&gt; resources before skipping them. CloudFormation sets the status of the specified resources to &lt;code&gt;UPDATE_COMPLETE&lt;/code&gt; and continues to roll back the stack. After the rollback is complete, the state of the skipped resources will be inconsistent with the state of the resources in the stack template. Before performing another stack update, you must update the stack or resources to be consistent with each other. If you don't, subsequent stack updates might fail, and the stack will become unrecoverable.&lt;/p&gt; &lt;/important&gt; &lt;p&gt;Specify the minimum number of resources required to successfully roll back your stack. For example, a failed resource update might cause dependent resources to fail. In this case, it might not be necessary to skip the dependent resources.&lt;/p&gt; &lt;p&gt;To skip resources that are part of nested stacks, use the following format: &lt;code&gt;NestedStackName.ResourceLogicalID&lt;/code&gt;. If you want to specify the logical ID of a stack resource (&lt;code&gt;Type: AWS::CloudFormation::Stack&lt;/code&gt;) in the &lt;code&gt;ResourcesToSkip&lt;/code&gt; list, then its corresponding embedded stack must be in one of the following states: &lt;code&gt;DELETE_IN_PROGRESS&lt;/code&gt;, &lt;code&gt;DELETE_COMPLETE&lt;/code&gt;, or &lt;code&gt;DELETE_FAILED&lt;/code&gt;.&lt;/p&gt; &lt;note&gt; &lt;p&gt;Don't confuse a child stack's name with its corresponding logical ID defined in the parent stack. For an example of a continue update rollback operation with nested stacks, see &lt;a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-continueupdaterollback.html#nested-stacks"&gt;Using ResourcesToSkip to recover a nested stacks hierarchy&lt;/a&gt;.&lt;/p&gt; &lt;/note&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ResourcesToSkip")
+    public String[] resourcesToSkip;
+    public GETContinueUpdateRollbackRequest withResourcesToSkip(String[] resourcesToSkip) {
+        this.resourcesToSkip = resourcesToSkip;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that CloudFormation assumes to roll back the stack. CloudFormation uses the role's credentials to make calls on your behalf. CloudFormation always uses this role for all future operations on the stack. Provided that users have permission to operate on the stack, CloudFormation uses this role even if the users don't have permission to pass it. Ensure that the role grants least permission.&lt;/p&gt; &lt;p&gt;If you don't specify a value, CloudFormation uses the role that was previously associated with the stack. If no role is available, CloudFormation uses a temporary session that's generated from your user credentials.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RoleARN")
+    public String roleARN;
+    public GETContinueUpdateRollbackRequest withRoleARN(String roleARN) {
+        this.roleARN = roleARN;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The name or the unique ID of the stack that you want to continue rolling back.&lt;/p&gt; &lt;note&gt; &lt;p&gt;Don't specify the name of a nested stack (a stack that was created by using the &lt;code&gt;AWS::CloudFormation::Stack&lt;/code&gt; resource). Instead, use this operation on the parent stack (the stack that contains the &lt;code&gt;AWS::CloudFormation::Stack&lt;/code&gt; resource).&lt;/p&gt; &lt;/note&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StackName")
+    public String stackName;
+    public GETContinueUpdateRollbackRequest withStackName(String stackName) {
+        this.stackName = stackName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETContinueUpdateRollbackVersionEnum version;
+    public GETContinueUpdateRollbackRequest withVersion(GETContinueUpdateRollbackVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETContinueUpdateRollbackRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETContinueUpdateRollbackRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETContinueUpdateRollbackRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETContinueUpdateRollbackRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETContinueUpdateRollbackRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETContinueUpdateRollbackRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETContinueUpdateRollbackRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

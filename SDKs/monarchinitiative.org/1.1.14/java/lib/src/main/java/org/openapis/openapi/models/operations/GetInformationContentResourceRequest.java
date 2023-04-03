@@ -4,20 +4,39 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetInformationContentResourceRequest {
-    
-    public GetInformationContentResourcePathParams pathParams;
-    public GetInformationContentResourceRequest withPathParams(GetInformationContentResourcePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Object id, e.g. ECO:0000501 (for IEA; Includes inferred by default)
+     *                     or a specific publication or other supporting ibject, e.g. ZFIN:ZDB-PUB-060503-2.
+     *                     
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=evidence")
+    public String evidence;
+    public GetInformationContentResourceRequest withEvidence(String evidence) {
+        this.evidence = evidence;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=object_category")
+    public String objectCategory;
+    public GetInformationContentResourceRequest withObjectCategory(String objectCategory) {
+        this.objectCategory = objectCategory;
+        return this;
+    }
     
-    public GetInformationContentResourceQueryParams queryParams;
-    public GetInformationContentResourceRequest withQueryParams(GetInformationContentResourceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subject_category")
+    public String subjectCategory;
+    public GetInformationContentResourceRequest withSubjectCategory(String subjectCategory) {
+        this.subjectCategory = subjectCategory;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subject_taxon")
+    public String subjectTaxon;
+    public GetInformationContentResourceRequest withSubjectTaxon(String subjectTaxon) {
+        this.subjectTaxon = subjectTaxon;
         return this;
     }
     

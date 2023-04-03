@@ -4,20 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsGetRepoInstallationRequest {
-    
-    public AppsGetRepoInstallationPathParams pathParams;
-    public AppsGetRepoInstallationRequest withPathParams(AppsGetRepoInstallationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * This API is under preview and subject to change.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=accept")
+    public String accept;
+    public AppsGetRepoInstallationRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public AppsGetRepoInstallationRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public AppsGetRepoInstallationHeaders headers;
-    public AppsGetRepoInstallationRequest withHeaders(AppsGetRepoInstallationHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public AppsGetRepoInstallationRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

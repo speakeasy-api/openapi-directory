@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UploadBlobByIdRequest {
-    
-    public UploadBlobByIdPathParams pathParams;
-    public UploadBlobByIdRequest withPathParams(UploadBlobByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public UploadBlobByIdRequestBody requestBody;
+    public UploadBlobByIdRequest withRequestBody(UploadBlobByIdRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public UploadBlobByIdRequestBody request;
-    public UploadBlobByIdRequest withRequest(UploadBlobByIdRequestBody request) {
-        this.request = request;
+    /**
+     * Unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UploadBlobByIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteDoNotContactRequest {
-    
-    public DeleteDoNotContactPathParams pathParams;
-    public DeleteDoNotContactRequest withPathParams(DeleteDoNotContactPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteDoNotContactSecurity security;
-    public DeleteDoNotContactRequest withSecurity(DeleteDoNotContactSecurity security) {
-        this.security = security;
+    /**
+     * Number associated with Do Not Contact (DNC) entry.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=number")
+    public String number;
+    public DeleteDoNotContactRequest withNumber(String number) {
+        this.number = number;
         return this;
     }
     

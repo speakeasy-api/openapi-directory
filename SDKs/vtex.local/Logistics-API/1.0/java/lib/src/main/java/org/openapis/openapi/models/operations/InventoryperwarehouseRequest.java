@@ -4,20 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InventoryperwarehouseRequest {
-    
-    public InventoryperwarehousePathParams pathParams;
-    public InventoryperwarehouseRequest withPathParams(InventoryperwarehousePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public InventoryperwarehouseRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public InventoryperwarehouseRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public InventoryperwarehouseHeaders headers;
-    public InventoryperwarehouseRequest withHeaders(InventoryperwarehouseHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=skuId")
+    public String skuId;
+    public InventoryperwarehouseRequest withSkuId(String skuId) {
+        this.skuId = skuId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=warehouseId")
+    public String warehouseId;
+    public InventoryperwarehouseRequest withWarehouseId(String warehouseId) {
+        this.warehouseId = warehouseId;
         return this;
     }
     

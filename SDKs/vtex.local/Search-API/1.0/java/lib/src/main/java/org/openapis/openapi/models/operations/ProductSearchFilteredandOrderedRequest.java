@@ -4,27 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProductSearchFilteredandOrderedRequest {
-    
-    public ProductSearchFilteredandOrderedQueryParams queryParams;
-    public ProductSearchFilteredandOrderedRequest withQueryParams(ProductSearchFilteredandOrderedQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public ProductSearchFilteredandOrderedRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public ProductSearchFilteredandOrderedHeaders headers;
-    public ProductSearchFilteredandOrderedRequest withHeaders(ProductSearchFilteredandOrderedHeaders headers) {
-        this.headers = headers;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public ProductSearchFilteredandOrderedRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
+    /**
+     * Sorting method. It can be by Price (`O=OrderByPriceDESC` or `O=OrderByPriceASC`), by Top Selling Products (`O=OrderByTopSaleDESC`), by Best Reviews (`O=OrderByReviewRateDESC`), by Name (`O=OrderByNameASC` or `O=OrderByNameDESC`), by Release Date (`O=OrderByReleaseDateDESC`), by Best Discounts (`O=OrderByBestDiscountDESC`), by Score (`O=OrderByScoreDESC`)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=O")
+    public String o;
+    public ProductSearchFilteredandOrderedRequest withO(String o) {
+        this.o = o;
+        return this;
+    }
     
-    public String serverURL;
-    public ProductSearchFilteredandOrderedRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Starter page range. These parameters allow the API to be paginated. Take into account that the initial and final pages cannot have a separation superior to 50 pages. Thus, it will be displayed 50 items per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_from")
+    public String from;
+    public ProductSearchFilteredandOrderedRequest withFrom(String from) {
+        this.from = from;
+        return this;
+    }
+    
+    /**
+     * Finisher page range. These parameters allow the API to be paginated. Take into account that the initial and final pages cannot have a separation superior to 50 pages. Thus, it will be displayed 50 items per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_to")
+    public String to;
+    public ProductSearchFilteredandOrderedRequest withTo(String to) {
+        this.to = to;
+        return this;
+    }
+    
+    /**
+     * General filter. It can be by category (`fq=C:/{a}/{b}`), by specification (`fq=specificationFilter_{a}:{b}`),  by price range (`fq=P:[{a} TO {b}]`), by collection (`fq=productClusterIds:{{productClusterId}}`), by product ID (`fq=productId:{{productId}}`),  by SKU ID (`fq=skuId:{{skuId}}`), by Reference ID (`fq=alternateIds_RefId:{{referenceId}}`), by EAN13 (`fq=alternateIds_Ean:{{ean13}}`), by availability at a specific sales channel (`fq=isAvailablePerSalesChannel_{{sc}}:{{bool}}`), by available at a specific seller (`fq=sellerId:{{sellerId}}`)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fq")
+    public String fq;
+    public ProductSearchFilteredandOrderedRequest withFq(String fq) {
+        this.fq = fq;
+        return this;
+    }
+    
+    /**
+     * Filter by full text. The form is`ft={searchWord}`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ft")
+    public String ft;
+    public ProductSearchFilteredandOrderedRequest withFt(String ft) {
+        this.ft = ft;
         return this;
     }
     

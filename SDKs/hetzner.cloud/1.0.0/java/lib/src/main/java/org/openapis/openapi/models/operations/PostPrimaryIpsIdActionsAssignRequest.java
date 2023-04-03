@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostPrimaryIpsIdActionsAssignRequest {
-    
-    public PostPrimaryIpsIdActionsAssignPathParams pathParams;
-    public PostPrimaryIpsIdActionsAssignRequest withPathParams(PostPrimaryIpsIdActionsAssignPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PostPrimaryIpsIdActionsAssignAssignPrimaryIPRequest requestBody;
+    public PostPrimaryIpsIdActionsAssignRequest withRequestBody(PostPrimaryIpsIdActionsAssignAssignPrimaryIPRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostPrimaryIpsIdActionsAssignAssignPrimaryIPRequest request;
-    public PostPrimaryIpsIdActionsAssignRequest withRequest(PostPrimaryIpsIdActionsAssignAssignPrimaryIPRequest request) {
-        this.request = request;
+    /**
+     * ID of the Primary IP
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public PostPrimaryIpsIdActionsAssignRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

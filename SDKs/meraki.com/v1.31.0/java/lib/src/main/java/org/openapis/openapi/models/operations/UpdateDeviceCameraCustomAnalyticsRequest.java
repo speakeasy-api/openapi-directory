@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDeviceCameraCustomAnalyticsRequest {
-    
-    public UpdateDeviceCameraCustomAnalyticsPathParams pathParams;
-    public UpdateDeviceCameraCustomAnalyticsRequest withPathParams(UpdateDeviceCameraCustomAnalyticsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateDeviceCameraCustomAnalyticsRequestBody requestBody;
+    public UpdateDeviceCameraCustomAnalyticsRequest withRequestBody(UpdateDeviceCameraCustomAnalyticsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateDeviceCameraCustomAnalyticsRequestBody request;
-    public UpdateDeviceCameraCustomAnalyticsRequest withRequest(UpdateDeviceCameraCustomAnalyticsRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public UpdateDeviceCameraCustomAnalyticsRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

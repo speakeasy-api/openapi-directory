@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05UsersAuthOnNotifyJsonRequest {
-    
-    public PostV05UsersAuthOnNotifyJsonHeaders headers;
-    public PostV05UsersAuthOnNotifyJsonRequest withHeaders(PostV05UsersAuthOnNotifyJsonHeaders headers) {
-        this.headers = headers;
+    /**
+     * Access token which was issued after successful login with gateway auth server.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostV05UsersAuthOnNotifyJsonRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PatientAuthNotificationAcknowledgement request;
-    public PostV05UsersAuthOnNotifyJsonRequest withRequest(org.openapis.openapi.models.shared.PatientAuthNotificationAcknowledgement request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PatientAuthNotificationAcknowledgement patientAuthNotificationAcknowledgement;
+    public PostV05UsersAuthOnNotifyJsonRequest withPatientAuthNotificationAcknowledgement(org.openapis.openapi.models.shared.PatientAuthNotificationAcknowledgement patientAuthNotificationAcknowledgement) {
+        this.patientAuthNotificationAcknowledgement = patientAuthNotificationAcknowledgement;
         return this;
     }
     

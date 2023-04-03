@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetReisezentrenQueryParams;
 import org.openapis.openapi.models.operations.GetReisezentrenRequest;
 import org.openapis.openapi.models.operations.GetReisezentrenResponse;
 
@@ -28,10 +27,8 @@ public class Application {
                 .build();
 
             GetReisezentrenRequest req = new GetReisezentrenRequest() {{
-                queryParams = new GetReisezentrenQueryParams() {{
-                    name = "corrupti";
-                }};
-            }};            
+                name = "corrupti";
+            }}            
 
             GetReisezentrenResponse res = sdk.getReisezentren(req);
 
@@ -45,7 +42,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

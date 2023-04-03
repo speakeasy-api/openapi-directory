@@ -35,25 +35,26 @@ public class Organizations {
     /**
      * Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsOperationsListResponse assuredworkloadsOrganizationsLocationsOperationsList(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsOperationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsOperationsListResponse assuredworkloadsOrganizationsLocationsOperationsList(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsOperationsListRequest request, org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsOperationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsOperationsListPathParams.class, baseUrl, "/v1/{name}/operations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsOperationsListRequest.class, baseUrl, "/v1/{name}/operations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsOperationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsOperationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -80,27 +81,28 @@ public class Organizations {
     /**
      * Creates Assured Workload.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsCreateResponse assuredworkloadsOrganizationsLocationsWorkloadsCreate(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsCreateResponse assuredworkloadsOrganizationsLocationsWorkloadsCreate(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsCreateRequest request, org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsCreatePathParams.class, baseUrl, "/v1/{parent}/workloads", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsCreateRequest.class, baseUrl, "/v1/{parent}/workloads", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudAssuredworkloadsV1WorkloadInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,25 +129,26 @@ public class Organizations {
     /**
      * Deletes the workload. Make sure that workload's direct children are already in a deleted state, otherwise the request will fail with a FAILED_PRECONDITION error.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsDeleteResponse assuredworkloadsOrganizationsLocationsWorkloadsDelete(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsDeleteResponse assuredworkloadsOrganizationsLocationsWorkloadsDelete(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsDeleteRequest request, org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsDeletePathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsDeleteRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -172,25 +175,26 @@ public class Organizations {
     /**
      * Lists Assured Workloads under a CRM Node.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsListResponse assuredworkloadsOrganizationsLocationsWorkloadsList(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsListResponse assuredworkloadsOrganizationsLocationsWorkloadsList(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsListRequest request, org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsListPathParams.class, baseUrl, "/v1/{parent}/workloads", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsListRequest.class, baseUrl, "/v1/{parent}/workloads", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -217,27 +221,28 @@ public class Organizations {
     /**
      * Update the permissions settings for an existing partner workload. For force updates don't set etag field in the Workload. Only one update operation per workload can be in progress.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsResponse assuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissions(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsResponse assuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissions(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsRequest request, org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsPathParams.class, baseUrl, "/v1/{name}:mutatePartnerPermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsRequest.class, baseUrl, "/v1/{name}:mutatePartnerPermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudAssuredworkloadsV1MutatePartnerPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -264,27 +269,28 @@ public class Organizations {
     /**
      * Updates an existing workload. Currently allows updating of workload display_name and labels. For force updates don't set etag field in the Workload. Only one update operation per workload can be in progress.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsPatchResponse assuredworkloadsOrganizationsLocationsWorkloadsPatch(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsPatchResponse assuredworkloadsOrganizationsLocationsWorkloadsPatch(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsPatchRequest request, org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsPatchPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsPatchRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudAssuredworkloadsV1WorkloadInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -311,27 +317,28 @@ public class Organizations {
     /**
      * Restrict the list of resources allowed in the Workload environment. The current list of allowed products can be found at https://cloud.google.com/assured-workloads/docs/supported-products In addition to assuredworkloads.workload.update permission, the user should also have orgpolicy.policy.set permission on the folder resource to use this functionality.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsRestrictAllowedResourcesResponse assuredworkloadsOrganizationsLocationsWorkloadsRestrictAllowedResources(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsRestrictAllowedResourcesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsRestrictAllowedResourcesResponse assuredworkloadsOrganizationsLocationsWorkloadsRestrictAllowedResources(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsRestrictAllowedResourcesRequest request, org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsRestrictAllowedResourcesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsRestrictAllowedResourcesPathParams.class, baseUrl, "/v1/{name}:restrictAllowedResources", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsRestrictAllowedResourcesRequest.class, baseUrl, "/v1/{name}:restrictAllowedResources", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudAssuredworkloadsV1RestrictAllowedResourcesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsRestrictAllowedResourcesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsRestrictAllowedResourcesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -358,27 +365,28 @@ public class Organizations {
     /**
      * Acknowledges an existing violation. By acknowledging a violation, users acknowledge the existence of a compliance violation in their workload and decide to ignore it due to a valid business justification. Acknowledgement is a permanent operation and it cannot be reverted.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsAcknowledgeResponse assuredworkloadsOrganizationsLocationsWorkloadsViolationsAcknowledge(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsAcknowledgeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsAcknowledgeResponse assuredworkloadsOrganizationsLocationsWorkloadsViolationsAcknowledge(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsAcknowledgeRequest request, org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsAcknowledgeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsAcknowledgePathParams.class, baseUrl, "/v1/{name}:acknowledge", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsAcknowledgeRequest.class, baseUrl, "/v1/{name}:acknowledge", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudAssuredworkloadsV1AcknowledgeViolationRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsAcknowledgeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsAcknowledgeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -405,25 +413,26 @@ public class Organizations {
     /**
      * Retrieves Assured Workload Violation based on ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsGetResponse assuredworkloadsOrganizationsLocationsWorkloadsViolationsGet(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsGetResponse assuredworkloadsOrganizationsLocationsWorkloadsViolationsGet(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsGetRequest request, org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsGetPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsGetRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -450,25 +459,26 @@ public class Organizations {
     /**
      * Lists the Violations in the AssuredWorkload Environment. Callers may also choose to read across multiple Workloads as per [AIP-159](https://google.aip.dev/159) by using '-' (the hyphen or dash character) as a wildcard character instead of workload-id in the parent. Format `organizations/{org_id}/locations/{location}/workloads/-`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListResponse assuredworkloadsOrganizationsLocationsWorkloadsViolationsList(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListResponse assuredworkloadsOrganizationsLocationsWorkloadsViolationsList(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListRequest request, org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListPathParams.class, baseUrl, "/v1/{parent}/violations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListRequest.class, baseUrl, "/v1/{parent}/violations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

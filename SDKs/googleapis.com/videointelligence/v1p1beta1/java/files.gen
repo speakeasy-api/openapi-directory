@@ -31,11 +31,11 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/VideointelligenceVideosAnnotateSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/VideointelligenceVideosAnnotateQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/VideointelligenceVideosAnnotateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/VideointelligenceVideosAnnotateResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleLongrunningOperation.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleRpcStatus.java
+lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudVideointelligenceV1p1beta1AnnotateVideoRequestFeaturesEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudVideointelligenceV1p1beta1AnnotateVideoRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudVideointelligenceV1p1beta1VideoContext.java
@@ -50,8 +50,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudVideointelligenc
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudVideointelligenceV1p1beta1LabelDetectionConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudVideointelligenceV1p1beta1FaceDetectionConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudVideointelligenceV1p1beta1ExplicitContentDetectionConfig.java
-lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2c.java
 USAGE.md

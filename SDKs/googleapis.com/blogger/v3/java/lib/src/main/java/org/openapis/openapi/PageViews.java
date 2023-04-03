@@ -33,25 +33,26 @@ public class PageViews {
     /**
      * Gets page views by blog id.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BloggerPageViewsGetResponse bloggerPageViewsGet(org.openapis.openapi.models.operations.BloggerPageViewsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BloggerPageViewsGetResponse bloggerPageViewsGet(org.openapis.openapi.models.operations.BloggerPageViewsGetRequest request, org.openapis.openapi.models.operations.BloggerPageViewsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BloggerPageViewsGetPathParams.class, baseUrl, "/v3/blogs/{blogId}/pageviews", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BloggerPageViewsGetRequest.class, baseUrl, "/v3/blogs/{blogId}/pageviews", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BloggerPageViewsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BloggerPageViewsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,27 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WebinarDeleteRequest {
-    
-    public WebinarDeletePathParams pathParams;
-    public WebinarDeleteRequest withPathParams(WebinarDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * `true`: Notify panelists and registrants about the webinar cancellation via email. 
+     * 
+     * `false`: Do not send any email notification to webinar registrants and panelists. 
+     * 
+     * The default value of this field is `false`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cancel_webinar_reminder")
+    public String cancelWebinarReminder;
+    public WebinarDeleteRequest withCancelWebinarReminder(String cancelWebinarReminder) {
+        this.cancelWebinarReminder = cancelWebinarReminder;
         return this;
     }
     
-    
-    public WebinarDeleteQueryParams queryParams;
-    public WebinarDeleteRequest withQueryParams(WebinarDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The meeting occurrence ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=occurrence_id")
+    public String occurrenceId;
+    public WebinarDeleteRequest withOccurrenceId(String occurrenceId) {
+        this.occurrenceId = occurrenceId;
         return this;
     }
     
-    
-    public WebinarDeleteSecurity security;
-    public WebinarDeleteRequest withSecurity(WebinarDeleteSecurity security) {
-        this.security = security;
+    /**
+     * The webinar ID in "**long**" format(represented as int64 data type in JSON). 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webinarId")
+    public Long webinarId;
+    public WebinarDeleteRequest withWebinarId(Long webinarId) {
+        this.webinarId = webinarId;
         return this;
     }
     

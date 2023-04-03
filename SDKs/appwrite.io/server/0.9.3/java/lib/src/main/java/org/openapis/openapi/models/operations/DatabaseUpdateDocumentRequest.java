@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DatabaseUpdateDocumentRequest {
-    
-    public DatabaseUpdateDocumentPathParams pathParams;
-    public DatabaseUpdateDocumentRequest withPathParams(DatabaseUpdateDocumentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public DatabaseUpdateDocumentRequestBody request;
-    public DatabaseUpdateDocumentRequest withRequest(DatabaseUpdateDocumentRequestBody request) {
-        this.request = request;
+    public DatabaseUpdateDocumentRequestBody requestBody;
+    public DatabaseUpdateDocumentRequest withRequestBody(DatabaseUpdateDocumentRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Collection unique ID. You can create a new collection with validation rules using the Database service [server integration](/docs/server/database#createCollection).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collectionId")
+    public String collectionId;
+    public DatabaseUpdateDocumentRequest withCollectionId(String collectionId) {
+        this.collectionId = collectionId;
+        return this;
+    }
     
-    public DatabaseUpdateDocumentSecurity security;
-    public DatabaseUpdateDocumentRequest withSecurity(DatabaseUpdateDocumentSecurity security) {
-        this.security = security;
+    /**
+     * Document unique ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=documentId")
+    public String documentId;
+    public DatabaseUpdateDocumentRequest withDocumentId(String documentId) {
+        this.documentId = documentId;
         return this;
     }
     

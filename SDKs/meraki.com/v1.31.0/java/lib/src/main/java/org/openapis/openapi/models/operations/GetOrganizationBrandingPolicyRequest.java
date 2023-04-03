@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationBrandingPolicyRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=brandingPolicyId")
+    public String brandingPolicyId;
+    public GetOrganizationBrandingPolicyRequest withBrandingPolicyId(String brandingPolicyId) {
+        this.brandingPolicyId = brandingPolicyId;
+        return this;
+    }
     
-    public GetOrganizationBrandingPolicyPathParams pathParams;
-    public GetOrganizationBrandingPolicyRequest withPathParams(GetOrganizationBrandingPolicyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public GetOrganizationBrandingPolicyRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

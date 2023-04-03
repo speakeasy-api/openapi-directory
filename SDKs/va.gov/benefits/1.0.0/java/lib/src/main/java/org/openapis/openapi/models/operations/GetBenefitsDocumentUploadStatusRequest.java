@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBenefitsDocumentUploadStatusRequest {
-    
-    public GetBenefitsDocumentUploadStatusPathParams pathParams;
-    public GetBenefitsDocumentUploadStatusRequest withPathParams(GetBenefitsDocumentUploadStatusPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetBenefitsDocumentUploadStatusSecurity security;
-    public GetBenefitsDocumentUploadStatusRequest withSecurity(GetBenefitsDocumentUploadStatusSecurity security) {
-        this.security = security;
+    /**
+     * ID as returned by a previous create upload request
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetBenefitsDocumentUploadStatusRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

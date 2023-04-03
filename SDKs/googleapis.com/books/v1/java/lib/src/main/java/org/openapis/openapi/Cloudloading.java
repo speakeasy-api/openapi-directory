@@ -35,10 +35,11 @@ public class Cloudloading {
     /**
      * Add a user-upload volume and triggers processing.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BooksCloudloadingAddBookResponse booksCloudloadingAddBook(org.openapis.openapi.models.operations.BooksCloudloadingAddBookRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BooksCloudloadingAddBookResponse booksCloudloadingAddBook(org.openapis.openapi.models.operations.BooksCloudloadingAddBookRequest request, org.openapis.openapi.models.operations.BooksCloudloadingAddBookSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/books/v1/cloudloading/addBook");
         
@@ -46,14 +47,14 @@ public class Cloudloading {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksCloudloadingAddBookQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksCloudloadingAddBookRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -80,10 +81,11 @@ public class Cloudloading {
     /**
      * Remove the book and its contents
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BooksCloudloadingDeleteBookResponse booksCloudloadingDeleteBook(org.openapis.openapi.models.operations.BooksCloudloadingDeleteBookRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BooksCloudloadingDeleteBookResponse booksCloudloadingDeleteBook(org.openapis.openapi.models.operations.BooksCloudloadingDeleteBookRequest request, org.openapis.openapi.models.operations.BooksCloudloadingDeleteBookSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/books/v1/cloudloading/deleteBook");
         
@@ -91,14 +93,14 @@ public class Cloudloading {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksCloudloadingDeleteBookQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksCloudloadingDeleteBookRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -125,27 +127,28 @@ public class Cloudloading {
     /**
      * Updates a user-upload volume.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BooksCloudloadingUpdateBookResponse booksCloudloadingUpdateBook(org.openapis.openapi.models.operations.BooksCloudloadingUpdateBookRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BooksCloudloadingUpdateBookResponse booksCloudloadingUpdateBook(org.openapis.openapi.models.operations.BooksCloudloadingUpdateBookRequest request, org.openapis.openapi.models.operations.BooksCloudloadingUpdateBookSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/books/v1/cloudloading/updateBook");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "booksCloudloadingResource", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksCloudloadingUpdateBookQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksCloudloadingUpdateBookRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

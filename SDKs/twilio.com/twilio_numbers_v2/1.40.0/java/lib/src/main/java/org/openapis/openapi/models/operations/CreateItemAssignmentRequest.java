@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateItemAssignmentRequest {
-    
-    public CreateItemAssignmentPathParams pathParams;
-    public CreateItemAssignmentRequest withPathParams(CreateItemAssignmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique string that we created to identify the Bundle resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=BundleSid")
+    public String bundleSid;
+    public CreateItemAssignmentRequest withBundleSid(String bundleSid) {
+        this.bundleSid = bundleSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateItemAssignmentCreateItemAssignmentRequest request;
-    public CreateItemAssignmentRequest withRequest(CreateItemAssignmentCreateItemAssignmentRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateItemAssignmentSecurity security;
-    public CreateItemAssignmentRequest withSecurity(CreateItemAssignmentSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateItemAssignmentRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateItemAssignmentCreateItemAssignmentRequest requestBody;
+    public CreateItemAssignmentRequest withRequestBody(CreateItemAssignmentCreateItemAssignmentRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

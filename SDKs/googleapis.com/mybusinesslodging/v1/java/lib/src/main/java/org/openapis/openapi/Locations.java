@@ -39,13 +39,13 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.MybusinesslodgingLocationsGetLodgingResponse mybusinesslodgingLocationsGetLodging(org.openapis.openapi.models.operations.MybusinesslodgingLocationsGetLodgingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MybusinesslodgingLocationsGetLodgingPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MybusinesslodgingLocationsGetLodgingRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MybusinesslodgingLocationsGetLodgingQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MybusinesslodgingLocationsGetLodgingRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -83,13 +83,13 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.MybusinesslodgingLocationsLodgingGetGoogleUpdatedResponse mybusinesslodgingLocationsLodgingGetGoogleUpdated(org.openapis.openapi.models.operations.MybusinesslodgingLocationsLodgingGetGoogleUpdatedRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MybusinesslodgingLocationsLodgingGetGoogleUpdatedPathParams.class, baseUrl, "/v1/{name}:getGoogleUpdated", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MybusinesslodgingLocationsLodgingGetGoogleUpdatedRequest.class, baseUrl, "/v1/{name}:getGoogleUpdated", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MybusinesslodgingLocationsLodgingGetGoogleUpdatedQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MybusinesslodgingLocationsLodgingGetGoogleUpdatedRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -127,15 +127,15 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.MybusinesslodgingLocationsUpdateLodgingResponse mybusinesslodgingLocationsUpdateLodging(org.openapis.openapi.models.operations.MybusinesslodgingLocationsUpdateLodgingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MybusinesslodgingLocationsUpdateLodgingPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MybusinesslodgingLocationsUpdateLodgingRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "lodgingInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MybusinesslodgingLocationsUpdateLodgingQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MybusinesslodgingLocationsUpdateLodgingRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSegmentRequest {
-    
-    public GetSegmentPathParams pathParams;
-    public GetSegmentRequest withPathParams(GetSegmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the segment
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSegmentRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * True if you want to display licensed content
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeLicensedContent")
+    public GetSegmentIncludeLicensedContentEnum includeLicensedContent;
+    public GetSegmentRequest withIncludeLicensedContent(GetSegmentIncludeLicensedContentEnum includeLicensedContent) {
+        this.includeLicensedContent = includeLicensedContent;
+        return this;
+    }
     
-    public GetSegmentQueryParams queryParams;
-    public GetSegmentRequest withQueryParams(GetSegmentQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The locale in ISO code format. Multiple comma-separated values can be provided. When omitting the country part of the code (e.g. only 'en' or 'fr') then the first matching locale is used. When using a '*' it matches all locales. '*' can only be used at the end (e.g. 'en-us,en,*') 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
+    public String locale;
+    public GetSegmentRequest withLocale(String locale) {
+        this.locale = locale;
         return this;
     }
     

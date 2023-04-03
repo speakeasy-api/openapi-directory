@@ -4,13 +4,257 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimPowerPortTemplatesListRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=allocated_draw")
+    public String allocatedDraw;
+    public DcimPowerPortTemplatesListRequest withAllocatedDraw(String allocatedDraw) {
+        this.allocatedDraw = allocatedDraw;
+        return this;
+    }
     
-    public DcimPowerPortTemplatesListQueryParams queryParams;
-    public DcimPowerPortTemplatesListRequest withQueryParams(DcimPowerPortTemplatesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=allocated_draw__gt")
+    public String allocatedDrawGt;
+    public DcimPowerPortTemplatesListRequest withAllocatedDrawGt(String allocatedDrawGt) {
+        this.allocatedDrawGt = allocatedDrawGt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=allocated_draw__gte")
+    public String allocatedDrawGte;
+    public DcimPowerPortTemplatesListRequest withAllocatedDrawGte(String allocatedDrawGte) {
+        this.allocatedDrawGte = allocatedDrawGte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=allocated_draw__lt")
+    public String allocatedDrawLt;
+    public DcimPowerPortTemplatesListRequest withAllocatedDrawLt(String allocatedDrawLt) {
+        this.allocatedDrawLt = allocatedDrawLt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=allocated_draw__lte")
+    public String allocatedDrawLte;
+    public DcimPowerPortTemplatesListRequest withAllocatedDrawLte(String allocatedDrawLte) {
+        this.allocatedDrawLte = allocatedDrawLte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=allocated_draw__n")
+    public String allocatedDrawN;
+    public DcimPowerPortTemplatesListRequest withAllocatedDrawN(String allocatedDrawN) {
+        this.allocatedDrawN = allocatedDrawN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devicetype_id")
+    public String devicetypeId;
+    public DcimPowerPortTemplatesListRequest withDevicetypeId(String devicetypeId) {
+        this.devicetypeId = devicetypeId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devicetype_id__n")
+    public String devicetypeIdN;
+    public DcimPowerPortTemplatesListRequest withDevicetypeIdN(String devicetypeIdN) {
+        this.devicetypeIdN = devicetypeIdN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public DcimPowerPortTemplatesListRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__gt")
+    public String idGt;
+    public DcimPowerPortTemplatesListRequest withIdGt(String idGt) {
+        this.idGt = idGt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__gte")
+    public String idGte;
+    public DcimPowerPortTemplatesListRequest withIdGte(String idGte) {
+        this.idGte = idGte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__lt")
+    public String idLt;
+    public DcimPowerPortTemplatesListRequest withIdLt(String idLt) {
+        this.idLt = idLt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__lte")
+    public String idLte;
+    public DcimPowerPortTemplatesListRequest withIdLte(String idLte) {
+        this.idLte = idLte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__n")
+    public String idN;
+    public DcimPowerPortTemplatesListRequest withIdN(String idN) {
+        this.idN = idN;
+        return this;
+    }
+    
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public DcimPowerPortTemplatesListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maximum_draw")
+    public String maximumDraw;
+    public DcimPowerPortTemplatesListRequest withMaximumDraw(String maximumDraw) {
+        this.maximumDraw = maximumDraw;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maximum_draw__gt")
+    public String maximumDrawGt;
+    public DcimPowerPortTemplatesListRequest withMaximumDrawGt(String maximumDrawGt) {
+        this.maximumDrawGt = maximumDrawGt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maximum_draw__gte")
+    public String maximumDrawGte;
+    public DcimPowerPortTemplatesListRequest withMaximumDrawGte(String maximumDrawGte) {
+        this.maximumDrawGte = maximumDrawGte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maximum_draw__lt")
+    public String maximumDrawLt;
+    public DcimPowerPortTemplatesListRequest withMaximumDrawLt(String maximumDrawLt) {
+        this.maximumDrawLt = maximumDrawLt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maximum_draw__lte")
+    public String maximumDrawLte;
+    public DcimPowerPortTemplatesListRequest withMaximumDrawLte(String maximumDrawLte) {
+        this.maximumDrawLte = maximumDrawLte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maximum_draw__n")
+    public String maximumDrawN;
+    public DcimPowerPortTemplatesListRequest withMaximumDrawN(String maximumDrawN) {
+        this.maximumDrawN = maximumDrawN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public DcimPowerPortTemplatesListRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__ic")
+    public String nameIc;
+    public DcimPowerPortTemplatesListRequest withNameIc(String nameIc) {
+        this.nameIc = nameIc;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__ie")
+    public String nameIe;
+    public DcimPowerPortTemplatesListRequest withNameIe(String nameIe) {
+        this.nameIe = nameIe;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__iew")
+    public String nameIew;
+    public DcimPowerPortTemplatesListRequest withNameIew(String nameIew) {
+        this.nameIew = nameIew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__isw")
+    public String nameIsw;
+    public DcimPowerPortTemplatesListRequest withNameIsw(String nameIsw) {
+        this.nameIsw = nameIsw;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__n")
+    public String nameN;
+    public DcimPowerPortTemplatesListRequest withNameN(String nameN) {
+        this.nameN = nameN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__nic")
+    public String nameNic;
+    public DcimPowerPortTemplatesListRequest withNameNic(String nameNic) {
+        this.nameNic = nameNic;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__nie")
+    public String nameNie;
+    public DcimPowerPortTemplatesListRequest withNameNie(String nameNie) {
+        this.nameNie = nameNie;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__niew")
+    public String nameNiew;
+    public DcimPowerPortTemplatesListRequest withNameNiew(String nameNiew) {
+        this.nameNiew = nameNiew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__nisw")
+    public String nameNisw;
+    public DcimPowerPortTemplatesListRequest withNameNisw(String nameNisw) {
+        this.nameNisw = nameNisw;
+        return this;
+    }
+    
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public DcimPowerPortTemplatesListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public DcimPowerPortTemplatesListRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public DcimPowerPortTemplatesListRequest withType(String type) {
+        this.type = type;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type__n")
+    public String typeN;
+    public DcimPowerPortTemplatesListRequest withTypeN(String typeN) {
+        this.typeN = typeN;
         return this;
     }
     

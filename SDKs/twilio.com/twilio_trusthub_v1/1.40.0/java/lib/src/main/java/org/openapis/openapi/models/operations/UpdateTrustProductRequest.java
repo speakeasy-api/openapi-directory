@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateTrustProductRequest {
-    
-    public UpdateTrustProductPathParams pathParams;
-    public UpdateTrustProductRequest withPathParams(UpdateTrustProductPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateTrustProductUpdateTrustProductRequest request;
-    public UpdateTrustProductRequest withRequest(UpdateTrustProductUpdateTrustProductRequest request) {
-        this.request = request;
+    public UpdateTrustProductUpdateTrustProductRequest requestBody;
+    public UpdateTrustProductRequest withRequestBody(UpdateTrustProductUpdateTrustProductRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateTrustProductSecurity security;
-    public UpdateTrustProductRequest withSecurity(UpdateTrustProductSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateTrustProductRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique string that we created to identify the Customer-Profile resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateTrustProductRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

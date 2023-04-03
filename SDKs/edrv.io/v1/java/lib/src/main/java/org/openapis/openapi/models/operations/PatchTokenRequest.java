@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchTokenRequest {
-    
-    public PatchTokenPathParams pathParams;
-    public PatchTokenRequest withPathParams(PatchTokenPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Include token properties to create here
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PatchTokenRequestBody request;
-    public PatchTokenRequest withRequest(PatchTokenRequestBody request) {
-        this.request = request;
+    public PatchTokenRequestBody requestBody;
+    public PatchTokenRequest withRequestBody(PatchTokenRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * ID of token that needs to be updated
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatchTokenRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

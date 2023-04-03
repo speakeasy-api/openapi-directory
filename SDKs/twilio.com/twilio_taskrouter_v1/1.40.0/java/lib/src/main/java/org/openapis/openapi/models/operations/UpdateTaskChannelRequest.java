@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateTaskChannelRequest {
-    
-    public UpdateTaskChannelPathParams pathParams;
-    public UpdateTaskChannelRequest withPathParams(UpdateTaskChannelPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateTaskChannelUpdateTaskChannelRequest request;
-    public UpdateTaskChannelRequest withRequest(UpdateTaskChannelUpdateTaskChannelRequest request) {
-        this.request = request;
+    public UpdateTaskChannelUpdateTaskChannelRequest requestBody;
+    public UpdateTaskChannelRequest withRequestBody(UpdateTaskChannelUpdateTaskChannelRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateTaskChannelSecurity security;
-    public UpdateTaskChannelRequest withSecurity(UpdateTaskChannelSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the Task Channel resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateTaskChannelRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public String serverURL;
-    public UpdateTaskChannelRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Workspace with the Task Channel to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkspaceSid")
+    public String workspaceSid;
+    public UpdateTaskChannelRequest withWorkspaceSid(String workspaceSid) {
+        this.workspaceSid = workspaceSid;
         return this;
     }
     

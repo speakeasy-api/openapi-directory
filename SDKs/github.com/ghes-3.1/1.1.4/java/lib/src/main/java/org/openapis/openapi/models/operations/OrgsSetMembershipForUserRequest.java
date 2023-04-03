@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgsSetMembershipForUserRequest {
-    
-    public OrgsSetMembershipForUserPathParams pathParams;
-    public OrgsSetMembershipForUserRequest withPathParams(OrgsSetMembershipForUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public OrgsSetMembershipForUserRequestBody requestBody;
+    public OrgsSetMembershipForUserRequest withRequestBody(OrgsSetMembershipForUserRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public OrgsSetMembershipForUserRequestBody request;
-    public OrgsSetMembershipForUserRequest withRequest(OrgsSetMembershipForUserRequestBody request) {
-        this.request = request;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public OrgsSetMembershipForUserRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
+    
+    /**
+     * The handle for the GitHub user account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public OrgsSetMembershipForUserRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

@@ -7,31 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PublishMessagesToChannelJsonRequest {
-    
-    public PublishMessagesToChannelJsonPathParams pathParams;
-    public PublishMessagesToChannelJsonRequest withPathParams(PublishMessagesToChannelJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PublishMessagesToChannelJsonQueryParams queryParams;
-    public PublishMessagesToChannelJsonRequest withQueryParams(PublishMessagesToChannelJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public PublishMessagesToChannelJsonHeaders headers;
-    public PublishMessagesToChannelJsonRequest withHeaders(PublishMessagesToChannelJsonHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.MessageInput request;
-    public PublishMessagesToChannelJsonRequest withRequest(org.openapis.openapi.models.shared.MessageInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.MessageInput messageInput;
+    public PublishMessagesToChannelJsonRequest withMessageInput(org.openapis.openapi.models.shared.MessageInput messageInput) {
+        this.messageInput = messageInput;
+        return this;
+    }
+    
+    /**
+     * The version of the API you wish to use.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Ably-Version")
+    public String xAblyVersion;
+    public PublishMessagesToChannelJsonRequest withXAblyVersion(String xAblyVersion) {
+        this.xAblyVersion = xAblyVersion;
+        return this;
+    }
+    
+    /**
+     * The [Channel's ID](https://www.ably.io/documentation/rest/channels).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel_id")
+    public String channelId;
+    public PublishMessagesToChannelJsonRequest withChannelId(String channelId) {
+        this.channelId = channelId;
+        return this;
+    }
+    
+    /**
+     * The response format you would like
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public org.openapis.openapi.models.shared.ResponseFormatEnum format;
+    public PublishMessagesToChannelJsonRequest withFormat(org.openapis.openapi.models.shared.ResponseFormatEnum format) {
+        this.format = format;
         return this;
     }
     

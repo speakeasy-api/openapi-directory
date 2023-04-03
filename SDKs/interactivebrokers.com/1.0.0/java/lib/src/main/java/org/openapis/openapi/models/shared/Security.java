@@ -7,9 +7,9 @@ package org.openapis.openapi.models.shared;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Security {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public SchemeCookieAuth cookieAuth;
-    public Security withCookieAuth(SchemeCookieAuth cookieAuth) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=portal")
+    public String cookieAuth;
+    public Security withCookieAuth(String cookieAuth) {
         this.cookieAuth = cookieAuth;
         return this;
     }

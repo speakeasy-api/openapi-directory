@@ -18,10 +18,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIdSecurity;
-import org.openapis.openapi.models.operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIdPathParams;
 import org.openapis.openapi.models.operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIdRequest;
 import org.openapis.openapi.models.operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIdResponse;
-import org.openapis.openapi.models.shared.SchemeBearer;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,19 +28,14 @@ public class Application {
                 .build();
 
             DeleteWorkspaceSlugMembersMemberSlugActivitiesIdRequest req = new DeleteWorkspaceSlugMembersMemberSlugActivitiesIdRequest() {{
-                security = new DeleteWorkspaceSlugMembersMemberSlugActivitiesIdSecurity() {{
-                    bearer = new SchemeBearer() {{
-                        authorization = "Bearer YOUR_BEARER_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new DeleteWorkspaceSlugMembersMemberSlugActivitiesIdPathParams() {{
-                    id = "corrupti";
-                    memberSlug = "provident";
-                    workspaceSlug = "distinctio";
-                }};
-            }};            
+                id = "corrupti";
+                memberSlug = "provident";
+                workspaceSlug = "distinctio";
+            }}            
 
-            DeleteWorkspaceSlugMembersMemberSlugActivitiesIdResponse res = sdk.activities.deleteWorkspaceSlugMembersMemberSlugActivitiesId(req);
+            DeleteWorkspaceSlugMembersMemberSlugActivitiesIdResponse res = sdk.activities.deleteWorkspaceSlugMembersMemberSlugActivitiesId(req, new DeleteWorkspaceSlugMembersMemberSlugActivitiesIdSecurity() {{
+                bearer = "Bearer YOUR_BEARER_TOKEN_HERE";
+            }});
 
             if (res.statusCode == 200) {
                 // handle response
@@ -54,7 +47,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### activities

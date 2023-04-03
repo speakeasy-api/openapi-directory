@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETPutRolePermissionsBoundaryRequest {
-    
-    public GETPutRolePermissionsBoundaryQueryParams queryParams;
-    public GETPutRolePermissionsBoundaryRequest withQueryParams(GETPutRolePermissionsBoundaryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETPutRolePermissionsBoundaryActionEnum action;
+    public GETPutRolePermissionsBoundaryRequest withAction(GETPutRolePermissionsBoundaryActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The ARN of the managed policy that is used to set the permissions boundary for the role.&lt;/p&gt; &lt;p&gt;A permissions boundary policy defines the maximum permissions that identity-based policies can grant to an entity, but does not grant permissions. Permissions boundaries do not define the maximum permissions that a resource-based policy can grant to an entity. To learn more, see &lt;a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html"&gt;Permissions boundaries for IAM entities&lt;/a&gt; in the &lt;i&gt;IAM User Guide&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;For more information about policy types, see &lt;a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#access_policy-types"&gt;Policy types &lt;/a&gt; in the &lt;i&gt;IAM User Guide&lt;/i&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PermissionsBoundary")
+    public String permissionsBoundary;
+    public GETPutRolePermissionsBoundaryRequest withPermissionsBoundary(String permissionsBoundary) {
+        this.permissionsBoundary = permissionsBoundary;
+        return this;
+    }
     
-    public GETPutRolePermissionsBoundaryHeaders headers;
-    public GETPutRolePermissionsBoundaryRequest withHeaders(GETPutRolePermissionsBoundaryHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name (friendly name, not ARN) of the IAM role for which you want to set the permissions boundary.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RoleName")
+    public String roleName;
+    public GETPutRolePermissionsBoundaryRequest withRoleName(String roleName) {
+        this.roleName = roleName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETPutRolePermissionsBoundaryVersionEnum version;
+    public GETPutRolePermissionsBoundaryRequest withVersion(GETPutRolePermissionsBoundaryVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETPutRolePermissionsBoundaryRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETPutRolePermissionsBoundaryRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETPutRolePermissionsBoundaryRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETPutRolePermissionsBoundaryRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETPutRolePermissionsBoundaryRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETPutRolePermissionsBoundaryRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETPutRolePermissionsBoundaryRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

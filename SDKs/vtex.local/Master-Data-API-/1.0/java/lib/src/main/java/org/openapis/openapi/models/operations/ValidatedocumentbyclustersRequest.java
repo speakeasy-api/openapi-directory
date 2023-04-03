@@ -7,17 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ValidatedocumentbyclustersRequest {
-    
-    public ValidatedocumentbyclustersPathParams pathParams;
-    public ValidatedocumentbyclustersRequest withPathParams(ValidatedocumentbyclustersPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ValidatedocumentbyclustersHeaders headers;
-    public ValidatedocumentbyclustersRequest withHeaders(ValidatedocumentbyclustersHeaders headers) {
-        this.headers = headers;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public ValidatedocumentbyclustersRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
@@ -25,9 +21,29 @@ public class ValidatedocumentbyclustersRequest {
      * Request body for validating a document by clusters
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public String request;
-    public ValidatedocumentbyclustersRequest withRequest(String request) {
-        this.request = request;
+    public String requestBody;
+    public ValidatedocumentbyclustersRequest withRequestBody(String requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Name of the data entity. Defined by the api. Examples of native data entities you can use are `CL` for client profiles and `AD` for client addresses.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dataEntityName")
+    public String dataEntityName;
+    public ValidatedocumentbyclustersRequest withDataEntityName(String dataEntityName) {
+        this.dataEntityName = dataEntityName;
+        return this;
+    }
+    
+    /**
+     * ID of the Document.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public ValidatedocumentbyclustersRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

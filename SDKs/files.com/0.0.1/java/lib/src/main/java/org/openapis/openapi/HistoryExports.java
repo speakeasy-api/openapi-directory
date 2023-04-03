@@ -43,7 +43,7 @@ public class HistoryExports {
      */
     public org.openapis.openapi.models.operations.GetHistoryExportsIdResponse getHistoryExportsId(org.openapis.openapi.models.operations.GetHistoryExportsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetHistoryExportsIdPathParams.class, baseUrl, "/history_exports/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetHistoryExportsIdRequest.class, baseUrl, "/history_exports/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -82,7 +82,7 @@ public class HistoryExports {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostHistoryExportsResponse postHistoryExports(org.openapis.openapi.models.operations.PostHistoryExportsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostHistoryExportsResponse postHistoryExports(org.openapis.openapi.models.operations.PostHistoryExportsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/history_exports");
         

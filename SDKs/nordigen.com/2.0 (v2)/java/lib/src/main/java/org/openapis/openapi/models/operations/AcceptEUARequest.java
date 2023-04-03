@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AcceptEUARequest {
-    
-    public AcceptEUAPathParams pathParams;
-    public AcceptEUARequest withPathParams(AcceptEUAPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.EnduserAcceptanceDetailsRequest enduserAcceptanceDetailsRequest;
+    public AcceptEUARequest withEnduserAcceptanceDetailsRequest(org.openapis.openapi.models.shared.EnduserAcceptanceDetailsRequest enduserAcceptanceDetailsRequest) {
+        this.enduserAcceptanceDetailsRequest = enduserAcceptanceDetailsRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.EnduserAcceptanceDetailsRequest request;
-    public AcceptEUARequest withRequest(org.openapis.openapi.models.shared.EnduserAcceptanceDetailsRequest request) {
-        this.request = request;
+    /**
+     * A UUID string identifying this end user agreement.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public AcceptEUARequest withId(String id) {
+        this.id = id;
         return this;
     }
     

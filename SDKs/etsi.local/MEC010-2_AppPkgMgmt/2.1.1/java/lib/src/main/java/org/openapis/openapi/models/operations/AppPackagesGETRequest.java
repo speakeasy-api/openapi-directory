@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppPackagesGETRequest {
+    /**
+     * Include all complex attributes in the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=all_fields")
+    public String allFields;
+    public AppPackagesGETRequest withAllFields(String allFields) {
+        this.allFields = allFields;
+        return this;
+    }
     
-    public AppPackagesGETQueryParams queryParams;
-    public AppPackagesGETRequest withQueryParams(AppPackagesGETQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Indicates to exclude the following complex attributes of AppPkgInfo from the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_default")
+    public String excludeDefault;
+    public AppPackagesGETRequest withExcludeDefault(String excludeDefault) {
+        this.excludeDefault = excludeDefault;
+        return this;
+    }
+    
+    /**
+     * Complex attributes of AppPkgInfo to be excluded from the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_fields")
+    public String excludeFields;
+    public AppPackagesGETRequest withExcludeFields(String excludeFields) {
+        this.excludeFields = excludeFields;
+        return this;
+    }
+    
+    /**
+     * Complex attributes of AppPkgInfo to be included into the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AppPackagesGETRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Attribute-based filtering parameters according to ETSI GS MEC 009
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public AppPackagesGETRequest withFilter(String filter) {
+        this.filter = filter;
         return this;
     }
     

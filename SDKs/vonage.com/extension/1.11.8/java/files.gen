@@ -30,12 +30,9 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/ExtensionCtrlGetAccountExtensionByIDSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/ExtensionCtrlGetAccountExtensionByIDPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ExtensionCtrlGetAccountExtensionByIDRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ExtensionCtrlGetAccountExtensionByIDResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ExtensionCtrlGetAccountExtensionsSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/ExtensionCtrlGetAccountExtensionsPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/ExtensionCtrlGetAccountExtensionsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ExtensionCtrlGetAccountExtensionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ExtensionCtrlGetAccountExtensionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ErrorResponse.java
@@ -50,7 +47,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/EndUserRoute.java
 lib/src/main/java/org/openapis/openapi/models/shared/BasicUser.java
 lib/src/main/java/org/openapis/openapi/models/shared/Line.java
 lib/src/main/java/org/openapis/openapi/models/shared/Did.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeBearerAuth.java
 lib/src/main/java/org/openapis/openapi/models/shared/ValidationErrorsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/DetailedInvalidParam.java
 USAGE.md

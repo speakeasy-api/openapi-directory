@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLatestResultFileRequest {
-    
-    public GetLatestResultFilePathParams pathParams;
-    public GetLatestResultFileRequest withPathParams(GetLatestResultFilePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetLatestResultFileSecurity security;
-    public GetLatestResultFileRequest withSecurity(GetLatestResultFileSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the schedule for which to retrieve the latest result file. This ID is generated when the schedule was created by the &lt;strong&gt;createSchedule&lt;/strong&gt; method.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=schedule_id")
+    public String scheduleId;
+    public GetLatestResultFileRequest withScheduleId(String scheduleId) {
+        this.scheduleId = scheduleId;
         return this;
     }
     

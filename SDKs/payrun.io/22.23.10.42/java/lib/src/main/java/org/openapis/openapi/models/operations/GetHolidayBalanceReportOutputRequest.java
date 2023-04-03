@@ -4,20 +4,77 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetHolidayBalanceReportOutputRequest {
-    
-    public GetHolidayBalanceReportOutputQueryParams queryParams;
-    public GetHolidayBalanceReportOutputRequest withQueryParams(GetHolidayBalanceReportOutputQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The version of the api to target. Omit or set as &amp;apos;default&amp;apos; to target the current api version.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Version")
+    public String apiVersion;
+    public GetHolidayBalanceReportOutputRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
+    /**
+     * The OAuth 1 authorization header. &amp;apos;Auto&amp;apos; enables auto complete.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public GetHolidayBalanceReportOutputRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
+        return this;
+    }
     
-    public GetHolidayBalanceReportOutputHeaders headers;
-    public GetHolidayBalanceReportOutputRequest withHeaders(GetHolidayBalanceReportOutputHeaders headers) {
-        this.headers = headers;
+    /**
+     * A comma separated list of the employee codes. E.g. EMP001,EMP002
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EmployeeCodes")
+    public String employeeCodes;
+    public GetHolidayBalanceReportOutputRequest withEmployeeCodes(String employeeCodes) {
+        this.employeeCodes = employeeCodes;
+        return this;
+    }
+    
+    /**
+     * The employer unique key. E.g. ER001
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EmployerKey")
+    public String employerKey;
+    public GetHolidayBalanceReportOutputRequest withEmployerKey(String employerKey) {
+        this.employerKey = employerKey;
+        return this;
+    }
+    
+    /**
+     * The holiday year end for the report. E.g. 2018-12-31
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HolidayYearEnd")
+    public LocalDate holidayYearEnd;
+    public GetHolidayBalanceReportOutputRequest withHolidayYearEnd(LocalDate holidayYearEnd) {
+        this.holidayYearEnd = holidayYearEnd;
+        return this;
+    }
+    
+    /**
+     * The highest element index to return from the report. Used to control paging within large data sets. E.g. 100
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxIndex")
+    public String maxIndex;
+    public GetHolidayBalanceReportOutputRequest withMaxIndex(String maxIndex) {
+        this.maxIndex = maxIndex;
+        return this;
+    }
+    
+    /**
+     * The element index to begin the report. Used to control paging within large data sets. E.g. 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StartIndex")
+    public String startIndex;
+    public GetHolidayBalanceReportOutputRequest withStartIndex(String startIndex) {
+        this.startIndex = startIndex;
         return this;
     }
     

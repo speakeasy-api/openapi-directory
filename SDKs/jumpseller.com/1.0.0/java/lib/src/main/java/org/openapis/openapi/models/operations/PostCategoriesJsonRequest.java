@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCategoriesJsonRequest {
-    
-    public PostCategoriesJsonQueryParams queryParams;
-    public PostCategoriesJsonRequest withQueryParams(PostCategoriesJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Category parameters.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CategoryEdit request;
-    public PostCategoriesJsonRequest withRequest(org.openapis.openapi.models.shared.CategoryEdit request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CategoryEdit categoryEdit;
+    public PostCategoriesJsonRequest withCategoryEdit(org.openapis.openapi.models.shared.CategoryEdit categoryEdit) {
+        this.categoryEdit = categoryEdit;
+        return this;
+    }
+    
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public PostCategoriesJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
+        return this;
+    }
+    
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public PostCategoriesJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

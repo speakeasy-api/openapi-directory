@@ -4,27 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchUnderstandModelBuildRequest {
-    
-    public FetchUnderstandModelBuildPathParams pathParams;
-    public FetchUnderstandModelBuildRequest withPathParams(FetchUnderstandModelBuildPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public FetchUnderstandModelBuildRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
-    
-    public FetchUnderstandModelBuildSecurity security;
-    public FetchUnderstandModelBuildRequest withSecurity(FetchUnderstandModelBuildSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchUnderstandModelBuildRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchUnderstandModelBuildRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

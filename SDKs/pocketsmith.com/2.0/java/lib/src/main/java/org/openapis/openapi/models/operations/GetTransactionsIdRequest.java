@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTransactionsIdRequest {
-    
-    public GetTransactionsIdPathParams pathParams;
-    public GetTransactionsIdRequest withPathParams(GetTransactionsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the transaction.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetTransactionsIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

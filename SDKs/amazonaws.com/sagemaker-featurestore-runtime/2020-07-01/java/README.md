@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.BatchGetRecordHeaders;
 import org.openapis.openapi.models.operations.BatchGetRecordRequestBody;
 import org.openapis.openapi.models.operations.BatchGetRecordRequest;
 import org.openapis.openapi.models.operations.BatchGetRecordResponse;
@@ -28,79 +27,62 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             BatchGetRecordRequest req = new BatchGetRecordRequest() {{
-                headers = new BatchGetRecordHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new BatchGetRecordRequestBody() {{
+                requestBody = new BatchGetRecordRequestBody() {{
                     identifiers = new org.openapis.openapi.models.shared.BatchGetRecordIdentifier[]{{
                         add(new BatchGetRecordIdentifier() {{
-                            featureGroupName = "vel";
+                            featureGroupName = "provident";
                             featureNames = new String[]{{
-                                add("deserunt"),
-                                add("suscipit"),
-                                add("iure"),
+                                add("quibusdam"),
+                                add("unde"),
+                                add("nulla"),
                             }};
                             recordIdentifiersValueAsString = new String[]{{
-                                add("debitis"),
-                                add("ipsa"),
+                                add("illum"),
+                                add("vel"),
+                                add("error"),
                             }};
                         }}),
                         add(new BatchGetRecordIdentifier() {{
-                            featureGroupName = "delectus";
+                            featureGroupName = "deserunt";
                             featureNames = new String[]{{
-                                add("suscipit"),
-                                add("molestiae"),
+                                add("iure"),
+                                add("magnam"),
                             }};
                             recordIdentifiersValueAsString = new String[]{{
+                                add("ipsa"),
+                                add("delectus"),
+                                add("tempora"),
+                                add("suscipit"),
+                            }};
+                        }}),
+                        add(new BatchGetRecordIdentifier() {{
+                            featureGroupName = "molestiae";
+                            featureNames = new String[]{{
                                 add("placeat"),
                                 add("voluptatum"),
                                 add("iusto"),
                                 add("excepturi"),
                             }};
-                        }}),
-                        add(new BatchGetRecordIdentifier() {{
-                            featureGroupName = "nisi";
-                            featureNames = new String[]{{
+                            recordIdentifiersValueAsString = new String[]{{
+                                add("recusandae"),
                                 add("temporibus"),
-                                add("ab"),
-                                add("quis"),
-                                add("veritatis"),
-                            }};
-                            recordIdentifiersValueAsString = new String[]{{
-                                add("perferendis"),
-                                add("ipsam"),
-                                add("repellendus"),
-                            }};
-                        }}),
-                        add(new BatchGetRecordIdentifier() {{
-                            featureGroupName = "sapiente";
-                            featureNames = new String[]{{
-                                add("odit"),
-                                add("at"),
-                                add("at"),
-                                add("maiores"),
-                            }};
-                            recordIdentifiersValueAsString = new String[]{{
-                                add("quod"),
-                                add("quod"),
                             }};
                         }}),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "ab";
+                xAmzContentSha256 = "quis";
+                xAmzCredential = "veritatis";
+                xAmzDate = "deserunt";
+                xAmzSecurityToken = "perferendis";
+                xAmzSignature = "ipsam";
+                xAmzSignedHeaders = "repellendus";
+            }}            
 
             BatchGetRecordResponse res = sdk.batchGetRecord(req);
 
@@ -114,7 +96,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

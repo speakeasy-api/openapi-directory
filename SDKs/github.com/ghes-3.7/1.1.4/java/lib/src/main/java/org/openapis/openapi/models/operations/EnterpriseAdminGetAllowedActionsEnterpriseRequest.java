@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminGetAllowedActionsEnterpriseRequest {
-    
-    public EnterpriseAdminGetAllowedActionsEnterprisePathParams pathParams;
-    public EnterpriseAdminGetAllowedActionsEnterpriseRequest withPathParams(EnterpriseAdminGetAllowedActionsEnterprisePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
+    public String enterprise;
+    public EnterpriseAdminGetAllowedActionsEnterpriseRequest withEnterprise(String enterprise) {
+        this.enterprise = enterprise;
         return this;
     }
     

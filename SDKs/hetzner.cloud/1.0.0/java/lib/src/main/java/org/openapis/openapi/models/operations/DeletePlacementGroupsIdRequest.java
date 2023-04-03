@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletePlacementGroupsIdRequest {
-    
-    public DeletePlacementGroupsIdPathParams pathParams;
-    public DeletePlacementGroupsIdRequest withPathParams(DeletePlacementGroupsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the resource
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DeletePlacementGroupsIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePaymentPolicyRequest {
-    
-    public UpdatePaymentPolicyPathParams pathParams;
-    public UpdatePaymentPolicyRequest withPathParams(UpdatePaymentPolicyPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Payment policy request
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PaymentPolicyRequest request;
-    public UpdatePaymentPolicyRequest withRequest(org.openapis.openapi.models.shared.PaymentPolicyRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PaymentPolicyRequest paymentPolicyRequest;
+    public UpdatePaymentPolicyRequest withPaymentPolicyRequest(org.openapis.openapi.models.shared.PaymentPolicyRequest paymentPolicyRequest) {
+        this.paymentPolicyRequest = paymentPolicyRequest;
         return this;
     }
     
-    
-    public UpdatePaymentPolicySecurity security;
-    public UpdatePaymentPolicyRequest withSecurity(UpdatePaymentPolicySecurity security) {
-        this.security = security;
+    /**
+     * This path parameter specifies the ID of the payment policy you want to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payment_policy_id")
+    public String paymentPolicyId;
+    public UpdatePaymentPolicyRequest withPaymentPolicyId(String paymentPolicyId) {
+        this.paymentPolicyId = paymentPolicyId;
         return this;
     }
     

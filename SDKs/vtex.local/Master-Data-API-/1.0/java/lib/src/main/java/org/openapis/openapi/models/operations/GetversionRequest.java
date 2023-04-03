@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetversionRequest {
-    
-    public GetversionPathParams pathParams;
-    public GetversionRequest withPathParams(GetversionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetversionRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetversionRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetversionHeaders headers;
-    public GetversionRequest withHeaders(GetversionHeaders headers) {
-        this.headers = headers;
+    /**
+     * Name of the data entity. Defined by the api. Examples of native data entities you can use are `CL` for client profiles and `AD` for client addresses.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dataEntityName")
+    public String dataEntityName;
+    public GetversionRequest withDataEntityName(String dataEntityName) {
+        this.dataEntityName = dataEntityName;
+        return this;
+    }
+    
+    /**
+     * ID of the Document.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetversionRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * ID of the version to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionId")
+    public String versionId;
+    public GetversionRequest withVersionId(String versionId) {
+        this.versionId = versionId;
         return this;
     }
     

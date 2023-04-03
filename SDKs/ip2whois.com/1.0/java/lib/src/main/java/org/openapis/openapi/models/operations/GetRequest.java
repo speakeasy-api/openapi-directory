@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRequest {
+    /**
+     * Domain name for lookup purpose.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain")
+    public String domain;
+    public GetRequest withDomain(String domain) {
+        this.domain = domain;
+        return this;
+    }
     
-    public GetQueryParams queryParams;
-    public GetRequest withQueryParams(GetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Returns the API response in json (default) or xml format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public String format;
+    public GetRequest withFormat(String format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * API key.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public GetRequest withKey(String key) {
+        this.key = key;
         return this;
     }
     

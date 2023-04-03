@@ -18,10 +18,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GetApiV1ScansSecurity;
-import org.openapis.openapi.models.operations.GetApiV1ScansQueryParams;
 import org.openapis.openapi.models.operations.GetApiV1ScansRequest;
 import org.openapis.openapi.models.operations.GetApiV1ScansResponse;
-import org.openapis.openapi.models.shared.SchemeAPIKey;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,18 +28,13 @@ public class Application {
                 .build();
 
             GetApiV1ScansRequest req = new GetApiV1ScansRequest() {{
-                security = new GetApiV1ScansSecurity() {{
-                    apiKey = new SchemeAPIKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }};
-                queryParams = new GetApiV1ScansQueryParams() {{
-                    name = "corrupti";
-                    perPage = "provident";
-                }};
-            }};            
+                name = "corrupti";
+                perPage = "provident";
+            }}            
 
-            GetApiV1ScansResponse res = sdk.scans.getApiV1Scans(req);
+            GetApiV1ScansResponse res = sdk.scans.getApiV1Scans(req, new GetApiV1ScansSecurity() {{
+                apiKey = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.statusCode == 200) {
                 // handle response
@@ -53,7 +46,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### scans

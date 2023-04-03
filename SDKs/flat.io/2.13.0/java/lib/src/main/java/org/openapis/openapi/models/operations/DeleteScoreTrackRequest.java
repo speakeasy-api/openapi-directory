@@ -4,20 +4,28 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteScoreTrackRequest {
-    
-    public DeleteScoreTrackPathParams pathParams;
-    public DeleteScoreTrackRequest withPathParams(DeleteScoreTrackPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the score document. This can be a Flat Score unique identifier (i.e. `ScoreDetails.id`) or, if the score is also a Google Drive file, the Drive file unique identifier prefixed with `drive-` (e.g. `drive-0B000000000`).
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=score")
+    public String score;
+    public DeleteScoreTrackRequest withScore(String score) {
+        this.score = score;
         return this;
     }
     
-    
-    public DeleteScoreTrackSecurity security;
-    public DeleteScoreTrackRequest withSecurity(DeleteScoreTrackSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of a score audio track
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=track")
+    public String track;
+    public DeleteScoreTrackRequest withTrack(String track) {
+        this.track = track;
         return this;
     }
     

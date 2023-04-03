@@ -7,20 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchSpacesSpaceIdFoldersFolderIdPayrollsDocumentIdRequest {
-    
-    public PatchSpacesSpaceIdFoldersFolderIdPayrollsDocumentIdPathParams pathParams;
-    public PatchSpacesSpaceIdFoldersFolderIdPayrollsDocumentIdRequest withPathParams(PatchSpacesSpaceIdFoldersFolderIdPayrollsDocumentIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * A payroll to modify
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PatchSpacesSpaceIdFoldersFolderIdPayrollsDocumentIdRequestBody request;
-    public PatchSpacesSpaceIdFoldersFolderIdPayrollsDocumentIdRequest withRequest(PatchSpacesSpaceIdFoldersFolderIdPayrollsDocumentIdRequestBody request) {
-        this.request = request;
+    public PatchSpacesSpaceIdFoldersFolderIdPayrollsDocumentIdRequestBody requestBody;
+    public PatchSpacesSpaceIdFoldersFolderIdPayrollsDocumentIdRequest withRequestBody(PatchSpacesSpaceIdFoldersFolderIdPayrollsDocumentIdRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Id of the document
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=documentId")
+    public String documentId;
+    public PatchSpacesSpaceIdFoldersFolderIdPayrollsDocumentIdRequest withDocumentId(String documentId) {
+        this.documentId = documentId;
+        return this;
+    }
+    
+    /**
+     * Id of the folder
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=folderId")
+    public String folderId;
+    public PatchSpacesSpaceIdFoldersFolderIdPayrollsDocumentIdRequest withFolderId(String folderId) {
+        this.folderId = folderId;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PatchSpacesSpaceIdFoldersFolderIdPayrollsDocumentIdRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

@@ -41,7 +41,7 @@ public class Applications {
      */
     public org.openapis.openapi.models.operations.GetApplicationsApplicationIdResponse getApplicationsApplicationId(org.openapis.openapi.models.operations.GetApplicationsApplicationIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApplicationsApplicationIdPathParams.class, baseUrl, "/applications/{application_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApplicationsApplicationIdRequest.class, baseUrl, "/applications/{application_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -83,7 +83,7 @@ public class Applications {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostApplicationsResponse postApplications(org.openapis.openapi.models.operations.PostApplicationsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostApplicationsResponse postApplications(org.openapis.openapi.models.shared.ApplicationWriteV1 request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/applications");
         
@@ -131,12 +131,12 @@ public class Applications {
      */
     public org.openapis.openapi.models.operations.PutApplicationsApplicationIdResponse putApplicationsApplicationId(org.openapis.openapi.models.operations.PutApplicationsApplicationIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutApplicationsApplicationIdPathParams.class, baseUrl, "/applications/{application_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutApplicationsApplicationIdRequest.class, baseUrl, "/applications/{application_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "applicationWriteV1", "json");
         req.setBody(serializedRequestBody);
         
         

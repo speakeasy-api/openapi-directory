@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGenesByAliasSymbolUsingGETRequest {
+    /**
+     * Gene alias symbol
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=aliasSymbol")
+    public String aliasSymbol;
+    public GETGenesByAliasSymbolUsingGETRequest withAliasSymbol(String aliasSymbol) {
+        this.aliasSymbol = aliasSymbol;
+        return this;
+    }
     
-    public GETGenesByAliasSymbolUsingGETPathParams pathParams;
-    public GETGenesByAliasSymbolUsingGETRequest withPathParams(GETGenesByAliasSymbolUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A list of RGD species type keys can be found in the lookup service
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=speciesTypeKey")
+    public Integer speciesTypeKey;
+    public GETGenesByAliasSymbolUsingGETRequest withSpeciesTypeKey(Integer speciesTypeKey) {
+        this.speciesTypeKey = speciesTypeKey;
         return this;
     }
     

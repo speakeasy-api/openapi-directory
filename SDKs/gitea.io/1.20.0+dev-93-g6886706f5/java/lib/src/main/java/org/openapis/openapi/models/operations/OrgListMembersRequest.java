@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgListMembersRequest {
-    
-    public OrgListMembersPathParams pathParams;
-    public OrgListMembersRequest withPathParams(OrgListMembersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * page size of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public OrgListMembersRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * name of the organization
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public OrgListMembersRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
     
-    public OrgListMembersQueryParams queryParams;
-    public OrgListMembersRequest withQueryParams(OrgListMembersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * page number of results to return (1-based)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public OrgListMembersRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     

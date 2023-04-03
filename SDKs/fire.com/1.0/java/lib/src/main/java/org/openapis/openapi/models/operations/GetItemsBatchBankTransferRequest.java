@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetItemsBatchBankTransferRequest {
-    
-    public GetItemsBatchBankTransferPathParams pathParams;
-    public GetItemsBatchBankTransferRequest withPathParams(GetItemsBatchBankTransferPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=batchUuid")
+    public String batchUuid;
+    public GetItemsBatchBankTransferRequest withBatchUuid(String batchUuid) {
+        this.batchUuid = batchUuid;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetItemsBatchBankTransferRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetItemsBatchBankTransferQueryParams queryParams;
-    public GetItemsBatchBankTransferRequest withQueryParams(GetItemsBatchBankTransferQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetItemsBatchBankTransferRequest withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     

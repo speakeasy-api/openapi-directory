@@ -7,24 +7,79 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BatchUpdateTableRowsRequest {
-    
-    public BatchUpdateTableRowsPathParams pathParams;
-    public BatchUpdateTableRowsRequest withPathParams(BatchUpdateTableRowsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public BatchUpdateTableRowsHeaders headers;
-    public BatchUpdateTableRowsRequest withHeaders(BatchUpdateTableRowsHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public BatchUpdateTableRowsRequestBody request;
-    public BatchUpdateTableRowsRequest withRequest(BatchUpdateTableRowsRequestBody request) {
-        this.request = request;
+    public BatchUpdateTableRowsRequestBody requestBody;
+    public BatchUpdateTableRowsRequest withRequestBody(BatchUpdateTableRowsRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public BatchUpdateTableRowsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public BatchUpdateTableRowsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public BatchUpdateTableRowsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public BatchUpdateTableRowsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public BatchUpdateTableRowsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public BatchUpdateTableRowsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public BatchUpdateTableRowsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The ID of the table where the rows are being updated.&lt;/p&gt; &lt;p&gt; If a table with the specified id could not be found, this API throws ResourceNotFoundException. &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tableId")
+    public String tableId;
+    public BatchUpdateTableRowsRequest withTableId(String tableId) {
+        this.tableId = tableId;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The ID of the workbook where the rows are being updated.&lt;/p&gt; &lt;p&gt; If a workbook with the specified id could not be found, this API throws ResourceNotFoundException. &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workbookId")
+    public String workbookId;
+    public BatchUpdateTableRowsRequest withWorkbookId(String workbookId) {
+        this.workbookId = workbookId;
         return this;
     }
     

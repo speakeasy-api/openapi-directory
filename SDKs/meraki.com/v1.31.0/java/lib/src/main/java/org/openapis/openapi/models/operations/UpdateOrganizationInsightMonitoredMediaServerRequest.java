@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateOrganizationInsightMonitoredMediaServerRequest {
-    
-    public UpdateOrganizationInsightMonitoredMediaServerPathParams pathParams;
-    public UpdateOrganizationInsightMonitoredMediaServerRequest withPathParams(UpdateOrganizationInsightMonitoredMediaServerPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateOrganizationInsightMonitoredMediaServerRequestBody requestBody;
+    public UpdateOrganizationInsightMonitoredMediaServerRequest withRequestBody(UpdateOrganizationInsightMonitoredMediaServerRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateOrganizationInsightMonitoredMediaServerRequestBody request;
-    public UpdateOrganizationInsightMonitoredMediaServerRequest withRequest(UpdateOrganizationInsightMonitoredMediaServerRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=monitoredMediaServerId")
+    public String monitoredMediaServerId;
+    public UpdateOrganizationInsightMonitoredMediaServerRequest withMonitoredMediaServerId(String monitoredMediaServerId) {
+        this.monitoredMediaServerId = monitoredMediaServerId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public UpdateOrganizationInsightMonitoredMediaServerRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

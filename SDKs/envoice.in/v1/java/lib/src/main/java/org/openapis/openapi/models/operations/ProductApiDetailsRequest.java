@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProductApiDetailsRequest {
-    
-    public ProductApiDetailsQueryParams queryParams;
-    public ProductApiDetailsRequest withQueryParams(ProductApiDetailsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public Integer id;
+    public ProductApiDetailsRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
+    public String xAuthKey;
+    public ProductApiDetailsRequest withXAuthKey(String xAuthKey) {
+        this.xAuthKey = xAuthKey;
+        return this;
+    }
     
-    public ProductApiDetailsHeaders headers;
-    public ProductApiDetailsRequest withHeaders(ProductApiDetailsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
+    public String xAuthSecret;
+    public ProductApiDetailsRequest withXAuthSecret(String xAuthSecret) {
+        this.xAuthSecret = xAuthSecret;
         return this;
     }
     

@@ -4,13 +4,34 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostConfigApacheSlingDavExServletRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alias")
+    public String alias;
+    public PostConfigApacheSlingDavExServletRequest withAlias(String alias) {
+        this.alias = alias;
+        return this;
+    }
     
-    public PostConfigApacheSlingDavExServletQueryParams queryParams;
-    public PostConfigApacheSlingDavExServletRequest withQueryParams(PostConfigApacheSlingDavExServletQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alias@TypeHint")
+    public String aliasAtTypeHint;
+    public PostConfigApacheSlingDavExServletRequest withAliasAtTypeHint(String aliasAtTypeHint) {
+        this.aliasAtTypeHint = aliasAtTypeHint;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dav.create-absolute-uri")
+    public Boolean davCreateAbsoluteUri;
+    public PostConfigApacheSlingDavExServletRequest withDavCreateAbsoluteUri(Boolean davCreateAbsoluteUri) {
+        this.davCreateAbsoluteUri = davCreateAbsoluteUri;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dav.create-absolute-uri@TypeHint")
+    public String davCreateAbsoluteUriAtTypeHint;
+    public PostConfigApacheSlingDavExServletRequest withDavCreateAbsoluteUriAtTypeHint(String davCreateAbsoluteUriAtTypeHint) {
+        this.davCreateAbsoluteUriAtTypeHint = davCreateAbsoluteUriAtTypeHint;
         return this;
     }
     

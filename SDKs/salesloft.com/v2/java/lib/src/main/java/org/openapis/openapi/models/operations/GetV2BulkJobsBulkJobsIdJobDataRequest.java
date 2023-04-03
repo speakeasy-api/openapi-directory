@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2BulkJobsBulkJobsIdJobDataRequest {
-    
-    public GetV2BulkJobsBulkJobsIdJobDataPathParams pathParams;
-    public GetV2BulkJobsBulkJobsIdJobDataRequest withPathParams(GetV2BulkJobsBulkJobsIdJobDataPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id for the bulk job to which the job data relates
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bulk_jobs_id")
+    public Long bulkJobsId;
+    public GetV2BulkJobsBulkJobsIdJobDataRequest withBulkJobsId(Long bulkJobsId) {
+        this.bulkJobsId = bulkJobsId;
         return this;
     }
     
+    /**
+     * Filter by id using comparison operators. Only supports greater than (gt) comparison (i.e. id[gt]=123)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public java.util.Map<String, Object> id;
+    public GetV2BulkJobsBulkJobsIdJobDataRequest withId(java.util.Map<String, Object> id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetV2BulkJobsBulkJobsIdJobDataQueryParams queryParams;
-    public GetV2BulkJobsBulkJobsIdJobDataRequest withQueryParams(GetV2BulkJobsBulkJobsIdJobDataQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * How many records to show per page in the range [1, 100]. Defaults to 25
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetV2BulkJobsBulkJobsIdJobDataRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Filter by result status. Accepts multiple statuses. Each status must be one of pending, success, error, retrying
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=status")
+    public String[] status;
+    public GetV2BulkJobsBulkJobsIdJobDataRequest withStatus(String[] status) {
+        this.status = status;
         return this;
     }
     

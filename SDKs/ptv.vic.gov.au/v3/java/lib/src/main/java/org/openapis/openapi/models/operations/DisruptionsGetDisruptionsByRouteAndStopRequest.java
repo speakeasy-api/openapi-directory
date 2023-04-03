@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisruptionsGetDisruptionsByRouteAndStopRequest {
-    
-    public DisruptionsGetDisruptionsByRouteAndStopPathParams pathParams;
-    public DisruptionsGetDisruptionsByRouteAndStopRequest withPathParams(DisruptionsGetDisruptionsByRouteAndStopPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Your developer id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
+    public String devid;
+    public DisruptionsGetDisruptionsByRouteAndStopRequest withDevid(String devid) {
+        this.devid = devid;
         return this;
     }
     
+    /**
+     * Filter by status of disruption
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=disruption_status")
+    public DisruptionsGetDisruptionsByRouteAndStopDisruptionStatusEnum disruptionStatus;
+    public DisruptionsGetDisruptionsByRouteAndStopRequest withDisruptionStatus(DisruptionsGetDisruptionsByRouteAndStopDisruptionStatusEnum disruptionStatus) {
+        this.disruptionStatus = disruptionStatus;
+        return this;
+    }
     
-    public DisruptionsGetDisruptionsByRouteAndStopQueryParams queryParams;
-    public DisruptionsGetDisruptionsByRouteAndStopRequest withQueryParams(DisruptionsGetDisruptionsByRouteAndStopQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Identifier of route; values returned by Routes API - v3/routes
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=route_id")
+    public Integer routeId;
+    public DisruptionsGetDisruptionsByRouteAndStopRequest withRouteId(Integer routeId) {
+        this.routeId = routeId;
+        return this;
+    }
+    
+    /**
+     * Authentication signature for request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
+    public String signature;
+    public DisruptionsGetDisruptionsByRouteAndStopRequest withSignature(String signature) {
+        this.signature = signature;
+        return this;
+    }
+    
+    /**
+     * Identifier of stop; values returned by Stops API - v3/stops
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=stop_id")
+    public Integer stopId;
+    public DisruptionsGetDisruptionsByRouteAndStopRequest withStopId(Integer stopId) {
+        this.stopId = stopId;
+        return this;
+    }
+    
+    /**
+     * Please ignore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public DisruptionsGetDisruptionsByRouteAndStopRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

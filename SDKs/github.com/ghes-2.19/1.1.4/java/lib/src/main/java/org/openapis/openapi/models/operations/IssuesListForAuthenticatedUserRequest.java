@@ -4,13 +4,92 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssuesListForAuthenticatedUserRequest {
+    /**
+     * One of `asc` (ascending) or `desc` (descending).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public org.openapis.openapi.models.shared.DirectionEnum direction;
+    public IssuesListForAuthenticatedUserRequest withDirection(org.openapis.openapi.models.shared.DirectionEnum direction) {
+        this.direction = direction;
+        return this;
+    }
     
-    public IssuesListForAuthenticatedUserQueryParams queryParams;
-    public IssuesListForAuthenticatedUserRequest withQueryParams(IssuesListForAuthenticatedUserQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Indicates which sorts of issues to return. Can be one of:  
+     * \* `assigned`: Issues assigned to you  
+     * \* `created`: Issues created by you  
+     * \* `mentioned`: Issues mentioning you  
+     * \* `subscribed`: Issues you're subscribed to updates for  
+     * \* `all` or `repos`: All issues the authenticated user can see, regardless of participation or creation
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public IssuesListForAuthenticatedUserFilterEnum filter;
+    public IssuesListForAuthenticatedUserRequest withFilter(IssuesListForAuthenticatedUserFilterEnum filter) {
+        this.filter = filter;
+        return this;
+    }
+    
+    /**
+     * A list of comma separated label names. Example: `bug,ui,@high`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=labels")
+    public String labels;
+    public IssuesListForAuthenticatedUserRequest withLabels(String labels) {
+        this.labels = labels;
+        return this;
+    }
+    
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public IssuesListForAuthenticatedUserRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public IssuesListForAuthenticatedUserRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Only show notifications updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public OffsetDateTime since;
+    public IssuesListForAuthenticatedUserRequest withSince(OffsetDateTime since) {
+        this.since = since;
+        return this;
+    }
+    
+    /**
+     * What to sort results by. Can be either `created`, `updated`, `comments`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public IssuesListForAuthenticatedUserSortEnum sort;
+    public IssuesListForAuthenticatedUserRequest withSort(IssuesListForAuthenticatedUserSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Indicates the state of the issues to return. Can be either `open`, `closed`, or `all`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public IssuesListForAuthenticatedUserStateEnum state;
+    public IssuesListForAuthenticatedUserRequest withState(IssuesListForAuthenticatedUserStateEnum state) {
+        this.state = state;
         return this;
     }
     

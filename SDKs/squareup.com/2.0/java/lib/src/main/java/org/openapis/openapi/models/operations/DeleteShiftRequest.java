@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteShiftRequest {
-    
-    public DeleteShiftPathParams pathParams;
-    public DeleteShiftRequest withPathParams(DeleteShiftPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteShiftSecurity security;
-    public DeleteShiftRequest withSecurity(DeleteShiftSecurity security) {
-        this.security = security;
+    /**
+     * The UUID for the `Shift` being deleted.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteShiftRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

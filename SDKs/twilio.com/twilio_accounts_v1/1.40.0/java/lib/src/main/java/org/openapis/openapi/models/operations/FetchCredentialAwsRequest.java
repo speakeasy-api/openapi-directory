@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchCredentialAwsRequest {
-    
-    public FetchCredentialAwsPathParams pathParams;
-    public FetchCredentialAwsRequest withPathParams(FetchCredentialAwsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchCredentialAwsSecurity security;
-    public FetchCredentialAwsRequest withSecurity(FetchCredentialAwsSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchCredentialAwsRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the AWS resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchCredentialAwsRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

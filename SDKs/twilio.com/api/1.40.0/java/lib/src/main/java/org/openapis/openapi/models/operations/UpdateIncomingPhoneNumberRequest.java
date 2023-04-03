@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateIncomingPhoneNumberRequest {
-    
-    public UpdateIncomingPhoneNumberPathParams pathParams;
-    public UpdateIncomingPhoneNumberRequest withPathParams(UpdateIncomingPhoneNumberPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the IncomingPhoneNumber resource to update.  For more information, see [Exchanging Numbers Between Subaccounts](https://www.twilio.com/docs/iam/api/subaccounts#exchanging-numbers).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public UpdateIncomingPhoneNumberRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateIncomingPhoneNumberUpdateIncomingPhoneNumberRequest request;
-    public UpdateIncomingPhoneNumberRequest withRequest(UpdateIncomingPhoneNumberUpdateIncomingPhoneNumberRequest request) {
-        this.request = request;
+    public UpdateIncomingPhoneNumberUpdateIncomingPhoneNumberRequest requestBody;
+    public UpdateIncomingPhoneNumberRequest withRequestBody(UpdateIncomingPhoneNumberUpdateIncomingPhoneNumberRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateIncomingPhoneNumberSecurity security;
-    public UpdateIncomingPhoneNumberRequest withSecurity(UpdateIncomingPhoneNumberSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateIncomingPhoneNumberRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the IncomingPhoneNumber resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateIncomingPhoneNumberRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

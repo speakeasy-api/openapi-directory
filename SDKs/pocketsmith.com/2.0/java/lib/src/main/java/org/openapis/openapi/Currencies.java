@@ -77,7 +77,7 @@ public class Currencies {
      */
     public org.openapis.openapi.models.operations.GetCurrenciesIdResponse getCurrenciesId(org.openapis.openapi.models.operations.GetCurrenciesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCurrenciesIdPathParams.class, baseUrl, "/currencies/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCurrenciesIdRequest.class, baseUrl, "/currencies/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

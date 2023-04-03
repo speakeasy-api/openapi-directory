@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountDeleteDomainWhitelistRequest {
-    
-    public AccountDeleteDomainWhitelistPathParams pathParams;
-    public AccountDeleteDomainWhitelistRequest withPathParams(AccountDeleteDomainWhitelistPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the domain to delete
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=whitelistId")
+    public String whitelistId;
+    public AccountDeleteDomainWhitelistRequest withWhitelistId(String whitelistId) {
+        this.whitelistId = whitelistId;
         return this;
     }
     

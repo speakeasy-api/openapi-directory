@@ -48,7 +48,7 @@ public class Sources {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetResourcesSourcesJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetResourcesSourcesJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -89,7 +89,7 @@ public class Sources {
      */
     public org.openapis.openapi.models.operations.GetResourcesSourcesIdJsonResponse getResourcesSourcesIdJson(org.openapis.openapi.models.operations.GetResourcesSourcesIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesSourcesIdJsonPathParams.class, baseUrl, "/resources/sources/{id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesSourcesIdJsonRequest.class, baseUrl, "/resources/sources/{id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -130,13 +130,13 @@ public class Sources {
      */
     public org.openapis.openapi.models.operations.GetResourcesSourcesIdSyndicateFormatResponse getResourcesSourcesIdSyndicateFormat(org.openapis.openapi.models.operations.GetResourcesSourcesIdSyndicateFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesSourcesIdSyndicateFormatPathParams.class, baseUrl, "/resources/sources/{id}/syndicate.{format}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesSourcesIdSyndicateFormatRequest.class, baseUrl, "/resources/sources/{id}/syndicate.{format}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetResourcesSourcesIdSyndicateFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetResourcesSourcesIdSyndicateFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

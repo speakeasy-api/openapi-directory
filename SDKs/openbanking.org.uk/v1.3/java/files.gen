@@ -35,7 +35,6 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/GetAtmsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAtmsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAtmsErrorObject.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAtms503ErrorObjectDescriptionEnum.java
@@ -76,10 +75,8 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetAtms200ApplicationPr
 lib/src/main/java/org/openapis/openapi/models/operations/GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJson.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAtmsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/HeadAtmsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/HeadAtmsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/HeadAtmsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetBusinessCurrentAccountsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBusinessCurrentAccountsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBusinessCurrentAccountsErrorObject.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBusinessCurrentAccounts503ErrorObjectDescriptionEnum.java
@@ -194,10 +191,8 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetBusinessCurrentAccou
 lib/src/main/java/org/openapis/openapi/models/operations/GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJson.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBusinessCurrentAccountsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/HeadBusinessCurrentAccountsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/HeadBusinessCurrentAccountsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/HeadBusinessCurrentAccountsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetBranchesHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBranchesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBranchesErrorObject.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBranches503ErrorObjectDescriptionEnum.java
@@ -244,10 +239,8 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetBranches200Applicati
 lib/src/main/java/org/openapis/openapi/models/operations/GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJson.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBranchesResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/HeadBranchesHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/HeadBranchesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/HeadBranchesResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetCommercialCreditCardsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCommercialCreditCardsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCommercialCreditCardsErrorObject.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCommercialCreditCards503ErrorObjectDescriptionEnum.java
@@ -302,10 +295,8 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetCommercialCreditCard
 lib/src/main/java/org/openapis/openapi/models/operations/GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJson.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCommercialCreditCardsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/HeadCommercialCreditCardsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/HeadCommercialCreditCardsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/HeadCommercialCreditCardsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetPersonalCurrentAccountsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPersonalCurrentAccountsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPersonalCurrentAccountsErrorObject.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPersonalCurrentAccounts503ErrorObjectDescriptionEnum.java
@@ -420,10 +411,8 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetPersonalCurrentAccou
 lib/src/main/java/org/openapis/openapi/models/operations/GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPersonalCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJson.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPersonalCurrentAccountsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/HeadPersonalCurrentAccountsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/HeadPersonalCurrentAccountsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/HeadPersonalCurrentAccountsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetUnsecuredSmeLoansHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetUnsecuredSmeLoansRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetUnsecuredSmeLoansErrorObject.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetUnsecuredSmeLoans503ErrorObjectDescriptionEnum.java
@@ -489,7 +478,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetUnsecuredSmeLoans200
 lib/src/main/java/org/openapis/openapi/models/operations/GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonMetaData.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetUnsecuredSmeLoansResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/HeadUnsecuredSmeLoansHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/HeadUnsecuredSmeLoansRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/HeadUnsecuredSmeLoansResponse.java
 USAGE.md

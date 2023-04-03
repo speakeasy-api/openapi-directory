@@ -4,13 +4,127 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class HistoryListRequest {
+    /**
+     * Used for pagination.  When a list request has more records available, cursors are provided in the response headers `X-Files-Cursor-Next` and `X-Files-Cursor-Prev`.  Send one of those cursor value here to resume an existing list from the next available record.  Note: many of our SDKs have iterator methods that will automatically handle cursor-based pagination.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public HistoryListRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
     
-    public HistoryListQueryParams queryParams;
-    public HistoryListRequest withQueryParams(HistoryListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Display format. Leave blank or set to `full` or `parent`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=display")
+    public String display;
+    public HistoryListRequest withDisplay(String display) {
+        this.display = display;
+        return this;
+    }
+    
+    /**
+     * Leave blank or set to a date/time to filter later entries.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_at")
+    public OffsetDateTime endAt;
+    public HistoryListRequest withEndAt(OffsetDateTime endAt) {
+        this.endAt = endAt;
+        return this;
+    }
+    
+    /**
+     * If set, return records where the specified field is equal to the supplied value. Valid fields are `user_id`, `folder` or `path`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public java.util.Map<String, Object> filter;
+    public HistoryListRequest withFilter(java.util.Map<String, Object> filter) {
+        this.filter = filter;
+        return this;
+    }
+    
+    /**
+     * If set, return records where the specified field is greater than the supplied value. Valid fields are `user_id`, `folder` or `path`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_gt")
+    public java.util.Map<String, Object> filterGt;
+    public HistoryListRequest withFilterGt(java.util.Map<String, Object> filterGt) {
+        this.filterGt = filterGt;
+        return this;
+    }
+    
+    /**
+     * If set, return records where the specified field is greater than or equal to the supplied value. Valid fields are `user_id`, `folder` or `path`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_gteq")
+    public java.util.Map<String, Object> filterGteq;
+    public HistoryListRequest withFilterGteq(java.util.Map<String, Object> filterGteq) {
+        this.filterGteq = filterGteq;
+        return this;
+    }
+    
+    /**
+     * If set, return records where the specified field is equal to the supplied value. Valid fields are `user_id`, `folder` or `path`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_like")
+    public java.util.Map<String, Object> filterLike;
+    public HistoryListRequest withFilterLike(java.util.Map<String, Object> filterLike) {
+        this.filterLike = filterLike;
+        return this;
+    }
+    
+    /**
+     * If set, return records where the specified field is less than the supplied value. Valid fields are `user_id`, `folder` or `path`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_lt")
+    public java.util.Map<String, Object> filterLt;
+    public HistoryListRequest withFilterLt(java.util.Map<String, Object> filterLt) {
+        this.filterLt = filterLt;
+        return this;
+    }
+    
+    /**
+     * If set, return records where the specified field is less than or equal to the supplied value. Valid fields are `user_id`, `folder` or `path`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_lteq")
+    public java.util.Map<String, Object> filterLteq;
+    public HistoryListRequest withFilterLteq(java.util.Map<String, Object> filterLteq) {
+        this.filterLteq = filterLteq;
+        return this;
+    }
+    
+    /**
+     * Number of records to show per page.  (Max: 10,000, 1,000 or less is recommended).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public HistoryListRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * If set, sort records by the specified field in either `asc` or `desc` direction (e.g. `sort_by[path]=desc`). Valid fields are `path`, `folder`, `user_id` or `created_at`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
+    public java.util.Map<String, Object> sortBy;
+    public HistoryListRequest withSortBy(java.util.Map<String, Object> sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    
+    /**
+     * Leave blank or set to a date/time to filter earlier entries.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_at")
+    public OffsetDateTime startAt;
+    public HistoryListRequest withStartAt(OffsetDateTime startAt) {
+        this.startAt = startAt;
         return this;
     }
     

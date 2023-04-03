@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AuthorizeIframeRequest {
-    
-    public AuthorizeIframePathParams pathParams;
-    public AuthorizeIframeRequest withPathParams(AuthorizeIframePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Client identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=client_id")
+    public String clientId;
+    public AuthorizeIframeRequest withClientId(String clientId) {
+        this.clientId = clientId;
         return this;
     }
     

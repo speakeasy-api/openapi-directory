@@ -4,20 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListInvoicesRequest {
-    
-    public ListInvoicesQueryParams queryParams;
-    public ListInvoicesRequest withQueryParams(ListInvoicesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A pagination cursor returned by a previous call to this endpoint. 
+     * Provide this cursor to retrieve the next set of results for your original query.
+     * 
+     * For more information, see [Pagination](https://developer.squareup.com/docs/working-with-apis/pagination).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public ListInvoicesRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
+    /**
+     * The maximum number of invoices to return (200 is the maximum `limit`). 
+     * If not provided, the server uses a default limit of 100 invoices.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListInvoicesRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public ListInvoicesSecurity security;
-    public ListInvoicesRequest withSecurity(ListInvoicesSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the location for which to list invoices.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location_id")
+    public String locationId;
+    public ListInvoicesRequest withLocationId(String locationId) {
+        this.locationId = locationId;
         return this;
     }
     

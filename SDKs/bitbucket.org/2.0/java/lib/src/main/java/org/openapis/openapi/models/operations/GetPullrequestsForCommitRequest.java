@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPullrequestsForCommitRequest {
-    
-    public GetPullrequestsForCommitPathParams pathParams;
-    public GetPullrequestsForCommitRequest withPathParams(GetPullrequestsForCommitPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SHA1 of the commit
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commit")
+    public String commit;
+    public GetPullrequestsForCommitRequest withCommit(String commit) {
+        this.commit = commit;
         return this;
     }
     
+    /**
+     * Which page to retrieve
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetPullrequestsForCommitRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetPullrequestsForCommitQueryParams queryParams;
-    public GetPullrequestsForCommitRequest withQueryParams(GetPullrequestsForCommitQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * How many pull requests to retrieve per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagelen")
+    public Integer pagelen;
+    public GetPullrequestsForCommitRequest withPagelen(Integer pagelen) {
+        this.pagelen = pagelen;
+        return this;
+    }
+    
+    /**
+     * The repository; either the UUID in curly braces, or the slug
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public GetPullrequestsForCommitRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
+    
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetPullrequestsForCommitRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

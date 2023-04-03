@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCallRequest {
-    
-    public UpdateCallPathParams pathParams;
-    public UpdateCallRequest withPathParams(UpdateCallPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Call resource(s) to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public UpdateCallRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateCallUpdateCallRequest request;
-    public UpdateCallRequest withRequest(UpdateCallUpdateCallRequest request) {
-        this.request = request;
+    public UpdateCallUpdateCallRequest requestBody;
+    public UpdateCallRequest withRequestBody(UpdateCallUpdateCallRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateCallSecurity security;
-    public UpdateCallRequest withSecurity(UpdateCallSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateCallRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the Call resource to update
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateCallRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

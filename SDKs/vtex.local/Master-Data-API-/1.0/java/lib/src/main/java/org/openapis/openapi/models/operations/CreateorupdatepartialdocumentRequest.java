@@ -7,24 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateorupdatepartialdocumentRequest {
-    
-    public CreateorupdatepartialdocumentPathParams pathParams;
-    public CreateorupdatepartialdocumentRequest withPathParams(CreateorupdatepartialdocumentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public CreateorupdatepartialdocumentRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public CreateorupdatepartialdocumentQueryParams queryParams;
-    public CreateorupdatepartialdocumentRequest withQueryParams(CreateorupdatepartialdocumentQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public CreateorupdatepartialdocumentHeaders headers;
-    public CreateorupdatepartialdocumentRequest withHeaders(CreateorupdatepartialdocumentHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public CreateorupdatepartialdocumentRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
@@ -32,9 +31,29 @@ public class CreateorupdatepartialdocumentRequest {
      * JSON with the fields to be updated.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, String> request;
-    public CreateorupdatepartialdocumentRequest withRequest(java.util.Map<String, String> request) {
-        this.request = request;
+    public java.util.Map<String, String> requestBody;
+    public CreateorupdatepartialdocumentRequest withRequestBody(java.util.Map<String, String> requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Name of the schema the document to be created needs to be compliant with.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_schema")
+    public String schema;
+    public CreateorupdatepartialdocumentRequest withSchema(String schema) {
+        this.schema = schema;
+        return this;
+    }
+    
+    /**
+     * Name of the data entity. Defined by the api. Examples of native data entities you can use are `CL` for client profiles and `AD` for client addresses.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dataEntityName")
+    public String dataEntityName;
+    public CreateorupdatepartialdocumentRequest withDataEntityName(String dataEntityName) {
+        this.dataEntityName = dataEntityName;
         return this;
     }
     

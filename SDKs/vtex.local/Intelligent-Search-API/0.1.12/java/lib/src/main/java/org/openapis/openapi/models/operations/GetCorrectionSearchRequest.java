@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCorrectionSearchRequest {
+    /**
+     * Indicates the target language as a BCP 47 language code. The Intelligent Search must have indexed the account in the target language.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
+    public String locale;
+    public GetCorrectionSearchRequest withLocale(String locale) {
+        this.locale = locale;
+        return this;
+    }
     
-    public GetCorrectionSearchQueryParams queryParams;
-    public GetCorrectionSearchRequest withQueryParams(GetCorrectionSearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Search term. It can contain any character.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public GetCorrectionSearchRequest withQuery(String query) {
+        this.query = query;
         return this;
     }
     

@@ -4,27 +4,38 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MeetingRequest {
-    
-    public MeetingPathParams pathParams;
-    public MeetingRequest withPathParams(MeetingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The meeting ID in **long** format. The data type of this field is "long"(represented as int64 in JSON).
+     * 
+     * While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=meetingId")
+    public Long meetingId;
+    public MeetingRequest withMeetingId(Long meetingId) {
+        this.meetingId = meetingId;
         return this;
     }
     
-    
-    public MeetingQueryParams queryParams;
-    public MeetingRequest withQueryParams(MeetingQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Meeting Occurrence ID. Provide this field to view meeting details of a particular occurrence of the [recurring meeting](https://support.zoom.us/hc/en-us/articles/214973206-Scheduling-Recurring-Meetings).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=occurrence_id")
+    public String occurrenceId;
+    public MeetingRequest withOccurrenceId(String occurrenceId) {
+        this.occurrenceId = occurrenceId;
         return this;
     }
     
-    
-    public MeetingSecurity security;
-    public MeetingRequest withSecurity(MeetingSecurity security) {
-        this.security = security;
+    /**
+     * Set the value of this field to `true` if you would like to view meeting details of all previous occurrences of a [recurring meeting](https://support.zoom.us/hc/en-us/articles/214973206-Scheduling-Recurring-Meetings). 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=show_previous_occurrences")
+    public Boolean showPreviousOccurrences;
+    public MeetingRequest withShowPreviousOccurrences(Boolean showPreviousOccurrences) {
+        this.showPreviousOccurrences = showPreviousOccurrences;
         return this;
     }
     

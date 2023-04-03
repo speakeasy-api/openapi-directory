@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateWebhookRequest {
-    
-    public UpdateWebhookPathParams pathParams;
-    public UpdateWebhookRequest withPathParams(UpdateWebhookPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public UpdateWebhookRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateWebhookUpdateWebhookRequest request;
-    public UpdateWebhookRequest withRequest(UpdateWebhookUpdateWebhookRequest request) {
-        this.request = request;
+    public UpdateWebhookUpdateWebhookRequest requestBody;
+    public UpdateWebhookRequest withRequestBody(UpdateWebhookUpdateWebhookRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateWebhookSecurity security;
-    public UpdateWebhookRequest withSecurity(UpdateWebhookSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateWebhookRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the Webhook resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateWebhookRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

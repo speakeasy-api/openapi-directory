@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDomainRequest {
-    
-    public GetDomainPathParams pathParams;
-    public GetDomainRequest withPathParams(GetDomainPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the domain to get information about.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainId")
+    public String domainId;
+    public GetDomainRequest withDomainId(String domainId) {
+        this.domainId = domainId;
         return this;
     }
     

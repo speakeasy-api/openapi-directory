@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteWorkspaceRequest {
-    
-    public DeleteWorkspaceQueryParams queryParams;
-    public DeleteWorkspaceRequest withQueryParams(DeleteWorkspaceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Workspace identifier
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=workspaceId")
+    public String workspaceId;
+    public DeleteWorkspaceRequest withWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
         return this;
     }
     

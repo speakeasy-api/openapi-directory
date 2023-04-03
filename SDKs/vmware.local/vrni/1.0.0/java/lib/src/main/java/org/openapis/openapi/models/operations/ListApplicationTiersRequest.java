@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListApplicationTiersRequest {
-    
-    public ListApplicationTiersPathParams pathParams;
-    public ListApplicationTiersRequest withPathParams(ListApplicationTiersPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ListApplicationTiersSecurity security;
-    public ListApplicationTiersRequest withSecurity(ListApplicationTiersSecurity security) {
-        this.security = security;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public ListApplicationTiersRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

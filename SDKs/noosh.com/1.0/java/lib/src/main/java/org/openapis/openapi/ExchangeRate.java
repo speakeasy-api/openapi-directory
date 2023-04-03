@@ -39,7 +39,7 @@ public class ExchangeRate {
      */
     public org.openapis.openapi.models.operations.GetExchangeRateListResponse getExchangeRateList(org.openapis.openapi.models.operations.GetExchangeRateListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetExchangeRateListPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/exchangeRate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetExchangeRateListRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/exchangeRate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -158,12 +158,12 @@ public class ExchangeRate {
      */
     public org.openapis.openapi.models.operations.PostExchangeRateJsonResponse postExchangeRateJson(org.openapis.openapi.models.operations.PostExchangeRateJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostExchangeRateJsonPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/exchangeRate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostExchangeRateJsonRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/exchangeRate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "multiExchangeRatePersistListVO", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -279,12 +279,12 @@ public class ExchangeRate {
      */
     public org.openapis.openapi.models.operations.PostExchangeRateRawResponse postExchangeRateRaw(org.openapis.openapi.models.operations.PostExchangeRateRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostExchangeRateRawPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/exchangeRate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostExchangeRateRawRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/exchangeRate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
         

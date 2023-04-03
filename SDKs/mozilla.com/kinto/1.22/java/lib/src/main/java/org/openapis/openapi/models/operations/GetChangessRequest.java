@@ -4,20 +4,83 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetChangessRequest {
-    
-    public GetChangessQueryParams queryParams;
-    public GetChangessRequest withQueryParams(GetChangessQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
+    public String ifMatch;
+    public GetChangessRequest withIfMatch(String ifMatch) {
+        this.ifMatch = ifMatch;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
+    public String ifNoneMatch;
+    public GetChangessRequest withIfNoneMatch(String ifNoneMatch) {
+        this.ifNoneMatch = ifNoneMatch;
+        return this;
+    }
     
-    public GetChangessHeaders headers;
-    public GetChangessRequest withHeaders(GetChangessHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_before")
+    public Long before;
+    public GetChangessRequest withBefore(Long before) {
+        this.before = before;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=_fields")
+    public String[] fields;
+    public GetChangessRequest withFields(String[] fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_limit")
+    public Long limit;
+    public GetChangessRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_since")
+    public Long since;
+    public GetChangessRequest withSince(Long since) {
+        this.since = since;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=_sort")
+    public String[] sort;
+    public GetChangessRequest withSort(String[] sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_to")
+    public Long to;
+    public GetChangessRequest withTo(Long to) {
+        this.to = to;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_token")
+    public String token;
+    public GetChangessRequest withToken(String token) {
+        this.token = token;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public GetChangessRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_modified")
+    public Long lastModified;
+    public GetChangessRequest withLastModified(Long lastModified) {
+        this.lastModified = lastModified;
         return this;
     }
     

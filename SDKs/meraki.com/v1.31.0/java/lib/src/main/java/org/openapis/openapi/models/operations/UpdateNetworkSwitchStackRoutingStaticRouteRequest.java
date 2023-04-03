@@ -7,17 +7,31 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkSwitchStackRoutingStaticRouteRequest {
-    
-    public UpdateNetworkSwitchStackRoutingStaticRoutePathParams pathParams;
-    public UpdateNetworkSwitchStackRoutingStaticRouteRequest withPathParams(UpdateNetworkSwitchStackRoutingStaticRoutePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkSwitchStackRoutingStaticRouteRequestBody requestBody;
+    public UpdateNetworkSwitchStackRoutingStaticRouteRequest withRequestBody(UpdateNetworkSwitchStackRoutingStaticRouteRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkSwitchStackRoutingStaticRouteRequestBody request;
-    public UpdateNetworkSwitchStackRoutingStaticRouteRequest withRequest(UpdateNetworkSwitchStackRoutingStaticRouteRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkSwitchStackRoutingStaticRouteRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=staticRouteId")
+    public String staticRouteId;
+    public UpdateNetworkSwitchStackRoutingStaticRouteRequest withStaticRouteId(String staticRouteId) {
+        this.staticRouteId = staticRouteId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=switchStackId")
+    public String switchStackId;
+    public UpdateNetworkSwitchStackRoutingStaticRouteRequest withSwitchStackId(String switchStackId) {
+        this.switchStackId = switchStackId;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCustomFields6Request {
-    
-    public GetCustomFields6PathParams pathParams;
-    public GetCustomFields6Request withPathParams(GetCustomFields6PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * quote's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=quoteId")
+    public String quoteId;
+    public GetCustomFields6Request withQuoteId(String quoteId) {
+        this.quoteId = quoteId;
         return this;
     }
     

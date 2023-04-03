@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchPatientHealthMetricRequest {
-    
-    public FetchPatientHealthMetricPathParams pathParams;
-    public FetchPatientHealthMetricRequest withPathParams(FetchPatientHealthMetricPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Patient health metric identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public FetchPatientHealthMetricRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

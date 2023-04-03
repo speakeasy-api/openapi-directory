@@ -4,20 +4,75 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCloudFrontOriginAccessIdentity20171030Request {
-    
-    public DeleteCloudFrontOriginAccessIdentity20171030PathParams pathParams;
-    public DeleteCloudFrontOriginAccessIdentity20171030Request withPathParams(DeleteCloudFrontOriginAccessIdentity20171030PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The origin access identity's ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Id")
+    public String id;
+    public DeleteCloudFrontOriginAccessIdentity20171030Request withId(String id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * The value of the &lt;code&gt;ETag&lt;/code&gt; header you received from a previous &lt;code&gt;GET&lt;/code&gt; or &lt;code&gt;PUT&lt;/code&gt; request. For example: &lt;code&gt;E2QWRUHAPOMQZL&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
+    public String ifMatch;
+    public DeleteCloudFrontOriginAccessIdentity20171030Request withIfMatch(String ifMatch) {
+        this.ifMatch = ifMatch;
+        return this;
+    }
     
-    public DeleteCloudFrontOriginAccessIdentity20171030Headers headers;
-    public DeleteCloudFrontOriginAccessIdentity20171030Request withHeaders(DeleteCloudFrontOriginAccessIdentity20171030Headers headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DeleteCloudFrontOriginAccessIdentity20171030Request withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DeleteCloudFrontOriginAccessIdentity20171030Request withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DeleteCloudFrontOriginAccessIdentity20171030Request withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DeleteCloudFrontOriginAccessIdentity20171030Request withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DeleteCloudFrontOriginAccessIdentity20171030Request withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DeleteCloudFrontOriginAccessIdentity20171030Request withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DeleteCloudFrontOriginAccessIdentity20171030Request withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TransferSupplyLotRequest {
-    
-    public TransferSupplyLotPathParams pathParams;
-    public TransferSupplyLotRequest withPathParams(TransferSupplyLotPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public TransferSupplyLotRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public TransferSupplyLotRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public TransferSupplyLotHeaders headers;
-    public TransferSupplyLotRequest withHeaders(TransferSupplyLotHeaders headers) {
-        this.headers = headers;
+    /**
+     * ID of the SKU.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=skuId")
+    public String skuId;
+    public TransferSupplyLotRequest withSkuId(String skuId) {
+        this.skuId = skuId;
+        return this;
+    }
+    
+    /**
+     * ID of the Supply Lot in which the SKU is currently located and from where it will be transfered.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=supplyLotId")
+    public String supplyLotId;
+    public TransferSupplyLotRequest withSupplyLotId(String supplyLotId) {
+        this.supplyLotId = supplyLotId;
+        return this;
+    }
+    
+    /**
+     * ID of the warehouse where the SKU is located.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=warehouseId")
+    public String warehouseId;
+    public TransferSupplyLotRequest withWarehouseId(String warehouseId) {
+        this.warehouseId = warehouseId;
         return this;
     }
     

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutConsumerV1AppointmentsIdRescheduleRequest {
-    
-    public PutConsumerV1AppointmentsIdReschedulePathParams pathParams;
-    public PutConsumerV1AppointmentsIdRescheduleRequest withPathParams(PutConsumerV1AppointmentsIdReschedulePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.AppointmentRescheduleModel appointmentRescheduleModel;
+    public PutConsumerV1AppointmentsIdRescheduleRequest withAppointmentRescheduleModel(org.openapis.openapi.models.shared.AppointmentRescheduleModel appointmentRescheduleModel) {
+        this.appointmentRescheduleModel = appointmentRescheduleModel;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AppointmentRescheduleModel request;
-    public PutConsumerV1AppointmentsIdRescheduleRequest withRequest(org.openapis.openapi.models.shared.AppointmentRescheduleModel request) {
-        this.request = request;
+    /**
+     * appointment id to reschedule
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutConsumerV1AppointmentsIdRescheduleRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

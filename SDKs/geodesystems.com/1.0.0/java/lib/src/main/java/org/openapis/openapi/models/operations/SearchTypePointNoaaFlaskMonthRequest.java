@@ -4,13 +4,227 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchTypePointNoaaFlaskMonthRequest {
+    /**
+     * Archive change date from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.from")
+    public OffsetDateTime changedateFrom;
+    public SearchTypePointNoaaFlaskMonthRequest withChangedateFrom(OffsetDateTime changedateFrom) {
+        this.changedateFrom = changedateFrom;
+        return this;
+    }
     
-    public SearchTypePointNoaaFlaskMonthQueryParams queryParams;
-    public SearchTypePointNoaaFlaskMonthRequest withQueryParams(SearchTypePointNoaaFlaskMonthQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Archive change date to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.to")
+    public OffsetDateTime changedateTo;
+    public SearchTypePointNoaaFlaskMonthRequest withChangedateTo(OffsetDateTime changedateTo) {
+        this.changedateTo = changedateTo;
+        return this;
+    }
+    
+    /**
+     * Archive create date from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.from")
+    public OffsetDateTime createdateFrom;
+    public SearchTypePointNoaaFlaskMonthRequest withCreatedateFrom(OffsetDateTime createdateFrom) {
+        this.createdateFrom = createdateFrom;
+        return this;
+    }
+    
+    /**
+     * Archive create date to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.to")
+    public OffsetDateTime createdateTo;
+    public SearchTypePointNoaaFlaskMonthRequest withCreatedateTo(OffsetDateTime createdateTo) {
+        this.createdateTo = createdateTo;
+        return this;
+    }
+    
+    /**
+     * Search description
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
+    public String description;
+    public SearchTypePointNoaaFlaskMonthRequest withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    
+    /**
+     * File suffix
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filesuffix")
+    public String filesuffix;
+    public SearchTypePointNoaaFlaskMonthRequest withFilesuffix(String filesuffix) {
+        this.filesuffix = filesuffix;
+        return this;
+    }
+    
+    /**
+     * From date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
+    public OffsetDateTime fromdate;
+    public SearchTypePointNoaaFlaskMonthRequest withFromdate(OffsetDateTime fromdate) {
+        this.fromdate = fromdate;
+        return this;
+    }
+    
+    /**
+     * Parent entry
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
+    public String group;
+    public SearchTypePointNoaaFlaskMonthRequest withGroup(String group) {
+        this.group = group;
+        return this;
+    }
+    
+    /**
+     * Max number of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
+    public Long max;
+    public SearchTypePointNoaaFlaskMonthRequest withMax(Long max) {
+        this.max = max;
+        return this;
+    }
+    
+    /**
+     * Northern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlatitude")
+    public Float maxlatitude;
+    public SearchTypePointNoaaFlaskMonthRequest withMaxlatitude(Float maxlatitude) {
+        this.maxlatitude = maxlatitude;
+        return this;
+    }
+    
+    /**
+     * Eastern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlongitude")
+    public Float maxlongitude;
+    public SearchTypePointNoaaFlaskMonthRequest withMaxlongitude(Float maxlongitude) {
+        this.maxlongitude = maxlongitude;
+        return this;
+    }
+    
+    /**
+     * Southern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlatitude")
+    public Float minlatitude;
+    public SearchTypePointNoaaFlaskMonthRequest withMinlatitude(Float minlatitude) {
+        this.minlatitude = minlatitude;
+        return this;
+    }
+    
+    /**
+     * Western bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlongitude")
+    public Float minlongitude;
+    public SearchTypePointNoaaFlaskMonthRequest withMinlongitude(Float minlongitude) {
+        this.minlongitude = minlongitude;
+        return this;
+    }
+    
+    /**
+     * Search name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public SearchTypePointNoaaFlaskMonthRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Lab ID Number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_point_noaa_flask_month.lab_id_number")
+    public String searchTypePointNoaaFlaskMonthLabIdNumber;
+    public SearchTypePointNoaaFlaskMonthRequest withSearchTypePointNoaaFlaskMonthLabIdNumber(String searchTypePointNoaaFlaskMonthLabIdNumber) {
+        this.searchTypePointNoaaFlaskMonthLabIdNumber = searchTypePointNoaaFlaskMonthLabIdNumber;
+        return this;
+    }
+    
+    /**
+     * Measurement Group
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_point_noaa_flask_month.measurement_group")
+    public String searchTypePointNoaaFlaskMonthMeasurementGroup;
+    public SearchTypePointNoaaFlaskMonthRequest withSearchTypePointNoaaFlaskMonthMeasurementGroup(String searchTypePointNoaaFlaskMonthMeasurementGroup) {
+        this.searchTypePointNoaaFlaskMonthMeasurementGroup = searchTypePointNoaaFlaskMonthMeasurementGroup;
+        return this;
+    }
+    
+    /**
+     * Parameter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_point_noaa_flask_month.parameter")
+    public String searchTypePointNoaaFlaskMonthParameter;
+    public SearchTypePointNoaaFlaskMonthRequest withSearchTypePointNoaaFlaskMonthParameter(String searchTypePointNoaaFlaskMonthParameter) {
+        this.searchTypePointNoaaFlaskMonthParameter = searchTypePointNoaaFlaskMonthParameter;
+        return this;
+    }
+    
+    /**
+     * Project
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_point_noaa_flask_month.project")
+    public String searchTypePointNoaaFlaskMonthProject;
+    public SearchTypePointNoaaFlaskMonthRequest withSearchTypePointNoaaFlaskMonthProject(String searchTypePointNoaaFlaskMonthProject) {
+        this.searchTypePointNoaaFlaskMonthProject = searchTypePointNoaaFlaskMonthProject;
+        return this;
+    }
+    
+    /**
+     * Site ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_point_noaa_flask_month.site_id")
+    public String searchTypePointNoaaFlaskMonthSiteId;
+    public SearchTypePointNoaaFlaskMonthRequest withSearchTypePointNoaaFlaskMonthSiteId(String searchTypePointNoaaFlaskMonthSiteId) {
+        this.searchTypePointNoaaFlaskMonthSiteId = searchTypePointNoaaFlaskMonthSiteId;
+        return this;
+    }
+    
+    /**
+     * Number to skip
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
+    public Long skip;
+    public SearchTypePointNoaaFlaskMonthRequest withSkip(Long skip) {
+        this.skip = skip;
+        return this;
+    }
+    
+    /**
+     * Search text
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
+    public String text;
+    public SearchTypePointNoaaFlaskMonthRequest withText(String text) {
+        this.text = text;
+        return this;
+    }
+    
+    /**
+     * To date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
+    public OffsetDateTime todate;
+    public SearchTypePointNoaaFlaskMonthRequest withTodate(OffsetDateTime todate) {
+        this.todate = todate;
         return this;
     }
     

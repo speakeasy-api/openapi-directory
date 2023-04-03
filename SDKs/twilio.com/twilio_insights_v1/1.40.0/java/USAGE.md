@@ -5,10 +5,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.FetchAccountSettingsSecurity;
-import org.openapis.openapi.models.operations.FetchAccountSettingsQueryParams;
 import org.openapis.openapi.models.operations.FetchAccountSettingsRequest;
 import org.openapis.openapi.models.operations.FetchAccountSettingsResponse;
-import org.openapis.openapi.models.shared.SchemeAccountSidAuthToken;
 
 public class Application {
     public static void main(String[] args) {
@@ -17,18 +15,13 @@ public class Application {
                 .build();
 
             FetchAccountSettingsRequest req = new FetchAccountSettingsRequest() {{
-                security = new FetchAccountSettingsSecurity() {{
-                    accountSidAuthToken = new SchemeAccountSidAuthToken() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
-                }};
-                queryParams = new FetchAccountSettingsQueryParams() {{
-                    subaccountSid = "corrupti";
-                }};
-            }};            
+                subaccountSid = "corrupti";
+            }}            
 
-            FetchAccountSettingsResponse res = sdk.fetchAccountSettings(req);
+            FetchAccountSettingsResponse res = sdk.fetchAccountSettings(req, new FetchAccountSettingsSecurity() {{
+                password = "YOUR_PASSWORD_HERE";
+                username = "YOUR_USERNAME_HERE";
+            }});
 
             if (res.insightsV1AccountSettings.isPresent()) {
                 // handle response

@@ -33,10 +33,11 @@ public class Entries {
     /**
      * Gets an entry by its target resource name. The resource name comes from the source Google Cloud Platform service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatacatalogEntriesLookupResponse datacatalogEntriesLookup(org.openapis.openapi.models.operations.DatacatalogEntriesLookupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatacatalogEntriesLookupResponse datacatalogEntriesLookup(org.openapis.openapi.models.operations.DatacatalogEntriesLookupRequest request, org.openapis.openapi.models.operations.DatacatalogEntriesLookupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/entries:lookup");
         
@@ -44,14 +45,14 @@ public class Entries {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogEntriesLookupQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatacatalogEntriesLookupRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

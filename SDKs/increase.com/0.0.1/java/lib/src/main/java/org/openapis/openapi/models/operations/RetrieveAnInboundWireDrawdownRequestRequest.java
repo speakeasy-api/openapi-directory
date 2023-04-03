@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveAnInboundWireDrawdownRequestRequest {
-    
-    public RetrieveAnInboundWireDrawdownRequestPathParams pathParams;
-    public RetrieveAnInboundWireDrawdownRequestRequest withPathParams(RetrieveAnInboundWireDrawdownRequestPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=inbound_wire_drawdown_request_id")
+    public String inboundWireDrawdownRequestId;
+    public RetrieveAnInboundWireDrawdownRequestRequest withInboundWireDrawdownRequestId(String inboundWireDrawdownRequestId) {
+        this.inboundWireDrawdownRequestId = inboundWireDrawdownRequestId;
         return this;
     }
     

@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TagsGetGroupsRequest {
-    
-    public TagsGetGroupsPathParams pathParams;
-    public TagsGetGroupsRequest withPathParams(TagsGetGroupsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Exclude groups created before this date (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAfter")
+    public String createdAfter;
+    public TagsGetGroupsRequest withCreatedAfter(String createdAfter) {
+        this.createdAfter = createdAfter;
         return this;
     }
     
+    /**
+     * Exclude groups created after this date (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdBefore")
+    public String createdBefore;
+    public TagsGetGroupsRequest withCreatedBefore(String createdBefore) {
+        this.createdBefore = createdBefore;
+        return this;
+    }
     
-    public TagsGetGroupsQueryParams queryParams;
-    public TagsGetGroupsRequest withQueryParams(TagsGetGroupsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Maximum elements to retrieve. Default to 20 if not specified.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public TagsGetGroupsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Where to start when retrieving elements. Default is 0 if not specified.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public TagsGetGroupsRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Status of the datapoint
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public TagsGetGroupsStatusEnum status;
+    public TagsGetGroupsRequest withStatus(TagsGetGroupsStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * Id of the tag.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tagId")
+    public Long tagId;
+    public TagsGetGroupsRequest withTagId(Long tagId) {
+        this.tagId = tagId;
+        return this;
+    }
+    
+    /**
+     * Filter fields by this pattern
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=textSearch")
+    public String textSearch;
+    public TagsGetGroupsRequest withTextSearch(String textSearch) {
+        this.textSearch = textSearch;
         return this;
     }
     

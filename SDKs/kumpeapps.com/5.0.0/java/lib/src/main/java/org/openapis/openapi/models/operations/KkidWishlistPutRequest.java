@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KkidWishlistPutRequest {
+    /**
+     * Item Description
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
+    public String description;
+    public KkidWishlistPutRequest withDescription(String description) {
+        this.description = description;
+        return this;
+    }
     
-    public KkidWishlistPutQueryParams queryParams;
-    public KkidWishlistPutRequest withQueryParams(KkidWishlistPutQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * URL Link to item
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=link")
+    public String link;
+    public KkidWishlistPutRequest withLink(String link) {
+        this.link = link;
+        return this;
+    }
+    
+    /**
+     * Item Priority
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=priority")
+    public Long priority;
+    public KkidWishlistPutRequest withPriority(Long priority) {
+        this.priority = priority;
+        return this;
+    }
+    
+    /**
+     * Item title
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=title")
+    public String title;
+    public KkidWishlistPutRequest withTitle(String title) {
+        this.title = title;
+        return this;
+    }
+    
+    /**
+     * Wish list item ID to update
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=wishId")
+    public Long wishId;
+    public KkidWishlistPutRequest withWishId(Long wishId) {
+        this.wishId = wishId;
         return this;
     }
     

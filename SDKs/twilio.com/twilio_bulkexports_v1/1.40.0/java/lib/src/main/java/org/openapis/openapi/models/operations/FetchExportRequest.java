@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchExportRequest {
-    
-    public FetchExportPathParams pathParams;
-    public FetchExportRequest withPathParams(FetchExportPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchExportSecurity security;
-    public FetchExportRequest withSecurity(FetchExportSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchExportRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The type of communication \u2013 Messages, Calls, Conferences, and Participants
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ResourceType")
+    public String resourceType;
+    public FetchExportRequest withResourceType(String resourceType) {
+        this.resourceType = resourceType;
         return this;
     }
     

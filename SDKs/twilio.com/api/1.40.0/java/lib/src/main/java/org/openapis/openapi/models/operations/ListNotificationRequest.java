@@ -4,34 +4,87 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListNotificationRequest {
-    
-    public ListNotificationPathParams pathParams;
-    public ListNotificationRequest withPathParams(ListNotificationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Notification resources to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public ListNotificationRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public ListNotificationQueryParams queryParams;
-    public ListNotificationRequest withQueryParams(ListNotificationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Only read notifications of the specified log level. Can be:  `0` to read only ERROR notifications or `1` to read only WARNING notifications. By default, all notifications are read.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Log")
+    public Long log;
+    public ListNotificationRequest withLog(Long log) {
+        this.log = log;
         return this;
     }
     
-    
-    public ListNotificationSecurity security;
-    public ListNotificationRequest withSecurity(ListNotificationSecurity security) {
-        this.security = security;
+    /**
+     * Only show notifications for the specified date, formatted as `YYYY-MM-DD`. You can also specify an inequality, such as `&lt;=YYYY-MM-DD` for messages logged at or before midnight on a date, or `&gt;=YYYY-MM-DD` for messages logged at or after midnight on a date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MessageDate")
+    public LocalDate messageDate;
+    public ListNotificationRequest withMessageDate(LocalDate messageDate) {
+        this.messageDate = messageDate;
         return this;
     }
     
+    /**
+     * Only show notifications for the specified date, formatted as `YYYY-MM-DD`. You can also specify an inequality, such as `&lt;=YYYY-MM-DD` for messages logged at or before midnight on a date, or `&gt;=YYYY-MM-DD` for messages logged at or after midnight on a date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MessageDate<")
+    public LocalDate messageDateLessThan;
+    public ListNotificationRequest withMessageDateLessThan(LocalDate messageDateLessThan) {
+        this.messageDateLessThan = messageDateLessThan;
+        return this;
+    }
     
-    public String serverURL;
-    public ListNotificationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Only show notifications for the specified date, formatted as `YYYY-MM-DD`. You can also specify an inequality, such as `&lt;=YYYY-MM-DD` for messages logged at or before midnight on a date, or `&gt;=YYYY-MM-DD` for messages logged at or after midnight on a date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MessageDate>")
+    public LocalDate messageDateGreaterThan;
+    public ListNotificationRequest withMessageDateGreaterThan(LocalDate messageDateGreaterThan) {
+        this.messageDateGreaterThan = messageDateGreaterThan;
+        return this;
+    }
+    
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListNotificationRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListNotificationRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListNotificationRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

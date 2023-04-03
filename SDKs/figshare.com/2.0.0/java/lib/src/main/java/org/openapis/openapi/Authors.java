@@ -34,19 +34,20 @@ public class Authors {
      * Author details
      * View author details
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateAuthorDetailsResponse privateAuthorDetails(org.openapis.openapi.models.operations.PrivateAuthorDetailsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateAuthorDetailsResponse privateAuthorDetails(org.openapis.openapi.models.operations.PrivateAuthorDetailsRequest request, org.openapis.openapi.models.operations.PrivateAuthorDetailsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateAuthorDetailsPathParams.class, baseUrl, "/account/authors/{author_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateAuthorDetailsRequest.class, baseUrl, "/account/authors/{author_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -84,10 +85,11 @@ public class Authors {
      * Search Authors
      * Search for authors
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateAuthorsSearchResponse privateAuthorsSearch(org.openapis.openapi.models.operations.PrivateAuthorsSearchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateAuthorsSearchResponse privateAuthorsSearch(org.openapis.openapi.models.shared.PrivateAuthorsSearch request, org.openapis.openapi.models.operations.PrivateAuthorsSearchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/authors/search");
         
@@ -98,7 +100,7 @@ public class Authors {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

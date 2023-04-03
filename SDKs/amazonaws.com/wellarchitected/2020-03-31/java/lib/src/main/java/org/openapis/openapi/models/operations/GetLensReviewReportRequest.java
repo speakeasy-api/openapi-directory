@@ -4,27 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLensReviewReportRequest {
-    
-    public GetLensReviewReportPathParams pathParams;
-    public GetLensReviewReportRequest withPathParams(GetLensReviewReportPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=LensAlias")
+    public String lensAlias;
+    public GetLensReviewReportRequest withLensAlias(String lensAlias) {
+        this.lensAlias = lensAlias;
         return this;
     }
     
-    
-    public GetLensReviewReportQueryParams queryParams;
-    public GetLensReviewReportRequest withQueryParams(GetLensReviewReportQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MilestoneNumber")
+    public Long milestoneNumber;
+    public GetLensReviewReportRequest withMilestoneNumber(Long milestoneNumber) {
+        this.milestoneNumber = milestoneNumber;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkloadId")
+    public String workloadId;
+    public GetLensReviewReportRequest withWorkloadId(String workloadId) {
+        this.workloadId = workloadId;
+        return this;
+    }
     
-    public GetLensReviewReportHeaders headers;
-    public GetLensReviewReportRequest withHeaders(GetLensReviewReportHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetLensReviewReportRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetLensReviewReportRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetLensReviewReportRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetLensReviewReportRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetLensReviewReportRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetLensReviewReportRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetLensReviewReportRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

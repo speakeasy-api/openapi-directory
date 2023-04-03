@@ -149,7 +149,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.CheckDomainResponse checkDomain(org.openapis.openapi.models.operations.CheckDomainRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CheckDomainPathParams.class, baseUrl, "/domains/{domain}/check", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CheckDomainRequest.class, baseUrl, "/domains/{domain}/check", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -186,7 +186,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateBatchResponse createBatch(org.openapis.openapi.models.operations.CreateBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateBatchResponse createBatch(org.openapis.openapi.models.operations.CreateBatchRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/batch");
         
@@ -232,7 +232,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteBatchResponse deleteBatch(org.openapis.openapi.models.operations.DeleteBatchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteBatchPathParams.class, baseUrl, "/batch/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteBatchRequest.class, baseUrl, "/batch/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -265,7 +265,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DomainRankResponse domainRank(org.openapis.openapi.models.operations.DomainRankRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainRankPathParams.class, baseUrl, "/domains/{domain}/rank", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainRankRequest.class, baseUrl, "/domains/{domain}/rank", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -304,7 +304,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetBatchResponse getBatch(org.openapis.openapi.models.operations.GetBatchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBatchPathParams.class, baseUrl, "/batch/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBatchRequest.class, baseUrl, "/batch/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -387,7 +387,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.QueryDbQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.QueryDbRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -426,13 +426,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.WhoisResponse whois(org.openapis.openapi.models.operations.WhoisRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WhoisPathParams.class, baseUrl, "/domains/{domain}/whois", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WhoisRequest.class, baseUrl, "/domains/{domain}/whois", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WhoisQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WhoisRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

@@ -4,27 +4,116 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FileGetFromTaskRequest {
-    
-    public FileGetFromTaskPathParams pathParams;
-    public FileGetFromTaskRequest withPathParams(FileGetFromTaskPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Specify this header to perform the operation only if the resource has been modified since the specified date/time.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Modified-Since")
+    public String ifModifiedSince;
+    public FileGetFromTaskRequest withIfModifiedSince(String ifModifiedSince) {
+        this.ifModifiedSince = ifModifiedSince;
         return this;
     }
     
-    
-    public FileGetFromTaskQueryParams queryParams;
-    public FileGetFromTaskRequest withQueryParams(FileGetFromTaskQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Specify this header to perform the operation only if the resource has not been modified since the specified date/time.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Unmodified-Since")
+    public String ifUnmodifiedSince;
+    public FileGetFromTaskRequest withIfUnmodifiedSince(String ifUnmodifiedSince) {
+        this.ifUnmodifiedSince = ifUnmodifiedSince;
         return this;
     }
     
+    /**
+     * Client API Version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public FileGetFromTaskRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
     
-    public FileGetFromTaskHeaders headers;
-    public FileGetFromTaskRequest withHeaders(FileGetFromTaskHeaders headers) {
-        this.headers = headers;
+    /**
+     * Caller generated request identity, in the form of a GUID with no decoration such as curly braces e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
+    public String clientRequestId;
+    public FileGetFromTaskRequest withClientRequestId(String clientRequestId) {
+        this.clientRequestId = clientRequestId;
+        return this;
+    }
+    
+    /**
+     * The path to the task file that you want to get the content of.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileName")
+    public String fileName;
+    public FileGetFromTaskRequest withFileName(String fileName) {
+        this.fileName = fileName;
+        return this;
+    }
+    
+    /**
+     * The id of the job that contains the task.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
+    public String jobId;
+    public FileGetFromTaskRequest withJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    
+    /**
+     * The time the request was issued. If not specified, this header will be automatically populated with the current system clock time.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
+    public String ocpDate;
+    public FileGetFromTaskRequest withOcpDate(String ocpDate) {
+        this.ocpDate = ocpDate;
+        return this;
+    }
+    
+    /**
+     * Specifies the byte range to be retrieved. The default is to retrieve the entire file.  The format is startRange-endRange.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-range")
+    public String ocpRange;
+    public FileGetFromTaskRequest withOcpRange(String ocpRange) {
+        this.ocpRange = ocpRange;
+        return this;
+    }
+    
+    /**
+     * Specifies if the server should return the client-request-id identifier in the response.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
+    public Boolean returnClientRequestId;
+    public FileGetFromTaskRequest withReturnClientRequestId(Boolean returnClientRequestId) {
+        this.returnClientRequestId = returnClientRequestId;
+        return this;
+    }
+    
+    /**
+     * The id of the task whose file you want to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taskId")
+    public String taskId;
+    public FileGetFromTaskRequest withTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    
+    /**
+     * Sets the maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
+    public Integer timeout;
+    public FileGetFromTaskRequest withTimeout(Integer timeout) {
+        this.timeout = timeout;
         return this;
     }
     

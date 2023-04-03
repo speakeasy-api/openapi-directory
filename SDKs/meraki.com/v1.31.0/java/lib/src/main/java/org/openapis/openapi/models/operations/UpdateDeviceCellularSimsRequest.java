@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDeviceCellularSimsRequest {
-    
-    public UpdateDeviceCellularSimsPathParams pathParams;
-    public UpdateDeviceCellularSimsRequest withPathParams(UpdateDeviceCellularSimsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateDeviceCellularSimsRequestBody requestBody;
+    public UpdateDeviceCellularSimsRequest withRequestBody(UpdateDeviceCellularSimsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateDeviceCellularSimsRequestBody request;
-    public UpdateDeviceCellularSimsRequest withRequest(UpdateDeviceCellularSimsRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public UpdateDeviceCellularSimsRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

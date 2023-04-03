@@ -4,27 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSnapshotRequest {
-    
-    public GetSnapshotPathParams pathParams;
-    public GetSnapshotRequest withPathParams(GetSnapshotPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the game.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=GameName")
+    public String gameName;
+    public GetSnapshotRequest withGameName(String gameName) {
+        this.gameName = gameName;
         return this;
     }
     
-    
-    public GetSnapshotQueryParams queryParams;
-    public GetSnapshotRequest withQueryParams(GetSnapshotQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The list of game configuration sections to be described.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Sections")
+    public String[] sections;
+    public GetSnapshotRequest withSections(String[] sections) {
+        this.sections = sections;
         return this;
     }
     
+    /**
+     * The identifier of the snapshot.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=SnapshotId")
+    public String snapshotId;
+    public GetSnapshotRequest withSnapshotId(String snapshotId) {
+        this.snapshotId = snapshotId;
+        return this;
+    }
     
-    public GetSnapshotHeaders headers;
-    public GetSnapshotRequest withHeaders(GetSnapshotHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetSnapshotRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetSnapshotRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetSnapshotRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetSnapshotRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetSnapshotRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetSnapshotRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetSnapshotRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

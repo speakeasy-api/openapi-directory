@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeInstancesHealthRequest {
-    
-    public GETDescribeInstancesHealthQueryParams queryParams;
-    public GETDescribeInstancesHealthRequest withQueryParams(GETDescribeInstancesHealthQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeInstancesHealthActionEnum action;
+    public GETDescribeInstancesHealthRequest withAction(GETDescribeInstancesHealthActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Specifies the response elements you wish to receive. To retrieve all attributes, set to &lt;code&gt;All&lt;/code&gt;. If no attribute names are specified, returns a list of instances.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AttributeNames")
+    public org.openapis.openapi.models.shared.InstancesHealthAttributeEnum[] attributeNames;
+    public GETDescribeInstancesHealthRequest withAttributeNames(org.openapis.openapi.models.shared.InstancesHealthAttributeEnum[] attributeNames) {
+        this.attributeNames = attributeNames;
+        return this;
+    }
     
-    public GETDescribeInstancesHealthHeaders headers;
-    public GETDescribeInstancesHealthRequest withHeaders(GETDescribeInstancesHealthHeaders headers) {
-        this.headers = headers;
+    /**
+     * Specify the AWS Elastic Beanstalk environment by ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnvironmentId")
+    public String environmentId;
+    public GETDescribeInstancesHealthRequest withEnvironmentId(String environmentId) {
+        this.environmentId = environmentId;
+        return this;
+    }
+    
+    /**
+     * Specify the AWS Elastic Beanstalk environment by name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnvironmentName")
+    public String environmentName;
+    public GETDescribeInstancesHealthRequest withEnvironmentName(String environmentName) {
+        this.environmentName = environmentName;
+        return this;
+    }
+    
+    /**
+     * Specify the pagination token returned by a previous call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public GETDescribeInstancesHealthRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeInstancesHealthVersionEnum version;
+    public GETDescribeInstancesHealthRequest withVersion(GETDescribeInstancesHealthVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeInstancesHealthRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeInstancesHealthRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeInstancesHealthRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeInstancesHealthRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeInstancesHealthRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeInstancesHealthRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeInstancesHealthRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

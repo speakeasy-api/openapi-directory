@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2SearchDestinyEntitiesRequest {
-    
-    public Destiny2SearchDestinyEntitiesPathParams pathParams;
-    public Destiny2SearchDestinyEntitiesRequest withPathParams(Destiny2SearchDestinyEntitiesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Page number to return, starting with 0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public Destiny2SearchDestinyEntitiesRequest withPage(Integer page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * The string to use when searching for Destiny entities.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=searchTerm")
+    public String searchTerm;
+    public Destiny2SearchDestinyEntitiesRequest withSearchTerm(String searchTerm) {
+        this.searchTerm = searchTerm;
+        return this;
+    }
     
-    public Destiny2SearchDestinyEntitiesQueryParams queryParams;
-    public Destiny2SearchDestinyEntitiesRequest withQueryParams(Destiny2SearchDestinyEntitiesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The type of entity for whom you would like results. These correspond to the entity's definition contract name. For instance, if you are looking for items, this property should be 'DestinyInventoryItemDefinition'.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
+    public String type;
+    public Destiny2SearchDestinyEntitiesRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

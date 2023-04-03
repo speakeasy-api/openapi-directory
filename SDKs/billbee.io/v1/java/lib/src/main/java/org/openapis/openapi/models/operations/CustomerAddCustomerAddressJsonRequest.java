@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CustomerAddCustomerAddressJsonRequest {
-    
-    public CustomerAddCustomerAddressJsonPathParams pathParams;
-    public CustomerAddCustomerAddressJsonRequest withPathParams(CustomerAddCustomerAddressJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Model containing the address, that should be attached.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel request;
-    public CustomerAddCustomerAddressJsonRequest withRequest(org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel billbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel;
+    public CustomerAddCustomerAddressJsonRequest withBillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel(org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel billbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel) {
+        this.billbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel = billbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel;
+        return this;
+    }
+    
+    /**
+     * CustomerId to attach the new address to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public CustomerAddCustomerAddressJsonRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

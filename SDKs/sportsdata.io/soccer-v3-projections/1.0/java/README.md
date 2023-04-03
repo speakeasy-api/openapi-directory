@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.DfsSlatesByDateFormatEnum;
-import org.openapis.openapi.models.operations.DfsSlatesByDatePathParams;
 import org.openapis.openapi.models.operations.DfsSlatesByDateRequest;
 import org.openapis.openapi.models.operations.DfsSlatesByDateResponse;
 
@@ -27,18 +26,14 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    apiKeyHeader = new SchemeAPIKeyHeader() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    apiKeyHeader = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             DfsSlatesByDateRequest req = new DfsSlatesByDateRequest() {{
-                pathParams = new DfsSlatesByDatePathParams() {{
-                    date = "corrupti";
-                    format = "xml";
-                }};
-            }};            
+                date = "corrupti";
+                format = "xml";
+            }}            
 
             DfsSlatesByDateResponse res = sdk.dfsSlatesByDate(req);
 
@@ -52,7 +47,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

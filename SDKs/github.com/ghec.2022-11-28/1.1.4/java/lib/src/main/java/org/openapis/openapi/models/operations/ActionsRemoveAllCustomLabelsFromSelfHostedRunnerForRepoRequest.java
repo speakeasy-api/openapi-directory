@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepoRequest {
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepoRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepoPathParams pathParams;
-    public ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepoRequest withPathParams(ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepoPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepoRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * Unique identifier of the self-hosted runner.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=runner_id")
+    public Long runnerId;
+    public ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepoRequest withRunnerId(Long runnerId) {
+        this.runnerId = runnerId;
         return this;
     }
     

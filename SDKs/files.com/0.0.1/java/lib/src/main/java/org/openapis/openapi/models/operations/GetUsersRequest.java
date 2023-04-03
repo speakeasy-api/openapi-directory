@@ -4,13 +4,186 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersRequest {
+    /**
+     * Used for pagination.  When a list request has more records available, cursors are provided in the response headers `X-Files-Cursor-Next` and `X-Files-Cursor-Prev`.  Send one of those cursor value here to resume an existing list from the next available record.  Note: many of our SDKs have iterator methods that will automatically handle cursor-based pagination.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public GetUsersRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
     
-    public GetUsersQueryParams queryParams;
-    public GetUsersRequest withQueryParams(GetUsersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * If set, return records where the specified field is equal to the supplied value. Valid fields are `username`, `email`, `company`, `site_admin`, `password_validity_days`, `ssl_required`, `last_login_at`, `authenticate_until` or `not_site_admin`. Valid field combinations are `[ not_site_admin, username ]`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public java.util.Map<String, Object> filter;
+    public GetUsersRequest withFilter(java.util.Map<String, Object> filter) {
+        this.filter = filter;
+        return this;
+    }
+    
+    /**
+     * If set, return records where the specified field is greater than the supplied value. Valid fields are `username`, `email`, `company`, `site_admin`, `password_validity_days`, `ssl_required`, `last_login_at`, `authenticate_until` or `not_site_admin`. Valid field combinations are `[ not_site_admin, username ]`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_gt")
+    public java.util.Map<String, Object> filterGt;
+    public GetUsersRequest withFilterGt(java.util.Map<String, Object> filterGt) {
+        this.filterGt = filterGt;
+        return this;
+    }
+    
+    /**
+     * If set, return records where the specified field is greater than or equal to the supplied value. Valid fields are `username`, `email`, `company`, `site_admin`, `password_validity_days`, `ssl_required`, `last_login_at`, `authenticate_until` or `not_site_admin`. Valid field combinations are `[ not_site_admin, username ]`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_gteq")
+    public java.util.Map<String, Object> filterGteq;
+    public GetUsersRequest withFilterGteq(java.util.Map<String, Object> filterGteq) {
+        this.filterGteq = filterGteq;
+        return this;
+    }
+    
+    /**
+     * If set, return records where the specified field is equal to the supplied value. Valid fields are `username`, `email`, `company`, `site_admin`, `password_validity_days`, `ssl_required`, `last_login_at`, `authenticate_until` or `not_site_admin`. Valid field combinations are `[ not_site_admin, username ]`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_like")
+    public java.util.Map<String, Object> filterLike;
+    public GetUsersRequest withFilterLike(java.util.Map<String, Object> filterLike) {
+        this.filterLike = filterLike;
+        return this;
+    }
+    
+    /**
+     * If set, return records where the specified field is less than the supplied value. Valid fields are `username`, `email`, `company`, `site_admin`, `password_validity_days`, `ssl_required`, `last_login_at`, `authenticate_until` or `not_site_admin`. Valid field combinations are `[ not_site_admin, username ]`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_lt")
+    public java.util.Map<String, Object> filterLt;
+    public GetUsersRequest withFilterLt(java.util.Map<String, Object> filterLt) {
+        this.filterLt = filterLt;
+        return this;
+    }
+    
+    /**
+     * If set, return records where the specified field is less than or equal to the supplied value. Valid fields are `username`, `email`, `company`, `site_admin`, `password_validity_days`, `ssl_required`, `last_login_at`, `authenticate_until` or `not_site_admin`. Valid field combinations are `[ not_site_admin, username ]`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_lteq")
+    public java.util.Map<String, Object> filterLteq;
+    public GetUsersRequest withFilterLteq(java.util.Map<String, Object> filterLteq) {
+        this.filterLteq = filterLteq;
+        return this;
+    }
+    
+    /**
+     * comma-separated list of User IDs
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids")
+    public String ids;
+    public GetUsersRequest withIds(String ids) {
+        this.ids = ids;
+        return this;
+    }
+    
+    /**
+     * Number of records to show per page.  (Max: 10,000, 1,000 or less is recommended).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetUsersRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * If `true`, list only admin users.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q[admin]")
+    public String qAdmin;
+    public GetUsersRequest withQAdmin(String qAdmin) {
+        this.qAdmin = qAdmin;
+        return this;
+    }
+    
+    /**
+     * If set, list only users with overridden allowed IP setting.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q[allowed_ips]")
+    public String qAllowedIps;
+    public GetUsersRequest withQAllowedIps(String qAllowedIps) {
+        this.qAllowedIps = qAllowedIps;
+        return this;
+    }
+    
+    /**
+     * List users matching email.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q[email]")
+    public String qEmail;
+    public GetUsersRequest withQEmail(String qEmail) {
+        this.qEmail = qEmail;
+        return this;
+    }
+    
+    /**
+     * List users matching notes field.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q[notes]")
+    public String qNotes;
+    public GetUsersRequest withQNotes(String qNotes) {
+        this.qNotes = qNotes;
+        return this;
+    }
+    
+    /**
+     * If set, list only users with overridden password validity days setting.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q[password_validity_days]")
+    public String qPasswordValidityDays;
+    public GetUsersRequest withQPasswordValidityDays(String qPasswordValidityDays) {
+        this.qPasswordValidityDays = qPasswordValidityDays;
+        return this;
+    }
+    
+    /**
+     * If set, list only users with overridden SSL required setting.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q[ssl_required]")
+    public String qSslRequired;
+    public GetUsersRequest withQSslRequired(String qSslRequired) {
+        this.qSslRequired = qSslRequired;
+        return this;
+    }
+    
+    /**
+     * List users matching username.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q[username]")
+    public String qUsername;
+    public GetUsersRequest withQUsername(String qUsername) {
+        this.qUsername = qUsername;
+        return this;
+    }
+    
+    /**
+     * Searches for partial matches of name, username, or email.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public GetUsersRequest withSearch(String search) {
+        this.search = search;
+        return this;
+    }
+    
+    /**
+     * If set, sort records by the specified field in either `asc` or `desc` direction (e.g. `sort_by[authenticate_until]=desc`). Valid fields are `authenticate_until`, `active`, `email`, `last_desktop_login_at`, `last_login_at`, `username`, `company`, `name`, `site_admin`, `receive_admin_alerts`, `password_validity_days`, `ssl_required` or `not_site_admin`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
+    public java.util.Map<String, Object> sortBy;
+    public GetUsersRequest withSortBy(java.util.Map<String, Object> sortBy) {
+        this.sortBy = sortBy;
         return this;
     }
     

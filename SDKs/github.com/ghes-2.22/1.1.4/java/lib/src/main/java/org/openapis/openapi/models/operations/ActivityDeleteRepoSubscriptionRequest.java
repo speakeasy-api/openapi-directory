@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActivityDeleteRepoSubscriptionRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ActivityDeleteRepoSubscriptionRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public ActivityDeleteRepoSubscriptionPathParams pathParams;
-    public ActivityDeleteRepoSubscriptionRequest withPathParams(ActivityDeleteRepoSubscriptionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ActivityDeleteRepoSubscriptionRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

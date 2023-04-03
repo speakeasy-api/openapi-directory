@@ -40,7 +40,7 @@ public class ConnectivityMonitoringDestinations {
      */
     public org.openapis.openapi.models.operations.GetNetworkApplianceConnectivityMonitoringDestinationsResponse getNetworkApplianceConnectivityMonitoringDestinations(org.openapis.openapi.models.operations.GetNetworkApplianceConnectivityMonitoringDestinationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceConnectivityMonitoringDestinationsPathParams.class, baseUrl, "/networks/{networkId}/appliance/connectivityMonitoringDestinations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceConnectivityMonitoringDestinationsRequest.class, baseUrl, "/networks/{networkId}/appliance/connectivityMonitoringDestinations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,7 +80,7 @@ public class ConnectivityMonitoringDestinations {
      */
     public org.openapis.openapi.models.operations.GetNetworkCellularGatewayConnectivityMonitoringDestinationsResponse getNetworkCellularGatewayConnectivityMonitoringDestinations(org.openapis.openapi.models.operations.GetNetworkCellularGatewayConnectivityMonitoringDestinationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkCellularGatewayConnectivityMonitoringDestinationsPathParams.class, baseUrl, "/networks/{networkId}/cellularGateway/connectivityMonitoringDestinations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkCellularGatewayConnectivityMonitoringDestinationsRequest.class, baseUrl, "/networks/{networkId}/cellularGateway/connectivityMonitoringDestinations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -120,12 +120,12 @@ public class ConnectivityMonitoringDestinations {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkApplianceConnectivityMonitoringDestinationsResponse updateNetworkApplianceConnectivityMonitoringDestinations(org.openapis.openapi.models.operations.UpdateNetworkApplianceConnectivityMonitoringDestinationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceConnectivityMonitoringDestinationsPathParams.class, baseUrl, "/networks/{networkId}/appliance/connectivityMonitoringDestinations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceConnectivityMonitoringDestinationsRequest.class, baseUrl, "/networks/{networkId}/appliance/connectivityMonitoringDestinations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -162,12 +162,12 @@ public class ConnectivityMonitoringDestinations {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsResponse updateNetworkCellularGatewayConnectivityMonitoringDestinations(org.openapis.openapi.models.operations.UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsPathParams.class, baseUrl, "/networks/{networkId}/cellularGateway/connectivityMonitoringDestinations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkCellularGatewayConnectivityMonitoringDestinationsRequest.class, baseUrl, "/networks/{networkId}/cellularGateway/connectivityMonitoringDestinations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

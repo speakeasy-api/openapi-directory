@@ -7,31 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateMemberRequest {
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Member resource(s) to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public UpdateMemberRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
+        return this;
+    }
     
-    public UpdateMemberPathParams pathParams;
-    public UpdateMemberRequest withPathParams(UpdateMemberPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The [Call](https://www.twilio.com/docs/voice/api/call-resource) SID of the resource(s) to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CallSid")
+    public String callSid;
+    public UpdateMemberRequest withCallSid(String callSid) {
+        this.callSid = callSid;
+        return this;
+    }
+    
+    /**
+     * The SID of the Queue in which to find the members to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=QueueSid")
+    public String queueSid;
+    public UpdateMemberRequest withQueueSid(String queueSid) {
+        this.queueSid = queueSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateMemberUpdateMemberRequest request;
-    public UpdateMemberRequest withRequest(UpdateMemberUpdateMemberRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public UpdateMemberSecurity security;
-    public UpdateMemberRequest withSecurity(UpdateMemberSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateMemberRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public UpdateMemberUpdateMemberRequest requestBody;
+    public UpdateMemberRequest withRequestBody(UpdateMemberUpdateMemberRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

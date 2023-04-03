@@ -4,34 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSwitchRequest {
-    
-    public GetSwitchPathParams pathParams;
-    public GetSwitchRequest withPathParams(GetSwitchPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * If set to `true` details of individual buy and sell (child) transactions will be included
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_details")
+    public Boolean includeDetails;
+    public GetSwitchRequest withIncludeDetails(Boolean includeDetails) {
+        this.includeDetails = includeDetails;
         return this;
     }
     
-    
-    public GetSwitchQueryParams queryParams;
-    public GetSwitchRequest withQueryParams(GetSwitchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Unique identifier of the switch instruction
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=switch_transaction_id")
+    public String switchTransactionId;
+    public GetSwitchRequest withSwitchTransactionId(String switchTransactionId) {
+        this.switchTransactionId = switchTransactionId;
         return this;
     }
     
-    
-    public GetSwitchHeaders headers;
-    public GetSwitchRequest withHeaders(GetSwitchHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetSwitchSecurity security;
-    public GetSwitchRequest withSecurity(GetSwitchSecurity security) {
-        this.security = security;
+    /**
+     * ApiSecretKey
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public GetSwitchRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

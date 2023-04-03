@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSipCredentialListRequest {
-    
-    public UpdateSipCredentialListPathParams pathParams;
-    public UpdateSipCredentialListRequest withPathParams(UpdateSipCredentialListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique id of the Account that is responsible for this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public UpdateSipCredentialListRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateSipCredentialListUpdateSipCredentialListRequest request;
-    public UpdateSipCredentialListRequest withRequest(UpdateSipCredentialListUpdateSipCredentialListRequest request) {
-        this.request = request;
+    public UpdateSipCredentialListUpdateSipCredentialListRequest requestBody;
+    public UpdateSipCredentialListRequest withRequestBody(UpdateSipCredentialListUpdateSipCredentialListRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateSipCredentialListSecurity security;
-    public UpdateSipCredentialListRequest withSecurity(UpdateSipCredentialListSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateSipCredentialListRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The credential list Sid that uniquely identifies this resource
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateSipCredentialListRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

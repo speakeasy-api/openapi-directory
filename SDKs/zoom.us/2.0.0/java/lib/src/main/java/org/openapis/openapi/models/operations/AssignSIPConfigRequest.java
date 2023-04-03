@@ -7,24 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AssignSIPConfigRequest {
-    
-    public AssignSIPConfigPathParams pathParams;
-    public AssignSIPConfigRequest withPathParams(AssignSIPConfigPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public AssignSIPConfigApplicationJSON request;
-    public AssignSIPConfigRequest withRequest(AssignSIPConfigApplicationJSON request) {
-        this.request = request;
+    public AssignSIPConfigApplicationJSON requestBody;
+    public AssignSIPConfigRequest withRequestBody(AssignSIPConfigApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public AssignSIPConfigSecurity security;
-    public AssignSIPConfigRequest withSecurity(AssignSIPConfigSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public AssignSIPConfigRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     

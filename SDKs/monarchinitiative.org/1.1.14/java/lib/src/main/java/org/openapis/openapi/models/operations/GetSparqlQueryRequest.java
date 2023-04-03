@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSparqlQueryRequest {
-    
-    public GetSparqlQueryPathParams pathParams;
-    public GetSparqlQueryRequest withPathParams(GetSparqlQueryPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=query")
+    public String query;
+    public GetSparqlQueryRequest withQuery(String query) {
+        this.query = query;
         return this;
     }
     

@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetInventoryTasksRequest {
-    
-    public GetInventoryTasksQueryParams queryParams;
-    public GetInventoryTasksRequest withQueryParams(GetInventoryTasksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Specifies the range of task creation dates used to filter the results. The results are filtered to include only tasks with a creation date that is equal to this date or is within specified range. &lt;p&gt; &lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; Maximum date range window size is 90 days.&lt;/span&gt;&lt;/p&gt;&lt;br /&gt;&lt;b&gt;Valid Format (UTC): &lt;/b&gt;&lt;code&gt;yyyy-MM-ddThh:mm:ss.SSSZ..yyyy-MM-ddThh:mm:ss.SSSZ&lt;/code&gt;&lt;br /&gt;&lt;br /&gt;For example: Tasks created on March 31, 2021&lt;br /&gt; &lt;code&gt;2021-03-31T00:00:00.000Z..2021-03-31T00:00:00.000Z&lt;/code&gt;&lt;br /&gt;&lt;br /&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_range")
+    public String dateRange;
+    public GetInventoryTasksRequest withDateRange(String dateRange) {
+        this.dateRange = dateRange;
         return this;
     }
     
+    /**
+     * The feed type associated with the inventory task. Either &lt;strong&gt;feed_type&lt;/strong&gt; or &lt;strong&gt;schedule_id&lt;/strong&gt; is required. Do not use with the &lt;strong&gt;schedule_id&lt;/strong&gt; parameter. Presently, only one feed type is available:&lt;ul&gt;&lt;li&gt;&lt;code&gt;LMS_ACTIVE_INVENTORY_REPORT&lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=feed_type")
+    public String feedType;
+    public GetInventoryTasksRequest withFeedType(String feedType) {
+        this.feedType = feedType;
+        return this;
+    }
     
-    public GetInventoryTasksSecurity security;
-    public GetInventoryTasksRequest withSecurity(GetInventoryTasksSecurity security) {
-        this.security = security;
+    /**
+     * The maximum number of tasks that can be returned on each page of the paginated response. Use this parameter in conjunction with the &lt;strong&gt;offset&lt;/strong&gt; parameter to control the pagination of the output. &lt;p&gt; &lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; This feature employs a zero-based list, where the first item in the list has an offset of &lt;code&gt;0&lt;/code&gt;.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;For example, if &lt;strong&gt;offset&lt;/strong&gt; is set to 10 and &lt;strong&gt;limit&lt;/strong&gt; is set to 10, the call retrieves tasks 11 thru 20 from the result set.&lt;/p&gt;&lt;p&gt;If this parameter is omitted, the default value is used. &lt;br /&gt;&lt;br /&gt;&lt;b&gt;Default: &lt;/b&gt; 10 &lt;br /&gt;&lt;br /&gt;&lt;b&gt;Maximum: &lt;/b&gt;500
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public String limit;
+    public GetInventoryTasksRequest withLimit(String limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * The number of previous days in which to search for tasks. Do not use with the &lt;code&gt;date_range&lt;/code&gt; parameter. If both &lt;code&gt;date_range&lt;/code&gt; and &lt;code&gt;look_back_days&lt;/code&gt; are omitted, this parameter's default value is used.  &lt;br /&gt;&lt;br /&gt;&lt;b&gt;Default: &lt;/b&gt; 7 &lt;br /&gt;&lt;br /&gt;&lt;b&gt;Range: &lt;/b&gt; 1-90 (inclusive)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=look_back_days")
+    public String lookBackDays;
+    public GetInventoryTasksRequest withLookBackDays(String lookBackDays) {
+        this.lookBackDays = lookBackDays;
+        return this;
+    }
+    
+    /**
+     * The number of tasks to skip in the result set before returning the first task in the paginated response. &lt;p&gt;Combine &lt;strong&gt;offset&lt;/strong&gt; with the &lt;strong&gt;limit&lt;/strong&gt; query parameter to control the items returned in the response. For example, if you supply an &lt;strong&gt;offset&lt;/strong&gt; of &lt;code&gt;0&lt;/code&gt; and a &lt;strong&gt;limit&lt;/strong&gt; of &lt;code&gt;10&lt;/code&gt;, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If &lt;strong&gt;offset&lt;/strong&gt; is &lt;code&gt;10&lt;/code&gt; and &lt;strong&gt;limit&lt;/strong&gt; is &lt;code&gt;20&lt;/code&gt;, the first page of the response contains items 11-30 from the complete result set. If this query parameter is not set, the default value is used and the first page of records is returned. &lt;br /&gt;&lt;br /&gt;&lt;b&gt;Default: &lt;/b&gt;0
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public String offset;
+    public GetInventoryTasksRequest withOffset(String offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * The ID of the schedule for which to retrieve the latest result file. This ID is generated when the schedule was created by the &lt;strong&gt;createSchedule&lt;/strong&gt; method. Schedules apply to downloaded reports (&lt;code&gt;LMS_ACTIVE_INVENTORY_REPORT&lt;/code&gt;). Either &lt;strong&gt;schedule_id&lt;/strong&gt; or &lt;strong&gt;feed_type&lt;/strong&gt; is  required. Do not use with the &lt;strong&gt;feed_type&lt;/strong&gt; parameter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=schedule_id")
+    public String scheduleId;
+    public GetInventoryTasksRequest withScheduleId(String scheduleId) {
+        this.scheduleId = scheduleId;
         return this;
     }
     

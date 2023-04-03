@@ -4,27 +4,156 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsRequest {
-    
-    public ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsPathParams pathParams;
-    public ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsRequest withPathParams(ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsQueryParams queryParams;
-    public ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsRequest withQueryParams(ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsSecurity security;
-    public ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsRequest withSecurity(ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsSecurity security) {
-        this.security = security;
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * An expression that can be used to filter the list. Filters use the Common Expression Language and can refer to all message fields.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Required. The name of the spec to list revisions for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * The maximum number of revisions to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token, received from a previous ListApiSpecRevisions call. Provide this to retrieve the subsequent page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public ApigeeregistryProjectsLocationsApisVersionsSpecsListRevisionsRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

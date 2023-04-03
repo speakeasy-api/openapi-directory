@@ -7,20 +7,77 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchArtifactsByContentRequest {
-    
-    public SearchArtifactsByContentQueryParams queryParams;
-    public SearchArtifactsByContentRequest withQueryParams(SearchArtifactsByContentQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * The content to search for.
      */
     @SpeakeasyMetadata("request:mediaType=*/*")
-    public byte[] request;
-    public SearchArtifactsByContentRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public SearchArtifactsByContentRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Indicates the type of artifact represented by the content being used for the search.  This is only needed when using the `canonical` query parameter, so that the server knows how to canonicalize the content prior to searching for matching artifacts.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=artifactType")
+    public String artifactType;
+    public SearchArtifactsByContentRequest withArtifactType(String artifactType) {
+        this.artifactType = artifactType;
+        return this;
+    }
+    
+    /**
+     * Parameter that can be set to `true` to indicate that the server should "canonicalize" the content when searching for matching artifacts.  Canonicalization is unique to each artifact type, but typically involves removing any extra whitespace and formatting the content in a consistent manner.  Must be used along with the `artifactType` query parameter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=canonical")
+    public Boolean canonical;
+    public SearchArtifactsByContentRequest withCanonical(Boolean canonical) {
+        this.canonical = canonical;
+        return this;
+    }
+    
+    /**
+     * The number of artifacts to return.  Defaults to 20.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public SearchArtifactsByContentRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * The number of artifacts to skip before starting to collect the result set.  Defaults to 0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public SearchArtifactsByContentRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Sort order, ascending (`asc`) or descending (`desc`).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public SearchArtifactsByContentOrderEnum order;
+    public SearchArtifactsByContentRequest withOrder(SearchArtifactsByContentOrderEnum order) {
+        this.order = order;
+        return this;
+    }
+    
+    /**
+     * The field to sort by.  Can be one of:
+     * 
+     * * `name`
+     * * `createdOn`
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderby")
+    public SearchArtifactsByContentOrderbyEnum orderby;
+    public SearchArtifactsByContentRequest withOrderby(SearchArtifactsByContentOrderbyEnum orderby) {
+        this.orderby = orderby;
         return this;
     }
     

@@ -4,27 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListEsimProfileRequest {
-    
-    public ListEsimProfileQueryParams queryParams;
-    public ListEsimProfileRequest withQueryParams(ListEsimProfileQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * List the eSIM Profiles that have been associated with an EId.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Eid")
+    public String eid;
+    public ListEsimProfileRequest withEid(String eid) {
+        this.eid = eid;
         return this;
     }
     
-    
-    public ListEsimProfileSecurity security;
-    public ListEsimProfileRequest withSecurity(ListEsimProfileSecurity security) {
-        this.security = security;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListEsimProfileRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListEsimProfileRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public String serverURL;
-    public ListEsimProfileRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListEsimProfileRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Find the eSIM Profile resource related to a [Sim](https://www.twilio.com/docs/wireless/api/sim-resource) resource by providing the SIM SID. Will always return an array with either 1 or 0 records.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SimSid")
+    public String simSid;
+    public ListEsimProfileRequest withSimSid(String simSid) {
+        this.simSid = simSid;
+        return this;
+    }
+    
+    /**
+     * List the eSIM Profiles that are in a given status.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Status")
+    public org.openapis.openapi.models.shared.EsimProfileEnumStatusEnum status;
+    public ListEsimProfileRequest withStatus(org.openapis.openapi.models.shared.EsimProfileEnumStatusEnum status) {
+        this.status = status;
         return this;
     }
     

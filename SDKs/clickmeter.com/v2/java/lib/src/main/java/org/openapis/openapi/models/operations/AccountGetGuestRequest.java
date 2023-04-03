@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountGetGuestRequest {
-    
-    public AccountGetGuestPathParams pathParams;
-    public AccountGetGuestRequest withPathParams(AccountGetGuestPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of the guest
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=guestId")
+    public Long guestId;
+    public AccountGetGuestRequest withGuestId(Long guestId) {
+        this.guestId = guestId;
         return this;
     }
     

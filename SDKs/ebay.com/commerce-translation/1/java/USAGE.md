@@ -5,10 +5,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.TranslateSecurity;
-import org.openapis.openapi.models.operations.TranslateRequest;
 import org.openapis.openapi.models.operations.TranslateResponse;
 import org.openapis.openapi.models.shared.TranslateRequest;
-import org.openapis.openapi.models.shared.SchemeAPIAuth;
 
 public class Application {
     public static void main(String[] args) {
@@ -16,25 +14,20 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            TranslateRequest req = new TranslateRequest() {{
-                security = new TranslateSecurity() {{
-                    apiAuth = new SchemeAPIAuth() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
+            org.openapis.openapi.models.shared.TranslateRequest req = new TranslateRequest() {{
+                from = "corrupti";
+                text = new String[]{{
+                    add("distinctio"),
+                    add("quibusdam"),
+                    add("unde"),
                 }};
-                request = new TranslateRequest() {{
-                    from = "corrupti";
-                    text = new String[]{{
-                        add("distinctio"),
-                        add("quibusdam"),
-                        add("unde"),
-                    }};
-                    to = "nulla";
-                    translationContext = "corrupti";
-                }};
-            }};            
+                to = "nulla";
+                translationContext = "corrupti";
+            }}            
 
-            TranslateResponse res = sdk.language.translate(req);
+            TranslateResponse res = sdk.language.translate(req, new TranslateSecurity() {{
+                apiAuth = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.translateResponse.isPresent()) {
                 // handle response

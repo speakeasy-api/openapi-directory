@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyDBClusterSnapshotAttributeRequest {
-    
-    public GETModifyDBClusterSnapshotAttributeQueryParams queryParams;
-    public GETModifyDBClusterSnapshotAttributeRequest withQueryParams(GETModifyDBClusterSnapshotAttributeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyDBClusterSnapshotAttributeActionEnum action;
+    public GETModifyDBClusterSnapshotAttributeRequest withAction(GETModifyDBClusterSnapshotAttributeActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The name of the DB cluster snapshot attribute to modify.&lt;/p&gt; &lt;p&gt;To manage authorization for other Amazon accounts to copy or restore a manual DB cluster snapshot, set this value to &lt;code&gt;restore&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AttributeName")
+    public String attributeName;
+    public GETModifyDBClusterSnapshotAttributeRequest withAttributeName(String attributeName) {
+        this.attributeName = attributeName;
+        return this;
+    }
     
-    public GETModifyDBClusterSnapshotAttributeHeaders headers;
-    public GETModifyDBClusterSnapshotAttributeRequest withHeaders(GETModifyDBClusterSnapshotAttributeHeaders headers) {
-        this.headers = headers;
+    /**
+     * The identifier for the DB cluster snapshot to modify the attributes for.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBClusterSnapshotIdentifier")
+    public String dbClusterSnapshotIdentifier;
+    public GETModifyDBClusterSnapshotAttributeRequest withDBClusterSnapshotIdentifier(String dbClusterSnapshotIdentifier) {
+        this.dbClusterSnapshotIdentifier = dbClusterSnapshotIdentifier;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;A list of DB cluster snapshot attributes to add to the attribute specified by &lt;code&gt;AttributeName&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;To authorize other Amazon accounts to copy or restore a manual DB cluster snapshot, set this list to include one or more Amazon account IDs, or &lt;code&gt;all&lt;/code&gt; to make the manual DB cluster snapshot restorable by any Amazon account. Do not add the &lt;code&gt;all&lt;/code&gt; value for any manual DB cluster snapshots that contain private information that you don't want available to all Amazon accounts.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ValuesToAdd")
+    public String[] valuesToAdd;
+    public GETModifyDBClusterSnapshotAttributeRequest withValuesToAdd(String[] valuesToAdd) {
+        this.valuesToAdd = valuesToAdd;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;A list of DB cluster snapshot attributes to remove from the attribute specified by &lt;code&gt;AttributeName&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;To remove authorization for other Amazon accounts to copy or restore a manual DB cluster snapshot, set this list to include one or more Amazon account identifiers, or &lt;code&gt;all&lt;/code&gt; to remove authorization for any Amazon account to copy or restore the DB cluster snapshot. If you specify &lt;code&gt;all&lt;/code&gt;, an Amazon account whose account ID is explicitly added to the &lt;code&gt;restore&lt;/code&gt; attribute can still copy or restore a manual DB cluster snapshot.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ValuesToRemove")
+    public String[] valuesToRemove;
+    public GETModifyDBClusterSnapshotAttributeRequest withValuesToRemove(String[] valuesToRemove) {
+        this.valuesToRemove = valuesToRemove;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyDBClusterSnapshotAttributeVersionEnum version;
+    public GETModifyDBClusterSnapshotAttributeRequest withVersion(GETModifyDBClusterSnapshotAttributeVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyDBClusterSnapshotAttributeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyDBClusterSnapshotAttributeRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyDBClusterSnapshotAttributeRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyDBClusterSnapshotAttributeRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyDBClusterSnapshotAttributeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyDBClusterSnapshotAttributeRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyDBClusterSnapshotAttributeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

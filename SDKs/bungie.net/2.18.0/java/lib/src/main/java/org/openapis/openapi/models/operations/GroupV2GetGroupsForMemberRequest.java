@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupV2GetGroupsForMemberRequest {
+    /**
+     * Filter apply to list of joined groups.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=filter")
+    public Integer filter;
+    public GroupV2GetGroupsForMemberRequest withFilter(Integer filter) {
+        this.filter = filter;
+        return this;
+    }
     
-    public GroupV2GetGroupsForMemberPathParams pathParams;
-    public GroupV2GetGroupsForMemberRequest withPathParams(GroupV2GetGroupsForMemberPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Type of group the supplied member founded.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupType")
+    public Integer groupType;
+    public GroupV2GetGroupsForMemberRequest withGroupType(Integer groupType) {
+        this.groupType = groupType;
+        return this;
+    }
+    
+    /**
+     * Membership ID to for which to find founded groups.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipId")
+    public Long membershipId;
+    public GroupV2GetGroupsForMemberRequest withMembershipId(Long membershipId) {
+        this.membershipId = membershipId;
+        return this;
+    }
+    
+    /**
+     * Membership type of the supplied membership ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
+    public Integer membershipType;
+    public GroupV2GetGroupsForMemberRequest withMembershipType(Integer membershipType) {
+        this.membershipType = membershipType;
         return this;
     }
     

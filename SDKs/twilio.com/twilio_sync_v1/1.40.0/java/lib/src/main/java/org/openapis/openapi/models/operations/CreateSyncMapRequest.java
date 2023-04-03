@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSyncMapRequest {
-    
-    public CreateSyncMapPathParams pathParams;
-    public CreateSyncMapRequest withPathParams(CreateSyncMapPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateSyncMapCreateSyncMapRequest request;
-    public CreateSyncMapRequest withRequest(CreateSyncMapCreateSyncMapRequest request) {
-        this.request = request;
+    public CreateSyncMapCreateSyncMapRequest requestBody;
+    public CreateSyncMapRequest withRequestBody(CreateSyncMapCreateSyncMapRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateSyncMapSecurity security;
-    public CreateSyncMapRequest withSecurity(CreateSyncMapSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateSyncMapRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) to create the Sync Map in.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public CreateSyncMapRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

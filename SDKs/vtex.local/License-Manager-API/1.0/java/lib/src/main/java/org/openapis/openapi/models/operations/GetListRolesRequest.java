@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetListRolesRequest {
-    
-    public GetListRolesQueryParams queryParams;
-    public GetListRolesRequest withQueryParams(GetListRolesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The media type of the body of the request. Default value for license manager protocol is application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetListRolesRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
+    /**
+     * Number of items in the returned page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=numItems")
+    public Long numItems;
+    public GetListRolesRequest withNumItems(Long numItems) {
+        this.numItems = numItems;
+        return this;
+    }
     
-    public GetListRolesHeaders headers;
-    public GetListRolesRequest withHeaders(GetListRolesHeaders headers) {
-        this.headers = headers;
+    /**
+     * Which page from the whole list will be returned
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
+    public Long pageNumber;
+    public GetListRolesRequest withPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    
+    /**
+     * Chooses the field that the list will be sorted by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetListRolesRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Defines the sorting order. ASC is used for ascendant order. DSC is used for descendant order
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortType")
+    public String sortType;
+    public GetListRolesRequest withSortType(String sortType) {
+        this.sortType = sortType;
         return this;
     }
     

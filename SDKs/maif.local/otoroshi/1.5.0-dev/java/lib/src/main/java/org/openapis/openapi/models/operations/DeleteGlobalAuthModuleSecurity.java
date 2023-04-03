@@ -7,10 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteGlobalAuthModuleSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic")
-    public org.openapis.openapi.models.shared.SchemeOtoroshiAuth otoroshiAuth;
-    public DeleteGlobalAuthModuleSecurity withOtoroshiAuth(org.openapis.openapi.models.shared.SchemeOtoroshiAuth otoroshiAuth) {
-        this.otoroshiAuth = otoroshiAuth;
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic,name=password")
+    public String password;
+    public DeleteGlobalAuthModuleSecurity withPassword(String password) {
+        this.password = password;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic,name=username")
+    public String username;
+    public DeleteGlobalAuthModuleSecurity withUsername(String username) {
+        this.username = username;
         return this;
     }
     

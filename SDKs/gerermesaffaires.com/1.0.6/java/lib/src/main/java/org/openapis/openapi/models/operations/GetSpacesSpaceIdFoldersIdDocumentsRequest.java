@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpacesSpaceIdFoldersIdDocumentsRequest {
-    
-    public GetSpacesSpaceIdFoldersIdDocumentsPathParams pathParams;
-    public GetSpacesSpaceIdFoldersIdDocumentsRequest withPathParams(GetSpacesSpaceIdFoldersIdDocumentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Class of document
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Class")
+    public String class_;
+    public GetSpacesSpaceIdFoldersIdDocumentsRequest withClass(String class_) {
+        this.class_ = class_;
         return this;
     }
     
+    /**
+     * date range of the documents
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Date")
+    public String date;
+    public GetSpacesSpaceIdFoldersIdDocumentsRequest withDate(String date) {
+        this.date = date;
+        return this;
+    }
     
-    public GetSpacesSpaceIdFoldersIdDocumentsQueryParams queryParams;
-    public GetSpacesSpaceIdFoldersIdDocumentsRequest withQueryParams(GetSpacesSpaceIdFoldersIdDocumentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * date range of attachment
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FolderDate")
+    public String folderDate;
+    public GetSpacesSpaceIdFoldersIdDocumentsRequest withFolderDate(String folderDate) {
+        this.folderDate = folderDate;
+        return this;
+    }
+    
+    /**
+     * index range of the results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Range")
+    public String range;
+    public GetSpacesSpaceIdFoldersIdDocumentsRequest withRange(String range) {
+        this.range = range;
+        return this;
+    }
+    
+    /**
+     * Title of the document
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Title")
+    public String title;
+    public GetSpacesSpaceIdFoldersIdDocumentsRequest withTitle(String title) {
+        this.title = title;
+        return this;
+    }
+    
+    /**
+     * Id of the folder
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSpacesSpaceIdFoldersIdDocumentsRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public GetSpacesSpaceIdFoldersIdDocumentsRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

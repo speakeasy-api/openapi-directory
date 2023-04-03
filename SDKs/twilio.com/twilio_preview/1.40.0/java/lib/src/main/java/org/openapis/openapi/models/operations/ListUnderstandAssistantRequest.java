@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListUnderstandAssistantRequest {
-    
-    public ListUnderstandAssistantQueryParams queryParams;
-    public ListUnderstandAssistantRequest withQueryParams(ListUnderstandAssistantQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListUnderstandAssistantRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListUnderstandAssistantSecurity security;
-    public ListUnderstandAssistantRequest withSecurity(ListUnderstandAssistantSecurity security) {
-        this.security = security;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListUnderstandAssistantRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
-    
-    public String serverURL;
-    public ListUnderstandAssistantRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListUnderstandAssistantRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

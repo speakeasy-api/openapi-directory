@@ -4,20 +4,53 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationDevicesRequest {
-    
-    public GetOrganizationDevicesPathParams pathParams;
-    public GetOrganizationDevicesRequest withPathParams(GetOrganizationDevicesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filter results by whether or not the device's configuration has been updated after the given timestamp
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=configurationUpdatedAfter")
+    public String configurationUpdatedAfter;
+    public GetOrganizationDevicesRequest withConfigurationUpdatedAfter(String configurationUpdatedAfter) {
+        this.configurationUpdatedAfter = configurationUpdatedAfter;
         return this;
     }
     
+    /**
+     * A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endingBefore")
+    public String endingBefore;
+    public GetOrganizationDevicesRequest withEndingBefore(String endingBefore) {
+        this.endingBefore = endingBefore;
+        return this;
+    }
     
-    public GetOrganizationDevicesQueryParams queryParams;
-    public GetOrganizationDevicesRequest withQueryParams(GetOrganizationDevicesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public GetOrganizationDevicesRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
+    
+    /**
+     * The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=perPage")
+    public Long perPage;
+    public GetOrganizationDevicesRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startingAfter")
+    public String startingAfter;
+    public GetOrganizationDevicesRequest withStartingAfter(String startingAfter) {
+        this.startingAfter = startingAfter;
         return this;
     }
     

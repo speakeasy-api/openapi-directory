@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdminDeleteHookRequest {
-    
-    public AdminDeleteHookPathParams pathParams;
-    public AdminDeleteHookRequest withPathParams(AdminDeleteHookPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * id of the hook to delete
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public AdminDeleteHookRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

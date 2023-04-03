@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyIdentityIdFormatRequest {
-    
-    public GETModifyIdentityIdFormatQueryParams queryParams;
-    public GETModifyIdentityIdFormatRequest withQueryParams(GETModifyIdentityIdFormatQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyIdentityIdFormatActionEnum action;
+    public GETModifyIdentityIdFormatRequest withAction(GETModifyIdentityIdFormatActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The ARN of the principal, which can be an IAM user, IAM role, or the root user. Specify &lt;code&gt;all&lt;/code&gt; to modify the ID format for all IAM users, IAM roles, and the root user of the account.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PrincipalArn")
+    public String principalArn;
+    public GETModifyIdentityIdFormatRequest withPrincipalArn(String principalArn) {
+        this.principalArn = principalArn;
+        return this;
+    }
     
-    public GETModifyIdentityIdFormatHeaders headers;
-    public GETModifyIdentityIdFormatRequest withHeaders(GETModifyIdentityIdFormatHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The type of resource: &lt;code&gt;bundle&lt;/code&gt; | &lt;code&gt;conversion-task&lt;/code&gt; | &lt;code&gt;customer-gateway&lt;/code&gt; | &lt;code&gt;dhcp-options&lt;/code&gt; | &lt;code&gt;elastic-ip-allocation&lt;/code&gt; | &lt;code&gt;elastic-ip-association&lt;/code&gt; | &lt;code&gt;export-task&lt;/code&gt; | &lt;code&gt;flow-log&lt;/code&gt; | &lt;code&gt;image&lt;/code&gt; | &lt;code&gt;import-task&lt;/code&gt; | &lt;code&gt;internet-gateway&lt;/code&gt; | &lt;code&gt;network-acl&lt;/code&gt; | &lt;code&gt;network-acl-association&lt;/code&gt; | &lt;code&gt;network-interface&lt;/code&gt; | &lt;code&gt;network-interface-attachment&lt;/code&gt; | &lt;code&gt;prefix-list&lt;/code&gt; | &lt;code&gt;route-table&lt;/code&gt; | &lt;code&gt;route-table-association&lt;/code&gt; | &lt;code&gt;security-group&lt;/code&gt; | &lt;code&gt;subnet&lt;/code&gt; | &lt;code&gt;subnet-cidr-block-association&lt;/code&gt; | &lt;code&gt;vpc&lt;/code&gt; | &lt;code&gt;vpc-cidr-block-association&lt;/code&gt; | &lt;code&gt;vpc-endpoint&lt;/code&gt; | &lt;code&gt;vpc-peering-connection&lt;/code&gt; | &lt;code&gt;vpn-connection&lt;/code&gt; | &lt;code&gt;vpn-gateway&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;Alternatively, use the &lt;code&gt;all-current&lt;/code&gt; option to include all resource types that are currently within their opt-in period for longer IDs.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Resource")
+    public String resource;
+    public GETModifyIdentityIdFormatRequest withResource(String resource) {
+        this.resource = resource;
+        return this;
+    }
+    
+    /**
+     * Indicates whether the resource should use longer IDs (17-character IDs)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UseLongIds")
+    public Boolean useLongIds;
+    public GETModifyIdentityIdFormatRequest withUseLongIds(Boolean useLongIds) {
+        this.useLongIds = useLongIds;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyIdentityIdFormatVersionEnum version;
+    public GETModifyIdentityIdFormatRequest withVersion(GETModifyIdentityIdFormatVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyIdentityIdFormatRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyIdentityIdFormatRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyIdentityIdFormatRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyIdentityIdFormatRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyIdentityIdFormatRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyIdentityIdFormatRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyIdentityIdFormatRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

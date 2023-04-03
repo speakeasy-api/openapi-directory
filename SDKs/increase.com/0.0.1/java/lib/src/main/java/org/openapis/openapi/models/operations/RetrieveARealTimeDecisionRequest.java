@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveARealTimeDecisionRequest {
-    
-    public RetrieveARealTimeDecisionPathParams pathParams;
-    public RetrieveARealTimeDecisionRequest withPathParams(RetrieveARealTimeDecisionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=real_time_decision_id")
+    public String realTimeDecisionId;
+    public RetrieveARealTimeDecisionRequest withRealTimeDecisionId(String realTimeDecisionId) {
+        this.realTimeDecisionId = realTimeDecisionId;
         return this;
     }
     

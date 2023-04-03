@@ -7,31 +7,130 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesRequest {
-    
-    public ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesPathParams pathParams;
-    public ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesRequest withPathParams(ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesQueryParams queryParams;
-    public ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesRequest withQueryParams(ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.V1Beta1ImportProducerOverridesRequest request;
-    public ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesRequest withRequest(org.openapis.openapi.models.shared.V1Beta1ImportProducerOverridesRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.V1Beta1ImportProducerOverridesRequest v1Beta1ImportProducerOverridesRequest;
+    public ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesRequest withV1Beta1ImportProducerOverridesRequest(org.openapis.openapi.models.shared.V1Beta1ImportProducerOverridesRequest v1Beta1ImportProducerOverridesRequest) {
+        this.v1Beta1ImportProducerOverridesRequest = v1Beta1ImportProducerOverridesRequest;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesSecurity security;
-    public ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesRequest withSecurity(ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * The resource name of the consumer. An example name would be: `services/compute.googleapis.com/projects/123`
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

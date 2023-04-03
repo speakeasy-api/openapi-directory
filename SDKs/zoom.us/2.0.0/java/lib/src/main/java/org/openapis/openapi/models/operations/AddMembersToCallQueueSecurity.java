@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddMembersToCallQueueSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeOAuth oAuth;
-    public AddMembersToCallQueueSecurity withOAuth(org.openapis.openapi.models.shared.SchemeOAuth oAuth) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String oAuth;
+    public AddMembersToCallQueueSecurity withOAuth(String oAuth) {
         this.oAuth = oAuth;
         return this;
     }

@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCertificateTypeRequest {
-    
-    public GetCertificateTypePathParams pathParams;
-    public GetCertificateTypeRequest withPathParams(GetCertificateTypePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public GetCertificateTypeRequest withExpand(String expand) {
+        this.expand = expand;
         return this;
     }
     
-    
-    public GetCertificateTypeQueryParams queryParams;
-    public GetCertificateTypeRequest withQueryParams(GetCertificateTypeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
+    public String type;
+    public GetCertificateTypeRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

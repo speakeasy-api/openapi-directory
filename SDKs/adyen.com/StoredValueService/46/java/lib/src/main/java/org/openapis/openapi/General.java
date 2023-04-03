@@ -34,10 +34,11 @@ public class General {
      * Changes the status of the payment method.
      * Changes the status of the provided payment method to the specified status.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostChangeStatusResponse postChangeStatus(org.openapis.openapi.models.operations.PostChangeStatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostChangeStatusResponse postChangeStatus(org.openapis.openapi.models.shared.StoredValueStatusChangeRequest request, org.openapis.openapi.models.operations.PostChangeStatusSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/changeStatus");
         
@@ -48,7 +49,7 @@ public class General {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -84,10 +85,11 @@ public class General {
      * Checks the balance.
      * Checks the balance of the provided payment method.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostCheckBalanceResponse postCheckBalance(org.openapis.openapi.models.operations.PostCheckBalanceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostCheckBalanceResponse postCheckBalance(org.openapis.openapi.models.shared.StoredValueBalanceCheckRequest request, org.openapis.openapi.models.operations.PostCheckBalanceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/checkBalance");
         
@@ -98,7 +100,7 @@ public class General {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -134,10 +136,11 @@ public class General {
      * Issues a new card.
      * Issues a new card of the given payment method.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostIssueResponse postIssue(org.openapis.openapi.models.operations.PostIssueRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostIssueResponse postIssue(org.openapis.openapi.models.shared.StoredValueIssueRequest request, org.openapis.openapi.models.operations.PostIssueSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/issue");
         
@@ -148,7 +151,7 @@ public class General {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -184,10 +187,11 @@ public class General {
      * Loads the payment method.
      * Loads the payment method with the specified funds.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostLoadResponse postLoad(org.openapis.openapi.models.operations.PostLoadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostLoadResponse postLoad(org.openapis.openapi.models.shared.StoredValueLoadRequest request, org.openapis.openapi.models.operations.PostLoadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/load");
         
@@ -198,7 +202,7 @@ public class General {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -234,10 +238,11 @@ public class General {
      * Merge the balance of two cards.
      * Increases the balance of the paymentmethod by the full amount left on the source paymentmethod
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostMergeBalanceResponse postMergeBalance(org.openapis.openapi.models.operations.PostMergeBalanceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostMergeBalanceResponse postMergeBalance(org.openapis.openapi.models.shared.StoredValueBalanceMergeRequest request, org.openapis.openapi.models.operations.PostMergeBalanceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/mergeBalance");
         
@@ -248,7 +253,7 @@ public class General {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -284,10 +289,11 @@ public class General {
      * Voids a transaction.
      * Voids the referenced stored value transaction.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostVoidTransactionResponse postVoidTransaction(org.openapis.openapi.models.operations.PostVoidTransactionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostVoidTransactionResponse postVoidTransaction(org.openapis.openapi.models.shared.StoredValueVoidRequest request, org.openapis.openapi.models.operations.PostVoidTransactionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/voidTransaction");
         
@@ -298,7 +304,7 @@ public class General {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

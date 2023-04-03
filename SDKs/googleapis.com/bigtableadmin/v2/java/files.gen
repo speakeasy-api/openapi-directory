@@ -38,8 +38,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminOperations
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminOperationsCancelSecurityOption5.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminOperationsCancelSecurityOption6.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminOperationsCancelSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminOperationsCancelPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminOperationsCancelQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminOperationsCancelRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminOperationsCancelResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminOperationsProjectsOperationsListSecurityOption1.java
@@ -50,8 +48,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminOperations
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminOperationsProjectsOperationsListSecurityOption6.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminOperationsProjectsOperationsListSecurityOption7.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminOperationsProjectsOperationsListSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminOperationsProjectsOperationsListPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminOperationsProjectsOperationsListQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminOperationsProjectsOperationsListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminOperationsProjectsOperationsListResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesAppProfilesCreateSecurityOption1.java
@@ -61,8 +57,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsIn
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesAppProfilesCreateSecurityOption5.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesAppProfilesCreateSecurityOption6.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesAppProfilesCreateSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesAppProfilesCreatePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesAppProfilesCreateQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesAppProfilesCreateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesAppProfilesCreateResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesAppProfilesListSecurityOption1.java
@@ -72,8 +66,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsIn
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesAppProfilesListSecurityOption5.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesAppProfilesListSecurityOption6.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesAppProfilesListSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesAppProfilesListPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesAppProfilesListQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesAppProfilesListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesAppProfilesListResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersBackupsCopySecurityOption1.java
@@ -82,8 +74,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsIn
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersBackupsCopySecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersBackupsCopySecurityOption5.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersBackupsCopySecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersBackupsCopyPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersBackupsCopyQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersBackupsCopyRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersBackupsCopyResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersBackupsCreateSecurityOption1.java
@@ -92,8 +82,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsIn
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersBackupsCreateSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersBackupsCreateSecurityOption5.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersBackupsCreateSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersBackupsCreatePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersBackupsCreateQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersBackupsCreateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersBackupsCreateResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersBackupsListSecurityOption1.java
@@ -102,8 +90,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsIn
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersBackupsListSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersBackupsListSecurityOption5.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersBackupsListSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersBackupsListPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersBackupsListQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersBackupsListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersBackupsListResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersCreateSecurityOption1.java
@@ -113,8 +99,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsIn
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersCreateSecurityOption5.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersCreateSecurityOption6.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersCreateSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersCreatePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersCreateQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersCreateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersCreateResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersHotTabletsListSecurityOption1.java
@@ -124,8 +108,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsIn
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersHotTabletsListSecurityOption5.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersHotTabletsListSecurityOption6.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersHotTabletsListSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersHotTabletsListPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersHotTabletsListQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersHotTabletsListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersHotTabletsListResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersListSecurityOption1.java
@@ -136,8 +118,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsIn
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersListSecurityOption6.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersListSecurityOption7.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersListSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersListPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersListQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersListResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersUpdateSecurityOption1.java
@@ -147,8 +127,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsIn
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersUpdateSecurityOption5.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersUpdateSecurityOption6.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersUpdateSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersUpdatePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersUpdateQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersUpdateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesClustersUpdateResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesCreateSecurityOption1.java
@@ -158,8 +136,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsIn
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesCreateSecurityOption5.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesCreateSecurityOption6.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesCreateSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesCreatePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesCreateQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesCreateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesCreateResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesListSecurityOption1.java
@@ -170,8 +146,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsIn
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesListSecurityOption6.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesListSecurityOption7.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesListSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesListPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesListQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesListResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesCheckConsistencySecurityOption1.java
@@ -180,8 +154,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsIn
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesCheckConsistencySecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesCheckConsistencySecurityOption5.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesCheckConsistencySecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesCheckConsistencyPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesCheckConsistencyQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesCheckConsistencyRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesCheckConsistencyResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesCreateSecurityOption1.java
@@ -190,8 +162,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsIn
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesCreateSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesCreateSecurityOption5.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesCreateSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesCreatePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesCreateQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesCreateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesCreateResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesDeleteSecurityOption1.java
@@ -201,8 +171,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsIn
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesDeleteSecurityOption5.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesDeleteSecurityOption6.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesDeleteSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesDeletePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesDeleteQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesDeleteRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesDeleteResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesDropRowRangeSecurityOption1.java
@@ -211,8 +179,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsIn
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesDropRowRangeSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesDropRowRangeSecurityOption5.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesDropRowRangeSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesDropRowRangePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesDropRowRangeQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesDropRowRangeRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesDropRowRangeResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesGenerateConsistencyTokenSecurityOption1.java
@@ -221,8 +187,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsIn
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesGenerateConsistencyTokenSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesGenerateConsistencyTokenSecurityOption5.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesGenerateConsistencyTokenSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesGenerateConsistencyTokenPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesGenerateConsistencyTokenQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesGenerateConsistencyTokenRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesGenerateConsistencyTokenResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesGetIamPolicySecurityOption1.java
@@ -232,8 +196,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsIn
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesGetIamPolicySecurityOption5.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesGetIamPolicySecurityOption6.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesGetIamPolicySecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesGetIamPolicyPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesGetIamPolicyQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesGetIamPolicyRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesGetIamPolicyResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesListSecurityOption1.java
@@ -243,9 +205,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsIn
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesListSecurityOption5.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesListSecurityOption6.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesListSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesListPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesListViewEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesListQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesListResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesModifyColumnFamiliesSecurityOption1.java
@@ -254,8 +214,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsIn
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesModifyColumnFamiliesSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesModifyColumnFamiliesSecurityOption5.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesModifyColumnFamiliesSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesModifyColumnFamiliesPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesModifyColumnFamiliesQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesModifyColumnFamiliesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesModifyColumnFamiliesResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesPatchSecurityOption1.java
@@ -265,8 +223,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsIn
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesPatchSecurityOption5.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesPatchSecurityOption6.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesPatchSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesPatchPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesPatchQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesPatchRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesPatchResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesRestoreSecurityOption1.java
@@ -275,8 +231,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsIn
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesRestoreSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesRestoreSecurityOption5.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesRestoreSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesRestorePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesRestoreQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesRestoreRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesRestoreResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesSetIamPolicySecurityOption1.java
@@ -286,8 +240,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsIn
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesSetIamPolicySecurityOption5.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesSetIamPolicySecurityOption6.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesSetIamPolicySecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesSetIamPolicyPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesSetIamPolicyQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesSetIamPolicyRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesSetIamPolicyResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesTestIamPermissionsSecurityOption1.java
@@ -297,8 +249,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsIn
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesTestIamPermissionsSecurityOption5.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesTestIamPermissionsSecurityOption6.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesTestIamPermissionsSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesTestIamPermissionsPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesTestIamPermissionsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesTestIamPermissionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesTestIamPermissionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesUndeleteSecurityOption1.java
@@ -307,8 +257,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsIn
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesUndeleteSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesUndeleteSecurityOption5.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesUndeleteSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesUndeletePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesUndeleteQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesUndeleteRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsInstancesTablesUndeleteResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsLocationsGetSecurityOption1.java
@@ -319,9 +267,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsLo
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsLocationsGetSecurityOption6.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsLocationsGetSecurityOption7.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsLocationsGetSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsLocationsGetPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsLocationsGetViewEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsLocationsGetQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsLocationsGetRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsLocationsGetResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsLocationsListSecurityOption1.java
@@ -332,14 +278,10 @@ lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsLo
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsLocationsListSecurityOption6.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsLocationsListSecurityOption7.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsLocationsListSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsLocationsListPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsLocationsListQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsLocationsListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/BigtableadminProjectsLocationsListResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2c.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListOperationsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Operation.java
 lib/src/main/java/org/openapis/openapi/models/shared/Status.java

@@ -40,7 +40,7 @@ public class Video {
      */
     public org.openapis.openapi.models.operations.GetDeviceCameraVideoSettingsResponse getDeviceCameraVideoSettings(org.openapis.openapi.models.operations.GetDeviceCameraVideoSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraVideoSettingsPathParams.class, baseUrl, "/devices/{serial}/camera/video/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraVideoSettingsRequest.class, baseUrl, "/devices/{serial}/camera/video/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,12 +80,12 @@ public class Video {
      */
     public org.openapis.openapi.models.operations.UpdateDeviceCameraVideoSettingsResponse updateDeviceCameraVideoSettings(org.openapis.openapi.models.operations.UpdateDeviceCameraVideoSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceCameraVideoSettingsPathParams.class, baseUrl, "/devices/{serial}/camera/video/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceCameraVideoSettingsRequest.class, baseUrl, "/devices/{serial}/camera/video/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

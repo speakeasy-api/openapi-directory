@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchSipIpAddressRequest {
-    
-    public FetchSipIpAddressPathParams pathParams;
-    public FetchSipIpAddressRequest withPathParams(FetchSipIpAddressPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public FetchSipIpAddressRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public FetchSipIpAddressSecurity security;
-    public FetchSipIpAddressRequest withSecurity(FetchSipIpAddressSecurity security) {
-        this.security = security;
+    /**
+     * The IpAccessControlList Sid that identifies the IpAddress resources to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=IpAccessControlListSid")
+    public String ipAccessControlListSid;
+    public FetchSipIpAddressRequest withIpAccessControlListSid(String ipAccessControlListSid) {
+        this.ipAccessControlListSid = ipAccessControlListSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public FetchSipIpAddressRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * A 34 character string that uniquely identifies the IpAddress resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchSipIpAddressRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

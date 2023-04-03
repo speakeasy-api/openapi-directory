@@ -4,20 +4,176 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CloudsearchStatsGetSearchapplicationRequest {
-    
-    public CloudsearchStatsGetSearchapplicationQueryParams queryParams;
-    public CloudsearchStatsGetSearchapplicationRequest withQueryParams(CloudsearchStatsGetSearchapplicationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public CloudsearchStatsGetSearchapplicationRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public CloudsearchStatsGetSearchapplicationRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public CloudsearchStatsGetSearchapplicationSecurity security;
-    public CloudsearchStatsGetSearchapplicationRequest withSecurity(CloudsearchStatsGetSearchapplicationSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public CloudsearchStatsGetSearchapplicationRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public CloudsearchStatsGetSearchapplicationRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Day of month. Must be from 1 to 31 and valid for the year and month.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate.day")
+    public Long endDateDay;
+    public CloudsearchStatsGetSearchapplicationRequest withEndDateDay(Long endDateDay) {
+        this.endDateDay = endDateDay;
+        return this;
+    }
+    
+    /**
+     * Month of date. Must be from 1 to 12.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate.month")
+    public Long endDateMonth;
+    public CloudsearchStatsGetSearchapplicationRequest withEndDateMonth(Long endDateMonth) {
+        this.endDateMonth = endDateMonth;
+        return this;
+    }
+    
+    /**
+     * Year of date. Must be from 1 to 9999.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate.year")
+    public Long endDateYear;
+    public CloudsearchStatsGetSearchapplicationRequest withEndDateYear(Long endDateYear) {
+        this.endDateYear = endDateYear;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public CloudsearchStatsGetSearchapplicationRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public CloudsearchStatsGetSearchapplicationRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public CloudsearchStatsGetSearchapplicationRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public CloudsearchStatsGetSearchapplicationRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public CloudsearchStatsGetSearchapplicationRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Day of month. Must be from 1 to 31 and valid for the year and month.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate.day")
+    public Long startDateDay;
+    public CloudsearchStatsGetSearchapplicationRequest withStartDateDay(Long startDateDay) {
+        this.startDateDay = startDateDay;
+        return this;
+    }
+    
+    /**
+     * Month of date. Must be from 1 to 12.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate.month")
+    public Long startDateMonth;
+    public CloudsearchStatsGetSearchapplicationRequest withStartDateMonth(Long startDateMonth) {
+        this.startDateMonth = startDateMonth;
+        return this;
+    }
+    
+    /**
+     * Year of date. Must be from 1 to 9999.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate.year")
+    public Long startDateYear;
+    public CloudsearchStatsGetSearchapplicationRequest withStartDateYear(Long startDateYear) {
+        this.startDateYear = startDateYear;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public CloudsearchStatsGetSearchapplicationRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public CloudsearchStatsGetSearchapplicationRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

@@ -52,7 +52,7 @@ public class Preprints {
      */
     public org.openapis.openapi.models.operations.PreprintsBibliographicContributorsListResponse preprintsBibliographicContributorsList(org.openapis.openapi.models.operations.PreprintsBibliographicContributorsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PreprintsBibliographicContributorsListPathParams.class, baseUrl, "/preprints/{preprint_id}/bibliographic_contributors/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PreprintsBibliographicContributorsListRequest.class, baseUrl, "/preprints/{preprint_id}/bibliographic_contributors/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -92,7 +92,7 @@ public class Preprints {
      */
     public org.openapis.openapi.models.operations.PreprintsCitationListResponse preprintsCitationList(org.openapis.openapi.models.operations.PreprintsCitationListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PreprintsCitationListPathParams.class, baseUrl, "/preprints/{preprint_id}/citation/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PreprintsCitationListRequest.class, baseUrl, "/preprints/{preprint_id}/citation/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -132,7 +132,7 @@ public class Preprints {
      */
     public org.openapis.openapi.models.operations.PreprintsCitationReadResponse preprintsCitationRead(org.openapis.openapi.models.operations.PreprintsCitationReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PreprintsCitationReadPathParams.class, baseUrl, "/preprints/{preprint_id}/citation/{style_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PreprintsCitationReadRequest.class, baseUrl, "/preprints/{preprint_id}/citation/{style_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -177,7 +177,7 @@ public class Preprints {
      */
     public org.openapis.openapi.models.operations.PreprintsContributorReadResponse preprintsContributorRead(org.openapis.openapi.models.operations.PreprintsContributorReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PreprintsContributorReadPathParams.class, baseUrl, "/preprints/{preprint_id}/contributors/{user_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PreprintsContributorReadRequest.class, baseUrl, "/preprints/{preprint_id}/contributors/{user_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -224,12 +224,12 @@ public class Preprints {
      */
     public org.openapis.openapi.models.operations.PreprintsContributorsCreateResponse preprintsContributorsCreate(org.openapis.openapi.models.operations.PreprintsContributorsCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PreprintsContributorsCreatePathParams.class, baseUrl, "/preprints/{preprint_id}/contributors/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PreprintsContributorsCreateRequest.class, baseUrl, "/preprints/{preprint_id}/contributors/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -279,7 +279,7 @@ public class Preprints {
      */
     public org.openapis.openapi.models.operations.PreprintsContributorsListResponse preprintsContributorsList(org.openapis.openapi.models.operations.PreprintsContributorsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PreprintsContributorsListPathParams.class, baseUrl, "/preprints/{preprint_id}/contributors/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PreprintsContributorsListRequest.class, baseUrl, "/preprints/{preprint_id}/contributors/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -319,7 +319,7 @@ public class Preprints {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PreprintsCreateResponse preprintsCreate(org.openapis.openapi.models.operations.PreprintsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PreprintsCreateResponse preprintsCreate(org.openapis.openapi.models.operations.PreprintsCreatePreprintInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/preprints/");
         
@@ -413,12 +413,12 @@ public class Preprints {
      */
     public org.openapis.openapi.models.operations.PreprintsPartialUpdateResponse preprintsPartialUpdate(org.openapis.openapi.models.operations.PreprintsPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PreprintsPartialUpdatePathParams.class, baseUrl, "/preprints/{preprint_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PreprintsPartialUpdateRequest.class, baseUrl, "/preprints/{preprint_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -455,7 +455,7 @@ public class Preprints {
      */
     public org.openapis.openapi.models.operations.PreprintsReadResponse preprintsRead(org.openapis.openapi.models.operations.PreprintsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PreprintsReadPathParams.class, baseUrl, "/preprints/{preprint_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PreprintsReadRequest.class, baseUrl, "/preprints/{preprint_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

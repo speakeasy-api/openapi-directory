@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RoutesOneOrMoreRoutesRequest {
+    /**
+     * Your developer id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
+    public String devid;
+    public RoutesOneOrMoreRoutesRequest withDevid(String devid) {
+        this.devid = devid;
+        return this;
+    }
     
-    public RoutesOneOrMoreRoutesQueryParams queryParams;
-    public RoutesOneOrMoreRoutesRequest withQueryParams(RoutesOneOrMoreRoutesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter by name  of route (accepts partial route name matches)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=route_name")
+    public String routeName;
+    public RoutesOneOrMoreRoutesRequest withRouteName(String routeName) {
+        this.routeName = routeName;
+        return this;
+    }
+    
+    /**
+     * Filter by route_type; values returned via RouteTypes API
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=route_types")
+    public RoutesOneOrMoreRoutesRouteTypesEnum[] routeTypes;
+    public RoutesOneOrMoreRoutesRequest withRouteTypes(RoutesOneOrMoreRoutesRouteTypesEnum[] routeTypes) {
+        this.routeTypes = routeTypes;
+        return this;
+    }
+    
+    /**
+     * Authentication signature for request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
+    public String signature;
+    public RoutesOneOrMoreRoutesRequest withSignature(String signature) {
+        this.signature = signature;
+        return this;
+    }
+    
+    /**
+     * Please ignore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public RoutesOneOrMoreRoutesRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

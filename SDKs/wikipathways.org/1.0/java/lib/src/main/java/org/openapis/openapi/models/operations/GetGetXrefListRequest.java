@@ -4,13 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGetXrefListRequest {
+    /**
+     * The database code to translate to (e.g. 'S' for UniProt).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=code")
+    public String code;
+    public GetGetXrefListRequest withCode(String code) {
+        this.code = code;
+        return this;
+    }
     
-    public GetGetXrefListQueryParams queryParams;
-    public GetGetXrefListRequest withQueryParams(GetGetXrefListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public GetGetXrefListFormatEnum format;
+    public GetGetXrefListRequest withFormat(GetGetXrefListFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * The pathway identifier.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pwId")
+    public String pwId;
+    public GetGetXrefListRequest withPwId(String pwId) {
+        this.pwId = pwId;
         return this;
     }
     

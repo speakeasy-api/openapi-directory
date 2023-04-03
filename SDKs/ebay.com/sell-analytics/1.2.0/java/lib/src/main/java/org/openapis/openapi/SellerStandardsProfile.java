@@ -31,11 +31,10 @@ public class SellerStandardsProfile {
 
     /**
      * This call retrieves all the standards profiles for the associated seller. A standards profile is a set of eBay seller metrics and the seller's associated compliance values (either TOP_RATED, ABOVE_STANDARD, or BELOW_STANDARD). A seller's multiple profiles are distinguished by two criteria, a &amp;quot;program&amp;quot; and a &amp;quot;cycle.&amp;quot; A profile's program is one of three regions where the seller may have done business, or PROGRAM_GLOBAL to indicate all marketplaces where the seller has done business. The cycle value specifies whether the standards compliance values were determined at the last official eBay evaluation or at the time of the request.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindSellerStandardsProfilesResponse findSellerStandardsProfiles(org.openapis.openapi.models.operations.FindSellerStandardsProfilesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FindSellerStandardsProfilesResponse findSellerStandardsProfiles() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/seller_standards_profile");
         
@@ -44,8 +43,7 @@ public class SellerStandardsProfile {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -73,19 +71,20 @@ public class SellerStandardsProfile {
     /**
      * This call retrieves a single standards profile for the associated seller. A standards profile is a set of eBay seller metrics and the seller's associated compliance values (either TOP_RATED, ABOVE_STANDARD, or BELOW_STANDARD). A seller can have multiple profiles distinguished by two criteria, a &amp;quot;program&amp;quot; and a &amp;quot;cycle.&amp;quot; A profile's program is one of three regions where the seller may have done business, or PROGRAM_GLOBAL to indicate all marketplaces where the seller has done business. The cycle value specifies whether the standards compliance values were determined at the last official eBay evaluation (CURRENT) or at the time of the request (PROJECTED). Both cycle and a program values are required URI parameters for this method.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSellerStandardsProfileResponse getSellerStandardsProfile(org.openapis.openapi.models.operations.GetSellerStandardsProfileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSellerStandardsProfileResponse getSellerStandardsProfile(org.openapis.openapi.models.operations.GetSellerStandardsProfileRequest request, org.openapis.openapi.models.operations.GetSellerStandardsProfileSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSellerStandardsProfilePathParams.class, baseUrl, "/seller_standards_profile/{program}/{cycle}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSellerStandardsProfileRequest.class, baseUrl, "/seller_standards_profile/{program}/{cycle}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

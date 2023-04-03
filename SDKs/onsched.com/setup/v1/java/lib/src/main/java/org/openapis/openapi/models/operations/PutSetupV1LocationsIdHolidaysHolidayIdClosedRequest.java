@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSetupV1LocationsIdHolidaysHolidayIdClosedRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=closed")
+    public Boolean closed;
+    public PutSetupV1LocationsIdHolidaysHolidayIdClosedRequest withClosed(Boolean closed) {
+        this.closed = closed;
+        return this;
+    }
     
-    public PutSetupV1LocationsIdHolidaysHolidayIdClosedPathParams pathParams;
-    public PutSetupV1LocationsIdHolidaysHolidayIdClosedRequest withPathParams(PutSetupV1LocationsIdHolidaysHolidayIdClosedPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=holidayId")
+    public String holidayId;
+    public PutSetupV1LocationsIdHolidaysHolidayIdClosedRequest withHolidayId(String holidayId) {
+        this.holidayId = holidayId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutSetupV1LocationsIdHolidaysHolidayIdClosedRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetcurrencyrateRequest {
+    /**
+     * Your Interzoid license API key. Register at www.interzoid.com/register
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
+    public String license;
+    public GetcurrencyrateRequest withLicense(String license) {
+        this.license = license;
+        return this;
+    }
     
-    public GetcurrencyrateQueryParams queryParams;
-    public GetcurrencyrateRequest withQueryParams(GetcurrencyrateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Currency symbol to retrieve current rate for
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=symbol")
+    public String symbol;
+    public GetcurrencyrateRequest withSymbol(String symbol) {
+        this.symbol = symbol;
         return this;
     }
     

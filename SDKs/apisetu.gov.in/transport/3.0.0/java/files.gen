@@ -34,7 +34,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/DrvlcSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/DrvlcRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/DrvlcRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/DrvlcRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/DrvlcRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Drvlc504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Drvlc504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Drvlc504ApplicationJSON.java
@@ -61,7 +60,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/FitcerSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitcerRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitcerRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitcerRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/FitcerRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Fitcer504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Fitcer504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Fitcer504ApplicationJSON.java
@@ -88,7 +86,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RvcerSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/RvcerRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/RvcerRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RvcerRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/RvcerRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Rvcer504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Rvcer504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Rvcer504ApplicationJSON.java
@@ -115,7 +112,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/VhinscSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/VhinscRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/VhinscRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/VhinscRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/VhinscRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Vhinsc504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Vhinsc504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Vhinsc504ApplicationJSON.java
@@ -142,7 +138,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/VhtaxSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/VhtaxRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/VhtaxRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/VhtaxRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/VhtaxRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Vhtax504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Vhtax504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Vhtax504ApplicationJSON.java
@@ -186,8 +181,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsen
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsent.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaSignature.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchema.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKey.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeClientID.java
 lib/src/main/java/org/openapis/openapi/models/shared/AcademicCertificateSchemaCertificateDataExamination.java
 lib/src/main/java/org/openapis/openapi/models/shared/AcademicCertificateSchemaCertificateDataPerformanceSubjects.java
 lib/src/main/java/org/openapis/openapi/models/shared/AcademicCertificateSchemaCertificateDataPerformance.java

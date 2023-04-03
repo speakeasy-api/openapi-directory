@@ -4,20 +4,136 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetItemChildrenListRequest {
-    
-    public GetItemChildrenListPathParams pathParams;
-    public GetItemChildrenListRequest withPathParams(GetItemChildrenListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The type of device the content is targeting.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device")
+    public String device;
+    public GetItemChildrenListRequest withDevice(String device) {
+        this.device = device;
         return this;
     }
     
+    /**
+     * The set of opt in feature flags which cause breaking changes to responses.
+     * 
+     * While Rocket APIs look to avoid breaking changes under the active major version, the formats of responses
+     * may need to evolve over this time.
+     * 
+     * These feature flags allow clients to select which response formats they expect and avoid breaking
+     * clients as these formats evolve under the current major version.
+     * 
+     * ### Flags
+     * 
+     * - `all` - Enable all flags. Useful for testing. _Don't use in production_.
+     * - `idp` - Dynamic item detail pages with schedulable rows.
+     * - `ldp` - Dynamic list detail pages with schedulable rows.
+     * - `hb` - Hubble formatted image urls.
+     * - `rpt` - Updated resume point threshold logic.
+     * - `cas` - "Custom Asset Search", inlcude `customAssets` in search results.
+     * - `lrl` - Do not pre-populate related list if more than `max_list_prefetch` down the page.
+     * - `cd` - Custom Destination support.
+     * 
+     * See the `feature-flags.md` for available flag details.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
+    public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+    public GetItemChildrenListRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
+        this.ff = ff;
+        return this;
+    }
     
-    public GetItemChildrenListQueryParams queryParams;
-    public GetItemChildrenListRequest withQueryParams(GetItemChildrenListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The identifier of the item whose children to load.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetItemChildrenListRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Language code for the preferred language to be returned in the response.
+     * 
+     * Parameter value is case-insensitive and should be
+     *   - a valid 2 letter language code without region such as en, de
+     *   - or with region such as en_us, en_au
+     * 
+     * If undefined then defaults to 'en', unless the server has been configured
+     * with a custom default.
+     * 
+     * See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public String lang;
+    public GetItemChildrenListRequest withLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    
+    /**
+     * The maximum rating (inclusive) of items returned, e.g. 'auoflc-pg'.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_rating")
+    public String maxRating;
+    public GetItemChildrenListRequest withMaxRating(String maxRating) {
+        this.maxRating = maxRating;
+        return this;
+    }
+    
+    /**
+     * The list sort order, either 'asc' or 'desc'.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public org.openapis.openapi.models.shared.ListOrderEnum order;
+    public GetItemChildrenListRequest withOrder(org.openapis.openapi.models.shared.ListOrderEnum order) {
+        this.order = order;
+        return this;
+    }
+    
+    /**
+     * The page of items to load. Starts from page 1.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetItemChildrenListRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of items to return in a page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Integer pageSize;
+    public GetItemChildrenListRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The list of segments to filter the response by.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=segments")
+    public String[] segments;
+    public GetItemChildrenListRequest withSegments(String[] segments) {
+        this.segments = segments;
+        return this;
+    }
+    
+    /**
+     * The active subscription code.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sub")
+    public String sub;
+    public GetItemChildrenListRequest withSub(String sub) {
+        this.sub = sub;
         return this;
     }
     

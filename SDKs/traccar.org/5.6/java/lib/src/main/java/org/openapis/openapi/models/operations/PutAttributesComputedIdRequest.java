@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutAttributesComputedIdRequest {
-    
-    public PutAttributesComputedIdPathParams pathParams;
-    public PutAttributesComputedIdRequest withPathParams(PutAttributesComputedIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.Attribute attribute;
+    public PutAttributesComputedIdRequest withAttribute(org.openapis.openapi.models.shared.Attribute attribute) {
+        this.attribute = attribute;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Attribute request;
-    public PutAttributesComputedIdRequest withRequest(org.openapis.openapi.models.shared.Attribute request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public PutAttributesComputedIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

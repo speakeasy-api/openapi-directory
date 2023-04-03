@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountsRequest {
-    
-    public GetAccountsQueryParams queryParams;
-    public GetAccountsRequest withQueryParams(GetAccountsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Account Number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=account")
+    public String account;
+    public GetAccountsRequest withAccount(String account) {
+        this.account = account;
         return this;
     }
     

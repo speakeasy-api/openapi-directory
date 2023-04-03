@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TemplatesCreateSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeSakariAuth sakariAuth;
-    public TemplatesCreateSecurity withSakariAuth(org.openapis.openapi.models.shared.SchemeSakariAuth sakariAuth) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String sakariAuth;
+    public TemplatesCreateSecurity withSakariAuth(String sakariAuth) {
         this.sakariAuth = sakariAuth;
         return this;
     }

@@ -34,27 +34,28 @@ public class Deployments {
     /**
      * Cancels and removes the preview currently associated with the deployment.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsCancelPreviewResponse deploymentmanagerDeploymentsCancelPreview(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsCancelPreviewRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsCancelPreviewResponse deploymentmanagerDeploymentsCancelPreview(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsCancelPreviewRequest request, org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsCancelPreviewSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsCancelPreviewPathParams.class, baseUrl, "/deploymentmanager/alpha/projects/{project}/global/deployments/{deployment}/cancelPreview", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsCancelPreviewRequest.class, baseUrl, "/deploymentmanager/alpha/projects/{project}/global/deployments/{deployment}/cancelPreview", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "deploymentsCancelPreviewRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsCancelPreviewQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsCancelPreviewRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,25 +82,26 @@ public class Deployments {
     /**
      * Deletes a deployment and all of the resources in the deployment.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsDeleteResponse deploymentmanagerDeploymentsDelete(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsDeleteResponse deploymentmanagerDeploymentsDelete(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsDeleteRequest request, org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsDeletePathParams.class, baseUrl, "/deploymentmanager/alpha/projects/{project}/global/deployments/{deployment}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsDeleteRequest.class, baseUrl, "/deploymentmanager/alpha/projects/{project}/global/deployments/{deployment}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,25 +128,26 @@ public class Deployments {
     /**
      * Gets information about a specific deployment.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsGetResponse deploymentmanagerDeploymentsGet(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsGetResponse deploymentmanagerDeploymentsGet(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsGetRequest request, org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsGetPathParams.class, baseUrl, "/deploymentmanager/alpha/projects/{project}/global/deployments/{deployment}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsGetRequest.class, baseUrl, "/deploymentmanager/alpha/projects/{project}/global/deployments/{deployment}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,25 +174,26 @@ public class Deployments {
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsGetIamPolicyResponse deploymentmanagerDeploymentsGetIamPolicy(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsGetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsGetIamPolicyResponse deploymentmanagerDeploymentsGetIamPolicy(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsGetIamPolicyRequest request, org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsGetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsGetIamPolicyPathParams.class, baseUrl, "/deploymentmanager/alpha/projects/{project}/global/deployments/{resource}/getIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsGetIamPolicyRequest.class, baseUrl, "/deploymentmanager/alpha/projects/{project}/global/deployments/{resource}/getIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsGetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsGetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -216,27 +220,28 @@ public class Deployments {
     /**
      * Creates a deployment and all of the resources described by the deployment manifest.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsInsertResponse deploymentmanagerDeploymentsInsert(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsInsertResponse deploymentmanagerDeploymentsInsert(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsInsertRequest request, org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsInsertPathParams.class, baseUrl, "/deploymentmanager/alpha/projects/{project}/global/deployments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsInsertRequest.class, baseUrl, "/deploymentmanager/alpha/projects/{project}/global/deployments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "deployment", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -263,25 +268,26 @@ public class Deployments {
     /**
      * Lists all deployments for a given project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsListResponse deploymentmanagerDeploymentsList(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsListResponse deploymentmanagerDeploymentsList(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsListRequest request, org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsListPathParams.class, baseUrl, "/deploymentmanager/alpha/projects/{project}/global/deployments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsListRequest.class, baseUrl, "/deploymentmanager/alpha/projects/{project}/global/deployments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -308,27 +314,28 @@ public class Deployments {
     /**
      * Patches a deployment and all of the resources described by the deployment manifest.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsPatchResponse deploymentmanagerDeploymentsPatch(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsPatchResponse deploymentmanagerDeploymentsPatch(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsPatchRequest request, org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsPatchPathParams.class, baseUrl, "/deploymentmanager/alpha/projects/{project}/global/deployments/{deployment}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsPatchRequest.class, baseUrl, "/deploymentmanager/alpha/projects/{project}/global/deployments/{deployment}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "deployment1", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -355,27 +362,28 @@ public class Deployments {
     /**
      * Sets the access control policy on the specified resource. Replaces any existing policy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsSetIamPolicyResponse deploymentmanagerDeploymentsSetIamPolicy(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsSetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsSetIamPolicyResponse deploymentmanagerDeploymentsSetIamPolicy(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsSetIamPolicyRequest request, org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsSetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsSetIamPolicyPathParams.class, baseUrl, "/deploymentmanager/alpha/projects/{project}/global/deployments/{resource}/setIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsSetIamPolicyRequest.class, baseUrl, "/deploymentmanager/alpha/projects/{project}/global/deployments/{resource}/setIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "globalSetPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsSetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsSetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -402,27 +410,28 @@ public class Deployments {
     /**
      * Stops an ongoing operation. This does not roll back any work that has already been completed, but prevents any new work from being started.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsStopResponse deploymentmanagerDeploymentsStop(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsStopRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsStopResponse deploymentmanagerDeploymentsStop(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsStopRequest request, org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsStopSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsStopPathParams.class, baseUrl, "/deploymentmanager/alpha/projects/{project}/global/deployments/{deployment}/stop", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsStopRequest.class, baseUrl, "/deploymentmanager/alpha/projects/{project}/global/deployments/{deployment}/stop", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "deploymentsStopRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsStopQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsStopRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -449,27 +458,28 @@ public class Deployments {
     /**
      * Returns permissions that a caller has on the specified resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsTestIamPermissionsResponse deploymentmanagerDeploymentsTestIamPermissions(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsTestIamPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsTestIamPermissionsResponse deploymentmanagerDeploymentsTestIamPermissions(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsTestIamPermissionsRequest request, org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsTestIamPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsTestIamPermissionsPathParams.class, baseUrl, "/deploymentmanager/alpha/projects/{project}/global/deployments/{resource}/testIamPermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsTestIamPermissionsRequest.class, baseUrl, "/deploymentmanager/alpha/projects/{project}/global/deployments/{resource}/testIamPermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsTestIamPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsTestIamPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -496,27 +506,28 @@ public class Deployments {
     /**
      * Updates a deployment and all of the resources described by the deployment manifest.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsUpdateResponse deploymentmanagerDeploymentsUpdate(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsUpdateResponse deploymentmanagerDeploymentsUpdate(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsUpdateRequest request, org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsUpdatePathParams.class, baseUrl, "/deploymentmanager/alpha/projects/{project}/global/deployments/{deployment}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsUpdateRequest.class, baseUrl, "/deploymentmanager/alpha/projects/{project}/global/deployments/{deployment}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "deployment1", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

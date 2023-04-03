@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.DeleteSessionPathParams;
-import org.openapis.openapi.models.operations.DeleteSessionHeaders;
 import org.openapis.openapi.models.operations.DeleteSessionRequest;
 import org.openapis.openapi.models.operations.DeleteSessionResponse;
 
@@ -14,29 +12,23 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             DeleteSessionRequest req = new DeleteSessionRequest() {{
-                pathParams = new DeleteSessionPathParams() {{
-                    botAliasId = "corrupti";
-                    botId = "provident";
-                    localeId = "distinctio";
-                    sessionId = "quibusdam";
-                }};
-                headers = new DeleteSessionHeaders() {{
-                    xAmzAlgorithm = "unde";
-                    xAmzContentSha256 = "nulla";
-                    xAmzCredential = "corrupti";
-                    xAmzDate = "illum";
-                    xAmzSecurityToken = "vel";
-                    xAmzSignature = "error";
-                    xAmzSignedHeaders = "deserunt";
-                }};
-            }};            
+                xAmzAlgorithm = "corrupti";
+                xAmzContentSha256 = "provident";
+                xAmzCredential = "distinctio";
+                xAmzDate = "quibusdam";
+                xAmzSecurityToken = "unde";
+                xAmzSignature = "nulla";
+                xAmzSignedHeaders = "corrupti";
+                botAliasId = "illum";
+                botId = "vel";
+                localeId = "error";
+                sessionId = "deserunt";
+            }}            
 
             DeleteSessionResponse res = sdk.deleteSession(req);
 

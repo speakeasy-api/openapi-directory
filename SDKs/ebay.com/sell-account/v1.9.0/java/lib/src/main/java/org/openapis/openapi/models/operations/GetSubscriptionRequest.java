@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSubscriptionRequest {
-    
-    public GetSubscriptionQueryParams queryParams;
-    public GetSubscriptionRequest withQueryParams(GetSubscriptionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * This field is for future use.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=continuation_token")
+    public String continuationToken;
+    public GetSubscriptionRequest withContinuationToken(String continuationToken) {
+        this.continuationToken = continuationToken;
         return this;
     }
     
-    
-    public GetSubscriptionSecurity security;
-    public GetSubscriptionRequest withSecurity(GetSubscriptionSecurity security) {
-        this.security = security;
+    /**
+     * This field is for future use.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public String limit;
+    public GetSubscriptionRequest withLimit(String limit) {
+        this.limit = limit;
         return this;
     }
     

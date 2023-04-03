@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolTodGetConfigRequest {
-    
-    public ProtocolTodGetConfigPathParams pathParams;
-    public ProtocolTodGetConfigRequest withPathParams(ProtocolTodGetConfigPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to show the TOD configuration
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolTodGetConfigRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

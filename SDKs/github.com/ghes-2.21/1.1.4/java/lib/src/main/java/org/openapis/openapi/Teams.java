@@ -57,7 +57,7 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsAddMemberLegacyResponse teamsAddMemberLegacy(org.openapis.openapi.models.operations.TeamsAddMemberLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsAddMemberLegacyPathParams.class, baseUrl, "/teams/{team_id}/members/{username}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsAddMemberLegacyRequest.class, baseUrl, "/teams/{team_id}/members/{username}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -109,12 +109,12 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsAddOrUpdateMembershipForUserInOrgResponse teamsAddOrUpdateMembershipForUserInOrg(org.openapis.openapi.models.operations.TeamsAddOrUpdateMembershipForUserInOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsAddOrUpdateMembershipForUserInOrgPathParams.class, baseUrl, "/orgs/{org}/teams/{team_slug}/memberships/{username}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsAddOrUpdateMembershipForUserInOrgRequest.class, baseUrl, "/orgs/{org}/teams/{team_slug}/memberships/{username}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -163,12 +163,12 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsAddOrUpdateMembershipForUserLegacyResponse teamsAddOrUpdateMembershipForUserLegacy(org.openapis.openapi.models.operations.TeamsAddOrUpdateMembershipForUserLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsAddOrUpdateMembershipForUserLegacyPathParams.class, baseUrl, "/teams/{team_id}/memberships/{username}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsAddOrUpdateMembershipForUserLegacyRequest.class, baseUrl, "/teams/{team_id}/memberships/{username}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -217,12 +217,12 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsAddOrUpdateProjectPermissionsInOrgResponse teamsAddOrUpdateProjectPermissionsInOrg(org.openapis.openapi.models.operations.TeamsAddOrUpdateProjectPermissionsInOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsAddOrUpdateProjectPermissionsInOrgPathParams.class, baseUrl, "/orgs/{org}/teams/{team_slug}/projects/{project_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsAddOrUpdateProjectPermissionsInOrgRequest.class, baseUrl, "/orgs/{org}/teams/{team_slug}/projects/{project_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -263,12 +263,12 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsAddOrUpdateProjectPermissionsLegacyResponse teamsAddOrUpdateProjectPermissionsLegacy(org.openapis.openapi.models.operations.TeamsAddOrUpdateProjectPermissionsLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsAddOrUpdateProjectPermissionsLegacyPathParams.class, baseUrl, "/teams/{team_id}/projects/{project_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsAddOrUpdateProjectPermissionsLegacyRequest.class, baseUrl, "/teams/{team_id}/projects/{project_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -335,12 +335,12 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsAddOrUpdateRepoPermissionsInOrgResponse teamsAddOrUpdateRepoPermissionsInOrg(org.openapis.openapi.models.operations.TeamsAddOrUpdateRepoPermissionsInOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsAddOrUpdateRepoPermissionsInOrgPathParams.class, baseUrl, "/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsAddOrUpdateRepoPermissionsInOrgRequest.class, baseUrl, "/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -375,12 +375,12 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsAddOrUpdateRepoPermissionsLegacyResponse teamsAddOrUpdateRepoPermissionsLegacy(org.openapis.openapi.models.operations.TeamsAddOrUpdateRepoPermissionsLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsAddOrUpdateRepoPermissionsLegacyPathParams.class, baseUrl, "/teams/{team_id}/repos/{owner}/{repo}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsAddOrUpdateRepoPermissionsLegacyRequest.class, baseUrl, "/teams/{team_id}/repos/{owner}/{repo}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -429,7 +429,7 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsCheckPermissionsForProjectInOrgResponse teamsCheckPermissionsForProjectInOrg(org.openapis.openapi.models.operations.TeamsCheckPermissionsForProjectInOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsCheckPermissionsForProjectInOrgPathParams.class, baseUrl, "/orgs/{org}/teams/{team_slug}/projects/{project_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsCheckPermissionsForProjectInOrgRequest.class, baseUrl, "/orgs/{org}/teams/{team_slug}/projects/{project_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -473,7 +473,7 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsCheckPermissionsForProjectLegacyResponse teamsCheckPermissionsForProjectLegacy(org.openapis.openapi.models.operations.TeamsCheckPermissionsForProjectLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsCheckPermissionsForProjectLegacyPathParams.class, baseUrl, "/teams/{team_id}/projects/{project_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsCheckPermissionsForProjectLegacyRequest.class, baseUrl, "/teams/{team_id}/projects/{project_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -529,7 +529,7 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsCheckPermissionsForRepoInOrgResponse teamsCheckPermissionsForRepoInOrg(org.openapis.openapi.models.operations.TeamsCheckPermissionsForRepoInOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsCheckPermissionsForRepoInOrgPathParams.class, baseUrl, "/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsCheckPermissionsForRepoInOrgRequest.class, baseUrl, "/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -575,7 +575,7 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsCheckPermissionsForRepoLegacyResponse teamsCheckPermissionsForRepoLegacy(org.openapis.openapi.models.operations.TeamsCheckPermissionsForRepoLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsCheckPermissionsForRepoLegacyPathParams.class, baseUrl, "/teams/{team_id}/repos/{owner}/{repo}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsCheckPermissionsForRepoLegacyRequest.class, baseUrl, "/teams/{team_id}/repos/{owner}/{repo}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -619,12 +619,12 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsCreateResponse teamsCreate(org.openapis.openapi.models.operations.TeamsCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsCreatePathParams.class, baseUrl, "/orgs/{org}/teams", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsCreateRequest.class, baseUrl, "/orgs/{org}/teams", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -684,12 +684,12 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsCreateDiscussionCommentInOrgResponse teamsCreateDiscussionCommentInOrg(org.openapis.openapi.models.operations.TeamsCreateDiscussionCommentInOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsCreateDiscussionCommentInOrgPathParams.class, baseUrl, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsCreateDiscussionCommentInOrgRequest.class, baseUrl, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -733,12 +733,12 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsCreateDiscussionCommentLegacyResponse teamsCreateDiscussionCommentLegacy(org.openapis.openapi.models.operations.TeamsCreateDiscussionCommentLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsCreateDiscussionCommentLegacyPathParams.class, baseUrl, "/teams/{team_id}/discussions/{discussion_number}/comments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsCreateDiscussionCommentLegacyRequest.class, baseUrl, "/teams/{team_id}/discussions/{discussion_number}/comments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -782,12 +782,12 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsCreateDiscussionInOrgResponse teamsCreateDiscussionInOrg(org.openapis.openapi.models.operations.TeamsCreateDiscussionInOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsCreateDiscussionInOrgPathParams.class, baseUrl, "/orgs/{org}/teams/{team_slug}/discussions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsCreateDiscussionInOrgRequest.class, baseUrl, "/orgs/{org}/teams/{team_slug}/discussions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -831,12 +831,12 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsCreateDiscussionLegacyResponse teamsCreateDiscussionLegacy(org.openapis.openapi.models.operations.TeamsCreateDiscussionLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsCreateDiscussionLegacyPathParams.class, baseUrl, "/teams/{team_id}/discussions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsCreateDiscussionLegacyRequest.class, baseUrl, "/teams/{team_id}/discussions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -878,7 +878,7 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsDeleteDiscussionCommentInOrgResponse teamsDeleteDiscussionCommentInOrg(org.openapis.openapi.models.operations.TeamsDeleteDiscussionCommentInOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsDeleteDiscussionCommentInOrgPathParams.class, baseUrl, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsDeleteDiscussionCommentInOrgRequest.class, baseUrl, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -914,7 +914,7 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsDeleteDiscussionCommentLegacyResponse teamsDeleteDiscussionCommentLegacy(org.openapis.openapi.models.operations.TeamsDeleteDiscussionCommentLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsDeleteDiscussionCommentLegacyPathParams.class, baseUrl, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsDeleteDiscussionCommentLegacyRequest.class, baseUrl, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -950,7 +950,7 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsDeleteDiscussionInOrgResponse teamsDeleteDiscussionInOrg(org.openapis.openapi.models.operations.TeamsDeleteDiscussionInOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsDeleteDiscussionInOrgPathParams.class, baseUrl, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsDeleteDiscussionInOrgRequest.class, baseUrl, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -986,7 +986,7 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsDeleteDiscussionLegacyResponse teamsDeleteDiscussionLegacy(org.openapis.openapi.models.operations.TeamsDeleteDiscussionLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsDeleteDiscussionLegacyPathParams.class, baseUrl, "/teams/{team_id}/discussions/{discussion_number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsDeleteDiscussionLegacyRequest.class, baseUrl, "/teams/{team_id}/discussions/{discussion_number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1024,7 +1024,7 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsDeleteInOrgResponse teamsDeleteInOrg(org.openapis.openapi.models.operations.TeamsDeleteInOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsDeleteInOrgPathParams.class, baseUrl, "/orgs/{org}/teams/{team_slug}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsDeleteInOrgRequest.class, baseUrl, "/orgs/{org}/teams/{team_slug}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1062,7 +1062,7 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsDeleteLegacyResponse teamsDeleteLegacy(org.openapis.openapi.models.operations.TeamsDeleteLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsDeleteLegacyPathParams.class, baseUrl, "/teams/{team_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsDeleteLegacyRequest.class, baseUrl, "/teams/{team_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1114,7 +1114,7 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsGetByNameResponse teamsGetByName(org.openapis.openapi.models.operations.TeamsGetByNameRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsGetByNamePathParams.class, baseUrl, "/orgs/{org}/teams/{team_slug}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsGetByNameRequest.class, baseUrl, "/orgs/{org}/teams/{team_slug}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1164,7 +1164,7 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsGetDiscussionCommentInOrgResponse teamsGetDiscussionCommentInOrg(org.openapis.openapi.models.operations.TeamsGetDiscussionCommentInOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsGetDiscussionCommentInOrgPathParams.class, baseUrl, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsGetDiscussionCommentInOrgRequest.class, baseUrl, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1206,7 +1206,7 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsGetDiscussionCommentLegacyResponse teamsGetDiscussionCommentLegacy(org.openapis.openapi.models.operations.TeamsGetDiscussionCommentLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsGetDiscussionCommentLegacyPathParams.class, baseUrl, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsGetDiscussionCommentLegacyRequest.class, baseUrl, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1248,7 +1248,7 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsGetDiscussionInOrgResponse teamsGetDiscussionInOrg(org.openapis.openapi.models.operations.TeamsGetDiscussionInOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsGetDiscussionInOrgPathParams.class, baseUrl, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsGetDiscussionInOrgRequest.class, baseUrl, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1290,7 +1290,7 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsGetDiscussionLegacyResponse teamsGetDiscussionLegacy(org.openapis.openapi.models.operations.TeamsGetDiscussionLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsGetDiscussionLegacyPathParams.class, baseUrl, "/teams/{team_id}/discussions/{discussion_number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsGetDiscussionLegacyRequest.class, baseUrl, "/teams/{team_id}/discussions/{discussion_number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1330,7 +1330,7 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsGetLegacyResponse teamsGetLegacy(org.openapis.openapi.models.operations.TeamsGetLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsGetLegacyPathParams.class, baseUrl, "/teams/{team_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsGetLegacyRequest.class, baseUrl, "/teams/{team_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1382,7 +1382,7 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsGetMemberLegacyResponse teamsGetMemberLegacy(org.openapis.openapi.models.operations.TeamsGetMemberLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsGetMemberLegacyPathParams.class, baseUrl, "/teams/{team_id}/members/{username}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsGetMemberLegacyRequest.class, baseUrl, "/teams/{team_id}/members/{username}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1425,7 +1425,7 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsGetMembershipForUserInOrgResponse teamsGetMembershipForUserInOrg(org.openapis.openapi.models.operations.TeamsGetMembershipForUserInOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsGetMembershipForUserInOrgPathParams.class, baseUrl, "/orgs/{org}/teams/{team_slug}/memberships/{username}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsGetMembershipForUserInOrgRequest.class, baseUrl, "/orgs/{org}/teams/{team_slug}/memberships/{username}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1476,7 +1476,7 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsGetMembershipForUserLegacyResponse teamsGetMembershipForUserLegacy(org.openapis.openapi.models.operations.TeamsGetMembershipForUserLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsGetMembershipForUserLegacyPathParams.class, baseUrl, "/teams/{team_id}/memberships/{username}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsGetMembershipForUserLegacyRequest.class, baseUrl, "/teams/{team_id}/memberships/{username}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1524,13 +1524,13 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsListResponse teamsList(org.openapis.openapi.models.operations.TeamsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsListPathParams.class, baseUrl, "/orgs/{org}/teams", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsListRequest.class, baseUrl, "/orgs/{org}/teams", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TeamsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TeamsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1582,13 +1582,13 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsListChildInOrgResponse teamsListChildInOrg(org.openapis.openapi.models.operations.TeamsListChildInOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsListChildInOrgPathParams.class, baseUrl, "/orgs/{org}/teams/{team_slug}/teams", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsListChildInOrgRequest.class, baseUrl, "/orgs/{org}/teams/{team_slug}/teams", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TeamsListChildInOrgQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TeamsListChildInOrgRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1630,13 +1630,13 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsListChildLegacyResponse teamsListChildLegacy(org.openapis.openapi.models.operations.TeamsListChildLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsListChildLegacyPathParams.class, baseUrl, "/teams/{team_id}/teams", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsListChildLegacyRequest.class, baseUrl, "/teams/{team_id}/teams", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TeamsListChildLegacyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TeamsListChildLegacyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1696,13 +1696,13 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsListDiscussionCommentsInOrgResponse teamsListDiscussionCommentsInOrg(org.openapis.openapi.models.operations.TeamsListDiscussionCommentsInOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsListDiscussionCommentsInOrgPathParams.class, baseUrl, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsListDiscussionCommentsInOrgRequest.class, baseUrl, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TeamsListDiscussionCommentsInOrgQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TeamsListDiscussionCommentsInOrgRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1746,13 +1746,13 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsListDiscussionCommentsLegacyResponse teamsListDiscussionCommentsLegacy(org.openapis.openapi.models.operations.TeamsListDiscussionCommentsLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsListDiscussionCommentsLegacyPathParams.class, baseUrl, "/teams/{team_id}/discussions/{discussion_number}/comments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsListDiscussionCommentsLegacyRequest.class, baseUrl, "/teams/{team_id}/discussions/{discussion_number}/comments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TeamsListDiscussionCommentsLegacyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TeamsListDiscussionCommentsLegacyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1796,13 +1796,13 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsListDiscussionsInOrgResponse teamsListDiscussionsInOrg(org.openapis.openapi.models.operations.TeamsListDiscussionsInOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsListDiscussionsInOrgPathParams.class, baseUrl, "/orgs/{org}/teams/{team_slug}/discussions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsListDiscussionsInOrgRequest.class, baseUrl, "/orgs/{org}/teams/{team_slug}/discussions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TeamsListDiscussionsInOrgQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TeamsListDiscussionsInOrgRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1846,13 +1846,13 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsListDiscussionsLegacyResponse teamsListDiscussionsLegacy(org.openapis.openapi.models.operations.TeamsListDiscussionsLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsListDiscussionsLegacyPathParams.class, baseUrl, "/teams/{team_id}/discussions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsListDiscussionsLegacyRequest.class, baseUrl, "/teams/{team_id}/discussions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TeamsListDiscussionsLegacyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TeamsListDiscussionsLegacyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1900,7 +1900,7 @@ public class Teams {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TeamsListForAuthenticatedUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TeamsListForAuthenticatedUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1954,13 +1954,13 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsListMembersInOrgResponse teamsListMembersInOrg(org.openapis.openapi.models.operations.TeamsListMembersInOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsListMembersInOrgPathParams.class, baseUrl, "/orgs/{org}/teams/{team_slug}/members", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsListMembersInOrgRequest.class, baseUrl, "/orgs/{org}/teams/{team_slug}/members", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TeamsListMembersInOrgQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TeamsListMembersInOrgRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2004,13 +2004,13 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsListMembersLegacyResponse teamsListMembersLegacy(org.openapis.openapi.models.operations.TeamsListMembersLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsListMembersLegacyPathParams.class, baseUrl, "/teams/{team_id}/members", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsListMembersLegacyRequest.class, baseUrl, "/teams/{team_id}/members", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TeamsListMembersLegacyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TeamsListMembersLegacyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2062,13 +2062,13 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsListProjectsInOrgResponse teamsListProjectsInOrg(org.openapis.openapi.models.operations.TeamsListProjectsInOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsListProjectsInOrgPathParams.class, baseUrl, "/orgs/{org}/teams/{team_slug}/projects", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsListProjectsInOrgRequest.class, baseUrl, "/orgs/{org}/teams/{team_slug}/projects", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TeamsListProjectsInOrgQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TeamsListProjectsInOrgRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2112,13 +2112,13 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsListProjectsLegacyResponse teamsListProjectsLegacy(org.openapis.openapi.models.operations.TeamsListProjectsLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsListProjectsLegacyPathParams.class, baseUrl, "/teams/{team_id}/projects", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsListProjectsLegacyRequest.class, baseUrl, "/teams/{team_id}/projects", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TeamsListProjectsLegacyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TeamsListProjectsLegacyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2178,13 +2178,13 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsListReposInOrgResponse teamsListReposInOrg(org.openapis.openapi.models.operations.TeamsListReposInOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsListReposInOrgPathParams.class, baseUrl, "/orgs/{org}/teams/{team_slug}/repos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsListReposInOrgRequest.class, baseUrl, "/orgs/{org}/teams/{team_slug}/repos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TeamsListReposInOrgQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TeamsListReposInOrgRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2226,13 +2226,13 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsListReposLegacyResponse teamsListReposLegacy(org.openapis.openapi.models.operations.TeamsListReposLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsListReposLegacyPathParams.class, baseUrl, "/teams/{team_id}/repos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsListReposLegacyRequest.class, baseUrl, "/teams/{team_id}/repos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TeamsListReposLegacyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TeamsListReposLegacyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2290,7 +2290,7 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsRemoveMemberLegacyResponse teamsRemoveMemberLegacy(org.openapis.openapi.models.operations.TeamsRemoveMemberLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsRemoveMemberLegacyPathParams.class, baseUrl, "/teams/{team_id}/members/{username}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsRemoveMemberLegacyRequest.class, baseUrl, "/teams/{team_id}/members/{username}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -2330,7 +2330,7 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsRemoveMembershipForUserInOrgResponse teamsRemoveMembershipForUserInOrg(org.openapis.openapi.models.operations.TeamsRemoveMembershipForUserInOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsRemoveMembershipForUserInOrgPathParams.class, baseUrl, "/orgs/{org}/teams/{team_slug}/memberships/{username}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsRemoveMembershipForUserInOrgRequest.class, baseUrl, "/orgs/{org}/teams/{team_slug}/memberships/{username}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -2370,7 +2370,7 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsRemoveMembershipForUserLegacyResponse teamsRemoveMembershipForUserLegacy(org.openapis.openapi.models.operations.TeamsRemoveMembershipForUserLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsRemoveMembershipForUserLegacyPathParams.class, baseUrl, "/teams/{team_id}/memberships/{username}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsRemoveMembershipForUserLegacyRequest.class, baseUrl, "/teams/{team_id}/memberships/{username}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -2406,7 +2406,7 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsRemoveProjectInOrgResponse teamsRemoveProjectInOrg(org.openapis.openapi.models.operations.TeamsRemoveProjectInOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsRemoveProjectInOrgPathParams.class, baseUrl, "/orgs/{org}/teams/{team_slug}/projects/{project_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsRemoveProjectInOrgRequest.class, baseUrl, "/orgs/{org}/teams/{team_slug}/projects/{project_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -2442,7 +2442,7 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsRemoveProjectLegacyResponse teamsRemoveProjectLegacy(org.openapis.openapi.models.operations.TeamsRemoveProjectLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsRemoveProjectLegacyPathParams.class, baseUrl, "/teams/{team_id}/projects/{project_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsRemoveProjectLegacyRequest.class, baseUrl, "/teams/{team_id}/projects/{project_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -2502,7 +2502,7 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsRemoveRepoInOrgResponse teamsRemoveRepoInOrg(org.openapis.openapi.models.operations.TeamsRemoveRepoInOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsRemoveRepoInOrgPathParams.class, baseUrl, "/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsRemoveRepoInOrgRequest.class, baseUrl, "/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -2538,7 +2538,7 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsRemoveRepoLegacyResponse teamsRemoveRepoLegacy(org.openapis.openapi.models.operations.TeamsRemoveRepoLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsRemoveRepoLegacyPathParams.class, baseUrl, "/teams/{team_id}/repos/{owner}/{repo}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsRemoveRepoLegacyRequest.class, baseUrl, "/teams/{team_id}/repos/{owner}/{repo}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -2574,12 +2574,12 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsUpdateDiscussionCommentInOrgResponse teamsUpdateDiscussionCommentInOrg(org.openapis.openapi.models.operations.TeamsUpdateDiscussionCommentInOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsUpdateDiscussionCommentInOrgPathParams.class, baseUrl, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsUpdateDiscussionCommentInOrgRequest.class, baseUrl, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -2621,12 +2621,12 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsUpdateDiscussionCommentLegacyResponse teamsUpdateDiscussionCommentLegacy(org.openapis.openapi.models.operations.TeamsUpdateDiscussionCommentLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsUpdateDiscussionCommentLegacyPathParams.class, baseUrl, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsUpdateDiscussionCommentLegacyRequest.class, baseUrl, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -2668,12 +2668,12 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsUpdateDiscussionInOrgResponse teamsUpdateDiscussionInOrg(org.openapis.openapi.models.operations.TeamsUpdateDiscussionInOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsUpdateDiscussionInOrgPathParams.class, baseUrl, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsUpdateDiscussionInOrgRequest.class, baseUrl, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -2712,12 +2712,12 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsUpdateDiscussionLegacyResponse teamsUpdateDiscussionLegacy(org.openapis.openapi.models.operations.TeamsUpdateDiscussionLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsUpdateDiscussionLegacyPathParams.class, baseUrl, "/teams/{team_id}/discussions/{discussion_number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsUpdateDiscussionLegacyRequest.class, baseUrl, "/teams/{team_id}/discussions/{discussion_number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -2756,12 +2756,12 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsUpdateInOrgResponse teamsUpdateInOrg(org.openapis.openapi.models.operations.TeamsUpdateInOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsUpdateInOrgPathParams.class, baseUrl, "/orgs/{org}/teams/{team_slug}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsUpdateInOrgRequest.class, baseUrl, "/orgs/{org}/teams/{team_slug}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -2802,12 +2802,12 @@ public class Teams {
      */
     public org.openapis.openapi.models.operations.TeamsUpdateLegacyResponse teamsUpdateLegacy(org.openapis.openapi.models.operations.TeamsUpdateLegacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsUpdateLegacyPathParams.class, baseUrl, "/teams/{team_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TeamsUpdateLegacyRequest.class, baseUrl, "/teams/{team_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

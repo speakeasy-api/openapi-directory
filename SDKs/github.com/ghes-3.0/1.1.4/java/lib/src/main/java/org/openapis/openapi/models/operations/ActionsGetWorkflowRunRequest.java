@@ -4,20 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsGetWorkflowRunRequest {
-    
-    public ActionsGetWorkflowRunPathParams pathParams;
-    public ActionsGetWorkflowRunRequest withPathParams(ActionsGetWorkflowRunPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * If `true` pull requests are omitted from the response (empty array).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_pull_requests")
+    public Boolean excludePullRequests;
+    public ActionsGetWorkflowRunRequest withExcludePullRequests(Boolean excludePullRequests) {
+        this.excludePullRequests = excludePullRequests;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ActionsGetWorkflowRunRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public ActionsGetWorkflowRunQueryParams queryParams;
-    public ActionsGetWorkflowRunRequest withQueryParams(ActionsGetWorkflowRunQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ActionsGetWorkflowRunRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * The id of the workflow run.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=run_id")
+    public Long runId;
+    public ActionsGetWorkflowRunRequest withRunId(Long runId) {
+        this.runId = runId;
         return this;
     }
     

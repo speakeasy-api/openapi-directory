@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTextTracksAlt1Request {
+    /**
+     * The ID of the channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel_id")
+    public Double channelId;
+    public GetTextTracksAlt1Request withChannelId(Double channelId) {
+        this.channelId = channelId;
+        return this;
+    }
     
-    public GetTextTracksAlt1PathParams pathParams;
-    public GetTextTracksAlt1Request withPathParams(GetTextTracksAlt1PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public GetTextTracksAlt1Request withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

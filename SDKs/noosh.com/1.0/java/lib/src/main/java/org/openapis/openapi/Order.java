@@ -40,7 +40,7 @@ public class Order {
      */
     public org.openapis.openapi.models.operations.GetBuyOrderResponse getBuyOrder(org.openapis.openapi.models.operations.GetBuyOrderRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBuyOrderPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/buyOrders/{order_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBuyOrderRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/buyOrders/{order_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -159,7 +159,7 @@ public class Order {
      */
     public org.openapis.openapi.models.operations.GetBuyOrderListResponse getBuyOrderList(org.openapis.openapi.models.operations.GetBuyOrderListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBuyOrderListPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/buyOrders", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBuyOrderListRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/buyOrders", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -278,7 +278,7 @@ public class Order {
      */
     public org.openapis.openapi.models.operations.GetBuyOrderListOfWorkgroupResponse getBuyOrderListOfWorkgroup(org.openapis.openapi.models.operations.GetBuyOrderListOfWorkgroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBuyOrderListOfWorkgroupPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/buyOrders", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBuyOrderListOfWorkgroupRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/buyOrders", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -397,7 +397,7 @@ public class Order {
      */
     public org.openapis.openapi.models.operations.GetBuyOrderOfWorkgroupResponse getBuyOrderOfWorkgroup(org.openapis.openapi.models.operations.GetBuyOrderOfWorkgroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBuyOrderOfWorkgroupPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/buyOrders/{order_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBuyOrderOfWorkgroupRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/buyOrders/{order_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -516,7 +516,7 @@ public class Order {
      */
     public org.openapis.openapi.models.operations.GetOrderResponse getOrder(org.openapis.openapi.models.operations.GetOrderRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrderPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/orders/{order_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrderRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/orders/{order_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -635,7 +635,7 @@ public class Order {
      */
     public org.openapis.openapi.models.operations.GetSellOrderResponse getSellOrder(org.openapis.openapi.models.operations.GetSellOrderRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSellOrderPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/sellOrders/{order_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSellOrderRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/sellOrders/{order_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -754,7 +754,7 @@ public class Order {
      */
     public org.openapis.openapi.models.operations.GetSellOrderListResponse getSellOrderList(org.openapis.openapi.models.operations.GetSellOrderListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSellOrderListPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/sellOrders", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSellOrderListRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/sellOrders", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -873,7 +873,7 @@ public class Order {
      */
     public org.openapis.openapi.models.operations.GetSellOrderListOfWorkgroupResponse getSellOrderListOfWorkgroup(org.openapis.openapi.models.operations.GetSellOrderListOfWorkgroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSellOrderListOfWorkgroupPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/sellOrders", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSellOrderListOfWorkgroupRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/sellOrders", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -992,7 +992,7 @@ public class Order {
      */
     public org.openapis.openapi.models.operations.GetSellOrderOfWorkgroupResponse getSellOrderOfWorkgroup(org.openapis.openapi.models.operations.GetSellOrderOfWorkgroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSellOrderOfWorkgroupPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/sellOrders/{order_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSellOrderOfWorkgroupRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/sellOrders/{order_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1111,12 +1111,12 @@ public class Order {
      */
     public org.openapis.openapi.models.operations.PostBuyOrderJsonResponse postBuyOrderJson(org.openapis.openapi.models.operations.PostBuyOrderJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostBuyOrderJsonPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/buyOrders", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostBuyOrderJsonRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/buyOrders", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "orderPO", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1232,12 +1232,12 @@ public class Order {
      */
     public org.openapis.openapi.models.operations.PostBuyOrderRawResponse postBuyOrderRaw(org.openapis.openapi.models.operations.PostBuyOrderRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostBuyOrderRawPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/buyOrders", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostBuyOrderRawRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/buyOrders", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
         
@@ -1353,12 +1353,12 @@ public class Order {
      */
     public org.openapis.openapi.models.operations.PutBuyOrderJsonResponse putBuyOrderJson(org.openapis.openapi.models.operations.PutBuyOrderJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutBuyOrderJsonPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/buyOrders/{order_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutBuyOrderJsonRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/buyOrders/{order_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "orderUpdPersistVO", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1474,12 +1474,12 @@ public class Order {
      */
     public org.openapis.openapi.models.operations.PutBuyOrderRawResponse putBuyOrderRaw(org.openapis.openapi.models.operations.PutBuyOrderRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutBuyOrderRawPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/buyOrders/{order_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutBuyOrderRawRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/buyOrders/{order_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
         
@@ -1595,12 +1595,12 @@ public class Order {
      */
     public org.openapis.openapi.models.operations.PutSellOrderJsonResponse putSellOrderJson(org.openapis.openapi.models.operations.PutSellOrderJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSellOrderJsonPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/sellOrders/{order_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSellOrderJsonRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/sellOrders/{order_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "orderUpdPersistVO", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1716,12 +1716,12 @@ public class Order {
      */
     public org.openapis.openapi.models.operations.PutSellOrderRawResponse putSellOrderRaw(org.openapis.openapi.models.operations.PutSellOrderRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSellOrderRawPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/sellOrders/{order_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSellOrderRawRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/sellOrders/{order_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
         

@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCustomGatewayPaymentOwnershipIdRequest {
-    
-    public PostCustomGatewayPaymentOwnershipIdPathParams pathParams;
-    public PostCustomGatewayPaymentOwnershipIdRequest withPathParams(PostCustomGatewayPaymentOwnershipIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The total amount paid in cents
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=amount")
+    public Long amount;
+    public PostCustomGatewayPaymentOwnershipIdRequest withAmount(Long amount) {
+        this.amount = amount;
         return this;
     }
     
+    /**
+     * A custom JSON object to attach to this transaction
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customData")
+    public String customData;
+    public PostCustomGatewayPaymentOwnershipIdRequest withCustomData(String customData) {
+        this.customData = customData;
+        return this;
+    }
     
-    public PostCustomGatewayPaymentOwnershipIdQueryParams queryParams;
-    public PostCustomGatewayPaymentOwnershipIdRequest withQueryParams(PostCustomGatewayPaymentOwnershipIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The date (in milliseconds) of when this payment was made
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
+    public Long date;
+    public PostCustomGatewayPaymentOwnershipIdRequest withDate(Long date) {
+        this.date = date;
+        return this;
+    }
+    
+    /**
+     * The amount (in cents) paid to the owner of the app. Defaults based on the commission amount configured for this marketplace.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=developerAmount")
+    public Long developerAmount;
+    public PostCustomGatewayPaymentOwnershipIdRequest withDeveloperAmount(Long developerAmount) {
+        this.developerAmount = developerAmount;
+        return this;
+    }
+    
+    /**
+     * The fee (in cents) paid to a payment processors or third parties to process this payment. Default is 0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=feeAmount")
+    public Long feeAmount;
+    public PostCustomGatewayPaymentOwnershipIdRequest withFeeAmount(Long feeAmount) {
+        this.feeAmount = feeAmount;
+        return this;
+    }
+    
+    /**
+     * The amount (in cents) paid to the marketplace owner as a commission for the purchase of this app. Defaults based on the commission amount configured for this marketplace.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=marketplaceAmount")
+    public Long marketplaceAmount;
+    public PostCustomGatewayPaymentOwnershipIdRequest withMarketplaceAmount(Long marketplaceAmount) {
+        this.marketplaceAmount = marketplaceAmount;
+        return this;
+    }
+    
+    /**
+     * The id of the ownership record involved in this transaction
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ownershipId")
+    public String ownershipId;
+    public PostCustomGatewayPaymentOwnershipIdRequest withOwnershipId(String ownershipId) {
+        this.ownershipId = ownershipId;
         return this;
     }
     

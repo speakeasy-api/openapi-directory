@@ -7,31 +7,290 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePaymentCancellationPsuDataRequest {
-    
-    public UpdatePaymentCancellationPsuDataPathParams pathParams;
-    public UpdatePaymentCancellationPsuDataRequest withPathParams(UpdatePaymentCancellationPsuDataPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Is contained if and only if the "Signature" element is contained in the header of the request.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Digest")
+    public String digest;
+    public UpdatePaymentCancellationPsuDataRequest withDigest(String digest) {
+        this.digest = digest;
         return this;
     }
     
+    /**
+     * The forwarded IP Accept header fields consist of the corresponding HTTP request Accept header fields between PSU and TPP, if available.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept")
+    public String psuAccept;
+    public UpdatePaymentCancellationPsuDataRequest withPSUAccept(String psuAccept) {
+        this.psuAccept = psuAccept;
+        return this;
+    }
     
-    public UpdatePaymentCancellationPsuDataHeaders headers;
-    public UpdatePaymentCancellationPsuDataRequest withHeaders(UpdatePaymentCancellationPsuDataHeaders headers) {
-        this.headers = headers;
+    /**
+     * The forwarded IP Accept header fields consist of the corresponding HTTP request Accept header fields between PSU and TPP, if available.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Charset")
+    public String psuAcceptCharset;
+    public UpdatePaymentCancellationPsuDataRequest withPSUAcceptCharset(String psuAcceptCharset) {
+        this.psuAcceptCharset = psuAcceptCharset;
+        return this;
+    }
+    
+    /**
+     * The forwarded IP Accept header fields consist of the corresponding HTTP request Accept header fields between PSU and TPP, if available.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Encoding")
+    public String psuAcceptEncoding;
+    public UpdatePaymentCancellationPsuDataRequest withPSUAcceptEncoding(String psuAcceptEncoding) {
+        this.psuAcceptEncoding = psuAcceptEncoding;
+        return this;
+    }
+    
+    /**
+     * The forwarded IP Accept header fields consist of the corresponding HTTP request Accept header fields between PSU and TPP, if available.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Language")
+    public String psuAcceptLanguage;
+    public UpdatePaymentCancellationPsuDataRequest withPSUAcceptLanguage(String psuAcceptLanguage) {
+        this.psuAcceptLanguage = psuAcceptLanguage;
+        return this;
+    }
+    
+    /**
+     * Might be mandated in the ASPSP's documentation. Only used in a corporate context.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Corporate-ID")
+    public String psuCorporateID;
+    public UpdatePaymentCancellationPsuDataRequest withPSUCorporateID(String psuCorporateID) {
+        this.psuCorporateID = psuCorporateID;
+        return this;
+    }
+    
+    /**
+     * Might be mandated in the ASPSP's documentation. Only used in a corporate context.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Corporate-ID-Type")
+    public String psuCorporateIDType;
+    public UpdatePaymentCancellationPsuDataRequest withPSUCorporateIDType(String psuCorporateIDType) {
+        this.psuCorporateIDType = psuCorporateIDType;
+        return this;
+    }
+    
+    /**
+     * UUID (Universally Unique Identifier) for a device, which is used by the PSU, if available.
+     * UUID identifies either a device or a device dependant application installation.
+     * In case of an installation identification this ID needs to be unaltered until removal from device.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Device-ID")
+    public String psuDeviceID;
+    public UpdatePaymentCancellationPsuDataRequest withPSUDeviceID(String psuDeviceID) {
+        this.psuDeviceID = psuDeviceID;
+        return this;
+    }
+    
+    /**
+     * The forwarded Geo Location of the corresponding http request between PSU and TPP if available.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Geo-Location")
+    public String psuGeoLocation;
+    public UpdatePaymentCancellationPsuDataRequest withPSUGeoLocation(String psuGeoLocation) {
+        this.psuGeoLocation = psuGeoLocation;
+        return this;
+    }
+    
+    /**
+     * HTTP method used at the PSU ? TPP interface, if available.
+     * Valid values are:
+     * * GET
+     * * POST
+     * * PUT
+     * * PATCH
+     * * DELETE
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Http-Method")
+    public org.openapis.openapi.models.shared.PSUHttpMethodEnum psuHttpMethod;
+    public UpdatePaymentCancellationPsuDataRequest withPSUHttpMethod(org.openapis.openapi.models.shared.PSUHttpMethodEnum psuHttpMethod) {
+        this.psuHttpMethod = psuHttpMethod;
+        return this;
+    }
+    
+    /**
+     * Client ID of the PSU in the ASPSP client interface.
+     * 
+     * Might be mandated in the ASPSP's documentation.
+     * 
+     * It might be contained even if an OAuth2 based authentication was performed in a pre-step or an OAuth2 based SCA was performed in an preceding
+     * AIS service in the same session.
+     * In this case the ASPSP might check whether PSU-ID and token match,
+     * according to ASPSP documentation.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-ID")
+    public String psuId;
+    public UpdatePaymentCancellationPsuDataRequest withPsuId(String psuId) {
+        this.psuId = psuId;
+        return this;
+    }
+    
+    /**
+     * Type of the PSU-ID, needed in scenarios where PSUs have several PSU-IDs as access possibility.
+     * 
+     * In this case, the mean and use are then defined in the ASPSP's documentation.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-ID-Type")
+    public String psuIDType;
+    public UpdatePaymentCancellationPsuDataRequest withPSUIDType(String psuIDType) {
+        this.psuIDType = psuIDType;
+        return this;
+    }
+    
+    /**
+     * The forwarded IP Address header field consists of the corresponding http request IP Address field between PSU and TPP.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-IP-Address")
+    public String psuIPAddress;
+    public UpdatePaymentCancellationPsuDataRequest withPSUIPAddress(String psuIPAddress) {
+        this.psuIPAddress = psuIPAddress;
+        return this;
+    }
+    
+    /**
+     * The forwarded IP Port header field consists of the corresponding HTTP request IP Port field between PSU and TPP, if available.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-IP-Port")
+    public String psuIPPort;
+    public UpdatePaymentCancellationPsuDataRequest withPSUIPPort(String psuIPPort) {
+        this.psuIPPort = psuIPPort;
+        return this;
+    }
+    
+    /**
+     * The forwarded Agent header field of the HTTP request between PSU and TPP, if available.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-User-Agent")
+    public String psuUserAgent;
+    public UpdatePaymentCancellationPsuDataRequest withPSUUserAgent(String psuUserAgent) {
+        this.psuUserAgent = psuUserAgent;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public Object request;
-    public UpdatePaymentCancellationPsuDataRequest withRequest(Object request) {
-        this.request = request;
+    public Object requestBody;
+    public UpdatePaymentCancellationPsuDataRequest withRequestBody(Object requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * A signature of the request by the TPP on application level. This might be mandated by ASPSP.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Signature")
+    public String signature;
+    public UpdatePaymentCancellationPsuDataRequest withSignature(String signature) {
+        this.signature = signature;
+        return this;
+    }
     
-    public UpdatePaymentCancellationPsuDataSecurity security;
-    public UpdatePaymentCancellationPsuDataRequest withSecurity(UpdatePaymentCancellationPsuDataSecurity security) {
-        this.security = security;
+    /**
+     * The certificate used for signing the request, in base64 encoding.
+     * Must be contained if a signature is contained.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Signature-Certificate")
+    public String tppSignatureCertificate;
+    public UpdatePaymentCancellationPsuDataRequest withTPPSignatureCertificate(String tppSignatureCertificate) {
+        this.tppSignatureCertificate = tppSignatureCertificate;
+        return this;
+    }
+    
+    /**
+     * ID of the request, unique to the call, as determined by the initiating party.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Request-ID")
+    public String xRequestID;
+    public UpdatePaymentCancellationPsuDataRequest withXRequestID(String xRequestID) {
+        this.xRequestID = xRequestID;
+        return this;
+    }
+    
+    /**
+     * Resource identification of the related SCA.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=authorisationId")
+    public String authorisationId;
+    public UpdatePaymentCancellationPsuDataRequest withAuthorisationId(String authorisationId) {
+        this.authorisationId = authorisationId;
+        return this;
+    }
+    
+    /**
+     * The addressed payment product endpoint, e.g. for SEPA Credit Transfers (SCT).
+     * The ASPSP will publish which of the payment products/endpoints will be supported.
+     * 
+     * The following payment products are supported:
+     *   - domestic-swiss-credit-transfers-isr
+     *   - domestic-swiss-credit-transfers
+     *   - domestic-swiss-credit-transfers-qr
+     *   - domestic-swiss-foreign-credit-transfers
+     *   - swiss-sepa-credit-transfers
+     *   - swiss-cross-border-credit-transfers
+     *   - pain.001-sepa-credit-transfers
+     *   - pain.001-cross-border-credit-transfers
+     *   - pain.001-swiss-six-credit-transfers
+     * 
+     * **Remark:** For all SEPA Credit Transfer based endpoints which accept XML encoding,
+     * the XML pain.001 schemes provided by EPC are supported by the ASPSP as a minimum for the body content.
+     * Further XML schemes might be supported by some communities.
+     * 
+     * **Remark:** For cross-border and TARGET-2 payments only community wide pain.001 schemes do exist.
+     * There are plenty of country specificic scheme variants.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payment-product")
+    public org.openapis.openapi.models.shared.PaymentProductEnum paymentProduct;
+    public UpdatePaymentCancellationPsuDataRequest withPaymentProduct(org.openapis.openapi.models.shared.PaymentProductEnum paymentProduct) {
+        this.paymentProduct = paymentProduct;
+        return this;
+    }
+    
+    /**
+     * Payment service:
+     * 
+     * Possible values are:
+     * * payments
+     * * bulk-payments
+     * * periodic-payments
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payment-service")
+    public org.openapis.openapi.models.shared.PaymentServiceEnum paymentService;
+    public UpdatePaymentCancellationPsuDataRequest withPaymentService(org.openapis.openapi.models.shared.PaymentServiceEnum paymentService) {
+        this.paymentService = paymentService;
+        return this;
+    }
+    
+    /**
+     * Resource identification of the generated payment initiation resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=paymentId")
+    public String paymentId;
+    public UpdatePaymentCancellationPsuDataRequest withPaymentId(String paymentId) {
+        this.paymentId = paymentId;
         return this;
     }
     

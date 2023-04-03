@@ -34,10 +34,11 @@ public class APIs {
      * Insurance Policy - Car
      * API to verify Insurance Policy - Car.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CripcResponse cripc(org.openapis.openapi.models.operations.CripcRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CripcResponse cripc(org.openapis.openapi.models.operations.CripcRequestBody request, org.openapis.openapi.models.operations.CripcSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/cripc/certificate");
         
@@ -48,7 +49,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,10 +127,11 @@ public class APIs {
      * Insurance Policy - Commercial Vehicle
      * API to verify Insurance Policy - Commercial Vehicle.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CvipcResponse cvipc(org.openapis.openapi.models.operations.CvipcRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CvipcResponse cvipc(org.openapis.openapi.models.operations.CvipcRequestBody request, org.openapis.openapi.models.operations.CvipcSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/cvipc/certificate");
         
@@ -140,7 +142,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -218,10 +220,11 @@ public class APIs {
      * Insurance Policy - Health
      * API to verify Insurance Policy - Health.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.HlipcResponse hlipc(org.openapis.openapi.models.operations.HlipcRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.HlipcResponse hlipc(org.openapis.openapi.models.operations.HlipcRequestBody request, org.openapis.openapi.models.operations.HlipcSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/hlipc/certificate");
         
@@ -232,7 +235,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -310,10 +313,11 @@ public class APIs {
      * Insurance Policy - Miscellaneous
      * API to verify Insurance Policy - Miscellaneous.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MiipcResponse miipc(org.openapis.openapi.models.operations.MiipcRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MiipcResponse miipc(org.openapis.openapi.models.operations.MiipcRequestBody request, org.openapis.openapi.models.operations.MiipcSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/miipc/certificate");
         
@@ -324,7 +328,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -402,10 +406,11 @@ public class APIs {
      * Insurance Policy - Travel
      * API to verify Insurance Policy - Travel.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TripcResponse tripc(org.openapis.openapi.models.operations.TripcRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TripcResponse tripc(org.openapis.openapi.models.operations.TripcRequestBody request, org.openapis.openapi.models.operations.TripcSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/tripc/certificate");
         
@@ -416,7 +421,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -494,10 +499,11 @@ public class APIs {
      * Insurance Policy - Two Wheeler
      * API to verify Insurance Policy - Two Wheeler.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TwipcResponse twipc(org.openapis.openapi.models.operations.TwipcRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TwipcResponse twipc(org.openapis.openapi.models.operations.TwipcRequestBody request, org.openapis.openapi.models.operations.TwipcSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/twipc/certificate");
         
@@ -508,7 +514,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,27 +4,178 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSigningBasketAuthorisationRequest {
-    
-    public GetSigningBasketAuthorisationPathParams pathParams;
-    public GetSigningBasketAuthorisationRequest withPathParams(GetSigningBasketAuthorisationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Is contained if and only if the "Signature" element is contained in the header of the request.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Digest")
+    public String digest;
+    public GetSigningBasketAuthorisationRequest withDigest(String digest) {
+        this.digest = digest;
         return this;
     }
     
-    
-    public GetSigningBasketAuthorisationHeaders headers;
-    public GetSigningBasketAuthorisationRequest withHeaders(GetSigningBasketAuthorisationHeaders headers) {
-        this.headers = headers;
+    /**
+     * The forwarded IP Accept header fields consist of the corresponding HTTP request Accept header fields between PSU and TPP, if available.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept")
+    public String psuAccept;
+    public GetSigningBasketAuthorisationRequest withPSUAccept(String psuAccept) {
+        this.psuAccept = psuAccept;
         return this;
     }
     
+    /**
+     * The forwarded IP Accept header fields consist of the corresponding HTTP request Accept header fields between PSU and TPP, if available.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Charset")
+    public String psuAcceptCharset;
+    public GetSigningBasketAuthorisationRequest withPSUAcceptCharset(String psuAcceptCharset) {
+        this.psuAcceptCharset = psuAcceptCharset;
+        return this;
+    }
     
-    public GetSigningBasketAuthorisationSecurity security;
-    public GetSigningBasketAuthorisationRequest withSecurity(GetSigningBasketAuthorisationSecurity security) {
-        this.security = security;
+    /**
+     * The forwarded IP Accept header fields consist of the corresponding HTTP request Accept header fields between PSU and TPP, if available.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Encoding")
+    public String psuAcceptEncoding;
+    public GetSigningBasketAuthorisationRequest withPSUAcceptEncoding(String psuAcceptEncoding) {
+        this.psuAcceptEncoding = psuAcceptEncoding;
+        return this;
+    }
+    
+    /**
+     * The forwarded IP Accept header fields consist of the corresponding HTTP request Accept header fields between PSU and TPP, if available.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Language")
+    public String psuAcceptLanguage;
+    public GetSigningBasketAuthorisationRequest withPSUAcceptLanguage(String psuAcceptLanguage) {
+        this.psuAcceptLanguage = psuAcceptLanguage;
+        return this;
+    }
+    
+    /**
+     * UUID (Universally Unique Identifier) for a device, which is used by the PSU, if available.
+     * UUID identifies either a device or a device dependant application installation.
+     * In case of an installation identification this ID needs to be unaltered until removal from device.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Device-ID")
+    public String psuDeviceID;
+    public GetSigningBasketAuthorisationRequest withPSUDeviceID(String psuDeviceID) {
+        this.psuDeviceID = psuDeviceID;
+        return this;
+    }
+    
+    /**
+     * The forwarded Geo Location of the corresponding http request between PSU and TPP if available.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Geo-Location")
+    public String psuGeoLocation;
+    public GetSigningBasketAuthorisationRequest withPSUGeoLocation(String psuGeoLocation) {
+        this.psuGeoLocation = psuGeoLocation;
+        return this;
+    }
+    
+    /**
+     * HTTP method used at the PSU ? TPP interface, if available.
+     * Valid values are:
+     * * GET
+     * * POST
+     * * PUT
+     * * PATCH
+     * * DELETE
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Http-Method")
+    public org.openapis.openapi.models.shared.PSUHttpMethodEnum psuHttpMethod;
+    public GetSigningBasketAuthorisationRequest withPSUHttpMethod(org.openapis.openapi.models.shared.PSUHttpMethodEnum psuHttpMethod) {
+        this.psuHttpMethod = psuHttpMethod;
+        return this;
+    }
+    
+    /**
+     * The forwarded IP Address header field consists of the corresponding http request IP Address field between PSU and TPP.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-IP-Address")
+    public String psuIPAddress;
+    public GetSigningBasketAuthorisationRequest withPSUIPAddress(String psuIPAddress) {
+        this.psuIPAddress = psuIPAddress;
+        return this;
+    }
+    
+    /**
+     * The forwarded IP Port header field consists of the corresponding HTTP request IP Port field between PSU and TPP, if available.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-IP-Port")
+    public String psuIPPort;
+    public GetSigningBasketAuthorisationRequest withPSUIPPort(String psuIPPort) {
+        this.psuIPPort = psuIPPort;
+        return this;
+    }
+    
+    /**
+     * The forwarded Agent header field of the HTTP request between PSU and TPP, if available.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-User-Agent")
+    public String psuUserAgent;
+    public GetSigningBasketAuthorisationRequest withPSUUserAgent(String psuUserAgent) {
+        this.psuUserAgent = psuUserAgent;
+        return this;
+    }
+    
+    /**
+     * A signature of the request by the TPP on application level. This might be mandated by ASPSP.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Signature")
+    public String signature;
+    public GetSigningBasketAuthorisationRequest withSignature(String signature) {
+        this.signature = signature;
+        return this;
+    }
+    
+    /**
+     * The certificate used for signing the request, in base64 encoding.
+     * Must be contained if a signature is contained.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Signature-Certificate")
+    public String tppSignatureCertificate;
+    public GetSigningBasketAuthorisationRequest withTPPSignatureCertificate(String tppSignatureCertificate) {
+        this.tppSignatureCertificate = tppSignatureCertificate;
+        return this;
+    }
+    
+    /**
+     * ID of the request, unique to the call, as determined by the initiating party.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Request-ID")
+    public String xRequestID;
+    public GetSigningBasketAuthorisationRequest withXRequestID(String xRequestID) {
+        this.xRequestID = xRequestID;
+        return this;
+    }
+    
+    /**
+     * This identification of the corresponding signing basket object.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=basketId")
+    public String basketId;
+    public GetSigningBasketAuthorisationRequest withBasketId(String basketId) {
+        this.basketId = basketId;
         return this;
     }
     

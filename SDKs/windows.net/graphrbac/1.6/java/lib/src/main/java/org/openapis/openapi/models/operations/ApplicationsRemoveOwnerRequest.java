@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ApplicationsRemoveOwnerRequest {
-    
-    public ApplicationsRemoveOwnerPathParams pathParams;
-    public ApplicationsRemoveOwnerRequest withPathParams(ApplicationsRemoveOwnerPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Client API version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public ApplicationsRemoveOwnerRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
+    /**
+     * The object ID of the application from which to remove the owner.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=applicationObjectId")
+    public String applicationObjectId;
+    public ApplicationsRemoveOwnerRequest withApplicationObjectId(String applicationObjectId) {
+        this.applicationObjectId = applicationObjectId;
+        return this;
+    }
     
-    public ApplicationsRemoveOwnerQueryParams queryParams;
-    public ApplicationsRemoveOwnerRequest withQueryParams(ApplicationsRemoveOwnerQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Owner object id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ownerObjectId")
+    public String ownerObjectId;
+    public ApplicationsRemoveOwnerRequest withOwnerObjectId(String ownerObjectId) {
+        this.ownerObjectId = ownerObjectId;
+        return this;
+    }
+    
+    /**
+     * The tenant ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tenantID")
+    public String tenantID;
+    public ApplicationsRemoveOwnerRequest withTenantID(String tenantID) {
+        this.tenantID = tenantID;
         return this;
     }
     

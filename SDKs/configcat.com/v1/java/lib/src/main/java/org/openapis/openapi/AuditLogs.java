@@ -43,13 +43,13 @@ public class AuditLogs {
      */
     public org.openapis.openapi.models.operations.GetAuditlogsResponse getAuditlogs(org.openapis.openapi.models.operations.GetAuditlogsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAuditlogsPathParams.class, baseUrl, "/v1/products/{productId}/auditlogs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAuditlogsRequest.class, baseUrl, "/v1/products/{productId}/auditlogs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAuditlogsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAuditlogsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -97,7 +97,7 @@ public class AuditLogs {
      */
     public org.openapis.openapi.models.operations.GetDeletedSettingsResponse getDeletedSettings(org.openapis.openapi.models.operations.GetDeletedSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeletedSettingsPathParams.class, baseUrl, "/v1/configs/{configId}/deleted-settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeletedSettingsRequest.class, baseUrl, "/v1/configs/{configId}/deleted-settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -146,13 +146,13 @@ public class AuditLogs {
      */
     public org.openapis.openapi.models.operations.GetOrganizationAuditlogsResponse getOrganizationAuditlogs(org.openapis.openapi.models.operations.GetOrganizationAuditlogsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationAuditlogsPathParams.class, baseUrl, "/v1/organizations/{organizationId}/auditlogs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationAuditlogsRequest.class, baseUrl, "/v1/organizations/{organizationId}/auditlogs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationAuditlogsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationAuditlogsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

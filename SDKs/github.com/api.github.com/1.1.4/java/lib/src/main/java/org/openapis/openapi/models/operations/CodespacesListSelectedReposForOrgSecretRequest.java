@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodespacesListSelectedReposForOrgSecretRequest {
-    
-    public CodespacesListSelectedReposForOrgSecretPathParams pathParams;
-    public CodespacesListSelectedReposForOrgSecretRequest withPathParams(CodespacesListSelectedReposForOrgSecretPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public CodespacesListSelectedReposForOrgSecretRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public CodespacesListSelectedReposForOrgSecretRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public CodespacesListSelectedReposForOrgSecretQueryParams queryParams;
-    public CodespacesListSelectedReposForOrgSecretRequest withQueryParams(CodespacesListSelectedReposForOrgSecretQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public CodespacesListSelectedReposForOrgSecretRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The name of the secret.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=secret_name")
+    public String secretName;
+    public CodespacesListSelectedReposForOrgSecretRequest withSecretName(String secretName) {
+        this.secretName = secretName;
         return this;
     }
     

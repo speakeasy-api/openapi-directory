@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSubscriptionRequest {
-    
-    public CreateSubscriptionPathParams pathParams;
-    public CreateSubscriptionRequest withPathParams(CreateSubscriptionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateSubscriptionRequest createSubscriptionRequest;
+    public CreateSubscriptionRequest withCreateSubscriptionRequest(org.openapis.openapi.models.shared.CreateSubscriptionRequest createSubscriptionRequest) {
+        this.createSubscriptionRequest = createSubscriptionRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateSubscriptionRequest request;
-    public CreateSubscriptionRequest withRequest(org.openapis.openapi.models.shared.CreateSubscriptionRequest request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public CreateSubscriptionRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

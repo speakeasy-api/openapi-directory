@@ -4,13 +4,78 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDocumentsRequest {
+    /**
+     * searches in source language of documents, in source and target languages of document's quote
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language_code")
+    public String languageCode;
+    public GetDocumentsRequest withLanguageCode(String languageCode) {
+        this.languageCode = languageCode;
+        return this;
+    }
     
-    public GetDocumentsQueryParams queryParams;
-    public GetDocumentsRequest withQueryParams(GetDocumentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_by")
+    public GetDocumentsOrderByEnum orderBy;
+    public GetDocumentsRequest withOrderBy(GetDocumentsOrderByEnum orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_type")
+    public org.openapis.openapi.models.shared.ListOrderTypeEnum orderType;
+    public GetDocumentsRequest withOrderType(org.openapis.openapi.models.shared.ListOrderTypeEnum orderType) {
+        this.orderType = orderType;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetDocumentsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetDocumentsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * When true, this will return the most 4 recent active documents.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=recent")
+    public Boolean recent;
+    public GetDocumentsRequest withRecent(Boolean recent) {
+        this.recent = recent;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public GetDocumentsRequest withSearch(String search) {
+        this.search = search;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type_filter")
+    public GetDocumentsTypeFilterEnum typeFilter;
+    public GetDocumentsRequest withTypeFilter(GetDocumentsTypeFilterEnum typeFilter) {
+        this.typeFilter = typeFilter;
+        return this;
+    }
+    
+    /**
+     * Attach further information. Possible values 'preview' to fetch temporary preview URLs. This is NOT recommended to be used with list calls. Only use with[]=preview for single document/style guide calls.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=with[]")
+    public GetDocumentsWithEnum[] with;
+    public GetDocumentsRequest withWith(GetDocumentsWithEnum[] with) {
+        this.with = with;
         return this;
     }
     

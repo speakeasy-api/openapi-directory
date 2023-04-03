@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRequest {
+    /**
+     * Format of the response message.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public GetFormatEnum format;
+    public GetRequest withFormat(GetFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public GetQueryParams queryParams;
-    public GetRequest withQueryParams(GetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * IP address (IPv4 or IPv6) for reverse IP location lookup purposes. If not present, the server IP address will be used for the location lookup.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ip")
+    public String ip;
+    public GetRequest withIp(String ip) {
+        this.ip = ip;
+        return this;
+    }
+    
+    /**
+     * API key.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public GetRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Translation information. The translation only applicable for continent, country, region and city name. This parameter is only available for Plus and Security plan only.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public GetLangEnum lang;
+    public GetRequest withLang(GetLangEnum lang) {
+        this.lang = lang;
         return this;
     }
     

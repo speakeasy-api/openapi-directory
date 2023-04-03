@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteDevEnvironmentRequest {
+    /**
+     * The system-generated unique ID of the Dev Environment you want to delete. To retrieve a list of Dev Environment IDs, use &lt;a&gt;ListDevEnvironments&lt;/a&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteDevEnvironmentRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public DeleteDevEnvironmentPathParams pathParams;
-    public DeleteDevEnvironmentRequest withPathParams(DeleteDevEnvironmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the project in the space.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectName")
+    public String projectName;
+    public DeleteDevEnvironmentRequest withProjectName(String projectName) {
+        this.projectName = projectName;
+        return this;
+    }
+    
+    /**
+     * The name of the space.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceName")
+    public String spaceName;
+    public DeleteDevEnvironmentRequest withSpaceName(String spaceName) {
+        this.spaceName = spaceName;
         return this;
     }
     

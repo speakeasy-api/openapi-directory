@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateUserRequest {
-    
-    public CreateUserQueryParams queryParams;
-    public CreateUserRequest withQueryParams(CreateUserQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.User user;
+    public CreateUserRequest withUser(org.openapis.openapi.models.shared.User user) {
+        this.user = user;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.User request;
-    public CreateUserRequest withRequest(org.openapis.openapi.models.shared.User request) {
-        this.request = request;
+    /**
+     * Send a welcome email to the user
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=notify")
+    public Boolean notify;
+    public CreateUserRequest withNotify(Boolean notify) {
+        this.notify = notify;
         return this;
     }
     

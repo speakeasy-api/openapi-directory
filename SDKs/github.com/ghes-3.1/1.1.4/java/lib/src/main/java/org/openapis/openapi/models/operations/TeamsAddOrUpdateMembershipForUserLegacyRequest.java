@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsAddOrUpdateMembershipForUserLegacyRequest {
-    
-    public TeamsAddOrUpdateMembershipForUserLegacyPathParams pathParams;
-    public TeamsAddOrUpdateMembershipForUserLegacyRequest withPathParams(TeamsAddOrUpdateMembershipForUserLegacyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public TeamsAddOrUpdateMembershipForUserLegacyRequestBody requestBody;
+    public TeamsAddOrUpdateMembershipForUserLegacyRequest withRequestBody(TeamsAddOrUpdateMembershipForUserLegacyRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public TeamsAddOrUpdateMembershipForUserLegacyRequestBody request;
-    public TeamsAddOrUpdateMembershipForUserLegacyRequest withRequest(TeamsAddOrUpdateMembershipForUserLegacyRequestBody request) {
-        this.request = request;
+    /**
+     * The unique identifier of the team.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
+    public Long teamId;
+    public TeamsAddOrUpdateMembershipForUserLegacyRequest withTeamId(Long teamId) {
+        this.teamId = teamId;
+        return this;
+    }
+    
+    /**
+     * The handle for the GitHub user account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public TeamsAddOrUpdateMembershipForUserLegacyRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

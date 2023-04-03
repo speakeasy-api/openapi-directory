@@ -4,27 +4,92 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListProvisionedConcurrencyConfigsRequest {
-    
-    public ListProvisionedConcurrencyConfigsPathParams pathParams;
-    public ListProvisionedConcurrencyConfigsRequest withPathParams(ListProvisionedConcurrencyConfigsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * &lt;p&gt;The name of the Lambda function.&lt;/p&gt; &lt;p class="title"&gt; &lt;b&gt;Name formats&lt;/b&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Function name&lt;/b&gt; \u2013 &lt;code&gt;my-function&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Function ARN&lt;/b&gt; \u2013 &lt;code&gt;arn:aws:lambda:us-west-2:123456789012:function:my-function&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Partial ARN&lt;/b&gt; \u2013 &lt;code&gt;123456789012:function:my-function&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;The length constraint applies only to the full ARN. If you specify only the function name, it is limited to 64 characters in length.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FunctionName")
+    public String functionName;
+    public ListProvisionedConcurrencyConfigsRequest withFunctionName(String functionName) {
+        this.functionName = functionName;
         return this;
     }
     
-    
-    public ListProvisionedConcurrencyConfigsQueryParams queryParams;
-    public ListProvisionedConcurrencyConfigsRequest withQueryParams(ListProvisionedConcurrencyConfigsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=List")
+    public ListProvisionedConcurrencyConfigsListEnum list;
+    public ListProvisionedConcurrencyConfigsRequest withList(ListProvisionedConcurrencyConfigsListEnum list) {
+        this.list = list;
         return this;
     }
     
+    /**
+     * Specify the pagination token that's returned by a previous request to retrieve the next page of results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
+    public String marker;
+    public ListProvisionedConcurrencyConfigsRequest withMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
     
-    public ListProvisionedConcurrencyConfigsHeaders headers;
-    public ListProvisionedConcurrencyConfigsRequest withHeaders(ListProvisionedConcurrencyConfigsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Specify a number to limit the number of configurations returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxItems")
+    public Long maxItems;
+    public ListProvisionedConcurrencyConfigsRequest withMaxItems(Long maxItems) {
+        this.maxItems = maxItems;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListProvisionedConcurrencyConfigsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListProvisionedConcurrencyConfigsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListProvisionedConcurrencyConfigsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListProvisionedConcurrencyConfigsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListProvisionedConcurrencyConfigsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListProvisionedConcurrencyConfigsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListProvisionedConcurrencyConfigsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOfferingsOfferingIdLearnersPendingSubmissionRequest {
-    
-    public GetOfferingsOfferingIdLearnersPendingSubmissionPathParams pathParams;
-    public GetOfferingsOfferingIdLearnersPendingSubmissionRequest withPathParams(GetOfferingsOfferingIdLearnersPendingSubmissionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * days to assessment due date. Default is 3 days
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=days")
+    public String days;
+    public GetOfferingsOfferingIdLearnersPendingSubmissionRequest withDays(String days) {
+        this.days = days;
         return this;
     }
     
-    
-    public GetOfferingsOfferingIdLearnersPendingSubmissionQueryParams queryParams;
-    public GetOfferingsOfferingIdLearnersPendingSubmissionRequest withQueryParams(GetOfferingsOfferingIdLearnersPendingSubmissionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * offering's id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offeringId")
+    public String offeringId;
+    public GetOfferingsOfferingIdLearnersPendingSubmissionRequest withOfferingId(String offeringId) {
+        this.offeringId = offeringId;
         return this;
     }
     

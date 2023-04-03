@@ -4,20 +4,57 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCallQueueRecordingsRequest {
-    
-    public GetCallQueueRecordingsPathParams pathParams;
-    public GetCallQueueRecordingsRequest withPathParams(GetCallQueueRecordingsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique Identifier of the Call Queue.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=callQueueId")
+    public String callQueueId;
+    public GetCallQueueRecordingsRequest withCallQueueId(String callQueueId) {
+        this.callQueueId = callQueueId;
         return this;
     }
     
+    /**
+     * Start date (within a 6 month range).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
+    public LocalDate from;
+    public GetCallQueueRecordingsRequest withFrom(LocalDate from) {
+        this.from = from;
+        return this;
+    }
     
-    public GetCallQueueRecordingsQueryParams queryParams;
-    public GetCallQueueRecordingsRequest withQueryParams(GetCallQueueRecordingsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next_page_token")
+    public String nextPageToken;
+    public GetCallQueueRecordingsRequest withNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
+        return this;
+    }
+    
+    /**
+     * The number of records returned within a single API call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public GetCallQueueRecordingsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * End date (within a 6 month range).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
+    public LocalDate to;
+    public GetCallQueueRecordingsRequest withTo(LocalDate to) {
+        this.to = to;
         return this;
     }
     

@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteNetworkMqttBrokerRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mqttBrokerId")
+    public String mqttBrokerId;
+    public DeleteNetworkMqttBrokerRequest withMqttBrokerId(String mqttBrokerId) {
+        this.mqttBrokerId = mqttBrokerId;
+        return this;
+    }
     
-    public DeleteNetworkMqttBrokerPathParams pathParams;
-    public DeleteNetworkMqttBrokerRequest withPathParams(DeleteNetworkMqttBrokerPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public DeleteNetworkMqttBrokerRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

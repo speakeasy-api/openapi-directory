@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteWebinarRegistrantRequest {
-    
-    public DeleteWebinarRegistrantPathParams pathParams;
-    public DeleteWebinarRegistrantRequest withPathParams(DeleteWebinarRegistrantPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The webinar occurence ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=occurrence_id")
+    public String occurrenceId;
+    public DeleteWebinarRegistrantRequest withOccurrenceId(String occurrenceId) {
+        this.occurrenceId = occurrenceId;
         return this;
     }
     
+    /**
+     * The registrant ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=registrantId")
+    public String registrantId;
+    public DeleteWebinarRegistrantRequest withRegistrantId(String registrantId) {
+        this.registrantId = registrantId;
+        return this;
+    }
     
-    public DeleteWebinarRegistrantQueryParams queryParams;
-    public DeleteWebinarRegistrantRequest withQueryParams(DeleteWebinarRegistrantQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The webinar ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webinarId")
+    public Long webinarId;
+    public DeleteWebinarRegistrantRequest withWebinarId(Long webinarId) {
+        this.webinarId = webinarId;
         return this;
     }
     

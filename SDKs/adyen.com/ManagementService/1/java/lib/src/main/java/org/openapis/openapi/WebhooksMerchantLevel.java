@@ -38,19 +38,20 @@ public class WebhooksMerchantLevel {
      * To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014Webhooks read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteMerchantsMerchantIdWebhooksWebhookIdResponse deleteMerchantsMerchantIdWebhooksWebhookId(org.openapis.openapi.models.operations.DeleteMerchantsMerchantIdWebhooksWebhookIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteMerchantsMerchantIdWebhooksWebhookIdResponse deleteMerchantsMerchantIdWebhooksWebhookId(org.openapis.openapi.models.operations.DeleteMerchantsMerchantIdWebhooksWebhookIdRequest request, org.openapis.openapi.models.operations.DeleteMerchantsMerchantIdWebhooksWebhookIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteMerchantsMerchantIdWebhooksWebhookIdPathParams.class, baseUrl, "/merchants/{merchantId}/webhooks/{webhookId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteMerchantsMerchantIdWebhooksWebhookIdRequest.class, baseUrl, "/merchants/{merchantId}/webhooks/{webhookId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -84,25 +85,26 @@ public class WebhooksMerchantLevel {
      * * Management API\u2014Webhooks read
      * * Management API\u2014Webhooks read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMerchantsMerchantIdWebhooksResponse getMerchantsMerchantIdWebhooks(org.openapis.openapi.models.operations.GetMerchantsMerchantIdWebhooksRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMerchantsMerchantIdWebhooksResponse getMerchantsMerchantIdWebhooks(org.openapis.openapi.models.operations.GetMerchantsMerchantIdWebhooksRequest request, org.openapis.openapi.models.operations.GetMerchantsMerchantIdWebhooksSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMerchantsMerchantIdWebhooksPathParams.class, baseUrl, "/merchants/{merchantId}/webhooks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMerchantsMerchantIdWebhooksRequest.class, baseUrl, "/merchants/{merchantId}/webhooks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMerchantsMerchantIdWebhooksQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMerchantsMerchantIdWebhooksRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -144,19 +146,20 @@ public class WebhooksMerchantLevel {
      * * Management API\u2014Webhooks read
      * * Management API\u2014Webhooks read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMerchantsMerchantIdWebhooksWebhookIdResponse getMerchantsMerchantIdWebhooksWebhookId(org.openapis.openapi.models.operations.GetMerchantsMerchantIdWebhooksWebhookIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMerchantsMerchantIdWebhooksWebhookIdResponse getMerchantsMerchantIdWebhooksWebhookId(org.openapis.openapi.models.operations.GetMerchantsMerchantIdWebhooksWebhookIdRequest request, org.openapis.openapi.models.operations.GetMerchantsMerchantIdWebhooksWebhookIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMerchantsMerchantIdWebhooksWebhookIdPathParams.class, baseUrl, "/merchants/{merchantId}/webhooks/{webhookId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMerchantsMerchantIdWebhooksWebhookIdRequest.class, baseUrl, "/merchants/{merchantId}/webhooks/{webhookId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -197,21 +200,22 @@ public class WebhooksMerchantLevel {
      * To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014Webhooks read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchMerchantsMerchantIdWebhooksWebhookIdResponse patchMerchantsMerchantIdWebhooksWebhookId(org.openapis.openapi.models.operations.PatchMerchantsMerchantIdWebhooksWebhookIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchMerchantsMerchantIdWebhooksWebhookIdResponse patchMerchantsMerchantIdWebhooksWebhookId(org.openapis.openapi.models.operations.PatchMerchantsMerchantIdWebhooksWebhookIdRequest request, org.openapis.openapi.models.operations.PatchMerchantsMerchantIdWebhooksWebhookIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchMerchantsMerchantIdWebhooksWebhookIdPathParams.class, baseUrl, "/merchants/{merchantId}/webhooks/{webhookId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchMerchantsMerchantIdWebhooksWebhookIdRequest.class, baseUrl, "/merchants/{merchantId}/webhooks/{webhookId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateMerchantWebhookRequest", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -252,21 +256,22 @@ public class WebhooksMerchantLevel {
      * To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014Webhooks read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostMerchantsMerchantIdWebhooksResponse postMerchantsMerchantIdWebhooks(org.openapis.openapi.models.operations.PostMerchantsMerchantIdWebhooksRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostMerchantsMerchantIdWebhooksResponse postMerchantsMerchantIdWebhooks(org.openapis.openapi.models.operations.PostMerchantsMerchantIdWebhooksRequest request, org.openapis.openapi.models.operations.PostMerchantsMerchantIdWebhooksSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostMerchantsMerchantIdWebhooksPathParams.class, baseUrl, "/merchants/{merchantId}/webhooks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostMerchantsMerchantIdWebhooksRequest.class, baseUrl, "/merchants/{merchantId}/webhooks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createMerchantWebhookRequest", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -307,19 +312,20 @@ public class WebhooksMerchantLevel {
      * To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014Webhooks read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostMerchantsMerchantIdWebhooksWebhookIdGenerateHmacResponse postMerchantsMerchantIdWebhooksWebhookIdGenerateHmac(org.openapis.openapi.models.operations.PostMerchantsMerchantIdWebhooksWebhookIdGenerateHmacRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostMerchantsMerchantIdWebhooksWebhookIdGenerateHmacResponse postMerchantsMerchantIdWebhooksWebhookIdGenerateHmac(org.openapis.openapi.models.operations.PostMerchantsMerchantIdWebhooksWebhookIdGenerateHmacRequest request, org.openapis.openapi.models.operations.PostMerchantsMerchantIdWebhooksWebhookIdGenerateHmacSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostMerchantsMerchantIdWebhooksWebhookIdGenerateHmacPathParams.class, baseUrl, "/merchants/{merchantId}/webhooks/{webhookId}/generateHmac", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostMerchantsMerchantIdWebhooksWebhookIdGenerateHmacRequest.class, baseUrl, "/merchants/{merchantId}/webhooks/{webhookId}/generateHmac", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -364,21 +370,22 @@ public class WebhooksMerchantLevel {
      * To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014Webhooks read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostMerchantsMerchantIdWebhooksWebhookIdTestResponse postMerchantsMerchantIdWebhooksWebhookIdTest(org.openapis.openapi.models.operations.PostMerchantsMerchantIdWebhooksWebhookIdTestRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostMerchantsMerchantIdWebhooksWebhookIdTestResponse postMerchantsMerchantIdWebhooksWebhookIdTest(org.openapis.openapi.models.operations.PostMerchantsMerchantIdWebhooksWebhookIdTestRequest request, org.openapis.openapi.models.operations.PostMerchantsMerchantIdWebhooksWebhookIdTestSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostMerchantsMerchantIdWebhooksWebhookIdTestPathParams.class, baseUrl, "/merchants/{merchantId}/webhooks/{webhookId}/test", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostMerchantsMerchantIdWebhooksWebhookIdTestRequest.class, baseUrl, "/merchants/{merchantId}/webhooks/{webhookId}/test", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testWebhookRequest", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

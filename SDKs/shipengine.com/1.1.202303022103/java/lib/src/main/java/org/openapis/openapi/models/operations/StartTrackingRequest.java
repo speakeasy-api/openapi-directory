@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StartTrackingRequest {
+    /**
+     * Carrier code used to retrieve tracking information
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=carrier_code")
+    public String carrierCode;
+    public StartTrackingRequest withCarrierCode(String carrierCode) {
+        this.carrierCode = carrierCode;
+        return this;
+    }
     
-    public StartTrackingQueryParams queryParams;
-    public StartTrackingRequest withQueryParams(StartTrackingQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The tracking number associated with a shipment
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tracking_number")
+    public String trackingNumber;
+    public StartTrackingRequest withTrackingNumber(String trackingNumber) {
+        this.trackingNumber = trackingNumber;
         return this;
     }
     

@@ -7,27 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class QueryPredictionResultsFormRequest {
-    
-    public QueryPredictionResultsFormPathParams pathParams;
-    public QueryPredictionResultsFormRequest withPathParams(QueryPredictionResultsFormPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public QueryPredictionResultsFormHeaders headers;
-    public QueryPredictionResultsFormRequest withHeaders(QueryPredictionResultsFormHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * Parameters used to query the predictions. Limited to combining 2 tags
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.PredictionQueryTokenInput request;
-    public QueryPredictionResultsFormRequest withRequest(org.openapis.openapi.models.shared.PredictionQueryTokenInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PredictionQueryTokenInput predictionQueryTokenInput;
+    public QueryPredictionResultsFormRequest withPredictionQueryTokenInput(org.openapis.openapi.models.shared.PredictionQueryTokenInput predictionQueryTokenInput) {
+        this.predictionQueryTokenInput = predictionQueryTokenInput;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
+    public String trainingKey;
+    public QueryPredictionResultsFormRequest withTrainingKey(String trainingKey) {
+        this.trainingKey = trainingKey;
+        return this;
+    }
+    
+    /**
+     * The project id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public QueryPredictionResultsFormRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

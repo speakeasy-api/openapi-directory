@@ -4,20 +4,129 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeTypeRequest {
-    
-    public GETDescribeTypeQueryParams queryParams;
-    public GETDescribeTypeRequest withQueryParams(GETDescribeTypeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeTypeActionEnum action;
+    public GETDescribeTypeRequest withAction(GETDescribeTypeActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The Amazon Resource Name (ARN) of the extension.&lt;/p&gt; &lt;p&gt;Conditional: You must specify either &lt;code&gt;TypeName&lt;/code&gt; and &lt;code&gt;Type&lt;/code&gt;, or &lt;code&gt;Arn&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Arn")
+    public String arn;
+    public GETDescribeTypeRequest withArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
     
-    public GETDescribeTypeHeaders headers;
-    public GETDescribeTypeRequest withHeaders(GETDescribeTypeHeaders headers) {
-        this.headers = headers;
+    /**
+     * The version number of a public third-party extension.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PublicVersionNumber")
+    public String publicVersionNumber;
+    public GETDescribeTypeRequest withPublicVersionNumber(String publicVersionNumber) {
+        this.publicVersionNumber = publicVersionNumber;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The publisher ID of the extension publisher.&lt;/p&gt; &lt;p&gt;Extensions provided by Amazon Web Services are not assigned a publisher ID.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PublisherId")
+    public String publisherId;
+    public GETDescribeTypeRequest withPublisherId(String publisherId) {
+        this.publisherId = publisherId;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The kind of extension.&lt;/p&gt; &lt;p&gt;Conditional: You must specify either &lt;code&gt;TypeName&lt;/code&gt; and &lt;code&gt;Type&lt;/code&gt;, or &lt;code&gt;Arn&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Type")
+    public GETDescribeTypeTypeEnum type;
+    public GETDescribeTypeRequest withType(GETDescribeTypeTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The name of the extension.&lt;/p&gt; &lt;p&gt;Conditional: You must specify either &lt;code&gt;TypeName&lt;/code&gt; and &lt;code&gt;Type&lt;/code&gt;, or &lt;code&gt;Arn&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TypeName")
+    public String typeName;
+    public GETDescribeTypeRequest withTypeName(String typeName) {
+        this.typeName = typeName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeTypeVersionEnum version;
+    public GETDescribeTypeRequest withVersion(GETDescribeTypeVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The ID of a specific version of the extension. The version ID is the value at the end of the Amazon Resource Name (ARN) assigned to the extension version when it is registered.&lt;/p&gt; &lt;p&gt;If you specify a &lt;code&gt;VersionId&lt;/code&gt;, &lt;code&gt;DescribeType&lt;/code&gt; returns information about that specific extension version. Otherwise, it returns information about the default extension version.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VersionId")
+    public String versionId;
+    public GETDescribeTypeRequest withVersionId(String versionId) {
+        this.versionId = versionId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeTypeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeTypeRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeTypeRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeTypeRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeTypeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeTypeRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeTypeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

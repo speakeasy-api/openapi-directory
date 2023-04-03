@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrgRequest {
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrgRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
     
-    public ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrgPathParams pathParams;
-    public ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrgRequest withPathParams(ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the self-hosted runner.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=runner_id")
+    public Long runnerId;
+    public ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrgRequest withRunnerId(Long runnerId) {
+        this.runnerId = runnerId;
         return this;
     }
     

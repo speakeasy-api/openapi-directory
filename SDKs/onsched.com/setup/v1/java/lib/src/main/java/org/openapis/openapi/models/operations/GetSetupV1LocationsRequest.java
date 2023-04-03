@@ -4,13 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSetupV1LocationsRequest {
+    /**
+     * Filter locations on deleted status
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deleted")
+    public Boolean deleted;
+    public GetSetupV1LocationsRequest withDeleted(Boolean deleted) {
+        this.deleted = deleted;
+        return this;
+    }
     
-    public GetSetupV1LocationsQueryParams queryParams;
-    public GetSetupV1LocationsRequest withQueryParams(GetSetupV1LocationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * friendlyId of location
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=friendlyId")
+    public String friendlyId;
+    public GetSetupV1LocationsRequest withFriendlyId(String friendlyId) {
+        this.friendlyId = friendlyId;
+        return this;
+    }
+    
+    /**
+     * Page limit default 20, max 100
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetSetupV1LocationsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Location name(full or partial) to filter on
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public GetSetupV1LocationsRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Starting row of page, default 0
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public GetSetupV1LocationsRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Find locations that offer this service
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceId")
+    public String serviceId;
+    public GetSetupV1LocationsRequest withServiceId(String serviceId) {
+        this.serviceId = serviceId;
         return this;
     }
     

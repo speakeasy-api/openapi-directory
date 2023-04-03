@@ -47,7 +47,7 @@ public class BackgroundRemoval {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostRemovebgFormResponse postRemovebgForm(org.openapis.openapi.models.operations.PostRemovebgFormRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostRemovebgFormResponse postRemovebgForm(org.openapis.openapi.models.shared.RemoveBgJson request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/removebg");
         
@@ -114,7 +114,7 @@ public class BackgroundRemoval {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostRemovebgJsonResponse postRemovebgJson(org.openapis.openapi.models.operations.PostRemovebgJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostRemovebgJsonResponse postRemovebgJson(org.openapis.openapi.models.shared.RemoveBgJson request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/removebg");
         
@@ -181,7 +181,7 @@ public class BackgroundRemoval {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostRemovebgMultipartResponse postRemovebgMultipart(org.openapis.openapi.models.operations.PostRemovebgMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostRemovebgMultipartResponse postRemovebgMultipart(org.openapis.openapi.models.shared.RemoveBgMultipart request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/removebg");
         

@@ -4,27 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchdocumentsRequest {
-    
-    public SearchdocumentsPathParams pathParams;
-    public SearchdocumentsRequest withPathParams(SearchdocumentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public SearchdocumentsRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public SearchdocumentsQueryParams queryParams;
-    public SearchdocumentsRequest withQueryParams(SearchdocumentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public SearchdocumentsRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
+    /**
+     * Range of documents to show
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=REST-Range")
+    public String restRange;
+    public SearchdocumentsRequest withRESTRange(String restRange) {
+        this.restRange = restRange;
+        return this;
+    }
     
-    public SearchdocumentsHeaders headers;
-    public SearchdocumentsRequest withHeaders(SearchdocumentsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Fields that will be returned by document
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_fields")
+    public String fields;
+    public SearchdocumentsRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * String to search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_keyword")
+    public String keyword;
+    public SearchdocumentsRequest withKeyword(String keyword) {
+        this.keyword = keyword;
+        return this;
+    }
+    
+    /**
+     * Enter with the name of the schema to filter documents by compatibility of the schema.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_schema")
+    public String schema;
+    public SearchdocumentsRequest withSchema(String schema) {
+        this.schema = schema;
+        return this;
+    }
+    
+    /**
+     * Use ASC value to sort ascending or DESC value to sort descending. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_sort")
+    public String sort;
+    public SearchdocumentsRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Specification of filters. As seen below
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_where")
+    public String where;
+    public SearchdocumentsRequest withWhere(String where) {
+        this.where = where;
+        return this;
+    }
+    
+    /**
+     * Identifies the kind of data
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=acronym")
+    public String acronym;
+    public SearchdocumentsRequest withAcronym(String acronym) {
+        this.acronym = acronym;
         return this;
     }
     

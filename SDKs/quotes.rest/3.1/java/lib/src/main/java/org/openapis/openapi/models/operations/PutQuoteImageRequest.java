@@ -4,20 +4,126 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutQuoteImageRequest {
-    
-    public PutQuoteImageQueryParams queryParams;
-    public PutQuoteImageRequest withQueryParams(PutQuoteImageQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Background Color(if background image id is not supplied)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bg_color")
+    public String bgColor;
+    public PutQuoteImageRequest withBgColor(String bgColor) {
+        this.bgColor = bgColor;
         return this;
     }
     
+    /**
+     * Background Image id ( Will override bgcolor if supplied)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bgimage_id")
+    public String bgimageId;
+    public PutQuoteImageRequest withBgimageId(String bgimageId) {
+        this.bgimageId = bgimageId;
+        return this;
+    }
     
-    public PutQuoteImageSecurity security;
-    public PutQuoteImageRequest withSecurity(PutQuoteImageSecurity security) {
-        this.security = security;
+    /**
+     * Disable They Said So branding (Only available in certain subscription levels. Ignored in other levels)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=branding")
+    public Boolean branding;
+    public PutQuoteImageRequest withBranding(Boolean branding) {
+        this.branding = branding;
+        return this;
+    }
+    
+    /**
+     * Font id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=font_id")
+    public String fontId;
+    public PutQuoteImageRequest withFontId(String fontId) {
+        this.fontId = fontId;
+        return this;
+    }
+    
+    /**
+     * Horizontal text Alignment Value
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=halign")
+    public String halign;
+    public PutQuoteImageRequest withHalign(String halign) {
+        this.halign = halign;
+        return this;
+    }
+    
+    /**
+     * Image Height(By default this takes the height of the background image)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=height")
+    public Long height;
+    public PutQuoteImageRequest withHeight(Long height) {
+        this.height = height;
+        return this;
+    }
+    
+    /**
+     * Should include a transparent layer between the text and the background image? This helps when the background image is bright and obscures the text.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_transparent_layer")
+    public Boolean includeTransparentLayer;
+    public PutQuoteImageRequest withIncludeTransparentLayer(Boolean includeTransparentLayer) {
+        this.includeTransparentLayer = includeTransparentLayer;
+        return this;
+    }
+    
+    /**
+     * Quote id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quote_id")
+    public String quoteId;
+    public PutQuoteImageRequest withQuoteId(String quoteId) {
+        this.quoteId = quoteId;
+        return this;
+    }
+    
+    /**
+     * Text Color
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text_color")
+    public String textColor;
+    public PutQuoteImageRequest withTextColor(String textColor) {
+        this.textColor = textColor;
+        return this;
+    }
+    
+    /**
+     * Text/font size
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text_size")
+    public String textSize;
+    public PutQuoteImageRequest withTextSize(String textSize) {
+        this.textSize = textSize;
+        return this;
+    }
+    
+    /**
+     * Vertical text Alignment Value
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=valign")
+    public String valign;
+    public PutQuoteImageRequest withValign(String valign) {
+        this.valign = valign;
+        return this;
+    }
+    
+    /**
+     * Image Width(By default this takes the width of the background image)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=width")
+    public Long width;
+    public PutQuoteImageRequest withWidth(Long width) {
+        this.width = width;
         return this;
     }
     

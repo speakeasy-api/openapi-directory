@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostLikesPlaylistsPlaylistIdSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeAuthHeader authHeader;
-    public PostLikesPlaylistsPlaylistIdSecurity withAuthHeader(org.openapis.openapi.models.shared.SchemeAuthHeader authHeader) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Authorization")
+    public String authHeader;
+    public PostLikesPlaylistsPlaylistIdSecurity withAuthHeader(String authHeader) {
         this.authHeader = authHeader;
         return this;
     }

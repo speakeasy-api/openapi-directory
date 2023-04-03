@@ -4,20 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRepositoriesWorkspaceRepoSlugIssuesImportRequest {
-    
-    public PostRepositoriesWorkspaceRepoSlugIssuesImportPathParams pathParams;
-    public PostRepositoriesWorkspaceRepoSlugIssuesImportRequest withPathParams(PostRepositoriesWorkspaceRepoSlugIssuesImportPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public PostRepositoriesWorkspaceRepoSlugIssuesImportRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
         return this;
     }
     
-    
-    public PostRepositoriesWorkspaceRepoSlugIssuesImportSecurity security;
-    public PostRepositoriesWorkspaceRepoSlugIssuesImportRequest withSecurity(PostRepositoriesWorkspaceRepoSlugIssuesImportSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public PostRepositoriesWorkspaceRepoSlugIssuesImportRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EurekaInfoRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nonce")
+    public Integer nonce;
+    public EurekaInfoRequest withNonce(Integer nonce) {
+        this.nonce = nonce;
+        return this;
+    }
     
-    public EurekaInfoQueryParams queryParams;
-    public EurekaInfoRequest withQueryParams(EurekaInfoQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=options")
+    public String options;
+    public EurekaInfoRequest withOptions(String options) {
+        this.options = options;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=params")
+    public String params;
+    public EurekaInfoRequest withParams(String params) {
+        this.params = params;
         return this;
     }
     

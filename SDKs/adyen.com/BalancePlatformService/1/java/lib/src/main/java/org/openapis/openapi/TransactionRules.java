@@ -34,19 +34,20 @@ public class TransactionRules {
      * Delete a transaction rule
      * Deletes a transaction rule.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteTransactionRulesTransactionRuleIdResponse deleteTransactionRulesTransactionRuleId(org.openapis.openapi.models.operations.DeleteTransactionRulesTransactionRuleIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteTransactionRulesTransactionRuleIdResponse deleteTransactionRulesTransactionRuleId(org.openapis.openapi.models.operations.DeleteTransactionRulesTransactionRuleIdRequest request, org.openapis.openapi.models.operations.DeleteTransactionRulesTransactionRuleIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteTransactionRulesTransactionRuleIdPathParams.class, baseUrl, "/transactionRules/{transactionRuleId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteTransactionRulesTransactionRuleIdRequest.class, baseUrl, "/transactionRules/{transactionRuleId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,19 +83,20 @@ public class TransactionRules {
      * Get a transaction rule
      * Returns the details of a transaction rule.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTransactionRulesTransactionRuleIdResponse getTransactionRulesTransactionRuleId(org.openapis.openapi.models.operations.GetTransactionRulesTransactionRuleIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTransactionRulesTransactionRuleIdResponse getTransactionRulesTransactionRuleId(org.openapis.openapi.models.operations.GetTransactionRulesTransactionRuleIdRequest request, org.openapis.openapi.models.operations.GetTransactionRulesTransactionRuleIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTransactionRulesTransactionRuleIdPathParams.class, baseUrl, "/transactionRules/{transactionRuleId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTransactionRulesTransactionRuleIdRequest.class, baseUrl, "/transactionRules/{transactionRuleId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -134,21 +136,22 @@ public class TransactionRules {
      * 
      * * When updating any other parameter, you need to send all existing resource parameters. If you omit a parameter in the request, that parameter is removed from the resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchTransactionRulesTransactionRuleIdResponse patchTransactionRulesTransactionRuleId(org.openapis.openapi.models.operations.PatchTransactionRulesTransactionRuleIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchTransactionRulesTransactionRuleIdResponse patchTransactionRulesTransactionRuleId(org.openapis.openapi.models.operations.PatchTransactionRulesTransactionRuleIdRequest request, org.openapis.openapi.models.operations.PatchTransactionRulesTransactionRuleIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchTransactionRulesTransactionRuleIdPathParams.class, baseUrl, "/transactionRules/{transactionRuleId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchTransactionRulesTransactionRuleIdRequest.class, baseUrl, "/transactionRules/{transactionRuleId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "transactionRuleInfo", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -184,10 +187,11 @@ public class TransactionRules {
      * Create a transaction rule
      * Creates a [transaction rule](https://docs.adyen.com/issuing/transaction-rules). When your user makes a transaction with their Adyen-issued card, the transaction is allowed or declined based on the conditions and outcome defined in the transaction rule. You can apply the transaction rule to several cards, such as all the cards in your platform, or to a specific card. For use cases, see [examples](https://docs.adyen.com/issuing/transaction-rules/examples).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostTransactionRulesResponse postTransactionRules(org.openapis.openapi.models.operations.PostTransactionRulesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostTransactionRulesResponse postTransactionRules(org.openapis.openapi.models.shared.TransactionRuleInfo request, org.openapis.openapi.models.operations.PostTransactionRulesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transactionRules");
         
@@ -198,7 +202,7 @@ public class TransactionRules {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

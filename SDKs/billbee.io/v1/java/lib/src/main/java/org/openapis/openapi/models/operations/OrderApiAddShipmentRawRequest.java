@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiAddShipmentRawRequest {
-    
-    public OrderApiAddShipmentRawPathParams pathParams;
-    public OrderApiAddShipmentRawRequest withPathParams(OrderApiAddShipmentRawPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The shipment data to create the shipment
      */
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public OrderApiAddShipmentRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public OrderApiAddShipmentRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The internal billbee id of the order
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public OrderApiAddShipmentRawRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

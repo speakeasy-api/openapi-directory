@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisableChannelCatalogProductRequest {
+    /**
+     * The channel catalog identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelCatalogId")
+    public String channelCatalogId;
+    public DisableChannelCatalogProductRequest withChannelCatalogId(String channelCatalogId) {
+        this.channelCatalogId = channelCatalogId;
+        return this;
+    }
     
-    public DisableChannelCatalogProductPathParams pathParams;
-    public DisableChannelCatalogProductRequest withPathParams(DisableChannelCatalogProductPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The product identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
+    public String productId;
+    public DisableChannelCatalogProductRequest withProductId(String productId) {
+        this.productId = productId;
         return this;
     }
     

@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSimCompareRequest {
+    /**
+     * set to true if *all* input ids are phenotypic features, else set to false
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_feature_set")
+    public Boolean isFeatureSet;
+    public GetSimCompareRequest withIsFeatureSet(Boolean isFeatureSet) {
+        this.isFeatureSet = isFeatureSet;
+        return this;
+    }
     
-    public GetSimCompareQueryParams queryParams;
-    public GetSimCompareRequest withQueryParams(GetSimCompareQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Metric for computing similarity
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=metric")
+    public GetSimCompareMetricEnum metric;
+    public GetSimCompareRequest withMetric(GetSimCompareMetricEnum metric) {
+        this.metric = metric;
+        return this;
+    }
+    
+    /**
+     * A phenotype or identifier that is composed of phenotypes (eg disease, gene)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query_id")
+    public String[] queryId;
+    public GetSimCompareRequest withQueryId(String[] queryId) {
+        this.queryId = queryId;
+        return this;
+    }
+    
+    /**
+     * A phenotype or identifier that is composed of phenotypes (eg disease, gene)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ref_id")
+    public String[] refId;
+    public GetSimCompareRequest withRefId(String[] refId) {
+        this.refId = refId;
         return this;
     }
     

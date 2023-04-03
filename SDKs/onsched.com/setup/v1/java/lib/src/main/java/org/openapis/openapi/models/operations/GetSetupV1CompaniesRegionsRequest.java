@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSetupV1CompaniesRegionsRequest {
+    /**
+     * Page limit default 20, max 100
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetSetupV1CompaniesRegionsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetSetupV1CompaniesRegionsQueryParams queryParams;
-    public GetSetupV1CompaniesRegionsRequest withQueryParams(GetSetupV1CompaniesRegionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Starting row of page, default 0
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public GetSetupV1CompaniesRegionsRequest withOffset(Integer offset) {
+        this.offset = offset;
         return this;
     }
     

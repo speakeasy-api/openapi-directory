@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV1PurchasesIdRequest {
-    
-    public GetV1PurchasesIdPathParams pathParams;
-    public GetV1PurchasesIdRequest withPathParams(GetV1PurchasesIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of Purchase to return.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetV1PurchasesIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateVolume1Request {
-    
-    public UpdateVolume1PathParams pathParams;
-    public UpdateVolume1Request withPathParams(UpdateVolume1PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated volume for a quote.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.BigDecimalDTO request;
-    public UpdateVolume1Request withRequest(org.openapis.openapi.models.shared.BigDecimalDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.BigDecimalDTO bigDecimalDTO;
+    public UpdateVolume1Request withBigDecimalDTO(org.openapis.openapi.models.shared.BigDecimalDTO bigDecimalDTO) {
+        this.bigDecimalDTO = bigDecimalDTO;
+        return this;
+    }
+    
+    /**
+     * quote's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=quoteId")
+    public String quoteId;
+    public UpdateVolume1Request withQuoteId(String quoteId) {
+        this.quoteId = quoteId;
         return this;
     }
     

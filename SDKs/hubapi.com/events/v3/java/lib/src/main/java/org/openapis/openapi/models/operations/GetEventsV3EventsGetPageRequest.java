@@ -4,20 +4,94 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEventsV3EventsGetPageRequest {
-    
-    public GetEventsV3EventsGetPageQueryParams queryParams;
-    public GetEventsV3EventsGetPageRequest withQueryParams(GetEventsV3EventsGetPageQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * An additional parameter that may be used to get the next `limit` set of results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=after")
+    public String after;
+    public GetEventsV3EventsGetPageRequest withAfter(String after) {
+        this.after = after;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=before")
+    public String before;
+    public GetEventsV3EventsGetPageRequest withBefore(String before) {
+        this.before = before;
+        return this;
+    }
     
-    public GetEventsV3EventsGetPageSecurity security;
-    public GetEventsV3EventsGetPageRequest withSecurity(GetEventsV3EventsGetPageSecurity security) {
-        this.security = security;
+    /**
+     * Limits the response to the specified event type.  For example `&amp;eventType=e_visited_page` returns only `e_visited_page` events.  If not present all event types are returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=eventType")
+    public String eventType;
+    public GetEventsV3EventsGetPageRequest withEventType(String eventType) {
+        this.eventType = eventType;
+        return this;
+    }
+    
+    /**
+     * The maximum number of events to return, defaults to 20.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetEventsV3EventsGetPageRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * The id of the selected object. If not present, then the `objectProperty` parameter is required.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=objectId")
+    public Long objectId;
+    public GetEventsV3EventsGetPageRequest withObjectId(Long objectId) {
+        this.objectId = objectId;
+        return this;
+    }
+    
+    /**
+     * The type of object being selected. Valid values are hubspot named object types (e.g. `contact`).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=objectType")
+    public String objectType;
+    public GetEventsV3EventsGetPageRequest withObjectType(String objectType) {
+        this.objectType = objectType;
+        return this;
+    }
+    
+    /**
+     * The starting time as an ISO 8601 timestamp.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=occurredAfter")
+    public OffsetDateTime occurredAfter;
+    public GetEventsV3EventsGetPageRequest withOccurredAfter(OffsetDateTime occurredAfter) {
+        this.occurredAfter = occurredAfter;
+        return this;
+    }
+    
+    /**
+     * The ending time as an ISO 8601 timestamp.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=occurredBefore")
+    public OffsetDateTime occurredBefore;
+    public GetEventsV3EventsGetPageRequest withOccurredBefore(OffsetDateTime occurredBefore) {
+        this.occurredBefore = occurredBefore;
+        return this;
+    }
+    
+    /**
+     * Selects the sort field and order. Defaults to ascending, prefix with `-` for descending order. `occurredAt` is the only field supported for sorting.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String[] sort;
+    public GetEventsV3EventsGetPageRequest withSort(String[] sort) {
+        this.sort = sort;
         return this;
     }
     

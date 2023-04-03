@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateTagRawRequest {
-    
-    public UpdateTagRawPathParams pathParams;
-    public UpdateTagRawRequest withPathParams(UpdateTagRawPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The updated tag model.
      */
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public UpdateTagRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public UpdateTagRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public UpdateTagRawRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    /**
+     * The id of the target tag.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tagId")
+    public String tagId;
+    public UpdateTagRawRequest withTagId(String tagId) {
+        this.tagId = tagId;
         return this;
     }
     

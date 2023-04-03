@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimConsolePortsUpdateRequest {
-    
-    public DcimConsolePortsUpdatePathParams pathParams;
-    public DcimConsolePortsUpdateRequest withPathParams(DcimConsolePortsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.WritableConsolePortInput writableConsolePortInput;
+    public DcimConsolePortsUpdateRequest withWritableConsolePortInput(org.openapis.openapi.models.shared.WritableConsolePortInput writableConsolePortInput) {
+        this.writableConsolePortInput = writableConsolePortInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WritableConsolePortInput request;
-    public DcimConsolePortsUpdateRequest withRequest(org.openapis.openapi.models.shared.WritableConsolePortInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this console port.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimConsolePortsUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

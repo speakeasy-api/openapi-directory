@@ -4,20 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EobsCreateRequest {
-    
-    public EobsCreateQueryParams queryParams;
-    public EobsCreateRequest withQueryParams(EobsCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public EobsCreateSecurity security;
-    public EobsCreateRequest withSecurity(EobsCreateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public EobsCreateRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     

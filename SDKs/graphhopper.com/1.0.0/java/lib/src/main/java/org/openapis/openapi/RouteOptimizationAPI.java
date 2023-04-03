@@ -101,7 +101,7 @@ public class RouteOptimizationAPI {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AsyncVRPResponse asyncVRP(org.openapis.openapi.models.operations.AsyncVRPRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AsyncVRPResponse asyncVRP(org.openapis.openapi.models.shared.Request request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/vrp/optimize");
         
@@ -174,7 +174,7 @@ public class RouteOptimizationAPI {
      */
     public org.openapis.openapi.models.operations.GetSolutionResponse getSolution(org.openapis.openapi.models.operations.GetSolutionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSolutionPathParams.class, baseUrl, "/vrp/solution/{jobId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSolutionRequest.class, baseUrl, "/vrp/solution/{jobId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -246,7 +246,7 @@ public class RouteOptimizationAPI {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SolveVRPResponse solveVRP(org.openapis.openapi.models.operations.SolveVRPRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SolveVRPResponse solveVRP(org.openapis.openapi.models.shared.Request request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/vrp");
         

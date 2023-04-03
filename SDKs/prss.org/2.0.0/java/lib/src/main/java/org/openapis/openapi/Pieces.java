@@ -38,19 +38,20 @@ public class Pieces {
     /**
      * Deletes the piece with the given ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteApiV2PiecesIdResponse deleteApiV2PiecesId(org.openapis.openapi.models.operations.DeleteApiV2PiecesIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteApiV2PiecesIdResponse deleteApiV2PiecesId(org.openapis.openapi.models.operations.DeleteApiV2PiecesIdRequest request, org.openapis.openapi.models.operations.DeleteApiV2PiecesIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteApiV2PiecesIdPathParams.class, baseUrl, "/api/v2/pieces/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteApiV2PiecesIdRequest.class, baseUrl, "/api/v2/pieces/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -71,10 +72,11 @@ public class Pieces {
     /**
      * Returns the pieces matching the query parameters.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV2PiecesResponse getApiV2Pieces(org.openapis.openapi.models.operations.GetApiV2PiecesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApiV2PiecesResponse getApiV2Pieces(org.openapis.openapi.models.operations.GetApiV2PiecesRequest request, org.openapis.openapi.models.operations.GetApiV2PiecesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v2/pieces");
         
@@ -82,14 +84,14 @@ public class Pieces {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApiV2PiecesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApiV2PiecesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -118,19 +120,20 @@ public class Pieces {
     /**
      * Returns the piece matching the given ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV2PiecesIdResponse getApiV2PiecesId(org.openapis.openapi.models.operations.GetApiV2PiecesIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApiV2PiecesIdResponse getApiV2PiecesId(org.openapis.openapi.models.operations.GetApiV2PiecesIdRequest request, org.openapis.openapi.models.operations.GetApiV2PiecesIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV2PiecesIdPathParams.class, baseUrl, "/api/v2/pieces/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV2PiecesIdRequest.class, baseUrl, "/api/v2/pieces/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -167,10 +170,11 @@ public class Pieces {
     /**
      * Create a new piece.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostApiV2PiecesResponse postApiV2Pieces(org.openapis.openapi.models.operations.PostApiV2PiecesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostApiV2PiecesResponse postApiV2Pieces(org.openapis.openapi.models.shared.PieceInput request, org.openapis.openapi.models.operations.PostApiV2PiecesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v2/pieces");
         
@@ -181,7 +185,7 @@ public class Pieces {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

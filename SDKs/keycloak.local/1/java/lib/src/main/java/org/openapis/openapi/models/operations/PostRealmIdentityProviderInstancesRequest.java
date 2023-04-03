@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRealmIdentityProviderInstancesRequest {
-    
-    public PostRealmIdentityProviderInstancesPathParams pathParams;
-    public PostRealmIdentityProviderInstancesRequest withPathParams(PostRealmIdentityProviderInstancesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * JSON body
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.IdentityProviderRepresentation request;
-    public PostRealmIdentityProviderInstancesRequest withRequest(org.openapis.openapi.models.shared.IdentityProviderRepresentation request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.IdentityProviderRepresentation identityProviderRepresentation;
+    public PostRealmIdentityProviderInstancesRequest withIdentityProviderRepresentation(org.openapis.openapi.models.shared.IdentityProviderRepresentation identityProviderRepresentation) {
+        this.identityProviderRepresentation = identityProviderRepresentation;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PostRealmIdentityProviderInstancesRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

@@ -38,21 +38,22 @@ public class Items {
     /**
      * Create a new Item
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateVaultItemResponse createVaultItem(org.openapis.openapi.models.operations.CreateVaultItemRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateVaultItemResponse createVaultItem(org.openapis.openapi.models.operations.CreateVaultItemRequest request, org.openapis.openapi.models.operations.CreateVaultItemSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateVaultItemPathParams.class, baseUrl, "/vaults/{vaultUuid}/items", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateVaultItemRequest.class, baseUrl, "/vaults/{vaultUuid}/items", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "fullItemInput", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -87,19 +88,20 @@ public class Items {
     /**
      * Delete an Item
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteVaultItemResponse deleteVaultItem(org.openapis.openapi.models.operations.DeleteVaultItemRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteVaultItemResponse deleteVaultItem(org.openapis.openapi.models.operations.DeleteVaultItemRequest request, org.openapis.openapi.models.operations.DeleteVaultItemSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVaultItemPathParams.class, baseUrl, "/vaults/{vaultUuid}/items/{itemUuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVaultItemRequest.class, baseUrl, "/vaults/{vaultUuid}/items/{itemUuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -128,19 +130,20 @@ public class Items {
     /**
      * Get the details of an Item
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetVaultItemByIdResponse getVaultItemById(org.openapis.openapi.models.operations.GetVaultItemByIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetVaultItemByIdResponse getVaultItemById(org.openapis.openapi.models.operations.GetVaultItemByIdRequest request, org.openapis.openapi.models.operations.GetVaultItemByIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVaultItemByIdPathParams.class, baseUrl, "/vaults/{vaultUuid}/items/{itemUuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVaultItemByIdRequest.class, baseUrl, "/vaults/{vaultUuid}/items/{itemUuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -175,25 +178,26 @@ public class Items {
     /**
      * Get all items for inside a Vault
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetVaultItemsResponse getVaultItems(org.openapis.openapi.models.operations.GetVaultItemsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetVaultItemsResponse getVaultItems(org.openapis.openapi.models.operations.GetVaultItemsRequest request, org.openapis.openapi.models.operations.GetVaultItemsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVaultItemsPathParams.class, baseUrl, "/vaults/{vaultUuid}/items", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVaultItemsRequest.class, baseUrl, "/vaults/{vaultUuid}/items", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVaultItemsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVaultItemsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -232,21 +236,22 @@ public class Items {
      * When modifying a specific ItemField, the ItemField's ID in the `path` attribute of the operation object: `/fields/{fieldId}`
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchVaultItemResponse patchVaultItem(org.openapis.openapi.models.operations.PatchVaultItemRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchVaultItemResponse patchVaultItem(org.openapis.openapi.models.operations.PatchVaultItemRequest request, org.openapis.openapi.models.operations.PatchVaultItemSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchVaultItemPathParams.class, baseUrl, "/vaults/{vaultUuid}/items/{itemUuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchVaultItemRequest.class, baseUrl, "/vaults/{vaultUuid}/items/{itemUuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -281,21 +286,22 @@ public class Items {
     /**
      * Update an Item
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateVaultItemResponse updateVaultItem(org.openapis.openapi.models.operations.UpdateVaultItemRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateVaultItemResponse updateVaultItem(org.openapis.openapi.models.operations.UpdateVaultItemRequest request, org.openapis.openapi.models.operations.UpdateVaultItemSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateVaultItemPathParams.class, baseUrl, "/vaults/{vaultUuid}/items/{itemUuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateVaultItemRequest.class, baseUrl, "/vaults/{vaultUuid}/items/{itemUuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "fullItemInput", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

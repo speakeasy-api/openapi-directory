@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveGroupMembersRequest {
-    
-    public RemoveGroupMembersPathParams pathParams;
-    public RemoveGroupMembersRequest withPathParams(RemoveGroupMembersPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public RemoveGroupMembersRequestBody requestBody;
+    public RemoveGroupMembersRequest withRequestBody(RemoveGroupMembersRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public RemoveGroupMembersRequestBody request;
-    public RemoveGroupMembersRequest withRequest(RemoveGroupMembersRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public RemoveGroupMembersRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

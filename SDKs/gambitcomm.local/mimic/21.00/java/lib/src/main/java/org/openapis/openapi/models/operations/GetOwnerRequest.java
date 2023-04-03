@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOwnerRequest {
-    
-    public GetOwnerPathParams pathParams;
-    public GetOwnerRequest withPathParams(GetOwnerPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to return the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public GetOwnerRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

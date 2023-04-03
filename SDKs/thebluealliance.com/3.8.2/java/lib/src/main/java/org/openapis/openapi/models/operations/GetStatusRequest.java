@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStatusRequest {
-    
-    public GetStatusHeaders headers;
-    public GetStatusRequest withHeaders(GetStatusHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetStatusSecurity security;
-    public GetStatusRequest withSecurity(GetStatusSecurity security) {
-        this.security = security;
+    /**
+     * Value of the `ETag` header in the most recently cached response by the client.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
+    public String ifNoneMatch;
+    public GetStatusRequest withIfNoneMatch(String ifNoneMatch) {
+        this.ifNoneMatch = ifNoneMatch;
         return this;
     }
     

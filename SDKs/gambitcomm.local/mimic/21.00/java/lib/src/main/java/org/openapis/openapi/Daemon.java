@@ -40,7 +40,7 @@ public class Daemon {
      */
     public org.openapis.openapi.models.operations.AddDaemonTimerScriptResponse addDaemonTimerScript(org.openapis.openapi.models.operations.AddDaemonTimerScriptRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddDaemonTimerScriptPathParams.class, baseUrl, "/mimic/timer/script/add/{script}/{interval}/{arg}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddDaemonTimerScriptRequest.class, baseUrl, "/mimic/timer/script/add/{script}/{interval}/{arg}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -81,7 +81,7 @@ public class Daemon {
      */
     public org.openapis.openapi.models.operations.CfgLoadResponse cfgLoad(org.openapis.openapi.models.operations.CfgLoadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CfgLoadPathParams.class, baseUrl, "/mimic/load/{cfgFile}/{firstAgentNum}/{lastAgentNum}/{startAgentNum}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CfgLoadRequest.class, baseUrl, "/mimic/load/{cfgFile}/{firstAgentNum}/{lastAgentNum}/{startAgentNum}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -121,7 +121,7 @@ public class Daemon {
      */
     public org.openapis.openapi.models.operations.CfgNewResponse cfgNew(org.openapis.openapi.models.operations.CfgNewRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CfgNewPathParams.class, baseUrl, "/mimic/clear/{firstAgentNum}/{lastAgentNum}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CfgNewRequest.class, baseUrl, "/mimic/clear/{firstAgentNum}/{lastAgentNum}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -200,7 +200,7 @@ public class Daemon {
      */
     public org.openapis.openapi.models.operations.CfgSaveasResponse cfgSaveas(org.openapis.openapi.models.operations.CfgSaveasRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CfgSaveasPathParams.class, baseUrl, "/mimic/saveas/{cfgFile}/{firstAgentNum}/{lastAgentNum}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CfgSaveasRequest.class, baseUrl, "/mimic/saveas/{cfgFile}/{firstAgentNum}/{lastAgentNum}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -240,7 +240,7 @@ public class Daemon {
      */
     public org.openapis.openapi.models.operations.DelDaemonTimerScriptResponse delDaemonTimerScript(org.openapis.openapi.models.operations.DelDaemonTimerScriptRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DelDaemonTimerScriptPathParams.class, baseUrl, "/mimic/timer/script/delete/{script}/{interval}/{arg}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DelDaemonTimerScriptRequest.class, baseUrl, "/mimic/timer/script/delete/{script}/{interval}/{arg}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1023,7 +1023,7 @@ public class Daemon {
      */
     public org.openapis.openapi.models.operations.MgetInfoResponse mgetInfo(org.openapis.openapi.models.operations.MgetInfoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MgetInfoPathParams.class, baseUrl, "/mimic/mget/{infoArray}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MgetInfoRequest.class, baseUrl, "/mimic/mget/{infoArray}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1063,7 +1063,7 @@ public class Daemon {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SetLogResponse setLog(org.openapis.openapi.models.operations.SetLogRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SetLogResponse setLog(String request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/mimic/set/log");
         
@@ -1226,7 +1226,7 @@ public class Daemon {
      */
     public org.openapis.openapi.models.operations.StoreExistsResponse storeExists(org.openapis.openapi.models.operations.StoreExistsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoreExistsPathParams.class, baseUrl, "/mimic/store/exists/{var}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoreExistsRequest.class, baseUrl, "/mimic/store/exists/{var}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1267,7 +1267,7 @@ public class Daemon {
      */
     public org.openapis.openapi.models.operations.StoreGetResponse storeGet(org.openapis.openapi.models.operations.StoreGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoreGetPathParams.class, baseUrl, "/mimic/store/get/{var}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoreGetRequest.class, baseUrl, "/mimic/store/get/{var}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1349,12 +1349,12 @@ public class Daemon {
      */
     public org.openapis.openapi.models.operations.StoreLreplaceResponse storeLreplace(org.openapis.openapi.models.operations.StoreLreplaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoreLreplacePathParams.class, baseUrl, "/mimic/store/lreplace/{var}/{index}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoreLreplaceRequest.class, baseUrl, "/mimic/store/lreplace/{var}/{index}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "string");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "string");
         req.setBody(serializedRequestBody);
         
         
@@ -1392,7 +1392,7 @@ public class Daemon {
      */
     public org.openapis.openapi.models.operations.StorePersistsResponse storePersists(org.openapis.openapi.models.operations.StorePersistsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StorePersistsPathParams.class, baseUrl, "/mimic/store/persists/{var}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StorePersistsRequest.class, baseUrl, "/mimic/store/persists/{var}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1472,12 +1472,12 @@ public class Daemon {
      */
     public org.openapis.openapi.models.operations.StoreSetResponse storeSet(org.openapis.openapi.models.operations.StoreSetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoreSetPathParams.class, baseUrl, "/mimic/store/set/{var}/{persist}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoreSetRequest.class, baseUrl, "/mimic/store/set/{var}/{persist}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "string");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "string");
         req.setBody(serializedRequestBody);
         
         
@@ -1515,7 +1515,7 @@ public class Daemon {
      */
     public org.openapis.openapi.models.operations.StoreUnsetResponse storeUnset(org.openapis.openapi.models.operations.StoreUnsetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoreUnsetPathParams.class, baseUrl, "/mimic/store/unset/{var}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoreUnsetRequest.class, baseUrl, "/mimic/store/unset/{var}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

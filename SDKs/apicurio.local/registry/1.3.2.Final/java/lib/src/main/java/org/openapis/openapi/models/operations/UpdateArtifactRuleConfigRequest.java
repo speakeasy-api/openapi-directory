@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateArtifactRuleConfigRequest {
-    
-    public UpdateArtifactRuleConfigPathParams pathParams;
-    public UpdateArtifactRuleConfigRequest withPathParams(UpdateArtifactRuleConfigPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.Rule rule1;
+    public UpdateArtifactRuleConfigRequest withRule1(org.openapis.openapi.models.shared.Rule rule1) {
+        this.rule1 = rule1;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Rule request;
-    public UpdateArtifactRuleConfigRequest withRequest(org.openapis.openapi.models.shared.Rule request) {
-        this.request = request;
+    /**
+     * The artifact ID.  Can be a string (client-provided) or integer (server-generated) representing the unique artifact identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifactId")
+    public String artifactId;
+    public UpdateArtifactRuleConfigRequest withArtifactId(String artifactId) {
+        this.artifactId = artifactId;
+        return this;
+    }
+    
+    /**
+     * The unique name/type of a rule.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rule")
+    public UpdateArtifactRuleConfigRuleEnum rulePathParameter;
+    public UpdateArtifactRuleConfigRequest withRulePathParameter(UpdateArtifactRuleConfigRuleEnum rulePathParameter) {
+        this.rulePathParameter = rulePathParameter;
         return this;
     }
     

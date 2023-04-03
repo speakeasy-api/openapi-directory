@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsListDevicePropertyValuesRequest {
-    
-    public AnalyticsListDevicePropertyValuesPathParams pathParams;
-    public AnalyticsListDevicePropertyValuesRequest withPathParams(AnalyticsListDevicePropertyValuesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public AnalyticsListDevicePropertyValuesRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public AnalyticsListDevicePropertyValuesQueryParams queryParams;
-    public AnalyticsListDevicePropertyValuesRequest withQueryParams(AnalyticsListDevicePropertyValuesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Contains string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contains")
+    public String contains;
+    public AnalyticsListDevicePropertyValuesRequest withContains(String contains) {
+        this.contains = contains;
         return this;
     }
     
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public AnalyticsListDevicePropertyValuesRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
     
-    public AnalyticsListDevicePropertyValuesSecurity security;
-    public AnalyticsListDevicePropertyValuesRequest withSecurity(AnalyticsListDevicePropertyValuesSecurity security) {
-        this.security = security;
+    /**
+     * Device property
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=property_name")
+    public String propertyName;
+    public AnalyticsListDevicePropertyValuesRequest withPropertyName(String propertyName) {
+        this.propertyName = propertyName;
         return this;
     }
     

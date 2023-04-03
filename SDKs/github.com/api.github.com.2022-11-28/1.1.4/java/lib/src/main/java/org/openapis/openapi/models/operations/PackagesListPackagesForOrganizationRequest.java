@@ -4,20 +4,59 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PackagesListPackagesForOrganizationRequest {
-    
-    public PackagesListPackagesForOrganizationPathParams pathParams;
-    public PackagesListPackagesForOrganizationRequest withPathParams(PackagesListPackagesForOrganizationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public PackagesListPackagesForOrganizationRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     
+    /**
+     * The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=package_type")
+    public PackagesListPackagesForOrganizationPackageTypeEnum packageType;
+    public PackagesListPackagesForOrganizationRequest withPackageType(PackagesListPackagesForOrganizationPackageTypeEnum packageType) {
+        this.packageType = packageType;
+        return this;
+    }
     
-    public PackagesListPackagesForOrganizationQueryParams queryParams;
-    public PackagesListPackagesForOrganizationRequest withQueryParams(PackagesListPackagesForOrganizationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public PackagesListPackagesForOrganizationRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public PackagesListPackagesForOrganizationRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The selected visibility of the packages.  This parameter is optional and only filters an existing result set.
+     * 
+     * The `internal` visibility is only supported for GitHub Packages registries that allow for granular permissions. For other ecosystems `internal` is synonymous with `private`.
+     * For the list of GitHub Packages registries that support granular permissions, see "[About permissions for GitHub Packages](https://docs.github.com/packages/learn-github-packages/about-permissions-for-github-packages#granular-permissions-for-userorganization-scoped-packages)."
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=visibility")
+    public org.openapis.openapi.models.shared.PackageVisibilityEnum visibility;
+    public PackagesListPackagesForOrganizationRequest withVisibility(org.openapis.openapi.models.shared.PackageVisibilityEnum visibility) {
+        this.visibility = visibility;
         return this;
     }
     

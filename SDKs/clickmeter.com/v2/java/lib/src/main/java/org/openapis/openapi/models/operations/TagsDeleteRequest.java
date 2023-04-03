@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TagsDeleteRequest {
-    
-    public TagsDeletePathParams pathParams;
-    public TagsDeleteRequest withPathParams(TagsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of the tag
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tagId")
+    public Long tagId;
+    public TagsDeleteRequest withTagId(Long tagId) {
+        this.tagId = tagId;
         return this;
     }
     

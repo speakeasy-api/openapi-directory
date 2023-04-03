@@ -7,31 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSipIpAddressRequest {
+    /**
+     * The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public UpdateSipIpAddressRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
+        return this;
+    }
     
-    public UpdateSipIpAddressPathParams pathParams;
-    public UpdateSipIpAddressRequest withPathParams(UpdateSipIpAddressPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The IpAccessControlList Sid that identifies the IpAddress resources to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=IpAccessControlListSid")
+    public String ipAccessControlListSid;
+    public UpdateSipIpAddressRequest withIpAccessControlListSid(String ipAccessControlListSid) {
+        this.ipAccessControlListSid = ipAccessControlListSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateSipIpAddressUpdateSipIpAddressRequest request;
-    public UpdateSipIpAddressRequest withRequest(UpdateSipIpAddressUpdateSipIpAddressRequest request) {
-        this.request = request;
+    public UpdateSipIpAddressUpdateSipIpAddressRequest requestBody;
+    public UpdateSipIpAddressRequest withRequestBody(UpdateSipIpAddressUpdateSipIpAddressRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateSipIpAddressSecurity security;
-    public UpdateSipIpAddressRequest withSecurity(UpdateSipIpAddressSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateSipIpAddressRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * A 34 character string that identifies the IpAddress resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateSipIpAddressRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

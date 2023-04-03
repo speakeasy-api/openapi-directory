@@ -4,20 +4,94 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminGetAuditLogRequest {
-    
-    public EnterpriseAdminGetAuditLogPathParams pathParams;
-    public EnterpriseAdminGetAuditLogRequest withPathParams(EnterpriseAdminGetAuditLogPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A cursor, as given in the [Link header](https://docs.github.com/enterprise-server@3.4/rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for events after this cursor.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=after")
+    public String after;
+    public EnterpriseAdminGetAuditLogRequest withAfter(String after) {
+        this.after = after;
         return this;
     }
     
+    /**
+     * A cursor, as given in the [Link header](https://docs.github.com/enterprise-server@3.4/rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for events before this cursor.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=before")
+    public String before;
+    public EnterpriseAdminGetAuditLogRequest withBefore(String before) {
+        this.before = before;
+        return this;
+    }
     
-    public EnterpriseAdminGetAuditLogQueryParams queryParams;
-    public EnterpriseAdminGetAuditLogRequest withQueryParams(EnterpriseAdminGetAuditLogQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
+    public String enterprise;
+    public EnterpriseAdminGetAuditLogRequest withEnterprise(String enterprise) {
+        this.enterprise = enterprise;
+        return this;
+    }
+    
+    /**
+     * The event types to include:
+     * 
+     * - `web` - returns web (non-Git) events.
+     * - `git` - returns Git events.
+     * - `all` - returns both web and Git events.
+     * 
+     * The default is `web`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include")
+    public org.openapis.openapi.models.shared.AuditLogIncludeEnum include;
+    public EnterpriseAdminGetAuditLogRequest withInclude(org.openapis.openapi.models.shared.AuditLogIncludeEnum include) {
+        this.include = include;
+        return this;
+    }
+    
+    /**
+     * The order of audit log events. To list newest events first, specify `desc`. To list oldest events first, specify `asc`.
+     * 
+     * The default is `desc`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public org.openapis.openapi.models.shared.AuditLogOrderEnum order;
+    public EnterpriseAdminGetAuditLogRequest withOrder(org.openapis.openapi.models.shared.AuditLogOrderEnum order) {
+        this.order = order;
+        return this;
+    }
+    
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public EnterpriseAdminGetAuditLogRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public EnterpriseAdminGetAuditLogRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * A search phrase. For more information, see [Searching the audit log](https://docs.github.com/enterprise-server@3.4/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/searching-the-audit-log-for-your-enterprise#searching-the-audit-log).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=phrase")
+    public String phrase;
+    public EnterpriseAdminGetAuditLogRequest withPhrase(String phrase) {
+        this.phrase = phrase;
         return this;
     }
     

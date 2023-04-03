@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMediaRequest {
-    
-    public GetMediaPathParams pathParams;
-    public GetMediaRequest withPathParams(GetMediaPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public GetMediaRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     
-    
-    public GetMediaQueryParams queryParams;
-    public GetMediaRequest withQueryParams(GetMediaQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetMediaSecurity security;
-    public GetMediaRequest withSecurity(GetMediaSecurity security) {
-        this.security = security;
+    /**
+     * An id of a media resource
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetMediaRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsGetMembershipsRequest {
-    
-    public TeamsGetMembershipsPathParams pathParams;
-    public TeamsGetMembershipsRequest withPathParams(TeamsGetMembershipsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Results limit value. By default will return maximum 25 results. Maximum of 100 results allowed per request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public TeamsGetMembershipsRequest withLimit(Integer limit) {
+        this.limit = limit;
         return this;
     }
     
-    
-    public TeamsGetMembershipsQueryParams queryParams;
-    public TeamsGetMembershipsRequest withQueryParams(TeamsGetMembershipsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Results offset. The default value is 0. Use this param to manage pagination.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public TeamsGetMembershipsRequest withOffset(Integer offset) {
+        this.offset = offset;
         return this;
     }
     
+    /**
+     * Order result by ASC or DESC order.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderType")
+    public String orderType;
+    public TeamsGetMembershipsRequest withOrderType(String orderType) {
+        this.orderType = orderType;
+        return this;
+    }
     
-    public TeamsGetMembershipsSecurity security;
-    public TeamsGetMembershipsRequest withSecurity(TeamsGetMembershipsSecurity security) {
-        this.security = security;
+    /**
+     * Search term to filter your list results. Max length: 256 chars.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public TeamsGetMembershipsRequest withSearch(String search) {
+        this.search = search;
+        return this;
+    }
+    
+    /**
+     * Team unique ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=teamId")
+    public String teamId;
+    public TeamsGetMembershipsRequest withTeamId(String teamId) {
+        this.teamId = teamId;
         return this;
     }
     

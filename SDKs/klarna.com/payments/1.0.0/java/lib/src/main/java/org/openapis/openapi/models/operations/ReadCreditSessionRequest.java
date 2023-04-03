@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReadCreditSessionRequest {
-    
-    public ReadCreditSessionPathParams pathParams;
-    public ReadCreditSessionRequest withPathParams(ReadCreditSessionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * session_id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=session_id")
+    public String sessionId;
+    public ReadCreditSessionRequest withSessionId(String sessionId) {
+        this.sessionId = sessionId;
         return this;
     }
     

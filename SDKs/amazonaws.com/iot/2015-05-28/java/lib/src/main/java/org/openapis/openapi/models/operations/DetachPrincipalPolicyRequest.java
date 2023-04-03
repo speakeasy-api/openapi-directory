@@ -4,20 +4,75 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DetachPrincipalPolicyRequest {
-    
-    public DetachPrincipalPolicyPathParams pathParams;
-    public DetachPrincipalPolicyRequest withPathParams(DetachPrincipalPolicyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DetachPrincipalPolicyRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DetachPrincipalPolicyRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public DetachPrincipalPolicyHeaders headers;
-    public DetachPrincipalPolicyRequest withHeaders(DetachPrincipalPolicyHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DetachPrincipalPolicyRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DetachPrincipalPolicyRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DetachPrincipalPolicyRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DetachPrincipalPolicyRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DetachPrincipalPolicyRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The name of the policy to detach.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=policyName")
+    public String policyName;
+    public DetachPrincipalPolicyRequest withPolicyName(String policyName) {
+        this.policyName = policyName;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The principal.&lt;/p&gt; &lt;p&gt;Valid principals are CertificateArn (arn:aws:iot:&lt;i&gt;region&lt;/i&gt;:&lt;i&gt;accountId&lt;/i&gt;:cert/&lt;i&gt;certificateId&lt;/i&gt;), thingGroupArn (arn:aws:iot:&lt;i&gt;region&lt;/i&gt;:&lt;i&gt;accountId&lt;/i&gt;:thinggroup/&lt;i&gt;groupName&lt;/i&gt;) and CognitoId (&lt;i&gt;region&lt;/i&gt;:&lt;i&gt;id&lt;/i&gt;).&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-amzn-iot-principal")
+    public String xAmznIotPrincipal;
+    public DetachPrincipalPolicyRequest withXAmznIotPrincipal(String xAmznIotPrincipal) {
+        this.xAmznIotPrincipal = xAmznIotPrincipal;
         return this;
     }
     

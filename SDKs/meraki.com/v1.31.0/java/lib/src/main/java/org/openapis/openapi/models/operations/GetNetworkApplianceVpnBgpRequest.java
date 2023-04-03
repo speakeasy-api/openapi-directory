@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkApplianceVpnBgpRequest {
-    
-    public GetNetworkApplianceVpnBgpPathParams pathParams;
-    public GetNetworkApplianceVpnBgpRequest withPathParams(GetNetworkApplianceVpnBgpPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkApplianceVpnBgpRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

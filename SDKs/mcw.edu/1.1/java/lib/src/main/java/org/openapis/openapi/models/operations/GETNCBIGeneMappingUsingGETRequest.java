@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETNCBIGeneMappingUsingGETRequest {
-    
-    public GETNCBIGeneMappingUsingGETPathParams pathParams;
-    public GETNCBIGeneMappingUsingGETRequest withPathParams(GETNCBIGeneMappingUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * RGD ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rgdId")
+    public Integer rgdId;
+    public GETNCBIGeneMappingUsingGETRequest withRgdId(Integer rgdId) {
+        this.rgdId = rgdId;
         return this;
     }
     

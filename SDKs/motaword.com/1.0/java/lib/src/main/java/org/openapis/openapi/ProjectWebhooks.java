@@ -40,7 +40,7 @@ public class ProjectWebhooks {
      */
     public org.openapis.openapi.models.operations.DeleteProjectWebhookResponse deleteProjectWebhook(org.openapis.openapi.models.operations.DeleteProjectWebhookRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteProjectWebhookPathParams.class, baseUrl, "/projects/{id}/webhooks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteProjectWebhookRequest.class, baseUrl, "/projects/{id}/webhooks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -88,7 +88,7 @@ public class ProjectWebhooks {
      */
     public org.openapis.openapi.models.operations.GetProjectWebhooksResponse getProjectWebhooks(org.openapis.openapi.models.operations.GetProjectWebhooksRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectWebhooksPathParams.class, baseUrl, "/projects/{id}/webhooks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectWebhooksRequest.class, baseUrl, "/projects/{id}/webhooks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -136,12 +136,12 @@ public class ProjectWebhooks {
      */
     public org.openapis.openapi.models.operations.PostProjectWebhookResponse postProjectWebhook(org.openapis.openapi.models.operations.PostProjectWebhookRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostProjectWebhookPathParams.class, baseUrl, "/projects/{id}/webhooks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostProjectWebhookRequest.class, baseUrl, "/projects/{id}/webhooks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "webhook", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -186,12 +186,12 @@ public class ProjectWebhooks {
      */
     public org.openapis.openapi.models.operations.UpdateProjectWebhookResponse updateProjectWebhook(org.openapis.openapi.models.operations.UpdateProjectWebhookRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateProjectWebhookPathParams.class, baseUrl, "/projects/{id}/webhooks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateProjectWebhookRequest.class, baseUrl, "/projects/{id}/webhooks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "webhook", "json");
         req.setBody(serializedRequestBody);
         
         

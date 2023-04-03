@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KkidShareGetRequest {
-    
-    public KkidShareGetQueryParams queryParams;
-    public KkidShareGetRequest withQueryParams(KkidShareGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Link to share
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=link")
+    public KkidShareGetLinkEnum link;
+    public KkidShareGetRequest withLink(KkidShareGetLinkEnum link) {
+        this.link = link;
         return this;
     }
     
+    /**
+     * User ID that the link should be authenticated to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=linkUserId")
+    public String linkUserId;
+    public KkidShareGetRequest withLinkUserId(String linkUserId) {
+        this.linkUserId = linkUserId;
+        return this;
+    }
     
-    public KkidShareGetSecurity security;
-    public KkidShareGetRequest withSecurity(KkidShareGetSecurity security) {
-        this.security = security;
+    /**
+     * Authentication scope for link
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scope")
+    public KkidShareGetScopeEnum scope;
+    public KkidShareGetRequest withScope(KkidShareGetScopeEnum scope) {
+        this.scope = scope;
+        return this;
+    }
+    
+    /**
+     * Authentication scope for link
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scope2")
+    public KkidShareGetScope2Enum scope2;
+    public KkidShareGetRequest withScope2(KkidShareGetScope2Enum scope2) {
+        this.scope2 = scope2;
+        return this;
+    }
+    
+    /**
+     * Authentication scope for link
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scope3")
+    public KkidShareGetScope3Enum scope3;
+    public KkidShareGetRequest withScope3(KkidShareGetScope3Enum scope3) {
+        this.scope3 = scope3;
+        return this;
+    }
+    
+    /**
+     * Authentication scope for link
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scope4")
+    public KkidShareGetScope4Enum scope4;
+    public KkidShareGetRequest withScope4(KkidShareGetScope4Enum scope4) {
+        this.scope4 = scope4;
         return this;
     }
     

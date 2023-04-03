@@ -4,13 +4,94 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETVersionLocationsMarkersFormatRequest {
+    /**
+     * &lt;p&gt;Give \u2018em all to me. Will ignore limit&lt;/p&gt;
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=all")
+    public Boolean all;
+    public GETVersionLocationsMarkersFormatRequest withAll(Boolean all) {
+        this.all = all;
+        return this;
+    }
     
-    public GETVersionLocationsMarkersFormatQueryParams queryParams;
-    public GETVersionLocationsMarkersFormatRequest withQueryParams(GETVersionLocationsMarkersFormatQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * &lt;p&gt;Only incidents of specific type&lt;/p&gt;
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=incident_type")
+    public GETVersionLocationsMarkersFormatIncidentTypeEnum incidentType;
+    public GETVersionLocationsMarkersFormatRequest withIncidentType(GETVersionLocationsMarkersFormatIncidentTypeEnum incidentType) {
+        this.incidentType = incidentType;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Max number of results to return. Defaults to 100&lt;/p&gt;
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GETVersionLocationsMarkersFormatRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Start of period&lt;/p&gt;
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=occurred_after")
+    public Integer occurredAfter;
+    public GETVersionLocationsMarkersFormatRequest withOccurredAfter(Integer occurredAfter) {
+        this.occurredAfter = occurredAfter;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;End of period&lt;/p&gt;
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=occurred_before")
+    public Integer occurredBefore;
+    public GETVersionLocationsMarkersFormatRequest withOccurredBefore(Integer occurredBefore) {
+        this.occurredBefore = occurredBefore;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Center of location for proximity search&lt;/p&gt;
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=proximity")
+    public String proximity;
+    public GETVersionLocationsMarkersFormatRequest withProximity(String proximity) {
+        this.proximity = proximity;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Size of the proximity search&lt;/p&gt;
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=proximity_square")
+    public Integer proximitySquare;
+    public GETVersionLocationsMarkersFormatRequest withProximitySquare(Integer proximitySquare) {
+        this.proximitySquare = proximitySquare;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Full text search of incidents&lt;/p&gt;
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public GETVersionLocationsMarkersFormatRequest withQuery(String query) {
+        this.query = query;
         return this;
     }
     

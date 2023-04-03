@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConsumerV1ResourcesIdServicesRequest {
-    
-    public GetConsumerV1ResourcesIdServicesPathParams pathParams;
-    public GetConsumerV1ResourcesIdServicesRequest withPathParams(GetConsumerV1ResourcesIdServicesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * id of resource object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public GetConsumerV1ResourcesIdServicesRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * Page limit default 20, max 100
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetConsumerV1ResourcesIdServicesRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetConsumerV1ResourcesIdServicesQueryParams queryParams;
-    public GetConsumerV1ResourcesIdServicesRequest withQueryParams(GetConsumerV1ResourcesIdServicesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Starting row of page, default 0
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public GetConsumerV1ResourcesIdServicesRequest withOffset(Integer offset) {
+        this.offset = offset;
         return this;
     }
     

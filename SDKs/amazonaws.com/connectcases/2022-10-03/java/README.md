@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.BatchGetFieldPathParams;
-import org.openapis.openapi.models.operations.BatchGetFieldHeaders;
 import org.openapis.openapi.models.operations.BatchGetFieldRequestBody;
 import org.openapis.openapi.models.operations.BatchGetFieldRequest;
 import org.openapis.openapi.models.operations.BatchGetFieldResponse;
@@ -29,36 +27,33 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             BatchGetFieldRequest req = new BatchGetFieldRequest() {{
-                pathParams = new BatchGetFieldPathParams() {{
-                    domainId = "corrupti";
-                }};
-                headers = new BatchGetFieldHeaders() {{
-                    xAmzAlgorithm = "provident";
-                    xAmzContentSha256 = "distinctio";
-                    xAmzCredential = "quibusdam";
-                    xAmzDate = "unde";
-                    xAmzSecurityToken = "nulla";
-                    xAmzSignature = "corrupti";
-                    xAmzSignedHeaders = "illum";
-                }};
-                request = new BatchGetFieldRequestBody() {{
+                requestBody = new BatchGetFieldRequestBody() {{
                     fields = new org.openapis.openapi.models.shared.FieldIdentifier[]{{
                         add(new FieldIdentifier() {{
-                            id = "error";
+                            id = "provident";
                         }}),
                         add(new FieldIdentifier() {{
-                            id = "deserunt";
+                            id = "distinctio";
+                        }}),
+                        add(new FieldIdentifier() {{
+                            id = "quibusdam";
                         }}),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "unde";
+                xAmzContentSha256 = "nulla";
+                xAmzCredential = "corrupti";
+                xAmzDate = "illum";
+                xAmzSecurityToken = "vel";
+                xAmzSignature = "error";
+                xAmzSignedHeaders = "deserunt";
+                domainId = "suscipit";
+            }}            
 
             BatchGetFieldResponse res = sdk.batchGetField(req);
 
@@ -72,7 +67,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

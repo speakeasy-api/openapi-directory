@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchSipAuthRegistrationsCredentialListMappingRequest {
-    
-    public FetchSipAuthRegistrationsCredentialListMappingPathParams pathParams;
-    public FetchSipAuthRegistrationsCredentialListMappingRequest withPathParams(FetchSipAuthRegistrationsCredentialListMappingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the CredentialListMapping resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public FetchSipAuthRegistrationsCredentialListMappingRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public FetchSipAuthRegistrationsCredentialListMappingSecurity security;
-    public FetchSipAuthRegistrationsCredentialListMappingRequest withSecurity(FetchSipAuthRegistrationsCredentialListMappingSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the SIP domain that contains the resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DomainSid")
+    public String domainSid;
+    public FetchSipAuthRegistrationsCredentialListMappingRequest withDomainSid(String domainSid) {
+        this.domainSid = domainSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public FetchSipAuthRegistrationsCredentialListMappingRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the CredentialListMapping resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchSipAuthRegistrationsCredentialListMappingRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

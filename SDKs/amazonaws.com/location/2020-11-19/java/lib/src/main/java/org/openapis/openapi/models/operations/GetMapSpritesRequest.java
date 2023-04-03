@@ -4,27 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMapSpritesRequest {
-    
-    public GetMapSpritesPathParams pathParams;
-    public GetMapSpritesRequest withPathParams(GetMapSpritesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * &lt;p&gt;The name of the sprite \ufb01le. Use the following \ufb01le names for the sprite sheet:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;sprites.png&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;sprites@2x.png&lt;/code&gt; for high pixel density displays&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;For the JSON document containing image offsets. Use the following \ufb01le names:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;sprites.json&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;sprites@2x.json&lt;/code&gt; for high pixel density displays&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FileName")
+    public String fileName;
+    public GetMapSpritesRequest withFileName(String fileName) {
+        this.fileName = fileName;
         return this;
     }
     
-    
-    public GetMapSpritesQueryParams queryParams;
-    public GetMapSpritesRequest withQueryParams(GetMapSpritesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The map resource associated with the sprite \ufb01le.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=MapName")
+    public String mapName;
+    public GetMapSpritesRequest withMapName(String mapName) {
+        this.mapName = mapName;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetMapSpritesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
     
-    public GetMapSpritesHeaders headers;
-    public GetMapSpritesRequest withHeaders(GetMapSpritesHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetMapSpritesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetMapSpritesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetMapSpritesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetMapSpritesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetMapSpritesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetMapSpritesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The optional &lt;a href="https://docs.aws.amazon.com/location/latest/developerguide/using-apikeys.html"&gt;API key&lt;/a&gt; to authorize the request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public GetMapSpritesRequest withKey(String key) {
+        this.key = key;
         return this;
     }
     

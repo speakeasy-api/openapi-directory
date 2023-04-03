@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateRuleRequest {
-    
-    public CreateRulePathParams pathParams;
-    public CreateRuleRequest withPathParams(CreateRulePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateRuleRequest createRuleRequest;
+    public CreateRuleRequest withCreateRuleRequest(org.openapis.openapi.models.shared.CreateRuleRequest createRuleRequest) {
+        this.createRuleRequest = createRuleRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateRuleRequest request;
-    public CreateRuleRequest withRequest(org.openapis.openapi.models.shared.CreateRuleRequest request) {
-        this.request = request;
+    /**
+     * Your store identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public CreateRuleRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

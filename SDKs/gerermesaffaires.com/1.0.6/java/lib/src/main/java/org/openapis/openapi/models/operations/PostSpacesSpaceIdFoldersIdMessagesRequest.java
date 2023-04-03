@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesSpaceIdFoldersIdMessagesRequest {
-    
-    public PostSpacesSpaceIdFoldersIdMessagesPathParams pathParams;
-    public PostSpacesSpaceIdFoldersIdMessagesRequest withPathParams(PostSpacesSpaceIdFoldersIdMessagesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Message to write (except Author and ModificationAuthor). Text must be Html, tags  'audio','button','input','script','select','textarea','video' are deleted
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostSpacesSpaceIdFoldersIdMessagesRequestBody request;
-    public PostSpacesSpaceIdFoldersIdMessagesRequest withRequest(PostSpacesSpaceIdFoldersIdMessagesRequestBody request) {
-        this.request = request;
+    public PostSpacesSpaceIdFoldersIdMessagesRequestBody requestBody;
+    public PostSpacesSpaceIdFoldersIdMessagesRequest withRequestBody(PostSpacesSpaceIdFoldersIdMessagesRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Id of the folder
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSpacesSpaceIdFoldersIdMessagesRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PostSpacesSpaceIdFoldersIdMessagesSecurity security;
-    public PostSpacesSpaceIdFoldersIdMessagesRequest withSecurity(PostSpacesSpaceIdFoldersIdMessagesSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PostSpacesSpaceIdFoldersIdMessagesRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMessagesIdRequest {
-    
-    public GetMessagesIdPathParams pathParams;
-    public GetMessagesIdRequest withPathParams(GetMessagesIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The `id` of the message you want to retrieve
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetMessagesIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

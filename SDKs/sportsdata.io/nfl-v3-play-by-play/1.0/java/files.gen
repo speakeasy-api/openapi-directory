@@ -30,15 +30,12 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/PlayByPlayFormatEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/PlayByPlayPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PlayByPlayRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PlayByPlayResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PlayByPlayDeltaFormatEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/PlayByPlayDeltaPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PlayByPlayDeltaRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PlayByPlayDeltaResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PlayByPlaySimulationFormatEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/PlayByPlaySimulationPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PlayByPlaySimulationRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PlayByPlaySimulationResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/PlayByPlay.java
@@ -48,7 +45,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/Quarter.java
 lib/src/main/java/org/openapis/openapi/models/shared/Play.java
 lib/src/main/java/org/openapis/openapi/models/shared/ScoringPlay.java
 lib/src/main/java/org/openapis/openapi/models/shared/PlayStat.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKeyHeader.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKeyQuery.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

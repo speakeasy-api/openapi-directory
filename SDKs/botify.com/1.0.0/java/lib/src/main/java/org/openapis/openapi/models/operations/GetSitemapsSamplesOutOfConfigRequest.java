@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSitemapsSamplesOutOfConfigRequest {
-    
-    public GetSitemapsSamplesOutOfConfigPathParams pathParams;
-    public GetSitemapsSamplesOutOfConfigRequest withPathParams(GetSitemapsSamplesOutOfConfigPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Analysis' identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=analysis_slug")
+    public String analysisSlug;
+    public GetSitemapsSamplesOutOfConfigRequest withAnalysisSlug(String analysisSlug) {
+        this.analysisSlug = analysisSlug;
         return this;
     }
     
+    /**
+     * Page Number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetSitemapsSamplesOutOfConfigRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetSitemapsSamplesOutOfConfigQueryParams queryParams;
-    public GetSitemapsSamplesOutOfConfigRequest withQueryParams(GetSitemapsSamplesOutOfConfigQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Project's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_slug")
+    public String projectSlug;
+    public GetSitemapsSamplesOutOfConfigRequest withProjectSlug(String projectSlug) {
+        this.projectSlug = projectSlug;
+        return this;
+    }
+    
+    /**
+     * Page Size
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
+    public Long size;
+    public GetSitemapsSamplesOutOfConfigRequest withSize(Long size) {
+        this.size = size;
+        return this;
+    }
+    
+    /**
+     * User's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public GetSitemapsSamplesOutOfConfigRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

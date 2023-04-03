@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GetArticlesearchJsonSortEnum;
-import org.openapis.openapi.models.operations.GetArticlesearchJsonQueryParams;
 import org.openapis.openapi.models.operations.GetArticlesearchJsonRequest;
 import org.openapis.openapi.models.operations.GetArticlesearchJsonResponse;
 
@@ -14,26 +13,22 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    apikey = new SchemeApikey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    apikey = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GetArticlesearchJsonRequest req = new GetArticlesearchJsonRequest() {{
-                queryParams = new GetArticlesearchJsonQueryParams() {{
-                    beginDate = "corrupti";
-                    endDate = "provident";
-                    facetField = "distinctio";
-                    facetFilter = false;
-                    fl = "quibusdam";
-                    fq = "unde";
-                    hl = false;
-                    page = 857946;
-                    q = "corrupti";
-                    sort = "oldest";
-                }};
-            }};            
+                beginDate = "corrupti";
+                endDate = "provident";
+                facetField = "distinctio";
+                facetFilter = false;
+                fl = "quibusdam";
+                fq = "unde";
+                hl = false;
+                page = 857946;
+                q = "corrupti";
+                sort = "oldest";
+            }}            
 
             GetArticlesearchJsonResponse res = sdk.stories.getArticlesearchJson(req);
 

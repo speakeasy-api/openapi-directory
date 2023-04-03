@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpacesSpaceIdFoldersIdBankStatementsRequest {
-    
-    public GetSpacesSpaceIdFoldersIdBankStatementsPathParams pathParams;
-    public GetSpacesSpaceIdFoldersIdBankStatementsRequest withPathParams(GetSpacesSpaceIdFoldersIdBankStatementsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * range date of the documents
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Date")
+    public String date;
+    public GetSpacesSpaceIdFoldersIdBankStatementsRequest withDate(String date) {
+        this.date = date;
         return this;
     }
     
+    /**
+     * Number of the bank statement
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Number")
+    public String number;
+    public GetSpacesSpaceIdFoldersIdBankStatementsRequest withNumber(String number) {
+        this.number = number;
+        return this;
+    }
     
-    public GetSpacesSpaceIdFoldersIdBankStatementsQueryParams queryParams;
-    public GetSpacesSpaceIdFoldersIdBankStatementsRequest withQueryParams(GetSpacesSpaceIdFoldersIdBankStatementsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * index range of the results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Range")
+    public String range;
+    public GetSpacesSpaceIdFoldersIdBankStatementsRequest withRange(String range) {
+        this.range = range;
+        return this;
+    }
+    
+    /**
+     * Id of the folder bank
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSpacesSpaceIdFoldersIdBankStatementsRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public GetSpacesSpaceIdFoldersIdBankStatementsRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

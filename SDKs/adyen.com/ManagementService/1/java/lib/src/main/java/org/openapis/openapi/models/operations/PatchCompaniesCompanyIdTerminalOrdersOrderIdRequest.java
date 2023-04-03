@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchCompaniesCompanyIdTerminalOrdersOrderIdRequest {
-    
-    public PatchCompaniesCompanyIdTerminalOrdersOrderIdPathParams pathParams;
-    public PatchCompaniesCompanyIdTerminalOrdersOrderIdRequest withPathParams(PatchCompaniesCompanyIdTerminalOrdersOrderIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TerminalOrderRequest request;
-    public PatchCompaniesCompanyIdTerminalOrdersOrderIdRequest withRequest(org.openapis.openapi.models.shared.TerminalOrderRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TerminalOrderRequest terminalOrderRequest;
+    public PatchCompaniesCompanyIdTerminalOrdersOrderIdRequest withTerminalOrderRequest(org.openapis.openapi.models.shared.TerminalOrderRequest terminalOrderRequest) {
+        this.terminalOrderRequest = terminalOrderRequest;
         return this;
     }
     
+    /**
+     * The unique identifier of the company account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public PatchCompaniesCompanyIdTerminalOrdersOrderIdRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
+        return this;
+    }
     
-    public PatchCompaniesCompanyIdTerminalOrdersOrderIdSecurity security;
-    public PatchCompaniesCompanyIdTerminalOrdersOrderIdRequest withSecurity(PatchCompaniesCompanyIdTerminalOrdersOrderIdSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the order.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderId")
+    public String orderId;
+    public PatchCompaniesCompanyIdTerminalOrdersOrderIdRequest withOrderId(String orderId) {
+        this.orderId = orderId;
         return this;
     }
     

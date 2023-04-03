@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BuildsListToolsetsRequest {
-    
-    public BuildsListToolsetsPathParams pathParams;
-    public BuildsListToolsetsRequest withPathParams(BuildsListToolsetsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public BuildsListToolsetsRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public BuildsListToolsetsQueryParams queryParams;
-    public BuildsListToolsetsRequest withQueryParams(BuildsListToolsetsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public BuildsListToolsetsRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     
-    
-    public BuildsListToolsetsSecurity security;
-    public BuildsListToolsetsRequest withSecurity(BuildsListToolsetsSecurity security) {
-        this.security = security;
+    /**
+     * Toolset name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tools")
+    public BuildsListToolsetsToolsEnum tools;
+    public BuildsListToolsetsRequest withTools(BuildsListToolsetsToolsEnum tools) {
+        this.tools = tools;
         return this;
     }
     

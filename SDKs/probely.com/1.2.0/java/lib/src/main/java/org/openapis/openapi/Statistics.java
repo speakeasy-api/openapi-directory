@@ -270,7 +270,7 @@ public class Statistics {
      */
     public org.openapis.openapi.models.operations.GetTargetsTargetIdAverageFixTimeResponse getTargetsTargetIdAverageFixTime(org.openapis.openapi.models.operations.GetTargetsTargetIdAverageFixTimeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdAverageFixTimePathParams.class, baseUrl, "/targets/{target_id}/average_fix_time/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdAverageFixTimeRequest.class, baseUrl, "/targets/{target_id}/average_fix_time/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -309,7 +309,7 @@ public class Statistics {
      */
     public org.openapis.openapi.models.operations.GetTargetsTargetIdRiskTrendResponse getTargetsTargetIdRiskTrend(org.openapis.openapi.models.operations.GetTargetsTargetIdRiskTrendRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdRiskTrendPathParams.class, baseUrl, "/targets/{target_id}/risk_trend/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdRiskTrendRequest.class, baseUrl, "/targets/{target_id}/risk_trend/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -348,7 +348,7 @@ public class Statistics {
      */
     public org.openapis.openapi.models.operations.GetTargetsTargetIdSeverityTrendResponse getTargetsTargetIdSeverityTrend(org.openapis.openapi.models.operations.GetTargetsTargetIdSeverityTrendRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdSeverityTrendPathParams.class, baseUrl, "/targets/{target_id}/severity_trend/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdSeverityTrendRequest.class, baseUrl, "/targets/{target_id}/severity_trend/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -387,7 +387,7 @@ public class Statistics {
      */
     public org.openapis.openapi.models.operations.GetTargetsTargetIdTopVulnsResponse getTargetsTargetIdTopVulns(org.openapis.openapi.models.operations.GetTargetsTargetIdTopVulnsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdTopVulnsPathParams.class, baseUrl, "/targets/{target_id}/top_vulns/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdTopVulnsRequest.class, baseUrl, "/targets/{target_id}/top_vulns/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

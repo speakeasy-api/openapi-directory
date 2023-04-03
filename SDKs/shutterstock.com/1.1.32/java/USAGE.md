@@ -5,12 +5,10 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.AddTrackCollectionItemsSecurity;
-import org.openapis.openapi.models.operations.AddTrackCollectionItemsPathParams;
 import org.openapis.openapi.models.operations.AddTrackCollectionItemsRequest;
 import org.openapis.openapi.models.operations.AddTrackCollectionItemsResponse;
 import org.openapis.openapi.models.shared.CollectionItemRequest;
 import org.openapis.openapi.models.shared.CollectionItem;
-import org.openapis.openapi.models.shared.SchemeCustomerAccessCode;
 
 public class Application {
     public static void main(String[] args) {
@@ -19,36 +17,31 @@ public class Application {
                 .build();
 
             AddTrackCollectionItemsRequest req = new AddTrackCollectionItemsRequest() {{
-                security = new AddTrackCollectionItemsSecurity() {{
-                    customerAccessCode = new SchemeCustomerAccessCode() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new AddTrackCollectionItemsPathParams() {{
-                    id = "corrupti";
-                }};
-                request = new CollectionItemRequest() {{
+                collectionItemRequest = new CollectionItemRequest() {{
                     items = new org.openapis.openapi.models.shared.CollectionItem[]{{
                         add(new CollectionItem() {{
-                            addedTime = "2021-04-24T16:27:50.833Z";
-                            id = "unde";
-                            mediaType = "nulla";
+                            addedTime = "2021-07-27T21:52:56.087Z";
+                            id = "quibusdam";
+                            mediaType = "unde";
                         }}),
                         add(new CollectionItem() {{
-                            addedTime = "2021-04-22T12:08:58.275Z";
-                            id = "vel";
-                            mediaType = "error";
+                            addedTime = "2021-05-14T08:28:11.899Z";
+                            id = "illum";
+                            mediaType = "vel";
                         }}),
                         add(new CollectionItem() {{
-                            addedTime = "2022-03-26T09:37:56.283Z";
-                            id = "iure";
-                            mediaType = "magnam";
+                            addedTime = "2021-09-16T11:56:06.019Z";
+                            id = "suscipit";
+                            mediaType = "iure";
                         }}),
                     }};
                 }};
-            }};            
+                id = "magnam";
+            }}            
 
-            AddTrackCollectionItemsResponse res = sdk.audio.addTrackCollectionItems(req);
+            AddTrackCollectionItemsResponse res = sdk.audio.addTrackCollectionItems(req, new AddTrackCollectionItemsSecurity() {{
+                customerAccessCode = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.statusCode == 200) {
                 // handle response

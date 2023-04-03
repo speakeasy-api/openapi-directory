@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimRearPortsPartialUpdateRequest {
-    
-    public DcimRearPortsPartialUpdatePathParams pathParams;
-    public DcimRearPortsPartialUpdateRequest withPathParams(DcimRearPortsPartialUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.WritableRearPortInput writableRearPortInput;
+    public DcimRearPortsPartialUpdateRequest withWritableRearPortInput(org.openapis.openapi.models.shared.WritableRearPortInput writableRearPortInput) {
+        this.writableRearPortInput = writableRearPortInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WritableRearPortInput request;
-    public DcimRearPortsPartialUpdateRequest withRequest(org.openapis.openapi.models.shared.WritableRearPortInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this rear port.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimRearPortsPartialUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

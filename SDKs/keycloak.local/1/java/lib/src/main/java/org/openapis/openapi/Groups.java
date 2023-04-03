@@ -34,7 +34,7 @@ public class Groups {
 
     public org.openapis.openapi.models.operations.DeleteRealmGroupsIdResponse deleteRealmGroupsId(org.openapis.openapi.models.operations.DeleteRealmGroupsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmGroupsIdPathParams.class, baseUrl, "/{realm}/groups/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmGroupsIdRequest.class, baseUrl, "/{realm}/groups/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -67,13 +67,13 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.GetRealmGroupsResponse getRealmGroups(org.openapis.openapi.models.operations.GetRealmGroupsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmGroupsPathParams.class, baseUrl, "/{realm}/groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmGroupsRequest.class, baseUrl, "/{realm}/groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRealmGroupsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRealmGroupsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -112,13 +112,13 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.GetRealmGroupsCountResponse getRealmGroupsCount(org.openapis.openapi.models.operations.GetRealmGroupsCountRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmGroupsCountPathParams.class, baseUrl, "/{realm}/groups/count", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmGroupsCountRequest.class, baseUrl, "/{realm}/groups/count", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRealmGroupsCountQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRealmGroupsCountRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -151,7 +151,7 @@ public class Groups {
 
     public org.openapis.openapi.models.operations.GetRealmGroupsIdResponse getRealmGroupsId(org.openapis.openapi.models.operations.GetRealmGroupsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmGroupsIdPathParams.class, baseUrl, "/{realm}/groups/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmGroupsIdRequest.class, baseUrl, "/{realm}/groups/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -190,7 +190,7 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.GetRealmGroupsIdManagementPermissionsResponse getRealmGroupsIdManagementPermissions(org.openapis.openapi.models.operations.GetRealmGroupsIdManagementPermissionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmGroupsIdManagementPermissionsPathParams.class, baseUrl, "/{realm}/groups/{id}/management/permissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmGroupsIdManagementPermissionsRequest.class, baseUrl, "/{realm}/groups/{id}/management/permissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -229,13 +229,13 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.GetRealmGroupsIdMembersResponse getRealmGroupsIdMembers(org.openapis.openapi.models.operations.GetRealmGroupsIdMembersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmGroupsIdMembersPathParams.class, baseUrl, "/{realm}/groups/{id}/members", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmGroupsIdMembersRequest.class, baseUrl, "/{realm}/groups/{id}/members", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRealmGroupsIdMembersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRealmGroupsIdMembersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -274,12 +274,12 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.PostRealmGroupsResponse postRealmGroups(org.openapis.openapi.models.operations.PostRealmGroupsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmGroupsPathParams.class, baseUrl, "/{realm}/groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmGroupsRequest.class, baseUrl, "/{realm}/groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "groupRepresentation", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -312,12 +312,12 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.PostRealmGroupsIdChildrenResponse postRealmGroupsIdChildren(org.openapis.openapi.models.operations.PostRealmGroupsIdChildrenRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmGroupsIdChildrenPathParams.class, baseUrl, "/{realm}/groups/{id}/children", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmGroupsIdChildrenRequest.class, baseUrl, "/{realm}/groups/{id}/children", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "groupRepresentation", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -350,12 +350,12 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.PutRealmGroupsIdResponse putRealmGroupsId(org.openapis.openapi.models.operations.PutRealmGroupsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmGroupsIdPathParams.class, baseUrl, "/{realm}/groups/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmGroupsIdRequest.class, baseUrl, "/{realm}/groups/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "groupRepresentation", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -388,12 +388,12 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.PutRealmGroupsIdManagementPermissionsResponse putRealmGroupsIdManagementPermissions(org.openapis.openapi.models.operations.PutRealmGroupsIdManagementPermissionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmGroupsIdManagementPermissionsPathParams.class, baseUrl, "/{realm}/groups/{id}/management/permissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmGroupsIdManagementPermissionsRequest.class, baseUrl, "/{realm}/groups/{id}/management/permissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "managementPermissionReference", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

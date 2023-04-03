@@ -4,27 +4,206 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GmailpostmastertoolsDomainsTrafficStatsListRequest {
-    
-    public GmailpostmastertoolsDomainsTrafficStatsListPathParams pathParams;
-    public GmailpostmastertoolsDomainsTrafficStatsListRequest withPathParams(GmailpostmastertoolsDomainsTrafficStatsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public GmailpostmastertoolsDomainsTrafficStatsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public GmailpostmastertoolsDomainsTrafficStatsListQueryParams queryParams;
-    public GmailpostmastertoolsDomainsTrafficStatsListRequest withQueryParams(GmailpostmastertoolsDomainsTrafficStatsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public GmailpostmastertoolsDomainsTrafficStatsListRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public GmailpostmastertoolsDomainsTrafficStatsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public GmailpostmastertoolsDomainsTrafficStatsListSecurity security;
-    public GmailpostmastertoolsDomainsTrafficStatsListRequest withSecurity(GmailpostmastertoolsDomainsTrafficStatsListSecurity security) {
-        this.security = security;
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public GmailpostmastertoolsDomainsTrafficStatsListRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate.day")
+    public Long endDateDay;
+    public GmailpostmastertoolsDomainsTrafficStatsListRequest withEndDateDay(Long endDateDay) {
+        this.endDateDay = endDateDay;
+        return this;
+    }
+    
+    /**
+     * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate.month")
+    public Long endDateMonth;
+    public GmailpostmastertoolsDomainsTrafficStatsListRequest withEndDateMonth(Long endDateMonth) {
+        this.endDateMonth = endDateMonth;
+        return this;
+    }
+    
+    /**
+     * Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate.year")
+    public Long endDateYear;
+    public GmailpostmastertoolsDomainsTrafficStatsListRequest withEndDateYear(Long endDateYear) {
+        this.endDateYear = endDateYear;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public GmailpostmastertoolsDomainsTrafficStatsListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public GmailpostmastertoolsDomainsTrafficStatsListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public GmailpostmastertoolsDomainsTrafficStatsListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Requested page size. Server may return fewer TrafficStats than requested. If unspecified, server will pick an appropriate default.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public GmailpostmastertoolsDomainsTrafficStatsListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The next_page_token value returned from a previous List request, if any. This is the value of ListTrafficStatsResponse.next_page_token returned from the previous call to `ListTrafficStats` method.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public GmailpostmastertoolsDomainsTrafficStatsListRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * The resource name of the domain whose traffic statistics we'd like to list. It should have the form `domains/{domain_name}`, where domain_name is the fully qualified domain name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public GmailpostmastertoolsDomainsTrafficStatsListRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public GmailpostmastertoolsDomainsTrafficStatsListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public GmailpostmastertoolsDomainsTrafficStatsListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate.day")
+    public Long startDateDay;
+    public GmailpostmastertoolsDomainsTrafficStatsListRequest withStartDateDay(Long startDateDay) {
+        this.startDateDay = startDateDay;
+        return this;
+    }
+    
+    /**
+     * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate.month")
+    public Long startDateMonth;
+    public GmailpostmastertoolsDomainsTrafficStatsListRequest withStartDateMonth(Long startDateMonth) {
+        this.startDateMonth = startDateMonth;
+        return this;
+    }
+    
+    /**
+     * Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate.year")
+    public Long startDateYear;
+    public GmailpostmastertoolsDomainsTrafficStatsListRequest withStartDateYear(Long startDateYear) {
+        this.startDateYear = startDateYear;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public GmailpostmastertoolsDomainsTrafficStatsListRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public GmailpostmastertoolsDomainsTrafficStatsListRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

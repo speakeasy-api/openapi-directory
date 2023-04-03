@@ -40,7 +40,7 @@ public class DestinationDefinition {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateCustomDestinationDefinitionResponse createCustomDestinationDefinition(org.openapis.openapi.models.operations.CreateCustomDestinationDefinitionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateCustomDestinationDefinitionResponse createCustomDestinationDefinition(org.openapis.openapi.models.shared.CustomDestinationDefinitionCreate request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/destination_definitions/create_custom");
         
@@ -88,7 +88,7 @@ public class DestinationDefinition {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteDestinationDefinitionResponse deleteDestinationDefinition(org.openapis.openapi.models.operations.DeleteDestinationDefinitionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteDestinationDefinitionResponse deleteDestinationDefinition(org.openapis.openapi.models.shared.DestinationDefinitionIdRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/destination_definitions/delete");
         
@@ -141,7 +141,7 @@ public class DestinationDefinition {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetDestinationDefinitionResponse getDestinationDefinition(org.openapis.openapi.models.operations.GetDestinationDefinitionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetDestinationDefinitionResponse getDestinationDefinition(org.openapis.openapi.models.shared.DestinationDefinitionIdRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/destination_definitions/get");
         
@@ -200,7 +200,7 @@ public class DestinationDefinition {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetDestinationDefinitionForWorkspaceResponse getDestinationDefinitionForWorkspace(org.openapis.openapi.models.operations.GetDestinationDefinitionForWorkspaceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetDestinationDefinitionForWorkspaceResponse getDestinationDefinitionForWorkspace(org.openapis.openapi.models.shared.DestinationDefinitionIdWithWorkspaceId request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/destination_definitions/get_for_workspace");
         
@@ -259,7 +259,7 @@ public class DestinationDefinition {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GrantDestinationDefinitionToWorkspaceResponse grantDestinationDefinitionToWorkspace(org.openapis.openapi.models.operations.GrantDestinationDefinitionToWorkspaceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GrantDestinationDefinitionToWorkspaceResponse grantDestinationDefinitionToWorkspace(org.openapis.openapi.models.shared.DestinationDefinitionIdWithWorkspaceId request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/destination_definitions/grant_definition");
         
@@ -355,7 +355,7 @@ public class DestinationDefinition {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListDestinationDefinitionsForWorkspaceResponse listDestinationDefinitionsForWorkspace(org.openapis.openapi.models.operations.ListDestinationDefinitionsForWorkspaceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListDestinationDefinitionsForWorkspaceResponse listDestinationDefinitionsForWorkspace(org.openapis.openapi.models.shared.WorkspaceIdRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/destination_definitions/list_for_workspace");
         
@@ -433,7 +433,7 @@ public class DestinationDefinition {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListPrivateDestinationDefinitionsResponse listPrivateDestinationDefinitions(org.openapis.openapi.models.operations.ListPrivateDestinationDefinitionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListPrivateDestinationDefinitionsResponse listPrivateDestinationDefinitions(org.openapis.openapi.models.shared.WorkspaceIdRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/destination_definitions/list_private");
         
@@ -473,7 +473,7 @@ public class DestinationDefinition {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RevokeDestinationDefinitionFromWorkspaceResponse revokeDestinationDefinitionFromWorkspace(org.openapis.openapi.models.operations.RevokeDestinationDefinitionFromWorkspaceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RevokeDestinationDefinitionFromWorkspaceResponse revokeDestinationDefinitionFromWorkspace(org.openapis.openapi.models.shared.DestinationDefinitionIdWithWorkspaceId request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/destination_definitions/revoke_definition");
         
@@ -526,7 +526,7 @@ public class DestinationDefinition {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateDestinationDefinitionResponse updateDestinationDefinition(org.openapis.openapi.models.operations.UpdateDestinationDefinitionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateDestinationDefinitionResponse updateDestinationDefinition(org.openapis.openapi.models.shared.DestinationDefinitionUpdate request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/destination_definitions/update");
         

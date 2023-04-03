@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetQuoteImageSearchRequest {
-    
-    public GetQuoteImageSearchQueryParams queryParams;
-    public GetQuoteImageSearchRequest withQueryParams(GetQuoteImageSearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Quote Author
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=author")
+    public String author;
+    public GetQuoteImageSearchRequest withAuthor(String author) {
+        this.author = author;
         return this;
     }
     
+    /**
+     * Quote Category
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
+    public String category;
+    public GetQuoteImageSearchRequest withCategory(String category) {
+        this.category = category;
+        return this;
+    }
     
-    public GetQuoteImageSearchSecurity security;
-    public GetQuoteImageSearchRequest withSecurity(GetQuoteImageSearchSecurity security) {
-        this.security = security;
+    /**
+     * Should search private collection. Default searches public image collection.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=private")
+    public Boolean private_;
+    public GetQuoteImageSearchRequest withPrivate(Boolean private_) {
+        this.private_ = private_;
         return this;
     }
     

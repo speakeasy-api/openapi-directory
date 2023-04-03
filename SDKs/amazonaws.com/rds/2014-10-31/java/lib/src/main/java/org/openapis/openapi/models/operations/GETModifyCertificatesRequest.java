@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyCertificatesRequest {
-    
-    public GETModifyCertificatesQueryParams queryParams;
-    public GETModifyCertificatesRequest withQueryParams(GETModifyCertificatesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyCertificatesActionEnum action;
+    public GETModifyCertificatesRequest withAction(GETModifyCertificatesActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The new default certificate identifier to override the current one with.&lt;/p&gt; &lt;p&gt;To determine the valid values, use the &lt;code&gt;describe-certificates&lt;/code&gt; CLI command or the &lt;code&gt;DescribeCertificates&lt;/code&gt; API operation.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CertificateIdentifier")
+    public String certificateIdentifier;
+    public GETModifyCertificatesRequest withCertificateIdentifier(String certificateIdentifier) {
+        this.certificateIdentifier = certificateIdentifier;
+        return this;
+    }
     
-    public GETModifyCertificatesHeaders headers;
-    public GETModifyCertificatesRequest withHeaders(GETModifyCertificatesHeaders headers) {
-        this.headers = headers;
+    /**
+     * A value that indicates whether to remove the override for the default certificate. If the override is removed, the default certificate is the system default.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RemoveCustomerOverride")
+    public Boolean removeCustomerOverride;
+    public GETModifyCertificatesRequest withRemoveCustomerOverride(Boolean removeCustomerOverride) {
+        this.removeCustomerOverride = removeCustomerOverride;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyCertificatesVersionEnum version;
+    public GETModifyCertificatesRequest withVersion(GETModifyCertificatesVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyCertificatesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyCertificatesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyCertificatesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyCertificatesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyCertificatesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyCertificatesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyCertificatesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

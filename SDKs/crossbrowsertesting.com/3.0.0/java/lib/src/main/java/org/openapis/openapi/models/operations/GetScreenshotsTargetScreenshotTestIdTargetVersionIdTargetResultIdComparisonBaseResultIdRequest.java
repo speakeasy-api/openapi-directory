@@ -4,27 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdRequest {
-    
-    public GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdPathParams pathParams;
-    public GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdRequest withPathParams(GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * result id of the base Screenshot Test
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=base_result_id")
+    public Long baseResultId;
+    public GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdRequest withBaseResultId(Long baseResultId) {
+        this.baseResultId = baseResultId;
         return this;
     }
     
-    
-    public GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdQueryParams queryParams;
-    public GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdRequest withQueryParams(GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Name of callback method for JSONP requests.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdRequest withCallback(String callback) {
+        this.callback = callback;
         return this;
     }
     
+    /**
+     * The format of the returned data. Possible values are "json" or "jsonp".
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public String format;
+    public GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdRequest withFormat(String format) {
+        this.format = format;
+        return this;
+    }
     
-    public GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdSecurity security;
-    public GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdRequest withSecurity(GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdSecurity security) {
-        this.security = security;
+    /**
+     * result id of the target Screenshot Test
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=target_result_id")
+    public Long targetResultId;
+    public GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdRequest withTargetResultId(Long targetResultId) {
+        this.targetResultId = targetResultId;
+        return this;
+    }
+    
+    /**
+     * test id of the target Screenshot Test
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=target_screenshot_test_id")
+    public Long targetScreenshotTestId;
+    public GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdRequest withTargetScreenshotTestId(Long targetScreenshotTestId) {
+        this.targetScreenshotTestId = targetScreenshotTestId;
+        return this;
+    }
+    
+    /**
+     * version id of the target Screenshot Test
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=target_version_id")
+    public Long targetVersionId;
+    public GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdRequest withTargetVersionId(Long targetVersionId) {
+        this.targetVersionId = targetVersionId;
+        return this;
+    }
+    
+    /**
+     * Used as the basis for detecting box model differences in element positioning and dimensions that should be flagged and reported back to the comparison results. The default is 30px which is a good basis for finding notable layout differences.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tolerance")
+    public Double tolerance;
+    public GetScreenshotsTargetScreenshotTestIdTargetVersionIdTargetResultIdComparisonBaseResultIdRequest withTolerance(Double tolerance) {
+        this.tolerance = tolerance;
         return this;
     }
     

@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddNotificationRequest {
-    
-    public AddNotificationHeaders headers;
-    public AddNotificationRequest withHeaders(AddNotificationHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public AddNotificationAddNotificationRequestBody requestBody;
+    public AddNotificationRequest withRequestBody(AddNotificationAddNotificationRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public AddNotificationAddNotificationRequestBody request;
-    public AddNotificationRequest withRequest(AddNotificationAddNotificationRequestBody request) {
-        this.request = request;
+    /**
+     * Access token required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-access-token")
+    public String evAccessToken;
+    public AddNotificationRequest withEvAccessToken(String evAccessToken) {
+        this.evAccessToken = evAccessToken;
+        return this;
+    }
+    
+    /**
+     * API Key required to make API call. 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-api-key")
+    public String evApiKey;
+    public AddNotificationRequest withEvApiKey(String evApiKey) {
+        this.evApiKey = evApiKey;
         return this;
     }
     

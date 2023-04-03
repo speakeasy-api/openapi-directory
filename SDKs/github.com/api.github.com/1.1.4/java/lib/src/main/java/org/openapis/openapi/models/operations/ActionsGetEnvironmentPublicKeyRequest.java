@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsGetEnvironmentPublicKeyRequest {
+    /**
+     * The name of the environment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environment_name")
+    public String environmentName;
+    public ActionsGetEnvironmentPublicKeyRequest withEnvironmentName(String environmentName) {
+        this.environmentName = environmentName;
+        return this;
+    }
     
-    public ActionsGetEnvironmentPublicKeyPathParams pathParams;
-    public ActionsGetEnvironmentPublicKeyRequest withPathParams(ActionsGetEnvironmentPublicKeyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the repository.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repository_id")
+    public Long repositoryId;
+    public ActionsGetEnvironmentPublicKeyRequest withRepositoryId(Long repositoryId) {
+        this.repositoryId = repositoryId;
         return this;
     }
     

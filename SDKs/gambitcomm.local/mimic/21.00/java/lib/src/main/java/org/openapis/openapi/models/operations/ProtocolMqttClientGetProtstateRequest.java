@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolMqttClientGetProtstateRequest {
-    
-    public ProtocolMqttClientGetProtstatePathParams pathParams;
-    public ProtocolMqttClientGetProtstateRequest withPathParams(ProtocolMqttClientGetProtstatePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to show MQTT state
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolMqttClientGetProtstateRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

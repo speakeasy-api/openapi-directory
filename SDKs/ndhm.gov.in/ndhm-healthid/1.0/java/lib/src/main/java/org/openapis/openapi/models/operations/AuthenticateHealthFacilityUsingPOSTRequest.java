@@ -7,10 +7,10 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AuthenticateHealthFacilityUsingPOSTRequest {
-    
-    public AuthenticateHealthFacilityUsingPOSTHeaders headers;
-    public AuthenticateHealthFacilityUsingPOSTRequest withHeaders(AuthenticateHealthFacilityUsingPOSTHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public AuthenticateHealthFacilityUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
@@ -18,16 +18,9 @@ public class AuthenticateHealthFacilityUsingPOSTRequest {
      * healthFacilityAuthenticationRequest
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.HealthFacilityAuthenticationRequest request;
-    public AuthenticateHealthFacilityUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.HealthFacilityAuthenticationRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public AuthenticateHealthFacilityUsingPOSTSecurity security;
-    public AuthenticateHealthFacilityUsingPOSTRequest withSecurity(AuthenticateHealthFacilityUsingPOSTSecurity security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.HealthFacilityAuthenticationRequest healthFacilityAuthenticationRequest;
+    public AuthenticateHealthFacilityUsingPOSTRequest withHealthFacilityAuthenticationRequest(org.openapis.openapi.models.shared.HealthFacilityAuthenticationRequest healthFacilityAuthenticationRequest) {
+        this.healthFacilityAuthenticationRequest = healthFacilityAuthenticationRequest;
         return this;
     }
     

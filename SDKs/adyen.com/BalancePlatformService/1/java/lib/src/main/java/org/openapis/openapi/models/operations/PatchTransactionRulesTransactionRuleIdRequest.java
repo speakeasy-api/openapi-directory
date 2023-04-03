@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchTransactionRulesTransactionRuleIdRequest {
-    
-    public PatchTransactionRulesTransactionRuleIdPathParams pathParams;
-    public PatchTransactionRulesTransactionRuleIdRequest withPathParams(PatchTransactionRulesTransactionRuleIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TransactionRuleInfo request;
-    public PatchTransactionRulesTransactionRuleIdRequest withRequest(org.openapis.openapi.models.shared.TransactionRuleInfo request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TransactionRuleInfo transactionRuleInfo;
+    public PatchTransactionRulesTransactionRuleIdRequest withTransactionRuleInfo(org.openapis.openapi.models.shared.TransactionRuleInfo transactionRuleInfo) {
+        this.transactionRuleInfo = transactionRuleInfo;
         return this;
     }
     
-    
-    public PatchTransactionRulesTransactionRuleIdSecurity security;
-    public PatchTransactionRulesTransactionRuleIdRequest withSecurity(PatchTransactionRulesTransactionRuleIdSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the transaction rule.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transactionRuleId")
+    public String transactionRuleId;
+    public PatchTransactionRulesTransactionRuleIdRequest withTransactionRuleId(String transactionRuleId) {
+        this.transactionRuleId = transactionRuleId;
         return this;
     }
     

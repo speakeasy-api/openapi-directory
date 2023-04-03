@@ -38,13 +38,13 @@ public class DpsMessage {
      */
     public org.openapis.openapi.models.operations.DeleteDpsMessageResponse deleteDpsMessage(org.openapis.openapi.models.operations.DeleteDpsMessageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDpsMessagePathParams.class, baseUrl, "/Employer/{EmployerId}/DpsMessage/{DpsMessageId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDpsMessageRequest.class, baseUrl, "/Employer/{EmployerId}/DpsMessage/{DpsMessageId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -87,13 +87,13 @@ public class DpsMessage {
      */
     public org.openapis.openapi.models.operations.GetDpsMessageFromEmployerResponse getDpsMessageFromEmployer(org.openapis.openapi.models.operations.GetDpsMessageFromEmployerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDpsMessageFromEmployerPathParams.class, baseUrl, "/Employer/{EmployerId}/DpsMessage/{DpsMessageId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDpsMessageFromEmployerRequest.class, baseUrl, "/Employer/{EmployerId}/DpsMessage/{DpsMessageId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -142,13 +142,13 @@ public class DpsMessage {
      */
     public org.openapis.openapi.models.operations.GetDpsMessagesFromEmployerResponse getDpsMessagesFromEmployer(org.openapis.openapi.models.operations.GetDpsMessagesFromEmployerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDpsMessagesFromEmployerPathParams.class, baseUrl, "/Employer/{EmployerId}/DpsMessages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDpsMessagesFromEmployerRequest.class, baseUrl, "/Employer/{EmployerId}/DpsMessages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -197,13 +197,13 @@ public class DpsMessage {
      */
     public org.openapis.openapi.models.operations.PatchDpsMessageResponse patchDpsMessage(org.openapis.openapi.models.operations.PatchDpsMessageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchDpsMessagePathParams.class, baseUrl, "/Employer/{EmployerId}/DpsMessage/{DpsMessageId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchDpsMessageRequest.class, baseUrl, "/Employer/{EmployerId}/DpsMessage/{DpsMessageId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -252,13 +252,13 @@ public class DpsMessage {
      */
     public org.openapis.openapi.models.operations.PostDpsMessageResponse postDpsMessage(org.openapis.openapi.models.operations.PostDpsMessageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostDpsMessagePathParams.class, baseUrl, "/Employer/{EmployerId}/DpsMessages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostDpsMessageRequest.class, baseUrl, "/Employer/{EmployerId}/DpsMessages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -307,13 +307,13 @@ public class DpsMessage {
      */
     public org.openapis.openapi.models.operations.PutDpsMessageResponse putDpsMessage(org.openapis.openapi.models.operations.PutDpsMessageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutDpsMessagePathParams.class, baseUrl, "/Employer/{EmployerId}/DpsMessage/{DpsMessageId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutDpsMessageRequest.class, baseUrl, "/Employer/{EmployerId}/DpsMessage/{DpsMessageId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

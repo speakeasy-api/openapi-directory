@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostApiV1StatusesIdUnreblogRequest {
-    
-    public PostApiV1StatusesIdUnreblogPathParams pathParams;
-    public PostApiV1StatusesIdUnreblogRequest withPathParams(PostApiV1StatusesIdUnreblogPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostApiV1StatusesIdUnreblogSecurity security;
-    public PostApiV1StatusesIdUnreblogRequest withSecurity(PostApiV1StatusesIdUnreblogSecurity security) {
-        this.security = security;
+    /**
+     * Local ID of a status in the database.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostApiV1StatusesIdUnreblogRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveSiteRequest {
-    
-    public RemoveSitePathParams pathParams;
-    public RemoveSiteRequest withPathParams(RemoveSitePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RemoveSiteSecurity security;
-    public RemoveSiteRequest withSecurity(RemoveSiteSecurity security) {
-        this.security = security;
+    /**
+     * UUID or name of the site to remove
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=site_id")
+    public String siteId;
+    public RemoveSiteRequest withSiteId(String siteId) {
+        this.siteId = siteId;
         return this;
     }
     

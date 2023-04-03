@@ -7,24 +7,34 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PUTVerifyPaymentMethodsRequest {
-    
-    public PUTVerifyPaymentMethodsPathParams pathParams;
-    public PUTVerifyPaymentMethodsRequest withPathParams(PUTVerifyPaymentMethodsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PUTVerifyPaymentMethodsHeaders headers;
-    public PUTVerifyPaymentMethodsRequest withHeaders(PUTVerifyPaymentMethodsHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PUTVerifyPaymentMethodType request;
-    public PUTVerifyPaymentMethodsRequest withRequest(org.openapis.openapi.models.shared.PUTVerifyPaymentMethodType request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PUTVerifyPaymentMethodType putVerifyPaymentMethodType;
+    public PUTVerifyPaymentMethodsRequest withPUTVerifyPaymentMethodType(org.openapis.openapi.models.shared.PUTVerifyPaymentMethodType putVerifyPaymentMethodType) {
+        this.putVerifyPaymentMethodType = putVerifyPaymentMethodType;
+        return this;
+    }
+    
+    /**
+     * A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+     * 
+     * The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Track-Id")
+    public String zuoraTrackId;
+    public PUTVerifyPaymentMethodsRequest withZuoraTrackId(String zuoraTrackId) {
+        this.zuoraTrackId = zuoraTrackId;
+        return this;
+    }
+    
+    /**
+     * The ID of the payment method to be verified.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payment-method-id")
+    public String paymentMethodId;
+    public PUTVerifyPaymentMethodsRequest withPaymentMethodId(String paymentMethodId) {
+        this.paymentMethodId = paymentMethodId;
         return this;
     }
     

@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateInsightsAssessmentsCommentRequest {
-    
-    public CreateInsightsAssessmentsCommentHeaders headers;
-    public CreateInsightsAssessmentsCommentRequest withHeaders(CreateInsightsAssessmentsCommentHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateInsightsAssessmentsCommentCreateInsightsAssessmentsCommentRequest request;
-    public CreateInsightsAssessmentsCommentRequest withRequest(CreateInsightsAssessmentsCommentCreateInsightsAssessmentsCommentRequest request) {
-        this.request = request;
+    public CreateInsightsAssessmentsCommentCreateInsightsAssessmentsCommentRequest requestBody;
+    public CreateInsightsAssessmentsCommentRequest withRequestBody(CreateInsightsAssessmentsCommentCreateInsightsAssessmentsCommentRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateInsightsAssessmentsCommentSecurity security;
-    public CreateInsightsAssessmentsCommentRequest withSecurity(CreateInsightsAssessmentsCommentSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateInsightsAssessmentsCommentRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Token HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Token")
+    public String token;
+    public CreateInsightsAssessmentsCommentRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

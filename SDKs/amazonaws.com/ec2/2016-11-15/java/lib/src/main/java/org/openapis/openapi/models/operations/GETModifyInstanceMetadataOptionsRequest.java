@@ -4,20 +4,139 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyInstanceMetadataOptionsRequest {
-    
-    public GETModifyInstanceMetadataOptionsQueryParams queryParams;
-    public GETModifyInstanceMetadataOptionsRequest withQueryParams(GETModifyInstanceMetadataOptionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyInstanceMetadataOptionsActionEnum action;
+    public GETModifyInstanceMetadataOptionsRequest withAction(GETModifyInstanceMetadataOptionsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETModifyInstanceMetadataOptionsRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
     
-    public GETModifyInstanceMetadataOptionsHeaders headers;
-    public GETModifyInstanceMetadataOptionsRequest withHeaders(GETModifyInstanceMetadataOptionsHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;Enables or disables the HTTP metadata endpoint on your instances. If this parameter is not specified, the existing state is maintained.&lt;/p&gt; &lt;p&gt;If you specify a value of &lt;code&gt;disabled&lt;/code&gt;, you cannot access your instance metadata.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HttpEndpoint")
+    public GETModifyInstanceMetadataOptionsHTTPEndpointEnum httpEndpoint;
+    public GETModifyInstanceMetadataOptionsRequest withHttpEndpoint(GETModifyInstanceMetadataOptionsHTTPEndpointEnum httpEndpoint) {
+        this.httpEndpoint = httpEndpoint;
+        return this;
+    }
+    
+    /**
+     * Enables or disables the IPv6 endpoint for the instance metadata service. This setting applies only if you have enabled the HTTP metadata endpoint.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HttpProtocolIpv6")
+    public GETModifyInstanceMetadataOptionsHTTPProtocolIpv6Enum httpProtocolIpv6;
+    public GETModifyInstanceMetadataOptionsRequest withHttpProtocolIpv6(GETModifyInstanceMetadataOptionsHTTPProtocolIpv6Enum httpProtocolIpv6) {
+        this.httpProtocolIpv6 = httpProtocolIpv6;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further instance metadata requests can travel. If no parameter is specified, the existing state is maintained.&lt;/p&gt; &lt;p&gt;Possible values: Integers from 1 to 64&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HttpPutResponseHopLimit")
+    public Long httpPutResponseHopLimit;
+    public GETModifyInstanceMetadataOptionsRequest withHttpPutResponseHopLimit(Long httpPutResponseHopLimit) {
+        this.httpPutResponseHopLimit = httpPutResponseHopLimit;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;IMDSv2 uses token-backed sessions. Set the use of HTTP tokens to &lt;code&gt;optional&lt;/code&gt; (in other words, set the use of IMDSv2 to &lt;code&gt;optional&lt;/code&gt;) or &lt;code&gt;required&lt;/code&gt; (in other words, set the use of IMDSv2 to &lt;code&gt;required&lt;/code&gt;).&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;optional&lt;/code&gt; - When IMDSv2 is optional, you can choose to retrieve instance metadata with or without a session token in your request. If you retrieve the IAM role credentials without a token, the IMDSv1 role credentials are returned. If you retrieve the IAM role credentials using a valid session token, the IMDSv2 role credentials are returned.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;required&lt;/code&gt; - When IMDSv2 is required, you must send a session token with any instance metadata retrieval requests. In this state, retrieving the IAM role credentials always returns IMDSv2 credentials; IMDSv1 credentials are not available.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Default: &lt;code&gt;optional&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HttpTokens")
+    public GETModifyInstanceMetadataOptionsHTTPTokensEnum httpTokens;
+    public GETModifyInstanceMetadataOptionsRequest withHttpTokens(GETModifyInstanceMetadataOptionsHTTPTokensEnum httpTokens) {
+        this.httpTokens = httpTokens;
+        return this;
+    }
+    
+    /**
+     * The ID of the instance.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceId")
+    public String instanceId;
+    public GETModifyInstanceMetadataOptionsRequest withInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Set to &lt;code&gt;enabled&lt;/code&gt; to allow access to instance tags from the instance metadata. Set to &lt;code&gt;disabled&lt;/code&gt; to turn off access to instance tags from the instance metadata. For more information, see &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS"&gt;Work with instance tags using the instance metadata&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;Default: &lt;code&gt;disabled&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceMetadataTags")
+    public GETModifyInstanceMetadataOptionsInstanceMetadataTagsEnum instanceMetadataTags;
+    public GETModifyInstanceMetadataOptionsRequest withInstanceMetadataTags(GETModifyInstanceMetadataOptionsInstanceMetadataTagsEnum instanceMetadataTags) {
+        this.instanceMetadataTags = instanceMetadataTags;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyInstanceMetadataOptionsVersionEnum version;
+    public GETModifyInstanceMetadataOptionsRequest withVersion(GETModifyInstanceMetadataOptionsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyInstanceMetadataOptionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyInstanceMetadataOptionsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyInstanceMetadataOptionsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyInstanceMetadataOptionsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyInstanceMetadataOptionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyInstanceMetadataOptionsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyInstanceMetadataOptionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

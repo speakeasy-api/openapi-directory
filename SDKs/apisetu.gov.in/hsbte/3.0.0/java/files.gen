@@ -34,7 +34,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/DgmstSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/DgmstRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/DgmstRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/DgmstRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/DgmstRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Dgmst504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Dgmst504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Dgmst504ApplicationJSON.java
@@ -68,6 +67,4 @@ lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsen
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsent.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaSignature.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchema.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKey.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeClientID.java
 USAGE.md

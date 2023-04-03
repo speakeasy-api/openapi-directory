@@ -39,7 +39,7 @@ public class AuthenticationManagement {
      */
     public org.openapis.openapi.models.operations.DeleteRealmAuthenticationConfigIdResponse deleteRealmAuthenticationConfigId(org.openapis.openapi.models.operations.DeleteRealmAuthenticationConfigIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmAuthenticationConfigIdPathParams.class, baseUrl, "/{realm}/authentication/config/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmAuthenticationConfigIdRequest.class, baseUrl, "/{realm}/authentication/config/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -72,7 +72,7 @@ public class AuthenticationManagement {
      */
     public org.openapis.openapi.models.operations.DeleteRealmAuthenticationExecutionsExecutionIdResponse deleteRealmAuthenticationExecutionsExecutionId(org.openapis.openapi.models.operations.DeleteRealmAuthenticationExecutionsExecutionIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmAuthenticationExecutionsExecutionIdPathParams.class, baseUrl, "/{realm}/authentication/executions/{executionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmAuthenticationExecutionsExecutionIdRequest.class, baseUrl, "/{realm}/authentication/executions/{executionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -105,7 +105,7 @@ public class AuthenticationManagement {
      */
     public org.openapis.openapi.models.operations.DeleteRealmAuthenticationFlowsIdResponse deleteRealmAuthenticationFlowsId(org.openapis.openapi.models.operations.DeleteRealmAuthenticationFlowsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmAuthenticationFlowsIdPathParams.class, baseUrl, "/{realm}/authentication/flows/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmAuthenticationFlowsIdRequest.class, baseUrl, "/{realm}/authentication/flows/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -138,7 +138,7 @@ public class AuthenticationManagement {
      */
     public org.openapis.openapi.models.operations.DeleteRealmAuthenticationRequiredActionsAliasResponse deleteRealmAuthenticationRequiredActionsAlias(org.openapis.openapi.models.operations.DeleteRealmAuthenticationRequiredActionsAliasRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmAuthenticationRequiredActionsAliasPathParams.class, baseUrl, "/{realm}/authentication/required-actions/{alias}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmAuthenticationRequiredActionsAliasRequest.class, baseUrl, "/{realm}/authentication/required-actions/{alias}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -171,7 +171,7 @@ public class AuthenticationManagement {
      */
     public org.openapis.openapi.models.operations.GetRealmAuthenticationAuthenticatorProvidersResponse getRealmAuthenticationAuthenticatorProviders(org.openapis.openapi.models.operations.GetRealmAuthenticationAuthenticatorProvidersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmAuthenticationAuthenticatorProvidersPathParams.class, baseUrl, "/{realm}/authentication/authenticator-providers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmAuthenticationAuthenticatorProvidersRequest.class, baseUrl, "/{realm}/authentication/authenticator-providers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -210,7 +210,7 @@ public class AuthenticationManagement {
      */
     public org.openapis.openapi.models.operations.GetRealmAuthenticationClientAuthenticatorProvidersResponse getRealmAuthenticationClientAuthenticatorProviders(org.openapis.openapi.models.operations.GetRealmAuthenticationClientAuthenticatorProvidersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmAuthenticationClientAuthenticatorProvidersPathParams.class, baseUrl, "/{realm}/authentication/client-authenticator-providers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmAuthenticationClientAuthenticatorProvidersRequest.class, baseUrl, "/{realm}/authentication/client-authenticator-providers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -249,7 +249,7 @@ public class AuthenticationManagement {
      */
     public org.openapis.openapi.models.operations.GetRealmAuthenticationConfigDescriptionProviderIdResponse getRealmAuthenticationConfigDescriptionProviderId(org.openapis.openapi.models.operations.GetRealmAuthenticationConfigDescriptionProviderIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmAuthenticationConfigDescriptionProviderIdPathParams.class, baseUrl, "/{realm}/authentication/config-description/{providerId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmAuthenticationConfigDescriptionProviderIdRequest.class, baseUrl, "/{realm}/authentication/config-description/{providerId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -288,7 +288,7 @@ public class AuthenticationManagement {
      */
     public org.openapis.openapi.models.operations.GetRealmAuthenticationConfigIdResponse getRealmAuthenticationConfigId(org.openapis.openapi.models.operations.GetRealmAuthenticationConfigIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmAuthenticationConfigIdPathParams.class, baseUrl, "/{realm}/authentication/config/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmAuthenticationConfigIdRequest.class, baseUrl, "/{realm}/authentication/config/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -327,7 +327,7 @@ public class AuthenticationManagement {
      */
     public org.openapis.openapi.models.operations.GetRealmAuthenticationExecutionsExecutionIdResponse getRealmAuthenticationExecutionsExecutionId(org.openapis.openapi.models.operations.GetRealmAuthenticationExecutionsExecutionIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmAuthenticationExecutionsExecutionIdPathParams.class, baseUrl, "/{realm}/authentication/executions/{executionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmAuthenticationExecutionsExecutionIdRequest.class, baseUrl, "/{realm}/authentication/executions/{executionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -360,7 +360,7 @@ public class AuthenticationManagement {
      */
     public org.openapis.openapi.models.operations.GetRealmAuthenticationFlowsResponse getRealmAuthenticationFlows(org.openapis.openapi.models.operations.GetRealmAuthenticationFlowsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmAuthenticationFlowsPathParams.class, baseUrl, "/{realm}/authentication/flows", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmAuthenticationFlowsRequest.class, baseUrl, "/{realm}/authentication/flows", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -399,7 +399,7 @@ public class AuthenticationManagement {
      */
     public org.openapis.openapi.models.operations.GetRealmAuthenticationFlowsFlowAliasExecutionsResponse getRealmAuthenticationFlowsFlowAliasExecutions(org.openapis.openapi.models.operations.GetRealmAuthenticationFlowsFlowAliasExecutionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmAuthenticationFlowsFlowAliasExecutionsPathParams.class, baseUrl, "/{realm}/authentication/flows/{flowAlias}/executions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmAuthenticationFlowsFlowAliasExecutionsRequest.class, baseUrl, "/{realm}/authentication/flows/{flowAlias}/executions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -432,7 +432,7 @@ public class AuthenticationManagement {
      */
     public org.openapis.openapi.models.operations.GetRealmAuthenticationFlowsIdResponse getRealmAuthenticationFlowsId(org.openapis.openapi.models.operations.GetRealmAuthenticationFlowsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmAuthenticationFlowsIdPathParams.class, baseUrl, "/{realm}/authentication/flows/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmAuthenticationFlowsIdRequest.class, baseUrl, "/{realm}/authentication/flows/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -471,7 +471,7 @@ public class AuthenticationManagement {
      */
     public org.openapis.openapi.models.operations.GetRealmAuthenticationFormActionProvidersResponse getRealmAuthenticationFormActionProviders(org.openapis.openapi.models.operations.GetRealmAuthenticationFormActionProvidersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmAuthenticationFormActionProvidersPathParams.class, baseUrl, "/{realm}/authentication/form-action-providers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmAuthenticationFormActionProvidersRequest.class, baseUrl, "/{realm}/authentication/form-action-providers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -510,7 +510,7 @@ public class AuthenticationManagement {
      */
     public org.openapis.openapi.models.operations.GetRealmAuthenticationFormProvidersResponse getRealmAuthenticationFormProviders(org.openapis.openapi.models.operations.GetRealmAuthenticationFormProvidersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmAuthenticationFormProvidersPathParams.class, baseUrl, "/{realm}/authentication/form-providers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmAuthenticationFormProvidersRequest.class, baseUrl, "/{realm}/authentication/form-providers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -549,7 +549,7 @@ public class AuthenticationManagement {
      */
     public org.openapis.openapi.models.operations.GetRealmAuthenticationPerClientConfigDescriptionResponse getRealmAuthenticationPerClientConfigDescription(org.openapis.openapi.models.operations.GetRealmAuthenticationPerClientConfigDescriptionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmAuthenticationPerClientConfigDescriptionPathParams.class, baseUrl, "/{realm}/authentication/per-client-config-description", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmAuthenticationPerClientConfigDescriptionRequest.class, baseUrl, "/{realm}/authentication/per-client-config-description", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -588,7 +588,7 @@ public class AuthenticationManagement {
      */
     public org.openapis.openapi.models.operations.GetRealmAuthenticationRequiredActionsResponse getRealmAuthenticationRequiredActions(org.openapis.openapi.models.operations.GetRealmAuthenticationRequiredActionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmAuthenticationRequiredActionsPathParams.class, baseUrl, "/{realm}/authentication/required-actions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmAuthenticationRequiredActionsRequest.class, baseUrl, "/{realm}/authentication/required-actions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -627,7 +627,7 @@ public class AuthenticationManagement {
      */
     public org.openapis.openapi.models.operations.GetRealmAuthenticationRequiredActionsAliasResponse getRealmAuthenticationRequiredActionsAlias(org.openapis.openapi.models.operations.GetRealmAuthenticationRequiredActionsAliasRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmAuthenticationRequiredActionsAliasPathParams.class, baseUrl, "/{realm}/authentication/required-actions/{alias}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmAuthenticationRequiredActionsAliasRequest.class, baseUrl, "/{realm}/authentication/required-actions/{alias}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -666,7 +666,7 @@ public class AuthenticationManagement {
      */
     public org.openapis.openapi.models.operations.GetRealmAuthenticationUnregisteredRequiredActionsResponse getRealmAuthenticationUnregisteredRequiredActions(org.openapis.openapi.models.operations.GetRealmAuthenticationUnregisteredRequiredActionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmAuthenticationUnregisteredRequiredActionsPathParams.class, baseUrl, "/{realm}/authentication/unregistered-required-actions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmAuthenticationUnregisteredRequiredActionsRequest.class, baseUrl, "/{realm}/authentication/unregistered-required-actions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -705,12 +705,12 @@ public class AuthenticationManagement {
      */
     public org.openapis.openapi.models.operations.PostRealmAuthenticationExecutionsResponse postRealmAuthenticationExecutions(org.openapis.openapi.models.operations.PostRealmAuthenticationExecutionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmAuthenticationExecutionsPathParams.class, baseUrl, "/{realm}/authentication/executions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmAuthenticationExecutionsRequest.class, baseUrl, "/{realm}/authentication/executions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "authenticationExecutionRepresentation", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -743,12 +743,12 @@ public class AuthenticationManagement {
      */
     public org.openapis.openapi.models.operations.PostRealmAuthenticationExecutionsExecutionIdConfigResponse postRealmAuthenticationExecutionsExecutionIdConfig(org.openapis.openapi.models.operations.PostRealmAuthenticationExecutionsExecutionIdConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmAuthenticationExecutionsExecutionIdConfigPathParams.class, baseUrl, "/{realm}/authentication/executions/{executionId}/config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmAuthenticationExecutionsExecutionIdConfigRequest.class, baseUrl, "/{realm}/authentication/executions/{executionId}/config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "authenticatorConfigRepresentation", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -781,7 +781,7 @@ public class AuthenticationManagement {
      */
     public org.openapis.openapi.models.operations.PostRealmAuthenticationExecutionsExecutionIdLowerPriorityResponse postRealmAuthenticationExecutionsExecutionIdLowerPriority(org.openapis.openapi.models.operations.PostRealmAuthenticationExecutionsExecutionIdLowerPriorityRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmAuthenticationExecutionsExecutionIdLowerPriorityPathParams.class, baseUrl, "/{realm}/authentication/executions/{executionId}/lower-priority", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmAuthenticationExecutionsExecutionIdLowerPriorityRequest.class, baseUrl, "/{realm}/authentication/executions/{executionId}/lower-priority", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -814,7 +814,7 @@ public class AuthenticationManagement {
      */
     public org.openapis.openapi.models.operations.PostRealmAuthenticationExecutionsExecutionIdRaisePriorityResponse postRealmAuthenticationExecutionsExecutionIdRaisePriority(org.openapis.openapi.models.operations.PostRealmAuthenticationExecutionsExecutionIdRaisePriorityRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmAuthenticationExecutionsExecutionIdRaisePriorityPathParams.class, baseUrl, "/{realm}/authentication/executions/{executionId}/raise-priority", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmAuthenticationExecutionsExecutionIdRaisePriorityRequest.class, baseUrl, "/{realm}/authentication/executions/{executionId}/raise-priority", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -847,12 +847,12 @@ public class AuthenticationManagement {
      */
     public org.openapis.openapi.models.operations.PostRealmAuthenticationFlowsResponse postRealmAuthenticationFlows(org.openapis.openapi.models.operations.PostRealmAuthenticationFlowsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmAuthenticationFlowsPathParams.class, baseUrl, "/{realm}/authentication/flows", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmAuthenticationFlowsRequest.class, baseUrl, "/{realm}/authentication/flows", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "authenticationFlowRepresentation", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -885,12 +885,12 @@ public class AuthenticationManagement {
      */
     public org.openapis.openapi.models.operations.PostRealmAuthenticationFlowsFlowAliasCopyResponse postRealmAuthenticationFlowsFlowAliasCopy(org.openapis.openapi.models.operations.PostRealmAuthenticationFlowsFlowAliasCopyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmAuthenticationFlowsFlowAliasCopyPathParams.class, baseUrl, "/{realm}/authentication/flows/{flowAlias}/copy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmAuthenticationFlowsFlowAliasCopyRequest.class, baseUrl, "/{realm}/authentication/flows/{flowAlias}/copy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -923,12 +923,12 @@ public class AuthenticationManagement {
      */
     public org.openapis.openapi.models.operations.PostRealmAuthenticationFlowsFlowAliasExecutionsExecutionResponse postRealmAuthenticationFlowsFlowAliasExecutionsExecution(org.openapis.openapi.models.operations.PostRealmAuthenticationFlowsFlowAliasExecutionsExecutionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmAuthenticationFlowsFlowAliasExecutionsExecutionPathParams.class, baseUrl, "/{realm}/authentication/flows/{flowAlias}/executions/execution", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmAuthenticationFlowsFlowAliasExecutionsExecutionRequest.class, baseUrl, "/{realm}/authentication/flows/{flowAlias}/executions/execution", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -961,12 +961,12 @@ public class AuthenticationManagement {
      */
     public org.openapis.openapi.models.operations.PostRealmAuthenticationFlowsFlowAliasExecutionsFlowResponse postRealmAuthenticationFlowsFlowAliasExecutionsFlow(org.openapis.openapi.models.operations.PostRealmAuthenticationFlowsFlowAliasExecutionsFlowRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmAuthenticationFlowsFlowAliasExecutionsFlowPathParams.class, baseUrl, "/{realm}/authentication/flows/{flowAlias}/executions/flow", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmAuthenticationFlowsFlowAliasExecutionsFlowRequest.class, baseUrl, "/{realm}/authentication/flows/{flowAlias}/executions/flow", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -999,12 +999,12 @@ public class AuthenticationManagement {
      */
     public org.openapis.openapi.models.operations.PostRealmAuthenticationRegisterRequiredActionResponse postRealmAuthenticationRegisterRequiredAction(org.openapis.openapi.models.operations.PostRealmAuthenticationRegisterRequiredActionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmAuthenticationRegisterRequiredActionPathParams.class, baseUrl, "/{realm}/authentication/register-required-action", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmAuthenticationRegisterRequiredActionRequest.class, baseUrl, "/{realm}/authentication/register-required-action", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1037,7 +1037,7 @@ public class AuthenticationManagement {
      */
     public org.openapis.openapi.models.operations.PostRealmAuthenticationRequiredActionsAliasLowerPriorityResponse postRealmAuthenticationRequiredActionsAliasLowerPriority(org.openapis.openapi.models.operations.PostRealmAuthenticationRequiredActionsAliasLowerPriorityRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmAuthenticationRequiredActionsAliasLowerPriorityPathParams.class, baseUrl, "/{realm}/authentication/required-actions/{alias}/lower-priority", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmAuthenticationRequiredActionsAliasLowerPriorityRequest.class, baseUrl, "/{realm}/authentication/required-actions/{alias}/lower-priority", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -1070,7 +1070,7 @@ public class AuthenticationManagement {
      */
     public org.openapis.openapi.models.operations.PostRealmAuthenticationRequiredActionsAliasRaisePriorityResponse postRealmAuthenticationRequiredActionsAliasRaisePriority(org.openapis.openapi.models.operations.PostRealmAuthenticationRequiredActionsAliasRaisePriorityRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmAuthenticationRequiredActionsAliasRaisePriorityPathParams.class, baseUrl, "/{realm}/authentication/required-actions/{alias}/raise-priority", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmAuthenticationRequiredActionsAliasRaisePriorityRequest.class, baseUrl, "/{realm}/authentication/required-actions/{alias}/raise-priority", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -1103,12 +1103,12 @@ public class AuthenticationManagement {
      */
     public org.openapis.openapi.models.operations.PutRealmAuthenticationConfigIdResponse putRealmAuthenticationConfigId(org.openapis.openapi.models.operations.PutRealmAuthenticationConfigIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmAuthenticationConfigIdPathParams.class, baseUrl, "/{realm}/authentication/config/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmAuthenticationConfigIdRequest.class, baseUrl, "/{realm}/authentication/config/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "authenticatorConfigRepresentation", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1141,12 +1141,12 @@ public class AuthenticationManagement {
      */
     public org.openapis.openapi.models.operations.PutRealmAuthenticationFlowsFlowAliasExecutionsResponse putRealmAuthenticationFlowsFlowAliasExecutions(org.openapis.openapi.models.operations.PutRealmAuthenticationFlowsFlowAliasExecutionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmAuthenticationFlowsFlowAliasExecutionsPathParams.class, baseUrl, "/{realm}/authentication/flows/{flowAlias}/executions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmAuthenticationFlowsFlowAliasExecutionsRequest.class, baseUrl, "/{realm}/authentication/flows/{flowAlias}/executions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "authenticationExecutionInfoRepresentation", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1179,12 +1179,12 @@ public class AuthenticationManagement {
      */
     public org.openapis.openapi.models.operations.PutRealmAuthenticationFlowsIdResponse putRealmAuthenticationFlowsId(org.openapis.openapi.models.operations.PutRealmAuthenticationFlowsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmAuthenticationFlowsIdPathParams.class, baseUrl, "/{realm}/authentication/flows/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmAuthenticationFlowsIdRequest.class, baseUrl, "/{realm}/authentication/flows/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "authenticationFlowRepresentation", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1217,12 +1217,12 @@ public class AuthenticationManagement {
      */
     public org.openapis.openapi.models.operations.PutRealmAuthenticationRequiredActionsAliasResponse putRealmAuthenticationRequiredActionsAlias(org.openapis.openapi.models.operations.PutRealmAuthenticationRequiredActionsAliasRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmAuthenticationRequiredActionsAliasPathParams.class, baseUrl, "/{realm}/authentication/required-actions/{alias}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmAuthenticationRequiredActionsAliasRequest.class, baseUrl, "/{realm}/authentication/required-actions/{alias}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requiredActionProviderRepresentation", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

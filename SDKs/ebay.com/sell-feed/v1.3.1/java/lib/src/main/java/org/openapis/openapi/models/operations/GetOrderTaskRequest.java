@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrderTaskRequest {
-    
-    public GetOrderTaskPathParams pathParams;
-    public GetOrderTaskRequest withPathParams(GetOrderTaskPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetOrderTaskSecurity security;
-    public GetOrderTaskRequest withSecurity(GetOrderTaskSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the task. This ID is generated when the task was created by the &lt;b&gt; createOrderTask&lt;/b&gt; method.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=task_id")
+    public String taskId;
+    public GetOrderTaskRequest withTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
     

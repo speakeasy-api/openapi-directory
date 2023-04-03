@@ -4,20 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest {
-    
-    public DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugPathParams pathParams;
-    public DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest withPathParams(DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Slug of the requested group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_slug")
+    public String groupSlug;
+    public DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest withGroupSlug(String groupSlug) {
+        this.groupSlug = groupSlug;
         return this;
     }
     
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
     
-    public DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugSecurity security;
-    public DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest withSecurity(DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

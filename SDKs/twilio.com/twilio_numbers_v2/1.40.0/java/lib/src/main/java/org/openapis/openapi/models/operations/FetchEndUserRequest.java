@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchEndUserRequest {
-    
-    public FetchEndUserPathParams pathParams;
-    public FetchEndUserRequest withPathParams(FetchEndUserPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchEndUserSecurity security;
-    public FetchEndUserRequest withSecurity(FetchEndUserSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchEndUserRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique string created by Twilio to identify the End User resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchEndUserRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

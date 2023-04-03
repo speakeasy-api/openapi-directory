@@ -38,12 +38,12 @@ public class IntegrationLinks {
      */
     public org.openapis.openapi.models.operations.AddOrUpdateIntegrationLinkResponse addOrUpdateIntegrationLink(org.openapis.openapi.models.operations.AddOrUpdateIntegrationLinkRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddOrUpdateIntegrationLinkPathParams.class, baseUrl, "/v1/environments/{environmentId}/settings/{settingId}/integrationLinks/{integrationLinkType}/{key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddOrUpdateIntegrationLinkRequest.class, baseUrl, "/v1/environments/{environmentId}/settings/{settingId}/integrationLinks/{integrationLinkType}/{key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "addOrUpdateIntegrationLinkModel", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -87,7 +87,7 @@ public class IntegrationLinks {
      */
     public org.openapis.openapi.models.operations.DeleteIntegrationLinkResponse deleteIntegrationLink(org.openapis.openapi.models.operations.DeleteIntegrationLinkRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteIntegrationLinkPathParams.class, baseUrl, "/v1/environments/{environmentId}/settings/{settingId}/integrationLinks/{integrationLinkType}/{key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteIntegrationLinkRequest.class, baseUrl, "/v1/environments/{environmentId}/settings/{settingId}/integrationLinks/{integrationLinkType}/{key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -134,7 +134,7 @@ public class IntegrationLinks {
      */
     public org.openapis.openapi.models.operations.GetIntegrationLinkDetailsResponse getIntegrationLinkDetails(org.openapis.openapi.models.operations.GetIntegrationLinkDetailsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIntegrationLinkDetailsPathParams.class, baseUrl, "/v1/integrationLink/{integrationLinkType}/{key}/details", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIntegrationLinkDetailsRequest.class, baseUrl, "/v1/integrationLink/{integrationLinkType}/{key}/details", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -175,12 +175,12 @@ public class IntegrationLinks {
 
     public org.openapis.openapi.models.operations.JiraAddOrUpdateIntegrationLinkResponse jiraAddOrUpdateIntegrationLink(org.openapis.openapi.models.operations.JiraAddOrUpdateIntegrationLinkRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JiraAddOrUpdateIntegrationLinkPathParams.class, baseUrl, "/v1/jira/environments/{environmentId}/settings/{settingId}/integrationLinks/{key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JiraAddOrUpdateIntegrationLinkRequest.class, baseUrl, "/v1/jira/environments/{environmentId}/settings/{settingId}/integrationLinks/{key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "addOrUpdateJiraIntegrationLinkModel", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -216,7 +216,7 @@ public class IntegrationLinks {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PostV1JiraConnectResponse postV1JiraConnect(org.openapis.openapi.models.operations.PostV1JiraConnectRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV1JiraConnectResponse postV1JiraConnect(org.openapis.openapi.models.shared.ConnectRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/jira/Connect");
         

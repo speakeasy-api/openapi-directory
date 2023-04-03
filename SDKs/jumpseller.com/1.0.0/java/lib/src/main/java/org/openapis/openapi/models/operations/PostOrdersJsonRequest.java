@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostOrdersJsonRequest {
-    
-    public PostOrdersJsonQueryParams queryParams;
-    public PostOrdersJsonRequest withQueryParams(PostOrdersJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Order parameters.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.OrderCreate request;
-    public PostOrdersJsonRequest withRequest(org.openapis.openapi.models.shared.OrderCreate request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.OrderCreate orderCreate;
+    public PostOrdersJsonRequest withOrderCreate(org.openapis.openapi.models.shared.OrderCreate orderCreate) {
+        this.orderCreate = orderCreate;
+        return this;
+    }
+    
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public PostOrdersJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
+        return this;
+    }
+    
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public PostOrdersJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

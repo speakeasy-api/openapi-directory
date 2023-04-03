@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesSpaceIdDocumentsDocumentIdExtendRequest {
-    
-    public PostSpacesSpaceIdDocumentsDocumentIdExtendPathParams pathParams;
-    public PostSpacesSpaceIdDocumentsDocumentIdExtendRequest withPathParams(PostSpacesSpaceIdDocumentsDocumentIdExtendPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public PostSpacesSpaceIdDocumentsDocumentIdExtendRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public PostSpacesSpaceIdDocumentsDocumentIdExtendRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Id of the document
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=documentId")
+    public String documentId;
+    public PostSpacesSpaceIdDocumentsDocumentIdExtendRequest withDocumentId(String documentId) {
+        this.documentId = documentId;
+        return this;
+    }
     
-    public PostSpacesSpaceIdDocumentsDocumentIdExtendSecurity security;
-    public PostSpacesSpaceIdDocumentsDocumentIdExtendRequest withSecurity(PostSpacesSpaceIdDocumentsDocumentIdExtendSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PostSpacesSpaceIdDocumentsDocumentIdExtendRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

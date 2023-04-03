@@ -35,19 +35,20 @@ public class Campaigns {
      * Delete a specific sound
      * Deletes a single campaign sound instance for a specific campaign sound id, this operation does not delete sound completely, it sets sound status to ARCHIVED which means that sound will no longer appear in 'find' operation results, but still accessible via 'get' operation
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteCampaignSoundResponse deleteCampaignSound(org.openapis.openapi.models.operations.DeleteCampaignSoundRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteCampaignSoundResponse deleteCampaignSound(org.openapis.openapi.models.operations.DeleteCampaignSoundRequest request, org.openapis.openapi.models.operations.DeleteCampaignSoundSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCampaignSoundPathParams.class, baseUrl, "/campaigns/sounds/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCampaignSoundRequest.class, baseUrl, "/campaigns/sounds/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -75,10 +76,11 @@ public class Campaigns {
      * Find sounds
      * To find all campaign sounds which were created by user. Returns all sounds available to be used in campaigns
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindCampaignSoundsResponse findCampaignSounds(org.openapis.openapi.models.operations.FindCampaignSoundsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FindCampaignSoundsResponse findCampaignSounds(org.openapis.openapi.models.operations.FindCampaignSoundsRequest request, org.openapis.openapi.models.operations.FindCampaignSoundsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/campaigns/sounds");
         
@@ -86,14 +88,14 @@ public class Campaigns {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindCampaignSoundsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindCampaignSoundsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -129,25 +131,26 @@ public class Campaigns {
      * Find a specific batch
      * Returns a single Batch instance for a given batch id. This API is useful for determining the state of a validating batch
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCampaignBatchResponse getCampaignBatch(org.openapis.openapi.models.operations.GetCampaignBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCampaignBatchResponse getCampaignBatch(org.openapis.openapi.models.operations.GetCampaignBatchRequest request, org.openapis.openapi.models.operations.GetCampaignBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCampaignBatchPathParams.class, baseUrl, "/campaigns/batches/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCampaignBatchRequest.class, baseUrl, "/campaigns/batches/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCampaignBatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCampaignBatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -183,25 +186,26 @@ public class Campaigns {
      * Find a specific sound
      * Returns a single CampaignSound instance for a given sound id in campaign. This is a meta data to the sounds. No audio data is returned from this API
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCampaignSoundResponse getCampaignSound(org.openapis.openapi.models.operations.GetCampaignSoundRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCampaignSoundResponse getCampaignSound(org.openapis.openapi.models.operations.GetCampaignSoundRequest request, org.openapis.openapi.models.operations.GetCampaignSoundSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCampaignSoundPathParams.class, baseUrl, "/campaigns/sounds/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCampaignSoundRequest.class, baseUrl, "/campaigns/sounds/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCampaignSoundQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCampaignSoundRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -237,19 +241,20 @@ public class Campaigns {
      * Download a MP3 sound
      * Download the MP3 version of a hosted file. This is an audio data endpoint. Returns binary response of the 'audio/mpeg' content type
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCampaignSoundDataMp3Response getCampaignSoundDataMp3(org.openapis.openapi.models.operations.GetCampaignSoundDataMp3Request request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCampaignSoundDataMp3Response getCampaignSoundDataMp3(org.openapis.openapi.models.operations.GetCampaignSoundDataMp3Request request, org.openapis.openapi.models.operations.GetCampaignSoundDataMp3Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCampaignSoundDataMp3PathParams.class, baseUrl, "/campaigns/sounds/{id}.mp3", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCampaignSoundDataMp3Request.class, baseUrl, "/campaigns/sounds/{id}.mp3", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -276,19 +281,20 @@ public class Campaigns {
      * Download a WAV sound
      * Download the WAV version of the hosted file. This is an audio data endpoint. Returns binary response of the 'audio/mpeg' content type
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCampaignSoundDataWavResponse getCampaignSoundDataWav(org.openapis.openapi.models.operations.GetCampaignSoundDataWavRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCampaignSoundDataWavResponse getCampaignSoundDataWav(org.openapis.openapi.models.operations.GetCampaignSoundDataWavRequest request, org.openapis.openapi.models.operations.GetCampaignSoundDataWavSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCampaignSoundDataWavPathParams.class, baseUrl, "/campaigns/sounds/{id}.wav", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCampaignSoundDataWavRequest.class, baseUrl, "/campaigns/sounds/{id}.wav", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -315,27 +321,28 @@ public class Campaigns {
      * Add sound via call
      * Use this API to create a sound via a phone call. Provide the required phone number in the CallCreateSound object inside the request, and user will receive a call shortly after with instructions on how to record a sound over the phone.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostCallCampaignSoundResponse postCallCampaignSound(org.openapis.openapi.models.operations.PostCallCampaignSoundRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostCallCampaignSoundResponse postCallCampaignSound(org.openapis.openapi.models.operations.PostCallCampaignSoundRequest request, org.openapis.openapi.models.operations.PostCallCampaignSoundSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/campaigns/sounds/calls");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "callCreateSound", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostCallCampaignSoundQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostCallCampaignSoundRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -371,30 +378,31 @@ public class Campaigns {
      * Add sound via file
      * Create a campaign sound file via a supplied .mp3 or .wav file
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostFileCampaignSoundResponse postFileCampaignSound(org.openapis.openapi.models.operations.PostFileCampaignSoundRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostFileCampaignSoundResponse postFileCampaignSound(org.openapis.openapi.models.operations.PostFileCampaignSoundRequest request, org.openapis.openapi.models.operations.PostFileCampaignSoundSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/campaigns/sounds/files");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostFileCampaignSoundQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostFileCampaignSoundRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -430,27 +438,28 @@ public class Campaigns {
      * Add sound via text-to-speech
      * Use this API to create a sound file via a supplied string of text. Add a text in the TextToSpeech.message field, and pick a voice in the TextToSpeech.voice field. Available voices are: MALE1, FEMALE1, FEMALE2, SPANISH1, FRENCHCANADIAN1
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostTTSCampaignSoundResponse postTTSCampaignSound(org.openapis.openapi.models.operations.PostTTSCampaignSoundRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostTTSCampaignSoundResponse postTTSCampaignSound(org.openapis.openapi.models.operations.PostTTSCampaignSoundRequest request, org.openapis.openapi.models.operations.PostTTSCampaignSoundSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/campaigns/sounds/tts");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "textToSpeech", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostTTSCampaignSoundQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostTTSCampaignSoundRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -486,21 +495,22 @@ public class Campaigns {
      * Update a batch
      * Updates a single Batch instance, currently batch can only be turned "on/off"
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateCampaignBatchResponse updateCampaignBatch(org.openapis.openapi.models.operations.UpdateCampaignBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateCampaignBatchResponse updateCampaignBatch(org.openapis.openapi.models.operations.UpdateCampaignBatchRequest request, org.openapis.openapi.models.operations.UpdateCampaignBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCampaignBatchPathParams.class, baseUrl, "/campaigns/batches/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCampaignBatchRequest.class, baseUrl, "/campaigns/batches/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "batchInput", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -7,24 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateProductSlugRequest {
-    
-    public CreateProductSlugPathParams pathParams;
-    public CreateProductSlugRequest withPathParams(CreateProductSlugPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateSlugRequest request;
-    public CreateProductSlugRequest withRequest(org.openapis.openapi.models.shared.CreateSlugRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CreateSlugRequest createSlugRequest;
+    public CreateProductSlugRequest withCreateSlugRequest(org.openapis.openapi.models.shared.CreateSlugRequest createSlugRequest) {
+        this.createSlugRequest = createSlugRequest;
         return this;
     }
     
-    
-    public CreateProductSlugSecurity security;
-    public CreateProductSlugRequest withSecurity(CreateProductSlugSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationUuid")
+    public String organizationUuid;
+    public CreateProductSlugRequest withOrganizationUuid(String organizationUuid) {
+        this.organizationUuid = organizationUuid;
         return this;
     }
     

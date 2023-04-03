@@ -41,12 +41,12 @@ public class Camera {
      */
     public org.openapis.openapi.models.operations.CreateNetworkCameraQualityRetentionProfileResponse createNetworkCameraQualityRetentionProfile(org.openapis.openapi.models.operations.CreateNetworkCameraQualityRetentionProfileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkCameraQualityRetentionProfilePathParams.class, baseUrl, "/networks/{networkId}/camera/qualityRetentionProfiles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkCameraQualityRetentionProfileRequest.class, baseUrl, "/networks/{networkId}/camera/qualityRetentionProfiles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -86,12 +86,12 @@ public class Camera {
      */
     public org.openapis.openapi.models.operations.CreateNetworkCameraWirelessProfileResponse createNetworkCameraWirelessProfile(org.openapis.openapi.models.operations.CreateNetworkCameraWirelessProfileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkCameraWirelessProfilePathParams.class, baseUrl, "/networks/{networkId}/camera/wirelessProfiles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkCameraWirelessProfileRequest.class, baseUrl, "/networks/{networkId}/camera/wirelessProfiles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -131,12 +131,12 @@ public class Camera {
      */
     public org.openapis.openapi.models.operations.CreateOrganizationCameraCustomAnalyticsArtifactResponse createOrganizationCameraCustomAnalyticsArtifact(org.openapis.openapi.models.operations.CreateOrganizationCameraCustomAnalyticsArtifactRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationCameraCustomAnalyticsArtifactPathParams.class, baseUrl, "/organizations/{organizationId}/camera/customAnalytics/artifacts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationCameraCustomAnalyticsArtifactRequest.class, baseUrl, "/organizations/{organizationId}/camera/customAnalytics/artifacts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -173,7 +173,7 @@ public class Camera {
      */
     public org.openapis.openapi.models.operations.DeleteNetworkCameraQualityRetentionProfileResponse deleteNetworkCameraQualityRetentionProfile(org.openapis.openapi.models.operations.DeleteNetworkCameraQualityRetentionProfileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkCameraQualityRetentionProfilePathParams.class, baseUrl, "/networks/{networkId}/camera/qualityRetentionProfiles/{qualityRetentionProfileId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkCameraQualityRetentionProfileRequest.class, baseUrl, "/networks/{networkId}/camera/qualityRetentionProfiles/{qualityRetentionProfileId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -207,7 +207,7 @@ public class Camera {
      */
     public org.openapis.openapi.models.operations.DeleteNetworkCameraWirelessProfileResponse deleteNetworkCameraWirelessProfile(org.openapis.openapi.models.operations.DeleteNetworkCameraWirelessProfileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkCameraWirelessProfilePathParams.class, baseUrl, "/networks/{networkId}/camera/wirelessProfiles/{wirelessProfileId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkCameraWirelessProfileRequest.class, baseUrl, "/networks/{networkId}/camera/wirelessProfiles/{wirelessProfileId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -241,7 +241,7 @@ public class Camera {
      */
     public org.openapis.openapi.models.operations.DeleteOrganizationCameraCustomAnalyticsArtifactResponse deleteOrganizationCameraCustomAnalyticsArtifact(org.openapis.openapi.models.operations.DeleteOrganizationCameraCustomAnalyticsArtifactRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationCameraCustomAnalyticsArtifactPathParams.class, baseUrl, "/organizations/{organizationId}/camera/customAnalytics/artifacts/{artifactId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationCameraCustomAnalyticsArtifactRequest.class, baseUrl, "/organizations/{organizationId}/camera/customAnalytics/artifacts/{artifactId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -275,12 +275,12 @@ public class Camera {
      */
     public org.openapis.openapi.models.operations.GenerateDeviceCameraSnapshotResponse generateDeviceCameraSnapshot(org.openapis.openapi.models.operations.GenerateDeviceCameraSnapshotRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GenerateDeviceCameraSnapshotPathParams.class, baseUrl, "/devices/{serial}/camera/generateSnapshot", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GenerateDeviceCameraSnapshotRequest.class, baseUrl, "/devices/{serial}/camera/generateSnapshot", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -317,7 +317,7 @@ public class Camera {
      */
     public org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsLiveResponse getDeviceCameraAnalyticsLive(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsLiveRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsLivePathParams.class, baseUrl, "/devices/{serial}/camera/analytics/live", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsLiveRequest.class, baseUrl, "/devices/{serial}/camera/analytics/live", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -357,13 +357,13 @@ public class Camera {
      */
     public org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsOverviewResponse getDeviceCameraAnalyticsOverview(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsOverviewRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsOverviewPathParams.class, baseUrl, "/devices/{serial}/camera/analytics/overview", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsOverviewRequest.class, baseUrl, "/devices/{serial}/camera/analytics/overview", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsOverviewQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsOverviewRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -403,13 +403,13 @@ public class Camera {
      */
     public org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsRecentResponse getDeviceCameraAnalyticsRecent(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsRecentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsRecentPathParams.class, baseUrl, "/devices/{serial}/camera/analytics/recent", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsRecentRequest.class, baseUrl, "/devices/{serial}/camera/analytics/recent", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsRecentQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsRecentRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -449,13 +449,13 @@ public class Camera {
      */
     public org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsZoneHistoryResponse getDeviceCameraAnalyticsZoneHistory(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsZoneHistoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsZoneHistoryPathParams.class, baseUrl, "/devices/{serial}/camera/analytics/zones/{zoneId}/history", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsZoneHistoryRequest.class, baseUrl, "/devices/{serial}/camera/analytics/zones/{zoneId}/history", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsZoneHistoryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsZoneHistoryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -495,7 +495,7 @@ public class Camera {
      */
     public org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsZonesResponse getDeviceCameraAnalyticsZones(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsZonesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsZonesPathParams.class, baseUrl, "/devices/{serial}/camera/analytics/zones", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsZonesRequest.class, baseUrl, "/devices/{serial}/camera/analytics/zones", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -535,7 +535,7 @@ public class Camera {
      */
     public org.openapis.openapi.models.operations.GetDeviceCameraCustomAnalyticsResponse getDeviceCameraCustomAnalytics(org.openapis.openapi.models.operations.GetDeviceCameraCustomAnalyticsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraCustomAnalyticsPathParams.class, baseUrl, "/devices/{serial}/camera/customAnalytics", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraCustomAnalyticsRequest.class, baseUrl, "/devices/{serial}/camera/customAnalytics", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -575,7 +575,7 @@ public class Camera {
      */
     public org.openapis.openapi.models.operations.GetDeviceCameraQualityAndRetentionResponse getDeviceCameraQualityAndRetention(org.openapis.openapi.models.operations.GetDeviceCameraQualityAndRetentionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraQualityAndRetentionPathParams.class, baseUrl, "/devices/{serial}/camera/qualityAndRetention", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraQualityAndRetentionRequest.class, baseUrl, "/devices/{serial}/camera/qualityAndRetention", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -615,7 +615,7 @@ public class Camera {
      */
     public org.openapis.openapi.models.operations.GetDeviceCameraSenseResponse getDeviceCameraSense(org.openapis.openapi.models.operations.GetDeviceCameraSenseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraSensePathParams.class, baseUrl, "/devices/{serial}/camera/sense", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraSenseRequest.class, baseUrl, "/devices/{serial}/camera/sense", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -655,7 +655,7 @@ public class Camera {
      */
     public org.openapis.openapi.models.operations.GetDeviceCameraSenseObjectDetectionModelsResponse getDeviceCameraSenseObjectDetectionModels(org.openapis.openapi.models.operations.GetDeviceCameraSenseObjectDetectionModelsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraSenseObjectDetectionModelsPathParams.class, baseUrl, "/devices/{serial}/camera/sense/objectDetectionModels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraSenseObjectDetectionModelsRequest.class, baseUrl, "/devices/{serial}/camera/sense/objectDetectionModels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -695,13 +695,13 @@ public class Camera {
      */
     public org.openapis.openapi.models.operations.GetDeviceCameraVideoLinkResponse getDeviceCameraVideoLink(org.openapis.openapi.models.operations.GetDeviceCameraVideoLinkRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraVideoLinkPathParams.class, baseUrl, "/devices/{serial}/camera/videoLink", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraVideoLinkRequest.class, baseUrl, "/devices/{serial}/camera/videoLink", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceCameraVideoLinkQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceCameraVideoLinkRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -741,7 +741,7 @@ public class Camera {
      */
     public org.openapis.openapi.models.operations.GetDeviceCameraVideoSettingsResponse getDeviceCameraVideoSettings(org.openapis.openapi.models.operations.GetDeviceCameraVideoSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraVideoSettingsPathParams.class, baseUrl, "/devices/{serial}/camera/video/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraVideoSettingsRequest.class, baseUrl, "/devices/{serial}/camera/video/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -781,7 +781,7 @@ public class Camera {
      */
     public org.openapis.openapi.models.operations.GetDeviceCameraWirelessProfilesResponse getDeviceCameraWirelessProfiles(org.openapis.openapi.models.operations.GetDeviceCameraWirelessProfilesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraWirelessProfilesPathParams.class, baseUrl, "/devices/{serial}/camera/wirelessProfiles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraWirelessProfilesRequest.class, baseUrl, "/devices/{serial}/camera/wirelessProfiles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -821,7 +821,7 @@ public class Camera {
      */
     public org.openapis.openapi.models.operations.GetNetworkCameraQualityRetentionProfileResponse getNetworkCameraQualityRetentionProfile(org.openapis.openapi.models.operations.GetNetworkCameraQualityRetentionProfileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkCameraQualityRetentionProfilePathParams.class, baseUrl, "/networks/{networkId}/camera/qualityRetentionProfiles/{qualityRetentionProfileId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkCameraQualityRetentionProfileRequest.class, baseUrl, "/networks/{networkId}/camera/qualityRetentionProfiles/{qualityRetentionProfileId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -861,7 +861,7 @@ public class Camera {
      */
     public org.openapis.openapi.models.operations.GetNetworkCameraQualityRetentionProfilesResponse getNetworkCameraQualityRetentionProfiles(org.openapis.openapi.models.operations.GetNetworkCameraQualityRetentionProfilesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkCameraQualityRetentionProfilesPathParams.class, baseUrl, "/networks/{networkId}/camera/qualityRetentionProfiles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkCameraQualityRetentionProfilesRequest.class, baseUrl, "/networks/{networkId}/camera/qualityRetentionProfiles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -901,7 +901,7 @@ public class Camera {
      */
     public org.openapis.openapi.models.operations.GetNetworkCameraSchedulesResponse getNetworkCameraSchedules(org.openapis.openapi.models.operations.GetNetworkCameraSchedulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkCameraSchedulesPathParams.class, baseUrl, "/networks/{networkId}/camera/schedules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkCameraSchedulesRequest.class, baseUrl, "/networks/{networkId}/camera/schedules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -941,7 +941,7 @@ public class Camera {
      */
     public org.openapis.openapi.models.operations.GetNetworkCameraWirelessProfileResponse getNetworkCameraWirelessProfile(org.openapis.openapi.models.operations.GetNetworkCameraWirelessProfileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkCameraWirelessProfilePathParams.class, baseUrl, "/networks/{networkId}/camera/wirelessProfiles/{wirelessProfileId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkCameraWirelessProfileRequest.class, baseUrl, "/networks/{networkId}/camera/wirelessProfiles/{wirelessProfileId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -981,7 +981,7 @@ public class Camera {
      */
     public org.openapis.openapi.models.operations.GetNetworkCameraWirelessProfilesResponse getNetworkCameraWirelessProfiles(org.openapis.openapi.models.operations.GetNetworkCameraWirelessProfilesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkCameraWirelessProfilesPathParams.class, baseUrl, "/networks/{networkId}/camera/wirelessProfiles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkCameraWirelessProfilesRequest.class, baseUrl, "/networks/{networkId}/camera/wirelessProfiles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1021,7 +1021,7 @@ public class Camera {
      */
     public org.openapis.openapi.models.operations.GetOrganizationCameraCustomAnalyticsArtifactResponse getOrganizationCameraCustomAnalyticsArtifact(org.openapis.openapi.models.operations.GetOrganizationCameraCustomAnalyticsArtifactRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationCameraCustomAnalyticsArtifactPathParams.class, baseUrl, "/organizations/{organizationId}/camera/customAnalytics/artifacts/{artifactId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationCameraCustomAnalyticsArtifactRequest.class, baseUrl, "/organizations/{organizationId}/camera/customAnalytics/artifacts/{artifactId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1061,7 +1061,7 @@ public class Camera {
      */
     public org.openapis.openapi.models.operations.GetOrganizationCameraCustomAnalyticsArtifactsResponse getOrganizationCameraCustomAnalyticsArtifacts(org.openapis.openapi.models.operations.GetOrganizationCameraCustomAnalyticsArtifactsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationCameraCustomAnalyticsArtifactsPathParams.class, baseUrl, "/organizations/{organizationId}/camera/customAnalytics/artifacts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationCameraCustomAnalyticsArtifactsRequest.class, baseUrl, "/organizations/{organizationId}/camera/customAnalytics/artifacts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1101,13 +1101,13 @@ public class Camera {
      */
     public org.openapis.openapi.models.operations.GetOrganizationCameraOnboardingStatusesResponse getOrganizationCameraOnboardingStatuses(org.openapis.openapi.models.operations.GetOrganizationCameraOnboardingStatusesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationCameraOnboardingStatusesPathParams.class, baseUrl, "/organizations/{organizationId}/camera/onboarding/statuses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationCameraOnboardingStatusesRequest.class, baseUrl, "/organizations/{organizationId}/camera/onboarding/statuses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationCameraOnboardingStatusesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationCameraOnboardingStatusesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1147,12 +1147,12 @@ public class Camera {
      */
     public org.openapis.openapi.models.operations.UpdateDeviceCameraCustomAnalyticsResponse updateDeviceCameraCustomAnalytics(org.openapis.openapi.models.operations.UpdateDeviceCameraCustomAnalyticsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceCameraCustomAnalyticsPathParams.class, baseUrl, "/devices/{serial}/camera/customAnalytics", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceCameraCustomAnalyticsRequest.class, baseUrl, "/devices/{serial}/camera/customAnalytics", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1189,12 +1189,12 @@ public class Camera {
      */
     public org.openapis.openapi.models.operations.UpdateDeviceCameraQualityAndRetentionResponse updateDeviceCameraQualityAndRetention(org.openapis.openapi.models.operations.UpdateDeviceCameraQualityAndRetentionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceCameraQualityAndRetentionPathParams.class, baseUrl, "/devices/{serial}/camera/qualityAndRetention", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceCameraQualityAndRetentionRequest.class, baseUrl, "/devices/{serial}/camera/qualityAndRetention", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1231,12 +1231,12 @@ public class Camera {
      */
     public org.openapis.openapi.models.operations.UpdateDeviceCameraSenseResponse updateDeviceCameraSense(org.openapis.openapi.models.operations.UpdateDeviceCameraSenseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceCameraSensePathParams.class, baseUrl, "/devices/{serial}/camera/sense", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceCameraSenseRequest.class, baseUrl, "/devices/{serial}/camera/sense", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1273,12 +1273,12 @@ public class Camera {
      */
     public org.openapis.openapi.models.operations.UpdateDeviceCameraVideoSettingsResponse updateDeviceCameraVideoSettings(org.openapis.openapi.models.operations.UpdateDeviceCameraVideoSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceCameraVideoSettingsPathParams.class, baseUrl, "/devices/{serial}/camera/video/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceCameraVideoSettingsRequest.class, baseUrl, "/devices/{serial}/camera/video/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1315,12 +1315,12 @@ public class Camera {
      */
     public org.openapis.openapi.models.operations.UpdateDeviceCameraWirelessProfilesResponse updateDeviceCameraWirelessProfiles(org.openapis.openapi.models.operations.UpdateDeviceCameraWirelessProfilesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceCameraWirelessProfilesPathParams.class, baseUrl, "/devices/{serial}/camera/wirelessProfiles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceCameraWirelessProfilesRequest.class, baseUrl, "/devices/{serial}/camera/wirelessProfiles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1360,12 +1360,12 @@ public class Camera {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkCameraQualityRetentionProfileResponse updateNetworkCameraQualityRetentionProfile(org.openapis.openapi.models.operations.UpdateNetworkCameraQualityRetentionProfileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkCameraQualityRetentionProfilePathParams.class, baseUrl, "/networks/{networkId}/camera/qualityRetentionProfiles/{qualityRetentionProfileId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkCameraQualityRetentionProfileRequest.class, baseUrl, "/networks/{networkId}/camera/qualityRetentionProfiles/{qualityRetentionProfileId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1402,12 +1402,12 @@ public class Camera {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkCameraWirelessProfileResponse updateNetworkCameraWirelessProfile(org.openapis.openapi.models.operations.UpdateNetworkCameraWirelessProfileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkCameraWirelessProfilePathParams.class, baseUrl, "/networks/{networkId}/camera/wirelessProfiles/{wirelessProfileId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkCameraWirelessProfileRequest.class, baseUrl, "/networks/{networkId}/camera/wirelessProfiles/{wirelessProfileId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1444,12 +1444,12 @@ public class Camera {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationCameraOnboardingStatusesResponse updateOrganizationCameraOnboardingStatuses(org.openapis.openapi.models.operations.UpdateOrganizationCameraOnboardingStatusesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationCameraOnboardingStatusesPathParams.class, baseUrl, "/organizations/{organizationId}/camera/onboarding/statuses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationCameraOnboardingStatusesRequest.class, baseUrl, "/organizations/{organizationId}/camera/onboarding/statuses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

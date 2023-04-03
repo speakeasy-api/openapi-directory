@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateContinuousCheckRequest {
-    
-    public UpdateContinuousCheckPathParams pathParams;
-    public UpdateContinuousCheckRequest withPathParams(UpdateContinuousCheckPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.UpdateContinuousCheckInput request;
-    public UpdateContinuousCheckRequest withRequest(org.openapis.openapi.models.shared.UpdateContinuousCheckInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateContinuousCheckInput updateContinuousCheckInput;
+    public UpdateContinuousCheckRequest withUpdateContinuousCheckInput(org.openapis.openapi.models.shared.UpdateContinuousCheckInput updateContinuousCheckInput) {
+        this.updateContinuousCheckInput = updateContinuousCheckInput;
         return this;
     }
     
-    
-    public UpdateContinuousCheckSecurity security;
-    public UpdateContinuousCheckRequest withSecurity(UpdateContinuousCheckSecurity security) {
-        this.security = security;
+    /**
+     * ID resulting from calling CreateContinuousCheck
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=continuous_check_id")
+    public Double continuousCheckId;
+    public UpdateContinuousCheckRequest withContinuousCheckId(Double continuousCheckId) {
+        this.continuousCheckId = continuousCheckId;
         return this;
     }
     

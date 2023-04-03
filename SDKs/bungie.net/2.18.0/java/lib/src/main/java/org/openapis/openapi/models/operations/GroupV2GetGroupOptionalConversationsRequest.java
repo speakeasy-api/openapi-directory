@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupV2GetGroupOptionalConversationsRequest {
-    
-    public GroupV2GetGroupOptionalConversationsPathParams pathParams;
-    public GroupV2GetGroupOptionalConversationsRequest withPathParams(GroupV2GetGroupOptionalConversationsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Requested group's id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public Long groupId;
+    public GroupV2GetGroupOptionalConversationsRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
         return this;
     }
     

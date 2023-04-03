@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSuperfundRequest {
-    
-    public GetSuperfundPathParams pathParams;
-    public GetSuperfundRequest withPathParams(GetSuperfundPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Superfund id for single object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=SuperFundID")
+    public String superFundID;
+    public GetSuperfundRequest withSuperFundID(String superFundID) {
+        this.superFundID = superFundID;
         return this;
     }
     
-    
-    public GetSuperfundHeaders headers;
-    public GetSuperfundRequest withHeaders(GetSuperfundHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetSuperfundSecurity security;
-    public GetSuperfundRequest withSecurity(GetSuperfundSecurity security) {
-        this.security = security;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
+    public String xeroTenantId;
+    public GetSuperfundRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     

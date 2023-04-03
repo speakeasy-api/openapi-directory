@@ -5,10 +5,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.PostAssignTerminalsSecurity;
-import org.openapis.openapi.models.operations.PostAssignTerminalsRequest;
 import org.openapis.openapi.models.operations.PostAssignTerminalsResponse;
 import org.openapis.openapi.models.shared.AssignTerminalsRequest;
-import org.openapis.openapi.models.shared.SchemeAPIKeyAuth;
 
 public class Application {
     public static void main(String[] args) {
@@ -16,27 +14,22 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            PostAssignTerminalsRequest req = new PostAssignTerminalsRequest() {{
-                security = new PostAssignTerminalsSecurity() {{
-                    apiKeyAuth = new SchemeAPIKeyAuth() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+            org.openapis.openapi.models.shared.AssignTerminalsRequest req = new AssignTerminalsRequest() {{
+                companyAccount = "corrupti";
+                merchantAccount = "provident";
+                merchantInventory = false;
+                store = "distinctio";
+                terminals = new String[]{{
+                    add("unde"),
+                    add("nulla"),
+                    add("corrupti"),
+                    add("illum"),
                 }};
-                request = new AssignTerminalsRequest() {{
-                    companyAccount = "corrupti";
-                    merchantAccount = "provident";
-                    merchantInventory = false;
-                    store = "distinctio";
-                    terminals = new String[]{{
-                        add("unde"),
-                        add("nulla"),
-                        add("corrupti"),
-                        add("illum"),
-                    }};
-                }};
-            }};            
+            }}            
 
-            PostAssignTerminalsResponse res = sdk.general.postAssignTerminals(req);
+            PostAssignTerminalsResponse res = sdk.general.postAssignTerminals(req, new PostAssignTerminalsSecurity() {{
+                apiKeyAuth = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.assignTerminalsResponse.isPresent()) {
                 // handle response

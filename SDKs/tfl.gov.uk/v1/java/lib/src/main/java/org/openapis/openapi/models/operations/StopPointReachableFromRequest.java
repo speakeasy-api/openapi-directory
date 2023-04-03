@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopPointReachableFromRequest {
-    
-    public StopPointReachableFromPathParams pathParams;
-    public StopPointReachableFromRequest withPathParams(StopPointReachableFromPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id (station naptan code e.g. 940GZZLUASL, you can use /StopPoint/Search/{query} endpoint to find a stop point id from a station name) of the stop point to filter by
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public StopPointReachableFromRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * Line id of the line to filter by (e.g. victoria)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=lineId")
+    public String lineId;
+    public StopPointReachableFromRequest withLineId(String lineId) {
+        this.lineId = lineId;
+        return this;
+    }
     
-    public StopPointReachableFromQueryParams queryParams;
-    public StopPointReachableFromRequest withQueryParams(StopPointReachableFromQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A comma-separated list of service types to filter on. If not specified. Supported values: Regular, Night. Defaulted to 'Regular' if not specified
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceTypes")
+    public StopPointReachableFromServiceTypesEnum[] serviceTypes;
+    public StopPointReachableFromRequest withServiceTypes(StopPointReachableFromServiceTypesEnum[] serviceTypes) {
+        this.serviceTypes = serviceTypes;
         return this;
     }
     

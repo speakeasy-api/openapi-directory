@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExportSubmissionsReviewsAsCsvRequest {
-    
-    public ExportSubmissionsReviewsAsCsvPathParams pathParams;
-    public ExportSubmissionsReviewsAsCsvRequest withPathParams(ExportSubmissionsReviewsAsCsvPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the assignment
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assignment")
+    public String assignment;
+    public ExportSubmissionsReviewsAsCsvRequest withAssignment(String assignment) {
+        this.assignment = assignment;
         return this;
     }
     
-    
-    public ExportSubmissionsReviewsAsCsvSecurity security;
-    public ExportSubmissionsReviewsAsCsvRequest withSecurity(ExportSubmissionsReviewsAsCsvSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the class
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=class")
+    public String class_;
+    public ExportSubmissionsReviewsAsCsvRequest withClass(String class_) {
+        this.class_ = class_;
         return this;
     }
     

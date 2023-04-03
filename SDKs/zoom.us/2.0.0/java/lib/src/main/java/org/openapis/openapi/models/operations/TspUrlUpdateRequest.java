@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TspUrlUpdateRequest {
-    
-    public TspUrlUpdatePathParams pathParams;
-    public TspUrlUpdateRequest withPathParams(TspUrlUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Global dial-in URL of the user.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public TSPURLUpdateTSPGlobalDialInURLSetting request;
-    public TspUrlUpdateRequest withRequest(TSPURLUpdateTSPGlobalDialInURLSetting request) {
-        this.request = request;
+    public TSPURLUpdateTSPGlobalDialInURLSetting requestBody;
+    public TspUrlUpdateRequest withRequestBody(TSPURLUpdateTSPGlobalDialInURLSetting requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public TspUrlUpdateSecurity security;
-    public TspUrlUpdateRequest withSecurity(TspUrlUpdateSecurity security) {
-        this.security = security;
+    /**
+     * The userId or email address of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public TspUrlUpdateRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

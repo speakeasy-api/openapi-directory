@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgGetLabelRequest {
+    /**
+     * id of the label to get
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public OrgGetLabelRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
     
-    public OrgGetLabelPathParams pathParams;
-    public OrgGetLabelRequest withPathParams(OrgGetLabelPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * name of the organization
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public OrgGetLabelRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

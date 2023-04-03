@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateBundleRequest {
-    
-    public UpdateBundlePathParams pathParams;
-    public UpdateBundleRequest withPathParams(UpdateBundlePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/vnd.api+json")
+    public org.openapis.openapi.models.shared.UpdateBundleRequest updateBundleRequest;
+    public UpdateBundleRequest withUpdateBundleRequest(org.openapis.openapi.models.shared.UpdateBundleRequest updateBundleRequest) {
+        this.updateBundleRequest = updateBundleRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/vnd.api+json")
-    public org.openapis.openapi.models.shared.UpdateBundleRequest request;
-    public UpdateBundleRequest withRequest(org.openapis.openapi.models.shared.UpdateBundleRequest request) {
-        this.request = request;
+    /**
+     * Bundle identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UpdateBundleRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

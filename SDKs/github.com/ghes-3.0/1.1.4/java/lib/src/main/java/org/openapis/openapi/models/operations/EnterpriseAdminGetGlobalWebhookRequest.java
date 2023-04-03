@@ -4,20 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminGetGlobalWebhookRequest {
-    
-    public EnterpriseAdminGetGlobalWebhookPathParams pathParams;
-    public EnterpriseAdminGetGlobalWebhookRequest withPathParams(EnterpriseAdminGetGlobalWebhookPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * This API is under preview and subject to change.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=accept")
+    public String accept;
+    public EnterpriseAdminGetGlobalWebhookRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public EnterpriseAdminGetGlobalWebhookHeaders headers;
-    public EnterpriseAdminGetGlobalWebhookRequest withHeaders(EnterpriseAdminGetGlobalWebhookHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hook_id")
+    public Long hookId;
+    public EnterpriseAdminGetGlobalWebhookRequest withHookId(Long hookId) {
+        this.hookId = hookId;
         return this;
     }
     

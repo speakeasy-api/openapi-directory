@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DataPointsPatchNotesRawRequest {
-    
-    public DataPointsPatchNotesRawPathParams pathParams;
-    public DataPointsPatchNotesRawRequest withPathParams(DataPointsPatchNotesRawPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Patch requests
      */
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public DataPointsPatchNotesRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public DataPointsPatchNotesRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Id of the datapoint
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DataPointsPatchNotesRawRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

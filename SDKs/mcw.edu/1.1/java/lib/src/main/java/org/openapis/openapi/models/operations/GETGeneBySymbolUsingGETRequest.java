@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGeneBySymbolUsingGETRequest {
+    /**
+     * Species type key.  A list of species type keys can be found in the lookup service
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=speciesTypeKey")
+    public Integer speciesTypeKey;
+    public GETGeneBySymbolUsingGETRequest withSpeciesTypeKey(Integer speciesTypeKey) {
+        this.speciesTypeKey = speciesTypeKey;
+        return this;
+    }
     
-    public GETGeneBySymbolUsingGETPathParams pathParams;
-    public GETGeneBySymbolUsingGETRequest withPathParams(GETGeneBySymbolUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Gene Symbol
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=symbol")
+    public String symbol;
+    public GETGeneBySymbolUsingGETRequest withSymbol(String symbol) {
+        this.symbol = symbol;
         return this;
     }
     

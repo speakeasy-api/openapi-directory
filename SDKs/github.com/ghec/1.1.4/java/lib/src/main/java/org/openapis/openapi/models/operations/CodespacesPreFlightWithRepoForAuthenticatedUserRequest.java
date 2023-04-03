@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodespacesPreFlightWithRepoForAuthenticatedUserRequest {
-    
-    public CodespacesPreFlightWithRepoForAuthenticatedUserPathParams pathParams;
-    public CodespacesPreFlightWithRepoForAuthenticatedUserRequest withPathParams(CodespacesPreFlightWithRepoForAuthenticatedUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * An alternative IP for default location auto-detection, such as when proxying a request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=client_ip")
+    public String clientIp;
+    public CodespacesPreFlightWithRepoForAuthenticatedUserRequest withClientIp(String clientIp) {
+        this.clientIp = clientIp;
         return this;
     }
     
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public CodespacesPreFlightWithRepoForAuthenticatedUserRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public CodespacesPreFlightWithRepoForAuthenticatedUserQueryParams queryParams;
-    public CodespacesPreFlightWithRepoForAuthenticatedUserRequest withQueryParams(CodespacesPreFlightWithRepoForAuthenticatedUserQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The branch or commit to check for a default devcontainer path. If not specified, the default branch will be checked.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ref")
+    public String ref;
+    public CodespacesPreFlightWithRepoForAuthenticatedUserRequest withRef(String ref) {
+        this.ref = ref;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public CodespacesPreFlightWithRepoForAuthenticatedUserRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

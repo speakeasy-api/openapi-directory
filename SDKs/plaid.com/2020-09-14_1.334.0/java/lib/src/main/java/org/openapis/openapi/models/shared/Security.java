@@ -7,23 +7,23 @@ package org.openapis.openapi.models.shared;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Security {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public SchemeClientID clientId;
-    public Security withClientId(SchemeClientID clientId) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=PLAID-CLIENT-ID")
+    public String clientId;
+    public Security withClientId(String clientId) {
         this.clientId = clientId;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public SchemePlaidVersion plaidVersion;
-    public Security withPlaidVersion(SchemePlaidVersion plaidVersion) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Plaid-Version")
+    public String plaidVersion;
+    public Security withPlaidVersion(String plaidVersion) {
         this.plaidVersion = plaidVersion;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public SchemeSecret secret;
-    public Security withSecret(SchemeSecret secret) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=PLAID-SECRET")
+    public String secret;
+    public Security withSecret(String secret) {
         this.secret = secret;
         return this;
     }

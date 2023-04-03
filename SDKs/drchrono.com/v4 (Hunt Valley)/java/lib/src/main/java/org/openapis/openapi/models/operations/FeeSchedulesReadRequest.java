@@ -4,27 +4,48 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FeeSchedulesReadRequest {
-    
-    public FeeSchedulesReadPathParams pathParams;
-    public FeeSchedulesReadRequest withPathParams(FeeSchedulesReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=code")
+    public String code;
+    public FeeSchedulesReadRequest withCode(String code) {
+        this.code = code;
         return this;
     }
     
-    
-    public FeeSchedulesReadQueryParams queryParams;
-    public FeeSchedulesReadRequest withQueryParams(FeeSchedulesReadQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=code_type")
+    public String codeType;
+    public FeeSchedulesReadRequest withCodeType(String codeType) {
+        this.codeType = codeType;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public FeeSchedulesReadRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
+        return this;
+    }
     
-    public FeeSchedulesReadSecurity security;
-    public FeeSchedulesReadRequest withSecurity(FeeSchedulesReadSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public FeeSchedulesReadRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=payer_id")
+    public String payerId;
+    public FeeSchedulesReadRequest withPayerId(String payerId) {
+        this.payerId = payerId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public FeeSchedulesReadRequest withSince(String since) {
+        this.since = since;
         return this;
     }
     

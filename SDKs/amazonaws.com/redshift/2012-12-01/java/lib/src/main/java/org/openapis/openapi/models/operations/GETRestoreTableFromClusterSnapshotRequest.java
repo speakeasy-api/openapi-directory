@@ -4,20 +4,159 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRestoreTableFromClusterSnapshotRequest {
-    
-    public GETRestoreTableFromClusterSnapshotQueryParams queryParams;
-    public GETRestoreTableFromClusterSnapshotRequest withQueryParams(GETRestoreTableFromClusterSnapshotQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETRestoreTableFromClusterSnapshotActionEnum action;
+    public GETRestoreTableFromClusterSnapshotRequest withAction(GETRestoreTableFromClusterSnapshotActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The identifier of the Amazon Redshift cluster to restore the table to.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
+    public String clusterIdentifier;
+    public GETRestoreTableFromClusterSnapshotRequest withClusterIdentifier(String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+        return this;
+    }
     
-    public GETRestoreTableFromClusterSnapshotHeaders headers;
-    public GETRestoreTableFromClusterSnapshotRequest withHeaders(GETRestoreTableFromClusterSnapshotHeaders headers) {
-        this.headers = headers;
+    /**
+     * Indicates whether name identifiers for database, schema, and table are case sensitive. If &lt;code&gt;true&lt;/code&gt;, the names are case sensitive. If &lt;code&gt;false&lt;/code&gt; (default), the names are not case sensitive.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnableCaseSensitiveIdentifier")
+    public Boolean enableCaseSensitiveIdentifier;
+    public GETRestoreTableFromClusterSnapshotRequest withEnableCaseSensitiveIdentifier(Boolean enableCaseSensitiveIdentifier) {
+        this.enableCaseSensitiveIdentifier = enableCaseSensitiveIdentifier;
+        return this;
+    }
+    
+    /**
+     * The name of the table to create as a result of the current request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NewTableName")
+    public String newTableName;
+    public GETRestoreTableFromClusterSnapshotRequest withNewTableName(String newTableName) {
+        this.newTableName = newTableName;
+        return this;
+    }
+    
+    /**
+     * The identifier of the snapshot to restore the table from. This snapshot must have been created from the Amazon Redshift cluster specified by the &lt;code&gt;ClusterIdentifier&lt;/code&gt; parameter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SnapshotIdentifier")
+    public String snapshotIdentifier;
+    public GETRestoreTableFromClusterSnapshotRequest withSnapshotIdentifier(String snapshotIdentifier) {
+        this.snapshotIdentifier = snapshotIdentifier;
+        return this;
+    }
+    
+    /**
+     * The name of the source database that contains the table to restore from.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SourceDatabaseName")
+    public String sourceDatabaseName;
+    public GETRestoreTableFromClusterSnapshotRequest withSourceDatabaseName(String sourceDatabaseName) {
+        this.sourceDatabaseName = sourceDatabaseName;
+        return this;
+    }
+    
+    /**
+     * The name of the source schema that contains the table to restore from. If you do not specify a &lt;code&gt;SourceSchemaName&lt;/code&gt; value, the default is &lt;code&gt;public&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SourceSchemaName")
+    public String sourceSchemaName;
+    public GETRestoreTableFromClusterSnapshotRequest withSourceSchemaName(String sourceSchemaName) {
+        this.sourceSchemaName = sourceSchemaName;
+        return this;
+    }
+    
+    /**
+     * The name of the source table to restore from.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SourceTableName")
+    public String sourceTableName;
+    public GETRestoreTableFromClusterSnapshotRequest withSourceTableName(String sourceTableName) {
+        this.sourceTableName = sourceTableName;
+        return this;
+    }
+    
+    /**
+     * The name of the database to restore the table to.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TargetDatabaseName")
+    public String targetDatabaseName;
+    public GETRestoreTableFromClusterSnapshotRequest withTargetDatabaseName(String targetDatabaseName) {
+        this.targetDatabaseName = targetDatabaseName;
+        return this;
+    }
+    
+    /**
+     * The name of the schema to restore the table to.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TargetSchemaName")
+    public String targetSchemaName;
+    public GETRestoreTableFromClusterSnapshotRequest withTargetSchemaName(String targetSchemaName) {
+        this.targetSchemaName = targetSchemaName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETRestoreTableFromClusterSnapshotVersionEnum version;
+    public GETRestoreTableFromClusterSnapshotRequest withVersion(GETRestoreTableFromClusterSnapshotVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETRestoreTableFromClusterSnapshotRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETRestoreTableFromClusterSnapshotRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETRestoreTableFromClusterSnapshotRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETRestoreTableFromClusterSnapshotRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETRestoreTableFromClusterSnapshotRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETRestoreTableFromClusterSnapshotRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETRestoreTableFromClusterSnapshotRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

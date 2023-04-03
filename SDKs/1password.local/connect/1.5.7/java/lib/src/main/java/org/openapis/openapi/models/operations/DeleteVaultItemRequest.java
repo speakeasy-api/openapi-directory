@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteVaultItemRequest {
-    
-    public DeleteVaultItemPathParams pathParams;
-    public DeleteVaultItemRequest withPathParams(DeleteVaultItemPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The UUID of the Item to update
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=itemUuid")
+    public String itemUuid;
+    public DeleteVaultItemRequest withItemUuid(String itemUuid) {
+        this.itemUuid = itemUuid;
         return this;
     }
     
-    
-    public DeleteVaultItemSecurity security;
-    public DeleteVaultItemRequest withSecurity(DeleteVaultItemSecurity security) {
-        this.security = security;
+    /**
+     * The UUID of the Vault the item is in
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=vaultUuid")
+    public String vaultUuid;
+    public DeleteVaultItemRequest withVaultUuid(String vaultUuid) {
+        this.vaultUuid = vaultUuid;
         return this;
     }
     

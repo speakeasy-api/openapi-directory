@@ -123,7 +123,7 @@ public class Environments {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateEnvironmentResponse createEnvironment(org.openapis.openapi.models.operations.CreateEnvironmentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateEnvironmentResponse createEnvironment(org.openapis.openapi.models.operations.CreateEnvironmentRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/environments");
         
@@ -176,7 +176,7 @@ public class Environments {
      */
     public org.openapis.openapi.models.operations.DeleteEnvironmentResponse deleteEnvironment(org.openapis.openapi.models.operations.DeleteEnvironmentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteEnvironmentPathParams.class, baseUrl, "/environments/{environment_uid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteEnvironmentRequest.class, baseUrl, "/environments/{environment_uid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -225,7 +225,7 @@ public class Environments {
      */
     public org.openapis.openapi.models.operations.SingleEnvironmentResponse singleEnvironment(org.openapis.openapi.models.operations.SingleEnvironmentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SingleEnvironmentPathParams.class, baseUrl, "/environments/{environment_uid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SingleEnvironmentRequest.class, baseUrl, "/environments/{environment_uid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -321,12 +321,12 @@ public class Environments {
      */
     public org.openapis.openapi.models.operations.UpdateEnvironmentResponse updateEnvironment(org.openapis.openapi.models.operations.UpdateEnvironmentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateEnvironmentPathParams.class, baseUrl, "/environments/{environment_uid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateEnvironmentRequest.class, baseUrl, "/environments/{environment_uid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

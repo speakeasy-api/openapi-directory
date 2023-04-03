@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1ScansIdFilesFileIdSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeAPIKey apiKey;
-    public GetApiV1ScansIdFilesFileIdSecurity withApiKey(org.openapis.openapi.models.shared.SchemeAPIKey apiKey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=apiKey")
+    public String apiKey;
+    public GetApiV1ScansIdFilesFileIdSecurity withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }

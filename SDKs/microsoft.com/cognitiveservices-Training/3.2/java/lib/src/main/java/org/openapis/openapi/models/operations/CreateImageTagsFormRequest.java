@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateImageTagsFormRequest {
-    
-    public CreateImageTagsFormPathParams pathParams;
-    public CreateImageTagsFormRequest withPathParams(CreateImageTagsFormPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Batch of image tags. Limited to 128 tags per batch.
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.ImageTagCreateBatch request;
-    public CreateImageTagsFormRequest withRequest(org.openapis.openapi.models.shared.ImageTagCreateBatch request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ImageTagCreateBatch imageTagCreateBatch;
+    public CreateImageTagsFormRequest withImageTagCreateBatch(org.openapis.openapi.models.shared.ImageTagCreateBatch imageTagCreateBatch) {
+        this.imageTagCreateBatch = imageTagCreateBatch;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public CreateImageTagsFormRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

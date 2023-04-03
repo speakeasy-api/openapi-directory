@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationMultipartRequest {
-    
-    public PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationMultipartPathParams pathParams;
-    public PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationMultipartRequest withPathParams(PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationMultipartPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Document to add (either DocumentId either (File,Name,Content64Encoded,Title) is mandatory)
      */
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationMultipartFormData1 request;
-    public PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationMultipartRequest withRequest(PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationMultipartFormData1 request) {
-        this.request = request;
+    public PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationMultipartFormData1 requestBody;
+    public PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationMultipartRequest withRequestBody(PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationMultipartFormData1 requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Id of the folder social
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationMultipartRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationMultipartSecurity security;
-    public PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationMultipartRequest withSecurity(PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationMultipartSecurity security) {
-        this.security = security;
+    /**
+     * Id of the payroll
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payrollId")
+    public String payrollId;
+    public PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationMultipartRequest withPayrollId(String payrollId) {
+        this.payrollId = payrollId;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationMultipartRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

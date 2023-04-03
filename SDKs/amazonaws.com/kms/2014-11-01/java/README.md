@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CancelKeyDeletionXAmzTargetEnum;
-import org.openapis.openapi.models.operations.CancelKeyDeletionHeaders;
 import org.openapis.openapi.models.operations.CancelKeyDeletionRequest;
 import org.openapis.openapi.models.operations.CancelKeyDeletionResponse;
 import org.openapis.openapi.models.shared.CancelKeyDeletionRequest;
@@ -28,27 +27,23 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CancelKeyDeletionRequest req = new CancelKeyDeletionRequest() {{
-                headers = new CancelKeyDeletionHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "TrentService.CancelKeyDeletion";
+                cancelKeyDeletionRequest = new CancelKeyDeletionRequest() {{
+                    keyId = "corrupti";
                 }};
-                request = new CancelKeyDeletionRequest() {{
-                    keyId = "illum";
-                }};
-            }};            
+                xAmzAlgorithm = "provident";
+                xAmzContentSha256 = "distinctio";
+                xAmzCredential = "quibusdam";
+                xAmzDate = "unde";
+                xAmzSecurityToken = "nulla";
+                xAmzSignature = "corrupti";
+                xAmzSignedHeaders = "illum";
+                xAmzTarget = "TrentService.CancelKeyDeletion";
+            }}            
 
             CancelKeyDeletionResponse res = sdk.cancelKeyDeletion(req);
 
@@ -62,7 +57,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MeetingCreateRequest {
-    
-    public MeetingCreatePathParams pathParams;
-    public MeetingCreateRequest withPathParams(MeetingCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Meeting object.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public MeetingCreateApplicationJSON request;
-    public MeetingCreateRequest withRequest(MeetingCreateApplicationJSON request) {
-        this.request = request;
+    public MeetingCreateApplicationJSON requestBody;
+    public MeetingCreateRequest withRequestBody(MeetingCreateApplicationJSON requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public MeetingCreateRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

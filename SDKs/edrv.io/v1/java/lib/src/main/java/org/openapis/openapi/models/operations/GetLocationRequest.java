@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLocationRequest {
-    
-    public GetLocationPathParams pathParams;
-    public GetLocationRequest withPathParams(GetLocationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The location id that needs to be fetched
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetLocationRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * Populate chargestations
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_chargestations")
+    public Boolean includeChargestations;
+    public GetLocationRequest withIncludeChargestations(Boolean includeChargestations) {
+        this.includeChargestations = includeChargestations;
+        return this;
+    }
     
-    public GetLocationQueryParams queryParams;
-    public GetLocationRequest withQueryParams(GetLocationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Populate organization
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_organization")
+    public Boolean includeOrganization;
+    public GetLocationRequest withIncludeOrganization(Boolean includeOrganization) {
+        this.includeOrganization = includeOrganization;
         return this;
     }
     

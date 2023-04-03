@@ -38,7 +38,7 @@ public class ChannelsSubscriptionsAndSubscribers {
      */
     public org.openapis.openapi.models.operations.CheckIfUserSubscribedToChannelResponse checkIfUserSubscribedToChannel(org.openapis.openapi.models.operations.CheckIfUserSubscribedToChannelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CheckIfUserSubscribedToChannelPathParams.class, baseUrl, "/users/{user_id}/channels/{channel_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CheckIfUserSubscribedToChannelRequest.class, baseUrl, "/users/{user_id}/channels/{channel_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -79,7 +79,7 @@ public class ChannelsSubscriptionsAndSubscribers {
      */
     public org.openapis.openapi.models.operations.CheckIfUserSubscribedToChannelAlt1Response checkIfUserSubscribedToChannelAlt1(org.openapis.openapi.models.operations.CheckIfUserSubscribedToChannelAlt1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CheckIfUserSubscribedToChannelAlt1PathParams.class, baseUrl, "/me/channels/{channel_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CheckIfUserSubscribedToChannelAlt1Request.class, baseUrl, "/me/channels/{channel_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -120,13 +120,13 @@ public class ChannelsSubscriptionsAndSubscribers {
      */
     public org.openapis.openapi.models.operations.GetChannelSubscribersResponse getChannelSubscribers(org.openapis.openapi.models.operations.GetChannelSubscribersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelSubscribersPathParams.class, baseUrl, "/channels/{channel_id}/users", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelSubscribersRequest.class, baseUrl, "/channels/{channel_id}/users", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetChannelSubscribersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetChannelSubscribersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -168,19 +168,20 @@ public class ChannelsSubscriptionsAndSubscribers {
     /**
      * Subscribe a user to a specific channel
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SubscribeToChannelResponse subscribeToChannel(org.openapis.openapi.models.operations.SubscribeToChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SubscribeToChannelResponse subscribeToChannel(org.openapis.openapi.models.operations.SubscribeToChannelRequest request, org.openapis.openapi.models.operations.SubscribeToChannelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubscribeToChannelPathParams.class, baseUrl, "/users/{user_id}/channels/{channel_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubscribeToChannelRequest.class, baseUrl, "/users/{user_id}/channels/{channel_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -209,19 +210,20 @@ public class ChannelsSubscriptionsAndSubscribers {
     /**
      * Subscribe a user to a specific channel
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SubscribeToChannelAlt1Response subscribeToChannelAlt1(org.openapis.openapi.models.operations.SubscribeToChannelAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.SubscribeToChannelAlt1Response subscribeToChannelAlt1(org.openapis.openapi.models.operations.SubscribeToChannelAlt1Request request, org.openapis.openapi.models.operations.SubscribeToChannelAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubscribeToChannelAlt1PathParams.class, baseUrl, "/me/channels/{channel_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubscribeToChannelAlt1Request.class, baseUrl, "/me/channels/{channel_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -250,19 +252,20 @@ public class ChannelsSubscriptionsAndSubscribers {
     /**
      * Unsubscribe a user from a specific channel
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UnsubscribeFromChannelResponse unsubscribeFromChannel(org.openapis.openapi.models.operations.UnsubscribeFromChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UnsubscribeFromChannelResponse unsubscribeFromChannel(org.openapis.openapi.models.operations.UnsubscribeFromChannelRequest request, org.openapis.openapi.models.operations.UnsubscribeFromChannelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnsubscribeFromChannelPathParams.class, baseUrl, "/users/{user_id}/channels/{channel_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnsubscribeFromChannelRequest.class, baseUrl, "/users/{user_id}/channels/{channel_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -291,19 +294,20 @@ public class ChannelsSubscriptionsAndSubscribers {
     /**
      * Unsubscribe a user from a specific channel
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UnsubscribeFromChannelAlt1Response unsubscribeFromChannelAlt1(org.openapis.openapi.models.operations.UnsubscribeFromChannelAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.UnsubscribeFromChannelAlt1Response unsubscribeFromChannelAlt1(org.openapis.openapi.models.operations.UnsubscribeFromChannelAlt1Request request, org.openapis.openapi.models.operations.UnsubscribeFromChannelAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnsubscribeFromChannelAlt1PathParams.class, baseUrl, "/me/channels/{channel_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnsubscribeFromChannelAlt1Request.class, baseUrl, "/me/channels/{channel_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

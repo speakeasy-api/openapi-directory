@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateExperimentUsingPOSTRequest {
-    
-    public CreateExperimentUsingPOSTPathParams pathParams;
-    public CreateExperimentUsingPOSTRequest withPathParams(CreateExperimentUsingPOSTPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * input
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ExperimentModel request;
-    public CreateExperimentUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.ExperimentModel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ExperimentModel experimentModel;
+    public CreateExperimentUsingPOSTRequest withExperimentModel(org.openapis.openapi.models.shared.ExperimentModel experimentModel) {
+        this.experimentModel = experimentModel;
+        return this;
+    }
+    
+    /**
+     * apiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public CreateExperimentUsingPOSTRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     

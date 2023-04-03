@@ -7,24 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutWebhooksAuthIdAuthRequest {
-    
-    public PutWebhooksAuthIdAuthPathParams pathParams;
-    public PutWebhooksAuthIdAuthRequest withPathParams(PutWebhooksAuthIdAuthPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutWebhooksAuthIdAuthQueryParams queryParams;
-    public PutWebhooksAuthIdAuthRequest withQueryParams(PutWebhooksAuthIdAuthQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PutWebhooksAuthIdAuthRequestBody request;
-    public PutWebhooksAuthIdAuthRequest withRequest(PutWebhooksAuthIdAuthRequestBody request) {
-        this.request = request;
+    public PutWebhooksAuthIdAuthRequestBody requestBody;
+    public PutWebhooksAuthIdAuthRequest withRequestBody(PutWebhooksAuthIdAuthRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public PutWebhooksAuthIdAuthRequest withExpand(String expand) {
+        this.expand = expand;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_auth")
+    public Long idAuth;
+    public PutWebhooksAuthIdAuthRequest withIdAuth(Long idAuth) {
+        this.idAuth = idAuth;
         return this;
     }
     

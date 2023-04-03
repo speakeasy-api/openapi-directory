@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PlaceSearchRequest {
+    /**
+     * The name of the place, you can use the /Place/Types/{types} endpoint to get a list of places for a given type including their names.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public PlaceSearchRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
     
-    public PlaceSearchQueryParams queryParams;
-    public PlaceSearchRequest withQueryParams(PlaceSearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A comma-separated list of the types to return. Max. approx 12 types.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=types")
+    public String[] types;
+    public PlaceSearchRequest withTypes(String[] types) {
+        this.types = types;
         return this;
     }
     

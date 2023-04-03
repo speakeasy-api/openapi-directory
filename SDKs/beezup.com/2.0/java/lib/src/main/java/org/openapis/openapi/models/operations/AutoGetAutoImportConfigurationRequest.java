@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AutoGetAutoImportConfigurationRequest {
-    
-    public AutoGetAutoImportConfigurationPathParams pathParams;
-    public AutoGetAutoImportConfigurationRequest withPathParams(AutoGetAutoImportConfigurationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Your store identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public AutoGetAutoImportConfigurationRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

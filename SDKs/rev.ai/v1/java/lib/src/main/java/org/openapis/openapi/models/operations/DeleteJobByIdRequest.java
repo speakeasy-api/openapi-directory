@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteJobByIdRequest {
-    
-    public DeleteJobByIdPathParams pathParams;
-    public DeleteJobByIdRequest withPathParams(DeleteJobByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Rev.ai API Job Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteJobByIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

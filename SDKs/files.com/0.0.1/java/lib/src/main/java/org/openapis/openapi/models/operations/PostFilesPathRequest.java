@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostFilesPathRequest {
-    
-    public PostFilesPathPathParams pathParams;
-    public PostFilesPathRequest withPathParams(PostFilesPathPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public PostFilesPathRequestBody requestBody;
+    public PostFilesPathRequest withRequestBody(PostFilesPathRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PostFilesPathRequestBody request;
-    public PostFilesPathRequest withRequest(PostFilesPathRequestBody request) {
-        this.request = request;
+    /**
+     * Path to operate on.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
+    public String path;
+    public PostFilesPathRequest withPath(String path) {
+        this.path = path;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersUserEmailOfferingsOfferingIdProgressRequest {
+    /**
+     * offering's id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offeringId")
+    public String offeringId;
+    public GetUsersUserEmailOfferingsOfferingIdProgressRequest withOfferingId(String offeringId) {
+        this.offeringId = offeringId;
+        return this;
+    }
     
-    public GetUsersUserEmailOfferingsOfferingIdProgressPathParams pathParams;
-    public GetUsersUserEmailOfferingsOfferingIdProgressRequest withPathParams(GetUsersUserEmailOfferingsOfferingIdProgressPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * user's email
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userEmail")
+    public String userEmail;
+    public GetUsersUserEmailOfferingsOfferingIdProgressRequest withUserEmail(String userEmail) {
+        this.userEmail = userEmail;
         return this;
     }
     

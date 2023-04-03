@@ -31,10 +31,11 @@ public class BehavioralEventsTracking {
      * Sends Custom Behavioral Event
      * Endpoint to send an instance of a behavioral event
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostEventsV3SendResponse postEventsV3Send(org.openapis.openapi.models.operations.PostEventsV3SendRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostEventsV3SendResponse postEventsV3Send(org.openapis.openapi.models.shared.BehavioralEventHttpCompletionRequest request, org.openapis.openapi.models.operations.PostEventsV3SendSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/events/v3/send");
         
@@ -48,7 +49,7 @@ public class BehavioralEventsTracking {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

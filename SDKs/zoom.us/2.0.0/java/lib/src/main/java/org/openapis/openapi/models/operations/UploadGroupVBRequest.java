@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UploadGroupVBRequest {
-    
-    public UploadGroupVBPathParams pathParams;
-    public UploadGroupVBRequest withPathParams(UploadGroupVBPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UploadGroupVBQueryParams queryParams;
-    public UploadGroupVBRequest withQueryParams(UploadGroupVBQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public UploadGroupVBRequestBody request;
-    public UploadGroupVBRequest withRequest(UploadGroupVBRequestBody request) {
-        this.request = request;
+    public UploadGroupVBRequestBody requestBody;
+    public UploadGroupVBRequest withRequestBody(UploadGroupVBRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Provide the id of the file that is to be deleted. To delete multiple files, provide comma separated values for this field.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=file_ids")
+    public String fileIds;
+    public UploadGroupVBRequest withFileIds(String fileIds) {
+        this.fileIds = fileIds;
+        return this;
+    }
+    
+    /**
+     * Unique identifier of the group. Retrieve the value for this field by calling the [List groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups) API.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public String groupId;
+    public UploadGroupVBRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     

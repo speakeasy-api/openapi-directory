@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CopySnapshotToExistingGameUsingPOSTRequest {
+    /**
+     * apiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public CopySnapshotToExistingGameUsingPOSTRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public CopySnapshotToExistingGameUsingPOSTPathParams pathParams;
-    public CopySnapshotToExistingGameUsingPOSTRequest withPathParams(CopySnapshotToExistingGameUsingPOSTPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * snapshotId
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=snapshotId")
+    public String snapshotId;
+    public CopySnapshotToExistingGameUsingPOSTRequest withSnapshotId(String snapshotId) {
+        this.snapshotId = snapshotId;
+        return this;
+    }
+    
+    /**
+     * targetApiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=targetApiKey")
+    public String targetApiKey;
+    public CopySnapshotToExistingGameUsingPOSTRequest withTargetApiKey(String targetApiKey) {
+        this.targetApiKey = targetApiKey;
         return this;
     }
     

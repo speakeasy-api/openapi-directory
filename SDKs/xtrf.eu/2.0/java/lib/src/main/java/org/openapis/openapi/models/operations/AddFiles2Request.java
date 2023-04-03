@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddFiles2Request {
-    
-    public AddFiles2PathParams pathParams;
-    public AddFiles2Request withPathParams(AddFiles2PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Added files to the quote as added by PM.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TimeDTO request;
-    public AddFiles2Request withRequest(org.openapis.openapi.models.shared.TimeDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TimeDTO timeDTO;
+    public AddFiles2Request withTimeDTO(org.openapis.openapi.models.shared.TimeDTO timeDTO) {
+        this.timeDTO = timeDTO;
+        return this;
+    }
+    
+    /**
+     * quote's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=quoteId")
+    public String quoteId;
+    public AddFiles2Request withQuoteId(String quoteId) {
+        this.quoteId = quoteId;
         return this;
     }
     

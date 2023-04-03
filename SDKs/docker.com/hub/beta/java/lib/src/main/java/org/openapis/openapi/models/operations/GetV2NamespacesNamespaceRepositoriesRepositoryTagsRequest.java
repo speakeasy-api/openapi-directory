@@ -4,20 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2NamespacesNamespaceRepositoriesRepositoryTagsRequest {
-    
-    public GetV2NamespacesNamespaceRepositoriesRepositoryTagsPathParams pathParams;
-    public GetV2NamespacesNamespaceRepositoriesRepositoryTagsRequest withPathParams(GetV2NamespacesNamespaceRepositoriesRepositoryTagsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=namespace")
+    public String namespace;
+    public GetV2NamespacesNamespaceRepositoriesRepositoryTagsRequest withNamespace(String namespace) {
+        this.namespace = namespace;
         return this;
     }
     
+    /**
+     * Page number to get. Defaults to 1.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetV2NamespacesNamespaceRepositoriesRepositoryTagsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetV2NamespacesNamespaceRepositoriesRepositoryTagsQueryParams queryParams;
-    public GetV2NamespacesNamespaceRepositoriesRepositoryTagsRequest withQueryParams(GetV2NamespacesNamespaceRepositoriesRepositoryTagsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Number of items to get per page. Defaults to 10. Max of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public GetV2NamespacesNamespaceRepositoriesRepositoryTagsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repository")
+    public String repository;
+    public GetV2NamespacesNamespaceRepositoriesRepositoryTagsRequest withRepository(String repository) {
+        this.repository = repository;
         return this;
     }
     

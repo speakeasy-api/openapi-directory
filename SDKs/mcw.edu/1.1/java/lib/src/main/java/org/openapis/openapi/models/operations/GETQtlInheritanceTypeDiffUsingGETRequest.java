@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETQtlInheritanceTypeDiffUsingGETRequest {
+    /**
+     * dateFromYYYYMMDD
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dateFromYYYYMMDD")
+    public String dateFromYYYYMMDD;
+    public GETQtlInheritanceTypeDiffUsingGETRequest withDateFromYYYYMMDD(String dateFromYYYYMMDD) {
+        this.dateFromYYYYMMDD = dateFromYYYYMMDD;
+        return this;
+    }
     
-    public GETQtlInheritanceTypeDiffUsingGETPathParams pathParams;
-    public GETQtlInheritanceTypeDiffUsingGETRequest withPathParams(GETQtlInheritanceTypeDiffUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * dateToYYYYMMDD
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dateToYYYYMMDD")
+    public String dateToYYYYMMDD;
+    public GETQtlInheritanceTypeDiffUsingGETRequest withDateToYYYYMMDD(String dateToYYYYMMDD) {
+        this.dateToYYYYMMDD = dateToYYYYMMDD;
+        return this;
+    }
+    
+    /**
+     * speciesTypeKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=speciesTypeKey")
+    public Integer speciesTypeKey;
+    public GETQtlInheritanceTypeDiffUsingGETRequest withSpeciesTypeKey(Integer speciesTypeKey) {
+        this.speciesTypeKey = speciesTypeKey;
         return this;
     }
     

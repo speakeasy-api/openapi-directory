@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetReturningProductionRequest {
+    /**
+     * Conference abbreviation filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=conference")
+    public String conference;
+    public GetReturningProductionRequest withConference(String conference) {
+        this.conference = conference;
+        return this;
+    }
     
-    public GetReturningProductionQueryParams queryParams;
-    public GetReturningProductionRequest withQueryParams(GetReturningProductionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Team filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team")
+    public String team;
+    public GetReturningProductionRequest withTeam(String team) {
+        this.team = team;
+        return this;
+    }
+    
+    /**
+     * Year filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public Long year;
+    public GetReturningProductionRequest withYear(Long year) {
+        this.year = year;
         return this;
     }
     

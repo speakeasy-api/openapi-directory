@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetChannelRequest {
-    
-    public GetChannelPathParams pathParams;
-    public GetChannelRequest withPathParams(GetChannelPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel_id")
+    public Double channelId;
+    public GetChannelRequest withChannelId(Double channelId) {
+        this.channelId = channelId;
         return this;
     }
     

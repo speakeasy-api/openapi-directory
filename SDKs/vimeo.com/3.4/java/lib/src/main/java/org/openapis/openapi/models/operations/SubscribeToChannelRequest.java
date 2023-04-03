@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SubscribeToChannelRequest {
-    
-    public SubscribeToChannelPathParams pathParams;
-    public SubscribeToChannelRequest withPathParams(SubscribeToChannelPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel_id")
+    public Double channelId;
+    public SubscribeToChannelRequest withChannelId(Double channelId) {
+        this.channelId = channelId;
         return this;
     }
     
-    
-    public SubscribeToChannelSecurity security;
-    public SubscribeToChannelRequest withSecurity(SubscribeToChannelSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public SubscribeToChannelRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

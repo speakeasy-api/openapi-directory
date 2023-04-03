@@ -6,7 +6,6 @@ import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.SvgconvertFileToConvertFile;
 import org.openapis.openapi.models.operations.SvgconvertFileToConvert;
-import org.openapis.openapi.models.operations.SvgconvertRequest;
 import org.openapis.openapi.models.operations.SvgconvertResponse;
 
 public class Application {
@@ -15,14 +14,12 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            SvgconvertRequest req = new SvgconvertRequest() {{
-                request = new SvgconvertFileToConvert() {{
-                    file = new SvgconvertFileToConvertFile() {{
-                        content = "corrupti".getBytes();
-                        file = "provident";
-                    }};
+            SvgconvertFileToConvert req = new SvgconvertFileToConvert() {{
+                file = new SvgconvertFileToConvertFile() {{
+                    content = "corrupti".getBytes();
+                    file = "provident";
                 }};
-            }};            
+            }}            
 
             SvgconvertResponse res = sdk.svgconvert(req);
 

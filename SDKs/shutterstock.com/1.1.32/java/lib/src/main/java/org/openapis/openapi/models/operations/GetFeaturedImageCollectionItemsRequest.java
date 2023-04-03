@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFeaturedImageCollectionItemsRequest {
-    
-    public GetFeaturedImageCollectionItemsPathParams pathParams;
-    public GetFeaturedImageCollectionItemsRequest withPathParams(GetFeaturedImageCollectionItemsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Collection ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetFeaturedImageCollectionItemsRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetFeaturedImageCollectionItemsQueryParams queryParams;
-    public GetFeaturedImageCollectionItemsRequest withQueryParams(GetFeaturedImageCollectionItemsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetFeaturedImageCollectionItemsRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public GetFeaturedImageCollectionItemsSecurity security;
-    public GetFeaturedImageCollectionItemsRequest withSecurity(GetFeaturedImageCollectionItemsSecurity security) {
-        this.security = security;
+    /**
+     * Number of results per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetFeaturedImageCollectionItemsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
         return this;
     }
     

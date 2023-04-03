@@ -309,13 +309,26 @@ public class SDK {
     /**
      * Create a config for an Account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateAccountConfigResponse createAccountConfig(org.openapis.openapi.models.operations.CreateAccountConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateAccountConfigResponse createAccountConfig(org.openapis.openapi.models.operations.CreateAccountConfigCreateAccountConfigRequest request, org.openapis.openapi.models.operations.CreateAccountConfigSecurity security) throws Exception {
+        return this.createAccountConfig(request, security, null);
+    }
+
+    /**
+     * Create a config for an Account.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateAccountConfigResponse createAccountConfig(org.openapis.openapi.models.operations.CreateAccountConfigCreateAccountConfigRequest request, org.openapis.openapi.models.operations.CreateAccountConfigSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_ACCOUNT_CONFIG_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Configs");
@@ -327,7 +340,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -354,13 +367,26 @@ public class SDK {
     /**
      * Create a secret for an Account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateAccountSecretResponse createAccountSecret(org.openapis.openapi.models.operations.CreateAccountSecretRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateAccountSecretResponse createAccountSecret(org.openapis.openapi.models.operations.CreateAccountSecretCreateAccountSecretRequest request, org.openapis.openapi.models.operations.CreateAccountSecretSecurity security) throws Exception {
+        return this.createAccountSecret(request, security, null);
+    }
+
+    /**
+     * Create a secret for an Account.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateAccountSecretResponse createAccountSecret(org.openapis.openapi.models.operations.CreateAccountSecretCreateAccountSecretRequest request, org.openapis.openapi.models.operations.CreateAccountSecretSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_ACCOUNT_SECRET_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Secrets");
@@ -372,7 +398,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -399,25 +425,38 @@ public class SDK {
     /**
      * Create a config for a Microvisor Device.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateDeviceConfigResponse createDeviceConfig(org.openapis.openapi.models.operations.CreateDeviceConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateDeviceConfigResponse createDeviceConfig(org.openapis.openapi.models.operations.CreateDeviceConfigRequest request, org.openapis.openapi.models.operations.CreateDeviceConfigSecurity security) throws Exception {
+        return this.createDeviceConfig(request, security, null);
+    }
+
+    /**
+     * Create a config for a Microvisor Device.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateDeviceConfigResponse createDeviceConfig(org.openapis.openapi.models.operations.CreateDeviceConfigRequest request, org.openapis.openapi.models.operations.CreateDeviceConfigSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_DEVICE_CONFIG_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateDeviceConfigPathParams.class, baseUrl, "/v1/Devices/{DeviceSid}/Configs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateDeviceConfigRequest.class, baseUrl, "/v1/Devices/{DeviceSid}/Configs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -444,25 +483,38 @@ public class SDK {
     /**
      * Create a secret for a Microvisor Device.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateDeviceSecretResponse createDeviceSecret(org.openapis.openapi.models.operations.CreateDeviceSecretRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateDeviceSecretResponse createDeviceSecret(org.openapis.openapi.models.operations.CreateDeviceSecretRequest request, org.openapis.openapi.models.operations.CreateDeviceSecretSecurity security) throws Exception {
+        return this.createDeviceSecret(request, security, null);
+    }
+
+    /**
+     * Create a secret for a Microvisor Device.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateDeviceSecretResponse createDeviceSecret(org.openapis.openapi.models.operations.CreateDeviceSecretRequest request, org.openapis.openapi.models.operations.CreateDeviceSecretSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_DEVICE_SECRET_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateDeviceSecretPathParams.class, baseUrl, "/v1/Devices/{DeviceSid}/Secrets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateDeviceSecretRequest.class, baseUrl, "/v1/Devices/{DeviceSid}/Secrets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -489,23 +541,36 @@ public class SDK {
     /**
      * Delete a config for an Account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteAccountConfigResponse deleteAccountConfig(org.openapis.openapi.models.operations.DeleteAccountConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteAccountConfigResponse deleteAccountConfig(org.openapis.openapi.models.operations.DeleteAccountConfigRequest request, org.openapis.openapi.models.operations.DeleteAccountConfigSecurity security) throws Exception {
+        return this.deleteAccountConfig(request, security, null);
+    }
+
+    /**
+     * Delete a config for an Account.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DeleteAccountConfigResponse deleteAccountConfig(org.openapis.openapi.models.operations.DeleteAccountConfigRequest request, org.openapis.openapi.models.operations.DeleteAccountConfigSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_ACCOUNT_CONFIG_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAccountConfigPathParams.class, baseUrl, "/v1/Configs/{Key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAccountConfigRequest.class, baseUrl, "/v1/Configs/{Key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -526,23 +591,36 @@ public class SDK {
     /**
      * Delete a secret for an Account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteAccountSecretResponse deleteAccountSecret(org.openapis.openapi.models.operations.DeleteAccountSecretRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteAccountSecretResponse deleteAccountSecret(org.openapis.openapi.models.operations.DeleteAccountSecretRequest request, org.openapis.openapi.models.operations.DeleteAccountSecretSecurity security) throws Exception {
+        return this.deleteAccountSecret(request, security, null);
+    }
+
+    /**
+     * Delete a secret for an Account.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DeleteAccountSecretResponse deleteAccountSecret(org.openapis.openapi.models.operations.DeleteAccountSecretRequest request, org.openapis.openapi.models.operations.DeleteAccountSecretSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_ACCOUNT_SECRET_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAccountSecretPathParams.class, baseUrl, "/v1/Secrets/{Key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAccountSecretRequest.class, baseUrl, "/v1/Secrets/{Key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -563,23 +641,36 @@ public class SDK {
     /**
      * Delete a specific App.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteAppResponse deleteApp(org.openapis.openapi.models.operations.DeleteAppRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteAppResponse deleteApp(org.openapis.openapi.models.operations.DeleteAppRequest request, org.openapis.openapi.models.operations.DeleteAppSecurity security) throws Exception {
+        return this.deleteApp(request, security, null);
+    }
+
+    /**
+     * Delete a specific App.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DeleteAppResponse deleteApp(org.openapis.openapi.models.operations.DeleteAppRequest request, org.openapis.openapi.models.operations.DeleteAppSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_APP_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAppPathParams.class, baseUrl, "/v1/Apps/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAppRequest.class, baseUrl, "/v1/Apps/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -600,23 +691,36 @@ public class SDK {
     /**
      * Delete a config for a Microvisor Device.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteDeviceConfigResponse deleteDeviceConfig(org.openapis.openapi.models.operations.DeleteDeviceConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteDeviceConfigResponse deleteDeviceConfig(org.openapis.openapi.models.operations.DeleteDeviceConfigRequest request, org.openapis.openapi.models.operations.DeleteDeviceConfigSecurity security) throws Exception {
+        return this.deleteDeviceConfig(request, security, null);
+    }
+
+    /**
+     * Delete a config for a Microvisor Device.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DeleteDeviceConfigResponse deleteDeviceConfig(org.openapis.openapi.models.operations.DeleteDeviceConfigRequest request, org.openapis.openapi.models.operations.DeleteDeviceConfigSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_DEVICE_CONFIG_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDeviceConfigPathParams.class, baseUrl, "/v1/Devices/{DeviceSid}/Configs/{Key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDeviceConfigRequest.class, baseUrl, "/v1/Devices/{DeviceSid}/Configs/{Key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -637,23 +741,36 @@ public class SDK {
     /**
      * Delete a secret for a Microvisor Device.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteDeviceSecretResponse deleteDeviceSecret(org.openapis.openapi.models.operations.DeleteDeviceSecretRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteDeviceSecretResponse deleteDeviceSecret(org.openapis.openapi.models.operations.DeleteDeviceSecretRequest request, org.openapis.openapi.models.operations.DeleteDeviceSecretSecurity security) throws Exception {
+        return this.deleteDeviceSecret(request, security, null);
+    }
+
+    /**
+     * Delete a secret for a Microvisor Device.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DeleteDeviceSecretResponse deleteDeviceSecret(org.openapis.openapi.models.operations.DeleteDeviceSecretRequest request, org.openapis.openapi.models.operations.DeleteDeviceSecretSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_DEVICE_SECRET_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDeviceSecretPathParams.class, baseUrl, "/v1/Devices/{DeviceSid}/Secrets/{Key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDeviceSecretRequest.class, baseUrl, "/v1/Devices/{DeviceSid}/Secrets/{Key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -674,23 +791,36 @@ public class SDK {
     /**
      * Retrieve a Config for an Account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchAccountConfigResponse fetchAccountConfig(org.openapis.openapi.models.operations.FetchAccountConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchAccountConfigResponse fetchAccountConfig(org.openapis.openapi.models.operations.FetchAccountConfigRequest request, org.openapis.openapi.models.operations.FetchAccountConfigSecurity security) throws Exception {
+        return this.fetchAccountConfig(request, security, null);
+    }
+
+    /**
+     * Retrieve a Config for an Account.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchAccountConfigResponse fetchAccountConfig(org.openapis.openapi.models.operations.FetchAccountConfigRequest request, org.openapis.openapi.models.operations.FetchAccountConfigSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_ACCOUNT_CONFIG_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchAccountConfigPathParams.class, baseUrl, "/v1/Configs/{Key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchAccountConfigRequest.class, baseUrl, "/v1/Configs/{Key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -717,23 +847,36 @@ public class SDK {
     /**
      * Retrieve a Secret for an Account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchAccountSecretResponse fetchAccountSecret(org.openapis.openapi.models.operations.FetchAccountSecretRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchAccountSecretResponse fetchAccountSecret(org.openapis.openapi.models.operations.FetchAccountSecretRequest request, org.openapis.openapi.models.operations.FetchAccountSecretSecurity security) throws Exception {
+        return this.fetchAccountSecret(request, security, null);
+    }
+
+    /**
+     * Retrieve a Secret for an Account.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchAccountSecretResponse fetchAccountSecret(org.openapis.openapi.models.operations.FetchAccountSecretRequest request, org.openapis.openapi.models.operations.FetchAccountSecretSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_ACCOUNT_SECRET_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchAccountSecretPathParams.class, baseUrl, "/v1/Secrets/{Key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchAccountSecretRequest.class, baseUrl, "/v1/Secrets/{Key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -760,23 +903,36 @@ public class SDK {
     /**
      * Fetch a specific App.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchAppResponse fetchApp(org.openapis.openapi.models.operations.FetchAppRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchAppResponse fetchApp(org.openapis.openapi.models.operations.FetchAppRequest request, org.openapis.openapi.models.operations.FetchAppSecurity security) throws Exception {
+        return this.fetchApp(request, security, null);
+    }
+
+    /**
+     * Fetch a specific App.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchAppResponse fetchApp(org.openapis.openapi.models.operations.FetchAppRequest request, org.openapis.openapi.models.operations.FetchAppSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_APP_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchAppPathParams.class, baseUrl, "/v1/Apps/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchAppRequest.class, baseUrl, "/v1/Apps/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -803,23 +959,36 @@ public class SDK {
     /**
      * Retrieve the Manifest for an App.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchAppManifestResponse fetchAppManifest(org.openapis.openapi.models.operations.FetchAppManifestRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchAppManifestResponse fetchAppManifest(org.openapis.openapi.models.operations.FetchAppManifestRequest request, org.openapis.openapi.models.operations.FetchAppManifestSecurity security) throws Exception {
+        return this.fetchAppManifest(request, security, null);
+    }
+
+    /**
+     * Retrieve the Manifest for an App.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchAppManifestResponse fetchAppManifest(org.openapis.openapi.models.operations.FetchAppManifestRequest request, org.openapis.openapi.models.operations.FetchAppManifestSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_APP_MANIFEST_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchAppManifestPathParams.class, baseUrl, "/v1/Apps/{AppSid}/Manifest", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchAppManifestRequest.class, baseUrl, "/v1/Apps/{AppSid}/Manifest", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -846,23 +1015,36 @@ public class SDK {
     /**
      * Fetch a specific Device.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchDeviceResponse fetchDevice(org.openapis.openapi.models.operations.FetchDeviceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchDeviceResponse fetchDevice(org.openapis.openapi.models.operations.FetchDeviceRequest request, org.openapis.openapi.models.operations.FetchDeviceSecurity security) throws Exception {
+        return this.fetchDevice(request, security, null);
+    }
+
+    /**
+     * Fetch a specific Device.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchDeviceResponse fetchDevice(org.openapis.openapi.models.operations.FetchDeviceRequest request, org.openapis.openapi.models.operations.FetchDeviceSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_DEVICE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchDevicePathParams.class, baseUrl, "/v1/Devices/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchDeviceRequest.class, baseUrl, "/v1/Devices/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -889,23 +1071,36 @@ public class SDK {
     /**
      * Retrieve a Config for a Device.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchDeviceConfigResponse fetchDeviceConfig(org.openapis.openapi.models.operations.FetchDeviceConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchDeviceConfigResponse fetchDeviceConfig(org.openapis.openapi.models.operations.FetchDeviceConfigRequest request, org.openapis.openapi.models.operations.FetchDeviceConfigSecurity security) throws Exception {
+        return this.fetchDeviceConfig(request, security, null);
+    }
+
+    /**
+     * Retrieve a Config for a Device.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchDeviceConfigResponse fetchDeviceConfig(org.openapis.openapi.models.operations.FetchDeviceConfigRequest request, org.openapis.openapi.models.operations.FetchDeviceConfigSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_DEVICE_CONFIG_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchDeviceConfigPathParams.class, baseUrl, "/v1/Devices/{DeviceSid}/Configs/{Key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchDeviceConfigRequest.class, baseUrl, "/v1/Devices/{DeviceSid}/Configs/{Key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -932,23 +1127,36 @@ public class SDK {
     /**
      * Retrieve a Secret for a Device.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchDeviceSecretResponse fetchDeviceSecret(org.openapis.openapi.models.operations.FetchDeviceSecretRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchDeviceSecretResponse fetchDeviceSecret(org.openapis.openapi.models.operations.FetchDeviceSecretRequest request, org.openapis.openapi.models.operations.FetchDeviceSecretSecurity security) throws Exception {
+        return this.fetchDeviceSecret(request, security, null);
+    }
+
+    /**
+     * Retrieve a Secret for a Device.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchDeviceSecretResponse fetchDeviceSecret(org.openapis.openapi.models.operations.FetchDeviceSecretRequest request, org.openapis.openapi.models.operations.FetchDeviceSecretSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_DEVICE_SECRET_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchDeviceSecretPathParams.class, baseUrl, "/v1/Devices/{DeviceSid}/Secrets/{Key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchDeviceSecretRequest.class, baseUrl, "/v1/Devices/{DeviceSid}/Secrets/{Key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -975,13 +1183,26 @@ public class SDK {
     /**
      * Retrieve a list of all Configs for an Account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListAccountConfigResponse listAccountConfig(org.openapis.openapi.models.operations.ListAccountConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListAccountConfigResponse listAccountConfig(org.openapis.openapi.models.operations.ListAccountConfigRequest request, org.openapis.openapi.models.operations.ListAccountConfigSecurity security) throws Exception {
+        return this.listAccountConfig(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of all Configs for an Account.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListAccountConfigResponse listAccountConfig(org.openapis.openapi.models.operations.ListAccountConfigRequest request, org.openapis.openapi.models.operations.ListAccountConfigSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_ACCOUNT_CONFIG_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Configs");
@@ -990,14 +1211,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListAccountConfigQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListAccountConfigRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1024,13 +1245,26 @@ public class SDK {
     /**
      * Retrieve a list of all Secrets for an Account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListAccountSecretResponse listAccountSecret(org.openapis.openapi.models.operations.ListAccountSecretRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListAccountSecretResponse listAccountSecret(org.openapis.openapi.models.operations.ListAccountSecretRequest request, org.openapis.openapi.models.operations.ListAccountSecretSecurity security) throws Exception {
+        return this.listAccountSecret(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of all Secrets for an Account.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListAccountSecretResponse listAccountSecret(org.openapis.openapi.models.operations.ListAccountSecretRequest request, org.openapis.openapi.models.operations.ListAccountSecretSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_ACCOUNT_SECRET_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Secrets");
@@ -1039,14 +1273,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListAccountSecretQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListAccountSecretRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1073,13 +1307,26 @@ public class SDK {
     /**
      * Retrieve a list of all Apps for an Account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListAppResponse listApp(org.openapis.openapi.models.operations.ListAppRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListAppResponse listApp(org.openapis.openapi.models.operations.ListAppRequest request, org.openapis.openapi.models.operations.ListAppSecurity security) throws Exception {
+        return this.listApp(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of all Apps for an Account.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListAppResponse listApp(org.openapis.openapi.models.operations.ListAppRequest request, org.openapis.openapi.models.operations.ListAppSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_APP_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Apps");
@@ -1088,14 +1335,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListAppQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListAppRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1122,13 +1369,26 @@ public class SDK {
     /**
      * Retrieve a list of all Devices registered with the Account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListDeviceResponse listDevice(org.openapis.openapi.models.operations.ListDeviceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListDeviceResponse listDevice(org.openapis.openapi.models.operations.ListDeviceRequest request, org.openapis.openapi.models.operations.ListDeviceSecurity security) throws Exception {
+        return this.listDevice(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of all Devices registered with the Account.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListDeviceResponse listDevice(org.openapis.openapi.models.operations.ListDeviceRequest request, org.openapis.openapi.models.operations.ListDeviceSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_DEVICE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Devices");
@@ -1137,14 +1397,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListDeviceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListDeviceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1171,29 +1431,42 @@ public class SDK {
     /**
      * Retrieve a list of all Configs for a Device.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListDeviceConfigResponse listDeviceConfig(org.openapis.openapi.models.operations.ListDeviceConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListDeviceConfigResponse listDeviceConfig(org.openapis.openapi.models.operations.ListDeviceConfigRequest request, org.openapis.openapi.models.operations.ListDeviceConfigSecurity security) throws Exception {
+        return this.listDeviceConfig(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of all Configs for a Device.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListDeviceConfigResponse listDeviceConfig(org.openapis.openapi.models.operations.ListDeviceConfigRequest request, org.openapis.openapi.models.operations.ListDeviceConfigSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_DEVICE_CONFIG_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListDeviceConfigPathParams.class, baseUrl, "/v1/Devices/{DeviceSid}/Configs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListDeviceConfigRequest.class, baseUrl, "/v1/Devices/{DeviceSid}/Configs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListDeviceConfigQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListDeviceConfigRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1220,29 +1493,42 @@ public class SDK {
     /**
      * Retrieve a list of all Secrets for a Device.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListDeviceSecretResponse listDeviceSecret(org.openapis.openapi.models.operations.ListDeviceSecretRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListDeviceSecretResponse listDeviceSecret(org.openapis.openapi.models.operations.ListDeviceSecretRequest request, org.openapis.openapi.models.operations.ListDeviceSecretSecurity security) throws Exception {
+        return this.listDeviceSecret(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of all Secrets for a Device.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListDeviceSecretResponse listDeviceSecret(org.openapis.openapi.models.operations.ListDeviceSecretRequest request, org.openapis.openapi.models.operations.ListDeviceSecretSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_DEVICE_SECRET_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListDeviceSecretPathParams.class, baseUrl, "/v1/Devices/{DeviceSid}/Secrets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListDeviceSecretRequest.class, baseUrl, "/v1/Devices/{DeviceSid}/Secrets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListDeviceSecretQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListDeviceSecretRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1269,25 +1555,38 @@ public class SDK {
     /**
      * Update a config for an Account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateAccountConfigResponse updateAccountConfig(org.openapis.openapi.models.operations.UpdateAccountConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateAccountConfigResponse updateAccountConfig(org.openapis.openapi.models.operations.UpdateAccountConfigRequest request, org.openapis.openapi.models.operations.UpdateAccountConfigSecurity security) throws Exception {
+        return this.updateAccountConfig(request, security, null);
+    }
+
+    /**
+     * Update a config for an Account.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateAccountConfigResponse updateAccountConfig(org.openapis.openapi.models.operations.UpdateAccountConfigRequest request, org.openapis.openapi.models.operations.UpdateAccountConfigSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_ACCOUNT_CONFIG_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateAccountConfigPathParams.class, baseUrl, "/v1/Configs/{Key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateAccountConfigRequest.class, baseUrl, "/v1/Configs/{Key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1314,25 +1613,38 @@ public class SDK {
     /**
      * Update a secret for an Account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateAccountSecretResponse updateAccountSecret(org.openapis.openapi.models.operations.UpdateAccountSecretRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateAccountSecretResponse updateAccountSecret(org.openapis.openapi.models.operations.UpdateAccountSecretRequest request, org.openapis.openapi.models.operations.UpdateAccountSecretSecurity security) throws Exception {
+        return this.updateAccountSecret(request, security, null);
+    }
+
+    /**
+     * Update a secret for an Account.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateAccountSecretResponse updateAccountSecret(org.openapis.openapi.models.operations.UpdateAccountSecretRequest request, org.openapis.openapi.models.operations.UpdateAccountSecretSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_ACCOUNT_SECRET_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateAccountSecretPathParams.class, baseUrl, "/v1/Secrets/{Key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateAccountSecretRequest.class, baseUrl, "/v1/Secrets/{Key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1359,25 +1671,38 @@ public class SDK {
     /**
      * Update a specific Device.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateDeviceResponse updateDevice(org.openapis.openapi.models.operations.UpdateDeviceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateDeviceResponse updateDevice(org.openapis.openapi.models.operations.UpdateDeviceRequest request, org.openapis.openapi.models.operations.UpdateDeviceSecurity security) throws Exception {
+        return this.updateDevice(request, security, null);
+    }
+
+    /**
+     * Update a specific Device.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateDeviceResponse updateDevice(org.openapis.openapi.models.operations.UpdateDeviceRequest request, org.openapis.openapi.models.operations.UpdateDeviceSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_DEVICE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDevicePathParams.class, baseUrl, "/v1/Devices/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceRequest.class, baseUrl, "/v1/Devices/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1404,25 +1729,38 @@ public class SDK {
     /**
      * Update a config for a Microvisor Device.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateDeviceConfigResponse updateDeviceConfig(org.openapis.openapi.models.operations.UpdateDeviceConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateDeviceConfigResponse updateDeviceConfig(org.openapis.openapi.models.operations.UpdateDeviceConfigRequest request, org.openapis.openapi.models.operations.UpdateDeviceConfigSecurity security) throws Exception {
+        return this.updateDeviceConfig(request, security, null);
+    }
+
+    /**
+     * Update a config for a Microvisor Device.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateDeviceConfigResponse updateDeviceConfig(org.openapis.openapi.models.operations.UpdateDeviceConfigRequest request, org.openapis.openapi.models.operations.UpdateDeviceConfigSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_DEVICE_CONFIG_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceConfigPathParams.class, baseUrl, "/v1/Devices/{DeviceSid}/Configs/{Key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceConfigRequest.class, baseUrl, "/v1/Devices/{DeviceSid}/Configs/{Key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1449,25 +1787,38 @@ public class SDK {
     /**
      * Update a secret for a Microvisor Device.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateDeviceSecretResponse updateDeviceSecret(org.openapis.openapi.models.operations.UpdateDeviceSecretRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateDeviceSecretResponse updateDeviceSecret(org.openapis.openapi.models.operations.UpdateDeviceSecretRequest request, org.openapis.openapi.models.operations.UpdateDeviceSecretSecurity security) throws Exception {
+        return this.updateDeviceSecret(request, security, null);
+    }
+
+    /**
+     * Update a secret for a Microvisor Device.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateDeviceSecretResponse updateDeviceSecret(org.openapis.openapi.models.operations.UpdateDeviceSecretRequest request, org.openapis.openapi.models.operations.UpdateDeviceSecretSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_DEVICE_SECRET_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceSecretPathParams.class, baseUrl, "/v1/Devices/{DeviceSid}/Secrets/{Key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceSecretRequest.class, baseUrl, "/v1/Devices/{DeviceSid}/Secrets/{Key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

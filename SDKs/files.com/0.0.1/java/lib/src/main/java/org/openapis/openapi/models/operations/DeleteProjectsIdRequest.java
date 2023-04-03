@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteProjectsIdRequest {
-    
-    public DeleteProjectsIdPathParams pathParams;
-    public DeleteProjectsIdRequest withPathParams(DeleteProjectsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Project ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public DeleteProjectsIdRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

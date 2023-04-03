@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ResendInvitationsForShareRequest {
-    
-    public ResendInvitationsForSharePathParams pathParams;
-    public ResendInvitationsForShareRequest withPathParams(ResendInvitationsForSharePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ResendInvitationsForShareHeaders headers;
-    public ResendInvitationsForShareRequest withHeaders(ResendInvitationsForShareHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public ResendInvitationsForShareResendInvitationsRequestBody request;
-    public ResendInvitationsForShareRequest withRequest(ResendInvitationsForShareResendInvitationsRequestBody request) {
-        this.request = request;
+    public ResendInvitationsForShareResendInvitationsRequestBody requestBody;
+    public ResendInvitationsForShareRequest withRequestBody(ResendInvitationsForShareResendInvitationsRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Access token required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-access-token")
+    public String evAccessToken;
+    public ResendInvitationsForShareRequest withEvAccessToken(String evAccessToken) {
+        this.evAccessToken = evAccessToken;
+        return this;
+    }
+    
+    /**
+     * API Key required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-api-key")
+    public String evApiKey;
+    public ResendInvitationsForShareRequest withEvApiKey(String evApiKey) {
+        this.evApiKey = evApiKey;
+        return this;
+    }
+    
+    /**
+     * ID of the share to resend invites for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shareId")
+    public Long shareId;
+    public ResendInvitationsForShareRequest withShareId(Long shareId) {
+        this.shareId = shareId;
         return this;
     }
     

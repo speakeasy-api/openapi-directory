@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CompleteContinuousDocumentRequest {
+    /**
+     * Document ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=documentId")
+    public Long documentId;
+    public CompleteContinuousDocumentRequest withDocumentId(Long documentId) {
+        this.documentId = documentId;
+        return this;
+    }
     
-    public CompleteContinuousDocumentPathParams pathParams;
-    public CompleteContinuousDocumentRequest withPathParams(CompleteContinuousDocumentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Continuous project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public CompleteContinuousDocumentRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

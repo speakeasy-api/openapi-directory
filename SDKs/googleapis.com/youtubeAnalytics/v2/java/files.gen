@@ -38,7 +38,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupIt
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupItemsDeleteSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupItemsDeleteSecurityOption5.java
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupItemsDeleteSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupItemsDeleteQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupItemsDeleteRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupItemsDeleteResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupItemsInsertSecurityOption1.java
@@ -47,7 +46,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupIt
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupItemsInsertSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupItemsInsertSecurityOption5.java
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupItemsInsertSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupItemsInsertQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupItemsInsertRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupItemsInsertResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupItemsListSecurityOption1.java
@@ -56,7 +54,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupIt
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupItemsListSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupItemsListSecurityOption5.java
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupItemsListSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupItemsListQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupItemsListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupItemsListResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupsDeleteSecurityOption1.java
@@ -65,7 +62,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupsD
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupsDeleteSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupsDeleteSecurityOption5.java
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupsDeleteSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupsDeleteQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupsDeleteRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupsDeleteResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupsInsertSecurityOption1.java
@@ -74,7 +70,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupsI
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupsInsertSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupsInsertSecurityOption5.java
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupsInsertSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupsInsertQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupsInsertRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupsInsertResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupsListSecurityOption1.java
@@ -83,7 +78,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupsL
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupsListSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupsListSecurityOption5.java
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupsListSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupsListQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupsListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupsListResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupsUpdateSecurityOption1.java
@@ -92,7 +86,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupsU
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupsUpdateSecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupsUpdateSecurityOption5.java
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupsUpdateSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupsUpdateQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupsUpdateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsGroupsUpdateResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsReportsQuerySecurityOption1.java
@@ -101,7 +94,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsReports
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsReportsQuerySecurityOption4.java
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsReportsQuerySecurityOption5.java
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsReportsQuerySecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsReportsQueryQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsReportsQueryRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/YoutubeAnalyticsReportsQueryResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/EmptyResponse.java
@@ -111,8 +103,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/ErrorProtoLocationTypeEnum.
 lib/src/main/java/org/openapis/openapi/models/shared/ErrorProto.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2c.java
 lib/src/main/java/org/openapis/openapi/models/shared/GroupItem.java
 lib/src/main/java/org/openapis/openapi/models/shared/GroupItemResource.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListGroupItemsResponse.java

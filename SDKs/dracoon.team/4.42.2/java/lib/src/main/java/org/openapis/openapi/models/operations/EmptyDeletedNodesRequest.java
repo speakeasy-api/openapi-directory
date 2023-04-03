@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EmptyDeletedNodesRequest {
-    
-    public EmptyDeletedNodesPathParams pathParams;
-    public EmptyDeletedNodesRequest withPathParams(EmptyDeletedNodesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public EmptyDeletedNodesRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public EmptyDeletedNodesHeaders headers;
-    public EmptyDeletedNodesRequest withHeaders(EmptyDeletedNodesHeaders headers) {
-        this.headers = headers;
+    /**
+     * Room ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=node_id")
+    public Long nodeId;
+    public EmptyDeletedNodesRequest withNodeId(Long nodeId) {
+        this.nodeId = nodeId;
         return this;
     }
     

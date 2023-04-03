@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateTagRequest {
-    
-    public CreateTagPathParams pathParams;
-    public CreateTagRequest withPathParams(CreateTagPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateTagModel createTagModel;
+    public CreateTagRequest withCreateTagModel(org.openapis.openapi.models.shared.CreateTagModel createTagModel) {
+        this.createTagModel = createTagModel;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateTagModel request;
-    public CreateTagRequest withRequest(org.openapis.openapi.models.shared.CreateTagModel request) {
-        this.request = request;
+    /**
+     * The identifier of the Organization.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
+    public String productId;
+    public CreateTagRequest withProductId(String productId) {
+        this.productId = productId;
         return this;
     }
     

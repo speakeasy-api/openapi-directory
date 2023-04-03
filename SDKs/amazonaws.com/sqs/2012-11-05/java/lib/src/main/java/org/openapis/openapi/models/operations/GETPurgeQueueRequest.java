@@ -4,27 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETPurgeQueueRequest {
-    
-    public GETPurgeQueuePathParams pathParams;
-    public GETPurgeQueueRequest withPathParams(GETPurgeQueuePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The AWS account number
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountNumber")
+    public Long accountNumber;
+    public GETPurgeQueueRequest withAccountNumber(Long accountNumber) {
+        this.accountNumber = accountNumber;
         return this;
     }
     
-    
-    public GETPurgeQueueQueryParams queryParams;
-    public GETPurgeQueueRequest withQueryParams(GETPurgeQueueQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETPurgeQueueActionEnum action;
+    public GETPurgeQueueRequest withAction(GETPurgeQueueActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the queue
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=QueueName")
+    public String queueName;
+    public GETPurgeQueueRequest withQueueName(String queueName) {
+        this.queueName = queueName;
+        return this;
+    }
     
-    public GETPurgeQueueHeaders headers;
-    public GETPurgeQueueRequest withHeaders(GETPurgeQueueHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETPurgeQueueVersionEnum version;
+    public GETPurgeQueueRequest withVersion(GETPurgeQueueVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETPurgeQueueRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETPurgeQueueRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETPurgeQueueRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETPurgeQueueRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETPurgeQueueRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETPurgeQueueRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETPurgeQueueRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

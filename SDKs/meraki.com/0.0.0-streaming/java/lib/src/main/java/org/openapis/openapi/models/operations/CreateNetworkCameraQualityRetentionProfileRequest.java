@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateNetworkCameraQualityRetentionProfileRequest {
-    
-    public CreateNetworkCameraQualityRetentionProfilePathParams pathParams;
-    public CreateNetworkCameraQualityRetentionProfileRequest withPathParams(CreateNetworkCameraQualityRetentionProfilePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateNetworkCameraQualityRetentionProfileRequestBody requestBody;
+    public CreateNetworkCameraQualityRetentionProfileRequest withRequestBody(CreateNetworkCameraQualityRetentionProfileRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateNetworkCameraQualityRetentionProfileRequestBody request;
-    public CreateNetworkCameraQualityRetentionProfileRequest withRequest(CreateNetworkCameraQualityRetentionProfileRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public CreateNetworkCameraQualityRetentionProfileRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

@@ -4,13 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GistsGetRevisionRequest {
+    /**
+     * The unique identifier of the gist.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=gist_id")
+    public String gistId;
+    public GistsGetRevisionRequest withGistId(String gistId) {
+        this.gistId = gistId;
+        return this;
+    }
     
-    public GistsGetRevisionPathParams pathParams;
-    public GistsGetRevisionRequest withPathParams(GistsGetRevisionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sha")
+    public String sha;
+    public GistsGetRevisionRequest withSha(String sha) {
+        this.sha = sha;
         return this;
     }
     

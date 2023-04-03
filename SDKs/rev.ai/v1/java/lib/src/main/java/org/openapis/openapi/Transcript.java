@@ -41,13 +41,13 @@ public class Transcript {
      */
     public org.openapis.openapi.models.operations.GetTranscriptByIdResponse getTranscriptById(org.openapis.openapi.models.operations.GetTranscriptByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTranscriptByIdPathParams.class, baseUrl, "/jobs/{id}/transcript", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTranscriptByIdRequest.class, baseUrl, "/jobs/{id}/transcript", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

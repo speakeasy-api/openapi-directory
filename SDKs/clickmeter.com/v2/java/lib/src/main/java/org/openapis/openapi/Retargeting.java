@@ -95,7 +95,7 @@ public class Retargeting {
      */
     public org.openapis.openapi.models.operations.RetargetingDeleteResponse retargetingDelete(org.openapis.openapi.models.operations.RetargetingDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetargetingDeletePathParams.class, baseUrl, "/retargeting/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetargetingDeleteRequest.class, baseUrl, "/retargeting/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -158,7 +158,7 @@ public class Retargeting {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetargetingGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetargetingGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -205,13 +205,13 @@ public class Retargeting {
      */
     public org.openapis.openapi.models.operations.RetargetingGetDatapointsResponse retargetingGetDatapoints(org.openapis.openapi.models.operations.RetargetingGetDatapointsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetargetingGetDatapointsPathParams.class, baseUrl, "/retargeting/{id}/datapoints", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetargetingGetDatapointsRequest.class, baseUrl, "/retargeting/{id}/datapoints", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetargetingGetDatapointsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetargetingGetDatapointsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -258,13 +258,13 @@ public class Retargeting {
      */
     public org.openapis.openapi.models.operations.RetargetingGetDatapointsCountResponse retargetingGetDatapointsCount(org.openapis.openapi.models.operations.RetargetingGetDatapointsCountRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetargetingGetDatapointsCountPathParams.class, baseUrl, "/retargeting/{id}/datapoints/count", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetargetingGetDatapointsCountRequest.class, baseUrl, "/retargeting/{id}/datapoints/count", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetargetingGetDatapointsCountQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetargetingGetDatapointsCountRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -321,12 +321,12 @@ public class Retargeting {
      */
     public org.openapis.openapi.models.operations.RetargetingPostFormResponse retargetingPostForm(org.openapis.openapi.models.operations.RetargetingPostFormRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetargetingPostFormPathParams.class, baseUrl, "/retargeting/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetargetingPostFormRequest.class, baseUrl, "/retargeting/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiCoreDtoRetargetingRetargetingScript", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -383,12 +383,12 @@ public class Retargeting {
      */
     public org.openapis.openapi.models.operations.RetargetingPostJsonResponse retargetingPostJson(org.openapis.openapi.models.operations.RetargetingPostJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetargetingPostJsonPathParams.class, baseUrl, "/retargeting/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetargetingPostJsonRequest.class, baseUrl, "/retargeting/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiCoreDtoRetargetingRetargetingScript", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -445,12 +445,12 @@ public class Retargeting {
      */
     public org.openapis.openapi.models.operations.RetargetingPostRawResponse retargetingPostRaw(org.openapis.openapi.models.operations.RetargetingPostRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetargetingPostRawPathParams.class, baseUrl, "/retargeting/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetargetingPostRawRequest.class, baseUrl, "/retargeting/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -505,7 +505,7 @@ public class Retargeting {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetargetingPutFormResponse retargetingPutForm(org.openapis.openapi.models.operations.RetargetingPutFormRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetargetingPutFormResponse retargetingPutForm(org.openapis.openapi.models.shared.ApiCoreDtoRetargetingRetargetingScript request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/retargeting");
         
@@ -567,7 +567,7 @@ public class Retargeting {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetargetingPutJsonResponse retargetingPutJson(org.openapis.openapi.models.operations.RetargetingPutJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetargetingPutJsonResponse retargetingPutJson(org.openapis.openapi.models.shared.ApiCoreDtoRetargetingRetargetingScript request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/retargeting");
         
@@ -629,7 +629,7 @@ public class Retargeting {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetargetingPutRawResponse retargetingPutRaw(org.openapis.openapi.models.operations.RetargetingPutRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetargetingPutRawResponse retargetingPutRaw(byte[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/retargeting");
         
@@ -693,7 +693,7 @@ public class Retargeting {
      */
     public org.openapis.openapi.models.operations.GetRetargetingIdResponse getRetargetingId(org.openapis.openapi.models.operations.GetRetargetingIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRetargetingIdPathParams.class, baseUrl, "/retargeting/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRetargetingIdRequest.class, baseUrl, "/retargeting/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

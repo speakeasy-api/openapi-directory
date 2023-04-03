@@ -4,27 +4,106 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AllFaresRequest {
-    
-    public AllFaresQueryParams queryParams;
-    public AllFaresRequest withQueryParams(AllFaresQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Mandatory http header:  application/xml or application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public AllFaresRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public AllFaresHeaders headers;
-    public AllFaresRequest withHeaders(AllFaresHeaders headers) {
-        this.headers = headers;
+    /**
+     * Enter the required cabin class (e.g econonmy, business etc.). (Acceptable values are: "", "economy", "premium economy", "business", "first")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cabin-class")
+    public String cabinClass;
+    public AllFaresRequest withCabinClass(String cabinClass) {
+        this.cabinClass = cabinClass;
         return this;
     }
     
+    /**
+     * Specifies in which catalogue the fares need to be searched (e.g.'4U;OS').
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=catalogues")
+    public String catalogues;
+    public AllFaresRequest withCatalogues(String catalogues) {
+        this.catalogues = catalogues;
+        return this;
+    }
     
-    public AllFaresSecurity security;
-    public AllFaresRequest withSecurity(AllFaresSecurity security) {
-        this.security = security;
+    /**
+     * Enter journey destination (e.g 'MAD').
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destination")
+    public String destination;
+    public AllFaresRequest withDestination(String destination) {
+        this.destination = destination;
+        return this;
+    }
+    
+    /**
+     * Mandatory for 4U. Specifies, which fares to be returned, such as basic, smart, best, smartflex, bestflex . (Acceptable values are: "", "basic", "smart", "best", "smartflex", "bestflex")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fare-family")
+    public String fareFamily;
+    public AllFaresRequest withFareFamily(String fareFamily) {
+        this.fareFamily = fareFamily;
+        return this;
+    }
+    
+    /**
+     * Enter journey origin (e.g 'FRA').
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=origin")
+    public String origin;
+    public AllFaresRequest withOrigin(String origin) {
+        this.origin = origin;
+        return this;
+    }
+    
+    /**
+     * Enter journey return-date (e.g 2016-10-31)'.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=return-date")
+    public String returnDate;
+    public AllFaresRequest withReturnDate(String returnDate) {
+        this.returnDate = returnDate;
+        return this;
+    }
+    
+    /**
+     * Austrian Airlines only - specify the web tracking id to be used in OS Deep link.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=trackingid")
+    public String trackingid;
+    public AllFaresRequest withTrackingid(String trackingid) {
+        this.trackingid = trackingid;
+        return this;
+    }
+    
+    /**
+     * Enter journey travel-date (e.g 2016-10-20)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=travel-date")
+    public String travelDate;
+    public AllFaresRequest withTravelDate(String travelDate) {
+        this.travelDate = travelDate;
+        return this;
+    }
+    
+    /**
+     * Specifies the type and number of travelers (e.g. '(adult=2;child=2;infant=1)') For LH only (adult=1) possible.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=travelers")
+    public String travelers;
+    public AllFaresRequest withTravelers(String travelers) {
+        this.travelers = travelers;
         return this;
     }
     

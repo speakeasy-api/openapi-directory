@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiPostNewOrderFormRequest {
-    
-    public OrderApiPostNewOrderFormQueryParams queryParams;
-    public OrderApiPostNewOrderFormRequest withQueryParams(OrderApiPostNewOrderFormQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
+    public org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelOrderInput billbeeInterfacesBillbeeAPIModelOrderInput;
+    public OrderApiPostNewOrderFormRequest withBillbeeInterfacesBillbeeAPIModelOrderInput(org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelOrderInput billbeeInterfacesBillbeeAPIModelOrderInput) {
+        this.billbeeInterfacesBillbeeAPIModelOrderInput = billbeeInterfacesBillbeeAPIModelOrderInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelOrderInput request;
-    public OrderApiPostNewOrderFormRequest withRequest(org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelOrderInput request) {
-        this.request = request;
+    /**
+     * Deprecated, if orderData.ApiAccountId is set, it will be used instead of 'shopId'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=shopId")
+    public Long shopId;
+    public OrderApiPostNewOrderFormRequest withShopId(Long shopId) {
+        this.shopId = shopId;
         return this;
     }
     

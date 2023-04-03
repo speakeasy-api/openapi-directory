@@ -39,25 +39,26 @@ public class PaymentMethodsMerchantLevel {
      * * Management API\u2014Payment methods read
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMerchantsMerchantIdPaymentMethodSettingsResponse getMerchantsMerchantIdPaymentMethodSettings(org.openapis.openapi.models.operations.GetMerchantsMerchantIdPaymentMethodSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMerchantsMerchantIdPaymentMethodSettingsResponse getMerchantsMerchantIdPaymentMethodSettings(org.openapis.openapi.models.operations.GetMerchantsMerchantIdPaymentMethodSettingsRequest request, org.openapis.openapi.models.operations.GetMerchantsMerchantIdPaymentMethodSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMerchantsMerchantIdPaymentMethodSettingsPathParams.class, baseUrl, "/merchants/{merchantId}/paymentMethodSettings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMerchantsMerchantIdPaymentMethodSettingsRequest.class, baseUrl, "/merchants/{merchantId}/paymentMethodSettings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMerchantsMerchantIdPaymentMethodSettingsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMerchantsMerchantIdPaymentMethodSettingsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -99,19 +100,20 @@ public class PaymentMethodsMerchantLevel {
      * * Management API\u2014Payment methods read
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdResponse getMerchantsMerchantIdPaymentMethodSettingsPaymentMethodId(org.openapis.openapi.models.operations.GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdResponse getMerchantsMerchantIdPaymentMethodSettingsPaymentMethodId(org.openapis.openapi.models.operations.GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdRequest request, org.openapis.openapi.models.operations.GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdPathParams.class, baseUrl, "/merchants/{merchantId}/paymentMethodSettings/{paymentMethodId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdRequest.class, baseUrl, "/merchants/{merchantId}/paymentMethodSettings/{paymentMethodId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -153,19 +155,20 @@ public class PaymentMethodsMerchantLevel {
      * * Management API\u2014Payment methods read
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdGetApplePayDomainsResponse getMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdGetApplePayDomains(org.openapis.openapi.models.operations.GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdGetApplePayDomainsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdGetApplePayDomainsResponse getMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdGetApplePayDomains(org.openapis.openapi.models.operations.GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdGetApplePayDomainsRequest request, org.openapis.openapi.models.operations.GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdGetApplePayDomainsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdGetApplePayDomainsPathParams.class, baseUrl, "/merchants/{merchantId}/paymentMethodSettings/{paymentMethodId}/getApplePayDomains", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdGetApplePayDomainsRequest.class, baseUrl, "/merchants/{merchantId}/paymentMethodSettings/{paymentMethodId}/getApplePayDomains", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -207,21 +210,22 @@ public class PaymentMethodsMerchantLevel {
      * * Management API\u2014Payment methods read and write
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdResponse patchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodId(org.openapis.openapi.models.operations.PatchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdResponse patchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodId(org.openapis.openapi.models.operations.PatchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdRequest request, org.openapis.openapi.models.operations.PatchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdPathParams.class, baseUrl, "/merchants/{merchantId}/paymentMethodSettings/{paymentMethodId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdRequest.class, baseUrl, "/merchants/{merchantId}/paymentMethodSettings/{paymentMethodId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updatePaymentMethodInfo", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -263,21 +267,22 @@ public class PaymentMethodsMerchantLevel {
      * * Management API\u2014Payment methods read and write
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostMerchantsMerchantIdPaymentMethodSettingsResponse postMerchantsMerchantIdPaymentMethodSettings(org.openapis.openapi.models.operations.PostMerchantsMerchantIdPaymentMethodSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostMerchantsMerchantIdPaymentMethodSettingsResponse postMerchantsMerchantIdPaymentMethodSettings(org.openapis.openapi.models.operations.PostMerchantsMerchantIdPaymentMethodSettingsRequest request, org.openapis.openapi.models.operations.PostMerchantsMerchantIdPaymentMethodSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostMerchantsMerchantIdPaymentMethodSettingsPathParams.class, baseUrl, "/merchants/{merchantId}/paymentMethodSettings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostMerchantsMerchantIdPaymentMethodSettingsRequest.class, baseUrl, "/merchants/{merchantId}/paymentMethodSettings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "paymentMethodSetupInfo", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -319,21 +324,22 @@ public class PaymentMethodsMerchantLevel {
      * * Management API\u2014Payment methods read and write
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdAddApplePayDomainsResponse postMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdAddApplePayDomains(org.openapis.openapi.models.operations.PostMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdAddApplePayDomainsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdAddApplePayDomainsResponse postMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdAddApplePayDomains(org.openapis.openapi.models.operations.PostMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdAddApplePayDomainsRequest request, org.openapis.openapi.models.operations.PostMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdAddApplePayDomainsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdAddApplePayDomainsPathParams.class, baseUrl, "/merchants/{merchantId}/paymentMethodSettings/{paymentMethodId}/addApplePayDomains", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdAddApplePayDomainsRequest.class, baseUrl, "/merchants/{merchantId}/paymentMethodSettings/{paymentMethodId}/addApplePayDomains", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "applePayInfo", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

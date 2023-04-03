@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsGetOrgPublicKeyRequest {
-    
-    public ActionsGetOrgPublicKeyPathParams pathParams;
-    public ActionsGetOrgPublicKeyRequest withPathParams(ActionsGetOrgPublicKeyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ActionsGetOrgPublicKeyRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

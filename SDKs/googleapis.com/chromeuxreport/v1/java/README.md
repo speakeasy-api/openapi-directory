@@ -17,12 +17,11 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.ChromeuxreportRecordsQueryHistoryRecordQueryParams;
 import org.openapis.openapi.models.operations.ChromeuxreportRecordsQueryHistoryRecordRequest;
 import org.openapis.openapi.models.operations.ChromeuxreportRecordsQueryHistoryRecordResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.QueryHistoryRequestFormFactorEnum;
 import org.openapis.openapi.models.shared.QueryHistoryRequest;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -32,29 +31,28 @@ public class Application {
                 .build();
 
             ChromeuxreportRecordsQueryHistoryRecordRequest req = new ChromeuxreportRecordsQueryHistoryRecordRequest() {{
-                queryParams = new ChromeuxreportRecordsQueryHistoryRecordQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "provident";
-                    alt = "proto";
-                    callback = "quibusdam";
-                    fields = "unde";
-                    key = "nulla";
-                    oauthToken = "corrupti";
-                    prettyPrint = false;
-                    quotaUser = "illum";
-                    uploadType = "vel";
-                    uploadProtocol = "error";
-                }};
-                request = new QueryHistoryRequest() {{
+                dollarXgafv = "2";
+                queryHistoryRequest = new QueryHistoryRequest() {{
                     formFactor = "DESKTOP";
                     metrics = new String[]{{
-                        add("iure"),
-                        add("magnam"),
+                        add("quibusdam"),
+                        add("unde"),
+                        add("nulla"),
                     }};
-                    origin = "debitis";
-                    url = "ipsa";
+                    origin = "corrupti";
+                    url = "illum";
                 }};
-            }};            
+                accessToken = "vel";
+                alt = "media";
+                callback = "deserunt";
+                fields = "suscipit";
+                key = "iure";
+                oauthToken = "magnam";
+                prettyPrint = false;
+                quotaUser = "debitis";
+                uploadType = "ipsa";
+                uploadProtocol = "delectus";
+            }}            
 
             ChromeuxreportRecordsQueryHistoryRecordResponse res = sdk.records.chromeuxreportRecordsQueryHistoryRecord(req);
 
@@ -68,7 +66,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### records

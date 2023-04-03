@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetClassificationsIdRequest {
-    
-    public GetClassificationsIdPathParams pathParams;
-    public GetClassificationsIdRequest withPathParams(GetClassificationsIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetClassificationsIdSecurity security;
-    public GetClassificationsIdRequest withSecurity(GetClassificationsIdSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the classification resource to load.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetClassificationsIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

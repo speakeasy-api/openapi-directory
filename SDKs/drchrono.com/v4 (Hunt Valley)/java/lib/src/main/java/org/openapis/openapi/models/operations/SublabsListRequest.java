@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SublabsListRequest {
-    
-    public SublabsListQueryParams queryParams;
-    public SublabsListRequest withQueryParams(SublabsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public SublabsListRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
-    
-    public SublabsListSecurity security;
-    public SublabsListRequest withSecurity(SublabsListSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public SublabsListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

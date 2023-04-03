@@ -34,27 +34,28 @@ public class Projects {
     /**
      * Service that performs image detection and annotation for a batch of files. Now only "application/pdf", "image/tiff" and "image/gif" are supported. This service will extract at most 5 (customers can specify which 5 in AnnotateFileRequest.pages) frames (gif) or pages (pdf or tiff) from each file provided and perform detection and annotation for each image extracted.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.VisionProjectsLocationsFilesAnnotateResponse visionProjectsLocationsFilesAnnotate(org.openapis.openapi.models.operations.VisionProjectsLocationsFilesAnnotateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.VisionProjectsLocationsFilesAnnotateResponse visionProjectsLocationsFilesAnnotate(org.openapis.openapi.models.operations.VisionProjectsLocationsFilesAnnotateRequest request, org.openapis.openapi.models.operations.VisionProjectsLocationsFilesAnnotateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VisionProjectsLocationsFilesAnnotatePathParams.class, baseUrl, "/v1p1beta1/{parent}/files:annotate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VisionProjectsLocationsFilesAnnotateRequest.class, baseUrl, "/v1p1beta1/{parent}/files:annotate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudVisionV1p1beta1BatchAnnotateFilesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.VisionProjectsLocationsFilesAnnotateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.VisionProjectsLocationsFilesAnnotateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,27 +82,28 @@ public class Projects {
     /**
      * Run asynchronous image detection and annotation for a list of generic files, such as PDF files, which may contain multiple pages and multiple images per page. Progress and results can be retrieved through the `google.longrunning.Operations` interface. `Operation.metadata` contains `OperationMetadata` (metadata). `Operation.response` contains `AsyncBatchAnnotateFilesResponse` (results).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.VisionProjectsLocationsFilesAsyncBatchAnnotateResponse visionProjectsLocationsFilesAsyncBatchAnnotate(org.openapis.openapi.models.operations.VisionProjectsLocationsFilesAsyncBatchAnnotateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.VisionProjectsLocationsFilesAsyncBatchAnnotateResponse visionProjectsLocationsFilesAsyncBatchAnnotate(org.openapis.openapi.models.operations.VisionProjectsLocationsFilesAsyncBatchAnnotateRequest request, org.openapis.openapi.models.operations.VisionProjectsLocationsFilesAsyncBatchAnnotateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VisionProjectsLocationsFilesAsyncBatchAnnotatePathParams.class, baseUrl, "/v1p1beta1/{parent}/files:asyncBatchAnnotate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VisionProjectsLocationsFilesAsyncBatchAnnotateRequest.class, baseUrl, "/v1p1beta1/{parent}/files:asyncBatchAnnotate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudVisionV1p1beta1AsyncBatchAnnotateFilesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.VisionProjectsLocationsFilesAsyncBatchAnnotateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.VisionProjectsLocationsFilesAsyncBatchAnnotateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -128,27 +130,28 @@ public class Projects {
     /**
      * Run image detection and annotation for a batch of images.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.VisionProjectsLocationsImagesAnnotateResponse visionProjectsLocationsImagesAnnotate(org.openapis.openapi.models.operations.VisionProjectsLocationsImagesAnnotateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.VisionProjectsLocationsImagesAnnotateResponse visionProjectsLocationsImagesAnnotate(org.openapis.openapi.models.operations.VisionProjectsLocationsImagesAnnotateRequest request, org.openapis.openapi.models.operations.VisionProjectsLocationsImagesAnnotateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VisionProjectsLocationsImagesAnnotatePathParams.class, baseUrl, "/v1p1beta1/{parent}/images:annotate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VisionProjectsLocationsImagesAnnotateRequest.class, baseUrl, "/v1p1beta1/{parent}/images:annotate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudVisionV1p1beta1BatchAnnotateImagesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.VisionProjectsLocationsImagesAnnotateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.VisionProjectsLocationsImagesAnnotateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -175,27 +178,28 @@ public class Projects {
     /**
      * Run asynchronous image detection and annotation for a list of images. Progress and results can be retrieved through the `google.longrunning.Operations` interface. `Operation.metadata` contains `OperationMetadata` (metadata). `Operation.response` contains `AsyncBatchAnnotateImagesResponse` (results). This service will write image annotation outputs to json files in customer GCS bucket, each json file containing BatchAnnotateImagesResponse proto.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.VisionProjectsLocationsImagesAsyncBatchAnnotateResponse visionProjectsLocationsImagesAsyncBatchAnnotate(org.openapis.openapi.models.operations.VisionProjectsLocationsImagesAsyncBatchAnnotateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.VisionProjectsLocationsImagesAsyncBatchAnnotateResponse visionProjectsLocationsImagesAsyncBatchAnnotate(org.openapis.openapi.models.operations.VisionProjectsLocationsImagesAsyncBatchAnnotateRequest request, org.openapis.openapi.models.operations.VisionProjectsLocationsImagesAsyncBatchAnnotateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VisionProjectsLocationsImagesAsyncBatchAnnotatePathParams.class, baseUrl, "/v1p1beta1/{parent}/images:asyncBatchAnnotate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VisionProjectsLocationsImagesAsyncBatchAnnotateRequest.class, baseUrl, "/v1p1beta1/{parent}/images:asyncBatchAnnotate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudVisionV1p1beta1AsyncBatchAnnotateImagesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.VisionProjectsLocationsImagesAsyncBatchAnnotateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.VisionProjectsLocationsImagesAsyncBatchAnnotateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

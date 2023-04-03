@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostHubSpacesSpaceIdPayslipsMultipartRequest {
-    
-    public PostHubSpacesSpaceIdPayslipsMultipartPathParams pathParams;
-    public PostHubSpacesSpaceIdPayslipsMultipartRequest withPathParams(PostHubSpacesSpaceIdPayslipsMultipartPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Document to add
      */
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PostHubSpacesSpaceIdPayslipsMultipartFormData1 request;
-    public PostHubSpacesSpaceIdPayslipsMultipartRequest withRequest(PostHubSpacesSpaceIdPayslipsMultipartFormData1 request) {
-        this.request = request;
+    public PostHubSpacesSpaceIdPayslipsMultipartFormData1 requestBody;
+    public PostHubSpacesSpaceIdPayslipsMultipartRequest withRequestBody(PostHubSpacesSpaceIdPayslipsMultipartFormData1 requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public PostHubSpacesSpaceIdPayslipsMultipartSecurity security;
-    public PostHubSpacesSpaceIdPayslipsMultipartRequest withSecurity(PostHubSpacesSpaceIdPayslipsMultipartSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PostHubSpacesSpaceIdPayslipsMultipartRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

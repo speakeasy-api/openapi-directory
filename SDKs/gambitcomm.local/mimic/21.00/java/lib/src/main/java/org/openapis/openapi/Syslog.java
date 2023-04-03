@@ -40,7 +40,7 @@ public class Syslog {
      */
     public org.openapis.openapi.models.operations.ProtocolSyslogGetArgsResponse protocolSyslogGetArgs(org.openapis.openapi.models.operations.ProtocolSyslogGetArgsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSyslogGetArgsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/syslog/get/args", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSyslogGetArgsRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/syslog/get/args", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -82,7 +82,7 @@ public class Syslog {
      */
     public org.openapis.openapi.models.operations.ProtocolSyslogGetAttrResponse protocolSyslogGetAttr(org.openapis.openapi.models.operations.ProtocolSyslogGetAttrRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSyslogGetAttrPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/syslog/get/{attr}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSyslogGetAttrRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/syslog/get/{attr}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -123,7 +123,7 @@ public class Syslog {
      */
     public org.openapis.openapi.models.operations.ProtocolSyslogGetConfigResponse protocolSyslogGetConfig(org.openapis.openapi.models.operations.ProtocolSyslogGetConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSyslogGetConfigPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/syslog/get/config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSyslogGetConfigRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/syslog/get/config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -165,7 +165,7 @@ public class Syslog {
      */
     public org.openapis.openapi.models.operations.ProtocolSyslogGetStatisticsResponse protocolSyslogGetStatistics(org.openapis.openapi.models.operations.ProtocolSyslogGetStatisticsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSyslogGetStatisticsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/syslog/get/statistics", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSyslogGetStatisticsRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/syslog/get/statistics", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -248,7 +248,7 @@ public class Syslog {
      */
     public org.openapis.openapi.models.operations.ProtocolSyslogGetTraceResponse protocolSyslogGetTrace(org.openapis.openapi.models.operations.ProtocolSyslogGetTraceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSyslogGetTracePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/syslog/get/trace", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSyslogGetTraceRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/syslog/get/trace", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -290,12 +290,12 @@ public class Syslog {
      */
     public org.openapis.openapi.models.operations.ProtocolSyslogSendResponse protocolSyslogSend(org.openapis.openapi.models.operations.ProtocolSyslogSendRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSyslogSendPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/syslog/send/{pri}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSyslogSendRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/syslog/send/{pri}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "syslogMsg", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -336,7 +336,7 @@ public class Syslog {
      */
     public org.openapis.openapi.models.operations.ProtocolSyslogSetAttrResponse protocolSyslogSetAttr(org.openapis.openapi.models.operations.ProtocolSyslogSetAttrRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSyslogSetAttrPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/syslog/set/{attr}/{value}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSyslogSetAttrRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/syslog/set/{attr}/{value}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -377,7 +377,7 @@ public class Syslog {
      */
     public org.openapis.openapi.models.operations.ProtocolSyslogSetConfigResponse protocolSyslogSetConfig(org.openapis.openapi.models.operations.ProtocolSyslogSetConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSyslogSetConfigPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/syslog/set/config/{argument}/{value}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSyslogSetConfigRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/syslog/set/config/{argument}/{value}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -418,7 +418,7 @@ public class Syslog {
      */
     public org.openapis.openapi.models.operations.ProtocolSyslogSetTraceResponse protocolSyslogSetTrace(org.openapis.openapi.models.operations.ProtocolSyslogSetTraceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSyslogSetTracePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/syslog/set/trace/{enableOrNot}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSyslogSetTraceRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/syslog/set/trace/{enableOrNot}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

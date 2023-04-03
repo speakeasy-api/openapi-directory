@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OAuth2PermissionGrantListRequest {
-    
-    public OAuth2PermissionGrantListPathParams pathParams;
-    public OAuth2PermissionGrantListRequest withPathParams(OAuth2PermissionGrantListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * This is the Service Principal ObjectId associated with the app
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$filter")
+    public String dollarFilter;
+    public OAuth2PermissionGrantListRequest withDollarFilter(String dollarFilter) {
+        this.dollarFilter = dollarFilter;
         return this;
     }
     
+    /**
+     * Client API version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public OAuth2PermissionGrantListRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
     
-    public OAuth2PermissionGrantListQueryParams queryParams;
-    public OAuth2PermissionGrantListRequest withQueryParams(OAuth2PermissionGrantListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The tenant ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tenantID")
+    public String tenantID;
+    public OAuth2PermissionGrantListRequest withTenantID(String tenantID) {
+        this.tenantID = tenantID;
         return this;
     }
     

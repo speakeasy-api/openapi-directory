@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddCouponsRequest {
-    
-    public AddCouponsPathParams pathParams;
-    public AddCouponsRequest withPathParams(AddCouponsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public AddCouponsRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public AddCouponsHeaders headers;
-    public AddCouponsRequest withHeaders(AddCouponsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public AddCouponsRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public AddCouponsRequestBody request;
-    public AddCouponsRequest withRequest(AddCouponsRequestBody request) {
-        this.request = request;
+    public AddCouponsRequestBody requestBody;
+    public AddCouponsRequest withRequestBody(AddCouponsRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * ID of the orderForm that will receive coupon information.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderFormId")
+    public String orderFormId;
+    public AddCouponsRequest withOrderFormId(String orderFormId) {
+        this.orderFormId = orderFormId;
         return this;
     }
     

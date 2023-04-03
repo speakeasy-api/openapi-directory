@@ -4,34 +4,113 @@
 
 package org.openapis.openapi.models.operations;
 
+import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BatchGetFrameMetricDataRequest {
-    
-    public BatchGetFrameMetricDataPathParams pathParams;
-    public BatchGetFrameMetricDataRequest withPathParams(BatchGetFrameMetricDataPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public BatchGetFrameMetricDataQueryParams queryParams;
-    public BatchGetFrameMetricDataRequest withQueryParams(BatchGetFrameMetricDataQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public BatchGetFrameMetricDataHeaders headers;
-    public BatchGetFrameMetricDataRequest withHeaders(BatchGetFrameMetricDataHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public BatchGetFrameMetricDataRequestBody request;
-    public BatchGetFrameMetricDataRequest withRequest(BatchGetFrameMetricDataRequestBody request) {
-        this.request = request;
+    public BatchGetFrameMetricDataRequestBody requestBody;
+    public BatchGetFrameMetricDataRequest withRequestBody(BatchGetFrameMetricDataRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public BatchGetFrameMetricDataRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public BatchGetFrameMetricDataRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public BatchGetFrameMetricDataRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public BatchGetFrameMetricDataRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public BatchGetFrameMetricDataRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public BatchGetFrameMetricDataRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public BatchGetFrameMetricDataRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     *  The end time of the time period for the returned time series values. This is specified using the ISO 8601 format. For example, 2020-06-01T13:15:02.001Z represents 1 millisecond past June 1, 2020 1:15:02 PM UTC. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endTime")
+    public OffsetDateTime endTime;
+    public BatchGetFrameMetricDataRequest withEndTime(OffsetDateTime endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    
+    /**
+     *  The duration of the frame metrics used to return the time series values. Specify using the ISO 8601 format. The maximum period duration is one day (&lt;code&gt;PT24H&lt;/code&gt; or &lt;code&gt;P1D&lt;/code&gt;). 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=period")
+    public String period;
+    public BatchGetFrameMetricDataRequest withPeriod(String period) {
+        this.period = period;
+        return this;
+    }
+    
+    /**
+     *  The name of the profiling group associated with the the frame metrics used to return the time series values. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profilingGroupName")
+    public String profilingGroupName;
+    public BatchGetFrameMetricDataRequest withProfilingGroupName(String profilingGroupName) {
+        this.profilingGroupName = profilingGroupName;
+        return this;
+    }
+    
+    /**
+     *  The start time of the time period for the frame metrics used to return the time series values. This is specified using the ISO 8601 format. For example, 2020-06-01T13:15:02.001Z represents 1 millisecond past June 1, 2020 1:15:02 PM UTC. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startTime")
+    public OffsetDateTime startTime;
+    public BatchGetFrameMetricDataRequest withStartTime(OffsetDateTime startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The requested resolution of time steps for the returned time series of values. If the requested target resolution is not available due to data not being retained we provide a best effort result by falling back to the most granular available resolution after the target resolution. There are 3 valid values. &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;P1D&lt;/code&gt; \u2014 1 day &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;PT1H&lt;/code&gt; \u2014 1 hour &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;PT5M&lt;/code&gt; \u2014 5 minutes &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=targetResolution")
+    public BatchGetFrameMetricDataTargetResolutionEnum targetResolution;
+    public BatchGetFrameMetricDataRequest withTargetResolution(BatchGetFrameMetricDataTargetResolutionEnum targetResolution) {
+        this.targetResolution = targetResolution;
         return this;
     }
     

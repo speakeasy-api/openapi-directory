@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteQuoteImageFontRequest {
-    
-    public DeleteQuoteImageFontQueryParams queryParams;
-    public DeleteQuoteImageFontRequest withQueryParams(DeleteQuoteImageFontQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public DeleteQuoteImageFontSecurity security;
-    public DeleteQuoteImageFontRequest withSecurity(DeleteQuoteImageFontSecurity security) {
-        this.security = security;
+    /**
+     * Font ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public DeleteQuoteImageFontRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

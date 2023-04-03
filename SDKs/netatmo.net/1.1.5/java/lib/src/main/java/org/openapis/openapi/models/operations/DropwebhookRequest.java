@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DropwebhookRequest {
-    
-    public DropwebhookQueryParams queryParams;
-    public DropwebhookRequest withQueryParams(DropwebhookQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public DropwebhookSecurity security;
-    public DropwebhookRequest withSecurity(DropwebhookSecurity security) {
-        this.security = security;
+    /**
+     * For Welcome, use app_camera
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=app_type")
+    public String appType;
+    public DropwebhookRequest withAppType(String appType) {
+        this.appType = appType;
         return this;
     }
     

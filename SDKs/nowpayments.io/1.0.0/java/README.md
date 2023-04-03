@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetAllTransfersQueryParams;
 import org.openapis.openapi.models.operations.GetAllTransfersRequest;
 import org.openapis.openapi.models.operations.GetAllTransfersResponse;
 
@@ -28,14 +27,12 @@ public class Application {
                 .build();
 
             GetAllTransfersRequest req = new GetAllTransfersRequest() {{
-                queryParams = new GetAllTransfersQueryParams() {{
-                    id = "111";
-                    limit = "10";
-                    offset = "0";
-                    order = "ASC";
-                    status = "CREATED";
-                }};
-            }};            
+                id = "111";
+                limit = "10";
+                offset = "0";
+                order = "ASC";
+                status = "CREATED";
+            }}            
 
             GetAllTransfersResponse res = sdk.billingSubPartnerAPI.getAllTransfers(req);
 
@@ -49,7 +46,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### billingSubPartnerAPI

@@ -34,27 +34,28 @@ public class TargetPools {
     /**
      * Adds health check URLs to a target pool.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeTargetPoolsAddHealthCheckResponse computeTargetPoolsAddHealthCheck(org.openapis.openapi.models.operations.ComputeTargetPoolsAddHealthCheckRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeTargetPoolsAddHealthCheckResponse computeTargetPoolsAddHealthCheck(org.openapis.openapi.models.operations.ComputeTargetPoolsAddHealthCheckRequest request, org.openapis.openapi.models.operations.ComputeTargetPoolsAddHealthCheckSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetPoolsAddHealthCheckPathParams.class, baseUrl, "/projects/{project}/regions/{region}/targetPools/{targetPool}/addHealthCheck", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetPoolsAddHealthCheckRequest.class, baseUrl, "/projects/{project}/regions/{region}/targetPools/{targetPool}/addHealthCheck", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "targetPoolsAddHealthCheckRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetPoolsAddHealthCheckQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetPoolsAddHealthCheckRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,27 +82,28 @@ public class TargetPools {
     /**
      * Adds an instance to a target pool.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeTargetPoolsAddInstanceResponse computeTargetPoolsAddInstance(org.openapis.openapi.models.operations.ComputeTargetPoolsAddInstanceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeTargetPoolsAddInstanceResponse computeTargetPoolsAddInstance(org.openapis.openapi.models.operations.ComputeTargetPoolsAddInstanceRequest request, org.openapis.openapi.models.operations.ComputeTargetPoolsAddInstanceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetPoolsAddInstancePathParams.class, baseUrl, "/projects/{project}/regions/{region}/targetPools/{targetPool}/addInstance", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetPoolsAddInstanceRequest.class, baseUrl, "/projects/{project}/regions/{region}/targetPools/{targetPool}/addInstance", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "targetPoolsAddInstanceRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetPoolsAddInstanceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetPoolsAddInstanceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -128,25 +130,26 @@ public class TargetPools {
     /**
      * Retrieves an aggregated list of target pools.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeTargetPoolsAggregatedListResponse computeTargetPoolsAggregatedList(org.openapis.openapi.models.operations.ComputeTargetPoolsAggregatedListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeTargetPoolsAggregatedListResponse computeTargetPoolsAggregatedList(org.openapis.openapi.models.operations.ComputeTargetPoolsAggregatedListRequest request, org.openapis.openapi.models.operations.ComputeTargetPoolsAggregatedListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetPoolsAggregatedListPathParams.class, baseUrl, "/projects/{project}/aggregated/targetPools", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetPoolsAggregatedListRequest.class, baseUrl, "/projects/{project}/aggregated/targetPools", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetPoolsAggregatedListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetPoolsAggregatedListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -173,25 +176,26 @@ public class TargetPools {
     /**
      * Deletes the specified target pool.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeTargetPoolsDeleteResponse computeTargetPoolsDelete(org.openapis.openapi.models.operations.ComputeTargetPoolsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeTargetPoolsDeleteResponse computeTargetPoolsDelete(org.openapis.openapi.models.operations.ComputeTargetPoolsDeleteRequest request, org.openapis.openapi.models.operations.ComputeTargetPoolsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetPoolsDeletePathParams.class, baseUrl, "/projects/{project}/regions/{region}/targetPools/{targetPool}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetPoolsDeleteRequest.class, baseUrl, "/projects/{project}/regions/{region}/targetPools/{targetPool}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetPoolsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetPoolsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -218,25 +222,26 @@ public class TargetPools {
     /**
      * Returns the specified target pool.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeTargetPoolsGetResponse computeTargetPoolsGet(org.openapis.openapi.models.operations.ComputeTargetPoolsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeTargetPoolsGetResponse computeTargetPoolsGet(org.openapis.openapi.models.operations.ComputeTargetPoolsGetRequest request, org.openapis.openapi.models.operations.ComputeTargetPoolsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetPoolsGetPathParams.class, baseUrl, "/projects/{project}/regions/{region}/targetPools/{targetPool}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetPoolsGetRequest.class, baseUrl, "/projects/{project}/regions/{region}/targetPools/{targetPool}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetPoolsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetPoolsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -263,27 +268,28 @@ public class TargetPools {
     /**
      * Gets the most recent health check results for each IP for the instance that is referenced by the given target pool.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeTargetPoolsGetHealthResponse computeTargetPoolsGetHealth(org.openapis.openapi.models.operations.ComputeTargetPoolsGetHealthRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeTargetPoolsGetHealthResponse computeTargetPoolsGetHealth(org.openapis.openapi.models.operations.ComputeTargetPoolsGetHealthRequest request, org.openapis.openapi.models.operations.ComputeTargetPoolsGetHealthSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetPoolsGetHealthPathParams.class, baseUrl, "/projects/{project}/regions/{region}/targetPools/{targetPool}/getHealth", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetPoolsGetHealthRequest.class, baseUrl, "/projects/{project}/regions/{region}/targetPools/{targetPool}/getHealth", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "instanceReference", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetPoolsGetHealthQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetPoolsGetHealthRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -310,27 +316,28 @@ public class TargetPools {
     /**
      * Creates a target pool in the specified project and region using the data included in the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeTargetPoolsInsertResponse computeTargetPoolsInsert(org.openapis.openapi.models.operations.ComputeTargetPoolsInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeTargetPoolsInsertResponse computeTargetPoolsInsert(org.openapis.openapi.models.operations.ComputeTargetPoolsInsertRequest request, org.openapis.openapi.models.operations.ComputeTargetPoolsInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetPoolsInsertPathParams.class, baseUrl, "/projects/{project}/regions/{region}/targetPools", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetPoolsInsertRequest.class, baseUrl, "/projects/{project}/regions/{region}/targetPools", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "targetPool", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetPoolsInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetPoolsInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -357,25 +364,26 @@ public class TargetPools {
     /**
      * Retrieves a list of target pools available to the specified project and region.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeTargetPoolsListResponse computeTargetPoolsList(org.openapis.openapi.models.operations.ComputeTargetPoolsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeTargetPoolsListResponse computeTargetPoolsList(org.openapis.openapi.models.operations.ComputeTargetPoolsListRequest request, org.openapis.openapi.models.operations.ComputeTargetPoolsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetPoolsListPathParams.class, baseUrl, "/projects/{project}/regions/{region}/targetPools", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetPoolsListRequest.class, baseUrl, "/projects/{project}/regions/{region}/targetPools", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetPoolsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetPoolsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -402,27 +410,28 @@ public class TargetPools {
     /**
      * Removes health check URL from a target pool.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeTargetPoolsRemoveHealthCheckResponse computeTargetPoolsRemoveHealthCheck(org.openapis.openapi.models.operations.ComputeTargetPoolsRemoveHealthCheckRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeTargetPoolsRemoveHealthCheckResponse computeTargetPoolsRemoveHealthCheck(org.openapis.openapi.models.operations.ComputeTargetPoolsRemoveHealthCheckRequest request, org.openapis.openapi.models.operations.ComputeTargetPoolsRemoveHealthCheckSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetPoolsRemoveHealthCheckPathParams.class, baseUrl, "/projects/{project}/regions/{region}/targetPools/{targetPool}/removeHealthCheck", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetPoolsRemoveHealthCheckRequest.class, baseUrl, "/projects/{project}/regions/{region}/targetPools/{targetPool}/removeHealthCheck", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "targetPoolsRemoveHealthCheckRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetPoolsRemoveHealthCheckQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetPoolsRemoveHealthCheckRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -449,27 +458,28 @@ public class TargetPools {
     /**
      * Removes instance URL from a target pool.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeTargetPoolsRemoveInstanceResponse computeTargetPoolsRemoveInstance(org.openapis.openapi.models.operations.ComputeTargetPoolsRemoveInstanceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeTargetPoolsRemoveInstanceResponse computeTargetPoolsRemoveInstance(org.openapis.openapi.models.operations.ComputeTargetPoolsRemoveInstanceRequest request, org.openapis.openapi.models.operations.ComputeTargetPoolsRemoveInstanceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetPoolsRemoveInstancePathParams.class, baseUrl, "/projects/{project}/regions/{region}/targetPools/{targetPool}/removeInstance", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetPoolsRemoveInstanceRequest.class, baseUrl, "/projects/{project}/regions/{region}/targetPools/{targetPool}/removeInstance", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "targetPoolsRemoveInstanceRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetPoolsRemoveInstanceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetPoolsRemoveInstanceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -496,27 +506,28 @@ public class TargetPools {
     /**
      * Changes a backup target pool's configurations.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeTargetPoolsSetBackupResponse computeTargetPoolsSetBackup(org.openapis.openapi.models.operations.ComputeTargetPoolsSetBackupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeTargetPoolsSetBackupResponse computeTargetPoolsSetBackup(org.openapis.openapi.models.operations.ComputeTargetPoolsSetBackupRequest request, org.openapis.openapi.models.operations.ComputeTargetPoolsSetBackupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetPoolsSetBackupPathParams.class, baseUrl, "/projects/{project}/regions/{region}/targetPools/{targetPool}/setBackup", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetPoolsSetBackupRequest.class, baseUrl, "/projects/{project}/regions/{region}/targetPools/{targetPool}/setBackup", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "targetReference", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetPoolsSetBackupQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetPoolsSetBackupRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,20 +4,129 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCreateGlobalClusterRequest {
-    
-    public GETCreateGlobalClusterQueryParams queryParams;
-    public GETCreateGlobalClusterRequest withQueryParams(GETCreateGlobalClusterQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETCreateGlobalClusterActionEnum action;
+    public GETCreateGlobalClusterRequest withAction(GETCreateGlobalClusterActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The deletion protection setting for the new global database. The global database can't be deleted when deletion protection is enabled.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DeletionProtection")
+    public Boolean deletionProtection;
+    public GETCreateGlobalClusterRequest withDeletionProtection(Boolean deletionProtection) {
+        this.deletionProtection = deletionProtection;
+        return this;
+    }
     
-    public GETCreateGlobalClusterHeaders headers;
-    public GETCreateGlobalClusterRequest withHeaders(GETCreateGlobalClusterHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The name of the database engine to be used in the global database.&lt;/p&gt; &lt;p&gt;Valid values: &lt;code&gt;neptune&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Engine")
+    public String engine;
+    public GETCreateGlobalClusterRequest withEngine(String engine) {
+        this.engine = engine;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The Neptune engine version to be used by the global database.&lt;/p&gt; &lt;p&gt;Valid values: &lt;code&gt;1.2.0.0&lt;/code&gt; or above.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EngineVersion")
+    public String engineVersion;
+    public GETCreateGlobalClusterRequest withEngineVersion(String engineVersion) {
+        this.engineVersion = engineVersion;
+        return this;
+    }
+    
+    /**
+     * The cluster identifier of the new global database cluster.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GlobalClusterIdentifier")
+    public String globalClusterIdentifier;
+    public GETCreateGlobalClusterRequest withGlobalClusterIdentifier(String globalClusterIdentifier) {
+        this.globalClusterIdentifier = globalClusterIdentifier;
+        return this;
+    }
+    
+    /**
+     * (&lt;i&gt;Optional&lt;/i&gt;) The Amazon Resource Name (ARN) of an existing Neptune DB cluster to use as the primary cluster of the new global database.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SourceDBClusterIdentifier")
+    public String sourceDBClusterIdentifier;
+    public GETCreateGlobalClusterRequest withSourceDBClusterIdentifier(String sourceDBClusterIdentifier) {
+        this.sourceDBClusterIdentifier = sourceDBClusterIdentifier;
+        return this;
+    }
+    
+    /**
+     * The storage encryption setting for the new global database cluster.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StorageEncrypted")
+    public Boolean storageEncrypted;
+    public GETCreateGlobalClusterRequest withStorageEncrypted(Boolean storageEncrypted) {
+        this.storageEncrypted = storageEncrypted;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETCreateGlobalClusterVersionEnum version;
+    public GETCreateGlobalClusterRequest withVersion(GETCreateGlobalClusterVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETCreateGlobalClusterRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETCreateGlobalClusterRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETCreateGlobalClusterRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETCreateGlobalClusterRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETCreateGlobalClusterRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETCreateGlobalClusterRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETCreateGlobalClusterRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -4,27 +4,120 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETListsFormatRequest {
-    
-    public GETListsFormatPathParams pathParams;
-    public GETListsFormatRequest withPathParams(GETListsFormatPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * YYYY-MM-DD
+     * 
+     * The week-ending date for the sales reflected on list-name. Times best-seller lists are compiled using available book sale data. The bestsellers-date may be significantly earlier than published-date. For additional information, see the explanation at the bottom of any best-seller list page on NYTimes.com (example: Hardcover Fiction, published Dec. 5 but reflecting sales to Nov. 29).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bestsellers-date")
+    public OffsetDateTime bestsellersDate;
+    public GETListsFormatRequest withBestsellersDate(OffsetDateTime bestsellersDate) {
+        this.bestsellersDate = bestsellersDate;
         return this;
     }
     
-    
-    public GETListsFormatQueryParams queryParams;
-    public GETListsFormatRequest withQueryParams(GETListsFormatQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * YYYY-MM-DD  The date the best-seller list was published on NYTimes.com (compare bestsellers-date)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
+    public String date;
+    public GETListsFormatRequest withDate(String date) {
+        this.date = date;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public GETListsFormatFormatEnum format;
+    public GETListsFormatRequest withFormat(GETListsFormatFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public GETListsFormatSecurity security;
-    public GETListsFormatRequest withSecurity(GETListsFormatSecurity security) {
-        this.security = security;
+    /**
+     * International Standard Book Number, 10 or 13 digits
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isbn")
+    public String isbn;
+    public GETListsFormatRequest withIsbn(String isbn) {
+        this.isbn = isbn;
+        return this;
+    }
+    
+    /**
+     * The name of the Times best-seller list. To get valid values, use a list names request.
+     * 
+     * Be sure to replace spaces with hyphens (e.g., e-book-fiction or hardcover-fiction, not E-Book Fiction or Hardcover Fiction). (The parameter is not case sensitive.)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=list")
+    public String list;
+    public GETListsFormatRequest withList(String list) {
+        this.list = list;
+        return this;
+    }
+    
+    /**
+     * Sets the starting point of the result set
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GETListsFormatRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * YYYY-MM-DD
+     * 
+     * The date the best-seller list was published on NYTimes.com (compare bestsellers-date)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=published-date")
+    public String publishedDate;
+    public GETListsFormatRequest withPublishedDate(String publishedDate) {
+        this.publishedDate = publishedDate;
+        return this;
+    }
+    
+    /**
+     * The rank of the best seller on list-name as of bestsellers-date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rank")
+    public Long rank;
+    public GETListsFormatRequest withRank(Long rank) {
+        this.rank = rank;
+        return this;
+    }
+    
+    /**
+     * The rank of the best seller on list-name one week prior to bestsellers-date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rank-last-week")
+    public Long rankLastWeek;
+    public GETListsFormatRequest withRankLastWeek(Long rankLastWeek) {
+        this.rankLastWeek = rankLastWeek;
+        return this;
+    }
+    
+    /**
+     * Sets the sort order of the result set
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort-order")
+    public GETListsFormatSortOrderEnum sortOrder;
+    public GETListsFormatRequest withSortOrder(GETListsFormatSortOrderEnum sortOrder) {
+        this.sortOrder = sortOrder;
+        return this;
+    }
+    
+    /**
+     * The number of weeks that the best seller has been on list-name, as of bestsellers-date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=weeks-on-list")
+    public Long weeksOnList;
+    public GETListsFormatRequest withWeeksOnList(Long weeksOnList) {
+        this.weeksOnList = weeksOnList;
         return this;
     }
     

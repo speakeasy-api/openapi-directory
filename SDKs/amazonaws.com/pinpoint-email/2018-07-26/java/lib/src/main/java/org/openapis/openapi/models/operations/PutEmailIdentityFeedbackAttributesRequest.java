@@ -7,24 +7,69 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutEmailIdentityFeedbackAttributesRequest {
-    
-    public PutEmailIdentityFeedbackAttributesPathParams pathParams;
-    public PutEmailIdentityFeedbackAttributesRequest withPathParams(PutEmailIdentityFeedbackAttributesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutEmailIdentityFeedbackAttributesHeaders headers;
-    public PutEmailIdentityFeedbackAttributesRequest withHeaders(PutEmailIdentityFeedbackAttributesHeaders headers) {
-        this.headers = headers;
+    /**
+     * The email identity that you want to configure bounce and complaint feedback forwarding for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EmailIdentity")
+    public String emailIdentity;
+    public PutEmailIdentityFeedbackAttributesRequest withEmailIdentity(String emailIdentity) {
+        this.emailIdentity = emailIdentity;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PutEmailIdentityFeedbackAttributesRequestBody request;
-    public PutEmailIdentityFeedbackAttributesRequest withRequest(PutEmailIdentityFeedbackAttributesRequestBody request) {
-        this.request = request;
+    public PutEmailIdentityFeedbackAttributesRequestBody requestBody;
+    public PutEmailIdentityFeedbackAttributesRequest withRequestBody(PutEmailIdentityFeedbackAttributesRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public PutEmailIdentityFeedbackAttributesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public PutEmailIdentityFeedbackAttributesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public PutEmailIdentityFeedbackAttributesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public PutEmailIdentityFeedbackAttributesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public PutEmailIdentityFeedbackAttributesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public PutEmailIdentityFeedbackAttributesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public PutEmailIdentityFeedbackAttributesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

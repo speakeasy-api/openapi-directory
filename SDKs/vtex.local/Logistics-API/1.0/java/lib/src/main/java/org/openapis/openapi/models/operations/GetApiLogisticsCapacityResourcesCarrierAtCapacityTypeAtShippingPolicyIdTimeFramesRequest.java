@@ -4,27 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesRequest {
-    
-    public GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesPathParams pathParams;
-    public GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesRequest withPathParams(GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesQueryParams queryParams;
-    public GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesRequest withQueryParams(GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
+    /**
+     * How the delivery capacity is measured as defined in the shipping policy. Capacity can be measured by maximum number of orders (`"orders_quantity"`) or SKUs (`"skus_quantity"`).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=capacityType")
+    public String capacityType;
+    public GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesRequest withCapacityType(String capacityType) {
+        this.capacityType = capacityType;
+        return this;
+    }
     
-    public GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesHeaders headers;
-    public GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesRequest withHeaders(GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesHeaders headers) {
-        this.headers = headers;
+    /**
+     * End date of time range.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rangeEnd")
+    public String rangeEnd;
+    public GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesRequest withRangeEnd(String rangeEnd) {
+        this.rangeEnd = rangeEnd;
+        return this;
+    }
+    
+    /**
+     * Starting date of time range
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rangeStart")
+    public String rangeStart;
+    public GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesRequest withRangeStart(String rangeStart) {
+        this.rangeStart = rangeStart;
+        return this;
+    }
+    
+    /**
+     * ID of shipping policy to search.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shippingPolicyId")
+    public String shippingPolicyId;
+    public GetApiLogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIdTimeFramesRequest withShippingPolicyId(String shippingPolicyId) {
+        this.shippingPolicyId = shippingPolicyId;
         return this;
     }
     

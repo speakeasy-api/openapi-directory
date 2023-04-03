@@ -4,20 +4,43 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkAlertsHistoryRequest {
-    
-    public GetNetworkAlertsHistoryPathParams pathParams;
-    public GetNetworkAlertsHistoryRequest withPathParams(GetNetworkAlertsHistoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endingBefore")
+    public String endingBefore;
+    public GetNetworkAlertsHistoryRequest withEndingBefore(String endingBefore) {
+        this.endingBefore = endingBefore;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkAlertsHistoryRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
     
-    public GetNetworkAlertsHistoryQueryParams queryParams;
-    public GetNetworkAlertsHistoryRequest withQueryParams(GetNetworkAlertsHistoryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of entries per page returned. Acceptable range is 3 - 1000. Default is 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=perPage")
+    public Long perPage;
+    public GetNetworkAlertsHistoryRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startingAfter")
+    public String startingAfter;
+    public GetNetworkAlertsHistoryRequest withStartingAfter(String startingAfter) {
+        this.startingAfter = startingAfter;
         return this;
     }
     

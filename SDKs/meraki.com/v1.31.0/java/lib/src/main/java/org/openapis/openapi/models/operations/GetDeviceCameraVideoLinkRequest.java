@@ -4,20 +4,24 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDeviceCameraVideoLinkRequest {
-    
-    public GetDeviceCameraVideoLinkPathParams pathParams;
-    public GetDeviceCameraVideoLinkRequest withPathParams(GetDeviceCameraVideoLinkPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public GetDeviceCameraVideoLinkRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     
-    
-    public GetDeviceCameraVideoLinkQueryParams queryParams;
-    public GetDeviceCameraVideoLinkRequest withQueryParams(GetDeviceCameraVideoLinkQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * [optional] The video link will start at this time. The timestamp should be a string in ISO8601 format. If no timestamp is specified, we will assume current time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timestamp")
+    public OffsetDateTime timestamp;
+    public GetDeviceCameraVideoLinkRequest withTimestamp(OffsetDateTime timestamp) {
+        this.timestamp = timestamp;
         return this;
     }
     

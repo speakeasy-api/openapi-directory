@@ -4,20 +4,87 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTransactionsRequest {
-    
-    public GetTransactionsQueryParams queryParams;
-    public GetTransactionsRequest withQueryParams(GetTransactionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Unique identifier of the [account holder](https://docs.adyen.com/api-explorer/#/balanceplatform/latest/get/accountHolders/{id}__queryParam_id).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountHolderId")
+    public String accountHolderId;
+    public GetTransactionsRequest withAccountHolderId(String accountHolderId) {
+        this.accountHolderId = accountHolderId;
         return this;
     }
     
+    /**
+     * Unique identifier of the [balance account](https://docs.adyen.com/api-explorer/#/balanceplatform/latest/get/balanceAccounts/{id}__queryParam_id).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=balanceAccountId")
+    public String balanceAccountId;
+    public GetTransactionsRequest withBalanceAccountId(String balanceAccountId) {
+        this.balanceAccountId = balanceAccountId;
+        return this;
+    }
     
-    public GetTransactionsSecurity security;
-    public GetTransactionsRequest withSecurity(GetTransactionsSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the [balance platform](https://docs.adyen.com/api-explorer/#/balanceplatform/latest/get/balancePlatforms/{id}__queryParam_id).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=balancePlatform")
+    public String balancePlatform;
+    public GetTransactionsRequest withBalancePlatform(String balancePlatform) {
+        this.balancePlatform = balancePlatform;
+        return this;
+    }
+    
+    /**
+     * Only include transactions that have been created on or after this point in time. The value must be in ISO 8601 format. For example, **2021-05-30T15:07:40Z**.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdSince")
+    public OffsetDateTime createdSince;
+    public GetTransactionsRequest withCreatedSince(OffsetDateTime createdSince) {
+        this.createdSince = createdSince;
+        return this;
+    }
+    
+    /**
+     * Only include transactions that have been created on or before this point in time. The value must be in ISO 8601 format. For example, **2021-05-30T15:07:40Z**.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdUntil")
+    public OffsetDateTime createdUntil;
+    public GetTransactionsRequest withCreatedUntil(OffsetDateTime createdUntil) {
+        this.createdUntil = createdUntil;
+        return this;
+    }
+    
+    /**
+     * The `cursor` returned in the links of the previous response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public GetTransactionsRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
+    
+    /**
+     * The number of items returned per page, maximum of 100 items. By default, the response returns 10 items per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetTransactionsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Unique identifier of the [payment instrument](https://docs.adyen.com/api-explorer/balanceplatform/latest/get/paymentInstruments/_id_).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paymentInstrumentId")
+    public String paymentInstrumentId;
+    public GetTransactionsRequest withPaymentInstrumentId(String paymentInstrumentId) {
+        this.paymentInstrumentId = paymentInstrumentId;
         return this;
     }
     

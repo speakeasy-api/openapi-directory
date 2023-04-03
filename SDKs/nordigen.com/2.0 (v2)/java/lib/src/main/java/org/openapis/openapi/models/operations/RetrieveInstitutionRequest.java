@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveInstitutionRequest {
-    
-    public RetrieveInstitutionPathParams pathParams;
-    public RetrieveInstitutionRequest withPathParams(RetrieveInstitutionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public RetrieveInstitutionRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

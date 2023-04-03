@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFactOnthisdayEventRequest {
-    
-    public GetFactOnthisdayEventQueryParams queryParams;
-    public GetFactOnthisdayEventRequest withQueryParams(GetFactOnthisdayEventQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Optional day of the month (1- 28/30/31 based on the month). Defaults to current day of the month.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=day")
+    public String day;
+    public GetFactOnthisdayEventRequest withDay(String day) {
+        this.day = day;
         return this;
     }
     
-    
-    public GetFactOnthisdayEventSecurity security;
-    public GetFactOnthisdayEventRequest withSecurity(GetFactOnthisdayEventSecurity security) {
-        this.security = security;
+    /**
+     * Optional month (1-12). Defaults to current month
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=month")
+    public String month;
+    public GetFactOnthisdayEventRequest withMonth(String month) {
+        this.month = month;
         return this;
     }
     

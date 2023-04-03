@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateUserRequest {
-    
-    public UpdateUserPathParams pathParams;
-    public UpdateUserRequest withPathParams(UpdateUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.UserUpdateContent userUpdateContent;
+    public UpdateUserRequest withUserUpdateContent(org.openapis.openapi.models.shared.UserUpdateContent userUpdateContent) {
+        this.userUpdateContent = userUpdateContent;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UserUpdateContent request;
-    public UpdateUserRequest withRequest(org.openapis.openapi.models.shared.UserUpdateContent request) {
-        this.request = request;
+    /**
+     * User ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public Long userId;
+    public UpdateUserRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

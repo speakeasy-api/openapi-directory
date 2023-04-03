@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsGetGithubActionsPermissionsRepositoryRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ActionsGetGithubActionsPermissionsRepositoryRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public ActionsGetGithubActionsPermissionsRepositoryPathParams pathParams;
-    public ActionsGetGithubActionsPermissionsRepositoryRequest withPathParams(ActionsGetGithubActionsPermissionsRepositoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ActionsGetGithubActionsPermissionsRepositoryRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssueGetMilestoneRequest {
+    /**
+     * the milestone to get, identified by ID and if not available by name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public IssueGetMilestoneRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public IssueGetMilestonePathParams pathParams;
-    public IssueGetMilestoneRequest withPathParams(IssueGetMilestonePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssueGetMilestoneRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssueGetMilestoneRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodeScanningUploadSarifRequest {
-    
-    public CodeScanningUploadSarifPathParams pathParams;
-    public CodeScanningUploadSarifRequest withPathParams(CodeScanningUploadSarifPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CodeScanningUploadSarifRequestBody requestBody;
+    public CodeScanningUploadSarifRequest withRequestBody(CodeScanningUploadSarifRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public CodeScanningUploadSarifRequestBody request;
-    public CodeScanningUploadSarifRequest withRequest(CodeScanningUploadSarifRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public CodeScanningUploadSarifRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public CodeScanningUploadSarifRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

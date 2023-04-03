@@ -4,27 +4,162 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListCallSummariesRequest {
-    
-    public ListCallSummariesQueryParams queryParams;
-    public ListCallSummariesRequest withQueryParams(ListCallSummariesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AbnormalSession")
+    public Boolean abnormalSession;
+    public ListCallSummariesRequest withAbnormalSession(Boolean abnormalSession) {
+        this.abnormalSession = abnormalSession;
         return this;
     }
     
-    
-    public ListCallSummariesSecurity security;
-    public ListCallSummariesRequest withSecurity(ListCallSummariesSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Branded")
+    public Boolean branded;
+    public ListCallSummariesRequest withBranded(Boolean branded) {
+        this.branded = branded;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CallState")
+    public String callState;
+    public ListCallSummariesRequest withCallState(String callState) {
+        this.callState = callState;
+        return this;
+    }
     
-    public String serverURL;
-    public ListCallSummariesRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CallType")
+    public String callType;
+    public ListCallSummariesRequest withCallType(String callType) {
+        this.callType = callType;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Direction")
+    public String direction;
+    public ListCallSummariesRequest withDirection(String direction) {
+        this.direction = direction;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndTime")
+    public String endTime;
+    public ListCallSummariesRequest withEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=From")
+    public String from;
+    public ListCallSummariesRequest withFrom(String from) {
+        this.from = from;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FromCarrier")
+    public String fromCarrier;
+    public ListCallSummariesRequest withFromCarrier(String fromCarrier) {
+        this.fromCarrier = fromCarrier;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FromCountryCode")
+    public String fromCountryCode;
+    public ListCallSummariesRequest withFromCountryCode(String fromCountryCode) {
+        this.fromCountryCode = fromCountryCode;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HasTag")
+    public Boolean hasTag;
+    public ListCallSummariesRequest withHasTag(Boolean hasTag) {
+        this.hasTag = hasTag;
+        return this;
+    }
+    
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListCallSummariesRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListCallSummariesRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListCallSummariesRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ProcessingState")
+    public org.openapis.openapi.models.shared.CallSummariesEnumProcessingStateRequestEnum processingState;
+    public ListCallSummariesRequest withProcessingState(org.openapis.openapi.models.shared.CallSummariesEnumProcessingStateRequestEnum processingState) {
+        this.processingState = processingState;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SortBy")
+    public org.openapis.openapi.models.shared.CallSummariesEnumSortByEnum sortBy;
+    public ListCallSummariesRequest withSortBy(org.openapis.openapi.models.shared.CallSummariesEnumSortByEnum sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StartTime")
+    public String startTime;
+    public ListCallSummariesRequest withStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Subaccount")
+    public String subaccount;
+    public ListCallSummariesRequest withSubaccount(String subaccount) {
+        this.subaccount = subaccount;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=To")
+    public String to;
+    public ListCallSummariesRequest withTo(String to) {
+        this.to = to;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ToCarrier")
+    public String toCarrier;
+    public ListCallSummariesRequest withToCarrier(String toCarrier) {
+        this.toCarrier = toCarrier;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ToCountryCode")
+    public String toCountryCode;
+    public ListCallSummariesRequest withToCountryCode(String toCountryCode) {
+        this.toCountryCode = toCountryCode;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VerifiedCaller")
+    public Boolean verifiedCaller;
+    public ListCallSummariesRequest withVerifiedCaller(Boolean verifiedCaller) {
+        this.verifiedCaller = verifiedCaller;
         return this;
     }
     

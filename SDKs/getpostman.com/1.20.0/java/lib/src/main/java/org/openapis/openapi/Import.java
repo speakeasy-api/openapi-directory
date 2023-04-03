@@ -44,7 +44,7 @@ public class Import {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ImportExportedDataResponse importExportedData(org.openapis.openapi.models.operations.ImportExportedDataRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ImportExportedDataResponse importExportedData(byte[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/import/exported");
         
@@ -111,7 +111,7 @@ public class Import {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ImportExternalApiSpecificationResponse importExternalApiSpecification(org.openapis.openapi.models.operations.ImportExternalApiSpecificationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ImportExternalApiSpecificationResponse importExternalApiSpecification(org.openapis.openapi.models.operations.ImportExternalApiSpecificationRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/import/openapi");
         

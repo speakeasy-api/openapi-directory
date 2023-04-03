@@ -4,13 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRealmAuthenticationConfigDescriptionProviderIdRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=providerId")
+    public String providerId;
+    public GetRealmAuthenticationConfigDescriptionProviderIdRequest withProviderId(String providerId) {
+        this.providerId = providerId;
+        return this;
+    }
     
-    public GetRealmAuthenticationConfigDescriptionProviderIdPathParams pathParams;
-    public GetRealmAuthenticationConfigDescriptionProviderIdRequest withPathParams(GetRealmAuthenticationConfigDescriptionProviderIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public GetRealmAuthenticationConfigDescriptionProviderIdRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

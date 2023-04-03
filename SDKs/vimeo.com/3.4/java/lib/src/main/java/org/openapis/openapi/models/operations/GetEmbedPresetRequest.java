@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEmbedPresetRequest {
+    /**
+     * The ID of the preset.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=preset_id")
+    public Double presetId;
+    public GetEmbedPresetRequest withPresetId(Double presetId) {
+        this.presetId = presetId;
+        return this;
+    }
     
-    public GetEmbedPresetPathParams pathParams;
-    public GetEmbedPresetRequest withPathParams(GetEmbedPresetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public GetEmbedPresetRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

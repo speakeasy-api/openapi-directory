@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CatalogGetCategoriesRequest {
-    
-    public CatalogGetCategoriesPathParams pathParams;
-    public CatalogGetCategoriesRequest withPathParams(CatalogGetCategoriesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Indicates that the client accepts that the response will be compressed to reduce traffic size.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Encoding")
+    public String[] acceptEncoding;
+    public CatalogGetCategoriesRequest withAcceptEncoding(String[] acceptEncoding) {
+        this.acceptEncoding = acceptEncoding;
         return this;
     }
     
-    
-    public CatalogGetCategoriesHeaders headers;
-    public CatalogGetCategoriesRequest withHeaders(CatalogGetCategoriesHeaders headers) {
-        this.headers = headers;
+    /**
+     * Your store identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public CatalogGetCategoriesRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

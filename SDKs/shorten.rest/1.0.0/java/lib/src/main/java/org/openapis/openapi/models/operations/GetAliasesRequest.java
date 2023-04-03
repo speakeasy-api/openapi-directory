@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAliasesRequest {
-    
-    public GetAliasesQueryParams queryParams;
-    public GetAliasesRequest withQueryParams(GetAliasesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * An ID returned by a previous query to continue aliases retrieval (see lastId in response)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=continueFrom")
+    public String continueFrom;
+    public GetAliasesRequest withContinueFrom(String continueFrom) {
+        this.continueFrom = continueFrom;
         return this;
     }
     
+    /**
+     * The domain name to get the aliases for (string without `http/https` or `/`)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domainName")
+    public String domainName;
+    public GetAliasesRequest withDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
     
-    public GetAliasesSecurity security;
-    public GetAliasesRequest withSecurity(GetAliasesSecurity security) {
-        this.security = security;
+    /**
+     * Number of results to return per request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetAliasesRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     

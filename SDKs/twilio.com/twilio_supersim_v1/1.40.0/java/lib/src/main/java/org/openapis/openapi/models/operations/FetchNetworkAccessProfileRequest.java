@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchNetworkAccessProfileRequest {
-    
-    public FetchNetworkAccessProfilePathParams pathParams;
-    public FetchNetworkAccessProfileRequest withPathParams(FetchNetworkAccessProfilePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchNetworkAccessProfileSecurity security;
-    public FetchNetworkAccessProfileRequest withSecurity(FetchNetworkAccessProfileSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchNetworkAccessProfileRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Network Access Profile resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchNetworkAccessProfileRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

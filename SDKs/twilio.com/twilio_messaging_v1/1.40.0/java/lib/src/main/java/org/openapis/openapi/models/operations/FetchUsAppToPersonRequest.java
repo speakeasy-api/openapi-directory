@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchUsAppToPersonRequest {
-    
-    public FetchUsAppToPersonPathParams pathParams;
-    public FetchUsAppToPersonRequest withPathParams(FetchUsAppToPersonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Messaging Service](https://www.twilio.com/docs/messaging/services/api) to fetch the resource from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=MessagingServiceSid")
+    public String messagingServiceSid;
+    public FetchUsAppToPersonRequest withMessagingServiceSid(String messagingServiceSid) {
+        this.messagingServiceSid = messagingServiceSid;
         return this;
     }
     
-    
-    public FetchUsAppToPersonSecurity security;
-    public FetchUsAppToPersonRequest withSecurity(FetchUsAppToPersonSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchUsAppToPersonRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the US A2P Compliance resource to fetch `QE2c6890da8086d771620e9b13fadeba0b`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchUsAppToPersonRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

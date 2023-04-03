@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProvinceRequest {
-    
-    public ProvincePathParams pathParams;
-    public ProvinceRequest withPathParams(ProvincePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A boolean parameter (AB and BC only). If false or 0 (default), will return only legislated holidays. If true or 1, will return optional holidays from Alberta and BC.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=optional")
+    public ProvinceOptionalEnum optional;
+    public ProvinceRequest withOptional(ProvinceOptionalEnum optional) {
+        this.optional = optional;
         return this;
     }
     
+    /**
+     * A Canadian province abbreviation
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=provinceId")
+    public ProvinceProvinceIDEnum provinceId;
+    public ProvinceRequest withProvinceId(ProvinceProvinceIDEnum provinceId) {
+        this.provinceId = provinceId;
+        return this;
+    }
     
-    public ProvinceQueryParams queryParams;
-    public ProvinceRequest withQueryParams(ProvinceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A calendar year
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public Long year;
+    public ProvinceRequest withYear(Long year) {
+        this.year = year;
         return this;
     }
     

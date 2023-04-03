@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCustomPageRequest {
-    
-    public DeleteCustomPagePathParams pathParams;
-    public DeleteCustomPageRequest withPathParams(DeleteCustomPagePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteCustomPageSecurity security;
-    public DeleteCustomPageRequest withSecurity(DeleteCustomPageSecurity security) {
-        this.security = security;
+    /**
+     * Slug of custom page
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=slug")
+    public String slug;
+    public DeleteCustomPageRequest withSlug(String slug) {
+        this.slug = slug;
         return this;
     }
     

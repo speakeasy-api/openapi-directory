@@ -4,20 +4,110 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETBacktrackDBClusterRequest {
-    
-    public GETBacktrackDBClusterQueryParams queryParams;
-    public GETBacktrackDBClusterRequest withQueryParams(GETBacktrackDBClusterQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETBacktrackDBClusterActionEnum action;
+    public GETBacktrackDBClusterRequest withAction(GETBacktrackDBClusterActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The timestamp of the time to backtrack the DB cluster to, specified in ISO 8601 format. For more information about ISO 8601, see the &lt;a href="http://en.wikipedia.org/wiki/ISO_8601"&gt;ISO8601 Wikipedia page.&lt;/a&gt; &lt;/p&gt; &lt;note&gt; &lt;p&gt;If the specified time isn't a consistent time for the DB cluster, Aurora automatically chooses the nearest possible consistent time for the DB cluster.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;Constraints:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Must contain a valid ISO 8601 timestamp.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Can't contain a timestamp set in the future.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Example: &lt;code&gt;2017-07-08T18:00Z&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=BacktrackTo")
+    public OffsetDateTime backtrackTo;
+    public GETBacktrackDBClusterRequest withBacktrackTo(OffsetDateTime backtrackTo) {
+        this.backtrackTo = backtrackTo;
+        return this;
+    }
     
-    public GETBacktrackDBClusterHeaders headers;
-    public GETBacktrackDBClusterRequest withHeaders(GETBacktrackDBClusterHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The DB cluster identifier of the DB cluster to be backtracked. This parameter is stored as a lowercase string.&lt;/p&gt; &lt;p&gt;Constraints:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Must contain from 1 to 63 alphanumeric characters or hyphens.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;First character must be a letter.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Can't end with a hyphen or contain two consecutive hyphens.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Example: &lt;code&gt;my-cluster1&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBClusterIdentifier")
+    public String dbClusterIdentifier;
+    public GETBacktrackDBClusterRequest withDBClusterIdentifier(String dbClusterIdentifier) {
+        this.dbClusterIdentifier = dbClusterIdentifier;
+        return this;
+    }
+    
+    /**
+     * A value that indicates whether to force the DB cluster to backtrack when binary logging is enabled. Otherwise, an error occurs when binary logging is enabled.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Force")
+    public Boolean force;
+    public GETBacktrackDBClusterRequest withForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
+    
+    /**
+     * A value that indicates whether to backtrack the DB cluster to the earliest possible backtrack time when &lt;i&gt;BacktrackTo&lt;/i&gt; is set to a timestamp earlier than the earliest backtrack time. When this parameter is disabled and &lt;i&gt;BacktrackTo&lt;/i&gt; is set to a timestamp earlier than the earliest backtrack time, an error occurs.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UseEarliestTimeOnPointInTimeUnavailable")
+    public Boolean useEarliestTimeOnPointInTimeUnavailable;
+    public GETBacktrackDBClusterRequest withUseEarliestTimeOnPointInTimeUnavailable(Boolean useEarliestTimeOnPointInTimeUnavailable) {
+        this.useEarliestTimeOnPointInTimeUnavailable = useEarliestTimeOnPointInTimeUnavailable;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETBacktrackDBClusterVersionEnum version;
+    public GETBacktrackDBClusterRequest withVersion(GETBacktrackDBClusterVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETBacktrackDBClusterRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETBacktrackDBClusterRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETBacktrackDBClusterRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETBacktrackDBClusterRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETBacktrackDBClusterRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETBacktrackDBClusterRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETBacktrackDBClusterRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCuratedPodcastByIdRequest {
-    
-    public GetCuratedPodcastByIdPathParams pathParams;
-    public GetCuratedPodcastByIdRequest withPathParams(GetCuratedPodcastByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Get API Key on listennotes.com/api
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-ListenAPI-Key")
+    public String xListenAPIKey;
+    public GetCuratedPodcastByIdRequest withXListenAPIKey(String xListenAPIKey) {
+        this.xListenAPIKey = xListenAPIKey;
         return this;
     }
     
-    
-    public GetCuratedPodcastByIdHeaders headers;
-    public GetCuratedPodcastByIdRequest withHeaders(GetCuratedPodcastByIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * id for a specific curated list of podcasts. You can get the id from the response of `GET /search?type=curated` or `GET /curated_podcasts`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetCuratedPodcastByIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

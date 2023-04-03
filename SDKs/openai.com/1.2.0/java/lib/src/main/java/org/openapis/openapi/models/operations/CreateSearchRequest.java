@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSearchRequest {
-    
-    public CreateSearchPathParams pathParams;
-    public CreateSearchRequest withPathParams(CreateSearchPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateSearchRequest createSearchRequest;
+    public CreateSearchRequest withCreateSearchRequest(org.openapis.openapi.models.shared.CreateSearchRequest createSearchRequest) {
+        this.createSearchRequest = createSearchRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateSearchRequest request;
-    public CreateSearchRequest withRequest(org.openapis.openapi.models.shared.CreateSearchRequest request) {
-        this.request = request;
+    /**
+     * The ID of the engine to use for this request.  You can select one of `ada`, `babbage`, `curie`, or `davinci`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=engine_id")
+    public String engineId;
+    public CreateSearchRequest withEngineId(String engineId) {
+        this.engineId = engineId;
         return this;
     }
     

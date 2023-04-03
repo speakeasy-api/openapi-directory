@@ -11,9 +11,7 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    cookieSid = new SchemeCookieSid() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    cookieSid = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetcountrystandardRequest {
+    /**
+     * Country name from which to retrieve the standardized version
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public String country;
+    public GetcountrystandardRequest withCountry(String country) {
+        this.country = country;
+        return this;
+    }
     
-    public GetcountrystandardQueryParams queryParams;
-    public GetcountrystandardRequest withQueryParams(GetcountrystandardQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Your Interzoid license API key. Register at www.interzoid.com/register
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
+    public String license;
+    public GetcountrystandardRequest withLicense(String license) {
+        this.license = license;
         return this;
     }
     

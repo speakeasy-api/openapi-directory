@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteTagFromChannelRequest {
-    
-    public DeleteTagFromChannelPathParams pathParams;
-    public DeleteTagFromChannelRequest withPathParams(DeleteTagFromChannelPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel_id")
+    public Double channelId;
+    public DeleteTagFromChannelRequest withChannelId(Double channelId) {
+        this.channelId = channelId;
         return this;
     }
     
-    
-    public DeleteTagFromChannelSecurity security;
-    public DeleteTagFromChannelRequest withSecurity(DeleteTagFromChannelSecurity security) {
-        this.security = security;
+    /**
+     * The word to use as the tag.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=word")
+    public String word;
+    public DeleteTagFromChannelRequest withWord(String word) {
+        this.word = word;
         return this;
     }
     

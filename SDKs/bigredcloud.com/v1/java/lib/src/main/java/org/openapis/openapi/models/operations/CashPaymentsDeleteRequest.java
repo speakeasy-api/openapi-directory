@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CashPaymentsDeleteRequest {
-    
-    public CashPaymentsDeletePathParams pathParams;
-    public CashPaymentsDeleteRequest withPathParams(CashPaymentsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of Cash Receipt to remove.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public CashPaymentsDeleteRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     
-    
-    public CashPaymentsDeleteQueryParams queryParams;
-    public CashPaymentsDeleteRequest withQueryParams(CashPaymentsDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Timestamp of Cash Receipt to remove. Should be encoded in Base64.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timestamp")
+    public String timestamp;
+    public CashPaymentsDeleteRequest withTimestamp(String timestamp) {
+        this.timestamp = timestamp;
         return this;
     }
     

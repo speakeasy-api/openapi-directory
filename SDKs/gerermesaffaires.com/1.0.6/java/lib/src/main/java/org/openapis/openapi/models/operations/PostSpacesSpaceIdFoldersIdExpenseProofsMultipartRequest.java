@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesSpaceIdFoldersIdExpenseProofsMultipartRequest {
-    
-    public PostSpacesSpaceIdFoldersIdExpenseProofsMultipartPathParams pathParams;
-    public PostSpacesSpaceIdFoldersIdExpenseProofsMultipartRequest withPathParams(PostSpacesSpaceIdFoldersIdExpenseProofsMultipartPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Expense proof to add (either DocumentId, ExpenseDate either (File,Name,Content64Encoded,Title,ExpenseDate) is mandatory)
      */
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PostSpacesSpaceIdFoldersIdExpenseProofsMultipartFormData1 request;
-    public PostSpacesSpaceIdFoldersIdExpenseProofsMultipartRequest withRequest(PostSpacesSpaceIdFoldersIdExpenseProofsMultipartFormData1 request) {
-        this.request = request;
+    public PostSpacesSpaceIdFoldersIdExpenseProofsMultipartFormData1 requestBody;
+    public PostSpacesSpaceIdFoldersIdExpenseProofsMultipartRequest withRequestBody(PostSpacesSpaceIdFoldersIdExpenseProofsMultipartFormData1 requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Id of the folder
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSpacesSpaceIdFoldersIdExpenseProofsMultipartRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PostSpacesSpaceIdFoldersIdExpenseProofsMultipartSecurity security;
-    public PostSpacesSpaceIdFoldersIdExpenseProofsMultipartRequest withSecurity(PostSpacesSpaceIdFoldersIdExpenseProofsMultipartSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PostSpacesSpaceIdFoldersIdExpenseProofsMultipartRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

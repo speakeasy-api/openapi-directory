@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpgradeAgentRequest {
-    
-    public UpgradeAgentPathParams pathParams;
-    public UpgradeAgentRequest withPathParams(UpgradeAgentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpgradeAgentSecurity security;
-    public UpgradeAgentRequest withSecurity(UpgradeAgentSecurity security) {
-        this.security = security;
+    /**
+     * UUID of the agent to update
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agent_id")
+    public String agentId;
+    public UpgradeAgentRequest withAgentId(String agentId) {
+        this.agentId = agentId;
         return this;
     }
     

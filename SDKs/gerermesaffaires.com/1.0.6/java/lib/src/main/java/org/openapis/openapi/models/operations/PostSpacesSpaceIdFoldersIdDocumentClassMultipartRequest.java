@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesSpaceIdFoldersIdDocumentClassMultipartRequest {
-    
-    public PostSpacesSpaceIdFoldersIdDocumentClassMultipartPathParams pathParams;
-    public PostSpacesSpaceIdFoldersIdDocumentClassMultipartRequest withPathParams(PostSpacesSpaceIdFoldersIdDocumentClassMultipartPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Document to add (either DocumentId either (File,Name,Content64Encoded,Title) is mandatory)
      */
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PostSpacesSpaceIdFoldersIdDocumentClassMultipartFormData1 request;
-    public PostSpacesSpaceIdFoldersIdDocumentClassMultipartRequest withRequest(PostSpacesSpaceIdFoldersIdDocumentClassMultipartFormData1 request) {
-        this.request = request;
+    public PostSpacesSpaceIdFoldersIdDocumentClassMultipartFormData1 requestBody;
+    public PostSpacesSpaceIdFoldersIdDocumentClassMultipartRequest withRequestBody(PostSpacesSpaceIdFoldersIdDocumentClassMultipartFormData1 requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * class of the document
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=documentClass")
+    public String documentClass;
+    public PostSpacesSpaceIdFoldersIdDocumentClassMultipartRequest withDocumentClass(String documentClass) {
+        this.documentClass = documentClass;
+        return this;
+    }
     
-    public PostSpacesSpaceIdFoldersIdDocumentClassMultipartSecurity security;
-    public PostSpacesSpaceIdFoldersIdDocumentClassMultipartRequest withSecurity(PostSpacesSpaceIdFoldersIdDocumentClassMultipartSecurity security) {
-        this.security = security;
+    /**
+     * Id of the folder
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSpacesSpaceIdFoldersIdDocumentClassMultipartRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PostSpacesSpaceIdFoldersIdDocumentClassMultipartRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

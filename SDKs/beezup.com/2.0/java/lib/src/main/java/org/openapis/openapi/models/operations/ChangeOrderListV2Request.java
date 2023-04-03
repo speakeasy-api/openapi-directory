@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangeOrderListV2Request {
-    
-    public ChangeOrderListV2PathParams pathParams;
-    public ChangeOrderListV2Request withPathParams(ChangeOrderListV2PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ChangeOrderListV2QueryParams queryParams;
-    public ChangeOrderListV2Request withQueryParams(ChangeOrderListV2QueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ChangeOrderListRequestV2 request;
-    public ChangeOrderListV2Request withRequest(org.openapis.openapi.models.shared.ChangeOrderListRequestV2 request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ChangeOrderListRequestV2 changeOrderListRequestV2;
+    public ChangeOrderListV2Request withChangeOrderListRequestV2(org.openapis.openapi.models.shared.ChangeOrderListRequestV2 changeOrderListRequestV2) {
+        this.changeOrderListRequestV2 = changeOrderListRequestV2;
+        return this;
+    }
+    
+    /**
+     * The Order change type
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=changeOrderType")
+    public String changeOrderType;
+    public ChangeOrderListV2Request withChangeOrderType(String changeOrderType) {
+        this.changeOrderType = changeOrderType;
+        return this;
+    }
+    
+    /**
+     * If true, the operation will be not be sent to marketplace. But the validation will be taken in account.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=testMode")
+    public Boolean testMode;
+    public ChangeOrderListV2Request withTestMode(Boolean testMode) {
+        this.testMode = testMode;
+        return this;
+    }
+    
+    /**
+     * Sometimes the user in the e-commerce application is not the same as user associated with the current subscription key. We recommend providing your application's user login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userName")
+    public String userName;
+    public ChangeOrderListV2Request withUserName(String userName) {
+        this.userName = userName;
         return this;
     }
     

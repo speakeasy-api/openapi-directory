@@ -4,20 +4,78 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUserDocumentsRequest {
-    
-    public GetUserDocumentsPathParams pathParams;
-    public GetUserDocumentsRequest withPathParams(GetUserDocumentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * searches in source language of documents, in source and target languages of document's quote
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language_code")
+    public String languageCode;
+    public GetUserDocumentsRequest withLanguageCode(String languageCode) {
+        this.languageCode = languageCode;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_by")
+    public GetUserDocumentsOrderByEnum orderBy;
+    public GetUserDocumentsRequest withOrderBy(GetUserDocumentsOrderByEnum orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
     
-    public GetUserDocumentsQueryParams queryParams;
-    public GetUserDocumentsRequest withQueryParams(GetUserDocumentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_type")
+    public org.openapis.openapi.models.shared.ListOrderTypeEnum orderType;
+    public GetUserDocumentsRequest withOrderType(org.openapis.openapi.models.shared.ListOrderTypeEnum orderType) {
+        this.orderType = orderType;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetUserDocumentsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetUserDocumentsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * When true, this will return the most 4 recent active documents.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=recent")
+    public Boolean recent;
+    public GetUserDocumentsRequest withRecent(Boolean recent) {
+        this.recent = recent;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public GetUserDocumentsRequest withSearch(String search) {
+        this.search = search;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type_filter")
+    public GetUserDocumentsTypeFilterEnum typeFilter;
+    public GetUserDocumentsRequest withTypeFilter(GetUserDocumentsTypeFilterEnum typeFilter) {
+        this.typeFilter = typeFilter;
+        return this;
+    }
+    
+    /**
+     * User ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public Long userId;
+    public GetUserDocumentsRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

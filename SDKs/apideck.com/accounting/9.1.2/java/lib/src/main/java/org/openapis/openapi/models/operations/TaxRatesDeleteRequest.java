@@ -4,34 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TaxRatesDeleteRequest {
-    
-    public TaxRatesDeletePathParams pathParams;
-    public TaxRatesDeleteRequest withPathParams(TaxRatesDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the record you are acting upon.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public TaxRatesDeleteRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public TaxRatesDeleteQueryParams queryParams;
-    public TaxRatesDeleteRequest withQueryParams(TaxRatesDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
+    public Boolean raw;
+    public TaxRatesDeleteRequest withRaw(Boolean raw) {
+        this.raw = raw;
         return this;
     }
     
-    
-    public TaxRatesDeleteHeaders headers;
-    public TaxRatesDeleteRequest withHeaders(TaxRatesDeleteHeaders headers) {
-        this.headers = headers;
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public TaxRatesDeleteRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
         return this;
     }
     
+    /**
+     * ID of the consumer which you want to get or push data from
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-consumer-id")
+    public String xApideckConsumerId;
+    public TaxRatesDeleteRequest withXApideckConsumerId(String xApideckConsumerId) {
+        this.xApideckConsumerId = xApideckConsumerId;
+        return this;
+    }
     
-    public TaxRatesDeleteSecurity security;
-    public TaxRatesDeleteRequest withSecurity(TaxRatesDeleteSecurity security) {
-        this.security = security;
+    /**
+     * Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-service-id")
+    public String xApideckServiceId;
+    public TaxRatesDeleteRequest withXApideckServiceId(String xApideckServiceId) {
+        this.xApideckServiceId = xApideckServiceId;
         return this;
     }
     

@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PullsCheckIfMergedRequest {
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public PullsCheckIfMergedRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public PullsCheckIfMergedPathParams pathParams;
-    public PullsCheckIfMergedRequest withPathParams(PullsCheckIfMergedPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The number that identifies the pull request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pull_number")
+    public Long pullNumber;
+    public PullsCheckIfMergedRequest withPullNumber(Long pullNumber) {
+        this.pullNumber = pullNumber;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public PullsCheckIfMergedRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

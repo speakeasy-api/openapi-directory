@@ -7,10 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ServiceDeleteTargetSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic")
-    public org.openapis.openapi.models.shared.SchemeOtoroshiAuth otoroshiAuth;
-    public ServiceDeleteTargetSecurity withOtoroshiAuth(org.openapis.openapi.models.shared.SchemeOtoroshiAuth otoroshiAuth) {
-        this.otoroshiAuth = otoroshiAuth;
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic,name=password")
+    public String password;
+    public ServiceDeleteTargetSecurity withPassword(String password) {
+        this.password = password;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic,name=username")
+    public String username;
+    public ServiceDeleteTargetSecurity withUsername(String username) {
+        this.username = username;
         return this;
     }
     

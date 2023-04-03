@@ -4,20 +4,216 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BooksMylibraryAnnotationsListRequest {
-    
-    public BooksMylibraryAnnotationsListQueryParams queryParams;
-    public BooksMylibraryAnnotationsListRequest withQueryParams(BooksMylibraryAnnotationsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public BooksMylibraryAnnotationsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public BooksMylibraryAnnotationsListRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public BooksMylibraryAnnotationsListSecurity security;
-    public BooksMylibraryAnnotationsListRequest withSecurity(BooksMylibraryAnnotationsListSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public BooksMylibraryAnnotationsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public BooksMylibraryAnnotationsListRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * The content version for the requested volume.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contentVersion")
+    public String contentVersion;
+    public BooksMylibraryAnnotationsListRequest withContentVersion(String contentVersion) {
+        this.contentVersion = contentVersion;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public BooksMylibraryAnnotationsListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public BooksMylibraryAnnotationsListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * The layer ID to limit annotation by.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=layerId")
+    public String layerId;
+    public BooksMylibraryAnnotationsListRequest withLayerId(String layerId) {
+        this.layerId = layerId;
+        return this;
+    }
+    
+    /**
+     * The layer ID(s) to limit annotation by.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=layerIds")
+    public String[] layerIds;
+    public BooksMylibraryAnnotationsListRequest withLayerIds(String[] layerIds) {
+        this.layerIds = layerIds;
+        return this;
+    }
+    
+    /**
+     * Maximum number of results to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public BooksMylibraryAnnotationsListRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public BooksMylibraryAnnotationsListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * The value of the nextToken from the previous page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public BooksMylibraryAnnotationsListRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public BooksMylibraryAnnotationsListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public BooksMylibraryAnnotationsListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Set to true to return deleted annotations. updatedMin must be in the request to use this. Defaults to false.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showDeleted")
+    public Boolean showDeleted;
+    public BooksMylibraryAnnotationsListRequest withShowDeleted(Boolean showDeleted) {
+        this.showDeleted = showDeleted;
+        return this;
+    }
+    
+    /**
+     * String to identify the originator of this request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
+    public String source;
+    public BooksMylibraryAnnotationsListRequest withSource(String source) {
+        this.source = source;
+        return this;
+    }
+    
+    /**
+     * RFC 3339 timestamp to restrict to items updated prior to this timestamp (exclusive).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedMax")
+    public String updatedMax;
+    public BooksMylibraryAnnotationsListRequest withUpdatedMax(String updatedMax) {
+        this.updatedMax = updatedMax;
+        return this;
+    }
+    
+    /**
+     * RFC 3339 timestamp to restrict to items updated since this timestamp (inclusive).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedMin")
+    public String updatedMin;
+    public BooksMylibraryAnnotationsListRequest withUpdatedMin(String updatedMin) {
+        this.updatedMin = updatedMin;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public BooksMylibraryAnnotationsListRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public BooksMylibraryAnnotationsListRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
+        return this;
+    }
+    
+    /**
+     * The volume to restrict annotations to.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=volumeId")
+    public String volumeId;
+    public BooksMylibraryAnnotationsListRequest withVolumeId(String volumeId) {
+        this.volumeId = volumeId;
         return this;
     }
     

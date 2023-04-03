@@ -39,7 +39,7 @@ public class State {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateOrUpdateStateResponse createOrUpdateState(org.openapis.openapi.models.operations.CreateOrUpdateStateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateOrUpdateStateResponse createOrUpdateState(org.openapis.openapi.models.shared.ConnectionStateCreateOrUpdate request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/state/create_or_update");
         
@@ -98,7 +98,7 @@ public class State {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetStateResponse getState(org.openapis.openapi.models.operations.GetStateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetStateResponse getState(org.openapis.openapi.models.shared.ConnectionIdRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/state/get");
         

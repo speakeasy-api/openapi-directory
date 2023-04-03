@@ -4,27 +4,50 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest {
-    
-    public GetRepositoriesWorkspaceRepoSlugBranchRestrictionsPathParams pathParams;
-    public GetRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest withPathParams(GetRepositoriesWorkspaceRepoSlugBranchRestrictionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Branch restrictions of this type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=kind")
+    public String kind;
+    public GetRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest withKind(String kind) {
+        this.kind = kind;
         return this;
     }
     
-    
-    public GetRepositoriesWorkspaceRepoSlugBranchRestrictionsQueryParams queryParams;
-    public GetRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest withQueryParams(GetRepositoriesWorkspaceRepoSlugBranchRestrictionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Branch restrictions applied to branches of this pattern
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pattern")
+    public String pattern;
+    public GetRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest withPattern(String pattern) {
+        this.pattern = pattern;
         return this;
     }
     
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public GetRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
     
-    public GetRepositoriesWorkspaceRepoSlugBranchRestrictionsSecurity security;
-    public GetRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest withSecurity(GetRepositoriesWorkspaceRepoSlugBranchRestrictionsSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

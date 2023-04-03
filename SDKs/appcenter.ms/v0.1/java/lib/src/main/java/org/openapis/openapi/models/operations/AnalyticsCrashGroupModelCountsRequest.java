@@ -4,27 +4,53 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsCrashGroupModelCountsRequest {
-    
-    public AnalyticsCrashGroupModelCountsPathParams pathParams;
-    public AnalyticsCrashGroupModelCountsRequest withPathParams(AnalyticsCrashGroupModelCountsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The maximum number of results to return. (0 will fetch all results)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$top")
+    public Long dollarTop;
+    public AnalyticsCrashGroupModelCountsRequest withDollarTop(Long dollarTop) {
+        this.dollarTop = dollarTop;
         return this;
     }
     
-    
-    public AnalyticsCrashGroupModelCountsQueryParams queryParams;
-    public AnalyticsCrashGroupModelCountsRequest withQueryParams(AnalyticsCrashGroupModelCountsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public AnalyticsCrashGroupModelCountsRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * The id of the crash group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=crash_group_id")
+    public String crashGroupId;
+    public AnalyticsCrashGroupModelCountsRequest withCrashGroupId(String crashGroupId) {
+        this.crashGroupId = crashGroupId;
+        return this;
+    }
     
-    public AnalyticsCrashGroupModelCountsSecurity security;
-    public AnalyticsCrashGroupModelCountsRequest withSecurity(AnalyticsCrashGroupModelCountsSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public AnalyticsCrashGroupModelCountsRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
+    public String version;
+    public AnalyticsCrashGroupModelCountsRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

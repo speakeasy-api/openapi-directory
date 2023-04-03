@@ -34,16 +34,16 @@ public class Settings {
 		this._genVersion = genVersion;
 	}
 
-    public org.openapis.openapi.models.operations.DeleteWebhooksV3AppIdSettingsClearResponse deleteWebhooksV3AppIdSettingsClear(org.openapis.openapi.models.operations.DeleteWebhooksV3AppIdSettingsClearRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteWebhooksV3AppIdSettingsClearResponse deleteWebhooksV3AppIdSettingsClear(org.openapis.openapi.models.operations.DeleteWebhooksV3AppIdSettingsClearRequest request, org.openapis.openapi.models.operations.DeleteWebhooksV3AppIdSettingsClearSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteWebhooksV3AppIdSettingsClearPathParams.class, baseUrl, "/webhooks/v3/{appId}/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteWebhooksV3AppIdSettingsClearRequest.class, baseUrl, "/webhooks/v3/{appId}/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -68,16 +68,16 @@ public class Settings {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.GetWebhooksV3AppIdSettingsGetAllResponse getWebhooksV3AppIdSettingsGetAll(org.openapis.openapi.models.operations.GetWebhooksV3AppIdSettingsGetAllRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetWebhooksV3AppIdSettingsGetAllResponse getWebhooksV3AppIdSettingsGetAll(org.openapis.openapi.models.operations.GetWebhooksV3AppIdSettingsGetAllRequest request, org.openapis.openapi.models.operations.GetWebhooksV3AppIdSettingsGetAllSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWebhooksV3AppIdSettingsGetAllPathParams.class, baseUrl, "/webhooks/v3/{appId}/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWebhooksV3AppIdSettingsGetAllRequest.class, baseUrl, "/webhooks/v3/{appId}/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -108,21 +108,21 @@ public class Settings {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PutWebhooksV3AppIdSettingsConfigureResponse putWebhooksV3AppIdSettingsConfigure(org.openapis.openapi.models.operations.PutWebhooksV3AppIdSettingsConfigureRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutWebhooksV3AppIdSettingsConfigureResponse putWebhooksV3AppIdSettingsConfigure(org.openapis.openapi.models.operations.PutWebhooksV3AppIdSettingsConfigureRequest request, org.openapis.openapi.models.operations.PutWebhooksV3AppIdSettingsConfigureSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutWebhooksV3AppIdSettingsConfigurePathParams.class, baseUrl, "/webhooks/v3/{appId}/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutWebhooksV3AppIdSettingsConfigureRequest.class, baseUrl, "/webhooks/v3/{appId}/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "settingsChangeRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

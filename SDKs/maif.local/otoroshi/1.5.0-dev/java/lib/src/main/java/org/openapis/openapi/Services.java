@@ -36,11 +36,10 @@ public class Services {
     /**
      * Get all services
      * Get all services
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AllServicesResponse allServices(org.openapis.openapi.models.operations.AllServicesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AllServicesResponse allServices() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/services");
         
@@ -49,8 +48,7 @@ public class Services {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -79,10 +77,11 @@ public class Services {
      * Create a new service descriptor
      * Create a new service descriptor
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateServiceResponse createService(org.openapis.openapi.models.operations.CreateServiceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateServiceResponse createService(org.openapis.openapi.models.shared.Service request, org.openapis.openapi.models.operations.CreateServiceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/services");
         
@@ -93,7 +92,7 @@ public class Services {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -123,21 +122,22 @@ public class Services {
      * Create a service descriptor error template
      * Update a service descriptor targets
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateServiceTemplateResponse createServiceTemplate(org.openapis.openapi.models.operations.CreateServiceTemplateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateServiceTemplateResponse createServiceTemplate(org.openapis.openapi.models.operations.CreateServiceTemplateRequest request, org.openapis.openapi.models.operations.CreateServiceTemplateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateServiceTemplatePathParams.class, baseUrl, "/api/services/{serviceId}/template", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateServiceTemplateRequest.class, baseUrl, "/api/services/{serviceId}/template", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "errorTemplate", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -167,19 +167,20 @@ public class Services {
      * Delete a service descriptor
      * Delete a service descriptor
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteServiceResponse deleteService(org.openapis.openapi.models.operations.DeleteServiceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteServiceResponse deleteService(org.openapis.openapi.models.operations.DeleteServiceRequest request, org.openapis.openapi.models.operations.DeleteServiceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteServicePathParams.class, baseUrl, "/api/services/{serviceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteServiceRequest.class, baseUrl, "/api/services/{serviceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -209,19 +210,20 @@ public class Services {
      * Delete a service descriptor error template
      * Delete a service descriptor error template
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteServiceTemplateResponse deleteServiceTemplate(org.openapis.openapi.models.operations.DeleteServiceTemplateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteServiceTemplateResponse deleteServiceTemplate(org.openapis.openapi.models.operations.DeleteServiceTemplateRequest request, org.openapis.openapi.models.operations.DeleteServiceTemplateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteServiceTemplatePathParams.class, baseUrl, "/api/services/{serviceId}/template", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteServiceTemplateRequest.class, baseUrl, "/api/services/{serviceId}/template", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -251,21 +253,22 @@ public class Services {
      * Update a service descriptor with a diff
      * Update a service descriptor with a diff
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchServiceResponse patchService(org.openapis.openapi.models.operations.PatchServiceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchServiceResponse patchService(org.openapis.openapi.models.operations.PatchServiceRequest request, org.openapis.openapi.models.operations.PatchServiceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchServicePathParams.class, baseUrl, "/api/services/{serviceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchServiceRequest.class, baseUrl, "/api/services/{serviceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -295,19 +298,20 @@ public class Services {
      * Get a service descriptor
      * Get a service descriptor
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServiceResponse service(org.openapis.openapi.models.operations.ServiceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServiceResponse service(org.openapis.openapi.models.operations.ServiceRequest request, org.openapis.openapi.models.operations.ServiceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicePathParams.class, baseUrl, "/api/services/{serviceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceRequest.class, baseUrl, "/api/services/{serviceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -337,21 +341,22 @@ public class Services {
      * Add a target to a service descriptor
      * Add a target to a service descriptor
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServiceAddTargetResponse serviceAddTarget(org.openapis.openapi.models.operations.ServiceAddTargetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServiceAddTargetResponse serviceAddTarget(org.openapis.openapi.models.operations.ServiceAddTargetRequest request, org.openapis.openapi.models.operations.ServiceAddTargetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceAddTargetPathParams.class, baseUrl, "/api/services/{serviceId}/targets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceAddTargetRequest.class, baseUrl, "/api/services/{serviceId}/targets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "target", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -381,19 +386,20 @@ public class Services {
      * Delete a service descriptor target
      * Delete a service descriptor target
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServiceDeleteTargetResponse serviceDeleteTarget(org.openapis.openapi.models.operations.ServiceDeleteTargetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServiceDeleteTargetResponse serviceDeleteTarget(org.openapis.openapi.models.operations.ServiceDeleteTargetRequest request, org.openapis.openapi.models.operations.ServiceDeleteTargetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceDeleteTargetPathParams.class, baseUrl, "/api/services/{serviceId}/targets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceDeleteTargetRequest.class, baseUrl, "/api/services/{serviceId}/targets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -423,19 +429,20 @@ public class Services {
      * Get all services descriptor for a group
      * Get all services descriptor for a group
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServiceGroupServicesResponse serviceGroupServices(org.openapis.openapi.models.operations.ServiceGroupServicesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServiceGroupServicesResponse serviceGroupServices(org.openapis.openapi.models.operations.ServiceGroupServicesRequest request, org.openapis.openapi.models.operations.ServiceGroupServicesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceGroupServicesPathParams.class, baseUrl, "/api/groups/{serviceGroupId}/services", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceGroupServicesRequest.class, baseUrl, "/api/groups/{serviceGroupId}/services", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -465,19 +472,20 @@ public class Services {
      * Get a service descriptor targets
      * Get a service descriptor targets
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServiceTargetsResponse serviceTargets(org.openapis.openapi.models.operations.ServiceTargetsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServiceTargetsResponse serviceTargets(org.openapis.openapi.models.operations.ServiceTargetsRequest request, org.openapis.openapi.models.operations.ServiceTargetsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceTargetsPathParams.class, baseUrl, "/api/services/{serviceId}/targets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceTargetsRequest.class, baseUrl, "/api/services/{serviceId}/targets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -507,19 +515,20 @@ public class Services {
      * Get a service descriptor error template
      * Get a service descriptor error template
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServiceTemplateResponse serviceTemplate(org.openapis.openapi.models.operations.ServiceTemplateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServiceTemplateResponse serviceTemplate(org.openapis.openapi.models.operations.ServiceTemplateRequest request, org.openapis.openapi.models.operations.ServiceTemplateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceTemplatePathParams.class, baseUrl, "/api/services/{serviceId}/template", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceTemplateRequest.class, baseUrl, "/api/services/{serviceId}/template", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -549,21 +558,22 @@ public class Services {
      * Update a service descriptor
      * Update a service descriptor
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateServiceResponse updateService(org.openapis.openapi.models.operations.UpdateServiceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateServiceResponse updateService(org.openapis.openapi.models.operations.UpdateServiceRequest request, org.openapis.openapi.models.operations.UpdateServiceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateServicePathParams.class, baseUrl, "/api/services/{serviceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateServiceRequest.class, baseUrl, "/api/services/{serviceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "service", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -593,21 +603,22 @@ public class Services {
      * Update a service descriptor targets
      * Update a service descriptor targets
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateServiceTargetsResponse updateServiceTargets(org.openapis.openapi.models.operations.UpdateServiceTargetsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateServiceTargetsResponse updateServiceTargets(org.openapis.openapi.models.operations.UpdateServiceTargetsRequest request, org.openapis.openapi.models.operations.UpdateServiceTargetsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateServiceTargetsPathParams.class, baseUrl, "/api/services/{serviceId}/targets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateServiceTargetsRequest.class, baseUrl, "/api/services/{serviceId}/targets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -637,21 +648,22 @@ public class Services {
      * Update an error template to a service descriptor
      * Update an error template to a service descriptor
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateServiceTemplateResponse updateServiceTemplate(org.openapis.openapi.models.operations.UpdateServiceTemplateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateServiceTemplateResponse updateServiceTemplate(org.openapis.openapi.models.operations.UpdateServiceTemplateRequest request, org.openapis.openapi.models.operations.UpdateServiceTemplateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateServiceTemplatePathParams.class, baseUrl, "/api/services/{serviceId}/template", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateServiceTemplateRequest.class, baseUrl, "/api/services/{serviceId}/template", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "errorTemplate", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

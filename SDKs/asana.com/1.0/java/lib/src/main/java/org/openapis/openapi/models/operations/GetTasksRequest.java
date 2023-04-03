@@ -4,13 +4,123 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTasksRequest {
+    /**
+     * The assignee to filter tasks on. If searching for unassigned tasks, assignee.any = null can be specified.
+     * *Note: If you specify `assignee`, you must also specify the `workspace` to filter on.*
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assignee")
+    public String assignee;
+    public GetTasksRequest withAssignee(String assignee) {
+        this.assignee = assignee;
+        return this;
+    }
     
-    public GetTasksQueryParams queryParams;
-    public GetTasksRequest withQueryParams(GetTasksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Only return tasks that are either incomplete or that have been completed since this time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=completed_since")
+    public OffsetDateTime completedSince;
+    public GetTasksRequest withCompletedSince(OffsetDateTime completedSince) {
+        this.completedSince = completedSince;
+        return this;
+    }
+    
+    /**
+     * Results per page.
+     * The number of objects to return per page. The value must be between 1 and 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetTasksRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Only return tasks that have been modified since the given time.
+     * 
+     * *Note: A task is considered \u201cmodified\u201d if any of its properties
+     * change, or associations between it and other objects are modified
+     * (e.g.  a task being added to a project). A task is not considered
+     * modified just because another object it is associated with (e.g. a
+     * subtask) is modified. Actions that count as modifying the task
+     * include assigning, renaming, completing, and adding stories.*
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modified_since")
+    public OffsetDateTime modifiedSince;
+    public GetTasksRequest withModifiedSince(OffsetDateTime modifiedSince) {
+        this.modifiedSince = modifiedSince;
+        return this;
+    }
+    
+    /**
+     * Offset token.
+     * An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.
+     * 'Note: You can only pass in an offset that was returned to you via a previously paginated request.'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public String offset;
+    public GetTasksRequest withOffset(String offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Defines fields to return.
+     * Some requests return *compact* representations of objects in order to conserve resources and complete the request more efficiently. Other times requests return more information than you may need. This option allows you to list the exact set of fields that the API should be sure to return for the objects. The field names should be provided as paths, described below.
+     * The id of included objects will always be returned, regardless of the field options.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
+    public String[] optFields;
+    public GetTasksRequest withOptFields(String[] optFields) {
+        this.optFields = optFields;
+        return this;
+    }
+    
+    /**
+     * Provides \u201cpretty\u201d output.
+     * Provides the response in a \u201cpretty\u201d format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
+    public Boolean optPretty;
+    public GetTasksRequest withOptPretty(Boolean optPretty) {
+        this.optPretty = optPretty;
+        return this;
+    }
+    
+    /**
+     * The project to filter tasks on.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=project")
+    public String project;
+    public GetTasksRequest withProject(String project) {
+        this.project = project;
+        return this;
+    }
+    
+    /**
+     * The section to filter tasks on.
+     * *Note: Currently, this is only supported in board views.*
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=section")
+    public String section;
+    public GetTasksRequest withSection(String section) {
+        this.section = section;
+        return this;
+    }
+    
+    /**
+     * The workspace to filter tasks on.
+     * *Note: If you specify `workspace`, you must also specify the `assignee` to filter on.*
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=workspace")
+    public String workspace;
+    public GetTasksRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

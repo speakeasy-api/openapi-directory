@@ -35,13 +35,13 @@ public class PermissionAddAndRemovePermissions {
      */
     public org.openapis.openapi.models.operations.DeletePermissionAppsAppIdResponse deletePermissionAppsAppId(org.openapis.openapi.models.operations.DeletePermissionAppsAppIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePermissionAppsAppIdPathParams.class, baseUrl, "/permission/apps/{appId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePermissionAppsAppIdRequest.class, baseUrl, "/permission/apps/{appId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeletePermissionAppsAppIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeletePermissionAppsAppIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -74,13 +74,13 @@ public class PermissionAddAndRemovePermissions {
      */
     public org.openapis.openapi.models.operations.GetPermissionAppsAppIdResponse getPermissionAppsAppId(org.openapis.openapi.models.operations.GetPermissionAppsAppIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPermissionAppsAppIdPathParams.class, baseUrl, "/permission/apps/{appId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPermissionAppsAppIdRequest.class, baseUrl, "/permission/apps/{appId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPermissionAppsAppIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPermissionAppsAppIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -120,13 +120,13 @@ public class PermissionAddAndRemovePermissions {
      */
     public org.openapis.openapi.models.operations.PostPermissionAppsAppIdResponse postPermissionAppsAppId(org.openapis.openapi.models.operations.PostPermissionAppsAppIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostPermissionAppsAppIdPathParams.class, baseUrl, "/permission/apps/{appId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostPermissionAppsAppIdRequest.class, baseUrl, "/permission/apps/{appId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostPermissionAppsAppIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostPermissionAppsAppIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

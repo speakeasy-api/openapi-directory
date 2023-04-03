@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateConfigurationSetHeaders;
 import org.openapis.openapi.models.operations.CreateConfigurationSetRequestBodyDeliveryOptions;
 import org.openapis.openapi.models.operations.CreateConfigurationSetRequestBodyReputationOptions;
 import org.openapis.openapi.models.operations.CreateConfigurationSetRequestBodySendingOptions;
@@ -20,30 +19,19 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateConfigurationSetRequest req = new CreateConfigurationSetRequest() {{
-                headers = new CreateConfigurationSetHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new CreateConfigurationSetRequestBody() {{
-                    configurationSetName = "illum";
+                requestBody = new CreateConfigurationSetRequestBody() {{
+                    configurationSetName = "corrupti";
                     deliveryOptions = new CreateConfigurationSetRequestBodyDeliveryOptions() {{
-                        sendingPoolName = "vel";
+                        sendingPoolName = "provident";
                         tlsPolicy = "OPTIONAL";
                     }};
                     reputationOptions = new CreateConfigurationSetRequestBodyReputationOptions() {{
-                        lastFreshStart = "2022-03-26T09:37:56.283Z";
+                        lastFreshStart = "2021-03-11T23:22:42.658Z";
                         reputationMetricsEnabled = false;
                     }};
                     sendingOptions = new CreateConfigurationSetRequestBodySendingOptions() {{
@@ -51,19 +39,34 @@ public class Application {
                     }};
                     tags = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            key = "magnam";
-                            value = "debitis";
+                            key = "corrupti";
+                            value = "illum";
                         }}),
                         add(new Tag() {{
-                            key = "ipsa";
-                            value = "delectus";
+                            key = "vel";
+                            value = "error";
+                        }}),
+                        add(new Tag() {{
+                            key = "deserunt";
+                            value = "suscipit";
+                        }}),
+                        add(new Tag() {{
+                            key = "iure";
+                            value = "magnam";
                         }}),
                     }};
                     trackingOptions = new CreateConfigurationSetRequestBodyTrackingOptions() {{
-                        customRedirectDomain = "tempora";
+                        customRedirectDomain = "debitis";
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "ipsa";
+                xAmzContentSha256 = "delectus";
+                xAmzCredential = "tempora";
+                xAmzDate = "suscipit";
+                xAmzSecurityToken = "molestiae";
+                xAmzSignature = "minus";
+                xAmzSignedHeaders = "placeat";
+            }}            
 
             CreateConfigurationSetResponse res = sdk.createConfigurationSet(req);
 

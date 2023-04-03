@@ -29,7 +29,6 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/ActionARealTimeDecisionPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ActionARealTimeDecisionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ActionARealTimeDecisionDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ActionARealTimeDecisionDefaultApplicationJSON13TypeEnum.java
@@ -71,7 +70,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ActionARealTimeDecision
 lib/src/main/java/org/openapis/openapi/models/operations/ActionARealTimeDecisionDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ActionARealTimeDecisionDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/ActionARealTimeDecisionResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ApproveACheckTransferPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ApproveACheckTransferRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ApproveACheckTransferDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ApproveACheckTransferDefaultApplicationJSON13TypeEnum.java
@@ -113,7 +111,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ApproveACheckTransferDe
 lib/src/main/java/org/openapis/openapi/models/operations/ApproveACheckTransferDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ApproveACheckTransferDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/ApproveACheckTransferResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ApproveAWireTransferPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ApproveAWireTransferRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ApproveAWireTransferDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ApproveAWireTransferDefaultApplicationJSON13TypeEnum.java
@@ -155,7 +152,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ApproveAWireTransferDef
 lib/src/main/java/org/openapis/openapi/models/operations/ApproveAWireTransferDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ApproveAWireTransferDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/ApproveAWireTransferResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ApproveAnAccountTransferPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ApproveAnAccountTransferRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ApproveAnAccountTransferDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ApproveAnAccountTransferDefaultApplicationJSON13TypeEnum.java
@@ -197,7 +193,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ApproveAnAccountTransfe
 lib/src/main/java/org/openapis/openapi/models/operations/ApproveAnAccountTransferDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ApproveAnAccountTransferDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/ApproveAnAccountTransferResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ApproveAnAchTransferPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ApproveAnAchTransferRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ApproveAnAchTransferDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ApproveAnAchTransferDefaultApplicationJSON13TypeEnum.java
@@ -239,7 +234,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ApproveAnAchTransferDef
 lib/src/main/java/org/openapis/openapi/models/operations/ApproveAnAchTransferDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ApproveAnAchTransferDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/ApproveAnAchTransferResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/CancelAPendingAchTransferPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/CancelAPendingAchTransferRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CancelAPendingAchTransferDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CancelAPendingAchTransferDefaultApplicationJSON13TypeEnum.java
@@ -281,7 +275,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CancelAPendingAchTransf
 lib/src/main/java/org/openapis/openapi/models/operations/CancelAPendingAchTransferDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CancelAPendingAchTransferDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/CancelAPendingAchTransferResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/CancelAPendingCheckTransferPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/CancelAPendingCheckTransferRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CancelAPendingCheckTransferDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CancelAPendingCheckTransferDefaultApplicationJSON13TypeEnum.java
@@ -323,7 +316,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CancelAPendingCheckTran
 lib/src/main/java/org/openapis/openapi/models/operations/CancelAPendingCheckTransferDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CancelAPendingCheckTransferDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/CancelAPendingCheckTransferResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/CancelAPendingWireTransferPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/CancelAPendingWireTransferRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CancelAPendingWireTransferDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CancelAPendingWireTransferDefaultApplicationJSON13TypeEnum.java
@@ -365,7 +357,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CancelAPendingWireTrans
 lib/src/main/java/org/openapis/openapi/models/operations/CancelAPendingWireTransferDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CancelAPendingWireTransferDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/CancelAPendingWireTransferResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/CancelAnAccountTransferPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/CancelAnAccountTransferRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CancelAnAccountTransferDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CancelAnAccountTransferDefaultApplicationJSON13TypeEnum.java
@@ -407,7 +398,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CancelAnAccountTransfer
 lib/src/main/java/org/openapis/openapi/models/operations/CancelAnAccountTransferDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CancelAnAccountTransferDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/CancelAnAccountTransferResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/CloseAnAccountPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloseAnAccountRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloseAnAccountDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloseAnAccountDefaultApplicationJSON13TypeEnum.java
@@ -449,7 +439,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CloseAnAccountDefaultAp
 lib/src/main/java/org/openapis/openapi/models/operations/CloseAnAccountDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloseAnAccountDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloseAnAccountResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/CompleteASandboxAccountTransferPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/CompleteASandboxAccountTransferRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CompleteASandboxAccountTransferDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CompleteASandboxAccountTransferDefaultApplicationJSON13TypeEnum.java
@@ -491,7 +480,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CompleteASandboxAccount
 lib/src/main/java/org/openapis/openapi/models/operations/CompleteASandboxAccountTransferDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CompleteASandboxAccountTransferDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/CompleteASandboxAccountTransferResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/CreateACardRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateACardDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateACardDefaultApplicationJSON13TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateACardDefaultApplicationJSON13.java
@@ -532,7 +520,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CreateACardDefaultAppli
 lib/src/main/java/org/openapis/openapi/models/operations/CreateACardDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateACardDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateACardResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/CreateACardDisputeRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateACardDisputeDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateACardDisputeDefaultApplicationJSON13TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateACardDisputeDefaultApplicationJSON13.java
@@ -573,7 +560,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CreateACardDisputeDefau
 lib/src/main/java/org/openapis/openapi/models/operations/CreateACardDisputeDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateACardDisputeDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateACardDisputeResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/CreateACardProfileRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateACardProfileDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateACardProfileDefaultApplicationJSON13TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateACardProfileDefaultApplicationJSON13.java
@@ -614,7 +600,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CreateACardProfileDefau
 lib/src/main/java/org/openapis/openapi/models/operations/CreateACardProfileDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateACardProfileDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateACardProfileResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/CreateACheckDepositRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateACheckDepositDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateACheckDepositDefaultApplicationJSON13TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateACheckDepositDefaultApplicationJSON13.java
@@ -655,7 +640,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CreateACheckDepositDefa
 lib/src/main/java/org/openapis/openapi/models/operations/CreateACheckDepositDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateACheckDepositDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateACheckDepositResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/CreateACheckTransferRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateACheckTransferDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateACheckTransferDefaultApplicationJSON13TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateACheckTransferDefaultApplicationJSON13.java
@@ -696,7 +680,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CreateACheckTransferDef
 lib/src/main/java/org/openapis/openapi/models/operations/CreateACheckTransferDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateACheckTransferDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateACheckTransferResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/CreateAFileRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAFileDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAFileDefaultApplicationJSON13TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAFileDefaultApplicationJSON13.java
@@ -737,7 +720,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CreateAFileDefaultAppli
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAFileDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAFileDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAFileResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/CreateALimitRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateALimitDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateALimitDefaultApplicationJSON13TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateALimitDefaultApplicationJSON13.java
@@ -778,7 +760,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CreateALimitDefaultAppl
 lib/src/main/java/org/openapis/openapi/models/operations/CreateALimitDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateALimitDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateALimitResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/CreateASupplementalDocumentForAnEntityPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateASupplementalDocumentForAnEntityRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateASupplementalDocumentForAnEntityDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateASupplementalDocumentForAnEntityDefaultApplicationJSON13TypeEnum.java
@@ -820,7 +801,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CreateASupplementalDocu
 lib/src/main/java/org/openapis/openapi/models/operations/CreateASupplementalDocumentForAnEntityDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateASupplementalDocumentForAnEntityDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateASupplementalDocumentForAnEntityResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/CreateAWireDrawdownRequestRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAWireDrawdownRequestDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAWireDrawdownRequestDefaultApplicationJSON13TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAWireDrawdownRequestDefaultApplicationJSON13.java
@@ -861,7 +841,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CreateAWireDrawdownRequ
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAWireDrawdownRequestDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAWireDrawdownRequestDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAWireDrawdownRequestResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/CreateAWireTransferRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAWireTransferDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAWireTransferDefaultApplicationJSON13TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAWireTransferDefaultApplicationJSON13.java
@@ -902,7 +881,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CreateAWireTransferDefa
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAWireTransferDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAWireTransferDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAWireTransferResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAccountRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAccountDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAccountDefaultApplicationJSON13TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAccountDefaultApplicationJSON13.java
@@ -943,7 +921,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAccountDefaultA
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAccountDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAccountDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAccountResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAccountNumberRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAccountNumberDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAccountNumberDefaultApplicationJSON13TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAccountNumberDefaultApplicationJSON13.java
@@ -984,7 +961,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAccountNumberDe
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAccountNumberDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAccountNumberDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAccountNumberResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAccountTransferRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAccountTransferDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAccountTransferDefaultApplicationJSON13TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAccountTransferDefaultApplicationJSON13.java
@@ -1025,7 +1001,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAccountTransfer
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAccountTransferDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAccountTransferDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAccountTransferResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAchPrenotificationRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAchPrenotificationDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAchPrenotificationDefaultApplicationJSON13TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAchPrenotificationDefaultApplicationJSON13.java
@@ -1066,7 +1041,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAchPrenotificat
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAchPrenotificationDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAchPrenotificationDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAchPrenotificationResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAchReturnRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAchReturnDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAchReturnDefaultApplicationJSON13TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAchReturnDefaultApplicationJSON13.java
@@ -1107,7 +1081,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAchReturnDefaul
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAchReturnDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAchReturnDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAchReturnResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAchTransferRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAchTransferDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAchTransferDefaultApplicationJSON13TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAchTransferDefaultApplicationJSON13.java
@@ -1148,7 +1121,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAchTransferDefa
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAchTransferDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAchTransferDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnAchTransferResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/CreateAnEntityRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnEntityDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnEntityDefaultApplicationJSON13TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnEntityDefaultApplicationJSON13.java
@@ -1189,7 +1161,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CreateAnEntityDefaultAp
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnEntityDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnEntityDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnEntityResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/CreateAnEventSubscriptionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnEventSubscriptionDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnEventSubscriptionDefaultApplicationJSON13TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnEventSubscriptionDefaultApplicationJSON13.java
@@ -1230,7 +1201,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CreateAnEventSubscripti
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnEventSubscriptionDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnEventSubscriptionDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnEventSubscriptionResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/CreateAnExternalAccountRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnExternalAccountDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnExternalAccountDefaultApplicationJSON13TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnExternalAccountDefaultApplicationJSON13.java
@@ -1271,7 +1241,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CreateAnExternalAccount
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnExternalAccountDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnExternalAccountDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateAnExternalAccountResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/DepositASandboxCheckTransferPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DepositASandboxCheckTransferRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DepositASandboxCheckTransferDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/DepositASandboxCheckTransferDefaultApplicationJSON13TypeEnum.java
@@ -1314,7 +1283,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/DepositASandboxCheckTra
 lib/src/main/java/org/openapis/openapi/models/operations/DepositASandboxCheckTransferDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/DepositASandboxCheckTransferResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListAccountNumbersStatusEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListAccountNumbersQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListAccountNumbersRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListAccountNumbersDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListAccountNumbersDefaultApplicationJSON13TypeEnum.java
@@ -1356,7 +1324,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListAccountNumbersDefau
 lib/src/main/java/org/openapis/openapi/models/operations/ListAccountNumbersDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListAccountNumbersDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListAccountNumbersResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListAccountStatementsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListAccountStatementsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListAccountStatementsDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListAccountStatementsDefaultApplicationJSON13TypeEnum.java
@@ -1398,7 +1365,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListAccountStatementsDe
 lib/src/main/java/org/openapis/openapi/models/operations/ListAccountStatementsDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListAccountStatementsDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListAccountStatementsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListAccountTransfersQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListAccountTransfersRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListAccountTransfersDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListAccountTransfersDefaultApplicationJSON13TypeEnum.java
@@ -1441,7 +1407,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListAccountTransfersDef
 lib/src/main/java/org/openapis/openapi/models/operations/ListAccountTransfersDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListAccountTransfersResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListAccountsStatusEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListAccountsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListAccountsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListAccountsDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListAccountsDefaultApplicationJSON13TypeEnum.java
@@ -1483,7 +1448,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListAccountsDefaultAppl
 lib/src/main/java/org/openapis/openapi/models/operations/ListAccountsDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListAccountsDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListAccountsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListAchPrenotificationsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListAchPrenotificationsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListAchPrenotificationsDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListAchPrenotificationsDefaultApplicationJSON13TypeEnum.java
@@ -1525,7 +1489,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListAchPrenotifications
 lib/src/main/java/org/openapis/openapi/models/operations/ListAchPrenotificationsDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListAchPrenotificationsDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListAchPrenotificationsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListAchTransfersQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListAchTransfersRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListAchTransfersDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListAchTransfersDefaultApplicationJSON13TypeEnum.java
@@ -1568,7 +1531,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListAchTransfersDefault
 lib/src/main/java/org/openapis/openapi/models/operations/ListAchTransfersDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListAchTransfersResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListCardDisputesStatusInEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListCardDisputesQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListCardDisputesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListCardDisputesDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListCardDisputesDefaultApplicationJSON13TypeEnum.java
@@ -1611,7 +1573,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListCardDisputesDefault
 lib/src/main/java/org/openapis/openapi/models/operations/ListCardDisputesDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListCardDisputesResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListCardProfilesStatusInEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListCardProfilesQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListCardProfilesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListCardProfilesDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListCardProfilesDefaultApplicationJSON13TypeEnum.java
@@ -1653,7 +1614,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListCardProfilesDefault
 lib/src/main/java/org/openapis/openapi/models/operations/ListCardProfilesDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListCardProfilesDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListCardProfilesResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListCardsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListCardsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListCardsDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListCardsDefaultApplicationJSON13TypeEnum.java
@@ -1695,7 +1655,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListCardsDefaultApplica
 lib/src/main/java/org/openapis/openapi/models/operations/ListCardsDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListCardsDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListCardsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListCheckDepositsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListCheckDepositsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListCheckDepositsDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListCheckDepositsDefaultApplicationJSON13TypeEnum.java
@@ -1737,7 +1696,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListCheckDepositsDefaul
 lib/src/main/java/org/openapis/openapi/models/operations/ListCheckDepositsDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListCheckDepositsDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListCheckDepositsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListCheckTransfersQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListCheckTransfersRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListCheckTransfersDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListCheckTransfersDefaultApplicationJSON13TypeEnum.java
@@ -1779,7 +1737,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListCheckTransfersDefau
 lib/src/main/java/org/openapis/openapi/models/operations/ListCheckTransfersDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListCheckTransfersDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListCheckTransfersResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListDeclinedTransactionsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListDeclinedTransactionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListDeclinedTransactionsDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListDeclinedTransactionsDefaultApplicationJSON13TypeEnum.java
@@ -1821,7 +1778,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListDeclinedTransaction
 lib/src/main/java/org/openapis/openapi/models/operations/ListDeclinedTransactionsDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListDeclinedTransactionsDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListDeclinedTransactionsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListDigitalWalletTokensQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListDigitalWalletTokensRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListDigitalWalletTokensDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListDigitalWalletTokensDefaultApplicationJSON13TypeEnum.java
@@ -1864,7 +1820,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListDigitalWalletTokens
 lib/src/main/java/org/openapis/openapi/models/operations/ListDigitalWalletTokensDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListDigitalWalletTokensResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListDocumentsCategoryInEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListDocumentsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListDocumentsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListDocumentsDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListDocumentsDefaultApplicationJSON13TypeEnum.java
@@ -1906,7 +1861,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListDocumentsDefaultApp
 lib/src/main/java/org/openapis/openapi/models/operations/ListDocumentsDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListDocumentsDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListDocumentsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListEntitiesQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListEntitiesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListEntitiesDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListEntitiesDefaultApplicationJSON13TypeEnum.java
@@ -1948,7 +1902,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListEntitiesDefaultAppl
 lib/src/main/java/org/openapis/openapi/models/operations/ListEntitiesDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListEntitiesDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListEntitiesResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListEventSubscriptionsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListEventSubscriptionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListEventSubscriptionsDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListEventSubscriptionsDefaultApplicationJSON13TypeEnum.java
@@ -1991,7 +1944,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListEventSubscriptionsD
 lib/src/main/java/org/openapis/openapi/models/operations/ListEventSubscriptionsDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListEventSubscriptionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListEventsCategoryInEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListEventsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListEventsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListEventsDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListEventsDefaultApplicationJSON13TypeEnum.java
@@ -2034,7 +1986,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListEventsDefaultApplic
 lib/src/main/java/org/openapis/openapi/models/operations/ListEventsDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListEventsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListExternalAccountsStatusInEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListExternalAccountsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListExternalAccountsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListExternalAccountsDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListExternalAccountsDefaultApplicationJSON13TypeEnum.java
@@ -2077,7 +2028,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListExternalAccountsDef
 lib/src/main/java/org/openapis/openapi/models/operations/ListExternalAccountsDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListExternalAccountsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListFilesPurposeInEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListFilesQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListFilesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListFilesDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListFilesDefaultApplicationJSON13TypeEnum.java
@@ -2119,7 +2069,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListFilesDefaultApplica
 lib/src/main/java/org/openapis/openapi/models/operations/ListFilesDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListFilesDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListFilesResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListInboundAchTransferReturnsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListInboundAchTransferReturnsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListInboundAchTransferReturnsDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListInboundAchTransferReturnsDefaultApplicationJSON13TypeEnum.java
@@ -2161,7 +2110,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListInboundAchTransferR
 lib/src/main/java/org/openapis/openapi/models/operations/ListInboundAchTransferReturnsDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListInboundAchTransferReturnsDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListInboundAchTransferReturnsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListInboundWireDrawdownRequestsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListInboundWireDrawdownRequestsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListInboundWireDrawdownRequestsDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListInboundWireDrawdownRequestsDefaultApplicationJSON13TypeEnum.java
@@ -2203,7 +2151,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListInboundWireDrawdown
 lib/src/main/java/org/openapis/openapi/models/operations/ListInboundWireDrawdownRequestsDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListInboundWireDrawdownRequestsDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListInboundWireDrawdownRequestsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListLimitsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListLimitsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListLimitsDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListLimitsDefaultApplicationJSON13TypeEnum.java
@@ -2245,7 +2192,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListLimitsDefaultApplic
 lib/src/main/java/org/openapis/openapi/models/operations/ListLimitsDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListLimitsDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListLimitsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListOauthConnectionsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListOauthConnectionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListOauthConnectionsDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListOauthConnectionsDefaultApplicationJSON13TypeEnum.java
@@ -2288,7 +2234,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListOauthConnectionsDef
 lib/src/main/java/org/openapis/openapi/models/operations/ListOauthConnectionsDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListOauthConnectionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListPendingTransactionsStatusInEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListPendingTransactionsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListPendingTransactionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListPendingTransactionsDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListPendingTransactionsDefaultApplicationJSON13TypeEnum.java
@@ -2330,7 +2275,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListPendingTransactions
 lib/src/main/java/org/openapis/openapi/models/operations/ListPendingTransactionsDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListPendingTransactionsDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListPendingTransactionsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListRoutingNumbersQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListRoutingNumbersRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListRoutingNumbersDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListRoutingNumbersDefaultApplicationJSON13TypeEnum.java
@@ -2373,7 +2317,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListRoutingNumbersDefau
 lib/src/main/java/org/openapis/openapi/models/operations/ListRoutingNumbersDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListRoutingNumbersResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListTransactionsCategoryInEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListTransactionsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListTransactionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListTransactionsDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListTransactionsDefaultApplicationJSON13TypeEnum.java
@@ -2415,7 +2358,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListTransactionsDefault
 lib/src/main/java/org/openapis/openapi/models/operations/ListTransactionsDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListTransactionsDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListTransactionsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListWireDrawdownRequestsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListWireDrawdownRequestsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListWireDrawdownRequestsDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListWireDrawdownRequestsDefaultApplicationJSON13TypeEnum.java
@@ -2457,7 +2399,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListWireDrawdownRequest
 lib/src/main/java/org/openapis/openapi/models/operations/ListWireDrawdownRequestsDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListWireDrawdownRequestsDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListWireDrawdownRequestsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListWireTransfersQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListWireTransfersRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListWireTransfersDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListWireTransfersDefaultApplicationJSON13TypeEnum.java
@@ -2499,7 +2440,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListWireTransfersDefaul
 lib/src/main/java/org/openapis/openapi/models/operations/ListWireTransfersDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListWireTransfersDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListWireTransfersResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/MailASandboxCheckTransferPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/MailASandboxCheckTransferRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/MailASandboxCheckTransferDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/MailASandboxCheckTransferDefaultApplicationJSON13TypeEnum.java
@@ -2541,7 +2481,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/MailASandboxCheckTransf
 lib/src/main/java/org/openapis/openapi/models/operations/MailASandboxCheckTransferDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/MailASandboxCheckTransferDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/MailASandboxCheckTransferResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/RejectASandboxCheckDepositPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/RejectASandboxCheckDepositRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RejectASandboxCheckDepositDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RejectASandboxCheckDepositDefaultApplicationJSON13TypeEnum.java
@@ -2583,7 +2522,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RejectASandboxCheckDepo
 lib/src/main/java/org/openapis/openapi/models/operations/RejectASandboxCheckDepositDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RejectASandboxCheckDepositDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/RejectASandboxCheckDepositResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/RequestAStopPaymentOnACheckTransferPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/RequestAStopPaymentOnACheckTransferRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RequestAStopPaymentOnACheckTransferDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RequestAStopPaymentOnACheckTransferDefaultApplicationJSON13TypeEnum.java
@@ -2625,7 +2563,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RequestAStopPaymentOnAC
 lib/src/main/java/org/openapis/openapi/models/operations/RequestAStopPaymentOnACheckTransferDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RequestAStopPaymentOnACheckTransferDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/RequestAStopPaymentOnACheckTransferResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACardPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACardRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACardDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACardDefaultApplicationJSON13TypeEnum.java
@@ -2667,7 +2604,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACardDefaultApp
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACardDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACardDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACardResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACardDisputePathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACardDisputeRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACardDisputeDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACardDisputeDefaultApplicationJSON13TypeEnum.java
@@ -2709,7 +2645,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACardDisputeDef
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACardDisputeDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACardDisputeDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACardDisputeResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACardProfilePathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACardProfileRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACardProfileDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACardProfileDefaultApplicationJSON13TypeEnum.java
@@ -2751,7 +2686,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACardProfileDef
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACardProfileDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACardProfileDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACardProfileResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACheckDepositPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACheckDepositRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACheckDepositDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACheckDepositDefaultApplicationJSON13TypeEnum.java
@@ -2793,7 +2727,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACheckDepositDe
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACheckDepositDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACheckDepositDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACheckDepositResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACheckTransferPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACheckTransferRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACheckTransferDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACheckTransferDefaultApplicationJSON13TypeEnum.java
@@ -2835,7 +2768,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACheckTransferD
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACheckTransferDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACheckTransferDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveACheckTransferResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/RetrieveADeclinedTransactionPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveADeclinedTransactionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveADeclinedTransactionDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveADeclinedTransactionDefaultApplicationJSON13TypeEnum.java
@@ -2877,7 +2809,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RetrieveADeclinedTransa
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveADeclinedTransactionDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveADeclinedTransactionDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveADeclinedTransactionResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/RetrieveADigitalWalletTokenPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveADigitalWalletTokenRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveADigitalWalletTokenDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveADigitalWalletTokenDefaultApplicationJSON13TypeEnum.java
@@ -2919,7 +2850,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RetrieveADigitalWalletT
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveADigitalWalletTokenDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveADigitalWalletTokenDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveADigitalWalletTokenResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/RetrieveADocumentPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveADocumentRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveADocumentDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveADocumentDefaultApplicationJSON13TypeEnum.java
@@ -2961,7 +2891,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RetrieveADocumentDefaul
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveADocumentDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveADocumentDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveADocumentResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAFilePathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAFileRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAFileDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAFileDefaultApplicationJSON13TypeEnum.java
@@ -3003,7 +2932,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAFileDefaultApp
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAFileDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAFileDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAFileResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/RetrieveALimitPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveALimitRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveALimitDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveALimitDefaultApplicationJSON13TypeEnum.java
@@ -3045,7 +2973,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RetrieveALimitDefaultAp
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveALimitDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveALimitDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveALimitResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAPendingTransactionPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAPendingTransactionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAPendingTransactionDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAPendingTransactionDefaultApplicationJSON13TypeEnum.java
@@ -3087,7 +3014,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAPendingTransac
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAPendingTransactionDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAPendingTransactionDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAPendingTransactionResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/RetrieveARealTimeDecisionPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveARealTimeDecisionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveARealTimeDecisionDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveARealTimeDecisionDefaultApplicationJSON13TypeEnum.java
@@ -3129,7 +3055,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RetrieveARealTimeDecisi
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveARealTimeDecisionDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveARealTimeDecisionDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveARealTimeDecisionResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/RetrieveATransactionPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveATransactionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveATransactionDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveATransactionDefaultApplicationJSON13TypeEnum.java
@@ -3171,7 +3096,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RetrieveATransactionDef
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveATransactionDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveATransactionDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveATransactionResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAWireDrawdownRequestPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAWireDrawdownRequestRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAWireDrawdownRequestDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAWireDrawdownRequestDefaultApplicationJSON13TypeEnum.java
@@ -3213,7 +3137,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAWireDrawdownRe
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAWireDrawdownRequestDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAWireDrawdownRequestDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAWireDrawdownRequestResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAWireTransferPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAWireTransferRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAWireTransferDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAWireTransferDefaultApplicationJSON13TypeEnum.java
@@ -3255,7 +3178,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAWireTransferDe
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAWireTransferDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAWireTransferDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAWireTransferResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAccountPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAccountRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAccountDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAccountDefaultApplicationJSON13TypeEnum.java
@@ -3297,7 +3219,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAccountDefaul
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAccountDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAccountDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAccountResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAccountNumberPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAccountNumberRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAccountNumberDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAccountNumberDefaultApplicationJSON13TypeEnum.java
@@ -3339,7 +3260,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAccountNumber
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAccountNumberDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAccountNumberDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAccountNumberResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAccountStatementPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAccountStatementRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAccountStatementDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAccountStatementDefaultApplicationJSON13TypeEnum.java
@@ -3381,7 +3301,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAccountStatem
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAccountStatementDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAccountStatementDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAccountStatementResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAccountTransferPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAccountTransferRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAccountTransferDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAccountTransferDefaultApplicationJSON13TypeEnum.java
@@ -3423,7 +3342,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAccountTransf
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAccountTransferDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAccountTransferDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAccountTransferResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAchPrenotificationPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAchPrenotificationRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAchPrenotificationDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAchPrenotificationDefaultApplicationJSON13TypeEnum.java
@@ -3465,7 +3383,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAchPrenotific
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAchPrenotificationDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAchPrenotificationDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAchPrenotificationResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAchTransferPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAchTransferRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAchTransferDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAchTransferDefaultApplicationJSON13TypeEnum.java
@@ -3507,7 +3424,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAchTransferDe
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAchTransferDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAchTransferDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnAchTransferResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnEntityPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnEntityRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnEntityDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnEntityDefaultApplicationJSON13TypeEnum.java
@@ -3549,7 +3465,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnEntityDefault
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnEntityDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnEntityDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnEntityResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnEventPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnEventRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnEventDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnEventDefaultApplicationJSON13TypeEnum.java
@@ -3591,7 +3506,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnEventDefaultA
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnEventDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnEventDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnEventResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnEventSubscriptionPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnEventSubscriptionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnEventSubscriptionDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnEventSubscriptionDefaultApplicationJSON13TypeEnum.java
@@ -3633,7 +3547,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnEventSubscrip
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnEventSubscriptionDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnEventSubscriptionDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnEventSubscriptionResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnExternalAccountPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnExternalAccountRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnExternalAccountDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnExternalAccountDefaultApplicationJSON13TypeEnum.java
@@ -3675,7 +3588,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnExternalAccou
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnExternalAccountDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnExternalAccountDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnExternalAccountResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnInboundAchTransferReturnPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnInboundAchTransferReturnRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnInboundAchTransferReturnDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnInboundAchTransferReturnDefaultApplicationJSON13TypeEnum.java
@@ -3717,7 +3629,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnInboundAchTra
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnInboundAchTransferReturnDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnInboundAchTransferReturnDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnInboundAchTransferReturnResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnInboundWireDrawdownRequestPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnInboundWireDrawdownRequestRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON13TypeEnum.java
@@ -3759,7 +3670,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnInboundWireDr
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnInboundWireDrawdownRequestDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnInboundWireDrawdownRequestResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnOauthConnectionPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnOauthConnectionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnOauthConnectionDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAnOauthConnectionDefaultApplicationJSON13TypeEnum.java
@@ -3841,7 +3751,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RetrieveGroupDetailsDef
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveGroupDetailsDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveGroupDetailsDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveGroupDetailsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/RetrieveSensitiveDetailsForACardPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveSensitiveDetailsForACardRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveSensitiveDetailsForACardDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveSensitiveDetailsForACardDefaultApplicationJSON13TypeEnum.java
@@ -3883,7 +3792,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RetrieveSensitiveDetail
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveSensitiveDetailsForACardDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveSensitiveDetailsForACardDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveSensitiveDetailsForACardResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ReturnASandboxAchTransferPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ReturnASandboxAchTransferRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ReturnASandboxAchTransferDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ReturnASandboxAchTransferDefaultApplicationJSON13TypeEnum.java
@@ -3925,7 +3833,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ReturnASandboxAchTransf
 lib/src/main/java/org/openapis/openapi/models/operations/ReturnASandboxAchTransferDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ReturnASandboxAchTransferDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/ReturnASandboxAchTransferResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ReturnASandboxCheckDepositPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ReturnASandboxCheckDepositRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ReturnASandboxCheckDepositDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ReturnASandboxCheckDepositDefaultApplicationJSON13TypeEnum.java
@@ -3967,7 +3874,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ReturnASandboxCheckDepo
 lib/src/main/java/org/openapis/openapi/models/operations/ReturnASandboxCheckDepositDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ReturnASandboxCheckDepositDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/ReturnASandboxCheckDepositResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ReverseASandboxWireTransferPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ReverseASandboxWireTransferRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ReverseASandboxWireTransferDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ReverseASandboxWireTransferDefaultApplicationJSON13TypeEnum.java
@@ -4009,7 +3915,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ReverseASandboxWireTran
 lib/src/main/java/org/openapis/openapi/models/operations/ReverseASandboxWireTransferDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ReverseASandboxWireTransferDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/ReverseASandboxWireTransferResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/SimulateARealTimePaymentsTransferToYourAccountRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON13TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON13.java
@@ -4050,7 +3955,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/SimulateARealTimePaymen
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateARealTimePaymentsTransferToYourAccountDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateARealTimePaymentsTransferToYourAccountResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/SimulateARefundOnACardRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateARefundOnACardDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateARefundOnACardDefaultApplicationJSON13TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateARefundOnACardDefaultApplicationJSON13.java
@@ -4091,7 +3995,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/SimulateARefundOnACardD
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateARefundOnACardDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateARefundOnACardDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateARefundOnACardResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/SimulateATaxDocumentBeingCreatedRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateATaxDocumentBeingCreatedDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateATaxDocumentBeingCreatedDefaultApplicationJSON13TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateATaxDocumentBeingCreatedDefaultApplicationJSON13.java
@@ -4132,7 +4035,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/SimulateATaxDocumentBei
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateATaxDocumentBeingCreatedDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateATaxDocumentBeingCreatedDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateATaxDocumentBeingCreatedResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/SimulateAWireTransferToYourAccountRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateAWireTransferToYourAccountDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateAWireTransferToYourAccountDefaultApplicationJSON13TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateAWireTransferToYourAccountDefaultApplicationJSON13.java
@@ -4173,7 +4075,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/SimulateAWireTransferTo
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateAWireTransferToYourAccountDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateAWireTransferToYourAccountDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateAWireTransferToYourAccountResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/SimulateAnAccountStatementBeingCreatedRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON13TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON13.java
@@ -4214,7 +4115,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/SimulateAnAccountStatem
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateAnAccountStatementBeingCreatedDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateAnAccountStatementBeingCreatedResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/SimulateAnAchTransferToYourAccountRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateAnAchTransferToYourAccountDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateAnAchTransferToYourAccountDefaultApplicationJSON13TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateAnAchTransferToYourAccountDefaultApplicationJSON13.java
@@ -4255,7 +4155,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/SimulateAnAchTransferTo
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateAnAchTransferToYourAccountDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateAnAchTransferToYourAccountDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateAnAchTransferToYourAccountResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/SimulateAnAuthorizationOnACardRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateAnAuthorizationOnACardDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateAnAuthorizationOnACardDefaultApplicationJSON13TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateAnAuthorizationOnACardDefaultApplicationJSON13.java
@@ -4296,7 +4195,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/SimulateAnAuthorization
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateAnAuthorizationOnACardDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateAnAuthorizationOnACardDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateAnAuthorizationOnACardResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/SimulateAnInboundWireDrawdownRequestBeingCreatedRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateAnInboundWireDrawdownRequestBeingCreatedDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateAnInboundWireDrawdownRequestBeingCreatedDefaultApplicationJSON13TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateAnInboundWireDrawdownRequestBeingCreatedDefaultApplicationJSON13.java
@@ -4337,7 +4235,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/SimulateAnInboundWireDr
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateAnInboundWireDrawdownRequestBeingCreatedDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateAnInboundWireDrawdownRequestBeingCreatedDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateAnInboundWireDrawdownRequestBeingCreatedResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/SimulateDigitalWalletProvisioningForACardRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON13TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON13.java
@@ -4378,7 +4275,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/SimulateDigitalWalletPr
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateDigitalWalletProvisioningForACardDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateDigitalWalletProvisioningForACardResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/SimulateSettlingACardAuthorizationRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateSettlingACardAuthorizationDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateSettlingACardAuthorizationDefaultApplicationJSON13TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateSettlingACardAuthorizationDefaultApplicationJSON13.java
@@ -4419,7 +4315,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/SimulateSettlingACardAu
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateSettlingACardAuthorizationDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateSettlingACardAuthorizationDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulateSettlingACardAuthorizationResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/SimulatesAdvancingTheStateOfACardDisputePathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulatesAdvancingTheStateOfACardDisputeRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulatesAdvancingTheStateOfACardDisputeDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulatesAdvancingTheStateOfACardDisputeDefaultApplicationJSON13TypeEnum.java
@@ -4461,7 +4356,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/SimulatesAdvancingTheSt
 lib/src/main/java/org/openapis/openapi/models/operations/SimulatesAdvancingTheStateOfACardDisputeDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulatesAdvancingTheStateOfACardDisputeDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/SimulatesAdvancingTheStateOfACardDisputeResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/SubmitASandboxAchTransferPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/SubmitASandboxAchTransferRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SubmitASandboxAchTransferDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SubmitASandboxAchTransferDefaultApplicationJSON13TypeEnum.java
@@ -4503,7 +4397,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/SubmitASandboxAchTransf
 lib/src/main/java/org/openapis/openapi/models/operations/SubmitASandboxAchTransferDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SubmitASandboxAchTransferDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/SubmitASandboxAchTransferResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/SubmitASandboxCheckDepositPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/SubmitASandboxCheckDepositRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SubmitASandboxCheckDepositDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SubmitASandboxCheckDepositDefaultApplicationJSON13TypeEnum.java
@@ -4545,7 +4438,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/SubmitASandboxCheckDepo
 lib/src/main/java/org/openapis/openapi/models/operations/SubmitASandboxCheckDepositDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SubmitASandboxCheckDepositDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/SubmitASandboxCheckDepositResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/SubmitASandboxWireTransferPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/SubmitASandboxWireTransferRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SubmitASandboxWireTransferDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SubmitASandboxWireTransferDefaultApplicationJSON13TypeEnum.java
@@ -4587,7 +4479,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/SubmitASandboxWireTrans
 lib/src/main/java/org/openapis/openapi/models/operations/SubmitASandboxWireTransferDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SubmitASandboxWireTransferDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/SubmitASandboxWireTransferResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/UpdateACardPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateACardRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateACardDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateACardDefaultApplicationJSON13TypeEnum.java
@@ -4629,7 +4520,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/UpdateACardDefaultAppli
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateACardDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateACardDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateACardResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/UpdateALimitPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateALimitRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateALimitDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateALimitDefaultApplicationJSON13TypeEnum.java
@@ -4671,7 +4561,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/UpdateALimitDefaultAppl
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateALimitDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateALimitDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateALimitResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/UpdateAnAccountPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateAnAccountRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateAnAccountDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateAnAccountDefaultApplicationJSON13TypeEnum.java
@@ -4713,7 +4602,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/UpdateAnAccountDefaultA
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateAnAccountDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateAnAccountDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateAnAccountResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/UpdateAnAccountNumberPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateAnAccountNumberRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateAnAccountNumberDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateAnAccountNumberDefaultApplicationJSON13TypeEnum.java
@@ -4755,7 +4643,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/UpdateAnAccountNumberDe
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateAnAccountNumberDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateAnAccountNumberDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateAnAccountNumberResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/UpdateAnEventSubscriptionPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateAnEventSubscriptionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateAnEventSubscriptionDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateAnEventSubscriptionDefaultApplicationJSON13TypeEnum.java
@@ -4797,7 +4684,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/UpdateAnEventSubscripti
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateAnEventSubscriptionDefaultApplicationJSON1TypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateAnEventSubscriptionDefaultApplicationJSON1.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateAnEventSubscriptionResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/UpdateAnExternalAccountPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateAnExternalAccountRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateAnExternalAccountDefaultApplicationJSON13StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateAnExternalAccountDefaultApplicationJSON13TypeEnum.java
@@ -5562,6 +5448,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateAnEventSubscriptionPa
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateAnEventSubscriptionParameters.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateAnExternalAccountParametersStatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateAnExternalAccountParameters.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeBearerAuth.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

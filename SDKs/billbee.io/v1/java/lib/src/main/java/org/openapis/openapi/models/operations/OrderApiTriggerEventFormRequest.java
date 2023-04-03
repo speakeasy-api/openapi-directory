@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiTriggerEventFormRequest {
-    
-    public OrderApiTriggerEventFormPathParams pathParams;
-    public OrderApiTriggerEventFormRequest withPathParams(OrderApiTriggerEventFormPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
+    public org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiOrderApiControllerTriggerEventContainer rechnungsdruckWebAppControllersApiOrderApiControllerTriggerEventContainer;
+    public OrderApiTriggerEventFormRequest withRechnungsdruckWebAppControllersApiOrderApiControllerTriggerEventContainer(org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiOrderApiControllerTriggerEventContainer rechnungsdruckWebAppControllersApiOrderApiControllerTriggerEventContainer) {
+        this.rechnungsdruckWebAppControllersApiOrderApiControllerTriggerEventContainer = rechnungsdruckWebAppControllersApiOrderApiControllerTriggerEventContainer;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiOrderApiControllerTriggerEventContainer request;
-    public OrderApiTriggerEventFormRequest withRequest(org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiOrderApiControllerTriggerEventContainer request) {
-        this.request = request;
+    /**
+     * The id of the order
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public OrderApiTriggerEventFormRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

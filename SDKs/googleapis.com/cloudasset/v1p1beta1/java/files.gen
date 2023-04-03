@@ -32,13 +32,9 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/CloudassetIamPoliciesSearchAllSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/CloudassetIamPoliciesSearchAllPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/CloudassetIamPoliciesSearchAllQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudassetIamPoliciesSearchAllRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudassetIamPoliciesSearchAllResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudassetResourcesSearchAllSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/CloudassetResourcesSearchAllPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/CloudassetResourcesSearchAllQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudassetResourcesSearchAllRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudassetResourcesSearchAllResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/SearchAllIamPoliciesResponse.java
@@ -53,8 +49,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/Explanation.java
 lib/src/main/java/org/openapis/openapi/models/shared/Permissions.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2c.java
 lib/src/main/java/org/openapis/openapi/models/shared/SearchAllResourcesResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/StandardResourceMetadata.java
 USAGE.md

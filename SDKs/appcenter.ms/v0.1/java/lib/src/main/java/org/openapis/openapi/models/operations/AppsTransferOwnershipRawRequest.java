@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsTransferOwnershipRawRequest {
-    
-    public AppsTransferOwnershipRawPathParams pathParams;
-    public AppsTransferOwnershipRawRequest withPathParams(AppsTransferOwnershipRawPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * allow empty body for custom http-client lib
      */
     @SpeakeasyMetadata("request:mediaType=application/octet-stream")
-    public byte[] request;
-    public AppsTransferOwnershipRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public AppsTransferOwnershipRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public AppsTransferOwnershipRawRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public AppsTransferOwnershipRawSecurity security;
-    public AppsTransferOwnershipRawRequest withSecurity(AppsTransferOwnershipRawSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner (user or organization) to which the app is being transferred
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destination_owner_name")
+    public String destinationOwnerName;
+    public AppsTransferOwnershipRawRequest withDestinationOwnerName(String destinationOwnerName) {
+        this.destinationOwnerName = destinationOwnerName;
+        return this;
+    }
+    
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public AppsTransferOwnershipRawRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

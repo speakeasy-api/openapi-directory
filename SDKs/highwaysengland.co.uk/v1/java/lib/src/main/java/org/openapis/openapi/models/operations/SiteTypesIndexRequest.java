@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SiteTypesIndexRequest {
-    
-    public SiteTypesIndexPathParams pathParams;
-    public SiteTypesIndexRequest withPathParams(SiteTypesIndexPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public String version;
+    public SiteTypesIndexRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

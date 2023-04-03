@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsCreateForIssueRequest {
-    
-    public ReactionsCreateForIssuePathParams pathParams;
-    public ReactionsCreateForIssueRequest withPathParams(ReactionsCreateForIssuePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ReactionsCreateForIssueRequestBody requestBody;
+    public ReactionsCreateForIssueRequest withRequestBody(ReactionsCreateForIssueRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ReactionsCreateForIssueRequestBody request;
-    public ReactionsCreateForIssueRequest withRequest(ReactionsCreateForIssueRequestBody request) {
-        this.request = request;
+    /**
+     * The number that identifies the issue.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=issue_number")
+    public Long issueNumber;
+    public ReactionsCreateForIssueRequest withIssueNumber(Long issueNumber) {
+        this.issueNumber = issueNumber;
+        return this;
+    }
+    
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReactionsCreateForIssueRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReactionsCreateForIssueRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

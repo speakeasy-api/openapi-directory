@@ -7,24 +7,60 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryUpdateApiRequest {
-    
-    public RegistryUpdateApiPathParams pathParams;
-    public RegistryUpdateApiRequest withPathParams(RegistryUpdateApiPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RegistryUpdateApiQueryParams queryParams;
-    public RegistryUpdateApiRequest withQueryParams(RegistryUpdateApiQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ApiInput request;
-    public RegistryUpdateApiRequest withRequest(org.openapis.openapi.models.shared.ApiInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ApiInput apiInput;
+    public RegistryUpdateApiRequest withApiInput(org.openapis.openapi.models.shared.ApiInput apiInput) {
+        this.apiInput = apiInput;
+        return this;
+    }
+    
+    /**
+     * If set to true, and the api is not found, a new api_versions will be created. In this situation, `update_mask` is ignored.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=allowMissing")
+    public Boolean allowMissing;
+    public RegistryUpdateApiRequest withAllowMissing(Boolean allowMissing) {
+        this.allowMissing = allowMissing;
+        return this;
+    }
+    
+    /**
+     * The api id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api")
+    public String api;
+    public RegistryUpdateApiRequest withApi(String api) {
+        this.api = api;
+        return this;
+    }
+    
+    /**
+     * The location id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
+    public String location;
+    public RegistryUpdateApiRequest withLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public RegistryUpdateApiRequest withProject(String project) {
+        this.project = project;
+        return this;
+    }
+    
+    /**
+     * The list of fields to be updated. If omitted, all fields are updated that are set in the request message (fields set to default values are ignored). If a "*" is specified, all fields are updated, including fields that are unspecified/default in the request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updateMask")
+    public String updateMask;
+    public RegistryUpdateApiRequest withUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
         return this;
     }
     

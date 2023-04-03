@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchMerchantsMerchantIdWebhooksWebhookIdRequest {
-    
-    public PatchMerchantsMerchantIdWebhooksWebhookIdPathParams pathParams;
-    public PatchMerchantsMerchantIdWebhooksWebhookIdRequest withPathParams(PatchMerchantsMerchantIdWebhooksWebhookIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateMerchantWebhookRequest request;
-    public PatchMerchantsMerchantIdWebhooksWebhookIdRequest withRequest(org.openapis.openapi.models.shared.UpdateMerchantWebhookRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateMerchantWebhookRequest updateMerchantWebhookRequest;
+    public PatchMerchantsMerchantIdWebhooksWebhookIdRequest withUpdateMerchantWebhookRequest(org.openapis.openapi.models.shared.UpdateMerchantWebhookRequest updateMerchantWebhookRequest) {
+        this.updateMerchantWebhookRequest = updateMerchantWebhookRequest;
         return this;
     }
     
+    /**
+     * The unique identifier of the merchant account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
+    public String merchantId;
+    public PatchMerchantsMerchantIdWebhooksWebhookIdRequest withMerchantId(String merchantId) {
+        this.merchantId = merchantId;
+        return this;
+    }
     
-    public PatchMerchantsMerchantIdWebhooksWebhookIdSecurity security;
-    public PatchMerchantsMerchantIdWebhooksWebhookIdRequest withSecurity(PatchMerchantsMerchantIdWebhooksWebhookIdSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the webhook configuration.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webhookId")
+    public String webhookId;
+    public PatchMerchantsMerchantIdWebhooksWebhookIdRequest withWebhookId(String webhookId) {
+        this.webhookId = webhookId;
         return this;
     }
     

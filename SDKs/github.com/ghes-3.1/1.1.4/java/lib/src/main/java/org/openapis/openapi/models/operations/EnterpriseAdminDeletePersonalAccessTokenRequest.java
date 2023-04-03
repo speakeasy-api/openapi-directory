@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminDeletePersonalAccessTokenRequest {
-    
-    public EnterpriseAdminDeletePersonalAccessTokenPathParams pathParams;
-    public EnterpriseAdminDeletePersonalAccessTokenRequest withPathParams(EnterpriseAdminDeletePersonalAccessTokenPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the token.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=token_id")
+    public Long tokenId;
+    public EnterpriseAdminDeletePersonalAccessTokenRequest withTokenId(Long tokenId) {
+        this.tokenId = tokenId;
         return this;
     }
     

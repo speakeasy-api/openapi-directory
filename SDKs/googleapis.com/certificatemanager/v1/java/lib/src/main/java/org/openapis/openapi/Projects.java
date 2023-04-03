@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Creates a new CertificateIssuanceConfig in a given project and location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateResponse certificatemanagerProjectsLocationsCertificateIssuanceConfigsCreate(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateResponse certificatemanagerProjectsLocationsCertificateIssuanceConfigsCreate(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest request, org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreatePathParams.class, baseUrl, "/v1/{parent}/certificateIssuanceConfigs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest.class, baseUrl, "/v1/{parent}/certificateIssuanceConfigs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "certificateIssuanceConfigInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,25 +83,26 @@ public class Projects {
     /**
      * Lists CertificateIssuanceConfigs in a given project and location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsListResponse certificatemanagerProjectsLocationsCertificateIssuanceConfigsList(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsListResponse certificatemanagerProjectsLocationsCertificateIssuanceConfigsList(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsListRequest request, org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsListPathParams.class, baseUrl, "/v1/{parent}/certificateIssuanceConfigs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsListRequest.class, baseUrl, "/v1/{parent}/certificateIssuanceConfigs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,27 +129,28 @@ public class Projects {
     /**
      * Creates a new CertificateMapEntry in a given project and location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesCreateResponse certificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesCreate(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesCreateResponse certificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesCreate(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesCreateRequest request, org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesCreatePathParams.class, baseUrl, "/v1/{parent}/certificateMapEntries", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesCreateRequest.class, baseUrl, "/v1/{parent}/certificateMapEntries", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "certificateMapEntryInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,25 +177,26 @@ public class Projects {
     /**
      * Lists CertificateMapEntries in a given project and location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesListResponse certificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesList(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesListResponse certificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesList(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesListRequest request, org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesListPathParams.class, baseUrl, "/v1/{parent}/certificateMapEntries", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesListRequest.class, baseUrl, "/v1/{parent}/certificateMapEntries", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsCertificateMapEntriesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -219,27 +223,28 @@ public class Projects {
     /**
      * Creates a new CertificateMap in a given project and location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsCreateResponse certificatemanagerProjectsLocationsCertificateMapsCreate(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsCreateResponse certificatemanagerProjectsLocationsCertificateMapsCreate(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsCreateRequest request, org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsCreatePathParams.class, baseUrl, "/v1/{parent}/certificateMaps", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsCreateRequest.class, baseUrl, "/v1/{parent}/certificateMaps", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "certificateMapInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -266,25 +271,26 @@ public class Projects {
     /**
      * Lists CertificateMaps in a given project and location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsListResponse certificatemanagerProjectsLocationsCertificateMapsList(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsListResponse certificatemanagerProjectsLocationsCertificateMapsList(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsListRequest request, org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsListPathParams.class, baseUrl, "/v1/{parent}/certificateMaps", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsListRequest.class, baseUrl, "/v1/{parent}/certificateMaps", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificateMapsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -311,27 +317,28 @@ public class Projects {
     /**
      * Creates a new Certificate in a given project and location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificatesCreateResponse certificatemanagerProjectsLocationsCertificatesCreate(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificatesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificatesCreateResponse certificatemanagerProjectsLocationsCertificatesCreate(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificatesCreateRequest request, org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificatesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificatesCreatePathParams.class, baseUrl, "/v1/{parent}/certificates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificatesCreateRequest.class, baseUrl, "/v1/{parent}/certificates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "certificateInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificatesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificatesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -358,25 +365,26 @@ public class Projects {
     /**
      * Lists Certificates in a given project and location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificatesListResponse certificatemanagerProjectsLocationsCertificatesList(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificatesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificatesListResponse certificatemanagerProjectsLocationsCertificatesList(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificatesListRequest request, org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificatesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificatesListPathParams.class, baseUrl, "/v1/{parent}/certificates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificatesListRequest.class, baseUrl, "/v1/{parent}/certificates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificatesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsCertificatesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -403,27 +411,28 @@ public class Projects {
     /**
      * Creates a new DnsAuthorization in a given project and location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsCreateResponse certificatemanagerProjectsLocationsDnsAuthorizationsCreate(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsCreateResponse certificatemanagerProjectsLocationsDnsAuthorizationsCreate(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsCreateRequest request, org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsCreatePathParams.class, baseUrl, "/v1/{parent}/dnsAuthorizations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsCreateRequest.class, baseUrl, "/v1/{parent}/dnsAuthorizations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "dnsAuthorizationInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -450,25 +459,26 @@ public class Projects {
     /**
      * Lists DnsAuthorizations in a given project and location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsListResponse certificatemanagerProjectsLocationsDnsAuthorizationsList(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsListResponse certificatemanagerProjectsLocationsDnsAuthorizationsList(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsListRequest request, org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsListPathParams.class, baseUrl, "/v1/{parent}/dnsAuthorizations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsListRequest.class, baseUrl, "/v1/{parent}/dnsAuthorizations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -495,27 +505,28 @@ public class Projects {
     /**
      * Updates a DnsAuthorization.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsPatchResponse certificatemanagerProjectsLocationsDnsAuthorizationsPatch(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsPatchResponse certificatemanagerProjectsLocationsDnsAuthorizationsPatch(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsPatchRequest request, org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsPatchPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsPatchRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "dnsAuthorizationInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsDnsAuthorizationsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -542,25 +553,26 @@ public class Projects {
     /**
      * Lists information about the supported locations for this service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsListResponse certificatemanagerProjectsLocationsList(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsListResponse certificatemanagerProjectsLocationsList(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsListRequest request, org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsListPathParams.class, baseUrl, "/v1/{name}/locations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsListRequest.class, baseUrl, "/v1/{name}/locations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -587,27 +599,28 @@ public class Projects {
     /**
      * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsCancelResponse certificatemanagerProjectsLocationsOperationsCancel(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsCancelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsCancelResponse certificatemanagerProjectsLocationsOperationsCancel(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsCancelRequest request, org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsCancelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsCancelPathParams.class, baseUrl, "/v1/{name}:cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsCancelRequest.class, baseUrl, "/v1/{name}:cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsCancelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsCancelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -634,25 +647,26 @@ public class Projects {
     /**
      * Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsDeleteResponse certificatemanagerProjectsLocationsOperationsDelete(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsDeleteResponse certificatemanagerProjectsLocationsOperationsDelete(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsDeleteRequest request, org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsDeletePathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsDeleteRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -679,25 +693,26 @@ public class Projects {
     /**
      * Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsGetResponse certificatemanagerProjectsLocationsOperationsGet(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsGetResponse certificatemanagerProjectsLocationsOperationsGet(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsGetRequest request, org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsGetPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsGetRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -724,25 +739,26 @@ public class Projects {
     /**
      * Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsListResponse certificatemanagerProjectsLocationsOperationsList(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsListResponse certificatemanagerProjectsLocationsOperationsList(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsListRequest request, org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsListPathParams.class, baseUrl, "/v1/{name}/operations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsListRequest.class, baseUrl, "/v1/{name}/operations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CertificatemanagerProjectsLocationsOperationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

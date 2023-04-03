@@ -5,10 +5,9 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsCreateSecurity;
-import org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsCreatePathParams;
-import org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsCreateQueryParams;
 import org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsCreateRequest;
 import org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.DeviceTierConfigInput;
 import org.openapis.openapi.models.shared.UserCountrySet;
 import org.openapis.openapi.models.shared.DeviceTierSet;
@@ -18,10 +17,7 @@ import org.openapis.openapi.models.shared.DeviceSelector;
 import org.openapis.openapi.models.shared.SystemFeature;
 import org.openapis.openapi.models.shared.DeviceId;
 import org.openapis.openapi.models.shared.DeviceRam;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,88 +26,90 @@ public class Application {
                 .build();
 
             AndroidpublisherApplicationsDeviceTierConfigsCreateRequest req = new AndroidpublisherApplicationsDeviceTierConfigsCreateRequest() {{
-                security = new AndroidpublisherApplicationsDeviceTierConfigsCreateSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new AndroidpublisherApplicationsDeviceTierConfigsCreatePathParams() {{
-                    packageName = "corrupti";
-                }};
-                queryParams = new AndroidpublisherApplicationsDeviceTierConfigsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    allowUnknownDevices = false;
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new DeviceTierConfigInput() {{
+                dollarXgafv = "2";
+                deviceTierConfigInput = new DeviceTierConfigInput() {{
                     deviceGroups = new org.openapis.openapi.models.shared.DeviceGroup[]{{
                         add(new DeviceGroup() {{
                             deviceSelectors = new org.openapis.openapi.models.shared.DeviceSelector[]{{
                                 add(new DeviceSelector() {{
                                     deviceRam = new DeviceRam() {{
-                                        maxBytes = "magnam";
-                                        minBytes = "debitis";
+                                        maxBytes = "quibusdam";
+                                        minBytes = "unde";
                                     }};
                                     excludedDeviceIds = new org.openapis.openapi.models.shared.DeviceId[]{{
                                         add(new DeviceId() {{
-                                            buildBrand = "delectus";
-                                            buildDevice = "tempora";
+                                            buildBrand = "corrupti";
+                                            buildDevice = "illum";
+                                        }}),
+                                        add(new DeviceId() {{
+                                            buildBrand = "vel";
+                                            buildDevice = "error";
+                                        }}),
+                                        add(new DeviceId() {{
+                                            buildBrand = "deserunt";
+                                            buildDevice = "suscipit";
+                                        }}),
+                                        add(new DeviceId() {{
+                                            buildBrand = "iure";
+                                            buildDevice = "magnam";
                                         }}),
                                     }};
                                     forbiddenSystemFeatures = new org.openapis.openapi.models.shared.SystemFeature[]{{
                                         add(new SystemFeature() {{
-                                            name = "molestiae";
+                                            name = "ipsa";
                                         }}),
                                         add(new SystemFeature() {{
-                                            name = "minus";
+                                            name = "delectus";
+                                        }}),
+                                        add(new SystemFeature() {{
+                                            name = "tempora";
+                                        }}),
+                                        add(new SystemFeature() {{
+                                            name = "suscipit";
                                         }}),
                                     }};
                                     includedDeviceIds = new org.openapis.openapi.models.shared.DeviceId[]{{
                                         add(new DeviceId() {{
+                                            buildBrand = "minus";
+                                            buildDevice = "placeat";
+                                        }}),
+                                        add(new DeviceId() {{
                                             buildBrand = "voluptatum";
                                             buildDevice = "iusto";
-                                        }}),
-                                        add(new DeviceId() {{
-                                            buildBrand = "excepturi";
-                                            buildDevice = "nisi";
-                                        }}),
-                                        add(new DeviceId() {{
-                                            buildBrand = "recusandae";
-                                            buildDevice = "temporibus";
-                                        }}),
-                                        add(new DeviceId() {{
-                                            buildBrand = "ab";
-                                            buildDevice = "quis";
                                         }}),
                                     }};
                                     requiredSystemFeatures = new org.openapis.openapi.models.shared.SystemFeature[]{{
                                         add(new SystemFeature() {{
-                                            name = "deserunt";
+                                            name = "nisi";
+                                        }}),
+                                        add(new SystemFeature() {{
+                                            name = "recusandae";
+                                        }}),
+                                        add(new SystemFeature() {{
+                                            name = "temporibus";
                                         }}),
                                     }};
                                 }}),
                                 add(new DeviceSelector() {{
                                     deviceRam = new DeviceRam() {{
-                                        maxBytes = "perferendis";
-                                        minBytes = "ipsam";
+                                        maxBytes = "ab";
+                                        minBytes = "quis";
                                     }};
                                     excludedDeviceIds = new org.openapis.openapi.models.shared.DeviceId[]{{
                                         add(new DeviceId() {{
-                                            buildBrand = "sapiente";
-                                            buildDevice = "quo";
+                                            buildBrand = "deserunt";
+                                            buildDevice = "perferendis";
                                         }}),
+                                    }};
+                                    forbiddenSystemFeatures = new org.openapis.openapi.models.shared.SystemFeature[]{{
+                                        add(new SystemFeature() {{
+                                            name = "repellendus";
+                                        }}),
+                                        add(new SystemFeature() {{
+                                            name = "sapiente";
+                                        }}),
+                                    }};
+                                    includedDeviceIds = new org.openapis.openapi.models.shared.DeviceId[]{{
                                         add(new DeviceId() {{
                                             buildBrand = "odit";
                                             buildDevice = "at";
@@ -124,60 +122,57 @@ public class Application {
                                             buildBrand = "molestiae";
                                             buildDevice = "quod";
                                         }}),
+                                        add(new DeviceId() {{
+                                            buildBrand = "quod";
+                                            buildDevice = "esse";
+                                        }}),
                                     }};
-                                    forbiddenSystemFeatures = new org.openapis.openapi.models.shared.SystemFeature[]{{
-                                        add(new SystemFeature() {{
-                                            name = "esse";
-                                        }}),
-                                        add(new SystemFeature() {{
-                                            name = "totam";
-                                        }}),
+                                    requiredSystemFeatures = new org.openapis.openapi.models.shared.SystemFeature[]{{
                                         add(new SystemFeature() {{
                                             name = "porro";
                                         }}),
                                         add(new SystemFeature() {{
                                             name = "dolorum";
                                         }}),
-                                    }};
-                                    includedDeviceIds = new org.openapis.openapi.models.shared.DeviceId[]{{
-                                        add(new DeviceId() {{
-                                            buildBrand = "nam";
-                                            buildDevice = "officia";
-                                        }}),
-                                    }};
-                                    requiredSystemFeatures = new org.openapis.openapi.models.shared.SystemFeature[]{{
                                         add(new SystemFeature() {{
-                                            name = "fugit";
-                                        }}),
-                                        add(new SystemFeature() {{
-                                            name = "deleniti";
-                                        }}),
-                                        add(new SystemFeature() {{
-                                            name = "hic";
+                                            name = "dicta";
                                         }}),
                                     }};
                                 }}),
-                            }};
-                            name = "optio";
-                        }}),
-                        add(new DeviceGroup() {{
-                            deviceSelectors = new org.openapis.openapi.models.shared.DeviceSelector[]{{
                                 add(new DeviceSelector() {{
                                     deviceRam = new DeviceRam() {{
-                                        maxBytes = "beatae";
-                                        minBytes = "commodi";
+                                        maxBytes = "nam";
+                                        minBytes = "officia";
                                     }};
                                     excludedDeviceIds = new org.openapis.openapi.models.shared.DeviceId[]{{
                                         add(new DeviceId() {{
-                                            buildBrand = "modi";
-                                            buildDevice = "qui";
+                                            buildBrand = "fugit";
+                                            buildDevice = "deleniti";
                                         }}),
+                                        add(new DeviceId() {{
+                                            buildBrand = "hic";
+                                            buildDevice = "optio";
+                                        }}),
+                                        add(new DeviceId() {{
+                                            buildBrand = "totam";
+                                            buildDevice = "beatae";
+                                        }}),
+                                    }};
+                                    forbiddenSystemFeatures = new org.openapis.openapi.models.shared.SystemFeature[]{{
+                                        add(new SystemFeature() {{
+                                            name = "molestiae";
+                                        }}),
+                                        add(new SystemFeature() {{
+                                            name = "modi";
+                                        }}),
+                                    }};
+                                    includedDeviceIds = new org.openapis.openapi.models.shared.DeviceId[]{{
                                         add(new DeviceId() {{
                                             buildBrand = "impedit";
                                             buildDevice = "cum";
                                         }}),
                                     }};
-                                    forbiddenSystemFeatures = new org.openapis.openapi.models.shared.SystemFeature[]{{
+                                    requiredSystemFeatures = new org.openapis.openapi.models.shared.SystemFeature[]{{
                                         add(new SystemFeature() {{
                                             name = "ipsum";
                                         }}),
@@ -185,34 +180,35 @@ public class Application {
                                             name = "excepturi";
                                         }}),
                                     }};
-                                    includedDeviceIds = new org.openapis.openapi.models.shared.DeviceId[]{{
-                                        add(new DeviceId() {{
-                                            buildBrand = "perferendis";
-                                            buildDevice = "ad";
-                                        }}),
-                                    }};
-                                    requiredSystemFeatures = new org.openapis.openapi.models.shared.SystemFeature[]{{
-                                        add(new SystemFeature() {{
-                                            name = "sed";
-                                        }}),
-                                        add(new SystemFeature() {{
-                                            name = "iste";
-                                        }}),
-                                        add(new SystemFeature() {{
-                                            name = "dolor";
-                                        }}),
-                                    }};
                                 }}),
+                            }};
+                            name = "aspernatur";
+                        }}),
+                        add(new DeviceGroup() {{
+                            deviceSelectors = new org.openapis.openapi.models.shared.DeviceSelector[]{{
                                 add(new DeviceSelector() {{
                                     deviceRam = new DeviceRam() {{
-                                        maxBytes = "natus";
-                                        minBytes = "laboriosam";
+                                        maxBytes = "ad";
+                                        minBytes = "natus";
                                     }};
                                     excludedDeviceIds = new org.openapis.openapi.models.shared.DeviceId[]{{
                                         add(new DeviceId() {{
-                                            buildBrand = "saepe";
-                                            buildDevice = "fuga";
+                                            buildBrand = "iste";
+                                            buildDevice = "dolor";
                                         }}),
+                                    }};
+                                    forbiddenSystemFeatures = new org.openapis.openapi.models.shared.SystemFeature[]{{
+                                        add(new SystemFeature() {{
+                                            name = "laboriosam";
+                                        }}),
+                                        add(new SystemFeature() {{
+                                            name = "hic";
+                                        }}),
+                                        add(new SystemFeature() {{
+                                            name = "saepe";
+                                        }}),
+                                    }};
+                                    includedDeviceIds = new org.openapis.openapi.models.shared.DeviceId[]{{
                                         add(new DeviceId() {{
                                             buildBrand = "in";
                                             buildDevice = "corporis";
@@ -226,64 +222,63 @@ public class Application {
                                             buildDevice = "quidem";
                                         }}),
                                     }};
-                                    forbiddenSystemFeatures = new org.openapis.openapi.models.shared.SystemFeature[]{{
+                                    requiredSystemFeatures = new org.openapis.openapi.models.shared.SystemFeature[]{{
                                         add(new SystemFeature() {{
                                             name = "ipsa";
                                         }}),
                                     }};
-                                    includedDeviceIds = new org.openapis.openapi.models.shared.DeviceId[]{{
-                                        add(new DeviceId() {{
-                                            buildBrand = "est";
-                                            buildDevice = "mollitia";
-                                        }}),
-                                        add(new DeviceId() {{
-                                            buildBrand = "laborum";
-                                            buildDevice = "dolores";
-                                        }}),
+                                }}),
+                            }};
+                            name = "reiciendis";
+                        }}),
+                        add(new DeviceGroup() {{
+                            deviceSelectors = new org.openapis.openapi.models.shared.DeviceSelector[]{{
+                                add(new DeviceSelector() {{
+                                    deviceRam = new DeviceRam() {{
+                                        maxBytes = "mollitia";
+                                        minBytes = "laborum";
+                                    }};
+                                    excludedDeviceIds = new org.openapis.openapi.models.shared.DeviceId[]{{
                                         add(new DeviceId() {{
                                             buildBrand = "dolorem";
                                             buildDevice = "corporis";
                                         }}),
+                                    }};
+                                    forbiddenSystemFeatures = new org.openapis.openapi.models.shared.SystemFeature[]{{
+                                        add(new SystemFeature() {{
+                                            name = "nobis";
+                                        }}),
+                                    }};
+                                    includedDeviceIds = new org.openapis.openapi.models.shared.DeviceId[]{{
                                         add(new DeviceId() {{
-                                            buildBrand = "explicabo";
-                                            buildDevice = "nobis";
+                                            buildBrand = "omnis";
+                                            buildDevice = "nemo";
+                                        }}),
+                                        add(new DeviceId() {{
+                                            buildBrand = "minima";
+                                            buildDevice = "excepturi";
                                         }}),
                                     }};
                                     requiredSystemFeatures = new org.openapis.openapi.models.shared.SystemFeature[]{{
                                         add(new SystemFeature() {{
-                                            name = "omnis";
-                                        }}),
-                                        add(new SystemFeature() {{
-                                            name = "nemo";
+                                            name = "iure";
                                         }}),
                                     }};
                                 }}),
                                 add(new DeviceSelector() {{
                                     deviceRam = new DeviceRam() {{
-                                        maxBytes = "minima";
-                                        minBytes = "excepturi";
+                                        maxBytes = "culpa";
+                                        minBytes = "doloribus";
                                     }};
                                     excludedDeviceIds = new org.openapis.openapi.models.shared.DeviceId[]{{
                                         add(new DeviceId() {{
-                                            buildBrand = "iure";
+                                            buildBrand = "architecto";
+                                            buildDevice = "mollitia";
+                                        }}),
+                                        add(new DeviceId() {{
+                                            buildBrand = "dolorem";
                                             buildDevice = "culpa";
                                         }}),
-                                    }};
-                                    forbiddenSystemFeatures = new org.openapis.openapi.models.shared.SystemFeature[]{{
-                                        add(new SystemFeature() {{
-                                            name = "sapiente";
-                                        }}),
-                                        add(new SystemFeature() {{
-                                            name = "architecto";
-                                        }}),
-                                        add(new SystemFeature() {{
-                                            name = "mollitia";
-                                        }}),
-                                        add(new SystemFeature() {{
-                                            name = "dolorem";
-                                        }}),
-                                    }};
-                                    includedDeviceIds = new org.openapis.openapi.models.shared.DeviceId[]{{
                                         add(new DeviceId() {{
                                             buildBrand = "consequuntur";
                                             buildDevice = "repellat";
@@ -292,56 +287,149 @@ public class Application {
                                             buildBrand = "mollitia";
                                             buildDevice = "occaecati";
                                         }}),
+                                    }};
+                                    forbiddenSystemFeatures = new org.openapis.openapi.models.shared.SystemFeature[]{{
+                                        add(new SystemFeature() {{
+                                            name = "commodi";
+                                        }}),
+                                        add(new SystemFeature() {{
+                                            name = "quam";
+                                        }}),
+                                    }};
+                                    includedDeviceIds = new org.openapis.openapi.models.shared.DeviceId[]{{
                                         add(new DeviceId() {{
-                                            buildBrand = "numquam";
-                                            buildDevice = "commodi";
+                                            buildBrand = "velit";
+                                            buildDevice = "error";
+                                        }}),
+                                        add(new DeviceId() {{
+                                            buildBrand = "quia";
+                                            buildDevice = "quis";
                                         }}),
                                     }};
                                     requiredSystemFeatures = new org.openapis.openapi.models.shared.SystemFeature[]{{
                                         add(new SystemFeature() {{
-                                            name = "molestiae";
+                                            name = "laborum";
+                                        }}),
+                                    }};
+                                }}),
+                                add(new DeviceSelector() {{
+                                    deviceRam = new DeviceRam() {{
+                                        maxBytes = "animi";
+                                        minBytes = "enim";
+                                    }};
+                                    excludedDeviceIds = new org.openapis.openapi.models.shared.DeviceId[]{{
+                                        add(new DeviceId() {{
+                                            buildBrand = "quo";
+                                            buildDevice = "sequi";
+                                        }}),
+                                    }};
+                                    forbiddenSystemFeatures = new org.openapis.openapi.models.shared.SystemFeature[]{{
+                                        add(new SystemFeature() {{
+                                            name = "ipsam";
                                         }}),
                                         add(new SystemFeature() {{
-                                            name = "velit";
+                                            name = "id";
+                                        }}),
+                                        add(new SystemFeature() {{
+                                            name = "possimus";
+                                        }}),
+                                        add(new SystemFeature() {{
+                                            name = "aut";
+                                        }}),
+                                    }};
+                                    includedDeviceIds = new org.openapis.openapi.models.shared.DeviceId[]{{
+                                        add(new DeviceId() {{
+                                            buildBrand = "error";
+                                            buildDevice = "temporibus";
+                                        }}),
+                                    }};
+                                    requiredSystemFeatures = new org.openapis.openapi.models.shared.SystemFeature[]{{
+                                        add(new SystemFeature() {{
+                                            name = "quasi";
+                                        }}),
+                                        add(new SystemFeature() {{
+                                            name = "reiciendis";
+                                        }}),
+                                        add(new SystemFeature() {{
+                                            name = "voluptatibus";
                                         }}),
                                     }};
                                 }}),
                             }};
-                            name = "error";
+                            name = "vero";
                         }}),
                     }};
                     deviceTierSet = new DeviceTierSet() {{
                         deviceTiers = new org.openapis.openapi.models.shared.DeviceTier[]{{
                             add(new DeviceTier() {{
                                 deviceGroupNames = new String[]{{
-                                    add("vitae"),
-                                    add("laborum"),
+                                    add("voluptatibus"),
+                                    add("ipsa"),
+                                    add("omnis"),
                                 }};
-                                level = 656330;
+                                level = 451159;
+                            }}),
+                            add(new DeviceTier() {{
+                                deviceGroupNames = new String[]{{
+                                    add("perferendis"),
+                                    add("doloremque"),
+                                    add("reprehenderit"),
+                                }};
+                                level = 282807;
                             }}),
                         }};
                     }};
                     userCountrySets = new org.openapis.openapi.models.shared.UserCountrySet[]{{
                         add(new UserCountrySet() {{
                             countryCodes = new String[]{{
-                                add("quo"),
+                                add("corporis"),
                             }};
-                            name = "sequi";
+                            name = "dolore";
                         }}),
                         add(new UserCountrySet() {{
                             countryCodes = new String[]{{
-                                add("ipsam"),
-                                add("id"),
-                                add("possimus"),
-                                add("aut"),
+                                add("dicta"),
+                                add("harum"),
                             }};
-                            name = "quasi";
+                            name = "enim";
+                        }}),
+                        add(new UserCountrySet() {{
+                            countryCodes = new String[]{{
+                                add("commodi"),
+                                add("repudiandae"),
+                                add("quae"),
+                                add("ipsum"),
+                            }};
+                            name = "quidem";
+                        }}),
+                        add(new UserCountrySet() {{
+                            countryCodes = new String[]{{
+                                add("excepturi"),
+                                add("pariatur"),
+                                add("modi"),
+                            }};
+                            name = "praesentium";
                         }}),
                     }};
                 }};
-            }};            
+                accessToken = "rem";
+                allowUnknownDevices = false;
+                alt = "proto";
+                callback = "quasi";
+                fields = "repudiandae";
+                key = "sint";
+                oauthToken = "veritatis";
+                packageName = "itaque";
+                prettyPrint = false;
+                quotaUser = "incidunt";
+                uploadType = "enim";
+                uploadProtocol = "consequatur";
+            }}            
 
-            AndroidpublisherApplicationsDeviceTierConfigsCreateResponse res = sdk.applications.androidpublisherApplicationsDeviceTierConfigsCreate(req);
+            AndroidpublisherApplicationsDeviceTierConfigsCreateResponse res = sdk.applications.androidpublisherApplicationsDeviceTierConfigsCreate(req, new AndroidpublisherApplicationsDeviceTierConfigsCreateSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.deviceTierConfig.isPresent()) {
                 // handle response

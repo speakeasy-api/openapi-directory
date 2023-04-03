@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV2CddriveFilesFileIdContentRequest {
-    
-    public GetApiV2CddriveFilesFileIdContentPathParams pathParams;
-    public GetApiV2CddriveFilesFileIdContentRequest withPathParams(GetApiV2CddriveFilesFileIdContentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Can be used to limit the range of bytes retrieved. Only a single byte range in the format ```bytes={start-range}-{end-range}``` is supported.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Range")
+    public String range;
+    public GetApiV2CddriveFilesFileIdContentRequest withRange(String range) {
+        this.range = range;
         return this;
     }
     
-    
-    public GetApiV2CddriveFilesFileIdContentHeaders headers;
-    public GetApiV2CddriveFilesFileIdContentRequest withHeaders(GetApiV2CddriveFilesFileIdContentHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetApiV2CddriveFilesFileIdContentSecurity security;
-    public GetApiV2CddriveFilesFileIdContentRequest withSecurity(GetApiV2CddriveFilesFileIdContentSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the file to download.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=file-id")
+    public Long fileId;
+    public GetApiV2CddriveFilesFileIdContentRequest withFileId(Long fileId) {
+        this.fileId = fileId;
         return this;
     }
     

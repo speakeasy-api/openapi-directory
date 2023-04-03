@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ServicePrincipalsUpdateRequest {
-    
-    public ServicePrincipalsUpdatePathParams pathParams;
-    public ServicePrincipalsUpdateRequest withPathParams(ServicePrincipalsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ServicePrincipalsUpdateQueryParams queryParams;
-    public ServicePrincipalsUpdateRequest withQueryParams(ServicePrincipalsUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Parameters to update a service principal.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ServicePrincipalUpdateParameters request;
-    public ServicePrincipalsUpdateRequest withRequest(org.openapis.openapi.models.shared.ServicePrincipalUpdateParameters request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ServicePrincipalUpdateParameters servicePrincipalUpdateParameters;
+    public ServicePrincipalsUpdateRequest withServicePrincipalUpdateParameters(org.openapis.openapi.models.shared.ServicePrincipalUpdateParameters servicePrincipalUpdateParameters) {
+        this.servicePrincipalUpdateParameters = servicePrincipalUpdateParameters;
+        return this;
+    }
+    
+    /**
+     * Client API version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public ServicePrincipalsUpdateRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
+    
+    /**
+     * The object ID of the service principal to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=objectId")
+    public String objectId;
+    public ServicePrincipalsUpdateRequest withObjectId(String objectId) {
+        this.objectId = objectId;
+        return this;
+    }
+    
+    /**
+     * The tenant ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tenantID")
+    public String tenantID;
+    public ServicePrincipalsUpdateRequest withTenantID(String tenantID) {
+        this.tenantID = tenantID;
         return this;
     }
     

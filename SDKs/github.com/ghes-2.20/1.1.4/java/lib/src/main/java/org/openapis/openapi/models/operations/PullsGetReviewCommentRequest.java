@@ -4,13 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PullsGetReviewCommentRequest {
+    /**
+     * comment_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_id")
+    public Long commentId;
+    public PullsGetReviewCommentRequest withCommentId(Long commentId) {
+        this.commentId = commentId;
+        return this;
+    }
     
-    public PullsGetReviewCommentPathParams pathParams;
-    public PullsGetReviewCommentRequest withPathParams(PullsGetReviewCommentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public PullsGetReviewCommentRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public PullsGetReviewCommentRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

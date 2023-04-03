@@ -4,27 +4,126 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListManagedEndpointsRequest {
-    
-    public ListManagedEndpointsPathParams pathParams;
-    public ListManagedEndpointsRequest withPathParams(ListManagedEndpointsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListManagedEndpointsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public ListManagedEndpointsQueryParams queryParams;
-    public ListManagedEndpointsRequest withQueryParams(ListManagedEndpointsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListManagedEndpointsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListManagedEndpointsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public ListManagedEndpointsHeaders headers;
-    public ListManagedEndpointsRequest withHeaders(ListManagedEndpointsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListManagedEndpointsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListManagedEndpointsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListManagedEndpointsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListManagedEndpointsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     *  The date and time after which the endpoints are created.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAfter")
+    public OffsetDateTime createdAfter;
+    public ListManagedEndpointsRequest withCreatedAfter(OffsetDateTime createdAfter) {
+        this.createdAfter = createdAfter;
+        return this;
+    }
+    
+    /**
+     * The date and time before which the endpoints are created.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdBefore")
+    public OffsetDateTime createdBefore;
+    public ListManagedEndpointsRequest withCreatedBefore(OffsetDateTime createdBefore) {
+        this.createdBefore = createdBefore;
+        return this;
+    }
+    
+    /**
+     * The maximum number of managed endpoints that can be listed.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public ListManagedEndpointsRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     *  The token for the next set of managed endpoints to return. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
+    public String nextToken;
+    public ListManagedEndpointsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * The states of the managed endpoints.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=states")
+    public org.openapis.openapi.models.shared.EndpointStateEnum[] states;
+    public ListManagedEndpointsRequest withStates(org.openapis.openapi.models.shared.EndpointStateEnum[] states) {
+        this.states = states;
+        return this;
+    }
+    
+    /**
+     * The types of the managed endpoints.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=types")
+    public String[] types;
+    public ListManagedEndpointsRequest withTypes(String[] types) {
+        this.types = types;
+        return this;
+    }
+    
+    /**
+     * The ID of the virtual cluster.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=virtualClusterId")
+    public String virtualClusterId;
+    public ListManagedEndpointsRequest withVirtualClusterId(String virtualClusterId) {
+        this.virtualClusterId = virtualClusterId;
         return this;
     }
     

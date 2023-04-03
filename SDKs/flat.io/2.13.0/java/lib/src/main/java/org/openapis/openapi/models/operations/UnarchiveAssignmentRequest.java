@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UnarchiveAssignmentRequest {
-    
-    public UnarchiveAssignmentPathParams pathParams;
-    public UnarchiveAssignmentRequest withPathParams(UnarchiveAssignmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the assignment
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assignment")
+    public String assignment;
+    public UnarchiveAssignmentRequest withAssignment(String assignment) {
+        this.assignment = assignment;
         return this;
     }
     
-    
-    public UnarchiveAssignmentSecurity security;
-    public UnarchiveAssignmentRequest withSecurity(UnarchiveAssignmentSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the class
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=class")
+    public String class_;
+    public UnarchiveAssignmentRequest withClass(String class_) {
+        this.class_ = class_;
         return this;
     }
     

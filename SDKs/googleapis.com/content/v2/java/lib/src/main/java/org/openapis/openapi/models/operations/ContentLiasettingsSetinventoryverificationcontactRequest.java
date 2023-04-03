@@ -4,27 +4,176 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContentLiasettingsSetinventoryverificationcontactRequest {
-    
-    public ContentLiasettingsSetinventoryverificationcontactPathParams pathParams;
-    public ContentLiasettingsSetinventoryverificationcontactRequest withPathParams(ContentLiasettingsSetinventoryverificationcontactPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public ContentLiasettingsSetinventoryverificationcontactRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public ContentLiasettingsSetinventoryverificationcontactQueryParams queryParams;
-    public ContentLiasettingsSetinventoryverificationcontactRequest withQueryParams(ContentLiasettingsSetinventoryverificationcontactQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public ContentLiasettingsSetinventoryverificationcontactRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * The ID of the account that manages the order. This cannot be a multi-client account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public ContentLiasettingsSetinventoryverificationcontactRequest withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
     
-    public ContentLiasettingsSetinventoryverificationcontactSecurity security;
-    public ContentLiasettingsSetinventoryverificationcontactRequest withSecurity(ContentLiasettingsSetinventoryverificationcontactSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public ContentLiasettingsSetinventoryverificationcontactRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public ContentLiasettingsSetinventoryverificationcontactRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * The email of the inventory verification contact.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contactEmail")
+    public String contactEmail;
+    public ContentLiasettingsSetinventoryverificationcontactRequest withContactEmail(String contactEmail) {
+        this.contactEmail = contactEmail;
+        return this;
+    }
+    
+    /**
+     * The name of the inventory verification contact.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contactName")
+    public String contactName;
+    public ContentLiasettingsSetinventoryverificationcontactRequest withContactName(String contactName) {
+        this.contactName = contactName;
+        return this;
+    }
+    
+    /**
+     * The country for which inventory verification is requested.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public String country;
+    public ContentLiasettingsSetinventoryverificationcontactRequest withCountry(String country) {
+        this.country = country;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public ContentLiasettingsSetinventoryverificationcontactRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public ContentLiasettingsSetinventoryverificationcontactRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * The language for which inventory verification is requested.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public String language;
+    public ContentLiasettingsSetinventoryverificationcontactRequest withLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    
+    /**
+     * The ID of the managing account. If this parameter is not the same as accountId, then this account must be a multi-client account and `accountId` must be the ID of a sub-account of this account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
+    public String merchantId;
+    public ContentLiasettingsSetinventoryverificationcontactRequest withMerchantId(String merchantId) {
+        this.merchantId = merchantId;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public ContentLiasettingsSetinventoryverificationcontactRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public ContentLiasettingsSetinventoryverificationcontactRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public ContentLiasettingsSetinventoryverificationcontactRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public ContentLiasettingsSetinventoryverificationcontactRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public ContentLiasettingsSetinventoryverificationcontactRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

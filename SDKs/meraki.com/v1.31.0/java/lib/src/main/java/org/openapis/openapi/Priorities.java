@@ -39,7 +39,7 @@ public class Priorities {
      */
     public org.openapis.openapi.models.operations.GetOrganizationBrandingPoliciesPrioritiesResponse getOrganizationBrandingPoliciesPriorities(org.openapis.openapi.models.operations.GetOrganizationBrandingPoliciesPrioritiesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationBrandingPoliciesPrioritiesPathParams.class, baseUrl, "/organizations/{organizationId}/brandingPolicies/priorities", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationBrandingPoliciesPrioritiesRequest.class, baseUrl, "/organizations/{organizationId}/brandingPolicies/priorities", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -79,12 +79,12 @@ public class Priorities {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationBrandingPoliciesPrioritiesResponse updateOrganizationBrandingPoliciesPriorities(org.openapis.openapi.models.operations.UpdateOrganizationBrandingPoliciesPrioritiesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationBrandingPoliciesPrioritiesPathParams.class, baseUrl, "/organizations/{organizationId}/brandingPolicies/priorities", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationBrandingPoliciesPrioritiesRequest.class, baseUrl, "/organizations/{organizationId}/brandingPolicies/priorities", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

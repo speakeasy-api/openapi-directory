@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminGetServerStatisticsRequest {
-    
-    public EnterpriseAdminGetServerStatisticsPathParams pathParams;
-    public EnterpriseAdminGetServerStatisticsRequest withPathParams(EnterpriseAdminGetServerStatisticsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A cursor, as given in the [Link header](https://docs.github.com/enterprise-cloud@latest//rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for events before this cursor.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_end")
+    public String dateEnd;
+    public EnterpriseAdminGetServerStatisticsRequest withDateEnd(String dateEnd) {
+        this.dateEnd = dateEnd;
         return this;
     }
     
+    /**
+     * A cursor, as given in the [Link header](https://docs.github.com/enterprise-cloud@latest//rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for events after this cursor.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_start")
+    public String dateStart;
+    public EnterpriseAdminGetServerStatisticsRequest withDateStart(String dateStart) {
+        this.dateStart = dateStart;
+        return this;
+    }
     
-    public EnterpriseAdminGetServerStatisticsQueryParams queryParams;
-    public EnterpriseAdminGetServerStatisticsRequest withQueryParams(EnterpriseAdminGetServerStatisticsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The slug version of the enterprise name or the login of an organization.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise_or_org")
+    public String enterpriseOrOrg;
+    public EnterpriseAdminGetServerStatisticsRequest withEnterpriseOrOrg(String enterpriseOrOrg) {
+        this.enterpriseOrOrg = enterpriseOrOrg;
         return this;
     }
     

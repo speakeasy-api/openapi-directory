@@ -39,13 +39,13 @@ public class ProductOptionValues {
      */
     public org.openapis.openapi.models.operations.DeleteProductsIdOptionsOptionIdValuesValueIdJsonResponse deleteProductsIdOptionsOptionIdValuesValueIdJson(org.openapis.openapi.models.operations.DeleteProductsIdOptionsOptionIdValuesValueIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteProductsIdOptionsOptionIdValuesValueIdJsonPathParams.class, baseUrl, "/products/{id}/options/{option_id}/values/{value_id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteProductsIdOptionsOptionIdValuesValueIdJsonRequest.class, baseUrl, "/products/{id}/options/{option_id}/values/{value_id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteProductsIdOptionsOptionIdValuesValueIdJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteProductsIdOptionsOptionIdValuesValueIdJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -90,13 +90,13 @@ public class ProductOptionValues {
      */
     public org.openapis.openapi.models.operations.GetProductsIdOptionsOptionIdValuesJsonResponse getProductsIdOptionsOptionIdValuesJson(org.openapis.openapi.models.operations.GetProductsIdOptionsOptionIdValuesJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProductsIdOptionsOptionIdValuesJsonPathParams.class, baseUrl, "/products/{id}/options/{option_id}/values.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProductsIdOptionsOptionIdValuesJsonRequest.class, baseUrl, "/products/{id}/options/{option_id}/values.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProductsIdOptionsOptionIdValuesJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProductsIdOptionsOptionIdValuesJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -142,13 +142,13 @@ public class ProductOptionValues {
      */
     public org.openapis.openapi.models.operations.GetProductsIdOptionsOptionIdValuesCountJsonResponse getProductsIdOptionsOptionIdValuesCountJson(org.openapis.openapi.models.operations.GetProductsIdOptionsOptionIdValuesCountJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProductsIdOptionsOptionIdValuesCountJsonPathParams.class, baseUrl, "/products/{id}/options/{option_id}/values/count.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProductsIdOptionsOptionIdValuesCountJsonRequest.class, baseUrl, "/products/{id}/options/{option_id}/values/count.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProductsIdOptionsOptionIdValuesCountJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProductsIdOptionsOptionIdValuesCountJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -194,13 +194,13 @@ public class ProductOptionValues {
      */
     public org.openapis.openapi.models.operations.GetProductsIdOptionsOptionIdValuesValueIdJsonResponse getProductsIdOptionsOptionIdValuesValueIdJson(org.openapis.openapi.models.operations.GetProductsIdOptionsOptionIdValuesValueIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProductsIdOptionsOptionIdValuesValueIdJsonPathParams.class, baseUrl, "/products/{id}/options/{option_id}/values/{value_id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProductsIdOptionsOptionIdValuesValueIdJsonRequest.class, baseUrl, "/products/{id}/options/{option_id}/values/{value_id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProductsIdOptionsOptionIdValuesValueIdJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProductsIdOptionsOptionIdValuesValueIdJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -246,18 +246,18 @@ public class ProductOptionValues {
      */
     public org.openapis.openapi.models.operations.PostProductsIdOptionsOptionIdValuesJsonResponse postProductsIdOptionsOptionIdValuesJson(org.openapis.openapi.models.operations.PostProductsIdOptionsOptionIdValuesJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostProductsIdOptionsOptionIdValuesJsonPathParams.class, baseUrl, "/products/{id}/options/{option_id}/values.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostProductsIdOptionsOptionIdValuesJsonRequest.class, baseUrl, "/products/{id}/options/{option_id}/values.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "productOptionValueEdit", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostProductsIdOptionsOptionIdValuesJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostProductsIdOptionsOptionIdValuesJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -295,18 +295,18 @@ public class ProductOptionValues {
      */
     public org.openapis.openapi.models.operations.PutProductsIdOptionsOptionIdValuesValueIdJsonResponse putProductsIdOptionsOptionIdValuesValueIdJson(org.openapis.openapi.models.operations.PutProductsIdOptionsOptionIdValuesValueIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutProductsIdOptionsOptionIdValuesValueIdJsonPathParams.class, baseUrl, "/products/{id}/options/{option_id}/values/{value_id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutProductsIdOptionsOptionIdValuesValueIdJsonRequest.class, baseUrl, "/products/{id}/options/{option_id}/values/{value_id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "productOptionValueEdit", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutProductsIdOptionsOptionIdValuesValueIdJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutProductsIdOptionsOptionIdValuesValueIdJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

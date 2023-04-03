@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutApplicationsApplicationIdRequest {
-    
-    public PutApplicationsApplicationIdPathParams pathParams;
-    public PutApplicationsApplicationIdRequest withPathParams(PutApplicationsApplicationIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ApplicationWriteV1 applicationWriteV1;
+    public PutApplicationsApplicationIdRequest withApplicationWriteV1(org.openapis.openapi.models.shared.ApplicationWriteV1 applicationWriteV1) {
+        this.applicationWriteV1 = applicationWriteV1;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ApplicationWriteV1 request;
-    public PutApplicationsApplicationIdRequest withRequest(org.openapis.openapi.models.shared.ApplicationWriteV1 request) {
-        this.request = request;
+    /**
+     * `id` for a specific application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=application_id")
+    public String applicationId;
+    public PutApplicationsApplicationIdRequest withApplicationId(String applicationId) {
+        this.applicationId = applicationId;
         return this;
     }
     

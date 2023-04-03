@@ -4,20 +4,116 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodeScanningListAlertsForOrgRequest {
-    
-    public CodeScanningListAlertsForOrgPathParams pathParams;
-    public CodeScanningListAlertsForOrgRequest withPathParams(CodeScanningListAlertsForOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A cursor, as given in the [Link header](https://docs.github.com/enterprise-server@3.8/rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for results after this cursor.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=after")
+    public String after;
+    public CodeScanningListAlertsForOrgRequest withAfter(String after) {
+        this.after = after;
         return this;
     }
     
+    /**
+     * A cursor, as given in the [Link header](https://docs.github.com/enterprise-server@3.8/rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for results before this cursor.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=before")
+    public String before;
+    public CodeScanningListAlertsForOrgRequest withBefore(String before) {
+        this.before = before;
+        return this;
+    }
     
-    public CodeScanningListAlertsForOrgQueryParams queryParams;
-    public CodeScanningListAlertsForOrgRequest withQueryParams(CodeScanningListAlertsForOrgQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The direction to sort the results by.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public org.openapis.openapi.models.shared.DirectionEnum direction;
+    public CodeScanningListAlertsForOrgRequest withDirection(org.openapis.openapi.models.shared.DirectionEnum direction) {
+        this.direction = direction;
+        return this;
+    }
+    
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public CodeScanningListAlertsForOrgRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
+    
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public CodeScanningListAlertsForOrgRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public CodeScanningListAlertsForOrgRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * If specified, only code scanning alerts with this severity will be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=severity")
+    public org.openapis.openapi.models.shared.CodeScanningAlertSeverityEnum severity;
+    public CodeScanningListAlertsForOrgRequest withSeverity(org.openapis.openapi.models.shared.CodeScanningAlertSeverityEnum severity) {
+        this.severity = severity;
+        return this;
+    }
+    
+    /**
+     * The property by which to sort the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public CodeScanningListAlertsForOrgSortEnum sort;
+    public CodeScanningListAlertsForOrgRequest withSort(CodeScanningListAlertsForOrgSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * If specified, only code scanning alerts with this state will be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public org.openapis.openapi.models.shared.CodeScanningAlertStateEnum state;
+    public CodeScanningListAlertsForOrgRequest withState(org.openapis.openapi.models.shared.CodeScanningAlertStateEnum state) {
+        this.state = state;
+        return this;
+    }
+    
+    /**
+     * The GUID of a code scanning tool. Only results by this tool will be listed. Note that some code scanning tools may not include a GUID in their analysis data. You can specify the tool by using either `tool_guid` or `tool_name`, but not both.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tool_guid")
+    public String toolGuid;
+    public CodeScanningListAlertsForOrgRequest withToolGuid(String toolGuid) {
+        this.toolGuid = toolGuid;
+        return this;
+    }
+    
+    /**
+     * The name of a code scanning tool. Only results by this tool will be listed. You can specify the tool by using either `tool_name` or `tool_guid`, but not both.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tool_name")
+    public String toolName;
+    public CodeScanningListAlertsForOrgRequest withToolName(String toolName) {
+        this.toolName = toolName;
         return this;
     }
     

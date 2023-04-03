@@ -34,25 +34,26 @@ public class Indexing {
     /**
      * Deletes the schema of a data source. **Note:** This API requires an admin or service account to execute.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesDeleteSchemaResponse cloudsearchIndexingDatasourcesDeleteSchema(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesDeleteSchemaRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesDeleteSchemaResponse cloudsearchIndexingDatasourcesDeleteSchema(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesDeleteSchemaRequest request, org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesDeleteSchemaSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesDeleteSchemaPathParams.class, baseUrl, "/v1/indexing/{name}/schema", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesDeleteSchemaRequest.class, baseUrl, "/v1/indexing/{name}/schema", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesDeleteSchemaQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesDeleteSchemaRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class Indexing {
     /**
      * Gets the schema of a data source. **Note:** This API requires an admin or service account to execute.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesGetSchemaResponse cloudsearchIndexingDatasourcesGetSchema(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesGetSchemaRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesGetSchemaResponse cloudsearchIndexingDatasourcesGetSchema(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesGetSchemaRequest request, org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesGetSchemaSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesGetSchemaPathParams.class, baseUrl, "/v1/indexing/{name}/schema", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesGetSchemaRequest.class, baseUrl, "/v1/indexing/{name}/schema", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesGetSchemaQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesGetSchemaRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,25 +126,26 @@ public class Indexing {
     /**
      * Deletes Item resource for the specified resource name. This API requires an admin or service account to execute. The service account used is the one whitelisted in the corresponding data source.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsDeleteResponse cloudsearchIndexingDatasourcesItemsDelete(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsDeleteResponse cloudsearchIndexingDatasourcesItemsDelete(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsDeleteRequest request, org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsDeletePathParams.class, baseUrl, "/v1/indexing/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsDeleteRequest.class, baseUrl, "/v1/indexing/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -169,27 +172,28 @@ public class Indexing {
     /**
      * Deletes all items in a queue. This method is useful for deleting stale items. This API requires an admin or service account to execute. The service account used is the one whitelisted in the corresponding data source.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsDeleteQueueItemsResponse cloudsearchIndexingDatasourcesItemsDeleteQueueItems(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsDeleteQueueItemsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsDeleteQueueItemsResponse cloudsearchIndexingDatasourcesItemsDeleteQueueItems(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsDeleteQueueItemsRequest request, org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsDeleteQueueItemsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsDeleteQueueItemsPathParams.class, baseUrl, "/v1/indexing/{name}/items:deleteQueueItems", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsDeleteQueueItemsRequest.class, baseUrl, "/v1/indexing/{name}/items:deleteQueueItems", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "deleteQueueItemsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsDeleteQueueItemsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsDeleteQueueItemsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -216,25 +220,26 @@ public class Indexing {
     /**
      * Gets Item resource by item name. This API requires an admin or service account to execute. The service account used is the one whitelisted in the corresponding data source.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsGetResponse cloudsearchIndexingDatasourcesItemsGet(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsGetResponse cloudsearchIndexingDatasourcesItemsGet(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsGetRequest request, org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsGetPathParams.class, baseUrl, "/v1/indexing/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsGetRequest.class, baseUrl, "/v1/indexing/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -261,27 +266,28 @@ public class Indexing {
     /**
      * Updates Item ACL, metadata, and content. It will insert the Item if it does not exist. This method does not support partial updates. Fields with no provided values are cleared out in the Cloud Search index. This API requires an admin or service account to execute. The service account used is the one whitelisted in the corresponding data source.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsIndexResponse cloudsearchIndexingDatasourcesItemsIndex(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsIndexRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsIndexResponse cloudsearchIndexingDatasourcesItemsIndex(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsIndexRequest request, org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsIndexSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsIndexPathParams.class, baseUrl, "/v1/indexing/{name}:index", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsIndexRequest.class, baseUrl, "/v1/indexing/{name}:index", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "indexItemRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsIndexQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsIndexRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -308,25 +314,26 @@ public class Indexing {
     /**
      * Lists all or a subset of Item resources. This API requires an admin or service account to execute. The service account used is the one whitelisted in the corresponding data source.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsListResponse cloudsearchIndexingDatasourcesItemsList(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsListResponse cloudsearchIndexingDatasourcesItemsList(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsListRequest request, org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsListPathParams.class, baseUrl, "/v1/indexing/{name}/items", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsListRequest.class, baseUrl, "/v1/indexing/{name}/items", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -353,27 +360,28 @@ public class Indexing {
     /**
      * Polls for unreserved items from the indexing queue and marks a set as reserved, starting with items that have the oldest timestamp from the highest priority ItemStatus. The priority order is as follows: ERROR MODIFIED NEW_ITEM ACCEPTED Reserving items ensures that polling from other threads cannot create overlapping sets. After handling the reserved items, the client should put items back into the unreserved state, either by calling index, or by calling push with the type REQUEUE. Items automatically become available (unreserved) after 4 hours even if no update or push method is called. This API requires an admin or service account to execute. The service account used is the one whitelisted in the corresponding data source.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsPollResponse cloudsearchIndexingDatasourcesItemsPoll(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsPollRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsPollResponse cloudsearchIndexingDatasourcesItemsPoll(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsPollRequest request, org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsPollSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsPollPathParams.class, baseUrl, "/v1/indexing/{name}/items:poll", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsPollRequest.class, baseUrl, "/v1/indexing/{name}/items:poll", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "pollItemsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsPollQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsPollRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -400,27 +408,28 @@ public class Indexing {
     /**
      * Pushes an item onto a queue for later polling and updating. This API requires an admin or service account to execute. The service account used is the one whitelisted in the corresponding data source.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsPushResponse cloudsearchIndexingDatasourcesItemsPush(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsPushRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsPushResponse cloudsearchIndexingDatasourcesItemsPush(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsPushRequest request, org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsPushSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsPushPathParams.class, baseUrl, "/v1/indexing/{name}:push", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsPushRequest.class, baseUrl, "/v1/indexing/{name}:push", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "pushItemRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsPushQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsPushRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -447,27 +456,28 @@ public class Indexing {
     /**
      * Unreserves all items from a queue, making them all eligible to be polled. This method is useful for resetting the indexing queue after a connector has been restarted. This API requires an admin or service account to execute. The service account used is the one whitelisted in the corresponding data source.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsUnreserveResponse cloudsearchIndexingDatasourcesItemsUnreserve(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsUnreserveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsUnreserveResponse cloudsearchIndexingDatasourcesItemsUnreserve(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsUnreserveRequest request, org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsUnreserveSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsUnreservePathParams.class, baseUrl, "/v1/indexing/{name}/items:unreserve", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsUnreserveRequest.class, baseUrl, "/v1/indexing/{name}/items:unreserve", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "unreserveItemsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsUnreserveQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsUnreserveRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -494,27 +504,28 @@ public class Indexing {
     /**
      * Creates an upload session for uploading item content. For items smaller than 100 KB, it's easier to embed the content inline within an index request. This API requires an admin or service account to execute. The service account used is the one whitelisted in the corresponding data source.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsUploadResponse cloudsearchIndexingDatasourcesItemsUpload(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsUploadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsUploadResponse cloudsearchIndexingDatasourcesItemsUpload(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsUploadRequest request, org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsUploadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsUploadPathParams.class, baseUrl, "/v1/indexing/{name}:upload", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsUploadRequest.class, baseUrl, "/v1/indexing/{name}:upload", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "startUploadItemRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsUploadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesItemsUploadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -541,27 +552,28 @@ public class Indexing {
     /**
      * Updates the schema of a data source. This method does not perform incremental updates to the schema. Instead, this method updates the schema by overwriting the entire schema. **Note:** This API requires an admin or service account to execute.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesUpdateSchemaResponse cloudsearchIndexingDatasourcesUpdateSchema(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesUpdateSchemaRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesUpdateSchemaResponse cloudsearchIndexingDatasourcesUpdateSchema(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesUpdateSchemaRequest request, org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesUpdateSchemaSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesUpdateSchemaPathParams.class, baseUrl, "/v1/indexing/{name}/schema", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesUpdateSchemaRequest.class, baseUrl, "/v1/indexing/{name}/schema", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateSchemaRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesUpdateSchemaQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchIndexingDatasourcesUpdateSchemaRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

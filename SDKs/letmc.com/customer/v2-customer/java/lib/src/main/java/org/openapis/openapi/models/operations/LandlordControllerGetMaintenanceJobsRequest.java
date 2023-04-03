@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LandlordControllerGetMaintenanceJobsRequest {
-    
-    public LandlordControllerGetMaintenanceJobsPathParams pathParams;
-    public LandlordControllerGetMaintenanceJobsRequest withPathParams(LandlordControllerGetMaintenanceJobsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique client short-name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
+    public String shortName;
+    public LandlordControllerGetMaintenanceJobsRequest withShortName(String shortName) {
+        this.shortName = shortName;
         return this;
     }
     
-    
-    public LandlordControllerGetMaintenanceJobsQueryParams queryParams;
-    public LandlordControllerGetMaintenanceJobsRequest withQueryParams(LandlordControllerGetMaintenanceJobsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The login token returned from the /session POST call
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public LandlordControllerGetMaintenanceJobsRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

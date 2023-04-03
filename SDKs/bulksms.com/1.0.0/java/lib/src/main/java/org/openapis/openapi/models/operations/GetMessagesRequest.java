@@ -4,20 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMessagesRequest {
-    
-    public GetMessagesQueryParams queryParams;
-    public GetMessagesRequest withQueryParams(GetMessagesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * See the message filtering for more information.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public GetMessagesRequest withFilter(String filter) {
+        this.filter = filter;
         return this;
     }
     
+    /**
+     * The maximum number of messages that are returned.  The default is 1000.
+     * The value of `limit` is not a guarantee that a specific number of messages will be in the response, even if there are more messages available.  Consider the case where you have 150 messages and you specify `limit=50`.  It is possible that only 49 messages will be returned.  The  way to make sure that there are no more messages is to submit a new call using the `id` filter field with the `&lt;` operator (described below).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Double limit;
+    public GetMessagesRequest withLimit(Double limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetMessagesSecurity security;
-    public GetMessagesRequest withSecurity(GetMessagesSecurity security) {
-        this.security = security;
+    /**
+     * The default value is DESCENDING
+     * 
+     * If the `sortOrder` is DESCENDING, the newest messages be first in the result.  ASCENDING places the oldest messages on top of the response.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortOrder")
+    public GetMessagesSortOrderEnum sortOrder;
+    public GetMessagesRequest withSortOrder(GetMessagesSortOrderEnum sortOrder) {
+        this.sortOrder = sortOrder;
         return this;
     }
     

@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutApiLogisticsPvtShippingPoliciesIdRequest {
-    
-    public PutApiLogisticsPvtShippingPoliciesIdPathParams pathParams;
-    public PutApiLogisticsPvtShippingPoliciesIdRequest withPathParams(PutApiLogisticsPvtShippingPoliciesIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public PutApiLogisticsPvtShippingPoliciesIdRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public PutApiLogisticsPvtShippingPoliciesIdHeaders headers;
-    public PutApiLogisticsPvtShippingPoliciesIdRequest withHeaders(PutApiLogisticsPvtShippingPoliciesIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public PutApiLogisticsPvtShippingPoliciesIdRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PutApiLogisticsPvtShippingPoliciesIdRequestBody request;
-    public PutApiLogisticsPvtShippingPoliciesIdRequest withRequest(PutApiLogisticsPvtShippingPoliciesIdRequestBody request) {
-        this.request = request;
+    public PutApiLogisticsPvtShippingPoliciesIdRequestBody requestBody;
+    public PutApiLogisticsPvtShippingPoliciesIdRequest withRequestBody(PutApiLogisticsPvtShippingPoliciesIdRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Shipping policy's ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutApiLogisticsPvtShippingPoliciesIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

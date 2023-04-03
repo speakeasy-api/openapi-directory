@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostConfigPropertyRequest {
-    
-    public PostConfigPropertyPathParams pathParams;
-    public PostConfigPropertyRequest withPathParams(PostConfigPropertyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=configNodeName")
+    public String configNodeName;
+    public PostConfigPropertyRequest withConfigNodeName(String configNodeName) {
+        this.configNodeName = configNodeName;
         return this;
     }
     

@@ -33,10 +33,11 @@ public class Processes {
     /**
      * List information about processes made by or on behalf of a user, such as process type and current status.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ScriptProcessesListResponse scriptProcessesList(org.openapis.openapi.models.operations.ScriptProcessesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ScriptProcessesListResponse scriptProcessesList(org.openapis.openapi.models.operations.ScriptProcessesListRequest request, org.openapis.openapi.models.operations.ScriptProcessesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/processes");
         
@@ -44,14 +45,14 @@ public class Processes {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ScriptProcessesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ScriptProcessesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,10 +79,11 @@ public class Processes {
     /**
      * List information about a script's executed processes, such as process type and current status.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ScriptProcessesListScriptProcessesResponse scriptProcessesListScriptProcesses(org.openapis.openapi.models.operations.ScriptProcessesListScriptProcessesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ScriptProcessesListScriptProcessesResponse scriptProcessesListScriptProcesses(org.openapis.openapi.models.operations.ScriptProcessesListScriptProcessesRequest request, org.openapis.openapi.models.operations.ScriptProcessesListScriptProcessesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/processes:listScriptProcesses");
         
@@ -89,14 +91,14 @@ public class Processes {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ScriptProcessesListScriptProcessesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ScriptProcessesListScriptProcessesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

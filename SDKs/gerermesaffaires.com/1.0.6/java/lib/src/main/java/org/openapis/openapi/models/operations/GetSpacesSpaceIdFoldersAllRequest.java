@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpacesSpaceIdFoldersAllRequest {
-    
-    public GetSpacesSpaceIdFoldersAllPathParams pathParams;
-    public GetSpacesSpaceIdFoldersAllRequest withPathParams(GetSpacesSpaceIdFoldersAllPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * class of the folder
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Class")
+    public String class_;
+    public GetSpacesSpaceIdFoldersAllRequest withClass(String class_) {
+        this.class_ = class_;
         return this;
     }
     
+    /**
+     * keywords attached to the folder
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Keywords")
+    public String keywords;
+    public GetSpacesSpaceIdFoldersAllRequest withKeywords(String keywords) {
+        this.keywords = keywords;
+        return this;
+    }
     
-    public GetSpacesSpaceIdFoldersAllQueryParams queryParams;
-    public GetSpacesSpaceIdFoldersAllRequest withQueryParams(GetSpacesSpaceIdFoldersAllQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Name of the folder
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Name")
+    public String name;
+    public GetSpacesSpaceIdFoldersAllRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * index range of the results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Range")
+    public String range;
+    public GetSpacesSpaceIdFoldersAllRequest withRange(String range) {
+        this.range = range;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public GetSpacesSpaceIdFoldersAllRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

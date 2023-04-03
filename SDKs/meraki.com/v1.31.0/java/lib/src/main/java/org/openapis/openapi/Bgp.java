@@ -40,7 +40,7 @@ public class Bgp {
      */
     public org.openapis.openapi.models.operations.GetNetworkApplianceVpnBgpResponse getNetworkApplianceVpnBgp(org.openapis.openapi.models.operations.GetNetworkApplianceVpnBgpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceVpnBgpPathParams.class, baseUrl, "/networks/{networkId}/appliance/vpn/bgp", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceVpnBgpRequest.class, baseUrl, "/networks/{networkId}/appliance/vpn/bgp", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,12 +80,12 @@ public class Bgp {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkApplianceVpnBgpResponse updateNetworkApplianceVpnBgp(org.openapis.openapi.models.operations.UpdateNetworkApplianceVpnBgpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceVpnBgpPathParams.class, baseUrl, "/networks/{networkId}/appliance/vpn/bgp", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceVpnBgpRequest.class, baseUrl, "/networks/{networkId}/appliance/vpn/bgp", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

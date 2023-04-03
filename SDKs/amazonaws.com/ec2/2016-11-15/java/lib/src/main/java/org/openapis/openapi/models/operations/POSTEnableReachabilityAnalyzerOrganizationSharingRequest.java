@@ -7,24 +7,73 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTEnableReachabilityAnalyzerOrganizationSharingRequest {
-    
-    public POSTEnableReachabilityAnalyzerOrganizationSharingQueryParams queryParams;
-    public POSTEnableReachabilityAnalyzerOrganizationSharingRequest withQueryParams(POSTEnableReachabilityAnalyzerOrganizationSharingQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public POSTEnableReachabilityAnalyzerOrganizationSharingHeaders headers;
-    public POSTEnableReachabilityAnalyzerOrganizationSharingRequest withHeaders(POSTEnableReachabilityAnalyzerOrganizationSharingHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public POSTEnableReachabilityAnalyzerOrganizationSharingActionEnum action;
+    public POSTEnableReachabilityAnalyzerOrganizationSharingRequest withAction(POSTEnableReachabilityAnalyzerOrganizationSharingActionEnum action) {
+        this.action = action;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public POSTEnableReachabilityAnalyzerOrganizationSharingRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public POSTEnableReachabilityAnalyzerOrganizationSharingRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public POSTEnableReachabilityAnalyzerOrganizationSharingVersionEnum version;
+    public POSTEnableReachabilityAnalyzerOrganizationSharingRequest withVersion(POSTEnableReachabilityAnalyzerOrganizationSharingVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public POSTEnableReachabilityAnalyzerOrganizationSharingRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public POSTEnableReachabilityAnalyzerOrganizationSharingRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public POSTEnableReachabilityAnalyzerOrganizationSharingRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public POSTEnableReachabilityAnalyzerOrganizationSharingRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public POSTEnableReachabilityAnalyzerOrganizationSharingRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public POSTEnableReachabilityAnalyzerOrganizationSharingRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public POSTEnableReachabilityAnalyzerOrganizationSharingRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

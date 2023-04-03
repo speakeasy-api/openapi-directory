@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteApiV2CddriveFoldersFolderIdRequest {
-    
-    public DeleteApiV2CddriveFoldersFolderIdPathParams pathParams;
-    public DeleteApiV2CddriveFoldersFolderIdRequest withPathParams(DeleteApiV2CddriveFoldersFolderIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the folder to get.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=folder-id")
+    public Long folderId;
+    public DeleteApiV2CddriveFoldersFolderIdRequest withFolderId(Long folderId) {
+        this.folderId = folderId;
         return this;
     }
     
-    
-    public DeleteApiV2CddriveFoldersFolderIdQueryParams queryParams;
-    public DeleteApiV2CddriveFoldersFolderIdRequest withQueryParams(DeleteApiV2CddriveFoldersFolderIdQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public DeleteApiV2CddriveFoldersFolderIdSecurity security;
-    public DeleteApiV2CddriveFoldersFolderIdRequest withSecurity(DeleteApiV2CddriveFoldersFolderIdSecurity security) {
-        this.security = security;
+    /**
+     * Flag to indicate if the folder should be deleted if it has items inside of it.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=recursive")
+    public Boolean recursive;
+    public DeleteApiV2CddriveFoldersFolderIdRequest withRecursive(Boolean recursive) {
+        this.recursive = recursive;
         return this;
     }
     

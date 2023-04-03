@@ -37,10 +37,11 @@ public class Articles {
      * Account Article Report
      * Return status on all reports generated for the account from the oauth credentials
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountArticleReportResponse accountArticleReport(org.openapis.openapi.models.operations.AccountArticleReportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountArticleReportResponse accountArticleReport(org.openapis.openapi.models.operations.AccountArticleReportRequest request, org.openapis.openapi.models.operations.AccountArticleReportSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/articles/export");
         
@@ -48,14 +49,14 @@ public class Articles {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccountArticleReportQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccountArticleReportRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -84,11 +85,10 @@ public class Articles {
     /**
      * Initiate a new Report
      * Initiate a new Article Report for this Account. There is a limit of 1 report per day.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountArticleReportGenerateResponse accountArticleReportGenerate(org.openapis.openapi.models.operations.AccountArticleReportGenerateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountArticleReportGenerateResponse accountArticleReportGenerate() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/articles/export");
         
@@ -97,8 +97,7 @@ public class Articles {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -132,7 +131,7 @@ public class Articles {
      */
     public org.openapis.openapi.models.operations.ArticleDetailsResponse articleDetails(org.openapis.openapi.models.operations.ArticleDetailsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticleDetailsPathParams.class, baseUrl, "/articles/{article_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticleDetailsRequest.class, baseUrl, "/articles/{article_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -173,7 +172,7 @@ public class Articles {
      */
     public org.openapis.openapi.models.operations.ArticleFileDetailsResponse articleFileDetails(org.openapis.openapi.models.operations.ArticleFileDetailsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticleFileDetailsPathParams.class, baseUrl, "/articles/{article_id}/files/{file_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticleFileDetailsRequest.class, baseUrl, "/articles/{article_id}/files/{file_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -214,7 +213,7 @@ public class Articles {
      */
     public org.openapis.openapi.models.operations.ArticleFilesResponse articleFiles(org.openapis.openapi.models.operations.ArticleFilesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticleFilesPathParams.class, baseUrl, "/articles/{article_id}/files", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticleFilesRequest.class, baseUrl, "/articles/{article_id}/files", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -255,7 +254,7 @@ public class Articles {
      */
     public org.openapis.openapi.models.operations.ArticleVersionConfidentialityResponse articleVersionConfidentiality(org.openapis.openapi.models.operations.ArticleVersionConfidentialityRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticleVersionConfidentialityPathParams.class, baseUrl, "/articles/{article_id}/versions/{v_number}/confidentiality", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticleVersionConfidentialityRequest.class, baseUrl, "/articles/{article_id}/versions/{v_number}/confidentiality", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -296,7 +295,7 @@ public class Articles {
      */
     public org.openapis.openapi.models.operations.ArticleVersionDetailsResponse articleVersionDetails(org.openapis.openapi.models.operations.ArticleVersionDetailsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticleVersionDetailsPathParams.class, baseUrl, "/articles/{article_id}/versions/{v_number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticleVersionDetailsRequest.class, baseUrl, "/articles/{article_id}/versions/{v_number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -337,7 +336,7 @@ public class Articles {
      */
     public org.openapis.openapi.models.operations.ArticleVersionEmbargoResponse articleVersionEmbargo(org.openapis.openapi.models.operations.ArticleVersionEmbargoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticleVersionEmbargoPathParams.class, baseUrl, "/articles/{article_id}/versions/{v_number}/embargo", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticleVersionEmbargoRequest.class, baseUrl, "/articles/{article_id}/versions/{v_number}/embargo", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -373,24 +372,25 @@ public class Articles {
      * Update article version
      * Updating an article version by passing body parameters; request can also be made with the PATCH method.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ArticleVersionUpdateResponse articleVersionUpdate(org.openapis.openapi.models.operations.ArticleVersionUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ArticleVersionUpdateResponse articleVersionUpdate(org.openapis.openapi.models.operations.ArticleVersionUpdateRequest request, org.openapis.openapi.models.operations.ArticleVersionUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticleVersionUpdatePathParams.class, baseUrl, "/account/articles/{article_id}/versions/{version_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticleVersionUpdateRequest.class, baseUrl, "/account/articles/{article_id}/versions/{version_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "articleUpdate", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -430,24 +430,25 @@ public class Articles {
      * Update article version thumbnail
      * For a given public article version update the article thumbnail by choosing one of the associated files
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ArticleVersionUpdateThumbResponse articleVersionUpdateThumb(org.openapis.openapi.models.operations.ArticleVersionUpdateThumbRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ArticleVersionUpdateThumbResponse articleVersionUpdateThumb(org.openapis.openapi.models.operations.ArticleVersionUpdateThumbRequest request, org.openapis.openapi.models.operations.ArticleVersionUpdateThumbSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticleVersionUpdateThumbPathParams.class, baseUrl, "/account/articles/{article_id}/versions/{version_id}/update_thumb", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticleVersionUpdateThumbRequest.class, baseUrl, "/account/articles/{article_id}/versions/{version_id}/update_thumb", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "fileId", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -486,7 +487,7 @@ public class Articles {
      */
     public org.openapis.openapi.models.operations.ArticleVersionsResponse articleVersions(org.openapis.openapi.models.operations.ArticleVersionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticleVersionsPathParams.class, baseUrl, "/articles/{article_id}/versions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArticleVersionsRequest.class, baseUrl, "/articles/{article_id}/versions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -533,13 +534,13 @@ public class Articles {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ArticlesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ArticlesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -589,10 +590,10 @@ public class Articles {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "articleSearch", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -632,19 +633,20 @@ public class Articles {
      * Delete article author
      * De-associate author from article
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateArticleAuthorDeleteResponse privateArticleAuthorDelete(org.openapis.openapi.models.operations.PrivateArticleAuthorDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateArticleAuthorDeleteResponse privateArticleAuthorDelete(org.openapis.openapi.models.operations.PrivateArticleAuthorDeleteRequest request, org.openapis.openapi.models.operations.PrivateArticleAuthorDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleAuthorDeletePathParams.class, baseUrl, "/account/articles/{article_id}/authors/{author_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleAuthorDeleteRequest.class, baseUrl, "/account/articles/{article_id}/authors/{author_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -674,24 +676,25 @@ public class Articles {
      * Add article authors
      * Associate new authors with the article. This will add new authors to the list of already associated authors
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateArticleAuthorsAddResponse privateArticleAuthorsAdd(org.openapis.openapi.models.operations.PrivateArticleAuthorsAddRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateArticleAuthorsAddResponse privateArticleAuthorsAdd(org.openapis.openapi.models.operations.PrivateArticleAuthorsAddRequest request, org.openapis.openapi.models.operations.PrivateArticleAuthorsAddSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleAuthorsAddPathParams.class, baseUrl, "/account/articles/{article_id}/authors", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleAuthorsAddRequest.class, baseUrl, "/account/articles/{article_id}/authors", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "authorsCreator", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -725,19 +728,20 @@ public class Articles {
      * List article authors
      * List article authors
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateArticleAuthorsListResponse privateArticleAuthorsList(org.openapis.openapi.models.operations.PrivateArticleAuthorsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateArticleAuthorsListResponse privateArticleAuthorsList(org.openapis.openapi.models.operations.PrivateArticleAuthorsListRequest request, org.openapis.openapi.models.operations.PrivateArticleAuthorsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleAuthorsListPathParams.class, baseUrl, "/account/articles/{article_id}/authors", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleAuthorsListRequest.class, baseUrl, "/account/articles/{article_id}/authors", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -775,24 +779,25 @@ public class Articles {
      * Replace article authors
      * Associate new authors with the article. This will remove all already associated authors and add these new ones
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateArticleAuthorsReplaceResponse privateArticleAuthorsReplace(org.openapis.openapi.models.operations.PrivateArticleAuthorsReplaceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateArticleAuthorsReplaceResponse privateArticleAuthorsReplace(org.openapis.openapi.models.operations.PrivateArticleAuthorsReplaceRequest request, org.openapis.openapi.models.operations.PrivateArticleAuthorsReplaceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleAuthorsReplacePathParams.class, baseUrl, "/account/articles/{article_id}/authors", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleAuthorsReplaceRequest.class, baseUrl, "/account/articles/{article_id}/authors", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "authorsCreator", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -826,24 +831,25 @@ public class Articles {
      * Add article categories
      * Associate new categories with the article. This will add new categories to the list of already associated categories
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateArticleCategoriesAddResponse privateArticleCategoriesAdd(org.openapis.openapi.models.operations.PrivateArticleCategoriesAddRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateArticleCategoriesAddResponse privateArticleCategoriesAdd(org.openapis.openapi.models.operations.PrivateArticleCategoriesAddRequest request, org.openapis.openapi.models.operations.PrivateArticleCategoriesAddSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleCategoriesAddPathParams.class, baseUrl, "/account/articles/{article_id}/categories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleCategoriesAddRequest.class, baseUrl, "/account/articles/{article_id}/categories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "categoriesCreator", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -873,19 +879,20 @@ public class Articles {
      * List article categories
      * List article categories
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateArticleCategoriesListResponse privateArticleCategoriesList(org.openapis.openapi.models.operations.PrivateArticleCategoriesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateArticleCategoriesListResponse privateArticleCategoriesList(org.openapis.openapi.models.operations.PrivateArticleCategoriesListRequest request, org.openapis.openapi.models.operations.PrivateArticleCategoriesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleCategoriesListPathParams.class, baseUrl, "/account/articles/{article_id}/categories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleCategoriesListRequest.class, baseUrl, "/account/articles/{article_id}/categories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -923,24 +930,25 @@ public class Articles {
      * Replace article categories
      * Associate new categories with the article. This will remove all already associated categories and add these new ones
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateArticleCategoriesReplaceResponse privateArticleCategoriesReplace(org.openapis.openapi.models.operations.PrivateArticleCategoriesReplaceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateArticleCategoriesReplaceResponse privateArticleCategoriesReplace(org.openapis.openapi.models.operations.PrivateArticleCategoriesReplaceRequest request, org.openapis.openapi.models.operations.PrivateArticleCategoriesReplaceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleCategoriesReplacePathParams.class, baseUrl, "/account/articles/{article_id}/categories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleCategoriesReplaceRequest.class, baseUrl, "/account/articles/{article_id}/categories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "categoriesCreator", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -970,19 +978,20 @@ public class Articles {
      * Delete article category
      * De-associate category from article
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateArticleCategoryDeleteResponse privateArticleCategoryDelete(org.openapis.openapi.models.operations.PrivateArticleCategoryDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateArticleCategoryDeleteResponse privateArticleCategoryDelete(org.openapis.openapi.models.operations.PrivateArticleCategoryDeleteRequest request, org.openapis.openapi.models.operations.PrivateArticleCategoryDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleCategoryDeletePathParams.class, baseUrl, "/account/articles/{article_id}/categories/{category_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleCategoryDeleteRequest.class, baseUrl, "/account/articles/{article_id}/categories/{category_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1012,19 +1021,20 @@ public class Articles {
      * Delete article confidentiality
      * Delete confidentiality settings. The confidentiality feature is now deprecated. This has been replaced by the new extended embargo functionality and all items that used to be confidential have now been migrated to items with a permanent embargo on files. All API endpoints related to this functionality will remain for backwards compatibility, but will now be attached to the new extended embargo workflows.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateArticleConfidentialityDeleteResponse privateArticleConfidentialityDelete(org.openapis.openapi.models.operations.PrivateArticleConfidentialityDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateArticleConfidentialityDeleteResponse privateArticleConfidentialityDelete(org.openapis.openapi.models.operations.PrivateArticleConfidentialityDeleteRequest request, org.openapis.openapi.models.operations.PrivateArticleConfidentialityDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleConfidentialityDeletePathParams.class, baseUrl, "/account/articles/{article_id}/confidentiality", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleConfidentialityDeleteRequest.class, baseUrl, "/account/articles/{article_id}/confidentiality", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1054,19 +1064,20 @@ public class Articles {
      * Article confidentiality details
      * View confidentiality settings. The confidentiality feature is now deprecated. This has been replaced by the new extended embargo functionality and all items that used to be confidential have now been migrated to items with a permanent embargo on files. All API endpoints related to this functionality will remain for backwards compatibility, but will now be attached to the new extended embargo workflows.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateArticleConfidentialityDetailsResponse privateArticleConfidentialityDetails(org.openapis.openapi.models.operations.PrivateArticleConfidentialityDetailsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateArticleConfidentialityDetailsResponse privateArticleConfidentialityDetails(org.openapis.openapi.models.operations.PrivateArticleConfidentialityDetailsRequest request, org.openapis.openapi.models.operations.PrivateArticleConfidentialityDetailsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleConfidentialityDetailsPathParams.class, baseUrl, "/account/articles/{article_id}/confidentiality", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleConfidentialityDetailsRequest.class, baseUrl, "/account/articles/{article_id}/confidentiality", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1104,24 +1115,25 @@ public class Articles {
      * Update article confidentiality
      * Update confidentiality settings. The confidentiality feature is now deprecated. This has been replaced by the new extended embargo functionality and all items that used to be confidential have now been migrated to items with a permanent embargo on files. All API endpoints related to this functionality will remain for backwards compatibility, but will now be attached to the new extended embargo workflows.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateArticleConfidentialityUpdateResponse privateArticleConfidentialityUpdate(org.openapis.openapi.models.operations.PrivateArticleConfidentialityUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateArticleConfidentialityUpdateResponse privateArticleConfidentialityUpdate(org.openapis.openapi.models.operations.PrivateArticleConfidentialityUpdateRequest request, org.openapis.openapi.models.operations.PrivateArticleConfidentialityUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleConfidentialityUpdatePathParams.class, baseUrl, "/account/articles/{article_id}/confidentiality", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleConfidentialityUpdateRequest.class, baseUrl, "/account/articles/{article_id}/confidentiality", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "confidentialityCreator", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1151,10 +1163,11 @@ public class Articles {
      * Create new Article
      * Create a new Article by sending article information
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateArticleCreateResponse privateArticleCreate(org.openapis.openapi.models.operations.PrivateArticleCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateArticleCreateResponse privateArticleCreate(org.openapis.openapi.models.shared.ArticleCreate request, org.openapis.openapi.models.operations.PrivateArticleCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/articles");
         
@@ -1168,7 +1181,7 @@ public class Articles {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1206,19 +1219,20 @@ public class Articles {
      * Delete article
      * Delete an article
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateArticleDeleteResponse privateArticleDelete(org.openapis.openapi.models.operations.PrivateArticleDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateArticleDeleteResponse privateArticleDelete(org.openapis.openapi.models.operations.PrivateArticleDeleteRequest request, org.openapis.openapi.models.operations.PrivateArticleDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleDeletePathParams.class, baseUrl, "/account/articles/{article_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleDeleteRequest.class, baseUrl, "/account/articles/{article_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1248,19 +1262,20 @@ public class Articles {
      * Article details
      * View a private article
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateArticleDetailsResponse privateArticleDetails(org.openapis.openapi.models.operations.PrivateArticleDetailsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateArticleDetailsResponse privateArticleDetails(org.openapis.openapi.models.operations.PrivateArticleDetailsRequest request, org.openapis.openapi.models.operations.PrivateArticleDetailsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleDetailsPathParams.class, baseUrl, "/account/articles/{article_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleDetailsRequest.class, baseUrl, "/account/articles/{article_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1298,19 +1313,20 @@ public class Articles {
      * Delete Article Embargo
      * Will lift the embargo for the specified article
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateArticleEmbargoDeleteResponse privateArticleEmbargoDelete(org.openapis.openapi.models.operations.PrivateArticleEmbargoDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateArticleEmbargoDeleteResponse privateArticleEmbargoDelete(org.openapis.openapi.models.operations.PrivateArticleEmbargoDeleteRequest request, org.openapis.openapi.models.operations.PrivateArticleEmbargoDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleEmbargoDeletePathParams.class, baseUrl, "/account/articles/{article_id}/embargo", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleEmbargoDeleteRequest.class, baseUrl, "/account/articles/{article_id}/embargo", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1340,19 +1356,20 @@ public class Articles {
      * Article Embargo Details
      * View a private article embargo details
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateArticleEmbargoDetailsResponse privateArticleEmbargoDetails(org.openapis.openapi.models.operations.PrivateArticleEmbargoDetailsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateArticleEmbargoDetailsResponse privateArticleEmbargoDetails(org.openapis.openapi.models.operations.PrivateArticleEmbargoDetailsRequest request, org.openapis.openapi.models.operations.PrivateArticleEmbargoDetailsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleEmbargoDetailsPathParams.class, baseUrl, "/account/articles/{article_id}/embargo", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleEmbargoDetailsRequest.class, baseUrl, "/account/articles/{article_id}/embargo", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1390,24 +1407,25 @@ public class Articles {
      * Update Article Embargo
      * Note: setting an article under whole embargo does not imply that the article will be published when the embargo will expire. You must explicitly call the publish endpoint to enable this functionality.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateArticleEmbargoUpdateResponse privateArticleEmbargoUpdate(org.openapis.openapi.models.operations.PrivateArticleEmbargoUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateArticleEmbargoUpdateResponse privateArticleEmbargoUpdate(org.openapis.openapi.models.operations.PrivateArticleEmbargoUpdateRequest request, org.openapis.openapi.models.operations.PrivateArticleEmbargoUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleEmbargoUpdatePathParams.class, baseUrl, "/account/articles/{article_id}/embargo", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleEmbargoUpdateRequest.class, baseUrl, "/account/articles/{article_id}/embargo", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "articleEmbargoUpdater", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1441,19 +1459,20 @@ public class Articles {
      * Single File
      * View details of file for specified article
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateArticleFileResponse privateArticleFile(org.openapis.openapi.models.operations.PrivateArticleFileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateArticleFileResponse privateArticleFile(org.openapis.openapi.models.operations.PrivateArticleFileRequest request, org.openapis.openapi.models.operations.PrivateArticleFileSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleFilePathParams.class, baseUrl, "/account/articles/{article_id}/files/{file_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleFileRequest.class, baseUrl, "/account/articles/{article_id}/files/{file_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1491,19 +1510,20 @@ public class Articles {
      * File Delete
      * Complete file upload
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateArticleFileDeleteResponse privateArticleFileDelete(org.openapis.openapi.models.operations.PrivateArticleFileDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateArticleFileDeleteResponse privateArticleFileDelete(org.openapis.openapi.models.operations.PrivateArticleFileDeleteRequest request, org.openapis.openapi.models.operations.PrivateArticleFileDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleFileDeletePathParams.class, baseUrl, "/account/articles/{article_id}/files/{file_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleFileDeleteRequest.class, baseUrl, "/account/articles/{article_id}/files/{file_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1533,19 +1553,20 @@ public class Articles {
      * List article files
      * List private files
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateArticleFilesListResponse privateArticleFilesList(org.openapis.openapi.models.operations.PrivateArticleFilesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateArticleFilesListResponse privateArticleFilesList(org.openapis.openapi.models.operations.PrivateArticleFilesListRequest request, org.openapis.openapi.models.operations.PrivateArticleFilesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleFilesListPathParams.class, baseUrl, "/account/articles/{article_id}/files", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleFilesListRequest.class, baseUrl, "/account/articles/{article_id}/files", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1583,19 +1604,20 @@ public class Articles {
      * List private links
      * List private links
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateArticlePrivateLinkResponse privateArticlePrivateLink(org.openapis.openapi.models.operations.PrivateArticlePrivateLinkRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateArticlePrivateLinkResponse privateArticlePrivateLink(org.openapis.openapi.models.operations.PrivateArticlePrivateLinkRequest request, org.openapis.openapi.models.operations.PrivateArticlePrivateLinkSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticlePrivateLinkPathParams.class, baseUrl, "/account/articles/{article_id}/private_links", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticlePrivateLinkRequest.class, baseUrl, "/account/articles/{article_id}/private_links", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1633,21 +1655,22 @@ public class Articles {
      * Create private link
      * Create new private link for this article
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateArticlePrivateLinkCreateResponse privateArticlePrivateLinkCreate(org.openapis.openapi.models.operations.PrivateArticlePrivateLinkCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateArticlePrivateLinkCreateResponse privateArticlePrivateLinkCreate(org.openapis.openapi.models.operations.PrivateArticlePrivateLinkCreateRequest request, org.openapis.openapi.models.operations.PrivateArticlePrivateLinkCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticlePrivateLinkCreatePathParams.class, baseUrl, "/account/articles/{article_id}/private_links", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticlePrivateLinkCreateRequest.class, baseUrl, "/account/articles/{article_id}/private_links", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "privateLinkCreator", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1687,19 +1710,20 @@ public class Articles {
      * Disable private link
      * Disable/delete private link for this article
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateArticlePrivateLinkDeleteResponse privateArticlePrivateLinkDelete(org.openapis.openapi.models.operations.PrivateArticlePrivateLinkDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateArticlePrivateLinkDeleteResponse privateArticlePrivateLinkDelete(org.openapis.openapi.models.operations.PrivateArticlePrivateLinkDeleteRequest request, org.openapis.openapi.models.operations.PrivateArticlePrivateLinkDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticlePrivateLinkDeletePathParams.class, baseUrl, "/account/articles/{article_id}/private_links/{link_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticlePrivateLinkDeleteRequest.class, baseUrl, "/account/articles/{article_id}/private_links/{link_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1729,21 +1753,22 @@ public class Articles {
      * Update private link
      * Update existing private link for this article
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateArticlePrivateLinkUpdateResponse privateArticlePrivateLinkUpdate(org.openapis.openapi.models.operations.PrivateArticlePrivateLinkUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateArticlePrivateLinkUpdateResponse privateArticlePrivateLinkUpdate(org.openapis.openapi.models.operations.PrivateArticlePrivateLinkUpdateRequest request, org.openapis.openapi.models.operations.PrivateArticlePrivateLinkUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticlePrivateLinkUpdatePathParams.class, baseUrl, "/account/articles/{article_id}/private_links/{link_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticlePrivateLinkUpdateRequest.class, baseUrl, "/account/articles/{article_id}/private_links/{link_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "privateLinkCreator", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1778,19 +1803,20 @@ public class Articles {
      * - If the whole article is under embargo, it will not be published immediately, but when the embargo expires or is lifted.
      * - When an article is published, a new public version will be generated. Any further updates to the article will affect the private article data. In order to make these changes publicly visible, an explicit publish operation is needed.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateArticlePublishResponse privateArticlePublish(org.openapis.openapi.models.operations.PrivateArticlePublishRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateArticlePublishResponse privateArticlePublish(org.openapis.openapi.models.operations.PrivateArticlePublishRequest request, org.openapis.openapi.models.operations.PrivateArticlePublishSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticlePublishPathParams.class, baseUrl, "/account/articles/{article_id}/publish", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticlePublishRequest.class, baseUrl, "/account/articles/{article_id}/publish", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1830,19 +1856,20 @@ public class Articles {
      * Private Article Reserve DOI
      * Reserve DOI for article
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateArticleReserveDoiResponse privateArticleReserveDoi(org.openapis.openapi.models.operations.PrivateArticleReserveDoiRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateArticleReserveDoiResponse privateArticleReserveDoi(org.openapis.openapi.models.operations.PrivateArticleReserveDoiRequest request, org.openapis.openapi.models.operations.PrivateArticleReserveDoiSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleReserveDoiPathParams.class, baseUrl, "/account/articles/{article_id}/reserve_doi", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleReserveDoiRequest.class, baseUrl, "/account/articles/{article_id}/reserve_doi", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1880,19 +1907,20 @@ public class Articles {
      * Private Article Reserve Handle
      * Reserve Handle for article
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateArticleReserveHandleResponse privateArticleReserveHandle(org.openapis.openapi.models.operations.PrivateArticleReserveHandleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateArticleReserveHandleResponse privateArticleReserveHandle(org.openapis.openapi.models.operations.PrivateArticleReserveHandleRequest request, org.openapis.openapi.models.operations.PrivateArticleReserveHandleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleReserveHandlePathParams.class, baseUrl, "/account/articles/{article_id}/reserve_handle", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleReserveHandleRequest.class, baseUrl, "/account/articles/{article_id}/reserve_handle", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1930,24 +1958,25 @@ public class Articles {
      * Private Article Resource
      * Edit article resource data.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateArticleResourceResponse privateArticleResource(org.openapis.openapi.models.operations.PrivateArticleResourceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateArticleResourceResponse privateArticleResource(org.openapis.openapi.models.operations.PrivateArticleResourceRequest request, org.openapis.openapi.models.operations.PrivateArticleResourceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleResourcePathParams.class, baseUrl, "/account/articles/{article_id}/resource", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleResourceRequest.class, baseUrl, "/account/articles/{article_id}/resource", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "resource", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1987,24 +2016,25 @@ public class Articles {
      * Update article
      * Updating an article by passing body parameters; request can also be made with the PATCH method.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateArticleUpdateResponse privateArticleUpdate(org.openapis.openapi.models.operations.PrivateArticleUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateArticleUpdateResponse privateArticleUpdate(org.openapis.openapi.models.operations.PrivateArticleUpdateRequest request, org.openapis.openapi.models.operations.PrivateArticleUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleUpdatePathParams.class, baseUrl, "/account/articles/{article_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleUpdateRequest.class, baseUrl, "/account/articles/{article_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "articleUpdate", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2044,19 +2074,20 @@ public class Articles {
      * Complete Upload
      * Complete file upload
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateArticleUploadCompleteResponse privateArticleUploadComplete(org.openapis.openapi.models.operations.PrivateArticleUploadCompleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateArticleUploadCompleteResponse privateArticleUploadComplete(org.openapis.openapi.models.operations.PrivateArticleUploadCompleteRequest request, org.openapis.openapi.models.operations.PrivateArticleUploadCompleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleUploadCompletePathParams.class, baseUrl, "/account/articles/{article_id}/files/{file_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleUploadCompleteRequest.class, baseUrl, "/account/articles/{article_id}/files/{file_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2086,24 +2117,25 @@ public class Articles {
      * Initiate Upload
      * Initiate a new file upload within the article. Either use the link property to point to an existing file that resides elsewhere and will not be uploaded to Figshare or use the other 3 parameters (md5, name, size).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateArticleUploadInitiateResponse privateArticleUploadInitiate(org.openapis.openapi.models.operations.PrivateArticleUploadInitiateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateArticleUploadInitiateResponse privateArticleUploadInitiate(org.openapis.openapi.models.operations.PrivateArticleUploadInitiateRequest request, org.openapis.openapi.models.operations.PrivateArticleUploadInitiateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleUploadInitiatePathParams.class, baseUrl, "/account/articles/{article_id}/files", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateArticleUploadInitiateRequest.class, baseUrl, "/account/articles/{article_id}/files", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "fileCreator", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2143,10 +2175,11 @@ public class Articles {
      * Private Articles
      * Get Own Articles
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateArticlesListResponse privateArticlesList(org.openapis.openapi.models.operations.PrivateArticlesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateArticlesListResponse privateArticlesList(org.openapis.openapi.models.operations.PrivateArticlesListRequest request, org.openapis.openapi.models.operations.PrivateArticlesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/articles");
         
@@ -2154,14 +2187,14 @@ public class Articles {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PrivateArticlesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PrivateArticlesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2199,10 +2232,11 @@ public class Articles {
      * Private Articles search
      * Returns a list of private articles filtered by the search parameters
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateArticlesSearchResponse privateArticlesSearch(org.openapis.openapi.models.operations.PrivateArticlesSearchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateArticlesSearchResponse privateArticlesSearch(org.openapis.openapi.models.shared.PrivateArticleSearch request, org.openapis.openapi.models.operations.PrivateArticlesSearchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/articles/search");
         
@@ -2216,7 +2250,7 @@ public class Articles {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

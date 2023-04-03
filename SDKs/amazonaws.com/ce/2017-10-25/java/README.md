@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CreateAnomalyMonitorXAmzTargetEnum;
-import org.openapis.openapi.models.operations.CreateAnomalyMonitorHeaders;
 import org.openapis.openapi.models.operations.CreateAnomalyMonitorRequest;
 import org.openapis.openapi.models.operations.CreateAnomalyMonitorResponse;
 import org.openapis.openapi.models.shared.CreateAnomalyMonitorRequest;
@@ -38,39 +37,39 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateAnomalyMonitorRequest req = new CreateAnomalyMonitorRequest() {{
-                headers = new CreateAnomalyMonitorHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "AWSInsightsIndexService.CreateAnomalyMonitor";
-                }};
-                request = new CreateAnomalyMonitorRequest() {{
+                createAnomalyMonitorRequest = new CreateAnomalyMonitorRequest() {{
                     anomalyMonitor = new AnomalyMonitor() {{
-                        creationDate = "illum";
-                        dimensionalValueCount = 423655;
-                        lastEvaluatedDate = "error";
-                        lastUpdatedDate = "deserunt";
-                        monitorArn = "suscipit";
+                        creationDate = "corrupti";
+                        dimensionalValueCount = 592845;
+                        lastEvaluatedDate = "distinctio";
+                        lastUpdatedDate = "quibusdam";
+                        monitorArn = "unde";
                         monitorDimension = "SERVICE";
-                        monitorName = "iure";
+                        monitorName = "nulla";
                         monitorSpecification = new Expression() {{
                             and = new org.openapis.openapi.models.shared.Expression[]{{
                                 add(new Expression() {{}}),
                                 add(new Expression() {{}}),
+                                add(new Expression() {{}}),
                             }};
                             costCategories = new CostCategoryValues() {{
-                                key = "debitis";
+                                key = "illum";
+                                matchOptions = new org.openapis.openapi.models.shared.MatchOptionEnum[]{{
+                                    add("CONTAINS"),
+                                    add("CASE_SENSITIVE"),
+                                }};
+                                values = new String[]{{
+                                    add("iure"),
+                                    add("magnam"),
+                                }};
+                            }};
+                            dimensions = new DimensionValues() {{
+                                key = "AGREEMENT_END_DATE_TIME_BEFORE";
                                 matchOptions = new org.openapis.openapi.models.shared.MatchOptionEnum[]{{
                                     add("GREATER_THAN_OR_EQUAL"),
                                 }};
@@ -79,10 +78,16 @@ public class Application {
                                     add("molestiae"),
                                 }};
                             }};
-                            dimensions = new DimensionValues() {{
-                                key = "SAVINGS_PLANS_TYPE";
+                            not = new Expression() {{}};
+                            or = new org.openapis.openapi.models.shared.Expression[]{{
+                                add(new Expression() {{}}),
+                                add(new Expression() {{}}),
+                                add(new Expression() {{}}),
+                                add(new Expression() {{}}),
+                            }};
+                            tags = new TagValues() {{
+                                key = "placeat";
                                 matchOptions = new org.openapis.openapi.models.shared.MatchOptionEnum[]{{
-                                    add("CONTAINS"),
                                     add("ENDS_WITH"),
                                     add("CONTAINS"),
                                     add("ENDS_WITH"),
@@ -94,48 +99,25 @@ public class Application {
                                     add("veritatis"),
                                 }};
                             }};
-                            not = new Expression() {{}};
-                            or = new org.openapis.openapi.models.shared.Expression[]{{
-                                add(new Expression() {{}}),
-                                add(new Expression() {{}}),
-                                add(new Expression() {{}}),
-                            }};
-                            tags = new TagValues() {{
-                                key = "perferendis";
-                                matchOptions = new org.openapis.openapi.models.shared.MatchOptionEnum[]{{
-                                    add("CASE_INSENSITIVE"),
-                                    add("GREATER_THAN_OR_EQUAL"),
-                                }};
-                                values = new String[]{{
-                                    add("odit"),
-                                    add("at"),
-                                    add("at"),
-                                    add("maiores"),
-                                }};
-                            }};
                         }};
-                        monitorType = "DIMENSIONAL";
+                        monitorType = "CUSTOM";
                     }};
                     resourceTags = new org.openapis.openapi.models.shared.ResourceTag[]{{
                         add(new ResourceTag() {{
-                            key = "quod";
-                            value = "esse";
-                        }}),
-                        add(new ResourceTag() {{
-                            key = "totam";
-                            value = "porro";
-                        }}),
-                        add(new ResourceTag() {{
-                            key = "dolorum";
-                            value = "dicta";
-                        }}),
-                        add(new ResourceTag() {{
-                            key = "nam";
-                            value = "officia";
+                            key = "ipsam";
+                            value = "repellendus";
                         }}),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "sapiente";
+                xAmzContentSha256 = "quo";
+                xAmzCredential = "odit";
+                xAmzDate = "at";
+                xAmzSecurityToken = "at";
+                xAmzSignature = "maiores";
+                xAmzSignedHeaders = "molestiae";
+                xAmzTarget = "AWSInsightsIndexService.CreateAnomalyMonitor";
+            }}            
 
             CreateAnomalyMonitorResponse res = sdk.createAnomalyMonitor(req);
 
@@ -149,7 +131,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

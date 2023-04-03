@@ -4,34 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListUserChannelRequest {
-    
-    public ListUserChannelPathParams pathParams;
-    public ListUserChannelRequest withPathParams(ListUserChannelPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListUserChannelRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListUserChannelQueryParams queryParams;
-    public ListUserChannelRequest withQueryParams(ListUserChannelQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListUserChannelRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
-    
-    public ListUserChannelSecurity security;
-    public ListUserChannelRequest withSecurity(ListUserChannelSecurity security) {
-        this.security = security;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListUserChannelRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     
+    /**
+     * The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to read the User Channel resources from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public ListUserChannelRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
+        return this;
+    }
     
-    public String serverURL;
-    public ListUserChannelRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the [User](https://www.twilio.com/docs/chat/rest/user-resource) to read the User Channel resources from. This value can be either the `sid` or the `identity` of the User resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=UserSid")
+    public String userSid;
+    public ListUserChannelRequest withUserSid(String userSid) {
+        this.userSid = userSid;
         return this;
     }
     

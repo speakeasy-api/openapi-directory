@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchUnderstandStyleSheetRequest {
-    
-    public FetchUnderstandStyleSheetPathParams pathParams;
-    public FetchUnderstandStyleSheetRequest withPathParams(FetchUnderstandStyleSheetPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchUnderstandStyleSheetSecurity security;
-    public FetchUnderstandStyleSheetRequest withSecurity(FetchUnderstandStyleSheetSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchUnderstandStyleSheetRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique ID of the Assistant
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public FetchUnderstandStyleSheetRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     

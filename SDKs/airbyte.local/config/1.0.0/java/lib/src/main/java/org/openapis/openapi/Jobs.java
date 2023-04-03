@@ -36,7 +36,7 @@ public class Jobs {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CancelJobResponse cancelJob(org.openapis.openapi.models.operations.CancelJobRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CancelJobResponse cancelJob(org.openapis.openapi.models.shared.JobIdRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/jobs/cancel");
         
@@ -95,7 +95,7 @@ public class Jobs {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAttemptNormalizationStatusesForJobResponse getAttemptNormalizationStatusesForJob(org.openapis.openapi.models.operations.GetAttemptNormalizationStatusesForJobRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetAttemptNormalizationStatusesForJobResponse getAttemptNormalizationStatusesForJob(org.openapis.openapi.models.shared.JobIdRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/jobs/get_normalization_status");
         
@@ -135,7 +135,7 @@ public class Jobs {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetJobDebugInfoResponse getJobDebugInfo(org.openapis.openapi.models.operations.GetJobDebugInfoRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetJobDebugInfoResponse getJobDebugInfo(org.openapis.openapi.models.shared.JobIdRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/jobs/get_debug_info");
         
@@ -194,7 +194,7 @@ public class Jobs {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetJobInfoResponse getJobInfo(org.openapis.openapi.models.operations.GetJobInfoRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetJobInfoResponse getJobInfo(org.openapis.openapi.models.shared.JobIdRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/jobs/get");
         
@@ -253,7 +253,7 @@ public class Jobs {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetJobInfoLightResponse getJobInfoLight(org.openapis.openapi.models.operations.GetJobInfoLightRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetJobInfoLightResponse getJobInfoLight(org.openapis.openapi.models.shared.JobIdRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/jobs/get_light");
         
@@ -306,7 +306,7 @@ public class Jobs {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.GetLastReplicationJobResponse getLastReplicationJob(org.openapis.openapi.models.operations.GetLastReplicationJobRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetLastReplicationJobResponse getLastReplicationJob(org.openapis.openapi.models.shared.ConnectionIdRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/jobs/get_last_replication_job");
         
@@ -365,7 +365,7 @@ public class Jobs {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListJobsForResponse listJobsFor(org.openapis.openapi.models.operations.ListJobsForRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListJobsForResponse listJobsFor(org.openapis.openapi.models.shared.JobListRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/jobs/list");
         

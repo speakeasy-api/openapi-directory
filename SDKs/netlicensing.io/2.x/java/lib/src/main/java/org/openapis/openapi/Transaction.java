@@ -38,10 +38,11 @@ public class Transaction {
      * Create Transaction
      * Creates a new Transaction
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateTransactionResponse createTransaction(org.openapis.openapi.models.operations.CreateTransactionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateTransactionResponse createTransaction(org.openapis.openapi.models.operations.CreateTransactionRequestBody request, org.openapis.openapi.models.operations.CreateTransactionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transaction");
         
@@ -52,7 +53,7 @@ public class Transaction {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -87,19 +88,20 @@ public class Transaction {
      * Get Transaction 
      * Return a Transaction by 'transactionNumber'
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTransactionResponse getTransaction(org.openapis.openapi.models.operations.GetTransactionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTransactionResponse getTransaction(org.openapis.openapi.models.operations.GetTransactionRequest request, org.openapis.openapi.models.operations.GetTransactionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTransactionPathParams.class, baseUrl, "/transaction/{transactionNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTransactionRequest.class, baseUrl, "/transaction/{transactionNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -133,11 +135,10 @@ public class Transaction {
     /**
      * List Transactions
      * Return a list of all Transactions for the current Vendor
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListTransactionsResponse listTransactions(org.openapis.openapi.models.operations.ListTransactionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListTransactionsResponse listTransactions() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transaction");
         
@@ -146,8 +147,7 @@ public class Transaction {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -181,21 +181,22 @@ public class Transaction {
      * Update Transaction
      * Sets the provided properties to a Transaction. Return an updated Transaction
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateTransactionResponse updateTransaction(org.openapis.openapi.models.operations.UpdateTransactionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateTransactionResponse updateTransaction(org.openapis.openapi.models.operations.UpdateTransactionRequest request, org.openapis.openapi.models.operations.UpdateTransactionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateTransactionPathParams.class, baseUrl, "/transaction/{transactionNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateTransactionRequest.class, baseUrl, "/transaction/{transactionNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

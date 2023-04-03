@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RebootDeviceRequest {
-    
-    public RebootDevicePathParams pathParams;
-    public RebootDeviceRequest withPathParams(RebootDevicePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public RebootDeviceRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

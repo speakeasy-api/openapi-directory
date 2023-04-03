@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AppendTextUsingGETQueryParams;
 import org.openapis.openapi.models.operations.AppendTextUsingGETRequest;
 import org.openapis.openapi.models.operations.AppendTextUsingGETResponse;
 
@@ -26,18 +25,14 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    apiKey = new SchemeAPIKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    apiKey = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AppendTextUsingGETRequest req = new AppendTextUsingGETRequest() {{
-                queryParams = new AppendTextUsingGETQueryParams() {{
-                    padID = "corrupti";
-                    text = "provident";
-                }};
-            }};            
+                padID = "corrupti";
+                text = "provident";
+            }}            
 
             AppendTextUsingGETResponse res = sdk.appendTextUsingGET(req);
 
@@ -51,7 +46,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

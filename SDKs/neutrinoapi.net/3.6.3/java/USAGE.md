@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.BadWordFilterRequestBody;
-import org.openapis.openapi.models.operations.BadWordFilterRequest;
 import org.openapis.openapi.models.operations.BadWordFilterResponse;
 
 public class Application {
@@ -13,22 +12,16 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    apiKey = new SchemeAPIKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                    userId = new SchemeUserID() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    apiKey = "YOUR_API_KEY_HERE";
+                    userId = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            BadWordFilterRequest req = new BadWordFilterRequest() {{
-                request = new BadWordFilterRequestBody() {{
-                    catalog = "corrupti";
-                    censorCharacter = "provident";
-                    content = "distinctio";
-                }};
-            }};            
+            BadWordFilterRequestBody req = new BadWordFilterRequestBody() {{
+                catalog = "corrupti";
+                censorCharacter = "provident";
+                content = "distinctio";
+            }}            
 
             BadWordFilterResponse res = sdk.dataTools.badWordFilter(req);
 

@@ -7,31 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DepartmentsAddRequest {
-    
-    public DepartmentsAddQueryParams queryParams;
-    public DepartmentsAddRequest withQueryParams(DepartmentsAddQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public DepartmentsAddHeaders headers;
-    public DepartmentsAddRequest withHeaders(DepartmentsAddHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DepartmentInput request;
-    public DepartmentsAddRequest withRequest(org.openapis.openapi.models.shared.DepartmentInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.DepartmentInput departmentInput;
+    public DepartmentsAddRequest withDepartmentInput(org.openapis.openapi.models.shared.DepartmentInput departmentInput) {
+        this.departmentInput = departmentInput;
         return this;
     }
     
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
+    public Boolean raw;
+    public DepartmentsAddRequest withRaw(Boolean raw) {
+        this.raw = raw;
+        return this;
+    }
     
-    public DepartmentsAddSecurity security;
-    public DepartmentsAddRequest withSecurity(DepartmentsAddSecurity security) {
-        this.security = security;
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public DepartmentsAddRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
+        return this;
+    }
+    
+    /**
+     * ID of the consumer which you want to get or push data from
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-consumer-id")
+    public String xApideckConsumerId;
+    public DepartmentsAddRequest withXApideckConsumerId(String xApideckConsumerId) {
+        this.xApideckConsumerId = xApideckConsumerId;
+        return this;
+    }
+    
+    /**
+     * Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-service-id")
+    public String xApideckServiceId;
+    public DepartmentsAddRequest withXApideckServiceId(String xApideckServiceId) {
+        this.xApideckServiceId = xApideckServiceId;
         return this;
     }
     

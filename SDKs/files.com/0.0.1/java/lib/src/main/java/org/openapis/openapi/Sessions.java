@@ -72,7 +72,7 @@ public class Sessions {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSessionsResponse postSessions(org.openapis.openapi.models.operations.PostSessionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSessionsResponse postSessions(org.openapis.openapi.models.operations.PostSessionsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/sessions");
         

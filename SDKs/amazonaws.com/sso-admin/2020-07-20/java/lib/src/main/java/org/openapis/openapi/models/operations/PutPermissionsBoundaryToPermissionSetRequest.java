@@ -7,17 +7,66 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutPermissionsBoundaryToPermissionSetRequest {
-    
-    public PutPermissionsBoundaryToPermissionSetHeaders headers;
-    public PutPermissionsBoundaryToPermissionSetRequest withHeaders(PutPermissionsBoundaryToPermissionSetHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.PutPermissionsBoundaryToPermissionSetRequest putPermissionsBoundaryToPermissionSetRequest;
+    public PutPermissionsBoundaryToPermissionSetRequest withPutPermissionsBoundaryToPermissionSetRequest(org.openapis.openapi.models.shared.PutPermissionsBoundaryToPermissionSetRequest putPermissionsBoundaryToPermissionSetRequest) {
+        this.putPermissionsBoundaryToPermissionSetRequest = putPermissionsBoundaryToPermissionSetRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PutPermissionsBoundaryToPermissionSetRequest request;
-    public PutPermissionsBoundaryToPermissionSetRequest withRequest(org.openapis.openapi.models.shared.PutPermissionsBoundaryToPermissionSetRequest request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public PutPermissionsBoundaryToPermissionSetRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public PutPermissionsBoundaryToPermissionSetRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public PutPermissionsBoundaryToPermissionSetRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public PutPermissionsBoundaryToPermissionSetRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public PutPermissionsBoundaryToPermissionSetRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public PutPermissionsBoundaryToPermissionSetRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public PutPermissionsBoundaryToPermissionSetRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public PutPermissionsBoundaryToPermissionSetXAmzTargetEnum xAmzTarget;
+    public PutPermissionsBoundaryToPermissionSetRequest withXAmzTarget(PutPermissionsBoundaryToPermissionSetXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
         return this;
     }
     

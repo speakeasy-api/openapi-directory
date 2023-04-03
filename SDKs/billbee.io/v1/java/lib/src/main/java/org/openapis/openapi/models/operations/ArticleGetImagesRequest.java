@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ArticleGetImagesRequest {
-    
-    public ArticleGetImagesPathParams pathParams;
-    public ArticleGetImagesRequest withPathParams(ArticleGetImagesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The Id of the product
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
+    public Long productId;
+    public ArticleGetImagesRequest withProductId(Long productId) {
+        this.productId = productId;
         return this;
     }
     

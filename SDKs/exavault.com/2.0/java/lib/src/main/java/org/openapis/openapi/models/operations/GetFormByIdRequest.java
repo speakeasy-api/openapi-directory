@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFormByIdRequest {
-    
-    public GetFormByIdPathParams pathParams;
-    public GetFormByIdRequest withPathParams(GetFormByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Access Token required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-access-token")
+    public String evAccessToken;
+    public GetFormByIdRequest withEvAccessToken(String evAccessToken) {
+        this.evAccessToken = evAccessToken;
         return this;
     }
     
-    
-    public GetFormByIdQueryParams queryParams;
-    public GetFormByIdRequest withQueryParams(GetFormByIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * API key required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-api-key")
+    public String evApiKey;
+    public GetFormByIdRequest withEvApiKey(String evApiKey) {
+        this.evApiKey = evApiKey;
         return this;
     }
     
+    /**
+     * Form unique ID number.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public GetFormByIdRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetFormByIdHeaders headers;
-    public GetFormByIdRequest withHeaders(GetFormByIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * Enter "**share**" to get information about associated receive folder.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include")
+    public String include;
+    public GetFormByIdRequest withInclude(String include) {
+        this.include = include;
         return this;
     }
     

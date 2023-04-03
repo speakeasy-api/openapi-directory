@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CrawlRequest {
-    
-    public CrawlPathParams pathParams;
-    public CrawlRequest withPathParams(CrawlPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=query")
+    public String query;
+    public CrawlRequest withQuery(String query) {
+        this.query = query;
         return this;
     }
     

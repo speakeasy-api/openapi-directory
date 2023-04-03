@@ -34,27 +34,28 @@ public class Services {
     /**
      * Enables multiple services on a project. The operation is atomic: if enabling any service fails, then the entire batch fails, and no state changes occur. Operation response type: `google.protobuf.Empty`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServiceusageServicesBatchEnableResponse serviceusageServicesBatchEnable(org.openapis.openapi.models.operations.ServiceusageServicesBatchEnableRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServiceusageServicesBatchEnableResponse serviceusageServicesBatchEnable(org.openapis.openapi.models.operations.ServiceusageServicesBatchEnableRequest request, org.openapis.openapi.models.operations.ServiceusageServicesBatchEnableSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceusageServicesBatchEnablePathParams.class, baseUrl, "/v1beta1/{parent}/services:batchEnable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceusageServicesBatchEnableRequest.class, baseUrl, "/v1beta1/{parent}/services:batchEnable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "batchEnableServicesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServiceusageServicesBatchEnableQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServiceusageServicesBatchEnableRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,27 +82,28 @@ public class Services {
     /**
      * Creates or updates multiple admin overrides atomically, all on the same consumer, but on many different metrics or limits. The name field in the quota override message should not be set.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsImportAdminOverridesResponse serviceusageServicesConsumerQuotaMetricsImportAdminOverrides(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsImportAdminOverridesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsImportAdminOverridesResponse serviceusageServicesConsumerQuotaMetricsImportAdminOverrides(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsImportAdminOverridesRequest request, org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsImportAdminOverridesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsImportAdminOverridesPathParams.class, baseUrl, "/v1beta1/{parent}/consumerQuotaMetrics:importAdminOverrides", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsImportAdminOverridesRequest.class, baseUrl, "/v1beta1/{parent}/consumerQuotaMetrics:importAdminOverrides", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "importAdminOverridesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsImportAdminOverridesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsImportAdminOverridesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -128,27 +130,28 @@ public class Services {
     /**
      * Creates or updates multiple consumer overrides atomically, all on the same consumer, but on many different metrics or limits. The name field in the quota override message should not be set.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsImportConsumerOverridesResponse serviceusageServicesConsumerQuotaMetricsImportConsumerOverrides(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsImportConsumerOverridesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsImportConsumerOverridesResponse serviceusageServicesConsumerQuotaMetricsImportConsumerOverrides(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsImportConsumerOverridesRequest request, org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsImportConsumerOverridesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsImportConsumerOverridesPathParams.class, baseUrl, "/v1beta1/{parent}/consumerQuotaMetrics:importConsumerOverrides", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsImportConsumerOverridesRequest.class, baseUrl, "/v1beta1/{parent}/consumerQuotaMetrics:importConsumerOverrides", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "importConsumerOverridesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsImportConsumerOverridesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsImportConsumerOverridesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -175,27 +178,28 @@ public class Services {
     /**
      * Creates an admin override. An admin override is applied by an administrator of a parent folder or parent organization of the consumer receiving the override. An admin override is intended to limit the amount of quota the consumer can use out of the total quota pool allocated to all children of the folder or organization.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateResponse serviceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreate(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateResponse serviceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreate(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateRequest request, org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreatePathParams.class, baseUrl, "/v1beta1/{parent}/adminOverrides", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateRequest.class, baseUrl, "/v1beta1/{parent}/adminOverrides", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "quotaOverride", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -222,25 +226,26 @@ public class Services {
     /**
      * Lists all admin overrides on this limit.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesListResponse serviceusageServicesConsumerQuotaMetricsLimitsAdminOverridesList(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesListResponse serviceusageServicesConsumerQuotaMetricsLimitsAdminOverridesList(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesListRequest request, org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesListPathParams.class, baseUrl, "/v1beta1/{parent}/adminOverrides", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesListRequest.class, baseUrl, "/v1beta1/{parent}/adminOverrides", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsAdminOverridesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -267,27 +272,28 @@ public class Services {
     /**
      * Creates a consumer override. A consumer override is applied to the consumer on its own authority to limit its own quota usage. Consumer overrides cannot be used to grant more quota than would be allowed by admin overrides, producer overrides, or the default limit of the service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateResponse serviceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreate(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateResponse serviceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreate(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateRequest request, org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreatePathParams.class, baseUrl, "/v1beta1/{parent}/consumerOverrides", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateRequest.class, baseUrl, "/v1beta1/{parent}/consumerOverrides", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "quotaOverride", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -314,25 +320,26 @@ public class Services {
     /**
      * Deletes a consumer override.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesDeleteResponse serviceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesDelete(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesDeleteResponse serviceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesDelete(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesDeleteRequest request, org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesDeletePathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesDeleteRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -359,25 +366,26 @@ public class Services {
     /**
      * Lists all consumer overrides on this limit.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesListResponse serviceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesList(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesListResponse serviceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesList(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesListRequest request, org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesListPathParams.class, baseUrl, "/v1beta1/{parent}/consumerOverrides", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesListRequest.class, baseUrl, "/v1beta1/{parent}/consumerOverrides", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -404,27 +412,28 @@ public class Services {
     /**
      * Updates a consumer override.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchResponse serviceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatch(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchResponse serviceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatch(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchRequest request, org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchPathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "quotaOverride", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -451,25 +460,26 @@ public class Services {
     /**
      * Retrieves a summary of quota information for a specific quota limit.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsGetResponse serviceusageServicesConsumerQuotaMetricsLimitsGet(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsGetResponse serviceusageServicesConsumerQuotaMetricsLimitsGet(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsGetRequest request, org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsGetPathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsGetRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsLimitsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -496,25 +506,26 @@ public class Services {
     /**
      * Retrieves a summary of all quota information visible to the service consumer, organized by service metric. Each metric includes information about all of its defined limits. Each limit includes the limit configuration (quota unit, preciseness, default value), the current effective limit value, and all of the overrides applied to the limit.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsListResponse serviceusageServicesConsumerQuotaMetricsList(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsListResponse serviceusageServicesConsumerQuotaMetricsList(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsListRequest request, org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsListPathParams.class, baseUrl, "/v1beta1/{parent}/consumerQuotaMetrics", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsListRequest.class, baseUrl, "/v1beta1/{parent}/consumerQuotaMetrics", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServiceusageServicesConsumerQuotaMetricsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -541,27 +552,28 @@ public class Services {
     /**
      * Disables a service so that it can no longer be used with a project. This prevents unintended usage that may cause unexpected billing charges or security leaks. It is not valid to call the disable method on a service that is not currently enabled. Callers will receive a `FAILED_PRECONDITION` status if the target service is not currently enabled. Operation response type: `google.protobuf.Empty`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServiceusageServicesDisableResponse serviceusageServicesDisable(org.openapis.openapi.models.operations.ServiceusageServicesDisableRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServiceusageServicesDisableResponse serviceusageServicesDisable(org.openapis.openapi.models.operations.ServiceusageServicesDisableRequest request, org.openapis.openapi.models.operations.ServiceusageServicesDisableSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceusageServicesDisablePathParams.class, baseUrl, "/v1beta1/{name}:disable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceusageServicesDisableRequest.class, baseUrl, "/v1beta1/{name}:disable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServiceusageServicesDisableQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServiceusageServicesDisableRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -588,27 +600,28 @@ public class Services {
     /**
      * Enables a service so that it can be used with a project. Operation response type: `google.protobuf.Empty`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServiceusageServicesEnableResponse serviceusageServicesEnable(org.openapis.openapi.models.operations.ServiceusageServicesEnableRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServiceusageServicesEnableResponse serviceusageServicesEnable(org.openapis.openapi.models.operations.ServiceusageServicesEnableRequest request, org.openapis.openapi.models.operations.ServiceusageServicesEnableSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceusageServicesEnablePathParams.class, baseUrl, "/v1beta1/{name}:enable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceusageServicesEnableRequest.class, baseUrl, "/v1beta1/{name}:enable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServiceusageServicesEnableQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServiceusageServicesEnableRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -635,25 +648,26 @@ public class Services {
     /**
      * Generates service identity for service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServiceusageServicesGenerateServiceIdentityResponse serviceusageServicesGenerateServiceIdentity(org.openapis.openapi.models.operations.ServiceusageServicesGenerateServiceIdentityRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServiceusageServicesGenerateServiceIdentityResponse serviceusageServicesGenerateServiceIdentity(org.openapis.openapi.models.operations.ServiceusageServicesGenerateServiceIdentityRequest request, org.openapis.openapi.models.operations.ServiceusageServicesGenerateServiceIdentitySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceusageServicesGenerateServiceIdentityPathParams.class, baseUrl, "/v1beta1/{parent}:generateServiceIdentity", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceusageServicesGenerateServiceIdentityRequest.class, baseUrl, "/v1beta1/{parent}:generateServiceIdentity", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServiceusageServicesGenerateServiceIdentityQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServiceusageServicesGenerateServiceIdentityRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -680,25 +694,26 @@ public class Services {
     /**
      * Lists all services available to the specified project, and the current state of those services with respect to the project. The list includes all public services, all services for which the calling user has the `servicemanagement.services.bind` permission, and all services that have already been enabled on the project. The list can be filtered to only include services in a specific state, for example to only include services enabled on the project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServiceusageServicesListResponse serviceusageServicesList(org.openapis.openapi.models.operations.ServiceusageServicesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServiceusageServicesListResponse serviceusageServicesList(org.openapis.openapi.models.operations.ServiceusageServicesListRequest request, org.openapis.openapi.models.operations.ServiceusageServicesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceusageServicesListPathParams.class, baseUrl, "/v1beta1/{parent}/services", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceusageServicesListRequest.class, baseUrl, "/v1beta1/{parent}/services", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServiceusageServicesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServiceusageServicesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

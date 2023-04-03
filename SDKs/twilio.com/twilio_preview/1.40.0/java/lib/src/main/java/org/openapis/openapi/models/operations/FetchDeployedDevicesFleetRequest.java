@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchDeployedDevicesFleetRequest {
-    
-    public FetchDeployedDevicesFleetPathParams pathParams;
-    public FetchDeployedDevicesFleetRequest withPathParams(FetchDeployedDevicesFleetPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchDeployedDevicesFleetSecurity security;
-    public FetchDeployedDevicesFleetRequest withSecurity(FetchDeployedDevicesFleetSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchDeployedDevicesFleetRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Provides a 34 character string that uniquely identifies the requested Fleet resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchDeployedDevicesFleetRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

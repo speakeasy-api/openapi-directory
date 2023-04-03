@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SendOfferToInterestedBuyersRequest {
-    
-    public SendOfferToInterestedBuyersHeaders headers;
-    public SendOfferToInterestedBuyersRequest withHeaders(SendOfferToInterestedBuyersHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * Send offer to eligible items request.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateOffersRequest request;
-    public SendOfferToInterestedBuyersRequest withRequest(org.openapis.openapi.models.shared.CreateOffersRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CreateOffersRequest createOffersRequest;
+    public SendOfferToInterestedBuyersRequest withCreateOffersRequest(org.openapis.openapi.models.shared.CreateOffersRequest createOffersRequest) {
+        this.createOffersRequest = createOffersRequest;
         return this;
     }
     
-    
-    public SendOfferToInterestedBuyersSecurity security;
-    public SendOfferToInterestedBuyersRequest withSecurity(SendOfferToInterestedBuyersSecurity security) {
-        this.security = security;
+    /**
+     * The eBay marketplace on which your listings with &amp;quot;eligible&amp;quot; buyers appear. For a complete list of supported marketplaces, see Negotiation API requirements and restrictions.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
+    public String xEbayCMarketplaceId;
+    public SendOfferToInterestedBuyersRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
+        this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
     }
     

@@ -39,7 +39,7 @@ public class Orders {
      */
     public org.openapis.openapi.models.operations.DeleteAccountsAccountOrdersCustomerOrderIdResponse deleteAccountsAccountOrdersCustomerOrderId(org.openapis.openapi.models.operations.DeleteAccountsAccountOrdersCustomerOrderIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAccountsAccountOrdersCustomerOrderIdPathParams.class, baseUrl, "/accounts/{account}/orders/{CustomerOrderId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAccountsAccountOrdersCustomerOrderIdRequest.class, baseUrl, "/accounts/{account}/orders/{CustomerOrderId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -81,7 +81,7 @@ public class Orders {
      */
     public org.openapis.openapi.models.operations.GetAccountsAccountOrdersResponse getAccountsAccountOrders(org.openapis.openapi.models.operations.GetAccountsAccountOrdersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAccountsAccountOrdersPathParams.class, baseUrl, "/accounts/{account}/orders", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAccountsAccountOrdersRequest.class, baseUrl, "/accounts/{account}/orders", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -123,7 +123,7 @@ public class Orders {
      */
     public org.openapis.openapi.models.operations.GetAccountsAccountOrdersCustomerOrderIdResponse getAccountsAccountOrdersCustomerOrderId(org.openapis.openapi.models.operations.GetAccountsAccountOrdersCustomerOrderIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAccountsAccountOrdersCustomerOrderIdPathParams.class, baseUrl, "/accounts/{account}/orders/{CustomerOrderId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAccountsAccountOrdersCustomerOrderIdRequest.class, baseUrl, "/accounts/{account}/orders/{CustomerOrderId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -165,12 +165,12 @@ public class Orders {
      */
     public org.openapis.openapi.models.operations.PostAccountsAccountOrdersResponse postAccountsAccountOrders(org.openapis.openapi.models.operations.PostAccountsAccountOrdersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostAccountsAccountOrdersPathParams.class, baseUrl, "/accounts/{account}/orders", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostAccountsAccountOrdersRequest.class, baseUrl, "/accounts/{account}/orders", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -212,12 +212,12 @@ public class Orders {
      */
     public org.openapis.openapi.models.operations.PutAccountsAccountOrdersCustomerOrderIdResponse putAccountsAccountOrdersCustomerOrderId(org.openapis.openapi.models.operations.PutAccountsAccountOrdersCustomerOrderIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutAccountsAccountOrdersCustomerOrderIdPathParams.class, baseUrl, "/accounts/{account}/orders/{CustomerOrderId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutAccountsAccountOrdersCustomerOrderIdRequest.class, baseUrl, "/accounts/{account}/orders/{CustomerOrderId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

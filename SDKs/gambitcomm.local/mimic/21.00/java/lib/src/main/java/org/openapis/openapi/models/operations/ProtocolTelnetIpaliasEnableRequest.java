@@ -4,13 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolTelnetIpaliasEnableRequest {
+    /**
+     * Agent to manipulate TELNET IP alias
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolTelnetIpaliasEnableRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolTelnetIpaliasEnablePathParams pathParams;
-    public ProtocolTelnetIpaliasEnableRequest withPathParams(ProtocolTelnetIpaliasEnablePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ipaddress")
+    public String ipaddress;
+    public ProtocolTelnetIpaliasEnableRequest withIpaddress(String ipaddress) {
+        this.ipaddress = ipaddress;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=port")
+    public Integer port;
+    public ProtocolTelnetIpaliasEnableRequest withPort(Integer port) {
+        this.port = port;
         return this;
     }
     

@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoCreateBranchProtectionRequest {
-    
-    public RepoCreateBranchProtectionPathParams pathParams;
-    public RepoCreateBranchProtectionRequest withPathParams(RepoCreateBranchProtectionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateBranchProtectionOption createBranchProtectionOption;
+    public RepoCreateBranchProtectionRequest withCreateBranchProtectionOption(org.openapis.openapi.models.shared.CreateBranchProtectionOption createBranchProtectionOption) {
+        this.createBranchProtectionOption = createBranchProtectionOption;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateBranchProtectionOption request;
-    public RepoCreateBranchProtectionRequest withRequest(org.openapis.openapi.models.shared.CreateBranchProtectionOption request) {
-        this.request = request;
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoCreateBranchProtectionRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoCreateBranchProtectionRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostApiInvoiceDeletecategoryJsonRequest {
-    
-    public PostApiInvoiceDeletecategoryJsonHeaders headers;
-    public PostApiInvoiceDeletecategoryJsonRequest withHeaders(PostApiInvoiceDeletecategoryJsonHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.InvoiceCategoryDeleteApiModel invoiceCategoryDeleteApiModel;
+    public PostApiInvoiceDeletecategoryJsonRequest withInvoiceCategoryDeleteApiModel(org.openapis.openapi.models.shared.InvoiceCategoryDeleteApiModel invoiceCategoryDeleteApiModel) {
+        this.invoiceCategoryDeleteApiModel = invoiceCategoryDeleteApiModel;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.InvoiceCategoryDeleteApiModel request;
-    public PostApiInvoiceDeletecategoryJsonRequest withRequest(org.openapis.openapi.models.shared.InvoiceCategoryDeleteApiModel request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
+    public String xAuthKey;
+    public PostApiInvoiceDeletecategoryJsonRequest withXAuthKey(String xAuthKey) {
+        this.xAuthKey = xAuthKey;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
+    public String xAuthSecret;
+    public PostApiInvoiceDeletecategoryJsonRequest withXAuthSecret(String xAuthSecret) {
+        this.xAuthSecret = xAuthSecret;
         return this;
     }
     

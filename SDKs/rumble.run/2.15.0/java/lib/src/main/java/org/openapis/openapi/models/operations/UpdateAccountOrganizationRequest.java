@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateAccountOrganizationRequest {
-    
-    public UpdateAccountOrganizationPathParams pathParams;
-    public UpdateAccountOrganizationRequest withPathParams(UpdateAccountOrganizationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * organization options
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.OrgOptions request;
-    public UpdateAccountOrganizationRequest withRequest(org.openapis.openapi.models.shared.OrgOptions request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.OrgOptions orgOptions;
+    public UpdateAccountOrganizationRequest withOrgOptions(org.openapis.openapi.models.shared.OrgOptions orgOptions) {
+        this.orgOptions = orgOptions;
         return this;
     }
     
-    
-    public UpdateAccountOrganizationSecurity security;
-    public UpdateAccountOrganizationRequest withSecurity(UpdateAccountOrganizationSecurity security) {
-        this.security = security;
+    /**
+     * UUID of the organization to retrieve
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_id")
+    public String orgId;
+    public UpdateAccountOrganizationRequest withOrgId(String orgId) {
+        this.orgId = orgId;
         return this;
     }
     

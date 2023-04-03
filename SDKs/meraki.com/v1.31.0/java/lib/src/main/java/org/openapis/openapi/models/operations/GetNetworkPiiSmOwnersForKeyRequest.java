@@ -4,20 +4,73 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkPiiSmOwnersForKeyRequest {
-    
-    public GetNetworkPiiSmOwnersForKeyPathParams pathParams;
-    public GetNetworkPiiSmOwnersForKeyRequest withPathParams(GetNetworkPiiSmOwnersForKeyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The MAC of a Bluetooth client
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bluetoothMac")
+    public String bluetoothMac;
+    public GetNetworkPiiSmOwnersForKeyRequest withBluetoothMac(String bluetoothMac) {
+        this.bluetoothMac = bluetoothMac;
         return this;
     }
     
+    /**
+     * The email of a network user account or a Systems Manager device
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public GetNetworkPiiSmOwnersForKeyRequest withEmail(String email) {
+        this.email = email;
+        return this;
+    }
     
-    public GetNetworkPiiSmOwnersForKeyQueryParams queryParams;
-    public GetNetworkPiiSmOwnersForKeyRequest withQueryParams(GetNetworkPiiSmOwnersForKeyQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The IMEI of a Systems Manager device
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=imei")
+    public String imei;
+    public GetNetworkPiiSmOwnersForKeyRequest withImei(String imei) {
+        this.imei = imei;
+        return this;
+    }
+    
+    /**
+     * The MAC of a network client device or a Systems Manager device
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mac")
+    public String mac;
+    public GetNetworkPiiSmOwnersForKeyRequest withMac(String mac) {
+        this.mac = mac;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkPiiSmOwnersForKeyRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
+    
+    /**
+     * The serial of a Systems Manager device
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serial")
+    public String serial;
+    public GetNetworkPiiSmOwnersForKeyRequest withSerial(String serial) {
+        this.serial = serial;
+        return this;
+    }
+    
+    /**
+     * The username of a Systems Manager user
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
+    public String username;
+    public GetNetworkPiiSmOwnersForKeyRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

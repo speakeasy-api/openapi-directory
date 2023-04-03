@@ -4,27 +4,88 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MirrorSettingsGetRequest {
-    
-    public MirrorSettingsGetPathParams pathParams;
-    public MirrorSettingsGetRequest withPathParams(MirrorSettingsGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public MirrorSettingsGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
         return this;
     }
     
-    
-    public MirrorSettingsGetQueryParams queryParams;
-    public MirrorSettingsGetRequest withQueryParams(MirrorSettingsGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public MirrorSettingsGetRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     
+    /**
+     * The ID of the setting. The following IDs are valid: 
+     * - locale - The key to the user\u2019s language/locale (BCP 47 identifier) that Glassware should use to render localized content. 
+     * - timezone - The key to the user\u2019s current time zone region as defined in the tz database. Example: America/Los_Angeles.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public MirrorSettingsGetRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public MirrorSettingsGetSecurity security;
-    public MirrorSettingsGetRequest withSecurity(MirrorSettingsGetSecurity security) {
-        this.security = security;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public MirrorSettingsGetRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public MirrorSettingsGetRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public MirrorSettingsGetRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public MirrorSettingsGetRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public MirrorSettingsGetRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

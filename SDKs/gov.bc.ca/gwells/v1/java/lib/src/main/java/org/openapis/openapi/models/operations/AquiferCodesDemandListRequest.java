@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AquiferCodesDemandListRequest {
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public AquiferCodesDemandListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public AquiferCodesDemandListQueryParams queryParams;
-    public AquiferCodesDemandListRequest withQueryParams(AquiferCodesDemandListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public AquiferCodesDemandListRequest withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     

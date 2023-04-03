@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FindScriptByIdRequest {
-    
-    public FindScriptByIdPathParams pathParams;
-    public FindScriptByIdRequest withPathParams(FindScriptByIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FindScriptByIdSecurity security;
-    public FindScriptByIdRequest withSecurity(FindScriptByIdSecurity security) {
-        this.security = security;
+    /**
+     * The script id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scriptId")
+    public String scriptId;
+    public FindScriptByIdRequest withScriptId(String scriptId) {
+        this.scriptId = scriptId;
         return this;
     }
     

@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateUserRequest {
-    
-    public UpdateUserPathParams pathParams;
-    public UpdateUserRequest withPathParams(UpdateUserPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateUserHeaders headers;
-    public UpdateUserRequest withHeaders(UpdateUserHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateUserRequest request;
-    public UpdateUserRequest withRequest(org.openapis.openapi.models.shared.UpdateUserRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateUserRequest updateUserRequest;
+    public UpdateUserRequest withUpdateUserRequest(org.openapis.openapi.models.shared.UpdateUserRequest updateUserRequest) {
+        this.updateUserRequest = updateUserRequest;
+        return this;
+    }
+    
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public UpdateUserRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
+        return this;
+    }
+    
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public UpdateUserXSdsDateFormatEnum xSdsDateFormat;
+    public UpdateUserRequest withXSdsDateFormat(UpdateUserXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
+        return this;
+    }
+    
+    /**
+     * User ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Long userId;
+    public UpdateUserRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

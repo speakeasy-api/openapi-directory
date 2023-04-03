@@ -4,20 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IdentitytoolkitRelyingpartyGetProjectConfigRequest {
-    
-    public IdentitytoolkitRelyingpartyGetProjectConfigQueryParams queryParams;
-    public IdentitytoolkitRelyingpartyGetProjectConfigRequest withQueryParams(IdentitytoolkitRelyingpartyGetProjectConfigQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public IdentitytoolkitRelyingpartyGetProjectConfigRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
         return this;
     }
     
+    /**
+     * Delegated GCP project number of the request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=delegatedProjectNumber")
+    public String delegatedProjectNumber;
+    public IdentitytoolkitRelyingpartyGetProjectConfigRequest withDelegatedProjectNumber(String delegatedProjectNumber) {
+        this.delegatedProjectNumber = delegatedProjectNumber;
+        return this;
+    }
     
-    public IdentitytoolkitRelyingpartyGetProjectConfigSecurity security;
-    public IdentitytoolkitRelyingpartyGetProjectConfigRequest withSecurity(IdentitytoolkitRelyingpartyGetProjectConfigSecurity security) {
-        this.security = security;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public IdentitytoolkitRelyingpartyGetProjectConfigRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public IdentitytoolkitRelyingpartyGetProjectConfigRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public IdentitytoolkitRelyingpartyGetProjectConfigRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public IdentitytoolkitRelyingpartyGetProjectConfigRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * GCP project number of the request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=projectNumber")
+    public String projectNumber;
+    public IdentitytoolkitRelyingpartyGetProjectConfigRequest withProjectNumber(String projectNumber) {
+        this.projectNumber = projectNumber;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public IdentitytoolkitRelyingpartyGetProjectConfigRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public IdentitytoolkitRelyingpartyGetProjectConfigRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

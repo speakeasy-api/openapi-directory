@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostMerchantsMerchantIdPayoutSettingsRequest {
-    
-    public PostMerchantsMerchantIdPayoutSettingsPathParams pathParams;
-    public PostMerchantsMerchantIdPayoutSettingsRequest withPathParams(PostMerchantsMerchantIdPayoutSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PayoutSettingsRequest request;
-    public PostMerchantsMerchantIdPayoutSettingsRequest withRequest(org.openapis.openapi.models.shared.PayoutSettingsRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PayoutSettingsRequest payoutSettingsRequest;
+    public PostMerchantsMerchantIdPayoutSettingsRequest withPayoutSettingsRequest(org.openapis.openapi.models.shared.PayoutSettingsRequest payoutSettingsRequest) {
+        this.payoutSettingsRequest = payoutSettingsRequest;
         return this;
     }
     
-    
-    public PostMerchantsMerchantIdPayoutSettingsSecurity security;
-    public PostMerchantsMerchantIdPayoutSettingsRequest withSecurity(PostMerchantsMerchantIdPayoutSettingsSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the merchant account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
+    public String merchantId;
+    public PostMerchantsMerchantIdPayoutSettingsRequest withMerchantId(String merchantId) {
+        this.merchantId = merchantId;
         return this;
     }
     

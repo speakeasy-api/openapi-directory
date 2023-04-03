@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DetectImageUrlRawRequest {
-    
-    public DetectImageUrlRawPathParams pathParams;
-    public DetectImageUrlRawRequest withPathParams(DetectImageUrlRawPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DetectImageUrlRawQueryParams queryParams;
-    public DetectImageUrlRawRequest withQueryParams(DetectImageUrlRawQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * An ImageUrl that contains the url of the image to be evaluated.
      */
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public DetectImageUrlRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public DetectImageUrlRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Optional. Specifies the name of application using the endpoint.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=application")
+    public String application;
+    public DetectImageUrlRawRequest withApplication(String application) {
+        this.application = application;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public DetectImageUrlRawRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    /**
+     * Specifies the name of the model to evaluate against.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=publishedName")
+    public String publishedName;
+    public DetectImageUrlRawRequest withPublishedName(String publishedName) {
+        this.publishedName = publishedName;
         return this;
     }
     

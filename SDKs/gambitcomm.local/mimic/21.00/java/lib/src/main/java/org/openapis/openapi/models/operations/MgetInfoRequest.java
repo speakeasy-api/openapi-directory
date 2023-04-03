@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MgetInfoRequest {
-    
-    public MgetInfoPathParams pathParams;
-    public MgetInfoRequest withPathParams(MgetInfoPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Multiple strings of info.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=infoArray")
+    public String[] infoArray;
+    public MgetInfoRequest withInfoArray(String[] infoArray) {
+        this.infoArray = infoArray;
         return this;
     }
     

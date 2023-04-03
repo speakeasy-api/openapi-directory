@@ -87,7 +87,7 @@ public class Courses {
      */
     public org.openapis.openapi.models.operations.GetCoursesContentIdResponse getCoursesContentId(org.openapis.openapi.models.operations.GetCoursesContentIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCoursesContentIdPathParams.class, baseUrl, "/courses/{contentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCoursesContentIdRequest.class, baseUrl, "/courses/{contentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -135,7 +135,7 @@ public class Courses {
      */
     public org.openapis.openapi.models.operations.GetCoursesContentIdActivationsResponse getCoursesContentIdActivations(org.openapis.openapi.models.operations.GetCoursesContentIdActivationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCoursesContentIdActivationsPathParams.class, baseUrl, "/courses/{contentId}/activations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCoursesContentIdActivationsRequest.class, baseUrl, "/courses/{contentId}/activations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -183,7 +183,7 @@ public class Courses {
      */
     public org.openapis.openapi.models.operations.GetCoursesContentIdPermissionsResponse getCoursesContentIdPermissions(org.openapis.openapi.models.operations.GetCoursesContentIdPermissionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCoursesContentIdPermissionsPathParams.class, baseUrl, "/courses/{contentId}/permissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCoursesContentIdPermissionsRequest.class, baseUrl, "/courses/{contentId}/permissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -231,12 +231,12 @@ public class Courses {
      */
     public org.openapis.openapi.models.operations.PostCoursesRootContentIdPermissionsUserEmailResponse postCoursesRootContentIdPermissionsUserEmail(org.openapis.openapi.models.operations.PostCoursesRootContentIdPermissionsUserEmailRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostCoursesRootContentIdPermissionsUserEmailPathParams.class, baseUrl, "/courses/{rootContentId}/permissions/{userEmail}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostCoursesRootContentIdPermissionsUserEmailRequest.class, baseUrl, "/courses/{rootContentId}/permissions/{userEmail}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

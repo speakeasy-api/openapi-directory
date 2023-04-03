@@ -4,20 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAssociationsFromRequest {
-    
-    public GetAssociationsFromPathParams pathParams;
-    public GetAssociationsFromRequest withPathParams(GetAssociationsFromPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Object id, e.g. ECO:0000501 (for IEA; Includes inferred by default) or a specific publication or other supporting object, e.g. ZFIN:ZDB-PUB-060503-2
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=evidence")
+    public String evidence;
+    public GetAssociationsFromRequest withEvidence(String evidence) {
+        this.evidence = evidence;
         return this;
     }
     
+    /**
+     * If true, excludes associations that involve IEAs (ECO:0000501)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_automatic_assertions")
+    public Boolean excludeAutomaticAssertions;
+    public GetAssociationsFromRequest withExcludeAutomaticAssertions(Boolean excludeAutomaticAssertions) {
+        this.excludeAutomaticAssertions = excludeAutomaticAssertions;
+        return this;
+    }
     
-    public GetAssociationsFromQueryParams queryParams;
-    public GetAssociationsFromRequest withQueryParams(GetAssociationsFromQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Object taxon ID, e.g. NCBITaxon:10090 (Includes inferred associations, by default)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=object_taxon")
+    public String objectTaxon;
+    public GetAssociationsFromRequest withObjectTaxon(String objectTaxon) {
+        this.objectTaxon = objectTaxon;
+        return this;
+    }
+    
+    /**
+     * Filter by relation CURIE, e.g. RO:0002200 (has_phenotype), RO:0002607 (is marker for), RO:HOM0000017 (orthologous to), etc.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=relation")
+    public String relation;
+    public GetAssociationsFromRequest withRelation(String relation) {
+        this.relation = relation;
+        return this;
+    }
+    
+    /**
+     * number of rows
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rows")
+    public Long rows;
+    public GetAssociationsFromRequest withRows(Long rows) {
+        this.rows = rows;
+        return this;
+    }
+    
+    /**
+     * beginning row
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public Long start;
+    public GetAssociationsFromRequest withStart(Long start) {
+        this.start = start;
+        return this;
+    }
+    
+    /**
+     * Return associations emanating from this node, e.g. NCBIGene:84570, ZFIN:ZDB-GENE-050417-357 (If ID is from an ontology then results would include inferred associations, by default)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subject")
+    public String subject;
+    public GetAssociationsFromRequest withSubject(String subject) {
+        this.subject = subject;
+        return this;
+    }
+    
+    /**
+     * If true, excludes evidence objects in response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unselect_evidence")
+    public Boolean unselectEvidence;
+    public GetAssociationsFromRequest withUnselectEvidence(Boolean unselectEvidence) {
+        this.unselectEvidence = unselectEvidence;
+        return this;
+    }
+    
+    /**
+     * If true, returns results in compact associations format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=use_compact_associations")
+    public Boolean useCompactAssociations;
+    public GetAssociationsFromRequest withUseCompactAssociations(Boolean useCompactAssociations) {
+        this.useCompactAssociations = useCompactAssociations;
         return this;
     }
     

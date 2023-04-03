@@ -40,12 +40,12 @@ public class ProjectDocument {
      */
     public org.openapis.openapi.models.operations.CreateProjectDocumentResponse createProjectDocument(org.openapis.openapi.models.operations.CreateProjectDocumentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateProjectDocumentPathParams.class, baseUrl, "/projects/{projectId}/documents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateProjectDocumentRequest.class, baseUrl, "/projects/{projectId}/documents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "documentUpdates", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -90,7 +90,7 @@ public class ProjectDocument {
      */
     public org.openapis.openapi.models.operations.DeleteProjectDocumentResponse deleteProjectDocument(org.openapis.openapi.models.operations.DeleteProjectDocumentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteProjectDocumentPathParams.class, baseUrl, "/projects/{projectId}/documents/{documentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteProjectDocumentRequest.class, baseUrl, "/projects/{projectId}/documents/{documentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -138,7 +138,7 @@ public class ProjectDocument {
      */
     public org.openapis.openapi.models.operations.DownloadProjectDocumentResponse downloadProjectDocument(org.openapis.openapi.models.operations.DownloadProjectDocumentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadProjectDocumentPathParams.class, baseUrl, "/projects/{projectId}/documents/{documentId}/download", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadProjectDocumentRequest.class, baseUrl, "/projects/{projectId}/documents/{documentId}/download", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -185,13 +185,13 @@ public class ProjectDocument {
      */
     public org.openapis.openapi.models.operations.DownloadTranslatedDocumentForLanguageResponse downloadTranslatedDocumentForLanguage(org.openapis.openapi.models.operations.DownloadTranslatedDocumentForLanguageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadTranslatedDocumentForLanguagePathParams.class, baseUrl, "/projects/{projectId}/documents/{documentId}/translations/download/{language}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadTranslatedDocumentForLanguageRequest.class, baseUrl, "/projects/{projectId}/documents/{documentId}/translations/download/{language}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DownloadTranslatedDocumentForLanguageQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DownloadTranslatedDocumentForLanguageRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -238,13 +238,13 @@ public class ProjectDocument {
      */
     public org.openapis.openapi.models.operations.GetProjectDocumentResponse getProjectDocument(org.openapis.openapi.models.operations.GetProjectDocumentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectDocumentPathParams.class, baseUrl, "/projects/{projectId}/documents/{documentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectDocumentRequest.class, baseUrl, "/projects/{projectId}/documents/{documentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProjectDocumentQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProjectDocumentRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -292,13 +292,13 @@ public class ProjectDocument {
      */
     public org.openapis.openapi.models.operations.GetProjectDocumentsResponse getProjectDocuments(org.openapis.openapi.models.operations.GetProjectDocumentsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectDocumentsPathParams.class, baseUrl, "/projects/{projectId}/documents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectDocumentsRequest.class, baseUrl, "/projects/{projectId}/documents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProjectDocumentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProjectDocumentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -346,12 +346,12 @@ public class ProjectDocument {
      */
     public org.openapis.openapi.models.operations.UpdateProjectDocumentJsonResponse updateProjectDocumentJson(org.openapis.openapi.models.operations.UpdateProjectDocumentJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateProjectDocumentJsonPathParams.class, baseUrl, "/projects/{projectId}/documents/{documentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateProjectDocumentJsonRequest.class, baseUrl, "/projects/{projectId}/documents/{documentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "documentUploadRequest", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -396,12 +396,12 @@ public class ProjectDocument {
      */
     public org.openapis.openapi.models.operations.UpdateProjectDocumentMultipartResponse updateProjectDocumentMultipart(org.openapis.openapi.models.operations.UpdateProjectDocumentMultipartRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateProjectDocumentMultipartPathParams.class, baseUrl, "/projects/{projectId}/documents/{documentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateProjectDocumentMultipartRequest.class, baseUrl, "/projects/{projectId}/documents/{documentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "documentUploadRequest1", "multipart");
         req.setBody(serializedRequestBody);
         
         

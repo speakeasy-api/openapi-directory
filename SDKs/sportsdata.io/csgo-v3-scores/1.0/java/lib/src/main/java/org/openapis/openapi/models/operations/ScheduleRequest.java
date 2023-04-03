@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ScheduleRequest {
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public ScheduleFormatEnum format;
+    public ScheduleRequest withFormat(ScheduleFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public SchedulePathParams pathParams;
-    public ScheduleRequest withPathParams(SchedulePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique FantasyData Round ID. RoundIDs can be found in the Competitions and Competition Details endpoints. 
+     * Examples: &lt;code&gt;100000138&lt;/code&gt;, &lt;code&gt;1000001412&lt;/code&gt;, etc
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=roundid")
+    public String roundid;
+    public ScheduleRequest withRoundid(String roundid) {
+        this.roundid = roundid;
         return this;
     }
     

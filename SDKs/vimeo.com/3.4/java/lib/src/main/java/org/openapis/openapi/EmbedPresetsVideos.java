@@ -33,19 +33,20 @@ public class EmbedPresetsVideos {
     /**
      * Add an embed preset to a video
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddVideoEmbedPresetResponse addVideoEmbedPreset(org.openapis.openapi.models.operations.AddVideoEmbedPresetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddVideoEmbedPresetResponse addVideoEmbedPreset(org.openapis.openapi.models.operations.AddVideoEmbedPresetRequest request, org.openapis.openapi.models.operations.AddVideoEmbedPresetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoEmbedPresetPathParams.class, baseUrl, "/videos/{video_id}/presets/{preset_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoEmbedPresetRequest.class, baseUrl, "/videos/{video_id}/presets/{preset_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -66,19 +67,20 @@ public class EmbedPresetsVideos {
     /**
      * Add a new custom logo to a video
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateVideoCustomLogoResponse createVideoCustomLogo(org.openapis.openapi.models.operations.CreateVideoCustomLogoRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateVideoCustomLogoResponse createVideoCustomLogo(org.openapis.openapi.models.operations.CreateVideoCustomLogoRequest request, org.openapis.openapi.models.operations.CreateVideoCustomLogoSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateVideoCustomLogoPathParams.class, baseUrl, "/videos/{video_id}/timelinethumbnails", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateVideoCustomLogoRequest.class, baseUrl, "/videos/{video_id}/timelinethumbnails", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -113,19 +115,20 @@ public class EmbedPresetsVideos {
     /**
      * Remove an embed preset from a video
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteVideoEmbedPresetResponse deleteVideoEmbedPreset(org.openapis.openapi.models.operations.DeleteVideoEmbedPresetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteVideoEmbedPresetResponse deleteVideoEmbedPreset(org.openapis.openapi.models.operations.DeleteVideoEmbedPresetRequest request, org.openapis.openapi.models.operations.DeleteVideoEmbedPresetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVideoEmbedPresetPathParams.class, baseUrl, "/videos/{video_id}/presets/{preset_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVideoEmbedPresetRequest.class, baseUrl, "/videos/{video_id}/presets/{preset_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -159,13 +162,13 @@ public class EmbedPresetsVideos {
      */
     public org.openapis.openapi.models.operations.GetEmbedPresetVideosResponse getEmbedPresetVideos(org.openapis.openapi.models.operations.GetEmbedPresetVideosRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEmbedPresetVideosPathParams.class, baseUrl, "/users/{user_id}/presets/{preset_id}/videos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEmbedPresetVideosRequest.class, baseUrl, "/users/{user_id}/presets/{preset_id}/videos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEmbedPresetVideosQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEmbedPresetVideosRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -204,13 +207,13 @@ public class EmbedPresetsVideos {
      */
     public org.openapis.openapi.models.operations.GetEmbedPresetVideosAlt1Response getEmbedPresetVideosAlt1(org.openapis.openapi.models.operations.GetEmbedPresetVideosAlt1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEmbedPresetVideosAlt1PathParams.class, baseUrl, "/me/presets/{preset_id}/videos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEmbedPresetVideosAlt1Request.class, baseUrl, "/me/presets/{preset_id}/videos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEmbedPresetVideosAlt1QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEmbedPresetVideosAlt1Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -249,7 +252,7 @@ public class EmbedPresetsVideos {
      */
     public org.openapis.openapi.models.operations.GetVideoCustomLogoResponse getVideoCustomLogo(org.openapis.openapi.models.operations.GetVideoCustomLogoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVideoCustomLogoPathParams.class, baseUrl, "/videos/{video_id}/timelinethumbnails/{thumbnail_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVideoCustomLogoRequest.class, baseUrl, "/videos/{video_id}/timelinethumbnails/{thumbnail_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -296,7 +299,7 @@ public class EmbedPresetsVideos {
      */
     public org.openapis.openapi.models.operations.GetVideoEmbedPresetResponse getVideoEmbedPreset(org.openapis.openapi.models.operations.GetVideoEmbedPresetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVideoEmbedPresetPathParams.class, baseUrl, "/videos/{video_id}/presets/{preset_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVideoEmbedPresetRequest.class, baseUrl, "/videos/{video_id}/presets/{preset_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

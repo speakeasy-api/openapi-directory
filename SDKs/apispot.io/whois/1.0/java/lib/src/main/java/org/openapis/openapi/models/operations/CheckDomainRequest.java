@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CheckDomainRequest {
-    
-    public CheckDomainPathParams pathParams;
-    public CheckDomainRequest withPathParams(CheckDomainPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Domain
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domain")
+    public String domain;
+    public CheckDomainRequest withDomain(String domain) {
+        this.domain = domain;
         return this;
     }
     

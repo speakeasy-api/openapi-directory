@@ -39,25 +39,26 @@ public class UsersCompanyLevel {
      * * Management API\u2014Users read and write
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCompaniesCompanyIdUsersResponse getCompaniesCompanyIdUsers(org.openapis.openapi.models.operations.GetCompaniesCompanyIdUsersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCompaniesCompanyIdUsersResponse getCompaniesCompanyIdUsers(org.openapis.openapi.models.operations.GetCompaniesCompanyIdUsersRequest request, org.openapis.openapi.models.operations.GetCompaniesCompanyIdUsersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCompaniesCompanyIdUsersPathParams.class, baseUrl, "/companies/{companyId}/users", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCompaniesCompanyIdUsersRequest.class, baseUrl, "/companies/{companyId}/users", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCompaniesCompanyIdUsersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCompaniesCompanyIdUsersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -97,19 +98,20 @@ public class UsersCompanyLevel {
      * * Management API\u2014Users read and write
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCompaniesCompanyIdUsersUserIdResponse getCompaniesCompanyIdUsersUserId(org.openapis.openapi.models.operations.GetCompaniesCompanyIdUsersUserIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCompaniesCompanyIdUsersUserIdResponse getCompaniesCompanyIdUsersUserId(org.openapis.openapi.models.operations.GetCompaniesCompanyIdUsersUserIdRequest request, org.openapis.openapi.models.operations.GetCompaniesCompanyIdUsersUserIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCompaniesCompanyIdUsersUserIdPathParams.class, baseUrl, "/companies/{companyId}/users/{userId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCompaniesCompanyIdUsersUserIdRequest.class, baseUrl, "/companies/{companyId}/users/{userId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -149,21 +151,22 @@ public class UsersCompanyLevel {
      * * Management API\u2014Users read and write
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchCompaniesCompanyIdUsersUserIdResponse patchCompaniesCompanyIdUsersUserId(org.openapis.openapi.models.operations.PatchCompaniesCompanyIdUsersUserIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchCompaniesCompanyIdUsersUserIdResponse patchCompaniesCompanyIdUsersUserId(org.openapis.openapi.models.operations.PatchCompaniesCompanyIdUsersUserIdRequest request, org.openapis.openapi.models.operations.PatchCompaniesCompanyIdUsersUserIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchCompaniesCompanyIdUsersUserIdPathParams.class, baseUrl, "/companies/{companyId}/users/{userId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchCompaniesCompanyIdUsersUserIdRequest.class, baseUrl, "/companies/{companyId}/users/{userId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateCompanyUserRequest", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -203,21 +206,22 @@ public class UsersCompanyLevel {
      * * Management API\u2014Users read and write
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostCompaniesCompanyIdUsersResponse postCompaniesCompanyIdUsers(org.openapis.openapi.models.operations.PostCompaniesCompanyIdUsersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostCompaniesCompanyIdUsersResponse postCompaniesCompanyIdUsers(org.openapis.openapi.models.operations.PostCompaniesCompanyIdUsersRequest request, org.openapis.openapi.models.operations.PostCompaniesCompanyIdUsersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostCompaniesCompanyIdUsersPathParams.class, baseUrl, "/companies/{companyId}/users", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostCompaniesCompanyIdUsersRequest.class, baseUrl, "/companies/{companyId}/users", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createCompanyUserRequest", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

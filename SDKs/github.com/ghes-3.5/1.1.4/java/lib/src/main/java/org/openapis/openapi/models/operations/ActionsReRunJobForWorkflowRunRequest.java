@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsReRunJobForWorkflowRunRequest {
-    
-    public ActionsReRunJobForWorkflowRunPathParams pathParams;
-    public ActionsReRunJobForWorkflowRunRequest withPathParams(ActionsReRunJobForWorkflowRunPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public java.util.Map<String, Object> requestBody;
+    public ActionsReRunJobForWorkflowRunRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public ActionsReRunJobForWorkflowRunRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    /**
+     * The unique identifier of the job.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=job_id")
+    public Long jobId;
+    public ActionsReRunJobForWorkflowRunRequest withJobId(Long jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ActionsReRunJobForWorkflowRunRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ActionsReRunJobForWorkflowRunRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

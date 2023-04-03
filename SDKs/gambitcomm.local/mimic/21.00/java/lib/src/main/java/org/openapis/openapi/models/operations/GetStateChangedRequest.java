@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStateChangedRequest {
-    
-    public GetStateChangedPathParams pathParams;
-    public GetStateChangedRequest withPathParams(GetStateChangedPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to return the indicator
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public GetStateChangedRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

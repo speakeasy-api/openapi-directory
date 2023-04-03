@@ -4,20 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupV2UnbanMemberRequest {
-    
-    public GroupV2UnbanMemberPathParams pathParams;
-    public GroupV2UnbanMemberRequest withPathParams(GroupV2UnbanMemberPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public Long groupId;
+    public GroupV2UnbanMemberRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
         return this;
     }
     
+    /**
+     * Membership ID of the member to unban from the group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipId")
+    public Long membershipId;
+    public GroupV2UnbanMemberRequest withMembershipId(Long membershipId) {
+        this.membershipId = membershipId;
+        return this;
+    }
     
-    public GroupV2UnbanMemberSecurity security;
-    public GroupV2UnbanMemberRequest withSecurity(GroupV2UnbanMemberSecurity security) {
-        this.security = security;
+    /**
+     * Membership type of the provided membership ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
+    public Integer membershipType;
+    public GroupV2UnbanMemberRequest withMembershipType(Integer membershipType) {
+        this.membershipType = membershipType;
         return this;
     }
     

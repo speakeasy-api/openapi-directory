@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CargoShipmentTrackingByAWBPrefixAndAWBNumberGetRequest {
-    
-    public CargoShipmentTrackingByAWBPrefixAndAWBNumberGetPathParams pathParams;
-    public CargoShipmentTrackingByAWBPrefixAndAWBNumberGetRequest withPathParams(CargoShipmentTrackingByAWBPrefixAndAWBNumberGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public CargoShipmentTrackingByAWBPrefixAndAWBNumberGetRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public CargoShipmentTrackingByAWBPrefixAndAWBNumberGetHeaders headers;
-    public CargoShipmentTrackingByAWBPrefixAndAWBNumberGetRequest withHeaders(CargoShipmentTrackingByAWBPrefixAndAWBNumberGetHeaders headers) {
-        this.headers = headers;
+    /**
+     * aWBNumber : The Air Waybill Number , format : [0-9]{8} e.g. 08002050
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=aWBNumber")
+    public String aWBNumber;
+    public CargoShipmentTrackingByAWBPrefixAndAWBNumberGetRequest withAWBNumber(String aWBNumber) {
+        this.aWBNumber = aWBNumber;
         return this;
     }
     
-    
-    public CargoShipmentTrackingByAWBPrefixAndAWBNumberGetSecurity security;
-    public CargoShipmentTrackingByAWBPrefixAndAWBNumberGetRequest withSecurity(CargoShipmentTrackingByAWBPrefixAndAWBNumberGetSecurity security) {
-        this.security = security;
+    /**
+     * aWBPrefix : Represents the airline that is the owner of this AWB, i.e. "020" = Lufthansa Cargo, format : [0-9]{3} e.g. 020
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=aWBPrefix")
+    public String aWBPrefix;
+    public CargoShipmentTrackingByAWBPrefixAndAWBNumberGetRequest withAWBPrefix(String aWBPrefix) {
+        this.aWBPrefix = aWBPrefix;
         return this;
     }
     

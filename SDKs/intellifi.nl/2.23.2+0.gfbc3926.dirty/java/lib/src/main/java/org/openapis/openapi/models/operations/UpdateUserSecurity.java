@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateUserSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=cookie")
-    public org.openapis.openapi.models.shared.SchemeCookieSid cookieSid;
-    public UpdateUserSecurity withCookieSid(org.openapis.openapi.models.shared.SchemeCookieSid cookieSid) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=cookie,name=brain.sid")
+    public String cookieSid;
+    public UpdateUserSecurity withCookieSid(String cookieSid) {
         this.cookieSid = cookieSid;
         return this;
     }

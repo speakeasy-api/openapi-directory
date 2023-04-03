@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyAuthenticationProfileRequest {
-    
-    public GETModifyAuthenticationProfileQueryParams queryParams;
-    public GETModifyAuthenticationProfileRequest withQueryParams(GETModifyAuthenticationProfileQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyAuthenticationProfileActionEnum action;
+    public GETModifyAuthenticationProfileRequest withAction(GETModifyAuthenticationProfileActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The new content of the authentication profile in JSON format. The maximum length of the JSON string is determined by a quota for your account.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AuthenticationProfileContent")
+    public String authenticationProfileContent;
+    public GETModifyAuthenticationProfileRequest withAuthenticationProfileContent(String authenticationProfileContent) {
+        this.authenticationProfileContent = authenticationProfileContent;
+        return this;
+    }
     
-    public GETModifyAuthenticationProfileHeaders headers;
-    public GETModifyAuthenticationProfileRequest withHeaders(GETModifyAuthenticationProfileHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name of the authentication profile to replace.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AuthenticationProfileName")
+    public String authenticationProfileName;
+    public GETModifyAuthenticationProfileRequest withAuthenticationProfileName(String authenticationProfileName) {
+        this.authenticationProfileName = authenticationProfileName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyAuthenticationProfileVersionEnum version;
+    public GETModifyAuthenticationProfileRequest withVersion(GETModifyAuthenticationProfileVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyAuthenticationProfileRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyAuthenticationProfileRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyAuthenticationProfileRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyAuthenticationProfileRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyAuthenticationProfileRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyAuthenticationProfileRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyAuthenticationProfileRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

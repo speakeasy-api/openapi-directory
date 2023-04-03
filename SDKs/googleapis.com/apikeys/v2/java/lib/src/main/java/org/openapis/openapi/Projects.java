@@ -34,27 +34,28 @@ public class Projects {
     /**
      * Creates a new API key. NOTE: Key is a global resource; hence the only supported value for location is `global`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysCreateResponse apikeysProjectsLocationsKeysCreate(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysCreateResponse apikeysProjectsLocationsKeysCreate(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysCreateRequest request, org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysCreatePathParams.class, baseUrl, "/v2/{parent}/keys", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysCreateRequest.class, baseUrl, "/v2/{parent}/keys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "v2KeyInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,25 +82,26 @@ public class Projects {
     /**
      * Deletes an API key. Deleted key can be retrieved within 30 days of deletion. Afterward, key will be purged from the project. NOTE: Key is a global resource; hence the only supported value for location is `global`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysDeleteResponse apikeysProjectsLocationsKeysDelete(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysDeleteResponse apikeysProjectsLocationsKeysDelete(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysDeleteRequest request, org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysDeletePathParams.class, baseUrl, "/v2/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysDeleteRequest.class, baseUrl, "/v2/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,25 +128,26 @@ public class Projects {
     /**
      * Gets the metadata for an API key. The key string of the API key isn't included in the response. NOTE: Key is a global resource; hence the only supported value for location is `global`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysGetResponse apikeysProjectsLocationsKeysGet(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysGetResponse apikeysProjectsLocationsKeysGet(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysGetRequest request, org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysGetPathParams.class, baseUrl, "/v2/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysGetRequest.class, baseUrl, "/v2/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,25 +174,26 @@ public class Projects {
     /**
      * Get the key string for an API key. NOTE: Key is a global resource; hence the only supported value for location is `global`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysGetKeyStringResponse apikeysProjectsLocationsKeysGetKeyString(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysGetKeyStringRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysGetKeyStringResponse apikeysProjectsLocationsKeysGetKeyString(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysGetKeyStringRequest request, org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysGetKeyStringSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysGetKeyStringPathParams.class, baseUrl, "/v2/{name}/keyString", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysGetKeyStringRequest.class, baseUrl, "/v2/{name}/keyString", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysGetKeyStringQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysGetKeyStringRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -216,25 +220,26 @@ public class Projects {
     /**
      * Lists the API keys owned by a project. The key string of the API key isn't included in the response. NOTE: Key is a global resource; hence the only supported value for location is `global`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysListResponse apikeysProjectsLocationsKeysList(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysListResponse apikeysProjectsLocationsKeysList(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysListRequest request, org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysListPathParams.class, baseUrl, "/v2/{parent}/keys", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysListRequest.class, baseUrl, "/v2/{parent}/keys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -261,27 +266,28 @@ public class Projects {
     /**
      * Patches the modifiable fields of an API key. The key string of the API key isn't included in the response. NOTE: Key is a global resource; hence the only supported value for location is `global`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysPatchResponse apikeysProjectsLocationsKeysPatch(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysPatchResponse apikeysProjectsLocationsKeysPatch(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysPatchRequest request, org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysPatchPathParams.class, baseUrl, "/v2/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysPatchRequest.class, baseUrl, "/v2/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "v2KeyInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -308,27 +314,28 @@ public class Projects {
     /**
      * Undeletes an API key which was deleted within 30 days. NOTE: Key is a global resource; hence the only supported value for location is `global`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysUndeleteResponse apikeysProjectsLocationsKeysUndelete(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysUndeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysUndeleteResponse apikeysProjectsLocationsKeysUndelete(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysUndeleteRequest request, org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysUndeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysUndeletePathParams.class, baseUrl, "/v2/{name}:undelete", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysUndeleteRequest.class, baseUrl, "/v2/{name}:undelete", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysUndeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApikeysProjectsLocationsKeysUndeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

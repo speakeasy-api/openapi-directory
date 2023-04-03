@@ -34,7 +34,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/EtcerSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/EtcerRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/EtcerRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/EtcerRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/EtcerRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Etcer504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Etcer504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Etcer504ApplicationJSON.java
@@ -61,7 +60,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GovidSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GovidRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/GovidRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GovidRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/GovidRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Govid504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Govid504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Govid504ApplicationJSON.java
@@ -88,7 +86,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/SicerSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/SicerRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/SicerRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SicerRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/SicerRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Sicer504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Sicer504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Sicer504ApplicationJSON.java
@@ -122,6 +119,4 @@ lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsen
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsent.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaSignature.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchema.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKey.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeClientID.java
 USAGE.md

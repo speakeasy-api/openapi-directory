@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequest {
-    
-    public CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerPathParams pathParams;
-    public CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequest withPathParams(CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequestBody requestBody;
+    public CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequest withRequestBody(CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequestBody request;
-    public CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequest withRequest(CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

@@ -53,7 +53,7 @@ public class Datacenters {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDatacentersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDatacentersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -92,7 +92,7 @@ public class Datacenters {
      */
     public org.openapis.openapi.models.operations.GetDatacentersIdResponse getDatacentersId(org.openapis.openapi.models.operations.GetDatacentersIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDatacentersIdPathParams.class, baseUrl, "/datacenters/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDatacentersIdRequest.class, baseUrl, "/datacenters/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

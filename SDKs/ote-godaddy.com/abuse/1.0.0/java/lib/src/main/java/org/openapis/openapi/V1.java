@@ -34,7 +34,7 @@ public class V1 {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateTicketResponse createTicket(org.openapis.openapi.models.operations.CreateTicketRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateTicketResponse createTicket(org.openapis.openapi.models.shared.AbuseTicketCreate request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/abuse/tickets");
         
@@ -80,7 +80,7 @@ public class V1 {
      */
     public org.openapis.openapi.models.operations.GetTicketInfoResponse getTicketInfo(org.openapis.openapi.models.operations.GetTicketInfoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTicketInfoPathParams.class, baseUrl, "/v1/abuse/tickets/{ticketId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTicketInfoRequest.class, baseUrl, "/v1/abuse/tickets/{ticketId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -123,7 +123,7 @@ public class V1 {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTicketsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTicketsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

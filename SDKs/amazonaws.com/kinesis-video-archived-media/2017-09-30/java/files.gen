@@ -29,12 +29,10 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/GetClipHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetClipRequestBodyClipFragmentSelector.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetClipRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetClipRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetClipResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetDASHStreamingSessionURLHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetDASHStreamingSessionURLRequestBodyDASHFragmentSelector.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetDASHStreamingSessionURLRequestBodyDisplayFragmentNumberEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetDASHStreamingSessionURLRequestBodyDisplayFragmentTimestampEnum.java
@@ -42,7 +40,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetDASHStreamingSession
 lib/src/main/java/org/openapis/openapi/models/operations/GetDASHStreamingSessionURLRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetDASHStreamingSessionURLRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetDASHStreamingSessionURLResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetHLSStreamingSessionURLHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetHLSStreamingSessionURLRequestBodyContainerFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetHLSStreamingSessionURLRequestBodyDiscontinuityModeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetHLSStreamingSessionURLRequestBodyDisplayFragmentTimestampEnum.java
@@ -51,19 +48,14 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetHLSStreamingSessionU
 lib/src/main/java/org/openapis/openapi/models/operations/GetHLSStreamingSessionURLRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetHLSStreamingSessionURLRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetHLSStreamingSessionURLResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetImagesQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetImagesHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetImagesRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetImagesRequestBodyImageSelectorTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetImagesRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetImagesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetImagesResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetMediaForFragmentListHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetMediaForFragmentListRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetMediaForFragmentListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetMediaForFragmentListResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListFragmentsQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListFragmentsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListFragmentsRequestBodyFragmentSelector.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListFragmentsRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListFragmentsRequest.java
@@ -85,6 +77,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ListFragmentsOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/Fragment.java
 lib/src/main/java/org/openapis/openapi/models/shared/TimestampRange.java
 lib/src/main/java/org/openapis/openapi/models/shared/FragmentSelectorTypeEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeHmac.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

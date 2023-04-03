@@ -161,23 +161,36 @@ public class SDK {
     /**
      * Delete a specific fax and its associated media.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteFaxResponse deleteFax(org.openapis.openapi.models.operations.DeleteFaxRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteFaxResponse deleteFax(org.openapis.openapi.models.operations.DeleteFaxRequest request, org.openapis.openapi.models.operations.DeleteFaxSecurity security) throws Exception {
+        return this.deleteFax(request, security, null);
+    }
+
+    /**
+     * Delete a specific fax and its associated media.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DeleteFaxResponse deleteFax(org.openapis.openapi.models.operations.DeleteFaxRequest request, org.openapis.openapi.models.operations.DeleteFaxSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_FAX_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteFaxPathParams.class, baseUrl, "/v1/Faxes/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteFaxRequest.class, baseUrl, "/v1/Faxes/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -198,23 +211,36 @@ public class SDK {
     /**
      * Delete a specific fax media instance.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteFaxMediaResponse deleteFaxMedia(org.openapis.openapi.models.operations.DeleteFaxMediaRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteFaxMediaResponse deleteFaxMedia(org.openapis.openapi.models.operations.DeleteFaxMediaRequest request, org.openapis.openapi.models.operations.DeleteFaxMediaSecurity security) throws Exception {
+        return this.deleteFaxMedia(request, security, null);
+    }
+
+    /**
+     * Delete a specific fax media instance.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DeleteFaxMediaResponse deleteFaxMedia(org.openapis.openapi.models.operations.DeleteFaxMediaRequest request, org.openapis.openapi.models.operations.DeleteFaxMediaSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_FAX_MEDIA_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteFaxMediaPathParams.class, baseUrl, "/v1/Faxes/{FaxSid}/Media/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteFaxMediaRequest.class, baseUrl, "/v1/Faxes/{FaxSid}/Media/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -235,23 +261,36 @@ public class SDK {
     /**
      * Fetch a specific fax.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchFaxResponse fetchFax(org.openapis.openapi.models.operations.FetchFaxRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchFaxResponse fetchFax(org.openapis.openapi.models.operations.FetchFaxRequest request, org.openapis.openapi.models.operations.FetchFaxSecurity security) throws Exception {
+        return this.fetchFax(request, security, null);
+    }
+
+    /**
+     * Fetch a specific fax.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchFaxResponse fetchFax(org.openapis.openapi.models.operations.FetchFaxRequest request, org.openapis.openapi.models.operations.FetchFaxSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_FAX_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchFaxPathParams.class, baseUrl, "/v1/Faxes/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchFaxRequest.class, baseUrl, "/v1/Faxes/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -278,23 +317,36 @@ public class SDK {
     /**
      * Fetch a specific fax media instance.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchFaxMediaResponse fetchFaxMedia(org.openapis.openapi.models.operations.FetchFaxMediaRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchFaxMediaResponse fetchFaxMedia(org.openapis.openapi.models.operations.FetchFaxMediaRequest request, org.openapis.openapi.models.operations.FetchFaxMediaSecurity security) throws Exception {
+        return this.fetchFaxMedia(request, security, null);
+    }
+
+    /**
+     * Fetch a specific fax media instance.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchFaxMediaResponse fetchFaxMedia(org.openapis.openapi.models.operations.FetchFaxMediaRequest request, org.openapis.openapi.models.operations.FetchFaxMediaSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_FAX_MEDIA_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchFaxMediaPathParams.class, baseUrl, "/v1/Faxes/{FaxSid}/Media/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchFaxMediaRequest.class, baseUrl, "/v1/Faxes/{FaxSid}/Media/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -321,13 +373,26 @@ public class SDK {
     /**
      * Retrieve a list of all faxes.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListFaxResponse listFax(org.openapis.openapi.models.operations.ListFaxRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListFaxResponse listFax(org.openapis.openapi.models.operations.ListFaxRequest request, org.openapis.openapi.models.operations.ListFaxSecurity security) throws Exception {
+        return this.listFax(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of all faxes.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListFaxResponse listFax(org.openapis.openapi.models.operations.ListFaxRequest request, org.openapis.openapi.models.operations.ListFaxSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_FAX_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Faxes");
@@ -336,14 +401,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListFaxQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListFaxRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -370,29 +435,42 @@ public class SDK {
     /**
      * Retrieve a list of all fax media instances for the specified fax.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListFaxMediaResponse listFaxMedia(org.openapis.openapi.models.operations.ListFaxMediaRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListFaxMediaResponse listFaxMedia(org.openapis.openapi.models.operations.ListFaxMediaRequest request, org.openapis.openapi.models.operations.ListFaxMediaSecurity security) throws Exception {
+        return this.listFaxMedia(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of all fax media instances for the specified fax.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListFaxMediaResponse listFaxMedia(org.openapis.openapi.models.operations.ListFaxMediaRequest request, org.openapis.openapi.models.operations.ListFaxMediaSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_FAX_MEDIA_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListFaxMediaPathParams.class, baseUrl, "/v1/Faxes/{FaxSid}/Media", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListFaxMediaRequest.class, baseUrl, "/v1/Faxes/{FaxSid}/Media", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListFaxMediaQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListFaxMediaRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

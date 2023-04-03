@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostContinuousProjectFileStringsRequest {
-    
-    public PostContinuousProjectFileStringsPathParams pathParams;
-    public PostContinuousProjectFileStringsRequest withPathParams(PostContinuousProjectFileStringsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ContinuousProjectDocumentStringsBody continuousProjectDocumentStringsBody;
+    public PostContinuousProjectFileStringsRequest withContinuousProjectDocumentStringsBody(org.openapis.openapi.models.shared.ContinuousProjectDocumentStringsBody continuousProjectDocumentStringsBody) {
+        this.continuousProjectDocumentStringsBody = continuousProjectDocumentStringsBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ContinuousProjectDocumentStringsBody request;
-    public PostContinuousProjectFileStringsRequest withRequest(org.openapis.openapi.models.shared.ContinuousProjectDocumentStringsBody request) {
-        this.request = request;
+    /**
+     * Project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public Long projectId;
+    public PostContinuousProjectFileStringsRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     

@@ -44,7 +44,7 @@ public class Accounts {
      */
     public org.openapis.openapi.models.operations.DeleteV2AccountsIdJsonResponse deleteV2AccountsIdJson(org.openapis.openapi.models.operations.DeleteV2AccountsIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteV2AccountsIdJsonPathParams.class, baseUrl, "/v2/accounts/{id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteV2AccountsIdJsonRequest.class, baseUrl, "/v2/accounts/{id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -85,7 +85,7 @@ public class Accounts {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV2AccountsJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV2AccountsJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -124,7 +124,7 @@ public class Accounts {
      */
     public org.openapis.openapi.models.operations.GetV2AccountsIdJsonResponse getV2AccountsIdJson(org.openapis.openapi.models.operations.GetV2AccountsIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2AccountsIdJsonPathParams.class, baseUrl, "/v2/accounts/{id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2AccountsIdJsonRequest.class, baseUrl, "/v2/accounts/{id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -163,7 +163,7 @@ public class Accounts {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV2AccountsJsonResponse postV2AccountsJson(org.openapis.openapi.models.operations.PostV2AccountsJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV2AccountsJsonResponse postV2AccountsJson(org.openapis.openapi.models.operations.PostV2AccountsJsonRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/accounts.json");
         
@@ -211,12 +211,12 @@ public class Accounts {
      */
     public org.openapis.openapi.models.operations.PutV2AccountsIdJsonResponse putV2AccountsIdJson(org.openapis.openapi.models.operations.PutV2AccountsIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutV2AccountsIdJsonPathParams.class, baseUrl, "/v2/accounts/{id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutV2AccountsIdJsonRequest.class, baseUrl, "/v2/accounts/{id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

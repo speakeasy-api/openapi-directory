@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsListForIssueRequest {
-    
-    public ReactionsListForIssuePathParams pathParams;
-    public ReactionsListForIssueRequest withPathParams(ReactionsListForIssuePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Returns a single [reaction type](https://docs.github.com/enterprise-server@3.3/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to an issue.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=content")
+    public ReactionsListForIssueContentEnum content;
+    public ReactionsListForIssueRequest withContent(ReactionsListForIssueContentEnum content) {
+        this.content = content;
         return this;
     }
     
+    /**
+     * The number that identifies the issue.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=issue_number")
+    public Long issueNumber;
+    public ReactionsListForIssueRequest withIssueNumber(Long issueNumber) {
+        this.issueNumber = issueNumber;
+        return this;
+    }
     
-    public ReactionsListForIssueQueryParams queryParams;
-    public ReactionsListForIssueRequest withQueryParams(ReactionsListForIssueQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReactionsListForIssueRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ReactionsListForIssueRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ReactionsListForIssueRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReactionsListForIssueRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

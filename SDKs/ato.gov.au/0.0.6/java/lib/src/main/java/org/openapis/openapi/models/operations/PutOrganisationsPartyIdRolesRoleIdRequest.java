@@ -7,17 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutOrganisationsPartyIdRolesRoleIdRequest {
-    
-    public PutOrganisationsPartyIdRolesRoleIdPathParams pathParams;
-    public PutOrganisationsPartyIdRolesRoleIdRequest withPathParams(PutOrganisationsPartyIdRolesRoleIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutOrganisationsPartyIdRolesRoleIdHeaders headers;
-    public PutOrganisationsPartyIdRolesRoleIdRequest withHeaders(PutOrganisationsPartyIdRolesRoleIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * The API key.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public PutOrganisationsPartyIdRolesRoleIdRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
@@ -25,9 +21,29 @@ public class PutOrganisationsPartyIdRolesRoleIdRequest {
      * Role resource
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PartyRoleInput request;
-    public PutOrganisationsPartyIdRolesRoleIdRequest withRequest(org.openapis.openapi.models.shared.PartyRoleInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PartyRoleInput partyRoleInput;
+    public PutOrganisationsPartyIdRolesRoleIdRequest withPartyRoleInput(org.openapis.openapi.models.shared.PartyRoleInput partyRoleInput) {
+        this.partyRoleInput = partyRoleInput;
+        return this;
+    }
+    
+    /**
+     * The party identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=partyId")
+    public String partyId;
+    public PutOrganisationsPartyIdRolesRoleIdRequest withPartyId(String partyId) {
+        this.partyId = partyId;
+        return this;
+    }
+    
+    /**
+     * The role identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=roleId")
+    public String roleId;
+    public PutOrganisationsPartyIdRolesRoleIdRequest withRoleId(String roleId) {
+        this.roleId = roleId;
         return this;
     }
     

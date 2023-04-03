@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ApplicationsListOwnersRequest {
-    
-    public ApplicationsListOwnersPathParams pathParams;
-    public ApplicationsListOwnersRequest withPathParams(ApplicationsListOwnersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Client API version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public ApplicationsListOwnersRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
+    /**
+     * The object ID of the application for which to get owners.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=applicationObjectId")
+    public String applicationObjectId;
+    public ApplicationsListOwnersRequest withApplicationObjectId(String applicationObjectId) {
+        this.applicationObjectId = applicationObjectId;
+        return this;
+    }
     
-    public ApplicationsListOwnersQueryParams queryParams;
-    public ApplicationsListOwnersRequest withQueryParams(ApplicationsListOwnersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The tenant ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tenantID")
+    public String tenantID;
+    public ApplicationsListOwnersRequest withTenantID(String tenantID) {
+        this.tenantID = tenantID;
         return this;
     }
     

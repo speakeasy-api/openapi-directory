@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateOrganizationSnmpRequest {
-    
-    public UpdateOrganizationSnmpPathParams pathParams;
-    public UpdateOrganizationSnmpRequest withPathParams(UpdateOrganizationSnmpPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateOrganizationSnmpRequestBody requestBody;
+    public UpdateOrganizationSnmpRequest withRequestBody(UpdateOrganizationSnmpRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateOrganizationSnmpRequestBody request;
-    public UpdateOrganizationSnmpRequest withRequest(UpdateOrganizationSnmpRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public UpdateOrganizationSnmpRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

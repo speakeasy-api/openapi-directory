@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationCameraCustomAnalyticsArtifactRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifactId")
+    public String artifactId;
+    public GetOrganizationCameraCustomAnalyticsArtifactRequest withArtifactId(String artifactId) {
+        this.artifactId = artifactId;
+        return this;
+    }
     
-    public GetOrganizationCameraCustomAnalyticsArtifactPathParams pathParams;
-    public GetOrganizationCameraCustomAnalyticsArtifactRequest withPathParams(GetOrganizationCameraCustomAnalyticsArtifactPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public GetOrganizationCameraCustomAnalyticsArtifactRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

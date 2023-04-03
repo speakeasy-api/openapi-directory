@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountDeleteSessionRequest {
-    
-    public AccountDeleteSessionPathParams pathParams;
-    public AccountDeleteSessionRequest withPathParams(AccountDeleteSessionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AccountDeleteSessionSecurity security;
-    public AccountDeleteSessionRequest withSecurity(AccountDeleteSessionSecurity security) {
-        this.security = security;
+    /**
+     * Session unique ID. Use the string 'current' to delete the current device session.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sessionId")
+    public String sessionId;
+    public AccountDeleteSessionRequest withSessionId(String sessionId) {
+        this.sessionId = sessionId;
         return this;
     }
     

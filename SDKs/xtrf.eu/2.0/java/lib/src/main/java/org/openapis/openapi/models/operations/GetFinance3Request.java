@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFinance3Request {
-    
-    public GetFinance3PathParams pathParams;
-    public GetFinance3Request withPathParams(GetFinance3PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * quote's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=quoteId")
+    public String quoteId;
+    public GetFinance3Request withQuoteId(String quoteId) {
+        this.quoteId = quoteId;
         return this;
     }
     

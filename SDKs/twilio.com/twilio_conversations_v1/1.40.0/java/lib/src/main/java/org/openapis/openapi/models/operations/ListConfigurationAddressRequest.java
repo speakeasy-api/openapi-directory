@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListConfigurationAddressRequest {
-    
-    public ListConfigurationAddressQueryParams queryParams;
-    public ListConfigurationAddressRequest withQueryParams(ListConfigurationAddressQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListConfigurationAddressRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListConfigurationAddressSecurity security;
-    public ListConfigurationAddressRequest withSecurity(ListConfigurationAddressSecurity security) {
-        this.security = security;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListConfigurationAddressRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListConfigurationAddressRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
     
-    public String serverURL;
-    public ListConfigurationAddressRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Filter the address configurations by its type. This value can be one of: `whatsapp`, `sms`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Type")
+    public String type;
+    public ListConfigurationAddressRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

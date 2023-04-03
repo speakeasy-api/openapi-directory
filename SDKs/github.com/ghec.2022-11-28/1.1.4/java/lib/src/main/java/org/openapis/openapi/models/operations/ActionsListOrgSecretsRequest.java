@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsListOrgSecretsRequest {
-    
-    public ActionsListOrgSecretsPathParams pathParams;
-    public ActionsListOrgSecretsRequest withPathParams(ActionsListOrgSecretsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ActionsListOrgSecretsRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ActionsListOrgSecretsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public ActionsListOrgSecretsQueryParams queryParams;
-    public ActionsListOrgSecretsRequest withQueryParams(ActionsListOrgSecretsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ActionsListOrgSecretsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
         return this;
     }
     

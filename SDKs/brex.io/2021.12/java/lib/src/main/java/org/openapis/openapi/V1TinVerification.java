@@ -37,10 +37,11 @@ public class V1TinVerification {
      * Verifies a TIN number
      * Performs a basic verification check of a given TIN number and name.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TinVerificationBasicCheckResponse tinVerificationBasicCheck(org.openapis.openapi.models.operations.TinVerificationBasicCheckRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TinVerificationBasicCheckResponse tinVerificationBasicCheck(org.openapis.openapi.models.operations.TinVerificationBasicCheckRequest request, org.openapis.openapi.models.operations.TinVerificationBasicCheckSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/tin-verification/basic-check");
         
@@ -48,14 +49,14 @@ public class V1TinVerification {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TinVerificationBasicCheckQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TinVerificationBasicCheckRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -91,10 +92,11 @@ public class V1TinVerification {
      * EIN Name Lookup with TIN number and retrieves company data
      * Performs an EIN name match using provided TIN Number. Additionally to the name lookup it will lookup company details
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TinVerificationComprehensiveCheckResponse tinVerificationComprehensiveCheck(org.openapis.openapi.models.operations.TinVerificationComprehensiveCheckRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TinVerificationComprehensiveCheckResponse tinVerificationComprehensiveCheck(org.openapis.openapi.models.operations.TinVerificationComprehensiveCheckRequest request, org.openapis.openapi.models.operations.TinVerificationComprehensiveCheckSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/tin-verification/comprehensive-check");
         
@@ -102,14 +104,14 @@ public class V1TinVerification {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TinVerificationComprehensiveCheckQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TinVerificationComprehensiveCheckRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -145,10 +147,11 @@ public class V1TinVerification {
      * EIN Name Lookup with TIN number
      * Performs an EIN name match using provided TIN Number
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TinVerificationNameLookupResponse tinVerificationNameLookup(org.openapis.openapi.models.operations.TinVerificationNameLookupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TinVerificationNameLookupResponse tinVerificationNameLookup(org.openapis.openapi.models.operations.TinVerificationNameLookupRequest request, org.openapis.openapi.models.operations.TinVerificationNameLookupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/tin-verification/name-lookup");
         
@@ -156,14 +159,14 @@ public class V1TinVerification {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TinVerificationNameLookupQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TinVerificationNameLookupRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

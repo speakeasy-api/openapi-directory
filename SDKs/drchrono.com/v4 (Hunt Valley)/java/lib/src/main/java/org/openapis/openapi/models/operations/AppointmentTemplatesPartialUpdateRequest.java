@@ -4,27 +4,34 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppointmentTemplatesPartialUpdateRequest {
-    
-    public AppointmentTemplatesPartialUpdatePathParams pathParams;
-    public AppointmentTemplatesPartialUpdateRequest withPathParams(AppointmentTemplatesPartialUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public AppointmentTemplatesPartialUpdateRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     
-    
-    public AppointmentTemplatesPartialUpdateQueryParams queryParams;
-    public AppointmentTemplatesPartialUpdateRequest withQueryParams(AppointmentTemplatesPartialUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public AppointmentTemplatesPartialUpdateRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=office")
+    public Long office;
+    public AppointmentTemplatesPartialUpdateRequest withOffice(Long office) {
+        this.office = office;
+        return this;
+    }
     
-    public AppointmentTemplatesPartialUpdateSecurity security;
-    public AppointmentTemplatesPartialUpdateRequest withSecurity(AppointmentTemplatesPartialUpdateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=profile")
+    public Long profile;
+    public AppointmentTemplatesPartialUpdateRequest withProfile(Long profile) {
+        this.profile = profile;
         return this;
     }
     

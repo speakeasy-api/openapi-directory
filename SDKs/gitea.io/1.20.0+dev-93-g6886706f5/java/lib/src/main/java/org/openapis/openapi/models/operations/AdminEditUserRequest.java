@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdminEditUserRequest {
-    
-    public AdminEditUserPathParams pathParams;
-    public AdminEditUserRequest withPathParams(AdminEditUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.EditUserOption editUserOption;
+    public AdminEditUserRequest withEditUserOption(org.openapis.openapi.models.shared.EditUserOption editUserOption) {
+        this.editUserOption = editUserOption;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.EditUserOption request;
-    public AdminEditUserRequest withRequest(org.openapis.openapi.models.shared.EditUserOption request) {
-        this.request = request;
+    /**
+     * username of user to edit
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public AdminEditUserRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

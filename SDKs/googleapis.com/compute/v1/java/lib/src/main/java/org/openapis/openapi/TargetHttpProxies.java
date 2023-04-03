@@ -34,25 +34,26 @@ public class TargetHttpProxies {
     /**
      * Retrieves the list of all TargetHttpProxy resources, regional and global, available to the specified project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeTargetHttpProxiesAggregatedListResponse computeTargetHttpProxiesAggregatedList(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesAggregatedListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeTargetHttpProxiesAggregatedListResponse computeTargetHttpProxiesAggregatedList(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesAggregatedListRequest request, org.openapis.openapi.models.operations.ComputeTargetHttpProxiesAggregatedListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesAggregatedListPathParams.class, baseUrl, "/projects/{project}/aggregated/targetHttpProxies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesAggregatedListRequest.class, baseUrl, "/projects/{project}/aggregated/targetHttpProxies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesAggregatedListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesAggregatedListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class TargetHttpProxies {
     /**
      * Deletes the specified TargetHttpProxy resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeTargetHttpProxiesDeleteResponse computeTargetHttpProxiesDelete(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeTargetHttpProxiesDeleteResponse computeTargetHttpProxiesDelete(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesDeleteRequest request, org.openapis.openapi.models.operations.ComputeTargetHttpProxiesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesDeletePathParams.class, baseUrl, "/projects/{project}/global/targetHttpProxies/{targetHttpProxy}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesDeleteRequest.class, baseUrl, "/projects/{project}/global/targetHttpProxies/{targetHttpProxy}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,25 +126,26 @@ public class TargetHttpProxies {
     /**
      * Returns the specified TargetHttpProxy resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeTargetHttpProxiesGetResponse computeTargetHttpProxiesGet(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeTargetHttpProxiesGetResponse computeTargetHttpProxiesGet(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesGetRequest request, org.openapis.openapi.models.operations.ComputeTargetHttpProxiesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesGetPathParams.class, baseUrl, "/projects/{project}/global/targetHttpProxies/{targetHttpProxy}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesGetRequest.class, baseUrl, "/projects/{project}/global/targetHttpProxies/{targetHttpProxy}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -169,27 +172,28 @@ public class TargetHttpProxies {
     /**
      * Creates a TargetHttpProxy resource in the specified project using the data included in the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeTargetHttpProxiesInsertResponse computeTargetHttpProxiesInsert(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeTargetHttpProxiesInsertResponse computeTargetHttpProxiesInsert(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesInsertRequest request, org.openapis.openapi.models.operations.ComputeTargetHttpProxiesInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesInsertPathParams.class, baseUrl, "/projects/{project}/global/targetHttpProxies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesInsertRequest.class, baseUrl, "/projects/{project}/global/targetHttpProxies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "targetHttpProxy", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -216,25 +220,26 @@ public class TargetHttpProxies {
     /**
      * Retrieves the list of TargetHttpProxy resources available to the specified project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeTargetHttpProxiesListResponse computeTargetHttpProxiesList(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeTargetHttpProxiesListResponse computeTargetHttpProxiesList(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesListRequest request, org.openapis.openapi.models.operations.ComputeTargetHttpProxiesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesListPathParams.class, baseUrl, "/projects/{project}/global/targetHttpProxies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesListRequest.class, baseUrl, "/projects/{project}/global/targetHttpProxies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -261,27 +266,28 @@ public class TargetHttpProxies {
     /**
      * Patches the specified TargetHttpProxy resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeTargetHttpProxiesPatchResponse computeTargetHttpProxiesPatch(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeTargetHttpProxiesPatchResponse computeTargetHttpProxiesPatch(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesPatchRequest request, org.openapis.openapi.models.operations.ComputeTargetHttpProxiesPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesPatchPathParams.class, baseUrl, "/projects/{project}/global/targetHttpProxies/{targetHttpProxy}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesPatchRequest.class, baseUrl, "/projects/{project}/global/targetHttpProxies/{targetHttpProxy}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "targetHttpProxy1", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -308,27 +314,28 @@ public class TargetHttpProxies {
     /**
      * Changes the URL map for TargetHttpProxy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeTargetHttpProxiesSetUrlMapResponse computeTargetHttpProxiesSetUrlMap(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesSetUrlMapRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeTargetHttpProxiesSetUrlMapResponse computeTargetHttpProxiesSetUrlMap(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesSetUrlMapRequest request, org.openapis.openapi.models.operations.ComputeTargetHttpProxiesSetUrlMapSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesSetUrlMapPathParams.class, baseUrl, "/projects/{project}/targetHttpProxies/{targetHttpProxy}/setUrlMap", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesSetUrlMapRequest.class, baseUrl, "/projects/{project}/targetHttpProxies/{targetHttpProxy}/setUrlMap", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "urlMapReference", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesSetUrlMapQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeTargetHttpProxiesSetUrlMapRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

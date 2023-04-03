@@ -4,20 +4,21 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MeterValuesGetRequest {
-    
-    public MeterValuesGetPathParams pathParams;
-    public MeterValuesGetRequest withPathParams(MeterValuesGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
+    public OffsetDateTime date;
+    public MeterValuesGetRequest withDate(OffsetDateTime date) {
+        this.date = date;
         return this;
     }
     
-    
-    public MeterValuesGetQueryParams queryParams;
-    public MeterValuesGetRequest withQueryParams(MeterValuesGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public MeterValuesGetRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

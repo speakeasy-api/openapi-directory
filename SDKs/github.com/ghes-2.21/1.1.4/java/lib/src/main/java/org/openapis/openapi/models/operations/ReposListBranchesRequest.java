@@ -4,20 +4,50 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposListBranchesRequest {
-    
-    public ReposListBranchesPathParams pathParams;
-    public ReposListBranchesRequest withPathParams(ReposListBranchesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposListBranchesRequest withOwner(String owner) {
+        this.owner = owner;
         return this;
     }
     
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ReposListBranchesRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public ReposListBranchesQueryParams queryParams;
-    public ReposListBranchesRequest withQueryParams(ReposListBranchesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ReposListBranchesRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Setting to `true` returns only protected branches. When set to `false`, only unprotected branches are returned. Omitting this parameter returns all branches.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=protected")
+    public Boolean protected_;
+    public ReposListBranchesRequest withProtected(Boolean protected_) {
+        this.protected_ = protected_;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposListBranchesRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

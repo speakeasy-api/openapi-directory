@@ -4,20 +4,57 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStatisticsChargingRequest {
-    
-    public GetStatisticsChargingQueryParams queryParams;
-    public GetStatisticsChargingRequest withQueryParams(GetStatisticsChargingQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter statistics to only include this charging location
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=chargingLocationId")
+    public String chargingLocationId;
+    public GetStatisticsChargingRequest withChargingLocationId(String chargingLocationId) {
+        this.chargingLocationId = chargingLocationId;
         return this;
     }
     
+    /**
+     * Latest date to include in the response (defaults to current date/time)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
+    public LocalDate endDate;
+    public GetStatisticsChargingRequest withEndDate(LocalDate endDate) {
+        this.endDate = endDate;
+        return this;
+    }
     
-    public GetStatisticsChargingSecurity security;
-    public GetStatisticsChargingRequest withSecurity(GetStatisticsChargingSecurity security) {
-        this.security = security;
+    /**
+     * The unit of time the data will be cut into before aggregate statistics are applied. For instance if you choose DAY, then each item in the returned array will cover 1 day.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resolution")
+    public GetStatisticsChargingResolutionEnum resolution;
+    public GetStatisticsChargingRequest withResolution(GetStatisticsChargingResolutionEnum resolution) {
+        this.resolution = resolution;
+        return this;
+    }
+    
+    /**
+     * Earliest date to include in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
+    public LocalDate startDate;
+    public GetStatisticsChargingRequest withStartDate(LocalDate startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    
+    /**
+     * Filter statistics to only include this vehicle
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicleId")
+    public String vehicleId;
+    public GetStatisticsChargingRequest withVehicleId(String vehicleId) {
+        this.vehicleId = vehicleId;
         return this;
     }
     

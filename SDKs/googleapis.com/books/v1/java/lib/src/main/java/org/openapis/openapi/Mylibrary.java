@@ -35,25 +35,26 @@ public class Mylibrary {
     /**
      * Deletes an annotation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BooksMylibraryAnnotationsDeleteResponse booksMylibraryAnnotationsDelete(org.openapis.openapi.models.operations.BooksMylibraryAnnotationsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BooksMylibraryAnnotationsDeleteResponse booksMylibraryAnnotationsDelete(org.openapis.openapi.models.operations.BooksMylibraryAnnotationsDeleteRequest request, org.openapis.openapi.models.operations.BooksMylibraryAnnotationsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BooksMylibraryAnnotationsDeletePathParams.class, baseUrl, "/books/v1/mylibrary/annotations/{annotationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BooksMylibraryAnnotationsDeleteRequest.class, baseUrl, "/books/v1/mylibrary/annotations/{annotationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksMylibraryAnnotationsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksMylibraryAnnotationsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -80,27 +81,28 @@ public class Mylibrary {
     /**
      * Inserts a new annotation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BooksMylibraryAnnotationsInsertResponse booksMylibraryAnnotationsInsert(org.openapis.openapi.models.operations.BooksMylibraryAnnotationsInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BooksMylibraryAnnotationsInsertResponse booksMylibraryAnnotationsInsert(org.openapis.openapi.models.operations.BooksMylibraryAnnotationsInsertRequest request, org.openapis.openapi.models.operations.BooksMylibraryAnnotationsInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/books/v1/mylibrary/annotations");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "annotation", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksMylibraryAnnotationsInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksMylibraryAnnotationsInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,10 +129,11 @@ public class Mylibrary {
     /**
      * Retrieves a list of annotations, possibly filtered.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BooksMylibraryAnnotationsListResponse booksMylibraryAnnotationsList(org.openapis.openapi.models.operations.BooksMylibraryAnnotationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BooksMylibraryAnnotationsListResponse booksMylibraryAnnotationsList(org.openapis.openapi.models.operations.BooksMylibraryAnnotationsListRequest request, org.openapis.openapi.models.operations.BooksMylibraryAnnotationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/books/v1/mylibrary/annotations");
         
@@ -138,14 +141,14 @@ public class Mylibrary {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksMylibraryAnnotationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksMylibraryAnnotationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -172,10 +175,11 @@ public class Mylibrary {
     /**
      * Gets the summary of specified layers.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BooksMylibraryAnnotationsSummaryResponse booksMylibraryAnnotationsSummary(org.openapis.openapi.models.operations.BooksMylibraryAnnotationsSummaryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BooksMylibraryAnnotationsSummaryResponse booksMylibraryAnnotationsSummary(org.openapis.openapi.models.operations.BooksMylibraryAnnotationsSummaryRequest request, org.openapis.openapi.models.operations.BooksMylibraryAnnotationsSummarySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/books/v1/mylibrary/annotations/summary");
         
@@ -183,14 +187,14 @@ public class Mylibrary {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksMylibraryAnnotationsSummaryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksMylibraryAnnotationsSummaryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -217,27 +221,28 @@ public class Mylibrary {
     /**
      * Updates an existing annotation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BooksMylibraryAnnotationsUpdateResponse booksMylibraryAnnotationsUpdate(org.openapis.openapi.models.operations.BooksMylibraryAnnotationsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BooksMylibraryAnnotationsUpdateResponse booksMylibraryAnnotationsUpdate(org.openapis.openapi.models.operations.BooksMylibraryAnnotationsUpdateRequest request, org.openapis.openapi.models.operations.BooksMylibraryAnnotationsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BooksMylibraryAnnotationsUpdatePathParams.class, baseUrl, "/books/v1/mylibrary/annotations/{annotationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BooksMylibraryAnnotationsUpdateRequest.class, baseUrl, "/books/v1/mylibrary/annotations/{annotationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "annotation", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksMylibraryAnnotationsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksMylibraryAnnotationsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -264,25 +269,26 @@ public class Mylibrary {
     /**
      * Adds a volume to a bookshelf.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BooksMylibraryBookshelvesAddVolumeResponse booksMylibraryBookshelvesAddVolume(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesAddVolumeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BooksMylibraryBookshelvesAddVolumeResponse booksMylibraryBookshelvesAddVolume(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesAddVolumeRequest request, org.openapis.openapi.models.operations.BooksMylibraryBookshelvesAddVolumeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesAddVolumePathParams.class, baseUrl, "/books/v1/mylibrary/bookshelves/{shelf}/addVolume", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesAddVolumeRequest.class, baseUrl, "/books/v1/mylibrary/bookshelves/{shelf}/addVolume", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesAddVolumeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesAddVolumeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -309,25 +315,26 @@ public class Mylibrary {
     /**
      * Clears all volumes from a bookshelf.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BooksMylibraryBookshelvesClearVolumesResponse booksMylibraryBookshelvesClearVolumes(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesClearVolumesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BooksMylibraryBookshelvesClearVolumesResponse booksMylibraryBookshelvesClearVolumes(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesClearVolumesRequest request, org.openapis.openapi.models.operations.BooksMylibraryBookshelvesClearVolumesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesClearVolumesPathParams.class, baseUrl, "/books/v1/mylibrary/bookshelves/{shelf}/clearVolumes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesClearVolumesRequest.class, baseUrl, "/books/v1/mylibrary/bookshelves/{shelf}/clearVolumes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesClearVolumesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesClearVolumesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -354,25 +361,26 @@ public class Mylibrary {
     /**
      * Retrieves metadata for a specific bookshelf belonging to the authenticated user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BooksMylibraryBookshelvesGetResponse booksMylibraryBookshelvesGet(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BooksMylibraryBookshelvesGetResponse booksMylibraryBookshelvesGet(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesGetRequest request, org.openapis.openapi.models.operations.BooksMylibraryBookshelvesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesGetPathParams.class, baseUrl, "/books/v1/mylibrary/bookshelves/{shelf}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesGetRequest.class, baseUrl, "/books/v1/mylibrary/bookshelves/{shelf}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -399,10 +407,11 @@ public class Mylibrary {
     /**
      * Retrieves a list of bookshelves belonging to the authenticated user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BooksMylibraryBookshelvesListResponse booksMylibraryBookshelvesList(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BooksMylibraryBookshelvesListResponse booksMylibraryBookshelvesList(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesListRequest request, org.openapis.openapi.models.operations.BooksMylibraryBookshelvesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/books/v1/mylibrary/bookshelves");
         
@@ -410,14 +419,14 @@ public class Mylibrary {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -444,25 +453,26 @@ public class Mylibrary {
     /**
      * Moves a volume within a bookshelf.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BooksMylibraryBookshelvesMoveVolumeResponse booksMylibraryBookshelvesMoveVolume(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesMoveVolumeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BooksMylibraryBookshelvesMoveVolumeResponse booksMylibraryBookshelvesMoveVolume(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesMoveVolumeRequest request, org.openapis.openapi.models.operations.BooksMylibraryBookshelvesMoveVolumeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesMoveVolumePathParams.class, baseUrl, "/books/v1/mylibrary/bookshelves/{shelf}/moveVolume", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesMoveVolumeRequest.class, baseUrl, "/books/v1/mylibrary/bookshelves/{shelf}/moveVolume", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesMoveVolumeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesMoveVolumeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -489,25 +499,26 @@ public class Mylibrary {
     /**
      * Removes a volume from a bookshelf.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BooksMylibraryBookshelvesRemoveVolumeResponse booksMylibraryBookshelvesRemoveVolume(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesRemoveVolumeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BooksMylibraryBookshelvesRemoveVolumeResponse booksMylibraryBookshelvesRemoveVolume(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesRemoveVolumeRequest request, org.openapis.openapi.models.operations.BooksMylibraryBookshelvesRemoveVolumeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesRemoveVolumePathParams.class, baseUrl, "/books/v1/mylibrary/bookshelves/{shelf}/removeVolume", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesRemoveVolumeRequest.class, baseUrl, "/books/v1/mylibrary/bookshelves/{shelf}/removeVolume", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesRemoveVolumeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesRemoveVolumeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -534,25 +545,26 @@ public class Mylibrary {
     /**
      * Gets volume information for volumes on a bookshelf.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BooksMylibraryBookshelvesVolumesListResponse booksMylibraryBookshelvesVolumesList(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesVolumesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BooksMylibraryBookshelvesVolumesListResponse booksMylibraryBookshelvesVolumesList(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesVolumesListRequest request, org.openapis.openapi.models.operations.BooksMylibraryBookshelvesVolumesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesVolumesListPathParams.class, baseUrl, "/books/v1/mylibrary/bookshelves/{shelf}/volumes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesVolumesListRequest.class, baseUrl, "/books/v1/mylibrary/bookshelves/{shelf}/volumes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesVolumesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksMylibraryBookshelvesVolumesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -579,25 +591,26 @@ public class Mylibrary {
     /**
      * Retrieves my reading position information for a volume.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BooksMylibraryReadingpositionsGetResponse booksMylibraryReadingpositionsGet(org.openapis.openapi.models.operations.BooksMylibraryReadingpositionsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BooksMylibraryReadingpositionsGetResponse booksMylibraryReadingpositionsGet(org.openapis.openapi.models.operations.BooksMylibraryReadingpositionsGetRequest request, org.openapis.openapi.models.operations.BooksMylibraryReadingpositionsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BooksMylibraryReadingpositionsGetPathParams.class, baseUrl, "/books/v1/mylibrary/readingpositions/{volumeId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BooksMylibraryReadingpositionsGetRequest.class, baseUrl, "/books/v1/mylibrary/readingpositions/{volumeId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksMylibraryReadingpositionsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksMylibraryReadingpositionsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -624,25 +637,26 @@ public class Mylibrary {
     /**
      * Sets my reading position information for a volume.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BooksMylibraryReadingpositionsSetPositionResponse booksMylibraryReadingpositionsSetPosition(org.openapis.openapi.models.operations.BooksMylibraryReadingpositionsSetPositionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BooksMylibraryReadingpositionsSetPositionResponse booksMylibraryReadingpositionsSetPosition(org.openapis.openapi.models.operations.BooksMylibraryReadingpositionsSetPositionRequest request, org.openapis.openapi.models.operations.BooksMylibraryReadingpositionsSetPositionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BooksMylibraryReadingpositionsSetPositionPathParams.class, baseUrl, "/books/v1/mylibrary/readingpositions/{volumeId}/setPosition", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BooksMylibraryReadingpositionsSetPositionRequest.class, baseUrl, "/books/v1/mylibrary/readingpositions/{volumeId}/setPosition", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksMylibraryReadingpositionsSetPositionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksMylibraryReadingpositionsSetPositionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

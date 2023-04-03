@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AcceptEnvironmentAccountConnectionXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AcceptEnvironmentAccountConnectionHeaders;
 import org.openapis.openapi.models.operations.AcceptEnvironmentAccountConnectionRequest;
 import org.openapis.openapi.models.operations.AcceptEnvironmentAccountConnectionResponse;
 import org.openapis.openapi.models.shared.AcceptEnvironmentAccountConnectionInput;
@@ -28,27 +27,23 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AcceptEnvironmentAccountConnectionRequest req = new AcceptEnvironmentAccountConnectionRequest() {{
-                headers = new AcceptEnvironmentAccountConnectionHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "AwsProton20200720.AcceptEnvironmentAccountConnection";
+                acceptEnvironmentAccountConnectionInput = new AcceptEnvironmentAccountConnectionInput() {{
+                    id = "corrupti";
                 }};
-                request = new AcceptEnvironmentAccountConnectionInput() {{
-                    id = "illum";
-                }};
-            }};            
+                xAmzAlgorithm = "provident";
+                xAmzContentSha256 = "distinctio";
+                xAmzCredential = "quibusdam";
+                xAmzDate = "unde";
+                xAmzSecurityToken = "nulla";
+                xAmzSignature = "corrupti";
+                xAmzSignedHeaders = "illum";
+                xAmzTarget = "AwsProton20200720.AcceptEnvironmentAccountConnection";
+            }}            
 
             AcceptEnvironmentAccountConnectionResponse res = sdk.acceptEnvironmentAccountConnection(req);
 
@@ -62,7 +57,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

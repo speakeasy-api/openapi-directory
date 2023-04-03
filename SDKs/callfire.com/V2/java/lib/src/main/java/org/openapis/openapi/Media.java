@@ -35,10 +35,11 @@ public class Media {
      * Create media
      * Uploads media file to account, acceptable media formats: bmp, gif, jpg, m4a, mp3, mp4, png, wav
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateMediaResponse createMedia(org.openapis.openapi.models.operations.CreateMediaRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateMediaResponse createMedia(org.openapis.openapi.models.operations.CreateMediaRequestBody request, org.openapis.openapi.models.operations.CreateMediaSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/media");
         
@@ -52,7 +53,7 @@ public class Media {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -88,10 +89,11 @@ public class Media {
      * Find media
      * Find media files created by user
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindMediaResponse findMedia(org.openapis.openapi.models.operations.FindMediaRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FindMediaResponse findMedia(org.openapis.openapi.models.operations.FindMediaRequest request, org.openapis.openapi.models.operations.FindMediaSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/media");
         
@@ -99,14 +101,14 @@ public class Media {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindMediaQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindMediaRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -142,25 +144,26 @@ public class Media {
      * Get a specific media
      * Get media resource by id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMediaResponse getMedia(org.openapis.openapi.models.operations.GetMediaRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMediaResponse getMedia(org.openapis.openapi.models.operations.GetMediaRequest request, org.openapis.openapi.models.operations.GetMediaSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMediaPathParams.class, baseUrl, "/media/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMediaRequest.class, baseUrl, "/media/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMediaQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMediaRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -196,19 +199,20 @@ public class Media {
      * Download media by extension
      * Download a media file. Available types of files: bmp, gif, jpg, m4a, mp3, mp4, png, wav. Content type in response depends on 'extension' parameter, e.g. image/jpeg, image/png, audio/mp3, etc
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMediaDataResponse getMediaData(org.openapis.openapi.models.operations.GetMediaDataRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMediaDataResponse getMediaData(org.openapis.openapi.models.operations.GetMediaDataRequest request, org.openapis.openapi.models.operations.GetMediaDataSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMediaDataPathParams.class, baseUrl, "/media/{id}.{extension}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMediaDataRequest.class, baseUrl, "/media/{id}.{extension}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -275,19 +279,20 @@ public class Media {
      * Download a MP3 media
      * Download a MP3 media, endpoint returns application/binary content-type
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMediaDataBinaryResponse getMediaDataBinary(org.openapis.openapi.models.operations.GetMediaDataBinaryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMediaDataBinaryResponse getMediaDataBinary(org.openapis.openapi.models.operations.GetMediaDataBinaryRequest request, org.openapis.openapi.models.operations.GetMediaDataBinarySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMediaDataBinaryPathParams.class, baseUrl, "/media/{id}/file", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMediaDataBinaryRequest.class, baseUrl, "/media/{id}/file", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -314,19 +319,20 @@ public class Media {
      * Download media by extension
      * Download a media file. Available types of files: bmp, gif, jpg, m4a, mp3, mp4, png, wav. Content type in response depends on 'extension' parameter, e.g. image/jpeg, image/png, audio/mp3, etc
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMediaDataByKeyResponse getMediaDataByKey(org.openapis.openapi.models.operations.GetMediaDataByKeyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMediaDataByKeyResponse getMediaDataByKey(org.openapis.openapi.models.operations.GetMediaDataByKeyRequest request, org.openapis.openapi.models.operations.GetMediaDataByKeySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMediaDataByKeyPathParams.class, baseUrl, "/media/public/{key}.{extension}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMediaDataByKeyRequest.class, baseUrl, "/media/public/{key}.{extension}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

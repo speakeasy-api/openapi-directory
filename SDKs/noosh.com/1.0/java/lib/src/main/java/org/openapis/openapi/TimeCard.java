@@ -39,7 +39,7 @@ public class TimeCard {
      */
     public org.openapis.openapi.models.operations.GetMyTimeCardResponse getMyTimeCard(org.openapis.openapi.models.operations.GetMyTimeCardRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMyTimeCardPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/myTimeCards/{timeCard_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMyTimeCardRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/myTimeCards/{timeCard_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -158,7 +158,7 @@ public class TimeCard {
      */
     public org.openapis.openapi.models.operations.GetMyTimeCardListResponse getMyTimeCardList(org.openapis.openapi.models.operations.GetMyTimeCardListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMyTimeCardListPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/myTimeCards", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMyTimeCardListRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/myTimeCards", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -277,7 +277,7 @@ public class TimeCard {
      */
     public org.openapis.openapi.models.operations.GetReceivedTimeCardResponse getReceivedTimeCard(org.openapis.openapi.models.operations.GetReceivedTimeCardRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetReceivedTimeCardPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/receivedTimeCards/{timeCard_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetReceivedTimeCardRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/receivedTimeCards/{timeCard_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -396,7 +396,7 @@ public class TimeCard {
      */
     public org.openapis.openapi.models.operations.GetReceivedTimeCardListResponse getReceivedTimeCardList(org.openapis.openapi.models.operations.GetReceivedTimeCardListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetReceivedTimeCardListPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/receivedTimeCards", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetReceivedTimeCardListRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/receivedTimeCards", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

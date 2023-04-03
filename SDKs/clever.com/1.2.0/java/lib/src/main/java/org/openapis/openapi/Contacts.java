@@ -38,7 +38,7 @@ public class Contacts {
      */
     public org.openapis.openapi.models.operations.GetContactResponse getContact(org.openapis.openapi.models.operations.GetContactRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContactPathParams.class, baseUrl, "/contacts/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContactRequest.class, baseUrl, "/contacts/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -91,7 +91,7 @@ public class Contacts {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetContactsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetContactsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -130,7 +130,7 @@ public class Contacts {
      */
     public org.openapis.openapi.models.operations.GetDistrictForStudentContactResponse getDistrictForStudentContact(org.openapis.openapi.models.operations.GetDistrictForStudentContactRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDistrictForStudentContactPathParams.class, baseUrl, "/contacts/{id}/district", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDistrictForStudentContactRequest.class, baseUrl, "/contacts/{id}/district", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -177,7 +177,7 @@ public class Contacts {
      */
     public org.openapis.openapi.models.operations.GetStudentForContactResponse getStudentForContact(org.openapis.openapi.models.operations.GetStudentForContactRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStudentForContactPathParams.class, baseUrl, "/contacts/{id}/student", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStudentForContactRequest.class, baseUrl, "/contacts/{id}/student", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

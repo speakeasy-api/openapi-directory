@@ -34,24 +34,25 @@ public class AlbumsEssentials {
     /**
      * Create an album
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateAlbumResponse createAlbum(org.openapis.openapi.models.operations.CreateAlbumRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateAlbumResponse createAlbum(org.openapis.openapi.models.operations.CreateAlbumRequest request, org.openapis.openapi.models.operations.CreateAlbumSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateAlbumPathParams.class, baseUrl, "/users/{user_id}/albums", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateAlbumRequest.class, baseUrl, "/users/{user_id}/albums", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -86,10 +87,11 @@ public class AlbumsEssentials {
     /**
      * Create an album
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateAlbumAlt1Response createAlbumAlt1(org.openapis.openapi.models.operations.CreateAlbumAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateAlbumAlt1Response createAlbumAlt1(org.openapis.openapi.models.operations.CreateAlbumAlt1RequestBody request, org.openapis.openapi.models.operations.CreateAlbumAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me/albums");
         
@@ -103,7 +105,7 @@ public class AlbumsEssentials {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -138,19 +140,20 @@ public class AlbumsEssentials {
     /**
      * Delete an album
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteAlbumResponse deleteAlbum(org.openapis.openapi.models.operations.DeleteAlbumRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteAlbumResponse deleteAlbum(org.openapis.openapi.models.operations.DeleteAlbumRequest request, org.openapis.openapi.models.operations.DeleteAlbumSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAlbumPathParams.class, baseUrl, "/users/{user_id}/albums/{album_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAlbumRequest.class, baseUrl, "/users/{user_id}/albums/{album_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -179,19 +182,20 @@ public class AlbumsEssentials {
     /**
      * Delete an album
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteAlbumAlt1Response deleteAlbumAlt1(org.openapis.openapi.models.operations.DeleteAlbumAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteAlbumAlt1Response deleteAlbumAlt1(org.openapis.openapi.models.operations.DeleteAlbumAlt1Request request, org.openapis.openapi.models.operations.DeleteAlbumAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAlbumAlt1PathParams.class, baseUrl, "/me/albums/{album_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAlbumAlt1Request.class, baseUrl, "/me/albums/{album_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -220,21 +224,22 @@ public class AlbumsEssentials {
     /**
      * Edit an album
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EditAlbumResponse editAlbum(org.openapis.openapi.models.operations.EditAlbumRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EditAlbumResponse editAlbum(org.openapis.openapi.models.operations.EditAlbumRequest request, org.openapis.openapi.models.operations.EditAlbumSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditAlbumPathParams.class, baseUrl, "/users/{user_id}/albums/{album_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditAlbumRequest.class, baseUrl, "/users/{user_id}/albums/{album_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -269,21 +274,22 @@ public class AlbumsEssentials {
     /**
      * Edit an album
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EditAlbumAlt1Response editAlbumAlt1(org.openapis.openapi.models.operations.EditAlbumAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.EditAlbumAlt1Response editAlbumAlt1(org.openapis.openapi.models.operations.EditAlbumAlt1Request request, org.openapis.openapi.models.operations.EditAlbumAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditAlbumAlt1PathParams.class, baseUrl, "/me/albums/{album_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditAlbumAlt1Request.class, baseUrl, "/me/albums/{album_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -323,7 +329,7 @@ public class AlbumsEssentials {
      */
     public org.openapis.openapi.models.operations.GetAlbumResponse getAlbum(org.openapis.openapi.models.operations.GetAlbumRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAlbumPathParams.class, baseUrl, "/users/{user_id}/albums/{album_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAlbumRequest.class, baseUrl, "/users/{user_id}/albums/{album_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -370,7 +376,7 @@ public class AlbumsEssentials {
      */
     public org.openapis.openapi.models.operations.GetAlbumAlt1Response getAlbumAlt1(org.openapis.openapi.models.operations.GetAlbumAlt1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAlbumAlt1PathParams.class, baseUrl, "/me/albums/{album_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAlbumAlt1Request.class, baseUrl, "/me/albums/{album_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -417,13 +423,13 @@ public class AlbumsEssentials {
      */
     public org.openapis.openapi.models.operations.GetAlbumsResponse getAlbums(org.openapis.openapi.models.operations.GetAlbumsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAlbumsPathParams.class, baseUrl, "/users/{user_id}/albums", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAlbumsRequest.class, baseUrl, "/users/{user_id}/albums", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAlbumsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAlbumsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -476,7 +482,7 @@ public class AlbumsEssentials {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAlbumsAlt1QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAlbumsAlt1Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

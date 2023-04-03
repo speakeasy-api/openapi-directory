@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRemoteServersIdConfigurationFileRequest {
-    
-    public GetRemoteServersIdConfigurationFilePathParams pathParams;
-    public GetRemoteServersIdConfigurationFileRequest withPathParams(GetRemoteServersIdConfigurationFilePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Remote Server ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public GetRemoteServersIdConfigurationFileRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLogConfigurationRequest {
-    
-    public GetLogConfigurationPathParams pathParams;
-    public GetLogConfigurationRequest withPathParams(GetLogConfigurationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of a single logger.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=logger")
+    public String logger;
+    public GetLogConfigurationRequest withLogger(String logger) {
+        this.logger = logger;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReferencesByGlobalIdRequest {
-    
-    public ReferencesByGlobalIdPathParams pathParams;
-    public ReferencesByGlobalIdRequest withPathParams(ReferencesByGlobalIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Global identifier for an artifact version.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=globalId")
+    public Long globalId;
+    public ReferencesByGlobalIdRequest withGlobalId(Long globalId) {
+        this.globalId = globalId;
         return this;
     }
     

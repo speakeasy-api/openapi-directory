@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccessSaveRequest {
-    
-    public AccessSavePathParams pathParams;
-    public AccessSaveRequest withPathParams(AccessSavePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filename to save
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=filename")
+    public String filename;
+    public AccessSaveRequest withFilename(String filename) {
+        this.filename = filename;
         return this;
     }
     

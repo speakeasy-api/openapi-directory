@@ -34,25 +34,26 @@ public class PretargetingConfig {
     /**
      * Deletes an existing pretargeting config.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigDeleteResponse adexchangebuyerPretargetingConfigDelete(org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigDeleteResponse adexchangebuyerPretargetingConfigDelete(org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigDeleteRequest request, org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigDeletePathParams.class, baseUrl, "/pretargetingconfigs/{accountId}/{configId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigDeleteRequest.class, baseUrl, "/pretargetingconfigs/{accountId}/{configId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -73,25 +74,26 @@ public class PretargetingConfig {
     /**
      * Gets a specific pretargeting configuration
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigGetResponse adexchangebuyerPretargetingConfigGet(org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigGetResponse adexchangebuyerPretargetingConfigGet(org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigGetRequest request, org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigGetPathParams.class, baseUrl, "/pretargetingconfigs/{accountId}/{configId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigGetRequest.class, baseUrl, "/pretargetingconfigs/{accountId}/{configId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -118,27 +120,28 @@ public class PretargetingConfig {
     /**
      * Inserts a new pretargeting configuration.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigInsertResponse adexchangebuyerPretargetingConfigInsert(org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigInsertResponse adexchangebuyerPretargetingConfigInsert(org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigInsertRequest request, org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigInsertPathParams.class, baseUrl, "/pretargetingconfigs/{accountId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigInsertRequest.class, baseUrl, "/pretargetingconfigs/{accountId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "pretargetingConfig", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -165,25 +168,26 @@ public class PretargetingConfig {
     /**
      * Retrieves a list of the authenticated user's pretargeting configurations.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigListResponse adexchangebuyerPretargetingConfigList(org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigListResponse adexchangebuyerPretargetingConfigList(org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigListRequest request, org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigListPathParams.class, baseUrl, "/pretargetingconfigs/{accountId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigListRequest.class, baseUrl, "/pretargetingconfigs/{accountId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -210,27 +214,28 @@ public class PretargetingConfig {
     /**
      * Updates an existing pretargeting config. This method supports patch semantics.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigPatchResponse adexchangebuyerPretargetingConfigPatch(org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigPatchResponse adexchangebuyerPretargetingConfigPatch(org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigPatchRequest request, org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigPatchPathParams.class, baseUrl, "/pretargetingconfigs/{accountId}/{configId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigPatchRequest.class, baseUrl, "/pretargetingconfigs/{accountId}/{configId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "pretargetingConfig", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -257,27 +262,28 @@ public class PretargetingConfig {
     /**
      * Updates an existing pretargeting config.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigUpdateResponse adexchangebuyerPretargetingConfigUpdate(org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigUpdateResponse adexchangebuyerPretargetingConfigUpdate(org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigUpdateRequest request, org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigUpdatePathParams.class, baseUrl, "/pretargetingconfigs/{accountId}/{configId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigUpdateRequest.class, baseUrl, "/pretargetingconfigs/{accountId}/{configId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "pretargetingConfig", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdexchangebuyerPretargetingConfigUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateDocRequest {
-    
-    public CreateDocHeaders headers;
-    public CreateDocRequest withHeaders(CreateDocHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * Doc object
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Doc request;
-    public CreateDocRequest withRequest(org.openapis.openapi.models.shared.Doc request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Doc doc;
+    public CreateDocRequest withDoc(org.openapis.openapi.models.shared.Doc doc) {
+        this.doc = doc;
         return this;
     }
     
-    
-    public CreateDocSecurity security;
-    public CreateDocRequest withSecurity(CreateDocSecurity security) {
-        this.security = security;
+    /**
+     * Version number of your docs project, for example, v3.0. To see all valid versions for your docs project call https://docs.readme.com/developers/reference/version#getversions.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-readme-version")
+    public String xReadmeVersion;
+    public CreateDocRequest withXReadmeVersion(String xReadmeVersion) {
+        this.xReadmeVersion = xReadmeVersion;
         return this;
     }
     

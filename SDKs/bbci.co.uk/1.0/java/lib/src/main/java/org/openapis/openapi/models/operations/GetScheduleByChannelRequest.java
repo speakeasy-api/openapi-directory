@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetScheduleByChannelRequest {
-    
-    public GetScheduleByChannelPathParams pathParams;
-    public GetScheduleByChannelRequest withPathParams(GetScheduleByChannelPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Whether to return all, or available programmes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=availability")
+    public org.openapis.openapi.models.shared.AvailabilityEnum availability;
+    public GetScheduleByChannelRequest withAvailability(org.openapis.openapi.models.shared.AvailabilityEnum availability) {
+        this.availability = availability;
         return this;
     }
     
+    /**
+     * The channel identifier to limit results to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel")
+    public String channel;
+    public GetScheduleByChannelRequest withChannel(String channel) {
+        this.channel = channel;
+        return this;
+    }
     
-    public GetScheduleByChannelQueryParams queryParams;
-    public GetScheduleByChannelRequest withQueryParams(GetScheduleByChannelQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The date to return the schedule for, yyyy-mm-dd format
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=date")
+    public String date;
+    public GetScheduleByChannelRequest withDate(String date) {
+        this.date = date;
+        return this;
+    }
+    
+    /**
+     * The language for any applicable localised strings.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public org.openapis.openapi.models.shared.LangEnum lang;
+    public GetScheduleByChannelRequest withLang(org.openapis.openapi.models.shared.LangEnum lang) {
+        this.lang = lang;
+        return this;
+    }
+    
+    /**
+     * The rights group to limit results to.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rights")
+    public org.openapis.openapi.models.shared.RightsEnum rights;
+    public GetScheduleByChannelRequest withRights(org.openapis.openapi.models.shared.RightsEnum rights) {
+        this.rights = rights;
         return this;
     }
     

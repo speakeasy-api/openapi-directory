@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkSwitchSettingsMtuRequest {
-    
-    public GetNetworkSwitchSettingsMtuPathParams pathParams;
-    public GetNetworkSwitchSettingsMtuRequest withPathParams(GetNetworkSwitchSettingsMtuPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkSwitchSettingsMtuRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

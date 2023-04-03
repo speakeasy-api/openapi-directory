@@ -4,20 +4,53 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMetadataOfAllChannelsRequest {
-    
-    public GetMetadataOfAllChannelsQueryParams queryParams;
-    public GetMetadataOfAllChannelsRequest withQueryParams(GetMetadataOfAllChannelsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The version of the API you wish to use.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Ably-Version")
+    public String xAblyVersion;
+    public GetMetadataOfAllChannelsRequest withXAblyVersion(String xAblyVersion) {
+        this.xAblyVersion = xAblyVersion;
         return this;
     }
     
+    /**
+     * optionally specifies whether to return just channel names (by=id) or ChannelDetails (by=value)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=by")
+    public GetMetadataOfAllChannelsByEnum by;
+    public GetMetadataOfAllChannelsRequest withBy(GetMetadataOfAllChannelsByEnum by) {
+        this.by = by;
+        return this;
+    }
     
-    public GetMetadataOfAllChannelsHeaders headers;
-    public GetMetadataOfAllChannelsRequest withHeaders(GetMetadataOfAllChannelsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The response format you would like
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public org.openapis.openapi.models.shared.ResponseFormatEnum format;
+    public GetMetadataOfAllChannelsRequest withFormat(org.openapis.openapi.models.shared.ResponseFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetMetadataOfAllChannelsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Optionally limits the query to only those channels whose name starts with the given prefix
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prefix")
+    public String prefix;
+    public GetMetadataOfAllChannelsRequest withPrefix(String prefix) {
+        this.prefix = prefix;
         return this;
     }
     

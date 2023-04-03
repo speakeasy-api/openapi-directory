@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OneCertRequest {
-    
-    public OneCertPathParams pathParams;
-    public OneCertRequest withPathParams(OneCertPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public OneCertSecurity security;
-    public OneCertRequest withSecurity(OneCertSecurity security) {
-        this.security = security;
+    /**
+     * The auth. config id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public OneCertRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

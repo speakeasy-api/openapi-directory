@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteArtifactRequest {
-    
-    public DeleteArtifactPathParams pathParams;
-    public DeleteArtifactRequest withPathParams(DeleteArtifactPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The artifact ID.  Can be a string (client-provided) or integer (server-generated) representing the unique artifact identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifactId")
+    public String artifactId;
+    public DeleteArtifactRequest withArtifactId(String artifactId) {
+        this.artifactId = artifactId;
         return this;
     }
     

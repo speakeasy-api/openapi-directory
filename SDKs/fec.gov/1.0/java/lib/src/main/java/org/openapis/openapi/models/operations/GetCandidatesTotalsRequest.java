@@ -4,13 +4,290 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCandidatesTotalsRequest {
+    /**
+     * API key for https://api.data.gov. Get one at https://api.data.gov/signup.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetCandidatesTotalsRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public GetCandidatesTotalsQueryParams queryParams;
-    public GetCandidatesTotalsRequest withQueryParams(GetCandidatesTotalsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A unique identifier assigned to each candidate registered with the FEC.
+     * If a person runs for several offices, that person will have separate candidate IDs for each office.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=candidate_id")
+    public String[] candidateId;
+    public GetCandidatesTotalsRequest withCandidateId(String[] candidateId) {
+        this.candidateId = candidateId;
+        return this;
+    }
+    
+    /**
+     * Filter records to only those that were applicable to a given
+     * two-year period.The cycle begins with an odd year and is named
+     * for its ending, even year.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cycle")
+    public Integer[] cycle;
+    public GetCandidatesTotalsRequest withCycle(Integer[] cycle) {
+        this.cycle = cycle;
+        return this;
+    }
+    
+    /**
+     * District of candidate
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=district")
+    public String[] district;
+    public GetCandidatesTotalsRequest withDistrict(String[] district) {
+        this.district = district;
+        return this;
+    }
+    
+    /**
+     * `True` indicates that full election period of a candidate.
+     * `False` indicates that two year election cycle.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=election_full")
+    public Boolean electionFull;
+    public GetCandidatesTotalsRequest withElectionFull(Boolean electionFull) {
+        this.electionFull = electionFull;
+        return this;
+    }
+    
+    /**
+     * Filter records to only those that were applicable to a given
+     * two-year period.The cycle begins with an odd year and is named
+     * for its ending, even year.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=election_year")
+    public Integer[] electionYear;
+    public GetCandidatesTotalsRequest withElectionYear(Integer[] electionYear) {
+        this.electionYear = electionYear;
+        return this;
+    }
+    
+    /**
+     * A boolean the describes if a presidential candidate has accepted federal funds. The flag will be false for House and Senate candidates.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=federal_funds_flag")
+    public Boolean federalFundsFlag;
+    public GetCandidatesTotalsRequest withFederalFundsFlag(Boolean federalFundsFlag) {
+        this.federalFundsFlag = federalFundsFlag;
+        return this;
+    }
+    
+    /**
+     * A boolean that describes if a candidate's committee has ever received any receipts for their campaign for this particular office. (Candidates have separate candidate IDs for each office.)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=has_raised_funds")
+    public Boolean hasRaisedFunds;
+    public GetCandidatesTotalsRequest withHasRaisedFunds(Boolean hasRaisedFunds) {
+        this.hasRaisedFunds = hasRaisedFunds;
+        return this;
+    }
+    
+    /**
+     *  Candidates who are actively seeking office. If no value is specified, all candidates
+     * are returned. When True is specified, only active candidates are returned. When False is
+     * specified, only inactive candidates are returned.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_active_candidate")
+    public Boolean isActiveCandidate;
+    public GetCandidatesTotalsRequest withIsActiveCandidate(Boolean isActiveCandidate) {
+        this.isActiveCandidate = isActiveCandidate;
+        return this;
+    }
+    
+    /**
+     * Maximum cash on hand
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_cash_on_hand_end_period")
+    public String maxCashOnHandEndPeriod;
+    public GetCandidatesTotalsRequest withMaxCashOnHandEndPeriod(String maxCashOnHandEndPeriod) {
+        this.maxCashOnHandEndPeriod = maxCashOnHandEndPeriod;
+        return this;
+    }
+    
+    /**
+     * Maximum debt
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_debts_owed_by_committee")
+    public String maxDebtsOwedByCommittee;
+    public GetCandidatesTotalsRequest withMaxDebtsOwedByCommittee(String maxDebtsOwedByCommittee) {
+        this.maxDebtsOwedByCommittee = maxDebtsOwedByCommittee;
+        return this;
+    }
+    
+    /**
+     * Maximum aggregated disbursements
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_disbursements")
+    public String maxDisbursements;
+    public GetCandidatesTotalsRequest withMaxDisbursements(String maxDisbursements) {
+        this.maxDisbursements = maxDisbursements;
+        return this;
+    }
+    
+    /**
+     * Maximum aggregated receipts
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_receipts")
+    public String maxReceipts;
+    public GetCandidatesTotalsRequest withMaxReceipts(String maxReceipts) {
+        this.maxReceipts = maxReceipts;
+        return this;
+    }
+    
+    /**
+     * Minimum cash on hand
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_cash_on_hand_end_period")
+    public String minCashOnHandEndPeriod;
+    public GetCandidatesTotalsRequest withMinCashOnHandEndPeriod(String minCashOnHandEndPeriod) {
+        this.minCashOnHandEndPeriod = minCashOnHandEndPeriod;
+        return this;
+    }
+    
+    /**
+     * Minimum debt
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_debts_owed_by_committee")
+    public String minDebtsOwedByCommittee;
+    public GetCandidatesTotalsRequest withMinDebtsOwedByCommittee(String minDebtsOwedByCommittee) {
+        this.minDebtsOwedByCommittee = minDebtsOwedByCommittee;
+        return this;
+    }
+    
+    /**
+     * Minimum aggregated disbursements
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_disbursements")
+    public String minDisbursements;
+    public GetCandidatesTotalsRequest withMinDisbursements(String minDisbursements) {
+        this.minDisbursements = minDisbursements;
+        return this;
+    }
+    
+    /**
+     * Minimum aggregated receipts
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_receipts")
+    public String minReceipts;
+    public GetCandidatesTotalsRequest withMinReceipts(String minReceipts) {
+        this.minReceipts = minReceipts;
+        return this;
+    }
+    
+    /**
+     * Federal office candidate runs for: H, S or P
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=office")
+    public GetCandidatesTotalsOfficeEnum[] office;
+    public GetCandidatesTotalsRequest withOffice(GetCandidatesTotalsOfficeEnum[] office) {
+        this.office = office;
+        return this;
+    }
+    
+    /**
+     * For paginating through results, starting at page 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetCandidatesTotalsRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Three-letter party code
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=party")
+    public String[] party;
+    public GetCandidatesTotalsRequest withParty(String[] party) {
+        this.party = party;
+        return this;
+    }
+    
+    /**
+     * The number of results returned per page. Defaults to 20.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetCandidatesTotalsRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Name of candidate running for office
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String[] q;
+    public GetCandidatesTotalsRequest withQ(String[] q) {
+        this.q = q;
+        return this;
+    }
+    
+    /**
+     * Provide a field to sort by. Use `-` for descending order.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetCandidatesTotalsRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Hide null values on sorted column(s).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
+    public Boolean sortHideNull;
+    public GetCandidatesTotalsRequest withSortHideNull(Boolean sortHideNull) {
+        this.sortHideNull = sortHideNull;
+        return this;
+    }
+    
+    /**
+     * Toggle that filters out all rows having sort column that is non-null
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
+    public Boolean sortNullOnly;
+    public GetCandidatesTotalsRequest withSortNullOnly(Boolean sortNullOnly) {
+        this.sortNullOnly = sortNullOnly;
+        return this;
+    }
+    
+    /**
+     * Toggle that sorts null values last
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
+    public Boolean sortNullsLast;
+    public GetCandidatesTotalsRequest withSortNullsLast(Boolean sortNullsLast) {
+        this.sortNullsLast = sortNullsLast;
+        return this;
+    }
+    
+    /**
+     * State of candidate
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public String[] state;
+    public GetCandidatesTotalsRequest withState(String[] state) {
+        this.state = state;
         return this;
     }
     

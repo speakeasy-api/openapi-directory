@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPaymentPolicyRequest {
-    
-    public GetPaymentPolicyPathParams pathParams;
-    public GetPaymentPolicyRequest withPathParams(GetPaymentPolicyPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetPaymentPolicySecurity security;
-    public GetPaymentPolicyRequest withSecurity(GetPaymentPolicySecurity security) {
-        this.security = security;
+    /**
+     * This path parameter specifies the ID of the payment policy you want to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payment_policy_id")
+    public String paymentPolicyId;
+    public GetPaymentPolicyRequest withPaymentPolicyId(String paymentPolicyId) {
+        this.paymentPolicyId = paymentPolicyId;
         return this;
     }
     

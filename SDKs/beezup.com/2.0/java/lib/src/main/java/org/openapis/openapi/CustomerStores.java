@@ -39,7 +39,7 @@ public class CustomerStores {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateStoreResponse createStore(org.openapis.openapi.models.operations.CreateStoreRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateStoreResponse createStore(org.openapis.openapi.models.shared.CreateStoreRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/user/customer/stores");
         
@@ -100,7 +100,7 @@ public class CustomerStores {
      */
     public org.openapis.openapi.models.operations.DeleteStoreResponse deleteStore(org.openapis.openapi.models.operations.DeleteStoreRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteStorePathParams.class, baseUrl, "/v2/user/customer/stores/{storeId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteStoreRequest.class, baseUrl, "/v2/user/customer/stores/{storeId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -140,13 +140,13 @@ public class CustomerStores {
      */
     public org.openapis.openapi.models.operations.GetStoreResponse getStore(org.openapis.openapi.models.operations.GetStoreRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStorePathParams.class, baseUrl, "/v2/user/customer/stores/{storeId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStoreRequest.class, baseUrl, "/v2/user/customer/stores/{storeId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -204,7 +204,7 @@ public class CustomerStores {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -258,12 +258,12 @@ public class CustomerStores {
      */
     public org.openapis.openapi.models.operations.UpdateStoreResponse updateStore(org.openapis.openapi.models.operations.UpdateStoreRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateStorePathParams.class, baseUrl, "/v2/user/customer/stores/{storeId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateStoreRequest.class, baseUrl, "/v2/user/customer/stores/{storeId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateStoreRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

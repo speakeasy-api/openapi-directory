@@ -30,15 +30,11 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/GetBalanceSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetBalanceRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBalanceResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ValidateIBANSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/ValidateIBANQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ValidateIBANRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ValidateIBANResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ValidateIBANBasicSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/ValidateIBANBasicQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ValidateIBANBasicRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ValidateIBANBasicResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/FourHundred.java
@@ -46,7 +42,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/FourHundredAndOne.java
 lib/src/main/java/org/openapis/openapi/models/shared/FourHundredAndThree.java
 lib/src/main/java/org/openapis/openapi/models/shared/FourHundredAndTwentyTwo.java
 lib/src/main/java/org/openapis/openapi/models/shared/BalanceResponse.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKeySecurity.java
 lib/src/main/java/org/openapis/openapi/models/shared/IBANResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/IBANResultBasic.java
 USAGE.md

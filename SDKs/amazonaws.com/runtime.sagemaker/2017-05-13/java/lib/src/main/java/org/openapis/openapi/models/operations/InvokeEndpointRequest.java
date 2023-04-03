@@ -7,24 +7,149 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InvokeEndpointRequest {
-    
-    public InvokeEndpointPathParams pathParams;
-    public InvokeEndpointRequest withPathParams(InvokeEndpointPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The desired MIME type of the inference in the response.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public InvokeEndpointRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * The MIME type of the input data in the request body.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public InvokeEndpointRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public InvokeEndpointHeaders headers;
-    public InvokeEndpointRequest withHeaders(InvokeEndpointHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name of the endpoint that you specified when you created the endpoint using the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateEndpoint.html"&gt;CreateEndpoint&lt;/a&gt; API. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EndpointName")
+    public String endpointName;
+    public InvokeEndpointRequest withEndpointName(String endpointName) {
+        this.endpointName = endpointName;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public InvokeEndpointRequestBody request;
-    public InvokeEndpointRequest withRequest(InvokeEndpointRequestBody request) {
-        this.request = request;
+    public InvokeEndpointRequestBody requestBody;
+    public InvokeEndpointRequest withRequestBody(InvokeEndpointRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public InvokeEndpointRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public InvokeEndpointRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public InvokeEndpointRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public InvokeEndpointRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public InvokeEndpointRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public InvokeEndpointRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public InvokeEndpointRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Provides additional information about a request for an inference submitted to a model hosted at an Amazon SageMaker endpoint. The information is an opaque value that is forwarded verbatim. You could use this value, for example, to provide an ID that you can use to track a request or to provide other metadata that a service endpoint was programmed to process. The value must consist of no more than 1024 visible US-ASCII characters as specified in &lt;a href="https://tools.ietf.org/html/rfc7230#section-3.2.6"&gt;Section 3.3.6. Field Value Components&lt;/a&gt; of the Hypertext Transfer Protocol (HTTP/1.1). &lt;/p&gt; &lt;p&gt;The code in your model is responsible for setting or updating any custom attributes in the response. If your code does not set this value in the response, an empty value is returned. For example, if a custom attribute represents the trace ID, your model can prepend the custom attribute with &lt;code&gt;Trace ID:&lt;/code&gt; in your post-processing function.&lt;/p&gt; &lt;p&gt;This feature is currently supported in the Amazon Web Services SDKs but not in the Amazon SageMaker Python SDK.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amzn-SageMaker-Custom-Attributes")
+    public String xAmznSageMakerCustomAttributes;
+    public InvokeEndpointRequest withXAmznSageMakerCustomAttributes(String xAmznSageMakerCustomAttributes) {
+        this.xAmznSageMakerCustomAttributes = xAmznSageMakerCustomAttributes;
+        return this;
+    }
+    
+    /**
+     * An optional JMESPath expression used to override the &lt;code&gt;EnableExplanations&lt;/code&gt; parameter of the &lt;code&gt;ClarifyExplainerConfig&lt;/code&gt; API. See the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-online-explainability-create-endpoint.html#clarify-online-explainability-create-endpoint-enable"&gt;EnableExplanations&lt;/a&gt; section in the developer guide for more information. 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amzn-SageMaker-Enable-Explanations")
+    public String xAmznSageMakerEnableExplanations;
+    public InvokeEndpointRequest withXAmznSageMakerEnableExplanations(String xAmznSageMakerEnableExplanations) {
+        this.xAmznSageMakerEnableExplanations = xAmznSageMakerEnableExplanations;
+        return this;
+    }
+    
+    /**
+     * If you provide a value, it is added to the captured data when you enable data capture on the endpoint. For information about data capture, see &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-monitor-data-capture.html"&gt;Capture Data&lt;/a&gt;.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amzn-SageMaker-Inference-Id")
+    public String xAmznSageMakerInferenceId;
+    public InvokeEndpointRequest withXAmznSageMakerInferenceId(String xAmznSageMakerInferenceId) {
+        this.xAmznSageMakerInferenceId = xAmznSageMakerInferenceId;
+        return this;
+    }
+    
+    /**
+     * If the endpoint hosts multiple containers and is configured to use direct invocation, this parameter specifies the host name of the container to invoke.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amzn-SageMaker-Target-Container-Hostname")
+    public String xAmznSageMakerTargetContainerHostname;
+    public InvokeEndpointRequest withXAmznSageMakerTargetContainerHostname(String xAmznSageMakerTargetContainerHostname) {
+        this.xAmznSageMakerTargetContainerHostname = xAmznSageMakerTargetContainerHostname;
+        return this;
+    }
+    
+    /**
+     * The model to request for inference when invoking a multi-model endpoint.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amzn-SageMaker-Target-Model")
+    public String xAmznSageMakerTargetModel;
+    public InvokeEndpointRequest withXAmznSageMakerTargetModel(String xAmznSageMakerTargetModel) {
+        this.xAmznSageMakerTargetModel = xAmznSageMakerTargetModel;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Specify the production variant to send the inference request to when invoking an endpoint that is running two or more variants. Note that this parameter overrides the default behavior for the endpoint, which is to distribute the invocation traffic based on the variant weights.&lt;/p&gt; &lt;p&gt;For information about how to use variant targeting to perform a/b testing, see &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-ab-testing.html"&gt;Test models in production&lt;/a&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amzn-SageMaker-Target-Variant")
+    public String xAmznSageMakerTargetVariant;
+    public InvokeEndpointRequest withXAmznSageMakerTargetVariant(String xAmznSageMakerTargetVariant) {
+        this.xAmznSageMakerTargetVariant = xAmznSageMakerTargetVariant;
         return this;
     }
     

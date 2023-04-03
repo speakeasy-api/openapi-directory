@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateMessagingConfigurationRequest {
-    
-    public CreateMessagingConfigurationPathParams pathParams;
-    public CreateMessagingConfigurationRequest withPathParams(CreateMessagingConfigurationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateMessagingConfigurationCreateMessagingConfigurationRequest request;
-    public CreateMessagingConfigurationRequest withRequest(CreateMessagingConfigurationCreateMessagingConfigurationRequest request) {
-        this.request = request;
+    public CreateMessagingConfigurationCreateMessagingConfigurationRequest requestBody;
+    public CreateMessagingConfigurationRequest withRequestBody(CreateMessagingConfigurationCreateMessagingConfigurationRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateMessagingConfigurationSecurity security;
-    public CreateMessagingConfigurationRequest withSecurity(CreateMessagingConfigurationSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateMessagingConfigurationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the [Service](https://www.twilio.com/docs/verify/api/service) that the resource is associated with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public CreateMessagingConfigurationRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

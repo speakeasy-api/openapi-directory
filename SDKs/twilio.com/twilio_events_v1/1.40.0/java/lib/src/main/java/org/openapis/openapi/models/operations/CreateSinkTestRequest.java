@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSinkTestRequest {
-    
-    public CreateSinkTestPathParams pathParams;
-    public CreateSinkTestRequest withPathParams(CreateSinkTestPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CreateSinkTestSecurity security;
-    public CreateSinkTestRequest withSecurity(CreateSinkTestSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateSinkTestRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * A 34 character string that uniquely identifies the Sink to be Tested.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public CreateSinkTestRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

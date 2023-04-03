@@ -7,20 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRealmGroupsIdRoleMappingsRealmRequest {
-    
-    public PostRealmGroupsIdRoleMappingsRealmPathParams pathParams;
-    public PostRealmGroupsIdRoleMappingsRealmRequest withPathParams(PostRealmGroupsIdRoleMappingsRealmPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Roles to add
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RoleRepresentation[] request;
-    public PostRealmGroupsIdRoleMappingsRealmRequest withRequest(org.openapis.openapi.models.shared.RoleRepresentation[] request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.RoleRepresentation[] requestBody;
+    public PostRealmGroupsIdRoleMappingsRealmRequest withRequestBody(org.openapis.openapi.models.shared.RoleRepresentation[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostRealmGroupsIdRoleMappingsRealmRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PostRealmGroupsIdRoleMappingsRealmRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

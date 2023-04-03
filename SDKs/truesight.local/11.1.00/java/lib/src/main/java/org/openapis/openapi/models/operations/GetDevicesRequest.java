@@ -4,13 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDevicesRequest {
+    /**
+     * The ID of the application.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=applicationId")
+    public String applicationId;
+    public GetDevicesRequest withApplicationId(String applicationId) {
+        this.applicationId = applicationId;
+        return this;
+    }
     
-    public GetDevicesQueryParams queryParams;
-    public GetDevicesRequest withQueryParams(GetDevicesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The sorting order (case insensitive).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public GetDevicesDirectionEnum direction;
+    public GetDevicesRequest withDirection(GetDevicesDirectionEnum direction) {
+        this.direction = direction;
+        return this;
+    }
+    
+    /**
+     * The ID of the group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupId")
+    public String groupId;
+    public GetDevicesRequest withGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    
+    /**
+     * The maximum number of entries per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetDevicesRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * The page number to retrieve (first page is 0).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public String page;
+    public GetDevicesRequest withPage(String page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The ID of the service.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceId")
+    public String serviceId;
+    public GetDevicesRequest withServiceId(String serviceId) {
+        this.serviceId = serviceId;
+        return this;
+    }
+    
+    /**
+     * The column to sort by (case insensitive).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetDevicesRequest withSort(String sort) {
+        this.sort = sort;
         return this;
     }
     

@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AssociateAssessmentReportEvidenceFolderPathParams;
-import org.openapis.openapi.models.operations.AssociateAssessmentReportEvidenceFolderHeaders;
 import org.openapis.openapi.models.operations.AssociateAssessmentReportEvidenceFolderRequestBody;
 import org.openapis.openapi.models.operations.AssociateAssessmentReportEvidenceFolderRequest;
 import org.openapis.openapi.models.operations.AssociateAssessmentReportEvidenceFolderResponse;
@@ -28,29 +26,23 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AssociateAssessmentReportEvidenceFolderRequest req = new AssociateAssessmentReportEvidenceFolderRequest() {{
-                pathParams = new AssociateAssessmentReportEvidenceFolderPathParams() {{
-                    assessmentId = "corrupti";
+                requestBody = new AssociateAssessmentReportEvidenceFolderRequestBody() {{
+                    evidenceFolderId = "corrupti";
                 }};
-                headers = new AssociateAssessmentReportEvidenceFolderHeaders() {{
-                    xAmzAlgorithm = "provident";
-                    xAmzContentSha256 = "distinctio";
-                    xAmzCredential = "quibusdam";
-                    xAmzDate = "unde";
-                    xAmzSecurityToken = "nulla";
-                    xAmzSignature = "corrupti";
-                    xAmzSignedHeaders = "illum";
-                }};
-                request = new AssociateAssessmentReportEvidenceFolderRequestBody() {{
-                    evidenceFolderId = "vel";
-                }};
-            }};            
+                xAmzAlgorithm = "provident";
+                xAmzContentSha256 = "distinctio";
+                xAmzCredential = "quibusdam";
+                xAmzDate = "unde";
+                xAmzSecurityToken = "nulla";
+                xAmzSignature = "corrupti";
+                xAmzSignedHeaders = "illum";
+                assessmentId = "vel";
+            }}            
 
             AssociateAssessmentReportEvidenceFolderResponse res = sdk.associateAssessmentReportEvidenceFolder(req);
 
@@ -64,7 +56,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

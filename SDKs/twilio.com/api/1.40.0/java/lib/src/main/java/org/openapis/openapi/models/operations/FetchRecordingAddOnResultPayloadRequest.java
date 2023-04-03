@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchRecordingAddOnResultPayloadRequest {
-    
-    public FetchRecordingAddOnResultPayloadPathParams pathParams;
-    public FetchRecordingAddOnResultPayloadRequest withPathParams(FetchRecordingAddOnResultPayloadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Recording AddOnResult Payload resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public FetchRecordingAddOnResultPayloadRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public FetchRecordingAddOnResultPayloadSecurity security;
-    public FetchRecordingAddOnResultPayloadRequest withSecurity(FetchRecordingAddOnResultPayloadSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the AddOnResult to which the payload to fetch belongs.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AddOnResultSid")
+    public String addOnResultSid;
+    public FetchRecordingAddOnResultPayloadRequest withAddOnResultSid(String addOnResultSid) {
+        this.addOnResultSid = addOnResultSid;
         return this;
     }
     
+    /**
+     * The SID of the recording to which the AddOnResult resource that contains the payload to fetch belongs.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ReferenceSid")
+    public String referenceSid;
+    public FetchRecordingAddOnResultPayloadRequest withReferenceSid(String referenceSid) {
+        this.referenceSid = referenceSid;
+        return this;
+    }
     
-    public String serverURL;
-    public FetchRecordingAddOnResultPayloadRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the Recording AddOnResult Payload resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchRecordingAddOnResultPayloadRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

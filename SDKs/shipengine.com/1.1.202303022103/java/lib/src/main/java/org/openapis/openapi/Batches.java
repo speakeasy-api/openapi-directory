@@ -45,12 +45,12 @@ public class Batches {
      */
     public org.openapis.openapi.models.operations.AddToBatchResponse addToBatch(org.openapis.openapi.models.operations.AddToBatchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddToBatchPathParams.class, baseUrl, "/v1/batches/{batch_id}/add", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddToBatchRequest.class, baseUrl, "/v1/batches/{batch_id}/add", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "addToBatchRequestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -100,7 +100,7 @@ public class Batches {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateBatchResponse createBatch(org.openapis.openapi.models.operations.CreateBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateBatchResponse createBatch(org.openapis.openapi.models.shared.CreateBatchRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/batches");
         
@@ -155,7 +155,7 @@ public class Batches {
      */
     public org.openapis.openapi.models.operations.DeleteBatchResponse deleteBatch(org.openapis.openapi.models.operations.DeleteBatchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteBatchPathParams.class, baseUrl, "/v1/batches/{batch_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteBatchRequest.class, baseUrl, "/v1/batches/{batch_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -207,7 +207,7 @@ public class Batches {
      */
     public org.openapis.openapi.models.operations.GetBatchByExternalIdResponse getBatchByExternalId(org.openapis.openapi.models.operations.GetBatchByExternalIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBatchByExternalIdPathParams.class, baseUrl, "/v1/batches/external_batch_id/{external_batch_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBatchByExternalIdRequest.class, baseUrl, "/v1/batches/external_batch_id/{external_batch_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -255,7 +255,7 @@ public class Batches {
      */
     public org.openapis.openapi.models.operations.GetBatchByIdResponse getBatchById(org.openapis.openapi.models.operations.GetBatchByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBatchByIdPathParams.class, baseUrl, "/v1/batches/{batch_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBatchByIdRequest.class, baseUrl, "/v1/batches/{batch_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -305,13 +305,13 @@ public class Batches {
      */
     public org.openapis.openapi.models.operations.ListBatchErrorsResponse listBatchErrors(org.openapis.openapi.models.operations.ListBatchErrorsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListBatchErrorsPathParams.class, baseUrl, "/v1/batches/{batch_id}/errors", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListBatchErrorsRequest.class, baseUrl, "/v1/batches/{batch_id}/errors", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListBatchErrorsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListBatchErrorsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -365,7 +365,7 @@ public class Batches {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListBatchesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListBatchesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -413,12 +413,12 @@ public class Batches {
      */
     public org.openapis.openapi.models.operations.ProcessBatchResponse processBatch(org.openapis.openapi.models.operations.ProcessBatchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProcessBatchPathParams.class, baseUrl, "/v1/batches/{batch_id}/process/labels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProcessBatchRequest.class, baseUrl, "/v1/batches/{batch_id}/process/labels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "processBatchRequestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -470,12 +470,12 @@ public class Batches {
      */
     public org.openapis.openapi.models.operations.RemoveFromBatchResponse removeFromBatch(org.openapis.openapi.models.operations.RemoveFromBatchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemoveFromBatchPathParams.class, baseUrl, "/v1/batches/{batch_id}/remove", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemoveFromBatchRequest.class, baseUrl, "/v1/batches/{batch_id}/remove", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "removeFromBatchRequestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -527,7 +527,7 @@ public class Batches {
      */
     public org.openapis.openapi.models.operations.UpdateBatchResponse updateBatch(org.openapis.openapi.models.operations.UpdateBatchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateBatchPathParams.class, baseUrl, "/v1/batches/{batch_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateBatchRequest.class, baseUrl, "/v1/batches/{batch_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetReportFilterRequest {
+    /**
+     * Your report filter identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reportFilterId")
+    public String reportFilterId;
+    public GetReportFilterRequest withReportFilterId(String reportFilterId) {
+        this.reportFilterId = reportFilterId;
+        return this;
+    }
     
-    public GetReportFilterPathParams pathParams;
-    public GetReportFilterRequest withPathParams(GetReportFilterPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Your store identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public GetReportFilterRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

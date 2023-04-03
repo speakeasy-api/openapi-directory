@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetClientClientIdPathParams;
 import org.openapis.openapi.models.operations.GetClientClientIdRequest;
 import org.openapis.openapi.models.operations.GetClientClientIdResponse;
 
@@ -28,10 +27,8 @@ public class Application {
                 .build();
 
             GetClientClientIdRequest req = new GetClientClientIdRequest() {{
-                pathParams = new GetClientClientIdPathParams() {{
-                    clientId = "corrupti";
-                }};
-            }};            
+                clientId = "corrupti";
+            }}            
 
             GetClientClientIdResponse res = sdk.client.getClientClientId(req);
 
@@ -45,7 +42,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### client

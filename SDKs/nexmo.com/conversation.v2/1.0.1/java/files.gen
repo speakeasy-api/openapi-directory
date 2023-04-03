@@ -32,7 +32,6 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/GetConversationsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetConversationsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetConversations200ApplicationJSONEmbeddedData.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetConversations200ApplicationJSONEmbedded.java
@@ -43,8 +42,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetConversations200Appl
 lib/src/main/java/org/openapis/openapi/models/operations/GetConversations200ApplicationJSONLinks.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetConversations200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetConversationsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetEventsPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetEventsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetEventsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetEvents200ApplicationJSONEmbeddedData.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetEvents200ApplicationJSONEmbedded.java
@@ -55,8 +52,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetEvents200Application
 lib/src/main/java/org/openapis/openapi/models/operations/GetEvents200ApplicationJSONLinks.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetEvents200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetEventsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetMembersPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetMembersQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetMembersRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetMembers200ApplicationJSONEmbeddedData.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetMembers200ApplicationJSONEmbedded.java
@@ -67,7 +62,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetMembers200Applicatio
 lib/src/main/java/org/openapis/openapi/models/operations/GetMembers200ApplicationJSONLinks.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetMembers200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetMembersResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetUsersQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetUsersRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetUsers200ApplicationJSONEmbeddedData.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetUsers200ApplicationJSONEmbedded.java

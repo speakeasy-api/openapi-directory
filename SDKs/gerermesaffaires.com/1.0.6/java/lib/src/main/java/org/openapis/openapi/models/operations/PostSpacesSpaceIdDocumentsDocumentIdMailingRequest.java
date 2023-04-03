@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesSpaceIdDocumentsDocumentIdMailingRequest {
-    
-    public PostSpacesSpaceIdDocumentsDocumentIdMailingPathParams pathParams;
-    public PostSpacesSpaceIdDocumentsDocumentIdMailingRequest withPathParams(PostSpacesSpaceIdDocumentsDocumentIdMailingPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * document to send by mail
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostSpacesSpaceIdDocumentsDocumentIdMailingRequestBody request;
-    public PostSpacesSpaceIdDocumentsDocumentIdMailingRequest withRequest(PostSpacesSpaceIdDocumentsDocumentIdMailingRequestBody request) {
-        this.request = request;
+    public PostSpacesSpaceIdDocumentsDocumentIdMailingRequestBody requestBody;
+    public PostSpacesSpaceIdDocumentsDocumentIdMailingRequest withRequestBody(PostSpacesSpaceIdDocumentsDocumentIdMailingRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Id of the document
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=documentId")
+    public String documentId;
+    public PostSpacesSpaceIdDocumentsDocumentIdMailingRequest withDocumentId(String documentId) {
+        this.documentId = documentId;
+        return this;
+    }
     
-    public PostSpacesSpaceIdDocumentsDocumentIdMailingSecurity security;
-    public PostSpacesSpaceIdDocumentsDocumentIdMailingRequest withSecurity(PostSpacesSpaceIdDocumentsDocumentIdMailingSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PostSpacesSpaceIdDocumentsDocumentIdMailingRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

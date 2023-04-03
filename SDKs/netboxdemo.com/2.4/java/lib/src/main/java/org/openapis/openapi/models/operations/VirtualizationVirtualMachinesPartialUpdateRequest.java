@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VirtualizationVirtualMachinesPartialUpdateRequest {
-    
-    public VirtualizationVirtualMachinesPartialUpdatePathParams pathParams;
-    public VirtualizationVirtualMachinesPartialUpdateRequest withPathParams(VirtualizationVirtualMachinesPartialUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.WritableVirtualMachineInput writableVirtualMachineInput;
+    public VirtualizationVirtualMachinesPartialUpdateRequest withWritableVirtualMachineInput(org.openapis.openapi.models.shared.WritableVirtualMachineInput writableVirtualMachineInput) {
+        this.writableVirtualMachineInput = writableVirtualMachineInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WritableVirtualMachineInput request;
-    public VirtualizationVirtualMachinesPartialUpdateRequest withRequest(org.openapis.openapi.models.shared.WritableVirtualMachineInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this virtual machine.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public VirtualizationVirtualMachinesPartialUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

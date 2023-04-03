@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMarketingV3MarketingEventsEventsSearchDoSearchRequest {
-    
-    public GetMarketingV3MarketingEventsEventsSearchDoSearchQueryParams queryParams;
-    public GetMarketingV3MarketingEventsEventsSearchDoSearchRequest withQueryParams(GetMarketingV3MarketingEventsEventsSearchDoSearchQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetMarketingV3MarketingEventsEventsSearchDoSearchSecurity security;
-    public GetMarketingV3MarketingEventsEventsSearchDoSearchRequest withSecurity(GetMarketingV3MarketingEventsEventsSearchDoSearchSecurity security) {
-        this.security = security;
+    /**
+     * The id of the marketing event in the external event application
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public GetMarketingV3MarketingEventsEventsSearchDoSearchRequest withQ(String q) {
+        this.q = q;
         return this;
     }
     

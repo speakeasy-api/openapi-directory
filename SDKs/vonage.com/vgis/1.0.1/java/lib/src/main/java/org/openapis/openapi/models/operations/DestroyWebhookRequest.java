@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DestroyWebhookRequest {
-    
-    public DestroyWebhookPathParams pathParams;
-    public DestroyWebhookRequest withPathParams(DestroyWebhookPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the webhook
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DestroyWebhookRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -4,13 +4,130 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPayoutsForPayorV4Request {
+    /**
+     * The name of the payor whose payees are being paid. This filters via a case insensitive substring match.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromPayorName")
+    public String fromPayorName;
+    public GetPayoutsForPayorV4Request withFromPayorName(String fromPayorName) {
+        this.fromPayorName = fromPayorName;
+        return this;
+    }
     
-    public GetPayoutsForPayorV4QueryParams queryParams;
-    public GetPayoutsForPayorV4Request withQueryParams(GetPayoutsForPayorV4QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number. Default is 1.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetPayoutsForPayorV4Request withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results to return in a page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public GetPayoutsForPayorV4Request withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The id (UUID) of the payor funding the payout or the payor whose payees are being paid.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=payorId")
+    public String payorId;
+    public GetPayoutsForPayorV4Request withPayorId(String payorId) {
+        this.payorId = payorId;
+        return this;
+    }
+    
+    /**
+     * Payout Memo filter - case insensitive sub-string match
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=payoutMemo")
+    public String payoutMemo;
+    public GetPayoutsForPayorV4Request withPayoutMemo(String payoutMemo) {
+        this.payoutMemo = payoutMemo;
+        return this;
+    }
+    
+    /**
+     * Payout Schedule Status
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scheduleStatus")
+    public GetPayoutsForPayorV4ScheduleStatusEnum scheduleStatus;
+    public GetPayoutsForPayorV4Request withScheduleStatus(GetPayoutsForPayorV4ScheduleStatusEnum scheduleStatus) {
+        this.scheduleStatus = scheduleStatus;
+        return this;
+    }
+    
+    /**
+     * Filter payouts scheduled to run on or after the given date. Format is yyyy-MM-dd.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scheduledForDateFrom")
+    public LocalDate scheduledForDateFrom;
+    public GetPayoutsForPayorV4Request withScheduledForDateFrom(LocalDate scheduledForDateFrom) {
+        this.scheduledForDateFrom = scheduledForDateFrom;
+        return this;
+    }
+    
+    /**
+     * Filter payouts scheduled to run on or before the given date. Format is yyyy-MM-dd.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scheduledForDateTo")
+    public LocalDate scheduledForDateTo;
+    public GetPayoutsForPayorV4Request withScheduledForDateTo(LocalDate scheduledForDateTo) {
+        this.scheduledForDateTo = scheduledForDateTo;
+        return this;
+    }
+    
+    /**
+     * List of sort fields (e.g. ?sort=submittedDateTime:asc,instructedDateTime:asc,status:asc)
+     * Default is submittedDateTime:asc
+     * The supported sort fields are: submittedDateTime, instructedDateTime, status, totalPayments, payoutId, scheduledFor
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetPayoutsForPayorV4Request withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Payout Status
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public GetPayoutsForPayorV4StatusEnum status;
+    public GetPayoutsForPayorV4Request withStatus(GetPayoutsForPayorV4StatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * The submitted date from range filter. Format is yyyy-MM-dd.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=submittedDateFrom")
+    public LocalDate submittedDateFrom;
+    public GetPayoutsForPayorV4Request withSubmittedDateFrom(LocalDate submittedDateFrom) {
+        this.submittedDateFrom = submittedDateFrom;
+        return this;
+    }
+    
+    /**
+     * The submitted date to range filter. Format is yyyy-MM-dd.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=submittedDateTo")
+    public LocalDate submittedDateTo;
+    public GetPayoutsForPayorV4Request withSubmittedDateTo(LocalDate submittedDateTo) {
+        this.submittedDateTo = submittedDateTo;
         return this;
     }
     

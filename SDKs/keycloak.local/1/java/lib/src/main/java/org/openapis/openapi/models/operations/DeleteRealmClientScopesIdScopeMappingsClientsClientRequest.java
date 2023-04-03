@@ -7,17 +7,37 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRealmClientScopesIdScopeMappingsClientsClientRequest {
-    
-    public DeleteRealmClientScopesIdScopeMappingsClientsClientPathParams pathParams;
-    public DeleteRealmClientScopesIdScopeMappingsClientsClientRequest withPathParams(DeleteRealmClientScopesIdScopeMappingsClientsClientPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.RoleRepresentation[] requestBody;
+    public DeleteRealmClientScopesIdScopeMappingsClientsClientRequest withRequestBody(org.openapis.openapi.models.shared.RoleRepresentation[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RoleRepresentation[] request;
-    public DeleteRealmClientScopesIdScopeMappingsClientsClientRequest withRequest(org.openapis.openapi.models.shared.RoleRepresentation[] request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=client")
+    public String client;
+    public DeleteRealmClientScopesIdScopeMappingsClientsClientRequest withClient(String client) {
+        this.client = client;
+        return this;
+    }
+    
+    /**
+     * id of client scope (not name)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteRealmClientScopesIdScopeMappingsClientsClientRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public DeleteRealmClientScopesIdScopeMappingsClientsClientRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

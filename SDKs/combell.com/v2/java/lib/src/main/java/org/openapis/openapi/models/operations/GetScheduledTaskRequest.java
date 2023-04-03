@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetScheduledTaskRequest {
-    
-    public GetScheduledTaskPathParams pathParams;
-    public GetScheduledTaskRequest withPathParams(GetScheduledTaskPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
+    public String domainNamePathParameter;
+    public GetScheduledTaskRequest withDomainNamePathParameter(String domainNamePathParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
         return this;
     }
     
+    /**
+     * Linux hosting domain name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
+    public String domainNameQueryParameter;
+    public GetScheduledTaskRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
+        this.domainNameQueryParameter = domainNameQueryParameter;
+        return this;
+    }
     
-    public GetScheduledTaskQueryParams queryParams;
-    public GetScheduledTaskRequest withQueryParams(GetScheduledTaskQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scheduledTaskId")
+    public String scheduledTaskIdPathParameter;
+    public GetScheduledTaskRequest withScheduledTaskIdPathParameter(String scheduledTaskIdPathParameter) {
+        this.scheduledTaskIdPathParameter = scheduledTaskIdPathParameter;
+        return this;
+    }
+    
+    /**
+     * Id of the scheduled task.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scheduled_task_id")
+    public String scheduledTaskIdQueryParameter;
+    public GetScheduledTaskRequest withScheduledTaskIdQueryParameter(String scheduledTaskIdQueryParameter) {
+        this.scheduledTaskIdQueryParameter = scheduledTaskIdQueryParameter;
         return this;
     }
     

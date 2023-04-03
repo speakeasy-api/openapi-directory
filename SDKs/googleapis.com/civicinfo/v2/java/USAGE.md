@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.CivicinfoDivisionsSearchQueryParams;
 import org.openapis.openapi.models.operations.CivicinfoDivisionsSearchRequest;
 import org.openapis.openapi.models.operations.CivicinfoDivisionsSearchResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -17,21 +16,19 @@ public class Application {
                 .build();
 
             CivicinfoDivisionsSearchRequest req = new CivicinfoDivisionsSearchRequest() {{
-                queryParams = new CivicinfoDivisionsSearchQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "provident";
-                    alt = "proto";
-                    callback = "quibusdam";
-                    fields = "unde";
-                    key = "nulla";
-                    oauthToken = "corrupti";
-                    prettyPrint = false;
-                    query = "illum";
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-            }};            
+                dollarXgafv = "2";
+                accessToken = "provident";
+                alt = "proto";
+                callback = "quibusdam";
+                fields = "unde";
+                key = "nulla";
+                oauthToken = "corrupti";
+                prettyPrint = false;
+                query = "illum";
+                quotaUser = "vel";
+                uploadType = "error";
+                uploadProtocol = "deserunt";
+            }}            
 
             CivicinfoDivisionsSearchResponse res = sdk.divisions.civicinfoDivisionsSearch(req);
 

@@ -7,24 +7,21 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddScoreCollaboratorRequest {
-    
-    public AddScoreCollaboratorPathParams pathParams;
-    public AddScoreCollaboratorRequest withPathParams(AddScoreCollaboratorPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ResourceCollaboratorCreation request;
-    public AddScoreCollaboratorRequest withRequest(org.openapis.openapi.models.shared.ResourceCollaboratorCreation request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ResourceCollaboratorCreation resourceCollaboratorCreation;
+    public AddScoreCollaboratorRequest withResourceCollaboratorCreation(org.openapis.openapi.models.shared.ResourceCollaboratorCreation resourceCollaboratorCreation) {
+        this.resourceCollaboratorCreation = resourceCollaboratorCreation;
         return this;
     }
     
-    
-    public AddScoreCollaboratorSecurity security;
-    public AddScoreCollaboratorRequest withSecurity(AddScoreCollaboratorSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the score document. This can be a Flat Score unique identifier (i.e. `ScoreDetails.id`) or, if the score is also a Google Drive file, the Drive file unique identifier prefixed with `drive-` (e.g. `drive-0B000000000`).
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=score")
+    public String score;
+    public AddScoreCollaboratorRequest withScore(String score) {
+        this.score = score;
         return this;
     }
     

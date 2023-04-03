@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateCallBroadcastRequest {
-    
-    public CreateCallBroadcastQueryParams queryParams;
-    public CreateCallBroadcastRequest withQueryParams(CreateCallBroadcastQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * A CallBroadcast object
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CallBroadcastInput request;
-    public CreateCallBroadcastRequest withRequest(org.openapis.openapi.models.shared.CallBroadcastInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CallBroadcastInput callBroadcastInput;
+    public CreateCallBroadcastRequest withCallBroadcastInput(org.openapis.openapi.models.shared.CallBroadcastInput callBroadcastInput) {
+        this.callBroadcastInput = callBroadcastInput;
         return this;
     }
     
+    /**
+     * Specify whether to immediately start this campaign (not required)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public Boolean start;
+    public CreateCallBroadcastRequest withStart(Boolean start) {
+        this.start = start;
+        return this;
+    }
     
-    public CreateCallBroadcastSecurity security;
-    public CreateCallBroadcastRequest withSecurity(CreateCallBroadcastSecurity security) {
-        this.security = security;
+    /**
+     * Turns on strict validation for recipients. System will reply with BAD_REQUEST(400) if strictValidation = true and one of numbers didn't pass validation
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=strictValidation")
+    public Boolean strictValidation;
+    public CreateCallBroadcastRequest withStrictValidation(Boolean strictValidation) {
+        this.strictValidation = strictValidation;
         return this;
     }
     

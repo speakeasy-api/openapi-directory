@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateUserRequest {
-    
-    public UpdateUserPathParams pathParams;
-    public UpdateUserRequest withPathParams(UpdateUserPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateUserUpdateUserRequest request;
-    public UpdateUserRequest withRequest(UpdateUserUpdateUserRequest request) {
-        this.request = request;
+    public UpdateUserUpdateUserRequest requestBody;
+    public UpdateUserRequest withRequestBody(UpdateUserUpdateUserRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateUserSecurity security;
-    public UpdateUserRequest withSecurity(UpdateUserSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateUserRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the User resource to update. This value can be either the `sid` or the `identity` of the User resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateUserRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

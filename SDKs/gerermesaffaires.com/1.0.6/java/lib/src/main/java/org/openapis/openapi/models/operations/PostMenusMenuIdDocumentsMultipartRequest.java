@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostMenusMenuIdDocumentsMultipartRequest {
-    
-    public PostMenusMenuIdDocumentsMultipartPathParams pathParams;
-    public PostMenusMenuIdDocumentsMultipartRequest withPathParams(PostMenusMenuIdDocumentsMultipartPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Document to add
      */
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PostMenusMenuIdDocumentsMultipartFormData request;
-    public PostMenusMenuIdDocumentsMultipartRequest withRequest(PostMenusMenuIdDocumentsMultipartFormData request) {
-        this.request = request;
+    public PostMenusMenuIdDocumentsMultipartFormData requestBody;
+    public PostMenusMenuIdDocumentsMultipartRequest withRequestBody(PostMenusMenuIdDocumentsMultipartFormData requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public PostMenusMenuIdDocumentsMultipartSecurity security;
-    public PostMenusMenuIdDocumentsMultipartRequest withSecurity(PostMenusMenuIdDocumentsMultipartSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=menuId")
+    public String menuId;
+    public PostMenusMenuIdDocumentsMultipartRequest withMenuId(String menuId) {
+        this.menuId = menuId;
         return this;
     }
     

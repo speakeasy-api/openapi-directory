@@ -7,17 +7,31 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PullsCreateReviewCommentAlternativeRequest {
-    
-    public PullsCreateReviewCommentAlternativePathParams pathParams;
-    public PullsCreateReviewCommentAlternativeRequest withPathParams(PullsCreateReviewCommentAlternativePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PullsCreateReviewCommentAlternativeRequestBody requestBody;
+    public PullsCreateReviewCommentAlternativeRequest withRequestBody(PullsCreateReviewCommentAlternativeRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PullsCreateReviewCommentAlternativeRequestBody request;
-    public PullsCreateReviewCommentAlternativeRequest withRequest(PullsCreateReviewCommentAlternativeRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public PullsCreateReviewCommentAlternativeRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pull_number")
+    public Long pullNumber;
+    public PullsCreateReviewCommentAlternativeRequest withPullNumber(Long pullNumber) {
+        this.pullNumber = pullNumber;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public PullsCreateReviewCommentAlternativeRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OauthAuthorizationsDeleteAuthorizationRequest {
-    
-    public OauthAuthorizationsDeleteAuthorizationPathParams pathParams;
-    public OauthAuthorizationsDeleteAuthorizationRequest withPathParams(OauthAuthorizationsDeleteAuthorizationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * authorization_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=authorization_id")
+    public Long authorizationId;
+    public OauthAuthorizationsDeleteAuthorizationRequest withAuthorizationId(Long authorizationId) {
+        this.authorizationId = authorizationId;
         return this;
     }
     

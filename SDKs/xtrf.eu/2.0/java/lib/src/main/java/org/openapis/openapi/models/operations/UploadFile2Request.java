@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UploadFile2Request {
-    
-    public UploadFile2PathParams pathParams;
-    public UploadFile2Request withPathParams(UploadFile2PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Uploaded file
      */
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public org.openapis.openapi.models.shared.FileToUploadDto request;
-    public UploadFile2Request withRequest(org.openapis.openapi.models.shared.FileToUploadDto request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.FileToUploadDto fileToUploadDto;
+    public UploadFile2Request withFileToUploadDto(org.openapis.openapi.models.shared.FileToUploadDto fileToUploadDto) {
+        this.fileToUploadDto = fileToUploadDto;
+        return this;
+    }
+    
+    /**
+     * project's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public UploadFile2Request withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

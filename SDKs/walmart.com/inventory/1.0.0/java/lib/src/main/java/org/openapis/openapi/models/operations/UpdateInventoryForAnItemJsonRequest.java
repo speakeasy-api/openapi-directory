@@ -7,27 +7,73 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateInventoryForAnItemJsonRequest {
-    
-    public UpdateInventoryForAnItemJsonQueryParams queryParams;
-    public UpdateInventoryForAnItemJsonRequest withQueryParams(UpdateInventoryForAnItemJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public UpdateInventoryForAnItemJsonHeaders headers;
-    public UpdateInventoryForAnItemJsonRequest withHeaders(UpdateInventoryForAnItemJsonHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * File fields
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateInventoryForAnItemApplicationJSON request;
-    public UpdateInventoryForAnItemJsonRequest withRequest(UpdateInventoryForAnItemApplicationJSON request) {
-        this.request = request;
+    public UpdateInventoryForAnItemApplicationJSON requestBody;
+    public UpdateInventoryForAnItemJsonRequest withRequestBody(UpdateInventoryForAnItemApplicationJSON requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * A unique ID to track the consumer request by channel. Use the Consumer Channel Type received during onboarding
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_CONSUMER.CHANNEL.TYPE")
+    public String wmConsumerChannelType;
+    public UpdateInventoryForAnItemJsonRequest withWmConsumerChannelType(String wmConsumerChannelType) {
+        this.wmConsumerChannelType = wmConsumerChannelType;
+        return this;
+    }
+    
+    /**
+     * A unique ID which identifies each API call and used to track and debug issues; use a random generated GUID for this ID
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_QOS.CORRELATION_ID")
+    public String wmQosCorrelationId;
+    public UpdateInventoryForAnItemJsonRequest withWmQosCorrelationId(String wmQosCorrelationId) {
+        this.wmQosCorrelationId = wmQosCorrelationId;
+        return this;
+    }
+    
+    /**
+     * The access token retrieved in the Token API call
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_SEC.ACCESS_TOKEN")
+    public String wmSecAccessToken;
+    public UpdateInventoryForAnItemJsonRequest withWmSecAccessToken(String wmSecAccessToken) {
+        this.wmSecAccessToken = wmSecAccessToken;
+        return this;
+    }
+    
+    /**
+     * Walmart Service Name
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_SVC.NAME")
+    public String wmSvcName;
+    public UpdateInventoryForAnItemJsonRequest withWmSvcName(String wmSvcName) {
+        this.wmSvcName = wmSvcName;
+        return this;
+    }
+    
+    /**
+     * The shipNode for which the inventory is to be updated.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=shipNode")
+    public String shipNode;
+    public UpdateInventoryForAnItemJsonRequest withShipNode(String shipNode) {
+        this.shipNode = shipNode;
+        return this;
+    }
+    
+    /**
+     * An arbitrary alphanumeric unique ID, specified by the seller, which identifies each item. This will be used by the seller in the XSD file to refer to each item. Special characters in the sku needing encoding are: ':', '/', '?', '#', '[', ']', '@', '!', '$', '&amp;', "'", '(', ')', '*', '+', ',', ';', '=', \u2018 \u2019, '{', '}' as well as '%' itself if it's a part of sku. Make sure to encode space with %20. Other characters don't need to be encoded.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sku")
+    public String sku;
+    public UpdateInventoryForAnItemJsonRequest withSku(String sku) {
+        this.sku = sku;
         return this;
     }
     

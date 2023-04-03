@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRightsRequest {
-    
-    public GetRightsPathParams pathParams;
-    public GetRightsRequest withPathParams(GetRightsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Your store identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public GetRightsRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

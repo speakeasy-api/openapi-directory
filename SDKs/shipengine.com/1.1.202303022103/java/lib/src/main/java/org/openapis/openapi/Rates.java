@@ -46,7 +46,7 @@ public class Rates {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CalculateRatesResponse calculateRates(org.openapis.openapi.models.operations.CalculateRatesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CalculateRatesResponse calculateRates(org.openapis.openapi.models.shared.CalculateRatesRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/rates");
         
@@ -99,7 +99,7 @@ public class Rates {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CompareBulkRatesResponse compareBulkRates(org.openapis.openapi.models.operations.CompareBulkRatesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CompareBulkRatesResponse compareBulkRates(org.openapis.openapi.models.shared.CompareBulkRatesRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/rates/bulk");
         
@@ -152,7 +152,7 @@ public class Rates {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EstimateRatesResponse estimateRates(org.openapis.openapi.models.operations.EstimateRatesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EstimateRatesResponse estimateRates(org.openapis.openapi.models.shared.EstimateRatesRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/rates/estimate");
         
@@ -207,7 +207,7 @@ public class Rates {
      */
     public org.openapis.openapi.models.operations.GetRateByIdResponse getRateById(org.openapis.openapi.models.operations.GetRateByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRateByIdPathParams.class, baseUrl, "/v1/rates/{rate_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRateByIdRequest.class, baseUrl, "/v1/rates/{rate_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

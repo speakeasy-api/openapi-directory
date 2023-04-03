@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAllAnnotatedGenesUsingGETRequest {
-    
-    public GETAllAnnotatedGenesUsingGETPathParams pathParams;
-    public GETAllAnnotatedGenesUsingGETRequest withPathParams(GETAllAnnotatedGenesUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Accesstion ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accId")
+    public String accId;
+    public GETAllAnnotatedGenesUsingGETRequest withAccId(String accId) {
+        this.accId = accId;
         return this;
     }
     

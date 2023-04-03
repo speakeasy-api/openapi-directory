@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ResetCorpusRequest {
-    
-    public ResetCorpusHeaders headers;
-    public ResetCorpusRequest withHeaders(ResetCorpusHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.AdminResetCorpusRequest adminResetCorpusRequest;
+    public ResetCorpusRequest withAdminResetCorpusRequest(org.openapis.openapi.models.shared.AdminResetCorpusRequest adminResetCorpusRequest) {
+        this.adminResetCorpusRequest = adminResetCorpusRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AdminResetCorpusRequest request;
-    public ResetCorpusRequest withRequest(org.openapis.openapi.models.shared.AdminResetCorpusRequest request) {
-        this.request = request;
+    /**
+     * The Customer ID to use for the request.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=customer-id")
+    public Long customerId;
+    public ResetCorpusRequest withCustomerId(Long customerId) {
+        this.customerId = customerId;
         return this;
     }
     

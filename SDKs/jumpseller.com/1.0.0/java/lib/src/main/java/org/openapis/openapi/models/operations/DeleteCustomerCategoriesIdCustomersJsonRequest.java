@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCustomerCategoriesIdCustomersJsonRequest {
-    
-    public DeleteCustomerCategoriesIdCustomersJsonPathParams pathParams;
-    public DeleteCustomerCategoriesIdCustomersJsonRequest withPathParams(DeleteCustomerCategoriesIdCustomersJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteCustomerCategoriesIdCustomersJsonQueryParams queryParams;
-    public DeleteCustomerCategoriesIdCustomersJsonRequest withQueryParams(DeleteCustomerCategoriesIdCustomersJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Customer parameters.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CustomersToCustomerCategory request;
-    public DeleteCustomerCategoriesIdCustomersJsonRequest withRequest(org.openapis.openapi.models.shared.CustomersToCustomerCategory request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CustomersToCustomerCategory customersToCustomerCategory;
+    public DeleteCustomerCategoriesIdCustomersJsonRequest withCustomersToCustomerCategory(org.openapis.openapi.models.shared.CustomersToCustomerCategory customersToCustomerCategory) {
+        this.customersToCustomerCategory = customersToCustomerCategory;
+        return this;
+    }
+    
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public DeleteCustomerCategoriesIdCustomersJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
+        return this;
+    }
+    
+    /**
+     * Id of the CustomerCategory
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public DeleteCustomerCategoriesIdCustomersJsonRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public DeleteCustomerCategoriesIdCustomersJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

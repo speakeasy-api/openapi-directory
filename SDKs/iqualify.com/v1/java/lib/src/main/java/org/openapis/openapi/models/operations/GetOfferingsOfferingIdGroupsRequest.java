@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOfferingsOfferingIdGroupsRequest {
-    
-    public GetOfferingsOfferingIdGroupsPathParams pathParams;
-    public GetOfferingsOfferingIdGroupsRequest withPathParams(GetOfferingsOfferingIdGroupsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * offering's id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offeringId")
+    public String offeringId;
+    public GetOfferingsOfferingIdGroupsRequest withOfferingId(String offeringId) {
+        this.offeringId = offeringId;
         return this;
     }
     

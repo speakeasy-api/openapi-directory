@@ -96,24 +96,24 @@ public class Artifacts {
      */
     public org.openapis.openapi.models.operations.CreateArtifactJsonResponse createArtifactJson(org.openapis.openapi.models.operations.CreateArtifactJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateArtifactJsonPathParams.class, baseUrl, "/groups/{groupId}/artifacts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateArtifactJsonRequest.class, baseUrl, "/groups/{groupId}/artifacts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "contentCreateRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CreateArtifactJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CreateArtifactJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -221,24 +221,24 @@ public class Artifacts {
      */
     public org.openapis.openapi.models.operations.CreateArtifactRawResponse createArtifactRaw(org.openapis.openapi.models.operations.CreateArtifactRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateArtifactRawPathParams.class, baseUrl, "/groups/{groupId}/artifacts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateArtifactRawRequest.class, baseUrl, "/groups/{groupId}/artifacts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CreateArtifactRawQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CreateArtifactRawRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -299,7 +299,7 @@ public class Artifacts {
      */
     public org.openapis.openapi.models.operations.DeleteArtifactResponse deleteArtifact(org.openapis.openapi.models.operations.DeleteArtifactRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteArtifactPathParams.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteArtifactRequest.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -340,7 +340,7 @@ public class Artifacts {
      */
     public org.openapis.openapi.models.operations.DeleteArtifactsInGroupResponse deleteArtifactsInGroup(org.openapis.openapi.models.operations.DeleteArtifactsInGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteArtifactsInGroupPathParams.class, baseUrl, "/groups/{groupId}/artifacts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteArtifactsInGroupRequest.class, baseUrl, "/groups/{groupId}/artifacts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -388,13 +388,13 @@ public class Artifacts {
      */
     public org.openapis.openapi.models.operations.GetContentByGlobalIdResponse getContentByGlobalId(org.openapis.openapi.models.operations.GetContentByGlobalIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContentByGlobalIdPathParams.class, baseUrl, "/ids/globalIds/{globalId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContentByGlobalIdRequest.class, baseUrl, "/ids/globalIds/{globalId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetContentByGlobalIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetContentByGlobalIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -448,7 +448,7 @@ public class Artifacts {
      */
     public org.openapis.openapi.models.operations.GetContentByHashResponse getContentByHash(org.openapis.openapi.models.operations.GetContentByHashRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContentByHashPathParams.class, baseUrl, "/ids/contentHashes/{contentHash}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContentByHashRequest.class, baseUrl, "/ids/contentHashes/{contentHash}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -502,7 +502,7 @@ public class Artifacts {
      */
     public org.openapis.openapi.models.operations.GetContentByIdResponse getContentById(org.openapis.openapi.models.operations.GetContentByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContentByIdPathParams.class, baseUrl, "/ids/contentIds/{contentId}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContentByIdRequest.class, baseUrl, "/ids/contentIds/{contentId}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -556,13 +556,13 @@ public class Artifacts {
      */
     public org.openapis.openapi.models.operations.GetLatestArtifactResponse getLatestArtifact(org.openapis.openapi.models.operations.GetLatestArtifactRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLatestArtifactPathParams.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLatestArtifactRequest.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetLatestArtifactQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetLatestArtifactRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -608,13 +608,13 @@ public class Artifacts {
      */
     public org.openapis.openapi.models.operations.ListArtifactsInGroupResponse listArtifactsInGroup(org.openapis.openapi.models.operations.ListArtifactsInGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListArtifactsInGroupPathParams.class, baseUrl, "/groups/{groupId}/artifacts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListArtifactsInGroupRequest.class, baseUrl, "/groups/{groupId}/artifacts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListArtifactsInGroupQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListArtifactsInGroupRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -666,7 +666,7 @@ public class Artifacts {
      */
     public org.openapis.openapi.models.operations.ReferencesByContentHashResponse referencesByContentHash(org.openapis.openapi.models.operations.ReferencesByContentHashRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReferencesByContentHashPathParams.class, baseUrl, "/ids/contentHashes/{contentHash}/references", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReferencesByContentHashRequest.class, baseUrl, "/ids/contentHashes/{contentHash}/references", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -709,7 +709,7 @@ public class Artifacts {
      */
     public org.openapis.openapi.models.operations.ReferencesByContentIdResponse referencesByContentId(org.openapis.openapi.models.operations.ReferencesByContentIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReferencesByContentIdPathParams.class, baseUrl, "/ids/contentIds/{contentId}/references", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReferencesByContentIdRequest.class, baseUrl, "/ids/contentIds/{contentId}/references", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -752,7 +752,7 @@ public class Artifacts {
      */
     public org.openapis.openapi.models.operations.ReferencesByGlobalIdResponse referencesByGlobalId(org.openapis.openapi.models.operations.ReferencesByGlobalIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReferencesByGlobalIdPathParams.class, baseUrl, "/ids/globalIds/{globalId}/references", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReferencesByGlobalIdRequest.class, baseUrl, "/ids/globalIds/{globalId}/references", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -798,7 +798,7 @@ public class Artifacts {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SearchArtifactsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SearchArtifactsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -852,13 +852,13 @@ public class Artifacts {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SearchArtifactsByContentQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SearchArtifactsByContentRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -913,12 +913,12 @@ public class Artifacts {
      */
     public org.openapis.openapi.models.operations.UpdateArtifactStateResponse updateArtifactState(org.openapis.openapi.models.operations.UpdateArtifactStateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateArtifactStatePathParams.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/state", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateArtifactStateRequest.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/state", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateState", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -974,18 +974,18 @@ public class Artifacts {
      */
     public org.openapis.openapi.models.operations.UpdateArtifactJsonResponse updateArtifactJson(org.openapis.openapi.models.operations.UpdateArtifactJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateArtifactJsonPathParams.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateArtifactJsonRequest.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "contentCreateRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1049,18 +1049,18 @@ public class Artifacts {
      */
     public org.openapis.openapi.models.operations.UpdateArtifactRawResponse updateArtifactRaw(org.openapis.openapi.models.operations.UpdateArtifactRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateArtifactRawPathParams.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateArtifactRawRequest.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

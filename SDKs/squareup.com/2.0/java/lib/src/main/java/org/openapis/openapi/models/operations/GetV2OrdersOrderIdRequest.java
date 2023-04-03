@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2OrdersOrderIdRequest {
-    
-    public GetV2OrdersOrderIdPathParams pathParams;
-    public GetV2OrdersOrderIdRequest withPathParams(GetV2OrdersOrderIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetV2OrdersOrderIdSecurity security;
-    public GetV2OrdersOrderIdRequest withSecurity(GetV2OrdersOrderIdSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the order to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=order_id")
+    public String orderId;
+    public GetV2OrdersOrderIdRequest withOrderId(String orderId) {
+        this.orderId = orderId;
         return this;
     }
     

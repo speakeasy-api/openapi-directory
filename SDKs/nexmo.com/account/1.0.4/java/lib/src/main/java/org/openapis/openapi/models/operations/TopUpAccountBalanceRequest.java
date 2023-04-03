@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TopUpAccountBalanceRequest {
+    /**
+     * Your Vonage API key. You can find this in the [dashboard](https://dashboard.nexmo.com)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public TopUpAccountBalanceRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public TopUpAccountBalanceQueryParams queryParams;
-    public TopUpAccountBalanceRequest withQueryParams(TopUpAccountBalanceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Your Vonage API secret. You can find this in the [dashboard](https://dashboard.nexmo.com)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_secret")
+    public String apiSecret;
+    public TopUpAccountBalanceRequest withApiSecret(String apiSecret) {
+        this.apiSecret = apiSecret;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.TopupRequest request;
-    public TopUpAccountBalanceRequest withRequest(org.openapis.openapi.models.shared.TopupRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public TopUpAccountBalanceRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public org.openapis.openapi.models.shared.TopupRequest topupRequest;
+    public TopUpAccountBalanceRequest withTopupRequest(org.openapis.openapi.models.shared.TopupRequest topupRequest) {
+        this.topupRequest = topupRequest;
         return this;
     }
     

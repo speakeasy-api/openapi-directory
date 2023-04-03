@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTimesheetRequest {
-    
-    public GetTimesheetPathParams pathParams;
-    public GetTimesheetRequest withPathParams(GetTimesheetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Timesheet id for single object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TimesheetID")
+    public String timesheetID;
+    public GetTimesheetRequest withTimesheetID(String timesheetID) {
+        this.timesheetID = timesheetID;
         return this;
     }
     
-    
-    public GetTimesheetHeaders headers;
-    public GetTimesheetRequest withHeaders(GetTimesheetHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetTimesheetSecurity security;
-    public GetTimesheetRequest withSecurity(GetTimesheetSecurity security) {
-        this.security = security;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
+    public String xeroTenantId;
+    public GetTimesheetRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     

@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNextPlaybackItemSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeProfileAuth profileAuth;
-    public GetNextPlaybackItemSecurity withProfileAuth(org.openapis.openapi.models.shared.SchemeProfileAuth profileAuth) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String profileAuth;
+    public GetNextPlaybackItemSecurity withProfileAuth(String profileAuth) {
         this.profileAuth = profileAuth;
         return this;
     }

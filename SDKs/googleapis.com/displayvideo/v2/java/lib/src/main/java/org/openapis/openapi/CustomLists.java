@@ -33,25 +33,26 @@ public class CustomLists {
     /**
      * Gets a custom list.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoCustomListsGetResponse displayvideoCustomListsGet(org.openapis.openapi.models.operations.DisplayvideoCustomListsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoCustomListsGetResponse displayvideoCustomListsGet(org.openapis.openapi.models.operations.DisplayvideoCustomListsGetRequest request, org.openapis.openapi.models.operations.DisplayvideoCustomListsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoCustomListsGetPathParams.class, baseUrl, "/v2/customLists/{customListId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoCustomListsGetRequest.class, baseUrl, "/v2/customLists/{customListId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoCustomListsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoCustomListsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,10 +79,11 @@ public class CustomLists {
     /**
      * Lists custom lists. The order is defined by the order_by parameter.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoCustomListsListResponse displayvideoCustomListsList(org.openapis.openapi.models.operations.DisplayvideoCustomListsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoCustomListsListResponse displayvideoCustomListsList(org.openapis.openapi.models.operations.DisplayvideoCustomListsListRequest request, org.openapis.openapi.models.operations.DisplayvideoCustomListsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/customLists");
         
@@ -89,14 +91,14 @@ public class CustomLists {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoCustomListsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoCustomListsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

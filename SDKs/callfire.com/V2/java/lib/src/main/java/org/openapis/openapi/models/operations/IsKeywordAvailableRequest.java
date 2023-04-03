@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IsKeywordAvailableRequest {
-    
-    public IsKeywordAvailablePathParams pathParams;
-    public IsKeywordAvailableRequest withPathParams(IsKeywordAvailablePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public IsKeywordAvailableSecurity security;
-    public IsKeywordAvailableRequest withSecurity(IsKeywordAvailableSecurity security) {
-        this.security = security;
+    /**
+     * To specify a keyword to search for. Example: SUN, MOON
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=keyword")
+    public String keyword;
+    public IsKeywordAvailableRequest withKeyword(String keyword) {
+        this.keyword = keyword;
         return this;
     }
     

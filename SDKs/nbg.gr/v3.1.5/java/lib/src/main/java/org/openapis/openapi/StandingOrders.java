@@ -33,18 +33,19 @@ public class StandingOrders {
      * Get Standing Orders
      * Get Standing Orders by Account ID
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAccountsAccountIdStandingOrdersResponse getAccountsAccountIdStandingOrders(org.openapis.openapi.models.operations.GetAccountsAccountIdStandingOrdersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetAccountsAccountIdStandingOrdersResponse getAccountsAccountIdStandingOrders(org.openapis.openapi.models.operations.GetAccountsAccountIdStandingOrdersRequest request, org.openapis.openapi.models.operations.GetAccountsAccountIdStandingOrdersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAccountsAccountIdStandingOrdersPathParams.class, baseUrl, "/accounts/{accountId}/standing-orders", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAccountsAccountIdStandingOrdersRequest.class, baseUrl, "/accounts/{accountId}/standing-orders", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -53,7 +54,7 @@ public class StandingOrders {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

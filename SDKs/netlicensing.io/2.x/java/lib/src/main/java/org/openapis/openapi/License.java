@@ -38,10 +38,11 @@ public class License {
      * Create License
      * Creates a new License
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateLicenseResponse createLicense(org.openapis.openapi.models.operations.CreateLicenseRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateLicenseResponse createLicense(org.openapis.openapi.models.operations.CreateLicenseRequestBody request, org.openapis.openapi.models.operations.CreateLicenseSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/license");
         
@@ -55,7 +56,7 @@ public class License {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -90,19 +91,20 @@ public class License {
      * Delete License
      * Delete License by a 'licenseNumber'
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteLicenseResponse deleteLicense(org.openapis.openapi.models.operations.DeleteLicenseRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteLicenseResponse deleteLicense(org.openapis.openapi.models.operations.DeleteLicenseRequest request, org.openapis.openapi.models.operations.DeleteLicenseSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteLicensePathParams.class, baseUrl, "/license/{licenseNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteLicenseRequest.class, baseUrl, "/license/{licenseNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -137,19 +139,20 @@ public class License {
      * Get License
      * Get License by a 'licenseNumber'
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetLicenseResponse getLicense(org.openapis.openapi.models.operations.GetLicenseRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetLicenseResponse getLicense(org.openapis.openapi.models.operations.GetLicenseRequest request, org.openapis.openapi.models.operations.GetLicenseSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLicensePathParams.class, baseUrl, "/license/{licenseNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLicenseRequest.class, baseUrl, "/license/{licenseNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -183,11 +186,10 @@ public class License {
     /**
      * List Licenses
      * Return a list of all Licenses for the current Vendor
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListLicensesResponse listLicenses(org.openapis.openapi.models.operations.ListLicensesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListLicensesResponse listLicenses() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/license");
         
@@ -196,8 +198,7 @@ public class License {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -231,21 +232,22 @@ public class License {
      * Update License
      * Update License by a 'licenseNumber'
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateLicenseResponse updateLicense(org.openapis.openapi.models.operations.UpdateLicenseRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateLicenseResponse updateLicense(org.openapis.openapi.models.operations.UpdateLicenseRequest request, org.openapis.openapi.models.operations.UpdateLicenseSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateLicensePathParams.class, baseUrl, "/license/{licenseNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateLicenseRequest.class, baseUrl, "/license/{licenseNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

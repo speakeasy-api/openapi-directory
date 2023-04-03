@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2GetClanAggregateStatsRequest {
-    
-    public Destiny2GetClanAggregateStatsPathParams pathParams;
-    public Destiny2GetClanAggregateStatsRequest withPathParams(Destiny2GetClanAggregateStatsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Group ID of the clan whose leaderboards you wish to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public Long groupId;
+    public Destiny2GetClanAggregateStatsRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
         return this;
     }
     
-    
-    public Destiny2GetClanAggregateStatsQueryParams queryParams;
-    public Destiny2GetClanAggregateStatsRequest withQueryParams(Destiny2GetClanAggregateStatsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modes")
+    public String modes;
+    public Destiny2GetClanAggregateStatsRequest withModes(String modes) {
+        this.modes = modes;
         return this;
     }
     

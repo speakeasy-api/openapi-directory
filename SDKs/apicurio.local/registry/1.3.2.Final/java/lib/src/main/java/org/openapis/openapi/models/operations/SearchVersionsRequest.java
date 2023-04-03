@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchVersionsRequest {
-    
-    public SearchVersionsPathParams pathParams;
-    public SearchVersionsRequest withPathParams(SearchVersionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The artifact ID.  Can be a string (client-provided) or integer (server-generated) representing the unique artifact identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifactId")
+    public String artifactId;
+    public SearchVersionsRequest withArtifactId(String artifactId) {
+        this.artifactId = artifactId;
         return this;
     }
     
+    /**
+     * The number of versions to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public SearchVersionsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public SearchVersionsQueryParams queryParams;
-    public SearchVersionsRequest withQueryParams(SearchVersionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of versions to skip before starting to collect the result set.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public SearchVersionsRequest withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     

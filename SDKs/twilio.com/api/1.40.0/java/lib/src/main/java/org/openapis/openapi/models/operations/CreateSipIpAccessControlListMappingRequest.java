@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSipIpAccessControlListMappingRequest {
+    /**
+     * The unique id of the Account that is responsible for this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public CreateSipIpAccessControlListMappingRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
+        return this;
+    }
     
-    public CreateSipIpAccessControlListMappingPathParams pathParams;
-    public CreateSipIpAccessControlListMappingRequest withPathParams(CreateSipIpAccessControlListMappingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A 34 character string that uniquely identifies the SIP domain.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DomainSid")
+    public String domainSid;
+    public CreateSipIpAccessControlListMappingRequest withDomainSid(String domainSid) {
+        this.domainSid = domainSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateSipIpAccessControlListMappingCreateSipIpAccessControlListMappingRequest request;
-    public CreateSipIpAccessControlListMappingRequest withRequest(CreateSipIpAccessControlListMappingCreateSipIpAccessControlListMappingRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateSipIpAccessControlListMappingSecurity security;
-    public CreateSipIpAccessControlListMappingRequest withSecurity(CreateSipIpAccessControlListMappingSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateSipIpAccessControlListMappingRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateSipIpAccessControlListMappingCreateSipIpAccessControlListMappingRequest requestBody;
+    public CreateSipIpAccessControlListMappingRequest withRequestBody(CreateSipIpAccessControlListMappingCreateSipIpAccessControlListMappingRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

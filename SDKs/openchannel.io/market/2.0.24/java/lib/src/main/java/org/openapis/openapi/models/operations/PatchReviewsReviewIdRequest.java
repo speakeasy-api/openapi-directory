@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchReviewsReviewIdRequest {
-    
-    public PatchReviewsReviewIdPathParams pathParams;
-    public PatchReviewsReviewIdRequest withPathParams(PatchReviewsReviewIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A custom JSON object that you can create and attach to this record
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customData")
+    public String customData;
+    public PatchReviewsReviewIdRequest withCustomData(String customData) {
+        this.customData = customData;
         return this;
     }
     
+    /**
+     * The review's description. Limited to 2000 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
+    public String description;
+    public PatchReviewsReviewIdRequest withDescription(String description) {
+        this.description = description;
+        return this;
+    }
     
-    public PatchReviewsReviewIdQueryParams queryParams;
-    public PatchReviewsReviewIdRequest withQueryParams(PatchReviewsReviewIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The review's headline. Limited to 50 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=headline")
+    public String headline;
+    public PatchReviewsReviewIdRequest withHeadline(String headline) {
+        this.headline = headline;
+        return this;
+    }
+    
+    /**
+     * The rating given within this review. The rating is represented as an integer between 0 and 500 (0 - 5 stars)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rating")
+    public Long rating;
+    public PatchReviewsReviewIdRequest withRating(Long rating) {
+        this.rating = rating;
+        return this;
+    }
+    
+    /**
+     * The id of the Review to be updated
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reviewId")
+    public String reviewId;
+    public PatchReviewsReviewIdRequest withReviewId(String reviewId) {
+        this.reviewId = reviewId;
+        return this;
+    }
+    
+    /**
+     * The id of the User account that is posting this review
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userAccountId")
+    public String userAccountId;
+    public PatchReviewsReviewIdRequest withUserAccountId(String userAccountId) {
+        this.userAccountId = userAccountId;
+        return this;
+    }
+    
+    /**
+     * The id of the User that is updating this review
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userId")
+    public String userId;
+    public PatchReviewsReviewIdRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

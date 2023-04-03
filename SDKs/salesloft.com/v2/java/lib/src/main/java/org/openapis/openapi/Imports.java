@@ -43,13 +43,13 @@ public class Imports {
      */
     public org.openapis.openapi.models.operations.DeleteV2ImportsIdJsonResponse deleteV2ImportsIdJson(org.openapis.openapi.models.operations.DeleteV2ImportsIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteV2ImportsIdJsonPathParams.class, baseUrl, "/v2/imports/{id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteV2ImportsIdJsonRequest.class, baseUrl, "/v2/imports/{id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteV2ImportsIdJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteV2ImportsIdJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -89,7 +89,7 @@ public class Imports {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV2ImportsJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV2ImportsJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -130,7 +130,7 @@ public class Imports {
      */
     public org.openapis.openapi.models.operations.GetV2ImportsIdJsonResponse getV2ImportsIdJson(org.openapis.openapi.models.operations.GetV2ImportsIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2ImportsIdJsonPathParams.class, baseUrl, "/v2/imports/{id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2ImportsIdJsonRequest.class, baseUrl, "/v2/imports/{id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -167,7 +167,7 @@ public class Imports {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV2ImportsJsonResponse postV2ImportsJson(org.openapis.openapi.models.operations.PostV2ImportsJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV2ImportsJsonResponse postV2ImportsJson(org.openapis.openapi.models.operations.PostV2ImportsJsonRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/imports.json");
         
@@ -212,12 +212,12 @@ public class Imports {
      */
     public org.openapis.openapi.models.operations.PutV2ImportsIdJsonResponse putV2ImportsIdJson(org.openapis.openapi.models.operations.PutV2ImportsIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutV2ImportsIdJsonPathParams.class, baseUrl, "/v2/imports/{id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutV2ImportsIdJsonRequest.class, baseUrl, "/v2/imports/{id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         

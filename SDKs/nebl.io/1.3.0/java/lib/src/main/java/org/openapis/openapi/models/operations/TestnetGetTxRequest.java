@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestnetGetTxRequest {
-    
-    public TestnetGetTxPathParams pathParams;
-    public TestnetGetTxRequest withPathParams(TestnetGetTxPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Transaction ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=txid")
+    public String txid;
+    public TestnetGetTxRequest withTxid(String txid) {
+        this.txid = txid;
         return this;
     }
     

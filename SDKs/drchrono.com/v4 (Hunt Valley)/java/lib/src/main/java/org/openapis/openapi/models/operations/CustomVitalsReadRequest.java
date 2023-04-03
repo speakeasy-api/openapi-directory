@@ -4,27 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CustomVitalsReadRequest {
-    
-    public CustomVitalsReadPathParams pathParams;
-    public CustomVitalsReadRequest withPathParams(CustomVitalsReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public CustomVitalsReadRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     
-    
-    public CustomVitalsReadQueryParams queryParams;
-    public CustomVitalsReadRequest withQueryParams(CustomVitalsReadQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public CustomVitalsReadSecurity security;
-    public CustomVitalsReadRequest withSecurity(CustomVitalsReadSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public CustomVitalsReadRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CompleteS3FileUploadViaShareRequest {
-    
-    public CompleteS3FileUploadViaSharePathParams pathParams;
-    public CompleteS3FileUploadViaShareRequest withPathParams(CompleteS3FileUploadViaSharePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CompleteS3ShareUploadRequest completeS3ShareUploadRequest;
+    public CompleteS3FileUploadViaShareRequest withCompleteS3ShareUploadRequest(org.openapis.openapi.models.shared.CompleteS3ShareUploadRequest completeS3ShareUploadRequest) {
+        this.completeS3ShareUploadRequest = completeS3ShareUploadRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CompleteS3ShareUploadRequest request;
-    public CompleteS3FileUploadViaShareRequest withRequest(org.openapis.openapi.models.shared.CompleteS3ShareUploadRequest request) {
-        this.request = request;
+    /**
+     * Access key
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=access_key")
+    public String accessKey;
+    public CompleteS3FileUploadViaShareRequest withAccessKey(String accessKey) {
+        this.accessKey = accessKey;
+        return this;
+    }
+    
+    /**
+     * Upload channel ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=upload_id")
+    public String uploadId;
+    public CompleteS3FileUploadViaShareRequest withUploadId(String uploadId) {
+        this.uploadId = uploadId;
         return this;
     }
     

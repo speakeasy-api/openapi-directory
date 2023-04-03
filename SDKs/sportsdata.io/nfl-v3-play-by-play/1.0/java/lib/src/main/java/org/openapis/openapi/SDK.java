@@ -141,7 +141,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PlayByPlayResponse playByPlay(org.openapis.openapi.models.operations.PlayByPlayRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PlayByPlayPathParams.class, baseUrl, "/{format}/PlayByPlay/{season}/{week}/{hometeam}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PlayByPlayRequest.class, baseUrl, "/{format}/PlayByPlay/{season}/{week}/{hometeam}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -180,7 +180,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PlayByPlayDeltaResponse playByPlayDelta(org.openapis.openapi.models.operations.PlayByPlayDeltaRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PlayByPlayDeltaPathParams.class, baseUrl, "/{format}/PlayByPlayDelta/{season}/{week}/{minutes}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PlayByPlayDeltaRequest.class, baseUrl, "/{format}/PlayByPlayDelta/{season}/{week}/{minutes}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -220,7 +220,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PlayByPlaySimulationResponse playByPlaySimulation(org.openapis.openapi.models.operations.PlayByPlaySimulationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PlayByPlaySimulationPathParams.class, baseUrl, "/{format}/SimulatedPlayByPlay/{numberofplays}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PlayByPlaySimulationRequest.class, baseUrl, "/{format}/SimulatedPlayByPlay/{numberofplays}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StartingGoaltendersByDateRequest {
+    /**
+     * The date of the game(s).
+     * &lt;br&gt;Examples: &lt;code&gt;2021-OCT-12&lt;/code&gt;, &lt;code&gt;2021-DEC-09&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=date")
+    public String date;
+    public StartingGoaltendersByDateRequest withDate(String date) {
+        this.date = date;
+        return this;
+    }
     
-    public StartingGoaltendersByDatePathParams pathParams;
-    public StartingGoaltendersByDateRequest withPathParams(StartingGoaltendersByDatePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public StartingGoaltendersByDateFormatEnum format;
+    public StartingGoaltendersByDateRequest withFormat(StartingGoaltendersByDateFormatEnum format) {
+        this.format = format;
         return this;
     }
     

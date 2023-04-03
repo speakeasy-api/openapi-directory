@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVideoSuggestionsRequest {
-    
-    public GetVideoSuggestionsQueryParams queryParams;
-    public GetVideoSuggestionsRequest withQueryParams(GetVideoSuggestionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Limit the number of the suggestions
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetVideoSuggestionsRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
-    
-    public GetVideoSuggestionsSecurity security;
-    public GetVideoSuggestionsRequest withSecurity(GetVideoSuggestionsSecurity security) {
-        this.security = security;
+    /**
+     * Search term for which you want keyword suggestions
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public GetVideoSuggestionsRequest withQuery(String query) {
+        this.query = query;
         return this;
     }
     

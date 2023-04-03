@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersRawRequest {
-    
-    public PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersRawPathParams pathParams;
-    public PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersRawRequest withPathParams(PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersRawPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=text/xml")
+    public byte[] requestBody;
+    public PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersRawRequest withRequest(byte[] request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public String projectId;
+    public PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersRawRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
+    public String workgroupId;
+    public PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersRawRequest withWorkgroupId(String workgroupId) {
+        this.workgroupId = workgroupId;
         return this;
     }
     

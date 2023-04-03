@@ -39,7 +39,7 @@ public class LldpCdp {
      */
     public org.openapis.openapi.models.operations.GetDeviceLldpCdpResponse getDeviceLldpCdp(org.openapis.openapi.models.operations.GetDeviceLldpCdpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceLldpCdpPathParams.class, baseUrl, "/devices/{serial}/lldpCdp", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceLldpCdpRequest.class, baseUrl, "/devices/{serial}/lldpCdp", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

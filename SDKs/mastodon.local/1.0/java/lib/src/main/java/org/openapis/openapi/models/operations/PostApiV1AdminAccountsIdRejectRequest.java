@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostApiV1AdminAccountsIdRejectRequest {
-    
-    public PostApiV1AdminAccountsIdRejectPathParams pathParams;
-    public PostApiV1AdminAccountsIdRejectRequest withPathParams(PostApiV1AdminAccountsIdRejectPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostApiV1AdminAccountsIdRejectSecurity security;
-    public PostApiV1AdminAccountsIdRejectRequest withSecurity(PostApiV1AdminAccountsIdRejectSecurity security) {
-        this.security = security;
+    /**
+     * ID of the account
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostApiV1AdminAccountsIdRejectRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

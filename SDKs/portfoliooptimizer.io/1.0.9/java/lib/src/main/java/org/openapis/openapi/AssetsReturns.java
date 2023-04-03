@@ -41,7 +41,7 @@ public class AssetsReturns {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAssetsReturnsResponse postAssetsReturns(org.openapis.openapi.models.operations.PostAssetsReturnsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAssetsReturnsResponse postAssetsReturns(org.openapis.openapi.models.operations.PostAssetsReturnsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/assets/returns");
         
@@ -90,7 +90,7 @@ public class AssetsReturns {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAssetsReturnsAverageResponse postAssetsReturnsAverage(org.openapis.openapi.models.operations.PostAssetsReturnsAverageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAssetsReturnsAverageResponse postAssetsReturnsAverage(org.openapis.openapi.models.operations.PostAssetsReturnsAverageRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/assets/returns/average");
         

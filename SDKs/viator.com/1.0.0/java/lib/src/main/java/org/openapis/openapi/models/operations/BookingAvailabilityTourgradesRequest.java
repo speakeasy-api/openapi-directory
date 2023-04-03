@@ -7,17 +7,21 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BookingAvailabilityTourgradesRequest {
-    
-    public BookingAvailabilityTourgradesHeaders headers;
-    public BookingAvailabilityTourgradesRequest withHeaders(BookingAvailabilityTourgradesHeaders headers) {
-        this.headers = headers;
+    /**
+     * Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public BookingAvailabilityTourgradesRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public BookingAvailabilityTourgradesRequestBody request;
-    public BookingAvailabilityTourgradesRequest withRequest(BookingAvailabilityTourgradesRequestBody request) {
-        this.request = request;
+    public BookingAvailabilityTourgradesRequestBody requestBody;
+    public BookingAvailabilityTourgradesRequest withRequestBody(BookingAvailabilityTourgradesRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

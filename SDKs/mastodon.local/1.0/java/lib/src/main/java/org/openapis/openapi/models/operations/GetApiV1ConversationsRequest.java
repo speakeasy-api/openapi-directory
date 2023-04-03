@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1ConversationsRequest {
-    
-    public GetApiV1ConversationsQueryParams queryParams;
-    public GetApiV1ConversationsRequest withQueryParams(GetApiV1ConversationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Max number of results to return. Defaults to 20.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetApiV1ConversationsRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * Return results older than ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_id")
+    public String maxId;
+    public GetApiV1ConversationsRequest withMaxId(String maxId) {
+        this.maxId = maxId;
+        return this;
+    }
     
-    public GetApiV1ConversationsSecurity security;
-    public GetApiV1ConversationsRequest withSecurity(GetApiV1ConversationsSecurity security) {
-        this.security = security;
+    /**
+     * Return results immediately newer than ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_id")
+    public String minId;
+    public GetApiV1ConversationsRequest withMinId(String minId) {
+        this.minId = minId;
+        return this;
+    }
+    
+    /**
+     * Return results newer than ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since_id")
+    public String sinceId;
+    public GetApiV1ConversationsRequest withSinceId(String sinceId) {
+        this.sinceId = sinceId;
         return this;
     }
     

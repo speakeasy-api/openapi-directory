@@ -30,19 +30,15 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/DescribeStreamXAmzTargetEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/DescribeStreamHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/DescribeStreamRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DescribeStreamResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRecordsXAmzTargetEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetRecordsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRecordsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRecordsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetShardIteratorXAmzTargetEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetShardIteratorHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetShardIteratorRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetShardIteratorResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListStreamsXAmzTargetEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListStreamsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListStreamsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListStreamsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/DescribeStreamOutput.java
@@ -67,6 +63,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ShardIteratorTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListStreamsOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/Stream.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListStreamsInput.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeHmac.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

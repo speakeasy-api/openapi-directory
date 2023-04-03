@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchPhoneNumberRequest {
-    
-    public FetchPhoneNumberPathParams pathParams;
-    public FetchPhoneNumberRequest withPathParams(FetchPhoneNumberPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique string that we created to identify the PhoneNumber resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchPhoneNumberRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public FetchPhoneNumberSecurity security;
-    public FetchPhoneNumberRequest withSecurity(FetchPhoneNumberSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchPhoneNumberRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Trunk from which to fetch the PhoneNumber resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TrunkSid")
+    public String trunkSid;
+    public FetchPhoneNumberRequest withTrunkSid(String trunkSid) {
+        this.trunkSid = trunkSid;
         return this;
     }
     

@@ -37,7 +37,7 @@ public class CommunityContent {
      */
     public org.openapis.openapi.models.operations.CommunityContentGetCommunityContentResponse communityContentGetCommunityContent(org.openapis.openapi.models.operations.CommunityContentGetCommunityContentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CommunityContentGetCommunityContentPathParams.class, baseUrl, "/CommunityContent/Get/{sort}/{mediaFilter}/{page}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CommunityContentGetCommunityContentRequest.class, baseUrl, "/CommunityContent/Get/{sort}/{mediaFilter}/{page}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

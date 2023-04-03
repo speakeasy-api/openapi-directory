@@ -40,12 +40,12 @@ public class AnalyticsRules {
      */
     public org.openapis.openapi.models.operations.CreateRuleResponse createRule(org.openapis.openapi.models.operations.CreateRuleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateRulePathParams.class, baseUrl, "/v2/user/analytics/{storeId}/rules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateRuleRequest.class, baseUrl, "/v2/user/analytics/{storeId}/rules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createRuleRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -92,7 +92,7 @@ public class AnalyticsRules {
      */
     public org.openapis.openapi.models.operations.DeleteRuleResponse deleteRule(org.openapis.openapi.models.operations.DeleteRuleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRulePathParams.class, baseUrl, "/v2/user/analytics/{storeId}/rules/{ruleId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRuleRequest.class, baseUrl, "/v2/user/analytics/{storeId}/rules/{ruleId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -132,7 +132,7 @@ public class AnalyticsRules {
      */
     public org.openapis.openapi.models.operations.DisableRuleResponse disableRule(org.openapis.openapi.models.operations.DisableRuleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisableRulePathParams.class, baseUrl, "/v2/user/analytics/{storeId}/rules/{ruleId}/disable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisableRuleRequest.class, baseUrl, "/v2/user/analytics/{storeId}/rules/{ruleId}/disable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -172,7 +172,7 @@ public class AnalyticsRules {
      */
     public org.openapis.openapi.models.operations.EnableRuleResponse enableRule(org.openapis.openapi.models.operations.EnableRuleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnableRulePathParams.class, baseUrl, "/v2/user/analytics/{storeId}/rules/{ruleId}/enable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnableRuleRequest.class, baseUrl, "/v2/user/analytics/{storeId}/rules/{ruleId}/enable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -212,7 +212,7 @@ public class AnalyticsRules {
      */
     public org.openapis.openapi.models.operations.GetRuleResponse getRule(org.openapis.openapi.models.operations.GetRuleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRulePathParams.class, baseUrl, "/v2/user/analytics/{storeId}/rules/{ruleId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRuleRequest.class, baseUrl, "/v2/user/analytics/{storeId}/rules/{ruleId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -258,7 +258,7 @@ public class AnalyticsRules {
      */
     public org.openapis.openapi.models.operations.GetRulesResponse getRules(org.openapis.openapi.models.operations.GetRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRulesPathParams.class, baseUrl, "/v2/user/analytics/{storeId}/rules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRulesRequest.class, baseUrl, "/v2/user/analytics/{storeId}/rules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -304,13 +304,13 @@ public class AnalyticsRules {
      */
     public org.openapis.openapi.models.operations.GetRulesExecutionsResponse getRulesExecutions(org.openapis.openapi.models.operations.GetRulesExecutionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRulesExecutionsPathParams.class, baseUrl, "/v2/user/analytics/{storeId}/rules/executions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRulesExecutionsRequest.class, baseUrl, "/v2/user/analytics/{storeId}/rules/executions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRulesExecutionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRulesExecutionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -356,7 +356,7 @@ public class AnalyticsRules {
      */
     public org.openapis.openapi.models.operations.MoveDownRuleResponse moveDownRule(org.openapis.openapi.models.operations.MoveDownRuleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MoveDownRulePathParams.class, baseUrl, "/v2/user/analytics/{storeId}/rules/{ruleId}/movedown", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MoveDownRuleRequest.class, baseUrl, "/v2/user/analytics/{storeId}/rules/{ruleId}/movedown", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -396,7 +396,7 @@ public class AnalyticsRules {
      */
     public org.openapis.openapi.models.operations.MoveUpRuleResponse moveUpRule(org.openapis.openapi.models.operations.MoveUpRuleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MoveUpRulePathParams.class, baseUrl, "/v2/user/analytics/{storeId}/rules/{ruleId}/moveup", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MoveUpRuleRequest.class, baseUrl, "/v2/user/analytics/{storeId}/rules/{ruleId}/moveup", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -436,7 +436,7 @@ public class AnalyticsRules {
      */
     public org.openapis.openapi.models.operations.RunRuleResponse runRule(org.openapis.openapi.models.operations.RunRuleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunRulePathParams.class, baseUrl, "/v2/user/analytics/{storeId}/rules/{ruleId}/run", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunRuleRequest.class, baseUrl, "/v2/user/analytics/{storeId}/rules/{ruleId}/run", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -476,7 +476,7 @@ public class AnalyticsRules {
      */
     public org.openapis.openapi.models.operations.RunRulesResponse runRules(org.openapis.openapi.models.operations.RunRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunRulesPathParams.class, baseUrl, "/v2/user/analytics/{storeId}/rules/run", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunRulesRequest.class, baseUrl, "/v2/user/analytics/{storeId}/rules/run", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -516,12 +516,12 @@ public class AnalyticsRules {
      */
     public org.openapis.openapi.models.operations.UpdateRuleResponse updateRule(org.openapis.openapi.models.operations.UpdateRuleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateRulePathParams.class, baseUrl, "/v2/user/analytics/{storeId}/rules/{ruleId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateRuleRequest.class, baseUrl, "/v2/user/analytics/{storeId}/rules/{ruleId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateRuleRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AssociateNodeXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AssociateNodeHeaders;
 import org.openapis.openapi.models.operations.AssociateNodeRequest;
 import org.openapis.openapi.models.operations.AssociateNodeResponse;
 import org.openapis.openapi.models.shared.AssociateNodeRequest;
@@ -16,46 +15,38 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AssociateNodeRequest req = new AssociateNodeRequest() {{
-                headers = new AssociateNodeHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "OpsWorksCM_V2016_11_01.AssociateNode";
-                }};
-                request = new AssociateNodeRequest() {{
+                associateNodeRequest = new AssociateNodeRequest() {{
                     engineAttributes = new org.openapis.openapi.models.shared.EngineAttribute[]{{
                         add(new EngineAttribute() {{
-                            name = "vel";
-                            value = "error";
+                            name = "provident";
+                            value = "distinctio";
                         }}),
                         add(new EngineAttribute() {{
-                            name = "deserunt";
-                            value = "suscipit";
+                            name = "quibusdam";
+                            value = "unde";
                         }}),
                         add(new EngineAttribute() {{
-                            name = "iure";
-                            value = "magnam";
-                        }}),
-                        add(new EngineAttribute() {{
-                            name = "debitis";
-                            value = "ipsa";
+                            name = "nulla";
+                            value = "corrupti";
                         }}),
                     }};
-                    nodeName = "delectus";
-                    serverName = "tempora";
+                    nodeName = "illum";
+                    serverName = "vel";
                 }};
-            }};            
+                xAmzAlgorithm = "error";
+                xAmzContentSha256 = "deserunt";
+                xAmzCredential = "suscipit";
+                xAmzDate = "iure";
+                xAmzSecurityToken = "magnam";
+                xAmzSignature = "debitis";
+                xAmzSignedHeaders = "ipsa";
+                xAmzTarget = "OpsWorksCM_V2016_11_01.AssociateNode";
+            }}            
 
             AssociateNodeResponse res = sdk.associateNode(req);
 

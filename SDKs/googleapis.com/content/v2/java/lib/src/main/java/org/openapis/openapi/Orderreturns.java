@@ -33,25 +33,26 @@ public class Orderreturns {
     /**
      * Retrieves an order return from your Merchant Center account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentOrderreturnsGetResponse contentOrderreturnsGet(org.openapis.openapi.models.operations.ContentOrderreturnsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentOrderreturnsGetResponse contentOrderreturnsGet(org.openapis.openapi.models.operations.ContentOrderreturnsGetRequest request, org.openapis.openapi.models.operations.ContentOrderreturnsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentOrderreturnsGetPathParams.class, baseUrl, "/{merchantId}/orderreturns/{returnId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentOrderreturnsGetRequest.class, baseUrl, "/{merchantId}/orderreturns/{returnId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentOrderreturnsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentOrderreturnsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,25 +79,26 @@ public class Orderreturns {
     /**
      * Lists order returns in your Merchant Center account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentOrderreturnsListResponse contentOrderreturnsList(org.openapis.openapi.models.operations.ContentOrderreturnsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentOrderreturnsListResponse contentOrderreturnsList(org.openapis.openapi.models.operations.ContentOrderreturnsListRequest request, org.openapis.openapi.models.operations.ContentOrderreturnsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentOrderreturnsListPathParams.class, baseUrl, "/{merchantId}/orderreturns", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentOrderreturnsListRequest.class, baseUrl, "/{merchantId}/orderreturns", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentOrderreturnsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentOrderreturnsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteDomainCertV4Request {
-    
-    public DeleteDomainCertV4PathParams pathParams;
-    public DeleteDomainCertV4Request withPathParams(DeleteDomainCertV4PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteDomainCertV4Security security;
-    public DeleteDomainCertV4Request withSecurity(DeleteDomainCertV4Security security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteDomainCertV4Request withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Unique string used to identify the domain that this certificate should be associated with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DomainSid")
+    public String domainSid;
+    public DeleteDomainCertV4Request withDomainSid(String domainSid) {
+        this.domainSid = domainSid;
         return this;
     }
     

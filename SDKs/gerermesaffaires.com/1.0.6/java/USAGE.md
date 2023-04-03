@@ -5,10 +5,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.DeleteBusinessGroupsIdSpacesSpaceIdSecurity;
-import org.openapis.openapi.models.operations.DeleteBusinessGroupsIdSpacesSpaceIdPathParams;
 import org.openapis.openapi.models.operations.DeleteBusinessGroupsIdSpacesSpaceIdRequest;
 import org.openapis.openapi.models.operations.DeleteBusinessGroupsIdSpacesSpaceIdResponse;
-import org.openapis.openapi.models.shared.SchemeGmaAuth;
 
 public class Application {
     public static void main(String[] args) {
@@ -17,18 +15,13 @@ public class Application {
                 .build();
 
             DeleteBusinessGroupsIdSpacesSpaceIdRequest req = new DeleteBusinessGroupsIdSpacesSpaceIdRequest() {{
-                security = new DeleteBusinessGroupsIdSpacesSpaceIdSecurity() {{
-                    gmaAuth = new SchemeGmaAuth() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new DeleteBusinessGroupsIdSpacesSpaceIdPathParams() {{
-                    id = "P18784";
-                    spaceId = "P18784";
-                }};
-            }};            
+                id = "P18784";
+                spaceId = "P18784";
+            }}            
 
-            DeleteBusinessGroupsIdSpacesSpaceIdResponse res = sdk.deleteBusinessGroupsIdSpacesSpaceId(req);
+            DeleteBusinessGroupsIdSpacesSpaceIdResponse res = sdk.deleteBusinessGroupsIdSpacesSpaceId(req, new DeleteBusinessGroupsIdSpacesSpaceIdSecurity() {{
+                gmaAuth = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.statusCode == 200) {
                 // handle response

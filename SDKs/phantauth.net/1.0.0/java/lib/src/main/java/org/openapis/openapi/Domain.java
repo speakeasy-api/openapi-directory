@@ -48,7 +48,7 @@ public class Domain {
      */
     public org.openapis.openapi.models.operations.GetDomainDomainnameResponse getDomainDomainname(org.openapis.openapi.models.operations.GetDomainDomainnameRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDomainDomainnamePathParams.class, baseUrl, "/domain/{domainname}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDomainDomainnameRequest.class, baseUrl, "/domain/{domainname}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

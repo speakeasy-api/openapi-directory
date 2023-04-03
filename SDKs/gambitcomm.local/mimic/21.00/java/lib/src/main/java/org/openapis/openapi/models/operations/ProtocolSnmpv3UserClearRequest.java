@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolSnmpv3UserClearRequest {
-    
-    public ProtocolSnmpv3UserClearPathParams pathParams;
-    public ProtocolSnmpv3UserClearRequest withPathParams(ProtocolSnmpv3UserClearPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to add the SNMPv3 user
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolSnmpv3UserClearRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

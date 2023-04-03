@@ -39,19 +39,20 @@ public class Snippets {
      * 
      * __Note:__ Square Online APIs are publicly available as part of an early access program. For more information, see [Early access program for Square Online APIs](https://developer.squareup.com/docs/online-api#early-access-program-for-square-online-apis).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteSnippetResponse deleteSnippet(org.openapis.openapi.models.operations.DeleteSnippetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteSnippetResponse deleteSnippet(org.openapis.openapi.models.operations.DeleteSnippetRequest request, org.openapis.openapi.models.operations.DeleteSnippetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSnippetPathParams.class, baseUrl, "/v2/sites/{site_id}/snippet", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSnippetRequest.class, baseUrl, "/v2/sites/{site_id}/snippet", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -84,19 +85,20 @@ public class Snippets {
      * 
      * __Note:__ Square Online APIs are publicly available as part of an early access program. For more information, see [Early access program for Square Online APIs](https://developer.squareup.com/docs/online-api#early-access-program-for-square-online-apis).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrieveSnippetResponse retrieveSnippet(org.openapis.openapi.models.operations.RetrieveSnippetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveSnippetResponse retrieveSnippet(org.openapis.openapi.models.operations.RetrieveSnippetRequest request, org.openapis.openapi.models.operations.RetrieveSnippetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveSnippetPathParams.class, baseUrl, "/v2/sites/{site_id}/snippet", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveSnippetRequest.class, baseUrl, "/v2/sites/{site_id}/snippet", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -130,24 +132,25 @@ public class Snippets {
      * 
      * __Note:__ Square Online APIs are publicly available as part of an early access program. For more information, see [Early access program for Square Online APIs](https://developer.squareup.com/docs/online-api#early-access-program-for-square-online-apis).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpsertSnippetResponse upsertSnippet(org.openapis.openapi.models.operations.UpsertSnippetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpsertSnippetResponse upsertSnippet(org.openapis.openapi.models.operations.UpsertSnippetRequest request, org.openapis.openapi.models.operations.UpsertSnippetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpsertSnippetPathParams.class, baseUrl, "/v2/sites/{site_id}/snippet", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpsertSnippetRequest.class, baseUrl, "/v2/sites/{site_id}/snippet", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "upsertSnippetRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

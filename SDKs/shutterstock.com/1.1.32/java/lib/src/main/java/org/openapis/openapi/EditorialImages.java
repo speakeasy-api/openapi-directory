@@ -36,11 +36,10 @@ public class EditorialImages {
     /**
      * (Deprecated) List editorial categories
      * Deprecated; use `GET /v2/editorial/images/categories` instead. This endpoint lists the categories that editorial images can belong to, which are separate from the categories that other types of assets can belong to.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEditorialCategoriesResponse getEditorialCategories(org.openapis.openapi.models.operations.GetEditorialCategoriesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEditorialCategoriesResponse getEditorialCategories() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/editorial/categories");
         
@@ -49,8 +48,7 @@ public class EditorialImages {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -79,25 +77,26 @@ public class EditorialImages {
      * Get editorial content details
      * This endpoint shows information about an editorial image, including a URL to a preview image and the sizes that it is available in.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEditorialImageResponse getEditorialImage(org.openapis.openapi.models.operations.GetEditorialImageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEditorialImageResponse getEditorialImage(org.openapis.openapi.models.operations.GetEditorialImageRequest request, org.openapis.openapi.models.operations.GetEditorialImageSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEditorialImagePathParams.class, baseUrl, "/v2/editorial/images/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEditorialImageRequest.class, baseUrl, "/v2/editorial/images/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEditorialImageQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEditorialImageRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,10 +126,11 @@ public class EditorialImages {
      * List editorial image licenses
      * This endpoint lists existing editorial image licenses.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEditorialImageLicenseListResponse getEditorialImageLicenseList(org.openapis.openapi.models.operations.GetEditorialImageLicenseListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEditorialImageLicenseListResponse getEditorialImageLicenseList(org.openapis.openapi.models.operations.GetEditorialImageLicenseListRequest request, org.openapis.openapi.models.operations.GetEditorialImageLicenseListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/editorial/images/licenses");
         
@@ -138,14 +138,14 @@ public class EditorialImages {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEditorialImageLicenseListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEditorialImageLicenseListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,25 +174,26 @@ public class EditorialImages {
     /**
      * Get editorial livefeed
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEditorialImageLivefeedResponse getEditorialImageLivefeed(org.openapis.openapi.models.operations.GetEditorialImageLivefeedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEditorialImageLivefeedResponse getEditorialImageLivefeed(org.openapis.openapi.models.operations.GetEditorialImageLivefeedRequest request, org.openapis.openapi.models.operations.GetEditorialImageLivefeedSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEditorialImageLivefeedPathParams.class, baseUrl, "/v2/editorial/images/livefeeds/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEditorialImageLivefeedRequest.class, baseUrl, "/v2/editorial/images/livefeeds/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEditorialImageLivefeedQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEditorialImageLivefeedRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -221,25 +222,26 @@ public class EditorialImages {
     /**
      * Get editorial livefeed items
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEditorialImageLivefeedItemsResponse getEditorialImageLivefeedItems(org.openapis.openapi.models.operations.GetEditorialImageLivefeedItemsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEditorialImageLivefeedItemsResponse getEditorialImageLivefeedItems(org.openapis.openapi.models.operations.GetEditorialImageLivefeedItemsRequest request, org.openapis.openapi.models.operations.GetEditorialImageLivefeedItemsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEditorialImageLivefeedItemsPathParams.class, baseUrl, "/v2/editorial/images/livefeeds/{id}/items", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEditorialImageLivefeedItemsRequest.class, baseUrl, "/v2/editorial/images/livefeeds/{id}/items", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEditorialImageLivefeedItemsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEditorialImageLivefeedItemsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -268,10 +270,11 @@ public class EditorialImages {
     /**
      * Get editorial livefeed list
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEditorialImageLivefeedListResponse getEditorialImageLivefeedList(org.openapis.openapi.models.operations.GetEditorialImageLivefeedListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEditorialImageLivefeedListResponse getEditorialImageLivefeedList(org.openapis.openapi.models.operations.GetEditorialImageLivefeedListRequest request, org.openapis.openapi.models.operations.GetEditorialImageLivefeedListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/editorial/images/livefeeds");
         
@@ -279,14 +282,14 @@ public class EditorialImages {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEditorialImageLivefeedListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEditorialImageLivefeedListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -316,25 +319,26 @@ public class EditorialImages {
      * (Deprecated) Get editorial livefeed
      * Deprecated: use `GET /v2/editorial/images/livefeeds/{id}` instead to get an editorial livefeed.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEditorialLivefeedResponse getEditorialLivefeed(org.openapis.openapi.models.operations.GetEditorialLivefeedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEditorialLivefeedResponse getEditorialLivefeed(org.openapis.openapi.models.operations.GetEditorialLivefeedRequest request, org.openapis.openapi.models.operations.GetEditorialLivefeedSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEditorialLivefeedPathParams.class, baseUrl, "/v2/editorial/livefeeds/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEditorialLivefeedRequest.class, baseUrl, "/v2/editorial/livefeeds/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEditorialLivefeedQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEditorialLivefeedRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -364,25 +368,26 @@ public class EditorialImages {
      * (Deprecated) Get editorial livefeed items
      * Deprecated; use `GET /v2/editorial/images/livefeeds/{id}/items` instead to get editorial livefeed items.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEditorialLivefeedItemsResponse getEditorialLivefeedItems(org.openapis.openapi.models.operations.GetEditorialLivefeedItemsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEditorialLivefeedItemsResponse getEditorialLivefeedItems(org.openapis.openapi.models.operations.GetEditorialLivefeedItemsRequest request, org.openapis.openapi.models.operations.GetEditorialLivefeedItemsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEditorialLivefeedItemsPathParams.class, baseUrl, "/v2/editorial/livefeeds/{id}/items", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEditorialLivefeedItemsRequest.class, baseUrl, "/v2/editorial/livefeeds/{id}/items", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEditorialLivefeedItemsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEditorialLivefeedItemsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -412,10 +417,11 @@ public class EditorialImages {
      * (Deprecated) Get editorial livefeed list
      * Deprecated; use `GET /v2/editorial/images/livefeeds` instead to get a list of editorial livefeeds.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEditorialLivefeedListResponse getEditorialLivefeedList(org.openapis.openapi.models.operations.GetEditorialLivefeedListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEditorialLivefeedListResponse getEditorialLivefeedList(org.openapis.openapi.models.operations.GetEditorialLivefeedListRequest request, org.openapis.openapi.models.operations.GetEditorialLivefeedListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/editorial/livefeeds");
         
@@ -423,14 +429,14 @@ public class EditorialImages {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEditorialLivefeedListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEditorialLivefeedListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -460,10 +466,11 @@ public class EditorialImages {
      * (Deprecated) List updated content
      * Deprecated; use `GET /v2/editorial/images/updated` instead to get recently updated items.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetUpdatedEditorialImageResponse getUpdatedEditorialImage(org.openapis.openapi.models.operations.GetUpdatedEditorialImageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetUpdatedEditorialImageResponse getUpdatedEditorialImage(org.openapis.openapi.models.operations.GetUpdatedEditorialImageRequest request, org.openapis.openapi.models.operations.GetUpdatedEditorialImageSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/editorial/updated");
         
@@ -471,14 +478,14 @@ public class EditorialImages {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUpdatedEditorialImageQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUpdatedEditorialImageRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -508,10 +515,11 @@ public class EditorialImages {
      * List updated content
      * This endpoint lists editorial images that have been updated in the specified time period to update content management systems (CMS) or digital asset management (DAM) systems. In most cases, use the date_updated_start and date_updated_end parameters to specify a range updates based on when the updates happened. You can also use the date_taken_start and date_taken_end parameters to specify a range of updates based on when the image was taken.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetUpdatedEditorialImagesResponse getUpdatedEditorialImages(org.openapis.openapi.models.operations.GetUpdatedEditorialImagesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetUpdatedEditorialImagesResponse getUpdatedEditorialImages(org.openapis.openapi.models.operations.GetUpdatedEditorialImagesRequest request, org.openapis.openapi.models.operations.GetUpdatedEditorialImagesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/editorial/images/updated");
         
@@ -519,14 +527,14 @@ public class EditorialImages {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUpdatedEditorialImagesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUpdatedEditorialImagesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -556,25 +564,26 @@ public class EditorialImages {
      * (Deprecated) Get editorial content details
      * Deprecated; use `GET /v2/editorial/images/{id}` instead to show information about an editorial image, including a URL to a preview image and the sizes that it is available in.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetV2EditorialIdResponse getV2EditorialId(org.openapis.openapi.models.operations.GetV2EditorialIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetV2EditorialIdResponse getV2EditorialId(org.openapis.openapi.models.operations.GetV2EditorialIdRequest request, org.openapis.openapi.models.operations.GetV2EditorialIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2EditorialIdPathParams.class, baseUrl, "/v2/editorial/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2EditorialIdRequest.class, baseUrl, "/v2/editorial/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV2EditorialIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV2EditorialIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -604,10 +613,11 @@ public class EditorialImages {
      * (Deprecated) License editorial content
      * Deprecated; use `POST /v2/editorial/images/licenses` instead to get licenses for one or more editorial images. You must specify the country and one or more editorial images to license. The download links in the response are valid for 8 hours.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LicenseEditorialImageResponse licenseEditorialImage(org.openapis.openapi.models.operations.LicenseEditorialImageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LicenseEditorialImageResponse licenseEditorialImage(org.openapis.openapi.models.shared.LicenseEditorialContentRequest request, org.openapis.openapi.models.operations.LicenseEditorialImageSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/editorial/licenses");
         
@@ -621,7 +631,7 @@ public class EditorialImages {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -651,10 +661,11 @@ public class EditorialImages {
      * License editorial content
      * This endpoint gets licenses for one or more editorial images. You must specify the country and one or more editorial images to license. The download links in the response are valid for 8 hours.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LicenseEditorialImagesResponse licenseEditorialImages(org.openapis.openapi.models.operations.LicenseEditorialImagesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LicenseEditorialImagesResponse licenseEditorialImages(org.openapis.openapi.models.shared.LicenseEditorialContentRequest request, org.openapis.openapi.models.operations.LicenseEditorialImagesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/editorial/images/licenses");
         
@@ -668,7 +679,7 @@ public class EditorialImages {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -697,11 +708,10 @@ public class EditorialImages {
     /**
      * List editorial categories
      * This endpoint lists the categories that editorial images can belong to, which are separate from the categories that other types of assets can belong to.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListEditorialImageCategoriesResponse listEditorialImageCategories(org.openapis.openapi.models.operations.ListEditorialImageCategoriesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListEditorialImageCategoriesResponse listEditorialImageCategories() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/editorial/images/categories");
         
@@ -710,8 +720,7 @@ public class EditorialImages {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -740,10 +749,11 @@ public class EditorialImages {
      * (Deprecated) Search editorial content
      * Deprecated; use `GET /v2/editorial/images/search` instead to search for editorial images.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SearchEditorialResponse searchEditorial(org.openapis.openapi.models.operations.SearchEditorialRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SearchEditorialResponse searchEditorial(org.openapis.openapi.models.operations.SearchEditorialRequest request, org.openapis.openapi.models.operations.SearchEditorialSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/editorial/search");
         
@@ -751,14 +761,14 @@ public class EditorialImages {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SearchEditorialQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SearchEditorialRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -788,10 +798,11 @@ public class EditorialImages {
      * Search editorial images
      * This endpoint searches for editorial images. If you specify more than one search parameter, the API uses an AND condition. For example, if you set the `category` parameter to "Alone,Performing" and also specify a `query` parameter, the results include only images that match the query and are in both the Alone and Performing categories. You can also filter search terms out in the `query` parameter by prefixing the term with NOT.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SearchEditorialImagesResponse searchEditorialImages(org.openapis.openapi.models.operations.SearchEditorialImagesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SearchEditorialImagesResponse searchEditorialImages(org.openapis.openapi.models.operations.SearchEditorialImagesRequest request, org.openapis.openapi.models.operations.SearchEditorialImagesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/editorial/images/search");
         
@@ -799,14 +810,14 @@ public class EditorialImages {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SearchEditorialImagesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SearchEditorialImagesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

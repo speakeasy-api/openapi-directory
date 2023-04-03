@@ -43,7 +43,7 @@ public class FileComments {
      */
     public org.openapis.openapi.models.operations.DeleteFileCommentsIdResponse deleteFileCommentsId(org.openapis.openapi.models.operations.DeleteFileCommentsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteFileCommentsIdPathParams.class, baseUrl, "/file_comments/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteFileCommentsIdRequest.class, baseUrl, "/file_comments/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -76,13 +76,13 @@ public class FileComments {
      */
     public org.openapis.openapi.models.operations.FileCommentListForPathResponse fileCommentListForPath(org.openapis.openapi.models.operations.FileCommentListForPathRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FileCommentListForPathPathParams.class, baseUrl, "/file_comments/files/{path}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FileCommentListForPathRequest.class, baseUrl, "/file_comments/files/{path}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FileCommentListForPathQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FileCommentListForPathRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -123,12 +123,12 @@ public class FileComments {
      */
     public org.openapis.openapi.models.operations.PatchFileCommentsIdResponse patchFileCommentsId(org.openapis.openapi.models.operations.PatchFileCommentsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchFileCommentsIdPathParams.class, baseUrl, "/file_comments/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchFileCommentsIdRequest.class, baseUrl, "/file_comments/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -167,7 +167,7 @@ public class FileComments {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostFileCommentsResponse postFileComments(org.openapis.openapi.models.operations.PostFileCommentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostFileCommentsResponse postFileComments(org.openapis.openapi.models.operations.PostFileCommentsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/file_comments");
         

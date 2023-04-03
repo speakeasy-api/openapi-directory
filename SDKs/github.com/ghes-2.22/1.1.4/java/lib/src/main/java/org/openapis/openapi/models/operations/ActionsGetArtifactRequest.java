@@ -4,13 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsGetArtifactRequest {
+    /**
+     * artifact_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifact_id")
+    public Long artifactId;
+    public ActionsGetArtifactRequest withArtifactId(Long artifactId) {
+        this.artifactId = artifactId;
+        return this;
+    }
     
-    public ActionsGetArtifactPathParams pathParams;
-    public ActionsGetArtifactRequest withPathParams(ActionsGetArtifactPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ActionsGetArtifactRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ActionsGetArtifactRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

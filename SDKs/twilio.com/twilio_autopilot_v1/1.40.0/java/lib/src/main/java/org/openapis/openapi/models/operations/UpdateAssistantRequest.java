@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateAssistantRequest {
-    
-    public UpdateAssistantPathParams pathParams;
-    public UpdateAssistantRequest withPathParams(UpdateAssistantPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateAssistantUpdateAssistantRequest request;
-    public UpdateAssistantRequest withRequest(UpdateAssistantUpdateAssistantRequest request) {
-        this.request = request;
+    public UpdateAssistantUpdateAssistantRequest requestBody;
+    public UpdateAssistantRequest withRequestBody(UpdateAssistantUpdateAssistantRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateAssistantSecurity security;
-    public UpdateAssistantRequest withSecurity(UpdateAssistantSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateAssistantRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the Assistant resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateAssistantRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

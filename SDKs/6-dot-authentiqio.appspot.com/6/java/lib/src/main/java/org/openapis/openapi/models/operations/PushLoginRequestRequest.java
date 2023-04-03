@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PushLoginRequestRequest {
-    
-    public PushLoginRequestQueryParams queryParams;
-    public PushLoginRequestRequest withQueryParams(PushLoginRequestQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Push Token.
      */
     @SpeakeasyMetadata("request:mediaType=application/jwt")
-    public byte[] request;
-    public PushLoginRequestRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public PushLoginRequestRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * URI App will connect to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public PushLoginRequestRequest withCallback(String callback) {
+        this.callback = callback;
         return this;
     }
     

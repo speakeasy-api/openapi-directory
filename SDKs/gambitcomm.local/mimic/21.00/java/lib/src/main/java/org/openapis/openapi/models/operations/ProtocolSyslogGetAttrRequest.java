@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolSyslogGetAttrRequest {
+    /**
+     * Agent to set the SYSLOG tracing
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolSyslogGetAttrRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolSyslogGetAttrPathParams pathParams;
-    public ProtocolSyslogGetAttrRequest withPathParams(ProtocolSyslogGetAttrPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Attribute
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=attr")
+    public String attr;
+    public ProtocolSyslogGetAttrRequest withAttr(String attr) {
+        this.attr = attr;
         return this;
     }
     

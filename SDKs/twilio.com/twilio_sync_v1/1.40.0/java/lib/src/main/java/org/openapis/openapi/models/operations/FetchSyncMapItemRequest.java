@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchSyncMapItemRequest {
-    
-    public FetchSyncMapItemPathParams pathParams;
-    public FetchSyncMapItemRequest withPathParams(FetchSyncMapItemPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The `key` value of the Sync Map Item resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Key")
+    public String key;
+    public FetchSyncMapItemRequest withKey(String key) {
+        this.key = key;
         return this;
     }
     
-    
-    public FetchSyncMapItemSecurity security;
-    public FetchSyncMapItemRequest withSecurity(FetchSyncMapItemSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the Sync Map with the Sync Map Item resource to fetch. Can be the Sync Map resource's `sid` or its `unique_name`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=MapSid")
+    public String mapSid;
+    public FetchSyncMapItemRequest withMapSid(String mapSid) {
+        this.mapSid = mapSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public FetchSyncMapItemRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync Map Item resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public FetchSyncMapItemRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

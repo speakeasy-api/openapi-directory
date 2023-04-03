@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsUpdateUserPermissionsRequest {
-    
-    public AppsUpdateUserPermissionsPathParams pathParams;
-    public AppsUpdateUserPermissionsRequest withPathParams(AppsUpdateUserPermissionsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The value to update the user permission for the app.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public AppsUpdateUserPermissionsRequestBody request;
-    public AppsUpdateUserPermissionsRequest withRequest(AppsUpdateUserPermissionsRequestBody request) {
-        this.request = request;
+    public AppsUpdateUserPermissionsRequestBody requestBody;
+    public AppsUpdateUserPermissionsRequest withRequestBody(AppsUpdateUserPermissionsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public AppsUpdateUserPermissionsRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public AppsUpdateUserPermissionsSecurity security;
-    public AppsUpdateUserPermissionsRequest withSecurity(AppsUpdateUserPermissionsSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public AppsUpdateUserPermissionsRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
+    
+    /**
+     * The user email of the user to patch
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_email")
+    public String userEmail;
+    public AppsUpdateUserPermissionsRequest withUserEmail(String userEmail) {
+        this.userEmail = userEmail;
         return this;
     }
     

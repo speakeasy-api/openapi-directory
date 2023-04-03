@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostConsumerV1AppointmentsRequest {
-    
-    public PostConsumerV1AppointmentsQueryParams queryParams;
-    public PostConsumerV1AppointmentsRequest withQueryParams(PostConsumerV1AppointmentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.AppointmentInitialModel appointmentInitialModel;
+    public PostConsumerV1AppointmentsRequest withAppointmentInitialModel(org.openapis.openapi.models.shared.AppointmentInitialModel appointmentInitialModel) {
+        this.appointmentInitialModel = appointmentInitialModel;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AppointmentInitialModel request;
-    public PostConsumerV1AppointmentsRequest withRequest(org.openapis.openapi.models.shared.AppointmentInitialModel request) {
-        this.request = request;
+    /**
+     * Options are "BK", "RS" or "IN"
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=completeBooking")
+    public String completeBooking;
+    public PostConsumerV1AppointmentsRequest withCompleteBooking(String completeBooking) {
+        this.completeBooking = completeBooking;
         return this;
     }
     

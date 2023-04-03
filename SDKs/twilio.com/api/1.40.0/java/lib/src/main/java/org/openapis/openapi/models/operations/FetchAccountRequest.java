@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchAccountRequest {
-    
-    public FetchAccountPathParams pathParams;
-    public FetchAccountRequest withPathParams(FetchAccountPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchAccountSecurity security;
-    public FetchAccountRequest withSecurity(FetchAccountSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchAccountRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Account Sid that uniquely identifies the account to fetch
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchAccountRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

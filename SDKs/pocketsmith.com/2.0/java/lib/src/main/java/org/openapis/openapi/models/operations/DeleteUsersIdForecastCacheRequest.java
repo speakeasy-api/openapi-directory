@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteUsersIdForecastCacheRequest {
-    
-    public DeleteUsersIdForecastCachePathParams pathParams;
-    public DeleteUsersIdForecastCacheRequest withPathParams(DeleteUsersIdForecastCachePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DeleteUsersIdForecastCacheRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

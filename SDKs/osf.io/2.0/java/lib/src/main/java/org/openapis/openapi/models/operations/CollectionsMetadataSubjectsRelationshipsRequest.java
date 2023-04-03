@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CollectionsMetadataSubjectsRelationshipsRequest {
+    /**
+     * A short id for that piece of metadata
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cgm_id")
+    public String cgmId;
+    public CollectionsMetadataSubjectsRelationshipsRequest withCgmId(String cgmId) {
+        this.cgmId = cgmId;
+        return this;
+    }
     
-    public CollectionsMetadataSubjectsRelationshipsPathParams pathParams;
-    public CollectionsMetadataSubjectsRelationshipsRequest withPathParams(CollectionsMetadataSubjectsRelationshipsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A short id for that collection
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection_id")
+    public String collectionId;
+    public CollectionsMetadataSubjectsRelationshipsRequest withCollectionId(String collectionId) {
+        this.collectionId = collectionId;
         return this;
     }
     

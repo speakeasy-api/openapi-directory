@@ -35,11 +35,10 @@ public class Environments {
     /**
      * Get all environments
      * Get all environments provided by the current Otoroshi instance
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AllLinesResponse allLines(org.openapis.openapi.models.operations.AllLinesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AllLinesResponse allLines() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/lines");
         
@@ -48,8 +47,7 @@ public class Environments {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -77,19 +75,20 @@ public class Environments {
      * Get all services for an environment
      * Get all services for an environment provided by the current Otoroshi instance
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServicesForALineResponse servicesForALine(org.openapis.openapi.models.operations.ServicesForALineRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServicesForALineResponse servicesForALine(org.openapis.openapi.models.operations.ServicesForALineRequest request, org.openapis.openapi.models.operations.ServicesForALineSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicesForALinePathParams.class, baseUrl, "/lines/{line}/services", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicesForALineRequest.class, baseUrl, "/lines/{line}/services", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

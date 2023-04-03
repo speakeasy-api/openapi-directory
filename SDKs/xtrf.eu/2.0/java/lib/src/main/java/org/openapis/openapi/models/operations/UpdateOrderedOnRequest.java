@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateOrderedOnRequest {
-    
-    public UpdateOrderedOnPathParams pathParams;
-    public UpdateOrderedOnRequest withPathParams(UpdateOrderedOnPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated Order Date for a project.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TimeDTO request;
-    public UpdateOrderedOnRequest withRequest(org.openapis.openapi.models.shared.TimeDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TimeDTO timeDTO;
+    public UpdateOrderedOnRequest withTimeDTO(org.openapis.openapi.models.shared.TimeDTO timeDTO) {
+        this.timeDTO = timeDTO;
+        return this;
+    }
+    
+    /**
+     * project's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public UpdateOrderedOnRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

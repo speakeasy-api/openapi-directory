@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSetupV1LocationsIdServicesRequest {
-    
-    public PostSetupV1LocationsIdServicesPathParams pathParams;
-    public PostSetupV1LocationsIdServicesRequest withPathParams(PostSetupV1LocationsIdServicesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * array of valid service object id's
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public String[] request;
-    public PostSetupV1LocationsIdServicesRequest withRequest(String[] request) {
-        this.request = request;
+    public String[] requestBody;
+    public PostSetupV1LocationsIdServicesRequest withRequestBody(String[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * id of business location, defaults to primary business location
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSetupV1LocationsIdServicesRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

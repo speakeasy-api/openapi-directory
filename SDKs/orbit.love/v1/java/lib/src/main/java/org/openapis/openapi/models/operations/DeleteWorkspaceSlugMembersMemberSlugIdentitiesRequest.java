@@ -7,24 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteWorkspaceSlugMembersMemberSlugIdentitiesRequest {
-    
-    public DeleteWorkspaceSlugMembersMemberSlugIdentitiesPathParams pathParams;
-    public DeleteWorkspaceSlugMembersMemberSlugIdentitiesRequest withPathParams(DeleteWorkspaceSlugMembersMemberSlugIdentitiesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Identity request;
-    public DeleteWorkspaceSlugMembersMemberSlugIdentitiesRequest withRequest(org.openapis.openapi.models.shared.Identity request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Identity identity;
+    public DeleteWorkspaceSlugMembersMemberSlugIdentitiesRequest withIdentity(org.openapis.openapi.models.shared.Identity identity) {
+        this.identity = identity;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=member_slug")
+    public String memberSlug;
+    public DeleteWorkspaceSlugMembersMemberSlugIdentitiesRequest withMemberSlug(String memberSlug) {
+        this.memberSlug = memberSlug;
+        return this;
+    }
     
-    public DeleteWorkspaceSlugMembersMemberSlugIdentitiesSecurity security;
-    public DeleteWorkspaceSlugMembersMemberSlugIdentitiesRequest withSecurity(DeleteWorkspaceSlugMembersMemberSlugIdentitiesSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_slug")
+    public String workspaceSlug;
+    public DeleteWorkspaceSlugMembersMemberSlugIdentitiesRequest withWorkspaceSlug(String workspaceSlug) {
+        this.workspaceSlug = workspaceSlug;
         return this;
     }
     

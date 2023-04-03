@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyDBSnapshotAttributeRequest {
-    
-    public GETModifyDBSnapshotAttributeQueryParams queryParams;
-    public GETModifyDBSnapshotAttributeRequest withQueryParams(GETModifyDBSnapshotAttributeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyDBSnapshotAttributeActionEnum action;
+    public GETModifyDBSnapshotAttributeRequest withAction(GETModifyDBSnapshotAttributeActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The name of the DB snapshot attribute to modify.&lt;/p&gt; &lt;p&gt;To manage authorization for other Amazon Web Services accounts to copy or restore a manual DB snapshot, set this value to &lt;code&gt;restore&lt;/code&gt;.&lt;/p&gt; &lt;note&gt; &lt;p&gt;To view the list of attributes available to modify, use the &lt;a&gt;DescribeDBSnapshotAttributes&lt;/a&gt; API operation.&lt;/p&gt; &lt;/note&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AttributeName")
+    public String attributeName;
+    public GETModifyDBSnapshotAttributeRequest withAttributeName(String attributeName) {
+        this.attributeName = attributeName;
+        return this;
+    }
     
-    public GETModifyDBSnapshotAttributeHeaders headers;
-    public GETModifyDBSnapshotAttributeRequest withHeaders(GETModifyDBSnapshotAttributeHeaders headers) {
-        this.headers = headers;
+    /**
+     * The identifier for the DB snapshot to modify the attributes for.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBSnapshotIdentifier")
+    public String dbSnapshotIdentifier;
+    public GETModifyDBSnapshotAttributeRequest withDBSnapshotIdentifier(String dbSnapshotIdentifier) {
+        this.dbSnapshotIdentifier = dbSnapshotIdentifier;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;A list of DB snapshot attributes to add to the attribute specified by &lt;code&gt;AttributeName&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;To authorize other Amazon Web Services accounts to copy or restore a manual snapshot, set this list to include one or more Amazon Web Services account IDs, or &lt;code&gt;all&lt;/code&gt; to make the manual DB snapshot restorable by any Amazon Web Services account. Do not add the &lt;code&gt;all&lt;/code&gt; value for any manual DB snapshots that contain private information that you don't want available to all Amazon Web Services accounts.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ValuesToAdd")
+    public String[] valuesToAdd;
+    public GETModifyDBSnapshotAttributeRequest withValuesToAdd(String[] valuesToAdd) {
+        this.valuesToAdd = valuesToAdd;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;A list of DB snapshot attributes to remove from the attribute specified by &lt;code&gt;AttributeName&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;To remove authorization for other Amazon Web Services accounts to copy or restore a manual snapshot, set this list to include one or more Amazon Web Services account identifiers, or &lt;code&gt;all&lt;/code&gt; to remove authorization for any Amazon Web Services account to copy or restore the DB snapshot. If you specify &lt;code&gt;all&lt;/code&gt;, an Amazon Web Services account whose account ID is explicitly added to the &lt;code&gt;restore&lt;/code&gt; attribute can still copy or restore the manual DB snapshot.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ValuesToRemove")
+    public String[] valuesToRemove;
+    public GETModifyDBSnapshotAttributeRequest withValuesToRemove(String[] valuesToRemove) {
+        this.valuesToRemove = valuesToRemove;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyDBSnapshotAttributeVersionEnum version;
+    public GETModifyDBSnapshotAttributeRequest withVersion(GETModifyDBSnapshotAttributeVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyDBSnapshotAttributeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyDBSnapshotAttributeRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyDBSnapshotAttributeRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyDBSnapshotAttributeRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyDBSnapshotAttributeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyDBSnapshotAttributeRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyDBSnapshotAttributeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

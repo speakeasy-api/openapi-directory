@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteApiV1AnnouncementsIdReactionsNameRequest {
-    
-    public DeleteApiV1AnnouncementsIdReactionsNamePathParams pathParams;
-    public DeleteApiV1AnnouncementsIdReactionsNameRequest withPathParams(DeleteApiV1AnnouncementsIdReactionsNamePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Local ID of an announcement in the database.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteApiV1AnnouncementsIdReactionsNameRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public DeleteApiV1AnnouncementsIdReactionsNameSecurity security;
-    public DeleteApiV1AnnouncementsIdReactionsNameRequest withSecurity(DeleteApiV1AnnouncementsIdReactionsNameSecurity security) {
-        this.security = security;
+    /**
+     * Unicode emoji, or shortcode of custom emoji
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public DeleteApiV1AnnouncementsIdReactionsNameRequest withName(String name) {
+        this.name = name;
         return this;
     }
     

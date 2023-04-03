@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAnalyticsTokenRequest {
-    
-    public GetAnalyticsTokenPathParams pathParams;
-    public GetAnalyticsTokenRequest withPathParams(GetAnalyticsTokenPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Continuous project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetAnalyticsTokenRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

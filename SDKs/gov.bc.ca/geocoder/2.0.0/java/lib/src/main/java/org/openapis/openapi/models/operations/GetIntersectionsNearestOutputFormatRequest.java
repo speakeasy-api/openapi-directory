@@ -4,20 +4,68 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetIntersectionsNearestOutputFormatRequest {
-    
-    public GetIntersectionsNearestOutputFormatPathParams pathParams;
-    public GetIntersectionsNearestOutputFormatRequest withPathParams(GetIntersectionsNearestOutputFormatPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The maximum degree an interesection can have to be included in results. A four-way stop has a degree of 4.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxDegree")
+    public Long maxDegree;
+    public GetIntersectionsNearestOutputFormatRequest withMaxDegree(Long maxDegree) {
+        this.maxDegree = maxDegree;
         return this;
     }
     
+    /**
+     * The maximum distance (in metres) to search from the given point.  If not specified, the search distance is unlimited.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxDistance")
+    public Long maxDistance;
+    public GetIntersectionsNearestOutputFormatRequest withMaxDistance(Long maxDistance) {
+        this.maxDistance = maxDistance;
+        return this;
+    }
     
-    public GetIntersectionsNearestOutputFormatQueryParams queryParams;
-    public GetIntersectionsNearestOutputFormatRequest withQueryParams(GetIntersectionsNearestOutputFormatQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The minimum degree an intersection can have to be included in results. A dead-end has a degree of 1.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minDegree")
+    public Long minDegree;
+    public GetIntersectionsNearestOutputFormatRequest withMinDegree(Long minDegree) {
+        this.minDegree = minDegree;
+        return this;
+    }
+    
+    /**
+     * Results format. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank"&gt;outputFormat&lt;/a&gt;. 
+     * 
+     * Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=outputFormat")
+    public GetIntersectionsNearestOutputFormatOutputFormatEnum outputFormat;
+    public GetIntersectionsNearestOutputFormatRequest withOutputFormat(GetIntersectionsNearestOutputFormatOutputFormatEnum outputFormat) {
+        this.outputFormat = outputFormat;
+        return this;
+    }
+    
+    /**
+     * The EPSG code of the spatial reference system (SRS) to use for output geometries. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank"&gt;outputSRS&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputSRS")
+    public GetIntersectionsNearestOutputFormatOutputSrsEnum outputSRS;
+    public GetIntersectionsNearestOutputFormatRequest withOutputSRS(GetIntersectionsNearestOutputFormatOutputSrsEnum outputSRS) {
+        this.outputSRS = outputSRS;
+        return this;
+    }
+    
+    /**
+     * Example: -122.377,50.121  The point (x,y) from which the nearest site will be identified. The coordinates must be specified in the same SRS as given by the 'outputSRS' parameter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=point")
+    public String point;
+    public GetIntersectionsNearestOutputFormatRequest withPoint(String point) {
+        this.point = point;
         return this;
     }
     

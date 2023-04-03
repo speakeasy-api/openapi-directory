@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DomainsUpdateFormRequest {
-    
-    public DomainsUpdateFormPathParams pathParams;
-    public DomainsUpdateFormRequest withPathParams(DomainsUpdateFormPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The domain to update
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.ApiCoreDtoDomainsDomain request;
-    public DomainsUpdateFormRequest withRequest(org.openapis.openapi.models.shared.ApiCoreDtoDomainsDomain request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ApiCoreDtoDomainsDomain apiCoreDtoDomainsDomain;
+    public DomainsUpdateFormRequest withApiCoreDtoDomainsDomain(org.openapis.openapi.models.shared.ApiCoreDtoDomainsDomain apiCoreDtoDomainsDomain) {
+        this.apiCoreDtoDomainsDomain = apiCoreDtoDomainsDomain;
+        return this;
+    }
+    
+    /**
+     * Id of domain
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DomainsUpdateFormRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

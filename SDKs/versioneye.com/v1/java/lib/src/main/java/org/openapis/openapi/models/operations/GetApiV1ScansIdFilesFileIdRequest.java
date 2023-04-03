@@ -4,27 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1ScansIdFilesFileIdRequest {
-    
-    public GetApiV1ScansIdFilesFileIdPathParams pathParams;
-    public GetApiV1ScansIdFilesFileIdRequest withPathParams(GetApiV1ScansIdFilesFileIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=file_id")
+    public String fileId;
+    public GetApiV1ScansIdFilesFileIdRequest withFileId(String fileId) {
+        this.fileId = fileId;
         return this;
     }
     
-    
-    public GetApiV1ScansIdFilesFileIdQueryParams queryParams;
-    public GetApiV1ScansIdFilesFileIdRequest withQueryParams(GetApiV1ScansIdFilesFileIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetApiV1ScansIdFilesFileIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetApiV1ScansIdFilesFileIdSecurity security;
-    public GetApiV1ScansIdFilesFileIdRequest withSecurity(GetApiV1ScansIdFilesFileIdSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public String perPage;
+    public GetApiV1ScansIdFilesFileIdRequest withPerPage(String perPage) {
+        this.perPage = perPage;
         return this;
     }
     

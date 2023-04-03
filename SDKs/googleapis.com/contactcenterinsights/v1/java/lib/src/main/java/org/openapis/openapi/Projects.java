@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Creates an analysis. The long running operation is done when the analysis has completed.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateResponse contactcenterinsightsProjectsLocationsConversationsAnalysesCreate(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateResponse contactcenterinsightsProjectsLocationsConversationsAnalysesCreate(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateRequest request, org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesCreatePathParams.class, baseUrl, "/v1/{parent}/analyses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateRequest.class, baseUrl, "/v1/{parent}/analyses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudContactcenterinsightsV1AnalysisInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,25 +83,26 @@ public class Projects {
     /**
      * Lists analyses.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesListResponse contactcenterinsightsProjectsLocationsConversationsAnalysesList(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesListResponse contactcenterinsightsProjectsLocationsConversationsAnalysesList(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesListRequest request, org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesListPathParams.class, baseUrl, "/v1/{parent}/analyses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesListRequest.class, baseUrl, "/v1/{parent}/analyses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,27 +129,28 @@ public class Projects {
     /**
      * Analyzes multiple conversations in a single request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsBulkAnalyzeResponse contactcenterinsightsProjectsLocationsConversationsBulkAnalyze(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsBulkAnalyzeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsBulkAnalyzeResponse contactcenterinsightsProjectsLocationsConversationsBulkAnalyze(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsBulkAnalyzeRequest request, org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsBulkAnalyzeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsBulkAnalyzePathParams.class, baseUrl, "/v1/{parent}/conversations:bulkAnalyze", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsBulkAnalyzeRequest.class, baseUrl, "/v1/{parent}/conversations:bulkAnalyze", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsBulkAnalyzeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsBulkAnalyzeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,25 +177,26 @@ public class Projects {
     /**
      * Gets conversation statistics.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsCalculateStatsResponse contactcenterinsightsProjectsLocationsConversationsCalculateStats(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsCalculateStatsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsCalculateStatsResponse contactcenterinsightsProjectsLocationsConversationsCalculateStats(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsCalculateStatsRequest request, org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsCalculateStatsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsCalculateStatsPathParams.class, baseUrl, "/v1/{location}/conversations:calculateStats", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsCalculateStatsRequest.class, baseUrl, "/v1/{location}/conversations:calculateStats", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsCalculateStatsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsCalculateStatsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -219,27 +223,28 @@ public class Projects {
     /**
      * Creates a conversation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsCreateResponse contactcenterinsightsProjectsLocationsConversationsCreate(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsCreateResponse contactcenterinsightsProjectsLocationsConversationsCreate(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsCreateRequest request, org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsCreatePathParams.class, baseUrl, "/v1/{parent}/conversations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsCreateRequest.class, baseUrl, "/v1/{parent}/conversations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudContactcenterinsightsV1ConversationInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -266,27 +271,28 @@ public class Projects {
     /**
      * Imports conversations and processes them according to the user's configuration.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsIngestResponse contactcenterinsightsProjectsLocationsConversationsIngest(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsIngestRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsIngestResponse contactcenterinsightsProjectsLocationsConversationsIngest(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsIngestRequest request, org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsIngestSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsIngestPathParams.class, baseUrl, "/v1/{parent}/conversations:ingest", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsIngestRequest.class, baseUrl, "/v1/{parent}/conversations:ingest", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudContactcenterinsightsV1IngestConversationsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsIngestQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsIngestRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -313,25 +319,26 @@ public class Projects {
     /**
      * Lists conversations.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsListResponse contactcenterinsightsProjectsLocationsConversationsList(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsListResponse contactcenterinsightsProjectsLocationsConversationsList(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsListRequest request, org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsListPathParams.class, baseUrl, "/v1/{parent}/conversations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsListRequest.class, baseUrl, "/v1/{parent}/conversations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsConversationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -358,27 +365,28 @@ public class Projects {
     /**
      * Export insights data to a destination defined in the request body.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsInsightsdataExportResponse contactcenterinsightsProjectsLocationsInsightsdataExport(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsInsightsdataExportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsInsightsdataExportResponse contactcenterinsightsProjectsLocationsInsightsdataExport(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsInsightsdataExportRequest request, org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsInsightsdataExportSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsInsightsdataExportPathParams.class, baseUrl, "/v1/{parent}/insightsdata:export", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsInsightsdataExportRequest.class, baseUrl, "/v1/{parent}/insightsdata:export", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudContactcenterinsightsV1ExportInsightsDataRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsInsightsdataExportQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsInsightsdataExportRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -405,25 +413,26 @@ public class Projects {
     /**
      * Gets an issue model's statistics.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsCalculateIssueModelStatsResponse contactcenterinsightsProjectsLocationsIssueModelsCalculateIssueModelStats(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsCalculateIssueModelStatsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsCalculateIssueModelStatsResponse contactcenterinsightsProjectsLocationsIssueModelsCalculateIssueModelStats(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsCalculateIssueModelStatsRequest request, org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsCalculateIssueModelStatsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsCalculateIssueModelStatsPathParams.class, baseUrl, "/v1/{issueModel}:calculateIssueModelStats", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsCalculateIssueModelStatsRequest.class, baseUrl, "/v1/{issueModel}:calculateIssueModelStats", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsCalculateIssueModelStatsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsCalculateIssueModelStatsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -450,27 +459,28 @@ public class Projects {
     /**
      * Creates an issue model.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsCreateResponse contactcenterinsightsProjectsLocationsIssueModelsCreate(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsCreateResponse contactcenterinsightsProjectsLocationsIssueModelsCreate(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsCreateRequest request, org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsCreatePathParams.class, baseUrl, "/v1/{parent}/issueModels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsCreateRequest.class, baseUrl, "/v1/{parent}/issueModels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudContactcenterinsightsV1IssueModelInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -497,27 +507,28 @@ public class Projects {
     /**
      * Deploys an issue model. Returns an error if a model is already deployed. An issue model can only be used in analysis after it has been deployed.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsDeployResponse contactcenterinsightsProjectsLocationsIssueModelsDeploy(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsDeployRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsDeployResponse contactcenterinsightsProjectsLocationsIssueModelsDeploy(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsDeployRequest request, org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsDeploySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsDeployPathParams.class, baseUrl, "/v1/{name}:deploy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsDeployRequest.class, baseUrl, "/v1/{name}:deploy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudContactcenterinsightsV1DeployIssueModelRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsDeployQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsDeployRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -544,25 +555,26 @@ public class Projects {
     /**
      * Lists issues.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsIssuesListResponse contactcenterinsightsProjectsLocationsIssueModelsIssuesList(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsIssuesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsIssuesListResponse contactcenterinsightsProjectsLocationsIssueModelsIssuesList(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsIssuesListRequest request, org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsIssuesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsIssuesListPathParams.class, baseUrl, "/v1/{parent}/issues", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsIssuesListRequest.class, baseUrl, "/v1/{parent}/issues", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsIssuesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsIssuesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -589,25 +601,26 @@ public class Projects {
     /**
      * Lists issue models.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsListResponse contactcenterinsightsProjectsLocationsIssueModelsList(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsListResponse contactcenterinsightsProjectsLocationsIssueModelsList(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsListRequest request, org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsListPathParams.class, baseUrl, "/v1/{parent}/issueModels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsListRequest.class, baseUrl, "/v1/{parent}/issueModels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -634,27 +647,28 @@ public class Projects {
     /**
      * Undeploys an issue model. An issue model can not be used in analysis after it has been undeployed.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsUndeployResponse contactcenterinsightsProjectsLocationsIssueModelsUndeploy(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsUndeployRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsUndeployResponse contactcenterinsightsProjectsLocationsIssueModelsUndeploy(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsUndeployRequest request, org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsUndeploySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsUndeployPathParams.class, baseUrl, "/v1/{name}:undeploy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsUndeployRequest.class, baseUrl, "/v1/{name}:undeploy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudContactcenterinsightsV1UndeployIssueModelRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsUndeployQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsIssueModelsUndeployRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -681,25 +695,26 @@ public class Projects {
     /**
      * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsOperationsCancelResponse contactcenterinsightsProjectsLocationsOperationsCancel(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsOperationsCancelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsOperationsCancelResponse contactcenterinsightsProjectsLocationsOperationsCancel(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsOperationsCancelRequest request, org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsOperationsCancelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsOperationsCancelPathParams.class, baseUrl, "/v1/{name}:cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsOperationsCancelRequest.class, baseUrl, "/v1/{name}:cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsOperationsCancelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsOperationsCancelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -726,25 +741,26 @@ public class Projects {
     /**
      * Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsOperationsListResponse contactcenterinsightsProjectsLocationsOperationsList(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsOperationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsOperationsListResponse contactcenterinsightsProjectsLocationsOperationsList(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsOperationsListRequest request, org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsOperationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsOperationsListPathParams.class, baseUrl, "/v1/{name}/operations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsOperationsListRequest.class, baseUrl, "/v1/{name}/operations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsOperationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsOperationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -771,27 +787,28 @@ public class Projects {
     /**
      * Creates a phrase matcher.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsPhraseMatchersCreateResponse contactcenterinsightsProjectsLocationsPhraseMatchersCreate(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsPhraseMatchersCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsPhraseMatchersCreateResponse contactcenterinsightsProjectsLocationsPhraseMatchersCreate(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsPhraseMatchersCreateRequest request, org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsPhraseMatchersCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsPhraseMatchersCreatePathParams.class, baseUrl, "/v1/{parent}/phraseMatchers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsPhraseMatchersCreateRequest.class, baseUrl, "/v1/{parent}/phraseMatchers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudContactcenterinsightsV1PhraseMatcherInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsPhraseMatchersCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsPhraseMatchersCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -818,25 +835,26 @@ public class Projects {
     /**
      * Lists phrase matchers.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsPhraseMatchersListResponse contactcenterinsightsProjectsLocationsPhraseMatchersList(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsPhraseMatchersListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsPhraseMatchersListResponse contactcenterinsightsProjectsLocationsPhraseMatchersList(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsPhraseMatchersListRequest request, org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsPhraseMatchersListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsPhraseMatchersListPathParams.class, baseUrl, "/v1/{parent}/phraseMatchers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsPhraseMatchersListRequest.class, baseUrl, "/v1/{parent}/phraseMatchers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsPhraseMatchersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsPhraseMatchersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -863,27 +881,28 @@ public class Projects {
     /**
      * Creates a view.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsCreateResponse contactcenterinsightsProjectsLocationsViewsCreate(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsCreateResponse contactcenterinsightsProjectsLocationsViewsCreate(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsCreateRequest request, org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsCreatePathParams.class, baseUrl, "/v1/{parent}/views", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsCreateRequest.class, baseUrl, "/v1/{parent}/views", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudContactcenterinsightsV1ViewInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -910,25 +929,26 @@ public class Projects {
     /**
      * Deletes a view.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsDeleteResponse contactcenterinsightsProjectsLocationsViewsDelete(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsDeleteResponse contactcenterinsightsProjectsLocationsViewsDelete(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsDeleteRequest request, org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsDeletePathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsDeleteRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -955,25 +975,26 @@ public class Projects {
     /**
      * Gets a view.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsGetResponse contactcenterinsightsProjectsLocationsViewsGet(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsGetResponse contactcenterinsightsProjectsLocationsViewsGet(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsGetRequest request, org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsGetPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsGetRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1000,25 +1021,26 @@ public class Projects {
     /**
      * Lists views.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsListResponse contactcenterinsightsProjectsLocationsViewsList(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsListResponse contactcenterinsightsProjectsLocationsViewsList(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsListRequest request, org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsListPathParams.class, baseUrl, "/v1/{parent}/views", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsListRequest.class, baseUrl, "/v1/{parent}/views", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1045,27 +1067,28 @@ public class Projects {
     /**
      * Updates a view.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsPatchResponse contactcenterinsightsProjectsLocationsViewsPatch(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsPatchResponse contactcenterinsightsProjectsLocationsViewsPatch(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsPatchRequest request, org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsPatchPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsPatchRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudContactcenterinsightsV1ViewInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactcenterinsightsProjectsLocationsViewsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

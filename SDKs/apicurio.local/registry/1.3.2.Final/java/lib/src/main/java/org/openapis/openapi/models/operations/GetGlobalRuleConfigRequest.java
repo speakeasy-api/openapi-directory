@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGlobalRuleConfigRequest {
-    
-    public GetGlobalRuleConfigPathParams pathParams;
-    public GetGlobalRuleConfigRequest withPathParams(GetGlobalRuleConfigPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique name/type of a rule.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rule")
+    public GetGlobalRuleConfigRuleEnum rule;
+    public GetGlobalRuleConfigRequest withRule(GetGlobalRuleConfigRuleEnum rule) {
+        this.rule = rule;
         return this;
     }
     

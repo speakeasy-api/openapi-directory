@@ -18,14 +18,10 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.CloudbuildProjectsLocationsOperationsCancelSecurity;
-import org.openapis.openapi.models.operations.CloudbuildProjectsLocationsOperationsCancelPathParams;
-import org.openapis.openapi.models.operations.CloudbuildProjectsLocationsOperationsCancelQueryParams;
 import org.openapis.openapi.models.operations.CloudbuildProjectsLocationsOperationsCancelRequest;
 import org.openapis.openapi.models.operations.CloudbuildProjectsLocationsOperationsCancelResponse;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -34,37 +30,29 @@ public class Application {
                 .build();
 
             CloudbuildProjectsLocationsOperationsCancelRequest req = new CloudbuildProjectsLocationsOperationsCancelRequest() {{
-                security = new CloudbuildProjectsLocationsOperationsCancelSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
+                dollarXgafv = "2";
+                requestBody = new java.util.HashMap<String, Object>() {{
+                    put("distinctio", "quibusdam");
+                    put("unde", "nulla");
+                    put("corrupti", "illum");
                 }};
-                pathParams = new CloudbuildProjectsLocationsOperationsCancelPathParams() {{
-                    name = "corrupti";
-                }};
-                queryParams = new CloudbuildProjectsLocationsOperationsCancelQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new java.util.HashMap<String, Object>() {{
-                    put("iure", "magnam");
-                    put("debitis", "ipsa");
-                }};
-            }};            
+                accessToken = "vel";
+                alt = "media";
+                callback = "deserunt";
+                fields = "suscipit";
+                key = "iure";
+                name = "magnam";
+                oauthToken = "debitis";
+                prettyPrint = false;
+                quotaUser = "ipsa";
+                uploadType = "delectus";
+                uploadProtocol = "tempora";
+            }}            
 
-            CloudbuildProjectsLocationsOperationsCancelResponse res = sdk.projects.cloudbuildProjectsLocationsOperationsCancel(req);
+            CloudbuildProjectsLocationsOperationsCancelResponse res = sdk.projects.cloudbuildProjectsLocationsOperationsCancel(req, new CloudbuildProjectsLocationsOperationsCancelSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.empty.isPresent()) {
                 // handle response
@@ -76,7 +64,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### projects

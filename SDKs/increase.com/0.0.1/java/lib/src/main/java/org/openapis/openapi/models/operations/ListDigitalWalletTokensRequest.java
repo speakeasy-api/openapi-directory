@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListDigitalWalletTokensRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=card_id")
+    public String cardId;
+    public ListDigitalWalletTokensRequest withCardId(String cardId) {
+        this.cardId = cardId;
+        return this;
+    }
     
-    public ListDigitalWalletTokensQueryParams queryParams;
-    public ListDigitalWalletTokensRequest withQueryParams(ListDigitalWalletTokensQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created_at.after")
+    public OffsetDateTime createdAtAfter;
+    public ListDigitalWalletTokensRequest withCreatedAtAfter(OffsetDateTime createdAtAfter) {
+        this.createdAtAfter = createdAtAfter;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created_at.before")
+    public OffsetDateTime createdAtBefore;
+    public ListDigitalWalletTokensRequest withCreatedAtBefore(OffsetDateTime createdAtBefore) {
+        this.createdAtBefore = createdAtBefore;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created_at.on_or_after")
+    public OffsetDateTime createdAtOnOrAfter;
+    public ListDigitalWalletTokensRequest withCreatedAtOnOrAfter(OffsetDateTime createdAtOnOrAfter) {
+        this.createdAtOnOrAfter = createdAtOnOrAfter;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created_at.on_or_before")
+    public OffsetDateTime createdAtOnOrBefore;
+    public ListDigitalWalletTokensRequest withCreatedAtOnOrBefore(OffsetDateTime createdAtOnOrBefore) {
+        this.createdAtOnOrBefore = createdAtOnOrBefore;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public ListDigitalWalletTokensRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListDigitalWalletTokensRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     

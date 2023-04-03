@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesSpaceIdPersonsIdEmployeesRequest {
-    
-    public PostSpacesSpaceIdPersonsIdEmployeesPathParams pathParams;
-    public PostSpacesSpaceIdPersonsIdEmployeesRequest withPathParams(PostSpacesSpaceIdPersonsIdEmployeesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Employee to add (except name, class and archivaldate)
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostSpacesSpaceIdPersonsIdEmployeesRequestBody request;
-    public PostSpacesSpaceIdPersonsIdEmployeesRequest withRequest(PostSpacesSpaceIdPersonsIdEmployeesRequestBody request) {
-        this.request = request;
+    public PostSpacesSpaceIdPersonsIdEmployeesRequestBody requestBody;
+    public PostSpacesSpaceIdPersonsIdEmployeesRequest withRequestBody(PostSpacesSpaceIdPersonsIdEmployeesRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Id of the employee
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSpacesSpaceIdPersonsIdEmployeesRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PostSpacesSpaceIdPersonsIdEmployeesSecurity security;
-    public PostSpacesSpaceIdPersonsIdEmployeesRequest withSecurity(PostSpacesSpaceIdPersonsIdEmployeesSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PostSpacesSpaceIdPersonsIdEmployeesRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

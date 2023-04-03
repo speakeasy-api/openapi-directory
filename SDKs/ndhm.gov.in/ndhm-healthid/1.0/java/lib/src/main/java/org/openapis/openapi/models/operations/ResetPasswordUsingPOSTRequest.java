@@ -7,10 +7,10 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ResetPasswordUsingPOSTRequest {
-    
-    public ResetPasswordUsingPOSTHeaders headers;
-    public ResetPasswordUsingPOSTRequest withHeaders(ResetPasswordUsingPOSTHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public ResetPasswordUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
@@ -18,16 +18,9 @@ public class ResetPasswordUsingPOSTRequest {
      * healthFacilityPasswordRequest
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.HealthFacilityPasswordRequest request;
-    public ResetPasswordUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.HealthFacilityPasswordRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public ResetPasswordUsingPOSTSecurity security;
-    public ResetPasswordUsingPOSTRequest withSecurity(ResetPasswordUsingPOSTSecurity security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.HealthFacilityPasswordRequest healthFacilityPasswordRequest;
+    public ResetPasswordUsingPOSTRequest withHealthFacilityPasswordRequest(org.openapis.openapi.models.shared.HealthFacilityPasswordRequest healthFacilityPasswordRequest) {
+        this.healthFacilityPasswordRequest = healthFacilityPasswordRequest;
         return this;
     }
     

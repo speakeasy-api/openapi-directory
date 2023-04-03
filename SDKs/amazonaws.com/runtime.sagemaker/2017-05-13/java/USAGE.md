@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.InvokeEndpointPathParams;
-import org.openapis.openapi.models.operations.InvokeEndpointHeaders;
 import org.openapis.openapi.models.operations.InvokeEndpointRequestBody;
 import org.openapis.openapi.models.operations.InvokeEndpointRequest;
 import org.openapis.openapi.models.operations.InvokeEndpointResponse;
@@ -15,37 +13,31 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             InvokeEndpointRequest req = new InvokeEndpointRequest() {{
-                pathParams = new InvokeEndpointPathParams() {{
-                    endpointName = "corrupti";
+                accept = "corrupti";
+                contentType = "provident";
+                endpointName = "distinctio";
+                requestBody = new InvokeEndpointRequestBody() {{
+                    body = "quibusdam";
                 }};
-                headers = new InvokeEndpointHeaders() {{
-                    accept = "provident";
-                    contentType = "distinctio";
-                    xAmzAlgorithm = "quibusdam";
-                    xAmzContentSha256 = "unde";
-                    xAmzCredential = "nulla";
-                    xAmzDate = "corrupti";
-                    xAmzSecurityToken = "illum";
-                    xAmzSignature = "vel";
-                    xAmzSignedHeaders = "error";
-                    xAmznSageMakerCustomAttributes = "deserunt";
-                    xAmznSageMakerEnableExplanations = "suscipit";
-                    xAmznSageMakerInferenceId = "iure";
-                    xAmznSageMakerTargetContainerHostname = "magnam";
-                    xAmznSageMakerTargetModel = "debitis";
-                    xAmznSageMakerTargetVariant = "ipsa";
-                }};
-                request = new InvokeEndpointRequestBody() {{
-                    body = "delectus";
-                }};
-            }};            
+                xAmzAlgorithm = "unde";
+                xAmzContentSha256 = "nulla";
+                xAmzCredential = "corrupti";
+                xAmzDate = "illum";
+                xAmzSecurityToken = "vel";
+                xAmzSignature = "error";
+                xAmzSignedHeaders = "deserunt";
+                xAmznSageMakerCustomAttributes = "suscipit";
+                xAmznSageMakerEnableExplanations = "iure";
+                xAmznSageMakerInferenceId = "magnam";
+                xAmznSageMakerTargetContainerHostname = "debitis";
+                xAmznSageMakerTargetModel = "ipsa";
+                xAmznSageMakerTargetVariant = "delectus";
+            }}            
 
             InvokeEndpointResponse res = sdk.invokeEndpoint(req);
 

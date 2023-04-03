@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSetupV1CalendarsBlockIdRequest {
-    
-    public PutSetupV1CalendarsBlockIdPathParams pathParams;
-    public PutSetupV1CalendarsBlockIdRequest withPathParams(PutSetupV1CalendarsBlockIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Resource Block input model
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CalendarBlockUpdateModel request;
-    public PutSetupV1CalendarsBlockIdRequest withRequest(org.openapis.openapi.models.shared.CalendarBlockUpdateModel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CalendarBlockUpdateModel calendarBlockUpdateModel;
+    public PutSetupV1CalendarsBlockIdRequest withCalendarBlockUpdateModel(org.openapis.openapi.models.shared.CalendarBlockUpdateModel calendarBlockUpdateModel) {
+        this.calendarBlockUpdateModel = calendarBlockUpdateModel;
+        return this;
+    }
+    
+    /**
+     * id of calendarBlock object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutSetupV1CalendarsBlockIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

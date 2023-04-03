@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MaintenanceControllerCreateMaintenanceJobRawRequest {
-    
-    public MaintenanceControllerCreateMaintenanceJobRawPathParams pathParams;
-    public MaintenanceControllerCreateMaintenanceJobRawRequest withPathParams(MaintenanceControllerCreateMaintenanceJobRawPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * A JSON object containing details of the maintenance job
      */
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public MaintenanceControllerCreateMaintenanceJobRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public MaintenanceControllerCreateMaintenanceJobRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The unique ID of the Branch
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branchID")
+    public String branchID;
+    public MaintenanceControllerCreateMaintenanceJobRawRequest withBranchID(String branchID) {
+        this.branchID = branchID;
+        return this;
+    }
+    
+    /**
+     * The unique client short-name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
+    public String shortName;
+    public MaintenanceControllerCreateMaintenanceJobRawRequest withShortName(String shortName) {
+        this.shortName = shortName;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MigrationsGetCommitAuthorsRequest {
-    
-    public MigrationsGetCommitAuthorsPathParams pathParams;
-    public MigrationsGetCommitAuthorsRequest withPathParams(MigrationsGetCommitAuthorsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public MigrationsGetCommitAuthorsRequest withOwner(String owner) {
+        this.owner = owner;
         return this;
     }
     
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public MigrationsGetCommitAuthorsRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
     
-    public MigrationsGetCommitAuthorsQueryParams queryParams;
-    public MigrationsGetCommitAuthorsRequest withQueryParams(MigrationsGetCommitAuthorsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A user ID. Only return users with an ID greater than this ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public Long since;
+    public MigrationsGetCommitAuthorsRequest withSince(Long since) {
+        this.since = since;
         return this;
     }
     

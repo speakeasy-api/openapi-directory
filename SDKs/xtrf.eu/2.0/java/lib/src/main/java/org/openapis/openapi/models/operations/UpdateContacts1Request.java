@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateContacts1Request {
-    
-    public UpdateContacts1PathParams pathParams;
-    public UpdateContacts1Request withPathParams(UpdateContacts1PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated contacts of given task.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ContactsDTO request;
-    public UpdateContacts1Request withRequest(org.openapis.openapi.models.shared.ContactsDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ContactsDTO contactsDTO;
+    public UpdateContacts1Request withContactsDTO(org.openapis.openapi.models.shared.ContactsDTO contactsDTO) {
+        this.contactsDTO = contactsDTO;
+        return this;
+    }
+    
+    /**
+     * task's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taskId")
+    public String taskId;
+    public UpdateContacts1Request withTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
     

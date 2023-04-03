@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTransferPortalRequest {
-    
-    public GetTransferPortalQueryParams queryParams;
-    public GetTransferPortalRequest withQueryParams(GetTransferPortalQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Year filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public Long year;
+    public GetTransferPortalRequest withYear(Long year) {
+        this.year = year;
         return this;
     }
     

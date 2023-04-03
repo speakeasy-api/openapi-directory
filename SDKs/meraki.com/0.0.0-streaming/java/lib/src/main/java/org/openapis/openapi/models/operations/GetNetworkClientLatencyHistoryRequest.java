@@ -4,20 +4,60 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkClientLatencyHistoryRequest {
-    
-    public GetNetworkClientLatencyHistoryPathParams pathParams;
-    public GetNetworkClientLatencyHistoryRequest withPathParams(GetNetworkClientLatencyHistoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=clientId")
+    public String clientId;
+    public GetNetworkClientLatencyHistoryRequest withClientId(String clientId) {
+        this.clientId = clientId;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkClientLatencyHistoryRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
     
-    public GetNetworkClientLatencyHistoryQueryParams queryParams;
-    public GetNetworkClientLatencyHistoryRequest withQueryParams(GetNetworkClientLatencyHistoryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The time resolution in seconds for returned data. The valid resolutions are: 86400. The default is 86400.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resolution")
+    public Long resolution;
+    public GetNetworkClientLatencyHistoryRequest withResolution(Long resolution) {
+        this.resolution = resolution;
+        return this;
+    }
+    
+    /**
+     * The beginning of the timespan for the data. The maximum lookback period is 791 days from today.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t0")
+    public String t0;
+    public GetNetworkClientLatencyHistoryRequest withT0(String t0) {
+        this.t0 = t0;
+        return this;
+    }
+    
+    /**
+     * The end of the timespan for the data. t1 can be a maximum of 791 days after t0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t1")
+    public String t1;
+    public GetNetworkClientLatencyHistoryRequest withT1(String t1) {
+        this.t1 = t1;
+        return this;
+    }
+    
+    /**
+     * The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 791 days. The default is 1 day.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timespan")
+    public Float timespan;
+    public GetNetworkClientLatencyHistoryRequest withTimespan(Float timespan) {
+        this.timespan = timespan;
         return this;
     }
     

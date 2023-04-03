@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETUpdateServiceSpecificCredentialRequest {
-    
-    public GETUpdateServiceSpecificCredentialQueryParams queryParams;
-    public GETUpdateServiceSpecificCredentialRequest withQueryParams(GETUpdateServiceSpecificCredentialQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETUpdateServiceSpecificCredentialActionEnum action;
+    public GETUpdateServiceSpecificCredentialRequest withAction(GETUpdateServiceSpecificCredentialActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The unique identifier of the service-specific credential.&lt;/p&gt; &lt;p&gt;This parameter allows (through its &lt;a href="http://wikipedia.org/wiki/regex"&gt;regex pattern&lt;/a&gt;) a string of characters that can consist of any upper or lowercased letter or digit.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ServiceSpecificCredentialId")
+    public String serviceSpecificCredentialId;
+    public GETUpdateServiceSpecificCredentialRequest withServiceSpecificCredentialId(String serviceSpecificCredentialId) {
+        this.serviceSpecificCredentialId = serviceSpecificCredentialId;
+        return this;
+    }
     
-    public GETUpdateServiceSpecificCredentialHeaders headers;
-    public GETUpdateServiceSpecificCredentialRequest withHeaders(GETUpdateServiceSpecificCredentialHeaders headers) {
-        this.headers = headers;
+    /**
+     * The status to be assigned to the service-specific credential.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Status")
+    public GETUpdateServiceSpecificCredentialStatusEnum status;
+    public GETUpdateServiceSpecificCredentialRequest withStatus(GETUpdateServiceSpecificCredentialStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The name of the IAM user associated with the service-specific credential. If you do not specify this value, then the operation assumes the user whose credentials are used to call the operation.&lt;/p&gt; &lt;p&gt;This parameter allows (through its &lt;a href="http://wikipedia.org/wiki/regex"&gt;regex pattern&lt;/a&gt;) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UserName")
+    public String userName;
+    public GETUpdateServiceSpecificCredentialRequest withUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETUpdateServiceSpecificCredentialVersionEnum version;
+    public GETUpdateServiceSpecificCredentialRequest withVersion(GETUpdateServiceSpecificCredentialVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETUpdateServiceSpecificCredentialRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETUpdateServiceSpecificCredentialRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETUpdateServiceSpecificCredentialRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETUpdateServiceSpecificCredentialRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETUpdateServiceSpecificCredentialRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETUpdateServiceSpecificCredentialRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETUpdateServiceSpecificCredentialRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

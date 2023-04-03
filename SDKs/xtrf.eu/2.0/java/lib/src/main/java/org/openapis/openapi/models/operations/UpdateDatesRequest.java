@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDatesRequest {
-    
-    public UpdateDatesPathParams pathParams;
-    public UpdateDatesRequest withPathParams(UpdateDatesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * New job dates.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.JobDatesDto request;
-    public UpdateDatesRequest withRequest(org.openapis.openapi.models.shared.JobDatesDto request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.JobDatesDto jobDatesDto;
+    public UpdateDatesRequest withJobDatesDto(org.openapis.openapi.models.shared.JobDatesDto jobDatesDto) {
+        this.jobDatesDto = jobDatesDto;
+        return this;
+    }
+    
+    /**
+     * job's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
+    public String jobId;
+    public UpdateDatesRequest withJobId(String jobId) {
+        this.jobId = jobId;
         return this;
     }
     

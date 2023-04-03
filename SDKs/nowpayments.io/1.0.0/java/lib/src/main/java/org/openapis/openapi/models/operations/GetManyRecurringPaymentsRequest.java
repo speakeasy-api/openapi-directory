@@ -7,24 +7,58 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetManyRecurringPaymentsRequest {
-    
-    public GetManyRecurringPaymentsQueryParams queryParams;
-    public GetManyRecurringPaymentsRequest withQueryParams(GetManyRecurringPaymentsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetManyRecurringPaymentsHeaders headers;
-    public GetManyRecurringPaymentsRequest withHeaders(GetManyRecurringPaymentsHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=text/plain")
-    public byte[] request;
-    public GetManyRecurringPaymentsRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public GetManyRecurringPaymentsRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * true / false
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_active")
+    public String isActive;
+    public GetManyRecurringPaymentsRequest withIsActive(String isActive) {
+        this.isActive = isActive;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public String limit;
+    public GetManyRecurringPaymentsRequest withLimit(String limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public String offset;
+    public GetManyRecurringPaymentsRequest withOffset(String offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * "WAITING_PAY" / "PAID" /  "PARTIALLY_PAID" / "EXPIRED"
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public String status;
+    public GetManyRecurringPaymentsRequest withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subscription_plan_id")
+    public String subscriptionPlanId;
+    public GetManyRecurringPaymentsRequest withSubscriptionPlanId(String subscriptionPlanId) {
+        this.subscriptionPlanId = subscriptionPlanId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public GetManyRecurringPaymentsRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

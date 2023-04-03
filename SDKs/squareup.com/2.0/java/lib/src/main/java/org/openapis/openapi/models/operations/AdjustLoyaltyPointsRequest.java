@@ -7,29 +7,25 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdjustLoyaltyPointsRequest {
-    
-    public AdjustLoyaltyPointsPathParams pathParams;
-    public AdjustLoyaltyPointsRequest withPathParams(AdjustLoyaltyPointsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * An object containing the fields to POST for the request.
      * 
      * See the corresponding object definition for field details.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AdjustLoyaltyPointsRequest request;
-    public AdjustLoyaltyPointsRequest withRequest(org.openapis.openapi.models.shared.AdjustLoyaltyPointsRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AdjustLoyaltyPointsRequest adjustLoyaltyPointsRequest;
+    public AdjustLoyaltyPointsRequest withAdjustLoyaltyPointsRequest(org.openapis.openapi.models.shared.AdjustLoyaltyPointsRequest adjustLoyaltyPointsRequest) {
+        this.adjustLoyaltyPointsRequest = adjustLoyaltyPointsRequest;
         return this;
     }
     
-    
-    public AdjustLoyaltyPointsSecurity security;
-    public AdjustLoyaltyPointsRequest withSecurity(AdjustLoyaltyPointsSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the [loyalty account](https://developer.squareup.com/reference/square_2021-08-18/objects/LoyaltyAccount) in which to adjust the points.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account_id")
+    public String accountId;
+    public AdjustLoyaltyPointsRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     

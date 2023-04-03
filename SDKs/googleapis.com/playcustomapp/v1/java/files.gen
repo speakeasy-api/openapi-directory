@@ -31,8 +31,6 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/PlaycustomappAccountsCustomAppsCreateSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/PlaycustomappAccountsCustomAppsCreatePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/PlaycustomappAccountsCustomAppsCreateQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PlaycustomappAccountsCustomAppsCreateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PlaycustomappAccountsCustomAppsCreateResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/CustomAppInput.java
@@ -40,6 +38,4 @@ lib/src/main/java/org/openapis/openapi/models/shared/CustomApp.java
 lib/src/main/java/org/openapis/openapi/models/shared/Organization.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2c.java
 USAGE.md

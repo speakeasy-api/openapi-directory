@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupV2GetBannedMembersOfGroupRequest {
-    
-    public GroupV2GetBannedMembersOfGroupPathParams pathParams;
-    public GroupV2GetBannedMembersOfGroupRequest withPathParams(GroupV2GetBannedMembersOfGroupPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Page number (starting with 1). Each page has a fixed size of 50 entries.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currentpage")
+    public Integer currentpage;
+    public GroupV2GetBannedMembersOfGroupRequest withCurrentpage(Integer currentpage) {
+        this.currentpage = currentpage;
         return this;
     }
     
-    
-    public GroupV2GetBannedMembersOfGroupQueryParams queryParams;
-    public GroupV2GetBannedMembersOfGroupRequest withQueryParams(GroupV2GetBannedMembersOfGroupQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GroupV2GetBannedMembersOfGroupSecurity security;
-    public GroupV2GetBannedMembersOfGroupRequest withSecurity(GroupV2GetBannedMembersOfGroupSecurity security) {
-        this.security = security;
+    /**
+     * Group ID whose banned members you are fetching
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public Long groupId;
+    public GroupV2GetBannedMembersOfGroupRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
         return this;
     }
     

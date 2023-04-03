@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsGetRequest {
-    
-    public AppsGetPathParams pathParams;
-    public AppsGetRequest withPathParams(AppsGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public AppsGetRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public AppsGetSecurity security;
-    public AppsGetRequest withSecurity(AppsGetSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public AppsGetRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

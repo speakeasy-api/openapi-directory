@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ResetPasswordRequest {
-    
-    public ResetPasswordPathParams pathParams;
-    public ResetPasswordRequest withPathParams(ResetPasswordPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ResetPasswordWithTokenRequest resetPasswordWithTokenRequest;
+    public ResetPasswordRequest withResetPasswordWithTokenRequest(org.openapis.openapi.models.shared.ResetPasswordWithTokenRequest resetPasswordWithTokenRequest) {
+        this.resetPasswordWithTokenRequest = resetPasswordWithTokenRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ResetPasswordWithTokenRequest request;
-    public ResetPasswordRequest withRequest(org.openapis.openapi.models.shared.ResetPasswordWithTokenRequest request) {
-        this.request = request;
+    /**
+     * Password reset token
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=token")
+    public String token;
+    public ResetPasswordRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

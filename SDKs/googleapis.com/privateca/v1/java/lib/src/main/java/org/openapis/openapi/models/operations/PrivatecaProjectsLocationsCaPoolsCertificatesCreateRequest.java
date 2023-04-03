@@ -7,31 +7,170 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivatecaProjectsLocationsCaPoolsCertificatesCreateRequest {
-    
-    public PrivatecaProjectsLocationsCaPoolsCertificatesCreatePathParams pathParams;
-    public PrivatecaProjectsLocationsCaPoolsCertificatesCreateRequest withPathParams(PrivatecaProjectsLocationsCaPoolsCertificatesCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PrivatecaProjectsLocationsCaPoolsCertificatesCreateQueryParams queryParams;
-    public PrivatecaProjectsLocationsCaPoolsCertificatesCreateRequest withQueryParams(PrivatecaProjectsLocationsCaPoolsCertificatesCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public PrivatecaProjectsLocationsCaPoolsCertificatesCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CertificateInput request;
-    public PrivatecaProjectsLocationsCaPoolsCertificatesCreateRequest withRequest(org.openapis.openapi.models.shared.CertificateInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CertificateInput certificateInput;
+    public PrivatecaProjectsLocationsCaPoolsCertificatesCreateRequest withCertificateInput(org.openapis.openapi.models.shared.CertificateInput certificateInput) {
+        this.certificateInput = certificateInput;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public PrivatecaProjectsLocationsCaPoolsCertificatesCreateRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public PrivatecaProjectsLocationsCaPoolsCertificatesCreateSecurity security;
-    public PrivatecaProjectsLocationsCaPoolsCertificatesCreateRequest withSecurity(PrivatecaProjectsLocationsCaPoolsCertificatesCreateSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public PrivatecaProjectsLocationsCaPoolsCertificatesCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public PrivatecaProjectsLocationsCaPoolsCertificatesCreateRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Optional. It must be unique within a location and match the regular expression `[a-zA-Z0-9_-]{1,63}`. This field is required when using a CertificateAuthority in the Enterprise CertificateAuthority.Tier, but is optional and its value is ignored otherwise.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=certificateId")
+    public String certificateId;
+    public PrivatecaProjectsLocationsCaPoolsCertificatesCreateRequest withCertificateId(String certificateId) {
+        this.certificateId = certificateId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public PrivatecaProjectsLocationsCaPoolsCertificatesCreateRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Optional. The resource ID of the CertificateAuthority that should issue the certificate. This optional field will ignore the load-balancing scheme of the Pool and directly issue the certificate from the CA with the specified ID, contained in the same CaPool referenced by `parent`. Per-CA quota rules apply. If left empty, a CertificateAuthority will be chosen from the CaPool by the service. For example, to issue a Certificate from a Certificate Authority with resource name "projects/my-project/locations/us-central1/caPools/my-pool/certificateAuthorities/my-ca", you can set the parent to "projects/my-project/locations/us-central1/caPools/my-pool" and the issuing_certificate_authority_id to "my-ca".
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=issuingCertificateAuthorityId")
+    public String issuingCertificateAuthorityId;
+    public PrivatecaProjectsLocationsCaPoolsCertificatesCreateRequest withIssuingCertificateAuthorityId(String issuingCertificateAuthorityId) {
+        this.issuingCertificateAuthorityId = issuingCertificateAuthorityId;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public PrivatecaProjectsLocationsCaPoolsCertificatesCreateRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public PrivatecaProjectsLocationsCaPoolsCertificatesCreateRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Required. The resource name of the CaPool associated with the Certificate, in the format `projects/* /locations/* /caPools/*`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public PrivatecaProjectsLocationsCaPoolsCertificatesCreateRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public PrivatecaProjectsLocationsCaPoolsCertificatesCreateRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public PrivatecaProjectsLocationsCaPoolsCertificatesCreateRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Optional. An ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
+    public String requestId;
+    public PrivatecaProjectsLocationsCaPoolsCertificatesCreateRequest withRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public PrivatecaProjectsLocationsCaPoolsCertificatesCreateRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public PrivatecaProjectsLocationsCaPoolsCertificatesCreateRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
+        return this;
+    }
+    
+    /**
+     * Optional. If this is true, no Certificate resource will be persisted regardless of the CaPool's tier, and the returned Certificate will not contain the pem_certificate field.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=validateOnly")
+    public Boolean validateOnly;
+    public PrivatecaProjectsLocationsCaPoolsCertificatesCreateRequest withValidateOnly(Boolean validateOnly) {
+        this.validateOnly = validateOnly;
         return this;
     }
     

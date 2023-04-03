@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetcampaignconfigurationRequest {
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public SetcampaignconfigurationRequest withAccept(String accept) {
+        this.accept = accept;
+        return this;
+    }
     
-    public SetcampaignconfigurationHeaders headers;
-    public SetcampaignconfigurationRequest withHeaders(SetcampaignconfigurationHeaders headers) {
-        this.headers = headers;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public SetcampaignconfigurationRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public SetcampaignconfigurationRequestBody request;
-    public SetcampaignconfigurationRequest withRequest(SetcampaignconfigurationRequestBody request) {
-        this.request = request;
+    public SetcampaignconfigurationRequestBody requestBody;
+    public SetcampaignconfigurationRequest withRequestBody(SetcampaignconfigurationRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

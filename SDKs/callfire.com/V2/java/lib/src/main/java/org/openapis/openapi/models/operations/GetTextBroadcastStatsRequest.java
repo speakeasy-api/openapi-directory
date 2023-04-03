@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTextBroadcastStatsRequest {
-    
-    public GetTextBroadcastStatsPathParams pathParams;
-    public GetTextBroadcastStatsRequest withPathParams(GetTextBroadcastStatsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Start of a search find time interval, formatted in unix time milliseconds. Example: 1473781817000 for Sat, 05 Jan 1985 14:03:37 GMT
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=begin")
+    public Long begin;
+    public GetTextBroadcastStatsRequest withBegin(Long begin) {
+        this.begin = begin;
         return this;
     }
     
-    
-    public GetTextBroadcastStatsQueryParams queryParams;
-    public GetTextBroadcastStatsRequest withQueryParams(GetTextBroadcastStatsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * End of a search time interval, formatted in unix time milliseconds. Example: 1473781817000 for Sat, 05 Jan 1985 14:03:37 GMT
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
+    public Long end;
+    public GetTextBroadcastStatsRequest withEnd(Long end) {
+        this.end = end;
         return this;
     }
     
+    /**
+     * Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public GetTextBroadcastStatsRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
     
-    public GetTextBroadcastStatsSecurity security;
-    public GetTextBroadcastStatsRequest withSecurity(GetTextBroadcastStatsSecurity security) {
-        this.security = security;
+    /**
+     * An id of a text broadcast
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetTextBroadcastStatsRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

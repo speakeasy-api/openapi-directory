@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoGetContentsRequest {
-    
-    public RepoGetContentsPathParams pathParams;
-    public RepoGetContentsRequest withPathParams(RepoGetContentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * path of the dir, file, symlink or submodule in the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=filepath")
+    public String filepath;
+    public RepoGetContentsRequest withFilepath(String filepath) {
+        this.filepath = filepath;
         return this;
     }
     
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoGetContentsRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public RepoGetContentsQueryParams queryParams;
-    public RepoGetContentsRequest withQueryParams(RepoGetContentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The name of the commit/branch/tag. Default the repository\u2019s default branch (usually master)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ref")
+    public String ref;
+    public RepoGetContentsRequest withRef(String ref) {
+        this.ref = ref;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoGetContentsRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

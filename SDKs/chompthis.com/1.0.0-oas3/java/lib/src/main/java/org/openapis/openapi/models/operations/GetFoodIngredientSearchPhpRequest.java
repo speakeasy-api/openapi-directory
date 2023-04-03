@@ -4,20 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFoodIngredientSearchPhpRequest {
-    
-    public GetFoodIngredientSearchPhpQueryParams queryParams;
-    public GetFoodIngredientSearchPhpRequest withQueryParams(GetFoodIngredientSearchPhpQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Search our database for a single ingredient or a specific set of ingredients.
+     * 
+     * **Example #1: Single Ingredient**
+     * &gt; ```&amp;find=raw broccoli```
+     * 
+     * **Example #2: Set of Ingredients**
+     * &gt; ```&amp;find=raw broccoli,buttermilk waffle,mashed potatoes```
+     * 
+     * **Important Notes** 
+     *   * Comma-separated lists cannot contain more than **10 ingredients**. You must perform additional API calls if you are looking up more than 10 ingredients.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=find")
+    public String find;
+    public GetFoodIngredientSearchPhpRequest withFind(String find) {
+        this.find = find;
         return this;
     }
     
-    
-    public GetFoodIngredientSearchPhpSecurity security;
-    public GetFoodIngredientSearchPhpRequest withSecurity(GetFoodIngredientSearchPhpSecurity security) {
-        this.security = security;
+    /**
+     * #### Set maximum number of records you want the API to return, per search term. The default value is "**1**."
+     * 
+     * **Example**
+     * &gt; ```&amp;limit=3```
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public GetFoodIngredientSearchPhpLimitEnum limit;
+    public GetFoodIngredientSearchPhpRequest withLimit(GetFoodIngredientSearchPhpLimitEnum limit) {
+        this.limit = limit;
         return this;
     }
     

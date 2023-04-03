@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LineRouteRequest {
-    
-    public LineRouteQueryParams queryParams;
-    public LineRouteRequest withQueryParams(LineRouteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A comma seperated list of service types to filter on. Supported values: Regular, Night. Defaulted to 'Regular' if not specified
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceTypes")
+    public LineRouteServiceTypesEnum[] serviceTypes;
+    public LineRouteRequest withServiceTypes(LineRouteServiceTypesEnum[] serviceTypes) {
+        this.serviceTypes = serviceTypes;
         return this;
     }
     

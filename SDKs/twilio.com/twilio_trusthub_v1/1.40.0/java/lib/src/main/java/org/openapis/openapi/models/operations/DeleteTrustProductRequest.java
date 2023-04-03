@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteTrustProductRequest {
-    
-    public DeleteTrustProductPathParams pathParams;
-    public DeleteTrustProductRequest withPathParams(DeleteTrustProductPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteTrustProductSecurity security;
-    public DeleteTrustProductRequest withSecurity(DeleteTrustProductSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteTrustProductRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique string that we created to identify the Customer-Profile resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteTrustProductRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

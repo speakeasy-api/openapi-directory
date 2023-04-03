@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SplitOidRequest {
+    /**
+     * OID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=OID")
+    public String oid;
+    public SplitOidRequest withOid(String oid) {
+        this.oid = oid;
+        return this;
+    }
     
-    public SplitOidPathParams pathParams;
-    public SplitOidRequest withPathParams(SplitOidPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent of the value space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public SplitOidRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

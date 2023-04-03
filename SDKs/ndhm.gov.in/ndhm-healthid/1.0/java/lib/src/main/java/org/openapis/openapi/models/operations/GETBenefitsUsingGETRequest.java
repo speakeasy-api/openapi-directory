@@ -4,20 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETBenefitsUsingGETRequest {
-    
-    public GETBenefitsUsingGETHeaders headers;
-    public GETBenefitsUsingGETRequest withHeaders(GETBenefitsUsingGETHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public GETBenefitsUsingGETRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
-    
-    public GETBenefitsUsingGETSecurity security;
-    public GETBenefitsUsingGETRequest withSecurity(GETBenefitsUsingGETSecurity security) {
-        this.security = security;
+    /**
+     * Auth Token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Token")
+    public String xToken;
+    public GETBenefitsUsingGETRequest withXToken(String xToken) {
+        this.xToken = xToken;
         return this;
     }
     

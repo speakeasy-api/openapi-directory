@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UnsubscribeUserNotificationRequest {
-    
-    public UnsubscribeUserNotificationPathParams pathParams;
-    public UnsubscribeUserNotificationRequest withPathParams(UnsubscribeUserNotificationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.NotificationSubscription request;
-    public UnsubscribeUserNotificationRequest withRequest(org.openapis.openapi.models.shared.NotificationSubscription request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.NotificationSubscription notificationSubscription;
+    public UnsubscribeUserNotificationRequest withNotificationSubscription(org.openapis.openapi.models.shared.NotificationSubscription notificationSubscription) {
+        this.notificationSubscription = notificationSubscription;
         return this;
     }
     
-    
-    public UnsubscribeUserNotificationSecurity security;
-    public UnsubscribeUserNotificationRequest withSecurity(UnsubscribeUserNotificationSecurity security) {
-        this.security = security;
+    /**
+     * User ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public Long userId;
+    public UnsubscribeUserNotificationRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

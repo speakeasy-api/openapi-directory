@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class JobSearchallReadRequest {
-    
-    public JobSearchallReadPathParams pathParams;
-    public JobSearchallReadRequest withPathParams(JobSearchallReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=company_name")
+    public String companyName;
+    public JobSearchallReadRequest withCompanyName(String companyName) {
+        this.companyName = companyName;
         return this;
     }
     

@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1MutesRequest {
-    
-    public GetApiV1MutesQueryParams queryParams;
-    public GetApiV1MutesRequest withQueryParams(GetApiV1MutesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public String limit;
+    public GetApiV1MutesRequest withLimit(String limit) {
+        this.limit = limit;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_id")
+    public String maxId;
+    public GetApiV1MutesRequest withMaxId(String maxId) {
+        this.maxId = maxId;
+        return this;
+    }
     
-    public GetApiV1MutesSecurity security;
-    public GetApiV1MutesRequest withSecurity(GetApiV1MutesSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since_id")
+    public String sinceId;
+    public GetApiV1MutesRequest withSinceId(String sinceId) {
+        this.sinceId = sinceId;
         return this;
     }
     

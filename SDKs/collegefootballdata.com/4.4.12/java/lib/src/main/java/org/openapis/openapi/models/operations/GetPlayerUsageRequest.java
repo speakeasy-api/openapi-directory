@@ -4,13 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPlayerUsageRequest {
+    /**
+     * Conference abbreviation filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=conference")
+    public String conference;
+    public GetPlayerUsageRequest withConference(String conference) {
+        this.conference = conference;
+        return this;
+    }
     
-    public GetPlayerUsageQueryParams queryParams;
-    public GetPlayerUsageRequest withQueryParams(GetPlayerUsageQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter to remove garbage time plays from calculations
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=excludeGarbageTime")
+    public Boolean excludeGarbageTime;
+    public GetPlayerUsageRequest withExcludeGarbageTime(Boolean excludeGarbageTime) {
+        this.excludeGarbageTime = excludeGarbageTime;
+        return this;
+    }
+    
+    /**
+     * Player id filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=playerId")
+    public Long playerId;
+    public GetPlayerUsageRequest withPlayerId(Long playerId) {
+        this.playerId = playerId;
+        return this;
+    }
+    
+    /**
+     * Position abbreviation filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=position")
+    public String position;
+    public GetPlayerUsageRequest withPosition(String position) {
+        this.position = position;
+        return this;
+    }
+    
+    /**
+     * Team filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team")
+    public String team;
+    public GetPlayerUsageRequest withTeam(String team) {
+        this.team = team;
+        return this;
+    }
+    
+    /**
+     * Year filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public Long year;
+    public GetPlayerUsageRequest withYear(Long year) {
+        this.year = year;
         return this;
     }
     

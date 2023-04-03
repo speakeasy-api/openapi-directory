@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkSyslogServersRequest {
-    
-    public UpdateNetworkSyslogServersPathParams pathParams;
-    public UpdateNetworkSyslogServersRequest withPathParams(UpdateNetworkSyslogServersPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkSyslogServersRequestBody requestBody;
+    public UpdateNetworkSyslogServersRequest withRequestBody(UpdateNetworkSyslogServersRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkSyslogServersRequestBody request;
-    public UpdateNetworkSyslogServersRequest withRequest(UpdateNetworkSyslogServersRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkSyslogServersRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

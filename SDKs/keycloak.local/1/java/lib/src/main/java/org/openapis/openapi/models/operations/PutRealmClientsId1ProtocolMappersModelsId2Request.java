@@ -7,17 +7,34 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutRealmClientsId1ProtocolMappersModelsId2Request {
-    
-    public PutRealmClientsId1ProtocolMappersModelsId2PathParams pathParams;
-    public PutRealmClientsId1ProtocolMappersModelsId2Request withPathParams(PutRealmClientsId1ProtocolMappersModelsId2PathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ProtocolMapperRepresentation protocolMapperRepresentation;
+    public PutRealmClientsId1ProtocolMappersModelsId2Request withProtocolMapperRepresentation(org.openapis.openapi.models.shared.ProtocolMapperRepresentation protocolMapperRepresentation) {
+        this.protocolMapperRepresentation = protocolMapperRepresentation;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ProtocolMapperRepresentation request;
-    public PutRealmClientsId1ProtocolMappersModelsId2Request withRequest(org.openapis.openapi.models.shared.ProtocolMapperRepresentation request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id1")
+    public String id1;
+    public PutRealmClientsId1ProtocolMappersModelsId2Request withId1(String id1) {
+        this.id1 = id1;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id2")
+    public String id2;
+    public PutRealmClientsId1ProtocolMappersModelsId2Request withId2(String id2) {
+        this.id2 = id2;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PutRealmClientsId1ProtocolMappersModelsId2Request withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

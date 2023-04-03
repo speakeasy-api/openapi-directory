@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.DeleteV2AccessTokensUuidPathParams;
 import org.openapis.openapi.models.operations.DeleteV2AccessTokensUuidRequest;
 import org.openapis.openapi.models.operations.DeleteV2AccessTokensUuidResponse;
 
@@ -28,10 +27,8 @@ public class Application {
                 .build();
 
             DeleteV2AccessTokensUuidRequest req = new DeleteV2AccessTokensUuidRequest() {{
-                pathParams = new DeleteV2AccessTokensUuidPathParams() {{
-                    uuid = "89bd9d8d-69a6-474e-8f46-7cc8796ed151";
-                }};
-            }};            
+                uuid = "89bd9d8d-69a6-474e-8f46-7cc8796ed151";
+            }}            
 
             DeleteV2AccessTokensUuidResponse res = sdk.accessTokens.deleteV2AccessTokensUuid(req);
 
@@ -45,7 +42,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### accessTokens

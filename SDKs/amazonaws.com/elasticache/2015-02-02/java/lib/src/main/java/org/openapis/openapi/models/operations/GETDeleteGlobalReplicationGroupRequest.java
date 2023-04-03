@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteGlobalReplicationGroupRequest {
-    
-    public GETDeleteGlobalReplicationGroupQueryParams queryParams;
-    public GETDeleteGlobalReplicationGroupRequest withQueryParams(GETDeleteGlobalReplicationGroupQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDeleteGlobalReplicationGroupActionEnum action;
+    public GETDeleteGlobalReplicationGroupRequest withAction(GETDeleteGlobalReplicationGroupActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the Global datastore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GlobalReplicationGroupId")
+    public String globalReplicationGroupId;
+    public GETDeleteGlobalReplicationGroupRequest withGlobalReplicationGroupId(String globalReplicationGroupId) {
+        this.globalReplicationGroupId = globalReplicationGroupId;
+        return this;
+    }
     
-    public GETDeleteGlobalReplicationGroupHeaders headers;
-    public GETDeleteGlobalReplicationGroupRequest withHeaders(GETDeleteGlobalReplicationGroupHeaders headers) {
-        this.headers = headers;
+    /**
+     * The primary replication group is retained as a standalone replication group. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RetainPrimaryReplicationGroup")
+    public Boolean retainPrimaryReplicationGroup;
+    public GETDeleteGlobalReplicationGroupRequest withRetainPrimaryReplicationGroup(Boolean retainPrimaryReplicationGroup) {
+        this.retainPrimaryReplicationGroup = retainPrimaryReplicationGroup;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDeleteGlobalReplicationGroupVersionEnum version;
+    public GETDeleteGlobalReplicationGroupRequest withVersion(GETDeleteGlobalReplicationGroupVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDeleteGlobalReplicationGroupRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDeleteGlobalReplicationGroupRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDeleteGlobalReplicationGroupRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDeleteGlobalReplicationGroupRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDeleteGlobalReplicationGroupRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDeleteGlobalReplicationGroupRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDeleteGlobalReplicationGroupRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostStripeGatewayDeveloperDeveloperIdAccountsRequest {
-    
-    public PostStripeGatewayDeveloperDeveloperIdAccountsPathParams pathParams;
-    public PostStripeGatewayDeveloperDeveloperIdAccountsRequest withPathParams(PostStripeGatewayDeveloperDeveloperIdAccountsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the developer connecting their Stripe account
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=developerId")
+    public String developerId;
+    public PostStripeGatewayDeveloperDeveloperIdAccountsRequest withDeveloperId(String developerId) {
+        this.developerId = developerId;
         return this;
     }
     
-    
-    public PostStripeGatewayDeveloperDeveloperIdAccountsQueryParams queryParams;
-    public PostStripeGatewayDeveloperDeveloperIdAccountsRequest withQueryParams(PostStripeGatewayDeveloperDeveloperIdAccountsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The URL to redirect this developer after they have connected their Stripe account
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=redirectUrl")
+    public String redirectUrl;
+    public PostStripeGatewayDeveloperDeveloperIdAccountsRequest withRedirectUrl(String redirectUrl) {
+        this.redirectUrl = redirectUrl;
         return this;
     }
     

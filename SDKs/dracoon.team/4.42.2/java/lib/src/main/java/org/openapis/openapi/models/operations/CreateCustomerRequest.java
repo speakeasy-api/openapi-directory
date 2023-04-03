@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateCustomerRequest {
-    
-    public CreateCustomerHeaders headers;
-    public CreateCustomerRequest withHeaders(CreateCustomerHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.NewCustomerRequest newCustomerRequest;
+    public CreateCustomerRequest withNewCustomerRequest(org.openapis.openapi.models.shared.NewCustomerRequest newCustomerRequest) {
+        this.newCustomerRequest = newCustomerRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.NewCustomerRequest request;
-    public CreateCustomerRequest withRequest(org.openapis.openapi.models.shared.NewCustomerRequest request) {
-        this.request = request;
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public CreateCustomerXSdsDateFormatEnum xSdsDateFormat;
+    public CreateCustomerRequest withXSdsDateFormat(CreateCustomerXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
+        return this;
+    }
+    
+    /**
+     * Service Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Service-Token")
+    public String xSdsServiceToken;
+    public CreateCustomerRequest withXSdsServiceToken(String xSdsServiceToken) {
+        this.xSdsServiceToken = xSdsServiceToken;
         return this;
     }
     

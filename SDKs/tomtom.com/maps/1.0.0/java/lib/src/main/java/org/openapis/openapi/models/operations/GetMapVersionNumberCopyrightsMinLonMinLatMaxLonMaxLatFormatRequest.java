@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest {
-    
-    public GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatPathParams pathParams;
-    public GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest withPathParams(GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Specifies the jsonp callback method. Only used when format is jsonp.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest withCallback(String callback) {
+        this.callback = callback;
         return this;
     }
     
+    /**
+     * Format of the response
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatFormatEnum format;
+    public GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest withFormat(GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatQueryParams queryParams;
-    public GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest withQueryParams(GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Maximum latitude coordinate of bounding box defined in terms of latitude/longitude.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=maxLat")
+    public Double maxLat;
+    public GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest withMaxLat(Double maxLat) {
+        this.maxLat = maxLat;
+        return this;
+    }
+    
+    /**
+     * Maximum longitude coordinate of bounding box defined in terms of latitude/longitude.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=maxLon")
+    public Double maxLon;
+    public GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest withMaxLon(Double maxLon) {
+        this.maxLon = maxLon;
+        return this;
+    }
+    
+    /**
+     * Minimum latitude coordinate of bounding box defined in terms of latitude/longitude.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=minLat")
+    public Double minLat;
+    public GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest withMinLat(Double minLat) {
+        this.minLat = minLat;
+        return this;
+    }
+    
+    /**
+     * Minimum longitude coordinate of bounding box defined in terms of latitude/longitude.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=minLon")
+    public Double minLon;
+    public GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest withMinLon(Double minLon) {
+        this.minLon = minLon;
+        return this;
+    }
+    
+    /**
+     * Version of the service to call. The current version is 1
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
+    public GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatVersionNumberEnum versionNumber;
+    public GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest withVersionNumber(GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatVersionNumberEnum versionNumber) {
+        this.versionNumber = versionNumber;
         return this;
     }
     

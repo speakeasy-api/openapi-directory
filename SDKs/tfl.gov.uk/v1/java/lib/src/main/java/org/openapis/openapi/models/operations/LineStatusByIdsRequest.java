@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LineStatusByIdsRequest {
-    
-    public LineStatusByIdsPathParams pathParams;
-    public LineStatusByIdsRequest withPathParams(LineStatusByIdsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Include details of the disruptions that are causing the line status including the affected stops and routes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=detail")
+    public Boolean detail;
+    public LineStatusByIdsRequest withDetail(Boolean detail) {
+        this.detail = detail;
         return this;
     }
     
-    
-    public LineStatusByIdsQueryParams queryParams;
-    public LineStatusByIdsRequest withQueryParams(LineStatusByIdsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A comma-separated list of line ids e.g. victoria,circle,N133. Max. approx. 20 ids.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ids")
+    public String[] ids;
+    public LineStatusByIdsRequest withIds(String[] ids) {
+        this.ids = ids;
         return this;
     }
     

@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiUpdateStateFormRequest {
-    
-    public OrderApiUpdateStateFormPathParams pathParams;
-    public OrderApiUpdateStateFormRequest withPathParams(OrderApiUpdateStateFormPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The data used to change the state
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiOrderStateUpdate request;
-    public OrderApiUpdateStateFormRequest withRequest(org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiOrderStateUpdate request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiOrderStateUpdate rechnungsdruckWebAppControllersApiOrderStateUpdate;
+    public OrderApiUpdateStateFormRequest withRechnungsdruckWebAppControllersApiOrderStateUpdate(org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiOrderStateUpdate rechnungsdruckWebAppControllersApiOrderStateUpdate) {
+        this.rechnungsdruckWebAppControllersApiOrderStateUpdate = rechnungsdruckWebAppControllersApiOrderStateUpdate;
+        return this;
+    }
+    
+    /**
+     * The internal id of the order
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public OrderApiUpdateStateFormRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

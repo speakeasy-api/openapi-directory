@@ -4,20 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActivityListReposWatchedByUserRequest {
-    
-    public ActivityListReposWatchedByUserPathParams pathParams;
-    public ActivityListReposWatchedByUserRequest withPathParams(ActivityListReposWatchedByUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ActivityListReposWatchedByUserRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ActivityListReposWatchedByUserRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
     
-    public ActivityListReposWatchedByUserQueryParams queryParams;
-    public ActivityListReposWatchedByUserRequest withQueryParams(ActivityListReposWatchedByUserQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public ActivityListReposWatchedByUserRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

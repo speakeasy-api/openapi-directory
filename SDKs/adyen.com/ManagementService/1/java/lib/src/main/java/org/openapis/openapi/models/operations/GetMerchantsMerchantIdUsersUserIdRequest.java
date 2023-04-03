@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMerchantsMerchantIdUsersUserIdRequest {
-    
-    public GetMerchantsMerchantIdUsersUserIdPathParams pathParams;
-    public GetMerchantsMerchantIdUsersUserIdRequest withPathParams(GetMerchantsMerchantIdUsersUserIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the merchant.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
+    public String merchantId;
+    public GetMerchantsMerchantIdUsersUserIdRequest withMerchantId(String merchantId) {
+        this.merchantId = merchantId;
         return this;
     }
     
-    
-    public GetMerchantsMerchantIdUsersUserIdSecurity security;
-    public GetMerchantsMerchantIdUsersUserIdRequest withSecurity(GetMerchantsMerchantIdUsersUserIdSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public GetMerchantsMerchantIdUsersUserIdRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

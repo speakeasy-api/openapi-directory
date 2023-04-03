@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AnalyticsGroupByEnum;
-import org.openapis.openapi.models.operations.AnalyticsQueryParams;
 import org.openapis.openapi.models.operations.AnalyticsRequest;
 import org.openapis.openapi.models.operations.AnalyticsResponse;
 
@@ -14,21 +13,17 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    apiKeyAuth = new SchemeAPIKeyAuth() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    apiKeyAuth = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AnalyticsRequest req = new AnalyticsRequest() {{
-                queryParams = new AnalyticsQueryParams() {{
-                    end = "corrupti";
-                    groupBy = "subaccount";
-                    label = "distinctio";
-                    start = "quibusdam";
-                    subaccounts = "unde";
-                }};
-            }};            
+                end = "corrupti";
+                groupBy = "subaccount";
+                label = "distinctio";
+                start = "quibusdam";
+                subaccounts = "unde";
+            }}            
 
             AnalyticsResponse res = sdk.analytics.analytics(req);
 

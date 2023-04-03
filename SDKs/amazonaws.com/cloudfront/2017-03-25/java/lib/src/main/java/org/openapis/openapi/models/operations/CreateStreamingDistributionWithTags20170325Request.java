@@ -7,24 +7,66 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateStreamingDistributionWithTags20170325Request {
-    
-    public CreateStreamingDistributionWithTags20170325QueryParams queryParams;
-    public CreateStreamingDistributionWithTags20170325Request withQueryParams(CreateStreamingDistributionWithTags20170325QueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public CreateStreamingDistributionWithTags20170325Headers headers;
-    public CreateStreamingDistributionWithTags20170325Request withHeaders(CreateStreamingDistributionWithTags20170325Headers headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public CreateStreamingDistributionWithTags20170325Request withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public CreateStreamingDistributionWithTags20170325Request withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=WithTags")
+    public CreateStreamingDistributionWithTags20170325WithTagsEnum withTags;
+    public CreateStreamingDistributionWithTags20170325Request withWithTags(CreateStreamingDistributionWithTags20170325WithTagsEnum withTags) {
+        this.withTags = withTags;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public CreateStreamingDistributionWithTags20170325Request withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public CreateStreamingDistributionWithTags20170325Request withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public CreateStreamingDistributionWithTags20170325Request withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public CreateStreamingDistributionWithTags20170325Request withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public CreateStreamingDistributionWithTags20170325Request withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public CreateStreamingDistributionWithTags20170325Request withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public CreateStreamingDistributionWithTags20170325Request withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

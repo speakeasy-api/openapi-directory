@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CompleteFileUploadViaShareRequest {
-    
-    public CompleteFileUploadViaSharePathParams pathParams;
-    public CompleteFileUploadViaShareRequest withPathParams(CompleteFileUploadViaSharePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CompleteFileUploadViaShareHeaders headers;
-    public CompleteFileUploadViaShareRequest withHeaders(CompleteFileUploadViaShareHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UserFileKeyList request;
-    public CompleteFileUploadViaShareRequest withRequest(org.openapis.openapi.models.shared.UserFileKeyList request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UserFileKeyList userFileKeyList;
+    public CompleteFileUploadViaShareRequest withUserFileKeyList(org.openapis.openapi.models.shared.UserFileKeyList userFileKeyList) {
+        this.userFileKeyList = userFileKeyList;
+        return this;
+    }
+    
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public CompleteFileUploadViaShareXSdsDateFormatEnum xSdsDateFormat;
+    public CompleteFileUploadViaShareRequest withXSdsDateFormat(CompleteFileUploadViaShareXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
+        return this;
+    }
+    
+    /**
+     * Access key
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=access_key")
+    public String accessKey;
+    public CompleteFileUploadViaShareRequest withAccessKey(String accessKey) {
+        this.accessKey = accessKey;
+        return this;
+    }
+    
+    /**
+     * Upload channel ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=upload_id")
+    public String uploadId;
+    public CompleteFileUploadViaShareRequest withUploadId(String uploadId) {
+        this.uploadId = uploadId;
         return this;
     }
     

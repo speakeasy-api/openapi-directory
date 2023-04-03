@@ -39,7 +39,7 @@ public class Tod {
      */
     public org.openapis.openapi.models.operations.ProtocolTodGetArgsResponse protocolTodGetArgs(org.openapis.openapi.models.operations.ProtocolTodGetArgsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTodGetArgsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tod/get/args", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTodGetArgsRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tod/get/args", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -81,7 +81,7 @@ public class Tod {
      */
     public org.openapis.openapi.models.operations.ProtocolTodGetConfigResponse protocolTodGetConfig(org.openapis.openapi.models.operations.ProtocolTodGetConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTodGetConfigPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tod/get/config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTodGetConfigRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tod/get/config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -123,7 +123,7 @@ public class Tod {
      */
     public org.openapis.openapi.models.operations.ProtocolTodGetStatisticsResponse protocolTodGetStatistics(org.openapis.openapi.models.operations.ProtocolTodGetStatisticsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTodGetStatisticsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tod/get/statistics", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTodGetStatisticsRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tod/get/statistics", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -206,7 +206,7 @@ public class Tod {
      */
     public org.openapis.openapi.models.operations.ProtocolTodGetTraceResponse protocolTodGetTrace(org.openapis.openapi.models.operations.ProtocolTodGetTraceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTodGetTracePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tod/get/trace", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTodGetTraceRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tod/get/trace", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -248,7 +248,7 @@ public class Tod {
      */
     public org.openapis.openapi.models.operations.ProtocolTodGettimeResponse protocolTodGettime(org.openapis.openapi.models.operations.ProtocolTodGettimeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTodGettimePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tod/gettime/server/{serverAddr}/port/{portNum}/script/{scriptName}/timeout/{timeSec}/retries/{numRetries}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTodGettimeRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tod/gettime/server/{serverAddr}/port/{portNum}/script/{scriptName}/timeout/{timeSec}/retries/{numRetries}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -290,7 +290,7 @@ public class Tod {
      */
     public org.openapis.openapi.models.operations.ProtocolTodSetConfigResponse protocolTodSetConfig(org.openapis.openapi.models.operations.ProtocolTodSetConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTodSetConfigPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tod/set/config/{argument}/{value}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTodSetConfigRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tod/set/config/{argument}/{value}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -331,7 +331,7 @@ public class Tod {
      */
     public org.openapis.openapi.models.operations.ProtocolTodSetTraceResponse protocolTodSetTrace(org.openapis.openapi.models.operations.ProtocolTodSetTraceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTodSetTracePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tod/set/trace/{enableOrNot}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTodSetTraceRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tod/set/trace/{enableOrNot}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

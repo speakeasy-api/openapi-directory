@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProjectsGetPermissionForUserRequest {
+    /**
+     * The unique identifier of the project.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public Long projectId;
+    public ProjectsGetPermissionForUserRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
     
-    public ProjectsGetPermissionForUserPathParams pathParams;
-    public ProjectsGetPermissionForUserRequest withPathParams(ProjectsGetPermissionForUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The handle for the GitHub user account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public ProjectsGetPermissionForUserRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

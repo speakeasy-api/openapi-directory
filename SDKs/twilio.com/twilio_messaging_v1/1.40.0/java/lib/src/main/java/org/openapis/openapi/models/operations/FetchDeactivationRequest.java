@@ -4,27 +4,17 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchDeactivationRequest {
-    
-    public FetchDeactivationQueryParams queryParams;
-    public FetchDeactivationRequest withQueryParams(FetchDeactivationQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public FetchDeactivationSecurity security;
-    public FetchDeactivationRequest withSecurity(FetchDeactivationSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchDeactivationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The request will return a list of all United States Phone Numbers that were deactivated on the day specified by this parameter. This date should be specified in YYYY-MM-DD format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Date")
+    public LocalDate date;
+    public FetchDeactivationRequest withDate(LocalDate date) {
+        this.date = date;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GistsListCommitsRequest {
-    
-    public GistsListCommitsPathParams pathParams;
-    public GistsListCommitsRequest withPathParams(GistsListCommitsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the gist.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=gist_id")
+    public String gistId;
+    public GistsListCommitsRequest withGistId(String gistId) {
+        this.gistId = gistId;
         return this;
     }
     
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GistsListCommitsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public GistsListCommitsQueryParams queryParams;
-    public GistsListCommitsRequest withQueryParams(GistsListCommitsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GistsListCommitsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
         return this;
     }
     

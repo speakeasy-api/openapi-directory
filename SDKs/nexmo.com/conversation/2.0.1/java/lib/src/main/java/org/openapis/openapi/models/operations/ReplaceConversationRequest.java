@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReplaceConversationRequest {
-    
-    public ReplaceConversationPathParams pathParams;
-    public ReplaceConversationRequest withPathParams(ReplaceConversationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Conversation Request Payload Object
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public ReplaceConversationRequestBody request;
-    public ReplaceConversationRequest withRequest(ReplaceConversationRequestBody request) {
-        this.request = request;
+    public ReplaceConversationRequestBody requestBody;
+    public ReplaceConversationRequest withRequestBody(ReplaceConversationRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Conversation ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversation_id")
+    public String conversationId;
+    public ReplaceConversationRequest withConversationId(String conversationId) {
+        this.conversationId = conversationId;
         return this;
     }
     

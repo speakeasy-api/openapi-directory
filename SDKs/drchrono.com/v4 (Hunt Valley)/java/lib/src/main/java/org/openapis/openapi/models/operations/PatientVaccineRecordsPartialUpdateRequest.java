@@ -4,27 +4,41 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatientVaccineRecordsPartialUpdateRequest {
-    
-    public PatientVaccineRecordsPartialUpdatePathParams pathParams;
-    public PatientVaccineRecordsPartialUpdateRequest withPathParams(PatientVaccineRecordsPartialUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cvx_code")
+    public String cvxCode;
+    public PatientVaccineRecordsPartialUpdateRequest withCvxCode(String cvxCode) {
+        this.cvxCode = cvxCode;
         return this;
     }
     
-    
-    public PatientVaccineRecordsPartialUpdateQueryParams queryParams;
-    public PatientVaccineRecordsPartialUpdateRequest withQueryParams(PatientVaccineRecordsPartialUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public PatientVaccineRecordsPartialUpdateRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatientVaccineRecordsPartialUpdateRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PatientVaccineRecordsPartialUpdateSecurity security;
-    public PatientVaccineRecordsPartialUpdateRequest withSecurity(PatientVaccineRecordsPartialUpdateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
+    public Long patient;
+    public PatientVaccineRecordsPartialUpdateRequest withPatient(Long patient) {
+        this.patient = patient;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public PatientVaccineRecordsPartialUpdateRequest withSince(String since) {
+        this.since = since;
         return this;
     }
     

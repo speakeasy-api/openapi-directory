@@ -4,27 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeRecommendationFeedbackRequest {
-    
-    public DescribeRecommendationFeedbackPathParams pathParams;
-    public DescribeRecommendationFeedbackRequest withPathParams(DescribeRecommendationFeedbackPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The Amazon Resource Name (ARN) of the &lt;a href="https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_CodeReview.html"&gt;CodeReview&lt;/a&gt; object. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CodeReviewArn")
+    public String codeReviewArn;
+    public DescribeRecommendationFeedbackRequest withCodeReviewArn(String codeReviewArn) {
+        this.codeReviewArn = codeReviewArn;
         return this;
     }
     
-    
-    public DescribeRecommendationFeedbackQueryParams queryParams;
-    public DescribeRecommendationFeedbackRequest withQueryParams(DescribeRecommendationFeedbackQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The recommendation ID that can be used to track the provided recommendations and then to collect the feedback.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RecommendationId")
+    public String recommendationId;
+    public DescribeRecommendationFeedbackRequest withRecommendationId(String recommendationId) {
+        this.recommendationId = recommendationId;
         return this;
     }
     
+    /**
+     * &lt;p&gt;Optional parameter to describe the feedback for a given user. If this is not supplied, it defaults to the user making the request.&lt;/p&gt; &lt;p&gt; The &lt;code&gt;UserId&lt;/code&gt; is an IAM principal that can be specified as an Amazon Web Services account ID or an Amazon Resource Name (ARN). For more information, see &lt;a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html#Principal_specifying"&gt; Specifying a Principal&lt;/a&gt; in the &lt;i&gt;Amazon Web Services Identity and Access Management User Guide&lt;/i&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UserId")
+    public String userId;
+    public DescribeRecommendationFeedbackRequest withUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
     
-    public DescribeRecommendationFeedbackHeaders headers;
-    public DescribeRecommendationFeedbackRequest withHeaders(DescribeRecommendationFeedbackHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DescribeRecommendationFeedbackRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DescribeRecommendationFeedbackRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DescribeRecommendationFeedbackRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DescribeRecommendationFeedbackRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DescribeRecommendationFeedbackRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DescribeRecommendationFeedbackRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DescribeRecommendationFeedbackRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

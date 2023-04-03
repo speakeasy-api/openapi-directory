@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelReportRequest {
-    
-    public CancelReportPathParams pathParams;
-    public CancelReportRequest withPathParams(CancelReportPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CancelReportSecurity security;
-    public CancelReportRequest withSecurity(CancelReportSecurity security) {
-        this.security = security;
+    /**
+     * UUID of the report
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=report_id")
+    public String reportId;
+    public CancelReportRequest withReportId(String reportId) {
+        this.reportId = reportId;
         return this;
     }
     

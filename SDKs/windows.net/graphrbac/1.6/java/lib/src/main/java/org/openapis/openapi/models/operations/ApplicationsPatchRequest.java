@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ApplicationsPatchRequest {
-    
-    public ApplicationsPatchPathParams pathParams;
-    public ApplicationsPatchRequest withPathParams(ApplicationsPatchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ApplicationsPatchQueryParams queryParams;
-    public ApplicationsPatchRequest withQueryParams(ApplicationsPatchQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Parameters to update an existing application.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ApplicationUpdateParameters request;
-    public ApplicationsPatchRequest withRequest(org.openapis.openapi.models.shared.ApplicationUpdateParameters request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ApplicationUpdateParameters applicationUpdateParameters;
+    public ApplicationsPatchRequest withApplicationUpdateParameters(org.openapis.openapi.models.shared.ApplicationUpdateParameters applicationUpdateParameters) {
+        this.applicationUpdateParameters = applicationUpdateParameters;
+        return this;
+    }
+    
+    /**
+     * Client API version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public ApplicationsPatchRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
+    
+    /**
+     * Application object ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=applicationObjectId")
+    public String applicationObjectId;
+    public ApplicationsPatchRequest withApplicationObjectId(String applicationObjectId) {
+        this.applicationObjectId = applicationObjectId;
+        return this;
+    }
+    
+    /**
+     * The tenant ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tenantID")
+    public String tenantID;
+    public ApplicationsPatchRequest withTenantID(String tenantID) {
+        this.tenantID = tenantID;
         return this;
     }
     

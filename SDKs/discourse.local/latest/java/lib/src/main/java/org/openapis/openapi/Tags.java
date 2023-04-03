@@ -36,7 +36,7 @@ public class Tags {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateTagGroupResponse createTagGroup(org.openapis.openapi.models.operations.CreateTagGroupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateTagGroupResponse createTagGroup(org.openapis.openapi.models.operations.CreateTagGroupRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/tag_groups.json");
         
@@ -78,7 +78,7 @@ public class Tags {
      */
     public org.openapis.openapi.models.operations.GetTagResponse getTag(org.openapis.openapi.models.operations.GetTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagPathParams.class, baseUrl, "/tag/{name}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagRequest.class, baseUrl, "/tag/{name}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -116,7 +116,7 @@ public class Tags {
      */
     public org.openapis.openapi.models.operations.GetTagGroupResponse getTagGroup(org.openapis.openapi.models.operations.GetTagGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagGroupPathParams.class, baseUrl, "/tag_groups/{id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagGroupRequest.class, baseUrl, "/tag_groups/{id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -228,12 +228,12 @@ public class Tags {
      */
     public org.openapis.openapi.models.operations.UpdateTagGroupResponse updateTagGroup(org.openapis.openapi.models.operations.UpdateTagGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateTagGroupPathParams.class, baseUrl, "/tag_groups/{id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateTagGroupRequest.class, baseUrl, "/tag_groups/{id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

@@ -38,7 +38,7 @@ public class ActionWebhookFailures {
      */
     public org.openapis.openapi.models.operations.PostActionWebhookFailuresIdRetryResponse postActionWebhookFailuresIdRetry(org.openapis.openapi.models.operations.PostActionWebhookFailuresIdRetryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostActionWebhookFailuresIdRetryPathParams.class, baseUrl, "/action_webhook_failures/{id}/retry", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostActionWebhookFailuresIdRetryRequest.class, baseUrl, "/action_webhook_failures/{id}/retry", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");

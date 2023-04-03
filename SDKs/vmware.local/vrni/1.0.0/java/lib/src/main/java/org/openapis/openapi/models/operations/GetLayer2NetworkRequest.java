@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLayer2NetworkRequest {
-    
-    public GetLayer2NetworkPathParams pathParams;
-    public GetLayer2NetworkRequest withPathParams(GetLayer2NetworkPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetLayer2NetworkRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetLayer2NetworkQueryParams queryParams;
-    public GetLayer2NetworkRequest withQueryParams(GetLayer2NetworkQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetLayer2NetworkSecurity security;
-    public GetLayer2NetworkRequest withSecurity(GetLayer2NetworkSecurity security) {
-        this.security = security;
+    /**
+     * time in epoch seconds
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=time")
+    public Long time;
+    public GetLayer2NetworkRequest withTime(Long time) {
+        this.time = time;
         return this;
     }
     

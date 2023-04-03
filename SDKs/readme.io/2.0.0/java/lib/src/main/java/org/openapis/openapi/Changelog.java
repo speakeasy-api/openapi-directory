@@ -34,10 +34,11 @@ public class Changelog {
      * Create changelog
      * Create a new changelog inside of this project
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateChangelogResponse createChangelog(org.openapis.openapi.models.operations.CreateChangelogRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateChangelogResponse createChangelog(org.openapis.openapi.models.shared.Changelog request, org.openapis.openapi.models.operations.CreateChangelogSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/changelogs");
         
@@ -51,7 +52,7 @@ public class Changelog {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -73,19 +74,20 @@ public class Changelog {
      * Delete changelog
      * Delete the changelog with this slug
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteChangelogResponse deleteChangelog(org.openapis.openapi.models.operations.DeleteChangelogRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteChangelogResponse deleteChangelog(org.openapis.openapi.models.operations.DeleteChangelogRequest request, org.openapis.openapi.models.operations.DeleteChangelogSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteChangelogPathParams.class, baseUrl, "/changelogs/{slug}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteChangelogRequest.class, baseUrl, "/changelogs/{slug}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -107,19 +109,20 @@ public class Changelog {
      * Get changelog
      * Returns the changelog with this slug
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetChangelogResponse getChangelog(org.openapis.openapi.models.operations.GetChangelogRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetChangelogResponse getChangelog(org.openapis.openapi.models.operations.GetChangelogRequest request, org.openapis.openapi.models.operations.GetChangelogSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChangelogPathParams.class, baseUrl, "/changelogs/{slug}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChangelogRequest.class, baseUrl, "/changelogs/{slug}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -141,10 +144,11 @@ public class Changelog {
      * Get changelogs
      * Returns a list of changelogs associated with the project API key
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetChangelogsResponse getChangelogs(org.openapis.openapi.models.operations.GetChangelogsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetChangelogsResponse getChangelogs(org.openapis.openapi.models.operations.GetChangelogsRequest request, org.openapis.openapi.models.operations.GetChangelogsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/changelogs");
         
@@ -152,14 +156,14 @@ public class Changelog {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetChangelogsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetChangelogsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -183,24 +187,25 @@ public class Changelog {
      * Update changelog
      * Update a changelog with this slug
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateChangelogResponse updateChangelog(org.openapis.openapi.models.operations.UpdateChangelogRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateChangelogResponse updateChangelog(org.openapis.openapi.models.operations.UpdateChangelogRequest request, org.openapis.openapi.models.operations.UpdateChangelogSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateChangelogPathParams.class, baseUrl, "/changelogs/{slug}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateChangelogRequest.class, baseUrl, "/changelogs/{slug}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "changelog", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,20 +4,31 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteV2ImportsIdJsonRequest {
-    
-    public DeleteV2ImportsIdJsonPathParams pathParams;
-    public DeleteV2ImportsIdJsonRequest withPathParams(DeleteV2ImportsIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Import ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteV2ImportsIdJsonRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public DeleteV2ImportsIdJsonQueryParams queryParams;
-    public DeleteV2ImportsIdJsonRequest withQueryParams(DeleteV2ImportsIdJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Whether to delete people on this Import. Possible values are: [not present], all, single.
+     * 
+     * 'single' will delete people who are only present in this Import.
+     * 'all' will delete people even if they are present in other Imports.
+     * Not specifying this parameter will not delete any people
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=undo")
+    public String undo;
+    public DeleteV2ImportsIdJsonRequest withUndo(String undo) {
+        this.undo = undo;
         return this;
     }
     

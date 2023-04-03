@@ -84,7 +84,7 @@ public class Pets {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListPetsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListPetsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -131,7 +131,7 @@ public class Pets {
      */
     public org.openapis.openapi.models.operations.ShowPetByIdResponse showPetById(org.openapis.openapi.models.operations.ShowPetByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ShowPetByIdPathParams.class, baseUrl, "/pets/{petId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ShowPetByIdRequest.class, baseUrl, "/pets/{petId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

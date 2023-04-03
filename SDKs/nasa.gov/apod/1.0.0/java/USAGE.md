@@ -5,10 +5,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GetApodSecurity;
-import org.openapis.openapi.models.operations.GetApodQueryParams;
 import org.openapis.openapi.models.operations.GetApodRequest;
 import org.openapis.openapi.models.operations.GetApodResponse;
-import org.openapis.openapi.models.shared.SchemeAPIKey;
 
 public class Application {
     public static void main(String[] args) {
@@ -17,18 +15,13 @@ public class Application {
                 .build();
 
             GetApodRequest req = new GetApodRequest() {{
-                security = new GetApodSecurity() {{
-                    apiKey = new SchemeAPIKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }};
-                queryParams = new GetApodQueryParams() {{
-                    date = "corrupti";
-                    hd = false;
-                }};
-            }};            
+                date = "corrupti";
+                hd = false;
+            }}            
 
-            GetApodResponse res = sdk.requestTag.getApod(req);
+            GetApodResponse res = sdk.requestTag.getApod(req, new GetApodSecurity() {{
+                apiKey = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.getApod200ApplicationJSONAnies.isPresent()) {
                 // handle response

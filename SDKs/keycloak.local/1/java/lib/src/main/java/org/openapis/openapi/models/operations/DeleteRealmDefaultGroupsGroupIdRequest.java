@@ -4,13 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRealmDefaultGroupsGroupIdRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public String groupId;
+    public DeleteRealmDefaultGroupsGroupIdRequest withGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
     
-    public DeleteRealmDefaultGroupsGroupIdPathParams pathParams;
-    public DeleteRealmDefaultGroupsGroupIdRequest withPathParams(DeleteRealmDefaultGroupsGroupIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public DeleteRealmDefaultGroupsGroupIdRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

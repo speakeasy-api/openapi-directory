@@ -7,17 +7,34 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsCreateForIssueCommentRequest {
-    
-    public ReactionsCreateForIssueCommentPathParams pathParams;
-    public ReactionsCreateForIssueCommentRequest withPathParams(ReactionsCreateForIssueCommentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ReactionsCreateForIssueCommentRequestBody requestBody;
+    public ReactionsCreateForIssueCommentRequest withRequestBody(ReactionsCreateForIssueCommentRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ReactionsCreateForIssueCommentRequestBody request;
-    public ReactionsCreateForIssueCommentRequest withRequest(ReactionsCreateForIssueCommentRequestBody request) {
-        this.request = request;
+    /**
+     * comment_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_id")
+    public Long commentId;
+    public ReactionsCreateForIssueCommentRequest withCommentId(Long commentId) {
+        this.commentId = commentId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReactionsCreateForIssueCommentRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReactionsCreateForIssueCommentRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

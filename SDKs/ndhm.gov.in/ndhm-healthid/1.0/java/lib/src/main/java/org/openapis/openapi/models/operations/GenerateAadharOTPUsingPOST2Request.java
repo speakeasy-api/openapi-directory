@@ -7,27 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GenerateAadharOTPUsingPOST2Request {
-    
-    public GenerateAadharOTPUsingPOST2Headers headers;
-    public GenerateAadharOTPUsingPOST2Request withHeaders(GenerateAadharOTPUsingPOST2Headers headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * generateOtpRequest
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AadharOtpGenerateRequestPayLoad request;
-    public GenerateAadharOTPUsingPOST2Request withRequest(org.openapis.openapi.models.shared.AadharOtpGenerateRequestPayLoad request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AadharOtpGenerateRequestPayLoad aadharOtpGenerateRequestPayLoad;
+    public GenerateAadharOTPUsingPOST2Request withAadharOtpGenerateRequestPayLoad(org.openapis.openapi.models.shared.AadharOtpGenerateRequestPayLoad aadharOtpGenerateRequestPayLoad) {
+        this.aadharOtpGenerateRequestPayLoad = aadharOtpGenerateRequestPayLoad;
         return this;
     }
     
-    
-    public GenerateAadharOTPUsingPOST2Security security;
-    public GenerateAadharOTPUsingPOST2Request withSecurity(GenerateAadharOTPUsingPOST2Security security) {
-        this.security = security;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public GenerateAadharOTPUsingPOST2Request withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     

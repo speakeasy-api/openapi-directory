@@ -4,20 +4,28 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPaymentDetailsV4Request {
-    
-    public GetPaymentDetailsV4PathParams pathParams;
-    public GetPaymentDetailsV4Request withPathParams(GetPaymentDetailsV4PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Payment Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=paymentId")
+    public String paymentId;
+    public GetPaymentDetailsV4Request withPaymentId(String paymentId) {
+        this.paymentId = paymentId;
         return this;
     }
     
-    
-    public GetPaymentDetailsV4QueryParams queryParams;
-    public GetPaymentDetailsV4Request withQueryParams(GetPaymentDetailsV4QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Optional. If omitted or set to false, any Personal Identifiable Information (PII) values are returned masked.
+     * If set to true, and you have permission, the PII values will be returned as their original unmasked values.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sensitive")
+    public Boolean sensitive;
+    public GetPaymentDetailsV4Request withSensitive(Boolean sensitive) {
+        this.sensitive = sensitive;
         return this;
     }
     

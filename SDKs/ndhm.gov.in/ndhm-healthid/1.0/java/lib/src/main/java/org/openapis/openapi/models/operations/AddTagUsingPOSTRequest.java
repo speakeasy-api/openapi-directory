@@ -7,10 +7,10 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddTagUsingPOSTRequest {
-    
-    public AddTagUsingPOSTHeaders headers;
-    public AddTagUsingPOSTRequest withHeaders(AddTagUsingPOSTHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public AddTagUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
@@ -18,16 +18,9 @@ public class AddTagUsingPOSTRequest {
      * tagRequest
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TagRequest request;
-    public AddTagUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.TagRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public AddTagUsingPOSTSecurity security;
-    public AddTagUsingPOSTRequest withSecurity(AddTagUsingPOSTSecurity security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.TagRequest tagRequest;
+    public AddTagUsingPOSTRequest withTagRequest(org.openapis.openapi.models.shared.TagRequest tagRequest) {
+        this.tagRequest = tagRequest;
         return this;
     }
     

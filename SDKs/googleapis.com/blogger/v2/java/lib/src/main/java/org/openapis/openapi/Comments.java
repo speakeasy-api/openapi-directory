@@ -33,25 +33,26 @@ public class Comments {
     /**
      * Gets a comment by blog id, post id and comment id.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BloggerCommentsGetResponse bloggerCommentsGet(org.openapis.openapi.models.operations.BloggerCommentsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BloggerCommentsGetResponse bloggerCommentsGet(org.openapis.openapi.models.operations.BloggerCommentsGetRequest request, org.openapis.openapi.models.operations.BloggerCommentsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BloggerCommentsGetPathParams.class, baseUrl, "/v2/blogs/{blogId}/posts/{postId}/comments/{commentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BloggerCommentsGetRequest.class, baseUrl, "/v2/blogs/{blogId}/posts/{postId}/comments/{commentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BloggerCommentsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BloggerCommentsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,25 +79,26 @@ public class Comments {
     /**
      * Lists comments.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BloggerCommentsListResponse bloggerCommentsList(org.openapis.openapi.models.operations.BloggerCommentsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BloggerCommentsListResponse bloggerCommentsList(org.openapis.openapi.models.operations.BloggerCommentsListRequest request, org.openapis.openapi.models.operations.BloggerCommentsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BloggerCommentsListPathParams.class, baseUrl, "/v2/blogs/{blogId}/posts/{postId}/comments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BloggerCommentsListRequest.class, baseUrl, "/v2/blogs/{blogId}/posts/{postId}/comments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BloggerCommentsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BloggerCommentsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

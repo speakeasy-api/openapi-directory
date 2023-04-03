@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveAccountScanTemplateRequest {
-    
-    public RemoveAccountScanTemplatePathParams pathParams;
-    public RemoveAccountScanTemplateRequest withPathParams(RemoveAccountScanTemplatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RemoveAccountScanTemplateSecurity security;
-    public RemoveAccountScanTemplateRequest withSecurity(RemoveAccountScanTemplateSecurity security) {
-        this.security = security;
+    /**
+     * UUID of the scan template to remove
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scan_template_id")
+    public String scanTemplateId;
+    public RemoveAccountScanTemplateRequest withScanTemplateId(String scanTemplateId) {
+        this.scanTemplateId = scanTemplateId;
         return this;
     }
     

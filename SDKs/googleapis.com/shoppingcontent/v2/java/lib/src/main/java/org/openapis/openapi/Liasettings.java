@@ -34,27 +34,28 @@ public class Liasettings {
     /**
      * Retrieves and/or updates the LIA settings of multiple accounts in a single request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentLiasettingsCustombatchResponse contentLiasettingsCustombatch(org.openapis.openapi.models.operations.ContentLiasettingsCustombatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentLiasettingsCustombatchResponse contentLiasettingsCustombatch(org.openapis.openapi.models.operations.ContentLiasettingsCustombatchRequest request, org.openapis.openapi.models.operations.ContentLiasettingsCustombatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/liasettings/batch");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "liasettingsCustomBatchRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentLiasettingsCustombatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentLiasettingsCustombatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,25 +82,26 @@ public class Liasettings {
     /**
      * Retrieves the LIA settings of the account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentLiasettingsGetResponse contentLiasettingsGet(org.openapis.openapi.models.operations.ContentLiasettingsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentLiasettingsGetResponse contentLiasettingsGet(org.openapis.openapi.models.operations.ContentLiasettingsGetRequest request, org.openapis.openapi.models.operations.ContentLiasettingsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentLiasettingsGetPathParams.class, baseUrl, "/{merchantId}/liasettings/{accountId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentLiasettingsGetRequest.class, baseUrl, "/{merchantId}/liasettings/{accountId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentLiasettingsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentLiasettingsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,25 +128,26 @@ public class Liasettings {
     /**
      * Retrieves the list of accessible Google My Business accounts.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentLiasettingsGetaccessiblegmbaccountsResponse contentLiasettingsGetaccessiblegmbaccounts(org.openapis.openapi.models.operations.ContentLiasettingsGetaccessiblegmbaccountsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentLiasettingsGetaccessiblegmbaccountsResponse contentLiasettingsGetaccessiblegmbaccounts(org.openapis.openapi.models.operations.ContentLiasettingsGetaccessiblegmbaccountsRequest request, org.openapis.openapi.models.operations.ContentLiasettingsGetaccessiblegmbaccountsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentLiasettingsGetaccessiblegmbaccountsPathParams.class, baseUrl, "/{merchantId}/liasettings/{accountId}/accessiblegmbaccounts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentLiasettingsGetaccessiblegmbaccountsRequest.class, baseUrl, "/{merchantId}/liasettings/{accountId}/accessiblegmbaccounts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentLiasettingsGetaccessiblegmbaccountsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentLiasettingsGetaccessiblegmbaccountsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,25 +174,26 @@ public class Liasettings {
     /**
      * Lists the LIA settings of the sub-accounts in your Merchant Center account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentLiasettingsListResponse contentLiasettingsList(org.openapis.openapi.models.operations.ContentLiasettingsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentLiasettingsListResponse contentLiasettingsList(org.openapis.openapi.models.operations.ContentLiasettingsListRequest request, org.openapis.openapi.models.operations.ContentLiasettingsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentLiasettingsListPathParams.class, baseUrl, "/{merchantId}/liasettings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentLiasettingsListRequest.class, baseUrl, "/{merchantId}/liasettings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentLiasettingsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentLiasettingsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -216,10 +220,11 @@ public class Liasettings {
     /**
      * Retrieves the list of POS data providers that have active settings for the all eiligible countries.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentLiasettingsListposdataprovidersResponse contentLiasettingsListposdataproviders(org.openapis.openapi.models.operations.ContentLiasettingsListposdataprovidersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentLiasettingsListposdataprovidersResponse contentLiasettingsListposdataproviders(org.openapis.openapi.models.operations.ContentLiasettingsListposdataprovidersRequest request, org.openapis.openapi.models.operations.ContentLiasettingsListposdataprovidersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/liasettings/posdataproviders");
         
@@ -227,14 +232,14 @@ public class Liasettings {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentLiasettingsListposdataprovidersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentLiasettingsListposdataprovidersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -261,25 +266,26 @@ public class Liasettings {
     /**
      * Requests access to a specified Google My Business account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentLiasettingsRequestgmbaccessResponse contentLiasettingsRequestgmbaccess(org.openapis.openapi.models.operations.ContentLiasettingsRequestgmbaccessRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentLiasettingsRequestgmbaccessResponse contentLiasettingsRequestgmbaccess(org.openapis.openapi.models.operations.ContentLiasettingsRequestgmbaccessRequest request, org.openapis.openapi.models.operations.ContentLiasettingsRequestgmbaccessSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentLiasettingsRequestgmbaccessPathParams.class, baseUrl, "/{merchantId}/liasettings/{accountId}/requestgmbaccess", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentLiasettingsRequestgmbaccessRequest.class, baseUrl, "/{merchantId}/liasettings/{accountId}/requestgmbaccess", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentLiasettingsRequestgmbaccessQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentLiasettingsRequestgmbaccessRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -306,25 +312,26 @@ public class Liasettings {
     /**
      * Requests inventory validation for the specified country.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentLiasettingsRequestinventoryverificationResponse contentLiasettingsRequestinventoryverification(org.openapis.openapi.models.operations.ContentLiasettingsRequestinventoryverificationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentLiasettingsRequestinventoryverificationResponse contentLiasettingsRequestinventoryverification(org.openapis.openapi.models.operations.ContentLiasettingsRequestinventoryverificationRequest request, org.openapis.openapi.models.operations.ContentLiasettingsRequestinventoryverificationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentLiasettingsRequestinventoryverificationPathParams.class, baseUrl, "/{merchantId}/liasettings/{accountId}/requestinventoryverification/{country}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentLiasettingsRequestinventoryverificationRequest.class, baseUrl, "/{merchantId}/liasettings/{accountId}/requestinventoryverification/{country}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentLiasettingsRequestinventoryverificationQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentLiasettingsRequestinventoryverificationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -351,25 +358,26 @@ public class Liasettings {
     /**
      * Sets the inventory verification contract for the specified country.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentLiasettingsSetinventoryverificationcontactResponse contentLiasettingsSetinventoryverificationcontact(org.openapis.openapi.models.operations.ContentLiasettingsSetinventoryverificationcontactRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentLiasettingsSetinventoryverificationcontactResponse contentLiasettingsSetinventoryverificationcontact(org.openapis.openapi.models.operations.ContentLiasettingsSetinventoryverificationcontactRequest request, org.openapis.openapi.models.operations.ContentLiasettingsSetinventoryverificationcontactSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentLiasettingsSetinventoryverificationcontactPathParams.class, baseUrl, "/{merchantId}/liasettings/{accountId}/setinventoryverificationcontact", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentLiasettingsSetinventoryverificationcontactRequest.class, baseUrl, "/{merchantId}/liasettings/{accountId}/setinventoryverificationcontact", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentLiasettingsSetinventoryverificationcontactQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentLiasettingsSetinventoryverificationcontactRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -396,25 +404,26 @@ public class Liasettings {
     /**
      * Sets the POS data provider for the specified country.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentLiasettingsSetposdataproviderResponse contentLiasettingsSetposdataprovider(org.openapis.openapi.models.operations.ContentLiasettingsSetposdataproviderRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentLiasettingsSetposdataproviderResponse contentLiasettingsSetposdataprovider(org.openapis.openapi.models.operations.ContentLiasettingsSetposdataproviderRequest request, org.openapis.openapi.models.operations.ContentLiasettingsSetposdataproviderSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentLiasettingsSetposdataproviderPathParams.class, baseUrl, "/{merchantId}/liasettings/{accountId}/setposdataprovider", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentLiasettingsSetposdataproviderRequest.class, baseUrl, "/{merchantId}/liasettings/{accountId}/setposdataprovider", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentLiasettingsSetposdataproviderQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentLiasettingsSetposdataproviderRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -441,27 +450,28 @@ public class Liasettings {
     /**
      * Updates the LIA settings of the account. Any fields that are not provided are deleted from the resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentLiasettingsUpdateResponse contentLiasettingsUpdate(org.openapis.openapi.models.operations.ContentLiasettingsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentLiasettingsUpdateResponse contentLiasettingsUpdate(org.openapis.openapi.models.operations.ContentLiasettingsUpdateRequest request, org.openapis.openapi.models.operations.ContentLiasettingsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentLiasettingsUpdatePathParams.class, baseUrl, "/{merchantId}/liasettings/{accountId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentLiasettingsUpdateRequest.class, baseUrl, "/{merchantId}/liasettings/{accountId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "liaSettings", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentLiasettingsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentLiasettingsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -40,12 +40,12 @@ public class OfferingMetadata {
      */
     public org.openapis.openapi.models.operations.PutOfferingsOfferingIdMetadataCategoryResponse putOfferingsOfferingIdMetadataCategory(org.openapis.openapi.models.operations.PutOfferingsOfferingIdMetadataCategoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutOfferingsOfferingIdMetadataCategoryPathParams.class, baseUrl, "/offerings/{offeringId}/metadata/category", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutOfferingsOfferingIdMetadataCategoryRequest.class, baseUrl, "/offerings/{offeringId}/metadata/category", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -93,12 +93,12 @@ public class OfferingMetadata {
      */
     public org.openapis.openapi.models.operations.PutOfferingsOfferingIdMetadataLevelResponse putOfferingsOfferingIdMetadataLevel(org.openapis.openapi.models.operations.PutOfferingsOfferingIdMetadataLevelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutOfferingsOfferingIdMetadataLevelPathParams.class, baseUrl, "/offerings/{offeringId}/metadata/level", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutOfferingsOfferingIdMetadataLevelRequest.class, baseUrl, "/offerings/{offeringId}/metadata/level", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -146,12 +146,12 @@ public class OfferingMetadata {
      */
     public org.openapis.openapi.models.operations.PutOfferingsOfferingIdMetadataTagsResponse putOfferingsOfferingIdMetadataTags(org.openapis.openapi.models.operations.PutOfferingsOfferingIdMetadataTagsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutOfferingsOfferingIdMetadataTagsPathParams.class, baseUrl, "/offerings/{offeringId}/metadata/tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutOfferingsOfferingIdMetadataTagsRequest.class, baseUrl, "/offerings/{offeringId}/metadata/tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -199,12 +199,12 @@ public class OfferingMetadata {
      */
     public org.openapis.openapi.models.operations.PutOfferingsOfferingIdMetadataTopicResponse putOfferingsOfferingIdMetadataTopic(org.openapis.openapi.models.operations.PutOfferingsOfferingIdMetadataTopicRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutOfferingsOfferingIdMetadataTopicPathParams.class, baseUrl, "/offerings/{offeringId}/metadata/topic", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutOfferingsOfferingIdMetadataTopicRequest.class, baseUrl, "/offerings/{offeringId}/metadata/topic", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

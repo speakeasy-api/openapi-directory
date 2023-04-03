@@ -48,7 +48,7 @@ public class Dependabot {
      */
     public org.openapis.openapi.models.operations.DependabotAddSelectedRepoToOrgSecretResponse dependabotAddSelectedRepoToOrgSecret(org.openapis.openapi.models.operations.DependabotAddSelectedRepoToOrgSecretRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependabotAddSelectedRepoToOrgSecretPathParams.class, baseUrl, "/orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependabotAddSelectedRepoToOrgSecretRequest.class, baseUrl, "/orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -157,12 +157,12 @@ public class Dependabot {
      */
     public org.openapis.openapi.models.operations.DependabotCreateOrUpdateOrgSecretResponse dependabotCreateOrUpdateOrgSecret(org.openapis.openapi.models.operations.DependabotCreateOrUpdateOrgSecretRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependabotCreateOrUpdateOrgSecretPathParams.class, baseUrl, "/orgs/{org}/dependabot/secrets/{secret_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependabotCreateOrUpdateOrgSecretRequest.class, baseUrl, "/orgs/{org}/dependabot/secrets/{secret_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -279,12 +279,12 @@ public class Dependabot {
      */
     public org.openapis.openapi.models.operations.DependabotCreateOrUpdateRepoSecretResponse dependabotCreateOrUpdateRepoSecret(org.openapis.openapi.models.operations.DependabotCreateOrUpdateRepoSecretRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependabotCreateOrUpdateRepoSecretPathParams.class, baseUrl, "/repos/{owner}/{repo}/dependabot/secrets/{secret_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependabotCreateOrUpdateRepoSecretRequest.class, baseUrl, "/repos/{owner}/{repo}/dependabot/secrets/{secret_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -326,7 +326,7 @@ public class Dependabot {
      */
     public org.openapis.openapi.models.operations.DependabotDeleteOrgSecretResponse dependabotDeleteOrgSecret(org.openapis.openapi.models.operations.DependabotDeleteOrgSecretRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependabotDeleteOrgSecretPathParams.class, baseUrl, "/orgs/{org}/dependabot/secrets/{secret_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependabotDeleteOrgSecretRequest.class, baseUrl, "/orgs/{org}/dependabot/secrets/{secret_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -360,7 +360,7 @@ public class Dependabot {
      */
     public org.openapis.openapi.models.operations.DependabotDeleteRepoSecretResponse dependabotDeleteRepoSecret(org.openapis.openapi.models.operations.DependabotDeleteRepoSecretRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependabotDeleteRepoSecretPathParams.class, baseUrl, "/repos/{owner}/{repo}/dependabot/secrets/{secret_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependabotDeleteRepoSecretRequest.class, baseUrl, "/repos/{owner}/{repo}/dependabot/secrets/{secret_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -396,7 +396,7 @@ public class Dependabot {
      */
     public org.openapis.openapi.models.operations.DependabotGetAlertResponse dependabotGetAlert(org.openapis.openapi.models.operations.DependabotGetAlertRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependabotGetAlertPathParams.class, baseUrl, "/repos/{owner}/{repo}/dependabot/alerts/{alert_number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependabotGetAlertRequest.class, baseUrl, "/repos/{owner}/{repo}/dependabot/alerts/{alert_number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -446,7 +446,7 @@ public class Dependabot {
      */
     public org.openapis.openapi.models.operations.DependabotGetOrgPublicKeyResponse dependabotGetOrgPublicKey(org.openapis.openapi.models.operations.DependabotGetOrgPublicKeyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependabotGetOrgPublicKeyPathParams.class, baseUrl, "/orgs/{org}/dependabot/secrets/public-key", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependabotGetOrgPublicKeyRequest.class, baseUrl, "/orgs/{org}/dependabot/secrets/public-key", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -486,7 +486,7 @@ public class Dependabot {
      */
     public org.openapis.openapi.models.operations.DependabotGetOrgSecretResponse dependabotGetOrgSecret(org.openapis.openapi.models.operations.DependabotGetOrgSecretRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependabotGetOrgSecretPathParams.class, baseUrl, "/orgs/{org}/dependabot/secrets/{secret_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependabotGetOrgSecretRequest.class, baseUrl, "/orgs/{org}/dependabot/secrets/{secret_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -526,7 +526,7 @@ public class Dependabot {
      */
     public org.openapis.openapi.models.operations.DependabotGetRepoPublicKeyResponse dependabotGetRepoPublicKey(org.openapis.openapi.models.operations.DependabotGetRepoPublicKeyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependabotGetRepoPublicKeyPathParams.class, baseUrl, "/repos/{owner}/{repo}/dependabot/secrets/public-key", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependabotGetRepoPublicKeyRequest.class, baseUrl, "/repos/{owner}/{repo}/dependabot/secrets/public-key", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -566,7 +566,7 @@ public class Dependabot {
      */
     public org.openapis.openapi.models.operations.DependabotGetRepoSecretResponse dependabotGetRepoSecret(org.openapis.openapi.models.operations.DependabotGetRepoSecretRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependabotGetRepoSecretPathParams.class, baseUrl, "/repos/{owner}/{repo}/dependabot/secrets/{secret_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependabotGetRepoSecretRequest.class, baseUrl, "/repos/{owner}/{repo}/dependabot/secrets/{secret_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -609,13 +609,13 @@ public class Dependabot {
      */
     public org.openapis.openapi.models.operations.DependabotListAlertsForEnterpriseResponse dependabotListAlertsForEnterprise(org.openapis.openapi.models.operations.DependabotListAlertsForEnterpriseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependabotListAlertsForEnterprisePathParams.class, baseUrl, "/enterprises/{enterprise}/dependabot/alerts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependabotListAlertsForEnterpriseRequest.class, baseUrl, "/enterprises/{enterprise}/dependabot/alerts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DependabotListAlertsForEnterpriseQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DependabotListAlertsForEnterpriseRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -679,13 +679,13 @@ public class Dependabot {
      */
     public org.openapis.openapi.models.operations.DependabotListAlertsForOrgResponse dependabotListAlertsForOrg(org.openapis.openapi.models.operations.DependabotListAlertsForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependabotListAlertsForOrgPathParams.class, baseUrl, "/orgs/{org}/dependabot/alerts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependabotListAlertsForOrgRequest.class, baseUrl, "/orgs/{org}/dependabot/alerts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DependabotListAlertsForOrgQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DependabotListAlertsForOrgRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -759,13 +759,13 @@ public class Dependabot {
      */
     public org.openapis.openapi.models.operations.DependabotListAlertsForRepoResponse dependabotListAlertsForRepo(org.openapis.openapi.models.operations.DependabotListAlertsForRepoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependabotListAlertsForRepoPathParams.class, baseUrl, "/repos/{owner}/{repo}/dependabot/alerts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependabotListAlertsForRepoRequest.class, baseUrl, "/repos/{owner}/{repo}/dependabot/alerts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DependabotListAlertsForRepoQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DependabotListAlertsForRepoRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -837,13 +837,13 @@ public class Dependabot {
      */
     public org.openapis.openapi.models.operations.DependabotListOrgSecretsResponse dependabotListOrgSecrets(org.openapis.openapi.models.operations.DependabotListOrgSecretsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependabotListOrgSecretsPathParams.class, baseUrl, "/orgs/{org}/dependabot/secrets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependabotListOrgSecretsRequest.class, baseUrl, "/orgs/{org}/dependabot/secrets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DependabotListOrgSecretsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DependabotListOrgSecretsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -885,13 +885,13 @@ public class Dependabot {
      */
     public org.openapis.openapi.models.operations.DependabotListRepoSecretsResponse dependabotListRepoSecrets(org.openapis.openapi.models.operations.DependabotListRepoSecretsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependabotListRepoSecretsPathParams.class, baseUrl, "/repos/{owner}/{repo}/dependabot/secrets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependabotListRepoSecretsRequest.class, baseUrl, "/repos/{owner}/{repo}/dependabot/secrets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DependabotListRepoSecretsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DependabotListRepoSecretsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -933,13 +933,13 @@ public class Dependabot {
      */
     public org.openapis.openapi.models.operations.DependabotListSelectedReposForOrgSecretResponse dependabotListSelectedReposForOrgSecret(org.openapis.openapi.models.operations.DependabotListSelectedReposForOrgSecretRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependabotListSelectedReposForOrgSecretPathParams.class, baseUrl, "/orgs/{org}/dependabot/secrets/{secret_name}/repositories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependabotListSelectedReposForOrgSecretRequest.class, baseUrl, "/orgs/{org}/dependabot/secrets/{secret_name}/repositories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DependabotListSelectedReposForOrgSecretQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DependabotListSelectedReposForOrgSecretRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -979,7 +979,7 @@ public class Dependabot {
      */
     public org.openapis.openapi.models.operations.DependabotRemoveSelectedRepoFromOrgSecretResponse dependabotRemoveSelectedRepoFromOrgSecret(org.openapis.openapi.models.operations.DependabotRemoveSelectedRepoFromOrgSecretRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependabotRemoveSelectedRepoFromOrgSecretPathParams.class, baseUrl, "/orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependabotRemoveSelectedRepoFromOrgSecretRequest.class, baseUrl, "/orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1013,12 +1013,12 @@ public class Dependabot {
      */
     public org.openapis.openapi.models.operations.DependabotSetSelectedReposForOrgSecretResponse dependabotSetSelectedReposForOrgSecret(org.openapis.openapi.models.operations.DependabotSetSelectedReposForOrgSecretRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependabotSetSelectedReposForOrgSecretPathParams.class, baseUrl, "/orgs/{org}/dependabot/secrets/{secret_name}/repositories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependabotSetSelectedReposForOrgSecretRequest.class, baseUrl, "/orgs/{org}/dependabot/secrets/{secret_name}/repositories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1054,12 +1054,12 @@ public class Dependabot {
      */
     public org.openapis.openapi.models.operations.DependabotUpdateAlertResponse dependabotUpdateAlert(org.openapis.openapi.models.operations.DependabotUpdateAlertRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependabotUpdateAlertPathParams.class, baseUrl, "/repos/{owner}/{repo}/dependabot/alerts/{alert_number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependabotUpdateAlertRequest.class, baseUrl, "/repos/{owner}/{repo}/dependabot/alerts/{alert_number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

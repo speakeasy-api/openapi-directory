@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConnectorsAllRequest {
-    
-    public ConnectorsAllQueryParams queryParams;
-    public ConnectorsAllRequest withQueryParams(ConnectorsAllQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public ConnectorsAllRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
-    
-    public ConnectorsAllHeaders headers;
-    public ConnectorsAllRequest withHeaders(ConnectorsAllHeaders headers) {
-        this.headers = headers;
+    /**
+     * Apply filters
+     */
+    @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=filter")
+    public org.openapis.openapi.models.shared.ConnectorsFilter filter;
+    public ConnectorsAllRequest withFilter(org.openapis.openapi.models.shared.ConnectorsFilter filter) {
+        this.filter = filter;
         return this;
     }
     
+    /**
+     * Number of records to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ConnectorsAllRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public ConnectorsAllSecurity security;
-    public ConnectorsAllRequest withSecurity(ConnectorsAllSecurity security) {
-        this.security = security;
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public ConnectorsAllRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
         return this;
     }
     

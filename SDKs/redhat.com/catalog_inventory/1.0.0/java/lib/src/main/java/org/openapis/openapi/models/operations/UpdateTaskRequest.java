@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateTaskRequest {
-    
-    public UpdateTaskPathParams pathParams;
-    public UpdateTaskRequest withPathParams(UpdateTaskPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Task attributes to update
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TaskInput request;
-    public UpdateTaskRequest withRequest(org.openapis.openapi.models.shared.TaskInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TaskInput taskInput;
+    public UpdateTaskRequest withTaskInput(org.openapis.openapi.models.shared.TaskInput taskInput) {
+        this.taskInput = taskInput;
+        return this;
+    }
+    
+    /**
+     * UUID of task
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UpdateTaskRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

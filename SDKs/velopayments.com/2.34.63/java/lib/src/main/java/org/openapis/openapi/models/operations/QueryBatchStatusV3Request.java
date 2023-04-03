@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class QueryBatchStatusV3Request {
-    
-    public QueryBatchStatusV3PathParams pathParams;
-    public QueryBatchStatusV3Request withPathParams(QueryBatchStatusV3PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Batch Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=batchId")
+    public String batchId;
+    public QueryBatchStatusV3Request withBatchId(String batchId) {
+        this.batchId = batchId;
         return this;
     }
     

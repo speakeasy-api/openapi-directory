@@ -4,27 +4,75 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AttachSecurityProfileRequest {
-    
-    public AttachSecurityProfilePathParams pathParams;
-    public AttachSecurityProfileRequest withPathParams(AttachSecurityProfilePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public AttachSecurityProfileRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public AttachSecurityProfileQueryParams queryParams;
-    public AttachSecurityProfileRequest withQueryParams(AttachSecurityProfileQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public AttachSecurityProfileRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public AttachSecurityProfileRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public AttachSecurityProfileHeaders headers;
-    public AttachSecurityProfileRequest withHeaders(AttachSecurityProfileHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public AttachSecurityProfileRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public AttachSecurityProfileRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public AttachSecurityProfileRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public AttachSecurityProfileRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The security profile that is attached.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=securityProfileName")
+    public String securityProfileName;
+    public AttachSecurityProfileRequest withSecurityProfileName(String securityProfileName) {
+        this.securityProfileName = securityProfileName;
+        return this;
+    }
+    
+    /**
+     * The ARN of the target (thing group) to which the security profile is attached.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=securityProfileTargetArn")
+    public String securityProfileTargetArn;
+    public AttachSecurityProfileRequest withSecurityProfileTargetArn(String securityProfileTargetArn) {
+        this.securityProfileTargetArn = securityProfileTargetArn;
         return this;
     }
     

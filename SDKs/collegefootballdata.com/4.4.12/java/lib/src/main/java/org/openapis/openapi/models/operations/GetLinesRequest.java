@@ -4,13 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLinesRequest {
+    /**
+     * Away team filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=away")
+    public String away;
+    public GetLinesRequest withAway(String away) {
+        this.away = away;
+        return this;
+    }
     
-    public GetLinesQueryParams queryParams;
-    public GetLinesRequest withQueryParams(GetLinesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Conference abbreviation filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=conference")
+    public String conference;
+    public GetLinesRequest withConference(String conference) {
+        this.conference = conference;
+        return this;
+    }
+    
+    /**
+     * Game id filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gameId")
+    public Long gameId;
+    public GetLinesRequest withGameId(Long gameId) {
+        this.gameId = gameId;
+        return this;
+    }
+    
+    /**
+     * Home team filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=home")
+    public String home;
+    public GetLinesRequest withHome(String home) {
+        this.home = home;
+        return this;
+    }
+    
+    /**
+     * Season type filter (regular or postseason)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=seasonType")
+    public String seasonType;
+    public GetLinesRequest withSeasonType(String seasonType) {
+        this.seasonType = seasonType;
+        return this;
+    }
+    
+    /**
+     * Team
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team")
+    public String team;
+    public GetLinesRequest withTeam(String team) {
+        this.team = team;
+        return this;
+    }
+    
+    /**
+     * Week filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=week")
+    public Long week;
+    public GetLinesRequest withWeek(Long week) {
+        this.week = week;
+        return this;
+    }
+    
+    /**
+     * Year/season filter for games
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public Long year;
+    public GetLinesRequest withYear(Long year) {
+        this.year = year;
         return this;
     }
     

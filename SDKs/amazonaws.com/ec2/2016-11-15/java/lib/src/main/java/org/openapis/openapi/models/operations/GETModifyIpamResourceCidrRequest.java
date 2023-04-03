@@ -4,20 +4,139 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyIpamResourceCidrRequest {
-    
-    public GETModifyIpamResourceCidrQueryParams queryParams;
-    public GETModifyIpamResourceCidrRequest withQueryParams(GETModifyIpamResourceCidrQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyIpamResourceCidrActionEnum action;
+    public GETModifyIpamResourceCidrRequest withAction(GETModifyIpamResourceCidrActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The ID of the current scope that the resource CIDR is in.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CurrentIpamScopeId")
+    public String currentIpamScopeId;
+    public GETModifyIpamResourceCidrRequest withCurrentIpamScopeId(String currentIpamScopeId) {
+        this.currentIpamScopeId = currentIpamScopeId;
+        return this;
+    }
     
-    public GETModifyIpamResourceCidrHeaders headers;
-    public GETModifyIpamResourceCidrRequest withHeaders(GETModifyIpamResourceCidrHeaders headers) {
-        this.headers = headers;
+    /**
+     * The ID of the scope you want to transfer the resource CIDR to.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DestinationIpamScopeId")
+    public String destinationIpamScopeId;
+    public GETModifyIpamResourceCidrRequest withDestinationIpamScopeId(String destinationIpamScopeId) {
+        this.destinationIpamScopeId = destinationIpamScopeId;
+        return this;
+    }
+    
+    /**
+     * A check for whether you have the required permissions for the action without actually making the request and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETModifyIpamResourceCidrRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    /**
+     * Determines if the resource is monitored by IPAM. If a resource is monitored, the resource is discovered by IPAM and you can view details about the resource\u2019s CIDR.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Monitored")
+    public Boolean monitored;
+    public GETModifyIpamResourceCidrRequest withMonitored(Boolean monitored) {
+        this.monitored = monitored;
+        return this;
+    }
+    
+    /**
+     * The CIDR of the resource you want to modify.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ResourceCidr")
+    public String resourceCidr;
+    public GETModifyIpamResourceCidrRequest withResourceCidr(String resourceCidr) {
+        this.resourceCidr = resourceCidr;
+        return this;
+    }
+    
+    /**
+     * The ID of the resource you want to modify.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ResourceId")
+    public String resourceId;
+    public GETModifyIpamResourceCidrRequest withResourceId(String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    
+    /**
+     * The Amazon Web Services Region of the resource you want to modify.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ResourceRegion")
+    public String resourceRegion;
+    public GETModifyIpamResourceCidrRequest withResourceRegion(String resourceRegion) {
+        this.resourceRegion = resourceRegion;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyIpamResourceCidrVersionEnum version;
+    public GETModifyIpamResourceCidrRequest withVersion(GETModifyIpamResourceCidrVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyIpamResourceCidrRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyIpamResourceCidrRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyIpamResourceCidrRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyIpamResourceCidrRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyIpamResourceCidrRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyIpamResourceCidrRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyIpamResourceCidrRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

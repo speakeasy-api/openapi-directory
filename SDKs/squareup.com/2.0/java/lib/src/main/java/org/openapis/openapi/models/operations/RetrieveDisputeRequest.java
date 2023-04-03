@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveDisputeRequest {
-    
-    public RetrieveDisputePathParams pathParams;
-    public RetrieveDisputeRequest withPathParams(RetrieveDisputePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RetrieveDisputeSecurity security;
-    public RetrieveDisputeRequest withSecurity(RetrieveDisputeSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the dispute you want more details about.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dispute_id")
+    public String disputeId;
+    public RetrieveDisputeRequest withDisputeId(String disputeId) {
+        this.disputeId = disputeId;
         return this;
     }
     

@@ -7,31 +7,140 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NetworksecurityProjectsLocationsServerTlsPoliciesCreateRequest {
-    
-    public NetworksecurityProjectsLocationsServerTlsPoliciesCreatePathParams pathParams;
-    public NetworksecurityProjectsLocationsServerTlsPoliciesCreateRequest withPathParams(NetworksecurityProjectsLocationsServerTlsPoliciesCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public NetworksecurityProjectsLocationsServerTlsPoliciesCreateQueryParams queryParams;
-    public NetworksecurityProjectsLocationsServerTlsPoliciesCreateRequest withQueryParams(NetworksecurityProjectsLocationsServerTlsPoliciesCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public NetworksecurityProjectsLocationsServerTlsPoliciesCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ServerTlsPolicyInput request;
-    public NetworksecurityProjectsLocationsServerTlsPoliciesCreateRequest withRequest(org.openapis.openapi.models.shared.ServerTlsPolicyInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ServerTlsPolicyInput serverTlsPolicyInput;
+    public NetworksecurityProjectsLocationsServerTlsPoliciesCreateRequest withServerTlsPolicyInput(org.openapis.openapi.models.shared.ServerTlsPolicyInput serverTlsPolicyInput) {
+        this.serverTlsPolicyInput = serverTlsPolicyInput;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public NetworksecurityProjectsLocationsServerTlsPoliciesCreateRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public NetworksecurityProjectsLocationsServerTlsPoliciesCreateSecurity security;
-    public NetworksecurityProjectsLocationsServerTlsPoliciesCreateRequest withSecurity(NetworksecurityProjectsLocationsServerTlsPoliciesCreateSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public NetworksecurityProjectsLocationsServerTlsPoliciesCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public NetworksecurityProjectsLocationsServerTlsPoliciesCreateRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public NetworksecurityProjectsLocationsServerTlsPoliciesCreateRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public NetworksecurityProjectsLocationsServerTlsPoliciesCreateRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public NetworksecurityProjectsLocationsServerTlsPoliciesCreateRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Required. The parent resource of the ServerTlsPolicy. Must be in the format `projects/* /locations/{location}`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public NetworksecurityProjectsLocationsServerTlsPoliciesCreateRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public NetworksecurityProjectsLocationsServerTlsPoliciesCreateRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public NetworksecurityProjectsLocationsServerTlsPoliciesCreateRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Required. Short name of the ServerTlsPolicy resource to be created. This value should be 1-63 characters long, containing only letters, numbers, hyphens, and underscores, and should not start with a number. E.g. "server_mtls_policy".
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serverTlsPolicyId")
+    public String serverTlsPolicyId;
+    public NetworksecurityProjectsLocationsServerTlsPoliciesCreateRequest withServerTlsPolicyId(String serverTlsPolicyId) {
+        this.serverTlsPolicyId = serverTlsPolicyId;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public NetworksecurityProjectsLocationsServerTlsPoliciesCreateRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public NetworksecurityProjectsLocationsServerTlsPoliciesCreateRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

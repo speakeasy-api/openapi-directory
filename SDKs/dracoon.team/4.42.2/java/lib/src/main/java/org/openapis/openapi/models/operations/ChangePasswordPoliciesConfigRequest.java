@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangePasswordPoliciesConfigRequest {
-    
-    public ChangePasswordPoliciesConfigHeaders headers;
-    public ChangePasswordPoliciesConfigRequest withHeaders(ChangePasswordPoliciesConfigHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.UpdatePasswordPoliciesConfig updatePasswordPoliciesConfig;
+    public ChangePasswordPoliciesConfigRequest withUpdatePasswordPoliciesConfig(org.openapis.openapi.models.shared.UpdatePasswordPoliciesConfig updatePasswordPoliciesConfig) {
+        this.updatePasswordPoliciesConfig = updatePasswordPoliciesConfig;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdatePasswordPoliciesConfig request;
-    public ChangePasswordPoliciesConfigRequest withRequest(org.openapis.openapi.models.shared.UpdatePasswordPoliciesConfig request) {
-        this.request = request;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public ChangePasswordPoliciesConfigRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     

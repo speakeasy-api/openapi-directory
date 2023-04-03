@@ -33,19 +33,20 @@ public class Fireteam {
     /**
      * Gets a count of all active non-public fireteams for the specified clan. Maximum value returned is 25.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FireteamGetActivePrivateClanFireteamCountResponse fireteamGetActivePrivateClanFireteamCount(org.openapis.openapi.models.operations.FireteamGetActivePrivateClanFireteamCountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FireteamGetActivePrivateClanFireteamCountResponse fireteamGetActivePrivateClanFireteamCount(org.openapis.openapi.models.operations.FireteamGetActivePrivateClanFireteamCountRequest request, org.openapis.openapi.models.operations.FireteamGetActivePrivateClanFireteamCountSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FireteamGetActivePrivateClanFireteamCountPathParams.class, baseUrl, "/Fireteam/Clan/{groupId}/ActiveCount/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FireteamGetActivePrivateClanFireteamCountRequest.class, baseUrl, "/Fireteam/Clan/{groupId}/ActiveCount/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -71,25 +72,26 @@ public class Fireteam {
     /**
      * Gets a listing of all of this clan's fireteams that are have available slots. Caller is not checked for join criteria so caching is maximized.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FireteamGetAvailableClanFireteamsResponse fireteamGetAvailableClanFireteams(org.openapis.openapi.models.operations.FireteamGetAvailableClanFireteamsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FireteamGetAvailableClanFireteamsResponse fireteamGetAvailableClanFireteams(org.openapis.openapi.models.operations.FireteamGetAvailableClanFireteamsRequest request, org.openapis.openapi.models.operations.FireteamGetAvailableClanFireteamsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FireteamGetAvailableClanFireteamsPathParams.class, baseUrl, "/Fireteam/Clan/{groupId}/Available/{platform}/{activityType}/{dateRange}/{slotFilter}/{publicOnly}/{page}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FireteamGetAvailableClanFireteamsRequest.class, baseUrl, "/Fireteam/Clan/{groupId}/Available/{platform}/{activityType}/{dateRange}/{slotFilter}/{publicOnly}/{page}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FireteamGetAvailableClanFireteamsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FireteamGetAvailableClanFireteamsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -115,19 +117,20 @@ public class Fireteam {
     /**
      * Gets a specific fireteam.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FireteamGetClanFireteamResponse fireteamGetClanFireteam(org.openapis.openapi.models.operations.FireteamGetClanFireteamRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FireteamGetClanFireteamResponse fireteamGetClanFireteam(org.openapis.openapi.models.operations.FireteamGetClanFireteamRequest request, org.openapis.openapi.models.operations.FireteamGetClanFireteamSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FireteamGetClanFireteamPathParams.class, baseUrl, "/Fireteam/Clan/{groupId}/Summary/{fireteamId}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FireteamGetClanFireteamRequest.class, baseUrl, "/Fireteam/Clan/{groupId}/Summary/{fireteamId}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -153,25 +156,26 @@ public class Fireteam {
     /**
      * Gets a listing of all fireteams that caller is an applicant, a member, or an alternate of.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FireteamGetMyClanFireteamsResponse fireteamGetMyClanFireteams(org.openapis.openapi.models.operations.FireteamGetMyClanFireteamsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FireteamGetMyClanFireteamsResponse fireteamGetMyClanFireteams(org.openapis.openapi.models.operations.FireteamGetMyClanFireteamsRequest request, org.openapis.openapi.models.operations.FireteamGetMyClanFireteamsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FireteamGetMyClanFireteamsPathParams.class, baseUrl, "/Fireteam/Clan/{groupId}/My/{platform}/{includeClosed}/{page}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FireteamGetMyClanFireteamsRequest.class, baseUrl, "/Fireteam/Clan/{groupId}/My/{platform}/{includeClosed}/{page}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FireteamGetMyClanFireteamsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FireteamGetMyClanFireteamsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -197,25 +201,26 @@ public class Fireteam {
     /**
      * Gets a listing of all public fireteams starting now with open slots. Caller is not checked for join criteria so caching is maximized.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FireteamSearchPublicAvailableClanFireteamsResponse fireteamSearchPublicAvailableClanFireteams(org.openapis.openapi.models.operations.FireteamSearchPublicAvailableClanFireteamsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FireteamSearchPublicAvailableClanFireteamsResponse fireteamSearchPublicAvailableClanFireteams(org.openapis.openapi.models.operations.FireteamSearchPublicAvailableClanFireteamsRequest request, org.openapis.openapi.models.operations.FireteamSearchPublicAvailableClanFireteamsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FireteamSearchPublicAvailableClanFireteamsPathParams.class, baseUrl, "/Fireteam/Search/Available/{platform}/{activityType}/{dateRange}/{slotFilter}/{page}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FireteamSearchPublicAvailableClanFireteamsRequest.class, baseUrl, "/Fireteam/Search/Available/{platform}/{activityType}/{dateRange}/{slotFilter}/{page}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FireteamSearchPublicAvailableClanFireteamsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FireteamSearchPublicAvailableClanFireteamsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

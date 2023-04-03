@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WeekLastCompletedRequest {
-    
-    public WeekLastCompletedPathParams pathParams;
-    public WeekLastCompletedRequest withPathParams(WeekLastCompletedPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public WeekLastCompletedFormatEnum format;
+    public WeekLastCompletedRequest withFormat(WeekLastCompletedFormatEnum format) {
+        this.format = format;
         return this;
     }
     

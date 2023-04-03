@@ -4,27 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdexchangebuyerPubprofilesListRequest {
-    
-    public AdexchangebuyerPubprofilesListPathParams pathParams;
-    public AdexchangebuyerPubprofilesListRequest withPathParams(AdexchangebuyerPubprofilesListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The accountId of the publisher to get profiles for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public Long accountId;
+    public AdexchangebuyerPubprofilesListRequest withAccountId(Long accountId) {
+        this.accountId = accountId;
         return this;
     }
     
-    
-    public AdexchangebuyerPubprofilesListQueryParams queryParams;
-    public AdexchangebuyerPubprofilesListRequest withQueryParams(AdexchangebuyerPubprofilesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AdexchangebuyerPubprofilesListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
         return this;
     }
     
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AdexchangebuyerPubprofilesListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
     
-    public AdexchangebuyerPubprofilesListSecurity security;
-    public AdexchangebuyerPubprofilesListRequest withSecurity(AdexchangebuyerPubprofilesListSecurity security) {
-        this.security = security;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AdexchangebuyerPubprofilesListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AdexchangebuyerPubprofilesListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AdexchangebuyerPubprofilesListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AdexchangebuyerPubprofilesListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public AdexchangebuyerPubprofilesListRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Delete7Request {
-    
-    public Delete7PathParams pathParams;
-    public Delete7Request withPathParams(Delete7PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * provider payment's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=paymentId")
+    public Long paymentId;
+    public Delete7Request withPaymentId(Long paymentId) {
+        this.paymentId = paymentId;
         return this;
     }
     

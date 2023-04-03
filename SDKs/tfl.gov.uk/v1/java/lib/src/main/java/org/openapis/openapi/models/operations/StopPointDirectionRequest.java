@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopPointDirectionRequest {
-    
-    public StopPointDirectionPathParams pathParams;
-    public StopPointDirectionRequest withPathParams(StopPointDirectionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Originating stop id (station naptan code e.g. 940GZZLUASL, you can use /StopPoint/Search/{query} endpoint to find a stop point id from a station name)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public StopPointDirectionRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * Optional line id filter e.g. victoria
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lineId")
+    public String lineId;
+    public StopPointDirectionRequest withLineId(String lineId) {
+        this.lineId = lineId;
+        return this;
+    }
     
-    public StopPointDirectionQueryParams queryParams;
-    public StopPointDirectionRequest withQueryParams(StopPointDirectionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Destination stop id (station naptan code e.g. 940GZZLUASL, you can use /StopPoint/Search/{query} endpoint to find a stop point id from a station name)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=toStopPointId")
+    public String toStopPointId;
+    public StopPointDirectionRequest withToStopPointId(String toStopPointId) {
+        this.toStopPointId = toStopPointId;
         return this;
     }
     

@@ -35,27 +35,28 @@ public class Organizations {
     /**
      * Filters an organization's assets and groups them by their specified properties.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SecuritycenterOrganizationsAssetsGroupResponse securitycenterOrganizationsAssetsGroup(org.openapis.openapi.models.operations.SecuritycenterOrganizationsAssetsGroupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SecuritycenterOrganizationsAssetsGroupResponse securitycenterOrganizationsAssetsGroup(org.openapis.openapi.models.operations.SecuritycenterOrganizationsAssetsGroupRequest request, org.openapis.openapi.models.operations.SecuritycenterOrganizationsAssetsGroupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterOrganizationsAssetsGroupPathParams.class, baseUrl, "/v1beta1/{parent}/assets:group", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterOrganizationsAssetsGroupRequest.class, baseUrl, "/v1beta1/{parent}/assets:group", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "groupAssetsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterOrganizationsAssetsGroupQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterOrganizationsAssetsGroupRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,25 +83,26 @@ public class Organizations {
     /**
      * Lists an organization's assets.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SecuritycenterOrganizationsAssetsListResponse securitycenterOrganizationsAssetsList(org.openapis.openapi.models.operations.SecuritycenterOrganizationsAssetsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SecuritycenterOrganizationsAssetsListResponse securitycenterOrganizationsAssetsList(org.openapis.openapi.models.operations.SecuritycenterOrganizationsAssetsListRequest request, org.openapis.openapi.models.operations.SecuritycenterOrganizationsAssetsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterOrganizationsAssetsListPathParams.class, baseUrl, "/v1beta1/{parent}/assets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterOrganizationsAssetsListRequest.class, baseUrl, "/v1beta1/{parent}/assets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterOrganizationsAssetsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterOrganizationsAssetsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,27 +129,28 @@ public class Organizations {
     /**
      * Runs asset discovery. The discovery is tracked with a long-running operation. This API can only be called with limited frequency for an organization. If it is called too frequently the caller will receive a TOO_MANY_REQUESTS error.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SecuritycenterOrganizationsAssetsRunDiscoveryResponse securitycenterOrganizationsAssetsRunDiscovery(org.openapis.openapi.models.operations.SecuritycenterOrganizationsAssetsRunDiscoveryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SecuritycenterOrganizationsAssetsRunDiscoveryResponse securitycenterOrganizationsAssetsRunDiscovery(org.openapis.openapi.models.operations.SecuritycenterOrganizationsAssetsRunDiscoveryRequest request, org.openapis.openapi.models.operations.SecuritycenterOrganizationsAssetsRunDiscoverySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterOrganizationsAssetsRunDiscoveryPathParams.class, baseUrl, "/v1beta1/{parent}/assets:runDiscovery", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterOrganizationsAssetsRunDiscoveryRequest.class, baseUrl, "/v1beta1/{parent}/assets:runDiscovery", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterOrganizationsAssetsRunDiscoveryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterOrganizationsAssetsRunDiscoveryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,27 +177,28 @@ public class Organizations {
     /**
      * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SecuritycenterOrganizationsOperationsCancelResponse securitycenterOrganizationsOperationsCancel(org.openapis.openapi.models.operations.SecuritycenterOrganizationsOperationsCancelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SecuritycenterOrganizationsOperationsCancelResponse securitycenterOrganizationsOperationsCancel(org.openapis.openapi.models.operations.SecuritycenterOrganizationsOperationsCancelRequest request, org.openapis.openapi.models.operations.SecuritycenterOrganizationsOperationsCancelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterOrganizationsOperationsCancelPathParams.class, baseUrl, "/v1beta1/{name}:cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterOrganizationsOperationsCancelRequest.class, baseUrl, "/v1beta1/{name}:cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterOrganizationsOperationsCancelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterOrganizationsOperationsCancelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -221,25 +225,26 @@ public class Organizations {
     /**
      * Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SecuritycenterOrganizationsOperationsDeleteResponse securitycenterOrganizationsOperationsDelete(org.openapis.openapi.models.operations.SecuritycenterOrganizationsOperationsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SecuritycenterOrganizationsOperationsDeleteResponse securitycenterOrganizationsOperationsDelete(org.openapis.openapi.models.operations.SecuritycenterOrganizationsOperationsDeleteRequest request, org.openapis.openapi.models.operations.SecuritycenterOrganizationsOperationsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterOrganizationsOperationsDeletePathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterOrganizationsOperationsDeleteRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterOrganizationsOperationsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterOrganizationsOperationsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -266,27 +271,28 @@ public class Organizations {
     /**
      * Creates a source.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesCreateResponse securitycenterOrganizationsSourcesCreate(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesCreateResponse securitycenterOrganizationsSourcesCreate(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesCreateRequest request, org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesCreatePathParams.class, baseUrl, "/v1beta1/{parent}/sources", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesCreateRequest.class, baseUrl, "/v1beta1/{parent}/sources", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "source", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -313,27 +319,28 @@ public class Organizations {
     /**
      * Creates a finding. The corresponding source must exist for finding creation to succeed.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsCreateResponse securitycenterOrganizationsSourcesFindingsCreate(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsCreateResponse securitycenterOrganizationsSourcesFindingsCreate(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsCreateRequest request, org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsCreatePathParams.class, baseUrl, "/v1beta1/{parent}/findings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsCreateRequest.class, baseUrl, "/v1beta1/{parent}/findings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudSecuritycenterV1beta1Finding", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -360,27 +367,28 @@ public class Organizations {
     /**
      * Filters an organization or source's findings and groups them by their specified properties. To group across all sources provide a `-` as the source id. Example: /v1beta1/organizations/{organization_id}/sources/-/findings
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsGroupResponse securitycenterOrganizationsSourcesFindingsGroup(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsGroupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsGroupResponse securitycenterOrganizationsSourcesFindingsGroup(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsGroupRequest request, org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsGroupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsGroupPathParams.class, baseUrl, "/v1beta1/{parent}/findings:group", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsGroupRequest.class, baseUrl, "/v1beta1/{parent}/findings:group", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "groupFindingsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsGroupQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsGroupRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -407,25 +415,26 @@ public class Organizations {
     /**
      * Lists an organization or source's findings. To list across all sources provide a `-` as the source id. Example: /v1beta1/organizations/{organization_id}/sources/-/findings
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsListResponse securitycenterOrganizationsSourcesFindingsList(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsListResponse securitycenterOrganizationsSourcesFindingsList(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsListRequest request, org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsListPathParams.class, baseUrl, "/v1beta1/{parent}/findings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsListRequest.class, baseUrl, "/v1beta1/{parent}/findings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -452,27 +461,28 @@ public class Organizations {
     /**
      * Updates the state of a finding.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsSetStateResponse securitycenterOrganizationsSourcesFindingsSetState(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsSetStateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsSetStateResponse securitycenterOrganizationsSourcesFindingsSetState(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsSetStateRequest request, org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsSetStateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsSetStatePathParams.class, baseUrl, "/v1beta1/{name}:setState", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsSetStateRequest.class, baseUrl, "/v1beta1/{name}:setState", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setFindingStateRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsSetStateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsSetStateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -499,27 +509,28 @@ public class Organizations {
     /**
      * Updates security marks.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsUpdateSecurityMarksResponse securitycenterOrganizationsSourcesFindingsUpdateSecurityMarks(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsUpdateSecurityMarksRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsUpdateSecurityMarksResponse securitycenterOrganizationsSourcesFindingsUpdateSecurityMarks(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsUpdateSecurityMarksRequest request, org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsUpdateSecurityMarksSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsUpdateSecurityMarksPathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsUpdateSecurityMarksRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudSecuritycenterV1beta1SecurityMarks", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsUpdateSecurityMarksQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesFindingsUpdateSecurityMarksRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -546,25 +557,26 @@ public class Organizations {
     /**
      * Gets a source.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesGetResponse securitycenterOrganizationsSourcesGet(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesGetResponse securitycenterOrganizationsSourcesGet(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesGetRequest request, org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesGetPathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesGetRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -591,27 +603,28 @@ public class Organizations {
     /**
      * Gets the access control policy on the specified Source.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesGetIamPolicyResponse securitycenterOrganizationsSourcesGetIamPolicy(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesGetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesGetIamPolicyResponse securitycenterOrganizationsSourcesGetIamPolicy(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesGetIamPolicyRequest request, org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesGetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesGetIamPolicyPathParams.class, baseUrl, "/v1beta1/{resource}:getIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesGetIamPolicyRequest.class, baseUrl, "/v1beta1/{resource}:getIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "getIamPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesGetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesGetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -638,25 +651,26 @@ public class Organizations {
     /**
      * Lists all sources belonging to an organization.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesListResponse securitycenterOrganizationsSourcesList(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesListResponse securitycenterOrganizationsSourcesList(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesListRequest request, org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesListPathParams.class, baseUrl, "/v1beta1/{parent}/sources", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesListRequest.class, baseUrl, "/v1beta1/{parent}/sources", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -683,27 +697,28 @@ public class Organizations {
     /**
      * Sets the access control policy on the specified Source.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesSetIamPolicyResponse securitycenterOrganizationsSourcesSetIamPolicy(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesSetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesSetIamPolicyResponse securitycenterOrganizationsSourcesSetIamPolicy(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesSetIamPolicyRequest request, org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesSetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesSetIamPolicyPathParams.class, baseUrl, "/v1beta1/{resource}:setIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesSetIamPolicyRequest.class, baseUrl, "/v1beta1/{resource}:setIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setIamPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesSetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesSetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -730,27 +745,28 @@ public class Organizations {
     /**
      * Returns the permissions that a caller has on the specified source.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesTestIamPermissionsResponse securitycenterOrganizationsSourcesTestIamPermissions(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesTestIamPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesTestIamPermissionsResponse securitycenterOrganizationsSourcesTestIamPermissions(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesTestIamPermissionsRequest request, org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesTestIamPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesTestIamPermissionsPathParams.class, baseUrl, "/v1beta1/{resource}:testIamPermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesTestIamPermissionsRequest.class, baseUrl, "/v1beta1/{resource}:testIamPermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testIamPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesTestIamPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterOrganizationsSourcesTestIamPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

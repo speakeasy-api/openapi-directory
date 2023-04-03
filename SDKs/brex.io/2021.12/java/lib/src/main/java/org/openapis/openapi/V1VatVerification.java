@@ -37,24 +37,25 @@ public class V1VatVerification {
      * Returns a verification result
      * Basic verification of given VAT number against VIES. Optional parameters may help to build a better confidence score.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.VatBasicResponse vatBasic(org.openapis.openapi.models.operations.VatBasicRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.VatBasicResponse vatBasic(org.openapis.openapi.models.operations.VatBasicRequest request, org.openapis.openapi.models.operations.VatBasicSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VatBasicPathParams.class, baseUrl, "/api/v1/vat-verification/basic-check/{country}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VatBasicRequest.class, baseUrl, "/api/v1/vat-verification/basic-check/{country}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -90,24 +91,25 @@ public class V1VatVerification {
      * Returns a verification result and company data
      * Extended verification of given VAT number against VIES. Optional parameters may help to build a better confidence score.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.VatComprehensiveResponse vatComprehensive(org.openapis.openapi.models.operations.VatComprehensiveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.VatComprehensiveResponse vatComprehensive(org.openapis.openapi.models.operations.VatComprehensiveRequest request, org.openapis.openapi.models.operations.VatComprehensiveSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VatComprehensivePathParams.class, baseUrl, "/api/v1/vat-verification/comprehensive-check/{country}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VatComprehensiveRequest.class, baseUrl, "/api/v1/vat-verification/comprehensive-check/{country}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -143,24 +145,25 @@ public class V1VatVerification {
      * Returns a level two verification result
      * Second Level Verification of VAT number against BMF Austria. Optional confirmation parameter can be provided to order a Confirmation Report.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.VatLevelTwoResponse vatLevelTwo(org.openapis.openapi.models.operations.VatLevelTwoRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.VatLevelTwoResponse vatLevelTwo(org.openapis.openapi.models.operations.VatLevelTwoRequest request, org.openapis.openapi.models.operations.VatLevelTwoSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VatLevelTwoPathParams.class, baseUrl, "/api/v1/vat-verification/leveltwo-check/{country}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VatLevelTwoRequest.class, baseUrl, "/api/v1/vat-verification/leveltwo-check/{country}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -196,24 +199,25 @@ public class V1VatVerification {
      * Returns a list of vat numbers with additional data
      * Reverse VAT Lookup: Search for companies and their VAT numbers by company name. Search is forwarded to a provider.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.VatLookupResponse vatLookup(org.openapis.openapi.models.operations.VatLookupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.VatLookupResponse vatLookup(org.openapis.openapi.models.operations.VatLookupRequest request, org.openapis.openapi.models.operations.VatLookupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VatLookupPathParams.class, baseUrl, "/api/v1/vat-verification/lookup/{country}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VatLookupRequest.class, baseUrl, "/api/v1/vat-verification/lookup/{country}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

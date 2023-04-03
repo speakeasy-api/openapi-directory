@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateVideoCustomLogoRequest {
-    
-    public CreateVideoCustomLogoPathParams pathParams;
-    public CreateVideoCustomLogoRequest withPathParams(CreateVideoCustomLogoPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CreateVideoCustomLogoSecurity security;
-    public CreateVideoCustomLogoRequest withSecurity(CreateVideoCustomLogoSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public CreateVideoCustomLogoRequest withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

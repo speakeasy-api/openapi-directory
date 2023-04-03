@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AgentStoreListRequest {
-    
-    public AgentStoreListPathParams pathParams;
-    public AgentStoreListRequest withPathParams(AgentStoreListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent of the value space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public AgentStoreListRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

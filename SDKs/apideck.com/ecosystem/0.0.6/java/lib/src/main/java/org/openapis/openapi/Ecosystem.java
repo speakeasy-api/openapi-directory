@@ -38,7 +38,7 @@ public class Ecosystem {
      */
     public org.openapis.openapi.models.operations.EcosystemsOneResponse ecosystemsOne(org.openapis.openapi.models.operations.EcosystemsOneRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EcosystemsOnePathParams.class, baseUrl, "/ecosystems/{ecosystem_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EcosystemsOneRequest.class, baseUrl, "/ecosystems/{ecosystem_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

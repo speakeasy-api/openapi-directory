@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopPointGetByModeRequest {
-    
-    public StopPointGetByModePathParams pathParams;
-    public StopPointGetByModeRequest withPathParams(StopPointGetByModePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A comma-seperated list of modes e.g. tube,dlr
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=modes")
+    public String[] modes;
+    public StopPointGetByModeRequest withModes(String[] modes) {
+        this.modes = modes;
         return this;
     }
     
-    
-    public StopPointGetByModeQueryParams queryParams;
-    public StopPointGetByModeRequest withQueryParams(StopPointGetByModeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The data set page to return. Page 1 equates to the first 1000 stop points, page 2 equates to 1001-2000 etc. Must be entered for bus mode as data set is too large.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public StopPointGetByModeRequest withPage(Integer page) {
+        this.page = page;
         return this;
     }
     

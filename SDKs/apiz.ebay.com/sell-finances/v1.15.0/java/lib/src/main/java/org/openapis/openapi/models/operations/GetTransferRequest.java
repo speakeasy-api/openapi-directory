@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTransferRequest {
-    
-    public GetTransferPathParams pathParams;
-    public GetTransferRequest withPathParams(GetTransferPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * This header identifies the seller's eBay marketplace. It is required for all marketplaces outside of the US. See &lt;a href="/api-docs/static/rest-request-components.html#marketpl " target="_blank "&gt;HTTP request headers&lt;/a&gt; for the marketplace ID values.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
+    public String xEbayCMarketplaceId;
+    public GetTransferRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
+        this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
     }
     
-    
-    public GetTransferHeaders headers;
-    public GetTransferRequest withHeaders(GetTransferHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetTransferSecurity security;
-    public GetTransferRequest withSecurity(GetTransferSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the &lt;code&gt;TRANSFER&lt;/code&gt; transaction type you wish to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transfer_Id")
+    public String transferId;
+    public GetTransferRequest withTransferId(String transferId) {
+        this.transferId = transferId;
         return this;
     }
     

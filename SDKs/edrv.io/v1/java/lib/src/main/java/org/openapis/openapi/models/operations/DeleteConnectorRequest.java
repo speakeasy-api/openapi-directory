@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteConnectorRequest {
-    
-    public DeleteConnectorPathParams pathParams;
-    public DeleteConnectorRequest withPathParams(DeleteConnectorPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The connector id that needs to be deleted
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteConnectorRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

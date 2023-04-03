@@ -143,7 +143,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetMappingValuesKeyResponse getMappingValuesKey(org.openapis.openapi.models.operations.GetMappingValuesKeyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMappingValuesKeyPathParams.class, baseUrl, "/mapping/values/{key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMappingValuesKeyRequest.class, baseUrl, "/mapping/values/{key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -194,7 +194,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostMappingResponse postMapping(org.openapis.openapi.models.operations.PostMappingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostMappingResponse postMapping(org.openapis.openapi.models.shared.MappingJob[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/mapping");
         

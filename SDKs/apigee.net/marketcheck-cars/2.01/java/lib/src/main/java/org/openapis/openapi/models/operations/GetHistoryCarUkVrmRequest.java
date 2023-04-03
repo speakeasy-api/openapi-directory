@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetHistoryCarUkVrmRequest {
-    
-    public GetHistoryCarUkVrmPathParams pathParams;
-    public GetHistoryCarUkVrmRequest withPathParams(GetHistoryCarUkVrmPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The API Authentication Key. Mandatory with all API calls.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetHistoryCarUkVrmRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    /**
+     * Flag to indicate whether to include duplicate historical records as well in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_duplicates")
+    public Boolean includeDuplicates;
+    public GetHistoryCarUkVrmRequest withIncludeDuplicates(Boolean includeDuplicates) {
+        this.includeDuplicates = includeDuplicates;
+        return this;
+    }
     
-    public GetHistoryCarUkVrmQueryParams queryParams;
-    public GetHistoryCarUkVrmRequest withQueryParams(GetHistoryCarUkVrmQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number to fetch the results for the given criteria. Default is 1.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetHistoryCarUkVrmRequest withPage(Double page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Sort order - asc or desc. Default sort order is asc
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_order")
+    public org.openapis.openapi.models.shared.SortOrderEnum sortOrder;
+    public GetHistoryCarUkVrmRequest withSortOrder(org.openapis.openapi.models.shared.SortOrderEnum sortOrder) {
+        this.sortOrder = sortOrder;
+        return this;
+    }
+    
+    /**
+     * The VRM to identify the car.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=vrm")
+    public String vrm;
+    public GetHistoryCarUkVrmRequest withVrm(String vrm) {
+        this.vrm = vrm;
         return this;
     }
     

@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountPatchPermissionsJsonRequest {
-    
-    public AccountPatchPermissionsJsonPathParams pathParams;
-    public AccountPatchPermissionsJsonRequest withPathParams(AccountPatchPermissionsJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The patch permission request
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ApiCoreRequestsPermissionPatchRequest request;
-    public AccountPatchPermissionsJsonRequest withRequest(org.openapis.openapi.models.shared.ApiCoreRequestsPermissionPatchRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ApiCoreRequestsPermissionPatchRequest apiCoreRequestsPermissionPatchRequest;
+    public AccountPatchPermissionsJsonRequest withApiCoreRequestsPermissionPatchRequest(org.openapis.openapi.models.shared.ApiCoreRequestsPermissionPatchRequest apiCoreRequestsPermissionPatchRequest) {
+        this.apiCoreRequestsPermissionPatchRequest = apiCoreRequestsPermissionPatchRequest;
+        return this;
+    }
+    
+    /**
+     * Id of the guest
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=guestId")
+    public Long guestId;
+    public AccountPatchPermissionsJsonRequest withGuestId(Long guestId) {
+        this.guestId = guestId;
+        return this;
+    }
+    
+    /**
+     * Can be "datapoint" or "group"
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
+    public AccountPatchPermissionsJsonTypeEnum type;
+    public AccountPatchPermissionsJsonRequest withType(AccountPatchPermissionsJsonTypeEnum type) {
+        this.type = type;
         return this;
     }
     

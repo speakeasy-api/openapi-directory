@@ -18,12 +18,9 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.AuthAccountPasswordRequestUsingPOSTSecurity;
-import org.openapis.openapi.models.operations.AuthAccountPasswordRequestUsingPOSTHeaders;
 import org.openapis.openapi.models.operations.AuthAccountPasswordRequestUsingPOSTRequest;
 import org.openapis.openapi.models.operations.AuthAccountPasswordRequestUsingPOSTResponse;
 import org.openapis.openapi.models.shared.AuthWithPasswordRequest;
-import org.openapis.openapi.models.shared.SchemeAuthorization;
-import org.openapis.openapi.models.shared.SchemeXHipID;
 
 public class Application {
     public static void main(String[] args) {
@@ -32,21 +29,16 @@ public class Application {
                 .build();
 
             AuthAccountPasswordRequestUsingPOSTRequest req = new AuthAccountPasswordRequestUsingPOSTRequest() {{
-                security = new AuthAccountPasswordRequestUsingPOSTSecurity() {{
-                    authorization = new SchemeAuthorization() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }};
-                headers = new AuthAccountPasswordRequestUsingPOSTHeaders() {{
-                    acceptLanguage = "corrupti";
-                }};
-                request = new AuthWithPasswordRequest() {{
+                acceptLanguage = "corrupti";
+                authWithPasswordRequest = new AuthWithPasswordRequest() {{
                     password = "provident";
                     txnId = "bd9d8d69-a674-4e0f-867c-c8796ed151a0";
                 }};
-            }};            
+            }}            
 
-            AuthAccountPasswordRequestUsingPOSTResponse res = sdk.authentication.authAccountPasswordRequestUsingPOST(req);
+            AuthAccountPasswordRequestUsingPOSTResponse res = sdk.authentication.authAccountPasswordRequestUsingPOST(req, new AuthAccountPasswordRequestUsingPOSTSecurity() {{
+                authorization = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.body.isPresent()) {
                 // handle response
@@ -58,7 +50,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### authentication

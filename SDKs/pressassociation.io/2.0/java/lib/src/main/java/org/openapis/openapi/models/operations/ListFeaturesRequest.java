@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListFeaturesRequest {
-    
-    public ListFeaturesQueryParams queryParams;
-    public ListFeaturesRequest withQueryParams(ListFeaturesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Date of the collection of feature items.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
+    public String date;
+    public ListFeaturesRequest withDate(String date) {
+        this.date = date;
         return this;
     }
     
+    /**
+     * End date for a range of features.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
+    public String end;
+    public ListFeaturesRequest withEnd(String end) {
+        this.end = end;
+        return this;
+    }
     
-    public ListFeaturesSecurity security;
-    public ListFeaturesRequest withSecurity(ListFeaturesSecurity security) {
-        this.security = security;
+    /**
+     * Start date for a range of features.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public String start;
+    public ListFeaturesRequest withStart(String start) {
+        this.start = start;
+        return this;
+    }
+    
+    /**
+     * The namespace of the feature type.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public ListFeaturesRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

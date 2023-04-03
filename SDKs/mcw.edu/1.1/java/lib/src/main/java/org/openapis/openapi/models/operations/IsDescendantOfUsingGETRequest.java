@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IsDescendantOfUsingGETRequest {
+    /**
+     * Child Term Accession ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accId1")
+    public String accId1;
+    public IsDescendantOfUsingGETRequest withAccId1(String accId1) {
+        this.accId1 = accId1;
+        return this;
+    }
     
-    public IsDescendantOfUsingGETPathParams pathParams;
-    public IsDescendantOfUsingGETRequest withPathParams(IsDescendantOfUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Parent Term Accession ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accId2")
+    public String accId2;
+    public IsDescendantOfUsingGETRequest withAccId2(String accId2) {
+        this.accId2 = accId2;
         return this;
     }
     

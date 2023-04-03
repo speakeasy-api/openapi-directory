@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteConsumerV1AppointmentsIdRequest {
-    
-    public DeleteConsumerV1AppointmentsIdPathParams pathParams;
-    public DeleteConsumerV1AppointmentsIdRequest withPathParams(DeleteConsumerV1AppointmentsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * appointment id to delete
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteConsumerV1AppointmentsIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -4,27 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListDeviceDefinitionVersionsRequest {
-    
-    public ListDeviceDefinitionVersionsPathParams pathParams;
-    public ListDeviceDefinitionVersionsRequest withPathParams(ListDeviceDefinitionVersionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the device definition.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DeviceDefinitionId")
+    public String deviceDefinitionId;
+    public ListDeviceDefinitionVersionsRequest withDeviceDefinitionId(String deviceDefinitionId) {
+        this.deviceDefinitionId = deviceDefinitionId;
         return this;
     }
     
-    
-    public ListDeviceDefinitionVersionsQueryParams queryParams;
-    public ListDeviceDefinitionVersionsRequest withQueryParams(ListDeviceDefinitionVersionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The maximum number of results to be returned per request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public String maxResults;
+    public ListDeviceDefinitionVersionsRequest withMaxResults(String maxResults) {
+        this.maxResults = maxResults;
         return this;
     }
     
+    /**
+     * The token for the next set of results, or ''null'' if there are no additional results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public ListDeviceDefinitionVersionsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
     
-    public ListDeviceDefinitionVersionsHeaders headers;
-    public ListDeviceDefinitionVersionsRequest withHeaders(ListDeviceDefinitionVersionsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListDeviceDefinitionVersionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListDeviceDefinitionVersionsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListDeviceDefinitionVersionsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListDeviceDefinitionVersionsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListDeviceDefinitionVersionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListDeviceDefinitionVersionsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListDeviceDefinitionVersionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

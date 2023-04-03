@@ -38,13 +38,13 @@ public class Content {
      */
     public org.openapis.openapi.models.operations.ContentGetContentByIdResponse contentGetContentById(org.openapis.openapi.models.operations.ContentGetContentByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentGetContentByIdPathParams.class, baseUrl, "/Content/GetContentById/{id}/{locale}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentGetContentByIdRequest.class, baseUrl, "/Content/GetContentById/{id}/{locale}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentGetContentByIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentGetContentByIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -81,13 +81,13 @@ public class Content {
      */
     public org.openapis.openapi.models.operations.ContentGetContentByTagAndTypeResponse contentGetContentByTagAndType(org.openapis.openapi.models.operations.ContentGetContentByTagAndTypeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentGetContentByTagAndTypePathParams.class, baseUrl, "/Content/GetContentByTagAndType/{tag}/{type}/{locale}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentGetContentByTagAndTypeRequest.class, baseUrl, "/Content/GetContentByTagAndType/{tag}/{type}/{locale}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentGetContentByTagAndTypeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentGetContentByTagAndTypeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -124,7 +124,7 @@ public class Content {
      */
     public org.openapis.openapi.models.operations.ContentGetContentTypeResponse contentGetContentType(org.openapis.openapi.models.operations.ContentGetContentTypeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentGetContentTypePathParams.class, baseUrl, "/Content/GetContentType/{type}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentGetContentTypeRequest.class, baseUrl, "/Content/GetContentType/{type}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -161,13 +161,13 @@ public class Content {
      */
     public org.openapis.openapi.models.operations.ContentRssNewsArticlesResponse contentRssNewsArticles(org.openapis.openapi.models.operations.ContentRssNewsArticlesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentRssNewsArticlesPathParams.class, baseUrl, "/Content/Rss/NewsArticles/{pageToken}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentRssNewsArticlesRequest.class, baseUrl, "/Content/Rss/NewsArticles/{pageToken}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentRssNewsArticlesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentRssNewsArticlesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -204,13 +204,13 @@ public class Content {
      */
     public org.openapis.openapi.models.operations.ContentSearchContentByTagAndTypeResponse contentSearchContentByTagAndType(org.openapis.openapi.models.operations.ContentSearchContentByTagAndTypeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentSearchContentByTagAndTypePathParams.class, baseUrl, "/Content/SearchContentByTagAndType/{tag}/{type}/{locale}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentSearchContentByTagAndTypeRequest.class, baseUrl, "/Content/SearchContentByTagAndType/{tag}/{type}/{locale}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentSearchContentByTagAndTypeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentSearchContentByTagAndTypeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -247,13 +247,13 @@ public class Content {
      */
     public org.openapis.openapi.models.operations.ContentSearchContentWithTextResponse contentSearchContentWithText(org.openapis.openapi.models.operations.ContentSearchContentWithTextRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentSearchContentWithTextPathParams.class, baseUrl, "/Content/Search/{locale}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentSearchContentWithTextRequest.class, baseUrl, "/Content/Search/{locale}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentSearchContentWithTextQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentSearchContentWithTextRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -290,7 +290,7 @@ public class Content {
      */
     public org.openapis.openapi.models.operations.ContentSearchHelpArticlesResponse contentSearchHelpArticles(org.openapis.openapi.models.operations.ContentSearchHelpArticlesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentSearchHelpArticlesPathParams.class, baseUrl, "/Content/SearchHelpArticles/{searchtext}/{size}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentSearchHelpArticlesRequest.class, baseUrl, "/Content/SearchHelpArticles/{searchtext}/{size}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

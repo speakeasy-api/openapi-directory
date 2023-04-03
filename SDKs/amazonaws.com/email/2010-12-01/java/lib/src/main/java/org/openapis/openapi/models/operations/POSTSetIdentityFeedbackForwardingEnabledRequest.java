@@ -7,24 +7,73 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTSetIdentityFeedbackForwardingEnabledRequest {
-    
-    public POSTSetIdentityFeedbackForwardingEnabledQueryParams queryParams;
-    public POSTSetIdentityFeedbackForwardingEnabledRequest withQueryParams(POSTSetIdentityFeedbackForwardingEnabledQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public POSTSetIdentityFeedbackForwardingEnabledHeaders headers;
-    public POSTSetIdentityFeedbackForwardingEnabledRequest withHeaders(POSTSetIdentityFeedbackForwardingEnabledHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public POSTSetIdentityFeedbackForwardingEnabledActionEnum action;
+    public POSTSetIdentityFeedbackForwardingEnabledRequest withAction(POSTSetIdentityFeedbackForwardingEnabledActionEnum action) {
+        this.action = action;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public POSTSetIdentityFeedbackForwardingEnabledRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public POSTSetIdentityFeedbackForwardingEnabledRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public POSTSetIdentityFeedbackForwardingEnabledVersionEnum version;
+    public POSTSetIdentityFeedbackForwardingEnabledRequest withVersion(POSTSetIdentityFeedbackForwardingEnabledVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public POSTSetIdentityFeedbackForwardingEnabledRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public POSTSetIdentityFeedbackForwardingEnabledRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public POSTSetIdentityFeedbackForwardingEnabledRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public POSTSetIdentityFeedbackForwardingEnabledRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public POSTSetIdentityFeedbackForwardingEnabledRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public POSTSetIdentityFeedbackForwardingEnabledRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public POSTSetIdentityFeedbackForwardingEnabledRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

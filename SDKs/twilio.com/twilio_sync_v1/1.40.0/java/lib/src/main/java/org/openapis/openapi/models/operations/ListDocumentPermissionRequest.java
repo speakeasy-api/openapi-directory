@@ -4,34 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListDocumentPermissionRequest {
-    
-    public ListDocumentPermissionPathParams pathParams;
-    public ListDocumentPermissionRequest withPathParams(ListDocumentPermissionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Sync Document with the Document Permission resources to read. Can be the Document resource's `sid` or its `unique_name`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DocumentSid")
+    public String documentSid;
+    public ListDocumentPermissionRequest withDocumentSid(String documentSid) {
+        this.documentSid = documentSid;
         return this;
     }
     
-    
-    public ListDocumentPermissionQueryParams queryParams;
-    public ListDocumentPermissionRequest withQueryParams(ListDocumentPermissionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListDocumentPermissionRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListDocumentPermissionSecurity security;
-    public ListDocumentPermissionRequest withSecurity(ListDocumentPermissionSecurity security) {
-        this.security = security;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListDocumentPermissionRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListDocumentPermissionRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
     
-    public String serverURL;
-    public ListDocumentPermissionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Document Permission resources to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public ListDocumentPermissionRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

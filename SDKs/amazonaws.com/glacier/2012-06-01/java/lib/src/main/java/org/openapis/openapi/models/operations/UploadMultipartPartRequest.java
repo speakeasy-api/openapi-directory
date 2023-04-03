@@ -7,24 +7,109 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UploadMultipartPartRequest {
-    
-    public UploadMultipartPartPathParams pathParams;
-    public UploadMultipartPartRequest withPathParams(UploadMultipartPartPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UploadMultipartPartHeaders headers;
-    public UploadMultipartPartRequest withHeaders(UploadMultipartPartHeaders headers) {
-        this.headers = headers;
+    /**
+     * Identifies the range of bytes in the assembled archive that will be uploaded in this part. Amazon S3 Glacier uses this information to assemble the archive in the proper sequence. The format of this header follows RFC 2616. An example header is Content-Range:bytes 0-4194303/*.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Range")
+    public String contentRange;
+    public UploadMultipartPartRequest withContentRange(String contentRange) {
+        this.contentRange = contentRange;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UploadMultipartPartRequestBody request;
-    public UploadMultipartPartRequest withRequest(UploadMultipartPartRequestBody request) {
-        this.request = request;
+    public UploadMultipartPartRequestBody requestBody;
+    public UploadMultipartPartRequest withRequestBody(UploadMultipartPartRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public UploadMultipartPartRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public UploadMultipartPartRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public UploadMultipartPartRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public UploadMultipartPartRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public UploadMultipartPartRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public UploadMultipartPartRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public UploadMultipartPartRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The &lt;code&gt;AccountId&lt;/code&gt; value is the AWS account ID of the account that owns the vault. You can either specify an AWS account ID or optionally a single '&lt;code&gt;-&lt;/code&gt;' (hyphen), in which case Amazon S3 Glacier uses the AWS account ID associated with the credentials used to sign the request. If you use an account ID, do not include any hyphens ('-') in the ID. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public UploadMultipartPartRequest withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    
+    /**
+     * The upload ID of the multipart upload.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=uploadId")
+    public String uploadId;
+    public UploadMultipartPartRequest withUploadId(String uploadId) {
+        this.uploadId = uploadId;
+        return this;
+    }
+    
+    /**
+     * The name of the vault.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=vaultName")
+    public String vaultName;
+    public UploadMultipartPartRequest withVaultName(String vaultName) {
+        this.vaultName = vaultName;
+        return this;
+    }
+    
+    /**
+     * The SHA256 tree hash of the data being uploaded.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-amz-sha256-tree-hash")
+    public String xAmzSha256TreeHash;
+    public UploadMultipartPartRequest withXAmzSha256TreeHash(String xAmzSha256TreeHash) {
+        this.xAmzSha256TreeHash = xAmzSha256TreeHash;
         return this;
     }
     

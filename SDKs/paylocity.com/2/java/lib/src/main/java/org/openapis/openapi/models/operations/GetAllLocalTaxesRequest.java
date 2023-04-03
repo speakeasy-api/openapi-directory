@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllLocalTaxesRequest {
-    
-    public GetAllLocalTaxesPathParams pathParams;
-    public GetAllLocalTaxesRequest withPathParams(GetAllLocalTaxesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Company Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public GetAllLocalTaxesRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
         return this;
     }
     
-    
-    public GetAllLocalTaxesSecurity security;
-    public GetAllLocalTaxesRequest withSecurity(GetAllLocalTaxesSecurity security) {
-        this.security = security;
+    /**
+     * Employee Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=employeeId")
+    public String employeeId;
+    public GetAllLocalTaxesRequest withEmployeeId(String employeeId) {
+        this.employeeId = employeeId;
         return this;
     }
     

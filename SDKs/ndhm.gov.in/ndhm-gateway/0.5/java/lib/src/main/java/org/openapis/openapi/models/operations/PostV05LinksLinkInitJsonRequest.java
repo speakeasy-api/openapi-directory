@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05LinksLinkInitJsonRequest {
-    
-    public PostV05LinksLinkInitJsonHeaders headers;
-    public PostV05LinksLinkInitJsonRequest withHeaders(PostV05LinksLinkInitJsonHeaders headers) {
-        this.headers = headers;
+    /**
+     * Access token which was issued after successful login with gateway auth server.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostV05LinksLinkInitJsonRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PatientLinkReferenceRequest request;
-    public PostV05LinksLinkInitJsonRequest withRequest(org.openapis.openapi.models.shared.PatientLinkReferenceRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PatientLinkReferenceRequest patientLinkReferenceRequest;
+    public PostV05LinksLinkInitJsonRequest withPatientLinkReferenceRequest(org.openapis.openapi.models.shared.PatientLinkReferenceRequest patientLinkReferenceRequest) {
+        this.patientLinkReferenceRequest = patientLinkReferenceRequest;
+        return this;
+    }
+    
+    /**
+     * Identifier of the health information provider to which the request was intended.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HIP-ID")
+    public String xHipId;
+    public PostV05LinksLinkInitJsonRequest withXHipId(String xHipId) {
+        this.xHipId = xHipId;
         return this;
     }
     

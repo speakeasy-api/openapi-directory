@@ -7,17 +7,34 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssuesUpdateCommentRequest {
-    
-    public IssuesUpdateCommentPathParams pathParams;
-    public IssuesUpdateCommentRequest withPathParams(IssuesUpdateCommentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public IssuesUpdateCommentRequestBody requestBody;
+    public IssuesUpdateCommentRequest withRequestBody(IssuesUpdateCommentRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public IssuesUpdateCommentRequestBody request;
-    public IssuesUpdateCommentRequest withRequest(IssuesUpdateCommentRequestBody request) {
-        this.request = request;
+    /**
+     * comment_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_id")
+    public Long commentId;
+    public IssuesUpdateCommentRequest withCommentId(Long commentId) {
+        this.commentId = commentId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssuesUpdateCommentRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssuesUpdateCommentRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

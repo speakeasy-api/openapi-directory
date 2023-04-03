@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveWageSettingRequest {
-    
-    public RetrieveWageSettingPathParams pathParams;
-    public RetrieveWageSettingRequest withPathParams(RetrieveWageSettingPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RetrieveWageSettingSecurity security;
-    public RetrieveWageSettingRequest withSecurity(RetrieveWageSettingSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the team member for which to retrieve the wage setting.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_member_id")
+    public String teamMemberId;
+    public RetrieveWageSettingRequest withTeamMemberId(String teamMemberId) {
+        this.teamMemberId = teamMemberId;
         return this;
     }
     

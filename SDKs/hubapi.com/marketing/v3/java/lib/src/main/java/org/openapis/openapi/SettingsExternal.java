@@ -30,16 +30,16 @@ public class SettingsExternal {
 		this._genVersion = genVersion;
 	}
 
-    public org.openapis.openapi.models.operations.GetMarketingV3MarketingEventsAppIdSettingsGetAllResponse getMarketingV3MarketingEventsAppIdSettingsGetAll(org.openapis.openapi.models.operations.GetMarketingV3MarketingEventsAppIdSettingsGetAllRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMarketingV3MarketingEventsAppIdSettingsGetAllResponse getMarketingV3MarketingEventsAppIdSettingsGetAll(org.openapis.openapi.models.operations.GetMarketingV3MarketingEventsAppIdSettingsGetAllRequest request, org.openapis.openapi.models.operations.GetMarketingV3MarketingEventsAppIdSettingsGetAllSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMarketingV3MarketingEventsAppIdSettingsGetAllPathParams.class, baseUrl, "/marketing/v3/marketing-events/{appId}/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMarketingV3MarketingEventsAppIdSettingsGetAllRequest.class, baseUrl, "/marketing/v3/marketing-events/{appId}/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -70,21 +70,21 @@ public class SettingsExternal {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsAppIdSettingsCreateResponse postMarketingV3MarketingEventsAppIdSettingsCreate(org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsAppIdSettingsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsAppIdSettingsCreateResponse postMarketingV3MarketingEventsAppIdSettingsCreate(org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsAppIdSettingsCreateRequest request, org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsAppIdSettingsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsAppIdSettingsCreatePathParams.class, baseUrl, "/marketing/v3/marketing-events/{appId}/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsAppIdSettingsCreateRequest.class, baseUrl, "/marketing/v3/marketing-events/{appId}/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "eventDetailSettingsUrl", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

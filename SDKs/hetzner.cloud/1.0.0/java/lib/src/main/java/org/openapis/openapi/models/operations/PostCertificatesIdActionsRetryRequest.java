@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCertificatesIdActionsRetryRequest {
-    
-    public PostCertificatesIdActionsRetryPathParams pathParams;
-    public PostCertificatesIdActionsRetryRequest withPathParams(PostCertificatesIdActionsRetryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the Certificate
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public PostCertificatesIdActionsRetryRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

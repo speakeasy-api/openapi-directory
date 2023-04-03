@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostMerchantsMerchantIdTerminalOrdersOrderIdCancelRequest {
-    
-    public PostMerchantsMerchantIdTerminalOrdersOrderIdCancelPathParams pathParams;
-    public PostMerchantsMerchantIdTerminalOrdersOrderIdCancelRequest withPathParams(PostMerchantsMerchantIdTerminalOrdersOrderIdCancelPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the merchant account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
+    public String merchantId;
+    public PostMerchantsMerchantIdTerminalOrdersOrderIdCancelRequest withMerchantId(String merchantId) {
+        this.merchantId = merchantId;
         return this;
     }
     
-    
-    public PostMerchantsMerchantIdTerminalOrdersOrderIdCancelSecurity security;
-    public PostMerchantsMerchantIdTerminalOrdersOrderIdCancelRequest withSecurity(PostMerchantsMerchantIdTerminalOrdersOrderIdCancelSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the order.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderId")
+    public String orderId;
+    public PostMerchantsMerchantIdTerminalOrdersOrderIdCancelRequest withOrderId(String orderId) {
+        this.orderId = orderId;
         return this;
     }
     

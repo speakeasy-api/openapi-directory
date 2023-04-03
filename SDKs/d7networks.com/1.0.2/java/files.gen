@@ -30,15 +30,12 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/BalanceGetResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/SendPostHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/SendPostRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SendPostResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/SendbatchPostHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/SendbatchPostRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SendbatchPostResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/SendSMSRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/BulkSMSRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Message.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAuth.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchTokenGroupsRequest {
-    
-    public FetchTokenGroupsPathParams pathParams;
-    public FetchTokenGroupsRequest withPathParams(FetchTokenGroupsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchTokenGroupsSecurity security;
-    public FetchTokenGroupsRequest withSecurity(FetchTokenGroupsSecurity security) {
-        this.security = security;
+    /**
+     * Token identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public FetchTokenGroupsRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

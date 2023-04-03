@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetQueueConfigRequest {
-    
-    public GetQueueConfigPathParams pathParams;
-    public GetQueueConfigRequest withPathParams(GetQueueConfigPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Name of Queue
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=queueName")
+    public String queueName;
+    public GetQueueConfigRequest withQueueName(String queueName) {
+        this.queueName = queueName;
         return this;
     }
     

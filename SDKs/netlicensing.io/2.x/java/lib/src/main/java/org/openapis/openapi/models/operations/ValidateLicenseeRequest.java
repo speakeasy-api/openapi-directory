@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ValidateLicenseeRequest {
-    
-    public ValidateLicenseePathParams pathParams;
-    public ValidateLicenseeRequest withPathParams(ValidateLicenseePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public ValidateLicenseeRequestBody request;
-    public ValidateLicenseeRequest withRequest(ValidateLicenseeRequestBody request) {
-        this.request = request;
+    public ValidateLicenseeRequestBody requestBody;
+    public ValidateLicenseeRequest withRequestBody(ValidateLicenseeRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public ValidateLicenseeSecurity security;
-    public ValidateLicenseeRequest withSecurity(ValidateLicenseeSecurity security) {
-        this.security = security;
+    /**
+     * Licensee number with a maximum length of 1000 characters
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=licenseeNumber")
+    public String licenseeNumber;
+    public ValidateLicenseeRequest withLicenseeNumber(String licenseeNumber) {
+        this.licenseeNumber = licenseeNumber;
         return this;
     }
     

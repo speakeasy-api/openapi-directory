@@ -38,7 +38,7 @@ public class Labels {
      */
     public org.openapis.openapi.models.operations.GetUsersIdLabelsResponse getUsersIdLabels(org.openapis.openapi.models.operations.GetUsersIdLabelsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdLabelsPathParams.class, baseUrl, "/users/{id}/labels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdLabelsRequest.class, baseUrl, "/users/{id}/labels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

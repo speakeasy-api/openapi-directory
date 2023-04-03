@@ -35,27 +35,28 @@ public class ResourceRecordSets {
     /**
      * Creates a new ResourceRecordSet.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DnsResourceRecordSetsCreateResponse dnsResourceRecordSetsCreate(org.openapis.openapi.models.operations.DnsResourceRecordSetsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DnsResourceRecordSetsCreateResponse dnsResourceRecordSetsCreate(org.openapis.openapi.models.operations.DnsResourceRecordSetsCreateRequest request, org.openapis.openapi.models.operations.DnsResourceRecordSetsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DnsResourceRecordSetsCreatePathParams.class, baseUrl, "/dns/v1/projects/{project}/managedZones/{managedZone}/rrsets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DnsResourceRecordSetsCreateRequest.class, baseUrl, "/dns/v1/projects/{project}/managedZones/{managedZone}/rrsets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "resourceRecordSet", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DnsResourceRecordSetsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DnsResourceRecordSetsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,25 +83,26 @@ public class ResourceRecordSets {
     /**
      * Deletes a previously created ResourceRecordSet.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DnsResourceRecordSetsDeleteResponse dnsResourceRecordSetsDelete(org.openapis.openapi.models.operations.DnsResourceRecordSetsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DnsResourceRecordSetsDeleteResponse dnsResourceRecordSetsDelete(org.openapis.openapi.models.operations.DnsResourceRecordSetsDeleteRequest request, org.openapis.openapi.models.operations.DnsResourceRecordSetsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DnsResourceRecordSetsDeletePathParams.class, baseUrl, "/dns/v1/projects/{project}/managedZones/{managedZone}/rrsets/{name}/{type}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DnsResourceRecordSetsDeleteRequest.class, baseUrl, "/dns/v1/projects/{project}/managedZones/{managedZone}/rrsets/{name}/{type}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DnsResourceRecordSetsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DnsResourceRecordSetsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,25 +129,26 @@ public class ResourceRecordSets {
     /**
      * Fetches the representation of an existing ResourceRecordSet.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DnsResourceRecordSetsGetResponse dnsResourceRecordSetsGet(org.openapis.openapi.models.operations.DnsResourceRecordSetsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DnsResourceRecordSetsGetResponse dnsResourceRecordSetsGet(org.openapis.openapi.models.operations.DnsResourceRecordSetsGetRequest request, org.openapis.openapi.models.operations.DnsResourceRecordSetsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DnsResourceRecordSetsGetPathParams.class, baseUrl, "/dns/v1/projects/{project}/managedZones/{managedZone}/rrsets/{name}/{type}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DnsResourceRecordSetsGetRequest.class, baseUrl, "/dns/v1/projects/{project}/managedZones/{managedZone}/rrsets/{name}/{type}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DnsResourceRecordSetsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DnsResourceRecordSetsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -172,25 +175,26 @@ public class ResourceRecordSets {
     /**
      * Enumerates ResourceRecordSets that you have created but not yet deleted.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DnsResourceRecordSetsListResponse dnsResourceRecordSetsList(org.openapis.openapi.models.operations.DnsResourceRecordSetsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DnsResourceRecordSetsListResponse dnsResourceRecordSetsList(org.openapis.openapi.models.operations.DnsResourceRecordSetsListRequest request, org.openapis.openapi.models.operations.DnsResourceRecordSetsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DnsResourceRecordSetsListPathParams.class, baseUrl, "/dns/v1/projects/{project}/managedZones/{managedZone}/rrsets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DnsResourceRecordSetsListRequest.class, baseUrl, "/dns/v1/projects/{project}/managedZones/{managedZone}/rrsets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DnsResourceRecordSetsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DnsResourceRecordSetsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -217,27 +221,28 @@ public class ResourceRecordSets {
     /**
      * Applies a partial update to an existing ResourceRecordSet.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DnsResourceRecordSetsPatchResponse dnsResourceRecordSetsPatch(org.openapis.openapi.models.operations.DnsResourceRecordSetsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DnsResourceRecordSetsPatchResponse dnsResourceRecordSetsPatch(org.openapis.openapi.models.operations.DnsResourceRecordSetsPatchRequest request, org.openapis.openapi.models.operations.DnsResourceRecordSetsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DnsResourceRecordSetsPatchPathParams.class, baseUrl, "/dns/v1/projects/{project}/managedZones/{managedZone}/rrsets/{name}/{type}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DnsResourceRecordSetsPatchRequest.class, baseUrl, "/dns/v1/projects/{project}/managedZones/{managedZone}/rrsets/{name}/{type}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "resourceRecordSet", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DnsResourceRecordSetsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DnsResourceRecordSetsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

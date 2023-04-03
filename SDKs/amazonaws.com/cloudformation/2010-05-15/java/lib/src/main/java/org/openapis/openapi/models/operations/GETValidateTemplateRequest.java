@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETValidateTemplateRequest {
-    
-    public GETValidateTemplateQueryParams queryParams;
-    public GETValidateTemplateRequest withQueryParams(GETValidateTemplateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETValidateTemplateActionEnum action;
+    public GETValidateTemplateRequest withAction(GETValidateTemplateActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;Structure containing the template body with a minimum length of 1 byte and a maximum length of 51,200 bytes. For more information, go to &lt;a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html"&gt;Template Anatomy&lt;/a&gt; in the CloudFormation User Guide.&lt;/p&gt; &lt;p&gt;Conditional: You must pass &lt;code&gt;TemplateURL&lt;/code&gt; or &lt;code&gt;TemplateBody&lt;/code&gt;. If both are passed, only &lt;code&gt;TemplateBody&lt;/code&gt; is used.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TemplateBody")
+    public String templateBody;
+    public GETValidateTemplateRequest withTemplateBody(String templateBody) {
+        this.templateBody = templateBody;
+        return this;
+    }
     
-    public GETValidateTemplateHeaders headers;
-    public GETValidateTemplateRequest withHeaders(GETValidateTemplateHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;Location of file containing the template body. The URL must point to a template (max size: 460,800 bytes) that is located in an Amazon S3 bucket or a Systems Manager document. For more information, go to &lt;a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html"&gt;Template Anatomy&lt;/a&gt; in the CloudFormation User Guide.&lt;/p&gt; &lt;p&gt;Conditional: You must pass &lt;code&gt;TemplateURL&lt;/code&gt; or &lt;code&gt;TemplateBody&lt;/code&gt;. If both are passed, only &lt;code&gt;TemplateBody&lt;/code&gt; is used.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TemplateURL")
+    public String templateURL;
+    public GETValidateTemplateRequest withTemplateURL(String templateURL) {
+        this.templateURL = templateURL;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETValidateTemplateVersionEnum version;
+    public GETValidateTemplateRequest withVersion(GETValidateTemplateVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETValidateTemplateRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETValidateTemplateRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETValidateTemplateRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETValidateTemplateRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETValidateTemplateRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETValidateTemplateRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETValidateTemplateRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

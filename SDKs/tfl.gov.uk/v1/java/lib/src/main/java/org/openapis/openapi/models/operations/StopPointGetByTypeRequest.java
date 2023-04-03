@@ -4,13 +4,17 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopPointGetByTypeRequest {
-    
-    public StopPointGetByTypePathParams pathParams;
-    public StopPointGetByTypeRequest withPathParams(StopPointGetByTypePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A comma-separated list of the types to return. Max. approx. 12 types. 
+     *             A list of valid stop types can be obtained from the StopPoint/meta/stoptypes endpoint.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=types")
+    public String[] types;
+    public StopPointGetByTypeRequest withTypes(String[] types) {
+        this.types = types;
         return this;
     }
     

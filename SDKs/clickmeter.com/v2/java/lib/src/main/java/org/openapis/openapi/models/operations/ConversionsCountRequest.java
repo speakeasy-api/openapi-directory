@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConversionsCountRequest {
+    /**
+     * Exclude conversions created before this date (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAfter")
+    public String createdAfter;
+    public ConversionsCountRequest withCreatedAfter(String createdAfter) {
+        this.createdAfter = createdAfter;
+        return this;
+    }
     
-    public ConversionsCountQueryParams queryParams;
-    public ConversionsCountRequest withQueryParams(ConversionsCountQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Exclude conversions created after this date (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdBefore")
+    public String createdBefore;
+    public ConversionsCountRequest withCreatedBefore(String createdBefore) {
+        this.createdBefore = createdBefore;
+        return this;
+    }
+    
+    /**
+     * Status of conversion ("deleted"/"active")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public ConversionsCountStatusEnum status;
+    public ConversionsCountRequest withStatus(ConversionsCountStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * Filter fields by this pattern
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=textSearch")
+    public String textSearch;
+    public ConversionsCountRequest withTextSearch(String textSearch) {
+        this.textSearch = textSearch;
         return this;
     }
     

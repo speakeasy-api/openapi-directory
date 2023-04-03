@@ -7,31 +7,170 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeploymentmanagerDeploymentsPatchRequest {
-    
-    public DeploymentmanagerDeploymentsPatchPathParams pathParams;
-    public DeploymentmanagerDeploymentsPatchRequest withPathParams(DeploymentmanagerDeploymentsPatchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeploymentmanagerDeploymentsPatchQueryParams queryParams;
-    public DeploymentmanagerDeploymentsPatchRequest withQueryParams(DeploymentmanagerDeploymentsPatchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public DeploymentmanagerDeploymentsPatchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Deployment request;
-    public DeploymentmanagerDeploymentsPatchRequest withRequest(org.openapis.openapi.models.shared.Deployment request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Deployment deployment1;
+    public DeploymentmanagerDeploymentsPatchRequest withDeployment1(org.openapis.openapi.models.shared.Deployment deployment1) {
+        this.deployment1 = deployment1;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public DeploymentmanagerDeploymentsPatchRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public DeploymentmanagerDeploymentsPatchSecurity security;
-    public DeploymentmanagerDeploymentsPatchRequest withSecurity(DeploymentmanagerDeploymentsPatchSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DeploymentmanagerDeploymentsPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public DeploymentmanagerDeploymentsPatchRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Sets the policy to use for creating new resources.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createPolicy")
+    public DeploymentmanagerDeploymentsPatchCreatePolicyEnum createPolicy;
+    public DeploymentmanagerDeploymentsPatchRequest withCreatePolicy(DeploymentmanagerDeploymentsPatchCreatePolicyEnum createPolicy) {
+        this.createPolicy = createPolicy;
+        return this;
+    }
+    
+    /**
+     * Sets the policy to use for deleting resources.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deletePolicy")
+    public DeploymentmanagerDeploymentsPatchDeletePolicyEnum deletePolicy;
+    public DeploymentmanagerDeploymentsPatchRequest withDeletePolicy(DeploymentmanagerDeploymentsPatchDeletePolicyEnum deletePolicy) {
+        this.deletePolicy = deletePolicy;
+        return this;
+    }
+    
+    /**
+     * The name of the deployment for this request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deployment")
+    public String deploymentPathParameter;
+    public DeploymentmanagerDeploymentsPatchRequest withDeploymentPathParameter(String deploymentPathParameter) {
+        this.deploymentPathParameter = deploymentPathParameter;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DeploymentmanagerDeploymentsPatchRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DeploymentmanagerDeploymentsPatchRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DeploymentmanagerDeploymentsPatchRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DeploymentmanagerDeploymentsPatchRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * If set to true, updates the deployment and creates and updates the "shell" resources but does not actually alter or instantiate these resources. This allows you to preview what your deployment will look like. You can use this intent to preview how an update would affect your deployment. You must provide a `target.config` with a configuration if this is set to true. After previewing a deployment, you can deploy your resources by making a request with the `update()` or you can `cancelPreview()` to remove the preview altogether. Note that the deployment will still exist after you cancel the preview and you must separately delete this deployment if you want to remove it.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=preview")
+    public Boolean preview;
+    public DeploymentmanagerDeploymentsPatchRequest withPreview(Boolean preview) {
+        this.preview = preview;
+        return this;
+    }
+    
+    /**
+     * The project ID for this request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public DeploymentmanagerDeploymentsPatchRequest withProject(String project) {
+        this.project = project;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DeploymentmanagerDeploymentsPatchRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public DeploymentmanagerDeploymentsPatchRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public DeploymentmanagerDeploymentsPatchRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

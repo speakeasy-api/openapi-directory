@@ -50,12 +50,12 @@ public class PhoneSharedLineGroups {
      */
     public org.openapis.openapi.models.operations.AddMembersToSharedLineGroupResponse addMembersToSharedLineGroup(org.openapis.openapi.models.operations.AddMembersToSharedLineGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddMembersToSharedLineGroupPathParams.class, baseUrl, "/phone/shared_line_groups/{sharedLineGroupId}/members", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddMembersToSharedLineGroupRequest.class, baseUrl, "/phone/shared_line_groups/{sharedLineGroupId}/members", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -106,12 +106,12 @@ public class PhoneSharedLineGroups {
      */
     public org.openapis.openapi.models.operations.AssignPhoneNumbersSLGResponse assignPhoneNumbersSLG(org.openapis.openapi.models.operations.AssignPhoneNumbersSLGRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssignPhoneNumbersSLGPathParams.class, baseUrl, "/phone/shared_line_groups/{sharedLineGroupId}/phone_numbers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssignPhoneNumbersSLGRequest.class, baseUrl, "/phone/shared_line_groups/{sharedLineGroupId}/phone_numbers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -145,10 +145,11 @@ public class PhoneSharedLineGroups {
      *  
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateASharedLineGroupResponse createASharedLineGroup(org.openapis.openapi.models.operations.CreateASharedLineGroupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateASharedLineGroupResponse createASharedLineGroup(org.openapis.openapi.models.operations.CreateASharedLineGroupApplicationJSON request, org.openapis.openapi.models.operations.CreateASharedLineGroupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/phone/shared_line_groups");
         
@@ -159,7 +160,7 @@ public class PhoneSharedLineGroups {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -208,7 +209,7 @@ public class PhoneSharedLineGroups {
      */
     public org.openapis.openapi.models.operations.DeleteAMemberSLGResponse deleteAMemberSLG(org.openapis.openapi.models.operations.DeleteAMemberSLGRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAMemberSLGPathParams.class, baseUrl, "/phone/shared_line_groups/{sharedLineGroupId}/members/{memberId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAMemberSLGRequest.class, baseUrl, "/phone/shared_line_groups/{sharedLineGroupId}/members/{memberId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -249,7 +250,7 @@ public class PhoneSharedLineGroups {
      */
     public org.openapis.openapi.models.operations.DeleteAPhoneNumberSLGResponse deleteAPhoneNumberSLG(org.openapis.openapi.models.operations.DeleteAPhoneNumberSLGRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAPhoneNumberSLGPathParams.class, baseUrl, "/phone/shared_line_groups/{sharedLineGroupId}/phone_numbers/{phoneNumberId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAPhoneNumberSLGRequest.class, baseUrl, "/phone/shared_line_groups/{sharedLineGroupId}/phone_numbers/{phoneNumberId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -291,7 +292,7 @@ public class PhoneSharedLineGroups {
      */
     public org.openapis.openapi.models.operations.DeleteASharedLineGroupResponse deleteASharedLineGroup(org.openapis.openapi.models.operations.DeleteASharedLineGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteASharedLineGroupPathParams.class, baseUrl, "/phone/shared_line_groups/{sharedLineGroupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteASharedLineGroupRequest.class, baseUrl, "/phone/shared_line_groups/{sharedLineGroupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -347,7 +348,7 @@ public class PhoneSharedLineGroups {
      */
     public org.openapis.openapi.models.operations.DeleteMembersOfSLGResponse deleteMembersOfSLG(org.openapis.openapi.models.operations.DeleteMembersOfSLGRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteMembersOfSLGPathParams.class, baseUrl, "/phone/shared_line_groups/{sharedLineGroupId}/members", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteMembersOfSLGRequest.class, baseUrl, "/phone/shared_line_groups/{sharedLineGroupId}/members", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -403,7 +404,7 @@ public class PhoneSharedLineGroups {
      */
     public org.openapis.openapi.models.operations.GetASharedLineGroupResponse getASharedLineGroup(org.openapis.openapi.models.operations.GetASharedLineGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetASharedLineGroupPathParams.class, baseUrl, "/phone/shared_line_groups/{sharedLineGroupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetASharedLineGroupRequest.class, baseUrl, "/phone/shared_line_groups/{sharedLineGroupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -463,7 +464,7 @@ public class PhoneSharedLineGroups {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListSharedLineGroupsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListSharedLineGroupsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -515,12 +516,12 @@ public class PhoneSharedLineGroups {
      */
     public org.openapis.openapi.models.operations.UpdateASharedLineGroupResponse updateASharedLineGroup(org.openapis.openapi.models.operations.UpdateASharedLineGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateASharedLineGroupPathParams.class, baseUrl, "/phone/shared_line_groups/{sharedLineGroupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateASharedLineGroupRequest.class, baseUrl, "/phone/shared_line_groups/{sharedLineGroupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

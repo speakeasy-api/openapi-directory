@@ -34,27 +34,28 @@ public class InstanceGroups {
     /**
      * Adds a list of instances to the specified instance group. All of the instances in the instance group must be in the same network/subnetwork. Read Adding instances for more information.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeInstanceGroupsAddInstancesResponse computeInstanceGroupsAddInstances(org.openapis.openapi.models.operations.ComputeInstanceGroupsAddInstancesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeInstanceGroupsAddInstancesResponse computeInstanceGroupsAddInstances(org.openapis.openapi.models.operations.ComputeInstanceGroupsAddInstancesRequest request, org.openapis.openapi.models.operations.ComputeInstanceGroupsAddInstancesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstanceGroupsAddInstancesPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/instanceGroups/{instanceGroup}/addInstances", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstanceGroupsAddInstancesRequest.class, baseUrl, "/projects/{project}/zones/{zone}/instanceGroups/{instanceGroup}/addInstances", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "instanceGroupsAddInstancesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstanceGroupsAddInstancesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstanceGroupsAddInstancesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,25 +82,26 @@ public class InstanceGroups {
     /**
      * Retrieves the list of instance groups and sorts them by zone.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeInstanceGroupsAggregatedListResponse computeInstanceGroupsAggregatedList(org.openapis.openapi.models.operations.ComputeInstanceGroupsAggregatedListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeInstanceGroupsAggregatedListResponse computeInstanceGroupsAggregatedList(org.openapis.openapi.models.operations.ComputeInstanceGroupsAggregatedListRequest request, org.openapis.openapi.models.operations.ComputeInstanceGroupsAggregatedListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstanceGroupsAggregatedListPathParams.class, baseUrl, "/projects/{project}/aggregated/instanceGroups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstanceGroupsAggregatedListRequest.class, baseUrl, "/projects/{project}/aggregated/instanceGroups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstanceGroupsAggregatedListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstanceGroupsAggregatedListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,25 +128,26 @@ public class InstanceGroups {
     /**
      * Deletes the specified instance group. The instances in the group are not deleted. Note that instance group must not belong to a backend service. Read Deleting an instance group for more information.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeInstanceGroupsDeleteResponse computeInstanceGroupsDelete(org.openapis.openapi.models.operations.ComputeInstanceGroupsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeInstanceGroupsDeleteResponse computeInstanceGroupsDelete(org.openapis.openapi.models.operations.ComputeInstanceGroupsDeleteRequest request, org.openapis.openapi.models.operations.ComputeInstanceGroupsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstanceGroupsDeletePathParams.class, baseUrl, "/projects/{project}/zones/{zone}/instanceGroups/{instanceGroup}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstanceGroupsDeleteRequest.class, baseUrl, "/projects/{project}/zones/{zone}/instanceGroups/{instanceGroup}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstanceGroupsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstanceGroupsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,25 +174,26 @@ public class InstanceGroups {
     /**
      * Returns the specified zonal instance group. Get a list of available zonal instance groups by making a list() request. For managed instance groups, use the instanceGroupManagers or regionInstanceGroupManagers methods instead.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeInstanceGroupsGetResponse computeInstanceGroupsGet(org.openapis.openapi.models.operations.ComputeInstanceGroupsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeInstanceGroupsGetResponse computeInstanceGroupsGet(org.openapis.openapi.models.operations.ComputeInstanceGroupsGetRequest request, org.openapis.openapi.models.operations.ComputeInstanceGroupsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstanceGroupsGetPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/instanceGroups/{instanceGroup}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstanceGroupsGetRequest.class, baseUrl, "/projects/{project}/zones/{zone}/instanceGroups/{instanceGroup}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstanceGroupsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstanceGroupsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -216,27 +220,28 @@ public class InstanceGroups {
     /**
      * Creates an instance group in the specified project using the parameters that are included in the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeInstanceGroupsInsertResponse computeInstanceGroupsInsert(org.openapis.openapi.models.operations.ComputeInstanceGroupsInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeInstanceGroupsInsertResponse computeInstanceGroupsInsert(org.openapis.openapi.models.operations.ComputeInstanceGroupsInsertRequest request, org.openapis.openapi.models.operations.ComputeInstanceGroupsInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstanceGroupsInsertPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/instanceGroups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstanceGroupsInsertRequest.class, baseUrl, "/projects/{project}/zones/{zone}/instanceGroups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "instanceGroup", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstanceGroupsInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstanceGroupsInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -263,25 +268,26 @@ public class InstanceGroups {
     /**
      * Retrieves the list of zonal instance group resources contained within the specified zone. For managed instance groups, use the instanceGroupManagers or regionInstanceGroupManagers methods instead.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeInstanceGroupsListResponse computeInstanceGroupsList(org.openapis.openapi.models.operations.ComputeInstanceGroupsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeInstanceGroupsListResponse computeInstanceGroupsList(org.openapis.openapi.models.operations.ComputeInstanceGroupsListRequest request, org.openapis.openapi.models.operations.ComputeInstanceGroupsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstanceGroupsListPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/instanceGroups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstanceGroupsListRequest.class, baseUrl, "/projects/{project}/zones/{zone}/instanceGroups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstanceGroupsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstanceGroupsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -308,27 +314,28 @@ public class InstanceGroups {
     /**
      * Lists the instances in the specified instance group. The orderBy query parameter is not supported. The filter query parameter is supported, but only for expressions that use `eq` (equal) or `ne` (not equal) operators.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeInstanceGroupsListInstancesResponse computeInstanceGroupsListInstances(org.openapis.openapi.models.operations.ComputeInstanceGroupsListInstancesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeInstanceGroupsListInstancesResponse computeInstanceGroupsListInstances(org.openapis.openapi.models.operations.ComputeInstanceGroupsListInstancesRequest request, org.openapis.openapi.models.operations.ComputeInstanceGroupsListInstancesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstanceGroupsListInstancesPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/instanceGroups/{instanceGroup}/listInstances", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstanceGroupsListInstancesRequest.class, baseUrl, "/projects/{project}/zones/{zone}/instanceGroups/{instanceGroup}/listInstances", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "instanceGroupsListInstancesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstanceGroupsListInstancesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstanceGroupsListInstancesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -355,27 +362,28 @@ public class InstanceGroups {
     /**
      * Removes one or more instances from the specified instance group, but does not delete those instances. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration before the VM instance is removed or deleted.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeInstanceGroupsRemoveInstancesResponse computeInstanceGroupsRemoveInstances(org.openapis.openapi.models.operations.ComputeInstanceGroupsRemoveInstancesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeInstanceGroupsRemoveInstancesResponse computeInstanceGroupsRemoveInstances(org.openapis.openapi.models.operations.ComputeInstanceGroupsRemoveInstancesRequest request, org.openapis.openapi.models.operations.ComputeInstanceGroupsRemoveInstancesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstanceGroupsRemoveInstancesPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/instanceGroups/{instanceGroup}/removeInstances", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstanceGroupsRemoveInstancesRequest.class, baseUrl, "/projects/{project}/zones/{zone}/instanceGroups/{instanceGroup}/removeInstances", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "instanceGroupsRemoveInstancesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstanceGroupsRemoveInstancesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstanceGroupsRemoveInstancesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -402,27 +410,28 @@ public class InstanceGroups {
     /**
      * Sets the named ports for the specified instance group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeInstanceGroupsSetNamedPortsResponse computeInstanceGroupsSetNamedPorts(org.openapis.openapi.models.operations.ComputeInstanceGroupsSetNamedPortsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeInstanceGroupsSetNamedPortsResponse computeInstanceGroupsSetNamedPorts(org.openapis.openapi.models.operations.ComputeInstanceGroupsSetNamedPortsRequest request, org.openapis.openapi.models.operations.ComputeInstanceGroupsSetNamedPortsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstanceGroupsSetNamedPortsPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/instanceGroups/{instanceGroup}/setNamedPorts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInstanceGroupsSetNamedPortsRequest.class, baseUrl, "/projects/{project}/zones/{zone}/instanceGroups/{instanceGroup}/setNamedPorts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "instanceGroupsSetNamedPortsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstanceGroupsSetNamedPortsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInstanceGroupsSetNamedPortsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

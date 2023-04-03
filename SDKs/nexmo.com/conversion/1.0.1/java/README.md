@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.SmsConversionQueryParams;
 import org.openapis.openapi.models.operations.SmsConversionRequest;
 import org.openapis.openapi.models.operations.SmsConversionResponse;
 import org.openapis.openapi.models.shared.DeliveredEnum;
@@ -28,23 +27,17 @@ public class Application {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
                     option1 = new SecurityOption1() {{
-                        apiKey = new SchemeAPIKey() {{
-                            apiKey = "YOUR_API_KEY_HERE";
-                        }};
-                        apiSecret = new SchemeAPISecret() {{
-                            apiKey = "YOUR_API_KEY_HERE";
-                        }};
+                        apiKey = "YOUR_API_KEY_HERE";
+                        apiSecret = "YOUR_API_KEY_HERE";
                     }};
                 }})
                 .build();
 
             SmsConversionRequest req = new SmsConversionRequest() {{
-                queryParams = new SmsConversionQueryParams() {{
-                    delivered = "0";
-                    messageId = "provident";
-                    timestamp = "distinctio";
-                }};
-            }};            
+                delivered = "0";
+                messageId = "provident";
+                timestamp = "distinctio";
+            }}            
 
             SmsConversionResponse res = sdk.smsConversion.smsConversion(req);
 
@@ -58,7 +51,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### smsConversion

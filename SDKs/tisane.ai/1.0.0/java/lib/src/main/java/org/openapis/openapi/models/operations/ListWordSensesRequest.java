@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListWordSensesRequest {
-    
-    public ListWordSensesQueryParams queryParams;
-    public ListWordSensesRequest withQueryParams(ListWordSensesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * {{apiKeyDescription}}
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Ocp-Apim-Subscription-Key")
+    public String ocpApimSubscriptionKey;
+    public ListWordSensesRequest withOcpApimSubscriptionKey(String ocpApimSubscriptionKey) {
+        this.ocpApimSubscriptionKey = ocpApimSubscriptionKey;
         return this;
     }
     
+    /**
+     * (Required) a standard culture code (ISO-639 language code with an optional country extension)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public String language;
+    public ListWordSensesRequest withLanguage(String language) {
+        this.language = language;
+        return this;
+    }
     
-    public ListWordSensesHeaders headers;
-    public ListWordSensesRequest withHeaders(ListWordSensesHeaders headers) {
-        this.headers = headers;
+    /**
+     * (Required) the word to inspect
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=word")
+    public String word;
+    public ListWordSensesRequest withWord(String word) {
+        this.word = word;
         return this;
     }
     

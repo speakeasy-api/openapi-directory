@@ -41,13 +41,13 @@ public class Addresses {
      */
     public org.openapis.openapi.models.operations.GetOrganizationDevicesUplinksAddressesByDeviceResponse getOrganizationDevicesUplinksAddressesByDevice(org.openapis.openapi.models.operations.GetOrganizationDevicesUplinksAddressesByDeviceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationDevicesUplinksAddressesByDevicePathParams.class, baseUrl, "/organizations/{organizationId}/devices/uplinks/addresses/byDevice", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationDevicesUplinksAddressesByDeviceRequest.class, baseUrl, "/organizations/{organizationId}/devices/uplinks/addresses/byDevice", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationDevicesUplinksAddressesByDeviceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationDevicesUplinksAddressesByDeviceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

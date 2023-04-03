@@ -4,20 +4,95 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProductRequest {
-    
-    public ProductQueryParams queryParams;
-    public ProductRequest withQueryParams(ProductQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public ProductRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
+    /**
+     * **unique alphanumeric identifier** of the product
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=code")
+    public String code;
+    public ProductRequest withCode(String code) {
+        this.code = code;
+        return this;
+    }
     
-    public ProductHeaders headers;
-    public ProductRequest withHeaders(ProductHeaders headers) {
-        this.headers = headers;
+    /**
+     * **currency code** for the currency in which pricing is displayed
+     * - default=`'USD'`
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currencyCode")
+    public String currencyCode;
+    public ProductRequest withCurrencyCode(String currencyCode) {
+        this.currencyCode = currencyCode;
+        return this;
+    }
+    
+    /**
+     * **specifier:** 
+     * - `true`: return **all** tour grades, including those that are not available
+     * - `false`: only display tour grades that *are* available
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=excludeTourGradeAvailability")
+    public Boolean excludeTourGradeAvailability;
+    public ProductRequest withExcludeTourGradeAvailability(Boolean excludeTourGradeAvailability) {
+        this.excludeTourGradeAvailability = excludeTourGradeAvailability;
+        return this;
+    }
+    
+    /**
+     * **specifier** as to whether or not to show 'unavailable' products:
+     * 
+     *   - `true`: return *both* available and unavailable products
+     *   - `false`: return *only* available products (default)
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showUnavailable")
+    public Boolean showUnavailable;
+    public ProductRequest withShowUnavailable(Boolean showUnavailable) {
+        this.showUnavailable = showUnavailable;
+        return this;
+    }
+    
+    /**
+     * **specifier** of the order in which to return reviews
+     * 
+     * Sort order options:
+     * 
+     *   - `"REVIEW_RATING_A"`: Traveler Rating (low\u2192high) Average
+     *   - `"REVIEW_RATING_D"`: Traveler Rating (high\u2192low) Average
+     *   - `"REVIEW_RATING_SUBMISSION_DATE_D"`: Most recent review
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortOrder")
+    public org.openapis.openapi.models.shared.SortOrderREVIEWEnum sortOrder;
+    public ProductRequest withSortOrder(org.openapis.openapi.models.shared.SortOrderREVIEWEnum sortOrder) {
+        this.sortOrder = sortOrder;
+        return this;
+    }
+    
+    /**
+     * - `"VOUCHER_PAPER_ONLY"`: Paper Vouchers only accepted
+     * - `"VOUCHER_E"`: EVouchers + Paper Vouchers accepted
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=voucherOption")
+    public ProductVoucherOptionEnum voucherOption;
+    public ProductRequest withVoucherOption(ProductVoucherOptionEnum voucherOption) {
+        this.voucherOption = voucherOption;
         return this;
     }
     

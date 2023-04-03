@@ -4,20 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETPaymentRunSummaryRequest {
-    
-    public GETPaymentRunSummaryPathParams pathParams;
-    public GETPaymentRunSummaryRequest withPathParams(GETPaymentRunSummaryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+     * 
+     * The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Track-Id")
+    public String zuoraTrackId;
+    public GETPaymentRunSummaryRequest withZuoraTrackId(String zuoraTrackId) {
+        this.zuoraTrackId = zuoraTrackId;
         return this;
     }
     
-    
-    public GETPaymentRunSummaryHeaders headers;
-    public GETPaymentRunSummaryRequest withHeaders(GETPaymentRunSummaryHeaders headers) {
-        this.headers = headers;
+    /**
+     * The unique ID of a payment run. For example, 402890245f097f39015f0f074a2e0566.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=paymentRunId")
+    public String paymentRunId;
+    public GETPaymentRunSummaryRequest withPaymentRunId(String paymentRunId) {
+        this.paymentRunId = paymentRunId;
         return this;
     }
     

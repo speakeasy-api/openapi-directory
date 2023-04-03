@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateInstitutionAccountGroupRolesCreateRequest {
-    
-    public PrivateInstitutionAccountGroupRolesCreatePathParams pathParams;
-    public PrivateInstitutionAccountGroupRolesCreateRequest withPathParams(PrivateInstitutionAccountGroupRolesCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Account description
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public PrivateInstitutionAccountGroupRolesCreateRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public PrivateInstitutionAccountGroupRolesCreateRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public PrivateInstitutionAccountGroupRolesCreateSecurity security;
-    public PrivateInstitutionAccountGroupRolesCreateRequest withSecurity(PrivateInstitutionAccountGroupRolesCreateSecurity security) {
-        this.security = security;
+    /**
+     * Account identifier the user is associated to
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account_id")
+    public Long accountId;
+    public PrivateInstitutionAccountGroupRolesCreateRequest withAccountId(Long accountId) {
+        this.accountId = accountId;
         return this;
     }
     

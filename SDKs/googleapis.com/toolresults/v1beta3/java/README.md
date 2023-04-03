@@ -18,14 +18,10 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.ToolresultsProjectsGetSettingsSecurity;
-import org.openapis.openapi.models.operations.ToolresultsProjectsGetSettingsPathParams;
-import org.openapis.openapi.models.operations.ToolresultsProjectsGetSettingsQueryParams;
 import org.openapis.openapi.models.operations.ToolresultsProjectsGetSettingsRequest;
 import org.openapis.openapi.models.operations.ToolresultsProjectsGetSettingsResponse;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -34,33 +30,24 @@ public class Application {
                 .build();
 
             ToolresultsProjectsGetSettingsRequest req = new ToolresultsProjectsGetSettingsRequest() {{
-                security = new ToolresultsProjectsGetSettingsSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new ToolresultsProjectsGetSettingsPathParams() {{
-                    projectId = "corrupti";
-                }};
-                queryParams = new ToolresultsProjectsGetSettingsQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-            }};            
+                dollarXgafv = "2";
+                accessToken = "provident";
+                alt = "proto";
+                callback = "quibusdam";
+                fields = "unde";
+                key = "nulla";
+                oauthToken = "corrupti";
+                prettyPrint = false;
+                projectId = "illum";
+                quotaUser = "vel";
+                uploadType = "error";
+                uploadProtocol = "deserunt";
+            }}            
 
-            ToolresultsProjectsGetSettingsResponse res = sdk.projects.toolresultsProjectsGetSettings(req);
+            ToolresultsProjectsGetSettingsResponse res = sdk.projects.toolresultsProjectsGetSettings(req, new ToolresultsProjectsGetSettingsSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.projectSettings.isPresent()) {
                 // handle response
@@ -72,7 +59,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### projects

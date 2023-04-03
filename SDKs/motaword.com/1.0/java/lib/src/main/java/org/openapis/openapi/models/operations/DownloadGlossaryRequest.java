@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DownloadGlossaryRequest {
+    /**
+     * Glossary ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=glossaryId")
+    public Long glossaryId;
+    public DownloadGlossaryRequest withGlossaryId(Long glossaryId) {
+        this.glossaryId = glossaryId;
+        return this;
+    }
     
-    public DownloadGlossaryPathParams pathParams;
-    public DownloadGlossaryRequest withPathParams(DownloadGlossaryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public Long projectId;
+    public DownloadGlossaryRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     

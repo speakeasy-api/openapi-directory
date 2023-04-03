@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UnAssignPhoneNumCallQueueRequest {
-    
-    public UnAssignPhoneNumCallQueuePathParams pathParams;
-    public UnAssignPhoneNumCallQueueRequest withPathParams(UnAssignPhoneNumCallQueuePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique Identifier of the Call Queue. This can be retrieved from the List Call Queues API.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=callQueueId")
+    public String callQueueId;
+    public UnAssignPhoneNumCallQueueRequest withCallQueueId(String callQueueId) {
+        this.callQueueId = callQueueId;
         return this;
     }
     
-    
-    public UnAssignPhoneNumCallQueueSecurity security;
-    public UnAssignPhoneNumCallQueueRequest withSecurity(UnAssignPhoneNumCallQueueSecurity security) {
-        this.security = security;
+    /**
+     * Unique Identifier of the Phone Number. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=phoneNumberId")
+    public String phoneNumberId;
+    public UnAssignPhoneNumCallQueueRequest withPhoneNumberId(String phoneNumberId) {
+        this.phoneNumberId = phoneNumberId;
         return this;
     }
     

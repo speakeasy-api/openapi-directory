@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRatesRequest {
-    
-    public GetRatesPathParams pathParams;
-    public GetRatesRequest withPathParams(GetRatesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Type of Rate
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rate_type")
+    public GetRatesRateTypeEnum rateType;
+    public GetRatesRequest withRateType(GetRatesRateTypeEnum rateType) {
+        this.rateType = rateType;
         return this;
     }
     
-    
-    public GetRatesHeaders headers;
-    public GetRatesRequest withHeaders(GetRatesHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetRatesSecurity security;
-    public GetRatesRequest withSecurity(GetRatesSecurity security) {
-        this.security = security;
+    /**
+     * ApiSecretKey
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public GetRatesRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

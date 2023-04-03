@@ -4,27 +4,126 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PoolGetRequest {
-    
-    public PoolGetPathParams pathParams;
-    public PoolGetRequest withPathParams(PoolGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * An OData $expand clause.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$expand")
+    public String dollarExpand;
+    public PoolGetRequest withDollarExpand(String dollarExpand) {
+        this.dollarExpand = dollarExpand;
         return this;
     }
     
-    
-    public PoolGetQueryParams queryParams;
-    public PoolGetRequest withQueryParams(PoolGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * An OData $select clause.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$select")
+    public String dollarSelect;
+    public PoolGetRequest withDollarSelect(String dollarSelect) {
+        this.dollarSelect = dollarSelect;
         return this;
     }
     
+    /**
+     * An ETag is specified. Specify this header to perform the operation only if the resource's ETag is an exact match as specified.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
+    public String ifMatch;
+    public PoolGetRequest withIfMatch(String ifMatch) {
+        this.ifMatch = ifMatch;
+        return this;
+    }
     
-    public PoolGetHeaders headers;
-    public PoolGetRequest withHeaders(PoolGetHeaders headers) {
-        this.headers = headers;
+    /**
+     * Specify this header to perform the operation only if the resource has been modified since the specified date/time.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Modified-Since")
+    public String ifModifiedSince;
+    public PoolGetRequest withIfModifiedSince(String ifModifiedSince) {
+        this.ifModifiedSince = ifModifiedSince;
+        return this;
+    }
+    
+    /**
+     * An ETag is specified. Specify this header to perform the operation only if the resource's ETag does not match the specified ETag.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
+    public String ifNoneMatch;
+    public PoolGetRequest withIfNoneMatch(String ifNoneMatch) {
+        this.ifNoneMatch = ifNoneMatch;
+        return this;
+    }
+    
+    /**
+     * Specify this header to perform the operation only if the resource has not been modified since the specified date/time.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Unmodified-Since")
+    public String ifUnmodifiedSince;
+    public PoolGetRequest withIfUnmodifiedSince(String ifUnmodifiedSince) {
+        this.ifUnmodifiedSince = ifUnmodifiedSince;
+        return this;
+    }
+    
+    /**
+     * Client API Version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public PoolGetRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
+    
+    /**
+     * The caller-generated request identity, in the form of a GUID with no decoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
+    public String clientRequestId;
+    public PoolGetRequest withClientRequestId(String clientRequestId) {
+        this.clientRequestId = clientRequestId;
+        return this;
+    }
+    
+    /**
+     * The time the request was issued. If not specified, this header will be automatically populated with the current system clock time.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
+    public String ocpDate;
+    public PoolGetRequest withOcpDate(String ocpDate) {
+        this.ocpDate = ocpDate;
+        return this;
+    }
+    
+    /**
+     * The id of the pool to get.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=poolId")
+    public String poolId;
+    public PoolGetRequest withPoolId(String poolId) {
+        this.poolId = poolId;
+        return this;
+    }
+    
+    /**
+     * Whether the server should return the client-request-id identifier in the response.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
+    public Boolean returnClientRequestId;
+    public PoolGetRequest withReturnClientRequestId(Boolean returnClientRequestId) {
+        this.returnClientRequestId = returnClientRequestId;
+        return this;
+    }
+    
+    /**
+     * The maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
+    public Integer timeout;
+    public PoolGetRequest withTimeout(Integer timeout) {
+        this.timeout = timeout;
         return this;
     }
     

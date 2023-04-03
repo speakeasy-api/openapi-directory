@@ -42,10 +42,11 @@ public class LocationEndpoints {
      * You can then identify the one you want by coordinates, country, or the administrative area.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindPlacesFindPlacesGetResponse findPlacesFindPlacesGet(org.openapis.openapi.models.operations.FindPlacesFindPlacesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FindPlacesFindPlacesGetResponse findPlacesFindPlacesGet(org.openapis.openapi.models.operations.FindPlacesFindPlacesGetRequest request, org.openapis.openapi.models.operations.FindPlacesFindPlacesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/find_places");
         
@@ -53,14 +54,14 @@ public class LocationEndpoints {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindPlacesFindPlacesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindPlacesFindPlacesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -109,10 +110,11 @@ public class LocationEndpoints {
      * Unlike the `/find_places` endpoint, you should only specify the prefix of the place you are looking for. This is particularly useful for autocomplete forms. You can search for cities, mountains, lakes, countries, ZIP codes, etc. The response can contain multiple places, sorted by relevance. You can then identify the one you want by coordinates, country, or the administrative area.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindPlacesPrefixFindPlacesPrefixGetResponse findPlacesPrefixFindPlacesPrefixGet(org.openapis.openapi.models.operations.FindPlacesPrefixFindPlacesPrefixGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FindPlacesPrefixFindPlacesPrefixGetResponse findPlacesPrefixFindPlacesPrefixGet(org.openapis.openapi.models.operations.FindPlacesPrefixFindPlacesPrefixGetRequest request, org.openapis.openapi.models.operations.FindPlacesPrefixFindPlacesPrefixGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/find_places_prefix");
         
@@ -120,14 +122,14 @@ public class LocationEndpoints {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindPlacesPrefixFindPlacesPrefixGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindPlacesPrefixFindPlacesPrefixGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -176,10 +178,11 @@ public class LocationEndpoints {
      * *Note: If you specify coordinates of a secluded place (e.g. middle of the ocean), the nearest point can be very far from the coordinates.*
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.NearestPlaceNearestPlaceGetResponse nearestPlaceNearestPlaceGet(org.openapis.openapi.models.operations.NearestPlaceNearestPlaceGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.NearestPlaceNearestPlaceGetResponse nearestPlaceNearestPlaceGet(org.openapis.openapi.models.operations.NearestPlaceNearestPlaceGetRequest request, org.openapis.openapi.models.operations.NearestPlaceNearestPlaceGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/nearest_place");
         
@@ -187,14 +190,14 @@ public class LocationEndpoints {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.NearestPlaceNearestPlaceGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.NearestPlaceNearestPlaceGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

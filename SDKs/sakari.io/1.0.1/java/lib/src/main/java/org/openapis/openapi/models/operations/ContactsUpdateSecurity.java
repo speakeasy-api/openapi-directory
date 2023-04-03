@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContactsUpdateSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeSakariAuth sakariAuth;
-    public ContactsUpdateSecurity withSakariAuth(org.openapis.openapi.models.shared.SchemeSakariAuth sakariAuth) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String sakariAuth;
+    public ContactsUpdateSecurity withSakariAuth(String sakariAuth) {
         this.sakariAuth = sakariAuth;
         return this;
     }

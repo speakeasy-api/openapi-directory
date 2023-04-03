@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutApiPagesIdRequest {
-    
-    public PutApiPagesIdPathParams pathParams;
-    public PutApiPagesIdRequest withPathParams(PutApiPagesIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.Page page;
+    public PutApiPagesIdRequest withPage(org.openapis.openapi.models.shared.Page page) {
+        this.page = page;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Page request;
-    public PutApiPagesIdRequest withRequest(org.openapis.openapi.models.shared.Page request) {
-        this.request = request;
+    /**
+     * The ID of the page.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PutApiPagesIdRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

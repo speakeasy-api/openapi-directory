@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GenerateDownloadUrlForZipArchiveRequest {
-    
-    public GenerateDownloadUrlForZipArchiveHeaders headers;
-    public GenerateDownloadUrlForZipArchiveRequest withHeaders(GenerateDownloadUrlForZipArchiveHeaders headers) {
-        this.headers = headers;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public GenerateDownloadUrlForZipArchiveRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ZipDownloadRequest request;
-    public GenerateDownloadUrlForZipArchiveRequest withRequest(org.openapis.openapi.models.shared.ZipDownloadRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ZipDownloadRequest zipDownloadRequest;
+    public GenerateDownloadUrlForZipArchiveRequest withZipDownloadRequest(org.openapis.openapi.models.shared.ZipDownloadRequest zipDownloadRequest) {
+        this.zipDownloadRequest = zipDownloadRequest;
         return this;
     }
     

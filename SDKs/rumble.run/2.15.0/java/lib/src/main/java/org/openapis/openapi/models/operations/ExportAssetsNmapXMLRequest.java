@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExportAssetsNmapXMLRequest {
-    
-    public ExportAssetsNmapXMLQueryParams queryParams;
-    public ExportAssetsNmapXMLRequest withQueryParams(ExportAssetsNmapXMLQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ExportAssetsNmapXMLSecurity security;
-    public ExportAssetsNmapXMLRequest withSecurity(ExportAssetsNmapXMLSecurity security) {
-        this.security = security;
+    /**
+     * an optional search string for filtering results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public ExportAssetsNmapXMLRequest withSearch(String search) {
+        this.search = search;
         return this;
     }
     

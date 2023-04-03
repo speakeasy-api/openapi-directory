@@ -166,12 +166,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.VerifyCheckResponse verifyCheck(org.openapis.openapi.models.operations.VerifyCheckRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VerifyCheckPathParams.class, baseUrl, "/check/{format}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VerifyCheckRequest.class, baseUrl, "/check/{format}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "checkRequest", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -223,12 +223,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.VerifyControlResponse verifyControl(org.openapis.openapi.models.operations.VerifyControlRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VerifyControlPathParams.class, baseUrl, "/control/{format}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VerifyControlRequest.class, baseUrl, "/control/{format}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "controlRequest", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -276,12 +276,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.VerifyRequestWithPsd2Response verifyRequestWithPsd2(org.openapis.openapi.models.operations.VerifyRequestWithPsd2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VerifyRequestWithPsd2PathParams.class, baseUrl, "/psd2/{format}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VerifyRequestWithPsd2Request.class, baseUrl, "/psd2/{format}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "psd2Request", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -325,13 +325,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.VerifySearchResponse verifySearch(org.openapis.openapi.models.operations.VerifySearchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VerifySearchPathParams.class, baseUrl, "/search/{format}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VerifySearchRequest.class, baseUrl, "/search/{format}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.VerifySearchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.VerifySearchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

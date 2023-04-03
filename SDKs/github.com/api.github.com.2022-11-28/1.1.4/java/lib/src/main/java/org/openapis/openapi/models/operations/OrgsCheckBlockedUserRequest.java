@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgsCheckBlockedUserRequest {
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public OrgsCheckBlockedUserRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
     
-    public OrgsCheckBlockedUserPathParams pathParams;
-    public OrgsCheckBlockedUserRequest withPathParams(OrgsCheckBlockedUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The handle for the GitHub user account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public OrgsCheckBlockedUserRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

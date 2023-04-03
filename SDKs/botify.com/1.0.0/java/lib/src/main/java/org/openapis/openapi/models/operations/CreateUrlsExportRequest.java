@@ -7,24 +7,47 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateUrlsExportRequest {
-    
-    public CreateUrlsExportPathParams pathParams;
-    public CreateUrlsExportRequest withPathParams(CreateUrlsExportPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CreateUrlsExportQueryParams queryParams;
-    public CreateUrlsExportRequest withQueryParams(CreateUrlsExportQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UrlsQuery request;
-    public CreateUrlsExportRequest withRequest(org.openapis.openapi.models.shared.UrlsQuery request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UrlsQuery urlsQuery;
+    public CreateUrlsExportRequest withUrlsQuery(org.openapis.openapi.models.shared.UrlsQuery urlsQuery) {
+        this.urlsQuery = urlsQuery;
+        return this;
+    }
+    
+    /**
+     * Analysis' identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=analysis_slug")
+    public String analysisSlug;
+    public CreateUrlsExportRequest withAnalysisSlug(String analysisSlug) {
+        this.analysisSlug = analysisSlug;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=area")
+    public CreateUrlsExportAreaEnum area;
+    public CreateUrlsExportRequest withArea(CreateUrlsExportAreaEnum area) {
+        this.area = area;
+        return this;
+    }
+    
+    /**
+     * Project's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_slug")
+    public String projectSlug;
+    public CreateUrlsExportRequest withProjectSlug(String projectSlug) {
+        this.projectSlug = projectSlug;
+        return this;
+    }
+    
+    /**
+     * User's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public CreateUrlsExportRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

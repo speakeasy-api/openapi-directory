@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSshKeysIdRequest {
-    
-    public GetSshKeysIdPathParams pathParams;
-    public GetSshKeysIdRequest withPathParams(GetSshKeysIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the SSH key
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetSshKeysIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

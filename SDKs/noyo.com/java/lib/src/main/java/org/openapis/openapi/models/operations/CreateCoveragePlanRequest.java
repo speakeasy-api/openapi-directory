@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateCoveragePlanRequest {
-    
-    public CreateCoveragePlanPathParams pathParams;
-    public CreateCoveragePlanRequest withPathParams(CreateCoveragePlanPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CoveragePlanCreateRequest coveragePlanCreateRequest;
+    public CreateCoveragePlanRequest withCoveragePlanCreateRequest(org.openapis.openapi.models.shared.CoveragePlanCreateRequest coveragePlanCreateRequest) {
+        this.coveragePlanCreateRequest = coveragePlanCreateRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CoveragePlanCreateRequest request;
-    public CreateCoveragePlanRequest withRequest(org.openapis.openapi.models.shared.CoveragePlanCreateRequest request) {
-        this.request = request;
+    /**
+     * The unique identifier of the group coverage in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_coverage_id")
+    public String groupCoverageId;
+    public CreateCoveragePlanRequest withGroupCoverageId(String groupCoverageId) {
+        this.groupCoverageId = groupCoverageId;
         return this;
     }
     

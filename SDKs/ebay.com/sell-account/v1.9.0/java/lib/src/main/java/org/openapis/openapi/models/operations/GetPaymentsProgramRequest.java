@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPaymentsProgramRequest {
-    
-    public GetPaymentsProgramPathParams pathParams;
-    public GetPaymentsProgramRequest withPathParams(GetPaymentsProgramPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * This path parameter specifies the eBay marketplace of the payments program for which you want to retrieve the seller's status.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=marketplace_id")
+    public String marketplaceId;
+    public GetPaymentsProgramRequest withMarketplaceId(String marketplaceId) {
+        this.marketplaceId = marketplaceId;
         return this;
     }
     
-    
-    public GetPaymentsProgramSecurity security;
-    public GetPaymentsProgramRequest withSecurity(GetPaymentsProgramSecurity security) {
-        this.security = security;
+    /**
+     * This path parameter specifies the payments program whose status is returned by the call.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payments_program_type")
+    public String paymentsProgramType;
+    public GetPaymentsProgramRequest withPaymentsProgramType(String paymentsProgramType) {
+        this.paymentsProgramType = paymentsProgramType;
         return this;
     }
     

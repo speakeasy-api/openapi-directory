@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoCreateKeyRequest {
-    
-    public RepoCreateKeyPathParams pathParams;
-    public RepoCreateKeyRequest withPathParams(RepoCreateKeyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateKeyOption createKeyOption;
+    public RepoCreateKeyRequest withCreateKeyOption(org.openapis.openapi.models.shared.CreateKeyOption createKeyOption) {
+        this.createKeyOption = createKeyOption;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateKeyOption request;
-    public RepoCreateKeyRequest withRequest(org.openapis.openapi.models.shared.CreateKeyOption request) {
-        this.request = request;
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoCreateKeyRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoCreateKeyRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

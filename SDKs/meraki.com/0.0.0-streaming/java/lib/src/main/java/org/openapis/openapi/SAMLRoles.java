@@ -40,12 +40,12 @@ public class SAMLRoles {
      */
     public org.openapis.openapi.models.operations.CreateOrganizationSamlRoleResponse createOrganizationSamlRole(org.openapis.openapi.models.operations.CreateOrganizationSamlRoleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationSamlRolePathParams.class, baseUrl, "/organizations/{organizationId}/samlRoles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationSamlRoleRequest.class, baseUrl, "/organizations/{organizationId}/samlRoles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -85,7 +85,7 @@ public class SAMLRoles {
      */
     public org.openapis.openapi.models.operations.GetOrganizationSamlRoleResponse getOrganizationSamlRole(org.openapis.openapi.models.operations.GetOrganizationSamlRoleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSamlRolePathParams.class, baseUrl, "/organizations/{organizationId}/samlRoles/{samlRoleId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSamlRoleRequest.class, baseUrl, "/organizations/{organizationId}/samlRoles/{samlRoleId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -125,7 +125,7 @@ public class SAMLRoles {
      */
     public org.openapis.openapi.models.operations.GetOrganizationSamlRolesResponse getOrganizationSamlRoles(org.openapis.openapi.models.operations.GetOrganizationSamlRolesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSamlRolesPathParams.class, baseUrl, "/organizations/{organizationId}/samlRoles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSamlRolesRequest.class, baseUrl, "/organizations/{organizationId}/samlRoles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -165,12 +165,12 @@ public class SAMLRoles {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationSamlRoleResponse updateOrganizationSamlRole(org.openapis.openapi.models.operations.UpdateOrganizationSamlRoleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationSamlRolePathParams.class, baseUrl, "/organizations/{organizationId}/samlRoles/{samlRoleId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationSamlRoleRequest.class, baseUrl, "/organizations/{organizationId}/samlRoles/{samlRoleId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

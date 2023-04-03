@@ -4,20 +4,95 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListAssessmentControlInsightsByControlDomainRequest {
-    
-    public ListAssessmentControlInsightsByControlDomainQueryParams queryParams;
-    public ListAssessmentControlInsightsByControlDomainRequest withQueryParams(ListAssessmentControlInsightsByControlDomainQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListAssessmentControlInsightsByControlDomainRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListAssessmentControlInsightsByControlDomainRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public ListAssessmentControlInsightsByControlDomainHeaders headers;
-    public ListAssessmentControlInsightsByControlDomainRequest withHeaders(ListAssessmentControlInsightsByControlDomainHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListAssessmentControlInsightsByControlDomainRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListAssessmentControlInsightsByControlDomainRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListAssessmentControlInsightsByControlDomainRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListAssessmentControlInsightsByControlDomainRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListAssessmentControlInsightsByControlDomainRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The unique identifier for the active assessment. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assessmentId")
+    public String assessmentId;
+    public ListAssessmentControlInsightsByControlDomainRequest withAssessmentId(String assessmentId) {
+        this.assessmentId = assessmentId;
+        return this;
+    }
+    
+    /**
+     * The unique identifier for the control domain. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=controlDomainId")
+    public String controlDomainId;
+    public ListAssessmentControlInsightsByControlDomainRequest withControlDomainId(String controlDomainId) {
+        this.controlDomainId = controlDomainId;
+        return this;
+    }
+    
+    /**
+     * Represents the maximum number of results on a page or for an API request call. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public ListAssessmentControlInsightsByControlDomainRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * The pagination token that's used to fetch the next set of results. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
+    public String nextToken;
+    public ListAssessmentControlInsightsByControlDomainRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
     

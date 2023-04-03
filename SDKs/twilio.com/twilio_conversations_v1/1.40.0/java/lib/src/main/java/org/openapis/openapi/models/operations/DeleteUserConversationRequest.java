@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteUserConversationRequest {
-    
-    public DeleteUserConversationPathParams pathParams;
-    public DeleteUserConversationRequest withPathParams(DeleteUserConversationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique SID identifier of the Conversation. This value can be either the `sid` or the `unique_name` of the [Conversation resource](https://www.twilio.com/docs/conversations/api/conversation-resource).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConversationSid")
+    public String conversationSid;
+    public DeleteUserConversationRequest withConversationSid(String conversationSid) {
+        this.conversationSid = conversationSid;
         return this;
     }
     
-    
-    public DeleteUserConversationSecurity security;
-    public DeleteUserConversationRequest withSecurity(DeleteUserConversationSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteUserConversationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique SID identifier of the [User resource](https://www.twilio.com/docs/conversations/api/user-resource). This value can be either the `sid` or the `identity` of the User resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=UserSid")
+    public String userSid;
+    public DeleteUserConversationRequest withUserSid(String userSid) {
+        this.userSid = userSid;
         return this;
     }
     

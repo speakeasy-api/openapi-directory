@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutRealmUsersManagementPermissionsRequest {
-    
-    public PutRealmUsersManagementPermissionsPathParams pathParams;
-    public PutRealmUsersManagementPermissionsRequest withPathParams(PutRealmUsersManagementPermissionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ManagementPermissionReference managementPermissionReference;
+    public PutRealmUsersManagementPermissionsRequest withManagementPermissionReference(org.openapis.openapi.models.shared.ManagementPermissionReference managementPermissionReference) {
+        this.managementPermissionReference = managementPermissionReference;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ManagementPermissionReference request;
-    public PutRealmUsersManagementPermissionsRequest withRequest(org.openapis.openapi.models.shared.ManagementPermissionReference request) {
-        this.request = request;
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PutRealmUsersManagementPermissionsRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

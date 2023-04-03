@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TfrByDistanceUsV1RestrictionsDistanceQueryPostRequest {
-    
-    public TfrByDistanceUsV1RestrictionsDistanceQueryPostHeaders headers;
-    public TfrByDistanceUsV1RestrictionsDistanceQueryPostRequest withHeaders(TfrByDistanceUsV1RestrictionsDistanceQueryPostHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.NOTAMsByDistance notaMsByDistance;
+    public TfrByDistanceUsV1RestrictionsDistanceQueryPostRequest withNOTAMsByDistance(org.openapis.openapi.models.shared.NOTAMsByDistance notaMsByDistance) {
+        this.notaMsByDistance = notaMsByDistance;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.NOTAMsByDistance request;
-    public TfrByDistanceUsV1RestrictionsDistanceQueryPostRequest withRequest(org.openapis.openapi.models.shared.NOTAMsByDistance request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public TfrByDistanceUsV1RestrictionsDistanceQueryPostRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

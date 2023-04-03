@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.GetrulesforapricetablePathParams;
-import org.openapis.openapi.models.operations.GetrulesforapricetableHeaders;
 import org.openapis.openapi.models.operations.GetrulesforapricetableRequest;
 import org.openapis.openapi.models.operations.GetrulesforapricetableResponse;
 
@@ -14,24 +12,16 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    appKey = new SchemeAppKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                    appToken = new SchemeAppToken() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    appKey = "YOUR_API_KEY_HERE";
+                    appToken = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GetrulesforapricetableRequest req = new GetrulesforapricetableRequest() {{
-                pathParams = new GetrulesforapricetablePathParams() {{
-                    priceTableId = "b2c";
-                }};
-                headers = new GetrulesforapricetableHeaders() {{
-                    accept = "application/json";
-                    contentType = "corrupti";
-                }};
-            }};            
+                accept = "application/json";
+                contentType = "corrupti";
+                priceTableId = "b2c";
+            }}            
 
             GetrulesforapricetableResponse res = sdk.priceTables.getrulesforapricetable(req);
 

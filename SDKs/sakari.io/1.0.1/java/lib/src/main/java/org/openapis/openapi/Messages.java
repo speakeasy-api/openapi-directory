@@ -38,19 +38,20 @@ public class Messages {
      * Fetch message by id
      * Returns a single messag
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MessagesFetchResponse messagesFetch(org.openapis.openapi.models.operations.MessagesFetchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MessagesFetchResponse messagesFetch(org.openapis.openapi.models.operations.MessagesFetchRequest request, org.openapis.openapi.models.operations.MessagesFetchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MessagesFetchPathParams.class, baseUrl, "/v1/accounts/{accountId}/messages/{messageId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MessagesFetchRequest.class, baseUrl, "/v1/accounts/{accountId}/messages/{messageId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -77,25 +78,26 @@ public class Messages {
     /**
      * Fetch messages
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MessagesFetchAllResponse messagesFetchAll(org.openapis.openapi.models.operations.MessagesFetchAllRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MessagesFetchAllResponse messagesFetchAll(org.openapis.openapi.models.operations.MessagesFetchAllRequest request, org.openapis.openapi.models.operations.MessagesFetchAllSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MessagesFetchAllPathParams.class, baseUrl, "/v1/accounts/{accountId}/messages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MessagesFetchAllRequest.class, baseUrl, "/v1/accounts/{accountId}/messages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MessagesFetchAllQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MessagesFetchAllRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -122,21 +124,22 @@ public class Messages {
     /**
      * Send Messages
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MessagesSendResponse messagesSend(org.openapis.openapi.models.operations.MessagesSendRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MessagesSendResponse messagesSend(org.openapis.openapi.models.operations.MessagesSendRequest request, org.openapis.openapi.models.operations.MessagesSendSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MessagesSendPathParams.class, baseUrl, "/v1/accounts/{accountId}/messages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MessagesSendRequest.class, baseUrl, "/v1/accounts/{accountId}/messages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "sendMessagesRequest", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FindContactListsRequest {
-    
-    public FindContactListsQueryParams queryParams;
-    public FindContactListsRequest withQueryParams(FindContactListsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * ~
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contactCount")
+    public Integer contactCount;
+    public FindContactListsRequest withContactCount(Integer contactCount) {
+        this.contactCount = contactCount;
         return this;
     }
     
+    /**
+     * ~
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exactMatch")
+    public Boolean exactMatch;
+    public FindContactListsRequest withExactMatch(Boolean exactMatch) {
+        this.exactMatch = exactMatch;
+        return this;
+    }
     
-    public FindContactListsSecurity security;
-    public FindContactListsRequest withSecurity(FindContactListsSecurity security) {
-        this.security = security;
+    /**
+     * Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public FindContactListsRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * To set the maximum number of records to return in a paged list response. The default is 100
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public FindContactListsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * A name or a partial name of a contact list
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public FindContactListsRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Offset to the start of a given page. The default is 0. Check [pagination](https://developers.callfire.com/docs.html#pagination) page for more information about pagination in CallFire API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public FindContactListsRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * ~
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
+    public String orderBy;
+    public FindContactListsRequest withOrderBy(String orderBy) {
+        this.orderBy = orderBy;
         return this;
     }
     

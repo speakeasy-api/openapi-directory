@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNameRequest {
-    
-    public UpdateNamePathParams pathParams;
-    public UpdateNameRequest withPathParams(UpdateNamePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.StringDTO stringDTO;
+    public UpdateNameRequest withStringDTO(org.openapis.openapi.models.shared.StringDTO stringDTO) {
+        this.stringDTO = stringDTO;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.StringDTO request;
-    public UpdateNameRequest withRequest(org.openapis.openapi.models.shared.StringDTO request) {
-        this.request = request;
+    /**
+     * task's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taskId")
+    public String taskId;
+    public UpdateNameRequest withTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
     

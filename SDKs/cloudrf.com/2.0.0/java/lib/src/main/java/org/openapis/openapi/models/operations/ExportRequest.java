@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExportRequest {
-    
-    public ExportQueryParams queryParams;
-    public ExportRequest withQueryParams(ExportQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Calculation file name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=file")
+    public String file;
+    public ExportRequest withFile(String file) {
+        this.file = file;
         return this;
     }
     
-    
-    public ExportSecurity security;
-    public ExportRequest withSecurity(ExportSecurity security) {
-        this.security = security;
+    /**
+     * Raster/Vector file format: KML, KMZ, SHP, GeoTIFF
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fmt")
+    public ExportFmtEnum fmt;
+    public ExportRequest withFmt(ExportFmtEnum fmt) {
+        this.fmt = fmt;
         return this;
     }
     

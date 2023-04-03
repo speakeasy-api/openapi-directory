@@ -254,12 +254,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.ActionARealTimeDecisionResponse actionARealTimeDecision(org.openapis.openapi.models.operations.ActionARealTimeDecisionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionARealTimeDecisionPathParams.class, baseUrl, "/real_time_decisions/{real_time_decision_id}/action", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionARealTimeDecisionRequest.class, baseUrl, "/real_time_decisions/{real_time_decision_id}/action", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "actionARealTimeDecisionParameters", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -306,7 +306,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.ApproveACheckTransferResponse approveACheckTransfer(org.openapis.openapi.models.operations.ApproveACheckTransferRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApproveACheckTransferPathParams.class, baseUrl, "/check_transfers/{check_transfer_id}/approve", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApproveACheckTransferRequest.class, baseUrl, "/check_transfers/{check_transfer_id}/approve", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -353,7 +353,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.ApproveAWireTransferResponse approveAWireTransfer(org.openapis.openapi.models.operations.ApproveAWireTransferRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApproveAWireTransferPathParams.class, baseUrl, "/wire_transfers/{wire_transfer_id}/approve", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApproveAWireTransferRequest.class, baseUrl, "/wire_transfers/{wire_transfer_id}/approve", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -400,7 +400,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.ApproveAnAccountTransferResponse approveAnAccountTransfer(org.openapis.openapi.models.operations.ApproveAnAccountTransferRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApproveAnAccountTransferPathParams.class, baseUrl, "/account_transfers/{account_transfer_id}/approve", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApproveAnAccountTransferRequest.class, baseUrl, "/account_transfers/{account_transfer_id}/approve", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -448,7 +448,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.ApproveAnAchTransferResponse approveAnAchTransfer(org.openapis.openapi.models.operations.ApproveAnAchTransferRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApproveAnAchTransferPathParams.class, baseUrl, "/ach_transfers/{ach_transfer_id}/approve", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApproveAnAchTransferRequest.class, baseUrl, "/ach_transfers/{ach_transfer_id}/approve", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -496,7 +496,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.CancelAPendingAchTransferResponse cancelAPendingAchTransfer(org.openapis.openapi.models.operations.CancelAPendingAchTransferRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelAPendingAchTransferPathParams.class, baseUrl, "/ach_transfers/{ach_transfer_id}/cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelAPendingAchTransferRequest.class, baseUrl, "/ach_transfers/{ach_transfer_id}/cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -543,7 +543,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.CancelAPendingCheckTransferResponse cancelAPendingCheckTransfer(org.openapis.openapi.models.operations.CancelAPendingCheckTransferRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelAPendingCheckTransferPathParams.class, baseUrl, "/check_transfers/{check_transfer_id}/cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelAPendingCheckTransferRequest.class, baseUrl, "/check_transfers/{check_transfer_id}/cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -590,7 +590,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.CancelAPendingWireTransferResponse cancelAPendingWireTransfer(org.openapis.openapi.models.operations.CancelAPendingWireTransferRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelAPendingWireTransferPathParams.class, baseUrl, "/wire_transfers/{wire_transfer_id}/cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelAPendingWireTransferRequest.class, baseUrl, "/wire_transfers/{wire_transfer_id}/cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -637,7 +637,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.CancelAnAccountTransferResponse cancelAnAccountTransfer(org.openapis.openapi.models.operations.CancelAnAccountTransferRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelAnAccountTransferPathParams.class, baseUrl, "/account_transfers/{account_transfer_id}/cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelAnAccountTransferRequest.class, baseUrl, "/account_transfers/{account_transfer_id}/cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -684,7 +684,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.CloseAnAccountResponse closeAnAccount(org.openapis.openapi.models.operations.CloseAnAccountRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloseAnAccountPathParams.class, baseUrl, "/accounts/{account_id}/close", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloseAnAccountRequest.class, baseUrl, "/accounts/{account_id}/close", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -732,7 +732,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.CompleteASandboxAccountTransferResponse completeASandboxAccountTransfer(org.openapis.openapi.models.operations.CompleteASandboxAccountTransferRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompleteASandboxAccountTransferPathParams.class, baseUrl, "/simulations/account_transfers/{account_transfer_id}/complete", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompleteASandboxAccountTransferRequest.class, baseUrl, "/simulations/account_transfers/{account_transfer_id}/complete", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -777,7 +777,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateACardResponse createACard(org.openapis.openapi.models.operations.CreateACardRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateACardResponse createACard(org.openapis.openapi.models.shared.CreateACardParameters request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/cards");
         
@@ -829,7 +829,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateACardDisputeResponse createACardDispute(org.openapis.openapi.models.operations.CreateACardDisputeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateACardDisputeResponse createACardDispute(org.openapis.openapi.models.shared.CreateACardDisputeParameters request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/card_disputes");
         
@@ -881,7 +881,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateACardProfileResponse createACardProfile(org.openapis.openapi.models.operations.CreateACardProfileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateACardProfileResponse createACardProfile(org.openapis.openapi.models.shared.CreateACardProfileParameters request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/card_profiles");
         
@@ -933,7 +933,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateACheckDepositResponse createACheckDeposit(org.openapis.openapi.models.operations.CreateACheckDepositRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateACheckDepositResponse createACheckDeposit(org.openapis.openapi.models.shared.CreateACheckDepositParameters request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/check_deposits");
         
@@ -985,7 +985,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateACheckTransferResponse createACheckTransfer(org.openapis.openapi.models.operations.CreateACheckTransferRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateACheckTransferResponse createACheckTransfer(org.openapis.openapi.models.shared.CreateACheckTransferParameters request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/check_transfers");
         
@@ -1038,7 +1038,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateAFileResponse createAFile(org.openapis.openapi.models.operations.CreateAFileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateAFileResponse createAFile(org.openapis.openapi.models.shared.CreateAFileParameters request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/files");
         
@@ -1090,7 +1090,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateALimitResponse createALimit(org.openapis.openapi.models.operations.CreateALimitRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateALimitResponse createALimit(org.openapis.openapi.models.shared.CreateALimitParameters request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/limits");
         
@@ -1144,12 +1144,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.CreateASupplementalDocumentForAnEntityResponse createASupplementalDocumentForAnEntity(org.openapis.openapi.models.operations.CreateASupplementalDocumentForAnEntityRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateASupplementalDocumentForAnEntityPathParams.class, baseUrl, "/entities/{entity_id}/supplemental_documents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateASupplementalDocumentForAnEntityRequest.class, baseUrl, "/entities/{entity_id}/supplemental_documents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createASupplementalDocumentForAnEntityParameters", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1194,7 +1194,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateAWireDrawdownRequestResponse createAWireDrawdownRequest(org.openapis.openapi.models.operations.CreateAWireDrawdownRequestRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateAWireDrawdownRequestResponse createAWireDrawdownRequest(org.openapis.openapi.models.shared.CreateAWireDrawdownRequestParameters request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/wire_drawdown_requests");
         
@@ -1246,7 +1246,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateAWireTransferResponse createAWireTransfer(org.openapis.openapi.models.operations.CreateAWireTransferRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateAWireTransferResponse createAWireTransfer(org.openapis.openapi.models.shared.CreateAWireTransferParameters request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/wire_transfers");
         
@@ -1298,7 +1298,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateAnAccountResponse createAnAccount(org.openapis.openapi.models.operations.CreateAnAccountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateAnAccountResponse createAnAccount(org.openapis.openapi.models.shared.CreateAnAccountParameters request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/accounts");
         
@@ -1350,7 +1350,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateAnAccountNumberResponse createAnAccountNumber(org.openapis.openapi.models.operations.CreateAnAccountNumberRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateAnAccountNumberResponse createAnAccountNumber(org.openapis.openapi.models.shared.CreateAnAccountNumberParameters request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account_numbers");
         
@@ -1402,7 +1402,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateAnAccountTransferResponse createAnAccountTransfer(org.openapis.openapi.models.operations.CreateAnAccountTransferRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateAnAccountTransferResponse createAnAccountTransfer(org.openapis.openapi.models.shared.CreateAnAccountTransferParameters request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account_transfers");
         
@@ -1454,7 +1454,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateAnAchPrenotificationResponse createAnAchPrenotification(org.openapis.openapi.models.operations.CreateAnAchPrenotificationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateAnAchPrenotificationResponse createAnAchPrenotification(org.openapis.openapi.models.shared.CreateAnAchPrenotificationParameters request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/ach_prenotifications");
         
@@ -1506,7 +1506,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateAnAchReturnResponse createAnAchReturn(org.openapis.openapi.models.operations.CreateAnAchReturnRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateAnAchReturnResponse createAnAchReturn(org.openapis.openapi.models.shared.CreateAnAchReturnParameters request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/inbound_ach_transfer_returns");
         
@@ -1558,7 +1558,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateAnAchTransferResponse createAnAchTransfer(org.openapis.openapi.models.operations.CreateAnAchTransferRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateAnAchTransferResponse createAnAchTransfer(org.openapis.openapi.models.shared.CreateAnAchTransferParameters request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/ach_transfers");
         
@@ -1610,7 +1610,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateAnEntityResponse createAnEntity(org.openapis.openapi.models.operations.CreateAnEntityRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateAnEntityResponse createAnEntity(org.openapis.openapi.models.shared.CreateAnEntityParameters request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/entities");
         
@@ -1662,7 +1662,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateAnEventSubscriptionResponse createAnEventSubscription(org.openapis.openapi.models.operations.CreateAnEventSubscriptionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateAnEventSubscriptionResponse createAnEventSubscription(org.openapis.openapi.models.shared.CreateAnEventSubscriptionParameters request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/event_subscriptions");
         
@@ -1714,7 +1714,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateAnExternalAccountResponse createAnExternalAccount(org.openapis.openapi.models.operations.CreateAnExternalAccountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateAnExternalAccountResponse createAnExternalAccount(org.openapis.openapi.models.shared.CreateAnExternalAccountParameters request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/external_accounts");
         
@@ -1769,7 +1769,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DepositASandboxCheckTransferResponse depositASandboxCheckTransfer(org.openapis.openapi.models.operations.DepositASandboxCheckTransferRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DepositASandboxCheckTransferPathParams.class, baseUrl, "/simulations/check_transfers/{check_transfer_id}/deposit", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DepositASandboxCheckTransferRequest.class, baseUrl, "/simulations/check_transfers/{check_transfer_id}/deposit", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -1822,7 +1822,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListAccountNumbersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListAccountNumbersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1875,7 +1875,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListAccountStatementsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListAccountStatementsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1928,7 +1928,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListAccountTransfersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListAccountTransfersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1981,7 +1981,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListAccountsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListAccountsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2034,7 +2034,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListAchPrenotificationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListAchPrenotificationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2087,7 +2087,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListAchTransfersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListAchTransfersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2140,7 +2140,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCardDisputesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCardDisputesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2193,7 +2193,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCardProfilesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCardProfilesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2246,7 +2246,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCardsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCardsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2299,7 +2299,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCheckDepositsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCheckDepositsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2352,7 +2352,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCheckTransfersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCheckTransfersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2405,7 +2405,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListDeclinedTransactionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListDeclinedTransactionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2458,7 +2458,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListDigitalWalletTokensQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListDigitalWalletTokensRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2511,7 +2511,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListDocumentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListDocumentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2564,7 +2564,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListEntitiesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListEntitiesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2617,7 +2617,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListEventSubscriptionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListEventSubscriptionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2670,7 +2670,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListEventsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListEventsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2723,7 +2723,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListExternalAccountsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListExternalAccountsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2776,7 +2776,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListFilesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListFilesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2829,7 +2829,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListInboundAchTransferReturnsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListInboundAchTransferReturnsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2882,7 +2882,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListInboundWireDrawdownRequestsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListInboundWireDrawdownRequestsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2935,7 +2935,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListLimitsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListLimitsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2988,7 +2988,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListOauthConnectionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListOauthConnectionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3041,7 +3041,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListPendingTransactionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListPendingTransactionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3095,7 +3095,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListRoutingNumbersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListRoutingNumbersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3148,7 +3148,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListTransactionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListTransactionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3201,7 +3201,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListWireDrawdownRequestsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListWireDrawdownRequestsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3254,7 +3254,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListWireTransfersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListWireTransfersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3302,7 +3302,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.MailASandboxCheckTransferResponse mailASandboxCheckTransfer(org.openapis.openapi.models.operations.MailASandboxCheckTransferRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MailASandboxCheckTransferPathParams.class, baseUrl, "/simulations/check_transfers/{check_transfer_id}/mail", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MailASandboxCheckTransferRequest.class, baseUrl, "/simulations/check_transfers/{check_transfer_id}/mail", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -3350,7 +3350,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.RejectASandboxCheckDepositResponse rejectASandboxCheckDeposit(org.openapis.openapi.models.operations.RejectASandboxCheckDepositRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RejectASandboxCheckDepositPathParams.class, baseUrl, "/simulations/check_deposits/{check_deposit_id}/reject", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RejectASandboxCheckDepositRequest.class, baseUrl, "/simulations/check_deposits/{check_deposit_id}/reject", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -3397,7 +3397,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.RequestAStopPaymentOnACheckTransferResponse requestAStopPaymentOnACheckTransfer(org.openapis.openapi.models.operations.RequestAStopPaymentOnACheckTransferRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RequestAStopPaymentOnACheckTransferPathParams.class, baseUrl, "/check_transfers/{check_transfer_id}/stop_payment", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RequestAStopPaymentOnACheckTransferRequest.class, baseUrl, "/check_transfers/{check_transfer_id}/stop_payment", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -3444,7 +3444,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.RetrieveACardResponse retrieveACard(org.openapis.openapi.models.operations.RetrieveACardRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveACardPathParams.class, baseUrl, "/cards/{card_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveACardRequest.class, baseUrl, "/cards/{card_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3491,7 +3491,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.RetrieveACardDisputeResponse retrieveACardDispute(org.openapis.openapi.models.operations.RetrieveACardDisputeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveACardDisputePathParams.class, baseUrl, "/card_disputes/{card_dispute_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveACardDisputeRequest.class, baseUrl, "/card_disputes/{card_dispute_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3538,7 +3538,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.RetrieveACardProfileResponse retrieveACardProfile(org.openapis.openapi.models.operations.RetrieveACardProfileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveACardProfilePathParams.class, baseUrl, "/card_profiles/{card_profile_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveACardProfileRequest.class, baseUrl, "/card_profiles/{card_profile_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3585,7 +3585,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.RetrieveACheckDepositResponse retrieveACheckDeposit(org.openapis.openapi.models.operations.RetrieveACheckDepositRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveACheckDepositPathParams.class, baseUrl, "/check_deposits/{check_deposit_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveACheckDepositRequest.class, baseUrl, "/check_deposits/{check_deposit_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3632,7 +3632,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.RetrieveACheckTransferResponse retrieveACheckTransfer(org.openapis.openapi.models.operations.RetrieveACheckTransferRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveACheckTransferPathParams.class, baseUrl, "/check_transfers/{check_transfer_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveACheckTransferRequest.class, baseUrl, "/check_transfers/{check_transfer_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3679,7 +3679,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.RetrieveADeclinedTransactionResponse retrieveADeclinedTransaction(org.openapis.openapi.models.operations.RetrieveADeclinedTransactionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveADeclinedTransactionPathParams.class, baseUrl, "/declined_transactions/{declined_transaction_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveADeclinedTransactionRequest.class, baseUrl, "/declined_transactions/{declined_transaction_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3726,7 +3726,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.RetrieveADigitalWalletTokenResponse retrieveADigitalWalletToken(org.openapis.openapi.models.operations.RetrieveADigitalWalletTokenRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveADigitalWalletTokenPathParams.class, baseUrl, "/digital_wallet_tokens/{digital_wallet_token_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveADigitalWalletTokenRequest.class, baseUrl, "/digital_wallet_tokens/{digital_wallet_token_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3773,7 +3773,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.RetrieveADocumentResponse retrieveADocument(org.openapis.openapi.models.operations.RetrieveADocumentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveADocumentPathParams.class, baseUrl, "/documents/{document_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveADocumentRequest.class, baseUrl, "/documents/{document_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3820,7 +3820,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.RetrieveAFileResponse retrieveAFile(org.openapis.openapi.models.operations.RetrieveAFileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAFilePathParams.class, baseUrl, "/files/{file_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAFileRequest.class, baseUrl, "/files/{file_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3867,7 +3867,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.RetrieveALimitResponse retrieveALimit(org.openapis.openapi.models.operations.RetrieveALimitRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveALimitPathParams.class, baseUrl, "/limits/{limit_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveALimitRequest.class, baseUrl, "/limits/{limit_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3914,7 +3914,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.RetrieveAPendingTransactionResponse retrieveAPendingTransaction(org.openapis.openapi.models.operations.RetrieveAPendingTransactionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAPendingTransactionPathParams.class, baseUrl, "/pending_transactions/{pending_transaction_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAPendingTransactionRequest.class, baseUrl, "/pending_transactions/{pending_transaction_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3961,7 +3961,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.RetrieveARealTimeDecisionResponse retrieveARealTimeDecision(org.openapis.openapi.models.operations.RetrieveARealTimeDecisionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveARealTimeDecisionPathParams.class, baseUrl, "/real_time_decisions/{real_time_decision_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveARealTimeDecisionRequest.class, baseUrl, "/real_time_decisions/{real_time_decision_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -4008,7 +4008,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.RetrieveATransactionResponse retrieveATransaction(org.openapis.openapi.models.operations.RetrieveATransactionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveATransactionPathParams.class, baseUrl, "/transactions/{transaction_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveATransactionRequest.class, baseUrl, "/transactions/{transaction_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -4055,7 +4055,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.RetrieveAWireDrawdownRequestResponse retrieveAWireDrawdownRequest(org.openapis.openapi.models.operations.RetrieveAWireDrawdownRequestRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAWireDrawdownRequestPathParams.class, baseUrl, "/wire_drawdown_requests/{wire_drawdown_request_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAWireDrawdownRequestRequest.class, baseUrl, "/wire_drawdown_requests/{wire_drawdown_request_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -4102,7 +4102,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.RetrieveAWireTransferResponse retrieveAWireTransfer(org.openapis.openapi.models.operations.RetrieveAWireTransferRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAWireTransferPathParams.class, baseUrl, "/wire_transfers/{wire_transfer_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAWireTransferRequest.class, baseUrl, "/wire_transfers/{wire_transfer_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -4149,7 +4149,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.RetrieveAnAccountResponse retrieveAnAccount(org.openapis.openapi.models.operations.RetrieveAnAccountRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAnAccountPathParams.class, baseUrl, "/accounts/{account_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAnAccountRequest.class, baseUrl, "/accounts/{account_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -4196,7 +4196,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.RetrieveAnAccountNumberResponse retrieveAnAccountNumber(org.openapis.openapi.models.operations.RetrieveAnAccountNumberRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAnAccountNumberPathParams.class, baseUrl, "/account_numbers/{account_number_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAnAccountNumberRequest.class, baseUrl, "/account_numbers/{account_number_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -4243,7 +4243,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.RetrieveAnAccountStatementResponse retrieveAnAccountStatement(org.openapis.openapi.models.operations.RetrieveAnAccountStatementRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAnAccountStatementPathParams.class, baseUrl, "/account_statements/{account_statement_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAnAccountStatementRequest.class, baseUrl, "/account_statements/{account_statement_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -4290,7 +4290,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.RetrieveAnAccountTransferResponse retrieveAnAccountTransfer(org.openapis.openapi.models.operations.RetrieveAnAccountTransferRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAnAccountTransferPathParams.class, baseUrl, "/account_transfers/{account_transfer_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAnAccountTransferRequest.class, baseUrl, "/account_transfers/{account_transfer_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -4337,7 +4337,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.RetrieveAnAchPrenotificationResponse retrieveAnAchPrenotification(org.openapis.openapi.models.operations.RetrieveAnAchPrenotificationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAnAchPrenotificationPathParams.class, baseUrl, "/ach_prenotifications/{ach_prenotification_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAnAchPrenotificationRequest.class, baseUrl, "/ach_prenotifications/{ach_prenotification_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -4384,7 +4384,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.RetrieveAnAchTransferResponse retrieveAnAchTransfer(org.openapis.openapi.models.operations.RetrieveAnAchTransferRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAnAchTransferPathParams.class, baseUrl, "/ach_transfers/{ach_transfer_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAnAchTransferRequest.class, baseUrl, "/ach_transfers/{ach_transfer_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -4431,7 +4431,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.RetrieveAnEntityResponse retrieveAnEntity(org.openapis.openapi.models.operations.RetrieveAnEntityRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAnEntityPathParams.class, baseUrl, "/entities/{entity_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAnEntityRequest.class, baseUrl, "/entities/{entity_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -4478,7 +4478,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.RetrieveAnEventResponse retrieveAnEvent(org.openapis.openapi.models.operations.RetrieveAnEventRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAnEventPathParams.class, baseUrl, "/events/{event_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAnEventRequest.class, baseUrl, "/events/{event_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -4525,7 +4525,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.RetrieveAnEventSubscriptionResponse retrieveAnEventSubscription(org.openapis.openapi.models.operations.RetrieveAnEventSubscriptionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAnEventSubscriptionPathParams.class, baseUrl, "/event_subscriptions/{event_subscription_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAnEventSubscriptionRequest.class, baseUrl, "/event_subscriptions/{event_subscription_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -4572,7 +4572,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.RetrieveAnExternalAccountResponse retrieveAnExternalAccount(org.openapis.openapi.models.operations.RetrieveAnExternalAccountRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAnExternalAccountPathParams.class, baseUrl, "/external_accounts/{external_account_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAnExternalAccountRequest.class, baseUrl, "/external_accounts/{external_account_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -4619,7 +4619,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.RetrieveAnInboundAchTransferReturnResponse retrieveAnInboundAchTransferReturn(org.openapis.openapi.models.operations.RetrieveAnInboundAchTransferReturnRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAnInboundAchTransferReturnPathParams.class, baseUrl, "/inbound_ach_transfer_returns/{inbound_ach_transfer_return_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAnInboundAchTransferReturnRequest.class, baseUrl, "/inbound_ach_transfer_returns/{inbound_ach_transfer_return_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -4666,7 +4666,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.RetrieveAnInboundWireDrawdownRequestResponse retrieveAnInboundWireDrawdownRequest(org.openapis.openapi.models.operations.RetrieveAnInboundWireDrawdownRequestRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAnInboundWireDrawdownRequestPathParams.class, baseUrl, "/inbound_wire_drawdown_requests/{inbound_wire_drawdown_request_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAnInboundWireDrawdownRequestRequest.class, baseUrl, "/inbound_wire_drawdown_requests/{inbound_wire_drawdown_request_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -4713,7 +4713,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.RetrieveAnOauthConnectionResponse retrieveAnOauthConnection(org.openapis.openapi.models.operations.RetrieveAnOauthConnectionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAnOauthConnectionPathParams.class, baseUrl, "/oauth_connections/{oauth_connection_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAnOauthConnectionRequest.class, baseUrl, "/oauth_connections/{oauth_connection_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -4807,7 +4807,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.RetrieveSensitiveDetailsForACardResponse retrieveSensitiveDetailsForACard(org.openapis.openapi.models.operations.RetrieveSensitiveDetailsForACardRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveSensitiveDetailsForACardPathParams.class, baseUrl, "/cards/{card_id}/details", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveSensitiveDetailsForACardRequest.class, baseUrl, "/cards/{card_id}/details", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -4855,12 +4855,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.ReturnASandboxAchTransferResponse returnASandboxAchTransfer(org.openapis.openapi.models.operations.ReturnASandboxAchTransferRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReturnASandboxAchTransferPathParams.class, baseUrl, "/simulations/ach_transfers/{ach_transfer_id}/return", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReturnASandboxAchTransferRequest.class, baseUrl, "/simulations/ach_transfers/{ach_transfer_id}/return", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "returnASandboxAchTransferParameters", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -4908,7 +4908,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.ReturnASandboxCheckDepositResponse returnASandboxCheckDeposit(org.openapis.openapi.models.operations.ReturnASandboxCheckDepositRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReturnASandboxCheckDepositPathParams.class, baseUrl, "/simulations/check_deposits/{check_deposit_id}/return", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReturnASandboxCheckDepositRequest.class, baseUrl, "/simulations/check_deposits/{check_deposit_id}/return", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -4956,7 +4956,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.ReverseASandboxWireTransferResponse reverseASandboxWireTransfer(org.openapis.openapi.models.operations.ReverseASandboxWireTransferRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReverseASandboxWireTransferPathParams.class, baseUrl, "/simulations/wire_transfers/{wire_transfer_id}/reverse", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReverseASandboxWireTransferRequest.class, baseUrl, "/simulations/wire_transfers/{wire_transfer_id}/reverse", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -5002,7 +5002,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SimulateARealTimePaymentsTransferToYourAccountResponse simulateARealTimePaymentsTransferToYourAccount(org.openapis.openapi.models.operations.SimulateARealTimePaymentsTransferToYourAccountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SimulateARealTimePaymentsTransferToYourAccountResponse simulateARealTimePaymentsTransferToYourAccount(org.openapis.openapi.models.shared.SimulateARealTimePaymentsTransferToYourAccountParameters request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/simulations/inbound_real_time_payments_transfers");
         
@@ -5055,7 +5055,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SimulateARefundOnACardResponse simulateARefundOnACard(org.openapis.openapi.models.operations.SimulateARefundOnACardRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SimulateARefundOnACardResponse simulateARefundOnACard(org.openapis.openapi.models.shared.SimulateARefundOnACardParameters request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/simulations/card_refunds");
         
@@ -5108,7 +5108,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SimulateATaxDocumentBeingCreatedResponse simulateATaxDocumentBeingCreated(org.openapis.openapi.models.operations.SimulateATaxDocumentBeingCreatedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SimulateATaxDocumentBeingCreatedResponse simulateATaxDocumentBeingCreated(org.openapis.openapi.models.shared.SimulateATaxDocumentBeingCreatedParameters request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/simulations/documents");
         
@@ -5161,7 +5161,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SimulateAWireTransferToYourAccountResponse simulateAWireTransferToYourAccount(org.openapis.openapi.models.operations.SimulateAWireTransferToYourAccountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SimulateAWireTransferToYourAccountResponse simulateAWireTransferToYourAccount(org.openapis.openapi.models.shared.SimulateAWireTransferToYourAccountParameters request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/simulations/inbound_wire_transfers");
         
@@ -5214,7 +5214,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SimulateAnAccountStatementBeingCreatedResponse simulateAnAccountStatementBeingCreated(org.openapis.openapi.models.operations.SimulateAnAccountStatementBeingCreatedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SimulateAnAccountStatementBeingCreatedResponse simulateAnAccountStatementBeingCreated(org.openapis.openapi.models.shared.SimulateAnAccountStatementBeingCreatedParameters request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/simulations/account_statements");
         
@@ -5267,7 +5267,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SimulateAnAchTransferToYourAccountResponse simulateAnAchTransferToYourAccount(org.openapis.openapi.models.operations.SimulateAnAchTransferToYourAccountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SimulateAnAchTransferToYourAccountResponse simulateAnAchTransferToYourAccount(org.openapis.openapi.models.shared.SimulateAnAchTransferToYourAccountParameters request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/simulations/inbound_ach_transfers");
         
@@ -5320,7 +5320,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SimulateAnAuthorizationOnACardResponse simulateAnAuthorizationOnACard(org.openapis.openapi.models.operations.SimulateAnAuthorizationOnACardRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SimulateAnAuthorizationOnACardResponse simulateAnAuthorizationOnACard(org.openapis.openapi.models.shared.SimulateAnAuthorizationOnACardParameters request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/simulations/card_authorizations");
         
@@ -5373,7 +5373,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SimulateAnInboundWireDrawdownRequestBeingCreatedResponse simulateAnInboundWireDrawdownRequestBeingCreated(org.openapis.openapi.models.operations.SimulateAnInboundWireDrawdownRequestBeingCreatedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SimulateAnInboundWireDrawdownRequestBeingCreatedResponse simulateAnInboundWireDrawdownRequestBeingCreated(org.openapis.openapi.models.shared.SimulateAnInboundWireDrawdownRequestBeingCreatedParameters request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/simulations/inbound_wire_drawdown_requests");
         
@@ -5426,7 +5426,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SimulateDigitalWalletProvisioningForACardResponse simulateDigitalWalletProvisioningForACard(org.openapis.openapi.models.operations.SimulateDigitalWalletProvisioningForACardRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SimulateDigitalWalletProvisioningForACardResponse simulateDigitalWalletProvisioningForACard(org.openapis.openapi.models.shared.SimulateDigitalWalletProvisioningForACardParameters request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/simulations/digital_wallet_token_requests");
         
@@ -5479,7 +5479,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SimulateSettlingACardAuthorizationResponse simulateSettlingACardAuthorization(org.openapis.openapi.models.operations.SimulateSettlingACardAuthorizationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SimulateSettlingACardAuthorizationResponse simulateSettlingACardAuthorization(org.openapis.openapi.models.shared.SimulateSettlingACardAuthorizationParameters request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/simulations/card_settlements");
         
@@ -5534,12 +5534,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.SimulatesAdvancingTheStateOfACardDisputeResponse simulatesAdvancingTheStateOfACardDispute(org.openapis.openapi.models.operations.SimulatesAdvancingTheStateOfACardDisputeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SimulatesAdvancingTheStateOfACardDisputePathParams.class, baseUrl, "/simulations/card_disputes/{card_dispute_id}/action", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SimulatesAdvancingTheStateOfACardDisputeRequest.class, baseUrl, "/simulations/card_disputes/{card_dispute_id}/action", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "simulatesAdvancingTheStateOfACardDisputeParameters", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -5587,7 +5587,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.SubmitASandboxAchTransferResponse submitASandboxAchTransfer(org.openapis.openapi.models.operations.SubmitASandboxAchTransferRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubmitASandboxAchTransferPathParams.class, baseUrl, "/simulations/ach_transfers/{ach_transfer_id}/submit", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubmitASandboxAchTransferRequest.class, baseUrl, "/simulations/ach_transfers/{ach_transfer_id}/submit", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -5635,7 +5635,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.SubmitASandboxCheckDepositResponse submitASandboxCheckDeposit(org.openapis.openapi.models.operations.SubmitASandboxCheckDepositRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubmitASandboxCheckDepositPathParams.class, baseUrl, "/simulations/check_deposits/{check_deposit_id}/submit", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubmitASandboxCheckDepositRequest.class, baseUrl, "/simulations/check_deposits/{check_deposit_id}/submit", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -5683,7 +5683,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.SubmitASandboxWireTransferResponse submitASandboxWireTransfer(org.openapis.openapi.models.operations.SubmitASandboxWireTransferRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubmitASandboxWireTransferPathParams.class, baseUrl, "/simulations/wire_transfers/{wire_transfer_id}/submit", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubmitASandboxWireTransferRequest.class, baseUrl, "/simulations/wire_transfers/{wire_transfer_id}/submit", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -5730,12 +5730,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.UpdateACardResponse updateACard(org.openapis.openapi.models.operations.UpdateACardRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateACardPathParams.class, baseUrl, "/cards/{card_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateACardRequest.class, baseUrl, "/cards/{card_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateACardParameters", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -5782,12 +5782,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.UpdateALimitResponse updateALimit(org.openapis.openapi.models.operations.UpdateALimitRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateALimitPathParams.class, baseUrl, "/limits/{limit_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateALimitRequest.class, baseUrl, "/limits/{limit_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateALimitParameters", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -5834,12 +5834,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.UpdateAnAccountResponse updateAnAccount(org.openapis.openapi.models.operations.UpdateAnAccountRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateAnAccountPathParams.class, baseUrl, "/accounts/{account_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateAnAccountRequest.class, baseUrl, "/accounts/{account_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateAnAccountParameters", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -5886,12 +5886,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.UpdateAnAccountNumberResponse updateAnAccountNumber(org.openapis.openapi.models.operations.UpdateAnAccountNumberRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateAnAccountNumberPathParams.class, baseUrl, "/account_numbers/{account_number_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateAnAccountNumberRequest.class, baseUrl, "/account_numbers/{account_number_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateAnAccountNumberParameters", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -5938,12 +5938,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.UpdateAnEventSubscriptionResponse updateAnEventSubscription(org.openapis.openapi.models.operations.UpdateAnEventSubscriptionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateAnEventSubscriptionPathParams.class, baseUrl, "/event_subscriptions/{event_subscription_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateAnEventSubscriptionRequest.class, baseUrl, "/event_subscriptions/{event_subscription_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateAnEventSubscriptionParameters", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -5990,12 +5990,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.UpdateAnExternalAccountResponse updateAnExternalAccount(org.openapis.openapi.models.operations.UpdateAnExternalAccountRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateAnExternalAccountPathParams.class, baseUrl, "/external_accounts/{external_account_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateAnExternalAccountRequest.class, baseUrl, "/external_accounts/{external_account_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateAnExternalAccountParameters", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

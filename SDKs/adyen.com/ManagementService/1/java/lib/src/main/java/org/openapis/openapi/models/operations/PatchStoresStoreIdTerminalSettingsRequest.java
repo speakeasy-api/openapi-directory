@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchStoresStoreIdTerminalSettingsRequest {
-    
-    public PatchStoresStoreIdTerminalSettingsPathParams pathParams;
-    public PatchStoresStoreIdTerminalSettingsRequest withPathParams(PatchStoresStoreIdTerminalSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TerminalSettings request;
-    public PatchStoresStoreIdTerminalSettingsRequest withRequest(org.openapis.openapi.models.shared.TerminalSettings request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TerminalSettings terminalSettings;
+    public PatchStoresStoreIdTerminalSettingsRequest withTerminalSettings(org.openapis.openapi.models.shared.TerminalSettings terminalSettings) {
+        this.terminalSettings = terminalSettings;
         return this;
     }
     
-    
-    public PatchStoresStoreIdTerminalSettingsSecurity security;
-    public PatchStoresStoreIdTerminalSettingsRequest withSecurity(PatchStoresStoreIdTerminalSettingsSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the store.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public PatchStoresStoreIdTerminalSettingsRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

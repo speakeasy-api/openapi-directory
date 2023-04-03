@@ -4,20 +4,113 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateInstitutionArticlesRequest {
-    
-    public PrivateInstitutionArticlesQueryParams queryParams;
-    public PrivateInstitutionArticlesRequest withQueryParams(PrivateInstitutionArticlesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Only return articles with the respective type. Mapping for item_type is: 1 - Figure, 2 - Media, 3 - Dataset, 5 - Poster, 6 - Journal contribution, 7 - Presentation, 8 - Thesis, 9 - Software, 11 - Online resource, 12 - Preprint, 13 - Book, 14 - Conference contribution, 15 - Chapter, 16 - Peer review, 17 - Educational resource, 18 - Report, 19 - Standard, 20 - Composition, 21 - Funding, 22 - Physical object, 23 - Data management plan, 24 - Workflow, 25 - Monograph, 26 - Performance, 27 - Event, 28 - Service, 29 - Model
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=item_type")
+    public Long itemType;
+    public PrivateInstitutionArticlesRequest withItemType(Long itemType) {
+        this.itemType = itemType;
         return this;
     }
     
+    /**
+     * Number of results included on a page. Used for pagination with query
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public PrivateInstitutionArticlesRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public PrivateInstitutionArticlesSecurity security;
-    public PrivateInstitutionArticlesRequest withSecurity(PrivateInstitutionArticlesSecurity security) {
-        this.security = security;
+    /**
+     * Filter by article modified date. Will only return articles published after the date. date(ISO 8601) YYYY-MM-DD
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modified_since")
+    public String modifiedSince;
+    public PrivateInstitutionArticlesRequest withModifiedSince(String modifiedSince) {
+        this.modifiedSince = modifiedSince;
+        return this;
+    }
+    
+    /**
+     * Where to start the listing(the offset of the first result). Used for pagination with limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public PrivateInstitutionArticlesRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * The field by which to order. Default varies by endpoint/resource.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public PrivateInstitutionArticlesOrderEnum order;
+    public PrivateInstitutionArticlesRequest withOrder(PrivateInstitutionArticlesOrderEnum order) {
+        this.order = order;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_direction")
+    public PrivateInstitutionArticlesOrderDirectionEnum orderDirection;
+    public PrivateInstitutionArticlesRequest withOrderDirection(PrivateInstitutionArticlesOrderDirectionEnum orderDirection) {
+        this.orderDirection = orderDirection;
+        return this;
+    }
+    
+    /**
+     * Page number. Used for pagination with page_size
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public PrivateInstitutionArticlesRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results included on a page. Used for pagination with page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public PrivateInstitutionArticlesRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * Filter by article publishing date. Will only return articles published after the date. date(ISO 8601) YYYY-MM-DD
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=published_since")
+    public String publishedSince;
+    public PrivateInstitutionArticlesRequest withPublishedSince(String publishedSince) {
+        this.publishedSince = publishedSince;
+        return this;
+    }
+    
+    /**
+     * only return collections with this resource_doi
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resource_doi")
+    public String resourceDoi;
+    public PrivateInstitutionArticlesRequest withResourceDoi(String resourceDoi) {
+        this.resourceDoi = resourceDoi;
+        return this;
+    }
+    
+    /**
+     * only return collections with this status
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public Long status;
+    public PrivateInstitutionArticlesRequest withStatus(Long status) {
+        this.status = status;
         return this;
     }
     

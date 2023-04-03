@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostReportsRequest {
+    /**
+     * Default value will be 'world'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=baseline")
+    public Long baseline;
+    public PostReportsRequest withBaseline(Long baseline) {
+        this.baseline = baseline;
+        return this;
+    }
     
-    public PostReportsQueryParams queryParams;
-    public PostReportsRequest withQueryParams(PostReportsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * report_date represents a Unix timestamp of when the report was generated. Default value will be the latest report generated. You can request the /report/dates/ endpoint in order to obtain available timestamps. Date must be in the future.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=report_date")
+    public Long reportDate;
+    public PostReportsRequest withReportDate(Long reportDate) {
+        this.reportDate = reportDate;
+        return this;
+    }
+    
+    /**
+     * Unique report hash
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=report_hash")
+    public String reportHash;
+    public PostReportsRequest withReportHash(String reportHash) {
+        this.reportHash = reportHash;
+        return this;
+    }
+    
+    /**
+     * Sample report indicator
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sample")
+    public Long sample;
+    public PostReportsRequest withSample(Long sample) {
+        this.sample = sample;
         return this;
     }
     

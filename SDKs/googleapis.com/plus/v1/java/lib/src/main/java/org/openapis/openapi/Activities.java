@@ -34,25 +34,26 @@ public class Activities {
     /**
      * Shut down. See https://developers.google.com/+/api-shutdown for more details.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PlusActivitiesGetResponse plusActivitiesGet(org.openapis.openapi.models.operations.PlusActivitiesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PlusActivitiesGetResponse plusActivitiesGet(org.openapis.openapi.models.operations.PlusActivitiesGetRequest request, org.openapis.openapi.models.operations.PlusActivitiesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PlusActivitiesGetPathParams.class, baseUrl, "/activities/{activityId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PlusActivitiesGetRequest.class, baseUrl, "/activities/{activityId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PlusActivitiesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PlusActivitiesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class Activities {
     /**
      * Shut down. See https://developers.google.com/+/api-shutdown for more details.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PlusActivitiesListResponse plusActivitiesList(org.openapis.openapi.models.operations.PlusActivitiesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PlusActivitiesListResponse plusActivitiesList(org.openapis.openapi.models.operations.PlusActivitiesListRequest request, org.openapis.openapi.models.operations.PlusActivitiesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PlusActivitiesListPathParams.class, baseUrl, "/people/{userId}/activities/{collection}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PlusActivitiesListRequest.class, baseUrl, "/people/{userId}/activities/{collection}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PlusActivitiesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PlusActivitiesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,10 +126,11 @@ public class Activities {
     /**
      * Shut down. See https://developers.google.com/+/api-shutdown for more details.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PlusActivitiesSearchResponse plusActivitiesSearch(org.openapis.openapi.models.operations.PlusActivitiesSearchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PlusActivitiesSearchResponse plusActivitiesSearch(org.openapis.openapi.models.operations.PlusActivitiesSearchRequest request, org.openapis.openapi.models.operations.PlusActivitiesSearchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/activities");
         
@@ -135,14 +138,14 @@ public class Activities {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PlusActivitiesSearchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PlusActivitiesSearchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

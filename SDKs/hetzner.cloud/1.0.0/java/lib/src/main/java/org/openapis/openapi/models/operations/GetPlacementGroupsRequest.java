@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPlacementGroupsRequest {
+    /**
+     * Can be used to filter resources by labels. The response will only contain resources matching the label selector.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=label_selector")
+    public String labelSelector;
+    public GetPlacementGroupsRequest withLabelSelector(String labelSelector) {
+        this.labelSelector = labelSelector;
+        return this;
+    }
     
-    public GetPlacementGroupsQueryParams queryParams;
-    public GetPlacementGroupsRequest withQueryParams(GetPlacementGroupsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Can be used to filter resources by their name. The response will only contain the resources matching the specified name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public GetPlacementGroupsRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Can be used multiple times.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetPlacementGroupsSortEnum sort;
+    public GetPlacementGroupsRequest withSort(GetPlacementGroupsSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Can be used multiple times. The response will only contain PlacementGroups matching the type.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public GetPlacementGroupsTypeParameterTypeEnum type;
+    public GetPlacementGroupsRequest withType(GetPlacementGroupsTypeParameterTypeEnum type) {
+        this.type = type;
         return this;
     }
     

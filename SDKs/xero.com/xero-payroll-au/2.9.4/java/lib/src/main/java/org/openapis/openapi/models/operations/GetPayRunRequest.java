@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPayRunRequest {
-    
-    public GetPayRunPathParams pathParams;
-    public GetPayRunRequest withPathParams(GetPayRunPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * PayRun id for single object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=PayRunID")
+    public String payRunID;
+    public GetPayRunRequest withPayRunID(String payRunID) {
+        this.payRunID = payRunID;
         return this;
     }
     
-    
-    public GetPayRunHeaders headers;
-    public GetPayRunRequest withHeaders(GetPayRunHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetPayRunSecurity security;
-    public GetPayRunRequest withSecurity(GetPayRunSecurity security) {
-        this.security = security;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
+    public String xeroTenantId;
+    public GetPayRunRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     

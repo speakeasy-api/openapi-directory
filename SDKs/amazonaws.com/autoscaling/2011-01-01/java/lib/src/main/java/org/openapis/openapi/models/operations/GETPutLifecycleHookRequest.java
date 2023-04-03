@@ -4,20 +4,149 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETPutLifecycleHookRequest {
-    
-    public GETPutLifecycleHookQueryParams queryParams;
-    public GETPutLifecycleHookRequest withQueryParams(GETPutLifecycleHookQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETPutLifecycleHookActionEnum action;
+    public GETPutLifecycleHookRequest withAction(GETPutLifecycleHookActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the Auto Scaling group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutoScalingGroupName")
+    public String autoScalingGroupName;
+    public GETPutLifecycleHookRequest withAutoScalingGroupName(String autoScalingGroupName) {
+        this.autoScalingGroupName = autoScalingGroupName;
+        return this;
+    }
     
-    public GETPutLifecycleHookHeaders headers;
-    public GETPutLifecycleHookRequest withHeaders(GETPutLifecycleHookHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The action the Auto Scaling group takes when the lifecycle hook timeout elapses or if an unexpected failure occurs. The default value is &lt;code&gt;ABANDON&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;Valid values: &lt;code&gt;CONTINUE&lt;/code&gt; | &lt;code&gt;ABANDON&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DefaultResult")
+    public String defaultResult;
+    public GETPutLifecycleHookRequest withDefaultResult(String defaultResult) {
+        this.defaultResult = defaultResult;
+        return this;
+    }
+    
+    /**
+     * The maximum time, in seconds, that can elapse before the lifecycle hook times out. The range is from &lt;code&gt;30&lt;/code&gt; to &lt;code&gt;7200&lt;/code&gt; seconds. The default value is &lt;code&gt;3600&lt;/code&gt; seconds (1 hour).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HeartbeatTimeout")
+    public Long heartbeatTimeout;
+    public GETPutLifecycleHookRequest withHeartbeatTimeout(Long heartbeatTimeout) {
+        this.heartbeatTimeout = heartbeatTimeout;
+        return this;
+    }
+    
+    /**
+     * The name of the lifecycle hook.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LifecycleHookName")
+    public String lifecycleHookName;
+    public GETPutLifecycleHookRequest withLifecycleHookName(String lifecycleHookName) {
+        this.lifecycleHookName = lifecycleHookName;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The lifecycle transition. For Auto Scaling groups, there are two major lifecycle transitions.&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;To create a lifecycle hook for scale-out events, specify &lt;code&gt;autoscaling:EC2_INSTANCE_LAUNCHING&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;To create a lifecycle hook for scale-in events, specify &lt;code&gt;autoscaling:EC2_INSTANCE_TERMINATING&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Required for new lifecycle hooks, but optional when updating existing hooks.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LifecycleTransition")
+    public String lifecycleTransition;
+    public GETPutLifecycleHookRequest withLifecycleTransition(String lifecycleTransition) {
+        this.lifecycleTransition = lifecycleTransition;
+        return this;
+    }
+    
+    /**
+     * Additional information that you want to include any time Amazon EC2 Auto Scaling sends a message to the notification target.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NotificationMetadata")
+    public String notificationMetadata;
+    public GETPutLifecycleHookRequest withNotificationMetadata(String notificationMetadata) {
+        this.notificationMetadata = notificationMetadata;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The Amazon Resource Name (ARN) of the notification target that Amazon EC2 Auto Scaling uses to notify you when an instance is in a wait state for the lifecycle hook. You can specify either an Amazon SNS topic or an Amazon SQS queue.&lt;/p&gt; &lt;p&gt;If you specify an empty string, this overrides the current ARN.&lt;/p&gt; &lt;p&gt;This operation uses the JSON format when sending notifications to an Amazon SQS queue, and an email key-value pair format when sending notifications to an Amazon SNS topic.&lt;/p&gt; &lt;p&gt;When you specify a notification target, Amazon EC2 Auto Scaling sends it a test message. Test messages contain the following additional key-value pair: &lt;code&gt;"Event": "autoscaling:TEST_NOTIFICATION"&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NotificationTargetARN")
+    public String notificationTargetARN;
+    public GETPutLifecycleHookRequest withNotificationTargetARN(String notificationTargetARN) {
+        this.notificationTargetARN = notificationTargetARN;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target.&lt;/p&gt; &lt;p&gt;Valid only if the notification target is an Amazon SNS topic or an Amazon SQS queue. Required for new lifecycle hooks, but optional when updating existing hooks.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RoleARN")
+    public String roleARN;
+    public GETPutLifecycleHookRequest withRoleARN(String roleARN) {
+        this.roleARN = roleARN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETPutLifecycleHookVersionEnum version;
+    public GETPutLifecycleHookRequest withVersion(GETPutLifecycleHookVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETPutLifecycleHookRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETPutLifecycleHookRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETPutLifecycleHookRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETPutLifecycleHookRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETPutLifecycleHookRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETPutLifecycleHookRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETPutLifecycleHookRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

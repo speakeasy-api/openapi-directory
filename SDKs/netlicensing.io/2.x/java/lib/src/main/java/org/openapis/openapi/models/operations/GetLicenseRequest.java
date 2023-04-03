@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLicenseRequest {
-    
-    public GetLicensePathParams pathParams;
-    public GetLicenseRequest withPathParams(GetLicensePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetLicenseSecurity security;
-    public GetLicenseRequest withSecurity(GetLicenseSecurity security) {
-        this.security = security;
+    /**
+     * Unique number (across all Products/Licensees of a Vendor) that identifies the License. Vendor can assign this number when creating a License or let NetLicensing generate one. Read-only after corresponding creation Transaction status is set to closed.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=licenseNumber")
+    public String licenseNumber;
+    public GetLicenseRequest withLicenseNumber(String licenseNumber) {
+        this.licenseNumber = licenseNumber;
         return this;
     }
     

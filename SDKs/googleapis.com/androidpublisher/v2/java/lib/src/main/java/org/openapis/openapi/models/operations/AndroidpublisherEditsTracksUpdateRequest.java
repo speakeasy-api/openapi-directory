@@ -7,31 +7,110 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AndroidpublisherEditsTracksUpdateRequest {
-    
-    public AndroidpublisherEditsTracksUpdatePathParams pathParams;
-    public AndroidpublisherEditsTracksUpdateRequest withPathParams(AndroidpublisherEditsTracksUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AndroidpublisherEditsTracksUpdateQueryParams queryParams;
-    public AndroidpublisherEditsTracksUpdateRequest withQueryParams(AndroidpublisherEditsTracksUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Track request;
-    public AndroidpublisherEditsTracksUpdateRequest withRequest(org.openapis.openapi.models.shared.Track request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Track track1;
+    public AndroidpublisherEditsTracksUpdateRequest withTrack1(org.openapis.openapi.models.shared.Track track1) {
+        this.track1 = track1;
         return this;
     }
     
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AndroidpublisherEditsTracksUpdateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public AndroidpublisherEditsTracksUpdateSecurity security;
-    public AndroidpublisherEditsTracksUpdateRequest withSecurity(AndroidpublisherEditsTracksUpdateSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier for this edit.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=editId")
+    public String editId;
+    public AndroidpublisherEditsTracksUpdateRequest withEditId(String editId) {
+        this.editId = editId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AndroidpublisherEditsTracksUpdateRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AndroidpublisherEditsTracksUpdateRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AndroidpublisherEditsTracksUpdateRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=packageName")
+    public String packageName;
+    public AndroidpublisherEditsTracksUpdateRequest withPackageName(String packageName) {
+        this.packageName = packageName;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AndroidpublisherEditsTracksUpdateRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AndroidpublisherEditsTracksUpdateRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * The track to read or modify.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=track")
+    public String trackPathParameter;
+    public AndroidpublisherEditsTracksUpdateRequest withTrackPathParameter(String trackPathParameter) {
+        this.trackPathParameter = trackPathParameter;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public AndroidpublisherEditsTracksUpdateRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

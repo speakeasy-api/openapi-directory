@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoDeleteRequest {
+    /**
+     * owner of the repo to delete
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoDeleteRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public RepoDeletePathParams pathParams;
-    public RepoDeleteRequest withPathParams(RepoDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * name of the repo to delete
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoDeleteRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

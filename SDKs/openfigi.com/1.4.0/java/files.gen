@@ -30,11 +30,9 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetMappingValuesKeyKeyEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetMappingValuesKeyPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetMappingValuesKeyRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetMappingValuesKey200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetMappingValuesKeyResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostMappingRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostMappingResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/MappingJobResultFigiList.java
 lib/src/main/java/org/openapis/openapi/models/shared/FigiResult.java
@@ -43,6 +41,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/MappingJobIdTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/MappingJobOptionTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/MappingJobStateCodeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/MappingJob.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKeyAuth.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

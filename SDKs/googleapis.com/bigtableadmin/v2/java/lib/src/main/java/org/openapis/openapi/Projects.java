@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Creates an app profile within an instance.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesAppProfilesCreateResponse bigtableadminProjectsInstancesAppProfilesCreate(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesAppProfilesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesAppProfilesCreateResponse bigtableadminProjectsInstancesAppProfilesCreate(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesAppProfilesCreateRequest request, org.openapis.openapi.models.operations.BigtableadminProjectsInstancesAppProfilesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesAppProfilesCreatePathParams.class, baseUrl, "/v2/{parent}/appProfiles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesAppProfilesCreateRequest.class, baseUrl, "/v2/{parent}/appProfiles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "appProfile", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesAppProfilesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesAppProfilesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,25 +83,26 @@ public class Projects {
     /**
      * Lists information about app profiles in an instance.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesAppProfilesListResponse bigtableadminProjectsInstancesAppProfilesList(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesAppProfilesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesAppProfilesListResponse bigtableadminProjectsInstancesAppProfilesList(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesAppProfilesListRequest request, org.openapis.openapi.models.operations.BigtableadminProjectsInstancesAppProfilesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesAppProfilesListPathParams.class, baseUrl, "/v2/{parent}/appProfiles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesAppProfilesListRequest.class, baseUrl, "/v2/{parent}/appProfiles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesAppProfilesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesAppProfilesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,27 +129,28 @@ public class Projects {
     /**
      * Copy a Cloud Bigtable backup to a new backup in the destination cluster located in the destination instance and project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersBackupsCopyResponse bigtableadminProjectsInstancesClustersBackupsCopy(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersBackupsCopyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersBackupsCopyResponse bigtableadminProjectsInstancesClustersBackupsCopy(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersBackupsCopyRequest request, org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersBackupsCopySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersBackupsCopyPathParams.class, baseUrl, "/v2/{parent}/backups:copy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersBackupsCopyRequest.class, baseUrl, "/v2/{parent}/backups:copy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "copyBackupRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersBackupsCopyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersBackupsCopyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,27 +177,28 @@ public class Projects {
     /**
      * Starts creating a new Cloud Bigtable Backup. The returned backup long-running operation can be used to track creation of the backup. The metadata field type is CreateBackupMetadata. The response field type is Backup, if successful. Cancelling the returned operation will stop the creation and delete the backup.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersBackupsCreateResponse bigtableadminProjectsInstancesClustersBackupsCreate(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersBackupsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersBackupsCreateResponse bigtableadminProjectsInstancesClustersBackupsCreate(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersBackupsCreateRequest request, org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersBackupsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersBackupsCreatePathParams.class, baseUrl, "/v2/{parent}/backups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersBackupsCreateRequest.class, baseUrl, "/v2/{parent}/backups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "backupInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersBackupsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersBackupsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -221,25 +225,26 @@ public class Projects {
     /**
      * Lists Cloud Bigtable backups. Returns both completed and pending backups.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersBackupsListResponse bigtableadminProjectsInstancesClustersBackupsList(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersBackupsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersBackupsListResponse bigtableadminProjectsInstancesClustersBackupsList(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersBackupsListRequest request, org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersBackupsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersBackupsListPathParams.class, baseUrl, "/v2/{parent}/backups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersBackupsListRequest.class, baseUrl, "/v2/{parent}/backups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersBackupsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersBackupsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -266,27 +271,28 @@ public class Projects {
     /**
      * Creates a cluster within an instance. Note that exactly one of Cluster.serve_nodes and Cluster.cluster_config.cluster_autoscaling_config can be set. If serve_nodes is set to non-zero, then the cluster is manually scaled. If cluster_config.cluster_autoscaling_config is non-empty, then autoscaling is enabled.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersCreateResponse bigtableadminProjectsInstancesClustersCreate(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersCreateResponse bigtableadminProjectsInstancesClustersCreate(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersCreateRequest request, org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersCreatePathParams.class, baseUrl, "/v2/{parent}/clusters", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersCreateRequest.class, baseUrl, "/v2/{parent}/clusters", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "clusterInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -313,25 +319,26 @@ public class Projects {
     /**
      * Lists hot tablets in a cluster, within the time range provided. Hot tablets are ordered based on CPU usage.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersHotTabletsListResponse bigtableadminProjectsInstancesClustersHotTabletsList(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersHotTabletsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersHotTabletsListResponse bigtableadminProjectsInstancesClustersHotTabletsList(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersHotTabletsListRequest request, org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersHotTabletsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersHotTabletsListPathParams.class, baseUrl, "/v2/{parent}/hotTablets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersHotTabletsListRequest.class, baseUrl, "/v2/{parent}/hotTablets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersHotTabletsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersHotTabletsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -358,25 +365,26 @@ public class Projects {
     /**
      * Lists information about clusters in an instance.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersListResponse bigtableadminProjectsInstancesClustersList(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersListResponse bigtableadminProjectsInstancesClustersList(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersListRequest request, org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersListPathParams.class, baseUrl, "/v2/{parent}/clusters", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersListRequest.class, baseUrl, "/v2/{parent}/clusters", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -403,27 +411,28 @@ public class Projects {
     /**
      * Updates a cluster within an instance. Note that UpdateCluster does not support updating cluster_config.cluster_autoscaling_config. In order to update it, you must use PartialUpdateCluster.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersUpdateResponse bigtableadminProjectsInstancesClustersUpdate(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersUpdateResponse bigtableadminProjectsInstancesClustersUpdate(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersUpdateRequest request, org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersUpdatePathParams.class, baseUrl, "/v2/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersUpdateRequest.class, baseUrl, "/v2/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "clusterInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -450,27 +459,28 @@ public class Projects {
     /**
      * Create an instance within a project. Note that exactly one of Cluster.serve_nodes and Cluster.cluster_config.cluster_autoscaling_config can be set. If serve_nodes is set to non-zero, then the cluster is manually scaled. If cluster_config.cluster_autoscaling_config is non-empty, then autoscaling is enabled.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesCreateResponse bigtableadminProjectsInstancesCreate(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesCreateResponse bigtableadminProjectsInstancesCreate(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesCreateRequest request, org.openapis.openapi.models.operations.BigtableadminProjectsInstancesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesCreatePathParams.class, baseUrl, "/v2/{parent}/instances", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesCreateRequest.class, baseUrl, "/v2/{parent}/instances", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createInstanceRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -497,25 +507,26 @@ public class Projects {
     /**
      * Lists information about instances in a project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesListResponse bigtableadminProjectsInstancesList(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesListResponse bigtableadminProjectsInstancesList(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesListRequest request, org.openapis.openapi.models.operations.BigtableadminProjectsInstancesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesListPathParams.class, baseUrl, "/v2/{parent}/instances", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesListRequest.class, baseUrl, "/v2/{parent}/instances", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -542,27 +553,28 @@ public class Projects {
     /**
      * Checks replication consistency based on a consistency token, that is, if replication has caught up based on the conditions specified in the token and the check request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesCheckConsistencyResponse bigtableadminProjectsInstancesTablesCheckConsistency(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesCheckConsistencyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesCheckConsistencyResponse bigtableadminProjectsInstancesTablesCheckConsistency(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesCheckConsistencyRequest request, org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesCheckConsistencySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesCheckConsistencyPathParams.class, baseUrl, "/v2/{name}:checkConsistency", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesCheckConsistencyRequest.class, baseUrl, "/v2/{name}:checkConsistency", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "checkConsistencyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesCheckConsistencyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesCheckConsistencyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -589,27 +601,28 @@ public class Projects {
     /**
      * Creates a new table in the specified instance. The table can be created with a full set of initial column families, specified in the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesCreateResponse bigtableadminProjectsInstancesTablesCreate(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesCreateResponse bigtableadminProjectsInstancesTablesCreate(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesCreateRequest request, org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesCreatePathParams.class, baseUrl, "/v2/{parent}/tables", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesCreateRequest.class, baseUrl, "/v2/{parent}/tables", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createTableRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -636,25 +649,26 @@ public class Projects {
     /**
      * Permanently deletes a specified table and all of its data.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesDeleteResponse bigtableadminProjectsInstancesTablesDelete(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesDeleteResponse bigtableadminProjectsInstancesTablesDelete(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesDeleteRequest request, org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesDeletePathParams.class, baseUrl, "/v2/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesDeleteRequest.class, baseUrl, "/v2/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -681,27 +695,28 @@ public class Projects {
     /**
      * Permanently drop/delete a row range from a specified table. The request can specify whether to delete all rows in a table, or only those that match a particular prefix.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesDropRowRangeResponse bigtableadminProjectsInstancesTablesDropRowRange(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesDropRowRangeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesDropRowRangeResponse bigtableadminProjectsInstancesTablesDropRowRange(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesDropRowRangeRequest request, org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesDropRowRangeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesDropRowRangePathParams.class, baseUrl, "/v2/{name}:dropRowRange", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesDropRowRangeRequest.class, baseUrl, "/v2/{name}:dropRowRange", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "dropRowRangeRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesDropRowRangeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesDropRowRangeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -728,27 +743,28 @@ public class Projects {
     /**
      * Generates a consistency token for a Table, which can be used in CheckConsistency to check whether mutations to the table that finished before this call started have been replicated. The tokens will be available for 90 days.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesGenerateConsistencyTokenResponse bigtableadminProjectsInstancesTablesGenerateConsistencyToken(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesGenerateConsistencyTokenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesGenerateConsistencyTokenResponse bigtableadminProjectsInstancesTablesGenerateConsistencyToken(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesGenerateConsistencyTokenRequest request, org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesGenerateConsistencyTokenSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesGenerateConsistencyTokenPathParams.class, baseUrl, "/v2/{name}:generateConsistencyToken", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesGenerateConsistencyTokenRequest.class, baseUrl, "/v2/{name}:generateConsistencyToken", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesGenerateConsistencyTokenQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesGenerateConsistencyTokenRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -775,27 +791,28 @@ public class Projects {
     /**
      * Gets the access control policy for a Table resource. Returns an empty policy if the resource exists but does not have a policy set.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesGetIamPolicyResponse bigtableadminProjectsInstancesTablesGetIamPolicy(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesGetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesGetIamPolicyResponse bigtableadminProjectsInstancesTablesGetIamPolicy(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesGetIamPolicyRequest request, org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesGetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesGetIamPolicyPathParams.class, baseUrl, "/v2/{resource}:getIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesGetIamPolicyRequest.class, baseUrl, "/v2/{resource}:getIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "getIamPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesGetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesGetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -822,25 +839,26 @@ public class Projects {
     /**
      * Lists all tables served from a specified instance.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesListResponse bigtableadminProjectsInstancesTablesList(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesListResponse bigtableadminProjectsInstancesTablesList(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesListRequest request, org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesListPathParams.class, baseUrl, "/v2/{parent}/tables", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesListRequest.class, baseUrl, "/v2/{parent}/tables", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -867,27 +885,28 @@ public class Projects {
     /**
      * Performs a series of column family modifications on the specified table. Either all or none of the modifications will occur before this method returns, but data requests received prior to that point may see a table where only some modifications have taken effect.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesModifyColumnFamiliesResponse bigtableadminProjectsInstancesTablesModifyColumnFamilies(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesModifyColumnFamiliesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesModifyColumnFamiliesResponse bigtableadminProjectsInstancesTablesModifyColumnFamilies(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesModifyColumnFamiliesRequest request, org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesModifyColumnFamiliesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesModifyColumnFamiliesPathParams.class, baseUrl, "/v2/{name}:modifyColumnFamilies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesModifyColumnFamiliesRequest.class, baseUrl, "/v2/{name}:modifyColumnFamilies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "modifyColumnFamiliesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesModifyColumnFamiliesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesModifyColumnFamiliesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -914,27 +933,28 @@ public class Projects {
     /**
      * Updates a specified table.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesPatchResponse bigtableadminProjectsInstancesTablesPatch(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesPatchResponse bigtableadminProjectsInstancesTablesPatch(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesPatchRequest request, org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesPatchPathParams.class, baseUrl, "/v2/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesPatchRequest.class, baseUrl, "/v2/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "tableInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -961,27 +981,28 @@ public class Projects {
     /**
      * Create a new table by restoring from a completed backup. The returned table long-running operation can be used to track the progress of the operation, and to cancel it. The metadata field type is RestoreTableMetadata. The response type is Table, if successful.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesRestoreResponse bigtableadminProjectsInstancesTablesRestore(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesRestoreRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesRestoreResponse bigtableadminProjectsInstancesTablesRestore(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesRestoreRequest request, org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesRestoreSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesRestorePathParams.class, baseUrl, "/v2/{parent}/tables:restore", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesRestoreRequest.class, baseUrl, "/v2/{parent}/tables:restore", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "restoreTableRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesRestoreQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesRestoreRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1008,27 +1029,28 @@ public class Projects {
     /**
      * Sets the access control policy on a Table resource. Replaces any existing policy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesSetIamPolicyResponse bigtableadminProjectsInstancesTablesSetIamPolicy(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesSetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesSetIamPolicyResponse bigtableadminProjectsInstancesTablesSetIamPolicy(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesSetIamPolicyRequest request, org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesSetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesSetIamPolicyPathParams.class, baseUrl, "/v2/{resource}:setIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesSetIamPolicyRequest.class, baseUrl, "/v2/{resource}:setIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setIamPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesSetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesSetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1055,27 +1077,28 @@ public class Projects {
     /**
      * Returns permissions that the caller has on the specified table resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesTestIamPermissionsResponse bigtableadminProjectsInstancesTablesTestIamPermissions(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesTestIamPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesTestIamPermissionsResponse bigtableadminProjectsInstancesTablesTestIamPermissions(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesTestIamPermissionsRequest request, org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesTestIamPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesTestIamPermissionsPathParams.class, baseUrl, "/v2/{resource}:testIamPermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesTestIamPermissionsRequest.class, baseUrl, "/v2/{resource}:testIamPermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testIamPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesTestIamPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesTestIamPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1102,27 +1125,28 @@ public class Projects {
     /**
      * Restores a specified table which was accidentally deleted.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesUndeleteResponse bigtableadminProjectsInstancesTablesUndelete(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesUndeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesUndeleteResponse bigtableadminProjectsInstancesTablesUndelete(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesUndeleteRequest request, org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesUndeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesUndeletePathParams.class, baseUrl, "/v2/{name}:undelete", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesUndeleteRequest.class, baseUrl, "/v2/{name}:undelete", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesUndeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesUndeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1149,25 +1173,26 @@ public class Projects {
     /**
      * Gets information about a location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigtableadminProjectsLocationsGetResponse bigtableadminProjectsLocationsGet(org.openapis.openapi.models.operations.BigtableadminProjectsLocationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigtableadminProjectsLocationsGetResponse bigtableadminProjectsLocationsGet(org.openapis.openapi.models.operations.BigtableadminProjectsLocationsGetRequest request, org.openapis.openapi.models.operations.BigtableadminProjectsLocationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsLocationsGetPathParams.class, baseUrl, "/v2/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsLocationsGetRequest.class, baseUrl, "/v2/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsLocationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsLocationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1194,25 +1219,26 @@ public class Projects {
     /**
      * Lists information about the supported locations for this service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigtableadminProjectsLocationsListResponse bigtableadminProjectsLocationsList(org.openapis.openapi.models.operations.BigtableadminProjectsLocationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigtableadminProjectsLocationsListResponse bigtableadminProjectsLocationsList(org.openapis.openapi.models.operations.BigtableadminProjectsLocationsListRequest request, org.openapis.openapi.models.operations.BigtableadminProjectsLocationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsLocationsListPathParams.class, baseUrl, "/v2/{name}/locations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigtableadminProjectsLocationsListRequest.class, baseUrl, "/v2/{name}/locations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsLocationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigtableadminProjectsLocationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETMapsBySpeciesUsingGETRequest {
-    
-    public GETMapsBySpeciesUsingGETPathParams pathParams;
-    public GETMapsBySpeciesUsingGETRequest withPathParams(GETMapsBySpeciesUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * species Key
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=speciesTypeKey")
+    public Integer speciesTypeKey;
+    public GETMapsBySpeciesUsingGETRequest withSpeciesTypeKey(Integer speciesTypeKey) {
+        this.speciesTypeKey = speciesTypeKey;
         return this;
     }
     

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCreditUsageRequest {
-    
-    public GetCreditUsageQueryParams queryParams;
-    public GetCreditUsageRequest withQueryParams(GetCreditUsageQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Beginning of usage period formatted in unix time milliseconds. Example: 1473781817000
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=intervalBegin")
+    public Long intervalBegin;
+    public GetCreditUsageRequest withIntervalBegin(Long intervalBegin) {
+        this.intervalBegin = intervalBegin;
         return this;
     }
     
-    
-    public GetCreditUsageSecurity security;
-    public GetCreditUsageRequest withSecurity(GetCreditUsageSecurity security) {
-        this.security = security;
+    /**
+     * End of usage period formatted in unix time milliseconds. Example: 1473781817000
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=intervalEnd")
+    public Long intervalEnd;
+    public GetCreditUsageRequest withIntervalEnd(Long intervalEnd) {
+        this.intervalEnd = intervalEnd;
         return this;
     }
     

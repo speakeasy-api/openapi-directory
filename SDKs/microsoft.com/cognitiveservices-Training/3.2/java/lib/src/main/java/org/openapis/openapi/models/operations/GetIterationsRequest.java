@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetIterationsRequest {
-    
-    public GetIterationsPathParams pathParams;
-    public GetIterationsRequest withPathParams(GetIterationsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public GetIterationsRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

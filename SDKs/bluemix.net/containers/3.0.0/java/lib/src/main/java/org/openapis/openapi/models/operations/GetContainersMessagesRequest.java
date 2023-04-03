@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContainersMessagesRequest {
+    /**
+     * The unique ID of your organization space where you want to create or work with your containers. To retrieve your space ID, run `cf space &lt;space_name&gt; --guid` and replace `&lt;space_name&gt;` with the name of the space where you want to create or work with your container. 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Project-Id")
+    public String xAuthProjectId;
+    public GetContainersMessagesRequest withXAuthProjectId(String xAuthProjectId) {
+        this.xAuthProjectId = xAuthProjectId;
+        return this;
+    }
     
-    public GetContainersMessagesHeaders headers;
-    public GetContainersMessagesRequest withHeaders(GetContainersMessagesHeaders headers) {
-        this.headers = headers;
+    /**
+     * The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Token")
+    public String xAuthToken;
+    public GetContainersMessagesRequest withXAuthToken(String xAuthToken) {
+        this.xAuthToken = xAuthToken;
         return this;
     }
     

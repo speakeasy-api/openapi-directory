@@ -7,10 +7,10 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DELETETagUsingDELETERequest {
-    
-    public DELETETagUsingDELETEHeaders headers;
-    public DELETETagUsingDELETERequest withHeaders(DELETETagUsingDELETEHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public DELETETagUsingDELETERequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
@@ -18,16 +18,9 @@ public class DELETETagUsingDELETERequest {
      * tagRequest
      */
     @SpeakeasyMetadata("request:mediaType=*/*")
-    public byte[] request;
-    public DELETETagUsingDELETERequest withRequest(byte[] request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public DELETETagUsingDELETESecurity security;
-    public DELETETagUsingDELETERequest withSecurity(DELETETagUsingDELETESecurity security) {
-        this.security = security;
+    public byte[] requestBody;
+    public DELETETagUsingDELETERequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

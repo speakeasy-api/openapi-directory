@@ -42,7 +42,7 @@ public class Messages {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ArchiveAllConversationsResponse archiveAllConversations(org.openapis.openapi.models.operations.ArchiveAllConversationsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ArchiveAllConversationsResponse archiveAllConversations(org.openapis.openapi.models.operations.ArchiveAllConversationsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/conversations/archive-all");
         
@@ -82,7 +82,7 @@ public class Messages {
      */
     public org.openapis.openapi.models.operations.ArchiveConversationResponse archiveConversation(org.openapis.openapi.models.operations.ArchiveConversationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArchiveConversationPathParams.class, baseUrl, "/conversations/{conversation_id}/archive", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArchiveConversationRequest.class, baseUrl, "/conversations/{conversation_id}/archive", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -115,7 +115,7 @@ public class Messages {
      */
     public org.openapis.openapi.models.operations.BlockConversationResponse blockConversation(org.openapis.openapi.models.operations.BlockConversationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BlockConversationPathParams.class, baseUrl, "/conversations/{conversation_id}/block", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BlockConversationRequest.class, baseUrl, "/conversations/{conversation_id}/block", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -148,13 +148,13 @@ public class Messages {
      */
     public org.openapis.openapi.models.operations.DeleteConversationResponse deleteConversation(org.openapis.openapi.models.operations.DeleteConversationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteConversationPathParams.class, baseUrl, "/conversations/{conversation_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteConversationRequest.class, baseUrl, "/conversations/{conversation_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteConversationQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteConversationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -187,13 +187,13 @@ public class Messages {
      */
     public org.openapis.openapi.models.operations.GetConversationMessagesResponse getConversationMessages(org.openapis.openapi.models.operations.GetConversationMessagesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConversationMessagesPathParams.class, baseUrl, "/conversations/{conversation_id}/messages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConversationMessagesRequest.class, baseUrl, "/conversations/{conversation_id}/messages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConversationMessagesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConversationMessagesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -240,7 +240,7 @@ public class Messages {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConversationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConversationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -279,7 +279,7 @@ public class Messages {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MarkAllConversationsReadResponse markAllConversationsRead(org.openapis.openapi.models.operations.MarkAllConversationsReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MarkAllConversationsReadResponse markAllConversationsRead(org.openapis.openapi.models.operations.MarkAllConversationsReadRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/conversations/mark-all-read");
         
@@ -319,12 +319,12 @@ public class Messages {
      */
     public org.openapis.openapi.models.operations.MarkConversationReadResponse markConversationRead(org.openapis.openapi.models.operations.MarkConversationReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MarkConversationReadPathParams.class, baseUrl, "/conversations/{conversation_id}/mark-read", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MarkConversationReadRequest.class, baseUrl, "/conversations/{conversation_id}/mark-read", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -357,12 +357,12 @@ public class Messages {
      */
     public org.openapis.openapi.models.operations.ReplyToConversationResponse replyToConversation(org.openapis.openapi.models.operations.ReplyToConversationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReplyToConversationPathParams.class, baseUrl, "/conversations/{conversation_id}/reply", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReplyToConversationRequest.class, baseUrl, "/conversations/{conversation_id}/reply", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -403,12 +403,12 @@ public class Messages {
      */
     public org.openapis.openapi.models.operations.ReportConversationResponse reportConversation(org.openapis.openapi.models.operations.ReportConversationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReportConversationPathParams.class, baseUrl, "/conversations/{conversation_id}/report", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReportConversationRequest.class, baseUrl, "/conversations/{conversation_id}/report", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -448,7 +448,7 @@ public class Messages {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SearchConversationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SearchConversationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -489,7 +489,7 @@ public class Messages {
      */
     public org.openapis.openapi.models.operations.UnarchiveConversationResponse unarchiveConversation(org.openapis.openapi.models.operations.UnarchiveConversationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnarchiveConversationPathParams.class, baseUrl, "/conversations/{conversation_id}/unarchive", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnarchiveConversationRequest.class, baseUrl, "/conversations/{conversation_id}/unarchive", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -522,7 +522,7 @@ public class Messages {
      */
     public org.openapis.openapi.models.operations.UnblockConversationResponse unblockConversation(org.openapis.openapi.models.operations.UnblockConversationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnblockConversationPathParams.class, baseUrl, "/conversations/{conversation_id}/unblock", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnblockConversationRequest.class, baseUrl, "/conversations/{conversation_id}/unblock", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

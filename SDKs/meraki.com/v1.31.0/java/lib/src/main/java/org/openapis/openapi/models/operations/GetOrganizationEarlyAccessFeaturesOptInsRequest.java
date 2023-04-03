@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationEarlyAccessFeaturesOptInsRequest {
-    
-    public GetOrganizationEarlyAccessFeaturesOptInsPathParams pathParams;
-    public GetOrganizationEarlyAccessFeaturesOptInsRequest withPathParams(GetOrganizationEarlyAccessFeaturesOptInsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public GetOrganizationEarlyAccessFeaturesOptInsRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

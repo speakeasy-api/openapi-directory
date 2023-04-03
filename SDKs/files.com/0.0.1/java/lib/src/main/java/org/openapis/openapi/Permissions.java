@@ -43,7 +43,7 @@ public class Permissions {
      */
     public org.openapis.openapi.models.operations.DeletePermissionsIdResponse deletePermissionsId(org.openapis.openapi.models.operations.DeletePermissionsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePermissionsIdPathParams.class, baseUrl, "/permissions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePermissionsIdRequest.class, baseUrl, "/permissions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -82,7 +82,7 @@ public class Permissions {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -121,7 +121,7 @@ public class Permissions {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPermissionsResponse postPermissions(org.openapis.openapi.models.operations.PostPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPermissionsResponse postPermissions(org.openapis.openapi.models.operations.PostPermissionsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/permissions");
         

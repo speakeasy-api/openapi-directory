@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSavedFiltersRequest {
-    
-    public GetSavedFiltersPathParams pathParams;
-    public GetSavedFiltersRequest withPathParams(GetSavedFiltersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Page Number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetSavedFiltersRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * Project's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_slug")
+    public String projectSlug;
+    public GetSavedFiltersRequest withProjectSlug(String projectSlug) {
+        this.projectSlug = projectSlug;
+        return this;
+    }
     
-    public GetSavedFiltersQueryParams queryParams;
-    public GetSavedFiltersRequest withQueryParams(GetSavedFiltersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page Size
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
+    public Long size;
+    public GetSavedFiltersRequest withSize(Long size) {
+        this.size = size;
+        return this;
+    }
+    
+    /**
+     * User's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public GetSavedFiltersRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

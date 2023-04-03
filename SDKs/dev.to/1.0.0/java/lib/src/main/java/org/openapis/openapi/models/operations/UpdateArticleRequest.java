@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateArticleRequest {
-    
-    public UpdateArticlePathParams pathParams;
-    public UpdateArticleRequest withPathParams(UpdateArticlePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.Article article;
+    public UpdateArticleRequest withArticle(org.openapis.openapi.models.shared.Article article) {
+        this.article = article;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Article request;
-    public UpdateArticleRequest withRequest(org.openapis.openapi.models.shared.Article request) {
-        this.request = request;
+    /**
+     * The ID of the user to unpublish.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public UpdateArticleRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

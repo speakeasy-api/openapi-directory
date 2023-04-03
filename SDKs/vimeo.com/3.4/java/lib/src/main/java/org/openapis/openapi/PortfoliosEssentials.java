@@ -38,7 +38,7 @@ public class PortfoliosEssentials {
      */
     public org.openapis.openapi.models.operations.GetPortfolioResponse getPortfolio(org.openapis.openapi.models.operations.GetPortfolioRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPortfolioPathParams.class, baseUrl, "/users/{user_id}/portfolios/{portfolio_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPortfolioRequest.class, baseUrl, "/users/{user_id}/portfolios/{portfolio_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -77,7 +77,7 @@ public class PortfoliosEssentials {
      */
     public org.openapis.openapi.models.operations.GetPortfolioAlt1Response getPortfolioAlt1(org.openapis.openapi.models.operations.GetPortfolioAlt1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPortfolioAlt1PathParams.class, baseUrl, "/me/portfolios/{portfolio_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPortfolioAlt1Request.class, baseUrl, "/me/portfolios/{portfolio_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -116,13 +116,13 @@ public class PortfoliosEssentials {
      */
     public org.openapis.openapi.models.operations.GetPortfoliosResponse getPortfolios(org.openapis.openapi.models.operations.GetPortfoliosRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPortfoliosPathParams.class, baseUrl, "/users/{user_id}/portfolios", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPortfoliosRequest.class, baseUrl, "/users/{user_id}/portfolios", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPortfoliosQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPortfoliosRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -167,7 +167,7 @@ public class PortfoliosEssentials {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPortfoliosAlt1QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPortfoliosAlt1Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

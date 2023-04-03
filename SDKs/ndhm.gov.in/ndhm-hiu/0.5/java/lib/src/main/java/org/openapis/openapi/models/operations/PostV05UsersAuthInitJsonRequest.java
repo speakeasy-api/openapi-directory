@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05UsersAuthInitJsonRequest {
-    
-    public PostV05UsersAuthInitJsonHeaders headers;
-    public PostV05UsersAuthInitJsonRequest withHeaders(PostV05UsersAuthInitJsonHeaders headers) {
-        this.headers = headers;
+    /**
+     * Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostV05UsersAuthInitJsonRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PatientAuthInitRequest request;
-    public PostV05UsersAuthInitJsonRequest withRequest(org.openapis.openapi.models.shared.PatientAuthInitRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PatientAuthInitRequest patientAuthInitRequest;
+    public PostV05UsersAuthInitJsonRequest withPatientAuthInitRequest(org.openapis.openapi.models.shared.PatientAuthInitRequest patientAuthInitRequest) {
+        this.patientAuthInitRequest = patientAuthInitRequest;
+        return this;
+    }
+    
+    /**
+     * Suffix of the consent manager to which the request was intended.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-CM-ID")
+    public String xCmId;
+    public PostV05UsersAuthInitJsonRequest withXCmId(String xCmId) {
+        this.xCmId = xCmId;
         return this;
     }
     

@@ -40,12 +40,12 @@ public class AnalyticsStatistics {
      */
     public org.openapis.openapi.models.operations.GetStoreReportByCategoryResponse getStoreReportByCategory(org.openapis.openapi.models.operations.GetStoreReportByCategoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStoreReportByCategoryPathParams.class, baseUrl, "/v2/user/analytics/{storeId}/reports/bycategory", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStoreReportByCategoryRequest.class, baseUrl, "/v2/user/analytics/{storeId}/reports/bycategory", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "reportByCategoryRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -92,12 +92,12 @@ public class AnalyticsStatistics {
      */
     public org.openapis.openapi.models.operations.GetStoreReportByChannelResponse getStoreReportByChannel(org.openapis.openapi.models.operations.GetStoreReportByChannelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStoreReportByChannelPathParams.class, baseUrl, "/v2/user/analytics/{storeId}/reports/bychannel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStoreReportByChannelRequest.class, baseUrl, "/v2/user/analytics/{storeId}/reports/bychannel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "reportByChannelRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -144,12 +144,12 @@ public class AnalyticsStatistics {
      */
     public org.openapis.openapi.models.operations.GetStoreReportByDayResponse getStoreReportByDay(org.openapis.openapi.models.operations.GetStoreReportByDayRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStoreReportByDayPathParams.class, baseUrl, "/v2/user/analytics/{storeId}/reports/byday", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStoreReportByDayRequest.class, baseUrl, "/v2/user/analytics/{storeId}/reports/byday", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "reportByDayRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -194,7 +194,7 @@ public class AnalyticsStatistics {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetStoreReportByDayPerStoreResponse getStoreReportByDayPerStore(org.openapis.openapi.models.operations.GetStoreReportByDayPerStoreRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetStoreReportByDayPerStoreResponse getStoreReportByDayPerStore(org.openapis.openapi.models.shared.ReportByDayRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/user/analytics/reports/byday");
         
@@ -248,12 +248,12 @@ public class AnalyticsStatistics {
      */
     public org.openapis.openapi.models.operations.GetStoreReportByProductResponse getStoreReportByProduct(org.openapis.openapi.models.operations.GetStoreReportByProductRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStoreReportByProductPathParams.class, baseUrl, "/v2/user/analytics/{storeId}/reports/byproduct", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStoreReportByProductRequest.class, baseUrl, "/v2/user/analytics/{storeId}/reports/byproduct", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "reportByProductRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

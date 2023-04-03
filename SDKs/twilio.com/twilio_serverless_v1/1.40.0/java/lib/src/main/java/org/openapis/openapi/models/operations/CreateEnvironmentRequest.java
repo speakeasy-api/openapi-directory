@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateEnvironmentRequest {
-    
-    public CreateEnvironmentPathParams pathParams;
-    public CreateEnvironmentRequest withPathParams(CreateEnvironmentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateEnvironmentCreateEnvironmentRequest request;
-    public CreateEnvironmentRequest withRequest(CreateEnvironmentCreateEnvironmentRequest request) {
-        this.request = request;
+    public CreateEnvironmentCreateEnvironmentRequest requestBody;
+    public CreateEnvironmentRequest withRequestBody(CreateEnvironmentCreateEnvironmentRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateEnvironmentSecurity security;
-    public CreateEnvironmentRequest withSecurity(CreateEnvironmentSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateEnvironmentRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Service to create the Environment resource under.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public CreateEnvironmentRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

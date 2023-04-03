@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PlayerSearchRequest {
+    /**
+     * Position abbreviation filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=position")
+    public String position;
+    public PlayerSearchRequest withPosition(String position) {
+        this.position = position;
+        return this;
+    }
     
-    public PlayerSearchQueryParams queryParams;
-    public PlayerSearchRequest withQueryParams(PlayerSearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Term to search on
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=searchTerm")
+    public String searchTerm;
+    public PlayerSearchRequest withSearchTerm(String searchTerm) {
+        this.searchTerm = searchTerm;
+        return this;
+    }
+    
+    /**
+     * Team filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team")
+    public String team;
+    public PlayerSearchRequest withTeam(String team) {
+        this.team = team;
+        return this;
+    }
+    
+    /**
+     * Year filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public Long year;
+    public PlayerSearchRequest withYear(Long year) {
+        this.year = year;
         return this;
     }
     

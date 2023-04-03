@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutCharginglocationsCharginglocationidRequest {
-    
-    public PutCharginglocationsCharginglocationidPathParams pathParams;
-    public PutCharginglocationsCharginglocationidRequest withPathParams(PutCharginglocationsCharginglocationidPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the Charging Location
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=chargingLocationId")
+    public String chargingLocationId;
+    public PutCharginglocationsCharginglocationidRequest withChargingLocationId(String chargingLocationId) {
+        this.chargingLocationId = chargingLocationId;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.OnechargingLocationsPostRequestBodyContentApplication1jsonSchemaInput request;
-    public PutCharginglocationsCharginglocationidRequest withRequest(org.openapis.openapi.models.shared.OnechargingLocationsPostRequestBodyContentApplication1jsonSchemaInput request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public PutCharginglocationsCharginglocationidSecurity security;
-    public PutCharginglocationsCharginglocationidRequest withSecurity(PutCharginglocationsCharginglocationidSecurity security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.OnechargingLocationsPostRequestBodyContentApplication1jsonSchemaInput onechargingLocationsPostRequestBodyContentApplication1jsonSchemaInput;
+    public PutCharginglocationsCharginglocationidRequest withOnechargingLocationsPostRequestBodyContentApplication1jsonSchemaInput(org.openapis.openapi.models.shared.OnechargingLocationsPostRequestBodyContentApplication1jsonSchemaInput onechargingLocationsPostRequestBodyContentApplication1jsonSchemaInput) {
+        this.onechargingLocationsPostRequestBodyContentApplication1jsonSchemaInput = onechargingLocationsPostRequestBodyContentApplication1jsonSchemaInput;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProgressRequest {
-    
-    public GetProgressPathParams pathParams;
-    public GetProgressRequest withPathParams(GetProgressPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * task's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taskId")
+    public String taskId;
+    public GetProgressRequest withTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
     

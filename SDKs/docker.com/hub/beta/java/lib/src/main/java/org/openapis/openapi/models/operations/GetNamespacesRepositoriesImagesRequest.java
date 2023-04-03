@@ -4,20 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNamespacesRepositoriesImagesRequest {
-    
-    public GetNamespacesRepositoriesImagesPathParams pathParams;
-    public GetNamespacesRepositoriesImagesRequest withPathParams(GetNamespacesRepositoriesImagesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Sets the time from which an image must have been pushed or pulled to
+     * be counted as active.
+     * 
+     * Defaults to 1 month before the current time.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=active_from")
+    public String activeFrom;
+    public GetNamespacesRepositoriesImagesRequest withActiveFrom(String activeFrom) {
+        this.activeFrom = activeFrom;
         return this;
     }
     
+    /**
+     * Filters to only show images with:
+     * - `true`: at least 1 current tag.
+     * - `false`: no current tags.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currently_tagged")
+    public Boolean currentlyTagged;
+    public GetNamespacesRepositoriesImagesRequest withCurrentlyTagged(Boolean currentlyTagged) {
+        this.currentlyTagged = currentlyTagged;
+        return this;
+    }
     
-    public GetNamespacesRepositoriesImagesQueryParams queryParams;
-    public GetNamespacesRepositoriesImagesRequest withQueryParams(GetNamespacesRepositoriesImagesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Namespace of the repository.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=namespace")
+    public String namespace;
+    public GetNamespacesRepositoriesImagesRequest withNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    
+    /**
+     * Orders the results by this property.
+     * 
+     * Prefixing with `-` sorts by descending order.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ordering")
+    public GetNamespacesRepositoriesImagesOrderingEnum ordering;
+    public GetNamespacesRepositoriesImagesRequest withOrdering(GetNamespacesRepositoriesImagesOrderingEnum ordering) {
+        this.ordering = ordering;
+        return this;
+    }
+    
+    /**
+     * Page number to get. Defaults to 1.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetNamespacesRepositoriesImagesRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Number of images to get per page. Defaults to 10. Max of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public GetNamespacesRepositoriesImagesRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * Name of the repository.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repository")
+    public String repository;
+    public GetNamespacesRepositoriesImagesRequest withRepository(String repository) {
+        this.repository = repository;
+        return this;
+    }
+    
+    /**
+     * Filters to only show images of this status.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public GetNamespacesRepositoriesImagesStatusEnum status;
+    public GetNamespacesRepositoriesImagesRequest withStatus(GetNamespacesRepositoriesImagesStatusEnum status) {
+        this.status = status;
         return this;
     }
     

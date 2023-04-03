@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetExpiredCertsRequest {
-    
-    public GetExpiredCertsPathParams pathParams;
-    public GetExpiredCertsRequest withPathParams(GetExpiredCertsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetExpiredCertsSecurity security;
-    public GetExpiredCertsRequest withSecurity(GetExpiredCertsSecurity security) {
-        this.security = security;
+    /**
+     * SHA2 hash of device firmware
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=firmware_hash")
+    public String firmwareHash;
+    public GetExpiredCertsRequest withFirmwareHash(String firmwareHash) {
+        this.firmwareHash = firmwareHash;
         return this;
     }
     

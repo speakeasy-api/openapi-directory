@@ -7,31 +7,160 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BeyondcorpProjectsLocationsAppGatewaysCreateRequest {
-    
-    public BeyondcorpProjectsLocationsAppGatewaysCreatePathParams pathParams;
-    public BeyondcorpProjectsLocationsAppGatewaysCreateRequest withPathParams(BeyondcorpProjectsLocationsAppGatewaysCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public BeyondcorpProjectsLocationsAppGatewaysCreateQueryParams queryParams;
-    public BeyondcorpProjectsLocationsAppGatewaysCreateRequest withQueryParams(BeyondcorpProjectsLocationsAppGatewaysCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public BeyondcorpProjectsLocationsAppGatewaysCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AppGatewayInput request;
-    public BeyondcorpProjectsLocationsAppGatewaysCreateRequest withRequest(org.openapis.openapi.models.shared.AppGatewayInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AppGatewayInput appGatewayInput;
+    public BeyondcorpProjectsLocationsAppGatewaysCreateRequest withAppGatewayInput(org.openapis.openapi.models.shared.AppGatewayInput appGatewayInput) {
+        this.appGatewayInput = appGatewayInput;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public BeyondcorpProjectsLocationsAppGatewaysCreateRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public BeyondcorpProjectsLocationsAppGatewaysCreateSecurity security;
-    public BeyondcorpProjectsLocationsAppGatewaysCreateRequest withSecurity(BeyondcorpProjectsLocationsAppGatewaysCreateSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public BeyondcorpProjectsLocationsAppGatewaysCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * Optional. User-settable AppGateway resource ID. * Must start with a letter. * Must contain between 4-63 characters from `/a-z-/`. * Must end with a number or a letter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appGatewayId")
+    public String appGatewayId;
+    public BeyondcorpProjectsLocationsAppGatewaysCreateRequest withAppGatewayId(String appGatewayId) {
+        this.appGatewayId = appGatewayId;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public BeyondcorpProjectsLocationsAppGatewaysCreateRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public BeyondcorpProjectsLocationsAppGatewaysCreateRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public BeyondcorpProjectsLocationsAppGatewaysCreateRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public BeyondcorpProjectsLocationsAppGatewaysCreateRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Required. The resource project name of the AppGateway location using the form: `projects/{project_id}/locations/{location_id}`
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public BeyondcorpProjectsLocationsAppGatewaysCreateRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public BeyondcorpProjectsLocationsAppGatewaysCreateRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public BeyondcorpProjectsLocationsAppGatewaysCreateRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Optional. An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
+    public String requestId;
+    public BeyondcorpProjectsLocationsAppGatewaysCreateRequest withRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public BeyondcorpProjectsLocationsAppGatewaysCreateRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public BeyondcorpProjectsLocationsAppGatewaysCreateRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
+        return this;
+    }
+    
+    /**
+     * Optional. If set, validates request by executing a dry-run which would not alter the resource in any way.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=validateOnly")
+    public Boolean validateOnly;
+    public BeyondcorpProjectsLocationsAppGatewaysCreateRequest withValidateOnly(Boolean validateOnly) {
+        this.validateOnly = validateOnly;
         return this;
     }
     

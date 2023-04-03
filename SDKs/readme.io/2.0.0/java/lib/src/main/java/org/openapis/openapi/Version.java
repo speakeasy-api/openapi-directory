@@ -31,10 +31,11 @@ public class Version {
      * Create version
      * Create a new version
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateVersionResponse createVersion(org.openapis.openapi.models.operations.CreateVersionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateVersionResponse createVersion(org.openapis.openapi.models.shared.Version request, org.openapis.openapi.models.operations.CreateVersionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/version");
         
@@ -48,7 +49,7 @@ public class Version {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -70,19 +71,20 @@ public class Version {
      * Delete version
      * Delete a version
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteVersionResponse deleteVersion(org.openapis.openapi.models.operations.DeleteVersionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteVersionResponse deleteVersion(org.openapis.openapi.models.operations.DeleteVersionRequest request, org.openapis.openapi.models.operations.DeleteVersionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVersionPathParams.class, baseUrl, "/version/{versionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVersionRequest.class, baseUrl, "/version/{versionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -104,19 +106,20 @@ public class Version {
      * Get version
      * Returns the version with this version ID
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetVersionResponse getVersion(org.openapis.openapi.models.operations.GetVersionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetVersionResponse getVersion(org.openapis.openapi.models.operations.GetVersionRequest request, org.openapis.openapi.models.operations.GetVersionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVersionPathParams.class, baseUrl, "/version/{versionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVersionRequest.class, baseUrl, "/version/{versionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -137,11 +140,10 @@ public class Version {
     /**
      * Get versions
      * Retrieve a list of versions associated with a project API key
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetVersionsResponse getVersions(org.openapis.openapi.models.operations.GetVersionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetVersionsResponse getVersions() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/version");
         
@@ -150,8 +152,7 @@ public class Version {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -172,24 +173,25 @@ public class Version {
      * Update version
      * Update an existing version
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateVersionResponse updateVersion(org.openapis.openapi.models.operations.UpdateVersionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateVersionResponse updateVersion(org.openapis.openapi.models.operations.UpdateVersionRequest request, org.openapis.openapi.models.operations.UpdateVersionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateVersionPathParams.class, baseUrl, "/version/{versionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateVersionRequest.class, baseUrl, "/version/{versionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "version", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

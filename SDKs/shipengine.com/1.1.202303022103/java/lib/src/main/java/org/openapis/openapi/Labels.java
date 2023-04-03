@@ -45,7 +45,7 @@ public class Labels {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateLabelResponse createLabel(org.openapis.openapi.models.operations.CreateLabelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateLabelResponse createLabel(org.openapis.openapi.models.shared.CreateLabelRequestBodyInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/labels");
         
@@ -102,12 +102,12 @@ public class Labels {
      */
     public org.openapis.openapi.models.operations.CreateLabelFromRateResponse createLabelFromRate(org.openapis.openapi.models.operations.CreateLabelFromRateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateLabelFromRatePathParams.class, baseUrl, "/v1/labels/rates/{rate_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateLabelFromRateRequest.class, baseUrl, "/v1/labels/rates/{rate_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createLabelFromRateRequestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -157,12 +157,12 @@ public class Labels {
      */
     public org.openapis.openapi.models.operations.CreateLabelFromShipmentResponse createLabelFromShipment(org.openapis.openapi.models.operations.CreateLabelFromShipmentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateLabelFromShipmentPathParams.class, baseUrl, "/v1/labels/shipment/{shipment_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateLabelFromShipmentRequest.class, baseUrl, "/v1/labels/shipment/{shipment_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createLabelFromShipmentRequestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -210,12 +210,12 @@ public class Labels {
      */
     public org.openapis.openapi.models.operations.CreateReturnLabelResponse createReturnLabel(org.openapis.openapi.models.operations.CreateReturnLabelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateReturnLabelPathParams.class, baseUrl, "/v1/labels/{label_id}/return", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateReturnLabelRequest.class, baseUrl, "/v1/labels/{label_id}/return", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createReturnLabelRequestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -264,13 +264,13 @@ public class Labels {
      */
     public org.openapis.openapi.models.operations.GetLabelByExternalShipmentIdResponse getLabelByExternalShipmentId(org.openapis.openapi.models.operations.GetLabelByExternalShipmentIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLabelByExternalShipmentIdPathParams.class, baseUrl, "/v1/labels/external_shipment_id/{external_shipment_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLabelByExternalShipmentIdRequest.class, baseUrl, "/v1/labels/external_shipment_id/{external_shipment_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetLabelByExternalShipmentIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetLabelByExternalShipmentIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -318,13 +318,13 @@ public class Labels {
      */
     public org.openapis.openapi.models.operations.GetLabelByIdResponse getLabelById(org.openapis.openapi.models.operations.GetLabelByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLabelByIdPathParams.class, baseUrl, "/v1/labels/{label_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLabelByIdRequest.class, baseUrl, "/v1/labels/{label_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetLabelByIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetLabelByIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -372,7 +372,7 @@ public class Labels {
      */
     public org.openapis.openapi.models.operations.GetTrackingLogFromLabelResponse getTrackingLogFromLabel(org.openapis.openapi.models.operations.GetTrackingLogFromLabelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTrackingLogFromLabelPathParams.class, baseUrl, "/v1/labels/{label_id}/track", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTrackingLogFromLabelRequest.class, baseUrl, "/v1/labels/{label_id}/track", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -429,7 +429,7 @@ public class Labels {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListLabelsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListLabelsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -477,7 +477,7 @@ public class Labels {
      */
     public org.openapis.openapi.models.operations.VoidLabelResponse voidLabel(org.openapis.openapi.models.operations.VoidLabelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VoidLabelPathParams.class, baseUrl, "/v1/labels/{label_id}/void", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VoidLabelRequest.class, baseUrl, "/v1/labels/{label_id}/void", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

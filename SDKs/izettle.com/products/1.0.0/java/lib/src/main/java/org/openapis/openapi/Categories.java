@@ -33,24 +33,25 @@ public class Categories {
     /**
      * Create a new category
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateCategoriesResponse createCategories(org.openapis.openapi.models.operations.CreateCategoriesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateCategoriesResponse createCategories(org.openapis.openapi.models.operations.CreateCategoriesRequest request, org.openapis.openapi.models.operations.CreateCategoriesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateCategoriesPathParams.class, baseUrl, "/organizations/{organizationUuid}/categories/v2", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateCategoriesRequest.class, baseUrl, "/organizations/{organizationUuid}/categories/v2", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createCategoriesRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -71,19 +72,20 @@ public class Categories {
     /**
      * Delete a category
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteCategoryResponse deleteCategory(org.openapis.openapi.models.operations.DeleteCategoryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteCategoryResponse deleteCategory(org.openapis.openapi.models.operations.DeleteCategoryRequest request, org.openapis.openapi.models.operations.DeleteCategorySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCategoryPathParams.class, baseUrl, "/organizations/{organizationUuid}/categories/v2/{categoryUuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCategoryRequest.class, baseUrl, "/organizations/{organizationUuid}/categories/v2/{categoryUuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -104,19 +106,20 @@ public class Categories {
     /**
      * Retrieve all categories
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetProductTypesResponse getProductTypes(org.openapis.openapi.models.operations.GetProductTypesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetProductTypesResponse getProductTypes(org.openapis.openapi.models.operations.GetProductTypesRequest request, org.openapis.openapi.models.operations.GetProductTypesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProductTypesPathParams.class, baseUrl, "/organizations/{organizationUuid}/categories/v2", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProductTypesRequest.class, baseUrl, "/organizations/{organizationUuid}/categories/v2", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -143,24 +146,25 @@ public class Categories {
     /**
      * Rename a category
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RenameCategoryResponse renameCategory(org.openapis.openapi.models.operations.RenameCategoryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RenameCategoryResponse renameCategory(org.openapis.openapi.models.operations.RenameCategoryRequest request, org.openapis.openapi.models.operations.RenameCategorySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RenameCategoryPathParams.class, baseUrl, "/organizations/{organizationUuid}/categories/v2/{categoryUuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RenameCategoryRequest.class, baseUrl, "/organizations/{organizationUuid}/categories/v2/{categoryUuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "renameCategoryRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

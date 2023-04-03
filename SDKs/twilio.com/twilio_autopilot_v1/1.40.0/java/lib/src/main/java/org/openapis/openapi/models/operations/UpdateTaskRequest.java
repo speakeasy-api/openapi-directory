@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateTaskRequest {
-    
-    public UpdateTaskPathParams pathParams;
-    public UpdateTaskRequest withPathParams(UpdateTaskPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public UpdateTaskRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateTaskUpdateTaskRequest request;
-    public UpdateTaskRequest withRequest(UpdateTaskUpdateTaskRequest request) {
-        this.request = request;
+    public UpdateTaskUpdateTaskRequest requestBody;
+    public UpdateTaskRequest withRequestBody(UpdateTaskUpdateTaskRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateTaskSecurity security;
-    public UpdateTaskRequest withSecurity(UpdateTaskSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateTaskRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the Task resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateTaskRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

@@ -55,7 +55,7 @@ public class Authentication {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostUsers2FALoginResponse postUsers2FALogin(org.openapis.openapi.models.operations.PostUsers2FALoginRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostUsers2FALoginResponse postUsers2FALogin(org.openapis.openapi.models.shared.Users2FALoginRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/users/2fa-login");
         
@@ -113,7 +113,7 @@ public class Authentication {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostUsersLoginResponse postUsersLogin(org.openapis.openapi.models.operations.PostUsersLoginRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostUsersLoginResponse postUsersLogin(org.openapis.openapi.models.shared.UsersLoginRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/users/login");
         

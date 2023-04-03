@@ -38,7 +38,7 @@ public class VirtualBillingMeterDeactivate {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.VirtualBillingMeterDeactivatePostFormResponse virtualBillingMeterDeactivatePostForm(org.openapis.openapi.models.operations.VirtualBillingMeterDeactivatePostFormRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.VirtualBillingMeterDeactivatePostFormResponse virtualBillingMeterDeactivatePostForm(org.openapis.openapi.models.shared.VMeterToDeactivate request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/VirtualBillingMeterDeactivate");
         
@@ -100,7 +100,7 @@ public class VirtualBillingMeterDeactivate {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.VirtualBillingMeterDeactivatePostJsonResponse virtualBillingMeterDeactivatePostJson(org.openapis.openapi.models.operations.VirtualBillingMeterDeactivatePostJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.VirtualBillingMeterDeactivatePostJsonResponse virtualBillingMeterDeactivatePostJson(org.openapis.openapi.models.shared.VMeterToDeactivate request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/VirtualBillingMeterDeactivate");
         
@@ -162,7 +162,7 @@ public class VirtualBillingMeterDeactivate {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.VirtualBillingMeterDeactivatePostRawResponse virtualBillingMeterDeactivatePostRaw(org.openapis.openapi.models.operations.VirtualBillingMeterDeactivatePostRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.VirtualBillingMeterDeactivatePostRawResponse virtualBillingMeterDeactivatePostRaw(byte[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/VirtualBillingMeterDeactivate");
         

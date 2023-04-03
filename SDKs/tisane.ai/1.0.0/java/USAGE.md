@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetFamilyDetailsQueryParams;
-import org.openapis.openapi.models.operations.GetFamilyDetailsHeaders;
 import org.openapis.openapi.models.operations.GetFamilyDetailsRequest;
 import org.openapis.openapi.models.operations.GetFamilyDetailsResponse;
 
@@ -16,13 +14,9 @@ public class Application {
                 .build();
 
             GetFamilyDetailsRequest req = new GetFamilyDetailsRequest() {{
-                queryParams = new GetFamilyDetailsQueryParams() {{
-                    id = "{family_id}";
-                }};
-                headers = new GetFamilyDetailsHeaders() {{
-                    ocpApimSubscriptionKey = "{{apiKey}}";
-                }};
-            }};            
+                ocpApimSubscriptionKey = "{{apiKey}}";
+                id = "{family_id}";
+            }}            
 
             GetFamilyDetailsResponse res = sdk.languageModelDirectAccess.getFamilyDetails(req);
 

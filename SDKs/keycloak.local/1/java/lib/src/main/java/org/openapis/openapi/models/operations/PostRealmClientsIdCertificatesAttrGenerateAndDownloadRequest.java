@@ -7,20 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRealmClientsIdCertificatesAttrGenerateAndDownloadRequest {
-    
-    public PostRealmClientsIdCertificatesAttrGenerateAndDownloadPathParams pathParams;
-    public PostRealmClientsIdCertificatesAttrGenerateAndDownloadRequest withPathParams(PostRealmClientsIdCertificatesAttrGenerateAndDownloadPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Keystore configuration as JSON
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.KeyStoreConfig request;
-    public PostRealmClientsIdCertificatesAttrGenerateAndDownloadRequest withRequest(org.openapis.openapi.models.shared.KeyStoreConfig request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.KeyStoreConfig keyStoreConfig;
+    public PostRealmClientsIdCertificatesAttrGenerateAndDownloadRequest withKeyStoreConfig(org.openapis.openapi.models.shared.KeyStoreConfig keyStoreConfig) {
+        this.keyStoreConfig = keyStoreConfig;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=attr")
+    public String attr;
+    public PostRealmClientsIdCertificatesAttrGenerateAndDownloadRequest withAttr(String attr) {
+        this.attr = attr;
+        return this;
+    }
+    
+    /**
+     * id of client (not client-id)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostRealmClientsIdCertificatesAttrGenerateAndDownloadRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PostRealmClientsIdCertificatesAttrGenerateAndDownloadRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

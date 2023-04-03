@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchSftpHostKeysIdRequest {
-    
-    public PatchSftpHostKeysIdPathParams pathParams;
-    public PatchSftpHostKeysIdRequest withPathParams(PatchSftpHostKeysIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public PatchSftpHostKeysIdRequestBody requestBody;
+    public PatchSftpHostKeysIdRequest withRequestBody(PatchSftpHostKeysIdRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PatchSftpHostKeysIdRequestBody request;
-    public PatchSftpHostKeysIdRequest withRequest(PatchSftpHostKeysIdRequestBody request) {
-        this.request = request;
+    /**
+     * Sftp Host Key ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PatchSftpHostKeysIdRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

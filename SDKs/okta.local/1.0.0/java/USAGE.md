@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.ClearUserSessionsPathParams;
 import org.openapis.openapi.models.operations.ClearUserSessionsRequest;
 import org.openapis.openapi.models.operations.ClearUserSessionsResponse;
 
@@ -15,11 +14,9 @@ public class Application {
                 .build();
 
             ClearUserSessionsRequest req = new ClearUserSessionsRequest() {{
-                pathParams = new ClearUserSessionsPathParams() {{
-                    userId = "corrupti";
-                }};
-                request = "provident".getBytes();
-            }};            
+                requestBody = "corrupti".getBytes();
+                userId = "provident";
+            }}            
 
             ClearUserSessionsResponse res = sdk.clearUserSessions(req);
 

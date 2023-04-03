@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesSpaceIdFoldersIdVatDeclarationsMultipartRequest {
-    
-    public PostSpacesSpaceIdFoldersIdVatDeclarationsMultipartPathParams pathParams;
-    public PostSpacesSpaceIdFoldersIdVatDeclarationsMultipartRequest withPathParams(PostSpacesSpaceIdFoldersIdVatDeclarationsMultipartPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * VATDeclaration to add (either (DocumentId,End) either (File,Name,Content64Encoded,Title,End) is mandatory)
      */
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PostSpacesSpaceIdFoldersIdVatDeclarationsMultipartFormData1 request;
-    public PostSpacesSpaceIdFoldersIdVatDeclarationsMultipartRequest withRequest(PostSpacesSpaceIdFoldersIdVatDeclarationsMultipartFormData1 request) {
-        this.request = request;
+    public PostSpacesSpaceIdFoldersIdVatDeclarationsMultipartFormData1 requestBody;
+    public PostSpacesSpaceIdFoldersIdVatDeclarationsMultipartRequest withRequestBody(PostSpacesSpaceIdFoldersIdVatDeclarationsMultipartFormData1 requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Id of the folder result and taxation
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSpacesSpaceIdFoldersIdVatDeclarationsMultipartRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PostSpacesSpaceIdFoldersIdVatDeclarationsMultipartSecurity security;
-    public PostSpacesSpaceIdFoldersIdVatDeclarationsMultipartRequest withSecurity(PostSpacesSpaceIdFoldersIdVatDeclarationsMultipartSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PostSpacesSpaceIdFoldersIdVatDeclarationsMultipartRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

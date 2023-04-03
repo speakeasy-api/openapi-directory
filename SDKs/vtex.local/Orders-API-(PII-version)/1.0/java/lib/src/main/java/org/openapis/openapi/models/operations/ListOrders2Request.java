@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListOrders2Request {
-    
-    public ListOrders2QueryParams queryParams;
-    public ListOrders2Request withQueryParams(ListOrders2QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public ListOrders2Request withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public ListOrders2Headers headers;
-    public ListOrders2Request withHeaders(ListOrders2Headers headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public ListOrders2Request withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public ListOrders2RequestBody request;
-    public ListOrders2Request withRequest(ListOrders2RequestBody request) {
-        this.request = request;
+    public ListOrders2RequestBody requestBody;
+    public ListOrders2Request withRequestBody(ListOrders2RequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Filters list to return only orders with non `null` values for the `invoiceInput` field.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=f_hasInputInvoice")
+    public Boolean fHasInputInvoice;
+    public ListOrders2Request withFHasInputInvoice(Boolean fHasInputInvoice) {
+        this.fHasInputInvoice = fHasInputInvoice;
         return this;
     }
     

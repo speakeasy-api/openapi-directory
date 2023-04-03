@@ -31,7 +31,6 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetEventsTypeEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetEventsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetEventsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetEventsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/EventRecord.java

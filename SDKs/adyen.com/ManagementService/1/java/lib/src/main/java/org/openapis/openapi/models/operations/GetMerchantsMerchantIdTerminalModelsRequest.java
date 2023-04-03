@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMerchantsMerchantIdTerminalModelsRequest {
-    
-    public GetMerchantsMerchantIdTerminalModelsPathParams pathParams;
-    public GetMerchantsMerchantIdTerminalModelsRequest withPathParams(GetMerchantsMerchantIdTerminalModelsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetMerchantsMerchantIdTerminalModelsSecurity security;
-    public GetMerchantsMerchantIdTerminalModelsRequest withSecurity(GetMerchantsMerchantIdTerminalModelsSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the merchant account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
+    public String merchantId;
+    public GetMerchantsMerchantIdTerminalModelsRequest withMerchantId(String merchantId) {
+        this.merchantId = merchantId;
         return this;
     }
     

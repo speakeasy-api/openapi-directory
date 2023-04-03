@@ -307,7 +307,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCallToken1Response getCallToken1(org.openapis.openapi.models.operations.GetCallToken1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCallToken1Response getCallToken1(org.openapis.openapi.models.shared.GetCallTokenRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/calls/");
         

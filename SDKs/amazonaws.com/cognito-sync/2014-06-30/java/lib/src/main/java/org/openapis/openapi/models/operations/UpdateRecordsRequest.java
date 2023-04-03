@@ -7,24 +7,99 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateRecordsRequest {
-    
-    public UpdateRecordsPathParams pathParams;
-    public UpdateRecordsRequest withPathParams(UpdateRecordsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A string of up to 128 characters. Allowed characters are a-z, A-Z, 0-9, '_' (underscore), '-' (dash), and '.' (dot).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DatasetName")
+    public String datasetName;
+    public UpdateRecordsRequest withDatasetName(String datasetName) {
+        this.datasetName = datasetName;
         return this;
     }
     
+    /**
+     * A name-spaced GUID (for example, us-east-1:23EC4050-6AEA-7089-A2DD-08002EXAMPLE) created by Amazon Cognito. GUID generation is unique within a region.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=IdentityId")
+    public String identityId;
+    public UpdateRecordsRequest withIdentityId(String identityId) {
+        this.identityId = identityId;
+        return this;
+    }
     
-    public UpdateRecordsHeaders headers;
-    public UpdateRecordsRequest withHeaders(UpdateRecordsHeaders headers) {
-        this.headers = headers;
+    /**
+     * A name-spaced GUID (for example, us-east-1:23EC4050-6AEA-7089-A2DD-08002EXAMPLE) created by Amazon Cognito. GUID generation is unique within a region.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=IdentityPoolId")
+    public String identityPoolId;
+    public UpdateRecordsRequest withIdentityPoolId(String identityPoolId) {
+        this.identityPoolId = identityPoolId;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateRecordsRequestBody request;
-    public UpdateRecordsRequest withRequest(UpdateRecordsRequestBody request) {
-        this.request = request;
+    public UpdateRecordsRequestBody requestBody;
+    public UpdateRecordsRequest withRequestBody(UpdateRecordsRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public UpdateRecordsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public UpdateRecordsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public UpdateRecordsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public UpdateRecordsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public UpdateRecordsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public UpdateRecordsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public UpdateRecordsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * Intended to supply a device ID that will populate the lastModifiedBy field referenced in other methods. The ClientContext field is not yet implemented.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-amz-Client-Context")
+    public String xAmzClientContext;
+    public UpdateRecordsRequest withXAmzClientContext(String xAmzClientContext) {
+        this.xAmzClientContext = xAmzClientContext;
         return this;
     }
     

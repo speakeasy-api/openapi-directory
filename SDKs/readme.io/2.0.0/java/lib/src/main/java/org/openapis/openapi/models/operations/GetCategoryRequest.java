@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCategoryRequest {
-    
-    public GetCategoryPathParams pathParams;
-    public GetCategoryRequest withPathParams(GetCategoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Slug of category. Slugs must be all lowercase, and replace spaces with hyphens. For example, for the the category "Getting Started", enter the slug "getting-started"
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=slug")
+    public String slug;
+    public GetCategoryRequest withSlug(String slug) {
+        this.slug = slug;
         return this;
     }
     
-    
-    public GetCategoryHeaders headers;
-    public GetCategoryRequest withHeaders(GetCategoryHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetCategorySecurity security;
-    public GetCategoryRequest withSecurity(GetCategorySecurity security) {
-        this.security = security;
+    /**
+     * Version number of your docs project, for example, v3.0. To see all valid versions for your docs project call https://docs.readme.com/developers/reference/version#getversions.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-readme-version")
+    public String xReadmeVersion;
+    public GetCategoryRequest withXReadmeVersion(String xReadmeVersion) {
+        this.xReadmeVersion = xReadmeVersion;
         return this;
     }
     

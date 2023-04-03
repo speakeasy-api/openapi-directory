@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkApplianceStaticRoutesRequest {
-    
-    public GetNetworkApplianceStaticRoutesPathParams pathParams;
-    public GetNetworkApplianceStaticRoutesRequest withPathParams(GetNetworkApplianceStaticRoutesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkApplianceStaticRoutesRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

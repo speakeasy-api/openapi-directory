@@ -41,10 +41,11 @@ public class PhoneBlockedList {
      * 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddAnumberToBlockedListResponse addAnumberToBlockedList(org.openapis.openapi.models.operations.AddAnumberToBlockedListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddAnumberToBlockedListResponse addAnumberToBlockedList(org.openapis.openapi.models.operations.AddAnumberToBlockedListApplicationJSON request, org.openapis.openapi.models.operations.AddAnumberToBlockedListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/phone/blocked_list");
         
@@ -55,7 +56,7 @@ public class PhoneBlockedList {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -97,19 +98,20 @@ public class PhoneBlockedList {
      * 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteABlockedListResponse deleteABlockedList(org.openapis.openapi.models.operations.DeleteABlockedListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteABlockedListResponse deleteABlockedList(org.openapis.openapi.models.operations.DeleteABlockedListRequest request, org.openapis.openapi.models.operations.DeleteABlockedListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteABlockedListPathParams.class, baseUrl, "/phone/blocked_list/{blockedListId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteABlockedListRequest.class, baseUrl, "/phone/blocked_list/{blockedListId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -149,19 +151,20 @@ public class PhoneBlockedList {
      * 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetABlockedListResponse getABlockedList(org.openapis.openapi.models.operations.GetABlockedListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetABlockedListResponse getABlockedList(org.openapis.openapi.models.operations.GetABlockedListRequest request, org.openapis.openapi.models.operations.GetABlockedListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetABlockedListPathParams.class, baseUrl, "/phone/blocked_list/{blockedListId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetABlockedListRequest.class, baseUrl, "/phone/blocked_list/{blockedListId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -202,10 +205,11 @@ public class PhoneBlockedList {
      * 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListBlockedListResponse listBlockedList(org.openapis.openapi.models.operations.ListBlockedListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListBlockedListResponse listBlockedList(org.openapis.openapi.models.operations.ListBlockedListRequest request, org.openapis.openapi.models.operations.ListBlockedListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/phone/blocked_list");
         
@@ -213,14 +217,14 @@ public class PhoneBlockedList {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListBlockedListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListBlockedListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -259,21 +263,22 @@ public class PhoneBlockedList {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateBlockedListResponse updateBlockedList(org.openapis.openapi.models.operations.UpdateBlockedListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateBlockedListResponse updateBlockedList(org.openapis.openapi.models.operations.UpdateBlockedListRequest request, org.openapis.openapi.models.operations.UpdateBlockedListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateBlockedListPathParams.class, baseUrl, "/phone/blocked_list/{blockedListId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateBlockedListRequest.class, baseUrl, "/phone/blocked_list/{blockedListId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

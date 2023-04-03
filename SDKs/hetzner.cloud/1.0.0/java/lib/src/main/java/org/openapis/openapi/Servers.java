@@ -43,7 +43,7 @@ public class Servers {
      */
     public org.openapis.openapi.models.operations.DeleteServersIdResponse deleteServersId(org.openapis.openapi.models.operations.DeleteServersIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteServersIdPathParams.class, baseUrl, "/servers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteServersIdRequest.class, baseUrl, "/servers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -88,7 +88,7 @@ public class Servers {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetServersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetServersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -127,7 +127,7 @@ public class Servers {
      */
     public org.openapis.openapi.models.operations.GetServersIdResponse getServersId(org.openapis.openapi.models.operations.GetServersIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetServersIdPathParams.class, baseUrl, "/servers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetServersIdRequest.class, baseUrl, "/servers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -189,13 +189,13 @@ public class Servers {
      */
     public org.openapis.openapi.models.operations.GetServersIdMetricsResponse getServersIdMetrics(org.openapis.openapi.models.operations.GetServersIdMetricsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetServersIdMetricsPathParams.class, baseUrl, "/servers/{id}/metrics", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetServersIdMetricsRequest.class, baseUrl, "/servers/{id}/metrics", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetServersIdMetricsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetServersIdMetricsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -232,7 +232,7 @@ public class Servers {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostServersResponse postServers(org.openapis.openapi.models.operations.PostServersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostServersResponse postServers(org.openapis.openapi.models.operations.PostServersCreateServerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/servers");
         
@@ -277,12 +277,12 @@ public class Servers {
      */
     public org.openapis.openapi.models.operations.PutServersIdResponse putServersId(org.openapis.openapi.models.operations.PutServersIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutServersIdPathParams.class, baseUrl, "/servers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutServersIdRequest.class, baseUrl, "/servers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

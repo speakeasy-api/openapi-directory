@@ -4,13 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2TeamTemplateAttachmentsJsonRequest {
+    /**
+     * IDs of team template attachments to fetch. If a record can't be found, that record won't be returned and your request will be successful
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ids")
+    public Long[] ids;
+    public GetV2TeamTemplateAttachmentsJsonRequest withIds(Long[] ids) {
+        this.ids = ids;
+        return this;
+    }
     
-    public GetV2TeamTemplateAttachmentsJsonQueryParams queryParams;
-    public GetV2TeamTemplateAttachmentsJsonRequest withQueryParams(GetV2TeamTemplateAttachmentsJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Whether to include total_pages and total_count in the metadata. Defaults to false
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_paging_counts")
+    public Boolean includePagingCounts;
+    public GetV2TeamTemplateAttachmentsJsonRequest withIncludePagingCounts(Boolean includePagingCounts) {
+        this.includePagingCounts = includePagingCounts;
+        return this;
+    }
+    
+    /**
+     * Specifies whether the max limit of 10k records should be applied to pagination counts. Affects the total_count and total_pages data
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit_paging_counts")
+    public Boolean limitPagingCounts;
+    public GetV2TeamTemplateAttachmentsJsonRequest withLimitPagingCounts(Boolean limitPagingCounts) {
+        this.limitPagingCounts = limitPagingCounts;
+        return this;
+    }
+    
+    /**
+     * The current page to fetch results from. Defaults to 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetV2TeamTemplateAttachmentsJsonRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * How many records to show per page in the range [1, 100]. Defaults to 25
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetV2TeamTemplateAttachmentsJsonRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Filters template attachments by team template IDs
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=team_template_id")
+    public Long[] teamTemplateId;
+    public GetV2TeamTemplateAttachmentsJsonRequest withTeamTemplateId(Long[] teamTemplateId) {
+        this.teamTemplateId = teamTemplateId;
         return this;
     }
     

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2AwaGetActionTokenRequest {
-    
-    public Destiny2AwaGetActionTokenPathParams pathParams;
-    public Destiny2AwaGetActionTokenRequest withPathParams(Destiny2AwaGetActionTokenPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public Destiny2AwaGetActionTokenSecurity security;
-    public Destiny2AwaGetActionTokenRequest withSecurity(Destiny2AwaGetActionTokenSecurity security) {
-        this.security = security;
+    /**
+     * The identifier for the advanced write action request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=correlationId")
+    public String correlationId;
+    public Destiny2AwaGetActionTokenRequest withCorrelationId(String correlationId) {
+        this.correlationId = correlationId;
         return this;
     }
     

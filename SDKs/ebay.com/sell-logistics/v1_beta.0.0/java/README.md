@@ -18,10 +18,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.CancelShipmentSecurity;
-import org.openapis.openapi.models.operations.CancelShipmentPathParams;
 import org.openapis.openapi.models.operations.CancelShipmentRequest;
 import org.openapis.openapi.models.operations.CancelShipmentResponse;
-import org.openapis.openapi.models.shared.SchemeAPIAuth;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,17 +28,12 @@ public class Application {
                 .build();
 
             CancelShipmentRequest req = new CancelShipmentRequest() {{
-                security = new CancelShipmentSecurity() {{
-                    apiAuth = new SchemeAPIAuth() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new CancelShipmentPathParams() {{
-                    shipmentId = "corrupti";
-                }};
-            }};            
+                shipmentId = "corrupti";
+            }}            
 
-            CancelShipmentResponse res = sdk.shipment.cancelShipment(req);
+            CancelShipmentResponse res = sdk.shipment.cancelShipment(req, new CancelShipmentSecurity() {{
+                apiAuth = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.shipment.isPresent()) {
                 // handle response
@@ -52,7 +45,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### shipment

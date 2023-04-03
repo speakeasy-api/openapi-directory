@@ -7,24 +7,21 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateScoreRevisionRequest {
-    
-    public CreateScoreRevisionPathParams pathParams;
-    public CreateScoreRevisionRequest withPathParams(CreateScoreRevisionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ScoreRevisionCreation request;
-    public CreateScoreRevisionRequest withRequest(org.openapis.openapi.models.shared.ScoreRevisionCreation request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ScoreRevisionCreation scoreRevisionCreation;
+    public CreateScoreRevisionRequest withScoreRevisionCreation(org.openapis.openapi.models.shared.ScoreRevisionCreation scoreRevisionCreation) {
+        this.scoreRevisionCreation = scoreRevisionCreation;
         return this;
     }
     
-    
-    public CreateScoreRevisionSecurity security;
-    public CreateScoreRevisionRequest withSecurity(CreateScoreRevisionSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the score document. This can be a Flat Score unique identifier (i.e. `ScoreDetails.id`) or, if the score is also a Google Drive file, the Drive file unique identifier prefixed with `drive-` (e.g. `drive-0B000000000`).
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=score")
+    public String score;
+    public CreateScoreRevisionRequest withScore(String score) {
+        this.score = score;
         return this;
     }
     

@@ -42,7 +42,7 @@ public class Company {
      */
     public org.openapis.openapi.models.operations.CompanySearchReadResponse companySearchRead(org.openapis.openapi.models.operations.CompanySearchReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanySearchReadPathParams.class, baseUrl, "/api/v1/company/search/{company_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanySearchReadRequest.class, baseUrl, "/api/v1/company/search/{company_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

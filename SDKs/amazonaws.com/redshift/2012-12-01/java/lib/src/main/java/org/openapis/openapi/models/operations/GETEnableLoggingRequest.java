@@ -4,20 +4,119 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETEnableLoggingRequest {
-    
-    public GETEnableLoggingQueryParams queryParams;
-    public GETEnableLoggingRequest withQueryParams(GETEnableLoggingQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETEnableLoggingActionEnum action;
+    public GETEnableLoggingRequest withAction(GETEnableLoggingActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The name of an existing S3 bucket where the log files are to be stored.&lt;/p&gt; &lt;p&gt;Constraints:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Must be in the same region as the cluster&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;The cluster must have read bucket and put object permissions&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=BucketName")
+    public String bucketName;
+    public GETEnableLoggingRequest withBucketName(String bucketName) {
+        this.bucketName = bucketName;
+        return this;
+    }
     
-    public GETEnableLoggingHeaders headers;
-    public GETEnableLoggingRequest withHeaders(GETEnableLoggingHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The identifier of the cluster on which logging is to be started.&lt;/p&gt; &lt;p&gt;Example: &lt;code&gt;examplecluster&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
+    public String clusterIdentifier;
+    public GETEnableLoggingRequest withClusterIdentifier(String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+        return this;
+    }
+    
+    /**
+     * The log destination type. An enum with possible values of &lt;code&gt;s3&lt;/code&gt; and &lt;code&gt;cloudwatch&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LogDestinationType")
+    public GETEnableLoggingLogDestinationTypeEnum logDestinationType;
+    public GETEnableLoggingRequest withLogDestinationType(GETEnableLoggingLogDestinationTypeEnum logDestinationType) {
+        this.logDestinationType = logDestinationType;
+        return this;
+    }
+    
+    /**
+     * The collection of exported log types. Possible values are &lt;code&gt;connectionlog&lt;/code&gt;, &lt;code&gt;useractivitylog&lt;/code&gt;, and &lt;code&gt;userlog&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LogExports")
+    public String[] logExports;
+    public GETEnableLoggingRequest withLogExports(String[] logExports) {
+        this.logExports = logExports;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The prefix applied to the log file names.&lt;/p&gt; &lt;p&gt;Constraints:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Cannot exceed 512 characters&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Cannot contain spaces( ), double quotes ("), single quotes ('), a backslash (\), or control characters. The hexadecimal codes for invalid characters are: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;x00 to x20&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;x22&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;x27&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;x5c&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;x7f or larger&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=S3KeyPrefix")
+    public String s3KeyPrefix;
+    public GETEnableLoggingRequest withS3KeyPrefix(String s3KeyPrefix) {
+        this.s3KeyPrefix = s3KeyPrefix;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETEnableLoggingVersionEnum version;
+    public GETEnableLoggingRequest withVersion(GETEnableLoggingVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETEnableLoggingRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETEnableLoggingRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETEnableLoggingRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETEnableLoggingRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETEnableLoggingRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETEnableLoggingRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETEnableLoggingRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

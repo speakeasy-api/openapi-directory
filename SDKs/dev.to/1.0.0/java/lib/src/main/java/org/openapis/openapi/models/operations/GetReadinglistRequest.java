@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetReadinglistRequest {
+    /**
+     * Pagination page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetReadinglistRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetReadinglistQueryParams queryParams;
-    public GetReadinglistRequest withQueryParams(GetReadinglistQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page size (the number of items to return per page). The default maximum value can be overridden by "API_PER_PAGE_MAX" environment variable.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetReadinglistRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
         return this;
     }
     

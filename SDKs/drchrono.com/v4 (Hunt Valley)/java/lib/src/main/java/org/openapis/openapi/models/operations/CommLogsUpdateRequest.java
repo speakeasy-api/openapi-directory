@@ -4,27 +4,34 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CommLogsUpdateRequest {
-    
-    public CommLogsUpdatePathParams pathParams;
-    public CommLogsUpdateRequest withPathParams(CommLogsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public CommLogsUpdateRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     
-    
-    public CommLogsUpdateQueryParams queryParams;
-    public CommLogsUpdateRequest withQueryParams(CommLogsUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public CommLogsUpdateRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
+    public Long patient;
+    public CommLogsUpdateRequest withPatient(Long patient) {
+        this.patient = patient;
+        return this;
+    }
     
-    public CommLogsUpdateSecurity security;
-    public CommLogsUpdateRequest withSecurity(CommLogsUpdateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public CommLogsUpdateRequest withSince(String since) {
+        this.since = since;
         return this;
     }
     

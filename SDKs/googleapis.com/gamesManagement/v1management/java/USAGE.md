@@ -5,14 +5,10 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GamesManagementAchievementsResetSecurity;
-import org.openapis.openapi.models.operations.GamesManagementAchievementsResetPathParams;
-import org.openapis.openapi.models.operations.GamesManagementAchievementsResetQueryParams;
 import org.openapis.openapi.models.operations.GamesManagementAchievementsResetRequest;
 import org.openapis.openapi.models.operations.GamesManagementAchievementsResetResponse;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -21,33 +17,24 @@ public class Application {
                 .build();
 
             GamesManagementAchievementsResetRequest req = new GamesManagementAchievementsResetRequest() {{
-                security = new GamesManagementAchievementsResetSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new GamesManagementAchievementsResetPathParams() {{
-                    achievementId = "corrupti";
-                }};
-                queryParams = new GamesManagementAchievementsResetQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-            }};            
+                dollarXgafv = "2";
+                accessToken = "provident";
+                achievementId = "distinctio";
+                alt = "proto";
+                callback = "unde";
+                fields = "nulla";
+                key = "corrupti";
+                oauthToken = "illum";
+                prettyPrint = false;
+                quotaUser = "vel";
+                uploadType = "error";
+                uploadProtocol = "deserunt";
+            }}            
 
-            GamesManagementAchievementsResetResponse res = sdk.achievements.gamesManagementAchievementsReset(req);
+            GamesManagementAchievementsResetResponse res = sdk.achievements.gamesManagementAchievementsReset(req, new GamesManagementAchievementsResetSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.achievementResetResponse.isPresent()) {
                 // handle response

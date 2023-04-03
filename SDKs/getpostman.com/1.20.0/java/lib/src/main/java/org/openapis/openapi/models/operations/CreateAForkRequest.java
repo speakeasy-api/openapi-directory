@@ -7,24 +7,27 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateAForkRequest {
-    
-    public CreateAForkPathParams pathParams;
-    public CreateAForkRequest withPathParams(CreateAForkPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CreateAForkQueryParams queryParams;
-    public CreateAForkRequest withQueryParams(CreateAForkQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateAForkRequestBody request;
-    public CreateAForkRequest withRequest(CreateAForkRequestBody request) {
-        this.request = request;
+    public CreateAForkRequestBody requestBody;
+    public CreateAForkRequest withRequestBody(CreateAForkRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection_uid")
+    public String collectionUid;
+    public CreateAForkRequest withCollectionUid(String collectionUid) {
+        this.collectionUid = collectionUid;
+        return this;
+    }
+    
+    /**
+     * Workspace ID is required to create a fork
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=workspace")
+    public String workspace;
+    public CreateAForkRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

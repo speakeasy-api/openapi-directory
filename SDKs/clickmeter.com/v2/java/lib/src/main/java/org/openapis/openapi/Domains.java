@@ -45,7 +45,7 @@ public class Domains {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsCountQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsCountRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -102,7 +102,7 @@ public class Domains {
      */
     public org.openapis.openapi.models.operations.DomainsDeleteResponse domainsDelete(org.openapis.openapi.models.operations.DomainsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsDeletePathParams.class, baseUrl, "/domains/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsDeleteRequest.class, baseUrl, "/domains/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -165,7 +165,7 @@ public class Domains {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -210,7 +210,7 @@ public class Domains {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DomainsPutFormResponse domainsPutForm(org.openapis.openapi.models.operations.DomainsPutFormRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DomainsPutFormResponse domainsPutForm(org.openapis.openapi.models.shared.ApiCoreDtoDomainsDomain request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/domains");
         
@@ -272,7 +272,7 @@ public class Domains {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DomainsPutJsonResponse domainsPutJson(org.openapis.openapi.models.operations.DomainsPutJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DomainsPutJsonResponse domainsPutJson(org.openapis.openapi.models.shared.ApiCoreDtoDomainsDomain request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/domains");
         
@@ -334,7 +334,7 @@ public class Domains {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DomainsPutRawResponse domainsPutRaw(org.openapis.openapi.models.operations.DomainsPutRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DomainsPutRawResponse domainsPutRaw(byte[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/domains");
         
@@ -398,12 +398,12 @@ public class Domains {
      */
     public org.openapis.openapi.models.operations.DomainsUpdateFormResponse domainsUpdateForm(org.openapis.openapi.models.operations.DomainsUpdateFormRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsUpdateFormPathParams.class, baseUrl, "/domains/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsUpdateFormRequest.class, baseUrl, "/domains/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiCoreDtoDomainsDomain", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -460,12 +460,12 @@ public class Domains {
      */
     public org.openapis.openapi.models.operations.DomainsUpdateJsonResponse domainsUpdateJson(org.openapis.openapi.models.operations.DomainsUpdateJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsUpdateJsonPathParams.class, baseUrl, "/domains/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsUpdateJsonRequest.class, baseUrl, "/domains/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiCoreDtoDomainsDomain", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -522,12 +522,12 @@ public class Domains {
      */
     public org.openapis.openapi.models.operations.DomainsUpdateRawResponse domainsUpdateRaw(org.openapis.openapi.models.operations.DomainsUpdateRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsUpdateRawPathParams.class, baseUrl, "/domains/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsUpdateRawRequest.class, baseUrl, "/domains/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -584,7 +584,7 @@ public class Domains {
      */
     public org.openapis.openapi.models.operations.GetDomainsIdResponse getDomainsId(org.openapis.openapi.models.operations.GetDomainsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDomainsIdPathParams.class, baseUrl, "/domains/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDomainsIdRequest.class, baseUrl, "/domains/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

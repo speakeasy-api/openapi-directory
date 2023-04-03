@@ -39,7 +39,7 @@ public class DestinationDefinitionSpecification {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetDestinationDefinitionSpecificationResponse getDestinationDefinitionSpecification(org.openapis.openapi.models.operations.GetDestinationDefinitionSpecificationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetDestinationDefinitionSpecificationResponse getDestinationDefinitionSpecification(org.openapis.openapi.models.shared.DestinationDefinitionIdWithWorkspaceId request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/destination_definition_specifications/get");
         

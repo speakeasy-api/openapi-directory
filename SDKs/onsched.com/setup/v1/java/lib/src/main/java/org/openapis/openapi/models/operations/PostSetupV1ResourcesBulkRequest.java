@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSetupV1ResourcesBulkRequest {
-    
-    public PostSetupV1ResourcesBulkQueryParams queryParams;
-    public PostSetupV1ResourcesBulkRequest withQueryParams(PostSetupV1ResourcesBulkQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Resources input model
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ResourcesInputModel request;
-    public PostSetupV1ResourcesBulkRequest withRequest(org.openapis.openapi.models.shared.ResourcesInputModel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ResourcesInputModel resourcesInputModel;
+    public PostSetupV1ResourcesBulkRequest withResourcesInputModel(org.openapis.openapi.models.shared.ResourcesInputModel resourcesInputModel) {
+        this.resourcesInputModel = resourcesInputModel;
+        return this;
+    }
+    
+    /**
+     * Google calendar authorization return url
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=googleAuthReturnUrl")
+    public String googleAuthReturnUrl;
+    public PostSetupV1ResourcesBulkRequest withGoogleAuthReturnUrl(String googleAuthReturnUrl) {
+        this.googleAuthReturnUrl = googleAuthReturnUrl;
+        return this;
+    }
+    
+    /**
+     * Outlook calendar authorization return url
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outlookAuthReturnUrl")
+    public String outlookAuthReturnUrl;
+    public PostSetupV1ResourcesBulkRequest withOutlookAuthReturnUrl(String outlookAuthReturnUrl) {
+        this.outlookAuthReturnUrl = outlookAuthReturnUrl;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdminCronRunRequest {
-    
-    public AdminCronRunPathParams pathParams;
-    public AdminCronRunRequest withPathParams(AdminCronRunPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * task to run
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=task")
+    public String task;
+    public AdminCronRunRequest withTask(String task) {
+        this.task = task;
         return this;
     }
     

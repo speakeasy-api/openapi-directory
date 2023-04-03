@@ -33,7 +33,7 @@ public class Dcim {
 		this._genVersion = genVersion;
 	}
 
-    public org.openapis.openapi.models.operations.DcimCablesCreateResponse dcimCablesCreate(org.openapis.openapi.models.operations.DcimCablesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DcimCablesCreateResponse dcimCablesCreate(org.openapis.openapi.models.shared.WritableCableInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/dcim/cables/");
         
@@ -73,7 +73,7 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimCablesDeleteResponse dcimCablesDelete(org.openapis.openapi.models.operations.DcimCablesDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimCablesDeletePathParams.class, baseUrl, "/dcim/cables/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimCablesDeleteRequest.class, baseUrl, "/dcim/cables/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -112,7 +112,7 @@ public class Dcim {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimCablesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimCablesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -145,12 +145,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimCablesPartialUpdateResponse dcimCablesPartialUpdate(org.openapis.openapi.models.operations.DcimCablesPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimCablesPartialUpdatePathParams.class, baseUrl, "/dcim/cables/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimCablesPartialUpdateRequest.class, baseUrl, "/dcim/cables/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableCableInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -189,7 +189,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimCablesReadResponse dcimCablesRead(org.openapis.openapi.models.operations.DcimCablesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimCablesReadPathParams.class, baseUrl, "/dcim/cables/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimCablesReadRequest.class, baseUrl, "/dcim/cables/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -222,12 +222,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimCablesUpdateResponse dcimCablesUpdate(org.openapis.openapi.models.operations.DcimCablesUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimCablesUpdatePathParams.class, baseUrl, "/dcim/cables/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimCablesUpdateRequest.class, baseUrl, "/dcim/cables/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableCableInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -272,7 +272,7 @@ public class Dcim {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimConnectedDeviceListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimConnectedDeviceListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -311,7 +311,7 @@ public class Dcim {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimConsoleConnectionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimConsoleConnectionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -342,7 +342,7 @@ public class Dcim {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DcimConsolePortTemplatesCreateResponse dcimConsolePortTemplatesCreate(org.openapis.openapi.models.operations.DcimConsolePortTemplatesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DcimConsolePortTemplatesCreateResponse dcimConsolePortTemplatesCreate(org.openapis.openapi.models.shared.WritableConsolePortTemplateInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/dcim/console-port-templates/");
         
@@ -382,7 +382,7 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimConsolePortTemplatesDeleteResponse dcimConsolePortTemplatesDelete(org.openapis.openapi.models.operations.DcimConsolePortTemplatesDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimConsolePortTemplatesDeletePathParams.class, baseUrl, "/dcim/console-port-templates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimConsolePortTemplatesDeleteRequest.class, baseUrl, "/dcim/console-port-templates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -421,7 +421,7 @@ public class Dcim {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimConsolePortTemplatesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimConsolePortTemplatesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -454,12 +454,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimConsolePortTemplatesPartialUpdateResponse dcimConsolePortTemplatesPartialUpdate(org.openapis.openapi.models.operations.DcimConsolePortTemplatesPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimConsolePortTemplatesPartialUpdatePathParams.class, baseUrl, "/dcim/console-port-templates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimConsolePortTemplatesPartialUpdateRequest.class, baseUrl, "/dcim/console-port-templates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableConsolePortTemplateInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -498,7 +498,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimConsolePortTemplatesReadResponse dcimConsolePortTemplatesRead(org.openapis.openapi.models.operations.DcimConsolePortTemplatesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimConsolePortTemplatesReadPathParams.class, baseUrl, "/dcim/console-port-templates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimConsolePortTemplatesReadRequest.class, baseUrl, "/dcim/console-port-templates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -531,12 +531,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimConsolePortTemplatesUpdateResponse dcimConsolePortTemplatesUpdate(org.openapis.openapi.models.operations.DcimConsolePortTemplatesUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimConsolePortTemplatesUpdatePathParams.class, baseUrl, "/dcim/console-port-templates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimConsolePortTemplatesUpdateRequest.class, baseUrl, "/dcim/console-port-templates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableConsolePortTemplateInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -567,7 +567,7 @@ public class Dcim {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DcimConsolePortsCreateResponse dcimConsolePortsCreate(org.openapis.openapi.models.operations.DcimConsolePortsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DcimConsolePortsCreateResponse dcimConsolePortsCreate(org.openapis.openapi.models.shared.WritableConsolePortInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/dcim/console-ports/");
         
@@ -607,7 +607,7 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimConsolePortsDeleteResponse dcimConsolePortsDelete(org.openapis.openapi.models.operations.DcimConsolePortsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimConsolePortsDeletePathParams.class, baseUrl, "/dcim/console-ports/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimConsolePortsDeleteRequest.class, baseUrl, "/dcim/console-ports/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -646,7 +646,7 @@ public class Dcim {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimConsolePortsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimConsolePortsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -679,12 +679,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimConsolePortsPartialUpdateResponse dcimConsolePortsPartialUpdate(org.openapis.openapi.models.operations.DcimConsolePortsPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimConsolePortsPartialUpdatePathParams.class, baseUrl, "/dcim/console-ports/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimConsolePortsPartialUpdateRequest.class, baseUrl, "/dcim/console-ports/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableConsolePortInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -723,7 +723,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimConsolePortsReadResponse dcimConsolePortsRead(org.openapis.openapi.models.operations.DcimConsolePortsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimConsolePortsReadPathParams.class, baseUrl, "/dcim/console-ports/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimConsolePortsReadRequest.class, baseUrl, "/dcim/console-ports/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -762,7 +762,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimConsolePortsTraceResponse dcimConsolePortsTrace(org.openapis.openapi.models.operations.DcimConsolePortsTraceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimConsolePortsTracePathParams.class, baseUrl, "/dcim/console-ports/{id}/trace/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimConsolePortsTraceRequest.class, baseUrl, "/dcim/console-ports/{id}/trace/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -795,12 +795,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimConsolePortsUpdateResponse dcimConsolePortsUpdate(org.openapis.openapi.models.operations.DcimConsolePortsUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimConsolePortsUpdatePathParams.class, baseUrl, "/dcim/console-ports/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimConsolePortsUpdateRequest.class, baseUrl, "/dcim/console-ports/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableConsolePortInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -831,7 +831,7 @@ public class Dcim {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DcimConsoleServerPortTemplatesCreateResponse dcimConsoleServerPortTemplatesCreate(org.openapis.openapi.models.operations.DcimConsoleServerPortTemplatesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DcimConsoleServerPortTemplatesCreateResponse dcimConsoleServerPortTemplatesCreate(org.openapis.openapi.models.shared.WritableConsoleServerPortTemplateInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/dcim/console-server-port-templates/");
         
@@ -871,7 +871,7 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimConsoleServerPortTemplatesDeleteResponse dcimConsoleServerPortTemplatesDelete(org.openapis.openapi.models.operations.DcimConsoleServerPortTemplatesDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimConsoleServerPortTemplatesDeletePathParams.class, baseUrl, "/dcim/console-server-port-templates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimConsoleServerPortTemplatesDeleteRequest.class, baseUrl, "/dcim/console-server-port-templates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -910,7 +910,7 @@ public class Dcim {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimConsoleServerPortTemplatesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimConsoleServerPortTemplatesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -943,12 +943,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimConsoleServerPortTemplatesPartialUpdateResponse dcimConsoleServerPortTemplatesPartialUpdate(org.openapis.openapi.models.operations.DcimConsoleServerPortTemplatesPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimConsoleServerPortTemplatesPartialUpdatePathParams.class, baseUrl, "/dcim/console-server-port-templates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimConsoleServerPortTemplatesPartialUpdateRequest.class, baseUrl, "/dcim/console-server-port-templates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableConsoleServerPortTemplateInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -987,7 +987,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimConsoleServerPortTemplatesReadResponse dcimConsoleServerPortTemplatesRead(org.openapis.openapi.models.operations.DcimConsoleServerPortTemplatesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimConsoleServerPortTemplatesReadPathParams.class, baseUrl, "/dcim/console-server-port-templates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimConsoleServerPortTemplatesReadRequest.class, baseUrl, "/dcim/console-server-port-templates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1020,12 +1020,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimConsoleServerPortTemplatesUpdateResponse dcimConsoleServerPortTemplatesUpdate(org.openapis.openapi.models.operations.DcimConsoleServerPortTemplatesUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimConsoleServerPortTemplatesUpdatePathParams.class, baseUrl, "/dcim/console-server-port-templates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimConsoleServerPortTemplatesUpdateRequest.class, baseUrl, "/dcim/console-server-port-templates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableConsoleServerPortTemplateInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1056,7 +1056,7 @@ public class Dcim {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DcimConsoleServerPortsCreateResponse dcimConsoleServerPortsCreate(org.openapis.openapi.models.operations.DcimConsoleServerPortsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DcimConsoleServerPortsCreateResponse dcimConsoleServerPortsCreate(org.openapis.openapi.models.shared.WritableConsoleServerPortInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/dcim/console-server-ports/");
         
@@ -1096,7 +1096,7 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimConsoleServerPortsDeleteResponse dcimConsoleServerPortsDelete(org.openapis.openapi.models.operations.DcimConsoleServerPortsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimConsoleServerPortsDeletePathParams.class, baseUrl, "/dcim/console-server-ports/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimConsoleServerPortsDeleteRequest.class, baseUrl, "/dcim/console-server-ports/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1135,7 +1135,7 @@ public class Dcim {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimConsoleServerPortsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimConsoleServerPortsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1168,12 +1168,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimConsoleServerPortsPartialUpdateResponse dcimConsoleServerPortsPartialUpdate(org.openapis.openapi.models.operations.DcimConsoleServerPortsPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimConsoleServerPortsPartialUpdatePathParams.class, baseUrl, "/dcim/console-server-ports/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimConsoleServerPortsPartialUpdateRequest.class, baseUrl, "/dcim/console-server-ports/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableConsoleServerPortInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1212,7 +1212,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimConsoleServerPortsReadResponse dcimConsoleServerPortsRead(org.openapis.openapi.models.operations.DcimConsoleServerPortsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimConsoleServerPortsReadPathParams.class, baseUrl, "/dcim/console-server-ports/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimConsoleServerPortsReadRequest.class, baseUrl, "/dcim/console-server-ports/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1251,7 +1251,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimConsoleServerPortsTraceResponse dcimConsoleServerPortsTrace(org.openapis.openapi.models.operations.DcimConsoleServerPortsTraceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimConsoleServerPortsTracePathParams.class, baseUrl, "/dcim/console-server-ports/{id}/trace/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimConsoleServerPortsTraceRequest.class, baseUrl, "/dcim/console-server-ports/{id}/trace/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1284,12 +1284,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimConsoleServerPortsUpdateResponse dcimConsoleServerPortsUpdate(org.openapis.openapi.models.operations.DcimConsoleServerPortsUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimConsoleServerPortsUpdatePathParams.class, baseUrl, "/dcim/console-server-ports/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimConsoleServerPortsUpdateRequest.class, baseUrl, "/dcim/console-server-ports/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableConsoleServerPortInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1320,7 +1320,7 @@ public class Dcim {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DcimDeviceBayTemplatesCreateResponse dcimDeviceBayTemplatesCreate(org.openapis.openapi.models.operations.DcimDeviceBayTemplatesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DcimDeviceBayTemplatesCreateResponse dcimDeviceBayTemplatesCreate(org.openapis.openapi.models.shared.WritableDeviceBayTemplateInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/dcim/device-bay-templates/");
         
@@ -1360,7 +1360,7 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimDeviceBayTemplatesDeleteResponse dcimDeviceBayTemplatesDelete(org.openapis.openapi.models.operations.DcimDeviceBayTemplatesDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDeviceBayTemplatesDeletePathParams.class, baseUrl, "/dcim/device-bay-templates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDeviceBayTemplatesDeleteRequest.class, baseUrl, "/dcim/device-bay-templates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1399,7 +1399,7 @@ public class Dcim {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimDeviceBayTemplatesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimDeviceBayTemplatesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1432,12 +1432,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimDeviceBayTemplatesPartialUpdateResponse dcimDeviceBayTemplatesPartialUpdate(org.openapis.openapi.models.operations.DcimDeviceBayTemplatesPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDeviceBayTemplatesPartialUpdatePathParams.class, baseUrl, "/dcim/device-bay-templates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDeviceBayTemplatesPartialUpdateRequest.class, baseUrl, "/dcim/device-bay-templates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableDeviceBayTemplateInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1476,7 +1476,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimDeviceBayTemplatesReadResponse dcimDeviceBayTemplatesRead(org.openapis.openapi.models.operations.DcimDeviceBayTemplatesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDeviceBayTemplatesReadPathParams.class, baseUrl, "/dcim/device-bay-templates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDeviceBayTemplatesReadRequest.class, baseUrl, "/dcim/device-bay-templates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1509,12 +1509,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimDeviceBayTemplatesUpdateResponse dcimDeviceBayTemplatesUpdate(org.openapis.openapi.models.operations.DcimDeviceBayTemplatesUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDeviceBayTemplatesUpdatePathParams.class, baseUrl, "/dcim/device-bay-templates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDeviceBayTemplatesUpdateRequest.class, baseUrl, "/dcim/device-bay-templates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableDeviceBayTemplateInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1545,7 +1545,7 @@ public class Dcim {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DcimDeviceBaysCreateResponse dcimDeviceBaysCreate(org.openapis.openapi.models.operations.DcimDeviceBaysCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DcimDeviceBaysCreateResponse dcimDeviceBaysCreate(org.openapis.openapi.models.shared.WritableDeviceBayInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/dcim/device-bays/");
         
@@ -1585,7 +1585,7 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimDeviceBaysDeleteResponse dcimDeviceBaysDelete(org.openapis.openapi.models.operations.DcimDeviceBaysDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDeviceBaysDeletePathParams.class, baseUrl, "/dcim/device-bays/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDeviceBaysDeleteRequest.class, baseUrl, "/dcim/device-bays/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1624,7 +1624,7 @@ public class Dcim {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimDeviceBaysListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimDeviceBaysListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1657,12 +1657,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimDeviceBaysPartialUpdateResponse dcimDeviceBaysPartialUpdate(org.openapis.openapi.models.operations.DcimDeviceBaysPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDeviceBaysPartialUpdatePathParams.class, baseUrl, "/dcim/device-bays/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDeviceBaysPartialUpdateRequest.class, baseUrl, "/dcim/device-bays/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableDeviceBayInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1701,7 +1701,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimDeviceBaysReadResponse dcimDeviceBaysRead(org.openapis.openapi.models.operations.DcimDeviceBaysReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDeviceBaysReadPathParams.class, baseUrl, "/dcim/device-bays/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDeviceBaysReadRequest.class, baseUrl, "/dcim/device-bays/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1734,12 +1734,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimDeviceBaysUpdateResponse dcimDeviceBaysUpdate(org.openapis.openapi.models.operations.DcimDeviceBaysUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDeviceBaysUpdatePathParams.class, baseUrl, "/dcim/device-bays/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDeviceBaysUpdateRequest.class, baseUrl, "/dcim/device-bays/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableDeviceBayInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1770,7 +1770,7 @@ public class Dcim {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DcimDeviceRolesCreateResponse dcimDeviceRolesCreate(org.openapis.openapi.models.operations.DcimDeviceRolesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DcimDeviceRolesCreateResponse dcimDeviceRolesCreate(org.openapis.openapi.models.shared.DeviceRoleInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/dcim/device-roles/");
         
@@ -1810,7 +1810,7 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimDeviceRolesDeleteResponse dcimDeviceRolesDelete(org.openapis.openapi.models.operations.DcimDeviceRolesDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDeviceRolesDeletePathParams.class, baseUrl, "/dcim/device-roles/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDeviceRolesDeleteRequest.class, baseUrl, "/dcim/device-roles/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1849,7 +1849,7 @@ public class Dcim {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimDeviceRolesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimDeviceRolesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1882,12 +1882,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimDeviceRolesPartialUpdateResponse dcimDeviceRolesPartialUpdate(org.openapis.openapi.models.operations.DcimDeviceRolesPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDeviceRolesPartialUpdatePathParams.class, baseUrl, "/dcim/device-roles/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDeviceRolesPartialUpdateRequest.class, baseUrl, "/dcim/device-roles/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "deviceRoleInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1926,7 +1926,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimDeviceRolesReadResponse dcimDeviceRolesRead(org.openapis.openapi.models.operations.DcimDeviceRolesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDeviceRolesReadPathParams.class, baseUrl, "/dcim/device-roles/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDeviceRolesReadRequest.class, baseUrl, "/dcim/device-roles/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1959,12 +1959,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimDeviceRolesUpdateResponse dcimDeviceRolesUpdate(org.openapis.openapi.models.operations.DcimDeviceRolesUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDeviceRolesUpdatePathParams.class, baseUrl, "/dcim/device-roles/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDeviceRolesUpdateRequest.class, baseUrl, "/dcim/device-roles/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "deviceRoleInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1995,7 +1995,7 @@ public class Dcim {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DcimDeviceTypesCreateResponse dcimDeviceTypesCreate(org.openapis.openapi.models.operations.DcimDeviceTypesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DcimDeviceTypesCreateResponse dcimDeviceTypesCreate(org.openapis.openapi.models.shared.WritableDeviceTypeInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/dcim/device-types/");
         
@@ -2035,7 +2035,7 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimDeviceTypesDeleteResponse dcimDeviceTypesDelete(org.openapis.openapi.models.operations.DcimDeviceTypesDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDeviceTypesDeletePathParams.class, baseUrl, "/dcim/device-types/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDeviceTypesDeleteRequest.class, baseUrl, "/dcim/device-types/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -2074,7 +2074,7 @@ public class Dcim {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimDeviceTypesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimDeviceTypesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2107,12 +2107,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimDeviceTypesPartialUpdateResponse dcimDeviceTypesPartialUpdate(org.openapis.openapi.models.operations.DcimDeviceTypesPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDeviceTypesPartialUpdatePathParams.class, baseUrl, "/dcim/device-types/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDeviceTypesPartialUpdateRequest.class, baseUrl, "/dcim/device-types/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableDeviceTypeInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -2151,7 +2151,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimDeviceTypesReadResponse dcimDeviceTypesRead(org.openapis.openapi.models.operations.DcimDeviceTypesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDeviceTypesReadPathParams.class, baseUrl, "/dcim/device-types/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDeviceTypesReadRequest.class, baseUrl, "/dcim/device-types/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2184,12 +2184,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimDeviceTypesUpdateResponse dcimDeviceTypesUpdate(org.openapis.openapi.models.operations.DcimDeviceTypesUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDeviceTypesUpdatePathParams.class, baseUrl, "/dcim/device-types/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDeviceTypesUpdateRequest.class, baseUrl, "/dcim/device-types/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableDeviceTypeInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -2220,7 +2220,7 @@ public class Dcim {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DcimDevicesCreateResponse dcimDevicesCreate(org.openapis.openapi.models.operations.DcimDevicesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DcimDevicesCreateResponse dcimDevicesCreate(org.openapis.openapi.models.shared.WritableDeviceWithConfigContextInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/dcim/devices/");
         
@@ -2260,7 +2260,7 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimDevicesDeleteResponse dcimDevicesDelete(org.openapis.openapi.models.operations.DcimDevicesDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDevicesDeletePathParams.class, baseUrl, "/dcim/devices/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDevicesDeleteRequest.class, baseUrl, "/dcim/devices/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -2293,7 +2293,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimDevicesGraphsResponse dcimDevicesGraphs(org.openapis.openapi.models.operations.DcimDevicesGraphsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDevicesGraphsPathParams.class, baseUrl, "/dcim/devices/{id}/graphs/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDevicesGraphsRequest.class, baseUrl, "/dcim/devices/{id}/graphs/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2338,7 +2338,7 @@ public class Dcim {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimDevicesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimDevicesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2377,13 +2377,13 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimDevicesNapalmResponse dcimDevicesNapalm(org.openapis.openapi.models.operations.DcimDevicesNapalmRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDevicesNapalmPathParams.class, baseUrl, "/dcim/devices/{id}/napalm/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDevicesNapalmRequest.class, baseUrl, "/dcim/devices/{id}/napalm/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimDevicesNapalmQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimDevicesNapalmRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2416,12 +2416,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimDevicesPartialUpdateResponse dcimDevicesPartialUpdate(org.openapis.openapi.models.operations.DcimDevicesPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDevicesPartialUpdatePathParams.class, baseUrl, "/dcim/devices/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDevicesPartialUpdateRequest.class, baseUrl, "/dcim/devices/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableDeviceWithConfigContextInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -2460,7 +2460,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimDevicesReadResponse dcimDevicesRead(org.openapis.openapi.models.operations.DcimDevicesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDevicesReadPathParams.class, baseUrl, "/dcim/devices/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDevicesReadRequest.class, baseUrl, "/dcim/devices/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2493,12 +2493,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimDevicesUpdateResponse dcimDevicesUpdate(org.openapis.openapi.models.operations.DcimDevicesUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDevicesUpdatePathParams.class, baseUrl, "/dcim/devices/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimDevicesUpdateRequest.class, baseUrl, "/dcim/devices/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableDeviceWithConfigContextInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -2529,7 +2529,7 @@ public class Dcim {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DcimFrontPortTemplatesCreateResponse dcimFrontPortTemplatesCreate(org.openapis.openapi.models.operations.DcimFrontPortTemplatesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DcimFrontPortTemplatesCreateResponse dcimFrontPortTemplatesCreate(org.openapis.openapi.models.shared.WritableFrontPortTemplateInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/dcim/front-port-templates/");
         
@@ -2569,7 +2569,7 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimFrontPortTemplatesDeleteResponse dcimFrontPortTemplatesDelete(org.openapis.openapi.models.operations.DcimFrontPortTemplatesDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimFrontPortTemplatesDeletePathParams.class, baseUrl, "/dcim/front-port-templates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimFrontPortTemplatesDeleteRequest.class, baseUrl, "/dcim/front-port-templates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -2608,7 +2608,7 @@ public class Dcim {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimFrontPortTemplatesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimFrontPortTemplatesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2641,12 +2641,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimFrontPortTemplatesPartialUpdateResponse dcimFrontPortTemplatesPartialUpdate(org.openapis.openapi.models.operations.DcimFrontPortTemplatesPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimFrontPortTemplatesPartialUpdatePathParams.class, baseUrl, "/dcim/front-port-templates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimFrontPortTemplatesPartialUpdateRequest.class, baseUrl, "/dcim/front-port-templates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableFrontPortTemplateInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -2685,7 +2685,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimFrontPortTemplatesReadResponse dcimFrontPortTemplatesRead(org.openapis.openapi.models.operations.DcimFrontPortTemplatesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimFrontPortTemplatesReadPathParams.class, baseUrl, "/dcim/front-port-templates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimFrontPortTemplatesReadRequest.class, baseUrl, "/dcim/front-port-templates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2718,12 +2718,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimFrontPortTemplatesUpdateResponse dcimFrontPortTemplatesUpdate(org.openapis.openapi.models.operations.DcimFrontPortTemplatesUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimFrontPortTemplatesUpdatePathParams.class, baseUrl, "/dcim/front-port-templates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimFrontPortTemplatesUpdateRequest.class, baseUrl, "/dcim/front-port-templates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableFrontPortTemplateInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -2754,7 +2754,7 @@ public class Dcim {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DcimFrontPortsCreateResponse dcimFrontPortsCreate(org.openapis.openapi.models.operations.DcimFrontPortsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DcimFrontPortsCreateResponse dcimFrontPortsCreate(org.openapis.openapi.models.shared.WritableFrontPortInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/dcim/front-ports/");
         
@@ -2794,7 +2794,7 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimFrontPortsDeleteResponse dcimFrontPortsDelete(org.openapis.openapi.models.operations.DcimFrontPortsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimFrontPortsDeletePathParams.class, baseUrl, "/dcim/front-ports/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimFrontPortsDeleteRequest.class, baseUrl, "/dcim/front-ports/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -2833,7 +2833,7 @@ public class Dcim {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimFrontPortsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimFrontPortsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2866,12 +2866,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimFrontPortsPartialUpdateResponse dcimFrontPortsPartialUpdate(org.openapis.openapi.models.operations.DcimFrontPortsPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimFrontPortsPartialUpdatePathParams.class, baseUrl, "/dcim/front-ports/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimFrontPortsPartialUpdateRequest.class, baseUrl, "/dcim/front-ports/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableFrontPortInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -2910,7 +2910,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimFrontPortsReadResponse dcimFrontPortsRead(org.openapis.openapi.models.operations.DcimFrontPortsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimFrontPortsReadPathParams.class, baseUrl, "/dcim/front-ports/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimFrontPortsReadRequest.class, baseUrl, "/dcim/front-ports/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2949,7 +2949,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimFrontPortsTraceResponse dcimFrontPortsTrace(org.openapis.openapi.models.operations.DcimFrontPortsTraceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimFrontPortsTracePathParams.class, baseUrl, "/dcim/front-ports/{id}/trace/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimFrontPortsTraceRequest.class, baseUrl, "/dcim/front-ports/{id}/trace/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2982,12 +2982,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimFrontPortsUpdateResponse dcimFrontPortsUpdate(org.openapis.openapi.models.operations.DcimFrontPortsUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimFrontPortsUpdatePathParams.class, baseUrl, "/dcim/front-ports/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimFrontPortsUpdateRequest.class, baseUrl, "/dcim/front-ports/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableFrontPortInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -3026,7 +3026,7 @@ public class Dcim {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimInterfaceConnectionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimInterfaceConnectionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3057,7 +3057,7 @@ public class Dcim {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DcimInterfaceTemplatesCreateResponse dcimInterfaceTemplatesCreate(org.openapis.openapi.models.operations.DcimInterfaceTemplatesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DcimInterfaceTemplatesCreateResponse dcimInterfaceTemplatesCreate(org.openapis.openapi.models.shared.WritableInterfaceTemplateInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/dcim/interface-templates/");
         
@@ -3097,7 +3097,7 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimInterfaceTemplatesDeleteResponse dcimInterfaceTemplatesDelete(org.openapis.openapi.models.operations.DcimInterfaceTemplatesDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimInterfaceTemplatesDeletePathParams.class, baseUrl, "/dcim/interface-templates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimInterfaceTemplatesDeleteRequest.class, baseUrl, "/dcim/interface-templates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -3136,7 +3136,7 @@ public class Dcim {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimInterfaceTemplatesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimInterfaceTemplatesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3169,12 +3169,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimInterfaceTemplatesPartialUpdateResponse dcimInterfaceTemplatesPartialUpdate(org.openapis.openapi.models.operations.DcimInterfaceTemplatesPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimInterfaceTemplatesPartialUpdatePathParams.class, baseUrl, "/dcim/interface-templates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimInterfaceTemplatesPartialUpdateRequest.class, baseUrl, "/dcim/interface-templates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableInterfaceTemplateInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -3213,7 +3213,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimInterfaceTemplatesReadResponse dcimInterfaceTemplatesRead(org.openapis.openapi.models.operations.DcimInterfaceTemplatesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimInterfaceTemplatesReadPathParams.class, baseUrl, "/dcim/interface-templates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimInterfaceTemplatesReadRequest.class, baseUrl, "/dcim/interface-templates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3246,12 +3246,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimInterfaceTemplatesUpdateResponse dcimInterfaceTemplatesUpdate(org.openapis.openapi.models.operations.DcimInterfaceTemplatesUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimInterfaceTemplatesUpdatePathParams.class, baseUrl, "/dcim/interface-templates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimInterfaceTemplatesUpdateRequest.class, baseUrl, "/dcim/interface-templates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableInterfaceTemplateInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -3282,7 +3282,7 @@ public class Dcim {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DcimInterfacesCreateResponse dcimInterfacesCreate(org.openapis.openapi.models.operations.DcimInterfacesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DcimInterfacesCreateResponse dcimInterfacesCreate(org.openapis.openapi.models.shared.WritableDeviceInterfaceInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/dcim/interfaces/");
         
@@ -3322,7 +3322,7 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimInterfacesDeleteResponse dcimInterfacesDelete(org.openapis.openapi.models.operations.DcimInterfacesDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimInterfacesDeletePathParams.class, baseUrl, "/dcim/interfaces/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimInterfacesDeleteRequest.class, baseUrl, "/dcim/interfaces/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -3355,7 +3355,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimInterfacesGraphsResponse dcimInterfacesGraphs(org.openapis.openapi.models.operations.DcimInterfacesGraphsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimInterfacesGraphsPathParams.class, baseUrl, "/dcim/interfaces/{id}/graphs/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimInterfacesGraphsRequest.class, baseUrl, "/dcim/interfaces/{id}/graphs/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3400,7 +3400,7 @@ public class Dcim {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimInterfacesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimInterfacesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3433,12 +3433,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimInterfacesPartialUpdateResponse dcimInterfacesPartialUpdate(org.openapis.openapi.models.operations.DcimInterfacesPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimInterfacesPartialUpdatePathParams.class, baseUrl, "/dcim/interfaces/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimInterfacesPartialUpdateRequest.class, baseUrl, "/dcim/interfaces/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableDeviceInterfaceInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -3477,7 +3477,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimInterfacesReadResponse dcimInterfacesRead(org.openapis.openapi.models.operations.DcimInterfacesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimInterfacesReadPathParams.class, baseUrl, "/dcim/interfaces/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimInterfacesReadRequest.class, baseUrl, "/dcim/interfaces/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3516,7 +3516,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimInterfacesTraceResponse dcimInterfacesTrace(org.openapis.openapi.models.operations.DcimInterfacesTraceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimInterfacesTracePathParams.class, baseUrl, "/dcim/interfaces/{id}/trace/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimInterfacesTraceRequest.class, baseUrl, "/dcim/interfaces/{id}/trace/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3549,12 +3549,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimInterfacesUpdateResponse dcimInterfacesUpdate(org.openapis.openapi.models.operations.DcimInterfacesUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimInterfacesUpdatePathParams.class, baseUrl, "/dcim/interfaces/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimInterfacesUpdateRequest.class, baseUrl, "/dcim/interfaces/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableDeviceInterfaceInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -3585,7 +3585,7 @@ public class Dcim {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DcimInventoryItemsCreateResponse dcimInventoryItemsCreate(org.openapis.openapi.models.operations.DcimInventoryItemsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DcimInventoryItemsCreateResponse dcimInventoryItemsCreate(org.openapis.openapi.models.shared.WritableInventoryItemInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/dcim/inventory-items/");
         
@@ -3625,7 +3625,7 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimInventoryItemsDeleteResponse dcimInventoryItemsDelete(org.openapis.openapi.models.operations.DcimInventoryItemsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimInventoryItemsDeletePathParams.class, baseUrl, "/dcim/inventory-items/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimInventoryItemsDeleteRequest.class, baseUrl, "/dcim/inventory-items/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -3664,7 +3664,7 @@ public class Dcim {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimInventoryItemsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimInventoryItemsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3697,12 +3697,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimInventoryItemsPartialUpdateResponse dcimInventoryItemsPartialUpdate(org.openapis.openapi.models.operations.DcimInventoryItemsPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimInventoryItemsPartialUpdatePathParams.class, baseUrl, "/dcim/inventory-items/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimInventoryItemsPartialUpdateRequest.class, baseUrl, "/dcim/inventory-items/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableInventoryItemInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -3741,7 +3741,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimInventoryItemsReadResponse dcimInventoryItemsRead(org.openapis.openapi.models.operations.DcimInventoryItemsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimInventoryItemsReadPathParams.class, baseUrl, "/dcim/inventory-items/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimInventoryItemsReadRequest.class, baseUrl, "/dcim/inventory-items/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3774,12 +3774,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimInventoryItemsUpdateResponse dcimInventoryItemsUpdate(org.openapis.openapi.models.operations.DcimInventoryItemsUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimInventoryItemsUpdatePathParams.class, baseUrl, "/dcim/inventory-items/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimInventoryItemsUpdateRequest.class, baseUrl, "/dcim/inventory-items/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableInventoryItemInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -3810,7 +3810,7 @@ public class Dcim {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DcimManufacturersCreateResponse dcimManufacturersCreate(org.openapis.openapi.models.operations.DcimManufacturersCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DcimManufacturersCreateResponse dcimManufacturersCreate(org.openapis.openapi.models.shared.ManufacturerInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/dcim/manufacturers/");
         
@@ -3850,7 +3850,7 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimManufacturersDeleteResponse dcimManufacturersDelete(org.openapis.openapi.models.operations.DcimManufacturersDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimManufacturersDeletePathParams.class, baseUrl, "/dcim/manufacturers/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimManufacturersDeleteRequest.class, baseUrl, "/dcim/manufacturers/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -3889,7 +3889,7 @@ public class Dcim {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimManufacturersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimManufacturersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3922,12 +3922,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimManufacturersPartialUpdateResponse dcimManufacturersPartialUpdate(org.openapis.openapi.models.operations.DcimManufacturersPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimManufacturersPartialUpdatePathParams.class, baseUrl, "/dcim/manufacturers/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimManufacturersPartialUpdateRequest.class, baseUrl, "/dcim/manufacturers/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "manufacturerInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -3966,7 +3966,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimManufacturersReadResponse dcimManufacturersRead(org.openapis.openapi.models.operations.DcimManufacturersReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimManufacturersReadPathParams.class, baseUrl, "/dcim/manufacturers/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimManufacturersReadRequest.class, baseUrl, "/dcim/manufacturers/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3999,12 +3999,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimManufacturersUpdateResponse dcimManufacturersUpdate(org.openapis.openapi.models.operations.DcimManufacturersUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimManufacturersUpdatePathParams.class, baseUrl, "/dcim/manufacturers/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimManufacturersUpdateRequest.class, baseUrl, "/dcim/manufacturers/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "manufacturerInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -4035,7 +4035,7 @@ public class Dcim {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DcimPlatformsCreateResponse dcimPlatformsCreate(org.openapis.openapi.models.operations.DcimPlatformsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DcimPlatformsCreateResponse dcimPlatformsCreate(org.openapis.openapi.models.shared.WritablePlatformInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/dcim/platforms/");
         
@@ -4075,7 +4075,7 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimPlatformsDeleteResponse dcimPlatformsDelete(org.openapis.openapi.models.operations.DcimPlatformsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPlatformsDeletePathParams.class, baseUrl, "/dcim/platforms/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPlatformsDeleteRequest.class, baseUrl, "/dcim/platforms/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -4114,7 +4114,7 @@ public class Dcim {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimPlatformsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimPlatformsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4147,12 +4147,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimPlatformsPartialUpdateResponse dcimPlatformsPartialUpdate(org.openapis.openapi.models.operations.DcimPlatformsPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPlatformsPartialUpdatePathParams.class, baseUrl, "/dcim/platforms/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPlatformsPartialUpdateRequest.class, baseUrl, "/dcim/platforms/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writablePlatformInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -4191,7 +4191,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimPlatformsReadResponse dcimPlatformsRead(org.openapis.openapi.models.operations.DcimPlatformsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPlatformsReadPathParams.class, baseUrl, "/dcim/platforms/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPlatformsReadRequest.class, baseUrl, "/dcim/platforms/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -4224,12 +4224,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimPlatformsUpdateResponse dcimPlatformsUpdate(org.openapis.openapi.models.operations.DcimPlatformsUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPlatformsUpdatePathParams.class, baseUrl, "/dcim/platforms/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPlatformsUpdateRequest.class, baseUrl, "/dcim/platforms/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writablePlatformInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -4268,7 +4268,7 @@ public class Dcim {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimPowerConnectionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimPowerConnectionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4299,7 +4299,7 @@ public class Dcim {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DcimPowerFeedsCreateResponse dcimPowerFeedsCreate(org.openapis.openapi.models.operations.DcimPowerFeedsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DcimPowerFeedsCreateResponse dcimPowerFeedsCreate(org.openapis.openapi.models.shared.WritablePowerFeedInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/dcim/power-feeds/");
         
@@ -4339,7 +4339,7 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimPowerFeedsDeleteResponse dcimPowerFeedsDelete(org.openapis.openapi.models.operations.DcimPowerFeedsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerFeedsDeletePathParams.class, baseUrl, "/dcim/power-feeds/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerFeedsDeleteRequest.class, baseUrl, "/dcim/power-feeds/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -4378,7 +4378,7 @@ public class Dcim {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimPowerFeedsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimPowerFeedsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4411,12 +4411,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimPowerFeedsPartialUpdateResponse dcimPowerFeedsPartialUpdate(org.openapis.openapi.models.operations.DcimPowerFeedsPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerFeedsPartialUpdatePathParams.class, baseUrl, "/dcim/power-feeds/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerFeedsPartialUpdateRequest.class, baseUrl, "/dcim/power-feeds/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writablePowerFeedInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -4455,7 +4455,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimPowerFeedsReadResponse dcimPowerFeedsRead(org.openapis.openapi.models.operations.DcimPowerFeedsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerFeedsReadPathParams.class, baseUrl, "/dcim/power-feeds/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerFeedsReadRequest.class, baseUrl, "/dcim/power-feeds/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -4488,12 +4488,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimPowerFeedsUpdateResponse dcimPowerFeedsUpdate(org.openapis.openapi.models.operations.DcimPowerFeedsUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerFeedsUpdatePathParams.class, baseUrl, "/dcim/power-feeds/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerFeedsUpdateRequest.class, baseUrl, "/dcim/power-feeds/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writablePowerFeedInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -4524,7 +4524,7 @@ public class Dcim {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DcimPowerOutletTemplatesCreateResponse dcimPowerOutletTemplatesCreate(org.openapis.openapi.models.operations.DcimPowerOutletTemplatesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DcimPowerOutletTemplatesCreateResponse dcimPowerOutletTemplatesCreate(org.openapis.openapi.models.shared.WritablePowerOutletTemplateInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/dcim/power-outlet-templates/");
         
@@ -4564,7 +4564,7 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimPowerOutletTemplatesDeleteResponse dcimPowerOutletTemplatesDelete(org.openapis.openapi.models.operations.DcimPowerOutletTemplatesDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerOutletTemplatesDeletePathParams.class, baseUrl, "/dcim/power-outlet-templates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerOutletTemplatesDeleteRequest.class, baseUrl, "/dcim/power-outlet-templates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -4603,7 +4603,7 @@ public class Dcim {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimPowerOutletTemplatesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimPowerOutletTemplatesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4636,12 +4636,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimPowerOutletTemplatesPartialUpdateResponse dcimPowerOutletTemplatesPartialUpdate(org.openapis.openapi.models.operations.DcimPowerOutletTemplatesPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerOutletTemplatesPartialUpdatePathParams.class, baseUrl, "/dcim/power-outlet-templates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerOutletTemplatesPartialUpdateRequest.class, baseUrl, "/dcim/power-outlet-templates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writablePowerOutletTemplateInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -4680,7 +4680,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimPowerOutletTemplatesReadResponse dcimPowerOutletTemplatesRead(org.openapis.openapi.models.operations.DcimPowerOutletTemplatesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerOutletTemplatesReadPathParams.class, baseUrl, "/dcim/power-outlet-templates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerOutletTemplatesReadRequest.class, baseUrl, "/dcim/power-outlet-templates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -4713,12 +4713,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimPowerOutletTemplatesUpdateResponse dcimPowerOutletTemplatesUpdate(org.openapis.openapi.models.operations.DcimPowerOutletTemplatesUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerOutletTemplatesUpdatePathParams.class, baseUrl, "/dcim/power-outlet-templates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerOutletTemplatesUpdateRequest.class, baseUrl, "/dcim/power-outlet-templates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writablePowerOutletTemplateInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -4749,7 +4749,7 @@ public class Dcim {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DcimPowerOutletsCreateResponse dcimPowerOutletsCreate(org.openapis.openapi.models.operations.DcimPowerOutletsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DcimPowerOutletsCreateResponse dcimPowerOutletsCreate(org.openapis.openapi.models.shared.WritablePowerOutletInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/dcim/power-outlets/");
         
@@ -4789,7 +4789,7 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimPowerOutletsDeleteResponse dcimPowerOutletsDelete(org.openapis.openapi.models.operations.DcimPowerOutletsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerOutletsDeletePathParams.class, baseUrl, "/dcim/power-outlets/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerOutletsDeleteRequest.class, baseUrl, "/dcim/power-outlets/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -4828,7 +4828,7 @@ public class Dcim {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimPowerOutletsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimPowerOutletsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4861,12 +4861,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimPowerOutletsPartialUpdateResponse dcimPowerOutletsPartialUpdate(org.openapis.openapi.models.operations.DcimPowerOutletsPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerOutletsPartialUpdatePathParams.class, baseUrl, "/dcim/power-outlets/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerOutletsPartialUpdateRequest.class, baseUrl, "/dcim/power-outlets/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writablePowerOutletInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -4905,7 +4905,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimPowerOutletsReadResponse dcimPowerOutletsRead(org.openapis.openapi.models.operations.DcimPowerOutletsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerOutletsReadPathParams.class, baseUrl, "/dcim/power-outlets/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerOutletsReadRequest.class, baseUrl, "/dcim/power-outlets/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -4944,7 +4944,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimPowerOutletsTraceResponse dcimPowerOutletsTrace(org.openapis.openapi.models.operations.DcimPowerOutletsTraceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerOutletsTracePathParams.class, baseUrl, "/dcim/power-outlets/{id}/trace/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerOutletsTraceRequest.class, baseUrl, "/dcim/power-outlets/{id}/trace/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -4977,12 +4977,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimPowerOutletsUpdateResponse dcimPowerOutletsUpdate(org.openapis.openapi.models.operations.DcimPowerOutletsUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerOutletsUpdatePathParams.class, baseUrl, "/dcim/power-outlets/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerOutletsUpdateRequest.class, baseUrl, "/dcim/power-outlets/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writablePowerOutletInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -5013,7 +5013,7 @@ public class Dcim {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DcimPowerPanelsCreateResponse dcimPowerPanelsCreate(org.openapis.openapi.models.operations.DcimPowerPanelsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DcimPowerPanelsCreateResponse dcimPowerPanelsCreate(org.openapis.openapi.models.shared.WritablePowerPanelInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/dcim/power-panels/");
         
@@ -5053,7 +5053,7 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimPowerPanelsDeleteResponse dcimPowerPanelsDelete(org.openapis.openapi.models.operations.DcimPowerPanelsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerPanelsDeletePathParams.class, baseUrl, "/dcim/power-panels/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerPanelsDeleteRequest.class, baseUrl, "/dcim/power-panels/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -5092,7 +5092,7 @@ public class Dcim {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimPowerPanelsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimPowerPanelsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -5125,12 +5125,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimPowerPanelsPartialUpdateResponse dcimPowerPanelsPartialUpdate(org.openapis.openapi.models.operations.DcimPowerPanelsPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerPanelsPartialUpdatePathParams.class, baseUrl, "/dcim/power-panels/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerPanelsPartialUpdateRequest.class, baseUrl, "/dcim/power-panels/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writablePowerPanelInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -5169,7 +5169,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimPowerPanelsReadResponse dcimPowerPanelsRead(org.openapis.openapi.models.operations.DcimPowerPanelsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerPanelsReadPathParams.class, baseUrl, "/dcim/power-panels/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerPanelsReadRequest.class, baseUrl, "/dcim/power-panels/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -5202,12 +5202,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimPowerPanelsUpdateResponse dcimPowerPanelsUpdate(org.openapis.openapi.models.operations.DcimPowerPanelsUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerPanelsUpdatePathParams.class, baseUrl, "/dcim/power-panels/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerPanelsUpdateRequest.class, baseUrl, "/dcim/power-panels/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writablePowerPanelInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -5238,7 +5238,7 @@ public class Dcim {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DcimPowerPortTemplatesCreateResponse dcimPowerPortTemplatesCreate(org.openapis.openapi.models.operations.DcimPowerPortTemplatesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DcimPowerPortTemplatesCreateResponse dcimPowerPortTemplatesCreate(org.openapis.openapi.models.shared.WritablePowerPortTemplateInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/dcim/power-port-templates/");
         
@@ -5278,7 +5278,7 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimPowerPortTemplatesDeleteResponse dcimPowerPortTemplatesDelete(org.openapis.openapi.models.operations.DcimPowerPortTemplatesDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerPortTemplatesDeletePathParams.class, baseUrl, "/dcim/power-port-templates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerPortTemplatesDeleteRequest.class, baseUrl, "/dcim/power-port-templates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -5317,7 +5317,7 @@ public class Dcim {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimPowerPortTemplatesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimPowerPortTemplatesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -5350,12 +5350,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimPowerPortTemplatesPartialUpdateResponse dcimPowerPortTemplatesPartialUpdate(org.openapis.openapi.models.operations.DcimPowerPortTemplatesPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerPortTemplatesPartialUpdatePathParams.class, baseUrl, "/dcim/power-port-templates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerPortTemplatesPartialUpdateRequest.class, baseUrl, "/dcim/power-port-templates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writablePowerPortTemplateInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -5394,7 +5394,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimPowerPortTemplatesReadResponse dcimPowerPortTemplatesRead(org.openapis.openapi.models.operations.DcimPowerPortTemplatesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerPortTemplatesReadPathParams.class, baseUrl, "/dcim/power-port-templates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerPortTemplatesReadRequest.class, baseUrl, "/dcim/power-port-templates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -5427,12 +5427,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimPowerPortTemplatesUpdateResponse dcimPowerPortTemplatesUpdate(org.openapis.openapi.models.operations.DcimPowerPortTemplatesUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerPortTemplatesUpdatePathParams.class, baseUrl, "/dcim/power-port-templates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerPortTemplatesUpdateRequest.class, baseUrl, "/dcim/power-port-templates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writablePowerPortTemplateInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -5463,7 +5463,7 @@ public class Dcim {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DcimPowerPortsCreateResponse dcimPowerPortsCreate(org.openapis.openapi.models.operations.DcimPowerPortsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DcimPowerPortsCreateResponse dcimPowerPortsCreate(org.openapis.openapi.models.shared.WritablePowerPortInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/dcim/power-ports/");
         
@@ -5503,7 +5503,7 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimPowerPortsDeleteResponse dcimPowerPortsDelete(org.openapis.openapi.models.operations.DcimPowerPortsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerPortsDeletePathParams.class, baseUrl, "/dcim/power-ports/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerPortsDeleteRequest.class, baseUrl, "/dcim/power-ports/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -5542,7 +5542,7 @@ public class Dcim {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimPowerPortsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimPowerPortsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -5575,12 +5575,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimPowerPortsPartialUpdateResponse dcimPowerPortsPartialUpdate(org.openapis.openapi.models.operations.DcimPowerPortsPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerPortsPartialUpdatePathParams.class, baseUrl, "/dcim/power-ports/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerPortsPartialUpdateRequest.class, baseUrl, "/dcim/power-ports/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writablePowerPortInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -5619,7 +5619,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimPowerPortsReadResponse dcimPowerPortsRead(org.openapis.openapi.models.operations.DcimPowerPortsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerPortsReadPathParams.class, baseUrl, "/dcim/power-ports/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerPortsReadRequest.class, baseUrl, "/dcim/power-ports/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -5658,7 +5658,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimPowerPortsTraceResponse dcimPowerPortsTrace(org.openapis.openapi.models.operations.DcimPowerPortsTraceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerPortsTracePathParams.class, baseUrl, "/dcim/power-ports/{id}/trace/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerPortsTraceRequest.class, baseUrl, "/dcim/power-ports/{id}/trace/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -5691,12 +5691,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimPowerPortsUpdateResponse dcimPowerPortsUpdate(org.openapis.openapi.models.operations.DcimPowerPortsUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerPortsUpdatePathParams.class, baseUrl, "/dcim/power-ports/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimPowerPortsUpdateRequest.class, baseUrl, "/dcim/power-ports/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writablePowerPortInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -5727,7 +5727,7 @@ public class Dcim {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DcimRackGroupsCreateResponse dcimRackGroupsCreate(org.openapis.openapi.models.operations.DcimRackGroupsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DcimRackGroupsCreateResponse dcimRackGroupsCreate(org.openapis.openapi.models.shared.WritableRackGroupInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/dcim/rack-groups/");
         
@@ -5767,7 +5767,7 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimRackGroupsDeleteResponse dcimRackGroupsDelete(org.openapis.openapi.models.operations.DcimRackGroupsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRackGroupsDeletePathParams.class, baseUrl, "/dcim/rack-groups/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRackGroupsDeleteRequest.class, baseUrl, "/dcim/rack-groups/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -5806,7 +5806,7 @@ public class Dcim {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimRackGroupsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimRackGroupsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -5839,12 +5839,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimRackGroupsPartialUpdateResponse dcimRackGroupsPartialUpdate(org.openapis.openapi.models.operations.DcimRackGroupsPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRackGroupsPartialUpdatePathParams.class, baseUrl, "/dcim/rack-groups/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRackGroupsPartialUpdateRequest.class, baseUrl, "/dcim/rack-groups/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableRackGroupInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -5883,7 +5883,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimRackGroupsReadResponse dcimRackGroupsRead(org.openapis.openapi.models.operations.DcimRackGroupsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRackGroupsReadPathParams.class, baseUrl, "/dcim/rack-groups/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRackGroupsReadRequest.class, baseUrl, "/dcim/rack-groups/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -5916,12 +5916,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimRackGroupsUpdateResponse dcimRackGroupsUpdate(org.openapis.openapi.models.operations.DcimRackGroupsUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRackGroupsUpdatePathParams.class, baseUrl, "/dcim/rack-groups/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRackGroupsUpdateRequest.class, baseUrl, "/dcim/rack-groups/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableRackGroupInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -5952,7 +5952,7 @@ public class Dcim {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DcimRackReservationsCreateResponse dcimRackReservationsCreate(org.openapis.openapi.models.operations.DcimRackReservationsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DcimRackReservationsCreateResponse dcimRackReservationsCreate(org.openapis.openapi.models.shared.WritableRackReservationInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/dcim/rack-reservations/");
         
@@ -5992,7 +5992,7 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimRackReservationsDeleteResponse dcimRackReservationsDelete(org.openapis.openapi.models.operations.DcimRackReservationsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRackReservationsDeletePathParams.class, baseUrl, "/dcim/rack-reservations/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRackReservationsDeleteRequest.class, baseUrl, "/dcim/rack-reservations/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -6031,7 +6031,7 @@ public class Dcim {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimRackReservationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimRackReservationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -6064,12 +6064,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimRackReservationsPartialUpdateResponse dcimRackReservationsPartialUpdate(org.openapis.openapi.models.operations.DcimRackReservationsPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRackReservationsPartialUpdatePathParams.class, baseUrl, "/dcim/rack-reservations/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRackReservationsPartialUpdateRequest.class, baseUrl, "/dcim/rack-reservations/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableRackReservationInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -6108,7 +6108,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimRackReservationsReadResponse dcimRackReservationsRead(org.openapis.openapi.models.operations.DcimRackReservationsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRackReservationsReadPathParams.class, baseUrl, "/dcim/rack-reservations/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRackReservationsReadRequest.class, baseUrl, "/dcim/rack-reservations/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -6141,12 +6141,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimRackReservationsUpdateResponse dcimRackReservationsUpdate(org.openapis.openapi.models.operations.DcimRackReservationsUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRackReservationsUpdatePathParams.class, baseUrl, "/dcim/rack-reservations/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRackReservationsUpdateRequest.class, baseUrl, "/dcim/rack-reservations/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableRackReservationInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -6177,7 +6177,7 @@ public class Dcim {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DcimRackRolesCreateResponse dcimRackRolesCreate(org.openapis.openapi.models.operations.DcimRackRolesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DcimRackRolesCreateResponse dcimRackRolesCreate(org.openapis.openapi.models.shared.RackRoleInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/dcim/rack-roles/");
         
@@ -6217,7 +6217,7 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimRackRolesDeleteResponse dcimRackRolesDelete(org.openapis.openapi.models.operations.DcimRackRolesDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRackRolesDeletePathParams.class, baseUrl, "/dcim/rack-roles/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRackRolesDeleteRequest.class, baseUrl, "/dcim/rack-roles/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -6256,7 +6256,7 @@ public class Dcim {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimRackRolesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimRackRolesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -6289,12 +6289,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimRackRolesPartialUpdateResponse dcimRackRolesPartialUpdate(org.openapis.openapi.models.operations.DcimRackRolesPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRackRolesPartialUpdatePathParams.class, baseUrl, "/dcim/rack-roles/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRackRolesPartialUpdateRequest.class, baseUrl, "/dcim/rack-roles/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "rackRoleInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -6333,7 +6333,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimRackRolesReadResponse dcimRackRolesRead(org.openapis.openapi.models.operations.DcimRackRolesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRackRolesReadPathParams.class, baseUrl, "/dcim/rack-roles/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRackRolesReadRequest.class, baseUrl, "/dcim/rack-roles/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -6366,12 +6366,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimRackRolesUpdateResponse dcimRackRolesUpdate(org.openapis.openapi.models.operations.DcimRackRolesUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRackRolesUpdatePathParams.class, baseUrl, "/dcim/rack-roles/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRackRolesUpdateRequest.class, baseUrl, "/dcim/rack-roles/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "rackRoleInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -6402,7 +6402,7 @@ public class Dcim {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DcimRacksCreateResponse dcimRacksCreate(org.openapis.openapi.models.operations.DcimRacksCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DcimRacksCreateResponse dcimRacksCreate(org.openapis.openapi.models.shared.WritableRackInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/dcim/racks/");
         
@@ -6442,7 +6442,7 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimRacksDeleteResponse dcimRacksDelete(org.openapis.openapi.models.operations.DcimRacksDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRacksDeletePathParams.class, baseUrl, "/dcim/racks/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRacksDeleteRequest.class, baseUrl, "/dcim/racks/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -6475,13 +6475,13 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimRacksElevationResponse dcimRacksElevation(org.openapis.openapi.models.operations.DcimRacksElevationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRacksElevationPathParams.class, baseUrl, "/dcim/racks/{id}/elevation/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRacksElevationRequest.class, baseUrl, "/dcim/racks/{id}/elevation/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimRacksElevationQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimRacksElevationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -6526,7 +6526,7 @@ public class Dcim {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimRacksListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimRacksListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -6559,12 +6559,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimRacksPartialUpdateResponse dcimRacksPartialUpdate(org.openapis.openapi.models.operations.DcimRacksPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRacksPartialUpdatePathParams.class, baseUrl, "/dcim/racks/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRacksPartialUpdateRequest.class, baseUrl, "/dcim/racks/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableRackInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -6603,7 +6603,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimRacksReadResponse dcimRacksRead(org.openapis.openapi.models.operations.DcimRacksReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRacksReadPathParams.class, baseUrl, "/dcim/racks/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRacksReadRequest.class, baseUrl, "/dcim/racks/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -6636,12 +6636,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimRacksUpdateResponse dcimRacksUpdate(org.openapis.openapi.models.operations.DcimRacksUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRacksUpdatePathParams.class, baseUrl, "/dcim/racks/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRacksUpdateRequest.class, baseUrl, "/dcim/racks/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableRackInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -6672,7 +6672,7 @@ public class Dcim {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DcimRearPortTemplatesCreateResponse dcimRearPortTemplatesCreate(org.openapis.openapi.models.operations.DcimRearPortTemplatesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DcimRearPortTemplatesCreateResponse dcimRearPortTemplatesCreate(org.openapis.openapi.models.shared.WritableRearPortTemplateInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/dcim/rear-port-templates/");
         
@@ -6712,7 +6712,7 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimRearPortTemplatesDeleteResponse dcimRearPortTemplatesDelete(org.openapis.openapi.models.operations.DcimRearPortTemplatesDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRearPortTemplatesDeletePathParams.class, baseUrl, "/dcim/rear-port-templates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRearPortTemplatesDeleteRequest.class, baseUrl, "/dcim/rear-port-templates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -6751,7 +6751,7 @@ public class Dcim {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimRearPortTemplatesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimRearPortTemplatesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -6784,12 +6784,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimRearPortTemplatesPartialUpdateResponse dcimRearPortTemplatesPartialUpdate(org.openapis.openapi.models.operations.DcimRearPortTemplatesPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRearPortTemplatesPartialUpdatePathParams.class, baseUrl, "/dcim/rear-port-templates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRearPortTemplatesPartialUpdateRequest.class, baseUrl, "/dcim/rear-port-templates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableRearPortTemplateInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -6828,7 +6828,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimRearPortTemplatesReadResponse dcimRearPortTemplatesRead(org.openapis.openapi.models.operations.DcimRearPortTemplatesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRearPortTemplatesReadPathParams.class, baseUrl, "/dcim/rear-port-templates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRearPortTemplatesReadRequest.class, baseUrl, "/dcim/rear-port-templates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -6861,12 +6861,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimRearPortTemplatesUpdateResponse dcimRearPortTemplatesUpdate(org.openapis.openapi.models.operations.DcimRearPortTemplatesUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRearPortTemplatesUpdatePathParams.class, baseUrl, "/dcim/rear-port-templates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRearPortTemplatesUpdateRequest.class, baseUrl, "/dcim/rear-port-templates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableRearPortTemplateInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -6897,7 +6897,7 @@ public class Dcim {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DcimRearPortsCreateResponse dcimRearPortsCreate(org.openapis.openapi.models.operations.DcimRearPortsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DcimRearPortsCreateResponse dcimRearPortsCreate(org.openapis.openapi.models.shared.WritableRearPortInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/dcim/rear-ports/");
         
@@ -6937,7 +6937,7 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimRearPortsDeleteResponse dcimRearPortsDelete(org.openapis.openapi.models.operations.DcimRearPortsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRearPortsDeletePathParams.class, baseUrl, "/dcim/rear-ports/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRearPortsDeleteRequest.class, baseUrl, "/dcim/rear-ports/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -6976,7 +6976,7 @@ public class Dcim {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimRearPortsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimRearPortsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -7009,12 +7009,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimRearPortsPartialUpdateResponse dcimRearPortsPartialUpdate(org.openapis.openapi.models.operations.DcimRearPortsPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRearPortsPartialUpdatePathParams.class, baseUrl, "/dcim/rear-ports/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRearPortsPartialUpdateRequest.class, baseUrl, "/dcim/rear-ports/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableRearPortInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -7053,7 +7053,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimRearPortsReadResponse dcimRearPortsRead(org.openapis.openapi.models.operations.DcimRearPortsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRearPortsReadPathParams.class, baseUrl, "/dcim/rear-ports/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRearPortsReadRequest.class, baseUrl, "/dcim/rear-ports/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -7092,7 +7092,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimRearPortsTraceResponse dcimRearPortsTrace(org.openapis.openapi.models.operations.DcimRearPortsTraceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRearPortsTracePathParams.class, baseUrl, "/dcim/rear-ports/{id}/trace/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRearPortsTraceRequest.class, baseUrl, "/dcim/rear-ports/{id}/trace/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -7125,12 +7125,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimRearPortsUpdateResponse dcimRearPortsUpdate(org.openapis.openapi.models.operations.DcimRearPortsUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRearPortsUpdatePathParams.class, baseUrl, "/dcim/rear-ports/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRearPortsUpdateRequest.class, baseUrl, "/dcim/rear-ports/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableRearPortInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -7161,7 +7161,7 @@ public class Dcim {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DcimRegionsCreateResponse dcimRegionsCreate(org.openapis.openapi.models.operations.DcimRegionsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DcimRegionsCreateResponse dcimRegionsCreate(org.openapis.openapi.models.shared.WritableRegionInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/dcim/regions/");
         
@@ -7201,7 +7201,7 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimRegionsDeleteResponse dcimRegionsDelete(org.openapis.openapi.models.operations.DcimRegionsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRegionsDeletePathParams.class, baseUrl, "/dcim/regions/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRegionsDeleteRequest.class, baseUrl, "/dcim/regions/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -7240,7 +7240,7 @@ public class Dcim {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimRegionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimRegionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -7273,12 +7273,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimRegionsPartialUpdateResponse dcimRegionsPartialUpdate(org.openapis.openapi.models.operations.DcimRegionsPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRegionsPartialUpdatePathParams.class, baseUrl, "/dcim/regions/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRegionsPartialUpdateRequest.class, baseUrl, "/dcim/regions/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableRegionInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -7317,7 +7317,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimRegionsReadResponse dcimRegionsRead(org.openapis.openapi.models.operations.DcimRegionsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRegionsReadPathParams.class, baseUrl, "/dcim/regions/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRegionsReadRequest.class, baseUrl, "/dcim/regions/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -7350,12 +7350,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimRegionsUpdateResponse dcimRegionsUpdate(org.openapis.openapi.models.operations.DcimRegionsUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRegionsUpdatePathParams.class, baseUrl, "/dcim/regions/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimRegionsUpdateRequest.class, baseUrl, "/dcim/regions/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableRegionInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -7386,7 +7386,7 @@ public class Dcim {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DcimSitesCreateResponse dcimSitesCreate(org.openapis.openapi.models.operations.DcimSitesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DcimSitesCreateResponse dcimSitesCreate(org.openapis.openapi.models.shared.WritableSiteInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/dcim/sites/");
         
@@ -7426,7 +7426,7 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimSitesDeleteResponse dcimSitesDelete(org.openapis.openapi.models.operations.DcimSitesDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimSitesDeletePathParams.class, baseUrl, "/dcim/sites/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimSitesDeleteRequest.class, baseUrl, "/dcim/sites/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -7459,7 +7459,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimSitesGraphsResponse dcimSitesGraphs(org.openapis.openapi.models.operations.DcimSitesGraphsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimSitesGraphsPathParams.class, baseUrl, "/dcim/sites/{id}/graphs/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimSitesGraphsRequest.class, baseUrl, "/dcim/sites/{id}/graphs/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -7504,7 +7504,7 @@ public class Dcim {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimSitesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimSitesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -7537,12 +7537,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimSitesPartialUpdateResponse dcimSitesPartialUpdate(org.openapis.openapi.models.operations.DcimSitesPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimSitesPartialUpdatePathParams.class, baseUrl, "/dcim/sites/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimSitesPartialUpdateRequest.class, baseUrl, "/dcim/sites/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableSiteInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -7581,7 +7581,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimSitesReadResponse dcimSitesRead(org.openapis.openapi.models.operations.DcimSitesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimSitesReadPathParams.class, baseUrl, "/dcim/sites/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimSitesReadRequest.class, baseUrl, "/dcim/sites/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -7614,12 +7614,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimSitesUpdateResponse dcimSitesUpdate(org.openapis.openapi.models.operations.DcimSitesUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimSitesUpdatePathParams.class, baseUrl, "/dcim/sites/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimSitesUpdateRequest.class, baseUrl, "/dcim/sites/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableSiteInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -7650,7 +7650,7 @@ public class Dcim {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DcimVirtualChassisCreateResponse dcimVirtualChassisCreate(org.openapis.openapi.models.operations.DcimVirtualChassisCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DcimVirtualChassisCreateResponse dcimVirtualChassisCreate(org.openapis.openapi.models.shared.WritableVirtualChassisInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/dcim/virtual-chassis/");
         
@@ -7690,7 +7690,7 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimVirtualChassisDeleteResponse dcimVirtualChassisDelete(org.openapis.openapi.models.operations.DcimVirtualChassisDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimVirtualChassisDeletePathParams.class, baseUrl, "/dcim/virtual-chassis/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimVirtualChassisDeleteRequest.class, baseUrl, "/dcim/virtual-chassis/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -7729,7 +7729,7 @@ public class Dcim {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimVirtualChassisListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DcimVirtualChassisListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -7762,12 +7762,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimVirtualChassisPartialUpdateResponse dcimVirtualChassisPartialUpdate(org.openapis.openapi.models.operations.DcimVirtualChassisPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimVirtualChassisPartialUpdatePathParams.class, baseUrl, "/dcim/virtual-chassis/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimVirtualChassisPartialUpdateRequest.class, baseUrl, "/dcim/virtual-chassis/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableVirtualChassisInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -7806,7 +7806,7 @@ public class Dcim {
      */
     public org.openapis.openapi.models.operations.DcimVirtualChassisReadResponse dcimVirtualChassisRead(org.openapis.openapi.models.operations.DcimVirtualChassisReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimVirtualChassisReadPathParams.class, baseUrl, "/dcim/virtual-chassis/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimVirtualChassisReadRequest.class, baseUrl, "/dcim/virtual-chassis/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -7839,12 +7839,12 @@ public class Dcim {
 
     public org.openapis.openapi.models.operations.DcimVirtualChassisUpdateResponse dcimVirtualChassisUpdate(org.openapis.openapi.models.operations.DcimVirtualChassisUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimVirtualChassisUpdatePathParams.class, baseUrl, "/dcim/virtual-chassis/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DcimVirtualChassisUpdateRequest.class, baseUrl, "/dcim/virtual-chassis/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableVirtualChassisInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

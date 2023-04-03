@@ -7,17 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostIndividualsPartyIdLicensesRequest {
-    
-    public PostIndividualsPartyIdLicensesPathParams pathParams;
-    public PostIndividualsPartyIdLicensesRequest withPathParams(PostIndividualsPartyIdLicensesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostIndividualsPartyIdLicensesHeaders headers;
-    public PostIndividualsPartyIdLicensesRequest withHeaders(PostIndividualsPartyIdLicensesHeaders headers) {
-        this.headers = headers;
+    /**
+     * The API key.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public PostIndividualsPartyIdLicensesRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
@@ -25,9 +21,19 @@ public class PostIndividualsPartyIdLicensesRequest {
      * License resource
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.LicenseInput request;
-    public PostIndividualsPartyIdLicensesRequest withRequest(org.openapis.openapi.models.shared.LicenseInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.LicenseInput licenseInput;
+    public PostIndividualsPartyIdLicensesRequest withLicenseInput(org.openapis.openapi.models.shared.LicenseInput licenseInput) {
+        this.licenseInput = licenseInput;
+        return this;
+    }
+    
+    /**
+     * The party identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=partyId")
+    public String partyId;
+    public PostIndividualsPartyIdLicensesRequest withPartyId(String partyId) {
+        this.partyId = partyId;
         return this;
     }
     

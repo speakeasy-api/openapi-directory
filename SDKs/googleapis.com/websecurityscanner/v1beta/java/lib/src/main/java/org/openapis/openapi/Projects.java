@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Creates a new ScanConfig.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreateResponse websecurityscannerProjectsScanConfigsCreate(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreateResponse websecurityscannerProjectsScanConfigsCreate(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreateRequest request, org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreatePathParams.class, baseUrl, "/v1beta/{parent}/scanConfigs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreateRequest.class, baseUrl, "/v1beta/{parent}/scanConfigs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "scanConfig", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,25 +83,26 @@ public class Projects {
     /**
      * Deletes an existing ScanConfig and its child resources.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsDeleteResponse websecurityscannerProjectsScanConfigsDelete(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsDeleteResponse websecurityscannerProjectsScanConfigsDelete(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsDeleteRequest request, org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsDeletePathParams.class, baseUrl, "/v1beta/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsDeleteRequest.class, baseUrl, "/v1beta/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,25 +129,26 @@ public class Projects {
     /**
      * Lists ScanConfigs under a given project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsListResponse websecurityscannerProjectsScanConfigsList(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsListResponse websecurityscannerProjectsScanConfigsList(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsListRequest request, org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsListPathParams.class, baseUrl, "/v1beta/{parent}/scanConfigs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsListRequest.class, baseUrl, "/v1beta/{parent}/scanConfigs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -172,27 +175,28 @@ public class Projects {
     /**
      * Updates a ScanConfig. This method support partial update of a ScanConfig.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsPatchResponse websecurityscannerProjectsScanConfigsPatch(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsPatchResponse websecurityscannerProjectsScanConfigsPatch(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsPatchRequest request, org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsPatchPathParams.class, baseUrl, "/v1beta/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsPatchRequest.class, baseUrl, "/v1beta/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "scanConfig", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -219,25 +223,26 @@ public class Projects {
     /**
      * List CrawledUrls under a given ScanRun.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsListResponse websecurityscannerProjectsScanConfigsScanRunsCrawledUrlsList(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsListResponse websecurityscannerProjectsScanConfigsScanRunsCrawledUrlsList(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsListRequest request, org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsListPathParams.class, baseUrl, "/v1beta/{parent}/crawledUrls", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsListRequest.class, baseUrl, "/v1beta/{parent}/crawledUrls", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsCrawledUrlsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -264,25 +269,26 @@ public class Projects {
     /**
      * List all FindingTypeStats under a given ScanRun.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingTypeStatsListResponse websecurityscannerProjectsScanConfigsScanRunsFindingTypeStatsList(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingTypeStatsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingTypeStatsListResponse websecurityscannerProjectsScanConfigsScanRunsFindingTypeStatsList(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingTypeStatsListRequest request, org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingTypeStatsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingTypeStatsListPathParams.class, baseUrl, "/v1beta/{parent}/findingTypeStats", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingTypeStatsListRequest.class, baseUrl, "/v1beta/{parent}/findingTypeStats", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingTypeStatsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingTypeStatsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -309,25 +315,26 @@ public class Projects {
     /**
      * Gets a Finding.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsGetResponse websecurityscannerProjectsScanConfigsScanRunsFindingsGet(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsGetResponse websecurityscannerProjectsScanConfigsScanRunsFindingsGet(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsGetRequest request, org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsGetPathParams.class, baseUrl, "/v1beta/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsGetRequest.class, baseUrl, "/v1beta/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -354,25 +361,26 @@ public class Projects {
     /**
      * List Findings under a given ScanRun.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsListResponse websecurityscannerProjectsScanConfigsScanRunsFindingsList(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsListResponse websecurityscannerProjectsScanConfigsScanRunsFindingsList(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsListRequest request, org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsListPathParams.class, baseUrl, "/v1beta/{parent}/findings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsListRequest.class, baseUrl, "/v1beta/{parent}/findings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsFindingsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -399,25 +407,26 @@ public class Projects {
     /**
      * Lists ScanRuns under a given ScanConfig, in descending order of ScanRun stop time.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsListResponse websecurityscannerProjectsScanConfigsScanRunsList(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsListResponse websecurityscannerProjectsScanConfigsScanRunsList(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsListRequest request, org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsListPathParams.class, baseUrl, "/v1beta/{parent}/scanRuns", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsListRequest.class, baseUrl, "/v1beta/{parent}/scanRuns", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -444,27 +453,28 @@ public class Projects {
     /**
      * Stops a ScanRun. The stopped ScanRun is returned.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsStopResponse websecurityscannerProjectsScanConfigsScanRunsStop(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsStopRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsStopResponse websecurityscannerProjectsScanConfigsScanRunsStop(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsStopRequest request, org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsStopSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsStopPathParams.class, baseUrl, "/v1beta/{name}:stop", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsStopRequest.class, baseUrl, "/v1beta/{name}:stop", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsStopQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsScanRunsStopRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -491,27 +501,28 @@ public class Projects {
     /**
      * Start a ScanRun according to the given ScanConfig.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsStartResponse websecurityscannerProjectsScanConfigsStart(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsStartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsStartResponse websecurityscannerProjectsScanConfigsStart(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsStartRequest request, org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsStartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsStartPathParams.class, baseUrl, "/v1beta/{name}:start", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsStartRequest.class, baseUrl, "/v1beta/{name}:start", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsStartQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsStartRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

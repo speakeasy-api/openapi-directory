@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.GetRawMessageContentPathParams;
-import org.openapis.openapi.models.operations.GetRawMessageContentHeaders;
 import org.openapis.openapi.models.operations.GetRawMessageContentRequest;
 import org.openapis.openapi.models.operations.GetRawMessageContentResponse;
 
@@ -27,26 +25,20 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GetRawMessageContentRequest req = new GetRawMessageContentRequest() {{
-                pathParams = new GetRawMessageContentPathParams() {{
-                    messageId = "corrupti";
-                }};
-                headers = new GetRawMessageContentHeaders() {{
-                    xAmzAlgorithm = "provident";
-                    xAmzContentSha256 = "distinctio";
-                    xAmzCredential = "quibusdam";
-                    xAmzDate = "unde";
-                    xAmzSecurityToken = "nulla";
-                    xAmzSignature = "corrupti";
-                    xAmzSignedHeaders = "illum";
-                }};
-            }};            
+                xAmzAlgorithm = "corrupti";
+                xAmzContentSha256 = "provident";
+                xAmzCredential = "distinctio";
+                xAmzDate = "quibusdam";
+                xAmzSecurityToken = "unde";
+                xAmzSignature = "nulla";
+                xAmzSignedHeaders = "corrupti";
+                messageId = "illum";
+            }}            
 
             GetRawMessageContentResponse res = sdk.getRawMessageContent(req);
 
@@ -60,7 +52,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

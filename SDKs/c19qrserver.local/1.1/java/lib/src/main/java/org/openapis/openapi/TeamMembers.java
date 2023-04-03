@@ -43,7 +43,7 @@ public class TeamMembers {
      */
     public org.openapis.openapi.models.operations.DeleteUserUserIdResponse deleteUserUserId(org.openapis.openapi.models.operations.DeleteUserUserIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserUserIdPathParams.class, baseUrl, "/user/{userId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserUserIdRequest.class, baseUrl, "/user/{userId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -86,7 +86,7 @@ public class TeamMembers {
      */
     public org.openapis.openapi.models.operations.GetUserUserIdResponse getUserUserId(org.openapis.openapi.models.operations.GetUserUserIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserUserIdPathParams.class, baseUrl, "/user/{userId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserUserIdRequest.class, baseUrl, "/user/{userId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -180,7 +180,7 @@ public class TeamMembers {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostUserResponse postUser(org.openapis.openapi.models.operations.PostUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostUserResponse postUser(org.openapis.openapi.models.operations.PostUserSample request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/user");
         

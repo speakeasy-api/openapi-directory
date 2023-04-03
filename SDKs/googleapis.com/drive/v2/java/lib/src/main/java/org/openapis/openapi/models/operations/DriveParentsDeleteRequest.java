@@ -4,27 +4,106 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DriveParentsDeleteRequest {
-    
-    public DriveParentsDeletePathParams pathParams;
-    public DriveParentsDeleteRequest withPathParams(DriveParentsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DriveParentsDeleteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
         return this;
     }
     
-    
-    public DriveParentsDeleteQueryParams queryParams;
-    public DriveParentsDeleteRequest withQueryParams(DriveParentsDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Deprecated. If an item is not in a shared drive and its last parent is deleted but the item itself is not, the item will be placed under its owner's root.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enforceSingleParent")
+    public Boolean enforceSingleParent;
+    public DriveParentsDeleteRequest withEnforceSingleParent(Boolean enforceSingleParent) {
+        this.enforceSingleParent = enforceSingleParent;
         return this;
     }
     
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DriveParentsDeleteRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
     
-    public DriveParentsDeleteSecurity security;
-    public DriveParentsDeleteRequest withSecurity(DriveParentsDeleteSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the file.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileId")
+    public String fileId;
+    public DriveParentsDeleteRequest withFileId(String fileId) {
+        this.fileId = fileId;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DriveParentsDeleteRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DriveParentsDeleteRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * The ID of the parent.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parentId")
+    public String parentId;
+    public DriveParentsDeleteRequest withParentId(String parentId) {
+        this.parentId = parentId;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DriveParentsDeleteRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DriveParentsDeleteRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public DriveParentsDeleteRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

@@ -43,7 +43,7 @@ public class Movie {
      */
     public org.openapis.openapi.models.operations.MovieSearchReadResponse movieSearchRead(org.openapis.openapi.models.operations.MovieSearchReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MovieSearchReadPathParams.class, baseUrl, "/api/v1/movie/search/{movie_title}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MovieSearchReadRequest.class, baseUrl, "/api/v1/movie/search/{movie_title}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

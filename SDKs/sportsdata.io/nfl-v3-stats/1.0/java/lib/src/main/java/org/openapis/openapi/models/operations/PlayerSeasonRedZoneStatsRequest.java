@@ -4,13 +4,28 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PlayerSeasonRedZoneStatsRequest {
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public PlayerSeasonRedZoneStatsFormatEnum format;
+    public PlayerSeasonRedZoneStatsRequest withFormat(PlayerSeasonRedZoneStatsFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public PlayerSeasonRedZoneStatsPathParams pathParams;
-    public PlayerSeasonRedZoneStatsRequest withPathParams(PlayerSeasonRedZoneStatsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Year of the season and the season type. If no season type is provided, then the default is regular season.
+     *           &lt;br&gt;Examples: &lt;code&gt;2015REG&lt;/code&gt;, &lt;code&gt;2015PRE&lt;/code&gt;, &lt;code&gt;2015POST&lt;/code&gt;.
+     *         
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=season")
+    public String season;
+    public PlayerSeasonRedZoneStatsRequest withSeason(String season) {
+        this.season = season;
         return this;
     }
     

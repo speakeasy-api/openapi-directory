@@ -4,20 +4,67 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUpdatedVideosRequest {
-    
-    public GetUpdatedVideosQueryParams queryParams;
-    public GetUpdatedVideosRequest withQueryParams(GetUpdatedVideosQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Show videos updated before the specified date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
+    public LocalDate endDate;
+    public GetUpdatedVideosRequest withEndDate(LocalDate endDate) {
+        this.endDate = endDate;
         return this;
     }
     
+    /**
+     * Show videos updated in the specified time period, where the time period is an interval (like SQL INTERVAL) such as 1 DAY, 6 HOUR, or 30 MINUTE; the default is 1 HOUR, which shows videos that were updated in the hour preceding the request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interval")
+    public String interval;
+    public GetUpdatedVideosRequest withInterval(String interval) {
+        this.interval = interval;
+        return this;
+    }
     
-    public GetUpdatedVideosSecurity security;
-    public GetUpdatedVideosRequest withSecurity(GetUpdatedVideosSecurity security) {
-        this.security = security;
+    /**
+     * Page number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetUpdatedVideosRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Number of results per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetUpdatedVideosRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Sort by oldest or newest videos first
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetUpdatedVideosSortEnum sort;
+    public GetUpdatedVideosRequest withSort(GetUpdatedVideosSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Show videos updated on or after the specified date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
+    public LocalDate startDate;
+    public GetUpdatedVideosRequest withStartDate(LocalDate startDate) {
+        this.startDate = startDate;
         return this;
     }
     

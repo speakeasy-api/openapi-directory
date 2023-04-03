@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteFeedConnectionsRequest {
-    
-    public DeleteFeedConnectionsHeaders headers;
-    public DeleteFeedConnectionsRequest withHeaders(DeleteFeedConnectionsHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * Feed Connections array object in the body
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.FeedConnections request;
-    public DeleteFeedConnectionsRequest withRequest(org.openapis.openapi.models.shared.FeedConnections request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.FeedConnections feedConnections;
+    public DeleteFeedConnectionsRequest withFeedConnections(org.openapis.openapi.models.shared.FeedConnections feedConnections) {
+        this.feedConnections = feedConnections;
         return this;
     }
     
-    
-    public DeleteFeedConnectionsSecurity security;
-    public DeleteFeedConnectionsRequest withSecurity(DeleteFeedConnectionsSecurity security) {
-        this.security = security;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
+    public String xeroTenantId;
+    public DeleteFeedConnectionsRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     

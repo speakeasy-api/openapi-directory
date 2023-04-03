@@ -4,13 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsDeleteSelfHostedRunnerFromRepoRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ActionsDeleteSelfHostedRunnerFromRepoRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public ActionsDeleteSelfHostedRunnerFromRepoPathParams pathParams;
-    public ActionsDeleteSelfHostedRunnerFromRepoRequest withPathParams(ActionsDeleteSelfHostedRunnerFromRepoPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ActionsDeleteSelfHostedRunnerFromRepoRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * Unique identifier of the self-hosted runner.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=runner_id")
+    public Long runnerId;
+    public ActionsDeleteSelfHostedRunnerFromRepoRequest withRunnerId(Long runnerId) {
+        this.runnerId = runnerId;
         return this;
     }
     

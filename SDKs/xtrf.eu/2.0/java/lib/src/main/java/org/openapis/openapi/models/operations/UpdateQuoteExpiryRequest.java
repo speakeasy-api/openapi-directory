@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateQuoteExpiryRequest {
-    
-    public UpdateQuoteExpiryPathParams pathParams;
-    public UpdateQuoteExpiryRequest withPathParams(UpdateQuoteExpiryPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated Quote Expiry Date for a quote.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TimeDTO request;
-    public UpdateQuoteExpiryRequest withRequest(org.openapis.openapi.models.shared.TimeDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TimeDTO timeDTO;
+    public UpdateQuoteExpiryRequest withTimeDTO(org.openapis.openapi.models.shared.TimeDTO timeDTO) {
+        this.timeDTO = timeDTO;
+        return this;
+    }
+    
+    /**
+     * quote's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=quoteId")
+    public String quoteId;
+    public UpdateQuoteExpiryRequest withQuoteId(String quoteId) {
+        this.quoteId = quoteId;
         return this;
     }
     

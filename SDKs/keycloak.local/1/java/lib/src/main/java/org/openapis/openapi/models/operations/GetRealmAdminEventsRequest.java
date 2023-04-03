@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRealmAdminEventsRequest {
-    
-    public GetRealmAdminEventsPathParams pathParams;
-    public GetRealmAdminEventsRequest withPathParams(GetRealmAdminEventsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authClient")
+    public String authClient;
+    public GetRealmAdminEventsRequest withAuthClient(String authClient) {
+        this.authClient = authClient;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authIpAddress")
+    public String authIpAddress;
+    public GetRealmAdminEventsRequest withAuthIpAddress(String authIpAddress) {
+        this.authIpAddress = authIpAddress;
+        return this;
+    }
     
-    public GetRealmAdminEventsQueryParams queryParams;
-    public GetRealmAdminEventsRequest withQueryParams(GetRealmAdminEventsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authRealm")
+    public String authRealm;
+    public GetRealmAdminEventsRequest withAuthRealm(String authRealm) {
+        this.authRealm = authRealm;
+        return this;
+    }
+    
+    /**
+     * user id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authUser")
+    public String authUser;
+    public GetRealmAdminEventsRequest withAuthUser(String authUser) {
+        this.authUser = authUser;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dateFrom")
+    public String dateFrom;
+    public GetRealmAdminEventsRequest withDateFrom(String dateFrom) {
+        this.dateFrom = dateFrom;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dateTo")
+    public String dateTo;
+    public GetRealmAdminEventsRequest withDateTo(String dateTo) {
+        this.dateTo = dateTo;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=first")
+    public Integer first;
+    public GetRealmAdminEventsRequest withFirst(Integer first) {
+        this.first = first;
+        return this;
+    }
+    
+    /**
+     * Maximum results size (defaults to 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
+    public Integer max;
+    public GetRealmAdminEventsRequest withMax(Integer max) {
+        this.max = max;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=operationTypes")
+    public String[] operationTypes;
+    public GetRealmAdminEventsRequest withOperationTypes(String[] operationTypes) {
+        this.operationTypes = operationTypes;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public GetRealmAdminEventsRequest withRealm(String realm) {
+        this.realm = realm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resourcePath")
+    public String resourcePath;
+    public GetRealmAdminEventsRequest withResourcePath(String resourcePath) {
+        this.resourcePath = resourcePath;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resourceTypes")
+    public String[] resourceTypes;
+    public GetRealmAdminEventsRequest withResourceTypes(String[] resourceTypes) {
+        this.resourceTypes = resourceTypes;
         return this;
     }
     

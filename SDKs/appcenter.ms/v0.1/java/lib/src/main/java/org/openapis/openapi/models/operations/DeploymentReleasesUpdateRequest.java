@@ -7,27 +7,53 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeploymentReleasesUpdateRequest {
-    
-    public DeploymentReleasesUpdatePathParams pathParams;
-    public DeploymentReleasesUpdateRequest withPathParams(DeploymentReleasesUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Release modification. All fields are optional and only provided fields will get updated.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public DeploymentReleasesUpdateRequestBody request;
-    public DeploymentReleasesUpdateRequest withRequest(DeploymentReleasesUpdateRequestBody request) {
-        this.request = request;
+    public DeploymentReleasesUpdateRequestBody requestBody;
+    public DeploymentReleasesUpdateRequest withRequestBody(DeploymentReleasesUpdateRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public DeploymentReleasesUpdateRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public DeploymentReleasesUpdateSecurity security;
-    public DeploymentReleasesUpdateRequest withSecurity(DeploymentReleasesUpdateSecurity security) {
-        this.security = security;
+    /**
+     * deployment name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deployment_name")
+    public String deploymentName;
+    public DeploymentReleasesUpdateRequest withDeploymentName(String deploymentName) {
+        this.deploymentName = deploymentName;
+        return this;
+    }
+    
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public DeploymentReleasesUpdateRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
+    
+    /**
+     * release label
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_label")
+    public String releaseLabel;
+    public DeploymentReleasesUpdateRequest withReleaseLabel(String releaseLabel) {
+        this.releaseLabel = releaseLabel;
         return this;
     }
     

@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Create a DataAttributeBinding resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsDataAttributeBindingsCreateResponse dataplexProjectsLocationsDataAttributeBindingsCreate(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataAttributeBindingsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsDataAttributeBindingsCreateResponse dataplexProjectsLocationsDataAttributeBindingsCreate(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataAttributeBindingsCreateRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsDataAttributeBindingsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataAttributeBindingsCreatePathParams.class, baseUrl, "/v1/{parent}/dataAttributeBindings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataAttributeBindingsCreateRequest.class, baseUrl, "/v1/{parent}/dataAttributeBindings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDataplexV1DataAttributeBindingInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataAttributeBindingsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataAttributeBindingsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,25 +83,26 @@ public class Projects {
     /**
      * Lists DataAttributeBinding resources in a project and location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsDataAttributeBindingsListResponse dataplexProjectsLocationsDataAttributeBindingsList(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataAttributeBindingsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsDataAttributeBindingsListResponse dataplexProjectsLocationsDataAttributeBindingsList(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataAttributeBindingsListRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsDataAttributeBindingsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataAttributeBindingsListPathParams.class, baseUrl, "/v1/{parent}/dataAttributeBindings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataAttributeBindingsListRequest.class, baseUrl, "/v1/{parent}/dataAttributeBindings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataAttributeBindingsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataAttributeBindingsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,27 +129,28 @@ public class Projects {
     /**
      * Creates a DataScan resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsDataScansCreateResponse dataplexProjectsLocationsDataScansCreate(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataScansCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsDataScansCreateResponse dataplexProjectsLocationsDataScansCreate(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataScansCreateRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsDataScansCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataScansCreatePathParams.class, baseUrl, "/v1/{parent}/dataScans", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataScansCreateRequest.class, baseUrl, "/v1/{parent}/dataScans", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDataplexV1DataScanInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataScansCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataScansCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,25 +177,26 @@ public class Projects {
     /**
      * Lists DataScans.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsDataScansListResponse dataplexProjectsLocationsDataScansList(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataScansListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsDataScansListResponse dataplexProjectsLocationsDataScansList(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataScansListRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsDataScansListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataScansListPathParams.class, baseUrl, "/v1/{parent}/dataScans", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataScansListRequest.class, baseUrl, "/v1/{parent}/dataScans", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataScansListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataScansListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -219,27 +223,28 @@ public class Projects {
     /**
      * Create a DataAttribute resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesAttributesCreateResponse dataplexProjectsLocationsDataTaxonomiesAttributesCreate(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesAttributesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesAttributesCreateResponse dataplexProjectsLocationsDataTaxonomiesAttributesCreate(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesAttributesCreateRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesAttributesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesAttributesCreatePathParams.class, baseUrl, "/v1/{parent}/attributes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesAttributesCreateRequest.class, baseUrl, "/v1/{parent}/attributes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDataplexV1DataAttributeInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesAttributesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesAttributesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -266,25 +271,26 @@ public class Projects {
     /**
      * Lists Data Attribute resources in a DataTaxonomy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesAttributesListResponse dataplexProjectsLocationsDataTaxonomiesAttributesList(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesAttributesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesAttributesListResponse dataplexProjectsLocationsDataTaxonomiesAttributesList(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesAttributesListRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesAttributesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesAttributesListPathParams.class, baseUrl, "/v1/{parent}/attributes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesAttributesListRequest.class, baseUrl, "/v1/{parent}/attributes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesAttributesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesAttributesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -311,27 +317,28 @@ public class Projects {
     /**
      * Create a DataTaxonomy resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesCreateResponse dataplexProjectsLocationsDataTaxonomiesCreate(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesCreateResponse dataplexProjectsLocationsDataTaxonomiesCreate(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesCreateRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesCreatePathParams.class, baseUrl, "/v1/{parent}/dataTaxonomies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesCreateRequest.class, baseUrl, "/v1/{parent}/dataTaxonomies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDataplexV1DataTaxonomyInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -358,25 +365,26 @@ public class Projects {
     /**
      * Lists DataTaxonomy resources in a project and location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesListResponse dataplexProjectsLocationsDataTaxonomiesList(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesListResponse dataplexProjectsLocationsDataTaxonomiesList(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesListRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesListPathParams.class, baseUrl, "/v1/{parent}/dataTaxonomies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesListRequest.class, baseUrl, "/v1/{parent}/dataTaxonomies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsDataTaxonomiesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -403,27 +411,28 @@ public class Projects {
     /**
      * Create a content.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentCreateResponse dataplexProjectsLocationsLakesContentCreate(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentCreateResponse dataplexProjectsLocationsLakesContentCreate(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentCreateRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentCreatePathParams.class, baseUrl, "/v1/{parent}/content", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentCreateRequest.class, baseUrl, "/v1/{parent}/content", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDataplexV1ContentInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -450,25 +459,26 @@ public class Projects {
     /**
      * List content.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentListResponse dataplexProjectsLocationsLakesContentList(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentListResponse dataplexProjectsLocationsLakesContentList(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentListRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentListPathParams.class, baseUrl, "/v1/{parent}/content", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentListRequest.class, baseUrl, "/v1/{parent}/content", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -495,27 +505,28 @@ public class Projects {
     /**
      * Create a content.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentitemsCreateResponse dataplexProjectsLocationsLakesContentitemsCreate(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentitemsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentitemsCreateResponse dataplexProjectsLocationsLakesContentitemsCreate(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentitemsCreateRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentitemsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentitemsCreatePathParams.class, baseUrl, "/v1/{parent}/contentitems", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentitemsCreateRequest.class, baseUrl, "/v1/{parent}/contentitems", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDataplexV1ContentInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentitemsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentitemsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -542,25 +553,26 @@ public class Projects {
     /**
      * List content.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentitemsListResponse dataplexProjectsLocationsLakesContentitemsList(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentitemsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentitemsListResponse dataplexProjectsLocationsLakesContentitemsList(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentitemsListRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentitemsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentitemsListPathParams.class, baseUrl, "/v1/{parent}/contentitems", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentitemsListRequest.class, baseUrl, "/v1/{parent}/contentitems", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentitemsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesContentitemsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -587,27 +599,28 @@ public class Projects {
     /**
      * Creates a lake resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesCreateResponse dataplexProjectsLocationsLakesCreate(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesCreateResponse dataplexProjectsLocationsLakesCreate(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesCreateRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesCreatePathParams.class, baseUrl, "/v1/{parent}/lakes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesCreateRequest.class, baseUrl, "/v1/{parent}/lakes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDataplexV1LakeInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -634,27 +647,28 @@ public class Projects {
     /**
      * Create an environment resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesEnvironmentsCreateResponse dataplexProjectsLocationsLakesEnvironmentsCreate(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesEnvironmentsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesEnvironmentsCreateResponse dataplexProjectsLocationsLakesEnvironmentsCreate(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesEnvironmentsCreateRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesEnvironmentsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesEnvironmentsCreatePathParams.class, baseUrl, "/v1/{parent}/environments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesEnvironmentsCreateRequest.class, baseUrl, "/v1/{parent}/environments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDataplexV1EnvironmentInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesEnvironmentsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesEnvironmentsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -681,25 +695,26 @@ public class Projects {
     /**
      * Lists environments under the given lake.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesEnvironmentsListResponse dataplexProjectsLocationsLakesEnvironmentsList(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesEnvironmentsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesEnvironmentsListResponse dataplexProjectsLocationsLakesEnvironmentsList(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesEnvironmentsListRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesEnvironmentsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesEnvironmentsListPathParams.class, baseUrl, "/v1/{parent}/environments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesEnvironmentsListRequest.class, baseUrl, "/v1/{parent}/environments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesEnvironmentsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesEnvironmentsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -726,25 +741,26 @@ public class Projects {
     /**
      * Lists session resources in an environment.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesEnvironmentsSessionsListResponse dataplexProjectsLocationsLakesEnvironmentsSessionsList(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesEnvironmentsSessionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesEnvironmentsSessionsListResponse dataplexProjectsLocationsLakesEnvironmentsSessionsList(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesEnvironmentsSessionsListRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesEnvironmentsSessionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesEnvironmentsSessionsListPathParams.class, baseUrl, "/v1/{parent}/sessions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesEnvironmentsSessionsListRequest.class, baseUrl, "/v1/{parent}/sessions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesEnvironmentsSessionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesEnvironmentsSessionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -771,25 +787,26 @@ public class Projects {
     /**
      * Lists lake resources in a project and location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesListResponse dataplexProjectsLocationsLakesList(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesListResponse dataplexProjectsLocationsLakesList(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesListRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesListPathParams.class, baseUrl, "/v1/{parent}/lakes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesListRequest.class, baseUrl, "/v1/{parent}/lakes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -816,27 +833,28 @@ public class Projects {
     /**
      * Creates a task resource within a lake.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksCreateResponse dataplexProjectsLocationsLakesTasksCreate(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksCreateResponse dataplexProjectsLocationsLakesTasksCreate(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksCreateRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksCreatePathParams.class, baseUrl, "/v1/{parent}/tasks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksCreateRequest.class, baseUrl, "/v1/{parent}/tasks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDataplexV1TaskInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -863,25 +881,26 @@ public class Projects {
     /**
      * Lists Jobs under the given task.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksJobsListResponse dataplexProjectsLocationsLakesTasksJobsList(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksJobsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksJobsListResponse dataplexProjectsLocationsLakesTasksJobsList(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksJobsListRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksJobsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksJobsListPathParams.class, baseUrl, "/v1/{parent}/jobs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksJobsListRequest.class, baseUrl, "/v1/{parent}/jobs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksJobsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksJobsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -908,25 +927,26 @@ public class Projects {
     /**
      * Lists tasks under the given lake.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksListResponse dataplexProjectsLocationsLakesTasksList(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksListResponse dataplexProjectsLocationsLakesTasksList(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksListRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksListPathParams.class, baseUrl, "/v1/{parent}/tasks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksListRequest.class, baseUrl, "/v1/{parent}/tasks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -953,27 +973,28 @@ public class Projects {
     /**
      * Run an on demand execution of a Task.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksRunResponse dataplexProjectsLocationsLakesTasksRun(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksRunRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksRunResponse dataplexProjectsLocationsLakesTasksRun(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksRunRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksRunSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksRunPathParams.class, baseUrl, "/v1/{name}:run", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksRunRequest.class, baseUrl, "/v1/{name}:run", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksRunQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesTasksRunRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1000,25 +1021,26 @@ public class Projects {
     /**
      * Lists action resources in an asset.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsActionsListResponse dataplexProjectsLocationsLakesZonesAssetsActionsList(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsActionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsActionsListResponse dataplexProjectsLocationsLakesZonesAssetsActionsList(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsActionsListRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsActionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsActionsListPathParams.class, baseUrl, "/v1/{parent}/actions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsActionsListRequest.class, baseUrl, "/v1/{parent}/actions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsActionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsActionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1045,27 +1067,28 @@ public class Projects {
     /**
      * Creates an asset resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsCreateResponse dataplexProjectsLocationsLakesZonesAssetsCreate(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsCreateResponse dataplexProjectsLocationsLakesZonesAssetsCreate(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsCreateRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsCreatePathParams.class, baseUrl, "/v1/{parent}/assets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsCreateRequest.class, baseUrl, "/v1/{parent}/assets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDataplexV1AssetInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1092,25 +1115,26 @@ public class Projects {
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsGetIamPolicyResponse dataplexProjectsLocationsLakesZonesAssetsGetIamPolicy(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsGetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsGetIamPolicyResponse dataplexProjectsLocationsLakesZonesAssetsGetIamPolicy(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsGetIamPolicyRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsGetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsGetIamPolicyPathParams.class, baseUrl, "/v1/{resource}:getIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsGetIamPolicyRequest.class, baseUrl, "/v1/{resource}:getIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsGetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsGetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1137,25 +1161,26 @@ public class Projects {
     /**
      * Lists asset resources in a zone.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsListResponse dataplexProjectsLocationsLakesZonesAssetsList(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsListResponse dataplexProjectsLocationsLakesZonesAssetsList(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsListRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsListPathParams.class, baseUrl, "/v1/{parent}/assets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsListRequest.class, baseUrl, "/v1/{parent}/assets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1182,27 +1207,28 @@ public class Projects {
     /**
      * Updates an asset resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsPatchResponse dataplexProjectsLocationsLakesZonesAssetsPatch(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsPatchResponse dataplexProjectsLocationsLakesZonesAssetsPatch(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsPatchRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsPatchPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsPatchRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDataplexV1AssetInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1229,27 +1255,28 @@ public class Projects {
     /**
      * Sets the access control policy on the specified resource. Replaces any existing policy.Can return NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsSetIamPolicyResponse dataplexProjectsLocationsLakesZonesAssetsSetIamPolicy(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsSetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsSetIamPolicyResponse dataplexProjectsLocationsLakesZonesAssetsSetIamPolicy(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsSetIamPolicyRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsSetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsSetIamPolicyPathParams.class, baseUrl, "/v1/{resource}:setIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsSetIamPolicyRequest.class, baseUrl, "/v1/{resource}:setIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleIamV1SetIamPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsSetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsSetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1276,27 +1303,28 @@ public class Projects {
     /**
      * Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a NOT_FOUND error.Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsTestIamPermissionsResponse dataplexProjectsLocationsLakesZonesAssetsTestIamPermissions(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsTestIamPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsTestIamPermissionsResponse dataplexProjectsLocationsLakesZonesAssetsTestIamPermissions(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsTestIamPermissionsRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsTestIamPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsTestIamPermissionsPathParams.class, baseUrl, "/v1/{resource}:testIamPermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsTestIamPermissionsRequest.class, baseUrl, "/v1/{resource}:testIamPermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleIamV1TestIamPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsTestIamPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesAssetsTestIamPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1323,27 +1351,28 @@ public class Projects {
     /**
      * Creates a zone resource within a lake.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesCreateResponse dataplexProjectsLocationsLakesZonesCreate(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesCreateResponse dataplexProjectsLocationsLakesZonesCreate(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesCreateRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesCreatePathParams.class, baseUrl, "/v1/{parent}/zones", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesCreateRequest.class, baseUrl, "/v1/{parent}/zones", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDataplexV1ZoneInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1370,27 +1399,28 @@ public class Projects {
     /**
      * Create a metadata entity.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesCreateResponse dataplexProjectsLocationsLakesZonesEntitiesCreate(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesCreateResponse dataplexProjectsLocationsLakesZonesEntitiesCreate(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesCreateRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesCreatePathParams.class, baseUrl, "/v1/{parent}/entities", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesCreateRequest.class, baseUrl, "/v1/{parent}/entities", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDataplexV1EntityInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1417,25 +1447,26 @@ public class Projects {
     /**
      * List metadata entities in a zone.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesListResponse dataplexProjectsLocationsLakesZonesEntitiesList(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesListResponse dataplexProjectsLocationsLakesZonesEntitiesList(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesListRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesListPathParams.class, baseUrl, "/v1/{parent}/entities", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesListRequest.class, baseUrl, "/v1/{parent}/entities", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1462,27 +1493,28 @@ public class Projects {
     /**
      * Create a metadata partition.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesPartitionsCreateResponse dataplexProjectsLocationsLakesZonesEntitiesPartitionsCreate(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesPartitionsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesPartitionsCreateResponse dataplexProjectsLocationsLakesZonesEntitiesPartitionsCreate(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesPartitionsCreateRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesPartitionsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesPartitionsCreatePathParams.class, baseUrl, "/v1/{parent}/partitions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesPartitionsCreateRequest.class, baseUrl, "/v1/{parent}/partitions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDataplexV1PartitionInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesPartitionsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesPartitionsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1509,25 +1541,26 @@ public class Projects {
     /**
      * List metadata partitions of an entity.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesPartitionsListResponse dataplexProjectsLocationsLakesZonesEntitiesPartitionsList(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesPartitionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesPartitionsListResponse dataplexProjectsLocationsLakesZonesEntitiesPartitionsList(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesPartitionsListRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesPartitionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesPartitionsListPathParams.class, baseUrl, "/v1/{parent}/partitions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesPartitionsListRequest.class, baseUrl, "/v1/{parent}/partitions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesPartitionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesPartitionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1554,27 +1587,28 @@ public class Projects {
     /**
      * Update a metadata entity. Only supports full resource update.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesUpdateResponse dataplexProjectsLocationsLakesZonesEntitiesUpdate(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesUpdateResponse dataplexProjectsLocationsLakesZonesEntitiesUpdate(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesUpdateRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesUpdatePathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesUpdateRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDataplexV1EntityInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesEntitiesUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1601,25 +1635,26 @@ public class Projects {
     /**
      * Lists zone resources in a lake.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesListResponse dataplexProjectsLocationsLakesZonesList(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesListResponse dataplexProjectsLocationsLakesZonesList(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesListRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesListPathParams.class, baseUrl, "/v1/{parent}/zones", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesListRequest.class, baseUrl, "/v1/{parent}/zones", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsLakesZonesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1646,25 +1681,26 @@ public class Projects {
     /**
      * Lists information about the supported locations for this service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsListResponse dataplexProjectsLocationsList(org.openapis.openapi.models.operations.DataplexProjectsLocationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsListResponse dataplexProjectsLocationsList(org.openapis.openapi.models.operations.DataplexProjectsLocationsListRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsListPathParams.class, baseUrl, "/v1/{name}/locations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsListRequest.class, baseUrl, "/v1/{name}/locations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1691,27 +1727,28 @@ public class Projects {
     /**
      * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns google.rpc.Code.UNIMPLEMENTED. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to Code.CANCELLED.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsCancelResponse dataplexProjectsLocationsOperationsCancel(org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsCancelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsCancelResponse dataplexProjectsLocationsOperationsCancel(org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsCancelRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsCancelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsCancelPathParams.class, baseUrl, "/v1/{name}:cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsCancelRequest.class, baseUrl, "/v1/{name}:cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsCancelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsCancelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1738,25 +1775,26 @@ public class Projects {
     /**
      * Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns google.rpc.Code.UNIMPLEMENTED.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsDeleteResponse dataplexProjectsLocationsOperationsDelete(org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsDeleteResponse dataplexProjectsLocationsOperationsDelete(org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsDeleteRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsDeletePathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsDeleteRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1783,25 +1821,26 @@ public class Projects {
     /**
      * Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsGetResponse dataplexProjectsLocationsOperationsGet(org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsGetResponse dataplexProjectsLocationsOperationsGet(org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsGetRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsGetPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsGetRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1828,25 +1867,26 @@ public class Projects {
     /**
      * Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns UNIMPLEMENTED.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsListResponse dataplexProjectsLocationsOperationsList(org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsListResponse dataplexProjectsLocationsOperationsList(org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsListRequest request, org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsListPathParams.class, baseUrl, "/v1/{name}/operations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsListRequest.class, baseUrl, "/v1/{name}/operations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataplexProjectsLocationsOperationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

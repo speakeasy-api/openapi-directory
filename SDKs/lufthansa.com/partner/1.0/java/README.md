@@ -18,11 +18,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.BaggageTripAndContactSecurity;
-import org.openapis.openapi.models.operations.BaggageTripAndContactPathParams;
-import org.openapis.openapi.models.operations.BaggageTripAndContactHeaders;
 import org.openapis.openapi.models.operations.BaggageTripAndContactRequest;
 import org.openapis.openapi.models.operations.BaggageTripAndContactResponse;
-import org.openapis.openapi.models.shared.SchemeAuth;
 
 public class Application {
     public static void main(String[] args) {
@@ -31,20 +28,13 @@ public class Application {
                 .build();
 
             BaggageTripAndContactRequest req = new BaggageTripAndContactRequest() {{
-                security = new BaggageTripAndContactSecurity() {{
-                    auth = new SchemeAuth() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new BaggageTripAndContactPathParams() {{
-                    searchID = "corrupti";
-                }};
-                headers = new BaggageTripAndContactHeaders() {{
-                    accept = "provident";
-                }};
-            }};            
+                accept = "corrupti";
+                searchID = "provident";
+            }}            
 
-            BaggageTripAndContactResponse res = sdk.baggage.baggageTripAndContact(req);
+            BaggageTripAndContactResponse res = sdk.baggage.baggageTripAndContact(req, new BaggageTripAndContactSecurity() {{
+                auth = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.baggageTripAndContact200ApplicationJSONString.isPresent()) {
                 // handle response
@@ -56,7 +46,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### baggage

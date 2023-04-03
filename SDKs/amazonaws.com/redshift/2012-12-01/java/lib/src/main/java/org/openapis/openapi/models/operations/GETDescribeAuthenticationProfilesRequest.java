@@ -4,20 +4,79 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeAuthenticationProfilesRequest {
-    
-    public GETDescribeAuthenticationProfilesQueryParams queryParams;
-    public GETDescribeAuthenticationProfilesRequest withQueryParams(GETDescribeAuthenticationProfilesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeAuthenticationProfilesActionEnum action;
+    public GETDescribeAuthenticationProfilesRequest withAction(GETDescribeAuthenticationProfilesActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the authentication profile to describe. If not specified then all authentication profiles owned by the account are listed.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AuthenticationProfileName")
+    public String authenticationProfileName;
+    public GETDescribeAuthenticationProfilesRequest withAuthenticationProfileName(String authenticationProfileName) {
+        this.authenticationProfileName = authenticationProfileName;
+        return this;
+    }
     
-    public GETDescribeAuthenticationProfilesHeaders headers;
-    public GETDescribeAuthenticationProfilesRequest withHeaders(GETDescribeAuthenticationProfilesHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeAuthenticationProfilesVersionEnum version;
+    public GETDescribeAuthenticationProfilesRequest withVersion(GETDescribeAuthenticationProfilesVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeAuthenticationProfilesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeAuthenticationProfilesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeAuthenticationProfilesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeAuthenticationProfilesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeAuthenticationProfilesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeAuthenticationProfilesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeAuthenticationProfilesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

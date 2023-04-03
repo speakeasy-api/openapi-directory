@@ -7,38 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateConversationRequest {
-    
-    public UpdateConversationPathParams pathParams;
-    public UpdateConversationRequest withPathParams(UpdateConversationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateConversationHeaders headers;
-    public UpdateConversationRequest withHeaders(UpdateConversationHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateConversationUpdateConversationRequest request;
-    public UpdateConversationRequest withRequest(UpdateConversationUpdateConversationRequest request) {
-        this.request = request;
+    public UpdateConversationUpdateConversationRequest requestBody;
+    public UpdateConversationRequest withRequestBody(UpdateConversationUpdateConversationRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateConversationSecurity security;
-    public UpdateConversationRequest withSecurity(UpdateConversationSecurity security) {
-        this.security = security;
+    /**
+     * A 34 character string that uniquely identifies this resource. Can also be the `unique_name` of the Conversation.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateConversationRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public String serverURL;
-    public UpdateConversationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The X-Twilio-Webhook-Enabled HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Twilio-Webhook-Enabled")
+    public org.openapis.openapi.models.shared.ConversationEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled;
+    public UpdateConversationRequest withXTwilioWebhookEnabled(org.openapis.openapi.models.shared.ConversationEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled) {
+        this.xTwilioWebhookEnabled = xTwilioWebhookEnabled;
         return this;
     }
     

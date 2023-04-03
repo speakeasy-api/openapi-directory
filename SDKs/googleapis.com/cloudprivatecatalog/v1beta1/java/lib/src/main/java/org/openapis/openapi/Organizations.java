@@ -30,25 +30,26 @@ public class Organizations {
     /**
      * Search Catalog resources that consumers have access to, within the - scope of the consumer cloud resource hierarchy context.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsCatalogsSearchResponse cloudprivatecatalogOrganizationsCatalogsSearch(org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsCatalogsSearchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsCatalogsSearchResponse cloudprivatecatalogOrganizationsCatalogsSearch(org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsCatalogsSearchRequest request, org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsCatalogsSearchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsCatalogsSearchPathParams.class, baseUrl, "/v1beta1/{resource}/catalogs:search", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsCatalogsSearchRequest.class, baseUrl, "/v1beta1/{resource}/catalogs:search", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsCatalogsSearchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsCatalogsSearchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -74,25 +75,26 @@ public class Organizations {
     /**
      * Search Product resources that consumers have access to, within the - scope of the consumer cloud resource hierarchy context.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsProductsSearchResponse cloudprivatecatalogOrganizationsProductsSearch(org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsProductsSearchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsProductsSearchResponse cloudprivatecatalogOrganizationsProductsSearch(org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsProductsSearchRequest request, org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsProductsSearchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsProductsSearchPathParams.class, baseUrl, "/v1beta1/{resource}/products:search", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsProductsSearchRequest.class, baseUrl, "/v1beta1/{resource}/products:search", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsProductsSearchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsProductsSearchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -118,25 +120,26 @@ public class Organizations {
     /**
      * Search Version resources that consumers have access to, within the - scope of the consumer cloud resource hierarchy context.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsVersionsSearchResponse cloudprivatecatalogOrganizationsVersionsSearch(org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsVersionsSearchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsVersionsSearchResponse cloudprivatecatalogOrganizationsVersionsSearch(org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsVersionsSearchRequest request, org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsVersionsSearchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsVersionsSearchPathParams.class, baseUrl, "/v1beta1/{resource}/versions:search", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsVersionsSearchRequest.class, baseUrl, "/v1beta1/{resource}/versions:search", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsVersionsSearchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsVersionsSearchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CollectAnalyticsRequest {
-    
-    public CollectAnalyticsPathParams pathParams;
-    public CollectAnalyticsRequest withPathParams(CollectAnalyticsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.AnalyticsCollection analyticsCollection;
+    public CollectAnalyticsRequest withAnalyticsCollection(org.openapis.openapi.models.shared.AnalyticsCollection analyticsCollection) {
+        this.analyticsCollection = analyticsCollection;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AnalyticsCollection request;
-    public CollectAnalyticsRequest withRequest(org.openapis.openapi.models.shared.AnalyticsCollection request) {
-        this.request = request;
+    /**
+     * Continuous project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public CollectAnalyticsRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

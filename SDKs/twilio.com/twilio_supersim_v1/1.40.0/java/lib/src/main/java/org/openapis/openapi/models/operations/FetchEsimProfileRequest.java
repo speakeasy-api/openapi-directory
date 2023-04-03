@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchEsimProfileRequest {
-    
-    public FetchEsimProfilePathParams pathParams;
-    public FetchEsimProfileRequest withPathParams(FetchEsimProfilePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchEsimProfileSecurity security;
-    public FetchEsimProfileRequest withSecurity(FetchEsimProfileSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchEsimProfileRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the eSIM Profile resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchEsimProfileRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

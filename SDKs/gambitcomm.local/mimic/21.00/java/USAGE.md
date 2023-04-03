@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AccessAddPathParams;
 import org.openapis.openapi.models.operations.AccessAddRequest;
 import org.openapis.openapi.models.operations.AccessAddResponse;
 
@@ -13,20 +12,16 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    basicAuth = new SchemeBasicAuth() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
+                    password = "YOUR_PASSWORD_HERE";
+                    username = "YOUR_USERNAME_HERE";
                 }})
                 .build();
 
             AccessAddRequest req = new AccessAddRequest() {{
-                pathParams = new AccessAddPathParams() {{
-                    agents = "corrupti";
-                    mask = "provident";
-                    user = "distinctio";
-                }};
-            }};            
+                agents = "corrupti";
+                mask = "provident";
+                user = "distinctio";
+            }}            
 
             AccessAddResponse res = sdk.access.accessAdd(req);
 

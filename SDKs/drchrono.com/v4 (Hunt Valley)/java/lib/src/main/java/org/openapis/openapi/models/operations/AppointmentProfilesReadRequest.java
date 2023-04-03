@@ -4,27 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppointmentProfilesReadRequest {
-    
-    public AppointmentProfilesReadPathParams pathParams;
-    public AppointmentProfilesReadRequest withPathParams(AppointmentProfilesReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public AppointmentProfilesReadRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     
-    
-    public AppointmentProfilesReadQueryParams queryParams;
-    public AppointmentProfilesReadRequest withQueryParams(AppointmentProfilesReadQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public AppointmentProfilesReadSecurity security;
-    public AppointmentProfilesReadRequest withSecurity(AppointmentProfilesReadSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public AppointmentProfilesReadRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

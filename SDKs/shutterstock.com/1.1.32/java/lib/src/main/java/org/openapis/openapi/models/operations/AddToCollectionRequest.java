@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddToCollectionRequest {
-    
-    public AddToCollectionPathParams pathParams;
-    public AddToCollectionRequest withPathParams(AddToCollectionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Collection item attributes to add to collection
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateCatalogCollectionItems request;
-    public AddToCollectionRequest withRequest(org.openapis.openapi.models.shared.CreateCatalogCollectionItems request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CreateCatalogCollectionItems createCatalogCollectionItems;
+    public AddToCollectionRequest withCreateCatalogCollectionItems(org.openapis.openapi.models.shared.CreateCatalogCollectionItems createCatalogCollectionItems) {
+        this.createCatalogCollectionItems = createCatalogCollectionItems;
         return this;
     }
     
-    
-    public AddToCollectionSecurity security;
-    public AddToCollectionRequest withSecurity(AddToCollectionSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the collection to add assets to
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection_id")
+    public String collectionId;
+    public AddToCollectionRequest withCollectionId(String collectionId) {
+        this.collectionId = collectionId;
         return this;
     }
     

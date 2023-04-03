@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNumberLeaseRequest {
-    
-    public UpdateNumberLeasePathParams pathParams;
-    public UpdateNumberLeaseRequest withPathParams(UpdateNumberLeasePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * A NumberLease object to update
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.NumberLeaseInput request;
-    public UpdateNumberLeaseRequest withRequest(org.openapis.openapi.models.shared.NumberLeaseInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.NumberLeaseInput numberLeaseInput;
+    public UpdateNumberLeaseRequest withNumberLeaseInput(org.openapis.openapi.models.shared.NumberLeaseInput numberLeaseInput) {
+        this.numberLeaseInput = numberLeaseInput;
         return this;
     }
     
-    
-    public UpdateNumberLeaseSecurity security;
-    public UpdateNumberLeaseRequest withSecurity(UpdateNumberLeaseSecurity security) {
-        this.security = security;
+    /**
+     * A phone number in E.164 format (11-digit). Example: 12132000384
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=number")
+    public String number;
+    public UpdateNumberLeaseRequest withNumber(String number) {
+        this.number = number;
         return this;
     }
     

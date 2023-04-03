@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkWirelessSsidSchedulesRequest {
-    
-    public UpdateNetworkWirelessSsidSchedulesPathParams pathParams;
-    public UpdateNetworkWirelessSsidSchedulesRequest withPathParams(UpdateNetworkWirelessSsidSchedulesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkWirelessSsidSchedulesRequestBody requestBody;
+    public UpdateNetworkWirelessSsidSchedulesRequest withRequestBody(UpdateNetworkWirelessSsidSchedulesRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkWirelessSsidSchedulesRequestBody request;
-    public UpdateNetworkWirelessSsidSchedulesRequest withRequest(UpdateNetworkWirelessSsidSchedulesRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkWirelessSsidSchedulesRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=number")
+    public String number;
+    public UpdateNetworkWirelessSsidSchedulesRequest withNumber(String number) {
+        this.number = number;
         return this;
     }
     

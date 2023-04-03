@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2GetDestinyAggregateActivityStatsRequest {
+    /**
+     * The specific character whose activities should be returned.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=characterId")
+    public Long characterId;
+    public Destiny2GetDestinyAggregateActivityStatsRequest withCharacterId(Long characterId) {
+        this.characterId = characterId;
+        return this;
+    }
     
-    public Destiny2GetDestinyAggregateActivityStatsPathParams pathParams;
-    public Destiny2GetDestinyAggregateActivityStatsRequest withPathParams(Destiny2GetDestinyAggregateActivityStatsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The Destiny membershipId of the user to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destinyMembershipId")
+    public Long destinyMembershipId;
+    public Destiny2GetDestinyAggregateActivityStatsRequest withDestinyMembershipId(Long destinyMembershipId) {
+        this.destinyMembershipId = destinyMembershipId;
+        return this;
+    }
+    
+    /**
+     * A valid non-BungieNet membership type.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
+    public Integer membershipType;
+    public Destiny2GetDestinyAggregateActivityStatsRequest withMembershipType(Integer membershipType) {
+        this.membershipType = membershipType;
         return this;
     }
     

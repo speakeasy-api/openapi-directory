@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSessionUsingPOSTRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authorID")
+    public String authorID;
+    public CreateSessionUsingPOSTRequest withAuthorID(String authorID) {
+        this.authorID = authorID;
+        return this;
+    }
     
-    public CreateSessionUsingPOSTQueryParams queryParams;
-    public CreateSessionUsingPOSTRequest withQueryParams(CreateSessionUsingPOSTQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupID")
+    public String groupID;
+    public CreateSessionUsingPOSTRequest withGroupID(String groupID) {
+        this.groupID = groupID;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=validUntil")
+    public String validUntil;
+    public CreateSessionUsingPOSTRequest withValidUntil(String validUntil) {
+        this.validUntil = validUntil;
         return this;
     }
     

@@ -4,27 +4,97 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ErrorsAvailableVersionsRequest {
-    
-    public ErrorsAvailableVersionsPathParams pathParams;
-    public ErrorsAvailableVersionsRequest withPathParams(ErrorsAvailableVersionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A filter as specified in https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md#97-filtering.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$filter")
+    public String dollarFilter;
+    public ErrorsAvailableVersionsRequest withDollarFilter(String dollarFilter) {
+        this.dollarFilter = dollarFilter;
         return this;
     }
     
-    
-    public ErrorsAvailableVersionsQueryParams queryParams;
-    public ErrorsAvailableVersionsRequest withQueryParams(ErrorsAvailableVersionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Controls whether or not to include a count of all the items across all pages.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$inlinecount")
+    public ErrorsAvailableVersionsDollarInlinecountEnum dollarInlinecount;
+    public ErrorsAvailableVersionsRequest withDollarInlinecount(ErrorsAvailableVersionsDollarInlinecountEnum dollarInlinecount) {
+        this.dollarInlinecount = dollarInlinecount;
         return this;
     }
     
+    /**
+     * The offset (starting at 0) of the first result to return. This parameter along with limit is used to perform pagination.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$skip")
+    public Long dollarSkip;
+    public ErrorsAvailableVersionsRequest withDollarSkip(Long dollarSkip) {
+        this.dollarSkip = dollarSkip;
+        return this;
+    }
     
-    public ErrorsAvailableVersionsSecurity security;
-    public ErrorsAvailableVersionsRequest withSecurity(ErrorsAvailableVersionsSecurity security) {
-        this.security = security;
+    /**
+     * The maximum number of results to return. (0 will fetch all results till the max number.)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$top")
+    public Long dollarTop;
+    public ErrorsAvailableVersionsRequest withDollarTop(Long dollarTop) {
+        this.dollarTop = dollarTop;
+        return this;
+    }
+    
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public ErrorsAvailableVersionsRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+    
+    /**
+     * Last date time in data in ISO 8601 date time format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
+    public OffsetDateTime end;
+    public ErrorsAvailableVersionsRequest withEnd(OffsetDateTime end) {
+        this.end = end;
+        return this;
+    }
+    
+    /**
+     * Type of error (handled vs unhandled), including All
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=errorType")
+    public ErrorsAvailableVersionsErrorTypeEnum errorType;
+    public ErrorsAvailableVersionsRequest withErrorType(ErrorsAvailableVersionsErrorTypeEnum errorType) {
+        this.errorType = errorType;
+        return this;
+    }
+    
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public ErrorsAvailableVersionsRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
+    
+    /**
+     * Start date time in data in ISO 8601 date time format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public OffsetDateTime start;
+    public ErrorsAvailableVersionsRequest withStart(OffsetDateTime start) {
+        this.start = start;
         return this;
     }
     

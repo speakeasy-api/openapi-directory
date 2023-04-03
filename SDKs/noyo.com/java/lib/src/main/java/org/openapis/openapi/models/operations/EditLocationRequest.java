@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EditLocationRequest {
-    
-    public EditLocationPathParams pathParams;
-    public EditLocationRequest withPathParams(EditLocationPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.LocationEditRequest locationEditRequest;
+    public EditLocationRequest withLocationEditRequest(org.openapis.openapi.models.shared.LocationEditRequest locationEditRequest) {
+        this.locationEditRequest = locationEditRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.LocationEditRequest request;
-    public EditLocationRequest withRequest(org.openapis.openapi.models.shared.LocationEditRequest request) {
-        this.request = request;
+    /**
+     * The unique identifier of the group in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public String groupId;
+    public EditLocationRequest withGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the location in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
+    public String locationId;
+    public EditLocationRequest withLocationId(String locationId) {
+        this.locationId = locationId;
+        return this;
+    }
+    
+    /**
+     * The current version identifier of the location
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public String version;
+    public EditLocationRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReplaceAlbumLogoRequest {
-    
-    public ReplaceAlbumLogoPathParams pathParams;
-    public ReplaceAlbumLogoRequest withPathParams(ReplaceAlbumLogoPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.picture+json")
-    public ReplaceAlbumLogoRequestBody request;
-    public ReplaceAlbumLogoRequest withRequest(ReplaceAlbumLogoRequestBody request) {
-        this.request = request;
+    public ReplaceAlbumLogoRequestBody requestBody;
+    public ReplaceAlbumLogoRequest withRequestBody(ReplaceAlbumLogoRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The ID of the album.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=album_id")
+    public Double albumId;
+    public ReplaceAlbumLogoRequest withAlbumId(Double albumId) {
+        this.albumId = albumId;
+        return this;
+    }
     
-    public ReplaceAlbumLogoSecurity security;
-    public ReplaceAlbumLogoRequest withSecurity(ReplaceAlbumLogoSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the custom logo.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=logo_id")
+    public Double logoId;
+    public ReplaceAlbumLogoRequest withLogoId(Double logoId) {
+        this.logoId = logoId;
+        return this;
+    }
+    
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public ReplaceAlbumLogoRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

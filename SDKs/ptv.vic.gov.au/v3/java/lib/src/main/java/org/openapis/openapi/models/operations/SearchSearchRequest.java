@@ -4,20 +4,136 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchSearchRequest {
-    
-    public SearchSearchPathParams pathParams;
-    public SearchSearchRequest withPathParams(SearchSearchPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Your developer id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
+    public String devid;
+    public SearchSearchRequest withDevid(String devid) {
+        this.devid = devid;
         return this;
     }
     
+    /**
+     * Placeholder for future development; currently unavailable
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_addresses")
+    public Boolean includeAddresses;
+    public SearchSearchRequest withIncludeAddresses(Boolean includeAddresses) {
+        this.includeAddresses = includeAddresses;
+        return this;
+    }
     
-    public SearchSearchQueryParams queryParams;
-    public SearchSearchRequest withQueryParams(SearchSearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Indicates if outlets will be returned in response (default = true)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_outlets")
+    public Boolean includeOutlets;
+    public SearchSearchRequest withIncludeOutlets(Boolean includeOutlets) {
+        this.includeOutlets = includeOutlets;
+        return this;
+    }
+    
+    /**
+     * Filter by geographic coordinate of latitude
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=latitude")
+    public Float latitude;
+    public SearchSearchRequest withLatitude(Float latitude) {
+        this.latitude = latitude;
+        return this;
+    }
+    
+    /**
+     * Filter by geographic coordinate of longitude
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=longitude")
+    public Float longitude;
+    public SearchSearchRequest withLongitude(Float longitude) {
+        this.longitude = longitude;
+        return this;
+    }
+    
+    /**
+     * Indicates whether to find routes by suburbs in the search term (default = true)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=match_route_by_suburb")
+    public Boolean matchRouteBySuburb;
+    public SearchSearchRequest withMatchRouteBySuburb(Boolean matchRouteBySuburb) {
+        this.matchRouteBySuburb = matchRouteBySuburb;
+        return this;
+    }
+    
+    /**
+     * Indicates whether to search for stops according to a metlink stop ID (default = false)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=match_stop_by_gtfs_stop_id")
+    public Boolean matchStopByGtfsStopId;
+    public SearchSearchRequest withMatchStopByGtfsStopId(Boolean matchStopByGtfsStopId) {
+        this.matchStopByGtfsStopId = matchStopByGtfsStopId;
+        return this;
+    }
+    
+    /**
+     * Indicates whether to find stops by suburbs in the search term (default = true)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=match_stop_by_suburb")
+    public Boolean matchStopBySuburb;
+    public SearchSearchRequest withMatchStopBySuburb(Boolean matchStopBySuburb) {
+        this.matchStopBySuburb = matchStopBySuburb;
+        return this;
+    }
+    
+    /**
+     * Filter by maximum distance (in metres) from location specified via latitude and longitude parameters
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_distance")
+    public Float maxDistance;
+    public SearchSearchRequest withMaxDistance(Float maxDistance) {
+        this.maxDistance = maxDistance;
+        return this;
+    }
+    
+    /**
+     * Filter by route_type; values returned via RouteTypes API (note: stops and routes are ordered by route_types specified)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=route_types")
+    public SearchSearchRouteTypesEnum[] routeTypes;
+    public SearchSearchRequest withRouteTypes(SearchSearchRouteTypesEnum[] routeTypes) {
+        this.routeTypes = routeTypes;
+        return this;
+    }
+    
+    /**
+     * Search text (note: if search text is numeric and/or less than 3 characters, the API will only return routes)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=search_term")
+    public String searchTerm;
+    public SearchSearchRequest withSearchTerm(String searchTerm) {
+        this.searchTerm = searchTerm;
+        return this;
+    }
+    
+    /**
+     * Authentication signature for request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
+    public String signature;
+    public SearchSearchRequest withSignature(String signature) {
+        this.signature = signature;
+        return this;
+    }
+    
+    /**
+     * Please ignore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public SearchSearchRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

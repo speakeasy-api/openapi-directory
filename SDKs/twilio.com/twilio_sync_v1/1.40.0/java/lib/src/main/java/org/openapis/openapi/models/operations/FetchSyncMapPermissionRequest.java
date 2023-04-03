@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchSyncMapPermissionRequest {
-    
-    public FetchSyncMapPermissionPathParams pathParams;
-    public FetchSyncMapPermissionRequest withPathParams(FetchSyncMapPermissionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The application-defined string that uniquely identifies the User's Sync Map Permission resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Identity")
+    public String identity;
+    public FetchSyncMapPermissionRequest withIdentity(String identity) {
+        this.identity = identity;
         return this;
     }
     
-    
-    public FetchSyncMapPermissionSecurity security;
-    public FetchSyncMapPermissionRequest withSecurity(FetchSyncMapPermissionSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the Sync Map with the Sync Map Permission resource to fetch. Can be the Sync Map resource's `sid` or its `unique_name`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=MapSid")
+    public String mapSid;
+    public FetchSyncMapPermissionRequest withMapSid(String mapSid) {
+        this.mapSid = mapSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public FetchSyncMapPermissionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync Map Permission resource to fetch. Can be the Service's `sid` value or `default`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public FetchSyncMapPermissionRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

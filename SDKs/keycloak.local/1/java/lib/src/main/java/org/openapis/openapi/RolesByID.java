@@ -38,7 +38,7 @@ public class RolesByID {
      */
     public org.openapis.openapi.models.operations.DeleteRealmRolesByIdRoleIdResponse deleteRealmRolesByIdRoleId(org.openapis.openapi.models.operations.DeleteRealmRolesByIdRoleIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmRolesByIdRoleIdPathParams.class, baseUrl, "/{realm}/roles-by-id/{role-id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmRolesByIdRoleIdRequest.class, baseUrl, "/{realm}/roles-by-id/{role-id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -71,12 +71,12 @@ public class RolesByID {
      */
     public org.openapis.openapi.models.operations.DeleteRealmRolesByIdRoleIdCompositesResponse deleteRealmRolesByIdRoleIdComposites(org.openapis.openapi.models.operations.DeleteRealmRolesByIdRoleIdCompositesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmRolesByIdRoleIdCompositesPathParams.class, baseUrl, "/{realm}/roles-by-id/{role-id}/composites", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmRolesByIdRoleIdCompositesRequest.class, baseUrl, "/{realm}/roles-by-id/{role-id}/composites", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -109,7 +109,7 @@ public class RolesByID {
      */
     public org.openapis.openapi.models.operations.GetRealmRolesByIdRoleIdResponse getRealmRolesByIdRoleId(org.openapis.openapi.models.operations.GetRealmRolesByIdRoleIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmRolesByIdRoleIdPathParams.class, baseUrl, "/{realm}/roles-by-id/{role-id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmRolesByIdRoleIdRequest.class, baseUrl, "/{realm}/roles-by-id/{role-id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -148,7 +148,7 @@ public class RolesByID {
      */
     public org.openapis.openapi.models.operations.GetRealmRolesByIdRoleIdCompositesResponse getRealmRolesByIdRoleIdComposites(org.openapis.openapi.models.operations.GetRealmRolesByIdRoleIdCompositesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmRolesByIdRoleIdCompositesPathParams.class, baseUrl, "/{realm}/roles-by-id/{role-id}/composites", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmRolesByIdRoleIdCompositesRequest.class, baseUrl, "/{realm}/roles-by-id/{role-id}/composites", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -187,7 +187,7 @@ public class RolesByID {
      */
     public org.openapis.openapi.models.operations.GetRealmRolesByIdRoleIdCompositesClientsClientResponse getRealmRolesByIdRoleIdCompositesClientsClient(org.openapis.openapi.models.operations.GetRealmRolesByIdRoleIdCompositesClientsClientRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmRolesByIdRoleIdCompositesClientsClientPathParams.class, baseUrl, "/{realm}/roles-by-id/{role-id}/composites/clients/{client}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmRolesByIdRoleIdCompositesClientsClientRequest.class, baseUrl, "/{realm}/roles-by-id/{role-id}/composites/clients/{client}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -226,7 +226,7 @@ public class RolesByID {
      */
     public org.openapis.openapi.models.operations.GetRealmRolesByIdRoleIdCompositesRealmResponse getRealmRolesByIdRoleIdCompositesRealm(org.openapis.openapi.models.operations.GetRealmRolesByIdRoleIdCompositesRealmRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmRolesByIdRoleIdCompositesRealmPathParams.class, baseUrl, "/{realm}/roles-by-id/{role-id}/composites/realm", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmRolesByIdRoleIdCompositesRealmRequest.class, baseUrl, "/{realm}/roles-by-id/{role-id}/composites/realm", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -265,7 +265,7 @@ public class RolesByID {
      */
     public org.openapis.openapi.models.operations.GetRealmRolesByIdRoleIdManagementPermissionsResponse getRealmRolesByIdRoleIdManagementPermissions(org.openapis.openapi.models.operations.GetRealmRolesByIdRoleIdManagementPermissionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmRolesByIdRoleIdManagementPermissionsPathParams.class, baseUrl, "/{realm}/roles-by-id/{role-id}/management/permissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmRolesByIdRoleIdManagementPermissionsRequest.class, baseUrl, "/{realm}/roles-by-id/{role-id}/management/permissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -304,12 +304,12 @@ public class RolesByID {
      */
     public org.openapis.openapi.models.operations.PostRealmRolesByIdRoleIdCompositesResponse postRealmRolesByIdRoleIdComposites(org.openapis.openapi.models.operations.PostRealmRolesByIdRoleIdCompositesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmRolesByIdRoleIdCompositesPathParams.class, baseUrl, "/{realm}/roles-by-id/{role-id}/composites", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmRolesByIdRoleIdCompositesRequest.class, baseUrl, "/{realm}/roles-by-id/{role-id}/composites", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -342,12 +342,12 @@ public class RolesByID {
      */
     public org.openapis.openapi.models.operations.PutRealmRolesByIdRoleIdResponse putRealmRolesByIdRoleId(org.openapis.openapi.models.operations.PutRealmRolesByIdRoleIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmRolesByIdRoleIdPathParams.class, baseUrl, "/{realm}/roles-by-id/{role-id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmRolesByIdRoleIdRequest.class, baseUrl, "/{realm}/roles-by-id/{role-id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "roleRepresentation", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -380,12 +380,12 @@ public class RolesByID {
      */
     public org.openapis.openapi.models.operations.PutRealmRolesByIdRoleIdManagementPermissionsResponse putRealmRolesByIdRoleIdManagementPermissions(org.openapis.openapi.models.operations.PutRealmRolesByIdRoleIdManagementPermissionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmRolesByIdRoleIdManagementPermissionsPathParams.class, baseUrl, "/{realm}/roles-by-id/{role-id}/management/permissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmRolesByIdRoleIdManagementPermissionsRequest.class, baseUrl, "/{realm}/roles-by-id/{role-id}/management/permissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "managementPermissionReference", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

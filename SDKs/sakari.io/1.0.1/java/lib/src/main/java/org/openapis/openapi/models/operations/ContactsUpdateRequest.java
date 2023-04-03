@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContactsUpdateRequest {
-    
-    public ContactsUpdatePathParams pathParams;
-    public ContactsUpdateRequest withPathParams(ContactsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Account to apply operations to
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public ContactsUpdateRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
-    
-    public ContactsUpdateSecurity security;
-    public ContactsUpdateRequest withSecurity(ContactsUpdateSecurity security) {
-        this.security = security;
+    /**
+     * ID of contact
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=contactId")
+    public String contactId;
+    public ContactsUpdateRequest withContactId(String contactId) {
+        this.contactId = contactId;
         return this;
     }
     

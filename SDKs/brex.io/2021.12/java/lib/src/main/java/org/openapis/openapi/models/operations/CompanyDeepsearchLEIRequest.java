@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CompanyDeepsearchLEIRequest {
-    
-    public CompanyDeepsearchLEIPathParams pathParams;
-    public CompanyDeepsearchLEIRequest withPathParams(CompanyDeepsearchLEIPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * lei number
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=number")
+    public String number;
+    public CompanyDeepsearchLEIRequest withNumber(String number) {
+        this.number = number;
         return this;
     }
     
-    
-    public CompanyDeepsearchLEIQueryParams queryParams;
-    public CompanyDeepsearchLEIRequest withQueryParams(CompanyDeepsearchLEIQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public CompanyDeepsearchLEISecurity security;
-    public CompanyDeepsearchLEIRequest withSecurity(CompanyDeepsearchLEISecurity security) {
-        this.security = security;
+    /**
+     * Pagination for the ISIN number results (1000 numbers per page)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public CompanyDeepsearchLEIRequest withPage(Integer page) {
+        this.page = page;
         return this;
     }
     

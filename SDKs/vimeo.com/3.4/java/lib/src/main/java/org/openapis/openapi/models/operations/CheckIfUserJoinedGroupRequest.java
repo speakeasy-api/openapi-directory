@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CheckIfUserJoinedGroupRequest {
+    /**
+     * The ID of the group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public Double groupId;
+    public CheckIfUserJoinedGroupRequest withGroupId(Double groupId) {
+        this.groupId = groupId;
+        return this;
+    }
     
-    public CheckIfUserJoinedGroupPathParams pathParams;
-    public CheckIfUserJoinedGroupRequest withPathParams(CheckIfUserJoinedGroupPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public CheckIfUserJoinedGroupRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

@@ -46,7 +46,7 @@ public class Shipments {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ShipmentGetListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ShipmentGetListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -222,7 +222,7 @@ public class Shipments {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ShipmentPostShipmentFormResponse shipmentPostShipmentForm(org.openapis.openapi.models.operations.ShipmentPostShipmentFormRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ShipmentPostShipmentFormResponse shipmentPostShipmentForm(org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/shipment/shipment");
         
@@ -271,7 +271,7 @@ public class Shipments {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ShipmentPostShipmentJsonResponse shipmentPostShipmentJson(org.openapis.openapi.models.operations.ShipmentPostShipmentJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ShipmentPostShipmentJsonResponse shipmentPostShipmentJson(org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/shipment/shipment");
         
@@ -320,7 +320,7 @@ public class Shipments {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ShipmentPostShipmentRawResponse shipmentPostShipmentRaw(org.openapis.openapi.models.operations.ShipmentPostShipmentRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ShipmentPostShipmentRawResponse shipmentPostShipmentRaw(byte[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/shipment/shipment");
         
@@ -369,7 +369,7 @@ public class Shipments {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ShipmentShipWithLabelFormResponse shipmentShipWithLabelForm(org.openapis.openapi.models.operations.ShipmentShipWithLabelFormRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ShipmentShipWithLabelFormResponse shipmentShipWithLabelForm(org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiShipmentWithLabel request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/shipment/shipwithlabel");
         
@@ -428,7 +428,7 @@ public class Shipments {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ShipmentShipWithLabelJsonResponse shipmentShipWithLabelJson(org.openapis.openapi.models.operations.ShipmentShipWithLabelJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ShipmentShipWithLabelJsonResponse shipmentShipWithLabelJson(org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiShipmentWithLabel request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/shipment/shipwithlabel");
         
@@ -487,7 +487,7 @@ public class Shipments {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ShipmentShipWithLabelRawResponse shipmentShipWithLabelRaw(org.openapis.openapi.models.operations.ShipmentShipWithLabelRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ShipmentShipWithLabelRawResponse shipmentShipWithLabelRaw(byte[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/shipment/shipwithlabel");
         

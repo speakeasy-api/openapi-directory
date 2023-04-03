@@ -7,24 +7,86 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListApprovalRuleTemplatesRequest {
-    
-    public ListApprovalRuleTemplatesQueryParams queryParams;
-    public ListApprovalRuleTemplatesRequest withQueryParams(ListApprovalRuleTemplatesQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ListApprovalRuleTemplatesHeaders headers;
-    public ListApprovalRuleTemplatesRequest withHeaders(ListApprovalRuleTemplatesHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ListApprovalRuleTemplatesInput request;
-    public ListApprovalRuleTemplatesRequest withRequest(org.openapis.openapi.models.shared.ListApprovalRuleTemplatesInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ListApprovalRuleTemplatesInput listApprovalRuleTemplatesInput;
+    public ListApprovalRuleTemplatesRequest withListApprovalRuleTemplatesInput(org.openapis.openapi.models.shared.ListApprovalRuleTemplatesInput listApprovalRuleTemplatesInput) {
+        this.listApprovalRuleTemplatesInput = listApprovalRuleTemplatesInput;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListApprovalRuleTemplatesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListApprovalRuleTemplatesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListApprovalRuleTemplatesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListApprovalRuleTemplatesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListApprovalRuleTemplatesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListApprovalRuleTemplatesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListApprovalRuleTemplatesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public ListApprovalRuleTemplatesXAmzTargetEnum xAmzTarget;
+    public ListApprovalRuleTemplatesRequest withXAmzTarget(ListApprovalRuleTemplatesXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
+        return this;
+    }
+    
+    /**
+     * Pagination limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public String maxResults;
+    public ListApprovalRuleTemplatesRequest withMaxResults(String maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * Pagination token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
+    public String nextToken;
+    public ListApprovalRuleTemplatesRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
     

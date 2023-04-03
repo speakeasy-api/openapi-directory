@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGifsByIdRequest {
-    
-    public GetGifsByIdQueryParams queryParams;
-    public GetGifsByIdRequest withQueryParams(GetGifsByIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filters results by specified GIF IDs, separated by commas.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids")
+    public String ids;
+    public GetGifsByIdRequest withIds(String ids) {
+        this.ids = ids;
         return this;
     }
     

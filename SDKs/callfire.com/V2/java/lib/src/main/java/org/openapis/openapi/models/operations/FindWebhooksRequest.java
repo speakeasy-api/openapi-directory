@@ -4,20 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FindWebhooksRequest {
-    
-    public FindWebhooksQueryParams queryParams;
-    public FindWebhooksRequest withQueryParams(FindWebhooksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A callback URL
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public FindWebhooksRequest withCallback(String callback) {
+        this.callback = callback;
         return this;
     }
     
+    /**
+     * Specifies whether webhook is enabled
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enabled")
+    public Boolean enabled;
+    public FindWebhooksRequest withEnabled(Boolean enabled) {
+        this.enabled = enabled;
+        return this;
+    }
     
-    public FindWebhooksSecurity security;
-    public FindWebhooksRequest withSecurity(FindWebhooksSecurity security) {
-        this.security = security;
+    /**
+     * A name of event, available values: 'started', 'stopped', 'finished'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=event")
+    public String event;
+    public FindWebhooksRequest withEvent(String event) {
+        this.event = event;
+        return this;
+    }
+    
+    /**
+     * Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public FindWebhooksRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * To set the maximum number of records to return in a paged list response. The default is 100
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public FindWebhooksRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * A name of a webhook
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public FindWebhooksRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Offset to the start of a given page. The default is 0. Check [pagination](https://developers.callfire.com/docs.html#pagination) page for more information about pagination in CallFire API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public FindWebhooksRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * A name of a resource, available values: 'CccCampaign', 'CallBroadcast', 'TextBroadcast',  'OutboundCall', 'OutboundText', 'InboundCall', 'InboundText', 'ContactList'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resource")
+    public String resource;
+    public FindWebhooksRequest withResource(String resource) {
+        this.resource = resource;
         return this;
     }
     

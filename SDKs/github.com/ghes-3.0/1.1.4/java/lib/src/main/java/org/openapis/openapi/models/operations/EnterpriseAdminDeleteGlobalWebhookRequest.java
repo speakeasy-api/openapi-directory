@@ -4,20 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminDeleteGlobalWebhookRequest {
-    
-    public EnterpriseAdminDeleteGlobalWebhookPathParams pathParams;
-    public EnterpriseAdminDeleteGlobalWebhookRequest withPathParams(EnterpriseAdminDeleteGlobalWebhookPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * This API is under preview and subject to change.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=accept")
+    public String accept;
+    public EnterpriseAdminDeleteGlobalWebhookRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public EnterpriseAdminDeleteGlobalWebhookHeaders headers;
-    public EnterpriseAdminDeleteGlobalWebhookRequest withHeaders(EnterpriseAdminDeleteGlobalWebhookHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hook_id")
+    public Long hookId;
+    public EnterpriseAdminDeleteGlobalWebhookRequest withHookId(Long hookId) {
+        this.hookId = hookId;
         return this;
     }
     

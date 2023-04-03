@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserCurrentGetKeyRequest {
-    
-    public UserCurrentGetKeyPathParams pathParams;
-    public UserCurrentGetKeyRequest withPathParams(UserCurrentGetKeyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * id of key to get
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public UserCurrentGetKeyRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

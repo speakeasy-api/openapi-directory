@@ -7,31 +7,32 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateZRSettingsRequest {
-    
-    public UpdateZRSettingsPathParams pathParams;
-    public UpdateZRSettingsRequest withPathParams(UpdateZRSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateZRSettingsQueryParams queryParams;
-    public UpdateZRSettingsRequest withQueryParams(UpdateZRSettingsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public Object request;
-    public UpdateZRSettingsRequest withRequest(Object request) {
-        this.request = request;
+    public Object requestBody;
+    public UpdateZRSettingsRequest withRequestBody(Object requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Unique Identifier of the Zoom Room.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=roomId")
+    public String roomId;
+    public UpdateZRSettingsRequest withRoomId(String roomId) {
+        this.roomId = roomId;
+        return this;
+    }
     
-    public UpdateZRSettingsSecurity security;
-    public UpdateZRSettingsRequest withSecurity(UpdateZRSettingsSecurity security) {
-        this.security = security;
+    /**
+     * The type of setting that you would like to update.&lt;br&gt; `alert`: Alert Settings applied on the Zoom Room.&lt;br&gt;
+     * `meeting`: Meeting settings of the Zoom Room.&lt;br&gt;
+     * `signage`: Digital signage settings applied on the Zoom Room.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=setting_type")
+    public String settingType;
+    public UpdateZRSettingsRequest withSettingType(String settingType) {
+        this.settingType = settingType;
         return this;
     }
     

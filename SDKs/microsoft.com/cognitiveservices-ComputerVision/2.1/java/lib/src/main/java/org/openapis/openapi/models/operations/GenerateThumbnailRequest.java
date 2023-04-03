@@ -7,20 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GenerateThumbnailRequest {
-    
-    public GenerateThumbnailQueryParams queryParams;
-    public GenerateThumbnailRequest withQueryParams(GenerateThumbnailQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * A JSON document with a URL pointing to the image that is to be analyzed.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ImageUrl request;
-    public GenerateThumbnailRequest withRequest(org.openapis.openapi.models.shared.ImageUrl request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ImageUrl imageUrl;
+    public GenerateThumbnailRequest withImageUrl(org.openapis.openapi.models.shared.ImageUrl imageUrl) {
+        this.imageUrl = imageUrl;
+        return this;
+    }
+    
+    /**
+     * Height of the thumbnail, in pixels. It must be between 1 and 1024. Recommended minimum of 50.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=height")
+    public Integer height;
+    public GenerateThumbnailRequest withHeight(Integer height) {
+        this.height = height;
+        return this;
+    }
+    
+    /**
+     * Boolean flag for enabling smart cropping.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=smartCropping")
+    public Boolean smartCropping;
+    public GenerateThumbnailRequest withSmartCropping(Boolean smartCropping) {
+        this.smartCropping = smartCropping;
+        return this;
+    }
+    
+    /**
+     * Width of the thumbnail, in pixels. It must be between 1 and 1024. Recommended minimum of 50.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=width")
+    public Integer width;
+    public GenerateThumbnailRequest withWidth(Integer width) {
+        this.width = width;
         return this;
     }
     

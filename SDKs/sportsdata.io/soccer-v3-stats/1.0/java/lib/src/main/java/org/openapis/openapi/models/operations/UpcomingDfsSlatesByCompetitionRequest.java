@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpcomingDfsSlatesByCompetitionRequest {
+    /**
+     * The id of the competition.
+     * &lt;br&gt;Examples: &lt;code&gt;3&lt;/code&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=competitionId")
+    public String competitionId;
+    public UpcomingDfsSlatesByCompetitionRequest withCompetitionId(String competitionId) {
+        this.competitionId = competitionId;
+        return this;
+    }
     
-    public UpcomingDfsSlatesByCompetitionPathParams pathParams;
-    public UpcomingDfsSlatesByCompetitionRequest withPathParams(UpcomingDfsSlatesByCompetitionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public UpcomingDfsSlatesByCompetitionFormatEnum format;
+    public UpcomingDfsSlatesByCompetitionRequest withFormat(UpcomingDfsSlatesByCompetitionFormatEnum format) {
+        this.format = format;
         return this;
     }
     

@@ -4,13 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFindPathwaysByTextRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public GetFindPathwaysByTextFormatEnum format;
+    public GetFindPathwaysByTextRequest withFormat(GetFindPathwaysByTextFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public GetFindPathwaysByTextQueryParams queryParams;
-    public GetFindPathwaysByTextRequest withQueryParams(GetFindPathwaysByTextQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The query, e.g. 'apoptosis'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public GetFindPathwaysByTextRequest withQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    
+    /**
+     * Optional, limit the query by species. Leave
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=species")
+    public String species;
+    public GetFindPathwaysByTextRequest withSpecies(String species) {
+        this.species = species;
         return this;
     }
     

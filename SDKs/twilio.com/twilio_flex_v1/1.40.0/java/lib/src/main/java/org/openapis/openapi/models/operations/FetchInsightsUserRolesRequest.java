@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchInsightsUserRolesRequest {
-    
-    public FetchInsightsUserRolesHeaders headers;
-    public FetchInsightsUserRolesRequest withHeaders(FetchInsightsUserRolesHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public FetchInsightsUserRolesSecurity security;
-    public FetchInsightsUserRolesRequest withSecurity(FetchInsightsUserRolesSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchInsightsUserRolesRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Authorization HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public FetchInsightsUserRolesRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     

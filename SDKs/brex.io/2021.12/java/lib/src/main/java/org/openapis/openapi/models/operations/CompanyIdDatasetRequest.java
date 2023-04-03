@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CompanyIdDatasetRequest {
-    
-    public CompanyIdDatasetPathParams pathParams;
-    public CompanyIdDatasetRequest withPathParams(CompanyIdDatasetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Try to retrieve additional stock information for this company. (Only available on refresh)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=check_stock_listing")
+    public Boolean checkStockListing;
+    public CompanyIdDatasetRequest withCheckStockListing(Boolean checkStockListing) {
+        this.checkStockListing = checkStockListing;
         return this;
     }
     
-    
-    public CompanyIdDatasetQueryParams queryParams;
-    public CompanyIdDatasetRequest withQueryParams(CompanyIdDatasetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * company master data by id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dataset")
+    public CompanyIdDatasetDatasetEnum dataset;
+    public CompanyIdDatasetRequest withDataset(CompanyIdDatasetDatasetEnum dataset) {
+        this.dataset = dataset;
         return this;
     }
     
+    /**
+     * company master data by id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public CompanyIdDatasetRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public CompanyIdDatasetSecurity security;
-    public CompanyIdDatasetRequest withSecurity(CompanyIdDatasetSecurity security) {
-        this.security = security;
+    /**
+     * Optional data translation (only available in limited jurisdictions)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public CompanyIdDatasetLangEnum lang;
+    public CompanyIdDatasetRequest withLang(CompanyIdDatasetLangEnum lang) {
+        this.lang = lang;
         return this;
     }
     

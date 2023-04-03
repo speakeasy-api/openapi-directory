@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimPlatformsUpdateRequest {
-    
-    public DcimPlatformsUpdatePathParams pathParams;
-    public DcimPlatformsUpdateRequest withPathParams(DcimPlatformsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.WritablePlatformInput writablePlatformInput;
+    public DcimPlatformsUpdateRequest withWritablePlatformInput(org.openapis.openapi.models.shared.WritablePlatformInput writablePlatformInput) {
+        this.writablePlatformInput = writablePlatformInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WritablePlatformInput request;
-    public DcimPlatformsUpdateRequest withRequest(org.openapis.openapi.models.shared.WritablePlatformInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this platform.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimPlatformsUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

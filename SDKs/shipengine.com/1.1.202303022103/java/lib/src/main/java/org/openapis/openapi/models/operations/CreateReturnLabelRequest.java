@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateReturnLabelRequest {
-    
-    public CreateReturnLabelPathParams pathParams;
-    public CreateReturnLabelRequest withPathParams(CreateReturnLabelPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateReturnLabelRequestBody createReturnLabelRequestBody;
+    public CreateReturnLabelRequest withCreateReturnLabelRequestBody(org.openapis.openapi.models.shared.CreateReturnLabelRequestBody createReturnLabelRequestBody) {
+        this.createReturnLabelRequestBody = createReturnLabelRequestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateReturnLabelRequestBody request;
-    public CreateReturnLabelRequest withRequest(org.openapis.openapi.models.shared.CreateReturnLabelRequestBody request) {
-        this.request = request;
+    /**
+     * Label ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=label_id")
+    public String labelId;
+    public CreateReturnLabelRequest withLabelId(String labelId) {
+        this.labelId = labelId;
         return this;
     }
     

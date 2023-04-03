@@ -20,18 +20,14 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.operations.DatastoreProjectsAllocateIdsSecurityOption1;
 import org.openapis.openapi.models.operations.DatastoreProjectsAllocateIdsSecurityOption2;
 import org.openapis.openapi.models.operations.DatastoreProjectsAllocateIdsSecurity;
-import org.openapis.openapi.models.operations.DatastoreProjectsAllocateIdsPathParams;
-import org.openapis.openapi.models.operations.DatastoreProjectsAllocateIdsQueryParams;
 import org.openapis.openapi.models.operations.DatastoreProjectsAllocateIdsRequest;
 import org.openapis.openapi.models.operations.DatastoreProjectsAllocateIdsResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.AllocateIdsRequest;
 import org.openapis.openapi.models.shared.Key;
 import org.openapis.openapi.models.shared.PathElement;
 import org.openapis.openapi.models.shared.PartitionId;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -40,47 +36,41 @@ public class Application {
                 .build();
 
             DatastoreProjectsAllocateIdsRequest req = new DatastoreProjectsAllocateIdsRequest() {{
-                security = new DatastoreProjectsAllocateIdsSecurity() {{
-                    option1 = new DatastoreProjectsAllocateIdsSecurityOption1() {{
-                        oauth2 = new SchemeOauth2() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                        oauth2c = new SchemeOauth2c() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                    }};
-                }};
-                pathParams = new DatastoreProjectsAllocateIdsPathParams() {{
-                    projectId = "corrupti";
-                }};
-                queryParams = new DatastoreProjectsAllocateIdsQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new AllocateIdsRequest() {{
-                    databaseId = "suscipit";
+                dollarXgafv = "2";
+                allocateIdsRequest = new AllocateIdsRequest() {{
+                    databaseId = "provident";
                     keys = new org.openapis.openapi.models.shared.Key[]{{
                         add(new Key() {{
                             partitionId = new PartitionId() {{
-                                databaseId = "magnam";
-                                namespaceId = "debitis";
-                                projectId = "ipsa";
+                                databaseId = "quibusdam";
+                                namespaceId = "unde";
+                                projectId = "nulla";
                             }};
                             path = new org.openapis.openapi.models.shared.PathElement[]{{
                                 add(new PathElement() {{
-                                    id = "tempora";
-                                    kind = "suscipit";
-                                    name = "molestiae";
+                                    id = "illum";
+                                    kind = "vel";
+                                    name = "error";
                                 }}),
+                                add(new PathElement() {{
+                                    id = "deserunt";
+                                    kind = "suscipit";
+                                    name = "iure";
+                                }}),
+                                add(new PathElement() {{
+                                    id = "magnam";
+                                    kind = "debitis";
+                                    name = "ipsa";
+                                }}),
+                            }};
+                        }}),
+                        add(new Key() {{
+                            partitionId = new PartitionId() {{
+                                databaseId = "delectus";
+                                namespaceId = "tempora";
+                                projectId = "suscipit";
+                            }};
+                            path = new org.openapis.openapi.models.shared.PathElement[]{{
                                 add(new PathElement() {{
                                     id = "minus";
                                     kind = "placeat";
@@ -91,20 +81,20 @@ public class Application {
                                     kind = "excepturi";
                                     name = "nisi";
                                 }}),
-                                add(new PathElement() {{
-                                    id = "recusandae";
-                                    kind = "temporibus";
-                                    name = "ab";
-                                }}),
                             }};
                         }}),
                         add(new Key() {{
                             partitionId = new PartitionId() {{
-                                databaseId = "quis";
-                                namespaceId = "veritatis";
-                                projectId = "deserunt";
+                                databaseId = "recusandae";
+                                namespaceId = "temporibus";
+                                projectId = "ab";
                             }};
                             path = new org.openapis.openapi.models.shared.PathElement[]{{
+                                add(new PathElement() {{
+                                    id = "veritatis";
+                                    kind = "deserunt";
+                                    name = "perferendis";
+                                }}),
                                 add(new PathElement() {{
                                     id = "ipsam";
                                     kind = "repellendus";
@@ -114,9 +104,25 @@ public class Application {
                         }}),
                     }};
                 }};
-            }};            
+                accessToken = "quo";
+                alt = "json";
+                callback = "at";
+                fields = "at";
+                key = "maiores";
+                oauthToken = "molestiae";
+                prettyPrint = false;
+                projectId = "quod";
+                quotaUser = "quod";
+                uploadType = "esse";
+                uploadProtocol = "totam";
+            }}            
 
-            DatastoreProjectsAllocateIdsResponse res = sdk.projects.datastoreProjectsAllocateIds(req);
+            DatastoreProjectsAllocateIdsResponse res = sdk.projects.datastoreProjectsAllocateIds(req, new DatastoreProjectsAllocateIdsSecurity() {{
+                option1 = new DatastoreProjectsAllocateIdsSecurityOption1() {{
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                }};
+            }});
 
             if (res.allocateIdsResponse.isPresent()) {
                 // handle response
@@ -128,7 +134,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### projects

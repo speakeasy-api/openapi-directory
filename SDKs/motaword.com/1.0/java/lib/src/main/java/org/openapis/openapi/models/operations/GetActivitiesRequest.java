@@ -4,20 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetActivitiesRequest {
-    
-    public GetActivitiesPathParams pathParams;
-    public GetActivitiesRequest withPathParams(GetActivitiesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetActivitiesRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetActivitiesRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
     
-    public GetActivitiesQueryParams queryParams;
-    public GetActivitiesRequest withQueryParams(GetActivitiesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public Long projectId;
+    public GetActivitiesRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     

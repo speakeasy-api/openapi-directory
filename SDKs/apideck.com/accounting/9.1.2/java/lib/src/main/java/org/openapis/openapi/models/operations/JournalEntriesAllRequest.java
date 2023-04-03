@@ -4,27 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class JournalEntriesAllRequest {
-    
-    public JournalEntriesAllQueryParams queryParams;
-    public JournalEntriesAllRequest withQueryParams(JournalEntriesAllQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public JournalEntriesAllRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
-    
-    public JournalEntriesAllHeaders headers;
-    public JournalEntriesAllRequest withHeaders(JournalEntriesAllHeaders headers) {
-        this.headers = headers;
+    /**
+     * The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: `fields=name,email,addresses.city`&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields "name", "email" and "addresses.city". If any other fields are available, they will be excluded.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public JournalEntriesAllRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     
+    /**
+     * Number of records to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public JournalEntriesAllRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public JournalEntriesAllSecurity security;
-    public JournalEntriesAllRequest withSecurity(JournalEntriesAllSecurity security) {
-        this.security = security;
+    /**
+     * Optional unmapped key/values that will be passed through to downstream as query parameters
+     */
+    @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=pass_through")
+    public java.util.Map<String, Object> passThrough;
+    public JournalEntriesAllRequest withPassThrough(java.util.Map<String, Object> passThrough) {
+        this.passThrough = passThrough;
+        return this;
+    }
+    
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
+    public Boolean raw;
+    public JournalEntriesAllRequest withRaw(Boolean raw) {
+        this.raw = raw;
+        return this;
+    }
+    
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public JournalEntriesAllRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
+        return this;
+    }
+    
+    /**
+     * ID of the consumer which you want to get or push data from
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-consumer-id")
+    public String xApideckConsumerId;
+    public JournalEntriesAllRequest withXApideckConsumerId(String xApideckConsumerId) {
+        this.xApideckConsumerId = xApideckConsumerId;
+        return this;
+    }
+    
+    /**
+     * Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-service-id")
+    public String xApideckServiceId;
+    public JournalEntriesAllRequest withXApideckServiceId(String xApideckServiceId) {
+        this.xApideckServiceId = xApideckServiceId;
         return this;
     }
     

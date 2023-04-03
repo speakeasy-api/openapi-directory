@@ -4,20 +4,78 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDocumentRequest {
-    
-    public GetDocumentPathParams pathParams;
-    public GetDocumentRequest withPathParams(GetDocumentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * If set to *full*, response will include query explanations in addition to the result.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=explain")
+    public String explain;
+    public GetDocumentRequest withExplain(String explain) {
+        this.explain = explain;
         return this;
     }
     
+    /**
+     * Provide the text for an [input document](https://www.openpolicyagent.org/docs/latest/kubernetes-primer/#input-document) in JSON format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=input")
+    public java.util.Map<String, Object> input;
+    public GetDocumentRequest withInput(java.util.Map<String, Object> input) {
+        this.input = input;
+        return this;
+    }
     
-    public GetDocumentQueryParams queryParams;
-    public GetDocumentRequest withQueryParams(GetDocumentQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * If true, response will return additional performance metrics in addition to the result and the standard metrics.
+     * 
+     * **Caution:** This can add significant overhead to query evaluation. The recommendation is to only use this parameter if you are debugging a performance problem.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=instrument")
+    public Boolean instrument;
+    public GetDocumentRequest withInstrument(Boolean instrument) {
+        this.instrument = instrument;
+        return this;
+    }
+    
+    /**
+     * If true, compiler performance metrics will be returned in the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=metrics")
+    public Boolean metrics;
+    public GetDocumentRequest withMetrics(Boolean metrics) {
+        this.metrics = metrics;
+        return this;
+    }
+    
+    /**
+     * A backslash (/) delimited path to access values inside object and array documents. If the path points to an array, the server will attempt to convert the array index to an integer. If the path element cannot be converted to an integer, the server will respond with 404.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
+    public String path;
+    public GetDocumentRequest withPath(String path) {
+        this.path = path;
+        return this;
+    }
+    
+    /**
+     * If true, response will be in a human-readable format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pretty")
+    public Boolean pretty;
+    public GetDocumentRequest withPretty(Boolean pretty) {
+        this.pretty = pretty;
+        return this;
+    }
+    
+    /**
+     * If true, response will include build and version information in addition to the result.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=provenance")
+    public Boolean provenance;
+    public GetDocumentRequest withProvenance(Boolean provenance) {
+        this.provenance = provenance;
         return this;
     }
     

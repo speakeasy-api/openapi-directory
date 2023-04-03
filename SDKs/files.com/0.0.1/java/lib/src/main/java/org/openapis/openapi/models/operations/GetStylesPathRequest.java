@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStylesPathRequest {
-    
-    public GetStylesPathPathParams pathParams;
-    public GetStylesPathRequest withPathParams(GetStylesPathPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Style path.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
+    public String path;
+    public GetStylesPathRequest withPath(String path) {
+        this.path = path;
         return this;
     }
     

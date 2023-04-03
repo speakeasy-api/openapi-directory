@@ -48,7 +48,7 @@ public class OAuth {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ObtainTokenResponse obtainToken(org.openapis.openapi.models.operations.ObtainTokenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ObtainTokenResponse obtainToken(org.openapis.openapi.models.shared.ObtainTokenRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/oauth2/token");
         
@@ -108,24 +108,25 @@ public class OAuth {
      * Replace `APPLICATION_SECRET` with the application secret on the Credentials
      * page in the [developer dashboard](https://developer.squareup.com/apps).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RenewTokenResponse renewToken(org.openapis.openapi.models.operations.RenewTokenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RenewTokenResponse renewToken(org.openapis.openapi.models.operations.RenewTokenRequest request, org.openapis.openapi.models.operations.RenewTokenSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RenewTokenPathParams.class, baseUrl, "/oauth2/clients/{client_id}/access-token/renew", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RenewTokenRequest.class, baseUrl, "/oauth2/clients/{client_id}/access-token/renew", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "renewTokenRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -168,10 +169,11 @@ public class OAuth {
      * Replace `APPLICATION_SECRET` with the application secret on the OAuth
      * page in the [developer dashboard](https://developer.squareup.com/apps).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RevokeTokenResponse revokeToken(org.openapis.openapi.models.operations.RevokeTokenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RevokeTokenResponse revokeToken(org.openapis.openapi.models.shared.RevokeTokenRequest request, org.openapis.openapi.models.operations.RevokeTokenSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/oauth2/revoke");
         
@@ -185,7 +187,7 @@ public class OAuth {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

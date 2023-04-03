@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Delete14Request {
-    
-    public Delete14PathParams pathParams;
-    public Delete14Request withPathParams(Delete14PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * force jobs removal (ie. started or ready)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=forceJobsRemoval")
+    public Boolean forceJobsRemoval;
+    public Delete14Request withForceJobsRemoval(Boolean forceJobsRemoval) {
+        this.forceJobsRemoval = forceJobsRemoval;
         return this;
     }
     
+    /**
+     * remove external projects (ie. from CAT Tool)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=removeExternalProjects")
+    public Boolean removeExternalProjects;
+    public Delete14Request withRemoveExternalProjects(Boolean removeExternalProjects) {
+        this.removeExternalProjects = removeExternalProjects;
+        return this;
+    }
     
-    public Delete14QueryParams queryParams;
-    public Delete14Request withQueryParams(Delete14QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * remove files from disc
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=removeFilesFromDisc")
+    public Boolean removeFilesFromDisc;
+    public Delete14Request withRemoveFilesFromDisc(Boolean removeFilesFromDisc) {
+        this.removeFilesFromDisc = removeFilesFromDisc;
+        return this;
+    }
+    
+    /**
+     * task's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taskId")
+    public String taskId;
+    public Delete14Request withTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
     

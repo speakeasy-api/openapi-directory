@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CreateAutoPredictorXAmzTargetEnum;
-import org.openapis.openapi.models.operations.CreateAutoPredictorHeaders;
 import org.openapis.openapi.models.operations.CreateAutoPredictorRequest;
 import org.openapis.openapi.models.operations.CreateAutoPredictorResponse;
 import org.openapis.openapi.models.shared.CreateAutoPredictorRequest;
@@ -25,62 +24,54 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateAutoPredictorRequest req = new CreateAutoPredictorRequest() {{
-                headers = new CreateAutoPredictorHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "AmazonForecast.CreateAutoPredictor";
-                }};
-                request = new CreateAutoPredictorRequest() {{
+                createAutoPredictorRequest = new CreateAutoPredictorRequest() {{
                     dataConfig = new DataConfig() {{
                         additionalDatasets = new org.openapis.openapi.models.shared.AdditionalDataset[]{{
                             add(new AdditionalDataset() {{
                                 configuration = new java.util.HashMap<String, String[]>() {{
-                                    put("error", new String[]{{
+                                    put("distinctio", new String[]{{
+                                        add("unde"),
+                                        add("nulla"),
+                                        add("corrupti"),
+                                        add("illum"),
+                                    }});
+                                    put("vel", new String[]{{
+                                        add("deserunt"),
                                         add("suscipit"),
                                         add("iure"),
-                                        add("magnam"),
                                     }});
-                                    put("debitis", new String[]{{
+                                    put("magnam", new String[]{{
+                                        add("ipsa"),
                                         add("delectus"),
+                                        add("tempora"),
+                                        add("suscipit"),
                                     }});
                                 }};
-                                name = "tempora";
+                                name = "molestiae";
                             }}),
                             add(new AdditionalDataset() {{
                                 configuration = new java.util.HashMap<String, String[]>() {{
-                                    put("molestiae", new String[]{{
-                                        add("placeat"),
-                                        add("voluptatum"),
+                                    put("placeat", new String[]{{
                                         add("iusto"),
                                         add("excepturi"),
+                                        add("nisi"),
                                     }});
-                                    put("nisi", new String[]{{
-                                        add("temporibus"),
+                                    put("recusandae", new String[]{{
                                         add("ab"),
                                         add("quis"),
                                         add("veritatis"),
+                                        add("deserunt"),
                                     }});
-                                }};
-                                name = "deserunt";
-                            }}),
-                            add(new AdditionalDataset() {{
-                                configuration = new java.util.HashMap<String, String[]>() {{
-                                    put("ipsam", new String[]{{
+                                    put("perferendis", new String[]{{
+                                        add("repellendus"),
                                         add("sapiente"),
-                                        add("quo"),
-                                        add("odit"),
+                                    }});
+                                    put("quo", new String[]{{
                                         add("at"),
                                     }});
                                 }};
@@ -158,7 +149,15 @@ public class Application {
                         month = "MARCH";
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "corporis";
+                xAmzContentSha256 = "explicabo";
+                xAmzCredential = "nobis";
+                xAmzDate = "enim";
+                xAmzSecurityToken = "omnis";
+                xAmzSignature = "nemo";
+                xAmzSignedHeaders = "minima";
+                xAmzTarget = "AmazonForecast.CreateAutoPredictor";
+            }}            
 
             CreateAutoPredictorResponse res = sdk.createAutoPredictor(req);
 

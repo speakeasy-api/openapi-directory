@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetActionsIdRequest {
-    
-    public GetActionsIdPathParams pathParams;
-    public GetActionsIdRequest withPathParams(GetActionsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the Resource
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetActionsIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsGetRequiredWorkflowRequest {
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ActionsGetRequiredWorkflowRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
     
-    public ActionsGetRequiredWorkflowPathParams pathParams;
-    public ActionsGetRequiredWorkflowRequest withPathParams(ActionsGetRequiredWorkflowPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the required workflow.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=required_workflow_id")
+    public Long requiredWorkflowId;
+    public ActionsGetRequiredWorkflowRequest withRequiredWorkflowId(Long requiredWorkflowId) {
+        this.requiredWorkflowId = requiredWorkflowId;
         return this;
     }
     

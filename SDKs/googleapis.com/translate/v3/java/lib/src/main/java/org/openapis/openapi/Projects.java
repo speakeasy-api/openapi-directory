@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Translates a large volume of document in asynchronous batch mode. This function provides real-time output as the inputs are being processed. If caller cancels a request, the partial results (for an input file, it's all or nothing) may still be available on the specified output location. This call returns immediately and you can use google.longrunning.Operation.name to poll the status of the call.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TranslateProjectsLocationsBatchTranslateDocumentResponse translateProjectsLocationsBatchTranslateDocument(org.openapis.openapi.models.operations.TranslateProjectsLocationsBatchTranslateDocumentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TranslateProjectsLocationsBatchTranslateDocumentResponse translateProjectsLocationsBatchTranslateDocument(org.openapis.openapi.models.operations.TranslateProjectsLocationsBatchTranslateDocumentRequest request, org.openapis.openapi.models.operations.TranslateProjectsLocationsBatchTranslateDocumentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsBatchTranslateDocumentPathParams.class, baseUrl, "/v3/{parent}:batchTranslateDocument", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsBatchTranslateDocumentRequest.class, baseUrl, "/v3/{parent}:batchTranslateDocument", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "batchTranslateDocumentRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsBatchTranslateDocumentQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsBatchTranslateDocumentRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,27 +83,28 @@ public class Projects {
     /**
      * Translates a large volume of text in asynchronous batch mode. This function provides real-time output as the inputs are being processed. If caller cancels a request, the partial results (for an input file, it's all or nothing) may still be available on the specified output location. This call returns immediately and you can use google.longrunning.Operation.name to poll the status of the call.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TranslateProjectsLocationsBatchTranslateTextResponse translateProjectsLocationsBatchTranslateText(org.openapis.openapi.models.operations.TranslateProjectsLocationsBatchTranslateTextRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TranslateProjectsLocationsBatchTranslateTextResponse translateProjectsLocationsBatchTranslateText(org.openapis.openapi.models.operations.TranslateProjectsLocationsBatchTranslateTextRequest request, org.openapis.openapi.models.operations.TranslateProjectsLocationsBatchTranslateTextSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsBatchTranslateTextPathParams.class, baseUrl, "/v3/{parent}:batchTranslateText", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsBatchTranslateTextRequest.class, baseUrl, "/v3/{parent}:batchTranslateText", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "batchTranslateTextRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsBatchTranslateTextQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsBatchTranslateTextRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -129,27 +131,28 @@ public class Projects {
     /**
      * Creates a Dataset.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsCreateResponse translateProjectsLocationsDatasetsCreate(org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsCreateResponse translateProjectsLocationsDatasetsCreate(org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsCreateRequest request, org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsCreatePathParams.class, baseUrl, "/v3/{parent}/datasets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsCreateRequest.class, baseUrl, "/v3/{parent}/datasets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "datasetInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -176,25 +179,26 @@ public class Projects {
     /**
      * Lists sentence pairs in the dataset.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsExamplesListResponse translateProjectsLocationsDatasetsExamplesList(org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsExamplesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsExamplesListResponse translateProjectsLocationsDatasetsExamplesList(org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsExamplesListRequest request, org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsExamplesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsExamplesListPathParams.class, baseUrl, "/v3/{parent}/examples", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsExamplesListRequest.class, baseUrl, "/v3/{parent}/examples", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsExamplesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsExamplesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -221,27 +225,28 @@ public class Projects {
     /**
      * Exports dataset's data to the provided output location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsExportDataResponse translateProjectsLocationsDatasetsExportData(org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsExportDataRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsExportDataResponse translateProjectsLocationsDatasetsExportData(org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsExportDataRequest request, org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsExportDataSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsExportDataPathParams.class, baseUrl, "/v3/{dataset}:exportData", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsExportDataRequest.class, baseUrl, "/v3/{dataset}:exportData", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "exportDataRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsExportDataQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsExportDataRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -268,27 +273,28 @@ public class Projects {
     /**
      * Import sentence pairs into translation Dataset.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsImportDataResponse translateProjectsLocationsDatasetsImportData(org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsImportDataRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsImportDataResponse translateProjectsLocationsDatasetsImportData(org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsImportDataRequest request, org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsImportDataSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsImportDataPathParams.class, baseUrl, "/v3/{dataset}:importData", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsImportDataRequest.class, baseUrl, "/v3/{dataset}:importData", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "importDataRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsImportDataQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsImportDataRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -315,25 +321,26 @@ public class Projects {
     /**
      * Lists datasets.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsListResponse translateProjectsLocationsDatasetsList(org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsListResponse translateProjectsLocationsDatasetsList(org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsListRequest request, org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsListPathParams.class, baseUrl, "/v3/{parent}/datasets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsListRequest.class, baseUrl, "/v3/{parent}/datasets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsDatasetsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -360,27 +367,28 @@ public class Projects {
     /**
      * Detects the language of text within a request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TranslateProjectsLocationsDetectLanguageResponse translateProjectsLocationsDetectLanguage(org.openapis.openapi.models.operations.TranslateProjectsLocationsDetectLanguageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TranslateProjectsLocationsDetectLanguageResponse translateProjectsLocationsDetectLanguage(org.openapis.openapi.models.operations.TranslateProjectsLocationsDetectLanguageRequest request, org.openapis.openapi.models.operations.TranslateProjectsLocationsDetectLanguageSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsDetectLanguagePathParams.class, baseUrl, "/v3/{parent}:detectLanguage", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsDetectLanguageRequest.class, baseUrl, "/v3/{parent}:detectLanguage", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "detectLanguageRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsDetectLanguageQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsDetectLanguageRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -407,25 +415,26 @@ public class Projects {
     /**
      * Returns a list of supported languages for translation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TranslateProjectsLocationsGetSupportedLanguagesResponse translateProjectsLocationsGetSupportedLanguages(org.openapis.openapi.models.operations.TranslateProjectsLocationsGetSupportedLanguagesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TranslateProjectsLocationsGetSupportedLanguagesResponse translateProjectsLocationsGetSupportedLanguages(org.openapis.openapi.models.operations.TranslateProjectsLocationsGetSupportedLanguagesRequest request, org.openapis.openapi.models.operations.TranslateProjectsLocationsGetSupportedLanguagesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsGetSupportedLanguagesPathParams.class, baseUrl, "/v3/{parent}/supportedLanguages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsGetSupportedLanguagesRequest.class, baseUrl, "/v3/{parent}/supportedLanguages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsGetSupportedLanguagesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsGetSupportedLanguagesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -452,27 +461,28 @@ public class Projects {
     /**
      * Creates a glossary and returns the long-running operation. Returns NOT_FOUND, if the project doesn't exist.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesCreateResponse translateProjectsLocationsGlossariesCreate(org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesCreateResponse translateProjectsLocationsGlossariesCreate(org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesCreateRequest request, org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesCreatePathParams.class, baseUrl, "/v3/{parent}/glossaries", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesCreateRequest.class, baseUrl, "/v3/{parent}/glossaries", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "glossaryInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -499,27 +509,28 @@ public class Projects {
     /**
      * Creates a glossary entry.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesGlossaryEntriesCreateResponse translateProjectsLocationsGlossariesGlossaryEntriesCreate(org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesGlossaryEntriesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesGlossaryEntriesCreateResponse translateProjectsLocationsGlossariesGlossaryEntriesCreate(org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesGlossaryEntriesCreateRequest request, org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesGlossaryEntriesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesGlossaryEntriesCreatePathParams.class, baseUrl, "/v3/{parent}/glossaryEntries", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesGlossaryEntriesCreateRequest.class, baseUrl, "/v3/{parent}/glossaryEntries", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "glossaryEntry", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesGlossaryEntriesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesGlossaryEntriesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -546,25 +557,26 @@ public class Projects {
     /**
      * List the entries for the glossary.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesGlossaryEntriesListResponse translateProjectsLocationsGlossariesGlossaryEntriesList(org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesGlossaryEntriesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesGlossaryEntriesListResponse translateProjectsLocationsGlossariesGlossaryEntriesList(org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesGlossaryEntriesListRequest request, org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesGlossaryEntriesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesGlossaryEntriesListPathParams.class, baseUrl, "/v3/{parent}/glossaryEntries", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesGlossaryEntriesListRequest.class, baseUrl, "/v3/{parent}/glossaryEntries", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesGlossaryEntriesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesGlossaryEntriesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -591,27 +603,28 @@ public class Projects {
     /**
      * Updates a glossary entry.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesGlossaryEntriesPatchResponse translateProjectsLocationsGlossariesGlossaryEntriesPatch(org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesGlossaryEntriesPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesGlossaryEntriesPatchResponse translateProjectsLocationsGlossariesGlossaryEntriesPatch(org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesGlossaryEntriesPatchRequest request, org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesGlossaryEntriesPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesGlossaryEntriesPatchPathParams.class, baseUrl, "/v3/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesGlossaryEntriesPatchRequest.class, baseUrl, "/v3/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "glossaryEntry", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesGlossaryEntriesPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesGlossaryEntriesPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -638,25 +651,26 @@ public class Projects {
     /**
      * Lists glossaries in a project. Returns NOT_FOUND, if the project doesn't exist.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesListResponse translateProjectsLocationsGlossariesList(org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesListResponse translateProjectsLocationsGlossariesList(org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesListRequest request, org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesListPathParams.class, baseUrl, "/v3/{parent}/glossaries", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesListRequest.class, baseUrl, "/v3/{parent}/glossaries", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsGlossariesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -683,25 +697,26 @@ public class Projects {
     /**
      * Lists information about the supported locations for this service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TranslateProjectsLocationsListResponse translateProjectsLocationsList(org.openapis.openapi.models.operations.TranslateProjectsLocationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TranslateProjectsLocationsListResponse translateProjectsLocationsList(org.openapis.openapi.models.operations.TranslateProjectsLocationsListRequest request, org.openapis.openapi.models.operations.TranslateProjectsLocationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsListPathParams.class, baseUrl, "/v3/{name}/locations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsListRequest.class, baseUrl, "/v3/{name}/locations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -728,27 +743,28 @@ public class Projects {
     /**
      * Creates a Model.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TranslateProjectsLocationsModelsCreateResponse translateProjectsLocationsModelsCreate(org.openapis.openapi.models.operations.TranslateProjectsLocationsModelsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TranslateProjectsLocationsModelsCreateResponse translateProjectsLocationsModelsCreate(org.openapis.openapi.models.operations.TranslateProjectsLocationsModelsCreateRequest request, org.openapis.openapi.models.operations.TranslateProjectsLocationsModelsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsModelsCreatePathParams.class, baseUrl, "/v3/{parent}/models", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsModelsCreateRequest.class, baseUrl, "/v3/{parent}/models", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "modelInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsModelsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsModelsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -775,25 +791,26 @@ public class Projects {
     /**
      * Lists models.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TranslateProjectsLocationsModelsListResponse translateProjectsLocationsModelsList(org.openapis.openapi.models.operations.TranslateProjectsLocationsModelsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TranslateProjectsLocationsModelsListResponse translateProjectsLocationsModelsList(org.openapis.openapi.models.operations.TranslateProjectsLocationsModelsListRequest request, org.openapis.openapi.models.operations.TranslateProjectsLocationsModelsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsModelsListPathParams.class, baseUrl, "/v3/{parent}/models", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsModelsListRequest.class, baseUrl, "/v3/{parent}/models", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsModelsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsModelsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -820,27 +837,28 @@ public class Projects {
     /**
      * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsCancelResponse translateProjectsLocationsOperationsCancel(org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsCancelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsCancelResponse translateProjectsLocationsOperationsCancel(org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsCancelRequest request, org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsCancelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsCancelPathParams.class, baseUrl, "/v3/{name}:cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsCancelRequest.class, baseUrl, "/v3/{name}:cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsCancelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsCancelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -867,25 +885,26 @@ public class Projects {
     /**
      * Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsDeleteResponse translateProjectsLocationsOperationsDelete(org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsDeleteResponse translateProjectsLocationsOperationsDelete(org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsDeleteRequest request, org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsDeletePathParams.class, baseUrl, "/v3/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsDeleteRequest.class, baseUrl, "/v3/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -912,25 +931,26 @@ public class Projects {
     /**
      * Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsGetResponse translateProjectsLocationsOperationsGet(org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsGetResponse translateProjectsLocationsOperationsGet(org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsGetRequest request, org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsGetPathParams.class, baseUrl, "/v3/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsGetRequest.class, baseUrl, "/v3/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -957,25 +977,26 @@ public class Projects {
     /**
      * Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsListResponse translateProjectsLocationsOperationsList(org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsListResponse translateProjectsLocationsOperationsList(org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsListRequest request, org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsListPathParams.class, baseUrl, "/v3/{name}/operations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsListRequest.class, baseUrl, "/v3/{name}/operations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1002,27 +1023,28 @@ public class Projects {
     /**
      * Waits until the specified long-running operation is done or reaches at most a specified timeout, returning the latest state. If the operation is already done, the latest state is immediately returned. If the timeout specified is greater than the default HTTP/RPC timeout, the HTTP/RPC timeout is used. If the server does not support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Note that this method is on a best-effort basis. It may return the latest state before the specified timeout (including immediately), meaning even an immediate response is no guarantee that the operation is done.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsWaitResponse translateProjectsLocationsOperationsWait(org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsWaitRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsWaitResponse translateProjectsLocationsOperationsWait(org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsWaitRequest request, org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsWaitSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsWaitPathParams.class, baseUrl, "/v3/{name}:wait", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsWaitRequest.class, baseUrl, "/v3/{name}:wait", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "waitOperationRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsWaitQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsOperationsWaitRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1049,27 +1071,28 @@ public class Projects {
     /**
      * Translates documents in synchronous mode.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TranslateProjectsLocationsTranslateDocumentResponse translateProjectsLocationsTranslateDocument(org.openapis.openapi.models.operations.TranslateProjectsLocationsTranslateDocumentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TranslateProjectsLocationsTranslateDocumentResponse translateProjectsLocationsTranslateDocument(org.openapis.openapi.models.operations.TranslateProjectsLocationsTranslateDocumentRequest request, org.openapis.openapi.models.operations.TranslateProjectsLocationsTranslateDocumentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsTranslateDocumentPathParams.class, baseUrl, "/v3/{parent}:translateDocument", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsTranslateDocumentRequest.class, baseUrl, "/v3/{parent}:translateDocument", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "translateDocumentRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsTranslateDocumentQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsTranslateDocumentRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1096,27 +1119,28 @@ public class Projects {
     /**
      * Translates input text and returns translated text.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TranslateProjectsLocationsTranslateTextResponse translateProjectsLocationsTranslateText(org.openapis.openapi.models.operations.TranslateProjectsLocationsTranslateTextRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TranslateProjectsLocationsTranslateTextResponse translateProjectsLocationsTranslateText(org.openapis.openapi.models.operations.TranslateProjectsLocationsTranslateTextRequest request, org.openapis.openapi.models.operations.TranslateProjectsLocationsTranslateTextSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsTranslateTextPathParams.class, baseUrl, "/v3/{parent}:translateText", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateProjectsLocationsTranslateTextRequest.class, baseUrl, "/v3/{parent}:translateText", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "translateTextRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsTranslateTextQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranslateProjectsLocationsTranslateTextRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

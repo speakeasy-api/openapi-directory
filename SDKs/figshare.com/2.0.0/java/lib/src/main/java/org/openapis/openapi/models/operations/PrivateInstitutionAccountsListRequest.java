@@ -4,20 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateInstitutionAccountsListRequest {
-    
-    public PrivateInstitutionAccountsListQueryParams queryParams;
-    public PrivateInstitutionAccountsListRequest withQueryParams(PrivateInstitutionAccountsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter by email
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public PrivateInstitutionAccountsListRequest withEmail(String email) {
+        this.email = email;
         return this;
     }
     
+    /**
+     * Retrieve accounts with an ID greater or equal to the specified value
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id_gte")
+    public Long idGte;
+    public PrivateInstitutionAccountsListRequest withIdGte(Long idGte) {
+        this.idGte = idGte;
+        return this;
+    }
     
-    public PrivateInstitutionAccountsListSecurity security;
-    public PrivateInstitutionAccountsListRequest withSecurity(PrivateInstitutionAccountsListSecurity security) {
-        this.security = security;
+    /**
+     * Retrieve accounts with an ID lower or equal to the specified value
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id_lte")
+    public Long idLte;
+    public PrivateInstitutionAccountsListRequest withIdLte(Long idLte) {
+        this.idLte = idLte;
+        return this;
+    }
+    
+    /**
+     * Filter by institution_user_id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=institution_user_id")
+    public String institutionUserId;
+    public PrivateInstitutionAccountsListRequest withInstitutionUserId(String institutionUserId) {
+        this.institutionUserId = institutionUserId;
+        return this;
+    }
+    
+    /**
+     * Filter by active status
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_active")
+    public Long isActive;
+    public PrivateInstitutionAccountsListRequest withIsActive(Long isActive) {
+        this.isActive = isActive;
+        return this;
+    }
+    
+    /**
+     * Number of results included on a page. Used for pagination with query
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public PrivateInstitutionAccountsListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Where to start the listing(the offset of the first result). Used for pagination with limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public PrivateInstitutionAccountsListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Page number. Used for pagination with page_size
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public PrivateInstitutionAccountsListRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results included on a page. Used for pagination with page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public PrivateInstitutionAccountsListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

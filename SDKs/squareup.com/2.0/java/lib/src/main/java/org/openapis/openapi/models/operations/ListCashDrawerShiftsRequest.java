@@ -4,20 +4,68 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListCashDrawerShiftsRequest {
-    
-    public ListCashDrawerShiftsQueryParams queryParams;
-    public ListCashDrawerShiftsRequest withQueryParams(ListCashDrawerShiftsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The inclusive start time of the query on opened_at, in ISO 8601 format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=begin_time")
+    public String beginTime;
+    public ListCashDrawerShiftsRequest withBeginTime(String beginTime) {
+        this.beginTime = beginTime;
         return this;
     }
     
+    /**
+     * Opaque cursor for fetching the next page of results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public ListCashDrawerShiftsRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
     
-    public ListCashDrawerShiftsSecurity security;
-    public ListCashDrawerShiftsRequest withSecurity(ListCashDrawerShiftsSecurity security) {
-        this.security = security;
+    /**
+     * The exclusive end date of the query on opened_at, in ISO 8601 format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_time")
+    public String endTime;
+    public ListCashDrawerShiftsRequest withEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    
+    /**
+     * Number of cash drawer shift events in a page of results (200 by
+     * default, 1000 max).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListCashDrawerShiftsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * The ID of the location to query for a list of cash drawer shifts.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location_id")
+    public String locationId;
+    public ListCashDrawerShiftsRequest withLocationId(String locationId) {
+        this.locationId = locationId;
+        return this;
+    }
+    
+    /**
+     * The order in which cash drawer shifts are listed in the response,
+     * based on their opened_at field. Default value: ASC
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_order")
+    public String sortOrder;
+    public ListCashDrawerShiftsRequest withSortOrder(String sortOrder) {
+        this.sortOrder = sortOrder;
         return this;
     }
     

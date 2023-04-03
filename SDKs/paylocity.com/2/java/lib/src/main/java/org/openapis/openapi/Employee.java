@@ -35,24 +35,25 @@ public class Employee {
      * Add new employee
      * New Employee API sends new employee data directly to Web Pay. Companies who use the New Hire Template in Web Pay may require additional fields when hiring employees. New Employee API Requests will honor these required fields.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddEmployeeResponse addEmployee(org.openapis.openapi.models.operations.AddEmployeeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddEmployeeResponse addEmployee(org.openapis.openapi.models.operations.AddEmployeeRequest request, org.openapis.openapi.models.operations.AddEmployeeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddEmployeePathParams.class, baseUrl, "/v2/companies/{companyId}/employees", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddEmployeeRequest.class, baseUrl, "/v2/companies/{companyId}/employees", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "employee", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -90,25 +91,26 @@ public class Employee {
      * Get all employees
      * Get All Employees API will return employee data currently available in Web Pay.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAllEmployeesResponse getAllEmployees(org.openapis.openapi.models.operations.GetAllEmployeesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetAllEmployeesResponse getAllEmployees(org.openapis.openapi.models.operations.GetAllEmployeesRequest request, org.openapis.openapi.models.operations.GetAllEmployeesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllEmployeesPathParams.class, baseUrl, "/v2/companies/{companyId}/employees/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllEmployeesRequest.class, baseUrl, "/v2/companies/{companyId}/employees/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAllEmployeesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAllEmployeesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -146,19 +148,20 @@ public class Employee {
      * Get employee
      * Get Employee API will return employee data currently available in Web Pay.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEmployeeResponse getEmployee(org.openapis.openapi.models.operations.GetEmployeeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEmployeeResponse getEmployee(org.openapis.openapi.models.operations.GetEmployeeRequest request, org.openapis.openapi.models.operations.GetEmployeeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEmployeePathParams.class, baseUrl, "/v2/companies/{companyId}/employees/{employeeId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEmployeeRequest.class, baseUrl, "/v2/companies/{companyId}/employees/{employeeId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -196,24 +199,25 @@ public class Employee {
      * Update employee
      * Update Employee API will update existing employee data in WebPay.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateEmployeeResponse updateEmployee(org.openapis.openapi.models.operations.UpdateEmployeeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateEmployeeResponse updateEmployee(org.openapis.openapi.models.operations.UpdateEmployeeRequest request, org.openapis.openapi.models.operations.UpdateEmployeeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateEmployeePathParams.class, baseUrl, "/v2/companies/{companyId}/employees/{employeeId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateEmployeeRequest.class, baseUrl, "/v2/companies/{companyId}/employees/{employeeId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "employee", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

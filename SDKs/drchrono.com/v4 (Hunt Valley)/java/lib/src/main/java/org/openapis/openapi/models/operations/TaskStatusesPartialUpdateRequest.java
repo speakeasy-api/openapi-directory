@@ -4,27 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TaskStatusesPartialUpdateRequest {
-    
-    public TaskStatusesPartialUpdatePathParams pathParams;
-    public TaskStatusesPartialUpdateRequest withPathParams(TaskStatusesPartialUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public TaskStatusesPartialUpdateRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public TaskStatusesPartialUpdateQueryParams queryParams;
-    public TaskStatusesPartialUpdateRequest withQueryParams(TaskStatusesPartialUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public TaskStatusesPartialUpdateSecurity security;
-    public TaskStatusesPartialUpdateRequest withSecurity(TaskStatusesPartialUpdateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public TaskStatusesPartialUpdateRequest withSince(String since) {
+        this.since = since;
         return this;
     }
     

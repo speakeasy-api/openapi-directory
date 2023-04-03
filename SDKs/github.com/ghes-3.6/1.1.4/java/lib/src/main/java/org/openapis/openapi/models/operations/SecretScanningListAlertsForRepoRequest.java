@@ -4,20 +4,98 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SecretScanningListAlertsForRepoRequest {
-    
-    public SecretScanningListAlertsForRepoPathParams pathParams;
-    public SecretScanningListAlertsForRepoRequest withPathParams(SecretScanningListAlertsForRepoPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The direction to sort the results by.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public org.openapis.openapi.models.shared.DirectionEnum direction;
+    public SecretScanningListAlertsForRepoRequest withDirection(org.openapis.openapi.models.shared.DirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public SecretScanningListAlertsForRepoRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public SecretScanningListAlertsForRepoQueryParams queryParams;
-    public SecretScanningListAlertsForRepoRequest withQueryParams(SecretScanningListAlertsForRepoQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public SecretScanningListAlertsForRepoRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public SecretScanningListAlertsForRepoRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public SecretScanningListAlertsForRepoRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * A comma-separated list of resolutions. Only secret scanning alerts with one of these resolutions are listed. Valid resolutions are `false_positive`, `wont_fix`, `revoked`, `pattern_edited`, `pattern_deleted` or `used_in_tests`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resolution")
+    public String resolution;
+    public SecretScanningListAlertsForRepoRequest withResolution(String resolution) {
+        this.resolution = resolution;
+        return this;
+    }
+    
+    /**
+     * A comma-separated list of secret types to return. By default all secret types are returned.
+     * See "[Secret scanning patterns](https://docs.github.com/enterprise-server@3.6/code-security/secret-scanning/secret-scanning-patterns#supported-secrets-for-advanced-security)"
+     * for a complete list of secret types.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=secret_type")
+    public String secretType;
+    public SecretScanningListAlertsForRepoRequest withSecretType(String secretType) {
+        this.secretType = secretType;
+        return this;
+    }
+    
+    /**
+     * The property to sort the results by. `created` means when the alert was created. `updated` means when the alert was updated or resolved.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public org.openapis.openapi.models.shared.SecretScanningAlertSortEnum sort;
+    public SecretScanningListAlertsForRepoRequest withSort(org.openapis.openapi.models.shared.SecretScanningAlertSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Set to `open` or `resolved` to only list secret scanning alerts in a specific state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public org.openapis.openapi.models.shared.SecretScanningAlertStateEnum state;
+    public SecretScanningListAlertsForRepoRequest withState(org.openapis.openapi.models.shared.SecretScanningAlertStateEnum state) {
+        this.state = state;
         return this;
     }
     

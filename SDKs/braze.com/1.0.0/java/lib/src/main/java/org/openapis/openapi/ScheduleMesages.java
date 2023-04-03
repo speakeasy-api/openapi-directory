@@ -72,7 +72,7 @@ public class ScheduleMesages {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUpcomingScheduledCampaignsAndCanvasesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUpcomingScheduledCampaignsAndCanvasesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -125,7 +125,7 @@ public class ScheduleMesages {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ScheduleApiTriggeredCanvasesResponse scheduleApiTriggeredCanvases(org.openapis.openapi.models.operations.ScheduleApiTriggeredCanvasesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ScheduleApiTriggeredCanvasesResponse scheduleApiTriggeredCanvases(org.openapis.openapi.models.operations.ScheduleApiTriggeredCanvasesRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/canvas/trigger/schedule/create");
         

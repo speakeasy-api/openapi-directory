@@ -42,7 +42,7 @@ public class Notifications {
      */
     public org.openapis.openapi.models.operations.DeleteNotificationsIdResponse deleteNotificationsId(org.openapis.openapi.models.operations.DeleteNotificationsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNotificationsIdPathParams.class, baseUrl, "/notifications/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNotificationsIdRequest.class, baseUrl, "/notifications/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -82,7 +82,7 @@ public class Notifications {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNotificationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNotificationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -157,7 +157,7 @@ public class Notifications {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostNotificationsResponse postNotifications(org.openapis.openapi.models.operations.PostNotificationsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostNotificationsResponse postNotifications(org.openapis.openapi.models.shared.Notification request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/notifications");
         
@@ -235,12 +235,12 @@ public class Notifications {
      */
     public org.openapis.openapi.models.operations.PutNotificationsIdResponse putNotificationsId(org.openapis.openapi.models.operations.PutNotificationsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutNotificationsIdPathParams.class, baseUrl, "/notifications/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutNotificationsIdRequest.class, baseUrl, "/notifications/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "notification", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

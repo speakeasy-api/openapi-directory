@@ -40,7 +40,7 @@ public class SSIDs {
      */
     public org.openapis.openapi.models.operations.GetNetworkDeviceWirelessStatusResponse getNetworkDeviceWirelessStatus(org.openapis.openapi.models.operations.GetNetworkDeviceWirelessStatusRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkDeviceWirelessStatusPathParams.class, baseUrl, "/networks/{networkId}/devices/{serial}/wireless/status", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkDeviceWirelessStatusRequest.class, baseUrl, "/networks/{networkId}/devices/{serial}/wireless/status", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,7 +80,7 @@ public class SSIDs {
      */
     public org.openapis.openapi.models.operations.GetNetworkSsidResponse getNetworkSsid(org.openapis.openapi.models.operations.GetNetworkSsidRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSsidPathParams.class, baseUrl, "/networks/{networkId}/ssids/{number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSsidRequest.class, baseUrl, "/networks/{networkId}/ssids/{number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -120,7 +120,7 @@ public class SSIDs {
      */
     public org.openapis.openapi.models.operations.GetNetworkSsidsResponse getNetworkSsids(org.openapis.openapi.models.operations.GetNetworkSsidsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSsidsPathParams.class, baseUrl, "/networks/{networkId}/ssids", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSsidsRequest.class, baseUrl, "/networks/{networkId}/ssids", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -160,12 +160,12 @@ public class SSIDs {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSsidResponse updateNetworkSsid(org.openapis.openapi.models.operations.UpdateNetworkSsidRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSsidPathParams.class, baseUrl, "/networks/{networkId}/ssids/{number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSsidRequest.class, baseUrl, "/networks/{networkId}/ssids/{number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

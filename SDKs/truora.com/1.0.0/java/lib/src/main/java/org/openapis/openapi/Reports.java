@@ -47,24 +47,25 @@ public class Reports {
      * 
      * Keep in mind that we currently do not support batch uploads for custom check types. Background checks created by batch upload are processed with low priority.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BatchUploadResponse batchUpload(org.openapis.openapi.models.operations.BatchUploadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BatchUploadResponse batchUpload(org.openapis.openapi.models.operations.BatchUploadRequest request, org.openapis.openapi.models.operations.BatchUploadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BatchUploadPathParams.class, baseUrl, "/v1/reports/{report_id}/upload", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BatchUploadRequest.class, baseUrl, "/v1/reports/{report_id}/upload", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "batchUploadInput", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -100,10 +101,11 @@ public class Reports {
      * Create Report
      * Creates a Report to which it is possible to associate multiple Checks.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateReportResponse createReport(org.openapis.openapi.models.operations.CreateReportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateReportResponse createReport(org.openapis.openapi.models.shared.CreateReportInput request, org.openapis.openapi.models.operations.CreateReportSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/reports");
         
@@ -117,7 +119,7 @@ public class Reports {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -145,19 +147,20 @@ public class Reports {
      * Get Report
      * Returns a report with the given ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetReportResponse getReport(org.openapis.openapi.models.operations.GetReportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetReportResponse getReport(org.openapis.openapi.models.operations.GetReportRequest request, org.openapis.openapi.models.operations.GetReportSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetReportPathParams.class, baseUrl, "/v1/reports/{report_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetReportRequest.class, baseUrl, "/v1/reports/{report_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -198,7 +201,7 @@ public class Reports {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListReportsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListReportsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

@@ -21,7 +21,6 @@ import org.openapis.openapi.models.operations.HscerSecurity;
 import org.openapis.openapi.models.operations.HscerRequestBodyCertificateParameters;
 import org.openapis.openapi.models.operations.HscerRequestBodyFormatEnum;
 import org.openapis.openapi.models.operations.HscerRequestBody;
-import org.openapis.openapi.models.operations.HscerRequest;
 import org.openapis.openapi.models.operations.HscerResponse;
 import org.openapis.openapi.models.shared.ConsentArtifactSchemaConsentData;
 import org.openapis.openapi.models.shared.ConsentArtifactSchemaConsentDataConsumer;
@@ -34,8 +33,6 @@ import org.openapis.openapi.models.shared.ConsentArtifactSchemaConsentUser;
 import org.openapis.openapi.models.shared.ConsentArtifactSchemaConsent;
 import org.openapis.openapi.models.shared.ConsentArtifactSchemaSignature;
 import org.openapis.openapi.models.shared.ConsentArtifactSchema;
-import org.openapis.openapi.models.shared.SchemeAPIKey;
-import org.openapis.openapi.models.shared.SchemeClientID;
 
 public class Application {
     public static void main(String[] args) {
@@ -43,67 +40,60 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            HscerRequest req = new HscerRequest() {{
-                security = new HscerSecurity() {{
-                    apiKey = new SchemeAPIKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                    clientId = new SchemeClientID() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+            HscerRequestBody req = new HscerRequestBody() {{
+                certificateParameters = new HscerRequestBodyCertificateParameters() {{
+                    fullName = "Sunil Kumar";
+                    examtype = "Main,Supplementary";
+                    rollno = "1XX100XXXX";
+                    year = "2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017";
                 }};
-                request = new HscerRequestBody() {{
-                    certificateParameters = new HscerRequestBodyCertificateParameters() {{
-                        fullName = "Sunil Kumar";
-                        examtype = "Main,Supplementary";
-                        rollno = "1XX100XXXX";
-                        year = "2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017";
-                    }};
-                    consentArtifact = new ConsentArtifactSchema() {{
-                        consent = new ConsentArtifactSchemaConsent() {{
-                            consentId = "ea9c43aa-7f5a-4bf3-a0be-e1caa24737ba";
-                            data = new ConsentArtifactSchemaConsentData() {{
-                                id = "corrupti";
+                consentArtifact = new ConsentArtifactSchema() {{
+                    consent = new ConsentArtifactSchemaConsent() {{
+                        consentId = "ea9c43aa-7f5a-4bf3-a0be-e1caa24737ba";
+                        data = new ConsentArtifactSchemaConsentData() {{
+                            id = "corrupti";
+                        }};
+                        dataConsumer = new ConsentArtifactSchemaConsentDataConsumer() {{
+                            id = "provident";
+                        }};
+                        dataProvider = new ConsentArtifactSchemaConsentDataProvider() {{
+                            id = "distinctio";
+                        }};
+                        permission = new ConsentArtifactSchemaConsentPermission() {{
+                            access = "quibusdam";
+                            dateRange = new ConsentArtifactSchemaConsentPermissionDateRange() {{
+                                from = "2021-04-14T16:47:33.722Z";
+                                to = "2021-04-22T12:08:58.275Z";
                             }};
-                            dataConsumer = new ConsentArtifactSchemaConsentDataConsumer() {{
-                                id = "provident";
-                            }};
-                            dataProvider = new ConsentArtifactSchemaConsentDataProvider() {{
-                                id = "distinctio";
-                            }};
-                            permission = new ConsentArtifactSchemaConsentPermission() {{
-                                access = "quibusdam";
-                                dateRange = new ConsentArtifactSchemaConsentPermissionDateRange() {{
-                                    from = "2021-04-14T16:47:33.722Z";
-                                    to = "2021-04-22T12:08:58.275Z";
-                                }};
-                                frequency = new ConsentArtifactSchemaConsentPermissionFrequency() {{
-                                    repeats = 4236.55;
-                                    unit = "error";
-                                    value = 6458.94;
-                                }};
-                            }};
-                            purpose = new ConsentArtifactSchemaConsentPurpose() {{
-                                description = "suscipit";
-                            }};
-                            timestamp = "2022-09-14T09:35:47.986Z";
-                            user = new ConsentArtifactSchemaConsentUser() {{
-                                email = "Anahi38@hotmail.com";
-                                idNumber = "molestiae";
-                                idType = "minus";
-                                mobile = "645-598-0306 x03897";
+                            frequency = new ConsentArtifactSchemaConsentPermissionFrequency() {{
+                                repeats = 4236.55;
+                                unit = "error";
+                                value = 6458.94;
                             }};
                         }};
-                        signature = new ConsentArtifactSchemaSignature() {{
-                            signature = "odit";
+                        purpose = new ConsentArtifactSchemaConsentPurpose() {{
+                            description = "suscipit";
+                        }};
+                        timestamp = "2022-09-14T09:35:47.986Z";
+                        user = new ConsentArtifactSchemaConsentUser() {{
+                            email = "Anahi38@hotmail.com";
+                            idNumber = "molestiae";
+                            idType = "minus";
+                            mobile = "645-598-0306 x03897";
                         }};
                     }};
-                    format = "pdf";
-                    txnId = "f7f1469c-29b0-4325-9dfc-c567200a70f7";
+                    signature = new ConsentArtifactSchemaSignature() {{
+                        signature = "odit";
+                    }};
                 }};
-            }};            
+                format = "pdf";
+                txnId = "f7f1469c-29b0-4325-9dfc-c567200a70f7";
+            }}            
 
-            HscerResponse res = sdk.apIs.hscer(req);
+            HscerResponse res = sdk.apIs.hscer(req, new HscerSecurity() {{
+                apiKey = "YOUR_API_KEY_HERE";
+                clientId = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.statusCode == 200) {
                 // handle response
@@ -115,7 +105,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### apIs

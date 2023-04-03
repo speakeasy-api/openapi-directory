@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddVideoCreditAlt1Request {
-    
-    public AddVideoCreditAlt1PathParams pathParams;
-    public AddVideoCreditAlt1Request withPathParams(AddVideoCreditAlt1PathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.credit+json")
+    public AddVideoCreditAlt1RequestBody requestBody;
+    public AddVideoCreditAlt1Request withRequestBody(AddVideoCreditAlt1RequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.credit+json")
-    public AddVideoCreditAlt1RequestBody request;
-    public AddVideoCreditAlt1Request withRequest(AddVideoCreditAlt1RequestBody request) {
-        this.request = request;
+    /**
+     * The ID of the channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel_id")
+    public Double channelId;
+    public AddVideoCreditAlt1Request withChannelId(Double channelId) {
+        this.channelId = channelId;
+        return this;
+    }
+    
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public AddVideoCreditAlt1Request withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

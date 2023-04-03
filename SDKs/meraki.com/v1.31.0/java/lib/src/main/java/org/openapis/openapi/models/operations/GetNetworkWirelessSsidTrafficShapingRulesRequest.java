@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkWirelessSsidTrafficShapingRulesRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkWirelessSsidTrafficShapingRulesRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
     
-    public GetNetworkWirelessSsidTrafficShapingRulesPathParams pathParams;
-    public GetNetworkWirelessSsidTrafficShapingRulesRequest withPathParams(GetNetworkWirelessSsidTrafficShapingRulesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=number")
+    public String number;
+    public GetNetworkWirelessSsidTrafficShapingRulesRequest withNumber(String number) {
+        this.number = number;
         return this;
     }
     

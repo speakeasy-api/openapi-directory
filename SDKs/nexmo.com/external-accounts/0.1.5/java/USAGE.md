@@ -6,11 +6,9 @@ import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GetAllAccountsSecurity;
 import org.openapis.openapi.models.operations.GetAllAccountsProviderEnum;
-import org.openapis.openapi.models.operations.GetAllAccountsQueryParams;
 import org.openapis.openapi.models.operations.GetAllAccountsRequest;
 import org.openapis.openapi.models.operations.GetAllAccountsResponse;
 import org.openapis.openapi.models.shared.SchemeBasicAuth;
-import org.openapis.openapi.models.shared.SchemeBearerAuth;
 
 public class Application {
     public static void main(String[] args) {
@@ -19,20 +17,17 @@ public class Application {
                 .build();
 
             GetAllAccountsRequest req = new GetAllAccountsRequest() {{
-                security = new GetAllAccountsSecurity() {{
-                    basicAuth = new SchemeBasicAuth() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
-                }};
-                queryParams = new GetAllAccountsQueryParams() {{
-                    pageNumber = 1;
-                    pageSize = 1;
-                    provider = "viber_service_msg";
-                }};
-            }};            
+                pageNumber = 1;
+                pageSize = 1;
+                provider = "viber_service_msg";
+            }}            
 
-            GetAllAccountsResponse res = sdk.account.getAllAccounts(req);
+            GetAllAccountsResponse res = sdk.account.getAllAccounts(req, new GetAllAccountsSecurity() {{
+                basicAuth = new SchemeBasicAuth() {{
+                    password = "YOUR_PASSWORD_HERE";
+                    username = "YOUR_USERNAME_HERE";
+                }};
+            }});
 
             if (res.getAllAccounts200ApplicationJSONObject.isPresent()) {
                 // handle response

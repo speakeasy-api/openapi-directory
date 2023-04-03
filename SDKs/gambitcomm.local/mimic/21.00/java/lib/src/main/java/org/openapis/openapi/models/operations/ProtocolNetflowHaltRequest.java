@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolNetflowHaltRequest {
-    
-    public ProtocolNetflowHaltPathParams pathParams;
-    public ProtocolNetflowHaltRequest withPathParams(ProtocolNetflowHaltPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to set the NETFLOW
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolNetflowHaltRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

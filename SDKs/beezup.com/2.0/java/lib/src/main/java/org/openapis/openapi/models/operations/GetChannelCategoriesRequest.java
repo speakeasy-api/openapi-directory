@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetChannelCategoriesRequest {
-    
-    public GetChannelCategoriesPathParams pathParams;
-    public GetChannelCategoriesRequest withPathParams(GetChannelCategoriesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Indicates that the client accepts that the response will be compressed to reduce traffic size.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Encoding")
+    public String[] acceptEncoding;
+    public GetChannelCategoriesRequest withAcceptEncoding(String[] acceptEncoding) {
+        this.acceptEncoding = acceptEncoding;
         return this;
     }
     
-    
-    public GetChannelCategoriesHeaders headers;
-    public GetChannelCategoriesRequest withHeaders(GetChannelCategoriesHeaders headers) {
-        this.headers = headers;
+    /**
+     * The channel identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelId")
+    public String channelId;
+    public GetChannelCategoriesRequest withChannelId(String channelId) {
+        this.channelId = channelId;
         return this;
     }
     

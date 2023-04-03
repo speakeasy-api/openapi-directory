@@ -43,7 +43,7 @@ public class PatrowlEngine {
      */
     public org.openapis.openapi.models.operations.CleanScanPageResponse cleanScanPage(org.openapis.openapi.models.operations.CleanScanPageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CleanScanPagePathParams.class, baseUrl, "/clean/{scanId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CleanScanPageRequest.class, baseUrl, "/clean/{scanId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -120,7 +120,7 @@ public class PatrowlEngine {
      */
     public org.openapis.openapi.models.operations.GetFindingPageResponse getFindingPage(org.openapis.openapi.models.operations.GetFindingPageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFindingPagePathParams.class, baseUrl, "/getfindings/{scanId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFindingPageRequest.class, baseUrl, "/getfindings/{scanId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -157,7 +157,7 @@ public class PatrowlEngine {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StartScanPageResponse startScanPage(org.openapis.openapi.models.operations.StartScanPageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StartScanPageResponse startScanPage(org.openapis.openapi.models.shared.ScanDefinition request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/startscan");
         
@@ -203,7 +203,7 @@ public class PatrowlEngine {
      */
     public org.openapis.openapi.models.operations.StatusScanPageResponse statusScanPage(org.openapis.openapi.models.operations.StatusScanPageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StatusScanPagePathParams.class, baseUrl, "/status/{scanId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StatusScanPageRequest.class, baseUrl, "/status/{scanId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -280,7 +280,7 @@ public class PatrowlEngine {
      */
     public org.openapis.openapi.models.operations.StopScanPageResponse stopScanPage(org.openapis.openapi.models.operations.StopScanPageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopScanPagePathParams.class, baseUrl, "/stop/{scanId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopScanPageRequest.class, baseUrl, "/stop/{scanId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

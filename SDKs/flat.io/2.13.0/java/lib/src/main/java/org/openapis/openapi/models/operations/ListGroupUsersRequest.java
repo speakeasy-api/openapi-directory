@@ -4,27 +4,28 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListGroupUsersRequest {
-    
-    public ListGroupUsersPathParams pathParams;
-    public ListGroupUsersRequest withPathParams(ListGroupUsersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of a Flat group
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group")
+    public String group;
+    public ListGroupUsersRequest withGroup(String group) {
+        this.group = group;
         return this;
     }
     
-    
-    public ListGroupUsersQueryParams queryParams;
-    public ListGroupUsersRequest withQueryParams(ListGroupUsersQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ListGroupUsersSecurity security;
-    public ListGroupUsersRequest withSecurity(ListGroupUsersSecurity security) {
-        this.security = security;
+    /**
+     * Filter the users by their source
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
+    public ListGroupUsersSourceEnum source;
+    public ListGroupUsersRequest withSource(ListGroupUsersSourceEnum source) {
+        this.source = source;
         return this;
     }
     

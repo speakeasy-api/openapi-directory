@@ -43,12 +43,12 @@ public class Licenses {
      */
     public org.openapis.openapi.models.operations.AssignOrganizationLicensesSeatsResponse assignOrganizationLicensesSeats(org.openapis.openapi.models.operations.AssignOrganizationLicensesSeatsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssignOrganizationLicensesSeatsPathParams.class, baseUrl, "/organizations/{organizationId}/licenses/assignSeats", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssignOrganizationLicensesSeatsRequest.class, baseUrl, "/organizations/{organizationId}/licenses/assignSeats", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -88,7 +88,7 @@ public class Licenses {
      */
     public org.openapis.openapi.models.operations.GetOrganizationLicenseResponse getOrganizationLicense(org.openapis.openapi.models.operations.GetOrganizationLicenseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationLicensePathParams.class, baseUrl, "/organizations/{organizationId}/licenses/{licenseId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationLicenseRequest.class, baseUrl, "/organizations/{organizationId}/licenses/{licenseId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -128,7 +128,7 @@ public class Licenses {
      */
     public org.openapis.openapi.models.operations.GetOrganizationLicenseStateResponse getOrganizationLicenseState(org.openapis.openapi.models.operations.GetOrganizationLicenseStateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationLicenseStatePathParams.class, baseUrl, "/organizations/{organizationId}/licenseState", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationLicenseStateRequest.class, baseUrl, "/organizations/{organizationId}/licenseState", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -168,13 +168,13 @@ public class Licenses {
      */
     public org.openapis.openapi.models.operations.GetOrganizationLicensesResponse getOrganizationLicenses(org.openapis.openapi.models.operations.GetOrganizationLicensesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationLicensesPathParams.class, baseUrl, "/organizations/{organizationId}/licenses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationLicensesRequest.class, baseUrl, "/organizations/{organizationId}/licenses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationLicensesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationLicensesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -216,12 +216,12 @@ public class Licenses {
      */
     public org.openapis.openapi.models.operations.MoveOrganizationLicensesSeatsResponse moveOrganizationLicensesSeats(org.openapis.openapi.models.operations.MoveOrganizationLicensesSeatsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MoveOrganizationLicensesSeatsPathParams.class, baseUrl, "/organizations/{organizationId}/licenses/moveSeats", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MoveOrganizationLicensesSeatsRequest.class, baseUrl, "/organizations/{organizationId}/licenses/moveSeats", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -261,12 +261,12 @@ public class Licenses {
      */
     public org.openapis.openapi.models.operations.RenewOrganizationLicensesSeatsResponse renewOrganizationLicensesSeats(org.openapis.openapi.models.operations.RenewOrganizationLicensesSeatsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RenewOrganizationLicensesSeatsPathParams.class, baseUrl, "/organizations/{organizationId}/licenses/renewSeats", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RenewOrganizationLicensesSeatsRequest.class, baseUrl, "/organizations/{organizationId}/licenses/renewSeats", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

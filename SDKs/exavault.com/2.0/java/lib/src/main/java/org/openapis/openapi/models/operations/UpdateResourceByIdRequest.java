@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateResourceByIdRequest {
-    
-    public UpdateResourceByIdPathParams pathParams;
-    public UpdateResourceByIdRequest withPathParams(UpdateResourceByIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateResourceByIdHeaders headers;
-    public UpdateResourceByIdRequest withHeaders(UpdateResourceByIdHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateResourceByIdUpdateResourceByIdRequestBody request;
-    public UpdateResourceByIdRequest withRequest(UpdateResourceByIdUpdateResourceByIdRequestBody request) {
-        this.request = request;
+    public UpdateResourceByIdUpdateResourceByIdRequestBody requestBody;
+    public UpdateResourceByIdRequest withRequestBody(UpdateResourceByIdUpdateResourceByIdRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Access token required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-access-token")
+    public String evAccessToken;
+    public UpdateResourceByIdRequest withEvAccessToken(String evAccessToken) {
+        this.evAccessToken = evAccessToken;
+        return this;
+    }
+    
+    /**
+     * API key required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-api-key")
+    public String evApiKey;
+    public UpdateResourceByIdRequest withEvApiKey(String evApiKey) {
+        this.evApiKey = evApiKey;
+        return this;
+    }
+    
+    /**
+     * ID number of the resource
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public UpdateResourceByIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

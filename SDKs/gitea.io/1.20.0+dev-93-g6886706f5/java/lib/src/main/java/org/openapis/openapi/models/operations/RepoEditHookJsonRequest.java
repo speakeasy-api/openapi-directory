@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoEditHookJsonRequest {
-    
-    public RepoEditHookJsonPathParams pathParams;
-    public RepoEditHookJsonRequest withPathParams(RepoEditHookJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.EditHookOption editHookOption;
+    public RepoEditHookJsonRequest withEditHookOption(org.openapis.openapi.models.shared.EditHookOption editHookOption) {
+        this.editHookOption = editHookOption;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.EditHookOption request;
-    public RepoEditHookJsonRequest withRequest(org.openapis.openapi.models.shared.EditHookOption request) {
-        this.request = request;
+    /**
+     * index of the hook
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public RepoEditHookJsonRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoEditHookJsonRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoEditHookJsonRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

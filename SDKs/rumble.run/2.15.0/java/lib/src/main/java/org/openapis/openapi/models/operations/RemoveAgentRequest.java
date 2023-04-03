@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveAgentRequest {
-    
-    public RemoveAgentPathParams pathParams;
-    public RemoveAgentRequest withPathParams(RemoveAgentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RemoveAgentSecurity security;
-    public RemoveAgentRequest withSecurity(RemoveAgentSecurity security) {
-        this.security = security;
+    /**
+     * UUID of the agent to remove
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agent_id")
+    public String agentId;
+    public RemoveAgentRequest withAgentId(String agentId) {
+        this.agentId = agentId;
         return this;
     }
     

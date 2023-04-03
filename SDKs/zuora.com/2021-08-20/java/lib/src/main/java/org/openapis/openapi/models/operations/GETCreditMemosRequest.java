@@ -4,20 +4,313 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCreditMemosRequest {
-    
-    public GETCreditMemosQueryParams queryParams;
-    public GETCreditMemosRequest withQueryParams(GETCreditMemosQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Entity-Ids")
+    public String zuoraEntityIds;
+    public GETCreditMemosRequest withZuoraEntityIds(String zuoraEntityIds) {
+        this.zuoraEntityIds = zuoraEntityIds;
         return this;
     }
     
+    /**
+     * A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+     * 
+     * The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Track-Id")
+    public String zuoraTrackId;
+    public GETCreditMemosRequest withZuoraTrackId(String zuoraTrackId) {
+        this.zuoraTrackId = zuoraTrackId;
+        return this;
+    }
     
-    public GETCreditMemosHeaders headers;
-    public GETCreditMemosRequest withHeaders(GETCreditMemosHeaders headers) {
-        this.headers = headers;
+    /**
+     * This parameter filters the response based on the `accountId` field. 
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountId")
+    public String accountId;
+    public GETCreditMemosRequest withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `amount` field. 
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=amount")
+    public Double amount;
+    public GETCreditMemosRequest withAmount(Double amount) {
+        this.amount = amount;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `appliedAmount` field. 
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appliedAmount")
+    public Double appliedAmount;
+    public GETCreditMemosRequest withAppliedAmount(Double appliedAmount) {
+        this.appliedAmount = appliedAmount;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `autoApplyUponPosting` field. 
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=autoApplyUponPosting")
+    public Boolean autoApplyUponPosting;
+    public GETCreditMemosRequest withAutoApplyUponPosting(Boolean autoApplyUponPosting) {
+        this.autoApplyUponPosting = autoApplyUponPosting;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `createdById` field. 
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdById")
+    public String createdById;
+    public GETCreditMemosRequest withCreatedById(String createdById) {
+        this.createdById = createdById;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `createdDate` field. 
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdDate")
+    public OffsetDateTime createdDate;
+    public GETCreditMemosRequest withCreatedDate(OffsetDateTime createdDate) {
+        this.createdDate = createdDate;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `creditMemoDate` field. 
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=creditMemoDate")
+    public LocalDate creditMemoDate;
+    public GETCreditMemosRequest withCreditMemoDate(LocalDate creditMemoDate) {
+        this.creditMemoDate = creditMemoDate;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `currency` field. 
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currency")
+    public String currency;
+    public GETCreditMemosRequest withCurrency(String currency) {
+        this.currency = currency;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `excludeFromAutoApplyRules` field. 
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=excludeFromAutoApplyRules")
+    public Boolean excludeFromAutoApplyRules;
+    public GETCreditMemosRequest withExcludeFromAutoApplyRules(Boolean excludeFromAutoApplyRules) {
+        this.excludeFromAutoApplyRules = excludeFromAutoApplyRules;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `number` field. 
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
+    public String number;
+    public GETCreditMemosRequest withNumber(String number) {
+        this.number = number;
+        return this;
+    }
+    
+    /**
+     * Number of rows returned per page.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public GETCreditMemosRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `referredInvoiceId` field. 
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=referredInvoiceId")
+    public String referredInvoiceId;
+    public GETCreditMemosRequest withReferredInvoiceId(String referredInvoiceId) {
+        this.referredInvoiceId = referredInvoiceId;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `refundAmount` field. 
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=refundAmount")
+    public Double refundAmount;
+    public GETCreditMemosRequest withRefundAmount(Double refundAmount) {
+        this.refundAmount = refundAmount;
+        return this;
+    }
+    
+    /**
+     * This parameter restricts the order of the data returned in the response. You can use this parameter to supply a dimension you want to sort on.
+     * 
+     * A sortable field uses the following form: 
+     * 
+     * *operator* *field_name*
+     * 
+     * You can use at most two sortable fields in one URL path. Use a comma to separate sortable fields. For example:  *operator* *field_name*, *operator* *field_name*  
+     * 
+     * *operator* is used to mark the order of sequencing. The operator is optional. If you only specify the sortable field without any operator, the response data is sorted in descending order by this field.
+     * 
+     *   - The `-` operator indicates an ascending order.
+     *   - The `+` operator indicates a descending order.
+     * 
+     * By default, the response data is displayed in descending order by credit memo number.
+     * 
+     * *field_name* indicates the name of a sortable field. The supported sortable fields of this operation are as below:
+     * 
+     *   - accountId
+     *   - amount
+     *   - appliedAmount
+     *   - createdById
+     *   - createdDate
+     *   - creditMemoDate
+     *   - number
+     *   - referredInvoiceId
+     *   - refundAmount
+     *   - status
+     *   - targetDate
+     *   - taxAmount
+     *   - totalTaxExemptAmount
+     *   - transferredToAccounting
+     *   - unappliedAmount
+     *   - updatedDate
+     * 
+     *   
+     * Examples:
+     * 
+     * - /v1/creditmemos?sort=+number
+     * 
+     * - /v1/creditmemos?status=Processed&amp;sort=-number,+amount
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GETCreditMemosRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `status` field. 
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public GETCreditMemosStatusEnum status;
+    public GETCreditMemosRequest withStatus(GETCreditMemosStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `targetDate` field. 
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=targetDate")
+    public LocalDate targetDate;
+    public GETCreditMemosRequest withTargetDate(LocalDate targetDate) {
+        this.targetDate = targetDate;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `taxAmount` field. 
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=taxAmount")
+    public Double taxAmount;
+    public GETCreditMemosRequest withTaxAmount(Double taxAmount) {
+        this.taxAmount = taxAmount;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `totalTaxExemptAmount` field.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=totalTaxExemptAmount")
+    public Double totalTaxExemptAmount;
+    public GETCreditMemosRequest withTotalTaxExemptAmount(Double totalTaxExemptAmount) {
+        this.totalTaxExemptAmount = totalTaxExemptAmount;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `transferredToAccounting` field. 
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=transferredToAccounting")
+    public GETCreditMemosTransferredToAccountingEnum transferredToAccounting;
+    public GETCreditMemosRequest withTransferredToAccounting(GETCreditMemosTransferredToAccountingEnum transferredToAccounting) {
+        this.transferredToAccounting = transferredToAccounting;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `unappliedAmount` field. 
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unappliedAmount")
+    public Double unappliedAmount;
+    public GETCreditMemosRequest withUnappliedAmount(Double unappliedAmount) {
+        this.unappliedAmount = unappliedAmount;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `updatedById` field. 
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedById")
+    public String updatedById;
+    public GETCreditMemosRequest withUpdatedById(String updatedById) {
+        this.updatedById = updatedById;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `updatedDate` field.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedDate")
+    public OffsetDateTime updatedDate;
+    public GETCreditMemosRequest withUpdatedDate(OffsetDateTime updatedDate) {
+        this.updatedDate = updatedDate;
         return this;
     }
     

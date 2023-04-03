@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateRelationsRequest {
-    
-    public CreateRelationsPathParams pathParams;
-    public CreateRelationsRequest withPathParams(CreateRelationsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateRelationsRequestBody requestBody;
+    public CreateRelationsRequest withRequestBody(CreateRelationsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateRelationsRequestBody request;
-    public CreateRelationsRequest withRequest(CreateRelationsRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiId")
+    public String apiId;
+    public CreateRelationsRequest withApiId(String apiId) {
+        this.apiId = apiId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiVersionId")
+    public String apiVersionId;
+    public CreateRelationsRequest withApiVersionId(String apiVersionId) {
+        this.apiVersionId = apiVersionId;
         return this;
     }
     

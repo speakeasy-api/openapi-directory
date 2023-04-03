@@ -4,20 +4,28 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountsTransactionsRetrieveRequest {
-    
-    public AccountsTransactionsRetrievePathParams pathParams;
-    public AccountsTransactionsRetrieveRequest withPathParams(AccountsTransactionsRetrievePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_from")
+    public LocalDate dateFrom;
+    public AccountsTransactionsRetrieveRequest withDateFrom(LocalDate dateFrom) {
+        this.dateFrom = dateFrom;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_to")
+    public LocalDate dateTo;
+    public AccountsTransactionsRetrieveRequest withDateTo(LocalDate dateTo) {
+        this.dateTo = dateTo;
+        return this;
+    }
     
-    public AccountsTransactionsRetrieveQueryParams queryParams;
-    public AccountsTransactionsRetrieveRequest withQueryParams(AccountsTransactionsRetrieveQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public AccountsTransactionsRetrieveRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

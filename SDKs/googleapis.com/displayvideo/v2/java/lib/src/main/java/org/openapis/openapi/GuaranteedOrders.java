@@ -34,27 +34,28 @@ public class GuaranteedOrders {
     /**
      * Creates a new guaranteed order. Returns the newly created guaranteed order if successful.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersCreateResponse displayvideoGuaranteedOrdersCreate(org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersCreateResponse displayvideoGuaranteedOrdersCreate(org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersCreateRequest request, org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/guaranteedOrders");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "guaranteedOrderInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,27 +82,28 @@ public class GuaranteedOrders {
     /**
      * Edits read advertisers of a guaranteed order.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersEditGuaranteedOrderReadAccessorsResponse displayvideoGuaranteedOrdersEditGuaranteedOrderReadAccessors(org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersEditGuaranteedOrderReadAccessorsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersEditGuaranteedOrderReadAccessorsResponse displayvideoGuaranteedOrdersEditGuaranteedOrderReadAccessors(org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersEditGuaranteedOrderReadAccessorsRequest request, org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersEditGuaranteedOrderReadAccessorsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersEditGuaranteedOrderReadAccessorsPathParams.class, baseUrl, "/v2/guaranteedOrders/{guaranteedOrderId}:editGuaranteedOrderReadAccessors", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersEditGuaranteedOrderReadAccessorsRequest.class, baseUrl, "/v2/guaranteedOrders/{guaranteedOrderId}:editGuaranteedOrderReadAccessors", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "editGuaranteedOrderReadAccessorsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersEditGuaranteedOrderReadAccessorsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersEditGuaranteedOrderReadAccessorsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -128,25 +130,26 @@ public class GuaranteedOrders {
     /**
      * Gets a guaranteed order.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersGetResponse displayvideoGuaranteedOrdersGet(org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersGetResponse displayvideoGuaranteedOrdersGet(org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersGetRequest request, org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersGetPathParams.class, baseUrl, "/v2/guaranteedOrders/{guaranteedOrderId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersGetRequest.class, baseUrl, "/v2/guaranteedOrders/{guaranteedOrderId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -173,10 +176,11 @@ public class GuaranteedOrders {
     /**
      * Lists guaranteed orders that are accessible to the current user. The order is defined by the order_by parameter. If a filter by entity_status is not specified, guaranteed orders with entity status `ENTITY_STATUS_ARCHIVED` will not be included in the results.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersListResponse displayvideoGuaranteedOrdersList(org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersListResponse displayvideoGuaranteedOrdersList(org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersListRequest request, org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/guaranteedOrders");
         
@@ -184,14 +188,14 @@ public class GuaranteedOrders {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -218,27 +222,28 @@ public class GuaranteedOrders {
     /**
      * Updates an existing guaranteed order. Returns the updated guaranteed order if successful.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersPatchResponse displayvideoGuaranteedOrdersPatch(org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersPatchResponse displayvideoGuaranteedOrdersPatch(org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersPatchRequest request, org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersPatchPathParams.class, baseUrl, "/v2/guaranteedOrders/{guaranteedOrderId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersPatchRequest.class, baseUrl, "/v2/guaranteedOrders/{guaranteedOrderId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "guaranteedOrderInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoGuaranteedOrdersPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

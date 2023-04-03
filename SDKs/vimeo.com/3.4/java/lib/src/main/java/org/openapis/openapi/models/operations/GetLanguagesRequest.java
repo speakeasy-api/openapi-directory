@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLanguagesRequest {
-    
-    public GetLanguagesQueryParams queryParams;
-    public GetLanguagesRequest withQueryParams(GetLanguagesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The attribute by which to filter the results.
+     * 
+     * Option descriptions:
+     *  * `texttracks` - Only return text track supported languages
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public GetLanguagesFilterEnum filter;
+    public GetLanguagesRequest withFilter(GetLanguagesFilterEnum filter) {
+        this.filter = filter;
         return this;
     }
     

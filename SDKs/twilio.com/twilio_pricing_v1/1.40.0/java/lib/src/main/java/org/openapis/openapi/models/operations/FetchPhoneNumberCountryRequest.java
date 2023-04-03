@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchPhoneNumberCountryRequest {
-    
-    public FetchPhoneNumberCountryPathParams pathParams;
-    public FetchPhoneNumberCountryRequest withPathParams(FetchPhoneNumberCountryPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchPhoneNumberCountrySecurity security;
-    public FetchPhoneNumberCountryRequest withSecurity(FetchPhoneNumberCountrySecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchPhoneNumberCountryRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The [ISO country code](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) of the pricing information to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=IsoCountry")
+    public String isoCountry;
+    public FetchPhoneNumberCountryRequest withIsoCountry(String isoCountry) {
+        this.isoCountry = isoCountry;
         return this;
     }
     

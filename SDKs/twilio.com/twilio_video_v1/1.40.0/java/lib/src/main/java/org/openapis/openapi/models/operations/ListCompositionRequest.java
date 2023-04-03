@@ -4,27 +4,77 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListCompositionRequest {
-    
-    public ListCompositionQueryParams queryParams;
-    public ListCompositionRequest withQueryParams(ListCompositionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Read only Composition resources created on or after this [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date-time with time zone.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DateCreatedAfter")
+    public OffsetDateTime dateCreatedAfter;
+    public ListCompositionRequest withDateCreatedAfter(OffsetDateTime dateCreatedAfter) {
+        this.dateCreatedAfter = dateCreatedAfter;
         return this;
     }
     
-    
-    public ListCompositionSecurity security;
-    public ListCompositionRequest withSecurity(ListCompositionSecurity security) {
-        this.security = security;
+    /**
+     * Read only Composition resources created before this ISO 8601 date-time with time zone.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DateCreatedBefore")
+    public OffsetDateTime dateCreatedBefore;
+    public ListCompositionRequest withDateCreatedBefore(OffsetDateTime dateCreatedBefore) {
+        this.dateCreatedBefore = dateCreatedBefore;
         return this;
     }
     
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListCompositionRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public String serverURL;
-    public ListCompositionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListCompositionRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListCompositionRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Read only Composition resources with this Room SID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RoomSid")
+    public String roomSid;
+    public ListCompositionRequest withRoomSid(String roomSid) {
+        this.roomSid = roomSid;
+        return this;
+    }
+    
+    /**
+     * Read only Composition resources with this status. Can be: `enqueued`, `processing`, `completed`, `deleted`, or `failed`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Status")
+    public org.openapis.openapi.models.shared.CompositionEnumStatusEnum status;
+    public ListCompositionRequest withStatus(org.openapis.openapi.models.shared.CompositionEnumStatusEnum status) {
+        this.status = status;
         return this;
     }
     

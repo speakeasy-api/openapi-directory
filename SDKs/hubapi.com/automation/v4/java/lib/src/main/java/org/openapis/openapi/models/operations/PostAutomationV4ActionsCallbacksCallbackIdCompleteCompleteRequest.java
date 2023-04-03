@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostAutomationV4ActionsCallbacksCallbackIdCompleteCompleteRequest {
-    
-    public PostAutomationV4ActionsCallbacksCallbackIdCompleteCompletePathParams pathParams;
-    public PostAutomationV4ActionsCallbacksCallbackIdCompleteCompleteRequest withPathParams(PostAutomationV4ActionsCallbacksCallbackIdCompleteCompletePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The result of the completed action.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CallbackCompletionRequest request;
-    public PostAutomationV4ActionsCallbacksCallbackIdCompleteCompleteRequest withRequest(org.openapis.openapi.models.shared.CallbackCompletionRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CallbackCompletionRequest callbackCompletionRequest;
+    public PostAutomationV4ActionsCallbacksCallbackIdCompleteCompleteRequest withCallbackCompletionRequest(org.openapis.openapi.models.shared.CallbackCompletionRequest callbackCompletionRequest) {
+        this.callbackCompletionRequest = callbackCompletionRequest;
         return this;
     }
     
-    
-    public PostAutomationV4ActionsCallbacksCallbackIdCompleteCompleteSecurity security;
-    public PostAutomationV4ActionsCallbacksCallbackIdCompleteCompleteRequest withSecurity(PostAutomationV4ActionsCallbacksCallbackIdCompleteCompleteSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the target app.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=callbackId")
+    public String callbackId;
+    public PostAutomationV4ActionsCallbacksCallbackIdCompleteCompleteRequest withCallbackId(String callbackId) {
+        this.callbackId = callbackId;
         return this;
     }
     

@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ErrorsUpdateStateRequest {
-    
-    public ErrorsUpdateStatePathParams pathParams;
-    public ErrorsUpdateStateRequest withPathParams(ErrorsUpdateStatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The state of the error group
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public ErrorsUpdateStateRequestBody request;
-    public ErrorsUpdateStateRequest withRequest(ErrorsUpdateStateRequestBody request) {
-        this.request = request;
+    public ErrorsUpdateStateRequestBody requestBody;
+    public ErrorsUpdateStateRequest withRequestBody(ErrorsUpdateStateRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public ErrorsUpdateStateRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public ErrorsUpdateStateSecurity security;
-    public ErrorsUpdateStateRequest withSecurity(ErrorsUpdateStateSecurity security) {
-        this.security = security;
+    /**
+     * The id of the error group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=errorGroupId")
+    public String errorGroupId;
+    public ErrorsUpdateStateRequest withErrorGroupId(String errorGroupId) {
+        this.errorGroupId = errorGroupId;
+        return this;
+    }
+    
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public ErrorsUpdateStateRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

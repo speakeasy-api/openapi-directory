@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05PatientsOnFindJsonRequest {
-    
-    public PostV05PatientsOnFindJsonHeaders headers;
-    public PostV05PatientsOnFindJsonRequest withHeaders(PostV05PatientsOnFindJsonHeaders headers) {
-        this.headers = headers;
+    /**
+     * Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostV05PatientsOnFindJsonRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PatientIdentificationResponse request;
-    public PostV05PatientsOnFindJsonRequest withRequest(org.openapis.openapi.models.shared.PatientIdentificationResponse request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public PostV05PatientsOnFindJsonRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public org.openapis.openapi.models.shared.PatientIdentificationResponse patientIdentificationResponse;
+    public PostV05PatientsOnFindJsonRequest withPatientIdentificationResponse(org.openapis.openapi.models.shared.PatientIdentificationResponse patientIdentificationResponse) {
+        this.patientIdentificationResponse = patientIdentificationResponse;
         return this;
     }
     

@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FindOrdersRequest {
-    
-    public FindOrdersQueryParams queryParams;
-    public FindOrdersRequest withQueryParams(FindOrdersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public FindOrdersRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     
+    /**
+     * Start of the find time interval, formatted in unix time milliseconds. Example: 1473781817000
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=intervalBegin")
+    public Long intervalBegin;
+    public FindOrdersRequest withIntervalBegin(Long intervalBegin) {
+        this.intervalBegin = intervalBegin;
+        return this;
+    }
     
-    public FindOrdersSecurity security;
-    public FindOrdersRequest withSecurity(FindOrdersSecurity security) {
-        this.security = security;
+    /**
+     * End of the find time interval, formatted in unix time milliseconds. Example: 1473781817000
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=intervalEnd")
+    public Long intervalEnd;
+    public FindOrdersRequest withIntervalEnd(Long intervalEnd) {
+        this.intervalEnd = intervalEnd;
+        return this;
+    }
+    
+    /**
+     * To set the maximum number of records to return in a paged list response. The default is 100
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public FindOrdersRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Offset to the start of a given page. The default is 0. Check [pagination](https://developers.callfire.com/docs.html#pagination) page for more information about pagination in CallFire API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public FindOrdersRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Filter by order status, accepts multiple values in comma separated string, available values: [PROCESSING, FINISHED, PAYMENT_ERROR, VOID, WAIT_FOR_PAYMENT, PARTIALLY_ADJUSTED, ADJUSTED]
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public String[] status;
+    public FindOrdersRequest withStatus(String[] status) {
+        this.status = status;
         return this;
     }
     

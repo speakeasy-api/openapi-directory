@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WorkTypeApiDeleteFormRequest {
-    
-    public WorkTypeApiDeleteFormHeaders headers;
-    public WorkTypeApiDeleteFormRequest withHeaders(WorkTypeApiDeleteFormHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
+    public org.openapis.openapi.models.shared.WorkTypeDeleteApiModel workTypeDeleteApiModel;
+    public WorkTypeApiDeleteFormRequest withWorkTypeDeleteApiModel(org.openapis.openapi.models.shared.WorkTypeDeleteApiModel workTypeDeleteApiModel) {
+        this.workTypeDeleteApiModel = workTypeDeleteApiModel;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.WorkTypeDeleteApiModel request;
-    public WorkTypeApiDeleteFormRequest withRequest(org.openapis.openapi.models.shared.WorkTypeDeleteApiModel request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
+    public String xAuthKey;
+    public WorkTypeApiDeleteFormRequest withXAuthKey(String xAuthKey) {
+        this.xAuthKey = xAuthKey;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
+    public String xAuthSecret;
+    public WorkTypeApiDeleteFormRequest withXAuthSecret(String xAuthSecret) {
+        this.xAuthSecret = xAuthSecret;
         return this;
     }
     

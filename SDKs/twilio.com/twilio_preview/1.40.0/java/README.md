@@ -18,11 +18,9 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.CreateDeployedDevicesCertificateSecurity;
-import org.openapis.openapi.models.operations.CreateDeployedDevicesCertificatePathParams;
 import org.openapis.openapi.models.operations.CreateDeployedDevicesCertificateCreateDeployedDevicesCertificateRequest;
 import org.openapis.openapi.models.operations.CreateDeployedDevicesCertificateRequest;
 import org.openapis.openapi.models.operations.CreateDeployedDevicesCertificateResponse;
-import org.openapis.openapi.models.shared.SchemeAccountSidAuthToken;
 
 public class Application {
     public static void main(String[] args) {
@@ -31,23 +29,18 @@ public class Application {
                 .build();
 
             CreateDeployedDevicesCertificateRequest req = new CreateDeployedDevicesCertificateRequest() {{
-                security = new CreateDeployedDevicesCertificateSecurity() {{
-                    accountSidAuthToken = new SchemeAccountSidAuthToken() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
-                }};
-                pathParams = new CreateDeployedDevicesCertificatePathParams() {{
-                    fleetSid = "corrupti";
-                }};
-                request = new CreateDeployedDevicesCertificateCreateDeployedDevicesCertificateRequest() {{
+                fleetSid = "corrupti";
+                requestBody = new CreateDeployedDevicesCertificateCreateDeployedDevicesCertificateRequest() {{
                     certificateData = "provident";
                     deviceSid = "distinctio";
                     friendlyName = "quibusdam";
                 }};
-            }};            
+            }}            
 
-            CreateDeployedDevicesCertificateResponse res = sdk.createDeployedDevicesCertificate(req);
+            CreateDeployedDevicesCertificateResponse res = sdk.createDeployedDevicesCertificate(req, new CreateDeployedDevicesCertificateSecurity() {{
+                password = "YOUR_PASSWORD_HERE";
+                username = "YOUR_USERNAME_HERE";
+            }});
 
             if (res.previewDeployedDevicesFleetCertificate.isPresent()) {
                 // handle response
@@ -59,7 +52,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

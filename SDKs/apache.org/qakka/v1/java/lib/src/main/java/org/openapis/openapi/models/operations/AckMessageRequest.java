@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AckMessageRequest {
+    /**
+     * ID of Queue Message to be acknowledged
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=queueMessageId")
+    public String queueMessageId;
+    public AckMessageRequest withQueueMessageId(String queueMessageId) {
+        this.queueMessageId = queueMessageId;
+        return this;
+    }
     
-    public AckMessagePathParams pathParams;
-    public AckMessageRequest withPathParams(AckMessagePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Name of Queue
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=queueName")
+    public String queueName;
+    public AckMessageRequest withQueueName(String queueName) {
+        this.queueName = queueName;
         return this;
     }
     

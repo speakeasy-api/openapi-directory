@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostApiReactionsRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
+    public PostApiReactionsCategoryEnum category;
+    public PostApiReactionsRequest withCategory(PostApiReactionsCategoryEnum category) {
+        this.category = category;
+        return this;
+    }
     
-    public PostApiReactionsQueryParams queryParams;
-    public PostApiReactionsRequest withQueryParams(PostApiReactionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reactable_id")
+    public Integer reactableId;
+    public PostApiReactionsRequest withReactableId(Integer reactableId) {
+        this.reactableId = reactableId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reactable_type")
+    public PostApiReactionsReactableTypeEnum reactableType;
+    public PostApiReactionsRequest withReactableType(PostApiReactionsReactableTypeEnum reactableType) {
+        this.reactableType = reactableType;
         return this;
     }
     

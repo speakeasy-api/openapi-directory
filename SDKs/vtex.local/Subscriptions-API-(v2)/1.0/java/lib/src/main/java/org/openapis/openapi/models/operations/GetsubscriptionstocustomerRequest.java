@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetsubscriptionstocustomerRequest {
-    
-    public GetsubscriptionstocustomerQueryParams queryParams;
-    public GetsubscriptionstocustomerRequest withQueryParams(GetsubscriptionstocustomerQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetsubscriptionstocustomerRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetsubscriptionstocustomerRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetsubscriptionstocustomerHeaders headers;
-    public GetsubscriptionstocustomerRequest withHeaders(GetsubscriptionstocustomerHeaders headers) {
-        this.headers = headers;
+    /**
+     * Customer ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customerId")
+    public String customerId;
+    public GetsubscriptionstocustomerRequest withCustomerId(String customerId) {
+        this.customerId = customerId;
         return this;
     }
     

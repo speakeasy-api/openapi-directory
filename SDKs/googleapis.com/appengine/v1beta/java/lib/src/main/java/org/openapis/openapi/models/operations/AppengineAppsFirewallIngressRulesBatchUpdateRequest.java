@@ -7,31 +7,130 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppengineAppsFirewallIngressRulesBatchUpdateRequest {
-    
-    public AppengineAppsFirewallIngressRulesBatchUpdatePathParams pathParams;
-    public AppengineAppsFirewallIngressRulesBatchUpdateRequest withPathParams(AppengineAppsFirewallIngressRulesBatchUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AppengineAppsFirewallIngressRulesBatchUpdateQueryParams queryParams;
-    public AppengineAppsFirewallIngressRulesBatchUpdateRequest withQueryParams(AppengineAppsFirewallIngressRulesBatchUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public AppengineAppsFirewallIngressRulesBatchUpdateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.BatchUpdateIngressRulesRequest request;
-    public AppengineAppsFirewallIngressRulesBatchUpdateRequest withRequest(org.openapis.openapi.models.shared.BatchUpdateIngressRulesRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.BatchUpdateIngressRulesRequest batchUpdateIngressRulesRequest;
+    public AppengineAppsFirewallIngressRulesBatchUpdateRequest withBatchUpdateIngressRulesRequest(org.openapis.openapi.models.shared.BatchUpdateIngressRulesRequest batchUpdateIngressRulesRequest) {
+        this.batchUpdateIngressRulesRequest = batchUpdateIngressRulesRequest;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public AppengineAppsFirewallIngressRulesBatchUpdateRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public AppengineAppsFirewallIngressRulesBatchUpdateSecurity security;
-    public AppengineAppsFirewallIngressRulesBatchUpdateRequest withSecurity(AppengineAppsFirewallIngressRulesBatchUpdateSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AppengineAppsFirewallIngressRulesBatchUpdateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * Part of `name`. Name of the Firewall collection to set. Example: apps/myapp/firewall/ingressRules.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appsId")
+    public String appsId;
+    public AppengineAppsFirewallIngressRulesBatchUpdateRequest withAppsId(String appsId) {
+        this.appsId = appsId;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public AppengineAppsFirewallIngressRulesBatchUpdateRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AppengineAppsFirewallIngressRulesBatchUpdateRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AppengineAppsFirewallIngressRulesBatchUpdateRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AppengineAppsFirewallIngressRulesBatchUpdateRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AppengineAppsFirewallIngressRulesBatchUpdateRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AppengineAppsFirewallIngressRulesBatchUpdateRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public AppengineAppsFirewallIngressRulesBatchUpdateRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public AppengineAppsFirewallIngressRulesBatchUpdateRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

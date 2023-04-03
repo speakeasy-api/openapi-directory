@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveSettlementRequest {
-    
-    public RetrieveSettlementPathParams pathParams;
-    public RetrieveSettlementRequest withPathParams(RetrieveSettlementPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the settlements's associated location.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
+    public String locationId;
+    public RetrieveSettlementRequest withLocationId(String locationId) {
+        this.locationId = locationId;
         return this;
     }
     
-    
-    public RetrieveSettlementSecurity security;
-    public RetrieveSettlementRequest withSecurity(RetrieveSettlementSecurity security) {
-        this.security = security;
+    /**
+     * The settlement's Square-issued ID. You obtain this value from Settlement objects returned by the List Settlements endpoint.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=settlement_id")
+    public String settlementId;
+    public RetrieveSettlementRequest withSettlementId(String settlementId) {
+        this.settlementId = settlementId;
         return this;
     }
     

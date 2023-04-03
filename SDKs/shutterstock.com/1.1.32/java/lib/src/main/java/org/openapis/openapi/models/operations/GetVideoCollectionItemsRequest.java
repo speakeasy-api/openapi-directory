@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVideoCollectionItemsRequest {
-    
-    public GetVideoCollectionItemsPathParams pathParams;
-    public GetVideoCollectionItemsRequest withPathParams(GetVideoCollectionItemsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Collection ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetVideoCollectionItemsRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetVideoCollectionItemsQueryParams queryParams;
-    public GetVideoCollectionItemsRequest withQueryParams(GetVideoCollectionItemsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetVideoCollectionItemsRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * Number of results per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetVideoCollectionItemsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
     
-    public GetVideoCollectionItemsSecurity security;
-    public GetVideoCollectionItemsRequest withSecurity(GetVideoCollectionItemsSecurity security) {
-        this.security = security;
+    /**
+     * Code to retrieve the contents of a shared collection
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=share_code")
+    public String shareCode;
+    public GetVideoCollectionItemsRequest withShareCode(String shareCode) {
+        this.shareCode = shareCode;
+        return this;
+    }
+    
+    /**
+     * Sort order
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetVideoCollectionItemsSortEnum sort;
+    public GetVideoCollectionItemsRequest withSort(GetVideoCollectionItemsSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

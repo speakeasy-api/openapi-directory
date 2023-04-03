@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteMarketplaceInstalledAddOnRequest {
-    
-    public DeleteMarketplaceInstalledAddOnPathParams pathParams;
-    public DeleteMarketplaceInstalledAddOnRequest withPathParams(DeleteMarketplaceInstalledAddOnPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteMarketplaceInstalledAddOnSecurity security;
-    public DeleteMarketplaceInstalledAddOnRequest withSecurity(DeleteMarketplaceInstalledAddOnSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteMarketplaceInstalledAddOnRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the InstalledAddOn resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteMarketplaceInstalledAddOnRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

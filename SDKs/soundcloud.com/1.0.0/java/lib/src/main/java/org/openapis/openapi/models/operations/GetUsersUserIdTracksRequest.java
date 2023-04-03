@@ -4,27 +4,47 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersUserIdTracksRequest {
-    
-    public GetUsersUserIdTracksPathParams pathParams;
-    public GetUsersUserIdTracksRequest withPathParams(GetUsersUserIdTracksPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filters content by level of access the user (logged in or anonymous) has to the track. The result list will include only tracks with the specified access. Include all options if you'd like to see all possible tracks. See `Track#access` schema for more details.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=access")
+    public org.openapis.openapi.models.shared.AccessEnum[] access;
+    public GetUsersUserIdTracksRequest withAccess(org.openapis.openapi.models.shared.AccessEnum[] access) {
+        this.access = access;
         return this;
     }
     
-    
-    public GetUsersUserIdTracksQueryParams queryParams;
-    public GetUsersUserIdTracksRequest withQueryParams(GetUsersUserIdTracksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Number of results to return in the collection.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetUsersUserIdTracksRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * Returns paginated collection of items (recommended, returning a list without pagination is deprecated and should not be used)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=linked_partitioning")
+    public Boolean linkedPartitioning;
+    public GetUsersUserIdTracksRequest withLinkedPartitioning(Boolean linkedPartitioning) {
+        this.linkedPartitioning = linkedPartitioning;
+        return this;
+    }
     
-    public GetUsersUserIdTracksSecurity security;
-    public GetUsersUserIdTracksRequest withSecurity(GetUsersUserIdTracksSecurity security) {
-        this.security = security;
+    /**
+     * SoundCloud User id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Long userId;
+    public GetUsersUserIdTracksRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

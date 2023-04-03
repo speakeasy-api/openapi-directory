@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountCtrlGetLocationsByAccountIDRequest {
-    
-    public AccountCtrlGetLocationsByAccountIDPathParams pathParams;
-    public AccountCtrlGetLocationsByAccountIDRequest withPathParams(AccountCtrlGetLocationsByAccountIDPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AccountCtrlGetLocationsByAccountIDSecurity security;
-    public AccountCtrlGetLocationsByAccountIDRequest withSecurity(AccountCtrlGetLocationsByAccountIDSecurity security) {
-        this.security = security;
+    /**
+     * The Vonage Business Cloud account ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account_id")
+    public Double accountId;
+    public AccountCtrlGetLocationsByAccountIDRequest withAccountId(Double accountId) {
+        this.accountId = accountId;
         return this;
     }
     

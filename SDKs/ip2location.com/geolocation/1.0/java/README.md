@@ -21,7 +21,6 @@ import org.openapis.openapi.models.operations.GetAddonEnum;
 import org.openapis.openapi.models.operations.GetFormatEnum;
 import org.openapis.openapi.models.operations.GetLangEnum;
 import org.openapis.openapi.models.operations.GetPackageEnum;
-import org.openapis.openapi.models.operations.GetQueryParams;
 import org.openapis.openapi.models.operations.GetRequest;
 import org.openapis.openapi.models.operations.GetResponse;
 
@@ -32,19 +31,17 @@ public class Application {
                 .build();
 
             GetRequest req = new GetRequest() {{
-                queryParams = new GetQueryParams() {{
-                    addon = new org.openapis.openapi.models.operations.GetAddonEnum[]{{
-                        add("geotargeting"),
-                        add("country_groupings"),
-                        add("country_groupings"),
-                    }};
-                    format = "xml";
-                    ip = "8.8.8.8";
-                    key = "nulla";
-                    lang = "ja";
-                    package_ = "WS22";
+                addon = new org.openapis.openapi.models.operations.GetAddonEnum[]{{
+                    add("geotargeting"),
+                    add("country_groupings"),
+                    add("country_groupings"),
                 }};
-            }};            
+                format = "xml";
+                ip = "8.8.8.8";
+                key = "nulla";
+                lang = "ja";
+                package_ = "WS22";
+            }}            
 
             GetResponse res = sdk.get(req);
 
@@ -58,7 +55,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

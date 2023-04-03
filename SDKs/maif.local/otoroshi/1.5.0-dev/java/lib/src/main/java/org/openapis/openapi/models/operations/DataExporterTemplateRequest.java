@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DataExporterTemplateRequest {
-    
-    public DataExporterTemplateQueryParams queryParams;
-    public DataExporterTemplateRequest withQueryParams(DataExporterTemplateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public DataExporterTemplateSecurity security;
-    public DataExporterTemplateRequest withSecurity(DataExporterTemplateSecurity security) {
-        this.security = security;
+    /**
+     * The data exporter config type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public DataExporterTemplateRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

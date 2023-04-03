@@ -4,20 +4,77 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class HistoryListForFileRequest {
-    
-    public HistoryListForFilePathParams pathParams;
-    public HistoryListForFileRequest withPathParams(HistoryListForFilePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Used for pagination.  When a list request has more records available, cursors are provided in the response headers `X-Files-Cursor-Next` and `X-Files-Cursor-Prev`.  Send one of those cursor value here to resume an existing list from the next available record.  Note: many of our SDKs have iterator methods that will automatically handle cursor-based pagination.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public HistoryListForFileRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
+    /**
+     * Display format. Leave blank or set to `full` or `parent`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=display")
+    public String display;
+    public HistoryListForFileRequest withDisplay(String display) {
+        this.display = display;
+        return this;
+    }
     
-    public HistoryListForFileQueryParams queryParams;
-    public HistoryListForFileRequest withQueryParams(HistoryListForFileQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Leave blank or set to a date/time to filter later entries.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_at")
+    public OffsetDateTime endAt;
+    public HistoryListForFileRequest withEndAt(OffsetDateTime endAt) {
+        this.endAt = endAt;
+        return this;
+    }
+    
+    /**
+     * Path to operate on.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
+    public String path;
+    public HistoryListForFileRequest withPath(String path) {
+        this.path = path;
+        return this;
+    }
+    
+    /**
+     * Number of records to show per page.  (Max: 10,000, 1,000 or less is recommended).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public HistoryListForFileRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * If set, sort records by the specified field in either `asc` or `desc` direction (e.g. `sort_by[user_id]=desc`). Valid fields are `user_id` and `created_at`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
+    public java.util.Map<String, Object> sortBy;
+    public HistoryListForFileRequest withSortBy(java.util.Map<String, Object> sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    
+    /**
+     * Leave blank or set to a date/time to filter earlier entries.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_at")
+    public OffsetDateTime startAt;
+    public HistoryListForFileRequest withStartAt(OffsetDateTime startAt) {
+        this.startAt = startAt;
         return this;
     }
     

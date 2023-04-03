@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveVideosFromProjectRequest {
-    
-    public RemoveVideosFromProjectPathParams pathParams;
-    public RemoveVideosFromProjectRequest withPathParams(RemoveVideosFromProjectPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the project.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public Double projectId;
+    public RemoveVideosFromProjectRequest withProjectId(Double projectId) {
+        this.projectId = projectId;
         return this;
     }
     
-    
-    public RemoveVideosFromProjectQueryParams queryParams;
-    public RemoveVideosFromProjectRequest withQueryParams(RemoveVideosFromProjectQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Whether to delete the videos when removing them from the project.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=should_delete_clips")
+    public Boolean shouldDeleteClips;
+    public RemoveVideosFromProjectRequest withShouldDeleteClips(Boolean shouldDeleteClips) {
+        this.shouldDeleteClips = shouldDeleteClips;
         return this;
     }
     
+    /**
+     * A comma-separated list of the video URIs to remove.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uris")
+    public String uris;
+    public RemoveVideosFromProjectRequest withUris(String uris) {
+        this.uris = uris;
+        return this;
+    }
     
-    public RemoveVideosFromProjectSecurity security;
-    public RemoveVideosFromProjectRequest withSecurity(RemoveVideosFromProjectSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public RemoveVideosFromProjectRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

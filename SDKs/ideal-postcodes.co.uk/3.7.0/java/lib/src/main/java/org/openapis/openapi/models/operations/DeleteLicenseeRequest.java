@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteLicenseeRequest {
-    
-    public DeleteLicenseePathParams pathParams;
-    public DeleteLicenseeRequest withPathParams(DeleteLicenseePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
+    public String key;
+    public DeleteLicenseeRequest withKey(String key) {
+        this.key = key;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=licensee")
+    public String licensee;
+    public DeleteLicenseeRequest withLicensee(String licensee) {
+        this.licensee = licensee;
+        return this;
+    }
     
-    public DeleteLicenseeQueryParams queryParams;
-    public DeleteLicenseeRequest withQueryParams(DeleteLicenseeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=user_token")
+    public String userToken;
+    public DeleteLicenseeRequest withUserToken(String userToken) {
+        this.userToken = userToken;
         return this;
     }
     

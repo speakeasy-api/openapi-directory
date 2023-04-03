@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeGlobalReplicationGroupsRequest {
-    
-    public GETDescribeGlobalReplicationGroupsQueryParams queryParams;
-    public GETDescribeGlobalReplicationGroupsRequest withQueryParams(GETDescribeGlobalReplicationGroupsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeGlobalReplicationGroupsActionEnum action;
+    public GETDescribeGlobalReplicationGroupsRequest withAction(GETDescribeGlobalReplicationGroupsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the Global datastore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GlobalReplicationGroupId")
+    public String globalReplicationGroupId;
+    public GETDescribeGlobalReplicationGroupsRequest withGlobalReplicationGroupId(String globalReplicationGroupId) {
+        this.globalReplicationGroupId = globalReplicationGroupId;
+        return this;
+    }
     
-    public GETDescribeGlobalReplicationGroupsHeaders headers;
-    public GETDescribeGlobalReplicationGroupsRequest withHeaders(GETDescribeGlobalReplicationGroupsHeaders headers) {
-        this.headers = headers;
+    /**
+     * An optional marker returned from a prior request. Use this marker for pagination of results from this operation. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by &lt;code&gt;MaxRecords&lt;/code&gt;. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
+    public String marker;
+    public GETDescribeGlobalReplicationGroupsRequest withMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
+    
+    /**
+     * The maximum number of records to include in the response. If more records exist than the specified MaxRecords value, a marker is included in the response so that the remaining results can be retrieved. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
+    public Long maxRecords;
+    public GETDescribeGlobalReplicationGroupsRequest withMaxRecords(Long maxRecords) {
+        this.maxRecords = maxRecords;
+        return this;
+    }
+    
+    /**
+     * Returns the list of members that comprise the Global datastore.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ShowMemberInfo")
+    public Boolean showMemberInfo;
+    public GETDescribeGlobalReplicationGroupsRequest withShowMemberInfo(Boolean showMemberInfo) {
+        this.showMemberInfo = showMemberInfo;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeGlobalReplicationGroupsVersionEnum version;
+    public GETDescribeGlobalReplicationGroupsRequest withVersion(GETDescribeGlobalReplicationGroupsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeGlobalReplicationGroupsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeGlobalReplicationGroupsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeGlobalReplicationGroupsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeGlobalReplicationGroupsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeGlobalReplicationGroupsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeGlobalReplicationGroupsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeGlobalReplicationGroupsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

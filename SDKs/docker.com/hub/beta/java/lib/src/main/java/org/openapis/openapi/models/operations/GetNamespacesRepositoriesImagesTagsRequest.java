@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNamespacesRepositoriesImagesTagsRequest {
-    
-    public GetNamespacesRepositoriesImagesTagsPathParams pathParams;
-    public GetNamespacesRepositoriesImagesTagsRequest withPathParams(GetNamespacesRepositoriesImagesTagsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Digest of the image.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=digest")
+    public String digest;
+    public GetNamespacesRepositoriesImagesTagsRequest withDigest(String digest) {
+        this.digest = digest;
         return this;
     }
     
+    /**
+     * Namespace of the repository.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=namespace")
+    public String namespace;
+    public GetNamespacesRepositoriesImagesTagsRequest withNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
     
-    public GetNamespacesRepositoriesImagesTagsQueryParams queryParams;
-    public GetNamespacesRepositoriesImagesTagsRequest withQueryParams(GetNamespacesRepositoriesImagesTagsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number to get. Defaults to 1.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetNamespacesRepositoriesImagesTagsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Number of images to get per page. Defaults to 10. Max of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public GetNamespacesRepositoriesImagesTagsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * Name of the repository.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repository")
+    public String repository;
+    public GetNamespacesRepositoriesImagesTagsRequest withRepository(String repository) {
+        this.repository = repository;
         return this;
     }
     

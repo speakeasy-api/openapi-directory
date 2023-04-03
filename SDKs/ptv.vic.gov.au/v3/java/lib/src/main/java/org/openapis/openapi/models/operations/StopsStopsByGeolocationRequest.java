@@ -4,20 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopsStopsByGeolocationRequest {
-    
-    public StopsStopsByGeolocationPathParams pathParams;
-    public StopsStopsByGeolocationRequest withPathParams(StopsStopsByGeolocationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Your developer id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
+    public String devid;
+    public StopsStopsByGeolocationRequest withDevid(String devid) {
+        this.devid = devid;
         return this;
     }
     
+    /**
+     * Geographic coordinate of latitude
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=latitude")
+    public Float latitude;
+    public StopsStopsByGeolocationRequest withLatitude(Float latitude) {
+        this.latitude = latitude;
+        return this;
+    }
     
-    public StopsStopsByGeolocationQueryParams queryParams;
-    public StopsStopsByGeolocationRequest withQueryParams(StopsStopsByGeolocationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Geographic coordinate of longitude
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=longitude")
+    public Float longitude;
+    public StopsStopsByGeolocationRequest withLongitude(Float longitude) {
+        this.longitude = longitude;
+        return this;
+    }
+    
+    /**
+     * Filter by maximum distance (in metres) from location specified via latitude and longitude parameters (default = 300)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_distance")
+    public Double maxDistance;
+    public StopsStopsByGeolocationRequest withMaxDistance(Double maxDistance) {
+        this.maxDistance = maxDistance;
+        return this;
+    }
+    
+    /**
+     * Maximum number of results returned (default = 30)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_results")
+    public Integer maxResults;
+    public StopsStopsByGeolocationRequest withMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * Filter by route_type; values returned via RouteTypes API
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=route_types")
+    public StopsStopsByGeolocationRouteTypesEnum[] routeTypes;
+    public StopsStopsByGeolocationRequest withRouteTypes(StopsStopsByGeolocationRouteTypesEnum[] routeTypes) {
+        this.routeTypes = routeTypes;
+        return this;
+    }
+    
+    /**
+     * Authentication signature for request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
+    public String signature;
+    public StopsStopsByGeolocationRequest withSignature(String signature) {
+        this.signature = signature;
+        return this;
+    }
+    
+    /**
+     * Indicates if stop disruption information will be returned (default = false)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stop_disruptions")
+    public Boolean stopDisruptions;
+    public StopsStopsByGeolocationRequest withStopDisruptions(Boolean stopDisruptions) {
+        this.stopDisruptions = stopDisruptions;
+        return this;
+    }
+    
+    /**
+     * Please ignore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public StopsStopsByGeolocationRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

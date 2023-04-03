@@ -4,13 +4,28 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetParcelsPidsSiteIDOutputFormatRequest {
+    /**
+     * Results format. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank"&gt;outputFormat&lt;/a&gt;. 
+     * 
+     * Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=outputFormat")
+    public GetParcelsPidsSiteIDOutputFormatOutputFormatEnum outputFormat;
+    public GetParcelsPidsSiteIDOutputFormatRequest withOutputFormat(GetParcelsPidsSiteIDOutputFormatOutputFormatEnum outputFormat) {
+        this.outputFormat = outputFormat;
+        return this;
+    }
     
-    public GetParcelsPidsSiteIDOutputFormatPathParams pathParams;
-    public GetParcelsPidsSiteIDOutputFormatRequest withPathParams(GetParcelsPidsSiteIDOutputFormatPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique, but not immutable, site identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=siteID")
+    public String siteID;
+    public GetParcelsPidsSiteIDOutputFormatRequest withSiteID(String siteID) {
+        this.siteID = siteID;
         return this;
     }
     

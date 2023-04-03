@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRepositoryPipelineKnownHostRequest {
+    /**
+     * The UUID of the known host to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=known_host_uuid")
+    public String knownHostUuid;
+    public DeleteRepositoryPipelineKnownHostRequest withKnownHostUuid(String knownHostUuid) {
+        this.knownHostUuid = knownHostUuid;
+        return this;
+    }
     
-    public DeleteRepositoryPipelineKnownHostPathParams pathParams;
-    public DeleteRepositoryPipelineKnownHostRequest withPathParams(DeleteRepositoryPipelineKnownHostPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The repository.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public DeleteRepositoryPipelineKnownHostRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
+    
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public DeleteRepositoryPipelineKnownHostRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

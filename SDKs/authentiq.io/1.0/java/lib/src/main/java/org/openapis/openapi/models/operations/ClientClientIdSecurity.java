@@ -7,23 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ClientClientIdSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeClientRegistrationToken clientRegistrationToken;
-    public ClientClientIdSecurity withClientRegistrationToken(org.openapis.openapi.models.shared.SchemeClientRegistrationToken clientRegistrationToken) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Authorization")
+    public String clientRegistrationToken;
+    public ClientClientIdSecurity withClientRegistrationToken(String clientRegistrationToken) {
         this.clientRegistrationToken = clientRegistrationToken;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeOauthCode oauthCode;
-    public ClientClientIdSecurity withOauthCode(org.openapis.openapi.models.shared.SchemeOauthCode oauthCode) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String oauthCode;
+    public ClientClientIdSecurity withOauthCode(String oauthCode) {
         this.oauthCode = oauthCode;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeOauthImplicit oauthImplicit;
-    public ClientClientIdSecurity withOauthImplicit(org.openapis.openapi.models.shared.SchemeOauthImplicit oauthImplicit) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String oauthImplicit;
+    public ClientClientIdSecurity withOauthImplicit(String oauthImplicit) {
         this.oauthImplicit = oauthImplicit;
         return this;
     }

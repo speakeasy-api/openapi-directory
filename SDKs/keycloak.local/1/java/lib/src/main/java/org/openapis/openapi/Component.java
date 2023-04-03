@@ -33,7 +33,7 @@ public class Component {
 
     public org.openapis.openapi.models.operations.DeleteRealmComponentsIdResponse deleteRealmComponentsId(org.openapis.openapi.models.operations.DeleteRealmComponentsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmComponentsIdPathParams.class, baseUrl, "/{realm}/components/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmComponentsIdRequest.class, baseUrl, "/{realm}/components/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -60,13 +60,13 @@ public class Component {
 
     public org.openapis.openapi.models.operations.GetRealmComponentsResponse getRealmComponents(org.openapis.openapi.models.operations.GetRealmComponentsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmComponentsPathParams.class, baseUrl, "/{realm}/components", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmComponentsRequest.class, baseUrl, "/{realm}/components", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRealmComponentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRealmComponentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -99,7 +99,7 @@ public class Component {
 
     public org.openapis.openapi.models.operations.GetRealmComponentsIdResponse getRealmComponentsId(org.openapis.openapi.models.operations.GetRealmComponentsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmComponentsIdPathParams.class, baseUrl, "/{realm}/components/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmComponentsIdRequest.class, baseUrl, "/{realm}/components/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -138,13 +138,13 @@ public class Component {
      */
     public org.openapis.openapi.models.operations.GetRealmComponentsIdSubComponentTypesResponse getRealmComponentsIdSubComponentTypes(org.openapis.openapi.models.operations.GetRealmComponentsIdSubComponentTypesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmComponentsIdSubComponentTypesPathParams.class, baseUrl, "/{realm}/components/{id}/sub-component-types", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmComponentsIdSubComponentTypesRequest.class, baseUrl, "/{realm}/components/{id}/sub-component-types", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRealmComponentsIdSubComponentTypesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRealmComponentsIdSubComponentTypesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -177,12 +177,12 @@ public class Component {
 
     public org.openapis.openapi.models.operations.PostRealmComponentsResponse postRealmComponents(org.openapis.openapi.models.operations.PostRealmComponentsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmComponentsPathParams.class, baseUrl, "/{realm}/components", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmComponentsRequest.class, baseUrl, "/{realm}/components", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "componentRepresentation", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -209,12 +209,12 @@ public class Component {
 
     public org.openapis.openapi.models.operations.PutRealmComponentsIdResponse putRealmComponentsId(org.openapis.openapi.models.operations.PutRealmComponentsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmComponentsIdPathParams.class, baseUrl, "/{realm}/components/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmComponentsIdRequest.class, baseUrl, "/{realm}/components/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "componentRepresentation", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

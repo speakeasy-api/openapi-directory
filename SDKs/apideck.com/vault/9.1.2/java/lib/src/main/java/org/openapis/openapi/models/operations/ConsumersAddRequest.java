@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConsumersAddRequest {
-    
-    public ConsumersAddHeaders headers;
-    public ConsumersAddRequest withHeaders(ConsumersAddHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ConsumerInput request;
-    public ConsumersAddRequest withRequest(org.openapis.openapi.models.shared.ConsumerInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ConsumerInput consumerInput;
+    public ConsumersAddRequest withConsumerInput(org.openapis.openapi.models.shared.ConsumerInput consumerInput) {
+        this.consumerInput = consumerInput;
         return this;
     }
     
-    
-    public ConsumersAddSecurity security;
-    public ConsumersAddRequest withSecurity(ConsumersAddSecurity security) {
-        this.security = security;
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public ConsumersAddRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
         return this;
     }
     

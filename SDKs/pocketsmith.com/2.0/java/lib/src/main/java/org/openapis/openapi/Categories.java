@@ -39,7 +39,7 @@ public class Categories {
      */
     public org.openapis.openapi.models.operations.DeleteCategoriesIdResponse deleteCategoriesId(org.openapis.openapi.models.operations.DeleteCategoriesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCategoriesIdPathParams.class, baseUrl, "/categories/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCategoriesIdRequest.class, baseUrl, "/categories/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -81,7 +81,7 @@ public class Categories {
      */
     public org.openapis.openapi.models.operations.GetCategoriesIdResponse getCategoriesId(org.openapis.openapi.models.operations.GetCategoriesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCategoriesIdPathParams.class, baseUrl, "/categories/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCategoriesIdRequest.class, baseUrl, "/categories/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -129,7 +129,7 @@ public class Categories {
      */
     public org.openapis.openapi.models.operations.GetUsersIdCategoriesResponse getUsersIdCategories(org.openapis.openapi.models.operations.GetUsersIdCategoriesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdCategoriesPathParams.class, baseUrl, "/users/{id}/categories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdCategoriesRequest.class, baseUrl, "/users/{id}/categories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -177,12 +177,12 @@ public class Categories {
      */
     public org.openapis.openapi.models.operations.PostUsersIdCategoriesResponse postUsersIdCategories(org.openapis.openapi.models.operations.PostUsersIdCategoriesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostUsersIdCategoriesPathParams.class, baseUrl, "/users/{id}/categories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostUsersIdCategoriesRequest.class, baseUrl, "/users/{id}/categories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -227,12 +227,12 @@ public class Categories {
      */
     public org.openapis.openapi.models.operations.PutCategoriesIdResponse putCategoriesId(org.openapis.openapi.models.operations.PutCategoriesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutCategoriesIdPathParams.class, baseUrl, "/categories/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutCategoriesIdRequest.class, baseUrl, "/categories/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

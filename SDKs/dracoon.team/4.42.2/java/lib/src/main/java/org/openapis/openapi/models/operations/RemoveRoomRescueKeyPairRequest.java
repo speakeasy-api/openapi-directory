@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveRoomRescueKeyPairRequest {
-    
-    public RemoveRoomRescueKeyPairPathParams pathParams;
-    public RemoveRoomRescueKeyPairRequest withPathParams(RemoveRoomRescueKeyPairPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RemoveRoomRescueKeyPairRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public RemoveRoomRescueKeyPairQueryParams queryParams;
-    public RemoveRoomRescueKeyPairRequest withQueryParams(RemoveRoomRescueKeyPairQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Room ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=room_id")
+    public Long roomId;
+    public RemoveRoomRescueKeyPairRequest withRoomId(Long roomId) {
+        this.roomId = roomId;
         return this;
     }
     
-    
-    public RemoveRoomRescueKeyPairHeaders headers;
-    public RemoveRoomRescueKeyPairRequest withHeaders(RemoveRoomRescueKeyPairHeaders headers) {
-        this.headers = headers;
+    /**
+     * Version (NEW)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
+    public String version;
+    public RemoveRoomRescueKeyPairRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

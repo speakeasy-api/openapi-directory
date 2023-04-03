@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFactRandomRequest {
-    
-    public GetFactRandomQueryParams queryParams;
-    public GetFactRandomRequest withQueryParams(GetFactRandomQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Category to get the fact from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
+    public String category;
+    public GetFactRandomRequest withCategory(String category) {
+        this.category = category;
         return this;
     }
     
-    
-    public GetFactRandomSecurity security;
-    public GetFactRandomRequest withSecurity(GetFactRandomSecurity security) {
-        this.security = security;
+    /**
+     * Sub Category to get the fact from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subcategory")
+    public String subcategory;
+    public GetFactRandomRequest withSubcategory(String subcategory) {
+        this.subcategory = subcategory;
         return this;
     }
     

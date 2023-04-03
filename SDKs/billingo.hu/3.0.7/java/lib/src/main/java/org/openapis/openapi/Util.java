@@ -40,7 +40,7 @@ public class Util {
      */
     public org.openapis.openapi.models.operations.GetIdResponse getId(org.openapis.openapi.models.operations.GetIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIdPathParams.class, baseUrl, "/utils/convert-legacy-id/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIdRequest.class, baseUrl, "/utils/convert-legacy-id/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

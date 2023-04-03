@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkSmCellularUsageHistoryRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deviceId")
+    public String deviceId;
+    public GetNetworkSmCellularUsageHistoryRequest withDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
     
-    public GetNetworkSmCellularUsageHistoryPathParams pathParams;
-    public GetNetworkSmCellularUsageHistoryRequest withPathParams(GetNetworkSmCellularUsageHistoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkSmCellularUsageHistoryRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

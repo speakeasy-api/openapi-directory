@@ -35,10 +35,11 @@ public class ComputerVision {
      * List suggested keywords
      * This endpoint returns a list of suggested keywords for a media item that you specify or upload.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetKeywordsResponse getKeywords(org.openapis.openapi.models.operations.GetKeywordsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetKeywordsResponse getKeywords(org.openapis.openapi.models.operations.GetKeywordsRequest request, org.openapis.openapi.models.operations.GetKeywordsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/cv/keywords");
         
@@ -46,14 +47,14 @@ public class ComputerVision {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetKeywordsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetKeywordsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -83,10 +84,11 @@ public class ComputerVision {
      * List similar images
      * This endpoint returns images that are visually similar to an image that you specify or upload.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSimilarImagesResponse getSimilarImages(org.openapis.openapi.models.operations.GetSimilarImagesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSimilarImagesResponse getSimilarImages(org.openapis.openapi.models.operations.GetSimilarImagesRequest request, org.openapis.openapi.models.operations.GetSimilarImagesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/cv/similar/images");
         
@@ -94,14 +96,14 @@ public class ComputerVision {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSimilarImagesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSimilarImagesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -131,10 +133,11 @@ public class ComputerVision {
      * List similar videos
      * This endpoint returns videos that are visually similar to an image that you specify or upload.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSimilarVideosResponse getSimilarVideos(org.openapis.openapi.models.operations.GetSimilarVideosRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSimilarVideosResponse getSimilarVideos(org.openapis.openapi.models.operations.GetSimilarVideosRequest request, org.openapis.openapi.models.operations.GetSimilarVideosSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/cv/similar/videos");
         
@@ -142,14 +145,14 @@ public class ComputerVision {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSimilarVideosQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSimilarVideosRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -179,10 +182,11 @@ public class ComputerVision {
      * Upload ephemeral images
      * Deprecated; use `POST /v2/cv/images` instead. This endpoint uploads an image for reverse image search. The image must be in JPEG or PNG format. To get the search results, pass the ID that this endpoint returns to the `GET /v2/images/{id}/similar` endpoint.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UploadEphemeralImageResponse uploadEphemeralImage(org.openapis.openapi.models.operations.UploadEphemeralImageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UploadEphemeralImageResponse uploadEphemeralImage(org.openapis.openapi.models.shared.ImageCreateRequest request, org.openapis.openapi.models.operations.UploadEphemeralImageSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/images");
         
@@ -196,7 +200,7 @@ public class ComputerVision {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -226,10 +230,11 @@ public class ComputerVision {
      * Upload images
      * This endpoint uploads an image for reverse image or video search. Images must be in JPEG or PNG format. To get the search results, pass the upload ID that this endpoint returns to the GET /v2/cv/similar/images or GET /v2/cv/similar/videos endpoints. Contact us for access to this endpoint.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UploadImageResponse uploadImage(org.openapis.openapi.models.operations.UploadImageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UploadImageResponse uploadImage(org.openapis.openapi.models.shared.ImageCreateRequest request, org.openapis.openapi.models.operations.UploadImageSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/cv/images");
         
@@ -243,7 +248,7 @@ public class ComputerVision {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

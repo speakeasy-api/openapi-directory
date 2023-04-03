@@ -4,27 +4,116 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DriveFilesDeleteRequest {
-    
-    public DriveFilesDeletePathParams pathParams;
-    public DriveFilesDeleteRequest withPathParams(DriveFilesDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DriveFilesDeleteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
         return this;
     }
     
-    
-    public DriveFilesDeleteQueryParams queryParams;
-    public DriveFilesDeleteRequest withQueryParams(DriveFilesDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Deprecated. If an item is not in a shared drive and its last parent is deleted but the item itself is not, the item will be placed under its owner's root.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enforceSingleParent")
+    public Boolean enforceSingleParent;
+    public DriveFilesDeleteRequest withEnforceSingleParent(Boolean enforceSingleParent) {
+        this.enforceSingleParent = enforceSingleParent;
         return this;
     }
     
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DriveFilesDeleteRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
     
-    public DriveFilesDeleteSecurity security;
-    public DriveFilesDeleteRequest withSecurity(DriveFilesDeleteSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the file to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileId")
+    public String fileId;
+    public DriveFilesDeleteRequest withFileId(String fileId) {
+        this.fileId = fileId;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DriveFilesDeleteRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DriveFilesDeleteRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DriveFilesDeleteRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DriveFilesDeleteRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Whether the requesting application supports both My Drives and shared drives.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supportsAllDrives")
+    public Boolean supportsAllDrives;
+    public DriveFilesDeleteRequest withSupportsAllDrives(Boolean supportsAllDrives) {
+        this.supportsAllDrives = supportsAllDrives;
+        return this;
+    }
+    
+    /**
+     * Deprecated use supportsAllDrives instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supportsTeamDrives")
+    public Boolean supportsTeamDrives;
+    public DriveFilesDeleteRequest withSupportsTeamDrives(Boolean supportsTeamDrives) {
+        this.supportsTeamDrives = supportsTeamDrives;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public DriveFilesDeleteRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostNetworksIdActionsAddRouteRequest {
-    
-    public PostNetworksIdActionsAddRoutePathParams pathParams;
-    public PostNetworksIdActionsAddRouteRequest withPathParams(PostNetworksIdActionsAddRoutePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PostNetworksIdActionsAddRouteAddDeleteRouteRequest requestBody;
+    public PostNetworksIdActionsAddRouteRequest withRequestBody(PostNetworksIdActionsAddRouteAddDeleteRouteRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostNetworksIdActionsAddRouteAddDeleteRouteRequest request;
-    public PostNetworksIdActionsAddRouteRequest withRequest(PostNetworksIdActionsAddRouteAddDeleteRouteRequest request) {
-        this.request = request;
+    /**
+     * ID of the Network
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public PostNetworksIdActionsAddRouteRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

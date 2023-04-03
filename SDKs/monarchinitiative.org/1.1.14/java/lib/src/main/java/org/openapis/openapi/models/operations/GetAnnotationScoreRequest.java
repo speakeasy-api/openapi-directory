@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAnnotationScoreRequest {
+    /**
+     * absent phenotype (eg HP:0002828)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=absent_id")
+    public String[] absentId;
+    public GetAnnotationScoreRequest withAbsentId(String[] absentId) {
+        this.absentId = absentId;
+        return this;
+    }
     
-    public GetAnnotationScoreQueryParams queryParams;
-    public GetAnnotationScoreRequest withQueryParams(GetAnnotationScoreQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Phenotype identifier (eg HP:0004935)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String[] id;
+    public GetAnnotationScoreRequest withId(String[] id) {
+        this.id = id;
         return this;
     }
     

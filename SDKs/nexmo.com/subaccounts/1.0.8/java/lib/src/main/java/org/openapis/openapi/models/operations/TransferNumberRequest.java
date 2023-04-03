@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TransferNumberRequest {
-    
-    public TransferNumberPathParams pathParams;
-    public TransferNumberRequest withPathParams(TransferNumberPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TransferNumberRequest request;
-    public TransferNumberRequest withRequest(org.openapis.openapi.models.shared.TransferNumberRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TransferNumberRequest transferNumberRequest;
+    public TransferNumberRequest withTransferNumberRequest(org.openapis.openapi.models.shared.TransferNumberRequest transferNumberRequest) {
+        this.transferNumberRequest = transferNumberRequest;
         return this;
     }
     
-    
-    public TransferNumberSecurity security;
-    public TransferNumberRequest withSecurity(TransferNumberSecurity security) {
-        this.security = security;
+    /**
+     * ID of the primary account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api_key")
+    public String apiKey;
+    public TransferNumberRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     

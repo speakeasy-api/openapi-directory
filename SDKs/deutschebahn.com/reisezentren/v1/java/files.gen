@@ -29,16 +29,12 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/GetReisezentrenQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetReisezentrenRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetReisezentrenResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetReisezentrenLocLatLonPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetReisezentrenLocLatLonRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetReisezentrenLocLatLonResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetReisezentrenLocLatLonDistPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetReisezentrenLocLatLonDistRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetReisezentrenLocLatLonDistResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetReisezentrenIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetReisezentrenIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetReisezentrenIdResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/TravelCenterOpeningTimes.java

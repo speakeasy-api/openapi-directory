@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGeoIPRequest {
+    /**
+     * Sets the format of the API response. JSON is the default format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public String format;
+    public GetGeoIPRequest withFormat(String format) {
+        this.format = format;
+        return this;
+    }
     
-    public GetGeoIPQueryParams queryParams;
-    public GetGeoIPRequest withQueryParams(GetGeoIPQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Your API Key. Each user has a unique API Key that can be used to access the API functions. If you don't have an account yet, please create new account first.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public GetGeoIPRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Used to inform the API to retrieve the response in your native language.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public String lang;
+    public GetGeoIPRequest withLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    
+    /**
+     * The modules you want to use of the request. It's a CSV (Comma Separated Values)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=params")
+    public String params;
+    public GetGeoIPRequest withParams(String params) {
+        this.params = params;
         return this;
     }
     

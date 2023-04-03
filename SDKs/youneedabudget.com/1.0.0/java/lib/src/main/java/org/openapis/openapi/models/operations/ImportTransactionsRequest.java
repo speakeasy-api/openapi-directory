@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImportTransactionsRequest {
-    
-    public ImportTransactionsPathParams pathParams;
-    public ImportTransactionsRequest withPathParams(ImportTransactionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=budget_id")
+    public String budgetId;
+    public ImportTransactionsRequest withBudgetId(String budgetId) {
+        this.budgetId = budgetId;
         return this;
     }
     

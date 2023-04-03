@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationRequest {
-    
-    public DeleteSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationPathParams pathParams;
-    public DeleteSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationRequest withPathParams(DeleteSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of the folder social
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * Id of the payroll
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payrollId")
+    public String payrollId;
+    public DeleteSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationRequest withPayrollId(String payrollId) {
+        this.payrollId = payrollId;
+        return this;
+    }
     
-    public DeleteSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationSecurity security;
-    public DeleteSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationRequest withSecurity(DeleteSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public DeleteSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

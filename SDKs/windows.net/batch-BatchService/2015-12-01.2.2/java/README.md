@@ -17,9 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.ApplicationGetPathParams;
-import org.openapis.openapi.models.operations.ApplicationGetQueryParams;
-import org.openapis.openapi.models.operations.ApplicationGetHeaders;
 import org.openapis.openapi.models.operations.ApplicationGetRequest;
 import org.openapis.openapi.models.operations.ApplicationGetResponse;
 
@@ -30,19 +27,13 @@ public class Application {
                 .build();
 
             ApplicationGetRequest req = new ApplicationGetRequest() {{
-                pathParams = new ApplicationGetPathParams() {{
-                    applicationId = "corrupti";
-                }};
-                queryParams = new ApplicationGetQueryParams() {{
-                    apiVersion = "provident";
-                    timeout = 715190;
-                }};
-                headers = new ApplicationGetHeaders() {{
-                    clientRequestId = "quibusdam";
-                    ocpDate = "unde";
-                    returnClientRequestId = false;
-                }};
-            }};            
+                apiVersion = "corrupti";
+                applicationId = "provident";
+                clientRequestId = "distinctio";
+                ocpDate = "quibusdam";
+                returnClientRequestId = false;
+                timeout = 602763;
+            }}            
 
             ApplicationGetResponse res = sdk.applications.applicationGet(req);
 
@@ -56,7 +47,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### applications

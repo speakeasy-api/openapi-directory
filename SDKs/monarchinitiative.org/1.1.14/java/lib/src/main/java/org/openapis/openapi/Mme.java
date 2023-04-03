@@ -36,7 +36,7 @@ public class Mme {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostDiseaseMmeResponse postDiseaseMme(org.openapis.openapi.models.operations.PostDiseaseMmeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostDiseaseMmeResponse postDiseaseMme(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/mme/disease");
         
@@ -73,7 +73,7 @@ public class Mme {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostFlyMmeResponse postFlyMme(org.openapis.openapi.models.operations.PostFlyMmeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostFlyMmeResponse postFlyMme(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/mme/fly");
         
@@ -110,7 +110,7 @@ public class Mme {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostMouseMmeResponse postMouseMme(org.openapis.openapi.models.operations.PostMouseMmeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostMouseMmeResponse postMouseMme(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/mme/mouse");
         
@@ -147,7 +147,7 @@ public class Mme {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostNematodeMmeResponse postNematodeMme(org.openapis.openapi.models.operations.PostNematodeMmeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostNematodeMmeResponse postNematodeMme(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/mme/nematode");
         
@@ -184,7 +184,7 @@ public class Mme {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostZebrafishMmeResponse postZebrafishMme(org.openapis.openapi.models.operations.PostZebrafishMmeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostZebrafishMmeResponse postZebrafishMme(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/mme/zebrafish");
         

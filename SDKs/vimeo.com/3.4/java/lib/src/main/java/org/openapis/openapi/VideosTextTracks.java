@@ -34,24 +34,25 @@ public class VideosTextTracks {
      * Add a text track to a video
      * For additional information, see our [text track upload guide](https://developer.vimeo.com/api/upload/texttracks).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateTextTrackResponse createTextTrack(org.openapis.openapi.models.operations.CreateTextTrackRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateTextTrackResponse createTextTrack(org.openapis.openapi.models.operations.CreateTextTrackRequest request, org.openapis.openapi.models.operations.CreateTextTrackSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateTextTrackPathParams.class, baseUrl, "/videos/{video_id}/texttracks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateTextTrackRequest.class, baseUrl, "/videos/{video_id}/texttracks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -87,24 +88,25 @@ public class VideosTextTracks {
      * Add a text track to a video
      * For additional information, see our [text track upload guide](https://developer.vimeo.com/api/upload/texttracks).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateTextTrackAlt1Response createTextTrackAlt1(org.openapis.openapi.models.operations.CreateTextTrackAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateTextTrackAlt1Response createTextTrackAlt1(org.openapis.openapi.models.operations.CreateTextTrackAlt1Request request, org.openapis.openapi.models.operations.CreateTextTrackAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateTextTrackAlt1PathParams.class, baseUrl, "/channels/{channel_id}/videos/{video_id}/texttracks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateTextTrackAlt1Request.class, baseUrl, "/channels/{channel_id}/videos/{video_id}/texttracks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -139,19 +141,20 @@ public class VideosTextTracks {
     /**
      * Delete a text track
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteTextTrackResponse deleteTextTrack(org.openapis.openapi.models.operations.DeleteTextTrackRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteTextTrackResponse deleteTextTrack(org.openapis.openapi.models.operations.DeleteTextTrackRequest request, org.openapis.openapi.models.operations.DeleteTextTrackSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteTextTrackPathParams.class, baseUrl, "/videos/{video_id}/texttracks/{texttrack_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteTextTrackRequest.class, baseUrl, "/videos/{video_id}/texttracks/{texttrack_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -188,21 +191,22 @@ public class VideosTextTracks {
     /**
      * Edit a text track
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EditTextTrackResponse editTextTrack(org.openapis.openapi.models.operations.EditTextTrackRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EditTextTrackResponse editTextTrack(org.openapis.openapi.models.operations.EditTextTrackRequest request, org.openapis.openapi.models.operations.EditTextTrackSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditTextTrackPathParams.class, baseUrl, "/videos/{video_id}/texttracks/{texttrack_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditTextTrackRequest.class, baseUrl, "/videos/{video_id}/texttracks/{texttrack_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -242,7 +246,7 @@ public class VideosTextTracks {
      */
     public org.openapis.openapi.models.operations.GetTextTrackResponse getTextTrack(org.openapis.openapi.models.operations.GetTextTrackRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTextTrackPathParams.class, baseUrl, "/videos/{video_id}/texttracks/{texttrack_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTextTrackRequest.class, baseUrl, "/videos/{video_id}/texttracks/{texttrack_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -297,7 +301,7 @@ public class VideosTextTracks {
      */
     public org.openapis.openapi.models.operations.GetTextTracksResponse getTextTracks(org.openapis.openapi.models.operations.GetTextTracksRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTextTracksPathParams.class, baseUrl, "/videos/{video_id}/texttracks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTextTracksRequest.class, baseUrl, "/videos/{video_id}/texttracks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -344,7 +348,7 @@ public class VideosTextTracks {
      */
     public org.openapis.openapi.models.operations.GetTextTracksAlt1Response getTextTracksAlt1(org.openapis.openapi.models.operations.GetTextTracksAlt1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTextTracksAlt1PathParams.class, baseUrl, "/channels/{channel_id}/videos/{video_id}/texttracks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTextTracksAlt1Request.class, baseUrl, "/channels/{channel_id}/videos/{video_id}/texttracks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

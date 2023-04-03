@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpacesSpaceIdLegalEntitiesIdCustomersAllRequest {
+    /**
+     * Id of the customer or memberId
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSpacesSpaceIdLegalEntitiesIdCustomersAllRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetSpacesSpaceIdLegalEntitiesIdCustomersAllPathParams pathParams;
-    public GetSpacesSpaceIdLegalEntitiesIdCustomersAllRequest withPathParams(GetSpacesSpaceIdLegalEntitiesIdCustomersAllPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public GetSpacesSpaceIdLegalEntitiesIdCustomersAllRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

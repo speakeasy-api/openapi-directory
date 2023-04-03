@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEdgeResourceRequest {
-    
-    public GetEdgeResourcePathParams pathParams;
-    public GetEdgeResourceRequest withPathParams(GetEdgeResourcePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * How far to traverse for neighbors
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=depth")
+    public Long depth;
+    public GetEdgeResourceRequest withDepth(Long depth) {
+        this.depth = depth;
         return this;
     }
     
+    /**
+     * Which direction to traverse (used only if relationship_type is defined)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public GetEdgeResourceDirectionEnum direction;
+    public GetEdgeResourceRequest withDirection(GetEdgeResourceDirectionEnum direction) {
+        this.direction = direction;
+        return this;
+    }
     
-    public GetEdgeResourceQueryParams queryParams;
-    public GetEdgeResourceRequest withQueryParams(GetEdgeResourceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Include sub-properties and equivalent properties
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entail")
+    public Boolean entail;
+    public GetEdgeResourceRequest withEntail(Boolean entail) {
+        this.entail = entail;
+        return this;
+    }
+    
+    /**
+     * Which monarch graph to query
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=graph")
+    public GetEdgeResourceGraphEnum graph;
+    public GetEdgeResourceRequest withGraph(GetEdgeResourceGraphEnum graph) {
+        this.graph = graph;
+        return this;
+    }
+    
+    /**
+     * CURIE e.g. HP:0000465
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetEdgeResourceRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Relationship type to traverse
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=relationship_type")
+    public String[] relationshipType;
+    public GetEdgeResourceRequest withRelationshipType(String[] relationshipType) {
+        this.relationshipType = relationshipType;
         return this;
     }
     

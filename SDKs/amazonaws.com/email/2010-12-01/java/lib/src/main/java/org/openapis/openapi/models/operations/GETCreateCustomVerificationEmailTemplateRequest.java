@@ -4,20 +4,129 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCreateCustomVerificationEmailTemplateRequest {
-    
-    public GETCreateCustomVerificationEmailTemplateQueryParams queryParams;
-    public GETCreateCustomVerificationEmailTemplateRequest withQueryParams(GETCreateCustomVerificationEmailTemplateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETCreateCustomVerificationEmailTemplateActionEnum action;
+    public GETCreateCustomVerificationEmailTemplateRequest withAction(GETCreateCustomVerificationEmailTemplateActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The URL that the recipient of the verification email is sent to if his or her address is not successfully verified.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FailureRedirectionURL")
+    public String failureRedirectionURL;
+    public GETCreateCustomVerificationEmailTemplateRequest withFailureRedirectionURL(String failureRedirectionURL) {
+        this.failureRedirectionURL = failureRedirectionURL;
+        return this;
+    }
     
-    public GETCreateCustomVerificationEmailTemplateHeaders headers;
-    public GETCreateCustomVerificationEmailTemplateRequest withHeaders(GETCreateCustomVerificationEmailTemplateHeaders headers) {
-        this.headers = headers;
+    /**
+     * The email address that the custom verification email is sent from.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FromEmailAddress")
+    public String fromEmailAddress;
+    public GETCreateCustomVerificationEmailTemplateRequest withFromEmailAddress(String fromEmailAddress) {
+        this.fromEmailAddress = fromEmailAddress;
+        return this;
+    }
+    
+    /**
+     * The URL that the recipient of the verification email is sent to if his or her address is successfully verified.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SuccessRedirectionURL")
+    public String successRedirectionURL;
+    public GETCreateCustomVerificationEmailTemplateRequest withSuccessRedirectionURL(String successRedirectionURL) {
+        this.successRedirectionURL = successRedirectionURL;
+        return this;
+    }
+    
+    /**
+     * The content of the custom verification email. The total size of the email must be less than 10 MB. The message body may contain HTML, with some limitations. For more information, see &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/custom-verification-emails.html#custom-verification-emails-faq"&gt;Custom Verification Email Frequently Asked Questions&lt;/a&gt; in the &lt;i&gt;Amazon SES Developer Guide&lt;/i&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TemplateContent")
+    public String templateContent;
+    public GETCreateCustomVerificationEmailTemplateRequest withTemplateContent(String templateContent) {
+        this.templateContent = templateContent;
+        return this;
+    }
+    
+    /**
+     * The name of the custom verification email template.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TemplateName")
+    public String templateName;
+    public GETCreateCustomVerificationEmailTemplateRequest withTemplateName(String templateName) {
+        this.templateName = templateName;
+        return this;
+    }
+    
+    /**
+     * The subject line of the custom verification email.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TemplateSubject")
+    public String templateSubject;
+    public GETCreateCustomVerificationEmailTemplateRequest withTemplateSubject(String templateSubject) {
+        this.templateSubject = templateSubject;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETCreateCustomVerificationEmailTemplateVersionEnum version;
+    public GETCreateCustomVerificationEmailTemplateRequest withVersion(GETCreateCustomVerificationEmailTemplateVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETCreateCustomVerificationEmailTemplateRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETCreateCustomVerificationEmailTemplateRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETCreateCustomVerificationEmailTemplateRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETCreateCustomVerificationEmailTemplateRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETCreateCustomVerificationEmailTemplateRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETCreateCustomVerificationEmailTemplateRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETCreateCustomVerificationEmailTemplateRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -7,17 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InsertAffiliationRequest {
+    /**
+     * Media type(s) that is/are acceptable for the response. Default value for payment provider protocol is application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public InsertAffiliationRequest withAccept(String accept) {
+        this.accept = accept;
+        return this;
+    }
     
-    public InsertAffiliationHeaders headers;
-    public InsertAffiliationRequest withHeaders(InsertAffiliationHeaders headers) {
-        this.headers = headers;
+    /**
+     * The Media type of the body of the request.  Default value for payment provider protocol is application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public InsertAffiliationRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.InsertAffiliationRequest request;
-    public InsertAffiliationRequest withRequest(org.openapis.openapi.models.shared.InsertAffiliationRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.InsertAffiliationRequest insertAffiliationRequest;
+    public InsertAffiliationRequest withInsertAffiliationRequest(org.openapis.openapi.models.shared.InsertAffiliationRequest insertAffiliationRequest) {
+        this.insertAffiliationRequest = insertAffiliationRequest;
+        return this;
+    }
+    
+    /**
+     * The AppKey configured by the merchant (optional configuration)
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-PROVIDER-API-AppKey")
+    public String xPROVIDERAPIAppKey;
+    public InsertAffiliationRequest withXPROVIDERAPIAppKey(String xPROVIDERAPIAppKey) {
+        this.xPROVIDERAPIAppKey = xPROVIDERAPIAppKey;
+        return this;
+    }
+    
+    /**
+     * The AppToken configured by the merchant (optional configuration)
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-PROVIDER-API-AppToken")
+    public String xPROVIDERAPIAppToken;
+    public InsertAffiliationRequest withXPROVIDERAPIAppToken(String xPROVIDERAPIAppToken) {
+        this.xPROVIDERAPIAppToken = xPROVIDERAPIAppToken;
         return this;
     }
     

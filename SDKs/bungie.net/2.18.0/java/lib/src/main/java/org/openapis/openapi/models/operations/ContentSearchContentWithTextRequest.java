@@ -4,20 +4,73 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContentSearchContentWithTextRequest {
-    
-    public ContentSearchContentWithTextPathParams pathParams;
-    public ContentSearchContentWithTextRequest withPathParams(ContentSearchContentWithTextPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Content type tag: Help, News, etc. Supply multiple ctypes separated by space.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ctype")
+    public String ctype;
+    public ContentSearchContentWithTextRequest withCtype(String ctype) {
+        this.ctype = ctype;
         return this;
     }
     
+    /**
+     * Page number for the search results, starting with page 1.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currentpage")
+    public Integer currentpage;
+    public ContentSearchContentWithTextRequest withCurrentpage(Integer currentpage) {
+        this.currentpage = currentpage;
+        return this;
+    }
     
-    public ContentSearchContentWithTextQueryParams queryParams;
-    public ContentSearchContentWithTextRequest withQueryParams(ContentSearchContentWithTextQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Not used.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=head")
+    public Boolean head;
+    public ContentSearchContentWithTextRequest withHead(Boolean head) {
+        this.head = head;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=locale")
+    public String locale;
+    public ContentSearchContentWithTextRequest withLocale(String locale) {
+        this.locale = locale;
+        return this;
+    }
+    
+    /**
+     * Word or phrase for the search.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=searchtext")
+    public String searchtext;
+    public ContentSearchContentWithTextRequest withSearchtext(String searchtext) {
+        this.searchtext = searchtext;
+        return this;
+    }
+    
+    /**
+     * For analytics, hint at the part of the app that triggered the search. Optional.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
+    public String source;
+    public ContentSearchContentWithTextRequest withSource(String source) {
+        this.source = source;
+        return this;
+    }
+    
+    /**
+     * Tag used on the content to be searched.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
+    public String tag;
+    public ContentSearchContentWithTextRequest withTag(String tag) {
+        this.tag = tag;
         return this;
     }
     

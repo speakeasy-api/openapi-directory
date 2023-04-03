@@ -4,20 +4,74 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListCollectionsRequest {
-    
-    public ListCollectionsQueryParams queryParams;
-    public ListCollectionsRequest withQueryParams(ListCollectionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Sort direction
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public ListCollectionsDirectionEnum direction;
+    public ListCollectionsRequest withDirection(ListCollectionsDirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
+    /**
+     * This is the maximum number of objects that may be returned
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListCollectionsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public ListCollectionsSecurity security;
-    public ListCollectionsRequest withSecurity(ListCollectionsSecurity security) {
-        this.security = security;
+    /**
+     * An opaque string cursor to fetch the next page of data.
+     * The paginated API URLs are returned in the `Link` header when requesting the API. These URLs will contain a `next` and `previous` cursor based on the available data.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next")
+    public String next;
+    public ListCollectionsRequest withNext(String next) {
+        this.next = next;
+        return this;
+    }
+    
+    /**
+     * List the collection contained in this `parent` collection.
+     * 
+     * This option doesn't provide a complete multi-level collection support.
+     * When sharing a collection with someone, this one will have as `parent` `sharedWithMe`.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parent")
+    public String parent;
+    public ListCollectionsRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * An opaque string cursor to fetch the previous page of data.
+     * The paginated API URLs are returned in the `Link` header when requesting the API. These URLs will contain a `next` and `previous` cursor based on the available data.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=previous")
+    public String previous;
+    public ListCollectionsRequest withPrevious(String previous) {
+        this.previous = previous;
+        return this;
+    }
+    
+    /**
+     * Sort
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public ListCollectionsSortEnum sort;
+    public ListCollectionsRequest withSort(ListCollectionsSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

@@ -4,27 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdsensehostAdclientsGetRequest {
-    
-    public AdsensehostAdclientsGetPathParams pathParams;
-    public AdsensehostAdclientsGetRequest withPathParams(AdsensehostAdclientsGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Ad client to get.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=adClientId")
+    public String adClientId;
+    public AdsensehostAdclientsGetRequest withAdClientId(String adClientId) {
+        this.adClientId = adClientId;
         return this;
     }
     
-    
-    public AdsensehostAdclientsGetQueryParams queryParams;
-    public AdsensehostAdclientsGetRequest withQueryParams(AdsensehostAdclientsGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AdsensehostAdclientsGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
         return this;
     }
     
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AdsensehostAdclientsGetRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
     
-    public AdsensehostAdclientsGetSecurity security;
-    public AdsensehostAdclientsGetRequest withSecurity(AdsensehostAdclientsGetSecurity security) {
-        this.security = security;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AdsensehostAdclientsGetRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AdsensehostAdclientsGetRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AdsensehostAdclientsGetRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AdsensehostAdclientsGetRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public AdsensehostAdclientsGetRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

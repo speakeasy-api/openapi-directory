@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimInterfacesUpdateRequest {
-    
-    public DcimInterfacesUpdatePathParams pathParams;
-    public DcimInterfacesUpdateRequest withPathParams(DcimInterfacesUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.WritableDeviceInterfaceInput writableDeviceInterfaceInput;
+    public DcimInterfacesUpdateRequest withWritableDeviceInterfaceInput(org.openapis.openapi.models.shared.WritableDeviceInterfaceInput writableDeviceInterfaceInput) {
+        this.writableDeviceInterfaceInput = writableDeviceInterfaceInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WritableDeviceInterfaceInput request;
-    public DcimInterfacesUpdateRequest withRequest(org.openapis.openapi.models.shared.WritableDeviceInterfaceInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this interface.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimInterfacesUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

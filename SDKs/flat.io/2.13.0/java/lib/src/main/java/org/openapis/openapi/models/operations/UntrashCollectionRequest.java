@@ -4,20 +4,21 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UntrashCollectionRequest {
-    
-    public UntrashCollectionPathParams pathParams;
-    public UntrashCollectionRequest withPathParams(UntrashCollectionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UntrashCollectionSecurity security;
-    public UntrashCollectionRequest withSecurity(UntrashCollectionSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the collection.
+     * The following aliases are supported:
+     * - `root`: The root collection of the account
+     * - `sharedWithMe`: Automatically contains new resources that have been shared individually
+     * - `trash`: Automatically contains resources that have been deleted
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection")
+    public String collection;
+    public UntrashCollectionRequest withCollection(String collection) {
+        this.collection = collection;
         return this;
     }
     

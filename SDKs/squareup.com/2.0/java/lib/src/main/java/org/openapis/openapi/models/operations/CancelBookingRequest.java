@@ -7,29 +7,25 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelBookingRequest {
-    
-    public CancelBookingPathParams pathParams;
-    public CancelBookingRequest withPathParams(CancelBookingPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * An object containing the fields to POST for the request.
      * 
      * See the corresponding object definition for field details.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CancelBookingRequest request;
-    public CancelBookingRequest withRequest(org.openapis.openapi.models.shared.CancelBookingRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CancelBookingRequest cancelBookingRequest;
+    public CancelBookingRequest withCancelBookingRequest(org.openapis.openapi.models.shared.CancelBookingRequest cancelBookingRequest) {
+        this.cancelBookingRequest = cancelBookingRequest;
         return this;
     }
     
-    
-    public CancelBookingSecurity security;
-    public CancelBookingRequest withSecurity(CancelBookingSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the [Booking](https://developer.squareup.com/reference/square_2021-08-18/objects/Booking) object representing the to-be-cancelled booking.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=booking_id")
+    public String bookingId;
+    public CancelBookingRequest withBookingId(String bookingId) {
+        this.bookingId = bookingId;
         return this;
     }
     

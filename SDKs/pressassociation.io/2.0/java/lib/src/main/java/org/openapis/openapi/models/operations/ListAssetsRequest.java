@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListAssetsRequest {
-    
-    public ListAssetsQueryParams queryParams;
-    public ListAssetsRequest withQueryParams(ListAssetsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Flag to display Legacy and Provider Ids.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aliases")
+    public Boolean aliases;
+    public ListAssetsRequest withAliases(Boolean aliases) {
+        this.aliases = aliases;
         return this;
     }
     
+    /**
+     * Limit the the number of items to be returned per page. For example: 5.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public ListAssetsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public ListAssetsSecurity security;
-    public ListAssetsRequest withSecurity(ListAssetsSecurity security) {
-        this.security = security;
+    /**
+     * Updated After
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedAfter")
+    public String updatedAfter;
+    public ListAssetsRequest withUpdatedAfter(String updatedAfter) {
+        this.updatedAfter = updatedAfter;
         return this;
     }
     

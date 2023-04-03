@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CollectionArticlesRequest {
-    
-    public CollectionArticlesPathParams pathParams;
-    public CollectionArticlesRequest withPathParams(CollectionArticlesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Collection Unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection_id")
+    public Long collectionId;
+    public CollectionArticlesRequest withCollectionId(Long collectionId) {
+        this.collectionId = collectionId;
         return this;
     }
     
+    /**
+     * Number of results included on a page. Used for pagination with query
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public CollectionArticlesRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public CollectionArticlesQueryParams queryParams;
-    public CollectionArticlesRequest withQueryParams(CollectionArticlesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Where to start the listing(the offset of the first result). Used for pagination with limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public CollectionArticlesRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Page number. Used for pagination with page_size
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public CollectionArticlesRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results included on a page. Used for pagination with page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public CollectionArticlesRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

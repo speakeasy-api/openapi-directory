@@ -40,13 +40,13 @@ public class BankAccounts {
      */
     public org.openapis.openapi.models.operations.BankAccountsDeleteResponse bankAccountsDelete(org.openapis.openapi.models.operations.BankAccountsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BankAccountsDeletePathParams.class, baseUrl, "/v1/bankAccounts/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BankAccountsDeleteRequest.class, baseUrl, "/v1/bankAccounts/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BankAccountsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BankAccountsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -119,7 +119,7 @@ public class BankAccounts {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BankAccountsPostResponse bankAccountsPost(org.openapis.openapi.models.operations.BankAccountsPostRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BankAccountsPostResponse bankAccountsPost(org.openapis.openapi.models.shared.BankAccountDto request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/bankAccounts");
         
@@ -162,7 +162,7 @@ public class BankAccounts {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BankAccountsProcessBatchResponse bankAccountsProcessBatch(org.openapis.openapi.models.operations.BankAccountsProcessBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BankAccountsProcessBatchResponse bankAccountsProcessBatch(org.openapis.openapi.models.shared.BatchItemBankAccountDto[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/bankAccounts/batch");
         
@@ -207,12 +207,12 @@ public class BankAccounts {
      */
     public org.openapis.openapi.models.operations.BankAccountsPutResponse bankAccountsPut(org.openapis.openapi.models.operations.BankAccountsPutRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BankAccountsPutPathParams.class, baseUrl, "/v1/bankAccounts/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BankAccountsPutRequest.class, baseUrl, "/v1/bankAccounts/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "bankAccountDto", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -250,7 +250,7 @@ public class BankAccounts {
      */
     public org.openapis.openapi.models.operations.GetV1BankAccountsIdResponse getV1BankAccountsId(org.openapis.openapi.models.operations.GetV1BankAccountsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV1BankAccountsIdPathParams.class, baseUrl, "/v1/bankAccounts/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV1BankAccountsIdRequest.class, baseUrl, "/v1/bankAccounts/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

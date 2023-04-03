@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CreateAccessTokenRequestBody;
-import org.openapis.openapi.models.operations.CreateAccessTokenRequest;
 import org.openapis.openapi.models.operations.CreateAccessTokenResponse;
 
 public class Application {
@@ -26,18 +25,14 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            CreateAccessTokenRequest req = new CreateAccessTokenRequest() {{
-                request = new CreateAccessTokenRequestBody() {{
-                    expiresTime = "2021-10-25T05:21:43.948Z";
-                    name = "distinctio";
-                }};
-            }};            
+            CreateAccessTokenRequestBody req = new CreateAccessTokenRequestBody() {{
+                expiresTime = "2021-10-25T05:21:43.948Z";
+                name = "distinctio";
+            }}            
 
             CreateAccessTokenResponse res = sdk.createAccessToken(req);
 
@@ -51,7 +46,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

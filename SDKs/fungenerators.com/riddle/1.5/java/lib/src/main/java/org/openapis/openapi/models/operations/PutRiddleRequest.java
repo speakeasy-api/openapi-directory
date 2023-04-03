@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutRiddleRequest {
-    
-    public PutRiddleQueryParams queryParams;
-    public PutRiddleRequest withQueryParams(PutRiddleQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Answer(s) to the riddle question
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=answer")
+    public String answer;
+    public PutRiddleRequest withAnswer(String answer) {
+        this.answer = answer;
         return this;
     }
     
+    /**
+     * Category of the riddle
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
+    public String category;
+    public PutRiddleRequest withCategory(String category) {
+        this.category = category;
+        return this;
+    }
     
-    public PutRiddleSecurity security;
-    public PutRiddleRequest withSecurity(PutRiddleSecurity security) {
-        this.security = security;
+    /**
+     * Riddle Question
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=question")
+    public String question;
+    public PutRiddleRequest withQuestion(String question) {
+        this.question = question;
         return this;
     }
     

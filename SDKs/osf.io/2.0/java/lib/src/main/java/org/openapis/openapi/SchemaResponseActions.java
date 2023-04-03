@@ -66,7 +66,7 @@ public class SchemaResponseActions {
      */
     public org.openapis.openapi.models.operations.GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdResponse getSchemaResponsesSchemaResponseIdActionsSchemaResponseActionId(org.openapis.openapi.models.operations.GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdPathParams.class, baseUrl, "/schema_responses/{schema_response_id}/actions/{schema_response_action_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSchemaResponsesSchemaResponseIdActionsSchemaResponseActionIdRequest.class, baseUrl, "/schema_responses/{schema_response_id}/actions/{schema_response_action_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -108,7 +108,7 @@ public class SchemaResponseActions {
      */
     public org.openapis.openapi.models.operations.PostSchemaResponsesSchemaResponseIdActionsResponse postSchemaResponsesSchemaResponseIdActions(org.openapis.openapi.models.operations.PostSchemaResponsesSchemaResponseIdActionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSchemaResponsesSchemaResponseIdActionsPathParams.class, baseUrl, "/schema_responses/{schema_response_id}/actions/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSchemaResponsesSchemaResponseIdActionsRequest.class, baseUrl, "/schema_responses/{schema_response_id}/actions/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -145,7 +145,7 @@ public class SchemaResponseActions {
      */
     public org.openapis.openapi.models.operations.SchemaResponseActionReadResponse schemaResponseActionRead(org.openapis.openapi.models.operations.SchemaResponseActionReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SchemaResponseActionReadPathParams.class, baseUrl, "/schema_responses/{schema_response_id}/actions/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SchemaResponseActionReadRequest.class, baseUrl, "/schema_responses/{schema_response_id}/actions/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

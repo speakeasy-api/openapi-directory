@@ -4,27 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugPullrequestsRequest {
-    
-    public GetRepositoriesWorkspaceRepoSlugPullrequestsPathParams pathParams;
-    public GetRepositoriesWorkspaceRepoSlugPullrequestsRequest withPathParams(GetRepositoriesWorkspaceRepoSlugPullrequestsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public GetRepositoriesWorkspaceRepoSlugPullrequestsRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
         return this;
     }
     
-    
-    public GetRepositoriesWorkspaceRepoSlugPullrequestsQueryParams queryParams;
-    public GetRepositoriesWorkspaceRepoSlugPullrequestsRequest withQueryParams(GetRepositoriesWorkspaceRepoSlugPullrequestsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Only return pull requests that are in this state. This parameter can be repeated.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public GetRepositoriesWorkspaceRepoSlugPullrequestsStateEnum state;
+    public GetRepositoriesWorkspaceRepoSlugPullrequestsRequest withState(GetRepositoriesWorkspaceRepoSlugPullrequestsStateEnum state) {
+        this.state = state;
         return this;
     }
     
-    
-    public GetRepositoriesWorkspaceRepoSlugPullrequestsSecurity security;
-    public GetRepositoriesWorkspaceRepoSlugPullrequestsRequest withSecurity(GetRepositoriesWorkspaceRepoSlugPullrequestsSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetRepositoriesWorkspaceRepoSlugPullrequestsRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

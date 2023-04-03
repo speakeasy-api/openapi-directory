@@ -4,13 +4,34 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ServicePointsGetByIdRequest {
+    /**
+     * Carrier code
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=carrier_code")
+    public String carrierCode;
+    public ServicePointsGetByIdRequest withCarrierCode(String carrierCode) {
+        this.carrierCode = carrierCode;
+        return this;
+    }
     
-    public ServicePointsGetByIdPathParams pathParams;
-    public ServicePointsGetByIdRequest withPathParams(ServicePointsGetByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A two-letter [ISO 3166-1 country code](https://en.wikipedia.org/wiki/ISO_3166-1)
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=country_code")
+    public String countryCode;
+    public ServicePointsGetByIdRequest withCountryCode(String countryCode) {
+        this.countryCode = countryCode;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=service_point_id")
+    public String servicePointId;
+    public ServicePointsGetByIdRequest withServicePointId(String servicePointId) {
+        this.servicePointId = servicePointId;
         return this;
     }
     

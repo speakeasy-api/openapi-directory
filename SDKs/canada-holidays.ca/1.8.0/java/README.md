@@ -17,9 +17,7 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.HolidayPathParams;
 import org.openapis.openapi.models.operations.HolidayOptionalEnum;
-import org.openapis.openapi.models.operations.HolidayQueryParams;
 import org.openapis.openapi.models.operations.HolidayRequest;
 import org.openapis.openapi.models.operations.HolidayResponse;
 
@@ -30,14 +28,10 @@ public class Application {
                 .build();
 
             HolidayRequest req = new HolidayRequest() {{
-                pathParams = new HolidayPathParams() {{
-                    holidayId = 2;
-                }};
-                queryParams = new HolidayQueryParams() {{
-                    optional = "true";
-                    year = 592845;
-                }};
-            }};            
+                holidayId = 2;
+                optional = "true";
+                year = 592845;
+            }}            
 
             HolidayResponse res = sdk.holidays.holiday(req);
 
@@ -51,7 +45,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### holidays

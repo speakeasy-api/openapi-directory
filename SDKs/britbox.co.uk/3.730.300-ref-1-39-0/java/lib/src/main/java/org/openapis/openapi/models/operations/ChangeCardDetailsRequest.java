@@ -7,34 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangeCardDetailsRequest {
-    
-    public ChangeCardDetailsPathParams pathParams;
-    public ChangeCardDetailsRequest withPathParams(ChangeCardDetailsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ChangeCardDetailsQueryParams queryParams;
-    public ChangeCardDetailsRequest withQueryParams(ChangeCardDetailsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Details of change card details request.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ItvChangeCardDetailsRequest request;
-    public ChangeCardDetailsRequest withRequest(org.openapis.openapi.models.shared.ItvChangeCardDetailsRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ItvChangeCardDetailsRequest itvChangeCardDetailsRequest;
+    public ChangeCardDetailsRequest withItvChangeCardDetailsRequest(org.openapis.openapi.models.shared.ItvChangeCardDetailsRequest itvChangeCardDetailsRequest) {
+        this.itvChangeCardDetailsRequest = itvChangeCardDetailsRequest;
         return this;
     }
     
+    /**
+     * Language code for the preferred language to be returned in the response.
+     * 
+     * Parameter value is case-insensitive and should be
+     *   - a valid 2 letter language code without region such as en, de
+     *   - or with region such as en_us, en_au
+     * 
+     * If undefined then defaults to 'en', unless the server has been configured
+     * with a custom default.
+     * 
+     * See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public String lang;
+    public ChangeCardDetailsRequest withLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
     
-    public ChangeCardDetailsSecurity security;
-    public ChangeCardDetailsRequest withSecurity(ChangeCardDetailsSecurity security) {
-        this.security = security;
+    /**
+     * The identifier of the payment platform (stripe/itunes).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=platform")
+    public String platform;
+    public ChangeCardDetailsRequest withPlatform(String platform) {
+        this.platform = platform;
         return this;
     }
     

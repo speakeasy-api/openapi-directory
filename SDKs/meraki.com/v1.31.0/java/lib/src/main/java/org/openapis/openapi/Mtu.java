@@ -40,7 +40,7 @@ public class Mtu {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchMtuResponse getNetworkSwitchMtu(org.openapis.openapi.models.operations.GetNetworkSwitchMtuRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchMtuPathParams.class, baseUrl, "/networks/{networkId}/switch/mtu", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchMtuRequest.class, baseUrl, "/networks/{networkId}/switch/mtu", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,12 +80,12 @@ public class Mtu {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSwitchMtuResponse updateNetworkSwitchMtu(org.openapis.openapi.models.operations.UpdateNetworkSwitchMtuRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchMtuPathParams.class, baseUrl, "/networks/{networkId}/switch/mtu", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchMtuRequest.class, baseUrl, "/networks/{networkId}/switch/mtu", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

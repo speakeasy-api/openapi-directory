@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchBrandRegistrationsRequest {
-    
-    public FetchBrandRegistrationsPathParams pathParams;
-    public FetchBrandRegistrationsRequest withPathParams(FetchBrandRegistrationsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchBrandRegistrationsSecurity security;
-    public FetchBrandRegistrationsRequest withSecurity(FetchBrandRegistrationsSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchBrandRegistrationsRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Brand Registration resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchBrandRegistrationsRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

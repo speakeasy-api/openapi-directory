@@ -4,13 +4,147 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEarlyDayMotionsListRequest {
+    /**
+     * Early Day Motions where the current status has been set on or before the date provided. Date format YYYY-MM-DD.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.currentStatusDateEnd")
+    public OffsetDateTime parametersCurrentStatusDateEnd;
+    public GetEarlyDayMotionsListRequest withParametersCurrentStatusDateEnd(OffsetDateTime parametersCurrentStatusDateEnd) {
+        this.parametersCurrentStatusDateEnd = parametersCurrentStatusDateEnd;
+        return this;
+    }
     
-    public GetEarlyDayMotionsListQueryParams queryParams;
-    public GetEarlyDayMotionsListRequest withQueryParams(GetEarlyDayMotionsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Early Day Motions where the current status has been set on or after the date provided. Date format YYYY-MM-DD.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.currentStatusDateStart")
+    public OffsetDateTime parametersCurrentStatusDateStart;
+    public GetEarlyDayMotionsListRequest withParametersCurrentStatusDateStart(OffsetDateTime parametersCurrentStatusDateStart) {
+        this.parametersCurrentStatusDateStart = parametersCurrentStatusDateStart;
+        return this;
+    }
+    
+    /**
+     * Early Day Motions with an ID in the list provided.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.edmIds")
+    public Integer[] parametersEdmIds;
+    public GetEarlyDayMotionsListRequest withParametersEdmIds(Integer[] parametersEdmIds) {
+        this.parametersEdmIds = parametersEdmIds;
+        return this;
+    }
+    
+    /**
+     * Include Early Day Motions sponsored by Member specified
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.includeSponsoredByMember")
+    public Boolean parametersIncludeSponsoredByMember;
+    public GetEarlyDayMotionsListRequest withParametersIncludeSponsoredByMember(Boolean parametersIncludeSponsoredByMember) {
+        this.parametersIncludeSponsoredByMember = parametersIncludeSponsoredByMember;
+        return this;
+    }
+    
+    /**
+     * Early Day Motions which are a prayer against a Negative Statutory Instrument.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.isPrayer")
+    public Boolean parametersIsPrayer;
+    public GetEarlyDayMotionsListRequest withParametersIsPrayer(Boolean parametersIsPrayer) {
+        this.parametersIsPrayer = parametersIsPrayer;
+        return this;
+    }
+    
+    /**
+     * Return Early Day Motions tabled by Member with ID provided.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.memberId")
+    public Integer parametersMemberId;
+    public GetEarlyDayMotionsListRequest withParametersMemberId(Integer parametersMemberId) {
+        this.parametersMemberId = parametersMemberId;
+        return this;
+    }
+    
+    /**
+     * Order results by date tabled, title or signature count. Default is date tabled.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.orderBy")
+    public GetEarlyDayMotionsListParametersOrderByEnum parametersOrderBy;
+    public GetEarlyDayMotionsListRequest withParametersOrderBy(GetEarlyDayMotionsListParametersOrderByEnum parametersOrderBy) {
+        this.parametersOrderBy = parametersOrderBy;
+        return this;
+    }
+    
+    /**
+     * Early Day Motions where the title includes the search term provided.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.searchTerm")
+    public String parametersSearchTerm;
+    public GetEarlyDayMotionsListRequest withParametersSearchTerm(String parametersSearchTerm) {
+        this.parametersSearchTerm = parametersSearchTerm;
+        return this;
+    }
+    
+    /**
+     * The number of records to skip from the first, default is 0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.skip")
+    public Integer parametersSkip;
+    public GetEarlyDayMotionsListRequest withParametersSkip(Integer parametersSkip) {
+        this.parametersSkip = parametersSkip;
+        return this;
+    }
+    
+    /**
+     * Early Day Motions where current status is in the selected list.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.statuses")
+    public GetEarlyDayMotionsListParametersStatusesEnum[] parametersStatuses;
+    public GetEarlyDayMotionsListRequest withParametersStatuses(GetEarlyDayMotionsListParametersStatusesEnum[] parametersStatuses) {
+        this.parametersStatuses = parametersStatuses;
+        return this;
+    }
+    
+    /**
+     * Early Day Motions where the date tabled is on or before the date provided. Date format YYYY-MM-DD.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.tabledEndDate")
+    public OffsetDateTime parametersTabledEndDate;
+    public GetEarlyDayMotionsListRequest withParametersTabledEndDate(OffsetDateTime parametersTabledEndDate) {
+        this.parametersTabledEndDate = parametersTabledEndDate;
+        return this;
+    }
+    
+    /**
+     * Early Day Motions where the date tabled is on or after the date provided. Date format YYYY-MM-DD.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.tabledStartDate")
+    public OffsetDateTime parametersTabledStartDate;
+    public GetEarlyDayMotionsListRequest withParametersTabledStartDate(OffsetDateTime parametersTabledStartDate) {
+        this.parametersTabledStartDate = parametersTabledStartDate;
+        return this;
+    }
+    
+    /**
+     * The number of records to return, default is 25, maximum is 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.take")
+    public Integer parametersTake;
+    public GetEarlyDayMotionsListRequest withParametersTake(Integer parametersTake) {
+        this.parametersTake = parametersTake;
+        return this;
+    }
+    
+    /**
+     * Early Day Motions with an UINWithAmendmentSuffix provided.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.uINWithAmendmentSuffix")
+    public String parametersUINWithAmendmentSuffix;
+    public GetEarlyDayMotionsListRequest withParametersUINWithAmendmentSuffix(String parametersUINWithAmendmentSuffix) {
+        this.parametersUINWithAmendmentSuffix = parametersUINWithAmendmentSuffix;
         return this;
     }
     

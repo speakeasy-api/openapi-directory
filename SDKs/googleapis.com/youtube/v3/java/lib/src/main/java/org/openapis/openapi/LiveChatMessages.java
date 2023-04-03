@@ -35,10 +35,11 @@ public class LiveChatMessages {
     /**
      * Deletes a chat message.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.YoutubeLiveChatMessagesDeleteResponse youtubeLiveChatMessagesDelete(org.openapis.openapi.models.operations.YoutubeLiveChatMessagesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.YoutubeLiveChatMessagesDeleteResponse youtubeLiveChatMessagesDelete(org.openapis.openapi.models.operations.YoutubeLiveChatMessagesDeleteRequest request, org.openapis.openapi.models.operations.YoutubeLiveChatMessagesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/youtube/v3/liveChat/messages");
         
@@ -46,14 +47,14 @@ public class LiveChatMessages {
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubeLiveChatMessagesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubeLiveChatMessagesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -74,27 +75,28 @@ public class LiveChatMessages {
     /**
      * Inserts a new resource into this collection.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.YoutubeLiveChatMessagesInsertResponse youtubeLiveChatMessagesInsert(org.openapis.openapi.models.operations.YoutubeLiveChatMessagesInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.YoutubeLiveChatMessagesInsertResponse youtubeLiveChatMessagesInsert(org.openapis.openapi.models.operations.YoutubeLiveChatMessagesInsertRequest request, org.openapis.openapi.models.operations.YoutubeLiveChatMessagesInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/youtube/v3/liveChat/messages");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "liveChatMessage", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubeLiveChatMessagesInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubeLiveChatMessagesInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -121,10 +123,11 @@ public class LiveChatMessages {
     /**
      * Retrieves a list of resources, possibly filtered.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.YoutubeLiveChatMessagesListResponse youtubeLiveChatMessagesList(org.openapis.openapi.models.operations.YoutubeLiveChatMessagesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.YoutubeLiveChatMessagesListResponse youtubeLiveChatMessagesList(org.openapis.openapi.models.operations.YoutubeLiveChatMessagesListRequest request, org.openapis.openapi.models.operations.YoutubeLiveChatMessagesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/youtube/v3/liveChat/messages");
         
@@ -132,14 +135,14 @@ public class LiveChatMessages {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubeLiveChatMessagesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubeLiveChatMessagesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

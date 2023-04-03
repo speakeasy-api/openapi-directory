@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetResourcesCampaignsIdMediaJsonRequest {
-    
-    public GetResourcesCampaignsIdMediaJsonPathParams pathParams;
-    public GetResourcesCampaignsIdMediaJsonRequest withPathParams(GetResourcesCampaignsIdMediaJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the campaign to find media items for
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetResourcesCampaignsIdMediaJsonRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * The maximum number of records to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=max")
+    public Integer max;
+    public GetResourcesCampaignsIdMediaJsonRequest withMax(Integer max) {
+        this.max = max;
+        return this;
+    }
     
-    public GetResourcesCampaignsIdMediaJsonQueryParams queryParams;
-    public GetResourcesCampaignsIdMediaJsonRequest withQueryParams(GetResourcesCampaignsIdMediaJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The offset of the records set to return for pagination
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=offset")
+    public Integer offset;
+    public GetResourcesCampaignsIdMediaJsonRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * The name of the property to which sorting will be applied
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=sort")
+    public String sort;
+    public GetResourcesCampaignsIdMediaJsonRequest withSort(String sort) {
+        this.sort = sort;
         return this;
     }
     

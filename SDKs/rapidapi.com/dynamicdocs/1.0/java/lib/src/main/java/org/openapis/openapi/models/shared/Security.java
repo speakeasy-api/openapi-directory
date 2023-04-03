@@ -7,16 +7,16 @@ package org.openapis.openapi.models.shared;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Security {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public SchemeAdvSecurityToken advSecurityToken;
-    public Security withAdvSecurityToken(SchemeAdvSecurityToken advSecurityToken) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=ADVICEment API Key")
+    public String advSecurityToken;
+    public Security withAdvSecurityToken(String advSecurityToken) {
         this.advSecurityToken = advSecurityToken;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public SchemeXRapidAPIKey xRapidAPIKey;
-    public Security withXRapidAPIKey(SchemeXRapidAPIKey xRapidAPIKey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=RapidAPI.com API Key")
+    public String xRapidAPIKey;
+    public Security withXRapidAPIKey(String xRapidAPIKey) {
         this.xRapidAPIKey = xRapidAPIKey;
         return this;
     }

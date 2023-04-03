@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FilesPatchRequest {
-    
-    public FilesPatchPathParams pathParams;
-    public FilesPatchRequest withPathParams(FilesPatchPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public java.util.Map<String, Object> requestBody;
+    public FilesPatchRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public FilesPatchRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    /**
+     * The unique identifier of the file you wish to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=file_id")
+    public String fileId;
+    public FilesPatchRequest withFileId(String fileId) {
+        this.fileId = fileId;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ForumGetPollRequest {
-    
-    public ForumGetPollPathParams pathParams;
-    public ForumGetPollRequest withPathParams(ForumGetPollPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The post id of the topic that has the poll.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=topicId")
+    public Long topicId;
+    public ForumGetPollRequest withTopicId(Long topicId) {
+        this.topicId = topicId;
         return this;
     }
     

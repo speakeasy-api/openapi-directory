@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetPathParams;
-import org.openapis.openapi.models.operations.GetHeaders;
 import org.openapis.openapi.models.operations.GetRequest;
 import org.openapis.openapi.models.operations.GetResponse;
 
@@ -29,14 +27,10 @@ public class Application {
                 .build();
 
             GetRequest req = new GetRequest() {{
-                pathParams = new GetPathParams() {{
-                    orderId = "corrupti";
-                }};
-                headers = new GetHeaders() {{
-                    xMarketId = "provident";
-                    xShopperId = "distinctio";
-                }};
-            }};            
+                xMarketId = "corrupti";
+                xShopperId = "provident";
+                orderId = "distinctio";
+            }}            
 
             GetResponse res = sdk.v1.get(req);
 
@@ -50,7 +44,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### v1

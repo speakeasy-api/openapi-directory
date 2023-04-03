@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AuthAuthkeyGetRequest {
-    
-    public AuthAuthkeyGetQueryParams queryParams;
-    public AuthAuthkeyGetRequest withQueryParams(AuthAuthkeyGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * User's device name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deviceName")
+    public String deviceName;
+    public AuthAuthkeyGetRequest withDeviceName(String deviceName) {
+        this.deviceName = deviceName;
         return this;
     }
     
+    /**
+     * identifierForVendor for User's Device (if app is iOS)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=identifierForVendor")
+    public String identifierForVendor;
+    public AuthAuthkeyGetRequest withIdentifierForVendor(String identifierForVendor) {
+        this.identifierForVendor = identifierForVendor;
+        return this;
+    }
     
-    public AuthAuthkeyGetSecurity security;
-    public AuthAuthkeyGetRequest withSecurity(AuthAuthkeyGetSecurity security) {
-        this.security = security;
+    /**
+     * YubiKey OTP (if configured for user)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=otp")
+    public String otp;
+    public AuthAuthkeyGetRequest withOtp(String otp) {
+        this.otp = otp;
+        return this;
+    }
+    
+    /**
+     * Authenticated password
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=password")
+    public String password;
+    public AuthAuthkeyGetRequest withPassword(String password) {
+        this.password = password;
+        return this;
+    }
+    
+    /**
+     * Authenticated username
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
+    public String username;
+    public AuthAuthkeyGetRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

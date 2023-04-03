@@ -125,12 +125,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.SendAnSmsResponse sendAnSms(org.openapis.openapi.models.operations.SendAnSmsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SendAnSmsPathParams.class, baseUrl, "/{format}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SendAnSmsRequest.class, baseUrl, "/{format}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "newMessage", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

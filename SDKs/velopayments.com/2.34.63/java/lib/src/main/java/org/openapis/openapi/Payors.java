@@ -46,7 +46,7 @@ public class Payors {
      */
     public org.openapis.openapi.models.operations.GetPayorByIdV1Response getPayorByIdV1(org.openapis.openapi.models.operations.GetPayorByIdV1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayorByIdV1PathParams.class, baseUrl, "/v1/payors/{payorId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayorByIdV1Request.class, baseUrl, "/v1/payors/{payorId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -103,7 +103,7 @@ public class Payors {
      */
     public org.openapis.openapi.models.operations.GetPayorByIdV2Response getPayorByIdV2(org.openapis.openapi.models.operations.GetPayorByIdV2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayorByIdV2PathParams.class, baseUrl, "/v2/payors/{payorId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayorByIdV2Request.class, baseUrl, "/v2/payors/{payorId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -169,12 +169,12 @@ public class Payors {
      */
     public org.openapis.openapi.models.operations.PayorAddPayorLogoV1Response payorAddPayorLogoV1(org.openapis.openapi.models.operations.PayorAddPayorLogoV1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PayorAddPayorLogoV1PathParams.class, baseUrl, "/v1/payors/{payorId}/branding/logos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PayorAddPayorLogoV1Request.class, baseUrl, "/v1/payors/{payorId}/branding/logos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "payorLogoRequest", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -235,12 +235,12 @@ public class Payors {
      */
     public org.openapis.openapi.models.operations.PayorCreateApiKeyV1Response payorCreateApiKeyV1(org.openapis.openapi.models.operations.PayorCreateApiKeyV1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PayorCreateApiKeyV1PathParams.class, baseUrl, "/v1/payors/{payorId}/applications/{applicationId}/keys", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PayorCreateApiKeyV1Request.class, baseUrl, "/v1/payors/{payorId}/applications/{applicationId}/keys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "payorCreateApiKeyRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -308,12 +308,12 @@ public class Payors {
      */
     public org.openapis.openapi.models.operations.PayorCreateApplicationV1Response payorCreateApplicationV1(org.openapis.openapi.models.operations.PayorCreateApplicationV1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PayorCreateApplicationV1PathParams.class, baseUrl, "/v1/payors/{payorId}/applications", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PayorCreateApplicationV1Request.class, baseUrl, "/v1/payors/{payorId}/applications", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "payorCreateApplicationRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -384,12 +384,12 @@ public class Payors {
      */
     public org.openapis.openapi.models.operations.PayorEmailOptOutResponse payorEmailOptOut(org.openapis.openapi.models.operations.PayorEmailOptOutRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PayorEmailOptOutPathParams.class, baseUrl, "/v1/payors/{payorId}/reminderEmailsUpdate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PayorEmailOptOutRequest.class, baseUrl, "/v1/payors/{payorId}/reminderEmailsUpdate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "payorEmailOptOutRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -447,7 +447,7 @@ public class Payors {
      */
     public org.openapis.openapi.models.operations.PayorGetBrandingResponse payorGetBranding(org.openapis.openapi.models.operations.PayorGetBrandingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PayorGetBrandingPathParams.class, baseUrl, "/v1/payors/{payorId}/branding", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PayorGetBrandingRequest.class, baseUrl, "/v1/payors/{payorId}/branding", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

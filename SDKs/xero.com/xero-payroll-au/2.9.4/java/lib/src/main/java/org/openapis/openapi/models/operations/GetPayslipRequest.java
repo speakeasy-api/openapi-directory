@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPayslipRequest {
-    
-    public GetPayslipPathParams pathParams;
-    public GetPayslipRequest withPathParams(GetPayslipPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Payslip id for single object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=PayslipID")
+    public String payslipID;
+    public GetPayslipRequest withPayslipID(String payslipID) {
+        this.payslipID = payslipID;
         return this;
     }
     
-    
-    public GetPayslipHeaders headers;
-    public GetPayslipRequest withHeaders(GetPayslipHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetPayslipSecurity security;
-    public GetPayslipRequest withSecurity(GetPayslipSecurity security) {
-        this.security = security;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
+    public String xeroTenantId;
+    public GetPayslipRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     

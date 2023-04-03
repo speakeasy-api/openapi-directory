@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRequest {
-    
-    public GetPathParams pathParams;
-    public GetRequest withPathParams(GetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the Market in which the request is happening
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Market-Id")
+    public String xMarketId;
+    public GetRequest withXMarketId(String xMarketId) {
+        this.xMarketId = xMarketId;
         return this;
     }
     
+    /**
+     * Shopper ID to be operated on, if different from JWT&lt;br/&gt;&lt;b&gt;Reseller subaccounts are not supported&lt;/b&gt;
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Shopper-Id")
+    public String xShopperId;
+    public GetRequest withXShopperId(String xShopperId) {
+        this.xShopperId = xShopperId;
+        return this;
+    }
     
-    public GetHeaders headers;
-    public GetRequest withHeaders(GetHeaders headers) {
-        this.headers = headers;
+    /**
+     * Order id whose details are to be retrieved
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderId")
+    public String orderId;
+    public GetRequest withOrderId(String orderId) {
+        this.orderId = orderId;
         return this;
     }
     

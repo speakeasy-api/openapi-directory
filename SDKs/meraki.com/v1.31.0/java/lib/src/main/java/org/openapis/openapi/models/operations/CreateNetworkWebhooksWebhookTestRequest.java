@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateNetworkWebhooksWebhookTestRequest {
-    
-    public CreateNetworkWebhooksWebhookTestPathParams pathParams;
-    public CreateNetworkWebhooksWebhookTestRequest withPathParams(CreateNetworkWebhooksWebhookTestPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateNetworkWebhooksWebhookTestRequestBody requestBody;
+    public CreateNetworkWebhooksWebhookTestRequest withRequestBody(CreateNetworkWebhooksWebhookTestRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateNetworkWebhooksWebhookTestRequestBody request;
-    public CreateNetworkWebhooksWebhookTestRequest withRequest(CreateNetworkWebhooksWebhookTestRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public CreateNetworkWebhooksWebhookTestRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

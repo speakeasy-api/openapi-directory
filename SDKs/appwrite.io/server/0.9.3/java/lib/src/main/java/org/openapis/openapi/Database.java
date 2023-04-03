@@ -39,10 +39,11 @@ public class Database {
      * Create Collection
      * Create a new Collection.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatabaseCreateCollectionResponse databaseCreateCollection(org.openapis.openapi.models.operations.DatabaseCreateCollectionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatabaseCreateCollectionResponse databaseCreateCollection(org.openapis.openapi.models.operations.DatabaseCreateCollectionRequestBody request, org.openapis.openapi.models.operations.DatabaseCreateCollectionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/database/collections");
         
@@ -53,7 +54,7 @@ public class Database {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,21 +82,22 @@ public class Database {
      * Create Document
      * Create a new Document. Before using this route, you should create a new collection resource using either a [server integration](/docs/server/database#databaseCreateCollection) API or directly from your database console.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatabaseCreateDocumentResponse databaseCreateDocument(org.openapis.openapi.models.operations.DatabaseCreateDocumentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatabaseCreateDocumentResponse databaseCreateDocument(org.openapis.openapi.models.operations.DatabaseCreateDocumentRequest request, org.openapis.openapi.models.operations.DatabaseCreateDocumentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatabaseCreateDocumentPathParams.class, baseUrl, "/database/collections/{collectionId}/documents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatabaseCreateDocumentRequest.class, baseUrl, "/database/collections/{collectionId}/documents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -123,19 +125,20 @@ public class Database {
      * Delete Collection
      * Delete a collection by its unique ID. Only users with write permissions have access to delete this resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatabaseDeleteCollectionResponse databaseDeleteCollection(org.openapis.openapi.models.operations.DatabaseDeleteCollectionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatabaseDeleteCollectionResponse databaseDeleteCollection(org.openapis.openapi.models.operations.DatabaseDeleteCollectionRequest request, org.openapis.openapi.models.operations.DatabaseDeleteCollectionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatabaseDeleteCollectionPathParams.class, baseUrl, "/database/collections/{collectionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatabaseDeleteCollectionRequest.class, baseUrl, "/database/collections/{collectionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -157,19 +160,20 @@ public class Database {
      * Delete Document
      * Delete a document by its unique ID. This endpoint deletes only the parent documents, its attributes and relations to other documents. Child documents **will not** be deleted.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatabaseDeleteDocumentResponse databaseDeleteDocument(org.openapis.openapi.models.operations.DatabaseDeleteDocumentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatabaseDeleteDocumentResponse databaseDeleteDocument(org.openapis.openapi.models.operations.DatabaseDeleteDocumentRequest request, org.openapis.openapi.models.operations.DatabaseDeleteDocumentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatabaseDeleteDocumentPathParams.class, baseUrl, "/database/collections/{collectionId}/documents/{documentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatabaseDeleteDocumentRequest.class, baseUrl, "/database/collections/{collectionId}/documents/{documentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -191,19 +195,20 @@ public class Database {
      * Get Collection
      * Get a collection by its unique ID. This endpoint response returns a JSON object with the collection metadata.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatabaseGetCollectionResponse databaseGetCollection(org.openapis.openapi.models.operations.DatabaseGetCollectionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatabaseGetCollectionResponse databaseGetCollection(org.openapis.openapi.models.operations.DatabaseGetCollectionRequest request, org.openapis.openapi.models.operations.DatabaseGetCollectionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatabaseGetCollectionPathParams.class, baseUrl, "/database/collections/{collectionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatabaseGetCollectionRequest.class, baseUrl, "/database/collections/{collectionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -231,19 +236,20 @@ public class Database {
      * Get Document
      * Get a document by its unique ID. This endpoint response returns a JSON object with the document data.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatabaseGetDocumentResponse databaseGetDocument(org.openapis.openapi.models.operations.DatabaseGetDocumentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatabaseGetDocumentResponse databaseGetDocument(org.openapis.openapi.models.operations.DatabaseGetDocumentRequest request, org.openapis.openapi.models.operations.DatabaseGetDocumentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatabaseGetDocumentPathParams.class, baseUrl, "/database/collections/{collectionId}/documents/{documentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatabaseGetDocumentRequest.class, baseUrl, "/database/collections/{collectionId}/documents/{documentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -271,10 +277,11 @@ public class Database {
      * List Collections
      * Get a list of all the user collections. You can use the query params to filter your results. On admin mode, this endpoint will return a list of all of the project's collections. [Learn more about different API modes](/docs/admin).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatabaseListCollectionsResponse databaseListCollections(org.openapis.openapi.models.operations.DatabaseListCollectionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatabaseListCollectionsResponse databaseListCollections(org.openapis.openapi.models.operations.DatabaseListCollectionsRequest request, org.openapis.openapi.models.operations.DatabaseListCollectionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/database/collections");
         
@@ -282,14 +289,14 @@ public class Database {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatabaseListCollectionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatabaseListCollectionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -317,25 +324,26 @@ public class Database {
      * List Documents
      * Get a list of all the user documents. You can use the query params to filter your results. On admin mode, this endpoint will return a list of all of the project's documents. [Learn more about different API modes](/docs/admin).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatabaseListDocumentsResponse databaseListDocuments(org.openapis.openapi.models.operations.DatabaseListDocumentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatabaseListDocumentsResponse databaseListDocuments(org.openapis.openapi.models.operations.DatabaseListDocumentsRequest request, org.openapis.openapi.models.operations.DatabaseListDocumentsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatabaseListDocumentsPathParams.class, baseUrl, "/database/collections/{collectionId}/documents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatabaseListDocumentsRequest.class, baseUrl, "/database/collections/{collectionId}/documents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatabaseListDocumentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatabaseListDocumentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -363,21 +371,22 @@ public class Database {
      * Update Collection
      * Update a collection by its unique ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatabaseUpdateCollectionResponse databaseUpdateCollection(org.openapis.openapi.models.operations.DatabaseUpdateCollectionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatabaseUpdateCollectionResponse databaseUpdateCollection(org.openapis.openapi.models.operations.DatabaseUpdateCollectionRequest request, org.openapis.openapi.models.operations.DatabaseUpdateCollectionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatabaseUpdateCollectionPathParams.class, baseUrl, "/database/collections/{collectionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatabaseUpdateCollectionRequest.class, baseUrl, "/database/collections/{collectionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -405,21 +414,22 @@ public class Database {
      * Update Document
      * Update a document by its unique ID. Using the patch method you can pass only specific fields that will get updated.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatabaseUpdateDocumentResponse databaseUpdateDocument(org.openapis.openapi.models.operations.DatabaseUpdateDocumentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatabaseUpdateDocumentResponse databaseUpdateDocument(org.openapis.openapi.models.operations.DatabaseUpdateDocumentRequest request, org.openapis.openapi.models.operations.DatabaseUpdateDocumentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatabaseUpdateDocumentPathParams.class, baseUrl, "/database/collections/{collectionId}/documents/{documentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatabaseUpdateDocumentRequest.class, baseUrl, "/database/collections/{collectionId}/documents/{documentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

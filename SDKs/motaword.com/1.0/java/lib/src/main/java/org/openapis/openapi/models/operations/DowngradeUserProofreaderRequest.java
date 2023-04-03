@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DowngradeUserProofreaderRequest {
-    
-    public DowngradeUserProofreaderPathParams pathParams;
-    public DowngradeUserProofreaderRequest withPathParams(DowngradeUserProofreaderPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DowngradeUserProofreaderSecurity security;
-    public DowngradeUserProofreaderRequest withSecurity(DowngradeUserProofreaderSecurity security) {
-        this.security = security;
+    /**
+     * User ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public Long userId;
+    public DowngradeUserProofreaderRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

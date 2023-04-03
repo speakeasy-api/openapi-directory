@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesIdPersonsRequest {
-    
-    public PostSpacesIdPersonsPathParams pathParams;
-    public PostSpacesIdPersonsRequest withPathParams(PostSpacesIdPersonsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Person to add
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostSpacesIdPersonsRequestBody request;
-    public PostSpacesIdPersonsRequest withRequest(PostSpacesIdPersonsRequestBody request) {
-        this.request = request;
+    public PostSpacesIdPersonsRequestBody requestBody;
+    public PostSpacesIdPersonsRequest withRequestBody(PostSpacesIdPersonsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public PostSpacesIdPersonsSecurity security;
-    public PostSpacesIdPersonsRequest withSecurity(PostSpacesIdPersonsSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSpacesIdPersonsRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

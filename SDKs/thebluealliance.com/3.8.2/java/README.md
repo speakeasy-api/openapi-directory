@@ -18,10 +18,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GetStatusSecurity;
-import org.openapis.openapi.models.operations.GetStatusHeaders;
 import org.openapis.openapi.models.operations.GetStatusRequest;
 import org.openapis.openapi.models.operations.GetStatusResponse;
-import org.openapis.openapi.models.shared.SchemeAPIKey;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,17 +28,12 @@ public class Application {
                 .build();
 
             GetStatusRequest req = new GetStatusRequest() {{
-                security = new GetStatusSecurity() {{
-                    apiKey = new SchemeAPIKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }};
-                headers = new GetStatusHeaders() {{
-                    ifNoneMatch = "corrupti";
-                }};
-            }};            
+                ifNoneMatch = "corrupti";
+            }}            
 
-            GetStatusResponse res = sdk.tba.getStatus(req);
+            GetStatusResponse res = sdk.tba.getStatus(req, new GetStatusSecurity() {{
+                apiKey = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.apiStatus.isPresent()) {
                 // handle response
@@ -52,7 +45,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### tba

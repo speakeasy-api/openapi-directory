@@ -38,7 +38,7 @@ public class StripeGatewayProcessPaymentsAndRefunds {
      */
     public org.openapis.openapi.models.operations.DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdResponse deleteStripeGatewayDeveloperDeveloperIdAccountsStripeId(org.openapis.openapi.models.operations.DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdPathParams.class, baseUrl, "/stripe-gateway/developer/{developerId}/accounts/{stripeId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdRequest.class, baseUrl, "/stripe-gateway/developer/{developerId}/accounts/{stripeId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -78,7 +78,7 @@ public class StripeGatewayProcessPaymentsAndRefunds {
      */
     public org.openapis.openapi.models.operations.DeleteStripeGatewayUserUserIdCardsCardIdResponse deleteStripeGatewayUserUserIdCardsCardId(org.openapis.openapi.models.operations.DeleteStripeGatewayUserUserIdCardsCardIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteStripeGatewayUserUserIdCardsCardIdPathParams.class, baseUrl, "/stripe-gateway/user/{userId}/cards/{cardId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteStripeGatewayUserUserIdCardsCardIdRequest.class, baseUrl, "/stripe-gateway/user/{userId}/cards/{cardId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -120,7 +120,7 @@ public class StripeGatewayProcessPaymentsAndRefunds {
      */
     public org.openapis.openapi.models.operations.GetStripeGatewayDeveloperDeveloperIdAccountsResponse getStripeGatewayDeveloperDeveloperIdAccounts(org.openapis.openapi.models.operations.GetStripeGatewayDeveloperDeveloperIdAccountsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStripeGatewayDeveloperDeveloperIdAccountsPathParams.class, baseUrl, "/stripe-gateway/developer/{developerId}/accounts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStripeGatewayDeveloperDeveloperIdAccountsRequest.class, baseUrl, "/stripe-gateway/developer/{developerId}/accounts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -162,7 +162,7 @@ public class StripeGatewayProcessPaymentsAndRefunds {
      */
     public org.openapis.openapi.models.operations.GetStripeGatewayUserUserIdCardsResponse getStripeGatewayUserUserIdCards(org.openapis.openapi.models.operations.GetStripeGatewayUserUserIdCardsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStripeGatewayUserUserIdCardsPathParams.class, baseUrl, "/stripe-gateway/user/{userId}/cards", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStripeGatewayUserUserIdCardsRequest.class, baseUrl, "/stripe-gateway/user/{userId}/cards", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -205,13 +205,13 @@ public class StripeGatewayProcessPaymentsAndRefunds {
      */
     public org.openapis.openapi.models.operations.PostStripeGatewayDeveloperDeveloperIdAccountsResponse postStripeGatewayDeveloperDeveloperIdAccounts(org.openapis.openapi.models.operations.PostStripeGatewayDeveloperDeveloperIdAccountsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostStripeGatewayDeveloperDeveloperIdAccountsPathParams.class, baseUrl, "/stripe-gateway/developer/{developerId}/accounts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostStripeGatewayDeveloperDeveloperIdAccountsRequest.class, baseUrl, "/stripe-gateway/developer/{developerId}/accounts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostStripeGatewayDeveloperDeveloperIdAccountsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostStripeGatewayDeveloperDeveloperIdAccountsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -253,13 +253,13 @@ public class StripeGatewayProcessPaymentsAndRefunds {
      */
     public org.openapis.openapi.models.operations.PostStripeGatewayUserUserIdCardsResponse postStripeGatewayUserUserIdCards(org.openapis.openapi.models.operations.PostStripeGatewayUserUserIdCardsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostStripeGatewayUserUserIdCardsPathParams.class, baseUrl, "/stripe-gateway/user/{userId}/cards", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostStripeGatewayUserUserIdCardsRequest.class, baseUrl, "/stripe-gateway/user/{userId}/cards", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostStripeGatewayUserUserIdCardsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostStripeGatewayUserUserIdCardsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -302,13 +302,13 @@ public class StripeGatewayProcessPaymentsAndRefunds {
      */
     public org.openapis.openapi.models.operations.PostStripeGatewayUserUserIdCardsCardIdResponse postStripeGatewayUserUserIdCardsCardId(org.openapis.openapi.models.operations.PostStripeGatewayUserUserIdCardsCardIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostStripeGatewayUserUserIdCardsCardIdPathParams.class, baseUrl, "/stripe-gateway/user/{userId}/cards/{cardId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostStripeGatewayUserUserIdCardsCardIdRequest.class, baseUrl, "/stripe-gateway/user/{userId}/cards/{cardId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostStripeGatewayUserUserIdCardsCardIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostStripeGatewayUserUserIdCardsCardIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

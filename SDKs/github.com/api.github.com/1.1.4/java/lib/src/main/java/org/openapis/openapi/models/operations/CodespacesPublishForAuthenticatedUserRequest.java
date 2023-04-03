@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodespacesPublishForAuthenticatedUserRequest {
-    
-    public CodespacesPublishForAuthenticatedUserPathParams pathParams;
-    public CodespacesPublishForAuthenticatedUserRequest withPathParams(CodespacesPublishForAuthenticatedUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CodespacesPublishForAuthenticatedUserRequestBody requestBody;
+    public CodespacesPublishForAuthenticatedUserRequest withRequestBody(CodespacesPublishForAuthenticatedUserRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public CodespacesPublishForAuthenticatedUserRequestBody request;
-    public CodespacesPublishForAuthenticatedUserRequest withRequest(CodespacesPublishForAuthenticatedUserRequestBody request) {
-        this.request = request;
+    /**
+     * The name of the codespace.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=codespace_name")
+    public String codespaceName;
+    public CodespacesPublishForAuthenticatedUserRequest withCodespaceName(String codespaceName) {
+        this.codespaceName = codespaceName;
         return this;
     }
     

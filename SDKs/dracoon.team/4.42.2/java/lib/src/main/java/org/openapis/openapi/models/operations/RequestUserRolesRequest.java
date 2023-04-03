@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestUserRolesRequest {
-    
-    public RequestUserRolesPathParams pathParams;
-    public RequestUserRolesRequest withPathParams(RequestUserRolesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestUserRolesRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public RequestUserRolesHeaders headers;
-    public RequestUserRolesRequest withHeaders(RequestUserRolesHeaders headers) {
-        this.headers = headers;
+    /**
+     * User ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Long userId;
+    public RequestUserRolesRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

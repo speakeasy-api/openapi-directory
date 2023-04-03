@@ -4,20 +4,129 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAssignPrivateIpAddressesRequest {
-    
-    public GETAssignPrivateIpAddressesQueryParams queryParams;
-    public GETAssignPrivateIpAddressesRequest withQueryParams(GETAssignPrivateIpAddressesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETAssignPrivateIpAddressesActionEnum action;
+    public GETAssignPrivateIpAddressesRequest withAction(GETAssignPrivateIpAddressesActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Indicates whether to allow an IP address that is already assigned to another network interface or instance to be reassigned to the specified network interface.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AllowReassignment")
+    public Boolean allowReassignment;
+    public GETAssignPrivateIpAddressesRequest withAllowReassignment(Boolean allowReassignment) {
+        this.allowReassignment = allowReassignment;
+        return this;
+    }
     
-    public GETAssignPrivateIpAddressesHeaders headers;
-    public GETAssignPrivateIpAddressesRequest withHeaders(GETAssignPrivateIpAddressesHeaders headers) {
-        this.headers = headers;
+    /**
+     * One or more IPv4 prefixes assigned to the network interface. You cannot use this option if you use the &lt;code&gt;Ipv4PrefixCount&lt;/code&gt; option.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Ipv4Prefix")
+    public String[] ipv4Prefix;
+    public GETAssignPrivateIpAddressesRequest withIpv4Prefix(String[] ipv4Prefix) {
+        this.ipv4Prefix = ipv4Prefix;
+        return this;
+    }
+    
+    /**
+     * The number of IPv4 prefixes that Amazon Web Services automatically assigns to the network interface. You cannot use this option if you use the &lt;code&gt;Ipv4 Prefixes&lt;/code&gt; option.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Ipv4PrefixCount")
+    public Long ipv4PrefixCount;
+    public GETAssignPrivateIpAddressesRequest withIpv4PrefixCount(Long ipv4PrefixCount) {
+        this.ipv4PrefixCount = ipv4PrefixCount;
+        return this;
+    }
+    
+    /**
+     * The ID of the network interface.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NetworkInterfaceId")
+    public String networkInterfaceId;
+    public GETAssignPrivateIpAddressesRequest withNetworkInterfaceId(String networkInterfaceId) {
+        this.networkInterfaceId = networkInterfaceId;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The IP addresses to be assigned as a secondary private IP address to the network interface. You can't specify this parameter when also specifying a number of secondary IP addresses.&lt;/p&gt; &lt;p&gt;If you don't specify an IP address, Amazon EC2 automatically selects an IP address within the subnet range.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PrivateIpAddress")
+    public String[] privateIpAddress;
+    public GETAssignPrivateIpAddressesRequest withPrivateIpAddress(String[] privateIpAddress) {
+        this.privateIpAddress = privateIpAddress;
+        return this;
+    }
+    
+    /**
+     * The number of secondary IP addresses to assign to the network interface. You can't specify this parameter when also specifying private IP addresses.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SecondaryPrivateIpAddressCount")
+    public Long secondaryPrivateIpAddressCount;
+    public GETAssignPrivateIpAddressesRequest withSecondaryPrivateIpAddressCount(Long secondaryPrivateIpAddressCount) {
+        this.secondaryPrivateIpAddressCount = secondaryPrivateIpAddressCount;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETAssignPrivateIpAddressesVersionEnum version;
+    public GETAssignPrivateIpAddressesRequest withVersion(GETAssignPrivateIpAddressesVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETAssignPrivateIpAddressesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETAssignPrivateIpAddressesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETAssignPrivateIpAddressesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETAssignPrivateIpAddressesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETAssignPrivateIpAddressesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETAssignPrivateIpAddressesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETAssignPrivateIpAddressesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

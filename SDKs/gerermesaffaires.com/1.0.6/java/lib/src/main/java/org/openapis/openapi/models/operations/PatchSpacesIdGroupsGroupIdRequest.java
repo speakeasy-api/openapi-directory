@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchSpacesIdGroupsGroupIdRequest {
-    
-    public PatchSpacesIdGroupsGroupIdPathParams pathParams;
-    public PatchSpacesIdGroupsGroupIdRequest withPathParams(PatchSpacesIdGroupsGroupIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Group to modify
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PatchSpacesIdGroupsGroupIdRequestBody request;
-    public PatchSpacesIdGroupsGroupIdRequest withRequest(PatchSpacesIdGroupsGroupIdRequestBody request) {
-        this.request = request;
+    public PatchSpacesIdGroupsGroupIdRequestBody requestBody;
+    public PatchSpacesIdGroupsGroupIdRequest withRequestBody(PatchSpacesIdGroupsGroupIdRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Id of the group to modify
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public String groupId;
+    public PatchSpacesIdGroupsGroupIdRequest withGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatchSpacesIdGroupsGroupIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -4,13 +4,53 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AggregatedGetStatisticsSingleRequest {
+    /**
+     * If using a "custom" timeFrame you can specify the starting day (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDay")
+    public String fromDay;
+    public AggregatedGetStatisticsSingleRequest withFromDay(String fromDay) {
+        this.fromDay = fromDay;
+        return this;
+    }
     
-    public AggregatedGetStatisticsSingleQueryParams queryParams;
-    public AggregatedGetStatisticsSingleRequest withQueryParams(AggregatedGetStatisticsSingleQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * If using "yesterday" or "today" timeframe you can ask for the hourly detail
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hourly")
+    public Boolean hourly;
+    public AggregatedGetStatisticsSingleRequest withHourly(Boolean hourly) {
+        this.hourly = hourly;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onlyFavorites")
+    public String onlyFavorites;
+    public AggregatedGetStatisticsSingleRequest withOnlyFavorites(String onlyFavorites) {
+        this.onlyFavorites = onlyFavorites;
+        return this;
+    }
+    
+    /**
+     * Timeframe of the request. See list at $timeframeList
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeFrame")
+    public AggregatedGetStatisticsSingleTimeFrameEnum timeFrame;
+    public AggregatedGetStatisticsSingleRequest withTimeFrame(AggregatedGetStatisticsSingleTimeFrameEnum timeFrame) {
+        this.timeFrame = timeFrame;
+        return this;
+    }
+    
+    /**
+     * If using a "custom" timeFrame you can specify the ending day (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDay")
+    public String toDay;
+    public AggregatedGetStatisticsSingleRequest withToDay(String toDay) {
+        this.toDay = toDay;
         return this;
     }
     

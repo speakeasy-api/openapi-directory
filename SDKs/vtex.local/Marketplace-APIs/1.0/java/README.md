@@ -17,9 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.GetProductoffersPathParams;
-import org.openapis.openapi.models.operations.GetProductoffersQueryParams;
-import org.openapis.openapi.models.operations.GetProductoffersHeaders;
 import org.openapis.openapi.models.operations.GetProductoffersRequest;
 import org.openapis.openapi.models.operations.GetProductoffersResponse;
 
@@ -28,28 +25,18 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    appKey = new SchemeAppKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                    appToken = new SchemeAppToken() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    appKey = "YOUR_API_KEY_HERE";
+                    appToken = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GetProductoffersRequest req = new GetProductoffersRequest() {{
-                pathParams = new GetProductoffersPathParams() {{
-                    productId = "corrupti";
-                }};
-                queryParams = new GetProductoffersQueryParams() {{
-                    accountName = "provident";
-                    environment = "distinctio";
-                }};
-                headers = new GetProductoffersHeaders() {{
-                    accept = "quibusdam";
-                    contentType = "unde";
-                }};
-            }};            
+                accept = "corrupti";
+                contentType = "provident";
+                accountName = "distinctio";
+                environment = "quibusdam";
+                productId = "unde";
+            }}            
 
             GetProductoffersResponse res = sdk.matchedOffers.getProductoffers(req);
 
@@ -63,7 +50,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### matchedOffers

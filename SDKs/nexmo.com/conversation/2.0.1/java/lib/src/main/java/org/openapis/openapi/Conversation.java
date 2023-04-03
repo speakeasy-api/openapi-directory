@@ -51,7 +51,7 @@ public class Conversation {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateConversationResponse createConversation(org.openapis.openapi.models.operations.CreateConversationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateConversationResponse createConversation(org.openapis.openapi.models.operations.CreateConversationRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/conversations");
         
@@ -94,7 +94,7 @@ public class Conversation {
      */
     public org.openapis.openapi.models.operations.DeleteConversationResponse deleteConversation(org.openapis.openapi.models.operations.DeleteConversationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteConversationPathParams.class, baseUrl, "/conversations/{conversation_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteConversationRequest.class, baseUrl, "/conversations/{conversation_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -142,7 +142,7 @@ public class Conversation {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListConversationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListConversationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -180,17 +180,28 @@ public class Conversation {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.RecordConversationResponse recordConversation(org.openapis.openapi.models.operations.RecordConversationRequest request) throws Exception {
+        return this.recordConversation(request, null);
+    }
+
+    /**
+     * Record a conversation
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.RecordConversationResponse recordConversation(org.openapis.openapi.models.operations.RecordConversationRequest request, String serverURL) throws Exception {
         String baseUrl = RECORD_CONVERSATION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecordConversationPathParams.class, baseUrl, "/conversations/{conversation_id}/record", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecordConversationRequest.class, baseUrl, "/conversations/{conversation_id}/record", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -220,12 +231,12 @@ public class Conversation {
      */
     public org.openapis.openapi.models.operations.ReplaceConversationResponse replaceConversation(org.openapis.openapi.models.operations.ReplaceConversationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReplaceConversationPathParams.class, baseUrl, "/conversations/{conversation_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReplaceConversationRequest.class, baseUrl, "/conversations/{conversation_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -261,7 +272,7 @@ public class Conversation {
      */
     public org.openapis.openapi.models.operations.RetrieveConversationResponse retrieveConversation(org.openapis.openapi.models.operations.RetrieveConversationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveConversationPathParams.class, baseUrl, "/conversations/{conversation_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveConversationRequest.class, baseUrl, "/conversations/{conversation_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

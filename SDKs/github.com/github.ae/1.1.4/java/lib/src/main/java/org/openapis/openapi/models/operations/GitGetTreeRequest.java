@@ -4,20 +4,43 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GitGetTreeRequest {
-    
-    public GitGetTreePathParams pathParams;
-    public GitGetTreeRequest withPathParams(GitGetTreePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public GitGetTreeRequest withOwner(String owner) {
+        this.owner = owner;
         return this;
     }
     
+    /**
+     * Setting this parameter to any value returns the objects or subtrees referenced by the tree specified in `:tree_sha`. For example, setting `recursive` to any of the following will enable returning objects or subtrees: `0`, `1`, `"true"`, and `"false"`. Omit this parameter to prevent recursively returning objects or subtrees.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=recursive")
+    public String recursive;
+    public GitGetTreeRequest withRecursive(String recursive) {
+        this.recursive = recursive;
+        return this;
+    }
     
-    public GitGetTreeQueryParams queryParams;
-    public GitGetTreeRequest withQueryParams(GitGetTreeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public GitGetTreeRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tree_sha")
+    public String treeSha;
+    public GitGetTreeRequest withTreeSha(String treeSha) {
+        this.treeSha = treeSha;
         return this;
     }
     

@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AccountPathParams;
 import org.openapis.openapi.models.operations.AccountRequest;
 import org.openapis.openapi.models.operations.AccountResponse;
 
@@ -26,17 +25,13 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    oAuth = new SchemeOAuth() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
+                    oAuth = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }})
                 .build();
 
             AccountRequest req = new AccountRequest() {{
-                pathParams = new AccountPathParams() {{
-                    accountId = "corrupti";
-                }};
-            }};            
+                accountId = "corrupti";
+            }}            
 
             AccountResponse res = sdk.accounts.account(req);
 
@@ -50,7 +45,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### accounts

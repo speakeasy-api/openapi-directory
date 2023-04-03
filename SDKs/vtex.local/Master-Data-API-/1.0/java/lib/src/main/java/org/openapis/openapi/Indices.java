@@ -39,13 +39,13 @@ public class Indices {
      */
     public org.openapis.openapi.models.operations.DeleteindexbynameResponse deleteindexbyname(org.openapis.openapi.models.operations.DeleteindexbynameRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteindexbynamePathParams.class, baseUrl, "/api/dataentities/{dataEntityName}/indices/{index_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteindexbynameRequest.class, baseUrl, "/api/dataentities/{dataEntityName}/indices/{index_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -81,13 +81,13 @@ public class Indices {
      */
     public org.openapis.openapi.models.operations.GetindexbynameResponse getindexbyname(org.openapis.openapi.models.operations.GetindexbynameRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetindexbynamePathParams.class, baseUrl, "/api/dataentities/{dataEntityName}/indices/{index_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetindexbynameRequest.class, baseUrl, "/api/dataentities/{dataEntityName}/indices/{index_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -123,13 +123,13 @@ public class Indices {
      */
     public org.openapis.openapi.models.operations.GetindicesResponse getindices(org.openapis.openapi.models.operations.GetindicesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetindicesPathParams.class, baseUrl, "/api/dataentities/{dataEntityName}/indices", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetindicesRequest.class, baseUrl, "/api/dataentities/{dataEntityName}/indices", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -165,12 +165,12 @@ public class Indices {
      */
     public org.openapis.openapi.models.operations.PutindicesResponse putindices(org.openapis.openapi.models.operations.PutindicesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutindicesPathParams.class, baseUrl, "/api/dataentities/{dataEntityName}/indices", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutindicesRequest.class, baseUrl, "/api/dataentities/{dataEntityName}/indices", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "putindicesRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

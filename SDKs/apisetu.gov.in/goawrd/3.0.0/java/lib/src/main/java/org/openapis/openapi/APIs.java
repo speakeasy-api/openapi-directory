@@ -34,10 +34,11 @@ public class APIs {
      * Registration Certificate of Establishment Employing Contract Labour
      * API to verify Registration Certificate of Establishment Employing Contract Labour.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ErcerResponse ercer(org.openapis.openapi.models.operations.ErcerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ErcerResponse ercer(org.openapis.openapi.models.operations.ErcerRequestBody request, org.openapis.openapi.models.operations.ErcerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/ercer/certificate");
         
@@ -48,7 +49,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,10 +127,11 @@ public class APIs {
      * Permission/ Certificate for Well
      * API to verify Permission/ Certificate for Well.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PfdawResponse pfdaw(org.openapis.openapi.models.operations.PfdawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PfdawResponse pfdaw(org.openapis.openapi.models.operations.PfdawRequestBody request, org.openapis.openapi.models.operations.PfdawSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/pfdaw/certificate");
         
@@ -140,7 +142,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -218,10 +220,11 @@ public class APIs {
      * Permission/ Certificate for Transportation (Petroleum Products, Water etc.)
      * API to verify Permission/ Certificate for Transportation (Petroleum Products, Water etc.).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TpcerResponse tpcer(org.openapis.openapi.models.operations.TpcerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TpcerResponse tpcer(org.openapis.openapi.models.operations.TpcerRequestBody request, org.openapis.openapi.models.operations.TpcerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/tpcer/certificate");
         
@@ -232,7 +235,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

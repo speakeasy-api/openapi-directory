@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutConsumerV1AppointmentsIdConfirmRequest {
-    
-    public PutConsumerV1AppointmentsIdConfirmPathParams pathParams;
-    public PutConsumerV1AppointmentsIdConfirmRequest withPathParams(PutConsumerV1AppointmentsIdConfirmPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * appointment id to confirm
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PutConsumerV1AppointmentsIdConfirmRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     
-    
-    public PutConsumerV1AppointmentsIdConfirmQueryParams queryParams;
-    public PutConsumerV1AppointmentsIdConfirmRequest withQueryParams(PutConsumerV1AppointmentsIdConfirmQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Use this parameter to undo the confirmed status
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=undo")
+    public Boolean undo;
+    public PutConsumerV1AppointmentsIdConfirmRequest withUndo(Boolean undo) {
+        this.undo = undo;
         return this;
     }
     

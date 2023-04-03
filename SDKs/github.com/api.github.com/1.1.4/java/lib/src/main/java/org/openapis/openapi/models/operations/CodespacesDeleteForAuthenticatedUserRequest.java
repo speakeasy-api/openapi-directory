@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodespacesDeleteForAuthenticatedUserRequest {
-    
-    public CodespacesDeleteForAuthenticatedUserPathParams pathParams;
-    public CodespacesDeleteForAuthenticatedUserRequest withPathParams(CodespacesDeleteForAuthenticatedUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the codespace.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=codespace_name")
+    public String codespaceName;
+    public CodespacesDeleteForAuthenticatedUserRequest withCodespaceName(String codespaceName) {
+        this.codespaceName = codespaceName;
         return this;
     }
     

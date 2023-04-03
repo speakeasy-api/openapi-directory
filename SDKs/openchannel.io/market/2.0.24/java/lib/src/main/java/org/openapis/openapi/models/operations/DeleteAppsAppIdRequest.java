@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAppsAppIdRequest {
-    
-    public DeleteAppsAppIdPathParams pathParams;
-    public DeleteAppsAppIdRequest withPathParams(DeleteAppsAppIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the App to be removed
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
+    public String appId;
+    public DeleteAppsAppIdRequest withAppId(String appId) {
+        this.appId = appId;
         return this;
     }
     
-    
-    public DeleteAppsAppIdQueryParams queryParams;
-    public DeleteAppsAppIdRequest withQueryParams(DeleteAppsAppIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The unique id of the developer that is removing this app
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=developerId")
+    public String developerId;
+    public DeleteAppsAppIdRequest withDeveloperId(String developerId) {
+        this.developerId = developerId;
         return this;
     }
     

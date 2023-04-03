@@ -31,11 +31,9 @@ lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/PostV1OrderFeedbackActionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostV1OrderFeedbackFormatEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostV1OrderFeedbackQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostV1OrderFeedbackRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostV1OrderFeedbackResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostV1OrderScreenFormatEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostV1OrderScreenQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostV1OrderScreenRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostV1OrderScreenResponse.java
 USAGE.md

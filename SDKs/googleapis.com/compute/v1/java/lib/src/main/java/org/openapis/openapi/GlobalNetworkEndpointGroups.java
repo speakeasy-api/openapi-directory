@@ -34,27 +34,28 @@ public class GlobalNetworkEndpointGroups {
     /**
      * Attach a network endpoint to the specified network endpoint group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsAttachNetworkEndpointsResponse computeGlobalNetworkEndpointGroupsAttachNetworkEndpoints(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsAttachNetworkEndpointsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsAttachNetworkEndpointsResponse computeGlobalNetworkEndpointGroupsAttachNetworkEndpoints(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsAttachNetworkEndpointsRequest request, org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsAttachNetworkEndpointsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsAttachNetworkEndpointsPathParams.class, baseUrl, "/projects/{project}/global/networkEndpointGroups/{networkEndpointGroup}/attachNetworkEndpoints", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsAttachNetworkEndpointsRequest.class, baseUrl, "/projects/{project}/global/networkEndpointGroups/{networkEndpointGroup}/attachNetworkEndpoints", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "globalNetworkEndpointGroupsAttachEndpointsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsAttachNetworkEndpointsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsAttachNetworkEndpointsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,25 +82,26 @@ public class GlobalNetworkEndpointGroups {
     /**
      * Deletes the specified network endpoint group.Note that the NEG cannot be deleted if there are backend services referencing it.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsDeleteResponse computeGlobalNetworkEndpointGroupsDelete(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsDeleteResponse computeGlobalNetworkEndpointGroupsDelete(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsDeleteRequest request, org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsDeletePathParams.class, baseUrl, "/projects/{project}/global/networkEndpointGroups/{networkEndpointGroup}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsDeleteRequest.class, baseUrl, "/projects/{project}/global/networkEndpointGroups/{networkEndpointGroup}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,27 +128,28 @@ public class GlobalNetworkEndpointGroups {
     /**
      * Detach the network endpoint from the specified network endpoint group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsResponse computeGlobalNetworkEndpointGroupsDetachNetworkEndpoints(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsResponse computeGlobalNetworkEndpointGroupsDetachNetworkEndpoints(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsRequest request, org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsPathParams.class, baseUrl, "/projects/{project}/global/networkEndpointGroups/{networkEndpointGroup}/detachNetworkEndpoints", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsRequest.class, baseUrl, "/projects/{project}/global/networkEndpointGroups/{networkEndpointGroup}/detachNetworkEndpoints", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "globalNetworkEndpointGroupsDetachEndpointsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsDetachNetworkEndpointsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -173,25 +176,26 @@ public class GlobalNetworkEndpointGroups {
     /**
      * Returns the specified network endpoint group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsGetResponse computeGlobalNetworkEndpointGroupsGet(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsGetResponse computeGlobalNetworkEndpointGroupsGet(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsGetRequest request, org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsGetPathParams.class, baseUrl, "/projects/{project}/global/networkEndpointGroups/{networkEndpointGroup}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsGetRequest.class, baseUrl, "/projects/{project}/global/networkEndpointGroups/{networkEndpointGroup}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -218,27 +222,28 @@ public class GlobalNetworkEndpointGroups {
     /**
      * Creates a network endpoint group in the specified project using the parameters that are included in the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsInsertResponse computeGlobalNetworkEndpointGroupsInsert(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsInsertResponse computeGlobalNetworkEndpointGroupsInsert(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsInsertRequest request, org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsInsertPathParams.class, baseUrl, "/projects/{project}/global/networkEndpointGroups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsInsertRequest.class, baseUrl, "/projects/{project}/global/networkEndpointGroups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "networkEndpointGroup", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -265,25 +270,26 @@ public class GlobalNetworkEndpointGroups {
     /**
      * Retrieves the list of network endpoint groups that are located in the specified project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsListResponse computeGlobalNetworkEndpointGroupsList(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsListResponse computeGlobalNetworkEndpointGroupsList(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsListRequest request, org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsListPathParams.class, baseUrl, "/projects/{project}/global/networkEndpointGroups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsListRequest.class, baseUrl, "/projects/{project}/global/networkEndpointGroups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -310,25 +316,26 @@ public class GlobalNetworkEndpointGroups {
     /**
      * Lists the network endpoints in the specified network endpoint group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsListNetworkEndpointsResponse computeGlobalNetworkEndpointGroupsListNetworkEndpoints(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsListNetworkEndpointsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsListNetworkEndpointsResponse computeGlobalNetworkEndpointGroupsListNetworkEndpoints(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsListNetworkEndpointsRequest request, org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsListNetworkEndpointsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsListNetworkEndpointsPathParams.class, baseUrl, "/projects/{project}/global/networkEndpointGroups/{networkEndpointGroup}/listNetworkEndpoints", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsListNetworkEndpointsRequest.class, baseUrl, "/projects/{project}/global/networkEndpointGroups/{networkEndpointGroup}/listNetworkEndpoints", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsListNetworkEndpointsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeGlobalNetworkEndpointGroupsListNetworkEndpointsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

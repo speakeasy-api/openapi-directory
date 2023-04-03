@@ -36,13 +36,13 @@ public class Filters {
      */
     public org.openapis.openapi.models.operations.GetSearchVersionNumberGeometryFilterExtResponse getSearchVersionNumberGeometryFilterExt(org.openapis.openapi.models.operations.GetSearchVersionNumberGeometryFilterExtRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSearchVersionNumberGeometryFilterExtPathParams.class, baseUrl, "/search/{versionNumber}/geometryFilter.{ext}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSearchVersionNumberGeometryFilterExtRequest.class, baseUrl, "/search/{versionNumber}/geometryFilter.{ext}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSearchVersionNumberGeometryFilterExtQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSearchVersionNumberGeometryFilterExtRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -75,13 +75,13 @@ public class Filters {
      */
     public org.openapis.openapi.models.operations.GetSearchVersionNumberRoutedFilterPositionHeadingExtResponse getSearchVersionNumberRoutedFilterPositionHeadingExt(org.openapis.openapi.models.operations.GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSearchVersionNumberRoutedFilterPositionHeadingExtPathParams.class, baseUrl, "/search/{versionNumber}/routedFilter/{position}/{heading}.{ext}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest.class, baseUrl, "/search/{versionNumber}/routedFilter/{position}/{heading}.{ext}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSearchVersionNumberRoutedFilterPositionHeadingExtQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSearchVersionNumberRoutedFilterPositionHeadingExtRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -114,12 +114,12 @@ public class Filters {
      */
     public org.openapis.openapi.models.operations.PostSearchVersionNumberGeometryFilterExtResponse postSearchVersionNumberGeometryFilterExt(org.openapis.openapi.models.operations.PostSearchVersionNumberGeometryFilterExtRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSearchVersionNumberGeometryFilterExtPathParams.class, baseUrl, "/search/{versionNumber}/geometryFilter.{ext}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSearchVersionNumberGeometryFilterExtRequest.class, baseUrl, "/search/{versionNumber}/geometryFilter.{ext}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -149,15 +149,15 @@ public class Filters {
      */
     public org.openapis.openapi.models.operations.PostSearchVersionNumberRoutedFilterPositionHeadingExtResponse postSearchVersionNumberRoutedFilterPositionHeadingExt(org.openapis.openapi.models.operations.PostSearchVersionNumberRoutedFilterPositionHeadingExtRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSearchVersionNumberRoutedFilterPositionHeadingExtPathParams.class, baseUrl, "/search/{versionNumber}/routedFilter/{position}/{heading}.{ext}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSearchVersionNumberRoutedFilterPositionHeadingExtRequest.class, baseUrl, "/search/{versionNumber}/routedFilter/{position}/{heading}.{ext}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostSearchVersionNumberRoutedFilterPositionHeadingExtQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostSearchVersionNumberRoutedFilterPositionHeadingExtRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

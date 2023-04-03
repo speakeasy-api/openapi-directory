@@ -4,34 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteUserChannelRequest {
-    
-    public DeleteUserChannelPathParams pathParams;
-    public DeleteUserChannelRequest withPathParams(DeleteUserChannelPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Channel](https://www.twilio.com/docs/api/chat/rest/channels) the resource belongs to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChannelSid")
+    public String channelSid;
+    public DeleteUserChannelRequest withChannelSid(String channelSid) {
+        this.channelSid = channelSid;
         return this;
     }
     
-    
-    public DeleteUserChannelHeaders headers;
-    public DeleteUserChannelRequest withHeaders(DeleteUserChannelHeaders headers) {
-        this.headers = headers;
+    /**
+     * The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) to read the resources from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public DeleteUserChannelRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public DeleteUserChannelSecurity security;
-    public DeleteUserChannelRequest withSecurity(DeleteUserChannelSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the [User](https://www.twilio.com/docs/api/chat/rest/users) to read the User Channel resources from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=UserSid")
+    public String userSid;
+    public DeleteUserChannelRequest withUserSid(String userSid) {
+        this.userSid = userSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public DeleteUserChannelRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The X-Twilio-Webhook-Enabled HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Twilio-Webhook-Enabled")
+    public org.openapis.openapi.models.shared.UserChannelEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled;
+    public DeleteUserChannelRequest withXTwilioWebhookEnabled(org.openapis.openapi.models.shared.UserChannelEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled) {
+        this.xTwilioWebhookEnabled = xTwilioWebhookEnabled;
         return this;
     }
     

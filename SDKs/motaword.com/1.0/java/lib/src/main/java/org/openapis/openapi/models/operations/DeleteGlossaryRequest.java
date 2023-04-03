@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteGlossaryRequest {
+    /**
+     * Glossary ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=glossaryId")
+    public Long glossaryId;
+    public DeleteGlossaryRequest withGlossaryId(Long glossaryId) {
+        this.glossaryId = glossaryId;
+        return this;
+    }
     
-    public DeleteGlossaryPathParams pathParams;
-    public DeleteGlossaryRequest withPathParams(DeleteGlossaryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public Long projectId;
+    public DeleteGlossaryRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     

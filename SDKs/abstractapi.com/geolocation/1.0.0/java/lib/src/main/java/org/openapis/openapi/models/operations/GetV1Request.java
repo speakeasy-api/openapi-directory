@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV1Request {
-    
-    public GetV1QueryParams queryParams;
-    public GetV1Request withQueryParams(GetV1QueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetV1Request withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public GetV1Request withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
     
-    public String serverURL;
-    public GetV1Request withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ip_address")
+    public String ipAddress;
+    public GetV1Request withIpAddress(String ipAddress) {
+        this.ipAddress = ipAddress;
         return this;
     }
     

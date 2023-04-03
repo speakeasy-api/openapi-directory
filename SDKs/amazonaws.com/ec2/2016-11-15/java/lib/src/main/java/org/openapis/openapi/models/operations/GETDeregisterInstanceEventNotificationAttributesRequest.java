@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeregisterInstanceEventNotificationAttributesRequest {
-    
-    public GETDeregisterInstanceEventNotificationAttributesQueryParams queryParams;
-    public GETDeregisterInstanceEventNotificationAttributesRequest withQueryParams(GETDeregisterInstanceEventNotificationAttributesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDeregisterInstanceEventNotificationAttributesActionEnum action;
+    public GETDeregisterInstanceEventNotificationAttributesRequest withAction(GETDeregisterInstanceEventNotificationAttributesActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETDeregisterInstanceEventNotificationAttributesRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
     
-    public GETDeregisterInstanceEventNotificationAttributesHeaders headers;
-    public GETDeregisterInstanceEventNotificationAttributesRequest withHeaders(GETDeregisterInstanceEventNotificationAttributesHeaders headers) {
-        this.headers = headers;
+    /**
+     * Information about the tag keys to deregister.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceTagAttribute")
+    public GETDeregisterInstanceEventNotificationAttributesInstanceTagAttribute instanceTagAttribute;
+    public GETDeregisterInstanceEventNotificationAttributesRequest withInstanceTagAttribute(GETDeregisterInstanceEventNotificationAttributesInstanceTagAttribute instanceTagAttribute) {
+        this.instanceTagAttribute = instanceTagAttribute;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDeregisterInstanceEventNotificationAttributesVersionEnum version;
+    public GETDeregisterInstanceEventNotificationAttributesRequest withVersion(GETDeregisterInstanceEventNotificationAttributesVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDeregisterInstanceEventNotificationAttributesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDeregisterInstanceEventNotificationAttributesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDeregisterInstanceEventNotificationAttributesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDeregisterInstanceEventNotificationAttributesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDeregisterInstanceEventNotificationAttributesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDeregisterInstanceEventNotificationAttributesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDeregisterInstanceEventNotificationAttributesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

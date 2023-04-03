@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutversionRequest {
-    
-    public PutversionPathParams pathParams;
-    public PutversionRequest withPathParams(PutversionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public PutversionRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public PutversionRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public PutversionHeaders headers;
-    public PutversionRequest withHeaders(PutversionHeaders headers) {
-        this.headers = headers;
+    /**
+     * Two letter word that identifies the data structure
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=acronym")
+    public String acronym;
+    public PutversionRequest withAcronym(String acronym) {
+        this.acronym = acronym;
+        return this;
+    }
+    
+    /**
+     * Id of the document
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutversionRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Id of the version to update
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionId")
+    public String versionId;
+    public PutversionRequest withVersionId(String versionId) {
+        this.versionId = versionId;
         return this;
     }
     

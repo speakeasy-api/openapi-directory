@@ -4,20 +4,18 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCatalogObjectRequest {
-    
-    public DeleteCatalogObjectPathParams pathParams;
-    public DeleteCatalogObjectRequest withPathParams(DeleteCatalogObjectPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteCatalogObjectSecurity security;
-    public DeleteCatalogObjectRequest withSecurity(DeleteCatalogObjectSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the catalog object to be deleted. When an object is deleted, other
+     * objects in the graph that depend on that object will be deleted as well (for example, deleting a
+     * catalog item will delete its catalog item variations).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=object_id")
+    public String objectId;
+    public DeleteCatalogObjectRequest withObjectId(String objectId) {
+        this.objectId = objectId;
         return this;
     }
     

@@ -7,34 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WebinarUpdateJsonRequest {
-    
-    public WebinarUpdateJsonPathParams pathParams;
-    public WebinarUpdateJsonRequest withPathParams(WebinarUpdateJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public WebinarUpdateJsonQueryParams queryParams;
-    public WebinarUpdateJsonRequest withQueryParams(WebinarUpdateJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Webinar.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public WebinarUpdateApplicationJSON request;
-    public WebinarUpdateJsonRequest withRequest(WebinarUpdateApplicationJSON request) {
-        this.request = request;
+    public WebinarUpdateApplicationJSON requestBody;
+    public WebinarUpdateJsonRequest withRequestBody(WebinarUpdateApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Webinar occurrence id. Support change of agenda, start_time, duration, settings: {host_video, panelist_video, hd_video, watermark, auto_recording}
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=occurrence_id")
+    public String occurrenceId;
+    public WebinarUpdateJsonRequest withOccurrenceId(String occurrenceId) {
+        this.occurrenceId = occurrenceId;
+        return this;
+    }
     
-    public WebinarUpdateJsonSecurity security;
-    public WebinarUpdateJsonRequest withSecurity(WebinarUpdateJsonSecurity security) {
-        this.security = security;
+    /**
+     * The webinar ID in "**long**" format(represented as int64 data type in JSON). 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webinarId")
+    public Long webinarId;
+    public WebinarUpdateJsonRequest withWebinarId(Long webinarId) {
+        this.webinarId = webinarId;
         return this;
     }
     

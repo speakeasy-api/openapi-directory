@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPrimaryIpsRequest {
+    /**
+     * Can be used to filter resources by their ip. The response will only contain the resources matching the specified ip.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ip")
+    public String ip;
+    public GetPrimaryIpsRequest withIp(String ip) {
+        this.ip = ip;
+        return this;
+    }
     
-    public GetPrimaryIpsQueryParams queryParams;
-    public GetPrimaryIpsRequest withQueryParams(GetPrimaryIpsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Can be used to filter resources by labels. The response will only contain resources matching the label selector.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=label_selector")
+    public String labelSelector;
+    public GetPrimaryIpsRequest withLabelSelector(String labelSelector) {
+        this.labelSelector = labelSelector;
+        return this;
+    }
+    
+    /**
+     * Can be used to filter resources by their name. The response will only contain the resources matching the specified name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public GetPrimaryIpsRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Can be used multiple times. Choices id id:asc id:desc created created:asc created:desc
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetPrimaryIpsSortEnum sort;
+    public GetPrimaryIpsRequest withSort(GetPrimaryIpsSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

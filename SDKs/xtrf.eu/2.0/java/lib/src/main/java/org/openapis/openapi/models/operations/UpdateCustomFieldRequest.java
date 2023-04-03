@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCustomFieldRequest {
-    
-    public UpdateCustomFieldPathParams pathParams;
-    public UpdateCustomFieldRequest withPathParams(UpdateCustomFieldPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated custom field of a given client.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CustomFieldDTO request;
-    public UpdateCustomFieldRequest withRequest(org.openapis.openapi.models.shared.CustomFieldDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CustomFieldDTO customFieldDTO;
+    public UpdateCustomFieldRequest withCustomFieldDTO(org.openapis.openapi.models.shared.CustomFieldDTO customFieldDTO) {
+        this.customFieldDTO = customFieldDTO;
+        return this;
+    }
+    
+    /**
+     * custom field's key
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customFieldKey")
+    public String customFieldKey;
+    public UpdateCustomFieldRequest withCustomFieldKey(String customFieldKey) {
+        this.customFieldKey = customFieldKey;
+        return this;
+    }
+    
+    /**
+     * client's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customerId")
+    public Long customerId;
+    public UpdateCustomFieldRequest withCustomerId(Long customerId) {
+        this.customerId = customerId;
         return this;
     }
     

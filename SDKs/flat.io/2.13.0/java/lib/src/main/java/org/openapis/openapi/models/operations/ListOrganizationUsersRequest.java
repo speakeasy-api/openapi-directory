@@ -4,20 +4,120 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListOrganizationUsersRequest {
-    
-    public ListOrganizationUsersQueryParams queryParams;
-    public ListOrganizationUsersRequest withQueryParams(ListOrganizationUsersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Sort direction
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public org.openapis.openapi.models.shared.SortDirectionEnum direction;
+    public ListOrganizationUsersRequest withDirection(org.openapis.openapi.models.shared.SortDirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
+    /**
+     * Filter users by group
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
+    public String[] group;
+    public ListOrganizationUsersRequest withGroup(String[] group) {
+        this.group = group;
+        return this;
+    }
     
-    public ListOrganizationUsersSecurity security;
-    public ListOrganizationUsersRequest withSecurity(ListOrganizationUsersSecurity security) {
-        this.security = security;
+    /**
+     * Filter users by license expiration date or `active` / `notActive`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=licenseExpirationDate")
+    public String[] licenseExpirationDate;
+    public ListOrganizationUsersRequest withLicenseExpirationDate(String[] licenseExpirationDate) {
+        this.licenseExpirationDate = licenseExpirationDate;
+        return this;
+    }
+    
+    /**
+     * This is the maximum number of objects that may be returned
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListOrganizationUsersRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * An opaque string cursor to fetch the next page of data.
+     * The paginated API URLs are returned in the `Link` header when requesting the API. These URLs will contain a `next` and `previous` cursor based on the available data.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next")
+    public String next;
+    public ListOrganizationUsersRequest withNext(String next) {
+        this.next = next;
+        return this;
+    }
+    
+    /**
+     * Filter users who don't have an active license
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=noActiveLicense")
+    public Boolean noActiveLicense;
+    public ListOrganizationUsersRequest withNoActiveLicense(Boolean noActiveLicense) {
+        this.noActiveLicense = noActiveLicense;
+        return this;
+    }
+    
+    /**
+     * Return only user ids
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onlyIds")
+    public Boolean onlyIds;
+    public ListOrganizationUsersRequest withOnlyIds(Boolean onlyIds) {
+        this.onlyIds = onlyIds;
+        return this;
+    }
+    
+    /**
+     * An opaque string cursor to fetch the previous page of data.
+     * The paginated API URLs are returned in the `Link` header when requesting the API. These URLs will contain a `next` and `previous` cursor based on the available data.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=previous")
+    public String previous;
+    public ListOrganizationUsersRequest withPrevious(String previous) {
+        this.previous = previous;
+        return this;
+    }
+    
+    /**
+     * The query to search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public ListOrganizationUsersRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    /**
+     * Filter users by role
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=role")
+    public org.openapis.openapi.models.shared.RoleEnum[] role;
+    public ListOrganizationUsersRequest withRole(org.openapis.openapi.models.shared.RoleEnum[] role) {
+        this.role = role;
+        return this;
+    }
+    
+    /**
+     * The order to sort the user list
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public ListOrganizationUsersRequest withSort(String sort) {
+        this.sort = sort;
         return this;
     }
     

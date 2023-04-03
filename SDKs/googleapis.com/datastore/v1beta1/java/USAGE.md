@@ -7,16 +7,12 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.operations.DatastoreProjectsExportSecurityOption1;
 import org.openapis.openapi.models.operations.DatastoreProjectsExportSecurityOption2;
 import org.openapis.openapi.models.operations.DatastoreProjectsExportSecurity;
-import org.openapis.openapi.models.operations.DatastoreProjectsExportPathParams;
-import org.openapis.openapi.models.operations.DatastoreProjectsExportQueryParams;
 import org.openapis.openapi.models.operations.DatastoreProjectsExportRequest;
 import org.openapis.openapi.models.operations.DatastoreProjectsExportResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.GoogleDatastoreAdminV1beta1ExportEntitiesRequest;
 import org.openapis.openapi.models.shared.GoogleDatastoreAdminV1beta1EntityFilter;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -25,54 +21,47 @@ public class Application {
                 .build();
 
             DatastoreProjectsExportRequest req = new DatastoreProjectsExportRequest() {{
-                security = new DatastoreProjectsExportSecurity() {{
-                    option1 = new DatastoreProjectsExportSecurityOption1() {{
-                        oauth2 = new SchemeOauth2() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                        oauth2c = new SchemeOauth2c() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                    }};
-                }};
-                pathParams = new DatastoreProjectsExportPathParams() {{
-                    projectId = "corrupti";
-                }};
-                queryParams = new DatastoreProjectsExportQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new GoogleDatastoreAdminV1beta1ExportEntitiesRequest() {{
+                dollarXgafv = "2";
+                googleDatastoreAdminV1beta1ExportEntitiesRequest = new GoogleDatastoreAdminV1beta1ExportEntitiesRequest() {{
                     entityFilter = new GoogleDatastoreAdminV1beta1EntityFilter() {{
                         kinds = new String[]{{
-                            add("iure"),
-                            add("magnam"),
+                            add("distinctio"),
+                            add("quibusdam"),
+                            add("unde"),
                         }};
                         namespaceIds = new String[]{{
-                            add("ipsa"),
-                            add("delectus"),
-                            add("tempora"),
-                            add("suscipit"),
+                            add("corrupti"),
+                            add("illum"),
+                            add("vel"),
+                            add("error"),
                         }};
                     }};
                     labels = new java.util.HashMap<String, String>() {{
-                        put("minus", "placeat");
-                        put("voluptatum", "iusto");
+                        put("suscipit", "iure");
+                        put("magnam", "debitis");
+                        put("ipsa", "delectus");
                     }};
-                    outputUrlPrefix = "excepturi";
+                    outputUrlPrefix = "tempora";
                 }};
-            }};            
+                accessToken = "suscipit";
+                alt = "media";
+                callback = "minus";
+                fields = "placeat";
+                key = "voluptatum";
+                oauthToken = "iusto";
+                prettyPrint = false;
+                projectId = "excepturi";
+                quotaUser = "nisi";
+                uploadType = "recusandae";
+                uploadProtocol = "temporibus";
+            }}            
 
-            DatastoreProjectsExportResponse res = sdk.projects.datastoreProjectsExport(req);
+            DatastoreProjectsExportResponse res = sdk.projects.datastoreProjectsExport(req, new DatastoreProjectsExportSecurity() {{
+                option1 = new DatastoreProjectsExportSecurityOption1() {{
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                }};
+            }});
 
             if (res.googleLongrunningOperation.isPresent()) {
                 // handle response

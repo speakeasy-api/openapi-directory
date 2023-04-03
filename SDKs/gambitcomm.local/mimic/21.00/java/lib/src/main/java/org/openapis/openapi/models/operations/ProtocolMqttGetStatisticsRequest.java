@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolMqttGetStatisticsRequest {
-    
-    public ProtocolMqttGetStatisticsPathParams pathParams;
-    public ProtocolMqttGetStatisticsRequest withPathParams(ProtocolMqttGetStatisticsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to show MQTT statistics
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolMqttGetStatisticsRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

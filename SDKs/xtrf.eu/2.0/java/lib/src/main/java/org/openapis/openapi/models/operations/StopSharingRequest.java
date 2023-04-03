@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopSharingRequest {
-    
-    public StopSharingPathParams pathParams;
-    public StopSharingRequest withPathParams(StopSharingPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * File sharing stopped for a project task.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.FilesDto request;
-    public StopSharingRequest withRequest(org.openapis.openapi.models.shared.FilesDto request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.FilesDto filesDto;
+    public StopSharingRequest withFilesDto(org.openapis.openapi.models.shared.FilesDto filesDto) {
+        this.filesDto = filesDto;
+        return this;
+    }
+    
+    /**
+     * job's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
+    public String jobId;
+    public StopSharingRequest withJobId(String jobId) {
+        this.jobId = jobId;
         return this;
     }
     

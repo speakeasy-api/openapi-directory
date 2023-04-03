@@ -4,13 +4,237 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchTypePointSnotelRequest {
+    /**
+     * Archive change date from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.from")
+    public OffsetDateTime changedateFrom;
+    public SearchTypePointSnotelRequest withChangedateFrom(OffsetDateTime changedateFrom) {
+        this.changedateFrom = changedateFrom;
+        return this;
+    }
     
-    public SearchTypePointSnotelQueryParams queryParams;
-    public SearchTypePointSnotelRequest withQueryParams(SearchTypePointSnotelQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Archive change date to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.to")
+    public OffsetDateTime changedateTo;
+    public SearchTypePointSnotelRequest withChangedateTo(OffsetDateTime changedateTo) {
+        this.changedateTo = changedateTo;
+        return this;
+    }
+    
+    /**
+     * Archive create date from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.from")
+    public OffsetDateTime createdateFrom;
+    public SearchTypePointSnotelRequest withCreatedateFrom(OffsetDateTime createdateFrom) {
+        this.createdateFrom = createdateFrom;
+        return this;
+    }
+    
+    /**
+     * Archive create date to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.to")
+    public OffsetDateTime createdateTo;
+    public SearchTypePointSnotelRequest withCreatedateTo(OffsetDateTime createdateTo) {
+        this.createdateTo = createdateTo;
+        return this;
+    }
+    
+    /**
+     * Search description
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
+    public String description;
+    public SearchTypePointSnotelRequest withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    
+    /**
+     * File suffix
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filesuffix")
+    public String filesuffix;
+    public SearchTypePointSnotelRequest withFilesuffix(String filesuffix) {
+        this.filesuffix = filesuffix;
+        return this;
+    }
+    
+    /**
+     * From date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
+    public OffsetDateTime fromdate;
+    public SearchTypePointSnotelRequest withFromdate(OffsetDateTime fromdate) {
+        this.fromdate = fromdate;
+        return this;
+    }
+    
+    /**
+     * Parent entry
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
+    public String group;
+    public SearchTypePointSnotelRequest withGroup(String group) {
+        this.group = group;
+        return this;
+    }
+    
+    /**
+     * Max number of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
+    public Long max;
+    public SearchTypePointSnotelRequest withMax(Long max) {
+        this.max = max;
+        return this;
+    }
+    
+    /**
+     * Northern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlatitude")
+    public Float maxlatitude;
+    public SearchTypePointSnotelRequest withMaxlatitude(Float maxlatitude) {
+        this.maxlatitude = maxlatitude;
+        return this;
+    }
+    
+    /**
+     * Eastern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlongitude")
+    public Float maxlongitude;
+    public SearchTypePointSnotelRequest withMaxlongitude(Float maxlongitude) {
+        this.maxlongitude = maxlongitude;
+        return this;
+    }
+    
+    /**
+     * Southern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlatitude")
+    public Float minlatitude;
+    public SearchTypePointSnotelRequest withMinlatitude(Float minlatitude) {
+        this.minlatitude = minlatitude;
+        return this;
+    }
+    
+    /**
+     * Western bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlongitude")
+    public Float minlongitude;
+    public SearchTypePointSnotelRequest withMinlongitude(Float minlongitude) {
+        this.minlongitude = minlongitude;
+        return this;
+    }
+    
+    /**
+     * Search name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public SearchTypePointSnotelRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * HUC ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_point_snotel.huc_id")
+    public String searchTypePointSnotelHucId;
+    public SearchTypePointSnotelRequest withSearchTypePointSnotelHucId(String searchTypePointSnotelHucId) {
+        this.searchTypePointSnotelHucId = searchTypePointSnotelHucId;
+        return this;
+    }
+    
+    /**
+     * HUC Name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_point_snotel.huc_name")
+    public String searchTypePointSnotelHucName;
+    public SearchTypePointSnotelRequest withSearchTypePointSnotelHucName(String searchTypePointSnotelHucName) {
+        this.searchTypePointSnotelHucName = searchTypePointSnotelHucName;
+        return this;
+    }
+    
+    /**
+     * Network
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_point_snotel.network")
+    public String searchTypePointSnotelNetwork;
+    public SearchTypePointSnotelRequest withSearchTypePointSnotelNetwork(String searchTypePointSnotelNetwork) {
+        this.searchTypePointSnotelNetwork = searchTypePointSnotelNetwork;
+        return this;
+    }
+    
+    /**
+     * Site ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_point_snotel.site_id")
+    public String searchTypePointSnotelSiteId;
+    public SearchTypePointSnotelRequest withSearchTypePointSnotelSiteId(String searchTypePointSnotelSiteId) {
+        this.searchTypePointSnotelSiteId = searchTypePointSnotelSiteId;
+        return this;
+    }
+    
+    /**
+     * Site Number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_point_snotel.site_number")
+    public String searchTypePointSnotelSiteNumber;
+    public SearchTypePointSnotelRequest withSearchTypePointSnotelSiteNumber(String searchTypePointSnotelSiteNumber) {
+        this.searchTypePointSnotelSiteNumber = searchTypePointSnotelSiteNumber;
+        return this;
+    }
+    
+    /**
+     * State
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_point_snotel.state")
+    public String searchTypePointSnotelState;
+    public SearchTypePointSnotelRequest withSearchTypePointSnotelState(String searchTypePointSnotelState) {
+        this.searchTypePointSnotelState = searchTypePointSnotelState;
+        return this;
+    }
+    
+    /**
+     * Number to skip
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
+    public Long skip;
+    public SearchTypePointSnotelRequest withSkip(Long skip) {
+        this.skip = skip;
+        return this;
+    }
+    
+    /**
+     * Search text
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
+    public String text;
+    public SearchTypePointSnotelRequest withText(String text) {
+        this.text = text;
+        return this;
+    }
+    
+    /**
+     * To date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
+    public OffsetDateTime todate;
+    public SearchTypePointSnotelRequest withTodate(OffsetDateTime todate) {
+        this.todate = todate;
         return this;
     }
     

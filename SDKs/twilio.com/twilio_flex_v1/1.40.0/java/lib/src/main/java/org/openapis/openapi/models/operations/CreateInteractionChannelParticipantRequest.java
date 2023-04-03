@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateInteractionChannelParticipantRequest {
+    /**
+     * The Channel Sid for the new Channel Participant.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChannelSid")
+    public String channelSid;
+    public CreateInteractionChannelParticipantRequest withChannelSid(String channelSid) {
+        this.channelSid = channelSid;
+        return this;
+    }
     
-    public CreateInteractionChannelParticipantPathParams pathParams;
-    public CreateInteractionChannelParticipantRequest withPathParams(CreateInteractionChannelParticipantPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The Interaction Sid for the new Channel Participant.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=InteractionSid")
+    public String interactionSid;
+    public CreateInteractionChannelParticipantRequest withInteractionSid(String interactionSid) {
+        this.interactionSid = interactionSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateInteractionChannelParticipantCreateInteractionChannelParticipantRequest request;
-    public CreateInteractionChannelParticipantRequest withRequest(CreateInteractionChannelParticipantCreateInteractionChannelParticipantRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateInteractionChannelParticipantSecurity security;
-    public CreateInteractionChannelParticipantRequest withSecurity(CreateInteractionChannelParticipantSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateInteractionChannelParticipantRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateInteractionChannelParticipantCreateInteractionChannelParticipantRequest requestBody;
+    public CreateInteractionChannelParticipantRequest withRequestBody(CreateInteractionChannelParticipantCreateInteractionChannelParticipantRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

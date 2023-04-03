@@ -4,20 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIdRequest {
-    
-    public DeleteWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIdPathParams pathParams;
-    public DeleteWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIdRequest withPathParams(DeleteWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The key ID matching the project deploy key.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key_id")
+    public String keyId;
+    public DeleteWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIdRequest withKeyId(String keyId) {
+        this.keyId = keyId;
         return this;
     }
     
+    /**
+     * The project in question. This is the actual `key` assigned
+     * to the project.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_key")
+    public String projectKey;
+    public DeleteWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIdRequest withProjectKey(String projectKey) {
+        this.projectKey = projectKey;
+        return this;
+    }
     
-    public DeleteWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIdSecurity security;
-    public DeleteWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIdRequest withSecurity(DeleteWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIdSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public DeleteWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIdRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

@@ -4,20 +4,77 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopPointSearchRequest {
-    
-    public StopPointSearchPathParams pathParams;
-    public StopPointSearchRequest withPathParams(StopPointSearchPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * True to only return stations in that have Fares data available for single fares to another station.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=faresOnly")
+    public Boolean faresOnly;
+    public StopPointSearchRequest withFaresOnly(Boolean faresOnly) {
+        this.faresOnly = faresOnly;
         return this;
     }
     
+    /**
+     * If true, returns results including HUBs.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeHubs")
+    public Boolean includeHubs;
+    public StopPointSearchRequest withIncludeHubs(Boolean includeHubs) {
+        this.includeHubs = includeHubs;
+        return this;
+    }
     
-    public StopPointSearchQueryParams queryParams;
-    public StopPointSearchRequest withQueryParams(StopPointSearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * An optional, parameter separated list of the lines to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lines")
+    public String[] lines;
+    public StopPointSearchRequest withLines(String[] lines) {
+        this.lines = lines;
+        return this;
+    }
+    
+    /**
+     * An optional result limit, defaulting to and with a maximum of 50. Since children of the stop point heirarchy are returned for matches,
+     *             it is possible that the flattened result set will contain more than 50 items.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Integer maxResults;
+    public StopPointSearchRequest withMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * An optional, parameter separated list of the modes to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modes")
+    public String[] modes;
+    public StopPointSearchRequest withModes(String[] modes) {
+        this.modes = modes;
+        return this;
+    }
+    
+    /**
+     * The query string, case-insensitive. Leading and trailing wildcards are applied automatically.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=query")
+    public String query;
+    public StopPointSearchRequest withQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    
+    /**
+     * If the national-rail mode is included, this flag will filter the national rail stations so that only those operated by TfL are returned
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tflOperatedNationalRailStationsOnly")
+    public Boolean tflOperatedNationalRailStationsOnly;
+    public StopPointSearchRequest withTflOperatedNationalRailStationsOnly(Boolean tflOperatedNationalRailStationsOnly) {
+        this.tflOperatedNationalRailStationsOnly = tflOperatedNationalRailStationsOnly;
         return this;
     }
     

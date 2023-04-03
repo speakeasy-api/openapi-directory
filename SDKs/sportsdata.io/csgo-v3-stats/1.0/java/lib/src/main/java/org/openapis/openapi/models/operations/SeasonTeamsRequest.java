@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SeasonTeamsRequest {
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public SeasonTeamsFormatEnum format;
+    public SeasonTeamsRequest withFormat(SeasonTeamsFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public SeasonTeamsPathParams pathParams;
-    public SeasonTeamsRequest withPathParams(SeasonTeamsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique FantasyData Season ID. SeasonIDs can be found in the Competitions and Competition Details endpoints. 
+     * Examples: &lt;code&gt;100000023&lt;/code&gt;, &lt;code&gt;100000024&lt;/code&gt;, etc
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=seasonid")
+    public String seasonid;
+    public SeasonTeamsRequest withSeasonid(String seasonid) {
+        this.seasonid = seasonid;
         return this;
     }
     

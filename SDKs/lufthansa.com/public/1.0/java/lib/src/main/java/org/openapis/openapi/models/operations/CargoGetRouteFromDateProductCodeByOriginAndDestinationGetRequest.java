@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest {
-    
-    public CargoGetRouteFromDateProductCodeByOriginAndDestinationGetPathParams pathParams;
-    public CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest withPathParams(CargoGetRouteFromDateProductCodeByOriginAndDestinationGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public CargoGetRouteFromDateProductCodeByOriginAndDestinationGetHeaders headers;
-    public CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest withHeaders(CargoGetRouteFromDateProductCodeByOriginAndDestinationGetHeaders headers) {
-        this.headers = headers;
+    /**
+     * Arrival airport : 3-letter IATA airport code, e.g. HKG.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destination")
+    public String destination;
+    public CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest withDestination(String destination) {
+        this.destination = destination;
         return this;
     }
     
+    /**
+     * Departure date in the local time of the departure airport. Based on LAT (Latest Acceptance Time). format : yyyy-MM-dd eg : 2017-07-15
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fromDate")
+    public String fromDate;
+    public CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest withFromDate(String fromDate) {
+        this.fromDate = fromDate;
+        return this;
+    }
     
-    public CargoGetRouteFromDateProductCodeByOriginAndDestinationGetSecurity security;
-    public CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest withSecurity(CargoGetRouteFromDateProductCodeByOriginAndDestinationGetSecurity security) {
-        this.security = security;
+    /**
+     * Departure Airport : 3-letter IATA airport code, e.g. FRA.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=origin")
+    public String origin;
+    public CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest withOrigin(String origin) {
+        this.origin = origin;
+        return this;
+    }
+    
+    /**
+     * Product code for requested service and specials : 3-letter eg: YNZ
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productCode")
+    public CargoGetRouteFromDateProductCodeByOriginAndDestinationGetProductCodeEnum productCode;
+    public CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest withProductCode(CargoGetRouteFromDateProductCodeByOriginAndDestinationGetProductCodeEnum productCode) {
+        this.productCode = productCode;
         return this;
     }
     

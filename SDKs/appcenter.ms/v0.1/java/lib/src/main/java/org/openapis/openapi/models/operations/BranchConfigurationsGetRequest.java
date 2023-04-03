@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BranchConfigurationsGetRequest {
-    
-    public BranchConfigurationsGetPathParams pathParams;
-    public BranchConfigurationsGetRequest withPathParams(BranchConfigurationsGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public BranchConfigurationsGetRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * The branch name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branch")
+    public String branch;
+    public BranchConfigurationsGetRequest withBranch(String branch) {
+        this.branch = branch;
+        return this;
+    }
     
-    public BranchConfigurationsGetSecurity security;
-    public BranchConfigurationsGetRequest withSecurity(BranchConfigurationsGetSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public BranchConfigurationsGetRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

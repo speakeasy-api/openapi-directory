@@ -4,34 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListParticipantRequest {
-    
-    public ListParticipantPathParams pathParams;
-    public ListParticipantRequest withPathParams(ListParticipantPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Participant resources to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public ListParticipantRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public ListParticipantQueryParams queryParams;
-    public ListParticipantRequest withQueryParams(ListParticipantQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Whether to return only participants who are coaching another call. Can be: `true` or `false`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Coaching")
+    public Boolean coaching;
+    public ListParticipantRequest withCoaching(Boolean coaching) {
+        this.coaching = coaching;
         return this;
     }
     
-    
-    public ListParticipantSecurity security;
-    public ListParticipantRequest withSecurity(ListParticipantSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the conference with the participants to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConferenceSid")
+    public String conferenceSid;
+    public ListParticipantRequest withConferenceSid(String conferenceSid) {
+        this.conferenceSid = conferenceSid;
         return this;
     }
     
+    /**
+     * Whether to return only participants that are on hold. Can be: `true` or `false`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Hold")
+    public Boolean hold;
+    public ListParticipantRequest withHold(Boolean hold) {
+        this.hold = hold;
+        return this;
+    }
     
-    public String serverURL;
-    public ListParticipantRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Whether to return only participants that are muted. Can be: `true` or `false`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Muted")
+    public Boolean muted;
+    public ListParticipantRequest withMuted(Boolean muted) {
+        this.muted = muted;
+        return this;
+    }
+    
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListParticipantRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListParticipantRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListParticipantRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

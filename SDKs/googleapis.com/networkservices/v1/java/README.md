@@ -18,10 +18,9 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.NetworkservicesProjectsLocationsEndpointPoliciesCreateSecurity;
-import org.openapis.openapi.models.operations.NetworkservicesProjectsLocationsEndpointPoliciesCreatePathParams;
-import org.openapis.openapi.models.operations.NetworkservicesProjectsLocationsEndpointPoliciesCreateQueryParams;
 import org.openapis.openapi.models.operations.NetworkservicesProjectsLocationsEndpointPoliciesCreateRequest;
 import org.openapis.openapi.models.operations.NetworkservicesProjectsLocationsEndpointPoliciesCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.EndpointPolicyTypeEnum;
 import org.openapis.openapi.models.shared.EndpointPolicyInput;
 import org.openapis.openapi.models.shared.TrafficPortSelector;
@@ -29,10 +28,7 @@ import org.openapis.openapi.models.shared.EndpointMatcher;
 import org.openapis.openapi.models.shared.EndpointMatcherMetadataLabelMatcherMetadataLabelMatchCriteriaEnum;
 import org.openapis.openapi.models.shared.EndpointMatcherMetadataLabelMatcher;
 import org.openapis.openapi.models.shared.EndpointMatcherMetadataLabelMatcherMetadataLabels;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -41,74 +37,68 @@ public class Application {
                 .build();
 
             NetworkservicesProjectsLocationsEndpointPoliciesCreateRequest req = new NetworkservicesProjectsLocationsEndpointPoliciesCreateRequest() {{
-                security = new NetworkservicesProjectsLocationsEndpointPoliciesCreateSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new NetworkservicesProjectsLocationsEndpointPoliciesCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new NetworkservicesProjectsLocationsEndpointPoliciesCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    endpointPolicyId = "nulla";
-                    fields = "corrupti";
-                    key = "illum";
-                    oauthToken = "vel";
-                    prettyPrint = false;
-                    quotaUser = "error";
-                    uploadType = "deserunt";
-                    uploadProtocol = "suscipit";
-                }};
-                request = new EndpointPolicyInput() {{
-                    authorizationPolicy = "iure";
-                    clientTlsPolicy = "magnam";
-                    description = "debitis";
+                dollarXgafv = "2";
+                endpointPolicyInput = new EndpointPolicyInput() {{
+                    authorizationPolicy = "provident";
+                    clientTlsPolicy = "distinctio";
+                    description = "quibusdam";
                     endpointMatcher = new EndpointMatcher() {{
                         metadataLabelMatcher = new EndpointMatcherMetadataLabelMatcher() {{
-                            metadataLabelMatchCriteria = "METADATA_LABEL_MATCH_CRITERIA_UNSPECIFIED";
+                            metadataLabelMatchCriteria = "MATCH_ANY";
                             metadataLabels = new org.openapis.openapi.models.shared.EndpointMatcherMetadataLabelMatcherMetadataLabels[]{{
                                 add(new EndpointMatcherMetadataLabelMatcherMetadataLabels() {{
-                                    labelName = "tempora";
+                                    labelName = "corrupti";
+                                    labelValue = "illum";
+                                }}),
+                                add(new EndpointMatcherMetadataLabelMatcherMetadataLabels() {{
+                                    labelName = "vel";
+                                    labelValue = "error";
+                                }}),
+                                add(new EndpointMatcherMetadataLabelMatcherMetadataLabels() {{
+                                    labelName = "deserunt";
                                     labelValue = "suscipit";
                                 }}),
                                 add(new EndpointMatcherMetadataLabelMatcherMetadataLabels() {{
-                                    labelName = "molestiae";
-                                    labelValue = "minus";
-                                }}),
-                                add(new EndpointMatcherMetadataLabelMatcherMetadataLabels() {{
-                                    labelName = "placeat";
-                                    labelValue = "voluptatum";
-                                }}),
-                                add(new EndpointMatcherMetadataLabelMatcherMetadataLabels() {{
-                                    labelName = "iusto";
-                                    labelValue = "excepturi";
+                                    labelName = "iure";
+                                    labelValue = "magnam";
                                 }}),
                             }};
                         }};
                     }};
                     labels = new java.util.HashMap<String, String>() {{
-                        put("recusandae", "temporibus");
-                        put("ab", "quis");
+                        put("ipsa", "delectus");
+                        put("tempora", "suscipit");
+                        put("molestiae", "minus");
+                        put("placeat", "voluptatum");
                     }};
-                    name = "veritatis";
-                    serverTlsPolicy = "deserunt";
+                    name = "iusto";
+                    serverTlsPolicy = "excepturi";
                     trafficPortSelector = new TrafficPortSelector() {{
                         ports = new String[]{{
-                            add("ipsam"),
+                            add("recusandae"),
+                            add("temporibus"),
                         }};
                     }};
-                    type = "GRPC_SERVER";
+                    type = "ENDPOINT_POLICY_TYPE_UNSPECIFIED";
                 }};
-            }};            
+                accessToken = "quis";
+                alt = "json";
+                callback = "deserunt";
+                endpointPolicyId = "perferendis";
+                fields = "ipsam";
+                key = "repellendus";
+                oauthToken = "sapiente";
+                parent = "quo";
+                prettyPrint = false;
+                quotaUser = "odit";
+                uploadType = "at";
+                uploadProtocol = "at";
+            }}            
 
-            NetworkservicesProjectsLocationsEndpointPoliciesCreateResponse res = sdk.projects.networkservicesProjectsLocationsEndpointPoliciesCreate(req);
+            NetworkservicesProjectsLocationsEndpointPoliciesCreateResponse res = sdk.projects.networkservicesProjectsLocationsEndpointPoliciesCreate(req, new NetworkservicesProjectsLocationsEndpointPoliciesCreateSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.operation.isPresent()) {
                 // handle response
@@ -120,7 +110,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### projects

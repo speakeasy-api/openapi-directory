@@ -322,7 +322,7 @@ public class Settings {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetStopWordsResponse getStopWords(org.openapis.openapi.models.operations.GetStopWordsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetStopWordsResponse getStopWords(String[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/indexes/books/settings/stop-words");
         
@@ -741,7 +741,7 @@ public class Settings {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ResetSynonymsResponse resetSynonyms(org.openapis.openapi.models.operations.ResetSynonymsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ResetSynonymsResponse resetSynonyms(byte[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/indexes/books/settings/synonyms");
         
@@ -808,7 +808,7 @@ public class Settings {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateDisplayedAttributesResponse updateDisplayedAttributes(org.openapis.openapi.models.operations.UpdateDisplayedAttributesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateDisplayedAttributesResponse updateDisplayedAttributes(String[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/indexes/books/settings/displayed-attributes");
         
@@ -843,7 +843,7 @@ public class Settings {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateDistinctAttributeResponse updateDistinctAttribute(org.openapis.openapi.models.operations.UpdateDistinctAttributeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateDistinctAttributeResponse updateDistinctAttribute(byte[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/indexes/books/settings/distinct-attribute");
         
@@ -878,7 +878,7 @@ public class Settings {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateFacetingResponse updateFaceting(org.openapis.openapi.models.operations.UpdateFacetingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateFacetingResponse updateFaceting(org.openapis.openapi.models.operations.UpdateFacetingRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/indexes/books/settings/faceting");
         
@@ -913,7 +913,7 @@ public class Settings {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateFilterableAttributesResponse updateFilterableAttributes(org.openapis.openapi.models.operations.UpdateFilterableAttributesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateFilterableAttributesResponse updateFilterableAttributes(String[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/indexes/books/settings/filterable-attributes");
         
@@ -948,7 +948,7 @@ public class Settings {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdatePaginationResponse updatePagination(org.openapis.openapi.models.operations.UpdatePaginationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdatePaginationResponse updatePagination(org.openapis.openapi.models.operations.UpdatePaginationRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/indexes/books/settings/pagination");
         
@@ -983,7 +983,7 @@ public class Settings {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateRankingRulesResponse updateRankingRules(org.openapis.openapi.models.operations.UpdateRankingRulesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateRankingRulesResponse updateRankingRules(String[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/indexes/books/settings/ranking-rules");
         
@@ -1018,7 +1018,7 @@ public class Settings {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateSearchableAttributesResponse updateSearchableAttributes(org.openapis.openapi.models.operations.UpdateSearchableAttributesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateSearchableAttributesResponse updateSearchableAttributes(String[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/indexes/books/settings/searchable-attributes");
         
@@ -1053,7 +1053,7 @@ public class Settings {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateSettingsResponse updateSettings(org.openapis.openapi.models.operations.UpdateSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateSettingsResponse updateSettings(org.openapis.openapi.models.operations.UpdateSettingsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/indexes/books/settings");
         
@@ -1088,7 +1088,7 @@ public class Settings {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateSortableAttributesResponse updateSortableAttributes(org.openapis.openapi.models.operations.UpdateSortableAttributesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateSortableAttributesResponse updateSortableAttributes(String[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/indexes/books/settings/sortable-attributes");
         
@@ -1123,7 +1123,7 @@ public class Settings {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateStopWordsResponse updateStopWords(org.openapis.openapi.models.operations.UpdateStopWordsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateStopWordsResponse updateStopWords(String[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/indexes/books/settings/stop-words");
         
@@ -1158,7 +1158,7 @@ public class Settings {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateSynonymsResponse updateSynonyms(org.openapis.openapi.models.operations.UpdateSynonymsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateSynonymsResponse updateSynonyms(org.openapis.openapi.models.operations.UpdateSynonymsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/indexes/books/settings/synonyms");
         
@@ -1193,7 +1193,7 @@ public class Settings {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateTypoToleranceResponse updateTypoTolerance(org.openapis.openapi.models.operations.UpdateTypoToleranceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateTypoToleranceResponse updateTypoTolerance(org.openapis.openapi.models.operations.UpdateTypoToleranceRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/indexes/books/settings/typo-tolerance");
         

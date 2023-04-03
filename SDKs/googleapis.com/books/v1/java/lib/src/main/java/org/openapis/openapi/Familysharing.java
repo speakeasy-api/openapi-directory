@@ -34,10 +34,11 @@ public class Familysharing {
     /**
      * Gets information regarding the family that the user is part of.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BooksFamilysharingGetFamilyInfoResponse booksFamilysharingGetFamilyInfo(org.openapis.openapi.models.operations.BooksFamilysharingGetFamilyInfoRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BooksFamilysharingGetFamilyInfoResponse booksFamilysharingGetFamilyInfo(org.openapis.openapi.models.operations.BooksFamilysharingGetFamilyInfoRequest request, org.openapis.openapi.models.operations.BooksFamilysharingGetFamilyInfoSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/books/v1/familysharing/getFamilyInfo");
         
@@ -45,14 +46,14 @@ public class Familysharing {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksFamilysharingGetFamilyInfoQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksFamilysharingGetFamilyInfoRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,10 +80,11 @@ public class Familysharing {
     /**
      * Initiates sharing of the content with the user's family. Empty response indicates success.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BooksFamilysharingShareResponse booksFamilysharingShare(org.openapis.openapi.models.operations.BooksFamilysharingShareRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BooksFamilysharingShareResponse booksFamilysharingShare(org.openapis.openapi.models.operations.BooksFamilysharingShareRequest request, org.openapis.openapi.models.operations.BooksFamilysharingShareSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/books/v1/familysharing/share");
         
@@ -90,14 +92,14 @@ public class Familysharing {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksFamilysharingShareQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksFamilysharingShareRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,10 +126,11 @@ public class Familysharing {
     /**
      * Initiates revoking content that has already been shared with the user's family. Empty response indicates success.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BooksFamilysharingUnshareResponse booksFamilysharingUnshare(org.openapis.openapi.models.operations.BooksFamilysharingUnshareRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BooksFamilysharingUnshareResponse booksFamilysharingUnshare(org.openapis.openapi.models.operations.BooksFamilysharingUnshareRequest request, org.openapis.openapi.models.operations.BooksFamilysharingUnshareSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/books/v1/familysharing/unshare");
         
@@ -135,14 +138,14 @@ public class Familysharing {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksFamilysharingUnshareQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksFamilysharingUnshareRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

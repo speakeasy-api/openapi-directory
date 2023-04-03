@@ -5,10 +5,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.DeleteBusinessLinesIdSecurity;
-import org.openapis.openapi.models.operations.DeleteBusinessLinesIdPathParams;
 import org.openapis.openapi.models.operations.DeleteBusinessLinesIdRequest;
 import org.openapis.openapi.models.operations.DeleteBusinessLinesIdResponse;
-import org.openapis.openapi.models.shared.SchemeAPIKeyAuth;
 import org.openapis.openapi.models.shared.SchemeBasicAuth;
 
 public class Application {
@@ -18,17 +16,12 @@ public class Application {
                 .build();
 
             DeleteBusinessLinesIdRequest req = new DeleteBusinessLinesIdRequest() {{
-                security = new DeleteBusinessLinesIdSecurity() {{
-                    apiKeyAuth = new SchemeAPIKeyAuth() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }};
-                pathParams = new DeleteBusinessLinesIdPathParams() {{
-                    id = "corrupti";
-                }};
-            }};            
+                id = "corrupti";
+            }}            
 
-            DeleteBusinessLinesIdResponse res = sdk.businessLines.deleteBusinessLinesId(req);
+            DeleteBusinessLinesIdResponse res = sdk.businessLines.deleteBusinessLinesId(req, new DeleteBusinessLinesIdSecurity() {{
+                apiKeyAuth = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.statusCode == 200) {
                 // handle response

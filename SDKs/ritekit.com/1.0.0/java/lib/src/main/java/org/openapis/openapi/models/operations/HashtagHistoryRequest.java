@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class HashtagHistoryRequest {
-    
-    public HashtagHistoryPathParams pathParams;
-    public HashtagHistoryRequest withPathParams(HashtagHistoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Hashtag without # mark
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hashtag")
+    public String hashtag;
+    public HashtagHistoryRequest withHashtag(String hashtag) {
+        this.hashtag = hashtag;
         return this;
     }
     

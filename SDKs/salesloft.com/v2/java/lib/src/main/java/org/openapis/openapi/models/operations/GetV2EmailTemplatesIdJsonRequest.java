@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2EmailTemplatesIdJsonRequest {
-    
-    public GetV2EmailTemplatesIdJsonPathParams pathParams;
-    public GetV2EmailTemplatesIdJsonRequest withPathParams(GetV2EmailTemplatesIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * EmailTemplate ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetV2EmailTemplatesIdJsonRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetV2EmailTemplatesIdJsonQueryParams queryParams;
-    public GetV2EmailTemplatesIdJsonRequest withQueryParams(GetV2EmailTemplatesIdJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Optionally will return the templates with the current user's email signature
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_signature")
+    public Boolean includeSignature;
+    public GetV2EmailTemplatesIdJsonRequest withIncludeSignature(Boolean includeSignature) {
+        this.includeSignature = includeSignature;
         return this;
     }
     

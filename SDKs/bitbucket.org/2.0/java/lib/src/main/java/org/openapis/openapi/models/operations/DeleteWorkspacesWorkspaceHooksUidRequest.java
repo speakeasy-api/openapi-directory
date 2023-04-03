@@ -4,20 +4,28 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteWorkspacesWorkspaceHooksUidRequest {
-    
-    public DeleteWorkspacesWorkspaceHooksUidPathParams pathParams;
-    public DeleteWorkspacesWorkspaceHooksUidRequest withPathParams(DeleteWorkspacesWorkspaceHooksUidPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Installed webhook's ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=uid")
+    public String uid;
+    public DeleteWorkspacesWorkspaceHooksUidRequest withUid(String uid) {
+        this.uid = uid;
         return this;
     }
     
-    
-    public DeleteWorkspacesWorkspaceHooksUidSecurity security;
-    public DeleteWorkspacesWorkspaceHooksUidRequest withSecurity(DeleteWorkspacesWorkspaceHooksUidSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public DeleteWorkspacesWorkspaceHooksUidRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTextOperationResultRequest {
-    
-    public GetTextOperationResultPathParams pathParams;
-    public GetTextOperationResultRequest withPathParams(GetTextOperationResultPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of the text operation returned in the response of the 'Recognize Text'
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=operationId")
+    public String operationId;
+    public GetTextOperationResultRequest withOperationId(String operationId) {
+        this.operationId = operationId;
         return this;
     }
     

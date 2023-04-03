@@ -4,20 +4,47 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ValuesInPastMultipleGetRequest {
-    
-    public ValuesInPastMultipleGetPathParams pathParams;
-    public ValuesInPastMultipleGetRequest withPathParams(ValuesInPastMultipleGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The date when the last value should start
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
+    public OffsetDateTime endDate;
+    public ValuesInPastMultipleGetRequest withEndDate(OffsetDateTime endDate) {
+        this.endDate = endDate;
         return this;
     }
     
+    /**
+     * The ID of the device
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public ValuesInPastMultipleGetRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public ValuesInPastMultipleGetQueryParams queryParams;
-    public ValuesInPastMultipleGetRequest withQueryParams(ValuesInPastMultipleGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The interval in minutes betwenn the values. 0 means as fast as possible. Only 1000 values can be get in one call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interval")
+    public Integer interval;
+    public ValuesInPastMultipleGetRequest withInterval(Integer interval) {
+        this.interval = interval;
+        return this;
+    }
+    
+    /**
+     * The date when the first value should start
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
+    public OffsetDateTime startDate;
+    public ValuesInPastMultipleGetRequest withStartDate(OffsetDateTime startDate) {
+        this.startDate = startDate;
         return this;
     }
     

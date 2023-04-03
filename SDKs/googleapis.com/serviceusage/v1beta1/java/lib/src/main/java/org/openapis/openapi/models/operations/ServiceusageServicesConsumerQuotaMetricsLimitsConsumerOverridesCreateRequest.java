@@ -7,31 +7,150 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateRequest {
-    
-    public ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreatePathParams pathParams;
-    public ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateRequest withPathParams(ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateQueryParams queryParams;
-    public ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateRequest withQueryParams(ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.QuotaOverride request;
-    public ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateRequest withRequest(org.openapis.openapi.models.shared.QuotaOverride request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.QuotaOverride quotaOverride;
+    public ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateRequest withQuotaOverride(org.openapis.openapi.models.shared.QuotaOverride quotaOverride) {
+        this.quotaOverride = quotaOverride;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateSecurity security;
-    public ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateRequest withSecurity(ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Whether to force the creation of the quota override. Setting the force parameter to 'true' ignores all quota safety checks that would fail the request. QuotaSafetyCheck lists all such validations.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=force")
+    public Boolean force;
+    public ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateRequest withForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
+    
+    /**
+     * The list of quota safety checks to ignore before the override mutation. Unlike 'force' field that ignores all the quota safety checks, the 'force_only' field ignores only the specified checks; other checks are still enforced. The 'force' and 'force_only' fields cannot both be set.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=forceOnly")
+    public ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateForceOnlyEnum[] forceOnly;
+    public ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateRequest withForceOnly(ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateForceOnlyEnum[] forceOnly) {
+        this.forceOnly = forceOnly;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * The resource name of the parent quota limit, returned by a ListConsumerQuotaMetrics or GetConsumerQuotaMetric call. An example name would be: `projects/123/services/compute.googleapis.com/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion`
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesCreateRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

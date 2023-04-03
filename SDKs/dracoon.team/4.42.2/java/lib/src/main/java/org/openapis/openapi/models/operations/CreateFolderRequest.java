@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateFolderRequest {
-    
-    public CreateFolderHeaders headers;
-    public CreateFolderRequest withHeaders(CreateFolderHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateFolderRequest createFolderRequest;
+    public CreateFolderRequest withCreateFolderRequest(org.openapis.openapi.models.shared.CreateFolderRequest createFolderRequest) {
+        this.createFolderRequest = createFolderRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateFolderRequest request;
-    public CreateFolderRequest withRequest(org.openapis.openapi.models.shared.CreateFolderRequest request) {
-        this.request = request;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public CreateFolderRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
+        return this;
+    }
+    
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public CreateFolderXSdsDateFormatEnum xSdsDateFormat;
+    public CreateFolderRequest withXSdsDateFormat(CreateFolderXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
         return this;
     }
     

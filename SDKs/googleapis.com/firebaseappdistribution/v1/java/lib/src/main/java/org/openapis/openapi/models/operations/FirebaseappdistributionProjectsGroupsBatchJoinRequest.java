@@ -7,31 +7,130 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FirebaseappdistributionProjectsGroupsBatchJoinRequest {
-    
-    public FirebaseappdistributionProjectsGroupsBatchJoinPathParams pathParams;
-    public FirebaseappdistributionProjectsGroupsBatchJoinRequest withPathParams(FirebaseappdistributionProjectsGroupsBatchJoinPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FirebaseappdistributionProjectsGroupsBatchJoinQueryParams queryParams;
-    public FirebaseappdistributionProjectsGroupsBatchJoinRequest withQueryParams(FirebaseappdistributionProjectsGroupsBatchJoinQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public FirebaseappdistributionProjectsGroupsBatchJoinRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GoogleFirebaseAppdistroV1BatchJoinGroupRequest request;
-    public FirebaseappdistributionProjectsGroupsBatchJoinRequest withRequest(org.openapis.openapi.models.shared.GoogleFirebaseAppdistroV1BatchJoinGroupRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GoogleFirebaseAppdistroV1BatchJoinGroupRequest googleFirebaseAppdistroV1BatchJoinGroupRequest;
+    public FirebaseappdistributionProjectsGroupsBatchJoinRequest withGoogleFirebaseAppdistroV1BatchJoinGroupRequest(org.openapis.openapi.models.shared.GoogleFirebaseAppdistroV1BatchJoinGroupRequest googleFirebaseAppdistroV1BatchJoinGroupRequest) {
+        this.googleFirebaseAppdistroV1BatchJoinGroupRequest = googleFirebaseAppdistroV1BatchJoinGroupRequest;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public FirebaseappdistributionProjectsGroupsBatchJoinRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public FirebaseappdistributionProjectsGroupsBatchJoinSecurity security;
-    public FirebaseappdistributionProjectsGroupsBatchJoinRequest withSecurity(FirebaseappdistributionProjectsGroupsBatchJoinSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public FirebaseappdistributionProjectsGroupsBatchJoinRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public FirebaseappdistributionProjectsGroupsBatchJoinRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public FirebaseappdistributionProjectsGroupsBatchJoinRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Required. The name of the group resource to which testers are added. Format: `projects/{project_number}/groups/{group_alias}`
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group")
+    public String group;
+    public FirebaseappdistributionProjectsGroupsBatchJoinRequest withGroup(String group) {
+        this.group = group;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public FirebaseappdistributionProjectsGroupsBatchJoinRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public FirebaseappdistributionProjectsGroupsBatchJoinRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public FirebaseappdistributionProjectsGroupsBatchJoinRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public FirebaseappdistributionProjectsGroupsBatchJoinRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public FirebaseappdistributionProjectsGroupsBatchJoinRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public FirebaseappdistributionProjectsGroupsBatchJoinRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetInterfaceRequest {
+    /**
+     * Agent to set the primary interface
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Long agentNum;
+    public SetInterfaceRequest withAgentNum(Long agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public SetInterfacePathParams pathParams;
-    public SetInterfaceRequest withPathParams(SetInterfacePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Primary interface of the agent
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=interface")
+    public String interface_;
+    public SetInterfaceRequest withInterface(String interface_) {
+        this.interface_ = interface_;
         return this;
     }
     

@@ -39,7 +39,7 @@ public class TaggedShows {
      */
     public org.openapis.openapi.models.operations.DeleteUserTagsTagIdResponse deleteUserTagsTagId(org.openapis.openapi.models.operations.DeleteUserTagsTagIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserTagsTagIdPathParams.class, baseUrl, "/user/tags/{tag_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserTagsTagIdRequest.class, baseUrl, "/user/tags/{tag_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -72,7 +72,7 @@ public class TaggedShows {
      */
     public org.openapis.openapi.models.operations.DeleteUserTagsTagIdShowsShowIdResponse deleteUserTagsTagIdShowsShowId(org.openapis.openapi.models.operations.DeleteUserTagsTagIdShowsShowIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserTagsTagIdShowsShowIdPathParams.class, baseUrl, "/user/tags/{tag_id}/shows/{show_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserTagsTagIdShowsShowIdRequest.class, baseUrl, "/user/tags/{tag_id}/shows/{show_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -143,13 +143,13 @@ public class TaggedShows {
      */
     public org.openapis.openapi.models.operations.GetUserTagsTagIdShowsResponse getUserTagsTagIdShows(org.openapis.openapi.models.operations.GetUserTagsTagIdShowsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserTagsTagIdShowsPathParams.class, baseUrl, "/user/tags/{tag_id}/shows", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserTagsTagIdShowsRequest.class, baseUrl, "/user/tags/{tag_id}/shows", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserTagsTagIdShowsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserTagsTagIdShowsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -190,12 +190,12 @@ public class TaggedShows {
      */
     public org.openapis.openapi.models.operations.PatchUserTagsTagIdResponse patchUserTagsTagId(org.openapis.openapi.models.operations.PatchUserTagsTagIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchUserTagsTagIdPathParams.class, baseUrl, "/user/tags/{tag_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchUserTagsTagIdRequest.class, baseUrl, "/user/tags/{tag_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "tagInput", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -231,7 +231,7 @@ public class TaggedShows {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostUserTagsResponse postUserTags(org.openapis.openapi.models.operations.PostUserTagsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostUserTagsResponse postUserTags(org.openapis.openapi.models.shared.TagInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/user/tags");
         
@@ -276,7 +276,7 @@ public class TaggedShows {
      */
     public org.openapis.openapi.models.operations.PutUserTagsTagIdShowsShowIdResponse putUserTagsTagIdShowsShowId(org.openapis.openapi.models.operations.PutUserTagsTagIdShowsShowIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutUserTagsTagIdShowsShowIdPathParams.class, baseUrl, "/user/tags/{tag_id}/shows/{show_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutUserTagsTagIdShowsShowIdRequest.class, baseUrl, "/user/tags/{tag_id}/shows/{show_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetQueryParams;
 import org.openapis.openapi.models.operations.GetRequest;
 import org.openapis.openapi.models.operations.GetResponse;
 
@@ -15,12 +14,10 @@ public class Application {
                 .build();
 
             GetRequest req = new GetRequest() {{
-                queryParams = new GetQueryParams() {{
-                    domain = "corrupti";
-                    format = "provident";
-                    key = "distinctio";
-                }};
-            }};            
+                domain = "corrupti";
+                format = "provident";
+                key = "distinctio";
+            }}            
 
             GetResponse res = sdk.get(req);
 

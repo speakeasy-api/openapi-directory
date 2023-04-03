@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateMySqlUserRequest {
-    
-    public CreateMySqlUserPathParams pathParams;
-    public CreateMySqlUserRequest withPathParams(CreateMySqlUserPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CreateMySqlUserQueryParams queryParams;
-    public CreateMySqlUserRequest withQueryParams(CreateMySqlUserQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateMySqlUser request;
-    public CreateMySqlUserRequest withRequest(org.openapis.openapi.models.shared.CreateMySqlUser request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CreateMySqlUser createMySqlUser;
+    public CreateMySqlUserRequest withCreateMySqlUser(org.openapis.openapi.models.shared.CreateMySqlUser createMySqlUser) {
+        this.createMySqlUser = createMySqlUser;
+        return this;
+    }
+    
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=databaseName")
+    public String databaseNamePathParameter;
+    public CreateMySqlUserRequest withDatabaseNamePathParameter(String databaseNamePathParameter) {
+        this.databaseNamePathParameter = databaseNamePathParameter;
+        return this;
+    }
+    
+    /**
+     * Name of the database.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=database_name")
+    public String databaseNameQueryParameter;
+    public CreateMySqlUserRequest withDatabaseNameQueryParameter(String databaseNameQueryParameter) {
+        this.databaseNameQueryParameter = databaseNameQueryParameter;
         return this;
     }
     

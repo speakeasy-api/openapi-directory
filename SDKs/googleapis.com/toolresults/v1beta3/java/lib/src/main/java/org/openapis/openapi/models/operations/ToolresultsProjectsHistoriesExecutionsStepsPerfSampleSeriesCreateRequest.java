@@ -7,31 +7,160 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateRequest {
-    
-    public ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreatePathParams pathParams;
-    public ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateRequest withPathParams(ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateQueryParams queryParams;
-    public ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateRequest withQueryParams(ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PerfSampleSeries request;
-    public ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateRequest withRequest(org.openapis.openapi.models.shared.PerfSampleSeries request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PerfSampleSeries perfSampleSeries;
+    public ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateRequest withPerfSampleSeries(org.openapis.openapi.models.shared.PerfSampleSeries perfSampleSeries) {
+        this.perfSampleSeries = perfSampleSeries;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateSecurity security;
-    public ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateRequest withSecurity(ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * A tool results execution ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=executionId")
+    public String executionId;
+    public ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateRequest withExecutionId(String executionId) {
+        this.executionId = executionId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * A tool results history ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=historyId")
+    public String historyId;
+    public ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateRequest withHistoryId(String historyId) {
+        this.historyId = historyId;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * The cloud project
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * A tool results step ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=stepId")
+    public String stepId;
+    public ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateRequest withStepId(String stepId) {
+        this.stepId = stepId;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

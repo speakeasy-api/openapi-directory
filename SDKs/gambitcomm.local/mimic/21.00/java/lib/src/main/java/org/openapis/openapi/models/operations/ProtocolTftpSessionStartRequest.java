@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolTftpSessionStartRequest {
+    /**
+     * Agent to start TFTP transaction
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolTftpSessionStartRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolTftpSessionStartPathParams pathParams;
-    public ProtocolTftpSessionStartRequest withPathParams(ProtocolTftpSessionStartPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * SessionID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sessionID")
+    public String sessionID;
+    public ProtocolTftpSessionStartRequest withSessionID(String sessionID) {
+        this.sessionID = sessionID;
         return this;
     }
     

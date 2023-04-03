@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TfrByPolyUsV1RestrictionsPolygonQueryPostRequest {
-    
-    public TfrByPolyUsV1RestrictionsPolygonQueryPostHeaders headers;
-    public TfrByPolyUsV1RestrictionsPolygonQueryPostRequest withHeaders(TfrByPolyUsV1RestrictionsPolygonQueryPostHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.NOTAMsByPolygon notaMsByPolygon;
+    public TfrByPolyUsV1RestrictionsPolygonQueryPostRequest withNOTAMsByPolygon(org.openapis.openapi.models.shared.NOTAMsByPolygon notaMsByPolygon) {
+        this.notaMsByPolygon = notaMsByPolygon;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.NOTAMsByPolygon request;
-    public TfrByPolyUsV1RestrictionsPolygonQueryPostRequest withRequest(org.openapis.openapi.models.shared.NOTAMsByPolygon request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public TfrByPolyUsV1RestrictionsPolygonQueryPostRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

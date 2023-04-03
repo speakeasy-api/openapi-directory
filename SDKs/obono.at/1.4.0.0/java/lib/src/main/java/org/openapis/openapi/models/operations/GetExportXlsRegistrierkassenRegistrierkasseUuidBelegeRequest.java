@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetExportXlsRegistrierkassenRegistrierkasseUuidBelegeRequest {
-    
-    public GetExportXlsRegistrierkassenRegistrierkasseUuidBelegePathParams pathParams;
-    public GetExportXlsRegistrierkassenRegistrierkasseUuidBelegeRequest withPathParams(GetExportXlsRegistrierkassenRegistrierkasseUuidBelegePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Only return results that were saved after the specified date-time string (i.e., anything that `Date.parse()` can parse).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=after")
+    public String after;
+    public GetExportXlsRegistrierkassenRegistrierkasseUuidBelegeRequest withAfter(String after) {
+        this.after = after;
         return this;
     }
     
+    /**
+     * Only return results that were saved before the specified date-time string (i.e., anything that `Date.parse()` can parse).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=before")
+    public String before;
+    public GetExportXlsRegistrierkassenRegistrierkasseUuidBelegeRequest withBefore(String before) {
+        this.before = before;
+        return this;
+    }
     
-    public GetExportXlsRegistrierkassenRegistrierkasseUuidBelegeQueryParams queryParams;
-    public GetExportXlsRegistrierkassenRegistrierkasseUuidBelegeRequest withQueryParams(GetExportXlsRegistrierkassenRegistrierkasseUuidBelegeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The `_uuid` of the `Registrierkasse` to export.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=registrierkasseUuid")
+    public String registrierkasseUuid;
+    public GetExportXlsRegistrierkassenRegistrierkasseUuidBelegeRequest withRegistrierkasseUuid(String registrierkasseUuid) {
+        this.registrierkasseUuid = registrierkasseUuid;
         return this;
     }
     

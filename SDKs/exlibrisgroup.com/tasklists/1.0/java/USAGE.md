@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.GetAlmawsV1TaskListsRsLendingRequestsQueryParams;
 import org.openapis.openapi.models.operations.GetAlmawsV1TaskListsRsLendingRequestsRequest;
 import org.openapis.openapi.models.operations.GetAlmawsV1TaskListsRsLendingRequestsResponse;
 
@@ -13,23 +12,19 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    apiKeyAuth = new SchemeAPIKeyAuth() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    apiKeyAuth = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GetAlmawsV1TaskListsRsLendingRequestsRequest req = new GetAlmawsV1TaskListsRsLendingRequestsRequest() {{
-                queryParams = new GetAlmawsV1TaskListsRsLendingRequestsQueryParams() {{
-                    library = "corrupti";
-                    partner = "provident";
-                    printed = "distinctio";
-                    reported = "quibusdam";
-                    requestedFormat = "unde";
-                    status = "nulla";
-                    suppliedFormat = "corrupti";
-                }};
-            }};            
+                library = "corrupti";
+                partner = "provident";
+                printed = "distinctio";
+                reported = "quibusdam";
+                requestedFormat = "unde";
+                status = "nulla";
+                suppliedFormat = "corrupti";
+            }}            
 
             GetAlmawsV1TaskListsRsLendingRequestsResponse res = sdk.lendingRequests.getAlmawsV1TaskListsRsLendingRequests(req);
 

@@ -35,11 +35,10 @@ public class Info {
     /**
      * Show version info
      * Show version info
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetVersionResponse getVersion(org.openapis.openapi.models.operations.GetVersionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetVersionResponse getVersion() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/info/version");
         
@@ -48,8 +47,7 @@ public class Info {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");

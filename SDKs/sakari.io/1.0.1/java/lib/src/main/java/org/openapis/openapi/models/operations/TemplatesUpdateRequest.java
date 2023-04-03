@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TemplatesUpdateRequest {
-    
-    public TemplatesUpdatePathParams pathParams;
-    public TemplatesUpdateRequest withPathParams(TemplatesUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Account to apply operations to
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public TemplatesUpdateRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
-    
-    public TemplatesUpdateSecurity security;
-    public TemplatesUpdateRequest withSecurity(TemplatesUpdateSecurity security) {
-        this.security = security;
+    /**
+     * ID of template
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=templateId")
+    public String templateId;
+    public TemplatesUpdateRequest withTemplateId(String templateId) {
+        this.templateId = templateId;
         return this;
     }
     

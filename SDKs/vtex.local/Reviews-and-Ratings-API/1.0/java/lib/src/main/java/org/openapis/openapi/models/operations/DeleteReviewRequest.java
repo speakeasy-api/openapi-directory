@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteReviewRequest {
-    
-    public DeleteReviewPathParams pathParams;
-    public DeleteReviewRequest withPathParams(DeleteReviewPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public DeleteReviewRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public DeleteReviewRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public DeleteReviewHeaders headers;
-    public DeleteReviewRequest withHeaders(DeleteReviewHeaders headers) {
-        this.headers = headers;
+    /**
+     * Review ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reviewId")
+    public String reviewId;
+    public DeleteReviewRequest withReviewId(String reviewId) {
+        this.reviewId = reviewId;
         return this;
     }
     

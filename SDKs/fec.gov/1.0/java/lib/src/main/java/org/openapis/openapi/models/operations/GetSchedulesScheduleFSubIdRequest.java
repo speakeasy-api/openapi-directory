@@ -4,20 +4,44 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSchedulesScheduleFSubIdRequest {
-    
-    public GetSchedulesScheduleFSubIdPathParams pathParams;
-    public GetSchedulesScheduleFSubIdRequest withPathParams(GetSchedulesScheduleFSubIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API key for https://api.data.gov. Get one at https://api.data.gov/signup.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetSchedulesScheduleFSubIdRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    /**
+     * For paginating through results, starting at page 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetSchedulesScheduleFSubIdRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetSchedulesScheduleFSubIdQueryParams queryParams;
-    public GetSchedulesScheduleFSubIdRequest withQueryParams(GetSchedulesScheduleFSubIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of results returned per page. Defaults to 20.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetSchedulesScheduleFSubIdRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sub_id")
+    public String subId;
+    public GetSchedulesScheduleFSubIdRequest withSubId(String subId) {
+        this.subId = subId;
         return this;
     }
     

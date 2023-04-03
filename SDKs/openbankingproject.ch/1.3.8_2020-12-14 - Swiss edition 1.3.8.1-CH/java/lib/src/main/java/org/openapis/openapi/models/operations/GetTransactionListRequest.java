@@ -4,34 +4,290 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTransactionListRequest {
-    
-    public GetTransactionListPathParams pathParams;
-    public GetTransactionListRequest withPathParams(GetTransactionListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * This then contains the consentId of the related AIS consent, which was performed prior to this payment initiation.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Consent-ID")
+    public String consentID;
+    public GetTransactionListRequest withConsentID(String consentID) {
+        this.consentID = consentID;
         return this;
     }
     
-    
-    public GetTransactionListQueryParams queryParams;
-    public GetTransactionListRequest withQueryParams(GetTransactionListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Is contained if and only if the "Signature" element is contained in the header of the request.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Digest")
+    public String digest;
+    public GetTransactionListRequest withDigest(String digest) {
+        this.digest = digest;
         return this;
     }
     
-    
-    public GetTransactionListHeaders headers;
-    public GetTransactionListRequest withHeaders(GetTransactionListHeaders headers) {
-        this.headers = headers;
+    /**
+     * The forwarded IP Accept header fields consist of the corresponding HTTP request Accept header fields between PSU and TPP, if available.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept")
+    public String psuAccept;
+    public GetTransactionListRequest withPSUAccept(String psuAccept) {
+        this.psuAccept = psuAccept;
         return this;
     }
     
+    /**
+     * The forwarded IP Accept header fields consist of the corresponding HTTP request Accept header fields between PSU and TPP, if available.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Charset")
+    public String psuAcceptCharset;
+    public GetTransactionListRequest withPSUAcceptCharset(String psuAcceptCharset) {
+        this.psuAcceptCharset = psuAcceptCharset;
+        return this;
+    }
     
-    public GetTransactionListSecurity security;
-    public GetTransactionListRequest withSecurity(GetTransactionListSecurity security) {
-        this.security = security;
+    /**
+     * The forwarded IP Accept header fields consist of the corresponding HTTP request Accept header fields between PSU and TPP, if available.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Encoding")
+    public String psuAcceptEncoding;
+    public GetTransactionListRequest withPSUAcceptEncoding(String psuAcceptEncoding) {
+        this.psuAcceptEncoding = psuAcceptEncoding;
+        return this;
+    }
+    
+    /**
+     * The forwarded IP Accept header fields consist of the corresponding HTTP request Accept header fields between PSU and TPP, if available.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Language")
+    public String psuAcceptLanguage;
+    public GetTransactionListRequest withPSUAcceptLanguage(String psuAcceptLanguage) {
+        this.psuAcceptLanguage = psuAcceptLanguage;
+        return this;
+    }
+    
+    /**
+     * UUID (Universally Unique Identifier) for a device, which is used by the PSU, if available.
+     * UUID identifies either a device or a device dependant application installation.
+     * In case of an installation identification this ID needs to be unaltered until removal from device.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Device-ID")
+    public String psuDeviceID;
+    public GetTransactionListRequest withPSUDeviceID(String psuDeviceID) {
+        this.psuDeviceID = psuDeviceID;
+        return this;
+    }
+    
+    /**
+     * The forwarded Geo Location of the corresponding http request between PSU and TPP if available.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Geo-Location")
+    public String psuGeoLocation;
+    public GetTransactionListRequest withPSUGeoLocation(String psuGeoLocation) {
+        this.psuGeoLocation = psuGeoLocation;
+        return this;
+    }
+    
+    /**
+     * HTTP method used at the PSU ? TPP interface, if available.
+     * Valid values are:
+     * * GET
+     * * POST
+     * * PUT
+     * * PATCH
+     * * DELETE
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Http-Method")
+    public org.openapis.openapi.models.shared.PSUHttpMethodEnum psuHttpMethod;
+    public GetTransactionListRequest withPSUHttpMethod(org.openapis.openapi.models.shared.PSUHttpMethodEnum psuHttpMethod) {
+        this.psuHttpMethod = psuHttpMethod;
+        return this;
+    }
+    
+    /**
+     * The forwarded IP Address header field consists of the corresponding HTTP request
+     * IP Address field between PSU and TPP.
+     * It shall be contained if and only if this request was actively initiated by the PSU.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-IP-Address")
+    public String psuIPAddress;
+    public GetTransactionListRequest withPSUIPAddress(String psuIPAddress) {
+        this.psuIPAddress = psuIPAddress;
+        return this;
+    }
+    
+    /**
+     * The forwarded IP Port header field consists of the corresponding HTTP request IP Port field between PSU and TPP, if available.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-IP-Port")
+    public String psuIPPort;
+    public GetTransactionListRequest withPSUIPPort(String psuIPPort) {
+        this.psuIPPort = psuIPPort;
+        return this;
+    }
+    
+    /**
+     * The forwarded Agent header field of the HTTP request between PSU and TPP, if available.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-User-Agent")
+    public String psuUserAgent;
+    public GetTransactionListRequest withPSUUserAgent(String psuUserAgent) {
+        this.psuUserAgent = psuUserAgent;
+        return this;
+    }
+    
+    /**
+     * A signature of the request by the TPP on application level. This might be mandated by ASPSP.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Signature")
+    public String signature;
+    public GetTransactionListRequest withSignature(String signature) {
+        this.signature = signature;
+        return this;
+    }
+    
+    /**
+     * The certificate used for signing the request, in base64 encoding.
+     * Must be contained if a signature is contained.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Signature-Certificate")
+    public String tppSignatureCertificate;
+    public GetTransactionListRequest withTPPSignatureCertificate(String tppSignatureCertificate) {
+        this.tppSignatureCertificate = tppSignatureCertificate;
+        return this;
+    }
+    
+    /**
+     * ID of the request, unique to the call, as determined by the initiating party.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Request-ID")
+    public String xRequestID;
+    public GetTransactionListRequest withXRequestID(String xRequestID) {
+        this.xRequestID = xRequestID;
+        return this;
+    }
+    
+    /**
+     * This identification is denoting the addressed (card) account. 
+     * The account-id is retrieved by using a "Read Account List" or "Read Card Account list" call. 
+     * The account-id is the "resourceId" attribute of the account structure. 
+     * Its value is constant at least throughout the lifecycle of a given consent.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account-id")
+    public String accountId;
+    public GetTransactionListRequest withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    
+    /**
+     * Permitted codes are 
+     *   * "information",
+     *   * "booked",
+     *   * "pending", and 
+     *   * "both"
+     * "booked" shall be supported by the ASPSP.
+     * To support the "pending" and "both" feature is optional for the ASPSP,
+     * Error code if not supported in the online banking frontend
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bookingStatus")
+    public org.openapis.openapi.models.shared.BookingStatusEnum bookingStatus;
+    public GetTransactionListRequest withBookingStatus(org.openapis.openapi.models.shared.BookingStatusEnum bookingStatus) {
+        this.bookingStatus = bookingStatus;
+        return this;
+    }
+    
+    /**
+     * Conditional: Starting date (inclusive the date dateFrom) of the transaction list, mandated if no delta access is required
+     * and if bookingStatus does not equal "information".
+     * 
+     * For booked transactions, the relevant date is the booking date. 
+     * 
+     * For pending transactions, the relevant date is the entry date, which may not be transparent 
+     * neither in this API nor other channels of the ASPSP.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dateFrom")
+    public LocalDate dateFrom;
+    public GetTransactionListRequest withDateFrom(LocalDate dateFrom) {
+        this.dateFrom = dateFrom;
+        return this;
+    }
+    
+    /**
+     * End date (inclusive the data dateTo) of the transaction list, default is "now" if not given.
+     * 
+     * Might be ignored if a delta function is used.
+     * 
+     * For booked transactions, the relevant date is the booking date.
+     * 
+     * For pending transactions, the relevant date is the entry date, which may not be transparent
+     * neither in this API nor other channels of the ASPSP.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dateTo")
+    public LocalDate dateTo;
+    public GetTransactionListRequest withDateTo(LocalDate dateTo) {
+        this.dateTo = dateTo;
+        return this;
+    }
+    
+    /**
+     * This data attribute is indicating that the AISP is in favour to get all transactions after the last report access for this PSU on the addressed account. This is another implementation of a delta access-report.
+     * This delta indicator might be rejected by the ASPSP if this function is not supported.
+     * Optional if supported by API provider
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deltaList")
+    public Boolean deltaList;
+    public GetTransactionListRequest withDeltaList(Boolean deltaList) {
+        this.deltaList = deltaList;
+        return this;
+    }
+    
+    /**
+     * This data attribute is indicating that the AISP is in favour to get all transactions after
+     * the transaction with identification entryReferenceFrom alternatively to the above defined period.
+     * This is a implementation of a delta access.
+     * If this data element is contained, the entries "dateFrom" and "dateTo" might be ignored by the ASPSP
+     * if a delta report is supported.
+     * 
+     * Optional if supported by API provider.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entryReferenceFrom")
+    public String entryReferenceFrom;
+    public GetTransactionListRequest withEntryReferenceFrom(String entryReferenceFrom) {
+        this.entryReferenceFrom = entryReferenceFrom;
+        return this;
+    }
+    
+    /**
+     * If contained, this function reads the list of accessible payment accounts including the booking balance,
+     * if granted by the PSU in the related consent and available by the ASPSP.
+     * This parameter might be ignored by the ASPSP.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=withBalance")
+    public Boolean withBalance;
+    public GetTransactionListRequest withWithBalance(Boolean withBalance) {
+        this.withBalance = withBalance;
         return this;
     }
     

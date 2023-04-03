@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveSellerLeadRequest {
-    
-    public RetrieveSellerLeadPathParams pathParams;
-    public RetrieveSellerLeadRequest withPathParams(RetrieveSellerLeadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public RetrieveSellerLeadRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public RetrieveSellerLeadQueryParams queryParams;
-    public RetrieveSellerLeadRequest withQueryParams(RetrieveSellerLeadQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public RetrieveSellerLeadRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
+    /**
+     * Name of the VTEX account that belongs to the marketplace.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
+    public String accountName;
+    public RetrieveSellerLeadRequest withAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
     
-    public RetrieveSellerLeadHeaders headers;
-    public RetrieveSellerLeadRequest withHeaders(RetrieveSellerLeadHeaders headers) {
-        this.headers = headers;
+    /**
+     * Environment to use. Used as part of the URL.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=environment")
+    public String environment;
+    public RetrieveSellerLeadRequest withEnvironment(String environment) {
+        this.environment = environment;
+        return this;
+    }
+    
+    /**
+     * ID of the Seller Lead invited to the marketplace.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerLeadId")
+    public String sellerLeadId;
+    public RetrieveSellerLeadRequest withSellerLeadId(String sellerLeadId) {
+        this.sellerLeadId = sellerLeadId;
         return this;
     }
     

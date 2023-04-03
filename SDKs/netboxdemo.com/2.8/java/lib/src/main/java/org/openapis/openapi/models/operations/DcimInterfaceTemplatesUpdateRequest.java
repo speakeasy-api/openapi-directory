@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimInterfaceTemplatesUpdateRequest {
-    
-    public DcimInterfaceTemplatesUpdatePathParams pathParams;
-    public DcimInterfaceTemplatesUpdateRequest withPathParams(DcimInterfaceTemplatesUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.WritableInterfaceTemplateInput writableInterfaceTemplateInput;
+    public DcimInterfaceTemplatesUpdateRequest withWritableInterfaceTemplateInput(org.openapis.openapi.models.shared.WritableInterfaceTemplateInput writableInterfaceTemplateInput) {
+        this.writableInterfaceTemplateInput = writableInterfaceTemplateInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WritableInterfaceTemplateInput request;
-    public DcimInterfaceTemplatesUpdateRequest withRequest(org.openapis.openapi.models.shared.WritableInterfaceTemplateInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this interface template.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimInterfaceTemplatesUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

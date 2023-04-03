@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SaveschemabynameRequest {
-    
-    public SaveschemabynamePathParams pathParams;
-    public SaveschemabynameRequest withPathParams(SaveschemabynamePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Request body for saving schema
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SaveschemabynameRequest request;
-    public SaveschemabynameRequest withRequest(org.openapis.openapi.models.shared.SaveschemabynameRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SaveschemabynameRequest saveschemabynameRequest;
+    public SaveschemabynameRequest withSaveschemabynameRequest(org.openapis.openapi.models.shared.SaveschemabynameRequest saveschemabynameRequest) {
+        this.saveschemabynameRequest = saveschemabynameRequest;
+        return this;
+    }
+    
+    /**
+     * Name of the data entity. Defined by the api. Examples of native data entities you can use are `CL` for client profiles and `AD` for client addresses.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dataEntityName")
+    public String dataEntityName;
+    public SaveschemabynameRequest withDataEntityName(String dataEntityName) {
+        this.dataEntityName = dataEntityName;
+        return this;
+    }
+    
+    /**
+     * Name of the schema.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=schemaName")
+    public String schemaName;
+    public SaveschemabynameRequest withSchemaName(String schemaName) {
+        this.schemaName = schemaName;
         return this;
     }
     

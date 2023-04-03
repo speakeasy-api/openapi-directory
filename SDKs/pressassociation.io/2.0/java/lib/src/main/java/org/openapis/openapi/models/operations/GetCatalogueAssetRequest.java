@@ -4,27 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCatalogueAssetRequest {
-    
-    public GetCatalogueAssetPathParams pathParams;
-    public GetCatalogueAssetRequest withPathParams(GetCatalogueAssetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Flag to display Legacy and Provider Ids.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aliases")
+    public Boolean aliases;
+    public GetCatalogueAssetRequest withAliases(Boolean aliases) {
+        this.aliases = aliases;
         return this;
     }
     
-    
-    public GetCatalogueAssetQueryParams queryParams;
-    public GetCatalogueAssetRequest withQueryParams(GetCatalogueAssetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The identifier for the selected catalogue.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=catalogueId")
+    public String catalogueId;
+    public GetCatalogueAssetRequest withCatalogueId(String catalogueId) {
+        this.catalogueId = catalogueId;
         return this;
     }
     
+    /**
+     * The End Date for the catalogue date range.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
+    public String end;
+    public GetCatalogueAssetRequest withEnd(String end) {
+        this.end = end;
+        return this;
+    }
     
-    public GetCatalogueAssetSecurity security;
-    public GetCatalogueAssetRequest withSecurity(GetCatalogueAssetSecurity security) {
-        this.security = security;
+    /**
+     * Restrict number of returned items Min = 1, Max = 500.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Double limit;
+    public GetCatalogueAssetRequest withLimit(Double limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * The Start Date for the catalogue date range.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public String start;
+    public GetCatalogueAssetRequest withStart(String start) {
+        this.start = start;
+        return this;
+    }
+    
+    /**
+     * The query string for a title search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=title")
+    public String title;
+    public GetCatalogueAssetRequest withTitle(String title) {
+        this.title = title;
+        return this;
+    }
+    
+    /**
+     * Retrieve items only that have been updated after this point.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedAfter")
+    public String updatedAfter;
+    public GetCatalogueAssetRequest withUpdatedAfter(String updatedAfter) {
+        this.updatedAfter = updatedAfter;
         return this;
     }
     

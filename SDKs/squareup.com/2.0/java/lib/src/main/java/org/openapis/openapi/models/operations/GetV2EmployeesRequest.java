@@ -4,20 +4,43 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2EmployeesRequest {
-    
-    public GetV2EmployeesQueryParams queryParams;
-    public GetV2EmployeesRequest withQueryParams(GetV2EmployeesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The token required to retrieve the specified page of results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public GetV2EmployeesRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
+    /**
+     * The number of employees to be returned on each page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetV2EmployeesRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetV2EmployeesSecurity security;
-    public GetV2EmployeesRequest withSecurity(GetV2EmployeesSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location_id")
+    public String locationId;
+    public GetV2EmployeesRequest withLocationId(String locationId) {
+        this.locationId = locationId;
+        return this;
+    }
+    
+    /**
+     * Specifies the EmployeeStatus to filter the employee by.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public String status;
+    public GetV2EmployeesRequest withStatus(String status) {
+        this.status = status;
         return this;
     }
     

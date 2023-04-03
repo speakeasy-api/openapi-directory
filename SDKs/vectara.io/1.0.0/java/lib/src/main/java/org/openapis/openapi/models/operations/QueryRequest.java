@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class QueryRequest {
-    
-    public QueryHeaders headers;
-    public QueryRequest withHeaders(QueryHeaders headers) {
-        this.headers = headers;
+    /**
+     * The Customer ID to use for the request.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=customer-id")
+    public Long customerId;
+    public QueryRequest withCustomerId(Long customerId) {
+        this.customerId = customerId;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ServingBatchQueryRequest request;
-    public QueryRequest withRequest(org.openapis.openapi.models.shared.ServingBatchQueryRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public QuerySecurity security;
-    public QueryRequest withSecurity(QuerySecurity security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.ServingBatchQueryRequest servingBatchQueryRequest;
+    public QueryRequest withServingBatchQueryRequest(org.openapis.openapi.models.shared.ServingBatchQueryRequest servingBatchQueryRequest) {
+        this.servingBatchQueryRequest = servingBatchQueryRequest;
         return this;
     }
     

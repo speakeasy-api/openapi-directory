@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UnloadServiceRequest {
-    
-    public UnloadServicePathParams pathParams;
-    public UnloadServiceRequest withPathParams(UnloadServicePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Service ID of the service to be unloaded
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serviceId")
+    public String serviceId;
+    public UnloadServiceRequest withServiceId(String serviceId) {
+        this.serviceId = serviceId;
         return this;
     }
     

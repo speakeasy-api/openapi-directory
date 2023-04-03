@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConversionsGetStatisticsSingleRequest {
-    
-    public ConversionsGetStatisticsSinglePathParams pathParams;
-    public ConversionsGetStatisticsSingleRequest withPathParams(ConversionsGetStatisticsSinglePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of the conversion
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversionId")
+    public Long conversionId;
+    public ConversionsGetStatisticsSingleRequest withConversionId(Long conversionId) {
+        this.conversionId = conversionId;
         return this;
     }
     
+    /**
+     * Is the datapoint marked as favourite
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=favourite")
+    public Boolean favourite;
+    public ConversionsGetStatisticsSingleRequest withFavourite(Boolean favourite) {
+        this.favourite = favourite;
+        return this;
+    }
     
-    public ConversionsGetStatisticsSingleQueryParams queryParams;
-    public ConversionsGetStatisticsSingleRequest withQueryParams(ConversionsGetStatisticsSingleQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * If using a "custom" timeFrame you can specify the starting day (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDay")
+    public String fromDay;
+    public ConversionsGetStatisticsSingleRequest withFromDay(String fromDay) {
+        this.fromDay = fromDay;
+        return this;
+    }
+    
+    /**
+     * If using "yesterday" or "today" timeframe you can ask for the hourly detail
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hourly")
+    public Boolean hourly;
+    public ConversionsGetStatisticsSingleRequest withHourly(Boolean hourly) {
+        this.hourly = hourly;
+        return this;
+    }
+    
+    /**
+     * Filter by this tag name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
+    public String tag;
+    public ConversionsGetStatisticsSingleRequest withTag(String tag) {
+        this.tag = tag;
+        return this;
+    }
+    
+    /**
+     * Timeframe of the request. See list at $timeframeList
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeFrame")
+    public ConversionsGetStatisticsSingleTimeFrameEnum timeFrame;
+    public ConversionsGetStatisticsSingleRequest withTimeFrame(ConversionsGetStatisticsSingleTimeFrameEnum timeFrame) {
+        this.timeFrame = timeFrame;
+        return this;
+    }
+    
+    /**
+     * If using a "custom" timeFrame you can specify the ending day (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDay")
+    public String toDay;
+    public ConversionsGetStatisticsSingleRequest withToDay(String toDay) {
+        this.toDay = toDay;
         return this;
     }
     

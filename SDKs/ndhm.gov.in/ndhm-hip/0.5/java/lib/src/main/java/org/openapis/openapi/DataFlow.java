@@ -53,9 +53,22 @@ public class DataFlow {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.PostV05HealthInformationHipRequestJsonResponse postV05HealthInformationHipRequestJson(org.openapis.openapi.models.operations.PostV05HealthInformationHipRequestJsonRequest request) throws Exception {
+        return this.postV05HealthInformationHipRequestJson(request, null);
+    }
+
+    /**
+     * Health information data request
+     * API called by CM to request Health information from HIP against a validated consent artefact. The transactionId is the correlation id that HIP should use use when pushing data to the **dataPushUrl**. 
+     * 
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.PostV05HealthInformationHipRequestJsonResponse postV05HealthInformationHipRequestJson(org.openapis.openapi.models.operations.PostV05HealthInformationHipRequestJsonRequest request, String serverURL) throws Exception {
         String baseUrl = POST_V05_HEALTH_INFORMATION_HIP_REQUEST_JSON_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.5/health-information/hip/request");
@@ -63,13 +76,13 @@ public class DataFlow {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "hipHealthInformationRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -117,9 +130,22 @@ public class DataFlow {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.PostV05HealthInformationHipRequestRawResponse postV05HealthInformationHipRequestRaw(org.openapis.openapi.models.operations.PostV05HealthInformationHipRequestRawRequest request) throws Exception {
+        return this.postV05HealthInformationHipRequestRaw(request, null);
+    }
+
+    /**
+     * Health information data request
+     * API called by CM to request Health information from HIP against a validated consent artefact. The transactionId is the correlation id that HIP should use use when pushing data to the **dataPushUrl**. 
+     * 
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.PostV05HealthInformationHipRequestRawResponse postV05HealthInformationHipRequestRaw(org.openapis.openapi.models.operations.PostV05HealthInformationHipRequestRawRequest request, String serverURL) throws Exception {
         String baseUrl = POST_V05_HEALTH_INFORMATION_HIP_REQUEST_RAW_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.5/health-information/hip/request");
@@ -127,13 +153,13 @@ public class DataFlow {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

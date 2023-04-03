@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostAccountGuestsGuestIdTypePermissionsPatchJsonRequest {
-    
-    public PostAccountGuestsGuestIdTypePermissionsPatchJsonPathParams pathParams;
-    public PostAccountGuestsGuestIdTypePermissionsPatchJsonRequest withPathParams(PostAccountGuestsGuestIdTypePermissionsPatchJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The patch permission request
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ApiCoreRequestsPermissionPatchRequest request;
-    public PostAccountGuestsGuestIdTypePermissionsPatchJsonRequest withRequest(org.openapis.openapi.models.shared.ApiCoreRequestsPermissionPatchRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ApiCoreRequestsPermissionPatchRequest apiCoreRequestsPermissionPatchRequest;
+    public PostAccountGuestsGuestIdTypePermissionsPatchJsonRequest withApiCoreRequestsPermissionPatchRequest(org.openapis.openapi.models.shared.ApiCoreRequestsPermissionPatchRequest apiCoreRequestsPermissionPatchRequest) {
+        this.apiCoreRequestsPermissionPatchRequest = apiCoreRequestsPermissionPatchRequest;
+        return this;
+    }
+    
+    /**
+     * Id of the guest
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=guestId")
+    public Long guestId;
+    public PostAccountGuestsGuestIdTypePermissionsPatchJsonRequest withGuestId(Long guestId) {
+        this.guestId = guestId;
+        return this;
+    }
+    
+    /**
+     * Can be "datapoint" or "group"
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
+    public PostAccountGuestsGuestIdTypePermissionsPatchJsonTypeEnum type;
+    public PostAccountGuestsGuestIdTypePermissionsPatchJsonRequest withType(PostAccountGuestsGuestIdTypePermissionsPatchJsonTypeEnum type) {
+        this.type = type;
         return this;
     }
     

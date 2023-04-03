@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCatalogueAssetDetailRequest {
-    
-    public GetCatalogueAssetDetailPathParams pathParams;
-    public GetCatalogueAssetDetailRequest withPathParams(GetCatalogueAssetDetailPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The identifier for the selected catalogue asset.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assetId")
+    public String assetId;
+    public GetCatalogueAssetDetailRequest withAssetId(String assetId) {
+        this.assetId = assetId;
         return this;
     }
     
-    
-    public GetCatalogueAssetDetailSecurity security;
-    public GetCatalogueAssetDetailRequest withSecurity(GetCatalogueAssetDetailSecurity security) {
-        this.security = security;
+    /**
+     * The identifier for the selected catalogue.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=catalogueId")
+    public String catalogueId;
+    public GetCatalogueAssetDetailRequest withCatalogueId(String catalogueId) {
+        this.catalogueId = catalogueId;
         return this;
     }
     

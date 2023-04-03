@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateEnvironmentHeaders;
 import org.openapis.openapi.models.operations.CreateEnvironmentRequestBodyFederationModeEnum;
 import org.openapis.openapi.models.operations.CreateEnvironmentRequestBodyFederationParameters;
 import org.openapis.openapi.models.operations.CreateEnvironmentRequestBodySuperuserParameters;
@@ -17,56 +16,52 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateEnvironmentRequest req = new CreateEnvironmentRequest() {{
-                headers = new CreateEnvironmentHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new CreateEnvironmentRequestBody() {{
+                requestBody = new CreateEnvironmentRequestBody() {{
                     dataBundles = new String[]{{
-                        add("vel"),
-                        add("error"),
-                        add("deserunt"),
-                        add("suscipit"),
+                        add("provident"),
+                        add("distinctio"),
+                        add("quibusdam"),
                     }};
-                    description = "iure";
-                    federationMode = "FEDERATED";
+                    description = "unde";
+                    federationMode = "LOCAL";
                     federationParameters = new CreateEnvironmentRequestBodyFederationParameters() {{
-                        applicationCallBackURL = "debitis";
+                        applicationCallBackURL = "corrupti";
                         attributeMap = new java.util.HashMap<String, String>() {{
-                            put("delectus", "tempora");
+                            put("vel", "error");
+                            put("deserunt", "suscipit");
+                            put("iure", "magnam");
+                            put("debitis", "ipsa");
                         }};
-                        federationProviderName = "suscipit";
-                        federationURN = "molestiae";
-                        samlMetadataDocument = "minus";
-                        samlMetadataURL = "placeat";
+                        federationProviderName = "delectus";
+                        federationURN = "tempora";
+                        samlMetadataDocument = "suscipit";
+                        samlMetadataURL = "molestiae";
                     }};
-                    kmsKeyId = "voluptatum";
-                    name = "iusto";
+                    kmsKeyId = "minus";
+                    name = "placeat";
                     superuserParameters = new CreateEnvironmentRequestBodySuperuserParameters() {{
-                        emailAddress = "excepturi";
-                        firstName = "Glen";
-                        lastName = "Walsh";
+                        emailAddress = "voluptatum";
+                        firstName = "Jaycee";
+                        lastName = "Mante";
                     }};
                     tags = new java.util.HashMap<String, String>() {{
+                        put("recusandae", "temporibus");
                         put("ab", "quis");
-                        put("veritatis", "deserunt");
-                        put("perferendis", "ipsam");
-                        put("repellendus", "sapiente");
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "veritatis";
+                xAmzContentSha256 = "deserunt";
+                xAmzCredential = "perferendis";
+                xAmzDate = "ipsam";
+                xAmzSecurityToken = "repellendus";
+                xAmzSignature = "sapiente";
+                xAmzSignedHeaders = "quo";
+            }}            
 
             CreateEnvironmentResponse res = sdk.createEnvironment(req);
 

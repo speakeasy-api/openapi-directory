@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveRequest {
-    
-    public DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchivePathParams pathParams;
-    public DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveRequest withPathParams(DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchivePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
+    public Integer appId;
+    public DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveRequest withAppId(Integer appId) {
+        this.appId = appId;
         return this;
     }
     
-    
-    public DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveSecurity security;
-    public DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveRequest withSecurity(DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subscriptionId")
+    public Integer subscriptionId;
+    public DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveRequest withSubscriptionId(Integer subscriptionId) {
+        this.subscriptionId = subscriptionId;
         return this;
     }
     

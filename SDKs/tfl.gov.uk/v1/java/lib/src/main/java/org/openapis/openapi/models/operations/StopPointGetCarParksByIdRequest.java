@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopPointGetCarParksByIdRequest {
-    
-    public StopPointGetCarParksByIdPathParams pathParams;
-    public StopPointGetCarParksByIdRequest withPathParams(StopPointGetCarParksByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * stopPointId is required to get the car parks.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=stopPointId")
+    public String stopPointId;
+    public StopPointGetCarParksByIdRequest withStopPointId(String stopPointId) {
+        this.stopPointId = stopPointId;
         return this;
     }
     

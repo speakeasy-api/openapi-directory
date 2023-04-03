@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2EmployeesIdRequest {
-    
-    public GetV2EmployeesIdPathParams pathParams;
-    public GetV2EmployeesIdRequest withPathParams(GetV2EmployeesIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetV2EmployeesIdSecurity security;
-    public GetV2EmployeesIdRequest withSecurity(GetV2EmployeesIdSecurity security) {
-        this.security = security;
+    /**
+     * UUID for the employee that was requested.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetV2EmployeesIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

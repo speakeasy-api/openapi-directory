@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPodcastEpisodesRequest {
-    
-    public GetPodcastEpisodesPathParams pathParams;
-    public GetPodcastEpisodesRequest withPathParams(GetPodcastEpisodesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public String limit;
+    public GetPodcastEpisodesRequest withLimit(String limit) {
+        this.limit = limit;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public String offset;
+    public GetPodcastEpisodesRequest withOffset(String offset) {
+        this.offset = offset;
+        return this;
+    }
     
-    public GetPodcastEpisodesQueryParams queryParams;
-    public GetPodcastEpisodesRequest withQueryParams(GetPodcastEpisodesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=podcastKey")
+    public String podcastKey;
+    public GetPodcastEpisodesRequest withPodcastKey(String podcastKey) {
+        this.podcastKey = podcastKey;
         return this;
     }
     

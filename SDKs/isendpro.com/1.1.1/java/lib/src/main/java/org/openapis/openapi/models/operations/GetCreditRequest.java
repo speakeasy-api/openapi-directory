@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCreditRequest {
+    /**
+     * Type de reponse demand\u00e9e, 1 pour euro, 2 pour euro + estimation quantit\u00e9
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=credit")
+    public GetCreditCreditEnum credit;
+    public GetCreditRequest withCredit(GetCreditCreditEnum credit) {
+        this.credit = credit;
+        return this;
+    }
     
-    public GetCreditQueryParams queryParams;
-    public GetCreditRequest withQueryParams(GetCreditQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Cl\u00e9 API
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keyid")
+    public String keyid;
+    public GetCreditRequest withKeyid(String keyid) {
+        this.keyid = keyid;
         return this;
     }
     

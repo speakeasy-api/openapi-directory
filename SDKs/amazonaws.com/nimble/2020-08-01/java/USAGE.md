@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AcceptEulasPathParams;
-import org.openapis.openapi.models.operations.AcceptEulasHeaders;
 import org.openapis.openapi.models.operations.AcceptEulasRequestBody;
 import org.openapis.openapi.models.operations.AcceptEulasRequest;
 import org.openapis.openapi.models.operations.AcceptEulasResponse;
@@ -15,34 +13,28 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AcceptEulasRequest req = new AcceptEulasRequest() {{
-                pathParams = new AcceptEulasPathParams() {{
-                    studioId = "corrupti";
-                }};
-                headers = new AcceptEulasHeaders() {{
-                    xAmzAlgorithm = "provident";
-                    xAmzClientToken = "distinctio";
-                    xAmzContentSha256 = "quibusdam";
-                    xAmzCredential = "unde";
-                    xAmzDate = "nulla";
-                    xAmzSecurityToken = "corrupti";
-                    xAmzSignature = "illum";
-                    xAmzSignedHeaders = "vel";
-                }};
-                request = new AcceptEulasRequestBody() {{
+                requestBody = new AcceptEulasRequestBody() {{
                     eulaIds = new String[]{{
-                        add("deserunt"),
-                        add("suscipit"),
-                        add("iure"),
+                        add("provident"),
+                        add("distinctio"),
+                        add("quibusdam"),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "unde";
+                xAmzClientToken = "nulla";
+                xAmzContentSha256 = "corrupti";
+                xAmzCredential = "illum";
+                xAmzDate = "vel";
+                xAmzSecurityToken = "error";
+                xAmzSignature = "deserunt";
+                xAmzSignedHeaders = "suscipit";
+                studioId = "iure";
+            }}            
 
             AcceptEulasResponse res = sdk.acceptEulas(req);
 

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CertificateEmailHistoryRequest {
-    
-    public CertificateEmailHistoryPathParams pathParams;
-    public CertificateEmailHistoryRequest withPathParams(CertificateEmailHistoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Certificate id to retrieve email history
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=certificateId")
+    public String certificateId;
+    public CertificateEmailHistoryRequest withCertificateId(String certificateId) {
+        this.certificateId = certificateId;
         return this;
     }
     

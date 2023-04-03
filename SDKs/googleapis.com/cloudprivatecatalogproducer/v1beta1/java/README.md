@@ -18,16 +18,12 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsAssociationsCreateSecurity;
-import org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsAssociationsCreatePathParams;
-import org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsAssociationsCreateQueryParams;
 import org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsAssociationsCreateRequest;
 import org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsAssociationsCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.GoogleCloudPrivatecatalogproducerV1beta1CreateAssociationRequest;
 import org.openapis.openapi.models.shared.GoogleCloudPrivatecatalogproducerV1beta1Association;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -36,40 +32,31 @@ public class Application {
                 .build();
 
             CloudprivatecatalogproducerCatalogsAssociationsCreateRequest req = new CloudprivatecatalogproducerCatalogsAssociationsCreateRequest() {{
-                security = new CloudprivatecatalogproducerCatalogsAssociationsCreateSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new CloudprivatecatalogproducerCatalogsAssociationsCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new CloudprivatecatalogproducerCatalogsAssociationsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new GoogleCloudPrivatecatalogproducerV1beta1CreateAssociationRequest() {{
+                dollarXgafv = "2";
+                googleCloudPrivatecatalogproducerV1beta1CreateAssociationRequest = new GoogleCloudPrivatecatalogproducerV1beta1CreateAssociationRequest() {{
                     association = new GoogleCloudPrivatecatalogproducerV1beta1Association() {{
-                        createTime = "suscipit";
-                        name = "iure";
-                        resource = "magnam";
+                        createTime = "provident";
+                        name = "distinctio";
+                        resource = "quibusdam";
                     }};
                 }};
-            }};            
+                accessToken = "unde";
+                alt = "proto";
+                callback = "corrupti";
+                fields = "illum";
+                key = "vel";
+                oauthToken = "error";
+                parent = "deserunt";
+                prettyPrint = false;
+                quotaUser = "suscipit";
+                uploadType = "iure";
+                uploadProtocol = "magnam";
+            }}            
 
-            CloudprivatecatalogproducerCatalogsAssociationsCreateResponse res = sdk.catalogs.cloudprivatecatalogproducerCatalogsAssociationsCreate(req);
+            CloudprivatecatalogproducerCatalogsAssociationsCreateResponse res = sdk.catalogs.cloudprivatecatalogproducerCatalogsAssociationsCreate(req, new CloudprivatecatalogproducerCatalogsAssociationsCreateSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.body.isPresent()) {
                 // handle response
@@ -81,7 +68,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### catalogs

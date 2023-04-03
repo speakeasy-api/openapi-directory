@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsCheckPermissionsForRepoLegacyRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public TeamsCheckPermissionsForRepoLegacyRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public TeamsCheckPermissionsForRepoLegacyPathParams pathParams;
-    public TeamsCheckPermissionsForRepoLegacyRequest withPathParams(TeamsCheckPermissionsForRepoLegacyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public TeamsCheckPermissionsForRepoLegacyRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
+    public Long teamId;
+    public TeamsCheckPermissionsForRepoLegacyRequest withTeamId(Long teamId) {
+        this.teamId = teamId;
         return this;
     }
     

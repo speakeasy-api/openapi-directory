@@ -35,7 +35,7 @@ public class Annotation {
      */
     public org.openapis.openapi.models.operations.GETAnnotationCountByAccIdAndObjectTypeUsingGETResponse getAnnotationCountByAccIdAndObjectTypeUsingGET(org.openapis.openapi.models.operations.GETAnnotationCountByAccIdAndObjectTypeUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETAnnotationCountByAccIdAndObjectTypeUsingGETPathParams.class, baseUrl, "/annotations/count/{accId}/{speciesTypeKey}/{includeChildren}/{objectType}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETAnnotationCountByAccIdAndObjectTypeUsingGETRequest.class, baseUrl, "/annotations/count/{accId}/{speciesTypeKey}/{includeChildren}/{objectType}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -74,7 +74,7 @@ public class Annotation {
      */
     public org.openapis.openapi.models.operations.GETAnnotationCountByAccIdAndSpeciesUsingGETResponse getAnnotationCountByAccIdAndSpeciesUsingGET(org.openapis.openapi.models.operations.GETAnnotationCountByAccIdAndSpeciesUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETAnnotationCountByAccIdAndSpeciesUsingGETPathParams.class, baseUrl, "/annotations/count/{accId}/{speciesTypeKey}/{includeChildren}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETAnnotationCountByAccIdAndSpeciesUsingGETRequest.class, baseUrl, "/annotations/count/{accId}/{speciesTypeKey}/{includeChildren}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -113,7 +113,7 @@ public class Annotation {
      */
     public org.openapis.openapi.models.operations.GETAnnotationCountByAccIdUsingGETResponse getAnnotationCountByAccIdUsingGET(org.openapis.openapi.models.operations.GETAnnotationCountByAccIdUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETAnnotationCountByAccIdUsingGETPathParams.class, baseUrl, "/annotations/count/{accId}/{includeChildren}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETAnnotationCountByAccIdUsingGETRequest.class, baseUrl, "/annotations/count/{accId}/{includeChildren}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -152,7 +152,7 @@ public class Annotation {
      */
     public org.openapis.openapi.models.operations.GETAnnotationsByAccIdAndRgdIdUsingGETResponse getAnnotationsByAccIdAndRgdIdUsingGET(org.openapis.openapi.models.operations.GETAnnotationsByAccIdAndRgdIdUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETAnnotationsByAccIdAndRgdIdUsingGETPathParams.class, baseUrl, "/annotations/{accId}/{rgdId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETAnnotationsByAccIdAndRgdIdUsingGETRequest.class, baseUrl, "/annotations/{accId}/{rgdId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -191,7 +191,7 @@ public class Annotation {
      */
     public org.openapis.openapi.models.operations.GETAnnotationsByRgdIdAndOntologyUsingGETResponse getAnnotationsByRgdIdAndOntologyUsingGET(org.openapis.openapi.models.operations.GETAnnotationsByRgdIdAndOntologyUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETAnnotationsByRgdIdAndOntologyUsingGETPathParams.class, baseUrl, "/annotations/rgdId/{rgdId}/{ontologyPrefix}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETAnnotationsByRgdIdAndOntologyUsingGETRequest.class, baseUrl, "/annotations/rgdId/{rgdId}/{ontologyPrefix}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -230,7 +230,7 @@ public class Annotation {
      */
     public org.openapis.openapi.models.operations.GETAnnotationsByRgdIdUsingGETResponse getAnnotationsByRgdIdUsingGET(org.openapis.openapi.models.operations.GETAnnotationsByRgdIdUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETAnnotationsByRgdIdUsingGETPathParams.class, baseUrl, "/annotations/rgdId/{rgdId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETAnnotationsByRgdIdUsingGETRequest.class, baseUrl, "/annotations/rgdId/{rgdId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -269,7 +269,7 @@ public class Annotation {
      */
     public org.openapis.openapi.models.operations.GETAnnotationsUsingGETResponse getAnnotationsUsingGET(org.openapis.openapi.models.operations.GETAnnotationsUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETAnnotationsUsingGETPathParams.class, baseUrl, "/annotations/{accId}/{speciesTypeKey}/{includeChildren}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETAnnotationsUsingGETRequest.class, baseUrl, "/annotations/{accId}/{speciesTypeKey}/{includeChildren}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -306,7 +306,7 @@ public class Annotation {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAnnotationsUsingPOSTResponse getAnnotationsUsingPOST(org.openapis.openapi.models.operations.GetAnnotationsUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetAnnotationsUsingPOSTResponse getAnnotationsUsingPOST(org.openapis.openapi.models.shared.AnnotationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/annotations/");
         
@@ -349,7 +349,7 @@ public class Annotation {
      */
     public org.openapis.openapi.models.operations.GETAnnotsByRefrerenceUsingGETResponse getAnnotsByRefrerenceUsingGET(org.openapis.openapi.models.operations.GETAnnotsByRefrerenceUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETAnnotsByRefrerenceUsingGETPathParams.class, baseUrl, "/annotations/reference/{refRgdId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETAnnotsByRefrerenceUsingGETRequest.class, baseUrl, "/annotations/reference/{refRgdId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -388,7 +388,7 @@ public class Annotation {
      */
     public org.openapis.openapi.models.operations.GETTermAccIdsUsingGETResponse getTermAccIdsUsingGET(org.openapis.openapi.models.operations.GETTermAccIdsUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETTermAccIdsUsingGETPathParams.class, baseUrl, "/annotations/accId/{rgdId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETTermAccIdsUsingGETRequest.class, baseUrl, "/annotations/accId/{rgdId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

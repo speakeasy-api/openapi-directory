@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListApplicationRequest {
+    /**
+     * The current page number (starts at 1)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ListApplicationRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public ListApplicationQueryParams queryParams;
-    public ListApplicationRequest withQueryParams(ListApplicationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of applications per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public ListApplicationRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

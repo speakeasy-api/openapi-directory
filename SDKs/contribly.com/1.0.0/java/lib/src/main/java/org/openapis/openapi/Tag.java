@@ -51,7 +51,7 @@ public class Tag {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTagsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTagsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -91,7 +91,7 @@ public class Tag {
      */
     public org.openapis.openapi.models.operations.GetTagsIdResponse getTagsId(org.openapis.openapi.models.operations.GetTagsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsIdPathParams.class, baseUrl, "/tags/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsIdRequest.class, baseUrl, "/tags/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -138,7 +138,7 @@ public class Tag {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTagsetsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTagsetsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -178,7 +178,7 @@ public class Tag {
      */
     public org.openapis.openapi.models.operations.GetTagsetsIdResponse getTagsetsId(org.openapis.openapi.models.operations.GetTagsetsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsetsIdPathParams.class, baseUrl, "/tagsets/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsetsIdRequest.class, baseUrl, "/tagsets/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -216,7 +216,7 @@ public class Tag {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostTagsResponse postTags(org.openapis.openapi.models.operations.PostTagsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostTagsResponse postTags(org.openapis.openapi.models.shared.TagSubmission request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/tags");
         
@@ -267,7 +267,7 @@ public class Tag {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostTagsetsResponse postTagsets(org.openapis.openapi.models.operations.PostTagsetsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostTagsetsResponse postTagsets(org.openapis.openapi.models.shared.TagSetSubmission request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/tagsets");
         

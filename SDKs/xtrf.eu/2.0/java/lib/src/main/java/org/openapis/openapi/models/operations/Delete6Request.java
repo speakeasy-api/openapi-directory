@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Delete6Request {
-    
-    public Delete6PathParams pathParams;
-    public Delete6Request withPathParams(Delete6PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * provider invoice's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=invoiceId")
+    public Long invoiceId;
+    public Delete6Request withInvoiceId(Long invoiceId) {
+        this.invoiceId = invoiceId;
         return this;
     }
     

@@ -4,34 +4,71 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSyncSyncListItemRequest {
-    
-    public ListSyncSyncListItemPathParams pathParams;
-    public ListSyncSyncListItemRequest withPathParams(ListSyncSyncListItemPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Bounds")
+    public org.openapis.openapi.models.shared.SyncListItemEnumQueryFromBoundTypeEnum bounds;
+    public ListSyncSyncListItemRequest withBounds(org.openapis.openapi.models.shared.SyncListItemEnumQueryFromBoundTypeEnum bounds) {
+        this.bounds = bounds;
         return this;
     }
     
-    
-    public ListSyncSyncListItemQueryParams queryParams;
-    public ListSyncSyncListItemRequest withQueryParams(ListSyncSyncListItemQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=From")
+    public String from;
+    public ListSyncSyncListItemRequest withFrom(String from) {
+        this.from = from;
         return this;
     }
     
-    
-    public ListSyncSyncListItemSecurity security;
-    public ListSyncSyncListItemRequest withSecurity(ListSyncSyncListItemSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ListSid")
+    public String listSid;
+    public ListSyncSyncListItemRequest withListSid(String listSid) {
+        this.listSid = listSid;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Order")
+    public org.openapis.openapi.models.shared.SyncListItemEnumQueryResultOrderEnum order;
+    public ListSyncSyncListItemRequest withOrder(org.openapis.openapi.models.shared.SyncListItemEnumQueryResultOrderEnum order) {
+        this.order = order;
+        return this;
+    }
     
-    public String serverURL;
-    public ListSyncSyncListItemRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListSyncSyncListItemRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListSyncSyncListItemRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListSyncSyncListItemRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public ListSyncSyncListItemRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

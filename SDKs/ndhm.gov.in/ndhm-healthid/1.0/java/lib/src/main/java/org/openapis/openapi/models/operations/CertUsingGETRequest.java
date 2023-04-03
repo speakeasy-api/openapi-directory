@@ -4,20 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CertUsingGETRequest {
-    
-    public CertUsingGETHeaders headers;
-    public CertUsingGETRequest withHeaders(CertUsingGETHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public CertUsingGETSecurity security;
-    public CertUsingGETRequest withSecurity(CertUsingGETSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public CertUsingGETRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     

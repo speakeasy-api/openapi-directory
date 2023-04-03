@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SignRequestRequest {
-    
-    public SignRequestQueryParams queryParams;
-    public SignRequestRequest withQueryParams(SignRequestQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Claims of scope
      */
     @SpeakeasyMetadata("request:mediaType=application/jwt")
-    public byte[] request;
-    public SignRequestRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public SignRequestRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * test only mode, using test issuer
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=test")
+    public Long test;
+    public SignRequestRequest withTest(Long test) {
+        this.test = test;
         return this;
     }
     

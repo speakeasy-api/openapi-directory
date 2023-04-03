@@ -7,24 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesPutDistributionGroupRequest {
-    
-    public ReleasesPutDistributionGroupPathParams pathParams;
-    public ReleasesPutDistributionGroupRequest withPathParams(ReleasesPutDistributionGroupPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public ReleasesPutDistributionGroupRequestBody request;
-    public ReleasesPutDistributionGroupRequest withRequest(ReleasesPutDistributionGroupRequestBody request) {
-        this.request = request;
+    public ReleasesPutDistributionGroupRequestBody requestBody;
+    public ReleasesPutDistributionGroupRequest withRequestBody(ReleasesPutDistributionGroupRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public ReleasesPutDistributionGroupRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public ReleasesPutDistributionGroupSecurity security;
-    public ReleasesPutDistributionGroupRequest withSecurity(ReleasesPutDistributionGroupSecurity security) {
-        this.security = security;
+    /**
+     * The id of the releases destination
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public String groupId;
+    public ReleasesPutDistributionGroupRequest withGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public ReleasesPutDistributionGroupRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
+    
+    /**
+     * The ID of the release
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_id")
+    public Long releaseId;
+    public ReleasesPutDistributionGroupRequest withReleaseId(Long releaseId) {
+        this.releaseId = releaseId;
         return this;
     }
     

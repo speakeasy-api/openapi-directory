@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopScreenshotsTestRequest {
-    
-    public StopScreenshotsTestPathParams pathParams;
-    public StopScreenshotsTestRequest withPathParams(StopScreenshotsTestPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public StopScreenshotsTestSecurity security;
-    public StopScreenshotsTestRequest withSecurity(StopScreenshotsTestSecurity security) {
-        this.security = security;
+    /**
+     * Test ID that details you want to stop
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=test_id")
+    public String testId;
+    public StopScreenshotsTestRequest withTestId(String testId) {
+        this.testId = testId;
         return this;
     }
     

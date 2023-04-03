@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateEmployeeRequest {
-    
-    public UpdateEmployeePathParams pathParams;
-    public UpdateEmployeeRequest withPathParams(UpdateEmployeePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateEmployeeHeaders headers;
-    public UpdateEmployeeRequest withHeaders(UpdateEmployeeHeaders headers) {
-        this.headers = headers;
+    /**
+     * Employee id for single object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EmployeeID")
+    public String employeeID;
+    public UpdateEmployeeRequest withEmployeeID(String employeeID) {
+        this.employeeID = employeeID;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.EmployeeInput[] request;
-    public UpdateEmployeeRequest withRequest(org.openapis.openapi.models.shared.EmployeeInput[] request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.EmployeeInput[] requestBody;
+    public UpdateEmployeeRequest withRequestBody(org.openapis.openapi.models.shared.EmployeeInput[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateEmployeeSecurity security;
-    public UpdateEmployeeRequest withSecurity(UpdateEmployeeSecurity security) {
-        this.security = security;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
+    public String xeroTenantId;
+    public UpdateEmployeeRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     

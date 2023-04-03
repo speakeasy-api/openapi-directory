@@ -4,13 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AuthorizeRequest {
+    /**
+     * Client ID (Consumer Key) of your application
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=client_id")
+    public String clientId;
+    public AuthorizeRequest withClientId(String clientId) {
+        this.clientId = clientId;
+        return this;
+    }
     
-    public AuthorizeQueryParams queryParams;
-    public AuthorizeRequest withQueryParams(AuthorizeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * User type to be authorized (usually 'customer')
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=realm")
+    public AuthorizeRealmEnum realm;
+    public AuthorizeRequest withRealm(AuthorizeRealmEnum realm) {
+        this.realm = realm;
+        return this;
+    }
+    
+    /**
+     * The callback URI to send the request to after authorization; must use a host name that is registered with your application
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=redirect_uri")
+    public String redirectUri;
+    public AuthorizeRequest withRedirectUri(String redirectUri) {
+        this.redirectUri = redirectUri;
+        return this;
+    }
+    
+    /**
+     * Type of temporary authorization code that will be used to generate an access code; the only valid value is 'code'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=response_type")
+    public AuthorizeResponseTypeEnum responseType;
+    public AuthorizeRequest withResponseType(AuthorizeResponseTypeEnum responseType) {
+        this.responseType = responseType;
+        return this;
+    }
+    
+    /**
+     * Space-separated list of scopes to be authorized
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scope")
+    public String scope;
+    public AuthorizeRequest withScope(String scope) {
+        this.scope = scope;
+        return this;
+    }
+    
+    /**
+     * Unique value used by the calling app to verify the request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public String state;
+    public AuthorizeRequest withState(String state) {
+        this.state = state;
         return this;
     }
     

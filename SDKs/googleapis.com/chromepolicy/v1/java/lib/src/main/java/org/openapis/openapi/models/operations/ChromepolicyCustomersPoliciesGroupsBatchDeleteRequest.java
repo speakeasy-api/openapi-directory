@@ -7,31 +7,130 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest {
-    
-    public ChromepolicyCustomersPoliciesGroupsBatchDeletePathParams pathParams;
-    public ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest withPathParams(ChromepolicyCustomersPoliciesGroupsBatchDeletePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ChromepolicyCustomersPoliciesGroupsBatchDeleteQueryParams queryParams;
-    public ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest withQueryParams(ChromepolicyCustomersPoliciesGroupsBatchDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GoogleChromePolicyVersionsV1BatchDeleteGroupPoliciesRequest request;
-    public ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest withRequest(org.openapis.openapi.models.shared.GoogleChromePolicyVersionsV1BatchDeleteGroupPoliciesRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GoogleChromePolicyVersionsV1BatchDeleteGroupPoliciesRequest googleChromePolicyVersionsV1BatchDeleteGroupPoliciesRequest;
+    public ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest withGoogleChromePolicyVersionsV1BatchDeleteGroupPoliciesRequest(org.openapis.openapi.models.shared.GoogleChromePolicyVersionsV1BatchDeleteGroupPoliciesRequest googleChromePolicyVersionsV1BatchDeleteGroupPoliciesRequest) {
+        this.googleChromePolicyVersionsV1BatchDeleteGroupPoliciesRequest = googleChromePolicyVersionsV1BatchDeleteGroupPoliciesRequest;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public ChromepolicyCustomersPoliciesGroupsBatchDeleteSecurity security;
-    public ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest withSecurity(ChromepolicyCustomersPoliciesGroupsBatchDeleteSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * ID of the Google Workspace account or literal "my_customer" for the customer associated to the request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customer")
+    public String customer;
+    public ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest withCustomer(String customer) {
+        this.customer = customer;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

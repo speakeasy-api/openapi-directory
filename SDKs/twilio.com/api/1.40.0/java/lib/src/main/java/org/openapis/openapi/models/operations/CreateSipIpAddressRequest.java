@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSipIpAddressRequest {
+    /**
+     * The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public CreateSipIpAddressRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
+        return this;
+    }
     
-    public CreateSipIpAddressPathParams pathParams;
-    public CreateSipIpAddressRequest withPathParams(CreateSipIpAddressPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The IpAccessControlList Sid with which to associate the created IpAddress resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=IpAccessControlListSid")
+    public String ipAccessControlListSid;
+    public CreateSipIpAddressRequest withIpAccessControlListSid(String ipAccessControlListSid) {
+        this.ipAccessControlListSid = ipAccessControlListSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateSipIpAddressCreateSipIpAddressRequest request;
-    public CreateSipIpAddressRequest withRequest(CreateSipIpAddressCreateSipIpAddressRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateSipIpAddressSecurity security;
-    public CreateSipIpAddressRequest withSecurity(CreateSipIpAddressSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateSipIpAddressRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateSipIpAddressCreateSipIpAddressRequest requestBody;
+    public CreateSipIpAddressRequest withRequestBody(CreateSipIpAddressCreateSipIpAddressRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

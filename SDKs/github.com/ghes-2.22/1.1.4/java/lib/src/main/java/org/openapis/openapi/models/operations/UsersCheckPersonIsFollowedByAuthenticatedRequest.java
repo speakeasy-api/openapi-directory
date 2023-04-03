@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UsersCheckPersonIsFollowedByAuthenticatedRequest {
-    
-    public UsersCheckPersonIsFollowedByAuthenticatedPathParams pathParams;
-    public UsersCheckPersonIsFollowedByAuthenticatedRequest withPathParams(UsersCheckPersonIsFollowedByAuthenticatedPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public UsersCheckPersonIsFollowedByAuthenticatedRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

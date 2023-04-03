@@ -35,19 +35,20 @@ public class Catalogue {
      * Catalogue Detail
      * Return the content of the selected catalogue.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCatalogueResponse getCatalogue(org.openapis.openapi.models.operations.GetCatalogueRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCatalogueResponse getCatalogue(org.openapis.openapi.models.operations.GetCatalogueRequest request, org.openapis.openapi.models.operations.GetCatalogueSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCataloguePathParams.class, baseUrl, "/catalogue/{catalogueId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCatalogueRequest.class, baseUrl, "/catalogue/{catalogueId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -75,25 +76,26 @@ public class Catalogue {
      * Catalogue Asset Collection
      * Return the content of the selected catalogue.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCatalogueAssetResponse getCatalogueAsset(org.openapis.openapi.models.operations.GetCatalogueAssetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCatalogueAssetResponse getCatalogueAsset(org.openapis.openapi.models.operations.GetCatalogueAssetRequest request, org.openapis.openapi.models.operations.GetCatalogueAssetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCatalogueAssetPathParams.class, baseUrl, "/catalogue/{catalogueId}/asset", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCatalogueAssetRequest.class, baseUrl, "/catalogue/{catalogueId}/asset", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCatalogueAssetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCatalogueAssetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -121,19 +123,20 @@ public class Catalogue {
      * Catalogue Asset Detail
      * Return the content of the selected catalogue asset.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCatalogueAssetDetailResponse getCatalogueAssetDetail(org.openapis.openapi.models.operations.GetCatalogueAssetDetailRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCatalogueAssetDetailResponse getCatalogueAssetDetail(org.openapis.openapi.models.operations.GetCatalogueAssetDetailRequest request, org.openapis.openapi.models.operations.GetCatalogueAssetDetailSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCatalogueAssetDetailPathParams.class, baseUrl, "/catalogue/{catalogueId}/asset/{assetId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCatalogueAssetDetailRequest.class, baseUrl, "/catalogue/{catalogueId}/asset/{assetId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -160,11 +163,10 @@ public class Catalogue {
     /**
      * Catalogue Collection
      * Return a collection of Catalogues.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListCataloguesResponse listCatalogues(org.openapis.openapi.models.operations.ListCataloguesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListCataloguesResponse listCatalogues() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/catalogue");
         
@@ -173,8 +175,7 @@ public class Catalogue {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");

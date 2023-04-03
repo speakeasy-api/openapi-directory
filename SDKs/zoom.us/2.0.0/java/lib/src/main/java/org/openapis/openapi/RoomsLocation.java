@@ -43,10 +43,11 @@ public class RoomsLocation {
      *  
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddAZRLocationResponse addAZRLocation(org.openapis.openapi.models.operations.AddAZRLocationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddAZRLocationResponse addAZRLocation(org.openapis.openapi.models.operations.AddAZRLocationApplicationJSON request, org.openapis.openapi.models.operations.AddAZRLocationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/rooms/locations");
         
@@ -57,7 +58,7 @@ public class RoomsLocation {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -97,21 +98,22 @@ public class RoomsLocation {
      * **Scopes:** `room:write:admin`&lt;br&gt;&lt;br&gt; 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChangeParentLocationResponse changeParentLocation(org.openapis.openapi.models.operations.ChangeParentLocationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChangeParentLocationResponse changeParentLocation(org.openapis.openapi.models.operations.ChangeParentLocationRequest request, org.openapis.openapi.models.operations.ChangeParentLocationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChangeParentLocationPathParams.class, baseUrl, "/rooms/locations/{locationId}/location", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChangeParentLocationRequest.class, baseUrl, "/rooms/locations/{locationId}/location", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -153,19 +155,20 @@ public class RoomsLocation {
      *  
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetZRLocationProfileResponse getZRLocationProfile(org.openapis.openapi.models.operations.GetZRLocationProfileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetZRLocationProfileResponse getZRLocationProfile(org.openapis.openapi.models.operations.GetZRLocationProfileRequest request, org.openapis.openapi.models.operations.GetZRLocationProfileSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetZRLocationProfilePathParams.class, baseUrl, "/rooms/locations/{locationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetZRLocationProfileRequest.class, baseUrl, "/rooms/locations/{locationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -205,25 +208,26 @@ public class RoomsLocation {
      * **Scopes:** `room:read:admin`&lt;br&gt; 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetZRLocationSettingsResponse getZRLocationSettings(org.openapis.openapi.models.operations.GetZRLocationSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetZRLocationSettingsResponse getZRLocationSettings(org.openapis.openapi.models.operations.GetZRLocationSettingsRequest request, org.openapis.openapi.models.operations.GetZRLocationSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetZRLocationSettingsPathParams.class, baseUrl, "/rooms/locations/{locationId}/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetZRLocationSettingsRequest.class, baseUrl, "/rooms/locations/{locationId}/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetZRLocationSettingsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetZRLocationSettingsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -262,11 +266,10 @@ public class RoomsLocation {
      * * Account owner or admin permissions&lt;br&gt;
      * **Scopes:** `room:read:admin`&lt;br&gt; 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetZRLocationStructureResponse getZRLocationStructure(org.openapis.openapi.models.operations.GetZRLocationStructureRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetZRLocationStructureResponse getZRLocationStructure() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/rooms/locations/structure");
         
@@ -275,7 +278,7 @@ public class RoomsLocation {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = this._securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -316,10 +319,11 @@ public class RoomsLocation {
      *  
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListZRLocationsResponse listZRLocations(org.openapis.openapi.models.operations.ListZRLocationsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListZRLocationsResponse listZRLocations(org.openapis.openapi.models.operations.ListZRLocationsRequest request, org.openapis.openapi.models.operations.ListZRLocationsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/rooms/locations");
         
@@ -327,14 +331,14 @@ public class RoomsLocation {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListZRLocationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListZRLocationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -377,21 +381,22 @@ public class RoomsLocation {
      *  
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateZRLocationProfileResponse updateZRLocationProfile(org.openapis.openapi.models.operations.UpdateZRLocationProfileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateZRLocationProfileResponse updateZRLocationProfile(org.openapis.openapi.models.operations.UpdateZRLocationProfileRequest request, org.openapis.openapi.models.operations.UpdateZRLocationProfileSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateZRLocationProfilePathParams.class, baseUrl, "/rooms/locations/{locationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateZRLocationProfileRequest.class, baseUrl, "/rooms/locations/{locationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -429,27 +434,28 @@ public class RoomsLocation {
      * **Scopes:** `room:write:admin`&lt;br&gt; 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateZRLocationSettingsResponse updateZRLocationSettings(org.openapis.openapi.models.operations.UpdateZRLocationSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateZRLocationSettingsResponse updateZRLocationSettings(org.openapis.openapi.models.operations.UpdateZRLocationSettingsRequest request, org.openapis.openapi.models.operations.UpdateZRLocationSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateZRLocationSettingsPathParams.class, baseUrl, "/rooms/locations/{locationId}/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateZRLocationSettingsRequest.class, baseUrl, "/rooms/locations/{locationId}/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UpdateZRLocationSettingsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UpdateZRLocationSettingsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -489,10 +495,11 @@ public class RoomsLocation {
      * **Scopes:** `room:write:admin`&lt;br&gt; 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateZoomRoomsLocationStructureResponse updateZoomRoomsLocationStructure(org.openapis.openapi.models.operations.UpdateZoomRoomsLocationStructureRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateZoomRoomsLocationStructureResponse updateZoomRoomsLocationStructure(org.openapis.openapi.models.operations.UpdateZoomRoomsLocationStructureApplicationJSON request, org.openapis.openapi.models.operations.UpdateZoomRoomsLocationStructureSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/rooms/locations/structure");
         
@@ -503,7 +510,7 @@ public class RoomsLocation {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

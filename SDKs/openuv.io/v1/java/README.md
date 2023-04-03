@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetForecastQueryParams;
-import org.openapis.openapi.models.operations.GetForecastHeaders;
 import org.openapis.openapi.models.operations.GetForecastRequest;
 import org.openapis.openapi.models.operations.GetForecastResponse;
 
@@ -29,17 +27,13 @@ public class Application {
                 .build();
 
             GetForecastRequest req = new GetForecastRequest() {{
-                queryParams = new GetForecastQueryParams() {{
-                    alt = 1050;
-                    dt = "2018-02-04T04:39:06.467Z";
-                    lat = 78.67;
-                    lng = 115.67;
-                    ozone = 304.5;
-                }};
-                headers = new GetForecastHeaders() {{
-                    xAccessToken = "corrupti";
-                }};
-            }};            
+                alt = 1050;
+                dt = "2018-02-04T04:39:06.467Z";
+                lat = 78.67;
+                lng = 115.67;
+                ozone = 304.5;
+                xAccessToken = "corrupti";
+            }}            
 
             GetForecastResponse res = sdk.getForecast(req);
 
@@ -53,7 +47,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

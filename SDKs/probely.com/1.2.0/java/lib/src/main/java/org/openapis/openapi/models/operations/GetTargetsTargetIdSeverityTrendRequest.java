@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTargetsTargetIdSeverityTrendRequest {
-    
-    public GetTargetsTargetIdSeverityTrendPathParams pathParams;
-    public GetTargetsTargetIdSeverityTrendRequest withPathParams(GetTargetsTargetIdSeverityTrendPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Target id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=target_id")
+    public String targetId;
+    public GetTargetsTargetIdSeverityTrendRequest withTargetId(String targetId) {
+        this.targetId = targetId;
         return this;
     }
     

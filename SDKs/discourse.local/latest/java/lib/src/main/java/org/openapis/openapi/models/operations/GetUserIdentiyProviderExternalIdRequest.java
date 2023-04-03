@@ -4,20 +4,38 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUserIdentiyProviderExternalIdRequest {
-    
-    public GetUserIdentiyProviderExternalIdPathParams pathParams;
-    public GetUserIdentiyProviderExternalIdRequest withPathParams(GetUserIdentiyProviderExternalIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Key")
+    public String apiKey;
+    public GetUserIdentiyProviderExternalIdRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Username")
+    public String apiUsername;
+    public GetUserIdentiyProviderExternalIdRequest withApiUsername(String apiUsername) {
+        this.apiUsername = apiUsername;
+        return this;
+    }
     
-    public GetUserIdentiyProviderExternalIdHeaders headers;
-    public GetUserIdentiyProviderExternalIdRequest withHeaders(GetUserIdentiyProviderExternalIdHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=external_id")
+    public String externalId;
+    public GetUserIdentiyProviderExternalIdRequest withExternalId(String externalId) {
+        this.externalId = externalId;
+        return this;
+    }
+    
+    /**
+     * Authentication provider name. Can be found in the provider callback
+     * URL: `/auth/{provider}/callback`
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=provider")
+    public String provider;
+    public GetUserIdentiyProviderExternalIdRequest withProvider(String provider) {
+        this.provider = provider;
         return this;
     }
     

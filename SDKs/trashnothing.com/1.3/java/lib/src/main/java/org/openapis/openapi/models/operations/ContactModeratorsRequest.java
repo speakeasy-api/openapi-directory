@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContactModeratorsRequest {
-    
-    public ContactModeratorsPathParams pathParams;
-    public ContactModeratorsRequest withPathParams(ContactModeratorsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public ContactModeratorsRequestBody requestBody;
+    public ContactModeratorsRequest withRequestBody(ContactModeratorsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public ContactModeratorsRequestBody request;
-    public ContactModeratorsRequest withRequest(ContactModeratorsRequestBody request) {
-        this.request = request;
+    /**
+     * The group ID of the group whose moderators will be contacted.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public String groupId;
+    public ContactModeratorsRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     

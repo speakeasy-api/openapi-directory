@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchSupportingDocumentTypeRequest {
-    
-    public FetchSupportingDocumentTypePathParams pathParams;
-    public FetchSupportingDocumentTypeRequest withPathParams(FetchSupportingDocumentTypePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchSupportingDocumentTypeSecurity security;
-    public FetchSupportingDocumentTypeRequest withSecurity(FetchSupportingDocumentTypeSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchSupportingDocumentTypeRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique string that identifies the Supporting Document Type resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchSupportingDocumentTypeRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

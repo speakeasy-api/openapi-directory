@@ -4,20 +4,104 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCmsV3DomainsGetPageRequest {
-    
-    public GetCmsV3DomainsGetPageQueryParams queryParams;
-    public GetCmsV3DomainsGetPageRequest withQueryParams(GetCmsV3DomainsGetPageQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The paging cursor token of the last successfully read resource will be returned as the `paging.next.after` JSON property of a paged response containing more results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=after")
+    public String after;
+    public GetCmsV3DomainsGetPageRequest withAfter(String after) {
+        this.after = after;
         return this;
     }
     
+    /**
+     * Whether to return only results that have been archived.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=archived")
+    public Boolean archived;
+    public GetCmsV3DomainsGetPageRequest withArchived(Boolean archived) {
+        this.archived = archived;
+        return this;
+    }
     
-    public GetCmsV3DomainsGetPageSecurity security;
-    public GetCmsV3DomainsGetPageRequest withSecurity(GetCmsV3DomainsGetPageSecurity security) {
-        this.security = security;
+    /**
+     * Only return domains created after this date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAfter")
+    public OffsetDateTime createdAfter;
+    public GetCmsV3DomainsGetPageRequest withCreatedAfter(OffsetDateTime createdAfter) {
+        this.createdAfter = createdAfter;
+        return this;
+    }
+    
+    /**
+     * Only return domains created at this date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAt")
+    public OffsetDateTime createdAt;
+    public GetCmsV3DomainsGetPageRequest withCreatedAt(OffsetDateTime createdAt) {
+        this.createdAt = createdAt;
+        return this;
+    }
+    
+    /**
+     * Only return domains created before this date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdBefore")
+    public OffsetDateTime createdBefore;
+    public GetCmsV3DomainsGetPageRequest withCreatedBefore(OffsetDateTime createdBefore) {
+        this.createdBefore = createdBefore;
+        return this;
+    }
+    
+    /**
+     * Maximum number of results per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetCmsV3DomainsGetPageRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String[] sort;
+    public GetCmsV3DomainsGetPageRequest withSort(String[] sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Only return domains updated after this date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedAfter")
+    public OffsetDateTime updatedAfter;
+    public GetCmsV3DomainsGetPageRequest withUpdatedAfter(OffsetDateTime updatedAfter) {
+        this.updatedAfter = updatedAfter;
+        return this;
+    }
+    
+    /**
+     * Only return domains updated at this date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedAt")
+    public OffsetDateTime updatedAt;
+    public GetCmsV3DomainsGetPageRequest withUpdatedAt(OffsetDateTime updatedAt) {
+        this.updatedAt = updatedAt;
+        return this;
+    }
+    
+    /**
+     * Only return domains updated before this date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedBefore")
+    public OffsetDateTime updatedBefore;
+    public GetCmsV3DomainsGetPageRequest withUpdatedBefore(OffsetDateTime updatedBefore) {
+        this.updatedBefore = updatedBefore;
         return this;
     }
     

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFacilityIdsRequest {
-    
-    public GetFacilityIdsQueryParams queryParams;
-    public GetFacilityIdsRequest withQueryParams(GetFacilityIdsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetFacilityIdsSecurity security;
-    public GetFacilityIdsRequest withSecurity(GetFacilityIdsSecurity security) {
-        this.security = security;
+    /**
+     * Optional facility type search filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public GetFacilityIdsTypeEnum type;
+    public GetFacilityIdsRequest withType(GetFacilityIdsTypeEnum type) {
+        this.type = type;
         return this;
     }
     

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveSystemRescueKeyPairRequest {
-    
-    public RemoveSystemRescueKeyPairQueryParams queryParams;
-    public RemoveSystemRescueKeyPairRequest withQueryParams(RemoveSystemRescueKeyPairQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RemoveSystemRescueKeyPairRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public RemoveSystemRescueKeyPairHeaders headers;
-    public RemoveSystemRescueKeyPairRequest withHeaders(RemoveSystemRescueKeyPairHeaders headers) {
-        this.headers = headers;
+    /**
+     * Version (NEW)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
+    public String version;
+    public RemoveSystemRescueKeyPairRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

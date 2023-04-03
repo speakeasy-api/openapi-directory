@@ -33,10 +33,11 @@ public class CaseClassifications {
     /**
      * Retrieve valid classifications to be used when creating a support case. The classications are hierarchical, with each classification containing all levels of the hierarchy, separated by " &gt; ". For example "Technical Issue &gt; Compute &gt; Compute Engine".
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsupportCaseClassificationsSearchResponse cloudsupportCaseClassificationsSearch(org.openapis.openapi.models.operations.CloudsupportCaseClassificationsSearchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsupportCaseClassificationsSearchResponse cloudsupportCaseClassificationsSearch(org.openapis.openapi.models.operations.CloudsupportCaseClassificationsSearchRequest request, org.openapis.openapi.models.operations.CloudsupportCaseClassificationsSearchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2beta/caseClassifications:search");
         
@@ -44,14 +45,14 @@ public class CaseClassifications {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsupportCaseClassificationsSearchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsupportCaseClassificationsSearchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

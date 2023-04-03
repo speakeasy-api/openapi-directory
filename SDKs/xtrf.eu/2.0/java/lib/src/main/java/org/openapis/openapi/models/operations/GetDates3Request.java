@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDates3Request {
-    
-    public GetDates3PathParams pathParams;
-    public GetDates3Request withPathParams(GetDates3PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * task's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taskId")
+    public String taskId;
+    public GetDates3Request withTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
     

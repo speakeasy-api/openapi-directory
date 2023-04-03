@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateUserRequest {
-    
-    public UpdateUserPathParams pathParams;
-    public UpdateUserRequest withPathParams(UpdateUserPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateUserUpdateUserRequest request;
-    public UpdateUserRequest withRequest(UpdateUserUpdateUserRequest request) {
-        this.request = request;
+    public UpdateUserUpdateUserRequest requestBody;
+    public UpdateUserRequest withRequestBody(UpdateUserUpdateUserRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateUserSecurity security;
-    public UpdateUserRequest withSecurity(UpdateUserSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) to update the resource from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public UpdateUserRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public UpdateUserRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the User resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateUserRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

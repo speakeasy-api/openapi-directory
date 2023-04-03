@@ -38,7 +38,7 @@ public class FolderSettings {
      */
     public org.openapis.openapi.models.operations.FolderSettingsDeleteResponse folderSettingsDelete(org.openapis.openapi.models.operations.FolderSettingsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FolderSettingsDeletePathParams.class, baseUrl, "/api/folder/settings/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FolderSettingsDeleteRequest.class, baseUrl, "/api/folder/settings/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -70,7 +70,7 @@ public class FolderSettings {
      */
     public org.openapis.openapi.models.operations.FolderSettingsGetResponse folderSettingsGet(org.openapis.openapi.models.operations.FolderSettingsGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FolderSettingsGetPathParams.class, baseUrl, "/api/folder/settings/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FolderSettingsGetRequest.class, baseUrl, "/api/folder/settings/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -124,12 +124,12 @@ public class FolderSettings {
      */
     public org.openapis.openapi.models.operations.FolderSettingsPostFormResponse folderSettingsPostForm(org.openapis.openapi.models.operations.FolderSettingsPostFormRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FolderSettingsPostFormPathParams.class, baseUrl, "/api/folder/settings/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FolderSettingsPostFormRequest.class, baseUrl, "/api/folder/settings/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "folderSettings", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -183,12 +183,12 @@ public class FolderSettings {
      */
     public org.openapis.openapi.models.operations.FolderSettingsPostJsonResponse folderSettingsPostJson(org.openapis.openapi.models.operations.FolderSettingsPostJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FolderSettingsPostJsonPathParams.class, baseUrl, "/api/folder/settings/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FolderSettingsPostJsonRequest.class, baseUrl, "/api/folder/settings/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "folderSettings", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -242,12 +242,12 @@ public class FolderSettings {
      */
     public org.openapis.openapi.models.operations.FolderSettingsPostRawResponse folderSettingsPostRaw(org.openapis.openapi.models.operations.FolderSettingsPostRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FolderSettingsPostRawPathParams.class, baseUrl, "/api/folder/settings/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FolderSettingsPostRawRequest.class, baseUrl, "/api/folder/settings/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

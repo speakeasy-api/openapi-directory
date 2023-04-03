@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutRealmAuthenticationConfigIdRequest {
-    
-    public PutRealmAuthenticationConfigIdPathParams pathParams;
-    public PutRealmAuthenticationConfigIdRequest withPathParams(PutRealmAuthenticationConfigIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * JSON describing new state of authenticator configuration
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AuthenticatorConfigRepresentation request;
-    public PutRealmAuthenticationConfigIdRequest withRequest(org.openapis.openapi.models.shared.AuthenticatorConfigRepresentation request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AuthenticatorConfigRepresentation authenticatorConfigRepresentation;
+    public PutRealmAuthenticationConfigIdRequest withAuthenticatorConfigRepresentation(org.openapis.openapi.models.shared.AuthenticatorConfigRepresentation authenticatorConfigRepresentation) {
+        this.authenticatorConfigRepresentation = authenticatorConfigRepresentation;
+        return this;
+    }
+    
+    /**
+     * Configuration id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutRealmAuthenticationConfigIdRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PutRealmAuthenticationConfigIdRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

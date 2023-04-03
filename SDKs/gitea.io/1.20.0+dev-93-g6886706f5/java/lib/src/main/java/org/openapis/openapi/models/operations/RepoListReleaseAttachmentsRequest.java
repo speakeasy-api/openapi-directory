@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoListReleaseAttachmentsRequest {
+    /**
+     * id of the release
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public RepoListReleaseAttachmentsRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
     
-    public RepoListReleaseAttachmentsPathParams pathParams;
-    public RepoListReleaseAttachmentsRequest withPathParams(RepoListReleaseAttachmentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoListReleaseAttachmentsRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoListReleaseAttachmentsRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

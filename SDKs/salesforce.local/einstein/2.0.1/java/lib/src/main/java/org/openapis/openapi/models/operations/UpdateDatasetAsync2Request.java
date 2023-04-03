@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDatasetAsync2Request {
-    
-    public UpdateDatasetAsync2PathParams pathParams;
-    public UpdateDatasetAsync2Request withPathParams(UpdateDatasetAsync2PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public UpdateDatasetAsync2RequestBody request;
-    public UpdateDatasetAsync2Request withRequest(UpdateDatasetAsync2RequestBody request) {
-        this.request = request;
+    public UpdateDatasetAsync2RequestBody requestBody;
+    public UpdateDatasetAsync2Request withRequestBody(UpdateDatasetAsync2RequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateDatasetAsync2Security security;
-    public UpdateDatasetAsync2Request withSecurity(UpdateDatasetAsync2Security security) {
-        this.security = security;
+    /**
+     * Dataset Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=datasetId")
+    public String datasetId;
+    public UpdateDatasetAsync2Request withDatasetId(String datasetId) {
+        this.datasetId = datasetId;
         return this;
     }
     

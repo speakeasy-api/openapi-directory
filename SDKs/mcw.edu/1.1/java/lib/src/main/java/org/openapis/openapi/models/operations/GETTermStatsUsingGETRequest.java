@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETTermStatsUsingGETRequest {
+    /**
+     * accId
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accId")
+    public String accId;
+    public GETTermStatsUsingGETRequest withAccId(String accId) {
+        this.accId = accId;
+        return this;
+    }
     
-    public GETTermStatsUsingGETPathParams pathParams;
-    public GETTermStatsUsingGETRequest withPathParams(GETTermStatsUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * filterAccId
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=filterAccId")
+    public String filterAccId;
+    public GETTermStatsUsingGETRequest withFilterAccId(String filterAccId) {
+        this.filterAccId = filterAccId;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelGroupApplicationRequest {
+    /**
+     * The unique identifier of the group application in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=application_id")
+    public String applicationId;
+    public CancelGroupApplicationRequest withApplicationId(String applicationId) {
+        this.applicationId = applicationId;
+        return this;
+    }
     
-    public CancelGroupApplicationPathParams pathParams;
-    public CancelGroupApplicationRequest withPathParams(CancelGroupApplicationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The current version identifier of the group application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public String version;
+    public CancelGroupApplicationRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

@@ -4,27 +4,88 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CrashesListRequest {
-    
-    public CrashesListPathParams pathParams;
-    public CrashesListRequest withPathParams(CrashesListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public CrashesListRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public CrashesListQueryParams queryParams;
-    public CrashesListRequest withQueryParams(CrashesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * version
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=app_version")
+    public String appVersion;
+    public CrashesListRequest withAppVersion(String appVersion) {
+        this.appVersion = appVersion;
         return this;
     }
     
+    /**
+     * id of a specific group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=crash_group_id")
+    public String crashGroupId;
+    public CrashesListRequest withCrashGroupId(String crashGroupId) {
+        this.crashGroupId = crashGroupId;
+        return this;
+    }
     
-    public CrashesListSecurity security;
-    public CrashesListRequest withSecurity(CrashesListSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_from")
+    public OffsetDateTime dateFrom;
+    public CrashesListRequest withDateFrom(OffsetDateTime dateFrom) {
+        this.dateFrom = dateFrom;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_to")
+    public OffsetDateTime dateTo;
+    public CrashesListRequest withDateTo(OffsetDateTime dateTo) {
+        this.dateTo = dateTo;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=error_type")
+    public CrashesListErrorTypeEnum errorType;
+    public CrashesListRequest withErrorType(CrashesListErrorTypeEnum errorType) {
+        this.errorType = errorType;
+        return this;
+    }
+    
+    /**
+     * true if the crash should include the custom log report. Default is false
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_log")
+    public Boolean includeLog;
+    public CrashesListRequest withIncludeLog(Boolean includeLog) {
+        this.includeLog = includeLog;
+        return this;
+    }
+    
+    /**
+     * true if the crash should include the raw crash report. Default is false
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_report")
+    public Boolean includeReport;
+    public CrashesListRequest withIncludeReport(Boolean includeReport) {
+        this.includeReport = includeReport;
+        return this;
+    }
+    
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public CrashesListRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

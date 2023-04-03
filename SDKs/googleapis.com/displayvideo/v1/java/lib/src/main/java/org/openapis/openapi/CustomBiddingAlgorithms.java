@@ -34,27 +34,28 @@ public class CustomBiddingAlgorithms {
     /**
      * Creates a new custom bidding algorithm. Returns the newly created custom bidding algorithm if successful.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsCreateResponse displayvideoCustomBiddingAlgorithmsCreate(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsCreateResponse displayvideoCustomBiddingAlgorithmsCreate(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsCreateRequest request, org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/customBiddingAlgorithms");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "customBiddingAlgorithmInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,25 +82,26 @@ public class CustomBiddingAlgorithms {
     /**
      * Gets a custom bidding algorithm.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsGetResponse displayvideoCustomBiddingAlgorithmsGet(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsGetResponse displayvideoCustomBiddingAlgorithmsGet(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsGetRequest request, org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsGetPathParams.class, baseUrl, "/v1/customBiddingAlgorithms/{customBiddingAlgorithmId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsGetRequest.class, baseUrl, "/v1/customBiddingAlgorithms/{customBiddingAlgorithmId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,10 +128,11 @@ public class CustomBiddingAlgorithms {
     /**
      * Lists custom bidding algorithms that are accessible to the current user and can be used in bidding stratgies. The order is defined by the order_by parameter.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsListResponse displayvideoCustomBiddingAlgorithmsList(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsListResponse displayvideoCustomBiddingAlgorithmsList(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsListRequest request, org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/customBiddingAlgorithms");
         
@@ -137,14 +140,14 @@ public class CustomBiddingAlgorithms {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,27 +174,28 @@ public class CustomBiddingAlgorithms {
     /**
      * Updates an existing custom bidding algorithm. Returns the updated custom bidding algorithm if successful.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsPatchResponse displayvideoCustomBiddingAlgorithmsPatch(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsPatchResponse displayvideoCustomBiddingAlgorithmsPatch(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsPatchRequest request, org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsPatchPathParams.class, baseUrl, "/v1/customBiddingAlgorithms/{customBiddingAlgorithmId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsPatchRequest.class, baseUrl, "/v1/customBiddingAlgorithms/{customBiddingAlgorithmId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "customBiddingAlgorithmInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -218,27 +222,28 @@ public class CustomBiddingAlgorithms {
     /**
      * Creates a new custom bidding script. Returns the newly created script if successful.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsScriptsCreateResponse displayvideoCustomBiddingAlgorithmsScriptsCreate(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsScriptsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsScriptsCreateResponse displayvideoCustomBiddingAlgorithmsScriptsCreate(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsScriptsCreateRequest request, org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsScriptsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsScriptsCreatePathParams.class, baseUrl, "/v1/customBiddingAlgorithms/{customBiddingAlgorithmId}/scripts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsScriptsCreateRequest.class, baseUrl, "/v1/customBiddingAlgorithms/{customBiddingAlgorithmId}/scripts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "customBiddingScriptInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsScriptsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsScriptsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -265,25 +270,26 @@ public class CustomBiddingAlgorithms {
     /**
      * Gets a custom bidding script.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsScriptsGetResponse displayvideoCustomBiddingAlgorithmsScriptsGet(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsScriptsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsScriptsGetResponse displayvideoCustomBiddingAlgorithmsScriptsGet(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsScriptsGetRequest request, org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsScriptsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsScriptsGetPathParams.class, baseUrl, "/v1/customBiddingAlgorithms/{customBiddingAlgorithmId}/scripts/{customBiddingScriptId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsScriptsGetRequest.class, baseUrl, "/v1/customBiddingAlgorithms/{customBiddingAlgorithmId}/scripts/{customBiddingScriptId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsScriptsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsScriptsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -310,25 +316,26 @@ public class CustomBiddingAlgorithms {
     /**
      * Lists custom bidding scripts that belong to the given algorithm. The order is defined by the order_by parameter.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsScriptsListResponse displayvideoCustomBiddingAlgorithmsScriptsList(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsScriptsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsScriptsListResponse displayvideoCustomBiddingAlgorithmsScriptsList(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsScriptsListRequest request, org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsScriptsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsScriptsListPathParams.class, baseUrl, "/v1/customBiddingAlgorithms/{customBiddingAlgorithmId}/scripts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsScriptsListRequest.class, baseUrl, "/v1/customBiddingAlgorithms/{customBiddingAlgorithmId}/scripts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsScriptsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsScriptsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -355,25 +362,26 @@ public class CustomBiddingAlgorithms {
     /**
      * Creates a custom bidding script reference object for a script file. The resulting reference object provides a resource path to which the script file should be uploaded. This reference object should be included in when creating a new custom bidding script object.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsUploadScriptResponse displayvideoCustomBiddingAlgorithmsUploadScript(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsUploadScriptRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsUploadScriptResponse displayvideoCustomBiddingAlgorithmsUploadScript(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsUploadScriptRequest request, org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsUploadScriptSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsUploadScriptPathParams.class, baseUrl, "/v1/customBiddingAlgorithms/{customBiddingAlgorithmId}:uploadScript", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsUploadScriptRequest.class, baseUrl, "/v1/customBiddingAlgorithms/{customBiddingAlgorithmId}:uploadScript", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsUploadScriptQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoCustomBiddingAlgorithmsUploadScriptRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

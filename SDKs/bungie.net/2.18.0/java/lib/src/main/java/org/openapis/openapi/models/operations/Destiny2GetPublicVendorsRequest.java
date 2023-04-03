@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2GetPublicVendorsRequest {
-    
-    public Destiny2GetPublicVendorsQueryParams queryParams;
-    public Destiny2GetPublicVendorsRequest withQueryParams(Destiny2GetPublicVendorsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=components")
+    public Integer[] components;
+    public Destiny2GetPublicVendorsRequest withComponents(Integer[] components) {
+        this.components = components;
         return this;
     }
     

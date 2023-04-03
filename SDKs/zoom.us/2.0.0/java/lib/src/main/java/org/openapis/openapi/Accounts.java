@@ -57,7 +57,7 @@ public class Accounts {
      */
     public org.openapis.openapi.models.operations.AccountResponse account(org.openapis.openapi.models.operations.AccountRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountPathParams.class, baseUrl, "/accounts/{accountId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountRequest.class, baseUrl, "/accounts/{accountId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -112,7 +112,7 @@ public class Accounts {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountCreateResponse accountCreate(org.openapis.openapi.models.operations.AccountCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountCreateResponse accountCreate(org.openapis.openapi.models.operations.AccountCreateApplicationJSON request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/accounts");
         
@@ -179,7 +179,7 @@ public class Accounts {
      */
     public org.openapis.openapi.models.operations.AccountDisassociateResponse accountDisassociate(org.openapis.openapi.models.operations.AccountDisassociateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountDisassociatePathParams.class, baseUrl, "/accounts/{accountId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountDisassociateRequest.class, baseUrl, "/accounts/{accountId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -220,19 +220,20 @@ public class Accounts {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountManagedDomainResponse accountManagedDomain(org.openapis.openapi.models.operations.AccountManagedDomainRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountManagedDomainResponse accountManagedDomain(org.openapis.openapi.models.operations.AccountManagedDomainRequest request, org.openapis.openapi.models.operations.AccountManagedDomainSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountManagedDomainPathParams.class, baseUrl, "/accounts/{accountId}/managed_domains", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountManagedDomainRequest.class, baseUrl, "/accounts/{accountId}/managed_domains", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -277,24 +278,25 @@ public class Accounts {
      * 
      *  
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountOptionsUpdateResponse accountOptionsUpdate(org.openapis.openapi.models.operations.AccountOptionsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountOptionsUpdateResponse accountOptionsUpdate(org.openapis.openapi.models.operations.AccountOptionsUpdateRequest request, org.openapis.openapi.models.operations.AccountOptionsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountOptionsUpdatePathParams.class, baseUrl, "/accounts/{accountId}/options", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountOptionsUpdateRequest.class, baseUrl, "/accounts/{accountId}/options", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -327,13 +329,13 @@ public class Accounts {
      */
     public org.openapis.openapi.models.operations.AccountSettingsResponse accountSettings(org.openapis.openapi.models.operations.AccountSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountSettingsPathParams.class, baseUrl, "/accounts/{accountId}/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountSettingsRequest.class, baseUrl, "/accounts/{accountId}/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccountSettingsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccountSettingsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -385,18 +387,18 @@ public class Accounts {
      */
     public org.openapis.openapi.models.operations.AccountSettingsUpdateResponse accountSettingsUpdate(org.openapis.openapi.models.operations.AccountSettingsUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountSettingsUpdatePathParams.class, baseUrl, "/accounts/{accountId}/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountSettingsUpdateRequest.class, baseUrl, "/accounts/{accountId}/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccountSettingsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccountSettingsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -435,7 +437,7 @@ public class Accounts {
      */
     public org.openapis.openapi.models.operations.AccountTrustedDomainResponse accountTrustedDomain(org.openapis.openapi.models.operations.AccountTrustedDomainRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountTrustedDomainPathParams.class, baseUrl, "/accounts/{accountId}/trusted_domains", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountTrustedDomainRequest.class, baseUrl, "/accounts/{accountId}/trusted_domains", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -496,7 +498,7 @@ public class Accounts {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccountsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccountsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -548,13 +550,13 @@ public class Accounts {
      */
     public org.openapis.openapi.models.operations.DelVBResponse delVB(org.openapis.openapi.models.operations.DelVBRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DelVBPathParams.class, baseUrl, "/accounts/{accountId}/settings/virtual_backgrounds", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DelVBRequest.class, baseUrl, "/accounts/{accountId}/settings/virtual_backgrounds", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DelVBQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DelVBRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -602,13 +604,13 @@ public class Accounts {
      */
     public org.openapis.openapi.models.operations.GetAccountLockSettingsResponse getAccountLockSettings(org.openapis.openapi.models.operations.GetAccountLockSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAccountLockSettingsPathParams.class, baseUrl, "/accounts/{accountId}/lock_settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAccountLockSettingsRequest.class, baseUrl, "/accounts/{accountId}/lock_settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAccountLockSettingsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAccountLockSettingsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -660,21 +662,22 @@ public class Accounts {
      * 
      *  
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateAccountLockSettingsResponse updateAccountLockSettings(org.openapis.openapi.models.operations.UpdateAccountLockSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateAccountLockSettingsResponse updateAccountLockSettings(org.openapis.openapi.models.operations.UpdateAccountLockSettingsRequest request, org.openapis.openapi.models.operations.UpdateAccountLockSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateAccountLockSettingsPathParams.class, baseUrl, "/accounts/{accountId}/lock_settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateAccountLockSettingsRequest.class, baseUrl, "/accounts/{accountId}/lock_settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -731,21 +734,22 @@ public class Accounts {
      * 
      * &lt;br&gt; 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateAccountOwnerResponse updateAccountOwner(org.openapis.openapi.models.operations.UpdateAccountOwnerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateAccountOwnerResponse updateAccountOwner(org.openapis.openapi.models.operations.UpdateAccountOwnerRequest request, org.openapis.openapi.models.operations.UpdateAccountOwnerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateAccountOwnerPathParams.class, baseUrl, "/accounts/{accountId}/owner", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateAccountOwnerRequest.class, baseUrl, "/accounts/{accountId}/owner", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -793,12 +797,12 @@ public class Accounts {
      */
     public org.openapis.openapi.models.operations.UploadVBResponse uploadVB(org.openapis.openapi.models.operations.UploadVBRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UploadVBPathParams.class, baseUrl, "/accounts/{accountId}/settings/virtual_backgrounds", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UploadVBRequest.class, baseUrl, "/accounts/{accountId}/settings/virtual_backgrounds", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         req.setBody(serializedRequestBody);
         
         

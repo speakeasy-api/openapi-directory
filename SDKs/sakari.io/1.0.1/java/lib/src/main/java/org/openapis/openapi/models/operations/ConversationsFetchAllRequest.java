@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConversationsFetchAllRequest {
-    
-    public ConversationsFetchAllPathParams pathParams;
-    public ConversationsFetchAllRequest withPathParams(ConversationsFetchAllPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Account to apply operations to
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public ConversationsFetchAllRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
-    
-    public ConversationsFetchAllQueryParams queryParams;
-    public ConversationsFetchAllRequest withQueryParams(ConversationsFetchAllQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Maximum number of results to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ConversationsFetchAllRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
-    
-    public ConversationsFetchAllSecurity security;
-    public ConversationsFetchAllRequest withSecurity(ConversationsFetchAllSecurity security) {
-        this.security = security;
+    /**
+     * Results to skip when paginating through a result set
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public ConversationsFetchAllRequest withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     

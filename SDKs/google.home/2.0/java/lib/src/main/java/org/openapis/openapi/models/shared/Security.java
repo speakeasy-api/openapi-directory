@@ -7,9 +7,9 @@ package org.openapis.openapi.models.shared;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Security {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public SchemeCastLocalAuthorizationToken castLocalAuthorizationToken;
-    public Security withCastLocalAuthorizationToken(SchemeCastLocalAuthorizationToken castLocalAuthorizationToken) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=cast-local-authorization-token")
+    public String castLocalAuthorizationToken;
+    public Security withCastLocalAuthorizationToken(String castLocalAuthorizationToken) {
         this.castLocalAuthorizationToken = castLocalAuthorizationToken;
         return this;
     }

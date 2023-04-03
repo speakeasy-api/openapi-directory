@@ -4,20 +4,77 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssueGetCommentsAndTimelineRequest {
-    
-    public IssueGetCommentsAndTimelinePathParams pathParams;
-    public IssueGetCommentsAndTimelineRequest withPathParams(IssueGetCommentsAndTimelinePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * if provided, only comments updated before the provided time are returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=before")
+    public OffsetDateTime before;
+    public IssueGetCommentsAndTimelineRequest withBefore(OffsetDateTime before) {
+        this.before = before;
         return this;
     }
     
+    /**
+     * index of the issue
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=index")
+    public Long index;
+    public IssueGetCommentsAndTimelineRequest withIndex(Long index) {
+        this.index = index;
+        return this;
+    }
     
-    public IssueGetCommentsAndTimelineQueryParams queryParams;
-    public IssueGetCommentsAndTimelineRequest withQueryParams(IssueGetCommentsAndTimelineQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * page size of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public IssueGetCommentsAndTimelineRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssueGetCommentsAndTimelineRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * page number of results to return (1-based)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public IssueGetCommentsAndTimelineRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssueGetCommentsAndTimelineRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * if provided, only comments updated since the specified time are returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public OffsetDateTime since;
+    public IssueGetCommentsAndTimelineRequest withSince(OffsetDateTime since) {
+        this.since = since;
         return this;
     }
     

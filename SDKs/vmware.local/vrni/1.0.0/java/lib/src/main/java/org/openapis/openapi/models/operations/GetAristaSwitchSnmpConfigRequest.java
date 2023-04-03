@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAristaSwitchSnmpConfigRequest {
-    
-    public GetAristaSwitchSnmpConfigPathParams pathParams;
-    public GetAristaSwitchSnmpConfigRequest withPathParams(GetAristaSwitchSnmpConfigPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetAristaSwitchSnmpConfigSecurity security;
-    public GetAristaSwitchSnmpConfigRequest withSecurity(GetAristaSwitchSnmpConfigSecurity security) {
-        this.security = security;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetAristaSwitchSnmpConfigRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

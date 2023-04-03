@@ -42,7 +42,7 @@ public class PortfolioOptimization {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPortfolioOptimizationEqualRiskContributionsResponse postPortfolioOptimizationEqualRiskContributions(org.openapis.openapi.models.operations.PostPortfolioOptimizationEqualRiskContributionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPortfolioOptimizationEqualRiskContributionsResponse postPortfolioOptimizationEqualRiskContributions(org.openapis.openapi.models.operations.PostPortfolioOptimizationEqualRiskContributionsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/portfolio/optimization/equal-risk-contributions");
         
@@ -91,7 +91,7 @@ public class PortfolioOptimization {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPortfolioOptimizationEqualSharpeRatioContributionsResponse postPortfolioOptimizationEqualSharpeRatioContributions(org.openapis.openapi.models.operations.PostPortfolioOptimizationEqualSharpeRatioContributionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPortfolioOptimizationEqualSharpeRatioContributionsResponse postPortfolioOptimizationEqualSharpeRatioContributions(org.openapis.openapi.models.operations.PostPortfolioOptimizationEqualSharpeRatioContributionsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/portfolio/optimization/equal-sharpe-ratio-contributions");
         
@@ -140,7 +140,7 @@ public class PortfolioOptimization {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPortfolioOptimizationEqualVolatilityWeightedResponse postPortfolioOptimizationEqualVolatilityWeighted(org.openapis.openapi.models.operations.PostPortfolioOptimizationEqualVolatilityWeightedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPortfolioOptimizationEqualVolatilityWeightedResponse postPortfolioOptimizationEqualVolatilityWeighted(org.openapis.openapi.models.operations.PostPortfolioOptimizationEqualVolatilityWeightedRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/portfolio/optimization/equal-volatility-weighted");
         
@@ -189,7 +189,7 @@ public class PortfolioOptimization {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPortfolioOptimizationEqualWeightedResponse postPortfolioOptimizationEqualWeighted(org.openapis.openapi.models.operations.PostPortfolioOptimizationEqualWeightedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPortfolioOptimizationEqualWeightedResponse postPortfolioOptimizationEqualWeighted(org.openapis.openapi.models.operations.PostPortfolioOptimizationEqualWeightedRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/portfolio/optimization/equal-weighted");
         
@@ -241,7 +241,7 @@ public class PortfolioOptimization {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPortfolioOptimizationHierarchicalRiskParityResponse postPortfolioOptimizationHierarchicalRiskParity(org.openapis.openapi.models.operations.PostPortfolioOptimizationHierarchicalRiskParityRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPortfolioOptimizationHierarchicalRiskParityResponse postPortfolioOptimizationHierarchicalRiskParity(org.openapis.openapi.models.operations.PostPortfolioOptimizationHierarchicalRiskParityRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/portfolio/optimization/hierarchical-risk-parity");
         
@@ -295,7 +295,7 @@ public class PortfolioOptimization {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedResponse postPortfolioOptimizationHierarchicalRiskParityClusteringBased(org.openapis.openapi.models.operations.PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedResponse postPortfolioOptimizationHierarchicalRiskParityClusteringBased(org.openapis.openapi.models.operations.PostPortfolioOptimizationHierarchicalRiskParityClusteringBasedRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/portfolio/optimization/hierarchical-risk-parity/clustering-based");
         
@@ -344,7 +344,7 @@ public class PortfolioOptimization {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPortfolioOptimizationInverseVarianceWeightedResponse postPortfolioOptimizationInverseVarianceWeighted(org.openapis.openapi.models.operations.PostPortfolioOptimizationInverseVarianceWeightedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPortfolioOptimizationInverseVarianceWeightedResponse postPortfolioOptimizationInverseVarianceWeighted(org.openapis.openapi.models.operations.PostPortfolioOptimizationInverseVarianceWeightedRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/portfolio/optimization/inverse-variance-weighted");
         
@@ -393,7 +393,7 @@ public class PortfolioOptimization {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPortfolioOptimizationInverseVolatilityWeightedResponse postPortfolioOptimizationInverseVolatilityWeighted(org.openapis.openapi.models.operations.PostPortfolioOptimizationInverseVolatilityWeightedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPortfolioOptimizationInverseVolatilityWeightedResponse postPortfolioOptimizationInverseVolatilityWeighted(org.openapis.openapi.models.operations.PostPortfolioOptimizationInverseVolatilityWeightedRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/portfolio/optimization/inverse-volatility-weighted");
         
@@ -442,7 +442,7 @@ public class PortfolioOptimization {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPortfolioOptimizationMarketCapitalizationWeightedResponse postPortfolioOptimizationMarketCapitalizationWeighted(org.openapis.openapi.models.operations.PostPortfolioOptimizationMarketCapitalizationWeightedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPortfolioOptimizationMarketCapitalizationWeightedResponse postPortfolioOptimizationMarketCapitalizationWeighted(org.openapis.openapi.models.operations.PostPortfolioOptimizationMarketCapitalizationWeightedRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/portfolio/optimization/market-capitalization-weighted");
         
@@ -494,7 +494,7 @@ public class PortfolioOptimization {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumDecorrelationResponse postPortfolioOptimizationMaximumDecorrelation(org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumDecorrelationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumDecorrelationResponse postPortfolioOptimizationMaximumDecorrelation(org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumDecorrelationRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/portfolio/optimization/maximum-decorrelation");
         
@@ -551,7 +551,7 @@ public class PortfolioOptimization {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumUlcerPerformanceIndexResponse postPortfolioOptimizationMaximumUlcerPerformanceIndex(org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumUlcerPerformanceIndexRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumUlcerPerformanceIndexResponse postPortfolioOptimizationMaximumUlcerPerformanceIndex(org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumUlcerPerformanceIndexRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/portfolio/optimization/maximum-ulcer-performance-index");
         
@@ -600,7 +600,7 @@ public class PortfolioOptimization {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumCorrelationResponse postPortfolioOptimizationMinimumCorrelation(org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumCorrelationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumCorrelationResponse postPortfolioOptimizationMinimumCorrelation(org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumCorrelationRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/portfolio/optimization/minimum-correlation");
         
@@ -654,7 +654,7 @@ public class PortfolioOptimization {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumUlcerIndexResponse postPortfolioOptimizationMinimumUlcerIndex(org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumUlcerIndexRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumUlcerIndexResponse postPortfolioOptimizationMinimumUlcerIndex(org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumUlcerIndexRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/portfolio/optimization/minimum-ulcer-index");
         
@@ -706,7 +706,7 @@ public class PortfolioOptimization {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPortfolioOptimizationMostDiversifiedResponse postPortfolioOptimizationMostDiversified(org.openapis.openapi.models.operations.PostPortfolioOptimizationMostDiversifiedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPortfolioOptimizationMostDiversifiedResponse postPortfolioOptimizationMostDiversified(org.openapis.openapi.models.operations.PostPortfolioOptimizationMostDiversifiedRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/portfolio/optimization/most-diversified");
         

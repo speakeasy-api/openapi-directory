@@ -42,18 +42,18 @@ public class MarketplacesOrdersBatches {
      */
     public org.openapis.openapi.models.operations.ChangeOrderListResponse changeOrderList(org.openapis.openapi.models.operations.ChangeOrderListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChangeOrderListPathParams.class, baseUrl, "/v2/user/marketplaces/orders/batches/changeOrders/{changeOrderType}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChangeOrderListRequest.class, baseUrl, "/v2/user/marketplaces/orders/batches/changeOrders/{changeOrderType}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "changeOrderListRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChangeOrderListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChangeOrderListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -98,7 +98,7 @@ public class MarketplacesOrdersBatches {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ClearMerchantOrderInfoListResponse clearMerchantOrderInfoList(org.openapis.openapi.models.operations.ClearMerchantOrderInfoListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ClearMerchantOrderInfoListResponse clearMerchantOrderInfoList(org.openapis.openapi.models.shared.ClearMerchantOrderInfoListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/user/marketplaces/orders/batches/clearMerchantOrderInfos");
         
@@ -150,7 +150,7 @@ public class MarketplacesOrdersBatches {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SetMerchantOrderInfoListResponse setMerchantOrderInfoList(org.openapis.openapi.models.operations.SetMerchantOrderInfoListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SetMerchantOrderInfoListResponse setMerchantOrderInfoList(org.openapis.openapi.models.shared.SetMerchantOrderInfoListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/user/marketplaces/orders/batches/setMerchantOrderInfos");
         

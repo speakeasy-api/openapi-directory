@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamSeasonStatsRequest {
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public TeamSeasonStatsFormatEnum format;
+    public TeamSeasonStatsRequest withFormat(TeamSeasonStatsFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public TeamSeasonStatsPathParams pathParams;
-    public TeamSeasonStatsRequest withPathParams(TeamSeasonStatsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique FantasyData Round ID. RoundIDs can be found in the Competition Hierarchy (League Hierarchy). 
+     * Examples: &lt;code&gt;1&lt;/code&gt;, &lt;code&gt;2&lt;/code&gt;, &lt;code&gt;3&lt;/code&gt;, etc
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=roundid")
+    public String roundid;
+    public TeamSeasonStatsRequest withRoundid(String roundid) {
+        this.roundid = roundid;
         return this;
     }
     

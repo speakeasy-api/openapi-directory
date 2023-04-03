@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetItemsBatchInternalTrasnferRequest {
-    
-    public GetItemsBatchInternalTrasnferPathParams pathParams;
-    public GetItemsBatchInternalTrasnferRequest withPathParams(GetItemsBatchInternalTrasnferPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=batchUuid")
+    public String batchUuid;
+    public GetItemsBatchInternalTrasnferRequest withBatchUuid(String batchUuid) {
+        this.batchUuid = batchUuid;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetItemsBatchInternalTrasnferRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetItemsBatchInternalTrasnferQueryParams queryParams;
-    public GetItemsBatchInternalTrasnferRequest withQueryParams(GetItemsBatchInternalTrasnferQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetItemsBatchInternalTrasnferRequest withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     

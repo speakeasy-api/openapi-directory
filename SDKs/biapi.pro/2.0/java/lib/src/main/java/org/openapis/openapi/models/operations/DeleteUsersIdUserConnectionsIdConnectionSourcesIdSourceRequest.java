@@ -4,20 +4,37 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteUsersIdUserConnectionsIdConnectionSourcesIdSourceRequest {
-    
-    public DeleteUsersIdUserConnectionsIdConnectionSourcesIdSourcePathParams pathParams;
-    public DeleteUsersIdUserConnectionsIdConnectionSourcesIdSourceRequest withPathParams(DeleteUsersIdUserConnectionsIdConnectionSourcesIdSourcePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public DeleteUsersIdUserConnectionsIdConnectionSourcesIdSourceRequest withExpand(String expand) {
+        this.expand = expand;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connection")
+    public Long idConnection;
+    public DeleteUsersIdUserConnectionsIdConnectionSourcesIdSourceRequest withIdConnection(Long idConnection) {
+        this.idConnection = idConnection;
+        return this;
+    }
     
-    public DeleteUsersIdUserConnectionsIdConnectionSourcesIdSourceQueryParams queryParams;
-    public DeleteUsersIdUserConnectionsIdConnectionSourcesIdSourceRequest withQueryParams(DeleteUsersIdUserConnectionsIdConnectionSourcesIdSourceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_source")
+    public Long idSource;
+    public DeleteUsersIdUserConnectionsIdConnectionSourcesIdSourceRequest withIdSource(Long idSource) {
+        this.idSource = idSource;
+        return this;
+    }
+    
+    /**
+     * Hint: you can use 'me' or 'all'
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
+    public String idUser;
+    public DeleteUsersIdUserConnectionsIdConnectionSourcesIdSourceRequest withIdUser(String idUser) {
+        this.idUser = idUser;
         return this;
     }
     

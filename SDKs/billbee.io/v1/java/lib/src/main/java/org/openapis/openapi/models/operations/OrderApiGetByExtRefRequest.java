@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiGetByExtRefRequest {
-    
-    public OrderApiGetByExtRefPathParams pathParams;
-    public OrderApiGetByExtRefRequest withPathParams(OrderApiGetByExtRefPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The extern order number of the order
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=extRef")
+    public String extRef;
+    public OrderApiGetByExtRefRequest withExtRef(String extRef) {
+        this.extRef = extRef;
         return this;
     }
     

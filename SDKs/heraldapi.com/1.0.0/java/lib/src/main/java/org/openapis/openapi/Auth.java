@@ -60,7 +60,7 @@ public class Auth {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAuthTokenResponse postAuthToken(org.openapis.openapi.models.operations.PostAuthTokenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAuthTokenResponse postAuthToken(org.openapis.openapi.models.operations.PostAuthTokenRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/auth/token");
         

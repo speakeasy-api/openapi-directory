@@ -7,34 +7,63 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConnectionSettingsUpdateRequest {
-    
-    public ConnectionSettingsUpdatePathParams pathParams;
-    public ConnectionSettingsUpdateRequest withPathParams(ConnectionSettingsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ConnectionSettingsUpdateHeaders headers;
-    public ConnectionSettingsUpdateRequest withHeaders(ConnectionSettingsUpdateHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * Fields that need to be updated on the resource
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ConnectionInput request;
-    public ConnectionSettingsUpdateRequest withRequest(org.openapis.openapi.models.shared.ConnectionInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ConnectionInput connectionInput;
+    public ConnectionSettingsUpdateRequest withConnectionInput(org.openapis.openapi.models.shared.ConnectionInput connectionInput) {
+        this.connectionInput = connectionInput;
         return this;
     }
     
+    /**
+     * Resource Name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=resource")
+    public String resource;
+    public ConnectionSettingsUpdateRequest withResource(String resource) {
+        this.resource = resource;
+        return this;
+    }
     
-    public ConnectionSettingsUpdateSecurity security;
-    public ConnectionSettingsUpdateRequest withSecurity(ConnectionSettingsUpdateSecurity security) {
-        this.security = security;
+    /**
+     * Service ID of the resource to return
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=service_id")
+    public String serviceId;
+    public ConnectionSettingsUpdateRequest withServiceId(String serviceId) {
+        this.serviceId = serviceId;
+        return this;
+    }
+    
+    /**
+     * Unified API
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=unified_api")
+    public String unifiedApi;
+    public ConnectionSettingsUpdateRequest withUnifiedApi(String unifiedApi) {
+        this.unifiedApi = unifiedApi;
+        return this;
+    }
+    
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public ConnectionSettingsUpdateRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
+        return this;
+    }
+    
+    /**
+     * ID of the consumer which you want to get or push data from
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-consumer-id")
+    public String xApideckConsumerId;
+    public ConnectionSettingsUpdateRequest withXApideckConsumerId(String xApideckConsumerId) {
+        this.xApideckConsumerId = xApideckConsumerId;
         return this;
     }
     

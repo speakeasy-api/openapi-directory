@@ -4,13 +4,53 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDriversRequest {
+    /**
+     * Can only be used by admins or managers to fetch all entities
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=all")
+    public Boolean all;
+    public GetDriversRequest withAll(Boolean all) {
+        this.all = all;
+        return this;
+    }
     
-    public GetDriversQueryParams queryParams;
-    public GetDriversRequest withQueryParams(GetDriversQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Standard users can use this only with _deviceId_s, they have access to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deviceId")
+    public Long deviceId;
+    public GetDriversRequest withDeviceId(Long deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
+    
+    /**
+     * Standard users can use this only with _groupId_s, they have access to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupId")
+    public Long groupId;
+    public GetDriversRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=refresh")
+    public Boolean refresh;
+    public GetDriversRequest withRefresh(Boolean refresh) {
+        this.refresh = refresh;
+        return this;
+    }
+    
+    /**
+     * Standard users can use this only with their own _userId_
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userId")
+    public Long userId;
+    public GetDriversRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OccupancyGetRequest {
-    
-    public OccupancyGetPathParams pathParams;
-    public OccupancyGetRequest withPathParams(OccupancyGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public OccupancyGetRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

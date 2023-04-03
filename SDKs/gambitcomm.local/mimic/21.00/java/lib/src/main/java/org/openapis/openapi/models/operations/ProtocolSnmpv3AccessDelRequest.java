@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolSnmpv3AccessDelRequest {
+    /**
+     * SNMPv3 access name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accessName")
+    public String accessName;
+    public ProtocolSnmpv3AccessDelRequest withAccessName(String accessName) {
+        this.accessName = accessName;
+        return this;
+    }
     
-    public ProtocolSnmpv3AccessDelPathParams pathParams;
-    public ProtocolSnmpv3AccessDelRequest withPathParams(ProtocolSnmpv3AccessDelPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to add the SNMPv3 access
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolSnmpv3AccessDelRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

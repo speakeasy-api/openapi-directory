@@ -41,25 +41,26 @@ public class TerminalSettingsMerchantLevel {
      * * Management API\u2014Terminal settings read
      * * Management API\u2014Terminal settings read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalLogosResponse getMerchantsMerchantIdTerminalLogos(org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalLogosRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalLogosResponse getMerchantsMerchantIdTerminalLogos(org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalLogosRequest request, org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalLogosSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalLogosPathParams.class, baseUrl, "/merchants/{merchantId}/terminalLogos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalLogosRequest.class, baseUrl, "/merchants/{merchantId}/terminalLogos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalLogosQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalLogosRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -101,19 +102,20 @@ public class TerminalSettingsMerchantLevel {
      * * Management API\u2014Terminal settings read
      * * Management API\u2014Terminal settings read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalSettingsResponse getMerchantsMerchantIdTerminalSettings(org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalSettingsResponse getMerchantsMerchantIdTerminalSettings(org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalSettingsRequest request, org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalSettingsPathParams.class, baseUrl, "/merchants/{merchantId}/terminalSettings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMerchantsMerchantIdTerminalSettingsRequest.class, baseUrl, "/merchants/{merchantId}/terminalSettings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -158,27 +160,28 @@ public class TerminalSettingsMerchantLevel {
      * To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014Terminal settings read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchMerchantsMerchantIdTerminalLogosResponse patchMerchantsMerchantIdTerminalLogos(org.openapis.openapi.models.operations.PatchMerchantsMerchantIdTerminalLogosRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchMerchantsMerchantIdTerminalLogosResponse patchMerchantsMerchantIdTerminalLogos(org.openapis.openapi.models.operations.PatchMerchantsMerchantIdTerminalLogosRequest request, org.openapis.openapi.models.operations.PatchMerchantsMerchantIdTerminalLogosSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchMerchantsMerchantIdTerminalLogosPathParams.class, baseUrl, "/merchants/{merchantId}/terminalLogos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchMerchantsMerchantIdTerminalLogosRequest.class, baseUrl, "/merchants/{merchantId}/terminalLogos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "logo", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatchMerchantsMerchantIdTerminalLogosQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatchMerchantsMerchantIdTerminalLogosRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -224,21 +227,22 @@ public class TerminalSettingsMerchantLevel {
      * To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014Terminal settings read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchMerchantsMerchantIdTerminalSettingsResponse patchMerchantsMerchantIdTerminalSettings(org.openapis.openapi.models.operations.PatchMerchantsMerchantIdTerminalSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchMerchantsMerchantIdTerminalSettingsResponse patchMerchantsMerchantIdTerminalSettings(org.openapis.openapi.models.operations.PatchMerchantsMerchantIdTerminalSettingsRequest request, org.openapis.openapi.models.operations.PatchMerchantsMerchantIdTerminalSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchMerchantsMerchantIdTerminalSettingsPathParams.class, baseUrl, "/merchants/{merchantId}/terminalSettings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchMerchantsMerchantIdTerminalSettingsRequest.class, baseUrl, "/merchants/{merchantId}/terminalSettings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "terminalSettings", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

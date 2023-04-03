@@ -7,38 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateWorkerReservationRequest {
-    
-    public UpdateWorkerReservationPathParams pathParams;
-    public UpdateWorkerReservationRequest withPathParams(UpdateWorkerReservationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateWorkerReservationHeaders headers;
-    public UpdateWorkerReservationRequest withHeaders(UpdateWorkerReservationHeaders headers) {
-        this.headers = headers;
+    /**
+     * The If-Match HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
+    public String ifMatch;
+    public UpdateWorkerReservationRequest withIfMatch(String ifMatch) {
+        this.ifMatch = ifMatch;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateWorkerReservationUpdateWorkerReservationRequest request;
-    public UpdateWorkerReservationRequest withRequest(UpdateWorkerReservationUpdateWorkerReservationRequest request) {
-        this.request = request;
+    public UpdateWorkerReservationUpdateWorkerReservationRequest requestBody;
+    public UpdateWorkerReservationRequest withRequestBody(UpdateWorkerReservationUpdateWorkerReservationRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateWorkerReservationSecurity security;
-    public UpdateWorkerReservationRequest withSecurity(UpdateWorkerReservationSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the WorkerReservation resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateWorkerReservationRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
+    /**
+     * The SID of the reserved Worker resource with the WorkerReservation resources to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkerSid")
+    public String workerSid;
+    public UpdateWorkerReservationRequest withWorkerSid(String workerSid) {
+        this.workerSid = workerSid;
+        return this;
+    }
     
-    public String serverURL;
-    public UpdateWorkerReservationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Workspace with the WorkerReservation resources to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkspaceSid")
+    public String workspaceSid;
+    public UpdateWorkerReservationRequest withWorkspaceSid(String workspaceSid) {
+        this.workspaceSid = workspaceSid;
         return this;
     }
     

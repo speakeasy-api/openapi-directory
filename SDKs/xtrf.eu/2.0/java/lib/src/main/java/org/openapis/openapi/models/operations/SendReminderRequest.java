@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SendReminderRequest {
-    
-    public SendReminderPathParams pathParams;
-    public SendReminderRequest withPathParams(SendReminderPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * client invoice's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=invoiceId")
+    public Long invoiceId;
+    public SendReminderRequest withInvoiceId(Long invoiceId) {
+        this.invoiceId = invoiceId;
         return this;
     }
     

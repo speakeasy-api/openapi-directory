@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePhoneSettingsRequest {
-    
-    public UpdatePhoneSettingsPathParams pathParams;
-    public UpdatePhoneSettingsRequest withPathParams(UpdatePhoneSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdatePhoneSettingsApplicationJSON request;
-    public UpdatePhoneSettingsRequest withRequest(UpdatePhoneSettingsApplicationJSON request) {
-        this.request = request;
+    public UpdatePhoneSettingsApplicationJSON requestBody;
+    public UpdatePhoneSettingsRequest withRequestBody(UpdatePhoneSettingsApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdatePhoneSettingsSecurity security;
-    public UpdatePhoneSettingsRequest withSecurity(UpdatePhoneSettingsSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the sub account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public UpdatePhoneSettingsRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     

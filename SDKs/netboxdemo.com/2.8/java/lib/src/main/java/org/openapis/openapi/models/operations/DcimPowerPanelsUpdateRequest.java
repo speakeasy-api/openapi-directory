@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimPowerPanelsUpdateRequest {
-    
-    public DcimPowerPanelsUpdatePathParams pathParams;
-    public DcimPowerPanelsUpdateRequest withPathParams(DcimPowerPanelsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.WritablePowerPanelInput writablePowerPanelInput;
+    public DcimPowerPanelsUpdateRequest withWritablePowerPanelInput(org.openapis.openapi.models.shared.WritablePowerPanelInput writablePowerPanelInput) {
+        this.writablePowerPanelInput = writablePowerPanelInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WritablePowerPanelInput request;
-    public DcimPowerPanelsUpdateRequest withRequest(org.openapis.openapi.models.shared.WritablePowerPanelInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this power panel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimPowerPanelsUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

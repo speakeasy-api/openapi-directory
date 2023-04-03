@@ -33,25 +33,26 @@ public class DnsKeys {
     /**
      * Fetches the representation of an existing DnsKey.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DnsDnsKeysGetResponse dnsDnsKeysGet(org.openapis.openapi.models.operations.DnsDnsKeysGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DnsDnsKeysGetResponse dnsDnsKeysGet(org.openapis.openapi.models.operations.DnsDnsKeysGetRequest request, org.openapis.openapi.models.operations.DnsDnsKeysGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DnsDnsKeysGetPathParams.class, baseUrl, "/dns/v1/projects/{project}/managedZones/{managedZone}/dnsKeys/{dnsKeyId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DnsDnsKeysGetRequest.class, baseUrl, "/dns/v1/projects/{project}/managedZones/{managedZone}/dnsKeys/{dnsKeyId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DnsDnsKeysGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DnsDnsKeysGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,25 +79,26 @@ public class DnsKeys {
     /**
      * Enumerates DnsKeys to a ResourceRecordSet collection.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DnsDnsKeysListResponse dnsDnsKeysList(org.openapis.openapi.models.operations.DnsDnsKeysListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DnsDnsKeysListResponse dnsDnsKeysList(org.openapis.openapi.models.operations.DnsDnsKeysListRequest request, org.openapis.openapi.models.operations.DnsDnsKeysListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DnsDnsKeysListPathParams.class, baseUrl, "/dns/v1/projects/{project}/managedZones/{managedZone}/dnsKeys", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DnsDnsKeysListRequest.class, baseUrl, "/dns/v1/projects/{project}/managedZones/{managedZone}/dnsKeys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DnsDnsKeysListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DnsDnsKeysListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

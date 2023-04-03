@@ -43,7 +43,7 @@ public class Uplinks {
      */
     public org.openapis.openapi.models.operations.GetDeviceApplianceUplinksSettingsResponse getDeviceApplianceUplinksSettings(org.openapis.openapi.models.operations.GetDeviceApplianceUplinksSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceApplianceUplinksSettingsPathParams.class, baseUrl, "/devices/{serial}/appliance/uplinks/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceApplianceUplinksSettingsRequest.class, baseUrl, "/devices/{serial}/appliance/uplinks/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -83,13 +83,13 @@ public class Uplinks {
      */
     public org.openapis.openapi.models.operations.GetDeviceLossAndLatencyHistoryResponse getDeviceLossAndLatencyHistory(org.openapis.openapi.models.operations.GetDeviceLossAndLatencyHistoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceLossAndLatencyHistoryPathParams.class, baseUrl, "/devices/{serial}/lossAndLatencyHistory", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceLossAndLatencyHistoryRequest.class, baseUrl, "/devices/{serial}/lossAndLatencyHistory", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceLossAndLatencyHistoryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceLossAndLatencyHistoryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -129,13 +129,13 @@ public class Uplinks {
      */
     public org.openapis.openapi.models.operations.GetNetworkApplianceUplinksUsageHistoryResponse getNetworkApplianceUplinksUsageHistory(org.openapis.openapi.models.operations.GetNetworkApplianceUplinksUsageHistoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceUplinksUsageHistoryPathParams.class, baseUrl, "/networks/{networkId}/appliance/uplinks/usageHistory", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceUplinksUsageHistoryRequest.class, baseUrl, "/networks/{networkId}/appliance/uplinks/usageHistory", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkApplianceUplinksUsageHistoryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkApplianceUplinksUsageHistoryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -175,13 +175,13 @@ public class Uplinks {
      */
     public org.openapis.openapi.models.operations.GetOrganizationApplianceUplinkStatusesResponse getOrganizationApplianceUplinkStatuses(org.openapis.openapi.models.operations.GetOrganizationApplianceUplinkStatusesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationApplianceUplinkStatusesPathParams.class, baseUrl, "/organizations/{organizationId}/appliance/uplink/statuses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationApplianceUplinkStatusesRequest.class, baseUrl, "/organizations/{organizationId}/appliance/uplink/statuses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationApplianceUplinkStatusesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationApplianceUplinkStatusesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -223,13 +223,13 @@ public class Uplinks {
      */
     public org.openapis.openapi.models.operations.GetOrganizationDevicesUplinksAddressesByDeviceResponse getOrganizationDevicesUplinksAddressesByDevice(org.openapis.openapi.models.operations.GetOrganizationDevicesUplinksAddressesByDeviceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationDevicesUplinksAddressesByDevicePathParams.class, baseUrl, "/organizations/{organizationId}/devices/uplinks/addresses/byDevice", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationDevicesUplinksAddressesByDeviceRequest.class, baseUrl, "/organizations/{organizationId}/devices/uplinks/addresses/byDevice", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationDevicesUplinksAddressesByDeviceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationDevicesUplinksAddressesByDeviceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -271,13 +271,13 @@ public class Uplinks {
      */
     public org.openapis.openapi.models.operations.GetOrganizationDevicesUplinksLossAndLatencyResponse getOrganizationDevicesUplinksLossAndLatency(org.openapis.openapi.models.operations.GetOrganizationDevicesUplinksLossAndLatencyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationDevicesUplinksLossAndLatencyPathParams.class, baseUrl, "/organizations/{organizationId}/devices/uplinksLossAndLatency", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationDevicesUplinksLossAndLatencyRequest.class, baseUrl, "/organizations/{organizationId}/devices/uplinksLossAndLatency", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationDevicesUplinksLossAndLatencyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationDevicesUplinksLossAndLatencyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -317,13 +317,13 @@ public class Uplinks {
      */
     public org.openapis.openapi.models.operations.GetOrganizationUplinksStatusesResponse getOrganizationUplinksStatuses(org.openapis.openapi.models.operations.GetOrganizationUplinksStatusesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationUplinksStatusesPathParams.class, baseUrl, "/organizations/{organizationId}/uplinks/statuses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationUplinksStatusesRequest.class, baseUrl, "/organizations/{organizationId}/uplinks/statuses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationUplinksStatusesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationUplinksStatusesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -365,12 +365,12 @@ public class Uplinks {
      */
     public org.openapis.openapi.models.operations.UpdateDeviceApplianceUplinksSettingsResponse updateDeviceApplianceUplinksSettings(org.openapis.openapi.models.operations.UpdateDeviceApplianceUplinksSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceApplianceUplinksSettingsPathParams.class, baseUrl, "/devices/{serial}/appliance/uplinks/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceApplianceUplinksSettingsRequest.class, baseUrl, "/devices/{serial}/appliance/uplinks/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiUpdateStateRawRequest {
-    
-    public OrderApiUpdateStateRawPathParams pathParams;
-    public OrderApiUpdateStateRawRequest withPathParams(OrderApiUpdateStateRawPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The data used to change the state
      */
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public OrderApiUpdateStateRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public OrderApiUpdateStateRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The internal id of the order
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public OrderApiUpdateStateRawRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

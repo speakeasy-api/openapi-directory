@@ -31,15 +31,11 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/CreatePetsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListPetsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListPetsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListPetsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ShowPetByIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ShowPetByIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ShowPetByIdResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Error.java
 lib/src/main/java/org/openapis/openapi/models/shared/Pet.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAppKey.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAppToken.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

@@ -33,25 +33,26 @@ public class Leaderboards {
     /**
      * Retrieves the metadata of the leaderboard with the given ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GamesLeaderboardsGetResponse gamesLeaderboardsGet(org.openapis.openapi.models.operations.GamesLeaderboardsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GamesLeaderboardsGetResponse gamesLeaderboardsGet(org.openapis.openapi.models.operations.GamesLeaderboardsGetRequest request, org.openapis.openapi.models.operations.GamesLeaderboardsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesLeaderboardsGetPathParams.class, baseUrl, "/games/v1/leaderboards/{leaderboardId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesLeaderboardsGetRequest.class, baseUrl, "/games/v1/leaderboards/{leaderboardId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesLeaderboardsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesLeaderboardsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,10 +79,11 @@ public class Leaderboards {
     /**
      * Lists all the leaderboard metadata for your application.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GamesLeaderboardsListResponse gamesLeaderboardsList(org.openapis.openapi.models.operations.GamesLeaderboardsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GamesLeaderboardsListResponse gamesLeaderboardsList(org.openapis.openapi.models.operations.GamesLeaderboardsListRequest request, org.openapis.openapi.models.operations.GamesLeaderboardsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/games/v1/leaderboards");
         
@@ -89,14 +91,14 @@ public class Leaderboards {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesLeaderboardsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesLeaderboardsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

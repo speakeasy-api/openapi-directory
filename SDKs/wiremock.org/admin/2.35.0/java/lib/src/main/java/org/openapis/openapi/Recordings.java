@@ -77,7 +77,7 @@ public class Recordings {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAdminRecordingsSnapshotResponse postAdminRecordingsSnapshot(org.openapis.openapi.models.operations.PostAdminRecordingsSnapshotRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAdminRecordingsSnapshotResponse postAdminRecordingsSnapshot(org.openapis.openapi.models.operations.PostAdminRecordingsSnapshotRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/__admin/recordings/snapshot");
         
@@ -121,7 +121,7 @@ public class Recordings {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAdminRecordingsStartResponse postAdminRecordingsStart(org.openapis.openapi.models.operations.PostAdminRecordingsStartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAdminRecordingsStartResponse postAdminRecordingsStart(org.openapis.openapi.models.operations.PostAdminRecordingsStartRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/__admin/recordings/start");
         

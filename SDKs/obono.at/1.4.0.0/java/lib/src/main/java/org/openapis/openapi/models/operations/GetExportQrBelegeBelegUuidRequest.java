@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetExportQrBelegeBelegUuidRequest {
-    
-    public GetExportQrBelegeBelegUuidPathParams pathParams;
-    public GetExportQrBelegeBelegUuidRequest withPathParams(GetExportQrBelegeBelegUuidPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The `_uuid` of a particular `Beleg` to export.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=belegUuid")
+    public String belegUuid;
+    public GetExportQrBelegeBelegUuidRequest withBelegUuid(String belegUuid) {
+        this.belegUuid = belegUuid;
         return this;
     }
     

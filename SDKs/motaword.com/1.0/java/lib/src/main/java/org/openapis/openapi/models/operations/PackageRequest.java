@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PackageRequest {
-    
-    public PackagePathParams pathParams;
-    public PackageRequest withPathParams(PackagePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * If you want to package and download the translation synchronously, mark this parameter as '0'. It will package the translation and then return the packaged file in the response, identical to /download call after an asynchronous /package call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=async")
+    public Long async;
+    public PackageRequest withAsync(Long async) {
+        this.async = async;
         return this;
     }
     
-    
-    public PackageQueryParams queryParams;
-    public PackageRequest withQueryParams(PackageQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public PackageRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

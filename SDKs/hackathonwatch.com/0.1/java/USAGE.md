@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GETHackathonsIdFormatPathParams;
 import org.openapis.openapi.models.operations.GETHackathonsIdFormatRequest;
 import org.openapis.openapi.models.operations.GETHackathonsIdFormatResponse;
 
@@ -15,10 +14,8 @@ public class Application {
                 .build();
 
             GETHackathonsIdFormatRequest req = new GETHackathonsIdFormatRequest() {{
-                pathParams = new GETHackathonsIdFormatPathParams() {{
-                    id = 548814;
-                }};
-            }};            
+                id = 548814;
+            }}            
 
             GETHackathonsIdFormatResponse res = sdk.hackathons.getHackathonsIdFormat(req);
 

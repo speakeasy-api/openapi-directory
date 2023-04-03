@@ -4,20 +4,98 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSitesNearestOutputFormatRequest {
-    
-    public GetSitesNearestOutputFormatPathParams pathParams;
-    public GetSitesNearestOutputFormatRequest withPathParams(GetSitesNearestOutputFormatPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * If true, include only basic match and address details in results. Not supported for shp, csv, and gml formats.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=brief")
+    public Boolean brief;
+    public GetSitesNearestOutputFormatRequest withBrief(Boolean brief) {
+        this.brief = brief;
         return this;
     }
     
+    /**
+     * If true, excludes sites that are units of a parent site
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=excludeUnits")
+    public Boolean excludeUnits;
+    public GetSitesNearestOutputFormatRequest withExcludeUnits(Boolean excludeUnits) {
+        this.excludeUnits = excludeUnits;
+        return this;
+    }
     
-    public GetSitesNearestOutputFormatQueryParams queryParams;
-    public GetSitesNearestOutputFormatRequest withQueryParams(GetSitesNearestOutputFormatQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Describes the nature of the address location. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#locationDescriptor target="_blank"&gt;locationDescriptor&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locationDescriptor")
+    public GetSitesNearestOutputFormatLocationDescriptorEnum locationDescriptor;
+    public GetSitesNearestOutputFormatRequest withLocationDescriptor(GetSitesNearestOutputFormatLocationDescriptorEnum locationDescriptor) {
+        this.locationDescriptor = locationDescriptor;
+        return this;
+    }
+    
+    /**
+     * The maximum distance (in metres) to search from the given point.  If not specified, the search distance is unlimited.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxDistance")
+    public Long maxDistance;
+    public GetSitesNearestOutputFormatRequest withMaxDistance(Long maxDistance) {
+        this.maxDistance = maxDistance;
+        return this;
+    }
+    
+    /**
+     * If true, excludes sites without a civic address
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onlyCivic")
+    public Boolean onlyCivic;
+    public GetSitesNearestOutputFormatRequest withOnlyCivic(Boolean onlyCivic) {
+        this.onlyCivic = onlyCivic;
+        return this;
+    }
+    
+    /**
+     * Results format. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank"&gt;outputFormat&lt;/a&gt;. 
+     * 
+     * Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=outputFormat")
+    public GetSitesNearestOutputFormatOutputFormatEnum outputFormat;
+    public GetSitesNearestOutputFormatRequest withOutputFormat(GetSitesNearestOutputFormatOutputFormatEnum outputFormat) {
+        this.outputFormat = outputFormat;
+        return this;
+    }
+    
+    /**
+     * The EPSG code of the spatial reference system (SRS) to use for output geometries. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank"&gt;outputSRS&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputSRS")
+    public GetSitesNearestOutputFormatOutputSrsEnum outputSRS;
+    public GetSitesNearestOutputFormatRequest withOutputSRS(GetSitesNearestOutputFormatOutputSrsEnum outputSRS) {
+        this.outputSRS = outputSRS;
+        return this;
+    }
+    
+    /**
+     * Centre point of search. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#point target="_blank"&gt;point&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=point")
+    public String point;
+    public GetSitesNearestOutputFormatRequest withPoint(String point) {
+        this.point = point;
+        return this;
+    }
+    
+    /**
+     * The distance to move the accessPoint away from the curb and towards the inside of the parcel (in metres). Ignored if locationDescriptor not set to accessPoint.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=setBack")
+    public Long setBack;
+    public GetSitesNearestOutputFormatRequest withSetBack(Long setBack) {
+        this.setBack = setBack;
         return this;
     }
     

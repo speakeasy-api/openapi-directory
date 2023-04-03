@@ -7,27 +7,27 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RecordingRegistrantQuestionUpdateRequest {
-    
-    public RecordingRegistrantQuestionUpdatePathParams pathParams;
-    public RecordingRegistrantQuestionUpdateRequest withPathParams(RecordingRegistrantQuestionUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Recording Registrant Questions
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public RecordingRegistrantQuestionUpdateRecordingRegistrantQuestions request;
-    public RecordingRegistrantQuestionUpdateRequest withRequest(RecordingRegistrantQuestionUpdateRecordingRegistrantQuestions request) {
-        this.request = request;
+    public RecordingRegistrantQuestionUpdateRecordingRegistrantQuestions requestBody;
+    public RecordingRegistrantQuestionUpdateRequest withRequestBody(RecordingRegistrantQuestionUpdateRecordingRegistrantQuestions requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public RecordingRegistrantQuestionUpdateSecurity security;
-    public RecordingRegistrantQuestionUpdateRequest withSecurity(RecordingRegistrantQuestionUpdateSecurity security) {
-        this.security = security;
+    /**
+     * To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance. 
+     * 
+     * To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance. 
+     * 
+     * If a UUID starts with "/" or contains "//" (example: "/ajXp112QmuoKj4854875=="), you must **double encode** the UUID before making an API request. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=meetingId")
+    public String meetingId;
+    public RecordingRegistrantQuestionUpdateRequest withMeetingId(String meetingId) {
+        this.meetingId = meetingId;
         return this;
     }
     

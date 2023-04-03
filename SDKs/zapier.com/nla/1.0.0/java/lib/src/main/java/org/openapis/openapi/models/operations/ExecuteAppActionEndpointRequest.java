@@ -7,24 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExecuteAppActionEndpointRequest {
-    
-    public ExecuteAppActionEndpointPathParams pathParams;
-    public ExecuteAppActionEndpointRequest withPathParams(ExecuteAppActionEndpointPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ExecuteRequest request;
-    public ExecuteAppActionEndpointRequest withRequest(org.openapis.openapi.models.shared.ExecuteRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ExecuteRequest executeRequest;
+    public ExecuteAppActionEndpointRequest withExecuteRequest(org.openapis.openapi.models.shared.ExecuteRequest executeRequest) {
+        this.executeRequest = executeRequest;
         return this;
     }
     
-    
-    public ExecuteAppActionEndpointSecurity security;
-    public ExecuteAppActionEndpointRequest withSecurity(ExecuteAppActionEndpointSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=exposed_app_action_id")
+    public String exposedAppActionId;
+    public ExecuteAppActionEndpointRequest withExposedAppActionId(String exposedAppActionId) {
+        this.exposedAppActionId = exposedAppActionId;
         return this;
     }
     

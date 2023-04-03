@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AssociateKmsKeyXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AssociateKmsKeyHeaders;
 import org.openapis.openapi.models.operations.AssociateKmsKeyRequest;
 import org.openapis.openapi.models.operations.AssociateKmsKeyResponse;
 import org.openapis.openapi.models.shared.AssociateKmsKeyRequest;
@@ -15,28 +14,24 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AssociateKmsKeyRequest req = new AssociateKmsKeyRequest() {{
-                headers = new AssociateKmsKeyHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "Logs_20140328.AssociateKmsKey";
+                associateKmsKeyRequest = new AssociateKmsKeyRequest() {{
+                    kmsKeyId = "corrupti";
+                    logGroupName = "provident";
                 }};
-                request = new AssociateKmsKeyRequest() {{
-                    kmsKeyId = "illum";
-                    logGroupName = "vel";
-                }};
-            }};            
+                xAmzAlgorithm = "distinctio";
+                xAmzContentSha256 = "quibusdam";
+                xAmzCredential = "unde";
+                xAmzDate = "nulla";
+                xAmzSecurityToken = "corrupti";
+                xAmzSignature = "illum";
+                xAmzSignedHeaders = "vel";
+                xAmzTarget = "Logs_20140328.AssociateKmsKey";
+            }}            
 
             AssociateKmsKeyResponse res = sdk.associateKmsKey(req);
 

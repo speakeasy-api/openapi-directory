@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteOrganizationAdminRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=adminId")
+    public String adminId;
+    public DeleteOrganizationAdminRequest withAdminId(String adminId) {
+        this.adminId = adminId;
+        return this;
+    }
     
-    public DeleteOrganizationAdminPathParams pathParams;
-    public DeleteOrganizationAdminRequest withPathParams(DeleteOrganizationAdminPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public DeleteOrganizationAdminRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

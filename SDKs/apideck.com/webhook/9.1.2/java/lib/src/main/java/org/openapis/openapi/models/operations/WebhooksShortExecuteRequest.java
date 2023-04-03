@@ -7,31 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WebhooksShortExecuteRequest {
-    
-    public WebhooksShortExecutePathParams pathParams;
-    public WebhooksShortExecuteRequest withPathParams(WebhooksShortExecutePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public WebhooksShortExecuteQueryParams queryParams;
-    public WebhooksShortExecuteRequest withQueryParams(WebhooksShortExecuteQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public Object request;
-    public WebhooksShortExecuteRequest withRequest(Object request) {
-        this.request = request;
+    public Object requestBody;
+    public WebhooksShortExecuteRequest withRequestBody(Object requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of downstream event when connector does not supply in body or header
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=e")
+    public String e;
+    public WebhooksShortExecuteRequest withE(String e) {
+        this.e = e;
+        return this;
+    }
     
-    public WebhooksShortExecuteSecurity security;
-    public WebhooksShortExecuteRequest withSecurity(WebhooksShortExecuteSecurity security) {
-        this.security = security;
+    /**
+     * JWT Webhook token that represents the unifiedApi and applicationId associated to the event source.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public WebhooksShortExecuteRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Unique identifier to used to look up consumer/connection when receiving connector events from downstream.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=l_id")
+    public String lId;
+    public WebhooksShortExecuteRequest withLId(String lId) {
+        this.lId = lId;
+        return this;
+    }
+    
+    /**
+     * Service provider ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serviceId")
+    public String serviceId;
+    public WebhooksShortExecuteRequest withServiceId(String serviceId) {
+        this.serviceId = serviceId;
         return this;
     }
     

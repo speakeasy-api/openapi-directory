@@ -19,13 +19,10 @@ import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.WebriskHashesSearchSecurity;
 import org.openapis.openapi.models.operations.WebriskHashesSearchThreatTypesEnum;
-import org.openapis.openapi.models.operations.WebriskHashesSearchQueryParams;
 import org.openapis.openapi.models.operations.WebriskHashesSearchRequest;
 import org.openapis.openapi.models.operations.WebriskHashesSearchResponse;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -34,36 +31,29 @@ public class Application {
                 .build();
 
             WebriskHashesSearchRequest req = new WebriskHashesSearchRequest() {{
-                security = new WebriskHashesSearchSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
+                dollarXgafv = "2";
+                accessToken = "provident";
+                alt = "proto";
+                callback = "quibusdam";
+                fields = "unde";
+                hashPrefix = "nulla";
+                key = "corrupti";
+                oauthToken = "illum";
+                prettyPrint = false;
+                quotaUser = "vel";
+                threatTypes = new org.openapis.openapi.models.operations.WebriskHashesSearchThreatTypesEnum[]{{
+                    add("UNWANTED_SOFTWARE"),
+                    add("MALWARE"),
+                    add("SOCIAL_ENGINEERING"),
                 }};
-                queryParams = new WebriskHashesSearchQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "provident";
-                    alt = "proto";
-                    callback = "quibusdam";
-                    fields = "unde";
-                    hashPrefix = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    threatTypes = new org.openapis.openapi.models.operations.WebriskHashesSearchThreatTypesEnum[]{{
-                        add("UNWANTED_SOFTWARE"),
-                        add("MALWARE"),
-                        add("SOCIAL_ENGINEERING"),
-                    }};
-                    uploadType = "magnam";
-                    uploadProtocol = "debitis";
-                }};
-            }};            
+                uploadType = "magnam";
+                uploadProtocol = "debitis";
+            }}            
 
-            WebriskHashesSearchResponse res = sdk.hashes.webriskHashesSearch(req);
+            WebriskHashesSearchResponse res = sdk.hashes.webriskHashesSearch(req, new WebriskHashesSearchSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.googleCloudWebriskV1SearchHashesResponse.isPresent()) {
                 // handle response
@@ -75,7 +65,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### hashes

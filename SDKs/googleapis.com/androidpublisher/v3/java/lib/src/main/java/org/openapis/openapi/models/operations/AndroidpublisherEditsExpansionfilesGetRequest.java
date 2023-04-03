@@ -4,27 +4,156 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AndroidpublisherEditsExpansionfilesGetRequest {
-    
-    public AndroidpublisherEditsExpansionfilesGetPathParams pathParams;
-    public AndroidpublisherEditsExpansionfilesGetRequest withPathParams(AndroidpublisherEditsExpansionfilesGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public AndroidpublisherEditsExpansionfilesGetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public AndroidpublisherEditsExpansionfilesGetQueryParams queryParams;
-    public AndroidpublisherEditsExpansionfilesGetRequest withQueryParams(AndroidpublisherEditsExpansionfilesGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public AndroidpublisherEditsExpansionfilesGetRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AndroidpublisherEditsExpansionfilesGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public AndroidpublisherEditsExpansionfilesGetSecurity security;
-    public AndroidpublisherEditsExpansionfilesGetRequest withSecurity(AndroidpublisherEditsExpansionfilesGetSecurity security) {
-        this.security = security;
+    /**
+     * The version code of the APK whose expansion file configuration is being read or modified.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apkVersionCode")
+    public Long apkVersionCode;
+    public AndroidpublisherEditsExpansionfilesGetRequest withApkVersionCode(Long apkVersionCode) {
+        this.apkVersionCode = apkVersionCode;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public AndroidpublisherEditsExpansionfilesGetRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Identifier of the edit.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=editId")
+    public String editId;
+    public AndroidpublisherEditsExpansionfilesGetRequest withEditId(String editId) {
+        this.editId = editId;
+        return this;
+    }
+    
+    /**
+     * The file type of the file configuration which is being read or modified.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=expansionFileType")
+    public AndroidpublisherEditsExpansionfilesGetExpansionFileTypeEnum expansionFileType;
+    public AndroidpublisherEditsExpansionfilesGetRequest withExpansionFileType(AndroidpublisherEditsExpansionfilesGetExpansionFileTypeEnum expansionFileType) {
+        this.expansionFileType = expansionFileType;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AndroidpublisherEditsExpansionfilesGetRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AndroidpublisherEditsExpansionfilesGetRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AndroidpublisherEditsExpansionfilesGetRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Package name of the app.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=packageName")
+    public String packageName;
+    public AndroidpublisherEditsExpansionfilesGetRequest withPackageName(String packageName) {
+        this.packageName = packageName;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AndroidpublisherEditsExpansionfilesGetRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AndroidpublisherEditsExpansionfilesGetRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public AndroidpublisherEditsExpansionfilesGetRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public AndroidpublisherEditsExpansionfilesGetRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

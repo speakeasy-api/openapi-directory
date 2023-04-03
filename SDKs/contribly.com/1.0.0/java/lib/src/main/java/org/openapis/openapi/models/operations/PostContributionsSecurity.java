@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostContributionsSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeOauth oauth;
-    public PostContributionsSecurity withOauth(org.openapis.openapi.models.shared.SchemeOauth oauth) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String oauth;
+    public PostContributionsSecurity withOauth(String oauth) {
         this.oauth = oauth;
         return this;
     }

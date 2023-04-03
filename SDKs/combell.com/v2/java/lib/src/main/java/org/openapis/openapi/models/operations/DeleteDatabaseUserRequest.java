@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteDatabaseUserRequest {
-    
-    public DeleteDatabaseUserPathParams pathParams;
-    public DeleteDatabaseUserRequest withPathParams(DeleteDatabaseUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=databaseName")
+    public String databaseNamePathParameter;
+    public DeleteDatabaseUserRequest withDatabaseNamePathParameter(String databaseNamePathParameter) {
+        this.databaseNamePathParameter = databaseNamePathParameter;
         return this;
     }
     
+    /**
+     * Name of the database.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=database_name")
+    public String databaseNameQueryParameter;
+    public DeleteDatabaseUserRequest withDatabaseNameQueryParameter(String databaseNameQueryParameter) {
+        this.databaseNameQueryParameter = databaseNameQueryParameter;
+        return this;
+    }
     
-    public DeleteDatabaseUserQueryParams queryParams;
-    public DeleteDatabaseUserRequest withQueryParams(DeleteDatabaseUserQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userName")
+    public String userNamePathParameter;
+    public DeleteDatabaseUserRequest withUserNamePathParameter(String userNamePathParameter) {
+        this.userNamePathParameter = userNamePathParameter;
+        return this;
+    }
+    
+    /**
+     * Name of the user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_name")
+    public String userNameQueryParameter;
+    public DeleteDatabaseUserRequest withUserNameQueryParameter(String userNameQueryParameter) {
+        this.userNameQueryParameter = userNameQueryParameter;
         return this;
     }
     

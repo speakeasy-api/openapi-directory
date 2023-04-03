@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePermissionsRequest {
-    
-    public UpdatePermissionsPathParams pathParams;
-    public UpdatePermissionsRequest withPathParams(UpdatePermissionsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated view's permissions.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PermissionsDTO request;
-    public UpdatePermissionsRequest withRequest(org.openapis.openapi.models.shared.PermissionsDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PermissionsDTO permissionsDTO;
+    public UpdatePermissionsRequest withPermissionsDTO(org.openapis.openapi.models.shared.PermissionsDTO permissionsDTO) {
+        this.permissionsDTO = permissionsDTO;
+        return this;
+    }
+    
+    /**
+     * view's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=viewId")
+    public Long viewId;
+    public UpdatePermissionsRequest withViewId(Long viewId) {
+        this.viewId = viewId;
         return this;
     }
     

@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DevicesByEnergyGetRequest {
-    
-    public DevicesByEnergyGetQueryParams queryParams;
-    public DevicesByEnergyGetRequest withQueryParams(DevicesByEnergyGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=meterEnergyType")
+    public DevicesByEnergyGetMeterEnergyTypeEnum meterEnergyType;
+    public DevicesByEnergyGetRequest withMeterEnergyType(DevicesByEnergyGetMeterEnergyTypeEnum meterEnergyType) {
+        this.meterEnergyType = meterEnergyType;
         return this;
     }
     

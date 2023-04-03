@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTerminalsTerminalIdTerminalSettingsRequest {
-    
-    public GetTerminalsTerminalIdTerminalSettingsPathParams pathParams;
-    public GetTerminalsTerminalIdTerminalSettingsRequest withPathParams(GetTerminalsTerminalIdTerminalSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetTerminalsTerminalIdTerminalSettingsSecurity security;
-    public GetTerminalsTerminalIdTerminalSettingsRequest withSecurity(GetTerminalsTerminalIdTerminalSettingsSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the payment terminal.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=terminalId")
+    public String terminalId;
+    public GetTerminalsTerminalIdTerminalSettingsRequest withTerminalId(String terminalId) {
+        this.terminalId = terminalId;
         return this;
     }
     

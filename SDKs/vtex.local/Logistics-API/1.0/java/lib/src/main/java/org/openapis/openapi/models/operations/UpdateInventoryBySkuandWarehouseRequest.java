@@ -7,24 +7,44 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateInventoryBySkuandWarehouseRequest {
-    
-    public UpdateInventoryBySkuandWarehousePathParams pathParams;
-    public UpdateInventoryBySkuandWarehouseRequest withPathParams(UpdateInventoryBySkuandWarehousePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public UpdateInventoryBySkuandWarehouseRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public UpdateInventoryBySkuandWarehouseHeaders headers;
-    public UpdateInventoryBySkuandWarehouseRequest withHeaders(UpdateInventoryBySkuandWarehouseHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public UpdateInventoryBySkuandWarehouseRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateInventoryBySkuandWarehouseUpdateInventoryBySkuandWarehouseRequest request;
-    public UpdateInventoryBySkuandWarehouseRequest withRequest(UpdateInventoryBySkuandWarehouseUpdateInventoryBySkuandWarehouseRequest request) {
-        this.request = request;
+    public UpdateInventoryBySkuandWarehouseUpdateInventoryBySkuandWarehouseRequest requestBody;
+    public UpdateInventoryBySkuandWarehouseRequest withRequestBody(UpdateInventoryBySkuandWarehouseUpdateInventoryBySkuandWarehouseRequest requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=skuId")
+    public String skuId;
+    public UpdateInventoryBySkuandWarehouseRequest withSkuId(String skuId) {
+        this.skuId = skuId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=warehouseId")
+    public String warehouseId;
+    public UpdateInventoryBySkuandWarehouseRequest withWarehouseId(String warehouseId) {
+        this.warehouseId = warehouseId;
         return this;
     }
     

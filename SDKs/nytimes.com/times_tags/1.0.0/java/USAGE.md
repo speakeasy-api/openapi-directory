@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GetTimestagsFilterEnum;
-import org.openapis.openapi.models.operations.GetTimestagsQueryParams;
 import org.openapis.openapi.models.operations.GetTimestagsRequest;
 import org.openapis.openapi.models.operations.GetTimestagsResponse;
 
@@ -14,19 +13,15 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    apikey = new SchemeApikey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    apikey = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GetTimestagsRequest req = new GetTimestagsRequest() {{
-                queryParams = new GetTimestagsQueryParams() {{
-                    filter = "Org";
-                    max = 592845;
-                    query = "distinctio";
-                }};
-            }};            
+                filter = "Org";
+                max = 592845;
+                query = "distinctio";
+            }}            
 
             GetTimestagsResponse res = sdk.getTimestags(req);
 

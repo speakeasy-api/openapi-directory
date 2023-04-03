@@ -7,31 +7,160 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TagmanagerAccountsContainersVersionsUpdateRequest {
-    
-    public TagmanagerAccountsContainersVersionsUpdatePathParams pathParams;
-    public TagmanagerAccountsContainersVersionsUpdateRequest withPathParams(TagmanagerAccountsContainersVersionsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public TagmanagerAccountsContainersVersionsUpdateQueryParams queryParams;
-    public TagmanagerAccountsContainersVersionsUpdateRequest withQueryParams(TagmanagerAccountsContainersVersionsUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public TagmanagerAccountsContainersVersionsUpdateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ContainerVersion request;
-    public TagmanagerAccountsContainersVersionsUpdateRequest withRequest(org.openapis.openapi.models.shared.ContainerVersion request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ContainerVersion containerVersion;
+    public TagmanagerAccountsContainersVersionsUpdateRequest withContainerVersion(org.openapis.openapi.models.shared.ContainerVersion containerVersion) {
+        this.containerVersion = containerVersion;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public TagmanagerAccountsContainersVersionsUpdateRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public TagmanagerAccountsContainersVersionsUpdateSecurity security;
-    public TagmanagerAccountsContainersVersionsUpdateRequest withSecurity(TagmanagerAccountsContainersVersionsUpdateSecurity security) {
-        this.security = security;
+    /**
+     * The GTM Account ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public TagmanagerAccountsContainersVersionsUpdateRequest withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public TagmanagerAccountsContainersVersionsUpdateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public TagmanagerAccountsContainersVersionsUpdateRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * The GTM Container ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=containerId")
+    public String containerId;
+    public TagmanagerAccountsContainersVersionsUpdateRequest withContainerId(String containerId) {
+        this.containerId = containerId;
+        return this;
+    }
+    
+    /**
+     * The GTM Container Version ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=containerVersionId")
+    public String containerVersionId;
+    public TagmanagerAccountsContainersVersionsUpdateRequest withContainerVersionId(String containerVersionId) {
+        this.containerVersionId = containerVersionId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public TagmanagerAccountsContainersVersionsUpdateRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * When provided, this fingerprint must match the fingerprint of the container version in storage.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fingerprint")
+    public String fingerprint;
+    public TagmanagerAccountsContainersVersionsUpdateRequest withFingerprint(String fingerprint) {
+        this.fingerprint = fingerprint;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public TagmanagerAccountsContainersVersionsUpdateRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public TagmanagerAccountsContainersVersionsUpdateRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public TagmanagerAccountsContainersVersionsUpdateRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public TagmanagerAccountsContainersVersionsUpdateRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public TagmanagerAccountsContainersVersionsUpdateRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public TagmanagerAccountsContainersVersionsUpdateRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

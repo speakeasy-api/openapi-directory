@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WeekUpcomingRequest {
-    
-    public WeekUpcomingPathParams pathParams;
-    public WeekUpcomingRequest withPathParams(WeekUpcomingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public WeekUpcomingFormatEnum format;
+    public WeekUpcomingRequest withFormat(WeekUpcomingFormatEnum format) {
+        this.format = format;
         return this;
     }
     

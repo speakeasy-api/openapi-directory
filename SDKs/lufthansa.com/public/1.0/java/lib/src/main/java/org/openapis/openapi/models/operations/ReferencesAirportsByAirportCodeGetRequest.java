@@ -4,34 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReferencesAirportsByAirportCodeGetRequest {
-    
-    public ReferencesAirportsByAirportCodeGetPathParams pathParams;
-    public ReferencesAirportsByAirportCodeGetRequest withPathParams(ReferencesAirportsByAirportCodeGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public ReferencesAirportsByAirportCodeGetRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public ReferencesAirportsByAirportCodeGetQueryParams queryParams;
-    public ReferencesAirportsByAirportCodeGetRequest withQueryParams(ReferencesAirportsByAirportCodeGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Restrict the results to locations with flights operated by LH (false=0, true=1)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LHoperated")
+    public Boolean lHoperated;
+    public ReferencesAirportsByAirportCodeGetRequest withLHoperated(Boolean lHoperated) {
+        this.lHoperated = lHoperated;
         return this;
     }
     
-    
-    public ReferencesAirportsByAirportCodeGetHeaders headers;
-    public ReferencesAirportsByAirportCodeGetRequest withHeaders(ReferencesAirportsByAirportCodeGetHeaders headers) {
-        this.headers = headers;
+    /**
+     * 3-letter IATA airport code
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=airportCode")
+    public String airportCode;
+    public ReferencesAirportsByAirportCodeGetRequest withAirportCode(String airportCode) {
+        this.airportCode = airportCode;
         return this;
     }
     
+    /**
+     * 2-letter ISO 3166-1 language code
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public String lang;
+    public ReferencesAirportsByAirportCodeGetRequest withLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
     
-    public ReferencesAirportsByAirportCodeGetSecurity security;
-    public ReferencesAirportsByAirportCodeGetRequest withSecurity(ReferencesAirportsByAirportCodeGetSecurity security) {
-        this.security = security;
+    /**
+     * Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public String limit;
+    public ReferencesAirportsByAirportCodeGetRequest withLimit(String limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Number of records skipped. Defaults to 0
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public String offset;
+    public ReferencesAirportsByAirportCodeGetRequest withOffset(String offset) {
+        this.offset = offset;
         return this;
     }
     

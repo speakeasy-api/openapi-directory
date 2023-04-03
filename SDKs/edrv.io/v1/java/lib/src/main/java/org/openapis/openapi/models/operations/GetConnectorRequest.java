@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConnectorRequest {
-    
-    public GetConnectorPathParams pathParams;
-    public GetConnectorRequest withPathParams(GetConnectorPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of connector that needs to be fetched
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetConnectorRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * Populate evse
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_evse")
+    public Boolean includeEvse;
+    public GetConnectorRequest withIncludeEvse(Boolean includeEvse) {
+        this.includeEvse = includeEvse;
+        return this;
+    }
     
-    public GetConnectorQueryParams queryParams;
-    public GetConnectorRequest withQueryParams(GetConnectorQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Populate organization
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_organization")
+    public Boolean includeOrganization;
+    public GetConnectorRequest withIncludeOrganization(Boolean includeOrganization) {
+        this.includeOrganization = includeOrganization;
+        return this;
+    }
+    
+    /**
+     * Populate rate
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_rate")
+    public Boolean includeRate;
+    public GetConnectorRequest withIncludeRate(Boolean includeRate) {
+        this.includeRate = includeRate;
         return this;
     }
     

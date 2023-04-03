@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FilmographyTypeSearchReadRequest {
-    
-    public FilmographyTypeSearchReadPathParams pathParams;
-    public FilmographyTypeSearchReadRequest withPathParams(FilmographyTypeSearchReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=filmography_description")
+    public String filmographyDescription;
+    public FilmographyTypeSearchReadRequest withFilmographyDescription(String filmographyDescription) {
+        this.filmographyDescription = filmographyDescription;
         return this;
     }
     

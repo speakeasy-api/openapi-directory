@@ -32,15 +32,11 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/PostSuggestRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostSuggestResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFrontendSettingsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLanguagesResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostDetectRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostDetectResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostTranslateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostTranslateResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostTranslateFileRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostTranslateFileResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/SuggestResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/FrontendSettingsLanguageSource.java

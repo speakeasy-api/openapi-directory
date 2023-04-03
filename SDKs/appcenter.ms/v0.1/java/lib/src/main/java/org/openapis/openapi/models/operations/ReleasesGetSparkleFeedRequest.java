@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesGetSparkleFeedRequest {
-    
-    public ReleasesGetSparkleFeedPathParams pathParams;
-    public ReleasesGetSparkleFeedRequest withPathParams(ReleasesGetSparkleFeedPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The secret of the application.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_secret")
+    public String appSecret;
+    public ReleasesGetSparkleFeedRequest withAppSecret(String appSecret) {
+        this.appSecret = appSecret;
         return this;
     }
     

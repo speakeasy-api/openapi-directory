@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletePictureRequest {
-    
-    public DeletePicturePathParams pathParams;
-    public DeletePictureRequest withPathParams(DeletePicturePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the picture.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=portraitset_id")
+    public Double portraitsetId;
+    public DeletePictureRequest withPortraitsetId(Double portraitsetId) {
+        this.portraitsetId = portraitsetId;
         return this;
     }
     
-    
-    public DeletePictureSecurity security;
-    public DeletePictureRequest withSecurity(DeletePictureSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public DeletePictureRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

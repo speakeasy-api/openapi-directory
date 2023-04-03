@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesGetLatestByHashRequest {
-    
-    public ReleasesGetLatestByHashPathParams pathParams;
-    public ReleasesGetLatestByHashRequest withPathParams(ReleasesGetLatestByHashPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The secret of the target application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_secret")
+    public String appSecret;
+    public ReleasesGetLatestByHashRequest withAppSecret(String appSecret) {
+        this.appSecret = appSecret;
         return this;
     }
     
-    
-    public ReleasesGetLatestByHashQueryParams queryParams;
-    public ReleasesGetLatestByHashRequest withQueryParams(ReleasesGetLatestByHashQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The hash of the release or 'latest' to get the latest release from all the distribution groups assigned to the current user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_hash")
+    public String releaseHash;
+    public ReleasesGetLatestByHashRequest withReleaseHash(String releaseHash) {
+        this.releaseHash = releaseHash;
         return this;
     }
     
-    
-    public ReleasesGetLatestByHashSecurity security;
-    public ReleasesGetLatestByHashRequest withSecurity(ReleasesGetLatestByHashSecurity security) {
-        this.security = security;
+    /**
+     * When passing `udid` in the query string, a provisioning check for the given device ID will be done. Will be ignored for non-iOS platforms.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=udid")
+    public String udid;
+    public ReleasesGetLatestByHashRequest withUdid(String udid) {
+        this.udid = udid;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBudgetsRequest {
-    
-    public GetBudgetsQueryParams queryParams;
-    public GetBudgetsRequest withQueryParams(GetBudgetsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Whether to include the list of budget accounts
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_accounts")
+    public Boolean includeAccounts;
+    public GetBudgetsRequest withIncludeAccounts(Boolean includeAccounts) {
+        this.includeAccounts = includeAccounts;
         return this;
     }
     

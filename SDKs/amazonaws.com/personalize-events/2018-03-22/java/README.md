@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.PutEventsHeaders;
 import org.openapis.openapi.models.operations.PutEventsRequestBody;
 import org.openapis.openapi.models.operations.PutEventsRequest;
 import org.openapis.openapi.models.operations.PutEventsResponse;
@@ -29,97 +28,75 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             PutEventsRequest req = new PutEventsRequest() {{
-                headers = new PutEventsHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new PutEventsRequestBody() {{
+                requestBody = new PutEventsRequestBody() {{
                     eventList = new org.openapis.openapi.models.shared.Event[]{{
                         add(new Event() {{
-                            eventId = "vel";
-                            eventType = "error";
-                            eventValue = 6458.94;
+                            eventId = "provident";
+                            eventType = "distinctio";
+                            eventValue = 8442.66;
                             impression = new String[]{{
-                                add("iure"),
-                                add("magnam"),
+                                add("nulla"),
+                                add("corrupti"),
+                                add("illum"),
                             }};
-                            itemId = "debitis";
+                            itemId = "vel";
                             metricAttribution = new MetricAttribution() {{
-                                eventAttributionSource = "ipsa";
+                                eventAttributionSource = "error";
                             }};
-                            properties = "delectus";
-                            recommendationId = "tempora";
-                            sentAt = "2022-07-10T15:39:12.517Z";
+                            properties = "deserunt";
+                            recommendationId = "suscipit";
+                            sentAt = "2022-09-14T09:35:47.986Z";
                         }}),
                         add(new Event() {{
-                            eventId = "minus";
-                            eventType = "placeat";
-                            eventValue = 5288.95;
+                            eventId = "debitis";
+                            eventType = "ipsa";
+                            eventValue = 9636.63;
                             impression = new String[]{{
-                                add("excepturi"),
-                                add("nisi"),
+                                add("suscipit"),
+                                add("molestiae"),
                             }};
-                            itemId = "recusandae";
+                            itemId = "minus";
                             metricAttribution = new MetricAttribution() {{
-                                eventAttributionSource = "temporibus";
+                                eventAttributionSource = "placeat";
                             }};
-                            properties = "ab";
-                            recommendationId = "quis";
-                            sentAt = "2022-05-09T10:00:51.349Z";
+                            properties = "voluptatum";
+                            recommendationId = "iusto";
+                            sentAt = "2022-03-20T06:24:36.919Z";
                         }}),
                         add(new Event() {{
-                            eventId = "perferendis";
-                            eventType = "ipsam";
-                            eventValue = 8326.2;
+                            eventId = "recusandae";
+                            eventType = "temporibus";
+                            eventValue = 710.36;
                             impression = new String[]{{
-                                add("quo"),
-                                add("odit"),
-                                add("at"),
-                                add("at"),
+                                add("veritatis"),
+                                add("deserunt"),
                             }};
-                            itemId = "maiores";
+                            itemId = "perferendis";
                             metricAttribution = new MetricAttribution() {{
-                                eventAttributionSource = "molestiae";
+                                eventAttributionSource = "ipsam";
                             }};
-                            properties = "quod";
-                            recommendationId = "quod";
-                            sentAt = "2022-06-25T00:37:01.696Z";
-                        }}),
-                        add(new Event() {{
-                            eventId = "porro";
-                            eventType = "dolorum";
-                            eventValue = 1182.74;
-                            impression = new String[]{{
-                                add("officia"),
-                                add("occaecati"),
-                                add("fugit"),
-                            }};
-                            itemId = "deleniti";
-                            metricAttribution = new MetricAttribution() {{
-                                eventAttributionSource = "hic";
-                            }};
-                            properties = "optio";
-                            recommendationId = "totam";
-                            sentAt = "2022-08-02T15:33:40.440Z";
+                            properties = "repellendus";
+                            recommendationId = "sapiente";
+                            sentAt = "2022-07-31T07:34:52.790Z";
                         }}),
                     }};
-                    sessionId = "molestiae";
-                    trackingId = "modi";
-                    userId = "qui";
+                    sessionId = "at";
+                    trackingId = "at";
+                    userId = "maiores";
                 }};
-            }};            
+                xAmzAlgorithm = "molestiae";
+                xAmzContentSha256 = "quod";
+                xAmzCredential = "quod";
+                xAmzDate = "esse";
+                xAmzSecurityToken = "totam";
+                xAmzSignature = "porro";
+                xAmzSignedHeaders = "dolorum";
+            }}            
 
             PutEventsResponse res = sdk.putEvents(req);
 
@@ -133,7 +110,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

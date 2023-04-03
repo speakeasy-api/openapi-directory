@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCompanyTimeOffsIdRequest {
-    
-    public DeleteCompanyTimeOffsIdPathParams pathParams;
-    public DeleteCompanyTimeOffsIdRequest withPathParams(DeleteCompanyTimeOffsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the absence period to delete
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public DeleteCompanyTimeOffsIdRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

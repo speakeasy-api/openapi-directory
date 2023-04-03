@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateStreamMessageRequest {
-    
-    public CreateStreamMessagePathParams pathParams;
-    public CreateStreamMessageRequest withPathParams(CreateStreamMessagePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateStreamMessageCreateStreamMessageRequest request;
-    public CreateStreamMessageRequest withRequest(CreateStreamMessageCreateStreamMessageRequest request) {
-        this.request = request;
+    public CreateStreamMessageCreateStreamMessageRequest requestBody;
+    public CreateStreamMessageRequest withRequestBody(CreateStreamMessageCreateStreamMessageRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateStreamMessageSecurity security;
-    public CreateStreamMessageRequest withSecurity(CreateStreamMessageSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) to create the new Stream Message in.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public CreateStreamMessageRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public CreateStreamMessageRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Sync Stream to create the new Stream Message resource for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=StreamSid")
+    public String streamSid;
+    public CreateStreamMessageRequest withStreamSid(String streamSid) {
+        this.streamSid = streamSid;
         return this;
     }
     

@@ -4,20 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStatisticsItemRequest {
-    
-    public GetStatisticsItemPathParams pathParams;
-    public GetStatisticsItemRequest withPathParams(GetStatisticsItemPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Results per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetStatisticsItemRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * Search page to request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public String page;
+    public GetStatisticsItemRequest withPage(String page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetStatisticsItemQueryParams queryParams;
-    public GetStatisticsItemRequest withQueryParams(GetStatisticsItemQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=zone")
+    public String zone;
+    public GetStatisticsItemRequest withZone(String zone) {
+        this.zone = zone;
         return this;
     }
     

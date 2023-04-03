@@ -34,27 +34,28 @@ public class FirstAndThirdPartyAudiences {
     /**
      * Creates a FirstAndThirdPartyAudience. Only supported for the following audience_type: * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesCreateResponse displayvideoFirstAndThirdPartyAudiencesCreate(org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesCreateResponse displayvideoFirstAndThirdPartyAudiencesCreate(org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesCreateRequest request, org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/firstAndThirdPartyAudiences");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "firstAndThirdPartyAudienceInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,27 +82,28 @@ public class FirstAndThirdPartyAudiences {
     /**
      * Updates the member list of a Customer Match audience. Only supported for the following audience_type: * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersResponse displayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembers(org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersResponse displayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembers(org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersRequest request, org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersPathParams.class, baseUrl, "/v2/firstAndThirdPartyAudiences/{firstAndThirdPartyAudienceId}:editCustomerMatchMembers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersRequest.class, baseUrl, "/v2/firstAndThirdPartyAudiences/{firstAndThirdPartyAudienceId}:editCustomerMatchMembers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "editCustomerMatchMembersRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -128,25 +130,26 @@ public class FirstAndThirdPartyAudiences {
     /**
      * Gets a first and third party audience.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesGetResponse displayvideoFirstAndThirdPartyAudiencesGet(org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesGetResponse displayvideoFirstAndThirdPartyAudiencesGet(org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesGetRequest request, org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesGetPathParams.class, baseUrl, "/v2/firstAndThirdPartyAudiences/{firstAndThirdPartyAudienceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesGetRequest.class, baseUrl, "/v2/firstAndThirdPartyAudiences/{firstAndThirdPartyAudienceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -173,10 +176,11 @@ public class FirstAndThirdPartyAudiences {
     /**
      * Lists first and third party audiences. The order is defined by the order_by parameter.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesListResponse displayvideoFirstAndThirdPartyAudiencesList(org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesListResponse displayvideoFirstAndThirdPartyAudiencesList(org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesListRequest request, org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/firstAndThirdPartyAudiences");
         
@@ -184,14 +188,14 @@ public class FirstAndThirdPartyAudiences {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -218,27 +222,28 @@ public class FirstAndThirdPartyAudiences {
     /**
      * Updates an existing FirstAndThirdPartyAudience. Only supported for the following audience_type: * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesPatchResponse displayvideoFirstAndThirdPartyAudiencesPatch(org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesPatchResponse displayvideoFirstAndThirdPartyAudiencesPatch(org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesPatchRequest request, org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesPatchPathParams.class, baseUrl, "/v2/firstAndThirdPartyAudiences/{firstAndThirdPartyAudienceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesPatchRequest.class, baseUrl, "/v2/firstAndThirdPartyAudiences/{firstAndThirdPartyAudienceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "firstAndThirdPartyAudienceInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

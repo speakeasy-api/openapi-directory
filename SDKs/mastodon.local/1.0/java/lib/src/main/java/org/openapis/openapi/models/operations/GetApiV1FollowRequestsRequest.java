@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1FollowRequestsRequest {
-    
-    public GetApiV1FollowRequestsQueryParams queryParams;
-    public GetApiV1FollowRequestsRequest withQueryParams(GetApiV1FollowRequestsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetApiV1FollowRequestsSecurity security;
-    public GetApiV1FollowRequestsRequest withSecurity(GetApiV1FollowRequestsSecurity security) {
-        this.security = security;
+    /**
+     * Maximum number of results to return. Defaults to 40. Paginate using the HTTP Link header.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetApiV1FollowRequestsRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     

@@ -4,20 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetResourcesTagsFormatRequest {
-    
-    public GetResourcesTagsFormatPathParams pathParams;
-    public GetResourcesTagsFormatRequest withPathParams(GetResourcesTagsFormatPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public String format;
+    public GetResourcesTagsFormatRequest withFormat(String format) {
+        this.format = format;
         return this;
     }
     
+    /**
+     * The maximum number of records to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=max")
+    public Integer max;
+    public GetResourcesTagsFormatRequest withMax(Integer max) {
+        this.max = max;
+        return this;
+    }
     
-    public GetResourcesTagsFormatQueryParams queryParams;
-    public GetResourcesTagsFormatRequest withQueryParams(GetResourcesTagsFormatQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Return tags associated with the supplied media id.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=mediaId")
+    public Long mediaId;
+    public GetResourcesTagsFormatRequest withMediaId(Long mediaId) {
+        this.mediaId = mediaId;
+        return this;
+    }
+    
+    /**
+     * Return tags[s] matching the supplied name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=name")
+    public String name;
+    public GetResourcesTagsFormatRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Return tags which contain the supplied partial name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=nameContains")
+    public String nameContains;
+    public GetResourcesTagsFormatRequest withNameContains(String nameContains) {
+        this.nameContains = nameContains;
+        return this;
+    }
+    
+    /**
+     * Return records starting at the offset index.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=offset")
+    public Integer offset;
+    public GetResourcesTagsFormatRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * The name of the property to which sorting will be applied
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=sort")
+    public String sort;
+    public GetResourcesTagsFormatRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Return tags belonging to the supplied tag type id.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=typeId")
+    public Long typeId;
+    public GetResourcesTagsFormatRequest withTypeId(Long typeId) {
+        this.typeId = typeId;
+        return this;
+    }
+    
+    /**
+     * Return tags belonging to the supplied tag type name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=typeName")
+    public String typeName;
+    public GetResourcesTagsFormatRequest withTypeName(String typeName) {
+        this.typeName = typeName;
         return this;
     }
     

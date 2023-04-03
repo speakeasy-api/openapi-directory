@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GlobalpageloadQueryParams;
 import org.openapis.openapi.models.operations.GlobalpageloadRequest;
 import org.openapis.openapi.models.operations.GlobalpageloadResponse;
 
@@ -15,12 +14,10 @@ public class Application {
                 .build();
 
             GlobalpageloadRequest req = new GlobalpageloadRequest() {{
-                queryParams = new GlobalpageloadQueryParams() {{
-                    license = "corrupti";
-                    origin = "provident";
-                    url = "distinctio";
-                }};
-            }};            
+                license = "corrupti";
+                origin = "provident";
+                url = "distinctio";
+            }}            
 
             GlobalpageloadResponse res = sdk.pageLoadPerformanceTime.globalpageload(req);
 

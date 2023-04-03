@@ -7,20 +7,6 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateArtifactVersionJsonRequest {
-    
-    public CreateArtifactVersionJsonPathParams pathParams;
-    public CreateArtifactVersionJsonRequest withPathParams(CreateArtifactVersionJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CreateArtifactVersionJsonHeaders headers;
-    public CreateArtifactVersionJsonRequest withHeaders(CreateArtifactVersionJsonHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * The content of the artifact version being created or the content and a set of references to other artifacts. This is often, but not always, JSON data
      * representing one of the supported artifact types:
@@ -37,9 +23,82 @@ public class CreateArtifactVersionJsonRequest {
      * 
      */
     @SpeakeasyMetadata("request:mediaType=application/vnd.create.extended+json")
-    public org.openapis.openapi.models.shared.ContentCreateRequest request;
-    public CreateArtifactVersionJsonRequest withRequest(org.openapis.openapi.models.shared.ContentCreateRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ContentCreateRequest contentCreateRequest;
+    public CreateArtifactVersionJsonRequest withContentCreateRequest(org.openapis.openapi.models.shared.ContentCreateRequest contentCreateRequest) {
+        this.contentCreateRequest = contentCreateRequest;
+        return this;
+    }
+    
+    /**
+     * Specifies the artifact description of this new version of the artifact content. Description must be ASCII-only string. If this is not provided, the server will extract the description from the artifact content.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-Description")
+    public String xRegistryDescription;
+    public CreateArtifactVersionJsonRequest withXRegistryDescription(String xRegistryDescription) {
+        this.xRegistryDescription = xRegistryDescription;
+        return this;
+    }
+    
+    /**
+     * Specifies the artifact description of this new version of the artifact content. Value of this must be Base64 encoded string. If this is not provided, the server will extract the description from the artifact content.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-Description-Encoded")
+    public String xRegistryDescriptionEncoded;
+    public CreateArtifactVersionJsonRequest withXRegistryDescriptionEncoded(String xRegistryDescriptionEncoded) {
+        this.xRegistryDescriptionEncoded = xRegistryDescriptionEncoded;
+        return this;
+    }
+    
+    /**
+     * Specifies the artifact name of this new version of the artifact content. Name must be ASCII-only string. If this is not
+     * provided, the server will extract the name from the artifact content.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-Name")
+    public String xRegistryName;
+    public CreateArtifactVersionJsonRequest withXRegistryName(String xRegistryName) {
+        this.xRegistryName = xRegistryName;
+        return this;
+    }
+    
+    /**
+     * Specifies the artifact name of this new version of the artifact content. Value of this must be Base64 encoded string. If this is not provided, the server will extract the name from the artifact content.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-Name-Encoded")
+    public String xRegistryNameEncoded;
+    public CreateArtifactVersionJsonRequest withXRegistryNameEncoded(String xRegistryNameEncoded) {
+        this.xRegistryNameEncoded = xRegistryNameEncoded;
+        return this;
+    }
+    
+    /**
+     * Specifies the version number of this new version of the artifact content.  This would typically
+     * be a simple integer or a SemVer value.  It must be unique within the artifact.  If this is not
+     * provided, the server will generate a new, unique version number for this new updated content.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-Version")
+    public String xRegistryVersion;
+    public CreateArtifactVersionJsonRequest withXRegistryVersion(String xRegistryVersion) {
+        this.xRegistryVersion = xRegistryVersion;
+        return this;
+    }
+    
+    /**
+     * The artifact ID.  Can be a string (client-provided) or UUID (server-generated), representing the unique artifact identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifactId")
+    public String artifactId;
+    public CreateArtifactVersionJsonRequest withArtifactId(String artifactId) {
+        this.artifactId = artifactId;
+        return this;
+    }
+    
+    /**
+     * The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public String groupId;
+    public CreateArtifactVersionJsonRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     

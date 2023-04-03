@@ -37,10 +37,11 @@ public class Conference {
      * /v0.1/ConferenceDeaf/
      * Blocks audio to one or more conference members
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV01ConferenceDeafResponse postV01ConferenceDeaf(org.openapis.openapi.models.operations.PostV01ConferenceDeafRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV01ConferenceDeafResponse postV01ConferenceDeaf(org.openapis.openapi.models.shared.ConferenceDeafParameters request, org.openapis.openapi.models.operations.PostV01ConferenceDeafSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/ConferenceDeaf/");
         
@@ -51,7 +52,7 @@ public class Conference {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,10 +80,11 @@ public class Conference {
      * /v0.1/ConferenceHangup/
      * Kicks one or more conference members, without playing the kick sound
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV01ConferenceHangupResponse postV01ConferenceHangup(org.openapis.openapi.models.operations.PostV01ConferenceHangupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV01ConferenceHangupResponse postV01ConferenceHangup(org.openapis.openapi.models.shared.ConferenceHangupParameters request, org.openapis.openapi.models.operations.PostV01ConferenceHangupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/ConferenceHangup/");
         
@@ -93,7 +95,7 @@ public class Conference {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -121,10 +123,11 @@ public class Conference {
      * /v0.1/ConferenceKick/
      * Kicks one or more conference members
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV01ConferenceKickResponse postV01ConferenceKick(org.openapis.openapi.models.operations.PostV01ConferenceKickRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV01ConferenceKickResponse postV01ConferenceKick(org.openapis.openapi.models.shared.ConferenceKickParameters request, org.openapis.openapi.models.operations.PostV01ConferenceKickSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/ConferenceKick/");
         
@@ -135,7 +138,7 @@ public class Conference {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -163,10 +166,11 @@ public class Conference {
      * /v0.1/ConferenceList/
      * Returns a list of all established conferences
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV01ConferenceListResponse postV01ConferenceList(org.openapis.openapi.models.operations.PostV01ConferenceListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV01ConferenceListResponse postV01ConferenceList(org.openapis.openapi.models.shared.ConferenceListParameters request, org.openapis.openapi.models.operations.PostV01ConferenceListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/ConferenceList/");
         
@@ -177,7 +181,7 @@ public class Conference {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -205,10 +209,11 @@ public class Conference {
      * /v0.1/ConferenceListMembers/
      * Retrieves the member list for a given conference
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV01ConferenceListMembersResponse postV01ConferenceListMembers(org.openapis.openapi.models.operations.PostV01ConferenceListMembersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV01ConferenceListMembersResponse postV01ConferenceListMembers(org.openapis.openapi.models.shared.ConferenceListMembersParameters request, org.openapis.openapi.models.operations.PostV01ConferenceListMembersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/ConferenceListMembers/");
         
@@ -219,7 +224,7 @@ public class Conference {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -247,10 +252,11 @@ public class Conference {
      * /v0.1/ConferenceMute/
      * Blocks audio from one or more conference members
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV01ConferenceMuteResponse postV01ConferenceMute(org.openapis.openapi.models.operations.PostV01ConferenceMuteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV01ConferenceMuteResponse postV01ConferenceMute(org.openapis.openapi.models.shared.ConferenceMuteParameters request, org.openapis.openapi.models.operations.PostV01ConferenceMuteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/ConferenceMute/");
         
@@ -261,7 +267,7 @@ public class Conference {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -289,10 +295,11 @@ public class Conference {
      * /v0.1/ConferencePlay/
      * Plays media to one or more conference members
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV01ConferencePlayResponse postV01ConferencePlay(org.openapis.openapi.models.operations.PostV01ConferencePlayRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV01ConferencePlayResponse postV01ConferencePlay(org.openapis.openapi.models.shared.ConferencePlayParameters request, org.openapis.openapi.models.operations.PostV01ConferencePlaySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/ConferencePlay/");
         
@@ -303,7 +310,7 @@ public class Conference {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -331,10 +338,11 @@ public class Conference {
      * /v0.1/ConferenceRecordStart/
      * Initiates a conference recording
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV01ConferenceRecordStartResponse postV01ConferenceRecordStart(org.openapis.openapi.models.operations.PostV01ConferenceRecordStartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV01ConferenceRecordStartResponse postV01ConferenceRecordStart(org.openapis.openapi.models.shared.ConferenceRecordStartParameters request, org.openapis.openapi.models.operations.PostV01ConferenceRecordStartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/ConferenceRecordStart/");
         
@@ -345,7 +353,7 @@ public class Conference {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -373,10 +381,11 @@ public class Conference {
      * /v0.1/ConferenceRecordStop/
      * Stops a conference recording
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV01ConferenceRecordStopResponse postV01ConferenceRecordStop(org.openapis.openapi.models.operations.PostV01ConferenceRecordStopRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV01ConferenceRecordStopResponse postV01ConferenceRecordStop(org.openapis.openapi.models.shared.ConferenceRecordStopParameters request, org.openapis.openapi.models.operations.PostV01ConferenceRecordStopSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/ConferenceRecordStop/");
         
@@ -387,7 +396,7 @@ public class Conference {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -415,10 +424,11 @@ public class Conference {
      * /v0.1/ConferenceSpeak/
      * Plays synthesized speech into a conference
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV01ConferenceSpeakResponse postV01ConferenceSpeak(org.openapis.openapi.models.operations.PostV01ConferenceSpeakRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV01ConferenceSpeakResponse postV01ConferenceSpeak(org.openapis.openapi.models.shared.ConferenceSpeakParameters request, org.openapis.openapi.models.operations.PostV01ConferenceSpeakSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/ConferenceSpeak/");
         
@@ -429,7 +439,7 @@ public class Conference {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -457,10 +467,11 @@ public class Conference {
      * /v0.1/ConferenceUndeaf/
      * Restores audio to one or more conference members
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV01ConferenceUndeafResponse postV01ConferenceUndeaf(org.openapis.openapi.models.operations.PostV01ConferenceUndeafRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV01ConferenceUndeafResponse postV01ConferenceUndeaf(org.openapis.openapi.models.shared.ConferenceUndeafParameters request, org.openapis.openapi.models.operations.PostV01ConferenceUndeafSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/ConferenceUndeaf/");
         
@@ -471,7 +482,7 @@ public class Conference {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -499,10 +510,11 @@ public class Conference {
      * /v0.1/ConferenceUnmute/
      * Restores audio from one or more conference members
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV01ConferenceUnmuteResponse postV01ConferenceUnmute(org.openapis.openapi.models.operations.PostV01ConferenceUnmuteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV01ConferenceUnmuteResponse postV01ConferenceUnmute(org.openapis.openapi.models.shared.ConferenceUnmuteParameters request, org.openapis.openapi.models.operations.PostV01ConferenceUnmuteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/ConferenceUnmute/");
         
@@ -513,7 +525,7 @@ public class Conference {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -38,7 +38,7 @@ public class Sections {
      */
     public org.openapis.openapi.models.operations.GetDistrictForSectionResponse getDistrictForSection(org.openapis.openapi.models.operations.GetDistrictForSectionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDistrictForSectionPathParams.class, baseUrl, "/sections/{id}/district", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDistrictForSectionRequest.class, baseUrl, "/sections/{id}/district", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -85,7 +85,7 @@ public class Sections {
      */
     public org.openapis.openapi.models.operations.GetSchoolForSectionResponse getSchoolForSection(org.openapis.openapi.models.operations.GetSchoolForSectionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSchoolForSectionPathParams.class, baseUrl, "/sections/{id}/school", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSchoolForSectionRequest.class, baseUrl, "/sections/{id}/school", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -132,7 +132,7 @@ public class Sections {
      */
     public org.openapis.openapi.models.operations.GetSectionResponse getSection(org.openapis.openapi.models.operations.GetSectionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSectionPathParams.class, baseUrl, "/sections/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSectionRequest.class, baseUrl, "/sections/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -185,7 +185,7 @@ public class Sections {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSectionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSectionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -224,13 +224,13 @@ public class Sections {
      */
     public org.openapis.openapi.models.operations.GetStudentsForSectionResponse getStudentsForSection(org.openapis.openapi.models.operations.GetStudentsForSectionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStudentsForSectionPathParams.class, baseUrl, "/sections/{id}/students", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStudentsForSectionRequest.class, baseUrl, "/sections/{id}/students", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetStudentsForSectionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetStudentsForSectionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -277,7 +277,7 @@ public class Sections {
      */
     public org.openapis.openapi.models.operations.GetTeacherForSectionResponse getTeacherForSection(org.openapis.openapi.models.operations.GetTeacherForSectionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeacherForSectionPathParams.class, baseUrl, "/sections/{id}/teacher", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeacherForSectionRequest.class, baseUrl, "/sections/{id}/teacher", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -324,13 +324,13 @@ public class Sections {
      */
     public org.openapis.openapi.models.operations.GetTeachersForSectionResponse getTeachersForSection(org.openapis.openapi.models.operations.GetTeachersForSectionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeachersForSectionPathParams.class, baseUrl, "/sections/{id}/teachers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeachersForSectionRequest.class, baseUrl, "/sections/{id}/teachers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTeachersForSectionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTeachersForSectionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

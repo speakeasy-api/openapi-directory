@@ -4,13 +4,28 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchCoachesRequest {
+    /**
+     * Comma-separated list of group ids. Note that one of the following filters must be specified: `filter[groups]`, `filter[organization]`.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[groups]")
+    public String filterGroups;
+    public FetchCoachesRequest withFilterGroups(String filterGroups) {
+        this.filterGroups = filterGroups;
+        return this;
+    }
     
-    public FetchCoachesQueryParams queryParams;
-    public FetchCoachesRequest withQueryParams(FetchCoachesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Fitbit Plus organization id. Note that one of the following filters must be specified: `filter[groups]`, `filter[organization]`.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[organization]")
+    public String filterOrganization;
+    public FetchCoachesRequest withFilterOrganization(String filterOrganization) {
+        this.filterOrganization = filterOrganization;
         return this;
     }
     

@@ -38,7 +38,7 @@ public class PicoCharging {
      */
     public org.openapis.openapi.models.operations.PicoChargingGetResponse picoChargingGet(org.openapis.openapi.models.operations.PicoChargingGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PicoChargingGetPathParams.class, baseUrl, "/api/pico/charging/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PicoChargingGetRequest.class, baseUrl, "/api/pico/charging/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

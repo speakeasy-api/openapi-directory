@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSeasonsIdRequest {
-    
-    public GetSeasonsIdPathParams pathParams;
-    public GetSeasonsIdRequest withPathParams(GetSeasonsIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetSeasonsIdSecurity security;
-    public GetSeasonsIdRequest withSecurity(GetSeasonsIdSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the season resource to load.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSeasonsIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

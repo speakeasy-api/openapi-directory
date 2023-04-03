@@ -43,7 +43,7 @@ public class CompanyCredits {
      */
     public org.openapis.openapi.models.operations.CompanyCreditsSearchReadResponse companyCreditsSearchRead(org.openapis.openapi.models.operations.CompanyCreditsSearchReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanyCreditsSearchReadPathParams.class, baseUrl, "/api/v1/company-credits/search/{movie_title}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanyCreditsSearchReadRequest.class, baseUrl, "/api/v1/company-credits/search/{movie_title}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -85,7 +85,7 @@ public class CompanyCredits {
      */
     public org.openapis.openapi.models.operations.CompanyCreditsSearchallReadResponse companyCreditsSearchallRead(org.openapis.openapi.models.operations.CompanyCreditsSearchallReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanyCreditsSearchallReadPathParams.class, baseUrl, "/api/v1/company-credits/searchall/{param}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanyCreditsSearchallReadRequest.class, baseUrl, "/api/v1/company-credits/searchall/{param}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -167,7 +167,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteProjectUsernameProjectBuildCacheResponse deleteProjectUsernameProjectBuildCache(org.openapis.openapi.models.operations.DeleteProjectUsernameProjectBuildCacheRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteProjectUsernameProjectBuildCachePathParams.class, baseUrl, "/project/{username}/{project}/build-cache", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteProjectUsernameProjectBuildCacheRequest.class, baseUrl, "/project/{username}/{project}/build-cache", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -206,7 +206,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteProjectUsernameProjectCheckoutKeyFingerprintResponse deleteProjectUsernameProjectCheckoutKeyFingerprint(org.openapis.openapi.models.operations.DeleteProjectUsernameProjectCheckoutKeyFingerprintRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteProjectUsernameProjectCheckoutKeyFingerprintPathParams.class, baseUrl, "/project/{username}/{project}/checkout-key/{fingerprint}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteProjectUsernameProjectCheckoutKeyFingerprintRequest.class, baseUrl, "/project/{username}/{project}/checkout-key/{fingerprint}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -245,7 +245,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteProjectUsernameProjectEnvvarNameResponse deleteProjectUsernameProjectEnvvarName(org.openapis.openapi.models.operations.DeleteProjectUsernameProjectEnvvarNameRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteProjectUsernameProjectEnvvarNamePathParams.class, baseUrl, "/project/{username}/{project}/envvar/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteProjectUsernameProjectEnvvarNameRequest.class, baseUrl, "/project/{username}/{project}/envvar/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -322,13 +322,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetProjectUsernameProjectResponse getProjectUsernameProject(org.openapis.openapi.models.operations.GetProjectUsernameProjectRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectUsernameProjectPathParams.class, baseUrl, "/project/{username}/{project}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectUsernameProjectRequest.class, baseUrl, "/project/{username}/{project}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProjectUsernameProjectQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProjectUsernameProjectRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -367,7 +367,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetProjectUsernameProjectCheckoutKeyResponse getProjectUsernameProjectCheckoutKey(org.openapis.openapi.models.operations.GetProjectUsernameProjectCheckoutKeyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectUsernameProjectCheckoutKeyPathParams.class, baseUrl, "/project/{username}/{project}/checkout-key", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectUsernameProjectCheckoutKeyRequest.class, baseUrl, "/project/{username}/{project}/checkout-key", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -406,7 +406,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetProjectUsernameProjectCheckoutKeyFingerprintResponse getProjectUsernameProjectCheckoutKeyFingerprint(org.openapis.openapi.models.operations.GetProjectUsernameProjectCheckoutKeyFingerprintRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectUsernameProjectCheckoutKeyFingerprintPathParams.class, baseUrl, "/project/{username}/{project}/checkout-key/{fingerprint}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectUsernameProjectCheckoutKeyFingerprintRequest.class, baseUrl, "/project/{username}/{project}/checkout-key/{fingerprint}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -445,7 +445,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetProjectUsernameProjectEnvvarResponse getProjectUsernameProjectEnvvar(org.openapis.openapi.models.operations.GetProjectUsernameProjectEnvvarRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectUsernameProjectEnvvarPathParams.class, baseUrl, "/project/{username}/{project}/envvar", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectUsernameProjectEnvvarRequest.class, baseUrl, "/project/{username}/{project}/envvar", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -484,7 +484,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetProjectUsernameProjectEnvvarNameResponse getProjectUsernameProjectEnvvarName(org.openapis.openapi.models.operations.GetProjectUsernameProjectEnvvarNameRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectUsernameProjectEnvvarNamePathParams.class, baseUrl, "/project/{username}/{project}/envvar/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectUsernameProjectEnvvarNameRequest.class, baseUrl, "/project/{username}/{project}/envvar/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -523,7 +523,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetProjectUsernameProjectBuildNumResponse getProjectUsernameProjectBuildNum(org.openapis.openapi.models.operations.GetProjectUsernameProjectBuildNumRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectUsernameProjectBuildNumPathParams.class, baseUrl, "/project/{username}/{project}/{build_num}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectUsernameProjectBuildNumRequest.class, baseUrl, "/project/{username}/{project}/{build_num}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -562,7 +562,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetProjectUsernameProjectBuildNumArtifactsResponse getProjectUsernameProjectBuildNumArtifacts(org.openapis.openapi.models.operations.GetProjectUsernameProjectBuildNumArtifactsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectUsernameProjectBuildNumArtifactsPathParams.class, baseUrl, "/project/{username}/{project}/{build_num}/artifacts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectUsernameProjectBuildNumArtifactsRequest.class, baseUrl, "/project/{username}/{project}/{build_num}/artifacts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -601,7 +601,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetProjectUsernameProjectBuildNumTestsResponse getProjectUsernameProjectBuildNumTests(org.openapis.openapi.models.operations.GetProjectUsernameProjectBuildNumTestsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectUsernameProjectBuildNumTestsPathParams.class, baseUrl, "/project/{username}/{project}/{build_num}/tests", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectUsernameProjectBuildNumTestsRequest.class, baseUrl, "/project/{username}/{project}/{build_num}/tests", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -684,7 +684,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRecentBuildsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRecentBuildsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -723,12 +723,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PostProjectUsernameProjectResponse postProjectUsernameProject(org.openapis.openapi.models.operations.PostProjectUsernameProjectRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostProjectUsernameProjectPathParams.class, baseUrl, "/project/{username}/{project}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostProjectUsernameProjectRequest.class, baseUrl, "/project/{username}/{project}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -764,12 +764,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PostProjectUsernameProjectCheckoutKeyResponse postProjectUsernameProjectCheckoutKey(org.openapis.openapi.models.operations.PostProjectUsernameProjectCheckoutKeyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostProjectUsernameProjectCheckoutKeyPathParams.class, baseUrl, "/project/{username}/{project}/checkout-key", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostProjectUsernameProjectCheckoutKeyRequest.class, baseUrl, "/project/{username}/{project}/checkout-key", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -805,7 +805,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PostProjectUsernameProjectEnvvarResponse postProjectUsernameProjectEnvvar(org.openapis.openapi.models.operations.PostProjectUsernameProjectEnvvarRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostProjectUsernameProjectEnvvarPathParams.class, baseUrl, "/project/{username}/{project}/envvar", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostProjectUsernameProjectEnvvarRequest.class, baseUrl, "/project/{username}/{project}/envvar", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -844,18 +844,18 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PostProjectUsernameProjectSshKeyResponse postProjectUsernameProjectSshKey(org.openapis.openapi.models.operations.PostProjectUsernameProjectSshKeyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostProjectUsernameProjectSshKeyPathParams.class, baseUrl, "/project/{username}/{project}/ssh-key", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostProjectUsernameProjectSshKeyRequest.class, baseUrl, "/project/{username}/{project}/ssh-key", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -896,12 +896,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PostProjectUsernameProjectTreeBranchResponse postProjectUsernameProjectTreeBranch(org.openapis.openapi.models.operations.PostProjectUsernameProjectTreeBranchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostProjectUsernameProjectTreeBranchPathParams.class, baseUrl, "/project/{username}/{project}/tree/{branch}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostProjectUsernameProjectTreeBranchRequest.class, baseUrl, "/project/{username}/{project}/tree/{branch}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -939,7 +939,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PostProjectUsernameProjectBuildNumCancelResponse postProjectUsernameProjectBuildNumCancel(org.openapis.openapi.models.operations.PostProjectUsernameProjectBuildNumCancelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostProjectUsernameProjectBuildNumCancelPathParams.class, baseUrl, "/project/{username}/{project}/{build_num}/cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostProjectUsernameProjectBuildNumCancelRequest.class, baseUrl, "/project/{username}/{project}/{build_num}/cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -978,7 +978,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PostProjectUsernameProjectBuildNumRetryResponse postProjectUsernameProjectBuildNumRetry(org.openapis.openapi.models.operations.PostProjectUsernameProjectBuildNumRetryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostProjectUsernameProjectBuildNumRetryPathParams.class, baseUrl, "/project/{username}/{project}/{build_num}/retry", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostProjectUsernameProjectBuildNumRetryRequest.class, baseUrl, "/project/{username}/{project}/{build_num}/retry", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");

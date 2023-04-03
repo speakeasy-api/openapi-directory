@@ -41,7 +41,7 @@ public class Quote {
      */
     public org.openapis.openapi.models.operations.QuoteCloseResponse quoteClose(org.openapis.openapi.models.operations.QuoteCloseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.QuoteClosePathParams.class, baseUrl, "/v1/quotes/close/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.QuoteCloseRequest.class, baseUrl, "/v1/quotes/close/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -79,13 +79,13 @@ public class Quote {
      */
     public org.openapis.openapi.models.operations.QuoteDeleteResponse quoteDelete(org.openapis.openapi.models.operations.QuoteDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.QuoteDeletePathParams.class, baseUrl, "/v1/quotes/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.QuoteDeleteRequest.class, baseUrl, "/v1/quotes/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.QuoteDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.QuoteDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -158,7 +158,7 @@ public class Quote {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.QuotePostResponse quotePost(org.openapis.openapi.models.operations.QuotePostRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.QuotePostResponse quotePost(org.openapis.openapi.models.shared.QuoteDto request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/quotes");
         
@@ -201,7 +201,7 @@ public class Quote {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.QuotePostCreateQuoteWithGeneratingReferenceResponse quotePostCreateQuoteWithGeneratingReference(org.openapis.openapi.models.operations.QuotePostCreateQuoteWithGeneratingReferenceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.QuotePostCreateQuoteWithGeneratingReferenceResponse quotePostCreateQuoteWithGeneratingReference(org.openapis.openapi.models.shared.QuoteDto request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/quotes/createQuoteWithGeneratingReference");
         
@@ -244,7 +244,7 @@ public class Quote {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.QuotePostGenerateSaleInvoiceResponse quotePostGenerateSaleInvoice(org.openapis.openapi.models.operations.QuotePostGenerateSaleInvoiceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.QuotePostGenerateSaleInvoiceResponse quotePostGenerateSaleInvoice(org.openapis.openapi.models.shared.QuoteGeneratingInvoiceDto request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/quotes/generateSaleInvoice");
         
@@ -287,7 +287,7 @@ public class Quote {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.QuoteProcessBatchResponse quoteProcessBatch(org.openapis.openapi.models.operations.QuoteProcessBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.QuoteProcessBatchResponse quoteProcessBatch(org.openapis.openapi.models.shared.BatchItemQuoteDto[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/quotes/batch");
         
@@ -332,12 +332,12 @@ public class Quote {
      */
     public org.openapis.openapi.models.operations.QuotePutResponse quotePut(org.openapis.openapi.models.operations.QuotePutRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.QuotePutPathParams.class, baseUrl, "/v1/quotes/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.QuotePutRequest.class, baseUrl, "/v1/quotes/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "quoteDto", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -375,7 +375,7 @@ public class Quote {
      */
     public org.openapis.openapi.models.operations.QuoteReopenResponse quoteReopen(org.openapis.openapi.models.operations.QuoteReopenRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.QuoteReopenPathParams.class, baseUrl, "/v1/quotes/reopen/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.QuoteReopenRequest.class, baseUrl, "/v1/quotes/reopen/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -413,7 +413,7 @@ public class Quote {
      */
     public org.openapis.openapi.models.operations.GetV1QuotesIdResponse getV1QuotesId(org.openapis.openapi.models.operations.GetV1QuotesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV1QuotesIdPathParams.class, baseUrl, "/v1/quotes/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV1QuotesIdRequest.class, baseUrl, "/v1/quotes/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

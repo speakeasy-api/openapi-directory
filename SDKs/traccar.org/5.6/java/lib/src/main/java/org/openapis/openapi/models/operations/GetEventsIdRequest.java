@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEventsIdRequest {
-    
-    public GetEventsIdPathParams pathParams;
-    public GetEventsIdRequest withPathParams(GetEventsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetEventsIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

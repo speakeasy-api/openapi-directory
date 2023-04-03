@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EinVerificationLookupRequest {
-    
-    public EinVerificationLookupQueryParams queryParams;
-    public EinVerificationLookupRequest withQueryParams(EinVerificationLookupQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Business name of the company
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public EinVerificationLookupRequest withName(String name) {
+        this.name = name;
         return this;
     }
     
+    /**
+     * Optional state parameter to improve results. (Two letter code for example CA or US-CA for California)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public String state;
+    public EinVerificationLookupRequest withState(String state) {
+        this.state = state;
+        return this;
+    }
     
-    public EinVerificationLookupSecurity security;
-    public EinVerificationLookupRequest withSecurity(EinVerificationLookupSecurity security) {
-        this.security = security;
+    /**
+     * Optional parameter to do tight matching. (Only the best match will be returned rather then the top 5)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tight")
+    public Boolean tight;
+    public EinVerificationLookupRequest withTight(Boolean tight) {
+        this.tight = tight;
+        return this;
+    }
+    
+    /**
+     * Optional zip code parameter to improve results. (Zip is preferred over state)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=zip")
+    public String zip;
+    public EinVerificationLookupRequest withZip(String zip) {
+        this.zip = zip;
         return this;
     }
     

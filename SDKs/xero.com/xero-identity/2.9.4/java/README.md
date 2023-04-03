@@ -18,10 +18,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.DeleteConnectionSecurity;
-import org.openapis.openapi.models.operations.DeleteConnectionPathParams;
 import org.openapis.openapi.models.operations.DeleteConnectionRequest;
 import org.openapis.openapi.models.operations.DeleteConnectionResponse;
-import org.openapis.openapi.models.shared.SchemeOAuth2;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,17 +28,12 @@ public class Application {
                 .build();
 
             DeleteConnectionRequest req = new DeleteConnectionRequest() {{
-                security = new DeleteConnectionSecurity() {{
-                    oAuth2 = new SchemeOAuth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new DeleteConnectionPathParams() {{
-                    id = "89bd9d8d-69a6-474e-8f46-7cc8796ed151";
-                }};
-            }};            
+                id = "89bd9d8d-69a6-474e-8f46-7cc8796ed151";
+            }}            
 
-            DeleteConnectionResponse res = sdk.identity.deleteConnection(req);
+            DeleteConnectionResponse res = sdk.identity.deleteConnection(req, new DeleteConnectionSecurity() {{
+                oAuth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.statusCode == 200) {
                 // handle response
@@ -52,7 +45,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### identity

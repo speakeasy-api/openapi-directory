@@ -44,7 +44,7 @@ public class Contribution {
      */
     public org.openapis.openapi.models.operations.DeleteContributionsIdResponse deleteContributionsId(org.openapis.openapi.models.operations.DeleteContributionsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteContributionsIdPathParams.class, baseUrl, "/contributions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteContributionsIdRequest.class, baseUrl, "/contributions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -128,7 +128,7 @@ public class Contribution {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetContributionRefinementsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetContributionRefinementsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -173,7 +173,7 @@ public class Contribution {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetContributionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetContributionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -211,7 +211,7 @@ public class Contribution {
      */
     public org.openapis.openapi.models.operations.GetContributionsIdResponse getContributionsId(org.openapis.openapi.models.operations.GetContributionsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContributionsIdPathParams.class, baseUrl, "/contributions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContributionsIdRequest.class, baseUrl, "/contributions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -252,7 +252,7 @@ public class Contribution {
      */
     public org.openapis.openapi.models.operations.GetContributionsIdLikesResponse getContributionsIdLikes(org.openapis.openapi.models.operations.GetContributionsIdLikesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContributionsIdLikesPathParams.class, baseUrl, "/contributions/{id}/likes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContributionsIdLikesRequest.class, baseUrl, "/contributions/{id}/likes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -290,7 +290,7 @@ public class Contribution {
      */
     public org.openapis.openapi.models.operations.GetExportsIdResponse getExportsId(org.openapis.openapi.models.operations.GetExportsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetExportsIdPathParams.class, baseUrl, "/exports/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetExportsIdRequest.class, baseUrl, "/exports/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -325,10 +325,11 @@ public class Contribution {
     /**
      * Create a new contribution
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostContributionsResponse postContributions(org.openapis.openapi.models.operations.PostContributionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostContributionsResponse postContributions(org.openapis.openapi.models.shared.Contribution request, org.openapis.openapi.models.operations.PostContributionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/contributions");
         
@@ -342,7 +343,7 @@ public class Contribution {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -375,12 +376,12 @@ public class Contribution {
      */
     public org.openapis.openapi.models.operations.PostContributionsIdFlagResponse postContributionsIdFlag(org.openapis.openapi.models.operations.PostContributionsIdFlagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostContributionsIdFlagPathParams.class, baseUrl, "/contributions/{id}/flag", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostContributionsIdFlagRequest.class, baseUrl, "/contributions/{id}/flag", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "flag", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -418,7 +419,7 @@ public class Contribution {
      */
     public org.openapis.openapi.models.operations.PostContributionsIdLikeResponse postContributionsIdLike(org.openapis.openapi.models.operations.PostContributionsIdLikeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostContributionsIdLikePathParams.class, baseUrl, "/contributions/{id}/like", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostContributionsIdLikeRequest.class, baseUrl, "/contributions/{id}/like", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -457,12 +458,12 @@ public class Contribution {
      */
     public org.openapis.openapi.models.operations.PostContributionsIdModerateResponse postContributionsIdModerate(org.openapis.openapi.models.operations.PostContributionsIdModerateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostContributionsIdModeratePathParams.class, baseUrl, "/contributions/{id}/moderate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostContributionsIdModerateRequest.class, baseUrl, "/contributions/{id}/moderate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "moderationHistoryItemSubmission", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -514,7 +515,7 @@ public class Contribution {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostExportQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostExportRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -559,7 +560,7 @@ public class Contribution {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostExportSummaryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostExportSummaryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

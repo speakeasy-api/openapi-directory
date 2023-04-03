@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRateByIdRequest {
-    
-    public GetRateByIdPathParams pathParams;
-    public GetRateByIdRequest withPathParams(GetRateByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Rate ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rate_id")
+    public String rateId;
+    public GetRateByIdRequest withRateId(String rateId) {
+        this.rateId = rateId;
         return this;
     }
     

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SocialRemoveFriendRequestRequest {
-    
-    public SocialRemoveFriendRequestPathParams pathParams;
-    public SocialRemoveFriendRequestRequest withPathParams(SocialRemoveFriendRequestPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public SocialRemoveFriendRequestSecurity security;
-    public SocialRemoveFriendRequestRequest withSecurity(SocialRemoveFriendRequestSecurity security) {
-        this.security = security;
+    /**
+     * The membership id of the user you wish to remove.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipId")
+    public String membershipId;
+    public SocialRemoveFriendRequestRequest withMembershipId(String membershipId) {
+        this.membershipId = membershipId;
         return this;
     }
     

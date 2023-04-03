@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DashboardZoomRoomsRequest {
-    
-    public DashboardZoomRoomsQueryParams queryParams;
-    public DashboardZoomRoomsRequest withQueryParams(DashboardZoomRoomsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next_page_token")
+    public String nextPageToken;
+    public DashboardZoomRoomsRequest withNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
         return this;
     }
     
+    /**
+     * The page number of the current page in the returned records.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_number")
+    public Long pageNumber;
+    public DashboardZoomRoomsRequest withPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
     
-    public DashboardZoomRoomsSecurity security;
-    public DashboardZoomRoomsRequest withSecurity(DashboardZoomRoomsSecurity security) {
-        this.security = security;
+    /**
+     * The number of records returned within a single API call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public DashboardZoomRoomsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

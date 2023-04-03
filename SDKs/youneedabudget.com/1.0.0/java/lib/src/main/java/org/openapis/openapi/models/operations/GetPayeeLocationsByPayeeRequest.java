@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPayeeLocationsByPayeeRequest {
+    /**
+     * The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=budget_id")
+    public String budgetId;
+    public GetPayeeLocationsByPayeeRequest withBudgetId(String budgetId) {
+        this.budgetId = budgetId;
+        return this;
+    }
     
-    public GetPayeeLocationsByPayeePathParams pathParams;
-    public GetPayeeLocationsByPayeeRequest withPathParams(GetPayeeLocationsByPayeePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * id of payee
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payee_id")
+    public String payeeId;
+    public GetPayeeLocationsByPayeeRequest withPayeeId(String payeeId) {
+        this.payeeId = payeeId;
         return this;
     }
     

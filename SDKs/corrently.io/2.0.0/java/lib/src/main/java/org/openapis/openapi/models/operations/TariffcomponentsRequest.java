@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TariffcomponentsRequest {
+    /**
+     * Valid email address to assign request to (pre offer generation). Ensure GDPR (DSGVO) at any time
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public TariffcomponentsRequest withEmail(String email) {
+        this.email = email;
+        return this;
+    }
     
-    public TariffcomponentsQueryParams queryParams;
-    public TariffcomponentsRequest withQueryParams(TariffcomponentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Total amount of energy in kilo-watt-hours per year. (sample 2100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=kwha")
+    public Long kwha;
+    public TariffcomponentsRequest withKwha(Long kwha) {
+        this.kwha = kwha;
+        return this;
+    }
+    
+    /**
+     * If provided all results will be scaled to this timeframe
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=milliseconds")
+    public Long milliseconds;
+    public TariffcomponentsRequest withMilliseconds(Long milliseconds) {
+        this.milliseconds = milliseconds;
+        return this;
+    }
+    
+    /**
+     * If provided together with milliseconds, a cost component stament for a particular event (like charging a car) will be created.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=wh")
+    public Long wh;
+    public TariffcomponentsRequest withWh(Long wh) {
+        this.wh = wh;
+        return this;
+    }
+    
+    /**
+     * Zipcode (Postzleitzahl) of a city in Germany.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=zipcode")
+    public String zipcode;
+    public TariffcomponentsRequest withZipcode(String zipcode) {
+        this.zipcode = zipcode;
         return this;
     }
     

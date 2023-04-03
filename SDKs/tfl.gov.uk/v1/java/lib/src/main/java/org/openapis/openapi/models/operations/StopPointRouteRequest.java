@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopPointRouteRequest {
-    
-    public StopPointRoutePathParams pathParams;
-    public StopPointRouteRequest withPathParams(StopPointRoutePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A stop point id (station naptan codes e.g. 940GZZLUASL, you can use /StopPoint/Search/{query} endpoint to find a stop point id from a station name)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public StopPointRouteRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public StopPointRouteQueryParams queryParams;
-    public StopPointRouteRequest withQueryParams(StopPointRouteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A comma-separated list of service types to filter on. If not specified. Supported values: Regular, Night. Defaulted to 'Regular' if not specified
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceTypes")
+    public StopPointRouteServiceTypesEnum[] serviceTypes;
+    public StopPointRouteRequest withServiceTypes(StopPointRouteServiceTypesEnum[] serviceTypes) {
+        this.serviceTypes = serviceTypes;
         return this;
     }
     

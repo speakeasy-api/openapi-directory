@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupsPostRequest {
-    
-    public GroupsPostPathParams pathParams;
-    public GroupsPostRequest withPathParams(GroupsPostPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The body of the group
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ApiCoreDtoGroupsGroup request;
-    public GroupsPostRequest withRequest(org.openapis.openapi.models.shared.ApiCoreDtoGroupsGroup request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ApiCoreDtoGroupsGroup apiCoreDtoGroupsGroup;
+    public GroupsPostRequest withApiCoreDtoGroupsGroup(org.openapis.openapi.models.shared.ApiCoreDtoGroupsGroup apiCoreDtoGroupsGroup) {
+        this.apiCoreDtoGroupsGroup = apiCoreDtoGroupsGroup;
+        return this;
+    }
+    
+    /**
+     * The id of the group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GroupsPostRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

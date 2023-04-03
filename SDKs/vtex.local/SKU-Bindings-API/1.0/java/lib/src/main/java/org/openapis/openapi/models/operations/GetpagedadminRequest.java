@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetpagedadminRequest {
-    
-    public GetpagedadminQueryParams queryParams;
-    public GetpagedadminRequest withQueryParams(GetpagedadminQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetpagedadminRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetpagedadminRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetpagedadminHeaders headers;
-    public GetpagedadminRequest withHeaders(GetpagedadminHeaders headers) {
-        this.headers = headers;
+    /**
+     * Defines if the SKU binding is active.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isActive")
+    public Boolean isActive;
+    public GetpagedadminRequest withIsActive(Boolean isActive) {
+        this.isActive = isActive;
+        return this;
+    }
+    
+    /**
+     * ID that identifies the seller in the marketplace. It can be the same as the seller name or a unique number. Check the **Sellers management** section in the Admin to get the correct ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sellerId")
+    public String sellerId;
+    public GetpagedadminRequest withSellerId(String sellerId) {
+        this.sellerId = sellerId;
+        return this;
+    }
+    
+    /**
+     * SKU ID in the seller's store.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sellerSkuId")
+    public String sellerSkuId;
+    public GetpagedadminRequest withSellerSkuId(String sellerSkuId) {
+        this.sellerSkuId = sellerSkuId;
+        return this;
+    }
+    
+    /**
+     * Amount of results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
+    public String size;
+    public GetpagedadminRequest withSize(String size) {
+        this.size = size;
+        return this;
+    }
+    
+    /**
+     * SKU's unique identifier in the marketplace.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skuId")
+    public String skuId;
+    public GetpagedadminRequest withSkuId(String skuId) {
+        this.skuId = skuId;
         return this;
     }
     

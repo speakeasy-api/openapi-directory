@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostTTSCampaignSoundRequest {
-    
-    public PostTTSCampaignSoundQueryParams queryParams;
-    public PostTTSCampaignSoundRequest withQueryParams(PostTTSCampaignSoundQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * textToSpeech
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TextToSpeech request;
-    public PostTTSCampaignSoundRequest withRequest(org.openapis.openapi.models.shared.TextToSpeech request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TextToSpeech textToSpeech;
+    public PostTTSCampaignSoundRequest withTextToSpeech(org.openapis.openapi.models.shared.TextToSpeech textToSpeech) {
+        this.textToSpeech = textToSpeech;
         return this;
     }
     
-    
-    public PostTTSCampaignSoundSecurity security;
-    public PostTTSCampaignSoundRequest withSecurity(PostTTSCampaignSoundSecurity security) {
-        this.security = security;
+    /**
+     * Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public PostTTSCampaignSoundRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     

@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveAnAchPrenotificationRequest {
-    
-    public RetrieveAnAchPrenotificationPathParams pathParams;
-    public RetrieveAnAchPrenotificationRequest withPathParams(RetrieveAnAchPrenotificationPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ach_prenotification_id")
+    public String achPrenotificationId;
+    public RetrieveAnAchPrenotificationRequest withAchPrenotificationId(String achPrenotificationId) {
+        this.achPrenotificationId = achPrenotificationId;
         return this;
     }
     

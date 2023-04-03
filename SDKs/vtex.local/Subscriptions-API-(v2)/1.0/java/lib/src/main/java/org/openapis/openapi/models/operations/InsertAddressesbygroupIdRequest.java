@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InsertAddressesbygroupIdRequest {
-    
-    public InsertAddressesbygroupIdPathParams pathParams;
-    public InsertAddressesbygroupIdRequest withPathParams(InsertAddressesbygroupIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public InsertAddressesbygroupIdRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public InsertAddressesbygroupIdHeaders headers;
-    public InsertAddressesbygroupIdRequest withHeaders(InsertAddressesbygroupIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public InsertAddressesbygroupIdRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.InsertAddressesbygroupIdRequest request;
-    public InsertAddressesbygroupIdRequest withRequest(org.openapis.openapi.models.shared.InsertAddressesbygroupIdRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.InsertAddressesbygroupIdRequest insertAddressesbygroupIdRequest;
+    public InsertAddressesbygroupIdRequest withInsertAddressesbygroupIdRequest(org.openapis.openapi.models.shared.InsertAddressesbygroupIdRequest insertAddressesbygroupIdRequest) {
+        this.insertAddressesbygroupIdRequest = insertAddressesbygroupIdRequest;
+        return this;
+    }
+    
+    /**
+     * Group ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public String groupId;
+    public InsertAddressesbygroupIdRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     

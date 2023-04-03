@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolSnmpv3GroupListRequest {
-    
-    public ProtocolSnmpv3GroupListPathParams pathParams;
-    public ProtocolSnmpv3GroupListRequest withPathParams(ProtocolSnmpv3GroupListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to show the SNMPv3 configuration
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolSnmpv3GroupListRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

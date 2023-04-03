@@ -39,7 +39,7 @@ public class TokenVerification {
      */
     public org.openapis.openapi.models.operations.CheckTokenResponse checkToken(org.openapis.openapi.models.operations.CheckTokenRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CheckTokenPathParams.class, baseUrl, "/tokens/check/{tokenId}/{tokenName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CheckTokenRequest.class, baseUrl, "/tokens/check/{tokenId}/{tokenName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

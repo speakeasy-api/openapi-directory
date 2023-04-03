@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetFeaturesFeatureIdPathParams;
 import org.openapis.openapi.models.operations.GetFeaturesFeatureIdRequest;
 import org.openapis.openapi.models.operations.GetFeaturesFeatureIdResponse;
 
@@ -15,10 +14,8 @@ public class Application {
                 .build();
 
             GetFeaturesFeatureIdRequest req = new GetFeaturesFeatureIdRequest() {{
-                pathParams = new GetFeaturesFeatureIdPathParams() {{
-                    featureId = 548814;
-                }};
-            }};            
+                featureId = 548814;
+            }}            
 
             GetFeaturesFeatureIdResponse res = sdk.feature.getFeaturesFeatureId(req);
 

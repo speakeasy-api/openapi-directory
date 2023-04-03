@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PublishIterationRequest {
-    
-    public PublishIterationPathParams pathParams;
-    public PublishIterationRequest withPathParams(PublishIterationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The iteration id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=iterationId")
+    public String iterationId;
+    public PublishIterationRequest withIterationId(String iterationId) {
+        this.iterationId = iterationId;
         return this;
     }
     
+    /**
+     * The id of the prediction resource to publish to.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=predictionId")
+    public String predictionId;
+    public PublishIterationRequest withPredictionId(String predictionId) {
+        this.predictionId = predictionId;
+        return this;
+    }
     
-    public PublishIterationQueryParams queryParams;
-    public PublishIterationRequest withQueryParams(PublishIterationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public PublishIterationRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    /**
+     * The name to give the published iteration.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=publishName")
+    public String publishName;
+    public PublishIterationRequest withPublishName(String publishName) {
+        this.publishName = publishName;
         return this;
     }
     

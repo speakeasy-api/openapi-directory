@@ -4,20 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMarketingV3MarketingEventsAppIdSettingsGetAllRequest {
-    
-    public GetMarketingV3MarketingEventsAppIdSettingsGetAllPathParams pathParams;
-    public GetMarketingV3MarketingEventsAppIdSettingsGetAllRequest withPathParams(GetMarketingV3MarketingEventsAppIdSettingsGetAllPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetMarketingV3MarketingEventsAppIdSettingsGetAllSecurity security;
-    public GetMarketingV3MarketingEventsAppIdSettingsGetAllRequest withSecurity(GetMarketingV3MarketingEventsAppIdSettingsGetAllSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
+    public Integer appId;
+    public GetMarketingV3MarketingEventsAppIdSettingsGetAllRequest withAppId(Integer appId) {
+        this.appId = appId;
         return this;
     }
     

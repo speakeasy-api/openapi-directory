@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPensionLiabilityReportOutputRequest {
-    
-    public GetPensionLiabilityReportOutputQueryParams queryParams;
-    public GetPensionLiabilityReportOutputRequest withQueryParams(GetPensionLiabilityReportOutputQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The version of the api to target. Omit or set as &amp;apos;default&amp;apos; to target the current api version.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Version")
+    public String apiVersion;
+    public GetPensionLiabilityReportOutputRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
+    /**
+     * The OAuth 1 authorization header. &amp;apos;Auto&amp;apos; enables auto complete.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public GetPensionLiabilityReportOutputRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
+        return this;
+    }
     
-    public GetPensionLiabilityReportOutputHeaders headers;
-    public GetPensionLiabilityReportOutputRequest withHeaders(GetPensionLiabilityReportOutputHeaders headers) {
-        this.headers = headers;
+    /**
+     * The employer unique key. E.g. ER001
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EmployerKey")
+    public String employerKey;
+    public GetPensionLiabilityReportOutputRequest withEmployerKey(String employerKey) {
+        this.employerKey = employerKey;
+        return this;
+    }
+    
+    /**
+     * The pension scheme unique key. E.g. PENSCH001
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PensionKey")
+    public String pensionKey;
+    public GetPensionLiabilityReportOutputRequest withPensionKey(String pensionKey) {
+        this.pensionKey = pensionKey;
+        return this;
+    }
+    
+    /**
+     * The tax year. E.g. 2017 = 2017/18 year.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TaxYear")
+    public String taxYear;
+    public GetPensionLiabilityReportOutputRequest withTaxYear(String taxYear) {
+        this.taxYear = taxYear;
         return this;
     }
     

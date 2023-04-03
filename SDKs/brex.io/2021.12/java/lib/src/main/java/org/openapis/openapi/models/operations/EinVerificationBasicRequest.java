@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EinVerificationBasicRequest {
-    
-    public EinVerificationBasicQueryParams queryParams;
-    public EinVerificationBasicRequest withQueryParams(EinVerificationBasicQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public EinVerificationBasicSecurity security;
-    public EinVerificationBasicRequest withSecurity(EinVerificationBasicSecurity security) {
-        this.security = security;
+    /**
+     * Nine letter EIN number with or without hyphens
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ein")
+    public String ein;
+    public EinVerificationBasicRequest withEin(String ein) {
+        this.ein = ein;
         return this;
     }
     

@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRealmUsersIdFederatedIdentityProviderRequest {
+    /**
+     * User id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteRealmUsersIdFederatedIdentityProviderRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public DeleteRealmUsersIdFederatedIdentityProviderPathParams pathParams;
-    public DeleteRealmUsersIdFederatedIdentityProviderRequest withPathParams(DeleteRealmUsersIdFederatedIdentityProviderPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Social login provider id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=provider")
+    public String provider;
+    public DeleteRealmUsersIdFederatedIdentityProviderRequest withProvider(String provider) {
+        this.provider = provider;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public DeleteRealmUsersIdFederatedIdentityProviderRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

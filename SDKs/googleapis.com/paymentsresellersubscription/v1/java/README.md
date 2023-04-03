@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersProductsListPathParams;
-import org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersProductsListQueryParams;
 import org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersProductsListRequest;
 import org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersProductsListResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -31,26 +29,22 @@ public class Application {
                 .build();
 
             PaymentsresellersubscriptionPartnersProductsListRequest req = new PaymentsresellersubscriptionPartnersProductsListRequest() {{
-                pathParams = new PaymentsresellersubscriptionPartnersProductsListPathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new PaymentsresellersubscriptionPartnersProductsListQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    filter = "corrupti";
-                    key = "illum";
-                    oauthToken = "vel";
-                    pageSize = 623564;
-                    pageToken = "deserunt";
-                    prettyPrint = false;
-                    quotaUser = "suscipit";
-                    uploadType = "iure";
-                    uploadProtocol = "magnam";
-                }};
-            }};            
+                dollarXgafv = "2";
+                accessToken = "provident";
+                alt = "proto";
+                callback = "quibusdam";
+                fields = "unde";
+                filter = "nulla";
+                key = "corrupti";
+                oauthToken = "illum";
+                pageSize = 423655;
+                pageToken = "error";
+                parent = "deserunt";
+                prettyPrint = false;
+                quotaUser = "suscipit";
+                uploadType = "iure";
+                uploadProtocol = "magnam";
+            }}            
 
             PaymentsresellersubscriptionPartnersProductsListResponse res = sdk.partners.paymentsresellersubscriptionPartnersProductsList(req);
 
@@ -64,7 +58,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### partners

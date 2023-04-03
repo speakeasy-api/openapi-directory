@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05UsersAuthOnFetchModesJsonRequest {
-    
-    public PostV05UsersAuthOnFetchModesJsonHeaders headers;
-    public PostV05UsersAuthOnFetchModesJsonRequest withHeaders(PostV05UsersAuthOnFetchModesJsonHeaders headers) {
-        this.headers = headers;
+    /**
+     * Access token which was issued after successful login with gateway auth server.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostV05UsersAuthOnFetchModesJsonRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PatientAuthModeQueryResponse request;
-    public PostV05UsersAuthOnFetchModesJsonRequest withRequest(org.openapis.openapi.models.shared.PatientAuthModeQueryResponse request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PatientAuthModeQueryResponse patientAuthModeQueryResponse;
+    public PostV05UsersAuthOnFetchModesJsonRequest withPatientAuthModeQueryResponse(org.openapis.openapi.models.shared.PatientAuthModeQueryResponse patientAuthModeQueryResponse) {
+        this.patientAuthModeQueryResponse = patientAuthModeQueryResponse;
+        return this;
+    }
+    
+    /**
+     * Identifier of the health information provider to which the request was intended.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HIP-ID")
+    public String xHipId;
+    public PostV05UsersAuthOnFetchModesJsonRequest withXHipId(String xHipId) {
+        this.xHipId = xHipId;
+        return this;
+    }
+    
+    /**
+     * Identifier of the health information user to which the request was intended.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HIU-ID")
+    public String xHiuId;
+    public PostV05UsersAuthOnFetchModesJsonRequest withXHiuId(String xHiuId) {
+        this.xHiuId = xHiuId;
         return this;
     }
     

@@ -122,10 +122,14 @@ public class SDK {
 		
 	}
 
-    public org.openapis.openapi.models.operations.CreateWebChannelResponse createWebChannel(org.openapis.openapi.models.operations.CreateWebChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateWebChannelResponse createWebChannel(org.openapis.openapi.models.operations.CreateWebChannelCreateWebChannelRequest request, org.openapis.openapi.models.operations.CreateWebChannelSecurity security) throws Exception {
+        return this.createWebChannel(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.CreateWebChannelResponse createWebChannel(org.openapis.openapi.models.operations.CreateWebChannelCreateWebChannelRequest request, org.openapis.openapi.models.operations.CreateWebChannelSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_WEB_CHANNEL_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/WebChats");
@@ -137,7 +141,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

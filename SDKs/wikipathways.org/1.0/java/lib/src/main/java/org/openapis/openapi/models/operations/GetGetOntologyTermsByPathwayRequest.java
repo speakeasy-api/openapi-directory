@@ -4,13 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGetOntologyTermsByPathwayRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public GetGetOntologyTermsByPathwayFormatEnum format;
+    public GetGetOntologyTermsByPathwayRequest withFormat(GetGetOntologyTermsByPathwayFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public GetGetOntologyTermsByPathwayQueryParams queryParams;
-    public GetGetOntologyTermsByPathwayRequest withQueryParams(GetGetOntologyTermsByPathwayQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The pathway identifier
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pwId")
+    public String pwId;
+    public GetGetOntologyTermsByPathwayRequest withPwId(String pwId) {
+        this.pwId = pwId;
         return this;
     }
     

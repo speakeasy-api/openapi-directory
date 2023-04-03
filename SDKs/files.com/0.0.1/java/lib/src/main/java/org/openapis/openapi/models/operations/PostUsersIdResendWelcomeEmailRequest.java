@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostUsersIdResendWelcomeEmailRequest {
-    
-    public PostUsersIdResendWelcomeEmailPathParams pathParams;
-    public PostUsersIdResendWelcomeEmailRequest withPathParams(PostUsersIdResendWelcomeEmailPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * User ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PostUsersIdResendWelcomeEmailRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

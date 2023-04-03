@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWatchHistoryRequest {
-    
-    public GetWatchHistoryQueryParams queryParams;
-    public GetWatchHistoryRequest withQueryParams(GetWatchHistoryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetWatchHistoryRequest withPage(Double page) {
+        this.page = page;
         return this;
     }
     
-    
-    public GetWatchHistorySecurity security;
-    public GetWatchHistoryRequest withSecurity(GetWatchHistorySecurity security) {
-        this.security = security;
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetWatchHistoryRequest withPerPage(Double perPage) {
+        this.perPage = perPage;
         return this;
     }
     

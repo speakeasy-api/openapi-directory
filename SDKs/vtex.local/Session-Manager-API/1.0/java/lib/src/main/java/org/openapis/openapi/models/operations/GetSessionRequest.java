@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSessionRequest {
-    
-    public GetSessionQueryParams queryParams;
-    public GetSessionRequest withQueryParams(GetSessionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Items are the keys of the values you wish to get. It follows the format `namespace1.key1,namespace2.key2`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=items")
+    public String items;
+    public GetSessionRequest withItems(String items) {
+        this.items = items;
         return this;
     }
     

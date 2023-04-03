@@ -4,13 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGameMediaRequest {
+    /**
+     * Division classification filter (fbs/fcs/ii/iii)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=classification")
+    public String classification;
+    public GetGameMediaRequest withClassification(String classification) {
+        this.classification = classification;
+        return this;
+    }
     
-    public GetGameMediaQueryParams queryParams;
-    public GetGameMediaRequest withQueryParams(GetGameMediaQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Conference filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=conference")
+    public String conference;
+    public GetGameMediaRequest withConference(String conference) {
+        this.conference = conference;
+        return this;
+    }
+    
+    /**
+     * Media type filter (tv, radio, web, ppv, or mobile)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mediaType")
+    public String mediaType;
+    public GetGameMediaRequest withMediaType(String mediaType) {
+        this.mediaType = mediaType;
+        return this;
+    }
+    
+    /**
+     * Season type filter (regular, postseason, or both)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=seasonType")
+    public String seasonType;
+    public GetGameMediaRequest withSeasonType(String seasonType) {
+        this.seasonType = seasonType;
+        return this;
+    }
+    
+    /**
+     * Team filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team")
+    public String team;
+    public GetGameMediaRequest withTeam(String team) {
+        this.team = team;
+        return this;
+    }
+    
+    /**
+     * Week filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=week")
+    public Long week;
+    public GetGameMediaRequest withWeek(Long week) {
+        this.week = week;
+        return this;
+    }
+    
+    /**
+     * Year filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public Long year;
+    public GetGameMediaRequest withYear(Long year) {
+        this.year = year;
         return this;
     }
     

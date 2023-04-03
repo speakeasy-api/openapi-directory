@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContentByGlobalIdRequest {
-    
-    public GetContentByGlobalIdPathParams pathParams;
-    public GetContentByGlobalIdRequest withPathParams(GetContentByGlobalIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Allows the user to specify if the content should be dereferenced when being returned
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dereference")
+    public Boolean dereference;
+    public GetContentByGlobalIdRequest withDereference(Boolean dereference) {
+        this.dereference = dereference;
         return this;
     }
     
-    
-    public GetContentByGlobalIdQueryParams queryParams;
-    public GetContentByGlobalIdRequest withQueryParams(GetContentByGlobalIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Global identifier for an artifact version.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=globalId")
+    public Long globalId;
+    public GetContentByGlobalIdRequest withGlobalId(Long globalId) {
+        this.globalId = globalId;
         return this;
     }
     

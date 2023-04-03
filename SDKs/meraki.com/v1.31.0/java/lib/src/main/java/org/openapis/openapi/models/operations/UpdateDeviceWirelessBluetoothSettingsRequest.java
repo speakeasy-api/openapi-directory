@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDeviceWirelessBluetoothSettingsRequest {
-    
-    public UpdateDeviceWirelessBluetoothSettingsPathParams pathParams;
-    public UpdateDeviceWirelessBluetoothSettingsRequest withPathParams(UpdateDeviceWirelessBluetoothSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateDeviceWirelessBluetoothSettingsRequestBody requestBody;
+    public UpdateDeviceWirelessBluetoothSettingsRequest withRequestBody(UpdateDeviceWirelessBluetoothSettingsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateDeviceWirelessBluetoothSettingsRequestBody request;
-    public UpdateDeviceWirelessBluetoothSettingsRequest withRequest(UpdateDeviceWirelessBluetoothSettingsRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public UpdateDeviceWirelessBluetoothSettingsRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

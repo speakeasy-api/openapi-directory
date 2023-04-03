@@ -4,9 +4,9 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.MybusinessAccountsCreateQueryParams;
 import org.openapis.openapi.models.operations.MybusinessAccountsCreateRequest;
 import org.openapis.openapi.models.operations.MybusinessAccountsCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.AccountPermissionLevelEnum;
 import org.openapis.openapi.models.shared.AccountRoleEnum;
 import org.openapis.openapi.models.shared.AccountTypeEnum;
@@ -15,7 +15,6 @@ import org.openapis.openapi.models.shared.AccountStateStatusEnum;
 import org.openapis.openapi.models.shared.AccountState;
 import org.openapis.openapi.models.shared.OrganizationInfo;
 import org.openapis.openapi.models.shared.PostalAddress;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -25,55 +24,56 @@ public class Application {
                 .build();
 
             MybusinessAccountsCreateRequest req = new MybusinessAccountsCreateRequest() {{
-                queryParams = new MybusinessAccountsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "provident";
-                    alt = "proto";
-                    callback = "quibusdam";
-                    fields = "unde";
-                    key = "nulla";
-                    oauthToken = "corrupti";
-                    prettyPrint = false;
-                    primaryOwner = "illum";
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new Account() {{
-                    accountName = "suscipit";
-                    accountNumber = "iure";
-                    name = "magnam";
+                dollarXgafv = "2";
+                account = new Account() {{
+                    accountName = "provident";
+                    accountNumber = "distinctio";
+                    name = "quibusdam";
                     organizationInfo = new OrganizationInfo() {{
-                        phoneNumber = "debitis";
+                        phoneNumber = "unde";
                         postalAddress = new PostalAddress() {{
                             addressLines = new String[]{{
-                                add("delectus"),
+                                add("corrupti"),
+                                add("illum"),
+                                add("vel"),
+                                add("error"),
                             }};
-                            administrativeArea = "tempora";
+                            administrativeArea = "deserunt";
                             languageCode = "suscipit";
-                            locality = "molestiae";
-                            organization = "minus";
-                            postalCode = "54539-8030";
+                            locality = "iure";
+                            organization = "magnam";
+                            postalCode = "09234-7854";
                             recipients = new String[]{{
-                                add("perferendis"),
-                                add("ipsam"),
-                                add("repellendus"),
+                                add("nisi"),
+                                add("recusandae"),
+                                add("temporibus"),
                             }};
-                            regionCode = "sapiente";
-                            revision = 778157;
-                            sortingCode = "odit";
-                            sublocality = "at";
+                            regionCode = "ab";
+                            revision = 337396;
+                            sortingCode = "veritatis";
+                            sublocality = "deserunt";
                         }};
-                        registeredDomain = "at";
+                        registeredDomain = "perferendis";
                     }};
-                    permissionLevel = "MEMBER_LEVEL";
-                    role = "CO_OWNER";
+                    permissionLevel = "OWNER_LEVEL";
+                    role = "COMMUNITY_MANAGER";
                     state = new AccountState() {{
                         status = "VERIFICATION_REQUESTED";
                     }};
-                    type = "ORGANIZATION";
+                    type = "USER_GROUP";
                 }};
-            }};            
+                accessToken = "odit";
+                alt = "proto";
+                callback = "at";
+                fields = "maiores";
+                key = "molestiae";
+                oauthToken = "quod";
+                prettyPrint = false;
+                primaryOwner = "quod";
+                quotaUser = "esse";
+                uploadType = "totam";
+                uploadProtocol = "porro";
+            }}            
 
             MybusinessAccountsCreateResponse res = sdk.accounts.mybusinessAccountsCreate(req);
 

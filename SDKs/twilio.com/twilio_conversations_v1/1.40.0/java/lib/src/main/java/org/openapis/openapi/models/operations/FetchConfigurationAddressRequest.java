@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchConfigurationAddressRequest {
-    
-    public FetchConfigurationAddressPathParams pathParams;
-    public FetchConfigurationAddressRequest withPathParams(FetchConfigurationAddressPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchConfigurationAddressSecurity security;
-    public FetchConfigurationAddressRequest withSecurity(FetchConfigurationAddressSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchConfigurationAddressRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Address Configuration resource. This value can be either the `sid` or the `address` of the configuration
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchConfigurationAddressRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

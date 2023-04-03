@@ -4,20 +4,119 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeScalingActivitiesRequest {
-    
-    public GETDescribeScalingActivitiesQueryParams queryParams;
-    public GETDescribeScalingActivitiesRequest withQueryParams(GETDescribeScalingActivitiesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeScalingActivitiesActionEnum action;
+    public GETDescribeScalingActivitiesRequest withAction(GETDescribeScalingActivitiesActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The activity IDs of the desired scaling activities. If you omit this property, all activities for the past six weeks are described. If unknown activities are requested, they are ignored with no error. If you specify an Auto Scaling group, the results are limited to that group.&lt;/p&gt; &lt;p&gt;Array Members: Maximum number of 50 IDs.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ActivityIds")
+    public String[] activityIds;
+    public GETDescribeScalingActivitiesRequest withActivityIds(String[] activityIds) {
+        this.activityIds = activityIds;
+        return this;
+    }
     
-    public GETDescribeScalingActivitiesHeaders headers;
-    public GETDescribeScalingActivitiesRequest withHeaders(GETDescribeScalingActivitiesHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name of the Auto Scaling group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutoScalingGroupName")
+    public String autoScalingGroupName;
+    public GETDescribeScalingActivitiesRequest withAutoScalingGroupName(String autoScalingGroupName) {
+        this.autoScalingGroupName = autoScalingGroupName;
+        return this;
+    }
+    
+    /**
+     * Indicates whether to include scaling activity from deleted Auto Scaling groups.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=IncludeDeletedGroups")
+    public Boolean includeDeletedGroups;
+    public GETDescribeScalingActivitiesRequest withIncludeDeletedGroups(Boolean includeDeletedGroups) {
+        this.includeDeletedGroups = includeDeletedGroups;
+        return this;
+    }
+    
+    /**
+     * The maximum number of items to return with this call. The default value is &lt;code&gt;100&lt;/code&gt; and the maximum value is &lt;code&gt;100&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
+    public Long maxRecords;
+    public GETDescribeScalingActivitiesRequest withMaxRecords(Long maxRecords) {
+        this.maxRecords = maxRecords;
+        return this;
+    }
+    
+    /**
+     * The token for the next set of items to return. (You received this token from a previous call.)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public GETDescribeScalingActivitiesRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeScalingActivitiesVersionEnum version;
+    public GETDescribeScalingActivitiesRequest withVersion(GETDescribeScalingActivitiesVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeScalingActivitiesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeScalingActivitiesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeScalingActivitiesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeScalingActivitiesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeScalingActivitiesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeScalingActivitiesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeScalingActivitiesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

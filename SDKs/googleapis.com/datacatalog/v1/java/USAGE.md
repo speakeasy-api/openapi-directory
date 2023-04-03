@@ -5,15 +5,12 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.DatacatalogCatalogSearchSecurity;
-import org.openapis.openapi.models.operations.DatacatalogCatalogSearchQueryParams;
 import org.openapis.openapi.models.operations.DatacatalogCatalogSearchRequest;
 import org.openapis.openapi.models.operations.DatacatalogCatalogSearchResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.GoogleCloudDatacatalogV1SearchCatalogRequest;
 import org.openapis.openapi.models.shared.GoogleCloudDatacatalogV1SearchCatalogRequestScope;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -22,56 +19,51 @@ public class Application {
                 .build();
 
             DatacatalogCatalogSearchRequest req = new DatacatalogCatalogSearchRequest() {{
-                security = new DatacatalogCatalogSearchSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                queryParams = new DatacatalogCatalogSearchQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "provident";
-                    alt = "proto";
-                    callback = "quibusdam";
-                    fields = "unde";
-                    key = "nulla";
-                    oauthToken = "corrupti";
-                    prettyPrint = false;
-                    quotaUser = "illum";
-                    uploadType = "vel";
-                    uploadProtocol = "error";
-                }};
-                request = new GoogleCloudDatacatalogV1SearchCatalogRequest() {{
-                    orderBy = "deserunt";
-                    pageSize = 384382;
-                    pageToken = "iure";
-                    query = "magnam";
+                dollarXgafv = "2";
+                googleCloudDatacatalogV1SearchCatalogRequest = new GoogleCloudDatacatalogV1SearchCatalogRequest() {{
+                    orderBy = "provident";
+                    pageSize = 715190;
+                    pageToken = "quibusdam";
+                    query = "unde";
                     scope = new GoogleCloudDatacatalogV1SearchCatalogRequestScope() {{
                         includeGcpPublicDatasets = false;
                         includeOrgIds = new String[]{{
+                            add("corrupti"),
+                            add("illum"),
+                            add("vel"),
+                            add("error"),
+                        }};
+                        includeProjectIds = new String[]{{
+                            add("suscipit"),
+                            add("iure"),
+                            add("magnam"),
+                        }};
+                        includePublicTagTemplates = false;
+                        restrictedLocations = new String[]{{
                             add("ipsa"),
                             add("delectus"),
                             add("tempora"),
                             add("suscipit"),
                         }};
-                        includeProjectIds = new String[]{{
-                            add("minus"),
-                            add("placeat"),
-                        }};
-                        includePublicTagTemplates = false;
-                        restrictedLocations = new String[]{{
-                            add("iusto"),
-                            add("excepturi"),
-                            add("nisi"),
-                        }};
                         starredOnly = false;
                     }};
                 }};
-            }};            
+                accessToken = "molestiae";
+                alt = "proto";
+                callback = "placeat";
+                fields = "voluptatum";
+                key = "iusto";
+                oauthToken = "excepturi";
+                prettyPrint = false;
+                quotaUser = "nisi";
+                uploadType = "recusandae";
+                uploadProtocol = "temporibus";
+            }}            
 
-            DatacatalogCatalogSearchResponse res = sdk.catalog.datacatalogCatalogSearch(req);
+            DatacatalogCatalogSearchResponse res = sdk.catalog.datacatalogCatalogSearch(req, new DatacatalogCatalogSearchSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.googleCloudDatacatalogV1SearchCatalogResponse.isPresent()) {
                 // handle response

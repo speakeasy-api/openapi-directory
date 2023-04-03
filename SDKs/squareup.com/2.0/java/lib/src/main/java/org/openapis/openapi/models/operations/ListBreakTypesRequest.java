@@ -4,20 +4,38 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListBreakTypesRequest {
-    
-    public ListBreakTypesQueryParams queryParams;
-    public ListBreakTypesRequest withQueryParams(ListBreakTypesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A pointer to the next page of `BreakType` results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public ListBreakTypesRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
+    /**
+     * The maximum number of `BreakType` results to return per page. The number can range between 1
+     * and 200. The default is 200.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListBreakTypesRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public ListBreakTypesSecurity security;
-    public ListBreakTypesRequest withSecurity(ListBreakTypesSecurity security) {
-        this.security = security;
+    /**
+     * Filter the returned `BreakType` results to only those that are associated with the
+     * specified location.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location_id")
+    public String locationId;
+    public ListBreakTypesRequest withLocationId(String locationId) {
+        this.locationId = locationId;
         return this;
     }
     

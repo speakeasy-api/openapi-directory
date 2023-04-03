@@ -7,31 +7,31 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelBookingRequest {
-    
-    public CancelBookingPathParams pathParams;
-    public CancelBookingRequest withPathParams(CancelBookingPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CancelBookingHeaders headers;
-    public CancelBookingRequest withHeaders(CancelBookingHeaders headers) {
-        this.headers = headers;
+    /**
+     * Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public CancelBookingRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CancellationRequest request;
-    public CancelBookingRequest withRequest(org.openapis.openapi.models.shared.CancellationRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CancellationRequest cancellationRequest;
+    public CancelBookingRequest withCancellationRequest(org.openapis.openapi.models.shared.CancellationRequest cancellationRequest) {
+        this.cancellationRequest = cancellationRequest;
         return this;
     }
     
-    
-    public String serverURL;
-    public CancelBookingRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The ID of the booking
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=booking-reference")
+    public String bookingReference;
+    public CancelBookingRequest withBookingReference(String bookingReference) {
+        this.bookingReference = bookingReference;
         return this;
     }
     

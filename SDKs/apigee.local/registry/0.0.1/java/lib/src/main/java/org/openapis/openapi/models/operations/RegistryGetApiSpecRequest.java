@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryGetApiSpecRequest {
+    /**
+     * The api id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api")
+    public String api;
+    public RegistryGetApiSpecRequest withApi(String api) {
+        this.api = api;
+        return this;
+    }
     
-    public RegistryGetApiSpecPathParams pathParams;
-    public RegistryGetApiSpecRequest withPathParams(RegistryGetApiSpecPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The location id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
+    public String location;
+    public RegistryGetApiSpecRequest withLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public RegistryGetApiSpecRequest withProject(String project) {
+        this.project = project;
+        return this;
+    }
+    
+    /**
+     * The spec id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spec")
+    public String spec;
+    public RegistryGetApiSpecRequest withSpec(String spec) {
+        this.spec = spec;
+        return this;
+    }
+    
+    /**
+     * The version id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public String version;
+    public RegistryGetApiSpecRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

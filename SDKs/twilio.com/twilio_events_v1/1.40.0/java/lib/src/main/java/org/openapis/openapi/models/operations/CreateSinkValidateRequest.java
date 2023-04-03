@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSinkValidateRequest {
-    
-    public CreateSinkValidatePathParams pathParams;
-    public CreateSinkValidateRequest withPathParams(CreateSinkValidatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateSinkValidateCreateSinkValidateRequest request;
-    public CreateSinkValidateRequest withRequest(CreateSinkValidateCreateSinkValidateRequest request) {
-        this.request = request;
+    public CreateSinkValidateCreateSinkValidateRequest requestBody;
+    public CreateSinkValidateRequest withRequestBody(CreateSinkValidateCreateSinkValidateRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateSinkValidateSecurity security;
-    public CreateSinkValidateRequest withSecurity(CreateSinkValidateSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateSinkValidateRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * A 34 character string that uniquely identifies the Sink being validated.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public CreateSinkValidateRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

@@ -4,20 +4,53 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkSmUsersRequest {
-    
-    public GetNetworkSmUsersPathParams pathParams;
-    public GetNetworkSmUsersRequest withPathParams(GetNetworkSmUsersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filter users by email(s).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=emails")
+    public String[] emails;
+    public GetNetworkSmUsersRequest withEmails(String[] emails) {
+        this.emails = emails;
         return this;
     }
     
+    /**
+     * Filter users by id(s).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ids")
+    public String[] ids;
+    public GetNetworkSmUsersRequest withIds(String[] ids) {
+        this.ids = ids;
+        return this;
+    }
     
-    public GetNetworkSmUsersQueryParams queryParams;
-    public GetNetworkSmUsersRequest withQueryParams(GetNetworkSmUsersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkSmUsersRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
+    
+    /**
+     * Specifiy a scope (one of all, none, withAny, withAll, withoutAny, withoutAll) and a set of tags.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=scope")
+    public String[] scope;
+    public GetNetworkSmUsersRequest withScope(String[] scope) {
+        this.scope = scope;
+        return this;
+    }
+    
+    /**
+     * Filter users by username(s).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=usernames")
+    public String[] usernames;
+    public GetNetworkSmUsersRequest withUsernames(String[] usernames) {
+        this.usernames = usernames;
         return this;
     }
     

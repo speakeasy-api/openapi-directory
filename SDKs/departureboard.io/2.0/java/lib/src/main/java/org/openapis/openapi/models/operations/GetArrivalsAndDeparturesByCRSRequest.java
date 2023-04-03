@@ -4,20 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetArrivalsAndDeparturesByCRSRequest {
-    
-    public GetArrivalsAndDeparturesByCRSPathParams pathParams;
-    public GetArrivalsAndDeparturesByCRSRequest withPathParams(GetArrivalsAndDeparturesByCRSPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The CRS (Computer Reservation System) for the Station you wish to get departure and arrival information for, e.g. KGX for London Kings Cross.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CRS")
+    public String crs;
+    public GetArrivalsAndDeparturesByCRSRequest withCrs(String crs) {
+        this.crs = crs;
         return this;
     }
     
+    /**
+     * The National Rail OpenLDBWS API Key to use for looking up service information. You must register with National Rail to obtain this key and whitelist it with us. See https://api.departureboard.io/docs/registration for more information.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=apiKey")
+    public String apiKey;
+    public GetArrivalsAndDeparturesByCRSRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public GetArrivalsAndDeparturesByCRSQueryParams queryParams;
-    public GetArrivalsAndDeparturesByCRSRequest withQueryParams(GetArrivalsAndDeparturesByCRSQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The CRS (Computer Reservation System) code to filter the results by. When setting this you must also set the filterType parameter. For example, performing a lookup for PAD (London Paddington) and setting filterStation to RED (Reading) and filterType to from, will only show services arriving to London Paddington that stopped at Reading. Setting a filter for getArrivalsAndDeparturesByCRS is similar to performing a getArrivalsByCRS or getDeparturesByCRS lookup, with the appropriate filterStation parameter. However using the getArrivalsAndDeparturesByCRS endpoint shows more details for each of the returned services.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filterStation")
+    public String filterStation;
+    public GetArrivalsAndDeparturesByCRSRequest withFilterStation(String filterStation) {
+        this.filterStation = filterStation;
+        return this;
+    }
+    
+    /**
+     * Determines if the filterStation parameter should be applied for services arriving to, or leaving from the selected station. Required if filterStation is set.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filterType")
+    public String filterType;
+    public GetArrivalsAndDeparturesByCRSRequest withFilterType(String filterType) {
+        this.filterType = filterType;
+        return this;
+    }
+    
+    /**
+     * The number of arriving and departing services to return. This is a maximum value, less may be returned if there is not a sufficient amount of services arriving to or departing from this station within the time window specified.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=numServices")
+    public Long numServices;
+    public GetArrivalsAndDeparturesByCRSRequest withNumServices(Long numServices) {
+        this.numServices = numServices;
+        return this;
+    }
+    
+    /**
+     * Should the response contain information on the calling points for each service? If set to false, calling points will not be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceDetails")
+    public Boolean serviceDetails;
+    public GetArrivalsAndDeparturesByCRSRequest withServiceDetails(Boolean serviceDetails) {
+        this.serviceDetails = serviceDetails;
+        return this;
+    }
+    
+    /**
+     * The time window in minutes to offset the arrival and departure information by. For example, a value of 20 will not show services arriving to or departing from the station within the next 20 minutes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeOffset")
+    public Long timeOffset;
+    public GetArrivalsAndDeparturesByCRSRequest withTimeOffset(Long timeOffset) {
+        this.timeOffset = timeOffset;
+        return this;
+    }
+    
+    /**
+     * The time window in minutes to offset the arrival and departure information by. For example, a value of 20 will not show services arriving to or departing from the selected station within the next 20 minutes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeWindow")
+    public Long timeWindow;
+    public GetArrivalsAndDeparturesByCRSRequest withTimeWindow(Long timeWindow) {
+        this.timeWindow = timeWindow;
         return this;
     }
     

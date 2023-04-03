@@ -4,27 +4,53 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsCrashGroupOperatingSystemCountsRequest {
-    
-    public AnalyticsCrashGroupOperatingSystemCountsPathParams pathParams;
-    public AnalyticsCrashGroupOperatingSystemCountsRequest withPathParams(AnalyticsCrashGroupOperatingSystemCountsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The maximum number of results to return. (0 will fetch all results)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$top")
+    public Long dollarTop;
+    public AnalyticsCrashGroupOperatingSystemCountsRequest withDollarTop(Long dollarTop) {
+        this.dollarTop = dollarTop;
         return this;
     }
     
-    
-    public AnalyticsCrashGroupOperatingSystemCountsQueryParams queryParams;
-    public AnalyticsCrashGroupOperatingSystemCountsRequest withQueryParams(AnalyticsCrashGroupOperatingSystemCountsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public AnalyticsCrashGroupOperatingSystemCountsRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * The id of the crash group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=crash_group_id")
+    public String crashGroupId;
+    public AnalyticsCrashGroupOperatingSystemCountsRequest withCrashGroupId(String crashGroupId) {
+        this.crashGroupId = crashGroupId;
+        return this;
+    }
     
-    public AnalyticsCrashGroupOperatingSystemCountsSecurity security;
-    public AnalyticsCrashGroupOperatingSystemCountsRequest withSecurity(AnalyticsCrashGroupOperatingSystemCountsSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public AnalyticsCrashGroupOperatingSystemCountsRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
+    public String version;
+    public AnalyticsCrashGroupOperatingSystemCountsRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

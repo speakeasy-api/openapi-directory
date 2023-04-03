@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCharityOrgRequest {
-    
-    public GetCharityOrgPathParams pathParams;
-    public GetCharityOrgRequest withPathParams(GetCharityOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A header used to specify the eBay marketplace ID.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Valid Values:&lt;/b&gt; &lt;code&gt;EBAY_GB&lt;/code&gt; and &lt;code&gt;EBAY_US&lt;/code&gt;
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
+    public String xEbayCMarketplaceId;
+    public GetCharityOrgRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
+        this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
     }
     
-    
-    public GetCharityOrgHeaders headers;
-    public GetCharityOrgRequest withHeaders(GetCharityOrgHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetCharityOrgSecurity security;
-    public GetCharityOrgRequest withSecurity(GetCharityOrgSecurity security) {
-        this.security = security;
+    /**
+     * The unique ID of the charitable organization.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=charity_org_id")
+    public String charityOrgId;
+    public GetCharityOrgRequest withCharityOrgId(String charityOrgId) {
+        this.charityOrgId = charityOrgId;
         return this;
     }
     

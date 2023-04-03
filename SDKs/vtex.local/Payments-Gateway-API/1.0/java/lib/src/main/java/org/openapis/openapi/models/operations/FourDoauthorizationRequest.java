@@ -7,24 +7,57 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FourDoauthorizationRequest {
-    
-    public FourDoauthorizationPathParams pathParams;
-    public FourDoauthorizationRequest withPathParams(FourDoauthorizationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FourDoauthorizationHeaders headers;
-    public FourDoauthorizationRequest withHeaders(FourDoauthorizationHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.FourDoauthorizationRequest request;
-    public FourDoauthorizationRequest withRequest(org.openapis.openapi.models.shared.FourDoauthorizationRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.FourDoauthorizationRequest fourDoauthorizationRequest;
+    public FourDoauthorizationRequest withFourDoauthorizationRequest(org.openapis.openapi.models.shared.FourDoauthorizationRequest fourDoauthorizationRequest) {
+        this.fourDoauthorizationRequest = fourDoauthorizationRequest;
+        return this;
+    }
+    
+    /**
+     * Media type(s) that is/are acceptable for the response. Default value for payment provider protocol is application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public FourDoauthorizationRequest withAccept(String accept) {
+        this.accept = accept;
+        return this;
+    }
+    
+    /**
+     * The Media type of the body of the request.  Default value for payment provider protocol is application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public FourDoauthorizationRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
+    
+    /**
+     * The AppKey configured by the merchant (optional configuration)
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-PROVIDER-API-AppKey")
+    public String xPROVIDERAPIAppKey;
+    public FourDoauthorizationRequest withXPROVIDERAPIAppKey(String xPROVIDERAPIAppKey) {
+        this.xPROVIDERAPIAppKey = xPROVIDERAPIAppKey;
+        return this;
+    }
+    
+    /**
+     * The AppToken configured by the merchant (optional configuration)
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-PROVIDER-API-AppToken")
+    public String xPROVIDERAPIAppToken;
+    public FourDoauthorizationRequest withXPROVIDERAPIAppToken(String xPROVIDERAPIAppToken) {
+        this.xPROVIDERAPIAppToken = xPROVIDERAPIAppToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transactionId")
+    public String transactionId;
+    public FourDoauthorizationRequest withTransactionId(String transactionId) {
+        this.transactionId = transactionId;
         return this;
     }
     

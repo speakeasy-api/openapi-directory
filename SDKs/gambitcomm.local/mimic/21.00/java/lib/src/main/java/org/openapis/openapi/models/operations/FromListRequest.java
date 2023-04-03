@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FromListRequest {
-    
-    public FromListPathParams pathParams;
-    public FromListRequest withPathParams(FromListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to show the IP sources
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public FromListRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

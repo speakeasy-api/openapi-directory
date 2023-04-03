@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchDeviceConfigRequest {
-    
-    public FetchDeviceConfigPathParams pathParams;
-    public FetchDeviceConfigRequest withPathParams(FetchDeviceConfigPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A 34-character string that uniquely identifies the Device.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DeviceSid")
+    public String deviceSid;
+    public FetchDeviceConfigRequest withDeviceSid(String deviceSid) {
+        this.deviceSid = deviceSid;
         return this;
     }
     
-    
-    public FetchDeviceConfigSecurity security;
-    public FetchDeviceConfigRequest withSecurity(FetchDeviceConfigSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchDeviceConfigRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The config key; up to 100 characters.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Key")
+    public String key;
+    public FetchDeviceConfigRequest withKey(String key) {
+        this.key = key;
         return this;
     }
     

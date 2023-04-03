@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMerchantsMerchantIdBillingEntitiesRequest {
-    
-    public GetMerchantsMerchantIdBillingEntitiesPathParams pathParams;
-    public GetMerchantsMerchantIdBillingEntitiesRequest withPathParams(GetMerchantsMerchantIdBillingEntitiesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the merchant account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
+    public String merchantId;
+    public GetMerchantsMerchantIdBillingEntitiesRequest withMerchantId(String merchantId) {
+        this.merchantId = merchantId;
         return this;
     }
     
-    
-    public GetMerchantsMerchantIdBillingEntitiesQueryParams queryParams;
-    public GetMerchantsMerchantIdBillingEntitiesRequest withQueryParams(GetMerchantsMerchantIdBillingEntitiesQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetMerchantsMerchantIdBillingEntitiesSecurity security;
-    public GetMerchantsMerchantIdBillingEntitiesRequest withSecurity(GetMerchantsMerchantIdBillingEntitiesSecurity security) {
-        this.security = security;
+    /**
+     * The name of the billing entity.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public GetMerchantsMerchantIdBillingEntitiesRequest withName(String name) {
+        this.name = name;
         return this;
     }
     

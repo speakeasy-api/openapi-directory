@@ -4,27 +4,101 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ErrorsGroupListRequest {
-    
-    public ErrorsGroupListPathParams pathParams;
-    public ErrorsGroupListRequest withPathParams(ErrorsGroupListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * controls the sorting order and sorting based on which column
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$orderby")
+    public String dollarOrderby;
+    public ErrorsGroupListRequest withDollarOrderby(String dollarOrderby) {
+        this.dollarOrderby = dollarOrderby;
         return this;
     }
     
-    
-    public ErrorsGroupListQueryParams queryParams;
-    public ErrorsGroupListRequest withQueryParams(ErrorsGroupListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The maximum number of results to return. (0 will fetch all results till the max number.)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$top")
+    public Long dollarTop;
+    public ErrorsGroupListRequest withDollarTop(Long dollarTop) {
+        this.dollarTop = dollarTop;
         return this;
     }
     
+    /**
+     * app build
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=app_build")
+    public String appBuild;
+    public ErrorsGroupListRequest withAppBuild(String appBuild) {
+        this.appBuild = appBuild;
+        return this;
+    }
     
-    public ErrorsGroupListSecurity security;
-    public ErrorsGroupListRequest withSecurity(ErrorsGroupListSecurity security) {
-        this.security = security;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public ErrorsGroupListRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+    
+    /**
+     * Last date time in data in ISO 8601 date time format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
+    public OffsetDateTime end;
+    public ErrorsGroupListRequest withEnd(OffsetDateTime end) {
+        this.end = end;
+        return this;
+    }
+    
+    /**
+     * Type of error (handled vs unhandled), including All
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=errorType")
+    public ErrorsGroupListErrorTypeEnum errorType;
+    public ErrorsGroupListRequest withErrorType(ErrorsGroupListErrorTypeEnum errorType) {
+        this.errorType = errorType;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupState")
+    public String groupState;
+    public ErrorsGroupListRequest withGroupState(String groupState) {
+        this.groupState = groupState;
+        return this;
+    }
+    
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public ErrorsGroupListRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
+    
+    /**
+     * Start date time in data in ISO 8601 date time format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public OffsetDateTime start;
+    public ErrorsGroupListRequest withStart(OffsetDateTime start) {
+        this.start = start;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
+    public String version;
+    public ErrorsGroupListRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

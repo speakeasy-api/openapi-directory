@@ -4,27 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListCollectionScoresRequest {
-    
-    public ListCollectionScoresPathParams pathParams;
-    public ListCollectionScoresRequest withPathParams(ListCollectionScoresPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the collection.
+     * The following aliases are supported:
+     * - `root`: The root collection of the account
+     * - `sharedWithMe`: Automatically contains new resources that have been shared individually
+     * - `trash`: Automatically contains resources that have been deleted
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection")
+    public String collection;
+    public ListCollectionScoresRequest withCollection(String collection) {
+        this.collection = collection;
         return this;
     }
     
-    
-    public ListCollectionScoresQueryParams queryParams;
-    public ListCollectionScoresRequest withQueryParams(ListCollectionScoresQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Sort direction
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public ListCollectionScoresDirectionEnum direction;
+    public ListCollectionScoresRequest withDirection(ListCollectionScoresDirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
+    /**
+     * This is the maximum number of objects that may be returned
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListCollectionScoresRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public ListCollectionScoresSecurity security;
-    public ListCollectionScoresRequest withSecurity(ListCollectionScoresSecurity security) {
-        this.security = security;
+    /**
+     * An opaque string cursor to fetch the next page of data.
+     * The paginated API URLs are returned in the `Link` header when requesting the API. These URLs will contain a `next` and `previous` cursor based on the available data.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next")
+    public String next;
+    public ListCollectionScoresRequest withNext(String next) {
+        this.next = next;
+        return this;
+    }
+    
+    /**
+     * An opaque string cursor to fetch the previous page of data.
+     * The paginated API URLs are returned in the `Link` header when requesting the API. These URLs will contain a `next` and `previous` cursor based on the available data.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=previous")
+    public String previous;
+    public ListCollectionScoresRequest withPrevious(String previous) {
+        this.previous = previous;
+        return this;
+    }
+    
+    /**
+     * This sharing key must be specified to access to a score or collection with a `privacy` mode set to `privateLink` and the current user is not a collaborator of the document.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sharingKey")
+    public String sharingKey;
+    public ListCollectionScoresRequest withSharingKey(String sharingKey) {
+        this.sharingKey = sharingKey;
+        return this;
+    }
+    
+    /**
+     * Sort
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public ListCollectionScoresSortEnum sort;
+    public ListCollectionScoresRequest withSort(ListCollectionScoresSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

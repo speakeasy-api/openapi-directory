@@ -7,38 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateTaskReservationRequest {
-    
-    public UpdateTaskReservationPathParams pathParams;
-    public UpdateTaskReservationRequest withPathParams(UpdateTaskReservationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateTaskReservationHeaders headers;
-    public UpdateTaskReservationRequest withHeaders(UpdateTaskReservationHeaders headers) {
-        this.headers = headers;
+    /**
+     * The If-Match HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
+    public String ifMatch;
+    public UpdateTaskReservationRequest withIfMatch(String ifMatch) {
+        this.ifMatch = ifMatch;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateTaskReservationUpdateTaskReservationRequest request;
-    public UpdateTaskReservationRequest withRequest(UpdateTaskReservationUpdateTaskReservationRequest request) {
-        this.request = request;
+    public UpdateTaskReservationUpdateTaskReservationRequest requestBody;
+    public UpdateTaskReservationRequest withRequestBody(UpdateTaskReservationUpdateTaskReservationRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateTaskReservationSecurity security;
-    public UpdateTaskReservationRequest withSecurity(UpdateTaskReservationSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the TaskReservation resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateTaskReservationRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
+    /**
+     * The SID of the reserved Task resource with the TaskReservation resources to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TaskSid")
+    public String taskSid;
+    public UpdateTaskReservationRequest withTaskSid(String taskSid) {
+        this.taskSid = taskSid;
+        return this;
+    }
     
-    public String serverURL;
-    public UpdateTaskReservationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Workspace with the TaskReservation resources to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkspaceSid")
+    public String workspaceSid;
+    public UpdateTaskReservationRequest withWorkspaceSid(String workspaceSid) {
+        this.workspaceSid = workspaceSid;
         return this;
     }
     

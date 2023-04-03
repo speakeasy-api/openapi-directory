@@ -49,12 +49,12 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.CreateDeploymentVariableResponse createDeploymentVariable(org.openapis.openapi.models.operations.CreateDeploymentVariableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateDeploymentVariablePathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/deployments_config/environments/{environment_uuid}/variables", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateDeploymentVariableRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/deployments_config/environments/{environment_uuid}/variables", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -274,12 +274,12 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.CreatePipelineForRepositoryResponse createPipelineForRepository(org.openapis.openapi.models.operations.CreatePipelineForRepositoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreatePipelineForRepositoryPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreatePipelineForRepositoryRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -329,12 +329,12 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.CreatePipelineVariableForTeamResponse createPipelineVariableForTeam(org.openapis.openapi.models.operations.CreatePipelineVariableForTeamRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreatePipelineVariableForTeamPathParams.class, baseUrl, "/teams/{username}/pipelines_config/variables/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreatePipelineVariableForTeamRequest.class, baseUrl, "/teams/{username}/pipelines_config/variables/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -381,12 +381,12 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.CreatePipelineVariableForUserResponse createPipelineVariableForUser(org.openapis.openapi.models.operations.CreatePipelineVariableForUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreatePipelineVariableForUserPathParams.class, baseUrl, "/users/{selected_user}/pipelines_config/variables/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreatePipelineVariableForUserRequest.class, baseUrl, "/users/{selected_user}/pipelines_config/variables/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -432,12 +432,12 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.CreatePipelineVariableForWorkspaceResponse createPipelineVariableForWorkspace(org.openapis.openapi.models.operations.CreatePipelineVariableForWorkspaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreatePipelineVariableForWorkspacePathParams.class, baseUrl, "/workspaces/{workspace}/pipelines-config/variables", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreatePipelineVariableForWorkspaceRequest.class, baseUrl, "/workspaces/{workspace}/pipelines-config/variables", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -483,12 +483,12 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.CreateRepositoryPipelineKnownHostResponse createRepositoryPipelineKnownHost(org.openapis.openapi.models.operations.CreateRepositoryPipelineKnownHostRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateRepositoryPipelineKnownHostPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/known_hosts/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateRepositoryPipelineKnownHostRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/known_hosts/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -537,12 +537,12 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.CreateRepositoryPipelineScheduleResponse createRepositoryPipelineSchedule(org.openapis.openapi.models.operations.CreateRepositoryPipelineScheduleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateRepositoryPipelineSchedulePathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/schedules/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateRepositoryPipelineScheduleRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/schedules/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -589,12 +589,12 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.CreateRepositoryPipelineVariableResponse createRepositoryPipelineVariable(org.openapis.openapi.models.operations.CreateRepositoryPipelineVariableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateRepositoryPipelineVariablePathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/variables/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateRepositoryPipelineVariableRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/variables/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -643,7 +643,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.DeleteDeploymentVariableResponse deleteDeploymentVariable(org.openapis.openapi.models.operations.DeleteDeploymentVariableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDeploymentVariablePathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/deployments_config/environments/{environment_uuid}/variables/{variable_uuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDeploymentVariableRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/deployments_config/environments/{environment_uuid}/variables/{variable_uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -685,7 +685,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.DeletePipelineVariableForTeamResponse deletePipelineVariableForTeam(org.openapis.openapi.models.operations.DeletePipelineVariableForTeamRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePipelineVariableForTeamPathParams.class, baseUrl, "/teams/{username}/pipelines_config/variables/{variable_uuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePipelineVariableForTeamRequest.class, baseUrl, "/teams/{username}/pipelines_config/variables/{variable_uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -727,7 +727,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.DeletePipelineVariableForUserResponse deletePipelineVariableForUser(org.openapis.openapi.models.operations.DeletePipelineVariableForUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePipelineVariableForUserPathParams.class, baseUrl, "/users/{selected_user}/pipelines_config/variables/{variable_uuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePipelineVariableForUserRequest.class, baseUrl, "/users/{selected_user}/pipelines_config/variables/{variable_uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -768,7 +768,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.DeletePipelineVariableForWorkspaceResponse deletePipelineVariableForWorkspace(org.openapis.openapi.models.operations.DeletePipelineVariableForWorkspaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePipelineVariableForWorkspacePathParams.class, baseUrl, "/workspaces/{workspace}/pipelines-config/variables/{variable_uuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePipelineVariableForWorkspaceRequest.class, baseUrl, "/workspaces/{workspace}/pipelines-config/variables/{variable_uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -809,7 +809,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.DeleteRepositoryPipelineCacheResponse deleteRepositoryPipelineCache(org.openapis.openapi.models.operations.DeleteRepositoryPipelineCacheRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoryPipelineCachePathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines-config/caches/{cache_uuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoryPipelineCacheRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines-config/caches/{cache_uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -850,13 +850,13 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.DeleteRepositoryPipelineCachesResponse deleteRepositoryPipelineCaches(org.openapis.openapi.models.operations.DeleteRepositoryPipelineCachesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoryPipelineCachesPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines-config/caches", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoryPipelineCachesRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines-config/caches", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteRepositoryPipelineCachesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteRepositoryPipelineCachesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -897,7 +897,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.DeleteRepositoryPipelineKeyPairResponse deleteRepositoryPipelineKeyPair(org.openapis.openapi.models.operations.DeleteRepositoryPipelineKeyPairRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoryPipelineKeyPairPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/key_pair", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoryPipelineKeyPairRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/key_pair", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -938,7 +938,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.DeleteRepositoryPipelineKnownHostResponse deleteRepositoryPipelineKnownHost(org.openapis.openapi.models.operations.DeleteRepositoryPipelineKnownHostRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoryPipelineKnownHostPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/known_hosts/{known_host_uuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoryPipelineKnownHostRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/known_hosts/{known_host_uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -979,7 +979,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.DeleteRepositoryPipelineScheduleResponse deleteRepositoryPipelineSchedule(org.openapis.openapi.models.operations.DeleteRepositoryPipelineScheduleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoryPipelineSchedulePathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/schedules/{schedule_uuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoryPipelineScheduleRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/schedules/{schedule_uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1020,7 +1020,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.DeleteRepositoryPipelineVariableResponse deleteRepositoryPipelineVariable(org.openapis.openapi.models.operations.DeleteRepositoryPipelineVariableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoryPipelineVariablePathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/variables/{variable_uuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoryPipelineVariableRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/variables/{variable_uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1061,7 +1061,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.GetDeploymentVariablesResponse getDeploymentVariables(org.openapis.openapi.models.operations.GetDeploymentVariablesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeploymentVariablesPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/deployments_config/environments/{environment_uuid}/variables", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeploymentVariablesRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/deployments_config/environments/{environment_uuid}/variables", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1100,7 +1100,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.GetOIDCConfigurationResponse getOIDCConfiguration(org.openapis.openapi.models.operations.GetOIDCConfigurationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOIDCConfigurationPathParams.class, baseUrl, "/workspaces/{workspace}/pipelines-config/identity/oidc/.well-known/openid-configuration", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOIDCConfigurationRequest.class, baseUrl, "/workspaces/{workspace}/pipelines-config/identity/oidc/.well-known/openid-configuration", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1141,7 +1141,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.GetOIDCKeysResponse getOIDCKeys(org.openapis.openapi.models.operations.GetOIDCKeysRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOIDCKeysPathParams.class, baseUrl, "/workspaces/{workspace}/pipelines-config/identity/oidc/keys.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOIDCKeysRequest.class, baseUrl, "/workspaces/{workspace}/pipelines-config/identity/oidc/keys.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1184,7 +1184,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.GetPipelineContainerLogResponse getPipelineContainerLog(org.openapis.openapi.models.operations.GetPipelineContainerLogRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelineContainerLogPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/steps/{step_uuid}/logs/{log_uuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelineContainerLogRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/steps/{step_uuid}/logs/{log_uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1224,7 +1224,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.GetPipelineForRepositoryResponse getPipelineForRepository(org.openapis.openapi.models.operations.GetPipelineForRepositoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelineForRepositoryPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelineForRepositoryRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1271,7 +1271,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.GetPipelineStepForRepositoryResponse getPipelineStepForRepository(org.openapis.openapi.models.operations.GetPipelineStepForRepositoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelineStepForRepositoryPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/steps/{step_uuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelineStepForRepositoryRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/steps/{step_uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1320,7 +1320,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.GetPipelineStepLogForRepositoryResponse getPipelineStepLogForRepository(org.openapis.openapi.models.operations.GetPipelineStepLogForRepositoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelineStepLogForRepositoryPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/steps/{step_uuid}/log", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelineStepLogForRepositoryRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/steps/{step_uuid}/log", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1360,7 +1360,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.GetPipelineStepsForRepositoryResponse getPipelineStepsForRepository(org.openapis.openapi.models.operations.GetPipelineStepsForRepositoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelineStepsForRepositoryPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/steps/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelineStepsForRepositoryRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/steps/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1398,7 +1398,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.GetPipelineTestReportTestCaseReasonsResponse getPipelineTestReportTestCaseReasons(org.openapis.openapi.models.operations.GetPipelineTestReportTestCaseReasonsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelineTestReportTestCaseReasonsPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/steps/{step_uuid}/test_reports/test_cases/{test_case_uuid}/test_case_reasons", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelineTestReportTestCaseReasonsRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/steps/{step_uuid}/test_reports/test_cases/{test_case_uuid}/test_case_reasons", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1438,7 +1438,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.GetPipelineTestReportTestCasesResponse getPipelineTestReportTestCases(org.openapis.openapi.models.operations.GetPipelineTestReportTestCasesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelineTestReportTestCasesPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/steps/{step_uuid}/test_reports/test_cases", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelineTestReportTestCasesRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/steps/{step_uuid}/test_reports/test_cases", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1478,7 +1478,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.GetPipelineTestReportsResponse getPipelineTestReports(org.openapis.openapi.models.operations.GetPipelineTestReportsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelineTestReportsPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/steps/{step_uuid}/test_reports", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelineTestReportsRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/steps/{step_uuid}/test_reports", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1520,7 +1520,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.GetPipelineVariableForTeamResponse getPipelineVariableForTeam(org.openapis.openapi.models.operations.GetPipelineVariableForTeamRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelineVariableForTeamPathParams.class, baseUrl, "/teams/{username}/pipelines_config/variables/{variable_uuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelineVariableForTeamRequest.class, baseUrl, "/teams/{username}/pipelines_config/variables/{variable_uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1568,7 +1568,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.GetPipelineVariableForUserResponse getPipelineVariableForUser(org.openapis.openapi.models.operations.GetPipelineVariableForUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelineVariableForUserPathParams.class, baseUrl, "/users/{selected_user}/pipelines_config/variables/{variable_uuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelineVariableForUserRequest.class, baseUrl, "/users/{selected_user}/pipelines_config/variables/{variable_uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1615,7 +1615,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.GetPipelineVariableForWorkspaceResponse getPipelineVariableForWorkspace(org.openapis.openapi.models.operations.GetPipelineVariableForWorkspaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelineVariableForWorkspacePathParams.class, baseUrl, "/workspaces/{workspace}/pipelines-config/variables/{variable_uuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelineVariableForWorkspaceRequest.class, baseUrl, "/workspaces/{workspace}/pipelines-config/variables/{variable_uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1663,7 +1663,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.GetPipelineVariablesForTeamResponse getPipelineVariablesForTeam(org.openapis.openapi.models.operations.GetPipelineVariablesForTeamRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelineVariablesForTeamPathParams.class, baseUrl, "/teams/{username}/pipelines_config/variables/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelineVariablesForTeamRequest.class, baseUrl, "/teams/{username}/pipelines_config/variables/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1703,7 +1703,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.GetPipelineVariablesForUserResponse getPipelineVariablesForUser(org.openapis.openapi.models.operations.GetPipelineVariablesForUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelineVariablesForUserPathParams.class, baseUrl, "/users/{selected_user}/pipelines_config/variables/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelineVariablesForUserRequest.class, baseUrl, "/users/{selected_user}/pipelines_config/variables/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1742,7 +1742,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.GetPipelineVariablesForWorkspaceResponse getPipelineVariablesForWorkspace(org.openapis.openapi.models.operations.GetPipelineVariablesForWorkspaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelineVariablesForWorkspacePathParams.class, baseUrl, "/workspaces/{workspace}/pipelines-config/variables", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelineVariablesForWorkspaceRequest.class, baseUrl, "/workspaces/{workspace}/pipelines-config/variables", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1781,7 +1781,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.GetPipelinesForRepositoryResponse getPipelinesForRepository(org.openapis.openapi.models.operations.GetPipelinesForRepositoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelinesForRepositoryPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPipelinesForRepositoryRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1820,7 +1820,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.GetRepositoryPipelineCacheContentURIResponse getRepositoryPipelineCacheContentURI(org.openapis.openapi.models.operations.GetRepositoryPipelineCacheContentURIRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoryPipelineCacheContentURIPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines-config/caches/{cache_uuid}/content-uri", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoryPipelineCacheContentURIRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines-config/caches/{cache_uuid}/content-uri", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1867,7 +1867,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.GetRepositoryPipelineCachesResponse getRepositoryPipelineCaches(org.openapis.openapi.models.operations.GetRepositoryPipelineCachesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoryPipelineCachesPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines-config/caches/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoryPipelineCachesRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines-config/caches/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1914,7 +1914,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.GetRepositoryPipelineConfigResponse getRepositoryPipelineConfig(org.openapis.openapi.models.operations.GetRepositoryPipelineConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoryPipelineConfigPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoryPipelineConfigRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1953,7 +1953,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.GetRepositoryPipelineKnownHostResponse getRepositoryPipelineKnownHost(org.openapis.openapi.models.operations.GetRepositoryPipelineKnownHostRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoryPipelineKnownHostPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/known_hosts/{known_host_uuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoryPipelineKnownHostRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/known_hosts/{known_host_uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2000,7 +2000,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.GetRepositoryPipelineKnownHostsResponse getRepositoryPipelineKnownHosts(org.openapis.openapi.models.operations.GetRepositoryPipelineKnownHostsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoryPipelineKnownHostsPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/known_hosts/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoryPipelineKnownHostsRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/known_hosts/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2039,7 +2039,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.GetRepositoryPipelineScheduleResponse getRepositoryPipelineSchedule(org.openapis.openapi.models.operations.GetRepositoryPipelineScheduleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoryPipelineSchedulePathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/schedules/{schedule_uuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoryPipelineScheduleRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/schedules/{schedule_uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2086,7 +2086,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.GetRepositoryPipelineScheduleExecutionsResponse getRepositoryPipelineScheduleExecutions(org.openapis.openapi.models.operations.GetRepositoryPipelineScheduleExecutionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoryPipelineScheduleExecutionsPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/schedules/{schedule_uuid}/executions/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoryPipelineScheduleExecutionsRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/schedules/{schedule_uuid}/executions/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2133,7 +2133,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.GetRepositoryPipelineSchedulesResponse getRepositoryPipelineSchedules(org.openapis.openapi.models.operations.GetRepositoryPipelineSchedulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoryPipelineSchedulesPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/schedules/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoryPipelineSchedulesRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/schedules/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2180,7 +2180,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.GetRepositoryPipelineSshKeyPairResponse getRepositoryPipelineSshKeyPair(org.openapis.openapi.models.operations.GetRepositoryPipelineSshKeyPairRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoryPipelineSshKeyPairPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/key_pair", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoryPipelineSshKeyPairRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/key_pair", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2227,7 +2227,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.GetRepositoryPipelineVariableResponse getRepositoryPipelineVariable(org.openapis.openapi.models.operations.GetRepositoryPipelineVariableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoryPipelineVariablePathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/variables/{variable_uuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoryPipelineVariableRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/variables/{variable_uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2274,7 +2274,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.GetRepositoryPipelineVariablesResponse getRepositoryPipelineVariables(org.openapis.openapi.models.operations.GetRepositoryPipelineVariablesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoryPipelineVariablesPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/variables/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoryPipelineVariablesRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/variables/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2313,7 +2313,7 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.StopPipelineResponse stopPipeline(org.openapis.openapi.models.operations.StopPipelineRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopPipelinePathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/stopPipeline", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopPipelineRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/stopPipeline", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -2354,12 +2354,12 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.UpdateDeploymentVariableResponse updateDeploymentVariable(org.openapis.openapi.models.operations.UpdateDeploymentVariableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeploymentVariablePathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/deployments_config/environments/{environment_uuid}/variables/{variable_uuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeploymentVariableRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/deployments_config/environments/{environment_uuid}/variables/{variable_uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -2407,12 +2407,12 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.UpdatePipelineVariableForTeamResponse updatePipelineVariableForTeam(org.openapis.openapi.models.operations.UpdatePipelineVariableForTeamRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePipelineVariableForTeamPathParams.class, baseUrl, "/teams/{username}/pipelines_config/variables/{variable_uuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePipelineVariableForTeamRequest.class, baseUrl, "/teams/{username}/pipelines_config/variables/{variable_uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -2460,12 +2460,12 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.UpdatePipelineVariableForUserResponse updatePipelineVariableForUser(org.openapis.openapi.models.operations.UpdatePipelineVariableForUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePipelineVariableForUserPathParams.class, baseUrl, "/users/{selected_user}/pipelines_config/variables/{variable_uuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePipelineVariableForUserRequest.class, baseUrl, "/users/{selected_user}/pipelines_config/variables/{variable_uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -2512,12 +2512,12 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.UpdatePipelineVariableForWorkspaceResponse updatePipelineVariableForWorkspace(org.openapis.openapi.models.operations.UpdatePipelineVariableForWorkspaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePipelineVariableForWorkspacePathParams.class, baseUrl, "/workspaces/{workspace}/pipelines-config/variables/{variable_uuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePipelineVariableForWorkspaceRequest.class, baseUrl, "/workspaces/{workspace}/pipelines-config/variables/{variable_uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -2564,12 +2564,12 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.UpdateRepositoryBuildNumberResponse updateRepositoryBuildNumber(org.openapis.openapi.models.operations.UpdateRepositoryBuildNumberRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateRepositoryBuildNumberPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/build_number", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateRepositoryBuildNumberRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/build_number", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -2616,12 +2616,12 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.UpdateRepositoryPipelineConfigResponse updateRepositoryPipelineConfig(org.openapis.openapi.models.operations.UpdateRepositoryPipelineConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateRepositoryPipelineConfigPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateRepositoryPipelineConfigRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -2660,12 +2660,12 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.UpdateRepositoryPipelineKeyPairResponse updateRepositoryPipelineKeyPair(org.openapis.openapi.models.operations.UpdateRepositoryPipelineKeyPairRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateRepositoryPipelineKeyPairPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/key_pair", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateRepositoryPipelineKeyPairRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/key_pair", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -2712,12 +2712,12 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.UpdateRepositoryPipelineKnownHostResponse updateRepositoryPipelineKnownHost(org.openapis.openapi.models.operations.UpdateRepositoryPipelineKnownHostRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateRepositoryPipelineKnownHostPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/known_hosts/{known_host_uuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateRepositoryPipelineKnownHostRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/known_hosts/{known_host_uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -2764,12 +2764,12 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.UpdateRepositoryPipelineScheduleResponse updateRepositoryPipelineSchedule(org.openapis.openapi.models.operations.UpdateRepositoryPipelineScheduleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateRepositoryPipelineSchedulePathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/schedules/{schedule_uuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateRepositoryPipelineScheduleRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/schedules/{schedule_uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -2816,12 +2816,12 @@ public class Pipelines {
      */
     public org.openapis.openapi.models.operations.UpdateRepositoryPipelineVariableResponse updateRepositoryPipelineVariable(org.openapis.openapi.models.operations.UpdateRepositoryPipelineVariableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateRepositoryPipelineVariablePathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/variables/{variable_uuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateRepositoryPipelineVariableRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pipelines_config/variables/{variable_uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

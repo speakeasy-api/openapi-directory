@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchPoliciesRequest {
-    
-    public FetchPoliciesPathParams pathParams;
-    public FetchPoliciesRequest withPathParams(FetchPoliciesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchPoliciesSecurity security;
-    public FetchPoliciesRequest withSecurity(FetchPoliciesSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchPoliciesRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique string that identifies the Policy resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchPoliciesRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

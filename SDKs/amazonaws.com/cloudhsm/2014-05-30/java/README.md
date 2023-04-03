@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AddTagsToResourceXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AddTagsToResourceHeaders;
 import org.openapis.openapi.models.operations.AddTagsToResourceRequest;
 import org.openapis.openapi.models.operations.AddTagsToResourceResponse;
 import org.openapis.openapi.models.shared.AddTagsToResourceRequest;
@@ -29,37 +28,37 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AddTagsToResourceRequest req = new AddTagsToResourceRequest() {{
-                headers = new AddTagsToResourceHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "CloudHsmFrontendService.AddTagsToResource";
-                }};
-                request = new AddTagsToResourceRequest() {{
-                    resourceArn = "illum";
+                addTagsToResourceRequest = new AddTagsToResourceRequest() {{
+                    resourceArn = "corrupti";
                     tagList = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            key = "error";
-                            value = "deserunt";
+                            key = "distinctio";
+                            value = "quibusdam";
                         }}),
                         add(new Tag() {{
-                            key = "suscipit";
-                            value = "iure";
+                            key = "unde";
+                            value = "nulla";
+                        }}),
+                        add(new Tag() {{
+                            key = "corrupti";
+                            value = "illum";
                         }}),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "vel";
+                xAmzContentSha256 = "error";
+                xAmzCredential = "deserunt";
+                xAmzDate = "suscipit";
+                xAmzSecurityToken = "iure";
+                xAmzSignature = "magnam";
+                xAmzSignedHeaders = "debitis";
+                xAmzTarget = "CloudHsmFrontendService.AddTagsToResource";
+            }}            
 
             AddTagsToResourceResponse res = sdk.addTagsToResource(req);
 
@@ -73,7 +72,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

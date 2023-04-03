@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETXdbsCountUsingGETRequest {
+    /**
+     * dateYYYYMMDD
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dateYYYYMMDD")
+    public String dateYYYYMMDD;
+    public GETXdbsCountUsingGETRequest withDateYYYYMMDD(String dateYYYYMMDD) {
+        this.dateYYYYMMDD = dateYYYYMMDD;
+        return this;
+    }
     
-    public GETXdbsCountUsingGETPathParams pathParams;
-    public GETXdbsCountUsingGETRequest withPathParams(GETXdbsCountUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * speciesTypeKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=speciesTypeKey")
+    public Integer speciesTypeKey;
+    public GETXdbsCountUsingGETRequest withSpeciesTypeKey(Integer speciesTypeKey) {
+        this.speciesTypeKey = speciesTypeKey;
         return this;
     }
     

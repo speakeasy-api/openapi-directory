@@ -38,13 +38,13 @@ public class Ontol {
      */
     public org.openapis.openapi.models.operations.GetExtractOntologySubgraphResourceResponse getExtractOntologySubgraphResource(org.openapis.openapi.models.operations.GetExtractOntologySubgraphResourceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetExtractOntologySubgraphResourcePathParams.class, baseUrl, "/ontol/subgraph/{ontology}/{node}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetExtractOntologySubgraphResourceRequest.class, baseUrl, "/ontol/subgraph/{ontology}/{node}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetExtractOntologySubgraphResourceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetExtractOntologySubgraphResourceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -82,13 +82,13 @@ public class Ontol {
      */
     public org.openapis.openapi.models.operations.GetInformationContentResourceResponse getInformationContentResource(org.openapis.openapi.models.operations.GetInformationContentResourceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInformationContentResourcePathParams.class, baseUrl, "/ontol/information_content/{subject_category}/{object_category}/{subject_taxon}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInformationContentResourceRequest.class, baseUrl, "/ontol/information_content/{subject_category}/{object_category}/{subject_taxon}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetInformationContentResourceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetInformationContentResourceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -120,13 +120,13 @@ public class Ontol {
      */
     public org.openapis.openapi.models.operations.PostExtractOntologySubgraphResourceResponse postExtractOntologySubgraphResource(org.openapis.openapi.models.operations.PostExtractOntologySubgraphResourceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostExtractOntologySubgraphResourcePathParams.class, baseUrl, "/ontol/subgraph/{ontology}/{node}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostExtractOntologySubgraphResourceRequest.class, baseUrl, "/ontol/subgraph/{ontology}/{node}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostExtractOntologySubgraphResourceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostExtractOntologySubgraphResourceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

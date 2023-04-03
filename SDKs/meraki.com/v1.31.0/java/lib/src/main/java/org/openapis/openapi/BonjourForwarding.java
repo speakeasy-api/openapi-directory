@@ -40,7 +40,7 @@ public class BonjourForwarding {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessSsidBonjourForwardingResponse getNetworkWirelessSsidBonjourForwarding(org.openapis.openapi.models.operations.GetNetworkWirelessSsidBonjourForwardingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidBonjourForwardingPathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/bonjourForwarding", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidBonjourForwardingRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/bonjourForwarding", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,12 +80,12 @@ public class BonjourForwarding {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidBonjourForwardingResponse updateNetworkWirelessSsidBonjourForwarding(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidBonjourForwardingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidBonjourForwardingPathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/bonjourForwarding", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidBonjourForwardingRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/bonjourForwarding", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

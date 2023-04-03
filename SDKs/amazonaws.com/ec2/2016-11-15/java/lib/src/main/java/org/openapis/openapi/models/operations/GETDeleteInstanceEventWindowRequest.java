@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteInstanceEventWindowRequest {
-    
-    public GETDeleteInstanceEventWindowQueryParams queryParams;
-    public GETDeleteInstanceEventWindowRequest withQueryParams(GETDeleteInstanceEventWindowQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDeleteInstanceEventWindowActionEnum action;
+    public GETDeleteInstanceEventWindowRequest withAction(GETDeleteInstanceEventWindowActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETDeleteInstanceEventWindowRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
     
-    public GETDeleteInstanceEventWindowHeaders headers;
-    public GETDeleteInstanceEventWindowRequest withHeaders(GETDeleteInstanceEventWindowHeaders headers) {
-        this.headers = headers;
+    /**
+     * Specify &lt;code&gt;true&lt;/code&gt; to force delete the event window. Use the force delete parameter if the event window is currently associated with targets.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ForceDelete")
+    public Boolean forceDelete;
+    public GETDeleteInstanceEventWindowRequest withForceDelete(Boolean forceDelete) {
+        this.forceDelete = forceDelete;
+        return this;
+    }
+    
+    /**
+     * The ID of the event window.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceEventWindowId")
+    public String instanceEventWindowId;
+    public GETDeleteInstanceEventWindowRequest withInstanceEventWindowId(String instanceEventWindowId) {
+        this.instanceEventWindowId = instanceEventWindowId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDeleteInstanceEventWindowVersionEnum version;
+    public GETDeleteInstanceEventWindowRequest withVersion(GETDeleteInstanceEventWindowVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDeleteInstanceEventWindowRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDeleteInstanceEventWindowRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDeleteInstanceEventWindowRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDeleteInstanceEventWindowRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDeleteInstanceEventWindowRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDeleteInstanceEventWindowRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDeleteInstanceEventWindowRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

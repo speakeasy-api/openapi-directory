@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteInstitutionsIdRequest {
-    
-    public DeleteInstitutionsIdPathParams pathParams;
-    public DeleteInstitutionsIdRequest withPathParams(DeleteInstitutionsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the institution.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DeleteInstitutionsIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     
-    
-    public DeleteInstitutionsIdQueryParams queryParams;
-    public DeleteInstitutionsIdRequest withQueryParams(DeleteInstitutionsIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The unique identifier of the institution to merge into.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=merge_into_institution_id")
+    public Long mergeIntoInstitutionId;
+    public DeleteInstitutionsIdRequest withMergeIntoInstitutionId(Long mergeIntoInstitutionId) {
+        this.mergeIntoInstitutionId = mergeIntoInstitutionId;
         return this;
     }
     

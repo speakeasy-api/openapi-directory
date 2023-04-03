@@ -43,7 +43,7 @@ public class Nodes {
      */
     public org.openapis.openapi.models.operations.NodesAddonReadResponse nodesAddonRead(org.openapis.openapi.models.operations.NodesAddonReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesAddonReadPathParams.class, baseUrl, "/nodes/{node_id}/addons/{provider}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesAddonReadRequest.class, baseUrl, "/nodes/{node_id}/addons/{provider}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -90,7 +90,7 @@ public class Nodes {
      */
     public org.openapis.openapi.models.operations.NodesAddonsFoldersListResponse nodesAddonsFoldersList(org.openapis.openapi.models.operations.NodesAddonsFoldersListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesAddonsFoldersListPathParams.class, baseUrl, "/nodes/{node_id}/addons/{provider}/folders/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesAddonsFoldersListRequest.class, baseUrl, "/nodes/{node_id}/addons/{provider}/folders/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -135,7 +135,7 @@ public class Nodes {
      */
     public org.openapis.openapi.models.operations.NodesAddonsListResponse nodesAddonsList(org.openapis.openapi.models.operations.NodesAddonsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesAddonsListPathParams.class, baseUrl, "/nodes/{node_id}/addons/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesAddonsListRequest.class, baseUrl, "/nodes/{node_id}/addons/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -189,12 +189,12 @@ public class Nodes {
      */
     public org.openapis.openapi.models.operations.NodesChildrenCreateResponse nodesChildrenCreate(org.openapis.openapi.models.operations.NodesChildrenCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesChildrenCreatePathParams.class, baseUrl, "/nodes/{node_id}/children/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesChildrenCreateRequest.class, baseUrl, "/nodes/{node_id}/children/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -244,7 +244,7 @@ public class Nodes {
      */
     public org.openapis.openapi.models.operations.NodesChildrenListResponse nodesChildrenList(org.openapis.openapi.models.operations.NodesChildrenListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesChildrenListPathParams.class, baseUrl, "/nodes/{node_id}/children/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesChildrenListRequest.class, baseUrl, "/nodes/{node_id}/children/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -284,7 +284,7 @@ public class Nodes {
      */
     public org.openapis.openapi.models.operations.NodesCitationListResponse nodesCitationList(org.openapis.openapi.models.operations.NodesCitationListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesCitationListPathParams.class, baseUrl, "/nodes/{node_id}/citation/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesCitationListRequest.class, baseUrl, "/nodes/{node_id}/citation/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -324,7 +324,7 @@ public class Nodes {
      */
     public org.openapis.openapi.models.operations.NodesCitationReadResponse nodesCitationRead(org.openapis.openapi.models.operations.NodesCitationReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesCitationReadPathParams.class, baseUrl, "/nodes/{node_id}/citation/{style_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesCitationReadRequest.class, baseUrl, "/nodes/{node_id}/citation/{style_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -373,12 +373,12 @@ public class Nodes {
      */
     public org.openapis.openapi.models.operations.NodesCommentCreateResponse nodesCommentCreate(org.openapis.openapi.models.operations.NodesCommentCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesCommentCreatePathParams.class, baseUrl, "/nodes/{node_id}/comments/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesCommentCreateRequest.class, baseUrl, "/nodes/{node_id}/comments/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -434,7 +434,7 @@ public class Nodes {
      */
     public org.openapis.openapi.models.operations.NodesCommentsListResponse nodesCommentsList(org.openapis.openapi.models.operations.NodesCommentsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesCommentsListPathParams.class, baseUrl, "/nodes/{node_id}/comments/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesCommentsListRequest.class, baseUrl, "/nodes/{node_id}/comments/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -486,12 +486,12 @@ public class Nodes {
      */
     public org.openapis.openapi.models.operations.NodesContributorsCreateResponse nodesContributorsCreate(org.openapis.openapi.models.operations.NodesContributorsCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesContributorsCreatePathParams.class, baseUrl, "/nodes/{node_id}/contributors/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesContributorsCreateRequest.class, baseUrl, "/nodes/{node_id}/contributors/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -532,7 +532,7 @@ public class Nodes {
      */
     public org.openapis.openapi.models.operations.NodesContributorsDeleteResponse nodesContributorsDelete(org.openapis.openapi.models.operations.NodesContributorsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesContributorsDeletePathParams.class, baseUrl, "/nodes/{node_id}/contributors/{user_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesContributorsDeleteRequest.class, baseUrl, "/nodes/{node_id}/contributors/{user_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -582,7 +582,7 @@ public class Nodes {
      */
     public org.openapis.openapi.models.operations.NodesContributorsListResponse nodesContributorsList(org.openapis.openapi.models.operations.NodesContributorsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesContributorsListPathParams.class, baseUrl, "/nodes/{node_id}/contributors/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesContributorsListRequest.class, baseUrl, "/nodes/{node_id}/contributors/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -630,12 +630,12 @@ public class Nodes {
      */
     public org.openapis.openapi.models.operations.NodesContributorsPartialUpdateResponse nodesContributorsPartialUpdate(org.openapis.openapi.models.operations.NodesContributorsPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesContributorsPartialUpdatePathParams.class, baseUrl, "/nodes/{node_id}/contributors/{user_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesContributorsPartialUpdateRequest.class, baseUrl, "/nodes/{node_id}/contributors/{user_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -676,7 +676,7 @@ public class Nodes {
      */
     public org.openapis.openapi.models.operations.NodesContributorsReadResponse nodesContributorsRead(org.openapis.openapi.models.operations.NodesContributorsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesContributorsReadPathParams.class, baseUrl, "/nodes/{node_id}/contributors/{user_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesContributorsReadRequest.class, baseUrl, "/nodes/{node_id}/contributors/{user_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -728,7 +728,7 @@ public class Nodes {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.NodesCreateResponse nodesCreate(org.openapis.openapi.models.operations.NodesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.NodesCreateResponse nodesCreate(org.openapis.openapi.models.operations.NodesCreateNodeInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/nodes/");
         
@@ -775,7 +775,7 @@ public class Nodes {
      */
     public org.openapis.openapi.models.operations.NodesDeleteResponse nodesDelete(org.openapis.openapi.models.operations.NodesDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesDeletePathParams.class, baseUrl, "/nodes/{node_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesDeleteRequest.class, baseUrl, "/nodes/{node_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -821,12 +821,12 @@ public class Nodes {
      */
     public org.openapis.openapi.models.operations.NodesDraftRegistrationsCreateResponse nodesDraftRegistrationsCreate(org.openapis.openapi.models.operations.NodesDraftRegistrationsCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesDraftRegistrationsCreatePathParams.class, baseUrl, "/nodes/{node_id}/draft_registrations/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesDraftRegistrationsCreateRequest.class, baseUrl, "/nodes/{node_id}/draft_registrations/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -865,7 +865,7 @@ public class Nodes {
      */
     public org.openapis.openapi.models.operations.NodesDraftRegistrationsDeleteResponse nodesDraftRegistrationsDelete(org.openapis.openapi.models.operations.NodesDraftRegistrationsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesDraftRegistrationsDeletePathParams.class, baseUrl, "/nodes/{node_id}/draft_registrations/{draft_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesDraftRegistrationsDeleteRequest.class, baseUrl, "/nodes/{node_id}/draft_registrations/{draft_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -910,7 +910,7 @@ public class Nodes {
      */
     public org.openapis.openapi.models.operations.NodesDraftRegistrationsListResponse nodesDraftRegistrationsList(org.openapis.openapi.models.operations.NodesDraftRegistrationsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesDraftRegistrationsListPathParams.class, baseUrl, "/nodes/{node_id}/draft_registrations/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesDraftRegistrationsListRequest.class, baseUrl, "/nodes/{node_id}/draft_registrations/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -962,12 +962,12 @@ public class Nodes {
      */
     public org.openapis.openapi.models.operations.NodesDraftRegistrationsPartialUpdateResponse nodesDraftRegistrationsPartialUpdate(org.openapis.openapi.models.operations.NodesDraftRegistrationsPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesDraftRegistrationsPartialUpdatePathParams.class, baseUrl, "/nodes/{node_id}/draft_registrations/{draft_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesDraftRegistrationsPartialUpdateRequest.class, baseUrl, "/nodes/{node_id}/draft_registrations/{draft_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1046,7 +1046,7 @@ public class Nodes {
      */
     public org.openapis.openapi.models.operations.NodesFilesListResponse nodesFilesList(org.openapis.openapi.models.operations.NodesFilesListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesFilesListPathParams.class, baseUrl, "/nodes/{node_id}/files/{provider}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesFilesListRequest.class, baseUrl, "/nodes/{node_id}/files/{provider}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1088,7 +1088,7 @@ public class Nodes {
      */
     public org.openapis.openapi.models.operations.NodesFilesReadResponse nodesFilesRead(org.openapis.openapi.models.operations.NodesFilesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesFilesReadPathParams.class, baseUrl, "/nodes/{node_id}/files/{provider}/{path}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesFilesReadRequest.class, baseUrl, "/nodes/{node_id}/files/{provider}/{path}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1139,12 +1139,12 @@ public class Nodes {
      */
     public org.openapis.openapi.models.operations.NodesForksCreateResponse nodesForksCreate(org.openapis.openapi.models.operations.NodesForksCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesForksCreatePathParams.class, baseUrl, "/nodes/{node_id}/forks/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesForksCreateRequest.class, baseUrl, "/nodes/{node_id}/forks/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1188,7 +1188,7 @@ public class Nodes {
      */
     public org.openapis.openapi.models.operations.NodesForksListResponse nodesForksList(org.openapis.openapi.models.operations.NodesForksListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesForksListPathParams.class, baseUrl, "/nodes/{node_id}/forks/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesForksListRequest.class, baseUrl, "/nodes/{node_id}/forks/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1237,7 +1237,7 @@ public class Nodes {
      */
     public org.openapis.openapi.models.operations.NodesIdentifiersListResponse nodesIdentifiersList(org.openapis.openapi.models.operations.NodesIdentifiersListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesIdentifiersListPathParams.class, baseUrl, "/nodes/{node_id}/identifiers/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesIdentifiersListRequest.class, baseUrl, "/nodes/{node_id}/identifiers/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1281,7 +1281,7 @@ public class Nodes {
      */
     public org.openapis.openapi.models.operations.NodesInstitutionsListResponse nodesInstitutionsList(org.openapis.openapi.models.operations.NodesInstitutionsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesInstitutionsListPathParams.class, baseUrl, "/nodes/{node_id}/institutions/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesInstitutionsListRequest.class, baseUrl, "/nodes/{node_id}/institutions/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1329,7 +1329,7 @@ public class Nodes {
      */
     public org.openapis.openapi.models.operations.NodesLinkedNodesListResponse nodesLinkedNodesList(org.openapis.openapi.models.operations.NodesLinkedNodesListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesLinkedNodesListPathParams.class, baseUrl, "/nodes/{node_id}/linked_nodes/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesLinkedNodesListRequest.class, baseUrl, "/nodes/{node_id}/linked_nodes/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1440,7 +1440,7 @@ public class Nodes {
      */
     public org.openapis.openapi.models.operations.NodesLogsListResponse nodesLogsList(org.openapis.openapi.models.operations.NodesLogsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesLogsListPathParams.class, baseUrl, "/nodes/{node_id}/logs/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesLogsListRequest.class, baseUrl, "/nodes/{node_id}/logs/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1490,12 +1490,12 @@ public class Nodes {
      */
     public org.openapis.openapi.models.operations.NodesNodeAddonUpdateResponse nodesNodeAddonUpdate(org.openapis.openapi.models.operations.NodesNodeAddonUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesNodeAddonUpdatePathParams.class, baseUrl, "/nodes/{node_id}/addons/{provider}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesNodeAddonUpdateRequest.class, baseUrl, "/nodes/{node_id}/addons/{provider}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1536,12 +1536,12 @@ public class Nodes {
      */
     public org.openapis.openapi.models.operations.NodesPartialUpdateResponse nodesPartialUpdate(org.openapis.openapi.models.operations.NodesPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesPartialUpdatePathParams.class, baseUrl, "/nodes/{node_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesPartialUpdateRequest.class, baseUrl, "/nodes/{node_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1582,7 +1582,7 @@ public class Nodes {
      */
     public org.openapis.openapi.models.operations.NodesPreprintsListResponse nodesPreprintsList(org.openapis.openapi.models.operations.NodesPreprintsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesPreprintsListPathParams.class, baseUrl, "/nodes/{node_id}/preprints/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesPreprintsListRequest.class, baseUrl, "/nodes/{node_id}/preprints/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1632,7 +1632,7 @@ public class Nodes {
      */
     public org.openapis.openapi.models.operations.NodesProvidersListResponse nodesProvidersList(org.openapis.openapi.models.operations.NodesProvidersListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesProvidersListPathParams.class, baseUrl, "/nodes/{node_id}/files/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesProvidersListRequest.class, baseUrl, "/nodes/{node_id}/files/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1674,7 +1674,7 @@ public class Nodes {
      */
     public org.openapis.openapi.models.operations.NodesProvidersReadResponse nodesProvidersRead(org.openapis.openapi.models.operations.NodesProvidersReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesProvidersReadPathParams.class, baseUrl, "/nodes/{node_id}/files/providers/{provider}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesProvidersReadRequest.class, baseUrl, "/nodes/{node_id}/files/providers/{provider}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1720,7 +1720,7 @@ public class Nodes {
      */
     public org.openapis.openapi.models.operations.NodesReadResponse nodesRead(org.openapis.openapi.models.operations.NodesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesReadPathParams.class, baseUrl, "/nodes/{node_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesReadRequest.class, baseUrl, "/nodes/{node_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1770,7 +1770,7 @@ public class Nodes {
      */
     public org.openapis.openapi.models.operations.NodesRegistrationsListResponse nodesRegistrationsList(org.openapis.openapi.models.operations.NodesRegistrationsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesRegistrationsListPathParams.class, baseUrl, "/nodes/{node_id}/registrations/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesRegistrationsListRequest.class, baseUrl, "/nodes/{node_id}/registrations/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1824,7 +1824,7 @@ public class Nodes {
      */
     public org.openapis.openapi.models.operations.NodesViewOnlyLinksListResponse nodesViewOnlyLinksList(org.openapis.openapi.models.operations.NodesViewOnlyLinksListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesViewOnlyLinksListPathParams.class, baseUrl, "/nodes/{node_id}/view_only_links/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesViewOnlyLinksListRequest.class, baseUrl, "/nodes/{node_id}/view_only_links/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1869,7 +1869,7 @@ public class Nodes {
      */
     public org.openapis.openapi.models.operations.NodesViewOnlyLinksReadResponse nodesViewOnlyLinksRead(org.openapis.openapi.models.operations.NodesViewOnlyLinksReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesViewOnlyLinksReadPathParams.class, baseUrl, "/nodes/{node_id}/view_only_links/{link_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesViewOnlyLinksReadRequest.class, baseUrl, "/nodes/{node_id}/view_only_links/{link_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1919,7 +1919,7 @@ public class Nodes {
      */
     public org.openapis.openapi.models.operations.NodesWikisListResponse nodesWikisList(org.openapis.openapi.models.operations.NodesWikisListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesWikisListPathParams.class, baseUrl, "/nodes/{node_id}/wikis/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesWikisListRequest.class, baseUrl, "/nodes/{node_id}/wikis/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserSafeScoringDailyValueV1ScoringsIndividualDailyRequest {
+    /**
+     * (Required) 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndDate")
+    public String endDate;
+    public UserSafeScoringDailyValueV1ScoringsIndividualDailyRequest withEndDate(String endDate) {
+        this.endDate = endDate;
+        return this;
+    }
     
-    public UserSafeScoringDailyValueV1ScoringsIndividualDailyQueryParams queryParams;
-    public UserSafeScoringDailyValueV1ScoringsIndividualDailyRequest withQueryParams(UserSafeScoringDailyValueV1ScoringsIndividualDailyQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * (Required) 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StartDate")
+    public String startDate;
+    public UserSafeScoringDailyValueV1ScoringsIndividualDailyRequest withStartDate(String startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    
+    /**
+     * Optional
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Tag")
+    public String tag;
+    public UserSafeScoringDailyValueV1ScoringsIndividualDailyRequest withTag(String tag) {
+        this.tag = tag;
         return this;
     }
     

@@ -7,24 +7,69 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutConfigurationSetSuppressionOptionsRequest {
-    
-    public PutConfigurationSetSuppressionOptionsPathParams pathParams;
-    public PutConfigurationSetSuppressionOptionsRequest withPathParams(PutConfigurationSetSuppressionOptionsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutConfigurationSetSuppressionOptionsHeaders headers;
-    public PutConfigurationSetSuppressionOptionsRequest withHeaders(PutConfigurationSetSuppressionOptionsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name of the configuration set to change the suppression list preferences for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConfigurationSetName")
+    public String configurationSetName;
+    public PutConfigurationSetSuppressionOptionsRequest withConfigurationSetName(String configurationSetName) {
+        this.configurationSetName = configurationSetName;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PutConfigurationSetSuppressionOptionsRequestBody request;
-    public PutConfigurationSetSuppressionOptionsRequest withRequest(PutConfigurationSetSuppressionOptionsRequestBody request) {
-        this.request = request;
+    public PutConfigurationSetSuppressionOptionsRequestBody requestBody;
+    public PutConfigurationSetSuppressionOptionsRequest withRequestBody(PutConfigurationSetSuppressionOptionsRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public PutConfigurationSetSuppressionOptionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public PutConfigurationSetSuppressionOptionsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public PutConfigurationSetSuppressionOptionsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public PutConfigurationSetSuppressionOptionsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public PutConfigurationSetSuppressionOptionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public PutConfigurationSetSuppressionOptionsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public PutConfigurationSetSuppressionOptionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AcceptQualificationRequestXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AcceptQualificationRequestHeaders;
 import org.openapis.openapi.models.operations.AcceptQualificationRequestRequest;
 import org.openapis.openapi.models.operations.AcceptQualificationRequestResponse;
 import org.openapis.openapi.models.shared.AcceptQualificationRequestRequest;
@@ -15,28 +14,24 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AcceptQualificationRequestRequest req = new AcceptQualificationRequestRequest() {{
-                headers = new AcceptQualificationRequestHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "MTurkRequesterServiceV20170117.AcceptQualificationRequest";
+                acceptQualificationRequestRequest = new AcceptQualificationRequestRequest() {{
+                    integerValue = 548814;
+                    qualificationRequestId = "provident";
                 }};
-                request = new AcceptQualificationRequestRequest() {{
-                    integerValue = 847252;
-                    qualificationRequestId = "vel";
-                }};
-            }};            
+                xAmzAlgorithm = "distinctio";
+                xAmzContentSha256 = "quibusdam";
+                xAmzCredential = "unde";
+                xAmzDate = "nulla";
+                xAmzSecurityToken = "corrupti";
+                xAmzSignature = "illum";
+                xAmzSignedHeaders = "vel";
+                xAmzTarget = "MTurkRequesterServiceV20170117.AcceptQualificationRequest";
+            }}            
 
             AcceptQualificationRequestResponse res = sdk.acceptQualificationRequest(req);
 

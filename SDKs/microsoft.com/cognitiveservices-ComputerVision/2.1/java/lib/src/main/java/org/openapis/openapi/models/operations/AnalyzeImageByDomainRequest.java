@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyzeImageByDomainRequest {
-    
-    public AnalyzeImageByDomainPathParams pathParams;
-    public AnalyzeImageByDomainRequest withPathParams(AnalyzeImageByDomainPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AnalyzeImageByDomainQueryParams queryParams;
-    public AnalyzeImageByDomainRequest withQueryParams(AnalyzeImageByDomainQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * A JSON document with a URL pointing to the image that is to be analyzed.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ImageUrl request;
-    public AnalyzeImageByDomainRequest withRequest(org.openapis.openapi.models.shared.ImageUrl request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ImageUrl imageUrl;
+    public AnalyzeImageByDomainRequest withImageUrl(org.openapis.openapi.models.shared.ImageUrl imageUrl) {
+        this.imageUrl = imageUrl;
+        return this;
+    }
+    
+    /**
+     * The desired language for output generation. If this parameter is not specified, the default value is &amp;quot;en&amp;quot;.Supported languages:en - English, Default. es - Spanish, ja - Japanese, pt - Portuguese, zh - Simplified Chinese.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public org.openapis.openapi.models.shared.ServiceLanguageEnum language;
+    public AnalyzeImageByDomainRequest withLanguage(org.openapis.openapi.models.shared.ServiceLanguageEnum language) {
+        this.language = language;
+        return this;
+    }
+    
+    /**
+     * The domain-specific content to recognize.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=model")
+    public String model;
+    public AnalyzeImageByDomainRequest withModel(String model) {
+        this.model = model;
         return this;
     }
     

@@ -4,20 +4,87 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetActivePayInstructionsReportOutputRequest {
-    
-    public GetActivePayInstructionsReportOutputQueryParams queryParams;
-    public GetActivePayInstructionsReportOutputRequest withQueryParams(GetActivePayInstructionsReportOutputQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The active date to consider. E.g 2017-04-05
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ActiveOn")
+    public LocalDate activeOn;
+    public GetActivePayInstructionsReportOutputRequest withActiveOn(LocalDate activeOn) {
+        this.activeOn = activeOn;
         return this;
     }
     
+    /**
+     * The version of the api to target. Omit or set as &amp;apos;default&amp;apos; to target the current api version.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Version")
+    public String apiVersion;
+    public GetActivePayInstructionsReportOutputRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
     
-    public GetActivePayInstructionsReportOutputHeaders headers;
-    public GetActivePayInstructionsReportOutputRequest withHeaders(GetActivePayInstructionsReportOutputHeaders headers) {
-        this.headers = headers;
+    /**
+     * The OAuth 1 authorization header. &amp;apos;Auto&amp;apos; enables auto complete.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public GetActivePayInstructionsReportOutputRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
+        return this;
+    }
+    
+    /**
+     * The employee unique key. E.g. EE001
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EmployeeKey")
+    public String employeeKey;
+    public GetActivePayInstructionsReportOutputRequest withEmployeeKey(String employeeKey) {
+        this.employeeKey = employeeKey;
+        return this;
+    }
+    
+    /**
+     * The employer unique key. E.g. ER001
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EmployerKey")
+    public String employerKey;
+    public GetActivePayInstructionsReportOutputRequest withEmployerKey(String employerKey) {
+        this.employerKey = employerKey;
+        return this;
+    }
+    
+    /**
+     * The lower filter date. E.g 2016-04-06
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FromDate")
+    public LocalDate fromDate;
+    public GetActivePayInstructionsReportOutputRequest withFromDate(LocalDate fromDate) {
+        this.fromDate = fromDate;
+        return this;
+    }
+    
+    /**
+     * The upper filter date. E.g 2017-04-05
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ToDate")
+    public LocalDate toDate;
+    public GetActivePayInstructionsReportOutputRequest withToDate(LocalDate toDate) {
+        this.toDate = toDate;
+        return this;
+    }
+    
+    /**
+     * the data type to filter on. E.g. TaxPayInstruction
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Type")
+    public String type;
+    public GetActivePayInstructionsReportOutputRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

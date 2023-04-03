@@ -4,27 +4,356 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DfareportingAdsListRequest {
-    
-    public DfareportingAdsListPathParams pathParams;
-    public DfareportingAdsListRequest withPathParams(DfareportingAdsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public DfareportingAdsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public DfareportingAdsListQueryParams queryParams;
-    public DfareportingAdsListRequest withQueryParams(DfareportingAdsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public DfareportingAdsListRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Select only active ads.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=active")
+    public Boolean active;
+    public DfareportingAdsListRequest withActive(Boolean active) {
+        this.active = active;
+        return this;
+    }
     
-    public DfareportingAdsListSecurity security;
-    public DfareportingAdsListRequest withSecurity(DfareportingAdsListSecurity security) {
-        this.security = security;
+    /**
+     * Select only ads with this advertiser ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=advertiserId")
+    public String advertiserId;
+    public DfareportingAdsListRequest withAdvertiserId(String advertiserId) {
+        this.advertiserId = advertiserId;
+        return this;
+    }
+    
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DfareportingAdsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * Select only archived ads.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=archived")
+    public Boolean archived;
+    public DfareportingAdsListRequest withArchived(Boolean archived) {
+        this.archived = archived;
+        return this;
+    }
+    
+    /**
+     * Select only ads with these audience segment IDs.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=audienceSegmentIds")
+    public String[] audienceSegmentIds;
+    public DfareportingAdsListRequest withAudienceSegmentIds(String[] audienceSegmentIds) {
+        this.audienceSegmentIds = audienceSegmentIds;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public DfareportingAdsListRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Select only ads with these campaign IDs.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=campaignIds")
+    public String[] campaignIds;
+    public DfareportingAdsListRequest withCampaignIds(String[] campaignIds) {
+        this.campaignIds = campaignIds;
+        return this;
+    }
+    
+    /**
+     * Select default ads with the specified compatibility. Applicable when type is AD_SERVING_DEFAULT_AD. DISPLAY and DISPLAY_INTERSTITIAL refer to rendering either on desktop or on mobile devices for regular or interstitial ads, respectively. APP and APP_INTERSTITIAL are for rendering in mobile apps. IN_STREAM_VIDEO refers to rendering an in-stream video ads developed with the VAST standard.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=compatibility")
+    public DfareportingAdsListCompatibilityEnum compatibility;
+    public DfareportingAdsListRequest withCompatibility(DfareportingAdsListCompatibilityEnum compatibility) {
+        this.compatibility = compatibility;
+        return this;
+    }
+    
+    /**
+     * Select only ads with these creative IDs assigned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=creativeIds")
+    public String[] creativeIds;
+    public DfareportingAdsListRequest withCreativeIds(String[] creativeIds) {
+        this.creativeIds = creativeIds;
+        return this;
+    }
+    
+    /**
+     * Select only ads with these creative optimization configuration IDs.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=creativeOptimizationConfigurationIds")
+    public String[] creativeOptimizationConfigurationIds;
+    public DfareportingAdsListRequest withCreativeOptimizationConfigurationIds(String[] creativeOptimizationConfigurationIds) {
+        this.creativeOptimizationConfigurationIds = creativeOptimizationConfigurationIds;
+        return this;
+    }
+    
+    /**
+     * Select only dynamic click trackers. Applicable when type is AD_SERVING_CLICK_TRACKER. If true, select dynamic click trackers. If false, select static click trackers. Leave unset to select both.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dynamicClickTracker")
+    public Boolean dynamicClickTracker;
+    public DfareportingAdsListRequest withDynamicClickTracker(Boolean dynamicClickTracker) {
+        this.dynamicClickTracker = dynamicClickTracker;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DfareportingAdsListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Select only ads with these IDs.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids")
+    public String[] ids;
+    public DfareportingAdsListRequest withIds(String[] ids) {
+        this.ids = ids;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DfareportingAdsListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Select only ads with these landing page IDs.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=landingPageIds")
+    public String[] landingPageIds;
+    public DfareportingAdsListRequest withLandingPageIds(String[] landingPageIds) {
+        this.landingPageIds = landingPageIds;
+        return this;
+    }
+    
+    /**
+     * Maximum number of results to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public DfareportingAdsListRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DfareportingAdsListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Select only ads with this event tag override ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=overriddenEventTagId")
+    public String overriddenEventTagId;
+    public DfareportingAdsListRequest withOverriddenEventTagId(String overriddenEventTagId) {
+        this.overriddenEventTagId = overriddenEventTagId;
+        return this;
+    }
+    
+    /**
+     * Value of the nextPageToken from the previous result page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public DfareportingAdsListRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Select only ads with these placement IDs assigned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=placementIds")
+    public String[] placementIds;
+    public DfareportingAdsListRequest withPlacementIds(String[] placementIds) {
+        this.placementIds = placementIds;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DfareportingAdsListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * User profile ID associated with this request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
+    public String profileId;
+    public DfareportingAdsListRequest withProfileId(String profileId) {
+        this.profileId = profileId;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DfareportingAdsListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Select only ads whose list targeting expression use these remarketing list IDs.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=remarketingListIds")
+    public String[] remarketingListIds;
+    public DfareportingAdsListRequest withRemarketingListIds(String[] remarketingListIds) {
+        this.remarketingListIds = remarketingListIds;
+        return this;
+    }
+    
+    /**
+     * Allows searching for objects by name or ID. Wildcards (*) are allowed. For example, "ad*2015" will return objects with names like "ad June 2015", "ad April 2015", or simply "ad 2015". Most of the searches also add wildcards implicitly at the start and the end of the search string. For example, a search string of "ad" will match objects with name "my ad", "ad 2015", or simply "ad".
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=searchString")
+    public String searchString;
+    public DfareportingAdsListRequest withSearchString(String searchString) {
+        this.searchString = searchString;
+        return this;
+    }
+    
+    /**
+     * Select only ads with these size IDs.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sizeIds")
+    public String[] sizeIds;
+    public DfareportingAdsListRequest withSizeIds(String[] sizeIds) {
+        this.sizeIds = sizeIds;
+        return this;
+    }
+    
+    /**
+     * Field by which to sort the list.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortField")
+    public DfareportingAdsListSortFieldEnum sortField;
+    public DfareportingAdsListRequest withSortField(DfareportingAdsListSortFieldEnum sortField) {
+        this.sortField = sortField;
+        return this;
+    }
+    
+    /**
+     * Order of sorted results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortOrder")
+    public DfareportingAdsListSortOrderEnum sortOrder;
+    public DfareportingAdsListRequest withSortOrder(DfareportingAdsListSortOrderEnum sortOrder) {
+        this.sortOrder = sortOrder;
+        return this;
+    }
+    
+    /**
+     * Select only ads that are SSL-compliant.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sslCompliant")
+    public Boolean sslCompliant;
+    public DfareportingAdsListRequest withSslCompliant(Boolean sslCompliant) {
+        this.sslCompliant = sslCompliant;
+        return this;
+    }
+    
+    /**
+     * Select only ads that require SSL.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sslRequired")
+    public Boolean sslRequired;
+    public DfareportingAdsListRequest withSslRequired(Boolean sslRequired) {
+        this.sslRequired = sslRequired;
+        return this;
+    }
+    
+    /**
+     * Select only ads with these types.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public DfareportingAdsListTypeEnum[] type;
+    public DfareportingAdsListRequest withType(DfareportingAdsListTypeEnum[] type) {
+        this.type = type;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public DfareportingAdsListRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public DfareportingAdsListRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

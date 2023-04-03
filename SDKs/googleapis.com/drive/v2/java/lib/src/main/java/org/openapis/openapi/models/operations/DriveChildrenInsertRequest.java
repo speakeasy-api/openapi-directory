@@ -7,31 +7,120 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DriveChildrenInsertRequest {
-    
-    public DriveChildrenInsertPathParams pathParams;
-    public DriveChildrenInsertRequest withPathParams(DriveChildrenInsertPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DriveChildrenInsertQueryParams queryParams;
-    public DriveChildrenInsertRequest withQueryParams(DriveChildrenInsertQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ChildReference request;
-    public DriveChildrenInsertRequest withRequest(org.openapis.openapi.models.shared.ChildReference request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ChildReference childReference;
+    public DriveChildrenInsertRequest withChildReference(org.openapis.openapi.models.shared.ChildReference childReference) {
+        this.childReference = childReference;
         return this;
     }
     
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DriveChildrenInsertRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public DriveChildrenInsertSecurity security;
-    public DriveChildrenInsertRequest withSecurity(DriveChildrenInsertSecurity security) {
-        this.security = security;
+    /**
+     * Deprecated. Adding files to multiple folders is no longer supported. Use shortcuts instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enforceSingleParent")
+    public Boolean enforceSingleParent;
+    public DriveChildrenInsertRequest withEnforceSingleParent(Boolean enforceSingleParent) {
+        this.enforceSingleParent = enforceSingleParent;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DriveChildrenInsertRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * The ID of the folder.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=folderId")
+    public String folderId;
+    public DriveChildrenInsertRequest withFolderId(String folderId) {
+        this.folderId = folderId;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DriveChildrenInsertRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DriveChildrenInsertRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DriveChildrenInsertRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DriveChildrenInsertRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Whether the requesting application supports both My Drives and shared drives.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supportsAllDrives")
+    public Boolean supportsAllDrives;
+    public DriveChildrenInsertRequest withSupportsAllDrives(Boolean supportsAllDrives) {
+        this.supportsAllDrives = supportsAllDrives;
+        return this;
+    }
+    
+    /**
+     * Deprecated use supportsAllDrives instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supportsTeamDrives")
+    public Boolean supportsTeamDrives;
+    public DriveChildrenInsertRequest withSupportsTeamDrives(Boolean supportsTeamDrives) {
+        this.supportsTeamDrives = supportsTeamDrives;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public DriveChildrenInsertRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateProjectArticleDetailsRequest {
-    
-    public PrivateProjectArticleDetailsPathParams pathParams;
-    public PrivateProjectArticleDetailsRequest withPathParams(PrivateProjectArticleDetailsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Project Article unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=article_id")
+    public Long articleId;
+    public PrivateProjectArticleDetailsRequest withArticleId(Long articleId) {
+        this.articleId = articleId;
         return this;
     }
     
-    
-    public PrivateProjectArticleDetailsSecurity security;
-    public PrivateProjectArticleDetailsRequest withSecurity(PrivateProjectArticleDetailsSecurity security) {
-        this.security = security;
+    /**
+     * Project unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public Long projectId;
+    public PrivateProjectArticleDetailsRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     

@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AddFacetToObjectHeaders;
 import org.openapis.openapi.models.operations.AddFacetToObjectRequestBodyObjectReference;
 import org.openapis.openapi.models.operations.AddFacetToObjectRequestBodySchemaFacet;
 import org.openapis.openapi.models.operations.AddFacetToObjectRequestBody;
@@ -32,25 +31,27 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AddFacetToObjectRequest req = new AddFacetToObjectRequest() {{
-                headers = new AddFacetToObjectHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzDataPartition = "illum";
-                }};
-                request = new AddFacetToObjectRequestBody() {{
+                requestBody = new AddFacetToObjectRequestBody() {{
                     objectAttributeList = new org.openapis.openapi.models.shared.AttributeKeyAndValue[]{{
+                        add(new AttributeKeyAndValue() {{
+                            key = new AttributeKey() {{
+                                facetName = "provident";
+                                name = "distinctio";
+                                schemaArn = "quibusdam";
+                            }};
+                            value = new TypedAttributeValue() {{
+                                binaryValue = "unde";
+                                booleanValue = false;
+                                datetimeValue = "2021-05-14T08:28:11.899Z";
+                                numberValue = "illum";
+                                stringValue = "vel";
+                            }};
+                        }}),
                         add(new AttributeKeyAndValue() {{
                             key = new AttributeKey() {{
                                 facetName = "error";
@@ -88,7 +89,15 @@ public class Application {
                         schemaArn = "temporibus";
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "ab";
+                xAmzContentSha256 = "quis";
+                xAmzCredential = "veritatis";
+                xAmzDate = "deserunt";
+                xAmzSecurityToken = "perferendis";
+                xAmzSignature = "ipsam";
+                xAmzSignedHeaders = "repellendus";
+                xAmzDataPartition = "sapiente";
+            }}            
 
             AddFacetToObjectResponse res = sdk.addFacetToObject(req);
 
@@ -102,7 +111,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

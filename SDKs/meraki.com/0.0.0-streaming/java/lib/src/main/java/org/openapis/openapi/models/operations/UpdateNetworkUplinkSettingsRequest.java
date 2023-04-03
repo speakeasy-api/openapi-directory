@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkUplinkSettingsRequest {
-    
-    public UpdateNetworkUplinkSettingsPathParams pathParams;
-    public UpdateNetworkUplinkSettingsRequest withPathParams(UpdateNetworkUplinkSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkUplinkSettingsRequestBody requestBody;
+    public UpdateNetworkUplinkSettingsRequest withRequestBody(UpdateNetworkUplinkSettingsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkUplinkSettingsRequestBody request;
-    public UpdateNetworkUplinkSettingsRequest withRequest(UpdateNetworkUplinkSettingsRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkUplinkSettingsRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

@@ -32,19 +32,20 @@ public class Social {
     /**
      * Accepts a friend relationship with the target user. The user must be on your incoming friend request list, though no error will occur if they are not.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SocialAcceptFriendRequestResponse socialAcceptFriendRequest(org.openapis.openapi.models.operations.SocialAcceptFriendRequestRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SocialAcceptFriendRequestResponse socialAcceptFriendRequest(org.openapis.openapi.models.operations.SocialAcceptFriendRequestRequest request, org.openapis.openapi.models.operations.SocialAcceptFriendRequestSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SocialAcceptFriendRequestPathParams.class, baseUrl, "/Social/Friends/Requests/Accept/{membershipId}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SocialAcceptFriendRequestRequest.class, baseUrl, "/Social/Friends/Requests/Accept/{membershipId}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -70,19 +71,20 @@ public class Social {
     /**
      * Declines a friend relationship with the target user. The user must be on your incoming friend request list, though no error will occur if they are not.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SocialDeclineFriendRequestResponse socialDeclineFriendRequest(org.openapis.openapi.models.operations.SocialDeclineFriendRequestRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SocialDeclineFriendRequestResponse socialDeclineFriendRequest(org.openapis.openapi.models.operations.SocialDeclineFriendRequestRequest request, org.openapis.openapi.models.operations.SocialDeclineFriendRequestSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SocialDeclineFriendRequestPathParams.class, baseUrl, "/Social/Friends/Requests/Decline/{membershipId}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SocialDeclineFriendRequestRequest.class, baseUrl, "/Social/Friends/Requests/Decline/{membershipId}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -107,11 +109,10 @@ public class Social {
 
     /**
      * Returns your Bungie Friend list
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SocialGetFriendListResponse socialGetFriendList(org.openapis.openapi.models.operations.SocialGetFriendListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SocialGetFriendListResponse socialGetFriendList() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/Social/Friends/");
         
@@ -120,8 +121,7 @@ public class Social {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -145,11 +145,10 @@ public class Social {
 
     /**
      * Returns your friend request queue.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SocialGetFriendRequestListResponse socialGetFriendRequestList(org.openapis.openapi.models.operations.SocialGetFriendRequestListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SocialGetFriendRequestListResponse socialGetFriendRequestList() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/Social/Friends/Requests/");
         
@@ -158,8 +157,7 @@ public class Social {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -189,7 +187,7 @@ public class Social {
      */
     public org.openapis.openapi.models.operations.SocialGetPlatformFriendListResponse socialGetPlatformFriendList(org.openapis.openapi.models.operations.SocialGetPlatformFriendListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SocialGetPlatformFriendListPathParams.class, baseUrl, "/Social/PlatformFriends/{friendPlatform}/{page}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SocialGetPlatformFriendListRequest.class, baseUrl, "/Social/PlatformFriends/{friendPlatform}/{page}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -221,19 +219,20 @@ public class Social {
     /**
      * Requests a friend relationship with the target user. Any of the target user's linked membership ids are valid inputs.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SocialIssueFriendRequestResponse socialIssueFriendRequest(org.openapis.openapi.models.operations.SocialIssueFriendRequestRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SocialIssueFriendRequestResponse socialIssueFriendRequest(org.openapis.openapi.models.operations.SocialIssueFriendRequestRequest request, org.openapis.openapi.models.operations.SocialIssueFriendRequestSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SocialIssueFriendRequestPathParams.class, baseUrl, "/Social/Friends/Add/{membershipId}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SocialIssueFriendRequestRequest.class, baseUrl, "/Social/Friends/Add/{membershipId}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -259,19 +258,20 @@ public class Social {
     /**
      * Remove a friend relationship with the target user. The user must be on your friend list, though no error will occur if they are not.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SocialRemoveFriendResponse socialRemoveFriend(org.openapis.openapi.models.operations.SocialRemoveFriendRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SocialRemoveFriendResponse socialRemoveFriend(org.openapis.openapi.models.operations.SocialRemoveFriendRequest request, org.openapis.openapi.models.operations.SocialRemoveFriendSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SocialRemoveFriendPathParams.class, baseUrl, "/Social/Friends/Remove/{membershipId}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SocialRemoveFriendRequest.class, baseUrl, "/Social/Friends/Remove/{membershipId}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -297,19 +297,20 @@ public class Social {
     /**
      * Remove a friend relationship with the target user. The user must be on your outgoing request friend list, though no error will occur if they are not.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SocialRemoveFriendRequestResponse socialRemoveFriendRequest(org.openapis.openapi.models.operations.SocialRemoveFriendRequestRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SocialRemoveFriendRequestResponse socialRemoveFriendRequest(org.openapis.openapi.models.operations.SocialRemoveFriendRequestRequest request, org.openapis.openapi.models.operations.SocialRemoveFriendRequestSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SocialRemoveFriendRequestPathParams.class, baseUrl, "/Social/Friends/Requests/Remove/{membershipId}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SocialRemoveFriendRequestRequest.class, baseUrl, "/Social/Friends/Requests/Remove/{membershipId}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KkidMasteruserPostSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeAppKey appKey;
-    public KkidMasteruserPostSecurity withAppKey(org.openapis.openapi.models.shared.SchemeAppKey appKey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Auth")
+    public String appKey;
+    public KkidMasteruserPostSecurity withAppKey(String appKey) {
         this.appKey = appKey;
         return this;
     }

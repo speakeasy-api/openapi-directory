@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSuffixesSuffixRequest {
-    
-    public GetSuffixesSuffixPathParams pathParams;
-    public GetSuffixesSuffixRequest withPathParams(GetSuffixesSuffixPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=suffix")
+    public String suffix;
+    public GetSuffixesSuffixRequest withSuffix(String suffix) {
+        this.suffix = suffix;
         return this;
     }
     

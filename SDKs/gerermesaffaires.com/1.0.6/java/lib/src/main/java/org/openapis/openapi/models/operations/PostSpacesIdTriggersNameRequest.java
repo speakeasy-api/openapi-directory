@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesIdTriggersNameRequest {
-    
-    public PostSpacesIdTriggersNamePathParams pathParams;
-    public PostSpacesIdTriggersNameRequest withPathParams(PostSpacesIdTriggersNamePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSpacesIdTriggersNameRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public PostSpacesIdTriggersNameSecurity security;
-    public PostSpacesIdTriggersNameRequest withSecurity(PostSpacesIdTriggersNameSecurity security) {
-        this.security = security;
+    /**
+     * trigger name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public PostSpacesIdTriggersNameRequest withName(String name) {
+        this.name = name;
         return this;
     }
     

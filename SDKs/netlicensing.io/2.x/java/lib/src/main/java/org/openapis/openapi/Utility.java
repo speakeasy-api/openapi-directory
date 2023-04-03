@@ -36,11 +36,10 @@ public class Utility {
     /**
      * List License Types
      * Return a list of all License Types supported by the service
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LicenseTypesResponse licenseTypes(org.openapis.openapi.models.operations.LicenseTypesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LicenseTypesResponse licenseTypes() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/utility/licenseTypes");
         
@@ -49,8 +48,7 @@ public class Utility {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -83,11 +81,10 @@ public class Utility {
     /**
      * List Licensing Models
      * Return a list of all licensing models supported by the service
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LicensingModelsResponse licensingModels(org.openapis.openapi.models.operations.LicensingModelsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LicensingModelsResponse licensingModels() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/utility/licensingModels");
         
@@ -96,8 +93,7 @@ public class Utility {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");

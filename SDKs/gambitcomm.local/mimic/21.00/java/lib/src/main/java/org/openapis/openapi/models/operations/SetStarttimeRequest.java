@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetStarttimeRequest {
+    /**
+     * Agent to return the relative start time
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public SetStarttimeRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public SetStarttimePathParams pathParams;
-    public SetStarttimeRequest withPathParams(SetStarttimePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Relative start time of the agent
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=start")
+    public Integer start;
+    public SetStarttimeRequest withStart(Integer start) {
+        this.start = start;
         return this;
     }
     

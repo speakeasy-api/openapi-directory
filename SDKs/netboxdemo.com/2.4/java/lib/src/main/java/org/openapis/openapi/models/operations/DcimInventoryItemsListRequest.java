@@ -4,13 +4,110 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimInventoryItemsListRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=asset_tag")
+    public String assetTag;
+    public DcimInventoryItemsListRequest withAssetTag(String assetTag) {
+        this.assetTag = assetTag;
+        return this;
+    }
     
-    public DcimInventoryItemsListQueryParams queryParams;
-    public DcimInventoryItemsListRequest withQueryParams(DcimInventoryItemsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device")
+    public String device;
+    public DcimInventoryItemsListRequest withDevice(String device) {
+        this.device = device;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_id")
+    public String deviceId;
+    public DcimInventoryItemsListRequest withDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=discovered")
+    public String discovered;
+    public DcimInventoryItemsListRequest withDiscovered(String discovered) {
+        this.discovered = discovered;
+        return this;
+    }
+    
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public DcimInventoryItemsListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=manufacturer")
+    public String manufacturer;
+    public DcimInventoryItemsListRequest withManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=manufacturer_id")
+    public String manufacturerId;
+    public DcimInventoryItemsListRequest withManufacturerId(String manufacturerId) {
+        this.manufacturerId = manufacturerId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public DcimInventoryItemsListRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public DcimInventoryItemsListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parent_id")
+    public String parentId;
+    public DcimInventoryItemsListRequest withParentId(String parentId) {
+        this.parentId = parentId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=part_id")
+    public String partId;
+    public DcimInventoryItemsListRequest withPartId(String partId) {
+        this.partId = partId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public DcimInventoryItemsListRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serial")
+    public String serial;
+    public DcimInventoryItemsListRequest withSerial(String serial) {
+        this.serial = serial;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
+    public String tag;
+    public DcimInventoryItemsListRequest withTag(String tag) {
+        this.tag = tag;
         return this;
     }
     

@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryDeleteApiSpecRequest {
-    
-    public RegistryDeleteApiSpecPathParams pathParams;
-    public RegistryDeleteApiSpecRequest withPathParams(RegistryDeleteApiSpecPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The api id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api")
+    public String api;
+    public RegistryDeleteApiSpecRequest withApi(String api) {
+        this.api = api;
         return this;
     }
     
+    /**
+     * If set to true, any child resources will also be deleted. (Otherwise, the request will only work if there are no child resources.)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=force")
+    public Boolean force;
+    public RegistryDeleteApiSpecRequest withForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
     
-    public RegistryDeleteApiSpecQueryParams queryParams;
-    public RegistryDeleteApiSpecRequest withQueryParams(RegistryDeleteApiSpecQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The location id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
+    public String location;
+    public RegistryDeleteApiSpecRequest withLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public RegistryDeleteApiSpecRequest withProject(String project) {
+        this.project = project;
+        return this;
+    }
+    
+    /**
+     * The spec id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spec")
+    public String spec;
+    public RegistryDeleteApiSpecRequest withSpec(String spec) {
+        this.spec = spec;
+        return this;
+    }
+    
+    /**
+     * The version id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public String version;
+    public RegistryDeleteApiSpecRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

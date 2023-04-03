@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchEnvironmentRequest {
-    
-    public FetchEnvironmentPathParams pathParams;
-    public FetchEnvironmentRequest withPathParams(FetchEnvironmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Service to fetch the Environment resource from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public FetchEnvironmentRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public FetchEnvironmentSecurity security;
-    public FetchEnvironmentRequest withSecurity(FetchEnvironmentSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchEnvironmentRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Environment resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchEnvironmentRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

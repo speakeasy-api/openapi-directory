@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetResourcesTagsIdFormatRequest {
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public String format;
+    public GetResourcesTagsIdFormatRequest withFormat(String format) {
+        this.format = format;
+        return this;
+    }
     
-    public GetResourcesTagsIdFormatPathParams pathParams;
-    public GetResourcesTagsIdFormatRequest withPathParams(GetResourcesTagsIdFormatPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the record to look up
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetResourcesTagsIdFormatRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

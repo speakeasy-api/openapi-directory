@@ -47,13 +47,13 @@ public class Images {
      */
     public org.openapis.openapi.models.operations.GetNamespacesRepositoriesImagesResponse getNamespacesRepositoriesImages(org.openapis.openapi.models.operations.GetNamespacesRepositoriesImagesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNamespacesRepositoriesImagesPathParams.class, baseUrl, "/v2/namespaces/{namespace}/repositories/{repository}/images", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNamespacesRepositoriesImagesRequest.class, baseUrl, "/v2/namespaces/{namespace}/repositories/{repository}/images", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNamespacesRepositoriesImagesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNamespacesRepositoriesImagesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -102,13 +102,13 @@ public class Images {
      */
     public org.openapis.openapi.models.operations.GetNamespacesRepositoriesImagesSummaryResponse getNamespacesRepositoriesImagesSummary(org.openapis.openapi.models.operations.GetNamespacesRepositoriesImagesSummaryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNamespacesRepositoriesImagesSummaryPathParams.class, baseUrl, "/v2/namespaces/{namespace}/repositories/{repository}/images-summary", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNamespacesRepositoriesImagesSummaryRequest.class, baseUrl, "/v2/namespaces/{namespace}/repositories/{repository}/images-summary", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNamespacesRepositoriesImagesSummaryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNamespacesRepositoriesImagesSummaryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -155,13 +155,13 @@ public class Images {
      */
     public org.openapis.openapi.models.operations.GetNamespacesRepositoriesImagesTagsResponse getNamespacesRepositoriesImagesTags(org.openapis.openapi.models.operations.GetNamespacesRepositoriesImagesTagsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNamespacesRepositoriesImagesTagsPathParams.class, baseUrl, "/v2/namespaces/{namespace}/repositories/{repository}/images/{digest}/tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNamespacesRepositoriesImagesTagsRequest.class, baseUrl, "/v2/namespaces/{namespace}/repositories/{repository}/images/{digest}/tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNamespacesRepositoriesImagesTagsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNamespacesRepositoriesImagesTagsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -217,12 +217,12 @@ public class Images {
      */
     public org.openapis.openapi.models.operations.PostNamespacesDeleteImagesResponse postNamespacesDeleteImages(org.openapis.openapi.models.operations.PostNamespacesDeleteImagesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostNamespacesDeleteImagesPathParams.class, baseUrl, "/v2/namespaces/{namespace}/delete-images", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostNamespacesDeleteImagesRequest.class, baseUrl, "/v2/namespaces/{namespace}/delete-images", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "postNamespacesDeleteImagesRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

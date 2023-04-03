@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpacesSpaceIdEmployersAllRequest {
-    
-    public GetSpacesSpaceIdEmployersAllPathParams pathParams;
-    public GetSpacesSpaceIdEmployersAllRequest withPathParams(GetSpacesSpaceIdEmployersAllPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * EmployeeNumber of the employer contract
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EmployeeNumber")
+    public String employeeNumber;
+    public GetSpacesSpaceIdEmployersAllRequest withEmployeeNumber(String employeeNumber) {
+        this.employeeNumber = employeeNumber;
         return this;
     }
     
+    /**
+     * if present returns infos of the ContractingPartner too
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=WithContractingPartner")
+    public String withContractingPartner;
+    public GetSpacesSpaceIdEmployersAllRequest withWithContractingPartner(String withContractingPartner) {
+        this.withContractingPartner = withContractingPartner;
+        return this;
+    }
     
-    public GetSpacesSpaceIdEmployersAllQueryParams queryParams;
-    public GetSpacesSpaceIdEmployersAllRequest withQueryParams(GetSpacesSpaceIdEmployersAllQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public GetSpacesSpaceIdEmployersAllRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPipelineTestReportTestCaseReasonsRequest {
+    /**
+     * The UUID of the pipeline.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pipeline_uuid")
+    public String pipelineUuid;
+    public GetPipelineTestReportTestCaseReasonsRequest withPipelineUuid(String pipelineUuid) {
+        this.pipelineUuid = pipelineUuid;
+        return this;
+    }
     
-    public GetPipelineTestReportTestCaseReasonsPathParams pathParams;
-    public GetPipelineTestReportTestCaseReasonsRequest withPathParams(GetPipelineTestReportTestCaseReasonsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The repository.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public GetPipelineTestReportTestCaseReasonsRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
+    
+    /**
+     * The UUID of the step.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=step_uuid")
+    public String stepUuid;
+    public GetPipelineTestReportTestCaseReasonsRequest withStepUuid(String stepUuid) {
+        this.stepUuid = stepUuid;
+        return this;
+    }
+    
+    /**
+     * The UUID of the test case.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=test_case_uuid")
+    public String testCaseUuid;
+    public GetPipelineTestReportTestCaseReasonsRequest withTestCaseUuid(String testCaseUuid) {
+        this.testCaseUuid = testCaseUuid;
+        return this;
+    }
+    
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetPipelineTestReportTestCaseReasonsRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

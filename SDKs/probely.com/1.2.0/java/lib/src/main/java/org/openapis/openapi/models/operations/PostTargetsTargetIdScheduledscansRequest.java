@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostTargetsTargetIdScheduledscansRequest {
-    
-    public PostTargetsTargetIdScheduledscansPathParams pathParams;
-    public PostTargetsTargetIdScheduledscansRequest withPathParams(PostTargetsTargetIdScheduledscansPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PostTargetsTargetIdScheduledscansRequestBody requestBody;
+    public PostTargetsTargetIdScheduledscansRequest withRequestBody(PostTargetsTargetIdScheduledscansRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostTargetsTargetIdScheduledscansRequestBody request;
-    public PostTargetsTargetIdScheduledscansRequest withRequest(PostTargetsTargetIdScheduledscansRequestBody request) {
-        this.request = request;
+    /**
+     * Target id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=target_id")
+    public String targetId;
+    public PostTargetsTargetIdScheduledscansRequest withTargetId(String targetId) {
+        this.targetId = targetId;
         return this;
     }
     

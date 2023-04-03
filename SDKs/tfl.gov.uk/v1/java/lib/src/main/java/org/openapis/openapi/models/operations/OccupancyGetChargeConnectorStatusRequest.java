@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OccupancyGetChargeConnectorStatusRequest {
-    
-    public OccupancyGetChargeConnectorStatusPathParams pathParams;
-    public OccupancyGetChargeConnectorStatusRequest withPathParams(OccupancyGetChargeConnectorStatusPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ids")
+    public String[] ids;
+    public OccupancyGetChargeConnectorStatusRequest withIds(String[] ids) {
+        this.ids = ids;
         return this;
     }
     

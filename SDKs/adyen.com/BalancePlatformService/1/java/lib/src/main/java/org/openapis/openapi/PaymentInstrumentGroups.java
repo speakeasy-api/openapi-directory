@@ -34,19 +34,20 @@ public class PaymentInstrumentGroups {
      * Get a payment instrument group
      * Returns the details of a payment instrument group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPaymentInstrumentGroupsIdResponse getPaymentInstrumentGroupsId(org.openapis.openapi.models.operations.GetPaymentInstrumentGroupsIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPaymentInstrumentGroupsIdResponse getPaymentInstrumentGroupsId(org.openapis.openapi.models.operations.GetPaymentInstrumentGroupsIdRequest request, org.openapis.openapi.models.operations.GetPaymentInstrumentGroupsIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentInstrumentGroupsIdPathParams.class, baseUrl, "/paymentInstrumentGroups/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentInstrumentGroupsIdRequest.class, baseUrl, "/paymentInstrumentGroups/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,19 +83,20 @@ public class PaymentInstrumentGroups {
      * Get all transaction rules for a payment instrument group
      * Returns a list of all the transaction rules associated with a payment instrument group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPaymentInstrumentGroupsIdTransactionRulesResponse getPaymentInstrumentGroupsIdTransactionRules(org.openapis.openapi.models.operations.GetPaymentInstrumentGroupsIdTransactionRulesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPaymentInstrumentGroupsIdTransactionRulesResponse getPaymentInstrumentGroupsIdTransactionRules(org.openapis.openapi.models.operations.GetPaymentInstrumentGroupsIdTransactionRulesRequest request, org.openapis.openapi.models.operations.GetPaymentInstrumentGroupsIdTransactionRulesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentInstrumentGroupsIdTransactionRulesPathParams.class, baseUrl, "/paymentInstrumentGroups/{id}/transactionRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentInstrumentGroupsIdTransactionRulesRequest.class, baseUrl, "/paymentInstrumentGroups/{id}/transactionRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -130,10 +132,11 @@ public class PaymentInstrumentGroups {
      * Create a payment instrument group
      * Creates a payment instrument group to associate and group payment instrument resources together. You can apply a transaction rule to a payment instrument group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPaymentInstrumentGroupsResponse postPaymentInstrumentGroups(org.openapis.openapi.models.operations.PostPaymentInstrumentGroupsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPaymentInstrumentGroupsResponse postPaymentInstrumentGroups(org.openapis.openapi.models.shared.PaymentInstrumentGroupInfo request, org.openapis.openapi.models.operations.PostPaymentInstrumentGroupsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/paymentInstrumentGroups");
         
@@ -144,7 +147,7 @@ public class PaymentInstrumentGroups {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutConsumerV1AppointmentsIdNoshowRequest {
-    
-    public PutConsumerV1AppointmentsIdNoshowPathParams pathParams;
-    public PutConsumerV1AppointmentsIdNoshowRequest withPathParams(PutConsumerV1AppointmentsIdNoshowPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public java.util.Map<String, Object> requestBody;
+    public PutConsumerV1AppointmentsIdNoshowRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public PutConsumerV1AppointmentsIdNoshowRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    /**
+     * appointment id to mark as NoShow
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PutConsumerV1AppointmentsIdNoshowRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

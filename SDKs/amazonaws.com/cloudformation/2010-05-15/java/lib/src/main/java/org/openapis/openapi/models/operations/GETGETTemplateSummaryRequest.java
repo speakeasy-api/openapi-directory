@@ -4,20 +4,119 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETTemplateSummaryRequest {
-    
-    public GETGETTemplateSummaryQueryParams queryParams;
-    public GETGETTemplateSummaryRequest withQueryParams(GETGETTemplateSummaryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETGETTemplateSummaryActionEnum action;
+    public GETGETTemplateSummaryRequest withAction(GETGETTemplateSummaryActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;[Service-managed permissions] Specifies whether you are acting as an account administrator in the organization's management account or as a delegated administrator in a member account.&lt;/p&gt; &lt;p&gt;By default, &lt;code&gt;SELF&lt;/code&gt; is specified. Use &lt;code&gt;SELF&lt;/code&gt; for stack sets with self-managed permissions.&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;If you are signed in to the management account, specify &lt;code&gt;SELF&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;If you are signed in to a delegated administrator account, specify &lt;code&gt;DELEGATED_ADMIN&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;Your Amazon Web Services account must be registered as a delegated administrator in the management account. For more information, see &lt;a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"&gt;Register a delegated administrator&lt;/a&gt; in the &lt;i&gt;CloudFormation User Guide&lt;/i&gt;.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CallAs")
+    public GETGETTemplateSummaryCallAsEnum callAs;
+    public GETGETTemplateSummaryRequest withCallAs(GETGETTemplateSummaryCallAsEnum callAs) {
+        this.callAs = callAs;
+        return this;
+    }
     
-    public GETGETTemplateSummaryHeaders headers;
-    public GETGETTemplateSummaryRequest withHeaders(GETGETTemplateSummaryHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The name or the stack ID that's associated with the stack, which aren't always interchangeable. For running stacks, you can specify either the stack's name or its unique stack ID. For deleted stack, you must specify the unique stack ID.&lt;/p&gt; &lt;p&gt;Conditional: You must specify only one of the following parameters: &lt;code&gt;StackName&lt;/code&gt;, &lt;code&gt;StackSetName&lt;/code&gt;, &lt;code&gt;TemplateBody&lt;/code&gt;, or &lt;code&gt;TemplateURL&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StackName")
+    public String stackName;
+    public GETGETTemplateSummaryRequest withStackName(String stackName) {
+        this.stackName = stackName;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The name or unique ID of the stack set from which the stack was created.&lt;/p&gt; &lt;p&gt;Conditional: You must specify only one of the following parameters: &lt;code&gt;StackName&lt;/code&gt;, &lt;code&gt;StackSetName&lt;/code&gt;, &lt;code&gt;TemplateBody&lt;/code&gt;, or &lt;code&gt;TemplateURL&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StackSetName")
+    public String stackSetName;
+    public GETGETTemplateSummaryRequest withStackSetName(String stackSetName) {
+        this.stackSetName = stackSetName;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Structure containing the template body with a minimum length of 1 byte and a maximum length of 51,200 bytes. For more information about templates, see &lt;a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html"&gt;Template anatomy&lt;/a&gt; in the CloudFormation User Guide.&lt;/p&gt; &lt;p&gt;Conditional: You must specify only one of the following parameters: &lt;code&gt;StackName&lt;/code&gt;, &lt;code&gt;StackSetName&lt;/code&gt;, &lt;code&gt;TemplateBody&lt;/code&gt;, or &lt;code&gt;TemplateURL&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TemplateBody")
+    public String templateBody;
+    public GETGETTemplateSummaryRequest withTemplateBody(String templateBody) {
+        this.templateBody = templateBody;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Location of file containing the template body. The URL must point to a template (max size: 460,800 bytes) that's located in an Amazon S3 bucket or a Systems Manager document. For more information about templates, see &lt;a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html"&gt;Template anatomy&lt;/a&gt; in the CloudFormation User Guide.&lt;/p&gt; &lt;p&gt;Conditional: You must specify only one of the following parameters: &lt;code&gt;StackName&lt;/code&gt;, &lt;code&gt;StackSetName&lt;/code&gt;, &lt;code&gt;TemplateBody&lt;/code&gt;, or &lt;code&gt;TemplateURL&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TemplateURL")
+    public String templateURL;
+    public GETGETTemplateSummaryRequest withTemplateURL(String templateURL) {
+        this.templateURL = templateURL;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETGETTemplateSummaryVersionEnum version;
+    public GETGETTemplateSummaryRequest withVersion(GETGETTemplateSummaryVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETGETTemplateSummaryRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETGETTemplateSummaryRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETGETTemplateSummaryRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETGETTemplateSummaryRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETGETTemplateSummaryRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETGETTemplateSummaryRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETGETTemplateSummaryRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

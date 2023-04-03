@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class QueryDbRequest {
-    
-    public QueryDbQueryParams queryParams;
-    public QueryDbRequest withQueryParams(QueryDbQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Query (contact name, dns, domain etc)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public QueryDbRequest withQuery(String query) {
+        this.query = query;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimDevicesGraphsRequest {
-    
-    public DcimDevicesGraphsPathParams pathParams;
-    public DcimDevicesGraphsRequest withPathParams(DcimDevicesGraphsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this device.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimDevicesGraphsRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

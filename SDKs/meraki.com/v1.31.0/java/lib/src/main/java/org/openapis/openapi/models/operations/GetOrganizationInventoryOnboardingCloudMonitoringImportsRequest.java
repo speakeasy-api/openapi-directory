@@ -4,20 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationInventoryOnboardingCloudMonitoringImportsRequest {
-    
-    public GetOrganizationInventoryOnboardingCloudMonitoringImportsPathParams pathParams;
-    public GetOrganizationInventoryOnboardingCloudMonitoringImportsRequest withPathParams(GetOrganizationInventoryOnboardingCloudMonitoringImportsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * import ids from an imports
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=importIds")
+    public String[] importIds;
+    public GetOrganizationInventoryOnboardingCloudMonitoringImportsRequest withImportIds(String[] importIds) {
+        this.importIds = importIds;
         return this;
     }
     
-    
-    public GetOrganizationInventoryOnboardingCloudMonitoringImportsQueryParams queryParams;
-    public GetOrganizationInventoryOnboardingCloudMonitoringImportsRequest withQueryParams(GetOrganizationInventoryOnboardingCloudMonitoringImportsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public GetOrganizationInventoryOnboardingCloudMonitoringImportsRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

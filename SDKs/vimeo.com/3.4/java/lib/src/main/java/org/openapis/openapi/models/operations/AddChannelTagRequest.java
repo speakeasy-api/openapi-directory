@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddChannelTagRequest {
-    
-    public AddChannelTagPathParams pathParams;
-    public AddChannelTagRequest withPathParams(AddChannelTagPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel_id")
+    public Double channelId;
+    public AddChannelTagRequest withChannelId(Double channelId) {
+        this.channelId = channelId;
         return this;
     }
     
-    
-    public AddChannelTagSecurity security;
-    public AddChannelTagRequest withSecurity(AddChannelTagSecurity security) {
-        this.security = security;
+    /**
+     * The word to use as the tag.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=word")
+    public String word;
+    public AddChannelTagRequest withWord(String word) {
+        this.word = word;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopPointCrowdingRequest {
-    
-    public StopPointCrowdingPathParams pathParams;
-    public StopPointCrowdingRequest withPathParams(StopPointCrowdingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The direction of travel. Can be inbound or outbound.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public StopPointCrowdingDirectionEnum direction;
+    public StopPointCrowdingRequest withDirection(StopPointCrowdingDirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
+    /**
+     * The Naptan id of the stop
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public StopPointCrowdingRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public StopPointCrowdingQueryParams queryParams;
-    public StopPointCrowdingRequest withQueryParams(StopPointCrowdingQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A particular line e.g. victoria, circle, northern etc.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=line")
+    public String line;
+    public StopPointCrowdingRequest withLine(String line) {
+        this.line = line;
         return this;
     }
     

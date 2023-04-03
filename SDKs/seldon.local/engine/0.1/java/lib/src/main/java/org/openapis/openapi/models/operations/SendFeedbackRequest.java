@@ -7,24 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SendFeedbackRequest {
-    
-    public SendFeedbackPathParams pathParams;
-    public SendFeedbackRequest withPathParams(SendFeedbackPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Feedback request;
-    public SendFeedbackRequest withRequest(org.openapis.openapi.models.shared.Feedback request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Feedback feedback;
+    public SendFeedbackRequest withFeedback(org.openapis.openapi.models.shared.Feedback feedback) {
+        this.feedback = feedback;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deployment")
+    public String deployment;
+    public SendFeedbackRequest withDeployment(String deployment) {
+        this.deployment = deployment;
+        return this;
+    }
     
-    public SendFeedbackSecurity security;
-    public SendFeedbackRequest withSecurity(SendFeedbackSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=namespace")
+    public String namespace;
+    public SendFeedbackRequest withNamespace(String namespace) {
+        this.namespace = namespace;
         return this;
     }
     

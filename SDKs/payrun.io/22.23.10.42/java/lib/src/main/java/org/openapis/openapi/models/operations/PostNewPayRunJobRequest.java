@@ -7,10 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostNewPayRunJobRequest {
+    /**
+     * The version of the api to target. Omit or set as &amp;apos;default&amp;apos; to target the current api version.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Version")
+    public String apiVersion;
+    public PostNewPayRunJobRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
     
-    public PostNewPayRunJobHeaders headers;
-    public PostNewPayRunJobRequest withHeaders(PostNewPayRunJobHeaders headers) {
-        this.headers = headers;
+    /**
+     * The OAuth 1 authorization header. &amp;apos;Auto&amp;apos; enables auto complete.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostNewPayRunJobRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
@@ -18,9 +31,9 @@ public class PostNewPayRunJobRequest {
      * The pay run job instruction object.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PayRunJobInstruction request;
-    public PostNewPayRunJobRequest withRequest(org.openapis.openapi.models.shared.PayRunJobInstruction request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PayRunJobInstruction payRunJobInstruction;
+    public PostNewPayRunJobRequest withPayRunJobInstruction(org.openapis.openapi.models.shared.PayRunJobInstruction payRunJobInstruction) {
+        this.payRunJobInstruction = payRunJobInstruction;
         return this;
     }
     

@@ -4,13 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1TimelinesPublicRequest {
+    /**
+     * Max number of results to return. Defaults to 20.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetApiV1TimelinesPublicRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetApiV1TimelinesPublicQueryParams queryParams;
-    public GetApiV1TimelinesPublicRequest withQueryParams(GetApiV1TimelinesPublicQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Show only local statuses? Defaults to false.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=local")
+    public Boolean local;
+    public GetApiV1TimelinesPublicRequest withLocal(Boolean local) {
+        this.local = local;
+        return this;
+    }
+    
+    /**
+     * Return results older than ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_id")
+    public String maxId;
+    public GetApiV1TimelinesPublicRequest withMaxId(String maxId) {
+        this.maxId = maxId;
+        return this;
+    }
+    
+    /**
+     * Return results immediately newer than ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_id")
+    public String minId;
+    public GetApiV1TimelinesPublicRequest withMinId(String minId) {
+        this.minId = minId;
+        return this;
+    }
+    
+    /**
+     * Show only statuses with media attached? Defaults to false..
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=only_media")
+    public Boolean onlyMedia;
+    public GetApiV1TimelinesPublicRequest withOnlyMedia(Boolean onlyMedia) {
+        this.onlyMedia = onlyMedia;
+        return this;
+    }
+    
+    /**
+     * Show only local statuses? Defaults to false.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=remote")
+    public Boolean remote;
+    public GetApiV1TimelinesPublicRequest withRemote(Boolean remote) {
+        this.remote = remote;
+        return this;
+    }
+    
+    /**
+     * Return results newer than ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since_id")
+    public String sinceId;
+    public GetApiV1TimelinesPublicRequest withSinceId(String sinceId) {
+        this.sinceId = sinceId;
         return this;
     }
     

@@ -34,25 +34,26 @@ public class BillingProfiles {
     /**
      * Gets one billing profile by ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingBillingProfilesGetResponse dfareportingBillingProfilesGet(org.openapis.openapi.models.operations.DfareportingBillingProfilesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingBillingProfilesGetResponse dfareportingBillingProfilesGet(org.openapis.openapi.models.operations.DfareportingBillingProfilesGetRequest request, org.openapis.openapi.models.operations.DfareportingBillingProfilesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingBillingProfilesGetPathParams.class, baseUrl, "/userprofiles/{profileId}/billingProfiles/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingBillingProfilesGetRequest.class, baseUrl, "/userprofiles/{profileId}/billingProfiles/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingBillingProfilesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingBillingProfilesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class BillingProfiles {
     /**
      * Retrieves a list of billing profiles, possibly filtered. This method supports paging.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingBillingProfilesListResponse dfareportingBillingProfilesList(org.openapis.openapi.models.operations.DfareportingBillingProfilesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingBillingProfilesListResponse dfareportingBillingProfilesList(org.openapis.openapi.models.operations.DfareportingBillingProfilesListRequest request, org.openapis.openapi.models.operations.DfareportingBillingProfilesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingBillingProfilesListPathParams.class, baseUrl, "/userprofiles/{profileId}/billingProfiles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingBillingProfilesListRequest.class, baseUrl, "/userprofiles/{profileId}/billingProfiles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingBillingProfilesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingBillingProfilesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,27 +126,28 @@ public class BillingProfiles {
     /**
      * Updates an existing billing profile.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingBillingProfilesUpdateResponse dfareportingBillingProfilesUpdate(org.openapis.openapi.models.operations.DfareportingBillingProfilesUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingBillingProfilesUpdateResponse dfareportingBillingProfilesUpdate(org.openapis.openapi.models.operations.DfareportingBillingProfilesUpdateRequest request, org.openapis.openapi.models.operations.DfareportingBillingProfilesUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingBillingProfilesUpdatePathParams.class, baseUrl, "/userprofiles/{profileId}/billingProfiles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingBillingProfilesUpdateRequest.class, baseUrl, "/userprofiles/{profileId}/billingProfiles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "billingProfile", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingBillingProfilesUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingBillingProfilesUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

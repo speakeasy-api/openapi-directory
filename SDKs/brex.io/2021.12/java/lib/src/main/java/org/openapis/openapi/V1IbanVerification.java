@@ -37,10 +37,11 @@ public class V1IbanVerification {
      * Checks validity of an IBAN number
      * Basic verification of an IBAN number validating its structure
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IbanBasicResponse ibanBasic(org.openapis.openapi.models.operations.IbanBasicRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IbanBasicResponse ibanBasic(org.openapis.openapi.models.operations.IbanBasicRequestBody request, org.openapis.openapi.models.operations.IbanBasicSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/iban-verification/check-iban");
         
@@ -54,7 +55,7 @@ public class V1IbanVerification {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -90,10 +91,11 @@ public class V1IbanVerification {
      * Checks validity of an IBAN number
      * Comprehensive verification of IBAN number using a service provider for verification
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IbanComprehensiveResponse ibanComprehensive(org.openapis.openapi.models.operations.IbanComprehensiveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IbanComprehensiveResponse ibanComprehensive(org.openapis.openapi.models.operations.IbanComprehensiveRequestBody request, org.openapis.openapi.models.operations.IbanComprehensiveSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/iban-verification/comprehensive-check-iban");
         
@@ -107,7 +109,7 @@ public class V1IbanVerification {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

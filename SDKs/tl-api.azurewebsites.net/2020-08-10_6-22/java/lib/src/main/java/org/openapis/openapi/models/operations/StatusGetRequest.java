@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StatusGetRequest {
-    
-    public StatusGetQueryParams queryParams;
-    public StatusGetRequest withQueryParams(StatusGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * respose of POST request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=messageId")
+    public String messageId;
+    public StatusGetRequest withMessageId(String messageId) {
+        this.messageId = messageId;
         return this;
     }
     

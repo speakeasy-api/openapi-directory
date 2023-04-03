@@ -7,34 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class QuerySuggestedImageCountFormRequest {
-    
-    public QuerySuggestedImageCountFormPathParams pathParams;
-    public QuerySuggestedImageCountFormRequest withPathParams(QuerySuggestedImageCountFormPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public QuerySuggestedImageCountFormQueryParams queryParams;
-    public QuerySuggestedImageCountFormRequest withQueryParams(QuerySuggestedImageCountFormQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public QuerySuggestedImageCountFormHeaders headers;
-    public QuerySuggestedImageCountFormRequest withHeaders(QuerySuggestedImageCountFormHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * Model that contains tagIds, threshold and projectType to query by.
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.TagFilter request;
-    public QuerySuggestedImageCountFormRequest withRequest(org.openapis.openapi.models.shared.TagFilter request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TagFilter tagFilter;
+    public QuerySuggestedImageCountFormRequest withTagFilter(org.openapis.openapi.models.shared.TagFilter tagFilter) {
+        this.tagFilter = tagFilter;
+        return this;
+    }
+    
+    /**
+     * API key.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
+    public String trainingKey;
+    public QuerySuggestedImageCountFormRequest withTrainingKey(String trainingKey) {
+        this.trainingKey = trainingKey;
+        return this;
+    }
+    
+    /**
+     * IterationId to use for the suggested tags and regions.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=iterationId")
+    public String iterationId;
+    public QuerySuggestedImageCountFormRequest withIterationId(String iterationId) {
+        this.iterationId = iterationId;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public QuerySuggestedImageCountFormRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

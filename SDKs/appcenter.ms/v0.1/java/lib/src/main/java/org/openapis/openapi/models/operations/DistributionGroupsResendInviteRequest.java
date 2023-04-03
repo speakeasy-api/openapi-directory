@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DistributionGroupsResendInviteRequest {
-    
-    public DistributionGroupsResendInvitePathParams pathParams;
-    public DistributionGroupsResendInviteRequest withPathParams(DistributionGroupsResendInvitePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The list of members to add
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public DistributionGroupsResendInviteRequestBody request;
-    public DistributionGroupsResendInviteRequest withRequest(DistributionGroupsResendInviteRequestBody request) {
-        this.request = request;
+    public DistributionGroupsResendInviteRequestBody requestBody;
+    public DistributionGroupsResendInviteRequest withRequestBody(DistributionGroupsResendInviteRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public DistributionGroupsResendInviteRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public DistributionGroupsResendInviteSecurity security;
-    public DistributionGroupsResendInviteRequest withSecurity(DistributionGroupsResendInviteSecurity security) {
-        this.security = security;
+    /**
+     * The name of the distribution group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=distribution_group_name")
+    public String distributionGroupName;
+    public DistributionGroupsResendInviteRequest withDistributionGroupName(String distributionGroupName) {
+        this.distributionGroupName = distributionGroupName;
+        return this;
+    }
+    
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public DistributionGroupsResendInviteRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

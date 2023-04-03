@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpacesIdAccountingYearRequest {
-    
-    public GetSpacesIdAccountingYearPathParams pathParams;
-    public GetSpacesIdAccountingYearRequest withPathParams(GetSpacesIdAccountingYearPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Effective date inside  the accounting year  (range not available)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EffectiveDate")
+    public String effectiveDate;
+    public GetSpacesIdAccountingYearRequest withEffectiveDate(String effectiveDate) {
+        this.effectiveDate = effectiveDate;
         return this;
     }
     
+    /**
+     * End date of the accounting year (YYYYMM or YYYYMMDD) (range not available)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=End")
+    public String end;
+    public GetSpacesIdAccountingYearRequest withEnd(String end) {
+        this.end = end;
+        return this;
+    }
     
-    public GetSpacesIdAccountingYearQueryParams queryParams;
-    public GetSpacesIdAccountingYearRequest withQueryParams(GetSpacesIdAccountingYearQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSpacesIdAccountingYearRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

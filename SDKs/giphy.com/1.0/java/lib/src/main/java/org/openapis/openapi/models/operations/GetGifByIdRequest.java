@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGifByIdRequest {
-    
-    public GetGifByIdPathParams pathParams;
-    public GetGifByIdRequest withPathParams(GetGifByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filters results by specified GIF ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=gifId")
+    public Integer gifId;
+    public GetGifByIdRequest withGifId(Integer gifId) {
+        this.gifId = gifId;
         return this;
     }
     

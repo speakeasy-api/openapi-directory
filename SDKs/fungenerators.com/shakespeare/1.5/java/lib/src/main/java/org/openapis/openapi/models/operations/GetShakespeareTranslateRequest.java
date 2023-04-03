@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetShakespeareTranslateRequest {
-    
-    public GetShakespeareTranslateQueryParams queryParams;
-    public GetShakespeareTranslateRequest withQueryParams(GetShakespeareTranslateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetShakespeareTranslateSecurity security;
-    public GetShakespeareTranslateRequest withSecurity(GetShakespeareTranslateSecurity security) {
-        this.security = security;
+    /**
+     * Text to translate to Shakespeare English.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
+    public String text;
+    public GetShakespeareTranslateRequest withText(String text) {
+        this.text = text;
         return this;
     }
     

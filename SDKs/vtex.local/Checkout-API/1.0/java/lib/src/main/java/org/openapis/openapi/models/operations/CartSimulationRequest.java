@@ -7,24 +7,52 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CartSimulationRequest {
-    
-    public CartSimulationQueryParams queryParams;
-    public CartSimulationRequest withQueryParams(CartSimulationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public CartSimulationRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public CartSimulationHeaders headers;
-    public CartSimulationRequest withHeaders(CartSimulationHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public CartSimulationRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public CartSimulationRequestBody request;
-    public CartSimulationRequest withRequest(CartSimulationRequestBody request) {
-        this.request = request;
+    public CartSimulationRequestBody requestBody;
+    public CartSimulationRequest withRequestBody(CartSimulationRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * This parameter defines which promotions apply to the simulation. Use `0` for simulations at cart stage, which means all promotions apply. In case of window simulation use `1`, which indicates promotions that apply nominal discounts over the total purchase value shouldn't be considered on the simulation.
+     * 
+     * Note that if this not sent, the parameter is `1`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RnbBehavior")
+    public Long rnbBehavior;
+    public CartSimulationRequest withRnbBehavior(Long rnbBehavior) {
+        this.rnbBehavior = rnbBehavior;
+        return this;
+    }
+    
+    /**
+     * Trade Policy (Sales Channel) identification.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sc")
+    public Long sc;
+    public CartSimulationRequest withSc(Long sc) {
+        this.sc = sc;
         return this;
     }
     

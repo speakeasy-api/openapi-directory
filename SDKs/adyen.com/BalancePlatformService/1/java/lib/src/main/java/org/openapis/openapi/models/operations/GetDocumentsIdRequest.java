@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDocumentsIdRequest {
-    
-    public GetDocumentsIdPathParams pathParams;
-    public GetDocumentsIdRequest withPathParams(GetDocumentsIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetDocumentsIdSecurity security;
-    public GetDocumentsIdRequest withSecurity(GetDocumentsIdSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the document.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetDocumentsIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

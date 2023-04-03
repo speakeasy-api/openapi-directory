@@ -7,10 +7,10 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VerifyAadharBioUsingPOSTRequest {
-    
-    public VerifyAadharBioUsingPOSTHeaders headers;
-    public VerifyAadharBioUsingPOSTRequest withHeaders(VerifyAadharBioUsingPOSTHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public VerifyAadharBioUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
@@ -18,16 +18,9 @@ public class VerifyAadharBioUsingPOSTRequest {
      * verifyAadharOtpRequest
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.VerifyAadhaarWithBio request;
-    public VerifyAadharBioUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.VerifyAadhaarWithBio request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public VerifyAadharBioUsingPOSTSecurity security;
-    public VerifyAadharBioUsingPOSTRequest withSecurity(VerifyAadharBioUsingPOSTSecurity security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.VerifyAadhaarWithBio verifyAadhaarWithBio;
+    public VerifyAadharBioUsingPOSTRequest withVerifyAadhaarWithBio(org.openapis.openapi.models.shared.VerifyAadhaarWithBio verifyAadhaarWithBio) {
+        this.verifyAadhaarWithBio = verifyAadhaarWithBio;
         return this;
     }
     

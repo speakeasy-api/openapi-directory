@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETEnsemblProteinMappingUsingGETRequest {
-    
-    public GETEnsemblProteinMappingUsingGETPathParams pathParams;
-    public GETEnsemblProteinMappingUsingGETRequest withPathParams(GETEnsemblProteinMappingUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * RGD ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rgdId")
+    public Integer rgdId;
+    public GETEnsemblProteinMappingUsingGETRequest withRgdId(Integer rgdId) {
+        this.rgdId = rgdId;
         return this;
     }
     

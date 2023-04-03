@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnableHpvcManagerRequest {
-    
-    public EnableHpvcManagerPathParams pathParams;
-    public EnableHpvcManagerRequest withPathParams(EnableHpvcManagerPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public EnableHpvcManagerSecurity security;
-    public EnableHpvcManagerRequest withSecurity(EnableHpvcManagerSecurity security) {
-        this.security = security;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public EnableHpvcManagerRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

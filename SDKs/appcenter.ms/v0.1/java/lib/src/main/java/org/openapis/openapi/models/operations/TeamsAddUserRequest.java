@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsAddUserRequest {
-    
-    public TeamsAddUserPathParams pathParams;
-    public TeamsAddUserRequest withPathParams(TeamsAddUserPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The email of the user to add to the team
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public TeamsAddUserRequestBody request;
-    public TeamsAddUserRequest withRequest(TeamsAddUserRequestBody request) {
-        this.request = request;
+    public TeamsAddUserRequestBody requestBody;
+    public TeamsAddUserRequest withRequestBody(TeamsAddUserRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The organization's name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_name")
+    public String orgName;
+    public TeamsAddUserRequest withOrgName(String orgName) {
+        this.orgName = orgName;
+        return this;
+    }
     
-    public TeamsAddUserSecurity security;
-    public TeamsAddUserRequest withSecurity(TeamsAddUserSecurity security) {
-        this.security = security;
+    /**
+     * The team's name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_name")
+    public String teamName;
+    public TeamsAddUserRequest withTeamName(String teamName) {
+        this.teamName = teamName;
         return this;
     }
     

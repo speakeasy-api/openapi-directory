@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimPowerOutletsUpdateRequest {
-    
-    public DcimPowerOutletsUpdatePathParams pathParams;
-    public DcimPowerOutletsUpdateRequest withPathParams(DcimPowerOutletsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.WritablePowerOutletInput writablePowerOutletInput;
+    public DcimPowerOutletsUpdateRequest withWritablePowerOutletInput(org.openapis.openapi.models.shared.WritablePowerOutletInput writablePowerOutletInput) {
+        this.writablePowerOutletInput = writablePowerOutletInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WritablePowerOutletInput request;
-    public DcimPowerOutletsUpdateRequest withRequest(org.openapis.openapi.models.shared.WritablePowerOutletInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this power outlet.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimPowerOutletsUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

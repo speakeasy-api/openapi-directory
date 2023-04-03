@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateFilterPropertyRequest {
-    
-    public UpdateFilterPropertyPathParams pathParams;
-    public UpdateFilterPropertyRequest withPathParams(UpdateFilterPropertyPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated view's filter property.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.FilterPropertyDTO request;
-    public UpdateFilterPropertyRequest withRequest(org.openapis.openapi.models.shared.FilterPropertyDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.FilterPropertyDTO filterPropertyDTO;
+    public UpdateFilterPropertyRequest withFilterPropertyDTO(org.openapis.openapi.models.shared.FilterPropertyDTO filterPropertyDTO) {
+        this.filterPropertyDTO = filterPropertyDTO;
+        return this;
+    }
+    
+    /**
+     * view's filter property name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=filterProperty")
+    public String filterProperty;
+    public UpdateFilterPropertyRequest withFilterProperty(String filterProperty) {
+        this.filterProperty = filterProperty;
+        return this;
+    }
+    
+    /**
+     * view's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=viewId")
+    public Long viewId;
+    public UpdateFilterPropertyRequest withViewId(Long viewId) {
+        this.viewId = viewId;
         return this;
     }
     

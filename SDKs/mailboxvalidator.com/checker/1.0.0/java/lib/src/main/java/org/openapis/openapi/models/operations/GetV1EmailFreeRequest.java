@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV1EmailFreeRequest {
+    /**
+     * The email address to check if is from a free email provider.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public GetV1EmailFreeRequest withEmail(String email) {
+        this.email = email;
+        return this;
+    }
     
-    public GetV1EmailFreeQueryParams queryParams;
-    public GetV1EmailFreeRequest withQueryParams(GetV1EmailFreeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Return the result in json (default) or xml format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public GetV1EmailFreeFormatEnum format;
+    public GetV1EmailFreeRequest withFormat(GetV1EmailFreeFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * API key.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public GetV1EmailFreeRequest withKey(String key) {
+        this.key = key;
         return this;
     }
     

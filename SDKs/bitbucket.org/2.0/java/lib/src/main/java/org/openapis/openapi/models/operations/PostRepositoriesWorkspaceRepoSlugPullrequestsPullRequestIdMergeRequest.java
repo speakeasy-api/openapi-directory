@@ -7,31 +7,66 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeRequest {
-    
-    public PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergePathParams pathParams;
-    public PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeRequest withPathParams(PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeQueryParams queryParams;
-    public PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeRequest withQueryParams(PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Default value is false.
+     * 
+     * 
+     * When set to true, runs merge asynchronously and
+     * immediately returns a 202 with polling link to
+     * the task-status API in the Location header.
+     * 
+     * 
+     * When set to false, runs merge and waits for it to
+     * complete, returning 200 when it succeeds. If the
+     * duration of the merge exceeds a timeout threshold,
+     * the API returns a 202 with polling link to the
+     * task-status API in the Location header.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=async")
+    public Boolean async;
+    public PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeRequest withAsync(Boolean async) {
+        this.async = async;
+        return this;
+    }
     
-    public PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeSecurity security;
-    public PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeRequest withSecurity(PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeSecurity security) {
-        this.security = security;
+    /**
+     * The id of the pull request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pull_request_id")
+    public Long pullRequestId;
+    public PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeRequest withPullRequestId(Long pullRequestId) {
+        this.pullRequestId = pullRequestId;
+        return this;
+    }
+    
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
+    
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdMergeRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

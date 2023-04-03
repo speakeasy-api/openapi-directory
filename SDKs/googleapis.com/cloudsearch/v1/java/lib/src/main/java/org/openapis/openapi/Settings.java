@@ -34,27 +34,28 @@ public class Settings {
     /**
      * Creates a datasource. **Note:** This API requires an admin account to execute.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsearchSettingsDatasourcesCreateResponse cloudsearchSettingsDatasourcesCreate(org.openapis.openapi.models.operations.CloudsearchSettingsDatasourcesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsearchSettingsDatasourcesCreateResponse cloudsearchSettingsDatasourcesCreate(org.openapis.openapi.models.operations.CloudsearchSettingsDatasourcesCreateRequest request, org.openapis.openapi.models.operations.CloudsearchSettingsDatasourcesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/settings/datasources");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "dataSource", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchSettingsDatasourcesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchSettingsDatasourcesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,10 +82,11 @@ public class Settings {
     /**
      * Lists datasources. **Note:** This API requires an admin account to execute.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsearchSettingsDatasourcesListResponse cloudsearchSettingsDatasourcesList(org.openapis.openapi.models.operations.CloudsearchSettingsDatasourcesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsearchSettingsDatasourcesListResponse cloudsearchSettingsDatasourcesList(org.openapis.openapi.models.operations.CloudsearchSettingsDatasourcesListRequest request, org.openapis.openapi.models.operations.CloudsearchSettingsDatasourcesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/settings/datasources");
         
@@ -92,14 +94,14 @@ public class Settings {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchSettingsDatasourcesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchSettingsDatasourcesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,10 +128,11 @@ public class Settings {
     /**
      * Get customer settings. **Note:** This API requires an admin account to execute.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsearchSettingsGetCustomerResponse cloudsearchSettingsGetCustomer(org.openapis.openapi.models.operations.CloudsearchSettingsGetCustomerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsearchSettingsGetCustomerResponse cloudsearchSettingsGetCustomer(org.openapis.openapi.models.operations.CloudsearchSettingsGetCustomerRequest request, org.openapis.openapi.models.operations.CloudsearchSettingsGetCustomerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/settings/customer");
         
@@ -137,14 +140,14 @@ public class Settings {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchSettingsGetCustomerQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchSettingsGetCustomerRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,27 +174,28 @@ public class Settings {
     /**
      * Creates a search application. **Note:** This API requires an admin account to execute.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsCreateResponse cloudsearchSettingsSearchapplicationsCreate(org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsCreateResponse cloudsearchSettingsSearchapplicationsCreate(org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsCreateRequest request, org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/settings/searchapplications");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "searchApplicationInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -218,25 +222,26 @@ public class Settings {
     /**
      * Deletes a search application. **Note:** This API requires an admin account to execute.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsDeleteResponse cloudsearchSettingsSearchapplicationsDelete(org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsDeleteResponse cloudsearchSettingsSearchapplicationsDelete(org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsDeleteRequest request, org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsDeletePathParams.class, baseUrl, "/v1/settings/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsDeleteRequest.class, baseUrl, "/v1/settings/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -263,25 +268,26 @@ public class Settings {
     /**
      * Gets the specified search application. **Note:** This API requires an admin account to execute.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsGetResponse cloudsearchSettingsSearchapplicationsGet(org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsGetResponse cloudsearchSettingsSearchapplicationsGet(org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsGetRequest request, org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsGetPathParams.class, baseUrl, "/v1/settings/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsGetRequest.class, baseUrl, "/v1/settings/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -308,10 +314,11 @@ public class Settings {
     /**
      * Lists all search applications. **Note:** This API requires an admin account to execute.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsListResponse cloudsearchSettingsSearchapplicationsList(org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsListResponse cloudsearchSettingsSearchapplicationsList(org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsListRequest request, org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/settings/searchapplications");
         
@@ -319,14 +326,14 @@ public class Settings {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -353,27 +360,28 @@ public class Settings {
     /**
      * Updates a search application. **Note:** This API requires an admin account to execute.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsPatchResponse cloudsearchSettingsSearchapplicationsPatch(org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsPatchResponse cloudsearchSettingsSearchapplicationsPatch(org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsPatchRequest request, org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsPatchPathParams.class, baseUrl, "/v1/settings/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsPatchRequest.class, baseUrl, "/v1/settings/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "searchApplicationInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -400,27 +408,28 @@ public class Settings {
     /**
      * Resets a search application to default settings. This will return an empty response. **Note:** This API requires an admin account to execute.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsResetResponse cloudsearchSettingsSearchapplicationsReset(org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsResetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsResetResponse cloudsearchSettingsSearchapplicationsReset(org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsResetRequest request, org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsResetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsResetPathParams.class, baseUrl, "/v1/settings/{name}:reset", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsResetRequest.class, baseUrl, "/v1/settings/{name}:reset", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "resetSearchApplicationRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsResetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsResetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -447,27 +456,28 @@ public class Settings {
     /**
      * Updates a search application. **Note:** This API requires an admin account to execute.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsUpdateResponse cloudsearchSettingsSearchapplicationsUpdate(org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsUpdateResponse cloudsearchSettingsSearchapplicationsUpdate(org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsUpdateRequest request, org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsUpdatePathParams.class, baseUrl, "/v1/settings/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsUpdateRequest.class, baseUrl, "/v1/settings/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "searchApplicationInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchSettingsSearchapplicationsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -494,27 +504,28 @@ public class Settings {
     /**
      * Update customer settings. **Note:** This API requires an admin account to execute.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsearchSettingsUpdateCustomerResponse cloudsearchSettingsUpdateCustomer(org.openapis.openapi.models.operations.CloudsearchSettingsUpdateCustomerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsearchSettingsUpdateCustomerResponse cloudsearchSettingsUpdateCustomer(org.openapis.openapi.models.operations.CloudsearchSettingsUpdateCustomerRequest request, org.openapis.openapi.models.operations.CloudsearchSettingsUpdateCustomerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/settings/customer");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "customerSettings", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchSettingsUpdateCustomerQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchSettingsUpdateCustomerRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

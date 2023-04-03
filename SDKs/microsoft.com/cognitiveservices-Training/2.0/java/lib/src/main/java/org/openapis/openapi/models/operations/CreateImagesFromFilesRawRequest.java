@@ -7,27 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateImagesFromFilesRawRequest {
-    
-    public CreateImagesFromFilesRawPathParams pathParams;
-    public CreateImagesFromFilesRawRequest withPathParams(CreateImagesFromFilesRawPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CreateImagesFromFilesRawHeaders headers;
-    public CreateImagesFromFilesRawRequest withHeaders(CreateImagesFromFilesRawHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * The batch of image files to add. Limited to 64 images and 20 tags per batch
      */
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public CreateImagesFromFilesRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public CreateImagesFromFilesRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
+    public String trainingKey;
+    public CreateImagesFromFilesRawRequest withTrainingKey(String trainingKey) {
+        this.trainingKey = trainingKey;
+        return this;
+    }
+    
+    /**
+     * The project id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public CreateImagesFromFilesRawRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

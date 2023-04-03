@@ -34,10 +34,11 @@ public class APIs {
      * Degree/ Diploma Certificate
      * API to verify Degree/ Diploma Certificate.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DgcerResponse dgcer(org.openapis.openapi.models.operations.DgcerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DgcerResponse dgcer(org.openapis.openapi.models.operations.DgcerRequestBody request, org.openapis.openapi.models.operations.DgcerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/dgcer/certificate");
         
@@ -48,7 +49,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,10 +127,11 @@ public class APIs {
      * Degree/ Diploma Marksheet
      * API to verify Degree/ Diploma Marksheet.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DgmstResponse dgmst(org.openapis.openapi.models.operations.DgmstRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DgmstResponse dgmst(org.openapis.openapi.models.operations.DgmstRequestBody request, org.openapis.openapi.models.operations.DgmstSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/dgmst/certificate");
         
@@ -140,7 +142,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

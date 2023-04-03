@@ -4,13 +4,50 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListGroupsRequest {
+    /**
+     * The number of groups to return.  Defaults to 20.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListGroupsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public ListGroupsQueryParams queryParams;
-    public ListGroupsRequest withQueryParams(ListGroupsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of groups to skip before starting the result set.  Defaults to 0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public ListGroupsRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Sort order, ascending (`asc`) or descending (`desc`).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public org.openapis.openapi.models.shared.SortOrderEnum order;
+    public ListGroupsRequest withOrder(org.openapis.openapi.models.shared.SortOrderEnum order) {
+        this.order = order;
+        return this;
+    }
+    
+    /**
+     * The field to sort by.  Can be one of:
+     * 
+     * * `name`
+     * * `createdOn`
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderby")
+    public org.openapis.openapi.models.shared.SortByEnum orderby;
+    public ListGroupsRequest withOrderby(org.openapis.openapi.models.shared.SortByEnum orderby) {
+        this.orderby = orderby;
         return this;
     }
     

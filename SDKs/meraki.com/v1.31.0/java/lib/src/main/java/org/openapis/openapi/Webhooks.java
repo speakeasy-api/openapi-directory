@@ -43,12 +43,12 @@ public class Webhooks {
      */
     public org.openapis.openapi.models.operations.CreateNetworkWebhooksHttpServerResponse createNetworkWebhooksHttpServer(org.openapis.openapi.models.operations.CreateNetworkWebhooksHttpServerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkWebhooksHttpServerPathParams.class, baseUrl, "/networks/{networkId}/webhooks/httpServers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkWebhooksHttpServerRequest.class, baseUrl, "/networks/{networkId}/webhooks/httpServers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -88,12 +88,12 @@ public class Webhooks {
      */
     public org.openapis.openapi.models.operations.CreateNetworkWebhooksPayloadTemplateResponse createNetworkWebhooksPayloadTemplate(org.openapis.openapi.models.operations.CreateNetworkWebhooksPayloadTemplateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkWebhooksPayloadTemplatePathParams.class, baseUrl, "/networks/{networkId}/webhooks/payloadTemplates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkWebhooksPayloadTemplateRequest.class, baseUrl, "/networks/{networkId}/webhooks/payloadTemplates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -133,12 +133,12 @@ public class Webhooks {
      */
     public org.openapis.openapi.models.operations.CreateNetworkWebhooksWebhookTestResponse createNetworkWebhooksWebhookTest(org.openapis.openapi.models.operations.CreateNetworkWebhooksWebhookTestRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkWebhooksWebhookTestPathParams.class, baseUrl, "/networks/{networkId}/webhooks/webhookTests", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkWebhooksWebhookTestRequest.class, baseUrl, "/networks/{networkId}/webhooks/webhookTests", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -178,7 +178,7 @@ public class Webhooks {
      */
     public org.openapis.openapi.models.operations.DeleteNetworkWebhooksHttpServerResponse deleteNetworkWebhooksHttpServer(org.openapis.openapi.models.operations.DeleteNetworkWebhooksHttpServerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkWebhooksHttpServerPathParams.class, baseUrl, "/networks/{networkId}/webhooks/httpServers/{httpServerId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkWebhooksHttpServerRequest.class, baseUrl, "/networks/{networkId}/webhooks/httpServers/{httpServerId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -212,7 +212,7 @@ public class Webhooks {
      */
     public org.openapis.openapi.models.operations.DeleteNetworkWebhooksPayloadTemplateResponse deleteNetworkWebhooksPayloadTemplate(org.openapis.openapi.models.operations.DeleteNetworkWebhooksPayloadTemplateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkWebhooksPayloadTemplatePathParams.class, baseUrl, "/networks/{networkId}/webhooks/payloadTemplates/{payloadTemplateId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkWebhooksPayloadTemplateRequest.class, baseUrl, "/networks/{networkId}/webhooks/payloadTemplates/{payloadTemplateId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -246,7 +246,7 @@ public class Webhooks {
      */
     public org.openapis.openapi.models.operations.GetNetworkWebhooksHttpServerResponse getNetworkWebhooksHttpServer(org.openapis.openapi.models.operations.GetNetworkWebhooksHttpServerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWebhooksHttpServerPathParams.class, baseUrl, "/networks/{networkId}/webhooks/httpServers/{httpServerId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWebhooksHttpServerRequest.class, baseUrl, "/networks/{networkId}/webhooks/httpServers/{httpServerId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -286,7 +286,7 @@ public class Webhooks {
      */
     public org.openapis.openapi.models.operations.GetNetworkWebhooksHttpServersResponse getNetworkWebhooksHttpServers(org.openapis.openapi.models.operations.GetNetworkWebhooksHttpServersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWebhooksHttpServersPathParams.class, baseUrl, "/networks/{networkId}/webhooks/httpServers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWebhooksHttpServersRequest.class, baseUrl, "/networks/{networkId}/webhooks/httpServers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -326,7 +326,7 @@ public class Webhooks {
      */
     public org.openapis.openapi.models.operations.GetNetworkWebhooksPayloadTemplateResponse getNetworkWebhooksPayloadTemplate(org.openapis.openapi.models.operations.GetNetworkWebhooksPayloadTemplateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWebhooksPayloadTemplatePathParams.class, baseUrl, "/networks/{networkId}/webhooks/payloadTemplates/{payloadTemplateId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWebhooksPayloadTemplateRequest.class, baseUrl, "/networks/{networkId}/webhooks/payloadTemplates/{payloadTemplateId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -366,7 +366,7 @@ public class Webhooks {
      */
     public org.openapis.openapi.models.operations.GetNetworkWebhooksPayloadTemplatesResponse getNetworkWebhooksPayloadTemplates(org.openapis.openapi.models.operations.GetNetworkWebhooksPayloadTemplatesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWebhooksPayloadTemplatesPathParams.class, baseUrl, "/networks/{networkId}/webhooks/payloadTemplates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWebhooksPayloadTemplatesRequest.class, baseUrl, "/networks/{networkId}/webhooks/payloadTemplates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -406,7 +406,7 @@ public class Webhooks {
      */
     public org.openapis.openapi.models.operations.GetNetworkWebhooksWebhookTestResponse getNetworkWebhooksWebhookTest(org.openapis.openapi.models.operations.GetNetworkWebhooksWebhookTestRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWebhooksWebhookTestPathParams.class, baseUrl, "/networks/{networkId}/webhooks/webhookTests/{webhookTestId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWebhooksWebhookTestRequest.class, baseUrl, "/networks/{networkId}/webhooks/webhookTests/{webhookTestId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -446,13 +446,13 @@ public class Webhooks {
      */
     public org.openapis.openapi.models.operations.GetOrganizationWebhooksAlertTypesResponse getOrganizationWebhooksAlertTypes(org.openapis.openapi.models.operations.GetOrganizationWebhooksAlertTypesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationWebhooksAlertTypesPathParams.class, baseUrl, "/organizations/{organizationId}/webhooks/alertTypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationWebhooksAlertTypesRequest.class, baseUrl, "/organizations/{organizationId}/webhooks/alertTypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationWebhooksAlertTypesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationWebhooksAlertTypesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -492,13 +492,13 @@ public class Webhooks {
      */
     public org.openapis.openapi.models.operations.GetOrganizationWebhooksLogsResponse getOrganizationWebhooksLogs(org.openapis.openapi.models.operations.GetOrganizationWebhooksLogsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationWebhooksLogsPathParams.class, baseUrl, "/organizations/{organizationId}/webhooks/logs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationWebhooksLogsRequest.class, baseUrl, "/organizations/{organizationId}/webhooks/logs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationWebhooksLogsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationWebhooksLogsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -540,12 +540,12 @@ public class Webhooks {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkWebhooksHttpServerResponse updateNetworkWebhooksHttpServer(org.openapis.openapi.models.operations.UpdateNetworkWebhooksHttpServerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWebhooksHttpServerPathParams.class, baseUrl, "/networks/{networkId}/webhooks/httpServers/{httpServerId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWebhooksHttpServerRequest.class, baseUrl, "/networks/{networkId}/webhooks/httpServers/{httpServerId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -582,12 +582,12 @@ public class Webhooks {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkWebhooksPayloadTemplateResponse updateNetworkWebhooksPayloadTemplate(org.openapis.openapi.models.operations.UpdateNetworkWebhooksPayloadTemplateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWebhooksPayloadTemplatePathParams.class, baseUrl, "/networks/{networkId}/webhooks/payloadTemplates/{payloadTemplateId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWebhooksPayloadTemplateRequest.class, baseUrl, "/networks/{networkId}/webhooks/payloadTemplates/{payloadTemplateId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

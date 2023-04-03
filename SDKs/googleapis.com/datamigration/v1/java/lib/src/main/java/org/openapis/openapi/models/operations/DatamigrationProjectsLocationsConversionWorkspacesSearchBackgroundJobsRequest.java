@@ -4,27 +4,156 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsRequest {
-    
-    public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsPathParams pathParams;
-    public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsRequest withPathParams(DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsQueryParams queryParams;
-    public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsRequest withQueryParams(DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsSecurity security;
-    public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsRequest withSecurity(DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsSecurity security) {
-        this.security = security;
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Optional. If provided, only returns jobs that completed until (not including) the given timestamp.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=completedUntilTime")
+    public String completedUntilTime;
+    public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsRequest withCompletedUntilTime(String completedUntilTime) {
+        this.completedUntilTime = completedUntilTime;
+        return this;
+    }
+    
+    /**
+     * Required. Name of the conversion workspace resource whose jobs are listed, in the form of: projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversionWorkspace")
+    public String conversionWorkspace;
+    public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsRequest withConversionWorkspace(String conversionWorkspace) {
+        this.conversionWorkspace = conversionWorkspace;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Optional. The maximum number of jobs to return. The service may return fewer than this value. If unspecified, at most 100 jobs are returned. The maximum value is 100; values above 100 are coerced to 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxSize")
+    public Long maxSize;
+    public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsRequest withMaxSize(Long maxSize) {
+        this.maxSize = maxSize;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Optional. Whether or not to return just the most recent job per job type,
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=returnMostRecentPerJobType")
+    public Boolean returnMostRecentPerJobType;
+    public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsRequest withReturnMostRecentPerJobType(Boolean returnMostRecentPerJobType) {
+        this.returnMostRecentPerJobType = returnMostRecentPerJobType;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

@@ -4,27 +4,43 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExportIterationRequest {
-    
-    public ExportIterationPathParams pathParams;
-    public ExportIterationRequest withPathParams(ExportIterationPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
+    public String trainingKey;
+    public ExportIterationRequest withTrainingKey(String trainingKey) {
+        this.trainingKey = trainingKey;
         return this;
     }
     
-    
-    public ExportIterationQueryParams queryParams;
-    public ExportIterationRequest withQueryParams(ExportIterationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The iteration id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=iterationId")
+    public String iterationId;
+    public ExportIterationRequest withIterationId(String iterationId) {
+        this.iterationId = iterationId;
         return this;
     }
     
+    /**
+     * The target platform (coreml or tensorflow)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=platform")
+    public String platform;
+    public ExportIterationRequest withPlatform(String platform) {
+        this.platform = platform;
+        return this;
+    }
     
-    public ExportIterationHeaders headers;
-    public ExportIterationRequest withHeaders(ExportIterationHeaders headers) {
-        this.headers = headers;
+    /**
+     * The project id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public ExportIterationRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

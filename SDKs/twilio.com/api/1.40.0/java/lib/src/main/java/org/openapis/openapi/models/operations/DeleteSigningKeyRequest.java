@@ -4,27 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSigningKeyRequest {
-    
-    public DeleteSigningKeyPathParams pathParams;
-    public DeleteSigningKeyRequest withPathParams(DeleteSigningKeyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public DeleteSigningKeyRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public DeleteSigningKeySecurity security;
-    public DeleteSigningKeyRequest withSecurity(DeleteSigningKeySecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteSigningKeyRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteSigningKeyRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

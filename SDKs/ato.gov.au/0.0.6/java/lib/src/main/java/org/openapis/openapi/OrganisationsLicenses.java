@@ -50,13 +50,13 @@ public class OrganisationsLicenses {
      */
     public org.openapis.openapi.models.operations.DeleteOrganisationsPartyIdLicensesProductIdResponse deleteOrganisationsPartyIdLicensesProductId(org.openapis.openapi.models.operations.DeleteOrganisationsPartyIdLicensesProductIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganisationsPartyIdLicensesProductIdPathParams.class, baseUrl, "/organisations/{partyId}/licenses/{productId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganisationsPartyIdLicensesProductIdRequest.class, baseUrl, "/organisations/{partyId}/licenses/{productId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -106,13 +106,13 @@ public class OrganisationsLicenses {
      */
     public org.openapis.openapi.models.operations.GetOrganisationsPartyIdLicensesResponse getOrganisationsPartyIdLicenses(org.openapis.openapi.models.operations.GetOrganisationsPartyIdLicensesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganisationsPartyIdLicensesPathParams.class, baseUrl, "/organisations/{partyId}/licenses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganisationsPartyIdLicensesRequest.class, baseUrl, "/organisations/{partyId}/licenses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -172,13 +172,13 @@ public class OrganisationsLicenses {
      */
     public org.openapis.openapi.models.operations.GetOrganisationsPartyIdLicensesProductIdResponse getOrganisationsPartyIdLicensesProductId(org.openapis.openapi.models.operations.GetOrganisationsPartyIdLicensesProductIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganisationsPartyIdLicensesProductIdPathParams.class, baseUrl, "/organisations/{partyId}/licenses/{productId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganisationsPartyIdLicensesProductIdRequest.class, baseUrl, "/organisations/{partyId}/licenses/{productId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -236,18 +236,18 @@ public class OrganisationsLicenses {
      */
     public org.openapis.openapi.models.operations.PostOrganisationsPartyIdLicensesResponse postOrganisationsPartyIdLicenses(org.openapis.openapi.models.operations.PostOrganisationsPartyIdLicensesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostOrganisationsPartyIdLicensesPathParams.class, baseUrl, "/organisations/{partyId}/licenses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostOrganisationsPartyIdLicensesRequest.class, baseUrl, "/organisations/{partyId}/licenses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "licenseInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -307,18 +307,18 @@ public class OrganisationsLicenses {
      */
     public org.openapis.openapi.models.operations.PutOrganisationsPartyIdLicensesProductIdResponse putOrganisationsPartyIdLicensesProductId(org.openapis.openapi.models.operations.PutOrganisationsPartyIdLicensesProductIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutOrganisationsPartyIdLicensesProductIdPathParams.class, baseUrl, "/organisations/{partyId}/licenses/{productId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutOrganisationsPartyIdLicensesProductIdRequest.class, baseUrl, "/organisations/{partyId}/licenses/{productId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "licenseInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

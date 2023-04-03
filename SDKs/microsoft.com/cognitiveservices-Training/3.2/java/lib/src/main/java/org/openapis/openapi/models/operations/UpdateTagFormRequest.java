@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateTagFormRequest {
-    
-    public UpdateTagFormPathParams pathParams;
-    public UpdateTagFormRequest withPathParams(UpdateTagFormPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The updated tag model.
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.TagInput request;
-    public UpdateTagFormRequest withRequest(org.openapis.openapi.models.shared.TagInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TagInput tagInput;
+    public UpdateTagFormRequest withTagInput(org.openapis.openapi.models.shared.TagInput tagInput) {
+        this.tagInput = tagInput;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public UpdateTagFormRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    /**
+     * The id of the target tag.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tagId")
+    public String tagId;
+    public UpdateTagFormRequest withTagId(String tagId) {
+        this.tagId = tagId;
         return this;
     }
     

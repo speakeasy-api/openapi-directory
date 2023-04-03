@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Creates a pipeline. For a batch pipeline, you can pass scheduler information. Data Pipelines uses the scheduler information to create an internal scheduler that runs jobs periodically. If the internal scheduler is not configured, you can use RunPipeline to run jobs.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesCreateResponse datapipelinesProjectsLocationsPipelinesCreate(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesCreateResponse datapipelinesProjectsLocationsPipelinesCreate(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesCreateRequest request, org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesCreatePathParams.class, baseUrl, "/v1/{parent}/pipelines", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesCreateRequest.class, baseUrl, "/v1/{parent}/pipelines", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDatapipelinesV1PipelineInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,25 +83,26 @@ public class Projects {
     /**
      * Deletes a pipeline. If a scheduler job is attached to the pipeline, it will be deleted.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesDeleteResponse datapipelinesProjectsLocationsPipelinesDelete(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesDeleteResponse datapipelinesProjectsLocationsPipelinesDelete(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesDeleteRequest request, org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesDeletePathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesDeleteRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,25 +129,26 @@ public class Projects {
     /**
      * Looks up a single pipeline. Returns a "NOT_FOUND" error if no such pipeline exists. Returns a "FORBIDDEN" error if the caller doesn't have permission to access it.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesGetResponse datapipelinesProjectsLocationsPipelinesGet(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesGetResponse datapipelinesProjectsLocationsPipelinesGet(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesGetRequest request, org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesGetPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesGetRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -172,25 +175,26 @@ public class Projects {
     /**
      * Lists jobs for a given pipeline. Throws a "FORBIDDEN" error if the caller doesn't have permission to access it.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesJobsListResponse datapipelinesProjectsLocationsPipelinesJobsList(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesJobsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesJobsListResponse datapipelinesProjectsLocationsPipelinesJobsList(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesJobsListRequest request, org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesJobsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesJobsListPathParams.class, baseUrl, "/v1/{parent}/jobs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesJobsListRequest.class, baseUrl, "/v1/{parent}/jobs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesJobsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesJobsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -217,25 +221,26 @@ public class Projects {
     /**
      * Lists pipelines. Returns a "FORBIDDEN" error if the caller doesn't have permission to access it.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesListResponse datapipelinesProjectsLocationsPipelinesList(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesListResponse datapipelinesProjectsLocationsPipelinesList(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesListRequest request, org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesListPathParams.class, baseUrl, "/v1/{parent}/pipelines", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesListRequest.class, baseUrl, "/v1/{parent}/pipelines", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -262,27 +267,28 @@ public class Projects {
     /**
      * Updates a pipeline. If successful, the updated Pipeline is returned. Returns `NOT_FOUND` if the pipeline doesn't exist. If UpdatePipeline does not return successfully, you can retry the UpdatePipeline request until you receive a successful response.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesPatchResponse datapipelinesProjectsLocationsPipelinesPatch(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesPatchResponse datapipelinesProjectsLocationsPipelinesPatch(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesPatchRequest request, org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesPatchPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesPatchRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDatapipelinesV1PipelineInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -309,27 +315,28 @@ public class Projects {
     /**
      * Creates a job for the specified pipeline directly. You can use this method when the internal scheduler is not configured and you want to trigger the job directly or through an external system. Returns a "NOT_FOUND" error if the pipeline doesn't exist. Returns a "FORBIDDEN" error if the user doesn't have permission to access the pipeline or run jobs for the pipeline.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesRunResponse datapipelinesProjectsLocationsPipelinesRun(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesRunRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesRunResponse datapipelinesProjectsLocationsPipelinesRun(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesRunRequest request, org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesRunSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesRunPathParams.class, baseUrl, "/v1/{name}:run", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesRunRequest.class, baseUrl, "/v1/{name}:run", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesRunQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesRunRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -356,27 +363,28 @@ public class Projects {
     /**
      * Freezes pipeline execution permanently. If there's a corresponding scheduler entry, it's deleted, and the pipeline state is changed to "ARCHIVED". However, pipeline metadata is retained.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesStopResponse datapipelinesProjectsLocationsPipelinesStop(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesStopRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesStopResponse datapipelinesProjectsLocationsPipelinesStop(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesStopRequest request, org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesStopSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesStopPathParams.class, baseUrl, "/v1/{name}:stop", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesStopRequest.class, baseUrl, "/v1/{name}:stop", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesStopQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesStopRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

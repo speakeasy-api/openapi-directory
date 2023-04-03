@@ -4,20 +4,77 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV2EpisodesRequest {
-    
-    public GetApiV2EpisodesQueryParams queryParams;
-    public GetApiV2EpisodesRequest withQueryParams(GetApiV2EpisodesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Matches on the begin air date of the episode (inclusive).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=beginAirDateAfter")
+    public OffsetDateTime beginAirDateAfter;
+    public GetApiV2EpisodesRequest withBeginAirDateAfter(OffsetDateTime beginAirDateAfter) {
+        this.beginAirDateAfter = beginAirDateAfter;
         return this;
     }
     
+    /**
+     * Matches on the end air date of the episode (inclusive).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endAirDateBefore")
+    public OffsetDateTime endAirDateBefore;
+    public GetApiV2EpisodesRequest withEndAirDateBefore(OffsetDateTime endAirDateBefore) {
+        this.endAirDateBefore = endAirDateBefore;
+        return this;
+    }
     
-    public GetApiV2EpisodesSecurity security;
-    public GetApiV2EpisodesRequest withSecurity(GetApiV2EpisodesSecurity security) {
-        this.security = security;
+    /**
+     * Matches on the ID of the episode.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public Long id;
+    public GetApiV2EpisodesRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * The sort order of the list of episodes, based on episode ID. If unspecified, the episodes are returned in random order. If using paging to iterate through the results, sort order should be specified.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderById")
+    public GetApiV2EpisodesOrderByIDEnum orderById;
+    public GetApiV2EpisodesRequest withOrderById(GetApiV2EpisodesOrderByIDEnum orderById) {
+        this.orderById = orderById;
+        return this;
+    }
+    
+    /**
+     * The number of items to return. Must be between 0 and 500, inclusive.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public GetApiV2EpisodesRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The start page of the results to return. The first item is indexed at 0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageStart")
+    public Integer pageStart;
+    public GetApiV2EpisodesRequest withPageStart(Integer pageStart) {
+        this.pageStart = pageStart;
+        return this;
+    }
+    
+    /**
+     * Matches on the ID of the program that owns the episode.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=programId")
+    public Long programId;
+    public GetApiV2EpisodesRequest withProgramId(Long programId) {
+        this.programId = programId;
         return this;
     }
     

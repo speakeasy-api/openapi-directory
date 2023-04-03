@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05UsersAuthNotifyRawRequest {
-    
-    public PostV05UsersAuthNotifyRawHeaders headers;
-    public PostV05UsersAuthNotifyRawRequest withHeaders(PostV05UsersAuthNotifyRawHeaders headers) {
-        this.headers = headers;
+    /**
+     * Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostV05UsersAuthNotifyRawRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/xml")
-    public byte[] request;
-    public PostV05UsersAuthNotifyRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public PostV05UsersAuthNotifyRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Identifier of the health information provider to which the request was intended.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HIP-ID")
+    public String xHipId;
+    public PostV05UsersAuthNotifyRawRequest withXHipId(String xHipId) {
+        this.xHipId = xHipId;
+        return this;
+    }
+    
+    /**
+     * Identifier of the health information user to which the request was intended.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HIU-ID")
+    public String xHiuId;
+    public PostV05UsersAuthNotifyRawRequest withXHiuId(String xHiuId) {
+        this.xHiuId = xHiuId;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMartParalogAssociationsResourceRequest {
+    /**
+     * subject taxon, e.g. NCBITaxon:9606
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taxon1")
+    public String taxon1;
+    public GetMartParalogAssociationsResourceRequest withTaxon1(String taxon1) {
+        this.taxon1 = taxon1;
+        return this;
+    }
     
-    public GetMartParalogAssociationsResourcePathParams pathParams;
-    public GetMartParalogAssociationsResourceRequest withPathParams(GetMartParalogAssociationsResourcePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * object taxon, e.g. NCBITaxon:9606
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taxon2")
+    public String taxon2;
+    public GetMartParalogAssociationsResourceRequest withTaxon2(String taxon2) {
+        this.taxon2 = taxon2;
         return this;
     }
     

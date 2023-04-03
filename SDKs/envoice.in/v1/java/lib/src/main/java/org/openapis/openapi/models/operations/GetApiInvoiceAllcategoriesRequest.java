@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiInvoiceAllcategoriesRequest {
-    
-    public GetApiInvoiceAllcategoriesQueryParams queryParams;
-    public GetApiInvoiceAllcategoriesRequest withQueryParams(GetApiInvoiceAllcategoriesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public GetApiInvoiceAllcategoriesRequest withQuery(String query) {
+        this.query = query;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
+    public String xAuthKey;
+    public GetApiInvoiceAllcategoriesRequest withXAuthKey(String xAuthKey) {
+        this.xAuthKey = xAuthKey;
+        return this;
+    }
     
-    public GetApiInvoiceAllcategoriesHeaders headers;
-    public GetApiInvoiceAllcategoriesRequest withHeaders(GetApiInvoiceAllcategoriesHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
+    public String xAuthSecret;
+    public GetApiInvoiceAllcategoriesRequest withXAuthSecret(String xAuthSecret) {
+        this.xAuthSecret = xAuthSecret;
         return this;
     }
     

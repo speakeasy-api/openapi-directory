@@ -35,13 +35,13 @@ public class ReverseGeocoding {
      */
     public org.openapis.openapi.models.operations.GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtResponse getSearchVersionNumberReverseGeocodeCrossStreetPositionExt(org.openapis.openapi.models.operations.GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtPathParams.class, baseUrl, "/search/{versionNumber}/reverseGeocode/crossStreet/{position}.{ext}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtRequest.class, baseUrl, "/search/{versionNumber}/reverseGeocode/crossStreet/{position}.{ext}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -74,13 +74,13 @@ public class ReverseGeocoding {
      */
     public org.openapis.openapi.models.operations.GetSearchVersionNumberReverseGeocodePositionExtResponse getSearchVersionNumberReverseGeocodePositionExt(org.openapis.openapi.models.operations.GetSearchVersionNumberReverseGeocodePositionExtRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSearchVersionNumberReverseGeocodePositionExtPathParams.class, baseUrl, "/search/{versionNumber}/reverseGeocode/{position}.{ext}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSearchVersionNumberReverseGeocodePositionExtRequest.class, baseUrl, "/search/{versionNumber}/reverseGeocode/{position}.{ext}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSearchVersionNumberReverseGeocodePositionExtQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSearchVersionNumberReverseGeocodePositionExtRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

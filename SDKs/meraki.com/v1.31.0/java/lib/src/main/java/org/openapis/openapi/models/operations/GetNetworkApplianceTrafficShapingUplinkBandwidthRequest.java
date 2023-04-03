@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkApplianceTrafficShapingUplinkBandwidthRequest {
-    
-    public GetNetworkApplianceTrafficShapingUplinkBandwidthPathParams pathParams;
-    public GetNetworkApplianceTrafficShapingUplinkBandwidthRequest withPathParams(GetNetworkApplianceTrafficShapingUplinkBandwidthPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkApplianceTrafficShapingUplinkBandwidthRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

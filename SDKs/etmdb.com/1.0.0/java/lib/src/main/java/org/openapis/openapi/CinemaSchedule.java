@@ -43,7 +43,7 @@ public class CinemaSchedule {
      */
     public org.openapis.openapi.models.operations.CinemaScheduleSearchReadResponse cinemaScheduleSearchRead(org.openapis.openapi.models.operations.CinemaScheduleSearchReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CinemaScheduleSearchReadPathParams.class, baseUrl, "/api/v1/cinema-schedule/search/{movie_title}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CinemaScheduleSearchReadRequest.class, baseUrl, "/api/v1/cinema-schedule/search/{movie_title}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -86,7 +86,7 @@ public class CinemaSchedule {
      */
     public org.openapis.openapi.models.operations.CinemaScheduleSearchallReadResponse cinemaScheduleSearchallRead(org.openapis.openapi.models.operations.CinemaScheduleSearchallReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CinemaScheduleSearchallReadPathParams.class, baseUrl, "/api/v1/cinema-schedule/searchall/{param}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CinemaScheduleSearchallReadRequest.class, baseUrl, "/api/v1/cinema-schedule/searchall/{param}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

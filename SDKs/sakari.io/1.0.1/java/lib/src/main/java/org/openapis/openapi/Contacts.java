@@ -37,27 +37,28 @@ public class Contacts {
     /**
      * Create contact
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContactsCreateJsonResponse contactsCreateJson(org.openapis.openapi.models.operations.ContactsCreateJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContactsCreateJsonResponse contactsCreateJson(org.openapis.openapi.models.operations.ContactsCreateJsonRequest request, org.openapis.openapi.models.operations.ContactsCreateJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactsCreateJsonPathParams.class, baseUrl, "/v1/accounts/{accountId}/contacts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactsCreateJsonRequest.class, baseUrl, "/v1/accounts/{accountId}/contacts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "contactRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactsCreateJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactsCreateJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -84,27 +85,28 @@ public class Contacts {
     /**
      * Create contact
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContactsCreateStringResponse contactsCreateString(org.openapis.openapi.models.operations.ContactsCreateStringRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContactsCreateStringResponse contactsCreateString(org.openapis.openapi.models.operations.ContactsCreateStringRequest request, org.openapis.openapi.models.operations.ContactsCreateStringSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactsCreateStringPathParams.class, baseUrl, "/v1/accounts/{accountId}/contacts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactsCreateStringRequest.class, baseUrl, "/v1/accounts/{accountId}/contacts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "string");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "string");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactsCreateStringQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactsCreateStringRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -131,19 +133,20 @@ public class Contacts {
     /**
      * Fetch contact by ID
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContactsFetchResponse contactsFetch(org.openapis.openapi.models.operations.ContactsFetchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContactsFetchResponse contactsFetch(org.openapis.openapi.models.operations.ContactsFetchRequest request, org.openapis.openapi.models.operations.ContactsFetchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactsFetchPathParams.class, baseUrl, "/v1/accounts/{accountId}/contacts/{contactId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactsFetchRequest.class, baseUrl, "/v1/accounts/{accountId}/contacts/{contactId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -170,25 +173,26 @@ public class Contacts {
     /**
      * Fetch contacts
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContactsFetchAllResponse contactsFetchAll(org.openapis.openapi.models.operations.ContactsFetchAllRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContactsFetchAllResponse contactsFetchAll(org.openapis.openapi.models.operations.ContactsFetchAllRequest request, org.openapis.openapi.models.operations.ContactsFetchAllSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactsFetchAllPathParams.class, baseUrl, "/v1/accounts/{accountId}/contacts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactsFetchAllRequest.class, baseUrl, "/v1/accounts/{accountId}/contacts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactsFetchAllQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContactsFetchAllRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -223,19 +227,20 @@ public class Contacts {
     /**
      * Deletes a contact
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContactsRemoveResponse contactsRemove(org.openapis.openapi.models.operations.ContactsRemoveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContactsRemoveResponse contactsRemove(org.openapis.openapi.models.operations.ContactsRemoveRequest request, org.openapis.openapi.models.operations.ContactsRemoveSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactsRemovePathParams.class, baseUrl, "/v1/accounts/{accountId}/contacts/{contactId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactsRemoveRequest.class, baseUrl, "/v1/accounts/{accountId}/contacts/{contactId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -262,19 +267,20 @@ public class Contacts {
     /**
      * Updates a contact
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContactsUpdateResponse contactsUpdate(org.openapis.openapi.models.operations.ContactsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContactsUpdateResponse contactsUpdate(org.openapis.openapi.models.operations.ContactsUpdateRequest request, org.openapis.openapi.models.operations.ContactsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactsUpdatePathParams.class, baseUrl, "/v1/accounts/{accountId}/contacts/{contactId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactsUpdateRequest.class, baseUrl, "/v1/accounts/{accountId}/contacts/{contactId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

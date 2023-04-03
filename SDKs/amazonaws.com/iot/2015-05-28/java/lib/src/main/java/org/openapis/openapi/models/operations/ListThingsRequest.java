@@ -4,20 +4,115 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListThingsRequest {
-    
-    public ListThingsQueryParams queryParams;
-    public ListThingsRequest withQueryParams(ListThingsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListThingsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListThingsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public ListThingsHeaders headers;
-    public ListThingsRequest withHeaders(ListThingsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListThingsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListThingsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListThingsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListThingsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListThingsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The attribute name used to search for things.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=attributeName")
+    public String attributeName;
+    public ListThingsRequest withAttributeName(String attributeName) {
+        this.attributeName = attributeName;
+        return this;
+    }
+    
+    /**
+     * The attribute value used to search for things.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=attributeValue")
+    public String attributeValue;
+    public ListThingsRequest withAttributeValue(String attributeValue) {
+        this.attributeValue = attributeValue;
+        return this;
+    }
+    
+    /**
+     * The maximum number of results to return in this operation.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public ListThingsRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * To retrieve the next set of results, the &lt;code&gt;nextToken&lt;/code&gt; value from a previous response; otherwise &lt;b&gt;null&lt;/b&gt; to receive the first set of results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
+    public String nextToken;
+    public ListThingsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * The name of the thing type used to search for things.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=thingTypeName")
+    public String thingTypeName;
+    public ListThingsRequest withThingTypeName(String thingTypeName) {
+        this.thingTypeName = thingTypeName;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;When &lt;code&gt;true&lt;/code&gt;, the action returns the thing resources with attribute values that start with the &lt;code&gt;attributeValue&lt;/code&gt; provided.&lt;/p&gt; &lt;p&gt;When &lt;code&gt;false&lt;/code&gt;, or not present, the action returns only the thing resources with attribute values that match the entire &lt;code&gt;attributeValue&lt;/code&gt; provided. &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=usePrefixAttributeValue")
+    public Boolean usePrefixAttributeValue;
+    public ListThingsRequest withUsePrefixAttributeValue(Boolean usePrefixAttributeValue) {
+        this.usePrefixAttributeValue = usePrefixAttributeValue;
         return this;
     }
     

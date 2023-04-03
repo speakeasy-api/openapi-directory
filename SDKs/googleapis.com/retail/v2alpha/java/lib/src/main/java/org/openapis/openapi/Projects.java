@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Adds the specified CatalogAttribute to the AttributesConfig. If the CatalogAttribute to add already exists, an ALREADY_EXISTS error is returned.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigAddCatalogAttributeResponse retailProjectsLocationsCatalogsAttributesConfigAddCatalogAttribute(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigAddCatalogAttributeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigAddCatalogAttributeResponse retailProjectsLocationsCatalogsAttributesConfigAddCatalogAttribute(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigAddCatalogAttributeRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigAddCatalogAttributeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigAddCatalogAttributePathParams.class, baseUrl, "/v2alpha/{attributesConfig}:addCatalogAttribute", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigAddCatalogAttributeRequest.class, baseUrl, "/v2alpha/{attributesConfig}:addCatalogAttribute", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRetailV2alphaAddCatalogAttributeRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigAddCatalogAttributeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigAddCatalogAttributeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,27 +83,28 @@ public class Projects {
     /**
      * Removes all specified CatalogAttributes from the AttributesConfig.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigBatchRemoveCatalogAttributesResponse retailProjectsLocationsCatalogsAttributesConfigBatchRemoveCatalogAttributes(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigBatchRemoveCatalogAttributesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigBatchRemoveCatalogAttributesResponse retailProjectsLocationsCatalogsAttributesConfigBatchRemoveCatalogAttributes(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigBatchRemoveCatalogAttributesRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigBatchRemoveCatalogAttributesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigBatchRemoveCatalogAttributesPathParams.class, baseUrl, "/v2alpha/{attributesConfig}:batchRemoveCatalogAttributes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigBatchRemoveCatalogAttributesRequest.class, baseUrl, "/v2alpha/{attributesConfig}:batchRemoveCatalogAttributes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRetailV2alphaBatchRemoveCatalogAttributesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigBatchRemoveCatalogAttributesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigBatchRemoveCatalogAttributesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -129,27 +131,28 @@ public class Projects {
     /**
      * Removes the specified CatalogAttribute from the AttributesConfig. If the CatalogAttribute to remove does not exist, a NOT_FOUND error is returned.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigRemoveCatalogAttributeResponse retailProjectsLocationsCatalogsAttributesConfigRemoveCatalogAttribute(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigRemoveCatalogAttributeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigRemoveCatalogAttributeResponse retailProjectsLocationsCatalogsAttributesConfigRemoveCatalogAttribute(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigRemoveCatalogAttributeRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigRemoveCatalogAttributeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigRemoveCatalogAttributePathParams.class, baseUrl, "/v2alpha/{attributesConfig}:removeCatalogAttribute", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigRemoveCatalogAttributeRequest.class, baseUrl, "/v2alpha/{attributesConfig}:removeCatalogAttribute", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRetailV2alphaRemoveCatalogAttributeRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigRemoveCatalogAttributeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigRemoveCatalogAttributeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -176,27 +179,28 @@ public class Projects {
     /**
      * Replaces the specified CatalogAttribute in the AttributesConfig by updating the catalog attribute with the same CatalogAttribute.key. If the CatalogAttribute to replace does not exist, a NOT_FOUND error is returned.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigReplaceCatalogAttributeResponse retailProjectsLocationsCatalogsAttributesConfigReplaceCatalogAttribute(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigReplaceCatalogAttributeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigReplaceCatalogAttributeResponse retailProjectsLocationsCatalogsAttributesConfigReplaceCatalogAttribute(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigReplaceCatalogAttributeRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigReplaceCatalogAttributeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigReplaceCatalogAttributePathParams.class, baseUrl, "/v2alpha/{attributesConfig}:replaceCatalogAttribute", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigReplaceCatalogAttributeRequest.class, baseUrl, "/v2alpha/{attributesConfig}:replaceCatalogAttribute", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRetailV2alphaReplaceCatalogAttributeRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigReplaceCatalogAttributeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigReplaceCatalogAttributeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -223,27 +227,28 @@ public class Projects {
     /**
      * It is recommended to use the ProductService.AddLocalInventories method instead of ProductService.AddFulfillmentPlaces. ProductService.AddLocalInventories achieves the same results but provides more fine-grained control over ingesting local inventory data. Incrementally adds place IDs to Product.fulfillment_info.place_ids. This process is asynchronous and does not require the Product to exist before updating fulfillment information. If the request is valid, the update will be enqueued and processed downstream. As a consequence, when a response is returned, the added place IDs are not immediately manifested in the Product queried by ProductService.GetProduct or ProductService.ListProducts. The returned Operations will be obsolete after 1 day, and GetOperation API will return NOT_FOUND afterwards. If conflicting updates are issued, the Operations associated with the stale updates will not be marked as done until being obsolete.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesResponse retailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlaces(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesResponse retailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlaces(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesPathParams.class, baseUrl, "/v2alpha/{product}:addFulfillmentPlaces", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest.class, baseUrl, "/v2alpha/{product}:addFulfillmentPlaces", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRetailV2alphaAddFulfillmentPlacesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -270,27 +275,28 @@ public class Projects {
     /**
      * Updates local inventory information for a Product at a list of places, while respecting the last update timestamps of each inventory field. This process is asynchronous and does not require the Product to exist before updating inventory information. If the request is valid, the update will be enqueued and processed downstream. As a consequence, when a response is returned, updates are not immediately manifested in the Product queried by ProductService.GetProduct or ProductService.ListProducts. Local inventory information can only be modified using this method. ProductService.CreateProduct and ProductService.UpdateProduct has no effect on local inventories. The returned Operations will be obsolete after 1 day, and GetOperation API will return NOT_FOUND afterwards. If conflicting updates are issued, the Operations associated with the stale updates will not be marked as done until being obsolete.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesResponse retailProjectsLocationsCatalogsBranchesProductsAddLocalInventories(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesResponse retailProjectsLocationsCatalogsBranchesProductsAddLocalInventories(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesPathParams.class, baseUrl, "/v2alpha/{product}:addLocalInventories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesRequest.class, baseUrl, "/v2alpha/{product}:addLocalInventories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRetailV2alphaAddLocalInventoriesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -317,27 +323,28 @@ public class Projects {
     /**
      * Creates a Product.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsCreateResponse retailProjectsLocationsCatalogsBranchesProductsCreate(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsCreateResponse retailProjectsLocationsCatalogsBranchesProductsCreate(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsCreateRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsCreatePathParams.class, baseUrl, "/v2alpha/{parent}/products", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsCreateRequest.class, baseUrl, "/v2alpha/{parent}/products", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRetailV2alphaProductInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -364,27 +371,28 @@ public class Projects {
     /**
      * Bulk import of multiple Products. Request processing may be synchronous. Non-existing items are created. Note that it is possible for a subset of the Products to be successfully updated.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsImportResponse retailProjectsLocationsCatalogsBranchesProductsImport(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsImportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsImportResponse retailProjectsLocationsCatalogsBranchesProductsImport(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsImportRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsImportSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsImportPathParams.class, baseUrl, "/v2alpha/{parent}/products:import", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsImportRequest.class, baseUrl, "/v2alpha/{parent}/products:import", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRetailV2alphaImportProductsRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsImportQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsImportRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -411,25 +419,26 @@ public class Projects {
     /**
      * Gets a list of Products.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsListResponse retailProjectsLocationsCatalogsBranchesProductsList(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsListResponse retailProjectsLocationsCatalogsBranchesProductsList(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsListRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsListPathParams.class, baseUrl, "/v2alpha/{parent}/products", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsListRequest.class, baseUrl, "/v2alpha/{parent}/products", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -456,27 +465,28 @@ public class Projects {
     /**
      * Permanently deletes all selected Products under a branch. This process is asynchronous. If the request is valid, the removal will be enqueued and processed offline. Depending on the number of Products, this operation could take hours to complete. Before the operation completes, some Products may still be returned by ProductService.GetProduct or ProductService.ListProducts. Depending on the number of Products, this operation could take hours to complete. To get a sample of Products that would be deleted, set PurgeProductsRequest.force to false.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsPurgeResponse retailProjectsLocationsCatalogsBranchesProductsPurge(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsPurgeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsPurgeResponse retailProjectsLocationsCatalogsBranchesProductsPurge(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsPurgeRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsPurgeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsPurgePathParams.class, baseUrl, "/v2alpha/{parent}/products:purge", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsPurgeRequest.class, baseUrl, "/v2alpha/{parent}/products:purge", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRetailV2alphaPurgeProductsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsPurgeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsPurgeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -503,27 +513,28 @@ public class Projects {
     /**
      * It is recommended to use the ProductService.RemoveLocalInventories method instead of ProductService.RemoveFulfillmentPlaces. ProductService.RemoveLocalInventories achieves the same results but provides more fine-grained control over ingesting local inventory data. Incrementally removes place IDs from a Product.fulfillment_info.place_ids. This process is asynchronous and does not require the Product to exist before updating fulfillment information. If the request is valid, the update will be enqueued and processed downstream. As a consequence, when a response is returned, the removed place IDs are not immediately manifested in the Product queried by ProductService.GetProduct or ProductService.ListProducts. The returned Operations will be obsolete after 1 day, and GetOperation API will return NOT_FOUND afterwards. If conflicting updates are issued, the Operations associated with the stale updates will not be marked as done until being obsolete.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsRemoveFulfillmentPlacesResponse retailProjectsLocationsCatalogsBranchesProductsRemoveFulfillmentPlaces(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsRemoveFulfillmentPlacesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsRemoveFulfillmentPlacesResponse retailProjectsLocationsCatalogsBranchesProductsRemoveFulfillmentPlaces(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsRemoveFulfillmentPlacesRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsRemoveFulfillmentPlacesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsRemoveFulfillmentPlacesPathParams.class, baseUrl, "/v2alpha/{product}:removeFulfillmentPlaces", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsRemoveFulfillmentPlacesRequest.class, baseUrl, "/v2alpha/{product}:removeFulfillmentPlaces", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRetailV2alphaRemoveFulfillmentPlacesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsRemoveFulfillmentPlacesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsRemoveFulfillmentPlacesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -550,27 +561,28 @@ public class Projects {
     /**
      * Remove local inventory information for a Product at a list of places at a removal timestamp. This process is asynchronous. If the request is valid, the removal will be enqueued and processed downstream. As a consequence, when a response is returned, removals are not immediately manifested in the Product queried by ProductService.GetProduct or ProductService.ListProducts. Local inventory information can only be removed using this method. ProductService.CreateProduct and ProductService.UpdateProduct has no effect on local inventories. The returned Operations will be obsolete after 1 day, and GetOperation API will return NOT_FOUND afterwards. If conflicting updates are issued, the Operations associated with the stale updates will not be marked as done until being obsolete.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsRemoveLocalInventoriesResponse retailProjectsLocationsCatalogsBranchesProductsRemoveLocalInventories(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsRemoveLocalInventoriesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsRemoveLocalInventoriesResponse retailProjectsLocationsCatalogsBranchesProductsRemoveLocalInventories(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsRemoveLocalInventoriesRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsRemoveLocalInventoriesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsRemoveLocalInventoriesPathParams.class, baseUrl, "/v2alpha/{product}:removeLocalInventories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsRemoveLocalInventoriesRequest.class, baseUrl, "/v2alpha/{product}:removeLocalInventories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRetailV2alphaRemoveLocalInventoriesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsRemoveLocalInventoriesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsRemoveLocalInventoriesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -597,27 +609,28 @@ public class Projects {
     /**
      * Updates inventory information for a Product while respecting the last update timestamps of each inventory field. This process is asynchronous and does not require the Product to exist before updating fulfillment information. If the request is valid, the update is enqueued and processed downstream. As a consequence, when a response is returned, updates are not immediately manifested in the Product queried by ProductService.GetProduct or ProductService.ListProducts. When inventory is updated with ProductService.CreateProduct and ProductService.UpdateProduct, the specified inventory field value(s) overwrite any existing value(s) while ignoring the last update time for this field. Furthermore, the last update times for the specified inventory fields are overwritten by the times of the ProductService.CreateProduct or ProductService.UpdateProduct request. If no inventory fields are set in CreateProductRequest.product, then any pre-existing inventory information for this product is used. If no inventory fields are set in SetInventoryRequest.set_mask, then any existing inventory information is preserved. Pre-existing inventory information can only be updated with ProductService.SetInventory, ProductService.AddFulfillmentPlaces, and ProductService.RemoveFulfillmentPlaces. The returned Operations is obsolete after one day, and the GetOperation API returns `NOT_FOUND` afterwards. If conflicting updates are issued, the Operations associated with the stale updates are not marked as done until they are obsolete.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsSetInventoryResponse retailProjectsLocationsCatalogsBranchesProductsSetInventory(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsSetInventoryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsSetInventoryResponse retailProjectsLocationsCatalogsBranchesProductsSetInventory(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsSetInventoryRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsSetInventorySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsSetInventoryPathParams.class, baseUrl, "/v2alpha/{name}:setInventory", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsSetInventoryRequest.class, baseUrl, "/v2alpha/{name}:setInventory", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRetailV2alphaSetInventoryRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsSetInventoryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsSetInventoryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -644,25 +657,26 @@ public class Projects {
     /**
      * Completes the specified prefix with keyword suggestions. This feature is only available for users who have Retail Search enabled. Enable Retail Search on Cloud Console before using this feature.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsCompleteQueryResponse retailProjectsLocationsCatalogsCompleteQuery(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsCompleteQueryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsCompleteQueryResponse retailProjectsLocationsCatalogsCompleteQuery(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsCompleteQueryRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsCompleteQuerySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsCompleteQueryPathParams.class, baseUrl, "/v2alpha/{catalog}:completeQuery", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsCompleteQueryRequest.class, baseUrl, "/v2alpha/{catalog}:completeQuery", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsCompleteQueryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsCompleteQueryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -689,27 +703,28 @@ public class Projects {
     /**
      * Bulk import of processed completion dataset. Request processing is asynchronous. Partial updating is not supported. The operation is successfully finished only after the imported suggestions are indexed successfully and ready for serving. The process takes hours. This feature is only available for users who have Retail Search enabled. Enable Retail Search on Cloud Console before using this feature.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsCompletionDataImportResponse retailProjectsLocationsCatalogsCompletionDataImport(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsCompletionDataImportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsCompletionDataImportResponse retailProjectsLocationsCatalogsCompletionDataImport(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsCompletionDataImportRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsCompletionDataImportSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsCompletionDataImportPathParams.class, baseUrl, "/v2alpha/{parent}/completionData:import", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsCompletionDataImportRequest.class, baseUrl, "/v2alpha/{parent}/completionData:import", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRetailV2alphaImportCompletionDataRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsCompletionDataImportQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsCompletionDataImportRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -736,27 +751,28 @@ public class Projects {
     /**
      * Creates a Control. If the Control to create already exists, an ALREADY_EXISTS error is returned.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsControlsCreateResponse retailProjectsLocationsCatalogsControlsCreate(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsControlsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsControlsCreateResponse retailProjectsLocationsCatalogsControlsCreate(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsControlsCreateRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsControlsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsControlsCreatePathParams.class, baseUrl, "/v2alpha/{parent}/controls", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsControlsCreateRequest.class, baseUrl, "/v2alpha/{parent}/controls", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRetailV2alphaControlInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsControlsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsControlsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -783,25 +799,26 @@ public class Projects {
     /**
      * Lists all Controls by their parent Catalog.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsControlsListResponse retailProjectsLocationsCatalogsControlsList(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsControlsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsControlsListResponse retailProjectsLocationsCatalogsControlsList(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsControlsListRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsControlsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsControlsListPathParams.class, baseUrl, "/v2alpha/{parent}/controls", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsControlsListRequest.class, baseUrl, "/v2alpha/{parent}/controls", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsControlsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsControlsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -828,25 +845,26 @@ public class Projects {
     /**
      * Get which branch is currently default branch set by CatalogService.SetDefaultBranch method under a specified parent catalog.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsGetDefaultBranchResponse retailProjectsLocationsCatalogsGetDefaultBranch(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsGetDefaultBranchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsGetDefaultBranchResponse retailProjectsLocationsCatalogsGetDefaultBranch(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsGetDefaultBranchRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsGetDefaultBranchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsGetDefaultBranchPathParams.class, baseUrl, "/v2alpha/{catalog}:getDefaultBranch", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsGetDefaultBranchRequest.class, baseUrl, "/v2alpha/{catalog}:getDefaultBranch", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsGetDefaultBranchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsGetDefaultBranchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -873,25 +891,26 @@ public class Projects {
     /**
      * Lists all the Catalogs associated with the project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsListResponse retailProjectsLocationsCatalogsList(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsListResponse retailProjectsLocationsCatalogsList(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsListRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsListPathParams.class, baseUrl, "/v2alpha/{parent}/catalogs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsListRequest.class, baseUrl, "/v2alpha/{parent}/catalogs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -918,27 +937,28 @@ public class Projects {
     /**
      * Creates a MerchantCenterAccountLink. MerchantCenterAccountLink cannot be set to a different oneof field, if so an INVALID_ARGUMENT is returned.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksCreateMerchantCenterAccountLinkResponse retailProjectsLocationsCatalogsMerchantCenterAccountLinksCreateMerchantCenterAccountLink(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksCreateMerchantCenterAccountLinkRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksCreateMerchantCenterAccountLinkResponse retailProjectsLocationsCatalogsMerchantCenterAccountLinksCreateMerchantCenterAccountLink(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksCreateMerchantCenterAccountLinkRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksCreateMerchantCenterAccountLinkSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksCreateMerchantCenterAccountLinkPathParams.class, baseUrl, "/v2alpha/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksCreateMerchantCenterAccountLinkRequest.class, baseUrl, "/v2alpha/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRetailV2alphaMerchantCenterAccountLinkInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksCreateMerchantCenterAccountLinkQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksCreateMerchantCenterAccountLinkRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -965,25 +985,26 @@ public class Projects {
     /**
      * Lists all MerchantCenterAccountLinks under the specified parent Catalog.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListResponse retailProjectsLocationsCatalogsMerchantCenterAccountLinksList(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListResponse retailProjectsLocationsCatalogsMerchantCenterAccountLinksList(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListPathParams.class, baseUrl, "/v2alpha/{parent}/merchantCenterAccountLinks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListRequest.class, baseUrl, "/v2alpha/{parent}/merchantCenterAccountLinks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1010,27 +1031,28 @@ public class Projects {
     /**
      * Creates a new model.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsCreateResponse retailProjectsLocationsCatalogsModelsCreate(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsCreateResponse retailProjectsLocationsCatalogsModelsCreate(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsCreateRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsCreatePathParams.class, baseUrl, "/v2alpha/{parent}/models", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsCreateRequest.class, baseUrl, "/v2alpha/{parent}/models", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRetailV2alphaModelInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1057,25 +1079,26 @@ public class Projects {
     /**
      * Lists all the models linked to this event store.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsListResponse retailProjectsLocationsCatalogsModelsList(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsListResponse retailProjectsLocationsCatalogsModelsList(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsListRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsListPathParams.class, baseUrl, "/v2alpha/{parent}/models", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsListRequest.class, baseUrl, "/v2alpha/{parent}/models", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1102,27 +1125,28 @@ public class Projects {
     /**
      * Pauses the training of an existing model.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsPauseResponse retailProjectsLocationsCatalogsModelsPause(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsPauseRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsPauseResponse retailProjectsLocationsCatalogsModelsPause(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsPauseRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsPauseSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsPausePathParams.class, baseUrl, "/v2alpha/{name}:pause", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsPauseRequest.class, baseUrl, "/v2alpha/{name}:pause", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsPauseQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsPauseRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1149,27 +1173,28 @@ public class Projects {
     /**
      * Resumes the training of an existing model.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsResumeResponse retailProjectsLocationsCatalogsModelsResume(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsResumeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsResumeResponse retailProjectsLocationsCatalogsModelsResume(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsResumeRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsResumeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsResumePathParams.class, baseUrl, "/v2alpha/{name}:resume", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsResumeRequest.class, baseUrl, "/v2alpha/{name}:resume", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsResumeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsResumeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1196,27 +1221,28 @@ public class Projects {
     /**
      * Tunes an existing model.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsTuneResponse retailProjectsLocationsCatalogsModelsTune(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsTuneRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsTuneResponse retailProjectsLocationsCatalogsModelsTune(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsTuneRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsTuneSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsTunePathParams.class, baseUrl, "/v2alpha/{name}:tune", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsTuneRequest.class, baseUrl, "/v2alpha/{name}:tune", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsTuneQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsTuneRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1243,27 +1269,28 @@ public class Projects {
     /**
      * Enables a Control on the specified ServingConfig. The control is added in the last position of the list of controls it belongs to (e.g. if it's a facet spec control it will be applied in the last position of servingConfig.facetSpecIds) Returns a ALREADY_EXISTS error if the control has already been applied. Returns a FAILED_PRECONDITION error if the addition could exceed maximum number of control allowed for that type of control.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsAddControlResponse retailProjectsLocationsCatalogsServingConfigsAddControl(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsAddControlRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsAddControlResponse retailProjectsLocationsCatalogsServingConfigsAddControl(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsAddControlRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsAddControlSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsAddControlPathParams.class, baseUrl, "/v2alpha/{servingConfig}:addControl", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsAddControlRequest.class, baseUrl, "/v2alpha/{servingConfig}:addControl", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRetailV2alphaAddControlRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsAddControlQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsAddControlRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1290,27 +1317,28 @@ public class Projects {
     /**
      * Creates a ServingConfig. A maximum of 100 ServingConfigs are allowed in a Catalog, otherwise a FAILED_PRECONDITION error is returned.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsCreateResponse retailProjectsLocationsCatalogsServingConfigsCreate(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsCreateResponse retailProjectsLocationsCatalogsServingConfigsCreate(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsCreateRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsCreatePathParams.class, baseUrl, "/v2alpha/{parent}/servingConfigs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsCreateRequest.class, baseUrl, "/v2alpha/{parent}/servingConfigs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRetailV2alphaServingConfig", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1337,25 +1365,26 @@ public class Projects {
     /**
      * Deletes a ServingConfig. Returns a NotFound error if the ServingConfig does not exist.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsDeleteResponse retailProjectsLocationsCatalogsServingConfigsDelete(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsDeleteResponse retailProjectsLocationsCatalogsServingConfigsDelete(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsDeleteRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsDeletePathParams.class, baseUrl, "/v2alpha/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsDeleteRequest.class, baseUrl, "/v2alpha/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1382,25 +1411,26 @@ public class Projects {
     /**
      * Lists all ServingConfigs linked to this catalog.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsListResponse retailProjectsLocationsCatalogsServingConfigsList(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsListResponse retailProjectsLocationsCatalogsServingConfigsList(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsListRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsListPathParams.class, baseUrl, "/v2alpha/{parent}/servingConfigs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsListRequest.class, baseUrl, "/v2alpha/{parent}/servingConfigs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1427,27 +1457,28 @@ public class Projects {
     /**
      * Updates a ServingConfig.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsPatchResponse retailProjectsLocationsCatalogsServingConfigsPatch(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsPatchResponse retailProjectsLocationsCatalogsServingConfigsPatch(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsPatchRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsPatchPathParams.class, baseUrl, "/v2alpha/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsPatchRequest.class, baseUrl, "/v2alpha/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRetailV2alphaServingConfig", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1474,27 +1505,28 @@ public class Projects {
     /**
      * Makes a recommendation prediction.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsPredictResponse retailProjectsLocationsCatalogsServingConfigsPredict(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsPredictRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsPredictResponse retailProjectsLocationsCatalogsServingConfigsPredict(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsPredictRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsPredictSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsPredictPathParams.class, baseUrl, "/v2alpha/{placement}:predict", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsPredictRequest.class, baseUrl, "/v2alpha/{placement}:predict", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRetailV2alphaPredictRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsPredictQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsPredictRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1521,27 +1553,28 @@ public class Projects {
     /**
      * Disables a Control on the specified ServingConfig. The control is removed from the ServingConfig. Returns a NOT_FOUND error if the Control is not enabled for the ServingConfig.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsRemoveControlResponse retailProjectsLocationsCatalogsServingConfigsRemoveControl(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsRemoveControlRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsRemoveControlResponse retailProjectsLocationsCatalogsServingConfigsRemoveControl(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsRemoveControlRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsRemoveControlSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsRemoveControlPathParams.class, baseUrl, "/v2alpha/{servingConfig}:removeControl", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsRemoveControlRequest.class, baseUrl, "/v2alpha/{servingConfig}:removeControl", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRetailV2alphaRemoveControlRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsRemoveControlQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsRemoveControlRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1568,27 +1601,28 @@ public class Projects {
     /**
      * Performs a search. This feature is only available for users who have Retail Search enabled. Enable Retail Search on Cloud Console before using this feature.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsSearchResponse retailProjectsLocationsCatalogsServingConfigsSearch(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsSearchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsSearchResponse retailProjectsLocationsCatalogsServingConfigsSearch(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsSearchRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsSearchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsSearchPathParams.class, baseUrl, "/v2alpha/{placement}:search", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsSearchRequest.class, baseUrl, "/v2alpha/{placement}:search", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRetailV2alphaSearchRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsSearchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsSearchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1615,27 +1649,28 @@ public class Projects {
     /**
      * Set a specified branch id as default branch. API methods such as SearchService.Search, ProductService.GetProduct, ProductService.ListProducts will treat requests using "default_branch" to the actual branch id set as default. For example, if `projects/* /locations/* /catalogs/* /branches/1` is set as default, setting SearchRequest.branch to `projects/* /locations/* /catalogs/* /branches/default_branch` is equivalent to setting SearchRequest.branch to `projects/* /locations/* /catalogs/* /branches/1`. Using multiple branches can be useful when developers would like to have a staging branch to test and verify for future usage. When it becomes ready, developers switch on the staging branch using this API while keeping using `projects/* /locations/* /catalogs/* /branches/default_branch` as SearchRequest.branch to route the traffic to this staging branch. CAUTION: If you have live predict/search traffic, switching the default branch could potentially cause outages if the ID space of the new branch is very different from the old one. More specifically: * PredictionService will only return product IDs from branch {newBranch}. * SearchService will only return product IDs from branch {newBranch} (if branch is not explicitly set). * UserEventService will only join events with products from branch {newBranch}.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsSetDefaultBranchResponse retailProjectsLocationsCatalogsSetDefaultBranch(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsSetDefaultBranchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsSetDefaultBranchResponse retailProjectsLocationsCatalogsSetDefaultBranch(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsSetDefaultBranchRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsSetDefaultBranchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsSetDefaultBranchPathParams.class, baseUrl, "/v2alpha/{catalog}:setDefaultBranch", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsSetDefaultBranchRequest.class, baseUrl, "/v2alpha/{catalog}:setDefaultBranch", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRetailV2alphaSetDefaultBranchRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsSetDefaultBranchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsSetDefaultBranchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1662,25 +1697,26 @@ public class Projects {
     /**
      * Writes a single user event from the browser. This uses a GET request to due to browser restriction of POST-ing to a 3rd party domain. This method is used only by the Retail API JavaScript pixel and Google Tag Manager. Users should not call this method directly.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsCollectResponse retailProjectsLocationsCatalogsUserEventsCollect(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsCollectRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsCollectResponse retailProjectsLocationsCatalogsUserEventsCollect(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsCollectRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsCollectSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsCollectPathParams.class, baseUrl, "/v2alpha/{parent}/userEvents:collect", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsCollectRequest.class, baseUrl, "/v2alpha/{parent}/userEvents:collect", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsCollectQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsCollectRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1707,27 +1743,28 @@ public class Projects {
     /**
      * Bulk import of User events. Request processing might be synchronous. Events that already exist are skipped. Use this method for backfilling historical user events. `Operation.response` is of type `ImportResponse`. Note that it is possible for a subset of the items to be successfully inserted. `Operation.metadata` is of type `ImportMetadata`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsImportResponse retailProjectsLocationsCatalogsUserEventsImport(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsImportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsImportResponse retailProjectsLocationsCatalogsUserEventsImport(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsImportRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsImportSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsImportPathParams.class, baseUrl, "/v2alpha/{parent}/userEvents:import", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsImportRequest.class, baseUrl, "/v2alpha/{parent}/userEvents:import", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRetailV2alphaImportUserEventsRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsImportQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsImportRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1754,27 +1791,28 @@ public class Projects {
     /**
      * Deletes permanently all user events specified by the filter provided. Depending on the number of events specified by the filter, this operation could take hours or days to complete. To test a filter, use the list command first.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsPurgeResponse retailProjectsLocationsCatalogsUserEventsPurge(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsPurgeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsPurgeResponse retailProjectsLocationsCatalogsUserEventsPurge(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsPurgeRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsPurgeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsPurgePathParams.class, baseUrl, "/v2alpha/{parent}/userEvents:purge", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsPurgeRequest.class, baseUrl, "/v2alpha/{parent}/userEvents:purge", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRetailV2alphaPurgeUserEventsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsPurgeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsPurgeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1801,27 +1839,28 @@ public class Projects {
     /**
      * Starts a user-event rejoin operation with latest product catalog. Events are not annotated with detailed product information for products that are missing from the catalog when the user event is ingested. These events are stored as unjoined events with limited usage on training and serving. You can use this method to start a join operation on specified events with the latest version of product catalog. You can also use this method to correct events joined with the wrong product catalog. A rejoin operation can take hours or days to complete.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsRejoinResponse retailProjectsLocationsCatalogsUserEventsRejoin(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsRejoinRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsRejoinResponse retailProjectsLocationsCatalogsUserEventsRejoin(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsRejoinRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsRejoinSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsRejoinPathParams.class, baseUrl, "/v2alpha/{parent}/userEvents:rejoin", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsRejoinRequest.class, baseUrl, "/v2alpha/{parent}/userEvents:rejoin", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRetailV2alphaRejoinUserEventsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsRejoinQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsRejoinRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1848,27 +1887,28 @@ public class Projects {
     /**
      * Writes a single user event.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsWriteResponse retailProjectsLocationsCatalogsUserEventsWrite(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsWriteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsWriteResponse retailProjectsLocationsCatalogsUserEventsWrite(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsWriteRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsWriteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsWritePathParams.class, baseUrl, "/v2alpha/{parent}/userEvents:write", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsWriteRequest.class, baseUrl, "/v2alpha/{parent}/userEvents:write", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRetailV2alphaUserEventInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsWriteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsWriteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1895,25 +1935,26 @@ public class Projects {
     /**
      * Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsOperationsGetResponse retailProjectsOperationsGet(org.openapis.openapi.models.operations.RetailProjectsOperationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsOperationsGetResponse retailProjectsOperationsGet(org.openapis.openapi.models.operations.RetailProjectsOperationsGetRequest request, org.openapis.openapi.models.operations.RetailProjectsOperationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsOperationsGetPathParams.class, baseUrl, "/v2alpha/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsOperationsGetRequest.class, baseUrl, "/v2alpha/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsOperationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsOperationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1940,25 +1981,26 @@ public class Projects {
     /**
      * Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsOperationsListResponse retailProjectsOperationsList(org.openapis.openapi.models.operations.RetailProjectsOperationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsOperationsListResponse retailProjectsOperationsList(org.openapis.openapi.models.operations.RetailProjectsOperationsListRequest request, org.openapis.openapi.models.operations.RetailProjectsOperationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsOperationsListPathParams.class, baseUrl, "/v2alpha/{name}/operations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsOperationsListRequest.class, baseUrl, "/v2alpha/{name}/operations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsOperationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsOperationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

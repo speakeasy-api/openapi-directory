@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisconnectVendorRequest {
-    
-    public DisconnectVendorPathParams pathParams;
-    public DisconnectVendorRequest withPathParams(DisconnectVendorPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DisconnectVendorSecurity security;
-    public DisconnectVendorRequest withSecurity(DisconnectVendorSecurity security) {
-        this.security = security;
+    /**
+     * Vendor to be unlinked
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=vendor")
+    public DisconnectVendorVendorEnum vendor;
+    public DisconnectVendorRequest withVendor(DisconnectVendorVendorEnum vendor) {
+        this.vendor = vendor;
         return this;
     }
     

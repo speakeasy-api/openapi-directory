@@ -4,27 +4,95 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListExtensionVersionsRequest {
-    
-    public ListExtensionVersionsPathParams pathParams;
-    public ListExtensionVersionsRequest withPathParams(ListExtensionVersionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * &lt;p&gt;The maximum number of results to return.&lt;/p&gt; &lt;p&gt; Use this parameter with NextToken to get results as a set of sequential pages. &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public Long maxResults;
+    public ListExtensionVersionsRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
         return this;
     }
     
-    
-    public ListExtensionVersionsQueryParams queryParams;
-    public ListExtensionVersionsRequest withQueryParams(ListExtensionVersionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The name of the extension.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Name")
+    public String name;
+    public ListExtensionVersionsRequest withName(String name) {
+        this.name = name;
         return this;
     }
     
+    /**
+     * The namespace (qualifier) of the extension.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Namespace")
+    public String namespace;
+    public ListExtensionVersionsRequest withNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
     
-    public ListExtensionVersionsHeaders headers;
-    public ListExtensionVersionsRequest withHeaders(ListExtensionVersionsHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The token that indicates the start of the next sequential page of results.&lt;/p&gt; &lt;p&gt; Use the token that is returned with a previous call to this operation. To start at the beginning of the result set, do not specify a value. &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public ListExtensionVersionsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListExtensionVersionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListExtensionVersionsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListExtensionVersionsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListExtensionVersionsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListExtensionVersionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListExtensionVersionsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListExtensionVersionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

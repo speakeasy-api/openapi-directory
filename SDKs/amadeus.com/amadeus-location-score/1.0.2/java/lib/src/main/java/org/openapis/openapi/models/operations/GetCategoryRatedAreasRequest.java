@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCategoryRatedAreasRequest {
+    /**
+     * Latitude in decimal coordinates
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=latitude")
+    public Double latitude;
+    public GetCategoryRatedAreasRequest withLatitude(Double latitude) {
+        this.latitude = latitude;
+        return this;
+    }
     
-    public GetCategoryRatedAreasQueryParams queryParams;
-    public GetCategoryRatedAreasRequest withQueryParams(GetCategoryRatedAreasQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Longitude in decimal coordinates
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=longitude")
+    public Double longitude;
+    public GetCategoryRatedAreasRequest withLongitude(Double longitude) {
+        this.longitude = longitude;
         return this;
     }
     

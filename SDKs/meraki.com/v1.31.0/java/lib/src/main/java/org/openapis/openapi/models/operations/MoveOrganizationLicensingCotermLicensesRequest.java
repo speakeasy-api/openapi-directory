@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MoveOrganizationLicensingCotermLicensesRequest {
-    
-    public MoveOrganizationLicensingCotermLicensesPathParams pathParams;
-    public MoveOrganizationLicensingCotermLicensesRequest withPathParams(MoveOrganizationLicensingCotermLicensesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public MoveOrganizationLicensingCotermLicensesRequestBody requestBody;
+    public MoveOrganizationLicensingCotermLicensesRequest withRequestBody(MoveOrganizationLicensingCotermLicensesRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public MoveOrganizationLicensingCotermLicensesRequestBody request;
-    public MoveOrganizationLicensingCotermLicensesRequest withRequest(MoveOrganizationLicensingCotermLicensesRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public MoveOrganizationLicensingCotermLicensesRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

@@ -41,13 +41,13 @@ public class Availabilities {
      */
     public org.openapis.openapi.models.operations.GetOrganizationDevicesAvailabilitiesResponse getOrganizationDevicesAvailabilities(org.openapis.openapi.models.operations.GetOrganizationDevicesAvailabilitiesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationDevicesAvailabilitiesPathParams.class, baseUrl, "/organizations/{organizationId}/devices/availabilities", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationDevicesAvailabilitiesRequest.class, baseUrl, "/organizations/{organizationId}/devices/availabilities", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationDevicesAvailabilitiesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationDevicesAvailabilitiesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

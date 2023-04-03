@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesIdCompanyEntitiesPersonIdDetailsRequest {
-    
-    public PostSpacesIdCompanyEntitiesPersonIdDetailsPathParams pathParams;
-    public PostSpacesIdCompanyEntitiesPersonIdDetailsRequest withPathParams(PostSpacesIdCompanyEntitiesPersonIdDetailsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Contact details to add or replace (Designation and Phone or Mail are mandatory)
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostSpacesIdCompanyEntitiesPersonIdDetailsRequestBody request;
-    public PostSpacesIdCompanyEntitiesPersonIdDetailsRequest withRequest(PostSpacesIdCompanyEntitiesPersonIdDetailsRequestBody request) {
-        this.request = request;
+    public PostSpacesIdCompanyEntitiesPersonIdDetailsRequestBody requestBody;
+    public PostSpacesIdCompanyEntitiesPersonIdDetailsRequest withRequestBody(PostSpacesIdCompanyEntitiesPersonIdDetailsRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSpacesIdCompanyEntitiesPersonIdDetailsRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Id of the person or memberId
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=personId")
+    public String personId;
+    public PostSpacesIdCompanyEntitiesPersonIdDetailsRequest withPersonId(String personId) {
+        this.personId = personId;
         return this;
     }
     

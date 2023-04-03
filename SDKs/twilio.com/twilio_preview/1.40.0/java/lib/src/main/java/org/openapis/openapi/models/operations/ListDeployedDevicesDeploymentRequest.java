@@ -4,34 +4,43 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListDeployedDevicesDeploymentRequest {
-    
-    public ListDeployedDevicesDeploymentPathParams pathParams;
-    public ListDeployedDevicesDeploymentRequest withPathParams(ListDeployedDevicesDeploymentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FleetSid")
+    public String fleetSid;
+    public ListDeployedDevicesDeploymentRequest withFleetSid(String fleetSid) {
+        this.fleetSid = fleetSid;
         return this;
     }
     
-    
-    public ListDeployedDevicesDeploymentQueryParams queryParams;
-    public ListDeployedDevicesDeploymentRequest withQueryParams(ListDeployedDevicesDeploymentQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListDeployedDevicesDeploymentRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListDeployedDevicesDeploymentSecurity security;
-    public ListDeployedDevicesDeploymentRequest withSecurity(ListDeployedDevicesDeploymentSecurity security) {
-        this.security = security;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListDeployedDevicesDeploymentRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
-    
-    public String serverURL;
-    public ListDeployedDevicesDeploymentRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListDeployedDevicesDeploymentRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

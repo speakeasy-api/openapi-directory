@@ -37,7 +37,7 @@ public class Provisioning {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AutomaticProvisioningCreateAccountFormResponse automaticProvisioningCreateAccountForm(org.openapis.openapi.models.operations.AutomaticProvisioningCreateAccountFormRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AutomaticProvisioningCreateAccountFormResponse automaticProvisioningCreateAccountForm(org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCreateAccountContainer request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/automaticprovision/createaccount");
         
@@ -86,7 +86,7 @@ public class Provisioning {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AutomaticProvisioningCreateAccountJsonResponse automaticProvisioningCreateAccountJson(org.openapis.openapi.models.operations.AutomaticProvisioningCreateAccountJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AutomaticProvisioningCreateAccountJsonResponse automaticProvisioningCreateAccountJson(org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiAutomaticProvisioningControllerCreateAccountContainer request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/automaticprovision/createaccount");
         
@@ -135,7 +135,7 @@ public class Provisioning {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AutomaticProvisioningCreateAccountRawResponse automaticProvisioningCreateAccountRaw(org.openapis.openapi.models.operations.AutomaticProvisioningCreateAccountRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AutomaticProvisioningCreateAccountRawResponse automaticProvisioningCreateAccountRaw(byte[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/automaticprovision/createaccount");
         

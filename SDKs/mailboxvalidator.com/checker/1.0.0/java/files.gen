@@ -30,7 +30,6 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetV1EmailFreeFormatEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetV1EmailFreeQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetV1EmailFreeRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetV1EmailFreeResponse.java
 USAGE.md

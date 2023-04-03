@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LogoutRequest {
-    
-    public LogoutQueryParams queryParams;
-    public LogoutRequest withQueryParams(LogoutQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public LogoutRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public LogoutHeaders headers;
-    public LogoutRequest withHeaders(LogoutHeaders headers) {
-        this.headers = headers;
+    /**
+     * Invalidate all tokens
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=everywhere")
+    public Boolean everywhere;
+    public LogoutRequest withEverywhere(Boolean everywhere) {
+        this.everywhere = everywhere;
         return this;
     }
     

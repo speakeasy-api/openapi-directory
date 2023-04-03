@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchSpacesSpaceIdFoldersIdSocialRegimesRequest {
-    
-    public PatchSpacesSpaceIdFoldersIdSocialRegimesPathParams pathParams;
-    public PatchSpacesSpaceIdFoldersIdSocialRegimesRequest withPathParams(PatchSpacesSpaceIdFoldersIdSocialRegimesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Social Regime to modify (except name, class and archivaldate)
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PatchSpacesSpaceIdFoldersIdSocialRegimesRequestBody request;
-    public PatchSpacesSpaceIdFoldersIdSocialRegimesRequest withRequest(PatchSpacesSpaceIdFoldersIdSocialRegimesRequestBody request) {
-        this.request = request;
+    public PatchSpacesSpaceIdFoldersIdSocialRegimesRequestBody requestBody;
+    public PatchSpacesSpaceIdFoldersIdSocialRegimesRequest withRequestBody(PatchSpacesSpaceIdFoldersIdSocialRegimesRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Id of the folder
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatchSpacesSpaceIdFoldersIdSocialRegimesRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PatchSpacesSpaceIdFoldersIdSocialRegimesRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

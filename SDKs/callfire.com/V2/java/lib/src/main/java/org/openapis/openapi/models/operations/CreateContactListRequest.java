@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateContactListRequest {
-    
-    public CreateContactListQueryParams queryParams;
-    public CreateContactListRequest withQueryParams(CreateContactListQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * A request object
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateContactListRequest request;
-    public CreateContactListRequest withRequest(org.openapis.openapi.models.shared.CreateContactListRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CreateContactListRequest createContactListRequest;
+    public CreateContactListRequest withCreateContactListRequest(org.openapis.openapi.models.shared.CreateContactListRequest createContactListRequest) {
+        this.createContactListRequest = createContactListRequest;
         return this;
     }
     
-    
-    public CreateContactListSecurity security;
-    public CreateContactListRequest withSecurity(CreateContactListSecurity security) {
-        this.security = security;
+    /**
+     * Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public CreateContactListRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     

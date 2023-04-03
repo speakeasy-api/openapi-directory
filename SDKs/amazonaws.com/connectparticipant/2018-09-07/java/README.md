@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CompleteAttachmentUploadHeaders;
 import org.openapis.openapi.models.operations.CompleteAttachmentUploadRequestBody;
 import org.openapis.openapi.models.operations.CompleteAttachmentUploadRequest;
 import org.openapis.openapi.models.operations.CompleteAttachmentUploadResponse;
@@ -27,31 +26,28 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CompleteAttachmentUploadRequest req = new CompleteAttachmentUploadRequest() {{
-                headers = new CompleteAttachmentUploadHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzBearer = "provident";
-                    xAmzContentSha256 = "distinctio";
-                    xAmzCredential = "quibusdam";
-                    xAmzDate = "unde";
-                    xAmzSecurityToken = "nulla";
-                    xAmzSignature = "corrupti";
-                    xAmzSignedHeaders = "illum";
-                }};
-                request = new CompleteAttachmentUploadRequestBody() {{
+                requestBody = new CompleteAttachmentUploadRequestBody() {{
                     attachmentIds = new String[]{{
-                        add("error"),
-                        add("deserunt"),
+                        add("provident"),
+                        add("distinctio"),
+                        add("quibusdam"),
                     }};
-                    clientToken = "suscipit";
+                    clientToken = "unde";
                 }};
-            }};            
+                xAmzAlgorithm = "nulla";
+                xAmzBearer = "corrupti";
+                xAmzContentSha256 = "illum";
+                xAmzCredential = "vel";
+                xAmzDate = "error";
+                xAmzSecurityToken = "deserunt";
+                xAmzSignature = "suscipit";
+                xAmzSignedHeaders = "iure";
+            }}            
 
             CompleteAttachmentUploadResponse res = sdk.completeAttachmentUpload(req);
 
@@ -65,7 +61,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

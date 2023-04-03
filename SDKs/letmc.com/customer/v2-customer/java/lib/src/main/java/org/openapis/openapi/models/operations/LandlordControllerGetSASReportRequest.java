@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LandlordControllerGetSASReportRequest {
-    
-    public LandlordControllerGetSASReportPathParams pathParams;
-    public LandlordControllerGetSASReportRequest withPathParams(LandlordControllerGetSASReportPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique client short-name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
+    public String shortName;
+    public LandlordControllerGetSASReportRequest withShortName(String shortName) {
+        this.shortName = shortName;
         return this;
     }
     
+    /**
+     * The login token returned from the /session POST call
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public LandlordControllerGetSASReportRequest withToken(String token) {
+        this.token = token;
+        return this;
+    }
     
-    public LandlordControllerGetSASReportQueryParams queryParams;
-    public LandlordControllerGetSASReportRequest withQueryParams(LandlordControllerGetSASReportQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The Tax Year End.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=yearEnd")
+    public Integer yearEnd;
+    public LandlordControllerGetSASReportRequest withYearEnd(Integer yearEnd) {
+        this.yearEnd = yearEnd;
         return this;
     }
     

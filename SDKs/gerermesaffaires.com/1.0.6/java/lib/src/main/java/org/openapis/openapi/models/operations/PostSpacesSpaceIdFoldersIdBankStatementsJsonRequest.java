@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesSpaceIdFoldersIdBankStatementsJsonRequest {
-    
-    public PostSpacesSpaceIdFoldersIdBankStatementsJsonPathParams pathParams;
-    public PostSpacesSpaceIdFoldersIdBankStatementsJsonRequest withPathParams(PostSpacesSpaceIdFoldersIdBankStatementsJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Bank statement to add (either DocumentId,StatementDate either (File,Name,Content64Encoded,Title,StatementDate) is mandatory)
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public Object request;
-    public PostSpacesSpaceIdFoldersIdBankStatementsJsonRequest withRequest(Object request) {
-        this.request = request;
+    public Object requestBody;
+    public PostSpacesSpaceIdFoldersIdBankStatementsJsonRequest withRequestBody(Object requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Id of the folder bank
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSpacesSpaceIdFoldersIdBankStatementsJsonRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PostSpacesSpaceIdFoldersIdBankStatementsJsonSecurity security;
-    public PostSpacesSpaceIdFoldersIdBankStatementsJsonRequest withSecurity(PostSpacesSpaceIdFoldersIdBankStatementsJsonSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PostSpacesSpaceIdFoldersIdBankStatementsJsonRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

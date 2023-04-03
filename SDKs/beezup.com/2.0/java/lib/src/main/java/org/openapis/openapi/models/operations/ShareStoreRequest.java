@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ShareStoreRequest {
-    
-    public ShareStorePathParams pathParams;
-    public ShareStoreRequest withPathParams(ShareStorePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Your friend's email
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public String request;
-    public ShareStoreRequest withRequest(String request) {
-        this.request = request;
+    public String requestBody;
+    public ShareStoreRequest withRequestBody(String requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Your store identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public ShareStoreRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

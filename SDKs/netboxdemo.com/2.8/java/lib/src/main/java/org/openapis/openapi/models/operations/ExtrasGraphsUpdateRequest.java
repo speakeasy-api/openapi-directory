@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExtrasGraphsUpdateRequest {
-    
-    public ExtrasGraphsUpdatePathParams pathParams;
-    public ExtrasGraphsUpdateRequest withPathParams(ExtrasGraphsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.GraphInput graphInput;
+    public ExtrasGraphsUpdateRequest withGraphInput(org.openapis.openapi.models.shared.GraphInput graphInput) {
+        this.graphInput = graphInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GraphInput request;
-    public ExtrasGraphsUpdateRequest withRequest(org.openapis.openapi.models.shared.GraphInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this graph.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public ExtrasGraphsUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

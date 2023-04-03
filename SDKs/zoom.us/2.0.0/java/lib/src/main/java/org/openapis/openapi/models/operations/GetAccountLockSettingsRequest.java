@@ -4,20 +4,42 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountLockSettingsRequest {
-    
-    public GetAccountLockSettingsPathParams pathParams;
-    public GetAccountLockSettingsRequest withPathParams(GetAccountLockSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique Identifier of the account. To retrieve locked settings of the master account or a regular account, provide "me" as the value of this field. &lt;br&gt; To retrieve locked settings of a sub account, provide the Account ID of the sub account in this field.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public GetAccountLockSettingsRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
+    /**
+     * Provide the name of the field by which you would like to filter the response. For example, if you provide "host_video" as the value of this field, you will get a response similar to the following:&lt;br&gt;
+     * {
+     *     "schedule_meeting": {
+     *         "host_video": false
+     *     }
+     * }
+     * &lt;br&gt;You can provide multiple values by separating them with commas(example: "host_video,participant_video\u201d).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=custom_query_fields")
+    public String customQueryFields;
+    public GetAccountLockSettingsRequest withCustomQueryFields(String customQueryFields) {
+        this.customQueryFields = customQueryFields;
+        return this;
+    }
     
-    public GetAccountLockSettingsQueryParams queryParams;
-    public GetAccountLockSettingsRequest withQueryParams(GetAccountLockSettingsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * `meeting_security`: Use this query parameter to view meeting security settings applied on the account.&lt;br&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=option")
+    public String option;
+    public GetAccountLockSettingsRequest withOption(String option) {
+        this.option = option;
         return this;
     }
     

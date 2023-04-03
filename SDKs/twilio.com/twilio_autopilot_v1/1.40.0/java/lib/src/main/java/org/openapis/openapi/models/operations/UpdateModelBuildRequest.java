@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateModelBuildRequest {
-    
-    public UpdateModelBuildPathParams pathParams;
-    public UpdateModelBuildRequest withPathParams(UpdateModelBuildPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public UpdateModelBuildRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateModelBuildUpdateModelBuildRequest request;
-    public UpdateModelBuildRequest withRequest(UpdateModelBuildUpdateModelBuildRequest request) {
-        this.request = request;
+    public UpdateModelBuildUpdateModelBuildRequest requestBody;
+    public UpdateModelBuildRequest withRequestBody(UpdateModelBuildUpdateModelBuildRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateModelBuildSecurity security;
-    public UpdateModelBuildRequest withSecurity(UpdateModelBuildSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateModelBuildRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the ModelBuild resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateModelBuildRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

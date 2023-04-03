@@ -32,25 +32,26 @@ public class Promotions {
      * Price Offers
      * Retrieve a best price offer given an origin and destination.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PriceOffersResponse priceOffers(org.openapis.openapi.models.operations.PriceOffersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PriceOffersResponse priceOffers(org.openapis.openapi.models.operations.PriceOffersRequest request, org.openapis.openapi.models.operations.PriceOffersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PriceOffersPathParams.class, baseUrl, "/promotions/priceoffers/flights/ond/{origin}/{destination}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PriceOffersRequest.class, baseUrl, "/promotions/priceoffers/flights/ond/{origin}/{destination}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PriceOffersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PriceOffersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

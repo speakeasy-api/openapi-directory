@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUnmaskedPurchaseInformationRequest {
-    
-    public GetUnmaskedPurchaseInformationPathParams pathParams;
-    public GetUnmaskedPurchaseInformationRequest withPathParams(GetUnmaskedPurchaseInformationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetUnmaskedPurchaseInformationRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetUnmaskedPurchaseInformationRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetUnmaskedPurchaseInformationHeaders headers;
-    public GetUnmaskedPurchaseInformationRequest withHeaders(GetUnmaskedPurchaseInformationHeaders headers) {
-        this.headers = headers;
+    /**
+     * ID of the client's profile as returned by the Create profile endpoint's response, in the `id` field. It can also be an `alternativeKey` according to your custom profile schema. In this case, this request should also send the `alternativeKey` parameter.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
+    public String profileId;
+    public GetUnmaskedPurchaseInformationRequest withProfileId(String profileId) {
+        this.profileId = profileId;
         return this;
     }
     

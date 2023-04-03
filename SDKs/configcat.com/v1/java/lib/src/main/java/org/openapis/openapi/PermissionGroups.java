@@ -45,12 +45,12 @@ public class PermissionGroups {
      */
     public org.openapis.openapi.models.operations.CreatePermissionGroupResponse createPermissionGroup(org.openapis.openapi.models.operations.CreatePermissionGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreatePermissionGroupPathParams.class, baseUrl, "/v1/products/{productId}/permissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreatePermissionGroupRequest.class, baseUrl, "/v1/products/{productId}/permissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createPermissionGroupRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -98,7 +98,7 @@ public class PermissionGroups {
      */
     public org.openapis.openapi.models.operations.DeletePermissionGroupResponse deletePermissionGroup(org.openapis.openapi.models.operations.DeletePermissionGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePermissionGroupPathParams.class, baseUrl, "/v1/permissions/{permissionGroupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePermissionGroupRequest.class, baseUrl, "/v1/permissions/{permissionGroupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -133,7 +133,7 @@ public class PermissionGroups {
      */
     public org.openapis.openapi.models.operations.GetPermissionGroupResponse getPermissionGroup(org.openapis.openapi.models.operations.GetPermissionGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPermissionGroupPathParams.class, baseUrl, "/v1/permissions/{permissionGroupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPermissionGroupRequest.class, baseUrl, "/v1/permissions/{permissionGroupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -182,7 +182,7 @@ public class PermissionGroups {
      */
     public org.openapis.openapi.models.operations.GetPermissionGroupsResponse getPermissionGroups(org.openapis.openapi.models.operations.GetPermissionGroupsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPermissionGroupsPathParams.class, baseUrl, "/v1/products/{productId}/permissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPermissionGroupsRequest.class, baseUrl, "/v1/products/{productId}/permissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -230,12 +230,12 @@ public class PermissionGroups {
      */
     public org.openapis.openapi.models.operations.UpdatePermissionGroupResponse updatePermissionGroup(org.openapis.openapi.models.operations.UpdatePermissionGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePermissionGroupPathParams.class, baseUrl, "/v1/permissions/{permissionGroupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePermissionGroupRequest.class, baseUrl, "/v1/permissions/{permissionGroupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updatePermissionGroupRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

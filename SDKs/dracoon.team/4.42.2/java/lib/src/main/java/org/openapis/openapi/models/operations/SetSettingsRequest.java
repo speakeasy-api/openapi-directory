@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetSettingsRequest {
-    
-    public SetSettingsHeaders headers;
-    public SetSettingsRequest withHeaders(SetSettingsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CustomerSettingsRequest customerSettingsRequest;
+    public SetSettingsRequest withCustomerSettingsRequest(org.openapis.openapi.models.shared.CustomerSettingsRequest customerSettingsRequest) {
+        this.customerSettingsRequest = customerSettingsRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CustomerSettingsRequest request;
-    public SetSettingsRequest withRequest(org.openapis.openapi.models.shared.CustomerSettingsRequest request) {
-        this.request = request;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public SetSettingsRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     

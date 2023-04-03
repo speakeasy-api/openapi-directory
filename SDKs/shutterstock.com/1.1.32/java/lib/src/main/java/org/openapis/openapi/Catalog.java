@@ -36,24 +36,25 @@ public class Catalog {
      * Add items to catalog collections
      * This endpoint adds assets to a catalog collection. It also automatically adds the assets to the user's account's catalog.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddToCollectionResponse addToCollection(org.openapis.openapi.models.operations.AddToCollectionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddToCollectionResponse addToCollection(org.openapis.openapi.models.operations.AddToCollectionRequest request, org.openapis.openapi.models.operations.AddToCollectionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddToCollectionPathParams.class, baseUrl, "/v2/catalog/collections/{collection_id}/items", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddToCollectionRequest.class, baseUrl, "/v2/catalog/collections/{collection_id}/items", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createCatalogCollectionItems", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,10 +82,11 @@ public class Catalog {
      * Create catalog collections
      * This endpoint creates a catalog collection and optionally adds assets. To add assets to the collection later, use `PATCH /v2/catalog/collections/{collection_id}/items`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateCollectionResponse createCollection(org.openapis.openapi.models.operations.CreateCollectionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateCollectionResponse createCollection(org.openapis.openapi.models.shared.CreateCatalogCollection request, org.openapis.openapi.models.operations.CreateCollectionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/catalog/collections");
         
@@ -98,7 +100,7 @@ public class Catalog {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,19 +128,20 @@ public class Catalog {
      * Delete catalog collections
      * This endpoint deletes a catalog collection. It does not remove the assets from the user's account's catalog.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteCollectionResponse deleteCollection(org.openapis.openapi.models.operations.DeleteCollectionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteCollectionResponse deleteCollection(org.openapis.openapi.models.operations.DeleteCollectionRequest request, org.openapis.openapi.models.operations.DeleteCollectionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCollectionPathParams.class, baseUrl, "/v2/catalog/collections/{collection_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCollectionRequest.class, baseUrl, "/v2/catalog/collections/{collection_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -160,24 +163,25 @@ public class Catalog {
      * Remove items from catalog collection
      * This endpoint removes assets from a catalog collection. It does not remove the assets from the user's account's catalog.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteFromCollectionResponse deleteFromCollection(org.openapis.openapi.models.operations.DeleteFromCollectionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteFromCollectionResponse deleteFromCollection(org.openapis.openapi.models.operations.DeleteFromCollectionRequest request, org.openapis.openapi.models.operations.DeleteFromCollectionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteFromCollectionPathParams.class, baseUrl, "/v2/catalog/collections/{collection_id}/items", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteFromCollectionRequest.class, baseUrl, "/v2/catalog/collections/{collection_id}/items", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "removeCatalogCollectionItems", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -205,10 +209,11 @@ public class Catalog {
      * List catalog collections
      * This endpoint returns a list of catalog collections.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCollectionsResponse getCollections(org.openapis.openapi.models.operations.GetCollectionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCollectionsResponse getCollections(org.openapis.openapi.models.operations.GetCollectionsRequest request, org.openapis.openapi.models.operations.GetCollectionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/catalog/collections");
         
@@ -216,14 +221,14 @@ public class Catalog {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCollectionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCollectionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -253,10 +258,11 @@ public class Catalog {
      * Search catalogs for assets
      * This endpoint searches for assets in the account's catalog. If you specify more than one search parameter, the API uses an AND condition. Array parameters can be specified multiple times; in this case, the API uses an AND or an OR condition with those values, depending on the parameter. You can also filter search terms out in the `query` parameter by prefixing the term with NOT.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SearchCatalogResponse searchCatalog(org.openapis.openapi.models.operations.SearchCatalogRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SearchCatalogResponse searchCatalog(org.openapis.openapi.models.operations.SearchCatalogRequest request, org.openapis.openapi.models.operations.SearchCatalogSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/catalog/search");
         
@@ -264,14 +270,14 @@ public class Catalog {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SearchCatalogQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SearchCatalogRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -301,24 +307,25 @@ public class Catalog {
      * Update collection metadata
      * This endpoint updates the metadata of a catalog collection.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateCollectionResponse updateCollection(org.openapis.openapi.models.operations.UpdateCollectionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateCollectionResponse updateCollection(org.openapis.openapi.models.operations.UpdateCollectionRequest request, org.openapis.openapi.models.operations.UpdateCollectionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCollectionPathParams.class, baseUrl, "/v2/catalog/collections/{collection_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCollectionRequest.class, baseUrl, "/v2/catalog/collections/{collection_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateCatalogCollection", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETFailoverGlobalClusterRequest {
-    
-    public GETFailoverGlobalClusterQueryParams queryParams;
-    public GETFailoverGlobalClusterRequest withQueryParams(GETFailoverGlobalClusterQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETFailoverGlobalClusterActionEnum action;
+    public GETFailoverGlobalClusterRequest withAction(GETFailoverGlobalClusterActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;Identifier of the Neptune global database that should be failed over. The identifier is the unique key assigned by the user when the Neptune global database was created. In other words, it's the name of the global database that you want to fail over.&lt;/p&gt; &lt;p&gt;Constraints: Must match the identifier of an existing Neptune global database.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GlobalClusterIdentifier")
+    public String globalClusterIdentifier;
+    public GETFailoverGlobalClusterRequest withGlobalClusterIdentifier(String globalClusterIdentifier) {
+        this.globalClusterIdentifier = globalClusterIdentifier;
+        return this;
+    }
     
-    public GETFailoverGlobalClusterHeaders headers;
-    public GETFailoverGlobalClusterRequest withHeaders(GETFailoverGlobalClusterHeaders headers) {
-        this.headers = headers;
+    /**
+     * The Amazon Resource Name (ARN) of the secondary Neptune DB cluster that you want to promote to primary for the global database.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TargetDbClusterIdentifier")
+    public String targetDbClusterIdentifier;
+    public GETFailoverGlobalClusterRequest withTargetDbClusterIdentifier(String targetDbClusterIdentifier) {
+        this.targetDbClusterIdentifier = targetDbClusterIdentifier;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETFailoverGlobalClusterVersionEnum version;
+    public GETFailoverGlobalClusterRequest withVersion(GETFailoverGlobalClusterVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETFailoverGlobalClusterRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETFailoverGlobalClusterRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETFailoverGlobalClusterRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETFailoverGlobalClusterRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETFailoverGlobalClusterRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETFailoverGlobalClusterRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETFailoverGlobalClusterRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

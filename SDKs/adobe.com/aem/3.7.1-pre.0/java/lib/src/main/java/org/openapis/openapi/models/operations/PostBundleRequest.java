@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostBundleRequest {
-    
-    public PostBundlePathParams pathParams;
-    public PostBundleRequest withPathParams(PostBundlePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=action")
+    public String action;
+    public PostBundleRequest withAction(String action) {
+        this.action = action;
         return this;
     }
     
-    
-    public PostBundleQueryParams queryParams;
-    public PostBundleRequest withQueryParams(PostBundleQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public PostBundleRequest withName(String name) {
+        this.name = name;
         return this;
     }
     

@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AuthVerifyotpGetSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeAuthKey authKey;
-    public AuthVerifyotpGetSecurity withAuthKey(org.openapis.openapi.models.shared.SchemeAuthKey authKey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Auth")
+    public String authKey;
+    public AuthVerifyotpGetSecurity withAuthKey(String authKey) {
         this.authKey = authKey;
         return this;
     }

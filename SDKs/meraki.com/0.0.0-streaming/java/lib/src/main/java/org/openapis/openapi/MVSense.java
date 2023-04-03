@@ -40,7 +40,7 @@ public class MVSense {
      */
     public org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsLiveResponse getDeviceCameraAnalyticsLive(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsLiveRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsLivePathParams.class, baseUrl, "/devices/{serial}/camera/analytics/live", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsLiveRequest.class, baseUrl, "/devices/{serial}/camera/analytics/live", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,13 +80,13 @@ public class MVSense {
      */
     public org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsOverviewResponse getDeviceCameraAnalyticsOverview(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsOverviewRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsOverviewPathParams.class, baseUrl, "/devices/{serial}/camera/analytics/overview", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsOverviewRequest.class, baseUrl, "/devices/{serial}/camera/analytics/overview", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsOverviewQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsOverviewRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -126,13 +126,13 @@ public class MVSense {
      */
     public org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsRecentResponse getDeviceCameraAnalyticsRecent(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsRecentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsRecentPathParams.class, baseUrl, "/devices/{serial}/camera/analytics/recent", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsRecentRequest.class, baseUrl, "/devices/{serial}/camera/analytics/recent", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsRecentQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsRecentRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -172,13 +172,13 @@ public class MVSense {
      */
     public org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsZoneHistoryResponse getDeviceCameraAnalyticsZoneHistory(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsZoneHistoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsZoneHistoryPathParams.class, baseUrl, "/devices/{serial}/camera/analytics/zones/{zoneId}/history", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsZoneHistoryRequest.class, baseUrl, "/devices/{serial}/camera/analytics/zones/{zoneId}/history", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsZoneHistoryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsZoneHistoryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -218,7 +218,7 @@ public class MVSense {
      */
     public org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsZonesResponse getDeviceCameraAnalyticsZones(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsZonesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsZonesPathParams.class, baseUrl, "/devices/{serial}/camera/analytics/zones", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsZonesRequest.class, baseUrl, "/devices/{serial}/camera/analytics/zones", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

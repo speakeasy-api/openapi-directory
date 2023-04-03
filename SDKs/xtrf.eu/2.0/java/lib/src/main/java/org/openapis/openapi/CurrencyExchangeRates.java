@@ -42,12 +42,12 @@ public class CurrencyExchangeRates {
      */
     public org.openapis.openapi.models.operations.CreateExchangeRateResponse createExchangeRate(org.openapis.openapi.models.operations.CreateExchangeRateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateExchangeRatePathParams.class, baseUrl, "/dictionaries/currency/{isoCode}/exchangeRate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateExchangeRateRequest.class, baseUrl, "/dictionaries/currency/{isoCode}/exchangeRate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "currencyHistoryDTO", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -81,7 +81,7 @@ public class CurrencyExchangeRates {
      */
     public org.openapis.openapi.models.operations.GetByIsoCodeResponse getByIsoCode(org.openapis.openapi.models.operations.GetByIsoCodeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetByIsoCodePathParams.class, baseUrl, "/dictionaries/currency/{isoCode}/exchangeRate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetByIsoCodeRequest.class, baseUrl, "/dictionaries/currency/{isoCode}/exchangeRate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

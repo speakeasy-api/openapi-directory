@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteInternalCallOutCountryRequest {
+    /**
+     * Unique Identifier of the Account.&lt;br&gt;
+     * To remove Call-out country from a sub account, provide the account ID of the sub account in the `accountId` path parameter. To remove Call-out country from a master account, provide `me` as the value of the `accountId` path parameter.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public DeleteInternalCallOutCountryRequest withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
     
-    public DeleteInternalCallOutCountryPathParams pathParams;
-    public DeleteInternalCallOutCountryRequest withPathParams(DeleteInternalCallOutCountryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Two lettered Id of the country.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=countryId")
+    public String countryId;
+    public DeleteInternalCallOutCountryRequest withCountryId(String countryId) {
+        this.countryId = countryId;
         return this;
     }
     

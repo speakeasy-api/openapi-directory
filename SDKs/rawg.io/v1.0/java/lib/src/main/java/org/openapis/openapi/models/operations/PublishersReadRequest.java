@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PublishersReadRequest {
-    
-    public PublishersReadPathParams pathParams;
-    public PublishersReadRequest withPathParams(PublishersReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this Publisher.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public PublishersReadRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

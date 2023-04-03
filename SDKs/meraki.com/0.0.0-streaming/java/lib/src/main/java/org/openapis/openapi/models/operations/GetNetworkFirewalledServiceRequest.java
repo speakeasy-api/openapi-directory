@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkFirewalledServiceRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkFirewalledServiceRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
     
-    public GetNetworkFirewalledServicePathParams pathParams;
-    public GetNetworkFirewalledServiceRequest withPathParams(GetNetworkFirewalledServicePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=service")
+    public String service;
+    public GetNetworkFirewalledServiceRequest withService(String service) {
+        this.service = service;
         return this;
     }
     

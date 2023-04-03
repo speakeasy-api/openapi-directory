@@ -7,34 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddCallBroadcastBatchRequest {
-    
-    public AddCallBroadcastBatchPathParams pathParams;
-    public AddCallBroadcastBatchRequest withPathParams(AddCallBroadcastBatchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AddCallBroadcastBatchQueryParams queryParams;
-    public AddCallBroadcastBatchRequest withQueryParams(AddCallBroadcastBatchQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * A request object
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.BatchRequest request;
-    public AddCallBroadcastBatchRequest withRequest(org.openapis.openapi.models.shared.BatchRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.BatchRequest batchRequest;
+    public AddCallBroadcastBatchRequest withBatchRequest(org.openapis.openapi.models.shared.BatchRequest batchRequest) {
+        this.batchRequest = batchRequest;
         return this;
     }
     
+    /**
+     * An id of a call broadcast
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public AddCallBroadcastBatchRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
     
-    public AddCallBroadcastBatchSecurity security;
-    public AddCallBroadcastBatchRequest withSecurity(AddCallBroadcastBatchSecurity security) {
-        this.security = security;
+    /**
+     * Turns on strict validation for recipients. System will reply with BAD_REQUEST(400) if strictValidation = true and one of numbers didn't pass validation
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=strictValidation")
+    public Boolean strictValidation;
+    public AddCallBroadcastBatchRequest withStrictValidation(Boolean strictValidation) {
+        this.strictValidation = strictValidation;
         return this;
     }
     

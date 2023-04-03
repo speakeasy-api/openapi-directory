@@ -4,20 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBlockIdTransactionRequest {
-    
-    public GetBlockIdTransactionPathParams pathParams;
-    public GetBlockIdTransactionRequest withPathParams(GetBlockIdTransactionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetBlockIdTransactionSecurity security;
-    public GetBlockIdTransactionRequest withSecurity(GetBlockIdTransactionSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetBlockIdTransactionRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

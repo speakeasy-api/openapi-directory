@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRateTablesRequest {
-    
-    public GetRateTablesQueryParams queryParams;
-    public GetRateTablesRequest withQueryParams(GetRateTablesQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetRateTablesSecurity security;
-    public GetRateTablesRequest withSecurity(GetRateTablesSecurity security) {
-        this.security = security;
+    /**
+     * This query parameter specifies the two-letter &lt;a href="https://www.iso.org/iso-3166-country-codes.html " title="https://www.iso.org " target="_blank"&gt;ISO 3166&lt;/a&gt; code of country for which you want shipping rate table information. If you do not specify a country code, the request returns all of the seller's defined shipping rate tables for all eBay marketplaces. For implementation help, refer to eBay API documentation at https://developer.ebay.com/api-docs/sell/account/types/ba:CountryCodeEnum
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country_code")
+    public String countryCode;
+    public GetRateTablesRequest withCountryCode(String countryCode) {
+        this.countryCode = countryCode;
         return this;
     }
     

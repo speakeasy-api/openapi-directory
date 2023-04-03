@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETTestHarnessScenarioUsingGETRequest {
+    /**
+     * apiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public GETTestHarnessScenarioUsingGETRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public GETTestHarnessScenarioUsingGETPathParams pathParams;
-    public GETTestHarnessScenarioUsingGETRequest withPathParams(GETTestHarnessScenarioUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * scenarioName
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scenarioName")
+    public String scenarioName;
+    public GETTestHarnessScenarioUsingGETRequest withScenarioName(String scenarioName) {
+        this.scenarioName = scenarioName;
         return this;
     }
     

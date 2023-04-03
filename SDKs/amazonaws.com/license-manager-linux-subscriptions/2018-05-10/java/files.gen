@@ -29,20 +29,14 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/GetServiceSettingsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServiceSettingsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetServiceSettingsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListLinuxSubscriptionInstancesQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListLinuxSubscriptionInstancesHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListLinuxSubscriptionInstancesRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListLinuxSubscriptionInstancesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListLinuxSubscriptionInstancesResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListLinuxSubscriptionsQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListLinuxSubscriptionsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListLinuxSubscriptionsRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListLinuxSubscriptionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListLinuxSubscriptionsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/UpdateServiceSettingsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateServiceSettingsRequestBodyLinuxSubscriptionsDiscoveryEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateServiceSettingsRequestBodyLinuxSubscriptionsDiscoverySettings.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateServiceSettingsRequestBody.java
@@ -60,6 +54,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/OperatorEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListLinuxSubscriptionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Subscription.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateServiceSettingsResponse.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeHmac.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

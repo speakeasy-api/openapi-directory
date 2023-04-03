@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CalculateSLARequest {
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public CalculateSLARequest withAccept(String accept) {
+        this.accept = accept;
+        return this;
+    }
     
-    public CalculateSLAHeaders headers;
-    public CalculateSLARequest withHeaders(CalculateSLAHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public CalculateSLARequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public CalculateSLACalculateSLARequest[] request;
-    public CalculateSLARequest withRequest(CalculateSLACalculateSLARequest[] request) {
-        this.request = request;
+    public CalculateSLACalculateSLARequest[] requestBody;
+    public CalculateSLARequest withRequestBody(CalculateSLACalculateSLARequest[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

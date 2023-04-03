@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMartCaseAssociationsResourceRequest {
-    
-    public GetMartCaseAssociationsResourcePathParams pathParams;
-    public GetMartCaseAssociationsResourceRequest withPathParams(GetMartCaseAssociationsResourcePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Category of entity at link Subject (target), e.g. phenotype, disease
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=object_category")
+    public String objectCategory;
+    public GetMartCaseAssociationsResourceRequest withObjectCategory(String objectCategory) {
+        this.objectCategory = objectCategory;
         return this;
     }
     
+    /**
+     * Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slim")
+    public String[] slim;
+    public GetMartCaseAssociationsResourceRequest withSlim(String[] slim) {
+        this.slim = slim;
+        return this;
+    }
     
-    public GetMartCaseAssociationsResourceQueryParams queryParams;
-    public GetMartCaseAssociationsResourceRequest withQueryParams(GetMartCaseAssociationsResourceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * taxon of case, must be of form NCBITaxon:9606
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taxon")
+    public String taxon;
+    public GetMartCaseAssociationsResourceRequest withTaxon(String taxon) {
+        this.taxon = taxon;
         return this;
     }
     

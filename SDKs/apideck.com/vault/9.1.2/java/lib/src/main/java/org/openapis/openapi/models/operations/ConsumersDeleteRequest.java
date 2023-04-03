@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConsumersDeleteRequest {
-    
-    public ConsumersDeletePathParams pathParams;
-    public ConsumersDeleteRequest withPathParams(ConsumersDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the consumer to return
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=consumer_id")
+    public String consumerId;
+    public ConsumersDeleteRequest withConsumerId(String consumerId) {
+        this.consumerId = consumerId;
         return this;
     }
     
-    
-    public ConsumersDeleteHeaders headers;
-    public ConsumersDeleteRequest withHeaders(ConsumersDeleteHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public ConsumersDeleteSecurity security;
-    public ConsumersDeleteRequest withSecurity(ConsumersDeleteSecurity security) {
-        this.security = security;
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public ConsumersDeleteRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
         return this;
     }
     

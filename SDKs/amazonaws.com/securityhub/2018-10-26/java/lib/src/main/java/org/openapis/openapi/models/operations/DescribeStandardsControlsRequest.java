@@ -4,27 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeStandardsControlsRequest {
-    
-    public DescribeStandardsControlsPathParams pathParams;
-    public DescribeStandardsControlsRequest withPathParams(DescribeStandardsControlsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The maximum number of security standard controls to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public Long maxResults;
+    public DescribeStandardsControlsRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
         return this;
     }
     
-    
-    public DescribeStandardsControlsQueryParams queryParams;
-    public DescribeStandardsControlsRequest withQueryParams(DescribeStandardsControlsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * &lt;p&gt;The token that is required for pagination. On your first call to the &lt;code&gt;DescribeStandardsControls&lt;/code&gt; operation, set the value of this parameter to &lt;code&gt;NULL&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;For subsequent calls to the operation, to continue listing data, set the value of this parameter to the value returned from the previous response.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public DescribeStandardsControlsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
     
+    /**
+     * The ARN of a resource that represents your subscription to a supported standard. To get the subscription ARNs of the standards you have enabled, use the &lt;code&gt;GetEnabledStandards&lt;/code&gt; operation.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=StandardsSubscriptionArn")
+    public String standardsSubscriptionArn;
+    public DescribeStandardsControlsRequest withStandardsSubscriptionArn(String standardsSubscriptionArn) {
+        this.standardsSubscriptionArn = standardsSubscriptionArn;
+        return this;
+    }
     
-    public DescribeStandardsControlsHeaders headers;
-    public DescribeStandardsControlsRequest withHeaders(DescribeStandardsControlsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DescribeStandardsControlsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DescribeStandardsControlsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DescribeStandardsControlsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DescribeStandardsControlsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DescribeStandardsControlsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DescribeStandardsControlsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DescribeStandardsControlsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

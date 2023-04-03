@@ -4,20 +4,29 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETWorkflowExportRequest {
-    
-    public GETWorkflowExportPathParams pathParams;
-    public GETWorkflowExportRequest withPathParams(GETWorkflowExportPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+     * 
+     * The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Track-Id")
+    public String zuoraTrackId;
+    public GETWorkflowExportRequest withZuoraTrackId(String zuoraTrackId) {
+        this.zuoraTrackId = zuoraTrackId;
         return this;
     }
     
-    
-    public GETWorkflowExportHeaders headers;
-    public GETWorkflowExportRequest withHeaders(GETWorkflowExportHeaders headers) {
-        this.headers = headers;
+    /**
+     * The ID of the workflow to export.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workflow_id")
+    public Long workflowId;
+    public GETWorkflowExportRequest withWorkflowId(Long workflowId) {
+        this.workflowId = workflowId;
         return this;
     }
     

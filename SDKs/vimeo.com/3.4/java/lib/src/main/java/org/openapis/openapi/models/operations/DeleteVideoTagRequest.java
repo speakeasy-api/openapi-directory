@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteVideoTagRequest {
-    
-    public DeleteVideoTagPathParams pathParams;
-    public DeleteVideoTagRequest withPathParams(DeleteVideoTagPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public DeleteVideoTagRequest withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     
-    
-    public DeleteVideoTagSecurity security;
-    public DeleteVideoTagRequest withSecurity(DeleteVideoTagSecurity security) {
-        this.security = security;
+    /**
+     * The tag word.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=word")
+    public String word;
+    public DeleteVideoTagRequest withWord(String word) {
+        this.word = word;
         return this;
     }
     

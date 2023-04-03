@@ -39,7 +39,7 @@ public class Activities {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV2ActivitiesJsonResponse postV2ActivitiesJson(org.openapis.openapi.models.operations.PostV2ActivitiesJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV2ActivitiesJsonResponse postV2ActivitiesJson(org.openapis.openapi.models.operations.PostV2ActivitiesJsonRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/activities.json");
         

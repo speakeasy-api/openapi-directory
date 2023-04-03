@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchBoundaryByIdRequest {
-    
-    public FetchBoundaryByIdPathParams pathParams;
-    public FetchBoundaryByIdRequest withPathParams(FetchBoundaryByIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchBoundaryByIdSecurity security;
-    public FetchBoundaryByIdRequest withSecurity(FetchBoundaryByIdSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the Boundary
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=boundaryId")
+    public String boundaryId;
+    public FetchBoundaryByIdRequest withBoundaryId(String boundaryId) {
+        this.boundaryId = boundaryId;
         return this;
     }
     

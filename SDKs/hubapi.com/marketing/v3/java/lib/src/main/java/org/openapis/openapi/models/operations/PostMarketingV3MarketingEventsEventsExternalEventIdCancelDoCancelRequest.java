@@ -4,27 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancelRequest {
-    
-    public PostMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancelPathParams pathParams;
-    public PostMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancelRequest withPathParams(PostMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancelPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=externalAccountId")
+    public String externalAccountId;
+    public PostMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancelRequest withExternalAccountId(String externalAccountId) {
+        this.externalAccountId = externalAccountId;
         return this;
     }
     
-    
-    public PostMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancelQueryParams queryParams;
-    public PostMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancelRequest withQueryParams(PostMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancelQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public PostMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancelSecurity security;
-    public PostMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancelRequest withSecurity(PostMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancelSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=externalEventId")
+    public String externalEventId;
+    public PostMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancelRequest withExternalEventId(String externalEventId) {
+        this.externalEventId = externalEventId;
         return this;
     }
     

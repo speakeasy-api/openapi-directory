@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSipCredentialRequest {
+    /**
+     * The unique id of the Account that is responsible for this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public CreateSipCredentialRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
+        return this;
+    }
     
-    public CreateSipCredentialPathParams pathParams;
-    public CreateSipCredentialRequest withPathParams(CreateSipCredentialPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique id that identifies the credential list to include the created credential.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CredentialListSid")
+    public String credentialListSid;
+    public CreateSipCredentialRequest withCredentialListSid(String credentialListSid) {
+        this.credentialListSid = credentialListSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateSipCredentialCreateSipCredentialRequest request;
-    public CreateSipCredentialRequest withRequest(CreateSipCredentialCreateSipCredentialRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateSipCredentialSecurity security;
-    public CreateSipCredentialRequest withSecurity(CreateSipCredentialSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateSipCredentialRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateSipCredentialCreateSipCredentialRequest requestBody;
+    public CreateSipCredentialRequest withRequestBody(CreateSipCredentialCreateSipCredentialRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

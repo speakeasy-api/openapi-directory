@@ -5,14 +5,10 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.TasksTasklistsDeleteSecurity;
-import org.openapis.openapi.models.operations.TasksTasklistsDeletePathParams;
-import org.openapis.openapi.models.operations.TasksTasklistsDeleteQueryParams;
 import org.openapis.openapi.models.operations.TasksTasklistsDeleteRequest;
 import org.openapis.openapi.models.operations.TasksTasklistsDeleteResponse;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -21,33 +17,24 @@ public class Application {
                 .build();
 
             TasksTasklistsDeleteRequest req = new TasksTasklistsDeleteRequest() {{
-                security = new TasksTasklistsDeleteSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new TasksTasklistsDeletePathParams() {{
-                    tasklist = "corrupti";
-                }};
-                queryParams = new TasksTasklistsDeleteQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-            }};            
+                dollarXgafv = "2";
+                accessToken = "provident";
+                alt = "proto";
+                callback = "quibusdam";
+                fields = "unde";
+                key = "nulla";
+                oauthToken = "corrupti";
+                prettyPrint = false;
+                quotaUser = "illum";
+                tasklist = "vel";
+                uploadType = "error";
+                uploadProtocol = "deserunt";
+            }}            
 
-            TasksTasklistsDeleteResponse res = sdk.tasklists.tasksTasklistsDelete(req);
+            TasksTasklistsDeleteResponse res = sdk.tasklists.tasksTasklistsDelete(req, new TasksTasklistsDeleteSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.statusCode == 200) {
                 // handle response

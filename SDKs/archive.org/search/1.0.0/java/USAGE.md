@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetSearchV1FieldsQueryParams;
 import org.openapis.openapi.models.operations.GetSearchV1FieldsRequest;
 import org.openapis.openapi.models.operations.GetSearchV1FieldsResponse;
 
@@ -15,10 +14,8 @@ public class Application {
                 .build();
 
             GetSearchV1FieldsRequest req = new GetSearchV1FieldsRequest() {{
-                queryParams = new GetSearchV1FieldsQueryParams() {{
-                    callback = "corrupti";
-                }};
-            }};            
+                callback = "corrupti";
+            }}            
 
             GetSearchV1FieldsResponse res = sdk.getSearchV1Fields(req);
 

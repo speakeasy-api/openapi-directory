@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupV2AbdicateFoundershipRequest {
+    /**
+     * The new founder for this group. Must already be a group admin.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=founderIdNew")
+    public Long founderIdNew;
+    public GroupV2AbdicateFoundershipRequest withFounderIdNew(Long founderIdNew) {
+        this.founderIdNew = founderIdNew;
+        return this;
+    }
     
-    public GroupV2AbdicateFoundershipPathParams pathParams;
-    public GroupV2AbdicateFoundershipRequest withPathParams(GroupV2AbdicateFoundershipPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The target group id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public Long groupId;
+    public GroupV2AbdicateFoundershipRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    
+    /**
+     * Membership type of the provided founderIdNew.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
+    public Integer membershipType;
+    public GroupV2AbdicateFoundershipRequest withMembershipType(Integer membershipType) {
+        this.membershipType = membershipType;
         return this;
     }
     

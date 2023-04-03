@@ -7,24 +7,32 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateScoreTrackRequest {
-    
-    public UpdateScoreTrackPathParams pathParams;
-    public UpdateScoreTrackRequest withPathParams(UpdateScoreTrackPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ScoreTrackUpdate request;
-    public UpdateScoreTrackRequest withRequest(org.openapis.openapi.models.shared.ScoreTrackUpdate request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ScoreTrackUpdate scoreTrackUpdate;
+    public UpdateScoreTrackRequest withScoreTrackUpdate(org.openapis.openapi.models.shared.ScoreTrackUpdate scoreTrackUpdate) {
+        this.scoreTrackUpdate = scoreTrackUpdate;
         return this;
     }
     
+    /**
+     * Unique identifier of the score document. This can be a Flat Score unique identifier (i.e. `ScoreDetails.id`) or, if the score is also a Google Drive file, the Drive file unique identifier prefixed with `drive-` (e.g. `drive-0B000000000`).
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=score")
+    public String score;
+    public UpdateScoreTrackRequest withScore(String score) {
+        this.score = score;
+        return this;
+    }
     
-    public UpdateScoreTrackSecurity security;
-    public UpdateScoreTrackRequest withSecurity(UpdateScoreTrackSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of a score audio track
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=track")
+    public String track;
+    public UpdateScoreTrackRequest withTrack(String track) {
+        this.track = track;
         return this;
     }
     

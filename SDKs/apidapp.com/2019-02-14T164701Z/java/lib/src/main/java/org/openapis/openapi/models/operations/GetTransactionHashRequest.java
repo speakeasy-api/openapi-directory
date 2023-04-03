@@ -4,20 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTransactionHashRequest {
-    
-    public GetTransactionHashPathParams pathParams;
-    public GetTransactionHashRequest withPathParams(GetTransactionHashPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetTransactionHashSecurity security;
-    public GetTransactionHashRequest withSecurity(GetTransactionHashSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hash")
+    public String hash;
+    public GetTransactionHashRequest withHash(String hash) {
+        this.hash = hash;
         return this;
     }
     

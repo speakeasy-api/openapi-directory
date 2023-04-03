@@ -7,17 +7,66 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetComplianceSummaryByResourceTypeRequest {
-    
-    public GetComplianceSummaryByResourceTypeHeaders headers;
-    public GetComplianceSummaryByResourceTypeRequest withHeaders(GetComplianceSummaryByResourceTypeHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.GetComplianceSummaryByResourceTypeRequest getComplianceSummaryByResourceTypeRequest;
+    public GetComplianceSummaryByResourceTypeRequest withGetComplianceSummaryByResourceTypeRequest(org.openapis.openapi.models.shared.GetComplianceSummaryByResourceTypeRequest getComplianceSummaryByResourceTypeRequest) {
+        this.getComplianceSummaryByResourceTypeRequest = getComplianceSummaryByResourceTypeRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GetComplianceSummaryByResourceTypeRequest request;
-    public GetComplianceSummaryByResourceTypeRequest withRequest(org.openapis.openapi.models.shared.GetComplianceSummaryByResourceTypeRequest request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetComplianceSummaryByResourceTypeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetComplianceSummaryByResourceTypeRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetComplianceSummaryByResourceTypeRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetComplianceSummaryByResourceTypeRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetComplianceSummaryByResourceTypeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetComplianceSummaryByResourceTypeRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetComplianceSummaryByResourceTypeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public GetComplianceSummaryByResourceTypeXAmzTargetEnum xAmzTarget;
+    public GetComplianceSummaryByResourceTypeRequest withXAmzTarget(GetComplianceSummaryByResourceTypeXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
         return this;
     }
     

@@ -4,34 +4,43 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListUnderstandFieldTypeRequest {
-    
-    public ListUnderstandFieldTypePathParams pathParams;
-    public ListUnderstandFieldTypeRequest withPathParams(ListUnderstandFieldTypePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public ListUnderstandFieldTypeRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
-    
-    public ListUnderstandFieldTypeQueryParams queryParams;
-    public ListUnderstandFieldTypeRequest withQueryParams(ListUnderstandFieldTypeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListUnderstandFieldTypeRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListUnderstandFieldTypeSecurity security;
-    public ListUnderstandFieldTypeRequest withSecurity(ListUnderstandFieldTypeSecurity security) {
-        this.security = security;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListUnderstandFieldTypeRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
-    
-    public String serverURL;
-    public ListUnderstandFieldTypeRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListUnderstandFieldTypeRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

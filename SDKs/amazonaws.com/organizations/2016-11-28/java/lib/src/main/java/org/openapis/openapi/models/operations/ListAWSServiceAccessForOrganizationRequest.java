@@ -7,24 +7,86 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListAWSServiceAccessForOrganizationRequest {
-    
-    public ListAWSServiceAccessForOrganizationQueryParams queryParams;
-    public ListAWSServiceAccessForOrganizationRequest withQueryParams(ListAWSServiceAccessForOrganizationQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ListAWSServiceAccessForOrganizationHeaders headers;
-    public ListAWSServiceAccessForOrganizationRequest withHeaders(ListAWSServiceAccessForOrganizationHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ListAWSServiceAccessForOrganizationRequest request;
-    public ListAWSServiceAccessForOrganizationRequest withRequest(org.openapis.openapi.models.shared.ListAWSServiceAccessForOrganizationRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ListAWSServiceAccessForOrganizationRequest listAWSServiceAccessForOrganizationRequest;
+    public ListAWSServiceAccessForOrganizationRequest withListAWSServiceAccessForOrganizationRequest(org.openapis.openapi.models.shared.ListAWSServiceAccessForOrganizationRequest listAWSServiceAccessForOrganizationRequest) {
+        this.listAWSServiceAccessForOrganizationRequest = listAWSServiceAccessForOrganizationRequest;
+        return this;
+    }
+    
+    /**
+     * Pagination limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public String maxResults;
+    public ListAWSServiceAccessForOrganizationRequest withMaxResults(String maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * Pagination token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public ListAWSServiceAccessForOrganizationRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListAWSServiceAccessForOrganizationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListAWSServiceAccessForOrganizationRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListAWSServiceAccessForOrganizationRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListAWSServiceAccessForOrganizationRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListAWSServiceAccessForOrganizationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListAWSServiceAccessForOrganizationRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListAWSServiceAccessForOrganizationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public ListAWSServiceAccessForOrganizationXAmzTargetEnum xAmzTarget;
+    public ListAWSServiceAccessForOrganizationRequest withXAmzTarget(ListAWSServiceAccessForOrganizationXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
         return this;
     }
     

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCiscoSwitchRequest {
-    
-    public DeleteCiscoSwitchPathParams pathParams;
-    public DeleteCiscoSwitchRequest withPathParams(DeleteCiscoSwitchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteCiscoSwitchSecurity security;
-    public DeleteCiscoSwitchRequest withSecurity(DeleteCiscoSwitchSecurity security) {
-        this.security = security;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteCiscoSwitchRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

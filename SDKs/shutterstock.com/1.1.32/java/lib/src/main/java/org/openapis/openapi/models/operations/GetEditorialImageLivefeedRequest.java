@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEditorialImageLivefeedRequest {
-    
-    public GetEditorialImageLivefeedPathParams pathParams;
-    public GetEditorialImageLivefeedRequest withPathParams(GetEditorialImageLivefeedPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Returns only if the livefeed is available for distribution in a certain country
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public String country;
+    public GetEditorialImageLivefeedRequest withCountry(String country) {
+        this.country = country;
         return this;
     }
     
-    
-    public GetEditorialImageLivefeedQueryParams queryParams;
-    public GetEditorialImageLivefeedRequest withQueryParams(GetEditorialImageLivefeedQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetEditorialImageLivefeedSecurity security;
-    public GetEditorialImageLivefeedRequest withSecurity(GetEditorialImageLivefeedSecurity security) {
-        this.security = security;
+    /**
+     * Editorial livefeed ID; must be an URI encoded string
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetEditorialImageLivefeedRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

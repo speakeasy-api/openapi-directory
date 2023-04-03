@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCampaignSoundDataMp3Request {
-    
-    public GetCampaignSoundDataMp3PathParams pathParams;
-    public GetCampaignSoundDataMp3Request withPathParams(GetCampaignSoundDataMp3PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetCampaignSoundDataMp3Security security;
-    public GetCampaignSoundDataMp3Request withSecurity(GetCampaignSoundDataMp3Security security) {
-        this.security = security;
+    /**
+     * An id of a campaign sound
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetCampaignSoundDataMp3Request withId(Long id) {
+        this.id = id;
         return this;
     }
     

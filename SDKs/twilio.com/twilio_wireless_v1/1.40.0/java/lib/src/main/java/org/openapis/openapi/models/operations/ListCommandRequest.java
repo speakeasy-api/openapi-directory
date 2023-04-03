@@ -4,27 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListCommandRequest {
-    
-    public ListCommandQueryParams queryParams;
-    public ListCommandRequest withQueryParams(ListCommandQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Only return Commands with this direction value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Direction")
+    public org.openapis.openapi.models.shared.CommandEnumDirectionEnum direction;
+    public ListCommandRequest withDirection(org.openapis.openapi.models.shared.CommandEnumDirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
-    
-    public ListCommandSecurity security;
-    public ListCommandRequest withSecurity(ListCommandSecurity security) {
-        this.security = security;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListCommandRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListCommandRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public String serverURL;
-    public ListCommandRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListCommandRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * The `sid` or `unique_name` of the [Sim resources](https://www.twilio.com/docs/wireless/api/sim-resource) to read.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Sim")
+    public String sim;
+    public ListCommandRequest withSim(String sim) {
+        this.sim = sim;
+        return this;
+    }
+    
+    /**
+     * The status of the resources to read. Can be: `queued`, `sent`, `delivered`, `received`, or `failed`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Status")
+    public org.openapis.openapi.models.shared.CommandEnumStatusEnum status;
+    public ListCommandRequest withStatus(org.openapis.openapi.models.shared.CommandEnumStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * Only return Commands with this transport value. Can be: `sms` or `ip`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Transport")
+    public org.openapis.openapi.models.shared.CommandEnumTransportEnum transport;
+    public ListCommandRequest withTransport(org.openapis.openapi.models.shared.CommandEnumTransportEnum transport) {
+        this.transport = transport;
         return this;
     }
     

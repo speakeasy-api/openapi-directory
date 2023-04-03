@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetViewsBriefRequest {
-    
-    public GetViewsBriefPathParams pathParams;
-    public GetViewsBriefRequest withPathParams(GetViewsBriefPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * views' class name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=className")
+    public String className;
+    public GetViewsBriefRequest withClassName(String className) {
+        this.className = className;
         return this;
     }
     
-    
-    public GetViewsBriefQueryParams queryParams;
-    public GetViewsBriefRequest withQueryParams(GetViewsBriefQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * place name (denotes specific place in system with the table)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=placeName")
+    public String placeName;
+    public GetViewsBriefRequest withPlaceName(String placeName) {
+        this.placeName = placeName;
         return this;
     }
     

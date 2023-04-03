@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteApplicationRequest {
-    
-    public DeleteApplicationPathParams pathParams;
-    public DeleteApplicationRequest withPathParams(DeleteApplicationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID allocated to your application by Nexmo.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_id")
+    public String appId;
+    public DeleteApplicationRequest withAppId(String appId) {
+        this.appId = appId;
         return this;
     }
     

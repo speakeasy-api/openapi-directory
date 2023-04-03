@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteTaskQueueRequest {
-    
-    public DeleteTaskQueuePathParams pathParams;
-    public DeleteTaskQueueRequest withPathParams(DeleteTaskQueuePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the TaskQueue resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteTaskQueueRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public DeleteTaskQueueSecurity security;
-    public DeleteTaskQueueRequest withSecurity(DeleteTaskQueueSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteTaskQueueRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Workspace with the TaskQueue to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkspaceSid")
+    public String workspaceSid;
+    public DeleteTaskQueueRequest withWorkspaceSid(String workspaceSid) {
+        this.workspaceSid = workspaceSid;
         return this;
     }
     

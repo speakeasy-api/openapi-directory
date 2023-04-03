@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CertificateSitesealGetRequest {
-    
-    public CertificateSitesealGetPathParams pathParams;
-    public CertificateSitesealGetRequest withPathParams(CertificateSitesealGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Certificate id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=certificateId")
+    public String certificateId;
+    public CertificateSitesealGetRequest withCertificateId(String certificateId) {
+        this.certificateId = certificateId;
         return this;
     }
     
+    /**
+     * Determine locale for text displayed in seal image and verification page. If seal doesn't exist, default values are used if params not present. If seal does exist, default values will not be used to update unless params present.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
+    public String locale;
+    public CertificateSitesealGetRequest withLocale(String locale) {
+        this.locale = locale;
+        return this;
+    }
     
-    public CertificateSitesealGetQueryParams queryParams;
-    public CertificateSitesealGetRequest withQueryParams(CertificateSitesealGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * This value represents the visual theme of the seal. If seal doesn't exist, default values are used if params not present. If seal does exist, default values will not be used to update unless params present.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=theme")
+    public CertificateSitesealGetThemeEnum theme;
+    public CertificateSitesealGetRequest withTheme(CertificateSitesealGetThemeEnum theme) {
+        this.theme = theme;
         return this;
     }
     

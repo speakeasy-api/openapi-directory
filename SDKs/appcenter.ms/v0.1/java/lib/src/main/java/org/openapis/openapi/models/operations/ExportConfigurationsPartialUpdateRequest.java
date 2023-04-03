@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExportConfigurationsPartialUpdateRequest {
-    
-    public ExportConfigurationsPartialUpdatePathParams pathParams;
-    public ExportConfigurationsPartialUpdateRequest withPathParams(ExportConfigurationsPartialUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Export configurations.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public ExportConfigurationsPartialUpdateRequestBody request;
-    public ExportConfigurationsPartialUpdateRequest withRequest(ExportConfigurationsPartialUpdateRequestBody request) {
-        this.request = request;
+    public ExportConfigurationsPartialUpdateRequestBody requestBody;
+    public ExportConfigurationsPartialUpdateRequest withRequestBody(ExportConfigurationsPartialUpdateRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public ExportConfigurationsPartialUpdateRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public ExportConfigurationsPartialUpdateSecurity security;
-    public ExportConfigurationsPartialUpdateRequest withSecurity(ExportConfigurationsPartialUpdateSecurity security) {
-        this.security = security;
+    /**
+     * The id of the export configuration.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=export_configuration_id")
+    public String exportConfigurationId;
+    public ExportConfigurationsPartialUpdateRequest withExportConfigurationId(String exportConfigurationId) {
+        this.exportConfigurationId = exportConfigurationId;
+        return this;
+    }
+    
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public ExportConfigurationsPartialUpdateRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

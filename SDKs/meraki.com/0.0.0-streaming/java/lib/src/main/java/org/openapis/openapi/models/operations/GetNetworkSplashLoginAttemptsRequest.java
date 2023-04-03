@@ -4,20 +4,43 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkSplashLoginAttemptsRequest {
-    
-    public GetNetworkSplashLoginAttemptsPathParams pathParams;
-    public GetNetworkSplashLoginAttemptsRequest withPathParams(GetNetworkSplashLoginAttemptsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The username, email, or phone number used during login
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=loginIdentifier")
+    public String loginIdentifier;
+    public GetNetworkSplashLoginAttemptsRequest withLoginIdentifier(String loginIdentifier) {
+        this.loginIdentifier = loginIdentifier;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkSplashLoginAttemptsRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
     
-    public GetNetworkSplashLoginAttemptsQueryParams queryParams;
-    public GetNetworkSplashLoginAttemptsRequest withQueryParams(GetNetworkSplashLoginAttemptsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Only return the login attempts for the specified SSID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ssidNumber")
+    public GetNetworkSplashLoginAttemptsSsidNumberEnum ssidNumber;
+    public GetNetworkSplashLoginAttemptsRequest withSsidNumber(GetNetworkSplashLoginAttemptsSsidNumberEnum ssidNumber) {
+        this.ssidNumber = ssidNumber;
+        return this;
+    }
+    
+    /**
+     * The timespan, in seconds, for the login attempts. The period will be from [timespan] seconds ago until now. The maximum timespan is 3 months
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timespan")
+    public Long timespan;
+    public GetNetworkSplashLoginAttemptsRequest withTimespan(Long timespan) {
+        this.timespan = timespan;
         return this;
     }
     

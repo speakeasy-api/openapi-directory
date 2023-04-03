@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBusinessGroupsIdRequest {
-    
-    public GetBusinessGroupsIdPathParams pathParams;
-    public GetBusinessGroupsIdRequest withPathParams(GetBusinessGroupsIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetBusinessGroupsIdSecurity security;
-    public GetBusinessGroupsIdRequest withSecurity(GetBusinessGroupsIdSecurity security) {
-        this.security = security;
+    /**
+     * Id of the group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetBusinessGroupsIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

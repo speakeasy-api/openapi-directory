@@ -31,7 +31,6 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/PostCreateTestCardRangesSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostCreateTestCardRangesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostCreateTestCardRangesResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ServiceError.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreateTestCardRangesResult.java
@@ -42,6 +41,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/TestCardRangeExpiryMonthEnu
 lib/src/main/java/org/openapis/openapi/models/shared/TestCardRangeThreeDDirectoryServerResponseEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/TestCardRange.java
 lib/src/main/java/org/openapis/openapi/models/shared/AvsAddress.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKeyAuth.java
 lib/src/main/java/org/openapis/openapi/models/shared/SchemeBasicAuth.java
 USAGE.md

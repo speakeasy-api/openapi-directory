@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ServicePrincipalsRemoveOwnerRequest {
-    
-    public ServicePrincipalsRemoveOwnerPathParams pathParams;
-    public ServicePrincipalsRemoveOwnerRequest withPathParams(ServicePrincipalsRemoveOwnerPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Client API version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public ServicePrincipalsRemoveOwnerRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
+    /**
+     * The object ID of the service principal from which to remove the owner.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=objectId")
+    public String objectId;
+    public ServicePrincipalsRemoveOwnerRequest withObjectId(String objectId) {
+        this.objectId = objectId;
+        return this;
+    }
     
-    public ServicePrincipalsRemoveOwnerQueryParams queryParams;
-    public ServicePrincipalsRemoveOwnerRequest withQueryParams(ServicePrincipalsRemoveOwnerQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Owner object id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ownerObjectId")
+    public String ownerObjectId;
+    public ServicePrincipalsRemoveOwnerRequest withOwnerObjectId(String ownerObjectId) {
+        this.ownerObjectId = ownerObjectId;
+        return this;
+    }
+    
+    /**
+     * The tenant ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tenantID")
+    public String tenantID;
+    public ServicePrincipalsRemoveOwnerRequest withTenantID(String tenantID) {
+        this.tenantID = tenantID;
         return this;
     }
     

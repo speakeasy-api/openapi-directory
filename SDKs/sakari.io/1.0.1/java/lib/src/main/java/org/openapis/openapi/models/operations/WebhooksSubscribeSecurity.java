@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WebhooksSubscribeSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeSakariAuth sakariAuth;
-    public WebhooksSubscribeSecurity withSakariAuth(org.openapis.openapi.models.shared.SchemeSakariAuth sakariAuth) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String sakariAuth;
+    public WebhooksSubscribeSecurity withSakariAuth(String sakariAuth) {
         this.sakariAuth = sakariAuth;
         return this;
     }

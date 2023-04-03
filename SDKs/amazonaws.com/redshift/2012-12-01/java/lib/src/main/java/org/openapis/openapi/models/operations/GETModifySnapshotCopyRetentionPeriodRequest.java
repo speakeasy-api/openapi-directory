@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifySnapshotCopyRetentionPeriodRequest {
-    
-    public GETModifySnapshotCopyRetentionPeriodQueryParams queryParams;
-    public GETModifySnapshotCopyRetentionPeriodRequest withQueryParams(GETModifySnapshotCopyRetentionPeriodQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifySnapshotCopyRetentionPeriodActionEnum action;
+    public GETModifySnapshotCopyRetentionPeriodRequest withAction(GETModifySnapshotCopyRetentionPeriodActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The unique identifier of the cluster for which you want to change the retention period for either automated or manual snapshots that are copied to a destination Amazon Web Services Region.&lt;/p&gt; &lt;p&gt;Constraints: Must be the valid name of an existing cluster that has cross-region snapshot copy enabled.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
+    public String clusterIdentifier;
+    public GETModifySnapshotCopyRetentionPeriodRequest withClusterIdentifier(String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+        return this;
+    }
     
-    public GETModifySnapshotCopyRetentionPeriodHeaders headers;
-    public GETModifySnapshotCopyRetentionPeriodRequest withHeaders(GETModifySnapshotCopyRetentionPeriodHeaders headers) {
-        this.headers = headers;
+    /**
+     * Indicates whether to apply the snapshot retention period to newly copied manual snapshots instead of automated snapshots.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Manual")
+    public Boolean manual;
+    public GETModifySnapshotCopyRetentionPeriodRequest withManual(Boolean manual) {
+        this.manual = manual;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The number of days to retain automated snapshots in the destination Amazon Web Services Region after they are copied from the source Amazon Web Services Region.&lt;/p&gt; &lt;p&gt;By default, this only changes the retention period of copied automated snapshots. &lt;/p&gt; &lt;p&gt;If you decrease the retention period for automated snapshots that are copied to a destination Amazon Web Services Region, Amazon Redshift deletes any existing automated snapshots that were copied to the destination Amazon Web Services Region and that fall outside of the new retention period.&lt;/p&gt; &lt;p&gt;Constraints: Must be at least 1 and no more than 35 for automated snapshots. &lt;/p&gt; &lt;p&gt;If you specify the &lt;code&gt;manual&lt;/code&gt; option, only newly copied manual snapshots will have the new retention period. &lt;/p&gt; &lt;p&gt;If you specify the value of -1 newly copied manual snapshots are retained indefinitely.&lt;/p&gt; &lt;p&gt;Constraints: The number of days must be either -1 or an integer between 1 and 3,653 for manual snapshots.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RetentionPeriod")
+    public Long retentionPeriod;
+    public GETModifySnapshotCopyRetentionPeriodRequest withRetentionPeriod(Long retentionPeriod) {
+        this.retentionPeriod = retentionPeriod;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifySnapshotCopyRetentionPeriodVersionEnum version;
+    public GETModifySnapshotCopyRetentionPeriodRequest withVersion(GETModifySnapshotCopyRetentionPeriodVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifySnapshotCopyRetentionPeriodRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifySnapshotCopyRetentionPeriodRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifySnapshotCopyRetentionPeriodRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifySnapshotCopyRetentionPeriodRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifySnapshotCopyRetentionPeriodRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifySnapshotCopyRetentionPeriodRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifySnapshotCopyRetentionPeriodRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

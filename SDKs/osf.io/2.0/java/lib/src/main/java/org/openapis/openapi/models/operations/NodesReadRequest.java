@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NodesReadRequest {
-    
-    public NodesReadPathParams pathParams;
-    public NodesReadRequest withPathParams(NodesReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the node.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=node_id")
+    public String nodeId;
+    public NodesReadRequest withNodeId(String nodeId) {
+        this.nodeId = nodeId;
         return this;
     }
     

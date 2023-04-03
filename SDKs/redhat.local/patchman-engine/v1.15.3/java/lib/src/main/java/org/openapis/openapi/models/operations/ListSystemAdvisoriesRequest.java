@@ -4,27 +4,116 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSystemAdvisoriesRequest {
-    
-    public ListSystemAdvisoriesPathParams pathParams;
-    public ListSystemAdvisoriesRequest withPathParams(ListSystemAdvisoriesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[advisory_type]")
+    public String filterAdvisoryType;
+    public ListSystemAdvisoriesRequest withFilterAdvisoryType(String filterAdvisoryType) {
+        this.filterAdvisoryType = filterAdvisoryType;
         return this;
     }
     
-    
-    public ListSystemAdvisoriesQueryParams queryParams;
-    public ListSystemAdvisoriesRequest withQueryParams(ListSystemAdvisoriesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[description]")
+    public String filterDescription;
+    public ListSystemAdvisoriesRequest withFilterDescription(String filterDescription) {
+        this.filterDescription = filterDescription;
         return this;
     }
     
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[id]")
+    public String filterId;
+    public ListSystemAdvisoriesRequest withFilterId(String filterId) {
+        this.filterId = filterId;
+        return this;
+    }
     
-    public ListSystemAdvisoriesSecurity security;
-    public ListSystemAdvisoriesRequest withSecurity(ListSystemAdvisoriesSecurity security) {
-        this.security = security;
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[public_date]")
+    public String filterPublicDate;
+    public ListSystemAdvisoriesRequest withFilterPublicDate(String filterPublicDate) {
+        this.filterPublicDate = filterPublicDate;
+        return this;
+    }
+    
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[severity]")
+    public String filterSeverity;
+    public ListSystemAdvisoriesRequest withFilterSeverity(String filterSeverity) {
+        this.filterSeverity = filterSeverity;
+        return this;
+    }
+    
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[synopsis]")
+    public String filterSynopsis;
+    public ListSystemAdvisoriesRequest withFilterSynopsis(String filterSynopsis) {
+        this.filterSynopsis = filterSynopsis;
+        return this;
+    }
+    
+    /**
+     * Inventory ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=inventory_id")
+    public String inventoryId;
+    public ListSystemAdvisoriesRequest withInventoryId(String inventoryId) {
+        this.inventoryId = inventoryId;
+        return this;
+    }
+    
+    /**
+     * Limit for paging, set -1 to return all
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListSystemAdvisoriesRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Offset for paging
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public ListSystemAdvisoriesRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Find matching text
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public ListSystemAdvisoriesRequest withSearch(String search) {
+        this.search = search;
+        return this;
+    }
+    
+    /**
+     * Sort field
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public ListSystemAdvisoriesSortEnum sort;
+    public ListSystemAdvisoriesRequest withSort(ListSystemAdvisoriesSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

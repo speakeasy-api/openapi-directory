@@ -37,10 +37,11 @@ public class QuoteOfTheDay {
     /**
      * Gets `Quote of the Day`. Optional `category` param determines the category of returned quote of the day - 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetQodResponse getQod(org.openapis.openapi.models.operations.GetQodRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetQodResponse getQod(org.openapis.openapi.models.operations.GetQodRequest request, org.openapis.openapi.models.operations.GetQodSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/qod");
         
@@ -48,14 +49,14 @@ public class QuoteOfTheDay {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetQodQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetQodRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -84,10 +85,11 @@ public class QuoteOfTheDay {
     /**
      * Gets a list of `Quote of the Day` Categories. - 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetQodCategoriesResponse getQodCategories(org.openapis.openapi.models.operations.GetQodCategoriesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetQodCategoriesResponse getQodCategories(org.openapis.openapi.models.operations.GetQodCategoriesRequest request, org.openapis.openapi.models.operations.GetQodCategoriesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/qod/categories");
         
@@ -95,14 +97,14 @@ public class QuoteOfTheDay {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetQodCategoriesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetQodCategoriesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -122,11 +124,10 @@ public class QuoteOfTheDay {
 
     /**
      * Gets a list of supported languages for `Quote of the Day`.  - 
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetQodLanguagesResponse getQodLanguages(org.openapis.openapi.models.operations.GetQodLanguagesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetQodLanguagesResponse getQodLanguages() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/qod/languages");
         
@@ -135,8 +136,7 @@ public class QuoteOfTheDay {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");

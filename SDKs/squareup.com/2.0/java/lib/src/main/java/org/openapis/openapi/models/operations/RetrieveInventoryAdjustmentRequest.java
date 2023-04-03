@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveInventoryAdjustmentRequest {
-    
-    public RetrieveInventoryAdjustmentPathParams pathParams;
-    public RetrieveInventoryAdjustmentRequest withPathParams(RetrieveInventoryAdjustmentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RetrieveInventoryAdjustmentSecurity security;
-    public RetrieveInventoryAdjustmentRequest withSecurity(RetrieveInventoryAdjustmentSecurity security) {
-        this.security = security;
+    /**
+     * ID of the [InventoryAdjustment](https://developer.squareup.com/reference/square_2021-08-18/objects/InventoryAdjustment) to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=adjustment_id")
+    public String adjustmentId;
+    public RetrieveInventoryAdjustmentRequest withAdjustmentId(String adjustmentId) {
+        this.adjustmentId = adjustmentId;
         return this;
     }
     

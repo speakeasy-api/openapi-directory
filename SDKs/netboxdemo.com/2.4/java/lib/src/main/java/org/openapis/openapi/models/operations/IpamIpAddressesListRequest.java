@@ -4,13 +4,155 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IpamIpAddressesListRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=address")
+    public String address;
+    public IpamIpAddressesListRequest withAddress(String address) {
+        this.address = address;
+        return this;
+    }
     
-    public IpamIpAddressesListQueryParams queryParams;
-    public IpamIpAddressesListRequest withQueryParams(IpamIpAddressesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device")
+    public String device;
+    public IpamIpAddressesListRequest withDevice(String device) {
+        this.device = device;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_id")
+    public Double deviceId;
+    public IpamIpAddressesListRequest withDeviceId(Double deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=family")
+    public String family;
+    public IpamIpAddressesListRequest withFamily(String family) {
+        this.family = family;
+        return this;
+    }
+    
+    /**
+     * Multiple values may be separated by commas.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__in")
+    public String idIn;
+    public IpamIpAddressesListRequest withIdIn(String idIn) {
+        this.idIn = idIn;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interface_id")
+    public String interfaceId;
+    public IpamIpAddressesListRequest withInterfaceId(String interfaceId) {
+        this.interfaceId = interfaceId;
+        return this;
+    }
+    
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public IpamIpAddressesListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mask_length")
+    public Double maskLength;
+    public IpamIpAddressesListRequest withMaskLength(Double maskLength) {
+        this.maskLength = maskLength;
+        return this;
+    }
+    
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public IpamIpAddressesListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parent")
+    public String parent;
+    public IpamIpAddressesListRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public IpamIpAddressesListRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=role")
+    public String role;
+    public IpamIpAddressesListRequest withRole(String role) {
+        this.role = role;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public String status;
+    public IpamIpAddressesListRequest withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
+    public String tag;
+    public IpamIpAddressesListRequest withTag(String tag) {
+        this.tag = tag;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tenant")
+    public String tenant;
+    public IpamIpAddressesListRequest withTenant(String tenant) {
+        this.tenant = tenant;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tenant_id")
+    public String tenantId;
+    public IpamIpAddressesListRequest withTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=virtual_machine")
+    public String virtualMachine;
+    public IpamIpAddressesListRequest withVirtualMachine(String virtualMachine) {
+        this.virtualMachine = virtualMachine;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=virtual_machine_id")
+    public String virtualMachineId;
+    public IpamIpAddressesListRequest withVirtualMachineId(String virtualMachineId) {
+        this.virtualMachineId = virtualMachineId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vrf")
+    public String vrf;
+    public IpamIpAddressesListRequest withVrf(String vrf) {
+        this.vrf = vrf;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vrf_id")
+    public String vrfId;
+    public IpamIpAddressesListRequest withVrfId(String vrfId) {
+        this.vrfId = vrfId;
         return this;
     }
     

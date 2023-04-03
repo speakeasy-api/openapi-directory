@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetInvoiceRequest {
-    
-    public GetInvoicePathParams pathParams;
-    public GetInvoiceRequest withPathParams(GetInvoicePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetInvoiceSecurity security;
-    public GetInvoiceRequest withSecurity(GetInvoiceSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the invoice to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=invoice_id")
+    public String invoiceId;
+    public GetInvoiceRequest withInvoiceId(String invoiceId) {
+        this.invoiceId = invoiceId;
         return this;
     }
     

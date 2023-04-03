@@ -4,13 +4,28 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRecentBuildsRequest {
+    /**
+     * The number of builds to return. Maximum 100, defaults to 30.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetRecentBuildsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetRecentBuildsQueryParams queryParams;
-    public GetRecentBuildsRequest withQueryParams(GetRecentBuildsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The API returns builds starting from this offset, defaults to 0.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetRecentBuildsRequest withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     

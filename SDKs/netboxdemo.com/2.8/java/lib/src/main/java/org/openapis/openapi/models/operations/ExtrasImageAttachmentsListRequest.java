@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExtrasImageAttachmentsListRequest {
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ExtrasImageAttachmentsListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public ExtrasImageAttachmentsListQueryParams queryParams;
-    public ExtrasImageAttachmentsListRequest withQueryParams(ExtrasImageAttachmentsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public ExtrasImageAttachmentsListRequest withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     

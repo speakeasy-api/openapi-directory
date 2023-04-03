@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEventDistrictPointsRequest {
-    
-    public GetEventDistrictPointsPathParams pathParams;
-    public GetEventDistrictPointsRequest withPathParams(GetEventDistrictPointsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Value of the `ETag` header in the most recently cached response by the client.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
+    public String ifNoneMatch;
+    public GetEventDistrictPointsRequest withIfNoneMatch(String ifNoneMatch) {
+        this.ifNoneMatch = ifNoneMatch;
         return this;
     }
     
-    
-    public GetEventDistrictPointsHeaders headers;
-    public GetEventDistrictPointsRequest withHeaders(GetEventDistrictPointsHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetEventDistrictPointsSecurity security;
-    public GetEventDistrictPointsRequest withSecurity(GetEventDistrictPointsSecurity security) {
-        this.security = security;
+    /**
+     * TBA Event Key, eg `2016nytr`
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=event_key")
+    public String eventKey;
+    public GetEventDistrictPointsRequest withEventKey(String eventKey) {
+        this.eventKey = eventKey;
         return this;
     }
     

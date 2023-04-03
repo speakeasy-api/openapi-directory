@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CreateRescoreExecutionPlanXAmzTargetEnum;
-import org.openapis.openapi.models.operations.CreateRescoreExecutionPlanHeaders;
 import org.openapis.openapi.models.operations.CreateRescoreExecutionPlanRequest;
 import org.openapis.openapi.models.operations.CreateRescoreExecutionPlanResponse;
 import org.openapis.openapi.models.shared.CreateRescoreExecutionPlanRequest;
@@ -30,42 +29,42 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateRescoreExecutionPlanRequest req = new CreateRescoreExecutionPlanRequest() {{
-                headers = new CreateRescoreExecutionPlanHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "AWSKendraRerankingFrontendService.CreateRescoreExecutionPlan";
-                }};
-                request = new CreateRescoreExecutionPlanRequest() {{
+                createRescoreExecutionPlanRequest = new CreateRescoreExecutionPlanRequest() {{
                     capacityUnits = new CapacityUnitsConfiguration() {{
-                        rescoreCapacityUnits = 847252;
+                        rescoreCapacityUnits = 548814;
                     }};
-                    clientToken = "vel";
-                    description = "error";
-                    name = "deserunt";
+                    clientToken = "provident";
+                    description = "distinctio";
+                    name = "quibusdam";
                     tags = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            key = "iure";
-                            value = "magnam";
+                            key = "nulla";
+                            value = "corrupti";
                         }}),
                         add(new Tag() {{
-                            key = "debitis";
-                            value = "ipsa";
+                            key = "illum";
+                            value = "vel";
+                        }}),
+                        add(new Tag() {{
+                            key = "error";
+                            value = "deserunt";
                         }}),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "suscipit";
+                xAmzContentSha256 = "iure";
+                xAmzCredential = "magnam";
+                xAmzDate = "debitis";
+                xAmzSecurityToken = "ipsa";
+                xAmzSignature = "delectus";
+                xAmzSignedHeaders = "tempora";
+                xAmzTarget = "AWSKendraRerankingFrontendService.CreateRescoreExecutionPlan";
+            }}            
 
             CreateRescoreExecutionPlanResponse res = sdk.createRescoreExecutionPlan(req);
 
@@ -79,7 +78,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

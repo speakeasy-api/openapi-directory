@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CommititemfeedorderstatusRequest {
-    
-    public CommititemfeedorderstatusHeaders headers;
-    public CommititemfeedorderstatusRequest withHeaders(CommititemfeedorderstatusHeaders headers) {
-        this.headers = headers;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public CommititemfeedorderstatusRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CommititemfeedorderstatusRequest request;
-    public CommititemfeedorderstatusRequest withRequest(org.openapis.openapi.models.shared.CommititemfeedorderstatusRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CommititemfeedorderstatusRequest commititemfeedorderstatusRequest;
+    public CommititemfeedorderstatusRequest withCommititemfeedorderstatusRequest(org.openapis.openapi.models.shared.CommititemfeedorderstatusRequest commititemfeedorderstatusRequest) {
+        this.commititemfeedorderstatusRequest = commititemfeedorderstatusRequest;
+        return this;
+    }
+    
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public CommititemfeedorderstatusRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     

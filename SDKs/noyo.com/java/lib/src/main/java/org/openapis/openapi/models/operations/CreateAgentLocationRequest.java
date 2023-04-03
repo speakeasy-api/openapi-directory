@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateAgentLocationRequest {
-    
-    public CreateAgentLocationPathParams pathParams;
-    public CreateAgentLocationRequest withPathParams(CreateAgentLocationPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.AgentLocationCreateRequest agentLocationCreateRequest;
+    public CreateAgentLocationRequest withAgentLocationCreateRequest(org.openapis.openapi.models.shared.AgentLocationCreateRequest agentLocationCreateRequest) {
+        this.agentLocationCreateRequest = agentLocationCreateRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AgentLocationCreateRequest request;
-    public CreateAgentLocationRequest withRequest(org.openapis.openapi.models.shared.AgentLocationCreateRequest request) {
-        this.request = request;
+    /**
+     * The unique identifier of the agent in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agent_id")
+    public String agentId;
+    public CreateAgentLocationRequest withAgentId(String agentId) {
+        this.agentId = agentId;
         return this;
     }
     

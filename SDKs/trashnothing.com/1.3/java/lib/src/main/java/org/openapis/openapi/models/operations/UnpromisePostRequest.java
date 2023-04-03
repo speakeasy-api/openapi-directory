@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UnpromisePostRequest {
-    
-    public UnpromisePostPathParams pathParams;
-    public UnpromisePostRequest withPathParams(UnpromisePostPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the post to unpromise.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=post_id")
+    public String postId;
+    public UnpromisePostRequest withPostId(String postId) {
+        this.postId = postId;
         return this;
     }
     

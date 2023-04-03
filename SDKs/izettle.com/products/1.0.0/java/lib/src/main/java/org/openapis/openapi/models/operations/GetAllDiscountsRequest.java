@@ -4,20 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllDiscountsRequest {
-    
-    public GetAllDiscountsPathParams pathParams;
-    public GetAllDiscountsRequest withPathParams(GetAllDiscountsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetAllDiscountsSecurity security;
-    public GetAllDiscountsRequest withSecurity(GetAllDiscountsSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationUuid")
+    public String organizationUuid;
+    public GetAllDiscountsRequest withOrganizationUuid(String organizationUuid) {
+        this.organizationUuid = organizationUuid;
         return this;
     }
     

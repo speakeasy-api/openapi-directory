@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateFlowRequest {
-    
-    public UpdateFlowPathParams pathParams;
-    public UpdateFlowRequest withPathParams(UpdateFlowPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateFlowUpdateFlowRequest request;
-    public UpdateFlowRequest withRequest(UpdateFlowUpdateFlowRequest request) {
-        this.request = request;
+    public UpdateFlowUpdateFlowRequest requestBody;
+    public UpdateFlowRequest withRequestBody(UpdateFlowUpdateFlowRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateFlowSecurity security;
-    public UpdateFlowRequest withSecurity(UpdateFlowSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateFlowRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Flow resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateFlowRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

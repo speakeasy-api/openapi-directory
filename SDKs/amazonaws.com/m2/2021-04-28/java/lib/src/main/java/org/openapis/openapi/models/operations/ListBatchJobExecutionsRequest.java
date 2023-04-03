@@ -4,27 +4,136 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListBatchJobExecutionsRequest {
-    
-    public ListBatchJobExecutionsPathParams pathParams;
-    public ListBatchJobExecutionsRequest withPathParams(ListBatchJobExecutionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListBatchJobExecutionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public ListBatchJobExecutionsQueryParams queryParams;
-    public ListBatchJobExecutionsRequest withQueryParams(ListBatchJobExecutionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListBatchJobExecutionsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListBatchJobExecutionsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public ListBatchJobExecutionsHeaders headers;
-    public ListBatchJobExecutionsRequest withHeaders(ListBatchJobExecutionsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListBatchJobExecutionsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListBatchJobExecutionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListBatchJobExecutionsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListBatchJobExecutionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the application.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=applicationId")
+    public String applicationId;
+    public ListBatchJobExecutionsRequest withApplicationId(String applicationId) {
+        this.applicationId = applicationId;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of each batch job execution.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=executionIds")
+    public String[] executionIds;
+    public ListBatchJobExecutionsRequest withExecutionIds(String[] executionIds) {
+        this.executionIds = executionIds;
+        return this;
+    }
+    
+    /**
+     * The name of each batch job execution.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jobName")
+    public String jobName;
+    public ListBatchJobExecutionsRequest withJobName(String jobName) {
+        this.jobName = jobName;
+        return this;
+    }
+    
+    /**
+     * The maximum number of batch job executions to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public ListBatchJobExecutionsRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * A pagination token to control the number of batch job executions displayed in the list.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
+    public String nextToken;
+    public ListBatchJobExecutionsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * The time after which the batch job executions started.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startedAfter")
+    public OffsetDateTime startedAfter;
+    public ListBatchJobExecutionsRequest withStartedAfter(OffsetDateTime startedAfter) {
+        this.startedAfter = startedAfter;
+        return this;
+    }
+    
+    /**
+     * The time before the batch job executions started.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startedBefore")
+    public OffsetDateTime startedBefore;
+    public ListBatchJobExecutionsRequest withStartedBefore(OffsetDateTime startedBefore) {
+        this.startedBefore = startedBefore;
+        return this;
+    }
+    
+    /**
+     * The status of the batch job executions.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public ListBatchJobExecutionsStatusEnum status;
+    public ListBatchJobExecutionsRequest withStatus(ListBatchJobExecutionsStatusEnum status) {
+        this.status = status;
         return this;
     }
     

@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposGetCommitActivityStatsRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposGetCommitActivityStatsRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public ReposGetCommitActivityStatsPathParams pathParams;
-    public ReposGetCommitActivityStatsRequest withPathParams(ReposGetCommitActivityStatsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposGetCommitActivityStatsRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.ActivityCheckRepoIsStarredByAuthenticatedUserPathParams;
 import org.openapis.openapi.models.operations.ActivityCheckRepoIsStarredByAuthenticatedUserRequest;
 import org.openapis.openapi.models.operations.ActivityCheckRepoIsStarredByAuthenticatedUserResponse;
 
@@ -15,11 +14,9 @@ public class Application {
                 .build();
 
             ActivityCheckRepoIsStarredByAuthenticatedUserRequest req = new ActivityCheckRepoIsStarredByAuthenticatedUserRequest() {{
-                pathParams = new ActivityCheckRepoIsStarredByAuthenticatedUserPathParams() {{
-                    owner = "corrupti";
-                    repo = "provident";
-                }};
-            }};            
+                owner = "corrupti";
+                repo = "provident";
+            }}            
 
             ActivityCheckRepoIsStarredByAuthenticatedUserResponse res = sdk.activity.activityCheckRepoIsStarredByAuthenticatedUser(req);
 

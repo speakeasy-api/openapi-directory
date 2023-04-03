@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class HolidayRequest {
-    
-    public HolidayPathParams pathParams;
-    public HolidayRequest withPathParams(HolidayPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Primary key for a holiday
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=holidayId")
+    public Long holidayId;
+    public HolidayRequest withHolidayId(Long holidayId) {
+        this.holidayId = holidayId;
         return this;
     }
     
+    /**
+     * A boolean parameter. If false or 0 (default), will return provinces for which this is a legislated holiday. If true or 1, will return provinces which optionally celebrate this holiday.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=optional")
+    public HolidayOptionalEnum optional;
+    public HolidayRequest withOptional(HolidayOptionalEnum optional) {
+        this.optional = optional;
+        return this;
+    }
     
-    public HolidayQueryParams queryParams;
-    public HolidayRequest withQueryParams(HolidayQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A calendar year
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public Long year;
+    public HolidayRequest withYear(Long year) {
+        this.year = year;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistrationsIdentifiersListRequest {
-    
-    public RegistrationsIdentifiersListPathParams pathParams;
-    public RegistrationsIdentifiersListRequest withPathParams(RegistrationsIdentifiersListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the registration.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=registration_id")
+    public String registrationId;
+    public RegistrationsIdentifiersListRequest withRegistrationId(String registrationId) {
+        this.registrationId = registrationId;
         return this;
     }
     

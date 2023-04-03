@@ -31,9 +31,7 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/CloudassetAssetsListSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/CloudassetAssetsListPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudassetAssetsListContentTypeEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/CloudassetAssetsListQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudassetAssetsListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudassetAssetsListResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListAssetsResponse.java
@@ -77,6 +75,4 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleIdentityAccesscontext
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleIdentityAccesscontextmanagerV1OsConstraint.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2c.java
 USAGE.md

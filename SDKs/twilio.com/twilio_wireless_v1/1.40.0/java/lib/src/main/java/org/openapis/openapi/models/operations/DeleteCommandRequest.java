@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCommandRequest {
-    
-    public DeleteCommandPathParams pathParams;
-    public DeleteCommandRequest withPathParams(DeleteCommandPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteCommandSecurity security;
-    public DeleteCommandRequest withSecurity(DeleteCommandSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteCommandRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Command resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteCommandRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

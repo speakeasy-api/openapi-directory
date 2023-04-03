@@ -144,7 +144,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BatchReadFileResponse batchReadFile(org.openapis.openapi.models.operations.BatchReadFileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BatchReadFileResponse batchReadFile(org.openapis.openapi.models.shared.ImageUrl request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/read/core/asyncBatchAnalyze");
         
@@ -194,7 +194,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetReadOperationResultResponse getReadOperationResult(org.openapis.openapi.models.operations.GetReadOperationResultRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetReadOperationResultPathParams.class, baseUrl, "/read/operations/{operationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetReadOperationResultRequest.class, baseUrl, "/read/operations/{operationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -241,7 +241,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetTextOperationResultResponse getTextOperationResult(org.openapis.openapi.models.operations.GetTextOperationResultRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTextOperationResultPathParams.class, baseUrl, "/textOperations/{operationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTextOperationResultRequest.class, baseUrl, "/textOperations/{operationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -293,13 +293,13 @@ public class SDK {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "imageUrl", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecognizeTextQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecognizeTextRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

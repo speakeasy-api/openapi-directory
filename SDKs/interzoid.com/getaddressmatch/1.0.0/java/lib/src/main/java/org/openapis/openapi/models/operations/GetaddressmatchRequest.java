@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetaddressmatchRequest {
+    /**
+     * Address from which to generate similarity key
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=address")
+    public String address;
+    public GetaddressmatchRequest withAddress(String address) {
+        this.address = address;
+        return this;
+    }
     
-    public GetaddressmatchQueryParams queryParams;
-    public GetaddressmatchRequest withQueryParams(GetaddressmatchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Your Interzoid license API key. Register at www.interzoid.com/register
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
+    public String license;
+    public GetaddressmatchRequest withLicense(String license) {
+        this.license = license;
         return this;
     }
     

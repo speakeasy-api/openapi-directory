@@ -4,13 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposDeleteAdminBranchProtectionRequest {
+    /**
+     * The name of the branch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branch")
+    public String branch;
+    public ReposDeleteAdminBranchProtectionRequest withBranch(String branch) {
+        this.branch = branch;
+        return this;
+    }
     
-    public ReposDeleteAdminBranchProtectionPathParams pathParams;
-    public ReposDeleteAdminBranchProtectionRequest withPathParams(ReposDeleteAdminBranchProtectionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposDeleteAdminBranchProtectionRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposDeleteAdminBranchProtectionRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

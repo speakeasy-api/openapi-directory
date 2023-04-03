@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteBundleNotificationsIdRequest {
-    
-    public DeleteBundleNotificationsIdPathParams pathParams;
-    public DeleteBundleNotificationsIdRequest withPathParams(DeleteBundleNotificationsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Bundle Notification ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public DeleteBundleNotificationsIdRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

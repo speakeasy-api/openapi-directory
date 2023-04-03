@@ -4,27 +4,53 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExportIterationRequest {
-    
-    public ExportIterationPathParams pathParams;
-    public ExportIterationRequest withPathParams(ExportIterationPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
+    public String trainingKey;
+    public ExportIterationRequest withTrainingKey(String trainingKey) {
+        this.trainingKey = trainingKey;
         return this;
     }
     
-    
-    public ExportIterationQueryParams queryParams;
-    public ExportIterationRequest withQueryParams(ExportIterationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The flavor of the target platform.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=flavor")
+    public ExportIterationFlavorEnum flavor;
+    public ExportIterationRequest withFlavor(ExportIterationFlavorEnum flavor) {
+        this.flavor = flavor;
         return this;
     }
     
+    /**
+     * The iteration id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=iterationId")
+    public String iterationId;
+    public ExportIterationRequest withIterationId(String iterationId) {
+        this.iterationId = iterationId;
+        return this;
+    }
     
-    public ExportIterationHeaders headers;
-    public ExportIterationRequest withHeaders(ExportIterationHeaders headers) {
-        this.headers = headers;
+    /**
+     * The target platform.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=platform")
+    public ExportIterationPlatformEnum platform;
+    public ExportIterationRequest withPlatform(ExportIterationPlatformEnum platform) {
+        this.platform = platform;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public ExportIterationRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

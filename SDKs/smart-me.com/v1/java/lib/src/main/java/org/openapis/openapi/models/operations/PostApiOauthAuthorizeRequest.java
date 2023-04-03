@@ -4,13 +4,41 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostApiOauthAuthorizeRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=client_id")
+    public String clientId;
+    public PostApiOauthAuthorizeRequest withClientId(String clientId) {
+        this.clientId = clientId;
+        return this;
+    }
     
-    public PostApiOauthAuthorizeQueryParams queryParams;
-    public PostApiOauthAuthorizeRequest withQueryParams(PostApiOauthAuthorizeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=client_secret")
+    public String clientSecret;
+    public PostApiOauthAuthorizeRequest withClientSecret(String clientSecret) {
+        this.clientSecret = clientSecret;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=redirect_uri")
+    public String redirectUri;
+    public PostApiOauthAuthorizeRequest withRedirectUri(String redirectUri) {
+        this.redirectUri = redirectUri;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scope")
+    public String scope;
+    public PostApiOauthAuthorizeRequest withScope(String scope) {
+        this.scope = scope;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public String state;
+    public PostApiOauthAuthorizeRequest withState(String state) {
+        this.state = state;
         return this;
     }
     

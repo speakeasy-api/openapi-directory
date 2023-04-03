@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteVodBackgroundRequest {
-    
-    public DeleteVodBackgroundPathParams pathParams;
-    public DeleteVodBackgroundRequest withPathParams(DeleteVodBackgroundPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the background.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=background_id")
+    public Double backgroundId;
+    public DeleteVodBackgroundRequest withBackgroundId(Double backgroundId) {
+        this.backgroundId = backgroundId;
         return this;
     }
     
-    
-    public DeleteVodBackgroundSecurity security;
-    public DeleteVodBackgroundRequest withSecurity(DeleteVodBackgroundSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the On Demand.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ondemand_id")
+    public Double ondemandId;
+    public DeleteVodBackgroundRequest withOndemandId(Double ondemandId) {
+        this.ondemandId = ondemandId;
         return this;
     }
     

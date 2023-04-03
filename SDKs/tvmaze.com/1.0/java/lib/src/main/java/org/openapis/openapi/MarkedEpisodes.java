@@ -39,7 +39,7 @@ public class MarkedEpisodes {
      */
     public org.openapis.openapi.models.operations.DeleteUserEpisodesEpisodeIdResponse deleteUserEpisodesEpisodeId(org.openapis.openapi.models.operations.DeleteUserEpisodesEpisodeIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserEpisodesEpisodeIdPathParams.class, baseUrl, "/user/episodes/{episode_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserEpisodesEpisodeIdRequest.class, baseUrl, "/user/episodes/{episode_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -78,7 +78,7 @@ public class MarkedEpisodes {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserEpisodesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserEpisodesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -117,7 +117,7 @@ public class MarkedEpisodes {
      */
     public org.openapis.openapi.models.operations.GetUserEpisodesEpisodeIdResponse getUserEpisodesEpisodeId(org.openapis.openapi.models.operations.GetUserEpisodesEpisodeIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserEpisodesEpisodeIdPathParams.class, baseUrl, "/user/episodes/{episode_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserEpisodesEpisodeIdRequest.class, baseUrl, "/user/episodes/{episode_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -159,12 +159,12 @@ public class MarkedEpisodes {
      */
     public org.openapis.openapi.models.operations.PutUserEpisodesEpisodeIdResponse putUserEpisodesEpisodeId(org.openapis.openapi.models.operations.PutUserEpisodesEpisodeIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutUserEpisodesEpisodeIdPathParams.class, baseUrl, "/user/episodes/{episode_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutUserEpisodesEpisodeIdRequest.class, baseUrl, "/user/episodes/{episode_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "markedEpisodeInput", "json");
         req.setBody(serializedRequestBody);
         
         

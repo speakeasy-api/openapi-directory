@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSetupV1ResourcesIdCalendarAuthOutlookOutlookEmailAddressRequest {
-    
-    public GetSetupV1ResourcesIdCalendarAuthOutlookOutlookEmailAddressPathParams pathParams;
-    public GetSetupV1ResourcesIdCalendarAuthOutlookOutlookEmailAddressRequest withPathParams(GetSetupV1ResourcesIdCalendarAuthOutlookOutlookEmailAddressPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * id of resource object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSetupV1ResourcesIdCalendarAuthOutlookOutlookEmailAddressRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * Outlook calendar authorization return url
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outlookAuthReturnUrl")
+    public String outlookAuthReturnUrl;
+    public GetSetupV1ResourcesIdCalendarAuthOutlookOutlookEmailAddressRequest withOutlookAuthReturnUrl(String outlookAuthReturnUrl) {
+        this.outlookAuthReturnUrl = outlookAuthReturnUrl;
+        return this;
+    }
     
-    public GetSetupV1ResourcesIdCalendarAuthOutlookOutlookEmailAddressQueryParams queryParams;
-    public GetSetupV1ResourcesIdCalendarAuthOutlookOutlookEmailAddressRequest withQueryParams(GetSetupV1ResourcesIdCalendarAuthOutlookOutlookEmailAddressQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Email address of Outlook Calendar
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=outlookEmailAddress")
+    public String outlookEmailAddress;
+    public GetSetupV1ResourcesIdCalendarAuthOutlookOutlookEmailAddressRequest withOutlookEmailAddress(String outlookEmailAddress) {
+        this.outlookEmailAddress = outlookEmailAddress;
         return this;
     }
     

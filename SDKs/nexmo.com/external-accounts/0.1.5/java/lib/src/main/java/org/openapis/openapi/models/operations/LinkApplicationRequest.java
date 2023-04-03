@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LinkApplicationRequest {
-    
-    public LinkApplicationPathParams pathParams;
-    public LinkApplicationRequest withPathParams(LinkApplicationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Request body can contain any of the following. Please note, the only one application can be linked to the account.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public LinkApplicationRequestBody request;
-    public LinkApplicationRequest withRequest(LinkApplicationRequestBody request) {
-        this.request = request;
+    public LinkApplicationRequestBody requestBody;
+    public LinkApplicationRequest withRequestBody(LinkApplicationRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * External id of the account you want to assign an application to. This is channel dependent. For Facebook it will be your Facebook Page ID, for Viber your Viber Service Message ID and for WhatsApp your WhatsApp number.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=external_id")
+    public String externalId;
+    public LinkApplicationRequest withExternalId(String externalId) {
+        this.externalId = externalId;
+        return this;
+    }
     
-    public LinkApplicationSecurity security;
-    public LinkApplicationRequest withSecurity(LinkApplicationSecurity security) {
-        this.security = security;
+    /**
+     * Provider of the account you want to assign an application to
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=provider")
+    public LinkApplicationProviderEnum provider;
+    public LinkApplicationRequest withProvider(LinkApplicationProviderEnum provider) {
+        this.provider = provider;
         return this;
     }
     

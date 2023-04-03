@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConsumerV1CustomersCustomfieldsRequest {
+    /**
+     * A true/false indicator to filter on custom fields used for lead questions
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=leadQuestions")
+    public Boolean leadQuestions;
+    public GetConsumerV1CustomersCustomfieldsRequest withLeadQuestions(Boolean leadQuestions) {
+        this.leadQuestions = leadQuestions;
+        return this;
+    }
     
-    public GetConsumerV1CustomersCustomfieldsQueryParams queryParams;
-    public GetConsumerV1CustomersCustomfieldsRequest withQueryParams(GetConsumerV1CustomersCustomfieldsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * id of business location, defaults to primary business location
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locationId")
+    public String locationId;
+    public GetConsumerV1CustomersCustomfieldsRequest withLocationId(String locationId) {
+        this.locationId = locationId;
         return this;
     }
     

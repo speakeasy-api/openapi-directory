@@ -7,31 +7,89 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSmsTemplateRequest {
-    
-    public UpdateSmsTemplatePathParams pathParams;
-    public UpdateSmsTemplateRequest withPathParams(UpdateSmsTemplatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateSmsTemplateQueryParams queryParams;
-    public UpdateSmsTemplateRequest withQueryParams(UpdateSmsTemplateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public UpdateSmsTemplateHeaders headers;
-    public UpdateSmsTemplateRequest withHeaders(UpdateSmsTemplateHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateSmsTemplateRequestBody request;
-    public UpdateSmsTemplateRequest withRequest(UpdateSmsTemplateRequestBody request) {
-        this.request = request;
+    public UpdateSmsTemplateRequestBody requestBody;
+    public UpdateSmsTemplateRequest withRequestBody(UpdateSmsTemplateRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public UpdateSmsTemplateRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public UpdateSmsTemplateRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public UpdateSmsTemplateRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public UpdateSmsTemplateRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public UpdateSmsTemplateRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public UpdateSmsTemplateRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public UpdateSmsTemplateRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Specifies whether to save the updates as a new version of the message template. Valid values are: true, save the updates as a new version; and, false, save the updates to (overwrite) the latest existing version of the template.&lt;/p&gt; &lt;p&gt;If you don't specify a value for this parameter, Amazon Pinpoint saves the updates to (overwrites) the latest existing version of the template. If you specify a value of true for this parameter, don't specify a value for the version parameter. Otherwise, an error will occur.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=create-new-version")
+    public Boolean createNewVersion;
+    public UpdateSmsTemplateRequest withCreateNewVersion(Boolean createNewVersion) {
+        this.createNewVersion = createNewVersion;
+        return this;
+    }
+    
+    /**
+     * The name of the message template. A template name must start with an alphanumeric character and can contain a maximum of 128 characters. The characters can be alphanumeric characters, underscores (_), or hyphens (-). Template names are case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=template-name")
+    public String templateName;
+    public UpdateSmsTemplateRequest withTemplateName(String templateName) {
+        this.templateName = templateName;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The unique identifier for the version of the message template to update, retrieve information about, or delete. To retrieve identifiers and other information for all the versions of a template, use the &lt;link  linkend="templates-template-name-template-type-versions"&gt;Template Versions&lt;/link&gt; resource.&lt;/p&gt; &lt;p&gt;If specified, this value must match the identifier for an existing template version. If specified for an update operation, this value must match the identifier for the latest existing version of the template. This restriction helps ensure that race conditions don't occur.&lt;/p&gt; &lt;p&gt;If you don't specify a value for this parameter, Amazon Pinpoint does the following:&lt;/p&gt; &lt;ul&gt;&lt;li&gt;&lt;p&gt;For a get operation, retrieves information about the active version of the template.&lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt;For an update operation, saves the updates to (overwrites) the latest existing version of the template, if the create-new-version parameter isn't used or is set to false.&lt;/p&gt;&lt;/li&gt; &lt;li&gt;&lt;p&gt;For a delete operation, deletes the template, including all versions of the template.&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
+    public String version;
+    public UpdateSmsTemplateRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

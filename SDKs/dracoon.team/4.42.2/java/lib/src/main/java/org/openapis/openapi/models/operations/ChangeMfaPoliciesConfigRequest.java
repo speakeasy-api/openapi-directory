@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangeMfaPoliciesConfigRequest {
-    
-    public ChangeMfaPoliciesConfigHeaders headers;
-    public ChangeMfaPoliciesConfigRequest withHeaders(ChangeMfaPoliciesConfigHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.UpdateMfaPoliciesConfig updateMfaPoliciesConfig;
+    public ChangeMfaPoliciesConfigRequest withUpdateMfaPoliciesConfig(org.openapis.openapi.models.shared.UpdateMfaPoliciesConfig updateMfaPoliciesConfig) {
+        this.updateMfaPoliciesConfig = updateMfaPoliciesConfig;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateMfaPoliciesConfig request;
-    public ChangeMfaPoliciesConfigRequest withRequest(org.openapis.openapi.models.shared.UpdateMfaPoliciesConfig request) {
-        this.request = request;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public ChangeMfaPoliciesConfigRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     

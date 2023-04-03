@@ -4,20 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpacesSpaceIdFoldersIdSumInvoicesRequest {
-    
-    public GetSpacesSpaceIdFoldersIdSumInvoicesPathParams pathParams;
-    public GetSpacesSpaceIdFoldersIdSumInvoicesRequest withPathParams(GetSpacesSpaceIdFoldersIdSumInvoicesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * amount before VAT
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=BeforeVAT")
+    public Double beforeVAT;
+    public GetSpacesSpaceIdFoldersIdSumInvoicesRequest withBeforeVAT(Double beforeVAT) {
+        this.beforeVAT = beforeVAT;
         return this;
     }
     
+    /**
+     * range date due payment
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DueDate")
+    public String dueDate;
+    public GetSpacesSpaceIdFoldersIdSumInvoicesRequest withDueDate(String dueDate) {
+        this.dueDate = dueDate;
+        return this;
+    }
     
-    public GetSpacesSpaceIdFoldersIdSumInvoicesQueryParams queryParams;
-    public GetSpacesSpaceIdFoldersIdSumInvoicesRequest withQueryParams(GetSpacesSpaceIdFoldersIdSumInvoicesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * amount incl. VAT
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InclVat")
+    public Double inclVat;
+    public GetSpacesSpaceIdFoldersIdSumInvoicesRequest withInclVat(Double inclVat) {
+        this.inclVat = inclVat;
+        return this;
+    }
+    
+    /**
+     * range date of invoice
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InvoiceDate")
+    public String invoiceDate;
+    public GetSpacesSpaceIdFoldersIdSumInvoicesRequest withInvoiceDate(String invoiceDate) {
+        this.invoiceDate = invoiceDate;
+        return this;
+    }
+    
+    /**
+     * Number of the invoice
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Number")
+    public String number;
+    public GetSpacesSpaceIdFoldersIdSumInvoicesRequest withNumber(String number) {
+        this.number = number;
+        return this;
+    }
+    
+    /**
+     * range date of payment
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PaymentDate")
+    public String paymentDate;
+    public GetSpacesSpaceIdFoldersIdSumInvoicesRequest withPaymentDate(String paymentDate) {
+        this.paymentDate = paymentDate;
+        return this;
+    }
+    
+    /**
+     * Id of the folder
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSpacesSpaceIdFoldersIdSumInvoicesRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public GetSpacesSpaceIdFoldersIdSumInvoicesRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

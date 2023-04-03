@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteOrdersIdRequest {
-    
-    public DeleteOrdersIdPathParams pathParams;
-    public DeleteOrdersIdRequest withPathParams(DeleteOrdersIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteOrdersIdSecurity security;
-    public DeleteOrdersIdRequest withSecurity(DeleteOrdersIdSecurity security) {
-        this.security = security;
+    /**
+     * ID of order that needs to be canceled
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public DeleteOrdersIdRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

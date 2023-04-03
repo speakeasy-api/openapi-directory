@@ -34,27 +34,28 @@ public class RegionInstances {
     /**
      * Creates multiple instances in a given region. Count specifies the number of instances to create.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionInstancesBulkInsertResponse computeRegionInstancesBulkInsert(org.openapis.openapi.models.operations.ComputeRegionInstancesBulkInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionInstancesBulkInsertResponse computeRegionInstancesBulkInsert(org.openapis.openapi.models.operations.ComputeRegionInstancesBulkInsertRequest request, org.openapis.openapi.models.operations.ComputeRegionInstancesBulkInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionInstancesBulkInsertPathParams.class, baseUrl, "/projects/{project}/regions/{region}/instances/bulkInsert", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionInstancesBulkInsertRequest.class, baseUrl, "/projects/{project}/regions/{region}/instances/bulkInsert", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "bulkInsertInstanceResource", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionInstancesBulkInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionInstancesBulkInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

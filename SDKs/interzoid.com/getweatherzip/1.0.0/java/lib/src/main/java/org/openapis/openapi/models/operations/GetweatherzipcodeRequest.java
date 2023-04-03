@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetweatherzipcodeRequest {
+    /**
+     * Your Interzoid license API key. Register at www.interzoid.com/register
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
+    public String license;
+    public GetweatherzipcodeRequest withLicense(String license) {
+        this.license = license;
+        return this;
+    }
     
-    public GetweatherzipcodeQueryParams queryParams;
-    public GetweatherzipcodeRequest withQueryParams(GetweatherzipcodeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Zip code for weather information
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=zip")
+    public String zip;
+    public GetweatherzipcodeRequest withZip(String zip) {
+        this.zip = zip;
         return this;
     }
     

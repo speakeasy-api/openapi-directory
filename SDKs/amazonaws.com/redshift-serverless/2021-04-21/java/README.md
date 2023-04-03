@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.ConvertRecoveryPointToSnapshotXAmzTargetEnum;
-import org.openapis.openapi.models.operations.ConvertRecoveryPointToSnapshotHeaders;
 import org.openapis.openapi.models.operations.ConvertRecoveryPointToSnapshotRequest;
 import org.openapis.openapi.models.operations.ConvertRecoveryPointToSnapshotResponse;
 import org.openapis.openapi.models.shared.ConvertRecoveryPointToSnapshotRequest;
@@ -29,43 +28,43 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             ConvertRecoveryPointToSnapshotRequest req = new ConvertRecoveryPointToSnapshotRequest() {{
-                headers = new ConvertRecoveryPointToSnapshotHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "RedshiftServerless.ConvertRecoveryPointToSnapshot";
-                }};
-                request = new ConvertRecoveryPointToSnapshotRequest() {{
-                    recoveryPointId = "illum";
-                    retentionPeriod = 423655;
-                    snapshotName = "error";
+                convertRecoveryPointToSnapshotRequest = new ConvertRecoveryPointToSnapshotRequest() {{
+                    recoveryPointId = "corrupti";
+                    retentionPeriod = 592845;
+                    snapshotName = "distinctio";
                     tags = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            key = "suscipit";
-                            value = "iure";
+                            key = "unde";
+                            value = "nulla";
                         }}),
                         add(new Tag() {{
-                            key = "magnam";
-                            value = "debitis";
+                            key = "corrupti";
+                            value = "illum";
                         }}),
                         add(new Tag() {{
-                            key = "ipsa";
-                            value = "delectus";
+                            key = "vel";
+                            value = "error";
+                        }}),
+                        add(new Tag() {{
+                            key = "deserunt";
+                            value = "suscipit";
                         }}),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "iure";
+                xAmzContentSha256 = "magnam";
+                xAmzCredential = "debitis";
+                xAmzDate = "ipsa";
+                xAmzSecurityToken = "delectus";
+                xAmzSignature = "tempora";
+                xAmzSignedHeaders = "suscipit";
+                xAmzTarget = "RedshiftServerless.ConvertRecoveryPointToSnapshot";
+            }}            
 
             ConvertRecoveryPointToSnapshotResponse res = sdk.convertRecoveryPointToSnapshot(req);
 
@@ -79,7 +78,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

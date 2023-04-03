@@ -4,20 +4,126 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListDetectMitigationActionsExecutionsRequest {
-    
-    public ListDetectMitigationActionsExecutionsQueryParams queryParams;
-    public ListDetectMitigationActionsExecutionsRequest withQueryParams(ListDetectMitigationActionsExecutionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListDetectMitigationActionsExecutionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListDetectMitigationActionsExecutionsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public ListDetectMitigationActionsExecutionsHeaders headers;
-    public ListDetectMitigationActionsExecutionsRequest withHeaders(ListDetectMitigationActionsExecutionsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListDetectMitigationActionsExecutionsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListDetectMitigationActionsExecutionsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListDetectMitigationActionsExecutionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListDetectMitigationActionsExecutionsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListDetectMitigationActionsExecutionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     *  The end of the time period for which ML Detect mitigation actions executions are returned. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endTime")
+    public OffsetDateTime endTime;
+    public ListDetectMitigationActionsExecutionsRequest withEndTime(OffsetDateTime endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    
+    /**
+     *  The maximum number of results to return at one time. The default is 25. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public ListDetectMitigationActionsExecutionsRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     *  The token for the next set of results. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
+    public String nextToken;
+    public ListDetectMitigationActionsExecutionsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     *  A filter to limit results to those found after the specified time. You must specify either the startTime and endTime or the taskId, but not both. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startTime")
+    public OffsetDateTime startTime;
+    public ListDetectMitigationActionsExecutionsRequest withStartTime(OffsetDateTime startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    
+    /**
+     *  The unique identifier of the task. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=taskId")
+    public String taskId;
+    public ListDetectMitigationActionsExecutionsRequest withTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    
+    /**
+     *  The name of the thing whose mitigation actions are listed. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=thingName")
+    public String thingName;
+    public ListDetectMitigationActionsExecutionsRequest withThingName(String thingName) {
+        this.thingName = thingName;
+        return this;
+    }
+    
+    /**
+     *  The unique identifier of the violation. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=violationId")
+    public String violationId;
+    public ListDetectMitigationActionsExecutionsRequest withViolationId(String violationId) {
+        this.violationId = violationId;
         return this;
     }
     

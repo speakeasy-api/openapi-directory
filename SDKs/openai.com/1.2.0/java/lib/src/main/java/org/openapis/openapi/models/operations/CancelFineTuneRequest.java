@@ -4,13 +4,17 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelFineTuneRequest {
-    
-    public CancelFineTunePathParams pathParams;
-    public CancelFineTuneRequest withPathParams(CancelFineTunePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the fine-tune job to cancel
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fine_tune_id")
+    public String fineTuneId;
+    public CancelFineTuneRequest withFineTuneId(String fineTuneId) {
+        this.fineTuneId = fineTuneId;
         return this;
     }
     

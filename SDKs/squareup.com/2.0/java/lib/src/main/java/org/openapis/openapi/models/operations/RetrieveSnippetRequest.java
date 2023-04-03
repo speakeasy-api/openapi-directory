@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveSnippetRequest {
-    
-    public RetrieveSnippetPathParams pathParams;
-    public RetrieveSnippetRequest withPathParams(RetrieveSnippetPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RetrieveSnippetSecurity security;
-    public RetrieveSnippetRequest withSecurity(RetrieveSnippetSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the site that contains the snippet.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=site_id")
+    public String siteId;
+    public RetrieveSnippetRequest withSiteId(String siteId) {
+        this.siteId = siteId;
         return this;
     }
     

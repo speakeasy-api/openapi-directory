@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateUsAppToPersonRequest {
-    
-    public CreateUsAppToPersonPathParams pathParams;
-    public CreateUsAppToPersonRequest withPathParams(CreateUsAppToPersonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Messaging Service](https://www.twilio.com/docs/messaging/services/api) to create the resources from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=MessagingServiceSid")
+    public String messagingServiceSid;
+    public CreateUsAppToPersonRequest withMessagingServiceSid(String messagingServiceSid) {
+        this.messagingServiceSid = messagingServiceSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateUsAppToPersonCreateUsAppToPersonRequest request;
-    public CreateUsAppToPersonRequest withRequest(CreateUsAppToPersonCreateUsAppToPersonRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateUsAppToPersonSecurity security;
-    public CreateUsAppToPersonRequest withSecurity(CreateUsAppToPersonSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateUsAppToPersonRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateUsAppToPersonCreateUsAppToPersonRequest requestBody;
+    public CreateUsAppToPersonRequest withRequestBody(CreateUsAppToPersonCreateUsAppToPersonRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

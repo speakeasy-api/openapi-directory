@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyUserGroupRequest {
-    
-    public GETModifyUserGroupQueryParams queryParams;
-    public GETModifyUserGroupRequest withQueryParams(GETModifyUserGroupQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyUserGroupActionEnum action;
+    public GETModifyUserGroupRequest withAction(GETModifyUserGroupActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The ID of the user group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UserGroupId")
+    public String userGroupId;
+    public GETModifyUserGroupRequest withUserGroupId(String userGroupId) {
+        this.userGroupId = userGroupId;
+        return this;
+    }
     
-    public GETModifyUserGroupHeaders headers;
-    public GETModifyUserGroupRequest withHeaders(GETModifyUserGroupHeaders headers) {
-        this.headers = headers;
+    /**
+     * The list of user IDs to add to the user group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UserIdsToAdd")
+    public String[] userIdsToAdd;
+    public GETModifyUserGroupRequest withUserIdsToAdd(String[] userIdsToAdd) {
+        this.userIdsToAdd = userIdsToAdd;
+        return this;
+    }
+    
+    /**
+     * The list of user IDs to remove from the user group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UserIdsToRemove")
+    public String[] userIdsToRemove;
+    public GETModifyUserGroupRequest withUserIdsToRemove(String[] userIdsToRemove) {
+        this.userIdsToRemove = userIdsToRemove;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyUserGroupVersionEnum version;
+    public GETModifyUserGroupRequest withVersion(GETModifyUserGroupVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyUserGroupRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyUserGroupRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyUserGroupRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyUserGroupRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyUserGroupRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyUserGroupRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyUserGroupRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -7,31 +7,37 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PricebycontextRequest {
-    
-    public PricebycontextQueryParams queryParams;
-    public PricebycontextRequest withQueryParams(PricebycontextQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public PricebycontextRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public PricebycontextHeaders headers;
-    public PricebycontextRequest withHeaders(PricebycontextHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public PricebycontextRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PricebycontextRequest request;
-    public PricebycontextRequest withRequest(org.openapis.openapi.models.shared.PricebycontextRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PricebycontextRequest pricebycontextRequest;
+    public PricebycontextRequest withPricebycontextRequest(org.openapis.openapi.models.shared.PricebycontextRequest pricebycontextRequest) {
+        this.pricebycontextRequest = pricebycontextRequest;
         return this;
     }
     
-    
-    public String serverURL;
-    public PricebycontextRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=an")
+    public String an;
+    public PricebycontextRequest withAn(String an) {
+        this.an = an;
         return this;
     }
     

@@ -34,10 +34,11 @@ public class APIs {
      * LPG Subscription Voucher
      * API to verify LPG Subscription Voucher.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LpgsvResponse lpgsv(org.openapis.openapi.models.operations.LpgsvRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LpgsvResponse lpgsv(org.openapis.openapi.models.operations.LpgsvRequestBody request, org.openapis.openapi.models.operations.LpgsvSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/lpgsv/certificate");
         
@@ -48,7 +49,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,10 +127,11 @@ public class APIs {
      * Termination Voucher
      * API to verify Termination Voucher.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LpgtvResponse lpgtv(org.openapis.openapi.models.operations.LpgtvRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LpgtvResponse lpgtv(org.openapis.openapi.models.operations.LpgtvRequestBody request, org.openapis.openapi.models.operations.LpgtvSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/lpgtv/certificate");
         
@@ -140,7 +142,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

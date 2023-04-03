@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTokenRequest {
-    
-    public GetTokenPathParams pathParams;
-    public GetTokenRequest withPathParams(GetTokenPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The token id that needs to be fetched
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetTokenRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * Populate driver
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_driver")
+    public Boolean includeDriver;
+    public GetTokenRequest withIncludeDriver(Boolean includeDriver) {
+        this.includeDriver = includeDriver;
+        return this;
+    }
     
-    public GetTokenQueryParams queryParams;
-    public GetTokenRequest withQueryParams(GetTokenQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Populate organization
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_organization")
+    public Boolean includeOrganization;
+    public GetTokenRequest withIncludeOrganization(Boolean includeOrganization) {
+        this.includeOrganization = includeOrganization;
         return this;
     }
     

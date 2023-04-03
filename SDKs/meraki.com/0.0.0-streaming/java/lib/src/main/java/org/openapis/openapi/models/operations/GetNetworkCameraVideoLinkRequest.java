@@ -4,20 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkCameraVideoLinkRequest {
-    
-    public GetNetworkCameraVideoLinkPathParams pathParams;
-    public GetNetworkCameraVideoLinkRequest withPathParams(GetNetworkCameraVideoLinkPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkCameraVideoLinkRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public GetNetworkCameraVideoLinkRequest withSerial(String serial) {
+        this.serial = serial;
+        return this;
+    }
     
-    public GetNetworkCameraVideoLinkQueryParams queryParams;
-    public GetNetworkCameraVideoLinkRequest withQueryParams(GetNetworkCameraVideoLinkQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * [optional] The video link will start at this timestamp. The timestamp is in UNIX Epoch time (milliseconds). If no timestamp is specified, we will assume current time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timestamp")
+    public String timestamp;
+    public GetNetworkCameraVideoLinkRequest withTimestamp(String timestamp) {
+        this.timestamp = timestamp;
         return this;
     }
     

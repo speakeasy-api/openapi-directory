@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CloseAnAccountRequest {
-    
-    public CloseAnAccountPathParams pathParams;
-    public CloseAnAccountRequest withPathParams(CloseAnAccountPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account_id")
+    public String accountId;
+    public CloseAnAccountRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     

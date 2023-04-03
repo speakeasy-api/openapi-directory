@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ApiResourceCoverageOneRequest {
-    
-    public ApiResourceCoverageOnePathParams pathParams;
-    public ApiResourceCoverageOneRequest withPathParams(ApiResourceCoverageOnePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the record you are acting upon.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public ApiResourceCoverageOneRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public ApiResourceCoverageOneHeaders headers;
-    public ApiResourceCoverageOneRequest withHeaders(ApiResourceCoverageOneHeaders headers) {
-        this.headers = headers;
+    /**
+     * ID of the resource you are acting upon.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=resource_id")
+    public String resourceId;
+    public ApiResourceCoverageOneRequest withResourceId(String resourceId) {
+        this.resourceId = resourceId;
         return this;
     }
     
-    
-    public ApiResourceCoverageOneSecurity security;
-    public ApiResourceCoverageOneRequest withSecurity(ApiResourceCoverageOneSecurity security) {
-        this.security = security;
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public ApiResourceCoverageOneRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
         return this;
     }
     

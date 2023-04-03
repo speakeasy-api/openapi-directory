@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ValuesInPastGetRequest {
-    
-    public ValuesInPastGetPathParams pathParams;
-    public ValuesInPastGetRequest withPathParams(ValuesInPastGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * the date of the value
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
+    public OffsetDateTime date;
+    public ValuesInPastGetRequest withDate(OffsetDateTime date) {
+        this.date = date;
         return this;
     }
     
-    
-    public ValuesInPastGetQueryParams queryParams;
-    public ValuesInPastGetRequest withQueryParams(ValuesInPastGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The ID of the device
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public ValuesInPastGetRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

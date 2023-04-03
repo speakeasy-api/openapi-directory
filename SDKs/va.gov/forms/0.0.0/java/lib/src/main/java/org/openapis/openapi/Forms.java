@@ -34,19 +34,20 @@ public class Forms {
      * Find form by form name
      * Returns a single form and the full revision history
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindFormByFormNameResponse findFormByFormName(org.openapis.openapi.models.operations.FindFormByFormNameRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FindFormByFormNameResponse findFormByFormName(org.openapis.openapi.models.operations.FindFormByFormNameRequest request, org.openapis.openapi.models.operations.FindFormByFormNameSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FindFormByFormNamePathParams.class, baseUrl, "/forms/{form_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FindFormByFormNameRequest.class, baseUrl, "/forms/{form_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -98,10 +99,11 @@ public class Forms {
      * Returns all VA Forms and their last revision date
      * Returns an index of all available VA forms. Optionally, pass a query parameter to filter forms by form number or title.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindFormsResponse findForms(org.openapis.openapi.models.operations.FindFormsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FindFormsResponse findForms(org.openapis.openapi.models.operations.FindFormsRequest request, org.openapis.openapi.models.operations.FindFormsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/forms");
         
@@ -109,14 +111,14 @@ public class Forms {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindFormsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindFormsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

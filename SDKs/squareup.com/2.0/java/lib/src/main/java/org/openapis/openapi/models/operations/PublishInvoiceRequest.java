@@ -7,29 +7,25 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PublishInvoiceRequest {
-    
-    public PublishInvoicePathParams pathParams;
-    public PublishInvoiceRequest withPathParams(PublishInvoicePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * An object containing the fields to POST for the request.
      * 
      * See the corresponding object definition for field details.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PublishInvoiceRequest request;
-    public PublishInvoiceRequest withRequest(org.openapis.openapi.models.shared.PublishInvoiceRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PublishInvoiceRequest publishInvoiceRequest;
+    public PublishInvoiceRequest withPublishInvoiceRequest(org.openapis.openapi.models.shared.PublishInvoiceRequest publishInvoiceRequest) {
+        this.publishInvoiceRequest = publishInvoiceRequest;
         return this;
     }
     
-    
-    public PublishInvoiceSecurity security;
-    public PublishInvoiceRequest withSecurity(PublishInvoiceSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the invoice to publish.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=invoice_id")
+    public String invoiceId;
+    public PublishInvoiceRequest withInvoiceId(String invoiceId) {
+        this.invoiceId = invoiceId;
         return this;
     }
     

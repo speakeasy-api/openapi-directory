@@ -42,18 +42,30 @@ public class TimelineWeatherAPIDateRangeRequest {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddateResponse getVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddate(org.openapis.openapi.models.operations.GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddateRequest request) throws Exception {
+        return this.getVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddate(request, null);
+    }
+
+    /**
+     * Historical and Forecast Weather API
+     * Seamless access to daily and hourly historical and forecast weather data plus weather alerts, events and current conditions.
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddateResponse getVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddate(org.openapis.openapi.models.operations.GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddateRequest request, String serverURL) throws Exception {
         String baseUrl = GET_VISUAL_CROSSING_WEB_SERVICES_REST_SERVICES_TIMELINE_LOCATION_STARTDATE_ENDDATE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddatePathParams.class, baseUrl, "/VisualCrossingWebServices/rest/services/timeline/{location}/{startdate}/{enddate}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddateRequest.class, baseUrl, "/VisualCrossingWebServices/rest/services/timeline/{location}/{startdate}/{enddate}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

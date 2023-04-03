@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchQshowRequest {
-    
-    public PatchQshowQueryParams queryParams;
-    public PatchQshowRequest withQueryParams(PatchQshowQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Qshow description
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
+    public String description;
+    public PatchQshowRequest withDescription(String description) {
+        this.description = description;
         return this;
     }
     
+    /**
+     * Qshow ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public PatchQshowRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PatchQshowSecurity security;
-    public PatchQshowRequest withSecurity(PatchQshowSecurity security) {
-        this.security = security;
+    /**
+     * Tags for the qshow
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
+    public String[] tags;
+    public PatchQshowRequest withTags(String[] tags) {
+        this.tags = tags;
+        return this;
+    }
+    
+    /**
+     * Qshow title
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=title")
+    public String title;
+    public PatchQshowRequest withTitle(String title) {
+        this.title = title;
         return this;
     }
     

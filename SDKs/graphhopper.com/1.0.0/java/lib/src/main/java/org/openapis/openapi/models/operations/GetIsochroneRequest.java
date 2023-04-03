@@ -4,13 +4,79 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetIsochroneRequest {
+    /**
+     * Number by which to divide the given `time_limit` to create `buckets` nested isochrones of time intervals `time_limit-n*time_limit/buckets`. Applies analogously to `distance_limit`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=buckets")
+    public Integer buckets;
+    public GetIsochroneRequest withBuckets(Integer buckets) {
+        this.buckets = buckets;
+        return this;
+    }
     
-    public GetIsochroneQueryParams queryParams;
-    public GetIsochroneRequest withQueryParams(GetIsochroneQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Specify which distance the vehicle should travel. In meters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=distance_limit")
+    public Integer distanceLimit;
+    public GetIsochroneRequest withDistanceLimit(Integer distanceLimit) {
+        this.distanceLimit = distanceLimit;
+        return this;
+    }
+    
+    /**
+     * Specify the start coordinate
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=point")
+    public String point;
+    public GetIsochroneRequest withPoint(String point) {
+        this.point = point;
+        return this;
+    }
+    
+    /**
+     * If `false` the flow goes from point to the polygon, if `true` the flow goes from the polygon "inside" to the point.
+     * Example use case for `false`&amp;#58; *How many potential customer can be reached within 30min travel time from your store* vs. `true`&amp;#58; *How many customers can reach your store within 30min travel time.*
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reverse_flow")
+    public Boolean reverseFlow;
+    public GetIsochroneRequest withReverseFlow(Boolean reverseFlow) {
+        this.reverseFlow = reverseFlow;
+        return this;
+    }
+    
+    /**
+     * Specify which time the vehicle should travel. In seconds.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=time_limit")
+    public Integer timeLimit;
+    public GetIsochroneRequest withTimeLimit(Integer timeLimit) {
+        this.timeLimit = timeLimit;
+        return this;
+    }
+    
+    /**
+     * The vehicle profile for which the route should be calculated.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicle")
+    public org.openapis.openapi.models.shared.VehicleProfileIdEnum vehicle;
+    public GetIsochroneRequest withVehicle(org.openapis.openapi.models.shared.VehicleProfileIdEnum vehicle) {
+        this.vehicle = vehicle;
+        return this;
+    }
+    
+    /**
+     * Use `"shortest"` to get an isodistance line instead of an isochrone.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=weighting")
+    public GetIsochroneWeightingEnum weighting;
+    public GetIsochroneRequest withWeighting(GetIsochroneWeightingEnum weighting) {
+        this.weighting = weighting;
         return this;
     }
     

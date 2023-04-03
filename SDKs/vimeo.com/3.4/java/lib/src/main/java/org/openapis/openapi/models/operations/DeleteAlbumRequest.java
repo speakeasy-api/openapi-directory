@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAlbumRequest {
-    
-    public DeleteAlbumPathParams pathParams;
-    public DeleteAlbumRequest withPathParams(DeleteAlbumPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the album.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=album_id")
+    public Double albumId;
+    public DeleteAlbumRequest withAlbumId(Double albumId) {
+        this.albumId = albumId;
         return this;
     }
     
-    
-    public DeleteAlbumSecurity security;
-    public DeleteAlbumRequest withSecurity(DeleteAlbumSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public DeleteAlbumRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

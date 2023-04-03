@@ -37,19 +37,20 @@ public class MetaPub {
      * Get an EPG batch operation.
      * Gets the batch information which can be used to check the status of the operation or retrieve more details if the batch fails.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV2MetapubProgramInformationBatchBatchIdResponse getApiV2MetapubProgramInformationBatchBatchId(org.openapis.openapi.models.operations.GetApiV2MetapubProgramInformationBatchBatchIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApiV2MetapubProgramInformationBatchBatchIdResponse getApiV2MetapubProgramInformationBatchBatchId(org.openapis.openapi.models.operations.GetApiV2MetapubProgramInformationBatchBatchIdRequest request, org.openapis.openapi.models.operations.GetApiV2MetapubProgramInformationBatchBatchIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV2MetapubProgramInformationBatchBatchIdPathParams.class, baseUrl, "/api/v2/metapub/program-information/batch/{batch-id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV2MetapubProgramInformationBatchBatchIdRequest.class, baseUrl, "/api/v2/metapub/program-information/batch/{batch-id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -83,10 +84,11 @@ public class MetaPub {
      * 
      * /api/epg-cd-mapping.html - Find RadioDns to ContentDepot Mapping here
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostApiV2MetapubProgramInformationBatchResponse postApiV2MetapubProgramInformationBatch(org.openapis.openapi.models.operations.PostApiV2MetapubProgramInformationBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostApiV2MetapubProgramInformationBatchResponse postApiV2MetapubProgramInformationBatch(org.openapis.openapi.models.operations.PostApiV2MetapubProgramInformationBatchRequestBody request, org.openapis.openapi.models.operations.PostApiV2MetapubProgramInformationBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v2/metapub/program-information/batch");
         
@@ -97,7 +99,7 @@ public class MetaPub {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

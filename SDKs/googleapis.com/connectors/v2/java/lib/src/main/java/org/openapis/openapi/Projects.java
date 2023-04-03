@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Executes an action with the name specified in the request. The input parameters for executing the action are passed through the body of the ExecuteAction request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsActionsExecuteResponse connectorsProjectsLocationsConnectionsActionsExecute(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsActionsExecuteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsActionsExecuteResponse connectorsProjectsLocationsConnectionsActionsExecute(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsActionsExecuteRequest request, org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsActionsExecuteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsActionsExecutePathParams.class, baseUrl, "/v2/{name}:execute", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsActionsExecuteRequest.class, baseUrl, "/v2/{name}:execute", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "executeActionRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsActionsExecuteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsActionsExecuteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,25 +83,26 @@ public class Projects {
     /**
      * Gets the schema of all the actions supported by the connector.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsActionsListResponse connectorsProjectsLocationsConnectionsActionsList(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsActionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsActionsListResponse connectorsProjectsLocationsConnectionsActionsList(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsActionsListRequest request, org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsActionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsActionsListPathParams.class, baseUrl, "/v2/{parent}/actions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsActionsListRequest.class, baseUrl, "/v2/{parent}/actions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsActionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsActionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,27 +129,28 @@ public class Projects {
     /**
      * Creates a new entity row of the specified entity type in the external system. The field values for creating the row are contained in the body of the request. The response message contains a `Entity` message object returned as a response by the external system.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesCreateResponse connectorsProjectsLocationsConnectionsEntityTypesEntitiesCreate(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesCreateResponse connectorsProjectsLocationsConnectionsEntityTypesEntitiesCreate(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesCreateRequest request, org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesCreatePathParams.class, baseUrl, "/v2/{parent}/entities", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesCreateRequest.class, baseUrl, "/v2/{parent}/entities", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "entityInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,25 +177,26 @@ public class Projects {
     /**
      * Deletes an existing entity row matching the entity type and entity id specified in the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDeleteResponse connectorsProjectsLocationsConnectionsEntityTypesEntitiesDelete(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDeleteResponse connectorsProjectsLocationsConnectionsEntityTypesEntitiesDelete(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDeleteRequest request, org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDeletePathParams.class, baseUrl, "/v2/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDeleteRequest.class, baseUrl, "/v2/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -219,25 +223,26 @@ public class Projects {
     /**
      * Deletes entities based on conditions specified in the request and not on entity id.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDeleteEntitiesWithConditionsResponse connectorsProjectsLocationsConnectionsEntityTypesEntitiesDeleteEntitiesWithConditions(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDeleteEntitiesWithConditionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDeleteEntitiesWithConditionsResponse connectorsProjectsLocationsConnectionsEntityTypesEntitiesDeleteEntitiesWithConditions(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDeleteEntitiesWithConditionsRequest request, org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDeleteEntitiesWithConditionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDeleteEntitiesWithConditionsPathParams.class, baseUrl, "/v2/{entityType}/entities:deleteEntitiesWithConditions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDeleteEntitiesWithConditionsRequest.class, baseUrl, "/v2/{entityType}/entities:deleteEntitiesWithConditions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDeleteEntitiesWithConditionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDeleteEntitiesWithConditionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -264,25 +269,26 @@ public class Projects {
     /**
      * Gets a single entity row matching the entity type and entity id specified in the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesGetResponse connectorsProjectsLocationsConnectionsEntityTypesEntitiesGet(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesGetResponse connectorsProjectsLocationsConnectionsEntityTypesEntitiesGet(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesGetRequest request, org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesGetPathParams.class, baseUrl, "/v2/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesGetRequest.class, baseUrl, "/v2/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -309,25 +315,26 @@ public class Projects {
     /**
      * Lists entity rows of a particular entity type contained in the request. Note: 1. Currently, only max of one 'sort_by' column is supported. 2. If no 'sort_by' column is provided, the primary key of the table is used. If zero or more than one primary key is available, we default to the unpaginated list entities logic which only returns the first page. 3. The values of the 'sort_by' columns must uniquely identify an entity row, otherwise undefined behaviors may be observed during pagination. 4. Since transactions are not supported, any updates, inserts or deletes during pagination can lead to stale data being returned or other unexpected behaviors.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesListResponse connectorsProjectsLocationsConnectionsEntityTypesEntitiesList(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesListResponse connectorsProjectsLocationsConnectionsEntityTypesEntitiesList(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesListRequest request, org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesListPathParams.class, baseUrl, "/v2/{parent}/entities", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesListRequest.class, baseUrl, "/v2/{parent}/entities", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -354,27 +361,28 @@ public class Projects {
     /**
      * Updates an existing entity row matching the entity type and entity id specified in the request. The fields in the entity row that need to be modified are contained in the body of the request. All unspecified fields are left unchanged. The response message contains a `Entity` message object returned as a response by the external system.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesPatchResponse connectorsProjectsLocationsConnectionsEntityTypesEntitiesPatch(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesPatchResponse connectorsProjectsLocationsConnectionsEntityTypesEntitiesPatch(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesPatchRequest request, org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesPatchPathParams.class, baseUrl, "/v2/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesPatchRequest.class, baseUrl, "/v2/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "entityInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -401,27 +409,28 @@ public class Projects {
     /**
      * Updates entities based on conditions specified in the request and not on entity id.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesUpdateEntitiesWithConditionsResponse connectorsProjectsLocationsConnectionsEntityTypesEntitiesUpdateEntitiesWithConditions(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesUpdateEntitiesWithConditionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesUpdateEntitiesWithConditionsResponse connectorsProjectsLocationsConnectionsEntityTypesEntitiesUpdateEntitiesWithConditions(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesUpdateEntitiesWithConditionsRequest request, org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesUpdateEntitiesWithConditionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesUpdateEntitiesWithConditionsPathParams.class, baseUrl, "/v2/{entityType}/entities:updateEntitiesWithConditions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesUpdateEntitiesWithConditionsRequest.class, baseUrl, "/v2/{entityType}/entities:updateEntitiesWithConditions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "entityInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesUpdateEntitiesWithConditionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesUpdateEntitiesWithConditionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -448,25 +457,26 @@ public class Projects {
     /**
      * Lists metadata related to all entity types present in the external system.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesListResponse connectorsProjectsLocationsConnectionsEntityTypesList(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesListResponse connectorsProjectsLocationsConnectionsEntityTypesList(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesListRequest request, org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesListPathParams.class, baseUrl, "/v2/{parent}/entityTypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesListRequest.class, baseUrl, "/v2/{parent}/entityTypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsEntityTypesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -493,27 +503,28 @@ public class Projects {
     /**
      * Executes a SQL statement specified in the body of the request. An example of this SQL statement in the case of Salesforce connector would be 'select * from Account a, Order o where a.Id = o.AccountId'.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsExecuteSqlQueryResponse connectorsProjectsLocationsConnectionsExecuteSqlQuery(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsExecuteSqlQueryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsExecuteSqlQueryResponse connectorsProjectsLocationsConnectionsExecuteSqlQuery(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsExecuteSqlQueryRequest request, org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsExecuteSqlQuerySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsExecuteSqlQueryPathParams.class, baseUrl, "/v2/{connection}:executeSqlQuery", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsExecuteSqlQueryRequest.class, baseUrl, "/v2/{connection}:executeSqlQuery", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "executeSqlQueryRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsExecuteSqlQueryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsExecuteSqlQueryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

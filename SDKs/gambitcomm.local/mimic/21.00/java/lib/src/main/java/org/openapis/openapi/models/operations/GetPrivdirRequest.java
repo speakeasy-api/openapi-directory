@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPrivdirRequest {
-    
-    public GetPrivdirPathParams pathParams;
-    public GetPrivdirRequest withPathParams(GetPrivdirPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to return the directory path
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public GetPrivdirRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

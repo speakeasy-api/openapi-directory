@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersUserIdFavoritesRequest {
-    
-    public GetUsersUserIdFavoritesPathParams pathParams;
-    public GetUsersUserIdFavoritesRequest withPathParams(GetUsersUserIdFavoritesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Number of results to return in the collection.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetUsersUserIdFavoritesRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
-    
-    public GetUsersUserIdFavoritesQueryParams queryParams;
-    public GetUsersUserIdFavoritesRequest withQueryParams(GetUsersUserIdFavoritesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Returns paginated collection of items (recommended, returning a list without pagination is deprecated and should not be used)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=linked_partitioning")
+    public Boolean linkedPartitioning;
+    public GetUsersUserIdFavoritesRequest withLinkedPartitioning(Boolean linkedPartitioning) {
+        this.linkedPartitioning = linkedPartitioning;
         return this;
     }
     
-    
-    public GetUsersUserIdFavoritesSecurity security;
-    public GetUsersUserIdFavoritesRequest withSecurity(GetUsersUserIdFavoritesSecurity security) {
-        this.security = security;
+    /**
+     * SoundCloud User id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Long userId;
+    public GetUsersUserIdFavoritesRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

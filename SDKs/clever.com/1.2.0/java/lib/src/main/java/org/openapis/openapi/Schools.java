@@ -38,7 +38,7 @@ public class Schools {
      */
     public org.openapis.openapi.models.operations.GetDistrictForSchoolResponse getDistrictForSchool(org.openapis.openapi.models.operations.GetDistrictForSchoolRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDistrictForSchoolPathParams.class, baseUrl, "/schools/{id}/district", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDistrictForSchoolRequest.class, baseUrl, "/schools/{id}/district", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -85,7 +85,7 @@ public class Schools {
      */
     public org.openapis.openapi.models.operations.GetSchoolResponse getSchool(org.openapis.openapi.models.operations.GetSchoolRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSchoolPathParams.class, baseUrl, "/schools/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSchoolRequest.class, baseUrl, "/schools/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -138,7 +138,7 @@ public class Schools {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSchoolsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSchoolsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -177,13 +177,13 @@ public class Schools {
      */
     public org.openapis.openapi.models.operations.GetSectionsForSchoolResponse getSectionsForSchool(org.openapis.openapi.models.operations.GetSectionsForSchoolRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSectionsForSchoolPathParams.class, baseUrl, "/schools/{id}/sections", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSectionsForSchoolRequest.class, baseUrl, "/schools/{id}/sections", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSectionsForSchoolQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSectionsForSchoolRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -230,13 +230,13 @@ public class Schools {
      */
     public org.openapis.openapi.models.operations.GetStudentsForSchoolResponse getStudentsForSchool(org.openapis.openapi.models.operations.GetStudentsForSchoolRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStudentsForSchoolPathParams.class, baseUrl, "/schools/{id}/students", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStudentsForSchoolRequest.class, baseUrl, "/schools/{id}/students", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetStudentsForSchoolQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetStudentsForSchoolRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -283,13 +283,13 @@ public class Schools {
      */
     public org.openapis.openapi.models.operations.GetTeachersForSchoolResponse getTeachersForSchool(org.openapis.openapi.models.operations.GetTeachersForSchoolRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeachersForSchoolPathParams.class, baseUrl, "/schools/{id}/teachers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeachersForSchoolRequest.class, baseUrl, "/schools/{id}/teachers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTeachersForSchoolQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTeachersForSchoolRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

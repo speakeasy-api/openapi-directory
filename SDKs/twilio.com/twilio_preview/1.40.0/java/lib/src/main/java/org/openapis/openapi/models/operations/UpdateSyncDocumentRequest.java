@@ -7,38 +7,34 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSyncDocumentRequest {
-    
-    public UpdateSyncDocumentPathParams pathParams;
-    public UpdateSyncDocumentRequest withPathParams(UpdateSyncDocumentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateSyncDocumentHeaders headers;
-    public UpdateSyncDocumentRequest withHeaders(UpdateSyncDocumentHeaders headers) {
-        this.headers = headers;
+    /**
+     * The If-Match HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
+    public String ifMatch;
+    public UpdateSyncDocumentRequest withIfMatch(String ifMatch) {
+        this.ifMatch = ifMatch;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateSyncDocumentUpdateSyncDocumentRequest request;
-    public UpdateSyncDocumentRequest withRequest(UpdateSyncDocumentUpdateSyncDocumentRequest request) {
-        this.request = request;
+    public UpdateSyncDocumentUpdateSyncDocumentRequest requestBody;
+    public UpdateSyncDocumentRequest withRequestBody(UpdateSyncDocumentUpdateSyncDocumentRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateSyncDocumentSecurity security;
-    public UpdateSyncDocumentRequest withSecurity(UpdateSyncDocumentSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public UpdateSyncDocumentRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public UpdateSyncDocumentRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateSyncDocumentRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

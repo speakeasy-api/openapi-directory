@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateAccessPointHeaders;
 import org.openapis.openapi.models.operations.CreateAccessPointRequestBodyPosixUser;
 import org.openapis.openapi.models.operations.CreateAccessPointRequestBodyRootDirectory;
 import org.openapis.openapi.models.operations.CreateAccessPointRequestBody;
@@ -31,54 +30,51 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateAccessPointRequest req = new CreateAccessPointRequest() {{
-                headers = new CreateAccessPointHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new CreateAccessPointRequestBody() {{
-                    clientToken = "illum";
-                    fileSystemId = "vel";
+                requestBody = new CreateAccessPointRequestBody() {{
+                    clientToken = "corrupti";
+                    fileSystemId = "provident";
                     posixUser = new CreateAccessPointRequestBodyPosixUser() {{
-                        gid = 623564;
+                        gid = 715190;
                         secondaryGids = new Long[]{{
-                            add(384382),
-                            add(437587),
-                            add(297534),
+                            add(602763),
+                            add(857946),
+                            add(544883),
+                            add(847252),
                         }};
-                        uid = 891773;
+                        uid = 423655;
                     }};
                     rootDirectory = new CreateAccessPointRequestBodyRootDirectory() {{
                         creationInfo = new CreationInfo() {{
-                            ownerGid = 56713;
-                            ownerUid = 963663;
-                            permissions = "tempora";
+                            ownerGid = 623564;
+                            ownerUid = 645894;
+                            permissions = "suscipit";
                         }};
-                        path = "suscipit";
+                        path = "iure";
                     }};
                     tags = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            key = "minus";
-                            value = "placeat";
+                            key = "debitis";
+                            value = "ipsa";
                         }}),
                         add(new Tag() {{
-                            key = "voluptatum";
-                            value = "iusto";
+                            key = "delectus";
+                            value = "tempora";
                         }}),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "suscipit";
+                xAmzContentSha256 = "molestiae";
+                xAmzCredential = "minus";
+                xAmzDate = "placeat";
+                xAmzSecurityToken = "voluptatum";
+                xAmzSignature = "iusto";
+                xAmzSignedHeaders = "excepturi";
+            }}            
 
             CreateAccessPointResponse res = sdk.createAccessPoint(req);
 
@@ -92,7 +88,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

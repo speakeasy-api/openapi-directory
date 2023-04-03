@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCustomFields8Request {
-    
-    public GetCustomFields8PathParams pathParams;
-    public GetCustomFields8Request withPathParams(GetCustomFields8PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * project's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public GetCustomFields8Request withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodePushDeploymentsCreateRequest {
-    
-    public CodePushDeploymentsCreatePathParams pathParams;
-    public CodePushDeploymentsCreateRequest withPathParams(CodePushDeploymentsCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Deployment to be created
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public CodePushDeploymentsCreateRequestBody request;
-    public CodePushDeploymentsCreateRequest withRequest(CodePushDeploymentsCreateRequestBody request) {
-        this.request = request;
+    public CodePushDeploymentsCreateRequestBody requestBody;
+    public CodePushDeploymentsCreateRequest withRequestBody(CodePushDeploymentsCreateRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public CodePushDeploymentsCreateRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public CodePushDeploymentsCreateSecurity security;
-    public CodePushDeploymentsCreateRequest withSecurity(CodePushDeploymentsCreateSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public CodePushDeploymentsCreateRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

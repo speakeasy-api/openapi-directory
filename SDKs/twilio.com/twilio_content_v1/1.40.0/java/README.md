@@ -18,10 +18,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.DeleteContentSecurity;
-import org.openapis.openapi.models.operations.DeleteContentPathParams;
 import org.openapis.openapi.models.operations.DeleteContentRequest;
 import org.openapis.openapi.models.operations.DeleteContentResponse;
-import org.openapis.openapi.models.shared.SchemeAccountSidAuthToken;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,18 +28,13 @@ public class Application {
                 .build();
 
             DeleteContentRequest req = new DeleteContentRequest() {{
-                security = new DeleteContentSecurity() {{
-                    accountSidAuthToken = new SchemeAccountSidAuthToken() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
-                }};
-                pathParams = new DeleteContentPathParams() {{
-                    sid = "corrupti";
-                }};
-            }};            
+                sid = "corrupti";
+            }}            
 
-            DeleteContentResponse res = sdk.deleteContent(req);
+            DeleteContentResponse res = sdk.deleteContent(req, new DeleteContentSecurity() {{
+                password = "YOUR_PASSWORD_HERE";
+                username = "YOUR_USERNAME_HERE";
+            }});
 
             if (res.statusCode == 200) {
                 // handle response
@@ -53,7 +46,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

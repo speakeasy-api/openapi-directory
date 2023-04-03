@@ -4,13 +4,266 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCandidatesSearchRequest {
+    /**
+     * API key for https://api.data.gov. Get one at https://api.data.gov/signup.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetCandidatesSearchRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public GetCandidatesSearchQueryParams queryParams;
-    public GetCandidatesSearchRequest withQueryParams(GetCandidatesSearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A unique identifier assigned to each candidate registered with the FEC.
+     * If a person runs for several offices, that person will have separate candidate IDs for each office.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=candidate_id")
+    public String[] candidateId;
+    public GetCandidatesSearchRequest withCandidateId(String[] candidateId) {
+        this.candidateId = candidateId;
+        return this;
+    }
+    
+    /**
+     * One-letter code explaining if the candidate is:
+     *         - C present candidate
+     *         - F future candidate
+     *         - N not yet a candidate
+     *         - P prior candidate
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=candidate_status")
+    public GetCandidatesSearchCandidateStatusEnum[] candidateStatus;
+    public GetCandidatesSearchRequest withCandidateStatus(GetCandidatesSearchCandidateStatusEnum[] candidateStatus) {
+        this.candidateStatus = candidateStatus;
+        return this;
+    }
+    
+    /**
+     * Two-year election cycle in which a candidate runs for office.
+     * Calculated from Form 2. The cycle begins with
+     * an odd year and is named for its ending, even year. This cycle follows
+     * the traditional house election cycle and subdivides the presidential
+     * and Senate elections into comparable two-year blocks. To retrieve data for
+     * the entire four years of a presidential term or six years of a senatorial term,
+     * you will need the `election_full` flag.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cycle")
+    public Integer[] cycle;
+    public GetCandidatesSearchRequest withCycle(Integer[] cycle) {
+        this.cycle = cycle;
+        return this;
+    }
+    
+    /**
+     * Two-digit US House distirict of the office the candidate is running for. Presidential, Senate and House at-large candidates will have District 00.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=district")
+    public String[] district;
+    public GetCandidatesSearchRequest withDistrict(String[] district) {
+        this.district = district;
+        return this;
+    }
+    
+    /**
+     * Year of election
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=election_year")
+    public Integer[] electionYear;
+    public GetCandidatesSearchRequest withElectionYear(Integer[] electionYear) {
+        this.electionYear = electionYear;
+        return this;
+    }
+    
+    /**
+     * A boolean the describes if a presidential candidate has accepted federal funds. The flag will be false for House and Senate candidates.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=federal_funds_flag")
+    public Boolean federalFundsFlag;
+    public GetCandidatesSearchRequest withFederalFundsFlag(Boolean federalFundsFlag) {
+        this.federalFundsFlag = federalFundsFlag;
+        return this;
+    }
+    
+    /**
+     * A boolean that describes if a candidate's committee has ever received any receipts for their campaign for this particular office. (Candidates have separate candidate IDs for each office.)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=has_raised_funds")
+    public Boolean hasRaisedFunds;
+    public GetCandidatesSearchRequest withHasRaisedFunds(Boolean hasRaisedFunds) {
+        this.hasRaisedFunds = hasRaisedFunds;
+        return this;
+    }
+    
+    /**
+     * One-letter code ('I', 'C', 'O') explaining if the candidate is an incumbent, a challenger, or if the seat is open.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=incumbent_challenge")
+    public GetCandidatesSearchIncumbentChallengeEnum[] incumbentChallenge;
+    public GetCandidatesSearchRequest withIncumbentChallenge(GetCandidatesSearchIncumbentChallengeEnum[] incumbentChallenge) {
+        this.incumbentChallenge = incumbentChallenge;
+        return this;
+    }
+    
+    /**
+     *  Candidates who are actively seeking office. If no value is specified, all candidates
+     * are returned. When True is specified, only active candidates are returned. When False is
+     * specified, only inactive candidates are returned.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_active_candidate")
+    public Boolean isActiveCandidate;
+    public GetCandidatesSearchRequest withIsActiveCandidate(Boolean isActiveCandidate) {
+        this.isActiveCandidate = isActiveCandidate;
+        return this;
+    }
+    
+    /**
+     * Selects all candidates whose first filing was received by the FEC before this date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_first_file_date")
+    public LocalDate maxFirstFileDate;
+    public GetCandidatesSearchRequest withMaxFirstFileDate(LocalDate maxFirstFileDate) {
+        this.maxFirstFileDate = maxFirstFileDate;
+        return this;
+    }
+    
+    /**
+     * Selects all candidates whose first filing was received by the FEC after this date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_first_file_date")
+    public LocalDate minFirstFileDate;
+    public GetCandidatesSearchRequest withMinFirstFileDate(LocalDate minFirstFileDate) {
+        this.minFirstFileDate = minFirstFileDate;
+        return this;
+    }
+    
+    /**
+     * Name (candidate or committee) to search for. Alias for 'q'.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String[] name;
+    public GetCandidatesSearchRequest withName(String[] name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Federal office candidate runs for: H, S or P
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=office")
+    public GetCandidatesSearchOfficeEnum[] office;
+    public GetCandidatesSearchRequest withOffice(GetCandidatesSearchOfficeEnum[] office) {
+        this.office = office;
+        return this;
+    }
+    
+    /**
+     * For paginating through results, starting at page 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetCandidatesSearchRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Three-letter code for the party affiliated with a candidate or committee. For example, DEM for Democratic Party and REP for Republican Party.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=party")
+    public String[] party;
+    public GetCandidatesSearchRequest withParty(String[] party) {
+        this.party = party;
+        return this;
+    }
+    
+    /**
+     * The number of results returned per page. Defaults to 20.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetCandidatesSearchRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Name of candidate running for office
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String[] q;
+    public GetCandidatesSearchRequest withQ(String[] q) {
+        this.q = q;
+        return this;
+    }
+    
+    /**
+     * Provide a field to sort by. Use `-` for descending order.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetCandidatesSearchRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Hide null values on sorted column(s).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
+    public Boolean sortHideNull;
+    public GetCandidatesSearchRequest withSortHideNull(Boolean sortHideNull) {
+        this.sortHideNull = sortHideNull;
+        return this;
+    }
+    
+    /**
+     * Toggle that filters out all rows having sort column that is non-null
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
+    public Boolean sortNullOnly;
+    public GetCandidatesSearchRequest withSortNullOnly(Boolean sortNullOnly) {
+        this.sortNullOnly = sortNullOnly;
+        return this;
+    }
+    
+    /**
+     * Toggle that sorts null values last
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
+    public Boolean sortNullsLast;
+    public GetCandidatesSearchRequest withSortNullsLast(Boolean sortNullsLast) {
+        this.sortNullsLast = sortNullsLast;
+        return this;
+    }
+    
+    /**
+     * US state or territory where a candidate runs for office
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public String[] state;
+    public GetCandidatesSearchRequest withState(String[] state) {
+        this.state = state;
+        return this;
+    }
+    
+    /**
+     * Retrieve records pertaining to a particular election year. The list of election years is based on a candidate filing a statement of candidacy (F2) for that year.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public String year;
+    public GetCandidatesSearchRequest withYear(String year) {
+        this.year = year;
         return this;
     }
     

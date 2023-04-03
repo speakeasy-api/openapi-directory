@@ -4,27 +4,32 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCollectionRequest {
-    
-    public GetCollectionPathParams pathParams;
-    public GetCollectionRequest withPathParams(GetCollectionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the collection.
+     * The following aliases are supported:
+     * - `root`: The root collection of the account
+     * - `sharedWithMe`: Automatically contains new resources that have been shared individually
+     * - `trash`: Automatically contains resources that have been deleted
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection")
+    public String collection;
+    public GetCollectionRequest withCollection(String collection) {
+        this.collection = collection;
         return this;
     }
     
-    
-    public GetCollectionQueryParams queryParams;
-    public GetCollectionRequest withQueryParams(GetCollectionQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetCollectionSecurity security;
-    public GetCollectionRequest withSecurity(GetCollectionSecurity security) {
-        this.security = security;
+    /**
+     * This sharing key must be specified to access to a score or collection with a `privacy` mode set to `privateLink` and the current user is not a collaborator of the document.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sharingKey")
+    public String sharingKey;
+    public GetCollectionRequest withSharingKey(String sharingKey) {
+        this.sharingKey = sharingKey;
         return this;
     }
     

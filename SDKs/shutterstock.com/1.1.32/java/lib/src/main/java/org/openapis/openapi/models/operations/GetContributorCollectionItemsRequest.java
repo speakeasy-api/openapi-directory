@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContributorCollectionItemsRequest {
-    
-    public GetContributorCollectionItemsPathParams pathParams;
-    public GetContributorCollectionItemsRequest withPathParams(GetContributorCollectionItemsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Contributor ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=contributor_id")
+    public String contributorId;
+    public GetContributorCollectionItemsRequest withContributorId(String contributorId) {
+        this.contributorId = contributorId;
         return this;
     }
     
-    
-    public GetContributorCollectionItemsQueryParams queryParams;
-    public GetContributorCollectionItemsRequest withQueryParams(GetContributorCollectionItemsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Collection ID that belongs to the contributor
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetContributorCollectionItemsRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * Page number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetContributorCollectionItemsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetContributorCollectionItemsSecurity security;
-    public GetContributorCollectionItemsRequest withSecurity(GetContributorCollectionItemsSecurity security) {
-        this.security = security;
+    /**
+     * Number of results per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetContributorCollectionItemsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Sort order
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetContributorCollectionItemsSortEnum sort;
+    public GetContributorCollectionItemsRequest withSort(GetContributorCollectionItemsSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

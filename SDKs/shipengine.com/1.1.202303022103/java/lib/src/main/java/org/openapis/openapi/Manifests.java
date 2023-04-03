@@ -45,7 +45,7 @@ public class Manifests {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateManifestResponse createManifest(org.openapis.openapi.models.operations.CreateManifestRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateManifestResponse createManifest(Object request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/manifests");
         
@@ -100,7 +100,7 @@ public class Manifests {
      */
     public org.openapis.openapi.models.operations.GetManifestByIdResponse getManifestById(org.openapis.openapi.models.operations.GetManifestByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetManifestByIdPathParams.class, baseUrl, "/v1/manifests/{manifest_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetManifestByIdRequest.class, baseUrl, "/v1/manifests/{manifest_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -148,7 +148,7 @@ public class Manifests {
      */
     public org.openapis.openapi.models.operations.GetManifestRequestByIdResponse getManifestRequestById(org.openapis.openapi.models.operations.GetManifestRequestByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetManifestRequestByIdPathParams.class, baseUrl, "/v1/manifests/requests/{manifest_request_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetManifestRequestByIdRequest.class, baseUrl, "/v1/manifests/requests/{manifest_request_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -202,7 +202,7 @@ public class Manifests {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListManifestsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListManifestsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

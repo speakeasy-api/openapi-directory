@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetQuoteIdFromInternalIdRequest {
-    
-    public GetQuoteIdFromInternalIdPathParams pathParams;
-    public GetQuoteIdFromInternalIdRequest withPathParams(GetQuoteIdFromInternalIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public Long projectId;
+    public GetQuoteIdFromInternalIdRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     

@@ -34,7 +34,5 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetApiVersionResponse.j
 lib/src/main/java/org/openapis/openapi/models/operations/GetHealthResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ApiVersion.java
 lib/src/main/java/org/openapis/openapi/models/shared/ApiHealthStatus.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKey.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAccessToken.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

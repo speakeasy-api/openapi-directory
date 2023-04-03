@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostBundlesIdShareRequest {
-    
-    public PostBundlesIdSharePathParams pathParams;
-    public PostBundlesIdShareRequest withPathParams(PostBundlesIdSharePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public PostBundlesIdShareRequestBody requestBody;
+    public PostBundlesIdShareRequest withRequestBody(PostBundlesIdShareRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PostBundlesIdShareRequestBody request;
-    public PostBundlesIdShareRequest withRequest(PostBundlesIdShareRequestBody request) {
-        this.request = request;
+    /**
+     * Bundle ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PostBundlesIdShareRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

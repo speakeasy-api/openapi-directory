@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsCreateDiscussionCommentLegacyRequest {
-    
-    public TeamsCreateDiscussionCommentLegacyPathParams pathParams;
-    public TeamsCreateDiscussionCommentLegacyRequest withPathParams(TeamsCreateDiscussionCommentLegacyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public TeamsCreateDiscussionCommentLegacyRequestBody requestBody;
+    public TeamsCreateDiscussionCommentLegacyRequest withRequestBody(TeamsCreateDiscussionCommentLegacyRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public TeamsCreateDiscussionCommentLegacyRequestBody request;
-    public TeamsCreateDiscussionCommentLegacyRequest withRequest(TeamsCreateDiscussionCommentLegacyRequestBody request) {
-        this.request = request;
+    /**
+     * The number that identifies the discussion.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=discussion_number")
+    public Long discussionNumber;
+    public TeamsCreateDiscussionCommentLegacyRequest withDiscussionNumber(Long discussionNumber) {
+        this.discussionNumber = discussionNumber;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the team.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
+    public Long teamId;
+    public TeamsCreateDiscussionCommentLegacyRequest withTeamId(Long teamId) {
+        this.teamId = teamId;
         return this;
     }
     

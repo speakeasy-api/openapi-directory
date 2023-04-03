@@ -38,7 +38,7 @@ public class Get {
      */
     public org.openapis.openapi.models.operations.KeyRetrieveResponse keyRetrieve(org.openapis.openapi.models.operations.KeyRetrieveRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.KeyRetrievePathParams.class, baseUrl, "/key/{PK}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.KeyRetrieveRequest.class, baseUrl, "/key/{PK}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -91,7 +91,7 @@ public class Get {
      */
     public org.openapis.openapi.models.operations.SignRetrieveResponse signRetrieve(org.openapis.openapi.models.operations.SignRetrieveRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SignRetrievePathParams.class, baseUrl, "/scope/{job}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SignRetrieveRequest.class, baseUrl, "/scope/{job}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

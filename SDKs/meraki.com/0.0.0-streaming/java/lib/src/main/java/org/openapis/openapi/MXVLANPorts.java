@@ -40,7 +40,7 @@ public class MXVLANPorts {
      */
     public org.openapis.openapi.models.operations.GetNetworkAppliancePortResponse getNetworkAppliancePort(org.openapis.openapi.models.operations.GetNetworkAppliancePortRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkAppliancePortPathParams.class, baseUrl, "/networks/{networkId}/appliancePorts/{appliancePortId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkAppliancePortRequest.class, baseUrl, "/networks/{networkId}/appliancePorts/{appliancePortId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,7 +80,7 @@ public class MXVLANPorts {
      */
     public org.openapis.openapi.models.operations.GetNetworkAppliancePortsResponse getNetworkAppliancePorts(org.openapis.openapi.models.operations.GetNetworkAppliancePortsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkAppliancePortsPathParams.class, baseUrl, "/networks/{networkId}/appliancePorts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkAppliancePortsRequest.class, baseUrl, "/networks/{networkId}/appliancePorts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -120,12 +120,12 @@ public class MXVLANPorts {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkAppliancePortResponse updateNetworkAppliancePort(org.openapis.openapi.models.operations.UpdateNetworkAppliancePortRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkAppliancePortPathParams.class, baseUrl, "/networks/{networkId}/appliancePorts/{appliancePortId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkAppliancePortRequest.class, baseUrl, "/networks/{networkId}/appliancePorts/{appliancePortId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

@@ -4,34 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EmployeePayrollsAllRequest {
-    
-    public EmployeePayrollsAllPathParams pathParams;
-    public EmployeePayrollsAllRequest withPathParams(EmployeePayrollsAllPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the employee you are acting upon.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=employee_id")
+    public String employeeId;
+    public EmployeePayrollsAllRequest withEmployeeId(String employeeId) {
+        this.employeeId = employeeId;
         return this;
     }
     
-    
-    public EmployeePayrollsAllQueryParams queryParams;
-    public EmployeePayrollsAllRequest withQueryParams(EmployeePayrollsAllQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: `fields=name,email,addresses.city`&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields "name", "email" and "addresses.city". If any other fields are available, they will be excluded.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public EmployeePayrollsAllRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     
-    
-    public EmployeePayrollsAllHeaders headers;
-    public EmployeePayrollsAllRequest withHeaders(EmployeePayrollsAllHeaders headers) {
-        this.headers = headers;
+    /**
+     * Apply filters
+     */
+    @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=filter")
+    public org.openapis.openapi.models.shared.PayrollsFilter filter;
+    public EmployeePayrollsAllRequest withFilter(org.openapis.openapi.models.shared.PayrollsFilter filter) {
+        this.filter = filter;
         return this;
     }
     
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
+    public Boolean raw;
+    public EmployeePayrollsAllRequest withRaw(Boolean raw) {
+        this.raw = raw;
+        return this;
+    }
     
-    public EmployeePayrollsAllSecurity security;
-    public EmployeePayrollsAllRequest withSecurity(EmployeePayrollsAllSecurity security) {
-        this.security = security;
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public EmployeePayrollsAllRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
+        return this;
+    }
+    
+    /**
+     * ID of the consumer which you want to get or push data from
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-consumer-id")
+    public String xApideckConsumerId;
+    public EmployeePayrollsAllRequest withXApideckConsumerId(String xApideckConsumerId) {
+        this.xApideckConsumerId = xApideckConsumerId;
+        return this;
+    }
+    
+    /**
+     * Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-service-id")
+    public String xApideckServiceId;
+    public EmployeePayrollsAllRequest withXApideckServiceId(String xApideckServiceId) {
+        this.xApideckServiceId = xApideckServiceId;
         return this;
     }
     

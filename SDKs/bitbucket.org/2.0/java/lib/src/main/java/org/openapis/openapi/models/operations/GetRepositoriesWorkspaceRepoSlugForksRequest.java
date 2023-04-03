@@ -4,27 +4,68 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugForksRequest {
-    
-    public GetRepositoriesWorkspaceRepoSlugForksPathParams pathParams;
-    public GetRepositoriesWorkspaceRepoSlugForksRequest withPathParams(GetRepositoriesWorkspaceRepoSlugForksPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Query string to narrow down the response as per [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public GetRepositoriesWorkspaceRepoSlugForksRequest withQ(String q) {
+        this.q = q;
         return this;
     }
     
-    
-    public GetRepositoriesWorkspaceRepoSlugForksQueryParams queryParams;
-    public GetRepositoriesWorkspaceRepoSlugForksRequest withQueryParams(GetRepositoriesWorkspaceRepoSlugForksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public GetRepositoriesWorkspaceRepoSlugForksRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
         return this;
     }
     
+    /**
+     * Filters the result based on the authenticated user's role on each repository.
+     * 
+     * * **member**: returns repositories to which the user has explicit read access
+     * * **contributor**: returns repositories to which the user has explicit write access
+     * * **admin**: returns repositories to which the user has explicit administrator access
+     * * **owner**: returns all repositories owned by the current user
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=role")
+    public GetRepositoriesWorkspaceRepoSlugForksRoleEnum role;
+    public GetRepositoriesWorkspaceRepoSlugForksRequest withRole(GetRepositoriesWorkspaceRepoSlugForksRoleEnum role) {
+        this.role = role;
+        return this;
+    }
     
-    public GetRepositoriesWorkspaceRepoSlugForksSecurity security;
-    public GetRepositoriesWorkspaceRepoSlugForksRequest withSecurity(GetRepositoriesWorkspaceRepoSlugForksSecurity security) {
-        this.security = security;
+    /**
+     * Field by which the results should be sorted as per [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetRepositoriesWorkspaceRepoSlugForksRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetRepositoriesWorkspaceRepoSlugForksRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

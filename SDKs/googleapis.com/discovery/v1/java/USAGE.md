@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.DiscoveryApisGetRestPathParams;
-import org.openapis.openapi.models.operations.DiscoveryApisGetRestQueryParams;
 import org.openapis.openapi.models.operations.DiscoveryApisGetRestRequest;
 import org.openapis.openapi.models.operations.DiscoveryApisGetRestResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -17,20 +15,16 @@ public class Application {
                 .build();
 
             DiscoveryApisGetRestRequest req = new DiscoveryApisGetRestRequest() {{
-                pathParams = new DiscoveryApisGetRestPathParams() {{
-                    api = "corrupti";
-                    version = "provident";
-                }};
-                queryParams = new DiscoveryApisGetRestQueryParams() {{
-                    alt = "json";
-                    fields = "distinctio";
-                    key = "quibusdam";
-                    oauthToken = "unde";
-                    prettyPrint = false;
-                    quotaUser = "nulla";
-                    userIp = "corrupti";
-                }};
-            }};            
+                alt = "json";
+                api = "corrupti";
+                fields = "provident";
+                key = "distinctio";
+                oauthToken = "quibusdam";
+                prettyPrint = false;
+                quotaUser = "unde";
+                userIp = "nulla";
+                version = "corrupti";
+            }}            
 
             DiscoveryApisGetRestResponse res = sdk.apis.discoveryApisGetRest(req);
 

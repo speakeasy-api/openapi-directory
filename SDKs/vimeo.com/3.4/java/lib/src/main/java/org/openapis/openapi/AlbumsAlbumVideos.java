@@ -34,19 +34,20 @@ public class AlbumsAlbumVideos {
     /**
      * Add a specific video to an album
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddVideoToAlbumResponse addVideoToAlbum(org.openapis.openapi.models.operations.AddVideoToAlbumRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddVideoToAlbumResponse addVideoToAlbum(org.openapis.openapi.models.operations.AddVideoToAlbumRequest request, org.openapis.openapi.models.operations.AddVideoToAlbumSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoToAlbumPathParams.class, baseUrl, "/users/{user_id}/albums/{album_id}/videos/{video_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoToAlbumRequest.class, baseUrl, "/users/{user_id}/albums/{album_id}/videos/{video_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -75,19 +76,20 @@ public class AlbumsAlbumVideos {
     /**
      * Add a specific video to an album
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddVideoToAlbumAlt1Response addVideoToAlbumAlt1(org.openapis.openapi.models.operations.AddVideoToAlbumAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.AddVideoToAlbumAlt1Response addVideoToAlbumAlt1(org.openapis.openapi.models.operations.AddVideoToAlbumAlt1Request request, org.openapis.openapi.models.operations.AddVideoToAlbumAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoToAlbumAlt1PathParams.class, baseUrl, "/me/albums/{album_id}/videos/{video_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoToAlbumAlt1Request.class, baseUrl, "/me/albums/{album_id}/videos/{video_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -122,13 +124,13 @@ public class AlbumsAlbumVideos {
      */
     public org.openapis.openapi.models.operations.GetAlbumVideoResponse getAlbumVideo(org.openapis.openapi.models.operations.GetAlbumVideoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAlbumVideoPathParams.class, baseUrl, "/users/{user_id}/albums/{album_id}/videos/{video_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAlbumVideoRequest.class, baseUrl, "/users/{user_id}/albums/{album_id}/videos/{video_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAlbumVideoQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAlbumVideoRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -176,13 +178,13 @@ public class AlbumsAlbumVideos {
      */
     public org.openapis.openapi.models.operations.GetAlbumVideoAlt1Response getAlbumVideoAlt1(org.openapis.openapi.models.operations.GetAlbumVideoAlt1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAlbumVideoAlt1PathParams.class, baseUrl, "/me/albums/{album_id}/videos/{video_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAlbumVideoAlt1Request.class, baseUrl, "/me/albums/{album_id}/videos/{video_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAlbumVideoAlt1QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAlbumVideoAlt1Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -229,13 +231,13 @@ public class AlbumsAlbumVideos {
      */
     public org.openapis.openapi.models.operations.GetAlbumVideosResponse getAlbumVideos(org.openapis.openapi.models.operations.GetAlbumVideosRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAlbumVideosPathParams.class, baseUrl, "/users/{user_id}/albums/{album_id}/videos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAlbumVideosRequest.class, baseUrl, "/users/{user_id}/albums/{album_id}/videos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAlbumVideosQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAlbumVideosRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -282,13 +284,13 @@ public class AlbumsAlbumVideos {
      */
     public org.openapis.openapi.models.operations.GetAlbumVideosAlt1Response getAlbumVideosAlt1(org.openapis.openapi.models.operations.GetAlbumVideosAlt1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAlbumVideosAlt1PathParams.class, baseUrl, "/me/albums/{album_id}/videos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAlbumVideosAlt1Request.class, baseUrl, "/me/albums/{album_id}/videos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAlbumVideosAlt1QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAlbumVideosAlt1Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -330,19 +332,20 @@ public class AlbumsAlbumVideos {
     /**
      * Remove a video from an album
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RemoveVideoFromAlbumResponse removeVideoFromAlbum(org.openapis.openapi.models.operations.RemoveVideoFromAlbumRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RemoveVideoFromAlbumResponse removeVideoFromAlbum(org.openapis.openapi.models.operations.RemoveVideoFromAlbumRequest request, org.openapis.openapi.models.operations.RemoveVideoFromAlbumSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemoveVideoFromAlbumPathParams.class, baseUrl, "/users/{user_id}/albums/{album_id}/videos/{video_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemoveVideoFromAlbumRequest.class, baseUrl, "/users/{user_id}/albums/{album_id}/videos/{video_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -371,19 +374,20 @@ public class AlbumsAlbumVideos {
     /**
      * Remove a video from an album
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RemoveVideoFromAlbumAlt1Response removeVideoFromAlbumAlt1(org.openapis.openapi.models.operations.RemoveVideoFromAlbumAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.RemoveVideoFromAlbumAlt1Response removeVideoFromAlbumAlt1(org.openapis.openapi.models.operations.RemoveVideoFromAlbumAlt1Request request, org.openapis.openapi.models.operations.RemoveVideoFromAlbumAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemoveVideoFromAlbumAlt1PathParams.class, baseUrl, "/me/albums/{album_id}/videos/{video_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemoveVideoFromAlbumAlt1Request.class, baseUrl, "/me/albums/{album_id}/videos/{video_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -413,24 +417,25 @@ public class AlbumsAlbumVideos {
      * Replace all the videos in an album
      * This method replaces all the existing videos in an album with one or more videos.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReplaceVideosInAlbumResponse replaceVideosInAlbum(org.openapis.openapi.models.operations.ReplaceVideosInAlbumRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReplaceVideosInAlbumResponse replaceVideosInAlbum(org.openapis.openapi.models.operations.ReplaceVideosInAlbumRequest request, org.openapis.openapi.models.operations.ReplaceVideosInAlbumSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReplaceVideosInAlbumPathParams.class, baseUrl, "/users/{user_id}/albums/{album_id}/videos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReplaceVideosInAlbumRequest.class, baseUrl, "/users/{user_id}/albums/{album_id}/videos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -460,24 +465,25 @@ public class AlbumsAlbumVideos {
      * Replace all the videos in an album
      * This method replaces all the existing videos in an album with one or more videos.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReplaceVideosInAlbumAlt1Response replaceVideosInAlbumAlt1(org.openapis.openapi.models.operations.ReplaceVideosInAlbumAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.ReplaceVideosInAlbumAlt1Response replaceVideosInAlbumAlt1(org.openapis.openapi.models.operations.ReplaceVideosInAlbumAlt1Request request, org.openapis.openapi.models.operations.ReplaceVideosInAlbumAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReplaceVideosInAlbumAlt1PathParams.class, baseUrl, "/me/albums/{album_id}/videos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReplaceVideosInAlbumAlt1Request.class, baseUrl, "/me/albums/{album_id}/videos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -506,21 +512,22 @@ public class AlbumsAlbumVideos {
     /**
      * Set a video as the album thumbnail
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SetVideoAsAlbumThumbnailResponse setVideoAsAlbumThumbnail(org.openapis.openapi.models.operations.SetVideoAsAlbumThumbnailRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SetVideoAsAlbumThumbnailResponse setVideoAsAlbumThumbnail(org.openapis.openapi.models.operations.SetVideoAsAlbumThumbnailRequest request, org.openapis.openapi.models.operations.SetVideoAsAlbumThumbnailSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetVideoAsAlbumThumbnailPathParams.class, baseUrl, "/users/{user_id}/albums/{album_id}/videos/{video_id}/set_album_thumbnail", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetVideoAsAlbumThumbnailRequest.class, baseUrl, "/users/{user_id}/albums/{album_id}/videos/{video_id}/set_album_thumbnail", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -555,21 +562,22 @@ public class AlbumsAlbumVideos {
     /**
      * Set a video as the album thumbnail
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SetVideoAsAlbumThumbnailAlt1Response setVideoAsAlbumThumbnailAlt1(org.openapis.openapi.models.operations.SetVideoAsAlbumThumbnailAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.SetVideoAsAlbumThumbnailAlt1Response setVideoAsAlbumThumbnailAlt1(org.openapis.openapi.models.operations.SetVideoAsAlbumThumbnailAlt1Request request, org.openapis.openapi.models.operations.SetVideoAsAlbumThumbnailAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetVideoAsAlbumThumbnailAlt1PathParams.class, baseUrl, "/me/albums/{album_id}/videos/{video_id}/set_album_thumbnail", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetVideoAsAlbumThumbnailAlt1Request.class, baseUrl, "/me/albums/{album_id}/videos/{video_id}/set_album_thumbnail", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

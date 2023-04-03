@@ -4,13 +4,367 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchBoulderCampaignContributionsRequest {
+    /**
+     * Archive change date from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.from")
+    public OffsetDateTime changedateFrom;
+    public SearchBoulderCampaignContributionsRequest withChangedateFrom(OffsetDateTime changedateFrom) {
+        this.changedateFrom = changedateFrom;
+        return this;
+    }
     
-    public SearchBoulderCampaignContributionsQueryParams queryParams;
-    public SearchBoulderCampaignContributionsRequest withQueryParams(SearchBoulderCampaignContributionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Archive change date to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.to")
+    public OffsetDateTime changedateTo;
+    public SearchBoulderCampaignContributionsRequest withChangedateTo(OffsetDateTime changedateTo) {
+        this.changedateTo = changedateTo;
+        return this;
+    }
+    
+    /**
+     * Archive create date from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.from")
+    public OffsetDateTime createdateFrom;
+    public SearchBoulderCampaignContributionsRequest withCreatedateFrom(OffsetDateTime createdateFrom) {
+        this.createdateFrom = createdateFrom;
+        return this;
+    }
+    
+    /**
+     * Archive create date to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.to")
+    public OffsetDateTime createdateTo;
+    public SearchBoulderCampaignContributionsRequest withCreatedateTo(OffsetDateTime createdateTo) {
+        this.createdateTo = createdateTo;
+        return this;
+    }
+    
+    /**
+     * Search description
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
+    public String description;
+    public SearchBoulderCampaignContributionsRequest withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    
+    /**
+     * File suffix
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filesuffix")
+    public String filesuffix;
+    public SearchBoulderCampaignContributionsRequest withFilesuffix(String filesuffix) {
+        this.filesuffix = filesuffix;
+        return this;
+    }
+    
+    /**
+     * From date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
+    public OffsetDateTime fromdate;
+    public SearchBoulderCampaignContributionsRequest withFromdate(OffsetDateTime fromdate) {
+        this.fromdate = fromdate;
+        return this;
+    }
+    
+    /**
+     * Parent entry
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
+    public String group;
+    public SearchBoulderCampaignContributionsRequest withGroup(String group) {
+        this.group = group;
+        return this;
+    }
+    
+    /**
+     * Max number of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
+    public Long max;
+    public SearchBoulderCampaignContributionsRequest withMax(Long max) {
+        this.max = max;
+        return this;
+    }
+    
+    /**
+     * Northern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlatitude")
+    public Float maxlatitude;
+    public SearchBoulderCampaignContributionsRequest withMaxlatitude(Float maxlatitude) {
+        this.maxlatitude = maxlatitude;
+        return this;
+    }
+    
+    /**
+     * Eastern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlongitude")
+    public Float maxlongitude;
+    public SearchBoulderCampaignContributionsRequest withMaxlongitude(Float maxlongitude) {
+        this.maxlongitude = maxlongitude;
+        return this;
+    }
+    
+    /**
+     * Southern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlatitude")
+    public Float minlatitude;
+    public SearchBoulderCampaignContributionsRequest withMinlatitude(Float minlatitude) {
+        this.minlatitude = minlatitude;
+        return this;
+    }
+    
+    /**
+     * Western bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlongitude")
+    public Float minlongitude;
+    public SearchBoulderCampaignContributionsRequest withMinlongitude(Float minlongitude) {
+        this.minlongitude = minlongitude;
+        return this;
+    }
+    
+    /**
+     * Search name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public SearchBoulderCampaignContributionsRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Amended Date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_campaign_contributions.amended_date")
+    public String searchDbBoulderCampaignContributionsAmendedDate;
+    public SearchBoulderCampaignContributionsRequest withSearchDbBoulderCampaignContributionsAmendedDate(String searchDbBoulderCampaignContributionsAmendedDate) {
+        this.searchDbBoulderCampaignContributionsAmendedDate = searchDbBoulderCampaignContributionsAmendedDate;
+        return this;
+    }
+    
+    /**
+     * Anonymous
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_campaign_contributions.anonymous")
+    public String searchDbBoulderCampaignContributionsAnonymous;
+    public SearchBoulderCampaignContributionsRequest withSearchDbBoulderCampaignContributionsAnonymous(String searchDbBoulderCampaignContributionsAnonymous) {
+        this.searchDbBoulderCampaignContributionsAnonymous = searchDbBoulderCampaignContributionsAnonymous;
+        return this;
+    }
+    
+    /**
+     * Candidate
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_campaign_contributions.candidate")
+    public String searchDbBoulderCampaignContributionsCandidate;
+    public SearchBoulderCampaignContributionsRequest withSearchDbBoulderCampaignContributionsCandidate(String searchDbBoulderCampaignContributionsCandidate) {
+        this.searchDbBoulderCampaignContributionsCandidate = searchDbBoulderCampaignContributionsCandidate;
+        return this;
+    }
+    
+    /**
+     * City
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_campaign_contributions.city")
+    public String searchDbBoulderCampaignContributionsCity;
+    public SearchBoulderCampaignContributionsRequest withSearchDbBoulderCampaignContributionsCity(String searchDbBoulderCampaignContributionsCity) {
+        this.searchDbBoulderCampaignContributionsCity = searchDbBoulderCampaignContributionsCity;
+        return this;
+    }
+    
+    /**
+     * Committee
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_campaign_contributions.committee")
+    public String searchDbBoulderCampaignContributionsCommittee;
+    public SearchBoulderCampaignContributionsRequest withSearchDbBoulderCampaignContributionsCommittee(String searchDbBoulderCampaignContributionsCommittee) {
+        this.searchDbBoulderCampaignContributionsCommittee = searchDbBoulderCampaignContributionsCommittee;
+        return this;
+    }
+    
+    /**
+     * Committee Num
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_campaign_contributions.committee_num")
+    public String searchDbBoulderCampaignContributionsCommitteeNum;
+    public SearchBoulderCampaignContributionsRequest withSearchDbBoulderCampaignContributionsCommitteeNum(String searchDbBoulderCampaignContributionsCommitteeNum) {
+        this.searchDbBoulderCampaignContributionsCommitteeNum = searchDbBoulderCampaignContributionsCommitteeNum;
+        return this;
+    }
+    
+    /**
+     * Contribution
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_campaign_contributions.contribution")
+    public Double searchDbBoulderCampaignContributionsContribution;
+    public SearchBoulderCampaignContributionsRequest withSearchDbBoulderCampaignContributionsContribution(Double searchDbBoulderCampaignContributionsContribution) {
+        this.searchDbBoulderCampaignContributionsContribution = searchDbBoulderCampaignContributionsContribution;
+        return this;
+    }
+    
+    /**
+     * Contribution Type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_campaign_contributions.contribution_type")
+    public String searchDbBoulderCampaignContributionsContributionType;
+    public SearchBoulderCampaignContributionsRequest withSearchDbBoulderCampaignContributionsContributionType(String searchDbBoulderCampaignContributionsContributionType) {
+        this.searchDbBoulderCampaignContributionsContributionType = searchDbBoulderCampaignContributionsContributionType;
+        return this;
+    }
+    
+    /**
+     * Filing Date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_campaign_contributions.filing_date")
+    public String searchDbBoulderCampaignContributionsFilingDate;
+    public SearchBoulderCampaignContributionsRequest withSearchDbBoulderCampaignContributionsFilingDate(String searchDbBoulderCampaignContributionsFilingDate) {
+        this.searchDbBoulderCampaignContributionsFilingDate = searchDbBoulderCampaignContributionsFilingDate;
+        return this;
+    }
+    
+    /**
+     * First Name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_campaign_contributions.first_name")
+    public String searchDbBoulderCampaignContributionsFirstName;
+    public SearchBoulderCampaignContributionsRequest withSearchDbBoulderCampaignContributionsFirstName(String searchDbBoulderCampaignContributionsFirstName) {
+        this.searchDbBoulderCampaignContributionsFirstName = searchDbBoulderCampaignContributionsFirstName;
+        return this;
+    }
+    
+    /**
+     * From Candidate
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_campaign_contributions.from_candidate")
+    public String searchDbBoulderCampaignContributionsFromCandidate;
+    public SearchBoulderCampaignContributionsRequest withSearchDbBoulderCampaignContributionsFromCandidate(String searchDbBoulderCampaignContributionsFromCandidate) {
+        this.searchDbBoulderCampaignContributionsFromCandidate = searchDbBoulderCampaignContributionsFromCandidate;
+        return this;
+    }
+    
+    /**
+     * Last Name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_campaign_contributions.last_name")
+    public String searchDbBoulderCampaignContributionsLastName;
+    public SearchBoulderCampaignContributionsRequest withSearchDbBoulderCampaignContributionsLastName(String searchDbBoulderCampaignContributionsLastName) {
+        this.searchDbBoulderCampaignContributionsLastName = searchDbBoulderCampaignContributionsLastName;
+        return this;
+    }
+    
+    /**
+     * Match
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_campaign_contributions.match")
+    public Double searchDbBoulderCampaignContributionsMatch;
+    public SearchBoulderCampaignContributionsRequest withSearchDbBoulderCampaignContributionsMatch(Double searchDbBoulderCampaignContributionsMatch) {
+        this.searchDbBoulderCampaignContributionsMatch = searchDbBoulderCampaignContributionsMatch;
+        return this;
+    }
+    
+    /**
+     * Official Filing
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_campaign_contributions.official_filing")
+    public String searchDbBoulderCampaignContributionsOfficialFiling;
+    public SearchBoulderCampaignContributionsRequest withSearchDbBoulderCampaignContributionsOfficialFiling(String searchDbBoulderCampaignContributionsOfficialFiling) {
+        this.searchDbBoulderCampaignContributionsOfficialFiling = searchDbBoulderCampaignContributionsOfficialFiling;
+        return this;
+    }
+    
+    /**
+     * State
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_campaign_contributions.state")
+    public String searchDbBoulderCampaignContributionsState;
+    public SearchBoulderCampaignContributionsRequest withSearchDbBoulderCampaignContributionsState(String searchDbBoulderCampaignContributionsState) {
+        this.searchDbBoulderCampaignContributionsState = searchDbBoulderCampaignContributionsState;
+        return this;
+    }
+    
+    /**
+     * Street
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_campaign_contributions.street")
+    public String searchDbBoulderCampaignContributionsStreet;
+    public SearchBoulderCampaignContributionsRequest withSearchDbBoulderCampaignContributionsStreet(String searchDbBoulderCampaignContributionsStreet) {
+        this.searchDbBoulderCampaignContributionsStreet = searchDbBoulderCampaignContributionsStreet;
+        return this;
+    }
+    
+    /**
+     * Transaction Date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_campaign_contributions.transaction_date")
+    public String searchDbBoulderCampaignContributionsTransactionDate;
+    public SearchBoulderCampaignContributionsRequest withSearchDbBoulderCampaignContributionsTransactionDate(String searchDbBoulderCampaignContributionsTransactionDate) {
+        this.searchDbBoulderCampaignContributionsTransactionDate = searchDbBoulderCampaignContributionsTransactionDate;
+        return this;
+    }
+    
+    /**
+     * Type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_campaign_contributions.type")
+    public String searchDbBoulderCampaignContributionsType;
+    public SearchBoulderCampaignContributionsRequest withSearchDbBoulderCampaignContributionsType(String searchDbBoulderCampaignContributionsType) {
+        this.searchDbBoulderCampaignContributionsType = searchDbBoulderCampaignContributionsType;
+        return this;
+    }
+    
+    /**
+     * Zip
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_campaign_contributions.zip")
+    public String searchDbBoulderCampaignContributionsZip;
+    public SearchBoulderCampaignContributionsRequest withSearchDbBoulderCampaignContributionsZip(String searchDbBoulderCampaignContributionsZip) {
+        this.searchDbBoulderCampaignContributionsZip = searchDbBoulderCampaignContributionsZip;
+        return this;
+    }
+    
+    /**
+     * Number to skip
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
+    public Long skip;
+    public SearchBoulderCampaignContributionsRequest withSkip(Long skip) {
+        this.skip = skip;
+        return this;
+    }
+    
+    /**
+     * Search text
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
+    public String text;
+    public SearchBoulderCampaignContributionsRequest withText(String text) {
+        this.text = text;
+        return this;
+    }
+    
+    /**
+     * To date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
+    public OffsetDateTime todate;
+    public SearchBoulderCampaignContributionsRequest withTodate(OffsetDateTime todate) {
+        this.todate = todate;
         return this;
     }
     

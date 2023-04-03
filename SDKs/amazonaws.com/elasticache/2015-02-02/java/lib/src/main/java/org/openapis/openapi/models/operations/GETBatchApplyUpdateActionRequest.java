@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETBatchApplyUpdateActionRequest {
-    
-    public GETBatchApplyUpdateActionQueryParams queryParams;
-    public GETBatchApplyUpdateActionRequest withQueryParams(GETBatchApplyUpdateActionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETBatchApplyUpdateActionActionEnum action;
+    public GETBatchApplyUpdateActionRequest withAction(GETBatchApplyUpdateActionActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The cache cluster IDs
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CacheClusterIds")
+    public String[] cacheClusterIds;
+    public GETBatchApplyUpdateActionRequest withCacheClusterIds(String[] cacheClusterIds) {
+        this.cacheClusterIds = cacheClusterIds;
+        return this;
+    }
     
-    public GETBatchApplyUpdateActionHeaders headers;
-    public GETBatchApplyUpdateActionRequest withHeaders(GETBatchApplyUpdateActionHeaders headers) {
-        this.headers = headers;
+    /**
+     * The replication group IDs
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ReplicationGroupIds")
+    public String[] replicationGroupIds;
+    public GETBatchApplyUpdateActionRequest withReplicationGroupIds(String[] replicationGroupIds) {
+        this.replicationGroupIds = replicationGroupIds;
+        return this;
+    }
+    
+    /**
+     * The unique ID of the service update
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ServiceUpdateName")
+    public String serviceUpdateName;
+    public GETBatchApplyUpdateActionRequest withServiceUpdateName(String serviceUpdateName) {
+        this.serviceUpdateName = serviceUpdateName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETBatchApplyUpdateActionVersionEnum version;
+    public GETBatchApplyUpdateActionRequest withVersion(GETBatchApplyUpdateActionVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETBatchApplyUpdateActionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETBatchApplyUpdateActionRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETBatchApplyUpdateActionRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETBatchApplyUpdateActionRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETBatchApplyUpdateActionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETBatchApplyUpdateActionRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETBatchApplyUpdateActionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

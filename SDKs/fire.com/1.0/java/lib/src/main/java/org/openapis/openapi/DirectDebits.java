@@ -48,7 +48,7 @@ public class DirectDebits {
      */
     public org.openapis.openapi.models.operations.ActivateMandateResponse activateMandate(org.openapis.openapi.models.operations.ActivateMandateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivateMandatePathParams.class, baseUrl, "/v1/mandates/{mandateUuid}/activate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivateMandateRequest.class, baseUrl, "/v1/mandates/{mandateUuid}/activate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -84,7 +84,7 @@ public class DirectDebits {
      */
     public org.openapis.openapi.models.operations.CancelMandateByUuidResponse cancelMandateByUuid(org.openapis.openapi.models.operations.CancelMandateByUuidRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelMandateByUuidPathParams.class, baseUrl, "/v1/mandates/{mandateUuid}/cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelMandateByUuidRequest.class, baseUrl, "/v1/mandates/{mandateUuid}/cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -120,7 +120,7 @@ public class DirectDebits {
      */
     public org.openapis.openapi.models.operations.GetDirectDebitByUuidResponse getDirectDebitByUuid(org.openapis.openapi.models.operations.GetDirectDebitByUuidRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDirectDebitByUuidPathParams.class, baseUrl, "/v1/directdebits/{directDebitUuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDirectDebitByUuidRequest.class, baseUrl, "/v1/directdebits/{directDebitUuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -208,7 +208,7 @@ public class DirectDebits {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDirectDebitsForMandateUuidQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDirectDebitsForMandateUuidRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -250,7 +250,7 @@ public class DirectDebits {
      */
     public org.openapis.openapi.models.operations.GetMandateResponse getMandate(org.openapis.openapi.models.operations.GetMandateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMandatePathParams.class, baseUrl, "/v1/mandates/{mandateUuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMandateRequest.class, baseUrl, "/v1/mandates/{mandateUuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -292,7 +292,7 @@ public class DirectDebits {
      */
     public org.openapis.openapi.models.operations.RejectDirectDebitResponse rejectDirectDebit(org.openapis.openapi.models.operations.RejectDirectDebitRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RejectDirectDebitPathParams.class, baseUrl, "/v1/directdebits/{directDebitUuid}/reject", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RejectDirectDebitRequest.class, baseUrl, "/v1/directdebits/{directDebitUuid}/reject", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -328,7 +328,7 @@ public class DirectDebits {
      */
     public org.openapis.openapi.models.operations.UpdateMandateAliasResponse updateMandateAlias(org.openapis.openapi.models.operations.UpdateMandateAliasRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateMandateAliasPathParams.class, baseUrl, "/v1/mandates/{mandateUuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateMandateAliasRequest.class, baseUrl, "/v1/mandates/{mandateUuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");

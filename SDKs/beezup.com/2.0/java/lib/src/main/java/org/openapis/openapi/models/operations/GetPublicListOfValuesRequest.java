@@ -4,20 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPublicListOfValuesRequest {
-    
-    public GetPublicListOfValuesPathParams pathParams;
-    public GetPublicListOfValuesRequest withPathParams(GetPublicListOfValuesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Indicates that the client accepts the following languages.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String[] acceptLanguage;
+    public GetPublicListOfValuesRequest withAcceptLanguage(String[] acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
+    /**
+     * ETag value to identify the last known version of requested resource.\
+     * To avoid useless exchange, we recommend you to indicate the ETag you previously got from this operation.\
+     * If the ETag value does not match the response will be 200 to give you a new content, otherwise the response will be: 304 Not Modified, without any content.\
+     * For more details go to this link: http://tools.ietf.org/html/rfc7232#section-2.3
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
+    public String ifNoneMatch;
+    public GetPublicListOfValuesRequest withIfNoneMatch(String ifNoneMatch) {
+        this.ifNoneMatch = ifNoneMatch;
+        return this;
+    }
     
-    public GetPublicListOfValuesHeaders headers;
-    public GetPublicListOfValuesRequest withHeaders(GetPublicListOfValuesHeaders headers) {
-        this.headers = headers;
+    /**
+     * The list of value name your want to get
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=listName")
+    public String listName;
+    public GetPublicListOfValuesRequest withListName(String listName) {
+        this.listName = listName;
         return this;
     }
     

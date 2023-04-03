@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSourceAccountV3Request {
-    
-    public DeleteSourceAccountV3PathParams pathParams;
-    public DeleteSourceAccountV3Request withPathParams(DeleteSourceAccountV3PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Source account id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sourceAccountId")
+    public String sourceAccountId;
+    public DeleteSourceAccountV3Request withSourceAccountId(String sourceAccountId) {
+        this.sourceAccountId = sourceAccountId;
         return this;
     }
     

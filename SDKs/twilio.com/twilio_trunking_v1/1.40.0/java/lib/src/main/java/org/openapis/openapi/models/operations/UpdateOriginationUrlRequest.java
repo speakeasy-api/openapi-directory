@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateOriginationUrlRequest {
-    
-    public UpdateOriginationUrlPathParams pathParams;
-    public UpdateOriginationUrlRequest withPathParams(UpdateOriginationUrlPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateOriginationUrlUpdateOriginationUrlRequest request;
-    public UpdateOriginationUrlRequest withRequest(UpdateOriginationUrlUpdateOriginationUrlRequest request) {
-        this.request = request;
+    public UpdateOriginationUrlUpdateOriginationUrlRequest requestBody;
+    public UpdateOriginationUrlRequest withRequestBody(UpdateOriginationUrlUpdateOriginationUrlRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateOriginationUrlSecurity security;
-    public UpdateOriginationUrlRequest withSecurity(UpdateOriginationUrlSecurity security) {
-        this.security = security;
+    /**
+     * The unique string that we created to identify the OriginationUrl resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateOriginationUrlRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public String serverURL;
-    public UpdateOriginationUrlRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Trunk from which to update the OriginationUrl.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TrunkSid")
+    public String trunkSid;
+    public UpdateOriginationUrlRequest withTrunkSid(String trunkSid) {
+        this.trunkSid = trunkSid;
         return this;
     }
     

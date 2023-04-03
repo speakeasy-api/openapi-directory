@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteIndividualsPartyIdAddressesAddressIdRequest {
-    
-    public DeleteIndividualsPartyIdAddressesAddressIdPathParams pathParams;
-    public DeleteIndividualsPartyIdAddressesAddressIdRequest withPathParams(DeleteIndividualsPartyIdAddressesAddressIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The address identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=addressId")
+    public String addressId;
+    public DeleteIndividualsPartyIdAddressesAddressIdRequest withAddressId(String addressId) {
+        this.addressId = addressId;
         return this;
     }
     
+    /**
+     * The API key.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public DeleteIndividualsPartyIdAddressesAddressIdRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public DeleteIndividualsPartyIdAddressesAddressIdHeaders headers;
-    public DeleteIndividualsPartyIdAddressesAddressIdRequest withHeaders(DeleteIndividualsPartyIdAddressesAddressIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * The party identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=partyId")
+    public String partyId;
+    public DeleteIndividualsPartyIdAddressesAddressIdRequest withPartyId(String partyId) {
+        this.partyId = partyId;
         return this;
     }
     

@@ -4,27 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExtensionCtrlGetAccountExtensionsRequest {
-    
-    public ExtensionCtrlGetAccountExtensionsPathParams pathParams;
-    public ExtensionCtrlGetAccountExtensionsRequest withPathParams(ExtensionCtrlGetAccountExtensionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The Vonage Business Cloud account ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account_id")
+    public String accountId;
+    public ExtensionCtrlGetAccountExtensionsRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
-    
-    public ExtensionCtrlGetAccountExtensionsQueryParams queryParams;
-    public ExtensionCtrlGetAccountExtensionsRequest withQueryParams(ExtensionCtrlGetAccountExtensionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter by email address
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public ExtensionCtrlGetAccountExtensionsRequest withEmail(String email) {
+        this.email = email;
         return this;
     }
     
+    /**
+     * Filter by location id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location_id")
+    public Double locationId;
+    public ExtensionCtrlGetAccountExtensionsRequest withLocationId(Double locationId) {
+        this.locationId = locationId;
+        return this;
+    }
     
-    public ExtensionCtrlGetAccountExtensionsSecurity security;
-    public ExtensionCtrlGetAccountExtensionsRequest withSecurity(ExtensionCtrlGetAccountExtensionsSecurity security) {
-        this.security = security;
+    /**
+     * Filter by login name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login_name")
+    public String loginName;
+    public ExtensionCtrlGetAccountExtensionsRequest withLoginName(String loginName) {
+        this.loginName = loginName;
+        return this;
+    }
+    
+    /**
+     * Current page number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public ExtensionCtrlGetAccountExtensionsRequest withPage(Double page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Number of records per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Double pageSize;
+    public ExtensionCtrlGetAccountExtensionsRequest withPageSize(Double pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * Filter by phone number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=phone_number")
+    public String phoneNumber;
+    public ExtensionCtrlGetAccountExtensionsRequest withPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
         return this;
     }
     

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DetailAdvisoryRequest {
-    
-    public DetailAdvisoryPathParams pathParams;
-    public DetailAdvisoryRequest withPathParams(DetailAdvisoryPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DetailAdvisorySecurity security;
-    public DetailAdvisoryRequest withSecurity(DetailAdvisorySecurity security) {
-        this.security = security;
+    /**
+     * Advisory ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=advisory_id")
+    public String advisoryId;
+    public DetailAdvisoryRequest withAdvisoryId(String advisoryId) {
+        this.advisoryId = advisoryId;
         return this;
     }
     

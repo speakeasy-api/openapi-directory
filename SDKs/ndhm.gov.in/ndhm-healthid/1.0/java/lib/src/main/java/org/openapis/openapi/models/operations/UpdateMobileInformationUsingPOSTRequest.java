@@ -7,10 +7,10 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateMobileInformationUsingPOSTRequest {
-    
-    public UpdateMobileInformationUsingPOSTHeaders headers;
-    public UpdateMobileInformationUsingPOSTRequest withHeaders(UpdateMobileInformationUsingPOSTHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public UpdateMobileInformationUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
@@ -18,16 +18,9 @@ public class UpdateMobileInformationUsingPOSTRequest {
      * request
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.HidUpdateMobiletRequest request;
-    public UpdateMobileInformationUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.HidUpdateMobiletRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public UpdateMobileInformationUsingPOSTSecurity security;
-    public UpdateMobileInformationUsingPOSTRequest withSecurity(UpdateMobileInformationUsingPOSTSecurity security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.HidUpdateMobiletRequest hidUpdateMobiletRequest;
+    public UpdateMobileInformationUsingPOSTRequest withHidUpdateMobiletRequest(org.openapis.openapi.models.shared.HidUpdateMobiletRequest hidUpdateMobiletRequest) {
+        this.hidUpdateMobiletRequest = hidUpdateMobiletRequest;
         return this;
     }
     

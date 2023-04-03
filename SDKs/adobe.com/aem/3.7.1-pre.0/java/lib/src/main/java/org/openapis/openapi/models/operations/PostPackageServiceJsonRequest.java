@@ -7,24 +7,66 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostPackageServiceJsonRequest {
-    
-    public PostPackageServiceJsonPathParams pathParams;
-    public PostPackageServiceJsonRequest withPathParams(PostPackageServiceJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostPackageServiceJsonQueryParams queryParams;
-    public PostPackageServiceJsonRequest withQueryParams(PostPackageServiceJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PostPackageServiceJsonRequestBody request;
-    public PostPackageServiceJsonRequest withRequest(PostPackageServiceJsonRequestBody request) {
-        this.request = request;
+    public PostPackageServiceJsonRequestBody requestBody;
+    public PostPackageServiceJsonRequest withRequestBody(PostPackageServiceJsonRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_charset_")
+    public String charset;
+    public PostPackageServiceJsonRequest withCharset(String charset) {
+        this.charset = charset;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cmd")
+    public String cmd;
+    public PostPackageServiceJsonRequest withCmd(String cmd) {
+        this.cmd = cmd;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=force")
+    public Boolean force;
+    public PostPackageServiceJsonRequest withForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupName")
+    public String groupName;
+    public PostPackageServiceJsonRequest withGroupName(String groupName) {
+        this.groupName = groupName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=packageName")
+    public String packageName;
+    public PostPackageServiceJsonRequest withPackageName(String packageName) {
+        this.packageName = packageName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=packageVersion")
+    public String packageVersion;
+    public PostPackageServiceJsonRequest withPackageVersion(String packageVersion) {
+        this.packageVersion = packageVersion;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
+    public String path;
+    public PostPackageServiceJsonRequest withPath(String path) {
+        this.path = path;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=recursive")
+    public Boolean recursive;
+    public PostPackageServiceJsonRequest withRecursive(Boolean recursive) {
+        this.recursive = recursive;
         return this;
     }
     

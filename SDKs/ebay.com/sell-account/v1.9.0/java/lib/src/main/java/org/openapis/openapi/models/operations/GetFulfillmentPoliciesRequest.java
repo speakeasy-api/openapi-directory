@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFulfillmentPoliciesRequest {
-    
-    public GetFulfillmentPoliciesQueryParams queryParams;
-    public GetFulfillmentPoliciesRequest withQueryParams(GetFulfillmentPoliciesQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetFulfillmentPoliciesSecurity security;
-    public GetFulfillmentPoliciesRequest withSecurity(GetFulfillmentPoliciesSecurity security) {
-        this.security = security;
+    /**
+     * This query parameter specifies the eBay marketplace of the policies you want to retrieve. For implementation help, refer to eBay API documentation at https://developer.ebay.com/api-docs/sell/account/types/ba:MarketplaceIdEnum
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=marketplace_id")
+    public String marketplaceId;
+    public GetFulfillmentPoliciesRequest withMarketplaceId(String marketplaceId) {
+        this.marketplaceId = marketplaceId;
         return this;
     }
     

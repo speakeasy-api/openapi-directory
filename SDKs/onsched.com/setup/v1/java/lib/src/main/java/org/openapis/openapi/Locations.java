@@ -40,7 +40,7 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.DeleteSetupV1LocationsServicesIdResponse deleteSetupV1LocationsServicesId(org.openapis.openapi.models.operations.DeleteSetupV1LocationsServicesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1LocationsServicesIdPathParams.class, baseUrl, "/setup/v1/locations/services/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1LocationsServicesIdRequest.class, baseUrl, "/setup/v1/locations/services/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -80,7 +80,7 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdResponse deleteSetupV1LocationsId(org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdPathParams.class, baseUrl, "/setup/v1/locations/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdRequest.class, baseUrl, "/setup/v1/locations/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -120,13 +120,13 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdDeleteallimagesResponse deleteSetupV1LocationsIdDeleteallimages(org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdDeleteallimagesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdDeleteallimagesPathParams.class, baseUrl, "/setup/v1/locations/{id}/deleteallimages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdDeleteallimagesRequest.class, baseUrl, "/setup/v1/locations/{id}/deleteallimages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdDeleteallimagesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdDeleteallimagesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -166,7 +166,7 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdDeleteimageResponse deleteSetupV1LocationsIdDeleteimage(org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdDeleteimageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdDeleteimagePathParams.class, baseUrl, "/setup/v1/locations/{id}/deleteimage", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdDeleteimageRequest.class, baseUrl, "/setup/v1/locations/{id}/deleteimage", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -206,7 +206,7 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdEmailTemplatesMasterResponse deleteSetupV1LocationsIdEmailTemplatesMaster(org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdEmailTemplatesMasterRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdEmailTemplatesMasterPathParams.class, baseUrl, "/setup/v1/locations/{id}/email/templates/master", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdEmailTemplatesMasterRequest.class, baseUrl, "/setup/v1/locations/{id}/email/templates/master", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -247,7 +247,7 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdEmailTemplatesTemplateNameResponse deleteSetupV1LocationsIdEmailTemplatesTemplateName(org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdEmailTemplatesTemplateNameRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdEmailTemplatesTemplateNamePathParams.class, baseUrl, "/setup/v1/locations/{id}/email/templates/{templateName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdEmailTemplatesTemplateNameRequest.class, baseUrl, "/setup/v1/locations/{id}/email/templates/{templateName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -287,7 +287,7 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdGoogleServiceAccountResponse deleteSetupV1LocationsIdGoogleServiceAccount(org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdGoogleServiceAccountRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdGoogleServiceAccountPathParams.class, baseUrl, "/setup/v1/locations/{id}/google/service/account", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdGoogleServiceAccountRequest.class, baseUrl, "/setup/v1/locations/{id}/google/service/account", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -321,7 +321,7 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdServicesResponse deleteSetupV1LocationsIdServices(org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdServicesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdServicesPathParams.class, baseUrl, "/setup/v1/locations/{id}/services", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSetupV1LocationsIdServicesRequest.class, baseUrl, "/setup/v1/locations/{id}/services", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -369,7 +369,7 @@ public class Locations {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1LocationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1LocationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -409,7 +409,7 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.GetSetupV1LocationsServicesIdResponse getSetupV1LocationsServicesId(org.openapis.openapi.models.operations.GetSetupV1LocationsServicesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1LocationsServicesIdPathParams.class, baseUrl, "/setup/v1/locations/services/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1LocationsServicesIdRequest.class, baseUrl, "/setup/v1/locations/services/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -453,7 +453,7 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.GetSetupV1LocationsIdResponse getSetupV1LocationsId(org.openapis.openapi.models.operations.GetSetupV1LocationsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1LocationsIdPathParams.class, baseUrl, "/setup/v1/locations/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1LocationsIdRequest.class, baseUrl, "/setup/v1/locations/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -493,7 +493,7 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.GetSetupV1LocationsIdAppointmentremindersResponse getSetupV1LocationsIdAppointmentreminders(org.openapis.openapi.models.operations.GetSetupV1LocationsIdAppointmentremindersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1LocationsIdAppointmentremindersPathParams.class, baseUrl, "/setup/v1/locations/{id}/appointmentreminders", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1LocationsIdAppointmentremindersRequest.class, baseUrl, "/setup/v1/locations/{id}/appointmentreminders", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -533,7 +533,7 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.GetSetupV1LocationsIdEmailTemplatesResponse getSetupV1LocationsIdEmailTemplates(org.openapis.openapi.models.operations.GetSetupV1LocationsIdEmailTemplatesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1LocationsIdEmailTemplatesPathParams.class, baseUrl, "/setup/v1/locations/{id}/email/templates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1LocationsIdEmailTemplatesRequest.class, baseUrl, "/setup/v1/locations/{id}/email/templates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -573,7 +573,7 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.GetSetupV1LocationsIdEmailTemplatesMasterResponse getSetupV1LocationsIdEmailTemplatesMaster(org.openapis.openapi.models.operations.GetSetupV1LocationsIdEmailTemplatesMasterRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1LocationsIdEmailTemplatesMasterPathParams.class, baseUrl, "/setup/v1/locations/{id}/email/templates/master", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1LocationsIdEmailTemplatesMasterRequest.class, baseUrl, "/setup/v1/locations/{id}/email/templates/master", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -613,7 +613,7 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.GetSetupV1LocationsIdEmailTemplatesTemplateNameResponse getSetupV1LocationsIdEmailTemplatesTemplateName(org.openapis.openapi.models.operations.GetSetupV1LocationsIdEmailTemplatesTemplateNameRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1LocationsIdEmailTemplatesTemplateNamePathParams.class, baseUrl, "/setup/v1/locations/{id}/email/templates/{templateName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1LocationsIdEmailTemplatesTemplateNameRequest.class, baseUrl, "/setup/v1/locations/{id}/email/templates/{templateName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -653,13 +653,13 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.GetSetupV1LocationsIdServicesResponse getSetupV1LocationsIdServices(org.openapis.openapi.models.operations.GetSetupV1LocationsIdServicesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1LocationsIdServicesPathParams.class, baseUrl, "/setup/v1/locations/{id}/services", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1LocationsIdServicesRequest.class, baseUrl, "/setup/v1/locations/{id}/services", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1LocationsIdServicesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1LocationsIdServicesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -712,7 +712,7 @@ public class Locations {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSetupV1LocationsResponse postSetupV1Locations(org.openapis.openapi.models.operations.PostSetupV1LocationsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSetupV1LocationsResponse postSetupV1Locations(org.openapis.openapi.models.shared.LocationInputModel request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/setup/v1/locations");
         
@@ -767,7 +767,7 @@ public class Locations {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSetupV1LocationsBulkResponse postSetupV1LocationsBulk(org.openapis.openapi.models.operations.PostSetupV1LocationsBulkRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSetupV1LocationsBulkResponse postSetupV1LocationsBulk(org.openapis.openapi.models.shared.LocationsInputModel request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/setup/v1/locations/bulk");
         
@@ -812,12 +812,12 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.PostSetupV1LocationsIdEmailTemplatesResponse postSetupV1LocationsIdEmailTemplates(org.openapis.openapi.models.operations.PostSetupV1LocationsIdEmailTemplatesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSetupV1LocationsIdEmailTemplatesPathParams.class, baseUrl, "/setup/v1/locations/{id}/email/templates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSetupV1LocationsIdEmailTemplatesRequest.class, baseUrl, "/setup/v1/locations/{id}/email/templates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "emailTemplateInputModel", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -855,12 +855,12 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.PostSetupV1LocationsIdEmailTemplatesMasterResponse postSetupV1LocationsIdEmailTemplatesMaster(org.openapis.openapi.models.operations.PostSetupV1LocationsIdEmailTemplatesMasterRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSetupV1LocationsIdEmailTemplatesMasterPathParams.class, baseUrl, "/setup/v1/locations/{id}/email/templates/master", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSetupV1LocationsIdEmailTemplatesMasterRequest.class, baseUrl, "/setup/v1/locations/{id}/email/templates/master", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "masterTemplateSettingsInputModel", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -897,12 +897,12 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.PostSetupV1LocationsIdGoogleServiceAccountResponse postSetupV1LocationsIdGoogleServiceAccount(org.openapis.openapi.models.operations.PostSetupV1LocationsIdGoogleServiceAccountRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSetupV1LocationsIdGoogleServiceAccountPathParams.class, baseUrl, "/setup/v1/locations/{id}/google/service/account", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSetupV1LocationsIdGoogleServiceAccountRequest.class, baseUrl, "/setup/v1/locations/{id}/google/service/account", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleServiceAccountCreds", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -942,12 +942,12 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.PostSetupV1LocationsIdServicesResponse postSetupV1LocationsIdServices(org.openapis.openapi.models.operations.PostSetupV1LocationsIdServicesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSetupV1LocationsIdServicesPathParams.class, baseUrl, "/setup/v1/locations/{id}/services", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSetupV1LocationsIdServicesRequest.class, baseUrl, "/setup/v1/locations/{id}/services", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -984,12 +984,12 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.PostSetupV1LocationsIdUploadimageResponse postSetupV1LocationsIdUploadimage(org.openapis.openapi.models.operations.PostSetupV1LocationsIdUploadimageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSetupV1LocationsIdUploadimagePathParams.class, baseUrl, "/setup/v1/locations/{id}/uploadimage", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSetupV1LocationsIdUploadimageRequest.class, baseUrl, "/setup/v1/locations/{id}/uploadimage", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "resourceImageInputModel", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1028,15 +1028,15 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.PutSetupV1LocationsIdResponse putSetupV1LocationsId(org.openapis.openapi.models.operations.PutSetupV1LocationsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1LocationsIdPathParams.class, baseUrl, "/setup/v1/locations/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1LocationsIdRequest.class, baseUrl, "/setup/v1/locations/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "locationUpdateModel", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutSetupV1LocationsIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutSetupV1LocationsIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1080,12 +1080,12 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.PutSetupV1LocationsIdAppointmentremindersResponse putSetupV1LocationsIdAppointmentreminders(org.openapis.openapi.models.operations.PutSetupV1LocationsIdAppointmentremindersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1LocationsIdAppointmentremindersPathParams.class, baseUrl, "/setup/v1/locations/{id}/appointmentreminders", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1LocationsIdAppointmentremindersRequest.class, baseUrl, "/setup/v1/locations/{id}/appointmentreminders", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "appointmentRemindersInputModel", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1123,7 +1123,7 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.PutSetupV1LocationsIdHolidaysHolidayIdClosedResponse putSetupV1LocationsIdHolidaysHolidayIdClosed(org.openapis.openapi.models.operations.PutSetupV1LocationsIdHolidaysHolidayIdClosedRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1LocationsIdHolidaysHolidayIdClosedPathParams.class, baseUrl, "/setup/v1/locations/{id}/holidays/{holidayId}/{closed}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1LocationsIdHolidaysHolidayIdClosedRequest.class, baseUrl, "/setup/v1/locations/{id}/holidays/{holidayId}/{closed}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -1163,7 +1163,7 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.PutSetupV1LocationsIdRecoverResponse putSetupV1LocationsIdRecover(org.openapis.openapi.models.operations.PutSetupV1LocationsIdRecoverRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1LocationsIdRecoverPathParams.class, baseUrl, "/setup/v1/locations/{id}/recover", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1LocationsIdRecoverRequest.class, baseUrl, "/setup/v1/locations/{id}/recover", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -1205,7 +1205,7 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.PutSetupV1LocationsIdSettingsScopeSettingsScopeResponse putSetupV1LocationsIdSettingsScopeSettingsScope(org.openapis.openapi.models.operations.PutSetupV1LocationsIdSettingsScopeSettingsScopeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1LocationsIdSettingsScopeSettingsScopePathParams.class, baseUrl, "/setup/v1/locations/{id}/settings/scope/{settingsScope}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1LocationsIdSettingsScopeSettingsScopeRequest.class, baseUrl, "/setup/v1/locations/{id}/settings/scope/{settingsScope}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

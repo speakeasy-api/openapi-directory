@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MigrationsGetStatusForOrgRequest {
-    
-    public MigrationsGetStatusForOrgPathParams pathParams;
-    public MigrationsGetStatusForOrgRequest withPathParams(MigrationsGetStatusForOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Exclude attributes from the API response to improve performance
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude")
+    public MigrationsGetStatusForOrgExcludeEnum[] exclude;
+    public MigrationsGetStatusForOrgRequest withExclude(MigrationsGetStatusForOrgExcludeEnum[] exclude) {
+        this.exclude = exclude;
         return this;
     }
     
+    /**
+     * The unique identifier of the migration.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=migration_id")
+    public Long migrationId;
+    public MigrationsGetStatusForOrgRequest withMigrationId(Long migrationId) {
+        this.migrationId = migrationId;
+        return this;
+    }
     
-    public MigrationsGetStatusForOrgQueryParams queryParams;
-    public MigrationsGetStatusForOrgRequest withQueryParams(MigrationsGetStatusForOrgQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public MigrationsGetStatusForOrgRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

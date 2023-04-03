@@ -7,9 +7,9 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.operations.VisionFilesAnnotateSecurityOption1;
 import org.openapis.openapi.models.operations.VisionFilesAnnotateSecurityOption2;
 import org.openapis.openapi.models.operations.VisionFilesAnnotateSecurity;
-import org.openapis.openapi.models.operations.VisionFilesAnnotateQueryParams;
 import org.openapis.openapi.models.operations.VisionFilesAnnotateRequest;
 import org.openapis.openapi.models.operations.VisionFilesAnnotateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.GoogleCloudVisionV1p2beta1BatchAnnotateFilesRequest;
 import org.openapis.openapi.models.shared.GoogleCloudVisionV1p2beta1AnnotateFileRequest;
 import org.openapis.openapi.models.shared.GoogleCloudVisionV1p2beta1InputConfig;
@@ -26,10 +26,7 @@ import org.openapis.openapi.models.shared.LatLng;
 import org.openapis.openapi.models.shared.GoogleCloudVisionV1p2beta1CropHintsParams;
 import org.openapis.openapi.models.shared.GoogleCloudVisionV1p2beta1FeatureTypeEnum;
 import org.openapis.openapi.models.shared.GoogleCloudVisionV1p2beta1Feature;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -38,53 +35,44 @@ public class Application {
                 .build();
 
             VisionFilesAnnotateRequest req = new VisionFilesAnnotateRequest() {{
-                security = new VisionFilesAnnotateSecurity() {{
-                    option1 = new VisionFilesAnnotateSecurityOption1() {{
-                        oauth2 = new SchemeOauth2() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                        oauth2c = new SchemeOauth2c() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                    }};
-                }};
-                queryParams = new VisionFilesAnnotateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "provident";
-                    alt = "proto";
-                    callback = "quibusdam";
-                    fields = "unde";
-                    key = "nulla";
-                    oauthToken = "corrupti";
-                    prettyPrint = false;
-                    quotaUser = "illum";
-                    uploadType = "vel";
-                    uploadProtocol = "error";
-                }};
-                request = new GoogleCloudVisionV1p2beta1BatchAnnotateFilesRequest() {{
-                    parent = "deserunt";
+                dollarXgafv = "2";
+                googleCloudVisionV1p2beta1BatchAnnotateFilesRequest = new GoogleCloudVisionV1p2beta1BatchAnnotateFilesRequest() {{
+                    parent = "provident";
                     requests = new org.openapis.openapi.models.shared.GoogleCloudVisionV1p2beta1AnnotateFileRequest[]{{
                         add(new GoogleCloudVisionV1p2beta1AnnotateFileRequest() {{
                             features = new org.openapis.openapi.models.shared.GoogleCloudVisionV1p2beta1Feature[]{{
+                                add(new GoogleCloudVisionV1p2beta1Feature() {{
+                                    maxResults = 602763;
+                                    model = "nulla";
+                                    type = "SAFE_SEARCH_DETECTION";
+                                }}),
+                                add(new GoogleCloudVisionV1p2beta1Feature() {{
+                                    maxResults = 847252;
+                                    model = "vel";
+                                    type = "IMAGE_PROPERTIES";
+                                }}),
+                                add(new GoogleCloudVisionV1p2beta1Feature() {{
+                                    maxResults = 645894;
+                                    model = "suscipit";
+                                    type = "TEXT_DETECTION";
+                                }}),
                                 add(new GoogleCloudVisionV1p2beta1Feature() {{
                                     maxResults = 297534;
                                     model = "debitis";
                                     type = "TYPE_UNSPECIFIED";
                                 }}),
-                                add(new GoogleCloudVisionV1p2beta1Feature() {{
-                                    maxResults = 963663;
-                                    model = "tempora";
-                                    type = "LABEL_DETECTION";
-                                }}),
                             }};
                             imageContext = new GoogleCloudVisionV1p2beta1ImageContext() {{
                                 cropHintsParams = new GoogleCloudVisionV1p2beta1CropHintsParams() {{
                                     aspectRatios = new Float[]{{
+                                        add(2726.56),
+                                        add(3834.41),
+                                        add(4776.65),
                                         add(7917.25),
-                                        add(8121.69),
                                     }};
                                 }};
                                 languageHints = new String[]{{
+                                    add("voluptatum"),
                                     add("iusto"),
                                     add("excepturi"),
                                     add("nisi"),
@@ -243,11 +231,128 @@ public class Application {
                                 add(988374),
                             }};
                         }}),
+                        add(new GoogleCloudVisionV1p2beta1AnnotateFileRequest() {{
+                            features = new org.openapis.openapi.models.shared.GoogleCloudVisionV1p2beta1Feature[]{{
+                                add(new GoogleCloudVisionV1p2beta1Feature() {{
+                                    maxResults = 102044;
+                                    model = "mollitia";
+                                    type = "LANDMARK_DETECTION";
+                                }}),
+                                add(new GoogleCloudVisionV1p2beta1Feature() {{
+                                    maxResults = 635059;
+                                    model = "consequuntur";
+                                    type = "OBJECT_LOCALIZATION";
+                                }}),
+                                add(new GoogleCloudVisionV1p2beta1Feature() {{
+                                    maxResults = 653108;
+                                    model = "occaecati";
+                                    type = "LOGO_DETECTION";
+                                }}),
+                                add(new GoogleCloudVisionV1p2beta1Feature() {{
+                                    maxResults = 414369;
+                                    model = "quam";
+                                    type = "DOCUMENT_TEXT_DETECTION";
+                                }}),
+                            }};
+                            imageContext = new GoogleCloudVisionV1p2beta1ImageContext() {{
+                                cropHintsParams = new GoogleCloudVisionV1p2beta1CropHintsParams() {{
+                                    aspectRatios = new Float[]{{
+                                        add(6235.1),
+                                    }};
+                                }};
+                                languageHints = new String[]{{
+                                    add("quis"),
+                                }};
+                                latLongRect = new GoogleCloudVisionV1p2beta1LatLongRect() {{
+                                    maxLatLng = new LatLng() {{
+                                        latitude = 1103.75;
+                                        longitude = 6747.52;
+                                    }};
+                                    minLatLng = new LatLng() {{
+                                        latitude = 6563.3;
+                                        longitude = 3172.02;
+                                    }};
+                                }};
+                                productSearchParams = new GoogleCloudVisionV1p2beta1ProductSearchParams() {{
+                                    boundingPoly = new GoogleCloudVisionV1p2beta1BoundingPoly() {{
+                                        normalizedVertices = new org.openapis.openapi.models.shared.GoogleCloudVisionV1p2beta1NormalizedVertex[]{{
+                                            add(new GoogleCloudVisionV1p2beta1NormalizedVertex() {{
+                                                x = 7783.46;
+                                                y = 1965.82;
+                                            }}),
+                                        }};
+                                        vertices = new org.openapis.openapi.models.shared.GoogleCloudVisionV1p2beta1Vertex[]{{
+                                            add(new GoogleCloudVisionV1p2beta1Vertex() {{
+                                                x = 368725;
+                                                y = 662527;
+                                            }}),
+                                            add(new GoogleCloudVisionV1p2beta1Vertex() {{
+                                                x = 820994;
+                                                y = 13571;
+                                            }}),
+                                            add(new GoogleCloudVisionV1p2beta1Vertex() {{
+                                                x = 97101;
+                                                y = 622846;
+                                            }}),
+                                            add(new GoogleCloudVisionV1p2beta1Vertex() {{
+                                                x = 837945;
+                                                y = 673660;
+                                            }}),
+                                        }};
+                                    }};
+                                    filter = "quasi";
+                                    productCategories = new String[]{{
+                                        add("voluptatibus"),
+                                        add("vero"),
+                                        add("nihil"),
+                                        add("praesentium"),
+                                    }};
+                                    productSet = "voluptatibus";
+                                }};
+                                textDetectionParams = new GoogleCloudVisionV1p2beta1TextDetectionParams() {{
+                                    advancedOcrOptions = new String[]{{
+                                        add("omnis"),
+                                    }};
+                                    enableTextDetectionConfidenceScore = false;
+                                }};
+                                webDetectionParams = new GoogleCloudVisionV1p2beta1WebDetectionParams() {{
+                                    includeGeoResults = false;
+                                }};
+                            }};
+                            inputConfig = new GoogleCloudVisionV1p2beta1InputConfig() {{
+                                content = "voluptate";
+                                gcsSource = new GoogleCloudVisionV1p2beta1GcsSource() {{
+                                    uri = "https://agile-arch-rival.info";
+                                }};
+                                mimeType = "ut";
+                            }};
+                            pages = new Integer[]{{
+                                add(120196),
+                                add(359444),
+                                add(296140),
+                                add(480894),
+                            }};
+                        }}),
                     }};
                 }};
-            }};            
+                accessToken = "dicta";
+                alt = "proto";
+                callback = "enim";
+                fields = "accusamus";
+                key = "commodi";
+                oauthToken = "repudiandae";
+                prettyPrint = false;
+                quotaUser = "quae";
+                uploadType = "ipsum";
+                uploadProtocol = "quidem";
+            }}            
 
-            VisionFilesAnnotateResponse res = sdk.files.visionFilesAnnotate(req);
+            VisionFilesAnnotateResponse res = sdk.files.visionFilesAnnotate(req, new VisionFilesAnnotateSecurity() {{
+                option1 = new VisionFilesAnnotateSecurityOption1() {{
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                }};
+            }});
 
             if (res.googleCloudVisionV1p2beta1BatchAnnotateFilesResponse.isPresent()) {
                 // handle response

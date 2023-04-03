@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsRedeliverWebhookDeliveryRequest {
-    
-    public AppsRedeliverWebhookDeliveryPathParams pathParams;
-    public AppsRedeliverWebhookDeliveryRequest withPathParams(AppsRedeliverWebhookDeliveryPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=delivery_id")
+    public Long deliveryId;
+    public AppsRedeliverWebhookDeliveryRequest withDeliveryId(Long deliveryId) {
+        this.deliveryId = deliveryId;
         return this;
     }
     

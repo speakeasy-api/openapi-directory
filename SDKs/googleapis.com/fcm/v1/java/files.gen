@@ -33,8 +33,6 @@ settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/FcmProjectsMessagesSendSecurityOption1.java
 lib/src/main/java/org/openapis/openapi/models/operations/FcmProjectsMessagesSendSecurityOption2.java
 lib/src/main/java/org/openapis/openapi/models/operations/FcmProjectsMessagesSendSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/FcmProjectsMessagesSendPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/FcmProjectsMessagesSendQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/FcmProjectsMessagesSendRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/FcmProjectsMessagesSendResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Message.java
@@ -52,9 +50,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/AndroidNotification.java
 lib/src/main/java/org/openapis/openapi/models/shared/LightSettings.java
 lib/src/main/java/org/openapis/openapi/models/shared/Color.java
 lib/src/main/java/org/openapis/openapi/models/shared/AndroidFcmOptions.java
-lib/src/main/java/org/openapis/openapi/models/shared/SendMessageRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/SendMessageRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2c.java
 USAGE.md

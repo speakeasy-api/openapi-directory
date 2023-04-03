@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateLocationRuleRequest {
-    
-    public UpdateLocationRulePathParams pathParams;
-    public UpdateLocationRuleRequest withPathParams(UpdateLocationRulePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * A JSON object containing new properties
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.LocationRuleUpdate request;
-    public UpdateLocationRuleRequest withRequest(org.openapis.openapi.models.shared.LocationRuleUpdate request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.LocationRuleUpdate locationRuleUpdate;
+    public UpdateLocationRuleRequest withLocationRuleUpdate(org.openapis.openapi.models.shared.LocationRuleUpdate locationRuleUpdate) {
+        this.locationRuleUpdate = locationRuleUpdate;
+        return this;
+    }
+    
+    /**
+     * Unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UpdateLocationRuleRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

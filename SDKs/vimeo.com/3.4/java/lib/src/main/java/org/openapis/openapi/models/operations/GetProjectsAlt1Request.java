@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProjectsAlt1Request {
-    
-    public GetProjectsAlt1QueryParams queryParams;
-    public GetProjectsAlt1Request withQueryParams(GetProjectsAlt1QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The sort direction of the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public GetProjectsAlt1DirectionEnum direction;
+    public GetProjectsAlt1Request withDirection(GetProjectsAlt1DirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetProjectsAlt1Request withPage(Double page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetProjectsAlt1Security security;
-    public GetProjectsAlt1Request withSecurity(GetProjectsAlt1Security security) {
-        this.security = security;
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetProjectsAlt1Request withPerPage(Double perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The way to sort the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetProjectsAlt1SortEnum sort;
+    public GetProjectsAlt1Request withSort(GetProjectsAlt1SortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

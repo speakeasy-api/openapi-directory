@@ -42,13 +42,13 @@ public class Coterm {
      */
     public org.openapis.openapi.models.operations.GetOrganizationLicensingCotermLicensesResponse getOrganizationLicensingCotermLicenses(org.openapis.openapi.models.operations.GetOrganizationLicensingCotermLicensesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationLicensingCotermLicensesPathParams.class, baseUrl, "/organizations/{organizationId}/licensing/coterm/licenses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationLicensingCotermLicensesRequest.class, baseUrl, "/organizations/{organizationId}/licensing/coterm/licenses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationLicensingCotermLicensesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationLicensingCotermLicensesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -90,12 +90,12 @@ public class Coterm {
      */
     public org.openapis.openapi.models.operations.MoveOrganizationLicensingCotermLicensesResponse moveOrganizationLicensingCotermLicenses(org.openapis.openapi.models.operations.MoveOrganizationLicensingCotermLicensesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MoveOrganizationLicensingCotermLicensesPathParams.class, baseUrl, "/organizations/{organizationId}/licensing/coterm/licenses/move", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MoveOrganizationLicensingCotermLicensesRequest.class, baseUrl, "/organizations/{organizationId}/licensing/coterm/licenses/move", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

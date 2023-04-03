@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.BalanceLookupQueryParams;
 import org.openapis.openapi.models.operations.BalanceLookupRequest;
 import org.openapis.openapi.models.operations.BalanceLookupResponse;
 
@@ -28,10 +27,8 @@ public class Application {
                 .build();
 
             BalanceLookupRequest req = new BalanceLookupRequest() {{
-                queryParams = new BalanceLookupQueryParams() {{
-                    apiKey = "corrupti";
-                }};
-            }};            
+                apiKey = "corrupti";
+            }}            
 
             BalanceLookupResponse res = sdk.balance.balanceLookup(req);
 
@@ -45,7 +42,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### balance

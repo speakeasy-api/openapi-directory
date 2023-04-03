@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETImportClientVpnClientCertificateRevocationListRequest {
-    
-    public GETImportClientVpnClientCertificateRevocationListQueryParams queryParams;
-    public GETImportClientVpnClientCertificateRevocationListRequest withQueryParams(GETImportClientVpnClientCertificateRevocationListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETImportClientVpnClientCertificateRevocationListActionEnum action;
+    public GETImportClientVpnClientCertificateRevocationListRequest withAction(GETImportClientVpnClientCertificateRevocationListActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The client certificate revocation list file. For more information, see &lt;a href="https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/cvpn-working-certificates.html#cvpn-working-certificates-generate"&gt;Generate a Client Certificate Revocation List&lt;/a&gt; in the &lt;i&gt;Client VPN Administrator Guide&lt;/i&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CertificateRevocationList")
+    public String certificateRevocationList;
+    public GETImportClientVpnClientCertificateRevocationListRequest withCertificateRevocationList(String certificateRevocationList) {
+        this.certificateRevocationList = certificateRevocationList;
+        return this;
+    }
     
-    public GETImportClientVpnClientCertificateRevocationListHeaders headers;
-    public GETImportClientVpnClientCertificateRevocationListRequest withHeaders(GETImportClientVpnClientCertificateRevocationListHeaders headers) {
-        this.headers = headers;
+    /**
+     * The ID of the Client VPN endpoint to which the client certificate revocation list applies.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClientVpnEndpointId")
+    public String clientVpnEndpointId;
+    public GETImportClientVpnClientCertificateRevocationListRequest withClientVpnEndpointId(String clientVpnEndpointId) {
+        this.clientVpnEndpointId = clientVpnEndpointId;
+        return this;
+    }
+    
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETImportClientVpnClientCertificateRevocationListRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETImportClientVpnClientCertificateRevocationListVersionEnum version;
+    public GETImportClientVpnClientCertificateRevocationListRequest withVersion(GETImportClientVpnClientCertificateRevocationListVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETImportClientVpnClientCertificateRevocationListRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETImportClientVpnClientCertificateRevocationListRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETImportClientVpnClientCertificateRevocationListRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETImportClientVpnClientCertificateRevocationListRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETImportClientVpnClientCertificateRevocationListRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETImportClientVpnClientCertificateRevocationListRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETImportClientVpnClientCertificateRevocationListRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

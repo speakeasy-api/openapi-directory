@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteApiV2CddriveFilesFileIdRequest {
-    
-    public DeleteApiV2CddriveFilesFileIdPathParams pathParams;
-    public DeleteApiV2CddriveFilesFileIdRequest withPathParams(DeleteApiV2CddriveFilesFileIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteApiV2CddriveFilesFileIdSecurity security;
-    public DeleteApiV2CddriveFilesFileIdRequest withSecurity(DeleteApiV2CddriveFilesFileIdSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the file to access.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=file-id")
+    public Long fileId;
+    public DeleteApiV2CddriveFilesFileIdRequest withFileId(Long fileId) {
+        this.fileId = fileId;
         return this;
     }
     

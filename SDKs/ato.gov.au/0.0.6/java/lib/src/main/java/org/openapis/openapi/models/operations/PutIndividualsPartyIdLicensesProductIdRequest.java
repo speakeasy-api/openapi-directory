@@ -7,17 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutIndividualsPartyIdLicensesProductIdRequest {
-    
-    public PutIndividualsPartyIdLicensesProductIdPathParams pathParams;
-    public PutIndividualsPartyIdLicensesProductIdRequest withPathParams(PutIndividualsPartyIdLicensesProductIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutIndividualsPartyIdLicensesProductIdHeaders headers;
-    public PutIndividualsPartyIdLicensesProductIdRequest withHeaders(PutIndividualsPartyIdLicensesProductIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * The API key.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public PutIndividualsPartyIdLicensesProductIdRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
@@ -25,9 +21,29 @@ public class PutIndividualsPartyIdLicensesProductIdRequest {
      * License resource
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.LicenseInput request;
-    public PutIndividualsPartyIdLicensesProductIdRequest withRequest(org.openapis.openapi.models.shared.LicenseInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.LicenseInput licenseInput;
+    public PutIndividualsPartyIdLicensesProductIdRequest withLicenseInput(org.openapis.openapi.models.shared.LicenseInput licenseInput) {
+        this.licenseInput = licenseInput;
+        return this;
+    }
+    
+    /**
+     * The party identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=partyId")
+    public String partyId;
+    public PutIndividualsPartyIdLicensesProductIdRequest withPartyId(String partyId) {
+        this.partyId = partyId;
+        return this;
+    }
+    
+    /**
+     * The product identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
+    public String productId;
+    public PutIndividualsPartyIdLicensesProductIdRequest withProductId(String productId) {
+        this.productId = productId;
         return this;
     }
     

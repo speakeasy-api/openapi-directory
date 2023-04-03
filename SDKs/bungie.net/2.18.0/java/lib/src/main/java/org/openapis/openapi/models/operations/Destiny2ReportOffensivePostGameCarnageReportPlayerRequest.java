@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2ReportOffensivePostGameCarnageReportPlayerRequest {
-    
-    public Destiny2ReportOffensivePostGameCarnageReportPlayerPathParams pathParams;
-    public Destiny2ReportOffensivePostGameCarnageReportPlayerRequest withPathParams(Destiny2ReportOffensivePostGameCarnageReportPlayerPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public Destiny2ReportOffensivePostGameCarnageReportPlayerSecurity security;
-    public Destiny2ReportOffensivePostGameCarnageReportPlayerRequest withSecurity(Destiny2ReportOffensivePostGameCarnageReportPlayerSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the activity where you ran into the brigand that you're reporting.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=activityId")
+    public Long activityId;
+    public Destiny2ReportOffensivePostGameCarnageReportPlayerRequest withActivityId(Long activityId) {
+        this.activityId = activityId;
         return this;
     }
     

@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SuggestBidsRequest {
-    
-    public SuggestBidsPathParams pathParams;
-    public SuggestBidsRequest withPathParams(SuggestBidsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The data requested to retrieve the suggested bids.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TargetedBidRequest request;
-    public SuggestBidsRequest withRequest(org.openapis.openapi.models.shared.TargetedBidRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TargetedBidRequest targetedBidRequest;
+    public SuggestBidsRequest withTargetedBidRequest(org.openapis.openapi.models.shared.TargetedBidRequest targetedBidRequest) {
+        this.targetedBidRequest = targetedBidRequest;
         return this;
     }
     
+    /**
+     * The ID of the ad group containing the keywords for which the bid suggestions will be provided.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ad_group_id")
+    public String adGroupId;
+    public SuggestBidsRequest withAdGroupId(String adGroupId) {
+        this.adGroupId = adGroupId;
+        return this;
+    }
     
-    public SuggestBidsSecurity security;
-    public SuggestBidsRequest withSecurity(SuggestBidsSecurity security) {
-        this.security = security;
+    /**
+     * A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created.&lt;br /&gt;&lt;br /&gt;&lt;span class="tablenote"&gt;&lt;b&gt;Note:&lt;/b&gt; You can retrieve the campaign IDs for a specified seller using the &lt;a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns"&gt;getCampaigns&lt;/a&gt; method.&lt;/span&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=campaign_id")
+    public String campaignId;
+    public SuggestBidsRequest withCampaignId(String campaignId) {
+        this.campaignId = campaignId;
         return this;
     }
     

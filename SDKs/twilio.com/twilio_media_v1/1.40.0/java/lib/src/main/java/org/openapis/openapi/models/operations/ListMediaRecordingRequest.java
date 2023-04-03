@@ -4,27 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListMediaRecordingRequest {
-    
-    public ListMediaRecordingQueryParams queryParams;
-    public ListMediaRecordingRequest withQueryParams(ListMediaRecordingQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The sort order of the list by `date_created`. Can be: `asc` (ascending) or `desc` (descending) with `desc` as the default.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Order")
+    public org.openapis.openapi.models.shared.MediaRecordingEnumOrderEnum order;
+    public ListMediaRecordingRequest withOrder(org.openapis.openapi.models.shared.MediaRecordingEnumOrderEnum order) {
+        this.order = order;
         return this;
     }
     
-    
-    public ListMediaRecordingSecurity security;
-    public ListMediaRecordingRequest withSecurity(ListMediaRecordingSecurity security) {
-        this.security = security;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListMediaRecordingRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListMediaRecordingRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public String serverURL;
-    public ListMediaRecordingRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListMediaRecordingRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * SID of a MediaProcessor to filter by.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ProcessorSid")
+    public String processorSid;
+    public ListMediaRecordingRequest withProcessorSid(String processorSid) {
+        this.processorSid = processorSid;
+        return this;
+    }
+    
+    /**
+     * SID of a MediaRecording source to filter by.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SourceSid")
+    public String sourceSid;
+    public ListMediaRecordingRequest withSourceSid(String sourceSid) {
+        this.sourceSid = sourceSid;
+        return this;
+    }
+    
+    /**
+     * Status to filter by, with possible values `processing`, `completed`, `deleted`, or `failed`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Status")
+    public org.openapis.openapi.models.shared.MediaRecordingEnumStatusEnum status;
+    public ListMediaRecordingRequest withStatus(org.openapis.openapi.models.shared.MediaRecordingEnumStatusEnum status) {
+        this.status = status;
         return this;
     }
     

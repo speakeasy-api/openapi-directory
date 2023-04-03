@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppDIdPUTRequest {
-    
-    public AppDIdPUTPathParams pathParams;
-    public AppDIdPUTRequest withPathParams(AppDIdPUTPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/zip")
+    public byte[] requestBody;
+    public AppDIdPUTRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/zip")
-    public byte[] request;
-    public AppDIdPUTRequest withRequest(byte[] request) {
-        this.request = request;
+    /**
+     * Identifier of an application descriptor
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appDId")
+    public String appDId;
+    public AppDIdPUTRequest withAppDId(String appDId) {
+        this.appDId = appDId;
         return this;
     }
     

@@ -7,31 +7,200 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StorageObjectsInsertRequest {
-    
-    public StorageObjectsInsertPathParams pathParams;
-    public StorageObjectsInsertRequest withPathParams(StorageObjectsInsertPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public StorageObjectsInsertQueryParams queryParams;
-    public StorageObjectsInsertRequest withQueryParams(StorageObjectsInsertQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/octet-stream")
-    public byte[] request;
-    public StorageObjectsInsertRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public StorageObjectsInsertRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public StorageObjectsInsertRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public StorageObjectsInsertSecurity security;
-    public StorageObjectsInsertRequest withSecurity(StorageObjectsInsertSecurity security) {
-        this.security = security;
+    /**
+     * Name of the bucket in which to store the new object. Overrides the provided object metadata's bucket value, if any.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bucket")
+    public String bucket;
+    public StorageObjectsInsertRequest withBucket(String bucket) {
+        this.bucket = bucket;
+        return this;
+    }
+    
+    /**
+     * If set, sets the contentEncoding property of the final object to this value. Setting this parameter is equivalent to setting the contentEncoding metadata property. This can be useful when uploading an object with uploadType=media to indicate the encoding of the content being uploaded.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contentEncoding")
+    public String contentEncoding;
+    public StorageObjectsInsertRequest withContentEncoding(String contentEncoding) {
+        this.contentEncoding = contentEncoding;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public StorageObjectsInsertRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Makes the operation conditional on whether the object's current generation matches the given value. Setting to 0 makes the operation succeed only if there are no live versions of the object.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifGenerationMatch")
+    public String ifGenerationMatch;
+    public StorageObjectsInsertRequest withIfGenerationMatch(String ifGenerationMatch) {
+        this.ifGenerationMatch = ifGenerationMatch;
+        return this;
+    }
+    
+    /**
+     * Makes the operation conditional on whether the object's current generation does not match the given value. If no live object exists, the precondition fails. Setting to 0 makes the operation succeed only if there is a live version of the object.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifGenerationNotMatch")
+    public String ifGenerationNotMatch;
+    public StorageObjectsInsertRequest withIfGenerationNotMatch(String ifGenerationNotMatch) {
+        this.ifGenerationNotMatch = ifGenerationNotMatch;
+        return this;
+    }
+    
+    /**
+     * Makes the operation conditional on whether the object's current metageneration matches the given value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifMetagenerationMatch")
+    public String ifMetagenerationMatch;
+    public StorageObjectsInsertRequest withIfMetagenerationMatch(String ifMetagenerationMatch) {
+        this.ifMetagenerationMatch = ifMetagenerationMatch;
+        return this;
+    }
+    
+    /**
+     * Makes the operation conditional on whether the object's current metageneration does not match the given value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifMetagenerationNotMatch")
+    public String ifMetagenerationNotMatch;
+    public StorageObjectsInsertRequest withIfMetagenerationNotMatch(String ifMetagenerationNotMatch) {
+        this.ifMetagenerationNotMatch = ifMetagenerationNotMatch;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public StorageObjectsInsertRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Resource name of the Cloud KMS key, of the form projects/my-project/locations/global/keyRings/my-kr/cryptoKeys/my-key, that will be used to encrypt the object. Overrides the object metadata's kms_key_name value, if any.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=kmsKeyName")
+    public String kmsKeyName;
+    public StorageObjectsInsertRequest withKmsKeyName(String kmsKeyName) {
+        this.kmsKeyName = kmsKeyName;
+        return this;
+    }
+    
+    /**
+     * Name of the object. Required when the object metadata is not otherwise provided. Overrides the object metadata's name value, if any. For information about how to URL encode object names to be path safe, see Encoding URI Path Parts.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public StorageObjectsInsertRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public StorageObjectsInsertRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Apply a predefined set of access controls to this object.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=predefinedAcl")
+    public StorageObjectsInsertPredefinedACLEnum predefinedAcl;
+    public StorageObjectsInsertRequest withPredefinedAcl(StorageObjectsInsertPredefinedACLEnum predefinedAcl) {
+        this.predefinedAcl = predefinedAcl;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public StorageObjectsInsertRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Set of properties to return. Defaults to noAcl, unless the object resource specifies the acl property, when it defaults to full.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=projection")
+    public StorageObjectsInsertProjectionEnum projection;
+    public StorageObjectsInsertRequest withProjection(StorageObjectsInsertProjectionEnum projection) {
+        this.projection = projection;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public StorageObjectsInsertRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "media", "multipart", "resumable").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public StorageObjectsInsertRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public StorageObjectsInsertRequest withUserIp(String userIp) {
+        this.userIp = userIp;
+        return this;
+    }
+    
+    /**
+     * The project to be billed for this request. Required for Requester Pays buckets.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userProject")
+    public String userProject;
+    public StorageObjectsInsertRequest withUserProject(String userProject) {
+        this.userProject = userProject;
         return this;
     }
     

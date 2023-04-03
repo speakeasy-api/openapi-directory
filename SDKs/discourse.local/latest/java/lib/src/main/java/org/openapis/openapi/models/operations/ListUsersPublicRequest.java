@@ -4,13 +4,34 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListUsersPublicRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=asc")
+    public ListUsersPublicAscEnum asc;
+    public ListUsersPublicRequest withAsc(ListUsersPublicAscEnum asc) {
+        this.asc = asc;
+        return this;
+    }
     
-    public ListUsersPublicQueryParams queryParams;
-    public ListUsersPublicRequest withQueryParams(ListUsersPublicQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public ListUsersPublicOrderEnum order;
+    public ListUsersPublicRequest withOrder(ListUsersPublicOrderEnum order) {
+        this.order = order;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ListUsersPublicRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=period")
+    public ListUsersPublicPeriodEnum period;
+    public ListUsersPublicRequest withPeriod(ListUsersPublicPeriodEnum period) {
+        this.period = period;
         return this;
     }
     

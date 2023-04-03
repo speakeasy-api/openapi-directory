@@ -40,13 +40,13 @@ public class Pricing {
      */
     public org.openapis.openapi.models.operations.RetrievePrefixPricingResponse retrievePrefixPricing(org.openapis.openapi.models.operations.RetrievePrefixPricingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrievePrefixPricingPathParams.class, baseUrl, "/get-prefix-pricing/outbound/{type}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrievePrefixPricingRequest.class, baseUrl, "/get-prefix-pricing/outbound/{type}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetrievePrefixPricingQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetrievePrefixPricingRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -104,13 +104,13 @@ public class Pricing {
      */
     public org.openapis.openapi.models.operations.RetrievePricingAllCountriesResponse retrievePricingAllCountries(org.openapis.openapi.models.operations.RetrievePricingAllCountriesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrievePricingAllCountriesPathParams.class, baseUrl, "/get-full-pricing/outbound/{type}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrievePricingAllCountriesRequest.class, baseUrl, "/get-full-pricing/outbound/{type}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetrievePricingAllCountriesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetrievePricingAllCountriesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -168,13 +168,13 @@ public class Pricing {
      */
     public org.openapis.openapi.models.operations.RetrievePricingCountryResponse retrievePricingCountry(org.openapis.openapi.models.operations.RetrievePricingCountryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrievePricingCountryPathParams.class, baseUrl, "/get-pricing/outbound/{type}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrievePricingCountryRequest.class, baseUrl, "/get-pricing/outbound/{type}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetrievePricingCountryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetrievePricingCountryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

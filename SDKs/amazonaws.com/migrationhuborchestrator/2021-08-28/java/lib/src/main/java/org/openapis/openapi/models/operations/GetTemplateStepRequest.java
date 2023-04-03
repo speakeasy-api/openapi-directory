@@ -4,27 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTemplateStepRequest {
-    
-    public GetTemplateStepPathParams pathParams;
-    public GetTemplateStepRequest withPathParams(GetTemplateStepPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetTemplateStepRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public GetTemplateStepQueryParams queryParams;
-    public GetTemplateStepRequest withQueryParams(GetTemplateStepQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetTemplateStepRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetTemplateStepRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public GetTemplateStepHeaders headers;
-    public GetTemplateStepRequest withHeaders(GetTemplateStepHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetTemplateStepRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetTemplateStepRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetTemplateStepRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetTemplateStepRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The ID of the step.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetTemplateStepRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * The ID of the step group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stepGroupId")
+    public String stepGroupId;
+    public GetTemplateStepRequest withStepGroupId(String stepGroupId) {
+        this.stepGroupId = stepGroupId;
+        return this;
+    }
+    
+    /**
+     * The ID of the template.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=templateId")
+    public String templateId;
+    public GetTemplateStepRequest withTemplateId(String templateId) {
+        this.templateId = templateId;
         return this;
     }
     

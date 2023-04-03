@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class HarvestAllV3Request {
-    
-    public HarvestAllV3QueryParams queryParams;
-    public HarvestAllV3Request withQueryParams(HarvestAllV3QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The StoreId to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=storeId")
+    public String storeId;
+    public HarvestAllV3Request withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

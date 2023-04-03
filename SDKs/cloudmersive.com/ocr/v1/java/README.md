@@ -18,12 +18,10 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.ImageOcrImageLinesWithLocationSecurity;
-import org.openapis.openapi.models.operations.ImageOcrImageLinesWithLocationHeaders;
 import org.openapis.openapi.models.operations.ImageOcrImageLinesWithLocationRequestBodyImageFile;
 import org.openapis.openapi.models.operations.ImageOcrImageLinesWithLocationRequestBody;
 import org.openapis.openapi.models.operations.ImageOcrImageLinesWithLocationRequest;
 import org.openapis.openapi.models.operations.ImageOcrImageLinesWithLocationResponse;
-import org.openapis.openapi.models.shared.SchemeApikey;
 
 public class Application {
     public static void main(String[] args) {
@@ -32,24 +30,19 @@ public class Application {
                 .build();
 
             ImageOcrImageLinesWithLocationRequest req = new ImageOcrImageLinesWithLocationRequest() {{
-                security = new ImageOcrImageLinesWithLocationSecurity() {{
-                    apikey = new SchemeApikey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }};
-                headers = new ImageOcrImageLinesWithLocationHeaders() {{
-                    language = "corrupti";
-                    preprocessing = "provident";
-                }};
-                request = new ImageOcrImageLinesWithLocationRequestBody() {{
+                requestBody = new ImageOcrImageLinesWithLocationRequestBody() {{
                     imageFile = new ImageOcrImageLinesWithLocationRequestBodyImageFile() {{
-                        content = "distinctio".getBytes();
-                        imageFile = "quibusdam";
+                        content = "corrupti".getBytes();
+                        imageFile = "provident";
                     }};
                 }};
-            }};            
+                language = "distinctio";
+                preprocessing = "quibusdam";
+            }}            
 
-            ImageOcrImageLinesWithLocationResponse res = sdk.imageOcr.imageOcrImageLinesWithLocation(req);
+            ImageOcrImageLinesWithLocationResponse res = sdk.imageOcr.imageOcrImageLinesWithLocation(req, new ImageOcrImageLinesWithLocationSecurity() {{
+                apikey = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.imageToLinesWithLocationResult.isPresent()) {
                 // handle response
@@ -61,7 +54,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### imageOcr

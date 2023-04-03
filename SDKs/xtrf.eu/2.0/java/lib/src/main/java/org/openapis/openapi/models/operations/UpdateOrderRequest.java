@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateOrderRequest {
-    
-    public UpdateOrderPathParams pathParams;
-    public UpdateOrderRequest withPathParams(UpdateOrderPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated view's order settings.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.OrderDTO request;
-    public UpdateOrderRequest withRequest(org.openapis.openapi.models.shared.OrderDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.OrderDTO orderDTO;
+    public UpdateOrderRequest withOrderDTO(org.openapis.openapi.models.shared.OrderDTO orderDTO) {
+        this.orderDTO = orderDTO;
+        return this;
+    }
+    
+    /**
+     * view's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=viewId")
+    public Long viewId;
+    public UpdateOrderRequest withViewId(Long viewId) {
+        this.viewId = viewId;
         return this;
     }
     

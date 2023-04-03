@@ -33,16 +33,12 @@ lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetBooks200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBooksResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetSentencesQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSentencesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSentences200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSentencesResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetSentencesFromBookPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetSentencesFromBookQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSentencesFromBookRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSentencesFromBook200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSentencesFromBookResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetSpecificSentencePathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSpecificSentenceRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSpecificSentence200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSpecificSentenceResponse.java

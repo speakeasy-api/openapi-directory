@@ -36,19 +36,20 @@ public class Japanese {
     /**
      * Infer the likely gender of a Japanese full name ex. \u738b\u6653\u660e
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GenderJapaneseNameFullResponse genderJapaneseNameFull(org.openapis.openapi.models.operations.GenderJapaneseNameFullRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GenderJapaneseNameFullResponse genderJapaneseNameFull(org.openapis.openapi.models.operations.GenderJapaneseNameFullRequest request, org.openapis.openapi.models.operations.GenderJapaneseNameFullSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GenderJapaneseNameFullPathParams.class, baseUrl, "/api2/json/genderJapaneseNameFull/{japaneseName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GenderJapaneseNameFullRequest.class, baseUrl, "/api2/json/genderJapaneseNameFull/{japaneseName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -77,10 +78,11 @@ public class Japanese {
     /**
      * Infer the likely gender of up to 100 full names
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GenderJapaneseNameFullBatchResponse genderJapaneseNameFullBatch(org.openapis.openapi.models.operations.GenderJapaneseNameFullBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GenderJapaneseNameFullBatchResponse genderJapaneseNameFullBatch(org.openapis.openapi.models.shared.BatchPersonalNameIn request, org.openapis.openapi.models.operations.GenderJapaneseNameFullBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/genderJapaneseNameFullBatch");
         
@@ -91,7 +93,7 @@ public class Japanese {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -120,19 +122,20 @@ public class Japanese {
     /**
      * Infer the likely gender of a Japanese name in LATIN (Pinyin).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GenderJapaneseNamePinyinResponse genderJapaneseNamePinyin(org.openapis.openapi.models.operations.GenderJapaneseNamePinyinRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GenderJapaneseNamePinyinResponse genderJapaneseNamePinyin(org.openapis.openapi.models.operations.GenderJapaneseNamePinyinRequest request, org.openapis.openapi.models.operations.GenderJapaneseNamePinyinSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GenderJapaneseNamePinyinPathParams.class, baseUrl, "/api2/json/genderJapaneseName/{japaneseSurname}/{japaneseGivenName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GenderJapaneseNamePinyinRequest.class, baseUrl, "/api2/json/genderJapaneseName/{japaneseSurname}/{japaneseGivenName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -161,10 +164,11 @@ public class Japanese {
     /**
      * Infer the likely gender of up to 100 Japanese names in LATIN (Pinyin).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GenderJapaneseNamePinyinBatchResponse genderJapaneseNamePinyinBatch(org.openapis.openapi.models.operations.GenderJapaneseNamePinyinBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GenderJapaneseNamePinyinBatchResponse genderJapaneseNamePinyinBatch(org.openapis.openapi.models.shared.BatchFirstLastNameIn request, org.openapis.openapi.models.operations.GenderJapaneseNamePinyinBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/genderJapaneseNameBatch");
         
@@ -175,7 +179,7 @@ public class Japanese {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -204,10 +208,11 @@ public class Japanese {
     /**
      * Identify japanese name candidates in KANJI, based on the romanized name (firstName = japaneseGivenName; lastName=japaneseSurname) with KNOWN gender, ex. Yamamoto Sanae
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.JapaneseNameGenderKanjiCandidatesBatchResponse japaneseNameGenderKanjiCandidatesBatch(org.openapis.openapi.models.operations.JapaneseNameGenderKanjiCandidatesBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.JapaneseNameGenderKanjiCandidatesBatchResponse japaneseNameGenderKanjiCandidatesBatch(org.openapis.openapi.models.shared.BatchFirstLastNameGenderIn request, org.openapis.openapi.models.operations.JapaneseNameGenderKanjiCandidatesBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/japaneseNameGenderKanjiCandidatesBatch");
         
@@ -218,7 +223,7 @@ public class Japanese {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -247,19 +252,20 @@ public class Japanese {
     /**
      * Identify japanese name candidates in KANJI, based on the romanized name ex. Yamamoto Sanae
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.JapaneseNameKanjiCandidatesResponse japaneseNameKanjiCandidates(org.openapis.openapi.models.operations.JapaneseNameKanjiCandidatesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.JapaneseNameKanjiCandidatesResponse japaneseNameKanjiCandidates(org.openapis.openapi.models.operations.JapaneseNameKanjiCandidatesRequest request, org.openapis.openapi.models.operations.JapaneseNameKanjiCandidatesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JapaneseNameKanjiCandidatesPathParams.class, baseUrl, "/api2/json/japaneseNameKanjiCandidates/{japaneseSurnameLatin}/{japaneseGivenNameLatin}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JapaneseNameKanjiCandidatesRequest.class, baseUrl, "/api2/json/japaneseNameKanjiCandidates/{japaneseSurnameLatin}/{japaneseGivenNameLatin}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -288,10 +294,11 @@ public class Japanese {
     /**
      * Identify japanese name candidates in KANJI, based on the romanized name (firstName = japaneseGivenName; lastName=japaneseSurname), ex. Yamamoto Sanae
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.JapaneseNameKanjiCandidatesBatchResponse japaneseNameKanjiCandidatesBatch(org.openapis.openapi.models.operations.JapaneseNameKanjiCandidatesBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.JapaneseNameKanjiCandidatesBatchResponse japaneseNameKanjiCandidatesBatch(org.openapis.openapi.models.shared.BatchFirstLastNameIn request, org.openapis.openapi.models.operations.JapaneseNameKanjiCandidatesBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/japaneseNameKanjiCandidatesBatch");
         
@@ -302,7 +309,7 @@ public class Japanese {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -331,19 +338,20 @@ public class Japanese {
     /**
      * Identify japanese name candidates in KANJI, based on the romanized name ex. Yamamoto Sanae - and a known gender.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.JapaneseNameKanjiCandidates1Response japaneseNameKanjiCandidates1(org.openapis.openapi.models.operations.JapaneseNameKanjiCandidates1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.JapaneseNameKanjiCandidates1Response japaneseNameKanjiCandidates1(org.openapis.openapi.models.operations.JapaneseNameKanjiCandidates1Request request, org.openapis.openapi.models.operations.JapaneseNameKanjiCandidates1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JapaneseNameKanjiCandidates1PathParams.class, baseUrl, "/api2/json/japaneseNameKanjiCandidates/{japaneseSurnameLatin}/{japaneseGivenNameLatin}/{knownGender}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JapaneseNameKanjiCandidates1Request.class, baseUrl, "/api2/json/japaneseNameKanjiCandidates/{japaneseSurnameLatin}/{japaneseGivenNameLatin}/{knownGender}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -372,19 +380,20 @@ public class Japanese {
     /**
      * Romanize japanese name, based on the name in Kanji.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.JapaneseNameLatinCandidatesResponse japaneseNameLatinCandidates(org.openapis.openapi.models.operations.JapaneseNameLatinCandidatesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.JapaneseNameLatinCandidatesResponse japaneseNameLatinCandidates(org.openapis.openapi.models.operations.JapaneseNameLatinCandidatesRequest request, org.openapis.openapi.models.operations.JapaneseNameLatinCandidatesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JapaneseNameLatinCandidatesPathParams.class, baseUrl, "/api2/json/japaneseNameLatinCandidates/{japaneseSurnameKanji}/{japaneseGivenNameKanji}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JapaneseNameLatinCandidatesRequest.class, baseUrl, "/api2/json/japaneseNameLatinCandidates/{japaneseSurnameKanji}/{japaneseGivenNameKanji}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -413,10 +422,11 @@ public class Japanese {
     /**
      * Romanize japanese names, based on the name in KANJI
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.JapaneseNameLatinCandidatesBatchResponse japaneseNameLatinCandidatesBatch(org.openapis.openapi.models.operations.JapaneseNameLatinCandidatesBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.JapaneseNameLatinCandidatesBatchResponse japaneseNameLatinCandidatesBatch(org.openapis.openapi.models.shared.BatchFirstLastNameIn request, org.openapis.openapi.models.operations.JapaneseNameLatinCandidatesBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/japaneseNameLatinCandidatesBatch");
         
@@ -427,7 +437,7 @@ public class Japanese {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -456,19 +466,20 @@ public class Japanese {
     /**
      * Return a score for matching Japanese name in KANJI ex. \u5c71\u672c \u65e9\u82d7 with a romanized name ex. Yamamoto Sanae
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.JapaneseNameMatchResponse japaneseNameMatch(org.openapis.openapi.models.operations.JapaneseNameMatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.JapaneseNameMatchResponse japaneseNameMatch(org.openapis.openapi.models.operations.JapaneseNameMatchRequest request, org.openapis.openapi.models.operations.JapaneseNameMatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JapaneseNameMatchPathParams.class, baseUrl, "/api2/json/japaneseNameMatch/{japaneseSurnameLatin}/{japaneseGivenNameLatin}/{japaneseName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JapaneseNameMatchRequest.class, baseUrl, "/api2/json/japaneseNameMatch/{japaneseSurnameLatin}/{japaneseGivenNameLatin}/{japaneseName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -497,10 +508,11 @@ public class Japanese {
     /**
      * Return a score for matching a list of Japanese names in KANJI ex. \u5c71\u672c \u65e9\u82d7 with romanized names ex. Yamamoto Sanae
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.JapaneseNameMatchBatchResponse japaneseNameMatchBatch(org.openapis.openapi.models.operations.JapaneseNameMatchBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.JapaneseNameMatchBatchResponse japaneseNameMatchBatch(org.openapis.openapi.models.shared.BatchMatchPersonalFirstLastNameIn request, org.openapis.openapi.models.operations.JapaneseNameMatchBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/japaneseNameMatchBatch");
         
@@ -511,7 +523,7 @@ public class Japanese {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -540,19 +552,20 @@ public class Japanese {
     /**
      * [CREDITS 1 UNIT] Feedback loop to better perform matching Japanese name in KANJI ex. \u5c71\u672c \u65e9\u82d7 with a romanized name ex. Yamamoto Sanae
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.JapaneseNameMatchFeedbackLoopResponse japaneseNameMatchFeedbackLoop(org.openapis.openapi.models.operations.JapaneseNameMatchFeedbackLoopRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.JapaneseNameMatchFeedbackLoopResponse japaneseNameMatchFeedbackLoop(org.openapis.openapi.models.operations.JapaneseNameMatchFeedbackLoopRequest request, org.openapis.openapi.models.operations.JapaneseNameMatchFeedbackLoopSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JapaneseNameMatchFeedbackLoopPathParams.class, baseUrl, "/api2/json/japaneseNameMatchFeedbackLoop/{japaneseSurnameLatin}/{japaneseGivenNameLatin}/{japaneseName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JapaneseNameMatchFeedbackLoopRequest.class, baseUrl, "/api2/json/japaneseNameMatchFeedbackLoop/{japaneseSurnameLatin}/{japaneseGivenNameLatin}/{japaneseName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -581,19 +594,20 @@ public class Japanese {
     /**
      * Infer the likely first/last name structure of a name, ex. \u5c71\u672c \u65e9\u82d7 or Yamamoto Sanae
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ParseJapaneseNameResponse parseJapaneseName(org.openapis.openapi.models.operations.ParseJapaneseNameRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ParseJapaneseNameResponse parseJapaneseName(org.openapis.openapi.models.operations.ParseJapaneseNameRequest request, org.openapis.openapi.models.operations.ParseJapaneseNameSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ParseJapaneseNamePathParams.class, baseUrl, "/api2/json/parseJapaneseName/{japaneseName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ParseJapaneseNameRequest.class, baseUrl, "/api2/json/parseJapaneseName/{japaneseName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -622,10 +636,11 @@ public class Japanese {
     /**
      * Infer the likely first/last name structure of a name, ex. \u5c71\u672c \u65e9\u82d7 or Yamamoto Sanae 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ParseJapaneseNameBatchResponse parseJapaneseNameBatch(org.openapis.openapi.models.operations.ParseJapaneseNameBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ParseJapaneseNameBatchResponse parseJapaneseNameBatch(org.openapis.openapi.models.shared.BatchPersonalNameIn request, org.openapis.openapi.models.operations.ParseJapaneseNameBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/parseJapaneseNameBatch");
         
@@ -636,7 +651,7 @@ public class Japanese {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

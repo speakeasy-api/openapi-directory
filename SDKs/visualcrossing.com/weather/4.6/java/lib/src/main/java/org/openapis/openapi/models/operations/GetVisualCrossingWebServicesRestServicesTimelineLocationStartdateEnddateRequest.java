@@ -4,27 +4,71 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddateRequest {
-    
-    public GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddatePathParams pathParams;
-    public GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddateRequest withPathParams(GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddatePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * data format of the output either json or CSV
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contentType")
+    public String contentType;
+    public GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddateRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
-    
-    public GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddateQueryParams queryParams;
-    public GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddateRequest withQueryParams(GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enddate")
+    public String enddate;
+    public GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddateRequest withEnddate(String enddate) {
+        this.enddate = enddate;
         return this;
     }
     
+    /**
+     * data to include in the output (required for CSV format - days,hours,alerts,current,events )
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include")
+    public String include;
+    public GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddateRequest withInclude(String include) {
+        this.include = include;
+        return this;
+    }
     
-    public String serverURL;
-    public GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddateRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddateRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Language to use for weather descriptions
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public String lang;
+    public GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddateRequest withLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
+    public String location;
+    public GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddateRequest withLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=startdate")
+    public String startdate;
+    public GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddateRequest withStartdate(String startdate) {
+        this.startdate = startdate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unitGroup")
+    public String unitGroup;
+    public GetVisualCrossingWebServicesRestServicesTimelineLocationStartdateEnddateRequest withUnitGroup(String unitGroup) {
+        this.unitGroup = unitGroup;
         return this;
     }
     

@@ -7,38 +7,60 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SharedLinksUpdateRequest {
-    
-    public SharedLinksUpdatePathParams pathParams;
-    public SharedLinksUpdateRequest withPathParams(SharedLinksUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public SharedLinksUpdateQueryParams queryParams;
-    public SharedLinksUpdateRequest withQueryParams(SharedLinksUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public SharedLinksUpdateHeaders headers;
-    public SharedLinksUpdateRequest withHeaders(SharedLinksUpdateHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SharedLinkInput request;
-    public SharedLinksUpdateRequest withRequest(org.openapis.openapi.models.shared.SharedLinkInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SharedLinkInput sharedLinkInput;
+    public SharedLinksUpdateRequest withSharedLinkInput(org.openapis.openapi.models.shared.SharedLinkInput sharedLinkInput) {
+        this.sharedLinkInput = sharedLinkInput;
         return this;
     }
     
+    /**
+     * ID of the record you are acting upon.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public SharedLinksUpdateRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public SharedLinksUpdateSecurity security;
-    public SharedLinksUpdateRequest withSecurity(SharedLinksUpdateSecurity security) {
-        this.security = security;
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
+    public Boolean raw;
+    public SharedLinksUpdateRequest withRaw(Boolean raw) {
+        this.raw = raw;
+        return this;
+    }
+    
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public SharedLinksUpdateRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
+        return this;
+    }
+    
+    /**
+     * ID of the consumer which you want to get or push data from
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-consumer-id")
+    public String xApideckConsumerId;
+    public SharedLinksUpdateRequest withXApideckConsumerId(String xApideckConsumerId) {
+        this.xApideckConsumerId = xApideckConsumerId;
+        return this;
+    }
+    
+    /**
+     * Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-service-id")
+    public String xApideckServiceId;
+    public SharedLinksUpdateRequest withXApideckServiceId(String xApideckServiceId) {
+        this.xApideckServiceId = xApideckServiceId;
         return this;
     }
     

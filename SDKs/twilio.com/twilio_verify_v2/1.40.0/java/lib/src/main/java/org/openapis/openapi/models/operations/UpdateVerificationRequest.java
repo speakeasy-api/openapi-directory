@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateVerificationRequest {
-    
-    public UpdateVerificationPathParams pathParams;
-    public UpdateVerificationRequest withPathParams(UpdateVerificationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateVerificationUpdateVerificationRequest request;
-    public UpdateVerificationRequest withRequest(UpdateVerificationUpdateVerificationRequest request) {
-        this.request = request;
+    public UpdateVerificationUpdateVerificationRequest requestBody;
+    public UpdateVerificationRequest withRequestBody(UpdateVerificationUpdateVerificationRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateVerificationSecurity security;
-    public UpdateVerificationRequest withSecurity(UpdateVerificationSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the verification [Service](https://www.twilio.com/docs/verify/api/service) to update the resource from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public UpdateVerificationRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public UpdateVerificationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the Verification resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateVerificationRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

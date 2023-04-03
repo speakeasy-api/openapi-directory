@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DelIpaliasRequest {
+    /**
+     * IP address , IPv4 or IPv6
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=IP")
+    public String ip;
+    public DelIpaliasRequest withIp(String ip) {
+        this.ip = ip;
+        return this;
+    }
     
-    public DelIpaliasPathParams pathParams;
-    public DelIpaliasRequest withPathParams(DelIpaliasPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to delete the IP alias
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public DelIpaliasRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
+    
+    /**
+     * SNMP port , 0 or empty for default
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=port")
+    public Integer port;
+    public DelIpaliasRequest withPort(Integer port) {
+        this.port = port;
         return this;
     }
     

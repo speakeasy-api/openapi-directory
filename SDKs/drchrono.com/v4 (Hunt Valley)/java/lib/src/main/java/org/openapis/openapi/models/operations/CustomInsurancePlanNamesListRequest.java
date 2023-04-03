@@ -4,20 +4,48 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CustomInsurancePlanNamesListRequest {
-    
-    public CustomInsurancePlanNamesListQueryParams queryParams;
-    public CustomInsurancePlanNamesListRequest withQueryParams(CustomInsurancePlanNamesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public CustomInsurancePlanNamesListRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public CustomInsurancePlanNamesListRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
+        return this;
+    }
     
-    public CustomInsurancePlanNamesListSecurity security;
-    public CustomInsurancePlanNamesListRequest withSecurity(CustomInsurancePlanNamesListSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public CustomInsurancePlanNamesListRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public CustomInsurancePlanNamesListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public CustomInsurancePlanNamesListRequest withSince(String since) {
+        this.since = since;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user")
+    public Long user;
+    public CustomInsurancePlanNamesListRequest withUser(Long user) {
+        this.user = user;
         return this;
     }
     

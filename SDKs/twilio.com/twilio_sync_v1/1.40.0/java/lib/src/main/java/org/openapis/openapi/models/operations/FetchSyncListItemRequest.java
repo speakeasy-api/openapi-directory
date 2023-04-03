@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchSyncListItemRequest {
-    
-    public FetchSyncListItemPathParams pathParams;
-    public FetchSyncListItemRequest withPathParams(FetchSyncListItemPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The index of the Sync List Item resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Index")
+    public Long index;
+    public FetchSyncListItemRequest withIndex(Long index) {
+        this.index = index;
         return this;
     }
     
-    
-    public FetchSyncListItemSecurity security;
-    public FetchSyncListItemRequest withSecurity(FetchSyncListItemSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the Sync List with the Sync List Item resource to fetch. Can be the Sync List resource's `sid` or its `unique_name`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ListSid")
+    public String listSid;
+    public FetchSyncListItemRequest withListSid(String listSid) {
+        this.listSid = listSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public FetchSyncListItemRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync List Item resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public FetchSyncListItemRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

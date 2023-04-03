@@ -40,12 +40,12 @@ public class GroupConfigurationLocations {
      */
     public org.openapis.openapi.models.operations.CreateLocationResponse createLocation(org.openapis.openapi.models.operations.CreateLocationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateLocationPathParams.class, baseUrl, "/api/v1/groups/{group_id}/locations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateLocationRequest.class, baseUrl, "/api/v1/groups/{group_id}/locations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "locationCreateRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -84,12 +84,12 @@ public class GroupConfigurationLocations {
      */
     public org.openapis.openapi.models.operations.EditLocationResponse editLocation(org.openapis.openapi.models.operations.EditLocationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditLocationPathParams.class, baseUrl, "/api/v1/groups/{group_id}/locations/{location_id}/{version}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditLocationRequest.class, baseUrl, "/api/v1/groups/{group_id}/locations/{location_id}/{version}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "locationEditRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -128,7 +128,7 @@ public class GroupConfigurationLocations {
      */
     public org.openapis.openapi.models.operations.GetLocationResponse getLocation(org.openapis.openapi.models.operations.GetLocationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLocationPathParams.class, baseUrl, "/api/v1/groups/{group_id}/locations/{location_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLocationRequest.class, baseUrl, "/api/v1/groups/{group_id}/locations/{location_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -167,13 +167,13 @@ public class GroupConfigurationLocations {
      */
     public org.openapis.openapi.models.operations.GetLocationListResponse getLocationList(org.openapis.openapi.models.operations.GetLocationListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLocationListPathParams.class, baseUrl, "/api/v1/groups/{group_id}/locations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLocationListRequest.class, baseUrl, "/api/v1/groups/{group_id}/locations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetLocationListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetLocationListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

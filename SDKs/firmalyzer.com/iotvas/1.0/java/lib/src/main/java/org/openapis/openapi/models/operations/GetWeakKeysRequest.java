@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWeakKeysRequest {
-    
-    public GetWeakKeysPathParams pathParams;
-    public GetWeakKeysRequest withPathParams(GetWeakKeysPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetWeakKeysSecurity security;
-    public GetWeakKeysRequest withSecurity(GetWeakKeysSecurity security) {
-        this.security = security;
+    /**
+     * SHA2 hash of device firmware
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=firmware_hash")
+    public String firmwareHash;
+    public GetWeakKeysRequest withFirmwareHash(String firmwareHash) {
+        this.firmwareHash = firmwareHash;
         return this;
     }
     

@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgsListSamlSsoAuthorizationsRequest {
-    
-    public OrgsListSamlSsoAuthorizationsPathParams pathParams;
-    public OrgsListSamlSsoAuthorizationsRequest withPathParams(OrgsListSamlSsoAuthorizationsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Limits the list of credentials authorizations for an organization to a specific login
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public OrgsListSamlSsoAuthorizationsRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public OrgsListSamlSsoAuthorizationsRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
     
-    public OrgsListSamlSsoAuthorizationsQueryParams queryParams;
-    public OrgsListSamlSsoAuthorizationsRequest withQueryParams(OrgsListSamlSsoAuthorizationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public OrgsListSamlSsoAuthorizationsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public OrgsListSamlSsoAuthorizationsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
         return this;
     }
     

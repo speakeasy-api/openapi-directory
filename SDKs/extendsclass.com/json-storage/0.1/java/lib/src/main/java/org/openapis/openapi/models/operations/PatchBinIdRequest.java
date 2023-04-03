@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchBinIdRequest {
-    
-    public PatchBinIdPathParams pathParams;
-    public PatchBinIdRequest withPathParams(PatchBinIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatchBinIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

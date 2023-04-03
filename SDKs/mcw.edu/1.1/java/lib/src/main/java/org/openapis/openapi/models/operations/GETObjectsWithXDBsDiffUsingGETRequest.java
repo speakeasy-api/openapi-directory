@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETObjectsWithXDBsDiffUsingGETRequest {
+    /**
+     * dateFromYYYYMMDD
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dateFromYYYYMMDD")
+    public String dateFromYYYYMMDD;
+    public GETObjectsWithXDBsDiffUsingGETRequest withDateFromYYYYMMDD(String dateFromYYYYMMDD) {
+        this.dateFromYYYYMMDD = dateFromYYYYMMDD;
+        return this;
+    }
     
-    public GETObjectsWithXDBsDiffUsingGETPathParams pathParams;
-    public GETObjectsWithXDBsDiffUsingGETRequest withPathParams(GETObjectsWithXDBsDiffUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * dateToYYYYMMDD
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dateToYYYYMMDD")
+    public String dateToYYYYMMDD;
+    public GETObjectsWithXDBsDiffUsingGETRequest withDateToYYYYMMDD(String dateToYYYYMMDD) {
+        this.dateToYYYYMMDD = dateToYYYYMMDD;
+        return this;
+    }
+    
+    /**
+     * objectKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=objectKey")
+    public Integer objectKey;
+    public GETObjectsWithXDBsDiffUsingGETRequest withObjectKey(Integer objectKey) {
+        this.objectKey = objectKey;
+        return this;
+    }
+    
+    /**
+     * speciesTypeKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=speciesTypeKey")
+    public Integer speciesTypeKey;
+    public GETObjectsWithXDBsDiffUsingGETRequest withSpeciesTypeKey(Integer speciesTypeKey) {
+        this.speciesTypeKey = speciesTypeKey;
         return this;
     }
     

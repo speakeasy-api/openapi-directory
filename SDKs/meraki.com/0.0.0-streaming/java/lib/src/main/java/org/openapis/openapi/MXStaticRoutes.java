@@ -40,12 +40,12 @@ public class MXStaticRoutes {
      */
     public org.openapis.openapi.models.operations.CreateNetworkStaticRouteResponse createNetworkStaticRoute(org.openapis.openapi.models.operations.CreateNetworkStaticRouteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkStaticRoutePathParams.class, baseUrl, "/networks/{networkId}/staticRoutes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkStaticRouteRequest.class, baseUrl, "/networks/{networkId}/staticRoutes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -85,7 +85,7 @@ public class MXStaticRoutes {
      */
     public org.openapis.openapi.models.operations.DeleteNetworkStaticRouteResponse deleteNetworkStaticRoute(org.openapis.openapi.models.operations.DeleteNetworkStaticRouteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkStaticRoutePathParams.class, baseUrl, "/networks/{networkId}/staticRoutes/{staticRouteId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkStaticRouteRequest.class, baseUrl, "/networks/{networkId}/staticRoutes/{staticRouteId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -119,7 +119,7 @@ public class MXStaticRoutes {
      */
     public org.openapis.openapi.models.operations.GetNetworkStaticRouteResponse getNetworkStaticRoute(org.openapis.openapi.models.operations.GetNetworkStaticRouteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkStaticRoutePathParams.class, baseUrl, "/networks/{networkId}/staticRoutes/{staticRouteId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkStaticRouteRequest.class, baseUrl, "/networks/{networkId}/staticRoutes/{staticRouteId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -159,7 +159,7 @@ public class MXStaticRoutes {
      */
     public org.openapis.openapi.models.operations.GetNetworkStaticRoutesResponse getNetworkStaticRoutes(org.openapis.openapi.models.operations.GetNetworkStaticRoutesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkStaticRoutesPathParams.class, baseUrl, "/networks/{networkId}/staticRoutes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkStaticRoutesRequest.class, baseUrl, "/networks/{networkId}/staticRoutes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -199,12 +199,12 @@ public class MXStaticRoutes {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkStaticRouteResponse updateNetworkStaticRoute(org.openapis.openapi.models.operations.UpdateNetworkStaticRouteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkStaticRoutePathParams.class, baseUrl, "/networks/{networkId}/staticRoutes/{staticRouteId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkStaticRouteRequest.class, baseUrl, "/networks/{networkId}/staticRoutes/{staticRouteId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

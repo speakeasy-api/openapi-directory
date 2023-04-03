@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDatacentersRequest {
-    
-    public GetDatacentersQueryParams queryParams;
-    public GetDatacentersRequest withQueryParams(GetDatacentersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Can be used to filter Datacenters by their name. The response will only contain the Datacenter matching the specified name. When the name does not match the Datacenter name format, an `invalid_input` error is returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public GetDatacentersRequest withName(String name) {
+        this.name = name;
         return this;
     }
     

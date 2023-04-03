@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsSetCustomOidcSubClaimForRepoRequest {
-    
-    public ActionsSetCustomOidcSubClaimForRepoPathParams pathParams;
-    public ActionsSetCustomOidcSubClaimForRepoRequest withPathParams(ActionsSetCustomOidcSubClaimForRepoPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ActionsSetCustomOIDCSubClaimForRepoActionsOIDCSubjectCustomizationForARepository requestBody;
+    public ActionsSetCustomOidcSubClaimForRepoRequest withRequestBody(ActionsSetCustomOIDCSubClaimForRepoActionsOIDCSubjectCustomizationForARepository requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ActionsSetCustomOIDCSubClaimForRepoActionsOIDCSubjectCustomizationForARepository request;
-    public ActionsSetCustomOidcSubClaimForRepoRequest withRequest(ActionsSetCustomOIDCSubClaimForRepoActionsOIDCSubjectCustomizationForARepository request) {
-        this.request = request;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ActionsSetCustomOidcSubClaimForRepoRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ActionsSetCustomOidcSubClaimForRepoRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

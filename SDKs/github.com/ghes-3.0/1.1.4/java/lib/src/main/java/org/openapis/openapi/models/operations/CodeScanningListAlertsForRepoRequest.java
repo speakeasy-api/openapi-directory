@@ -4,20 +4,80 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodeScanningListAlertsForRepoRequest {
-    
-    public CodeScanningListAlertsForRepoPathParams pathParams;
-    public CodeScanningListAlertsForRepoRequest withPathParams(CodeScanningListAlertsForRepoPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public CodeScanningListAlertsForRepoRequest withOwner(String owner) {
+        this.owner = owner;
         return this;
     }
     
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public CodeScanningListAlertsForRepoRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public CodeScanningListAlertsForRepoQueryParams queryParams;
-    public CodeScanningListAlertsForRepoRequest withQueryParams(CodeScanningListAlertsForRepoQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public CodeScanningListAlertsForRepoRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/&lt;branch name&gt;` or simply `&lt;branch name&gt;`. To reference a pull request use `refs/pull/&lt;number&gt;/merge`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ref")
+    public String ref;
+    public CodeScanningListAlertsForRepoRequest withRef(String ref) {
+        this.ref = ref;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public CodeScanningListAlertsForRepoRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * Set to `open`, `fixed`, or `dismissed` to list code scanning alerts in a specific state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public org.openapis.openapi.models.shared.CodeScanningAlertStateEnum state;
+    public CodeScanningListAlertsForRepoRequest withState(org.openapis.openapi.models.shared.CodeScanningAlertStateEnum state) {
+        this.state = state;
+        return this;
+    }
+    
+    /**
+     * The GUID of a code scanning tool. Only results by this tool will be listed. Note that some code scanning tools may not include a GUID in their analysis data. You can specify the tool by using either `tool_guid` or `tool_name`, but not both.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tool_guid")
+    public String toolGuid;
+    public CodeScanningListAlertsForRepoRequest withToolGuid(String toolGuid) {
+        this.toolGuid = toolGuid;
+        return this;
+    }
+    
+    /**
+     * The name of a code scanning tool. Only results by this tool will be listed. You can specify the tool by using either `tool_name` or `tool_guid`, but not both.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tool_name")
+    public String toolName;
+    public CodeScanningListAlertsForRepoRequest withToolName(String toolName) {
+        this.toolName = toolName;
         return this;
     }
     

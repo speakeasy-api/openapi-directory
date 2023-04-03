@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CustomFieldsUploadRequest {
-    
-    public CustomFieldsUploadPathParams pathParams;
-    public CustomFieldsUploadRequest withPathParams(CustomFieldsUploadPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public CustomFieldsUploadRequestBody request;
-    public CustomFieldsUploadRequest withRequest(CustomFieldsUploadRequestBody request) {
-        this.request = request;
+    public CustomFieldsUploadRequestBody requestBody;
+    public CustomFieldsUploadRequest withRequestBody(CustomFieldsUploadRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CustomFieldsUploadSecurity security;
-    public CustomFieldsUploadRequest withSecurity(CustomFieldsUploadSecurity security) {
-        this.security = security;
+    /**
+     * Custom field identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=custom_field_id")
+    public Long customFieldId;
+    public CustomFieldsUploadRequest withCustomFieldId(Long customFieldId) {
+        this.customFieldId = customFieldId;
         return this;
     }
     

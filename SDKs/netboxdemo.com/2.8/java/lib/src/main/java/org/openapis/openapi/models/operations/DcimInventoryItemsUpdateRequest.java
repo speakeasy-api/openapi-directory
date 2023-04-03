@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimInventoryItemsUpdateRequest {
-    
-    public DcimInventoryItemsUpdatePathParams pathParams;
-    public DcimInventoryItemsUpdateRequest withPathParams(DcimInventoryItemsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.WritableInventoryItemInput writableInventoryItemInput;
+    public DcimInventoryItemsUpdateRequest withWritableInventoryItemInput(org.openapis.openapi.models.shared.WritableInventoryItemInput writableInventoryItemInput) {
+        this.writableInventoryItemInput = writableInventoryItemInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WritableInventoryItemInput request;
-    public DcimInventoryItemsUpdateRequest withRequest(org.openapis.openapi.models.shared.WritableInventoryItemInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this inventory item.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimInventoryItemsUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

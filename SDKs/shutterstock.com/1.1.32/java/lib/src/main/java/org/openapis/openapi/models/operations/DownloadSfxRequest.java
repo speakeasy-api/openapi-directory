@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DownloadSfxRequest {
-    
-    public DownloadSfxPathParams pathParams;
-    public DownloadSfxRequest withPathParams(DownloadSfxPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DownloadSfxSecurity security;
-    public DownloadSfxRequest withSecurity(DownloadSfxSecurity security) {
-        this.security = security;
+    /**
+     * License ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DownloadSfxRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

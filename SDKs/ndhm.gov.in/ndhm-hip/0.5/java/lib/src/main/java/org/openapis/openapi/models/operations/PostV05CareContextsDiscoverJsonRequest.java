@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05CareContextsDiscoverJsonRequest {
-    
-    public PostV05CareContextsDiscoverJsonHeaders headers;
-    public PostV05CareContextsDiscoverJsonRequest withHeaders(PostV05CareContextsDiscoverJsonHeaders headers) {
-        this.headers = headers;
+    /**
+     * Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostV05CareContextsDiscoverJsonRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PatientDiscoveryRequest request;
-    public PostV05CareContextsDiscoverJsonRequest withRequest(org.openapis.openapi.models.shared.PatientDiscoveryRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PatientDiscoveryRequest patientDiscoveryRequest;
+    public PostV05CareContextsDiscoverJsonRequest withPatientDiscoveryRequest(org.openapis.openapi.models.shared.PatientDiscoveryRequest patientDiscoveryRequest) {
+        this.patientDiscoveryRequest = patientDiscoveryRequest;
         return this;
     }
     
-    
-    public String serverURL;
-    public PostV05CareContextsDiscoverJsonRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Identifier of the health information provider to which the request was intended.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HIP-ID")
+    public String xHipId;
+    public PostV05CareContextsDiscoverJsonRequest withXHipId(String xHipId) {
+        this.xHipId = xHipId;
         return this;
     }
     

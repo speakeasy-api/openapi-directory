@@ -251,19 +251,20 @@ public class SDK {
     /**
      * delete clip
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteApiV1ClipsIdResponse deleteApiV1ClipsId(org.openapis.openapi.models.operations.DeleteApiV1ClipsIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteApiV1ClipsIdResponse deleteApiV1ClipsId(org.openapis.openapi.models.operations.DeleteApiV1ClipsIdRequest request, org.openapis.openapi.models.operations.DeleteApiV1ClipsIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteApiV1ClipsIdPathParams.class, baseUrl, "/api/v1/clips/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteApiV1ClipsIdRequest.class, baseUrl, "/api/v1/clips/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -284,19 +285,20 @@ public class SDK {
     /**
      * delete media
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteApiV1MediasIdResponse deleteApiV1MediasId(org.openapis.openapi.models.operations.DeleteApiV1MediasIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteApiV1MediasIdResponse deleteApiV1MediasId(org.openapis.openapi.models.operations.DeleteApiV1MediasIdRequest request, org.openapis.openapi.models.operations.DeleteApiV1MediasIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteApiV1MediasIdPathParams.class, baseUrl, "/api/v1/medias/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteApiV1MediasIdRequest.class, baseUrl, "/api/v1/medias/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -317,19 +319,20 @@ public class SDK {
     /**
      * delete webhook subscription
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteApiV1WebhookSubscriptionsIdResponse deleteApiV1WebhookSubscriptionsId(org.openapis.openapi.models.operations.DeleteApiV1WebhookSubscriptionsIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteApiV1WebhookSubscriptionsIdResponse deleteApiV1WebhookSubscriptionsId(org.openapis.openapi.models.operations.DeleteApiV1WebhookSubscriptionsIdRequest request, org.openapis.openapi.models.operations.DeleteApiV1WebhookSubscriptionsIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteApiV1WebhookSubscriptionsIdPathParams.class, baseUrl, "/api/v1/webhook_subscriptions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteApiV1WebhookSubscriptionsIdRequest.class, baseUrl, "/api/v1/webhook_subscriptions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -350,10 +353,11 @@ public class SDK {
     /**
      * list clips
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV1ClipsResponse getApiV1Clips(org.openapis.openapi.models.operations.GetApiV1ClipsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApiV1ClipsResponse getApiV1Clips(org.openapis.openapi.models.operations.GetApiV1ClipsRequest request, org.openapis.openapi.models.operations.GetApiV1ClipsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/clips");
         
@@ -361,14 +365,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApiV1ClipsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApiV1ClipsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -389,19 +393,20 @@ public class SDK {
     /**
      * show clip
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV1ClipsIdResponse getApiV1ClipsId(org.openapis.openapi.models.operations.GetApiV1ClipsIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApiV1ClipsIdResponse getApiV1ClipsId(org.openapis.openapi.models.operations.GetApiV1ClipsIdRequest request, org.openapis.openapi.models.operations.GetApiV1ClipsIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV1ClipsIdPathParams.class, baseUrl, "/api/v1/clips/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV1ClipsIdRequest.class, baseUrl, "/api/v1/clips/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -421,11 +426,10 @@ public class SDK {
 
     /**
      * prepare presigned upload url
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV1DirectUploadsResponse getApiV1DirectUploads(org.openapis.openapi.models.operations.GetApiV1DirectUploadsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApiV1DirectUploadsResponse getApiV1DirectUploads() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/direct_uploads");
         
@@ -434,8 +438,7 @@ public class SDK {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -455,10 +458,11 @@ public class SDK {
     /**
      * list medias
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV1MediasResponse getApiV1Medias(org.openapis.openapi.models.operations.GetApiV1MediasRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApiV1MediasResponse getApiV1Medias(org.openapis.openapi.models.operations.GetApiV1MediasRequest request, org.openapis.openapi.models.operations.GetApiV1MediasSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/medias");
         
@@ -466,14 +470,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApiV1MediasQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApiV1MediasRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -494,19 +498,20 @@ public class SDK {
     /**
      * show media
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV1MediasIdResponse getApiV1MediasId(org.openapis.openapi.models.operations.GetApiV1MediasIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApiV1MediasIdResponse getApiV1MediasId(org.openapis.openapi.models.operations.GetApiV1MediasIdRequest request, org.openapis.openapi.models.operations.GetApiV1MediasIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV1MediasIdPathParams.class, baseUrl, "/api/v1/medias/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV1MediasIdRequest.class, baseUrl, "/api/v1/medias/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -527,10 +532,11 @@ public class SDK {
     /**
      * list webhook subscriptions
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV1WebhookSubscriptionsResponse getApiV1WebhookSubscriptions(org.openapis.openapi.models.operations.GetApiV1WebhookSubscriptionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApiV1WebhookSubscriptionsResponse getApiV1WebhookSubscriptions(org.openapis.openapi.models.operations.GetApiV1WebhookSubscriptionsRequest request, org.openapis.openapi.models.operations.GetApiV1WebhookSubscriptionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/webhook_subscriptions");
         
@@ -538,14 +544,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApiV1WebhookSubscriptionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApiV1WebhookSubscriptionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -566,19 +572,20 @@ public class SDK {
     /**
      * show webhook subscription
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV1WebhookSubscriptionsIdResponse getApiV1WebhookSubscriptionsId(org.openapis.openapi.models.operations.GetApiV1WebhookSubscriptionsIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApiV1WebhookSubscriptionsIdResponse getApiV1WebhookSubscriptionsId(org.openapis.openapi.models.operations.GetApiV1WebhookSubscriptionsIdRequest request, org.openapis.openapi.models.operations.GetApiV1WebhookSubscriptionsIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV1WebhookSubscriptionsIdPathParams.class, baseUrl, "/api/v1/webhook_subscriptions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV1WebhookSubscriptionsIdRequest.class, baseUrl, "/api/v1/webhook_subscriptions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -599,10 +606,11 @@ public class SDK {
     /**
      * create clip
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostApiV1ClipsResponse postApiV1Clips(org.openapis.openapi.models.operations.PostApiV1ClipsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostApiV1ClipsResponse postApiV1Clips(org.openapis.openapi.models.operations.PostApiV1ClipsRequestBody request, org.openapis.openapi.models.operations.PostApiV1ClipsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/clips");
         
@@ -616,7 +624,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -637,10 +645,11 @@ public class SDK {
     /**
      * create media
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostApiV1MediasResponse postApiV1Medias(org.openapis.openapi.models.operations.PostApiV1MediasRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostApiV1MediasResponse postApiV1Medias(org.openapis.openapi.models.operations.PostApiV1MediasRequestBody request, org.openapis.openapi.models.operations.PostApiV1MediasSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/medias");
         
@@ -654,7 +663,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -675,10 +684,11 @@ public class SDK {
     /**
      * create webhook subscription
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostApiV1WebhookSubscriptionsResponse postApiV1WebhookSubscriptions(org.openapis.openapi.models.operations.PostApiV1WebhookSubscriptionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostApiV1WebhookSubscriptionsResponse postApiV1WebhookSubscriptions(org.openapis.openapi.models.operations.PostApiV1WebhookSubscriptionsRequestBody request, org.openapis.openapi.models.operations.PostApiV1WebhookSubscriptionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/webhook_subscriptions");
         
@@ -692,7 +702,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -713,24 +723,25 @@ public class SDK {
     /**
      * update clip
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutApiV1ClipsIdResponse putApiV1ClipsId(org.openapis.openapi.models.operations.PutApiV1ClipsIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutApiV1ClipsIdResponse putApiV1ClipsId(org.openapis.openapi.models.operations.PutApiV1ClipsIdRequest request, org.openapis.openapi.models.operations.PutApiV1ClipsIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutApiV1ClipsIdPathParams.class, baseUrl, "/api/v1/clips/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutApiV1ClipsIdRequest.class, baseUrl, "/api/v1/clips/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -751,24 +762,25 @@ public class SDK {
     /**
      * update media
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutApiV1MediasIdResponse putApiV1MediasId(org.openapis.openapi.models.operations.PutApiV1MediasIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutApiV1MediasIdResponse putApiV1MediasId(org.openapis.openapi.models.operations.PutApiV1MediasIdRequest request, org.openapis.openapi.models.operations.PutApiV1MediasIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutApiV1MediasIdPathParams.class, baseUrl, "/api/v1/medias/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutApiV1MediasIdRequest.class, baseUrl, "/api/v1/medias/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

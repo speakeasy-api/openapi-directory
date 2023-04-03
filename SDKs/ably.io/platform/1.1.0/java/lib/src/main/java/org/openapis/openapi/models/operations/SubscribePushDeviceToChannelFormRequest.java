@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SubscribePushDeviceToChannelFormRequest {
-    
-    public SubscribePushDeviceToChannelFormQueryParams queryParams;
-    public SubscribePushDeviceToChannelFormRequest withQueryParams(SubscribePushDeviceToChannelFormQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public SubscribePushDeviceToChannelFormHeaders headers;
-    public SubscribePushDeviceToChannelFormRequest withHeaders(SubscribePushDeviceToChannelFormHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public Object request;
-    public SubscribePushDeviceToChannelFormRequest withRequest(Object request) {
-        this.request = request;
+    public Object requestBody;
+    public SubscribePushDeviceToChannelFormRequest withRequestBody(Object requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The version of the API you wish to use.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Ably-Version")
+    public String xAblyVersion;
+    public SubscribePushDeviceToChannelFormRequest withXAblyVersion(String xAblyVersion) {
+        this.xAblyVersion = xAblyVersion;
+        return this;
+    }
+    
+    /**
+     * The response format you would like
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public org.openapis.openapi.models.shared.ResponseFormatEnum format;
+    public SubscribePushDeviceToChannelFormRequest withFormat(org.openapis.openapi.models.shared.ResponseFormatEnum format) {
+        this.format = format;
         return this;
     }
     

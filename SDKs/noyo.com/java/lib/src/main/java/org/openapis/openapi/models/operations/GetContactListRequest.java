@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContactListRequest {
-    
-    public GetContactListPathParams pathParams;
-    public GetContactListRequest withPathParams(GetContactListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the group for which you would like to view contacts
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public String groupId;
+    public GetContactListRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     
+    /**
+     * The integer offset at which to start the page. Possible values are 0 to total_records - 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetContactListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
     
-    public GetContactListQueryParams queryParams;
-    public GetContactListRequest withQueryParams(GetContactListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The max size of each page of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public GetContactListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

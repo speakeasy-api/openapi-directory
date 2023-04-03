@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CopyTemplateRequest {
+    /**
+     * Name for the copied template. If name is not specified then the original name is used.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public CopyTemplateRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
     
-    public CopyTemplateQueryParams queryParams;
-    public CopyTemplateRequest withQueryParams(CopyTemplateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Template unique identifier
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=templateId")
+    public Long templateId;
+    public CopyTemplateRequest withTemplateId(Long templateId) {
+        this.templateId = templateId;
         return this;
     }
     

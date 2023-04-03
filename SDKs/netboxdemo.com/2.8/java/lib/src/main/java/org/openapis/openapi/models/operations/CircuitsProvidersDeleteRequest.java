@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CircuitsProvidersDeleteRequest {
-    
-    public CircuitsProvidersDeletePathParams pathParams;
-    public CircuitsProvidersDeleteRequest withPathParams(CircuitsProvidersDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this provider.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public CircuitsProvidersDeleteRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

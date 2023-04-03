@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchCrmV3ExtensionsCardsAppIdCardIdUpdateRequest {
-    
-    public PatchCrmV3ExtensionsCardsAppIdCardIdUpdatePathParams pathParams;
-    public PatchCrmV3ExtensionsCardsAppIdCardIdUpdateRequest withPathParams(PatchCrmV3ExtensionsCardsAppIdCardIdUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Card definition fields to be updated.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CardPatchRequest request;
-    public PatchCrmV3ExtensionsCardsAppIdCardIdUpdateRequest withRequest(org.openapis.openapi.models.shared.CardPatchRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CardPatchRequest cardPatchRequest;
+    public PatchCrmV3ExtensionsCardsAppIdCardIdUpdateRequest withCardPatchRequest(org.openapis.openapi.models.shared.CardPatchRequest cardPatchRequest) {
+        this.cardPatchRequest = cardPatchRequest;
         return this;
     }
     
+    /**
+     * The ID of the target app.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
+    public Integer appId;
+    public PatchCrmV3ExtensionsCardsAppIdCardIdUpdateRequest withAppId(Integer appId) {
+        this.appId = appId;
+        return this;
+    }
     
-    public PatchCrmV3ExtensionsCardsAppIdCardIdUpdateSecurity security;
-    public PatchCrmV3ExtensionsCardsAppIdCardIdUpdateRequest withSecurity(PatchCrmV3ExtensionsCardsAppIdCardIdUpdateSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the card to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cardId")
+    public String cardId;
+    public PatchCrmV3ExtensionsCardsAppIdCardIdUpdateRequest withCardId(String cardId) {
+        this.cardId = cardId;
         return this;
     }
     

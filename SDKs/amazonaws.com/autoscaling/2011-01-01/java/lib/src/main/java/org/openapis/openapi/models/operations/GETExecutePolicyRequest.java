@@ -4,20 +4,119 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETExecutePolicyRequest {
-    
-    public GETExecutePolicyQueryParams queryParams;
-    public GETExecutePolicyRequest withQueryParams(GETExecutePolicyQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETExecutePolicyActionEnum action;
+    public GETExecutePolicyRequest withAction(GETExecutePolicyActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the Auto Scaling group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutoScalingGroupName")
+    public String autoScalingGroupName;
+    public GETExecutePolicyRequest withAutoScalingGroupName(String autoScalingGroupName) {
+        this.autoScalingGroupName = autoScalingGroupName;
+        return this;
+    }
     
-    public GETExecutePolicyHeaders headers;
-    public GETExecutePolicyRequest withHeaders(GETExecutePolicyHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The breach threshold for the alarm.&lt;/p&gt; &lt;p&gt;Required if the policy type is &lt;code&gt;StepScaling&lt;/code&gt; and not supported otherwise.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=BreachThreshold")
+    public Double breachThreshold;
+    public GETExecutePolicyRequest withBreachThreshold(Double breachThreshold) {
+        this.breachThreshold = breachThreshold;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Indicates whether Amazon EC2 Auto Scaling waits for the cooldown period to complete before executing the policy.&lt;/p&gt; &lt;p&gt;Valid only if the policy type is &lt;code&gt;SimpleScaling&lt;/code&gt;. For more information, see &lt;a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/Cooldown.html"&gt;Scaling cooldowns for Amazon EC2 Auto Scaling&lt;/a&gt; in the &lt;i&gt;Amazon EC2 Auto Scaling User Guide&lt;/i&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HonorCooldown")
+    public Boolean honorCooldown;
+    public GETExecutePolicyRequest withHonorCooldown(Boolean honorCooldown) {
+        this.honorCooldown = honorCooldown;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The metric value to compare to &lt;code&gt;BreachThreshold&lt;/code&gt;. This enables you to execute a policy of type &lt;code&gt;StepScaling&lt;/code&gt; and determine which step adjustment to use. For example, if the breach threshold is 50 and you want to use a step adjustment with a lower bound of 0 and an upper bound of 10, you can set the metric value to 59.&lt;/p&gt; &lt;p&gt;If you specify a metric value that doesn't correspond to a step adjustment for the policy, the call returns an error.&lt;/p&gt; &lt;p&gt;Required if the policy type is &lt;code&gt;StepScaling&lt;/code&gt; and not supported otherwise.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MetricValue")
+    public Double metricValue;
+    public GETExecutePolicyRequest withMetricValue(Double metricValue) {
+        this.metricValue = metricValue;
+        return this;
+    }
+    
+    /**
+     * The name or ARN of the policy.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PolicyName")
+    public String policyName;
+    public GETExecutePolicyRequest withPolicyName(String policyName) {
+        this.policyName = policyName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETExecutePolicyVersionEnum version;
+    public GETExecutePolicyRequest withVersion(GETExecutePolicyVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETExecutePolicyRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETExecutePolicyRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETExecutePolicyRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETExecutePolicyRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETExecutePolicyRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETExecutePolicyRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETExecutePolicyRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

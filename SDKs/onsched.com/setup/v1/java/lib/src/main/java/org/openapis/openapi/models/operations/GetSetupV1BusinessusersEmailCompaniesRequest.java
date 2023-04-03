@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSetupV1BusinessusersEmailCompaniesRequest {
-    
-    public GetSetupV1BusinessusersEmailCompaniesPathParams pathParams;
-    public GetSetupV1BusinessusersEmailCompaniesRequest withPathParams(GetSetupV1BusinessusersEmailCompaniesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Email of business user
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=email")
+    public String email;
+    public GetSetupV1BusinessusersEmailCompaniesRequest withEmail(String email) {
+        this.email = email;
         return this;
     }
     
+    /**
+     * Page limit default 20, max 100
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetSetupV1BusinessusersEmailCompaniesRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetSetupV1BusinessusersEmailCompaniesQueryParams queryParams;
-    public GetSetupV1BusinessusersEmailCompaniesRequest withQueryParams(GetSetupV1BusinessusersEmailCompaniesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Starting row of page, default 0
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public GetSetupV1BusinessusersEmailCompaniesRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * All or partial company name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=searchText")
+    public String searchText;
+    public GetSetupV1BusinessusersEmailCompaniesRequest withSearchText(String searchText) {
+        this.searchText = searchText;
         return this;
     }
     

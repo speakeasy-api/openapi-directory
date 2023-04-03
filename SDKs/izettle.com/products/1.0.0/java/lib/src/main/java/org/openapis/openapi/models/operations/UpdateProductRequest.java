@@ -7,31 +7,31 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateProductRequest {
-    
-    public UpdateProductPathParams pathParams;
-    public UpdateProductRequest withPathParams(UpdateProductPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateProductHeaders headers;
-    public UpdateProductRequest withHeaders(UpdateProductHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.FullProductUpdateRequest request;
-    public UpdateProductRequest withRequest(org.openapis.openapi.models.shared.FullProductUpdateRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.FullProductUpdateRequest fullProductUpdateRequest;
+    public UpdateProductRequest withFullProductUpdateRequest(org.openapis.openapi.models.shared.FullProductUpdateRequest fullProductUpdateRequest) {
+        this.fullProductUpdateRequest = fullProductUpdateRequest;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
+    public String ifMatch;
+    public UpdateProductRequest withIfMatch(String ifMatch) {
+        this.ifMatch = ifMatch;
+        return this;
+    }
     
-    public UpdateProductSecurity security;
-    public UpdateProductRequest withSecurity(UpdateProductSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationUuid")
+    public String organizationUuid;
+    public UpdateProductRequest withOrganizationUuid(String organizationUuid) {
+        this.organizationUuid = organizationUuid;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productUuid")
+    public String productUuid;
+    public UpdateProductRequest withProductUuid(String productUuid) {
+        this.productUuid = productUuid;
         return this;
     }
     

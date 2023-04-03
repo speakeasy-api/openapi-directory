@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class QuoteCloseRequest {
-    
-    public QuoteClosePathParams pathParams;
-    public QuoteCloseRequest withPathParams(QuoteClosePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of Quote to close
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public QuoteCloseRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteConferenceRecordingRequest {
-    
-    public DeleteConferenceRecordingPathParams pathParams;
-    public DeleteConferenceRecordingRequest withPathParams(DeleteConferenceRecordingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Conference Recording resources to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public DeleteConferenceRecordingRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public DeleteConferenceRecordingSecurity security;
-    public DeleteConferenceRecordingRequest withSecurity(DeleteConferenceRecordingSecurity security) {
-        this.security = security;
+    /**
+     * The Conference SID that identifies the conference associated with the recording to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConferenceSid")
+    public String conferenceSid;
+    public DeleteConferenceRecordingRequest withConferenceSid(String conferenceSid) {
+        this.conferenceSid = conferenceSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public DeleteConferenceRecordingRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the Conference Recording resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteConferenceRecordingRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

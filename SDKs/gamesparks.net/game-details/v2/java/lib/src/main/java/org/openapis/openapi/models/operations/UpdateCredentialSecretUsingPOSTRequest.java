@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCredentialSecretUsingPOSTRequest {
+    /**
+     * apiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public UpdateCredentialSecretUsingPOSTRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public UpdateCredentialSecretUsingPOSTPathParams pathParams;
-    public UpdateCredentialSecretUsingPOSTRequest withPathParams(UpdateCredentialSecretUsingPOSTPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * credentialName
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=credentialName")
+    public String credentialName;
+    public UpdateCredentialSecretUsingPOSTRequest withCredentialName(String credentialName) {
+        this.credentialName = credentialName;
         return this;
     }
     

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddVideoEmbedPresetRequest {
-    
-    public AddVideoEmbedPresetPathParams pathParams;
-    public AddVideoEmbedPresetRequest withPathParams(AddVideoEmbedPresetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the preset.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=preset_id")
+    public Double presetId;
+    public AddVideoEmbedPresetRequest withPresetId(Double presetId) {
+        this.presetId = presetId;
         return this;
     }
     
-    
-    public AddVideoEmbedPresetSecurity security;
-    public AddVideoEmbedPresetRequest withSecurity(AddVideoEmbedPresetSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public AddVideoEmbedPresetRequest withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

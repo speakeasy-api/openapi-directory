@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSystemSettingsRequest {
-    
-    public UpdateSystemSettingsHeaders headers;
-    public UpdateSystemSettingsRequest withHeaders(UpdateSystemSettingsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ConfigOptionList configOptionList;
+    public UpdateSystemSettingsRequest withConfigOptionList(org.openapis.openapi.models.shared.ConfigOptionList configOptionList) {
+        this.configOptionList = configOptionList;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ConfigOptionList request;
-    public UpdateSystemSettingsRequest withRequest(org.openapis.openapi.models.shared.ConfigOptionList request) {
-        this.request = request;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public UpdateSystemSettingsRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     

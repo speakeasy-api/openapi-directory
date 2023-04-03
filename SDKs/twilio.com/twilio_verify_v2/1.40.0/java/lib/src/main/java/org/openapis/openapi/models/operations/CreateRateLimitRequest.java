@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateRateLimitRequest {
-    
-    public CreateRateLimitPathParams pathParams;
-    public CreateRateLimitRequest withPathParams(CreateRateLimitPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateRateLimitCreateRateLimitRequest request;
-    public CreateRateLimitRequest withRequest(CreateRateLimitCreateRateLimitRequest request) {
-        this.request = request;
+    public CreateRateLimitCreateRateLimitRequest requestBody;
+    public CreateRateLimitRequest withRequestBody(CreateRateLimitCreateRateLimitRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateRateLimitSecurity security;
-    public CreateRateLimitRequest withSecurity(CreateRateLimitSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateRateLimitRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the [Service](https://www.twilio.com/docs/verify/api/service) the resource is associated with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public CreateRateLimitRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

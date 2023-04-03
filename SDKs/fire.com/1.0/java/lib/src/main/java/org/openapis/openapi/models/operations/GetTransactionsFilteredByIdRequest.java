@@ -4,20 +4,48 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTransactionsFilteredByIdRequest {
-    
-    public GetTransactionsFilteredByIdPathParams pathParams;
-    public GetTransactionsFilteredByIdRequest withPathParams(GetTransactionsFilteredByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dateRangeFrom")
+    public Long dateRangeFrom;
+    public GetTransactionsFilteredByIdRequest withDateRangeFrom(Long dateRangeFrom) {
+        this.dateRangeFrom = dateRangeFrom;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dateRangeTo")
+    public Long dateRangeTo;
+    public GetTransactionsFilteredByIdRequest withDateRangeTo(Long dateRangeTo) {
+        this.dateRangeTo = dateRangeTo;
+        return this;
+    }
     
-    public GetTransactionsFilteredByIdQueryParams queryParams;
-    public GetTransactionsFilteredByIdRequest withQueryParams(GetTransactionsFilteredByIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ican")
+    public Long ican;
+    public GetTransactionsFilteredByIdRequest withIcan(Long ican) {
+        this.ican = ican;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetTransactionsFilteredByIdRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=searchKeyword")
+    public String searchKeyword;
+    public GetTransactionsFilteredByIdRequest withSearchKeyword(String searchKeyword) {
+        this.searchKeyword = searchKeyword;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=transactionTypes")
+    public String[] transactionTypes;
+    public GetTransactionsFilteredByIdRequest withTransactionTypes(String[] transactionTypes) {
+        this.transactionTypes = transactionTypes;
         return this;
     }
     

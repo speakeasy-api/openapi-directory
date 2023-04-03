@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsCheckPermissionsForProjectInOrgRequest {
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public TeamsCheckPermissionsForProjectInOrgRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
     
-    public TeamsCheckPermissionsForProjectInOrgPathParams pathParams;
-    public TeamsCheckPermissionsForProjectInOrgRequest withPathParams(TeamsCheckPermissionsForProjectInOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the project.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public Long projectId;
+    public TeamsCheckPermissionsForProjectInOrgRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    /**
+     * The slug of the team name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_slug")
+    public String teamSlug;
+    public TeamsCheckPermissionsForProjectInOrgRequest withTeamSlug(String teamSlug) {
+        this.teamSlug = teamSlug;
         return this;
     }
     

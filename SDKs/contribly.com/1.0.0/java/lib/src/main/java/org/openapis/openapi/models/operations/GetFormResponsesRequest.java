@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFormResponsesRequest {
+    /**
+     * Restrict results to responses relating to this contribution.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contribution")
+    public String contribution;
+    public GetFormResponsesRequest withContribution(String contribution) {
+        this.contribution = contribution;
+        return this;
+    }
     
-    public GetFormResponsesQueryParams queryParams;
-    public GetFormResponsesRequest withQueryParams(GetFormResponsesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Restrict results to responses submitted to this form.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=form")
+    public String form;
+    public GetFormResponsesRequest withForm(String form) {
+        this.form = form;
+        return this;
+    }
+    
+    /**
+     * Restrict results to responses submitted by this user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user")
+    public String user;
+    public GetFormResponsesRequest withUser(String user) {
+        this.user = user;
         return this;
     }
     

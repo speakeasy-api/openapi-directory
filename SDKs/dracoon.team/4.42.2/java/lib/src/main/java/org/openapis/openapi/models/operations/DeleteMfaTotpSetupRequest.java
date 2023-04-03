@@ -4,27 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteMfaTotpSetupRequest {
-    
-    public DeleteMfaTotpSetupPathParams pathParams;
-    public DeleteMfaTotpSetupRequest withPathParams(DeleteMfaTotpSetupPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public DeleteMfaTotpSetupRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public DeleteMfaTotpSetupQueryParams queryParams;
-    public DeleteMfaTotpSetupRequest withQueryParams(DeleteMfaTotpSetupQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DeleteMfaTotpSetupRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     
-    
-    public DeleteMfaTotpSetupHeaders headers;
-    public DeleteMfaTotpSetupRequest withHeaders(DeleteMfaTotpSetupHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=valid_otp")
+    public String validOtp;
+    public DeleteMfaTotpSetupRequest withValidOtp(String validOtp) {
+        this.validOtp = validOtp;
         return this;
     }
     

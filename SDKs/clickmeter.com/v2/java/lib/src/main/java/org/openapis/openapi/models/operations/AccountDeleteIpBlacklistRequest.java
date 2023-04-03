@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountDeleteIpBlacklistRequest {
-    
-    public AccountDeleteIpBlacklistPathParams pathParams;
-    public AccountDeleteIpBlacklistRequest withPathParams(AccountDeleteIpBlacklistPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the ip to delete
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=blacklistId")
+    public String blacklistId;
+    public AccountDeleteIpBlacklistRequest withBlacklistId(String blacklistId) {
+        this.blacklistId = blacklistId;
         return this;
     }
     

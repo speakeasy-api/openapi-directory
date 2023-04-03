@@ -34,19 +34,20 @@ public class Terminal {
      * CancelTerminalCheckout
      * Cancels a Terminal checkout request if the status of the request permits it.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CancelTerminalCheckoutResponse cancelTerminalCheckout(org.openapis.openapi.models.operations.CancelTerminalCheckoutRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CancelTerminalCheckoutResponse cancelTerminalCheckout(org.openapis.openapi.models.operations.CancelTerminalCheckoutRequest request, org.openapis.openapi.models.operations.CancelTerminalCheckoutSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelTerminalCheckoutPathParams.class, baseUrl, "/v2/terminals/checkouts/{checkout_id}/cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelTerminalCheckoutRequest.class, baseUrl, "/v2/terminals/checkouts/{checkout_id}/cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -74,19 +75,20 @@ public class Terminal {
      * CancelTerminalRefund
      * Cancels an Interac Terminal refund request by refund request ID if the status of the request permits it.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CancelTerminalRefundResponse cancelTerminalRefund(org.openapis.openapi.models.operations.CancelTerminalRefundRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CancelTerminalRefundResponse cancelTerminalRefund(org.openapis.openapi.models.operations.CancelTerminalRefundRequest request, org.openapis.openapi.models.operations.CancelTerminalRefundSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelTerminalRefundPathParams.class, baseUrl, "/v2/terminals/refunds/{terminal_refund_id}/cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelTerminalRefundRequest.class, baseUrl, "/v2/terminals/refunds/{terminal_refund_id}/cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -115,10 +117,11 @@ public class Terminal {
      * Creates a Terminal checkout request and sends it to the specified device to take a payment
      * for the requested amount.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateTerminalCheckoutResponse createTerminalCheckout(org.openapis.openapi.models.operations.CreateTerminalCheckoutRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateTerminalCheckoutResponse createTerminalCheckout(org.openapis.openapi.models.shared.CreateTerminalCheckoutRequest request, org.openapis.openapi.models.operations.CreateTerminalCheckoutSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/terminals/checkouts");
         
@@ -132,7 +135,7 @@ public class Terminal {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -160,10 +163,11 @@ public class Terminal {
      * CreateTerminalRefund
      * Creates a request to refund an Interac payment completed on a Square Terminal.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateTerminalRefundResponse createTerminalRefund(org.openapis.openapi.models.operations.CreateTerminalRefundRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateTerminalRefundResponse createTerminalRefund(org.openapis.openapi.models.shared.CreateTerminalRefundRequest request, org.openapis.openapi.models.operations.CreateTerminalRefundSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/terminals/refunds");
         
@@ -177,7 +181,7 @@ public class Terminal {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -205,19 +209,20 @@ public class Terminal {
      * GetTerminalCheckout
      * Retrieves a Terminal checkout request by `checkout_id`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTerminalCheckoutResponse getTerminalCheckout(org.openapis.openapi.models.operations.GetTerminalCheckoutRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTerminalCheckoutResponse getTerminalCheckout(org.openapis.openapi.models.operations.GetTerminalCheckoutRequest request, org.openapis.openapi.models.operations.GetTerminalCheckoutSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTerminalCheckoutPathParams.class, baseUrl, "/v2/terminals/checkouts/{checkout_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTerminalCheckoutRequest.class, baseUrl, "/v2/terminals/checkouts/{checkout_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -245,19 +250,20 @@ public class Terminal {
      * GetTerminalRefund
      * Retrieves an Interac Terminal refund object by ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTerminalRefundResponse getTerminalRefund(org.openapis.openapi.models.operations.GetTerminalRefundRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTerminalRefundResponse getTerminalRefund(org.openapis.openapi.models.operations.GetTerminalRefundRequest request, org.openapis.openapi.models.operations.GetTerminalRefundSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTerminalRefundPathParams.class, baseUrl, "/v2/terminals/refunds/{terminal_refund_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTerminalRefundRequest.class, baseUrl, "/v2/terminals/refunds/{terminal_refund_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -285,10 +291,11 @@ public class Terminal {
      * SearchTerminalCheckouts
      * Retrieves a filtered list of Terminal checkout requests created by the account making the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SearchTerminalCheckoutsResponse searchTerminalCheckouts(org.openapis.openapi.models.operations.SearchTerminalCheckoutsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SearchTerminalCheckoutsResponse searchTerminalCheckouts(org.openapis.openapi.models.shared.SearchTerminalCheckoutsRequest request, org.openapis.openapi.models.operations.SearchTerminalCheckoutsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/terminals/checkouts/search");
         
@@ -302,7 +309,7 @@ public class Terminal {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -330,10 +337,11 @@ public class Terminal {
      * SearchTerminalRefunds
      * Retrieves a filtered list of Interac Terminal refund requests created by the seller making the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SearchTerminalRefundsResponse searchTerminalRefunds(org.openapis.openapi.models.operations.SearchTerminalRefundsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SearchTerminalRefundsResponse searchTerminalRefunds(org.openapis.openapi.models.shared.SearchTerminalRefundsRequest request, org.openapis.openapi.models.operations.SearchTerminalRefundsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/terminals/refunds/search");
         
@@ -347,7 +355,7 @@ public class Terminal {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

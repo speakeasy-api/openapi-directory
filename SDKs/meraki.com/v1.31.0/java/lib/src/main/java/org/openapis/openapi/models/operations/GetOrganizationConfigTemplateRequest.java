@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationConfigTemplateRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=configTemplateId")
+    public String configTemplateId;
+    public GetOrganizationConfigTemplateRequest withConfigTemplateId(String configTemplateId) {
+        this.configTemplateId = configTemplateId;
+        return this;
+    }
     
-    public GetOrganizationConfigTemplatePathParams pathParams;
-    public GetOrganizationConfigTemplateRequest withPathParams(GetOrganizationConfigTemplatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public GetOrganizationConfigTemplateRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

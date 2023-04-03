@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IpamPrefixesAvailablePrefixesCreateRequest {
-    
-    public IpamPrefixesAvailablePrefixesCreatePathParams pathParams;
-    public IpamPrefixesAvailablePrefixesCreateRequest withPathParams(IpamPrefixesAvailablePrefixesCreatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.WritablePrefixInput writablePrefixInput;
+    public IpamPrefixesAvailablePrefixesCreateRequest withWritablePrefixInput(org.openapis.openapi.models.shared.WritablePrefixInput writablePrefixInput) {
+        this.writablePrefixInput = writablePrefixInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WritablePrefixInput request;
-    public IpamPrefixesAvailablePrefixesCreateRequest withRequest(org.openapis.openapi.models.shared.WritablePrefixInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this prefix.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public IpamPrefixesAvailablePrefixesCreateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

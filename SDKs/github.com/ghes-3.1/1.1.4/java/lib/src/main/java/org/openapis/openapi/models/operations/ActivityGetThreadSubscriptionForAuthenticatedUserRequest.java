@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActivityGetThreadSubscriptionForAuthenticatedUserRequest {
-    
-    public ActivityGetThreadSubscriptionForAuthenticatedUserPathParams pathParams;
-    public ActivityGetThreadSubscriptionForAuthenticatedUserRequest withPathParams(ActivityGetThreadSubscriptionForAuthenticatedUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the pull request thread.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=thread_id")
+    public Long threadId;
+    public ActivityGetThreadSubscriptionForAuthenticatedUserRequest withThreadId(Long threadId) {
+        this.threadId = threadId;
         return this;
     }
     

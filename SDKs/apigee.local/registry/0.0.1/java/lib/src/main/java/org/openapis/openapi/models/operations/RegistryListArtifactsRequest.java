@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryListArtifactsRequest {
-    
-    public RegistryListArtifactsPathParams pathParams;
-    public RegistryListArtifactsRequest withPathParams(RegistryListArtifactsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * An expression that can be used to filter the list. Filters use the Common Expression Language and can refer to all message fields except contents.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public RegistryListArtifactsRequest withFilter(String filter) {
+        this.filter = filter;
         return this;
     }
     
+    /**
+     * The location id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
+    public String location;
+    public RegistryListArtifactsRequest withLocation(String location) {
+        this.location = location;
+        return this;
+    }
     
-    public RegistryListArtifactsQueryParams queryParams;
-    public RegistryListArtifactsRequest withQueryParams(RegistryListArtifactsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The maximum number of artifacts to return. The service may return fewer than this value. If unspecified, at most 50 values will be returned. The maximum is 1000; values above 1000 will be coerced to 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public RegistryListArtifactsRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * A page token, received from a previous `ListArtifacts` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListArtifacts` must match the call that provided the page token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public RegistryListArtifactsRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public RegistryListArtifactsRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

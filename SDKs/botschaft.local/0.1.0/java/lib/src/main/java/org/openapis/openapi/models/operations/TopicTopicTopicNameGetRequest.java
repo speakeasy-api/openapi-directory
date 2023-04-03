@@ -4,27 +4,34 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TopicTopicTopicNameGetRequest {
-    
-    public TopicTopicTopicNameGetPathParams pathParams;
-    public TopicTopicTopicNameGetRequest withPathParams(TopicTopicTopicNameGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=authorization")
+    public String authorization;
+    public TopicTopicTopicNameGetRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
-    
-    public TopicTopicTopicNameGetQueryParams queryParams;
-    public TopicTopicTopicNameGetRequest withQueryParams(TopicTopicTopicNameGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=base64_message")
+    public String base64Message;
+    public TopicTopicTopicNameGetRequest withBase64Message(String base64Message) {
+        this.base64Message = base64Message;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=message")
+    public String message;
+    public TopicTopicTopicNameGetRequest withMessage(String message) {
+        this.message = message;
+        return this;
+    }
     
-    public TopicTopicTopicNameGetHeaders headers;
-    public TopicTopicTopicNameGetRequest withHeaders(TopicTopicTopicNameGetHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=topic_name")
+    public String topicName;
+    public TopicTopicTopicNameGetRequest withTopicName(String topicName) {
+        this.topicName = topicName;
         return this;
     }
     

@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WebhooksSubscribeRequest {
-    
-    public WebhooksSubscribePathParams pathParams;
-    public WebhooksSubscribeRequest withPathParams(WebhooksSubscribePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public WebhooksSubscribeRequestBody request;
-    public WebhooksSubscribeRequest withRequest(WebhooksSubscribeRequestBody request) {
-        this.request = request;
+    public WebhooksSubscribeRequestBody requestBody;
+    public WebhooksSubscribeRequest withRequestBody(WebhooksSubscribeRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public WebhooksSubscribeSecurity security;
-    public WebhooksSubscribeRequest withSecurity(WebhooksSubscribeSecurity security) {
-        this.security = security;
+    /**
+     * Account to apply operations to
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public WebhooksSubscribeRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     

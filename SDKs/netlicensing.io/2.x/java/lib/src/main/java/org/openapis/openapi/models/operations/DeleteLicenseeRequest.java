@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteLicenseeRequest {
-    
-    public DeleteLicenseePathParams pathParams;
-    public DeleteLicenseeRequest withPathParams(DeleteLicenseePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Force object deletion and all descendants.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=forceCascade")
+    public Boolean forceCascade;
+    public DeleteLicenseeRequest withForceCascade(Boolean forceCascade) {
+        this.forceCascade = forceCascade;
         return this;
     }
     
-    
-    public DeleteLicenseeQueryParams queryParams;
-    public DeleteLicenseeRequest withQueryParams(DeleteLicenseeQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public DeleteLicenseeSecurity security;
-    public DeleteLicenseeRequest withSecurity(DeleteLicenseeSecurity security) {
-        this.security = security;
+    /**
+     * Unique number (across all Products of a Vendor) that identifies the Licensee.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=licenseeNumber")
+    public String licenseeNumber;
+    public DeleteLicenseeRequest withLicenseeNumber(String licenseeNumber) {
+        this.licenseeNumber = licenseeNumber;
         return this;
     }
     

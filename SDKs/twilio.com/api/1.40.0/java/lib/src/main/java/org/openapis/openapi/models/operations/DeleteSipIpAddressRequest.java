@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSipIpAddressRequest {
-    
-    public DeleteSipIpAddressPathParams pathParams;
-    public DeleteSipIpAddressRequest withPathParams(DeleteSipIpAddressPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public DeleteSipIpAddressRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public DeleteSipIpAddressSecurity security;
-    public DeleteSipIpAddressRequest withSecurity(DeleteSipIpAddressSecurity security) {
-        this.security = security;
+    /**
+     * The IpAccessControlList Sid that identifies the IpAddress resources to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=IpAccessControlListSid")
+    public String ipAccessControlListSid;
+    public DeleteSipIpAddressRequest withIpAccessControlListSid(String ipAccessControlListSid) {
+        this.ipAccessControlListSid = ipAccessControlListSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public DeleteSipIpAddressRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * A 34 character string that uniquely identifies the resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteSipIpAddressRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

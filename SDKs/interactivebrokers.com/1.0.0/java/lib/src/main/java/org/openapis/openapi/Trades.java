@@ -40,12 +40,12 @@ public class Trades {
      */
     public org.openapis.openapi.models.operations.GetAccountsAccountTradesResponse getAccountsAccountTrades(org.openapis.openapi.models.operations.GetAccountsAccountTradesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAccountsAccountTradesPathParams.class, baseUrl, "/accounts/{account}/trades", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAccountsAccountTradesRequest.class, baseUrl, "/accounts/{account}/trades", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "string");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "string");
         req.setBody(serializedRequestBody);
         
         

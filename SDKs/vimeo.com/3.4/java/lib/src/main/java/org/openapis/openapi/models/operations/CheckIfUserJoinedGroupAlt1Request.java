@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CheckIfUserJoinedGroupAlt1Request {
-    
-    public CheckIfUserJoinedGroupAlt1PathParams pathParams;
-    public CheckIfUserJoinedGroupAlt1Request withPathParams(CheckIfUserJoinedGroupAlt1PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public Double groupId;
+    public CheckIfUserJoinedGroupAlt1Request withGroupId(Double groupId) {
+        this.groupId = groupId;
         return this;
     }
     

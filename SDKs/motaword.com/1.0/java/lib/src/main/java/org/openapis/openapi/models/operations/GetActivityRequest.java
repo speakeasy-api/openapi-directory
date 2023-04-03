@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetActivityRequest {
+    /**
+     * Activity ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=activityId")
+    public Long activityId;
+    public GetActivityRequest withActivityId(Long activityId) {
+        this.activityId = activityId;
+        return this;
+    }
     
-    public GetActivityPathParams pathParams;
-    public GetActivityRequest withPathParams(GetActivityPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public Long projectId;
+    public GetActivityRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     

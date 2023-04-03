@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimFrontPortsUpdateRequest {
-    
-    public DcimFrontPortsUpdatePathParams pathParams;
-    public DcimFrontPortsUpdateRequest withPathParams(DcimFrontPortsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.WritableFrontPortInput writableFrontPortInput;
+    public DcimFrontPortsUpdateRequest withWritableFrontPortInput(org.openapis.openapi.models.shared.WritableFrontPortInput writableFrontPortInput) {
+        this.writableFrontPortInput = writableFrontPortInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WritableFrontPortInput request;
-    public DcimFrontPortsUpdateRequest withRequest(org.openapis.openapi.models.shared.WritableFrontPortInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this front port.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimFrontPortsUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

@@ -40,7 +40,7 @@ public class Properties {
      */
     public org.openapis.openapi.models.operations.DeleteCommitHostedPropertyValueResponse deleteCommitHostedPropertyValue(org.openapis.openapi.models.operations.DeleteCommitHostedPropertyValueRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCommitHostedPropertyValuePathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/commit/{commit}/properties/{app_key}/{property_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCommitHostedPropertyValueRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/commit/{commit}/properties/{app_key}/{property_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -73,7 +73,7 @@ public class Properties {
      */
     public org.openapis.openapi.models.operations.DeletePullRequestHostedPropertyValueResponse deletePullRequestHostedPropertyValue(org.openapis.openapi.models.operations.DeletePullRequestHostedPropertyValueRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePullRequestHostedPropertyValuePathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pullrequests/{pullrequest_id}/properties/{app_key}/{property_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePullRequestHostedPropertyValueRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pullrequests/{pullrequest_id}/properties/{app_key}/{property_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -106,7 +106,7 @@ public class Properties {
      */
     public org.openapis.openapi.models.operations.DeleteRepositoryHostedPropertyValueResponse deleteRepositoryHostedPropertyValue(org.openapis.openapi.models.operations.DeleteRepositoryHostedPropertyValueRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoryHostedPropertyValuePathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/properties/{app_key}/{property_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoryHostedPropertyValueRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/properties/{app_key}/{property_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -139,7 +139,7 @@ public class Properties {
      */
     public org.openapis.openapi.models.operations.DeleteUserHostedPropertyValueResponse deleteUserHostedPropertyValue(org.openapis.openapi.models.operations.DeleteUserHostedPropertyValueRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserHostedPropertyValuePathParams.class, baseUrl, "/users/{selected_user}/properties/{app_key}/{property_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserHostedPropertyValueRequest.class, baseUrl, "/users/{selected_user}/properties/{app_key}/{property_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -172,7 +172,7 @@ public class Properties {
      */
     public org.openapis.openapi.models.operations.GetCommitHostedPropertyValueResponse getCommitHostedPropertyValue(org.openapis.openapi.models.operations.GetCommitHostedPropertyValueRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCommitHostedPropertyValuePathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/commit/{commit}/properties/{app_key}/{property_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCommitHostedPropertyValueRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/commit/{commit}/properties/{app_key}/{property_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -211,7 +211,7 @@ public class Properties {
      */
     public org.openapis.openapi.models.operations.GetPullRequestHostedPropertyValueResponse getPullRequestHostedPropertyValue(org.openapis.openapi.models.operations.GetPullRequestHostedPropertyValueRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPullRequestHostedPropertyValuePathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pullrequests/{pullrequest_id}/properties/{app_key}/{property_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPullRequestHostedPropertyValueRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pullrequests/{pullrequest_id}/properties/{app_key}/{property_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -250,7 +250,7 @@ public class Properties {
      */
     public org.openapis.openapi.models.operations.GetRepositoryHostedPropertyValueResponse getRepositoryHostedPropertyValue(org.openapis.openapi.models.operations.GetRepositoryHostedPropertyValueRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoryHostedPropertyValuePathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/properties/{app_key}/{property_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoryHostedPropertyValueRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/properties/{app_key}/{property_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -289,7 +289,7 @@ public class Properties {
      */
     public org.openapis.openapi.models.operations.RetrieveUserHostedPropertyValueResponse retrieveUserHostedPropertyValue(org.openapis.openapi.models.operations.RetrieveUserHostedPropertyValueRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveUserHostedPropertyValuePathParams.class, baseUrl, "/users/{selected_user}/properties/{app_key}/{property_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveUserHostedPropertyValueRequest.class, baseUrl, "/users/{selected_user}/properties/{app_key}/{property_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -328,12 +328,12 @@ public class Properties {
      */
     public org.openapis.openapi.models.operations.UpdateCommitHostedPropertyValueResponse updateCommitHostedPropertyValue(org.openapis.openapi.models.operations.UpdateCommitHostedPropertyValueRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCommitHostedPropertyValuePathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/commit/{commit}/properties/{app_key}/{property_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCommitHostedPropertyValueRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/commit/{commit}/properties/{app_key}/{property_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -366,12 +366,12 @@ public class Properties {
      */
     public org.openapis.openapi.models.operations.UpdatePullRequestHostedPropertyValueResponse updatePullRequestHostedPropertyValue(org.openapis.openapi.models.operations.UpdatePullRequestHostedPropertyValueRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePullRequestHostedPropertyValuePathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pullrequests/{pullrequest_id}/properties/{app_key}/{property_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePullRequestHostedPropertyValueRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/pullrequests/{pullrequest_id}/properties/{app_key}/{property_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -404,12 +404,12 @@ public class Properties {
      */
     public org.openapis.openapi.models.operations.UpdateRepositoryHostedPropertyValueResponse updateRepositoryHostedPropertyValue(org.openapis.openapi.models.operations.UpdateRepositoryHostedPropertyValueRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateRepositoryHostedPropertyValuePathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/properties/{app_key}/{property_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateRepositoryHostedPropertyValueRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/properties/{app_key}/{property_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -442,12 +442,12 @@ public class Properties {
      */
     public org.openapis.openapi.models.operations.UpdateUserHostedPropertyValueResponse updateUserHostedPropertyValue(org.openapis.openapi.models.operations.UpdateUserHostedPropertyValueRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateUserHostedPropertyValuePathParams.class, baseUrl, "/users/{selected_user}/properties/{app_key}/{property_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateUserHostedPropertyValueRequest.class, baseUrl, "/users/{selected_user}/properties/{app_key}/{property_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

@@ -41,7 +41,7 @@ public class Insight {
      */
     public org.openapis.openapi.models.operations.GetAddressResponse getAddress(org.openapis.openapi.models.operations.GetAddressRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAddressPathParams.class, baseUrl, "/ins/addr/{address}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAddressRequest.class, baseUrl, "/ins/addr/{address}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,7 +80,7 @@ public class Insight {
      */
     public org.openapis.openapi.models.operations.GetAddressBalanceResponse getAddressBalance(org.openapis.openapi.models.operations.GetAddressBalanceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAddressBalancePathParams.class, baseUrl, "/ins/addr/{address}/balance", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAddressBalanceRequest.class, baseUrl, "/ins/addr/{address}/balance", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -119,7 +119,7 @@ public class Insight {
      */
     public org.openapis.openapi.models.operations.GetAddressTotalReceivedResponse getAddressTotalReceived(org.openapis.openapi.models.operations.GetAddressTotalReceivedRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAddressTotalReceivedPathParams.class, baseUrl, "/ins/addr/{address}/totalReceived", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAddressTotalReceivedRequest.class, baseUrl, "/ins/addr/{address}/totalReceived", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -158,7 +158,7 @@ public class Insight {
      */
     public org.openapis.openapi.models.operations.GetAddressTotalSentResponse getAddressTotalSent(org.openapis.openapi.models.operations.GetAddressTotalSentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAddressTotalSentPathParams.class, baseUrl, "/ins/addr/{address}/totalSent", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAddressTotalSentRequest.class, baseUrl, "/ins/addr/{address}/totalSent", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -197,7 +197,7 @@ public class Insight {
      */
     public org.openapis.openapi.models.operations.GetAddressUnconfirmedBalanceResponse getAddressUnconfirmedBalance(org.openapis.openapi.models.operations.GetAddressUnconfirmedBalanceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAddressUnconfirmedBalancePathParams.class, baseUrl, "/ins/addr/{address}/unconfirmedBalance", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAddressUnconfirmedBalanceRequest.class, baseUrl, "/ins/addr/{address}/unconfirmedBalance", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -236,7 +236,7 @@ public class Insight {
      */
     public org.openapis.openapi.models.operations.GetAddressUtxosResponse getAddressUtxos(org.openapis.openapi.models.operations.GetAddressUtxosRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAddressUtxosPathParams.class, baseUrl, "/ins/addr/{address}/utxo", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAddressUtxosRequest.class, baseUrl, "/ins/addr/{address}/utxo", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -275,7 +275,7 @@ public class Insight {
      */
     public org.openapis.openapi.models.operations.GetBlockResponse getBlock(org.openapis.openapi.models.operations.GetBlockRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBlockPathParams.class, baseUrl, "/ins/block/{blockhash}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBlockRequest.class, baseUrl, "/ins/block/{blockhash}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -314,7 +314,7 @@ public class Insight {
      */
     public org.openapis.openapi.models.operations.GetBlockIndexResponse getBlockIndex(org.openapis.openapi.models.operations.GetBlockIndexRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBlockIndexPathParams.class, baseUrl, "/ins/block-index/{blockindex}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBlockIndexRequest.class, baseUrl, "/ins/block-index/{blockindex}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -353,7 +353,7 @@ public class Insight {
      */
     public org.openapis.openapi.models.operations.GetRawTxResponse getRawTx(org.openapis.openapi.models.operations.GetRawTxRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRawTxPathParams.class, baseUrl, "/ins/rawtx/{txid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRawTxRequest.class, baseUrl, "/ins/rawtx/{txid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -398,7 +398,7 @@ public class Insight {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetStatusQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetStatusRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -475,7 +475,7 @@ public class Insight {
      */
     public org.openapis.openapi.models.operations.GetTxResponse getTx(org.openapis.openapi.models.operations.GetTxRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTxPathParams.class, baseUrl, "/ins/tx/{txid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTxRequest.class, baseUrl, "/ins/tx/{txid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -520,7 +520,7 @@ public class Insight {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTxsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTxsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -558,7 +558,7 @@ public class Insight {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SendTxResponse sendTx(org.openapis.openapi.models.operations.SendTxRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SendTxResponse sendTx(org.openapis.openapi.models.shared.SendTxRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/ins/tx/send");
         

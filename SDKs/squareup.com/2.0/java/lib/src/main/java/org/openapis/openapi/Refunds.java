@@ -35,19 +35,20 @@ public class Refunds {
      * GetPaymentRefund
      * Retrieves a specific refund using the `refund_id`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPaymentRefundResponse getPaymentRefund(org.openapis.openapi.models.operations.GetPaymentRefundRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPaymentRefundResponse getPaymentRefund(org.openapis.openapi.models.operations.GetPaymentRefundRequest request, org.openapis.openapi.models.operations.GetPaymentRefundSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentRefundPathParams.class, baseUrl, "/v2/refunds/{refund_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentRefundRequest.class, baseUrl, "/v2/refunds/{refund_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -80,10 +81,11 @@ public class Refunds {
      * 
      * The maximum results per page is 100.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListPaymentRefundsResponse listPaymentRefunds(org.openapis.openapi.models.operations.ListPaymentRefundsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListPaymentRefundsResponse listPaymentRefunds(org.openapis.openapi.models.operations.ListPaymentRefundsRequest request, org.openapis.openapi.models.operations.ListPaymentRefundsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/refunds");
         
@@ -91,14 +93,14 @@ public class Refunds {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListPaymentRefundsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListPaymentRefundsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -129,10 +131,11 @@ public class Refunds {
      * refund of a cash or external payment. For more information, see
      * [Refund Payment](https://developer.squareup.com/docs/payments-api/refund-payments).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RefundPaymentResponse refundPayment(org.openapis.openapi.models.operations.RefundPaymentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RefundPaymentResponse refundPayment(org.openapis.openapi.models.shared.RefundPaymentRequest request, org.openapis.openapi.models.operations.RefundPaymentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/refunds");
         
@@ -146,7 +149,7 @@ public class Refunds {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

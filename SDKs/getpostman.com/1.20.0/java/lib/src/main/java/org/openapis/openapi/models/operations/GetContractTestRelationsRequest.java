@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContractTestRelationsRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiId")
+    public String apiId;
+    public GetContractTestRelationsRequest withApiId(String apiId) {
+        this.apiId = apiId;
+        return this;
+    }
     
-    public GetContractTestRelationsPathParams pathParams;
-    public GetContractTestRelationsRequest withPathParams(GetContractTestRelationsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiVersionId")
+    public String apiVersionId;
+    public GetContractTestRelationsRequest withApiVersionId(String apiVersionId) {
+        this.apiVersionId = apiVersionId;
         return this;
     }
     

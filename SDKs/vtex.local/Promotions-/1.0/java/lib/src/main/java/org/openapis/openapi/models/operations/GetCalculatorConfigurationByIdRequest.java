@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCalculatorConfigurationByIdRequest {
-    
-    public GetCalculatorConfigurationByIdPathParams pathParams;
-    public GetCalculatorConfigurationByIdRequest withPathParams(GetCalculatorConfigurationByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetCalculatorConfigurationByIdRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetCalculatorConfigurationByIdRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetCalculatorConfigurationByIdHeaders headers;
-    public GetCalculatorConfigurationByIdRequest withHeaders(GetCalculatorConfigurationByIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * Promotion ID or tax ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=idCalculatorConfiguration")
+    public String idCalculatorConfiguration;
+    public GetCalculatorConfigurationByIdRequest withIdCalculatorConfiguration(String idCalculatorConfiguration) {
+        this.idCalculatorConfiguration = idCalculatorConfiguration;
         return this;
     }
     

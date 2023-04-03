@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CommunityContentGetCommunityContentRequest {
+    /**
+     * The type of media to get
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mediaFilter")
+    public Integer mediaFilter;
+    public CommunityContentGetCommunityContentRequest withMediaFilter(Integer mediaFilter) {
+        this.mediaFilter = mediaFilter;
+        return this;
+    }
     
-    public CommunityContentGetCommunityContentPathParams pathParams;
-    public CommunityContentGetCommunityContentRequest withPathParams(CommunityContentGetCommunityContentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Zero based page
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=page")
+    public Integer page;
+    public CommunityContentGetCommunityContentRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The sort mode.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sort")
+    public Long sort;
+    public CommunityContentGetCommunityContentRequest withSort(Long sort) {
+        this.sort = sort;
         return this;
     }
     

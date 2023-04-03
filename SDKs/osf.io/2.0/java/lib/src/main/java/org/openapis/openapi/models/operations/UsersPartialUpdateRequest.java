@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UsersPartialUpdateRequest {
-    
-    public UsersPartialUpdatePathParams pathParams;
-    public UsersPartialUpdateRequest withPathParams(UsersPartialUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UsersPartialUpdateUserInput requestBody;
+    public UsersPartialUpdateRequest withRequestBody(UsersPartialUpdateUserInput requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UsersPartialUpdateUserInput request;
-    public UsersPartialUpdateRequest withRequest(UsersPartialUpdateUserInput request) {
-        this.request = request;
+    /**
+     * The unique identifier of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public String userId;
+    public UsersPartialUpdateRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

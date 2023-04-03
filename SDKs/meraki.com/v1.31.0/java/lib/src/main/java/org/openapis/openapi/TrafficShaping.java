@@ -40,12 +40,12 @@ public class TrafficShaping {
      */
     public org.openapis.openapi.models.operations.CreateNetworkApplianceTrafficShapingCustomPerformanceClassResponse createNetworkApplianceTrafficShapingCustomPerformanceClass(org.openapis.openapi.models.operations.CreateNetworkApplianceTrafficShapingCustomPerformanceClassRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkApplianceTrafficShapingCustomPerformanceClassPathParams.class, baseUrl, "/networks/{networkId}/appliance/trafficShaping/customPerformanceClasses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkApplianceTrafficShapingCustomPerformanceClassRequest.class, baseUrl, "/networks/{networkId}/appliance/trafficShaping/customPerformanceClasses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -85,7 +85,7 @@ public class TrafficShaping {
      */
     public org.openapis.openapi.models.operations.DeleteNetworkApplianceTrafficShapingCustomPerformanceClassResponse deleteNetworkApplianceTrafficShapingCustomPerformanceClass(org.openapis.openapi.models.operations.DeleteNetworkApplianceTrafficShapingCustomPerformanceClassRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkApplianceTrafficShapingCustomPerformanceClassPathParams.class, baseUrl, "/networks/{networkId}/appliance/trafficShaping/customPerformanceClasses/{customPerformanceClassId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkApplianceTrafficShapingCustomPerformanceClassRequest.class, baseUrl, "/networks/{networkId}/appliance/trafficShaping/customPerformanceClasses/{customPerformanceClassId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -119,7 +119,7 @@ public class TrafficShaping {
      */
     public org.openapis.openapi.models.operations.GetNetworkApplianceTrafficShapingResponse getNetworkApplianceTrafficShaping(org.openapis.openapi.models.operations.GetNetworkApplianceTrafficShapingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceTrafficShapingPathParams.class, baseUrl, "/networks/{networkId}/appliance/trafficShaping", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceTrafficShapingRequest.class, baseUrl, "/networks/{networkId}/appliance/trafficShaping", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -159,7 +159,7 @@ public class TrafficShaping {
      */
     public org.openapis.openapi.models.operations.GetNetworkApplianceTrafficShapingCustomPerformanceClassResponse getNetworkApplianceTrafficShapingCustomPerformanceClass(org.openapis.openapi.models.operations.GetNetworkApplianceTrafficShapingCustomPerformanceClassRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceTrafficShapingCustomPerformanceClassPathParams.class, baseUrl, "/networks/{networkId}/appliance/trafficShaping/customPerformanceClasses/{customPerformanceClassId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceTrafficShapingCustomPerformanceClassRequest.class, baseUrl, "/networks/{networkId}/appliance/trafficShaping/customPerformanceClasses/{customPerformanceClassId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -199,7 +199,7 @@ public class TrafficShaping {
      */
     public org.openapis.openapi.models.operations.GetNetworkApplianceTrafficShapingCustomPerformanceClassesResponse getNetworkApplianceTrafficShapingCustomPerformanceClasses(org.openapis.openapi.models.operations.GetNetworkApplianceTrafficShapingCustomPerformanceClassesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceTrafficShapingCustomPerformanceClassesPathParams.class, baseUrl, "/networks/{networkId}/appliance/trafficShaping/customPerformanceClasses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceTrafficShapingCustomPerformanceClassesRequest.class, baseUrl, "/networks/{networkId}/appliance/trafficShaping/customPerformanceClasses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -239,7 +239,7 @@ public class TrafficShaping {
      */
     public org.openapis.openapi.models.operations.GetNetworkApplianceTrafficShapingRulesResponse getNetworkApplianceTrafficShapingRules(org.openapis.openapi.models.operations.GetNetworkApplianceTrafficShapingRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceTrafficShapingRulesPathParams.class, baseUrl, "/networks/{networkId}/appliance/trafficShaping/rules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceTrafficShapingRulesRequest.class, baseUrl, "/networks/{networkId}/appliance/trafficShaping/rules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -279,7 +279,7 @@ public class TrafficShaping {
      */
     public org.openapis.openapi.models.operations.GetNetworkApplianceTrafficShapingUplinkBandwidthResponse getNetworkApplianceTrafficShapingUplinkBandwidth(org.openapis.openapi.models.operations.GetNetworkApplianceTrafficShapingUplinkBandwidthRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceTrafficShapingUplinkBandwidthPathParams.class, baseUrl, "/networks/{networkId}/appliance/trafficShaping/uplinkBandwidth", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceTrafficShapingUplinkBandwidthRequest.class, baseUrl, "/networks/{networkId}/appliance/trafficShaping/uplinkBandwidth", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -319,7 +319,7 @@ public class TrafficShaping {
      */
     public org.openapis.openapi.models.operations.GetNetworkApplianceTrafficShapingUplinkSelectionResponse getNetworkApplianceTrafficShapingUplinkSelection(org.openapis.openapi.models.operations.GetNetworkApplianceTrafficShapingUplinkSelectionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceTrafficShapingUplinkSelectionPathParams.class, baseUrl, "/networks/{networkId}/appliance/trafficShaping/uplinkSelection", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceTrafficShapingUplinkSelectionRequest.class, baseUrl, "/networks/{networkId}/appliance/trafficShaping/uplinkSelection", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -359,7 +359,7 @@ public class TrafficShaping {
      */
     public org.openapis.openapi.models.operations.GetNetworkTrafficShapingApplicationCategoriesResponse getNetworkTrafficShapingApplicationCategories(org.openapis.openapi.models.operations.GetNetworkTrafficShapingApplicationCategoriesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkTrafficShapingApplicationCategoriesPathParams.class, baseUrl, "/networks/{networkId}/trafficShaping/applicationCategories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkTrafficShapingApplicationCategoriesRequest.class, baseUrl, "/networks/{networkId}/trafficShaping/applicationCategories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -399,7 +399,7 @@ public class TrafficShaping {
      */
     public org.openapis.openapi.models.operations.GetNetworkTrafficShapingDscpTaggingOptionsResponse getNetworkTrafficShapingDscpTaggingOptions(org.openapis.openapi.models.operations.GetNetworkTrafficShapingDscpTaggingOptionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkTrafficShapingDscpTaggingOptionsPathParams.class, baseUrl, "/networks/{networkId}/trafficShaping/dscpTaggingOptions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkTrafficShapingDscpTaggingOptionsRequest.class, baseUrl, "/networks/{networkId}/trafficShaping/dscpTaggingOptions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -439,7 +439,7 @@ public class TrafficShaping {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessSsidTrafficShapingRulesResponse getNetworkWirelessSsidTrafficShapingRules(org.openapis.openapi.models.operations.GetNetworkWirelessSsidTrafficShapingRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidTrafficShapingRulesPathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/trafficShaping/rules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidTrafficShapingRulesRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/trafficShaping/rules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -479,12 +479,12 @@ public class TrafficShaping {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkApplianceTrafficShapingResponse updateNetworkApplianceTrafficShaping(org.openapis.openapi.models.operations.UpdateNetworkApplianceTrafficShapingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceTrafficShapingPathParams.class, baseUrl, "/networks/{networkId}/appliance/trafficShaping", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceTrafficShapingRequest.class, baseUrl, "/networks/{networkId}/appliance/trafficShaping", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -521,12 +521,12 @@ public class TrafficShaping {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkApplianceTrafficShapingCustomPerformanceClassResponse updateNetworkApplianceTrafficShapingCustomPerformanceClass(org.openapis.openapi.models.operations.UpdateNetworkApplianceTrafficShapingCustomPerformanceClassRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceTrafficShapingCustomPerformanceClassPathParams.class, baseUrl, "/networks/{networkId}/appliance/trafficShaping/customPerformanceClasses/{customPerformanceClassId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceTrafficShapingCustomPerformanceClassRequest.class, baseUrl, "/networks/{networkId}/appliance/trafficShaping/customPerformanceClasses/{customPerformanceClassId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -563,12 +563,12 @@ public class TrafficShaping {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkApplianceTrafficShapingRulesResponse updateNetworkApplianceTrafficShapingRules(org.openapis.openapi.models.operations.UpdateNetworkApplianceTrafficShapingRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceTrafficShapingRulesPathParams.class, baseUrl, "/networks/{networkId}/appliance/trafficShaping/rules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceTrafficShapingRulesRequest.class, baseUrl, "/networks/{networkId}/appliance/trafficShaping/rules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -605,12 +605,12 @@ public class TrafficShaping {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkApplianceTrafficShapingUplinkBandwidthResponse updateNetworkApplianceTrafficShapingUplinkBandwidth(org.openapis.openapi.models.operations.UpdateNetworkApplianceTrafficShapingUplinkBandwidthRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceTrafficShapingUplinkBandwidthPathParams.class, baseUrl, "/networks/{networkId}/appliance/trafficShaping/uplinkBandwidth", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceTrafficShapingUplinkBandwidthRequest.class, baseUrl, "/networks/{networkId}/appliance/trafficShaping/uplinkBandwidth", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -647,12 +647,12 @@ public class TrafficShaping {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkApplianceTrafficShapingUplinkSelectionResponse updateNetworkApplianceTrafficShapingUplinkSelection(org.openapis.openapi.models.operations.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceTrafficShapingUplinkSelectionPathParams.class, baseUrl, "/networks/{networkId}/appliance/trafficShaping/uplinkSelection", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceTrafficShapingUplinkSelectionRequest.class, baseUrl, "/networks/{networkId}/appliance/trafficShaping/uplinkSelection", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -689,12 +689,12 @@ public class TrafficShaping {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidTrafficShapingRulesResponse updateNetworkWirelessSsidTrafficShapingRules(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidTrafficShapingRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidTrafficShapingRulesPathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/trafficShaping/rules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidTrafficShapingRulesRequest.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/trafficShaping/rules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

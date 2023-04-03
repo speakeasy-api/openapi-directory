@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchDomainConfigRequest {
-    
-    public FetchDomainConfigPathParams pathParams;
-    public FetchDomainConfigRequest withPathParams(FetchDomainConfigPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchDomainConfigSecurity security;
-    public FetchDomainConfigRequest withSecurity(FetchDomainConfigSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchDomainConfigRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Unique string used to identify the domain that this config should be associated with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DomainSid")
+    public String domainSid;
+    public FetchDomainConfigRequest withDomainSid(String domainSid) {
+        this.domainSid = domainSid;
         return this;
     }
     

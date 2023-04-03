@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGenresRequest {
-    
-    public GetGenresQueryParams queryParams;
-    public GetGenresRequest withQueryParams(GetGenresQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Get API Key on listennotes.com/api
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-ListenAPI-Key")
+    public String xListenAPIKey;
+    public GetGenresRequest withXListenAPIKey(String xListenAPIKey) {
+        this.xListenAPIKey = xListenAPIKey;
         return this;
     }
     
-    
-    public GetGenresHeaders headers;
-    public GetGenresRequest withHeaders(GetGenresHeaders headers) {
-        this.headers = headers;
+    /**
+     * Just show top level genres? If 1, yes, just show top level genres. If 0, no, show all genres.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=top_level_only")
+    public GetGenresTopLevelOnlyEnum topLevelOnly;
+    public GetGenresRequest withTopLevelOnly(GetGenresTopLevelOnlyEnum topLevelOnly) {
+        this.topLevelOnly = topLevelOnly;
         return this;
     }
     

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdminCreatePublicKeyRequest {
-    
-    public AdminCreatePublicKeyPathParams pathParams;
-    public AdminCreatePublicKeyRequest withPathParams(AdminCreatePublicKeyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateKeyOption createKeyOption;
+    public AdminCreatePublicKeyRequest withCreateKeyOption(org.openapis.openapi.models.shared.CreateKeyOption createKeyOption) {
+        this.createKeyOption = createKeyOption;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateKeyOption request;
-    public AdminCreatePublicKeyRequest withRequest(org.openapis.openapi.models.shared.CreateKeyOption request) {
-        this.request = request;
+    /**
+     * username of the user
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public AdminCreatePublicKeyRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

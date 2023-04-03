@@ -6,7 +6,6 @@ import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GetFormatEnum;
 import org.openapis.openapi.models.operations.GetLangEnum;
-import org.openapis.openapi.models.operations.GetQueryParams;
 import org.openapis.openapi.models.operations.GetRequest;
 import org.openapis.openapi.models.operations.GetResponse;
 
@@ -17,13 +16,11 @@ public class Application {
                 .build();
 
             GetRequest req = new GetRequest() {{
-                queryParams = new GetQueryParams() {{
-                    format = "xml";
-                    ip = "8.8.8.8";
-                    key = "provident";
-                    lang = "pt";
-                }};
-            }};            
+                format = "xml";
+                ip = "8.8.8.8";
+                key = "provident";
+                lang = "pt";
+            }}            
 
             GetResponse res = sdk.get(req);
 

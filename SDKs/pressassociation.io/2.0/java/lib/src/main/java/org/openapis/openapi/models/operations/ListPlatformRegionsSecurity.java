@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListPlatformRegionsSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeApikey apikey;
-    public ListPlatformRegionsSecurity withApikey(org.openapis.openapi.models.shared.SchemeApikey apikey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=apikey")
+    public String apikey;
+    public ListPlatformRegionsSecurity withApikey(String apikey) {
         this.apikey = apikey;
         return this;
     }

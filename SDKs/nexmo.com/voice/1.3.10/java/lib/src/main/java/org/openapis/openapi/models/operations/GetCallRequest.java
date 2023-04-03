@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCallRequest {
-    
-    public GetCallPathParams pathParams;
-    public GetCallRequest withPathParams(GetCallPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetCallSecurity security;
-    public GetCallRequest withSecurity(GetCallSecurity security) {
-        this.security = security;
+    /**
+     * UUID of the Call
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=uuid")
+    public String uuid;
+    public GetCallRequest withUuid(String uuid) {
+        this.uuid = uuid;
         return this;
     }
     

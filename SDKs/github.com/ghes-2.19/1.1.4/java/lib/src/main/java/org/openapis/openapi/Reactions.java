@@ -47,12 +47,12 @@ public class Reactions {
      */
     public org.openapis.openapi.models.operations.ReactionsCreateForCommitCommentResponse reactionsCreateForCommitComment(org.openapis.openapi.models.operations.ReactionsCreateForCommitCommentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReactionsCreateForCommitCommentPathParams.class, baseUrl, "/repos/{owner}/{repo}/comments/{comment_id}/reactions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReactionsCreateForCommitCommentRequest.class, baseUrl, "/repos/{owner}/{repo}/comments/{comment_id}/reactions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -108,12 +108,12 @@ public class Reactions {
      */
     public org.openapis.openapi.models.operations.ReactionsCreateForIssueResponse reactionsCreateForIssue(org.openapis.openapi.models.operations.ReactionsCreateForIssueRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReactionsCreateForIssuePathParams.class, baseUrl, "/repos/{owner}/{repo}/issues/{issue_number}/reactions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReactionsCreateForIssueRequest.class, baseUrl, "/repos/{owner}/{repo}/issues/{issue_number}/reactions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -169,12 +169,12 @@ public class Reactions {
      */
     public org.openapis.openapi.models.operations.ReactionsCreateForIssueCommentResponse reactionsCreateForIssueComment(org.openapis.openapi.models.operations.ReactionsCreateForIssueCommentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReactionsCreateForIssueCommentPathParams.class, baseUrl, "/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReactionsCreateForIssueCommentRequest.class, baseUrl, "/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -230,12 +230,12 @@ public class Reactions {
      */
     public org.openapis.openapi.models.operations.ReactionsCreateForPullRequestReviewCommentResponse reactionsCreateForPullRequestReviewComment(org.openapis.openapi.models.operations.ReactionsCreateForPullRequestReviewCommentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReactionsCreateForPullRequestReviewCommentPathParams.class, baseUrl, "/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReactionsCreateForPullRequestReviewCommentRequest.class, baseUrl, "/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -291,18 +291,18 @@ public class Reactions {
      */
     public org.openapis.openapi.models.operations.ReactionsCreateForTeamDiscussionResponse reactionsCreateForTeamDiscussion(org.openapis.openapi.models.operations.ReactionsCreateForTeamDiscussionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReactionsCreateForTeamDiscussionPathParams.class, baseUrl, "/teams/{team_id}/discussions/{discussion_number}/reactions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReactionsCreateForTeamDiscussionRequest.class, baseUrl, "/teams/{team_id}/discussions/{discussion_number}/reactions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -344,18 +344,18 @@ public class Reactions {
      */
     public org.openapis.openapi.models.operations.ReactionsCreateForTeamDiscussionCommentResponse reactionsCreateForTeamDiscussionComment(org.openapis.openapi.models.operations.ReactionsCreateForTeamDiscussionCommentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReactionsCreateForTeamDiscussionCommentPathParams.class, baseUrl, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReactionsCreateForTeamDiscussionCommentRequest.class, baseUrl, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -397,13 +397,13 @@ public class Reactions {
      */
     public org.openapis.openapi.models.operations.ReactionsDeleteResponse reactionsDelete(org.openapis.openapi.models.operations.ReactionsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReactionsDeletePathParams.class, baseUrl, "/reactions/{reaction_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReactionsDeleteRequest.class, baseUrl, "/reactions/{reaction_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -439,13 +439,13 @@ public class Reactions {
      */
     public org.openapis.openapi.models.operations.ReactionsListForCommitCommentResponse reactionsListForCommitComment(org.openapis.openapi.models.operations.ReactionsListForCommitCommentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReactionsListForCommitCommentPathParams.class, baseUrl, "/repos/{owner}/{repo}/comments/{comment_id}/reactions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReactionsListForCommitCommentRequest.class, baseUrl, "/repos/{owner}/{repo}/comments/{comment_id}/reactions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReactionsListForCommitCommentQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReactionsListForCommitCommentRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -503,13 +503,13 @@ public class Reactions {
      */
     public org.openapis.openapi.models.operations.ReactionsListForIssueResponse reactionsListForIssue(org.openapis.openapi.models.operations.ReactionsListForIssueRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReactionsListForIssuePathParams.class, baseUrl, "/repos/{owner}/{repo}/issues/{issue_number}/reactions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReactionsListForIssueRequest.class, baseUrl, "/repos/{owner}/{repo}/issues/{issue_number}/reactions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReactionsListForIssueQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReactionsListForIssueRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -567,13 +567,13 @@ public class Reactions {
      */
     public org.openapis.openapi.models.operations.ReactionsListForIssueCommentResponse reactionsListForIssueComment(org.openapis.openapi.models.operations.ReactionsListForIssueCommentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReactionsListForIssueCommentPathParams.class, baseUrl, "/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReactionsListForIssueCommentRequest.class, baseUrl, "/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReactionsListForIssueCommentQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReactionsListForIssueCommentRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -631,13 +631,13 @@ public class Reactions {
      */
     public org.openapis.openapi.models.operations.ReactionsListForPullRequestReviewCommentResponse reactionsListForPullRequestReviewComment(org.openapis.openapi.models.operations.ReactionsListForPullRequestReviewCommentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReactionsListForPullRequestReviewCommentPathParams.class, baseUrl, "/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReactionsListForPullRequestReviewCommentRequest.class, baseUrl, "/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReactionsListForPullRequestReviewCommentQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReactionsListForPullRequestReviewCommentRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -695,19 +695,19 @@ public class Reactions {
      */
     public org.openapis.openapi.models.operations.ReactionsListForTeamDiscussionResponse reactionsListForTeamDiscussion(org.openapis.openapi.models.operations.ReactionsListForTeamDiscussionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReactionsListForTeamDiscussionPathParams.class, baseUrl, "/teams/{team_id}/discussions/{discussion_number}/reactions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReactionsListForTeamDiscussionRequest.class, baseUrl, "/teams/{team_id}/discussions/{discussion_number}/reactions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReactionsListForTeamDiscussionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReactionsListForTeamDiscussionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -751,19 +751,19 @@ public class Reactions {
      */
     public org.openapis.openapi.models.operations.ReactionsListForTeamDiscussionCommentResponse reactionsListForTeamDiscussionComment(org.openapis.openapi.models.operations.ReactionsListForTeamDiscussionCommentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReactionsListForTeamDiscussionCommentPathParams.class, baseUrl, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReactionsListForTeamDiscussionCommentRequest.class, baseUrl, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReactionsListForTeamDiscussionCommentQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReactionsListForTeamDiscussionCommentRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

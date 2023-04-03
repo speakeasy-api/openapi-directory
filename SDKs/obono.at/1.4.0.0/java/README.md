@@ -17,27 +17,18 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.GetAuthSecurity;
-import org.openapis.openapi.models.operations.GetAuthRequest;
 import org.openapis.openapi.models.operations.GetAuthResponse;
-import org.openapis.openapi.models.shared.SchemeBasicAuth;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
+                    jwt = "YOUR_API_KEY_HERE";
+                }})
                 .build();
 
-            GetAuthRequest req = new GetAuthRequest() {{
-                security = new GetAuthSecurity() {{
-                    basicAuth = new SchemeBasicAuth() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
-                }};
-            }};            
-
-            GetAuthResponse res = sdk.auth.getAuth(req);
+            GetAuthResponse res = sdk.auth.getAuth();
 
             if (res.authResult.isPresent()) {
                 // handle response
@@ -49,7 +40,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### auth

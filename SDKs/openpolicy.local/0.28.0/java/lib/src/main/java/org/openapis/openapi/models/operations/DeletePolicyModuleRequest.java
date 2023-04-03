@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletePolicyModuleRequest {
-    
-    public DeletePolicyModulePathParams pathParams;
-    public DeletePolicyModuleRequest withPathParams(DeletePolicyModulePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of a policy module
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeletePolicyModuleRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public DeletePolicyModuleQueryParams queryParams;
-    public DeletePolicyModuleRequest withQueryParams(DeletePolicyModuleQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * If true, response will be in a human-readable format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pretty")
+    public Boolean pretty;
+    public DeletePolicyModuleRequest withPretty(Boolean pretty) {
+        this.pretty = pretty;
         return this;
     }
     

@@ -96,13 +96,13 @@ public class OMInvoiceAPISettings {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "orderInvoiceDesignSettings", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -209,7 +209,7 @@ public class OMInvoiceAPISettings {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SaveOrderInvoiceDesignSettingsResponse saveOrderInvoiceDesignSettings(org.openapis.openapi.models.operations.SaveOrderInvoiceDesignSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SaveOrderInvoiceDesignSettingsResponse saveOrderInvoiceDesignSettings(org.openapis.openapi.models.shared.OrderInvoiceDesignSettings request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/user/marketplaces/orders/invoices/settings/design");
         
@@ -262,7 +262,7 @@ public class OMInvoiceAPISettings {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SaveOrderInvoiceGeneralSettingsResponse saveOrderInvoiceGeneralSettings(org.openapis.openapi.models.operations.SaveOrderInvoiceGeneralSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SaveOrderInvoiceGeneralSettingsResponse saveOrderInvoiceGeneralSettings(org.openapis.openapi.models.shared.OrderInvoiceGeneralSettings request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/user/marketplaces/orders/invoices/settings/general");
         

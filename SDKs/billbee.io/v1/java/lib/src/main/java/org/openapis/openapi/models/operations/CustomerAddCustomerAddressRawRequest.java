@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CustomerAddCustomerAddressRawRequest {
-    
-    public CustomerAddCustomerAddressRawPathParams pathParams;
-    public CustomerAddCustomerAddressRawRequest withPathParams(CustomerAddCustomerAddressRawPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Model containing the address, that should be attached.
      */
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public CustomerAddCustomerAddressRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public CustomerAddCustomerAddressRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * CustomerId to attach the new address to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public CustomerAddCustomerAddressRawRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

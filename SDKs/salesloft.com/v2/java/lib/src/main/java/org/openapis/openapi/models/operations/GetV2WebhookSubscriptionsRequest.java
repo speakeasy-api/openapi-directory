@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2WebhookSubscriptionsRequest {
-    
-    public GetV2WebhookSubscriptionsQueryParams queryParams;
-    public GetV2WebhookSubscriptionsRequest withQueryParams(GetV2WebhookSubscriptionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filters webhook subscriptions by whether is enabled or not.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enabled")
+    public Boolean enabled;
+    public GetV2WebhookSubscriptionsRequest withEnabled(Boolean enabled) {
+        this.enabled = enabled;
         return this;
     }
     

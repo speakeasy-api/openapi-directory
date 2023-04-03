@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCertificatesIdActionsActionIdRequest {
+    /**
+     * ID of the Action
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=action_id")
+    public Long actionId;
+    public GetCertificatesIdActionsActionIdRequest withActionId(Long actionId) {
+        this.actionId = actionId;
+        return this;
+    }
     
-    public GetCertificatesIdActionsActionIdPathParams pathParams;
-    public GetCertificatesIdActionsActionIdRequest withPathParams(GetCertificatesIdActionsActionIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the Certificate
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetCertificatesIdActionsActionIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

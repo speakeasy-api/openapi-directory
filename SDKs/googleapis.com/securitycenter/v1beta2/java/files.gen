@@ -31,18 +31,12 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SecuritycenterProjectsLocationsClustersGetContainerThreatDetectionSettingsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/SecuritycenterProjectsLocationsClustersUpdateContainerThreatDetectionSettingsSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/SecuritycenterProjectsLocationsClustersUpdateContainerThreatDetectionSettingsPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/SecuritycenterProjectsLocationsClustersUpdateContainerThreatDetectionSettingsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/SecuritycenterProjectsLocationsClustersUpdateContainerThreatDetectionSettingsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SecuritycenterProjectsLocationsClustersUpdateContainerThreatDetectionSettingsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/SecuritycenterProjectsWebSecurityScannerSettingsCalculateSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/SecuritycenterProjectsWebSecurityScannerSettingsCalculatePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/SecuritycenterProjectsWebSecurityScannerSettingsCalculateQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/SecuritycenterProjectsWebSecurityScannerSettingsCalculateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SecuritycenterProjectsWebSecurityScannerSettingsCalculateResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ContainerThreatDetectionSettingsServiceEnablementStateEnum.java
@@ -52,8 +46,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/ConfigModuleEnablementState
 lib/src/main/java/org/openapis/openapi/models/shared/Config.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2c.java
 lib/src/main/java/org/openapis/openapi/models/shared/WebSecurityScannerSettingsServiceEnablementStateEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/WebSecurityScannerSettings.java
 USAGE.md

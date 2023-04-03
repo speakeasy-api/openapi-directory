@@ -4,20 +4,28 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWebhooksWebhookIdLogsRequest {
-    
-    public GetWebhooksWebhookIdLogsPathParams pathParams;
-    public GetWebhooksWebhookIdLogsRequest withPathParams(GetWebhooksWebhookIdLogsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The number of records to return in each page.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[size]")
+    public Long pageSize;
+    public GetWebhooksWebhookIdLogsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
-    
-    public GetWebhooksWebhookIdLogsQueryParams queryParams;
-    public GetWebhooksWebhookIdLogsRequest withQueryParams(GetWebhooksWebhookIdLogsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The unique identifier for the webhook.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webhookId")
+    public String webhookId;
+    public GetWebhooksWebhookIdLogsRequest withWebhookId(String webhookId) {
+        this.webhookId = webhookId;
         return this;
     }
     

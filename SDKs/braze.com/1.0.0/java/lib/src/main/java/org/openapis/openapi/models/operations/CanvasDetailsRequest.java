@@ -4,13 +4,18 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CanvasDetailsRequest {
-    
-    public CanvasDetailsQueryParams queryParams;
-    public CanvasDetailsRequest withQueryParams(CanvasDetailsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * (Required) String
+     * 
+     * Canvas API Identifier 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=canvas_id")
+    public String canvasId;
+    public CanvasDetailsRequest withCanvasId(String canvasId) {
+        this.canvasId = canvasId;
         return this;
     }
     

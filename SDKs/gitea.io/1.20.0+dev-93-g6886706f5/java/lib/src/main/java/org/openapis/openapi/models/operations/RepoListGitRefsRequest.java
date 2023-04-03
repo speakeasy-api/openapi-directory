@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoListGitRefsRequest {
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoListGitRefsRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public RepoListGitRefsPathParams pathParams;
-    public RepoListGitRefsRequest withPathParams(RepoListGitRefsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * part or full name of the ref
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ref")
+    public String ref;
+    public RepoListGitRefsRequest withRef(String ref) {
+        this.ref = ref;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoListGitRefsRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

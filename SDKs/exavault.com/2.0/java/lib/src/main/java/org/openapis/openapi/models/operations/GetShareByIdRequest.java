@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetShareByIdRequest {
-    
-    public GetShareByIdPathParams pathParams;
-    public GetShareByIdRequest withPathParams(GetShareByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Access Token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-access-token")
+    public String evAccessToken;
+    public GetShareByIdRequest withEvAccessToken(String evAccessToken) {
+        this.evAccessToken = evAccessToken;
         return this;
     }
     
-    
-    public GetShareByIdQueryParams queryParams;
-    public GetShareByIdRequest withQueryParams(GetShareByIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * API Key
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-api-key")
+    public String evApiKey;
+    public GetShareByIdRequest withEvApiKey(String evApiKey) {
+        this.evApiKey = evApiKey;
         return this;
     }
     
+    /**
+     * ID of the share entry
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public GetShareByIdRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetShareByIdHeaders headers;
-    public GetShareByIdRequest withHeaders(GetShareByIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * Comma separated list of relationships to include in response. Possible values are **owner**, **resources**, **notifications**, **activity**.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include")
+    public String include;
+    public GetShareByIdRequest withInclude(String include) {
+        this.include = include;
         return this;
     }
     

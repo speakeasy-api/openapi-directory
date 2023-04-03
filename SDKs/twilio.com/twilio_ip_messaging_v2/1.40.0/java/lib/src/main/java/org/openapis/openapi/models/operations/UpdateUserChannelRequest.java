@@ -7,31 +7,31 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateUserChannelRequest {
-    
-    public UpdateUserChannelPathParams pathParams;
-    public UpdateUserChannelRequest withPathParams(UpdateUserChannelPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChannelSid")
+    public String channelSid;
+    public UpdateUserChannelRequest withChannelSid(String channelSid) {
+        this.channelSid = channelSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateUserChannelUpdateUserChannelRequest request;
-    public UpdateUserChannelRequest withRequest(UpdateUserChannelUpdateUserChannelRequest request) {
-        this.request = request;
+    public UpdateUserChannelUpdateUserChannelRequest requestBody;
+    public UpdateUserChannelRequest withRequestBody(UpdateUserChannelUpdateUserChannelRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateUserChannelSecurity security;
-    public UpdateUserChannelRequest withSecurity(UpdateUserChannelSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public UpdateUserChannelRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public UpdateUserChannelRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=UserSid")
+    public String userSid;
+    public UpdateUserChannelRequest withUserSid(String userSid) {
+        this.userSid = userSid;
         return this;
     }
     

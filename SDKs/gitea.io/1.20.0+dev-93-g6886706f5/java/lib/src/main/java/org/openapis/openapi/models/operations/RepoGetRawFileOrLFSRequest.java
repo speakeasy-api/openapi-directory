@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoGetRawFileOrLFSRequest {
-    
-    public RepoGetRawFileOrLFSPathParams pathParams;
-    public RepoGetRawFileOrLFSRequest withPathParams(RepoGetRawFileOrLFSPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * filepath of the file to get
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=filepath")
+    public String filepath;
+    public RepoGetRawFileOrLFSRequest withFilepath(String filepath) {
+        this.filepath = filepath;
         return this;
     }
     
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoGetRawFileOrLFSRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public RepoGetRawFileOrLFSQueryParams queryParams;
-    public RepoGetRawFileOrLFSRequest withQueryParams(RepoGetRawFileOrLFSQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The name of the commit/branch/tag. Default the repository\u2019s default branch (usually master)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ref")
+    public String ref;
+    public RepoGetRawFileOrLFSRequest withRef(String ref) {
+        this.ref = ref;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoGetRawFileOrLFSRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

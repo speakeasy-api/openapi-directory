@@ -113,19 +113,20 @@ public class BranchingModel {
      * }
      * ```
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchingModelResponse getRepositoriesWorkspaceRepoSlugBranchingModel(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchingModelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchingModelResponse getRepositoriesWorkspaceRepoSlugBranchingModel(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchingModelRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchingModelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchingModelPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/branching-model", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchingModelRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/branching-model", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -217,19 +218,20 @@ public class BranchingModel {
      * }
      * ```
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchingModelSettingsResponse getRepositoriesWorkspaceRepoSlugBranchingModelSettings(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchingModelSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchingModelSettingsResponse getRepositoriesWorkspaceRepoSlugBranchingModelSettings(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchingModelSettingsRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchingModelSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchingModelSettingsPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/branching-model/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchingModelSettingsRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/branching-model/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -264,19 +266,20 @@ public class BranchingModel {
     /**
      * Get the effective, or currently applied, branching model for a repository
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelResponse getRepositoriesWorkspaceRepoSlugEffectiveBranchingModel(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelResponse getRepositoriesWorkspaceRepoSlugEffectiveBranchingModel(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/effective-branching-model", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/effective-branching-model", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -366,19 +369,20 @@ public class BranchingModel {
      * }
      * ```
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelResponse getWorkspacesWorkspaceProjectsProjectKeyBranchingModel(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelResponse getWorkspacesWorkspaceProjectsProjectKeyBranchingModel(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelRequest request, org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelPathParams.class, baseUrl, "/workspaces/{workspace}/projects/{project_key}/branching-model", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelRequest.class, baseUrl, "/workspaces/{workspace}/projects/{project_key}/branching-model", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -470,19 +474,20 @@ public class BranchingModel {
      * }
      * ```
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsResponse getWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettings(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsResponse getWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettings(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsRequest request, org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsPathParams.class, baseUrl, "/workspaces/{workspace}/projects/{project_key}/branching-model/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsRequest.class, baseUrl, "/workspaces/{workspace}/projects/{project_key}/branching-model/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -604,19 +609,20 @@ public class BranchingModel {
      * 
      * We have deprecated this side effect and will remove it on 1 August 2022.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugBranchingModelSettingsResponse putRepositoriesWorkspaceRepoSlugBranchingModelSettings(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugBranchingModelSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugBranchingModelSettingsResponse putRepositoriesWorkspaceRepoSlugBranchingModelSettings(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugBranchingModelSettingsRequest request, org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugBranchingModelSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugBranchingModelSettingsPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/branching-model/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugBranchingModelSettingsRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/branching-model/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -718,19 +724,20 @@ public class BranchingModel {
      *     }
      * ```
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsResponse putWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettings(org.openapis.openapi.models.operations.PutWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsResponse putWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettings(org.openapis.openapi.models.operations.PutWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsRequest request, org.openapis.openapi.models.operations.PutWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsPathParams.class, baseUrl, "/workspaces/{workspace}/projects/{project_key}/branching-model/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsRequest.class, baseUrl, "/workspaces/{workspace}/projects/{project_key}/branching-model/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

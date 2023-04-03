@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCallRecordingMp3Request {
-    
-    public GetCallRecordingMp3PathParams pathParams;
-    public GetCallRecordingMp3Request withPathParams(GetCallRecordingMp3PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetCallRecordingMp3Security security;
-    public GetCallRecordingMp3Request withSecurity(GetCallRecordingMp3Security security) {
-        this.security = security;
+    /**
+     * An id of a call
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetCallRecordingMp3Request withId(Long id) {
+        this.id = id;
         return this;
     }
     

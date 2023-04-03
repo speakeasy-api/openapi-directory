@@ -33,25 +33,26 @@ public class ZoneOperations {
     /**
      * Deletes the specified zone-specific Operations resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeZoneOperationsDeleteResponse computeZoneOperationsDelete(org.openapis.openapi.models.operations.ComputeZoneOperationsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeZoneOperationsDeleteResponse computeZoneOperationsDelete(org.openapis.openapi.models.operations.ComputeZoneOperationsDeleteRequest request, org.openapis.openapi.models.operations.ComputeZoneOperationsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeZoneOperationsDeletePathParams.class, baseUrl, "/projects/{project}/zones/{zone}/operations/{operation}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeZoneOperationsDeleteRequest.class, baseUrl, "/projects/{project}/zones/{zone}/operations/{operation}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeZoneOperationsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeZoneOperationsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -72,25 +73,26 @@ public class ZoneOperations {
     /**
      * Retrieves the specified zone-specific Operations resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeZoneOperationsGetResponse computeZoneOperationsGet(org.openapis.openapi.models.operations.ComputeZoneOperationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeZoneOperationsGetResponse computeZoneOperationsGet(org.openapis.openapi.models.operations.ComputeZoneOperationsGetRequest request, org.openapis.openapi.models.operations.ComputeZoneOperationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeZoneOperationsGetPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/operations/{operation}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeZoneOperationsGetRequest.class, baseUrl, "/projects/{project}/zones/{zone}/operations/{operation}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeZoneOperationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeZoneOperationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -117,25 +119,26 @@ public class ZoneOperations {
     /**
      * Retrieves a list of Operation resources contained within the specified zone.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeZoneOperationsListResponse computeZoneOperationsList(org.openapis.openapi.models.operations.ComputeZoneOperationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeZoneOperationsListResponse computeZoneOperationsList(org.openapis.openapi.models.operations.ComputeZoneOperationsListRequest request, org.openapis.openapi.models.operations.ComputeZoneOperationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeZoneOperationsListPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/operations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeZoneOperationsListRequest.class, baseUrl, "/projects/{project}/zones/{zone}/operations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeZoneOperationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeZoneOperationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -162,25 +165,26 @@ public class ZoneOperations {
     /**
      * Waits for the specified Operation resource to return as `DONE` or for the request to approach the 2 minute deadline, and retrieves the specified Operation resource. This method waits for no more than the 2 minutes and then returns the current state of the operation, which might be `DONE` or still in progress. This method is called on a best-effort basis. Specifically: - In uncommon cases, when the server is overloaded, the request might return before the default deadline is reached, or might return after zero seconds. - If the default deadline is reached, there is no guarantee that the operation is actually done when the method returns. Be prepared to retry if the operation is not `DONE`. 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeZoneOperationsWaitResponse computeZoneOperationsWait(org.openapis.openapi.models.operations.ComputeZoneOperationsWaitRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeZoneOperationsWaitResponse computeZoneOperationsWait(org.openapis.openapi.models.operations.ComputeZoneOperationsWaitRequest request, org.openapis.openapi.models.operations.ComputeZoneOperationsWaitSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeZoneOperationsWaitPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/operations/{operation}/wait", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeZoneOperationsWaitRequest.class, baseUrl, "/projects/{project}/zones/{zone}/operations/{operation}/wait", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeZoneOperationsWaitQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeZoneOperationsWaitRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

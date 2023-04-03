@@ -36,13 +36,13 @@ public class Distance {
      */
     public org.openapis.openapi.models.operations.GetDistanceOutputFormatResponse getDistanceOutputFormat(org.openapis.openapi.models.operations.GetDistanceOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDistanceOutputFormatPathParams.class, baseUrl, "/distance.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDistanceOutputFormatRequest.class, baseUrl, "/distance.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDistanceOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDistanceOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -76,13 +76,13 @@ public class Distance {
      */
     public org.openapis.openapi.models.operations.GetDistanceBetweenPairsOutputFormatResponse getDistanceBetweenPairsOutputFormat(org.openapis.openapi.models.operations.GetDistanceBetweenPairsOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDistanceBetweenPairsOutputFormatPathParams.class, baseUrl, "/distance/betweenPairs.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDistanceBetweenPairsOutputFormatRequest.class, baseUrl, "/distance/betweenPairs.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDistanceBetweenPairsOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDistanceBetweenPairsOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -116,13 +116,13 @@ public class Distance {
      */
     public org.openapis.openapi.models.operations.GetTruckDistanceOutputFormatResponse getTruckDistanceOutputFormat(org.openapis.openapi.models.operations.GetTruckDistanceOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTruckDistanceOutputFormatPathParams.class, baseUrl, "/truck/distance.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTruckDistanceOutputFormatRequest.class, baseUrl, "/truck/distance.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTruckDistanceOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTruckDistanceOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -156,13 +156,13 @@ public class Distance {
      */
     public org.openapis.openapi.models.operations.GetTruckDistanceBetweenPairsOutputFormatResponse getTruckDistanceBetweenPairsOutputFormat(org.openapis.openapi.models.operations.GetTruckDistanceBetweenPairsOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTruckDistanceBetweenPairsOutputFormatPathParams.class, baseUrl, "/truck/distance/betweenPairs.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTruckDistanceBetweenPairsOutputFormatRequest.class, baseUrl, "/truck/distance/betweenPairs.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTruckDistanceBetweenPairsOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTruckDistanceBetweenPairsOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -196,13 +196,13 @@ public class Distance {
      */
     public org.openapis.openapi.models.operations.PostDistanceOutputFormatResponse postDistanceOutputFormat(org.openapis.openapi.models.operations.PostDistanceOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostDistanceOutputFormatPathParams.class, baseUrl, "/distance.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostDistanceOutputFormatRequest.class, baseUrl, "/distance.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostDistanceOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostDistanceOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -236,13 +236,13 @@ public class Distance {
      */
     public org.openapis.openapi.models.operations.PostDistanceBetweenPairsOutputFormatResponse postDistanceBetweenPairsOutputFormat(org.openapis.openapi.models.operations.PostDistanceBetweenPairsOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostDistanceBetweenPairsOutputFormatPathParams.class, baseUrl, "/distance/betweenPairs.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostDistanceBetweenPairsOutputFormatRequest.class, baseUrl, "/distance/betweenPairs.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostDistanceBetweenPairsOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostDistanceBetweenPairsOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -276,13 +276,13 @@ public class Distance {
      */
     public org.openapis.openapi.models.operations.PostTruckDistanceOutputFormatResponse postTruckDistanceOutputFormat(org.openapis.openapi.models.operations.PostTruckDistanceOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTruckDistanceOutputFormatPathParams.class, baseUrl, "/truck/distance.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTruckDistanceOutputFormatRequest.class, baseUrl, "/truck/distance.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostTruckDistanceOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostTruckDistanceOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -316,13 +316,13 @@ public class Distance {
      */
     public org.openapis.openapi.models.operations.PostTruckDistanceBetweenPairsOutputFormatResponse postTruckDistanceBetweenPairsOutputFormat(org.openapis.openapi.models.operations.PostTruckDistanceBetweenPairsOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTruckDistanceBetweenPairsOutputFormatPathParams.class, baseUrl, "/truck/distance/betweenPairs.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTruckDistanceBetweenPairsOutputFormatRequest.class, baseUrl, "/truck/distance/betweenPairs.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostTruckDistanceBetweenPairsOutputFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostTruckDistanceBetweenPairsOutputFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

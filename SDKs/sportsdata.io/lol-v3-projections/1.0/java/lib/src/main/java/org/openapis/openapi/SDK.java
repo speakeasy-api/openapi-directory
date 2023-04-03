@@ -141,7 +141,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DfsSlatesByDateResponse dfsSlatesByDate(org.openapis.openapi.models.operations.DfsSlatesByDateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfsSlatesByDatePathParams.class, baseUrl, "/{format}/DfsSlatesByDate/{date}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfsSlatesByDateRequest.class, baseUrl, "/{format}/DfsSlatesByDate/{date}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -181,7 +181,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByDateResponse projectedPlayerGameStatsByDate(org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByDateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByDatePathParams.class, baseUrl, "/{format}/PlayerGameProjectionStatsByDate/{date}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByDateRequest.class, baseUrl, "/{format}/PlayerGameProjectionStatsByDate/{date}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -221,7 +221,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByPlayerResponse projectedPlayerGameStatsByPlayer(org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByPlayerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByPlayerPathParams.class, baseUrl, "/{format}/PlayerGameProjectionStatsByPlayer/{date}/{playerid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByPlayerRequest.class, baseUrl, "/{format}/PlayerGameProjectionStatsByPlayer/{date}/{playerid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

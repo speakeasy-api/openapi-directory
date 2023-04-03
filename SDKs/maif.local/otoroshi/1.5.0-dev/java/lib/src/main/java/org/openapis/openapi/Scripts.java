@@ -37,10 +37,11 @@ public class Scripts {
      * Compile a script
      * Compile a script
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CompileScriptResponse compileScript(org.openapis.openapi.models.operations.CompileScriptRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CompileScriptResponse compileScript(org.openapis.openapi.models.shared.Script request, org.openapis.openapi.models.operations.CompileScriptSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/scripts/_compile");
         
@@ -51,7 +52,7 @@ public class Scripts {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,10 +82,11 @@ public class Scripts {
      * Create a new script
      * Create a new script
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateScriptResponse createScript(org.openapis.openapi.models.operations.CreateScriptRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateScriptResponse createScript(org.openapis.openapi.models.shared.Script request, org.openapis.openapi.models.operations.CreateScriptSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/scripts");
         
@@ -95,7 +97,7 @@ public class Scripts {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -125,19 +127,20 @@ public class Scripts {
      * Delete a script
      * Delete a script
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteScriptResponse deleteScript(org.openapis.openapi.models.operations.DeleteScriptRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteScriptResponse deleteScript(org.openapis.openapi.models.operations.DeleteScriptRequest request, org.openapis.openapi.models.operations.DeleteScriptSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteScriptPathParams.class, baseUrl, "/api/scripts/{scriptId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteScriptRequest.class, baseUrl, "/api/scripts/{scriptId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -166,11 +169,10 @@ public class Scripts {
     /**
      * Get all scripts
      * Get all scripts
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindAllScriptsResponse findAllScripts(org.openapis.openapi.models.operations.FindAllScriptsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FindAllScriptsResponse findAllScripts() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/scripts");
         
@@ -179,8 +181,7 @@ public class Scripts {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -209,19 +210,20 @@ public class Scripts {
      * Get a script
      * Get a script
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindScriptByIdResponse findScriptById(org.openapis.openapi.models.operations.FindScriptByIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FindScriptByIdResponse findScriptById(org.openapis.openapi.models.operations.FindScriptByIdRequest request, org.openapis.openapi.models.operations.FindScriptByIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FindScriptByIdPathParams.class, baseUrl, "/api/scripts/{scriptId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FindScriptByIdRequest.class, baseUrl, "/api/scripts/{scriptId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -251,21 +253,22 @@ public class Scripts {
      * Update a script with a diff
      * Update a script with a diff
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchScriptResponse patchScript(org.openapis.openapi.models.operations.PatchScriptRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchScriptResponse patchScript(org.openapis.openapi.models.operations.PatchScriptRequest request, org.openapis.openapi.models.operations.PatchScriptSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchScriptPathParams.class, baseUrl, "/api/scripts/{scriptId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchScriptRequest.class, baseUrl, "/api/scripts/{scriptId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -295,21 +298,22 @@ public class Scripts {
      * Update a script
      * Update a script
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateScriptResponse updateScript(org.openapis.openapi.models.operations.UpdateScriptRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateScriptResponse updateScript(org.openapis.openapi.models.operations.UpdateScriptRequest request, org.openapis.openapi.models.operations.UpdateScriptSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateScriptPathParams.class, baseUrl, "/api/scripts/{scriptId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateScriptRequest.class, baseUrl, "/api/scripts/{scriptId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "script", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

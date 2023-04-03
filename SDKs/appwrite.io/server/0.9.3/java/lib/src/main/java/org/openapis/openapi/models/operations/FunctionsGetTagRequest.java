@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FunctionsGetTagRequest {
-    
-    public FunctionsGetTagPathParams pathParams;
-    public FunctionsGetTagRequest withPathParams(FunctionsGetTagPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Function unique ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=functionId")
+    public String functionId;
+    public FunctionsGetTagRequest withFunctionId(String functionId) {
+        this.functionId = functionId;
         return this;
     }
     
-    
-    public FunctionsGetTagSecurity security;
-    public FunctionsGetTagRequest withSecurity(FunctionsGetTagSecurity security) {
-        this.security = security;
+    /**
+     * Tag unique ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tagId")
+    public String tagId;
+    public FunctionsGetTagRequest withTagId(String tagId) {
+        this.tagId = tagId;
         return this;
     }
     

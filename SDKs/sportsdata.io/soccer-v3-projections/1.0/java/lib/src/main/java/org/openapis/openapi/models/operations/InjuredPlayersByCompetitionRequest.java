@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InjuredPlayersByCompetitionRequest {
+    /**
+     * An indication of a soccer competition/league. This value can be the CompetitionId or the Competition Key. Possible values include: &lt;code&gt;EPL&lt;/code&gt;, &lt;code&gt;1&lt;/code&gt;, &lt;code&gt;MLS&lt;/code&gt;, &lt;code&gt;8&lt;/code&gt;, etc.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=competition")
+    public String competition;
+    public InjuredPlayersByCompetitionRequest withCompetition(String competition) {
+        this.competition = competition;
+        return this;
+    }
     
-    public InjuredPlayersByCompetitionPathParams pathParams;
-    public InjuredPlayersByCompetitionRequest withPathParams(InjuredPlayersByCompetitionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public InjuredPlayersByCompetitionFormatEnum format;
+    public InjuredPlayersByCompetitionRequest withFormat(InjuredPlayersByCompetitionFormatEnum format) {
+        this.format = format;
         return this;
     }
     

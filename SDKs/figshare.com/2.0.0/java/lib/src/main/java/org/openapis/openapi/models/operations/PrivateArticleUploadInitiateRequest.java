@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateArticleUploadInitiateRequest {
-    
-    public PrivateArticleUploadInitiatePathParams pathParams;
-    public PrivateArticleUploadInitiateRequest withPathParams(PrivateArticleUploadInitiatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.FileCreator request;
-    public PrivateArticleUploadInitiateRequest withRequest(org.openapis.openapi.models.shared.FileCreator request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.FileCreator fileCreator;
+    public PrivateArticleUploadInitiateRequest withFileCreator(org.openapis.openapi.models.shared.FileCreator fileCreator) {
+        this.fileCreator = fileCreator;
         return this;
     }
     
-    
-    public PrivateArticleUploadInitiateSecurity security;
-    public PrivateArticleUploadInitiateRequest withSecurity(PrivateArticleUploadInitiateSecurity security) {
-        this.security = security;
+    /**
+     * Article unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=article_id")
+    public Long articleId;
+    public PrivateArticleUploadInitiateRequest withArticleId(Long articleId) {
+        this.articleId = articleId;
         return this;
     }
     

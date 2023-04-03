@@ -41,7 +41,7 @@ public class Locationrules {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddLocationRuleResponse addLocationRule(org.openapis.openapi.models.operations.AddLocationRuleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddLocationRuleResponse addLocationRule(org.openapis.openapi.models.shared.LocationRuleUpdate request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/locationrules");
         
@@ -87,7 +87,7 @@ public class Locationrules {
      */
     public org.openapis.openapi.models.operations.DeleteLocationRuleResponse deleteLocationRule(org.openapis.openapi.models.operations.DeleteLocationRuleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteLocationRulePathParams.class, baseUrl, "/locationrules/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteLocationRuleRequest.class, baseUrl, "/locationrules/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -126,7 +126,7 @@ public class Locationrules {
      */
     public org.openapis.openapi.models.operations.GetLocationRuleByIdResponse getLocationRuleById(org.openapis.openapi.models.operations.GetLocationRuleByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLocationRuleByIdPathParams.class, baseUrl, "/locationrules/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLocationRuleByIdRequest.class, baseUrl, "/locationrules/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -171,7 +171,7 @@ public class Locationrules {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetLocationRulesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetLocationRulesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -210,12 +210,12 @@ public class Locationrules {
      */
     public org.openapis.openapi.models.operations.UpdateLocationRuleResponse updateLocationRule(org.openapis.openapi.models.operations.UpdateLocationRuleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateLocationRulePathParams.class, baseUrl, "/locationrules/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateLocationRuleRequest.class, baseUrl, "/locationrules/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "locationRuleUpdate", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

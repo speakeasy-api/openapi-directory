@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsUpdateRepoVariableRequest {
-    
-    public ActionsUpdateRepoVariablePathParams pathParams;
-    public ActionsUpdateRepoVariableRequest withPathParams(ActionsUpdateRepoVariablePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ActionsUpdateRepoVariableRequestBody requestBody;
+    public ActionsUpdateRepoVariableRequest withRequestBody(ActionsUpdateRepoVariableRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ActionsUpdateRepoVariableRequestBody request;
-    public ActionsUpdateRepoVariableRequest withRequest(ActionsUpdateRepoVariableRequestBody request) {
-        this.request = request;
+    /**
+     * The name of the variable.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public ActionsUpdateRepoVariableRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ActionsUpdateRepoVariableRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ActionsUpdateRepoVariableRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

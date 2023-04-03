@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OptionsBlockchainIdRequest {
-    
-    public OptionsBlockchainIdPathParams pathParams;
-    public OptionsBlockchainIdRequest withPathParams(OptionsBlockchainIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public OptionsBlockchainIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

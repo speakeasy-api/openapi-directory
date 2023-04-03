@@ -37,19 +37,20 @@ public class Projects {
      * Delete project article
      * Delete project article
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateProjectArticleDeleteResponse privateProjectArticleDelete(org.openapis.openapi.models.operations.PrivateProjectArticleDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateProjectArticleDeleteResponse privateProjectArticleDelete(org.openapis.openapi.models.operations.PrivateProjectArticleDeleteRequest request, org.openapis.openapi.models.operations.PrivateProjectArticleDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateProjectArticleDeletePathParams.class, baseUrl, "/account/projects/{project_id}/articles/{article_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateProjectArticleDeleteRequest.class, baseUrl, "/account/projects/{project_id}/articles/{article_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,19 +80,20 @@ public class Projects {
      * Project article details
      * Project article details
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateProjectArticleDetailsResponse privateProjectArticleDetails(org.openapis.openapi.models.operations.PrivateProjectArticleDetailsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateProjectArticleDetailsResponse privateProjectArticleDetails(org.openapis.openapi.models.operations.PrivateProjectArticleDetailsRequest request, org.openapis.openapi.models.operations.PrivateProjectArticleDetailsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateProjectArticleDetailsPathParams.class, baseUrl, "/account/projects/{project_id}/articles/{article_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateProjectArticleDetailsRequest.class, baseUrl, "/account/projects/{project_id}/articles/{article_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -129,19 +131,20 @@ public class Projects {
      * Project article file details
      * Project article file details
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateProjectArticleFileResponse privateProjectArticleFile(org.openapis.openapi.models.operations.PrivateProjectArticleFileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateProjectArticleFileResponse privateProjectArticleFile(org.openapis.openapi.models.operations.PrivateProjectArticleFileRequest request, org.openapis.openapi.models.operations.PrivateProjectArticleFileSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateProjectArticleFilePathParams.class, baseUrl, "/account/projects/{project_id}/articles/{article_id}/files/{file_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateProjectArticleFileRequest.class, baseUrl, "/account/projects/{project_id}/articles/{article_id}/files/{file_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -179,19 +182,20 @@ public class Projects {
      * Project article list files
      * List article files
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateProjectArticleFilesResponse privateProjectArticleFiles(org.openapis.openapi.models.operations.PrivateProjectArticleFilesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateProjectArticleFilesResponse privateProjectArticleFiles(org.openapis.openapi.models.operations.PrivateProjectArticleFilesRequest request, org.openapis.openapi.models.operations.PrivateProjectArticleFilesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateProjectArticleFilesPathParams.class, baseUrl, "/account/projects/{project_id}/articles/{article_id}/files", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateProjectArticleFilesRequest.class, baseUrl, "/account/projects/{project_id}/articles/{article_id}/files", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -229,30 +233,31 @@ public class Projects {
      * Create project article
      * Create a new Article and associate it with this project
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateProjectArticlesCreateResponse privateProjectArticlesCreate(org.openapis.openapi.models.operations.PrivateProjectArticlesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateProjectArticlesCreateResponse privateProjectArticlesCreate(org.openapis.openapi.models.operations.PrivateProjectArticlesCreateRequest request, org.openapis.openapi.models.operations.PrivateProjectArticlesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateProjectArticlesCreatePathParams.class, baseUrl, "/account/projects/{project_id}/articles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateProjectArticlesCreateRequest.class, baseUrl, "/account/projects/{project_id}/articles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "articleProjectCreate", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PrivateProjectArticlesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PrivateProjectArticlesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -292,25 +297,26 @@ public class Projects {
      * List project articles
      * List project articles
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateProjectArticlesListResponse privateProjectArticlesList(org.openapis.openapi.models.operations.PrivateProjectArticlesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateProjectArticlesListResponse privateProjectArticlesList(org.openapis.openapi.models.operations.PrivateProjectArticlesListRequest request, org.openapis.openapi.models.operations.PrivateProjectArticlesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateProjectArticlesListPathParams.class, baseUrl, "/account/projects/{project_id}/articles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateProjectArticlesListRequest.class, baseUrl, "/account/projects/{project_id}/articles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PrivateProjectArticlesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PrivateProjectArticlesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -348,19 +354,20 @@ public class Projects {
      * Remove project collaborator
      * Remove project collaborator
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateProjectCollaboratorDeleteResponse privateProjectCollaboratorDelete(org.openapis.openapi.models.operations.PrivateProjectCollaboratorDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateProjectCollaboratorDeleteResponse privateProjectCollaboratorDelete(org.openapis.openapi.models.operations.PrivateProjectCollaboratorDeleteRequest request, org.openapis.openapi.models.operations.PrivateProjectCollaboratorDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateProjectCollaboratorDeletePathParams.class, baseUrl, "/account/projects/{project_id}/collaborators/{user_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateProjectCollaboratorDeleteRequest.class, baseUrl, "/account/projects/{project_id}/collaborators/{user_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -390,24 +397,25 @@ public class Projects {
      * Invite project collaborators
      * Invite users to collaborate on project or view the project
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateProjectCollaboratorsInviteResponse privateProjectCollaboratorsInvite(org.openapis.openapi.models.operations.PrivateProjectCollaboratorsInviteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateProjectCollaboratorsInviteResponse privateProjectCollaboratorsInvite(org.openapis.openapi.models.operations.PrivateProjectCollaboratorsInviteRequest request, org.openapis.openapi.models.operations.PrivateProjectCollaboratorsInviteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateProjectCollaboratorsInvitePathParams.class, baseUrl, "/account/projects/{project_id}/collaborators", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateProjectCollaboratorsInviteRequest.class, baseUrl, "/account/projects/{project_id}/collaborators", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "projectCollaboratorInvite", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -445,19 +453,20 @@ public class Projects {
      * List project collaborators
      * List Project collaborators and invited users
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateProjectCollaboratorsListResponse privateProjectCollaboratorsList(org.openapis.openapi.models.operations.PrivateProjectCollaboratorsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateProjectCollaboratorsListResponse privateProjectCollaboratorsList(org.openapis.openapi.models.operations.PrivateProjectCollaboratorsListRequest request, org.openapis.openapi.models.operations.PrivateProjectCollaboratorsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateProjectCollaboratorsListPathParams.class, baseUrl, "/account/projects/{project_id}/collaborators", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateProjectCollaboratorsListRequest.class, baseUrl, "/account/projects/{project_id}/collaborators", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -495,10 +504,11 @@ public class Projects {
      * Create project
      * Create a new project
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateProjectCreateResponse privateProjectCreate(org.openapis.openapi.models.operations.PrivateProjectCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateProjectCreateResponse privateProjectCreate(org.openapis.openapi.models.shared.ProjectCreate request, org.openapis.openapi.models.operations.PrivateProjectCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/projects");
         
@@ -512,7 +522,7 @@ public class Projects {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -555,19 +565,20 @@ public class Projects {
      * When a group project is deleted, all the articles and files are deleted as well. Only project owner, group admin and above can delete a project.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateProjectDeleteResponse privateProjectDelete(org.openapis.openapi.models.operations.PrivateProjectDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateProjectDeleteResponse privateProjectDelete(org.openapis.openapi.models.operations.PrivateProjectDeleteRequest request, org.openapis.openapi.models.operations.PrivateProjectDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateProjectDeletePathParams.class, baseUrl, "/account/projects/{project_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateProjectDeleteRequest.class, baseUrl, "/account/projects/{project_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -597,19 +608,20 @@ public class Projects {
      * View project details
      * View a private project
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateProjectDetailsResponse privateProjectDetails(org.openapis.openapi.models.operations.PrivateProjectDetailsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateProjectDetailsResponse privateProjectDetails(org.openapis.openapi.models.operations.PrivateProjectDetailsRequest request, org.openapis.openapi.models.operations.PrivateProjectDetailsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateProjectDetailsPathParams.class, baseUrl, "/account/projects/{project_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateProjectDetailsRequest.class, baseUrl, "/account/projects/{project_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -647,19 +659,20 @@ public class Projects {
      * Private Project Leave
      * Please note: project's owner cannot leave the project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateProjectLeaveResponse privateProjectLeave(org.openapis.openapi.models.operations.PrivateProjectLeaveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateProjectLeaveResponse privateProjectLeave(org.openapis.openapi.models.operations.PrivateProjectLeaveRequest request, org.openapis.openapi.models.operations.PrivateProjectLeaveSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateProjectLeavePathParams.class, baseUrl, "/account/projects/{project_id}/leave", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateProjectLeaveRequest.class, baseUrl, "/account/projects/{project_id}/leave", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -688,19 +701,20 @@ public class Projects {
     /**
      * Project note details
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateProjectNoteResponse privateProjectNote(org.openapis.openapi.models.operations.PrivateProjectNoteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateProjectNoteResponse privateProjectNote(org.openapis.openapi.models.operations.PrivateProjectNoteRequest request, org.openapis.openapi.models.operations.PrivateProjectNoteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateProjectNotePathParams.class, baseUrl, "/account/projects/{project_id}/notes/{note_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateProjectNoteRequest.class, baseUrl, "/account/projects/{project_id}/notes/{note_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -737,19 +751,20 @@ public class Projects {
     /**
      * Delete project note
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateProjectNoteDeleteResponse privateProjectNoteDelete(org.openapis.openapi.models.operations.PrivateProjectNoteDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateProjectNoteDeleteResponse privateProjectNoteDelete(org.openapis.openapi.models.operations.PrivateProjectNoteDeleteRequest request, org.openapis.openapi.models.operations.PrivateProjectNoteDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateProjectNoteDeletePathParams.class, baseUrl, "/account/projects/{project_id}/notes/{note_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateProjectNoteDeleteRequest.class, baseUrl, "/account/projects/{project_id}/notes/{note_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -778,24 +793,25 @@ public class Projects {
     /**
      * Update project note
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateProjectNoteUpdateResponse privateProjectNoteUpdate(org.openapis.openapi.models.operations.PrivateProjectNoteUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateProjectNoteUpdateResponse privateProjectNoteUpdate(org.openapis.openapi.models.operations.PrivateProjectNoteUpdateRequest request, org.openapis.openapi.models.operations.PrivateProjectNoteUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateProjectNoteUpdatePathParams.class, baseUrl, "/account/projects/{project_id}/notes/{note_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateProjectNoteUpdateRequest.class, baseUrl, "/account/projects/{project_id}/notes/{note_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "projectNoteCreate", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -829,24 +845,25 @@ public class Projects {
      * Create project note
      * Create a new project note
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateProjectNotesCreateResponse privateProjectNotesCreate(org.openapis.openapi.models.operations.PrivateProjectNotesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateProjectNotesCreateResponse privateProjectNotesCreate(org.openapis.openapi.models.operations.PrivateProjectNotesCreateRequest request, org.openapis.openapi.models.operations.PrivateProjectNotesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateProjectNotesCreatePathParams.class, baseUrl, "/account/projects/{project_id}/notes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateProjectNotesCreateRequest.class, baseUrl, "/account/projects/{project_id}/notes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "projectNoteCreate", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -886,25 +903,26 @@ public class Projects {
      * List project notes
      * List project notes
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateProjectNotesListResponse privateProjectNotesList(org.openapis.openapi.models.operations.PrivateProjectNotesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateProjectNotesListResponse privateProjectNotesList(org.openapis.openapi.models.operations.PrivateProjectNotesListRequest request, org.openapis.openapi.models.operations.PrivateProjectNotesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateProjectNotesListPathParams.class, baseUrl, "/account/projects/{project_id}/notes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateProjectNotesListRequest.class, baseUrl, "/account/projects/{project_id}/notes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PrivateProjectNotesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PrivateProjectNotesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -942,19 +960,20 @@ public class Projects {
      * Private Project Publish
      * Publish a project. Possible after all items inside it are public
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateProjectPublishResponse privateProjectPublish(org.openapis.openapi.models.operations.PrivateProjectPublishRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateProjectPublishResponse privateProjectPublish(org.openapis.openapi.models.operations.PrivateProjectPublishRequest request, org.openapis.openapi.models.operations.PrivateProjectPublishSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateProjectPublishPathParams.class, baseUrl, "/account/projects/{project_id}/publish", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateProjectPublishRequest.class, baseUrl, "/account/projects/{project_id}/publish", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -992,24 +1011,25 @@ public class Projects {
      * Update project
      * Updating an project by passing body parameters; request can also be made with the PATCH method.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateProjectUpdateResponse privateProjectUpdate(org.openapis.openapi.models.operations.PrivateProjectUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateProjectUpdateResponse privateProjectUpdate(org.openapis.openapi.models.operations.PrivateProjectUpdateRequest request, org.openapis.openapi.models.operations.PrivateProjectUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateProjectUpdatePathParams.class, baseUrl, "/account/projects/{project_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateProjectUpdateRequest.class, baseUrl, "/account/projects/{project_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "projectUpdate", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1043,10 +1063,11 @@ public class Projects {
      * Private Projects
      * List private projects
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateProjectsListResponse privateProjectsList(org.openapis.openapi.models.operations.PrivateProjectsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateProjectsListResponse privateProjectsList(org.openapis.openapi.models.operations.PrivateProjectsListRequest request, org.openapis.openapi.models.operations.PrivateProjectsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/projects");
         
@@ -1054,14 +1075,14 @@ public class Projects {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PrivateProjectsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PrivateProjectsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1102,7 +1123,7 @@ public class Projects {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateProjectsSearchResponse privateProjectsSearch(org.openapis.openapi.models.operations.PrivateProjectsSearchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateProjectsSearchResponse privateProjectsSearch(org.openapis.openapi.models.shared.ProjectsSearch request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/projects/search");
         
@@ -1147,7 +1168,7 @@ public class Projects {
      */
     public org.openapis.openapi.models.operations.ProjectArticlesResponse projectArticles(org.openapis.openapi.models.operations.ProjectArticlesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectArticlesPathParams.class, baseUrl, "/projects/{project_id}/articles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectArticlesRequest.class, baseUrl, "/projects/{project_id}/articles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1188,7 +1209,7 @@ public class Projects {
      */
     public org.openapis.openapi.models.operations.ProjectDetailsResponse projectDetails(org.openapis.openapi.models.operations.ProjectDetailsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectDetailsPathParams.class, baseUrl, "/projects/{project_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectDetailsRequest.class, baseUrl, "/projects/{project_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1235,13 +1256,13 @@ public class Projects {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProjectsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProjectsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1291,10 +1312,10 @@ public class Projects {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "projectsSearch", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

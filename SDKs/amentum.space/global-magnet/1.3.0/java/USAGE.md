@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.AppApiWMMEndpointsWMMMagneticFieldQueryParams;
 import org.openapis.openapi.models.operations.AppApiWMMEndpointsWMMMagneticFieldRequest;
 import org.openapis.openapi.models.operations.AppApiWMMEndpointsWMMMagneticFieldResponse;
 
@@ -15,13 +14,11 @@ public class Application {
                 .build();
 
             AppApiWMMEndpointsWMMMagneticFieldRequest req = new AppApiWMMEndpointsWMMMagneticFieldRequest() {{
-                queryParams = new AppApiWMMEndpointsWMMMagneticFieldQueryParams() {{
-                    altitude = 10;
-                    latitude = 80;
-                    longitude = 100;
-                    year = 2020.5;
-                }};
-            }};            
+                altitude = 10;
+                latitude = 80;
+                longitude = 100;
+                year = 2020.5;
+            }}            
 
             AppApiWMMEndpointsWMMMagneticFieldResponse res = sdk.appApiWMMEndpointsWMMMagneticField(req);
 

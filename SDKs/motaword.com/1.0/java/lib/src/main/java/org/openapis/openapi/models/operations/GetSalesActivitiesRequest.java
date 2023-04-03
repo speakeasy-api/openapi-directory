@@ -4,20 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSalesActivitiesRequest {
-    
-    public GetSalesActivitiesPathParams pathParams;
-    public GetSalesActivitiesRequest withPathParams(GetSalesActivitiesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=excludeOwner")
+    public String excludeOwner;
+    public GetSalesActivitiesRequest withExcludeOwner(String excludeOwner) {
+        this.excludeOwner = excludeOwner;
         return this;
     }
     
+    /**
+     * Project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetSalesActivitiesRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetSalesActivitiesQueryParams queryParams;
-    public GetSalesActivitiesRequest withQueryParams(GetSalesActivitiesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public org.openapis.openapi.models.shared.SalesActivityTypeEnum type;
+    public GetSalesActivitiesRequest withType(org.openapis.openapi.models.shared.SalesActivityTypeEnum type) {
+        this.type = type;
         return this;
     }
     

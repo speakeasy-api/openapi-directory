@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateRoomRecordingRuleRequest {
-    
-    public UpdateRoomRecordingRulePathParams pathParams;
-    public UpdateRoomRecordingRuleRequest withPathParams(UpdateRoomRecordingRulePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateRoomRecordingRuleUpdateRoomRecordingRuleRequest request;
-    public UpdateRoomRecordingRuleRequest withRequest(UpdateRoomRecordingRuleUpdateRoomRecordingRuleRequest request) {
-        this.request = request;
+    public UpdateRoomRecordingRuleUpdateRoomRecordingRuleRequest requestBody;
+    public UpdateRoomRecordingRuleRequest withRequestBody(UpdateRoomRecordingRuleUpdateRoomRecordingRuleRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateRoomRecordingRuleSecurity security;
-    public UpdateRoomRecordingRuleRequest withSecurity(UpdateRoomRecordingRuleSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateRoomRecordingRuleRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Room resource where the recording rules to update apply.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=RoomSid")
+    public String roomSid;
+    public UpdateRoomRecordingRuleRequest withRoomSid(String roomSid) {
+        this.roomSid = roomSid;
         return this;
     }
     

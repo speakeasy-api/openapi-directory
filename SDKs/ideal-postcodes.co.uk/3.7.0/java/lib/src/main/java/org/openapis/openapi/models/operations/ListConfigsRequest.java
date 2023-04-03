@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListConfigsRequest {
-    
-    public ListConfigsPathParams pathParams;
-    public ListConfigsRequest withPathParams(ListConfigsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
+    public String key;
+    public ListConfigsRequest withKey(String key) {
+        this.key = key;
         return this;
     }
     
-    
-    public ListConfigsQueryParams queryParams;
-    public ListConfigsRequest withQueryParams(ListConfigsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=user_token")
+    public String userToken;
+    public ListConfigsRequest withUserToken(String userToken) {
+        this.userToken = userToken;
         return this;
     }
     

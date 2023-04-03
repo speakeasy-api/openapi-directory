@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRadiodnsSpi31IdFqdnSidDatePIXmlRequest {
-    
-    public GetRadiodnsSpi31IdFqdnSidDatePIXmlPathParams pathParams;
-    public GetRadiodnsSpi31IdFqdnSidDatePIXmlRequest withPathParams(GetRadiodnsSpi31IdFqdnSidDatePIXmlPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The PI schedule date to retrieve in format yyyymmdd.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=date")
+    public String date;
+    public GetRadiodnsSpi31IdFqdnSidDatePIXmlRequest withDate(String date) {
+        this.date = date;
         return this;
     }
     
-    
-    public GetRadiodnsSpi31IdFqdnSidDatePIXmlHeaders headers;
-    public GetRadiodnsSpi31IdFqdnSidDatePIXmlRequest withHeaders(GetRadiodnsSpi31IdFqdnSidDatePIXmlHeaders headers) {
-        this.headers = headers;
+    /**
+     * The fully qualified domain name for the environment where the service is running. The fqdn is defined in the `radiodns` element in the SI document in each Content Depot environment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fqdn")
+    public String fqdn;
+    public GetRadiodnsSpi31IdFqdnSidDatePIXmlRequest withFqdn(String fqdn) {
+        this.fqdn = fqdn;
         return this;
     }
     
+    /**
+     * One of the valid service IDs defined in the SI document. For example, "files" or "streams".
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sid")
+    public String sid;
+    public GetRadiodnsSpi31IdFqdnSidDatePIXmlRequest withSid(String sid) {
+        this.sid = sid;
+        return this;
+    }
     
-    public String serverURL;
-    public GetRadiodnsSpi31IdFqdnSidDatePIXmlRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The API client Id you received. This is required for National PI documents, but not Station PI documents. Contact help desk if you need one.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-radiodnsspi-api-key")
+    public String xRadiodnsspiApiKey;
+    public GetRadiodnsSpi31IdFqdnSidDatePIXmlRequest withXRadiodnsspiApiKey(String xRadiodnsspiApiKey) {
+        this.xRadiodnsspiApiKey = xRadiodnsspiApiKey;
         return this;
     }
     

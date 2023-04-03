@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostOwnershipUninstallOwnershipIdRequest {
-    
-    public PostOwnershipUninstallOwnershipIdPathParams pathParams;
-    public PostOwnershipUninstallOwnershipIdRequest withPathParams(PostOwnershipUninstallOwnershipIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * True if this app will require payment to be re-installed. Default is false
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cancelOwnership")
+    public Boolean cancelOwnership;
+    public PostOwnershipUninstallOwnershipIdRequest withCancelOwnership(Boolean cancelOwnership) {
+        this.cancelOwnership = cancelOwnership;
         return this;
     }
     
+    /**
+     * A custom JSON object to attach to this ownership record
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customData")
+    public String customData;
+    public PostOwnershipUninstallOwnershipIdRequest withCustomData(String customData) {
+        this.customData = customData;
+        return this;
+    }
     
-    public PostOwnershipUninstallOwnershipIdQueryParams queryParams;
-    public PostOwnershipUninstallOwnershipIdRequest withQueryParams(PostOwnershipUninstallOwnershipIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The id of the ownership to be unintalled
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ownershipId")
+    public String ownershipId;
+    public PostOwnershipUninstallOwnershipIdRequest withOwnershipId(String ownershipId) {
+        this.ownershipId = ownershipId;
+        return this;
+    }
+    
+    /**
+     * The id of the User requesting to uninstall the App
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userId")
+    public String userId;
+    public PostOwnershipUninstallOwnershipIdRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

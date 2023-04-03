@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesSpaceIdPersonsIdGuestInSpaceRequest {
-    
-    public PostSpacesSpaceIdPersonsIdGuestInSpacePathParams pathParams;
-    public PostSpacesSpaceIdPersonsIdGuestInSpaceRequest withPathParams(PostSpacesSpaceIdPersonsIdGuestInSpacePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Infos to invite
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GuestInSpace request;
-    public PostSpacesSpaceIdPersonsIdGuestInSpaceRequest withRequest(org.openapis.openapi.models.shared.GuestInSpace request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GuestInSpace guestInSpace;
+    public PostSpacesSpaceIdPersonsIdGuestInSpaceRequest withGuestInSpace(org.openapis.openapi.models.shared.GuestInSpace guestInSpace) {
+        this.guestInSpace = guestInSpace;
         return this;
     }
     
+    /**
+     * Id of the person
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSpacesSpaceIdPersonsIdGuestInSpaceRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PostSpacesSpaceIdPersonsIdGuestInSpaceSecurity security;
-    public PostSpacesSpaceIdPersonsIdGuestInSpaceRequest withSecurity(PostSpacesSpaceIdPersonsIdGuestInSpaceSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PostSpacesSpaceIdPersonsIdGuestInSpaceRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

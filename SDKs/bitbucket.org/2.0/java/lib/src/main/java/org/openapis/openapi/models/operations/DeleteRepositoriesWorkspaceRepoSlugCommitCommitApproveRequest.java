@@ -4,20 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRepositoriesWorkspaceRepoSlugCommitCommitApproveRequest {
-    
-    public DeleteRepositoriesWorkspaceRepoSlugCommitCommitApprovePathParams pathParams;
-    public DeleteRepositoriesWorkspaceRepoSlugCommitCommitApproveRequest withPathParams(DeleteRepositoriesWorkspaceRepoSlugCommitCommitApprovePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The commit's SHA1.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commit")
+    public String commit;
+    public DeleteRepositoriesWorkspaceRepoSlugCommitCommitApproveRequest withCommit(String commit) {
+        this.commit = commit;
         return this;
     }
     
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public DeleteRepositoriesWorkspaceRepoSlugCommitCommitApproveRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
     
-    public DeleteRepositoriesWorkspaceRepoSlugCommitCommitApproveSecurity security;
-    public DeleteRepositoriesWorkspaceRepoSlugCommitCommitApproveRequest withSecurity(DeleteRepositoriesWorkspaceRepoSlugCommitCommitApproveSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public DeleteRepositoriesWorkspaceRepoSlugCommitCommitApproveRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

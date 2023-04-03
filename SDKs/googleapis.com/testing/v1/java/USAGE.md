@@ -5,14 +5,11 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.TestingApplicationDetailServiceGetApkDetailsSecurity;
-import org.openapis.openapi.models.operations.TestingApplicationDetailServiceGetApkDetailsQueryParams;
 import org.openapis.openapi.models.operations.TestingApplicationDetailServiceGetApkDetailsRequest;
 import org.openapis.openapi.models.operations.TestingApplicationDetailServiceGetApkDetailsResponse;
-import org.openapis.openapi.models.shared.FileReference;
 import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.FileReference;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -21,33 +18,26 @@ public class Application {
                 .build();
 
             TestingApplicationDetailServiceGetApkDetailsRequest req = new TestingApplicationDetailServiceGetApkDetailsRequest() {{
-                security = new TestingApplicationDetailServiceGetApkDetailsSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
+                dollarXgafv = "2";
+                fileReference = new FileReference() {{
+                    gcsPath = "provident";
                 }};
-                queryParams = new TestingApplicationDetailServiceGetApkDetailsQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "provident";
-                    alt = "proto";
-                    callback = "quibusdam";
-                    fields = "unde";
-                    key = "nulla";
-                    oauthToken = "corrupti";
-                    prettyPrint = false;
-                    quotaUser = "illum";
-                    uploadType = "vel";
-                    uploadProtocol = "error";
-                }};
-                request = new FileReference() {{
-                    gcsPath = "deserunt";
-                }};
-            }};            
+                accessToken = "distinctio";
+                alt = "proto";
+                callback = "unde";
+                fields = "nulla";
+                key = "corrupti";
+                oauthToken = "illum";
+                prettyPrint = false;
+                quotaUser = "vel";
+                uploadType = "error";
+                uploadProtocol = "deserunt";
+            }}            
 
-            TestingApplicationDetailServiceGetApkDetailsResponse res = sdk.applicationDetailService.testingApplicationDetailServiceGetApkDetails(req);
+            TestingApplicationDetailServiceGetApkDetailsResponse res = sdk.applicationDetailService.testingApplicationDetailServiceGetApkDetails(req, new TestingApplicationDetailServiceGetApkDetailsSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.getApkDetailsResponse.isPresent()) {
                 // handle response

@@ -38,7 +38,7 @@ public class AssessmentData {
      */
     public org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsActivitiesResponsesResponse getOfferingsOfferingIdAnalyticsActivitiesResponses(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsActivitiesResponsesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsActivitiesResponsesPathParams.class, baseUrl, "/offerings/{offeringId}/analytics/activities/responses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsActivitiesResponsesRequest.class, baseUrl, "/offerings/{offeringId}/analytics/activities/responses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -86,7 +86,7 @@ public class AssessmentData {
      */
     public org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsMarksAssignmentsResponse getOfferingsOfferingIdAnalyticsMarksAssignments(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsMarksAssignmentsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsMarksAssignmentsPathParams.class, baseUrl, "/offerings/{offeringId}/analytics/marks/assignments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsMarksAssignmentsRequest.class, baseUrl, "/offerings/{offeringId}/analytics/marks/assignments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -134,7 +134,7 @@ public class AssessmentData {
      */
     public org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsMarksQuizzesResponse getOfferingsOfferingIdAnalyticsMarksQuizzes(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsMarksQuizzesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsMarksQuizzesPathParams.class, baseUrl, "/offerings/{offeringId}/analytics/marks/quizzes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsMarksQuizzesRequest.class, baseUrl, "/offerings/{offeringId}/analytics/marks/quizzes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -182,7 +182,7 @@ public class AssessmentData {
      */
     public org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsSubmissionsAssignmentsResponse getOfferingsOfferingIdAnalyticsSubmissionsAssignments(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsSubmissionsAssignmentsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsSubmissionsAssignmentsPathParams.class, baseUrl, "/offerings/{offeringId}/analytics/submissions/assignments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsSubmissionsAssignmentsRequest.class, baseUrl, "/offerings/{offeringId}/analytics/submissions/assignments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -230,7 +230,7 @@ public class AssessmentData {
      */
     public org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsSubmissionsOpenResponseAssessmentIdResponse getOfferingsOfferingIdAnalyticsSubmissionsOpenResponseAssessmentId(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsSubmissionsOpenResponseAssessmentIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsSubmissionsOpenResponseAssessmentIdPathParams.class, baseUrl, "/offerings/{offeringId}/analytics/submissions/open-response/{assessmentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsSubmissionsOpenResponseAssessmentIdRequest.class, baseUrl, "/offerings/{offeringId}/analytics/submissions/open-response/{assessmentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -278,7 +278,7 @@ public class AssessmentData {
      */
     public org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsSubmissionsUserEmailAssignmentsAssessmentIdResponse getOfferingsOfferingIdAnalyticsSubmissionsUserEmailAssignmentsAssessmentId(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsSubmissionsUserEmailAssignmentsAssessmentIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsSubmissionsUserEmailAssignmentsAssessmentIdPathParams.class, baseUrl, "/offerings/{offeringId}/analytics/submissions/{userEmail}/assignments/{assessmentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsSubmissionsUserEmailAssignmentsAssessmentIdRequest.class, baseUrl, "/offerings/{offeringId}/analytics/submissions/{userEmail}/assignments/{assessmentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -7,24 +7,463 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest {
-    
-    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawPathParams pathParams;
-    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withPathParams(PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawQueryParams queryParams;
-    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withQueryParams(PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/xml")
-    public byte[] request;
-    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Specifies the efficiency of converting chemical energy stored in fuel to kinetic energy when the vehicle accelerates (i.e. KineticEnergyGained/ChemicalEnergyConsumed).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accelerationEfficiency")
+    public Float accelerationEfficiency;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withAccelerationEfficiency(Float accelerationEfficiency) {
+        this.accelerationEfficiency = accelerationEfficiency;
+        return this;
+    }
+    
+    /**
+     * Determines whether the alternative routes to be calculated should be better with respect to the planning criteria provided than the reference route.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alternativeType")
+    public org.openapis.openapi.models.shared.AlternativeTypeEnum alternativeType;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withAlternativeType(org.openapis.openapi.models.shared.AlternativeTypeEnum alternativeType) {
+        this.alternativeType = alternativeType;
+        return this;
+    }
+    
+    /**
+     * The date and time of arrival at the destination point. It must be specified as a dateTime.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=arriveAt")
+    public String arriveAt;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withArriveAt(String arriveAt) {
+        this.arriveAt = arriveAt;
+        return this;
+    }
+    
+    /**
+     * Specifies the amount of fuel consumed for sustaining auxiliary systems of the vehicle, in liters per hour.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=auxiliaryPowerInLitersPerHour")
+    public Float auxiliaryPowerInLitersPerHour;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withAuxiliaryPowerInLitersPerHour(Float auxiliaryPowerInLitersPerHour) {
+        this.auxiliaryPowerInLitersPerHour = auxiliaryPowerInLitersPerHour;
+        return this;
+    }
+    
+    /**
+     * Specifies whether the routing engine should try to avoid specific types of road segment when calculating the route. Can be specified multiple times.
+     * Possible values:
+     *   - tollRoads
+     *   - motorways
+     *   - ferries
+     *   - unpavedRoads
+     *   - carpools
+     *   - alreadyUsedRoads
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=avoid")
+    public String avoid;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withAvoid(String avoid) {
+        this.avoid = avoid;
+        return this;
+    }
+    
+    /**
+     * Specifies the jsonp callback method.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Re-order the route waypoints to reduce the route length.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=computeBestOrder")
+    public Boolean computeBestOrder;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withComputeBestOrder(Boolean computeBestOrder) {
+        this.computeBestOrder = computeBestOrder;
+        return this;
+    }
+    
+    /**
+     * Specifies whether to return additional travel times using different types of traffic information (none, historic, live) as well as the default best-estimate travel time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=computeTravelTimeFor")
+    public org.openapis.openapi.models.shared.ComputeTravelTimeForEnum computeTravelTimeFor;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withComputeTravelTimeFor(org.openapis.openapi.models.shared.ComputeTravelTimeForEnum computeTravelTimeFor) {
+        this.computeTravelTimeFor = computeTravelTimeFor;
+        return this;
+    }
+    
+    /**
+     * Specifies the speed-dependent component of consumption. Provided as an unordered list of speed/consumption-rate pairs.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=constantSpeedConsumptionInLitersPerHundredkm")
+    public String constantSpeedConsumptionInLitersPerHundredkm;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withConstantSpeedConsumptionInLitersPerHundredkm(String constantSpeedConsumptionInLitersPerHundredkm) {
+        this.constantSpeedConsumptionInLitersPerHundredkm = constantSpeedConsumptionInLitersPerHundredkm;
+        return this;
+    }
+    
+    /**
+     * Specifies the speed-dependent component of consumption. Provided as an unordered list of speed/consumption-rate pairs.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=constantSpeedConsumptionInkWhPerHundredkm")
+    public String constantSpeedConsumptionInkWhPerHundredkm;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withConstantSpeedConsumptionInkWhPerHundredkm(String constantSpeedConsumptionInkWhPerHundredkm) {
+        this.constantSpeedConsumptionInkWhPerHundredkm = constantSpeedConsumptionInkWhPerHundredkm;
+        return this;
+    }
+    
+    /**
+     * The content type of the response structure. If the content type is jsonp, a callback method can be specified in the query parameters.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=contentType")
+    public org.openapis.openapi.models.shared.ContentTypeEnum contentType;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withContentType(org.openapis.openapi.models.shared.ContentTypeEnum contentType) {
+        this.contentType = contentType;
+        return this;
+    }
+    
+    /**
+     * Specifies the current supply of fuel in liters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currentFuelInLiters")
+    public Float currentFuelInLiters;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withCurrentFuelInLiters(Float currentFuelInLiters) {
+        this.currentFuelInLiters = currentFuelInLiters;
+        return this;
+    }
+    
+    /**
+     * Specifies the efficiency of converting kinetic energy to saved (not consumed) fuel when the vehicle decelerates (i.e. ChemicalEnergySaved/KineticEnergyLost).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=decelerationEfficiency")
+    public Float decelerationEfficiency;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withDecelerationEfficiency(Float decelerationEfficiency) {
+        this.decelerationEfficiency = decelerationEfficiency;
+        return this;
+    }
+    
+    /**
+     * The date and time of departure from the origin point. Departure times apart from &lt;i&gt;now&lt;/i&gt; must be specified as a dateTime.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=departAt")
+    public String departAt;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withDepartAt(String departAt) {
+        this.departAt = departAt;
+        return this;
+    }
+    
+    /**
+     * Specifies the efficiency of converting potential energy to saved (not consumed) fuel when the vehicle loses elevation (i.e. ChemicalEnergySaved/PotentialEnergyLost).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=downhillEfficiency")
+    public Float downhillEfficiency;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withDownhillEfficiency(Float downhillEfficiency) {
+        this.downhillEfficiency = downhillEfficiency;
+        return this;
+    }
+    
+    /**
+     * Specifies the amount of chemical energy stored in one liter of fuel in megajoules (MJ).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fuelEnergyDensityInMJoulesPerLiter")
+    public Float fuelEnergyDensityInMJoulesPerLiter;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withFuelEnergyDensityInMJoulesPerLiter(Float fuelEnergyDensityInMJoulesPerLiter) {
+        this.fuelEnergyDensityInMJoulesPerLiter = fuelEnergyDensityInMJoulesPerLiter;
+        return this;
+    }
+    
+    /**
+     * Degree of hilliness for calculating a thrilling route.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hilliness")
+    public org.openapis.openapi.models.shared.HillinessEnum hilliness;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withHilliness(org.openapis.openapi.models.shared.HillinessEnum hilliness) {
+        this.hilliness = hilliness;
+        return this;
+    }
+    
+    /**
+     * If specified, guidance instructions will be returned (if available).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=instructionsType")
+    public org.openapis.openapi.models.shared.InstructionsTypeEnum instructionsType;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withInstructionsType(org.openapis.openapi.models.shared.InstructionsTypeEnum instructionsType) {
+        this.instructionsType = instructionsType;
+        return this;
+    }
+    
+    /**
+     * The language parameter determines the language of the guidance messages.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public String language;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    
+    /**
+     * Locations through which the calculated route must pass.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=locations")
+    public String locations;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withLocations(String locations) {
+        this.locations = locations;
+        return this;
+    }
+    
+    /**
+     * Number of alternative routes to be calculated.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxAlternatives")
+    public Long maxAlternatives;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withMaxAlternatives(Long maxAlternatives) {
+        this.maxAlternatives = maxAlternatives;
+        return this;
+    }
+    
+    /**
+     * All alternative routes will follow the reference route for the specified minimum number of meters starting from the origin point.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minDeviationDistance")
+    public Long minDeviationDistance;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withMinDeviationDistance(Long minDeviationDistance) {
+        this.minDeviationDistance = minDeviationDistance;
+        return this;
+    }
+    
+    /**
+     * All alternative routes will follow the reference route for the specified minimum number of seconds starting from the origin point.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minDeviationTime")
+    public Long minDeviationTime;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withMinDeviationTime(Long minDeviationTime) {
+        this.minDeviationTime = minDeviationTime;
+        return this;
+    }
+    
+    /**
+     * Specifies which data should be reported for diagnosis purposes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=report")
+    public org.openapis.openapi.models.shared.ReportEnum report;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withReport(org.openapis.openapi.models.shared.ReportEnum report) {
+        this.report = report;
+        return this;
+    }
+    
+    /**
+     * Specifies the representation of the set of routes provided as a response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=routeRepresentation")
+    public org.openapis.openapi.models.shared.RouteRepresentationEnum routeRepresentation;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withRouteRepresentation(org.openapis.openapi.models.shared.RouteRepresentationEnum routeRepresentation) {
+        this.routeRepresentation = routeRepresentation;
+        return this;
+    }
+    
+    /**
+     * The type of route requested.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=routeType")
+    public org.openapis.openapi.models.shared.RouteTypeEnum routeType;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withRouteType(org.openapis.openapi.models.shared.RouteTypeEnum routeType) {
+        this.routeType = routeType;
+        return this;
+    }
+    
+    /**
+     * Specifies which section types are explicitly reported in the route response. Can be specified multiple times.
+     *   - carTrain, ferry, tunnel or motorway
+     *   - pedestrian
+     *   - tollRoad
+     *   - tollVignette
+     *   - country
+     *   - travelMode
+     *   - traffic
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sectionType")
+    public String sectionType;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withSectionType(String sectionType) {
+        this.sectionType = sectionType;
+        return this;
+    }
+    
+    /**
+     * Determines whether current traffic is used in route calculations. Note that information on historic road speeds is always used.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=traffic")
+    public Boolean traffic;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withTraffic(Boolean traffic) {
+        this.traffic = traffic;
+        return this;
+    }
+    
+    /**
+     * The mode of travel for the requested route.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=travelMode")
+    public org.openapis.openapi.models.shared.TravelModeEnum travelMode;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withTravelMode(org.openapis.openapi.models.shared.TravelModeEnum travelMode) {
+        this.travelMode = travelMode;
+        return this;
+    }
+    
+    /**
+     * Specifies the efficiency of converting chemical energy stored in fuel to potential energy when the vehicle gains elevation (i.e. PotentialEnergyGained/ChemicalEnergyConsumed).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uphillEfficiency")
+    public Float uphillEfficiency;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withUphillEfficiency(Float uphillEfficiency) {
+        this.uphillEfficiency = uphillEfficiency;
+        return this;
+    }
+    
+    /**
+     * Weight per axle of the vehicle in kg.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicleAxleWeight")
+    public Long vehicleAxleWeight;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withVehicleAxleWeight(Long vehicleAxleWeight) {
+        this.vehicleAxleWeight = vehicleAxleWeight;
+        return this;
+    }
+    
+    /**
+     * Indicates that the vehicle is used for commercial purposes. This means it may not be allowed on certain roads.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicleCommercial")
+    public Boolean vehicleCommercial;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withVehicleCommercial(Boolean vehicleCommercial) {
+        this.vehicleCommercial = vehicleCommercial;
+        return this;
+    }
+    
+    /**
+     * Engine type of the vehicle.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicleEngineType")
+    public org.openapis.openapi.models.shared.VehicleEngineTypeEnum vehicleEngineType;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withVehicleEngineType(org.openapis.openapi.models.shared.VehicleEngineTypeEnum vehicleEngineType) {
+        this.vehicleEngineType = vehicleEngineType;
+        return this;
+    }
+    
+    /**
+     * The directional heading of the vehicle in degrees. Entered in degrees, measured clockwise from north (so north is 0, east is 90, etc.).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicleHeading")
+    public Long vehicleHeading;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withVehicleHeading(Long vehicleHeading) {
+        this.vehicleHeading = vehicleHeading;
+        return this;
+    }
+    
+    /**
+     * Height of the vehicle in meters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicleHeight")
+    public Float vehicleHeight;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withVehicleHeight(Float vehicleHeight) {
+        this.vehicleHeight = vehicleHeight;
+        return this;
+    }
+    
+    /**
+     * Length of the vehicle in meters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicleLength")
+    public Float vehicleLength;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withVehicleLength(Float vehicleLength) {
+        this.vehicleLength = vehicleLength;
+        return this;
+    }
+    
+    /**
+     * Indicates what kinds of hazardous materials the vehicle is carrying (if any). This means it may not be allowed on certain roads.
+     * Use these for routing in the US:
+     * 
+     *   - &lt;i&gt;USHazmatClass1&lt;/i&gt; Explosives
+     *   - &lt;i&gt;USHazmatClass2&lt;/i&gt; Compressed gas
+     *   - &lt;i&gt;USHazmatClass3&lt;/i&gt; Flammable liquids
+     *   - &lt;i&gt;USHazmatClass4&lt;/i&gt; Flammable solids
+     *   - &lt;i&gt;USHazmatClass5&lt;/i&gt; Oxidizers
+     *   - &lt;i&gt;USHazmatClass6&lt;/i&gt; Poisons
+     *   - &lt;i&gt;USHazmatClass7&lt;/i&gt; Radioactive
+     *   - &lt;i&gt;USHazmatClass8&lt;/i&gt; Corrosives
+     *   - &lt;i&gt;USHazmatClass9&lt;/i&gt; Miscellaneous
+     * 
+     * Use these for routing in all other countries:
+     * 
+     *   - &lt;i&gt;otherHazmatExplosive&lt;/i&gt; Explosives
+     *   - &lt;i&gt;otherHazmatGeneral&lt;/i&gt; Miscellaneous
+     *   - &lt;i&gt;otherHazmatHarmfulToWater&lt;/i&gt; Harmful to water
+     * 
+     * vehicleLoadType can be specified multiple times. This parameter is currently only considered for &lt;b&gt;travelMode&lt;/b&gt;=&lt;i&gt;truck&lt;/i&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicleLoadType")
+    public String vehicleLoadType;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withVehicleLoadType(String vehicleLoadType) {
+        this.vehicleLoadType = vehicleLoadType;
+        return this;
+    }
+    
+    /**
+     * Maximum speed of the vehicle in km/hour.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicleMaxSpeed")
+    public Long vehicleMaxSpeed;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withVehicleMaxSpeed(Long vehicleMaxSpeed) {
+        this.vehicleMaxSpeed = vehicleMaxSpeed;
+        return this;
+    }
+    
+    /**
+     * Weight of the vehicle in kilograms.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicleWeight")
+    public Long vehicleWeight;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withVehicleWeight(Long vehicleWeight) {
+        this.vehicleWeight = vehicleWeight;
+        return this;
+    }
+    
+    /**
+     * Width of the vehicle in meters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicleWidth")
+    public Float vehicleWidth;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withVehicleWidth(Float vehicleWidth) {
+        this.vehicleWidth = vehicleWidth;
+        return this;
+    }
+    
+    /**
+     * Service version number. The current value is 1.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
+    public org.openapis.openapi.models.shared.VersionNumberEnum versionNumber;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withVersionNumber(org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
+        this.versionNumber = versionNumber;
+        return this;
+    }
+    
+    /**
+     * Amount that a thrilling route should wind.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=windingness")
+    public org.openapis.openapi.models.shared.WindingnessEnum windingness;
+    public PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest withWindingness(org.openapis.openapi.models.shared.WindingnessEnum windingness) {
+        this.windingness = windingness;
         return this;
     }
     

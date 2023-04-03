@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSupplierWorkgroupDetailRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bu_supplier_workgroup_id")
+    public String buSupplierWorkgroupId;
+    public GetSupplierWorkgroupDetailRequest withBuSupplierWorkgroupId(String buSupplierWorkgroupId) {
+        this.buSupplierWorkgroupId = buSupplierWorkgroupId;
+        return this;
+    }
     
-    public GetSupplierWorkgroupDetailPathParams pathParams;
-    public GetSupplierWorkgroupDetailRequest withPathParams(GetSupplierWorkgroupDetailPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
+    public String workgroupId;
+    public GetSupplierWorkgroupDetailRequest withWorkgroupId(String workgroupId) {
+        this.workgroupId = workgroupId;
         return this;
     }
     

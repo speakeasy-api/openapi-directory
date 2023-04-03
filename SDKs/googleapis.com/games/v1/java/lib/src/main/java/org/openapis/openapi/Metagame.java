@@ -33,10 +33,11 @@ public class Metagame {
     /**
      * Return the metagame configuration data for the calling application.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GamesMetagameGetMetagameConfigResponse gamesMetagameGetMetagameConfig(org.openapis.openapi.models.operations.GamesMetagameGetMetagameConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GamesMetagameGetMetagameConfigResponse gamesMetagameGetMetagameConfig(org.openapis.openapi.models.operations.GamesMetagameGetMetagameConfigRequest request, org.openapis.openapi.models.operations.GamesMetagameGetMetagameConfigSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/games/v1/metagameConfig");
         
@@ -44,14 +45,14 @@ public class Metagame {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesMetagameGetMetagameConfigQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesMetagameGetMetagameConfigRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,25 +79,26 @@ public class Metagame {
     /**
      * List play data aggregated per category for the player corresponding to `playerId`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GamesMetagameListCategoriesByPlayerResponse gamesMetagameListCategoriesByPlayer(org.openapis.openapi.models.operations.GamesMetagameListCategoriesByPlayerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GamesMetagameListCategoriesByPlayerResponse gamesMetagameListCategoriesByPlayer(org.openapis.openapi.models.operations.GamesMetagameListCategoriesByPlayerRequest request, org.openapis.openapi.models.operations.GamesMetagameListCategoriesByPlayerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesMetagameListCategoriesByPlayerPathParams.class, baseUrl, "/games/v1/players/{playerId}/categories/{collection}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesMetagameListCategoriesByPlayerRequest.class, baseUrl, "/games/v1/players/{playerId}/categories/{collection}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesMetagameListCategoriesByPlayerQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesMetagameListCategoriesByPlayerRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class HaltRequest {
-    
-    public HaltPathParams pathParams;
-    public HaltRequest withPathParams(HaltPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to return the primary IP
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public HaltRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeRequest {
-    
-    public GetExportCsvRegistrierkassenRegistrierkasseUuidBelegePathParams pathParams;
-    public GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeRequest withPathParams(GetExportCsvRegistrierkassenRegistrierkasseUuidBelegePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Only return results that were saved after the specified date-time string (i.e., anything that `Date.parse()` can parse).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=after")
+    public String after;
+    public GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeRequest withAfter(String after) {
+        this.after = after;
         return this;
     }
     
+    /**
+     * Only return results that were saved before the specified date-time string (i.e., anything that `Date.parse()` can parse).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=before")
+    public String before;
+    public GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeRequest withBefore(String before) {
+        this.before = before;
+        return this;
+    }
     
-    public GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeQueryParams queryParams;
-    public GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeRequest withQueryParams(GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Export `Posten` instead of `Belegdaten`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=posten")
+    public Boolean posten;
+    public GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeRequest withPosten(Boolean posten) {
+        this.posten = posten;
+        return this;
+    }
+    
+    /**
+     * The `_uuid` of the `Registrierkasse` to export.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=registrierkasseUuid")
+    public String registrierkasseUuid;
+    public GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeRequest withRegistrierkasseUuid(String registrierkasseUuid) {
+        this.registrierkasseUuid = registrierkasseUuid;
         return this;
     }
     

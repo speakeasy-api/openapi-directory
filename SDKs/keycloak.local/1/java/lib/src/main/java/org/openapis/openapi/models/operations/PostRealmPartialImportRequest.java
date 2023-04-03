@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRealmPartialImportRequest {
-    
-    public PostRealmPartialImportPathParams pathParams;
-    public PostRealmPartialImportRequest withPathParams(PostRealmPartialImportPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.PartialImportRepresentation partialImportRepresentation;
+    public PostRealmPartialImportRequest withPartialImportRepresentation(org.openapis.openapi.models.shared.PartialImportRepresentation partialImportRepresentation) {
+        this.partialImportRepresentation = partialImportRepresentation;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PartialImportRepresentation request;
-    public PostRealmPartialImportRequest withRequest(org.openapis.openapi.models.shared.PartialImportRepresentation request) {
-        this.request = request;
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PostRealmPartialImportRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

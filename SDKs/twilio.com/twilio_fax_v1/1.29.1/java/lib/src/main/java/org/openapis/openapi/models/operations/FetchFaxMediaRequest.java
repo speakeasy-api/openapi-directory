@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchFaxMediaRequest {
-    
-    public FetchFaxMediaPathParams pathParams;
-    public FetchFaxMediaRequest withPathParams(FetchFaxMediaPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the fax with the FaxMedia resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FaxSid")
+    public String faxSid;
+    public FetchFaxMediaRequest withFaxSid(String faxSid) {
+        this.faxSid = faxSid;
         return this;
     }
     
-    
-    public FetchFaxMediaSecurity security;
-    public FetchFaxMediaRequest withSecurity(FetchFaxMediaSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchFaxMediaRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the FaxMedia resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchFaxMediaRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

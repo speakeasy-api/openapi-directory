@@ -40,7 +40,7 @@ public class ContentFiltering {
      */
     public org.openapis.openapi.models.operations.GetNetworkApplianceContentFilteringResponse getNetworkApplianceContentFiltering(org.openapis.openapi.models.operations.GetNetworkApplianceContentFilteringRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceContentFilteringPathParams.class, baseUrl, "/networks/{networkId}/appliance/contentFiltering", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceContentFilteringRequest.class, baseUrl, "/networks/{networkId}/appliance/contentFiltering", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,7 +80,7 @@ public class ContentFiltering {
      */
     public org.openapis.openapi.models.operations.GetNetworkApplianceContentFilteringCategoriesResponse getNetworkApplianceContentFilteringCategories(org.openapis.openapi.models.operations.GetNetworkApplianceContentFilteringCategoriesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceContentFilteringCategoriesPathParams.class, baseUrl, "/networks/{networkId}/appliance/contentFiltering/categories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceContentFilteringCategoriesRequest.class, baseUrl, "/networks/{networkId}/appliance/contentFiltering/categories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -120,12 +120,12 @@ public class ContentFiltering {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkApplianceContentFilteringResponse updateNetworkApplianceContentFiltering(org.openapis.openapi.models.operations.UpdateNetworkApplianceContentFilteringRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceContentFilteringPathParams.class, baseUrl, "/networks/{networkId}/appliance/contentFiltering", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceContentFilteringRequest.class, baseUrl, "/networks/{networkId}/appliance/contentFiltering", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

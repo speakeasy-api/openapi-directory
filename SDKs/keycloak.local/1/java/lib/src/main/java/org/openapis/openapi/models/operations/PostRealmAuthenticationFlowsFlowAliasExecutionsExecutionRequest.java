@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRealmAuthenticationFlowsFlowAliasExecutionsExecutionRequest {
-    
-    public PostRealmAuthenticationFlowsFlowAliasExecutionsExecutionPathParams pathParams;
-    public PostRealmAuthenticationFlowsFlowAliasExecutionsExecutionRequest withPathParams(PostRealmAuthenticationFlowsFlowAliasExecutionsExecutionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * New execution JSON data containing 'provider' attribute
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public PostRealmAuthenticationFlowsFlowAliasExecutionsExecutionRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public PostRealmAuthenticationFlowsFlowAliasExecutionsExecutionRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Alias of parent flow
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=flowAlias")
+    public String flowAlias;
+    public PostRealmAuthenticationFlowsFlowAliasExecutionsExecutionRequest withFlowAlias(String flowAlias) {
+        this.flowAlias = flowAlias;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PostRealmAuthenticationFlowsFlowAliasExecutionsExecutionRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

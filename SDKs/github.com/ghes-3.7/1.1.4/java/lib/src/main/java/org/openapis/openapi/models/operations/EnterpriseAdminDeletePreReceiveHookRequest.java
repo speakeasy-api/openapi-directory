@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminDeletePreReceiveHookRequest {
-    
-    public EnterpriseAdminDeletePreReceiveHookPathParams pathParams;
-    public EnterpriseAdminDeletePreReceiveHookRequest withPathParams(EnterpriseAdminDeletePreReceiveHookPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the pre-receive hook.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pre_receive_hook_id")
+    public Long preReceiveHookId;
+    public EnterpriseAdminDeletePreReceiveHookRequest withPreReceiveHookId(Long preReceiveHookId) {
+        this.preReceiveHookId = preReceiveHookId;
         return this;
     }
     

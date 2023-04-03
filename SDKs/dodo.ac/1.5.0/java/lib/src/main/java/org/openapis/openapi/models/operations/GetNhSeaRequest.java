@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNhSeaRequest {
-    
-    public GetNhSeaQueryParams queryParams;
-    public GetNhSeaRequest withQueryParams(GetNhSeaQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The version of the API you are calling, written as `1.0.0`. This is specified as required as good practice, but it is not actually enforced by the API. If you do not specify a version, you will be served the latest version, which may eventually result in breaking changes.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Version")
+    public String acceptVersion;
+    public GetNhSeaRequest withAcceptVersion(String acceptVersion) {
+        this.acceptVersion = acceptVersion;
         return this;
     }
     
+    /**
+     * Your UUID secret key, granted to you by the Nookipedia team. Required for accessing the API.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-API-KEY")
+    public String xApiKey;
+    public GetNhSeaRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
+        return this;
+    }
     
-    public GetNhSeaHeaders headers;
-    public GetNhSeaRequest withHeaders(GetNhSeaHeaders headers) {
-        this.headers = headers;
+    /**
+     * When set to `true`, only sea creature names are returned. Instead of an array of objects with all details, the return will be an array of strings. This is particularly useful when used with the `month` filter, for users who want just a list of sea creatures in a given month but not all their respective details.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=excludedetails")
+    public String excludedetails;
+    public GetNhSeaRequest withExcludedetails(String excludedetails) {
+        this.excludedetails = excludedetails;
+        return this;
+    }
+    
+    /**
+     * Retrive only the sea creature that are available in a specific month. Value may be the month's name (`jan`, `january`), the integer representing the month (`01`, `1`), or `current` for the current month. When `current` is specified, the return body will be an object with two arrays inside, one called `north` and the other `south` containing the sea creature available in each respective hemisphere. Note that the current month is calculated based off the API server's time, so it may be slightly off for you at the beginning or end of the month.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=month")
+    public String month;
+    public GetNhSeaRequest withMonth(String month) {
+        this.month = month;
+        return this;
+    }
+    
+    /**
+     * Specify the desired width of returned image URLs. When unspecified, the linked image(s) returned by the API will be full-resolution. Note that images can only be reduced in size; specifying a width greater than than the maximum size will return the default full-size image URL. Note that requesting specific image sizes for long lists may result in a very long response time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=thumbsize")
+    public Long thumbsize;
+    public GetNhSeaRequest withThumbsize(Long thumbsize) {
+        this.thumbsize = thumbsize;
         return this;
     }
     

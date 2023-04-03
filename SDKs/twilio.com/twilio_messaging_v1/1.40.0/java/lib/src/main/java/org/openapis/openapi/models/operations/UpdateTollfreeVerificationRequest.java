@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateTollfreeVerificationRequest {
-    
-    public UpdateTollfreeVerificationPathParams pathParams;
-    public UpdateTollfreeVerificationRequest withPathParams(UpdateTollfreeVerificationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateTollfreeVerificationUpdateTollfreeVerificationRequest request;
-    public UpdateTollfreeVerificationRequest withRequest(UpdateTollfreeVerificationUpdateTollfreeVerificationRequest request) {
-        this.request = request;
+    public UpdateTollfreeVerificationUpdateTollfreeVerificationRequest requestBody;
+    public UpdateTollfreeVerificationRequest withRequestBody(UpdateTollfreeVerificationUpdateTollfreeVerificationRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateTollfreeVerificationSecurity security;
-    public UpdateTollfreeVerificationRequest withSecurity(UpdateTollfreeVerificationSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateTollfreeVerificationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique string to identify Tollfree Verification.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateTollfreeVerificationRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

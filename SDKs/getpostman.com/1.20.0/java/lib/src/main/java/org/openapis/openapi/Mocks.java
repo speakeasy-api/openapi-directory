@@ -81,7 +81,7 @@ public class Mocks {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateMockResponse createMock(org.openapis.openapi.models.operations.CreateMockRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateMockResponse createMock(org.openapis.openapi.models.operations.CreateMockRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/mocks");
         
@@ -126,7 +126,7 @@ public class Mocks {
      */
     public org.openapis.openapi.models.operations.DeleteMockResponse deleteMock(org.openapis.openapi.models.operations.DeleteMockRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteMockPathParams.class, baseUrl, "/mocks/{mock_uid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteMockRequest.class, baseUrl, "/mocks/{mock_uid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -167,7 +167,7 @@ public class Mocks {
      */
     public org.openapis.openapi.models.operations.PublishMockResponse publishMock(org.openapis.openapi.models.operations.PublishMockRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PublishMockPathParams.class, baseUrl, "/mocks/{mock_uid}/publish", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PublishMockRequest.class, baseUrl, "/mocks/{mock_uid}/publish", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -208,7 +208,7 @@ public class Mocks {
      */
     public org.openapis.openapi.models.operations.SingleMockResponse singleMock(org.openapis.openapi.models.operations.SingleMockRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SingleMockPathParams.class, baseUrl, "/mocks/{mock_uid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SingleMockRequest.class, baseUrl, "/mocks/{mock_uid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -249,7 +249,7 @@ public class Mocks {
      */
     public org.openapis.openapi.models.operations.UnpublishMockResponse unpublishMock(org.openapis.openapi.models.operations.UnpublishMockRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnpublishMockPathParams.class, baseUrl, "/mocks/{mock_uid}/unpublish", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnpublishMockRequest.class, baseUrl, "/mocks/{mock_uid}/unpublish", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -295,12 +295,12 @@ public class Mocks {
      */
     public org.openapis.openapi.models.operations.UpdateMockResponse updateMock(org.openapis.openapi.models.operations.UpdateMockRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateMockPathParams.class, baseUrl, "/mocks/{mock_uid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateMockRequest.class, baseUrl, "/mocks/{mock_uid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

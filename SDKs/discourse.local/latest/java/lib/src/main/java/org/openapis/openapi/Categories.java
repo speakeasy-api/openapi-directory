@@ -37,7 +37,7 @@ public class Categories {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateCategoryResponse createCategory(org.openapis.openapi.models.operations.CreateCategoryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateCategoryResponse createCategory(org.openapis.openapi.models.operations.CreateCategoryRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/categories.json");
         
@@ -79,7 +79,7 @@ public class Categories {
      */
     public org.openapis.openapi.models.operations.GetCategoryResponse getCategory(org.openapis.openapi.models.operations.GetCategoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCategoryPathParams.class, baseUrl, "/c/{id}/show.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCategoryRequest.class, baseUrl, "/c/{id}/show.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -161,7 +161,7 @@ public class Categories {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCategoriesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCategoriesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -199,7 +199,7 @@ public class Categories {
      */
     public org.openapis.openapi.models.operations.ListCategoryTopicsResponse listCategoryTopics(org.openapis.openapi.models.operations.ListCategoryTopicsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListCategoryTopicsPathParams.class, baseUrl, "/c/{slug}/{id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListCategoryTopicsRequest.class, baseUrl, "/c/{slug}/{id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -237,12 +237,12 @@ public class Categories {
      */
     public org.openapis.openapi.models.operations.UpdateCategoryResponse updateCategory(org.openapis.openapi.models.operations.UpdateCategoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCategoryPathParams.class, baseUrl, "/categories/{id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCategoryRequest.class, baseUrl, "/categories/{id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

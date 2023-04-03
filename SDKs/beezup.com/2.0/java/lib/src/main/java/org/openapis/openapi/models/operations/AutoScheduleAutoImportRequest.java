@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AutoScheduleAutoImportRequest {
-    
-    public AutoScheduleAutoImportPathParams pathParams;
-    public AutoScheduleAutoImportRequest withPathParams(AutoScheduleAutoImportPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ScheduleAutoImportRequest scheduleAutoImportRequest;
+    public AutoScheduleAutoImportRequest withScheduleAutoImportRequest(org.openapis.openapi.models.shared.ScheduleAutoImportRequest scheduleAutoImportRequest) {
+        this.scheduleAutoImportRequest = scheduleAutoImportRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ScheduleAutoImportRequest request;
-    public AutoScheduleAutoImportRequest withRequest(org.openapis.openapi.models.shared.ScheduleAutoImportRequest request) {
-        this.request = request;
+    /**
+     * Your store identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public AutoScheduleAutoImportRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

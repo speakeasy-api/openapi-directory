@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateInsightsQuestionnairesQuestionRequest {
-    
-    public CreateInsightsQuestionnairesQuestionHeaders headers;
-    public CreateInsightsQuestionnairesQuestionRequest withHeaders(CreateInsightsQuestionnairesQuestionHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateInsightsQuestionnairesQuestionCreateInsightsQuestionnairesQuestionRequest request;
-    public CreateInsightsQuestionnairesQuestionRequest withRequest(CreateInsightsQuestionnairesQuestionCreateInsightsQuestionnairesQuestionRequest request) {
-        this.request = request;
+    public CreateInsightsQuestionnairesQuestionCreateInsightsQuestionnairesQuestionRequest requestBody;
+    public CreateInsightsQuestionnairesQuestionRequest withRequestBody(CreateInsightsQuestionnairesQuestionCreateInsightsQuestionnairesQuestionRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateInsightsQuestionnairesQuestionSecurity security;
-    public CreateInsightsQuestionnairesQuestionRequest withSecurity(CreateInsightsQuestionnairesQuestionSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateInsightsQuestionnairesQuestionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Token HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Token")
+    public String token;
+    public CreateInsightsQuestionnairesQuestionRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

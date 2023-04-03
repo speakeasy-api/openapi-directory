@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateALimitRequest {
-    
-    public UpdateALimitPathParams pathParams;
-    public UpdateALimitRequest withPathParams(UpdateALimitPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=limit_id")
+    public String limitId;
+    public UpdateALimitRequest withLimitId(String limitId) {
+        this.limitId = limitId;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateALimitParameters request;
-    public UpdateALimitRequest withRequest(org.openapis.openapi.models.shared.UpdateALimitParameters request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateALimitParameters updateALimitParameters;
+    public UpdateALimitRequest withUpdateALimitParameters(org.openapis.openapi.models.shared.UpdateALimitParameters updateALimitParameters) {
+        this.updateALimitParameters = updateALimitParameters;
         return this;
     }
     

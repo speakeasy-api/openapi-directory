@@ -4,20 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationActionBatchesRequest {
-    
-    public GetOrganizationActionBatchesPathParams pathParams;
-    public GetOrganizationActionBatchesRequest withPathParams(GetOrganizationActionBatchesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public GetOrganizationActionBatchesRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     
-    
-    public GetOrganizationActionBatchesQueryParams queryParams;
-    public GetOrganizationActionBatchesRequest withQueryParams(GetOrganizationActionBatchesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter batches by status. Valid types are pending, completed, and failed.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public GetOrganizationActionBatchesStatusEnum status;
+    public GetOrganizationActionBatchesRequest withStatus(GetOrganizationActionBatchesStatusEnum status) {
+        this.status = status;
         return this;
     }
     

@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateProspectRequest {
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public CreateProspectRequest withAccept(String accept) {
+        this.accept = accept;
+        return this;
+    }
     
-    public CreateProspectHeaders headers;
-    public CreateProspectRequest withHeaders(CreateProspectHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public CreateProspectRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public Object request;
-    public CreateProspectRequest withRequest(Object request) {
-        this.request = request;
+    public Object requestBody;
+    public CreateProspectRequest withRequestBody(Object requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

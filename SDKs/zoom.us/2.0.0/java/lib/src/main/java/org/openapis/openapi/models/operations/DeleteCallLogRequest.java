@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCallLogRequest {
+    /**
+     * Unique identifier of the call log. The value for this field can be retrieved from [account's call logs](https://marketplace.zoom.us/docs/api-reference/zoom-api/phone/accountcalllogs) or [user's call logs](https://marketplace.zoom.us/docs/api-reference/zoom-api/phone/phoneusercalllogs).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=callLogId")
+    public String callLogId;
+    public DeleteCallLogRequest withCallLogId(String callLogId) {
+        this.callLogId = callLogId;
+        return this;
+    }
     
-    public DeleteCallLogPathParams pathParams;
-    public DeleteCallLogRequest withPathParams(DeleteCallLogPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The user ID or email address of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public DeleteCallLogRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

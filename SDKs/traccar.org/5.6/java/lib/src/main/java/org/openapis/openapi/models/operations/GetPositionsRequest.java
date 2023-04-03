@@ -4,13 +4,47 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPositionsRequest {
+    /**
+     * _deviceId_ is optional, but requires the _from_ and _to_ parameters when used
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deviceId")
+    public Long deviceId;
+    public GetPositionsRequest withDeviceId(Long deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
     
-    public GetPositionsQueryParams queryParams;
-    public GetPositionsRequest withQueryParams(GetPositionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * in IS0 8601 format. eg. `1963-11-22T18:30:00Z`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
+    public OffsetDateTime from;
+    public GetPositionsRequest withFrom(OffsetDateTime from) {
+        this.from = from;
+        return this;
+    }
+    
+    /**
+     * To fetch one or more positions. Multiple params can be passed like `id=31&amp;id=42`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public Long id;
+    public GetPositionsRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * in IS0 8601 format. eg. `1963-11-22T18:30:00Z`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
+    public OffsetDateTime to;
+    public GetPositionsRequest withTo(OffsetDateTime to) {
+        this.to = to;
         return this;
     }
     

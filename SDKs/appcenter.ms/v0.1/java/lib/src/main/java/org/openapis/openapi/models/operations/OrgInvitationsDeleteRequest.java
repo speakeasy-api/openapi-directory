@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgInvitationsDeleteRequest {
-    
-    public OrgInvitationsDeletePathParams pathParams;
-    public OrgInvitationsDeleteRequest withPathParams(OrgInvitationsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The email of the user whose invitation should be removed
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public OrgInvitationsDeleteRequestBody request;
-    public OrgInvitationsDeleteRequest withRequest(OrgInvitationsDeleteRequestBody request) {
-        this.request = request;
+    public OrgInvitationsDeleteRequestBody requestBody;
+    public OrgInvitationsDeleteRequest withRequestBody(OrgInvitationsDeleteRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public OrgInvitationsDeleteSecurity security;
-    public OrgInvitationsDeleteRequest withSecurity(OrgInvitationsDeleteSecurity security) {
-        this.security = security;
+    /**
+     * The organization's name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_name")
+    public String orgName;
+    public OrgInvitationsDeleteRequest withOrgName(String orgName) {
+        this.orgName = orgName;
         return this;
     }
     

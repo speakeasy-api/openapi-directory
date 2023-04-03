@@ -33,10 +33,11 @@ public class Splunk {
     /**
      * Exports the asset inventory in a sync-friendly manner using created_at as a checkpoint. Requires the Splunk entitlement.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SplunkAssetSyncCreatedJSONResponse splunkAssetSyncCreatedJSON(org.openapis.openapi.models.operations.SplunkAssetSyncCreatedJSONRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SplunkAssetSyncCreatedJSONResponse splunkAssetSyncCreatedJSON(org.openapis.openapi.models.operations.SplunkAssetSyncCreatedJSONRequest request, org.openapis.openapi.models.operations.SplunkAssetSyncCreatedJSONSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/export/org/assets/sync/created/assets.json");
         
@@ -44,14 +45,14 @@ public class Splunk {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SplunkAssetSyncCreatedJSONQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SplunkAssetSyncCreatedJSONRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -80,10 +81,11 @@ public class Splunk {
     /**
      * Exports the asset inventory in a sync-friendly manner using updated_at as a checkpoint. Requires the Splunk entitlement.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SplunkAssetSyncUpdatedJSONResponse splunkAssetSyncUpdatedJSON(org.openapis.openapi.models.operations.SplunkAssetSyncUpdatedJSONRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SplunkAssetSyncUpdatedJSONResponse splunkAssetSyncUpdatedJSON(org.openapis.openapi.models.operations.SplunkAssetSyncUpdatedJSONRequest request, org.openapis.openapi.models.operations.SplunkAssetSyncUpdatedJSONSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/export/org/assets/sync/updated/assets.json");
         
@@ -91,14 +93,14 @@ public class Splunk {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SplunkAssetSyncUpdatedJSONQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SplunkAssetSyncUpdatedJSONRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

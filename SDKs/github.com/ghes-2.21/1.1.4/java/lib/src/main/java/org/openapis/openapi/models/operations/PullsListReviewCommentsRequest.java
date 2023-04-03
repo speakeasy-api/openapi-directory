@@ -4,20 +4,78 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PullsListReviewCommentsRequest {
-    
-    public PullsListReviewCommentsPathParams pathParams;
-    public PullsListReviewCommentsRequest withPathParams(PullsListReviewCommentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Can be either `asc` or `desc`. Ignored without `sort` parameter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public PullsListReviewCommentsDirectionEnum direction;
+    public PullsListReviewCommentsRequest withDirection(PullsListReviewCommentsDirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public PullsListReviewCommentsRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public PullsListReviewCommentsQueryParams queryParams;
-    public PullsListReviewCommentsRequest withQueryParams(PullsListReviewCommentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public PullsListReviewCommentsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public PullsListReviewCommentsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pull_number")
+    public Long pullNumber;
+    public PullsListReviewCommentsRequest withPullNumber(Long pullNumber) {
+        this.pullNumber = pullNumber;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public PullsListReviewCommentsRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * Only show notifications updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public OffsetDateTime since;
+    public PullsListReviewCommentsRequest withSince(OffsetDateTime since) {
+        this.since = since;
+        return this;
+    }
+    
+    /**
+     * One of `created` (when the repository was starred) or `updated` (when it was last pushed to).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public org.openapis.openapi.models.shared.SortEnum sort;
+    public PullsListReviewCommentsRequest withSort(org.openapis.openapi.models.shared.SortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

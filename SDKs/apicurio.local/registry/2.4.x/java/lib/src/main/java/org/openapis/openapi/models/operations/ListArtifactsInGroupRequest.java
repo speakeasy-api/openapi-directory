@@ -4,20 +4,60 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListArtifactsInGroupRequest {
-    
-    public ListArtifactsInGroupPathParams pathParams;
-    public ListArtifactsInGroupRequest withPathParams(ListArtifactsInGroupPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public String groupId;
+    public ListArtifactsInGroupRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     
+    /**
+     * The number of artifacts to return.  Defaults to 20.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListArtifactsInGroupRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public ListArtifactsInGroupQueryParams queryParams;
-    public ListArtifactsInGroupRequest withQueryParams(ListArtifactsInGroupQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of artifacts to skip before starting the result set.  Defaults to 0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public ListArtifactsInGroupRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Sort order, ascending (`asc`) or descending (`desc`).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public org.openapis.openapi.models.shared.SortOrderEnum order;
+    public ListArtifactsInGroupRequest withOrder(org.openapis.openapi.models.shared.SortOrderEnum order) {
+        this.order = order;
+        return this;
+    }
+    
+    /**
+     * The field to sort by.  Can be one of:
+     * 
+     * * `name`
+     * * `createdOn`
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderby")
+    public org.openapis.openapi.models.shared.SortByEnum orderby;
+    public ListArtifactsInGroupRequest withOrderby(org.openapis.openapi.models.shared.SortByEnum orderby) {
+        this.orderby = orderby;
         return this;
     }
     

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SecretScanningPatchSecurityAnalysisSettingsForEnterpriseRequest {
-    
-    public SecretScanningPatchSecurityAnalysisSettingsForEnterprisePathParams pathParams;
-    public SecretScanningPatchSecurityAnalysisSettingsForEnterpriseRequest withPathParams(SecretScanningPatchSecurityAnalysisSettingsForEnterprisePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public SecretScanningPatchSecurityAnalysisSettingsForEnterpriseRequestBody requestBody;
+    public SecretScanningPatchSecurityAnalysisSettingsForEnterpriseRequest withRequestBody(SecretScanningPatchSecurityAnalysisSettingsForEnterpriseRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public SecretScanningPatchSecurityAnalysisSettingsForEnterpriseRequestBody request;
-    public SecretScanningPatchSecurityAnalysisSettingsForEnterpriseRequest withRequest(SecretScanningPatchSecurityAnalysisSettingsForEnterpriseRequestBody request) {
-        this.request = request;
+    /**
+     * The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
+    public String enterprise;
+    public SecretScanningPatchSecurityAnalysisSettingsForEnterpriseRequest withEnterprise(String enterprise) {
+        this.enterprise = enterprise;
         return this;
     }
     

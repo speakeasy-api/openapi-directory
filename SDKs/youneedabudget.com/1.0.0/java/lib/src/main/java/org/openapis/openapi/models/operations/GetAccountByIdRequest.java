@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountByIdRequest {
+    /**
+     * The id of the account
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account_id")
+    public String accountId;
+    public GetAccountByIdRequest withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
     
-    public GetAccountByIdPathParams pathParams;
-    public GetAccountByIdRequest withPathParams(GetAccountByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=budget_id")
+    public String budgetId;
+    public GetAccountByIdRequest withBudgetId(String budgetId) {
+        this.budgetId = budgetId;
         return this;
     }
     

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CompanyNotificationUnregisterRequest {
-    
-    public CompanyNotificationUnregisterPathParams pathParams;
-    public CompanyNotificationUnregisterRequest withPathParams(CompanyNotificationUnregisterPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CompanyNotificationUnregisterSecurity security;
-    public CompanyNotificationUnregisterRequest withSecurity(CompanyNotificationUnregisterSecurity security) {
-        this.security = security;
+    /**
+     * Registration id of monitoring request record
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public CompanyNotificationUnregisterRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

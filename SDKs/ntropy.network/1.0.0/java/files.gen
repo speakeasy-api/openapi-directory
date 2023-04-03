@@ -34,7 +34,6 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/GetABatchOfConsumerTransactionClassificationResultsPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetABatchOfConsumerTransactionClassificationResultsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetABatchOfConsumerTransactionClassificationResults200ApplicationJSONResultsContact.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetABatchOfConsumerTransactionClassificationResults200ApplicationJSONResultsLocation.java
@@ -42,7 +41,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetABatchOfConsumerTran
 lib/src/main/java/org/openapis/openapi/models/operations/GetABatchOfConsumerTransactionClassificationResults200ApplicationJSONResults.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetABatchOfConsumerTransactionClassificationResults200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetABatchOfConsumerTransactionClassificationResultsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetABatchOfBusinessTransactionClassificationResultsPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetABatchOfBusinessTransactionClassificationResultsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetABatchOfBusinessTransactionClassificationResults200ApplicationJSONResults.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetABatchOfBusinessTransactionClassificationResults200ApplicationJSON.java

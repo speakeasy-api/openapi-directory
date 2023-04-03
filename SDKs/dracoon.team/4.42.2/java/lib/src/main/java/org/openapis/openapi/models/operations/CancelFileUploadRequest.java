@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelFileUploadRequest {
-    
-    public CancelFileUploadPathParams pathParams;
-    public CancelFileUploadRequest withPathParams(CancelFileUploadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public CancelFileUploadRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public CancelFileUploadHeaders headers;
-    public CancelFileUploadRequest withHeaders(CancelFileUploadHeaders headers) {
-        this.headers = headers;
+    /**
+     * Upload channel ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=upload_id")
+    public String uploadId;
+    public CancelFileUploadRequest withUploadId(String uploadId) {
+        this.uploadId = uploadId;
         return this;
     }
     

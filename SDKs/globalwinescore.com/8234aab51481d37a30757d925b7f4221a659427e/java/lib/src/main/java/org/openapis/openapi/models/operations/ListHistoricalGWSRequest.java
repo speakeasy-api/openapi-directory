@@ -4,20 +4,107 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListHistoricalGWSRequest {
-    
-    public ListHistoricalGWSQueryParams queryParams;
-    public ListHistoricalGWSRequest withQueryParams(ListHistoricalGWSQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public ListHistoricalGWSRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
+    /**
+     * The lowercase color of the wine.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=color")
+    public ListHistoricalGWSColorEnum color;
+    public ListHistoricalGWSRequest withColor(ListHistoricalGWSColorEnum color) {
+        this.color = color;
+        return this;
+    }
     
-    public ListHistoricalGWSHeaders headers;
-    public ListHistoricalGWSRequest withHeaders(ListHistoricalGWSHeaders headers) {
-        this.headers = headers;
+    /**
+     * Only show the &lt;a href="See https://en.wikipedia.org/wiki/En_primeur"&gt;en primeur&lt;/a&gt; GlobalWineScores
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_primeurs")
+    public Boolean isPrimeurs;
+    public ListHistoricalGWSRequest withIsPrimeurs(Boolean isPrimeurs) {
+        this.isPrimeurs = isPrimeurs;
+        return this;
+    }
+    
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListHistoricalGWSRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * L-WIN wine identifier (See definition &lt;a href="https://www.liv-ex.com/lwin/" target="_blank"&gt;here&lt;/a&gt;)
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lwin")
+    public String lwin;
+    public ListHistoricalGWSRequest withLwin(String lwin) {
+        this.lwin = lwin;
+        return this;
+    }
+    
+    /**
+     * L-WIN wine/vintage identifier (See definition &lt;a href="https://www.liv-ex.com/lwin/" target="_blank"&gt;here&lt;/a&gt;)
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lwin_11")
+    public String lwin11;
+    public ListHistoricalGWSRequest withLwin11(String lwin11) {
+        this.lwin11 = lwin11;
+        return this;
+    }
+    
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public ListHistoricalGWSRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Which field to use when ordering the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ordering")
+    public ListHistoricalGWSOrderingEnum ordering;
+    public ListHistoricalGWSRequest withOrdering(ListHistoricalGWSOrderingEnum ordering) {
+        this.ordering = ordering;
+        return this;
+    }
+    
+    /**
+     * The vintage you want to search against.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vintage")
+    public String vintage;
+    public ListHistoricalGWSRequest withVintage(String vintage) {
+        this.vintage = vintage;
+        return this;
+    }
+    
+    /**
+     * The exact `id` of the wine. Can be used multiple times (e.g `?wine_id=114959&amp;wine_id=114952`) &lt;br/&gt; If you need to find the `wine_id` for your wines, use our &lt;a href="https://api.globalwinescore.com/search/" target="_blank"&gt;search page&lt;/a&gt;
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=wine_id")
+    public Long[] wineId;
+    public ListHistoricalGWSRequest withWineId(Long[] wineId) {
+        this.wineId = wineId;
         return this;
     }
     

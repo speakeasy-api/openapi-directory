@@ -45,13 +45,13 @@ public class PublicIPAddresses {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetContainersFloatingIpsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetContainersFloatingIpsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -100,7 +100,7 @@ public class PublicIPAddresses {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -142,13 +142,13 @@ public class PublicIPAddresses {
      */
     public org.openapis.openapi.models.operations.PostContainersFloatingIpsIpReleaseResponse postContainersFloatingIpsIpRelease(org.openapis.openapi.models.operations.PostContainersFloatingIpsIpReleaseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostContainersFloatingIpsIpReleasePathParams.class, baseUrl, "/containers/floating-ips/{ip}/release", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostContainersFloatingIpsIpReleaseRequest.class, baseUrl, "/containers/floating-ips/{ip}/release", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -183,13 +183,13 @@ public class PublicIPAddresses {
      */
     public org.openapis.openapi.models.operations.PostContainersNameOrIdFloatingIpsIpBindResponse postContainersNameOrIdFloatingIpsIpBind(org.openapis.openapi.models.operations.PostContainersNameOrIdFloatingIpsIpBindRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostContainersNameOrIdFloatingIpsIpBindPathParams.class, baseUrl, "/containers/{name_or_id}/floating-ips/{ip}/bind", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostContainersNameOrIdFloatingIpsIpBindRequest.class, baseUrl, "/containers/{name_or_id}/floating-ips/{ip}/bind", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -224,13 +224,13 @@ public class PublicIPAddresses {
      */
     public org.openapis.openapi.models.operations.PostContainersNameOrIdFloatingIpsIpUnbindResponse postContainersNameOrIdFloatingIpsIpUnbind(org.openapis.openapi.models.operations.PostContainersNameOrIdFloatingIpsIpUnbindRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostContainersNameOrIdFloatingIpsIpUnbindPathParams.class, baseUrl, "/containers/{name_or_id}/floating-ips/{ip}/unbind", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostContainersNameOrIdFloatingIpsIpUnbindRequest.class, baseUrl, "/containers/{name_or_id}/floating-ips/{ip}/unbind", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

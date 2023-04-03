@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchConversationRequest {
-    
-    public FetchConversationPathParams pathParams;
-    public FetchConversationRequest withPathParams(FetchConversationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchConversationSecurity security;
-    public FetchConversationRequest withSecurity(FetchConversationSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchConversationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * A 34 character string that uniquely identifies this resource. Can also be the `unique_name` of the Conversation.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchConversationRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

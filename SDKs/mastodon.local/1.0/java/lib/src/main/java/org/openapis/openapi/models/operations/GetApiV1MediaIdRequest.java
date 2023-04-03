@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1MediaIdRequest {
-    
-    public GetApiV1MediaIdPathParams pathParams;
-    public GetApiV1MediaIdRequest withPathParams(GetApiV1MediaIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetApiV1MediaIdSecurity security;
-    public GetApiV1MediaIdRequest withSecurity(GetApiV1MediaIdSecurity security) {
-        this.security = security;
+    /**
+     * The id of the Attachment entity to be updated.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetApiV1MediaIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

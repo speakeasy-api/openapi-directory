@@ -4,27 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSubscriptionDefinitionVersionsRequest {
-    
-    public ListSubscriptionDefinitionVersionsPathParams pathParams;
-    public ListSubscriptionDefinitionVersionsRequest withPathParams(ListSubscriptionDefinitionVersionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The maximum number of results to be returned per request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public String maxResults;
+    public ListSubscriptionDefinitionVersionsRequest withMaxResults(String maxResults) {
+        this.maxResults = maxResults;
         return this;
     }
     
-    
-    public ListSubscriptionDefinitionVersionsQueryParams queryParams;
-    public ListSubscriptionDefinitionVersionsRequest withQueryParams(ListSubscriptionDefinitionVersionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The token for the next set of results, or ''null'' if there are no additional results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public ListSubscriptionDefinitionVersionsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
     
+    /**
+     * The ID of the subscription definition.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=SubscriptionDefinitionId")
+    public String subscriptionDefinitionId;
+    public ListSubscriptionDefinitionVersionsRequest withSubscriptionDefinitionId(String subscriptionDefinitionId) {
+        this.subscriptionDefinitionId = subscriptionDefinitionId;
+        return this;
+    }
     
-    public ListSubscriptionDefinitionVersionsHeaders headers;
-    public ListSubscriptionDefinitionVersionsRequest withHeaders(ListSubscriptionDefinitionVersionsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListSubscriptionDefinitionVersionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListSubscriptionDefinitionVersionsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListSubscriptionDefinitionVersionsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListSubscriptionDefinitionVersionsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListSubscriptionDefinitionVersionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListSubscriptionDefinitionVersionsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListSubscriptionDefinitionVersionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

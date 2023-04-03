@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KeyRetrieveRequest {
-    
-    public KeyRetrievePathParams pathParams;
-    public KeyRetrieveRequest withPathParams(KeyRetrievePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Public Signing Key - Authentiq ID (43 chars)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=PK")
+    public String pk;
+    public KeyRetrieveRequest withPk(String pk) {
+        this.pk = pk;
         return this;
     }
     

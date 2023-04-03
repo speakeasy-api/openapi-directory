@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContactRequest {
+    /**
+     * The unique identifier of the contact in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=contact_id")
+    public String contactId;
+    public GetContactRequest withContactId(String contactId) {
+        this.contactId = contactId;
+        return this;
+    }
     
-    public GetContactPathParams pathParams;
-    public GetContactRequest withPathParams(GetContactPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the group in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public String groupId;
+    public GetContactRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     

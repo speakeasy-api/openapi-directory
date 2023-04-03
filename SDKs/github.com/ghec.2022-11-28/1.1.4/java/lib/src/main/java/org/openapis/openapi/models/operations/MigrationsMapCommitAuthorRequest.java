@@ -7,17 +7,37 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MigrationsMapCommitAuthorRequest {
-    
-    public MigrationsMapCommitAuthorPathParams pathParams;
-    public MigrationsMapCommitAuthorRequest withPathParams(MigrationsMapCommitAuthorPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public MigrationsMapCommitAuthorRequestBody requestBody;
+    public MigrationsMapCommitAuthorRequest withRequestBody(MigrationsMapCommitAuthorRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public MigrationsMapCommitAuthorRequestBody request;
-    public MigrationsMapCommitAuthorRequest withRequest(MigrationsMapCommitAuthorRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=author_id")
+    public Long authorId;
+    public MigrationsMapCommitAuthorRequest withAuthorId(Long authorId) {
+        this.authorId = authorId;
+        return this;
+    }
+    
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public MigrationsMapCommitAuthorRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public MigrationsMapCommitAuthorRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkWirelessSsidEapOverrideRequest {
-    
-    public UpdateNetworkWirelessSsidEapOverridePathParams pathParams;
-    public UpdateNetworkWirelessSsidEapOverrideRequest withPathParams(UpdateNetworkWirelessSsidEapOverridePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkWirelessSsidEapOverrideRequestBody requestBody;
+    public UpdateNetworkWirelessSsidEapOverrideRequest withRequestBody(UpdateNetworkWirelessSsidEapOverrideRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkWirelessSsidEapOverrideRequestBody request;
-    public UpdateNetworkWirelessSsidEapOverrideRequest withRequest(UpdateNetworkWirelessSsidEapOverrideRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkWirelessSsidEapOverrideRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=number")
+    public String number;
+    public UpdateNetworkWirelessSsidEapOverrideRequest withNumber(String number) {
+        this.number = number;
         return this;
     }
     

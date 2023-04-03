@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPolicyModuleRequest {
-    
-    public GetPolicyModulePathParams pathParams;
-    public GetPolicyModuleRequest withPathParams(GetPolicyModulePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of a policy module
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetPolicyModuleRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetPolicyModuleQueryParams queryParams;
-    public GetPolicyModuleRequest withQueryParams(GetPolicyModuleQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * If true, response will be in a human-readable format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pretty")
+    public Boolean pretty;
+    public GetPolicyModuleRequest withPretty(Boolean pretty) {
+        this.pretty = pretty;
         return this;
     }
     

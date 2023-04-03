@@ -18,9 +18,9 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.FirebasedynamiclinksManagedShortLinksCreateSecurity;
-import org.openapis.openapi.models.operations.FirebasedynamiclinksManagedShortLinksCreateQueryParams;
 import org.openapis.openapi.models.operations.FirebasedynamiclinksManagedShortLinksCreateRequest;
 import org.openapis.openapi.models.operations.FirebasedynamiclinksManagedShortLinksCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.CreateManagedShortLinkRequest;
 import org.openapis.openapi.models.shared.SuffixOptionEnum;
 import org.openapis.openapi.models.shared.Suffix;
@@ -33,10 +33,7 @@ import org.openapis.openapi.models.shared.AndroidInfo;
 import org.openapis.openapi.models.shared.AnalyticsInfo;
 import org.openapis.openapi.models.shared.ITunesConnectAnalytics;
 import org.openapis.openapi.models.shared.GooglePlayAnalytics;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -45,86 +42,79 @@ public class Application {
                 .build();
 
             FirebasedynamiclinksManagedShortLinksCreateRequest req = new FirebasedynamiclinksManagedShortLinksCreateRequest() {{
-                security = new FirebasedynamiclinksManagedShortLinksCreateSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                queryParams = new FirebasedynamiclinksManagedShortLinksCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "provident";
-                    alt = "proto";
-                    callback = "quibusdam";
-                    fields = "unde";
-                    key = "nulla";
-                    oauthToken = "corrupti";
-                    prettyPrint = false;
-                    quotaUser = "illum";
-                    uploadType = "vel";
-                    uploadProtocol = "error";
-                }};
-                request = new CreateManagedShortLinkRequest() {{
+                dollarXgafv = "2";
+                createManagedShortLinkRequest = new CreateManagedShortLinkRequest() {{
                     dynamicLinkInfo = new DynamicLinkInfo() {{
                         analyticsInfo = new AnalyticsInfo() {{
                             googlePlayAnalytics = new GooglePlayAnalytics() {{
-                                gclid = "deserunt";
-                                utmCampaign = "suscipit";
-                                utmContent = "iure";
-                                utmMedium = "magnam";
-                                utmSource = "debitis";
-                                utmTerm = "ipsa";
+                                gclid = "provident";
+                                utmCampaign = "distinctio";
+                                utmContent = "quibusdam";
+                                utmMedium = "unde";
+                                utmSource = "nulla";
+                                utmTerm = "corrupti";
                             }};
                             itunesConnectAnalytics = new ITunesConnectAnalytics() {{
-                                at = "delectus";
-                                ct = "tempora";
-                                mt = "suscipit";
-                                pt = "molestiae";
+                                at = "illum";
+                                ct = "vel";
+                                mt = "error";
+                                pt = "deserunt";
                             }};
                         }};
                         androidInfo = new AndroidInfo() {{
-                            androidFallbackLink = "minus";
-                            androidLink = "placeat";
-                            androidMinPackageVersionCode = "voluptatum";
-                            androidPackageName = "iusto";
+                            androidFallbackLink = "suscipit";
+                            androidLink = "iure";
+                            androidMinPackageVersionCode = "magnam";
+                            androidPackageName = "debitis";
                         }};
                         desktopInfo = new DesktopInfo() {{
-                            desktopFallbackLink = "excepturi";
+                            desktopFallbackLink = "ipsa";
                         }};
-                        domainUriPrefix = "nisi";
-                        dynamicLinkDomain = "recusandae";
+                        domainUriPrefix = "delectus";
+                        dynamicLinkDomain = "tempora";
                         iosInfo = new IosInfo() {{
-                            iosAppStoreId = "temporibus";
-                            iosBundleId = "ab";
-                            iosCustomScheme = "quis";
-                            iosFallbackLink = "veritatis";
-                            iosIpadBundleId = "deserunt";
-                            iosIpadFallbackLink = "perferendis";
-                            iosMinimumVersion = "ipsam";
+                            iosAppStoreId = "suscipit";
+                            iosBundleId = "molestiae";
+                            iosCustomScheme = "minus";
+                            iosFallbackLink = "placeat";
+                            iosIpadBundleId = "voluptatum";
+                            iosIpadFallbackLink = "iusto";
+                            iosMinimumVersion = "excepturi";
                         }};
-                        link = "repellendus";
+                        link = "nisi";
                         navigationInfo = new NavigationInfo() {{
                             enableForcedRedirect = false;
                         }};
                         socialMetaTagInfo = new SocialMetaTagInfo() {{
-                            socialDescription = "sapiente";
-                            socialImageLink = "quo";
-                            socialTitle = "odit";
+                            socialDescription = "recusandae";
+                            socialImageLink = "temporibus";
+                            socialTitle = "ab";
                         }};
                     }};
-                    longDynamicLink = "at";
-                    name = "at";
-                    sdkVersion = "maiores";
+                    longDynamicLink = "quis";
+                    name = "veritatis";
+                    sdkVersion = "deserunt";
                     suffix = new Suffix() {{
-                        customSuffix = "molestiae";
-                        option = "CUSTOM";
+                        customSuffix = "perferendis";
+                        option = "UNGUESSABLE";
                     }};
                 }};
-            }};            
+                accessToken = "repellendus";
+                alt = "proto";
+                callback = "quo";
+                fields = "odit";
+                key = "at";
+                oauthToken = "at";
+                prettyPrint = false;
+                quotaUser = "maiores";
+                uploadType = "molestiae";
+                uploadProtocol = "quod";
+            }}            
 
-            FirebasedynamiclinksManagedShortLinksCreateResponse res = sdk.managedShortLinks.firebasedynamiclinksManagedShortLinksCreate(req);
+            FirebasedynamiclinksManagedShortLinksCreateResponse res = sdk.managedShortLinks.firebasedynamiclinksManagedShortLinksCreate(req, new FirebasedynamiclinksManagedShortLinksCreateSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.createManagedShortLinkResponse.isPresent()) {
                 // handle response
@@ -136,7 +126,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### managedShortLinks

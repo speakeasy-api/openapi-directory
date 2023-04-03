@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IPProbeRequest {
-    
-    public IPProbeQueryParams queryParams;
-    public IPProbeRequest withQueryParams(IPProbeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * IPv4 or IPv6 address
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ip")
+    public String ip;
+    public IPProbeRequest withIp(String ip) {
+        this.ip = ip;
         return this;
     }
     

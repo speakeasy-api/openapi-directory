@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TwilioMessagePostTwilioPostRequest {
-    
-    public TwilioMessagePostTwilioPostHeaders headers;
-    public TwilioMessagePostTwilioPostRequest withHeaders(TwilioMessagePostTwilioPostHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.TwilioMessageRequest twilioMessageRequest;
+    public TwilioMessagePostTwilioPostRequest withTwilioMessageRequest(org.openapis.openapi.models.shared.TwilioMessageRequest twilioMessageRequest) {
+        this.twilioMessageRequest = twilioMessageRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TwilioMessageRequest request;
-    public TwilioMessagePostTwilioPostRequest withRequest(org.openapis.openapi.models.shared.TwilioMessageRequest request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=authorization")
+    public String authorization;
+    public TwilioMessagePostTwilioPostRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     

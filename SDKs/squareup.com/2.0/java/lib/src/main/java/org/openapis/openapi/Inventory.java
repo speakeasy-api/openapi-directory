@@ -39,10 +39,11 @@ public class Inventory {
      * referenced in the request.
      * On failure: returns a list of related errors.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BatchChangeInventoryResponse batchChangeInventory(org.openapis.openapi.models.operations.BatchChangeInventoryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BatchChangeInventoryResponse batchChangeInventory(org.openapis.openapi.models.shared.BatchChangeInventoryRequest request, org.openapis.openapi.models.operations.BatchChangeInventorySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/inventory/changes/batch-create");
         
@@ -56,7 +57,7 @@ public class Inventory {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -91,10 +92,11 @@ public class Inventory {
      * BatchRetrieveInventoryChanges is a catch-all query endpoint for queries
      * that cannot be handled by other, simpler endpoints.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BatchRetrieveInventoryChangesResponse batchRetrieveInventoryChanges(org.openapis.openapi.models.operations.BatchRetrieveInventoryChangesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BatchRetrieveInventoryChangesResponse batchRetrieveInventoryChanges(org.openapis.openapi.models.shared.BatchRetrieveInventoryChangesRequest request, org.openapis.openapi.models.operations.BatchRetrieveInventoryChangesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/inventory/changes/batch-retrieve");
         
@@ -108,7 +110,7 @@ public class Inventory {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -146,10 +148,11 @@ public class Inventory {
      * returned. This allows clients to perform a "sync" operation, for example
      * in response to receiving a Webhook notification.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BatchRetrieveInventoryCountsResponse batchRetrieveInventoryCounts(org.openapis.openapi.models.operations.BatchRetrieveInventoryCountsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BatchRetrieveInventoryCountsResponse batchRetrieveInventoryCounts(org.openapis.openapi.models.shared.BatchRetrieveInventoryCountsRequest request, org.openapis.openapi.models.operations.BatchRetrieveInventoryCountsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/inventory/counts/batch-retrieve");
         
@@ -163,7 +166,7 @@ public class Inventory {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -192,10 +195,11 @@ public class Inventory {
      * Deprecated version of [BatchChangeInventory](https://developer.squareup.com/reference/square_2021-08-18/inventory-api/batch-change-inventory) after the endpoint URL 
      * is updated to conform to the standard convention.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeprecatedBatchChangeInventoryResponse deprecatedBatchChangeInventory(org.openapis.openapi.models.operations.DeprecatedBatchChangeInventoryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeprecatedBatchChangeInventoryResponse deprecatedBatchChangeInventory(org.openapis.openapi.models.shared.BatchChangeInventoryRequest request, org.openapis.openapi.models.operations.DeprecatedBatchChangeInventorySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/inventory/batch-change");
         
@@ -209,7 +213,7 @@ public class Inventory {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -238,10 +242,11 @@ public class Inventory {
      * Deprecated version of [BatchRetrieveInventoryChanges](https://developer.squareup.com/reference/square_2021-08-18/inventory-api/batch-retrieve-inventory-changes) after the endpoint URL 
      * is updated to conform to the standard convention.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeprecatedBatchRetrieveInventoryChangesResponse deprecatedBatchRetrieveInventoryChanges(org.openapis.openapi.models.operations.DeprecatedBatchRetrieveInventoryChangesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeprecatedBatchRetrieveInventoryChangesResponse deprecatedBatchRetrieveInventoryChanges(org.openapis.openapi.models.shared.BatchRetrieveInventoryChangesRequest request, org.openapis.openapi.models.operations.DeprecatedBatchRetrieveInventoryChangesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/inventory/batch-retrieve-changes");
         
@@ -255,7 +260,7 @@ public class Inventory {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -284,10 +289,11 @@ public class Inventory {
      * Deprecated version of [BatchRetrieveInventoryCounts](https://developer.squareup.com/reference/square_2021-08-18/inventory-api/batch-retrieve-inventory-counts) after the endpoint URL 
      * is updated to conform to the standard convention.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeprecatedBatchRetrieveInventoryCountsResponse deprecatedBatchRetrieveInventoryCounts(org.openapis.openapi.models.operations.DeprecatedBatchRetrieveInventoryCountsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeprecatedBatchRetrieveInventoryCountsResponse deprecatedBatchRetrieveInventoryCounts(org.openapis.openapi.models.shared.BatchRetrieveInventoryCountsRequest request, org.openapis.openapi.models.operations.DeprecatedBatchRetrieveInventoryCountsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/inventory/batch-retrieve-counts");
         
@@ -301,7 +307,7 @@ public class Inventory {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -330,19 +336,20 @@ public class Inventory {
      * Deprecated version of [RetrieveInventoryAdjustment](https://developer.squareup.com/reference/square_2021-08-18/inventory-api/retrieve-inventory-adjustment) after the endpoint URL 
      * is updated to conform to the standard convention.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeprecatedRetrieveInventoryAdjustmentResponse deprecatedRetrieveInventoryAdjustment(org.openapis.openapi.models.operations.DeprecatedRetrieveInventoryAdjustmentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeprecatedRetrieveInventoryAdjustmentResponse deprecatedRetrieveInventoryAdjustment(org.openapis.openapi.models.operations.DeprecatedRetrieveInventoryAdjustmentRequest request, org.openapis.openapi.models.operations.DeprecatedRetrieveInventoryAdjustmentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeprecatedRetrieveInventoryAdjustmentPathParams.class, baseUrl, "/v2/inventory/adjustment/{adjustment_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeprecatedRetrieveInventoryAdjustmentRequest.class, baseUrl, "/v2/inventory/adjustment/{adjustment_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -371,19 +378,20 @@ public class Inventory {
      * Deprecated version of [RetrieveInventoryPhysicalCount](https://developer.squareup.com/reference/square_2021-08-18/inventory-api/retrieve-inventory-physical-count) after the endpoint URL 
      * is updated to conform to the standard convention.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeprecatedRetrieveInventoryPhysicalCountResponse deprecatedRetrieveInventoryPhysicalCount(org.openapis.openapi.models.operations.DeprecatedRetrieveInventoryPhysicalCountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeprecatedRetrieveInventoryPhysicalCountResponse deprecatedRetrieveInventoryPhysicalCount(org.openapis.openapi.models.operations.DeprecatedRetrieveInventoryPhysicalCountRequest request, org.openapis.openapi.models.operations.DeprecatedRetrieveInventoryPhysicalCountSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeprecatedRetrieveInventoryPhysicalCountPathParams.class, baseUrl, "/v2/inventory/physical-count/{physical_count_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeprecatedRetrieveInventoryPhysicalCountRequest.class, baseUrl, "/v2/inventory/physical-count/{physical_count_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -412,19 +420,20 @@ public class Inventory {
      * Returns the [InventoryAdjustment](https://developer.squareup.com/reference/square_2021-08-18/objects/InventoryAdjustment) object
      * with the provided `adjustment_id`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrieveInventoryAdjustmentResponse retrieveInventoryAdjustment(org.openapis.openapi.models.operations.RetrieveInventoryAdjustmentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveInventoryAdjustmentResponse retrieveInventoryAdjustment(org.openapis.openapi.models.operations.RetrieveInventoryAdjustmentRequest request, org.openapis.openapi.models.operations.RetrieveInventoryAdjustmentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveInventoryAdjustmentPathParams.class, baseUrl, "/v2/inventory/adjustments/{adjustment_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveInventoryAdjustmentRequest.class, baseUrl, "/v2/inventory/adjustments/{adjustment_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -464,25 +473,26 @@ public class Inventory {
      * used to display recent changes for a specific item. For more
      * sophisticated queries, use a batch endpoint.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrieveInventoryChangesResponse retrieveInventoryChanges(org.openapis.openapi.models.operations.RetrieveInventoryChangesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveInventoryChangesResponse retrieveInventoryChanges(org.openapis.openapi.models.operations.RetrieveInventoryChangesRequest request, org.openapis.openapi.models.operations.RetrieveInventoryChangesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveInventoryChangesPathParams.class, baseUrl, "/v2/inventory/{catalog_object_id}/changes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveInventoryChangesRequest.class, baseUrl, "/v2/inventory/{catalog_object_id}/changes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetrieveInventoryChangesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetrieveInventoryChangesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -513,25 +523,26 @@ public class Inventory {
      * [Location](https://developer.squareup.com/reference/square_2021-08-18/objects/Location)s. Responses are paginated and unsorted.
      * For more sophisticated queries, use a batch endpoint.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrieveInventoryCountResponse retrieveInventoryCount(org.openapis.openapi.models.operations.RetrieveInventoryCountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveInventoryCountResponse retrieveInventoryCount(org.openapis.openapi.models.operations.RetrieveInventoryCountRequest request, org.openapis.openapi.models.operations.RetrieveInventoryCountSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveInventoryCountPathParams.class, baseUrl, "/v2/inventory/{catalog_object_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveInventoryCountRequest.class, baseUrl, "/v2/inventory/{catalog_object_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetrieveInventoryCountQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetrieveInventoryCountRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -560,19 +571,20 @@ public class Inventory {
      * Returns the [InventoryPhysicalCount](https://developer.squareup.com/reference/square_2021-08-18/objects/InventoryPhysicalCount)
      * object with the provided `physical_count_id`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrieveInventoryPhysicalCountResponse retrieveInventoryPhysicalCount(org.openapis.openapi.models.operations.RetrieveInventoryPhysicalCountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveInventoryPhysicalCountResponse retrieveInventoryPhysicalCount(org.openapis.openapi.models.operations.RetrieveInventoryPhysicalCountRequest request, org.openapis.openapi.models.operations.RetrieveInventoryPhysicalCountSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveInventoryPhysicalCountPathParams.class, baseUrl, "/v2/inventory/physical-counts/{physical_count_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveInventoryPhysicalCountRequest.class, baseUrl, "/v2/inventory/physical-counts/{physical_count_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -601,19 +613,20 @@ public class Inventory {
      * Returns the [InventoryTransfer](https://developer.squareup.com/reference/square_2021-08-18/objects/InventoryTransfer) object
      * with the provided `transfer_id`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrieveInventoryTransferResponse retrieveInventoryTransfer(org.openapis.openapi.models.operations.RetrieveInventoryTransferRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveInventoryTransferResponse retrieveInventoryTransfer(org.openapis.openapi.models.operations.RetrieveInventoryTransferRequest request, org.openapis.openapi.models.operations.RetrieveInventoryTransferSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveInventoryTransferPathParams.class, baseUrl, "/v2/inventory/transfers/{transfer_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveInventoryTransferRequest.class, baseUrl, "/v2/inventory/transfers/{transfer_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

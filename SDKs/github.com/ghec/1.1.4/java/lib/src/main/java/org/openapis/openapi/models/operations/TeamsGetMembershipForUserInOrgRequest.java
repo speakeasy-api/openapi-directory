@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsGetMembershipForUserInOrgRequest {
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public TeamsGetMembershipForUserInOrgRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
     
-    public TeamsGetMembershipForUserInOrgPathParams pathParams;
-    public TeamsGetMembershipForUserInOrgRequest withPathParams(TeamsGetMembershipForUserInOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The slug of the team name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_slug")
+    public String teamSlug;
+    public TeamsGetMembershipForUserInOrgRequest withTeamSlug(String teamSlug) {
+        this.teamSlug = teamSlug;
+        return this;
+    }
+    
+    /**
+     * The handle for the GitHub user account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public TeamsGetMembershipForUserInOrgRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

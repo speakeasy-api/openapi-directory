@@ -7,29 +7,25 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateInvoiceRequest {
-    
-    public UpdateInvoicePathParams pathParams;
-    public UpdateInvoiceRequest withPathParams(UpdateInvoicePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * An object containing the fields to POST for the request.
      * 
      * See the corresponding object definition for field details.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateInvoiceRequest request;
-    public UpdateInvoiceRequest withRequest(org.openapis.openapi.models.shared.UpdateInvoiceRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateInvoiceRequest updateInvoiceRequest;
+    public UpdateInvoiceRequest withUpdateInvoiceRequest(org.openapis.openapi.models.shared.UpdateInvoiceRequest updateInvoiceRequest) {
+        this.updateInvoiceRequest = updateInvoiceRequest;
         return this;
     }
     
-    
-    public UpdateInvoiceSecurity security;
-    public UpdateInvoiceRequest withSecurity(UpdateInvoiceSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the invoice to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=invoice_id")
+    public String invoiceId;
+    public UpdateInvoiceRequest withInvoiceId(String invoiceId) {
+        this.invoiceId = invoiceId;
         return this;
     }
     

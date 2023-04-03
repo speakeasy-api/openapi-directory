@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CheckSpellingRussianRequest {
-    
-    public CheckSpellingRussianHeaders headers;
-    public CheckSpellingRussianRequest withHeaders(CheckSpellingRussianHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CheckSpellingRussianRequestBody requestBody;
+    public CheckSpellingRussianRequest withRequestBody(CheckSpellingRussianRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public CheckSpellingRussianRequestBody request;
-    public CheckSpellingRussianRequest withRequest(CheckSpellingRussianRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-RapidAPI-Key")
+    public String xRapidAPIKey;
+    public CheckSpellingRussianRequest withXRapidAPIKey(String xRapidAPIKey) {
+        this.xRapidAPIKey = xRapidAPIKey;
         return this;
     }
     

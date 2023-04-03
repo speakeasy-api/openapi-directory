@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GitGetBlobRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=file_sha")
+    public String fileSha;
+    public GitGetBlobRequest withFileSha(String fileSha) {
+        this.fileSha = fileSha;
+        return this;
+    }
     
-    public GitGetBlobPathParams pathParams;
-    public GitGetBlobRequest withPathParams(GitGetBlobPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public GitGetBlobRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public GitGetBlobRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

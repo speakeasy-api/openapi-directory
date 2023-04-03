@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContinuousProjectsRequest {
-    
-    public GetContinuousProjectsQueryParams queryParams;
-    public GetContinuousProjectsRequest withQueryParams(GetContinuousProjectsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Type of continuous project.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public GetContinuousProjectsTypeEnum type;
+    public GetContinuousProjectsRequest withType(GetContinuousProjectsTypeEnum type) {
+        this.type = type;
         return this;
     }
     

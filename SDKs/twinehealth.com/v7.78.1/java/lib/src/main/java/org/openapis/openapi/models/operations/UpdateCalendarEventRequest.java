@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCalendarEventRequest {
-    
-    public UpdateCalendarEventPathParams pathParams;
-    public UpdateCalendarEventRequest withPathParams(UpdateCalendarEventPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/vnd.api+json")
+    public org.openapis.openapi.models.shared.UpdateCalendarEventRequest updateCalendarEventRequest;
+    public UpdateCalendarEventRequest withUpdateCalendarEventRequest(org.openapis.openapi.models.shared.UpdateCalendarEventRequest updateCalendarEventRequest) {
+        this.updateCalendarEventRequest = updateCalendarEventRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/vnd.api+json")
-    public org.openapis.openapi.models.shared.UpdateCalendarEventRequest request;
-    public UpdateCalendarEventRequest withRequest(org.openapis.openapi.models.shared.UpdateCalendarEventRequest request) {
-        this.request = request;
+    /**
+     * Calendar event identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UpdateCalendarEventRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

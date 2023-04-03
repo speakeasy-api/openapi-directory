@@ -4,27 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LabTestsUpdateRequest {
-    
-    public LabTestsUpdatePathParams pathParams;
-    public LabTestsUpdateRequest withPathParams(LabTestsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public LabTestsUpdateRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     
-    
-    public LabTestsUpdateQueryParams queryParams;
-    public LabTestsUpdateRequest withQueryParams(LabTestsUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public LabTestsUpdateRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public LabTestsUpdateSecurity security;
-    public LabTestsUpdateRequest withSecurity(LabTestsUpdateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public Long order;
+    public LabTestsUpdateRequest withOrder(Long order) {
+        this.order = order;
         return this;
     }
     

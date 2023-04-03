@@ -4,13 +4,106 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MetalsSpotHistoryGETRequest {
+    /**
+     * comma separated list of conversion currencies, defaults to USD
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currency")
+    public String currency;
+    public MetalsSpotHistoryGETRequest withCurrency(String currency) {
+        this.currency = currency;
+        return this;
+    }
     
-    public MetalsSpotHistoryGETQueryParams queryParams;
-    public MetalsSpotHistoryGETRequest withQueryParams(MetalsSpotHistoryGETQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * end date of time period. format is &lt;i&gt;yyyy-mm-dd&lt;/i&gt;. Default is current date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
+    public OffsetDateTime end;
+    public MetalsSpotHistoryGETRequest withEnd(OffsetDateTime end) {
+        this.end = end;
+        return this;
+    }
+    
+    /**
+     * to override content negotiation specify a value of json or xml
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public MetalsSpotHistoryGETFormatEnum format;
+    public MetalsSpotHistoryGETRequest withFormat(MetalsSpotHistoryGETFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * if true use historical currency rates otherwise current currency rates. Defaults to true.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=historicalfx")
+    public Boolean historicalfx;
+    public MetalsSpotHistoryGETRequest withHistoricalfx(Boolean historicalfx) {
+        this.historicalfx = historicalfx;
+        return this;
+    }
+    
+    /**
+     * aggregation interval. Composed of an optional integer value (which defaults to 1 when not specified), 
+     * followed by a type string which must be one of the following values:
+     * y=year,
+     * m=month,
+     * w=week,
+     * d=day,
+     * h=hour,
+     * mi=minute
+     * 
+     * For example, a yearly interval can be specified as "y" and 6 month interval as "6m". 
+     * 
+     * If not specified the interval parameter default is 1 Day.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interval")
+    public String interval;
+    public MetalsSpotHistoryGETRequest withInterval(String interval) {
+        this.interval = interval;
+        return this;
+    }
+    
+    /**
+     * comma separated list of metals
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=metals")
+    public String metals;
+    public MetalsSpotHistoryGETRequest withMetals(String metals) {
+        this.metals = metals;
+        return this;
+    }
+    
+    /**
+     * start date of time period. format is &lt;i&gt;yyyy-mm-dd&lt;/i&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public OffsetDateTime start;
+    public MetalsSpotHistoryGETRequest withStart(OffsetDateTime start) {
+        this.start = start;
+        return this;
+    }
+    
+    /**
+     * unit of meaure, defaults to troy ounces. allowed values are:
+     * mg=milligram
+     * g=gram
+     * kg=kilogram
+     * gr=grain
+     * oz=ounce
+     * toz=troy ounce
+     * ct=carat
+     * dwt=pennyweight
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unitofmeasure")
+    public MetalsSpotHistoryGETUnitofmeasureEnum unitofmeasure;
+    public MetalsSpotHistoryGETRequest withUnitofmeasure(MetalsSpotHistoryGETUnitofmeasureEnum unitofmeasure) {
+        this.unitofmeasure = unitofmeasure;
         return this;
     }
     

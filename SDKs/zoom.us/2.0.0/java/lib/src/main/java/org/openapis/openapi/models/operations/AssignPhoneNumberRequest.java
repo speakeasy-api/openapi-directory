@@ -7,27 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AssignPhoneNumberRequest {
-    
-    public AssignPhoneNumberPathParams pathParams;
-    public AssignPhoneNumberRequest withPathParams(AssignPhoneNumberPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Provide either an id or a number in the request body.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public AssignPhoneNumberApplicationJSON request;
-    public AssignPhoneNumberRequest withRequest(AssignPhoneNumberApplicationJSON request) {
-        this.request = request;
+    public AssignPhoneNumberApplicationJSON requestBody;
+    public AssignPhoneNumberRequest withRequestBody(AssignPhoneNumberApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public AssignPhoneNumberSecurity security;
-    public AssignPhoneNumberRequest withSecurity(AssignPhoneNumberSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public AssignPhoneNumberRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

@@ -39,7 +39,7 @@ public class SingleLan {
      */
     public org.openapis.openapi.models.operations.GetNetworkApplianceSingleLanResponse getNetworkApplianceSingleLan(org.openapis.openapi.models.operations.GetNetworkApplianceSingleLanRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceSingleLanPathParams.class, baseUrl, "/networks/{networkId}/appliance/singleLan", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceSingleLanRequest.class, baseUrl, "/networks/{networkId}/appliance/singleLan", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -79,12 +79,12 @@ public class SingleLan {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkApplianceSingleLanResponse updateNetworkApplianceSingleLan(org.openapis.openapi.models.operations.UpdateNetworkApplianceSingleLanRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceSingleLanPathParams.class, baseUrl, "/networks/{networkId}/appliance/singleLan", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceSingleLanRequest.class, baseUrl, "/networks/{networkId}/appliance/singleLan", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

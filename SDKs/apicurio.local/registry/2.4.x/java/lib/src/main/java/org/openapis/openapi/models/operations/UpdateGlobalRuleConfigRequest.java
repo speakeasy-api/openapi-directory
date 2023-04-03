@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateGlobalRuleConfigRequest {
-    
-    public UpdateGlobalRuleConfigPathParams pathParams;
-    public UpdateGlobalRuleConfigRequest withPathParams(UpdateGlobalRuleConfigPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.Rule rule1;
+    public UpdateGlobalRuleConfigRequest withRule1(org.openapis.openapi.models.shared.Rule rule1) {
+        this.rule1 = rule1;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Rule request;
-    public UpdateGlobalRuleConfigRequest withRequest(org.openapis.openapi.models.shared.Rule request) {
-        this.request = request;
+    /**
+     * The unique name/type of a rule.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rule")
+    public org.openapis.openapi.models.shared.RuleTypeEnum rulePathParameter;
+    public UpdateGlobalRuleConfigRequest withRulePathParameter(org.openapis.openapi.models.shared.RuleTypeEnum rulePathParameter) {
+        this.rulePathParameter = rulePathParameter;
         return this;
     }
     

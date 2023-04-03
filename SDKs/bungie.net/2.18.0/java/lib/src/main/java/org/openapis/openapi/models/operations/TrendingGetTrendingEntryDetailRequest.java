@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TrendingGetTrendingEntryDetailRequest {
+    /**
+     * The identifier for the entity to be returned.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=identifier")
+    public String identifier;
+    public TrendingGetTrendingEntryDetailRequest withIdentifier(String identifier) {
+        this.identifier = identifier;
+        return this;
+    }
     
-    public TrendingGetTrendingEntryDetailPathParams pathParams;
-    public TrendingGetTrendingEntryDetailRequest withPathParams(TrendingGetTrendingEntryDetailPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The type of entity to be returned.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=trendingEntryType")
+    public Integer trendingEntryType;
+    public TrendingGetTrendingEntryDetailRequest withTrendingEntryType(Integer trendingEntryType) {
+        this.trendingEntryType = trendingEntryType;
         return this;
     }
     

@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountGetPermissionsRequest {
-    
-    public AccountGetPermissionsPathParams pathParams;
-    public AccountGetPermissionsRequest withPathParams(AccountGetPermissionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Optional id of the datapoint/group entity to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entityId")
+    public Long entityId;
+    public AccountGetPermissionsRequest withEntityId(Long entityId) {
+        this.entityId = entityId;
         return this;
     }
     
+    /**
+     * Can be "datapoint" or "group"
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entityType")
+    public AccountGetPermissionsEntityTypeEnum entityType;
+    public AccountGetPermissionsRequest withEntityType(AccountGetPermissionsEntityTypeEnum entityType) {
+        this.entityType = entityType;
+        return this;
+    }
     
-    public AccountGetPermissionsQueryParams queryParams;
-    public AccountGetPermissionsRequest withQueryParams(AccountGetPermissionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Id of the guest
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=guestId")
+    public Long guestId;
+    public AccountGetPermissionsRequest withGuestId(Long guestId) {
+        this.guestId = guestId;
+        return this;
+    }
+    
+    /**
+     * Limit results to this number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public AccountGetPermissionsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Offset where to start from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public AccountGetPermissionsRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Can be "w" or "r"
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public AccountGetPermissionsTypeEnum type;
+    public AccountGetPermissionsRequest withType(AccountGetPermissionsTypeEnum type) {
+        this.type = type;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETChartInfoUsingGET1Request {
+    /**
+     * Species Type Key - 3=rat 4=chinchilla 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=speciesTypeKey")
+    public Integer speciesTypeKey;
+    public GETChartInfoUsingGET1Request withSpeciesTypeKey(Integer speciesTypeKey) {
+        this.speciesTypeKey = speciesTypeKey;
+        return this;
+    }
     
-    public GETChartInfoUsingGET1PathParams pathParams;
-    public GETChartInfoUsingGET1Request withPathParams(GETChartInfoUsingGET1PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * List of term accession IDs
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=termString")
+    public String termString;
+    public GETChartInfoUsingGET1Request withTermString(String termString) {
+        this.termString = termString;
         return this;
     }
     

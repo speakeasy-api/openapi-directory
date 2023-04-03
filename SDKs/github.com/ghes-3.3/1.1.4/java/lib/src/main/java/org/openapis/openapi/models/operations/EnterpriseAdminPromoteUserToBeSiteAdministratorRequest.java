@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminPromoteUserToBeSiteAdministratorRequest {
-    
-    public EnterpriseAdminPromoteUserToBeSiteAdministratorPathParams pathParams;
-    public EnterpriseAdminPromoteUserToBeSiteAdministratorRequest withPathParams(EnterpriseAdminPromoteUserToBeSiteAdministratorPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The handle for the GitHub user account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public EnterpriseAdminPromoteUserToBeSiteAdministratorRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

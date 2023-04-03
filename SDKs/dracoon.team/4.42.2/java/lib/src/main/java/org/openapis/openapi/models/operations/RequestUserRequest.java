@@ -4,27 +4,54 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestUserRequest {
-    
-    public RequestUserPathParams pathParams;
-    public RequestUserRequest withPathParams(RequestUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestUserRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public RequestUserQueryParams queryParams;
-    public RequestUserRequest withQueryParams(RequestUserQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public RequestUserXSdsDateFormatEnum xSdsDateFormat;
+    public RequestUserRequest withXSdsDateFormat(RequestUserXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
         return this;
     }
     
+    /**
+     * Filter users with DIRECT or DIRECT **AND** EFFECTIVE roles.
+     * 
+     * * `false`: DIRECT roles
+     * 
+     * * `true`: DIRECT **AND** EFFECTIVE roles
+     * 
+     * DIRECT means: e.g. user gets role **directly** granted from someone with _grant permission_ right.
+     * 
+     * EFFECTIVE means: e.g. user gets role through **group membership**.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=effective_roles")
+    public Boolean effectiveRoles;
+    public RequestUserRequest withEffectiveRoles(Boolean effectiveRoles) {
+        this.effectiveRoles = effectiveRoles;
+        return this;
+    }
     
-    public RequestUserHeaders headers;
-    public RequestUserRequest withHeaders(RequestUserHeaders headers) {
-        this.headers = headers;
+    /**
+     * User ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Long userId;
+    public RequestUserRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

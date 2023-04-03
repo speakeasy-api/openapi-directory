@@ -40,7 +40,7 @@ public class SourceDefinition {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateCustomSourceDefinitionResponse createCustomSourceDefinition(org.openapis.openapi.models.operations.CreateCustomSourceDefinitionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateCustomSourceDefinitionResponse createCustomSourceDefinition(org.openapis.openapi.models.shared.CustomSourceDefinitionCreate request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/source_definitions/create_custom");
         
@@ -88,7 +88,7 @@ public class SourceDefinition {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteSourceDefinitionResponse deleteSourceDefinition(org.openapis.openapi.models.operations.DeleteSourceDefinitionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteSourceDefinitionResponse deleteSourceDefinition(org.openapis.openapi.models.shared.SourceDefinitionIdRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/source_definitions/delete");
         
@@ -141,7 +141,7 @@ public class SourceDefinition {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSourceDefinitionResponse getSourceDefinition(org.openapis.openapi.models.operations.GetSourceDefinitionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSourceDefinitionResponse getSourceDefinition(org.openapis.openapi.models.shared.SourceDefinitionIdRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/source_definitions/get");
         
@@ -200,7 +200,7 @@ public class SourceDefinition {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSourceDefinitionForWorkspaceResponse getSourceDefinitionForWorkspace(org.openapis.openapi.models.operations.GetSourceDefinitionForWorkspaceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSourceDefinitionForWorkspaceResponse getSourceDefinitionForWorkspace(org.openapis.openapi.models.shared.SourceDefinitionIdWithWorkspaceId request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/source_definitions/get_for_workspace");
         
@@ -259,7 +259,7 @@ public class SourceDefinition {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GrantSourceDefinitionToWorkspaceResponse grantSourceDefinitionToWorkspace(org.openapis.openapi.models.operations.GrantSourceDefinitionToWorkspaceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GrantSourceDefinitionToWorkspaceResponse grantSourceDefinitionToWorkspace(org.openapis.openapi.models.shared.SourceDefinitionIdWithWorkspaceId request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/source_definitions/grant_definition");
         
@@ -356,7 +356,7 @@ public class SourceDefinition {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListPrivateSourceDefinitionsResponse listPrivateSourceDefinitions(org.openapis.openapi.models.operations.ListPrivateSourceDefinitionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListPrivateSourceDefinitionsResponse listPrivateSourceDefinitions(org.openapis.openapi.models.shared.WorkspaceIdRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/source_definitions/list_private");
         
@@ -433,7 +433,7 @@ public class SourceDefinition {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListSourceDefinitionsForWorkspaceResponse listSourceDefinitionsForWorkspace(org.openapis.openapi.models.operations.ListSourceDefinitionsForWorkspaceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListSourceDefinitionsForWorkspaceResponse listSourceDefinitionsForWorkspace(org.openapis.openapi.models.shared.WorkspaceIdRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/source_definitions/list_for_workspace");
         
@@ -473,7 +473,7 @@ public class SourceDefinition {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RevokeSourceDefinitionFromWorkspaceResponse revokeSourceDefinitionFromWorkspace(org.openapis.openapi.models.operations.RevokeSourceDefinitionFromWorkspaceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RevokeSourceDefinitionFromWorkspaceResponse revokeSourceDefinitionFromWorkspace(org.openapis.openapi.models.shared.SourceDefinitionIdWithWorkspaceId request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/source_definitions/revoke_definition");
         
@@ -526,7 +526,7 @@ public class SourceDefinition {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateSourceDefinitionResponse updateSourceDefinition(org.openapis.openapi.models.operations.UpdateSourceDefinitionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateSourceDefinitionResponse updateSourceDefinition(org.openapis.openapi.models.shared.SourceDefinitionUpdate request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/source_definitions/update");
         

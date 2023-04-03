@@ -4,20 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InsurancesListRequest {
-    
-    public InsurancesListQueryParams queryParams;
-    public InsurancesListRequest withQueryParams(InsurancesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public InsurancesListRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public InsurancesListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public InsurancesListSecurity security;
-    public InsurancesListRequest withSecurity(InsurancesListSecurity security) {
-        this.security = security;
+    /**
+     * One of `"emdeon"`, `"gateway"`, `"ihcfa"`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=payer_type")
+    public String payerType;
+    public InsurancesListRequest withPayerType(String payerType) {
+        this.payerType = payerType;
+        return this;
+    }
+    
+    /**
+     * Search term, which can be either a partial name, partial ID or the state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=term")
+    public String term;
+    public InsurancesListRequest withTerm(String term) {
+        this.term = term;
         return this;
     }
     

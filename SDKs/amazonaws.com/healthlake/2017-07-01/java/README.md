@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CreateFHIRDatastoreXAmzTargetEnum;
-import org.openapis.openapi.models.operations.CreateFHIRDatastoreHeaders;
 import org.openapis.openapi.models.operations.CreateFHIRDatastoreRequest;
 import org.openapis.openapi.models.operations.CreateFHIRDatastoreResponse;
 import org.openapis.openapi.models.shared.CreateFHIRDatastoreRequest;
@@ -35,26 +34,14 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateFHIRDatastoreRequest req = new CreateFHIRDatastoreRequest() {{
-                headers = new CreateFHIRDatastoreHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "HealthLake.CreateFHIRDatastore";
-                }};
-                request = new CreateFHIRDatastoreRequest() {{
-                    clientToken = "illum";
-                    datastoreName = "vel";
+                createFHIRDatastoreRequest = new CreateFHIRDatastoreRequest() {{
+                    clientToken = "corrupti";
+                    datastoreName = "provident";
                     datastoreTypeVersion = "R4";
                     preloadDataConfig = new PreloadDataConfig() {{
                         preloadDataType = "SYNTHEA";
@@ -62,21 +49,33 @@ public class Application {
                     sseConfiguration = new SseConfiguration() {{
                         kmsEncryptionConfig = new KmsEncryptionConfig() {{
                             cmkType = "AWS_OWNED_KMS_KEY";
-                            kmsKeyId = "deserunt";
+                            kmsKeyId = "quibusdam";
                         }};
                     }};
                     tags = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            key = "iure";
-                            value = "magnam";
+                            key = "nulla";
+                            value = "corrupti";
                         }}),
                         add(new Tag() {{
-                            key = "debitis";
-                            value = "ipsa";
+                            key = "illum";
+                            value = "vel";
+                        }}),
+                        add(new Tag() {{
+                            key = "error";
+                            value = "deserunt";
                         }}),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "suscipit";
+                xAmzContentSha256 = "iure";
+                xAmzCredential = "magnam";
+                xAmzDate = "debitis";
+                xAmzSecurityToken = "ipsa";
+                xAmzSignature = "delectus";
+                xAmzSignedHeaders = "tempora";
+                xAmzTarget = "HealthLake.CreateFHIRDatastore";
+            }}            
 
             CreateFHIRDatastoreResponse res = sdk.createFHIRDatastore(req);
 
@@ -90,7 +89,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

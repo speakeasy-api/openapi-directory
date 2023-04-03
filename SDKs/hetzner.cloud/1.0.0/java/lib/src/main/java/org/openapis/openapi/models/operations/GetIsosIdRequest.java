@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetIsosIdRequest {
-    
-    public GetIsosIdPathParams pathParams;
-    public GetIsosIdRequest withPathParams(GetIsosIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the ISO
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetIsosIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

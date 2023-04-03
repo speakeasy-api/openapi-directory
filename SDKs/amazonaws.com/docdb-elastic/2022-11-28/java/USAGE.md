@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateClusterHeaders;
 import org.openapis.openapi.models.operations.CreateClusterRequestBodyAuthTypeEnum;
 import org.openapis.openapi.models.operations.CreateClusterRequestBody;
 import org.openapis.openapi.models.operations.CreateClusterRequest;
@@ -15,49 +14,43 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateClusterRequest req = new CreateClusterRequest() {{
-                headers = new CreateClusterHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new CreateClusterRequestBody() {{
-                    adminUserName = "illum";
-                    adminUserPassword = "vel";
+                requestBody = new CreateClusterRequestBody() {{
+                    adminUserName = "corrupti";
+                    adminUserPassword = "provident";
                     authType = "SECRET_ARN";
-                    clientToken = "deserunt";
-                    clusterName = "suscipit";
-                    kmsKeyId = "iure";
-                    preferredMaintenanceWindow = "magnam";
-                    shardCapacity = 891773;
-                    shardCount = 56713;
+                    clientToken = "quibusdam";
+                    clusterName = "unde";
+                    kmsKeyId = "nulla";
+                    preferredMaintenanceWindow = "corrupti";
+                    shardCapacity = 847252;
+                    shardCount = 423655;
                     subnetIds = new String[]{{
-                        add("tempora"),
+                        add("deserunt"),
                         add("suscipit"),
+                        add("iure"),
+                    }};
+                    tags = new java.util.HashMap<String, String>() {{
+                        put("debitis", "ipsa");
+                        put("delectus", "tempora");
+                    }};
+                    vpcSecurityGroupIds = new String[]{{
                         add("molestiae"),
                         add("minus"),
                     }};
-                    tags = new java.util.HashMap<String, String>() {{
-                        put("voluptatum", "iusto");
-                        put("excepturi", "nisi");
-                        put("recusandae", "temporibus");
-                        put("ab", "quis");
-                    }};
-                    vpcSecurityGroupIds = new String[]{{
-                        add("deserunt"),
-                    }};
                 }};
-            }};            
+                xAmzAlgorithm = "placeat";
+                xAmzContentSha256 = "voluptatum";
+                xAmzCredential = "iusto";
+                xAmzDate = "excepturi";
+                xAmzSecurityToken = "nisi";
+                xAmzSignature = "recusandae";
+                xAmzSignedHeaders = "temporibus";
+            }}            
 
             CreateClusterResponse res = sdk.createCluster(req);
 

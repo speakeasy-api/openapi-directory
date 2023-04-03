@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveUserKeyPairRequest {
-    
-    public RemoveUserKeyPairQueryParams queryParams;
-    public RemoveUserKeyPairRequest withQueryParams(RemoveUserKeyPairQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RemoveUserKeyPairRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public RemoveUserKeyPairHeaders headers;
-    public RemoveUserKeyPairRequest withHeaders(RemoveUserKeyPairHeaders headers) {
-        this.headers = headers;
+    /**
+     * Version (NEW)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
+    public String version;
+    public RemoveUserKeyPairRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

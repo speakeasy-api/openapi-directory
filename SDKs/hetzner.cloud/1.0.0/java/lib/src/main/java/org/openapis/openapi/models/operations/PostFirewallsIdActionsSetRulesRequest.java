@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostFirewallsIdActionsSetRulesRequest {
-    
-    public PostFirewallsIdActionsSetRulesPathParams pathParams;
-    public PostFirewallsIdActionsSetRulesRequest withPathParams(PostFirewallsIdActionsSetRulesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PostFirewallsIdActionsSetRulesSetRulesRequest requestBody;
+    public PostFirewallsIdActionsSetRulesRequest withRequestBody(PostFirewallsIdActionsSetRulesSetRulesRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostFirewallsIdActionsSetRulesSetRulesRequest request;
-    public PostFirewallsIdActionsSetRulesRequest withRequest(PostFirewallsIdActionsSetRulesSetRulesRequest request) {
-        this.request = request;
+    /**
+     * ID of the Firewall
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public PostFirewallsIdActionsSetRulesRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

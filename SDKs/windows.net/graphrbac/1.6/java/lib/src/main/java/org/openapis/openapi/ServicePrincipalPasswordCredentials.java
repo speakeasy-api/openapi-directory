@@ -39,13 +39,13 @@ public class ServicePrincipalPasswordCredentials {
      */
     public org.openapis.openapi.models.operations.ServicePrincipalsListPasswordCredentialsResponse servicePrincipalsListPasswordCredentials(org.openapis.openapi.models.operations.ServicePrincipalsListPasswordCredentialsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicePrincipalsListPasswordCredentialsPathParams.class, baseUrl, "/{tenantID}/servicePrincipals/{objectId}/passwordCredentials", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicePrincipalsListPasswordCredentialsRequest.class, baseUrl, "/{tenantID}/servicePrincipals/{objectId}/passwordCredentials", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicePrincipalsListPasswordCredentialsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicePrincipalsListPasswordCredentialsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -104,18 +104,18 @@ public class ServicePrincipalPasswordCredentials {
      */
     public org.openapis.openapi.models.operations.ServicePrincipalsUpdatePasswordCredentialsResponse servicePrincipalsUpdatePasswordCredentials(org.openapis.openapi.models.operations.ServicePrincipalsUpdatePasswordCredentialsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicePrincipalsUpdatePasswordCredentialsPathParams.class, baseUrl, "/{tenantID}/servicePrincipals/{objectId}/passwordCredentials", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicePrincipalsUpdatePasswordCredentialsRequest.class, baseUrl, "/{tenantID}/servicePrincipals/{objectId}/passwordCredentials", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "passwordCredentialsUpdateParameters", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicePrincipalsUpdatePasswordCredentialsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicePrincipalsUpdatePasswordCredentialsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

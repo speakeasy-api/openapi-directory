@@ -81,9 +81,22 @@ public class Link {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.PostV05LinksLinkConfirmJsonResponse postV05LinksLinkConfirmJson(org.openapis.openapi.models.operations.PostV05LinksLinkConfirmJsonRequest request) throws Exception {
+        return this.postV05LinksLinkConfirmJson(request, null);
+    }
+
+    /**
+     * Token submission by Consent Manager for link confirmation
+     * API to submit the token that was sent by HIP during the link request. 
+     * 
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.PostV05LinksLinkConfirmJsonResponse postV05LinksLinkConfirmJson(org.openapis.openapi.models.operations.PostV05LinksLinkConfirmJsonRequest request, String serverURL) throws Exception {
         String baseUrl = POST_V05_LINKS_LINK_CONFIRM_JSON_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.5/links/link/confirm");
@@ -91,13 +104,13 @@ public class Link {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "linkConfirmationRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -145,9 +158,22 @@ public class Link {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.PostV05LinksLinkConfirmRawResponse postV05LinksLinkConfirmRaw(org.openapis.openapi.models.operations.PostV05LinksLinkConfirmRawRequest request) throws Exception {
+        return this.postV05LinksLinkConfirmRaw(request, null);
+    }
+
+    /**
+     * Token submission by Consent Manager for link confirmation
+     * API to submit the token that was sent by HIP during the link request. 
+     * 
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.PostV05LinksLinkConfirmRawResponse postV05LinksLinkConfirmRaw(org.openapis.openapi.models.operations.PostV05LinksLinkConfirmRawRequest request, String serverURL) throws Exception {
         String baseUrl = POST_V05_LINKS_LINK_CONFIRM_RAW_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.5/links/link/confirm");
@@ -155,13 +181,13 @@ public class Link {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -214,9 +240,27 @@ public class Link {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.PostV05LinksLinkInitJsonResponse postV05LinksLinkInitJson(org.openapis.openapi.models.operations.PostV05LinksLinkInitJsonRequest request) throws Exception {
+        return this.postV05LinksLinkInitJson(request, null);
+    }
+
+    /**
+     * Link patient's care contexts
+     * Request from Gateway to links care contexts associated with only one patient
+     *   1. **Validate account reference number and care context reference number**
+     *   2. **Validate transactionId in the request with discovery request entry to check whether there was a discovery
+     *       and were these care contexts discovered or not for a given patient**
+     *   3. **Before eventual link confirmation, HIP needs to authenticate the request with the patient(eg: OTP verification)**
+     *   4. **HIP should communicate the mode of authentication of a successful request to Consent Manager**
+     * 
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.PostV05LinksLinkInitJsonResponse postV05LinksLinkInitJson(org.openapis.openapi.models.operations.PostV05LinksLinkInitJsonRequest request, String serverURL) throws Exception {
         String baseUrl = POST_V05_LINKS_LINK_INIT_JSON_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.5/links/link/init");
@@ -224,13 +268,13 @@ public class Link {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "patientLinkReferenceRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -283,9 +327,27 @@ public class Link {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.PostV05LinksLinkInitRawResponse postV05LinksLinkInitRaw(org.openapis.openapi.models.operations.PostV05LinksLinkInitRawRequest request) throws Exception {
+        return this.postV05LinksLinkInitRaw(request, null);
+    }
+
+    /**
+     * Link patient's care contexts
+     * Request from Gateway to links care contexts associated with only one patient
+     *   1. **Validate account reference number and care context reference number**
+     *   2. **Validate transactionId in the request with discovery request entry to check whether there was a discovery
+     *       and were these care contexts discovered or not for a given patient**
+     *   3. **Before eventual link confirmation, HIP needs to authenticate the request with the patient(eg: OTP verification)**
+     *   4. **HIP should communicate the mode of authentication of a successful request to Consent Manager**
+     * 
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.PostV05LinksLinkInitRawResponse postV05LinksLinkInitRaw(org.openapis.openapi.models.operations.PostV05LinksLinkInitRawRequest request, String serverURL) throws Exception {
         String baseUrl = POST_V05_LINKS_LINK_INIT_RAW_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.5/links/link/init");
@@ -293,13 +355,13 @@ public class Link {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -348,9 +410,23 @@ public class Link {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.PostV05LinksLinkOnAddContextsJsonResponse postV05LinksLinkOnAddContextsJson(org.openapis.openapi.models.operations.PostV05LinksLinkOnAddContextsJsonRequest request) throws Exception {
+        return this.postV05LinksLinkOnAddContextsJson(request, null);
+    }
+
+    /**
+     * callback API for HIP initiated patient linking /link/add-context
+     * If the accessToken is valid for purpose of linking, and specified details provided, CM will send "acknoweldgement.status" as SUCCESS. If any error occcurred, for example invalid token, or other required patient or care-context information not provided, then "error" attribute conveys so. 
+     *   1. **accessToken must be valid and must be for the purpose of linking**
+     * 
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.PostV05LinksLinkOnAddContextsJsonResponse postV05LinksLinkOnAddContextsJson(org.openapis.openapi.models.operations.PostV05LinksLinkOnAddContextsJsonRequest request, String serverURL) throws Exception {
         String baseUrl = POST_V05_LINKS_LINK_ON_ADD_CONTEXTS_JSON_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.5/links/link/on-add-contexts");
@@ -358,13 +434,13 @@ public class Link {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "patientCareContextLinkResponse", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -413,9 +489,23 @@ public class Link {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.PostV05LinksLinkOnAddContextsRawResponse postV05LinksLinkOnAddContextsRaw(org.openapis.openapi.models.operations.PostV05LinksLinkOnAddContextsRawRequest request) throws Exception {
+        return this.postV05LinksLinkOnAddContextsRaw(request, null);
+    }
+
+    /**
+     * callback API for HIP initiated patient linking /link/add-context
+     * If the accessToken is valid for purpose of linking, and specified details provided, CM will send "acknoweldgement.status" as SUCCESS. If any error occcurred, for example invalid token, or other required patient or care-context information not provided, then "error" attribute conveys so. 
+     *   1. **accessToken must be valid and must be for the purpose of linking**
+     * 
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.PostV05LinksLinkOnAddContextsRawResponse postV05LinksLinkOnAddContextsRaw(org.openapis.openapi.models.operations.PostV05LinksLinkOnAddContextsRawRequest request, String serverURL) throws Exception {
         String baseUrl = POST_V05_LINKS_LINK_ON_ADD_CONTEXTS_RAW_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.5/links/link/on-add-contexts");
@@ -423,13 +513,13 @@ public class Link {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

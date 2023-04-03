@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRatePlanRequest {
-    
-    public DeleteRatePlanPathParams pathParams;
-    public DeleteRatePlanRequest withPathParams(DeleteRatePlanPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteRatePlanSecurity security;
-    public DeleteRatePlanRequest withSecurity(DeleteRatePlanSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteRatePlanRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the RatePlan resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteRatePlanRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

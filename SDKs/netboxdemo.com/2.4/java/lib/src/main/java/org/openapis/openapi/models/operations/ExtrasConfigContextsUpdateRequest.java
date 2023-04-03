@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExtrasConfigContextsUpdateRequest {
-    
-    public ExtrasConfigContextsUpdatePathParams pathParams;
-    public ExtrasConfigContextsUpdateRequest withPathParams(ExtrasConfigContextsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.WritableConfigContextInput writableConfigContextInput;
+    public ExtrasConfigContextsUpdateRequest withWritableConfigContextInput(org.openapis.openapi.models.shared.WritableConfigContextInput writableConfigContextInput) {
+        this.writableConfigContextInput = writableConfigContextInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WritableConfigContextInput request;
-    public ExtrasConfigContextsUpdateRequest withRequest(org.openapis.openapi.models.shared.WritableConfigContextInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this config context.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public ExtrasConfigContextsUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPaymentMethodRequest {
-    
-    public GetPaymentMethodPathParams pathParams;
-    public GetPaymentMethodRequest withPathParams(GetPaymentMethodPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetPaymentMethodSecurity security;
-    public GetPaymentMethodRequest withSecurity(GetPaymentMethodSecurity security) {
-        this.security = security;
+    /**
+     * Payment method number
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=paymentMethodNumber")
+    public String paymentMethodNumber;
+    public GetPaymentMethodRequest withPaymentMethodNumber(String paymentMethodNumber) {
+        this.paymentMethodNumber = paymentMethodNumber;
         return this;
     }
     

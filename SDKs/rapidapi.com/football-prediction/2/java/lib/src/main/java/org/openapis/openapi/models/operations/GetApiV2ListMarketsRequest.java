@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV2ListMarketsRequest {
-    
-    public GetApiV2ListMarketsHeaders headers;
-    public GetApiV2ListMarketsRequest withHeaders(GetApiV2ListMarketsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Your key obtained from https://boggio-analytics.com/fp-api/
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-RapidApi-Key")
+    public String xRapidApiKey;
+    public GetApiV2ListMarketsRequest withXRapidApiKey(String xRapidApiKey) {
+        this.xRapidApiKey = xRapidApiKey;
         return this;
     }
     

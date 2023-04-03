@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveBalanceTransfersRequest {
-    
-    public RetrieveBalanceTransfersPathParams pathParams;
-    public RetrieveBalanceTransfersRequest withPathParams(RetrieveBalanceTransfersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the primary account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api_key")
+    public String apiKey;
+    public RetrieveBalanceTransfersRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
-    
-    public RetrieveBalanceTransfersQueryParams queryParams;
-    public RetrieveBalanceTransfersRequest withQueryParams(RetrieveBalanceTransfersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * End of the retrieval period. If absent then all transfers until now is returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
+    public String endDate;
+    public RetrieveBalanceTransfersRequest withEndDate(String endDate) {
+        this.endDate = endDate;
         return this;
     }
     
+    /**
+     * Start of the retrieval period.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
+    public String startDate;
+    public RetrieveBalanceTransfersRequest withStartDate(String startDate) {
+        this.startDate = startDate;
+        return this;
+    }
     
-    public RetrieveBalanceTransfersSecurity security;
-    public RetrieveBalanceTransfersRequest withSecurity(RetrieveBalanceTransfersSecurity security) {
-        this.security = security;
+    /**
+     * Subaccount to filter by. You may send this multiple times to filter on multiple subaccounts
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subaccount")
+    public String subaccount;
+    public RetrieveBalanceTransfersRequest withSubaccount(String subaccount) {
+        this.subaccount = subaccount;
         return this;
     }
     

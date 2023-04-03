@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSubscribedEventRequest {
-    
-    public CreateSubscribedEventPathParams pathParams;
-    public CreateSubscribedEventRequest withPathParams(CreateSubscribedEventPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateSubscribedEventCreateSubscribedEventRequest request;
-    public CreateSubscribedEventRequest withRequest(CreateSubscribedEventCreateSubscribedEventRequest request) {
-        this.request = request;
+    public CreateSubscribedEventCreateSubscribedEventRequest requestBody;
+    public CreateSubscribedEventRequest withRequestBody(CreateSubscribedEventCreateSubscribedEventRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateSubscribedEventSecurity security;
-    public CreateSubscribedEventRequest withSecurity(CreateSubscribedEventSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateSubscribedEventRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique SID identifier of the Subscription.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=SubscriptionSid")
+    public String subscriptionSid;
+    public CreateSubscribedEventRequest withSubscriptionSid(String subscriptionSid) {
+        this.subscriptionSid = subscriptionSid;
         return this;
     }
     

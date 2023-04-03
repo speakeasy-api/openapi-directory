@@ -4,20 +4,147 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssueListIssuesRequest {
-    
-    public IssueListIssuesPathParams pathParams;
-    public IssueListIssuesRequest withPathParams(IssueListIssuesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Only show items for which the given user is assigned
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assigned_by")
+    public String assignedBy;
+    public IssueListIssuesRequest withAssignedBy(String assignedBy) {
+        this.assignedBy = assignedBy;
         return this;
     }
     
+    /**
+     * Only show items updated before the given time. This is a timestamp in RFC 3339 format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=before")
+    public OffsetDateTime before;
+    public IssueListIssuesRequest withBefore(OffsetDateTime before) {
+        this.before = before;
+        return this;
+    }
     
-    public IssueListIssuesQueryParams queryParams;
-    public IssueListIssuesRequest withQueryParams(IssueListIssuesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Only show items which were created by the the given user
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created_by")
+    public String createdBy;
+    public IssueListIssuesRequest withCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+        return this;
+    }
+    
+    /**
+     * comma separated list of labels. Fetch only issues that have any of this labels. Non existent labels are discarded
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=labels")
+    public String labels;
+    public IssueListIssuesRequest withLabels(String labels) {
+        this.labels = labels;
+        return this;
+    }
+    
+    /**
+     * page size of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public IssueListIssuesRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Only show items in which the given user was mentioned
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mentioned_by")
+    public String mentionedBy;
+    public IssueListIssuesRequest withMentionedBy(String mentionedBy) {
+        this.mentionedBy = mentionedBy;
+        return this;
+    }
+    
+    /**
+     * comma separated list of milestone names or ids. It uses names and fall back to ids. Fetch only issues that have any of this milestones. Non existent milestones are discarded
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=milestones")
+    public String milestones;
+    public IssueListIssuesRequest withMilestones(String milestones) {
+        this.milestones = milestones;
+        return this;
+    }
+    
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssueListIssuesRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * page number of results to return (1-based)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public IssueListIssuesRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * search string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public IssueListIssuesRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssueListIssuesRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * Only show items updated after the given time. This is a timestamp in RFC 3339 format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public OffsetDateTime since;
+    public IssueListIssuesRequest withSince(OffsetDateTime since) {
+        this.since = since;
+        return this;
+    }
+    
+    /**
+     * whether issue is open or closed
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public IssueListIssuesStateEnum state;
+    public IssueListIssuesRequest withState(IssueListIssuesStateEnum state) {
+        this.state = state;
+        return this;
+    }
+    
+    /**
+     * filter by type (issues / pulls) if set
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public IssueListIssuesTypeEnum type;
+    public IssueListIssuesRequest withType(IssueListIssuesTypeEnum type) {
+        this.type = type;
         return this;
     }
     

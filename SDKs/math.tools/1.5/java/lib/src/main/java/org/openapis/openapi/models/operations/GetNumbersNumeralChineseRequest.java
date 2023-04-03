@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNumbersNumeralChineseRequest {
-    
-    public GetNumbersNumeralChineseQueryParams queryParams;
-    public GetNumbersNumeralChineseRequest withQueryParams(GetNumbersNumeralChineseQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetNumbersNumeralChineseSecurity security;
-    public GetNumbersNumeralChineseRequest withSecurity(GetNumbersNumeralChineseSecurity security) {
-        this.security = security;
+    /**
+     * Number to convert
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
+    public Long number;
+    public GetNumbersNumeralChineseRequest withNumber(Long number) {
+        this.number = number;
         return this;
     }
     

@@ -4,27 +4,126 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdsensehostAccountsAdunitsListRequest {
-    
-    public AdsensehostAccountsAdunitsListPathParams pathParams;
-    public AdsensehostAccountsAdunitsListRequest withPathParams(AdsensehostAccountsAdunitsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Account which contains the ad client.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public AdsensehostAccountsAdunitsListRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
-    
-    public AdsensehostAccountsAdunitsListQueryParams queryParams;
-    public AdsensehostAccountsAdunitsListRequest withQueryParams(AdsensehostAccountsAdunitsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Ad client for which to list ad units.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=adClientId")
+    public String adClientId;
+    public AdsensehostAccountsAdunitsListRequest withAdClientId(String adClientId) {
+        this.adClientId = adClientId;
         return this;
     }
     
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AdsensehostAccountsAdunitsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public AdsensehostAccountsAdunitsListSecurity security;
-    public AdsensehostAccountsAdunitsListRequest withSecurity(AdsensehostAccountsAdunitsListSecurity security) {
-        this.security = security;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AdsensehostAccountsAdunitsListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Whether to include inactive ad units. Default: true.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeInactive")
+    public Boolean includeInactive;
+    public AdsensehostAccountsAdunitsListRequest withIncludeInactive(Boolean includeInactive) {
+        this.includeInactive = includeInactive;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AdsensehostAccountsAdunitsListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * The maximum number of ad units to include in the response, used for paging.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public AdsensehostAccountsAdunitsListRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AdsensehostAccountsAdunitsListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * A continuation token, used to page through ad units. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public AdsensehostAccountsAdunitsListRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AdsensehostAccountsAdunitsListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AdsensehostAccountsAdunitsListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public AdsensehostAccountsAdunitsListRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDEPRequest {
-    
-    public GetDEPPathParams pathParams;
-    public GetDEPRequest withPathParams(GetDEPPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The `_uuid` of the `Registrierkasse` to retrieve the DEP file.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=registrierkasseUuid")
+    public String registrierkasseUuid;
+    public GetDEPRequest withRegistrierkasseUuid(String registrierkasseUuid) {
+        this.registrierkasseUuid = registrierkasseUuid;
         return this;
     }
     

@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchDomainCertV4Request {
-    
-    public FetchDomainCertV4PathParams pathParams;
-    public FetchDomainCertV4Request withPathParams(FetchDomainCertV4PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchDomainCertV4Security security;
-    public FetchDomainCertV4Request withSecurity(FetchDomainCertV4Security security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchDomainCertV4Request withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Unique string used to identify the domain that this certificate should be associated with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DomainSid")
+    public String domainSid;
+    public FetchDomainCertV4Request withDomainSid(String domainSid) {
+        this.domainSid = domainSid;
         return this;
     }
     

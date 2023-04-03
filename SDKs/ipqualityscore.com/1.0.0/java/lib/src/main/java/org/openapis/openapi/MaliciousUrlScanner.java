@@ -38,7 +38,7 @@ public class MaliciousUrlScanner {
      */
     public org.openapis.openapi.models.operations.MaliciousUrlScannerResponse maliciousUrlScanner(org.openapis.openapi.models.operations.MaliciousUrlScannerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MaliciousUrlScannerPathParams.class, baseUrl, "/json/url/{YOUR_API_KEY_HERE}/{URL_HERE}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MaliciousUrlScannerRequest.class, baseUrl, "/json/url/{YOUR_API_KEY_HERE}/{URL_HERE}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

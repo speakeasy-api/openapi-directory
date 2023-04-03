@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EstimationApiStatusRequest {
-    
-    public EstimationApiStatusQueryParams queryParams;
-    public EstimationApiStatusRequest withQueryParams(EstimationApiStatusQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public Integer id;
+    public EstimationApiStatusRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
+    public String xAuthKey;
+    public EstimationApiStatusRequest withXAuthKey(String xAuthKey) {
+        this.xAuthKey = xAuthKey;
+        return this;
+    }
     
-    public EstimationApiStatusHeaders headers;
-    public EstimationApiStatusRequest withHeaders(EstimationApiStatusHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
+    public String xAuthSecret;
+    public EstimationApiStatusRequest withXAuthSecret(String xAuthSecret) {
+        this.xAuthSecret = xAuthSecret;
         return this;
     }
     

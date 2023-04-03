@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.DeleteJsappsCodeJsonPathParams;
-import org.openapis.openapi.models.operations.DeleteJsappsCodeJsonQueryParams;
 import org.openapis.openapi.models.operations.DeleteJsappsCodeJsonRequest;
 import org.openapis.openapi.models.operations.DeleteJsappsCodeJsonResponse;
 
@@ -16,14 +14,10 @@ public class Application {
                 .build();
 
             DeleteJsappsCodeJsonRequest req = new DeleteJsappsCodeJsonRequest() {{
-                pathParams = new DeleteJsappsCodeJsonPathParams() {{
-                    code = "corrupti";
-                }};
-                queryParams = new DeleteJsappsCodeJsonQueryParams() {{
-                    authtoken = "provident";
-                    login = "distinctio";
-                }};
-            }};            
+                authtoken = "corrupti";
+                code = "provident";
+                login = "distinctio";
+            }}            
 
             DeleteJsappsCodeJsonResponse res = sdk.apps.deleteJsappsCodeJson(req);
 

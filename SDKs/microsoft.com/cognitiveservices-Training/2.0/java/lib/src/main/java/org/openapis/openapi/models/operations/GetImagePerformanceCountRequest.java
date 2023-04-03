@@ -4,27 +4,43 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetImagePerformanceCountRequest {
-    
-    public GetImagePerformanceCountPathParams pathParams;
-    public GetImagePerformanceCountRequest withPathParams(GetImagePerformanceCountPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
+    public String trainingKey;
+    public GetImagePerformanceCountRequest withTrainingKey(String trainingKey) {
+        this.trainingKey = trainingKey;
         return this;
     }
     
-    
-    public GetImagePerformanceCountQueryParams queryParams;
-    public GetImagePerformanceCountRequest withQueryParams(GetImagePerformanceCountQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The iteration id. Defaults to workspace
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=iterationId")
+    public String iterationId;
+    public GetImagePerformanceCountRequest withIterationId(String iterationId) {
+        this.iterationId = iterationId;
         return this;
     }
     
+    /**
+     * The project id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public GetImagePerformanceCountRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
     
-    public GetImagePerformanceCountHeaders headers;
-    public GetImagePerformanceCountRequest withHeaders(GetImagePerformanceCountHeaders headers) {
-        this.headers = headers;
+    /**
+     * A list of tags ids to filter the images to count. Defaults to all tags when null.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=tagIds")
+    public String[] tagIds;
+    public GetImagePerformanceCountRequest withTagIds(String[] tagIds) {
+        this.tagIds = tagIds;
         return this;
     }
     

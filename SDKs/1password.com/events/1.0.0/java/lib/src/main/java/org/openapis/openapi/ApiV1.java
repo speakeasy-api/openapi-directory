@@ -34,10 +34,11 @@ public class ApiV1 {
      * Retrieves item usages
      * This endpoint requires your JSON Web Token to have the *itemusages* feature.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetItemUsagesResponse getItemUsages(org.openapis.openapi.models.operations.GetItemUsagesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetItemUsagesResponse getItemUsages(Object request, org.openapis.openapi.models.operations.GetItemUsagesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/itemusages");
         
@@ -48,7 +49,7 @@ public class ApiV1 {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -84,10 +85,11 @@ public class ApiV1 {
      * Retrieves sign-in attempts
      * This endpoint requires your JSON Web Token to have the *signinattempts* feature.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSignInAttemptsResponse getSignInAttempts(org.openapis.openapi.models.operations.GetSignInAttemptsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSignInAttemptsResponse getSignInAttempts(Object request, org.openapis.openapi.models.operations.GetSignInAttemptsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/signinattempts");
         
@@ -98,7 +100,7 @@ public class ApiV1 {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

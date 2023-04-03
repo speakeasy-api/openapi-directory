@@ -4,20 +4,37 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSectionFormatRequest {
-    
-    public GetSectionFormatPathParams pathParams;
-    public GetSectionFormatRequest withPathParams(GetSectionFormatPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the function the API call results will be passed to. Required when using JSONP. This parameter has only one valid value per section. The format is {section_name}TopStoriesCallback.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public GetSectionFormatRequest withCallback(String callback) {
+        this.callback = callback;
         return this;
     }
     
+    /**
+     * if this is JSONP or JSON
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public GetSectionFormatFormatEnum format;
+    public GetSectionFormatRequest withFormat(GetSectionFormatFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public GetSectionFormatQueryParams queryParams;
-    public GetSectionFormatRequest withQueryParams(GetSectionFormatQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The section the story appears in.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=section")
+    public GetSectionFormatSectionEnum section;
+    public GetSectionFormatRequest withSection(GetSectionFormatSectionEnum section) {
+        this.section = section;
         return this;
     }
     

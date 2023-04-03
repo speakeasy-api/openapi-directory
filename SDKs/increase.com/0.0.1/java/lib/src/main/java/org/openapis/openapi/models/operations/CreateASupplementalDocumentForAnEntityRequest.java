@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateASupplementalDocumentForAnEntityRequest {
-    
-    public CreateASupplementalDocumentForAnEntityPathParams pathParams;
-    public CreateASupplementalDocumentForAnEntityRequest withPathParams(CreateASupplementalDocumentForAnEntityPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateASupplementalDocumentForAnEntityParameters createASupplementalDocumentForAnEntityParameters;
+    public CreateASupplementalDocumentForAnEntityRequest withCreateASupplementalDocumentForAnEntityParameters(org.openapis.openapi.models.shared.CreateASupplementalDocumentForAnEntityParameters createASupplementalDocumentForAnEntityParameters) {
+        this.createASupplementalDocumentForAnEntityParameters = createASupplementalDocumentForAnEntityParameters;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateASupplementalDocumentForAnEntityParameters request;
-    public CreateASupplementalDocumentForAnEntityRequest withRequest(org.openapis.openapi.models.shared.CreateASupplementalDocumentForAnEntityParameters request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=entity_id")
+    public String entityId;
+    public CreateASupplementalDocumentForAnEntityRequest withEntityId(String entityId) {
+        this.entityId = entityId;
         return this;
     }
     

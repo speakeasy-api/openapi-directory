@@ -123,10 +123,8 @@ import org.openapis.openapi.models.operations.SendMessageRequestBody2Image;
 import org.openapis.openapi.models.operations.SendMessageRequestBody1TextChannelEnum;
 import org.openapis.openapi.models.operations.SendMessageRequestBody1TextMessageTypeEnum;
 import org.openapis.openapi.models.operations.SendMessageRequestBody1Text;
-import org.openapis.openapi.models.operations.SendMessageRequest;
 import org.openapis.openapi.models.operations.SendMessageResponse;
 import org.openapis.openapi.models.shared.SchemeBasicAuth;
-import org.openapis.openapi.models.shared.SchemeBearerAuth;
 import org.openapis.openapi.models.shared.MessageStatusSMSChannelEnum;
 import org.openapis.openapi.models.shared.MessageStatusSMSError;
 import org.openapis.openapi.models.shared.MessageStatusSMSStatusEnum;
@@ -161,7 +159,6 @@ import org.openapis.openapi.models.shared.MessageStatusViberUsageCurrencyEnum;
 import org.openapis.openapi.models.shared.MessageStatusViberUsage;
 import org.openapis.openapi.models.shared.MessageStatusViber;
 import org.openapis.openapi.models.callbacks.SendMessageMessageStatusResponse;
-import org.openapis.openapi.models.callbacks.SendMessageMessageStatusRequest;
 
 public class Application {
     public static void main(String[] args) {
@@ -169,26 +166,23 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            SendMessageRequest req = new SendMessageRequest() {{
-                security = new SendMessageSecurity() {{
-                    basicAuth = new SchemeBasicAuth() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
+            org.openapis.openapi.models.. req = new SendMessageRequestBody3Video() {{
+                channel = "whatsapp";
+                clientRef = "distinctio";
+                from = "447700900001";
+                messageType = "video";
+                to = "447700900000";
+                video = new SendMessageRequestBody3VideoVideo() {{
+                    url = "https://example.com/video.mp4";
                 }};
-                request = new SendMessageRequestBody3Video() {{
-                    channel = "whatsapp";
-                    clientRef = "distinctio";
-                    from = "447700900001";
-                    messageType = "video";
-                    to = "447700900000";
-                    video = new SendMessageRequestBody3VideoVideo() {{
-                        url = "https://example.com/video.mp4";
-                    }};
-                }};
-            }};            
+            }}            
 
-            SendMessageResponse res = sdk.sendMessage(req);
+            SendMessageResponse res = sdk.sendMessage(req, new SendMessageSecurity() {{
+                basicAuth = new SchemeBasicAuth() {{
+                    password = "YOUR_PASSWORD_HERE";
+                    username = "YOUR_USERNAME_HERE";
+                }};
+            }});
 
             if (res.sendMessage202ApplicationJSONObject.isPresent()) {
                 // handle response
@@ -200,7 +194,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

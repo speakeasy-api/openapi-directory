@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchServiceWebhookConfigurationRequest {
-    
-    public FetchServiceWebhookConfigurationPathParams pathParams;
-    public FetchServiceWebhookConfigurationRequest withPathParams(FetchServiceWebhookConfigurationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchServiceWebhookConfigurationSecurity security;
-    public FetchServiceWebhookConfigurationRequest withSecurity(FetchServiceWebhookConfigurationSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchServiceWebhookConfigurationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique ID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) this conversation belongs to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChatServiceSid")
+    public String chatServiceSid;
+    public FetchServiceWebhookConfigurationRequest withChatServiceSid(String chatServiceSid) {
+        this.chatServiceSid = chatServiceSid;
         return this;
     }
     

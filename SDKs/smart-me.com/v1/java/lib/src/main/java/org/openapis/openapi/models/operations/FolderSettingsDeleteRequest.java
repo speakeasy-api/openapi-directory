@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FolderSettingsDeleteRequest {
-    
-    public FolderSettingsDeletePathParams pathParams;
-    public FolderSettingsDeleteRequest withPathParams(FolderSettingsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the folder
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public FolderSettingsDeleteRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

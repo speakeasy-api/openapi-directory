@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchJobRequest {
-    
-    public FetchJobPathParams pathParams;
-    public FetchJobRequest withPathParams(FetchJobPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchJobSecurity security;
-    public FetchJobRequest withSecurity(FetchJobSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchJobRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique string that that we created to identify the Bulk Export job
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=JobSid")
+    public String jobSid;
+    public FetchJobRequest withJobSid(String jobSid) {
+        this.jobSid = jobSid;
         return this;
     }
     

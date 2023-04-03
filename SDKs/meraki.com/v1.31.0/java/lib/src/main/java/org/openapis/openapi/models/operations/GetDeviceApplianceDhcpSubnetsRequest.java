@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDeviceApplianceDhcpSubnetsRequest {
-    
-    public GetDeviceApplianceDhcpSubnetsPathParams pathParams;
-    public GetDeviceApplianceDhcpSubnetsRequest withPathParams(GetDeviceApplianceDhcpSubnetsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public GetDeviceApplianceDhcpSubnetsRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

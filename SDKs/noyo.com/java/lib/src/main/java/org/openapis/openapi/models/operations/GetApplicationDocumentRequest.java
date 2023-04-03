@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApplicationDocumentRequest {
+    /**
+     * The unique identifier of the application document in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=application_id")
+    public String applicationId;
+    public GetApplicationDocumentRequest withApplicationId(String applicationId) {
+        this.applicationId = applicationId;
+        return this;
+    }
     
-    public GetApplicationDocumentPathParams pathParams;
-    public GetApplicationDocumentRequest withPathParams(GetApplicationDocumentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the document
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=document_id")
+    public String documentId;
+    public GetApplicationDocumentRequest withDocumentId(String documentId) {
+        this.documentId = documentId;
         return this;
     }
     

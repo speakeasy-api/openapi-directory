@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListdataentitiesRequest {
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public ListdataentitiesRequest withAccept(String accept) {
+        this.accept = accept;
+        return this;
+    }
     
-    public ListdataentitiesHeaders headers;
-    public ListdataentitiesRequest withHeaders(ListdataentitiesHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public ListdataentitiesRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     

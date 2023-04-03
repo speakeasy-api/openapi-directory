@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateWorkflowRequest {
-    
-    public CreateWorkflowPathParams pathParams;
-    public CreateWorkflowRequest withPathParams(CreateWorkflowPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateWorkflowCreateWorkflowRequest request;
-    public CreateWorkflowRequest withRequest(CreateWorkflowCreateWorkflowRequest request) {
-        this.request = request;
+    public CreateWorkflowCreateWorkflowRequest requestBody;
+    public CreateWorkflowRequest withRequestBody(CreateWorkflowCreateWorkflowRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateWorkflowSecurity security;
-    public CreateWorkflowRequest withSecurity(CreateWorkflowSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateWorkflowRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Workspace that the new Workflow to create belongs to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkspaceSid")
+    public String workspaceSid;
+    public CreateWorkflowRequest withWorkspaceSid(String workspaceSid) {
+        this.workspaceSid = workspaceSid;
         return this;
     }
     

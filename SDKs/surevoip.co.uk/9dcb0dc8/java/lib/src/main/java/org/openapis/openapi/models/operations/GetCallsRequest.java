@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCallsRequest {
-    
-    public GetCallsQueryParams queryParams;
-    public GetCallsRequest withQueryParams(GetCallsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Validate a phone number by calling it for one ring. Note; not 100% proof the number is in service.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=validate")
+    public Long validate;
+    public GetCallsRequest withValidate(Long validate) {
+        this.validate = validate;
         return this;
     }
     

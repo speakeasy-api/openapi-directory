@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteStripeGatewayUserUserIdCardsCardIdRequest {
+    /**
+     * The id of the credit card to remove
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cardId")
+    public String cardId;
+    public DeleteStripeGatewayUserUserIdCardsCardIdRequest withCardId(String cardId) {
+        this.cardId = cardId;
+        return this;
+    }
     
-    public DeleteStripeGatewayUserUserIdCardsCardIdPathParams pathParams;
-    public DeleteStripeGatewayUserUserIdCardsCardIdRequest withPathParams(DeleteStripeGatewayUserUserIdCardsCardIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the user removing their credit card
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public DeleteStripeGatewayUserUserIdCardsCardIdRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

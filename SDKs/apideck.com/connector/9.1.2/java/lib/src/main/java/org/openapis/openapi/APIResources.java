@@ -33,18 +33,19 @@ public class APIResources {
      * Get API Resource Coverage
      * Get API Resource Coverage
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApiResourceCoverageOneResponse apiResourceCoverageOne(org.openapis.openapi.models.operations.ApiResourceCoverageOneRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApiResourceCoverageOneResponse apiResourceCoverageOne(org.openapis.openapi.models.operations.ApiResourceCoverageOneRequest request, org.openapis.openapi.models.operations.ApiResourceCoverageOneSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApiResourceCoverageOnePathParams.class, baseUrl, "/connector/apis/{id}/resources/{resource_id}/coverage", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApiResourceCoverageOneRequest.class, baseUrl, "/connector/apis/{id}/resources/{resource_id}/coverage", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -53,7 +54,7 @@ public class APIResources {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -113,18 +114,19 @@ public class APIResources {
      * Get API Resource
      * Get API Resource
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApiResourcesOneResponse apiResourcesOne(org.openapis.openapi.models.operations.ApiResourcesOneRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApiResourcesOneResponse apiResourcesOne(org.openapis.openapi.models.operations.ApiResourcesOneRequest request, org.openapis.openapi.models.operations.ApiResourcesOneSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApiResourcesOnePathParams.class, baseUrl, "/connector/apis/{id}/resources/{resource_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApiResourcesOneRequest.class, baseUrl, "/connector/apis/{id}/resources/{resource_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -133,7 +135,7 @@ public class APIResources {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

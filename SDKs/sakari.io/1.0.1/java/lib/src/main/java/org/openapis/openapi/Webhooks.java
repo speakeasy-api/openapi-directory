@@ -37,19 +37,20 @@ public class Webhooks {
      * Fetch active webhooks
      * When messages are acknowledge by carriers, a notification is sent to the specified URL
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebhooksFetchAllResponse webhooksFetchAll(org.openapis.openapi.models.operations.WebhooksFetchAllRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebhooksFetchAllResponse webhooksFetchAll(org.openapis.openapi.models.operations.WebhooksFetchAllRequest request, org.openapis.openapi.models.operations.WebhooksFetchAllSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebhooksFetchAllPathParams.class, baseUrl, "/v1/accounts/{accountId}/webhooks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebhooksFetchAllRequest.class, baseUrl, "/v1/accounts/{accountId}/webhooks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -77,24 +78,25 @@ public class Webhooks {
      * Subscribe to message events
      * When messages are acknowledge by carriers, a notification is sent to the specified URL
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebhooksSubscribeResponse webhooksSubscribe(org.openapis.openapi.models.operations.WebhooksSubscribeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebhooksSubscribeResponse webhooksSubscribe(org.openapis.openapi.models.operations.WebhooksSubscribeRequest request, org.openapis.openapi.models.operations.WebhooksSubscribeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebhooksSubscribePathParams.class, baseUrl, "/v1/accounts/{accountId}/webhooks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebhooksSubscribeRequest.class, baseUrl, "/v1/accounts/{accountId}/webhooks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -122,19 +124,20 @@ public class Webhooks {
      * Unsubscribe to message events
      * Delete subscription for receiving notifications
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebhooksUnsubscribeResponse webhooksUnsubscribe(org.openapis.openapi.models.operations.WebhooksUnsubscribeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebhooksUnsubscribeResponse webhooksUnsubscribe(org.openapis.openapi.models.operations.WebhooksUnsubscribeRequest request, org.openapis.openapi.models.operations.WebhooksUnsubscribeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebhooksUnsubscribePathParams.class, baseUrl, "/v1/accounts/{accountId}/webhooks/{url}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebhooksUnsubscribeRequest.class, baseUrl, "/v1/accounts/{accountId}/webhooks/{url}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

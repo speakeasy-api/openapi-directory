@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGroupsRequest {
+    /**
+     * The sorting order (case insensitive).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public GetGroupsDirectionEnum direction;
+    public GetGroupsRequest withDirection(GetGroupsDirectionEnum direction) {
+        this.direction = direction;
+        return this;
+    }
     
-    public GetGroupsQueryParams queryParams;
-    public GetGroupsRequest withQueryParams(GetGroupsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The maximum number of entries per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetGroupsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * The page number to retrieve (first page is 0).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public String page;
+    public GetGroupsRequest withPage(String page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The column to sort by (case insensitive).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetGroupsRequest withSort(String sort) {
+        this.sort = sort;
         return this;
     }
     

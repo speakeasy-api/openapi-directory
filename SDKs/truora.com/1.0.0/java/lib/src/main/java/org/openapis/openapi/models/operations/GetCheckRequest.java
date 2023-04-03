@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCheckRequest {
-    
-    public GetCheckPathParams pathParams;
-    public GetCheckRequest withPathParams(GetCheckPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetCheckSecurity security;
-    public GetCheckRequest withSecurity(GetCheckSecurity security) {
-        this.security = security;
+    /**
+     * Check ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=check_id")
+    public String checkId;
+    public GetCheckRequest withCheckId(String checkId) {
+        this.checkId = checkId;
         return this;
     }
     

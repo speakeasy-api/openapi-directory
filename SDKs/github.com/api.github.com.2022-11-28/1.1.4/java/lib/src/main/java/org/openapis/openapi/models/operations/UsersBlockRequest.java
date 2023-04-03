@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UsersBlockRequest {
-    
-    public UsersBlockPathParams pathParams;
-    public UsersBlockRequest withPathParams(UsersBlockPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The handle for the GitHub user account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public UsersBlockRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

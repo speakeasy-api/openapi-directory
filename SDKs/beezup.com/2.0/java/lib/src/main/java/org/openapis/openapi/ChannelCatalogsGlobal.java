@@ -39,7 +39,7 @@ public class ChannelCatalogsGlobal {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddChannelCatalogResponse addChannelCatalog(org.openapis.openapi.models.operations.AddChannelCatalogRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddChannelCatalogResponse addChannelCatalog(org.openapis.openapi.models.shared.AddChannelCatalogRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/user/channelCatalogs/");
         
@@ -94,7 +94,7 @@ public class ChannelCatalogsGlobal {
      */
     public org.openapis.openapi.models.operations.DeleteChannelCatalogResponse deleteChannelCatalog(org.openapis.openapi.models.operations.DeleteChannelCatalogRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteChannelCatalogPathParams.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteChannelCatalogRequest.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -134,7 +134,7 @@ public class ChannelCatalogsGlobal {
      */
     public org.openapis.openapi.models.operations.GetChannelCatalogResponse getChannelCatalog(org.openapis.openapi.models.operations.GetChannelCatalogRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelCatalogPathParams.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelCatalogRequest.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -231,7 +231,7 @@ public class ChannelCatalogsGlobal {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetChannelCatalogsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetChannelCatalogsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WebinarCreateRequest {
-    
-    public WebinarCreatePathParams pathParams;
-    public WebinarCreateRequest withPathParams(WebinarCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public WebinarCreateApplicationJSON request;
-    public WebinarCreateRequest withRequest(WebinarCreateApplicationJSON request) {
-        this.request = request;
+    public WebinarCreateApplicationJSON requestBody;
+    public WebinarCreateRequest withRequestBody(WebinarCreateApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public WebinarCreateSecurity security;
-    public WebinarCreateRequest withSecurity(WebinarCreateSecurity security) {
-        this.security = security;
+    /**
+     * The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public WebinarCreateRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

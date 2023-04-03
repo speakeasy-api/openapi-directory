@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchMerchantsMerchantIdTerminalSettingsRequest {
-    
-    public PatchMerchantsMerchantIdTerminalSettingsPathParams pathParams;
-    public PatchMerchantsMerchantIdTerminalSettingsRequest withPathParams(PatchMerchantsMerchantIdTerminalSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TerminalSettings request;
-    public PatchMerchantsMerchantIdTerminalSettingsRequest withRequest(org.openapis.openapi.models.shared.TerminalSettings request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TerminalSettings terminalSettings;
+    public PatchMerchantsMerchantIdTerminalSettingsRequest withTerminalSettings(org.openapis.openapi.models.shared.TerminalSettings terminalSettings) {
+        this.terminalSettings = terminalSettings;
         return this;
     }
     
-    
-    public PatchMerchantsMerchantIdTerminalSettingsSecurity security;
-    public PatchMerchantsMerchantIdTerminalSettingsRequest withSecurity(PatchMerchantsMerchantIdTerminalSettingsSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the merchant account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
+    public String merchantId;
+    public PatchMerchantsMerchantIdTerminalSettingsRequest withMerchantId(String merchantId) {
+        this.merchantId = merchantId;
         return this;
     }
     

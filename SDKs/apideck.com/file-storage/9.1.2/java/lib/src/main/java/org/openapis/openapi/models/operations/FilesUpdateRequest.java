@@ -7,38 +7,60 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FilesUpdateRequest {
-    
-    public FilesUpdatePathParams pathParams;
-    public FilesUpdateRequest withPathParams(FilesUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FilesUpdateQueryParams queryParams;
-    public FilesUpdateRequest withQueryParams(FilesUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public FilesUpdateHeaders headers;
-    public FilesUpdateRequest withHeaders(FilesUpdateHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateFileRequest request;
-    public FilesUpdateRequest withRequest(org.openapis.openapi.models.shared.UpdateFileRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateFileRequest updateFileRequest;
+    public FilesUpdateRequest withUpdateFileRequest(org.openapis.openapi.models.shared.UpdateFileRequest updateFileRequest) {
+        this.updateFileRequest = updateFileRequest;
         return this;
     }
     
+    /**
+     * ID of the record you are acting upon.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public FilesUpdateRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public FilesUpdateSecurity security;
-    public FilesUpdateRequest withSecurity(FilesUpdateSecurity security) {
-        this.security = security;
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
+    public Boolean raw;
+    public FilesUpdateRequest withRaw(Boolean raw) {
+        this.raw = raw;
+        return this;
+    }
+    
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public FilesUpdateRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
+        return this;
+    }
+    
+    /**
+     * ID of the consumer which you want to get or push data from
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-consumer-id")
+    public String xApideckConsumerId;
+    public FilesUpdateRequest withXApideckConsumerId(String xApideckConsumerId) {
+        this.xApideckConsumerId = xApideckConsumerId;
+        return this;
+    }
+    
+    /**
+     * Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-service-id")
+    public String xApideckServiceId;
+    public FilesUpdateRequest withXApideckServiceId(String xApideckServiceId) {
+        this.xApideckServiceId = xApideckServiceId;
         return this;
     }
     

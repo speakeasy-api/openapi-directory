@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteV2CadenceMembershipsIdJsonRequest {
-    
-    public DeleteV2CadenceMembershipsIdJsonPathParams pathParams;
-    public DeleteV2CadenceMembershipsIdJsonRequest withPathParams(DeleteV2CadenceMembershipsIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * CadenceMembership ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteV2CadenceMembershipsIdJsonRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

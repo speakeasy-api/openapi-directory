@@ -7,20 +7,27 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class QueryChannelsRequest {
-    
-    public QueryChannelsQueryParams queryParams;
-    public QueryChannelsRequest withQueryParams(QueryChannelsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Query Channels Request
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.QueryChannelsRequest request;
-    public QueryChannelsRequest withRequest(org.openapis.openapi.models.shared.QueryChannelsRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.QueryChannelsRequest queryChannelsRequest;
+    public QueryChannelsRequest withQueryChannelsRequest(org.openapis.openapi.models.shared.QueryChannelsRequest queryChannelsRequest) {
+        this.queryChannelsRequest = queryChannelsRequest;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:serialization=json,name=client_id")
+    public String clientId;
+    public QueryChannelsRequest withClientId(String clientId) {
+        this.clientId = clientId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:serialization=json,name=connection_id")
+    public String connectionId;
+    public QueryChannelsRequest withConnectionId(String connectionId) {
+        this.connectionId = connectionId;
         return this;
     }
     

@@ -4,20 +4,74 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProductReviewsRequest {
-    
-    public ProductReviewsQueryParams queryParams;
-    public ProductReviewsRequest withQueryParams(ProductReviewsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public ProductReviewsRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
+    /**
+     * **unique alphanumeric identifier** of the product
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=code")
+    public String code;
+    public ProductReviewsRequest withCode(String code) {
+        this.code = code;
+        return this;
+    }
     
-    public ProductReviewsHeaders headers;
-    public ProductReviewsRequest withHeaders(ProductReviewsHeaders headers) {
-        this.headers = headers;
+    /**
+     * **specifier** as to whether or not to show 'unavailable' products:
+     * 
+     *   - `true`: return *both* available and unavailable products
+     *   - `false`: return *only* available products (default)
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showUnavailable")
+    public Boolean showUnavailable;
+    public ProductReviewsRequest withShowUnavailable(Boolean showUnavailable) {
+        this.showUnavailable = showUnavailable;
+        return this;
+    }
+    
+    /**
+     * **specifier** of the order in which to return reviews
+     * 
+     * Sort order options:
+     * 
+     *   - `"REVIEW_RATING_A"`: Traveler Rating (low\u2192high) Average
+     *   - `"REVIEW_RATING_D"`: Traveler Rating (high\u2192low) Average
+     *   - `"REVIEW_RATING_SUBMISSION_DATE_D"`: Most recent review
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortOrder")
+    public org.openapis.openapi.models.shared.SortOrderREVIEWEnum sortOrder;
+    public ProductReviewsRequest withSortOrder(org.openapis.openapi.models.shared.SortOrderREVIEWEnum sortOrder) {
+        this.sortOrder = sortOrder;
+        return this;
+    }
+    
+    /**
+     * **start and end rows** to return in the format {start}-{end}
+     * - e.g. `'1-10'`, `'11-20'`
+     * 
+     * **Note**: 
+     * - the maximum number of rows per request is 100; therefore, `'100-400'` will return the same as `'100-200'`
+     * - if `topX` is not specified, the default is `'1-100'`
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=topX")
+    public String topX;
+    public ProductReviewsRequest withTopX(String topX) {
+        this.topX = topX;
         return this;
     }
     

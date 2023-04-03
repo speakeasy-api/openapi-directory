@@ -30,16 +30,10 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/FirebasehostingOperationsCancelPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/FirebasehostingOperationsCancelQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/FirebasehostingOperationsCancelRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/FirebasehostingOperationsCancelResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/FirebasehostingOperationsDeletePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/FirebasehostingOperationsDeleteQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/FirebasehostingOperationsDeleteRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/FirebasehostingOperationsDeleteResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/FirebasehostingOperationsListPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/FirebasehostingOperationsListQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/FirebasehostingOperationsListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/FirebasehostingOperationsListResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java

@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2BulkJobsBulkJobsIdResultsRequest {
-    
-    public GetV2BulkJobsBulkJobsIdResultsPathParams pathParams;
-    public GetV2BulkJobsBulkJobsIdResultsRequest withPathParams(GetV2BulkJobsBulkJobsIdResultsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id for the Bulk Job
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bulk_jobs_id")
+    public Long bulkJobsId;
+    public GetV2BulkJobsBulkJobsIdResultsRequest withBulkJobsId(Long bulkJobsId) {
+        this.bulkJobsId = bulkJobsId;
         return this;
     }
     
+    /**
+     * Filter by id using comparison operators. Only supports greater than (gt) comparison (i.e. id[gt]=123)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public java.util.Map<String, Object> id;
+    public GetV2BulkJobsBulkJobsIdResultsRequest withId(java.util.Map<String, Object> id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetV2BulkJobsBulkJobsIdResultsQueryParams queryParams;
-    public GetV2BulkJobsBulkJobsIdResultsRequest withQueryParams(GetV2BulkJobsBulkJobsIdResultsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * How many records to show per page in the range [1, 100]. Defaults to 25
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetV2BulkJobsBulkJobsIdResultsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Filter by result status. Accepts multiple statuses. Each status must be one of pending, success, error, retrying
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=status")
+    public String[] status;
+    public GetV2BulkJobsBulkJobsIdResultsRequest withStatus(String[] status) {
+        this.status = status;
         return this;
     }
     

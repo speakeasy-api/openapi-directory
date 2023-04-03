@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateFilterRequest {
-    
-    public UpdateFilterPathParams pathParams;
-    public UpdateFilterRequest withPathParams(UpdateFilterPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated view's filter.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.FilterPropertyDTO[] request;
-    public UpdateFilterRequest withRequest(org.openapis.openapi.models.shared.FilterPropertyDTO[] request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.FilterPropertyDTO[] requestBody;
+    public UpdateFilterRequest withRequestBody(org.openapis.openapi.models.shared.FilterPropertyDTO[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * view's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=viewId")
+    public Long viewId;
+    public UpdateFilterRequest withViewId(Long viewId) {
+        this.viewId = viewId;
         return this;
     }
     

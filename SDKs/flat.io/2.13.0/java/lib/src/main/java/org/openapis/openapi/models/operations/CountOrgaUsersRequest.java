@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CountOrgaUsersRequest {
-    
-    public CountOrgaUsersQueryParams queryParams;
-    public CountOrgaUsersRequest withQueryParams(CountOrgaUsersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter users by group
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
+    public String[] group;
+    public CountOrgaUsersRequest withGroup(String[] group) {
+        this.group = group;
         return this;
     }
     
+    /**
+     * Filter users who don't have an active license
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=noActiveLicense")
+    public Boolean noActiveLicense;
+    public CountOrgaUsersRequest withNoActiveLicense(Boolean noActiveLicense) {
+        this.noActiveLicense = noActiveLicense;
+        return this;
+    }
     
-    public CountOrgaUsersSecurity security;
-    public CountOrgaUsersRequest withSecurity(CountOrgaUsersSecurity security) {
-        this.security = security;
+    /**
+     * The query to search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public CountOrgaUsersRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    /**
+     * Filter users by role
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=role")
+    public org.openapis.openapi.models.shared.RoleEnum[] role;
+    public CountOrgaUsersRequest withRole(org.openapis.openapi.models.shared.RoleEnum[] role) {
+        this.role = role;
         return this;
     }
     

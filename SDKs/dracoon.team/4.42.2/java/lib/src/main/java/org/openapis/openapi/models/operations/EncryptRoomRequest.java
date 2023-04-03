@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EncryptRoomRequest {
-    
-    public EncryptRoomPathParams pathParams;
-    public EncryptRoomRequest withPathParams(EncryptRoomPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public EncryptRoomHeaders headers;
-    public EncryptRoomRequest withHeaders(EncryptRoomHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.EncryptRoomRequest request;
-    public EncryptRoomRequest withRequest(org.openapis.openapi.models.shared.EncryptRoomRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.EncryptRoomRequest encryptRoomRequest;
+    public EncryptRoomRequest withEncryptRoomRequest(org.openapis.openapi.models.shared.EncryptRoomRequest encryptRoomRequest) {
+        this.encryptRoomRequest = encryptRoomRequest;
+        return this;
+    }
+    
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public EncryptRoomRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
+        return this;
+    }
+    
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public EncryptRoomXSdsDateFormatEnum xSdsDateFormat;
+    public EncryptRoomRequest withXSdsDateFormat(EncryptRoomXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
+        return this;
+    }
+    
+    /**
+     * Room ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=room_id")
+    public Long roomId;
+    public EncryptRoomRequest withRoomId(Long roomId) {
+        this.roomId = roomId;
         return this;
     }
     

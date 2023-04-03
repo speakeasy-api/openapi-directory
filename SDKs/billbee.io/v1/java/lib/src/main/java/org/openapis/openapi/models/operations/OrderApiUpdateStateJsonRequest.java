@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiUpdateStateJsonRequest {
-    
-    public OrderApiUpdateStateJsonPathParams pathParams;
-    public OrderApiUpdateStateJsonRequest withPathParams(OrderApiUpdateStateJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The data used to change the state
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiOrderStateUpdate request;
-    public OrderApiUpdateStateJsonRequest withRequest(org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiOrderStateUpdate request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiOrderStateUpdate rechnungsdruckWebAppControllersApiOrderStateUpdate;
+    public OrderApiUpdateStateJsonRequest withRechnungsdruckWebAppControllersApiOrderStateUpdate(org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiOrderStateUpdate rechnungsdruckWebAppControllersApiOrderStateUpdate) {
+        this.rechnungsdruckWebAppControllersApiOrderStateUpdate = rechnungsdruckWebAppControllersApiOrderStateUpdate;
+        return this;
+    }
+    
+    /**
+     * The internal id of the order
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public OrderApiUpdateStateJsonRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

@@ -4,20 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSentencesFromBookRequest {
-    
-    public GetSentencesFromBookPathParams pathParams;
-    public GetSentencesFromBookRequest withPathParams(GetSentencesFromBookPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Book ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSentencesFromBookRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetSentencesFromBookQueryParams queryParams;
-    public GetSentencesFromBookRequest withQueryParams(GetSentencesFromBookQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetSentencesFromBookRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     

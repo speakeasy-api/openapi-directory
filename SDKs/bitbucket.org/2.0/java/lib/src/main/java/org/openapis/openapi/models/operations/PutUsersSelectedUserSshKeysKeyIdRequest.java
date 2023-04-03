@@ -7,27 +7,35 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutUsersSelectedUserSshKeysKeyIdRequest {
-    
-    public PutUsersSelectedUserSshKeysKeyIdPathParams pathParams;
-    public PutUsersSelectedUserSshKeysKeyIdRequest withPathParams(PutUsersSelectedUserSshKeysKeyIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The updated SSH key object
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public PutUsersSelectedUserSshKeysKeyIdRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public PutUsersSelectedUserSshKeysKeyIdRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The SSH key's UUID value.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key_id")
+    public String keyId;
+    public PutUsersSelectedUserSshKeysKeyIdRequest withKeyId(String keyId) {
+        this.keyId = keyId;
+        return this;
+    }
     
-    public PutUsersSelectedUserSshKeysKeyIdSecurity security;
-    public PutUsersSelectedUserSshKeysKeyIdRequest withSecurity(PutUsersSelectedUserSshKeysKeyIdSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the UUID of the account, surrounded by curly-braces, for
+     * example: `{account UUID}`, OR an Atlassian Account ID.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=selected_user")
+    public String selectedUser;
+    public PutUsersSelectedUserSshKeysKeyIdRequest withSelectedUser(String selectedUser) {
+        this.selectedUser = selectedUser;
         return this;
     }
     

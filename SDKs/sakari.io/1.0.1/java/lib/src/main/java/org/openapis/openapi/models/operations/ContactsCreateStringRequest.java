@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContactsCreateStringRequest {
-    
-    public ContactsCreateStringPathParams pathParams;
-    public ContactsCreateStringRequest withPathParams(ContactsCreateStringPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ContactsCreateStringQueryParams queryParams;
-    public ContactsCreateStringRequest withQueryParams(ContactsCreateStringQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=text/csv")
-    public String request;
-    public ContactsCreateStringRequest withRequest(String request) {
-        this.request = request;
+    public String requestBody;
+    public ContactsCreateStringRequest withRequestBody(String requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Account to apply operations to
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public ContactsCreateStringRequest withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
     
-    public ContactsCreateStringSecurity security;
-    public ContactsCreateStringRequest withSecurity(ContactsCreateStringSecurity security) {
-        this.security = security;
+    /**
+     * Determines how existing contacts with matching mobile numbers are treated
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mergeStrategy")
+    public ContactsCreateStringMergeStrategyEnum mergeStrategy;
+    public ContactsCreateStringRequest withMergeStrategy(ContactsCreateStringMergeStrategyEnum mergeStrategy) {
+        this.mergeStrategy = mergeStrategy;
         return this;
     }
     

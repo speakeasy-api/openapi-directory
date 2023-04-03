@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWehooksListRequest {
-    
-    public GetWehooksListQueryParams queryParams;
-    public GetWehooksListRequest withQueryParams(GetWehooksListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Access token required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-access-token")
+    public String evAccessToken;
+    public GetWehooksListRequest withEvAccessToken(String evAccessToken) {
+        this.evAccessToken = evAccessToken;
         return this;
     }
     
+    /**
+     * API key required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-api-key")
+    public String evApiKey;
+    public GetWehooksListRequest withEvApiKey(String evApiKey) {
+        this.evApiKey = evApiKey;
+        return this;
+    }
     
-    public GetWehooksListHeaders headers;
-    public GetWehooksListRequest withHeaders(GetWehooksListHeaders headers) {
-        this.headers = headers;
+    /**
+     * List of related record types to include. Valid options are `owningAccount` and `resource`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include")
+    public String include;
+    public GetWehooksListRequest withInclude(String include) {
+        this.include = include;
+        return this;
+    }
+    
+    /**
+     * Limit of the records list
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetWehooksListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Records to skip before returning results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetWehooksListRequest withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     

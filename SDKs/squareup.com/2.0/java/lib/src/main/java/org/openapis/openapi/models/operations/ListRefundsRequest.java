@@ -4,27 +4,67 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListRefundsRequest {
-    
-    public ListRefundsPathParams pathParams;
-    public ListRefundsRequest withPathParams(ListRefundsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A pagination cursor to retrieve the next set of results for your
+     * original query to the endpoint.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=batch_token")
+    public String batchToken;
+    public ListRefundsRequest withBatchToken(String batchToken) {
+        this.batchToken = batchToken;
         return this;
     }
     
-    
-    public ListRefundsQueryParams queryParams;
-    public ListRefundsRequest withQueryParams(ListRefundsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The beginning of the requested reporting period, in ISO 8601 format. If this value is before January 1, 2013 (2013-01-01T00:00:00Z), this endpoint returns an error. Default value: The current time minus one year.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=begin_time")
+    public String beginTime;
+    public ListRefundsRequest withBeginTime(String beginTime) {
+        this.beginTime = beginTime;
         return this;
     }
     
+    /**
+     * The end of the requested reporting period, in ISO 8601 format. If this value is more than one year greater than begin_time, this endpoint returns an error. Default value: The current time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_time")
+    public String endTime;
+    public ListRefundsRequest withEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
     
-    public ListRefundsSecurity security;
-    public ListRefundsRequest withSecurity(ListRefundsSecurity security) {
-        this.security = security;
+    /**
+     * The approximate number of refunds to return in a single response. Default: 100. Max: 200. Response may contain more results than the prescribed limit when refunds are made simultaneously to multiple tenders in a payment or when refunds are generated in an exchange to account for the value of returned goods.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListRefundsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * The ID of the location to list refunds for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
+    public String locationId;
+    public ListRefundsRequest withLocationId(String locationId) {
+        this.locationId = locationId;
+        return this;
+    }
+    
+    /**
+     * The order in which payments are listed in the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public String order;
+    public ListRefundsRequest withOrder(String order) {
+        this.order = order;
         return this;
     }
     

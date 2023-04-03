@@ -7,17 +7,34 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChecksUpdateRequest {
-    
-    public ChecksUpdatePathParams pathParams;
-    public ChecksUpdateRequest withPathParams(ChecksUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public Object requestBody;
+    public ChecksUpdateRequest withRequestBody(Object requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public Object request;
-    public ChecksUpdateRequest withRequest(Object request) {
-        this.request = request;
+    /**
+     * check_run_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=check_run_id")
+    public Long checkRunId;
+    public ChecksUpdateRequest withCheckRunId(Long checkRunId) {
+        this.checkRunId = checkRunId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ChecksUpdateRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ChecksUpdateRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

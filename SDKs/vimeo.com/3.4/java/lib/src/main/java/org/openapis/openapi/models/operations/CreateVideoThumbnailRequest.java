@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateVideoThumbnailRequest {
-    
-    public CreateVideoThumbnailPathParams pathParams;
-    public CreateVideoThumbnailRequest withPathParams(CreateVideoThumbnailPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.picture+json")
-    public CreateVideoThumbnailRequestBody request;
-    public CreateVideoThumbnailRequest withRequest(CreateVideoThumbnailRequestBody request) {
-        this.request = request;
+    public CreateVideoThumbnailRequestBody requestBody;
+    public CreateVideoThumbnailRequest withRequestBody(CreateVideoThumbnailRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateVideoThumbnailSecurity security;
-    public CreateVideoThumbnailRequest withSecurity(CreateVideoThumbnailSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public CreateVideoThumbnailRequest withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

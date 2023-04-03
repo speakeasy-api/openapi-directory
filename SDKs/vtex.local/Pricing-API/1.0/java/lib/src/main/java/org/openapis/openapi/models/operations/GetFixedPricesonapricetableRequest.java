@@ -4,20 +4,43 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFixedPricesonapricetableRequest {
-    
-    public GetFixedPricesonapricetablePathParams pathParams;
-    public GetFixedPricesonapricetableRequest withPathParams(GetFixedPricesonapricetablePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetFixedPricesonapricetableRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetFixedPricesonapricetableRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetFixedPricesonapricetableHeaders headers;
-    public GetFixedPricesonapricetableRequest withHeaders(GetFixedPricesonapricetableHeaders headers) {
-        this.headers = headers;
+    /**
+     * SKU ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=itemId")
+    public Long itemId;
+    public GetFixedPricesonapricetableRequest withItemId(Long itemId) {
+        this.itemId = itemId;
+        return this;
+    }
+    
+    /**
+     * Price Table Name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=priceTableId")
+    public String priceTableId;
+    public GetFixedPricesonapricetableRequest withPriceTableId(String priceTableId) {
+        this.priceTableId = priceTableId;
         return this;
     }
     

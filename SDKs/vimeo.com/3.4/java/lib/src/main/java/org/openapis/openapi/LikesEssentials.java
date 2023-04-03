@@ -38,7 +38,7 @@ public class LikesEssentials {
      */
     public org.openapis.openapi.models.operations.CheckIfUserLikedVideoResponse checkIfUserLikedVideo(org.openapis.openapi.models.operations.CheckIfUserLikedVideoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CheckIfUserLikedVideoPathParams.class, baseUrl, "/users/{user_id}/likes/{video_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CheckIfUserLikedVideoRequest.class, baseUrl, "/users/{user_id}/likes/{video_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -79,7 +79,7 @@ public class LikesEssentials {
      */
     public org.openapis.openapi.models.operations.CheckIfUserLikedVideoAlt1Response checkIfUserLikedVideoAlt1(org.openapis.openapi.models.operations.CheckIfUserLikedVideoAlt1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CheckIfUserLikedVideoAlt1PathParams.class, baseUrl, "/me/likes/{video_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CheckIfUserLikedVideoAlt1Request.class, baseUrl, "/me/likes/{video_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -120,13 +120,13 @@ public class LikesEssentials {
      */
     public org.openapis.openapi.models.operations.GetLikesResponse getLikes(org.openapis.openapi.models.operations.GetLikesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLikesPathParams.class, baseUrl, "/users/{user_id}/likes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLikesRequest.class, baseUrl, "/users/{user_id}/likes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetLikesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetLikesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -171,7 +171,7 @@ public class LikesEssentials {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetLikesAlt1QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetLikesAlt1Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -210,13 +210,13 @@ public class LikesEssentials {
      */
     public org.openapis.openapi.models.operations.GetVideoLikesResponse getVideoLikes(org.openapis.openapi.models.operations.GetVideoLikesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVideoLikesPathParams.class, baseUrl, "/videos/{video_id}/likes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVideoLikesRequest.class, baseUrl, "/videos/{video_id}/likes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVideoLikesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVideoLikesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -255,13 +255,13 @@ public class LikesEssentials {
      */
     public org.openapis.openapi.models.operations.GetVideoLikesAlt1Response getVideoLikesAlt1(org.openapis.openapi.models.operations.GetVideoLikesAlt1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVideoLikesAlt1PathParams.class, baseUrl, "/channels/{channel_id}/videos/{video_id}/likes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVideoLikesAlt1Request.class, baseUrl, "/channels/{channel_id}/videos/{video_id}/likes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVideoLikesAlt1QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVideoLikesAlt1Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -301,13 +301,13 @@ public class LikesEssentials {
      */
     public org.openapis.openapi.models.operations.GetVodLikesResponse getVodLikes(org.openapis.openapi.models.operations.GetVodLikesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVodLikesPathParams.class, baseUrl, "/ondemand/pages/{ondemand_id}/likes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVodLikesRequest.class, baseUrl, "/ondemand/pages/{ondemand_id}/likes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVodLikesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVodLikesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -341,19 +341,20 @@ public class LikesEssentials {
     /**
      * Cause a user to like a video
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LikeVideoResponse likeVideo(org.openapis.openapi.models.operations.LikeVideoRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LikeVideoResponse likeVideo(org.openapis.openapi.models.operations.LikeVideoRequest request, org.openapis.openapi.models.operations.LikeVideoSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LikeVideoPathParams.class, baseUrl, "/users/{user_id}/likes/{video_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LikeVideoRequest.class, baseUrl, "/users/{user_id}/likes/{video_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -382,19 +383,20 @@ public class LikesEssentials {
     /**
      * Cause a user to like a video
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LikeVideoAlt1Response likeVideoAlt1(org.openapis.openapi.models.operations.LikeVideoAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.LikeVideoAlt1Response likeVideoAlt1(org.openapis.openapi.models.operations.LikeVideoAlt1Request request, org.openapis.openapi.models.operations.LikeVideoAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LikeVideoAlt1PathParams.class, baseUrl, "/me/likes/{video_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LikeVideoAlt1Request.class, baseUrl, "/me/likes/{video_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -423,19 +425,20 @@ public class LikesEssentials {
     /**
      * Cause a user to unlike a video
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UnlikeVideoResponse unlikeVideo(org.openapis.openapi.models.operations.UnlikeVideoRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UnlikeVideoResponse unlikeVideo(org.openapis.openapi.models.operations.UnlikeVideoRequest request, org.openapis.openapi.models.operations.UnlikeVideoSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnlikeVideoPathParams.class, baseUrl, "/users/{user_id}/likes/{video_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnlikeVideoRequest.class, baseUrl, "/users/{user_id}/likes/{video_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -464,19 +467,20 @@ public class LikesEssentials {
     /**
      * Cause a user to unlike a video
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UnlikeVideoAlt1Response unlikeVideoAlt1(org.openapis.openapi.models.operations.UnlikeVideoAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.UnlikeVideoAlt1Response unlikeVideoAlt1(org.openapis.openapi.models.operations.UnlikeVideoAlt1Request request, org.openapis.openapi.models.operations.UnlikeVideoAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnlikeVideoAlt1PathParams.class, baseUrl, "/me/likes/{video_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnlikeVideoAlt1Request.class, baseUrl, "/me/likes/{video_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

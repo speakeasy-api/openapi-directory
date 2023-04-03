@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConfigureAntiSpamRequest {
-    
-    public ConfigureAntiSpamPathParams pathParams;
-    public ConfigureAntiSpamRequest withPathParams(ConfigureAntiSpamPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ConfigureAntiSpamQueryParams queryParams;
-    public ConfigureAntiSpamRequest withQueryParams(ConfigureAntiSpamQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Contains the anti-spam information.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateAntiSpamRequest request;
-    public ConfigureAntiSpamRequest withRequest(org.openapis.openapi.models.shared.UpdateAntiSpamRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateAntiSpamRequest updateAntiSpamRequest;
+    public ConfigureAntiSpamRequest withUpdateAntiSpamRequest(org.openapis.openapi.models.shared.UpdateAntiSpamRequest updateAntiSpamRequest) {
+        this.updateAntiSpamRequest = updateAntiSpamRequest;
+        return this;
+    }
+    
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
+    public String domainNamePathParameter;
+    public ConfigureAntiSpamRequest withDomainNamePathParameter(String domainNamePathParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
+        return this;
+    }
+    
+    /**
+     * Mail zone domain name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
+    public String domainNameQueryParameter;
+    public ConfigureAntiSpamRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
+        this.domainNameQueryParameter = domainNameQueryParameter;
         return this;
     }
     

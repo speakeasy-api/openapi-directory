@@ -4,34 +4,57 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListMetricRequest {
-    
-    public ListMetricPathParams pathParams;
-    public ListMetricRequest withPathParams(ListMetricPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CallSid")
+    public String callSid;
+    public ListMetricRequest withCallSid(String callSid) {
+        this.callSid = callSid;
         return this;
     }
     
-    
-    public ListMetricQueryParams queryParams;
-    public ListMetricRequest withQueryParams(ListMetricQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Direction")
+    public org.openapis.openapi.models.shared.MetricEnumStreamDirectionEnum direction;
+    public ListMetricRequest withDirection(org.openapis.openapi.models.shared.MetricEnumStreamDirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
-    
-    public ListMetricSecurity security;
-    public ListMetricRequest withSecurity(ListMetricSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Edge")
+    public org.openapis.openapi.models.shared.MetricEnumTwilioEdgeEnum edge;
+    public ListMetricRequest withEdge(org.openapis.openapi.models.shared.MetricEnumTwilioEdgeEnum edge) {
+        this.edge = edge;
         return this;
     }
     
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListMetricRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public String serverURL;
-    public ListMetricRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListMetricRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListMetricRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

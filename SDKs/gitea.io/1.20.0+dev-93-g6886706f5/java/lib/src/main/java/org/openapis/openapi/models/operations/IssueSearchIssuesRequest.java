@@ -4,13 +4,177 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssueSearchIssuesRequest {
+    /**
+     * filter (issues / pulls) assigned to you, default is false
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assigned")
+    public Boolean assigned;
+    public IssueSearchIssuesRequest withAssigned(Boolean assigned) {
+        this.assigned = assigned;
+        return this;
+    }
     
-    public IssueSearchIssuesQueryParams queryParams;
-    public IssueSearchIssuesRequest withQueryParams(IssueSearchIssuesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Only show notifications updated before the given time. This is a timestamp in RFC 3339 format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=before")
+    public OffsetDateTime before;
+    public IssueSearchIssuesRequest withBefore(OffsetDateTime before) {
+        this.before = before;
+        return this;
+    }
+    
+    /**
+     * filter (issues / pulls) created by you, default is false
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created")
+    public Boolean created;
+    public IssueSearchIssuesRequest withCreated(Boolean created) {
+        this.created = created;
+        return this;
+    }
+    
+    /**
+     * comma separated list of labels. Fetch only issues that have any of this labels. Non existent labels are discarded
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=labels")
+    public String labels;
+    public IssueSearchIssuesRequest withLabels(String labels) {
+        this.labels = labels;
+        return this;
+    }
+    
+    /**
+     * page size of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public IssueSearchIssuesRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * filter (issues / pulls) mentioning you, default is false
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mentioned")
+    public Boolean mentioned;
+    public IssueSearchIssuesRequest withMentioned(Boolean mentioned) {
+        this.mentioned = mentioned;
+        return this;
+    }
+    
+    /**
+     * comma separated list of milestone names. Fetch only issues that have any of this milestones. Non existent are discarded
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=milestones")
+    public String milestones;
+    public IssueSearchIssuesRequest withMilestones(String milestones) {
+        this.milestones = milestones;
+        return this;
+    }
+    
+    /**
+     * filter by owner
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=owner")
+    public String owner;
+    public IssueSearchIssuesRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * page number of results to return (1-based)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public IssueSearchIssuesRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * repository to prioritize in the results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=priority_repo_id")
+    public Long priorityRepoId;
+    public IssueSearchIssuesRequest withPriorityRepoId(Long priorityRepoId) {
+        this.priorityRepoId = priorityRepoId;
+        return this;
+    }
+    
+    /**
+     * search string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public IssueSearchIssuesRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    /**
+     * filter pulls requesting your review, default is false
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=review_requested")
+    public Boolean reviewRequested;
+    public IssueSearchIssuesRequest withReviewRequested(Boolean reviewRequested) {
+        this.reviewRequested = reviewRequested;
+        return this;
+    }
+    
+    /**
+     * filter pulls reviewed by you, default is false
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reviewed")
+    public Boolean reviewed;
+    public IssueSearchIssuesRequest withReviewed(Boolean reviewed) {
+        this.reviewed = reviewed;
+        return this;
+    }
+    
+    /**
+     * Only show notifications updated after the given time. This is a timestamp in RFC 3339 format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public OffsetDateTime since;
+    public IssueSearchIssuesRequest withSince(OffsetDateTime since) {
+        this.since = since;
+        return this;
+    }
+    
+    /**
+     * whether issue is open or closed
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public String state;
+    public IssueSearchIssuesRequest withState(String state) {
+        this.state = state;
+        return this;
+    }
+    
+    /**
+     * filter by team (requires organization owner parameter to be provided)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team")
+    public String team;
+    public IssueSearchIssuesRequest withTeam(String team) {
+        this.team = team;
+        return this;
+    }
+    
+    /**
+     * filter by type (issues / pulls) if set
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public IssueSearchIssuesRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

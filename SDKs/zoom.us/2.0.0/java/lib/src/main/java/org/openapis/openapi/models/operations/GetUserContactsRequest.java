@@ -4,20 +4,38 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUserContactsRequest {
-    
-    public GetUserContactsQueryParams queryParams;
-    public GetUserContactsRequest withQueryParams(GetUserContactsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next_page_token")
+    public String nextPageToken;
+    public GetUserContactsRequest withNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
         return this;
     }
     
+    /**
+     * The number of records returned with a single API call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public GetUserContactsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public GetUserContactsSecurity security;
-    public GetUserContactsRequest withSecurity(GetUserContactsSecurity security) {
-        this.security = security;
+    /**
+     * The type of contact. The value can be one of the following:
+     * `company`: Contacts from the user's organization.
+     * `external`: External contacts. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public GetUserContactsRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

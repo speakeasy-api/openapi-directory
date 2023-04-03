@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UnregisterMFARequest {
-    
-    public UnregisterMFAPathParams pathParams;
-    public UnregisterMFARequest withPathParams(UnregisterMFAPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The MFA Type to unregister
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UnregisterMFARequest request;
-    public UnregisterMFARequest withRequest(org.openapis.openapi.models.shared.UnregisterMFARequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UnregisterMFARequest unregisterMFARequest;
+    public UnregisterMFARequest withUnregisterMFARequest(org.openapis.openapi.models.shared.UnregisterMFARequest unregisterMFARequest) {
+        this.unregisterMFARequest = unregisterMFARequest;
+        return this;
+    }
+    
+    /**
+     * The UUID of the User.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public UnregisterMFARequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

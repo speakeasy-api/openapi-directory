@@ -31,10 +31,8 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/PostGet3dsAvailabilitySecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostGet3dsAvailabilityRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostGet3dsAvailabilityResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostGetCostEstimateSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostGetCostEstimateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostGetCostEstimateResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ThreeDSAvailabilityResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ThreeDs2CardRangeDetail.java
@@ -42,7 +40,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/DSPublicKeyDetail.java
 lib/src/main/java/org/openapis/openapi/models/shared/BinDetail.java
 lib/src/main/java/org/openapis/openapi/models/shared/ServiceError.java
 lib/src/main/java/org/openapis/openapi/models/shared/ThreeDSAvailabilityRequest.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKeyAuth.java
 lib/src/main/java/org/openapis/openapi/models/shared/SchemeBasicAuth.java
 lib/src/main/java/org/openapis/openapi/models/shared/CostEstimateResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Amount.java

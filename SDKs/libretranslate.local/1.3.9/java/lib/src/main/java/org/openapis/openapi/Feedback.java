@@ -33,7 +33,7 @@ public class Feedback {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSuggestResponse postSuggest(org.openapis.openapi.models.operations.PostSuggestRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSuggestResponse postSuggest(String request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/suggest");
         

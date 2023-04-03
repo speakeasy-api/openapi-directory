@@ -4,27 +4,166 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SheetsSpreadsheetsValuesGetRequest {
-    
-    public SheetsSpreadsheetsValuesGetPathParams pathParams;
-    public SheetsSpreadsheetsValuesGetRequest withPathParams(SheetsSpreadsheetsValuesGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public SheetsSpreadsheetsValuesGetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public SheetsSpreadsheetsValuesGetQueryParams queryParams;
-    public SheetsSpreadsheetsValuesGetRequest withQueryParams(SheetsSpreadsheetsValuesGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public SheetsSpreadsheetsValuesGetRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public SheetsSpreadsheetsValuesGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public SheetsSpreadsheetsValuesGetSecurity security;
-    public SheetsSpreadsheetsValuesGetRequest withSecurity(SheetsSpreadsheetsValuesGetSecurity security) {
-        this.security = security;
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public SheetsSpreadsheetsValuesGetRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * How dates, times, and durations should be represented in the output. This is ignored if value_render_option is FORMATTED_VALUE. The default dateTime render option is SERIAL_NUMBER.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dateTimeRenderOption")
+    public SheetsSpreadsheetsValuesGetDateTimeRenderOptionEnum dateTimeRenderOption;
+    public SheetsSpreadsheetsValuesGetRequest withDateTimeRenderOption(SheetsSpreadsheetsValuesGetDateTimeRenderOptionEnum dateTimeRenderOption) {
+        this.dateTimeRenderOption = dateTimeRenderOption;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public SheetsSpreadsheetsValuesGetRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public SheetsSpreadsheetsValuesGetRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * The major dimension that results should use. For example, if the spreadsheet data in Sheet1 is: `A1=1,B1=2,A2=3,B2=4`, then requesting `range=Sheet1!A1:B2?majorDimension=ROWS` returns `[[1,2],[3,4]]`, whereas requesting `range=Sheet1!A1:B2?majorDimension=COLUMNS` returns `[[1,3],[2,4]]`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=majorDimension")
+    public SheetsSpreadsheetsValuesGetMajorDimensionEnum majorDimension;
+    public SheetsSpreadsheetsValuesGetRequest withMajorDimension(SheetsSpreadsheetsValuesGetMajorDimensionEnum majorDimension) {
+        this.majorDimension = majorDimension;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public SheetsSpreadsheetsValuesGetRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public SheetsSpreadsheetsValuesGetRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public SheetsSpreadsheetsValuesGetRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * The [A1 notation or R1C1 notation](/sheets/api/guides/concepts#cell) of the range to retrieve values from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=range")
+    public String range;
+    public SheetsSpreadsheetsValuesGetRequest withRange(String range) {
+        this.range = range;
+        return this;
+    }
+    
+    /**
+     * The ID of the spreadsheet to retrieve data from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spreadsheetId")
+    public String spreadsheetId;
+    public SheetsSpreadsheetsValuesGetRequest withSpreadsheetId(String spreadsheetId) {
+        this.spreadsheetId = spreadsheetId;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public SheetsSpreadsheetsValuesGetRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public SheetsSpreadsheetsValuesGetRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
+        return this;
+    }
+    
+    /**
+     * How values should be represented in the output. The default render option is FORMATTED_VALUE.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=valueRenderOption")
+    public SheetsSpreadsheetsValuesGetValueRenderOptionEnum valueRenderOption;
+    public SheetsSpreadsheetsValuesGetRequest withValueRenderOption(SheetsSpreadsheetsValuesGetValueRenderOptionEnum valueRenderOption) {
+        this.valueRenderOption = valueRenderOption;
         return this;
     }
     

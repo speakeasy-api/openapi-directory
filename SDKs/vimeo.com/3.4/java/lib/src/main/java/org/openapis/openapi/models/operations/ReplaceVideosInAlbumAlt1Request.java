@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReplaceVideosInAlbumAlt1Request {
-    
-    public ReplaceVideosInAlbumAlt1PathParams pathParams;
-    public ReplaceVideosInAlbumAlt1Request withPathParams(ReplaceVideosInAlbumAlt1PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public ReplaceVideosInAlbumAlt1RequestBody request;
-    public ReplaceVideosInAlbumAlt1Request withRequest(ReplaceVideosInAlbumAlt1RequestBody request) {
-        this.request = request;
+    public ReplaceVideosInAlbumAlt1RequestBody requestBody;
+    public ReplaceVideosInAlbumAlt1Request withRequestBody(ReplaceVideosInAlbumAlt1RequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public ReplaceVideosInAlbumAlt1Security security;
-    public ReplaceVideosInAlbumAlt1Request withSecurity(ReplaceVideosInAlbumAlt1Security security) {
-        this.security = security;
+    /**
+     * The ID of the album.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=album_id")
+    public Double albumId;
+    public ReplaceVideosInAlbumAlt1Request withAlbumId(Double albumId) {
+        this.albumId = albumId;
         return this;
     }
     

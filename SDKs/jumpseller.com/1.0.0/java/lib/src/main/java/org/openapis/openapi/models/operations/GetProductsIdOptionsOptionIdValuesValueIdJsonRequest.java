@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProductsIdOptionsOptionIdValuesValueIdJsonRequest {
-    
-    public GetProductsIdOptionsOptionIdValuesValueIdJsonPathParams pathParams;
-    public GetProductsIdOptionsOptionIdValuesValueIdJsonRequest withPathParams(GetProductsIdOptionsOptionIdValuesValueIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public GetProductsIdOptionsOptionIdValuesValueIdJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
         return this;
     }
     
+    /**
+     * Id of the Product
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public GetProductsIdOptionsOptionIdValuesValueIdJsonRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetProductsIdOptionsOptionIdValuesValueIdJsonQueryParams queryParams;
-    public GetProductsIdOptionsOptionIdValuesValueIdJsonRequest withQueryParams(GetProductsIdOptionsOptionIdValuesValueIdJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public GetProductsIdOptionsOptionIdValuesValueIdJsonRequest withLogin(String login) {
+        this.login = login;
+        return this;
+    }
+    
+    /**
+     * Id of the Product Option
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=option_id")
+    public Integer optionId;
+    public GetProductsIdOptionsOptionIdValuesValueIdJsonRequest withOptionId(Integer optionId) {
+        this.optionId = optionId;
+        return this;
+    }
+    
+    /**
+     * ID of the Product Option Value
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=value_id")
+    public Integer valueId;
+    public GetProductsIdOptionsOptionIdValuesValueIdJsonRequest withValueId(Integer valueId) {
+        this.valueId = valueId;
         return this;
     }
     

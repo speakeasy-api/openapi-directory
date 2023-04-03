@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChecksSetSuitesPreferencesRequest {
-    
-    public ChecksSetSuitesPreferencesPathParams pathParams;
-    public ChecksSetSuitesPreferencesRequest withPathParams(ChecksSetSuitesPreferencesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ChecksSetSuitesPreferencesRequestBody requestBody;
+    public ChecksSetSuitesPreferencesRequest withRequestBody(ChecksSetSuitesPreferencesRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ChecksSetSuitesPreferencesRequestBody request;
-    public ChecksSetSuitesPreferencesRequest withRequest(ChecksSetSuitesPreferencesRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ChecksSetSuitesPreferencesRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ChecksSetSuitesPreferencesRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

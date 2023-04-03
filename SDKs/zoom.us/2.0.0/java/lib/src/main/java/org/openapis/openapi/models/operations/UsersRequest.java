@@ -4,20 +4,68 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UsersRequest {
-    
-    public UsersQueryParams queryParams;
-    public UsersRequest withQueryParams(UsersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Provide a value for this field if you would like to see the following attribute in the response of this API call:&lt;br&gt;
+     * 
+     * `custom_attributes`: Returns custom attributes that are associated with the user.&lt;br&gt;`host_key`: Returns [host key](https://support.zoom.us/hc/en-us/articles/205172555-Using-your-host-key) of the user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_fields")
+    public String includeFields;
+    public UsersRequest withIncludeFields(String includeFields) {
+        this.includeFields = includeFields;
         return this;
     }
     
+    /**
+     * The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next_page_token")
+    public String nextPageToken;
+    public UsersRequest withNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
+        return this;
+    }
     
-    public UsersSecurity security;
-    public UsersRequest withSecurity(UsersSecurity security) {
-        this.security = security;
+    /**
+     * The page number of the current page in the returned records.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_number")
+    public String pageNumber;
+    public UsersRequest withPageNumber(String pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    
+    /**
+     * The number of records returned within a single API call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public UsersRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * Unique identifier of the role. Provide this parameter if you would like to filter the response by a specific role. You can retrieve Role IDs from [List Roles](https://marketplace.zoom.us/docs/api-reference/zoom-api/roles/roles) API. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=role_id")
+    public String roleId;
+    public UsersRequest withRoleId(String roleId) {
+        this.roleId = roleId;
+        return this;
+    }
+    
+    /**
+     * User statuses:&lt;br&gt;`active` - Users with an active status.&lt;br&gt;`inactive` - Users who are deactivated.&lt;br&gt;`pending` - Users with a pending status.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public UsersStatusEnum status;
+    public UsersRequest withStatus(UsersStatusEnum status) {
+        this.status = status;
         return this;
     }
     

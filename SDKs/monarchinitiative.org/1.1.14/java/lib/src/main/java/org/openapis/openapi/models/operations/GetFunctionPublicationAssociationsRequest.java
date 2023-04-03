@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFunctionPublicationAssociationsRequest {
-    
-    public GetFunctionPublicationAssociationsPathParams pathParams;
-    public GetFunctionPublicationAssociationsRequest withPathParams(GetFunctionPublicationAssociationsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Object id, e.g. ECO:0000501 (for IEA; Includes inferred by default) or a specific publication or other supporting object, e.g. ZFIN:ZDB-PUB-060503-2
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=evidence")
+    public String[] evidence;
+    public GetFunctionPublicationAssociationsRequest withEvidence(String[] evidence) {
+        this.evidence = evidence;
         return this;
     }
     
+    /**
+     * CURIE identifier of a GO term, e.g. GO:0044598
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetFunctionPublicationAssociationsRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetFunctionPublicationAssociationsQueryParams queryParams;
-    public GetFunctionPublicationAssociationsRequest withQueryParams(GetFunctionPublicationAssociationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * number of rows
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rows")
+    public Long rows;
+    public GetFunctionPublicationAssociationsRequest withRows(Long rows) {
+        this.rows = rows;
+        return this;
+    }
+    
+    /**
+     * beginning row
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public Long start;
+    public GetFunctionPublicationAssociationsRequest withStart(Long start) {
+        this.start = start;
         return this;
     }
     

@@ -39,13 +39,13 @@ public class Top {
      */
     public org.openapis.openapi.models.operations.GetOrganizationSummaryTopAppliancesByUtilizationResponse getOrganizationSummaryTopAppliancesByUtilization(org.openapis.openapi.models.operations.GetOrganizationSummaryTopAppliancesByUtilizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSummaryTopAppliancesByUtilizationPathParams.class, baseUrl, "/organizations/{organizationId}/summary/top/appliances/byUtilization", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSummaryTopAppliancesByUtilizationRequest.class, baseUrl, "/organizations/{organizationId}/summary/top/appliances/byUtilization", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationSummaryTopAppliancesByUtilizationQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationSummaryTopAppliancesByUtilizationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -85,13 +85,13 @@ public class Top {
      */
     public org.openapis.openapi.models.operations.GetOrganizationSummaryTopClientsByUsageResponse getOrganizationSummaryTopClientsByUsage(org.openapis.openapi.models.operations.GetOrganizationSummaryTopClientsByUsageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSummaryTopClientsByUsagePathParams.class, baseUrl, "/organizations/{organizationId}/summary/top/clients/byUsage", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSummaryTopClientsByUsageRequest.class, baseUrl, "/organizations/{organizationId}/summary/top/clients/byUsage", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationSummaryTopClientsByUsageQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationSummaryTopClientsByUsageRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -131,13 +131,13 @@ public class Top {
      */
     public org.openapis.openapi.models.operations.GetOrganizationSummaryTopClientsManufacturersByUsageResponse getOrganizationSummaryTopClientsManufacturersByUsage(org.openapis.openapi.models.operations.GetOrganizationSummaryTopClientsManufacturersByUsageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSummaryTopClientsManufacturersByUsagePathParams.class, baseUrl, "/organizations/{organizationId}/summary/top/clients/manufacturers/byUsage", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSummaryTopClientsManufacturersByUsageRequest.class, baseUrl, "/organizations/{organizationId}/summary/top/clients/manufacturers/byUsage", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationSummaryTopClientsManufacturersByUsageQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationSummaryTopClientsManufacturersByUsageRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -177,13 +177,13 @@ public class Top {
      */
     public org.openapis.openapi.models.operations.GetOrganizationSummaryTopDevicesByUsageResponse getOrganizationSummaryTopDevicesByUsage(org.openapis.openapi.models.operations.GetOrganizationSummaryTopDevicesByUsageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSummaryTopDevicesByUsagePathParams.class, baseUrl, "/organizations/{organizationId}/summary/top/devices/byUsage", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSummaryTopDevicesByUsageRequest.class, baseUrl, "/organizations/{organizationId}/summary/top/devices/byUsage", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationSummaryTopDevicesByUsageQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationSummaryTopDevicesByUsageRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -223,13 +223,13 @@ public class Top {
      */
     public org.openapis.openapi.models.operations.GetOrganizationSummaryTopDevicesModelsByUsageResponse getOrganizationSummaryTopDevicesModelsByUsage(org.openapis.openapi.models.operations.GetOrganizationSummaryTopDevicesModelsByUsageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSummaryTopDevicesModelsByUsagePathParams.class, baseUrl, "/organizations/{organizationId}/summary/top/devices/models/byUsage", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSummaryTopDevicesModelsByUsageRequest.class, baseUrl, "/organizations/{organizationId}/summary/top/devices/models/byUsage", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationSummaryTopDevicesModelsByUsageQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationSummaryTopDevicesModelsByUsageRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -269,13 +269,13 @@ public class Top {
      */
     public org.openapis.openapi.models.operations.GetOrganizationSummaryTopSsidsByUsageResponse getOrganizationSummaryTopSsidsByUsage(org.openapis.openapi.models.operations.GetOrganizationSummaryTopSsidsByUsageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSummaryTopSsidsByUsagePathParams.class, baseUrl, "/organizations/{organizationId}/summary/top/ssids/byUsage", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSummaryTopSsidsByUsageRequest.class, baseUrl, "/organizations/{organizationId}/summary/top/ssids/byUsage", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationSummaryTopSsidsByUsageQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationSummaryTopSsidsByUsageRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -315,13 +315,13 @@ public class Top {
      */
     public org.openapis.openapi.models.operations.GetOrganizationSummaryTopSwitchesByEnergyUsageResponse getOrganizationSummaryTopSwitchesByEnergyUsage(org.openapis.openapi.models.operations.GetOrganizationSummaryTopSwitchesByEnergyUsageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSummaryTopSwitchesByEnergyUsagePathParams.class, baseUrl, "/organizations/{organizationId}/summary/top/switches/byEnergyUsage", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSummaryTopSwitchesByEnergyUsageRequest.class, baseUrl, "/organizations/{organizationId}/summary/top/switches/byEnergyUsage", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationSummaryTopSwitchesByEnergyUsageQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationSummaryTopSwitchesByEnergyUsageRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

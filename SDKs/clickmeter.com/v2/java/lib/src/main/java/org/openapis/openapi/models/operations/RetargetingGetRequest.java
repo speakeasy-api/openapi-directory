@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetargetingGetRequest {
+    /**
+     * Maximum elements to retrieve. Default to 20 if not specified.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public RetargetingGetRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public RetargetingGetQueryParams queryParams;
-    public RetargetingGetRequest withQueryParams(RetargetingGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Where to start when retrieving elements. Default is 0 if not specified.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public RetargetingGetRequest withOffset(Integer offset) {
+        this.offset = offset;
         return this;
     }
     

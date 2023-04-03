@@ -43,7 +43,7 @@ public class Posts {
      */
     public org.openapis.openapi.models.operations.BookmarkPostResponse bookmarkPost(org.openapis.openapi.models.operations.BookmarkPostRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BookmarkPostPathParams.class, baseUrl, "/posts/{post_id}/bookmark", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BookmarkPostRequest.class, baseUrl, "/posts/{post_id}/bookmark", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -76,7 +76,7 @@ public class Posts {
      */
     public org.openapis.openapi.models.operations.DeleteBookmarkResponse deleteBookmark(org.openapis.openapi.models.operations.DeleteBookmarkRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteBookmarkPathParams.class, baseUrl, "/posts/{post_id}/bookmark", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteBookmarkRequest.class, baseUrl, "/posts/{post_id}/bookmark", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -111,7 +111,7 @@ public class Posts {
      */
     public org.openapis.openapi.models.operations.DeletePostResponse deletePost(org.openapis.openapi.models.operations.DeletePostRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePostPathParams.class, baseUrl, "/posts/{post_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePostRequest.class, baseUrl, "/posts/{post_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -141,10 +141,11 @@ public class Posts {
      * This endpoint provides an easy way to get a feed of all the publicly published posts on trash nothing. It provides access to all publicly published offer and wanted posts from the last 30 days. The posts are sorted by date (newest first). &lt;br /&gt;&lt;br /&gt; There are fewer options for filtering, sorting and searching posts with this endpoint but there is no 1,000 post limit and posts that are crossposted to multiple groups are not merged together in the response.  In most cases, crossposted posts are easy to detect because they have the same user_id, title and content.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAllPostsResponse getAllPosts(org.openapis.openapi.models.operations.GetAllPostsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetAllPostsResponse getAllPosts(org.openapis.openapi.models.operations.GetAllPostsRequest request, org.openapis.openapi.models.operations.GetAllPostsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/posts/all");
         
@@ -152,14 +153,14 @@ public class Posts {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAllPostsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAllPostsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -190,10 +191,11 @@ public class Posts {
      * This endpoint provides an easy way to get a feed of all the changes that have been made to publicly published posts on trash nothing.  Similar to the /posts/all endpoint, only data from the last 30 days is available and the changes are sorted by date (newest first).  Every change includes the date of the change, the post_id of the post that was changed and the type of change. &lt;br /&gt;&lt;br /&gt; The different types of changes that are returned are listed below. &lt;br /&gt;&lt;br /&gt; - deleted&lt;br /&gt; - undeleted&lt;br /&gt; - satisfied&lt;br /&gt; - promised&lt;br /&gt; - unpromised&lt;br /&gt; - withdrawn&lt;br /&gt; - edited&lt;br /&gt; &lt;br /&gt; For edited changes, clients can use the retrieve post API endpoint to get the edits that have been made to the post.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAllPostsChangesResponse getAllPostsChanges(org.openapis.openapi.models.operations.GetAllPostsChangesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetAllPostsChangesResponse getAllPostsChanges(org.openapis.openapi.models.operations.GetAllPostsChangesRequest request, org.openapis.openapi.models.operations.GetAllPostsChangesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/posts/all/changes");
         
@@ -201,14 +203,14 @@ public class Posts {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAllPostsChangesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAllPostsChangesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -237,19 +239,20 @@ public class Posts {
     /**
      * Retrieve a post
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPostResponse getPost(org.openapis.openapi.models.operations.GetPostRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPostResponse getPost(org.openapis.openapi.models.operations.GetPostRequest request, org.openapis.openapi.models.operations.GetPostSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPostPathParams.class, baseUrl, "/posts/{post_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPostRequest.class, baseUrl, "/posts/{post_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -280,19 +283,20 @@ public class Posts {
      * Retrieve a post and other data related to the post that is useful for displaying the post such as data about the user who posted the post and the groups the post was posted on.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPostAndRelatedDataResponse getPostAndRelatedData(org.openapis.openapi.models.operations.GetPostAndRelatedDataRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPostAndRelatedDataResponse getPostAndRelatedData(org.openapis.openapi.models.operations.GetPostAndRelatedDataRequest request, org.openapis.openapi.models.operations.GetPostAndRelatedDataSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPostAndRelatedDataPathParams.class, baseUrl, "/posts/{post_id}/display", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPostAndRelatedDataRequest.class, baseUrl, "/posts/{post_id}/display", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -324,10 +328,11 @@ public class Posts {
      * NOTE: Passing the latitude, longitude and radius parameters filters all posts by their location and so these parameters will temporarily override the current users' location preferences. When latitude, longitude and radius are not specified, public posts will be filtered by the current users' location preferences.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPostsResponse getPosts(org.openapis.openapi.models.operations.GetPostsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPostsResponse getPosts(org.openapis.openapi.models.operations.GetPostsRequest request, org.openapis.openapi.models.operations.GetPostsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/posts");
         
@@ -335,14 +340,14 @@ public class Posts {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPostsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPostsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -371,10 +376,11 @@ public class Posts {
     /**
      * Retrieve multiple posts
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPostsByIdsResponse getPostsByIds(org.openapis.openapi.models.operations.GetPostsByIdsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPostsByIdsResponse getPostsByIds(org.openapis.openapi.models.operations.GetPostsByIdsRequest request, org.openapis.openapi.models.operations.GetPostsByIdsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/posts/multiple");
         
@@ -382,14 +388,14 @@ public class Posts {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPostsByIdsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPostsByIdsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -423,7 +429,7 @@ public class Posts {
      */
     public org.openapis.openapi.models.operations.PromisePostResponse promisePost(org.openapis.openapi.models.operations.PromisePostRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PromisePostPathParams.class, baseUrl, "/posts/{post_id}/promise", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PromisePostRequest.class, baseUrl, "/posts/{post_id}/promise", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -465,12 +471,12 @@ public class Posts {
      */
     public org.openapis.openapi.models.operations.ReplyToPostResponse replyToPost(org.openapis.openapi.models.operations.ReplyToPostRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReplyToPostPathParams.class, baseUrl, "/posts/{post_id}/reply", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReplyToPostRequest.class, baseUrl, "/posts/{post_id}/reply", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -504,12 +510,12 @@ public class Posts {
      */
     public org.openapis.openapi.models.operations.ReportPostResponse reportPost(org.openapis.openapi.models.operations.ReportPostRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReportPostPathParams.class, baseUrl, "/posts/{post_id}/report", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReportPostRequest.class, baseUrl, "/posts/{post_id}/report", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -543,7 +549,7 @@ public class Posts {
      */
     public org.openapis.openapi.models.operations.SatisfyPostResponse satisfyPost(org.openapis.openapi.models.operations.SatisfyPostRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SatisfyPostPathParams.class, baseUrl, "/posts/{post_id}/satisfy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SatisfyPostRequest.class, baseUrl, "/posts/{post_id}/satisfy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -582,10 +588,11 @@ public class Posts {
      * NOTE: When paging through the posts returned by this endpoint, there will be at most 1,000 posts that can be returned (eg. 50 pages worth of posts with the default per_page value of 20).  In areas where there are more than 1,000 posts, clients can use more specific query parameters to adjust which posts are returned.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SearchPostsResponse searchPosts(org.openapis.openapi.models.operations.SearchPostsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SearchPostsResponse searchPosts(org.openapis.openapi.models.operations.SearchPostsRequest request, org.openapis.openapi.models.operations.SearchPostsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/posts/search");
         
@@ -593,14 +600,14 @@ public class Posts {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SearchPostsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SearchPostsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -635,7 +642,7 @@ public class Posts {
      */
     public org.openapis.openapi.models.operations.SharePostResponse sharePost(org.openapis.openapi.models.operations.SharePostRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SharePostPathParams.class, baseUrl, "/posts/{post_id}/share", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SharePostRequest.class, baseUrl, "/posts/{post_id}/share", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -668,7 +675,7 @@ public class Posts {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SubmitPostResponse submitPost(org.openapis.openapi.models.operations.SubmitPostRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SubmitPostResponse submitPost(org.openapis.openapi.models.operations.SubmitPostRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/posts");
         
@@ -714,7 +721,7 @@ public class Posts {
      */
     public org.openapis.openapi.models.operations.UnpromisePostResponse unpromisePost(org.openapis.openapi.models.operations.UnpromisePostRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnpromisePostPathParams.class, baseUrl, "/posts/{post_id}/unpromise", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnpromisePostRequest.class, baseUrl, "/posts/{post_id}/unpromise", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -757,12 +764,12 @@ public class Posts {
      */
     public org.openapis.openapi.models.operations.UpdatePostResponse updatePost(org.openapis.openapi.models.operations.UpdatePostRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePostPathParams.class, baseUrl, "/posts/{post_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePostRequest.class, baseUrl, "/posts/{post_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -804,7 +811,7 @@ public class Posts {
      */
     public org.openapis.openapi.models.operations.WithdrawPostResponse withdrawPost(org.openapis.openapi.models.operations.WithdrawPostRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WithdrawPostPathParams.class, baseUrl, "/posts/{post_id}/withdraw", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WithdrawPostRequest.class, baseUrl, "/posts/{post_id}/withdraw", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

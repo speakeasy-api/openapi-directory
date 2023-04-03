@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1DonationsShowRequest {
-    
-    public GetApiV1DonationsShowQueryParams queryParams;
-    public GetApiV1DonationsShowRequest withQueryParams(GetApiV1DonationsShowQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetApiV1DonationsShowSecurity security;
-    public GetApiV1DonationsShowRequest withSecurity(GetApiV1DonationsShowSecurity security) {
-        this.security = security;
+    /**
+     * The id of a donation. Ids are returned when a donation is created.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public GetApiV1DonationsShowRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

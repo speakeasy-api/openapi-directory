@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamSearchRequest {
-    
-    public TeamSearchPathParams pathParams;
-    public TeamSearchRequest withPathParams(TeamSearchPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * include search within team description (defaults to true)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_desc")
+    public Boolean includeDesc;
+    public TeamSearchRequest withIncludeDesc(Boolean includeDesc) {
+        this.includeDesc = includeDesc;
         return this;
     }
     
+    /**
+     * page size of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public TeamSearchRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public TeamSearchQueryParams queryParams;
-    public TeamSearchRequest withQueryParams(TeamSearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * name of the organization
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public TeamSearchRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
+    
+    /**
+     * page number of results to return (1-based)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public TeamSearchRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * keywords to search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public TeamSearchRequest withQ(String q) {
+        this.q = q;
         return this;
     }
     

@@ -38,7 +38,7 @@ public class Teachers {
      */
     public org.openapis.openapi.models.operations.GetDistrictForTeacherResponse getDistrictForTeacher(org.openapis.openapi.models.operations.GetDistrictForTeacherRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDistrictForTeacherPathParams.class, baseUrl, "/teachers/{id}/district", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDistrictForTeacherRequest.class, baseUrl, "/teachers/{id}/district", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -85,7 +85,7 @@ public class Teachers {
      */
     public org.openapis.openapi.models.operations.GetGradeLevelsForTeacherResponse getGradeLevelsForTeacher(org.openapis.openapi.models.operations.GetGradeLevelsForTeacherRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGradeLevelsForTeacherPathParams.class, baseUrl, "/teachers/{id}/grade_levels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGradeLevelsForTeacherRequest.class, baseUrl, "/teachers/{id}/grade_levels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -132,7 +132,7 @@ public class Teachers {
      */
     public org.openapis.openapi.models.operations.GetSchoolForTeacherResponse getSchoolForTeacher(org.openapis.openapi.models.operations.GetSchoolForTeacherRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSchoolForTeacherPathParams.class, baseUrl, "/teachers/{id}/school", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSchoolForTeacherRequest.class, baseUrl, "/teachers/{id}/school", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -179,13 +179,13 @@ public class Teachers {
      */
     public org.openapis.openapi.models.operations.GetSectionsForTeacherResponse getSectionsForTeacher(org.openapis.openapi.models.operations.GetSectionsForTeacherRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSectionsForTeacherPathParams.class, baseUrl, "/teachers/{id}/sections", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSectionsForTeacherRequest.class, baseUrl, "/teachers/{id}/sections", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSectionsForTeacherQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSectionsForTeacherRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -232,13 +232,13 @@ public class Teachers {
      */
     public org.openapis.openapi.models.operations.GetStudentsForTeacherResponse getStudentsForTeacher(org.openapis.openapi.models.operations.GetStudentsForTeacherRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStudentsForTeacherPathParams.class, baseUrl, "/teachers/{id}/students", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStudentsForTeacherRequest.class, baseUrl, "/teachers/{id}/students", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetStudentsForTeacherQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetStudentsForTeacherRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -285,13 +285,13 @@ public class Teachers {
      */
     public org.openapis.openapi.models.operations.GetTeacherResponse getTeacher(org.openapis.openapi.models.operations.GetTeacherRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeacherPathParams.class, baseUrl, "/teachers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeacherRequest.class, baseUrl, "/teachers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTeacherQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTeacherRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -344,7 +344,7 @@ public class Teachers {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTeachersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTeachersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

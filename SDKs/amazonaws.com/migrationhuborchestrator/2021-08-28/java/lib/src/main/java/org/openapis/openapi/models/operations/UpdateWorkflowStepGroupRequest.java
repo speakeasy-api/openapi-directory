@@ -7,31 +7,79 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateWorkflowStepGroupRequest {
-    
-    public UpdateWorkflowStepGroupPathParams pathParams;
-    public UpdateWorkflowStepGroupRequest withPathParams(UpdateWorkflowStepGroupPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateWorkflowStepGroupQueryParams queryParams;
-    public UpdateWorkflowStepGroupRequest withQueryParams(UpdateWorkflowStepGroupQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public UpdateWorkflowStepGroupHeaders headers;
-    public UpdateWorkflowStepGroupRequest withHeaders(UpdateWorkflowStepGroupHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateWorkflowStepGroupRequestBody request;
-    public UpdateWorkflowStepGroupRequest withRequest(UpdateWorkflowStepGroupRequestBody request) {
-        this.request = request;
+    public UpdateWorkflowStepGroupRequestBody requestBody;
+    public UpdateWorkflowStepGroupRequest withRequestBody(UpdateWorkflowStepGroupRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public UpdateWorkflowStepGroupRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public UpdateWorkflowStepGroupRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public UpdateWorkflowStepGroupRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public UpdateWorkflowStepGroupRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public UpdateWorkflowStepGroupRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public UpdateWorkflowStepGroupRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public UpdateWorkflowStepGroupRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The ID of the step group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UpdateWorkflowStepGroupRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * The ID of the migration workflow.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=workflowId")
+    public String workflowId;
+    public UpdateWorkflowStepGroupRequest withWorkflowId(String workflowId) {
+        this.workflowId = workflowId;
         return this;
     }
     

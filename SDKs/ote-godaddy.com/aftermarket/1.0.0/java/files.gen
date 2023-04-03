@@ -30,11 +30,8 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/AddExpiryListingsJsonRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/AddExpiryListingsJsonResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/AddExpiryListingsRawRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/AddExpiryListingsRawResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/DeleteListingsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteListingsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteListingsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ErrorLimit.java

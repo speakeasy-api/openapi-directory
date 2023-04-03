@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetChildrenRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=count")
+    public Long count;
+    public GetChildrenRequest withCount(Long count) {
+        this.count = count;
+        return this;
+    }
     
-    public GetChildrenPathParams pathParams;
-    public GetChildrenRequest withPathParams(GetChildrenPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cursor")
+    public String cursor;
+    public GetChildrenRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sha1")
+    public String sha1;
+    public GetChildrenRequest withSha1(String sha1) {
+        this.sha1 = sha1;
         return this;
     }
     

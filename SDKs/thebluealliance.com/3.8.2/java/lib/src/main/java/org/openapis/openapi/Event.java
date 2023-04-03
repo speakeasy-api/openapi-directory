@@ -39,18 +39,19 @@ public class Event {
     /**
      * Gets a list of events in the given district.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetDistrictEventsResponse getDistrictEvents(org.openapis.openapi.models.operations.GetDistrictEventsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetDistrictEventsResponse getDistrictEvents(org.openapis.openapi.models.operations.GetDistrictEventsRequest request, org.openapis.openapi.models.operations.GetDistrictEventsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDistrictEventsPathParams.class, baseUrl, "/district/{district_key}/events", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDistrictEventsRequest.class, baseUrl, "/district/{district_key}/events", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -59,7 +60,7 @@ public class Event {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -90,18 +91,19 @@ public class Event {
     /**
      * Gets a list of event keys for events in the given district.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetDistrictEventsKeysResponse getDistrictEventsKeys(org.openapis.openapi.models.operations.GetDistrictEventsKeysRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetDistrictEventsKeysResponse getDistrictEventsKeys(org.openapis.openapi.models.operations.GetDistrictEventsKeysRequest request, org.openapis.openapi.models.operations.GetDistrictEventsKeysSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDistrictEventsKeysPathParams.class, baseUrl, "/district/{district_key}/events/keys", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDistrictEventsKeysRequest.class, baseUrl, "/district/{district_key}/events/keys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -110,7 +112,7 @@ public class Event {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -141,18 +143,19 @@ public class Event {
     /**
      * Gets a short-form list of events in the given district.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetDistrictEventsSimpleResponse getDistrictEventsSimple(org.openapis.openapi.models.operations.GetDistrictEventsSimpleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetDistrictEventsSimpleResponse getDistrictEventsSimple(org.openapis.openapi.models.operations.GetDistrictEventsSimpleRequest request, org.openapis.openapi.models.operations.GetDistrictEventsSimpleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDistrictEventsSimplePathParams.class, baseUrl, "/district/{district_key}/events/simple", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDistrictEventsSimpleRequest.class, baseUrl, "/district/{district_key}/events/simple", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -161,7 +164,7 @@ public class Event {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -192,18 +195,19 @@ public class Event {
     /**
      * Gets an Event.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEventResponse getEvent(org.openapis.openapi.models.operations.GetEventRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEventResponse getEvent(org.openapis.openapi.models.operations.GetEventRequest request, org.openapis.openapi.models.operations.GetEventSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventPathParams.class, baseUrl, "/event/{event_key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventRequest.class, baseUrl, "/event/{event_key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -212,7 +216,7 @@ public class Event {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -243,18 +247,19 @@ public class Event {
     /**
      * Gets a list of Elimination Alliances for the given Event.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEventAlliancesResponse getEventAlliances(org.openapis.openapi.models.operations.GetEventAlliancesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEventAlliancesResponse getEventAlliances(org.openapis.openapi.models.operations.GetEventAlliancesRequest request, org.openapis.openapi.models.operations.GetEventAlliancesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventAlliancesPathParams.class, baseUrl, "/event/{event_key}/alliances", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventAlliancesRequest.class, baseUrl, "/event/{event_key}/alliances", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -263,7 +268,7 @@ public class Event {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -294,18 +299,19 @@ public class Event {
     /**
      * Gets a list of awards from the given event.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEventAwardsResponse getEventAwards(org.openapis.openapi.models.operations.GetEventAwardsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEventAwardsResponse getEventAwards(org.openapis.openapi.models.operations.GetEventAwardsRequest request, org.openapis.openapi.models.operations.GetEventAwardsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventAwardsPathParams.class, baseUrl, "/event/{event_key}/awards", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventAwardsRequest.class, baseUrl, "/event/{event_key}/awards", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -314,7 +320,7 @@ public class Event {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -345,18 +351,19 @@ public class Event {
     /**
      * Gets a list of team rankings for the Event.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEventDistrictPointsResponse getEventDistrictPoints(org.openapis.openapi.models.operations.GetEventDistrictPointsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEventDistrictPointsResponse getEventDistrictPoints(org.openapis.openapi.models.operations.GetEventDistrictPointsRequest request, org.openapis.openapi.models.operations.GetEventDistrictPointsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventDistrictPointsPathParams.class, baseUrl, "/event/{event_key}/district_points", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventDistrictPointsRequest.class, baseUrl, "/event/{event_key}/district_points", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -365,7 +372,7 @@ public class Event {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -396,18 +403,19 @@ public class Event {
     /**
      * Gets a set of Event-specific insights for the given Event.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEventInsightsResponse getEventInsights(org.openapis.openapi.models.operations.GetEventInsightsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEventInsightsResponse getEventInsights(org.openapis.openapi.models.operations.GetEventInsightsRequest request, org.openapis.openapi.models.operations.GetEventInsightsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventInsightsPathParams.class, baseUrl, "/event/{event_key}/insights", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventInsightsRequest.class, baseUrl, "/event/{event_key}/insights", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -416,7 +424,7 @@ public class Event {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -447,18 +455,19 @@ public class Event {
     /**
      * Gets an array of Match Keys for the given event key that have timeseries data. Returns an empty array if no matches have timeseries data. - *WARNING:* This is *not* official data, and is subject to a significant possibility of error, or missing data. Do not rely on this data for any purpose. In fact, pretend we made it up. - *WARNING:* This endpoint and corresponding data models are under *active development* and may change at any time, including in breaking ways.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEventMatchTimeseriesResponse getEventMatchTimeseries(org.openapis.openapi.models.operations.GetEventMatchTimeseriesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEventMatchTimeseriesResponse getEventMatchTimeseries(org.openapis.openapi.models.operations.GetEventMatchTimeseriesRequest request, org.openapis.openapi.models.operations.GetEventMatchTimeseriesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventMatchTimeseriesPathParams.class, baseUrl, "/event/{event_key}/matches/timeseries", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventMatchTimeseriesRequest.class, baseUrl, "/event/{event_key}/matches/timeseries", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -467,7 +476,7 @@ public class Event {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -498,18 +507,19 @@ public class Event {
     /**
      * Gets a list of matches for the given event.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEventMatchesResponse getEventMatches(org.openapis.openapi.models.operations.GetEventMatchesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEventMatchesResponse getEventMatches(org.openapis.openapi.models.operations.GetEventMatchesRequest request, org.openapis.openapi.models.operations.GetEventMatchesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventMatchesPathParams.class, baseUrl, "/event/{event_key}/matches", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventMatchesRequest.class, baseUrl, "/event/{event_key}/matches", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -518,7 +528,7 @@ public class Event {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -549,18 +559,19 @@ public class Event {
     /**
      * Gets a list of match keys for the given event.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEventMatchesKeysResponse getEventMatchesKeys(org.openapis.openapi.models.operations.GetEventMatchesKeysRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEventMatchesKeysResponse getEventMatchesKeys(org.openapis.openapi.models.operations.GetEventMatchesKeysRequest request, org.openapis.openapi.models.operations.GetEventMatchesKeysSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventMatchesKeysPathParams.class, baseUrl, "/event/{event_key}/matches/keys", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventMatchesKeysRequest.class, baseUrl, "/event/{event_key}/matches/keys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -569,7 +580,7 @@ public class Event {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -600,18 +611,19 @@ public class Event {
     /**
      * Gets a short-form list of matches for the given event.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEventMatchesSimpleResponse getEventMatchesSimple(org.openapis.openapi.models.operations.GetEventMatchesSimpleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEventMatchesSimpleResponse getEventMatchesSimple(org.openapis.openapi.models.operations.GetEventMatchesSimpleRequest request, org.openapis.openapi.models.operations.GetEventMatchesSimpleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventMatchesSimplePathParams.class, baseUrl, "/event/{event_key}/matches/simple", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventMatchesSimpleRequest.class, baseUrl, "/event/{event_key}/matches/simple", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -620,7 +632,7 @@ public class Event {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -651,18 +663,19 @@ public class Event {
     /**
      * Gets a set of Event OPRs (including OPR, DPR, and CCWM) for the given Event.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEventOPRsResponse getEventOPRs(org.openapis.openapi.models.operations.GetEventOPRsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEventOPRsResponse getEventOPRs(org.openapis.openapi.models.operations.GetEventOPRsRequest request, org.openapis.openapi.models.operations.GetEventOPRsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventOPRsPathParams.class, baseUrl, "/event/{event_key}/oprs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventOPRsRequest.class, baseUrl, "/event/{event_key}/oprs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -671,7 +684,7 @@ public class Event {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -702,18 +715,19 @@ public class Event {
     /**
      * Gets information on TBA-generated predictions for the given Event. Contains year-specific information. *WARNING* This endpoint is currently under development and may change at any time.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEventPredictionsResponse getEventPredictions(org.openapis.openapi.models.operations.GetEventPredictionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEventPredictionsResponse getEventPredictions(org.openapis.openapi.models.operations.GetEventPredictionsRequest request, org.openapis.openapi.models.operations.GetEventPredictionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventPredictionsPathParams.class, baseUrl, "/event/{event_key}/predictions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventPredictionsRequest.class, baseUrl, "/event/{event_key}/predictions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -722,7 +736,7 @@ public class Event {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -753,18 +767,19 @@ public class Event {
     /**
      * Gets a list of team rankings for the Event.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEventRankingsResponse getEventRankings(org.openapis.openapi.models.operations.GetEventRankingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEventRankingsResponse getEventRankings(org.openapis.openapi.models.operations.GetEventRankingsRequest request, org.openapis.openapi.models.operations.GetEventRankingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventRankingsPathParams.class, baseUrl, "/event/{event_key}/rankings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventRankingsRequest.class, baseUrl, "/event/{event_key}/rankings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -773,7 +788,7 @@ public class Event {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -804,18 +819,19 @@ public class Event {
     /**
      * Gets a short-form Event.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEventSimpleResponse getEventSimple(org.openapis.openapi.models.operations.GetEventSimpleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEventSimpleResponse getEventSimple(org.openapis.openapi.models.operations.GetEventSimpleRequest request, org.openapis.openapi.models.operations.GetEventSimpleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventSimplePathParams.class, baseUrl, "/event/{event_key}/simple", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventSimpleRequest.class, baseUrl, "/event/{event_key}/simple", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -824,7 +840,7 @@ public class Event {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -855,18 +871,19 @@ public class Event {
     /**
      * Gets a list of `Team` objects that competed in the given event.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEventTeamsResponse getEventTeams(org.openapis.openapi.models.operations.GetEventTeamsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEventTeamsResponse getEventTeams(org.openapis.openapi.models.operations.GetEventTeamsRequest request, org.openapis.openapi.models.operations.GetEventTeamsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventTeamsPathParams.class, baseUrl, "/event/{event_key}/teams", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventTeamsRequest.class, baseUrl, "/event/{event_key}/teams", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -875,7 +892,7 @@ public class Event {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -906,18 +923,19 @@ public class Event {
     /**
      * Gets a list of `Team` keys that competed in the given event.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEventTeamsKeysResponse getEventTeamsKeys(org.openapis.openapi.models.operations.GetEventTeamsKeysRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEventTeamsKeysResponse getEventTeamsKeys(org.openapis.openapi.models.operations.GetEventTeamsKeysRequest request, org.openapis.openapi.models.operations.GetEventTeamsKeysSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventTeamsKeysPathParams.class, baseUrl, "/event/{event_key}/teams/keys", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventTeamsKeysRequest.class, baseUrl, "/event/{event_key}/teams/keys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -926,7 +944,7 @@ public class Event {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -957,18 +975,19 @@ public class Event {
     /**
      * Gets a short-form list of `Team` objects that competed in the given event.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEventTeamsSimpleResponse getEventTeamsSimple(org.openapis.openapi.models.operations.GetEventTeamsSimpleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEventTeamsSimpleResponse getEventTeamsSimple(org.openapis.openapi.models.operations.GetEventTeamsSimpleRequest request, org.openapis.openapi.models.operations.GetEventTeamsSimpleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventTeamsSimplePathParams.class, baseUrl, "/event/{event_key}/teams/simple", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventTeamsSimpleRequest.class, baseUrl, "/event/{event_key}/teams/simple", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -977,7 +996,7 @@ public class Event {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1008,18 +1027,19 @@ public class Event {
     /**
      * Gets a key-value list of the event statuses for teams competing at the given event.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEventTeamsStatusesResponse getEventTeamsStatuses(org.openapis.openapi.models.operations.GetEventTeamsStatusesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEventTeamsStatusesResponse getEventTeamsStatuses(org.openapis.openapi.models.operations.GetEventTeamsStatusesRequest request, org.openapis.openapi.models.operations.GetEventTeamsStatusesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventTeamsStatusesPathParams.class, baseUrl, "/event/{event_key}/teams/statuses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventTeamsStatusesRequest.class, baseUrl, "/event/{event_key}/teams/statuses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1028,7 +1048,7 @@ public class Event {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1059,18 +1079,19 @@ public class Event {
     /**
      * Gets a list of events in the given year.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEventsByYearResponse getEventsByYear(org.openapis.openapi.models.operations.GetEventsByYearRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEventsByYearResponse getEventsByYear(org.openapis.openapi.models.operations.GetEventsByYearRequest request, org.openapis.openapi.models.operations.GetEventsByYearSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventsByYearPathParams.class, baseUrl, "/events/{year}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventsByYearRequest.class, baseUrl, "/events/{year}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1079,7 +1100,7 @@ public class Event {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1110,18 +1131,19 @@ public class Event {
     /**
      * Gets a list of event keys in the given year.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEventsByYearKeysResponse getEventsByYearKeys(org.openapis.openapi.models.operations.GetEventsByYearKeysRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEventsByYearKeysResponse getEventsByYearKeys(org.openapis.openapi.models.operations.GetEventsByYearKeysRequest request, org.openapis.openapi.models.operations.GetEventsByYearKeysSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventsByYearKeysPathParams.class, baseUrl, "/events/{year}/keys", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventsByYearKeysRequest.class, baseUrl, "/events/{year}/keys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1130,7 +1152,7 @@ public class Event {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1161,18 +1183,19 @@ public class Event {
     /**
      * Gets a short-form list of events in the given year.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEventsByYearSimpleResponse getEventsByYearSimple(org.openapis.openapi.models.operations.GetEventsByYearSimpleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEventsByYearSimpleResponse getEventsByYearSimple(org.openapis.openapi.models.operations.GetEventsByYearSimpleRequest request, org.openapis.openapi.models.operations.GetEventsByYearSimpleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventsByYearSimplePathParams.class, baseUrl, "/events/{year}/simple", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventsByYearSimpleRequest.class, baseUrl, "/events/{year}/simple", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1181,7 +1204,7 @@ public class Event {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1212,18 +1235,19 @@ public class Event {
     /**
      * Gets a list of awards the given team won at the given event.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTeamEventAwardsResponse getTeamEventAwards(org.openapis.openapi.models.operations.GetTeamEventAwardsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTeamEventAwardsResponse getTeamEventAwards(org.openapis.openapi.models.operations.GetTeamEventAwardsRequest request, org.openapis.openapi.models.operations.GetTeamEventAwardsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeamEventAwardsPathParams.class, baseUrl, "/team/{team_key}/event/{event_key}/awards", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeamEventAwardsRequest.class, baseUrl, "/team/{team_key}/event/{event_key}/awards", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1232,7 +1256,7 @@ public class Event {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1263,18 +1287,19 @@ public class Event {
     /**
      * Gets a list of matches for the given team and event.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTeamEventMatchesResponse getTeamEventMatches(org.openapis.openapi.models.operations.GetTeamEventMatchesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTeamEventMatchesResponse getTeamEventMatches(org.openapis.openapi.models.operations.GetTeamEventMatchesRequest request, org.openapis.openapi.models.operations.GetTeamEventMatchesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeamEventMatchesPathParams.class, baseUrl, "/team/{team_key}/event/{event_key}/matches", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeamEventMatchesRequest.class, baseUrl, "/team/{team_key}/event/{event_key}/matches", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1283,7 +1308,7 @@ public class Event {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1314,18 +1339,19 @@ public class Event {
     /**
      * Gets a list of match keys for matches for the given team and event.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTeamEventMatchesKeysResponse getTeamEventMatchesKeys(org.openapis.openapi.models.operations.GetTeamEventMatchesKeysRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTeamEventMatchesKeysResponse getTeamEventMatchesKeys(org.openapis.openapi.models.operations.GetTeamEventMatchesKeysRequest request, org.openapis.openapi.models.operations.GetTeamEventMatchesKeysSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeamEventMatchesKeysPathParams.class, baseUrl, "/team/{team_key}/event/{event_key}/matches/keys", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeamEventMatchesKeysRequest.class, baseUrl, "/team/{team_key}/event/{event_key}/matches/keys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1334,7 +1360,7 @@ public class Event {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1365,18 +1391,19 @@ public class Event {
     /**
      * Gets a short-form list of matches for the given team and event.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTeamEventMatchesSimpleResponse getTeamEventMatchesSimple(org.openapis.openapi.models.operations.GetTeamEventMatchesSimpleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTeamEventMatchesSimpleResponse getTeamEventMatchesSimple(org.openapis.openapi.models.operations.GetTeamEventMatchesSimpleRequest request, org.openapis.openapi.models.operations.GetTeamEventMatchesSimpleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeamEventMatchesSimplePathParams.class, baseUrl, "/team/{team_key}/event/{event_key}/matches/simple", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeamEventMatchesSimpleRequest.class, baseUrl, "/team/{team_key}/event/{event_key}/matches/simple", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1385,7 +1412,7 @@ public class Event {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1416,18 +1443,19 @@ public class Event {
     /**
      * Gets the competition rank and status of the team at the given event.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTeamEventStatusResponse getTeamEventStatus(org.openapis.openapi.models.operations.GetTeamEventStatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTeamEventStatusResponse getTeamEventStatus(org.openapis.openapi.models.operations.GetTeamEventStatusRequest request, org.openapis.openapi.models.operations.GetTeamEventStatusSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeamEventStatusPathParams.class, baseUrl, "/team/{team_key}/event/{event_key}/status", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeamEventStatusRequest.class, baseUrl, "/team/{team_key}/event/{event_key}/status", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1436,7 +1464,7 @@ public class Event {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1467,18 +1495,19 @@ public class Event {
     /**
      * Gets a list of all events this team has competed at.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTeamEventsResponse getTeamEvents(org.openapis.openapi.models.operations.GetTeamEventsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTeamEventsResponse getTeamEvents(org.openapis.openapi.models.operations.GetTeamEventsRequest request, org.openapis.openapi.models.operations.GetTeamEventsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeamEventsPathParams.class, baseUrl, "/team/{team_key}/events", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeamEventsRequest.class, baseUrl, "/team/{team_key}/events", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1487,7 +1516,7 @@ public class Event {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1518,18 +1547,19 @@ public class Event {
     /**
      * Gets a list of events this team has competed at in the given year.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTeamEventsByYearResponse getTeamEventsByYear(org.openapis.openapi.models.operations.GetTeamEventsByYearRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTeamEventsByYearResponse getTeamEventsByYear(org.openapis.openapi.models.operations.GetTeamEventsByYearRequest request, org.openapis.openapi.models.operations.GetTeamEventsByYearSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeamEventsByYearPathParams.class, baseUrl, "/team/{team_key}/events/{year}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeamEventsByYearRequest.class, baseUrl, "/team/{team_key}/events/{year}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1538,7 +1568,7 @@ public class Event {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1569,18 +1599,19 @@ public class Event {
     /**
      * Gets a list of the event keys for events this team has competed at in the given year.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTeamEventsByYearKeysResponse getTeamEventsByYearKeys(org.openapis.openapi.models.operations.GetTeamEventsByYearKeysRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTeamEventsByYearKeysResponse getTeamEventsByYearKeys(org.openapis.openapi.models.operations.GetTeamEventsByYearKeysRequest request, org.openapis.openapi.models.operations.GetTeamEventsByYearKeysSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeamEventsByYearKeysPathParams.class, baseUrl, "/team/{team_key}/events/{year}/keys", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeamEventsByYearKeysRequest.class, baseUrl, "/team/{team_key}/events/{year}/keys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1589,7 +1620,7 @@ public class Event {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1620,18 +1651,19 @@ public class Event {
     /**
      * Gets a short-form list of events this team has competed at in the given year.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTeamEventsByYearSimpleResponse getTeamEventsByYearSimple(org.openapis.openapi.models.operations.GetTeamEventsByYearSimpleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTeamEventsByYearSimpleResponse getTeamEventsByYearSimple(org.openapis.openapi.models.operations.GetTeamEventsByYearSimpleRequest request, org.openapis.openapi.models.operations.GetTeamEventsByYearSimpleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeamEventsByYearSimplePathParams.class, baseUrl, "/team/{team_key}/events/{year}/simple", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeamEventsByYearSimpleRequest.class, baseUrl, "/team/{team_key}/events/{year}/simple", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1640,7 +1672,7 @@ public class Event {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1671,18 +1703,19 @@ public class Event {
     /**
      * Gets a list of the event keys for all events this team has competed at.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTeamEventsKeysResponse getTeamEventsKeys(org.openapis.openapi.models.operations.GetTeamEventsKeysRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTeamEventsKeysResponse getTeamEventsKeys(org.openapis.openapi.models.operations.GetTeamEventsKeysRequest request, org.openapis.openapi.models.operations.GetTeamEventsKeysSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeamEventsKeysPathParams.class, baseUrl, "/team/{team_key}/events/keys", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeamEventsKeysRequest.class, baseUrl, "/team/{team_key}/events/keys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1691,7 +1724,7 @@ public class Event {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1722,18 +1755,19 @@ public class Event {
     /**
      * Gets a short-form list of all events this team has competed at.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTeamEventsSimpleResponse getTeamEventsSimple(org.openapis.openapi.models.operations.GetTeamEventsSimpleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTeamEventsSimpleResponse getTeamEventsSimple(org.openapis.openapi.models.operations.GetTeamEventsSimpleRequest request, org.openapis.openapi.models.operations.GetTeamEventsSimpleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeamEventsSimplePathParams.class, baseUrl, "/team/{team_key}/events/simple", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeamEventsSimpleRequest.class, baseUrl, "/team/{team_key}/events/simple", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1742,7 +1776,7 @@ public class Event {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1773,18 +1807,19 @@ public class Event {
     /**
      * Gets a key-value list of the event statuses for events this team has competed at in the given year.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTeamEventsStatusesByYearResponse getTeamEventsStatusesByYear(org.openapis.openapi.models.operations.GetTeamEventsStatusesByYearRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTeamEventsStatusesByYearResponse getTeamEventsStatusesByYear(org.openapis.openapi.models.operations.GetTeamEventsStatusesByYearRequest request, org.openapis.openapi.models.operations.GetTeamEventsStatusesByYearSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeamEventsStatusesByYearPathParams.class, baseUrl, "/team/{team_key}/events/{year}/statuses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeamEventsStatusesByYearRequest.class, baseUrl, "/team/{team_key}/events/{year}/statuses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1793,7 +1828,7 @@ public class Event {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

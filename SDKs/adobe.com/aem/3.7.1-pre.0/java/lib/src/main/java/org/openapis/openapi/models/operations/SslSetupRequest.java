@@ -7,17 +7,52 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SslSetupRequest {
-    
-    public SslSetupQueryParams queryParams;
-    public SslSetupRequest withQueryParams(SslSetupQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public SslSetupRequestBody requestBody;
+    public SslSetupRequest withRequestBody(SslSetupRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public SslSetupRequestBody request;
-    public SslSetupRequest withRequest(SslSetupRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=httpsHostname")
+    public String httpsHostname;
+    public SslSetupRequest withHttpsHostname(String httpsHostname) {
+        this.httpsHostname = httpsHostname;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=httpsPort")
+    public String httpsPort;
+    public SslSetupRequest withHttpsPort(String httpsPort) {
+        this.httpsPort = httpsPort;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keystorePassword")
+    public String keystorePassword;
+    public SslSetupRequest withKeystorePassword(String keystorePassword) {
+        this.keystorePassword = keystorePassword;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keystorePasswordConfirm")
+    public String keystorePasswordConfirm;
+    public SslSetupRequest withKeystorePasswordConfirm(String keystorePasswordConfirm) {
+        this.keystorePasswordConfirm = keystorePasswordConfirm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=truststorePassword")
+    public String truststorePassword;
+    public SslSetupRequest withTruststorePassword(String truststorePassword) {
+        this.truststorePassword = truststorePassword;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=truststorePasswordConfirm")
+    public String truststorePasswordConfirm;
+    public SslSetupRequest withTruststorePasswordConfirm(String truststorePasswordConfirm) {
+        this.truststorePasswordConfirm = truststorePasswordConfirm;
         return this;
     }
     

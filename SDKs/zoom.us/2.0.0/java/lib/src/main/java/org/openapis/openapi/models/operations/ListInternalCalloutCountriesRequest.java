@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListInternalCalloutCountriesRequest {
-    
-    public ListInternalCalloutCountriesPathParams pathParams;
-    public ListInternalCalloutCountriesRequest withPathParams(ListInternalCalloutCountriesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the account. To list Call-out enabled countries to a sub account, provide the account ID of the sub account in the `accountId` path parameter. To list Call-out enabled countries of a sub account, provide the account ID of the sub account in the `accountId` path parameter. To list Call-out enabled countries of a master account, provide `me` as the value of the `accountId` path parameter.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public ListInternalCalloutCountriesRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     

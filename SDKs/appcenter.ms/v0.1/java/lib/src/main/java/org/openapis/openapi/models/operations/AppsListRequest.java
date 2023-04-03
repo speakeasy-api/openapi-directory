@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsListRequest {
-    
-    public AppsListQueryParams queryParams;
-    public AppsListRequest withQueryParams(AppsListQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public AppsListSecurity security;
-    public AppsListRequest withSecurity(AppsListSecurity security) {
-        this.security = security;
+    /**
+     * The name of the attribute by which to order the response by. By default, apps are in order of creation. All results are ordered in ascending order.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$orderBy")
+    public AppsListDollarOrderByEnum dollarOrderBy;
+    public AppsListRequest withDollarOrderBy(AppsListDollarOrderByEnum dollarOrderBy) {
+        this.dollarOrderBy = dollarOrderBy;
         return this;
     }
     

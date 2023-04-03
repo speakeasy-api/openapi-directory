@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTransactionRequest {
-    
-    public GetTransactionPathParams pathParams;
-    public GetTransactionRequest withPathParams(GetTransactionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetTransactionSecurity security;
-    public GetTransactionRequest withSecurity(GetTransactionSecurity security) {
-        this.security = security;
+    /**
+     * Unique number (across all Products of a Vendor) that identifies the Transaction
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transactionNumber")
+    public String transactionNumber;
+    public GetTransactionRequest withTransactionNumber(String transactionNumber) {
+        this.transactionNumber = transactionNumber;
         return this;
     }
     

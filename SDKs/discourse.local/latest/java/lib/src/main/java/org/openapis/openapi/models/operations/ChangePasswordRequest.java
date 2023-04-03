@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangePasswordRequest {
-    
-    public ChangePasswordPathParams pathParams;
-    public ChangePasswordRequest withPathParams(ChangePasswordPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ChangePasswordRequestBody requestBody;
+    public ChangePasswordRequest withRequestBody(ChangePasswordRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ChangePasswordRequestBody request;
-    public ChangePasswordRequest withRequest(ChangePasswordRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=token")
+    public String token;
+    public ChangePasswordRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

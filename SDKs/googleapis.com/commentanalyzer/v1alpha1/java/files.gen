@@ -31,11 +31,9 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/CommentanalyzerCommentsAnalyzeSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/CommentanalyzerCommentsAnalyzeQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/CommentanalyzerCommentsAnalyzeRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CommentanalyzerCommentsAnalyzeResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/CommentanalyzerCommentsSuggestscoreSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/CommentanalyzerCommentsSuggestscoreQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/CommentanalyzerCommentsSuggestscoreRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CommentanalyzerCommentsSuggestscoreResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/AnalyzeCommentResponse.java
@@ -43,6 +41,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/AttributeScores.java
 lib/src/main/java/org/openapis/openapi/models/shared/ScoreTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Score.java
 lib/src/main/java/org/openapis/openapi/models/shared/SpanScore.java
+lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/AnalyzeCommentRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/AttributeParametersScoreTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/AttributeParameters.java
@@ -50,10 +49,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/Context.java
 lib/src/main/java/org/openapis/openapi/models/shared/TextEntryTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/TextEntry.java
 lib/src/main/java/org/openapis/openapi/models/shared/ArticleAndParentComment.java
-lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2c.java
 lib/src/main/java/org/openapis/openapi/models/shared/SuggestCommentScoreResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/SuggestCommentScoreRequest.java
 USAGE.md

@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFactSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeXFungeneratorsAPISecret xFungeneratorsApiSecret;
-    public GetFactSecurity withXFungeneratorsApiSecret(org.openapis.openapi.models.shared.SchemeXFungeneratorsAPISecret xFungeneratorsApiSecret) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Fungenerators-Api-Secret")
+    public String xFungeneratorsApiSecret;
+    public GetFactSecurity withXFungeneratorsApiSecret(String xFungeneratorsApiSecret) {
         this.xFungeneratorsApiSecret = xFungeneratorsApiSecret;
         return this;
     }

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IpamAggregatesPartialUpdateRequest {
-    
-    public IpamAggregatesPartialUpdatePathParams pathParams;
-    public IpamAggregatesPartialUpdateRequest withPathParams(IpamAggregatesPartialUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.WritableAggregateInput writableAggregateInput;
+    public IpamAggregatesPartialUpdateRequest withWritableAggregateInput(org.openapis.openapi.models.shared.WritableAggregateInput writableAggregateInput) {
+        this.writableAggregateInput = writableAggregateInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WritableAggregateInput request;
-    public IpamAggregatesPartialUpdateRequest withRequest(org.openapis.openapi.models.shared.WritableAggregateInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this aggregate.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public IpamAggregatesPartialUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

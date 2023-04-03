@@ -7,10 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetChangelogsSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic")
-    public org.openapis.openapi.models.shared.SchemeAPIKey apiKey;
-    public GetChangelogsSecurity withApiKey(org.openapis.openapi.models.shared.SchemeAPIKey apiKey) {
-        this.apiKey = apiKey;
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic,name=password")
+    public String password;
+    public GetChangelogsSecurity withPassword(String password) {
+        this.password = password;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic,name=username")
+    public String username;
+    public GetChangelogsSecurity withUsername(String username) {
+        this.username = username;
         return this;
     }
     

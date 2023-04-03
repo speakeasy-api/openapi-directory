@@ -4,20 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopPointDisruptionByModeRequest {
-    
-    public StopPointDisruptionByModePathParams pathParams;
-    public StopPointDisruptionByModeRequest withPathParams(StopPointDisruptionByModePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeRouteBlockedStops")
+    public Boolean includeRouteBlockedStops;
+    public StopPointDisruptionByModeRequest withIncludeRouteBlockedStops(Boolean includeRouteBlockedStops) {
+        this.includeRouteBlockedStops = includeRouteBlockedStops;
         return this;
     }
     
-    
-    public StopPointDisruptionByModeQueryParams queryParams;
-    public StopPointDisruptionByModeRequest withQueryParams(StopPointDisruptionByModeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A comma-seperated list of modes e.g. tube,dlr
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=modes")
+    public String[] modes;
+    public StopPointDisruptionByModeRequest withModes(String[] modes) {
+        this.modes = modes;
         return this;
     }
     

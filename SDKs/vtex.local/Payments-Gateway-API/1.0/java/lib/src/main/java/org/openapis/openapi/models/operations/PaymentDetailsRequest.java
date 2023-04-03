@@ -4,20 +4,60 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PaymentDetailsRequest {
-    
-    public PaymentDetailsPathParams pathParams;
-    public PaymentDetailsRequest withPathParams(PaymentDetailsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Media type(s) that is/are acceptable for the response. Default value for payment provider protocol is application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public PaymentDetailsRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * The Media type of the body of the request.  Default value for payment provider protocol is application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public PaymentDetailsRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public PaymentDetailsHeaders headers;
-    public PaymentDetailsRequest withHeaders(PaymentDetailsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The AppKey configured by the merchant (optional configuration)
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-PROVIDER-API-AppKey")
+    public String xPROVIDERAPIAppKey;
+    public PaymentDetailsRequest withXPROVIDERAPIAppKey(String xPROVIDERAPIAppKey) {
+        this.xPROVIDERAPIAppKey = xPROVIDERAPIAppKey;
+        return this;
+    }
+    
+    /**
+     * The AppToken configured by the merchant (optional configuration)
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-PROVIDER-API-AppToken")
+    public String xPROVIDERAPIAppToken;
+    public PaymentDetailsRequest withXPROVIDERAPIAppToken(String xPROVIDERAPIAppToken) {
+        this.xPROVIDERAPIAppToken = xPROVIDERAPIAppToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=paymentId")
+    public String paymentId;
+    public PaymentDetailsRequest withPaymentId(String paymentId) {
+        this.paymentId = paymentId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transactionId")
+    public String transactionId;
+    public PaymentDetailsRequest withTransactionId(String transactionId) {
+        this.transactionId = transactionId;
         return this;
     }
     

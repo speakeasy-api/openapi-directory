@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMessageDataRequest {
+    /**
+     * ID of Queue Message for which data is to be returned
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=queueMessageId")
+    public String queueMessageId;
+    public GetMessageDataRequest withQueueMessageId(String queueMessageId) {
+        this.queueMessageId = queueMessageId;
+        return this;
+    }
     
-    public GetMessageDataPathParams pathParams;
-    public GetMessageDataRequest withPathParams(GetMessageDataPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Name of Queue
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=queueName")
+    public String queueName;
+    public GetMessageDataRequest withQueueName(String queueName) {
+        this.queueName = queueName;
         return this;
     }
     

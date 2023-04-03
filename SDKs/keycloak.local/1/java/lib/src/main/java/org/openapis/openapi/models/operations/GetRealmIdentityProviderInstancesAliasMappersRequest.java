@@ -4,13 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRealmIdentityProviderInstancesAliasMappersRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=alias")
+    public String alias;
+    public GetRealmIdentityProviderInstancesAliasMappersRequest withAlias(String alias) {
+        this.alias = alias;
+        return this;
+    }
     
-    public GetRealmIdentityProviderInstancesAliasMappersPathParams pathParams;
-    public GetRealmIdentityProviderInstancesAliasMappersRequest withPathParams(GetRealmIdentityProviderInstancesAliasMappersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public GetRealmIdentityProviderInstancesAliasMappersRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

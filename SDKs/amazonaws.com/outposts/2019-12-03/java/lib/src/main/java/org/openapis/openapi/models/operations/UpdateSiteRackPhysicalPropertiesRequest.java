@@ -7,24 +7,69 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSiteRackPhysicalPropertiesRequest {
-    
-    public UpdateSiteRackPhysicalPropertiesPathParams pathParams;
-    public UpdateSiteRackPhysicalPropertiesRequest withPathParams(UpdateSiteRackPhysicalPropertiesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateSiteRackPhysicalPropertiesHeaders headers;
-    public UpdateSiteRackPhysicalPropertiesRequest withHeaders(UpdateSiteRackPhysicalPropertiesHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateSiteRackPhysicalPropertiesRequestBody request;
-    public UpdateSiteRackPhysicalPropertiesRequest withRequest(UpdateSiteRackPhysicalPropertiesRequestBody request) {
-        this.request = request;
+    public UpdateSiteRackPhysicalPropertiesRequestBody requestBody;
+    public UpdateSiteRackPhysicalPropertiesRequest withRequestBody(UpdateSiteRackPhysicalPropertiesRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     *  The ID or the Amazon Resource Name (ARN) of the site. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=SiteId")
+    public String siteId;
+    public UpdateSiteRackPhysicalPropertiesRequest withSiteId(String siteId) {
+        this.siteId = siteId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public UpdateSiteRackPhysicalPropertiesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public UpdateSiteRackPhysicalPropertiesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public UpdateSiteRackPhysicalPropertiesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public UpdateSiteRackPhysicalPropertiesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public UpdateSiteRackPhysicalPropertiesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public UpdateSiteRackPhysicalPropertiesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public UpdateSiteRackPhysicalPropertiesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

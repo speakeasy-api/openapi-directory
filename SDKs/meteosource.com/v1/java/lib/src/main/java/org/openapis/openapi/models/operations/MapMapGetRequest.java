@@ -4,20 +4,132 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MapMapGetRequest {
-    
-    public MapMapGetQueryParams queryParams;
-    public MapMapGetRequest withQueryParams(MapMapGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * There are two ways to specify date and time for your map:
+     * 
+     * 1. Datetime in `YYYY-MM-DDTHH:MM` format and `UTC` timezone, e.g. `2021-08-24T12:00`
+     * 2. Offset from current time in `[+-]&lt;minutes|hours|days&gt;` format, e.g. `+10minutes`, `-2hours` or `+1days`
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=datetime")
+    public String datetime;
+    public MapMapGetRequest withDatetime(String datetime) {
+        this.datetime = datetime;
         return this;
     }
     
+    /**
+     * Your unique API key. You can either specify it in this parameter, or set it in `X-API-Key` header.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public MapMapGetRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
     
-    public MapMapGetSecurity security;
-    public MapMapGetRequest withSecurity(MapMapGetSecurity security) {
-        this.security = security;
+    /**
+     * Maximal latitude in format 12N, 12.3N, 12.3, or 13S, 13.2S, -13.2.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_lat")
+    public String maxLat;
+    public MapMapGetRequest withMaxLat(String maxLat) {
+        this.maxLat = maxLat;
+        return this;
+    }
+    
+    /**
+     * Maximal longitude in format 12E, 12.3E, 12.3, or 13W, 13.2W, -13.2
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_lon")
+    public String maxLon;
+    public MapMapGetRequest withMaxLon(String maxLon) {
+        this.maxLon = maxLon;
+        return this;
+    }
+    
+    /**
+     * Minimal latitude in format 12N, 12.3N, 12.3, or 13S, 13.2S, -13.2
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_lat")
+    public String minLat;
+    public MapMapGetRequest withMinLat(String minLat) {
+        this.minLat = minLat;
+        return this;
+    }
+    
+    /**
+     * Minimal longitude in format 12E, 12.3E, 12.3, or 13W, 13.2W, -13.2
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_lon")
+    public String minLon;
+    public MapMapGetRequest withMinLon(String minLon) {
+        this.minLon = minLon;
+        return this;
+    }
+    
+    /**
+     * The X coordinate of Google Maps tile
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tile_x")
+    public Long tileX;
+    public MapMapGetRequest withTileX(Long tileX) {
+        this.tileX = tileX;
+        return this;
+    }
+    
+    /**
+     * The Y coordinate of Google Maps tile
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tile_y")
+    public Long tileY;
+    public MapMapGetRequest withTileY(Long tileY) {
+        this.tileY = tileY;
+        return this;
+    }
+    
+    /**
+     * The zoom level of Google Maps tile
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tile_zoom")
+    public Long tileZoom;
+    public MapMapGetRequest withTileZoom(Long tileZoom) {
+        this.tileZoom = tileZoom;
+        return this;
+    }
+    
+    /**
+     * Name of the variable for your map. Available values are:
+     * 
+     * * `temperature`: Temperature 2 metres above ground
+     * * `feels_like_temperature`: Feels like temperature
+     * * `clouds`: Percentage of sky covered by clouds
+     * * `precipitation`: Total precipitation amount accumulated since last hour
+     * * `wind_speed`: Wind speed 10 metres above the ground
+     * * `wind_gust`: Wind gust speed
+     * * `pressure`: Atmospheric pressure at mean sea level
+     * * `humidity`: Relative humidity
+     * * `wave_height`: Wave height
+     * * `wave_period`: Wave period
+     * * `sea_temperature`: Sea temperature (available only for +-24 hours)
+     * * `air_quality`: Air quality index
+     * * `ozone_surface`: Ozone at surface level
+     * * `ozone_total`: Total column ozone
+     * * `no2`: Nitrogen dioxide at surface level
+     * * `pm2.5`: Particulate matter d &lt; 2.5 \u00b5m (PM2.5)
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=variable")
+    public String variable;
+    public MapMapGetRequest withVariable(String variable) {
+        this.variable = variable;
         return this;
     }
     

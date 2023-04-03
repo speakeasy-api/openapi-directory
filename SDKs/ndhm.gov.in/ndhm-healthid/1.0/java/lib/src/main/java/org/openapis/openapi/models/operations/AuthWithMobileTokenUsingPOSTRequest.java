@@ -7,10 +7,10 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AuthWithMobileTokenUsingPOSTRequest {
-    
-    public AuthWithMobileTokenUsingPOSTHeaders headers;
-    public AuthWithMobileTokenUsingPOSTRequest withHeaders(AuthWithMobileTokenUsingPOSTHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public AuthWithMobileTokenUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
@@ -18,16 +18,9 @@ public class AuthWithMobileTokenUsingPOSTRequest {
      * authRequest
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AuthWithMobileTxnAndUserData request;
-    public AuthWithMobileTokenUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.AuthWithMobileTxnAndUserData request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public AuthWithMobileTokenUsingPOSTSecurity security;
-    public AuthWithMobileTokenUsingPOSTRequest withSecurity(AuthWithMobileTokenUsingPOSTSecurity security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.AuthWithMobileTxnAndUserData authWithMobileTxnAndUserData;
+    public AuthWithMobileTokenUsingPOSTRequest withAuthWithMobileTxnAndUserData(org.openapis.openapi.models.shared.AuthWithMobileTxnAndUserData authWithMobileTxnAndUserData) {
+        this.authWithMobileTxnAndUserData = authWithMobileTxnAndUserData;
         return this;
     }
     

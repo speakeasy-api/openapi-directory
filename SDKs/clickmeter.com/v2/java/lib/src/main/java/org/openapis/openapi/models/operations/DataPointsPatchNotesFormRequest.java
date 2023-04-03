@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DataPointsPatchNotesFormRequest {
-    
-    public DataPointsPatchNotesFormPathParams pathParams;
-    public DataPointsPatchNotesFormRequest withPathParams(DataPointsPatchNotesFormPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Patch requests
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.ApiCoreRequestsGenericTextPatch request;
-    public DataPointsPatchNotesFormRequest withRequest(org.openapis.openapi.models.shared.ApiCoreRequestsGenericTextPatch request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ApiCoreRequestsGenericTextPatch apiCoreRequestsGenericTextPatch;
+    public DataPointsPatchNotesFormRequest withApiCoreRequestsGenericTextPatch(org.openapis.openapi.models.shared.ApiCoreRequestsGenericTextPatch apiCoreRequestsGenericTextPatch) {
+        this.apiCoreRequestsGenericTextPatch = apiCoreRequestsGenericTextPatch;
+        return this;
+    }
+    
+    /**
+     * Id of the datapoint
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DataPointsPatchNotesFormRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

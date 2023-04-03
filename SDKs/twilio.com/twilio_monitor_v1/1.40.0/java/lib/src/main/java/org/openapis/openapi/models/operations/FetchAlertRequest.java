@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchAlertRequest {
-    
-    public FetchAlertPathParams pathParams;
-    public FetchAlertRequest withPathParams(FetchAlertPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchAlertSecurity security;
-    public FetchAlertRequest withSecurity(FetchAlertSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchAlertRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Alert resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchAlertRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TranslateStickerRequest {
-    
-    public TranslateStickerQueryParams queryParams;
-    public TranslateStickerRequest withQueryParams(TranslateStickerQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Search term.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=s")
+    public String s;
+    public TranslateStickerRequest withS(String s) {
+        this.s = s;
         return this;
     }
     

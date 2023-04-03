@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRegistrierkasseRequest {
-    
-    public GetRegistrierkassePathParams pathParams;
-    public GetRegistrierkasseRequest withPathParams(GetRegistrierkassePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The `_uuid` of a particular `Registrierkasse` to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=registrierkasseUuid")
+    public String registrierkasseUuid;
+    public GetRegistrierkasseRequest withRegistrierkasseUuid(String registrierkasseUuid) {
+        this.registrierkasseUuid = registrierkasseUuid;
         return this;
     }
     

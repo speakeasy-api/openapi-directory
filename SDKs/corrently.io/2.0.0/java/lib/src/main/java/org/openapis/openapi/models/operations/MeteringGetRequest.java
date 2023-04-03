@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MeteringGetRequest {
-    
-    public MeteringGetQueryParams queryParams;
-    public MeteringGetRequest withQueryParams(MeteringGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Account/Address (Stromkonto) to retrieve reading for.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=account")
+    public String account;
+    public MeteringGetRequest withAccount(String account) {
+        this.account = account;
         return this;
     }
     

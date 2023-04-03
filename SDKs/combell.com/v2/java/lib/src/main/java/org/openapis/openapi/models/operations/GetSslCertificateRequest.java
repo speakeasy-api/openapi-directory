@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSslCertificateRequest {
-    
-    public GetSslCertificatePathParams pathParams;
-    public GetSslCertificateRequest withPathParams(GetSslCertificatePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sha1Fingerprint")
+    public String sha1FingerprintPathParameter;
+    public GetSslCertificateRequest withSha1FingerprintPathParameter(String sha1FingerprintPathParameter) {
+        this.sha1FingerprintPathParameter = sha1FingerprintPathParameter;
         return this;
     }
     
-    
-    public GetSslCertificateQueryParams queryParams;
-    public GetSslCertificateRequest withQueryParams(GetSslCertificateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The SHA-1 fingerprint of the certificate.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sha1_fingerprint")
+    public String sha1FingerprintQueryParameter;
+    public GetSslCertificateRequest withSha1FingerprintQueryParameter(String sha1FingerprintQueryParameter) {
+        this.sha1FingerprintQueryParameter = sha1FingerprintQueryParameter;
         return this;
     }
     

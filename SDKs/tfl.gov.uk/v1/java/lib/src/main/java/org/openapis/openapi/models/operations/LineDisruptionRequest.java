@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LineDisruptionRequest {
-    
-    public LineDisruptionPathParams pathParams;
-    public LineDisruptionRequest withPathParams(LineDisruptionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A comma-separated list of line ids e.g. victoria,circle,N133. Max. approx. 20 ids.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ids")
+    public String[] ids;
+    public LineDisruptionRequest withIds(String[] ids) {
+        this.ids = ids;
         return this;
     }
     

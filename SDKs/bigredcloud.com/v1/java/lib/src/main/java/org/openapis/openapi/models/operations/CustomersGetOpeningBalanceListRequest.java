@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CustomersGetOpeningBalanceListRequest {
-    
-    public CustomersGetOpeningBalanceListPathParams pathParams;
-    public CustomersGetOpeningBalanceListRequest withPathParams(CustomersGetOpeningBalanceListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of Customer to return opening balances transaction.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=itemId")
+    public Long itemId;
+    public CustomersGetOpeningBalanceListRequest withItemId(Long itemId) {
+        this.itemId = itemId;
         return this;
     }
     

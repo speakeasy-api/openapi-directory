@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserCheckFollowingRequest {
+    /**
+     * username of followed user
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=target")
+    public String target;
+    public UserCheckFollowingRequest withTarget(String target) {
+        this.target = target;
+        return this;
+    }
     
-    public UserCheckFollowingPathParams pathParams;
-    public UserCheckFollowingRequest withPathParams(UserCheckFollowingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * username of following user
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public UserCheckFollowingRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

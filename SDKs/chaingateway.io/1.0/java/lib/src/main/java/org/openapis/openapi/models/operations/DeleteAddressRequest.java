@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAddressRequest {
-    
-    public DeleteAddressHeaders headers;
-    public DeleteAddressRequest withHeaders(DeleteAddressHeaders headers) {
-        this.headers = headers;
+    /**
+     * API Key
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public DeleteAddressRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DeleteAddressRequest request;
-    public DeleteAddressRequest withRequest(org.openapis.openapi.models.shared.DeleteAddressRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.DeleteAddressRequest deleteAddressRequest;
+    public DeleteAddressRequest withDeleteAddressRequest(org.openapis.openapi.models.shared.DeleteAddressRequest deleteAddressRequest) {
+        this.deleteAddressRequest = deleteAddressRequest;
         return this;
     }
     

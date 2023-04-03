@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ONDStatusRequest {
-    
-    public ONDStatusQueryParams queryParams;
-    public ONDStatusRequest withQueryParams(ONDStatusQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Mandatory http header:  application/xml or application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public ONDStatusRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public ONDStatusHeaders headers;
-    public ONDStatusRequest withHeaders(ONDStatusHeaders headers) {
-        this.headers = headers;
+    /**
+     * Carrier for which the OND will be retrieved (e.g. 'LH')
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=catalogues")
+    public String catalogues;
+    public ONDStatusRequest withCatalogues(String catalogues) {
+        this.catalogues = catalogues;
         return this;
     }
     
+    /**
+     * Enter if newly added routes should be returned in the response. (Acceptable values are: "", "true", "false")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=new-routes")
+    public String newRoutes;
+    public ONDStatusRequest withNewRoutes(String newRoutes) {
+        this.newRoutes = newRoutes;
+        return this;
+    }
     
-    public ONDStatusSecurity security;
-    public ONDStatusRequest withSecurity(ONDStatusSecurity security) {
-        this.security = security;
+    /**
+     * Enter if old (deleted) routes should be returned in the response. (Acceptable values are: "", "true", "false")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=old-routes")
+    public String oldRoutes;
+    public ONDStatusRequest withOldRoutes(String oldRoutes) {
+        this.oldRoutes = oldRoutes;
         return this;
     }
     

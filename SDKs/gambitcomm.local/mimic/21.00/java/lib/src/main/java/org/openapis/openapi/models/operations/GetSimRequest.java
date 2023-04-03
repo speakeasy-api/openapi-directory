@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSimRequest {
-    
-    public GetSimPathParams pathParams;
-    public GetSimRequest withPathParams(GetSimPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to return the first simulation name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public GetSimRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

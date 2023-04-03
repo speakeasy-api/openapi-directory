@@ -4,13 +4,17 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveFineTuneRequest {
-    
-    public RetrieveFineTunePathParams pathParams;
-    public RetrieveFineTuneRequest withPathParams(RetrieveFineTunePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the fine-tune job
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fine_tune_id")
+    public String fineTuneId;
+    public RetrieveFineTuneRequest withFineTuneId(String fineTuneId) {
+        this.fineTuneId = fineTuneId;
         return this;
     }
     

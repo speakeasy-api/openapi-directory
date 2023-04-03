@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutRealmRolesByIdRoleIdRequest {
-    
-    public PutRealmRolesByIdRoleIdPathParams pathParams;
-    public PutRealmRolesByIdRoleIdRequest withPathParams(PutRealmRolesByIdRoleIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.RoleRepresentation roleRepresentation;
+    public PutRealmRolesByIdRoleIdRequest withRoleRepresentation(org.openapis.openapi.models.shared.RoleRepresentation roleRepresentation) {
+        this.roleRepresentation = roleRepresentation;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RoleRepresentation request;
-    public PutRealmRolesByIdRoleIdRequest withRequest(org.openapis.openapi.models.shared.RoleRepresentation request) {
-        this.request = request;
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PutRealmRolesByIdRoleIdRequest withRealm(String realm) {
+        this.realm = realm;
+        return this;
+    }
+    
+    /**
+     * id of role
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=role-id")
+    public String roleId;
+    public PutRealmRolesByIdRoleIdRequest withRoleId(String roleId) {
+        this.roleId = roleId;
         return this;
     }
     

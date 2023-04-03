@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostFilesRequest {
-    
-    public PostFilesQueryParams queryParams;
-    public PostFilesRequest withQueryParams(PostFilesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public PostFilesRequestBody requestBody;
+    public PostFilesRequest withRequestBody(PostFilesRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PostFilesRequestBody request;
-    public PostFilesRequest withRequest(PostFilesRequestBody request) {
-        this.request = request;
+    /**
+     * A comma separated list of hashes to return in order to verify file integrity.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hash")
+    public String hash;
+    public PostFilesRequest withHash(String hash) {
+        this.hash = hash;
+        return this;
+    }
+    
+    /**
+     * If true, this file will be protected as a private file and require the generation of a signed URL in order to download using the Download File API. The default is false.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isPrivate")
+    public Boolean isPrivate;
+    public PostFilesRequest withIsPrivate(Boolean isPrivate) {
+        this.isPrivate = isPrivate;
         return this;
     }
     

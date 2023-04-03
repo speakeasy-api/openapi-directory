@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkWebhooksPayloadTemplatesRequest {
-    
-    public GetNetworkWebhooksPayloadTemplatesPathParams pathParams;
-    public GetNetworkWebhooksPayloadTemplatesRequest withPathParams(GetNetworkWebhooksPayloadTemplatesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkWebhooksPayloadTemplatesRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

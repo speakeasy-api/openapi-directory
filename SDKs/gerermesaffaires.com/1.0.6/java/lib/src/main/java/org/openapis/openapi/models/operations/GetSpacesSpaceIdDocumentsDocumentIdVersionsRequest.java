@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpacesSpaceIdDocumentsDocumentIdVersionsRequest {
+    /**
+     * Id of the document
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=documentId")
+    public String documentId;
+    public GetSpacesSpaceIdDocumentsDocumentIdVersionsRequest withDocumentId(String documentId) {
+        this.documentId = documentId;
+        return this;
+    }
     
-    public GetSpacesSpaceIdDocumentsDocumentIdVersionsPathParams pathParams;
-    public GetSpacesSpaceIdDocumentsDocumentIdVersionsRequest withPathParams(GetSpacesSpaceIdDocumentsDocumentIdVersionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public GetSpacesSpaceIdDocumentsDocumentIdVersionsRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

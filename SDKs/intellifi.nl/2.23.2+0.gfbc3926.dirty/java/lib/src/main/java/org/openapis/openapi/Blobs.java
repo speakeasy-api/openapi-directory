@@ -44,7 +44,7 @@ public class Blobs {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddBlobResponse addBlob(org.openapis.openapi.models.operations.AddBlobRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddBlobResponse addBlob(org.openapis.openapi.models.shared.BlobInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/blobs");
         
@@ -90,7 +90,7 @@ public class Blobs {
      */
     public org.openapis.openapi.models.operations.DeleteBlobResponse deleteBlob(org.openapis.openapi.models.operations.DeleteBlobRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteBlobPathParams.class, baseUrl, "/blobs/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteBlobRequest.class, baseUrl, "/blobs/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -129,7 +129,7 @@ public class Blobs {
      */
     public org.openapis.openapi.models.operations.GetBlobByIdResponse getBlobById(org.openapis.openapi.models.operations.GetBlobByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBlobByIdPathParams.class, baseUrl, "/blobs/{id}/download/{filename}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBlobByIdRequest.class, baseUrl, "/blobs/{id}/download/{filename}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -167,7 +167,7 @@ public class Blobs {
      */
     public org.openapis.openapi.models.operations.GetBlobMetadataByIdResponse getBlobMetadataById(org.openapis.openapi.models.operations.GetBlobMetadataByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBlobMetadataByIdPathParams.class, baseUrl, "/blobs/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBlobMetadataByIdRequest.class, baseUrl, "/blobs/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -212,7 +212,7 @@ public class Blobs {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBlobsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBlobsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -251,12 +251,12 @@ public class Blobs {
      */
     public org.openapis.openapi.models.operations.UploadBlobByIdResponse uploadBlobById(org.openapis.openapi.models.operations.UploadBlobByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UploadBlobByIdPathParams.class, baseUrl, "/blobs/{id}/upload", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UploadBlobByIdRequest.class, baseUrl, "/blobs/{id}/upload", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         req.setBody(serializedRequestBody);
         
         

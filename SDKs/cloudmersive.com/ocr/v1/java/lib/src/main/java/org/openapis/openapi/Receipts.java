@@ -35,10 +35,11 @@ public class Receipts {
      * Convert a photo of a receipt into a CSV file containing structured information from the receipt
      * Leverage Deep Learning to automatically turn a photo of a receipt into a CSV file containing the structured information from the receipt.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReceiptsPhotoToCSVResponse receiptsPhotoToCSV(org.openapis.openapi.models.operations.ReceiptsPhotoToCSVRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReceiptsPhotoToCSVResponse receiptsPhotoToCSV(org.openapis.openapi.models.operations.ReceiptsPhotoToCSVRequestBody request, org.openapis.openapi.models.operations.ReceiptsPhotoToCSVSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/ocr/receipts/photo/to/csv");
         
@@ -52,7 +53,7 @@ public class Receipts {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

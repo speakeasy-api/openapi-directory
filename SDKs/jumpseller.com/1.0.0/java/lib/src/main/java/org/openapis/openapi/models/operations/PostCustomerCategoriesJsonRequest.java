@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCustomerCategoriesJsonRequest {
-    
-    public PostCustomerCategoriesJsonQueryParams queryParams;
-    public PostCustomerCategoriesJsonRequest withQueryParams(PostCustomerCategoriesJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * CustomerCategory parameters.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CustomerCategoryEdit request;
-    public PostCustomerCategoriesJsonRequest withRequest(org.openapis.openapi.models.shared.CustomerCategoryEdit request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CustomerCategoryEdit customerCategoryEdit;
+    public PostCustomerCategoriesJsonRequest withCustomerCategoryEdit(org.openapis.openapi.models.shared.CustomerCategoryEdit customerCategoryEdit) {
+        this.customerCategoryEdit = customerCategoryEdit;
+        return this;
+    }
+    
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public PostCustomerCategoriesJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
+        return this;
+    }
+    
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public PostCustomerCategoriesJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

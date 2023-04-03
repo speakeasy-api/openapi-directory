@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEstimateRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=estimate_id")
+    public String estimateId;
+    public GetEstimateRequest withEstimateId(String estimateId) {
+        this.estimateId = estimateId;
+        return this;
+    }
     
-    public GetEstimatePathParams pathParams;
-    public GetEstimateRequest withPathParams(GetEstimatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public String projectId;
+    public GetEstimateRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
+    public String workgroupId;
+    public GetEstimateRequest withWorkgroupId(String workgroupId) {
+        this.workgroupId = workgroupId;
         return this;
     }
     

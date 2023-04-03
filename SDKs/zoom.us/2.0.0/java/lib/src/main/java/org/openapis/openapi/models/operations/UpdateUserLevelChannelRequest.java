@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateUserLevelChannelRequest {
-    
-    public UpdateUserLevelChannelPathParams pathParams;
-    public UpdateUserLevelChannelRequest withPathParams(UpdateUserLevelChannelPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateUserLevelChannelApplicationJSON request;
-    public UpdateUserLevelChannelRequest withRequest(UpdateUserLevelChannelApplicationJSON request) {
-        this.request = request;
+    public UpdateUserLevelChannelApplicationJSON requestBody;
+    public UpdateUserLevelChannelRequest withRequestBody(UpdateUserLevelChannelApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateUserLevelChannelSecurity security;
-    public UpdateUserLevelChannelRequest withSecurity(UpdateUserLevelChannelSecurity security) {
-        this.security = security;
+    /**
+     * Channel Id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelId")
+    public String channelId;
+    public UpdateUserLevelChannelRequest withChannelId(String channelId) {
+        this.channelId = channelId;
         return this;
     }
     

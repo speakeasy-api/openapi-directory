@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DistributionGroupsRemoveUserRequest {
-    
-    public DistributionGroupsRemoveUserPathParams pathParams;
-    public DistributionGroupsRemoveUserRequest withPathParams(DistributionGroupsRemoveUserPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The list of members to add
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public DistributionGroupsRemoveUserRequestBody request;
-    public DistributionGroupsRemoveUserRequest withRequest(DistributionGroupsRemoveUserRequestBody request) {
-        this.request = request;
+    public DistributionGroupsRemoveUserRequestBody requestBody;
+    public DistributionGroupsRemoveUserRequest withRequestBody(DistributionGroupsRemoveUserRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public DistributionGroupsRemoveUserRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public DistributionGroupsRemoveUserSecurity security;
-    public DistributionGroupsRemoveUserRequest withSecurity(DistributionGroupsRemoveUserSecurity security) {
-        this.security = security;
+    /**
+     * The name of the distribution group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=distribution_group_name")
+    public String distributionGroupName;
+    public DistributionGroupsRemoveUserRequest withDistributionGroupName(String distributionGroupName) {
+        this.distributionGroupName = distributionGroupName;
+        return this;
+    }
+    
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public DistributionGroupsRemoveUserRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

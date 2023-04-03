@@ -31,7 +31,6 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/FindFormByFormNameSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/FindFormByFormNamePathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/FindFormByFormNameRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/FindFormByFormName429ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/FindFormByFormName404ApplicationJSONErrors.java
@@ -40,7 +39,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/FindFormByFormName401Ap
 lib/src/main/java/org/openapis/openapi/models/operations/FindFormByFormName200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/FindFormByFormNameResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/FindFormsSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/FindFormsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/FindFormsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/FindForms429ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/FindForms401ApplicationJSON.java
@@ -50,7 +48,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/FormShowAttributesBenefitCa
 lib/src/main/java/org/openapis/openapi/models/shared/FormShowAttributesVersions.java
 lib/src/main/java/org/openapis/openapi/models/shared/FormShowAttributes.java
 lib/src/main/java/org/openapis/openapi/models/shared/FormShow.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeApikey.java
 lib/src/main/java/org/openapis/openapi/models/shared/FormsIndexAttributesBenefitCategories.java
 lib/src/main/java/org/openapis/openapi/models/shared/FormsIndexAttributes.java
 lib/src/main/java/org/openapis/openapi/models/shared/FormsIndex.java

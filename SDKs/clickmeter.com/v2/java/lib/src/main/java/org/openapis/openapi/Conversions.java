@@ -45,7 +45,7 @@ public class Conversions {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConversionsCountQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConversionsCountRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -102,7 +102,7 @@ public class Conversions {
      */
     public org.openapis.openapi.models.operations.ConversionsDeleteResponse conversionsDelete(org.openapis.openapi.models.operations.ConversionsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConversionsDeletePathParams.class, baseUrl, "/conversions/{conversionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConversionsDeleteRequest.class, baseUrl, "/conversions/{conversionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -165,7 +165,7 @@ public class Conversions {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConversionsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConversionsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -212,13 +212,13 @@ public class Conversions {
      */
     public org.openapis.openapi.models.operations.ConversionsGetDatapointsResponse conversionsGetDatapoints(org.openapis.openapi.models.operations.ConversionsGetDatapointsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConversionsGetDatapointsPathParams.class, baseUrl, "/conversions/{conversionId}/datapoints", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConversionsGetDatapointsRequest.class, baseUrl, "/conversions/{conversionId}/datapoints", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConversionsGetDatapointsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConversionsGetDatapointsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -265,13 +265,13 @@ public class Conversions {
      */
     public org.openapis.openapi.models.operations.ConversionsGetDatapointsCountResponse conversionsGetDatapointsCount(org.openapis.openapi.models.operations.ConversionsGetDatapointsCountRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConversionsGetDatapointsCountPathParams.class, baseUrl, "/conversions/{conversionId}/datapoints/count", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConversionsGetDatapointsCountRequest.class, baseUrl, "/conversions/{conversionId}/datapoints/count", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConversionsGetDatapointsCountQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConversionsGetDatapointsCountRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -328,13 +328,13 @@ public class Conversions {
      */
     public org.openapis.openapi.models.operations.ConversionsGetHitsResponse conversionsGetHits(org.openapis.openapi.models.operations.ConversionsGetHitsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConversionsGetHitsPathParams.class, baseUrl, "/conversions/{conversionId}/hits", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConversionsGetHitsRequest.class, baseUrl, "/conversions/{conversionId}/hits", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConversionsGetHitsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConversionsGetHitsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -387,7 +387,7 @@ public class Conversions {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConversionsGetStatisticsAllListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConversionsGetStatisticsAllListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -434,13 +434,13 @@ public class Conversions {
      */
     public org.openapis.openapi.models.operations.ConversionsGetStatisticsListResponse conversionsGetStatisticsList(org.openapis.openapi.models.operations.ConversionsGetStatisticsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConversionsGetStatisticsListPathParams.class, baseUrl, "/conversions/{conversionId}/aggregated/list", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConversionsGetStatisticsListRequest.class, baseUrl, "/conversions/{conversionId}/aggregated/list", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConversionsGetStatisticsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConversionsGetStatisticsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -487,13 +487,13 @@ public class Conversions {
      */
     public org.openapis.openapi.models.operations.ConversionsGetStatisticsSingleResponse conversionsGetStatisticsSingle(org.openapis.openapi.models.operations.ConversionsGetStatisticsSingleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConversionsGetStatisticsSinglePathParams.class, baseUrl, "/conversions/{conversionId}/aggregated", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConversionsGetStatisticsSingleRequest.class, baseUrl, "/conversions/{conversionId}/aggregated", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConversionsGetStatisticsSingleQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConversionsGetStatisticsSingleRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -540,12 +540,12 @@ public class Conversions {
      */
     public org.openapis.openapi.models.operations.ConversionsPatchNotesFormResponse conversionsPatchNotesForm(org.openapis.openapi.models.operations.ConversionsPatchNotesFormRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConversionsPatchNotesFormPathParams.class, baseUrl, "/conversions/{conversionId}/notes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConversionsPatchNotesFormRequest.class, baseUrl, "/conversions/{conversionId}/notes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiCoreRequestsGenericTextPatch", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -602,12 +602,12 @@ public class Conversions {
      */
     public org.openapis.openapi.models.operations.ConversionsPatchNotesJsonResponse conversionsPatchNotesJson(org.openapis.openapi.models.operations.ConversionsPatchNotesJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConversionsPatchNotesJsonPathParams.class, baseUrl, "/conversions/{conversionId}/notes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConversionsPatchNotesJsonRequest.class, baseUrl, "/conversions/{conversionId}/notes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiCoreRequestsGenericTextPatch", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -664,12 +664,12 @@ public class Conversions {
      */
     public org.openapis.openapi.models.operations.ConversionsPatchNotesRawResponse conversionsPatchNotesRaw(org.openapis.openapi.models.operations.ConversionsPatchNotesRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConversionsPatchNotesRawPathParams.class, baseUrl, "/conversions/{conversionId}/notes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConversionsPatchNotesRawRequest.class, baseUrl, "/conversions/{conversionId}/notes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -726,12 +726,12 @@ public class Conversions {
      */
     public org.openapis.openapi.models.operations.ConversionsPatchFormResponse conversionsPatchForm(org.openapis.openapi.models.operations.ConversionsPatchFormRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConversionsPatchFormPathParams.class, baseUrl, "/conversions/{conversionId}/datapoints/patch", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConversionsPatchFormRequest.class, baseUrl, "/conversions/{conversionId}/datapoints/patch", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiCoreRequestsConversionPatchBody", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -788,12 +788,12 @@ public class Conversions {
      */
     public org.openapis.openapi.models.operations.ConversionsPatchJsonResponse conversionsPatchJson(org.openapis.openapi.models.operations.ConversionsPatchJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConversionsPatchJsonPathParams.class, baseUrl, "/conversions/{conversionId}/datapoints/patch", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConversionsPatchJsonRequest.class, baseUrl, "/conversions/{conversionId}/datapoints/patch", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiCoreRequestsConversionPatchBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -850,12 +850,12 @@ public class Conversions {
      */
     public org.openapis.openapi.models.operations.ConversionsPatchRawResponse conversionsPatchRaw(org.openapis.openapi.models.operations.ConversionsPatchRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConversionsPatchRawPathParams.class, baseUrl, "/conversions/{conversionId}/datapoints/patch", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConversionsPatchRawRequest.class, baseUrl, "/conversions/{conversionId}/datapoints/patch", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -912,12 +912,12 @@ public class Conversions {
      */
     public org.openapis.openapi.models.operations.ConversionsPostFormResponse conversionsPostForm(org.openapis.openapi.models.operations.ConversionsPostFormRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConversionsPostFormPathParams.class, baseUrl, "/conversions/{conversionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConversionsPostFormRequest.class, baseUrl, "/conversions/{conversionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiCoreDtoConversionsConversion", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -974,12 +974,12 @@ public class Conversions {
      */
     public org.openapis.openapi.models.operations.ConversionsPostJsonResponse conversionsPostJson(org.openapis.openapi.models.operations.ConversionsPostJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConversionsPostJsonPathParams.class, baseUrl, "/conversions/{conversionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConversionsPostJsonRequest.class, baseUrl, "/conversions/{conversionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiCoreDtoConversionsConversion", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1036,12 +1036,12 @@ public class Conversions {
      */
     public org.openapis.openapi.models.operations.ConversionsPostRawResponse conversionsPostRaw(org.openapis.openapi.models.operations.ConversionsPostRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConversionsPostRawPathParams.class, baseUrl, "/conversions/{conversionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConversionsPostRawRequest.class, baseUrl, "/conversions/{conversionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1096,7 +1096,7 @@ public class Conversions {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConversionsPutFormResponse conversionsPutForm(org.openapis.openapi.models.operations.ConversionsPutFormRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ConversionsPutFormResponse conversionsPutForm(org.openapis.openapi.models.shared.ApiCoreDtoConversionsConversion request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/conversions");
         
@@ -1158,7 +1158,7 @@ public class Conversions {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConversionsPutJsonResponse conversionsPutJson(org.openapis.openapi.models.operations.ConversionsPutJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ConversionsPutJsonResponse conversionsPutJson(org.openapis.openapi.models.shared.ApiCoreDtoConversionsConversion request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/conversions");
         
@@ -1220,7 +1220,7 @@ public class Conversions {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConversionsPutRawResponse conversionsPutRaw(org.openapis.openapi.models.operations.ConversionsPutRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ConversionsPutRawResponse conversionsPutRaw(byte[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/conversions");
         
@@ -1284,7 +1284,7 @@ public class Conversions {
      */
     public org.openapis.openapi.models.operations.GetConversionsConversionIdResponse getConversionsConversionId(org.openapis.openapi.models.operations.GetConversionsConversionIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConversionsConversionIdPathParams.class, baseUrl, "/conversions/{conversionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConversionsConversionIdRequest.class, baseUrl, "/conversions/{conversionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1341,12 +1341,12 @@ public class Conversions {
      */
     public org.openapis.openapi.models.operations.PutConversionsConversionIdDatapointsBatchPatchResponse putConversionsConversionIdDatapointsBatchPatch(org.openapis.openapi.models.operations.PutConversionsConversionIdDatapointsBatchPatchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutConversionsConversionIdDatapointsBatchPatchPathParams.class, baseUrl, "/conversions/{conversionId}/datapoints/batch/patch", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutConversionsConversionIdDatapointsBatchPatchRequest.class, baseUrl, "/conversions/{conversionId}/datapoints/batch/patch", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiCoreRequestsPatchBodyBatch", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

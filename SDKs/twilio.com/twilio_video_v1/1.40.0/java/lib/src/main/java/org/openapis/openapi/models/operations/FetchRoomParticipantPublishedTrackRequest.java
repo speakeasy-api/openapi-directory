@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchRoomParticipantPublishedTrackRequest {
-    
-    public FetchRoomParticipantPublishedTrackPathParams pathParams;
-    public FetchRoomParticipantPublishedTrackRequest withPathParams(FetchRoomParticipantPublishedTrackPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Participant resource with the published track to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ParticipantSid")
+    public String participantSid;
+    public FetchRoomParticipantPublishedTrackRequest withParticipantSid(String participantSid) {
+        this.participantSid = participantSid;
         return this;
     }
     
-    
-    public FetchRoomParticipantPublishedTrackSecurity security;
-    public FetchRoomParticipantPublishedTrackRequest withSecurity(FetchRoomParticipantPublishedTrackSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the Room resource where the Track resource to fetch is published.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=RoomSid")
+    public String roomSid;
+    public FetchRoomParticipantPublishedTrackRequest withRoomSid(String roomSid) {
+        this.roomSid = roomSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public FetchRoomParticipantPublishedTrackRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the RoomParticipantPublishedTrack resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchRoomParticipantPublishedTrackRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

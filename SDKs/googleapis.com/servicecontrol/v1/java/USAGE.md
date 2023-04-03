@@ -7,10 +7,9 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.operations.ServicecontrolServicesAllocateQuotaSecurityOption1;
 import org.openapis.openapi.models.operations.ServicecontrolServicesAllocateQuotaSecurityOption2;
 import org.openapis.openapi.models.operations.ServicecontrolServicesAllocateQuotaSecurity;
-import org.openapis.openapi.models.operations.ServicecontrolServicesAllocateQuotaPathParams;
-import org.openapis.openapi.models.operations.ServicecontrolServicesAllocateQuotaQueryParams;
 import org.openapis.openapi.models.operations.ServicecontrolServicesAllocateQuotaRequest;
 import org.openapis.openapi.models.operations.ServicecontrolServicesAllocateQuotaResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.AllocateQuotaRequest;
 import org.openapis.openapi.models.shared.QuotaOperationQuotaModeEnum;
 import org.openapis.openapi.models.shared.QuotaOperation;
@@ -22,10 +21,7 @@ import org.openapis.openapi.models.shared.LinearBuckets;
 import org.openapis.openapi.models.shared.ExponentialBuckets;
 import org.openapis.openapi.models.shared.ExplicitBuckets;
 import org.openapis.openapi.models.shared.Exemplar;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -34,191 +30,168 @@ public class Application {
                 .build();
 
             ServicecontrolServicesAllocateQuotaRequest req = new ServicecontrolServicesAllocateQuotaRequest() {{
-                security = new ServicecontrolServicesAllocateQuotaSecurity() {{
-                    option1 = new ServicecontrolServicesAllocateQuotaSecurityOption1() {{
-                        oauth2 = new SchemeOauth2() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                        oauth2c = new SchemeOauth2c() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                    }};
-                }};
-                pathParams = new ServicecontrolServicesAllocateQuotaPathParams() {{
-                    serviceName = "corrupti";
-                }};
-                queryParams = new ServicecontrolServicesAllocateQuotaQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new AllocateQuotaRequest() {{
+                dollarXgafv = "2";
+                allocateQuotaRequest = new AllocateQuotaRequest() {{
                     allocateOperation = new QuotaOperation() {{
-                        consumerId = "suscipit";
+                        consumerId = "provident";
                         labels = new java.util.HashMap<String, String>() {{
-                            put("magnam", "debitis");
-                            put("ipsa", "delectus");
+                            put("quibusdam", "unde");
+                            put("nulla", "corrupti");
+                            put("illum", "vel");
                         }};
-                        methodName = "tempora";
-                        operationId = "suscipit";
+                        methodName = "error";
+                        operationId = "deserunt";
                         quotaMetrics = new org.openapis.openapi.models.shared.MetricValueSet[]{{
                             add(new MetricValueSet() {{
-                                metricName = "minus";
+                                metricName = "iure";
                                 metricValues = new org.openapis.openapi.models.shared.MetricValue[]{{
                                     add(new MetricValue() {{
                                         boolValue = false;
                                         distributionValue = new Distribution() {{
                                             bucketCounts = new String[]{{
-                                                add("iusto"),
-                                                add("excepturi"),
-                                                add("nisi"),
+                                                add("ipsa"),
+                                                add("delectus"),
+                                                add("tempora"),
+                                                add("suscipit"),
                                             }};
-                                            count = "recusandae";
+                                            count = "molestiae";
                                             exemplars = new org.openapis.openapi.models.shared.Exemplar[]{{
                                                 add(new Exemplar() {{
                                                     attachments = new java.util.HashMap<String, Object>[]{{
                                                         add(new java.util.HashMap<String, Object>() {{
+                                                            put("iusto", "excepturi");
+                                                            put("nisi", "recusandae");
+                                                            put("temporibus", "ab");
+                                                        }}),
+                                                        add(new java.util.HashMap<String, Object>() {{
                                                             put("veritatis", "deserunt");
                                                             put("perferendis", "ipsam");
                                                         }}),
-                                                    }};
-                                                    timestamp = "repellendus";
-                                                    value = 9571.56;
-                                                }}),
-                                                add(new Exemplar() {{
-                                                    attachments = new java.util.HashMap<String, Object>[]{{
                                                         add(new java.util.HashMap<String, Object>() {{
-                                                            put("at", "at");
-                                                        }}),
-                                                        add(new java.util.HashMap<String, Object>() {{
+                                                            put("sapiente", "quo");
+                                                            put("odit", "at");
+                                                            put("at", "maiores");
                                                             put("molestiae", "quod");
-                                                            put("quod", "esse");
-                                                            put("totam", "porro");
-                                                            put("dolorum", "dicta");
                                                         }}),
                                                         add(new java.util.HashMap<String, Object>() {{
+                                                            put("esse", "totam");
+                                                            put("porro", "dolorum");
+                                                            put("dicta", "nam");
                                                             put("officia", "occaecati");
-                                                            put("fugit", "deleniti");
-                                                            put("hic", "optio");
-                                                        }}),
-                                                        add(new java.util.HashMap<String, Object>() {{
-                                                            put("beatae", "commodi");
-                                                            put("molestiae", "modi");
-                                                            put("qui", "impedit");
                                                         }}),
                                                     }};
-                                                    timestamp = "cum";
-                                                    value = 4561.5;
+                                                    timestamp = "fugit";
+                                                    value = 5373.73;
                                                 }}),
                                                 add(new Exemplar() {{
                                                     attachments = new java.util.HashMap<String, Object>[]{{
                                                         add(new java.util.HashMap<String, Object>() {{
+                                                            put("totam", "beatae");
+                                                            put("commodi", "molestiae");
+                                                            put("modi", "qui");
+                                                            put("impedit", "cum");
+                                                        }}),
+                                                        add(new java.util.HashMap<String, Object>() {{
+                                                            put("ipsum", "excepturi");
                                                             put("aspernatur", "perferendis");
-                                                            put("ad", "natus");
-                                                            put("sed", "iste");
                                                         }}),
-                                                    }};
-                                                    timestamp = "dolor";
-                                                    value = 6169.34;
-                                                }}),
-                                                add(new Exemplar() {{
-                                                    attachments = new java.util.HashMap<String, Object>[]{{
                                                         add(new java.util.HashMap<String, Object>() {{
+                                                            put("natus", "sed");
+                                                            put("iste", "dolor");
+                                                        }}),
+                                                        add(new java.util.HashMap<String, Object>() {{
+                                                            put("laboriosam", "hic");
                                                             put("saepe", "fuga");
                                                             put("in", "corporis");
-                                                            put("iste", "iure");
-                                                            put("saepe", "quidem");
-                                                        }}),
-                                                        add(new java.util.HashMap<String, Object>() {{
-                                                            put("ipsa", "reiciendis");
                                                         }}),
                                                     }};
-                                                    timestamp = "est";
-                                                    value = 6531.4;
+                                                    timestamp = "iste";
+                                                    value = 4370.32;
+                                                }}),
+                                                add(new Exemplar() {{
+                                                    attachments = new java.util.HashMap<String, Object>[]{{
+                                                        add(new java.util.HashMap<String, Object>() {{
+                                                            put("architecto", "ipsa");
+                                                            put("reiciendis", "est");
+                                                            put("mollitia", "laborum");
+                                                        }}),
+                                                        add(new java.util.HashMap<String, Object>() {{
+                                                            put("dolorem", "corporis");
+                                                        }}),
+                                                        add(new java.util.HashMap<String, Object>() {{
+                                                            put("nobis", "enim");
+                                                        }}),
+                                                        add(new java.util.HashMap<String, Object>() {{
+                                                            put("nemo", "minima");
+                                                            put("excepturi", "accusantium");
+                                                            put("iure", "culpa");
+                                                        }}),
+                                                    }};
+                                                    timestamp = "doloribus";
+                                                    value = 9589.5;
+                                                }}),
+                                                add(new Exemplar() {{
+                                                    attachments = new java.util.HashMap<String, Object>[]{{
+                                                        add(new java.util.HashMap<String, Object>() {{
+                                                            put("dolorem", "culpa");
+                                                            put("consequuntur", "repellat");
+                                                            put("mollitia", "occaecati");
+                                                        }}),
+                                                    }};
+                                                    timestamp = "numquam";
+                                                    value = 4143.69;
                                                 }}),
                                             }};
                                             explicitBuckets = new ExplicitBuckets() {{
                                                 bounds = new Double[]{{
-                                                    add(1709.09),
-                                                    add(2103.82),
-                                                    add(3581.52),
+                                                    add(4746.97),
+                                                    add(2444.25),
                                                 }};
                                             }};
                                             exponentialBuckets = new ExponentialBuckets() {{
-                                                growthFactor = 1289.26;
-                                                numFiniteBuckets = 750686;
-                                                scale = 3154.28;
+                                                growthFactor = 6235.1;
+                                                numFiniteBuckets = 158969;
+                                                scale = 3380.07;
                                             }};
                                             linearBuckets = new LinearBuckets() {{
-                                                numFiniteBuckets = 607831;
-                                                offset = 3637.11;
-                                                width = 3250.47;
+                                                numFiniteBuckets = 110375;
+                                                offset = 6747.52;
+                                                width = 6563.3;
                                             }};
-                                            maximum = 5701.97;
-                                            mean = 384.25;
-                                            minimum = 4386.01;
-                                            sumOfSquaredDeviation = 6342.74;
+                                            maximum = 3172.02;
+                                            mean = 1381.83;
+                                            minimum = 7783.46;
+                                            sumOfSquaredDeviation = 1965.82;
                                         }};
-                                        doubleValue = 9883.74;
-                                        endTime = "sapiente";
-                                        int64Value = "architecto";
+                                        doubleValue = 9495.72;
+                                        endTime = "ipsam";
+                                        int64Value = "id";
                                         labels = new java.util.HashMap<String, String>() {{
-                                            put("dolorem", "culpa");
-                                            put("consequuntur", "repellat");
-                                            put("mollitia", "occaecati");
+                                            put("aut", "quasi");
+                                            put("error", "temporibus");
+                                            put("laborum", "quasi");
+                                            put("reiciendis", "voluptatibus");
                                         }};
                                         moneyValue = new Money() {{
-                                            currencyCode = "numquam";
-                                            nanos = 414369;
-                                            units = "quam";
+                                            currencyCode = "vero";
+                                            nanos = 468651;
+                                            units = "praesentium";
                                         }};
-                                        startTime = "molestiae";
-                                        stringValue = "velit";
+                                        startTime = "voluptatibus";
+                                        stringValue = "ipsa";
                                     }}),
                                     add(new MetricValue() {{
                                         boolValue = false;
                                         distributionValue = new Distribution() {{
                                             bucketCounts = new String[]{{
-                                                add("quia"),
-                                                add("quis"),
-                                                add("vitae"),
+                                                add("voluptate"),
+                                                add("cum"),
+                                                add("perferendis"),
                                             }};
-                                            count = "laborum";
+                                            count = "doloremque";
                                             exemplars = new org.openapis.openapi.models.shared.Exemplar[]{{
                                                 add(new Exemplar() {{
                                                     attachments = new java.util.HashMap<String, Object>[]{{
-                                                        add(new java.util.HashMap<String, Object>() {{
-                                                            put("quo", "sequi");
-                                                        }}),
-                                                        add(new java.util.HashMap<String, Object>() {{
-                                                            put("ipsam", "id");
-                                                            put("possimus", "aut");
-                                                            put("quasi", "error");
-                                                            put("temporibus", "laborum");
-                                                        }}),
-                                                    }};
-                                                    timestamp = "quasi";
-                                                    value = 9719.45;
-                                                }}),
-                                                add(new Exemplar() {{
-                                                    attachments = new java.util.HashMap<String, Object>[]{{
-                                                        add(new java.util.HashMap<String, Object>() {{
-                                                            put("nihil", "praesentium");
-                                                            put("voluptatibus", "ipsa");
-                                                            put("omnis", "voluptate");
-                                                            put("cum", "perferendis");
-                                                        }}),
-                                                        add(new java.util.HashMap<String, Object>() {{
-                                                            put("reprehenderit", "ut");
-                                                        }}),
                                                         add(new java.util.HashMap<String, Object>() {{
                                                             put("dicta", "corporis");
                                                             put("dolore", "iusto");
@@ -296,12 +269,15 @@ public class Application {
                                         startTime = "dicta";
                                         stringValue = "magnam";
                                     }}),
+                                }};
+                            }}),
+                            add(new MetricValueSet() {{
+                                metricName = "cumque";
+                                metricValues = new org.openapis.openapi.models.shared.MetricValue[]{{
                                     add(new MetricValue() {{
                                         boolValue = false;
                                         distributionValue = new Distribution() {{
                                             bucketCounts = new String[]{{
-                                                add("facere"),
-                                                add("ea"),
                                                 add("aliquid"),
                                                 add("laborum"),
                                             }};
@@ -475,88 +451,92 @@ public class Application {
                                         startTime = "nobis";
                                         stringValue = "libero";
                                     }}),
-                                }};
-                            }}),
-                            add(new MetricValueSet() {{
-                                metricName = "delectus";
-                                metricValues = new org.openapis.openapi.models.shared.MetricValue[]{{
                                     add(new MetricValue() {{
                                         boolValue = false;
                                         distributionValue = new Distribution() {{
                                             bucketCounts = new String[]{{
+                                                add("quaerat"),
+                                                add("quos"),
                                                 add("aliquid"),
                                                 add("dolorem"),
-                                                add("dolorem"),
                                             }};
-                                            count = "dolor";
+                                            count = "dolorem";
                                             exemplars = new org.openapis.openapi.models.shared.Exemplar[]{{
                                                 add(new Exemplar() {{
                                                     attachments = new java.util.HashMap<String, Object>[]{{
                                                         add(new java.util.HashMap<String, Object>() {{
-                                                            put("excepturi", "cum");
-                                                            put("voluptate", "dignissimos");
-                                                            put("reiciendis", "amet");
-                                                            put("dolorum", "numquam");
+                                                            put("hic", "excepturi");
                                                         }}),
                                                     }};
-                                                    timestamp = "veritatis";
-                                                    value = 580.29;
+                                                    timestamp = "cum";
+                                                    value = 4521.09;
                                                 }}),
                                             }};
                                             explicitBuckets = new ExplicitBuckets() {{
                                                 bounds = new Double[]{{
-                                                    add(4344.17),
+                                                    add(9702.37),
+                                                    add(2274.14),
                                                 }};
                                             }};
                                             exponentialBuckets = new ExponentialBuckets() {{
-                                                growthFactor = 4878.38;
-                                                numFiniteBuckets = 311796;
-                                                scale = 8810.05;
+                                                growthFactor = 6805.45;
+                                                numFiniteBuckets = 254356;
+                                                scale = 852.95;
                                             }};
                                             linearBuckets = new LinearBuckets() {{
-                                                numFiniteBuckets = 696344;
-                                                offset = 9764.05;
-                                                width = 3777.52;
+                                                numFiniteBuckets = 58029;
+                                                offset = 564.18;
+                                                width = 4344.17;
                                             }};
-                                            maximum = 6176.58;
-                                            mean = 1796.03;
-                                            minimum = 5424.99;
-                                            sumOfSquaredDeviation = 246.78;
+                                            maximum = 4878.38;
+                                            mean = 3117.96;
+                                            minimum = 8810.05;
+                                            sumOfSquaredDeviation = 6963.44;
                                         }};
-                                        doubleValue = 8546.14;
-                                        endTime = "ab";
-                                        int64Value = "soluta";
+                                        doubleValue = 9764.05;
+                                        endTime = "voluptas";
+                                        int64Value = "natus";
                                         labels = new java.util.HashMap<String, String>() {{
-                                            put("iusto", "voluptate");
-                                            put("dolorum", "deleniti");
-                                            put("omnis", "necessitatibus");
+                                            put("atque", "sit");
                                         }};
                                         moneyValue = new Money() {{
-                                            currencyCode = "distinctio";
-                                            nanos = 990339;
-                                            units = "nihil";
+                                            currencyCode = "fugiat";
+                                            nanos = 67249;
+                                            units = "soluta";
                                         }};
-                                        startTime = "ipsum";
-                                        stringValue = "voluptate";
+                                        startTime = "dolorum";
+                                        stringValue = "iusto";
                                     }}),
                                     add(new MetricValue() {{
                                         boolValue = false;
                                         distributionValue = new Distribution() {{
                                             bucketCounts = new String[]{{
-                                                add("saepe"),
-                                                add("eius"),
-                                                add("aspernatur"),
+                                                add("dolorum"),
+                                                add("deleniti"),
                                             }};
-                                            count = "perferendis";
+                                            count = "omnis";
                                             exemplars = new org.openapis.openapi.models.shared.Exemplar[]{{
                                                 add(new Exemplar() {{
                                                     attachments = new java.util.HashMap<String, Object>[]{{
                                                         add(new java.util.HashMap<String, Object>() {{
-                                                            put("ad", "saepe");
-                                                            put("suscipit", "deserunt");
-                                                            put("provident", "minima");
-                                                            put("repellendus", "totam");
+                                                            put("nihil", "ipsum");
+                                                            put("voluptate", "id");
+                                                            put("saepe", "eius");
+                                                            put("aspernatur", "perferendis");
                                                         }}),
+                                                        add(new java.util.HashMap<String, Object>() {{
+                                                            put("optio", "accusamus");
+                                                        }}),
+                                                        add(new java.util.HashMap<String, Object>() {{
+                                                            put("saepe", "suscipit");
+                                                            put("deserunt", "provident");
+                                                        }}),
+                                                    }};
+                                                    timestamp = "minima";
+                                                    value = 8310.49;
+                                                }}),
+                                                add(new Exemplar() {{
+                                                    attachments = new java.util.HashMap<String, Object>[]{{
                                                         add(new java.util.HashMap<String, Object>() {{
                                                             put("alias", "at");
                                                             put("quaerat", "tempora");
@@ -578,55 +558,99 @@ public class Application {
                                                     timestamp = "nihil";
                                                     value = 256.62;
                                                 }}),
+                                                add(new Exemplar() {{
+                                                    attachments = new java.util.HashMap<String, Object>[]{{
+                                                        add(new java.util.HashMap<String, Object>() {{
+                                                            put("sed", "vel");
+                                                        }}),
+                                                        add(new java.util.HashMap<String, Object>() {{
+                                                            put("voluptas", "deserunt");
+                                                            put("quam", "ipsum");
+                                                            put("incidunt", "qui");
+                                                        }}),
+                                                        add(new java.util.HashMap<String, Object>() {{
+                                                            put("maxime", "pariatur");
+                                                            put("soluta", "dicta");
+                                                            put("laborum", "totam");
+                                                        }}),
+                                                    }};
+                                                    timestamp = "incidunt";
+                                                    value = 1320.68;
+                                                }}),
+                                                add(new Exemplar() {{
+                                                    attachments = new java.util.HashMap<String, Object>[]{{
+                                                        add(new java.util.HashMap<String, Object>() {{
+                                                            put("facilis", "aliquid");
+                                                            put("quam", "molestias");
+                                                            put("temporibus", "qui");
+                                                        }}),
+                                                    }};
+                                                    timestamp = "neque";
+                                                    value = 1448.47;
+                                                }}),
                                             }};
                                             explicitBuckets = new ExplicitBuckets() {{
                                                 bounds = new Double[]{{
-                                                    add(2074.7),
-                                                    add(1536.94),
-                                                    add(4246.85),
+                                                    add(4880.56),
                                                 }};
                                             }};
                                             exponentialBuckets = new ExponentialBuckets() {{
-                                                growthFactor = 7304.42;
-                                                numFiniteBuckets = 374170;
-                                                scale = 6462.65;
+                                                growthFactor = 1248.33;
+                                                numFiniteBuckets = 355613;
+                                                scale = 7220.81;
                                             }};
                                             linearBuckets = new LinearBuckets() {{
-                                                numFiniteBuckets = 463575;
-                                                offset = 2148.8;
-                                                width = 2776.28;
+                                                numFiniteBuckets = 940432;
+                                                offset = 304.52;
+                                                width = 7653.26;
                                             }};
-                                            maximum = 1864.58;
-                                            mean = 5867.84;
-                                            minimum = 8075.81;
-                                            sumOfSquaredDeviation = 8638.56;
+                                            maximum = 7469.94;
+                                            mean = 7486.64;
+                                            minimum = 925.96;
+                                            sumOfSquaredDeviation = 9037.2;
                                         }};
-                                        doubleValue = 7470.8;
-                                        endTime = "dicta";
-                                        int64Value = "laborum";
+                                        doubleValue = 2174.5;
+                                        endTime = "veritatis";
+                                        int64Value = "nobis";
                                         labels = new java.util.HashMap<String, String>() {{
-                                            put("incidunt", "aspernatur");
-                                            put("dolores", "distinctio");
-                                            put("facilis", "aliquid");
+                                            put("tempore", "cupiditate");
+                                            put("aperiam", "delectus");
+                                            put("dolorem", "dolore");
                                         }};
                                         moneyValue = new Money() {{
-                                            currencyCode = "quam";
-                                            nanos = 565421;
-                                            units = "temporibus";
+                                            currencyCode = "labore";
+                                            nanos = 240829;
+                                            units = "dolorum";
                                         }};
-                                        startTime = "qui";
-                                        stringValue = "neque";
+                                        startTime = "architecto";
+                                        stringValue = "quae";
                                     }}),
                                 }};
                             }}),
                         }};
                         quotaMode = "UNSPECIFIED";
                     }};
-                    serviceConfigId = "magni";
+                    serviceConfigId = "quas";
                 }};
-            }};            
+                accessToken = "itaque";
+                alt = "json";
+                callback = "est";
+                fields = "repellendus";
+                key = "porro";
+                oauthToken = "doloribus";
+                prettyPrint = false;
+                quotaUser = "ut";
+                serviceName = "facilis";
+                uploadType = "cupiditate";
+                uploadProtocol = "qui";
+            }}            
 
-            ServicecontrolServicesAllocateQuotaResponse res = sdk.services.servicecontrolServicesAllocateQuota(req);
+            ServicecontrolServicesAllocateQuotaResponse res = sdk.services.servicecontrolServicesAllocateQuota(req, new ServicecontrolServicesAllocateQuotaSecurity() {{
+                option1 = new ServicecontrolServicesAllocateQuotaSecurityOption1() {{
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                }};
+            }});
 
             if (res.allocateQuotaResponse.isPresent()) {
                 // handle response

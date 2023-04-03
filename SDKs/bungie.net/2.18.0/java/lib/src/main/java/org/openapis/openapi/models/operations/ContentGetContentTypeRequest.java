@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContentGetContentTypeRequest {
-    
-    public ContentGetContentTypePathParams pathParams;
-    public ContentGetContentTypeRequest withPathParams(ContentGetContentTypePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
+    public String type;
+    public ContentGetContentTypeRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

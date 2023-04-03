@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestRoomRescueKeyRequest {
-    
-    public RequestRoomRescueKeyPathParams pathParams;
-    public RequestRoomRescueKeyRequest withPathParams(RequestRoomRescueKeyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestRoomRescueKeyRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public RequestRoomRescueKeyQueryParams queryParams;
-    public RequestRoomRescueKeyRequest withQueryParams(RequestRoomRescueKeyQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * File ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=file_id")
+    public Long fileId;
+    public RequestRoomRescueKeyRequest withFileId(Long fileId) {
+        this.fileId = fileId;
         return this;
     }
     
-    
-    public RequestRoomRescueKeyHeaders headers;
-    public RequestRoomRescueKeyRequest withHeaders(RequestRoomRescueKeyHeaders headers) {
-        this.headers = headers;
+    /**
+     * Version (NEW)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
+    public String version;
+    public RequestRoomRescueKeyRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

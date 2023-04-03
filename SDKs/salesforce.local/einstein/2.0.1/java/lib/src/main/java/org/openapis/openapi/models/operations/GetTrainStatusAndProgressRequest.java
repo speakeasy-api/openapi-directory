@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTrainStatusAndProgressRequest {
-    
-    public GetTrainStatusAndProgressPathParams pathParams;
-    public GetTrainStatusAndProgressRequest withPathParams(GetTrainStatusAndProgressPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetTrainStatusAndProgressSecurity security;
-    public GetTrainStatusAndProgressRequest withSecurity(GetTrainStatusAndProgressSecurity security) {
-        this.security = security;
+    /**
+     * Model Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=modelId")
+    public String modelId;
+    public GetTrainStatusAndProgressRequest withModelId(String modelId) {
+        this.modelId = modelId;
         return this;
     }
     

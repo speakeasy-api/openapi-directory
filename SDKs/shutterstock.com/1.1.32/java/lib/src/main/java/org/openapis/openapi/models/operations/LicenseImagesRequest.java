@@ -7,27 +7,53 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LicenseImagesRequest {
-    
-    public LicenseImagesQueryParams queryParams;
-    public LicenseImagesRequest withQueryParams(LicenseImagesQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * List of images to request licenses for and information about each license transaction; these values override the defaults in the query parameters
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.LicenseImageRequest request;
-    public LicenseImagesRequest withRequest(org.openapis.openapi.models.shared.LicenseImageRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.LicenseImageRequest licenseImageRequest;
+    public LicenseImagesRequest withLicenseImageRequest(org.openapis.openapi.models.shared.LicenseImageRequest licenseImageRequest) {
+        this.licenseImageRequest = licenseImageRequest;
         return this;
     }
     
+    /**
+     * (Deprecated) Image format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public LicenseImagesFormatEnum format;
+    public LicenseImagesRequest withFormat(LicenseImagesFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public LicenseImagesSecurity security;
-    public LicenseImagesRequest withSecurity(LicenseImagesSecurity security) {
-        this.security = security;
+    /**
+     * Search ID that was provided in the results of an image search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_id")
+    public String searchId;
+    public LicenseImagesRequest withSearchId(String searchId) {
+        this.searchId = searchId;
+        return this;
+    }
+    
+    /**
+     * Image size
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
+    public LicenseImagesSizeEnum size;
+    public LicenseImagesRequest withSize(LicenseImagesSizeEnum size) {
+        this.size = size;
+        return this;
+    }
+    
+    /**
+     * Subscription ID to use to license the image
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subscription_id")
+    public String subscriptionId;
+    public LicenseImagesRequest withSubscriptionId(String subscriptionId) {
+        this.subscriptionId = subscriptionId;
         return this;
     }
     

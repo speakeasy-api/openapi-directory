@@ -30,15 +30,12 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentByDateJsonSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentByDateJsonQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentByDateJsonRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentByDateJSON200ApplicationJSONDebug.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentByDateJSON200ApplicationJSONResultsComments.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentByDateJSON200ApplicationJSONResults.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentByDateJSON200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentByDateJsonResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentRecentJsonSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentRecentJsonRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentRecentJSON200ApplicationJSONDebug.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentRecentJSON200ApplicationJSONResultsCommentsAssetAllProperties.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentRecentJSON200ApplicationJSONResultsCommentsAssetPropertiesAutomoderationOn.java
@@ -51,7 +48,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentRecentJSO
 lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentRecentJSON200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentRecentJsonResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentUrlJsonSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentUrlJsonQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentUrlJsonRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentUrlJSON200ApplicationJSONDebug.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentUrlJSON200ApplicationJSONResultsComments.java
@@ -59,7 +55,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentUrlJSON20
 lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentUrlJSON200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentUrlJsonResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentUserJsonSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentUserJsonQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentUserJsonRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentUserJSON200ApplicationJSONDebug.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentUserJSON200ApplicationJSONResultsCommentsAssetAllProperties.java
@@ -73,5 +68,4 @@ lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentUserJSON2
 lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentUserJSON200ApplicationJSONResults.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentUserJSON200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETUserContentUserJsonResponse.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKey.java
 USAGE.md

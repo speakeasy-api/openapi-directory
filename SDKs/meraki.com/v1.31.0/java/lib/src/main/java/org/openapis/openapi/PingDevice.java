@@ -39,12 +39,12 @@ public class PingDevice {
      */
     public org.openapis.openapi.models.operations.CreateDeviceLiveToolsPingDeviceResponse createDeviceLiveToolsPingDevice(org.openapis.openapi.models.operations.CreateDeviceLiveToolsPingDeviceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateDeviceLiveToolsPingDevicePathParams.class, baseUrl, "/devices/{serial}/liveTools/pingDevice", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateDeviceLiveToolsPingDeviceRequest.class, baseUrl, "/devices/{serial}/liveTools/pingDevice", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -81,7 +81,7 @@ public class PingDevice {
      */
     public org.openapis.openapi.models.operations.GetDeviceLiveToolsPingDeviceResponse getDeviceLiveToolsPingDevice(org.openapis.openapi.models.operations.GetDeviceLiveToolsPingDeviceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceLiveToolsPingDevicePathParams.class, baseUrl, "/devices/{serial}/liveTools/pingDevice/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceLiveToolsPingDeviceRequest.class, baseUrl, "/devices/{serial}/liveTools/pingDevice/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

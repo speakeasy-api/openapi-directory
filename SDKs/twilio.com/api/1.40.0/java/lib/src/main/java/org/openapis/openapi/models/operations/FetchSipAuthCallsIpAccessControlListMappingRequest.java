@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchSipAuthCallsIpAccessControlListMappingRequest {
-    
-    public FetchSipAuthCallsIpAccessControlListMappingPathParams pathParams;
-    public FetchSipAuthCallsIpAccessControlListMappingRequest withPathParams(FetchSipAuthCallsIpAccessControlListMappingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the IpAccessControlListMapping resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public FetchSipAuthCallsIpAccessControlListMappingRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public FetchSipAuthCallsIpAccessControlListMappingSecurity security;
-    public FetchSipAuthCallsIpAccessControlListMappingRequest withSecurity(FetchSipAuthCallsIpAccessControlListMappingSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the SIP domain that contains the resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DomainSid")
+    public String domainSid;
+    public FetchSipAuthCallsIpAccessControlListMappingRequest withDomainSid(String domainSid) {
+        this.domainSid = domainSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public FetchSipAuthCallsIpAccessControlListMappingRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the IpAccessControlListMapping resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchSipAuthCallsIpAccessControlListMappingRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

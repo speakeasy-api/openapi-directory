@@ -37,10 +37,11 @@ public class LanguagePrediction {
      * Prediction for Intent
      * Returns an intent prediction for the given string.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IntentMultipartResponse intentMultipart(org.openapis.openapi.models.operations.IntentMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IntentMultipartResponse intentMultipart(org.openapis.openapi.models.shared.IntentPredictRequest request, org.openapis.openapi.models.operations.IntentMultipartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/language/intent");
         
@@ -51,7 +52,7 @@ public class LanguagePrediction {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -87,10 +88,11 @@ public class LanguagePrediction {
      * Prediction for Sentiment
      * Returns a sentiment prediction for the given string.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SentimentMultipartResponse sentimentMultipart(org.openapis.openapi.models.operations.SentimentMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SentimentMultipartResponse sentimentMultipart(org.openapis.openapi.models.shared.SentimentPredictRequest request, org.openapis.openapi.models.operations.SentimentMultipartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/language/sentiment");
         
@@ -101,7 +103,7 @@ public class LanguagePrediction {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

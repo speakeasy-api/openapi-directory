@@ -4,20 +4,191 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCommitteeCommitteeIdRequest {
-    
-    public GetCommitteeCommitteeIdPathParams pathParams;
-    public GetCommitteeCommitteeIdRequest withPathParams(GetCommitteeCommitteeIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API key for https://api.data.gov. Get one at https://api.data.gov/signup.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetCommitteeCommitteeIdRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    /**
+     * A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=committee_id")
+    public String committeeId;
+    public GetCommitteeCommitteeIdRequest withCommitteeId(String committeeId) {
+        this.committeeId = committeeId;
+        return this;
+    }
     
-    public GetCommitteeCommitteeIdQueryParams queryParams;
-    public GetCommitteeCommitteeIdRequest withQueryParams(GetCommitteeCommitteeIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The one-letter type code of the organization:
+     *         - C communication cost
+     *         - D delegate
+     *         - E electioneering communication
+     *         - H House
+     *         - I independent expenditure filer (not a committee)
+     *         - N PAC - nonqualified
+     *         - O independent expenditure-only (super PACs)
+     *         - P presidential
+     *         - Q PAC - qualified
+     *         - S Senate
+     *         - U single candidate independent expenditure
+     *         - V PAC with non-contribution account, nonqualified
+     *         - W PAC with non-contribution account, qualified
+     *         - X party, nonqualified
+     *         - Y party, qualified
+     *         - Z national party non-federal account
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=committee_type")
+    public GetCommitteeCommitteeIdCommitteeTypeEnum[] committeeType;
+    public GetCommitteeCommitteeIdRequest withCommitteeType(GetCommitteeCommitteeIdCommitteeTypeEnum[] committeeType) {
+        this.committeeType = committeeType;
+        return this;
+    }
+    
+    /**
+     * A two year election cycle that the committee was active- (after original registration
+     * date but before expiration date in Form 1s) The cycle begins with
+     * an odd year and is named for its ending, even year.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cycle")
+    public Integer[] cycle;
+    public GetCommitteeCommitteeIdRequest withCycle(Integer[] cycle) {
+        this.cycle = cycle;
+        return this;
+    }
+    
+    /**
+     * The one-letter designation code of the organization:
+     *          - A authorized by a candidate
+     *          - J joint fundraising committee
+     *          - P principal campaign committee of a candidate
+     *          - U unauthorized
+     *          - B lobbyist/registrant PAC
+     *          - D leadership PAC
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=designation")
+    public GetCommitteeCommitteeIdDesignationEnum[] designation;
+    public GetCommitteeCommitteeIdRequest withDesignation(GetCommitteeCommitteeIdDesignationEnum[] designation) {
+        this.designation = designation;
+        return this;
+    }
+    
+    /**
+     * The one-letter 
+     *     code of the filing frequency:
+     *          - A Administratively terminated
+     *          - D Debt
+     *          - M Monthly filer
+     *          - Q Quarterly filer
+     *          - T Terminated
+     *          - W Waived
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filing_frequency")
+    public GetCommitteeCommitteeIdFilingFrequencyEnum[] filingFrequency;
+    public GetCommitteeCommitteeIdRequest withFilingFrequency(GetCommitteeCommitteeIdFilingFrequencyEnum[] filingFrequency) {
+        this.filingFrequency = filingFrequency;
+        return this;
+    }
+    
+    /**
+     * The one-letter code for the kind for organization:
+     *         - C corporation
+     *         - L labor organization
+     *         - M membership organization
+     *         - T trade association
+     *         - V cooperative
+     *         - W corporation without capital stock
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=organization_type")
+    public GetCommitteeCommitteeIdOrganizationTypeEnum[] organizationType;
+    public GetCommitteeCommitteeIdRequest withOrganizationType(GetCommitteeCommitteeIdOrganizationTypeEnum[] organizationType) {
+        this.organizationType = organizationType;
+        return this;
+    }
+    
+    /**
+     * For paginating through results, starting at page 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetCommitteeCommitteeIdRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results returned per page. Defaults to 20.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetCommitteeCommitteeIdRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Provide a field to sort by. Use `-` for descending order.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetCommitteeCommitteeIdRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Hide null values on sorted column(s).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
+    public Boolean sortHideNull;
+    public GetCommitteeCommitteeIdRequest withSortHideNull(Boolean sortHideNull) {
+        this.sortHideNull = sortHideNull;
+        return this;
+    }
+    
+    /**
+     * Toggle that filters out all rows having sort column that is non-null
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
+    public Boolean sortNullOnly;
+    public GetCommitteeCommitteeIdRequest withSortNullOnly(Boolean sortNullOnly) {
+        this.sortNullOnly = sortNullOnly;
+        return this;
+    }
+    
+    /**
+     * Toggle that sorts null values last
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
+    public Boolean sortNullsLast;
+    public GetCommitteeCommitteeIdRequest withSortNullsLast(Boolean sortNullsLast) {
+        this.sortNullsLast = sortNullsLast;
+        return this;
+    }
+    
+    /**
+     * A year that the committee was active\u2014 (after original registration date     or filing but before expiration date)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public Integer[] year;
+    public GetCommitteeCommitteeIdRequest withYear(Integer[] year) {
+        this.year = year;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class XPingRequest {
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public XPingFormatEnum format;
+    public XPingRequest withFormat(XPingFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public XPingPathParams pathParams;
-    public XPingRequest withPathParams(XPingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Number of seconds to sleep before responding
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=seconds")
+    public String seconds;
+    public XPingRequest withSeconds(String seconds) {
+        this.seconds = seconds;
         return this;
     }
     

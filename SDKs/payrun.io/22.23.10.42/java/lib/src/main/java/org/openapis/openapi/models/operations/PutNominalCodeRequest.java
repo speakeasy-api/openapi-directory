@@ -7,17 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutNominalCodeRequest {
-    
-    public PutNominalCodePathParams pathParams;
-    public PutNominalCodeRequest withPathParams(PutNominalCodePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The version of the api to target. Omit or set as &amp;apos;default&amp;apos; to target the current api version.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Version")
+    public String apiVersion;
+    public PutNominalCodeRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
+    /**
+     * The OAuth 1 authorization header. &amp;apos;Auto&amp;apos; enables auto complete.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PutNominalCodeRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
+        return this;
+    }
     
-    public PutNominalCodeHeaders headers;
-    public PutNominalCodeRequest withHeaders(PutNominalCodeHeaders headers) {
-        this.headers = headers;
+    /**
+     * The employers' unique identifier. E.g ER001
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EmployerId")
+    public String employerId;
+    public PutNominalCodeRequest withEmployerId(String employerId) {
+        this.employerId = employerId;
         return this;
     }
     
@@ -25,9 +41,19 @@ public class PutNominalCodeRequest {
      * The nominal code object.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.NominalCode request;
-    public PutNominalCodeRequest withRequest(org.openapis.openapi.models.shared.NominalCode request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.NominalCode nominalCode;
+    public PutNominalCodeRequest withNominalCode(org.openapis.openapi.models.shared.NominalCode nominalCode) {
+        this.nominalCode = nominalCode;
+        return this;
+    }
+    
+    /**
+     * The nominal code unique identifier. E.g. NOM001
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=NominalCodeId")
+    public String nominalCodeId;
+    public PutNominalCodeRequest withNominalCodeId(String nominalCodeId) {
+        this.nominalCodeId = nominalCodeId;
         return this;
     }
     

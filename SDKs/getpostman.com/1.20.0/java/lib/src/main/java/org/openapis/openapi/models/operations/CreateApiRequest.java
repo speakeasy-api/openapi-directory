@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateApiRequest {
-    
-    public CreateApiQueryParams queryParams;
-    public CreateApiRequest withQueryParams(CreateApiQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateApiRequestBody requestBody;
+    public CreateApiRequest withRequestBody(CreateApiRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateApiRequestBody request;
-    public CreateApiRequest withRequest(CreateApiRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=workspace")
+    public String workspace;
+    public CreateApiRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodespacesCreateOrUpdateRepoSecretRequest {
-    
-    public CodespacesCreateOrUpdateRepoSecretPathParams pathParams;
-    public CodespacesCreateOrUpdateRepoSecretRequest withPathParams(CodespacesCreateOrUpdateRepoSecretPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CodespacesCreateOrUpdateRepoSecretRequestBody requestBody;
+    public CodespacesCreateOrUpdateRepoSecretRequest withRequestBody(CodespacesCreateOrUpdateRepoSecretRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public CodespacesCreateOrUpdateRepoSecretRequestBody request;
-    public CodespacesCreateOrUpdateRepoSecretRequest withRequest(CodespacesCreateOrUpdateRepoSecretRequestBody request) {
-        this.request = request;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public CodespacesCreateOrUpdateRepoSecretRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public CodespacesCreateOrUpdateRepoSecretRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * The name of the secret.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=secret_name")
+    public String secretName;
+    public CodespacesCreateOrUpdateRepoSecretRequest withSecretName(String secretName) {
+        this.secretName = secretName;
         return this;
     }
     

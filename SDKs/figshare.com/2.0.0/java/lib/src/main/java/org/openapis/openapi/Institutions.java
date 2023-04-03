@@ -38,19 +38,20 @@ public class Institutions {
      * Institution Curation Review
      * Retrieve a certain curation review by its ID
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountInstitutionCurationResponse accountInstitutionCuration(org.openapis.openapi.models.operations.AccountInstitutionCurationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountInstitutionCurationResponse accountInstitutionCuration(org.openapis.openapi.models.operations.AccountInstitutionCurationRequest request, org.openapis.openapi.models.operations.AccountInstitutionCurationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountInstitutionCurationPathParams.class, baseUrl, "/account/institution/review/{curation_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountInstitutionCurationRequest.class, baseUrl, "/account/institution/review/{curation_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -88,25 +89,26 @@ public class Institutions {
      * Institution Curation Review Comments
      * Retrieve a certain curation review's comments.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountInstitutionCurationCommentsResponse accountInstitutionCurationComments(org.openapis.openapi.models.operations.AccountInstitutionCurationCommentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountInstitutionCurationCommentsResponse accountInstitutionCurationComments(org.openapis.openapi.models.operations.AccountInstitutionCurationCommentsRequest request, org.openapis.openapi.models.operations.AccountInstitutionCurationCommentsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountInstitutionCurationCommentsPathParams.class, baseUrl, "/account/institution/review/{curation_id}/comments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountInstitutionCurationCommentsRequest.class, baseUrl, "/account/institution/review/{curation_id}/comments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccountInstitutionCurationCommentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccountInstitutionCurationCommentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -144,10 +146,11 @@ public class Institutions {
      * Institution Curation Reviews
      * Retrieve a list of curation reviews for this institution
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountInstitutionCurationsResponse accountInstitutionCurations(org.openapis.openapi.models.operations.AccountInstitutionCurationsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountInstitutionCurationsResponse accountInstitutionCurations(org.openapis.openapi.models.operations.AccountInstitutionCurationsRequest request, org.openapis.openapi.models.operations.AccountInstitutionCurationsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/institution/reviews");
         
@@ -155,14 +158,14 @@ public class Institutions {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccountInstitutionCurationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccountInstitutionCurationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -200,10 +203,11 @@ public class Institutions {
      * Private account institution group custom fields
      * Returns the custom fields in the group the user belongs to, or the ones in the group specified, if the user has access.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CustomFieldsListResponse customFieldsList(org.openapis.openapi.models.operations.CustomFieldsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CustomFieldsListResponse customFieldsList(org.openapis.openapi.models.operations.CustomFieldsListRequest request, org.openapis.openapi.models.operations.CustomFieldsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/institution/custom_fields");
         
@@ -211,14 +215,14 @@ public class Institutions {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CustomFieldsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CustomFieldsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -256,21 +260,22 @@ public class Institutions {
      * Custom fields values files upload
      * Uploads a CSV containing values for a specific custom field of type &lt;b&gt;dropdown_large_list&lt;/b&gt;. More details in the &lt;a href="#custom_fields"&gt;Custom Fields section&lt;/a&gt;
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CustomFieldsUploadResponse customFieldsUpload(org.openapis.openapi.models.operations.CustomFieldsUploadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CustomFieldsUploadResponse customFieldsUpload(org.openapis.openapi.models.operations.CustomFieldsUploadRequest request, org.openapis.openapi.models.operations.CustomFieldsUploadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CustomFieldsUploadPathParams.class, baseUrl, "/account/institution/custom_fields/{custom_field_id}/items/upload", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CustomFieldsUploadRequest.class, baseUrl, "/account/institution/custom_fields/{custom_field_id}/items/upload", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -313,13 +318,13 @@ public class Institutions {
      */
     public org.openapis.openapi.models.operations.InstitutionArticlesResponse institutionArticles(org.openapis.openapi.models.operations.InstitutionArticlesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InstitutionArticlesPathParams.class, baseUrl, "/institutions/{institution_string_id}/articles/filter-by", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InstitutionArticlesRequest.class, baseUrl, "/institutions/{institution_string_id}/articles/filter-by", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.InstitutionArticlesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.InstitutionArticlesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -355,10 +360,11 @@ public class Institutions {
      * Private Institution HRfeed Upload
      * More info in the &lt;a href="#hr_feed"&gt;HR Feed section&lt;/a&gt;
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.InstitutionHrfeedUploadResponse institutionHrfeedUpload(org.openapis.openapi.models.operations.InstitutionHrfeedUploadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.InstitutionHrfeedUploadResponse institutionHrfeedUpload(org.openapis.openapi.models.operations.InstitutionHrfeedUploadRequestBody request, org.openapis.openapi.models.operations.InstitutionHrfeedUploadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/institution/hrfeed/upload");
         
@@ -369,7 +375,7 @@ public class Institutions {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -407,24 +413,25 @@ public class Institutions {
      * POST Institution Curation Review Comment
      * Add a new comment to the review.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAccountInstitutionReviewCurationIdCommentsResponse postAccountInstitutionReviewCurationIdComments(org.openapis.openapi.models.operations.PostAccountInstitutionReviewCurationIdCommentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAccountInstitutionReviewCurationIdCommentsResponse postAccountInstitutionReviewCurationIdComments(org.openapis.openapi.models.operations.PostAccountInstitutionReviewCurationIdCommentsRequest request, org.openapis.openapi.models.operations.PostAccountInstitutionReviewCurationIdCommentsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostAccountInstitutionReviewCurationIdCommentsPathParams.class, baseUrl, "/account/institution/review/{curation_id}/comments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostAccountInstitutionReviewCurationIdCommentsRequest.class, baseUrl, "/account/institution/review/{curation_id}/comments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "curationCommentCreate", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -454,19 +461,20 @@ public class Institutions {
      * Private Account Institution User
      * Retrieve institution user information using the account_id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateAccountInstitutionUserResponse privateAccountInstitutionUser(org.openapis.openapi.models.operations.PrivateAccountInstitutionUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateAccountInstitutionUserResponse privateAccountInstitutionUser(org.openapis.openapi.models.operations.PrivateAccountInstitutionUserRequest request, org.openapis.openapi.models.operations.PrivateAccountInstitutionUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateAccountInstitutionUserPathParams.class, baseUrl, "/account/institution/users/{account_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateAccountInstitutionUserRequest.class, baseUrl, "/account/institution/users/{account_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -503,11 +511,10 @@ public class Institutions {
     /**
      * Private Account Categories
      * List institution categories (including parent Categories)
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateCategoriesListResponse privateCategoriesList(org.openapis.openapi.models.operations.PrivateCategoriesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateCategoriesListResponse privateCategoriesList() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/categories");
         
@@ -516,8 +523,7 @@ public class Institutions {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -554,19 +560,20 @@ public class Institutions {
      * Private Account Institution Group Embargo Options
      * Account institution group embargo options details
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateGroupEmbargoOptionsDetailsResponse privateGroupEmbargoOptionsDetails(org.openapis.openapi.models.operations.PrivateGroupEmbargoOptionsDetailsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateGroupEmbargoOptionsDetailsResponse privateGroupEmbargoOptionsDetails(org.openapis.openapi.models.operations.PrivateGroupEmbargoOptionsDetailsRequest request, org.openapis.openapi.models.operations.PrivateGroupEmbargoOptionsDetailsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateGroupEmbargoOptionsDetailsPathParams.class, baseUrl, "/account/institution/groups/{group_id}/embargo_options", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateGroupEmbargoOptionsDetailsRequest.class, baseUrl, "/account/institution/groups/{group_id}/embargo_options", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -604,19 +611,20 @@ public class Institutions {
      * Delete Institution Account Group Role
      * Delete Institution Account Group Role
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateInstitutionAccountGroupRoleDeleteResponse privateInstitutionAccountGroupRoleDelete(org.openapis.openapi.models.operations.PrivateInstitutionAccountGroupRoleDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateInstitutionAccountGroupRoleDeleteResponse privateInstitutionAccountGroupRoleDelete(org.openapis.openapi.models.operations.PrivateInstitutionAccountGroupRoleDeleteRequest request, org.openapis.openapi.models.operations.PrivateInstitutionAccountGroupRoleDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateInstitutionAccountGroupRoleDeletePathParams.class, baseUrl, "/account/institution/roles/{account_id}/{group_id}/{role_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateInstitutionAccountGroupRoleDeleteRequest.class, baseUrl, "/account/institution/roles/{account_id}/{group_id}/{role_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -646,19 +654,20 @@ public class Institutions {
      * List Institution Account Group Roles
      * List Institution Account Group Roles
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateInstitutionAccountGroupRolesResponse privateInstitutionAccountGroupRoles(org.openapis.openapi.models.operations.PrivateInstitutionAccountGroupRolesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateInstitutionAccountGroupRolesResponse privateInstitutionAccountGroupRoles(org.openapis.openapi.models.operations.PrivateInstitutionAccountGroupRolesRequest request, org.openapis.openapi.models.operations.PrivateInstitutionAccountGroupRolesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateInstitutionAccountGroupRolesPathParams.class, baseUrl, "/account/institution/roles/{account_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateInstitutionAccountGroupRolesRequest.class, baseUrl, "/account/institution/roles/{account_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -696,24 +705,25 @@ public class Institutions {
      * Add Institution Account Group Roles
      * Add Institution Account Group Roles
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateInstitutionAccountGroupRolesCreateResponse privateInstitutionAccountGroupRolesCreate(org.openapis.openapi.models.operations.PrivateInstitutionAccountGroupRolesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateInstitutionAccountGroupRolesCreateResponse privateInstitutionAccountGroupRolesCreate(org.openapis.openapi.models.operations.PrivateInstitutionAccountGroupRolesCreateRequest request, org.openapis.openapi.models.operations.PrivateInstitutionAccountGroupRolesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateInstitutionAccountGroupRolesCreatePathParams.class, baseUrl, "/account/institution/roles/{account_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateInstitutionAccountGroupRolesCreateRequest.class, baseUrl, "/account/institution/roles/{account_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -743,10 +753,11 @@ public class Institutions {
      * Create new Institution Account
      * Create a new Account by sending account information
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateInstitutionAccountsCreateResponse privateInstitutionAccountsCreate(org.openapis.openapi.models.operations.PrivateInstitutionAccountsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateInstitutionAccountsCreateResponse privateInstitutionAccountsCreate(org.openapis.openapi.models.shared.AccountCreate request, org.openapis.openapi.models.operations.PrivateInstitutionAccountsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/institution/accounts");
         
@@ -760,7 +771,7 @@ public class Institutions {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -790,10 +801,11 @@ public class Institutions {
      * Private Account Institution Accounts
      * Returns the accounts for which the account has administrative privileges (assigned and inherited).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateInstitutionAccountsListResponse privateInstitutionAccountsList(org.openapis.openapi.models.operations.PrivateInstitutionAccountsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateInstitutionAccountsListResponse privateInstitutionAccountsList(org.openapis.openapi.models.operations.PrivateInstitutionAccountsListRequest request, org.openapis.openapi.models.operations.PrivateInstitutionAccountsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/institution/accounts");
         
@@ -801,14 +813,14 @@ public class Institutions {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PrivateInstitutionAccountsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PrivateInstitutionAccountsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -846,10 +858,11 @@ public class Institutions {
      * Private Account Institution Accounts Search
      * Returns the accounts for which the account has administrative privileges (assigned and inherited).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateInstitutionAccountsSearchResponse privateInstitutionAccountsSearch(org.openapis.openapi.models.operations.PrivateInstitutionAccountsSearchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateInstitutionAccountsSearchResponse privateInstitutionAccountsSearch(org.openapis.openapi.models.shared.InstitutionAccountsSearch request, org.openapis.openapi.models.operations.PrivateInstitutionAccountsSearchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/institution/accounts/search");
         
@@ -863,7 +876,7 @@ public class Institutions {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -901,24 +914,25 @@ public class Institutions {
      * Update Institution Account
      * Update Institution Account
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateInstitutionAccountsUpdateResponse privateInstitutionAccountsUpdate(org.openapis.openapi.models.operations.PrivateInstitutionAccountsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateInstitutionAccountsUpdateResponse privateInstitutionAccountsUpdate(org.openapis.openapi.models.operations.PrivateInstitutionAccountsUpdateRequest request, org.openapis.openapi.models.operations.PrivateInstitutionAccountsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateInstitutionAccountsUpdatePathParams.class, baseUrl, "/account/institution/accounts/{account_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateInstitutionAccountsUpdateRequest.class, baseUrl, "/account/institution/accounts/{account_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "accountUpdate", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -952,10 +966,11 @@ public class Institutions {
      * Private Institution Articles
      * Get Articles from own institution. User must be administrator of the institution
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateInstitutionArticlesResponse privateInstitutionArticles(org.openapis.openapi.models.operations.PrivateInstitutionArticlesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateInstitutionArticlesResponse privateInstitutionArticles(org.openapis.openapi.models.operations.PrivateInstitutionArticlesRequest request, org.openapis.openapi.models.operations.PrivateInstitutionArticlesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/institution/articles");
         
@@ -963,14 +978,14 @@ public class Institutions {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PrivateInstitutionArticlesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PrivateInstitutionArticlesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1007,11 +1022,10 @@ public class Institutions {
     /**
      * Private Account Institutions
      * Account institution details
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateInstitutionDetailsResponse privateInstitutionDetails(org.openapis.openapi.models.operations.PrivateInstitutionDetailsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateInstitutionDetailsResponse privateInstitutionDetails() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/institution");
         
@@ -1020,8 +1034,7 @@ public class Institutions {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -1057,11 +1070,10 @@ public class Institutions {
     /**
      * Private Account Institution embargo options
      * Account institution embargo options details
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateInstitutionEmbargoOptionsDetailsResponse privateInstitutionEmbargoOptionsDetails(org.openapis.openapi.models.operations.PrivateInstitutionEmbargoOptionsDetailsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateInstitutionEmbargoOptionsDetailsResponse privateInstitutionEmbargoOptionsDetails() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/institution/embargo_options");
         
@@ -1070,8 +1082,7 @@ public class Institutions {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -1107,11 +1118,10 @@ public class Institutions {
     /**
      * Private Account Institution Groups
      * Returns the groups for which the account has administrative privileges (assigned and inherited).
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateInstitutionGroupsListResponse privateInstitutionGroupsList(org.openapis.openapi.models.operations.PrivateInstitutionGroupsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateInstitutionGroupsListResponse privateInstitutionGroupsList() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/institution/groups");
         
@@ -1120,8 +1130,7 @@ public class Institutions {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -1157,11 +1166,10 @@ public class Institutions {
     /**
      * Private Account Institution Roles
      * Returns the roles available for groups and the institution group.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateInstitutionRolesListResponse privateInstitutionRolesList(org.openapis.openapi.models.operations.PrivateInstitutionRolesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateInstitutionRolesListResponse privateInstitutionRolesList() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/institution/roles");
         
@@ -1170,8 +1178,7 @@ public class Institutions {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");

@@ -40,19 +40,20 @@ public class PayoutSettingsMerchantLevel {
      * 
      * * Management API\u2014Payout account settings read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteMerchantsMerchantIdPayoutSettingsPayoutSettingsIdResponse deleteMerchantsMerchantIdPayoutSettingsPayoutSettingsId(org.openapis.openapi.models.operations.DeleteMerchantsMerchantIdPayoutSettingsPayoutSettingsIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteMerchantsMerchantIdPayoutSettingsPayoutSettingsIdResponse deleteMerchantsMerchantIdPayoutSettingsPayoutSettingsId(org.openapis.openapi.models.operations.DeleteMerchantsMerchantIdPayoutSettingsPayoutSettingsIdRequest request, org.openapis.openapi.models.operations.DeleteMerchantsMerchantIdPayoutSettingsPayoutSettingsIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteMerchantsMerchantIdPayoutSettingsPayoutSettingsIdPathParams.class, baseUrl, "/merchants/{merchantId}/payoutSettings/{payoutSettingsId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteMerchantsMerchantIdPayoutSettingsPayoutSettingsIdRequest.class, baseUrl, "/merchants/{merchantId}/payoutSettings/{payoutSettingsId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -87,19 +88,20 @@ public class PayoutSettingsMerchantLevel {
      * To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014Payout account settings read
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMerchantsMerchantIdPayoutSettingsResponse getMerchantsMerchantIdPayoutSettings(org.openapis.openapi.models.operations.GetMerchantsMerchantIdPayoutSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMerchantsMerchantIdPayoutSettingsResponse getMerchantsMerchantIdPayoutSettings(org.openapis.openapi.models.operations.GetMerchantsMerchantIdPayoutSettingsRequest request, org.openapis.openapi.models.operations.GetMerchantsMerchantIdPayoutSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMerchantsMerchantIdPayoutSettingsPathParams.class, baseUrl, "/merchants/{merchantId}/payoutSettings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMerchantsMerchantIdPayoutSettingsRequest.class, baseUrl, "/merchants/{merchantId}/payoutSettings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -142,19 +144,20 @@ public class PayoutSettingsMerchantLevel {
      * To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014Payout account settings read
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMerchantsMerchantIdPayoutSettingsPayoutSettingsIdResponse getMerchantsMerchantIdPayoutSettingsPayoutSettingsId(org.openapis.openapi.models.operations.GetMerchantsMerchantIdPayoutSettingsPayoutSettingsIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMerchantsMerchantIdPayoutSettingsPayoutSettingsIdResponse getMerchantsMerchantIdPayoutSettingsPayoutSettingsId(org.openapis.openapi.models.operations.GetMerchantsMerchantIdPayoutSettingsPayoutSettingsIdRequest request, org.openapis.openapi.models.operations.GetMerchantsMerchantIdPayoutSettingsPayoutSettingsIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMerchantsMerchantIdPayoutSettingsPayoutSettingsIdPathParams.class, baseUrl, "/merchants/{merchantId}/payoutSettings/{payoutSettingsId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMerchantsMerchantIdPayoutSettingsPayoutSettingsIdRequest.class, baseUrl, "/merchants/{merchantId}/payoutSettings/{payoutSettingsId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -198,21 +201,22 @@ public class PayoutSettingsMerchantLevel {
      * 
      * * Management API\u2014Payout account settings read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchMerchantsMerchantIdPayoutSettingsPayoutSettingsIdResponse patchMerchantsMerchantIdPayoutSettingsPayoutSettingsId(org.openapis.openapi.models.operations.PatchMerchantsMerchantIdPayoutSettingsPayoutSettingsIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchMerchantsMerchantIdPayoutSettingsPayoutSettingsIdResponse patchMerchantsMerchantIdPayoutSettingsPayoutSettingsId(org.openapis.openapi.models.operations.PatchMerchantsMerchantIdPayoutSettingsPayoutSettingsIdRequest request, org.openapis.openapi.models.operations.PatchMerchantsMerchantIdPayoutSettingsPayoutSettingsIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchMerchantsMerchantIdPayoutSettingsPayoutSettingsIdPathParams.class, baseUrl, "/merchants/{merchantId}/payoutSettings/{payoutSettingsId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchMerchantsMerchantIdPayoutSettingsPayoutSettingsIdRequest.class, baseUrl, "/merchants/{merchantId}/payoutSettings/{payoutSettingsId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updatePayoutSettingsRequest", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -258,21 +262,22 @@ public class PayoutSettingsMerchantLevel {
      * 
      * * Management API\u2014Payout account settings read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostMerchantsMerchantIdPayoutSettingsResponse postMerchantsMerchantIdPayoutSettings(org.openapis.openapi.models.operations.PostMerchantsMerchantIdPayoutSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostMerchantsMerchantIdPayoutSettingsResponse postMerchantsMerchantIdPayoutSettings(org.openapis.openapi.models.operations.PostMerchantsMerchantIdPayoutSettingsRequest request, org.openapis.openapi.models.operations.PostMerchantsMerchantIdPayoutSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostMerchantsMerchantIdPayoutSettingsPathParams.class, baseUrl, "/merchants/{merchantId}/payoutSettings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostMerchantsMerchantIdPayoutSettingsRequest.class, baseUrl, "/merchants/{merchantId}/payoutSettings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "payoutSettingsRequest", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

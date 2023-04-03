@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.DeleteCachePathParams;
 import org.openapis.openapi.models.operations.DeleteCacheRequest;
 import org.openapis.openapi.models.operations.DeleteCacheResponse;
 
@@ -26,17 +25,13 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    mwoAuth = new SchemeMwoAuth() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
+                    mwoAuth = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }})
                 .build();
 
             DeleteCacheRequest req = new DeleteCacheRequest() {{
-                pathParams = new DeleteCachePathParams() {{
-                    key = "corrupti";
-                }};
-            }};            
+                key = "corrupti";
+            }}            
 
             DeleteCacheResponse res = sdk.deleteCache(req);
 
@@ -50,7 +45,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

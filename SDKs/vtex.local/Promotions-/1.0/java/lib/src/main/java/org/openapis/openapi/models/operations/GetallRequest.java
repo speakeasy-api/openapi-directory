@@ -4,13 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetallRequest {
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetallRequest withAccept(String accept) {
+        this.accept = accept;
+        return this;
+    }
     
-    public GetallHeaders headers;
-    public GetallRequest withHeaders(GetallHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetallRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     

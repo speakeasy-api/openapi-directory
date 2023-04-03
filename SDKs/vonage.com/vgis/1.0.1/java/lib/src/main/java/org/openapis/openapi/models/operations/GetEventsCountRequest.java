@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEventsCountRequest {
+    /**
+     * Filter by event direction
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public GetEventsCountDirectionEnum direction;
+    public GetEventsCountRequest withDirection(GetEventsCountDirectionEnum direction) {
+        this.direction = direction;
+        return this;
+    }
     
-    public GetEventsCountQueryParams queryParams;
-    public GetEventsCountRequest withQueryParams(GetEventsCountQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Return events that occurred after this point in time
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDate")
+    public Long fromDate;
+    public GetEventsCountRequest withFromDate(Long fromDate) {
+        this.fromDate = fromDate;
+        return this;
+    }
+    
+    /**
+     * Filter events by state
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=states")
+    public GetEventsCountStatesEnum states;
+    public GetEventsCountRequest withStates(GetEventsCountStatesEnum states) {
+        this.states = states;
+        return this;
+    }
+    
+    /**
+     * Return events that occurred before this point in time
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDate")
+    public Long toDate;
+    public GetEventsCountRequest withToDate(Long toDate) {
+        this.toDate = toDate;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCallLogMetricsDetailsRequest {
-    
-    public GetCallLogMetricsDetailsPathParams pathParams;
-    public GetCallLogMetricsDetailsRequest withPathParams(GetCallLogMetricsDetailsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the phone call. The value of this field can be retrieved from [List Call Logs]() API.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=call_id")
+    public String callId;
+    public GetCallLogMetricsDetailsRequest withCallId(String callId) {
+        this.callId = callId;
         return this;
     }
     

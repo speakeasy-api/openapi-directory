@@ -33,7 +33,7 @@ public class Tenancy {
 		this._genVersion = genVersion;
 	}
 
-    public org.openapis.openapi.models.operations.TenancyTenantGroupsCreateResponse tenancyTenantGroupsCreate(org.openapis.openapi.models.operations.TenancyTenantGroupsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TenancyTenantGroupsCreateResponse tenancyTenantGroupsCreate(org.openapis.openapi.models.shared.WritableTenantGroupInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/tenancy/tenant-groups/");
         
@@ -73,7 +73,7 @@ public class Tenancy {
 
     public org.openapis.openapi.models.operations.TenancyTenantGroupsDeleteResponse tenancyTenantGroupsDelete(org.openapis.openapi.models.operations.TenancyTenantGroupsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TenancyTenantGroupsDeletePathParams.class, baseUrl, "/tenancy/tenant-groups/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TenancyTenantGroupsDeleteRequest.class, baseUrl, "/tenancy/tenant-groups/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -112,7 +112,7 @@ public class Tenancy {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TenancyTenantGroupsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TenancyTenantGroupsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -145,12 +145,12 @@ public class Tenancy {
 
     public org.openapis.openapi.models.operations.TenancyTenantGroupsPartialUpdateResponse tenancyTenantGroupsPartialUpdate(org.openapis.openapi.models.operations.TenancyTenantGroupsPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TenancyTenantGroupsPartialUpdatePathParams.class, baseUrl, "/tenancy/tenant-groups/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TenancyTenantGroupsPartialUpdateRequest.class, baseUrl, "/tenancy/tenant-groups/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableTenantGroupInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -189,7 +189,7 @@ public class Tenancy {
      */
     public org.openapis.openapi.models.operations.TenancyTenantGroupsReadResponse tenancyTenantGroupsRead(org.openapis.openapi.models.operations.TenancyTenantGroupsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TenancyTenantGroupsReadPathParams.class, baseUrl, "/tenancy/tenant-groups/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TenancyTenantGroupsReadRequest.class, baseUrl, "/tenancy/tenant-groups/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -222,12 +222,12 @@ public class Tenancy {
 
     public org.openapis.openapi.models.operations.TenancyTenantGroupsUpdateResponse tenancyTenantGroupsUpdate(org.openapis.openapi.models.operations.TenancyTenantGroupsUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TenancyTenantGroupsUpdatePathParams.class, baseUrl, "/tenancy/tenant-groups/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TenancyTenantGroupsUpdateRequest.class, baseUrl, "/tenancy/tenant-groups/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableTenantGroupInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -258,7 +258,7 @@ public class Tenancy {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.TenancyTenantsCreateResponse tenancyTenantsCreate(org.openapis.openapi.models.operations.TenancyTenantsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TenancyTenantsCreateResponse tenancyTenantsCreate(org.openapis.openapi.models.shared.WritableTenantInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/tenancy/tenants/");
         
@@ -298,7 +298,7 @@ public class Tenancy {
 
     public org.openapis.openapi.models.operations.TenancyTenantsDeleteResponse tenancyTenantsDelete(org.openapis.openapi.models.operations.TenancyTenantsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TenancyTenantsDeletePathParams.class, baseUrl, "/tenancy/tenants/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TenancyTenantsDeleteRequest.class, baseUrl, "/tenancy/tenants/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -337,7 +337,7 @@ public class Tenancy {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TenancyTenantsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TenancyTenantsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -370,12 +370,12 @@ public class Tenancy {
 
     public org.openapis.openapi.models.operations.TenancyTenantsPartialUpdateResponse tenancyTenantsPartialUpdate(org.openapis.openapi.models.operations.TenancyTenantsPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TenancyTenantsPartialUpdatePathParams.class, baseUrl, "/tenancy/tenants/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TenancyTenantsPartialUpdateRequest.class, baseUrl, "/tenancy/tenants/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableTenantInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -414,7 +414,7 @@ public class Tenancy {
      */
     public org.openapis.openapi.models.operations.TenancyTenantsReadResponse tenancyTenantsRead(org.openapis.openapi.models.operations.TenancyTenantsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TenancyTenantsReadPathParams.class, baseUrl, "/tenancy/tenants/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TenancyTenantsReadRequest.class, baseUrl, "/tenancy/tenants/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -447,12 +447,12 @@ public class Tenancy {
 
     public org.openapis.openapi.models.operations.TenancyTenantsUpdateResponse tenancyTenantsUpdate(org.openapis.openapi.models.operations.TenancyTenantsUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TenancyTenantsUpdatePathParams.class, baseUrl, "/tenancy/tenants/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TenancyTenantsUpdateRequest.class, baseUrl, "/tenancy/tenants/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableTenantInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

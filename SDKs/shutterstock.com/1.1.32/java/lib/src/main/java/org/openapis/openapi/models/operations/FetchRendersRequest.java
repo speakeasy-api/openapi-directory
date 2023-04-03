@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchRendersRequest {
-    
-    public FetchRendersQueryParams queryParams;
-    public FetchRendersRequest withQueryParams(FetchRendersQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public FetchRendersSecurity security;
-    public FetchRendersRequest withSecurity(FetchRendersSecurity security) {
-        this.security = security;
+    /**
+     * One or more render IDs
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String[] id;
+    public FetchRendersRequest withId(String[] id) {
+        this.id = id;
         return this;
     }
     

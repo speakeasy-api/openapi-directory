@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateClientTaskPONumberRequest {
-    
-    public UpdateClientTaskPONumberPathParams pathParams;
-    public UpdateClientTaskPONumberRequest withPathParams(UpdateClientTaskPONumberPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated Client Task PO Number of a given task.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.StringDTO request;
-    public UpdateClientTaskPONumberRequest withRequest(org.openapis.openapi.models.shared.StringDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.StringDTO stringDTO;
+    public UpdateClientTaskPONumberRequest withStringDTO(org.openapis.openapi.models.shared.StringDTO stringDTO) {
+        this.stringDTO = stringDTO;
+        return this;
+    }
+    
+    /**
+     * task's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taskId")
+    public String taskId;
+    public UpdateClientTaskPONumberRequest withTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
     

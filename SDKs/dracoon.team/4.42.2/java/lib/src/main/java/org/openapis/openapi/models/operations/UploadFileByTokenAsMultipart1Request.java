@@ -7,24 +7,32 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UploadFileByTokenAsMultipart1Request {
-    
-    public UploadFileByTokenAsMultipart1PathParams pathParams;
-    public UploadFileByTokenAsMultipart1Request withPathParams(UploadFileByTokenAsMultipart1PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UploadFileByTokenAsMultipart1Headers headers;
-    public UploadFileByTokenAsMultipart1Request withHeaders(UploadFileByTokenAsMultipart1Headers headers) {
-        this.headers = headers;
+    /**
+     * Content-Range 
+     * 
+     * e.g. `bytes 0-999/3980`
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Range")
+    public String contentRange;
+    public UploadFileByTokenAsMultipart1Request withContentRange(String contentRange) {
+        this.contentRange = contentRange;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public UploadFileByTokenAsMultipart1RequestBody request;
-    public UploadFileByTokenAsMultipart1Request withRequest(UploadFileByTokenAsMultipart1RequestBody request) {
-        this.request = request;
+    public UploadFileByTokenAsMultipart1RequestBody requestBody;
+    public UploadFileByTokenAsMultipart1Request withRequestBody(UploadFileByTokenAsMultipart1RequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Upload token
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=token")
+    public String token;
+    public UploadFileByTokenAsMultipart1Request withToken(String token) {
+        this.token = token;
         return this;
     }
     

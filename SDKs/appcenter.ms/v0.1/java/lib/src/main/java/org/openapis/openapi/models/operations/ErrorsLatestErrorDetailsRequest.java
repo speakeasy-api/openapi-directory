@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ErrorsLatestErrorDetailsRequest {
-    
-    public ErrorsLatestErrorDetailsPathParams pathParams;
-    public ErrorsLatestErrorDetailsRequest withPathParams(ErrorsLatestErrorDetailsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public ErrorsLatestErrorDetailsRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * The id of the error group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=errorGroupId")
+    public String errorGroupId;
+    public ErrorsLatestErrorDetailsRequest withErrorGroupId(String errorGroupId) {
+        this.errorGroupId = errorGroupId;
+        return this;
+    }
     
-    public ErrorsLatestErrorDetailsSecurity security;
-    public ErrorsLatestErrorDetailsRequest withSecurity(ErrorsLatestErrorDetailsSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public ErrorsLatestErrorDetailsRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

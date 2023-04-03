@@ -37,19 +37,20 @@ public class Downloads {
      * Delete a download artifact
      * Deletes the specified download artifact from the repository.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenameResponse deleteRepositoriesWorkspaceRepoSlugDownloadsFilename(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenameRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenameResponse deleteRepositoriesWorkspaceRepoSlugDownloadsFilename(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenameRequest request, org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenameSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenamePathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/downloads/{filename}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenameRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/downloads/{filename}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,19 +80,20 @@ public class Downloads {
      * List download artifacts
      * Returns a list of download links associated with the repository.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDownloadsResponse getRepositoriesWorkspaceRepoSlugDownloads(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDownloadsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDownloadsResponse getRepositoriesWorkspaceRepoSlugDownloads(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDownloadsRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDownloadsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDownloadsPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/downloads", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDownloadsRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/downloads", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,19 +129,20 @@ public class Downloads {
      *     $ curl -s -L https://api.bitbucket.org/2.0/repositories/evzijst/git-tests/downloads/hello.txt
      *     Hello World
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDownloadsFilenameResponse getRepositoriesWorkspaceRepoSlugDownloadsFilename(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDownloadsFilenameRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDownloadsFilenameResponse getRepositoriesWorkspaceRepoSlugDownloadsFilename(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDownloadsFilenameRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDownloadsFilenameSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDownloadsFilenamePathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/downloads/{filename}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugDownloadsFilenameRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/downloads/{filename}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -178,19 +181,20 @@ public class Downloads {
      * When a file is uploaded with the same name as an existing artifact,
      * then the existing file will be replaced.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugDownloadsResponse postRepositoriesWorkspaceRepoSlugDownloads(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugDownloadsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugDownloadsResponse postRepositoriesWorkspaceRepoSlugDownloads(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugDownloadsRequest request, org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugDownloadsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugDownloadsPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/downloads", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugDownloadsRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/downloads", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

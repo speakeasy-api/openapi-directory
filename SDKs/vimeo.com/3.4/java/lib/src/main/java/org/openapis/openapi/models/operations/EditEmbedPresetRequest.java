@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EditEmbedPresetRequest {
-    
-    public EditEmbedPresetPathParams pathParams;
-    public EditEmbedPresetRequest withPathParams(EditEmbedPresetPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.preset+json")
+    public EditEmbedPresetRequestBody requestBody;
+    public EditEmbedPresetRequest withRequestBody(EditEmbedPresetRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.preset+json")
-    public EditEmbedPresetRequestBody request;
-    public EditEmbedPresetRequest withRequest(EditEmbedPresetRequestBody request) {
-        this.request = request;
+    /**
+     * The ID of the preset.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=preset_id")
+    public Double presetId;
+    public EditEmbedPresetRequest withPresetId(Double presetId) {
+        this.presetId = presetId;
+        return this;
+    }
+    
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public EditEmbedPresetRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCustomerServiceMetricRequest {
-    
-    public GetCustomerServiceMetricPathParams pathParams;
-    public GetCustomerServiceMetricRequest withPathParams(GetCustomerServiceMetricPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Use this path parameter to specify the type of customer service metrics and benchmark data you want returned for the seller. Supported types are: ITEM_NOT_AS_DESCRIBED ITEM_NOT_RECEIVED
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customer_service_metric_type")
+    public String customerServiceMetricType;
+    public GetCustomerServiceMetricRequest withCustomerServiceMetricType(String customerServiceMetricType) {
+        this.customerServiceMetricType = customerServiceMetricType;
         return this;
     }
     
-    
-    public GetCustomerServiceMetricQueryParams queryParams;
-    public GetCustomerServiceMetricRequest withQueryParams(GetCustomerServiceMetricQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Use this query parameter to specify the Marketplace ID to evaluate for the customer service metrics and benchmark data. For the list of supported marketplaces, see Analytics API requirements and restrictions. For implementation help, refer to eBay API documentation at https://developer.ebay.com/devzone/rest/api-ref/analytics/types/MarketplaceIdEnum.html
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=evaluation_marketplace_id")
+    public String evaluationMarketplaceId;
+    public GetCustomerServiceMetricRequest withEvaluationMarketplaceId(String evaluationMarketplaceId) {
+        this.evaluationMarketplaceId = evaluationMarketplaceId;
         return this;
     }
     
-    
-    public GetCustomerServiceMetricSecurity security;
-    public GetCustomerServiceMetricRequest withSecurity(GetCustomerServiceMetricSecurity security) {
-        this.security = security;
+    /**
+     * Use this path parameter to specify the type of the seller evaluation you want returned, either: CURRENT &amp;ndash; A monthly evaluation that occurs on the 20th of every month. PROJECTED &amp;ndash; A daily evaluation that provides a projection of how the seller is currently performing with regards to the upcoming evaluation period.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=evaluation_type")
+    public String evaluationType;
+    public GetCustomerServiceMetricRequest withEvaluationType(String evaluationType) {
+        this.evaluationType = evaluationType;
         return this;
     }
     

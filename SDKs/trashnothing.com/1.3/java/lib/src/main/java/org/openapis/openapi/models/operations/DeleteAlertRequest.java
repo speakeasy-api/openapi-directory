@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAlertRequest {
-    
-    public DeleteAlertPathParams pathParams;
-    public DeleteAlertRequest withPathParams(DeleteAlertPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the email alert to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=alert_id")
+    public String alertId;
+    public DeleteAlertRequest withAlertId(String alertId) {
+        this.alertId = alertId;
         return this;
     }
     

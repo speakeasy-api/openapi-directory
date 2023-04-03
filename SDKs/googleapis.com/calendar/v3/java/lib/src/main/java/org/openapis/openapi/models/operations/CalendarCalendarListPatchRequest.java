@@ -7,31 +7,100 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CalendarCalendarListPatchRequest {
-    
-    public CalendarCalendarListPatchPathParams pathParams;
-    public CalendarCalendarListPatchRequest withPathParams(CalendarCalendarListPatchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CalendarCalendarListPatchQueryParams queryParams;
-    public CalendarCalendarListPatchRequest withQueryParams(CalendarCalendarListPatchQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CalendarListEntry request;
-    public CalendarCalendarListPatchRequest withRequest(org.openapis.openapi.models.shared.CalendarListEntry request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CalendarListEntry calendarListEntry;
+    public CalendarCalendarListPatchRequest withCalendarListEntry(org.openapis.openapi.models.shared.CalendarListEntry calendarListEntry) {
+        this.calendarListEntry = calendarListEntry;
         return this;
     }
     
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public CalendarCalendarListPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public CalendarCalendarListPatchSecurity security;
-    public CalendarCalendarListPatchRequest withSecurity(CalendarCalendarListPatchSecurity security) {
-        this.security = security;
+    /**
+     * Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to access the primary calendar of the currently logged in user, use the "primary" keyword.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=calendarId")
+    public String calendarId;
+    public CalendarCalendarListPatchRequest withCalendarId(String calendarId) {
+        this.calendarId = calendarId;
+        return this;
+    }
+    
+    /**
+     * Whether to use the foregroundColor and backgroundColor fields to write the calendar colors (RGB). If this feature is used, the index-based colorId field will be set to the best matching option automatically. Optional. The default is False.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=colorRgbFormat")
+    public Boolean colorRgbFormat;
+    public CalendarCalendarListPatchRequest withColorRgbFormat(Boolean colorRgbFormat) {
+        this.colorRgbFormat = colorRgbFormat;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public CalendarCalendarListPatchRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public CalendarCalendarListPatchRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public CalendarCalendarListPatchRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public CalendarCalendarListPatchRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public CalendarCalendarListPatchRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public CalendarCalendarListPatchRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

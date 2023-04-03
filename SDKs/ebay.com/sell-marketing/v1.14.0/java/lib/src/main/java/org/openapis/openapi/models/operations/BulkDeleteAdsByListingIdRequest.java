@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BulkDeleteAdsByListingIdRequest {
-    
-    public BulkDeleteAdsByListingIdPathParams pathParams;
-    public BulkDeleteAdsByListingIdRequest withPathParams(BulkDeleteAdsByListingIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * This request object defines the fields for the &lt;b&gt;bulkDeleteAdsByListingId&lt;/b&gt; request.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.BulkDeleteAdRequest request;
-    public BulkDeleteAdsByListingIdRequest withRequest(org.openapis.openapi.models.shared.BulkDeleteAdRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.BulkDeleteAdRequest bulkDeleteAdRequest;
+    public BulkDeleteAdsByListingIdRequest withBulkDeleteAdRequest(org.openapis.openapi.models.shared.BulkDeleteAdRequest bulkDeleteAdRequest) {
+        this.bulkDeleteAdRequest = bulkDeleteAdRequest;
         return this;
     }
     
-    
-    public BulkDeleteAdsByListingIdSecurity security;
-    public BulkDeleteAdsByListingIdRequest withSecurity(BulkDeleteAdsByListingIdSecurity security) {
-        this.security = security;
+    /**
+     * A unique eBay-assigned ID for an ad campaign that's generated when a campaign is created. Get a seller's campaign IDs by calling &lt;a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns"&gt;getCampaigns&lt;/a&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=campaign_id")
+    public String campaignId;
+    public BulkDeleteAdsByListingIdRequest withCampaignId(String campaignId) {
+        this.campaignId = campaignId;
         return this;
     }
     

@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AbortMultipartUploadPathParams;
-import org.openapis.openapi.models.operations.AbortMultipartUploadHeaders;
 import org.openapis.openapi.models.operations.AbortMultipartUploadRequest;
 import org.openapis.openapi.models.operations.AbortMultipartUploadResponse;
 
@@ -14,28 +12,22 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AbortMultipartUploadRequest req = new AbortMultipartUploadRequest() {{
-                pathParams = new AbortMultipartUploadPathParams() {{
-                    accountId = "corrupti";
-                    uploadId = "provident";
-                    vaultName = "distinctio";
-                }};
-                headers = new AbortMultipartUploadHeaders() {{
-                    xAmzAlgorithm = "quibusdam";
-                    xAmzContentSha256 = "unde";
-                    xAmzCredential = "nulla";
-                    xAmzDate = "corrupti";
-                    xAmzSecurityToken = "illum";
-                    xAmzSignature = "vel";
-                    xAmzSignedHeaders = "error";
-                }};
-            }};            
+                xAmzAlgorithm = "corrupti";
+                xAmzContentSha256 = "provident";
+                xAmzCredential = "distinctio";
+                xAmzDate = "quibusdam";
+                xAmzSecurityToken = "unde";
+                xAmzSignature = "nulla";
+                xAmzSignedHeaders = "corrupti";
+                accountId = "illum";
+                uploadId = "vel";
+                vaultName = "error";
+            }}            
 
             AbortMultipartUploadResponse res = sdk.abortMultipartUpload(req);
 

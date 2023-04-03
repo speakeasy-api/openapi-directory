@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DistributionGroupsListAllTestersForOrgRequest {
-    
-    public DistributionGroupsListAllTestersForOrgPathParams pathParams;
-    public DistributionGroupsListAllTestersForOrgRequest withPathParams(DistributionGroupsListAllTestersForOrgPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DistributionGroupsListAllTestersForOrgSecurity security;
-    public DistributionGroupsListAllTestersForOrgRequest withSecurity(DistributionGroupsListAllTestersForOrgSecurity security) {
-        this.security = security;
+    /**
+     * The organization's name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_name")
+    public String orgName;
+    public DistributionGroupsListAllTestersForOrgRequest withOrgName(String orgName) {
+        this.orgName = orgName;
         return this;
     }
     

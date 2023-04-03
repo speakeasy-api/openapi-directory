@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1ListsIdAccountsRequest {
-    
-    public GetApiV1ListsIdAccountsPathParams pathParams;
-    public GetApiV1ListsIdAccountsRequest withPathParams(GetApiV1ListsIdAccountsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the list in the database
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetApiV1ListsIdAccountsRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetApiV1ListsIdAccountsQueryParams queryParams;
-    public GetApiV1ListsIdAccountsRequest withQueryParams(GetApiV1ListsIdAccountsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Maximum number of results. Defaults to 40. Max 40. Set to 0 in order to get all accounts without pagination. Pagination is done with the HTTP Link header.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetApiV1ListsIdAccountsRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * Return results older than ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_id")
+    public String maxId;
+    public GetApiV1ListsIdAccountsRequest withMaxId(String maxId) {
+        this.maxId = maxId;
+        return this;
+    }
     
-    public GetApiV1ListsIdAccountsSecurity security;
-    public GetApiV1ListsIdAccountsRequest withSecurity(GetApiV1ListsIdAccountsSecurity security) {
-        this.security = security;
+    /**
+     * Return results newer than ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since_id")
+    public String sinceId;
+    public GetApiV1ListsIdAccountsRequest withSinceId(String sinceId) {
+        this.sinceId = sinceId;
         return this;
     }
     

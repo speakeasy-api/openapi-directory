@@ -4,20 +4,55 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FeeSchedulesListRequest {
-    
-    public FeeSchedulesListQueryParams queryParams;
-    public FeeSchedulesListRequest withQueryParams(FeeSchedulesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=code")
+    public String code;
+    public FeeSchedulesListRequest withCode(String code) {
+        this.code = code;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=code_type")
+    public String codeType;
+    public FeeSchedulesListRequest withCodeType(String codeType) {
+        this.codeType = codeType;
+        return this;
+    }
     
-    public FeeSchedulesListSecurity security;
-    public FeeSchedulesListRequest withSecurity(FeeSchedulesListSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public FeeSchedulesListRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public FeeSchedulesListRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public FeeSchedulesListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=payer_id")
+    public String payerId;
+    public FeeSchedulesListRequest withPayerId(String payerId) {
+        this.payerId = payerId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public FeeSchedulesListRequest withSince(String since) {
+        this.since = since;
         return this;
     }
     

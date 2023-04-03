@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateFieldTypeRequest {
-    
-    public CreateFieldTypePathParams pathParams;
-    public CreateFieldTypeRequest withPathParams(CreateFieldTypePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the new resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public CreateFieldTypeRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateFieldTypeCreateFieldTypeRequest request;
-    public CreateFieldTypeRequest withRequest(CreateFieldTypeCreateFieldTypeRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateFieldTypeSecurity security;
-    public CreateFieldTypeRequest withSecurity(CreateFieldTypeSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateFieldTypeRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateFieldTypeCreateFieldTypeRequest requestBody;
+    public CreateFieldTypeRequest withRequestBody(CreateFieldTypeCreateFieldTypeRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

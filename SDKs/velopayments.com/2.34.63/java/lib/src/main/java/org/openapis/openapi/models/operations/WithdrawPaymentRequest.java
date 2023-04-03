@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WithdrawPaymentRequest {
-    
-    public WithdrawPaymentPathParams pathParams;
-    public WithdrawPaymentRequest withPathParams(WithdrawPaymentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * details for withdrawal
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WithdrawPaymentRequest request;
-    public WithdrawPaymentRequest withRequest(org.openapis.openapi.models.shared.WithdrawPaymentRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.WithdrawPaymentRequest withdrawPaymentRequest;
+    public WithdrawPaymentRequest withWithdrawPaymentRequest(org.openapis.openapi.models.shared.WithdrawPaymentRequest withdrawPaymentRequest) {
+        this.withdrawPaymentRequest = withdrawPaymentRequest;
+        return this;
+    }
+    
+    /**
+     * Id of the Payment
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=paymentId")
+    public String paymentId;
+    public WithdrawPaymentRequest withPaymentId(String paymentId) {
+        this.paymentId = paymentId;
         return this;
     }
     

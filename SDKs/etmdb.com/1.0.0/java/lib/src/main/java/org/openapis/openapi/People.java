@@ -44,7 +44,7 @@ public class People {
      */
     public org.openapis.openapi.models.operations.PeopleSearchReadResponse peopleSearchRead(org.openapis.openapi.models.operations.PeopleSearchReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PeopleSearchReadPathParams.class, baseUrl, "/api/v1/people/search/{user}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PeopleSearchReadRequest.class, baseUrl, "/api/v1/people/search/{user}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

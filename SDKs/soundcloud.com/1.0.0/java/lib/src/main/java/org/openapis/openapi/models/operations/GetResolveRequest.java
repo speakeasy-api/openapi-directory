@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetResolveRequest {
-    
-    public GetResolveQueryParams queryParams;
-    public GetResolveRequest withQueryParams(GetResolveQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetResolveSecurity security;
-    public GetResolveRequest withSecurity(GetResolveSecurity security) {
-        this.security = security;
+    /**
+     * SoundCloud URL
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=url")
+    public String url;
+    public GetResolveRequest withUrl(String url) {
+        this.url = url;
         return this;
     }
     

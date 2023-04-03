@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.BatchExecuteStatementXAmzTargetEnum;
-import org.openapis.openapi.models.operations.BatchExecuteStatementHeaders;
 import org.openapis.openapi.models.operations.BatchExecuteStatementRequest;
 import org.openapis.openapi.models.operations.BatchExecuteStatementResponse;
 import org.openapis.openapi.models.shared.BatchExecuteStatementInput;
@@ -15,38 +14,36 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             BatchExecuteStatementRequest req = new BatchExecuteStatementRequest() {{
-                headers = new BatchExecuteStatementHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "RedshiftData.BatchExecuteStatement";
-                }};
-                request = new BatchExecuteStatementInput() {{
-                    clientToken = "illum";
-                    clusterIdentifier = "vel";
-                    database = "error";
-                    dbUser = "deserunt";
-                    secretArn = "suscipit";
+                batchExecuteStatementInput = new BatchExecuteStatementInput() {{
+                    clientToken = "corrupti";
+                    clusterIdentifier = "provident";
+                    database = "distinctio";
+                    dbUser = "quibusdam";
+                    secretArn = "unde";
                     sqls = new String[]{{
-                        add("magnam"),
-                        add("debitis"),
+                        add("corrupti"),
+                        add("illum"),
+                        add("vel"),
+                        add("error"),
                     }};
-                    statementName = "ipsa";
+                    statementName = "deserunt";
                     withEvent = false;
-                    workgroupName = "delectus";
+                    workgroupName = "suscipit";
                 }};
-            }};            
+                xAmzAlgorithm = "iure";
+                xAmzContentSha256 = "magnam";
+                xAmzCredential = "debitis";
+                xAmzDate = "ipsa";
+                xAmzSecurityToken = "delectus";
+                xAmzSignature = "tempora";
+                xAmzSignedHeaders = "suscipit";
+                xAmzTarget = "RedshiftData.BatchExecuteStatement";
+            }}            
 
             BatchExecuteStatementResponse res = sdk.batchExecuteStatement(req);
 

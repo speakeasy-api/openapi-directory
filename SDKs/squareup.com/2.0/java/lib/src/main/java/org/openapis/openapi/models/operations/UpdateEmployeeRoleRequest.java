@@ -7,29 +7,25 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateEmployeeRoleRequest {
-    
-    public UpdateEmployeeRolePathParams pathParams;
-    public UpdateEmployeeRoleRequest withPathParams(UpdateEmployeeRolePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * An object containing the fields to POST for the request.
      * 
      * See the corresponding object definition for field details.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.V1EmployeeRole request;
-    public UpdateEmployeeRoleRequest withRequest(org.openapis.openapi.models.shared.V1EmployeeRole request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.V1EmployeeRole v1EmployeeRole;
+    public UpdateEmployeeRoleRequest withV1EmployeeRole(org.openapis.openapi.models.shared.V1EmployeeRole v1EmployeeRole) {
+        this.v1EmployeeRole = v1EmployeeRole;
         return this;
     }
     
-    
-    public UpdateEmployeeRoleSecurity security;
-    public UpdateEmployeeRoleRequest withSecurity(UpdateEmployeeRoleSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the role to modify.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=role_id")
+    public String roleId;
+    public UpdateEmployeeRoleRequest withRoleId(String roleId) {
+        this.roleId = roleId;
         return this;
     }
     

@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsCreateContentAttachmentRequest {
-    
-    public AppsCreateContentAttachmentPathParams pathParams;
-    public AppsCreateContentAttachmentRequest withPathParams(AppsCreateContentAttachmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public AppsCreateContentAttachmentRequestBody requestBody;
+    public AppsCreateContentAttachmentRequest withRequestBody(AppsCreateContentAttachmentRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public AppsCreateContentAttachmentRequestBody request;
-    public AppsCreateContentAttachmentRequest withRequest(AppsCreateContentAttachmentRequestBody request) {
-        this.request = request;
+    /**
+     * The `id` of the `content_reference` event.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=content_reference_id")
+    public Long contentReferenceId;
+    public AppsCreateContentAttachmentRequest withContentReferenceId(Long contentReferenceId) {
+        this.contentReferenceId = contentReferenceId;
+        return this;
+    }
+    
+    /**
+     * The owner of the repository. Determined from the `repository` `full_name` of the `content_reference` event.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public AppsCreateContentAttachmentRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. Determined from the `repository` `full_name` of the `content_reference` event.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public AppsCreateContentAttachmentRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

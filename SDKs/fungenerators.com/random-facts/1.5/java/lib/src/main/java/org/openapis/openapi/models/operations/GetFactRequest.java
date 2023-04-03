@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFactRequest {
-    
-    public GetFactQueryParams queryParams;
-    public GetFactRequest withQueryParams(GetFactQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetFactSecurity security;
-    public GetFactRequest withSecurity(GetFactSecurity security) {
-        this.security = security;
+    /**
+     * ID of the fact to fetch
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public GetFactRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

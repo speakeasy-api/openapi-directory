@@ -7,29 +7,25 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LinkCustomerToGiftCardRequest {
-    
-    public LinkCustomerToGiftCardPathParams pathParams;
-    public LinkCustomerToGiftCardRequest withPathParams(LinkCustomerToGiftCardPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * An object containing the fields to POST for the request.
      * 
      * See the corresponding object definition for field details.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.LinkCustomerToGiftCardRequest request;
-    public LinkCustomerToGiftCardRequest withRequest(org.openapis.openapi.models.shared.LinkCustomerToGiftCardRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.LinkCustomerToGiftCardRequest linkCustomerToGiftCardRequest;
+    public LinkCustomerToGiftCardRequest withLinkCustomerToGiftCardRequest(org.openapis.openapi.models.shared.LinkCustomerToGiftCardRequest linkCustomerToGiftCardRequest) {
+        this.linkCustomerToGiftCardRequest = linkCustomerToGiftCardRequest;
         return this;
     }
     
-    
-    public LinkCustomerToGiftCardSecurity security;
-    public LinkCustomerToGiftCardRequest withSecurity(LinkCustomerToGiftCardSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the gift card to link.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=gift_card_id")
+    public String giftCardId;
+    public LinkCustomerToGiftCardRequest withGiftCardId(String giftCardId) {
+        this.giftCardId = giftCardId;
         return this;
     }
     

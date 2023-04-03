@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchTaskChannelRequest {
-    
-    public FetchTaskChannelPathParams pathParams;
-    public FetchTaskChannelRequest withPathParams(FetchTaskChannelPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Task Channel resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchTaskChannelRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public FetchTaskChannelSecurity security;
-    public FetchTaskChannelRequest withSecurity(FetchTaskChannelSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchTaskChannelRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Workspace with the Task Channel to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkspaceSid")
+    public String workspaceSid;
+    public FetchTaskChannelRequest withWorkspaceSid(String workspaceSid) {
+        this.workspaceSid = workspaceSid;
         return this;
     }
     

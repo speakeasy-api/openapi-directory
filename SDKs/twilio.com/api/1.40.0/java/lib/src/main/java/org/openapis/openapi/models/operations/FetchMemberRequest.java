@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchMemberRequest {
-    
-    public FetchMemberPathParams pathParams;
-    public FetchMemberRequest withPathParams(FetchMemberPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Member resource(s) to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public FetchMemberRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public FetchMemberSecurity security;
-    public FetchMemberRequest withSecurity(FetchMemberSecurity security) {
-        this.security = security;
+    /**
+     * The [Call](https://www.twilio.com/docs/voice/api/call-resource) SID of the resource(s) to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CallSid")
+    public String callSid;
+    public FetchMemberRequest withCallSid(String callSid) {
+        this.callSid = callSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public FetchMemberRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Queue in which to find the members to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=QueueSid")
+    public String queueSid;
+    public FetchMemberRequest withQueueSid(String queueSid) {
+        this.queueSid = queueSid;
         return this;
     }
     

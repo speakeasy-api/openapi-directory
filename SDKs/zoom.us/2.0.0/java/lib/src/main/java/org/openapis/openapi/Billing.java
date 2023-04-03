@@ -52,7 +52,7 @@ public class Billing {
      */
     public org.openapis.openapi.models.operations.AccountBillingResponse accountBilling(org.openapis.openapi.models.operations.AccountBillingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountBillingPathParams.class, baseUrl, "/accounts/{accountId}/billing", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountBillingRequest.class, baseUrl, "/accounts/{accountId}/billing", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -107,13 +107,13 @@ public class Billing {
      */
     public org.openapis.openapi.models.operations.AccountBillingInvoicesResponse accountBillingInvoices(org.openapis.openapi.models.operations.AccountBillingInvoicesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountBillingInvoicesPathParams.class, baseUrl, "/accounts/{accountId}/billing/invoices", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountBillingInvoicesRequest.class, baseUrl, "/accounts/{accountId}/billing/invoices", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccountBillingInvoicesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccountBillingInvoicesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -169,12 +169,12 @@ public class Billing {
      */
     public org.openapis.openapi.models.operations.AccountBillingUpdateResponse accountBillingUpdate(org.openapis.openapi.models.operations.AccountBillingUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountBillingUpdatePathParams.class, baseUrl, "/accounts/{accountId}/billing", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountBillingUpdateRequest.class, baseUrl, "/accounts/{accountId}/billing", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -213,21 +213,22 @@ public class Billing {
      * **Scope:** `billing:master`&lt;br&gt;
      *  
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountPlanAddonCancelResponse accountPlanAddonCancel(org.openapis.openapi.models.operations.AccountPlanAddonCancelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountPlanAddonCancelResponse accountPlanAddonCancel(org.openapis.openapi.models.operations.AccountPlanAddonCancelRequest request, org.openapis.openapi.models.operations.AccountPlanAddonCancelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountPlanAddonCancelPathParams.class, baseUrl, "/accounts/{accountId}/plans/addons/status", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountPlanAddonCancelRequest.class, baseUrl, "/accounts/{accountId}/plans/addons/status", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -275,12 +276,12 @@ public class Billing {
      */
     public org.openapis.openapi.models.operations.AccountPlanAddonCreateResponse accountPlanAddonCreate(org.openapis.openapi.models.operations.AccountPlanAddonCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountPlanAddonCreatePathParams.class, baseUrl, "/accounts/{accountId}/plans/addons", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountPlanAddonCreateRequest.class, baseUrl, "/accounts/{accountId}/plans/addons", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -325,12 +326,12 @@ public class Billing {
      */
     public org.openapis.openapi.models.operations.AccountPlanAddonUpdateResponse accountPlanAddonUpdate(org.openapis.openapi.models.operations.AccountPlanAddonUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountPlanAddonUpdatePathParams.class, baseUrl, "/accounts/{accountId}/plans/addons", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountPlanAddonUpdateRequest.class, baseUrl, "/accounts/{accountId}/plans/addons", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -372,12 +373,12 @@ public class Billing {
      */
     public org.openapis.openapi.models.operations.AccountPlanBaseDeleteResponse accountPlanBaseDelete(org.openapis.openapi.models.operations.AccountPlanBaseDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountPlanBaseDeletePathParams.class, baseUrl, "/accounts/{accountId}/plans/base/status", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountPlanBaseDeleteRequest.class, baseUrl, "/accounts/{accountId}/plans/base/status", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -428,12 +429,12 @@ public class Billing {
      */
     public org.openapis.openapi.models.operations.AccountPlanBaseUpdateResponse accountPlanBaseUpdate(org.openapis.openapi.models.operations.AccountPlanBaseUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountPlanBaseUpdatePathParams.class, baseUrl, "/accounts/{accountId}/plans/base", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountPlanBaseUpdateRequest.class, baseUrl, "/accounts/{accountId}/plans/base", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -469,12 +470,12 @@ public class Billing {
      */
     public org.openapis.openapi.models.operations.AccountPlanCreateResponse accountPlanCreate(org.openapis.openapi.models.operations.AccountPlanCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountPlanCreatePathParams.class, baseUrl, "/accounts/{accountId}/plans", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountPlanCreateRequest.class, baseUrl, "/accounts/{accountId}/plans", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -539,7 +540,7 @@ public class Billing {
      */
     public org.openapis.openapi.models.operations.AccountPlansResponse accountPlans(org.openapis.openapi.models.operations.AccountPlansRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountPlansPathParams.class, baseUrl, "/accounts/{accountId}/plans", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountPlansRequest.class, baseUrl, "/accounts/{accountId}/plans", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -593,7 +594,7 @@ public class Billing {
      */
     public org.openapis.openapi.models.operations.DownloadInvoicePDFResponse downloadInvoicePDF(org.openapis.openapi.models.operations.DownloadInvoicePDFRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadInvoicePDFPathParams.class, baseUrl, "/api/download/billing/invoices/{invoiceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadInvoicePDFRequest.class, baseUrl, "/api/download/billing/invoices/{invoiceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -647,7 +648,7 @@ public class Billing {
      */
     public org.openapis.openapi.models.operations.GetAccountBillingInvoiceResponse getAccountBillingInvoice(org.openapis.openapi.models.operations.GetAccountBillingInvoiceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAccountBillingInvoicePathParams.class, baseUrl, "/accounts/{accountId}/billing/invoices/{invoiceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAccountBillingInvoiceRequest.class, baseUrl, "/accounts/{accountId}/billing/invoices/{invoiceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -694,19 +695,20 @@ public class Billing {
      * **Scope:** `billing:master` for master and sub accounts. `account:read:admin` for regular Zoom accounts.&lt;br&gt;
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPlanUsageResponse getPlanUsage(org.openapis.openapi.models.operations.GetPlanUsageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPlanUsageResponse getPlanUsage(org.openapis.openapi.models.operations.GetPlanUsageRequest request, org.openapis.openapi.models.operations.GetPlanUsageSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPlanUsagePathParams.class, baseUrl, "/accounts/{accountId}/plans/usage", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPlanUsageRequest.class, baseUrl, "/accounts/{accountId}/plans/usage", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

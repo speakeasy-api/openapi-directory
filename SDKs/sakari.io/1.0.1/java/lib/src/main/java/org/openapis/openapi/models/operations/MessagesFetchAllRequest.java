@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MessagesFetchAllRequest {
-    
-    public MessagesFetchAllPathParams pathParams;
-    public MessagesFetchAllRequest withPathParams(MessagesFetchAllPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Account to apply operations to
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public MessagesFetchAllRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
-    
-    public MessagesFetchAllQueryParams queryParams;
-    public MessagesFetchAllRequest withQueryParams(MessagesFetchAllQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * ID of contact
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contactId")
+    public String contactId;
+    public MessagesFetchAllRequest withContactId(String contactId) {
+        this.contactId = contactId;
         return this;
     }
     
+    /**
+     * ID of conversation
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=conversationId")
+    public String conversationId;
+    public MessagesFetchAllRequest withConversationId(String conversationId) {
+        this.conversationId = conversationId;
+        return this;
+    }
     
-    public MessagesFetchAllSecurity security;
-    public MessagesFetchAllRequest withSecurity(MessagesFetchAllSecurity security) {
-        this.security = security;
+    /**
+     * Maximum number of results to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public MessagesFetchAllRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Results to skip when paginating through a result set
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public MessagesFetchAllRequest withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     

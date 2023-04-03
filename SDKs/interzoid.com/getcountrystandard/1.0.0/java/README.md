@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetcountrystandardQueryParams;
 import org.openapis.openapi.models.operations.GetcountrystandardRequest;
 import org.openapis.openapi.models.operations.GetcountrystandardResponse;
 
@@ -28,11 +27,9 @@ public class Application {
                 .build();
 
             GetcountrystandardRequest req = new GetcountrystandardRequest() {{
-                queryParams = new GetcountrystandardQueryParams() {{
-                    country = "Malta";
-                    license = "provident";
-                }};
-            }};            
+                country = "Malta";
+                license = "provident";
+            }}            
 
             GetcountrystandardResponse res = sdk.countryNameStandardization.getcountrystandard(req);
 
@@ -46,7 +43,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### countryNameStandardization

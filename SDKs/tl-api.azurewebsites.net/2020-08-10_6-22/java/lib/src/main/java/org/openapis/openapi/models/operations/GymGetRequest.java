@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GymGetRequest {
-    
-    public GymGetPathParams pathParams;
-    public GymGetRequest withPathParams(GymGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * indentity number (primary key) for gym object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=gymID")
+    public Integer gymID;
+    public GymGetRequest withGymID(Integer gymID) {
+        this.gymID = gymID;
         return this;
     }
     

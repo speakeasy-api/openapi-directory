@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PlayerTournamentProjectedStatsWDraftkingsSalariesRequest {
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public PlayerTournamentProjectedStatsWDraftkingsSalariesFormatEnum format;
+    public PlayerTournamentProjectedStatsWDraftkingsSalariesRequest withFormat(PlayerTournamentProjectedStatsWDraftkingsSalariesFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public PlayerTournamentProjectedStatsWDraftkingsSalariesPathParams pathParams;
-    public PlayerTournamentProjectedStatsWDraftkingsSalariesRequest withPathParams(PlayerTournamentProjectedStatsWDraftkingsSalariesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The TournamentID of a tournament.  TournamentIDs can be found in the Tournaments API.  Valid entries are &lt;code&gt;78&lt;/code&gt;, &lt;code&gt;79&lt;/code&gt;, &lt;code&gt;80&lt;/code&gt;, etc.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tournamentid")
+    public String tournamentid;
+    public PlayerTournamentProjectedStatsWDraftkingsSalariesRequest withTournamentid(String tournamentid) {
+        this.tournamentid = tournamentid;
         return this;
     }
     

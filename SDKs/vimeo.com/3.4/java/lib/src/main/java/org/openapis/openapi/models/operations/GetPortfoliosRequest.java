@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPortfoliosRequest {
-    
-    public GetPortfoliosPathParams pathParams;
-    public GetPortfoliosRequest withPathParams(GetPortfoliosPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The sort direction of the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public GetPortfoliosDirectionEnum direction;
+    public GetPortfoliosRequest withDirection(GetPortfoliosDirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetPortfoliosRequest withPage(Double page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetPortfoliosQueryParams queryParams;
-    public GetPortfoliosRequest withQueryParams(GetPortfoliosQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetPortfoliosRequest withPerPage(Double perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The search query to use to filter the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public GetPortfoliosRequest withQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    
+    /**
+     * The way to sort the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetPortfoliosSortEnum sort;
+    public GetPortfoliosRequest withSort(GetPortfoliosSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public GetPortfoliosRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

@@ -4,27 +4,41 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWorkspacesWorkspacePermissionsRepositoriesRequest {
-    
-    public GetWorkspacesWorkspacePermissionsRepositoriesPathParams pathParams;
-    public GetWorkspacesWorkspacePermissionsRepositoriesRequest withPathParams(GetWorkspacesWorkspacePermissionsRepositoriesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Query string to narrow down the response as per
+     * [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public GetWorkspacesWorkspacePermissionsRepositoriesRequest withQ(String q) {
+        this.q = q;
         return this;
     }
     
-    
-    public GetWorkspacesWorkspacePermissionsRepositoriesQueryParams queryParams;
-    public GetWorkspacesWorkspacePermissionsRepositoriesRequest withQueryParams(GetWorkspacesWorkspacePermissionsRepositoriesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Name of a response property sort the result by as per
+     * [filtering and sorting](/cloud/bitbucket/rest/intro/#sorting-query-results).
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetWorkspacesWorkspacePermissionsRepositoriesRequest withSort(String sort) {
+        this.sort = sort;
         return this;
     }
     
-    
-    public GetWorkspacesWorkspacePermissionsRepositoriesSecurity security;
-    public GetWorkspacesWorkspacePermissionsRepositoriesRequest withSecurity(GetWorkspacesWorkspacePermissionsRepositoriesSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetWorkspacesWorkspacePermissionsRepositoriesRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

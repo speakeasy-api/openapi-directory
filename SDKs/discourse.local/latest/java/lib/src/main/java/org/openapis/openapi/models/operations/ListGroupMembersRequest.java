@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListGroupMembersRequest {
-    
-    public ListGroupMembersPathParams pathParams;
-    public ListGroupMembersRequest withPathParams(ListGroupMembersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Use group name instead of id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public ListGroupMembersRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

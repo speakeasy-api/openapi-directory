@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EstimationApiSendToClientFormRequest {
-    
-    public EstimationApiSendToClientFormHeaders headers;
-    public EstimationApiSendToClientFormRequest withHeaders(EstimationApiSendToClientFormHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
+    public org.openapis.openapi.models.shared.SendEstimationToClientApiModel sendEstimationToClientApiModel;
+    public EstimationApiSendToClientFormRequest withSendEstimationToClientApiModel(org.openapis.openapi.models.shared.SendEstimationToClientApiModel sendEstimationToClientApiModel) {
+        this.sendEstimationToClientApiModel = sendEstimationToClientApiModel;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.SendEstimationToClientApiModel request;
-    public EstimationApiSendToClientFormRequest withRequest(org.openapis.openapi.models.shared.SendEstimationToClientApiModel request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
+    public String xAuthKey;
+    public EstimationApiSendToClientFormRequest withXAuthKey(String xAuthKey) {
+        this.xAuthKey = xAuthKey;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
+    public String xAuthSecret;
+    public EstimationApiSendToClientFormRequest withXAuthSecret(String xAuthSecret) {
+        this.xAuthSecret = xAuthSecret;
         return this;
     }
     

@@ -122,26 +122,30 @@ public class SDK {
 		
 	}
 
-    public org.openapis.openapi.models.operations.FetchPhoneNumberResponse fetchPhoneNumber(org.openapis.openapi.models.operations.FetchPhoneNumberRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchPhoneNumberResponse fetchPhoneNumber(org.openapis.openapi.models.operations.FetchPhoneNumberRequest request, org.openapis.openapi.models.operations.FetchPhoneNumberSecurity security) throws Exception {
+        return this.fetchPhoneNumber(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.FetchPhoneNumberResponse fetchPhoneNumber(org.openapis.openapi.models.operations.FetchPhoneNumberRequest request, org.openapis.openapi.models.operations.FetchPhoneNumberSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_PHONE_NUMBER_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchPhoneNumberPathParams.class, baseUrl, "/v1/PhoneNumbers/{PhoneNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchPhoneNumberRequest.class, baseUrl, "/v1/PhoneNumbers/{PhoneNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FetchPhoneNumberQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FetchPhoneNumberRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

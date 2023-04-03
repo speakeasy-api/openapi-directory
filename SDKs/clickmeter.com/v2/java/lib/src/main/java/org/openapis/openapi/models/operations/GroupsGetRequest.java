@@ -4,13 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupsGetRequest {
+    /**
+     * Exclude groups created before this date (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAfter")
+    public String createdAfter;
+    public GroupsGetRequest withCreatedAfter(String createdAfter) {
+        this.createdAfter = createdAfter;
+        return this;
+    }
     
-    public GroupsGetQueryParams queryParams;
-    public GroupsGetRequest withQueryParams(GroupsGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Exclude groups created after this date (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdBefore")
+    public String createdBefore;
+    public GroupsGetRequest withCreatedBefore(String createdBefore) {
+        this.createdBefore = createdBefore;
+        return this;
+    }
+    
+    /**
+     * Maximum elements to retrieve. Default to 20 if not specified.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GroupsGetRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Where to start when retrieving elements. Default is 0 if not specified.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public GroupsGetRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Status of the group
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public GroupsGetStatusEnum status;
+    public GroupsGetRequest withStatus(GroupsGetStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * A comma separated list of tags you want to filter with.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
+    public String tags;
+    public GroupsGetRequest withTags(String tags) {
+        this.tags = tags;
+        return this;
+    }
+    
+    /**
+     * Filter fields by this pattern
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=textSearch")
+    public String textSearch;
+    public GroupsGetRequest withTextSearch(String textSearch) {
+        this.textSearch = textSearch;
+        return this;
+    }
+    
+    /**
+     * Write permission
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=write")
+    public Boolean write;
+    public GroupsGetRequest withWrite(Boolean write) {
+        this.write = write;
         return this;
     }
     

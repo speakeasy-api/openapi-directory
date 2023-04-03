@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestUploadHashRequest {
-    
-    public TestUploadHashPathParams pathParams;
-    public TestUploadHashRequest withPathParams(TestUploadHashPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * File hash information
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public TestUploadHashTestCloudFileHash request;
-    public TestUploadHashRequest withRequest(TestUploadHashTestCloudFileHash request) {
-        this.request = request;
+    public TestUploadHashTestCloudFileHash requestBody;
+    public TestUploadHashRequest withRequestBody(TestUploadHashTestCloudFileHash requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public TestUploadHashRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public TestUploadHashSecurity security;
-    public TestUploadHashRequest withSecurity(TestUploadHashSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public TestUploadHashRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
+    
+    /**
+     * The ID of the test run
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=test_run_id")
+    public String testRunId;
+    public TestUploadHashRequest withTestRunId(String testRunId) {
+        this.testRunId = testRunId;
         return this;
     }
     

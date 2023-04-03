@@ -4,20 +4,117 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchEditorialVideosRequest {
-    
-    public SearchEditorialVideosQueryParams queryParams;
-    public SearchEditorialVideosRequest withQueryParams(SearchEditorialVideosQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Show editorial content with each of the specified editorial categories; specify category names in a comma-separated list
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
+    public String category;
+    public SearchEditorialVideosRequest withCategory(String category) {
+        this.category = category;
         return this;
     }
     
+    /**
+     * Show only editorial video content that is available for distribution in a certain country
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public String country;
+    public SearchEditorialVideosRequest withCountry(String country) {
+        this.country = country;
+        return this;
+    }
     
-    public SearchEditorialVideosSecurity security;
-    public SearchEditorialVideosRequest withSecurity(SearchEditorialVideosSecurity security) {
-        this.security = security;
+    /**
+     * The cursor of the page with which to start fetching results; this cursor is returned from previous requests
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public SearchEditorialVideosRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
+    
+    /**
+     * Show only editorial video content generated on or before a specific date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_end")
+    public LocalDate dateEnd;
+    public SearchEditorialVideosRequest withDateEnd(LocalDate dateEnd) {
+        this.dateEnd = dateEnd;
+        return this;
+    }
+    
+    /**
+     * Show only editorial video content generated on or after a specific date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_start")
+    public LocalDate dateStart;
+    public SearchEditorialVideosRequest withDateStart(LocalDate dateStart) {
+        this.dateStart = dateStart;
+        return this;
+    }
+    
+    /**
+     * Show only editorial video content generated with specific frames per second
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fps")
+    public Double fps;
+    public SearchEditorialVideosRequest withFps(Double fps) {
+        this.fps = fps;
+        return this;
+    }
+    
+    /**
+     * Number of results per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public SearchEditorialVideosRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * One or more search terms separated by spaces
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public SearchEditorialVideosRequest withQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    
+    /**
+     * Show only editorial video content with specific resolution
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resolution")
+    public SearchEditorialVideosResolutionEnum resolution;
+    public SearchEditorialVideosRequest withResolution(SearchEditorialVideosResolutionEnum resolution) {
+        this.resolution = resolution;
+        return this;
+    }
+    
+    /**
+     * Sort by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public SearchEditorialVideosSortEnum sort;
+    public SearchEditorialVideosRequest withSort(SearchEditorialVideosSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Show only editorial video content from certain suppliers
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supplier_code")
+    public String[] supplierCode;
+    public SearchEditorialVideosRequest withSupplierCode(String[] supplierCode) {
+        this.supplierCode = supplierCode;
         return this;
     }
     

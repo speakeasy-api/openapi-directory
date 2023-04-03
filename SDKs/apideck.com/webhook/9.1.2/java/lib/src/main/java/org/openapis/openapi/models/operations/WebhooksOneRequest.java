@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WebhooksOneRequest {
-    
-    public WebhooksOnePathParams pathParams;
-    public WebhooksOneRequest withPathParams(WebhooksOnePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * JWT Webhook token that represents the unifiedApi and applicationId associated to the event source.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public WebhooksOneRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public WebhooksOneHeaders headers;
-    public WebhooksOneRequest withHeaders(WebhooksOneHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public WebhooksOneSecurity security;
-    public WebhooksOneRequest withSecurity(WebhooksOneSecurity security) {
-        this.security = security;
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public WebhooksOneRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
         return this;
     }
     

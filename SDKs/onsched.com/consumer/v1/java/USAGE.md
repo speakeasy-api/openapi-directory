@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.DeleteConsumerV1AppointmentsIdPathParams;
 import org.openapis.openapi.models.operations.DeleteConsumerV1AppointmentsIdRequest;
 import org.openapis.openapi.models.operations.DeleteConsumerV1AppointmentsIdResponse;
 
@@ -13,17 +12,13 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }})
                 .build();
 
             DeleteConsumerV1AppointmentsIdRequest req = new DeleteConsumerV1AppointmentsIdRequest() {{
-                pathParams = new DeleteConsumerV1AppointmentsIdPathParams() {{
-                    id = "corrupti";
-                }};
-            }};            
+                id = "corrupti";
+            }}            
 
             DeleteConsumerV1AppointmentsIdResponse res = sdk.appointments.deleteConsumerV1AppointmentsId(req);
 

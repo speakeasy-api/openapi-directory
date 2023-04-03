@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CatalogGetRandomProductsRequest {
-    
-    public CatalogGetRandomProductsPathParams pathParams;
-    public CatalogGetRandomProductsRequest withPathParams(CatalogGetRandomProductsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Your store identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public CatalogGetRandomProductsRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

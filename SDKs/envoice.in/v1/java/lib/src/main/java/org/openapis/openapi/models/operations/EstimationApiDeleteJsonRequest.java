@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EstimationApiDeleteJsonRequest {
-    
-    public EstimationApiDeleteJsonHeaders headers;
-    public EstimationApiDeleteJsonRequest withHeaders(EstimationApiDeleteJsonHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.EstimationDeleteApiModel estimationDeleteApiModel;
+    public EstimationApiDeleteJsonRequest withEstimationDeleteApiModel(org.openapis.openapi.models.shared.EstimationDeleteApiModel estimationDeleteApiModel) {
+        this.estimationDeleteApiModel = estimationDeleteApiModel;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.EstimationDeleteApiModel request;
-    public EstimationApiDeleteJsonRequest withRequest(org.openapis.openapi.models.shared.EstimationDeleteApiModel request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
+    public String xAuthKey;
+    public EstimationApiDeleteJsonRequest withXAuthKey(String xAuthKey) {
+        this.xAuthKey = xAuthKey;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
+    public String xAuthSecret;
+    public EstimationApiDeleteJsonRequest withXAuthSecret(String xAuthSecret) {
+        this.xAuthSecret = xAuthSecret;
         return this;
     }
     

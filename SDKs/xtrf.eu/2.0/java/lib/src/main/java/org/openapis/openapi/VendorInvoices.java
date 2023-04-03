@@ -43,12 +43,12 @@ public class VendorInvoices {
      */
     public org.openapis.openapi.models.operations.CreatePayment1Response createPayment1(org.openapis.openapi.models.operations.CreatePayment1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreatePayment1PathParams.class, baseUrl, "/accounting/providers/invoices/{invoiceId}/payments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreatePayment1Request.class, baseUrl, "/accounting/providers/invoices/{invoiceId}/payments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "paymentDTO", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -80,7 +80,7 @@ public class VendorInvoices {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Create4Response create4(org.openapis.openapi.models.operations.Create4Request request) throws Exception {
+    public org.openapis.openapi.models.operations.Create4Response create4(org.openapis.openapi.models.shared.ProviderInvoiceCreateDTO request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/accounting/providers/invoices");
         
@@ -127,7 +127,7 @@ public class VendorInvoices {
      */
     public org.openapis.openapi.models.operations.Delete6Response delete6(org.openapis.openapi.models.operations.Delete6Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Delete6PathParams.class, baseUrl, "/accounting/providers/invoices/{invoiceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Delete6Request.class, baseUrl, "/accounting/providers/invoices/{invoiceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -161,7 +161,7 @@ public class VendorInvoices {
      */
     public org.openapis.openapi.models.operations.Delete7Response delete7(org.openapis.openapi.models.operations.Delete7Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Delete7PathParams.class, baseUrl, "/accounting/providers/payments/{paymentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Delete7Request.class, baseUrl, "/accounting/providers/payments/{paymentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -201,7 +201,7 @@ public class VendorInvoices {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAllIds3QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAllIds3Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -247,7 +247,7 @@ public class VendorInvoices {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAll2QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAll2Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -287,7 +287,7 @@ public class VendorInvoices {
      */
     public org.openapis.openapi.models.operations.GetById3Response getById3(org.openapis.openapi.models.operations.GetById3Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetById3PathParams.class, baseUrl, "/accounting/providers/invoices/{invoiceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetById3Request.class, baseUrl, "/accounting/providers/invoices/{invoiceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -327,7 +327,7 @@ public class VendorInvoices {
      */
     public org.openapis.openapi.models.operations.GetDocument1Response getDocument1(org.openapis.openapi.models.operations.GetDocument1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDocument1PathParams.class, baseUrl, "/accounting/providers/invoices/{invoiceId}/document", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDocument1Request.class, baseUrl, "/accounting/providers/invoices/{invoiceId}/document", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -367,7 +367,7 @@ public class VendorInvoices {
      */
     public org.openapis.openapi.models.operations.GetPayments1Response getPayments1(org.openapis.openapi.models.operations.GetPayments1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayments1PathParams.class, baseUrl, "/accounting/providers/invoices/{invoiceId}/payments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayments1Request.class, baseUrl, "/accounting/providers/invoices/{invoiceId}/payments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -407,7 +407,7 @@ public class VendorInvoices {
      */
     public org.openapis.openapi.models.operations.SendResponse send(org.openapis.openapi.models.operations.SendRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SendPathParams.class, baseUrl, "/accounting/providers/invoices/{invoiceId}/send", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SendRequest.class, baseUrl, "/accounting/providers/invoices/{invoiceId}/send", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -441,12 +441,12 @@ public class VendorInvoices {
      */
     public org.openapis.openapi.models.operations.SetStatusResponse setStatus(org.openapis.openapi.models.operations.SetStatusRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetStatusPathParams.class, baseUrl, "/accounting/providers/invoices/{invoiceId}/status", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetStatusRequest.class, baseUrl, "/accounting/providers/invoices/{invoiceId}/status", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "statusRequestDTO", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

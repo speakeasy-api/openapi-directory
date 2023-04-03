@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETTestRenderTemplateRequest {
-    
-    public GETTestRenderTemplateQueryParams queryParams;
-    public GETTestRenderTemplateRequest withQueryParams(GETTestRenderTemplateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETTestRenderTemplateActionEnum action;
+    public GETTestRenderTemplateRequest withAction(GETTestRenderTemplateActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * A list of replacement values to apply to the template. This parameter is a JSON object, typically consisting of key-value pairs in which the keys correspond to replacement tags in the email template.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TemplateData")
+    public String templateData;
+    public GETTestRenderTemplateRequest withTemplateData(String templateData) {
+        this.templateData = templateData;
+        return this;
+    }
     
-    public GETTestRenderTemplateHeaders headers;
-    public GETTestRenderTemplateRequest withHeaders(GETTestRenderTemplateHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name of the template that you want to render.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TemplateName")
+    public String templateName;
+    public GETTestRenderTemplateRequest withTemplateName(String templateName) {
+        this.templateName = templateName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETTestRenderTemplateVersionEnum version;
+    public GETTestRenderTemplateRequest withVersion(GETTestRenderTemplateVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETTestRenderTemplateRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETTestRenderTemplateRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETTestRenderTemplateRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETTestRenderTemplateRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETTestRenderTemplateRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETTestRenderTemplateRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETTestRenderTemplateRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

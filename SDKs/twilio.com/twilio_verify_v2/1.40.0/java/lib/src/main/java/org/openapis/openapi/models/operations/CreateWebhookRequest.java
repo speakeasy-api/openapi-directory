@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateWebhookRequest {
-    
-    public CreateWebhookPathParams pathParams;
-    public CreateWebhookRequest withPathParams(CreateWebhookPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateWebhookCreateWebhookRequest request;
-    public CreateWebhookRequest withRequest(CreateWebhookCreateWebhookRequest request) {
-        this.request = request;
+    public CreateWebhookCreateWebhookRequest requestBody;
+    public CreateWebhookRequest withRequestBody(CreateWebhookCreateWebhookRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateWebhookSecurity security;
-    public CreateWebhookRequest withSecurity(CreateWebhookSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateWebhookRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique SID identifier of the Service.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public CreateWebhookRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AvatarsGetFlagRequest {
-    
-    public AvatarsGetFlagPathParams pathParams;
-    public AvatarsGetFlagRequest withPathParams(AvatarsGetFlagPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Country Code. ISO Alpha-2 country code format.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=code")
+    public String code;
+    public AvatarsGetFlagRequest withCode(String code) {
+        this.code = code;
         return this;
     }
     
-    
-    public AvatarsGetFlagQueryParams queryParams;
-    public AvatarsGetFlagRequest withQueryParams(AvatarsGetFlagQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Image height. Pass an integer between 0 to 2000. Defaults to 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=height")
+    public Integer height;
+    public AvatarsGetFlagRequest withHeight(Integer height) {
+        this.height = height;
         return this;
     }
     
+    /**
+     * Image quality. Pass an integer between 0 to 100. Defaults to 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quality")
+    public Integer quality;
+    public AvatarsGetFlagRequest withQuality(Integer quality) {
+        this.quality = quality;
+        return this;
+    }
     
-    public AvatarsGetFlagSecurity security;
-    public AvatarsGetFlagRequest withSecurity(AvatarsGetFlagSecurity security) {
-        this.security = security;
+    /**
+     * Image width. Pass an integer between 0 to 2000. Defaults to 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=width")
+    public Integer width;
+    public AvatarsGetFlagRequest withWidth(Integer width) {
+        this.width = width;
         return this;
     }
     

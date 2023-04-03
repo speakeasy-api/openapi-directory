@@ -57,12 +57,12 @@ public class FeatureFlagsAndSettings {
      */
     public org.openapis.openapi.models.operations.CreateSettingResponse createSetting(org.openapis.openapi.models.operations.CreateSettingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateSettingPathParams.class, baseUrl, "/v1/configs/{configId}/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateSettingRequest.class, baseUrl, "/v1/configs/{configId}/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createSettingInitialValues", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -111,7 +111,7 @@ public class FeatureFlagsAndSettings {
      */
     public org.openapis.openapi.models.operations.DeleteSettingResponse deleteSetting(org.openapis.openapi.models.operations.DeleteSettingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSettingPathParams.class, baseUrl, "/v1/settings/{settingId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSettingRequest.class, baseUrl, "/v1/settings/{settingId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -146,7 +146,7 @@ public class FeatureFlagsAndSettings {
      */
     public org.openapis.openapi.models.operations.GetSettingResponse getSetting(org.openapis.openapi.models.operations.GetSettingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSettingPathParams.class, baseUrl, "/v1/settings/{settingId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSettingRequest.class, baseUrl, "/v1/settings/{settingId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -195,7 +195,7 @@ public class FeatureFlagsAndSettings {
      */
     public org.openapis.openapi.models.operations.GetSettingsResponse getSettings(org.openapis.openapi.models.operations.GetSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSettingsPathParams.class, baseUrl, "/v1/configs/{configId}/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSettingsRequest.class, baseUrl, "/v1/configs/{configId}/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -306,12 +306,12 @@ public class FeatureFlagsAndSettings {
      */
     public org.openapis.openapi.models.operations.UpdateSettingResponse updateSetting(org.openapis.openapi.models.operations.UpdateSettingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSettingPathParams.class, baseUrl, "/v1/settings/{settingId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSettingRequest.class, baseUrl, "/v1/settings/{settingId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "jsonPatchInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostLegalEntitiesIdCheckVerificationErrorsRequest {
-    
-    public PostLegalEntitiesIdCheckVerificationErrorsPathParams pathParams;
-    public PostLegalEntitiesIdCheckVerificationErrorsRequest withPathParams(PostLegalEntitiesIdCheckVerificationErrorsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostLegalEntitiesIdCheckVerificationErrorsSecurity security;
-    public PostLegalEntitiesIdCheckVerificationErrorsRequest withSecurity(PostLegalEntitiesIdCheckVerificationErrorsSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the legal entity.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostLegalEntitiesIdCheckVerificationErrorsRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

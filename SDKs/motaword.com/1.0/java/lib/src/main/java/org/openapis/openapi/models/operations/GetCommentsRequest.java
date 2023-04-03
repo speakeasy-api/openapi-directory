@@ -4,20 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCommentsRequest {
-    
-    public GetCommentsPathParams pathParams;
-    public GetCommentsRequest withPathParams(GetCommentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetCommentsRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetCommentsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
     
-    public GetCommentsQueryParams queryParams;
-    public GetCommentsRequest withQueryParams(GetCommentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public Long projectId;
+    public GetCommentsRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     

@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PerformPostActionRequest {
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Key")
+    public String apiKey;
+    public PerformPostActionRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public PerformPostActionHeaders headers;
-    public PerformPostActionRequest withHeaders(PerformPostActionHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Username")
+    public String apiUsername;
+    public PerformPostActionRequest withApiUsername(String apiUsername) {
+        this.apiUsername = apiUsername;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PerformPostActionRequestBody request;
-    public PerformPostActionRequest withRequest(PerformPostActionRequestBody request) {
-        this.request = request;
+    public PerformPostActionRequestBody requestBody;
+    public PerformPostActionRequest withRequestBody(PerformPostActionRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

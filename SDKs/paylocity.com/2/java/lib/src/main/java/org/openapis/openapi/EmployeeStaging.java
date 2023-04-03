@@ -34,24 +34,25 @@ public class EmployeeStaging {
      * Add new employee to Web Link
      * Add new employee to Web Link will send partially completed or potentially erroneous new hire record to Web Link, where it can be corrected and competed by company administrator or authorized Paylocity Service Bureau employee.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddNewEmployeeToWebLinkResponse addNewEmployeeToWebLink(org.openapis.openapi.models.operations.AddNewEmployeeToWebLinkRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddNewEmployeeToWebLinkResponse addNewEmployeeToWebLink(org.openapis.openapi.models.operations.AddNewEmployeeToWebLinkRequest request, org.openapis.openapi.models.operations.AddNewEmployeeToWebLinkSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddNewEmployeeToWebLinkPathParams.class, baseUrl, "/v2/weblinkstaging/companies/{companyId}/employees/newemployees", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddNewEmployeeToWebLinkRequest.class, baseUrl, "/v2/weblinkstaging/companies/{companyId}/employees/newemployees", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "stagedEmployee", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

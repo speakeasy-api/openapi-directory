@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutHooksIdJsonRequest {
-    
-    public PutHooksIdJsonPathParams pathParams;
-    public PutHooksIdJsonRequest withPathParams(PutHooksIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutHooksIdJsonQueryParams queryParams;
-    public PutHooksIdJsonRequest withQueryParams(PutHooksIdJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Hook parameters.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.HookEdit request;
-    public PutHooksIdJsonRequest withRequest(org.openapis.openapi.models.shared.HookEdit request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.HookEdit hookEdit;
+    public PutHooksIdJsonRequest withHookEdit(org.openapis.openapi.models.shared.HookEdit hookEdit) {
+        this.hookEdit = hookEdit;
+        return this;
+    }
+    
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public PutHooksIdJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
+        return this;
+    }
+    
+    /**
+     * Id of the Hook
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PutHooksIdJsonRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public PutHooksIdJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

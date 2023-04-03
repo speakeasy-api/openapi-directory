@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoListGitHooksRequest {
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoListGitHooksRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public RepoListGitHooksPathParams pathParams;
-    public RepoListGitHooksRequest withPathParams(RepoListGitHooksPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoListGitHooksRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

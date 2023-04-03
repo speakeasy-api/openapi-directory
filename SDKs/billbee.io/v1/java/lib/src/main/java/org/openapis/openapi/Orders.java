@@ -88,12 +88,12 @@ public class Orders {
      */
     public org.openapis.openapi.models.operations.OrderApiAddShipmentFormResponse orderApiAddShipmentForm(org.openapis.openapi.models.operations.OrderApiAddShipmentFormRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiAddShipmentFormPathParams.class, baseUrl, "/api/v1/orders/{id}/shipment", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiAddShipmentFormRequest.class, baseUrl, "/api/v1/orders/{id}/shipment", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "rechnungsdruckWebAppControllersApiApiAddShipmentToOrderModel", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -137,12 +137,12 @@ public class Orders {
      */
     public org.openapis.openapi.models.operations.OrderApiAddShipmentJsonResponse orderApiAddShipmentJson(org.openapis.openapi.models.operations.OrderApiAddShipmentJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiAddShipmentJsonPathParams.class, baseUrl, "/api/v1/orders/{id}/shipment", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiAddShipmentJsonRequest.class, baseUrl, "/api/v1/orders/{id}/shipment", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "rechnungsdruckWebAppControllersApiApiAddShipmentToOrderModel", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -186,12 +186,12 @@ public class Orders {
      */
     public org.openapis.openapi.models.operations.OrderApiAddShipmentRawResponse orderApiAddShipmentRaw(org.openapis.openapi.models.operations.OrderApiAddShipmentRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiAddShipmentRawPathParams.class, baseUrl, "/api/v1/orders/{id}/shipment", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiAddShipmentRawRequest.class, baseUrl, "/api/v1/orders/{id}/shipment", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -235,13 +235,13 @@ public class Orders {
      */
     public org.openapis.openapi.models.operations.OrderApiCreateDeliveryNoteResponse orderApiCreateDeliveryNote(org.openapis.openapi.models.operations.OrderApiCreateDeliveryNoteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiCreateDeliveryNotePathParams.class, baseUrl, "/api/v1/orders/CreateDeliveryNote/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiCreateDeliveryNoteRequest.class, baseUrl, "/api/v1/orders/CreateDeliveryNote/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OrderApiCreateDeliveryNoteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OrderApiCreateDeliveryNoteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -285,13 +285,13 @@ public class Orders {
      */
     public org.openapis.openapi.models.operations.OrderApiCreateInvoiceResponse orderApiCreateInvoice(org.openapis.openapi.models.operations.OrderApiCreateInvoiceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiCreateInvoicePathParams.class, baseUrl, "/api/v1/orders/CreateInvoice/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiCreateInvoiceRequest.class, baseUrl, "/api/v1/orders/CreateInvoice/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OrderApiCreateInvoiceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OrderApiCreateInvoiceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -335,7 +335,7 @@ public class Orders {
      */
     public org.openapis.openapi.models.operations.OrderApiFindResponse orderApiFind(org.openapis.openapi.models.operations.OrderApiFindRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiFindPathParams.class, baseUrl, "/api/v1/orders/find/{id}/{partner}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiFindRequest.class, baseUrl, "/api/v1/orders/find/{id}/{partner}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -379,13 +379,13 @@ public class Orders {
      */
     public org.openapis.openapi.models.operations.OrderApiGetResponse orderApiGet(org.openapis.openapi.models.operations.OrderApiGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiGetPathParams.class, baseUrl, "/api/v1/orders/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiGetRequest.class, baseUrl, "/api/v1/orders/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OrderApiGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OrderApiGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -439,7 +439,7 @@ public class Orders {
      */
     public org.openapis.openapi.models.operations.OrderApiGetByExtRefResponse orderApiGetByExtRef(org.openapis.openapi.models.operations.OrderApiGetByExtRefRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiGetByExtRefPathParams.class, baseUrl, "/api/v1/orders/findbyextref/{extRef}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiGetByExtRefRequest.class, baseUrl, "/api/v1/orders/findbyextref/{extRef}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -499,7 +499,7 @@ public class Orders {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OrderApiGetInvoiceListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OrderApiGetInvoiceListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -549,7 +549,7 @@ public class Orders {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OrderApiGetListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OrderApiGetListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -646,12 +646,12 @@ public class Orders {
      */
     public org.openapis.openapi.models.operations.OrderApiParsePlaceholdersFormResponse orderApiParsePlaceholdersForm(org.openapis.openapi.models.operations.OrderApiParsePlaceholdersFormRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiParsePlaceholdersFormPathParams.class, baseUrl, "/api/v1/orders/{id}/parse-placeholders", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiParsePlaceholdersFormRequest.class, baseUrl, "/api/v1/orders/{id}/parse-placeholders", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "rechnungsdruckWebAppControllersApiOrderApiControllerParseTextContainer", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -695,12 +695,12 @@ public class Orders {
      */
     public org.openapis.openapi.models.operations.OrderApiParsePlaceholdersJsonResponse orderApiParsePlaceholdersJson(org.openapis.openapi.models.operations.OrderApiParsePlaceholdersJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiParsePlaceholdersJsonPathParams.class, baseUrl, "/api/v1/orders/{id}/parse-placeholders", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiParsePlaceholdersJsonRequest.class, baseUrl, "/api/v1/orders/{id}/parse-placeholders", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "rechnungsdruckWebAppControllersApiOrderApiControllerParseTextContainer", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -744,12 +744,12 @@ public class Orders {
      */
     public org.openapis.openapi.models.operations.OrderApiParsePlaceholdersRawResponse orderApiParsePlaceholdersRaw(org.openapis.openapi.models.operations.OrderApiParsePlaceholdersRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiParsePlaceholdersRawPathParams.class, baseUrl, "/api/v1/orders/{id}/parse-placeholders", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiParsePlaceholdersRawRequest.class, baseUrl, "/api/v1/orders/{id}/parse-placeholders", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -793,12 +793,12 @@ public class Orders {
      */
     public org.openapis.openapi.models.operations.OrderApiPatchOrderResponse orderApiPatchOrder(org.openapis.openapi.models.operations.OrderApiPatchOrderRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiPatchOrderPathParams.class, baseUrl, "/api/v1/orders/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiPatchOrderRequest.class, baseUrl, "/api/v1/orders/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -859,13 +859,13 @@ public class Orders {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "billbeeInterfacesBillbeeAPIModelOrderInput", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OrderApiPostNewOrderFormQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OrderApiPostNewOrderFormRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -928,13 +928,13 @@ public class Orders {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "billbeeInterfacesBillbeeAPIModelOrderInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OrderApiPostNewOrderJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OrderApiPostNewOrderJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -997,13 +997,13 @@ public class Orders {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OrderApiPostNewOrderRawQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OrderApiPostNewOrderRawRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1059,12 +1059,12 @@ public class Orders {
      */
     public org.openapis.openapi.models.operations.OrderApiSendMessageFormResponse orderApiSendMessageForm(org.openapis.openapi.models.operations.OrderApiSendMessageFormRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiSendMessageFormPathParams.class, baseUrl, "/api/v1/orders/{id}/send-message", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiSendMessageFormRequest.class, baseUrl, "/api/v1/orders/{id}/send-message", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "rechnungsdruckWebAppControllersApiOrderApiControllerSendMessageModel", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1108,12 +1108,12 @@ public class Orders {
      */
     public org.openapis.openapi.models.operations.OrderApiSendMessageJsonResponse orderApiSendMessageJson(org.openapis.openapi.models.operations.OrderApiSendMessageJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiSendMessageJsonPathParams.class, baseUrl, "/api/v1/orders/{id}/send-message", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiSendMessageJsonRequest.class, baseUrl, "/api/v1/orders/{id}/send-message", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "rechnungsdruckWebAppControllersApiOrderApiControllerSendMessageModel", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1157,12 +1157,12 @@ public class Orders {
      */
     public org.openapis.openapi.models.operations.OrderApiSendMessageRawResponse orderApiSendMessageRaw(org.openapis.openapi.models.operations.OrderApiSendMessageRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiSendMessageRawPathParams.class, baseUrl, "/api/v1/orders/{id}/send-message", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiSendMessageRawRequest.class, baseUrl, "/api/v1/orders/{id}/send-message", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1207,12 +1207,12 @@ public class Orders {
      */
     public org.openapis.openapi.models.operations.OrderApiTagsCreateFormResponse orderApiTagsCreateForm(org.openapis.openapi.models.operations.OrderApiTagsCreateFormRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiTagsCreateFormPathParams.class, baseUrl, "/api/v1/orders/{id}/tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiTagsCreateFormRequest.class, baseUrl, "/api/v1/orders/{id}/tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "rechnungsdruckWebAppControllersApiOrderTagCreate", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1257,12 +1257,12 @@ public class Orders {
      */
     public org.openapis.openapi.models.operations.OrderApiTagsCreateJsonResponse orderApiTagsCreateJson(org.openapis.openapi.models.operations.OrderApiTagsCreateJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiTagsCreateJsonPathParams.class, baseUrl, "/api/v1/orders/{id}/tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiTagsCreateJsonRequest.class, baseUrl, "/api/v1/orders/{id}/tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "rechnungsdruckWebAppControllersApiOrderTagCreate", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1307,12 +1307,12 @@ public class Orders {
      */
     public org.openapis.openapi.models.operations.OrderApiTagsCreateRawResponse orderApiTagsCreateRaw(org.openapis.openapi.models.operations.OrderApiTagsCreateRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiTagsCreateRawPathParams.class, baseUrl, "/api/v1/orders/{id}/tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiTagsCreateRawRequest.class, baseUrl, "/api/v1/orders/{id}/tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1357,12 +1357,12 @@ public class Orders {
      */
     public org.openapis.openapi.models.operations.OrderApiTagsUpdateFormResponse orderApiTagsUpdateForm(org.openapis.openapi.models.operations.OrderApiTagsUpdateFormRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiTagsUpdateFormPathParams.class, baseUrl, "/api/v1/orders/{id}/tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiTagsUpdateFormRequest.class, baseUrl, "/api/v1/orders/{id}/tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "rechnungsdruckWebAppControllersApiOrderTagCreate", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1407,12 +1407,12 @@ public class Orders {
      */
     public org.openapis.openapi.models.operations.OrderApiTagsUpdateJsonResponse orderApiTagsUpdateJson(org.openapis.openapi.models.operations.OrderApiTagsUpdateJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiTagsUpdateJsonPathParams.class, baseUrl, "/api/v1/orders/{id}/tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiTagsUpdateJsonRequest.class, baseUrl, "/api/v1/orders/{id}/tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "rechnungsdruckWebAppControllersApiOrderTagCreate", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1457,12 +1457,12 @@ public class Orders {
      */
     public org.openapis.openapi.models.operations.OrderApiTagsUpdateRawResponse orderApiTagsUpdateRaw(org.openapis.openapi.models.operations.OrderApiTagsUpdateRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiTagsUpdateRawPathParams.class, baseUrl, "/api/v1/orders/{id}/tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiTagsUpdateRawRequest.class, baseUrl, "/api/v1/orders/{id}/tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1506,12 +1506,12 @@ public class Orders {
      */
     public org.openapis.openapi.models.operations.OrderApiTriggerEventFormResponse orderApiTriggerEventForm(org.openapis.openapi.models.operations.OrderApiTriggerEventFormRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiTriggerEventFormPathParams.class, baseUrl, "/api/v1/orders/{id}/trigger-event", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiTriggerEventFormRequest.class, baseUrl, "/api/v1/orders/{id}/trigger-event", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "rechnungsdruckWebAppControllersApiOrderApiControllerTriggerEventContainer", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1555,12 +1555,12 @@ public class Orders {
      */
     public org.openapis.openapi.models.operations.OrderApiTriggerEventJsonResponse orderApiTriggerEventJson(org.openapis.openapi.models.operations.OrderApiTriggerEventJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiTriggerEventJsonPathParams.class, baseUrl, "/api/v1/orders/{id}/trigger-event", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiTriggerEventJsonRequest.class, baseUrl, "/api/v1/orders/{id}/trigger-event", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "rechnungsdruckWebAppControllersApiOrderApiControllerTriggerEventContainer", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1604,12 +1604,12 @@ public class Orders {
      */
     public org.openapis.openapi.models.operations.OrderApiTriggerEventRawResponse orderApiTriggerEventRaw(org.openapis.openapi.models.operations.OrderApiTriggerEventRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiTriggerEventRawPathParams.class, baseUrl, "/api/v1/orders/{id}/trigger-event", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiTriggerEventRawRequest.class, baseUrl, "/api/v1/orders/{id}/trigger-event", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1674,12 +1674,12 @@ public class Orders {
      */
     public org.openapis.openapi.models.operations.OrderApiUpdateStateFormResponse orderApiUpdateStateForm(org.openapis.openapi.models.operations.OrderApiUpdateStateFormRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiUpdateStateFormPathParams.class, baseUrl, "/api/v1/orders/{id}/orderstate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiUpdateStateFormRequest.class, baseUrl, "/api/v1/orders/{id}/orderstate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "rechnungsdruckWebAppControllersApiOrderStateUpdate", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1744,12 +1744,12 @@ public class Orders {
      */
     public org.openapis.openapi.models.operations.OrderApiUpdateStateJsonResponse orderApiUpdateStateJson(org.openapis.openapi.models.operations.OrderApiUpdateStateJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiUpdateStateJsonPathParams.class, baseUrl, "/api/v1/orders/{id}/orderstate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiUpdateStateJsonRequest.class, baseUrl, "/api/v1/orders/{id}/orderstate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "rechnungsdruckWebAppControllersApiOrderStateUpdate", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1814,12 +1814,12 @@ public class Orders {
      */
     public org.openapis.openapi.models.operations.OrderApiUpdateStateRawResponse orderApiUpdateStateRaw(org.openapis.openapi.models.operations.OrderApiUpdateStateRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiUpdateStateRawPathParams.class, baseUrl, "/api/v1/orders/{id}/orderstate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiUpdateStateRawRequest.class, baseUrl, "/api/v1/orders/{id}/orderstate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1861,7 +1861,7 @@ public class Orders {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SearchSearchFormResponse searchSearchForm(org.openapis.openapi.models.operations.SearchSearchFormRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SearchSearchFormResponse searchSearchForm(org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiSearchControllerSearchModel request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/search");
         
@@ -1920,7 +1920,7 @@ public class Orders {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SearchSearchJsonResponse searchSearchJson(org.openapis.openapi.models.operations.SearchSearchJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SearchSearchJsonResponse searchSearchJson(org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiSearchControllerSearchModel request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/search");
         
@@ -1979,7 +1979,7 @@ public class Orders {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SearchSearchRawResponse searchSearchRaw(org.openapis.openapi.models.operations.SearchSearchRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SearchSearchRawResponse searchSearchRaw(byte[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/search");
         

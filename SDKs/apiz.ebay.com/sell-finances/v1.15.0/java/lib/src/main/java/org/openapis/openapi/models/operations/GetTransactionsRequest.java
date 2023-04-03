@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTransactionsRequest {
-    
-    public GetTransactionsQueryParams queryParams;
-    public GetTransactionsRequest withQueryParams(GetTransactionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * This header identifies the seller's eBay marketplace. It is required for all marketplaces outside of the US. See &lt;a href="/api-docs/static/rest-request-components.html#marketpl " target="_blank "&gt;HTTP request headers&lt;/a&gt; for the marketplace ID values.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
+    public String xEbayCMarketplaceId;
+    public GetTransactionsRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
+        this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
     }
     
-    
-    public GetTransactionsHeaders headers;
-    public GetTransactionsRequest withHeaders(GetTransactionsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Numerous filters are available for the &lt;strong&gt;getTransactions&lt;/strong&gt; method, and these filters are discussed below. One or more of these filter types can be used. If none of these filters are used, all monetary transactions from the last 90 days are returned:&lt;ul&gt;&lt;li&gt;&lt;b&gt;transactionDate&lt;/b&gt;: search for monetary transactions that occurred within a specific range of dates.&lt;br&gt;&lt;br&gt;&lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; All dates must be input using UTC format (&lt;code&gt;YYYY-MM-DDTHH:MM:SS.SSSZ&lt;/code&gt;) and should be adjusted accordingly for the local timezone of the user.&lt;/span&gt;&lt;br&gt;&lt;br&gt;Below is the proper syntax to use if filtering by a date range: &lt;br&gt;&lt;br&gt;&lt;code&gt;https://apiz.ebay.com/sell/finances/v1/transaction?filter=transactionDate:[2018-10-23T00:00:01.000Z..2018-11-09T00:00:01.000Z]&lt;/code&gt;&lt;br&gt;&lt;br&gt;Alternatively, the user could omit the ending date, and the date range would include the starting date and up to 90 days past that date, or the current date if the starting date is less than 90 days in the past.&lt;/li&gt;  &lt;li&gt;&lt;b&gt;transactionType&lt;/b&gt;: search for a specific type of monetary transaction. The supported &lt;b&gt;transactionType&lt;/b&gt; values are as follows:&lt;ul&gt;&lt;li&gt;&lt;code&gt;SALE&lt;/code&gt;: a sales order.&lt;/li&gt;&lt;li&gt; &lt;code&gt;REFUND&lt;/code&gt;: a refund to the buyer after an order cancellation or return.&lt;/li&gt;&lt;li&gt;&lt;code&gt;CREDIT&lt;/code&gt;: a credit issued by eBay to the seller's account.&lt;/li&gt;&lt;li&gt;&lt;code&gt;DISPUTE&lt;/code&gt;: a monetary transaction associated with a payment dispute between buyer and seller.&lt;/li&gt;&lt;li&gt;&lt;code&gt;NON_SALE_CHARGE&lt;/code&gt;: a monetary transaction involving a seller transferring money to eBay for the balance of a charge for NON_SALE_CHARGE transactions (transactions that contain non-transactional seller fees). These can include a one-time payment, monthly/yearly subscription fees charged monthly, NRC charges, and fee credits.&lt;/li&gt;&lt;li&gt;&lt;code&gt;SHIPPING_LABEL&lt;/code&gt;: a monetary transaction where eBay is billing the seller for an eBay shipping label. Note that the shipping label functionality will initially only be available to a select number of sellers.&lt;/li&gt;&lt;li&gt;&lt;code&gt;TRANSFER&lt;/code&gt;: A transfer is a monetary transaction where eBay is billing the seller for reimbursement of a charge. An example of a transfer is a seller reimbursing eBay for a buyer refund.&lt;/li&gt;&lt;li&gt;&lt;code&gt;ADJUSTMENT&lt;/code&gt;: An adjustment is a monetary transaction where eBay is crediting or debiting the seller's account.&lt;/li&gt;&lt;li&gt;&lt;code&gt;WITHDRAWAL&lt;/code&gt;: A withdrawal is a monetary transaction where the seller requests an on-demand payout from eBay.&lt;br&gt;&lt;br&gt;&lt;span class="tablenote"&gt;&lt;b&gt;Note:&lt;/b&gt; On-demand payout is not available for sellers who are already on a &lt;b&gt;daily&lt;/b&gt; payout schedule. In order to initiate an on-demand payout, a seller must be on a &lt;b&gt;weekly&lt;/b&gt;, &lt;b&gt;bi-weekly&lt;/b&gt;, or &lt;b&gt;monthly&lt;/b&gt; payout schedule.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;LOAN_REPAYMENT&lt;/code&gt;: A monetary transaction related to the repayment of an outstanding loan balance for approved participants enrolled in the &lt;a href="https://pages.ebay.com/sellercapital/ " target="_blank "&gt;eBay Seller Capital financing program&lt;/a&gt;.&lt;br&gt;&lt;br&gt;&lt;span class="tablenote"&gt;&lt;b&gt;Note:&lt;/b&gt; eBay Seller Capital financing is only available in select marketplaces. Refer to &lt;a href="/api-docs/sell/finances/overview.html#loans " target="_blank "&gt;Marketplace availability for eBay Seller Capital funding program&lt;/a&gt; for current marketplace eligibility.&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;Below is the proper syntax to use if filtering by a monetary transaction type: &lt;br&gt;&lt;br&gt;&lt;code&gt;https://apiz.ebay.com/sell/finances/v1/transaction?filter=transactionType:{SALE}&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;transactionStatus&lt;/b&gt;: this filter type is only applicable for sales orders, and allows the user to filter seller payouts in a particular state.  The supported &lt;b&gt;transactionStatus&lt;/b&gt; values are as follows:&lt;ul&gt;&lt;li&gt;&lt;code&gt;PAYOUT&lt;/code&gt;: this indicates that the proceeds from the corresponding sales order has been paid out to the seller's account.&lt;/li&gt;&lt;li&gt;&lt;code&gt;FUNDS_PROCESSING&lt;/code&gt;: this indicates that the funds for the corresponding monetary transaction are currently being processed.&lt;/li&gt;&lt;li&gt;&lt;code&gt;FUNDS_AVAILABLE_FOR_PAYOUT&lt;/code&gt;: this indicates that the proceeds from the corresponding sales order are available for a seller payout, but processing has not yet begun.&lt;/li&gt;&lt;li&gt;&lt;code&gt;FUNDS_ON_HOLD&lt;/code&gt;: this indicates that the proceeds from the corresponding sales order are currently being held by eBay, and are not yet available for a seller payout.&lt;/li&gt;&lt;li&gt;&lt;code&gt;COMPLETED&lt;/code&gt;: this indicates that the funds for the corresponding &lt;code&gt;TRANSFER&lt;/code&gt; monetary transaction have transferred and the transaction has completed.&lt;/li&gt;&lt;li&gt;&lt;code&gt;FAILED&lt;/code&gt;: this indicates the process has failed for the corresponding &lt;code&gt;TRANSFER&lt;/code&gt; monetary transaction. &lt;/li&gt;&lt;/ul&gt;Below is the proper syntax to use if filtering by transaction status: &lt;br&gt;&lt;br&gt;&lt;code&gt;https://apiz.ebay.com/sell/finances/v1/transaction?filter=transactionStatus:{PAYOUT}&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;buyerUsername&lt;/b&gt;: the eBay user ID of the buyer involved in the monetary transaction. Only monetary transactions involving this buyer are returned. Below is the proper syntax to use if filtering by a specific eBay buyer: &lt;br&gt;&lt;br&gt;&lt;code&gt;https://apiz.ebay.com/sell/finances/v1/transaction?filter=buyerUsername:{buyer1234}&lt;/code&gt; &lt;/li&gt;&lt;li&gt;&lt;b&gt;salesRecordReference&lt;/b&gt;: the unique Selling Manager identifier of the order involved in the monetary transaction. Only monetary transactions involving this Selling Manager Sales Record ID are returned. Below is the proper syntax to use if filtering by a specific Selling Manager Sales Record ID: &lt;br&gt;&lt;br&gt;&lt;code&gt;https://apiz.ebay.com/sell/finances/v1/transaction?filter=salesRecordReference:{123}&lt;/code&gt;&lt;br&gt;&lt;br&gt;&lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; For all orders originating after February 1, 2020, a value of &lt;code&gt;0&lt;/code&gt; will be returned in the &lt;b&gt;salesRecordReference&lt;/b&gt; field. So, this filter will only be useful to retrieve orders than occurred before this date. &lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;payoutId&lt;/b&gt;: the unique identifier of a seller payout. This value is auto-generated by eBay once the seller payout is set to be processed. Only monetary transactions involving this Payout ID are returned. Below is the proper syntax to use if filtering by a specific Payout ID: &lt;br&gt;&lt;br&gt;&lt;code&gt;https://apiz.ebay.com/sell/finances/v1/transaction?filter=payoutId:{5********8}&lt;/code&gt;  &lt;/li&gt;&lt;li&gt;&lt;b&gt;transactionId&lt;/b&gt;: the unique identifier of a monetary transaction. For a sales order, the &lt;b&gt;orderId&lt;/b&gt; filter should be used instead. Only the monetary transaction defined by the identifier is returned.&lt;br&gt;&lt;br&gt;&lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; This filter cannot be used alone; the &lt;b&gt;transactionType&lt;/b&gt; must also be specified when filtering by transaction ID.&lt;/span&gt;&lt;br&gt;&lt;br&gt;Below is the proper syntax to use if filtering by a specific transaction ID: &lt;br&gt;&lt;br&gt;&lt;code&gt;https://apiz.ebay.com/sell/finances/v1/transaction?filter=transactionId:{0*-0***0-3***3}&amp;filter=transactionType:{SALE}&lt;/code&gt; &lt;/li&gt;&lt;li&gt;&lt;b&gt;orderId&lt;/b&gt;: the unique identifier of a sales order. Only monetary transaction(s) associated with this &lt;b&gt;orderId&lt;/b&gt; value are returned.&lt;br&gt;&lt;br&gt;For any other monetary transaction, the &lt;b&gt;transactionId&lt;/b&gt; filter should be used instead.&lt;br&gt;&lt;br&gt;Below is the proper syntax to use if filtering by a specific order ID:&lt;br&gt;&lt;br&gt;&lt;code&gt;https://apiz.ebay.com/sell/finances/v1/transaction?filter=orderId:{0*-0***0-3***3}&lt;/code&gt; &lt;/li&gt;&lt;/ul&gt; For implementation help, refer to eBay API documentation at https://developer.ebay.com/api-docs/sell/finances/types/cos:FilterField
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public GetTransactionsRequest withFilter(String filter) {
+        this.filter = filter;
         return this;
     }
     
+    /**
+     * The number of monetary transactions to return per page of the result set. Use this parameter in conjunction with the &lt;b&gt;offset&lt;/b&gt; parameter to control the pagination of the output. &lt;br&gt;&lt;br&gt; For example, if &lt;b&gt;offset&lt;/b&gt; is set to &lt;code&gt;10&lt;/code&gt; and &lt;b&gt;limit&lt;/b&gt; is set to &lt;code&gt;10&lt;/code&gt;, the method retrieves monetary transactions 11 thru 20 from the result set. &lt;br&gt;&lt;br&gt; &lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; This feature employs a zero-based list, where the first item in the list has an offset of &lt;code&gt;0&lt;/code&gt;.&lt;/span&gt; &lt;br&gt;&lt;br&gt; &lt;b&gt;Maximum:&lt;/b&gt;&lt;code&gt; 1000&lt;/code&gt; &lt;br&gt; &lt;b&gt;Default:&lt;/b&gt;&lt;code&gt; 20&lt;/code&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public String limit;
+    public GetTransactionsRequest withLimit(String limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetTransactionsSecurity security;
-    public GetTransactionsRequest withSecurity(GetTransactionsSecurity security) {
-        this.security = security;
+    /**
+     * This integer value indicates the actual position that the first monetary transaction returned on the current page has in the results set. So, if you wanted to view the 11th monetary transaction of the result set, you would set the &lt;strong&gt;offset&lt;/strong&gt; value in the request to &lt;code&gt;10&lt;/code&gt;. &lt;br&gt;&lt;br&gt;In the request, you can use the &lt;b&gt;offset&lt;/b&gt; parameter in conjunction with the &lt;b&gt;limit&lt;/b&gt; parameter to control the pagination of the output. For example, if &lt;b&gt;offset&lt;/b&gt; is set to &lt;code&gt;30&lt;/code&gt; and &lt;b&gt;limit&lt;/b&gt; is set to &lt;code&gt;10&lt;/code&gt;, the method retrieves transactions 31 thru 40 from the resulting collection of transactions. &lt;br&gt;&lt;br&gt; &lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; This feature employs a zero-based list, where the first item in the list has an offset of &lt;code&gt;0&lt;/code&gt;.&lt;/span&gt;&lt;br&gt;&lt;b&gt;Default:&lt;/b&gt; &lt;code&gt;0&lt;/code&gt; (zero)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public String offset;
+    public GetTransactionsRequest withOffset(String offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Sorting is not yet available for the &lt;b&gt;getTransactions&lt;/b&gt; method. By default, monetary transactions that match the input criteria are sorted in descending order according to the transaction date. For implementation help, refer to eBay API documentation at https://developer.ebay.com/api-docs/sell/finances/types/cos:SortField
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetTransactionsRequest withSort(String sort) {
+        this.sort = sort;
         return this;
     }
     

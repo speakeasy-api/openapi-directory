@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTrainedModelLearningCurveRequest {
-    
-    public GetTrainedModelLearningCurvePathParams pathParams;
-    public GetTrainedModelLearningCurveRequest withPathParams(GetTrainedModelLearningCurvePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Number of epoch to return. Maximum valid value is 25.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
+    public String count;
+    public GetTrainedModelLearningCurveRequest withCount(String count) {
+        this.count = count;
         return this;
     }
     
-    
-    public GetTrainedModelLearningCurveQueryParams queryParams;
-    public GetTrainedModelLearningCurveRequest withQueryParams(GetTrainedModelLearningCurveQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Model Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=modelId")
+    public String modelId;
+    public GetTrainedModelLearningCurveRequest withModelId(String modelId) {
+        this.modelId = modelId;
         return this;
     }
     
-    
-    public GetTrainedModelLearningCurveSecurity security;
-    public GetTrainedModelLearningCurveRequest withSecurity(GetTrainedModelLearningCurveSecurity security) {
-        this.security = security;
+    /**
+     * Index of the epoch from which you want to start paging
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public String offset;
+    public GetTrainedModelLearningCurveRequest withOffset(String offset) {
+        this.offset = offset;
         return this;
     }
     

@@ -38,7 +38,7 @@ public class UserFields {
      */
     public org.openapis.openapi.models.operations.GetProjectHomeUserFieldListOfClientResponse getProjectHomeUserFieldListOfClient(org.openapis.openapi.models.operations.GetProjectHomeUserFieldListOfClientRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectHomeUserFieldListOfClientPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/clientWorkgroups/{client_workgroup_id}/projectHomeUserFields", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectHomeUserFieldListOfClientRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/clientWorkgroups/{client_workgroup_id}/projectHomeUserFields", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -157,7 +157,7 @@ public class UserFields {
      */
     public org.openapis.openapi.models.operations.GetProjectHomeUserFieldsListResponse getProjectHomeUserFieldsList(org.openapis.openapi.models.operations.GetProjectHomeUserFieldsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectHomeUserFieldsListPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projectHomeUserFields", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectHomeUserFieldsListRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projectHomeUserFields", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

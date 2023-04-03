@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminDeleteScimGroupFromEnterpriseRequest {
-    
-    public EnterpriseAdminDeleteScimGroupFromEnterprisePathParams pathParams;
-    public EnterpriseAdminDeleteScimGroupFromEnterpriseRequest withPathParams(EnterpriseAdminDeleteScimGroupFromEnterprisePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique identifier of the SCIM group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scim_group_id")
+    public String scimGroupId;
+    public EnterpriseAdminDeleteScimGroupFromEnterpriseRequest withScimGroupId(String scimGroupId) {
+        this.scimGroupId = scimGroupId;
         return this;
     }
     

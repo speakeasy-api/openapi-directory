@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimDeviceBaysDeleteRequest {
-    
-    public DcimDeviceBaysDeletePathParams pathParams;
-    public DcimDeviceBaysDeleteRequest withPathParams(DcimDeviceBaysDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this device bay.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimDeviceBaysDeleteRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

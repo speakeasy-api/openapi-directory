@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CrashGroupsGetStacktraceRequest {
-    
-    public CrashGroupsGetStacktracePathParams pathParams;
-    public CrashGroupsGetStacktraceRequest withPathParams(CrashGroupsGetStacktracePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public CrashGroupsGetStacktraceRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public CrashGroupsGetStacktraceQueryParams queryParams;
-    public CrashGroupsGetStacktraceRequest withQueryParams(CrashGroupsGetStacktraceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * id of a specific group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=crash_group_id")
+    public String crashGroupId;
+    public CrashGroupsGetStacktraceRequest withCrashGroupId(String crashGroupId) {
+        this.crashGroupId = crashGroupId;
         return this;
     }
     
+    /**
+     * true if the stacktrace should be only the relevant thread / exception. Default is false
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=grouping_only")
+    public Boolean groupingOnly;
+    public CrashGroupsGetStacktraceRequest withGroupingOnly(Boolean groupingOnly) {
+        this.groupingOnly = groupingOnly;
+        return this;
+    }
     
-    public CrashGroupsGetStacktraceSecurity security;
-    public CrashGroupsGetStacktraceRequest withSecurity(CrashGroupsGetStacktraceSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public CrashGroupsGetStacktraceRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

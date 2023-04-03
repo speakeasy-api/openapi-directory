@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateIncomingPhoneNumberAssignedAddOnRequest {
-    
-    public CreateIncomingPhoneNumberAssignedAddOnPathParams pathParams;
-    public CreateIncomingPhoneNumberAssignedAddOnRequest withPathParams(CreateIncomingPhoneNumberAssignedAddOnPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public CreateIncomingPhoneNumberAssignedAddOnRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateIncomingPhoneNumberAssignedAddOnCreateIncomingPhoneNumberAssignedAddOnRequest request;
-    public CreateIncomingPhoneNumberAssignedAddOnRequest withRequest(CreateIncomingPhoneNumberAssignedAddOnCreateIncomingPhoneNumberAssignedAddOnRequest request) {
-        this.request = request;
+    public CreateIncomingPhoneNumberAssignedAddOnCreateIncomingPhoneNumberAssignedAddOnRequest requestBody;
+    public CreateIncomingPhoneNumberAssignedAddOnRequest withRequestBody(CreateIncomingPhoneNumberAssignedAddOnCreateIncomingPhoneNumberAssignedAddOnRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateIncomingPhoneNumberAssignedAddOnSecurity security;
-    public CreateIncomingPhoneNumberAssignedAddOnRequest withSecurity(CreateIncomingPhoneNumberAssignedAddOnSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateIncomingPhoneNumberAssignedAddOnRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Phone Number to assign the Add-on.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ResourceSid")
+    public String resourceSid;
+    public CreateIncomingPhoneNumberAssignedAddOnRequest withResourceSid(String resourceSid) {
+        this.resourceSid = resourceSid;
         return this;
     }
     

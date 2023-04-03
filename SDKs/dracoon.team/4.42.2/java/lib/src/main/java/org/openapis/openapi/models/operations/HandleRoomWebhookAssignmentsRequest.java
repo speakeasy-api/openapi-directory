@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class HandleRoomWebhookAssignmentsRequest {
-    
-    public HandleRoomWebhookAssignmentsPathParams pathParams;
-    public HandleRoomWebhookAssignmentsRequest withPathParams(HandleRoomWebhookAssignmentsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public HandleRoomWebhookAssignmentsHeaders headers;
-    public HandleRoomWebhookAssignmentsRequest withHeaders(HandleRoomWebhookAssignmentsHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateRoomWebhookRequest request;
-    public HandleRoomWebhookAssignmentsRequest withRequest(org.openapis.openapi.models.shared.UpdateRoomWebhookRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateRoomWebhookRequest updateRoomWebhookRequest;
+    public HandleRoomWebhookAssignmentsRequest withUpdateRoomWebhookRequest(org.openapis.openapi.models.shared.UpdateRoomWebhookRequest updateRoomWebhookRequest) {
+        this.updateRoomWebhookRequest = updateRoomWebhookRequest;
+        return this;
+    }
+    
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public HandleRoomWebhookAssignmentsRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
+        return this;
+    }
+    
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public HandleRoomWebhookAssignmentsXSdsDateFormatEnum xSdsDateFormat;
+    public HandleRoomWebhookAssignmentsRequest withXSdsDateFormat(HandleRoomWebhookAssignmentsXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
+        return this;
+    }
+    
+    /**
+     * Room ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=room_id")
+    public Long roomId;
+    public HandleRoomWebhookAssignmentsRequest withRoomId(Long roomId) {
+        this.roomId = roomId;
         return this;
     }
     

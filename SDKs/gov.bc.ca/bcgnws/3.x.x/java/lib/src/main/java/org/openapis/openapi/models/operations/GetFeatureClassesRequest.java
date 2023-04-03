@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFeatureClassesRequest {
-    
-    public GetFeatureClassesQueryParams queryParams;
-    public GetFeatureClassesRequest withQueryParams(GetFeatureClassesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The format of the output.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputFormat")
+    public GetFeatureClassesOutputFormatEnum outputFormat;
+    public GetFeatureClassesRequest withOutputFormat(GetFeatureClassesOutputFormatEnum outputFormat) {
+        this.outputFormat = outputFormat;
         return this;
     }
     

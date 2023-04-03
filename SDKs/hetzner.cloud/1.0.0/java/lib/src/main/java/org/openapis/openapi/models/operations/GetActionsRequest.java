@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetActionsRequest {
+    /**
+     * Can be used multiple times, the response will contain only Actions with specified IDs
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public Long id;
+    public GetActionsRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetActionsQueryParams queryParams;
-    public GetActionsRequest withQueryParams(GetActionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Can be used multiple times.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetActionsSortParameterSortEnum sort;
+    public GetActionsRequest withSort(GetActionsSortParameterSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Can be used multiple times, the response will contain only Actions with specified statuses
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public GetActionsStatusParameterStatusEnum status;
+    public GetActionsRequest withStatus(GetActionsStatusParameterStatusEnum status) {
+        this.status = status;
         return this;
     }
     

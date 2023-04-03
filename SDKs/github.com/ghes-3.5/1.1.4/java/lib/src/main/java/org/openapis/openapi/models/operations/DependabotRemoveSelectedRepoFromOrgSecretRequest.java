@@ -4,13 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DependabotRemoveSelectedRepoFromOrgSecretRequest {
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public DependabotRemoveSelectedRepoFromOrgSecretRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
     
-    public DependabotRemoveSelectedRepoFromOrgSecretPathParams pathParams;
-    public DependabotRemoveSelectedRepoFromOrgSecretRequest withPathParams(DependabotRemoveSelectedRepoFromOrgSecretPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repository_id")
+    public Long repositoryId;
+    public DependabotRemoveSelectedRepoFromOrgSecretRequest withRepositoryId(Long repositoryId) {
+        this.repositoryId = repositoryId;
+        return this;
+    }
+    
+    /**
+     * The name of the secret.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=secret_name")
+    public String secretName;
+    public DependabotRemoveSelectedRepoFromOrgSecretRequest withSecretName(String secretName) {
+        this.secretName = secretName;
         return this;
     }
     

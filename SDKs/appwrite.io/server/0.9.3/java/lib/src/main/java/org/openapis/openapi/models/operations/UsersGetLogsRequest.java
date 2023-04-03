@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UsersGetLogsRequest {
-    
-    public UsersGetLogsPathParams pathParams;
-    public UsersGetLogsRequest withPathParams(UsersGetLogsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UsersGetLogsSecurity security;
-    public UsersGetLogsRequest withSecurity(UsersGetLogsSecurity security) {
-        this.security = security;
+    /**
+     * User unique ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public UsersGetLogsRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

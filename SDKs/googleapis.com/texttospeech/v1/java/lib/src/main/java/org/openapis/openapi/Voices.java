@@ -33,10 +33,11 @@ public class Voices {
     /**
      * Returns a list of Voice supported for synthesis.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TexttospeechVoicesListResponse texttospeechVoicesList(org.openapis.openapi.models.operations.TexttospeechVoicesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TexttospeechVoicesListResponse texttospeechVoicesList(org.openapis.openapi.models.operations.TexttospeechVoicesListRequest request, org.openapis.openapi.models.operations.TexttospeechVoicesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/voices");
         
@@ -44,14 +45,14 @@ public class Voices {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TexttospeechVoicesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TexttospeechVoicesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

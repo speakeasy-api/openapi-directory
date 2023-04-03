@@ -7,31 +7,90 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BigqueryTablesTestIamPermissionsRequest {
-    
-    public BigqueryTablesTestIamPermissionsPathParams pathParams;
-    public BigqueryTablesTestIamPermissionsRequest withPathParams(BigqueryTablesTestIamPermissionsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public BigqueryTablesTestIamPermissionsQueryParams queryParams;
-    public BigqueryTablesTestIamPermissionsRequest withQueryParams(BigqueryTablesTestIamPermissionsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TestIamPermissionsRequest request;
-    public BigqueryTablesTestIamPermissionsRequest withRequest(org.openapis.openapi.models.shared.TestIamPermissionsRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TestIamPermissionsRequest testIamPermissionsRequest;
+    public BigqueryTablesTestIamPermissionsRequest withTestIamPermissionsRequest(org.openapis.openapi.models.shared.TestIamPermissionsRequest testIamPermissionsRequest) {
+        this.testIamPermissionsRequest = testIamPermissionsRequest;
         return this;
     }
     
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public BigqueryTablesTestIamPermissionsRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public BigqueryTablesTestIamPermissionsSecurity security;
-    public BigqueryTablesTestIamPermissionsRequest withSecurity(BigqueryTablesTestIamPermissionsSecurity security) {
-        this.security = security;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public BigqueryTablesTestIamPermissionsRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public BigqueryTablesTestIamPermissionsRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public BigqueryTablesTestIamPermissionsRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public BigqueryTablesTestIamPermissionsRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public BigqueryTablesTestIamPermissionsRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * REQUIRED: The resource for which the policy detail is being requested. See [Resource names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this field.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=resource")
+    public String resource;
+    public BigqueryTablesTestIamPermissionsRequest withResource(String resource) {
+        this.resource = resource;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public BigqueryTablesTestIamPermissionsRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

@@ -18,20 +18,16 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GkebackupProjectsLocationsBackupPlansBackupsCreateSecurity;
-import org.openapis.openapi.models.operations.GkebackupProjectsLocationsBackupPlansBackupsCreatePathParams;
-import org.openapis.openapi.models.operations.GkebackupProjectsLocationsBackupPlansBackupsCreateQueryParams;
 import org.openapis.openapi.models.operations.GkebackupProjectsLocationsBackupPlansBackupsCreateRequest;
 import org.openapis.openapi.models.operations.GkebackupProjectsLocationsBackupPlansBackupsCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.BackupInput;
 import org.openapis.openapi.models.shared.Namespaces;
 import org.openapis.openapi.models.shared.NamespacedNames;
 import org.openapis.openapi.models.shared.NamespacedName;
 import org.openapis.openapi.models.shared.EncryptionKey;
 import org.openapis.openapi.models.shared.ClusterMetadata;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -40,73 +36,66 @@ public class Application {
                 .build();
 
             GkebackupProjectsLocationsBackupPlansBackupsCreateRequest req = new GkebackupProjectsLocationsBackupPlansBackupsCreateRequest() {{
-                security = new GkebackupProjectsLocationsBackupPlansBackupsCreateSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new GkebackupProjectsLocationsBackupPlansBackupsCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new GkebackupProjectsLocationsBackupPlansBackupsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    backupId = "unde";
-                    callback = "nulla";
-                    fields = "corrupti";
-                    key = "illum";
-                    oauthToken = "vel";
-                    prettyPrint = false;
-                    quotaUser = "error";
-                    uploadType = "deserunt";
-                    uploadProtocol = "suscipit";
-                }};
-                request = new BackupInput() {{
+                dollarXgafv = "2";
+                backupInput = new BackupInput() {{
                     clusterMetadata = new ClusterMetadata() {{
-                        anthosVersion = "iure";
+                        anthosVersion = "provident";
                         backupCrdVersions = new java.util.HashMap<String, String>() {{
-                            put("debitis", "ipsa");
-                            put("delectus", "tempora");
+                            put("quibusdam", "unde");
+                            put("nulla", "corrupti");
+                            put("illum", "vel");
                         }};
-                        cluster = "suscipit";
-                        gkeVersion = "molestiae";
-                        k8sVersion = "minus";
+                        cluster = "error";
+                        gkeVersion = "deserunt";
+                        k8sVersion = "suscipit";
                     }};
-                    deleteLockDays = 812169;
-                    description = "voluptatum";
+                    deleteLockDays = 437587;
+                    description = "magnam";
                     encryptionKey = new EncryptionKey() {{
-                        gcpKmsEncryptionKey = "iusto";
+                        gcpKmsEncryptionKey = "debitis";
                     }};
                     labels = new java.util.HashMap<String, String>() {{
-                        put("nisi", "recusandae");
-                        put("temporibus", "ab");
-                        put("quis", "veritatis");
+                        put("delectus", "tempora");
                     }};
-                    retainDays = 648172;
+                    retainDays = 383441;
                     selectedApplications = new NamespacedNames() {{
                         namespacedNames = new org.openapis.openapi.models.shared.NamespacedName[]{{
                             add(new NamespacedName() {{
-                                name = "ipsam";
-                                namespace = "repellendus";
+                                name = "minus";
+                                namespace = "placeat";
+                            }}),
+                            add(new NamespacedName() {{
+                                name = "voluptatum";
+                                namespace = "iusto";
                             }}),
                         }};
                     }};
                     selectedNamespaces = new Namespaces() {{
                         namespaces = new String[]{{
-                            add("quo"),
-                            add("odit"),
-                            add("at"),
-                            add("at"),
+                            add("nisi"),
+                            add("recusandae"),
+                            add("temporibus"),
                         }};
                     }};
                 }};
-            }};            
+                accessToken = "ab";
+                alt = "media";
+                backupId = "veritatis";
+                callback = "deserunt";
+                fields = "perferendis";
+                key = "ipsam";
+                oauthToken = "repellendus";
+                parent = "sapiente";
+                prettyPrint = false;
+                quotaUser = "quo";
+                uploadType = "odit";
+                uploadProtocol = "at";
+            }}            
 
-            GkebackupProjectsLocationsBackupPlansBackupsCreateResponse res = sdk.projects.gkebackupProjectsLocationsBackupPlansBackupsCreate(req);
+            GkebackupProjectsLocationsBackupPlansBackupsCreateResponse res = sdk.projects.gkebackupProjectsLocationsBackupPlansBackupsCreate(req, new GkebackupProjectsLocationsBackupPlansBackupsCreateSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.googleLongrunningOperation.isPresent()) {
                 // handle response
@@ -118,7 +107,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### projects

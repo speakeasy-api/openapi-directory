@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BookmarkPostRequest {
-    
-    public BookmarkPostPathParams pathParams;
-    public BookmarkPostRequest withPathParams(BookmarkPostPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=post_id")
+    public String postId;
+    public BookmarkPostRequest withPostId(String postId) {
+        this.postId = postId;
         return this;
     }
     

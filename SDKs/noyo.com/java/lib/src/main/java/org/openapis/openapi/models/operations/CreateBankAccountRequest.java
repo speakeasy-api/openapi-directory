@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateBankAccountRequest {
-    
-    public CreateBankAccountPathParams pathParams;
-    public CreateBankAccountRequest withPathParams(CreateBankAccountPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.BankAccountCreateRequest bankAccountCreateRequest;
+    public CreateBankAccountRequest withBankAccountCreateRequest(org.openapis.openapi.models.shared.BankAccountCreateRequest bankAccountCreateRequest) {
+        this.bankAccountCreateRequest = bankAccountCreateRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.BankAccountCreateRequest request;
-    public CreateBankAccountRequest withRequest(org.openapis.openapi.models.shared.BankAccountCreateRequest request) {
-        this.request = request;
+    /**
+     * The unique identifier of the application in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=application_id")
+    public String applicationId;
+    public CreateBankAccountRequest withApplicationId(String applicationId) {
+        this.applicationId = applicationId;
         return this;
     }
     

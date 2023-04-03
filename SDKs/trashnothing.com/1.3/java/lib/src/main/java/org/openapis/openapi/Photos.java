@@ -42,7 +42,7 @@ public class Photos {
      */
     public org.openapis.openapi.models.operations.DeletePhotoResponse deletePhoto(org.openapis.openapi.models.operations.DeletePhotoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePhotoPathParams.class, baseUrl, "/photos/{photo_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePhotoRequest.class, baseUrl, "/photos/{photo_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -81,7 +81,7 @@ public class Photos {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPhotosByIdsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPhotosByIdsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -122,13 +122,13 @@ public class Photos {
      */
     public org.openapis.openapi.models.operations.RotatePhotoResponse rotatePhoto(org.openapis.openapi.models.operations.RotatePhotoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RotatePhotoPathParams.class, baseUrl, "/photos/{photo_id}/rotate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RotatePhotoRequest.class, baseUrl, "/photos/{photo_id}/rotate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RotatePhotoQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RotatePhotoRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -167,7 +167,7 @@ public class Photos {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UploadPhotoResponse uploadPhoto(org.openapis.openapi.models.operations.UploadPhotoRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UploadPhotoResponse uploadPhoto(org.openapis.openapi.models.operations.UploadPhotoRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/photos");
         

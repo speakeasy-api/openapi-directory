@@ -4,20 +4,29 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETJobStatusAndResponseRequest {
-    
-    public GETJobStatusAndResponsePathParams pathParams;
-    public GETJobStatusAndResponseRequest withPathParams(GETJobStatusAndResponsePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+     * 
+     * The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Track-Id")
+    public String zuoraTrackId;
+    public GETJobStatusAndResponseRequest withZuoraTrackId(String zuoraTrackId) {
+        this.zuoraTrackId = zuoraTrackId;
         return this;
     }
     
-    
-    public GETJobStatusAndResponseHeaders headers;
-    public GETJobStatusAndResponseRequest withHeaders(GETJobStatusAndResponseHeaders headers) {
-        this.headers = headers;
+    /**
+     * UUID of the asynchronous job created by an asynchronous API operation.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
+    public String jobId;
+    public GETJobStatusAndResponseRequest withJobId(String jobId) {
+        this.jobId = jobId;
         return this;
     }
     

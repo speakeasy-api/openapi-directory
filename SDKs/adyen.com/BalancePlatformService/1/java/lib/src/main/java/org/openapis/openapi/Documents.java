@@ -36,19 +36,20 @@ public class Documents {
      * Delete a document
      * Deletes a document.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteDocumentsIdResponse deleteDocumentsId(org.openapis.openapi.models.operations.DeleteDocumentsIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteDocumentsIdResponse deleteDocumentsId(org.openapis.openapi.models.operations.DeleteDocumentsIdRequest request, org.openapis.openapi.models.operations.DeleteDocumentsIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDocumentsIdPathParams.class, baseUrl, "/documents/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDocumentsIdRequest.class, baseUrl, "/documents/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -84,19 +85,20 @@ public class Documents {
      * Get a document
      * Returns a document.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetDocumentsIdResponse getDocumentsId(org.openapis.openapi.models.operations.GetDocumentsIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetDocumentsIdResponse getDocumentsId(org.openapis.openapi.models.operations.GetDocumentsIdRequest request, org.openapis.openapi.models.operations.GetDocumentsIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDocumentsIdPathParams.class, baseUrl, "/documents/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDocumentsIdRequest.class, baseUrl, "/documents/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -132,21 +134,22 @@ public class Documents {
      * Update a document
      * Updates a document.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchDocumentsIdResponse patchDocumentsId(org.openapis.openapi.models.operations.PatchDocumentsIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchDocumentsIdResponse patchDocumentsId(org.openapis.openapi.models.operations.PatchDocumentsIdRequest request, org.openapis.openapi.models.operations.PatchDocumentsIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchDocumentsIdPathParams.class, baseUrl, "/documents/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchDocumentsIdRequest.class, baseUrl, "/documents/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "documentInput", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -186,10 +189,11 @@ public class Documents {
      * 
      *  You should only upload documents when Adyen requests additional information for the legal entity. 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostDocumentsResponse postDocuments(org.openapis.openapi.models.operations.PostDocumentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostDocumentsResponse postDocuments(org.openapis.openapi.models.shared.DocumentInput request, org.openapis.openapi.models.operations.PostDocumentsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/documents");
         
@@ -200,7 +204,7 @@ public class Documents {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

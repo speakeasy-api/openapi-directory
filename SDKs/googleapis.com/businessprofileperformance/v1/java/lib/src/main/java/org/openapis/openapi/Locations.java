@@ -38,13 +38,13 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesResponse businessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeries(org.openapis.openapi.models.operations.BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesPathParams.class, baseUrl, "/v1/{location}:fetchMultiDailyMetricsTimeSeries", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesRequest.class, baseUrl, "/v1/{location}:fetchMultiDailyMetricsTimeSeries", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -82,13 +82,13 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesResponse businessprofileperformanceLocationsGetDailyMetricsTimeSeries(org.openapis.openapi.models.operations.BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesPathParams.class, baseUrl, "/v1/{name}:getDailyMetricsTimeSeries", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest.class, baseUrl, "/v1/{name}:getDailyMetricsTimeSeries", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -126,13 +126,13 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListResponse businessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyList(org.openapis.openapi.models.operations.BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListPathParams.class, baseUrl, "/v1/{parent}/searchkeywords/impressions/monthly", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListRequest.class, baseUrl, "/v1/{parent}/searchkeywords/impressions/monthly", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

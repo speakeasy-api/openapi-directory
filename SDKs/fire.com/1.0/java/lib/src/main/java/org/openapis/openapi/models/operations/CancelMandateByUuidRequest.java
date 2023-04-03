@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelMandateByUuidRequest {
-    
-    public CancelMandateByUuidPathParams pathParams;
-    public CancelMandateByUuidRequest withPathParams(CancelMandateByUuidPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mandateUuid")
+    public String mandateUuid;
+    public CancelMandateByUuidRequest withMandateUuid(String mandateUuid) {
+        this.mandateUuid = mandateUuid;
         return this;
     }
     

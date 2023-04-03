@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCrawlStatisticsUrlsRequest {
+    /**
+     * Analysis' identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=analysis_slug")
+    public String analysisSlug;
+    public GetCrawlStatisticsUrlsRequest withAnalysisSlug(String analysisSlug) {
+        this.analysisSlug = analysisSlug;
+        return this;
+    }
     
-    public GetCrawlStatisticsUrlsPathParams pathParams;
-    public GetCrawlStatisticsUrlsRequest withPathParams(GetCrawlStatisticsUrlsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * URLs list type (crawled URLs or error URLs)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=list_type")
+    public GetCrawlStatisticsUrlsListTypeEnum listType;
+    public GetCrawlStatisticsUrlsRequest withListType(GetCrawlStatisticsUrlsListTypeEnum listType) {
+        this.listType = listType;
+        return this;
+    }
+    
+    /**
+     * Project's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_slug")
+    public String projectSlug;
+    public GetCrawlStatisticsUrlsRequest withProjectSlug(String projectSlug) {
+        this.projectSlug = projectSlug;
+        return this;
+    }
+    
+    /**
+     * User's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public GetCrawlStatisticsUrlsRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

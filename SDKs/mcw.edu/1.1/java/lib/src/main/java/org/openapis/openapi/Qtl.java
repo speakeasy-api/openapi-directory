@@ -34,7 +34,7 @@ public class Qtl {
      */
     public org.openapis.openapi.models.operations.GETMappedQTLByPositionUsingGETResponse getMappedQTLByPositionUsingGET(org.openapis.openapi.models.operations.GETMappedQTLByPositionUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETMappedQTLByPositionUsingGETPathParams.class, baseUrl, "/qtls/mapped/{chr}/{start}/{stop}/{mapKey}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETMappedQTLByPositionUsingGETRequest.class, baseUrl, "/qtls/mapped/{chr}/{start}/{stop}/{mapKey}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -73,7 +73,7 @@ public class Qtl {
      */
     public org.openapis.openapi.models.operations.GETQTLByRgdIdUsingGETResponse getQTLByRgdIdUsingGET(org.openapis.openapi.models.operations.GETQTLByRgdIdUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETQTLByRgdIdUsingGETPathParams.class, baseUrl, "/qtls/{rgdId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETQTLByRgdIdUsingGETRequest.class, baseUrl, "/qtls/{rgdId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -112,7 +112,7 @@ public class Qtl {
      */
     public org.openapis.openapi.models.operations.GETQtlListByPositionUsingGETResponse getQtlListByPositionUsingGET(org.openapis.openapi.models.operations.GETQtlListByPositionUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETQtlListByPositionUsingGETPathParams.class, baseUrl, "/qtls/{chr}/{start}/{stop}/{mapKey}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETQtlListByPositionUsingGETRequest.class, baseUrl, "/qtls/{chr}/{start}/{stop}/{mapKey}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

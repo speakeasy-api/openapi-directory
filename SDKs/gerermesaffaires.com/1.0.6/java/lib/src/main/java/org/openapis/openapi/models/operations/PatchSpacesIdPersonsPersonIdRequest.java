@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchSpacesIdPersonsPersonIdRequest {
-    
-    public PatchSpacesIdPersonsPersonIdPathParams pathParams;
-    public PatchSpacesIdPersonsPersonIdRequest withPathParams(PatchSpacesIdPersonsPersonIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Person to modify
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PatchSpacesIdPersonsPersonIdRequestBody request;
-    public PatchSpacesIdPersonsPersonIdRequest withRequest(PatchSpacesIdPersonsPersonIdRequestBody request) {
-        this.request = request;
+    public PatchSpacesIdPersonsPersonIdRequestBody requestBody;
+    public PatchSpacesIdPersonsPersonIdRequest withRequestBody(PatchSpacesIdPersonsPersonIdRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatchSpacesIdPersonsPersonIdRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Id of the person to modify or memberId
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=personId")
+    public String personId;
+    public PatchSpacesIdPersonsPersonIdRequest withPersonId(String personId) {
+        this.personId = personId;
         return this;
     }
     

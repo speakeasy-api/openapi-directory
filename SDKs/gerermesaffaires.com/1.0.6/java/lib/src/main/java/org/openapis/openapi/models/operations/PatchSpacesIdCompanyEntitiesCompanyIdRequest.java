@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchSpacesIdCompanyEntitiesCompanyIdRequest {
-    
-    public PatchSpacesIdCompanyEntitiesCompanyIdPathParams pathParams;
-    public PatchSpacesIdCompanyEntitiesCompanyIdRequest withPathParams(PatchSpacesIdCompanyEntitiesCompanyIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Company entity to modify
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PatchSpacesIdCompanyEntitiesCompanyIdRequestBody request;
-    public PatchSpacesIdCompanyEntitiesCompanyIdRequest withRequest(PatchSpacesIdCompanyEntitiesCompanyIdRequestBody request) {
-        this.request = request;
+    public PatchSpacesIdCompanyEntitiesCompanyIdRequestBody requestBody;
+    public PatchSpacesIdCompanyEntitiesCompanyIdRequest withRequestBody(PatchSpacesIdCompanyEntitiesCompanyIdRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Id of the company entity to modify
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public PatchSpacesIdCompanyEntitiesCompanyIdRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatchSpacesIdCompanyEntitiesCompanyIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

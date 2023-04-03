@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateActivityRequest {
-    
-    public UpdateActivityPathParams pathParams;
-    public UpdateActivityRequest withPathParams(UpdateActivityPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateActivityUpdateActivityRequest request;
-    public UpdateActivityRequest withRequest(UpdateActivityUpdateActivityRequest request) {
-        this.request = request;
+    public UpdateActivityUpdateActivityRequest requestBody;
+    public UpdateActivityRequest withRequestBody(UpdateActivityUpdateActivityRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateActivitySecurity security;
-    public UpdateActivityRequest withSecurity(UpdateActivitySecurity security) {
-        this.security = security;
+    /**
+     * The SID of the Activity resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateActivityRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public String serverURL;
-    public UpdateActivityRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Workspace with the Activity resources to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkspaceSid")
+    public String workspaceSid;
+    public UpdateActivityRequest withWorkspaceSid(String workspaceSid) {
+        this.workspaceSid = workspaceSid;
         return this;
     }
     

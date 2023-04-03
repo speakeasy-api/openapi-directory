@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddVideoToVodRequest {
-    
-    public AddVideoToVodPathParams pathParams;
-    public AddVideoToVodRequest withPathParams(AddVideoToVodPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.ondemand.video+json")
-    public AddVideoToVodRequestBody request;
-    public AddVideoToVodRequest withRequest(AddVideoToVodRequestBody request) {
-        this.request = request;
+    public AddVideoToVodRequestBody requestBody;
+    public AddVideoToVodRequest withRequestBody(AddVideoToVodRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The ID of the On Demand.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ondemand_id")
+    public Double ondemandId;
+    public AddVideoToVodRequest withOndemandId(Double ondemandId) {
+        this.ondemandId = ondemandId;
+        return this;
+    }
     
-    public AddVideoToVodSecurity security;
-    public AddVideoToVodRequest withSecurity(AddVideoToVodSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public AddVideoToVodRequest withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

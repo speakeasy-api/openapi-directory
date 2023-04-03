@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatepartialdocumentRequest {
-    
-    public UpdatepartialdocumentPathParams pathParams;
-    public UpdatepartialdocumentRequest withPathParams(UpdatepartialdocumentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdatepartialdocumentHeaders headers;
-    public UpdatepartialdocumentRequest withHeaders(UpdatepartialdocumentHeaders headers) {
-        this.headers = headers;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public UpdatepartialdocumentRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public UpdatepartialdocumentRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public UpdatepartialdocumentRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Two letter word that identifies the data structure
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=acronym")
+    public String acronym;
+    public UpdatepartialdocumentRequest withAcronym(String acronym) {
+        this.acronym = acronym;
+        return this;
+    }
+    
+    /**
+     * Id of the document
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UpdatepartialdocumentRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

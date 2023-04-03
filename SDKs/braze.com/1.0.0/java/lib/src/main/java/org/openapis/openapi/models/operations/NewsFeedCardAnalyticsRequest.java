@@ -4,13 +4,54 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NewsFeedCardAnalyticsRequest {
+    /**
+     * (Required) String
+     * 
+     * Card API identifier
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=card_id")
+    public String cardId;
+    public NewsFeedCardAnalyticsRequest withCardId(String cardId) {
+        this.cardId = cardId;
+        return this;
+    }
     
-    public NewsFeedCardAnalyticsQueryParams queryParams;
-    public NewsFeedCardAnalyticsRequest withQueryParams(NewsFeedCardAnalyticsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * (Optional) DateTime (ISO 8601 string)
+     * 
+     * Date on which the data series should end - defaults to time of the request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ending_at")
+    public String endingAt;
+    public NewsFeedCardAnalyticsRequest withEndingAt(String endingAt) {
+        this.endingAt = endingAt;
+        return this;
+    }
+    
+    /**
+     * (Required) Integer
+     * 
+     * Max number of units (days or hours) before ending_at to include in the returned series - must be between 1 and 100 inclusive
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=length")
+    public String length;
+    public NewsFeedCardAnalyticsRequest withLength(String length) {
+        this.length = length;
+        return this;
+    }
+    
+    /**
+     * (Optional) String
+     * 
+     * Unit of time between data points - can be "day" or "hour" (defaults to "day")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unit")
+    public String unit;
+    public NewsFeedCardAnalyticsRequest withUnit(String unit) {
+        this.unit = unit;
         return this;
     }
     

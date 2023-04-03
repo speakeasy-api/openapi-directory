@@ -42,7 +42,7 @@ public class OpenAI {
      */
     public org.openapis.openapi.models.operations.CancelFineTuneResponse cancelFineTune(org.openapis.openapi.models.operations.CancelFineTuneRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelFineTunePathParams.class, baseUrl, "/fine-tunes/{fine_tune_id}/cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelFineTuneRequest.class, baseUrl, "/fine-tunes/{fine_tune_id}/cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -78,7 +78,7 @@ public class OpenAI {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateAnswerResponse createAnswer(org.openapis.openapi.models.operations.CreateAnswerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateAnswerResponse createAnswer(org.openapis.openapi.models.shared.CreateAnswerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/answers");
         
@@ -121,7 +121,7 @@ public class OpenAI {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateChatCompletionResponse createChatCompletion(org.openapis.openapi.models.operations.CreateChatCompletionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateChatCompletionResponse createChatCompletion(org.openapis.openapi.models.shared.CreateChatCompletionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/chat/completions");
         
@@ -164,7 +164,7 @@ public class OpenAI {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateClassificationResponse createClassification(org.openapis.openapi.models.operations.CreateClassificationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateClassificationResponse createClassification(org.openapis.openapi.models.shared.CreateClassificationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/classifications");
         
@@ -207,7 +207,7 @@ public class OpenAI {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateCompletionResponse createCompletion(org.openapis.openapi.models.operations.CreateCompletionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateCompletionResponse createCompletion(org.openapis.openapi.models.shared.CreateCompletionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/completions");
         
@@ -250,7 +250,7 @@ public class OpenAI {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateEditResponse createEdit(org.openapis.openapi.models.operations.CreateEditRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateEditResponse createEdit(org.openapis.openapi.models.shared.CreateEditRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/edits");
         
@@ -293,7 +293,7 @@ public class OpenAI {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateEmbeddingResponse createEmbedding(org.openapis.openapi.models.operations.CreateEmbeddingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateEmbeddingResponse createEmbedding(org.openapis.openapi.models.shared.CreateEmbeddingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/embeddings");
         
@@ -336,7 +336,7 @@ public class OpenAI {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateFileResponse createFile(org.openapis.openapi.models.operations.CreateFileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateFileResponse createFile(org.openapis.openapi.models.shared.CreateFileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/files");
         
@@ -379,7 +379,7 @@ public class OpenAI {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateFineTuneResponse createFineTune(org.openapis.openapi.models.operations.CreateFineTuneRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateFineTuneResponse createFineTune(org.openapis.openapi.models.shared.CreateFineTuneRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/fine-tunes");
         
@@ -422,7 +422,7 @@ public class OpenAI {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateImageResponse createImage(org.openapis.openapi.models.operations.CreateImageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateImageResponse createImage(org.openapis.openapi.models.shared.CreateImageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/images/generations");
         
@@ -465,7 +465,7 @@ public class OpenAI {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateImageEditResponse createImageEdit(org.openapis.openapi.models.operations.CreateImageEditRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateImageEditResponse createImageEdit(org.openapis.openapi.models.shared.CreateImageEditRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/images/edits");
         
@@ -508,7 +508,7 @@ public class OpenAI {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateImageVariationResponse createImageVariation(org.openapis.openapi.models.operations.CreateImageVariationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateImageVariationResponse createImageVariation(org.openapis.openapi.models.shared.CreateImageVariationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/images/variations");
         
@@ -551,7 +551,7 @@ public class OpenAI {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateModerationResponse createModeration(org.openapis.openapi.models.operations.CreateModerationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateModerationResponse createModeration(org.openapis.openapi.models.shared.CreateModerationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/moderations");
         
@@ -596,12 +596,12 @@ public class OpenAI {
      */
     public org.openapis.openapi.models.operations.CreateSearchResponse createSearch(org.openapis.openapi.models.operations.CreateSearchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateSearchPathParams.class, baseUrl, "/engines/{engine_id}/search", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateSearchRequest.class, baseUrl, "/engines/{engine_id}/search", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createSearchRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -637,7 +637,7 @@ public class OpenAI {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateTranscriptionResponse createTranscription(org.openapis.openapi.models.operations.CreateTranscriptionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateTranscriptionResponse createTranscription(org.openapis.openapi.models.shared.CreateTranscriptionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/audio/transcriptions");
         
@@ -680,7 +680,7 @@ public class OpenAI {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateTranslationResponse createTranslation(org.openapis.openapi.models.operations.CreateTranslationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateTranslationResponse createTranslation(org.openapis.openapi.models.shared.CreateTranslationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/audio/translations");
         
@@ -725,7 +725,7 @@ public class OpenAI {
      */
     public org.openapis.openapi.models.operations.DeleteFileResponse deleteFile(org.openapis.openapi.models.operations.DeleteFileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteFilePathParams.class, baseUrl, "/files/{file_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteFileRequest.class, baseUrl, "/files/{file_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -763,7 +763,7 @@ public class OpenAI {
      */
     public org.openapis.openapi.models.operations.DeleteModelResponse deleteModel(org.openapis.openapi.models.operations.DeleteModelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteModelPathParams.class, baseUrl, "/models/{model}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteModelRequest.class, baseUrl, "/models/{model}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -801,7 +801,7 @@ public class OpenAI {
      */
     public org.openapis.openapi.models.operations.DownloadFileResponse downloadFile(org.openapis.openapi.models.operations.DownloadFileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadFilePathParams.class, baseUrl, "/files/{file_id}/content", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadFileRequest.class, baseUrl, "/files/{file_id}/content", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -912,13 +912,13 @@ public class OpenAI {
      */
     public org.openapis.openapi.models.operations.ListFineTuneEventsResponse listFineTuneEvents(org.openapis.openapi.models.operations.ListFineTuneEventsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListFineTuneEventsPathParams.class, baseUrl, "/fine-tunes/{fine_tune_id}/events", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListFineTuneEventsRequest.class, baseUrl, "/fine-tunes/{fine_tune_id}/events", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListFineTuneEventsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListFineTuneEventsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1030,7 +1030,7 @@ public class OpenAI {
      */
     public org.openapis.openapi.models.operations.RetrieveEngineResponse retrieveEngine(org.openapis.openapi.models.operations.RetrieveEngineRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveEnginePathParams.class, baseUrl, "/engines/{engine_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveEngineRequest.class, baseUrl, "/engines/{engine_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1068,7 +1068,7 @@ public class OpenAI {
      */
     public org.openapis.openapi.models.operations.RetrieveFileResponse retrieveFile(org.openapis.openapi.models.operations.RetrieveFileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveFilePathParams.class, baseUrl, "/files/{file_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveFileRequest.class, baseUrl, "/files/{file_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1106,7 +1106,7 @@ public class OpenAI {
      */
     public org.openapis.openapi.models.operations.RetrieveFineTuneResponse retrieveFineTune(org.openapis.openapi.models.operations.RetrieveFineTuneRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveFineTunePathParams.class, baseUrl, "/fine-tunes/{fine_tune_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveFineTuneRequest.class, baseUrl, "/fine-tunes/{fine_tune_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1144,7 +1144,7 @@ public class OpenAI {
      */
     public org.openapis.openapi.models.operations.RetrieveModelResponse retrieveModel(org.openapis.openapi.models.operations.RetrieveModelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveModelPathParams.class, baseUrl, "/models/{model}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveModelRequest.class, baseUrl, "/models/{model}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

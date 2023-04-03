@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteLoyaltyRewardRequest {
-    
-    public DeleteLoyaltyRewardPathParams pathParams;
-    public DeleteLoyaltyRewardRequest withPathParams(DeleteLoyaltyRewardPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteLoyaltyRewardSecurity security;
-    public DeleteLoyaltyRewardRequest withSecurity(DeleteLoyaltyRewardSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the [loyalty reward](https://developer.squareup.com/reference/square_2021-08-18/objects/LoyaltyReward) to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reward_id")
+    public String rewardId;
+    public DeleteLoyaltyRewardRequest withRewardId(String rewardId) {
+        this.rewardId = rewardId;
         return this;
     }
     

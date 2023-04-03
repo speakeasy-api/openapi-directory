@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteDnsDomainNameRecordsRecordIdRequest {
-    
-    public DeleteDnsDomainNameRecordsRecordIdPathParams pathParams;
-    public DeleteDnsDomainNameRecordsRecordIdRequest withPathParams(DeleteDnsDomainNameRecordsRecordIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
+    public String domainNamePathParameter;
+    public DeleteDnsDomainNameRecordsRecordIdRequest withDomainNamePathParameter(String domainNamePathParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
         return this;
     }
     
+    /**
+     * The domain name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
+    public String domainNameQueryParameter;
+    public DeleteDnsDomainNameRecordsRecordIdRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
+        this.domainNameQueryParameter = domainNameQueryParameter;
+        return this;
+    }
     
-    public DeleteDnsDomainNameRecordsRecordIdQueryParams queryParams;
-    public DeleteDnsDomainNameRecordsRecordIdRequest withQueryParams(DeleteDnsDomainNameRecordsRecordIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=recordId")
+    public String recordIdPathParameter;
+    public DeleteDnsDomainNameRecordsRecordIdRequest withRecordIdPathParameter(String recordIdPathParameter) {
+        this.recordIdPathParameter = recordIdPathParameter;
+        return this;
+    }
+    
+    /**
+     * The id of the record.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=record_id")
+    public String recordIdQueryParameter;
+    public DeleteDnsDomainNameRecordsRecordIdRequest withRecordIdQueryParameter(String recordIdQueryParameter) {
+        this.recordIdQueryParameter = recordIdQueryParameter;
         return this;
     }
     

@@ -4,34 +4,53 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListDeployedDevicesDeviceRequest {
-    
-    public ListDeployedDevicesDevicePathParams pathParams;
-    public ListDeployedDevicesDeviceRequest withPathParams(ListDeployedDevicesDevicePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filters the resulting list of Devices by a unique string identifier of the Deployment they are associated with.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DeploymentSid")
+    public String deploymentSid;
+    public ListDeployedDevicesDeviceRequest withDeploymentSid(String deploymentSid) {
+        this.deploymentSid = deploymentSid;
         return this;
     }
     
-    
-    public ListDeployedDevicesDeviceQueryParams queryParams;
-    public ListDeployedDevicesDeviceRequest withQueryParams(ListDeployedDevicesDeviceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FleetSid")
+    public String fleetSid;
+    public ListDeployedDevicesDeviceRequest withFleetSid(String fleetSid) {
+        this.fleetSid = fleetSid;
         return this;
     }
     
-    
-    public ListDeployedDevicesDeviceSecurity security;
-    public ListDeployedDevicesDeviceRequest withSecurity(ListDeployedDevicesDeviceSecurity security) {
-        this.security = security;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListDeployedDevicesDeviceRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListDeployedDevicesDeviceRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public String serverURL;
-    public ListDeployedDevicesDeviceRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListDeployedDevicesDeviceRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

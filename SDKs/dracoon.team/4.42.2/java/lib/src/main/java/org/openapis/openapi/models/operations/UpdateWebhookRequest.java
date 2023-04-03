@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateWebhookRequest {
-    
-    public UpdateWebhookPathParams pathParams;
-    public UpdateWebhookRequest withPathParams(UpdateWebhookPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateWebhookHeaders headers;
-    public UpdateWebhookRequest withHeaders(UpdateWebhookHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateWebhookRequest request;
-    public UpdateWebhookRequest withRequest(org.openapis.openapi.models.shared.UpdateWebhookRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateWebhookRequest updateWebhookRequest;
+    public UpdateWebhookRequest withUpdateWebhookRequest(org.openapis.openapi.models.shared.UpdateWebhookRequest updateWebhookRequest) {
+        this.updateWebhookRequest = updateWebhookRequest;
+        return this;
+    }
+    
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public UpdateWebhookRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
+        return this;
+    }
+    
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public UpdateWebhookXSdsDateFormatEnum xSdsDateFormat;
+    public UpdateWebhookRequest withXSdsDateFormat(UpdateWebhookXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
+        return this;
+    }
+    
+    /**
+     * Webhook ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webhook_id")
+    public Long webhookId;
+    public UpdateWebhookRequest withWebhookId(Long webhookId) {
+        this.webhookId = webhookId;
         return this;
     }
     

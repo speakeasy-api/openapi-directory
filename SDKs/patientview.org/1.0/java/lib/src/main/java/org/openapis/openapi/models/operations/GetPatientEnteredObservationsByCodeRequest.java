@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPatientEnteredObservationsByCodeRequest {
+    /**
+     * code
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=code")
+    public String code;
+    public GetPatientEnteredObservationsByCodeRequest withCode(String code) {
+        this.code = code;
+        return this;
+    }
     
-    public GetPatientEnteredObservationsByCodePathParams pathParams;
-    public GetPatientEnteredObservationsByCodeRequest withPathParams(GetPatientEnteredObservationsByCodePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * userId
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public Long userId;
+    public GetPatientEnteredObservationsByCodeRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

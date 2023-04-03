@@ -41,7 +41,7 @@ public class Announcements {
      */
     public org.openapis.openapi.models.operations.DeleteCustomersAccountAnnouncementsAnnouncementIdResponse deleteCustomersAccountAnnouncementsAnnouncementId(org.openapis.openapi.models.operations.DeleteCustomersAccountAnnouncementsAnnouncementIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCustomersAccountAnnouncementsAnnouncementIdPathParams.class, baseUrl, "/customers/{account}/announcements/{announcement_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCustomersAccountAnnouncementsAnnouncementIdRequest.class, baseUrl, "/customers/{account}/announcements/{announcement_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -123,7 +123,7 @@ public class Announcements {
      */
     public org.openapis.openapi.models.operations.GetCustomersAccountAnnouncementsResponse getCustomersAccountAnnouncements(org.openapis.openapi.models.operations.GetCustomersAccountAnnouncementsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomersAccountAnnouncementsPathParams.class, baseUrl, "/customers/{account}/announcements", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomersAccountAnnouncementsRequest.class, baseUrl, "/customers/{account}/announcements", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -170,7 +170,7 @@ public class Announcements {
      */
     public org.openapis.openapi.models.operations.GetCustomersAccountAnnouncementsAnnouncementIdResponse getCustomersAccountAnnouncementsAnnouncementId(org.openapis.openapi.models.operations.GetCustomersAccountAnnouncementsAnnouncementIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomersAccountAnnouncementsAnnouncementIdPathParams.class, baseUrl, "/customers/{account}/announcements/{announcement_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomersAccountAnnouncementsAnnouncementIdRequest.class, baseUrl, "/customers/{account}/announcements/{announcement_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -215,7 +215,7 @@ public class Announcements {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAnnouncementsResponse postAnnouncements(org.openapis.openapi.models.operations.PostAnnouncementsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAnnouncementsResponse postAnnouncements(org.openapis.openapi.models.operations.PostAnnouncementsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/announcements");
         

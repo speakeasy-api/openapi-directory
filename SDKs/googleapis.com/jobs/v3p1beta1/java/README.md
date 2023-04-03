@@ -20,18 +20,14 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.operations.JobsProjectsClientEventsCreateSecurityOption1;
 import org.openapis.openapi.models.operations.JobsProjectsClientEventsCreateSecurityOption2;
 import org.openapis.openapi.models.operations.JobsProjectsClientEventsCreateSecurity;
-import org.openapis.openapi.models.operations.JobsProjectsClientEventsCreatePathParams;
-import org.openapis.openapi.models.operations.JobsProjectsClientEventsCreateQueryParams;
 import org.openapis.openapi.models.operations.JobsProjectsClientEventsCreateRequest;
 import org.openapis.openapi.models.operations.JobsProjectsClientEventsCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.CreateClientEventRequest;
 import org.openapis.openapi.models.shared.ClientEvent;
 import org.openapis.openapi.models.shared.JobEventTypeEnum;
 import org.openapis.openapi.models.shared.JobEvent;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -40,54 +36,47 @@ public class Application {
                 .build();
 
             JobsProjectsClientEventsCreateRequest req = new JobsProjectsClientEventsCreateRequest() {{
-                security = new JobsProjectsClientEventsCreateSecurity() {{
-                    option1 = new JobsProjectsClientEventsCreateSecurityOption1() {{
-                        oauth2 = new SchemeOauth2() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                        oauth2c = new SchemeOauth2c() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                    }};
-                }};
-                pathParams = new JobsProjectsClientEventsCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new JobsProjectsClientEventsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new CreateClientEventRequest() {{
+                dollarXgafv = "2";
+                createClientEventRequest = new CreateClientEventRequest() {{
                     clientEvent = new ClientEvent() {{
-                        createTime = "suscipit";
-                        eventId = "iure";
+                        createTime = "provident";
+                        eventId = "distinctio";
                         extraInfo = new java.util.HashMap<String, String>() {{
-                            put("debitis", "ipsa");
-                            put("delectus", "tempora");
+                            put("unde", "nulla");
+                            put("corrupti", "illum");
+                            put("vel", "error");
+                            put("deserunt", "suscipit");
                         }};
                         jobEvent = new JobEvent() {{
                             jobs = new String[]{{
-                                add("molestiae"),
-                                add("minus"),
+                                add("magnam"),
+                                add("debitis"),
                             }};
-                            type = "HIRED";
+                            type = "JOB_EVENT_TYPE_UNSPECIFIED";
                         }};
-                        parentEventId = "voluptatum";
-                        requestId = "iusto";
+                        parentEventId = "delectus";
+                        requestId = "tempora";
                     }};
                 }};
-            }};            
+                accessToken = "suscipit";
+                alt = "media";
+                callback = "minus";
+                fields = "placeat";
+                key = "voluptatum";
+                oauthToken = "iusto";
+                parent = "excepturi";
+                prettyPrint = false;
+                quotaUser = "nisi";
+                uploadType = "recusandae";
+                uploadProtocol = "temporibus";
+            }}            
 
-            JobsProjectsClientEventsCreateResponse res = sdk.projects.jobsProjectsClientEventsCreate(req);
+            JobsProjectsClientEventsCreateResponse res = sdk.projects.jobsProjectsClientEventsCreate(req, new JobsProjectsClientEventsCreateSecurity() {{
+                option1 = new JobsProjectsClientEventsCreateSecurityOption1() {{
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                }};
+            }});
 
             if (res.clientEvent.isPresent()) {
                 // handle response
@@ -99,7 +88,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### projects

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminStartPreReceiveEnvironmentDownloadRequest {
-    
-    public EnterpriseAdminStartPreReceiveEnvironmentDownloadPathParams pathParams;
-    public EnterpriseAdminStartPreReceiveEnvironmentDownloadRequest withPathParams(EnterpriseAdminStartPreReceiveEnvironmentDownloadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the pre-receive environment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pre_receive_environment_id")
+    public Long preReceiveEnvironmentId;
+    public EnterpriseAdminStartPreReceiveEnvironmentDownloadRequest withPreReceiveEnvironmentId(Long preReceiveEnvironmentId) {
+        this.preReceiveEnvironmentId = preReceiveEnvironmentId;
         return this;
     }
     

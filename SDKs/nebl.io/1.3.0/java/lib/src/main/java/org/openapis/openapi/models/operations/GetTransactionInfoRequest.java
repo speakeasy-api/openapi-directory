@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTransactionInfoRequest {
-    
-    public GetTransactionInfoPathParams pathParams;
-    public GetTransactionInfoRequest withPathParams(GetTransactionInfoPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Neblio txid to get information on.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=txid")
+    public String txid;
+    public GetTransactionInfoRequest withTxid(String txid) {
+        this.txid = txid;
         return this;
     }
     

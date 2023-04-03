@@ -41,12 +41,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.ClaimIntoOrganizationResponse claimIntoOrganization(org.openapis.openapi.models.operations.ClaimIntoOrganizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClaimIntoOrganizationPathParams.class, baseUrl, "/organizations/{organizationId}/claim", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClaimIntoOrganizationRequest.class, baseUrl, "/organizations/{organizationId}/claim", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -83,12 +83,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.CloneOrganizationResponse cloneOrganization(org.openapis.openapi.models.operations.CloneOrganizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloneOrganizationPathParams.class, baseUrl, "/organizations/{organizationId}/clone", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloneOrganizationRequest.class, baseUrl, "/organizations/{organizationId}/clone", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -128,7 +128,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationResponse getOrganization(org.openapis.openapi.models.operations.GetOrganizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationPathParams.class, baseUrl, "/organizations/{organizationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationRequest.class, baseUrl, "/organizations/{organizationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -168,7 +168,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationDeviceStatusesResponse getOrganizationDeviceStatuses(org.openapis.openapi.models.operations.GetOrganizationDeviceStatusesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationDeviceStatusesPathParams.class, baseUrl, "/organizations/{organizationId}/deviceStatuses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationDeviceStatusesRequest.class, baseUrl, "/organizations/{organizationId}/deviceStatuses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -208,13 +208,13 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationInventoryResponse getOrganizationInventory(org.openapis.openapi.models.operations.GetOrganizationInventoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationInventoryPathParams.class, baseUrl, "/organizations/{organizationId}/inventory", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationInventoryRequest.class, baseUrl, "/organizations/{organizationId}/inventory", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationInventoryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationInventoryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -254,7 +254,7 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationThirdPartyVPNPeersResponse getOrganizationThirdPartyVPNPeers(org.openapis.openapi.models.operations.GetOrganizationThirdPartyVPNPeersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationThirdPartyVPNPeersPathParams.class, baseUrl, "/organizations/{organizationId}/thirdPartyVPNPeers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationThirdPartyVPNPeersRequest.class, baseUrl, "/organizations/{organizationId}/thirdPartyVPNPeers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -294,13 +294,13 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.GetOrganizationUplinksLossAndLatencyResponse getOrganizationUplinksLossAndLatency(org.openapis.openapi.models.operations.GetOrganizationUplinksLossAndLatencyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationUplinksLossAndLatencyPathParams.class, baseUrl, "/organizations/{organizationId}/uplinksLossAndLatency", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationUplinksLossAndLatencyRequest.class, baseUrl, "/organizations/{organizationId}/uplinksLossAndLatency", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationUplinksLossAndLatencyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationUplinksLossAndLatencyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -379,12 +379,12 @@ public class Organizations {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationThirdPartyVPNPeersResponse updateOrganizationThirdPartyVPNPeers(org.openapis.openapi.models.operations.UpdateOrganizationThirdPartyVPNPeersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationThirdPartyVPNPeersPathParams.class, baseUrl, "/organizations/{organizationId}/thirdPartyVPNPeers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationThirdPartyVPNPeersRequest.class, baseUrl, "/organizations/{organizationId}/thirdPartyVPNPeers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

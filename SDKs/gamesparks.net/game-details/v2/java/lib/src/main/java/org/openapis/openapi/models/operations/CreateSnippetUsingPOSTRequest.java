@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSnippetUsingPOSTRequest {
-    
-    public CreateSnippetUsingPOSTPathParams pathParams;
-    public CreateSnippetUsingPOSTRequest withPathParams(CreateSnippetUsingPOSTPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * snippet
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ManageSnippet request;
-    public CreateSnippetUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.ManageSnippet request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ManageSnippet manageSnippet;
+    public CreateSnippetUsingPOSTRequest withManageSnippet(org.openapis.openapi.models.shared.ManageSnippet manageSnippet) {
+        this.manageSnippet = manageSnippet;
+        return this;
+    }
+    
+    /**
+     * apiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public CreateSnippetUsingPOSTRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     

@@ -4,20 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAssociatedResourceRequest {
-    
-    public GetAssociatedResourcePathParams pathParams;
-    public GetAssociatedResourceRequest withPathParams(GetAssociatedResourcePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetAssociatedResourceRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetAssociatedResourceRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public GetAssociatedResourceHeaders headers;
-    public GetAssociatedResourceRequest withHeaders(GetAssociatedResourceHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetAssociatedResourceRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetAssociatedResourceRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetAssociatedResourceRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetAssociatedResourceRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetAssociatedResourceRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     *  The name, ID, or ARN of the application. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=application")
+    public String application;
+    public GetAssociatedResourceRequest withApplication(String application) {
+        this.application = application;
+        return this;
+    }
+    
+    /**
+     * The name or ID of the resource associated with the application.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=resource")
+    public String resource;
+    public GetAssociatedResourceRequest withResource(String resource) {
+        this.resource = resource;
+        return this;
+    }
+    
+    /**
+     * The type of resource associated with the application.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=resourceType")
+    public GetAssociatedResourceResourceTypeEnum resourceType;
+    public GetAssociatedResourceRequest withResourceType(GetAssociatedResourceResourceTypeEnum resourceType) {
+        this.resourceType = resourceType;
         return this;
     }
     

@@ -75,15 +75,15 @@ public class PricesAndFixedPrices {
      */
     public org.openapis.openapi.models.operations.CreateUpdatePriceOrFixedPriceResponse createUpdatePriceOrFixedPrice(org.openapis.openapi.models.operations.CreateUpdatePriceOrFixedPriceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateUpdatePriceOrFixedPricePathParams.class, baseUrl, "/pricing/prices/{itemId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateUpdatePriceOrFixedPriceRequest.class, baseUrl, "/pricing/prices/{itemId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -119,13 +119,13 @@ public class PricesAndFixedPrices {
      */
     public org.openapis.openapi.models.operations.DeletePriceResponse deletePrice(org.openapis.openapi.models.operations.DeletePriceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePricePathParams.class, baseUrl, "/pricing/prices/{itemId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePriceRequest.class, baseUrl, "/pricing/prices/{itemId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -161,13 +161,13 @@ public class PricesAndFixedPrices {
      */
     public org.openapis.openapi.models.operations.DeletefixedpricesonapricetableortradepolicyResponse deletefixedpricesonapricetableortradepolicy(org.openapis.openapi.models.operations.DeletefixedpricesonapricetableortradepolicyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletefixedpricesonapricetableortradepolicyPathParams.class, baseUrl, "/pricing/prices/{itemId}/fixed/{priceTableId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletefixedpricesonapricetableortradepolicyRequest.class, baseUrl, "/pricing/prices/{itemId}/fixed/{priceTableId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -214,24 +214,48 @@ public class PricesAndFixedPrices {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.GetComputedPricebypricetableResponse getComputedPricebypricetable(org.openapis.openapi.models.operations.GetComputedPricebypricetableRequest request) throws Exception {
+        return this.getComputedPricebypricetable(request, null);
+    }
+
+    /**
+     * Get Computed Price by price table or trade policy
+     * Gets the Computed Price, which is the price after all the steps in the Pricing pipeline, for an SKU in a specific price table or trade policy. 
+     * 
+     * ## Response body example
+     * 
+     * ```json
+     * {
+     *     "tradePolicyId": "1",
+     *     "listPrice": 30,
+     *     "costPrice": 76.92,
+     *     "sellingPrice": 18.9,
+     *     "priceValidUntil": "2018-12-20T18:12:14Z"
+     * }
+     * ```
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.GetComputedPricebypricetableResponse getComputedPricebypricetable(org.openapis.openapi.models.operations.GetComputedPricebypricetableRequest request, String serverURL) throws Exception {
         String baseUrl = GET_COMPUTED_PRICEBYPRICETABLE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetComputedPricebypricetablePathParams.class, baseUrl, "/pricing/prices/{itemId}/computed/{priceTableId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetComputedPricebypricetableRequest.class, baseUrl, "/pricing/prices/{itemId}/computed/{priceTableId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetComputedPricebypricetableQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetComputedPricebypricetableRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -306,13 +330,13 @@ public class PricesAndFixedPrices {
      */
     public org.openapis.openapi.models.operations.GetFixedPricesResponse getFixedPrices(org.openapis.openapi.models.operations.GetFixedPricesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFixedPricesPathParams.class, baseUrl, "/pricing/prices/{itemId}/fixed", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFixedPricesRequest.class, baseUrl, "/pricing/prices/{itemId}/fixed", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -377,13 +401,13 @@ public class PricesAndFixedPrices {
      */
     public org.openapis.openapi.models.operations.GetFixedPricesonapricetableResponse getFixedPricesonapricetable(org.openapis.openapi.models.operations.GetFixedPricesonapricetableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFixedPricesonapricetablePathParams.class, baseUrl, "/pricing/prices/{itemId}/fixed/{priceTableId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFixedPricesonapricetableRequest.class, baseUrl, "/pricing/prices/{itemId}/fixed/{priceTableId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -455,13 +479,13 @@ public class PricesAndFixedPrices {
      */
     public org.openapis.openapi.models.operations.GetPriceResponse getPrice(org.openapis.openapi.models.operations.GetPriceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPricePathParams.class, baseUrl, "/pricing/prices/{itemId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPriceRequest.class, baseUrl, "/pricing/prices/{itemId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -519,15 +543,15 @@ public class PricesAndFixedPrices {
      */
     public org.openapis.openapi.models.operations.CreateorupdatefixedpricesonpricetableortradepolicyResponse createorupdatefixedpricesonpricetableortradepolicy(org.openapis.openapi.models.operations.CreateorupdatefixedpricesonpricetableortradepolicyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateorupdatefixedpricesonpricetableortradepolicyPathParams.class, baseUrl, "/pricing/prices/{itemId}/fixed/{priceTableId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateorupdatefixedpricesonpricetableortradepolicyRequest.class, baseUrl, "/pricing/prices/{itemId}/fixed/{priceTableId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

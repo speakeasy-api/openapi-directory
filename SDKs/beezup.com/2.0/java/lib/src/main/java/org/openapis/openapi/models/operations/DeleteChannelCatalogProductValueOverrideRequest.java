@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteChannelCatalogProductValueOverrideRequest {
+    /**
+     * The channel catalog identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelCatalogId")
+    public String channelCatalogId;
+    public DeleteChannelCatalogProductValueOverrideRequest withChannelCatalogId(String channelCatalogId) {
+        this.channelCatalogId = channelCatalogId;
+        return this;
+    }
     
-    public DeleteChannelCatalogProductValueOverridePathParams pathParams;
-    public DeleteChannelCatalogProductValueOverrideRequest withPathParams(DeleteChannelCatalogProductValueOverridePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The channel column identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelColumnId")
+    public String channelColumnId;
+    public DeleteChannelCatalogProductValueOverrideRequest withChannelColumnId(String channelColumnId) {
+        this.channelColumnId = channelColumnId;
+        return this;
+    }
+    
+    /**
+     * The product identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
+    public String productId;
+    public DeleteChannelCatalogProductValueOverrideRequest withProductId(String productId) {
+        this.productId = productId;
         return this;
     }
     

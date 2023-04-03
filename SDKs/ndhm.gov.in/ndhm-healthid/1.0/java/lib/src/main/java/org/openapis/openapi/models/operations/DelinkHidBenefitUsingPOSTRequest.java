@@ -7,10 +7,10 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DelinkHidBenefitUsingPOSTRequest {
-    
-    public DelinkHidBenefitUsingPOSTHeaders headers;
-    public DelinkHidBenefitUsingPOSTRequest withHeaders(DelinkHidBenefitUsingPOSTHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public DelinkHidBenefitUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
@@ -18,16 +18,9 @@ public class DelinkHidBenefitUsingPOSTRequest {
      * hidBenefitLinkedRequestPayload
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.HidBenefitDelinkRequestPayload request;
-    public DelinkHidBenefitUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.HidBenefitDelinkRequestPayload request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public DelinkHidBenefitUsingPOSTSecurity security;
-    public DelinkHidBenefitUsingPOSTRequest withSecurity(DelinkHidBenefitUsingPOSTSecurity security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.HidBenefitDelinkRequestPayload hidBenefitDelinkRequestPayload;
+    public DelinkHidBenefitUsingPOSTRequest withHidBenefitDelinkRequestPayload(org.openapis.openapi.models.shared.HidBenefitDelinkRequestPayload hidBenefitDelinkRequestPayload) {
+        this.hidBenefitDelinkRequestPayload = hidBenefitDelinkRequestPayload;
         return this;
     }
     

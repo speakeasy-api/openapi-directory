@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.InvoiceNotification2PathParams;
-import org.openapis.openapi.models.operations.InvoiceNotification2Headers;
 import org.openapis.openapi.models.operations.InvoiceNotification2Request;
 import org.openapis.openapi.models.operations.InvoiceNotification2Response;
 import org.openapis.openapi.models.shared.InvoiceNotificationRequest;
@@ -29,24 +27,15 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    appKey = new SchemeAppKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                    appToken = new SchemeAppToken() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    appKey = "YOUR_API_KEY_HERE";
+                    appToken = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             InvoiceNotification2Request req = new InvoiceNotification2Request() {{
-                pathParams = new InvoiceNotification2PathParams() {{
-                    orderId = "70caf3941s6df1";
-                }};
-                headers = new InvoiceNotification2Headers() {{
-                    accept = "application/json";
-                    contentType = "application/json";
-                }};
-                request = new InvoiceNotificationRequest() {{
+                accept = "application/json";
+                contentType = "application/json";
+                invoiceNotificationRequest = new InvoiceNotificationRequest() {{
                     cfop = "6.104";
                     courier = "corrupti";
                     extraValue = 100;
@@ -82,7 +71,8 @@ public class Application {
                     type = "Output";
                     volumes = 3;
                 }};
-            }};            
+                orderId = "70caf3941s6df1";
+            }}            
 
             InvoiceNotification2Response res = sdk.invoice.invoiceNotification2(req);
 
@@ -96,7 +86,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### invoice

@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MailASandboxCheckTransferRequest {
-    
-    public MailASandboxCheckTransferPathParams pathParams;
-    public MailASandboxCheckTransferRequest withPathParams(MailASandboxCheckTransferPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=check_transfer_id")
+    public String checkTransferId;
+    public MailASandboxCheckTransferRequest withCheckTransferId(String checkTransferId) {
+        this.checkTransferId = checkTransferId;
         return this;
     }
     

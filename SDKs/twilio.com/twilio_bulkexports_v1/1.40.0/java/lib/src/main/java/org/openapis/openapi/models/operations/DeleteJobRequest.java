@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteJobRequest {
-    
-    public DeleteJobPathParams pathParams;
-    public DeleteJobRequest withPathParams(DeleteJobPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteJobSecurity security;
-    public DeleteJobRequest withSecurity(DeleteJobSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteJobRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique string that that we created to identify the Bulk Export job
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=JobSid")
+    public String jobSid;
+    public DeleteJobRequest withJobSid(String jobSid) {
+        this.jobSid = jobSid;
         return this;
     }
     

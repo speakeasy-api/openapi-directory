@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.BatchGetTracesQueryParams;
-import org.openapis.openapi.models.operations.BatchGetTracesHeaders;
 import org.openapis.openapi.models.operations.BatchGetTracesRequestBody;
 import org.openapis.openapi.models.operations.BatchGetTracesRequest;
 import org.openapis.openapi.models.operations.BatchGetTracesResponse;
@@ -28,34 +26,28 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             BatchGetTracesRequest req = new BatchGetTracesRequest() {{
-                queryParams = new BatchGetTracesQueryParams() {{
-                    nextToken = "corrupti";
-                }};
-                headers = new BatchGetTracesHeaders() {{
-                    xAmzAlgorithm = "provident";
-                    xAmzContentSha256 = "distinctio";
-                    xAmzCredential = "quibusdam";
-                    xAmzDate = "unde";
-                    xAmzSecurityToken = "nulla";
-                    xAmzSignature = "corrupti";
-                    xAmzSignedHeaders = "illum";
-                }};
-                request = new BatchGetTracesRequestBody() {{
-                    nextToken = "vel";
+                nextToken = "corrupti";
+                requestBody = new BatchGetTracesRequestBody() {{
+                    nextToken = "provident";
                     traceIds = new String[]{{
-                        add("deserunt"),
-                        add("suscipit"),
-                        add("iure"),
+                        add("quibusdam"),
+                        add("unde"),
+                        add("nulla"),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "corrupti";
+                xAmzContentSha256 = "illum";
+                xAmzCredential = "vel";
+                xAmzDate = "error";
+                xAmzSecurityToken = "deserunt";
+                xAmzSignature = "suscipit";
+                xAmzSignedHeaders = "iure";
+            }}            
 
             BatchGetTracesResponse res = sdk.batchGetTraces(req);
 
@@ -69,7 +61,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

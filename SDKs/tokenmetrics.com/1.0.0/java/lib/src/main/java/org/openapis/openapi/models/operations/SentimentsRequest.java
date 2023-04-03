@@ -4,13 +4,34 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SentimentsRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
+    public String endDate;
+    public SentimentsRequest withEndDate(String endDate) {
+        this.endDate = endDate;
+        return this;
+    }
     
-    public SentimentsQueryParams queryParams;
-    public SentimentsRequest withQueryParams(SentimentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public String limit;
+    public SentimentsRequest withLimit(String limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
+    public String startDate;
+    public SentimentsRequest withStartDate(String startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tokens")
+    public String tokens;
+    public SentimentsRequest withTokens(String tokens) {
+        this.tokens = tokens;
         return this;
     }
     

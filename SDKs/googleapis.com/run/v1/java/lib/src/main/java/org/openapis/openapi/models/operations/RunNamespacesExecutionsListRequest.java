@@ -4,27 +4,196 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RunNamespacesExecutionsListRequest {
-    
-    public RunNamespacesExecutionsListPathParams pathParams;
-    public RunNamespacesExecutionsListRequest withPathParams(RunNamespacesExecutionsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public RunNamespacesExecutionsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public RunNamespacesExecutionsListQueryParams queryParams;
-    public RunNamespacesExecutionsListRequest withQueryParams(RunNamespacesExecutionsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public RunNamespacesExecutionsListRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public RunNamespacesExecutionsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public RunNamespacesExecutionsListSecurity security;
-    public RunNamespacesExecutionsListRequest withSecurity(RunNamespacesExecutionsListSecurity security) {
-        this.security = security;
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public RunNamespacesExecutionsListRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Optional. Optional encoded string to continue paging.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=continue")
+    public String continue_;
+    public RunNamespacesExecutionsListRequest withContinue(String continue_) {
+        this.continue_ = continue_;
+        return this;
+    }
+    
+    /**
+     * Optional. Not supported by Cloud Run.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fieldSelector")
+    public String fieldSelector;
+    public RunNamespacesExecutionsListRequest withFieldSelector(String fieldSelector) {
+        this.fieldSelector = fieldSelector;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public RunNamespacesExecutionsListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Optional. Not supported by Cloud Run.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeUninitialized")
+    public Boolean includeUninitialized;
+    public RunNamespacesExecutionsListRequest withIncludeUninitialized(Boolean includeUninitialized) {
+        this.includeUninitialized = includeUninitialized;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public RunNamespacesExecutionsListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Optional. Allows to filter resources based on a label. Supported operations are =, !=, exists, in, and notIn.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=labelSelector")
+    public String labelSelector;
+    public RunNamespacesExecutionsListRequest withLabelSelector(String labelSelector) {
+        this.labelSelector = labelSelector;
+        return this;
+    }
+    
+    /**
+     * Optional. The maximum number of the records that should be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public RunNamespacesExecutionsListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public RunNamespacesExecutionsListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Required. The namespace from which the executions should be listed. Replace {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public RunNamespacesExecutionsListRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public RunNamespacesExecutionsListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public RunNamespacesExecutionsListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Optional. Not supported by Cloud Run.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resourceVersion")
+    public String resourceVersion;
+    public RunNamespacesExecutionsListRequest withResourceVersion(String resourceVersion) {
+        this.resourceVersion = resourceVersion;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public RunNamespacesExecutionsListRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public RunNamespacesExecutionsListRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
+        return this;
+    }
+    
+    /**
+     * Optional. Not supported by Cloud Run.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=watch")
+    public Boolean watch;
+    public RunNamespacesExecutionsListRequest withWatch(Boolean watch) {
+        this.watch = watch;
         return this;
     }
     

@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCoursesRootContentIdPermissionsUserEmailRequest {
-    
-    public PostCoursesRootContentIdPermissionsUserEmailPathParams pathParams;
-    public PostCoursesRootContentIdPermissionsUserEmailRequest withPathParams(PostCoursesRootContentIdPermissionsUserEmailPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PostCoursesRootContentIdPermissionsUserEmailPermissionToBeGrantedToTheUser requestBody;
+    public PostCoursesRootContentIdPermissionsUserEmailRequest withRequestBody(PostCoursesRootContentIdPermissionsUserEmailPermissionToBeGrantedToTheUser requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostCoursesRootContentIdPermissionsUserEmailPermissionToBeGrantedToTheUser request;
-    public PostCoursesRootContentIdPermissionsUserEmailRequest withRequest(PostCoursesRootContentIdPermissionsUserEmailPermissionToBeGrantedToTheUser request) {
-        this.request = request;
+    /**
+     * The content Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rootContentId")
+    public String rootContentId;
+    public PostCoursesRootContentIdPermissionsUserEmailRequest withRootContentId(String rootContentId) {
+        this.rootContentId = rootContentId;
+        return this;
+    }
+    
+    /**
+     * The user email
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userEmail")
+    public String userEmail;
+    public PostCoursesRootContentIdPermissionsUserEmailRequest withUserEmail(String userEmail) {
+        this.userEmail = userEmail;
         return this;
     }
     

@@ -35,27 +35,28 @@ public class Accounts {
     /**
      * Creates a new client buyer.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsCreateResponse adexchangebuyer2AccountsClientsCreate(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsCreateResponse adexchangebuyer2AccountsClientsCreate(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsCreateRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsCreatePathParams.class, baseUrl, "/v2beta1/accounts/{accountId}/clients", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsCreateRequest.class, baseUrl, "/v2beta1/accounts/{accountId}/clients", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "client", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,25 +83,26 @@ public class Accounts {
     /**
      * Gets a client buyer with a given client account ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsGetResponse adexchangebuyer2AccountsClientsGet(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsGetResponse adexchangebuyer2AccountsClientsGet(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsGetRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsGetPathParams.class, baseUrl, "/v2beta1/accounts/{accountId}/clients/{clientAccountId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsGetRequest.class, baseUrl, "/v2beta1/accounts/{accountId}/clients/{clientAccountId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,27 +129,28 @@ public class Accounts {
     /**
      * Creates and sends out an email invitation to access an Ad Exchange client buyer account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsInvitationsCreateResponse adexchangebuyer2AccountsClientsInvitationsCreate(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsInvitationsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsInvitationsCreateResponse adexchangebuyer2AccountsClientsInvitationsCreate(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsInvitationsCreateRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsInvitationsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsInvitationsCreatePathParams.class, baseUrl, "/v2beta1/accounts/{accountId}/clients/{clientAccountId}/invitations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsInvitationsCreateRequest.class, baseUrl, "/v2beta1/accounts/{accountId}/clients/{clientAccountId}/invitations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "clientUserInvitation", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsInvitationsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsInvitationsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,25 +177,26 @@ public class Accounts {
     /**
      * Retrieves an existing client user invitation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsInvitationsGetResponse adexchangebuyer2AccountsClientsInvitationsGet(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsInvitationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsInvitationsGetResponse adexchangebuyer2AccountsClientsInvitationsGet(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsInvitationsGetRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsInvitationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsInvitationsGetPathParams.class, baseUrl, "/v2beta1/accounts/{accountId}/clients/{clientAccountId}/invitations/{invitationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsInvitationsGetRequest.class, baseUrl, "/v2beta1/accounts/{accountId}/clients/{clientAccountId}/invitations/{invitationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsInvitationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsInvitationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -219,25 +223,26 @@ public class Accounts {
     /**
      * Lists all the client users invitations for a client with a given account ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsInvitationsListResponse adexchangebuyer2AccountsClientsInvitationsList(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsInvitationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsInvitationsListResponse adexchangebuyer2AccountsClientsInvitationsList(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsInvitationsListRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsInvitationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsInvitationsListPathParams.class, baseUrl, "/v2beta1/accounts/{accountId}/clients/{clientAccountId}/invitations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsInvitationsListRequest.class, baseUrl, "/v2beta1/accounts/{accountId}/clients/{clientAccountId}/invitations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsInvitationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsInvitationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -264,25 +269,26 @@ public class Accounts {
     /**
      * Lists all the clients for the current sponsor buyer.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsListResponse adexchangebuyer2AccountsClientsList(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsListResponse adexchangebuyer2AccountsClientsList(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsListRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsListPathParams.class, baseUrl, "/v2beta1/accounts/{accountId}/clients", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsListRequest.class, baseUrl, "/v2beta1/accounts/{accountId}/clients", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -309,27 +315,28 @@ public class Accounts {
     /**
      * Updates an existing client buyer.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUpdateResponse adexchangebuyer2AccountsClientsUpdate(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUpdateResponse adexchangebuyer2AccountsClientsUpdate(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUpdateRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUpdatePathParams.class, baseUrl, "/v2beta1/accounts/{accountId}/clients/{clientAccountId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUpdateRequest.class, baseUrl, "/v2beta1/accounts/{accountId}/clients/{clientAccountId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "client", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -356,25 +363,26 @@ public class Accounts {
     /**
      * Retrieves an existing client user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUsersGetResponse adexchangebuyer2AccountsClientsUsersGet(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUsersGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUsersGetResponse adexchangebuyer2AccountsClientsUsersGet(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUsersGetRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUsersGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUsersGetPathParams.class, baseUrl, "/v2beta1/accounts/{accountId}/clients/{clientAccountId}/users/{userId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUsersGetRequest.class, baseUrl, "/v2beta1/accounts/{accountId}/clients/{clientAccountId}/users/{userId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUsersGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUsersGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -401,25 +409,26 @@ public class Accounts {
     /**
      * Lists all the known client users for a specified sponsor buyer account ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUsersListResponse adexchangebuyer2AccountsClientsUsersList(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUsersListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUsersListResponse adexchangebuyer2AccountsClientsUsersList(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUsersListRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUsersListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUsersListPathParams.class, baseUrl, "/v2beta1/accounts/{accountId}/clients/{clientAccountId}/users", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUsersListRequest.class, baseUrl, "/v2beta1/accounts/{accountId}/clients/{clientAccountId}/users", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUsersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUsersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -446,27 +455,28 @@ public class Accounts {
     /**
      * Updates an existing client user. Only the user status can be changed on update.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUsersUpdateResponse adexchangebuyer2AccountsClientsUsersUpdate(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUsersUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUsersUpdateResponse adexchangebuyer2AccountsClientsUsersUpdate(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUsersUpdateRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUsersUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUsersUpdatePathParams.class, baseUrl, "/v2beta1/accounts/{accountId}/clients/{clientAccountId}/users/{userId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUsersUpdateRequest.class, baseUrl, "/v2beta1/accounts/{accountId}/clients/{clientAccountId}/users/{userId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "clientUser", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUsersUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsClientsUsersUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -493,27 +503,28 @@ public class Accounts {
     /**
      * Creates a creative.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesCreateResponse adexchangebuyer2AccountsCreativesCreate(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesCreateResponse adexchangebuyer2AccountsCreativesCreate(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesCreateRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesCreatePathParams.class, baseUrl, "/v2beta1/accounts/{accountId}/creatives", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesCreateRequest.class, baseUrl, "/v2beta1/accounts/{accountId}/creatives", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "creative", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -540,27 +551,28 @@ public class Accounts {
     /**
      * Associate an existing deal with a creative.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesDealAssociationsAddResponse adexchangebuyer2AccountsCreativesDealAssociationsAdd(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesDealAssociationsAddRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesDealAssociationsAddResponse adexchangebuyer2AccountsCreativesDealAssociationsAdd(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesDealAssociationsAddRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesDealAssociationsAddSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesDealAssociationsAddPathParams.class, baseUrl, "/v2beta1/accounts/{accountId}/creatives/{creativeId}/dealAssociations:add", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesDealAssociationsAddRequest.class, baseUrl, "/v2beta1/accounts/{accountId}/creatives/{creativeId}/dealAssociations:add", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "addDealAssociationRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesDealAssociationsAddQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesDealAssociationsAddRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -587,25 +599,26 @@ public class Accounts {
     /**
      * List all creative-deal associations.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesDealAssociationsListResponse adexchangebuyer2AccountsCreativesDealAssociationsList(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesDealAssociationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesDealAssociationsListResponse adexchangebuyer2AccountsCreativesDealAssociationsList(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesDealAssociationsListRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesDealAssociationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesDealAssociationsListPathParams.class, baseUrl, "/v2beta1/accounts/{accountId}/creatives/{creativeId}/dealAssociations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesDealAssociationsListRequest.class, baseUrl, "/v2beta1/accounts/{accountId}/creatives/{creativeId}/dealAssociations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesDealAssociationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesDealAssociationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -632,27 +645,28 @@ public class Accounts {
     /**
      * Remove the association between a deal and a creative.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesDealAssociationsRemoveResponse adexchangebuyer2AccountsCreativesDealAssociationsRemove(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesDealAssociationsRemoveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesDealAssociationsRemoveResponse adexchangebuyer2AccountsCreativesDealAssociationsRemove(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesDealAssociationsRemoveRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesDealAssociationsRemoveSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesDealAssociationsRemovePathParams.class, baseUrl, "/v2beta1/accounts/{accountId}/creatives/{creativeId}/dealAssociations:remove", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesDealAssociationsRemoveRequest.class, baseUrl, "/v2beta1/accounts/{accountId}/creatives/{creativeId}/dealAssociations:remove", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "removeDealAssociationRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesDealAssociationsRemoveQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesDealAssociationsRemoveRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -679,25 +693,26 @@ public class Accounts {
     /**
      * Gets a creative.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesGetResponse adexchangebuyer2AccountsCreativesGet(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesGetResponse adexchangebuyer2AccountsCreativesGet(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesGetRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesGetPathParams.class, baseUrl, "/v2beta1/accounts/{accountId}/creatives/{creativeId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesGetRequest.class, baseUrl, "/v2beta1/accounts/{accountId}/creatives/{creativeId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -724,25 +739,26 @@ public class Accounts {
     /**
      * Lists creatives.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesListResponse adexchangebuyer2AccountsCreativesList(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesListResponse adexchangebuyer2AccountsCreativesList(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesListRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesListPathParams.class, baseUrl, "/v2beta1/accounts/{accountId}/creatives", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesListRequest.class, baseUrl, "/v2beta1/accounts/{accountId}/creatives", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -769,27 +785,28 @@ public class Accounts {
     /**
      * Stops watching a creative. Will stop push notifications being sent to the topics when the creative changes status.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesStopWatchingResponse adexchangebuyer2AccountsCreativesStopWatching(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesStopWatchingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesStopWatchingResponse adexchangebuyer2AccountsCreativesStopWatching(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesStopWatchingRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesStopWatchingSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesStopWatchingPathParams.class, baseUrl, "/v2beta1/accounts/{accountId}/creatives/{creativeId}:stopWatching", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesStopWatchingRequest.class, baseUrl, "/v2beta1/accounts/{accountId}/creatives/{creativeId}:stopWatching", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesStopWatchingQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesStopWatchingRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -816,27 +833,28 @@ public class Accounts {
     /**
      * Updates a creative.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesUpdateResponse adexchangebuyer2AccountsCreativesUpdate(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesUpdateResponse adexchangebuyer2AccountsCreativesUpdate(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesUpdateRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesUpdatePathParams.class, baseUrl, "/v2beta1/accounts/{accountId}/creatives/{creativeId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesUpdateRequest.class, baseUrl, "/v2beta1/accounts/{accountId}/creatives/{creativeId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "creative", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -863,27 +881,28 @@ public class Accounts {
     /**
      * Watches a creative. Will result in push notifications being sent to the topic when the creative changes status.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesWatchResponse adexchangebuyer2AccountsCreativesWatch(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesWatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesWatchResponse adexchangebuyer2AccountsCreativesWatch(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesWatchRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesWatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesWatchPathParams.class, baseUrl, "/v2beta1/accounts/{accountId}/creatives/{creativeId}:watch", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesWatchRequest.class, baseUrl, "/v2beta1/accounts/{accountId}/creatives/{creativeId}:watch", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "watchCreativeRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesWatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsCreativesWatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -910,25 +929,26 @@ public class Accounts {
     /**
      * List finalized proposals, regardless if a proposal is being renegotiated. A filter expression (PQL query) may be specified to filter the results. The notes will not be returned.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsFinalizedProposalsListResponse adexchangebuyer2AccountsFinalizedProposalsList(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsFinalizedProposalsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsFinalizedProposalsListResponse adexchangebuyer2AccountsFinalizedProposalsList(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsFinalizedProposalsListRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2AccountsFinalizedProposalsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsFinalizedProposalsListPathParams.class, baseUrl, "/v2beta1/accounts/{accountId}/finalizedProposals", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsFinalizedProposalsListRequest.class, baseUrl, "/v2beta1/accounts/{accountId}/finalizedProposals", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsFinalizedProposalsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsFinalizedProposalsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -955,27 +975,28 @@ public class Accounts {
     /**
      * Update given deals to pause serving. This method will set the `DealServingMetadata.DealPauseStatus.has_buyer_paused` bit to true for all listed deals in the request. Currently, this method only applies to PG and PD deals. For PA deals, call accounts.proposals.pause endpoint. It is a no-op to pause already-paused deals. It is an error to call PauseProposalDeals for deals which are not part of the proposal of proposal_id or which are not finalized or renegotiating.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsFinalizedProposalsPauseResponse adexchangebuyer2AccountsFinalizedProposalsPause(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsFinalizedProposalsPauseRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsFinalizedProposalsPauseResponse adexchangebuyer2AccountsFinalizedProposalsPause(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsFinalizedProposalsPauseRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2AccountsFinalizedProposalsPauseSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsFinalizedProposalsPausePathParams.class, baseUrl, "/v2beta1/accounts/{accountId}/finalizedProposals/{proposalId}:pause", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsFinalizedProposalsPauseRequest.class, baseUrl, "/v2beta1/accounts/{accountId}/finalizedProposals/{proposalId}:pause", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "pauseProposalDealsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsFinalizedProposalsPauseQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsFinalizedProposalsPauseRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1002,27 +1023,28 @@ public class Accounts {
     /**
      * Update given deals to resume serving. This method will set the `DealServingMetadata.DealPauseStatus.has_buyer_paused` bit to false for all listed deals in the request. Currently, this method only applies to PG and PD deals. For PA deals, call accounts.proposals.resume endpoint. It is a no-op to resume running deals or deals paused by the other party. It is an error to call ResumeProposalDeals for deals which are not part of the proposal of proposal_id or which are not finalized or renegotiating.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsFinalizedProposalsResumeResponse adexchangebuyer2AccountsFinalizedProposalsResume(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsFinalizedProposalsResumeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsFinalizedProposalsResumeResponse adexchangebuyer2AccountsFinalizedProposalsResume(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsFinalizedProposalsResumeRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2AccountsFinalizedProposalsResumeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsFinalizedProposalsResumePathParams.class, baseUrl, "/v2beta1/accounts/{accountId}/finalizedProposals/{proposalId}:resume", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsFinalizedProposalsResumeRequest.class, baseUrl, "/v2beta1/accounts/{accountId}/finalizedProposals/{proposalId}:resume", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "resumeProposalDealsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsFinalizedProposalsResumeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsFinalizedProposalsResumeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1049,25 +1071,26 @@ public class Accounts {
     /**
      * Gets the requested product by ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProductsGetResponse adexchangebuyer2AccountsProductsGet(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProductsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProductsGetResponse adexchangebuyer2AccountsProductsGet(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProductsGetRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProductsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProductsGetPathParams.class, baseUrl, "/v2beta1/accounts/{accountId}/products/{productId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProductsGetRequest.class, baseUrl, "/v2beta1/accounts/{accountId}/products/{productId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProductsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProductsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1094,25 +1117,26 @@ public class Accounts {
     /**
      * List all products visible to the buyer (optionally filtered by the specified PQL query).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProductsListResponse adexchangebuyer2AccountsProductsList(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProductsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProductsListResponse adexchangebuyer2AccountsProductsList(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProductsListRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProductsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProductsListPathParams.class, baseUrl, "/v2beta1/accounts/{accountId}/products", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProductsListRequest.class, baseUrl, "/v2beta1/accounts/{accountId}/products", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProductsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProductsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1139,27 +1163,28 @@ public class Accounts {
     /**
      * Mark the proposal as accepted at the given revision number. If the number does not match the server's revision number an `ABORTED` error message will be returned. This call updates the proposal_state from `PROPOSED` to `BUYER_ACCEPTED`, or from `SELLER_ACCEPTED` to `FINALIZED`. Upon calling this endpoint, the buyer implicitly agrees to the terms and conditions optionally set within the proposal by the publisher.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsAcceptResponse adexchangebuyer2AccountsProposalsAccept(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsAcceptRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsAcceptResponse adexchangebuyer2AccountsProposalsAccept(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsAcceptRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsAcceptSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsAcceptPathParams.class, baseUrl, "/v2beta1/accounts/{accountId}/proposals/{proposalId}:accept", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsAcceptRequest.class, baseUrl, "/v2beta1/accounts/{accountId}/proposals/{proposalId}:accept", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "acceptProposalRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsAcceptQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsAcceptRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1186,27 +1211,28 @@ public class Accounts {
     /**
      * Create a new note and attach it to the proposal. The note is assigned a unique ID by the server. The proposal revision number will not increase when associated with a new note.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsAddNoteResponse adexchangebuyer2AccountsProposalsAddNote(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsAddNoteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsAddNoteResponse adexchangebuyer2AccountsProposalsAddNote(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsAddNoteRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsAddNoteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsAddNotePathParams.class, baseUrl, "/v2beta1/accounts/{accountId}/proposals/{proposalId}:addNote", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsAddNoteRequest.class, baseUrl, "/v2beta1/accounts/{accountId}/proposals/{proposalId}:addNote", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "addNoteRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsAddNoteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsAddNoteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1233,27 +1259,28 @@ public class Accounts {
     /**
      * Cancel an ongoing negotiation on a proposal. This does not cancel or end serving for the deals if the proposal has been finalized, but only cancels a negotiation unilaterally.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsCancelNegotiationResponse adexchangebuyer2AccountsProposalsCancelNegotiation(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsCancelNegotiationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsCancelNegotiationResponse adexchangebuyer2AccountsProposalsCancelNegotiation(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsCancelNegotiationRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsCancelNegotiationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsCancelNegotiationPathParams.class, baseUrl, "/v2beta1/accounts/{accountId}/proposals/{proposalId}:cancelNegotiation", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsCancelNegotiationRequest.class, baseUrl, "/v2beta1/accounts/{accountId}/proposals/{proposalId}:cancelNegotiation", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsCancelNegotiationQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsCancelNegotiationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1280,27 +1307,28 @@ public class Accounts {
     /**
      * You can opt-in to manually update proposals to indicate that setup is complete. By default, proposal setup is automatically completed after their deals are finalized. Contact your Technical Account Manager to opt in. Buyers can call this method when the proposal has been finalized, and all the required creatives have been uploaded using the Creatives API. This call updates the `is_setup_completed` field on the deals in the proposal, and notifies the seller. The server then advances the revision number of the most recent proposal. To mark an individual deal as ready to serve, call `buyers.finalizedDeals.setReadyToServe` in the Marketplace API.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsCompleteSetupResponse adexchangebuyer2AccountsProposalsCompleteSetup(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsCompleteSetupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsCompleteSetupResponse adexchangebuyer2AccountsProposalsCompleteSetup(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsCompleteSetupRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsCompleteSetupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsCompleteSetupPathParams.class, baseUrl, "/v2beta1/accounts/{accountId}/proposals/{proposalId}:completeSetup", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsCompleteSetupRequest.class, baseUrl, "/v2beta1/accounts/{accountId}/proposals/{proposalId}:completeSetup", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsCompleteSetupQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsCompleteSetupRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1327,27 +1355,28 @@ public class Accounts {
     /**
      * Create the given proposal. Each created proposal and any deals it contains are assigned a unique ID by the server.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsCreateResponse adexchangebuyer2AccountsProposalsCreate(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsCreateResponse adexchangebuyer2AccountsProposalsCreate(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsCreateRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsCreatePathParams.class, baseUrl, "/v2beta1/accounts/{accountId}/proposals", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsCreateRequest.class, baseUrl, "/v2beta1/accounts/{accountId}/proposals", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "proposalInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1374,25 +1403,26 @@ public class Accounts {
     /**
      * Gets a proposal given its ID. The proposal is returned at its head revision.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsGetResponse adexchangebuyer2AccountsProposalsGet(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsGetResponse adexchangebuyer2AccountsProposalsGet(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsGetRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsGetPathParams.class, baseUrl, "/v2beta1/accounts/{accountId}/proposals/{proposalId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsGetRequest.class, baseUrl, "/v2beta1/accounts/{accountId}/proposals/{proposalId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1419,25 +1449,26 @@ public class Accounts {
     /**
      * List proposals. A filter expression (PQL query) may be specified to filter the results. To retrieve all finalized proposals, regardless if a proposal is being renegotiated, see the FinalizedProposals resource. Note that Bidder/ChildSeat relationships differ from the usual behavior. A Bidder account can only see its child seats' proposals by specifying the ChildSeat's accountId in the request path.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsListResponse adexchangebuyer2AccountsProposalsList(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsListResponse adexchangebuyer2AccountsProposalsList(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsListRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsListPathParams.class, baseUrl, "/v2beta1/accounts/{accountId}/proposals", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsListRequest.class, baseUrl, "/v2beta1/accounts/{accountId}/proposals", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1464,27 +1495,28 @@ public class Accounts {
     /**
      * Update the given proposal to pause serving. This method will set the `DealServingMetadata.DealPauseStatus.has_buyer_paused` bit to true for all deals in the proposal. It is a no-op to pause an already-paused proposal. It is an error to call PauseProposal for a proposal that is not finalized or renegotiating.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsPauseResponse adexchangebuyer2AccountsProposalsPause(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsPauseRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsPauseResponse adexchangebuyer2AccountsProposalsPause(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsPauseRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsPauseSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsPausePathParams.class, baseUrl, "/v2beta1/accounts/{accountId}/proposals/{proposalId}:pause", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsPauseRequest.class, baseUrl, "/v2beta1/accounts/{accountId}/proposals/{proposalId}:pause", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "pauseProposalRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsPauseQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsPauseRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1511,27 +1543,28 @@ public class Accounts {
     /**
      * Update the given proposal to resume serving. This method will set the `DealServingMetadata.DealPauseStatus.has_buyer_paused` bit to false for all deals in the proposal. Note that if the `has_seller_paused` bit is also set, serving will not resume until the seller also resumes. It is a no-op to resume an already-running proposal. It is an error to call ResumeProposal for a proposal that is not finalized or renegotiating.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsResumeResponse adexchangebuyer2AccountsProposalsResume(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsResumeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsResumeResponse adexchangebuyer2AccountsProposalsResume(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsResumeRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsResumeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsResumePathParams.class, baseUrl, "/v2beta1/accounts/{accountId}/proposals/{proposalId}:resume", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsResumeRequest.class, baseUrl, "/v2beta1/accounts/{accountId}/proposals/{proposalId}:resume", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsResumeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsResumeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1558,27 +1591,28 @@ public class Accounts {
     /**
      * Update the given proposal at the client known revision number. If the server revision has advanced since the passed-in `proposal.proposal_revision`, an `ABORTED` error message will be returned. Only the buyer-modifiable fields of the proposal will be updated. Note that the deals in the proposal will be updated to match the passed-in copy. If a passed-in deal does not have a `deal_id`, the server will assign a new unique ID and create the deal. If passed-in deal has a `deal_id`, it will be updated to match the passed-in copy. Any existing deals not present in the passed-in proposal will be deleted. It is an error to pass in a deal with a `deal_id` not present at head.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsUpdateResponse adexchangebuyer2AccountsProposalsUpdate(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsUpdateResponse adexchangebuyer2AccountsProposalsUpdate(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsUpdateRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsUpdatePathParams.class, baseUrl, "/v2beta1/accounts/{accountId}/proposals/{proposalId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsUpdateRequest.class, baseUrl, "/v2beta1/accounts/{accountId}/proposals/{proposalId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "proposalInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsProposalsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1605,25 +1639,26 @@ public class Accounts {
     /**
      * Gets the requested publisher profile by id.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsPublisherProfilesGetResponse adexchangebuyer2AccountsPublisherProfilesGet(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsPublisherProfilesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsPublisherProfilesGetResponse adexchangebuyer2AccountsPublisherProfilesGet(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsPublisherProfilesGetRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2AccountsPublisherProfilesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsPublisherProfilesGetPathParams.class, baseUrl, "/v2beta1/accounts/{accountId}/publisherProfiles/{publisherProfileId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsPublisherProfilesGetRequest.class, baseUrl, "/v2beta1/accounts/{accountId}/publisherProfiles/{publisherProfileId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsPublisherProfilesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsPublisherProfilesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1650,25 +1685,26 @@ public class Accounts {
     /**
      * List all publisher profiles visible to the buyer
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsPublisherProfilesListResponse adexchangebuyer2AccountsPublisherProfilesList(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsPublisherProfilesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Adexchangebuyer2AccountsPublisherProfilesListResponse adexchangebuyer2AccountsPublisherProfilesList(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsPublisherProfilesListRequest request, org.openapis.openapi.models.operations.Adexchangebuyer2AccountsPublisherProfilesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsPublisherProfilesListPathParams.class, baseUrl, "/v2beta1/accounts/{accountId}/publisherProfiles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsPublisherProfilesListRequest.class, baseUrl, "/v2beta1/accounts/{accountId}/publisherProfiles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsPublisherProfilesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Adexchangebuyer2AccountsPublisherProfilesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

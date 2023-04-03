@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiLogisticsPvtShippingPoliciesRequest {
-    
-    public GetApiLogisticsPvtShippingPoliciesQueryParams queryParams;
-    public GetApiLogisticsPvtShippingPoliciesRequest withQueryParams(GetApiLogisticsPvtShippingPoliciesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetApiLogisticsPvtShippingPoliciesRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetApiLogisticsPvtShippingPoliciesRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetApiLogisticsPvtShippingPoliciesHeaders headers;
-    public GetApiLogisticsPvtShippingPoliciesRequest withHeaders(GetApiLogisticsPvtShippingPoliciesHeaders headers) {
-        this.headers = headers;
+    /**
+     * Desired number of pages to retrieve information from your Shipping Policies.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public String page;
+    public GetApiLogisticsPvtShippingPoliciesRequest withPage(String page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Desired number of items per page, to retrieve information from your Shipping Policies.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=perPage")
+    public String perPage;
+    public GetApiLogisticsPvtShippingPoliciesRequest withPerPage(String perPage) {
+        this.perPage = perPage;
         return this;
     }
     

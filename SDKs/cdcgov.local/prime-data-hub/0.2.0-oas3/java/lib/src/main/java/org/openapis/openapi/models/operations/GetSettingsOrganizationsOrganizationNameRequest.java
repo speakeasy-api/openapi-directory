@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSettingsOrganizationsOrganizationNameRequest {
-    
-    public GetSettingsOrganizationsOrganizationNamePathParams pathParams;
-    public GetSettingsOrganizationsOrganizationNameRequest withPathParams(GetSettingsOrganizationsOrganizationNamePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetSettingsOrganizationsOrganizationNameSecurity security;
-    public GetSettingsOrganizationsOrganizationNameRequest withSecurity(GetSettingsOrganizationsOrganizationNameSecurity security) {
-        this.security = security;
+    /**
+     * The name of the organization
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationName")
+    public String organizationName;
+    public GetSettingsOrganizationsOrganizationNameRequest withOrganizationName(String organizationName) {
+        this.organizationName = organizationName;
         return this;
     }
     

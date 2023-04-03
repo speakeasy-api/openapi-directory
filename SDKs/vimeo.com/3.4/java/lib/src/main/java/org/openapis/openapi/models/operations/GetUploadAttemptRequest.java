@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUploadAttemptRequest {
-    
-    public GetUploadAttemptPathParams pathParams;
-    public GetUploadAttemptRequest withPathParams(GetUploadAttemptPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the upload attempt.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=upload")
+    public Double upload;
+    public GetUploadAttemptRequest withUpload(Double upload) {
+        this.upload = upload;
         return this;
     }
     
-    
-    public GetUploadAttemptSecurity security;
-    public GetUploadAttemptRequest withSecurity(GetUploadAttemptSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public GetUploadAttemptRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

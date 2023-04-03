@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetcitymatchRequest {
+    /**
+     * City name from which to generate similarity key
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=city")
+    public String city;
+    public GetcitymatchRequest withCity(String city) {
+        this.city = city;
+        return this;
+    }
     
-    public GetcitymatchQueryParams queryParams;
-    public GetcitymatchRequest withQueryParams(GetcitymatchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Your Interzoid license API key. Register at www.interzoid.com/register
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
+    public String license;
+    public GetcitymatchRequest withLicense(String license) {
+        this.license = license;
         return this;
     }
     

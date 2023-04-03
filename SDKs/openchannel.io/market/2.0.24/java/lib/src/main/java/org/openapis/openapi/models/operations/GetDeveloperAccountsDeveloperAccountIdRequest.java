@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDeveloperAccountsDeveloperAccountIdRequest {
-    
-    public GetDeveloperAccountsDeveloperAccountIdPathParams pathParams;
-    public GetDeveloperAccountsDeveloperAccountIdRequest withPathParams(GetDeveloperAccountsDeveloperAccountIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the developer account to be located
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=developerAccountId")
+    public String developerAccountId;
+    public GetDeveloperAccountsDeveloperAccountIdRequest withDeveloperAccountId(String developerAccountId) {
+        this.developerAccountId = developerAccountId;
         return this;
     }
     

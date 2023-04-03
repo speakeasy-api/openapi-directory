@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.CreateDomesticPaymentConsentsJsonSecurity;
-import org.openapis.openapi.models.operations.CreateDomesticPaymentConsentsJsonHeaders;
 import org.openapis.openapi.models.operations.CreateDomesticPaymentConsentsJsonRequest;
 import org.openapis.openapi.models.operations.CreateDomesticPaymentConsentsJsonResponse;
 import org.openapis.openapi.models.shared.OBWriteDomesticConsent4DataAuthorisationAuthorisationTypeEnum;
@@ -26,7 +25,6 @@ import org.openapis.openapi.models.shared.OBSCASupportData1RequestedSCAExemption
 import org.openapis.openapi.models.shared.OBSCASupportData1;
 import org.openapis.openapi.models.shared.OBPostalAddress6;
 import org.openapis.openapi.models.shared.OBAddressTypeCodeEnum;
-import org.openapis.openapi.models.shared.SchemeTppoAuth2Security;
 
 public class Application {
     public static void main(String[] args) {
@@ -35,101 +33,96 @@ public class Application {
                 .build();
 
             CreateDomesticPaymentConsentsJsonRequest req = new CreateDomesticPaymentConsentsJsonRequest() {{
-                security = new CreateDomesticPaymentConsentsJsonSecurity() {{
-                    tppoAuth2Security = new SchemeTppoAuth2Security() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                headers = new CreateDomesticPaymentConsentsJsonHeaders() {{
-                    authorization = "corrupti";
-                    xCustomerUserAgent = "provident";
-                    xFapiAuthDate = "distinctio";
-                    xFapiCustomerIpAddress = "quibusdam";
-                    xFapiInteractionId = "unde";
-                    xIdempotencyKey = "nulla";
-                    xJwsSignature = "corrupti";
-                }};
-                request = new OBWriteDomesticConsent4() {{
+                authorization = "corrupti";
+                obWriteDomesticConsent4 = new OBWriteDomesticConsent4() {{
                     data = new OBWriteDomesticConsent4Data() {{
                         authorisation = new OBWriteDomesticConsent4DataAuthorisation() {{
                             authorisationType = "Single";
-                            completionDateTime = "2022-05-18T09:34:54.894Z";
+                            completionDateTime = "2021-04-24T16:27:50.833Z";
                         }};
                         initiation = new OBWriteDomesticConsent4DataInitiation() {{
                             creditorAccount = new OBWriteDomesticConsent4DataInitiationCreditorAccount() {{
-                                identification = "deserunt";
-                                name = "suscipit";
-                                schemeName = "iure";
-                                secondaryIdentification = "magnam";
+                                identification = "unde";
+                                name = "nulla";
+                                schemeName = "corrupti";
+                                secondaryIdentification = "illum";
                             }};
                             creditorPostalAddress = new OBPostalAddress6() {{
                                 addressLine = new String[]{{
-                                    add("ipsa"),
-                                    add("delectus"),
-                                    add("tempora"),
-                                    add("suscipit"),
+                                    add("error"),
+                                    add("deserunt"),
                                 }};
                                 addressType = "MailTo";
-                                buildingNumber = "minus";
-                                country = "Slovenia";
-                                countrySubDivision = "voluptatum";
-                                department = "iusto";
-                                postCode = "39803-0603";
-                                streetName = "repellendus";
-                                subDepartment = "sapiente";
-                                townName = "quo";
+                                buildingNumber = "iure";
+                                country = "French Guiana";
+                                countrySubDivision = "debitis";
+                                department = "ipsa";
+                                postCode = "23478-5453";
+                                streetName = "recusandae";
+                                subDepartment = "temporibus";
+                                townName = "ab";
                             }};
                             debtorAccount = new OBWriteDomesticConsent4DataInitiationDebtorAccount() {{
-                                identification = "odit";
-                                name = "at";
-                                schemeName = "at";
-                                secondaryIdentification = "maiores";
+                                identification = "quis";
+                                name = "veritatis";
+                                schemeName = "deserunt";
+                                secondaryIdentification = "perferendis";
                             }};
-                            endToEndIdentification = "molestiae";
+                            endToEndIdentification = "ipsam";
                             instructedAmount = new OBWriteDomesticConsent4DataInitiationInstructedAmount() {{
-                                amount = "quod";
-                                currency = "quod";
+                                amount = "repellendus";
+                                currency = "sapiente";
                             }};
-                            instructionIdentification = "esse";
-                            localInstrument = "totam";
+                            instructionIdentification = "quo";
+                            localInstrument = "odit";
                             remittanceInformation = new OBWriteDomesticConsent4DataInitiationRemittanceInformation() {{
-                                reference = "porro";
-                                unstructured = "dolorum";
+                                reference = "at";
+                                unstructured = "at";
                             }};
                             supplementaryData = new java.util.HashMap<String, Object>() {{
-                                put("nam", "officia");
+                                put("molestiae", "quod");
+                                put("quod", "esse");
+                                put("totam", "porro");
+                                put("dolorum", "dicta");
                             }};
                         }};
                         readRefundAccount = "Yes";
                         scaSupportData = new OBSCASupportData1() {{
-                            appliedAuthenticationApproach = "CA";
-                            referencePaymentOrderId = "deleniti";
-                            requestedSCAExemptionType = "PartyToParty";
+                            appliedAuthenticationApproach = "SCA";
+                            referencePaymentOrderId = "occaecati";
+                            requestedSCAExemptionType = "ContactlessTravel";
                         }};
                     }};
                     risk = new OBRisk1() {{
                         deliveryAddress = new OBRisk1DeliveryAddress() {{
                             addressLine = new String[]{{
+                                add("hic"),
+                                add("optio"),
                                 add("totam"),
-                                add("beatae"),
-                                add("commodi"),
-                                add("molestiae"),
                             }};
-                            buildingNumber = "modi";
-                            country = "Cocos (Keeling) Islands";
-                            countrySubDivision = "impedit";
-                            postCode = "42510-3616";
-                            streetName = "dolor";
-                            townName = "natus";
+                            buildingNumber = "beatae";
+                            country = "Iraq";
+                            countrySubDivision = "molestiae";
+                            postCode = "17742";
+                            streetName = "excepturi";
+                            townName = "aspernatur";
                         }};
-                        merchantCategoryCode = "laboriosam";
-                        merchantCustomerIdentification = "hic";
-                        paymentContextCode = "PartyToParty";
+                        merchantCategoryCode = "perferendis";
+                        merchantCustomerIdentification = "ad";
+                        paymentContextCode = "Other";
                     }};
                 }};
-            }};            
+                xCustomerUserAgent = "sed";
+                xFapiAuthDate = "iste";
+                xFapiCustomerIpAddress = "dolor";
+                xFapiInteractionId = "natus";
+                xIdempotencyKey = "laboriosam";
+                xJwsSignature = "hic";
+            }}            
 
-            CreateDomesticPaymentConsentsJsonResponse res = sdk.domesticPayments.createDomesticPaymentConsentsJson(req);
+            CreateDomesticPaymentConsentsJsonResponse res = sdk.domesticPayments.createDomesticPaymentConsentsJson(req, new CreateDomesticPaymentConsentsJsonSecurity() {{
+                tppoAuth2Security = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.body.isPresent()) {
                 // handle response

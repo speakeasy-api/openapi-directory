@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CancelRotateSecretXAmzTargetEnum;
-import org.openapis.openapi.models.operations.CancelRotateSecretHeaders;
 import org.openapis.openapi.models.operations.CancelRotateSecretRequest;
 import org.openapis.openapi.models.operations.CancelRotateSecretResponse;
 import org.openapis.openapi.models.shared.CancelRotateSecretRequest;
@@ -28,27 +27,23 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CancelRotateSecretRequest req = new CancelRotateSecretRequest() {{
-                headers = new CancelRotateSecretHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "secretsmanager.CancelRotateSecret";
+                cancelRotateSecretRequest = new CancelRotateSecretRequest() {{
+                    secretId = "corrupti";
                 }};
-                request = new CancelRotateSecretRequest() {{
-                    secretId = "illum";
-                }};
-            }};            
+                xAmzAlgorithm = "provident";
+                xAmzContentSha256 = "distinctio";
+                xAmzCredential = "quibusdam";
+                xAmzDate = "unde";
+                xAmzSecurityToken = "nulla";
+                xAmzSignature = "corrupti";
+                xAmzSignedHeaders = "illum";
+                xAmzTarget = "secretsmanager.CancelRotateSecret";
+            }}            
 
             CancelRotateSecretResponse res = sdk.cancelRotateSecret(req);
 
@@ -62,7 +57,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

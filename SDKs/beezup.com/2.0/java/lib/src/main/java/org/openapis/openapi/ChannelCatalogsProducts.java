@@ -41,18 +41,18 @@ public class ChannelCatalogsProducts {
      */
     public org.openapis.openapi.models.operations.ExportChannelCatalogProductInfoListResponse exportChannelCatalogProductInfoList(org.openapis.openapi.models.operations.ExportChannelCatalogProductInfoListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExportChannelCatalogProductInfoListPathParams.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/products/export", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExportChannelCatalogProductInfoListRequest.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/products/export", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "getChannelCatalogProductInfoListRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportChannelCatalogProductInfoListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportChannelCatalogProductInfoListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -98,7 +98,7 @@ public class ChannelCatalogsProducts {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetChannelCatalogProductByChannelCatalogResponse getChannelCatalogProductByChannelCatalog(org.openapis.openapi.models.operations.GetChannelCatalogProductByChannelCatalogRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetChannelCatalogProductByChannelCatalogResponse getChannelCatalogProductByChannelCatalog(org.openapis.openapi.models.shared.ChannelCatalogProductByChannelCatalogRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/user/channelCatalogs/products");
         
@@ -151,7 +151,7 @@ public class ChannelCatalogsProducts {
      */
     public org.openapis.openapi.models.operations.GetChannelCatalogProductInfoResponse getChannelCatalogProductInfo(org.openapis.openapi.models.operations.GetChannelCatalogProductInfoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelCatalogProductInfoPathParams.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/products/{productId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelCatalogProductInfoRequest.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/products/{productId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -197,12 +197,12 @@ public class ChannelCatalogsProducts {
      */
     public org.openapis.openapi.models.operations.GetChannelCatalogProductInfoListResponse getChannelCatalogProductInfoList(org.openapis.openapi.models.operations.GetChannelCatalogProductInfoListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelCatalogProductInfoListPathParams.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/products", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelCatalogProductInfoListRequest.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/products", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "getChannelCatalogProductInfoListRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -248,7 +248,7 @@ public class ChannelCatalogsProducts {
      */
     public org.openapis.openapi.models.operations.GetChannelCatalogProductsCountersResponse getChannelCatalogProductsCounters(org.openapis.openapi.models.operations.GetChannelCatalogProductsCountersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelCatalogProductsCountersPathParams.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/products/counters", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelCatalogProductsCountersRequest.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/products/counters", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

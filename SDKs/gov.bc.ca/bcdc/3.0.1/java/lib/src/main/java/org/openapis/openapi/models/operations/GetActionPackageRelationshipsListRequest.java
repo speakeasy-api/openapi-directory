@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetActionPackageRelationshipsListRequest {
+    /**
+     * The id or name of the first package
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public GetActionPackageRelationshipsListRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetActionPackageRelationshipsListQueryParams queryParams;
-    public GetActionPackageRelationshipsListRequest withQueryParams(GetActionPackageRelationshipsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The id or name of the second package
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id2")
+    public String id2;
+    public GetActionPackageRelationshipsListRequest withId2(String id2) {
+        this.id2 = id2;
+        return this;
+    }
+    
+    /**
+     * relationship as string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rel")
+    public String rel;
+    public GetActionPackageRelationshipsListRequest withRel(String rel) {
+        this.rel = rel;
         return this;
     }
     

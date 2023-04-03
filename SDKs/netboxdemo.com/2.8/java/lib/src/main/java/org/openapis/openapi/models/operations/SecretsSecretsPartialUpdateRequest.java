@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SecretsSecretsPartialUpdateRequest {
-    
-    public SecretsSecretsPartialUpdatePathParams pathParams;
-    public SecretsSecretsPartialUpdateRequest withPathParams(SecretsSecretsPartialUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.WritableSecretInput writableSecretInput;
+    public SecretsSecretsPartialUpdateRequest withWritableSecretInput(org.openapis.openapi.models.shared.WritableSecretInput writableSecretInput) {
+        this.writableSecretInput = writableSecretInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WritableSecretInput request;
-    public SecretsSecretsPartialUpdateRequest withRequest(org.openapis.openapi.models.shared.WritableSecretInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this secret.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public SecretsSecretsPartialUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

@@ -4,20 +4,179 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyVpcEndpointServiceConfigurationRequest {
-    
-    public GETModifyVpcEndpointServiceConfigurationQueryParams queryParams;
-    public GETModifyVpcEndpointServiceConfigurationRequest withQueryParams(GETModifyVpcEndpointServiceConfigurationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Indicates whether requests to create an endpoint to your service must be accepted.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AcceptanceRequired")
+    public Boolean acceptanceRequired;
+    public GETModifyVpcEndpointServiceConfigurationRequest withAcceptanceRequired(Boolean acceptanceRequired) {
+        this.acceptanceRequired = acceptanceRequired;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyVpcEndpointServiceConfigurationActionEnum action;
+    public GETModifyVpcEndpointServiceConfigurationRequest withAction(GETModifyVpcEndpointServiceConfigurationActionEnum action) {
+        this.action = action;
+        return this;
+    }
     
-    public GETModifyVpcEndpointServiceConfigurationHeaders headers;
-    public GETModifyVpcEndpointServiceConfigurationRequest withHeaders(GETModifyVpcEndpointServiceConfigurationHeaders headers) {
-        this.headers = headers;
+    /**
+     * The Amazon Resource Names (ARNs) of Gateway Load Balancers to add to your service configuration.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AddGatewayLoadBalancerArn")
+    public String[] addGatewayLoadBalancerArn;
+    public GETModifyVpcEndpointServiceConfigurationRequest withAddGatewayLoadBalancerArn(String[] addGatewayLoadBalancerArn) {
+        this.addGatewayLoadBalancerArn = addGatewayLoadBalancerArn;
+        return this;
+    }
+    
+    /**
+     * The Amazon Resource Names (ARNs) of Network Load Balancers to add to your service configuration.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AddNetworkLoadBalancerArn")
+    public String[] addNetworkLoadBalancerArn;
+    public GETModifyVpcEndpointServiceConfigurationRequest withAddNetworkLoadBalancerArn(String[] addNetworkLoadBalancerArn) {
+        this.addNetworkLoadBalancerArn = addNetworkLoadBalancerArn;
+        return this;
+    }
+    
+    /**
+     * The IP address types to add to your service configuration.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AddSupportedIpAddressType")
+    public String[] addSupportedIpAddressType;
+    public GETModifyVpcEndpointServiceConfigurationRequest withAddSupportedIpAddressType(String[] addSupportedIpAddressType) {
+        this.addSupportedIpAddressType = addSupportedIpAddressType;
+        return this;
+    }
+    
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETModifyVpcEndpointServiceConfigurationRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    /**
+     * (Interface endpoint configuration) The private DNS name to assign to the endpoint service.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PrivateDnsName")
+    public String privateDnsName;
+    public GETModifyVpcEndpointServiceConfigurationRequest withPrivateDnsName(String privateDnsName) {
+        this.privateDnsName = privateDnsName;
+        return this;
+    }
+    
+    /**
+     * The Amazon Resource Names (ARNs) of Gateway Load Balancers to remove from your service configuration.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RemoveGatewayLoadBalancerArn")
+    public String[] removeGatewayLoadBalancerArn;
+    public GETModifyVpcEndpointServiceConfigurationRequest withRemoveGatewayLoadBalancerArn(String[] removeGatewayLoadBalancerArn) {
+        this.removeGatewayLoadBalancerArn = removeGatewayLoadBalancerArn;
+        return this;
+    }
+    
+    /**
+     * The Amazon Resource Names (ARNs) of Network Load Balancers to remove from your service configuration.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RemoveNetworkLoadBalancerArn")
+    public String[] removeNetworkLoadBalancerArn;
+    public GETModifyVpcEndpointServiceConfigurationRequest withRemoveNetworkLoadBalancerArn(String[] removeNetworkLoadBalancerArn) {
+        this.removeNetworkLoadBalancerArn = removeNetworkLoadBalancerArn;
+        return this;
+    }
+    
+    /**
+     * (Interface endpoint configuration) Removes the private DNS name of the endpoint service.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RemovePrivateDnsName")
+    public Boolean removePrivateDnsName;
+    public GETModifyVpcEndpointServiceConfigurationRequest withRemovePrivateDnsName(Boolean removePrivateDnsName) {
+        this.removePrivateDnsName = removePrivateDnsName;
+        return this;
+    }
+    
+    /**
+     * The IP address types to remove from your service configuration.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RemoveSupportedIpAddressType")
+    public String[] removeSupportedIpAddressType;
+    public GETModifyVpcEndpointServiceConfigurationRequest withRemoveSupportedIpAddressType(String[] removeSupportedIpAddressType) {
+        this.removeSupportedIpAddressType = removeSupportedIpAddressType;
+        return this;
+    }
+    
+    /**
+     * The ID of the service.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ServiceId")
+    public String serviceId;
+    public GETModifyVpcEndpointServiceConfigurationRequest withServiceId(String serviceId) {
+        this.serviceId = serviceId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyVpcEndpointServiceConfigurationVersionEnum version;
+    public GETModifyVpcEndpointServiceConfigurationRequest withVersion(GETModifyVpcEndpointServiceConfigurationVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyVpcEndpointServiceConfigurationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyVpcEndpointServiceConfigurationRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyVpcEndpointServiceConfigurationRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyVpcEndpointServiceConfigurationRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyVpcEndpointServiceConfigurationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyVpcEndpointServiceConfigurationRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyVpcEndpointServiceConfigurationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

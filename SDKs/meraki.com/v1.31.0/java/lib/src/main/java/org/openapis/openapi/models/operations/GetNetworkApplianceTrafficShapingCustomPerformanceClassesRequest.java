@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkApplianceTrafficShapingCustomPerformanceClassesRequest {
-    
-    public GetNetworkApplianceTrafficShapingCustomPerformanceClassesPathParams pathParams;
-    public GetNetworkApplianceTrafficShapingCustomPerformanceClassesRequest withPathParams(GetNetworkApplianceTrafficShapingCustomPerformanceClassesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkApplianceTrafficShapingCustomPerformanceClassesRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

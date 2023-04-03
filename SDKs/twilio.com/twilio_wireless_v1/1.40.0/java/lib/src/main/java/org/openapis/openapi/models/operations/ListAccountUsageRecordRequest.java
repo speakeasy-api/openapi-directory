@@ -4,27 +4,67 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListAccountUsageRecordRequest {
-    
-    public ListAccountUsageRecordQueryParams queryParams;
-    public ListAccountUsageRecordRequest withQueryParams(ListAccountUsageRecordQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Only include usage that has occurred on or before this date. Format is [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=End")
+    public OffsetDateTime end;
+    public ListAccountUsageRecordRequest withEnd(OffsetDateTime end) {
+        this.end = end;
         return this;
     }
     
-    
-    public ListAccountUsageRecordSecurity security;
-    public ListAccountUsageRecordRequest withSecurity(ListAccountUsageRecordSecurity security) {
-        this.security = security;
+    /**
+     * How to summarize the usage by time. Can be: `daily`, `hourly`, or `all`. A value of `all` returns one Usage Record that describes the usage for the entire period.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Granularity")
+    public org.openapis.openapi.models.shared.AccountUsageRecordEnumGranularityEnum granularity;
+    public ListAccountUsageRecordRequest withGranularity(org.openapis.openapi.models.shared.AccountUsageRecordEnumGranularityEnum granularity) {
+        this.granularity = granularity;
         return this;
     }
     
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListAccountUsageRecordRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public String serverURL;
-    public ListAccountUsageRecordRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListAccountUsageRecordRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListAccountUsageRecordRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Only include usage that has occurred on or after this date. Format is [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Start")
+    public OffsetDateTime start;
+    public ListAccountUsageRecordRequest withStart(OffsetDateTime start) {
+        this.start = start;
         return this;
     }
     

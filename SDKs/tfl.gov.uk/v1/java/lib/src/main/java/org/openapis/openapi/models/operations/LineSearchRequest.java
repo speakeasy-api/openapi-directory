@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LineSearchRequest {
-    
-    public LineSearchPathParams pathParams;
-    public LineSearchRequest withPathParams(LineSearchPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Optionally filter by the specified modes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modes")
+    public String[] modes;
+    public LineSearchRequest withModes(String[] modes) {
+        this.modes = modes;
         return this;
     }
     
+    /**
+     * Search term e.g victoria
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=query")
+    public String query;
+    public LineSearchRequest withQuery(String query) {
+        this.query = query;
+        return this;
+    }
     
-    public LineSearchQueryParams queryParams;
-    public LineSearchRequest withQueryParams(LineSearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A comma seperated list of service types to filter on. Supported values: Regular, Night. Defaulted to 'Regular' if not specified
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceTypes")
+    public LineSearchServiceTypesEnum[] serviceTypes;
+    public LineSearchRequest withServiceTypes(LineSearchServiceTypesEnum[] serviceTypes) {
+        this.serviceTypes = serviceTypes;
         return this;
     }
     

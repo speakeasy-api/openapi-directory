@@ -7,10 +7,58 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CheckAvailabilityOfFundsRequest {
+    /**
+     * This field  might be used in case where a consent was agreed between ASPSP and PSU through an OAuth2 based protocol,
+     * facilitated by the TPP.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public CheckAvailabilityOfFundsRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
+        return this;
+    }
     
-    public CheckAvailabilityOfFundsHeaders headers;
-    public CheckAvailabilityOfFundsRequest withHeaders(CheckAvailabilityOfFundsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Is contained if and only if the "Signature" element is contained in the header of the request.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Digest")
+    public String digest;
+    public CheckAvailabilityOfFundsRequest withDigest(String digest) {
+        this.digest = digest;
+        return this;
+    }
+    
+    /**
+     * A signature of the request by the TPP on application level. This might be mandated by ASPSP.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Signature")
+    public String signature;
+    public CheckAvailabilityOfFundsRequest withSignature(String signature) {
+        this.signature = signature;
+        return this;
+    }
+    
+    /**
+     * The certificate used for signing the request, in base64 encoding.
+     * Must be contained if a signature is contained.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Signature-Certificate")
+    public String tppSignatureCertificate;
+    public CheckAvailabilityOfFundsRequest withTPPSignatureCertificate(String tppSignatureCertificate) {
+        this.tppSignatureCertificate = tppSignatureCertificate;
+        return this;
+    }
+    
+    /**
+     * ID of the request, unique to the call, as determined by the initiating party.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Request-ID")
+    public String xRequestID;
+    public CheckAvailabilityOfFundsRequest withXRequestID(String xRequestID) {
+        this.xRequestID = xRequestID;
         return this;
     }
     
@@ -19,16 +67,9 @@ public class CheckAvailabilityOfFundsRequest {
      * 
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ConfirmationOfFunds request;
-    public CheckAvailabilityOfFundsRequest withRequest(org.openapis.openapi.models.shared.ConfirmationOfFunds request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CheckAvailabilityOfFundsSecurity security;
-    public CheckAvailabilityOfFundsRequest withSecurity(CheckAvailabilityOfFundsSecurity security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.ConfirmationOfFunds confirmationOfFunds;
+    public CheckAvailabilityOfFundsRequest withConfirmationOfFunds(org.openapis.openapi.models.shared.ConfirmationOfFunds confirmationOfFunds) {
+        this.confirmationOfFunds = confirmationOfFunds;
         return this;
     }
     

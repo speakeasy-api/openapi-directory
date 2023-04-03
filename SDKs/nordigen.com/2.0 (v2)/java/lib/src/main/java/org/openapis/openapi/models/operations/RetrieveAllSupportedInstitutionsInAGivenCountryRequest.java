@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveAllSupportedInstitutionsInAGivenCountryRequest {
+    /**
+     * ISO 3166 two-character country code
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public String country;
+    public RetrieveAllSupportedInstitutionsInAGivenCountryRequest withCountry(String country) {
+        this.country = country;
+        return this;
+    }
     
-    public RetrieveAllSupportedInstitutionsInAGivenCountryQueryParams queryParams;
-    public RetrieveAllSupportedInstitutionsInAGivenCountryRequest withQueryParams(RetrieveAllSupportedInstitutionsInAGivenCountryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Boolean value, indicating if payments are enabled
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=payments_enabled")
+    public String paymentsEnabled;
+    public RetrieveAllSupportedInstitutionsInAGivenCountryRequest withPaymentsEnabled(String paymentsEnabled) {
+        this.paymentsEnabled = paymentsEnabled;
         return this;
     }
     

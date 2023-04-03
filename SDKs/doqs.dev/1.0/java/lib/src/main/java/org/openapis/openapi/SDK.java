@@ -151,7 +151,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateTemplateDesignerTemplatesPostResponse createTemplateDesignerTemplatesPost(org.openapis.openapi.models.operations.CreateTemplateDesignerTemplatesPostRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateTemplateDesignerTemplatesPostResponse createTemplateDesignerTemplatesPost(org.openapis.openapi.models.shared.CreateOrUpdateTemplateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/designer/templates/");
         
@@ -205,7 +205,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteDesignerTemplatesIdDeleteResponse deleteDesignerTemplatesIdDelete(org.openapis.openapi.models.operations.DeleteDesignerTemplatesIdDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDesignerTemplatesIdDeletePathParams.class, baseUrl, "/designer/templates/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDesignerTemplatesIdDeleteRequest.class, baseUrl, "/designer/templates/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -252,12 +252,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GeneratePdfDesignerTemplatesIdGeneratePostResponse generatePdfDesignerTemplatesIdGeneratePost(org.openapis.openapi.models.operations.GeneratePdfDesignerTemplatesIdGeneratePostRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GeneratePdfDesignerTemplatesIdGeneratePostPathParams.class, baseUrl, "/designer/templates/{id}/generate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GeneratePdfDesignerTemplatesIdGeneratePostRequest.class, baseUrl, "/designer/templates/{id}/generate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "generatePDFPayload", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -310,7 +310,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListTemplatesDesignerTemplatesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListTemplatesDesignerTemplatesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -357,7 +357,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.ListTemplatesDesignerTemplatesIdGetResponse listTemplatesDesignerTemplatesIdGet(org.openapis.openapi.models.operations.ListTemplatesDesignerTemplatesIdGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListTemplatesDesignerTemplatesIdGetPathParams.class, baseUrl, "/designer/templates/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListTemplatesDesignerTemplatesIdGetRequest.class, baseUrl, "/designer/templates/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -402,7 +402,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PreviewDesignerTemplatesPreviewPostResponse previewDesignerTemplatesPreviewPost(org.openapis.openapi.models.operations.PreviewDesignerTemplatesPreviewPostRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PreviewDesignerTemplatesPreviewPostResponse previewDesignerTemplatesPreviewPost(org.openapis.openapi.models.shared.PreviewModel request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/designer/templates/preview");
         
@@ -456,12 +456,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.UpdateTemplateDesignerTemplatesIdPutResponse updateTemplateDesignerTemplatesIdPut(org.openapis.openapi.models.operations.UpdateTemplateDesignerTemplatesIdPutRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateTemplateDesignerTemplatesIdPutPathParams.class, baseUrl, "/designer/templates/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateTemplateDesignerTemplatesIdPutRequest.class, baseUrl, "/designer/templates/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createOrUpdateTemplateRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveAccountOrganizationRequest {
-    
-    public RemoveAccountOrganizationPathParams pathParams;
-    public RemoveAccountOrganizationRequest withPathParams(RemoveAccountOrganizationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RemoveAccountOrganizationSecurity security;
-    public RemoveAccountOrganizationRequest withSecurity(RemoveAccountOrganizationSecurity security) {
-        this.security = security;
+    /**
+     * UUID of the organization to retrieve
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_id")
+    public String orgId;
+    public RemoveAccountOrganizationRequest withOrgId(String orgId) {
+        this.orgId = orgId;
         return this;
     }
     

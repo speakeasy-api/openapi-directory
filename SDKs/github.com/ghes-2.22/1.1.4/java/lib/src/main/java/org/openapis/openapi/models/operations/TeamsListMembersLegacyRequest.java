@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsListMembersLegacyRequest {
-    
-    public TeamsListMembersLegacyPathParams pathParams;
-    public TeamsListMembersLegacyRequest withPathParams(TeamsListMembersLegacyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public TeamsListMembersLegacyRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public TeamsListMembersLegacyRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
     
-    public TeamsListMembersLegacyQueryParams queryParams;
-    public TeamsListMembersLegacyRequest withQueryParams(TeamsListMembersLegacyQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filters members returned by their role in the team. Can be one of:  
+     * \* `member` - normal members of the team.  
+     * \* `maintainer` - team maintainers.  
+     * \* `all` - all members of the team.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=role")
+    public TeamsListMembersLegacyRoleEnum role;
+    public TeamsListMembersLegacyRequest withRole(TeamsListMembersLegacyRoleEnum role) {
+        this.role = role;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
+    public Long teamId;
+    public TeamsListMembersLegacyRequest withTeamId(Long teamId) {
+        this.teamId = teamId;
         return this;
     }
     

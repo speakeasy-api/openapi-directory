@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ApplicationsListRequest {
-    
-    public ApplicationsListPathParams pathParams;
-    public ApplicationsListRequest withPathParams(ApplicationsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The filters to apply to the operation.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$filter")
+    public String dollarFilter;
+    public ApplicationsListRequest withDollarFilter(String dollarFilter) {
+        this.dollarFilter = dollarFilter;
         return this;
     }
     
+    /**
+     * Client API version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public ApplicationsListRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
     
-    public ApplicationsListQueryParams queryParams;
-    public ApplicationsListRequest withQueryParams(ApplicationsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The tenant ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tenantID")
+    public String tenantID;
+    public ApplicationsListRequest withTenantID(String tenantID) {
+        this.tenantID = tenantID;
         return this;
     }
     

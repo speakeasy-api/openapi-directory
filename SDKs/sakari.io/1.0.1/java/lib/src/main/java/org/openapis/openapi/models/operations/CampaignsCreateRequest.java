@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CampaignsCreateRequest {
-    
-    public CampaignsCreatePathParams pathParams;
-    public CampaignsCreateRequest withPathParams(CampaignsCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CampaignRequest request;
-    public CampaignsCreateRequest withRequest(org.openapis.openapi.models.shared.CampaignRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CampaignRequest campaignRequest;
+    public CampaignsCreateRequest withCampaignRequest(org.openapis.openapi.models.shared.CampaignRequest campaignRequest) {
+        this.campaignRequest = campaignRequest;
         return this;
     }
     
-    
-    public CampaignsCreateSecurity security;
-    public CampaignsCreateRequest withSecurity(CampaignsCreateSecurity security) {
-        this.security = security;
+    /**
+     * Account to apply operations to
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public CampaignsCreateRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     

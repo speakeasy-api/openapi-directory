@@ -34,25 +34,26 @@ public class Subnetworks {
     /**
      * Retrieves an aggregated list of subnetworks.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeSubnetworksAggregatedListResponse computeSubnetworksAggregatedList(org.openapis.openapi.models.operations.ComputeSubnetworksAggregatedListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeSubnetworksAggregatedListResponse computeSubnetworksAggregatedList(org.openapis.openapi.models.operations.ComputeSubnetworksAggregatedListRequest request, org.openapis.openapi.models.operations.ComputeSubnetworksAggregatedListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSubnetworksAggregatedListPathParams.class, baseUrl, "/projects/{project}/aggregated/subnetworks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSubnetworksAggregatedListRequest.class, baseUrl, "/projects/{project}/aggregated/subnetworks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSubnetworksAggregatedListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSubnetworksAggregatedListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class Subnetworks {
     /**
      * Deletes the specified subnetwork.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeSubnetworksDeleteResponse computeSubnetworksDelete(org.openapis.openapi.models.operations.ComputeSubnetworksDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeSubnetworksDeleteResponse computeSubnetworksDelete(org.openapis.openapi.models.operations.ComputeSubnetworksDeleteRequest request, org.openapis.openapi.models.operations.ComputeSubnetworksDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSubnetworksDeletePathParams.class, baseUrl, "/projects/{project}/regions/{region}/subnetworks/{subnetwork}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSubnetworksDeleteRequest.class, baseUrl, "/projects/{project}/regions/{region}/subnetworks/{subnetwork}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSubnetworksDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSubnetworksDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,27 +126,28 @@ public class Subnetworks {
     /**
      * Expands the IP CIDR range of the subnetwork to a specified value.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeSubnetworksExpandIpCidrRangeResponse computeSubnetworksExpandIpCidrRange(org.openapis.openapi.models.operations.ComputeSubnetworksExpandIpCidrRangeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeSubnetworksExpandIpCidrRangeResponse computeSubnetworksExpandIpCidrRange(org.openapis.openapi.models.operations.ComputeSubnetworksExpandIpCidrRangeRequest request, org.openapis.openapi.models.operations.ComputeSubnetworksExpandIpCidrRangeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSubnetworksExpandIpCidrRangePathParams.class, baseUrl, "/projects/{project}/regions/{region}/subnetworks/{subnetwork}/expandIpCidrRange", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSubnetworksExpandIpCidrRangeRequest.class, baseUrl, "/projects/{project}/regions/{region}/subnetworks/{subnetwork}/expandIpCidrRange", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "subnetworksExpandIpCidrRangeRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSubnetworksExpandIpCidrRangeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSubnetworksExpandIpCidrRangeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,25 +174,26 @@ public class Subnetworks {
     /**
      * Returns the specified subnetwork.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeSubnetworksGetResponse computeSubnetworksGet(org.openapis.openapi.models.operations.ComputeSubnetworksGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeSubnetworksGetResponse computeSubnetworksGet(org.openapis.openapi.models.operations.ComputeSubnetworksGetRequest request, org.openapis.openapi.models.operations.ComputeSubnetworksGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSubnetworksGetPathParams.class, baseUrl, "/projects/{project}/regions/{region}/subnetworks/{subnetwork}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSubnetworksGetRequest.class, baseUrl, "/projects/{project}/regions/{region}/subnetworks/{subnetwork}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSubnetworksGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSubnetworksGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -216,25 +220,26 @@ public class Subnetworks {
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeSubnetworksGetIamPolicyResponse computeSubnetworksGetIamPolicy(org.openapis.openapi.models.operations.ComputeSubnetworksGetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeSubnetworksGetIamPolicyResponse computeSubnetworksGetIamPolicy(org.openapis.openapi.models.operations.ComputeSubnetworksGetIamPolicyRequest request, org.openapis.openapi.models.operations.ComputeSubnetworksGetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSubnetworksGetIamPolicyPathParams.class, baseUrl, "/projects/{project}/regions/{region}/subnetworks/{resource}/getIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSubnetworksGetIamPolicyRequest.class, baseUrl, "/projects/{project}/regions/{region}/subnetworks/{resource}/getIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSubnetworksGetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSubnetworksGetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -261,27 +266,28 @@ public class Subnetworks {
     /**
      * Creates a subnetwork in the specified project using the data included in the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeSubnetworksInsertResponse computeSubnetworksInsert(org.openapis.openapi.models.operations.ComputeSubnetworksInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeSubnetworksInsertResponse computeSubnetworksInsert(org.openapis.openapi.models.operations.ComputeSubnetworksInsertRequest request, org.openapis.openapi.models.operations.ComputeSubnetworksInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSubnetworksInsertPathParams.class, baseUrl, "/projects/{project}/regions/{region}/subnetworks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSubnetworksInsertRequest.class, baseUrl, "/projects/{project}/regions/{region}/subnetworks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "subnetwork", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSubnetworksInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSubnetworksInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -308,25 +314,26 @@ public class Subnetworks {
     /**
      * Retrieves a list of subnetworks available to the specified project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeSubnetworksListResponse computeSubnetworksList(org.openapis.openapi.models.operations.ComputeSubnetworksListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeSubnetworksListResponse computeSubnetworksList(org.openapis.openapi.models.operations.ComputeSubnetworksListRequest request, org.openapis.openapi.models.operations.ComputeSubnetworksListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSubnetworksListPathParams.class, baseUrl, "/projects/{project}/regions/{region}/subnetworks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSubnetworksListRequest.class, baseUrl, "/projects/{project}/regions/{region}/subnetworks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSubnetworksListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSubnetworksListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -353,25 +360,26 @@ public class Subnetworks {
     /**
      * Retrieves an aggregated list of all usable subnetworks in the project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeSubnetworksListUsableResponse computeSubnetworksListUsable(org.openapis.openapi.models.operations.ComputeSubnetworksListUsableRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeSubnetworksListUsableResponse computeSubnetworksListUsable(org.openapis.openapi.models.operations.ComputeSubnetworksListUsableRequest request, org.openapis.openapi.models.operations.ComputeSubnetworksListUsableSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSubnetworksListUsablePathParams.class, baseUrl, "/projects/{project}/aggregated/subnetworks/listUsable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSubnetworksListUsableRequest.class, baseUrl, "/projects/{project}/aggregated/subnetworks/listUsable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSubnetworksListUsableQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSubnetworksListUsableRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -398,27 +406,28 @@ public class Subnetworks {
     /**
      * Patches the specified subnetwork with the data included in the request. Only certain fields can be updated with a patch request as indicated in the field descriptions. You must specify the current fingerprint of the subnetwork resource being patched.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeSubnetworksPatchResponse computeSubnetworksPatch(org.openapis.openapi.models.operations.ComputeSubnetworksPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeSubnetworksPatchResponse computeSubnetworksPatch(org.openapis.openapi.models.operations.ComputeSubnetworksPatchRequest request, org.openapis.openapi.models.operations.ComputeSubnetworksPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSubnetworksPatchPathParams.class, baseUrl, "/projects/{project}/regions/{region}/subnetworks/{subnetwork}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSubnetworksPatchRequest.class, baseUrl, "/projects/{project}/regions/{region}/subnetworks/{subnetwork}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "subnetwork1", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSubnetworksPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSubnetworksPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -445,27 +454,28 @@ public class Subnetworks {
     /**
      * Sets the access control policy on the specified resource. Replaces any existing policy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeSubnetworksSetIamPolicyResponse computeSubnetworksSetIamPolicy(org.openapis.openapi.models.operations.ComputeSubnetworksSetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeSubnetworksSetIamPolicyResponse computeSubnetworksSetIamPolicy(org.openapis.openapi.models.operations.ComputeSubnetworksSetIamPolicyRequest request, org.openapis.openapi.models.operations.ComputeSubnetworksSetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSubnetworksSetIamPolicyPathParams.class, baseUrl, "/projects/{project}/regions/{region}/subnetworks/{resource}/setIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSubnetworksSetIamPolicyRequest.class, baseUrl, "/projects/{project}/regions/{region}/subnetworks/{resource}/setIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "regionSetPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSubnetworksSetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSubnetworksSetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -492,27 +502,28 @@ public class Subnetworks {
     /**
      * Set whether VMs in this subnet can access Google services without assigning external IP addresses through Private Google Access.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeSubnetworksSetPrivateIpGoogleAccessResponse computeSubnetworksSetPrivateIpGoogleAccess(org.openapis.openapi.models.operations.ComputeSubnetworksSetPrivateIpGoogleAccessRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeSubnetworksSetPrivateIpGoogleAccessResponse computeSubnetworksSetPrivateIpGoogleAccess(org.openapis.openapi.models.operations.ComputeSubnetworksSetPrivateIpGoogleAccessRequest request, org.openapis.openapi.models.operations.ComputeSubnetworksSetPrivateIpGoogleAccessSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSubnetworksSetPrivateIpGoogleAccessPathParams.class, baseUrl, "/projects/{project}/regions/{region}/subnetworks/{subnetwork}/setPrivateIpGoogleAccess", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSubnetworksSetPrivateIpGoogleAccessRequest.class, baseUrl, "/projects/{project}/regions/{region}/subnetworks/{subnetwork}/setPrivateIpGoogleAccess", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "subnetworksSetPrivateIpGoogleAccessRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSubnetworksSetPrivateIpGoogleAccessQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSubnetworksSetPrivateIpGoogleAccessRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -539,27 +550,28 @@ public class Subnetworks {
     /**
      * Returns permissions that a caller has on the specified resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeSubnetworksTestIamPermissionsResponse computeSubnetworksTestIamPermissions(org.openapis.openapi.models.operations.ComputeSubnetworksTestIamPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeSubnetworksTestIamPermissionsResponse computeSubnetworksTestIamPermissions(org.openapis.openapi.models.operations.ComputeSubnetworksTestIamPermissionsRequest request, org.openapis.openapi.models.operations.ComputeSubnetworksTestIamPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSubnetworksTestIamPermissionsPathParams.class, baseUrl, "/projects/{project}/regions/{region}/subnetworks/{resource}/testIamPermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeSubnetworksTestIamPermissionsRequest.class, baseUrl, "/projects/{project}/regions/{region}/subnetworks/{resource}/testIamPermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSubnetworksTestIamPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeSubnetworksTestIamPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

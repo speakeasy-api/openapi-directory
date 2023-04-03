@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateContact1Request {
-    
-    public UpdateContact1PathParams pathParams;
-    public UpdateContact1Request withPathParams(UpdateContact1PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated contact of a given client.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ContactDTO request;
-    public UpdateContact1Request withRequest(org.openapis.openapi.models.shared.ContactDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ContactDTO contactDTO;
+    public UpdateContact1Request withContactDTO(org.openapis.openapi.models.shared.ContactDTO contactDTO) {
+        this.contactDTO = contactDTO;
+        return this;
+    }
+    
+    /**
+     * client's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customerId")
+    public Long customerId;
+    public UpdateContact1Request withCustomerId(Long customerId) {
+        this.customerId = customerId;
         return this;
     }
     

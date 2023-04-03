@@ -7,31 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateDeployedDevicesCertificateRequest {
-    
-    public CreateDeployedDevicesCertificatePathParams pathParams;
-    public CreateDeployedDevicesCertificateRequest withPathParams(CreateDeployedDevicesCertificatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FleetSid")
+    public String fleetSid;
+    public CreateDeployedDevicesCertificateRequest withFleetSid(String fleetSid) {
+        this.fleetSid = fleetSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateDeployedDevicesCertificateCreateDeployedDevicesCertificateRequest request;
-    public CreateDeployedDevicesCertificateRequest withRequest(CreateDeployedDevicesCertificateCreateDeployedDevicesCertificateRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateDeployedDevicesCertificateSecurity security;
-    public CreateDeployedDevicesCertificateRequest withSecurity(CreateDeployedDevicesCertificateSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateDeployedDevicesCertificateRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateDeployedDevicesCertificateCreateDeployedDevicesCertificateRequest requestBody;
+    public CreateDeployedDevicesCertificateRequest withRequestBody(CreateDeployedDevicesCertificateCreateDeployedDevicesCertificateRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

@@ -4,27 +4,223 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPaymentInitiationAuthorisationRequest {
-    
-    public GetPaymentInitiationAuthorisationPathParams pathParams;
-    public GetPaymentInitiationAuthorisationRequest withPathParams(GetPaymentInitiationAuthorisationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Is contained if and only if the "Signature" element is contained in the header of the request.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Digest")
+    public String digest;
+    public GetPaymentInitiationAuthorisationRequest withDigest(String digest) {
+        this.digest = digest;
         return this;
     }
     
-    
-    public GetPaymentInitiationAuthorisationHeaders headers;
-    public GetPaymentInitiationAuthorisationRequest withHeaders(GetPaymentInitiationAuthorisationHeaders headers) {
-        this.headers = headers;
+    /**
+     * The forwarded IP Accept header fields consist of the corresponding HTTP request Accept header fields between PSU and TPP, if available.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept")
+    public String psuAccept;
+    public GetPaymentInitiationAuthorisationRequest withPSUAccept(String psuAccept) {
+        this.psuAccept = psuAccept;
         return this;
     }
     
+    /**
+     * The forwarded IP Accept header fields consist of the corresponding HTTP request Accept header fields between PSU and TPP, if available.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Charset")
+    public String psuAcceptCharset;
+    public GetPaymentInitiationAuthorisationRequest withPSUAcceptCharset(String psuAcceptCharset) {
+        this.psuAcceptCharset = psuAcceptCharset;
+        return this;
+    }
     
-    public GetPaymentInitiationAuthorisationSecurity security;
-    public GetPaymentInitiationAuthorisationRequest withSecurity(GetPaymentInitiationAuthorisationSecurity security) {
-        this.security = security;
+    /**
+     * The forwarded IP Accept header fields consist of the corresponding HTTP request Accept header fields between PSU and TPP, if available.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Encoding")
+    public String psuAcceptEncoding;
+    public GetPaymentInitiationAuthorisationRequest withPSUAcceptEncoding(String psuAcceptEncoding) {
+        this.psuAcceptEncoding = psuAcceptEncoding;
+        return this;
+    }
+    
+    /**
+     * The forwarded IP Accept header fields consist of the corresponding HTTP request Accept header fields between PSU and TPP, if available.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Language")
+    public String psuAcceptLanguage;
+    public GetPaymentInitiationAuthorisationRequest withPSUAcceptLanguage(String psuAcceptLanguage) {
+        this.psuAcceptLanguage = psuAcceptLanguage;
+        return this;
+    }
+    
+    /**
+     * UUID (Universally Unique Identifier) for a device, which is used by the PSU, if available.
+     * UUID identifies either a device or a device dependant application installation.
+     * In case of an installation identification this ID needs to be unaltered until removal from device.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Device-ID")
+    public String psuDeviceID;
+    public GetPaymentInitiationAuthorisationRequest withPSUDeviceID(String psuDeviceID) {
+        this.psuDeviceID = psuDeviceID;
+        return this;
+    }
+    
+    /**
+     * The forwarded Geo Location of the corresponding http request between PSU and TPP if available.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Geo-Location")
+    public String psuGeoLocation;
+    public GetPaymentInitiationAuthorisationRequest withPSUGeoLocation(String psuGeoLocation) {
+        this.psuGeoLocation = psuGeoLocation;
+        return this;
+    }
+    
+    /**
+     * HTTP method used at the PSU ? TPP interface, if available.
+     * Valid values are:
+     * * GET
+     * * POST
+     * * PUT
+     * * PATCH
+     * * DELETE
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Http-Method")
+    public org.openapis.openapi.models.shared.PSUHttpMethodEnum psuHttpMethod;
+    public GetPaymentInitiationAuthorisationRequest withPSUHttpMethod(org.openapis.openapi.models.shared.PSUHttpMethodEnum psuHttpMethod) {
+        this.psuHttpMethod = psuHttpMethod;
+        return this;
+    }
+    
+    /**
+     * The forwarded IP Address header field consists of the corresponding http request IP Address field between PSU and TPP.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-IP-Address")
+    public String psuIPAddress;
+    public GetPaymentInitiationAuthorisationRequest withPSUIPAddress(String psuIPAddress) {
+        this.psuIPAddress = psuIPAddress;
+        return this;
+    }
+    
+    /**
+     * The forwarded IP Port header field consists of the corresponding HTTP request IP Port field between PSU and TPP, if available.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-IP-Port")
+    public String psuIPPort;
+    public GetPaymentInitiationAuthorisationRequest withPSUIPPort(String psuIPPort) {
+        this.psuIPPort = psuIPPort;
+        return this;
+    }
+    
+    /**
+     * The forwarded Agent header field of the HTTP request between PSU and TPP, if available.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-User-Agent")
+    public String psuUserAgent;
+    public GetPaymentInitiationAuthorisationRequest withPSUUserAgent(String psuUserAgent) {
+        this.psuUserAgent = psuUserAgent;
+        return this;
+    }
+    
+    /**
+     * A signature of the request by the TPP on application level. This might be mandated by ASPSP.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Signature")
+    public String signature;
+    public GetPaymentInitiationAuthorisationRequest withSignature(String signature) {
+        this.signature = signature;
+        return this;
+    }
+    
+    /**
+     * The certificate used for signing the request, in base64 encoding.
+     * Must be contained if a signature is contained.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Signature-Certificate")
+    public String tppSignatureCertificate;
+    public GetPaymentInitiationAuthorisationRequest withTPPSignatureCertificate(String tppSignatureCertificate) {
+        this.tppSignatureCertificate = tppSignatureCertificate;
+        return this;
+    }
+    
+    /**
+     * ID of the request, unique to the call, as determined by the initiating party.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Request-ID")
+    public String xRequestID;
+    public GetPaymentInitiationAuthorisationRequest withXRequestID(String xRequestID) {
+        this.xRequestID = xRequestID;
+        return this;
+    }
+    
+    /**
+     * The addressed payment product endpoint, e.g. for SEPA Credit Transfers (SCT).
+     * The ASPSP will publish which of the payment products/endpoints will be supported.
+     * 
+     * The following payment products are supported:
+     *   - domestic-swiss-credit-transfers-isr
+     *   - domestic-swiss-credit-transfers
+     *   - domestic-swiss-credit-transfers-qr
+     *   - domestic-swiss-foreign-credit-transfers
+     *   - swiss-sepa-credit-transfers
+     *   - swiss-cross-border-credit-transfers
+     *   - pain.001-sepa-credit-transfers
+     *   - pain.001-cross-border-credit-transfers
+     *   - pain.001-swiss-six-credit-transfers
+     * 
+     * **Remark:** For all SEPA Credit Transfer based endpoints which accept XML encoding,
+     * the XML pain.001 schemes provided by EPC are supported by the ASPSP as a minimum for the body content.
+     * Further XML schemes might be supported by some communities.
+     * 
+     * **Remark:** For cross-border and TARGET-2 payments only community wide pain.001 schemes do exist.
+     * There are plenty of country specificic scheme variants.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payment-product")
+    public org.openapis.openapi.models.shared.PaymentProductEnum paymentProduct;
+    public GetPaymentInitiationAuthorisationRequest withPaymentProduct(org.openapis.openapi.models.shared.PaymentProductEnum paymentProduct) {
+        this.paymentProduct = paymentProduct;
+        return this;
+    }
+    
+    /**
+     * Payment service:
+     * 
+     * Possible values are:
+     * * payments
+     * * bulk-payments
+     * * periodic-payments
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payment-service")
+    public org.openapis.openapi.models.shared.PaymentServiceEnum paymentService;
+    public GetPaymentInitiationAuthorisationRequest withPaymentService(org.openapis.openapi.models.shared.PaymentServiceEnum paymentService) {
+        this.paymentService = paymentService;
+        return this;
+    }
+    
+    /**
+     * Resource identification of the generated payment initiation resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=paymentId")
+    public String paymentId;
+    public GetPaymentInitiationAuthorisationRequest withPaymentId(String paymentId) {
+        this.paymentId = paymentId;
         return this;
     }
     

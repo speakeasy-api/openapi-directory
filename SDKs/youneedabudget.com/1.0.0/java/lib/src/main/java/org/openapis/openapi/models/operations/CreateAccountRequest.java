@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateAccountRequest {
-    
-    public CreateAccountPathParams pathParams;
-    public CreateAccountRequest withPathParams(CreateAccountPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The account to create.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PostAccountWrapper request;
-    public CreateAccountRequest withRequest(org.openapis.openapi.models.shared.PostAccountWrapper request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PostAccountWrapper postAccountWrapper;
+    public CreateAccountRequest withPostAccountWrapper(org.openapis.openapi.models.shared.PostAccountWrapper postAccountWrapper) {
+        this.postAccountWrapper = postAccountWrapper;
+        return this;
+    }
+    
+    /**
+     * The id of the budget ("last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=budget_id")
+    public String budgetId;
+    public CreateAccountRequest withBudgetId(String budgetId) {
+        this.budgetId = budgetId;
         return this;
     }
     

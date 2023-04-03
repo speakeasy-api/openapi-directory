@@ -4,34 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteChannelRequest {
-    
-    public DeleteChannelPathParams pathParams;
-    public DeleteChannelRequest withPathParams(DeleteChannelPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to delete the resource from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public DeleteChannelRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public DeleteChannelHeaders headers;
-    public DeleteChannelRequest withHeaders(DeleteChannelHeaders headers) {
-        this.headers = headers;
+    /**
+     * The SID of the Channel resource to delete.  This value can be either the `sid` or the `unique_name` of the Channel resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteChannelRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public DeleteChannelSecurity security;
-    public DeleteChannelRequest withSecurity(DeleteChannelSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteChannelRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The X-Twilio-Webhook-Enabled HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Twilio-Webhook-Enabled")
+    public org.openapis.openapi.models.shared.ChannelEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled;
+    public DeleteChannelRequest withXTwilioWebhookEnabled(org.openapis.openapi.models.shared.ChannelEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled) {
+        this.xTwilioWebhookEnabled = xTwilioWebhookEnabled;
         return this;
     }
     

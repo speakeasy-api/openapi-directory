@@ -41,7 +41,7 @@ public class Settings {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CheckPushResponse checkPush(org.openapis.openapi.models.operations.CheckPushRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CheckPushResponse checkPush(org.openapis.openapi.models.shared.CheckPushRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/check_push");
         
@@ -104,7 +104,7 @@ public class Settings {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CheckSQSResponse checkSQS(org.openapis.openapi.models.operations.CheckSQSRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CheckSQSResponse checkSQS(org.openapis.openapi.models.shared.CheckSQSRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/check_sqs");
         
@@ -167,7 +167,7 @@ public class Settings {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateBlockListResponse createBlockList(org.openapis.openapi.models.operations.CreateBlockListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateBlockListResponse createBlockList(org.openapis.openapi.models.shared.CreateBlockListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/blocklists");
         
@@ -230,7 +230,7 @@ public class Settings {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateChannelTypeResponse createChannelType(org.openapis.openapi.models.operations.CreateChannelTypeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateChannelTypeResponse createChannelType(org.openapis.openapi.models.shared.CreateChannelTypeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/channeltypes");
         
@@ -358,7 +358,7 @@ public class Settings {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRateLimitsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRateLimitsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -585,7 +585,7 @@ public class Settings {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateAppResponse updateApp(org.openapis.openapi.models.operations.UpdateAppRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateAppResponse updateApp(org.openapis.openapi.models.shared.UpdateAppRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/app");
         
@@ -648,7 +648,7 @@ public class Settings {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpsertPushProviderResponse upsertPushProvider(org.openapis.openapi.models.operations.UpsertPushProviderRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpsertPushProviderResponse upsertPushProvider(org.openapis.openapi.models.shared.UpsertPushProviderRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/push_providers");
         

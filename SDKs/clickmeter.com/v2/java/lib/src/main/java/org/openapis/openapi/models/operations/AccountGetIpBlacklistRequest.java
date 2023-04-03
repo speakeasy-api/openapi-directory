@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountGetIpBlacklistRequest {
+    /**
+     * Limit results to this number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public AccountGetIpBlacklistRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public AccountGetIpBlacklistQueryParams queryParams;
-    public AccountGetIpBlacklistRequest withQueryParams(AccountGetIpBlacklistQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Offset where to start from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public AccountGetIpBlacklistRequest withOffset(Integer offset) {
+        this.offset = offset;
         return this;
     }
     

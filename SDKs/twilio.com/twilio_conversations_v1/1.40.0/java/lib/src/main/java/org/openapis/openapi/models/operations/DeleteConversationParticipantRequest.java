@@ -4,34 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteConversationParticipantRequest {
-    
-    public DeleteConversationParticipantPathParams pathParams;
-    public DeleteConversationParticipantRequest withPathParams(DeleteConversationParticipantPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this participant.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConversationSid")
+    public String conversationSid;
+    public DeleteConversationParticipantRequest withConversationSid(String conversationSid) {
+        this.conversationSid = conversationSid;
         return this;
     }
     
-    
-    public DeleteConversationParticipantHeaders headers;
-    public DeleteConversationParticipantRequest withHeaders(DeleteConversationParticipantHeaders headers) {
-        this.headers = headers;
+    /**
+     * A 34 character string that uniquely identifies this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteConversationParticipantRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public DeleteConversationParticipantSecurity security;
-    public DeleteConversationParticipantRequest withSecurity(DeleteConversationParticipantSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteConversationParticipantRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The X-Twilio-Webhook-Enabled HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Twilio-Webhook-Enabled")
+    public org.openapis.openapi.models.shared.ConversationParticipantEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled;
+    public DeleteConversationParticipantRequest withXTwilioWebhookEnabled(org.openapis.openapi.models.shared.ConversationParticipantEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled) {
+        this.xTwilioWebhookEnabled = xTwilioWebhookEnabled;
         return this;
     }
     

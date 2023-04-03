@@ -35,25 +35,26 @@ public class Controller {
     /**
      * Returns the list of all active breakpoints for the debuggee. The breakpoint specification (`location`, `condition`, and `expressions` fields) is semantically immutable, although the field values may change. For example, an agent may update the location line number to reflect the actual line where the breakpoint was set, but this doesn't change the breakpoint semantics. This means that an agent does not need to check if a breakpoint has changed when it encounters the same breakpoint on a successive call. Moreover, an agent should remember the breakpoints that are completed until the controller removes them from the active list to avoid setting those breakpoints again.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ClouddebuggerControllerDebuggeesBreakpointsListResponse clouddebuggerControllerDebuggeesBreakpointsList(org.openapis.openapi.models.operations.ClouddebuggerControllerDebuggeesBreakpointsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ClouddebuggerControllerDebuggeesBreakpointsListResponse clouddebuggerControllerDebuggeesBreakpointsList(org.openapis.openapi.models.operations.ClouddebuggerControllerDebuggeesBreakpointsListRequest request, org.openapis.openapi.models.operations.ClouddebuggerControllerDebuggeesBreakpointsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClouddebuggerControllerDebuggeesBreakpointsListPathParams.class, baseUrl, "/v2/controller/debuggees/{debuggeeId}/breakpoints", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClouddebuggerControllerDebuggeesBreakpointsListRequest.class, baseUrl, "/v2/controller/debuggees/{debuggeeId}/breakpoints", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClouddebuggerControllerDebuggeesBreakpointsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClouddebuggerControllerDebuggeesBreakpointsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -80,27 +81,28 @@ public class Controller {
     /**
      * Updates the breakpoint state or mutable fields. The entire Breakpoint message must be sent back to the controller service. Updates to active breakpoint fields are only allowed if the new value does not change the breakpoint specification. Updates to the `location`, `condition` and `expressions` fields should not alter the breakpoint semantics. These may only make changes such as canonicalizing a value or snapping the location to the correct line of code.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ClouddebuggerControllerDebuggeesBreakpointsUpdateResponse clouddebuggerControllerDebuggeesBreakpointsUpdate(org.openapis.openapi.models.operations.ClouddebuggerControllerDebuggeesBreakpointsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ClouddebuggerControllerDebuggeesBreakpointsUpdateResponse clouddebuggerControllerDebuggeesBreakpointsUpdate(org.openapis.openapi.models.operations.ClouddebuggerControllerDebuggeesBreakpointsUpdateRequest request, org.openapis.openapi.models.operations.ClouddebuggerControllerDebuggeesBreakpointsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClouddebuggerControllerDebuggeesBreakpointsUpdatePathParams.class, baseUrl, "/v2/controller/debuggees/{debuggeeId}/breakpoints/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClouddebuggerControllerDebuggeesBreakpointsUpdateRequest.class, baseUrl, "/v2/controller/debuggees/{debuggeeId}/breakpoints/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateActiveBreakpointRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClouddebuggerControllerDebuggeesBreakpointsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClouddebuggerControllerDebuggeesBreakpointsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,27 +129,28 @@ public class Controller {
     /**
      * Registers the debuggee with the controller service. All agents attached to the same application must call this method with exactly the same request content to get back the same stable `debuggee_id`. Agents should call this method again whenever `google.rpc.Code.NOT_FOUND` is returned from any controller method. This protocol allows the controller service to disable debuggees, recover from data loss, or change the `debuggee_id` format. Agents must handle `debuggee_id` value changing upon re-registration.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ClouddebuggerControllerDebuggeesRegisterResponse clouddebuggerControllerDebuggeesRegister(org.openapis.openapi.models.operations.ClouddebuggerControllerDebuggeesRegisterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ClouddebuggerControllerDebuggeesRegisterResponse clouddebuggerControllerDebuggeesRegister(org.openapis.openapi.models.operations.ClouddebuggerControllerDebuggeesRegisterRequest request, org.openapis.openapi.models.operations.ClouddebuggerControllerDebuggeesRegisterSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/controller/debuggees/register");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "registerDebuggeeRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClouddebuggerControllerDebuggeesRegisterQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClouddebuggerControllerDebuggeesRegisterRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

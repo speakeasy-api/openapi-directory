@@ -5,10 +5,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.FetchAlertSecurity;
-import org.openapis.openapi.models.operations.FetchAlertPathParams;
 import org.openapis.openapi.models.operations.FetchAlertRequest;
 import org.openapis.openapi.models.operations.FetchAlertResponse;
-import org.openapis.openapi.models.shared.SchemeAccountSidAuthToken;
 
 public class Application {
     public static void main(String[] args) {
@@ -17,18 +15,13 @@ public class Application {
                 .build();
 
             FetchAlertRequest req = new FetchAlertRequest() {{
-                security = new FetchAlertSecurity() {{
-                    accountSidAuthToken = new SchemeAccountSidAuthToken() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
-                }};
-                pathParams = new FetchAlertPathParams() {{
-                    sid = "corrupti";
-                }};
-            }};            
+                sid = "corrupti";
+            }}            
 
-            FetchAlertResponse res = sdk.fetchAlert(req);
+            FetchAlertResponse res = sdk.fetchAlert(req, new FetchAlertSecurity() {{
+                password = "YOUR_PASSWORD_HERE";
+                username = "YOUR_USERNAME_HERE";
+            }});
 
             if (res.monitorV1AlertInstance.isPresent()) {
                 // handle response

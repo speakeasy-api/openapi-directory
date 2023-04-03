@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateFolderRequest {
-    
-    public UpdateFolderPathParams pathParams;
-    public UpdateFolderRequest withPathParams(UpdateFolderPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateFolderHeaders headers;
-    public UpdateFolderRequest withHeaders(UpdateFolderHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Folder request;
-    public UpdateFolderRequest withRequest(org.openapis.openapi.models.shared.Folder request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Folder folder;
+    public UpdateFolderRequest withFolder(org.openapis.openapi.models.shared.Folder folder) {
+        this.folder = folder;
         return this;
     }
     
+    /**
+     * Folder id for single object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FolderId")
+    public String folderId;
+    public UpdateFolderRequest withFolderId(String folderId) {
+        this.folderId = folderId;
+        return this;
+    }
     
-    public UpdateFolderSecurity security;
-    public UpdateFolderRequest withSecurity(UpdateFolderSecurity security) {
-        this.security = security;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=xero-tenant-id")
+    public String xeroTenantId;
+    public UpdateFolderRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     

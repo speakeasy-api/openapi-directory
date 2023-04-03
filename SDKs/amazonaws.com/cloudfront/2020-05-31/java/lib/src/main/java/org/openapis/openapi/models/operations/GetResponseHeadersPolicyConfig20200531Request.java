@@ -4,20 +4,65 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetResponseHeadersPolicyConfig20200531Request {
-    
-    public GetResponseHeadersPolicyConfig20200531PathParams pathParams;
-    public GetResponseHeadersPolicyConfig20200531Request withPathParams(GetResponseHeadersPolicyConfig20200531PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * &lt;p&gt;The identifier for the response headers policy.&lt;/p&gt; &lt;p&gt;If the response headers policy is attached to a distribution's cache behavior, you can get the policy's identifier using &lt;code&gt;ListDistributions&lt;/code&gt; or &lt;code&gt;GetDistribution&lt;/code&gt;. If the response headers policy is not attached to a cache behavior, you can get the identifier using &lt;code&gt;ListResponseHeadersPolicies&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Id")
+    public String id;
+    public GetResponseHeadersPolicyConfig20200531Request withId(String id) {
+        this.id = id;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetResponseHeadersPolicyConfig20200531Request withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
     
-    public GetResponseHeadersPolicyConfig20200531Headers headers;
-    public GetResponseHeadersPolicyConfig20200531Request withHeaders(GetResponseHeadersPolicyConfig20200531Headers headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetResponseHeadersPolicyConfig20200531Request withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetResponseHeadersPolicyConfig20200531Request withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetResponseHeadersPolicyConfig20200531Request withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetResponseHeadersPolicyConfig20200531Request withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetResponseHeadersPolicyConfig20200531Request withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetResponseHeadersPolicyConfig20200531Request withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

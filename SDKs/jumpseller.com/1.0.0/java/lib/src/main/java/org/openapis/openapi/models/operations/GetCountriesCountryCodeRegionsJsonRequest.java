@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCountriesCountryCodeRegionsJsonRequest {
-    
-    public GetCountriesCountryCodeRegionsJsonPathParams pathParams;
-    public GetCountriesCountryCodeRegionsJsonRequest withPathParams(GetCountriesCountryCodeRegionsJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public GetCountriesCountryCodeRegionsJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
         return this;
     }
     
+    /**
+     * ISO3166 Country Code
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=country_code")
+    public String countryCode;
+    public GetCountriesCountryCodeRegionsJsonRequest withCountryCode(String countryCode) {
+        this.countryCode = countryCode;
+        return this;
+    }
     
-    public GetCountriesCountryCodeRegionsJsonQueryParams queryParams;
-    public GetCountriesCountryCodeRegionsJsonRequest withQueryParams(GetCountriesCountryCodeRegionsJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public GetCountriesCountryCodeRegionsJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

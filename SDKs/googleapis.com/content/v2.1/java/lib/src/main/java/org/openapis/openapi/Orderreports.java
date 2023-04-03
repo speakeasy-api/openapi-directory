@@ -33,25 +33,26 @@ public class Orderreports {
     /**
      * Retrieves a report for disbursements from your Merchant Center account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentOrderreportsListdisbursementsResponse contentOrderreportsListdisbursements(org.openapis.openapi.models.operations.ContentOrderreportsListdisbursementsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentOrderreportsListdisbursementsResponse contentOrderreportsListdisbursements(org.openapis.openapi.models.operations.ContentOrderreportsListdisbursementsRequest request, org.openapis.openapi.models.operations.ContentOrderreportsListdisbursementsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentOrderreportsListdisbursementsPathParams.class, baseUrl, "/{merchantId}/orderreports/disbursements", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentOrderreportsListdisbursementsRequest.class, baseUrl, "/{merchantId}/orderreports/disbursements", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentOrderreportsListdisbursementsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentOrderreportsListdisbursementsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,25 +79,26 @@ public class Orderreports {
     /**
      * Retrieves a list of transactions for a disbursement from your Merchant Center account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentOrderreportsListtransactionsResponse contentOrderreportsListtransactions(org.openapis.openapi.models.operations.ContentOrderreportsListtransactionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentOrderreportsListtransactionsResponse contentOrderreportsListtransactions(org.openapis.openapi.models.operations.ContentOrderreportsListtransactionsRequest request, org.openapis.openapi.models.operations.ContentOrderreportsListtransactionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentOrderreportsListtransactionsPathParams.class, baseUrl, "/{merchantId}/orderreports/disbursements/{disbursementId}/transactions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentOrderreportsListtransactionsRequest.class, baseUrl, "/{merchantId}/orderreports/disbursements/{disbursementId}/transactions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentOrderreportsListtransactionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentOrderreportsListtransactionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

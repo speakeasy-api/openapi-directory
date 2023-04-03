@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAlbumCustomThumbnailRequest {
+    /**
+     * The ID of the album.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=album_id")
+    public Double albumId;
+    public GetAlbumCustomThumbnailRequest withAlbumId(Double albumId) {
+        this.albumId = albumId;
+        return this;
+    }
     
-    public GetAlbumCustomThumbnailPathParams pathParams;
-    public GetAlbumCustomThumbnailRequest withPathParams(GetAlbumCustomThumbnailPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the custom thumbnail.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=thumbnail_id")
+    public Double thumbnailId;
+    public GetAlbumCustomThumbnailRequest withThumbnailId(Double thumbnailId) {
+        this.thumbnailId = thumbnailId;
+        return this;
+    }
+    
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public GetAlbumCustomThumbnailRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

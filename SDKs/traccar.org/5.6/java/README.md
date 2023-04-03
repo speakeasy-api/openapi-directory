@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.DeleteAttributesComputedIdPathParams;
 import org.openapis.openapi.models.operations.DeleteAttributesComputedIdRequest;
 import org.openapis.openapi.models.operations.DeleteAttributesComputedIdResponse;
 
@@ -26,18 +25,14 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    basicAuth = new SchemeBasicAuth() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
+                    password = "YOUR_PASSWORD_HERE";
+                    username = "YOUR_USERNAME_HERE";
                 }})
                 .build();
 
             DeleteAttributesComputedIdRequest req = new DeleteAttributesComputedIdRequest() {{
-                pathParams = new DeleteAttributesComputedIdPathParams() {{
-                    id = 548814;
-                }};
-            }};            
+                id = 548814;
+            }}            
 
             DeleteAttributesComputedIdResponse res = sdk.attributes.deleteAttributesComputedId(req);
 
@@ -51,7 +46,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### attributes

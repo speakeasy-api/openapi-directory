@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserTSPDeleteRequest {
+    /**
+     * TSP account ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tspId")
+    public UserTSPDeleteTSPIDEnum tspId;
+    public UserTSPDeleteRequest withTspId(UserTSPDeleteTSPIDEnum tspId) {
+        this.tspId = tspId;
+        return this;
+    }
     
-    public UserTSPDeletePathParams pathParams;
-    public UserTSPDeleteRequest withPathParams(UserTSPDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public UserTSPDeleteRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

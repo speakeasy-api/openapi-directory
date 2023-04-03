@@ -102,7 +102,7 @@ public class JiraCloudIntegration {
      */
     public org.openapis.openapi.models.operations.GetIntegrationsJiraCloudProjectsProjectIdIssueTypesResponse getIntegrationsJiraCloudProjectsProjectIdIssueTypes(org.openapis.openapi.models.operations.GetIntegrationsJiraCloudProjectsProjectIdIssueTypesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIntegrationsJiraCloudProjectsProjectIdIssueTypesPathParams.class, baseUrl, "/integrations/jira-cloud/projects/{project_id}/issue_types/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIntegrationsJiraCloudProjectsProjectIdIssueTypesRequest.class, baseUrl, "/integrations/jira-cloud/projects/{project_id}/issue_types/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -165,7 +165,7 @@ public class JiraCloudIntegration {
      */
     public org.openapis.openapi.models.operations.GetIntegrationsJiraCloudProjectsProjectIdIssueTypesIssueTypeIdPrioritiesResponse getIntegrationsJiraCloudProjectsProjectIdIssueTypesIssueTypeIdPriorities(org.openapis.openapi.models.operations.GetIntegrationsJiraCloudProjectsProjectIdIssueTypesIssueTypeIdPrioritiesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIntegrationsJiraCloudProjectsProjectIdIssueTypesIssueTypeIdPrioritiesPathParams.class, baseUrl, "/integrations/jira-cloud/projects/{project_id}/issue_types/{issue_type_id}/priorities/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIntegrationsJiraCloudProjectsProjectIdIssueTypesIssueTypeIdPrioritiesRequest.class, baseUrl, "/integrations/jira-cloud/projects/{project_id}/issue_types/{issue_type_id}/priorities/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -220,7 +220,7 @@ public class JiraCloudIntegration {
      */
     public org.openapis.openapi.models.operations.GetIntegrationsJiraCloudProjectsProjectIdIssueTypesIssueTypeIdStatusResponse getIntegrationsJiraCloudProjectsProjectIdIssueTypesIssueTypeIdStatus(org.openapis.openapi.models.operations.GetIntegrationsJiraCloudProjectsProjectIdIssueTypesIssueTypeIdStatusRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIntegrationsJiraCloudProjectsProjectIdIssueTypesIssueTypeIdStatusPathParams.class, baseUrl, "/integrations/jira-cloud/projects/{project_id}/issue_types/{issue_type_id}/status/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIntegrationsJiraCloudProjectsProjectIdIssueTypesIssueTypeIdStatusRequest.class, baseUrl, "/integrations/jira-cloud/projects/{project_id}/issue_types/{issue_type_id}/status/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -283,7 +283,7 @@ public class JiraCloudIntegration {
      */
     public org.openapis.openapi.models.operations.GetTargetsTargetIdFindingsIdIntegrationsJiraCloudResponse getTargetsTargetIdFindingsIdIntegrationsJiraCloud(org.openapis.openapi.models.operations.GetTargetsTargetIdFindingsIdIntegrationsJiraCloudRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdFindingsIdIntegrationsJiraCloudPathParams.class, baseUrl, "/targets/{target_id}/findings/{id}/integrations/jira-cloud/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdFindingsIdIntegrationsJiraCloudRequest.class, baseUrl, "/targets/{target_id}/findings/{id}/integrations/jira-cloud/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -338,7 +338,7 @@ public class JiraCloudIntegration {
      */
     public org.openapis.openapi.models.operations.GetTargetsTargetIdIntegrationsJiraCloudResponse getTargetsTargetIdIntegrationsJiraCloud(org.openapis.openapi.models.operations.GetTargetsTargetIdIntegrationsJiraCloudRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdIntegrationsJiraCloudPathParams.class, baseUrl, "/targets/{target_id}/integrations/jira-cloud/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdIntegrationsJiraCloudRequest.class, baseUrl, "/targets/{target_id}/integrations/jira-cloud/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -393,12 +393,12 @@ public class JiraCloudIntegration {
      */
     public org.openapis.openapi.models.operations.PatchTargetsTargetIdFindingsIdIntegrationsJiraCloudResponse patchTargetsTargetIdFindingsIdIntegrationsJiraCloud(org.openapis.openapi.models.operations.PatchTargetsTargetIdFindingsIdIntegrationsJiraCloudRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchTargetsTargetIdFindingsIdIntegrationsJiraCloudPathParams.class, baseUrl, "/targets/{target_id}/findings/{id}/integrations/jira-cloud/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchTargetsTargetIdFindingsIdIntegrationsJiraCloudRequest.class, baseUrl, "/targets/{target_id}/findings/{id}/integrations/jira-cloud/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "jiraFinding", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -461,12 +461,12 @@ public class JiraCloudIntegration {
      */
     public org.openapis.openapi.models.operations.PatchTargetsTargetIdIntegrationsJiraCloudResponse patchTargetsTargetIdIntegrationsJiraCloud(org.openapis.openapi.models.operations.PatchTargetsTargetIdIntegrationsJiraCloudRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchTargetsTargetIdIntegrationsJiraCloudPathParams.class, baseUrl, "/targets/{target_id}/integrations/jira-cloud/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchTargetsTargetIdIntegrationsJiraCloudRequest.class, baseUrl, "/targets/{target_id}/integrations/jira-cloud/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "jiraScope", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -529,12 +529,12 @@ public class JiraCloudIntegration {
      */
     public org.openapis.openapi.models.operations.PutTargetsTargetIdFindingsIdIntegrationsJiraCloudResponse putTargetsTargetIdFindingsIdIntegrationsJiraCloud(org.openapis.openapi.models.operations.PutTargetsTargetIdFindingsIdIntegrationsJiraCloudRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutTargetsTargetIdFindingsIdIntegrationsJiraCloudPathParams.class, baseUrl, "/targets/{target_id}/findings/{id}/integrations/jira-cloud/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutTargetsTargetIdFindingsIdIntegrationsJiraCloudRequest.class, baseUrl, "/targets/{target_id}/findings/{id}/integrations/jira-cloud/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "jiraFinding", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -597,12 +597,12 @@ public class JiraCloudIntegration {
      */
     public org.openapis.openapi.models.operations.PutTargetsTargetIdIntegrationsJiraCloudResponse putTargetsTargetIdIntegrationsJiraCloud(org.openapis.openapi.models.operations.PutTargetsTargetIdIntegrationsJiraCloudRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutTargetsTargetIdIntegrationsJiraCloudPathParams.class, baseUrl, "/targets/{target_id}/integrations/jira-cloud/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutTargetsTargetIdIntegrationsJiraCloudRequest.class, baseUrl, "/targets/{target_id}/integrations/jira-cloud/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "jiraScope", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

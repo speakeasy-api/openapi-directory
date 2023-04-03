@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Duplicate1Request {
-    
-    public Duplicate1PathParams pathParams;
-    public Duplicate1Request withPathParams(Duplicate1PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * report's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reportId")
+    public Long reportId;
+    public Duplicate1Request withReportId(Long reportId) {
+        this.reportId = reportId;
         return this;
     }
     

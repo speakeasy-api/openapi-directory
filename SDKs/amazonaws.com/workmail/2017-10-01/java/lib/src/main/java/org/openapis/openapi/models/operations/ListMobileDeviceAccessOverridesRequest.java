@@ -7,24 +7,86 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListMobileDeviceAccessOverridesRequest {
-    
-    public ListMobileDeviceAccessOverridesQueryParams queryParams;
-    public ListMobileDeviceAccessOverridesRequest withQueryParams(ListMobileDeviceAccessOverridesQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ListMobileDeviceAccessOverridesHeaders headers;
-    public ListMobileDeviceAccessOverridesRequest withHeaders(ListMobileDeviceAccessOverridesHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ListMobileDeviceAccessOverridesRequest request;
-    public ListMobileDeviceAccessOverridesRequest withRequest(org.openapis.openapi.models.shared.ListMobileDeviceAccessOverridesRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ListMobileDeviceAccessOverridesRequest listMobileDeviceAccessOverridesRequest;
+    public ListMobileDeviceAccessOverridesRequest withListMobileDeviceAccessOverridesRequest(org.openapis.openapi.models.shared.ListMobileDeviceAccessOverridesRequest listMobileDeviceAccessOverridesRequest) {
+        this.listMobileDeviceAccessOverridesRequest = listMobileDeviceAccessOverridesRequest;
+        return this;
+    }
+    
+    /**
+     * Pagination limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public String maxResults;
+    public ListMobileDeviceAccessOverridesRequest withMaxResults(String maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * Pagination token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public ListMobileDeviceAccessOverridesRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListMobileDeviceAccessOverridesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListMobileDeviceAccessOverridesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListMobileDeviceAccessOverridesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListMobileDeviceAccessOverridesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListMobileDeviceAccessOverridesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListMobileDeviceAccessOverridesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListMobileDeviceAccessOverridesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public ListMobileDeviceAccessOverridesXAmzTargetEnum xAmzTarget;
+    public ListMobileDeviceAccessOverridesRequest withXAmzTarget(ListMobileDeviceAccessOverridesXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
         return this;
     }
     

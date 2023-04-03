@@ -38,19 +38,20 @@ public class Me {
      * 
      * All stored data about their Vendor account will be deleted, and any vehicles that were provided by that Vendor will disappear from the system.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisconnectVendorResponse disconnectVendor(org.openapis.openapi.models.operations.DisconnectVendorRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisconnectVendorResponse disconnectVendor(org.openapis.openapi.models.operations.DisconnectVendorRequest request, org.openapis.openapi.models.operations.DisconnectVendorSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisconnectVendorPathParams.class, baseUrl, "/me/vendors/{vendor}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisconnectVendorRequest.class, baseUrl, "/me/vendors/{vendor}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -71,11 +72,10 @@ public class Me {
     /**
      * Get My User
      * Returns metadata about the authenticated User, including a list of vendors for which the user has provided credentials.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMeResponse getMe(org.openapis.openapi.models.operations.GetMeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMeResponse getMe() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me");
         
@@ -84,8 +84,7 @@ public class Me {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");

@@ -7,24 +7,79 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateConfiguredTableAnalysisRuleRequest {
-    
-    public UpdateConfiguredTableAnalysisRulePathParams pathParams;
-    public UpdateConfiguredTableAnalysisRuleRequest withPathParams(UpdateConfiguredTableAnalysisRulePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateConfiguredTableAnalysisRuleHeaders headers;
-    public UpdateConfiguredTableAnalysisRuleRequest withHeaders(UpdateConfiguredTableAnalysisRuleHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateConfiguredTableAnalysisRuleRequestBody request;
-    public UpdateConfiguredTableAnalysisRuleRequest withRequest(UpdateConfiguredTableAnalysisRuleRequestBody request) {
-        this.request = request;
+    public UpdateConfiguredTableAnalysisRuleRequestBody requestBody;
+    public UpdateConfiguredTableAnalysisRuleRequest withRequestBody(UpdateConfiguredTableAnalysisRuleRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public UpdateConfiguredTableAnalysisRuleRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public UpdateConfiguredTableAnalysisRuleRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public UpdateConfiguredTableAnalysisRuleRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public UpdateConfiguredTableAnalysisRuleRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public UpdateConfiguredTableAnalysisRuleRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public UpdateConfiguredTableAnalysisRuleRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public UpdateConfiguredTableAnalysisRuleRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The analysis rule type to be updated. Configured table analysis rules are uniquely identified by their configured table identifier and analysis rule type.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=analysisRuleType")
+    public UpdateConfiguredTableAnalysisRuleAnalysisRuleTypeEnum analysisRuleType;
+    public UpdateConfiguredTableAnalysisRuleRequest withAnalysisRuleType(UpdateConfiguredTableAnalysisRuleAnalysisRuleTypeEnum analysisRuleType) {
+        this.analysisRuleType = analysisRuleType;
+        return this;
+    }
+    
+    /**
+     * The unique identifier for the configured table that the analysis rule applies to. Currently accepts the configured table ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=configuredTableIdentifier")
+    public String configuredTableIdentifier;
+    public UpdateConfiguredTableAnalysisRuleRequest withConfiguredTableIdentifier(String configuredTableIdentifier) {
+        this.configuredTableIdentifier = configuredTableIdentifier;
         return this;
     }
     

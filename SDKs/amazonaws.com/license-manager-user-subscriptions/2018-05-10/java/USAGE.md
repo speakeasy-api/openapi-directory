@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AssociateUserHeaders;
 import org.openapis.openapi.models.operations.AssociateUserRequestBodyIdentityProvider;
 import org.openapis.openapi.models.operations.AssociateUserRequestBody;
 import org.openapis.openapi.models.operations.AssociateUserRequest;
@@ -16,33 +15,29 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AssociateUserRequest req = new AssociateUserRequest() {{
-                headers = new AssociateUserHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new AssociateUserRequestBody() {{
-                    domain = "illum";
+                requestBody = new AssociateUserRequestBody() {{
+                    domain = "corrupti";
                     identityProvider = new AssociateUserRequestBodyIdentityProvider() {{
                         activeDirectoryIdentityProvider = new ActiveDirectoryIdentityProvider() {{
-                            directoryId = "vel";
+                            directoryId = "provident";
                         }};
                     }};
-                    instanceId = "error";
-                    username = "Luna.Hoppe";
+                    instanceId = "distinctio";
+                    username = "Rosalinda_Mitchell84";
                 }};
-            }};            
+                xAmzAlgorithm = "vel";
+                xAmzContentSha256 = "error";
+                xAmzCredential = "deserunt";
+                xAmzDate = "suscipit";
+                xAmzSecurityToken = "iure";
+                xAmzSignature = "magnam";
+                xAmzSignedHeaders = "debitis";
+            }}            
 
             AssociateUserResponse res = sdk.associateUser(req);
 

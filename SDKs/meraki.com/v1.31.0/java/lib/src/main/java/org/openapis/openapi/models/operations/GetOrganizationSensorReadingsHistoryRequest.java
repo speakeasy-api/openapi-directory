@@ -4,20 +4,103 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationSensorReadingsHistoryRequest {
-    
-    public GetOrganizationSensorReadingsHistoryPathParams pathParams;
-    public GetOrganizationSensorReadingsHistoryRequest withPathParams(GetOrganizationSensorReadingsHistoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endingBefore")
+    public String endingBefore;
+    public GetOrganizationSensorReadingsHistoryRequest withEndingBefore(String endingBefore) {
+        this.endingBefore = endingBefore;
         return this;
     }
     
+    /**
+     * Types of sensor readings to retrieve. If no metrics are supplied, all available types of readings will be retrieved. Allowed values are battery, button, door, humidity, indoorAirQuality, noise, pm25, temperature, tvoc, and water.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=metrics")
+    public String[] metrics;
+    public GetOrganizationSensorReadingsHistoryRequest withMetrics(String[] metrics) {
+        this.metrics = metrics;
+        return this;
+    }
     
-    public GetOrganizationSensorReadingsHistoryQueryParams queryParams;
-    public GetOrganizationSensorReadingsHistoryRequest withQueryParams(GetOrganizationSensorReadingsHistoryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Optional parameter to filter readings by network.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=networkIds")
+    public String[] networkIds;
+    public GetOrganizationSensorReadingsHistoryRequest withNetworkIds(String[] networkIds) {
+        this.networkIds = networkIds;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public GetOrganizationSensorReadingsHistoryRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
+    
+    /**
+     * The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=perPage")
+    public Long perPage;
+    public GetOrganizationSensorReadingsHistoryRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Optional parameter to filter readings by sensor.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=serials")
+    public String[] serials;
+    public GetOrganizationSensorReadingsHistoryRequest withSerials(String[] serials) {
+        this.serials = serials;
+        return this;
+    }
+    
+    /**
+     * A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startingAfter")
+    public String startingAfter;
+    public GetOrganizationSensorReadingsHistoryRequest withStartingAfter(String startingAfter) {
+        this.startingAfter = startingAfter;
+        return this;
+    }
+    
+    /**
+     * The beginning of the timespan for the data. The maximum lookback period is 365 days and 6 hours from today.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t0")
+    public String t0;
+    public GetOrganizationSensorReadingsHistoryRequest withT0(String t0) {
+        this.t0 = t0;
+        return this;
+    }
+    
+    /**
+     * The end of the timespan for the data. t1 can be a maximum of 7 days after t0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t1")
+    public String t1;
+    public GetOrganizationSensorReadingsHistoryRequest withT1(String t1) {
+        this.t1 = t1;
+        return this;
+    }
+    
+    /**
+     * The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. The default is 2 hours.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timespan")
+    public Float timespan;
+    public GetOrganizationSensorReadingsHistoryRequest withTimespan(Float timespan) {
+        this.timespan = timespan;
         return this;
     }
     

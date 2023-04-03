@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupV2IndividualGroupInviteCancelRequest {
-    
-    public GroupV2IndividualGroupInviteCancelPathParams pathParams;
-    public GroupV2IndividualGroupInviteCancelRequest withPathParams(GroupV2IndividualGroupInviteCancelPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the group you would like to join.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public Long groupId;
+    public GroupV2IndividualGroupInviteCancelRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
         return this;
     }
     
+    /**
+     * Membership id of the account being cancelled.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipId")
+    public Long membershipId;
+    public GroupV2IndividualGroupInviteCancelRequest withMembershipId(Long membershipId) {
+        this.membershipId = membershipId;
+        return this;
+    }
     
-    public GroupV2IndividualGroupInviteCancelSecurity security;
-    public GroupV2IndividualGroupInviteCancelRequest withSecurity(GroupV2IndividualGroupInviteCancelSecurity security) {
-        this.security = security;
+    /**
+     * MembershipType of the account being cancelled.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
+    public Integer membershipType;
+    public GroupV2IndividualGroupInviteCancelRequest withMembershipType(Integer membershipType) {
+        this.membershipType = membershipType;
         return this;
     }
     

@@ -4,27 +4,62 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MessagesUpdateRequest {
-    
-    public MessagesUpdatePathParams pathParams;
-    public MessagesUpdateRequest withPathParams(MessagesUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public MessagesUpdateRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     
-    
-    public MessagesUpdateQueryParams queryParams;
-    public MessagesUpdateRequest withQueryParams(MessagesUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public MessagesUpdateRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=owner")
+    public Long owner;
+    public MessagesUpdateRequest withOwner(Long owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public MessagesUpdateSecurity security;
-    public MessagesUpdateRequest withSecurity(MessagesUpdateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
+    public Long patient;
+    public MessagesUpdateRequest withPatient(Long patient) {
+        this.patient = patient;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=received_since")
+    public String receivedSince;
+    public MessagesUpdateRequest withReceivedSince(String receivedSince) {
+        this.receivedSince = receivedSince;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=responsible_user")
+    public Long responsibleUser;
+    public MessagesUpdateRequest withResponsibleUser(Long responsibleUser) {
+        this.responsibleUser = responsibleUser;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public MessagesUpdateRequest withType(String type) {
+        this.type = type;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_since")
+    public String updatedSince;
+    public MessagesUpdateRequest withUpdatedSince(String updatedSince) {
+        this.updatedSince = updatedSince;
         return this;
     }
     

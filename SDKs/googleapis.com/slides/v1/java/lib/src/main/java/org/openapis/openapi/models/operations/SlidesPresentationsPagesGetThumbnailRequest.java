@@ -4,27 +4,156 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SlidesPresentationsPagesGetThumbnailRequest {
-    
-    public SlidesPresentationsPagesGetThumbnailPathParams pathParams;
-    public SlidesPresentationsPagesGetThumbnailRequest withPathParams(SlidesPresentationsPagesGetThumbnailPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public SlidesPresentationsPagesGetThumbnailRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public SlidesPresentationsPagesGetThumbnailQueryParams queryParams;
-    public SlidesPresentationsPagesGetThumbnailRequest withQueryParams(SlidesPresentationsPagesGetThumbnailQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public SlidesPresentationsPagesGetThumbnailRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public SlidesPresentationsPagesGetThumbnailRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public SlidesPresentationsPagesGetThumbnailSecurity security;
-    public SlidesPresentationsPagesGetThumbnailRequest withSecurity(SlidesPresentationsPagesGetThumbnailSecurity security) {
-        this.security = security;
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public SlidesPresentationsPagesGetThumbnailRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public SlidesPresentationsPagesGetThumbnailRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public SlidesPresentationsPagesGetThumbnailRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public SlidesPresentationsPagesGetThumbnailRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * The object ID of the page whose thumbnail to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pageObjectId")
+    public String pageObjectId;
+    public SlidesPresentationsPagesGetThumbnailRequest withPageObjectId(String pageObjectId) {
+        this.pageObjectId = pageObjectId;
+        return this;
+    }
+    
+    /**
+     * The ID of the presentation to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=presentationId")
+    public String presentationId;
+    public SlidesPresentationsPagesGetThumbnailRequest withPresentationId(String presentationId) {
+        this.presentationId = presentationId;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public SlidesPresentationsPagesGetThumbnailRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public SlidesPresentationsPagesGetThumbnailRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * The optional mime type of the thumbnail image. If you don't specify the mime type, the mime type defaults to PNG.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=thumbnailProperties.mimeType")
+    public SlidesPresentationsPagesGetThumbnailThumbnailPropertiesMimeTypeEnum thumbnailPropertiesMimeType;
+    public SlidesPresentationsPagesGetThumbnailRequest withThumbnailPropertiesMimeType(SlidesPresentationsPagesGetThumbnailThumbnailPropertiesMimeTypeEnum thumbnailPropertiesMimeType) {
+        this.thumbnailPropertiesMimeType = thumbnailPropertiesMimeType;
+        return this;
+    }
+    
+    /**
+     * The optional thumbnail image size. If you don't specify the size, the server chooses a default size of the image.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=thumbnailProperties.thumbnailSize")
+    public SlidesPresentationsPagesGetThumbnailThumbnailPropertiesThumbnailSizeEnum thumbnailPropertiesThumbnailSize;
+    public SlidesPresentationsPagesGetThumbnailRequest withThumbnailPropertiesThumbnailSize(SlidesPresentationsPagesGetThumbnailThumbnailPropertiesThumbnailSizeEnum thumbnailPropertiesThumbnailSize) {
+        this.thumbnailPropertiesThumbnailSize = thumbnailPropertiesThumbnailSize;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public SlidesPresentationsPagesGetThumbnailRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public SlidesPresentationsPagesGetThumbnailRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

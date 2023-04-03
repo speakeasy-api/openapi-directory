@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSetupV1ServicegroupsIdRequest {
-    
-    public PutSetupV1ServicegroupsIdPathParams pathParams;
-    public PutSetupV1ServicegroupsIdRequest withPathParams(PutSetupV1ServicegroupsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ServiceGroupInputModel serviceGroupInputModel;
+    public PutSetupV1ServicegroupsIdRequest withServiceGroupInputModel(org.openapis.openapi.models.shared.ServiceGroupInputModel serviceGroupInputModel) {
+        this.serviceGroupInputModel = serviceGroupInputModel;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ServiceGroupInputModel request;
-    public PutSetupV1ServicegroupsIdRequest withRequest(org.openapis.openapi.models.shared.ServiceGroupInputModel request) {
-        this.request = request;
+    /**
+     * id of serviceGroup object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PutSetupV1ServicegroupsIdRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

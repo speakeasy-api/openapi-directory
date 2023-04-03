@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateUpdatePickupPointRequest {
-    
-    public CreateUpdatePickupPointPathParams pathParams;
-    public CreateUpdatePickupPointRequest withPathParams(CreateUpdatePickupPointPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public CreateUpdatePickupPointRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public CreateUpdatePickupPointHeaders headers;
-    public CreateUpdatePickupPointRequest withHeaders(CreateUpdatePickupPointHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public CreateUpdatePickupPointRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateUpdatePickupPointRequestBody request;
-    public CreateUpdatePickupPointRequest withRequest(CreateUpdatePickupPointRequestBody request) {
-        this.request = request;
+    public CreateUpdatePickupPointRequestBody requestBody;
+    public CreateUpdatePickupPointRequest withRequestBody(CreateUpdatePickupPointRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Pickup Point ID. Cannot contain spaces.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pickupPointId")
+    public String pickupPointId;
+    public CreateUpdatePickupPointRequest withPickupPointId(String pickupPointId) {
+        this.pickupPointId = pickupPointId;
         return this;
     }
     

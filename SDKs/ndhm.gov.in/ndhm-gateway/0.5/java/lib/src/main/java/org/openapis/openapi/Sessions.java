@@ -146,7 +146,7 @@ public class Sessions {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV05SessionsJsonResponse postV05SessionsJson(org.openapis.openapi.models.operations.PostV05SessionsJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV05SessionsJsonResponse postV05SessionsJson(org.openapis.openapi.models.shared.SessionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.5/sessions");
         
@@ -207,7 +207,7 @@ public class Sessions {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV05SessionsRawResponse postV05SessionsRaw(org.openapis.openapi.models.operations.PostV05SessionsRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV05SessionsRawResponse postV05SessionsRaw(byte[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.5/sessions");
         

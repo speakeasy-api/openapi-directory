@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolMqttClientSetBrokerRequest {
+    /**
+     * Agent to set MQTT config
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolMqttClientSetBrokerRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolMqttClientSetBrokerPathParams pathParams;
-    public ProtocolMqttClientSetBrokerRequest withPathParams(ProtocolMqttClientSetBrokerPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Broker address
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=brokerAddr")
+    public String brokerAddr;
+    public ProtocolMqttClientSetBrokerRequest withBrokerAddr(String brokerAddr) {
+        this.brokerAddr = brokerAddr;
         return this;
     }
     

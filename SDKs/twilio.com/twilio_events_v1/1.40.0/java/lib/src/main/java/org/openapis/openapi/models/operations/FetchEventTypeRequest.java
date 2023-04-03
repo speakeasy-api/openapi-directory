@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchEventTypeRequest {
-    
-    public FetchEventTypePathParams pathParams;
-    public FetchEventTypeRequest withPathParams(FetchEventTypePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchEventTypeSecurity security;
-    public FetchEventTypeRequest withSecurity(FetchEventTypeSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchEventTypeRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * A string that uniquely identifies this Event Type.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Type")
+    public String type;
+    public FetchEventTypeRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

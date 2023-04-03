@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminSyncLdapMappingForTeamRequest {
-    
-    public EnterpriseAdminSyncLdapMappingForTeamPathParams pathParams;
-    public EnterpriseAdminSyncLdapMappingForTeamRequest withPathParams(EnterpriseAdminSyncLdapMappingForTeamPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
+    public Long teamId;
+    public EnterpriseAdminSyncLdapMappingForTeamRequest withTeamId(Long teamId) {
+        this.teamId = teamId;
         return this;
     }
     

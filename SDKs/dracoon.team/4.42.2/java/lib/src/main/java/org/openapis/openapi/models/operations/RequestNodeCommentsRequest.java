@@ -4,27 +4,70 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestNodeCommentsRequest {
-    
-    public RequestNodeCommentsPathParams pathParams;
-    public RequestNodeCommentsRequest withPathParams(RequestNodeCommentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestNodeCommentsRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public RequestNodeCommentsQueryParams queryParams;
-    public RequestNodeCommentsRequest withQueryParams(RequestNodeCommentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public RequestNodeCommentsXSdsDateFormatEnum xSdsDateFormat;
+    public RequestNodeCommentsRequest withXSdsDateFormat(RequestNodeCommentsXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
         return this;
     }
     
+    /**
+     * Hide deleted comments (default: false)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hide_deleted")
+    public Boolean hideDeleted;
+    public RequestNodeCommentsRequest withHideDeleted(Boolean hideDeleted) {
+        this.hideDeleted = hideDeleted;
+        return this;
+    }
     
-    public RequestNodeCommentsHeaders headers;
-    public RequestNodeCommentsRequest withHeaders(RequestNodeCommentsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Range limit.
+     * 
+     * Maximum 500.
+     * 
+     *  For more results please use paging (`offset` + `limit`).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public RequestNodeCommentsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Node ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=node_id")
+    public Long nodeId;
+    public RequestNodeCommentsRequest withNodeId(Long nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
+    
+    /**
+     * Range offset
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public RequestNodeCommentsRequest withOffset(Integer offset) {
+        this.offset = offset;
         return this;
     }
     

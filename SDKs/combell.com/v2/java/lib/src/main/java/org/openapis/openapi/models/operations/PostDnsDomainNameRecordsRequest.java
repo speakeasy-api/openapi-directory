@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostDnsDomainNameRecordsRequest {
-    
-    public PostDnsDomainNameRecordsPathParams pathParams;
-    public PostDnsDomainNameRecordsRequest withPathParams(PostDnsDomainNameRecordsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostDnsDomainNameRecordsQueryParams queryParams;
-    public PostDnsDomainNameRecordsRequest withQueryParams(PostDnsDomainNameRecordsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * The record to create
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DnsRecord request;
-    public PostDnsDomainNameRecordsRequest withRequest(org.openapis.openapi.models.shared.DnsRecord request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.DnsRecord dnsRecord;
+    public PostDnsDomainNameRecordsRequest withDnsRecord(org.openapis.openapi.models.shared.DnsRecord dnsRecord) {
+        this.dnsRecord = dnsRecord;
+        return this;
+    }
+    
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
+    public String domainNamePathParameter;
+    public PostDnsDomainNameRecordsRequest withDomainNamePathParameter(String domainNamePathParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
+        return this;
+    }
+    
+    /**
+     * The domain name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
+    public String domainNameQueryParameter;
+    public PostDnsDomainNameRecordsRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
+        this.domainNameQueryParameter = domainNameQueryParameter;
         return this;
     }
     

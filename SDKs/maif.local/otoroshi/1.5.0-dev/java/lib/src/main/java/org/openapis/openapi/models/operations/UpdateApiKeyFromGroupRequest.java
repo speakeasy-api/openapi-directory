@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateApiKeyFromGroupRequest {
-    
-    public UpdateApiKeyFromGroupPathParams pathParams;
-    public UpdateApiKeyFromGroupRequest withPathParams(UpdateApiKeyFromGroupPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ApiKey request;
-    public UpdateApiKeyFromGroupRequest withRequest(org.openapis.openapi.models.shared.ApiKey request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ApiKey apiKey;
+    public UpdateApiKeyFromGroupRequest withApiKey(org.openapis.openapi.models.shared.ApiKey apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    /**
+     * the api key id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=clientId")
+    public String clientId;
+    public UpdateApiKeyFromGroupRequest withClientId(String clientId) {
+        this.clientId = clientId;
+        return this;
+    }
     
-    public UpdateApiKeyFromGroupSecurity security;
-    public UpdateApiKeyFromGroupRequest withSecurity(UpdateApiKeyFromGroupSecurity security) {
-        this.security = security;
+    /**
+     * The api key group id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public String groupId;
+    public UpdateApiKeyFromGroupRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     

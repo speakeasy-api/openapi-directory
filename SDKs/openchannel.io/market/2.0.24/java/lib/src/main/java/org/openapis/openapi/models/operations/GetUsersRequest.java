@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersRequest {
+    /**
+     * The maximum number of results to return per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetUsersRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetUsersQueryParams queryParams;
-    public GetUsersRequest withQueryParams(GetUsersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The result set page number to be returned
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
+    public Long pageNumber;
+    public GetUsersRequest withPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    
+    /**
+     * A query document. Example: {'name':'John'} matches all the users that have the name 'John'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public GetUsersRequest withQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    
+    /**
+     * A sort document. Example: {'name':1} sorts the results by name in ascending order
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetUsersRequest withSort(String sort) {
+        this.sort = sort;
         return this;
     }
     

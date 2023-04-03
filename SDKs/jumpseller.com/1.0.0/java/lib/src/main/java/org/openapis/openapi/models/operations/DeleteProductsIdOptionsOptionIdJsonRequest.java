@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteProductsIdOptionsOptionIdJsonRequest {
-    
-    public DeleteProductsIdOptionsOptionIdJsonPathParams pathParams;
-    public DeleteProductsIdOptionsOptionIdJsonRequest withPathParams(DeleteProductsIdOptionsOptionIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public DeleteProductsIdOptionsOptionIdJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
         return this;
     }
     
+    /**
+     * Id of the Product
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public DeleteProductsIdOptionsOptionIdJsonRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
     
-    public DeleteProductsIdOptionsOptionIdJsonQueryParams queryParams;
-    public DeleteProductsIdOptionsOptionIdJsonRequest withQueryParams(DeleteProductsIdOptionsOptionIdJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public DeleteProductsIdOptionsOptionIdJsonRequest withLogin(String login) {
+        this.login = login;
+        return this;
+    }
+    
+    /**
+     * Id of the Product Option
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=option_id")
+    public Integer optionId;
+    public DeleteProductsIdOptionsOptionIdJsonRequest withOptionId(Integer optionId) {
+        this.optionId = optionId;
         return this;
     }
     

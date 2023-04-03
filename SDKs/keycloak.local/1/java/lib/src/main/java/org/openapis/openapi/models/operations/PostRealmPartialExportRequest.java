@@ -4,20 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRealmPartialExportRequest {
-    
-    public PostRealmPartialExportPathParams pathParams;
-    public PostRealmPartialExportRequest withPathParams(PostRealmPartialExportPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exportClients")
+    public Boolean exportClients;
+    public PostRealmPartialExportRequest withExportClients(Boolean exportClients) {
+        this.exportClients = exportClients;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exportGroupsAndRoles")
+    public Boolean exportGroupsAndRoles;
+    public PostRealmPartialExportRequest withExportGroupsAndRoles(Boolean exportGroupsAndRoles) {
+        this.exportGroupsAndRoles = exportGroupsAndRoles;
+        return this;
+    }
     
-    public PostRealmPartialExportQueryParams queryParams;
-    public PostRealmPartialExportRequest withQueryParams(PostRealmPartialExportQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PostRealmPartialExportRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

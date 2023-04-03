@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCustomFields7Request {
-    
-    public GetCustomFields7PathParams pathParams;
-    public GetCustomFields7Request withPathParams(GetCustomFields7PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * task's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taskId")
+    public String taskId;
+    public GetCustomFields7Request withTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolMqttClientSetWillretainRequest {
+    /**
+     * Agent to set MQTT config
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolMqttClientSetWillretainRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolMqttClientSetWillretainPathParams pathParams;
-    public ProtocolMqttClientSetWillretainRequest withPathParams(ProtocolMqttClientSetWillretainPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Retaining will
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=retain")
+    public String retain;
+    public ProtocolMqttClientSetWillretainRequest withRetain(String retain) {
+        this.retain = retain;
         return this;
     }
     

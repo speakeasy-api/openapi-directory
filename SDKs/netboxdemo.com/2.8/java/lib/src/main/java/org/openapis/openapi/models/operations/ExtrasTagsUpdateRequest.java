@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExtrasTagsUpdateRequest {
-    
-    public ExtrasTagsUpdatePathParams pathParams;
-    public ExtrasTagsUpdateRequest withPathParams(ExtrasTagsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.TagInput tagInput;
+    public ExtrasTagsUpdateRequest withTagInput(org.openapis.openapi.models.shared.TagInput tagInput) {
+        this.tagInput = tagInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TagInput request;
-    public ExtrasTagsUpdateRequest withRequest(org.openapis.openapi.models.shared.TagInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this tag.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public ExtrasTagsUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

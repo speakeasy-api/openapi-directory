@@ -31,7 +31,6 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetEventsV3EventsGetPageSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetEventsV3EventsGetPageQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetEventsV3EventsGetPageRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetEventsV3EventsGetPageResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/CollectionResponseExternalUnifiedEvent.java
@@ -40,7 +39,4 @@ lib/src/main/java/org/openapis/openapi/models/shared/Paging.java
 lib/src/main/java/org/openapis/openapi/models/shared/NextPage.java
 lib/src/main/java/org/openapis/openapi/models/shared/Error.java
 lib/src/main/java/org/openapis/openapi/models/shared/ErrorDetail.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeHapikey.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2Legacy.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemePrivateAppsLegacy.java
 USAGE.md

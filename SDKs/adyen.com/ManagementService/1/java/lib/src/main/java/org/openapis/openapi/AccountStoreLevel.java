@@ -39,25 +39,26 @@ public class AccountStoreLevel {
      * * Management API\u2014Stores read
      * * Management API\u2014Stores read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMerchantsMerchantIdStoresResponse getMerchantsMerchantIdStores(org.openapis.openapi.models.operations.GetMerchantsMerchantIdStoresRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMerchantsMerchantIdStoresResponse getMerchantsMerchantIdStores(org.openapis.openapi.models.operations.GetMerchantsMerchantIdStoresRequest request, org.openapis.openapi.models.operations.GetMerchantsMerchantIdStoresSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMerchantsMerchantIdStoresPathParams.class, baseUrl, "/merchants/{merchantId}/stores", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMerchantsMerchantIdStoresRequest.class, baseUrl, "/merchants/{merchantId}/stores", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMerchantsMerchantIdStoresQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMerchantsMerchantIdStoresRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -99,19 +100,20 @@ public class AccountStoreLevel {
      * * Management API\u2014Stores read
      * * Management API\u2014Stores read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMerchantsMerchantIdStoresStoreIdResponse getMerchantsMerchantIdStoresStoreId(org.openapis.openapi.models.operations.GetMerchantsMerchantIdStoresStoreIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMerchantsMerchantIdStoresStoreIdResponse getMerchantsMerchantIdStoresStoreId(org.openapis.openapi.models.operations.GetMerchantsMerchantIdStoresStoreIdRequest request, org.openapis.openapi.models.operations.GetMerchantsMerchantIdStoresStoreIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMerchantsMerchantIdStoresStoreIdPathParams.class, baseUrl, "/merchants/{merchantId}/stores/{storeId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMerchantsMerchantIdStoresStoreIdRequest.class, baseUrl, "/merchants/{merchantId}/stores/{storeId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -153,10 +155,11 @@ public class AccountStoreLevel {
      * * Management API\u2014Stores read
      * * Management API\u2014Stores read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetStoresResponse getStores(org.openapis.openapi.models.operations.GetStoresRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetStoresResponse getStores(org.openapis.openapi.models.operations.GetStoresRequest request, org.openapis.openapi.models.operations.GetStoresSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/stores");
         
@@ -164,14 +167,14 @@ public class AccountStoreLevel {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetStoresQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetStoresRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -211,19 +214,20 @@ public class AccountStoreLevel {
      * * Management API\u2014Stores read
      * * Management API\u2014Stores read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetStoresStoreIdResponse getStoresStoreId(org.openapis.openapi.models.operations.GetStoresStoreIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetStoresStoreIdResponse getStoresStoreId(org.openapis.openapi.models.operations.GetStoresStoreIdRequest request, org.openapis.openapi.models.operations.GetStoresStoreIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStoresStoreIdPathParams.class, baseUrl, "/stores/{storeId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStoresStoreIdRequest.class, baseUrl, "/stores/{storeId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -262,21 +266,22 @@ public class AccountStoreLevel {
      * To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014Stores read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchMerchantsMerchantIdStoresStoreIdResponse patchMerchantsMerchantIdStoresStoreId(org.openapis.openapi.models.operations.PatchMerchantsMerchantIdStoresStoreIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchMerchantsMerchantIdStoresStoreIdResponse patchMerchantsMerchantIdStoresStoreId(org.openapis.openapi.models.operations.PatchMerchantsMerchantIdStoresStoreIdRequest request, org.openapis.openapi.models.operations.PatchMerchantsMerchantIdStoresStoreIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchMerchantsMerchantIdStoresStoreIdPathParams.class, baseUrl, "/merchants/{merchantId}/stores/{storeId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchMerchantsMerchantIdStoresStoreIdRequest.class, baseUrl, "/merchants/{merchantId}/stores/{storeId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateStoreRequest", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -318,21 +323,22 @@ public class AccountStoreLevel {
      * To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014Stores read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchStoresStoreIdResponse patchStoresStoreId(org.openapis.openapi.models.operations.PatchStoresStoreIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchStoresStoreIdResponse patchStoresStoreId(org.openapis.openapi.models.operations.PatchStoresStoreIdRequest request, org.openapis.openapi.models.operations.PatchStoresStoreIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchStoresStoreIdPathParams.class, baseUrl, "/stores/{storeId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchStoresStoreIdRequest.class, baseUrl, "/stores/{storeId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateStoreRequest", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -371,21 +377,22 @@ public class AccountStoreLevel {
      * To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014Stores read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostMerchantsMerchantIdStoresResponse postMerchantsMerchantIdStores(org.openapis.openapi.models.operations.PostMerchantsMerchantIdStoresRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostMerchantsMerchantIdStoresResponse postMerchantsMerchantIdStores(org.openapis.openapi.models.operations.PostMerchantsMerchantIdStoresRequest request, org.openapis.openapi.models.operations.PostMerchantsMerchantIdStoresSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostMerchantsMerchantIdStoresPathParams.class, baseUrl, "/merchants/{merchantId}/stores", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostMerchantsMerchantIdStoresRequest.class, baseUrl, "/merchants/{merchantId}/stores", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "storeCreationRequest", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -426,10 +433,11 @@ public class AccountStoreLevel {
      * To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014Stores read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostStoresResponse postStores(org.openapis.openapi.models.operations.PostStoresRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostStoresResponse postStores(org.openapis.openapi.models.shared.StoreCreationWithMerchantCodeRequest request, org.openapis.openapi.models.operations.PostStoresSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/stores");
         
@@ -440,7 +448,7 @@ public class AccountStoreLevel {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

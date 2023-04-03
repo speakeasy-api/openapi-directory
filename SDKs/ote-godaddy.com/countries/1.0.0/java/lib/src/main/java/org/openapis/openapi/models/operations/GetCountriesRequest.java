@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCountriesRequest {
+    /**
+     * MarketId in which the request is being made, and for which responses should be localized
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=marketId")
+    public String marketId;
+    public GetCountriesRequest withMarketId(String marketId) {
+        this.marketId = marketId;
+        return this;
+    }
     
-    public GetCountriesQueryParams queryParams;
-    public GetCountriesRequest withQueryParams(GetCountriesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The direction to sort the result countries by.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public GetCountriesOrderEnum order;
+    public GetCountriesRequest withOrder(GetCountriesOrderEnum order) {
+        this.order = order;
+        return this;
+    }
+    
+    /**
+     * Restrict countries to this region name; required if regionTypeId is supplied
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=regionName")
+    public String regionName;
+    public GetCountriesRequest withRegionName(String regionName) {
+        this.regionName = regionName;
+        return this;
+    }
+    
+    /**
+     * Restrict countries to this region type; required if regionName is supplied
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=regionTypeId")
+    public Long regionTypeId;
+    public GetCountriesRequest withRegionTypeId(Long regionTypeId) {
+        this.regionTypeId = regionTypeId;
+        return this;
+    }
+    
+    /**
+     * The term to sort the result countries by.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetCountriesSortEnum sort;
+    public GetCountriesRequest withSort(GetCountriesSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

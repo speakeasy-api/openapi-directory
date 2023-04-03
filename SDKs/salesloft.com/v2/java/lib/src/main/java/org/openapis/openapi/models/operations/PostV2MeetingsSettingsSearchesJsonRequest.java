@@ -4,13 +4,80 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV2MeetingsSettingsSearchesJsonRequest {
+    /**
+     * Filters meeting settings by calendar type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=calendar_type")
+    public String calendarType;
+    public PostV2MeetingsSettingsSearchesJsonRequest withCalendarType(String calendarType) {
+        this.calendarType = calendarType;
+        return this;
+    }
     
-    public PostV2MeetingsSettingsSearchesJsonQueryParams queryParams;
-    public PostV2MeetingsSettingsSearchesJsonRequest withQueryParams(PostV2MeetingsSettingsSearchesJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Whether to include total_pages and total_count in the metadata. Defaults to false
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_paging_counts")
+    public Boolean includePagingCounts;
+    public PostV2MeetingsSettingsSearchesJsonRequest withIncludePagingCounts(Boolean includePagingCounts) {
+        this.includePagingCounts = includePagingCounts;
+        return this;
+    }
+    
+    /**
+     * Specifies whether the max limit of 10k records should be applied to pagination counts. Affects the total_count and total_pages data
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit_paging_counts")
+    public Boolean limitPagingCounts;
+    public PostV2MeetingsSettingsSearchesJsonRequest withLimitPagingCounts(Boolean limitPagingCounts) {
+        this.limitPagingCounts = limitPagingCounts;
+        return this;
+    }
+    
+    /**
+     * The current page to fetch results from. Defaults to 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public PostV2MeetingsSettingsSearchesJsonRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * How many records to show per page in the range [1, 100]. Defaults to 25
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public PostV2MeetingsSettingsSearchesJsonRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Equality filters that are applied to the updated_at field. A single filter can be used by itself or combined with other filters to create a range.
+     * 
+     * ---CUSTOM---
+     * {"type":"object","keys":[{"name":"gt","type":"iso8601 string","description":"Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"gte","type":"iso8601 string","description":"Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"lt","type":"iso8601 string","description":"Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"lte","type":"iso8601 string","description":"Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision."}]}
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=updated_at")
+    public String[] updatedAt;
+    public PostV2MeetingsSettingsSearchesJsonRequest withUpdatedAt(String[] updatedAt) {
+        this.updatedAt = updatedAt;
+        return this;
+    }
+    
+    /**
+     * Filters meeting settings by array of user_guids
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=user_guids")
+    public String[] userGuids;
+    public PostV2MeetingsSettingsSearchesJsonRequest withUserGuids(String[] userGuids) {
+        this.userGuids = userGuids;
         return this;
     }
     

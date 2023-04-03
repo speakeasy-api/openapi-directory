@@ -4,27 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEvidenceFoldersByAssessmentRequest {
-    
-    public GetEvidenceFoldersByAssessmentPathParams pathParams;
-    public GetEvidenceFoldersByAssessmentRequest withPathParams(GetEvidenceFoldersByAssessmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetEvidenceFoldersByAssessmentRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public GetEvidenceFoldersByAssessmentQueryParams queryParams;
-    public GetEvidenceFoldersByAssessmentRequest withQueryParams(GetEvidenceFoldersByAssessmentQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetEvidenceFoldersByAssessmentRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetEvidenceFoldersByAssessmentRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public GetEvidenceFoldersByAssessmentHeaders headers;
-    public GetEvidenceFoldersByAssessmentRequest withHeaders(GetEvidenceFoldersByAssessmentHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetEvidenceFoldersByAssessmentRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetEvidenceFoldersByAssessmentRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetEvidenceFoldersByAssessmentRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetEvidenceFoldersByAssessmentRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     *  The unique identifier for the assessment. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assessmentId")
+    public String assessmentId;
+    public GetEvidenceFoldersByAssessmentRequest withAssessmentId(String assessmentId) {
+        this.assessmentId = assessmentId;
+        return this;
+    }
+    
+    /**
+     *  Represents the maximum number of results on a page or for an API request call. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public GetEvidenceFoldersByAssessmentRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     *  The pagination token that's used to fetch the next set of results. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
+    public String nextToken;
+    public GetEvidenceFoldersByAssessmentRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
     

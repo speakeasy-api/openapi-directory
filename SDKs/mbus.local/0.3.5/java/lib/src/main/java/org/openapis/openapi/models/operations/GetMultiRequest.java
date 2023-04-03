@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMultiRequest {
+    /**
+     * The slave device to get data from
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=address")
+    public String address;
+    public GetMultiRequest withAddress(String address) {
+        this.address = address;
+        return this;
+    }
     
-    public GetMultiPathParams pathParams;
-    public GetMultiRequest withPathParams(GetMultiPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Baudrate to communicate with M-Bus devices
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=baudrate")
+    public org.openapis.openapi.models.shared.BaudrateEnum baudrate;
+    public GetMultiRequest withBaudrate(org.openapis.openapi.models.shared.BaudrateEnum baudrate) {
+        this.baudrate = baudrate;
+        return this;
+    }
+    
+    /**
+     * The serial device to scan - /dev/ is pre-pended to {device} by M-Bus HTTPD before scanning
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=device")
+    public String device;
+    public GetMultiRequest withDevice(String device) {
+        this.device = device;
+        return this;
+    }
+    
+    /**
+     * The slave device to get data from
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=maxframes")
+    public Integer maxframes;
+    public GetMultiRequest withMaxframes(Integer maxframes) {
+        this.maxframes = maxframes;
         return this;
     }
     

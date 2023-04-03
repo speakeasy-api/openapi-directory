@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPushDeviceDetailsRequest {
-    
-    public GetPushDeviceDetailsPathParams pathParams;
-    public GetPushDeviceDetailsRequest withPathParams(GetPushDeviceDetailsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The version of the API you wish to use.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Ably-Version")
+    public String xAblyVersion;
+    public GetPushDeviceDetailsRequest withXAblyVersion(String xAblyVersion) {
+        this.xAblyVersion = xAblyVersion;
         return this;
     }
     
-    
-    public GetPushDeviceDetailsQueryParams queryParams;
-    public GetPushDeviceDetailsRequest withQueryParams(GetPushDeviceDetailsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Device's ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=device_id")
+    public String deviceId;
+    public GetPushDeviceDetailsRequest withDeviceId(String deviceId) {
+        this.deviceId = deviceId;
         return this;
     }
     
-    
-    public GetPushDeviceDetailsHeaders headers;
-    public GetPushDeviceDetailsRequest withHeaders(GetPushDeviceDetailsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The response format you would like
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public org.openapis.openapi.models.shared.ResponseFormatEnum format;
+    public GetPushDeviceDetailsRequest withFormat(org.openapis.openapi.models.shared.ResponseFormatEnum format) {
+        this.format = format;
         return this;
     }
     

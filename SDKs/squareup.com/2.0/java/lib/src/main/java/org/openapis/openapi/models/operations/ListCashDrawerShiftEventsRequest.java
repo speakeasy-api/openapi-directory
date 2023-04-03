@@ -4,27 +4,47 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListCashDrawerShiftEventsRequest {
-    
-    public ListCashDrawerShiftEventsPathParams pathParams;
-    public ListCashDrawerShiftEventsRequest withPathParams(ListCashDrawerShiftEventsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Opaque cursor for fetching the next page of results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public ListCashDrawerShiftEventsRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
-    
-    public ListCashDrawerShiftEventsQueryParams queryParams;
-    public ListCashDrawerShiftEventsRequest withQueryParams(ListCashDrawerShiftEventsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Number of resources to be returned in a page of results (200 by
+     * default, 1000 max).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListCashDrawerShiftEventsRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * The ID of the location to list cash drawer shifts for.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location_id")
+    public String locationId;
+    public ListCashDrawerShiftEventsRequest withLocationId(String locationId) {
+        this.locationId = locationId;
+        return this;
+    }
     
-    public ListCashDrawerShiftEventsSecurity security;
-    public ListCashDrawerShiftEventsRequest withSecurity(ListCashDrawerShiftEventsSecurity security) {
-        this.security = security;
+    /**
+     * The shift ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shift_id")
+    public String shiftId;
+    public ListCashDrawerShiftEventsRequest withShiftId(String shiftId) {
+        this.shiftId = shiftId;
         return this;
     }
     

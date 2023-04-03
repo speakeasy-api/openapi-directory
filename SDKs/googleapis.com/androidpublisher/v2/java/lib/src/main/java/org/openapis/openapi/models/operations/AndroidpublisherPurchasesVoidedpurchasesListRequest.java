@@ -4,27 +4,127 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AndroidpublisherPurchasesVoidedpurchasesListRequest {
-    
-    public AndroidpublisherPurchasesVoidedpurchasesListPathParams pathParams;
-    public AndroidpublisherPurchasesVoidedpurchasesListRequest withPathParams(AndroidpublisherPurchasesVoidedpurchasesListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AndroidpublisherPurchasesVoidedpurchasesListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
         return this;
     }
     
-    
-    public AndroidpublisherPurchasesVoidedpurchasesListQueryParams queryParams;
-    public AndroidpublisherPurchasesVoidedpurchasesListRequest withQueryParams(AndroidpublisherPurchasesVoidedpurchasesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The time, in milliseconds since the Epoch, of the newest voided purchase that you want to see in the response. The value of this parameter cannot be greater than the current time and is ignored if a pagination token is set. Default value is current time. Note: This filter is applied on the time at which the record is seen as voided by our systems and not the actual voided time returned in the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endTime")
+    public String endTime;
+    public AndroidpublisherPurchasesVoidedpurchasesListRequest withEndTime(String endTime) {
+        this.endTime = endTime;
         return this;
     }
     
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AndroidpublisherPurchasesVoidedpurchasesListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
     
-    public AndroidpublisherPurchasesVoidedpurchasesListSecurity security;
-    public AndroidpublisherPurchasesVoidedpurchasesListRequest withSecurity(AndroidpublisherPurchasesVoidedpurchasesListSecurity security) {
-        this.security = security;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AndroidpublisherPurchasesVoidedpurchasesListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public AndroidpublisherPurchasesVoidedpurchasesListRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AndroidpublisherPurchasesVoidedpurchasesListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * The package name of the application for which voided purchases need to be returned (for example, 'com.some.thing').
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=packageName")
+    public String packageName;
+    public AndroidpublisherPurchasesVoidedpurchasesListRequest withPackageName(String packageName) {
+        this.packageName = packageName;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AndroidpublisherPurchasesVoidedpurchasesListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AndroidpublisherPurchasesVoidedpurchasesListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startIndex")
+    public Long startIndex;
+    public AndroidpublisherPurchasesVoidedpurchasesListRequest withStartIndex(Long startIndex) {
+        this.startIndex = startIndex;
+        return this;
+    }
+    
+    /**
+     * The time, in milliseconds since the Epoch, of the oldest voided purchase that you want to see in the response. The value of this parameter cannot be older than 30 days and is ignored if a pagination token is set. Default value is current time minus 30 days. Note: This filter is applied on the time at which the record is seen as voided by our systems and not the actual voided time returned in the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startTime")
+    public String startTime;
+    public AndroidpublisherPurchasesVoidedpurchasesListRequest withStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public AndroidpublisherPurchasesVoidedpurchasesListRequest withToken(String token) {
+        this.token = token;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public AndroidpublisherPurchasesVoidedpurchasesListRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ShowTaskRequest {
-    
-    public ShowTaskPathParams pathParams;
-    public ShowTaskRequest withPathParams(ShowTaskPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * UUID of task
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public ShowTaskRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

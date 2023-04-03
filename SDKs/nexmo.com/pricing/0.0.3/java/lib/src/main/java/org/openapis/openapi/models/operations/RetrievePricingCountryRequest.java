@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrievePricingCountryRequest {
-    
-    public RetrievePricingCountryPathParams pathParams;
-    public RetrievePricingCountryRequest withPathParams(RetrievePricingCountryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Your Nexmo API key.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public RetrievePricingCountryRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    /**
+     * Your Nexmo API secret.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_secret")
+    public String apiSecret;
+    public RetrievePricingCountryRequest withApiSecret(String apiSecret) {
+        this.apiSecret = apiSecret;
+        return this;
+    }
     
-    public RetrievePricingCountryQueryParams queryParams;
-    public RetrievePricingCountryRequest withQueryParams(RetrievePricingCountryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A two letter [country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). For example, `CA`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public String country;
+    public RetrievePricingCountryRequest withCountry(String country) {
+        this.country = country;
+        return this;
+    }
+    
+    /**
+     * The type of service you wish to retrieve data about: either `sms`, `sms-transit` or `voice`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
+    public String type;
+    public RetrievePricingCountryRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

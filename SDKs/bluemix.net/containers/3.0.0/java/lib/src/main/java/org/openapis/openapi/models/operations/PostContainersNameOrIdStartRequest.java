@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostContainersNameOrIdStartRequest {
-    
-    public PostContainersNameOrIdStartPathParams pathParams;
-    public PostContainersNameOrIdStartRequest withPathParams(PostContainersNameOrIdStartPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique ID of your organization space where you want to create or work with your containers. Run `cf space &lt;space_name&gt; --guid`, where `&lt;space_name&gt;` is the name of your space, to retrieve your space ID.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Project-Id")
+    public String xAuthProjectId;
+    public PostContainersNameOrIdStartRequest withXAuthProjectId(String xAuthProjectId) {
+        this.xAuthProjectId = xAuthProjectId;
         return this;
     }
     
+    /**
+     * The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Token")
+    public String xAuthToken;
+    public PostContainersNameOrIdStartRequest withXAuthToken(String xAuthToken) {
+        this.xAuthToken = xAuthToken;
+        return this;
+    }
     
-    public PostContainersNameOrIdStartHeaders headers;
-    public PostContainersNameOrIdStartRequest withHeaders(PostContainersNameOrIdStartHeaders headers) {
-        this.headers = headers;
+    /**
+     * The unique identifier or name of the container that you want to start. Run `cf ic ps -a` or call the `GET /containers/json?all=true` endpoint to review the containers in your space that are currently not in a running state.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name_or_id")
+    public String nameOrId;
+    public PostContainersNameOrIdStartRequest withNameOrId(String nameOrId) {
+        this.nameOrId = nameOrId;
         return this;
     }
     

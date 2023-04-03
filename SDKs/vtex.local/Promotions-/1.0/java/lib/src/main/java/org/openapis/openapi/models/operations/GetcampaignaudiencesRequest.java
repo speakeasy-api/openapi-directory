@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetcampaignaudiencesRequest {
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetcampaignaudiencesRequest withAccept(String accept) {
+        this.accept = accept;
+        return this;
+    }
     
-    public GetcampaignaudiencesHeaders headers;
-    public GetcampaignaudiencesRequest withHeaders(GetcampaignaudiencesHeaders headers) {
-        this.headers = headers;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetcampaignaudiencesRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     

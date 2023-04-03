@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostWalletAccountIdErc20Request {
-    
-    public PostWalletAccountIdErc20PathParams pathParams;
-    public PostWalletAccountIdErc20Request withPathParams(PostWalletAccountIdErc20PathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostWalletAccountIdErc20Request withId(String id) {
+        this.id = id;
         return this;
     }
     

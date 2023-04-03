@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetQuoteImageBackgroundListRequest {
-    
-    public GetQuoteImageBackgroundListQueryParams queryParams;
-    public GetQuoteImageBackgroundListRequest withQueryParams(GetQuoteImageBackgroundListQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetQuoteImageBackgroundListSecurity security;
-    public GetQuoteImageBackgroundListRequest withSecurity(GetQuoteImageBackgroundListSecurity security) {
-        this.security = security;
+    /**
+     * Response is paged. This parameter determines where the response should start.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public Long start;
+    public GetQuoteImageBackgroundListRequest withStart(Long start) {
+        this.start = start;
         return this;
     }
     

@@ -35,25 +35,26 @@ public class Debugger {
     /**
      * Deletes the breakpoint from the debuggee.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsDeleteResponse clouddebuggerDebuggerDebuggeesBreakpointsDelete(org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsDeleteResponse clouddebuggerDebuggerDebuggeesBreakpointsDelete(org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsDeleteRequest request, org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsDeletePathParams.class, baseUrl, "/v2/debugger/debuggees/{debuggeeId}/breakpoints/{breakpointId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsDeleteRequest.class, baseUrl, "/v2/debugger/debuggees/{debuggeeId}/breakpoints/{breakpointId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -80,25 +81,26 @@ public class Debugger {
     /**
      * Gets breakpoint information.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsGetResponse clouddebuggerDebuggerDebuggeesBreakpointsGet(org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsGetResponse clouddebuggerDebuggerDebuggeesBreakpointsGet(org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsGetRequest request, org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsGetPathParams.class, baseUrl, "/v2/debugger/debuggees/{debuggeeId}/breakpoints/{breakpointId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsGetRequest.class, baseUrl, "/v2/debugger/debuggees/{debuggeeId}/breakpoints/{breakpointId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -125,25 +127,26 @@ public class Debugger {
     /**
      * Lists all breakpoints for the debuggee.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsListResponse clouddebuggerDebuggerDebuggeesBreakpointsList(org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsListResponse clouddebuggerDebuggerDebuggeesBreakpointsList(org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsListRequest request, org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsListPathParams.class, baseUrl, "/v2/debugger/debuggees/{debuggeeId}/breakpoints", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsListRequest.class, baseUrl, "/v2/debugger/debuggees/{debuggeeId}/breakpoints", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -170,27 +173,28 @@ public class Debugger {
     /**
      * Sets the breakpoint to the debuggee.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsSetResponse clouddebuggerDebuggerDebuggeesBreakpointsSet(org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsSetResponse clouddebuggerDebuggerDebuggeesBreakpointsSet(org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest request, org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsSetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsSetPathParams.class, baseUrl, "/v2/debugger/debuggees/{debuggeeId}/breakpoints/set", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest.class, baseUrl, "/v2/debugger/debuggees/{debuggeeId}/breakpoints/set", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "breakpoint", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsSetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -217,10 +221,11 @@ public class Debugger {
     /**
      * Lists all the debuggees that the user has access to.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesListResponse clouddebuggerDebuggerDebuggeesList(org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesListResponse clouddebuggerDebuggerDebuggeesList(org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesListRequest request, org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/debugger/debuggees");
         
@@ -228,14 +233,14 @@ public class Debugger {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClouddebuggerDebuggerDebuggeesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

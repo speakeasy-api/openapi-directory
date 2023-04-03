@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteASharedLineGroupRequest {
-    
-    public DeleteASharedLineGroupPathParams pathParams;
-    public DeleteASharedLineGroupRequest withPathParams(DeleteASharedLineGroupPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique Identifier of the shared line group that you would like to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sharedLineGroupId")
+    public String sharedLineGroupId;
+    public DeleteASharedLineGroupRequest withSharedLineGroupId(String sharedLineGroupId) {
+        this.sharedLineGroupId = sharedLineGroupId;
         return this;
     }
     

@@ -4,20 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersIdUserConnectionsIdConnectionSourcesRequest {
-    
-    public GetUsersIdUserConnectionsIdConnectionSourcesPathParams pathParams;
-    public GetUsersIdUserConnectionsIdConnectionSourcesRequest withPathParams(GetUsersIdUserConnectionsIdConnectionSourcesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public GetUsersIdUserConnectionsIdConnectionSourcesRequest withExpand(String expand) {
+        this.expand = expand;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connection")
+    public Long idConnection;
+    public GetUsersIdUserConnectionsIdConnectionSourcesRequest withIdConnection(Long idConnection) {
+        this.idConnection = idConnection;
+        return this;
+    }
     
-    public GetUsersIdUserConnectionsIdConnectionSourcesQueryParams queryParams;
-    public GetUsersIdUserConnectionsIdConnectionSourcesRequest withQueryParams(GetUsersIdUserConnectionsIdConnectionSourcesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Hint: you can use 'me' or 'all'
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
+    public String idUser;
+    public GetUsersIdUserConnectionsIdConnectionSourcesRequest withIdUser(String idUser) {
+        this.idUser = idUser;
         return this;
     }
     

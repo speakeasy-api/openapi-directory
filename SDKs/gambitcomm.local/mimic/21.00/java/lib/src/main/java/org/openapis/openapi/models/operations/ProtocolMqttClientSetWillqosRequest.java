@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolMqttClientSetWillqosRequest {
+    /**
+     * Agent to set MQTT config
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolMqttClientSetWillqosRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolMqttClientSetWillqosPathParams pathParams;
-    public ProtocolMqttClientSetWillqosRequest withPathParams(ProtocolMqttClientSetWillqosPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Quality of service field
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=qos")
+    public String qos;
+    public ProtocolMqttClientSetWillqosRequest withQos(String qos) {
+        this.qos = qos;
         return this;
     }
     

@@ -39,13 +39,13 @@ public class AEAssessment {
      */
     public org.openapis.openapi.models.operations.DeleteAEAssessmentResponse deleteAEAssessment(org.openapis.openapi.models.operations.DeleteAEAssessmentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAEAssessmentPathParams.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/AEAssessment/{AEAssessmentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAEAssessmentRequest.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/AEAssessment/{AEAssessmentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -88,13 +88,13 @@ public class AEAssessment {
      */
     public org.openapis.openapi.models.operations.GetAEAssessmentFromEmployeeResponse getAEAssessmentFromEmployee(org.openapis.openapi.models.operations.GetAEAssessmentFromEmployeeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAEAssessmentFromEmployeePathParams.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/AEAssessment/{AEAssessmentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAEAssessmentFromEmployeeRequest.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/AEAssessment/{AEAssessmentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -143,13 +143,13 @@ public class AEAssessment {
      */
     public org.openapis.openapi.models.operations.GetAEAssessmentsFromEmployeeResponse getAEAssessmentsFromEmployee(org.openapis.openapi.models.operations.GetAEAssessmentsFromEmployeeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAEAssessmentsFromEmployeePathParams.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/AEAssessments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAEAssessmentsFromEmployeeRequest.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/AEAssessments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -198,13 +198,13 @@ public class AEAssessment {
      */
     public org.openapis.openapi.models.operations.GetAEAssessmentsFromPayRunResponse getAEAssessmentsFromPayRun(org.openapis.openapi.models.operations.GetAEAssessmentsFromPayRunRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAEAssessmentsFromPayRunPathParams.class, baseUrl, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRun/{PayRunId}/AEAssessments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAEAssessmentsFromPayRunRequest.class, baseUrl, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRun/{PayRunId}/AEAssessments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -253,18 +253,18 @@ public class AEAssessment {
      */
     public org.openapis.openapi.models.operations.PostNewAEAssessmentResponse postNewAEAssessment(org.openapis.openapi.models.operations.PostNewAEAssessmentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostNewAEAssessmentPathParams.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/AEAssessments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostNewAEAssessmentRequest.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/AEAssessments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "aeAssessment", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -313,18 +313,18 @@ public class AEAssessment {
      */
     public org.openapis.openapi.models.operations.PutNewAEAssessmentResponse putNewAEAssessment(org.openapis.openapi.models.operations.PutNewAEAssessmentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutNewAEAssessmentPathParams.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/AEAssessment/{AEAssessmentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutNewAEAssessmentRequest.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/AEAssessment/{AEAssessmentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "aeAssessment", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

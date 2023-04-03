@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteLikesPlaylistsPlaylistIdRequest {
-    
-    public DeleteLikesPlaylistsPlaylistIdPathParams pathParams;
-    public DeleteLikesPlaylistsPlaylistIdRequest withPathParams(DeleteLikesPlaylistsPlaylistIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteLikesPlaylistsPlaylistIdSecurity security;
-    public DeleteLikesPlaylistsPlaylistIdRequest withSecurity(DeleteLikesPlaylistsPlaylistIdSecurity security) {
-        this.security = security;
+    /**
+     * SoundCloud playlist id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=playlist_id")
+    public Long playlistId;
+    public DeleteLikesPlaylistsPlaylistIdRequest withPlaylistId(Long playlistId) {
+        this.playlistId = playlistId;
         return this;
     }
     

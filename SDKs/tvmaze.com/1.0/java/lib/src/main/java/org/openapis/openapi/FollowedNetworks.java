@@ -38,7 +38,7 @@ public class FollowedNetworks {
      */
     public org.openapis.openapi.models.operations.DeleteUserFollowsNetworksNetworkIdResponse deleteUserFollowsNetworksNetworkId(org.openapis.openapi.models.operations.DeleteUserFollowsNetworksNetworkIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserFollowsNetworksNetworkIdPathParams.class, baseUrl, "/user/follows/networks/{network_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserFollowsNetworksNetworkIdRequest.class, baseUrl, "/user/follows/networks/{network_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -77,7 +77,7 @@ public class FollowedNetworks {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserFollowsNetworksQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserFollowsNetworksRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -116,7 +116,7 @@ public class FollowedNetworks {
      */
     public org.openapis.openapi.models.operations.GetUserFollowsNetworksNetworkIdResponse getUserFollowsNetworksNetworkId(org.openapis.openapi.models.operations.GetUserFollowsNetworksNetworkIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserFollowsNetworksNetworkIdPathParams.class, baseUrl, "/user/follows/networks/{network_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserFollowsNetworksNetworkIdRequest.class, baseUrl, "/user/follows/networks/{network_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -157,7 +157,7 @@ public class FollowedNetworks {
      */
     public org.openapis.openapi.models.operations.PutUserFollowsNetworksNetworkIdResponse putUserFollowsNetworksNetworkId(org.openapis.openapi.models.operations.PutUserFollowsNetworksNetworkIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutUserFollowsNetworksNetworkIdPathParams.class, baseUrl, "/user/follows/networks/{network_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutUserFollowsNetworksNetworkIdRequest.class, baseUrl, "/user/follows/networks/{network_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateFormRequest {
-    
-    public UpdateFormPathParams pathParams;
-    public UpdateFormRequest withPathParams(UpdateFormPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Details of the Subscription to change
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.SubscriptionUpdate request;
-    public UpdateFormRequest withRequest(org.openapis.openapi.models.shared.SubscriptionUpdate request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SubscriptionUpdate subscriptionUpdate;
+    public UpdateFormRequest withSubscriptionUpdate(org.openapis.openapi.models.shared.SubscriptionUpdate subscriptionUpdate) {
+        this.subscriptionUpdate = subscriptionUpdate;
+        return this;
+    }
+    
+    /**
+     * Unique identifier of the Subscription to update
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subscriptionId")
+    public String subscriptionId;
+    public UpdateFormRequest withSubscriptionId(String subscriptionId) {
+        this.subscriptionId = subscriptionId;
         return this;
     }
     

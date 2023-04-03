@@ -5,14 +5,10 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreateSecurity;
-import org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreatePathParams;
-import org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreateQueryParams;
 import org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreateRequest;
 import org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreateResponse;
 import org.openapis.openapi.models.shared.BatchInputMarketingEventSubscriber;
 import org.openapis.openapi.models.shared.MarketingEventSubscriber;
-import org.openapis.openapi.models.shared.SchemeOauth2Legacy;
-import org.openapis.openapi.models.shared.SchemePrivateAppsLegacy;
 
 public class Application {
     public static void main(String[] args) {
@@ -21,65 +17,43 @@ public class Application {
                 .build();
 
             PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreateRequest req = new PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreateRequest() {{
-                security = new PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreateSecurity() {{
-                    oauth2Legacy = new SchemeOauth2Legacy() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreatePathParams() {{
-                    externalEventId = "corrupti";
-                    subscriberState = "provident";
-                }};
-                queryParams = new PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreateQueryParams() {{
-                    externalAccountId = "distinctio";
-                }};
-                request = new BatchInputMarketingEventSubscriber() {{
+                batchInputMarketingEventSubscriber = new BatchInputMarketingEventSubscriber() {{
                     inputs = new org.openapis.openapi.models.shared.MarketingEventSubscriber[]{{
                         add(new MarketingEventSubscriber() {{
-                            interactionDateTime = 602763;
+                            interactionDateTime = 592845;
                             properties = new java.util.HashMap<String, String>() {{
-                                put("corrupti", "illum");
-                                put("vel", "error");
-                                put("deserunt", "suscipit");
-                                put("iure", "magnam");
+                                put("quibusdam", "unde");
+                                put("nulla", "corrupti");
+                                put("illum", "vel");
                             }};
-                            vid = 891773;
+                            vid = 623564;
                         }}),
                         add(new MarketingEventSubscriber() {{
-                            interactionDateTime = 56713;
+                            interactionDateTime = 645894;
                             properties = new java.util.HashMap<String, String>() {{
-                                put("tempora", "suscipit");
+                                put("iure", "magnam");
+                                put("debitis", "ipsa");
+                            }};
+                            vid = 963663;
+                        }}),
+                        add(new MarketingEventSubscriber() {{
+                            interactionDateTime = 272656;
+                            properties = new java.util.HashMap<String, String>() {{
                                 put("molestiae", "minus");
                                 put("placeat", "voluptatum");
-                                put("iusto", "excepturi");
                             }};
-                            vid = 392785;
-                        }}),
-                        add(new MarketingEventSubscriber() {{
-                            interactionDateTime = 925597;
-                            properties = new java.util.HashMap<String, String>() {{
-                                put("ab", "quis");
-                                put("veritatis", "deserunt");
-                                put("perferendis", "ipsam");
-                                put("repellendus", "sapiente");
-                            }};
-                            vid = 778157;
-                        }}),
-                        add(new MarketingEventSubscriber() {{
-                            interactionDateTime = 140350;
-                            properties = new java.util.HashMap<String, String>() {{
-                                put("at", "maiores");
-                                put("molestiae", "quod");
-                                put("quod", "esse");
-                                put("totam", "porro");
-                            }};
-                            vid = 678880;
+                            vid = 479977;
                         }}),
                     }};
                 }};
-            }};            
+                externalAccountId = "excepturi";
+                externalEventId = "nisi";
+                subscriberState = "recusandae";
+            }}            
 
-            PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreateResponse res = sdk.attendanceSubscriberStateChanges.postMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreate(req);
+            PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreateResponse res = sdk.attendanceSubscriberStateChanges.postMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreate(req, new PostMarketingV3MarketingEventsAttendanceExternalEventIdSubscriberStateCreateCreateSecurity() {{
+                oauth2Legacy = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.batchResponseSubscriberVidResponse.isPresent()) {
                 // handle response

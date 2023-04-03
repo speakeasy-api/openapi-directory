@@ -4,13 +4,201 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCandidatesTotalsAggregatesRequest {
+    /**
+     * Candidate totals aggregate_by (Chose one of dropdown options):
+     *         - ' ' grouped by election year
+     *         - office grouped by election year, by office
+     *         - office-state grouped by election year, by office, by state
+     *         - office-state-district grouped by election year, by office, by state, by district
+     *         - office-party grouped by election year, by office, by party
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aggregate_by")
+    public GetCandidatesTotalsAggregatesAggregateByEnum aggregateBy;
+    public GetCandidatesTotalsAggregatesRequest withAggregateBy(GetCandidatesTotalsAggregatesAggregateByEnum aggregateBy) {
+        this.aggregateBy = aggregateBy;
+        return this;
+    }
     
-    public GetCandidatesTotalsAggregatesQueryParams queryParams;
-    public GetCandidatesTotalsAggregatesRequest withQueryParams(GetCandidatesTotalsAggregatesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * API key for https://api.data.gov. Get one at https://api.data.gov/signup.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetCandidatesTotalsAggregatesRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
+    
+    /**
+     * Two-digit US House distirict of the office the candidate is running for. Presidential, Senate and House at-large candidates will have District 00.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=district")
+    public String[] district;
+    public GetCandidatesTotalsAggregatesRequest withDistrict(String[] district) {
+        this.district = district;
+        return this;
+    }
+    
+    /**
+     * `True` indicates that full election period of a candidate.
+     * `False` indicates that two year election cycle.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=election_full")
+    public Boolean electionFull;
+    public GetCandidatesTotalsAggregatesRequest withElectionFull(Boolean electionFull) {
+        this.electionFull = electionFull;
+        return this;
+    }
+    
+    /**
+     * Filter records to only those that were applicable to a given
+     * two-year period.The cycle begins with an odd year and is named
+     * for its ending, even year.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=election_year")
+    public Integer[] electionYear;
+    public GetCandidatesTotalsAggregatesRequest withElectionYear(Integer[] electionYear) {
+        this.electionYear = electionYear;
+        return this;
+    }
+    
+    /**
+     *  Candidates who are actively seeking office. If no value is specified, all candidates
+     * are returned. When True is specified, only active candidates are returned. When False is
+     * specified, only inactive candidates are returned.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_active_candidate")
+    public Boolean isActiveCandidate;
+    public GetCandidatesTotalsAggregatesRequest withIsActiveCandidate(Boolean isActiveCandidate) {
+        this.isActiveCandidate = isActiveCandidate;
+        return this;
+    }
+    
+    /**
+     * Filter records to only those that are applicable to a given two-year
+     * period. This cycle follows the traditional House election cycle and
+     * subdivides the presidential and Senate elections into comparable
+     * two-year blocks. The cycle begins with an odd year and is named for its
+     * ending, even year.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_election_cycle")
+    public Integer maxElectionCycle;
+    public GetCandidatesTotalsAggregatesRequest withMaxElectionCycle(Integer maxElectionCycle) {
+        this.maxElectionCycle = maxElectionCycle;
+        return this;
+    }
+    
+    /**
+     * Filter records to only those that are applicable to a given two-year
+     * period. This cycle follows the traditional House election cycle and
+     * subdivides the presidential and Senate elections into comparable
+     * two-year blocks. The cycle begins with an odd year and is named for its
+     * ending, even year.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_election_cycle")
+    public Integer minElectionCycle;
+    public GetCandidatesTotalsAggregatesRequest withMinElectionCycle(Integer minElectionCycle) {
+        this.minElectionCycle = minElectionCycle;
+        return this;
+    }
+    
+    /**
+     * Federal office candidate runs for: H, S or P
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=office")
+    public GetCandidatesTotalsAggregatesOfficeEnum office;
+    public GetCandidatesTotalsAggregatesRequest withOffice(GetCandidatesTotalsAggregatesOfficeEnum office) {
+        this.office = office;
+        return this;
+    }
+    
+    /**
+     * For paginating through results, starting at page 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetCandidatesTotalsAggregatesRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Three-letter code for the party affiliated with a candidate or committee. For example, DEM for Democratic Party and REP for Republican Party.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=party")
+    public GetCandidatesTotalsAggregatesPartyEnum party;
+    public GetCandidatesTotalsAggregatesRequest withParty(GetCandidatesTotalsAggregatesPartyEnum party) {
+        this.party = party;
+        return this;
+    }
+    
+    /**
+     * The number of results returned per page. Defaults to 20.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetCandidatesTotalsAggregatesRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Provide a field to sort by. Use `-` for descending order. ex: `-case_no`
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String[] sort;
+    public GetCandidatesTotalsAggregatesRequest withSort(String[] sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Hide null values on sorted column(s).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
+    public Boolean sortHideNull;
+    public GetCandidatesTotalsAggregatesRequest withSortHideNull(Boolean sortHideNull) {
+        this.sortHideNull = sortHideNull;
+        return this;
+    }
+    
+    /**
+     * Toggle that filters out all rows having sort column that is non-null
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
+    public Boolean sortNullOnly;
+    public GetCandidatesTotalsAggregatesRequest withSortNullOnly(Boolean sortNullOnly) {
+        this.sortNullOnly = sortNullOnly;
+        return this;
+    }
+    
+    /**
+     * Toggle that sorts null values last
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
+    public Boolean sortNullsLast;
+    public GetCandidatesTotalsAggregatesRequest withSortNullsLast(Boolean sortNullsLast) {
+        this.sortNullsLast = sortNullsLast;
+        return this;
+    }
+    
+    /**
+     * US state or territory where a candidate runs for office
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public String[] state;
+    public GetCandidatesTotalsAggregatesRequest withState(String[] state) {
+        this.state = state;
         return this;
     }
     

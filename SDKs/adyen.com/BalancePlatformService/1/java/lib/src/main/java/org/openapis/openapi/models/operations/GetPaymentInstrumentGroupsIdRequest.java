@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPaymentInstrumentGroupsIdRequest {
-    
-    public GetPaymentInstrumentGroupsIdPathParams pathParams;
-    public GetPaymentInstrumentGroupsIdRequest withPathParams(GetPaymentInstrumentGroupsIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetPaymentInstrumentGroupsIdSecurity security;
-    public GetPaymentInstrumentGroupsIdRequest withSecurity(GetPaymentInstrumentGroupsIdSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the payment instrument group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetPaymentInstrumentGroupsIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

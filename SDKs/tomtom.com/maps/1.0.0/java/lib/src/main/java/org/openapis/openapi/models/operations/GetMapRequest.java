@@ -4,20 +4,121 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMapRequest {
-    
-    public GetMapPathParams pathParams;
-    public GetMapRequest withPathParams(GetMapPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Bounding box in the projection stated in &lt;b&gt;srs&lt;/b&gt;
+     * (minLon,minLat,maxLon,maxLat)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bbox")
+    public String bbox;
+    public GetMapRequest withBbox(String bbox) {
+        this.bbox = bbox;
         return this;
     }
     
+    /**
+     * Image format to be returned
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public GetMapFormatEnum format;
+    public GetMapRequest withFormat(GetMapFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public GetMapQueryParams queryParams;
-    public GetMapRequest withQueryParams(GetMapQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Height of the resulting image, in pixels Maximum value is 2048
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=height")
+    public Long height;
+    public GetMapRequest withHeight(Long height) {
+        this.height = height;
+        return this;
+    }
+    
+    /**
+     * Map layers requested Currently only the basic layer is available
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=layers")
+    public GetMapLayersEnum layers;
+    public GetMapRequest withLayers(GetMapLayersEnum layers) {
+        this.layers = layers;
+        return this;
+    }
+    
+    /**
+     * Request type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=request")
+    public GetMapRequestEnum request;
+    public GetMapRequest withRequest(GetMapRequestEnum request) {
+        this.request = request;
+        return this;
+    }
+    
+    /**
+     * Service type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=service")
+    public GetMapServiceEnum service;
+    public GetMapRequest withService(GetMapServiceEnum service) {
+        this.service = service;
+        return this;
+    }
+    
+    /**
+     * Projection used in describing the &lt;b&gt;bbox&lt;/b&gt; EPSG:3857 is
+     * recommended, particularly at higher zoom levels. (Note that
+     * EPSG:3857 is functionally equivalent to EPSG:900913/EPSG:3785)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=srs")
+    public GetMapSrsEnum srs;
+    public GetMapRequest withSrs(GetMapSrsEnum srs) {
+        this.srs = srs;
+        return this;
+    }
+    
+    /**
+     * Map styles to be returned. Currently, no styles are available. This
+     * parameter is present for forward compatibility; it must be used and
+     * left blank.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=styles")
+    public GetMapStylesEnum styles;
+    public GetMapRequest withStyles(GetMapStylesEnum styles) {
+        this.styles = styles;
+        return this;
+    }
+    
+    /**
+     * WMS service version
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
+    public GetMapVersionEnum version;
+    public GetMapRequest withVersion(GetMapVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    /**
+     * Version of the service to call. The current version is 1
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
+    public GetMapVersionNumberEnum versionNumber;
+    public GetMapRequest withVersionNumber(GetMapVersionNumberEnum versionNumber) {
+        this.versionNumber = versionNumber;
+        return this;
+    }
+    
+    /**
+     * Width of the resulting image, in pixels Maximum value is 2048
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=width")
+    public Long width;
+    public GetMapRequest withWidth(Long width) {
+        this.width = width;
         return this;
     }
     

@@ -7,27 +7,63 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class JobAddRequest {
-    
-    public JobAddQueryParams queryParams;
-    public JobAddRequest withQueryParams(JobAddQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public JobAddHeaders headers;
-    public JobAddRequest withHeaders(JobAddHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * Specifies the job to be added.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.JobAddParameter request;
-    public JobAddRequest withRequest(org.openapis.openapi.models.shared.JobAddParameter request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.JobAddParameter jobAddParameter;
+    public JobAddRequest withJobAddParameter(org.openapis.openapi.models.shared.JobAddParameter jobAddParameter) {
+        this.jobAddParameter = jobAddParameter;
+        return this;
+    }
+    
+    /**
+     * Client API Version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public JobAddRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
+    
+    /**
+     * Caller generated request identity, in the form of a GUID with no decoration such as curly braces e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
+    public String clientRequestId;
+    public JobAddRequest withClientRequestId(String clientRequestId) {
+        this.clientRequestId = clientRequestId;
+        return this;
+    }
+    
+    /**
+     * The time the request was issued. If not specified, this header will be automatically populated with the current system clock time.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
+    public String ocpDate;
+    public JobAddRequest withOcpDate(String ocpDate) {
+        this.ocpDate = ocpDate;
+        return this;
+    }
+    
+    /**
+     * Specifies if the server should return the client-request-id identifier in the response.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
+    public Boolean returnClientRequestId;
+    public JobAddRequest withReturnClientRequestId(Boolean returnClientRequestId) {
+        this.returnClientRequestId = returnClientRequestId;
+        return this;
+    }
+    
+    /**
+     * Sets the maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
+    public Integer timeout;
+    public JobAddRequest withTimeout(Integer timeout) {
+        this.timeout = timeout;
         return this;
     }
     

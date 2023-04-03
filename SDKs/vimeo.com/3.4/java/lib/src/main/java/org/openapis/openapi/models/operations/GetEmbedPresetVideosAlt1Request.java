@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEmbedPresetVideosAlt1Request {
-    
-    public GetEmbedPresetVideosAlt1PathParams pathParams;
-    public GetEmbedPresetVideosAlt1Request withPathParams(GetEmbedPresetVideosAlt1PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetEmbedPresetVideosAlt1Request withPage(Double page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetEmbedPresetVideosAlt1Request withPerPage(Double perPage) {
+        this.perPage = perPage;
+        return this;
+    }
     
-    public GetEmbedPresetVideosAlt1QueryParams queryParams;
-    public GetEmbedPresetVideosAlt1Request withQueryParams(GetEmbedPresetVideosAlt1QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The ID of the preset.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=preset_id")
+    public Double presetId;
+    public GetEmbedPresetVideosAlt1Request withPresetId(Double presetId) {
+        this.presetId = presetId;
         return this;
     }
     

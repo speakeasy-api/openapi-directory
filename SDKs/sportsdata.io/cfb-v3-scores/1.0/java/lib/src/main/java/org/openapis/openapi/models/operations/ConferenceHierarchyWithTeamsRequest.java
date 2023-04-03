@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConferenceHierarchyWithTeamsRequest {
-    
-    public ConferenceHierarchyWithTeamsPathParams pathParams;
-    public ConferenceHierarchyWithTeamsRequest withPathParams(ConferenceHierarchyWithTeamsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;xml&lt;/code&gt; or &lt;code&gt;json&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public ConferenceHierarchyWithTeamsFormatEnum format;
+    public ConferenceHierarchyWithTeamsRequest withFormat(ConferenceHierarchyWithTeamsFormatEnum format) {
+        this.format = format;
         return this;
     }
     

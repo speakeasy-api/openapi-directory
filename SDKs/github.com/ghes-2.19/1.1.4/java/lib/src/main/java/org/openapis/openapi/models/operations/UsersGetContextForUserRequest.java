@@ -4,20 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UsersGetContextForUserRequest {
-    
-    public UsersGetContextForUserPathParams pathParams;
-    public UsersGetContextForUserRequest withPathParams(UsersGetContextForUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Uses the ID for the `subject_type` you specified. **Required** when using `subject_type`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subject_id")
+    public String subjectId;
+    public UsersGetContextForUserRequest withSubjectId(String subjectId) {
+        this.subjectId = subjectId;
         return this;
     }
     
+    /**
+     * Identifies which additional information you'd like to receive about the person's hovercard. Can be `organization`, `repository`, `issue`, `pull_request`. **Required** when using `subject_id`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subject_type")
+    public UsersGetContextForUserSubjectTypeEnum subjectType;
+    public UsersGetContextForUserRequest withSubjectType(UsersGetContextForUserSubjectTypeEnum subjectType) {
+        this.subjectType = subjectType;
+        return this;
+    }
     
-    public UsersGetContextForUserQueryParams queryParams;
-    public UsersGetContextForUserRequest withQueryParams(UsersGetContextForUserQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public UsersGetContextForUserRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

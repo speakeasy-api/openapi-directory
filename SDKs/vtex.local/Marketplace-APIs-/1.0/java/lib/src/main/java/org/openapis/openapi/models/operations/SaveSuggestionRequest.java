@@ -7,31 +7,60 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SaveSuggestionRequest {
-    
-    public SaveSuggestionPathParams pathParams;
-    public SaveSuggestionRequest withPathParams(SaveSuggestionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public SaveSuggestionRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public SaveSuggestionQueryParams queryParams;
-    public SaveSuggestionRequest withQueryParams(SaveSuggestionQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public SaveSuggestionHeaders headers;
-    public SaveSuggestionRequest withHeaders(SaveSuggestionHeaders headers) {
-        this.headers = headers;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public SaveSuggestionRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SaveSuggestionRequest request;
-    public SaveSuggestionRequest withRequest(org.openapis.openapi.models.shared.SaveSuggestionRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SaveSuggestionRequest saveSuggestionRequest;
+    public SaveSuggestionRequest withSaveSuggestionRequest(org.openapis.openapi.models.shared.SaveSuggestionRequest saveSuggestionRequest) {
+        this.saveSuggestionRequest = saveSuggestionRequest;
+        return this;
+    }
+    
+    /**
+     * Name of the VTEX account to which the seller wants to suggest a new SKU. It is used as part of the request URL.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
+    public String accountName;
+    public SaveSuggestionRequest withAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    
+    /**
+     * A string that identifies the seller in the marketplace. This ID must be created by the marketplace and informed to the seller before the integration is built.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerId")
+    public String sellerId;
+    public SaveSuggestionRequest withSellerId(String sellerId) {
+        this.sellerId = sellerId;
+        return this;
+    }
+    
+    /**
+     * A string that identifies the SKU in the seller. This is the ID that the marketplace will use for future references to this SKU, such as price and inventory notifications.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerSkuId")
+    public String sellerSkuId;
+    public SaveSuggestionRequest withSellerSkuId(String sellerSkuId) {
+        this.sellerSkuId = sellerSkuId;
         return this;
     }
     

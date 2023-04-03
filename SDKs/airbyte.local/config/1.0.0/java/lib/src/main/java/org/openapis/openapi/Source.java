@@ -39,7 +39,7 @@ public class Source {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CheckConnectionToSourceResponse checkConnectionToSource(org.openapis.openapi.models.operations.CheckConnectionToSourceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CheckConnectionToSourceResponse checkConnectionToSource(org.openapis.openapi.models.shared.SourceIdRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/sources/check_connection");
         
@@ -98,7 +98,7 @@ public class Source {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CheckConnectionToSourceForUpdateResponse checkConnectionToSourceForUpdate(org.openapis.openapi.models.operations.CheckConnectionToSourceForUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CheckConnectionToSourceForUpdateResponse checkConnectionToSourceForUpdate(org.openapis.openapi.models.shared.SourceUpdate request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/sources/check_connection_for_update");
         
@@ -157,7 +157,7 @@ public class Source {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloneSourceResponse cloneSource(org.openapis.openapi.models.operations.CloneSourceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloneSourceResponse cloneSource(org.openapis.openapi.models.shared.SourceCloneRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/sources/clone");
         
@@ -216,7 +216,7 @@ public class Source {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateSourceResponse createSource(org.openapis.openapi.models.operations.CreateSourceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateSourceResponse createSource(org.openapis.openapi.models.shared.SourceCreate request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/sources/create");
         
@@ -267,7 +267,7 @@ public class Source {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteSourceResponse deleteSource(org.openapis.openapi.models.operations.DeleteSourceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteSourceResponse deleteSource(org.openapis.openapi.models.shared.SourceIdRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/sources/delete");
         
@@ -320,7 +320,7 @@ public class Source {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DiscoverSchemaForSourceResponse discoverSchemaForSource(org.openapis.openapi.models.operations.DiscoverSchemaForSourceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DiscoverSchemaForSourceResponse discoverSchemaForSource(org.openapis.openapi.models.shared.SourceDiscoverSchemaRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/sources/discover_schema");
         
@@ -379,7 +379,7 @@ public class Source {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMostRecentSourceActorCatalogResponse getMostRecentSourceActorCatalog(org.openapis.openapi.models.operations.GetMostRecentSourceActorCatalogRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMostRecentSourceActorCatalogResponse getMostRecentSourceActorCatalog(org.openapis.openapi.models.shared.SourceIdRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/sources/most_recent_source_actor_catalog");
         
@@ -438,7 +438,7 @@ public class Source {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSourceResponse getSource(org.openapis.openapi.models.operations.GetSourceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSourceResponse getSource(org.openapis.openapi.models.shared.SourceIdRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/sources/get");
         
@@ -498,7 +498,7 @@ public class Source {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListSourcesForWorkspaceResponse listSourcesForWorkspace(org.openapis.openapi.models.operations.ListSourcesForWorkspaceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListSourcesForWorkspaceResponse listSourcesForWorkspace(org.openapis.openapi.models.shared.WorkspaceIdRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/sources/list");
         
@@ -557,7 +557,7 @@ public class Source {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SearchSourcesResponse searchSources(org.openapis.openapi.models.operations.SearchSourcesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SearchSourcesResponse searchSources(org.openapis.openapi.models.shared.SourceSearch request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/sources/search");
         
@@ -608,7 +608,7 @@ public class Source {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateSourceResponse updateSource(org.openapis.openapi.models.operations.UpdateSourceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateSourceResponse updateSource(org.openapis.openapi.models.shared.SourceUpdate request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/sources/update");
         
@@ -667,7 +667,7 @@ public class Source {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WriteDiscoverCatalogResultResponse writeDiscoverCatalogResult(org.openapis.openapi.models.operations.WriteDiscoverCatalogResultRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WriteDiscoverCatalogResultResponse writeDiscoverCatalogResult(org.openapis.openapi.models.shared.SourceDiscoverSchemaWriteRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/sources/write_discover_catalog_result");
         

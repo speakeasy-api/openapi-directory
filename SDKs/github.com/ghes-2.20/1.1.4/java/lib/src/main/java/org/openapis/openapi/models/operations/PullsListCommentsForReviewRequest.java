@@ -4,20 +4,57 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PullsListCommentsForReviewRequest {
-    
-    public PullsListCommentsForReviewPathParams pathParams;
-    public PullsListCommentsForReviewRequest withPathParams(PullsListCommentsForReviewPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public PullsListCommentsForReviewRequest withOwner(String owner) {
+        this.owner = owner;
         return this;
     }
     
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public PullsListCommentsForReviewRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public PullsListCommentsForReviewQueryParams queryParams;
-    public PullsListCommentsForReviewRequest withQueryParams(PullsListCommentsForReviewQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public PullsListCommentsForReviewRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pull_number")
+    public Long pullNumber;
+    public PullsListCommentsForReviewRequest withPullNumber(Long pullNumber) {
+        this.pullNumber = pullNumber;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public PullsListCommentsForReviewRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * review_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=review_id")
+    public Long reviewId;
+    public PullsListCommentsForReviewRequest withReviewId(Long reviewId) {
+        this.reviewId = reviewId;
         return this;
     }
     

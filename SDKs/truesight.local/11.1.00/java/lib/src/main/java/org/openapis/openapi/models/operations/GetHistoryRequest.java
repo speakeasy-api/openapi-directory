@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetHistoryRequest {
+    /**
+     * The ID of the application.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=applicationId")
+    public String applicationId;
+    public GetHistoryRequest withApplicationId(String applicationId) {
+        this.applicationId = applicationId;
+        return this;
+    }
     
-    public GetHistoryQueryParams queryParams;
-    public GetHistoryRequest withQueryParams(GetHistoryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Beginning of the period (Epoch time, in seconds).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
+    public Long from;
+    public GetHistoryRequest withFrom(Long from) {
+        this.from = from;
+        return this;
+    }
+    
+    /**
+     * The ID of the group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupId")
+    public String groupId;
+    public GetHistoryRequest withGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    
+    /**
+     * The ID of the service.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceId")
+    public String serviceId;
+    public GetHistoryRequest withServiceId(String serviceId) {
+        this.serviceId = serviceId;
+        return this;
+    }
+    
+    /**
+     * End of the period (Epoch time, in seconds).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
+    public Long to;
+    public GetHistoryRequest withTo(Long to) {
+        this.to = to;
         return this;
     }
     

@@ -4,27 +4,176 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CloudassetBatchGetAssetsHistoryRequest {
-    
-    public CloudassetBatchGetAssetsHistoryPathParams pathParams;
-    public CloudassetBatchGetAssetsHistoryRequest withPathParams(CloudassetBatchGetAssetsHistoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public CloudassetBatchGetAssetsHistoryRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public CloudassetBatchGetAssetsHistoryQueryParams queryParams;
-    public CloudassetBatchGetAssetsHistoryRequest withQueryParams(CloudassetBatchGetAssetsHistoryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public CloudassetBatchGetAssetsHistoryRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public CloudassetBatchGetAssetsHistoryRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public CloudassetBatchGetAssetsHistorySecurity security;
-    public CloudassetBatchGetAssetsHistoryRequest withSecurity(CloudassetBatchGetAssetsHistorySecurity security) {
-        this.security = security;
+    /**
+     * A list of the full names of the assets. See: https://cloud.google.com/asset-inventory/docs/resource-name-format Example: `//compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1`. The request becomes a no-op if the asset name list is empty, and the max size of the asset name list is 100 in one request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assetNames")
+    public String[] assetNames;
+    public CloudassetBatchGetAssetsHistoryRequest withAssetNames(String[] assetNames) {
+        this.assetNames = assetNames;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public CloudassetBatchGetAssetsHistoryRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Optional. The content type.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contentType")
+    public CloudassetBatchGetAssetsHistoryContentTypeEnum contentType;
+    public CloudassetBatchGetAssetsHistoryRequest withContentType(CloudassetBatchGetAssetsHistoryContentTypeEnum contentType) {
+        this.contentType = contentType;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public CloudassetBatchGetAssetsHistoryRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public CloudassetBatchGetAssetsHistoryRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public CloudassetBatchGetAssetsHistoryRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Required. The relative name of the root asset. It can only be an organization number (such as "organizations/123"), a project ID (such as "projects/my-project-id")", or a project number (such as "projects/12345").
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public CloudassetBatchGetAssetsHistoryRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public CloudassetBatchGetAssetsHistoryRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public CloudassetBatchGetAssetsHistoryRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * End time of the time window (inclusive). If not specified, the current timestamp is used instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=readTimeWindow.endTime")
+    public String readTimeWindowEndTime;
+    public CloudassetBatchGetAssetsHistoryRequest withReadTimeWindowEndTime(String readTimeWindowEndTime) {
+        this.readTimeWindowEndTime = readTimeWindowEndTime;
+        return this;
+    }
+    
+    /**
+     * Start time of the time window (exclusive).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=readTimeWindow.startTime")
+    public String readTimeWindowStartTime;
+    public CloudassetBatchGetAssetsHistoryRequest withReadTimeWindowStartTime(String readTimeWindowStartTime) {
+        this.readTimeWindowStartTime = readTimeWindowStartTime;
+        return this;
+    }
+    
+    /**
+     * Optional. A list of relationship types to output, for example: `INSTANCE_TO_INSTANCEGROUP`. This field should only be specified if content_type=RELATIONSHIP. * If specified: it outputs specified relationships' history on the [asset_names]. It returns an error if any of the [relationship_types] doesn't belong to the supported relationship types of the [asset_names] or if any of the [asset_names]'s types doesn't belong to the source types of the [relationship_types]. * Otherwise: it outputs the supported relationships' history on the [asset_names] or returns an error if any of the [asset_names]'s types has no relationship support. See [Introduction to Cloud Asset Inventory](https://cloud.google.com/asset-inventory/docs/overview) for all supported asset types and relationship types.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=relationshipTypes")
+    public String[] relationshipTypes;
+    public CloudassetBatchGetAssetsHistoryRequest withRelationshipTypes(String[] relationshipTypes) {
+        this.relationshipTypes = relationshipTypes;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public CloudassetBatchGetAssetsHistoryRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public CloudassetBatchGetAssetsHistoryRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

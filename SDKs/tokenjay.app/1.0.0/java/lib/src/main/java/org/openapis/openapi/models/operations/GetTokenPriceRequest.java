@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTokenPriceRequest {
-    
-    public GetTokenPricePathParams pathParams;
-    public GetTokenPriceRequest withPathParams(GetTokenPricePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tokenId")
+    public String tokenId;
+    public GetTokenPriceRequest withTokenId(String tokenId) {
+        this.tokenId = tokenId;
         return this;
     }
     

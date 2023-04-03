@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConversionRateRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
+    public org.openapis.openapi.models.shared.CurrencyEnum from;
+    public GetConversionRateRequest withFrom(org.openapis.openapi.models.shared.CurrencyEnum from) {
+        this.from = from;
+        return this;
+    }
     
-    public GetConversionRateQueryParams queryParams;
-    public GetConversionRateRequest withQueryParams(GetConversionRateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
+    public org.openapis.openapi.models.shared.CurrencyEnum to;
+    public GetConversionRateRequest withTo(org.openapis.openapi.models.shared.CurrencyEnum to) {
+        this.to = to;
         return this;
     }
     

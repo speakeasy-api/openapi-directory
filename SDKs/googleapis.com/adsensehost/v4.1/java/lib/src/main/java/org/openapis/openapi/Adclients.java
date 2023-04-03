@@ -33,25 +33,26 @@ public class Adclients {
     /**
      * Get information about one of the ad clients in the Host AdSense account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdsensehostAdclientsGetResponse adsensehostAdclientsGet(org.openapis.openapi.models.operations.AdsensehostAdclientsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdsensehostAdclientsGetResponse adsensehostAdclientsGet(org.openapis.openapi.models.operations.AdsensehostAdclientsGetRequest request, org.openapis.openapi.models.operations.AdsensehostAdclientsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsensehostAdclientsGetPathParams.class, baseUrl, "/adclients/{adClientId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsensehostAdclientsGetRequest.class, baseUrl, "/adclients/{adClientId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsensehostAdclientsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsensehostAdclientsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,10 +79,11 @@ public class Adclients {
     /**
      * List all host ad clients in this AdSense account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdsensehostAdclientsListResponse adsensehostAdclientsList(org.openapis.openapi.models.operations.AdsensehostAdclientsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdsensehostAdclientsListResponse adsensehostAdclientsList(org.openapis.openapi.models.operations.AdsensehostAdclientsListRequest request, org.openapis.openapi.models.operations.AdsensehostAdclientsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/adclients");
         
@@ -89,14 +91,14 @@ public class Adclients {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsensehostAdclientsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsensehostAdclientsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

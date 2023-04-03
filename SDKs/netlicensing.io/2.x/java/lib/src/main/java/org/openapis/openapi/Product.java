@@ -39,10 +39,11 @@ public class Product {
      * Create Product
      * Creates a new Product
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateProductResponse createProduct(org.openapis.openapi.models.operations.CreateProductRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateProductResponse createProduct(org.openapis.openapi.models.operations.CreateProductRequestBody request, org.openapis.openapi.models.operations.CreateProductSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/product");
         
@@ -53,7 +54,7 @@ public class Product {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -88,25 +89,26 @@ public class Product {
      * Delete Product
      * Delete a Product by 'number'
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteProductResponse deleteProduct(org.openapis.openapi.models.operations.DeleteProductRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteProductResponse deleteProduct(org.openapis.openapi.models.operations.DeleteProductRequest request, org.openapis.openapi.models.operations.DeleteProductSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteProductPathParams.class, baseUrl, "/product/{productNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteProductRequest.class, baseUrl, "/product/{productNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteProductQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteProductRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -140,11 +142,10 @@ public class Product {
     /**
      * List Products
      * Return a list of all configured Products for the current Vendor
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListProductsResponse listProducts(org.openapis.openapi.models.operations.ListProductsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListProductsResponse listProducts() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/product");
         
@@ -153,8 +154,7 @@ public class Product {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -188,19 +188,20 @@ public class Product {
      * Get Product
      * Return a Product by 'productNumber'
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProductNumberResponse productNumber(org.openapis.openapi.models.operations.ProductNumberRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProductNumberResponse productNumber(org.openapis.openapi.models.operations.ProductNumberRequest request, org.openapis.openapi.models.operations.ProductNumberSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductNumberPathParams.class, baseUrl, "/product/{productNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductNumberRequest.class, baseUrl, "/product/{productNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -235,21 +236,22 @@ public class Product {
      * Update Product
      * Sets the provided properties to a Product. Return an updated Product
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateProductResponse updateProduct(org.openapis.openapi.models.operations.UpdateProductRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateProductResponse updateProduct(org.openapis.openapi.models.operations.UpdateProductRequest request, org.openapis.openapi.models.operations.UpdateProductSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateProductPathParams.class, baseUrl, "/product/{productNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateProductRequest.class, baseUrl, "/product/{productNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

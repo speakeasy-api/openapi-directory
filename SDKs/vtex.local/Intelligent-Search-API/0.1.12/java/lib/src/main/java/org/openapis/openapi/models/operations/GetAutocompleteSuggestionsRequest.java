@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAutocompleteSuggestionsRequest {
+    /**
+     * Indicates the target language as a BCP 47 language code. The Intelligent Search must have indexed the account in the target language.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
+    public String locale;
+    public GetAutocompleteSuggestionsRequest withLocale(String locale) {
+        this.locale = locale;
+        return this;
+    }
     
-    public GetAutocompleteSuggestionsQueryParams queryParams;
-    public GetAutocompleteSuggestionsRequest withQueryParams(GetAutocompleteSuggestionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Search term. It can contain any character.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public GetAutocompleteSuggestionsRequest withQuery(String query) {
+        this.query = query;
         return this;
     }
     

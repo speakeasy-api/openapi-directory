@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetargetingPostFormRequest {
-    
-    public RetargetingPostFormPathParams pathParams;
-    public RetargetingPostFormRequest withPathParams(RetargetingPostFormPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The body of the retargeting script
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.ApiCoreDtoRetargetingRetargetingScript request;
-    public RetargetingPostFormRequest withRequest(org.openapis.openapi.models.shared.ApiCoreDtoRetargetingRetargetingScript request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ApiCoreDtoRetargetingRetargetingScript apiCoreDtoRetargetingRetargetingScript;
+    public RetargetingPostFormRequest withApiCoreDtoRetargetingRetargetingScript(org.openapis.openapi.models.shared.ApiCoreDtoRetargetingRetargetingScript apiCoreDtoRetargetingRetargetingScript) {
+        this.apiCoreDtoRetargetingRetargetingScript = apiCoreDtoRetargetingRetargetingScript;
+        return this;
+    }
+    
+    /**
+     * The id of the retargeting script
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public RetargetingPostFormRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

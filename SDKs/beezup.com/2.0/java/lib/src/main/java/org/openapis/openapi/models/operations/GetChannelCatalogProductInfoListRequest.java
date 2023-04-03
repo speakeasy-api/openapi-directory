@@ -7,10 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetChannelCatalogProductInfoListRequest {
-    
-    public GetChannelCatalogProductInfoListPathParams pathParams;
-    public GetChannelCatalogProductInfoListRequest withPathParams(GetChannelCatalogProductInfoListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The channel catalog identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelCatalogId")
+    public String channelCatalogId;
+    public GetChannelCatalogProductInfoListRequest withChannelCatalogId(String channelCatalogId) {
+        this.channelCatalogId = channelCatalogId;
         return this;
     }
     
@@ -18,9 +21,9 @@ public class GetChannelCatalogProductInfoListRequest {
      * The channel catalog product list filter
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GetChannelCatalogProductInfoListRequest request;
-    public GetChannelCatalogProductInfoListRequest withRequest(org.openapis.openapi.models.shared.GetChannelCatalogProductInfoListRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GetChannelCatalogProductInfoListRequest getChannelCatalogProductInfoListRequest;
+    public GetChannelCatalogProductInfoListRequest withGetChannelCatalogProductInfoListRequest(org.openapis.openapi.models.shared.GetChannelCatalogProductInfoListRequest getChannelCatalogProductInfoListRequest) {
+        this.getChannelCatalogProductInfoListRequest = getChannelCatalogProductInfoListRequest;
         return this;
     }
     

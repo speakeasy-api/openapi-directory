@@ -46,7 +46,7 @@ public class Oauth {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AuthorizeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AuthorizeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -84,7 +84,7 @@ public class Oauth {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateAccessTokenFormResponse createAccessTokenForm(org.openapis.openapi.models.operations.CreateAccessTokenFormRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateAccessTokenFormResponse createAccessTokenForm(org.openapis.openapi.models.operations.CreateAccessTokenApplicationXWwwFormUrlencoded request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/oauth/access_token");
         
@@ -127,7 +127,7 @@ public class Oauth {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateAccessTokenJsonResponse createAccessTokenJson(org.openapis.openapi.models.operations.CreateAccessTokenJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateAccessTokenJsonResponse createAccessTokenJson(org.openapis.openapi.models.operations.CreateAccessTokenApplicationJSON request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/oauth/access_token");
         

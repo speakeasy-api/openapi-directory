@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetQuoteAuthorsSearchRequest {
-    
-    public GetQuoteAuthorsSearchQueryParams queryParams;
-    public GetQuoteAuthorsSearchRequest withQueryParams(GetQuoteAuthorsSearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Should return detailed author information such as `birthday`, `death date`, `occupation`, `description` etc. Only available at certain subscription levels.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=detailed")
+    public Boolean detailed;
+    public GetQuoteAuthorsSearchRequest withDetailed(Boolean detailed) {
+        this.detailed = detailed;
         return this;
     }
     
+    /**
+     * Language. A same author may have quotes in two or more different languages. So for example 'Mahatma Gandhi' may be returned for language "en"(English), and "\u0bae\u0bb9\u0bbe\u0ba4\u0bcd\u0bae\u0bbe \u0b95\u0bbe\u0ba8\u0bcd\u0ba4\u0bbf" may be returned when the language is "ta" (Tamil).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public String language;
+    public GetQuoteAuthorsSearchRequest withLanguage(String language) {
+        this.language = language;
+        return this;
+    }
     
-    public GetQuoteAuthorsSearchSecurity security;
-    public GetQuoteAuthorsSearchRequest withSecurity(GetQuoteAuthorsSearchSecurity security) {
-        this.security = security;
+    /**
+     * Response is paged. This parameter controls how many is returned in the result. The maximum depends on the subscription level.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetQuoteAuthorsSearchRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Text string to search for in author names
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public GetQuoteAuthorsSearchRequest withQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    
+    /**
+     * Response is paged. This parameter controls where response starts the listing at
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public Integer start;
+    public GetQuoteAuthorsSearchRequest withStart(Integer start) {
+        this.start = start;
         return this;
     }
     

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NodesDraftRegistrationsCreateRequest {
-    
-    public NodesDraftRegistrationsCreatePathParams pathParams;
-    public NodesDraftRegistrationsCreateRequest withPathParams(NodesDraftRegistrationsCreatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public NodesDraftRegistrationsCreateDraftRegistrationInput requestBody;
+    public NodesDraftRegistrationsCreateRequest withRequestBody(NodesDraftRegistrationsCreateDraftRegistrationInput requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public NodesDraftRegistrationsCreateDraftRegistrationInput request;
-    public NodesDraftRegistrationsCreateRequest withRequest(NodesDraftRegistrationsCreateDraftRegistrationInput request) {
-        this.request = request;
+    /**
+     * The unique identifier of the node.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=node_id")
+    public String nodeId;
+    public NodesDraftRegistrationsCreateRequest withNodeId(String nodeId) {
+        this.nodeId = nodeId;
         return this;
     }
     

@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodeScanningListAlertInstancesRequest {
-    
-    public CodeScanningListAlertInstancesPathParams pathParams;
-    public CodeScanningListAlertInstancesRequest withPathParams(CodeScanningListAlertInstancesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The number that identifies an alert. You can find this at the end of the URL for a code scanning alert within GitHub, and in the `number` field in the response from the `GET /repos/{owner}/{repo}/code-scanning/alerts` operation.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=alert_number")
+    public Long alertNumber;
+    public CodeScanningListAlertInstancesRequest withAlertNumber(Long alertNumber) {
+        this.alertNumber = alertNumber;
         return this;
     }
     
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public CodeScanningListAlertInstancesRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public CodeScanningListAlertInstancesQueryParams queryParams;
-    public CodeScanningListAlertInstancesRequest withQueryParams(CodeScanningListAlertInstancesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public CodeScanningListAlertInstancesRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public CodeScanningListAlertInstancesRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The Git reference for the results you want to list. The `ref` for a branch can be formatted either as `refs/heads/&lt;branch name&gt;` or simply `&lt;branch name&gt;`. To reference a pull request use `refs/pull/&lt;number&gt;/merge`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ref")
+    public String ref;
+    public CodeScanningListAlertInstancesRequest withRef(String ref) {
+        this.ref = ref;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public CodeScanningListAlertInstancesRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

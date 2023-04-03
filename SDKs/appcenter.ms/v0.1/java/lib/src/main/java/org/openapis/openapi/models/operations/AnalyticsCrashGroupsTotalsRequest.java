@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsCrashGroupsTotalsRequest {
-    
-    public AnalyticsCrashGroupsTotalsPathParams pathParams;
-    public AnalyticsCrashGroupsTotalsRequest withPathParams(AnalyticsCrashGroupsTotalsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public AnalyticsCrashGroupsTotalsRequestBody request;
-    public AnalyticsCrashGroupsTotalsRequest withRequest(AnalyticsCrashGroupsTotalsRequestBody request) {
-        this.request = request;
+    public AnalyticsCrashGroupsTotalsRequestBody requestBody;
+    public AnalyticsCrashGroupsTotalsRequest withRequestBody(AnalyticsCrashGroupsTotalsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public AnalyticsCrashGroupsTotalsRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public AnalyticsCrashGroupsTotalsSecurity security;
-    public AnalyticsCrashGroupsTotalsRequest withSecurity(AnalyticsCrashGroupsTotalsSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public AnalyticsCrashGroupsTotalsRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

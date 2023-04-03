@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddGroupMembersRequest {
-    
-    public AddGroupMembersPathParams pathParams;
-    public AddGroupMembersRequest withPathParams(AddGroupMembersPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AddGroupMembersHeaders headers;
-    public AddGroupMembersRequest withHeaders(AddGroupMembersHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ChangeGroupMembersRequest request;
-    public AddGroupMembersRequest withRequest(org.openapis.openapi.models.shared.ChangeGroupMembersRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ChangeGroupMembersRequest changeGroupMembersRequest;
+    public AddGroupMembersRequest withChangeGroupMembersRequest(org.openapis.openapi.models.shared.ChangeGroupMembersRequest changeGroupMembersRequest) {
+        this.changeGroupMembersRequest = changeGroupMembersRequest;
+        return this;
+    }
+    
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public AddGroupMembersRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
+        return this;
+    }
+    
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public AddGroupMembersXSdsDateFormatEnum xSdsDateFormat;
+    public AddGroupMembersRequest withXSdsDateFormat(AddGroupMembersXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
+        return this;
+    }
+    
+    /**
+     * Group ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public Long groupId;
+    public AddGroupMembersRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
         return this;
     }
     

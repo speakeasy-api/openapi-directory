@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ArticleVersionUpdateThumbRequest {
-    
-    public ArticleVersionUpdateThumbPathParams pathParams;
-    public ArticleVersionUpdateThumbRequest withPathParams(ArticleVersionUpdateThumbPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * File ID
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.FileId request;
-    public ArticleVersionUpdateThumbRequest withRequest(org.openapis.openapi.models.shared.FileId request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.FileId fileId;
+    public ArticleVersionUpdateThumbRequest withFileId(org.openapis.openapi.models.shared.FileId fileId) {
+        this.fileId = fileId;
         return this;
     }
     
+    /**
+     * Article unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=article_id")
+    public Long articleId;
+    public ArticleVersionUpdateThumbRequest withArticleId(Long articleId) {
+        this.articleId = articleId;
+        return this;
+    }
     
-    public ArticleVersionUpdateThumbSecurity security;
-    public ArticleVersionUpdateThumbRequest withSecurity(ArticleVersionUpdateThumbSecurity security) {
-        this.security = security;
+    /**
+     * Article version identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version_id")
+    public Long versionId;
+    public ArticleVersionUpdateThumbRequest withVersionId(Long versionId) {
+        this.versionId = versionId;
         return this;
     }
     

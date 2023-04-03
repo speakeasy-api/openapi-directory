@@ -4,20 +4,136 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchWordsRequest {
-    
-    public SearchWordsPathParams pathParams;
-    public SearchWordsRequest withPathParams(SearchWordsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Search term is a Regular Expression
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=allowRegex")
+    public String allowRegex;
+    public SearchWordsRequest withAllowRegex(String allowRegex) {
+        this.allowRegex = allowRegex;
         return this;
     }
     
+    /**
+     * Search case sensitive
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=caseSensitive")
+    public String caseSensitive;
+    public SearchWordsRequest withCaseSensitive(String caseSensitive) {
+        this.caseSensitive = caseSensitive;
+        return this;
+    }
     
-    public SearchWordsQueryParams queryParams;
-    public SearchWordsRequest withQueryParams(SearchWordsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Exclude these comma-delimited parts of speech (allowable values are noun, adjective, verb, adverb, interjection, pronoun, preposition, abbreviation, affix, article, auxiliary-verb, conjunction, definite-article, family-name, given-name, idiom, imperative, noun-plural, noun-posessive, past-participle, phrasal-prefix, proper-noun, proper-noun-plural, proper-noun-posessive, suffix, verb-intransitive, verb-transitive)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=excludePartOfSpeech")
+    public String excludePartOfSpeech;
+    public SearchWordsRequest withExcludePartOfSpeech(String excludePartOfSpeech) {
+        this.excludePartOfSpeech = excludePartOfSpeech;
+        return this;
+    }
+    
+    /**
+     * Only include these comma-delimited parts of speech (allowable values are noun, adjective, verb, adverb, interjection, pronoun, preposition, abbreviation, affix, article, auxiliary-verb, conjunction, definite-article, family-name, given-name, idiom, imperative, noun-plural, noun-posessive, past-participle, phrasal-prefix, proper-noun, proper-noun-plural, proper-noun-posessive, suffix, verb-intransitive, verb-transitive)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includePartOfSpeech")
+    public String includePartOfSpeech;
+    public SearchWordsRequest withIncludePartOfSpeech(String includePartOfSpeech) {
+        this.includePartOfSpeech = includePartOfSpeech;
+        return this;
+    }
+    
+    /**
+     * Maximum number of results to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public SearchWordsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Maximum corpus frequency for terms
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxCorpusCount")
+    public Integer maxCorpusCount;
+    public SearchWordsRequest withMaxCorpusCount(Integer maxCorpusCount) {
+        this.maxCorpusCount = maxCorpusCount;
+        return this;
+    }
+    
+    /**
+     * Maximum dictionary definition count
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxDictionaryCount")
+    public Integer maxDictionaryCount;
+    public SearchWordsRequest withMaxDictionaryCount(Integer maxDictionaryCount) {
+        this.maxDictionaryCount = maxDictionaryCount;
+        return this;
+    }
+    
+    /**
+     * Maximum word length
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxLength")
+    public Integer maxLength;
+    public SearchWordsRequest withMaxLength(Integer maxLength) {
+        this.maxLength = maxLength;
+        return this;
+    }
+    
+    /**
+     * Minimum corpus frequency for terms
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minCorpusCount")
+    public Integer minCorpusCount;
+    public SearchWordsRequest withMinCorpusCount(Integer minCorpusCount) {
+        this.minCorpusCount = minCorpusCount;
+        return this;
+    }
+    
+    /**
+     * Minimum number of dictionary entries for words returned
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minDictionaryCount")
+    public Integer minDictionaryCount;
+    public SearchWordsRequest withMinDictionaryCount(Integer minDictionaryCount) {
+        this.minDictionaryCount = minDictionaryCount;
+        return this;
+    }
+    
+    /**
+     * Minimum word length
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minLength")
+    public Integer minLength;
+    public SearchWordsRequest withMinLength(Integer minLength) {
+        this.minLength = minLength;
+        return this;
+    }
+    
+    /**
+     * Search query
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=query")
+    public String query;
+    public SearchWordsRequest withQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    
+    /**
+     * Results to skip
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
+    public Integer skip;
+    public SearchWordsRequest withSkip(Integer skip) {
+        this.skip = skip;
         return this;
     }
     

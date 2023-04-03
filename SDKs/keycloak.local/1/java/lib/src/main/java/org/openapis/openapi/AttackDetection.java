@@ -38,7 +38,7 @@ public class AttackDetection {
      */
     public org.openapis.openapi.models.operations.DeleteRealmAttackDetectionBruteForceUsersResponse deleteRealmAttackDetectionBruteForceUsers(org.openapis.openapi.models.operations.DeleteRealmAttackDetectionBruteForceUsersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmAttackDetectionBruteForceUsersPathParams.class, baseUrl, "/{realm}/attack-detection/brute-force/users", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmAttackDetectionBruteForceUsersRequest.class, baseUrl, "/{realm}/attack-detection/brute-force/users", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -71,7 +71,7 @@ public class AttackDetection {
      */
     public org.openapis.openapi.models.operations.DeleteRealmAttackDetectionBruteForceUsersUserIdResponse deleteRealmAttackDetectionBruteForceUsersUserId(org.openapis.openapi.models.operations.DeleteRealmAttackDetectionBruteForceUsersUserIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmAttackDetectionBruteForceUsersUserIdPathParams.class, baseUrl, "/{realm}/attack-detection/brute-force/users/{userId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmAttackDetectionBruteForceUsersUserIdRequest.class, baseUrl, "/{realm}/attack-detection/brute-force/users/{userId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -104,7 +104,7 @@ public class AttackDetection {
      */
     public org.openapis.openapi.models.operations.GetRealmAttackDetectionBruteForceUsersUserIdResponse getRealmAttackDetectionBruteForceUsersUserId(org.openapis.openapi.models.operations.GetRealmAttackDetectionBruteForceUsersUserIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmAttackDetectionBruteForceUsersUserIdPathParams.class, baseUrl, "/{realm}/attack-detection/brute-force/users/{userId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmAttackDetectionBruteForceUsersUserIdRequest.class, baseUrl, "/{realm}/attack-detection/brute-force/users/{userId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

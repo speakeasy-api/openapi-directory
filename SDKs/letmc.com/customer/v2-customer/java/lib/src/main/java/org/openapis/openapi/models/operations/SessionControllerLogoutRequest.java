@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SessionControllerLogoutRequest {
-    
-    public SessionControllerLogoutPathParams pathParams;
-    public SessionControllerLogoutRequest withPathParams(SessionControllerLogoutPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique client short-name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
+    public String shortName;
+    public SessionControllerLogoutRequest withShortName(String shortName) {
+        this.shortName = shortName;
         return this;
     }
     
-    
-    public SessionControllerLogoutQueryParams queryParams;
-    public SessionControllerLogoutRequest withQueryParams(SessionControllerLogoutQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The login token returned from the /session POST call
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public SessionControllerLogoutRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

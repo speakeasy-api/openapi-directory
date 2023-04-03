@@ -44,7 +44,7 @@ public class PortfolioAnalysisSharpeRatio {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPortfolioAnalysisSharpeRatioResponse postPortfolioAnalysisSharpeRatio(org.openapis.openapi.models.operations.PostPortfolioAnalysisSharpeRatioRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPortfolioAnalysisSharpeRatioResponse postPortfolioAnalysisSharpeRatio(Object request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/portfolio/analysis/sharpe-ratio");
         
@@ -93,7 +93,7 @@ public class PortfolioAnalysisSharpeRatio {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPortfolioAnalysisSharpeRatioBiasAdjustedResponse postPortfolioAnalysisSharpeRatioBiasAdjusted(org.openapis.openapi.models.operations.PostPortfolioAnalysisSharpeRatioBiasAdjustedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPortfolioAnalysisSharpeRatioBiasAdjustedResponse postPortfolioAnalysisSharpeRatioBiasAdjusted(org.openapis.openapi.models.operations.PostPortfolioAnalysisSharpeRatioBiasAdjustedRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/portfolio/analysis/sharpe-ratio/bias-adjusted");
         
@@ -142,7 +142,7 @@ public class PortfolioAnalysisSharpeRatio {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPortfolioAnalysisSharpeRatioConfidenceIntervalResponse postPortfolioAnalysisSharpeRatioConfidenceInterval(org.openapis.openapi.models.operations.PostPortfolioAnalysisSharpeRatioConfidenceIntervalRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPortfolioAnalysisSharpeRatioConfidenceIntervalResponse postPortfolioAnalysisSharpeRatioConfidenceInterval(org.openapis.openapi.models.operations.PostPortfolioAnalysisSharpeRatioConfidenceIntervalRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/portfolio/analysis/sharpe-ratio/confidence-interval");
         
@@ -192,7 +192,7 @@ public class PortfolioAnalysisSharpeRatio {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPortfolioAnalysisSharpeRatioProbabilisticResponse postPortfolioAnalysisSharpeRatioProbabilistic(org.openapis.openapi.models.operations.PostPortfolioAnalysisSharpeRatioProbabilisticRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPortfolioAnalysisSharpeRatioProbabilisticResponse postPortfolioAnalysisSharpeRatioProbabilistic(Object request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/portfolio/analysis/sharpe-ratio/probabilistic");
         
@@ -241,7 +241,7 @@ public class PortfolioAnalysisSharpeRatio {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLengthResponse postPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLength(org.openapis.openapi.models.operations.PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLengthRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLengthResponse postPortfolioAnalysisSharpeRatioProbabilisticMinimumTrackRecordLength(Object request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/portfolio/analysis/sharpe-ratio/probabilistic/minimum-track-record-length");
         

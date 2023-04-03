@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateTrunksRequest {
-    
-    public UpdateTrunksPathParams pathParams;
-    public UpdateTrunksRequest withPathParams(UpdateTrunksPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateTrunksUpdateTrunksRequest request;
-    public UpdateTrunksRequest withRequest(UpdateTrunksUpdateTrunksRequest request) {
-        this.request = request;
+    public UpdateTrunksUpdateTrunksRequest requestBody;
+    public UpdateTrunksRequest withRequestBody(UpdateTrunksUpdateTrunksRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateTrunksSecurity security;
-    public UpdateTrunksRequest withSecurity(UpdateTrunksSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateTrunksRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The absolute URL of the SIP Trunk
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=SipTrunkDomain")
+    public String sipTrunkDomain;
+    public UpdateTrunksRequest withSipTrunkDomain(String sipTrunkDomain) {
+        this.sipTrunkDomain = sipTrunkDomain;
         return this;
     }
     

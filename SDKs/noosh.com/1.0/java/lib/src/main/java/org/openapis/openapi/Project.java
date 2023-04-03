@@ -39,12 +39,12 @@ public class Project {
      */
     public org.openapis.openapi.models.operations.AttachProjectJsonResponse attachProjectJson(org.openapis.openapi.models.operations.AttachProjectJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AttachProjectJsonPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/children", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AttachProjectJsonRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/children", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "projectIdListVO", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -116,12 +116,12 @@ public class Project {
      */
     public org.openapis.openapi.models.operations.AttachProjectRawResponse attachProjectRaw(org.openapis.openapi.models.operations.AttachProjectRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AttachProjectRawPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/children", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AttachProjectRawRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/children", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
         
@@ -193,7 +193,7 @@ public class Project {
      */
     public org.openapis.openapi.models.operations.DeleteProjectResponse deleteProject(org.openapis.openapi.models.operations.DeleteProjectRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteProjectPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteProjectRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -268,7 +268,7 @@ public class Project {
      */
     public org.openapis.openapi.models.operations.GetProjectResponse getProject(org.openapis.openapi.models.operations.GetProjectRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -387,7 +387,7 @@ public class Project {
      */
     public org.openapis.openapi.models.operations.GetProjectListResponse getProjectList(org.openapis.openapi.models.operations.GetProjectListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectListPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectListRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -506,12 +506,12 @@ public class Project {
      */
     public org.openapis.openapi.models.operations.PatchProjectJsonResponse patchProjectJson(org.openapis.openapi.models.operations.PatchProjectJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchProjectJsonPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchProjectJsonRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "projectPatchPO", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -583,12 +583,12 @@ public class Project {
      */
     public org.openapis.openapi.models.operations.PatchProjectRawResponse patchProjectRaw(org.openapis.openapi.models.operations.PatchProjectRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchProjectRawPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchProjectRawRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
         
@@ -660,12 +660,12 @@ public class Project {
      */
     public org.openapis.openapi.models.operations.PostProjectJsonResponse postProjectJson(org.openapis.openapi.models.operations.PostProjectJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostProjectJsonPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostProjectJsonRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "projectPersistVO", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -781,12 +781,12 @@ public class Project {
      */
     public org.openapis.openapi.models.operations.PostProjectRawResponse postProjectRaw(org.openapis.openapi.models.operations.PostProjectRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostProjectRawPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostProjectRawRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
         
@@ -902,12 +902,12 @@ public class Project {
      */
     public org.openapis.openapi.models.operations.PutProjectJsonResponse putProjectJson(org.openapis.openapi.models.operations.PutProjectJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutProjectJsonPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutProjectJsonRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "projectPersistVO", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -979,12 +979,12 @@ public class Project {
      */
     public org.openapis.openapi.models.operations.PutProjectRawResponse putProjectRaw(org.openapis.openapi.models.operations.PutProjectRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutProjectRawPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutProjectRawRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
         

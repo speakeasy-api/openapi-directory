@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddVideoCollectionItemsRequest {
-    
-    public AddVideoCollectionItemsPathParams pathParams;
-    public AddVideoCollectionItemsRequest withPathParams(AddVideoCollectionItemsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Array of video IDs to add to the collection
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CollectionItemRequest request;
-    public AddVideoCollectionItemsRequest withRequest(org.openapis.openapi.models.shared.CollectionItemRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CollectionItemRequest collectionItemRequest;
+    public AddVideoCollectionItemsRequest withCollectionItemRequest(org.openapis.openapi.models.shared.CollectionItemRequest collectionItemRequest) {
+        this.collectionItemRequest = collectionItemRequest;
         return this;
     }
     
-    
-    public AddVideoCollectionItemsSecurity security;
-    public AddVideoCollectionItemsRequest withSecurity(AddVideoCollectionItemsSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the collection to which items should be added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public AddVideoCollectionItemsRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

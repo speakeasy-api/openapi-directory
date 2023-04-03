@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProjectsGetCardRequest {
-    
-    public ProjectsGetCardPathParams pathParams;
-    public ProjectsGetCardRequest withPathParams(ProjectsGetCardPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * card_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=card_id")
+    public Long cardId;
+    public ProjectsGetCardRequest withCardId(Long cardId) {
+        this.cardId = cardId;
         return this;
     }
     

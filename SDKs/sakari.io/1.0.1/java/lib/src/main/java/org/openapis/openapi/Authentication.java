@@ -48,7 +48,7 @@ public class Authentication {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AuthTokenResponse authToken(org.openapis.openapi.models.operations.AuthTokenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AuthTokenResponse authToken(org.openapis.openapi.models.shared.TokenRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/oauth2/token");
         

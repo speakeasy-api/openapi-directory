@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSearchV1OrganicRequest {
+    /**
+     * Specifies a JavaScript function func, for a JSON-P response. When provided, results are wrapped as `callback(data)`, and the returned MIME type is application/javascript. This causes the caller to automatically run the func with the JSON results as its argument.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public GetSearchV1OrganicRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
     
-    public GetSearchV1OrganicQueryParams queryParams;
-    public GetSearchV1OrganicRequest withQueryParams(GetSearchV1OrganicQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Metadata field
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=field")
+    public String field;
+    public GetSearchV1OrganicRequest withField(String field) {
+        this.field = field;
+        return this;
+    }
+    
+    /**
+     * Lucene-type search query
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public GetSearchV1OrganicRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    /**
+     * Number of query results to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
+    public Long size;
+    public GetSearchV1OrganicRequest withSize(Long size) {
+        this.size = size;
+        return this;
+    }
+    
+    /**
+     * Request total only; do not return hits
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=total_only")
+    public Boolean totalOnly;
+    public GetSearchV1OrganicRequest withTotalOnly(Boolean totalOnly) {
+        this.totalOnly = totalOnly;
         return this;
     }
     

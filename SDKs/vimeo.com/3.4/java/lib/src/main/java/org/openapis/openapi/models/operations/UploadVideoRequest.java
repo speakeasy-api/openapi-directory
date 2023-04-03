@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UploadVideoRequest {
-    
-    public UploadVideoPathParams pathParams;
-    public UploadVideoRequest withPathParams(UploadVideoPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.video+json")
+    public UploadVideoRequestBody requestBody;
+    public UploadVideoRequest withRequestBody(UploadVideoRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.video+json")
-    public UploadVideoRequestBody request;
-    public UploadVideoRequest withRequest(UploadVideoRequestBody request) {
-        this.request = request;
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public UploadVideoRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

@@ -7,17 +7,27 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequest {
-    
-    public OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintPathParams pathParams;
-    public OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequest withPathParams(OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequestBody requestBody;
+    public OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequest withRequestBody(OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequestBody request;
-    public OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequest withRequest(OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequestBody request) {
-        this.request = request;
+    /**
+     * The client ID of your GitHub app.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=client_id")
+    public String clientId;
+    public OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequest withClientId(String clientId) {
+        this.clientId = clientId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fingerprint")
+    public String fingerprint;
+    public OauthAuthorizationsGetOrCreateAuthorizationForAppAndFingerprintRequest withFingerprint(String fingerprint) {
+        this.fingerprint = fingerprint;
         return this;
     }
     

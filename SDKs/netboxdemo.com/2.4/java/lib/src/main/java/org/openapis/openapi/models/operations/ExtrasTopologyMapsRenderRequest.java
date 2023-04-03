@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExtrasTopologyMapsRenderRequest {
-    
-    public ExtrasTopologyMapsRenderPathParams pathParams;
-    public ExtrasTopologyMapsRenderRequest withPathParams(ExtrasTopologyMapsRenderPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this topology map.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public ExtrasTopologyMapsRenderRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

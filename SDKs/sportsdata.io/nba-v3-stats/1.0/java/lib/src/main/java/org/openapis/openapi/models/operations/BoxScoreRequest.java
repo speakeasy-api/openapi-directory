@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BoxScoreRequest {
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public BoxScoreFormatEnum format;
+    public BoxScoreRequest withFormat(BoxScoreFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public BoxScorePathParams pathParams;
-    public BoxScoreRequest withPathParams(BoxScorePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The GameID of an NBA game.  GameIDs can be found in the Games API.  Valid entries are &lt;code&gt;14620&lt;/code&gt;, &lt;code&gt;16905&lt;/code&gt;, etc.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=gameid")
+    public String gameid;
+    public BoxScoreRequest withGameid(String gameid) {
+        this.gameid = gameid;
         return this;
     }
     

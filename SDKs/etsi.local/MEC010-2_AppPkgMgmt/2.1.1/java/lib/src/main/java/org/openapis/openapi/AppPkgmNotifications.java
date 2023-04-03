@@ -40,7 +40,7 @@ public class AppPkgmNotifications {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AppPkgNotificationPOSTResponse appPkgNotificationPOST(org.openapis.openapi.models.operations.AppPkgNotificationPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AppPkgNotificationPOSTResponse appPkgNotificationPOST(org.openapis.openapi.models.shared.AppPkgNotification request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/user_defined_notification");
         

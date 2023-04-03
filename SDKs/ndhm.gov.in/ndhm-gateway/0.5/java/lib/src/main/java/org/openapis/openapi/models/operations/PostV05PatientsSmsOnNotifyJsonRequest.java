@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05PatientsSmsOnNotifyJsonRequest {
-    
-    public PostV05PatientsSmsOnNotifyJsonHeaders headers;
-    public PostV05PatientsSmsOnNotifyJsonRequest withHeaders(PostV05PatientsSmsOnNotifyJsonHeaders headers) {
-        this.headers = headers;
+    /**
+     * Access token which was issued after successful login with gateway auth server.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostV05PatientsSmsOnNotifyJsonRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PatientSMSNotifcationResponse request;
-    public PostV05PatientsSmsOnNotifyJsonRequest withRequest(org.openapis.openapi.models.shared.PatientSMSNotifcationResponse request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PatientSMSNotifcationResponse patientSMSNotifcationResponse;
+    public PostV05PatientsSmsOnNotifyJsonRequest withPatientSMSNotifcationResponse(org.openapis.openapi.models.shared.PatientSMSNotifcationResponse patientSMSNotifcationResponse) {
+        this.patientSMSNotifcationResponse = patientSMSNotifcationResponse;
+        return this;
+    }
+    
+    /**
+     * Identifier of the health information provider to which the request was intended.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HIP-ID")
+    public String xHipId;
+    public PostV05PatientsSmsOnNotifyJsonRequest withXHipId(String xHipId) {
+        this.xHipId = xHipId;
         return this;
     }
     

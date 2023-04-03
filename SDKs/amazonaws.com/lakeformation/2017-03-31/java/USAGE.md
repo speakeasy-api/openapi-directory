@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AddLFTagsToResourceHeaders;
 import org.openapis.openapi.models.operations.AddLFTagsToResourceRequestBodyResource;
 import org.openapis.openapi.models.operations.AddLFTagsToResourceRequestBody;
 import org.openapis.openapi.models.operations.AddLFTagsToResourceRequest;
@@ -26,29 +25,28 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AddLFTagsToResourceRequest req = new AddLFTagsToResourceRequest() {{
-                headers = new AddLFTagsToResourceHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new AddLFTagsToResourceRequestBody() {{
-                    catalogId = "illum";
+                requestBody = new AddLFTagsToResourceRequestBody() {{
+                    catalogId = "corrupti";
                     lfTags = new org.openapis.openapi.models.shared.LFTagPair[]{{
                         add(new LFTagPair() {{
-                            catalogId = "error";
-                            tagKey = "deserunt";
+                            catalogId = "distinctio";
+                            tagKey = "quibusdam";
                             tagValues = new String[]{{
+                                add("nulla"),
+                                add("corrupti"),
+                                add("illum"),
+                            }};
+                        }}),
+                        add(new LFTagPair() {{
+                            catalogId = "vel";
+                            tagKey = "error";
+                            tagValues = new String[]{{
+                                add("suscipit"),
                                 add("iure"),
                                 add("magnam"),
                             }};
@@ -152,7 +150,14 @@ public class Application {
                         }};
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "saepe";
+                xAmzContentSha256 = "fuga";
+                xAmzCredential = "in";
+                xAmzDate = "corporis";
+                xAmzSecurityToken = "iste";
+                xAmzSignature = "iure";
+                xAmzSignedHeaders = "saepe";
+            }}            
 
             AddLFTagsToResourceResponse res = sdk.addLFTagsToResource(req);
 

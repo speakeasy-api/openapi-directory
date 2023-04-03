@@ -36,10 +36,11 @@ public class FacebookMessenger {
     /**
      * Create a Messenger account
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateMessengerAccountResponse createMessengerAccount(org.openapis.openapi.models.operations.CreateMessengerAccountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateMessengerAccountResponse createMessengerAccount(org.openapis.openapi.models.operations.CreateMessengerAccountRequestBody request, org.openapis.openapi.models.operations.CreateMessengerAccountSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/messenger");
         
@@ -53,7 +54,7 @@ public class FacebookMessenger {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -104,19 +105,20 @@ public class FacebookMessenger {
     /**
      * Delete a Messenger account
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteMessengerAccountResponse deleteMessengerAccount(org.openapis.openapi.models.operations.DeleteMessengerAccountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteMessengerAccountResponse deleteMessengerAccount(org.openapis.openapi.models.operations.DeleteMessengerAccountRequest request, org.openapis.openapi.models.operations.DeleteMessengerAccountSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteMessengerAccountPathParams.class, baseUrl, "/messenger/{external_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteMessengerAccountRequest.class, baseUrl, "/messenger/{external_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -153,19 +155,20 @@ public class FacebookMessenger {
     /**
      * Retrieve a Messenger account
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMessengerAccountResponse getMessengerAccount(org.openapis.openapi.models.operations.GetMessengerAccountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMessengerAccountResponse getMessengerAccount(org.openapis.openapi.models.operations.GetMessengerAccountRequest request, org.openapis.openapi.models.operations.GetMessengerAccountSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMessengerAccountPathParams.class, baseUrl, "/messenger/{external_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMessengerAccountRequest.class, baseUrl, "/messenger/{external_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -202,24 +205,25 @@ public class FacebookMessenger {
     /**
      * Update a Messenger account
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateMessengerAccountResponse updateMessengerAccount(org.openapis.openapi.models.operations.UpdateMessengerAccountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateMessengerAccountResponse updateMessengerAccount(org.openapis.openapi.models.operations.UpdateMessengerAccountRequest request, org.openapis.openapi.models.operations.UpdateMessengerAccountSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateMessengerAccountPathParams.class, baseUrl, "/messenger/{external_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateMessengerAccountRequest.class, baseUrl, "/messenger/{external_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesGetLatestByDistributionGroupRequest {
-    
-    public ReleasesGetLatestByDistributionGroupPathParams pathParams;
-    public ReleasesGetLatestByDistributionGroupRequest withPathParams(ReleasesGetLatestByDistributionGroupPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the app
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public ReleasesGetLatestByDistributionGroupRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public ReleasesGetLatestByDistributionGroupQueryParams queryParams;
-    public ReleasesGetLatestByDistributionGroupRequest withQueryParams(ReleasesGetLatestByDistributionGroupQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The name of the distribution group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=distribution_group_name")
+    public String distributionGroupName;
+    public ReleasesGetLatestByDistributionGroupRequest withDistributionGroupName(String distributionGroupName) {
+        this.distributionGroupName = distributionGroupName;
         return this;
     }
     
+    /**
+     * The check if the request is from Install page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_install_page")
+    public Boolean isInstallPage;
+    public ReleasesGetLatestByDistributionGroupRequest withIsInstallPage(Boolean isInstallPage) {
+        this.isInstallPage = isInstallPage;
+        return this;
+    }
     
-    public ReleasesGetLatestByDistributionGroupSecurity security;
-    public ReleasesGetLatestByDistributionGroupRequest withSecurity(ReleasesGetLatestByDistributionGroupSecurity security) {
-        this.security = security;
+    /**
+     * The name of the app owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public ReleasesGetLatestByDistributionGroupRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
+    
+    /**
+     * Also supports the constant `latest`, which will return the latest release in the distribution group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_id")
+    public String releaseId;
+    public ReleasesGetLatestByDistributionGroupRequest withReleaseId(String releaseId) {
+        this.releaseId = releaseId;
         return this;
     }
     

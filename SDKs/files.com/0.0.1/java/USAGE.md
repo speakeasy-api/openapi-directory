@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetActionNotificationExportResultsQueryParams;
 import org.openapis.openapi.models.operations.GetActionNotificationExportResultsRequest;
 import org.openapis.openapi.models.operations.GetActionNotificationExportResultsResponse;
 
@@ -15,13 +14,11 @@ public class Application {
                 .build();
 
             GetActionNotificationExportResultsRequest req = new GetActionNotificationExportResultsRequest() {{
-                queryParams = new GetActionNotificationExportResultsQueryParams() {{
-                    actionNotificationExportId = 548814;
-                    cursor = "provident";
-                    perPage = 715190;
-                    userId = 844266;
-                }};
-            }};            
+                actionNotificationExportId = 548814;
+                cursor = "provident";
+                perPage = 715190;
+                userId = 844266;
+            }}            
 
             GetActionNotificationExportResultsResponse res = sdk.actionNotificationExportResults.getActionNotificationExportResults(req);
 

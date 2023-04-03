@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnonymizeRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=anonymized")
+    public Boolean anonymized;
+    public AnonymizeRequest withAnonymized(Boolean anonymized) {
+        this.anonymized = anonymized;
+        return this;
+    }
     
-    public AnonymizePathParams pathParams;
-    public AnonymizeRequest withPathParams(AnonymizePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=source")
+    public String source;
+    public AnonymizeRequest withSource(String source) {
+        this.source = source;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=token")
+    public String token;
+    public AnonymizeRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

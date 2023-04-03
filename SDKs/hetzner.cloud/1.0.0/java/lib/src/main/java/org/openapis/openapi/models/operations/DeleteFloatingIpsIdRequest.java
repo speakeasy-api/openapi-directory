@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteFloatingIpsIdRequest {
-    
-    public DeleteFloatingIpsIdPathParams pathParams;
-    public DeleteFloatingIpsIdRequest withPathParams(DeleteFloatingIpsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the Floating IP
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DeleteFloatingIpsIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

@@ -4,20 +4,37 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SwitchscheduleRequest {
-    
-    public SwitchscheduleQueryParams queryParams;
-    public SwitchscheduleRequest withQueryParams(SwitchscheduleQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The relay id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_id")
+    public String deviceId;
+    public SwitchscheduleRequest withDeviceId(String deviceId) {
+        this.deviceId = deviceId;
         return this;
     }
     
+    /**
+     * The thermostat id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=module_id")
+    public String moduleId;
+    public SwitchscheduleRequest withModuleId(String moduleId) {
+        this.moduleId = moduleId;
+        return this;
+    }
     
-    public SwitchscheduleSecurity security;
-    public SwitchscheduleRequest withSecurity(SwitchscheduleSecurity security) {
-        this.security = security;
+    /**
+     * The schedule id. It can be found in the getthermstate response, under the keys `therm_program_backup` and `therm_program`.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=schedule_id")
+    public String scheduleId;
+    public SwitchscheduleRequest withScheduleId(String scheduleId) {
+        this.scheduleId = scheduleId;
         return this;
     }
     

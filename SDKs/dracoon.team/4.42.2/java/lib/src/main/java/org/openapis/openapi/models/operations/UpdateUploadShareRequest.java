@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateUploadShareRequest {
-    
-    public UpdateUploadSharePathParams pathParams;
-    public UpdateUploadShareRequest withPathParams(UpdateUploadSharePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateUploadShareHeaders headers;
-    public UpdateUploadShareRequest withHeaders(UpdateUploadShareHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateUploadShareRequest request;
-    public UpdateUploadShareRequest withRequest(org.openapis.openapi.models.shared.UpdateUploadShareRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateUploadShareRequest updateUploadShareRequest;
+    public UpdateUploadShareRequest withUpdateUploadShareRequest(org.openapis.openapi.models.shared.UpdateUploadShareRequest updateUploadShareRequest) {
+        this.updateUploadShareRequest = updateUploadShareRequest;
+        return this;
+    }
+    
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public UpdateUploadShareRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
+        return this;
+    }
+    
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public UpdateUploadShareXSdsDateFormatEnum xSdsDateFormat;
+    public UpdateUploadShareRequest withXSdsDateFormat(UpdateUploadShareXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
+        return this;
+    }
+    
+    /**
+     * Share ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=share_id")
+    public Long shareId;
+    public UpdateUploadShareRequest withShareId(Long shareId) {
+        this.shareId = shareId;
         return this;
     }
     

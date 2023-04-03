@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateConfigPropertyRequest {
-    
-    public UpdateConfigPropertyPathParams pathParams;
-    public UpdateConfigPropertyRequest withPathParams(UpdateConfigPropertyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.UpdateConfigurationProperty updateConfigurationProperty;
+    public UpdateConfigPropertyRequest withUpdateConfigurationProperty(org.openapis.openapi.models.shared.UpdateConfigurationProperty updateConfigurationProperty) {
+        this.updateConfigurationProperty = updateConfigurationProperty;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateConfigurationProperty request;
-    public UpdateConfigPropertyRequest withRequest(org.openapis.openapi.models.shared.UpdateConfigurationProperty request) {
-        this.request = request;
+    /**
+     * The name of a configuration property.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=propertyName")
+    public String propertyName;
+    public UpdateConfigPropertyRequest withPropertyName(String propertyName) {
+        this.propertyName = propertyName;
         return this;
     }
     

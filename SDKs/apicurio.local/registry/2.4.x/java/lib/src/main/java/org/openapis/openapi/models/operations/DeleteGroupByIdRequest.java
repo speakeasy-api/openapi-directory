@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteGroupByIdRequest {
-    
-    public DeleteGroupByIdPathParams pathParams;
-    public DeleteGroupByIdRequest withPathParams(DeleteGroupByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public String groupId;
+    public DeleteGroupByIdRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     

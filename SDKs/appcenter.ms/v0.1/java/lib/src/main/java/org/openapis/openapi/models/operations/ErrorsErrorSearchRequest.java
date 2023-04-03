@@ -4,27 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ErrorsErrorSearchRequest {
-    
-    public ErrorsErrorSearchPathParams pathParams;
-    public ErrorsErrorSearchRequest withPathParams(ErrorsErrorSearchPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The offset (starting at 0) of the first result to return. This parameter along with limit is used to perform pagination.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$skip")
+    public Long dollarSkip;
+    public ErrorsErrorSearchRequest withDollarSkip(Long dollarSkip) {
+        this.dollarSkip = dollarSkip;
         return this;
     }
     
-    
-    public ErrorsErrorSearchQueryParams queryParams;
-    public ErrorsErrorSearchRequest withQueryParams(ErrorsErrorSearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The maximum number of results to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$top")
+    public Long dollarTop;
+    public ErrorsErrorSearchRequest withDollarTop(Long dollarTop) {
+        this.dollarTop = dollarTop;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public ErrorsErrorSearchRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public ErrorsErrorSearchSecurity security;
-    public ErrorsErrorSearchRequest withSecurity(ErrorsErrorSearchSecurity security) {
-        this.security = security;
+    /**
+     * A filter as specified in OData notation
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public ErrorsErrorSearchRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
+    
+    /**
+     * It controls the order of sorting
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public ErrorsErrorSearchOrderEnum order;
+    public ErrorsErrorSearchRequest withOrder(ErrorsErrorSearchOrderEnum order) {
+        this.order = order;
+        return this;
+    }
+    
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public ErrorsErrorSearchRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
+    
+    /**
+     * A query string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public ErrorsErrorSearchRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    /**
+     * It controls the sort based on specified field
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public ErrorsErrorSearchSortEnum sort;
+    public ErrorsErrorSearchRequest withSort(ErrorsErrorSearchSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

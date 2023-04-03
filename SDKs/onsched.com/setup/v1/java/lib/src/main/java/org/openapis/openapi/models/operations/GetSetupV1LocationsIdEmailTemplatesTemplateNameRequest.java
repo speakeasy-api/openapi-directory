@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSetupV1LocationsIdEmailTemplatesTemplateNameRequest {
+    /**
+     * id of business location
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSetupV1LocationsIdEmailTemplatesTemplateNameRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetSetupV1LocationsIdEmailTemplatesTemplateNamePathParams pathParams;
-    public GetSetupV1LocationsIdEmailTemplatesTemplateNameRequest withPathParams(GetSetupV1LocationsIdEmailTemplatesTemplateNamePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * name of the email template
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=templateName")
+    public String templateName;
+    public GetSetupV1LocationsIdEmailTemplatesTemplateNameRequest withTemplateName(String templateName) {
+        this.templateName = templateName;
         return this;
     }
     

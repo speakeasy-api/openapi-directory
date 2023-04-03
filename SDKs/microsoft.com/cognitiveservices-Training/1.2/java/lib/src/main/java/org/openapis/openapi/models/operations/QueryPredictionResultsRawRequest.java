@@ -7,27 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class QueryPredictionResultsRawRequest {
-    
-    public QueryPredictionResultsRawPathParams pathParams;
-    public QueryPredictionResultsRawRequest withPathParams(QueryPredictionResultsRawPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public QueryPredictionResultsRawHeaders headers;
-    public QueryPredictionResultsRawRequest withHeaders(QueryPredictionResultsRawHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * Parameters used to query the predictions. Limited to combining 2 tags
      */
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public QueryPredictionResultsRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public QueryPredictionResultsRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
+    public String trainingKey;
+    public QueryPredictionResultsRawRequest withTrainingKey(String trainingKey) {
+        this.trainingKey = trainingKey;
+        return this;
+    }
+    
+    /**
+     * The project id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public QueryPredictionResultsRawRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

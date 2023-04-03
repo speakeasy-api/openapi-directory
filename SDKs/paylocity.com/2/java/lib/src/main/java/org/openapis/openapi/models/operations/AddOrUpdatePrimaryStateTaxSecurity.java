@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddOrUpdatePrimaryStateTaxSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemePaylocityAuth paylocityAuth;
-    public AddOrUpdatePrimaryStateTaxSecurity withPaylocityAuth(org.openapis.openapi.models.shared.SchemePaylocityAuth paylocityAuth) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String paylocityAuth;
+    public AddOrUpdatePrimaryStateTaxSecurity withPaylocityAuth(String paylocityAuth) {
         this.paylocityAuth = paylocityAuth;
         return this;
     }

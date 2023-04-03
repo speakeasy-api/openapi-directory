@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetChannelModeratorsRequest {
-    
-    public GetChannelModeratorsPathParams pathParams;
-    public GetChannelModeratorsRequest withPathParams(GetChannelModeratorsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel_id")
+    public Double channelId;
+    public GetChannelModeratorsRequest withChannelId(Double channelId) {
+        this.channelId = channelId;
         return this;
     }
     
+    /**
+     * The sort direction of the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public GetChannelModeratorsDirectionEnum direction;
+    public GetChannelModeratorsRequest withDirection(GetChannelModeratorsDirectionEnum direction) {
+        this.direction = direction;
+        return this;
+    }
     
-    public GetChannelModeratorsQueryParams queryParams;
-    public GetChannelModeratorsRequest withQueryParams(GetChannelModeratorsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetChannelModeratorsRequest withPage(Double page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetChannelModeratorsRequest withPerPage(Double perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The search query to use to filter the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public GetChannelModeratorsRequest withQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    
+    /**
+     * The way to sort the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetChannelModeratorsSortEnum sort;
+    public GetChannelModeratorsRequest withSort(GetChannelModeratorsSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

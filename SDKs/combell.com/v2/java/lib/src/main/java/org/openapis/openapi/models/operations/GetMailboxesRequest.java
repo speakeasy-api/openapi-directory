@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMailboxesRequest {
-    
-    public GetMailboxesQueryParams queryParams;
-    public GetMailboxesRequest withQueryParams(GetMailboxesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Obligated domain name for getting mailboxes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
+    public String domainName;
+    public GetMailboxesRequest withDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
     

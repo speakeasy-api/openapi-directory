@@ -36,13 +36,13 @@ public class Vector {
      */
     public org.openapis.openapi.models.operations.GetMapVersionNumberTileLayerStyleZoomXYPbfResponse getMapVersionNumberTileLayerStyleZoomXYPbf(org.openapis.openapi.models.operations.GetMapVersionNumberTileLayerStyleZoomXYPbfRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMapVersionNumberTileLayerStyleZoomXYPbfPathParams.class, baseUrl, "/map/{versionNumber}/tile/{layer}/{style}/{zoom}/{X}/{Y}.pbf", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMapVersionNumberTileLayerStyleZoomXYPbfRequest.class, baseUrl, "/map/{versionNumber}/tile/{layer}/{style}/{zoom}/{X}/{Y}.pbf", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMapVersionNumberTileLayerStyleZoomXYPbfQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMapVersionNumberTileLayerStyleZoomXYPbfRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

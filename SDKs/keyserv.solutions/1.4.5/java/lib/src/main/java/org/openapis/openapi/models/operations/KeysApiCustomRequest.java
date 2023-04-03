@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KeysApiCustomRequest {
-    
-    public KeysApiCustomPathParams pathParams;
-    public KeysApiCustomRequest withPathParams(KeysApiCustomPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public KeysApiCustomRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

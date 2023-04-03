@@ -112,13 +112,13 @@ public class CodeScanning {
      */
     public org.openapis.openapi.models.operations.CodeScanningDeleteAnalysisResponse codeScanningDeleteAnalysis(org.openapis.openapi.models.operations.CodeScanningDeleteAnalysisRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodeScanningDeleteAnalysisPathParams.class, baseUrl, "/repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodeScanningDeleteAnalysisRequest.class, baseUrl, "/repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CodeScanningDeleteAnalysisQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CodeScanningDeleteAnalysisRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -191,7 +191,7 @@ public class CodeScanning {
      */
     public org.openapis.openapi.models.operations.CodeScanningGetAlertResponse codeScanningGetAlert(org.openapis.openapi.models.operations.CodeScanningGetAlertRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodeScanningGetAlertPathParams.class, baseUrl, "/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodeScanningGetAlertRequest.class, baseUrl, "/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -267,7 +267,7 @@ public class CodeScanning {
      */
     public org.openapis.openapi.models.operations.CodeScanningGetAnalysisResponse codeScanningGetAnalysis(org.openapis.openapi.models.operations.CodeScanningGetAnalysisRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodeScanningGetAnalysisPathParams.class, baseUrl, "/repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodeScanningGetAnalysisRequest.class, baseUrl, "/repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -329,7 +329,7 @@ public class CodeScanning {
      */
     public org.openapis.openapi.models.operations.CodeScanningGetSarifResponse codeScanningGetSarif(org.openapis.openapi.models.operations.CodeScanningGetSarifRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodeScanningGetSarifPathParams.class, baseUrl, "/repos/{owner}/{repo}/code-scanning/sarifs/{sarif_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodeScanningGetSarifRequest.class, baseUrl, "/repos/{owner}/{repo}/code-scanning/sarifs/{sarif_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -390,13 +390,13 @@ public class CodeScanning {
      */
     public org.openapis.openapi.models.operations.CodeScanningListAlertInstancesResponse codeScanningListAlertInstances(org.openapis.openapi.models.operations.CodeScanningListAlertInstancesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodeScanningListAlertInstancesPathParams.class, baseUrl, "/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodeScanningListAlertInstancesRequest.class, baseUrl, "/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CodeScanningListAlertInstancesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CodeScanningListAlertInstancesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -456,13 +456,13 @@ public class CodeScanning {
      */
     public org.openapis.openapi.models.operations.CodeScanningListAlertsForOrgResponse codeScanningListAlertsForOrg(org.openapis.openapi.models.operations.CodeScanningListAlertsForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodeScanningListAlertsForOrgPathParams.class, baseUrl, "/orgs/{org}/code-scanning/alerts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodeScanningListAlertsForOrgRequest.class, baseUrl, "/orgs/{org}/code-scanning/alerts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CodeScanningListAlertsForOrgQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CodeScanningListAlertsForOrgRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -529,13 +529,13 @@ public class CodeScanning {
      */
     public org.openapis.openapi.models.operations.CodeScanningListAlertsForRepoResponse codeScanningListAlertsForRepo(org.openapis.openapi.models.operations.CodeScanningListAlertsForRepoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodeScanningListAlertsForRepoPathParams.class, baseUrl, "/repos/{owner}/{repo}/code-scanning/alerts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodeScanningListAlertsForRepoRequest.class, baseUrl, "/repos/{owner}/{repo}/code-scanning/alerts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CodeScanningListAlertsForRepoQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CodeScanningListAlertsForRepoRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -609,13 +609,13 @@ public class CodeScanning {
      */
     public org.openapis.openapi.models.operations.CodeScanningListRecentAnalysesResponse codeScanningListRecentAnalyses(org.openapis.openapi.models.operations.CodeScanningListRecentAnalysesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodeScanningListRecentAnalysesPathParams.class, baseUrl, "/repos/{owner}/{repo}/code-scanning/analyses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodeScanningListRecentAnalysesRequest.class, baseUrl, "/repos/{owner}/{repo}/code-scanning/analyses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CodeScanningListRecentAnalysesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CodeScanningListRecentAnalysesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -671,12 +671,12 @@ public class CodeScanning {
      */
     public org.openapis.openapi.models.operations.CodeScanningUpdateAlertResponse codeScanningUpdateAlert(org.openapis.openapi.models.operations.CodeScanningUpdateAlertRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodeScanningUpdateAlertPathParams.class, baseUrl, "/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodeScanningUpdateAlertRequest.class, baseUrl, "/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -758,12 +758,12 @@ public class CodeScanning {
      */
     public org.openapis.openapi.models.operations.CodeScanningUploadSarifResponse codeScanningUploadSarif(org.openapis.openapi.models.operations.CodeScanningUploadSarifRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodeScanningUploadSarifPathParams.class, baseUrl, "/repos/{owner}/{repo}/code-scanning/sarifs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodeScanningUploadSarifRequest.class, baseUrl, "/repos/{owner}/{repo}/code-scanning/sarifs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

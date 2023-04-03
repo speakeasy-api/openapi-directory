@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchIpCommandRequest {
-    
-    public FetchIpCommandPathParams pathParams;
-    public FetchIpCommandRequest withPathParams(FetchIpCommandPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchIpCommandSecurity security;
-    public FetchIpCommandRequest withSecurity(FetchIpCommandSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchIpCommandRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the IP Command resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchIpCommandRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

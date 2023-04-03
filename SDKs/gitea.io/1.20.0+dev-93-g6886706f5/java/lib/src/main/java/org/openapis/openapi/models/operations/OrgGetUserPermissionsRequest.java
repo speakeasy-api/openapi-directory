@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgGetUserPermissionsRequest {
+    /**
+     * name of the organization
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public OrgGetUserPermissionsRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
     
-    public OrgGetUserPermissionsPathParams pathParams;
-    public OrgGetUserPermissionsRequest withPathParams(OrgGetUserPermissionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * username of user
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public OrgGetUserPermissionsRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

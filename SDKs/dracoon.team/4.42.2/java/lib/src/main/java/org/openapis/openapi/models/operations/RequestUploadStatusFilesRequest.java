@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestUploadStatusFilesRequest {
-    
-    public RequestUploadStatusFilesPathParams pathParams;
-    public RequestUploadStatusFilesRequest withPathParams(RequestUploadStatusFilesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestUploadStatusFilesRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public RequestUploadStatusFilesXSdsDateFormatEnum xSdsDateFormat;
+    public RequestUploadStatusFilesRequest withXSdsDateFormat(RequestUploadStatusFilesXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
+        return this;
+    }
     
-    public RequestUploadStatusFilesHeaders headers;
-    public RequestUploadStatusFilesRequest withHeaders(RequestUploadStatusFilesHeaders headers) {
-        this.headers = headers;
+    /**
+     * Upload channel ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=upload_id")
+    public String uploadId;
+    public RequestUploadStatusFilesRequest withUploadId(String uploadId) {
+        this.uploadId = uploadId;
         return this;
     }
     

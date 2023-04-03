@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ServicePrincipalsListAppRoleAssignedToRequest {
-    
-    public ServicePrincipalsListAppRoleAssignedToPathParams pathParams;
-    public ServicePrincipalsListAppRoleAssignedToRequest withPathParams(ServicePrincipalsListAppRoleAssignedToPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Client API version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public ServicePrincipalsListAppRoleAssignedToRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
+    /**
+     * The object ID of the service principal for which to get owners.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=objectId")
+    public String objectId;
+    public ServicePrincipalsListAppRoleAssignedToRequest withObjectId(String objectId) {
+        this.objectId = objectId;
+        return this;
+    }
     
-    public ServicePrincipalsListAppRoleAssignedToQueryParams queryParams;
-    public ServicePrincipalsListAppRoleAssignedToRequest withQueryParams(ServicePrincipalsListAppRoleAssignedToQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The tenant ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tenantID")
+    public String tenantID;
+    public ServicePrincipalsListAppRoleAssignedToRequest withTenantID(String tenantID) {
+        this.tenantID = tenantID;
         return this;
     }
     

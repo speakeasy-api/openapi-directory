@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkAppliancePrefixesDelegatedStaticRequest {
-    
-    public UpdateNetworkAppliancePrefixesDelegatedStaticPathParams pathParams;
-    public UpdateNetworkAppliancePrefixesDelegatedStaticRequest withPathParams(UpdateNetworkAppliancePrefixesDelegatedStaticPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkAppliancePrefixesDelegatedStaticRequestBody requestBody;
+    public UpdateNetworkAppliancePrefixesDelegatedStaticRequest withRequestBody(UpdateNetworkAppliancePrefixesDelegatedStaticRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkAppliancePrefixesDelegatedStaticRequestBody request;
-    public UpdateNetworkAppliancePrefixesDelegatedStaticRequest withRequest(UpdateNetworkAppliancePrefixesDelegatedStaticRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkAppliancePrefixesDelegatedStaticRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=staticDelegatedPrefixId")
+    public String staticDelegatedPrefixId;
+    public UpdateNetworkAppliancePrefixesDelegatedStaticRequest withStaticDelegatedPrefixId(String staticDelegatedPrefixId) {
+        this.staticDelegatedPrefixId = staticDelegatedPrefixId;
         return this;
     }
     

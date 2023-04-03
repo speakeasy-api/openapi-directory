@@ -7,34 +7,63 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateProjectArticlesCreateRequest {
-    
-    public PrivateProjectArticlesCreatePathParams pathParams;
-    public PrivateProjectArticlesCreateRequest withPathParams(PrivateProjectArticlesCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PrivateProjectArticlesCreateQueryParams queryParams;
-    public PrivateProjectArticlesCreateRequest withQueryParams(PrivateProjectArticlesCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Article description
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ArticleProjectCreate request;
-    public PrivateProjectArticlesCreateRequest withRequest(org.openapis.openapi.models.shared.ArticleProjectCreate request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ArticleProjectCreate articleProjectCreate;
+    public PrivateProjectArticlesCreateRequest withArticleProjectCreate(org.openapis.openapi.models.shared.ArticleProjectCreate articleProjectCreate) {
+        this.articleProjectCreate = articleProjectCreate;
         return this;
     }
     
+    /**
+     * Number of results included on a page. Used for pagination with query
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public PrivateProjectArticlesCreateRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public PrivateProjectArticlesCreateSecurity security;
-    public PrivateProjectArticlesCreateRequest withSecurity(PrivateProjectArticlesCreateSecurity security) {
-        this.security = security;
+    /**
+     * Where to start the listing(the offset of the first result). Used for pagination with limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public PrivateProjectArticlesCreateRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Page number. Used for pagination with page_size
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public PrivateProjectArticlesCreateRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results included on a page. Used for pagination with page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public PrivateProjectArticlesCreateRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * Project unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public Long projectId;
+    public PrivateProjectArticlesCreateRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     

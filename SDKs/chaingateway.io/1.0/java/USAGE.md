@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.DeleteAddressHeaders;
 import org.openapis.openapi.models.operations.DeleteAddressRequest;
 import org.openapis.openapi.models.operations.DeleteAddressResponse;
 import org.openapis.openapi.models.shared.DeleteAddressRequest;
@@ -16,14 +15,12 @@ public class Application {
                 .build();
 
             DeleteAddressRequest req = new DeleteAddressRequest() {{
-                headers = new DeleteAddressHeaders() {{
-                    authorization = "q9PdaWuD4j6DK6vsUgehhL8pgarSrS9m";
-                }};
-                request = new DeleteAddressRequest() {{
+                authorization = "q9PdaWuD4j6DK6vsUgehhL8pgarSrS9m";
+                deleteAddressRequest = new DeleteAddressRequest() {{
                     ethereumaddress = "corrupti";
                     password = "provident";
                 }};
-            }};            
+            }}            
 
             DeleteAddressResponse res = sdk.addressRequests.deleteAddress(req);
 

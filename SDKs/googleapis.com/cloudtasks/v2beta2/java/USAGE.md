@@ -5,14 +5,11 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.CloudtasksApiQueueUpdateSecurity;
-import org.openapis.openapi.models.operations.CloudtasksApiQueueUpdateQueryParams;
 import org.openapis.openapi.models.operations.CloudtasksApiQueueUpdateRequest;
 import org.openapis.openapi.models.operations.CloudtasksApiQueueUpdateResponse;
-import org.openapis.openapi.models.shared.HttpBody;
 import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.HttpBody;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -21,47 +18,49 @@ public class Application {
                 .build();
 
             CloudtasksApiQueueUpdateRequest req = new CloudtasksApiQueueUpdateRequest() {{
-                security = new CloudtasksApiQueueUpdateSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                queryParams = new CloudtasksApiQueueUpdateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "provident";
-                    alt = "proto";
-                    appId = "quibusdam";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new HttpBody() {{
-                    contentType = "suscipit";
-                    data = "iure";
+                dollarXgafv = "2";
+                httpBody = new HttpBody() {{
+                    contentType = "provident";
+                    data = "distinctio";
                     extensions = new java.util.HashMap<String, Object>[]{{
                         add(new java.util.HashMap<String, Object>() {{
-                            put("ipsa", "delectus");
+                            put("nulla", "corrupti");
+                            put("illum", "vel");
+                            put("error", "deserunt");
+                        }}),
+                        add(new java.util.HashMap<String, Object>() {{
+                            put("iure", "magnam");
+                            put("debitis", "ipsa");
+                        }}),
+                        add(new java.util.HashMap<String, Object>() {{
                             put("tempora", "suscipit");
                             put("molestiae", "minus");
                             put("placeat", "voluptatum");
+                            put("iusto", "excepturi");
                         }}),
                         add(new java.util.HashMap<String, Object>() {{
-                            put("excepturi", "nisi");
                             put("recusandae", "temporibus");
+                            put("ab", "quis");
                         }}),
                     }};
                 }};
-            }};            
+                accessToken = "veritatis";
+                alt = "media";
+                appId = "perferendis";
+                callback = "ipsam";
+                fields = "repellendus";
+                key = "sapiente";
+                oauthToken = "quo";
+                prettyPrint = false;
+                quotaUser = "odit";
+                uploadType = "at";
+                uploadProtocol = "at";
+            }}            
 
-            CloudtasksApiQueueUpdateResponse res = sdk.api.cloudtasksApiQueueUpdate(req);
+            CloudtasksApiQueueUpdateResponse res = sdk.api.cloudtasksApiQueueUpdate(req, new CloudtasksApiQueueUpdateSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.empty.isPresent()) {
                 // handle response

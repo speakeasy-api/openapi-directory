@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCountriesCountryCodeRegionsRegionCodeJsonRequest {
-    
-    public GetCountriesCountryCodeRegionsRegionCodeJsonPathParams pathParams;
-    public GetCountriesCountryCodeRegionsRegionCodeJsonRequest withPathParams(GetCountriesCountryCodeRegionsRegionCodeJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public GetCountriesCountryCodeRegionsRegionCodeJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
         return this;
     }
     
+    /**
+     * ISO3166 Country Code
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=country_code")
+    public String countryCode;
+    public GetCountriesCountryCodeRegionsRegionCodeJsonRequest withCountryCode(String countryCode) {
+        this.countryCode = countryCode;
+        return this;
+    }
     
-    public GetCountriesCountryCodeRegionsRegionCodeJsonQueryParams queryParams;
-    public GetCountriesCountryCodeRegionsRegionCodeJsonRequest withQueryParams(GetCountriesCountryCodeRegionsRegionCodeJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public GetCountriesCountryCodeRegionsRegionCodeJsonRequest withLogin(String login) {
+        this.login = login;
+        return this;
+    }
+    
+    /**
+     * Region Code
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=region_code")
+    public String regionCode;
+    public GetCountriesCountryCodeRegionsRegionCodeJsonRequest withRegionCode(String regionCode) {
+        this.regionCode = regionCode;
         return this;
     }
     

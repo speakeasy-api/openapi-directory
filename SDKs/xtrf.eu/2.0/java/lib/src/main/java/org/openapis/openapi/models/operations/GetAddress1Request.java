@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAddress1Request {
-    
-    public GetAddress1PathParams pathParams;
-    public GetAddress1Request withPathParams(GetAddress1PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * provider's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=providerId")
+    public Long providerId;
+    public GetAddress1Request withProviderId(Long providerId) {
+        this.providerId = providerId;
         return this;
     }
     

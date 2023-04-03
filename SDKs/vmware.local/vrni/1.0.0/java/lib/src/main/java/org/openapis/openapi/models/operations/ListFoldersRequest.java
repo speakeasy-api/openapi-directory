@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListFoldersRequest {
-    
-    public ListFoldersQueryParams queryParams;
-    public ListFoldersRequest withQueryParams(ListFoldersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * cursor from previous response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public ListFoldersRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
+    /**
+     * end time for query in epoch seconds
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_time")
+    public Double endTime;
+    public ListFoldersRequest withEndTime(Double endTime) {
+        this.endTime = endTime;
+        return this;
+    }
     
-    public ListFoldersSecurity security;
-    public ListFoldersRequest withSecurity(ListFoldersSecurity security) {
-        this.security = security;
+    /**
+     * page size of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
+    public Double size;
+    public ListFoldersRequest withSize(Double size) {
+        this.size = size;
+        return this;
+    }
+    
+    /**
+     * start time for query in epoch seconds
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_time")
+    public Double startTime;
+    public ListFoldersRequest withStartTime(Double startTime) {
+        this.startTime = startTime;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCommentsByArticleIdRequest {
+    /**
+     * Article identifier.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=a_id")
+    public String aId;
+    public GetCommentsByArticleIdRequest withAId(String aId) {
+        this.aId = aId;
+        return this;
+    }
     
-    public GetCommentsByArticleIdQueryParams queryParams;
-    public GetCommentsByArticleIdRequest withQueryParams(GetCommentsByArticleIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Podcast Episode identifier.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=p_id")
+    public String pId;
+    public GetCommentsByArticleIdRequest withPId(String pId) {
+        this.pId = pId;
         return this;
     }
     

@@ -4,27 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllProductsV2Request {
-    
-    public GetAllProductsV2PathParams pathParams;
-    public GetAllProductsV2Request withPathParams(GetAllProductsV2PathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationUuid")
+    public String organizationUuid;
+    public GetAllProductsV2Request withOrganizationUuid(String organizationUuid) {
+        this.organizationUuid = organizationUuid;
         return this;
     }
     
-    
-    public GetAllProductsV2QueryParams queryParams;
-    public GetAllProductsV2Request withQueryParams(GetAllProductsV2QueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetAllProductsV2Security security;
-    public GetAllProductsV2Request withSecurity(GetAllProductsV2Security security) {
-        this.security = security;
+    /**
+     * If true, sorts response by created date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public Boolean sort;
+    public GetAllProductsV2Request withSort(Boolean sort) {
+        this.sort = sort;
         return this;
     }
     

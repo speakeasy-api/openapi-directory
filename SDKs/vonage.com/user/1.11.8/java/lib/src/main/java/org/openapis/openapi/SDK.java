@@ -123,19 +123,20 @@ public class SDK {
     /**
      * Get user data by account ID and user ID
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UserCtrlGetUserByIDResponse userCtrlGetUserByID(org.openapis.openapi.models.operations.UserCtrlGetUserByIDRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UserCtrlGetUserByIDResponse userCtrlGetUserByID(org.openapis.openapi.models.operations.UserCtrlGetUserByIDRequest request, org.openapis.openapi.models.operations.UserCtrlGetUserByIDSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UserCtrlGetUserByIDPathParams.class, baseUrl, "/api/accounts/{account_id}/users/{user_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UserCtrlGetUserByIDRequest.class, baseUrl, "/api/accounts/{account_id}/users/{user_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -170,25 +171,26 @@ public class SDK {
     /**
      * Get account users data by account ID
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UserCtrlGetUsersResponse userCtrlGetUsers(org.openapis.openapi.models.operations.UserCtrlGetUsersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UserCtrlGetUsersResponse userCtrlGetUsers(org.openapis.openapi.models.operations.UserCtrlGetUsersRequest request, org.openapis.openapi.models.operations.UserCtrlGetUsersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UserCtrlGetUsersPathParams.class, baseUrl, "/api/accounts/{account_id}/users", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UserCtrlGetUsersRequest.class, baseUrl, "/api/accounts/{account_id}/users", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UserCtrlGetUsersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UserCtrlGetUsersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

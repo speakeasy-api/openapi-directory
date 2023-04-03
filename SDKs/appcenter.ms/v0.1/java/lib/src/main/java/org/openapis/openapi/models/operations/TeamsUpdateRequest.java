@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsUpdateRequest {
-    
-    public TeamsUpdatePathParams pathParams;
-    public TeamsUpdateRequest withPathParams(TeamsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The information used to update the team
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public TeamsUpdateRequestBody request;
-    public TeamsUpdateRequest withRequest(TeamsUpdateRequestBody request) {
-        this.request = request;
+    public TeamsUpdateRequestBody requestBody;
+    public TeamsUpdateRequest withRequestBody(TeamsUpdateRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The organization's name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_name")
+    public String orgName;
+    public TeamsUpdateRequest withOrgName(String orgName) {
+        this.orgName = orgName;
+        return this;
+    }
     
-    public TeamsUpdateSecurity security;
-    public TeamsUpdateRequest withSecurity(TeamsUpdateSecurity security) {
-        this.security = security;
+    /**
+     * The team's name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_name")
+    public String teamName;
+    public TeamsUpdateRequest withTeamName(String teamName) {
+        this.teamName = teamName;
         return this;
     }
     

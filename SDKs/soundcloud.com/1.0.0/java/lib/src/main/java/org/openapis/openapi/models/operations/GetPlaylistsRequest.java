@@ -4,20 +4,57 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPlaylistsRequest {
-    
-    public GetPlaylistsQueryParams queryParams;
-    public GetPlaylistsRequest withQueryParams(GetPlaylistsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filters content by level of access the user (logged in or anonymous) has to the track. The result list will include only tracks with the specified access. Include all options if you'd like to see all possible tracks. See `Track#access` schema for more details.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=access")
+    public org.openapis.openapi.models.shared.AccessEnum[] access;
+    public GetPlaylistsRequest withAccess(org.openapis.openapi.models.shared.AccessEnum[] access) {
+        this.access = access;
         return this;
     }
     
+    /**
+     * Number of results to return in the collection.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetPlaylistsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetPlaylistsSecurity security;
-    public GetPlaylistsRequest withSecurity(GetPlaylistsSecurity security) {
-        this.security = security;
+    /**
+     * Returns paginated collection of items (recommended, returning a list without pagination is deprecated and should not be used)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=linked_partitioning")
+    public Boolean linkedPartitioning;
+    public GetPlaylistsRequest withLinkedPartitioning(Boolean linkedPartitioning) {
+        this.linkedPartitioning = linkedPartitioning;
+        return this;
+    }
+    
+    /**
+     * Offset of first result. Deprecated, use `linked_partitioning` instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetPlaylistsRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public GetPlaylistsRequest withQ(String q) {
+        this.q = q;
         return this;
     }
     

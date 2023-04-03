@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.DeleteCustomersAccountAnnouncementsAnnouncementIdPathParams;
 import org.openapis.openapi.models.operations.DeleteCustomersAccountAnnouncementsAnnouncementIdRequest;
 import org.openapis.openapi.models.operations.DeleteCustomersAccountAnnouncementsAnnouncementIdResponse;
 
@@ -21,11 +20,9 @@ public class Application {
                 .build();
 
             DeleteCustomersAccountAnnouncementsAnnouncementIdRequest req = new DeleteCustomersAccountAnnouncementsAnnouncementIdRequest() {{
-                pathParams = new DeleteCustomersAccountAnnouncementsAnnouncementIdPathParams() {{
-                    account = 548814;
-                    announcementId = "provident";
-                }};
-            }};            
+                account = 548814;
+                announcementId = "provident";
+            }}            
 
             DeleteCustomersAccountAnnouncementsAnnouncementIdResponse res = sdk.announcements.deleteCustomersAccountAnnouncementsAnnouncementId(req);
 

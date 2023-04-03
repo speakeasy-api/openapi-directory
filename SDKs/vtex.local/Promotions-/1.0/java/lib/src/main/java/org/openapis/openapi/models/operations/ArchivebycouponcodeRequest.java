@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ArchivebycouponcodeRequest {
-    
-    public ArchivebycouponcodePathParams pathParams;
-    public ArchivebycouponcodeRequest withPathParams(ArchivebycouponcodePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public ArchivebycouponcodeRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public ArchivebycouponcodeRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public ArchivebycouponcodeHeaders headers;
-    public ArchivebycouponcodeRequest withHeaders(ArchivebycouponcodeHeaders headers) {
-        this.headers = headers;
+    /**
+     * Coupon Code
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=couponCode")
+    public String couponCode;
+    public ArchivebycouponcodeRequest withCouponCode(String couponCode) {
+        this.couponCode = couponCode;
         return this;
     }
     

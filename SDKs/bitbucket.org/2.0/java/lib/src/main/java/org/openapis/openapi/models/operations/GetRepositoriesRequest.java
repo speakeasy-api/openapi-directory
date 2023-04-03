@@ -4,20 +4,57 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesRequest {
-    
-    public GetRepositoriesQueryParams queryParams;
-    public GetRepositoriesRequest withQueryParams(GetRepositoriesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter the results to include only repositories created on or
+     * after this [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)
+     *  timestamp. Example: `YYYY-MM-DDTHH:mm:ss.sssZ`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=after")
+    public String after;
+    public GetRepositoriesRequest withAfter(String after) {
+        this.after = after;
         return this;
     }
     
+    /**
+     * Query string to narrow down the response as per [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
+     * `role` parameter must also be specified.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public GetRepositoriesRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
     
-    public GetRepositoriesSecurity security;
-    public GetRepositoriesRequest withSecurity(GetRepositoriesSecurity security) {
-        this.security = security;
+    /**
+     * Filters the result based on the authenticated user's role on each repository.
+     * 
+     * * **member**: returns repositories to which the user has explicit read access
+     * * **contributor**: returns repositories to which the user has explicit write access
+     * * **admin**: returns repositories to which the user has explicit administrator access
+     * * **owner**: returns all repositories owned by the current user
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=role")
+    public GetRepositoriesRoleEnum role;
+    public GetRepositoriesRequest withRole(GetRepositoriesRoleEnum role) {
+        this.role = role;
+        return this;
+    }
+    
+    /**
+     * Field by which the results should be sorted as per [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetRepositoriesRequest withSort(String sort) {
+        this.sort = sort;
         return this;
     }
     

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFulfillmentPolicyRequest {
-    
-    public GetFulfillmentPolicyPathParams pathParams;
-    public GetFulfillmentPolicyRequest withPathParams(GetFulfillmentPolicyPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetFulfillmentPolicySecurity security;
-    public GetFulfillmentPolicyRequest withSecurity(GetFulfillmentPolicySecurity security) {
-        this.security = security;
+    /**
+     * This path parameter specifies the ID of the fulfillment policy you want to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fulfillmentPolicyId")
+    public String fulfillmentPolicyId;
+    public GetFulfillmentPolicyRequest withFulfillmentPolicyId(String fulfillmentPolicyId) {
+        this.fulfillmentPolicyId = fulfillmentPolicyId;
         return this;
     }
     

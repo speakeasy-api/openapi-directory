@@ -39,19 +39,20 @@ public class DeprecatedAPIEndpoints {
      * 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium` 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListPastMeetingFilesResponse listPastMeetingFiles(org.openapis.openapi.models.operations.ListPastMeetingFilesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListPastMeetingFilesResponse listPastMeetingFiles(org.openapis.openapi.models.operations.ListPastMeetingFilesRequest request, org.openapis.openapi.models.operations.ListPastMeetingFilesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListPastMeetingFilesPathParams.class, baseUrl, "/past_meetings/{meetingId}/files", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListPastMeetingFilesRequest.class, baseUrl, "/past_meetings/{meetingId}/files", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -94,19 +95,20 @@ public class DeprecatedAPIEndpoints {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListPastWebinarFilesResponse listPastWebinarFiles(org.openapis.openapi.models.operations.ListPastWebinarFilesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListPastWebinarFilesResponse listPastWebinarFiles(org.openapis.openapi.models.operations.ListPastWebinarFilesRequest request, org.openapis.openapi.models.operations.ListPastWebinarFilesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListPastWebinarFilesPathParams.class, baseUrl, "/past_webinars/{webinarId}/files", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListPastWebinarFilesRequest.class, baseUrl, "/past_webinars/{webinarId}/files", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

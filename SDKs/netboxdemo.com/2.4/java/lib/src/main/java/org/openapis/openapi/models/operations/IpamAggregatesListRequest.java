@@ -4,13 +4,78 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IpamAggregatesListRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_added")
+    public String dateAdded;
+    public IpamAggregatesListRequest withDateAdded(String dateAdded) {
+        this.dateAdded = dateAdded;
+        return this;
+    }
     
-    public IpamAggregatesListQueryParams queryParams;
-    public IpamAggregatesListRequest withQueryParams(IpamAggregatesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=family")
+    public String family;
+    public IpamAggregatesListRequest withFamily(String family) {
+        this.family = family;
+        return this;
+    }
+    
+    /**
+     * Multiple values may be separated by commas.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__in")
+    public String idIn;
+    public IpamAggregatesListRequest withIdIn(String idIn) {
+        this.idIn = idIn;
+        return this;
+    }
+    
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public IpamAggregatesListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public IpamAggregatesListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public IpamAggregatesListRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rir")
+    public String rir;
+    public IpamAggregatesListRequest withRir(String rir) {
+        this.rir = rir;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rir_id")
+    public String rirId;
+    public IpamAggregatesListRequest withRirId(String rirId) {
+        this.rirId = rirId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
+    public String tag;
+    public IpamAggregatesListRequest withTag(String tag) {
+        this.tag = tag;
         return this;
     }
     

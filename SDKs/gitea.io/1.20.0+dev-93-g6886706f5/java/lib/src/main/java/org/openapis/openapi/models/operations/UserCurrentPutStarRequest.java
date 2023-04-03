@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserCurrentPutStarRequest {
+    /**
+     * owner of the repo to star
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public UserCurrentPutStarRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public UserCurrentPutStarPathParams pathParams;
-    public UserCurrentPutStarRequest withPathParams(UserCurrentPutStarPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * name of the repo to star
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public UserCurrentPutStarRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

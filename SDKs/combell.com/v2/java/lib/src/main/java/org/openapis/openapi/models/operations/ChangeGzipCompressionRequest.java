@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangeGzipCompressionRequest {
-    
-    public ChangeGzipCompressionPathParams pathParams;
-    public ChangeGzipCompressionRequest withPathParams(ChangeGzipCompressionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ChangeGzipCompressionQueryParams queryParams;
-    public ChangeGzipCompressionRequest withQueryParams(ChangeGzipCompressionQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Whether GZIP compression is enabled or not.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GzipConfig request;
-    public ChangeGzipCompressionRequest withRequest(org.openapis.openapi.models.shared.GzipConfig request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GzipConfig gzipConfig;
+    public ChangeGzipCompressionRequest withGzipConfig(org.openapis.openapi.models.shared.GzipConfig gzipConfig) {
+        this.gzipConfig = gzipConfig;
+        return this;
+    }
+    
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
+    public String domainNamePathParameter;
+    public ChangeGzipCompressionRequest withDomainNamePathParameter(String domainNamePathParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
+        return this;
+    }
+    
+    /**
+     * Linux hosting domain name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
+    public String domainNameQueryParameter;
+    public ChangeGzipCompressionRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
+        this.domainNameQueryParameter = domainNameQueryParameter;
         return this;
     }
     

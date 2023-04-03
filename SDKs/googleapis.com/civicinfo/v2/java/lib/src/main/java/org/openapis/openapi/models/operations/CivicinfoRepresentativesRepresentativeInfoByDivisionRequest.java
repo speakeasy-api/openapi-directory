@@ -4,20 +4,156 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CivicinfoRepresentativesRepresentativeInfoByDivisionRequest {
-    
-    public CivicinfoRepresentativesRepresentativeInfoByDivisionPathParams pathParams;
-    public CivicinfoRepresentativesRepresentativeInfoByDivisionRequest withPathParams(CivicinfoRepresentativesRepresentativeInfoByDivisionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public CivicinfoRepresentativesRepresentativeInfoByDivisionRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public CivicinfoRepresentativesRepresentativeInfoByDivisionRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public CivicinfoRepresentativesRepresentativeInfoByDivisionQueryParams queryParams;
-    public CivicinfoRepresentativesRepresentativeInfoByDivisionRequest withQueryParams(CivicinfoRepresentativesRepresentativeInfoByDivisionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public CivicinfoRepresentativesRepresentativeInfoByDivisionRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public CivicinfoRepresentativesRepresentativeInfoByDivisionRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public CivicinfoRepresentativesRepresentativeInfoByDivisionRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public CivicinfoRepresentativesRepresentativeInfoByDivisionRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * A list of office levels to filter by. Only offices that serve at least one of these levels will be returned. Divisions that don't contain a matching office will not be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=levels")
+    public CivicinfoRepresentativesRepresentativeInfoByDivisionLevelsEnum[] levels;
+    public CivicinfoRepresentativesRepresentativeInfoByDivisionRequest withLevels(CivicinfoRepresentativesRepresentativeInfoByDivisionLevelsEnum[] levels) {
+        this.levels = levels;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public CivicinfoRepresentativesRepresentativeInfoByDivisionRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * The Open Civic Data division identifier of the division to look up.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ocdId")
+    public String ocdId;
+    public CivicinfoRepresentativesRepresentativeInfoByDivisionRequest withOcdId(String ocdId) {
+        this.ocdId = ocdId;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public CivicinfoRepresentativesRepresentativeInfoByDivisionRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public CivicinfoRepresentativesRepresentativeInfoByDivisionRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * If true, information about all divisions contained in the division requested will be included as well. For example, if querying ocd-division/country:us/district:dc, this would also return all DC's wards and ANCs.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=recursive")
+    public Boolean recursive;
+    public CivicinfoRepresentativesRepresentativeInfoByDivisionRequest withRecursive(Boolean recursive) {
+        this.recursive = recursive;
+        return this;
+    }
+    
+    /**
+     * A list of office roles to filter by. Only offices fulfilling one of these roles will be returned. Divisions that don't contain a matching office will not be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=roles")
+    public CivicinfoRepresentativesRepresentativeInfoByDivisionRolesEnum[] roles;
+    public CivicinfoRepresentativesRepresentativeInfoByDivisionRequest withRoles(CivicinfoRepresentativesRepresentativeInfoByDivisionRolesEnum[] roles) {
+        this.roles = roles;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public CivicinfoRepresentativesRepresentativeInfoByDivisionRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public CivicinfoRepresentativesRepresentativeInfoByDivisionRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

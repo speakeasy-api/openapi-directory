@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostApiV1StatusesRequest {
-    
-    public PostApiV1StatusesHeaders headers;
-    public PostApiV1StatusesRequest withHeaders(PostApiV1StatusesHeaders headers) {
-        this.headers = headers;
+    /**
+     * Prevent duplicate submissions of the same status. Idempotency keys are stored for up to 1 hour, and can be any arbitrary string. Consider using a hash or UUID generated client-side.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Idempotency-Key")
+    public String idempotencyKey;
+    public PostApiV1StatusesRequest withIdempotencyKey(String idempotencyKey) {
+        this.idempotencyKey = idempotencyKey;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostApiV1StatusesRequestBody[] request;
-    public PostApiV1StatusesRequest withRequest(PostApiV1StatusesRequestBody[] request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public PostApiV1StatusesSecurity security;
-    public PostApiV1StatusesRequest withSecurity(PostApiV1StatusesSecurity security) {
-        this.security = security;
+    public PostApiV1StatusesRequestBody[] requestBody;
+    public PostApiV1StatusesRequest withRequestBody(PostApiV1StatusesRequestBody[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

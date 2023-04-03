@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSchemaRequest {
-    
-    public CreateSchemaPathParams pathParams;
-    public CreateSchemaRequest withPathParams(CreateSchemaPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateSchemaRequestBody requestBody;
+    public CreateSchemaRequest withRequestBody(CreateSchemaRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateSchemaRequestBody request;
-    public CreateSchemaRequest withRequest(CreateSchemaRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiId")
+    public String apiId;
+    public CreateSchemaRequest withApiId(String apiId) {
+        this.apiId = apiId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiVersionId")
+    public String apiVersionId;
+    public CreateSchemaRequest withApiVersionId(String apiVersionId) {
+        this.apiVersionId = apiVersionId;
         return this;
     }
     

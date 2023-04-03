@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NifComprehensiveRequest {
-    
-    public NifComprehensivePathParams pathParams;
-    public NifComprehensiveRequest withPathParams(NifComprehensivePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Company details
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public NifComprehensiveRequestBody request;
-    public NifComprehensiveRequest withRequest(NifComprehensiveRequestBody request) {
-        this.request = request;
+    public NifComprehensiveRequestBody requestBody;
+    public NifComprehensiveRequest withRequestBody(NifComprehensiveRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public NifComprehensiveSecurity security;
-    public NifComprehensiveRequest withSecurity(NifComprehensiveSecurity security) {
-        this.security = security;
+    /**
+     * ISO_3166-1_alpha-2 representation of a country name - 2 chars
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=country")
+    public String country;
+    public NifComprehensiveRequest withCountry(String country) {
+        this.country = country;
         return this;
     }
     

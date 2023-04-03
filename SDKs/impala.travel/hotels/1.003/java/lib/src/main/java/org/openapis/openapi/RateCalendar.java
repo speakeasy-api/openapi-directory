@@ -51,13 +51,13 @@ public class RateCalendar {
      */
     public org.openapis.openapi.models.operations.ListRatePlanForHotelForRatePlanIdResponse listRatePlanForHotelForRatePlanId(org.openapis.openapi.models.operations.ListRatePlanForHotelForRatePlanIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListRatePlanForHotelForRatePlanIdPathParams.class, baseUrl, "/hotels/{hotelId}/rate-plans/{ratePlanId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListRatePlanForHotelForRatePlanIdRequest.class, baseUrl, "/hotels/{hotelId}/rate-plans/{ratePlanId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListRatePlanForHotelForRatePlanIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListRatePlanForHotelForRatePlanIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -128,13 +128,13 @@ public class RateCalendar {
      */
     public org.openapis.openapi.models.operations.ListRatePlansForHotelResponse listRatePlansForHotel(org.openapis.openapi.models.operations.ListRatePlansForHotelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListRatePlansForHotelPathParams.class, baseUrl, "/hotels/{hotelId}/rate-plans", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListRatePlansForHotelRequest.class, baseUrl, "/hotels/{hotelId}/rate-plans", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListRatePlansForHotelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListRatePlansForHotelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

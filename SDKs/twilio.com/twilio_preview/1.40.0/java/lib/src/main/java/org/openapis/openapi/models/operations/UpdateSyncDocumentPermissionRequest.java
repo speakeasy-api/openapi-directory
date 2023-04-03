@@ -7,31 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSyncDocumentPermissionRequest {
+    /**
+     * Identifier of the Sync Document. Either a SID or a unique name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DocumentSid")
+    public String documentSid;
+    public UpdateSyncDocumentPermissionRequest withDocumentSid(String documentSid) {
+        this.documentSid = documentSid;
+        return this;
+    }
     
-    public UpdateSyncDocumentPermissionPathParams pathParams;
-    public UpdateSyncDocumentPermissionRequest withPathParams(UpdateSyncDocumentPermissionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Arbitrary string identifier representing a human user associated with an FPA token, assigned by the developer.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Identity")
+    public String identity;
+    public UpdateSyncDocumentPermissionRequest withIdentity(String identity) {
+        this.identity = identity;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateSyncDocumentPermissionUpdateSyncDocumentPermissionRequest request;
-    public UpdateSyncDocumentPermissionRequest withRequest(UpdateSyncDocumentPermissionUpdateSyncDocumentPermissionRequest request) {
-        this.request = request;
+    public UpdateSyncDocumentPermissionUpdateSyncDocumentPermissionRequest requestBody;
+    public UpdateSyncDocumentPermissionRequest withRequestBody(UpdateSyncDocumentPermissionUpdateSyncDocumentPermissionRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateSyncDocumentPermissionSecurity security;
-    public UpdateSyncDocumentPermissionRequest withSecurity(UpdateSyncDocumentPermissionSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateSyncDocumentPermissionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique SID identifier of the Sync Service Instance.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public UpdateSyncDocumentPermissionRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodesOfConductGetConductCodeRequest {
-    
-    public CodesOfConductGetConductCodePathParams pathParams;
-    public CodesOfConductGetConductCodeRequest withPathParams(CodesOfConductGetConductCodePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
+    public String key;
+    public CodesOfConductGetConductCodeRequest withKey(String key) {
+        this.key = key;
         return this;
     }
     

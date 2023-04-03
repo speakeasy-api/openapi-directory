@@ -18,10 +18,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GetSalesTaxJurisdictionsSecurity;
-import org.openapis.openapi.models.operations.GetSalesTaxJurisdictionsPathParams;
 import org.openapis.openapi.models.operations.GetSalesTaxJurisdictionsRequest;
 import org.openapis.openapi.models.operations.GetSalesTaxJurisdictionsResponse;
-import org.openapis.openapi.models.shared.SchemeAPIAuth;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,17 +28,12 @@ public class Application {
                 .build();
 
             GetSalesTaxJurisdictionsRequest req = new GetSalesTaxJurisdictionsRequest() {{
-                security = new GetSalesTaxJurisdictionsSecurity() {{
-                    apiAuth = new SchemeAPIAuth() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new GetSalesTaxJurisdictionsPathParams() {{
-                    countryCode = "corrupti";
-                }};
-            }};            
+                countryCode = "corrupti";
+            }}            
 
-            GetSalesTaxJurisdictionsResponse res = sdk.country.getSalesTaxJurisdictions(req);
+            GetSalesTaxJurisdictionsResponse res = sdk.country.getSalesTaxJurisdictions(req, new GetSalesTaxJurisdictionsSecurity() {{
+                apiAuth = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.salesTaxJurisdictions.isPresent()) {
                 // handle response
@@ -52,7 +45,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### country

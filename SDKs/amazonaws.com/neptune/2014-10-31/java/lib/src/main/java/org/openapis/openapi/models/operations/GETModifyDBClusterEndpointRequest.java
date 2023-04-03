@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyDBClusterEndpointRequest {
-    
-    public GETModifyDBClusterEndpointQueryParams queryParams;
-    public GETModifyDBClusterEndpointRequest withQueryParams(GETModifyDBClusterEndpointQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyDBClusterEndpointActionEnum action;
+    public GETModifyDBClusterEndpointRequest withAction(GETModifyDBClusterEndpointActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The identifier of the endpoint to modify. This parameter is stored as a lowercase string.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBClusterEndpointIdentifier")
+    public String dbClusterEndpointIdentifier;
+    public GETModifyDBClusterEndpointRequest withDBClusterEndpointIdentifier(String dbClusterEndpointIdentifier) {
+        this.dbClusterEndpointIdentifier = dbClusterEndpointIdentifier;
+        return this;
+    }
     
-    public GETModifyDBClusterEndpointHeaders headers;
-    public GETModifyDBClusterEndpointRequest withHeaders(GETModifyDBClusterEndpointHeaders headers) {
-        this.headers = headers;
+    /**
+     * The type of the endpoint. One of: &lt;code&gt;READER&lt;/code&gt;, &lt;code&gt;WRITER&lt;/code&gt;, &lt;code&gt;ANY&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndpointType")
+    public String endpointType;
+    public GETModifyDBClusterEndpointRequest withEndpointType(String endpointType) {
+        this.endpointType = endpointType;
+        return this;
+    }
+    
+    /**
+     * List of DB instance identifiers that aren't part of the custom endpoint group. All other eligible instances are reachable through the custom endpoint. Only relevant if the list of static members is empty.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ExcludedMembers")
+    public String[] excludedMembers;
+    public GETModifyDBClusterEndpointRequest withExcludedMembers(String[] excludedMembers) {
+        this.excludedMembers = excludedMembers;
+        return this;
+    }
+    
+    /**
+     * List of DB instance identifiers that are part of the custom endpoint group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StaticMembers")
+    public String[] staticMembers;
+    public GETModifyDBClusterEndpointRequest withStaticMembers(String[] staticMembers) {
+        this.staticMembers = staticMembers;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyDBClusterEndpointVersionEnum version;
+    public GETModifyDBClusterEndpointRequest withVersion(GETModifyDBClusterEndpointVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyDBClusterEndpointRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyDBClusterEndpointRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyDBClusterEndpointRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyDBClusterEndpointRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyDBClusterEndpointRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyDBClusterEndpointRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyDBClusterEndpointRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

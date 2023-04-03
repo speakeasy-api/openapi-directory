@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAdminRequestsRequest {
+    /**
+     * The maximum number of results to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public String limit;
+    public GetAdminRequestsRequest withLimit(String limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetAdminRequestsQueryParams queryParams;
-    public GetAdminRequestsRequest withQueryParams(GetAdminRequestsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Only return logged requests after this date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public GetAdminRequestsRequest withSince(String since) {
+        this.since = since;
         return this;
     }
     

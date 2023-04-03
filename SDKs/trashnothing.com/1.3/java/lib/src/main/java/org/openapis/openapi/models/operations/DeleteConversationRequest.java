@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteConversationRequest {
-    
-    public DeleteConversationPathParams pathParams;
-    public DeleteConversationRequest withPathParams(DeleteConversationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the conversation to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversation_id")
+    public String conversationId;
+    public DeleteConversationRequest withConversationId(String conversationId) {
+        this.conversationId = conversationId;
         return this;
     }
     
-    
-    public DeleteConversationQueryParams queryParams;
-    public DeleteConversationRequest withQueryParams(DeleteConversationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The ID of the newest message in the conversation that the client has downloaded.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=message_id")
+    public String messageId;
+    public DeleteConversationRequest withMessageId(String messageId) {
+        this.messageId = messageId;
         return this;
     }
     

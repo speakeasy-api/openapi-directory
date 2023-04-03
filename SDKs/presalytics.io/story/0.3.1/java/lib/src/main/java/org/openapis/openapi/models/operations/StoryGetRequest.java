@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoryGetRequest {
+    /**
+     * Determines whether a repsonse including story objects should include the story outline.  Defaults to true. Useful for speeding up processing times.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_outline")
+    public Boolean includeOutline;
+    public StoryGetRequest withIncludeOutline(Boolean includeOutline) {
+        this.includeOutline = includeOutline;
+        return this;
+    }
     
-    public StoryGetQueryParams queryParams;
-    public StoryGetRequest withQueryParams(StoryGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Indicate whether the returned object should include child relationships
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_relationships")
+    public Boolean includeRelationships;
+    public StoryGetRequest withIncludeRelationships(Boolean includeRelationships) {
+        this.includeRelationships = includeRelationships;
         return this;
     }
     

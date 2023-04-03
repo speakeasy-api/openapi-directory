@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BuildsListBranchesRequest {
-    
-    public BuildsListBranchesPathParams pathParams;
-    public BuildsListBranchesRequest withPathParams(BuildsListBranchesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public BuildsListBranchesRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public BuildsListBranchesSecurity security;
-    public BuildsListBranchesRequest withSecurity(BuildsListBranchesSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public BuildsListBranchesRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

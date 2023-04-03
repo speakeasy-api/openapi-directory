@@ -7,24 +7,31 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutWorkspaceSlugMembersMemberSlugNotesIdRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutWorkspaceSlugMembersMemberSlugNotesIdRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PutWorkspaceSlugMembersMemberSlugNotesIdPathParams pathParams;
-    public PutWorkspaceSlugMembersMemberSlugNotesIdRequest withPathParams(PutWorkspaceSlugMembersMemberSlugNotesIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=member_slug")
+    public String memberSlug;
+    public PutWorkspaceSlugMembersMemberSlugNotesIdRequest withMemberSlug(String memberSlug) {
+        this.memberSlug = memberSlug;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Note request;
-    public PutWorkspaceSlugMembersMemberSlugNotesIdRequest withRequest(org.openapis.openapi.models.shared.Note request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Note note;
+    public PutWorkspaceSlugMembersMemberSlugNotesIdRequest withNote(org.openapis.openapi.models.shared.Note note) {
+        this.note = note;
         return this;
     }
     
-    
-    public PutWorkspaceSlugMembersMemberSlugNotesIdSecurity security;
-    public PutWorkspaceSlugMembersMemberSlugNotesIdRequest withSecurity(PutWorkspaceSlugMembersMemberSlugNotesIdSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_slug")
+    public String workspaceSlug;
+    public PutWorkspaceSlugMembersMemberSlugNotesIdRequest withWorkspaceSlug(String workspaceSlug) {
+        this.workspaceSlug = workspaceSlug;
         return this;
     }
     

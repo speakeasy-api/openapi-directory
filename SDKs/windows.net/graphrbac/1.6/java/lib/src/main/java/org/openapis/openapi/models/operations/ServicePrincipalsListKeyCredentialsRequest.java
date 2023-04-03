@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ServicePrincipalsListKeyCredentialsRequest {
-    
-    public ServicePrincipalsListKeyCredentialsPathParams pathParams;
-    public ServicePrincipalsListKeyCredentialsRequest withPathParams(ServicePrincipalsListKeyCredentialsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Client API version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public ServicePrincipalsListKeyCredentialsRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
+    /**
+     * The object ID of the service principal for which to get keyCredentials.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=objectId")
+    public String objectId;
+    public ServicePrincipalsListKeyCredentialsRequest withObjectId(String objectId) {
+        this.objectId = objectId;
+        return this;
+    }
     
-    public ServicePrincipalsListKeyCredentialsQueryParams queryParams;
-    public ServicePrincipalsListKeyCredentialsRequest withQueryParams(ServicePrincipalsListKeyCredentialsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The tenant ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tenantID")
+    public String tenantID;
+    public ServicePrincipalsListKeyCredentialsRequest withTenantID(String tenantID) {
+        this.tenantID = tenantID;
         return this;
     }
     

@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchAllFieldsRequest {
-    
-    public FetchAllFieldsQueryParams queryParams;
-    public FetchAllFieldsRequest withQueryParams(FetchAllFieldsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Max number of results to return per batch.  Must be between 1 and 100 inclusive.  Defaults to 100.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Limit")
+    public Integer xLimit;
+    public FetchAllFieldsRequest withXLimit(Integer xLimit) {
+        this.xLimit = xLimit;
         return this;
     }
     
-    
-    public FetchAllFieldsHeaders headers;
-    public FetchAllFieldsRequest withHeaders(FetchAllFieldsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Opaque string which allows for fetching the next batch of results.  Can be used to poll for changes.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Next-Token")
+    public String xNextToken;
+    public FetchAllFieldsRequest withXNextToken(String xNextToken) {
+        this.xNextToken = xNextToken;
         return this;
     }
     
-    
-    public FetchAllFieldsSecurity security;
-    public FetchAllFieldsRequest withSecurity(FetchAllFieldsSecurity security) {
-        this.security = security;
+    /**
+     * Optional prefix filter for field name. Must be at least 3 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fieldName")
+    public String fieldName;
+    public FetchAllFieldsRequest withFieldName(String fieldName) {
+        this.fieldName = fieldName;
         return this;
     }
     

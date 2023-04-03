@@ -37,7 +37,7 @@ public class Statistics {
      */
     public org.openapis.openapi.models.operations.GETActiveObjectCountUsingGETResponse getActiveObjectCountUsingGET(org.openapis.openapi.models.operations.GETActiveObjectCountUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETActiveObjectCountUsingGETPathParams.class, baseUrl, "/stats/count/activeObject/{speciesTypeKey}/{dateYYYYMMDD}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETActiveObjectCountUsingGETRequest.class, baseUrl, "/stats/count/activeObject/{speciesTypeKey}/{dateYYYYMMDD}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -76,7 +76,7 @@ public class Statistics {
      */
     public org.openapis.openapi.models.operations.GETActiveObjectDiffUsingGETResponse getActiveObjectDiffUsingGET(org.openapis.openapi.models.operations.GETActiveObjectDiffUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETActiveObjectDiffUsingGETPathParams.class, baseUrl, "/stats/diff/activeObject/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETActiveObjectDiffUsingGETRequest.class, baseUrl, "/stats/diff/activeObject/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -115,7 +115,7 @@ public class Statistics {
      */
     public org.openapis.openapi.models.operations.GETGeneTypeCountUsingGETResponse getGeneTypeCountUsingGET(org.openapis.openapi.models.operations.GETGeneTypeCountUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGeneTypeCountUsingGETPathParams.class, baseUrl, "/stats/count/geneType/{speciesTypeKey}/{dateYYYYMMDD}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGeneTypeCountUsingGETRequest.class, baseUrl, "/stats/count/geneType/{speciesTypeKey}/{dateYYYYMMDD}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -154,7 +154,7 @@ public class Statistics {
      */
     public org.openapis.openapi.models.operations.GETGeneTypeDiffUsingGETResponse getGeneTypeDiffUsingGET(org.openapis.openapi.models.operations.GETGeneTypeDiffUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGeneTypeDiffUsingGETPathParams.class, baseUrl, "/stats/diff/geneType/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGeneTypeDiffUsingGETRequest.class, baseUrl, "/stats/diff/geneType/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -193,7 +193,7 @@ public class Statistics {
      */
     public org.openapis.openapi.models.operations.GETObjectStatusCountUsingGETResponse getObjectStatusCountUsingGET(org.openapis.openapi.models.operations.GETObjectStatusCountUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETObjectStatusCountUsingGETPathParams.class, baseUrl, "/stats/count/objectStatus/{speciesTypeKey}/{dateYYYYMMDD}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETObjectStatusCountUsingGETRequest.class, baseUrl, "/stats/count/objectStatus/{speciesTypeKey}/{dateYYYYMMDD}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -232,7 +232,7 @@ public class Statistics {
      */
     public org.openapis.openapi.models.operations.GETObjectStatusDiffUsingGETResponse getObjectStatusDiffUsingGET(org.openapis.openapi.models.operations.GETObjectStatusDiffUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETObjectStatusDiffUsingGETPathParams.class, baseUrl, "/stats/diff/objectStatus/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETObjectStatusDiffUsingGETRequest.class, baseUrl, "/stats/diff/objectStatus/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -271,7 +271,7 @@ public class Statistics {
      */
     public org.openapis.openapi.models.operations.GETObjectsWithRefSeqCountUsingGETResponse getObjectsWithRefSeqCountUsingGET(org.openapis.openapi.models.operations.GETObjectsWithRefSeqCountUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETObjectsWithRefSeqCountUsingGETPathParams.class, baseUrl, "/stats/count/objectWithRefSeq/{speciesTypeKey}/{dateYYYYMMDD}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETObjectsWithRefSeqCountUsingGETRequest.class, baseUrl, "/stats/count/objectWithRefSeq/{speciesTypeKey}/{dateYYYYMMDD}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -310,7 +310,7 @@ public class Statistics {
      */
     public org.openapis.openapi.models.operations.GETObjectsWithRefSeqDiffUsingGETResponse getObjectsWithRefSeqDiffUsingGET(org.openapis.openapi.models.operations.GETObjectsWithRefSeqDiffUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETObjectsWithRefSeqDiffUsingGETPathParams.class, baseUrl, "/stats/diff/objectWithRefSeq/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETObjectsWithRefSeqDiffUsingGETRequest.class, baseUrl, "/stats/diff/objectWithRefSeq/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -349,7 +349,7 @@ public class Statistics {
      */
     public org.openapis.openapi.models.operations.GETObjectsWithReferenceCountUsingGETResponse getObjectsWithReferenceCountUsingGET(org.openapis.openapi.models.operations.GETObjectsWithReferenceCountUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETObjectsWithReferenceCountUsingGETPathParams.class, baseUrl, "/stats/count/objectWithReference/{speciesTypeKey}/{dateYYYYMMDD}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETObjectsWithReferenceCountUsingGETRequest.class, baseUrl, "/stats/count/objectWithReference/{speciesTypeKey}/{dateYYYYMMDD}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -388,7 +388,7 @@ public class Statistics {
      */
     public org.openapis.openapi.models.operations.GETObjectsWithReferenceDiffUsingGETResponse getObjectsWithReferenceDiffUsingGET(org.openapis.openapi.models.operations.GETObjectsWithReferenceDiffUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETObjectsWithReferenceDiffUsingGETPathParams.class, baseUrl, "/stats/diff/objectWithReference/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETObjectsWithReferenceDiffUsingGETRequest.class, baseUrl, "/stats/diff/objectWithReference/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -427,7 +427,7 @@ public class Statistics {
      */
     public org.openapis.openapi.models.operations.GETObjectsWithXDBsCountUsingGETResponse getObjectsWithXDBsCountUsingGET(org.openapis.openapi.models.operations.GETObjectsWithXDBsCountUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETObjectsWithXDBsCountUsingGETPathParams.class, baseUrl, "/stats/count/objectWithXdb/{speciesTypeKey}/{objectKey}/{dateYYYYMMDD}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETObjectsWithXDBsCountUsingGETRequest.class, baseUrl, "/stats/count/objectWithXdb/{speciesTypeKey}/{objectKey}/{dateYYYYMMDD}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -466,7 +466,7 @@ public class Statistics {
      */
     public org.openapis.openapi.models.operations.GETObjectsWithXDBsDiffUsingGETResponse getObjectsWithXDBsDiffUsingGET(org.openapis.openapi.models.operations.GETObjectsWithXDBsDiffUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETObjectsWithXDBsDiffUsingGETPathParams.class, baseUrl, "/stats/diff/objectWithXdb/{speciesTypeKey}/{objectKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETObjectsWithXDBsDiffUsingGETRequest.class, baseUrl, "/stats/diff/objectWithXdb/{speciesTypeKey}/{objectKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -505,7 +505,7 @@ public class Statistics {
      */
     public org.openapis.openapi.models.operations.GETProteinInteractionCountUsingGETResponse getProteinInteractionCountUsingGET(org.openapis.openapi.models.operations.GETProteinInteractionCountUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETProteinInteractionCountUsingGETPathParams.class, baseUrl, "/stats/count/proteinInteraction/{speciesTypeKey}/{dateYYYYMMDD}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETProteinInteractionCountUsingGETRequest.class, baseUrl, "/stats/count/proteinInteraction/{speciesTypeKey}/{dateYYYYMMDD}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -544,7 +544,7 @@ public class Statistics {
      */
     public org.openapis.openapi.models.operations.GETProteinInteractionDiffUsingGETResponse getProteinInteractionDiffUsingGET(org.openapis.openapi.models.operations.GETProteinInteractionDiffUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETProteinInteractionDiffUsingGETPathParams.class, baseUrl, "/stats/diff/proteinInteraction/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETProteinInteractionDiffUsingGETRequest.class, baseUrl, "/stats/diff/proteinInteraction/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -583,7 +583,7 @@ public class Statistics {
      */
     public org.openapis.openapi.models.operations.GETQtlInheritanceTypeCountUsingGETResponse getQtlInheritanceTypeCountUsingGET(org.openapis.openapi.models.operations.GETQtlInheritanceTypeCountUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETQtlInheritanceTypeCountUsingGETPathParams.class, baseUrl, "/stats/count/qtlInheritanceType/{speciesTypeKey}/{dateYYYYMMDD}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETQtlInheritanceTypeCountUsingGETRequest.class, baseUrl, "/stats/count/qtlInheritanceType/{speciesTypeKey}/{dateYYYYMMDD}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -622,7 +622,7 @@ public class Statistics {
      */
     public org.openapis.openapi.models.operations.GETQtlInheritanceTypeDiffUsingGETResponse getQtlInheritanceTypeDiffUsingGET(org.openapis.openapi.models.operations.GETQtlInheritanceTypeDiffUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETQtlInheritanceTypeDiffUsingGETPathParams.class, baseUrl, "/stats/diff/qtlInheritanceType/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETQtlInheritanceTypeDiffUsingGETRequest.class, baseUrl, "/stats/diff/qtlInheritanceType/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -661,7 +661,7 @@ public class Statistics {
      */
     public org.openapis.openapi.models.operations.GETRetiredObjectCountUsingGETResponse getRetiredObjectCountUsingGET(org.openapis.openapi.models.operations.GETRetiredObjectCountUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRetiredObjectCountUsingGETPathParams.class, baseUrl, "/stats/count/retiredObject/{speciesTypeKey}/{dateYYYYMMDD}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRetiredObjectCountUsingGETRequest.class, baseUrl, "/stats/count/retiredObject/{speciesTypeKey}/{dateYYYYMMDD}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -700,7 +700,7 @@ public class Statistics {
      */
     public org.openapis.openapi.models.operations.GETRetiredObjectDiffUsingGETResponse getRetiredObjectDiffUsingGET(org.openapis.openapi.models.operations.GETRetiredObjectDiffUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRetiredObjectDiffUsingGETPathParams.class, baseUrl, "/stats/diff/retiredObject/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRetiredObjectDiffUsingGETRequest.class, baseUrl, "/stats/diff/retiredObject/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -739,7 +739,7 @@ public class Statistics {
      */
     public org.openapis.openapi.models.operations.GETStrainTypeCountUsingGETResponse getStrainTypeCountUsingGET(org.openapis.openapi.models.operations.GETStrainTypeCountUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETStrainTypeCountUsingGETPathParams.class, baseUrl, "/stats/count/strainType/{speciesTypeKey}/{dateYYYYMMDD}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETStrainTypeCountUsingGETRequest.class, baseUrl, "/stats/count/strainType/{speciesTypeKey}/{dateYYYYMMDD}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -778,7 +778,7 @@ public class Statistics {
      */
     public org.openapis.openapi.models.operations.GETStrainTypeDiffUsingGETResponse getStrainTypeDiffUsingGET(org.openapis.openapi.models.operations.GETStrainTypeDiffUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETStrainTypeDiffUsingGETPathParams.class, baseUrl, "/stats/diff/strainType/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETStrainTypeDiffUsingGETRequest.class, baseUrl, "/stats/diff/strainType/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -817,7 +817,7 @@ public class Statistics {
      */
     public org.openapis.openapi.models.operations.GETTermStatsUsingGETResponse getTermStatsUsingGET(org.openapis.openapi.models.operations.GETTermStatsUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETTermStatsUsingGETPathParams.class, baseUrl, "/stats/term/{accId}/{filterAccId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETTermStatsUsingGETRequest.class, baseUrl, "/stats/term/{accId}/{filterAccId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -856,7 +856,7 @@ public class Statistics {
      */
     public org.openapis.openapi.models.operations.GETWithdrawnObjectCountUsingGETResponse getWithdrawnObjectCountUsingGET(org.openapis.openapi.models.operations.GETWithdrawnObjectCountUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETWithdrawnObjectCountUsingGETPathParams.class, baseUrl, "/stats/count/withdrawnObject/{speciesTypeKey}/{dateYYYYMMDD}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETWithdrawnObjectCountUsingGETRequest.class, baseUrl, "/stats/count/withdrawnObject/{speciesTypeKey}/{dateYYYYMMDD}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -895,7 +895,7 @@ public class Statistics {
      */
     public org.openapis.openapi.models.operations.GETWithdrawnObjectDiffUsingGETResponse getWithdrawnObjectDiffUsingGET(org.openapis.openapi.models.operations.GETWithdrawnObjectDiffUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETWithdrawnObjectDiffUsingGETPathParams.class, baseUrl, "/stats/diff/withdrawnObject/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETWithdrawnObjectDiffUsingGETRequest.class, baseUrl, "/stats/diff/withdrawnObject/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -934,7 +934,7 @@ public class Statistics {
      */
     public org.openapis.openapi.models.operations.GETXdbsCountUsingGETResponse getXdbsCountUsingGET(org.openapis.openapi.models.operations.GETXdbsCountUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETXdbsCountUsingGETPathParams.class, baseUrl, "/stats/count/xdb/{speciesTypeKey}/{dateYYYYMMDD}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETXdbsCountUsingGETRequest.class, baseUrl, "/stats/count/xdb/{speciesTypeKey}/{dateYYYYMMDD}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -973,7 +973,7 @@ public class Statistics {
      */
     public org.openapis.openapi.models.operations.GETXdbsDiffUsingGETResponse getXdbsDiffUsingGET(org.openapis.openapi.models.operations.GETXdbsDiffUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETXdbsDiffUsingGETPathParams.class, baseUrl, "/stats/diff/xdb/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETXdbsDiffUsingGETRequest.class, baseUrl, "/stats/diff/xdb/{speciesTypeKey}/{dateFromYYYYMMDD}/{dateToYYYYMMDD}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

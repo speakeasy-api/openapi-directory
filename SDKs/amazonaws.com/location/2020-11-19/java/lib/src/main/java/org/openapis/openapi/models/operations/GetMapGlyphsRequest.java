@@ -4,27 +4,95 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMapGlyphsRequest {
-    
-    public GetMapGlyphsPathParams pathParams;
-    public GetMapGlyphsRequest withPathParams(GetMapGlyphsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * &lt;p&gt;A comma-separated list of fonts to load glyphs from in order of preference. For example, &lt;code&gt;Noto Sans Regular, Arial Unicode&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;Valid fonts stacks for &lt;a href="https://docs.aws.amazon.com/location/latest/developerguide/esri.html"&gt;Esri&lt;/a&gt; styles: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;VectorEsriDarkGrayCanvas \u2013 &lt;code&gt;Ubuntu Medium Italic&lt;/code&gt; | &lt;code&gt;Ubuntu Medium&lt;/code&gt; | &lt;code&gt;Ubuntu Italic&lt;/code&gt; | &lt;code&gt;Ubuntu Regular&lt;/code&gt; | &lt;code&gt;Ubuntu Bold&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;VectorEsriLightGrayCanvas \u2013 &lt;code&gt;Ubuntu Italic&lt;/code&gt; | &lt;code&gt;Ubuntu Regular&lt;/code&gt; | &lt;code&gt;Ubuntu Light&lt;/code&gt; | &lt;code&gt;Ubuntu Bold&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;VectorEsriTopographic \u2013 &lt;code&gt;Noto Sans Italic&lt;/code&gt; | &lt;code&gt;Noto Sans Regular&lt;/code&gt; | &lt;code&gt;Noto Sans Bold&lt;/code&gt; | &lt;code&gt;Noto Serif Regular&lt;/code&gt; | &lt;code&gt;Roboto Condensed Light Italic&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;VectorEsriStreets \u2013 &lt;code&gt;Arial Regular&lt;/code&gt; | &lt;code&gt;Arial Italic&lt;/code&gt; | &lt;code&gt;Arial Bold&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;VectorEsriNavigation \u2013 &lt;code&gt;Arial Regular&lt;/code&gt; | &lt;code&gt;Arial Italic&lt;/code&gt; | &lt;code&gt;Arial Bold&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Valid font stacks for &lt;a href="https://docs.aws.amazon.com/location/latest/developerguide/HERE.html"&gt;HERE Technologies&lt;/a&gt; styles:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;VectorHereContrast \u2013 &lt;code&gt;Fira GO Regular&lt;/code&gt; | &lt;code&gt;Fira GO Bold&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;VectorHereExplore, VectorHereExploreTruck, HybridHereExploreSatellite \u2013 &lt;code&gt;Fira GO Italic&lt;/code&gt; | &lt;code&gt;Fira GO Map&lt;/code&gt; | &lt;code&gt;Fira GO Map Bold&lt;/code&gt; | &lt;code&gt;Noto Sans CJK JP Bold&lt;/code&gt; | &lt;code&gt;Noto Sans CJK JP Light&lt;/code&gt; | &lt;code&gt;Noto Sans CJK JP Regular&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Valid font stacks for &lt;a href="https://docs.aws.amazon.com/location/latest/developerguide/grab.html"&gt;GrabMaps&lt;/a&gt; styles:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;VectorGrabStandardLight, VectorGrabStandardDark \u2013 &lt;code&gt;Noto Sans Regular&lt;/code&gt; | &lt;code&gt;Noto Sans Medium&lt;/code&gt; | &lt;code&gt;Noto Sans Bold&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Valid font stacks for &lt;a href="https://docs.aws.amazon.com/location/latest/developerguide/open-data.html"&gt;Open Data&lt;/a&gt; styles:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;VectorOpenDataStandardLight, VectorOpenDataStandardDark, VectorOpenDataVisualizationLight, VectorOpenDataVisualizationDark \u2013 &lt;code&gt;Amazon Ember Regular,Noto Sans Regular&lt;/code&gt; | &lt;code&gt;Amazon Ember Bold,Noto Sans Bold&lt;/code&gt; | &lt;code&gt;Amazon Ember Medium,Noto Sans Medium&lt;/code&gt; | &lt;code&gt;Amazon Ember Regular Italic,Noto Sans Italic&lt;/code&gt; | &lt;code&gt;Amazon Ember Condensed RC Regular,Noto Sans Regular&lt;/code&gt; | &lt;code&gt;Amazon Ember Condensed RC Bold,Noto Sans Bold&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;note&gt; &lt;p&gt;The fonts used by the Open Data map styles are combined fonts that use &lt;code&gt;Amazon Ember&lt;/code&gt; for most glyphs but &lt;code&gt;Noto Sans&lt;/code&gt; for glyphs unsupported by &lt;code&gt;Amazon Ember&lt;/code&gt;.&lt;/p&gt; &lt;/note&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FontStack")
+    public String fontStack;
+    public GetMapGlyphsRequest withFontStack(String fontStack) {
+        this.fontStack = fontStack;
         return this;
     }
     
-    
-    public GetMapGlyphsQueryParams queryParams;
-    public GetMapGlyphsRequest withQueryParams(GetMapGlyphsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A Unicode range of characters to download glyphs for. Each response will contain 256 characters. For example, 0\u2013255 includes all characters from range &lt;code&gt;U+0000&lt;/code&gt; to &lt;code&gt;00FF&lt;/code&gt;. Must be aligned to multiples of 256.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FontUnicodeRange")
+    public String fontUnicodeRange;
+    public GetMapGlyphsRequest withFontUnicodeRange(String fontUnicodeRange) {
+        this.fontUnicodeRange = fontUnicodeRange;
         return this;
     }
     
+    /**
+     * The map resource associated with the glyph \ufb01le.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=MapName")
+    public String mapName;
+    public GetMapGlyphsRequest withMapName(String mapName) {
+        this.mapName = mapName;
+        return this;
+    }
     
-    public GetMapGlyphsHeaders headers;
-    public GetMapGlyphsRequest withHeaders(GetMapGlyphsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetMapGlyphsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetMapGlyphsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetMapGlyphsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetMapGlyphsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetMapGlyphsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetMapGlyphsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetMapGlyphsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The optional &lt;a href="https://docs.aws.amazon.com/location/latest/developerguide/using-apikeys.html"&gt;API key&lt;/a&gt; to authorize the request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public GetMapGlyphsRequest withKey(String key) {
+        this.key = key;
         return this;
     }
     

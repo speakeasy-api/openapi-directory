@@ -7,17 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateFilePaymentConsentsConsentIdFileJsonRequest {
-    
-    public CreateFilePaymentConsentsConsentIdFileJsonPathParams pathParams;
-    public CreateFilePaymentConsentsConsentIdFileJsonRequest withPathParams(CreateFilePaymentConsentsConsentIdFileJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * An Authorisation Token as per https://tools.ietf.org/html/rfc6750
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public CreateFilePaymentConsentsConsentIdFileJsonRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
-    
-    public CreateFilePaymentConsentsConsentIdFileJsonHeaders headers;
-    public CreateFilePaymentConsentsConsentIdFileJsonRequest withHeaders(CreateFilePaymentConsentsConsentIdFileJsonHeaders headers) {
-        this.headers = headers;
+    /**
+     * ConsentId
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConsentId")
+    public String consentId;
+    public CreateFilePaymentConsentsConsentIdFileJsonRequest withConsentId(String consentId) {
+        this.consentId = consentId;
         return this;
     }
     
@@ -25,16 +31,73 @@ public class CreateFilePaymentConsentsConsentIdFileJsonRequest {
      * Default
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public CreateFilePaymentConsentsConsentIdFileJsonRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public CreateFilePaymentConsentsConsentIdFileJsonRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Indicates the user-agent that the PSU is using.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-customer-user-agent")
+    public String xCustomerUserAgent;
+    public CreateFilePaymentConsentsConsentIdFileJsonRequest withXCustomerUserAgent(String xCustomerUserAgent) {
+        this.xCustomerUserAgent = xCustomerUserAgent;
+        return this;
+    }
     
-    public CreateFilePaymentConsentsConsentIdFileJsonSecurity security;
-    public CreateFilePaymentConsentsConsentIdFileJsonRequest withSecurity(CreateFilePaymentConsentsConsentIdFileJsonSecurity security) {
-        this.security = security;
+    /**
+     * The time when the PSU last logged in with the TPP. 
+     * All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: 
+     * Sun, 10 Sep 2017 19:43:31 UTC
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-auth-date")
+    public String xFapiAuthDate;
+    public CreateFilePaymentConsentsConsentIdFileJsonRequest withXFapiAuthDate(String xFapiAuthDate) {
+        this.xFapiAuthDate = xFapiAuthDate;
+        return this;
+    }
+    
+    /**
+     * The PSU's IP address if the PSU is currently logged in with the TPP.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-customer-ip-address")
+    public String xFapiCustomerIpAddress;
+    public CreateFilePaymentConsentsConsentIdFileJsonRequest withXFapiCustomerIpAddress(String xFapiCustomerIpAddress) {
+        this.xFapiCustomerIpAddress = xFapiCustomerIpAddress;
+        return this;
+    }
+    
+    /**
+     * An RFC4122 UID used as a correlation id.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-interaction-id")
+    public String xFapiInteractionId;
+    public CreateFilePaymentConsentsConsentIdFileJsonRequest withXFapiInteractionId(String xFapiInteractionId) {
+        this.xFapiInteractionId = xFapiInteractionId;
+        return this;
+    }
+    
+    /**
+     * Every request will be processed only once per x-idempotency-key.  The
+     * Idempotency Key will be valid for 24 hours.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-idempotency-key")
+    public String xIdempotencyKey;
+    public CreateFilePaymentConsentsConsentIdFileJsonRequest withXIdempotencyKey(String xIdempotencyKey) {
+        this.xIdempotencyKey = xIdempotencyKey;
+        return this;
+    }
+    
+    /**
+     * A detached JWS signature of the body of the payload.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-jws-signature")
+    public String xJwsSignature;
+    public CreateFilePaymentConsentsConsentIdFileJsonRequest withXJwsSignature(String xJwsSignature) {
+        this.xJwsSignature = xJwsSignature;
         return this;
     }
     

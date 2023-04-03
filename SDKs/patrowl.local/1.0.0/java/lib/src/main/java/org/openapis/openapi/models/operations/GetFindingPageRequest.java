@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFindingPageRequest {
-    
-    public GetFindingPagePathParams pathParams;
-    public GetFindingPageRequest withPathParams(GetFindingPagePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Numeric ID of the scan to get findings
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scanId")
+    public Long scanId;
+    public GetFindingPageRequest withScanId(Long scanId) {
+        this.scanId = scanId;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMessagesSendRequest {
-    
-    public GetMessagesSendQueryParams queryParams;
-    public GetMessagesSendRequest withQueryParams(GetMessagesSendQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The text you want to send.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=body")
+    public String body;
+    public GetMessagesSendRequest withBody(String body) {
+        this.body = body;
         return this;
     }
     
+    /**
+     * Refer to the `deduplication-id` parameter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deduplication-id")
+    public Long deduplicationId;
+    public GetMessagesSendRequest withDeduplicationId(Long deduplicationId) {
+        this.deduplicationId = deduplicationId;
+        return this;
+    }
     
-    public GetMessagesSendSecurity security;
-    public GetMessagesSendRequest withSecurity(GetMessagesSendSecurity security) {
-        this.security = security;
+    /**
+     * The phone number of the recipient.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
+    public String to;
+    public GetMessagesSendRequest withTo(String to) {
+        this.to = to;
         return this;
     }
     

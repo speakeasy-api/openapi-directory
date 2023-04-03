@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DataSubjectRightCancelDeleteRequestRequest {
-    
-    public DataSubjectRightCancelDeleteRequestPathParams pathParams;
-    public DataSubjectRightCancelDeleteRequestRequest withPathParams(DataSubjectRightCancelDeleteRequestPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public DataSubjectRightCancelDeleteRequestRequestBody request;
-    public DataSubjectRightCancelDeleteRequestRequest withRequest(DataSubjectRightCancelDeleteRequestRequestBody request) {
-        this.request = request;
+    public DataSubjectRightCancelDeleteRequestRequestBody requestBody;
+    public DataSubjectRightCancelDeleteRequestRequest withRequestBody(DataSubjectRightCancelDeleteRequestRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public DataSubjectRightCancelDeleteRequestSecurity security;
-    public DataSubjectRightCancelDeleteRequestRequest withSecurity(DataSubjectRightCancelDeleteRequestSecurity security) {
-        this.security = security;
+    /**
+     * Unique request ID (GUID)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=token")
+    public String token;
+    public DataSubjectRightCancelDeleteRequestRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

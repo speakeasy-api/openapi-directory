@@ -41,7 +41,7 @@ public class HealthQuestionDefinition {
      */
     public org.openapis.openapi.models.operations.FetchHealthQuestionDefinitionResponse fetchHealthQuestionDefinition(org.openapis.openapi.models.operations.FetchHealthQuestionDefinitionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchHealthQuestionDefinitionPathParams.class, baseUrl, "/health_question_definition/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchHealthQuestionDefinitionRequest.class, baseUrl, "/health_question_definition/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

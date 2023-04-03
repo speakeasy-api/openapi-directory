@@ -40,13 +40,13 @@ public class SwitchPorts {
      */
     public org.openapis.openapi.models.operations.GetDeviceSwitchPortStatusesResponse getDeviceSwitchPortStatuses(org.openapis.openapi.models.operations.GetDeviceSwitchPortStatusesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceSwitchPortStatusesPathParams.class, baseUrl, "/devices/{serial}/switchPortStatuses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceSwitchPortStatusesRequest.class, baseUrl, "/devices/{serial}/switchPortStatuses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceSwitchPortStatusesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceSwitchPortStatusesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -86,13 +86,13 @@ public class SwitchPorts {
      */
     public org.openapis.openapi.models.operations.GetDeviceSwitchPortStatusesPacketsResponse getDeviceSwitchPortStatusesPackets(org.openapis.openapi.models.operations.GetDeviceSwitchPortStatusesPacketsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceSwitchPortStatusesPacketsPathParams.class, baseUrl, "/devices/{serial}/switchPortStatuses/packets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceSwitchPortStatusesPacketsRequest.class, baseUrl, "/devices/{serial}/switchPortStatuses/packets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceSwitchPortStatusesPacketsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceSwitchPortStatusesPacketsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

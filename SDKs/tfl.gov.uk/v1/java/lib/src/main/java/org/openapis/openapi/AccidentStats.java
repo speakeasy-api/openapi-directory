@@ -37,7 +37,7 @@ public class AccidentStats {
      */
     public org.openapis.openapi.models.operations.AccidentStatsGetResponse accidentStatsGet(org.openapis.openapi.models.operations.AccidentStatsGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccidentStatsGetPathParams.class, baseUrl, "/AccidentStats/{year}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccidentStatsGetRequest.class, baseUrl, "/AccidentStats/{year}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -4,27 +4,126 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DriveRepliesListRequest {
-    
-    public DriveRepliesListPathParams pathParams;
-    public DriveRepliesListRequest withPathParams(DriveRepliesListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DriveRepliesListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
         return this;
     }
     
-    
-    public DriveRepliesListQueryParams queryParams;
-    public DriveRepliesListRequest withQueryParams(DriveRepliesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The ID of the comment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commentId")
+    public String commentId;
+    public DriveRepliesListRequest withCommentId(String commentId) {
+        this.commentId = commentId;
         return this;
     }
     
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DriveRepliesListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
     
-    public DriveRepliesListSecurity security;
-    public DriveRepliesListRequest withSecurity(DriveRepliesListSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the file.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileId")
+    public String fileId;
+    public DriveRepliesListRequest withFileId(String fileId) {
+        this.fileId = fileId;
+        return this;
+    }
+    
+    /**
+     * Whether to include deleted replies. Deleted replies will not include their original content.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeDeleted")
+    public Boolean includeDeleted;
+    public DriveRepliesListRequest withIncludeDeleted(Boolean includeDeleted) {
+        this.includeDeleted = includeDeleted;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DriveRepliesListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DriveRepliesListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * The maximum number of replies to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public DriveRepliesListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The token for continuing a previous list request on the next page. This should be set to the value of 'nextPageToken' from the previous response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public DriveRepliesListRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DriveRepliesListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DriveRepliesListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public DriveRepliesListRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

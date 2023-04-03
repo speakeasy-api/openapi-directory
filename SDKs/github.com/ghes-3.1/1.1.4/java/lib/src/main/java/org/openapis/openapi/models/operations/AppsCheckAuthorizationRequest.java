@@ -4,13 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsCheckAuthorizationRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=access_token")
+    public String accessToken;
+    public AppsCheckAuthorizationRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public AppsCheckAuthorizationPathParams pathParams;
-    public AppsCheckAuthorizationRequest withPathParams(AppsCheckAuthorizationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The client ID of the GitHub app.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=client_id")
+    public String clientId;
+    public AppsCheckAuthorizationRequest withClientId(String clientId) {
+        this.clientId = clientId;
         return this;
     }
     

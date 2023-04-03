@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateAddressRequest {
-    
-    public UpdateAddressPathParams pathParams;
-    public UpdateAddressRequest withPathParams(UpdateAddressPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that is responsible for the Address resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public UpdateAddressRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateAddressUpdateAddressRequest request;
-    public UpdateAddressRequest withRequest(UpdateAddressUpdateAddressRequest request) {
-        this.request = request;
+    public UpdateAddressUpdateAddressRequest requestBody;
+    public UpdateAddressRequest withRequestBody(UpdateAddressUpdateAddressRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateAddressSecurity security;
-    public UpdateAddressRequest withSecurity(UpdateAddressSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateAddressRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the Address resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateAddressRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

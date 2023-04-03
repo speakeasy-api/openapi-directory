@@ -4,27 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PackageSystemsRequest {
-    
-    public PackageSystemsPathParams pathParams;
-    public PackageSystemsRequest withPathParams(PackageSystemsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filter systems by their SAP SIDs
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[system_profile][sap_sids][in]")
+    public String[] filterSystemProfileSapSidsIn;
+    public PackageSystemsRequest withFilterSystemProfileSapSidsIn(String[] filterSystemProfileSapSidsIn) {
+        this.filterSystemProfileSapSidsIn = filterSystemProfileSapSidsIn;
         return this;
     }
     
-    
-    public PackageSystemsQueryParams queryParams;
-    public PackageSystemsRequest withQueryParams(PackageSystemsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter only SAP systems
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[system_profile][sap_system]")
+    public String filterSystemProfileSapSystem;
+    public PackageSystemsRequest withFilterSystemProfileSapSystem(String filterSystemProfileSapSystem) {
+        this.filterSystemProfileSapSystem = filterSystemProfileSapSystem;
         return this;
     }
     
+    /**
+     * Limit for paging, set -1 to return all
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public PackageSystemsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public PackageSystemsSecurity security;
-    public PackageSystemsRequest withSecurity(PackageSystemsSecurity security) {
-        this.security = security;
+    /**
+     * Offset for paging
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public PackageSystemsRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Package name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=package_name")
+    public String packageName;
+    public PackageSystemsRequest withPackageName(String packageName) {
+        this.packageName = packageName;
+        return this;
+    }
+    
+    /**
+     * Tag filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
+    public String[] tags;
+    public PackageSystemsRequest withTags(String[] tags) {
+        this.tags = tags;
         return this;
     }
     

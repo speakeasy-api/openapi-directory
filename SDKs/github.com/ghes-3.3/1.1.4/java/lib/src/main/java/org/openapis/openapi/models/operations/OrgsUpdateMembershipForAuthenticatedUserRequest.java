@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgsUpdateMembershipForAuthenticatedUserRequest {
-    
-    public OrgsUpdateMembershipForAuthenticatedUserPathParams pathParams;
-    public OrgsUpdateMembershipForAuthenticatedUserRequest withPathParams(OrgsUpdateMembershipForAuthenticatedUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public OrgsUpdateMembershipForAuthenticatedUserRequestBody requestBody;
+    public OrgsUpdateMembershipForAuthenticatedUserRequest withRequestBody(OrgsUpdateMembershipForAuthenticatedUserRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public OrgsUpdateMembershipForAuthenticatedUserRequestBody request;
-    public OrgsUpdateMembershipForAuthenticatedUserRequest withRequest(OrgsUpdateMembershipForAuthenticatedUserRequestBody request) {
-        this.request = request;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public OrgsUpdateMembershipForAuthenticatedUserRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

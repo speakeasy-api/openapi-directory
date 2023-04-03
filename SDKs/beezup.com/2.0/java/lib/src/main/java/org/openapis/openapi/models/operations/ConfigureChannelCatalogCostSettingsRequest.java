@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConfigureChannelCatalogCostSettingsRequest {
-    
-    public ConfigureChannelCatalogCostSettingsPathParams pathParams;
-    public ConfigureChannelCatalogCostSettingsRequest withPathParams(ConfigureChannelCatalogCostSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The channel catalog identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelCatalogId")
+    public String channelCatalogId;
+    public ConfigureChannelCatalogCostSettingsRequest withChannelCatalogId(String channelCatalogId) {
+        this.channelCatalogId = channelCatalogId;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CostSettings request;
-    public ConfigureChannelCatalogCostSettingsRequest withRequest(org.openapis.openapi.models.shared.CostSettings request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CostSettings costSettings;
+    public ConfigureChannelCatalogCostSettingsRequest withCostSettings(org.openapis.openapi.models.shared.CostSettings costSettings) {
+        this.costSettings = costSettings;
         return this;
     }
     

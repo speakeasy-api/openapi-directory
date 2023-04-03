@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBng2latlongEastingNorthingRequest {
+    /**
+     * An OSGB36 (British National Grid) easting.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=easting")
+    public Long easting;
+    public GetBng2latlongEastingNorthingRequest withEasting(Long easting) {
+        this.easting = easting;
+        return this;
+    }
     
-    public GetBng2latlongEastingNorthingPathParams pathParams;
-    public GetBng2latlongEastingNorthingRequest withPathParams(GetBng2latlongEastingNorthingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * An OSGB36 (British National Grid) northing.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=northing")
+    public Long northing;
+    public GetBng2latlongEastingNorthingRequest withNorthing(Long northing) {
+        this.northing = northing;
         return this;
     }
     

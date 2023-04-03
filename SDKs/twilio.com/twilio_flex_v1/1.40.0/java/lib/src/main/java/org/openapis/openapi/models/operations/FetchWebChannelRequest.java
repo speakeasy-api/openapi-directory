@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchWebChannelRequest {
-    
-    public FetchWebChannelPathParams pathParams;
-    public FetchWebChannelRequest withPathParams(FetchWebChannelPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchWebChannelSecurity security;
-    public FetchWebChannelRequest withSecurity(FetchWebChannelSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchWebChannelRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the WebChannel resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchWebChannelRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

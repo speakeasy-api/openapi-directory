@@ -7,24 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateTaxRateRequest {
-    
-    public UpdateTaxRatePathParams pathParams;
-    public UpdateTaxRateRequest withPathParams(UpdateTaxRatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TaxRateUpdateRequest request;
-    public UpdateTaxRateRequest withRequest(org.openapis.openapi.models.shared.TaxRateUpdateRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TaxRateUpdateRequest taxRateUpdateRequest;
+    public UpdateTaxRateRequest withTaxRateUpdateRequest(org.openapis.openapi.models.shared.TaxRateUpdateRequest taxRateUpdateRequest) {
+        this.taxRateUpdateRequest = taxRateUpdateRequest;
         return this;
     }
     
-    
-    public UpdateTaxRateSecurity security;
-    public UpdateTaxRateRequest withSecurity(UpdateTaxRateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taxRateUuid")
+    public String taxRateUuid;
+    public UpdateTaxRateRequest withTaxRateUuid(String taxRateUuid) {
+        this.taxRateUuid = taxRateUuid;
         return this;
     }
     

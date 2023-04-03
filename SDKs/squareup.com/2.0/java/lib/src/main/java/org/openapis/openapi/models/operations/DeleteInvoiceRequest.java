@@ -4,27 +4,28 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteInvoiceRequest {
-    
-    public DeleteInvoicePathParams pathParams;
-    public DeleteInvoiceRequest withPathParams(DeleteInvoicePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the invoice to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=invoice_id")
+    public String invoiceId;
+    public DeleteInvoiceRequest withInvoiceId(String invoiceId) {
+        this.invoiceId = invoiceId;
         return this;
     }
     
-    
-    public DeleteInvoiceQueryParams queryParams;
-    public DeleteInvoiceRequest withQueryParams(DeleteInvoiceQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public DeleteInvoiceSecurity security;
-    public DeleteInvoiceRequest withSecurity(DeleteInvoiceSecurity security) {
-        this.security = security;
+    /**
+     * The version of the [invoice](https://developer.squareup.com/reference/square_2021-08-18/objects/Invoice) to delete.
+     * If you do not know the version, you can call [GetInvoice](https://developer.squareup.com/reference/square_2021-08-18/invoices-api/get-invoice) or 
+     * [ListInvoices](https://developer.squareup.com/reference/square_2021-08-18/invoices-api/list-invoices).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
+    public Long version;
+    public DeleteInvoiceRequest withVersion(Long version) {
+        this.version = version;
         return this;
     }
     

@@ -7,31 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSyncMapPermissionRequest {
+    /**
+     * The application-defined string that uniquely identifies the User's Sync Map Permission resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Identity")
+    public String identity;
+    public UpdateSyncMapPermissionRequest withIdentity(String identity) {
+        this.identity = identity;
+        return this;
+    }
     
-    public UpdateSyncMapPermissionPathParams pathParams;
-    public UpdateSyncMapPermissionRequest withPathParams(UpdateSyncMapPermissionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Sync Map with the Sync Map Permission resource to update. Can be the Sync Map resource's `sid` or its `unique_name`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=MapSid")
+    public String mapSid;
+    public UpdateSyncMapPermissionRequest withMapSid(String mapSid) {
+        this.mapSid = mapSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateSyncMapPermissionUpdateSyncMapPermissionRequest request;
-    public UpdateSyncMapPermissionRequest withRequest(UpdateSyncMapPermissionUpdateSyncMapPermissionRequest request) {
-        this.request = request;
+    public UpdateSyncMapPermissionUpdateSyncMapPermissionRequest requestBody;
+    public UpdateSyncMapPermissionRequest withRequestBody(UpdateSyncMapPermissionUpdateSyncMapPermissionRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateSyncMapPermissionSecurity security;
-    public UpdateSyncMapPermissionRequest withSecurity(UpdateSyncMapPermissionSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateSyncMapPermissionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync Map Permission resource to update. Can be the Service's `sid` value or `default`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public UpdateSyncMapPermissionRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

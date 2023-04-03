@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.AerodromesByDistanceUsV1AerodromesDistanceQueryPostHeaders;
 import org.openapis.openapi.models.operations.AerodromesByDistanceUsV1AerodromesDistanceQueryPostRequest;
 import org.openapis.openapi.models.operations.AerodromesByDistanceUsV1AerodromesDistanceQueryPostResponse;
 import org.openapis.openapi.models.shared.AerodromesByDistance;
@@ -29,15 +28,13 @@ public class Application {
                 .build();
 
             AerodromesByDistanceUsV1AerodromesDistanceQueryPostRequest req = new AerodromesByDistanceUsV1AerodromesDistanceQueryPostRequest() {{
-                headers = new AerodromesByDistanceUsV1AerodromesDistanceQueryPostHeaders() {{
-                    xApiKey = "corrupti";
+                aerodromesByDistance = new AerodromesByDistance() {{
+                    distance = 592845;
+                    latitude = 844266;
+                    longitude = 857946;
                 }};
-                request = new AerodromesByDistance() {{
-                    distance = 715190;
-                    latitude = 602763;
-                    longitude = 544883;
-                }};
-            }};            
+                xApiKey = "corrupti";
+            }}            
 
             AerodromesByDistanceUsV1AerodromesDistanceQueryPostResponse res = sdk.aerodromes.aerodromesByDistanceUsV1AerodromesDistanceQueryPost(req);
 
@@ -51,7 +48,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### aerodromes

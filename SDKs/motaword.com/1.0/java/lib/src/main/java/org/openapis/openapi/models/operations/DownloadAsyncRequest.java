@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DownloadAsyncRequest {
-    
-    public DownloadAsyncQueryParams queryParams;
-    public DownloadAsyncRequest withQueryParams(DownloadAsyncQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Async operation key
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=async_request_key")
+    public String asyncRequestKey;
+    public DownloadAsyncRequest withAsyncRequestKey(String asyncRequestKey) {
+        this.asyncRequestKey = asyncRequestKey;
         return this;
     }
     

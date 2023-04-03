@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public ListQueryParams queryParams;
-    public ListRequest withQueryParams(ListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public ListRequest withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     

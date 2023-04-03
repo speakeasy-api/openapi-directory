@@ -4,20 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdRequestChangesRequest {
-    
-    public PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdRequestChangesPathParams pathParams;
-    public PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdRequestChangesRequest withPathParams(PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdRequestChangesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the pull request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pull_request_id")
+    public Long pullRequestId;
+    public PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdRequestChangesRequest withPullRequestId(Long pullRequestId) {
+        this.pullRequestId = pullRequestId;
         return this;
     }
     
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdRequestChangesRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
     
-    public PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdRequestChangesSecurity security;
-    public PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdRequestChangesRequest withSecurity(PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdRequestChangesSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdRequestChangesRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

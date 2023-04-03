@@ -7,38 +7,60 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LocationsUpdateRequest {
-    
-    public LocationsUpdatePathParams pathParams;
-    public LocationsUpdateRequest withPathParams(LocationsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public LocationsUpdateQueryParams queryParams;
-    public LocationsUpdateRequest withQueryParams(LocationsUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public LocationsUpdateHeaders headers;
-    public LocationsUpdateRequest withHeaders(LocationsUpdateHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.LocationInput request;
-    public LocationsUpdateRequest withRequest(org.openapis.openapi.models.shared.LocationInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.LocationInput locationInput;
+    public LocationsUpdateRequest withLocationInput(org.openapis.openapi.models.shared.LocationInput locationInput) {
+        this.locationInput = locationInput;
         return this;
     }
     
+    /**
+     * ID of the record you are acting upon.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public LocationsUpdateRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public LocationsUpdateSecurity security;
-    public LocationsUpdateRequest withSecurity(LocationsUpdateSecurity security) {
-        this.security = security;
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
+    public Boolean raw;
+    public LocationsUpdateRequest withRaw(Boolean raw) {
+        this.raw = raw;
+        return this;
+    }
+    
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public LocationsUpdateRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
+        return this;
+    }
+    
+    /**
+     * ID of the consumer which you want to get or push data from
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-consumer-id")
+    public String xApideckConsumerId;
+    public LocationsUpdateRequest withXApideckConsumerId(String xApideckConsumerId) {
+        this.xApideckConsumerId = xApideckConsumerId;
+        return this;
+    }
+    
+    /**
+     * Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-service-id")
+    public String xApideckServiceId;
+    public LocationsUpdateRequest withXApideckServiceId(String xApideckServiceId) {
+        this.xApideckServiceId = xApideckServiceId;
         return this;
     }
     

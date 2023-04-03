@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReverseASandboxWireTransferRequest {
-    
-    public ReverseASandboxWireTransferPathParams pathParams;
-    public ReverseASandboxWireTransferRequest withPathParams(ReverseASandboxWireTransferPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=wire_transfer_id")
+    public String wireTransferId;
+    public ReverseASandboxWireTransferRequest withWireTransferId(String wireTransferId) {
+        this.wireTransferId = wireTransferId;
         return this;
     }
     

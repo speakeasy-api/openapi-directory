@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPersonasRequest {
+    /**
+     * Amount of items to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
+    public Long count;
+    public GetPersonasRequest withCount(Long count) {
+        this.count = count;
+        return this;
+    }
     
-    public GetPersonasQueryParams queryParams;
-    public GetPersonasRequest withQueryParams(GetPersonasQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Allows to select extra fields
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String[] expand;
+    public GetPersonasRequest withExpand(String[] expand) {
+        this.expand = expand;
+        return this;
+    }
+    
+    /**
+     * Allows to select only needed fields
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String[] fields;
+    public GetPersonasRequest withFields(String[] fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Filter by Persona name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public GetPersonasRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Offset, used together with count
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetPersonasRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     

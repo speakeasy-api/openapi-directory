@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveEmployeeRequest {
-    
-    public RetrieveEmployeePathParams pathParams;
-    public RetrieveEmployeeRequest withPathParams(RetrieveEmployeePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RetrieveEmployeeSecurity security;
-    public RetrieveEmployeeRequest withSecurity(RetrieveEmployeeSecurity security) {
-        this.security = security;
+    /**
+     * The employee's ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=employee_id")
+    public String employeeId;
+    public RetrieveEmployeeRequest withEmployeeId(String employeeId) {
+        this.employeeId = employeeId;
         return this;
     }
     

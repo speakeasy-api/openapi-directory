@@ -4,34 +4,87 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListRoomRecordingRequest {
-    
-    public ListRoomRecordingPathParams pathParams;
-    public ListRoomRecordingRequest withPathParams(ListRoomRecordingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Read only recordings that started on or after this [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) datetime with time zone.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DateCreatedAfter")
+    public OffsetDateTime dateCreatedAfter;
+    public ListRoomRecordingRequest withDateCreatedAfter(OffsetDateTime dateCreatedAfter) {
+        this.dateCreatedAfter = dateCreatedAfter;
         return this;
     }
     
-    
-    public ListRoomRecordingQueryParams queryParams;
-    public ListRoomRecordingRequest withQueryParams(ListRoomRecordingQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Read only Recordings that started before this [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) datetime with time zone.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DateCreatedBefore")
+    public OffsetDateTime dateCreatedBefore;
+    public ListRoomRecordingRequest withDateCreatedBefore(OffsetDateTime dateCreatedBefore) {
+        this.dateCreatedBefore = dateCreatedBefore;
         return this;
     }
     
-    
-    public ListRoomRecordingSecurity security;
-    public ListRoomRecordingRequest withSecurity(ListRoomRecordingSecurity security) {
-        this.security = security;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListRoomRecordingRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListRoomRecordingRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public String serverURL;
-    public ListRoomRecordingRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListRoomRecordingRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * The SID of the room with the RoomRecording resources to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=RoomSid")
+    public String roomSid;
+    public ListRoomRecordingRequest withRoomSid(String roomSid) {
+        this.roomSid = roomSid;
+        return this;
+    }
+    
+    /**
+     * Read only the recordings that have this `source_sid`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SourceSid")
+    public String sourceSid;
+    public ListRoomRecordingRequest withSourceSid(String sourceSid) {
+        this.sourceSid = sourceSid;
+        return this;
+    }
+    
+    /**
+     * Read only the recordings with this status. Can be: `processing`, `completed`, or `deleted`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Status")
+    public org.openapis.openapi.models.shared.RoomRecordingEnumStatusEnum status;
+    public ListRoomRecordingRequest withStatus(org.openapis.openapi.models.shared.RoomRecordingEnumStatusEnum status) {
+        this.status = status;
         return this;
     }
     

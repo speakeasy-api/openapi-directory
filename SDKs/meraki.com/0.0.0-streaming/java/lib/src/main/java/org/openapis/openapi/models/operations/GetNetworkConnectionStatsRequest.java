@@ -4,20 +4,83 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkConnectionStatsRequest {
-    
-    public GetNetworkConnectionStatsPathParams pathParams;
-    public GetNetworkConnectionStatsRequest withPathParams(GetNetworkConnectionStatsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filter results by AP Tag
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=apTag")
+    public String apTag;
+    public GetNetworkConnectionStatsRequest withApTag(String apTag) {
+        this.apTag = apTag;
         return this;
     }
     
+    /**
+     * Filter results by band (either '2.4' or '5'). Note that data prior to February 2020 will not have band information.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=band")
+    public GetNetworkConnectionStatsBandEnum band;
+    public GetNetworkConnectionStatsRequest withBand(GetNetworkConnectionStatsBandEnum band) {
+        this.band = band;
+        return this;
+    }
     
-    public GetNetworkConnectionStatsQueryParams queryParams;
-    public GetNetworkConnectionStatsRequest withQueryParams(GetNetworkConnectionStatsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkConnectionStatsRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
+    
+    /**
+     * Filter results by SSID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ssid")
+    public Long ssid;
+    public GetNetworkConnectionStatsRequest withSsid(Long ssid) {
+        this.ssid = ssid;
+        return this;
+    }
+    
+    /**
+     * The beginning of the timespan for the data. The maximum lookback period is 180 days from today.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t0")
+    public String t0;
+    public GetNetworkConnectionStatsRequest withT0(String t0) {
+        this.t0 = t0;
+        return this;
+    }
+    
+    /**
+     * The end of the timespan for the data. t1 can be a maximum of 7 days after t0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t1")
+    public String t1;
+    public GetNetworkConnectionStatsRequest withT1(String t1) {
+        this.t1 = t1;
+        return this;
+    }
+    
+    /**
+     * The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timespan")
+    public Float timespan;
+    public GetNetworkConnectionStatsRequest withTimespan(Float timespan) {
+        this.timespan = timespan;
+        return this;
+    }
+    
+    /**
+     * Filter results by VLAN
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vlan")
+    public Long vlan;
+    public GetNetworkConnectionStatsRequest withVlan(Long vlan) {
+        this.vlan = vlan;
         return this;
     }
     

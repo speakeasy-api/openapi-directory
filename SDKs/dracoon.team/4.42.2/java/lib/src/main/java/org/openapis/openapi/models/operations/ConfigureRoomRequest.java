@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConfigureRoomRequest {
-    
-    public ConfigureRoomPathParams pathParams;
-    public ConfigureRoomRequest withPathParams(ConfigureRoomPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ConfigureRoomHeaders headers;
-    public ConfigureRoomRequest withHeaders(ConfigureRoomHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ConfigRoomRequest request;
-    public ConfigureRoomRequest withRequest(org.openapis.openapi.models.shared.ConfigRoomRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ConfigRoomRequest configRoomRequest;
+    public ConfigureRoomRequest withConfigRoomRequest(org.openapis.openapi.models.shared.ConfigRoomRequest configRoomRequest) {
+        this.configRoomRequest = configRoomRequest;
+        return this;
+    }
+    
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public ConfigureRoomRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
+        return this;
+    }
+    
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public ConfigureRoomXSdsDateFormatEnum xSdsDateFormat;
+    public ConfigureRoomRequest withXSdsDateFormat(ConfigureRoomXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
+        return this;
+    }
+    
+    /**
+     * Room ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=room_id")
+    public Long roomId;
+    public ConfigureRoomRequest withRoomId(Long roomId) {
+        this.roomId = roomId;
         return this;
     }
     

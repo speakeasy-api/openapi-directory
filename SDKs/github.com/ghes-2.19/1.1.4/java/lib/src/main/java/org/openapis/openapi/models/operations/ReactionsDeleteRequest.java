@@ -4,20 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsDeleteRequest {
-    
-    public ReactionsDeletePathParams pathParams;
-    public ReactionsDeleteRequest withPathParams(ReactionsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * This API is under preview and subject to change.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=accept")
+    public String accept;
+    public ReactionsDeleteRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public ReactionsDeleteHeaders headers;
-    public ReactionsDeleteRequest withHeaders(ReactionsDeleteHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reaction_id")
+    public Long reactionId;
+    public ReactionsDeleteRequest withReactionId(Long reactionId) {
+        this.reactionId = reactionId;
         return this;
     }
     

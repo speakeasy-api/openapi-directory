@@ -33,25 +33,26 @@ public class InterconnectLocations {
     /**
      * Returns the details for the specified interconnect location. Gets a list of available interconnect locations by making a list() request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeInterconnectLocationsGetResponse computeInterconnectLocationsGet(org.openapis.openapi.models.operations.ComputeInterconnectLocationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeInterconnectLocationsGetResponse computeInterconnectLocationsGet(org.openapis.openapi.models.operations.ComputeInterconnectLocationsGetRequest request, org.openapis.openapi.models.operations.ComputeInterconnectLocationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInterconnectLocationsGetPathParams.class, baseUrl, "/projects/{project}/global/interconnectLocations/{interconnectLocation}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInterconnectLocationsGetRequest.class, baseUrl, "/projects/{project}/global/interconnectLocations/{interconnectLocation}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInterconnectLocationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInterconnectLocationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,25 +79,26 @@ public class InterconnectLocations {
     /**
      * Retrieves the list of interconnect locations available to the specified project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeInterconnectLocationsListResponse computeInterconnectLocationsList(org.openapis.openapi.models.operations.ComputeInterconnectLocationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeInterconnectLocationsListResponse computeInterconnectLocationsList(org.openapis.openapi.models.operations.ComputeInterconnectLocationsListRequest request, org.openapis.openapi.models.operations.ComputeInterconnectLocationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInterconnectLocationsListPathParams.class, baseUrl, "/projects/{project}/global/interconnectLocations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeInterconnectLocationsListRequest.class, baseUrl, "/projects/{project}/global/interconnectLocations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInterconnectLocationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeInterconnectLocationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

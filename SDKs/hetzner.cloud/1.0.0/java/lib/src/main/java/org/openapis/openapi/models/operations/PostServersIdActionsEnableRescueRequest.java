@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostServersIdActionsEnableRescueRequest {
-    
-    public PostServersIdActionsEnableRescuePathParams pathParams;
-    public PostServersIdActionsEnableRescueRequest withPathParams(PostServersIdActionsEnableRescuePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PostServersIdActionsEnableRescueRequestBody requestBody;
+    public PostServersIdActionsEnableRescueRequest withRequestBody(PostServersIdActionsEnableRescueRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostServersIdActionsEnableRescueRequestBody request;
-    public PostServersIdActionsEnableRescueRequest withRequest(PostServersIdActionsEnableRescueRequestBody request) {
-        this.request = request;
+    /**
+     * ID of the Server
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public PostServersIdActionsEnableRescueRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

@@ -40,12 +40,12 @@ public class Employees {
      */
     public org.openapis.openapi.models.operations.CreateEmployeeResponse createEmployee(org.openapis.openapi.models.operations.CreateEmployeeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateEmployeePathParams.class, baseUrl, "/api/v1/groups/{group_id}/employees", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateEmployeeRequest.class, baseUrl, "/api/v1/groups/{group_id}/employees", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "employeeCreateRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -84,12 +84,12 @@ public class Employees {
      */
     public org.openapis.openapi.models.operations.EditEmployeeResponse editEmployee(org.openapis.openapi.models.operations.EditEmployeeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditEmployeePathParams.class, baseUrl, "/api/v1/employees/{employee_id}/{version}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditEmployeeRequest.class, baseUrl, "/api/v1/employees/{employee_id}/{version}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "employeeEditRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -128,7 +128,7 @@ public class Employees {
      */
     public org.openapis.openapi.models.operations.GetEmployeeResponse getEmployee(org.openapis.openapi.models.operations.GetEmployeeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEmployeePathParams.class, baseUrl, "/api/v1/employees/{employee_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEmployeeRequest.class, baseUrl, "/api/v1/employees/{employee_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -167,13 +167,13 @@ public class Employees {
      */
     public org.openapis.openapi.models.operations.GetGroupEmployeesListResponse getGroupEmployeesList(org.openapis.openapi.models.operations.GetGroupEmployeesListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGroupEmployeesListPathParams.class, baseUrl, "/api/v1/groups/{group_id}/employees", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGroupEmployeesListRequest.class, baseUrl, "/api/v1/groups/{group_id}/employees", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGroupEmployeesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGroupEmployeesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

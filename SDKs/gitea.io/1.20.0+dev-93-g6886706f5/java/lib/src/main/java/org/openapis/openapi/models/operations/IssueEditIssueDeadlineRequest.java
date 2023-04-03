@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssueEditIssueDeadlineRequest {
-    
-    public IssueEditIssueDeadlinePathParams pathParams;
-    public IssueEditIssueDeadlineRequest withPathParams(IssueEditIssueDeadlinePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.EditDeadlineOption editDeadlineOption;
+    public IssueEditIssueDeadlineRequest withEditDeadlineOption(org.openapis.openapi.models.shared.EditDeadlineOption editDeadlineOption) {
+        this.editDeadlineOption = editDeadlineOption;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.EditDeadlineOption request;
-    public IssueEditIssueDeadlineRequest withRequest(org.openapis.openapi.models.shared.EditDeadlineOption request) {
-        this.request = request;
+    /**
+     * index of the issue to create or update a deadline on
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=index")
+    public Long index;
+    public IssueEditIssueDeadlineRequest withIndex(Long index) {
+        this.index = index;
+        return this;
+    }
+    
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssueEditIssueDeadlineRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssueEditIssueDeadlineRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

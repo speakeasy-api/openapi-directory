@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRankingsRequest {
+    /**
+     * Season type filter (regular or postseason)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=seasonType")
+    public String seasonType;
+    public GetRankingsRequest withSeasonType(String seasonType) {
+        this.seasonType = seasonType;
+        return this;
+    }
     
-    public GetRankingsQueryParams queryParams;
-    public GetRankingsRequest withQueryParams(GetRankingsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Week filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=week")
+    public Long week;
+    public GetRankingsRequest withWeek(Long week) {
+        this.week = week;
+        return this;
+    }
+    
+    /**
+     * Year/season filter for games
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public Long year;
+    public GetRankingsRequest withYear(Long year) {
+        this.year = year;
         return this;
     }
     

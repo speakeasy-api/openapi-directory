@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetResourcesCampaignsIdJsonRequest {
-    
-    public GetResourcesCampaignsIdJsonPathParams pathParams;
-    public GetResourcesCampaignsIdJsonRequest withPathParams(GetResourcesCampaignsIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the record to look up
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetResourcesCampaignsIdJsonRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

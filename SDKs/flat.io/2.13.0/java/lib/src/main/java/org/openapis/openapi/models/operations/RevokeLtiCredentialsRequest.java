@@ -4,20 +4,17 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RevokeLtiCredentialsRequest {
-    
-    public RevokeLtiCredentialsPathParams pathParams;
-    public RevokeLtiCredentialsRequest withPathParams(RevokeLtiCredentialsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RevokeLtiCredentialsSecurity security;
-    public RevokeLtiCredentialsRequest withSecurity(RevokeLtiCredentialsSecurity security) {
-        this.security = security;
+    /**
+     * Credentials unique identifier
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=credentials")
+    public String credentials;
+    public RevokeLtiCredentialsRequest withCredentials(String credentials) {
+        this.credentials = credentials;
         return this;
     }
     

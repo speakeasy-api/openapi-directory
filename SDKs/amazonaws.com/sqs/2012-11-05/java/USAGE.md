@@ -4,11 +4,8 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.GETAddPermissionPathParams;
 import org.openapis.openapi.models.operations.GETAddPermissionActionEnum;
 import org.openapis.openapi.models.operations.GETAddPermissionVersionEnum;
-import org.openapis.openapi.models.operations.GETAddPermissionQueryParams;
-import org.openapis.openapi.models.operations.GETAddPermissionHeaders;
 import org.openapis.openapi.models.operations.GETAddPermissionRequest;
 import org.openapis.openapi.models.operations.GETAddPermissionResponse;
 
@@ -17,42 +14,35 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GETAddPermissionRequest req = new GETAddPermissionRequest() {{
-                pathParams = new GETAddPermissionPathParams() {{
-                    accountNumber = 548814;
-                    queueName = "provident";
+                awsAccountIds = new String[]{{
+                    add("provident"),
+                    add("distinctio"),
+                    add("quibusdam"),
                 }};
-                queryParams = new GETAddPermissionQueryParams() {{
-                    awsAccountIds = new String[]{{
-                        add("quibusdam"),
-                        add("unde"),
-                        add("nulla"),
-                    }};
-                    action = "AddPermission";
-                    actions = new String[]{{
-                        add("illum"),
-                        add("vel"),
-                        add("error"),
-                    }};
-                    label = "deserunt";
-                    version = "2012-11-05";
+                accountNumber = 602763;
+                action = "AddPermission";
+                actions = new String[]{{
+                    add("corrupti"),
+                    add("illum"),
+                    add("vel"),
+                    add("error"),
                 }};
-                headers = new GETAddPermissionHeaders() {{
-                    xAmzAlgorithm = "suscipit";
-                    xAmzContentSha256 = "iure";
-                    xAmzCredential = "magnam";
-                    xAmzDate = "debitis";
-                    xAmzSecurityToken = "ipsa";
-                    xAmzSignature = "delectus";
-                    xAmzSignedHeaders = "tempora";
-                }};
-            }};            
+                label = "deserunt";
+                queueName = "suscipit";
+                version = "2012-11-05";
+                xAmzAlgorithm = "iure";
+                xAmzContentSha256 = "magnam";
+                xAmzCredential = "debitis";
+                xAmzDate = "ipsa";
+                xAmzSecurityToken = "delectus";
+                xAmzSignature = "tempora";
+                xAmzSignedHeaders = "suscipit";
+            }}            
 
             GETAddPermissionResponse res = sdk.getAddPermission(req);
 

@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetinvestorAccountRequest {
-    
-    public GetinvestorAccountPathParams pathParams;
-    public GetinvestorAccountRequest withPathParams(GetinvestorAccountPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the investor account
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account_id")
+    public String accountId;
+    public GetinvestorAccountRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
-    
-    public GetinvestorAccountHeaders headers;
-    public GetinvestorAccountRequest withHeaders(GetinvestorAccountHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetinvestorAccountSecurity security;
-    public GetinvestorAccountRequest withSecurity(GetinvestorAccountSecurity security) {
-        this.security = security;
+    /**
+     * ApiSecretKey
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public GetinvestorAccountRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

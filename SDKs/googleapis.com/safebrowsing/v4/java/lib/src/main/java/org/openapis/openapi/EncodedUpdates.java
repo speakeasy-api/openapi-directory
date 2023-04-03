@@ -32,13 +32,13 @@ public class EncodedUpdates {
 
     public org.openapis.openapi.models.operations.SafebrowsingEncodedUpdatesGetResponse safebrowsingEncodedUpdatesGet(org.openapis.openapi.models.operations.SafebrowsingEncodedUpdatesGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SafebrowsingEncodedUpdatesGetPathParams.class, baseUrl, "/v4/encodedUpdates/{encodedRequest}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SafebrowsingEncodedUpdatesGetRequest.class, baseUrl, "/v4/encodedUpdates/{encodedRequest}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SafebrowsingEncodedUpdatesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SafebrowsingEncodedUpdatesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

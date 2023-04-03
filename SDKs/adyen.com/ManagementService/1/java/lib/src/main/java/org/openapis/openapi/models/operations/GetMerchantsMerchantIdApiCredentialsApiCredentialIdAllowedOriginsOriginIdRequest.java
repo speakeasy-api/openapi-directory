@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdRequest {
-    
-    public GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdPathParams pathParams;
-    public GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdRequest withPathParams(GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the API credential.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiCredentialId")
+    public String apiCredentialId;
+    public GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdRequest withApiCredentialId(String apiCredentialId) {
+        this.apiCredentialId = apiCredentialId;
         return this;
     }
     
+    /**
+     * The unique identifier of the merchant account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
+    public String merchantId;
+    public GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdRequest withMerchantId(String merchantId) {
+        this.merchantId = merchantId;
+        return this;
+    }
     
-    public GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdSecurity security;
-    public GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdRequest withSecurity(GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the allowed origin.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=originId")
+    public String originId;
+    public GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdRequest withOriginId(String originId) {
+        this.originId = originId;
         return this;
     }
     

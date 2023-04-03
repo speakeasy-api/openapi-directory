@@ -37,10 +37,11 @@ public class CustomerGroups {
      * 
      * The request must include the `name` value of the group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateCustomerGroupResponse createCustomerGroup(org.openapis.openapi.models.operations.CreateCustomerGroupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateCustomerGroupResponse createCustomerGroup(org.openapis.openapi.models.shared.CreateCustomerGroupRequest request, org.openapis.openapi.models.operations.CreateCustomerGroupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/customers/groups");
         
@@ -54,7 +55,7 @@ public class CustomerGroups {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,19 +83,20 @@ public class CustomerGroups {
      * DeleteCustomerGroup
      * Deletes a customer group as identified by the `group_id` value.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteCustomerGroupResponse deleteCustomerGroup(org.openapis.openapi.models.operations.DeleteCustomerGroupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteCustomerGroupResponse deleteCustomerGroup(org.openapis.openapi.models.operations.DeleteCustomerGroupRequest request, org.openapis.openapi.models.operations.DeleteCustomerGroupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCustomerGroupPathParams.class, baseUrl, "/v2/customers/groups/{group_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCustomerGroupRequest.class, baseUrl, "/v2/customers/groups/{group_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -122,10 +124,11 @@ public class CustomerGroups {
      * ListCustomerGroups
      * Retrieves the list of customer groups of a business.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListCustomerGroupsResponse listCustomerGroups(org.openapis.openapi.models.operations.ListCustomerGroupsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListCustomerGroupsResponse listCustomerGroups(org.openapis.openapi.models.operations.ListCustomerGroupsRequest request, org.openapis.openapi.models.operations.ListCustomerGroupsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/customers/groups");
         
@@ -133,14 +136,14 @@ public class CustomerGroups {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCustomerGroupsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCustomerGroupsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -168,19 +171,20 @@ public class CustomerGroups {
      * RetrieveCustomerGroup
      * Retrieves a specific customer group as identified by the `group_id` value.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrieveCustomerGroupResponse retrieveCustomerGroup(org.openapis.openapi.models.operations.RetrieveCustomerGroupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveCustomerGroupResponse retrieveCustomerGroup(org.openapis.openapi.models.operations.RetrieveCustomerGroupRequest request, org.openapis.openapi.models.operations.RetrieveCustomerGroupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveCustomerGroupPathParams.class, baseUrl, "/v2/customers/groups/{group_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveCustomerGroupRequest.class, baseUrl, "/v2/customers/groups/{group_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -208,24 +212,25 @@ public class CustomerGroups {
      * UpdateCustomerGroup
      * Updates a customer group as identified by the `group_id` value.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateCustomerGroupResponse updateCustomerGroup(org.openapis.openapi.models.operations.UpdateCustomerGroupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateCustomerGroupResponse updateCustomerGroup(org.openapis.openapi.models.operations.UpdateCustomerGroupRequest request, org.openapis.openapi.models.operations.UpdateCustomerGroupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCustomerGroupPathParams.class, baseUrl, "/v2/customers/groups/{group_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCustomerGroupRequest.class, baseUrl, "/v2/customers/groups/{group_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateCustomerGroupRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

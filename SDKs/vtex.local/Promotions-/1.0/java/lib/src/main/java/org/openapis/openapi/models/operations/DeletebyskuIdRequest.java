@@ -4,34 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletebyskuIdRequest {
-    
-    public DeletebyskuIdPathParams pathParams;
-    public DeletebyskuIdRequest withPathParams(DeletebyskuIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public DeletebyskuIdRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public DeletebyskuIdQueryParams queryParams;
-    public DeletebyskuIdRequest withQueryParams(DeletebyskuIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public DeletebyskuIdRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
-    
-    public DeletebyskuIdHeaders headers;
-    public DeletebyskuIdRequest withHeaders(DeletebyskuIdHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=an")
+    public String an;
+    public DeletebyskuIdRequest withAn(String an) {
+        this.an = an;
         return this;
     }
     
-    
-    public String serverURL;
-    public DeletebyskuIdRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=skuId")
+    public String skuId;
+    public DeletebyskuIdRequest withSkuId(String skuId) {
+        this.skuId = skuId;
         return this;
     }
     

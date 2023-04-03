@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetInternationalScheduledPaymentConsentsConsentIdFundsConfirmationSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemePsuoAuth2Security psuoAuth2Security;
-    public GetInternationalScheduledPaymentConsentsConsentIdFundsConfirmationSecurity withPSUOAuth2Security(org.openapis.openapi.models.shared.SchemePsuoAuth2Security psuoAuth2Security) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String psuoAuth2Security;
+    public GetInternationalScheduledPaymentConsentsConsentIdFundsConfirmationSecurity withPSUOAuth2Security(String psuoAuth2Security) {
         this.psuoAuth2Security = psuoAuth2Security;
         return this;
     }

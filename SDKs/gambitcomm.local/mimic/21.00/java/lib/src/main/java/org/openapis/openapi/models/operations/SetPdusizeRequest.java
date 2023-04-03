@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetPdusizeRequest {
+    /**
+     * Agent to return the PDU size
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public SetPdusizeRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public SetPdusizePathParams pathParams;
-    public SetPdusizeRequest withPathParams(SetPdusizePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * PDU size setting for the agent
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pdusize")
+    public Integer pdusize;
+    public SetPdusizeRequest withPdusize(Integer pdusize) {
+        this.pdusize = pdusize;
         return this;
     }
     

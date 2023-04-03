@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutUserEpisodesEpisodeIdRequest {
-    
-    public PutUserEpisodesEpisodeIdPathParams pathParams;
-    public PutUserEpisodesEpisodeIdRequest withPathParams(PutUserEpisodesEpisodeIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.MarkedEpisodeInput markedEpisodeInput;
+    public PutUserEpisodesEpisodeIdRequest withMarkedEpisodeInput(org.openapis.openapi.models.shared.MarkedEpisodeInput markedEpisodeInput) {
+        this.markedEpisodeInput = markedEpisodeInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.MarkedEpisodeInput request;
-    public PutUserEpisodesEpisodeIdRequest withRequest(org.openapis.openapi.models.shared.MarkedEpisodeInput request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=episode_id")
+    public Long episodeId;
+    public PutUserEpisodesEpisodeIdRequest withEpisodeId(Long episodeId) {
+        this.episodeId = episodeId;
         return this;
     }
     

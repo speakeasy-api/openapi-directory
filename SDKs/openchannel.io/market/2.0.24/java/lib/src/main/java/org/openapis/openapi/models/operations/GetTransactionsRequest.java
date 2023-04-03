@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTransactionsRequest {
+    /**
+     * The maximum number of results to return per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetTransactionsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetTransactionsQueryParams queryParams;
-    public GetTransactionsRequest withQueryParams(GetTransactionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The result set page number to be returned
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
+    public Long pageNumber;
+    public GetTransactionsRequest withPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    
+    /**
+     * A query document. Example: {'userId':'1'} matches all the transactions that have the userId '1'.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public GetTransactionsRequest withQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    
+    /**
+     * A sort document. Example: {'date':1} sorts the results by total in ascending order
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetTransactionsRequest withSort(String sort) {
+        this.sort = sort;
         return this;
     }
     

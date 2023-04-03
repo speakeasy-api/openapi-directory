@@ -4,13 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGetUserByOrcidRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public GetGetUserByOrcidFormatEnum format;
+    public GetGetUserByOrcidRequest withFormat(GetGetUserByOrcidFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public GetGetUserByOrcidQueryParams queryParams;
-    public GetGetUserByOrcidRequest withQueryParams(GetGetUserByOrcidQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orcid")
+    public String orcid;
+    public GetGetUserByOrcidRequest withOrcid(String orcid) {
+        this.orcid = orcid;
         return this;
     }
     

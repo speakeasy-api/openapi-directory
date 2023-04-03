@@ -18,9 +18,7 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GetNameConceptTypeSpecificConceptJsonConceptTypeEnum;
-import org.openapis.openapi.models.operations.GetNameConceptTypeSpecificConceptJsonPathParams;
 import org.openapis.openapi.models.operations.GetNameConceptTypeSpecificConceptJsonFieldsEnum;
-import org.openapis.openapi.models.operations.GetNameConceptTypeSpecificConceptJsonQueryParams;
 import org.openapis.openapi.models.operations.GetNameConceptTypeSpecificConceptJsonRequest;
 import org.openapis.openapi.models.operations.GetNameConceptTypeSpecificConceptJsonResponse;
 
@@ -29,22 +27,16 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    apikey = new SchemeApikey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    apikey = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GetNameConceptTypeSpecificConceptJsonRequest req = new GetNameConceptTypeSpecificConceptJsonRequest() {{
-                pathParams = new GetNameConceptTypeSpecificConceptJsonPathParams() {{
-                    conceptType = "nytd_org";
-                    specificConcept = "provident";
-                }};
-                queryParams = new GetNameConceptTypeSpecificConceptJsonQueryParams() {{
-                    fields = "article_list";
-                    query = "quibusdam";
-                }};
-            }};            
+                conceptType = "nytd_org";
+                fields = "combinations";
+                query = "distinctio";
+                specificConcept = "quibusdam";
+            }}            
 
             GetNameConceptTypeSpecificConceptJsonResponse res = sdk.getNameConceptTypeSpecificConceptJson(req);
 
@@ -58,7 +50,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

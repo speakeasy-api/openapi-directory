@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAChatbotMessageSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeClientCredentials clientCredentials;
-    public DeleteAChatbotMessageSecurity withClientCredentials(org.openapis.openapi.models.shared.SchemeClientCredentials clientCredentials) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String clientCredentials;
+    public DeleteAChatbotMessageSecurity withClientCredentials(String clientCredentials) {
         this.clientCredentials = clientCredentials;
         return this;
     }

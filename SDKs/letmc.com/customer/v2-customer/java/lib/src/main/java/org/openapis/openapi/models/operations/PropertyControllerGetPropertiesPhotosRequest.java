@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PropertyControllerGetPropertiesPhotosRequest {
-    
-    public PropertyControllerGetPropertiesPhotosPathParams pathParams;
-    public PropertyControllerGetPropertiesPhotosRequest withPathParams(PropertyControllerGetPropertiesPhotosPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The maximum number of items to return (up to 1000 per request)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
+    public Integer count;
+    public PropertyControllerGetPropertiesPhotosRequest withCount(Integer count) {
+        this.count = count;
         return this;
     }
     
+    /**
+     * The index of the first item to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public PropertyControllerGetPropertiesPhotosRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
     
-    public PropertyControllerGetPropertiesPhotosQueryParams queryParams;
-    public PropertyControllerGetPropertiesPhotosRequest withQueryParams(PropertyControllerGetPropertiesPhotosQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The unique ID of the Property
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=propertyID")
+    public String propertyID;
+    public PropertyControllerGetPropertiesPhotosRequest withPropertyID(String propertyID) {
+        this.propertyID = propertyID;
+        return this;
+    }
+    
+    /**
+     * The unique client short-name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
+    public String shortName;
+    public PropertyControllerGetPropertiesPhotosRequest withShortName(String shortName) {
+        this.shortName = shortName;
+        return this;
+    }
+    
+    /**
+     * The login token returned from the /session POST call
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public PropertyControllerGetPropertiesPhotosRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

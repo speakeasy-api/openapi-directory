@@ -4,20 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersIdUserProfilesIdProfileRequest {
-    
-    public GetUsersIdUserProfilesIdProfilePathParams pathParams;
-    public GetUsersIdUserProfilesIdProfileRequest withPathParams(GetUsersIdUserProfilesIdProfilePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public GetUsersIdUserProfilesIdProfileRequest withExpand(String expand) {
+        this.expand = expand;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_profile")
+    public Long idProfile;
+    public GetUsersIdUserProfilesIdProfileRequest withIdProfile(Long idProfile) {
+        this.idProfile = idProfile;
+        return this;
+    }
     
-    public GetUsersIdUserProfilesIdProfileQueryParams queryParams;
-    public GetUsersIdUserProfilesIdProfileRequest withQueryParams(GetUsersIdUserProfilesIdProfileQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Hint: you can use 'me' or 'all'
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
+    public String idUser;
+    public GetUsersIdUserProfilesIdProfileRequest withIdUser(String idUser) {
+        this.idUser = idUser;
         return this;
     }
     

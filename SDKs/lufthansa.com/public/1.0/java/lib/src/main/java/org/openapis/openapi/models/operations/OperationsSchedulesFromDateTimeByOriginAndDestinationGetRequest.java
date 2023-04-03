@@ -4,34 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OperationsSchedulesFromDateTimeByOriginAndDestinationGetRequest {
-    
-    public OperationsSchedulesFromDateTimeByOriginAndDestinationGetPathParams pathParams;
-    public OperationsSchedulesFromDateTimeByOriginAndDestinationGetRequest withPathParams(OperationsSchedulesFromDateTimeByOriginAndDestinationGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public OperationsSchedulesFromDateTimeByOriginAndDestinationGetRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public OperationsSchedulesFromDateTimeByOriginAndDestinationGetQueryParams queryParams;
-    public OperationsSchedulesFromDateTimeByOriginAndDestinationGetRequest withQueryParams(OperationsSchedulesFromDateTimeByOriginAndDestinationGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Destination airport. 3-letter IATA airport code (e.g. 'FRA')
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destination")
+    public String destination;
+    public OperationsSchedulesFromDateTimeByOriginAndDestinationGetRequest withDestination(String destination) {
+        this.destination = destination;
         return this;
     }
     
-    
-    public OperationsSchedulesFromDateTimeByOriginAndDestinationGetHeaders headers;
-    public OperationsSchedulesFromDateTimeByOriginAndDestinationGetRequest withHeaders(OperationsSchedulesFromDateTimeByOriginAndDestinationGetHeaders headers) {
-        this.headers = headers;
+    /**
+     * Show only direct flights (false=0, true=1). Default is false
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=directFlights")
+    public Boolean directFlights;
+    public OperationsSchedulesFromDateTimeByOriginAndDestinationGetRequest withDirectFlights(Boolean directFlights) {
+        this.directFlights = directFlights;
         return this;
     }
     
+    /**
+     * Local departure date and optionally departure time (YYYY-MM-DD or YYYY-MM-DDTHH:mm). When not provided, time is assumed to be 00:01
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fromDateTime")
+    public String fromDateTime;
+    public OperationsSchedulesFromDateTimeByOriginAndDestinationGetRequest withFromDateTime(String fromDateTime) {
+        this.fromDateTime = fromDateTime;
+        return this;
+    }
     
-    public OperationsSchedulesFromDateTimeByOriginAndDestinationGetSecurity security;
-    public OperationsSchedulesFromDateTimeByOriginAndDestinationGetRequest withSecurity(OperationsSchedulesFromDateTimeByOriginAndDestinationGetSecurity security) {
-        this.security = security;
+    /**
+     * Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public String limit;
+    public OperationsSchedulesFromDateTimeByOriginAndDestinationGetRequest withLimit(String limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Number of records skipped. Defaults to 0
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public String offset;
+    public OperationsSchedulesFromDateTimeByOriginAndDestinationGetRequest withOffset(String offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Departure airport. 3-letter IATA airport code (e.g. 'ZRH')
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=origin")
+    public String origin;
+    public OperationsSchedulesFromDateTimeByOriginAndDestinationGetRequest withOrigin(String origin) {
+        this.origin = origin;
         return this;
     }
     

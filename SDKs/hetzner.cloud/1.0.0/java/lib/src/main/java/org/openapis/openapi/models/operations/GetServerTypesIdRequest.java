@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetServerTypesIdRequest {
-    
-    public GetServerTypesIdPathParams pathParams;
-    public GetServerTypesIdRequest withPathParams(GetServerTypesIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of Server Type
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetServerTypesIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

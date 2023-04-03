@@ -36,11 +36,10 @@ public class Groups {
     /**
      * Get all service groups
      * Get all service groups
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AllServiceGroupsResponse allServiceGroups(org.openapis.openapi.models.operations.AllServiceGroupsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AllServiceGroupsResponse allServiceGroups() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/groups");
         
@@ -49,8 +48,7 @@ public class Groups {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -79,10 +77,11 @@ public class Groups {
      * Create a new service group
      * Create a new service group
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateGroupResponse createGroup(org.openapis.openapi.models.operations.CreateGroupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateGroupResponse createGroup(org.openapis.openapi.models.shared.Group request, org.openapis.openapi.models.operations.CreateGroupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/groups");
         
@@ -93,7 +92,7 @@ public class Groups {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -123,19 +122,20 @@ public class Groups {
      * Delete a service group
      * Delete a service group
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteGroupResponse deleteGroup(org.openapis.openapi.models.operations.DeleteGroupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteGroupResponse deleteGroup(org.openapis.openapi.models.operations.DeleteGroupRequest request, org.openapis.openapi.models.operations.DeleteGroupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteGroupPathParams.class, baseUrl, "/api/groups/{serviceGroupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteGroupRequest.class, baseUrl, "/api/groups/{serviceGroupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -165,21 +165,22 @@ public class Groups {
      * Update a service group with a diff
      * Update a service group with a diff
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchGroupResponse patchGroup(org.openapis.openapi.models.operations.PatchGroupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchGroupResponse patchGroup(org.openapis.openapi.models.operations.PatchGroupRequest request, org.openapis.openapi.models.operations.PatchGroupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchGroupPathParams.class, baseUrl, "/api/groups/{serviceGroupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchGroupRequest.class, baseUrl, "/api/groups/{serviceGroupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -209,19 +210,20 @@ public class Groups {
      * Get a service group
      * Get a service group
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServiceGroupResponse serviceGroup(org.openapis.openapi.models.operations.ServiceGroupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServiceGroupResponse serviceGroup(org.openapis.openapi.models.operations.ServiceGroupRequest request, org.openapis.openapi.models.operations.ServiceGroupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceGroupPathParams.class, baseUrl, "/api/groups/{serviceGroupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceGroupRequest.class, baseUrl, "/api/groups/{serviceGroupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -251,21 +253,22 @@ public class Groups {
      * Update a service group
      * Update a service group
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateGroupResponse updateGroup(org.openapis.openapi.models.operations.UpdateGroupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateGroupResponse updateGroup(org.openapis.openapi.models.operations.UpdateGroupRequest request, org.openapis.openapi.models.operations.UpdateGroupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateGroupPathParams.class, baseUrl, "/api/groups/{serviceGroupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateGroupRequest.class, baseUrl, "/api/groups/{serviceGroupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "group", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

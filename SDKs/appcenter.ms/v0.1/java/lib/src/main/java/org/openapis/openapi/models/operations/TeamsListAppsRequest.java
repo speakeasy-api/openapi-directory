@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsListAppsRequest {
-    
-    public TeamsListAppsPathParams pathParams;
-    public TeamsListAppsRequest withPathParams(TeamsListAppsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The organization's name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_name")
+    public String orgName;
+    public TeamsListAppsRequest withOrgName(String orgName) {
+        this.orgName = orgName;
         return this;
     }
     
-    
-    public TeamsListAppsSecurity security;
-    public TeamsListAppsRequest withSecurity(TeamsListAppsSecurity security) {
-        this.security = security;
+    /**
+     * The team's name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_name")
+    public String teamName;
+    public TeamsListAppsRequest withTeamName(String teamName) {
+        this.teamName = teamName;
         return this;
     }
     

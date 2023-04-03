@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAnnotationsByRgdIdAndOntologyUsingGETRequest {
+    /**
+     * Ontology Prefix.  The prefix can be found left of the semicolon in an ontology term accession ID.  As an example, term accession PW:0000034 has the ontology prefix PW
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ontologyPrefix")
+    public String ontologyPrefix;
+    public GETAnnotationsByRgdIdAndOntologyUsingGETRequest withOntologyPrefix(String ontologyPrefix) {
+        this.ontologyPrefix = ontologyPrefix;
+        return this;
+    }
     
-    public GETAnnotationsByRgdIdAndOntologyUsingGETPathParams pathParams;
-    public GETAnnotationsByRgdIdAndOntologyUsingGETRequest withPathParams(GETAnnotationsByRgdIdAndOntologyUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * RGD ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rgdId")
+    public Integer rgdId;
+    public GETAnnotationsByRgdIdAndOntologyUsingGETRequest withRgdId(Integer rgdId) {
+        this.rgdId = rgdId;
         return this;
     }
     

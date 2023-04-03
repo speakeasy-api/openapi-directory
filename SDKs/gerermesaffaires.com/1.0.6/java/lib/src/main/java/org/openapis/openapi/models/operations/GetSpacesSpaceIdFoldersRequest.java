@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpacesSpaceIdFoldersRequest {
-    
-    public GetSpacesSpaceIdFoldersPathParams pathParams;
-    public GetSpacesSpaceIdFoldersRequest withPathParams(GetSpacesSpaceIdFoldersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * class of the folder
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Class")
+    public String class_;
+    public GetSpacesSpaceIdFoldersRequest withClass(String class_) {
+        this.class_ = class_;
         return this;
     }
     
+    /**
+     * keywords attached to the folder
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Keywords")
+    public String keywords;
+    public GetSpacesSpaceIdFoldersRequest withKeywords(String keywords) {
+        this.keywords = keywords;
+        return this;
+    }
     
-    public GetSpacesSpaceIdFoldersQueryParams queryParams;
-    public GetSpacesSpaceIdFoldersRequest withQueryParams(GetSpacesSpaceIdFoldersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Name of the folder
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Name")
+    public String name;
+    public GetSpacesSpaceIdFoldersRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * index range of the results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Range")
+    public String range;
+    public GetSpacesSpaceIdFoldersRequest withRange(String range) {
+        this.range = range;
+        return this;
+    }
+    
+    /**
+     * only root folders
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RootFolders")
+    public GetSpacesSpaceIdFoldersRootFoldersEnum rootFolders;
+    public GetSpacesSpaceIdFoldersRequest withRootFolders(GetSpacesSpaceIdFoldersRootFoldersEnum rootFolders) {
+        this.rootFolders = rootFolders;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public GetSpacesSpaceIdFoldersRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

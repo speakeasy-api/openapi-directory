@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActivateSKUBindingRequest {
-    
-    public ActivateSKUBindingPathParams pathParams;
-    public ActivateSKUBindingRequest withPathParams(ActivateSKUBindingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public ActivateSKUBindingRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public ActivateSKUBindingRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public ActivateSKUBindingHeaders headers;
-    public ActivateSKUBindingRequest withHeaders(ActivateSKUBindingHeaders headers) {
-        this.headers = headers;
+    /**
+     * ID that identifies the seller in the marketplace. It can be the same as the seller name or a unique number. Check the **Sellers management** section in the Admin to get the correct ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerId")
+    public String sellerId;
+    public ActivateSKUBindingRequest withSellerId(String sellerId) {
+        this.sellerId = sellerId;
+        return this;
+    }
+    
+    /**
+     * SKU ID in the seller's store.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=skuSellerId")
+    public String skuSellerId;
+    public ActivateSKUBindingRequest withSkuSellerId(String skuSellerId) {
+        this.skuSellerId = skuSellerId;
         return this;
     }
     

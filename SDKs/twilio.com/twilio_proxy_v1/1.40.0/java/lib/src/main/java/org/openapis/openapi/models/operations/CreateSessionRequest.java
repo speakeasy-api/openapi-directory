@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSessionRequest {
-    
-    public CreateSessionPathParams pathParams;
-    public CreateSessionRequest withPathParams(CreateSessionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateSessionCreateSessionRequest request;
-    public CreateSessionRequest withRequest(CreateSessionCreateSessionRequest request) {
-        this.request = request;
+    public CreateSessionCreateSessionRequest requestBody;
+    public CreateSessionRequest withRequestBody(CreateSessionCreateSessionRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateSessionSecurity security;
-    public CreateSessionRequest withSecurity(CreateSessionSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateSessionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public CreateSessionRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

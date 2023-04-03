@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateInstructionsRequest {
-    
-    public UpdateInstructionsPathParams pathParams;
-    public UpdateInstructionsRequest withPathParams(UpdateInstructionsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated instructions for a job.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.InstructionsDTO request;
-    public UpdateInstructionsRequest withRequest(org.openapis.openapi.models.shared.InstructionsDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.InstructionsDTO instructionsDTO;
+    public UpdateInstructionsRequest withInstructionsDTO(org.openapis.openapi.models.shared.InstructionsDTO instructionsDTO) {
+        this.instructionsDTO = instructionsDTO;
+        return this;
+    }
+    
+    /**
+     * job's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
+    public String jobId;
+    public UpdateInstructionsRequest withJobId(String jobId) {
+        this.jobId = jobId;
         return this;
     }
     

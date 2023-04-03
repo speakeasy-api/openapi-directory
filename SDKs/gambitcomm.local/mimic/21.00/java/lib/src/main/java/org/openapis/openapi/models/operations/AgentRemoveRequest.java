@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AgentRemoveRequest {
-    
-    public AgentRemovePathParams pathParams;
-    public AgentRemoveRequest withPathParams(AgentRemovePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to return the primary IP
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public AgentRemoveRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

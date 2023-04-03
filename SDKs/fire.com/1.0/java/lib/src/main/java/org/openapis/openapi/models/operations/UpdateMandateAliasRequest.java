@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateMandateAliasRequest {
-    
-    public UpdateMandateAliasPathParams pathParams;
-    public UpdateMandateAliasRequest withPathParams(UpdateMandateAliasPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mandateUuid")
+    public String mandateUuid;
+    public UpdateMandateAliasRequest withMandateUuid(String mandateUuid) {
+        this.mandateUuid = mandateUuid;
         return this;
     }
     

@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateTagRequest {
-    
-    public CreateTagPathParams pathParams;
-    public CreateTagRequest withPathParams(CreateTagPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Optional description for the tag.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
+    public String description;
+    public CreateTagRequest withDescription(String description) {
+        this.description = description;
         return this;
     }
     
+    /**
+     * The tag name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public CreateTagRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
     
-    public CreateTagQueryParams queryParams;
-    public CreateTagRequest withQueryParams(CreateTagQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public CreateTagRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    /**
+     * Optional type for the tag.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public CreateTagTypeEnum type;
+    public CreateTagRequest withType(CreateTagTypeEnum type) {
+        this.type = type;
         return this;
     }
     

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllByTypeRequest {
-    
-    public GetAllByTypePathParams pathParams;
-    public GetAllByTypeRequest withPathParams(GetAllByTypePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * exact name of entity
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nameEquals")
+    public String nameEquals;
+    public GetAllByTypeRequest withNameEquals(String nameEquals) {
+        this.nameEquals = nameEquals;
         return this;
     }
     
-    
-    public GetAllByTypeQueryParams queryParams;
-    public GetAllByTypeRequest withQueryParams(GetAllByTypeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * dictionary type
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
+    public String type;
+    public GetAllByTypeRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

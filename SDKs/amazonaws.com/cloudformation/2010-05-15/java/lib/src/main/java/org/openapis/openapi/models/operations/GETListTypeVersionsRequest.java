@@ -4,20 +4,139 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETListTypeVersionsRequest {
-    
-    public GETListTypeVersionsQueryParams queryParams;
-    public GETListTypeVersionsRequest withQueryParams(GETListTypeVersionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETListTypeVersionsActionEnum action;
+    public GETListTypeVersionsRequest withAction(GETListTypeVersionsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The Amazon Resource Name (ARN) of the extension for which you want version summary information.&lt;/p&gt; &lt;p&gt;Conditional: You must specify either &lt;code&gt;TypeName&lt;/code&gt; and &lt;code&gt;Type&lt;/code&gt;, or &lt;code&gt;Arn&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Arn")
+    public String arn;
+    public GETListTypeVersionsRequest withArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
     
-    public GETListTypeVersionsHeaders headers;
-    public GETListTypeVersionsRequest withHeaders(GETListTypeVersionsHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The deprecation status of the extension versions that you want to get summary information about.&lt;/p&gt; &lt;p&gt;Valid values include:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;LIVE&lt;/code&gt;: The extension version is registered and can be used in CloudFormation operations, dependent on its provisioning behavior and visibility scope.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;DEPRECATED&lt;/code&gt;: The extension version has been deregistered and can no longer be used in CloudFormation operations.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;The default is &lt;code&gt;LIVE&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DeprecatedStatus")
+    public GETListTypeVersionsDeprecatedStatusEnum deprecatedStatus;
+    public GETListTypeVersionsRequest withDeprecatedStatus(GETListTypeVersionsDeprecatedStatusEnum deprecatedStatus) {
+        this.deprecatedStatus = deprecatedStatus;
+        return this;
+    }
+    
+    /**
+     * The maximum number of results to be returned with a single call. If the number of available results exceeds this maximum, the response includes a &lt;code&gt;NextToken&lt;/code&gt; value that you can assign to the &lt;code&gt;NextToken&lt;/code&gt; request parameter to get the next set of results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public Long maxResults;
+    public GETListTypeVersionsRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * If the previous paginated request didn't return all of the remaining results, the response object's &lt;code&gt;NextToken&lt;/code&gt; parameter value is set to a token. To retrieve the next set of results, call this action again and assign that token to the request object's &lt;code&gt;NextToken&lt;/code&gt; parameter. If there are no remaining results, the previous response object's &lt;code&gt;NextToken&lt;/code&gt; parameter is set to &lt;code&gt;null&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public GETListTypeVersionsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The publisher ID of the extension publisher.&lt;/p&gt; &lt;p&gt;Extensions published by Amazon aren't assigned a publisher ID.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PublisherId")
+    public String publisherId;
+    public GETListTypeVersionsRequest withPublisherId(String publisherId) {
+        this.publisherId = publisherId;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The kind of the extension.&lt;/p&gt; &lt;p&gt;Conditional: You must specify either &lt;code&gt;TypeName&lt;/code&gt; and &lt;code&gt;Type&lt;/code&gt;, or &lt;code&gt;Arn&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Type")
+    public GETListTypeVersionsTypeEnum type;
+    public GETListTypeVersionsRequest withType(GETListTypeVersionsTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The name of the extension for which you want version summary information.&lt;/p&gt; &lt;p&gt;Conditional: You must specify either &lt;code&gt;TypeName&lt;/code&gt; and &lt;code&gt;Type&lt;/code&gt;, or &lt;code&gt;Arn&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TypeName")
+    public String typeName;
+    public GETListTypeVersionsRequest withTypeName(String typeName) {
+        this.typeName = typeName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETListTypeVersionsVersionEnum version;
+    public GETListTypeVersionsRequest withVersion(GETListTypeVersionsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETListTypeVersionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETListTypeVersionsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETListTypeVersionsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETListTypeVersionsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETListTypeVersionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETListTypeVersionsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETListTypeVersionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

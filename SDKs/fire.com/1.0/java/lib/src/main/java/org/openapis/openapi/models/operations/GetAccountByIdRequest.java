@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountByIdRequest {
-    
-    public GetAccountByIdPathParams pathParams;
-    public GetAccountByIdRequest withPathParams(GetAccountByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ican")
+    public Long ican;
+    public GetAccountByIdRequest withIcan(Long ican) {
+        this.ican = ican;
         return this;
     }
     

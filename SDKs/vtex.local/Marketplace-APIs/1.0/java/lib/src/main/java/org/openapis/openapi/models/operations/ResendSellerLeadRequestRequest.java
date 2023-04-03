@@ -7,31 +7,60 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ResendSellerLeadRequestRequest {
-    
-    public ResendSellerLeadRequestPathParams pathParams;
-    public ResendSellerLeadRequestRequest withPathParams(ResendSellerLeadRequestPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public ResendSellerLeadRequestRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public ResendSellerLeadRequestQueryParams queryParams;
-    public ResendSellerLeadRequestRequest withQueryParams(ResendSellerLeadRequestQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ResendSellerLeadRequestHeaders headers;
-    public ResendSellerLeadRequestRequest withHeaders(ResendSellerLeadRequestHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public ResendSellerLeadRequestRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ResendSellerLeadRequestRequest request;
-    public ResendSellerLeadRequestRequest withRequest(org.openapis.openapi.models.shared.ResendSellerLeadRequestRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ResendSellerLeadRequestRequest resendSellerLeadRequestRequest;
+    public ResendSellerLeadRequestRequest withResendSellerLeadRequestRequest(org.openapis.openapi.models.shared.ResendSellerLeadRequestRequest resendSellerLeadRequestRequest) {
+        this.resendSellerLeadRequestRequest = resendSellerLeadRequestRequest;
+        return this;
+    }
+    
+    /**
+     * Name of the VTEX account that belongs to the marketplace.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
+    public String accountName;
+    public ResendSellerLeadRequestRequest withAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    
+    /**
+     * Environment to use. Used as part of the URL.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=environment")
+    public String environment;
+    public ResendSellerLeadRequestRequest withEnvironment(String environment) {
+        this.environment = environment;
+        return this;
+    }
+    
+    /**
+     * ID of the Seller Lead invited to the marketplace.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerLeadId")
+    public String sellerLeadId;
+    public ResendSellerLeadRequestRequest withSellerLeadId(String sellerLeadId) {
+        this.sellerLeadId = sellerLeadId;
         return this;
     }
     

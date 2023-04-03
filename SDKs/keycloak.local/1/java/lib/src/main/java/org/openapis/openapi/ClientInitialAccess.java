@@ -32,7 +32,7 @@ public class ClientInitialAccess {
 
     public org.openapis.openapi.models.operations.DeleteRealmClientsInitialAccessIdResponse deleteRealmClientsInitialAccessId(org.openapis.openapi.models.operations.DeleteRealmClientsInitialAccessIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmClientsInitialAccessIdPathParams.class, baseUrl, "/{realm}/clients-initial-access/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmClientsInitialAccessIdRequest.class, baseUrl, "/{realm}/clients-initial-access/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -59,7 +59,7 @@ public class ClientInitialAccess {
 
     public org.openapis.openapi.models.operations.GetRealmClientsInitialAccessResponse getRealmClientsInitialAccess(org.openapis.openapi.models.operations.GetRealmClientsInitialAccessRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmClientsInitialAccessPathParams.class, baseUrl, "/{realm}/clients-initial-access", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmClientsInitialAccessRequest.class, baseUrl, "/{realm}/clients-initial-access", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -98,12 +98,12 @@ public class ClientInitialAccess {
      */
     public org.openapis.openapi.models.operations.PostRealmClientsInitialAccessResponse postRealmClientsInitialAccess(org.openapis.openapi.models.operations.PostRealmClientsInitialAccessRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmClientsInitialAccessPathParams.class, baseUrl, "/{realm}/clients-initial-access", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmClientsInitialAccessRequest.class, baseUrl, "/{realm}/clients-initial-access", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "clientInitialAccessCreatePresentation", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

@@ -47,13 +47,13 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.GETEntitiesUserAccessibleResponse getEntitiesUserAccessible(org.openapis.openapi.models.operations.GETEntitiesUserAccessibleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETEntitiesUserAccessiblePathParams.class, baseUrl, "/v1/users/{username}/accessible-entities", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETEntitiesUserAccessibleRequest.class, baseUrl, "/v1/users/{username}/accessible-entities", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -102,13 +102,13 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.PUTAcceptUserAccessResponse putAcceptUserAccess(org.openapis.openapi.models.operations.PUTAcceptUserAccessRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PUTAcceptUserAccessPathParams.class, baseUrl, "/v1/users/{username}/accept-access", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PUTAcceptUserAccessRequest.class, baseUrl, "/v1/users/{username}/accept-access", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -157,13 +157,13 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.PUTDenyUserAccessResponse putDenyUserAccess(org.openapis.openapi.models.operations.PUTDenyUserAccessRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PUTDenyUserAccessPathParams.class, baseUrl, "/v1/users/{username}/deny-access", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PUTDenyUserAccessRequest.class, baseUrl, "/v1/users/{username}/deny-access", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -212,18 +212,18 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.PUTSendUserAccessRequestsResponse putSendUserAccessRequests(org.openapis.openapi.models.operations.PUTSendUserAccessRequestsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PUTSendUserAccessRequestsPathParams.class, baseUrl, "/v1/users/{username}/request-access", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PUTSendUserAccessRequestsRequest.class, baseUrl, "/v1/users/{username}/request-access", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "putSendUserAccessRequestType", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProductStatusRequest {
-    
-    public ProductStatusPathParams pathParams;
-    public ProductStatusRequest withPathParams(ProductStatusPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ProductStatusSecurity security;
-    public ProductStatusRequest withSecurity(ProductStatusSecurity security) {
-        this.security = security;
+    /**
+     * ID of the ProductOrder as returned from a /product/buy call - 32 character hex value
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderId")
+    public String orderId;
+    public ProductStatusRequest withOrderId(String orderId) {
+        this.orderId = orderId;
         return this;
     }
     

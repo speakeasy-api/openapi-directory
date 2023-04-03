@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.GetIceServerConfigHeaders;
 import org.openapis.openapi.models.operations.GetIceServerConfigRequestBodyServiceEnum;
 import org.openapis.openapi.models.operations.GetIceServerConfigRequestBody;
 import org.openapis.openapi.models.operations.GetIceServerConfigRequest;
@@ -28,29 +27,25 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GetIceServerConfigRequest req = new GetIceServerConfigRequest() {{
-                headers = new GetIceServerConfigHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new GetIceServerConfigRequestBody() {{
-                    channelARN = "illum";
-                    clientId = "vel";
+                requestBody = new GetIceServerConfigRequestBody() {{
+                    channelARN = "corrupti";
+                    clientId = "provident";
                     service = "TURN";
-                    username = "Linda.Oberbrunner";
+                    username = "Micheal_Sporer";
                 }};
-            }};            
+                xAmzAlgorithm = "corrupti";
+                xAmzContentSha256 = "illum";
+                xAmzCredential = "vel";
+                xAmzDate = "error";
+                xAmzSecurityToken = "deserunt";
+                xAmzSignature = "suscipit";
+                xAmzSignedHeaders = "iure";
+            }}            
 
             GetIceServerConfigResponse res = sdk.getIceServerConfig(req);
 
@@ -64,7 +59,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

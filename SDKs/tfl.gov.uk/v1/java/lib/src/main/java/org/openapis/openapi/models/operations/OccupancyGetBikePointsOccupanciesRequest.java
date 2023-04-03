@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OccupancyGetBikePointsOccupanciesRequest {
-    
-    public OccupancyGetBikePointsOccupanciesPathParams pathParams;
-    public OccupancyGetBikePointsOccupanciesRequest withPathParams(OccupancyGetBikePointsOccupanciesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ids")
+    public String[] ids;
+    public OccupancyGetBikePointsOccupanciesRequest withIds(String[] ids) {
+        this.ids = ids;
         return this;
     }
     

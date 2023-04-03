@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListCardProfilesRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public ListCardProfilesRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
     
-    public ListCardProfilesQueryParams queryParams;
-    public ListCardProfilesRequest withQueryParams(ListCardProfilesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListCardProfilesRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status.in")
+    public ListCardProfilesStatusInEnum[] statusIn;
+    public ListCardProfilesRequest withStatusIn(ListCardProfilesStatusInEnum[] statusIn) {
+        this.statusIn = statusIn;
         return this;
     }
     

@@ -4,13 +4,51 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetReportsEventsRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deviceId")
+    public Long[] deviceId;
+    public GetReportsEventsRequest withDeviceId(Long[] deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
     
-    public GetReportsEventsQueryParams queryParams;
-    public GetReportsEventsRequest withQueryParams(GetReportsEventsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * in IS0 8601 format. eg. `1963-11-22T18:30:00Z`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
+    public OffsetDateTime from;
+    public GetReportsEventsRequest withFrom(OffsetDateTime from) {
+        this.from = from;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupId")
+    public Long[] groupId;
+    public GetReportsEventsRequest withGroupId(Long[] groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    
+    /**
+     * in IS0 8601 format. eg. `1963-11-22T18:30:00Z`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
+    public OffsetDateTime to;
+    public GetReportsEventsRequest withTo(OffsetDateTime to) {
+        this.to = to;
+        return this;
+    }
+    
+    /**
+     * % can be used to return events of all types
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=type")
+    public String[] type;
+    public GetReportsEventsRequest withType(String[] type) {
+        this.type = type;
         return this;
     }
     

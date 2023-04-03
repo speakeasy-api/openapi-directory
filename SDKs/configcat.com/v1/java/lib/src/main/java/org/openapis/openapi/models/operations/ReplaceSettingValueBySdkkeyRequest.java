@@ -7,31 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReplaceSettingValueBySdkkeyRequest {
-    
-    public ReplaceSettingValueBySdkkeyPathParams pathParams;
-    public ReplaceSettingValueBySdkkeyRequest withPathParams(ReplaceSettingValueBySdkkeyPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ReplaceSettingValueBySdkkeyQueryParams queryParams;
-    public ReplaceSettingValueBySdkkeyRequest withQueryParams(ReplaceSettingValueBySdkkeyQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ReplaceSettingValueBySdkkeyHeaders headers;
-    public ReplaceSettingValueBySdkkeyRequest withHeaders(ReplaceSettingValueBySdkkeyHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateSettingValueModel request;
-    public ReplaceSettingValueBySdkkeyRequest withRequest(org.openapis.openapi.models.shared.UpdateSettingValueModel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateSettingValueModel updateSettingValueModel;
+    public ReplaceSettingValueBySdkkeyRequest withUpdateSettingValueModel(org.openapis.openapi.models.shared.UpdateSettingValueModel updateSettingValueModel) {
+        this.updateSettingValueModel = updateSettingValueModel;
+        return this;
+    }
+    
+    /**
+     * The ConfigCat SDK Key. (https://app.configcat.com/sdkkey)
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-CONFIGCAT-SDKKEY")
+    public String xConfigcatSdkkey;
+    public ReplaceSettingValueBySdkkeyRequest withXConfigcatSdkkey(String xConfigcatSdkkey) {
+        this.xConfigcatSdkkey = xConfigcatSdkkey;
+        return this;
+    }
+    
+    /**
+     * The reason note for the Audit Log if the Product's "Config changes require a reason" preference is turned on.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reason")
+    public String reason;
+    public ReplaceSettingValueBySdkkeyRequest withReason(String reason) {
+        this.reason = reason;
+        return this;
+    }
+    
+    /**
+     * The key or id of the Setting.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=settingKeyOrId")
+    public String settingKeyOrId;
+    public ReplaceSettingValueBySdkkeyRequest withSettingKeyOrId(String settingKeyOrId) {
+        this.settingKeyOrId = settingKeyOrId;
         return this;
     }
     

@@ -4,20 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDeviceClientsRequest {
-    
-    public GetDeviceClientsPathParams pathParams;
-    public GetDeviceClientsRequest withPathParams(GetDeviceClientsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public GetDeviceClientsRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     
+    /**
+     * The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t0")
+    public String t0;
+    public GetDeviceClientsRequest withT0(String t0) {
+        this.t0 = t0;
+        return this;
+    }
     
-    public GetDeviceClientsQueryParams queryParams;
-    public GetDeviceClientsRequest withQueryParams(GetDeviceClientsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 31 days. The default is 1 day.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timespan")
+    public Float timespan;
+    public GetDeviceClientsRequest withTimespan(Float timespan) {
+        this.timespan = timespan;
         return this;
     }
     

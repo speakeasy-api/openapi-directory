@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PremiumNewsByTeamRequest {
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public PremiumNewsByTeamFormatEnum format;
+    public PremiumNewsByTeamRequest withFormat(PremiumNewsByTeamFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public PremiumNewsByTeamPathParams pathParams;
-    public PremiumNewsByTeamRequest withPathParams(PremiumNewsByTeamPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Abbreviation of the team. Example: &lt;code&gt;WAS&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team")
+    public String team;
+    public PremiumNewsByTeamRequest withTeam(String team) {
+        this.team = team;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2PhoneNumberAssignmentsIdJsonRequest {
-    
-    public GetV2PhoneNumberAssignmentsIdJsonPathParams pathParams;
-    public GetV2PhoneNumberAssignmentsIdJsonRequest withPathParams(GetV2PhoneNumberAssignmentsIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * PhoneNumberAssignment ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetV2PhoneNumberAssignmentsIdJsonRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

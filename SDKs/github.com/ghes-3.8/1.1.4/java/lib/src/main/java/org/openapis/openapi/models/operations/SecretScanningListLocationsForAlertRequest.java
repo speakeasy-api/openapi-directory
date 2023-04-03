@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SecretScanningListLocationsForAlertRequest {
-    
-    public SecretScanningListLocationsForAlertPathParams pathParams;
-    public SecretScanningListLocationsForAlertRequest withPathParams(SecretScanningListLocationsForAlertPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The number that identifies an alert. You can find this at the end of the URL for a code scanning alert within GitHub, and in the `number` field in the response from the `GET /repos/{owner}/{repo}/code-scanning/alerts` operation.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=alert_number")
+    public Long alertNumber;
+    public SecretScanningListLocationsForAlertRequest withAlertNumber(Long alertNumber) {
+        this.alertNumber = alertNumber;
         return this;
     }
     
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public SecretScanningListLocationsForAlertRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public SecretScanningListLocationsForAlertQueryParams queryParams;
-    public SecretScanningListLocationsForAlertRequest withQueryParams(SecretScanningListLocationsForAlertQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public SecretScanningListLocationsForAlertRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public SecretScanningListLocationsForAlertRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public SecretScanningListLocationsForAlertRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

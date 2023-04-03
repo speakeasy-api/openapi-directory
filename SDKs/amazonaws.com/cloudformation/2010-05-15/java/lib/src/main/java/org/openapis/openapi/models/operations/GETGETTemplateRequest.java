@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETTemplateRequest {
-    
-    public GETGETTemplateQueryParams queryParams;
-    public GETGETTemplateRequest withQueryParams(GETGETTemplateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETGETTemplateActionEnum action;
+    public GETGETTemplateRequest withAction(GETGETTemplateActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name or Amazon Resource Name (ARN) of a change set for which CloudFormation returns the associated template. If you specify a name, you must also specify the &lt;code&gt;StackName&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ChangeSetName")
+    public String changeSetName;
+    public GETGETTemplateRequest withChangeSetName(String changeSetName) {
+        this.changeSetName = changeSetName;
+        return this;
+    }
     
-    public GETGETTemplateHeaders headers;
-    public GETGETTemplateRequest withHeaders(GETGETTemplateHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The name or the unique stack ID that's associated with the stack, which aren't always interchangeable:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Running stacks: You can specify either the stack's name or its unique stack ID.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Deleted stacks: You must specify the unique stack ID.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Default: There is no default value.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StackName")
+    public String stackName;
+    public GETGETTemplateRequest withStackName(String stackName) {
+        this.stackName = stackName;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;For templates that include transforms, the stage of the template that CloudFormation returns. To get the user-submitted template, specify &lt;code&gt;Original&lt;/code&gt;. To get the template after CloudFormation has processed all transforms, specify &lt;code&gt;Processed&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;If the template doesn't include transforms, &lt;code&gt;Original&lt;/code&gt; and &lt;code&gt;Processed&lt;/code&gt; return the same template. By default, CloudFormation specifies &lt;code&gt;Processed&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TemplateStage")
+    public GETGETTemplateTemplateStageEnum templateStage;
+    public GETGETTemplateRequest withTemplateStage(GETGETTemplateTemplateStageEnum templateStage) {
+        this.templateStage = templateStage;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETGETTemplateVersionEnum version;
+    public GETGETTemplateRequest withVersion(GETGETTemplateVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETGETTemplateRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETGETTemplateRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETGETTemplateRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETGETTemplateRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETGETTemplateRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETGETTemplateRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETGETTemplateRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

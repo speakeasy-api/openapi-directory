@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GitDeleteRefRequest {
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public GitDeleteRefRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public GitDeleteRefPathParams pathParams;
-    public GitDeleteRefRequest withPathParams(GitDeleteRefPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ref parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ref")
+    public String ref;
+    public GitDeleteRefRequest withRef(String ref) {
+        this.ref = ref;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public GitDeleteRefRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

@@ -4,20 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FindContactsRequest {
-    
-    public FindContactsQueryParams queryParams;
-    public FindContactsRequest withQueryParams(FindContactsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filters contacts by a particular contact list
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contactListId")
+    public Long contactListId;
+    public FindContactsRequest withContactListId(Long contactListId) {
+        this.contactListId = contactListId;
         return this;
     }
     
+    /**
+     * Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public FindContactsRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
     
-    public FindContactsSecurity security;
-    public FindContactsRequest withSecurity(FindContactsSecurity security) {
-        this.security = security;
+    /**
+     * A list of contact IDs. If the id parameter is included, the other query parameters are ignored.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public Long[] id;
+    public FindContactsRequest withId(Long[] id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * To set the maximum number of records to return in a paged list response. The default is 100
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public FindContactsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Multiple contact numbers can be specified. If the number parameter is included, the other query parameters are ignored.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
+    public String[] number;
+    public FindContactsRequest withNumber(String[] number) {
+        this.number = number;
+        return this;
+    }
+    
+    /**
+     * Offset to the start of a given page. The default is 0. Check [pagination](https://developers.callfire.com/docs.html#pagination) page for more information about pagination in CallFire API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public FindContactsRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Name of a contact property to search by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=propertyName")
+    public String propertyName;
+    public FindContactsRequest withPropertyName(String propertyName) {
+        this.propertyName = propertyName;
+        return this;
+    }
+    
+    /**
+     * Value of a contact property to search by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=propertyValue")
+    public String propertyValue;
+    public FindContactsRequest withPropertyValue(String propertyValue) {
+        this.propertyValue = propertyValue;
         return this;
     }
     

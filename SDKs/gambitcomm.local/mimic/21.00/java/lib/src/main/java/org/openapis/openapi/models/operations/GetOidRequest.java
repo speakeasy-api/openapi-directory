@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOidRequest {
+    /**
+     * Agent to show the OID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public GetOidRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public GetOidPathParams pathParams;
-    public GetOidRequest withPathParams(GetOidPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=object")
+    public String object;
+    public GetOidRequest withObject(String object) {
+        this.object = object;
         return this;
     }
     

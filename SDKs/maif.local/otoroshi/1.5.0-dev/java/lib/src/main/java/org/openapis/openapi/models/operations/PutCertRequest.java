@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutCertRequest {
-    
-    public PutCertPathParams pathParams;
-    public PutCertRequest withPathParams(PutCertPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Certificate request;
-    public PutCertRequest withRequest(org.openapis.openapi.models.shared.Certificate request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Certificate certificate;
+    public PutCertRequest withCertificate(org.openapis.openapi.models.shared.Certificate certificate) {
+        this.certificate = certificate;
         return this;
     }
     
-    
-    public PutCertSecurity security;
-    public PutCertRequest withSecurity(PutCertSecurity security) {
-        this.security = security;
+    /**
+     * The certificate id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutCertRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

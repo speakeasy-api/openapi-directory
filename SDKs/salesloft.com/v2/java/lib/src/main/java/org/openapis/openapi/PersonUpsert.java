@@ -39,7 +39,7 @@ public class PersonUpsert {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV2PersonUpsertsJsonResponse postV2PersonUpsertsJson(org.openapis.openapi.models.operations.PostV2PersonUpsertsJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV2PersonUpsertsJsonResponse postV2PersonUpsertsJson(org.openapis.openapi.models.operations.PostV2PersonUpsertsJsonRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/person_upserts.json");
         

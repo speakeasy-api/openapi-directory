@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateAccountOwnerRequest {
-    
-    public UpdateAccountOwnerPathParams pathParams;
-    public UpdateAccountOwnerRequest withPathParams(UpdateAccountOwnerPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateAccountOwnerApplicationJSON request;
-    public UpdateAccountOwnerRequest withRequest(UpdateAccountOwnerApplicationJSON request) {
-        this.request = request;
+    public UpdateAccountOwnerApplicationJSON requestBody;
+    public UpdateAccountOwnerRequest withRequestBody(UpdateAccountOwnerApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateAccountOwnerSecurity security;
-    public UpdateAccountOwnerRequest withSecurity(UpdateAccountOwnerSecurity security) {
-        this.security = security;
+    /**
+     * Account Id of the account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public UpdateAccountOwnerRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     

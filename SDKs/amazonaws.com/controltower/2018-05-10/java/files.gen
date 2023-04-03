@@ -29,20 +29,15 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/DisableControlHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/DisableControlRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/DisableControlRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DisableControlResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/EnableControlHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/EnableControlRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/EnableControlRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/EnableControlResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetControlOperationHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetControlOperationRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetControlOperationRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetControlOperationResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListEnabledControlsQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListEnabledControlsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListEnabledControlsRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListEnabledControlsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListEnabledControlsResponse.java
@@ -54,6 +49,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ControlOperationStatusEnum.
 lib/src/main/java/org/openapis/openapi/models/shared/ControlOperationTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListEnabledControlsOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/EnabledControlSummary.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeHmac.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

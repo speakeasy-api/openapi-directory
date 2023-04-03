@@ -4,13 +4,17 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSubscriptionDataRequest {
-    
-    public GetSubscriptionDataPathParams pathParams;
-    public GetSubscriptionDataRequest withPathParams(GetSubscriptionDataPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The identifier of the user to load.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSubscriptionDataRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchMarketplaceAvailableAddOnRequest {
-    
-    public FetchMarketplaceAvailableAddOnPathParams pathParams;
-    public FetchMarketplaceAvailableAddOnRequest withPathParams(FetchMarketplaceAvailableAddOnPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchMarketplaceAvailableAddOnSecurity security;
-    public FetchMarketplaceAvailableAddOnRequest withSecurity(FetchMarketplaceAvailableAddOnSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchMarketplaceAvailableAddOnRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the AvailableAddOn resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchMarketplaceAvailableAddOnRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

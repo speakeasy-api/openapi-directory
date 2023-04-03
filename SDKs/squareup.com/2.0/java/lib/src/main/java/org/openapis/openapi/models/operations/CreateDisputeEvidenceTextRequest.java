@@ -7,29 +7,25 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateDisputeEvidenceTextRequest {
-    
-    public CreateDisputeEvidenceTextPathParams pathParams;
-    public CreateDisputeEvidenceTextRequest withPathParams(CreateDisputeEvidenceTextPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * An object containing the fields to POST for the request.
      * 
      * See the corresponding object definition for field details.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateDisputeEvidenceTextRequest request;
-    public CreateDisputeEvidenceTextRequest withRequest(org.openapis.openapi.models.shared.CreateDisputeEvidenceTextRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CreateDisputeEvidenceTextRequest createDisputeEvidenceTextRequest;
+    public CreateDisputeEvidenceTextRequest withCreateDisputeEvidenceTextRequest(org.openapis.openapi.models.shared.CreateDisputeEvidenceTextRequest createDisputeEvidenceTextRequest) {
+        this.createDisputeEvidenceTextRequest = createDisputeEvidenceTextRequest;
         return this;
     }
     
-    
-    public CreateDisputeEvidenceTextSecurity security;
-    public CreateDisputeEvidenceTextRequest withSecurity(CreateDisputeEvidenceTextSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the dispute you want to upload evidence for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dispute_id")
+    public String disputeId;
+    public CreateDisputeEvidenceTextRequest withDisputeId(String disputeId) {
+        this.disputeId = disputeId;
         return this;
     }
     

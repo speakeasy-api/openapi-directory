@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WxByPolyUsV1WxForecastPolygonQueryPostRequest {
-    
-    public WxByPolyUsV1WxForecastPolygonQueryPostHeaders headers;
-    public WxByPolyUsV1WxForecastPolygonQueryPostRequest withHeaders(WxByPolyUsV1WxForecastPolygonQueryPostHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.WxByPolygon wxByPolygon;
+    public WxByPolyUsV1WxForecastPolygonQueryPostRequest withWxByPolygon(org.openapis.openapi.models.shared.WxByPolygon wxByPolygon) {
+        this.wxByPolygon = wxByPolygon;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WxByPolygon request;
-    public WxByPolyUsV1WxForecastPolygonQueryPostRequest withRequest(org.openapis.openapi.models.shared.WxByPolygon request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public WxByPolyUsV1WxForecastPolygonQueryPostRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

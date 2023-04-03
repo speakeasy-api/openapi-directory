@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GETVersionIncidentsFormatIncidentTypeEnum;
-import org.openapis.openapi.models.operations.GETVersionIncidentsFormatQueryParams;
 import org.openapis.openapi.models.operations.GETVersionIncidentsFormatRequest;
 import org.openapis.openapi.models.operations.GETVersionIncidentsFormatResponse;
 
@@ -16,17 +15,15 @@ public class Application {
                 .build();
 
             GETVersionIncidentsFormatRequest req = new GETVersionIncidentsFormatRequest() {{
-                queryParams = new GETVersionIncidentsFormatQueryParams() {{
-                    incidentType = "unconfirmed";
-                    occurredAfter = 592845;
-                    occurredBefore = 715190;
-                    page = 844266;
-                    perPage = 602763;
-                    proximity = "nulla";
-                    proximitySquare = 544883;
-                    query = "illum";
-                }};
-            }};            
+                incidentType = "unconfirmed";
+                occurredAfter = 592845;
+                occurredBefore = 715190;
+                page = 844266;
+                perPage = 602763;
+                proximity = "nulla";
+                proximitySquare = 544883;
+                query = "illum";
+            }}            
 
             GETVersionIncidentsFormatResponse res = sdk.incidents.getVersionIncidentsFormat(req);
 

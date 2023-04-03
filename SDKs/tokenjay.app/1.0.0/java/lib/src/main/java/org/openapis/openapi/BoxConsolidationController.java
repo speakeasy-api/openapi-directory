@@ -29,7 +29,7 @@ public class BoxConsolidationController {
 
     public org.openapis.openapi.models.operations.EpConsolidateResponse epConsolidate(org.openapis.openapi.models.operations.EpConsolidateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EpConsolidatePathParams.class, baseUrl, "/mosaik/boxconsolidation/consolidate/{p2pkaddress}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EpConsolidateRequest.class, baseUrl, "/mosaik/boxconsolidation/consolidate/{p2pkaddress}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

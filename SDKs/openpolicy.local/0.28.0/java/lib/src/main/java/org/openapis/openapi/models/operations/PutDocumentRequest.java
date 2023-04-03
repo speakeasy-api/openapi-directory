@@ -7,17 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutDocumentRequest {
-    
-    public PutDocumentPathParams pathParams;
-    public PutDocumentRequest withPathParams(PutDocumentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutDocumentHeaders headers;
-    public PutDocumentRequest withHeaders(PutDocumentHeaders headers) {
-        this.headers = headers;
+    /**
+     * The server will respect the If-None-Match header if it is set to * (in other words, it will not overwrite an existing document located at the specified `path`).
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
+    public String ifNoneMatch;
+    public PutDocumentRequest withIfNoneMatch(String ifNoneMatch) {
+        this.ifNoneMatch = ifNoneMatch;
         return this;
     }
     
@@ -25,9 +21,19 @@ public class PutDocumentRequest {
      * The JSON document to write to the specified path.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public Object request;
-    public PutDocumentRequest withRequest(Object request) {
-        this.request = request;
+    public Object requestBody;
+    public PutDocumentRequest withRequestBody(Object requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * A backslash (/) delimited path to access values inside object and array documents. If the path points to an array, the server will attempt to convert the array index to an integer. If the path element cannot be converted to an integer, the server will respond with 404.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
+    public String path;
+    public PutDocumentRequest withPath(String path) {
+        this.path = path;
         return this;
     }
     

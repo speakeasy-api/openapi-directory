@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNhFurnitureRequest {
-    
-    public GetNhFurnitureQueryParams queryParams;
-    public GetNhFurnitureRequest withQueryParams(GetNhFurnitureQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The version of the API you are calling, written as `1.0.0`. This is specified as required as good practice, but it is not actually enforced by the API. If you do not specify a version, you will be served the latest version, which may eventually result in breaking changes.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Version")
+    public String acceptVersion;
+    public GetNhFurnitureRequest withAcceptVersion(String acceptVersion) {
+        this.acceptVersion = acceptVersion;
         return this;
     }
     
+    /**
+     * Your UUID secret key, granted to you by the Nookipedia team. Required for accessing the API.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-API-KEY")
+    public String xApiKey;
+    public GetNhFurnitureRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
+        return this;
+    }
     
-    public GetNhFurnitureHeaders headers;
-    public GetNhFurnitureRequest withHeaders(GetNhFurnitureHeaders headers) {
-        this.headers = headers;
+    /**
+     * Specify the category of furniture to return (houswares, miscellaneous, or wall-mounted).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
+    public GetNhFurnitureCategoryEnum category;
+    public GetNhFurnitureRequest withCategory(GetNhFurnitureCategoryEnum category) {
+        this.category = category;
+        return this;
+    }
+    
+    /**
+     * Return furniture that matches the provided colors (may specify one or two colors).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=color")
+    public GetNhFurnitureColorEnum[] color;
+    public GetNhFurnitureRequest withColor(GetNhFurnitureColorEnum[] color) {
+        this.color = color;
+        return this;
+    }
+    
+    /**
+     * When set to `true`, only furniture names are returned. Instead of an array of objects with all details, the return will be an array of strings.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=excludedetails")
+    public String excludedetails;
+    public GetNhFurnitureRequest withExcludedetails(String excludedetails) {
+        this.excludedetails = excludedetails;
         return this;
     }
     

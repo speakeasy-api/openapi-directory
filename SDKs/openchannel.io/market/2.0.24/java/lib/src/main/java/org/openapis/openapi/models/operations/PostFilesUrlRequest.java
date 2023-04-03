@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostFilesUrlRequest {
+    /**
+     * If true, this file will be protected as a private file and require the generation of a signed URL in order to download using the Download File API. The default is false.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isPrivate")
+    public Boolean isPrivate;
+    public PostFilesUrlRequest withIsPrivate(Boolean isPrivate) {
+        this.isPrivate = isPrivate;
+        return this;
+    }
     
-    public PostFilesUrlQueryParams queryParams;
-    public PostFilesUrlRequest withQueryParams(PostFilesUrlQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The URL of the file to be uploaded
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=url")
+    public String url;
+    public PostFilesUrlRequest withUrl(String url) {
+        this.url = url;
         return this;
     }
     

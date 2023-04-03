@@ -40,13 +40,13 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.CollectNowResponse collectNow(org.openapis.openapi.models.operations.CollectNowRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectNowPathParams.class, baseUrl, "/hardware/actions/{deviceId}/collect-now", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectNowRequest.class, baseUrl, "/hardware/actions/{deviceId}/collect-now", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CollectNowQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CollectNowRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -84,7 +84,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.RediscoverResponse rediscover(org.openapis.openapi.models.operations.RediscoverRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RediscoverPathParams.class, baseUrl, "/hardware/actions/{deviceId}/rediscover", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RediscoverRequest.class, baseUrl, "/hardware/actions/{deviceId}/rediscover", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -122,12 +122,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ReinitializeResponse reinitialize(org.openapis.openapi.models.operations.ReinitializeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReinitializePathParams.class, baseUrl, "/hardware/actions/{deviceId}/reinitialize", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReinitializeRequest.class, baseUrl, "/hardware/actions/{deviceId}/reinitialize", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "reinitializeActionConfiguration", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -165,13 +165,13 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.RemoveResponse remove(org.openapis.openapi.models.operations.RemoveRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemovePathParams.class, baseUrl, "/hardware/actions/{deviceId}/remove", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemoveRequest.class, baseUrl, "/hardware/actions/{deviceId}/remove", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RemoveQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RemoveRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -209,13 +209,13 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ResetResponse reset(org.openapis.openapi.models.operations.ResetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ResetPathParams.class, baseUrl, "/hardware/actions/{deviceId}/reset-error-count", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ResetRequest.class, baseUrl, "/hardware/actions/{deviceId}/reset-error-count", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ResetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ResetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

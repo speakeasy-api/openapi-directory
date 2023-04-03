@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LogOutRequest {
-    
-    public LogOutPathParams pathParams;
-    public LogOutRequest withPathParams(LogOutPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * token
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=token")
+    public String token;
+    public LogOutRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

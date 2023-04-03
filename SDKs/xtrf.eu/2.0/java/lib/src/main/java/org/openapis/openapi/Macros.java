@@ -44,12 +44,12 @@ public class Macros {
      */
     public org.openapis.openapi.models.operations.RunResponse run(org.openapis.openapi.models.operations.RunRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunPathParams.class, baseUrl, "/macros/{macroId}/run", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunRequest.class, baseUrl, "/macros/{macroId}/run", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "macroRequestDTO", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

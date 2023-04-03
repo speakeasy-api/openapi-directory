@@ -44,12 +44,12 @@ public class SIPConnectedAudio {
      */
     public org.openapis.openapi.models.operations.AddCalloutCountriesResponse addCalloutCountries(org.openapis.openapi.models.operations.AddCalloutCountriesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddCalloutCountriesPathParams.class, baseUrl, "/accounts/{accountId}/sip_trunk/callout_countries", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddCalloutCountriesRequest.class, baseUrl, "/accounts/{accountId}/sip_trunk/callout_countries", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -98,12 +98,12 @@ public class SIPConnectedAudio {
      */
     public org.openapis.openapi.models.operations.AddInternalNumbersResponse addInternalNumbers(org.openapis.openapi.models.operations.AddInternalNumbersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddInternalNumbersPathParams.class, baseUrl, "/accounts/{accountId}/sip_trunk/internal_numbers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddInternalNumbersRequest.class, baseUrl, "/accounts/{accountId}/sip_trunk/internal_numbers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -148,21 +148,22 @@ public class SIPConnectedAudio {
      * 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AssignSIPConfigResponse assignSIPConfig(org.openapis.openapi.models.operations.AssignSIPConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AssignSIPConfigResponse assignSIPConfig(org.openapis.openapi.models.operations.AssignSIPConfigRequest request, org.openapis.openapi.models.operations.AssignSIPConfigSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssignSIPConfigPathParams.class, baseUrl, "/accounts/{accountId}/sip_trunk/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssignSIPConfigRequest.class, baseUrl, "/accounts/{accountId}/sip_trunk/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -204,12 +205,12 @@ public class SIPConnectedAudio {
      */
     public org.openapis.openapi.models.operations.AssignSIPTrunksResponse assignSIPTrunks(org.openapis.openapi.models.operations.AssignSIPTrunksRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssignSIPTrunksPathParams.class, baseUrl, "/accounts/{accountId}/sip_trunk/trunks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssignSIPTrunksRequest.class, baseUrl, "/accounts/{accountId}/sip_trunk/trunks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -255,21 +256,22 @@ public class SIPConnectedAudio {
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AssignSipTrunkNumbersResponse assignSipTrunkNumbers(org.openapis.openapi.models.operations.AssignSipTrunkNumbersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AssignSipTrunkNumbersResponse assignSipTrunkNumbers(org.openapis.openapi.models.operations.AssignSipTrunkNumbersRequest request, org.openapis.openapi.models.operations.AssignSipTrunkNumbersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssignSipTrunkNumbersPathParams.class, baseUrl, "/accounts/{accountId}/sip_trunk/numbers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssignSipTrunkNumbersRequest.class, baseUrl, "/accounts/{accountId}/sip_trunk/numbers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -310,19 +312,20 @@ public class SIPConnectedAudio {
      * **Scopes:** `sip_trunk:master`&lt;br&gt;
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteAllSipNumbersResponse deleteAllSipNumbers(org.openapis.openapi.models.operations.DeleteAllSipNumbersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteAllSipNumbersResponse deleteAllSipNumbers(org.openapis.openapi.models.operations.DeleteAllSipNumbersRequest request, org.openapis.openapi.models.operations.DeleteAllSipNumbersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAllSipNumbersPathParams.class, baseUrl, "/accounts/{accountId}/sip_trunk/numbers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAllSipNumbersRequest.class, baseUrl, "/accounts/{accountId}/sip_trunk/numbers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -365,7 +368,7 @@ public class SIPConnectedAudio {
      */
     public org.openapis.openapi.models.operations.DeleteInternalCallOutCountryResponse deleteInternalCallOutCountry(org.openapis.openapi.models.operations.DeleteInternalCallOutCountryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteInternalCallOutCountryPathParams.class, baseUrl, "/accounts/{accountId}/sip_trunk/callout_countries/{countryId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteInternalCallOutCountryRequest.class, baseUrl, "/accounts/{accountId}/sip_trunk/callout_countries/{countryId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -418,7 +421,7 @@ public class SIPConnectedAudio {
      */
     public org.openapis.openapi.models.operations.DeleteInternalNumberResponse deleteInternalNumber(org.openapis.openapi.models.operations.DeleteInternalNumberRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteInternalNumberPathParams.class, baseUrl, "/accounts/{accountId}/sip_trunk/internal_numbers/{numberId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteInternalNumberRequest.class, baseUrl, "/accounts/{accountId}/sip_trunk/internal_numbers/{numberId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -468,7 +471,7 @@ public class SIPConnectedAudio {
      */
     public org.openapis.openapi.models.operations.DeleteSIPTrunkResponse deleteSIPTrunk(org.openapis.openapi.models.operations.DeleteSIPTrunkRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSIPTrunkPathParams.class, baseUrl, "/accounts/{accountId}/sip_trunk/trunks/{trunkId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSIPTrunkRequest.class, baseUrl, "/accounts/{accountId}/sip_trunk/trunks/{trunkId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -518,7 +521,7 @@ public class SIPConnectedAudio {
      */
     public org.openapis.openapi.models.operations.ListInternalCalloutCountriesResponse listInternalCalloutCountries(org.openapis.openapi.models.operations.ListInternalCalloutCountriesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListInternalCalloutCountriesPathParams.class, baseUrl, "/accounts/{accountId}/sip_trunk/callout_countries", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListInternalCalloutCountriesRequest.class, baseUrl, "/accounts/{accountId}/sip_trunk/callout_countries", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -571,13 +574,13 @@ public class SIPConnectedAudio {
      */
     public org.openapis.openapi.models.operations.ListInternalNumbersResponse listInternalNumbers(org.openapis.openapi.models.operations.ListInternalNumbersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListInternalNumbersPathParams.class, baseUrl, "/accounts/{accountId}/sip_trunk/internal_numbers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListInternalNumbersRequest.class, baseUrl, "/accounts/{accountId}/sip_trunk/internal_numbers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListInternalNumbersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListInternalNumbersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -627,7 +630,7 @@ public class SIPConnectedAudio {
      */
     public org.openapis.openapi.models.operations.ListSIPTrunksResponse listSIPTrunks(org.openapis.openapi.models.operations.ListSIPTrunksRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListSIPTrunksPathParams.class, baseUrl, "/accounts/{accountId}/sip_trunk/trunks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListSIPTrunksRequest.class, baseUrl, "/accounts/{accountId}/sip_trunk/trunks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -675,11 +678,10 @@ public class SIPConnectedAudio {
      * **Scopes:** `sip_trunk:master`
      *  
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListSipTrunkNumbersResponse listSipTrunkNumbers(org.openapis.openapi.models.operations.ListSipTrunkNumbersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListSipTrunkNumbersResponse listSipTrunkNumbers() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/sip_trunk/numbers");
         
@@ -688,7 +690,7 @@ public class SIPConnectedAudio {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = this._securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

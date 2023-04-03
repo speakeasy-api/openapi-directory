@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetImageCollectionItemsRequest {
-    
-    public GetImageCollectionItemsPathParams pathParams;
-    public GetImageCollectionItemsRequest withPathParams(GetImageCollectionItemsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Collection ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetImageCollectionItemsRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetImageCollectionItemsQueryParams queryParams;
-    public GetImageCollectionItemsRequest withQueryParams(GetImageCollectionItemsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetImageCollectionItemsRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * Number of results per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetImageCollectionItemsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
     
-    public GetImageCollectionItemsSecurity security;
-    public GetImageCollectionItemsRequest withSecurity(GetImageCollectionItemsSecurity security) {
-        this.security = security;
+    /**
+     * Code to retrieve the contents of a shared collection
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=share_code")
+    public String shareCode;
+    public GetImageCollectionItemsRequest withShareCode(String shareCode) {
+        this.shareCode = shareCode;
+        return this;
+    }
+    
+    /**
+     * Sort order
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetImageCollectionItemsSortEnum sort;
+    public GetImageCollectionItemsRequest withSort(GetImageCollectionItemsSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

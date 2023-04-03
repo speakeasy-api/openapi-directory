@@ -20,16 +20,12 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.operations.WebmastersSearchanalyticsQuerySecurityOption1;
 import org.openapis.openapi.models.operations.WebmastersSearchanalyticsQuerySecurityOption2;
 import org.openapis.openapi.models.operations.WebmastersSearchanalyticsQuerySecurity;
-import org.openapis.openapi.models.operations.WebmastersSearchanalyticsQueryPathParams;
-import org.openapis.openapi.models.operations.WebmastersSearchanalyticsQueryQueryParams;
 import org.openapis.openapi.models.operations.WebmastersSearchanalyticsQueryRequest;
 import org.openapis.openapi.models.operations.WebmastersSearchanalyticsQueryResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.SearchAnalyticsQueryRequest;
 import org.openapis.openapi.models.shared.ApiDimensionFilterGroup;
 import org.openapis.openapi.models.shared.ApiDimensionFilter;
-import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -38,34 +34,22 @@ public class Application {
                 .build();
 
             WebmastersSearchanalyticsQueryRequest req = new WebmastersSearchanalyticsQueryRequest() {{
-                security = new WebmastersSearchanalyticsQuerySecurity() {{
-                    option1 = new WebmastersSearchanalyticsQuerySecurityOption1() {{
-                        oauth2 = new SchemeOauth2() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                        oauth2c = new SchemeOauth2c() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                    }};
-                }};
-                pathParams = new WebmastersSearchanalyticsQueryPathParams() {{
-                    siteUrl = "corrupti";
-                }};
-                queryParams = new WebmastersSearchanalyticsQueryQueryParams() {{
-                    alt = "json";
-                    fields = "provident";
-                    key = "distinctio";
-                    oauthToken = "quibusdam";
-                    prettyPrint = false;
-                    quotaUser = "unde";
-                    userIp = "nulla";
-                }};
-                request = new SearchAnalyticsQueryRequest() {{
+                searchAnalyticsQueryRequest = new SearchAnalyticsQueryRequest() {{
                     aggregationType = "corrupti";
-                    dataState = "illum";
+                    dataState = "provident";
                     dimensionFilterGroups = new org.openapis.openapi.models.shared.ApiDimensionFilterGroup[]{{
                         add(new ApiDimensionFilterGroup() {{
                             filters = new org.openapis.openapi.models.shared.ApiDimensionFilter[]{{
+                                add(new ApiDimensionFilter() {{
+                                    dimension = "unde";
+                                    expression = "nulla";
+                                    operator = "corrupti";
+                                }}),
+                                add(new ApiDimensionFilter() {{
+                                    dimension = "illum";
+                                    expression = "vel";
+                                    operator = "error";
+                                }}),
                                 add(new ApiDimensionFilter() {{
                                     dimension = "deserunt";
                                     expression = "suscipit";
@@ -76,55 +60,66 @@ public class Application {
                                     expression = "debitis";
                                     operator = "ipsa";
                                 }}),
-                                add(new ApiDimensionFilter() {{
-                                    dimension = "delectus";
-                                    expression = "tempora";
-                                    operator = "suscipit";
-                                }}),
                             }};
-                            groupType = "molestiae";
+                            groupType = "delectus";
                         }}),
                         add(new ApiDimensionFilterGroup() {{
                             filters = new org.openapis.openapi.models.shared.ApiDimensionFilter[]{{
+                                add(new ApiDimensionFilter() {{
+                                    dimension = "suscipit";
+                                    expression = "molestiae";
+                                    operator = "minus";
+                                }}),
                                 add(new ApiDimensionFilter() {{
                                     dimension = "placeat";
                                     expression = "voluptatum";
                                     operator = "iusto";
                                 }}),
+                            }};
+                            groupType = "excepturi";
+                        }}),
+                        add(new ApiDimensionFilterGroup() {{
+                            filters = new org.openapis.openapi.models.shared.ApiDimensionFilter[]{{
                                 add(new ApiDimensionFilter() {{
-                                    dimension = "excepturi";
-                                    expression = "nisi";
-                                    operator = "recusandae";
+                                    dimension = "recusandae";
+                                    expression = "temporibus";
+                                    operator = "ab";
                                 }}),
                                 add(new ApiDimensionFilter() {{
-                                    dimension = "temporibus";
-                                    expression = "ab";
-                                    operator = "quis";
-                                }}),
-                                add(new ApiDimensionFilter() {{
-                                    dimension = "veritatis";
-                                    expression = "deserunt";
-                                    operator = "perferendis";
+                                    dimension = "quis";
+                                    expression = "veritatis";
+                                    operator = "deserunt";
                                 }}),
                             }};
-                            groupType = "ipsam";
+                            groupType = "perferendis";
                         }}),
                     }};
                     dimensions = new String[]{{
+                        add("repellendus"),
                         add("sapiente"),
-                        add("quo"),
-                        add("odit"),
-                        add("at"),
                     }};
-                    endDate = "at";
-                    rowLimit = 978619;
-                    searchType = "molestiae";
-                    startDate = "quod";
-                    startRow = 800911;
+                    endDate = "quo";
+                    rowLimit = 140350;
+                    searchType = "at";
+                    startDate = "at";
+                    startRow = 978619;
                 }};
-            }};            
+                alt = "json";
+                fields = "molestiae";
+                key = "quod";
+                oauthToken = "quod";
+                prettyPrint = false;
+                quotaUser = "esse";
+                siteUrl = "totam";
+                userIp = "porro";
+            }}            
 
-            WebmastersSearchanalyticsQueryResponse res = sdk.searchanalytics.webmastersSearchanalyticsQuery(req);
+            WebmastersSearchanalyticsQueryResponse res = sdk.searchanalytics.webmastersSearchanalyticsQuery(req, new WebmastersSearchanalyticsQuerySecurity() {{
+                option1 = new WebmastersSearchanalyticsQuerySecurityOption1() {{
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                }};
+            }});
 
             if (res.searchAnalyticsQueryResponse.isPresent()) {
                 // handle response
@@ -136,7 +131,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### searchanalytics

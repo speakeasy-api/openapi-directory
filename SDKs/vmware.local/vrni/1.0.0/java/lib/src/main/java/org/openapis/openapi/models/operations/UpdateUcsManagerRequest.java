@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateUcsManagerRequest {
-    
-    public UpdateUcsManagerPathParams pathParams;
-    public UpdateUcsManagerRequest withPathParams(UpdateUcsManagerPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SwitchDataSource request;
-    public UpdateUcsManagerRequest withRequest(org.openapis.openapi.models.shared.SwitchDataSource request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SwitchDataSource switchDataSource;
+    public UpdateUcsManagerRequest withSwitchDataSource(org.openapis.openapi.models.shared.SwitchDataSource switchDataSource) {
+        this.switchDataSource = switchDataSource;
         return this;
     }
     
-    
-    public UpdateUcsManagerSecurity security;
-    public UpdateUcsManagerRequest withSecurity(UpdateUcsManagerSecurity security) {
-        this.security = security;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UpdateUcsManagerRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

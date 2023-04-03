@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CampaignsFetchRequest {
-    
-    public CampaignsFetchPathParams pathParams;
-    public CampaignsFetchRequest withPathParams(CampaignsFetchPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Account to apply operations to
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public CampaignsFetchRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
-    
-    public CampaignsFetchSecurity security;
-    public CampaignsFetchRequest withSecurity(CampaignsFetchSecurity security) {
-        this.security = security;
+    /**
+     * ID of campaign to return
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=campaignId")
+    public String campaignId;
+    public CampaignsFetchRequest withCampaignId(String campaignId) {
+        this.campaignId = campaignId;
         return this;
     }
     

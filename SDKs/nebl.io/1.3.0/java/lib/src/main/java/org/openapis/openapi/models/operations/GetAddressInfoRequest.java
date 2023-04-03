@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAddressInfoRequest {
-    
-    public GetAddressInfoPathParams pathParams;
-    public GetAddressInfoRequest withPathParams(GetAddressInfoPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Neblio Address to get information on.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=address")
+    public String address;
+    public GetAddressInfoRequest withAddress(String address) {
+        this.address = address;
         return this;
     }
     

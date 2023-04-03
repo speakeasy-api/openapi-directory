@@ -4,27 +4,70 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestCustomerAttributesRequest {
-    
-    public RequestCustomerAttributesPathParams pathParams;
-    public RequestCustomerAttributesRequest withPathParams(RequestCustomerAttributesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Service Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Service-Token")
+    public String xSdsServiceToken;
+    public RequestCustomerAttributesRequest withXSdsServiceToken(String xSdsServiceToken) {
+        this.xSdsServiceToken = xSdsServiceToken;
         return this;
     }
     
-    
-    public RequestCustomerAttributesQueryParams queryParams;
-    public RequestCustomerAttributesRequest withQueryParams(RequestCustomerAttributesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Customer ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customer_id")
+    public Long customerId;
+    public RequestCustomerAttributesRequest withCustomerId(Long customerId) {
+        this.customerId = customerId;
         return this;
     }
     
+    /**
+     * Filter string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public RequestCustomerAttributesRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
     
-    public RequestCustomerAttributesHeaders headers;
-    public RequestCustomerAttributesRequest withHeaders(RequestCustomerAttributesHeaders headers) {
-        this.headers = headers;
+    /**
+     * Range limit.
+     * 
+     * Maximum 500.
+     * 
+     *  For more results please use paging (`offset` + `limit`).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public RequestCustomerAttributesRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Range offset
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public RequestCustomerAttributesRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Sort string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public RequestCustomerAttributesRequest withSort(String sort) {
+        this.sort = sort;
         return this;
     }
     

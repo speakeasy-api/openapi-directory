@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PhoneValidateRequest {
+    /**
+     * ISO 2-letter country code, assume numbers are based in this country. If not set numbers are assumed to be in international format (with or without the leading + sign)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country-code")
+    public String countryCode;
+    public PhoneValidateRequest withCountryCode(String countryCode) {
+        this.countryCode = countryCode;
+        return this;
+    }
     
-    public PhoneValidateQueryParams queryParams;
-    public PhoneValidateRequest withQueryParams(PhoneValidateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Pass in a users IP address and we will assume numbers are based in the country of the IP address
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ip")
+    public String ip;
+    public PhoneValidateRequest withIp(String ip) {
+        this.ip = ip;
+        return this;
+    }
+    
+    /**
+     * A phone number. This can be in international format (E.164) or local format. If passing local format you must also set either the 'country-code' OR 'ip' options as well
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
+    public String number;
+    public PhoneValidateRequest withNumber(String number) {
+        this.number = number;
         return this;
     }
     

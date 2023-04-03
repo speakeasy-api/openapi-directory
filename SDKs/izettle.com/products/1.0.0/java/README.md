@@ -18,12 +18,10 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.CreateCategoriesSecurity;
-import org.openapis.openapi.models.operations.CreateCategoriesPathParams;
 import org.openapis.openapi.models.operations.CreateCategoriesRequest;
 import org.openapis.openapi.models.operations.CreateCategoriesResponse;
 import org.openapis.openapi.models.shared.CreateCategoriesRequest;
 import org.openapis.openapi.models.shared.CategoryDTO;
-import org.openapis.openapi.models.shared.SchemeZettleOauth;
 
 public class Application {
     public static void main(String[] args) {
@@ -32,33 +30,28 @@ public class Application {
                 .build();
 
             CreateCategoriesRequest req = new CreateCategoriesRequest() {{
-                security = new CreateCategoriesSecurity() {{
-                    zettleOauth = new SchemeZettleOauth() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new CreateCategoriesPathParams() {{
-                    organizationUuid = "89bd9d8d-69a6-474e-8f46-7cc8796ed151";
-                }};
-                request = new CreateCategoriesRequest() {{
+                createCategoriesRequest = new CreateCategoriesRequest() {{
                     categories = new org.openapis.openapi.models.shared.CategoryDTO[]{{
                         add(new CategoryDTO() {{
-                            name = "perferendis";
-                            uuid = "5dfc2ddf-7cc7-48ca-9ba9-28fc816742cb";
+                            name = "provident";
+                            uuid = "bd9d8d69-a674-4e0f-867c-c8796ed151a0";
                         }}),
                         add(new CategoryDTO() {{
-                            name = "esse";
-                            uuid = "39205929-396f-4ea7-996e-b10faaa2352c";
+                            name = "ipsam";
+                            uuid = "dfc2ddf7-cc78-4ca1-ba92-8fc816742cb7";
                         }}),
                         add(new CategoryDTO() {{
-                            name = "enim";
-                            uuid = "955907af-f1a3-4a2f-a946-7739251aa52c";
+                            name = "ipsum";
+                            uuid = "92059293-96fe-4a75-96eb-10faaa2352c5";
                         }}),
                     }};
                 }};
-            }};            
+                organizationUuid = "955907af-f1a3-4a2f-a946-7739251aa52c";
+            }}            
 
-            CreateCategoriesResponse res = sdk.categories.createCategories(req);
+            CreateCategoriesResponse res = sdk.categories.createCategories(req, new CreateCategoriesSecurity() {{
+                zettleOauth = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.statusCode == 200) {
                 // handle response
@@ -70,7 +63,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### categories

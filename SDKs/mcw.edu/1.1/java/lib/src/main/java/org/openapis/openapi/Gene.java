@@ -35,7 +35,7 @@ public class Gene {
      */
     public org.openapis.openapi.models.operations.GETAllAnnotatedGenesUsingGETResponse getAllAnnotatedGenesUsingGET(org.openapis.openapi.models.operations.GETAllAnnotatedGenesUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETAllAnnotatedGenesUsingGETPathParams.class, baseUrl, "/genes/annotation/{accId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETAllAnnotatedGenesUsingGETRequest.class, baseUrl, "/genes/annotation/{accId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -72,7 +72,7 @@ public class Gene {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAnnotatedGenesUsingPOSTResponse getAnnotatedGenesUsingPOST(org.openapis.openapi.models.operations.GetAnnotatedGenesUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetAnnotatedGenesUsingPOSTResponse getAnnotatedGenesUsingPOST(org.openapis.openapi.models.shared.AnnotatedGeneRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/genes/annotation");
         
@@ -115,7 +115,7 @@ public class Gene {
      */
     public org.openapis.openapi.models.operations.GETGeneAllelesUsingGETResponse getGeneAllelesUsingGET(org.openapis.openapi.models.operations.GETGeneAllelesUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGeneAllelesUsingGETPathParams.class, baseUrl, "/genes/allele/{rgdId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGeneAllelesUsingGETRequest.class, baseUrl, "/genes/allele/{rgdId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -154,7 +154,7 @@ public class Gene {
      */
     public org.openapis.openapi.models.operations.GETGeneByMapKeyUsingGETResponse getGeneByMapKeyUsingGET(org.openapis.openapi.models.operations.GETGeneByMapKeyUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGeneByMapKeyUsingGETPathParams.class, baseUrl, "/genes/map/{mapKey}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGeneByMapKeyUsingGETRequest.class, baseUrl, "/genes/map/{mapKey}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -193,7 +193,7 @@ public class Gene {
      */
     public org.openapis.openapi.models.operations.GETGeneByRgdIdUsingGETResponse getGeneByRgdIdUsingGET(org.openapis.openapi.models.operations.GETGeneByRgdIdUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGeneByRgdIdUsingGETPathParams.class, baseUrl, "/genes/{rgdId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGeneByRgdIdUsingGETRequest.class, baseUrl, "/genes/{rgdId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -232,7 +232,7 @@ public class Gene {
      */
     public org.openapis.openapi.models.operations.GETGeneBySymbolUsingGETResponse getGeneBySymbolUsingGET(org.openapis.openapi.models.operations.GETGeneBySymbolUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGeneBySymbolUsingGETPathParams.class, baseUrl, "/genes/{symbol}/{speciesTypeKey}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGeneBySymbolUsingGETRequest.class, baseUrl, "/genes/{symbol}/{speciesTypeKey}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -271,7 +271,7 @@ public class Gene {
      */
     public org.openapis.openapi.models.operations.GETGeneOrthologsUsingGETResponse getGeneOrthologsUsingGET(org.openapis.openapi.models.operations.GETGeneOrthologsUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGeneOrthologsUsingGETPathParams.class, baseUrl, "/genes/orthologs/{rgdId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGeneOrthologsUsingGETRequest.class, baseUrl, "/genes/orthologs/{rgdId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -310,7 +310,7 @@ public class Gene {
      */
     public org.openapis.openapi.models.operations.GETGenesAnnotatedUsingGETResponse getGenesAnnotatedUsingGET(org.openapis.openapi.models.operations.GETGenesAnnotatedUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGenesAnnotatedUsingGETPathParams.class, baseUrl, "/genes/annotation/{accId}/{speciesTypeKey}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGenesAnnotatedUsingGETRequest.class, baseUrl, "/genes/annotation/{accId}/{speciesTypeKey}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -349,7 +349,7 @@ public class Gene {
      */
     public org.openapis.openapi.models.operations.GETGenesByAffyIdUsingGETResponse getGenesByAffyIdUsingGET(org.openapis.openapi.models.operations.GETGenesByAffyIdUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGenesByAffyIdUsingGETPathParams.class, baseUrl, "/genes/affyId/{affyId}/{speciesTypeKey}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGenesByAffyIdUsingGETRequest.class, baseUrl, "/genes/affyId/{affyId}/{speciesTypeKey}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -388,7 +388,7 @@ public class Gene {
      */
     public org.openapis.openapi.models.operations.GETGenesByAliasSymbolUsingGETResponse getGenesByAliasSymbolUsingGET(org.openapis.openapi.models.operations.GETGenesByAliasSymbolUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGenesByAliasSymbolUsingGETPathParams.class, baseUrl, "/genes/alias/{aliasSymbol}/{speciesTypeKey}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGenesByAliasSymbolUsingGETRequest.class, baseUrl, "/genes/alias/{aliasSymbol}/{speciesTypeKey}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -427,7 +427,7 @@ public class Gene {
      */
     public org.openapis.openapi.models.operations.GETGenesByKeywordUsingGETResponse getGenesByKeywordUsingGET(org.openapis.openapi.models.operations.GETGenesByKeywordUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGenesByKeywordUsingGETPathParams.class, baseUrl, "/genes/keyword/{keyword}/{speciesTypeKey}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGenesByKeywordUsingGETRequest.class, baseUrl, "/genes/keyword/{keyword}/{speciesTypeKey}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -466,7 +466,7 @@ public class Gene {
      */
     public org.openapis.openapi.models.operations.GETGenesByPositionUsingGETResponse getGenesByPositionUsingGET(org.openapis.openapi.models.operations.GETGenesByPositionUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGenesByPositionUsingGETPathParams.class, baseUrl, "/genes/{chr}/{start}/{stop}/{mapKey}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGenesByPositionUsingGETRequest.class, baseUrl, "/genes/{chr}/{start}/{stop}/{mapKey}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -505,7 +505,7 @@ public class Gene {
      */
     public org.openapis.openapi.models.operations.GETGenesBySpeciesUsingGETResponse getGenesBySpeciesUsingGET(org.openapis.openapi.models.operations.GETGenesBySpeciesUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGenesBySpeciesUsingGETPathParams.class, baseUrl, "/genes/species/{speciesTypeKey}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGenesBySpeciesUsingGETRequest.class, baseUrl, "/genes/species/{speciesTypeKey}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -544,7 +544,7 @@ public class Gene {
      */
     public org.openapis.openapi.models.operations.GETGenesInRegionUsingGETResponse getGenesInRegionUsingGET(org.openapis.openapi.models.operations.GETGenesInRegionUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGenesInRegionUsingGETPathParams.class, baseUrl, "/genes/region/{chr}/{start}/{stop}/{mapKey}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGenesInRegionUsingGETRequest.class, baseUrl, "/genes/region/{chr}/{start}/{stop}/{mapKey}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -583,7 +583,7 @@ public class Gene {
      */
     public org.openapis.openapi.models.operations.GETMappedGenesByPositionUsingGETResponse getMappedGenesByPositionUsingGET(org.openapis.openapi.models.operations.GETMappedGenesByPositionUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETMappedGenesByPositionUsingGETPathParams.class, baseUrl, "/genes/mapped/{chr}/{start}/{stop}/{mapKey}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETMappedGenesByPositionUsingGETRequest.class, baseUrl, "/genes/mapped/{chr}/{start}/{stop}/{mapKey}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -620,7 +620,7 @@ public class Gene {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetOrthologsByListUsingPOSTResponse getOrthologsByListUsingPOST(org.openapis.openapi.models.operations.GetOrthologsByListUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetOrthologsByListUsingPOSTResponse getOrthologsByListUsingPOST(org.openapis.openapi.models.shared.OrthologRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/genes/orthologs");
         

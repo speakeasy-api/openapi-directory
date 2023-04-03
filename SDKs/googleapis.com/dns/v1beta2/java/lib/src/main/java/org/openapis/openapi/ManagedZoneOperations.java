@@ -33,25 +33,26 @@ public class ManagedZoneOperations {
     /**
      * Fetches the representation of an existing Operation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DnsManagedZoneOperationsGetResponse dnsManagedZoneOperationsGet(org.openapis.openapi.models.operations.DnsManagedZoneOperationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DnsManagedZoneOperationsGetResponse dnsManagedZoneOperationsGet(org.openapis.openapi.models.operations.DnsManagedZoneOperationsGetRequest request, org.openapis.openapi.models.operations.DnsManagedZoneOperationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DnsManagedZoneOperationsGetPathParams.class, baseUrl, "/dns/v1beta2/projects/{project}/managedZones/{managedZone}/operations/{operation}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DnsManagedZoneOperationsGetRequest.class, baseUrl, "/dns/v1beta2/projects/{project}/managedZones/{managedZone}/operations/{operation}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DnsManagedZoneOperationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DnsManagedZoneOperationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,25 +79,26 @@ public class ManagedZoneOperations {
     /**
      * Enumerates Operations for the given ManagedZone.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DnsManagedZoneOperationsListResponse dnsManagedZoneOperationsList(org.openapis.openapi.models.operations.DnsManagedZoneOperationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DnsManagedZoneOperationsListResponse dnsManagedZoneOperationsList(org.openapis.openapi.models.operations.DnsManagedZoneOperationsListRequest request, org.openapis.openapi.models.operations.DnsManagedZoneOperationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DnsManagedZoneOperationsListPathParams.class, baseUrl, "/dns/v1beta2/projects/{project}/managedZones/{managedZone}/operations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DnsManagedZoneOperationsListRequest.class, baseUrl, "/dns/v1beta2/projects/{project}/managedZones/{managedZone}/operations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DnsManagedZoneOperationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DnsManagedZoneOperationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

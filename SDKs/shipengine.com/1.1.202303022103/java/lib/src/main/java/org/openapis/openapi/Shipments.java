@@ -50,7 +50,7 @@ public class Shipments {
      */
     public org.openapis.openapi.models.operations.CancelShipmentsResponse cancelShipments(org.openapis.openapi.models.operations.CancelShipmentsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelShipmentsPathParams.class, baseUrl, "/v1/shipments/{shipment_id}/cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelShipmentsRequest.class, baseUrl, "/v1/shipments/{shipment_id}/cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -100,7 +100,7 @@ public class Shipments {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateShipmentsResponse createShipments(org.openapis.openapi.models.operations.CreateShipmentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateShipmentsResponse createShipments(org.openapis.openapi.models.shared.CreateShipmentsRequestBodyInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/shipments");
         
@@ -155,7 +155,7 @@ public class Shipments {
      */
     public org.openapis.openapi.models.operations.GetShipmentByExternalIdResponse getShipmentByExternalId(org.openapis.openapi.models.operations.GetShipmentByExternalIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetShipmentByExternalIdPathParams.class, baseUrl, "/v1/shipments/external_shipment_id/{external_shipment_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetShipmentByExternalIdRequest.class, baseUrl, "/v1/shipments/external_shipment_id/{external_shipment_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -203,7 +203,7 @@ public class Shipments {
      */
     public org.openapis.openapi.models.operations.GetShipmentByIdResponse getShipmentById(org.openapis.openapi.models.operations.GetShipmentByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetShipmentByIdPathParams.class, baseUrl, "/v1/shipments/{shipment_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetShipmentByIdRequest.class, baseUrl, "/v1/shipments/{shipment_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -251,13 +251,13 @@ public class Shipments {
      */
     public org.openapis.openapi.models.operations.ListShipmentRatesResponse listShipmentRates(org.openapis.openapi.models.operations.ListShipmentRatesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListShipmentRatesPathParams.class, baseUrl, "/v1/shipments/{shipment_id}/rates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListShipmentRatesRequest.class, baseUrl, "/v1/shipments/{shipment_id}/rates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListShipmentRatesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListShipmentRatesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -311,7 +311,7 @@ public class Shipments {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListShipmentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListShipmentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -362,7 +362,7 @@ public class Shipments {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ParseShipmentResponse parseShipment(org.openapis.openapi.models.operations.ParseShipmentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ParseShipmentResponse parseShipment(org.openapis.openapi.models.shared.ParseShipmentRequestBodyInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/shipments/recognize");
         
@@ -417,7 +417,7 @@ public class Shipments {
      */
     public org.openapis.openapi.models.operations.TagShipmentResponse tagShipment(org.openapis.openapi.models.operations.TagShipmentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagShipmentPathParams.class, baseUrl, "/v1/shipments/{shipment_id}/tags/{tag_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagShipmentRequest.class, baseUrl, "/v1/shipments/{shipment_id}/tags/{tag_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -465,7 +465,7 @@ public class Shipments {
      */
     public org.openapis.openapi.models.operations.UntagShipmentResponse untagShipment(org.openapis.openapi.models.operations.UntagShipmentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UntagShipmentPathParams.class, baseUrl, "/v1/shipments/{shipment_id}/tags/{tag_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UntagShipmentRequest.class, baseUrl, "/v1/shipments/{shipment_id}/tags/{tag_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -517,12 +517,12 @@ public class Shipments {
      */
     public org.openapis.openapi.models.operations.UpdateShipmentResponse updateShipment(org.openapis.openapi.models.operations.UpdateShipmentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateShipmentPathParams.class, baseUrl, "/v1/shipments/{shipment_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateShipmentRequest.class, baseUrl, "/v1/shipments/{shipment_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateShipmentRequestBodyInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

@@ -4,27 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletePredictionRequest {
-    
-    public DeletePredictionPathParams pathParams;
-    public DeletePredictionRequest withPathParams(DeletePredictionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
+    public String trainingKey;
+    public DeletePredictionRequest withTrainingKey(String trainingKey) {
+        this.trainingKey = trainingKey;
         return this;
     }
     
-    
-    public DeletePredictionQueryParams queryParams;
-    public DeletePredictionRequest withQueryParams(DeletePredictionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The prediction ids. Limited to 64
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ids")
+    public String[] ids;
+    public DeletePredictionRequest withIds(String[] ids) {
+        this.ids = ids;
         return this;
     }
     
-    
-    public DeletePredictionHeaders headers;
-    public DeletePredictionRequest withHeaders(DeletePredictionHeaders headers) {
-        this.headers = headers;
+    /**
+     * The project id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public DeletePredictionRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

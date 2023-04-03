@@ -33,25 +33,26 @@ public class UserRolePermissions {
     /**
      * Gets one user role permission by ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingUserRolePermissionsGetResponse dfareportingUserRolePermissionsGet(org.openapis.openapi.models.operations.DfareportingUserRolePermissionsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingUserRolePermissionsGetResponse dfareportingUserRolePermissionsGet(org.openapis.openapi.models.operations.DfareportingUserRolePermissionsGetRequest request, org.openapis.openapi.models.operations.DfareportingUserRolePermissionsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingUserRolePermissionsGetPathParams.class, baseUrl, "/userprofiles/{profileId}/userRolePermissions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingUserRolePermissionsGetRequest.class, baseUrl, "/userprofiles/{profileId}/userRolePermissions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingUserRolePermissionsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingUserRolePermissionsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,25 +79,26 @@ public class UserRolePermissions {
     /**
      * Gets a list of user role permissions, possibly filtered.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingUserRolePermissionsListResponse dfareportingUserRolePermissionsList(org.openapis.openapi.models.operations.DfareportingUserRolePermissionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingUserRolePermissionsListResponse dfareportingUserRolePermissionsList(org.openapis.openapi.models.operations.DfareportingUserRolePermissionsListRequest request, org.openapis.openapi.models.operations.DfareportingUserRolePermissionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingUserRolePermissionsListPathParams.class, baseUrl, "/userprofiles/{profileId}/userRolePermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingUserRolePermissionsListRequest.class, baseUrl, "/userprofiles/{profileId}/userRolePermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingUserRolePermissionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingUserRolePermissionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

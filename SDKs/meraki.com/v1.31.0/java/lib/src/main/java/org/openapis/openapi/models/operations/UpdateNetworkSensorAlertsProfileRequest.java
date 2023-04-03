@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkSensorAlertsProfileRequest {
-    
-    public UpdateNetworkSensorAlertsProfilePathParams pathParams;
-    public UpdateNetworkSensorAlertsProfileRequest withPathParams(UpdateNetworkSensorAlertsProfilePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkSensorAlertsProfileRequestBody requestBody;
+    public UpdateNetworkSensorAlertsProfileRequest withRequestBody(UpdateNetworkSensorAlertsProfileRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkSensorAlertsProfileRequestBody request;
-    public UpdateNetworkSensorAlertsProfileRequest withRequest(UpdateNetworkSensorAlertsProfileRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UpdateNetworkSensorAlertsProfileRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkSensorAlertsProfileRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

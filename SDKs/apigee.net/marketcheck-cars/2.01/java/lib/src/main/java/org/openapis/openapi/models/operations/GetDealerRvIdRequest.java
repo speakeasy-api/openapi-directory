@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDealerRvIdRequest {
-    
-    public GetDealerRvIdPathParams pathParams;
-    public GetDealerRvIdRequest withPathParams(GetDealerRvIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The API Authentication Key. Mandatory with all API calls.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetDealerRvIdRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    /**
+     * Dealer id to get all the dealer info attributes
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetDealerRvIdRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetDealerRvIdQueryParams queryParams;
-    public GetDealerRvIdRequest withQueryParams(GetDealerRvIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * boolean param to include site providers name in response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=provider")
+    public Boolean provider;
+    public GetDealerRvIdRequest withProvider(Boolean provider) {
+        this.provider = provider;
         return this;
     }
     

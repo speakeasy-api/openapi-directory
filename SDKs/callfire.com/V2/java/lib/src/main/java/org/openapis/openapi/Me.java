@@ -36,10 +36,11 @@ public class Me {
      * Create api credentials
      * Creates an API credentials for the CallFire API. This endpoint requires full CallFire account credentials to be used, authenticated using Basic Authentication. At the moment user provides only the name for the credentials. The generated credentials can be used to access any CallFire APIs. For authentication use account credentials.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateApiCredentialResponse createApiCredential(org.openapis.openapi.models.operations.CreateApiCredentialRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateApiCredentialResponse createApiCredential(org.openapis.openapi.models.shared.ApiCredentialInput request, org.openapis.openapi.models.operations.CreateApiCredentialSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me/api/credentials");
         
@@ -50,7 +51,7 @@ public class Me {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -86,19 +87,20 @@ public class Me {
      * Delete api credentials
      * Deletes a specified API credential. Currently, removes the ability to access the API. Only ACCOUNT_HOLDER can invoke this API. For authentication use account credentials.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteApiCredentialResponse deleteApiCredential(org.openapis.openapi.models.operations.DeleteApiCredentialRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteApiCredentialResponse deleteApiCredential(org.openapis.openapi.models.operations.DeleteApiCredentialRequest request, org.openapis.openapi.models.operations.DeleteApiCredentialSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteApiCredentialPathParams.class, baseUrl, "/me/api/credentials/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteApiCredentialRequest.class, baseUrl, "/me/api/credentials/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,19 +128,20 @@ public class Me {
      * Disable specified API credentials
      * Disables a specified API credential. Currently, removes the ability to access the API. Only ACCOUNT_HOLDER can invoke this API. For authentication use account credentials.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisableApiCredentialsResponse disableApiCredentials(org.openapis.openapi.models.operations.DisableApiCredentialsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisableApiCredentialsResponse disableApiCredentials(org.openapis.openapi.models.operations.DisableApiCredentialsRequest request, org.openapis.openapi.models.operations.DisableApiCredentialsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisableApiCredentialsPathParams.class, baseUrl, "/me/api/credentials/{id}/disable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisableApiCredentialsRequest.class, baseUrl, "/me/api/credentials/{id}/disable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -166,19 +169,20 @@ public class Me {
      * Enable specified API credentials
      * Enables a specified API credential. Currently, adds the ability to access the API. Only ACCOUNT_HOLDER can invoke this API. For authentication use account credentials.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EnableApiCredentialsResponse enableApiCredentials(org.openapis.openapi.models.operations.EnableApiCredentialsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EnableApiCredentialsResponse enableApiCredentials(org.openapis.openapi.models.operations.EnableApiCredentialsRequest request, org.openapis.openapi.models.operations.EnableApiCredentialsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnableApiCredentialsPathParams.class, baseUrl, "/me/api/credentials/{id}/enable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnableApiCredentialsRequest.class, baseUrl, "/me/api/credentials/{id}/enable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -206,10 +210,11 @@ public class Me {
      * Find api credentials
      * Searches for all credentials generated by user. Returns a paged list of the API credentials. Only ACCOUNT_HOLDER can invoke this API. For authentication use account credentials.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindApiCredentialsResponse findApiCredentials(org.openapis.openapi.models.operations.FindApiCredentialsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FindApiCredentialsResponse findApiCredentials(org.openapis.openapi.models.operations.FindApiCredentialsRequest request, org.openapis.openapi.models.operations.FindApiCredentialsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me/api/credentials");
         
@@ -217,14 +222,14 @@ public class Me {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindApiCredentialsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindApiCredentialsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -260,10 +265,11 @@ public class Me {
      * Find account details
      * Searches for the user account details. Details include name, email, and basic account permissions. For authentication use api credentials.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAccountResponse getAccount(org.openapis.openapi.models.operations.GetAccountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetAccountResponse getAccount(org.openapis.openapi.models.operations.GetAccountRequest request, org.openapis.openapi.models.operations.GetAccountSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me/account");
         
@@ -271,14 +277,14 @@ public class Me {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAccountQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAccountRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -314,25 +320,26 @@ public class Me {
      * Find a specific api credential
      * Returns an API credential instance for a given api credential id. Only ACCOUNT_HOLDER can invoke this API. For authentication use account credentials.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiCredentialResponse getApiCredential(org.openapis.openapi.models.operations.GetApiCredentialRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApiCredentialResponse getApiCredential(org.openapis.openapi.models.operations.GetApiCredentialRequest request, org.openapis.openapi.models.operations.GetApiCredentialSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiCredentialPathParams.class, baseUrl, "/me/api/credentials/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiCredentialRequest.class, baseUrl, "/me/api/credentials/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApiCredentialQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApiCredentialRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -367,11 +374,10 @@ public class Me {
     /**
      * Find plan usage
      * Searches for the data of a billing plan usage for the user. Returns the data of a billing plan usage for the current month. For authentication use api credentials.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetBillingPlanUsageResponse getBillingPlanUsage(org.openapis.openapi.models.operations.GetBillingPlanUsageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetBillingPlanUsageResponse getBillingPlanUsage() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me/billing/plan-usage");
         
@@ -380,8 +386,7 @@ public class Me {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -415,11 +420,10 @@ public class Me {
     /**
      * Find caller ids
      * Returns a list of verified caller ids. If the number is not shown in the list, then it is not verified. In this case sending of a verification code is required. For authentication use api credentials.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCallerIdsResponse getCallerIds(org.openapis.openapi.models.operations.GetCallerIdsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCallerIdsResponse getCallerIds() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me/callerids");
         
@@ -428,8 +432,7 @@ public class Me {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -464,10 +467,11 @@ public class Me {
      * Find credit usage
      * Find credit usage for the user. Returns credits usage for time period specified or if unspecified then total for all time. For authentication use api credentials.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCreditUsageResponse getCreditUsage(org.openapis.openapi.models.operations.GetCreditUsageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCreditUsageResponse getCreditUsage(org.openapis.openapi.models.operations.GetCreditUsageRequest request, org.openapis.openapi.models.operations.GetCreditUsageSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me/billing/credit-usage");
         
@@ -475,14 +479,14 @@ public class Me {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCreditUsageQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCreditUsageRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -518,19 +522,20 @@ public class Me {
      * Create a caller id
      * Generates and sends a verification code to the phone number provided in the path. The verification code is delivered via a phone call. This code needs to be submitted to the verify caller id API endpoint to complete verification. For authentication use api credentials.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SendVerificationCodeToCallerIdResponse sendVerificationCodeToCallerId(org.openapis.openapi.models.operations.SendVerificationCodeToCallerIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SendVerificationCodeToCallerIdResponse sendVerificationCodeToCallerId(org.openapis.openapi.models.operations.SendVerificationCodeToCallerIdRequest request, org.openapis.openapi.models.operations.SendVerificationCodeToCallerIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SendVerificationCodeToCallerIdPathParams.class, baseUrl, "/me/callerids/{callerid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SendVerificationCodeToCallerIdRequest.class, baseUrl, "/me/callerids/{callerid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -558,21 +563,22 @@ public class Me {
      * Verify a caller id
      * With the verification code received from the Create caller id endpoint, a call to this endpoint is required to finish verification. For authentication use api credentials.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.VerifyCallerIdResponse verifyCallerId(org.openapis.openapi.models.operations.VerifyCallerIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.VerifyCallerIdResponse verifyCallerId(org.openapis.openapi.models.operations.VerifyCallerIdRequest request, org.openapis.openapi.models.operations.VerifyCallerIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VerifyCallerIdPathParams.class, baseUrl, "/me/callerids/{callerid}/verification-code", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VerifyCallerIdRequest.class, baseUrl, "/me/callerids/{callerid}/verification-code", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "callerIdVerificationRequest", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

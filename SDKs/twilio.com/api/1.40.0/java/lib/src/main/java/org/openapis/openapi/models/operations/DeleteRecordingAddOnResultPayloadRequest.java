@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRecordingAddOnResultPayloadRequest {
-    
-    public DeleteRecordingAddOnResultPayloadPathParams pathParams;
-    public DeleteRecordingAddOnResultPayloadRequest withPathParams(DeleteRecordingAddOnResultPayloadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Recording AddOnResult Payload resources to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public DeleteRecordingAddOnResultPayloadRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public DeleteRecordingAddOnResultPayloadSecurity security;
-    public DeleteRecordingAddOnResultPayloadRequest withSecurity(DeleteRecordingAddOnResultPayloadSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the AddOnResult to which the payloads to delete belongs.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AddOnResultSid")
+    public String addOnResultSid;
+    public DeleteRecordingAddOnResultPayloadRequest withAddOnResultSid(String addOnResultSid) {
+        this.addOnResultSid = addOnResultSid;
         return this;
     }
     
+    /**
+     * The SID of the recording to which the AddOnResult resource that contains the payloads to delete belongs.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ReferenceSid")
+    public String referenceSid;
+    public DeleteRecordingAddOnResultPayloadRequest withReferenceSid(String referenceSid) {
+        this.referenceSid = referenceSid;
+        return this;
+    }
     
-    public String serverURL;
-    public DeleteRecordingAddOnResultPayloadRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the Recording AddOnResult Payload resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteRecordingAddOnResultPayloadRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDocumentWithWebHookRequest {
-    
-    public GetDocumentWithWebHookPathParams pathParams;
-    public GetDocumentWithWebHookRequest withPathParams(GetDocumentWithWebHookPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetDocumentWithWebHookQueryParams queryParams;
-    public GetDocumentWithWebHookRequest withQueryParams(GetDocumentWithWebHookQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * The input document (in JSON format)
      */
     @SpeakeasyMetadata("request:mediaType=application/x-yaml")
-    public byte[] request;
-    public GetDocumentWithWebHookRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public GetDocumentWithWebHookRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * A backslash (/) delimited path to access values inside object and array documents. If the path points to an array, the server will attempt to convert the array index to an integer. If the path element cannot be converted to an integer, the server will respond with 404.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
+    public String path;
+    public GetDocumentWithWebHookRequest withPath(String path) {
+        this.path = path;
+        return this;
+    }
+    
+    /**
+     * If true, response will be in a human-readable format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pretty")
+    public Boolean pretty;
+    public GetDocumentWithWebHookRequest withPretty(Boolean pretty) {
+        this.pretty = pretty;
         return this;
     }
     

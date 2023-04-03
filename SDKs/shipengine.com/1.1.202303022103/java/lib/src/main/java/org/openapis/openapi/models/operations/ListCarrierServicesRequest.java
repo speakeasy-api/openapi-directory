@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListCarrierServicesRequest {
-    
-    public ListCarrierServicesPathParams pathParams;
-    public ListCarrierServicesRequest withPathParams(ListCarrierServicesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Carrier ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=carrier_id")
+    public String carrierId;
+    public ListCarrierServicesRequest withCarrierId(String carrierId) {
+        this.carrierId = carrierId;
         return this;
     }
     

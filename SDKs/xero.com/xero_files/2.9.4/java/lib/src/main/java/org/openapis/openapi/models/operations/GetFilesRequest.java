@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFilesRequest {
-    
-    public GetFilesQueryParams queryParams;
-    public GetFilesRequest withQueryParams(GetFilesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * number of records to skip for pagination
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetFilesRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public GetFilesHeaders headers;
-    public GetFilesRequest withHeaders(GetFilesHeaders headers) {
-        this.headers = headers;
+    /**
+     * pass an optional page size value
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagesize")
+    public Long pagesize;
+    public GetFilesRequest withPagesize(Long pagesize) {
+        this.pagesize = pagesize;
         return this;
     }
     
+    /**
+     * values to sort by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetFilesSortEnum sort;
+    public GetFilesRequest withSort(GetFilesSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
     
-    public GetFilesSecurity security;
-    public GetFilesRequest withSecurity(GetFilesSecurity security) {
-        this.security = security;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=xero-tenant-id")
+    public String xeroTenantId;
+    public GetFilesRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimInterfaceTemplatesDeleteRequest {
-    
-    public DcimInterfaceTemplatesDeletePathParams pathParams;
-    public DcimInterfaceTemplatesDeleteRequest withPathParams(DcimInterfaceTemplatesDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this interface template.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimInterfaceTemplatesDeleteRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

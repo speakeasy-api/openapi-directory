@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchDriverRequest {
-    
-    public PatchDriverPathParams pathParams;
-    public PatchDriverRequest withPathParams(PatchDriverPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Include driver properties to create here
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PatchDriverRequestBody request;
-    public PatchDriverRequest withRequest(PatchDriverRequestBody request) {
-        this.request = request;
+    public PatchDriverRequestBody requestBody;
+    public PatchDriverRequest withRequestBody(PatchDriverRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * ID of driver that needs to be updated
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatchDriverRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

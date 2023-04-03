@@ -42,12 +42,12 @@ public class Sensor {
      */
     public org.openapis.openapi.models.operations.CreateNetworkSensorAlertsProfileResponse createNetworkSensorAlertsProfile(org.openapis.openapi.models.operations.CreateNetworkSensorAlertsProfileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkSensorAlertsProfilePathParams.class, baseUrl, "/networks/{networkId}/sensor/alerts/profiles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkSensorAlertsProfileRequest.class, baseUrl, "/networks/{networkId}/sensor/alerts/profiles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -87,7 +87,7 @@ public class Sensor {
      */
     public org.openapis.openapi.models.operations.DeleteNetworkSensorAlertsProfileResponse deleteNetworkSensorAlertsProfile(org.openapis.openapi.models.operations.DeleteNetworkSensorAlertsProfileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkSensorAlertsProfilePathParams.class, baseUrl, "/networks/{networkId}/sensor/alerts/profiles/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkSensorAlertsProfileRequest.class, baseUrl, "/networks/{networkId}/sensor/alerts/profiles/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -121,7 +121,7 @@ public class Sensor {
      */
     public org.openapis.openapi.models.operations.GetDeviceSensorRelationshipsResponse getDeviceSensorRelationships(org.openapis.openapi.models.operations.GetDeviceSensorRelationshipsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceSensorRelationshipsPathParams.class, baseUrl, "/devices/{serial}/sensor/relationships", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceSensorRelationshipsRequest.class, baseUrl, "/devices/{serial}/sensor/relationships", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -161,7 +161,7 @@ public class Sensor {
      */
     public org.openapis.openapi.models.operations.GetNetworkSensorAlertsCurrentOverviewByMetricResponse getNetworkSensorAlertsCurrentOverviewByMetric(org.openapis.openapi.models.operations.GetNetworkSensorAlertsCurrentOverviewByMetricRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSensorAlertsCurrentOverviewByMetricPathParams.class, baseUrl, "/networks/{networkId}/sensor/alerts/current/overview/byMetric", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSensorAlertsCurrentOverviewByMetricRequest.class, baseUrl, "/networks/{networkId}/sensor/alerts/current/overview/byMetric", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -201,13 +201,13 @@ public class Sensor {
      */
     public org.openapis.openapi.models.operations.GetNetworkSensorAlertsOverviewByMetricResponse getNetworkSensorAlertsOverviewByMetric(org.openapis.openapi.models.operations.GetNetworkSensorAlertsOverviewByMetricRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSensorAlertsOverviewByMetricPathParams.class, baseUrl, "/networks/{networkId}/sensor/alerts/overview/byMetric", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSensorAlertsOverviewByMetricRequest.class, baseUrl, "/networks/{networkId}/sensor/alerts/overview/byMetric", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkSensorAlertsOverviewByMetricQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkSensorAlertsOverviewByMetricRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -247,7 +247,7 @@ public class Sensor {
      */
     public org.openapis.openapi.models.operations.GetNetworkSensorAlertsProfileResponse getNetworkSensorAlertsProfile(org.openapis.openapi.models.operations.GetNetworkSensorAlertsProfileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSensorAlertsProfilePathParams.class, baseUrl, "/networks/{networkId}/sensor/alerts/profiles/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSensorAlertsProfileRequest.class, baseUrl, "/networks/{networkId}/sensor/alerts/profiles/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -287,7 +287,7 @@ public class Sensor {
      */
     public org.openapis.openapi.models.operations.GetNetworkSensorAlertsProfilesResponse getNetworkSensorAlertsProfiles(org.openapis.openapi.models.operations.GetNetworkSensorAlertsProfilesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSensorAlertsProfilesPathParams.class, baseUrl, "/networks/{networkId}/sensor/alerts/profiles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSensorAlertsProfilesRequest.class, baseUrl, "/networks/{networkId}/sensor/alerts/profiles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -327,7 +327,7 @@ public class Sensor {
      */
     public org.openapis.openapi.models.operations.GetNetworkSensorRelationshipsResponse getNetworkSensorRelationships(org.openapis.openapi.models.operations.GetNetworkSensorRelationshipsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSensorRelationshipsPathParams.class, baseUrl, "/networks/{networkId}/sensor/relationships", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSensorRelationshipsRequest.class, baseUrl, "/networks/{networkId}/sensor/relationships", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -367,13 +367,13 @@ public class Sensor {
      */
     public org.openapis.openapi.models.operations.GetOrganizationSensorReadingsHistoryResponse getOrganizationSensorReadingsHistory(org.openapis.openapi.models.operations.GetOrganizationSensorReadingsHistoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSensorReadingsHistoryPathParams.class, baseUrl, "/organizations/{organizationId}/sensor/readings/history", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSensorReadingsHistoryRequest.class, baseUrl, "/organizations/{organizationId}/sensor/readings/history", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationSensorReadingsHistoryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationSensorReadingsHistoryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -415,13 +415,13 @@ public class Sensor {
      */
     public org.openapis.openapi.models.operations.GetOrganizationSensorReadingsLatestResponse getOrganizationSensorReadingsLatest(org.openapis.openapi.models.operations.GetOrganizationSensorReadingsLatestRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSensorReadingsLatestPathParams.class, baseUrl, "/organizations/{organizationId}/sensor/readings/latest", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSensorReadingsLatestRequest.class, baseUrl, "/organizations/{organizationId}/sensor/readings/latest", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationSensorReadingsLatestQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationSensorReadingsLatestRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -463,12 +463,12 @@ public class Sensor {
      */
     public org.openapis.openapi.models.operations.UpdateDeviceSensorRelationshipsResponse updateDeviceSensorRelationships(org.openapis.openapi.models.operations.UpdateDeviceSensorRelationshipsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceSensorRelationshipsPathParams.class, baseUrl, "/devices/{serial}/sensor/relationships", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceSensorRelationshipsRequest.class, baseUrl, "/devices/{serial}/sensor/relationships", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -505,12 +505,12 @@ public class Sensor {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSensorAlertsProfileResponse updateNetworkSensorAlertsProfile(org.openapis.openapi.models.operations.UpdateNetworkSensorAlertsProfileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSensorAlertsProfilePathParams.class, baseUrl, "/networks/{networkId}/sensor/alerts/profiles/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSensorAlertsProfileRequest.class, baseUrl, "/networks/{networkId}/sensor/alerts/profiles/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

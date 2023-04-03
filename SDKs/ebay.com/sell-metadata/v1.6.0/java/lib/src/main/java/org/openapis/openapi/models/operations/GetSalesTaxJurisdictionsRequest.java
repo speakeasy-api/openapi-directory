@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSalesTaxJurisdictionsRequest {
-    
-    public GetSalesTaxJurisdictionsPathParams pathParams;
-    public GetSalesTaxJurisdictionsRequest withPathParams(GetSalesTaxJurisdictionsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetSalesTaxJurisdictionsSecurity security;
-    public GetSalesTaxJurisdictionsRequest withSecurity(GetSalesTaxJurisdictionsSecurity security) {
-        this.security = security;
+    /**
+     * This path parameter specifies the two-letter &lt;a href="https://www.iso.org/iso-3166-country-codes.html " title="https://www.iso.org " target="_blank"&gt;ISO 3166&lt;/a&gt; country code for the country whose jurisdictions you want to retrieve. eBay provides sales tax jurisdiction information for Canada and the United States.Valid values for this path parameter are &lt;code&gt;CA&lt;/code&gt; and &lt;code&gt;US&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=countryCode")
+    public String countryCode;
+    public GetSalesTaxJurisdictionsRequest withCountryCode(String countryCode) {
+        this.countryCode = countryCode;
         return this;
     }
     

@@ -4,20 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAutomationV4ActionsAppIdDefinitionIdRevisionsRevisionIdGetByIdRequest {
-    
-    public GetAutomationV4ActionsAppIdDefinitionIdRevisionsRevisionIdGetByIdPathParams pathParams;
-    public GetAutomationV4ActionsAppIdDefinitionIdRevisionsRevisionIdGetByIdRequest withPathParams(GetAutomationV4ActionsAppIdDefinitionIdRevisionsRevisionIdGetByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
+    public Integer appId;
+    public GetAutomationV4ActionsAppIdDefinitionIdRevisionsRevisionIdGetByIdRequest withAppId(Integer appId) {
+        this.appId = appId;
         return this;
     }
     
+    /**
+     * The ID of the custom workflow action.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=definitionId")
+    public String definitionId;
+    public GetAutomationV4ActionsAppIdDefinitionIdRevisionsRevisionIdGetByIdRequest withDefinitionId(String definitionId) {
+        this.definitionId = definitionId;
+        return this;
+    }
     
-    public GetAutomationV4ActionsAppIdDefinitionIdRevisionsRevisionIdGetByIdSecurity security;
-    public GetAutomationV4ActionsAppIdDefinitionIdRevisionsRevisionIdGetByIdRequest withSecurity(GetAutomationV4ActionsAppIdDefinitionIdRevisionsRevisionIdGetByIdSecurity security) {
-        this.security = security;
+    /**
+     * The version of the custom workflow action.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=revisionId")
+    public String revisionId;
+    public GetAutomationV4ActionsAppIdDefinitionIdRevisionsRevisionIdGetByIdRequest withRevisionId(String revisionId) {
+        this.revisionId = revisionId;
         return this;
     }
     

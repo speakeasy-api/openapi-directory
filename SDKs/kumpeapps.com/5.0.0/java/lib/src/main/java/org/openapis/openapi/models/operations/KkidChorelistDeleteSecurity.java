@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KkidChorelistDeleteSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeAuthKey authKey;
-    public KkidChorelistDeleteSecurity withAuthKey(org.openapis.openapi.models.shared.SchemeAuthKey authKey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Auth")
+    public String authKey;
+    public KkidChorelistDeleteSecurity withAuthKey(String authKey) {
         this.authKey = authKey;
         return this;
     }

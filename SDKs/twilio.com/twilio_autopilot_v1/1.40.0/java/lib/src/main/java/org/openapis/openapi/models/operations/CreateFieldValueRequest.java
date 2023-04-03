@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateFieldValueRequest {
+    /**
+     * The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the FieldType associated with the new resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public CreateFieldValueRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
+        return this;
+    }
     
-    public CreateFieldValuePathParams pathParams;
-    public CreateFieldValueRequest withPathParams(CreateFieldValuePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Field Type associated with the Field Value.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FieldTypeSid")
+    public String fieldTypeSid;
+    public CreateFieldValueRequest withFieldTypeSid(String fieldTypeSid) {
+        this.fieldTypeSid = fieldTypeSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateFieldValueCreateFieldValueRequest request;
-    public CreateFieldValueRequest withRequest(CreateFieldValueCreateFieldValueRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateFieldValueSecurity security;
-    public CreateFieldValueRequest withSecurity(CreateFieldValueSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateFieldValueRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateFieldValueCreateFieldValueRequest requestBody;
+    public CreateFieldValueRequest withRequestBody(CreateFieldValueCreateFieldValueRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

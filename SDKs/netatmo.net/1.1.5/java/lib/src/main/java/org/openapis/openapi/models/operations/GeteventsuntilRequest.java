@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GeteventsuntilRequest {
-    
-    public GeteventsuntilQueryParams queryParams;
-    public GeteventsuntilRequest withQueryParams(GeteventsuntilQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Your request will retrieve all the events until this one
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=event_id")
+    public String eventId;
+    public GeteventsuntilRequest withEventId(String eventId) {
+        this.eventId = eventId;
         return this;
     }
     
-    
-    public GeteventsuntilSecurity security;
-    public GeteventsuntilRequest withSecurity(GeteventsuntilSecurity security) {
-        this.security = security;
+    /**
+     * ID of the Home you're interested in
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=home_id")
+    public String homeId;
+    public GeteventsuntilRequest withHomeId(String homeId) {
+        this.homeId = homeId;
         return this;
     }
     

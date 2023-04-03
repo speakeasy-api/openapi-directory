@@ -37,12 +37,12 @@ public class CredentialOperations {
      */
     public org.openapis.openapi.models.operations.ChangePasswordResponse changePassword(org.openapis.openapi.models.operations.ChangePasswordRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChangePasswordPathParams.class, baseUrl, "/api/v1/users/{userId}/credentials/change_password", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChangePasswordRequest.class, baseUrl, "/api/v1/users/{userId}/credentials/change_password", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -72,12 +72,12 @@ public class CredentialOperations {
      */
     public org.openapis.openapi.models.operations.ChangeRecoveryQuestionResponse changeRecoveryQuestion(org.openapis.openapi.models.operations.ChangeRecoveryQuestionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChangeRecoveryQuestionPathParams.class, baseUrl, "/api/v1/users/{userId}/credentials/change_recovery_question", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChangeRecoveryQuestionRequest.class, baseUrl, "/api/v1/users/{userId}/credentials/change_recovery_question", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -107,15 +107,15 @@ public class CredentialOperations {
      */
     public org.openapis.openapi.models.operations.ForgotPasswordOneTimeCodeResponse forgotPasswordOneTimeCode(org.openapis.openapi.models.operations.ForgotPasswordOneTimeCodeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ForgotPasswordOneTimeCodePathParams.class, baseUrl, "/api/v1/users/{userId}/credentials/forgot_password", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ForgotPasswordOneTimeCodeRequest.class, baseUrl, "/api/v1/users/{userId}/credentials/forgot_password", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ForgotPasswordOneTimeCodeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ForgotPasswordOneTimeCodeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -148,12 +148,12 @@ public class CredentialOperations {
      */
     public org.openapis.openapi.models.operations.SetRecoveryCredentialResponse setRecoveryCredential(org.openapis.openapi.models.operations.SetRecoveryCredentialRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetRecoveryCredentialPathParams.class, baseUrl, "/api/v1/users/{userId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetRecoveryCredentialRequest.class, baseUrl, "/api/v1/users/{userId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

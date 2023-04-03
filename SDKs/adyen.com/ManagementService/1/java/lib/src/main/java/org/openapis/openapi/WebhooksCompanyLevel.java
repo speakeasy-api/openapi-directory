@@ -38,19 +38,20 @@ public class WebhooksCompanyLevel {
      * To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014Webhooks read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteCompaniesCompanyIdWebhooksWebhookIdResponse deleteCompaniesCompanyIdWebhooksWebhookId(org.openapis.openapi.models.operations.DeleteCompaniesCompanyIdWebhooksWebhookIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteCompaniesCompanyIdWebhooksWebhookIdResponse deleteCompaniesCompanyIdWebhooksWebhookId(org.openapis.openapi.models.operations.DeleteCompaniesCompanyIdWebhooksWebhookIdRequest request, org.openapis.openapi.models.operations.DeleteCompaniesCompanyIdWebhooksWebhookIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCompaniesCompanyIdWebhooksWebhookIdPathParams.class, baseUrl, "/companies/{companyId}/webhooks/{webhookId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCompaniesCompanyIdWebhooksWebhookIdRequest.class, baseUrl, "/companies/{companyId}/webhooks/{webhookId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -84,25 +85,26 @@ public class WebhooksCompanyLevel {
      * * Management API\u2014Webhooks read
      * * Management API\u2014Webhooks read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCompaniesCompanyIdWebhooksResponse getCompaniesCompanyIdWebhooks(org.openapis.openapi.models.operations.GetCompaniesCompanyIdWebhooksRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCompaniesCompanyIdWebhooksResponse getCompaniesCompanyIdWebhooks(org.openapis.openapi.models.operations.GetCompaniesCompanyIdWebhooksRequest request, org.openapis.openapi.models.operations.GetCompaniesCompanyIdWebhooksSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCompaniesCompanyIdWebhooksPathParams.class, baseUrl, "/companies/{companyId}/webhooks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCompaniesCompanyIdWebhooksRequest.class, baseUrl, "/companies/{companyId}/webhooks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCompaniesCompanyIdWebhooksQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCompaniesCompanyIdWebhooksRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -142,19 +144,20 @@ public class WebhooksCompanyLevel {
      * * Management API\u2014Webhooks read
      * * Management API\u2014Webhooks read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCompaniesCompanyIdWebhooksWebhookIdResponse getCompaniesCompanyIdWebhooksWebhookId(org.openapis.openapi.models.operations.GetCompaniesCompanyIdWebhooksWebhookIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCompaniesCompanyIdWebhooksWebhookIdResponse getCompaniesCompanyIdWebhooksWebhookId(org.openapis.openapi.models.operations.GetCompaniesCompanyIdWebhooksWebhookIdRequest request, org.openapis.openapi.models.operations.GetCompaniesCompanyIdWebhooksWebhookIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCompaniesCompanyIdWebhooksWebhookIdPathParams.class, baseUrl, "/companies/{companyId}/webhooks/{webhookId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCompaniesCompanyIdWebhooksWebhookIdRequest.class, baseUrl, "/companies/{companyId}/webhooks/{webhookId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -193,21 +196,22 @@ public class WebhooksCompanyLevel {
      * To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014Webhooks read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchCompaniesCompanyIdWebhooksWebhookIdResponse patchCompaniesCompanyIdWebhooksWebhookId(org.openapis.openapi.models.operations.PatchCompaniesCompanyIdWebhooksWebhookIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchCompaniesCompanyIdWebhooksWebhookIdResponse patchCompaniesCompanyIdWebhooksWebhookId(org.openapis.openapi.models.operations.PatchCompaniesCompanyIdWebhooksWebhookIdRequest request, org.openapis.openapi.models.operations.PatchCompaniesCompanyIdWebhooksWebhookIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchCompaniesCompanyIdWebhooksWebhookIdPathParams.class, baseUrl, "/companies/{companyId}/webhooks/{webhookId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchCompaniesCompanyIdWebhooksWebhookIdRequest.class, baseUrl, "/companies/{companyId}/webhooks/{webhookId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateCompanyWebhookRequest", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -246,21 +250,22 @@ public class WebhooksCompanyLevel {
      * To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014Webhooks read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostCompaniesCompanyIdWebhooksResponse postCompaniesCompanyIdWebhooks(org.openapis.openapi.models.operations.PostCompaniesCompanyIdWebhooksRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostCompaniesCompanyIdWebhooksResponse postCompaniesCompanyIdWebhooks(org.openapis.openapi.models.operations.PostCompaniesCompanyIdWebhooksRequest request, org.openapis.openapi.models.operations.PostCompaniesCompanyIdWebhooksSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostCompaniesCompanyIdWebhooksPathParams.class, baseUrl, "/companies/{companyId}/webhooks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostCompaniesCompanyIdWebhooksRequest.class, baseUrl, "/companies/{companyId}/webhooks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createCompanyWebhookRequest", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -299,19 +304,20 @@ public class WebhooksCompanyLevel {
      * To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014Webhooks read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostCompaniesCompanyIdWebhooksWebhookIdGenerateHmacResponse postCompaniesCompanyIdWebhooksWebhookIdGenerateHmac(org.openapis.openapi.models.operations.PostCompaniesCompanyIdWebhooksWebhookIdGenerateHmacRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostCompaniesCompanyIdWebhooksWebhookIdGenerateHmacResponse postCompaniesCompanyIdWebhooksWebhookIdGenerateHmac(org.openapis.openapi.models.operations.PostCompaniesCompanyIdWebhooksWebhookIdGenerateHmacRequest request, org.openapis.openapi.models.operations.PostCompaniesCompanyIdWebhooksWebhookIdGenerateHmacSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostCompaniesCompanyIdWebhooksWebhookIdGenerateHmacPathParams.class, baseUrl, "/companies/{companyId}/webhooks/{webhookId}/generateHmac", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostCompaniesCompanyIdWebhooksWebhookIdGenerateHmacRequest.class, baseUrl, "/companies/{companyId}/webhooks/{webhookId}/generateHmac", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -356,21 +362,22 @@ public class WebhooksCompanyLevel {
      * To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014Webhooks read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostCompaniesCompanyIdWebhooksWebhookIdTestResponse postCompaniesCompanyIdWebhooksWebhookIdTest(org.openapis.openapi.models.operations.PostCompaniesCompanyIdWebhooksWebhookIdTestRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostCompaniesCompanyIdWebhooksWebhookIdTestResponse postCompaniesCompanyIdWebhooksWebhookIdTest(org.openapis.openapi.models.operations.PostCompaniesCompanyIdWebhooksWebhookIdTestRequest request, org.openapis.openapi.models.operations.PostCompaniesCompanyIdWebhooksWebhookIdTestSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostCompaniesCompanyIdWebhooksWebhookIdTestPathParams.class, baseUrl, "/companies/{companyId}/webhooks/{webhookId}/test", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostCompaniesCompanyIdWebhooksWebhookIdTestRequest.class, baseUrl, "/companies/{companyId}/webhooks/{webhookId}/test", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testCompanyWebhookRequest", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

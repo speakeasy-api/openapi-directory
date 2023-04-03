@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreatePortfolioTemplateRequest {
-    
-    public CreatePortfolioTemplateHeaders headers;
-    public CreatePortfolioTemplateRequest withHeaders(CreatePortfolioTemplateHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreatePortfolioTemplateRequestBodyInput request;
-    public CreatePortfolioTemplateRequest withRequest(CreatePortfolioTemplateRequestBodyInput request) {
-        this.request = request;
+    public CreatePortfolioTemplateRequestBodyInput requestBody;
+    public CreatePortfolioTemplateRequest withRequestBody(CreatePortfolioTemplateRequestBodyInput requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreatePortfolioTemplateSecurity security;
-    public CreatePortfolioTemplateRequest withSecurity(CreatePortfolioTemplateSecurity security) {
-        this.security = security;
+    /**
+     * ApiSecretKey
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public CreatePortfolioTemplateRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

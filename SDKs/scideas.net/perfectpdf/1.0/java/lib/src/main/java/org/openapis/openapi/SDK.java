@@ -120,7 +120,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPerfectpdfApiResponse postPerfectpdfApi(org.openapis.openapi.models.operations.PostPerfectpdfApiRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPerfectpdfApiResponse postPerfectpdfApi(org.openapis.openapi.models.shared.PerfectpdfApiBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/perfectpdf/api");
         

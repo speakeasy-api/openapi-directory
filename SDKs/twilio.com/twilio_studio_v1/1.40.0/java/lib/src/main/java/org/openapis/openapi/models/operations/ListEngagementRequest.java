@@ -4,34 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListEngagementRequest {
-    
-    public ListEngagementPathParams pathParams;
-    public ListEngagementRequest withPathParams(ListEngagementPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Flow to read Engagements from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FlowSid")
+    public String flowSid;
+    public ListEngagementRequest withFlowSid(String flowSid) {
+        this.flowSid = flowSid;
         return this;
     }
     
-    
-    public ListEngagementQueryParams queryParams;
-    public ListEngagementRequest withQueryParams(ListEngagementQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListEngagementRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListEngagementSecurity security;
-    public ListEngagementRequest withSecurity(ListEngagementSecurity security) {
-        this.security = security;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListEngagementRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
-    
-    public String serverURL;
-    public ListEngagementRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListEngagementRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

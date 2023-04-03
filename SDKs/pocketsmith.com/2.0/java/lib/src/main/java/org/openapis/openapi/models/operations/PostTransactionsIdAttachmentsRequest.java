@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostTransactionsIdAttachmentsRequest {
-    
-    public PostTransactionsIdAttachmentsPathParams pathParams;
-    public PostTransactionsIdAttachmentsRequest withPathParams(PostTransactionsIdAttachmentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PostTransactionsIdAttachmentsRequestBody requestBody;
+    public PostTransactionsIdAttachmentsRequest withRequestBody(PostTransactionsIdAttachmentsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostTransactionsIdAttachmentsRequestBody request;
-    public PostTransactionsIdAttachmentsRequest withRequest(PostTransactionsIdAttachmentsRequestBody request) {
-        this.request = request;
+    /**
+     * The unique identifier of the transaction.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public PostTransactionsIdAttachmentsRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

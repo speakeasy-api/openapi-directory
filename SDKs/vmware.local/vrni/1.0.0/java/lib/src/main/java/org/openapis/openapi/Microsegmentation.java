@@ -38,10 +38,11 @@ public class Microsegmentation {
      * Export recommended firewall rules based on the flow data gathered by vRealize Network Insight in NSX-V compatible
      * format
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportNsxRecommendedRulesResponse exportNsxRecommendedRules(org.openapis.openapi.models.operations.ExportNsxRecommendedRulesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportNsxRecommendedRulesResponse exportNsxRecommendedRules(org.openapis.openapi.models.shared.RecommendedRulesRequest request, org.openapis.openapi.models.operations.ExportNsxRecommendedRulesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/micro-seg/recommended-rules/nsx");
         
@@ -52,7 +53,7 @@ public class Microsegmentation {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -92,10 +93,11 @@ public class Microsegmentation {
      * In case two groups are provided, both the groups should be of same type.
      * Currently supported groups are Application, Tier, NSXSecurityGroup, EC2SecurityGroup.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListRecommendedRulesResponse listRecommendedRules(org.openapis.openapi.models.operations.ListRecommendedRulesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListRecommendedRulesResponse listRecommendedRules(org.openapis.openapi.models.shared.RecommendedRulesRequest request, org.openapis.openapi.models.operations.ListRecommendedRulesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/micro-seg/recommended-rules");
         
@@ -106,7 +108,7 @@ public class Microsegmentation {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

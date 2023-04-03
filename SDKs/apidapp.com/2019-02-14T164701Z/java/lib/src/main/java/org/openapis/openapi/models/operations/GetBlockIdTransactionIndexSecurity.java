@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBlockIdTransactionIndexSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeKey2 key2;
-    public GetBlockIdTransactionIndexSecurity withKey2(org.openapis.openapi.models.shared.SchemeKey2 key2) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Api-Key")
+    public String key2;
+    public GetBlockIdTransactionIndexSecurity withKey2(String key2) {
         this.key2 = key2;
         return this;
     }

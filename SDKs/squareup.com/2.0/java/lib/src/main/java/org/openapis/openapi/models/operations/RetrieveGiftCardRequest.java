@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveGiftCardRequest {
-    
-    public RetrieveGiftCardPathParams pathParams;
-    public RetrieveGiftCardRequest withPathParams(RetrieveGiftCardPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RetrieveGiftCardSecurity security;
-    public RetrieveGiftCardRequest withSecurity(RetrieveGiftCardSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the gift card to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public RetrieveGiftCardRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

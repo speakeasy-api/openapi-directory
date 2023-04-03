@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodePushDeploymentReleaseRollbackRequest {
-    
-    public CodePushDeploymentReleaseRollbackPathParams pathParams;
-    public CodePushDeploymentReleaseRollbackRequest withPathParams(CodePushDeploymentReleaseRollbackPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The specific release label that you want to rollback to
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public CodePushDeploymentReleaseRollbackRequestBody request;
-    public CodePushDeploymentReleaseRollbackRequest withRequest(CodePushDeploymentReleaseRollbackRequestBody request) {
-        this.request = request;
+    public CodePushDeploymentReleaseRollbackRequestBody requestBody;
+    public CodePushDeploymentReleaseRollbackRequest withRequestBody(CodePushDeploymentReleaseRollbackRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public CodePushDeploymentReleaseRollbackRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public CodePushDeploymentReleaseRollbackSecurity security;
-    public CodePushDeploymentReleaseRollbackRequest withSecurity(CodePushDeploymentReleaseRollbackSecurity security) {
-        this.security = security;
+    /**
+     * deployment name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deployment_name")
+    public String deploymentName;
+    public CodePushDeploymentReleaseRollbackRequest withDeploymentName(String deploymentName) {
+        this.deploymentName = deploymentName;
+        return this;
+    }
+    
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public CodePushDeploymentReleaseRollbackRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

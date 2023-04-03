@@ -7,16 +7,16 @@ package org.openapis.openapi.models.shared;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Security {
-    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer")
-    public SchemeBearer bearer;
-    public Security withBearer(SchemeBearer bearer) {
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer,name=Authorization")
+    public String bearer;
+    public Security withBearer(String bearer) {
         this.bearer = bearer;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=cookie")
-    public SchemeCookie cookie;
-    public Security withCookie(SchemeCookie cookie) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=cookie,name=mercureAuthorization")
+    public String cookie;
+    public Security withCookie(String cookie) {
         this.cookie = cookie;
         return this;
     }

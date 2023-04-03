@@ -4,13 +4,43 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrderChangeReportingV3Request {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public Integer accountId;
+    public GetOrderChangeReportingV3Request withAccountId(Integer accountId) {
+        this.accountId = accountId;
+        return this;
+    }
     
-    public GetOrderChangeReportingV3PathParams pathParams;
-    public GetOrderChangeReportingV3Request withPathParams(GetOrderChangeReportingV3PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The BeezUP Order identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=beezUPOrderId")
+    public String beezUPOrderId;
+    public GetOrderChangeReportingV3Request withBeezUPOrderId(String beezUPOrderId) {
+        this.beezUPOrderId = beezUPOrderId;
+        return this;
+    }
+    
+    /**
+     * The marketplace technical code
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=marketplaceTechnicalCode")
+    public String marketplaceTechnicalCode;
+    public GetOrderChangeReportingV3Request withMarketplaceTechnicalCode(String marketplaceTechnicalCode) {
+        this.marketplaceTechnicalCode = marketplaceTechnicalCode;
+        return this;
+    }
+    
+    /**
+     * The order change execution id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderChangeExecutionUUID")
+    public String orderChangeExecutionUUID;
+    public GetOrderChangeReportingV3Request withOrderChangeExecutionUUID(String orderChangeExecutionUUID) {
+        this.orderChangeExecutionUUID = orderChangeExecutionUUID;
         return this;
     }
     

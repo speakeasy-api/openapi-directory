@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimRegionsPartialUpdateRequest {
-    
-    public DcimRegionsPartialUpdatePathParams pathParams;
-    public DcimRegionsPartialUpdateRequest withPathParams(DcimRegionsPartialUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.WritableRegionInput writableRegionInput;
+    public DcimRegionsPartialUpdateRequest withWritableRegionInput(org.openapis.openapi.models.shared.WritableRegionInput writableRegionInput) {
+        this.writableRegionInput = writableRegionInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WritableRegionInput request;
-    public DcimRegionsPartialUpdateRequest withRequest(org.openapis.openapi.models.shared.WritableRegionInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this region.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimRegionsPartialUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

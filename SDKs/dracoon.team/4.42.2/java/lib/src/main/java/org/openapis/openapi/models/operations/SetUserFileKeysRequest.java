@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetUserFileKeysRequest {
-    
-    public SetUserFileKeysHeaders headers;
-    public SetUserFileKeysRequest withHeaders(SetUserFileKeysHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.UserFileKeySetBatchRequest userFileKeySetBatchRequest;
+    public SetUserFileKeysRequest withUserFileKeySetBatchRequest(org.openapis.openapi.models.shared.UserFileKeySetBatchRequest userFileKeySetBatchRequest) {
+        this.userFileKeySetBatchRequest = userFileKeySetBatchRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UserFileKeySetBatchRequest request;
-    public SetUserFileKeysRequest withRequest(org.openapis.openapi.models.shared.UserFileKeySetBatchRequest request) {
-        this.request = request;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public SetUserFileKeysRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRulesExecutionsRequest {
-    
-    public GetRulesExecutionsPathParams pathParams;
-    public GetRulesExecutionsRequest withPathParams(GetRulesExecutionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The page to retrieve
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
+    public Long pageNumber;
+    public GetRulesExecutionsRequest withPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
     
+    /**
+     * The count of rule history to retrieve
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public GetRulesExecutionsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public GetRulesExecutionsQueryParams queryParams;
-    public GetRulesExecutionsRequest withQueryParams(GetRulesExecutionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Your store identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public GetRulesExecutionsRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

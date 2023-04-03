@@ -4,27 +4,116 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdsenseAccountsUrlchannelsListRequest {
-    
-    public AdsenseAccountsUrlchannelsListPathParams pathParams;
-    public AdsenseAccountsUrlchannelsListRequest withPathParams(AdsenseAccountsUrlchannelsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Account to which the ad client belongs.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public AdsenseAccountsUrlchannelsListRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
-    
-    public AdsenseAccountsUrlchannelsListQueryParams queryParams;
-    public AdsenseAccountsUrlchannelsListRequest withQueryParams(AdsenseAccountsUrlchannelsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Ad client for which to list URL channels.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=adClientId")
+    public String adClientId;
+    public AdsenseAccountsUrlchannelsListRequest withAdClientId(String adClientId) {
+        this.adClientId = adClientId;
         return this;
     }
     
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AdsenseAccountsUrlchannelsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public AdsenseAccountsUrlchannelsListSecurity security;
-    public AdsenseAccountsUrlchannelsListRequest withSecurity(AdsenseAccountsUrlchannelsListSecurity security) {
-        this.security = security;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AdsenseAccountsUrlchannelsListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AdsenseAccountsUrlchannelsListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * The maximum number of URL channels to include in the response, used for paging.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public AdsenseAccountsUrlchannelsListRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AdsenseAccountsUrlchannelsListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * A continuation token, used to page through URL channels. To retrieve the next page, set this parameter to the value of "nextPageToken" from the previous response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public AdsenseAccountsUrlchannelsListRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AdsenseAccountsUrlchannelsListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AdsenseAccountsUrlchannelsListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public AdsenseAccountsUrlchannelsListRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

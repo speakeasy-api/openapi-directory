@@ -7,24 +7,34 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsAddOrUpdateProjectPermissionsRequest {
-    
-    public TeamsAddOrUpdateProjectPermissionsPathParams pathParams;
-    public TeamsAddOrUpdateProjectPermissionsRequest withPathParams(TeamsAddOrUpdateProjectPermissionsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public TeamsAddOrUpdateProjectPermissionsHeaders headers;
-    public TeamsAddOrUpdateProjectPermissionsRequest withHeaders(TeamsAddOrUpdateProjectPermissionsHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public TeamsAddOrUpdateProjectPermissionsRequestBody request;
-    public TeamsAddOrUpdateProjectPermissionsRequest withRequest(TeamsAddOrUpdateProjectPermissionsRequestBody request) {
-        this.request = request;
+    public TeamsAddOrUpdateProjectPermissionsRequestBody requestBody;
+    public TeamsAddOrUpdateProjectPermissionsRequest withRequestBody(TeamsAddOrUpdateProjectPermissionsRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * This API is under preview and subject to change.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=accept")
+    public String accept;
+    public TeamsAddOrUpdateProjectPermissionsRequest withAccept(String accept) {
+        this.accept = accept;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public Long projectId;
+    public TeamsAddOrUpdateProjectPermissionsRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
+    public Long teamId;
+    public TeamsAddOrUpdateProjectPermissionsRequest withTeamId(Long teamId) {
+        this.teamId = teamId;
         return this;
     }
     

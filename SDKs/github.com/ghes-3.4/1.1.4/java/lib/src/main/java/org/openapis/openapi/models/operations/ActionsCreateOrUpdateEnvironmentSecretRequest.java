@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsCreateOrUpdateEnvironmentSecretRequest {
-    
-    public ActionsCreateOrUpdateEnvironmentSecretPathParams pathParams;
-    public ActionsCreateOrUpdateEnvironmentSecretRequest withPathParams(ActionsCreateOrUpdateEnvironmentSecretPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ActionsCreateOrUpdateEnvironmentSecretRequestBody requestBody;
+    public ActionsCreateOrUpdateEnvironmentSecretRequest withRequestBody(ActionsCreateOrUpdateEnvironmentSecretRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ActionsCreateOrUpdateEnvironmentSecretRequestBody request;
-    public ActionsCreateOrUpdateEnvironmentSecretRequest withRequest(ActionsCreateOrUpdateEnvironmentSecretRequestBody request) {
-        this.request = request;
+    /**
+     * The name of the environment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environment_name")
+    public String environmentName;
+    public ActionsCreateOrUpdateEnvironmentSecretRequest withEnvironmentName(String environmentName) {
+        this.environmentName = environmentName;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the repository.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repository_id")
+    public Long repositoryId;
+    public ActionsCreateOrUpdateEnvironmentSecretRequest withRepositoryId(Long repositoryId) {
+        this.repositoryId = repositoryId;
+        return this;
+    }
+    
+    /**
+     * The name of the secret.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=secret_name")
+    public String secretName;
+    public ActionsCreateOrUpdateEnvironmentSecretRequest withSecretName(String secretName) {
+        this.secretName = secretName;
         return this;
     }
     

@@ -31,7 +31,6 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetBenefitsDocumentUploadDownloadSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetBenefitsDocumentUploadDownloadPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBenefitsDocumentUploadDownloadRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBenefitsDocumentUploadDownload500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBenefitsDocumentUploadDownload429ApplicationJSON.java
@@ -40,7 +39,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetBenefitsDocumentUplo
 lib/src/main/java/org/openapis/openapi/models/operations/GetBenefitsDocumentUploadDownload401ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBenefitsDocumentUploadDownloadResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBenefitsDocumentUploadStatusSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetBenefitsDocumentUploadStatusPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBenefitsDocumentUploadStatusRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBenefitsDocumentUploadStatus500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBenefitsDocumentUploadStatus429ApplicationJSON.java
@@ -50,7 +48,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetBenefitsDocumentUplo
 lib/src/main/java/org/openapis/openapi/models/operations/GetBenefitsDocumentUploadStatus200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBenefitsDocumentUploadStatusResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBenefitsDocumentUploadStatusReportSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetBenefitsDocumentUploadStatusReportRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBenefitsDocumentUploadStatusReport500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBenefitsDocumentUploadStatusReport429ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBenefitsDocumentUploadStatusReport422ApplicationJSON.java
@@ -58,8 +55,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetBenefitsDocumentUplo
 lib/src/main/java/org/openapis/openapi/models/operations/GetBenefitsDocumentUploadStatusReport401ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBenefitsDocumentUploadStatusReport200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetBenefitsDocumentUploadStatusReportResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostBenefitsDocumentUploadSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostBenefitsDocumentUploadRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostBenefitsDocumentUpload500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostBenefitsDocumentUpload429ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostBenefitsDocumentUpload422ApplicationJSON.java
@@ -76,14 +71,12 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostBenefitsDocumentUpl
 lib/src/main/java/org/openapis/openapi/models/operations/PostBenefitsDocumentUploadValidateDocument200ApplicationJSONData.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostBenefitsDocumentUploadValidateDocument200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostBenefitsDocumentUploadValidateDocumentResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PutBenefitsDocumentUploadHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutBenefitsDocumentUploadRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutBenefitsDocumentUpload500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutBenefitsDocumentUpload429ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutBenefitsDocumentUpload422ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutBenefitsDocumentUpload401ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutBenefitsDocumentUploadResponse.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeApikey.java
 lib/src/main/java/org/openapis/openapi/models/shared/DocumentUploadStatus.java
 lib/src/main/java/org/openapis/openapi/models/shared/DocumentUploadStatusAttributesStatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/DocumentUploadStatusAttributes.java

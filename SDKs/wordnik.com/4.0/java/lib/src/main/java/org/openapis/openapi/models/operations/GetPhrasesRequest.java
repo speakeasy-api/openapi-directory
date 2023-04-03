@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPhrasesRequest {
-    
-    public GetPhrasesPathParams pathParams;
-    public GetPhrasesRequest withPathParams(GetPhrasesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Maximum number of results to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetPhrasesRequest withLimit(Integer limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * If true will try to return the correct word root ('cats' -&gt; 'cat'). If false returns exactly what was requested.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=useCanonical")
+    public GetPhrasesUseCanonicalEnum useCanonical;
+    public GetPhrasesRequest withUseCanonical(GetPhrasesUseCanonicalEnum useCanonical) {
+        this.useCanonical = useCanonical;
+        return this;
+    }
     
-    public GetPhrasesQueryParams queryParams;
-    public GetPhrasesRequest withQueryParams(GetPhrasesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Minimum WLMI for the phrase
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=wlmi")
+    public Integer wlmi;
+    public GetPhrasesRequest withWlmi(Integer wlmi) {
+        this.wlmi = wlmi;
+        return this;
+    }
+    
+    /**
+     * Word to fetch phrases for
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=word")
+    public String word;
+    public GetPhrasesRequest withWord(String word) {
+        this.word = word;
         return this;
     }
     

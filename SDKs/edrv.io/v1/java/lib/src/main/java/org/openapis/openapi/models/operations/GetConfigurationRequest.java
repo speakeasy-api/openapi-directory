@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConfigurationRequest {
-    
-    public GetConfigurationPathParams pathParams;
-    public GetConfigurationRequest withPathParams(GetConfigurationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of Configuration that needs to be fetched
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetConfigurationRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

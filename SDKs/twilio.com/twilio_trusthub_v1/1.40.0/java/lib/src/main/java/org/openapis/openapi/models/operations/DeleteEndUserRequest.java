@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteEndUserRequest {
-    
-    public DeleteEndUserPathParams pathParams;
-    public DeleteEndUserRequest withPathParams(DeleteEndUserPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteEndUserSecurity security;
-    public DeleteEndUserRequest withSecurity(DeleteEndUserSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteEndUserRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique string created by Twilio to identify the End User resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteEndUserRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

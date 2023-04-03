@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateTagRequest {
-    
-    public CreateTagPathParams pathParams;
-    public CreateTagRequest withPathParams(CreateTagPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tag_name")
+    public String tagName;
+    public CreateTagRequest withTagName(String tagName) {
+        this.tagName = tagName;
         return this;
     }
     

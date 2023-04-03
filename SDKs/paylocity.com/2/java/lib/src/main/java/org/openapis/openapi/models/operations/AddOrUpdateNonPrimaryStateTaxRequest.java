@@ -7,10 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddOrUpdateNonPrimaryStateTaxRequest {
+    /**
+     * Company Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public AddOrUpdateNonPrimaryStateTaxRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
+        return this;
+    }
     
-    public AddOrUpdateNonPrimaryStateTaxPathParams pathParams;
-    public AddOrUpdateNonPrimaryStateTaxRequest withPathParams(AddOrUpdateNonPrimaryStateTaxPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Employee Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=employeeId")
+    public String employeeId;
+    public AddOrUpdateNonPrimaryStateTaxRequest withEmployeeId(String employeeId) {
+        this.employeeId = employeeId;
         return this;
     }
     
@@ -18,16 +31,9 @@ public class AddOrUpdateNonPrimaryStateTaxRequest {
      * Non-Primary State Tax Model
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.NonPrimaryStateTax request;
-    public AddOrUpdateNonPrimaryStateTaxRequest withRequest(org.openapis.openapi.models.shared.NonPrimaryStateTax request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public AddOrUpdateNonPrimaryStateTaxSecurity security;
-    public AddOrUpdateNonPrimaryStateTaxRequest withSecurity(AddOrUpdateNonPrimaryStateTaxSecurity security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.NonPrimaryStateTax nonPrimaryStateTax;
+    public AddOrUpdateNonPrimaryStateTaxRequest withNonPrimaryStateTax(org.openapis.openapi.models.shared.NonPrimaryStateTax nonPrimaryStateTax) {
+        this.nonPrimaryStateTax = nonPrimaryStateTax;
         return this;
     }
     

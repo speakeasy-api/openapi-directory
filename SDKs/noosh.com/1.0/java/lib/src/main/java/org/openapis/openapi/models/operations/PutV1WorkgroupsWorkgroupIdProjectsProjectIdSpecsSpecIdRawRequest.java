@@ -7,17 +7,31 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdRawRequest {
-    
-    public PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdRawPathParams pathParams;
-    public PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdRawRequest withPathParams(PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdRawPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=text/xml")
+    public byte[] requestBody;
+    public PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdRawRequest withRequest(byte[] request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public String projectId;
+    public PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdRawRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spec_id")
+    public String specId;
+    public PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdRawRequest withSpecId(String specId) {
+        this.specId = specId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
+    public String workgroupId;
+    public PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdRawRequest withWorkgroupId(String workgroupId) {
+        this.workgroupId = workgroupId;
         return this;
     }
     

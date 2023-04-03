@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GetEventsTypeEnum;
-import org.openapis.openapi.models.operations.GetEventsQueryParams;
 import org.openapis.openapi.models.operations.GetEventsRequest;
 import org.openapis.openapi.models.operations.GetEventsResponse;
 
@@ -16,15 +15,13 @@ public class Application {
                 .build();
 
             GetEventsRequest req = new GetEventsRequest() {{
-                queryParams = new GetEventsQueryParams() {{
-                    company = "Medhurst - Rau";
-                    deal = "quibusdam";
-                    nexttoken = "unde";
-                    queryexecutionid = "nulla";
-                    site = "corrupti";
-                    type = "contacts";
-                }};
-            }};            
+                company = "Medhurst - Rau";
+                deal = "quibusdam";
+                nexttoken = "unde";
+                queryexecutionid = "nulla";
+                site = "corrupti";
+                type = "contacts";
+            }}            
 
             GetEventsResponse res = sdk.developers.getEvents(req);
 

@@ -35,10 +35,11 @@ public class Keywords {
      * Find keyword lease configs
      * Searches for all keyword lease configs for the user. Returns a paged list of KeywordConfig
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindKeywordLeaseConfigsResponse findKeywordLeaseConfigs(org.openapis.openapi.models.operations.FindKeywordLeaseConfigsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FindKeywordLeaseConfigsResponse findKeywordLeaseConfigs(org.openapis.openapi.models.operations.FindKeywordLeaseConfigsRequest request, org.openapis.openapi.models.operations.FindKeywordLeaseConfigsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/keywords/leases/configs");
         
@@ -46,14 +47,14 @@ public class Keywords {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindKeywordLeaseConfigsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindKeywordLeaseConfigsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -89,10 +90,11 @@ public class Keywords {
      * Find keyword leases
      * Searches for all keywords owned by user. A keyword lease is the ownership information involving a keyword
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindKeywordLeasesResponse findKeywordLeases(org.openapis.openapi.models.operations.FindKeywordLeasesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FindKeywordLeasesResponse findKeywordLeases(org.openapis.openapi.models.operations.FindKeywordLeasesRequest request, org.openapis.openapi.models.operations.FindKeywordLeasesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/keywords/leases");
         
@@ -100,14 +102,14 @@ public class Keywords {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindKeywordLeasesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindKeywordLeasesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -143,10 +145,11 @@ public class Keywords {
      * Find keywords
      * Searches for all keywords available for purchase on the CallFire platform. If a keyword appears in the response, it is available for purchase. List the 'keywords' in a query parameter to search for multiple keywords (at least one keyword should be sent in request). Keyword should only consist of uppercase and lowercase letters and numbers. Number of characters must be greater than 2, but less than 65.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindKeywordsResponse findKeywords(org.openapis.openapi.models.operations.FindKeywordsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FindKeywordsResponse findKeywords(org.openapis.openapi.models.operations.FindKeywordsRequest request, org.openapis.openapi.models.operations.FindKeywordsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/keywords");
         
@@ -154,14 +157,14 @@ public class Keywords {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindKeywordsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindKeywordsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -197,25 +200,26 @@ public class Keywords {
      * Find a specific lease
      * Searches for all keywords owned by user
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetKeywordLeaseResponse getKeywordLease(org.openapis.openapi.models.operations.GetKeywordLeaseRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetKeywordLeaseResponse getKeywordLease(org.openapis.openapi.models.operations.GetKeywordLeaseRequest request, org.openapis.openapi.models.operations.GetKeywordLeaseSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetKeywordLeasePathParams.class, baseUrl, "/keywords/leases/{keyword}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetKeywordLeaseRequest.class, baseUrl, "/keywords/leases/{keyword}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetKeywordLeaseQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetKeywordLeaseRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -251,25 +255,26 @@ public class Keywords {
      * Find a keyword by id
      * Get keyword by id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetKeywordLeaseByIdResponse getKeywordLeaseById(org.openapis.openapi.models.operations.GetKeywordLeaseByIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetKeywordLeaseByIdResponse getKeywordLeaseById(org.openapis.openapi.models.operations.GetKeywordLeaseByIdRequest request, org.openapis.openapi.models.operations.GetKeywordLeaseByIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetKeywordLeaseByIdPathParams.class, baseUrl, "/keywords/leases/id/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetKeywordLeaseByIdRequest.class, baseUrl, "/keywords/leases/id/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetKeywordLeaseByIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetKeywordLeaseByIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -305,25 +310,26 @@ public class Keywords {
      * Find a specific keyword lease config
      * Returns a single KeywordConfig instance for a given keyword lease
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetKeywordLeaseConfigResponse getKeywordLeaseConfig(org.openapis.openapi.models.operations.GetKeywordLeaseConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetKeywordLeaseConfigResponse getKeywordLeaseConfig(org.openapis.openapi.models.operations.GetKeywordLeaseConfigRequest request, org.openapis.openapi.models.operations.GetKeywordLeaseConfigSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetKeywordLeaseConfigPathParams.class, baseUrl, "/keywords/leases/configs/{keyword}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetKeywordLeaseConfigRequest.class, baseUrl, "/keywords/leases/configs/{keyword}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetKeywordLeaseConfigQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetKeywordLeaseConfigRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -359,19 +365,20 @@ public class Keywords {
      * Check for a specific keyword
      * Searches for the specific keyword to purchase on the CallFire platform. Returns 'true' if keyword is available. Keyword should only consist of uppercase and lowercase letters and numbers. Number of characters must be greater than 2, but less than 65.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IsKeywordAvailableResponse isKeywordAvailable(org.openapis.openapi.models.operations.IsKeywordAvailableRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IsKeywordAvailableResponse isKeywordAvailable(org.openapis.openapi.models.operations.IsKeywordAvailableRequest request, org.openapis.openapi.models.operations.IsKeywordAvailableSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IsKeywordAvailablePathParams.class, baseUrl, "/keywords/{keyword}/available", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IsKeywordAvailableRequest.class, baseUrl, "/keywords/{keyword}/available", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -407,21 +414,22 @@ public class Keywords {
      * Update a lease
      * Updates a keyword lease. Turns the autoRenew on/off. Configure double opt in feature. Add/remove contact list from keyword.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateKeywordLeaseResponse updateKeywordLease(org.openapis.openapi.models.operations.UpdateKeywordLeaseRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateKeywordLeaseResponse updateKeywordLease(org.openapis.openapi.models.operations.UpdateKeywordLeaseRequest request, org.openapis.openapi.models.operations.UpdateKeywordLeaseSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateKeywordLeasePathParams.class, baseUrl, "/keywords/leases/{keyword}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateKeywordLeaseRequest.class, baseUrl, "/keywords/leases/{keyword}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "keywordLease", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -449,21 +457,22 @@ public class Keywords {
      * Update a keyword lease config
      * Updates a keyword lease configuration. Use this API endpoint to enable/disable inbound SMS forwarding, set forward number. Forward number must be in E.164 format)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateKeywordLeaseConfigResponse updateKeywordLeaseConfig(org.openapis.openapi.models.operations.UpdateKeywordLeaseConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateKeywordLeaseConfigResponse updateKeywordLeaseConfig(org.openapis.openapi.models.operations.UpdateKeywordLeaseConfigRequest request, org.openapis.openapi.models.operations.UpdateKeywordLeaseConfigSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateKeywordLeaseConfigPathParams.class, baseUrl, "/keywords/leases/configs/{keyword}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateKeywordLeaseConfigRequest.class, baseUrl, "/keywords/leases/configs/{keyword}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "keywordConfig", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

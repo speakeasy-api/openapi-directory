@@ -4,20 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsListSelfHostedRunnerGroupsForOrgRequest {
-    
-    public ActionsListSelfHostedRunnerGroupsForOrgPathParams pathParams;
-    public ActionsListSelfHostedRunnerGroupsForOrgRequest withPathParams(ActionsListSelfHostedRunnerGroupsForOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ActionsListSelfHostedRunnerGroupsForOrgRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ActionsListSelfHostedRunnerGroupsForOrgRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public ActionsListSelfHostedRunnerGroupsForOrgQueryParams queryParams;
-    public ActionsListSelfHostedRunnerGroupsForOrgRequest withQueryParams(ActionsListSelfHostedRunnerGroupsForOrgQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ActionsListSelfHostedRunnerGroupsForOrgRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
         return this;
     }
     

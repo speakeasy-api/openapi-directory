@@ -4,20 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV2MetapubProgramInformationBatchBatchIdRequest {
-    
-    public GetApiV2MetapubProgramInformationBatchBatchIdPathParams pathParams;
-    public GetApiV2MetapubProgramInformationBatchBatchIdRequest withPathParams(GetApiV2MetapubProgramInformationBatchBatchIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetApiV2MetapubProgramInformationBatchBatchIdSecurity security;
-    public GetApiV2MetapubProgramInformationBatchBatchIdRequest withSecurity(GetApiV2MetapubProgramInformationBatchBatchIdSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=batch-id")
+    public Long batchId;
+    public GetApiV2MetapubProgramInformationBatchBatchIdRequest withBatchId(Long batchId) {
+        this.batchId = batchId;
         return this;
     }
     

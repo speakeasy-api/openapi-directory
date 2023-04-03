@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListFleetRequest {
-    
-    public ListFleetQueryParams queryParams;
-    public ListFleetRequest withQueryParams(ListFleetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The SID or unique name of the Network Access Profile that controls which cellular networks the Fleet's SIMs can connect to.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NetworkAccessProfile")
+    public String networkAccessProfile;
+    public ListFleetRequest withNetworkAccessProfile(String networkAccessProfile) {
+        this.networkAccessProfile = networkAccessProfile;
         return this;
     }
     
-    
-    public ListFleetSecurity security;
-    public ListFleetRequest withSecurity(ListFleetSecurity security) {
-        this.security = security;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListFleetRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListFleetRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public String serverURL;
-    public ListFleetRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListFleetRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

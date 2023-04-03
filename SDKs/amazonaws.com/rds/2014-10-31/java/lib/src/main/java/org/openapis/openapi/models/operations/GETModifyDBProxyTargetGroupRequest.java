@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyDBProxyTargetGroupRequest {
-    
-    public GETModifyDBProxyTargetGroupQueryParams queryParams;
-    public GETModifyDBProxyTargetGroupRequest withQueryParams(GETModifyDBProxyTargetGroupQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyDBProxyTargetGroupActionEnum action;
+    public GETModifyDBProxyTargetGroupRequest withAction(GETModifyDBProxyTargetGroupActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The settings that determine the size and behavior of the connection pool for the target group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ConnectionPoolConfig")
+    public GETModifyDBProxyTargetGroupConnectionPoolConfig connectionPoolConfig;
+    public GETModifyDBProxyTargetGroupRequest withConnectionPoolConfig(GETModifyDBProxyTargetGroupConnectionPoolConfig connectionPoolConfig) {
+        this.connectionPoolConfig = connectionPoolConfig;
+        return this;
+    }
     
-    public GETModifyDBProxyTargetGroupHeaders headers;
-    public GETModifyDBProxyTargetGroupRequest withHeaders(GETModifyDBProxyTargetGroupHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name of the proxy.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBProxyName")
+    public String dbProxyName;
+    public GETModifyDBProxyTargetGroupRequest withDBProxyName(String dbProxyName) {
+        this.dbProxyName = dbProxyName;
+        return this;
+    }
+    
+    /**
+     * The new name for the modified &lt;code&gt;DBProxyTarget&lt;/code&gt;. An identifier must begin with a letter and must contain only ASCII letters, digits, and hyphens; it can't end with a hyphen or contain two consecutive hyphens.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NewName")
+    public String newName;
+    public GETModifyDBProxyTargetGroupRequest withNewName(String newName) {
+        this.newName = newName;
+        return this;
+    }
+    
+    /**
+     * The name of the target group to modify.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TargetGroupName")
+    public String targetGroupName;
+    public GETModifyDBProxyTargetGroupRequest withTargetGroupName(String targetGroupName) {
+        this.targetGroupName = targetGroupName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyDBProxyTargetGroupVersionEnum version;
+    public GETModifyDBProxyTargetGroupRequest withVersion(GETModifyDBProxyTargetGroupVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyDBProxyTargetGroupRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyDBProxyTargetGroupRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyDBProxyTargetGroupRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyDBProxyTargetGroupRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyDBProxyTargetGroupRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyDBProxyTargetGroupRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyDBProxyTargetGroupRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

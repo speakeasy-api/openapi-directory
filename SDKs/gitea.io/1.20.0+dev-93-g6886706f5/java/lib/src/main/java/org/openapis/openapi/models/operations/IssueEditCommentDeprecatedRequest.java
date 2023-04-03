@@ -7,17 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssueEditCommentDeprecatedRequest {
-    
-    public IssueEditCommentDeprecatedPathParams pathParams;
-    public IssueEditCommentDeprecatedRequest withPathParams(IssueEditCommentDeprecatedPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.EditIssueCommentOption editIssueCommentOption;
+    public IssueEditCommentDeprecatedRequest withEditIssueCommentOption(org.openapis.openapi.models.shared.EditIssueCommentOption editIssueCommentOption) {
+        this.editIssueCommentOption = editIssueCommentOption;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.EditIssueCommentOption request;
-    public IssueEditCommentDeprecatedRequest withRequest(org.openapis.openapi.models.shared.EditIssueCommentOption request) {
-        this.request = request;
+    /**
+     * id of the comment to edit
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public IssueEditCommentDeprecatedRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * this parameter is ignored
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=index")
+    public Long index;
+    public IssueEditCommentDeprecatedRequest withIndex(Long index) {
+        this.index = index;
+        return this;
+    }
+    
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssueEditCommentDeprecatedRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssueEditCommentDeprecatedRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

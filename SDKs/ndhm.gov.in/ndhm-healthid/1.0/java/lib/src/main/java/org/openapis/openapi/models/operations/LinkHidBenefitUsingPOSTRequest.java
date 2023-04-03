@@ -7,10 +7,10 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LinkHidBenefitUsingPOSTRequest {
-    
-    public LinkHidBenefitUsingPOSTHeaders headers;
-    public LinkHidBenefitUsingPOSTRequest withHeaders(LinkHidBenefitUsingPOSTHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public LinkHidBenefitUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
@@ -18,16 +18,9 @@ public class LinkHidBenefitUsingPOSTRequest {
      * hidBenefitLinkedRequestPayload
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.HidBenefitLinkedRequestPayload request;
-    public LinkHidBenefitUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.HidBenefitLinkedRequestPayload request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public LinkHidBenefitUsingPOSTSecurity security;
-    public LinkHidBenefitUsingPOSTRequest withSecurity(LinkHidBenefitUsingPOSTSecurity security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.HidBenefitLinkedRequestPayload hidBenefitLinkedRequestPayload;
+    public LinkHidBenefitUsingPOSTRequest withHidBenefitLinkedRequestPayload(org.openapis.openapi.models.shared.HidBenefitLinkedRequestPayload hidBenefitLinkedRequestPayload) {
+        this.hidBenefitLinkedRequestPayload = hidBenefitLinkedRequestPayload;
         return this;
     }
     

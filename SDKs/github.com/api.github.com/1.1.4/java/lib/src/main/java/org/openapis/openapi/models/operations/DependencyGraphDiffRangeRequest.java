@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DependencyGraphDiffRangeRequest {
-    
-    public DependencyGraphDiffRangePathParams pathParams;
-    public DependencyGraphDiffRangeRequest withPathParams(DependencyGraphDiffRangePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The base and head Git revisions to compare. The Git revisions will be resolved to commit SHAs. Named revisions will be resolved to their corresponding HEAD commits, and an appropriate merge base will be determined. This parameter expects the format `{base}...{head}`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=basehead")
+    public String basehead;
+    public DependencyGraphDiffRangeRequest withBasehead(String basehead) {
+        this.basehead = basehead;
         return this;
     }
     
+    /**
+     * The full path, relative to the repository root, of the dependency manifest file.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public DependencyGraphDiffRangeRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
     
-    public DependencyGraphDiffRangeQueryParams queryParams;
-    public DependencyGraphDiffRangeRequest withQueryParams(DependencyGraphDiffRangeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public DependencyGraphDiffRangeRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public DependencyGraphDiffRangeRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

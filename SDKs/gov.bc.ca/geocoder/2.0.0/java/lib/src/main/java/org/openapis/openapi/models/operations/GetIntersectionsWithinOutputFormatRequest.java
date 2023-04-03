@@ -4,20 +4,68 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetIntersectionsWithinOutputFormatRequest {
-    
-    public GetIntersectionsWithinOutputFormatPathParams pathParams;
-    public GetIntersectionsWithinOutputFormatRequest withPathParams(GetIntersectionsWithinOutputFormatPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A bounding box (xmin,ymin,xmax,ymax) used to limit the search area. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#bbox target="_blank"&gt;bbox&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bbox")
+    public String bbox;
+    public GetIntersectionsWithinOutputFormatRequest withBbox(String bbox) {
+        this.bbox = bbox;
         return this;
     }
     
+    /**
+     * The maximum degree an interesection can have to be included in results. A four-way stop has a degree of 4.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxDegree")
+    public Long maxDegree;
+    public GetIntersectionsWithinOutputFormatRequest withMaxDegree(Long maxDegree) {
+        this.maxDegree = maxDegree;
+        return this;
+    }
     
-    public GetIntersectionsWithinOutputFormatQueryParams queryParams;
-    public GetIntersectionsWithinOutputFormatRequest withQueryParams(GetIntersectionsWithinOutputFormatQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The maximum number of search results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public GetIntersectionsWithinOutputFormatRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * The minimum degree an intersection can have to be included in results. A dead-end has a degree of 1.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minDegree")
+    public Long minDegree;
+    public GetIntersectionsWithinOutputFormatRequest withMinDegree(Long minDegree) {
+        this.minDegree = minDegree;
+        return this;
+    }
+    
+    /**
+     * Results format. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank"&gt;outputFormat&lt;/a&gt;. 
+     * 
+     * Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=outputFormat")
+    public GetIntersectionsWithinOutputFormatOutputFormatEnum outputFormat;
+    public GetIntersectionsWithinOutputFormatRequest withOutputFormat(GetIntersectionsWithinOutputFormatOutputFormatEnum outputFormat) {
+        this.outputFormat = outputFormat;
+        return this;
+    }
+    
+    /**
+     * The EPSG code of the spatial reference system (SRS) to use for output geometries. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank"&gt;outputSRS&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputSRS")
+    public GetIntersectionsWithinOutputFormatOutputSrsEnum outputSRS;
+    public GetIntersectionsWithinOutputFormatRequest withOutputSRS(GetIntersectionsWithinOutputFormatOutputSrsEnum outputSRS) {
+        this.outputSRS = outputSRS;
         return this;
     }
     

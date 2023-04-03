@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDependentRequest {
-    
-    public GetDependentPathParams pathParams;
-    public GetDependentRequest withPathParams(GetDependentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the dependent in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dependent_id")
+    public String dependentId;
+    public GetDependentRequest withDependentId(String dependentId) {
+        this.dependentId = dependentId;
         return this;
     }
     

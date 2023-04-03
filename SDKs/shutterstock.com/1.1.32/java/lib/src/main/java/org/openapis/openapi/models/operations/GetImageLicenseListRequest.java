@@ -4,20 +4,107 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetImageLicenseListRequest {
-    
-    public GetImageLicenseListQueryParams queryParams;
-    public GetImageLicenseListRequest withQueryParams(GetImageLicenseListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter licenses by download availability
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=download_availability")
+    public GetImageLicenseListDownloadAvailabilityEnum downloadAvailability;
+    public GetImageLicenseListRequest withDownloadAvailability(GetImageLicenseListDownloadAvailabilityEnum downloadAvailability) {
+        this.downloadAvailability = downloadAvailability;
         return this;
     }
     
+    /**
+     * Show licenses created before the specified date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
+    public OffsetDateTime endDate;
+    public GetImageLicenseListRequest withEndDate(OffsetDateTime endDate) {
+        this.endDate = endDate;
+        return this;
+    }
     
-    public GetImageLicenseListSecurity security;
-    public GetImageLicenseListRequest withSecurity(GetImageLicenseListSecurity security) {
-        this.security = security;
+    /**
+     * Show licenses for the specified image ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=image_id")
+    public String imageId;
+    public GetImageLicenseListRequest withImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    
+    /**
+     * Show images that are available with the specified license, such as `standard` or `enhanced`; prepending a `-` sign excludes results from that license
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
+    public String license;
+    public GetImageLicenseListRequest withLicense(String license) {
+        this.license = license;
+        return this;
+    }
+    
+    /**
+     * Page number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetImageLicenseListRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Number of results per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetImageLicenseListRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Sort order
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetImageLicenseListSortEnum sort;
+    public GetImageLicenseListRequest withSort(GetImageLicenseListSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Show licenses created on or after the specified date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
+    public OffsetDateTime startDate;
+    public GetImageLicenseListRequest withStartDate(OffsetDateTime startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    
+    /**
+     * Set to true to see license history for all members of your team.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team_history")
+    public Boolean teamHistory;
+    public GetImageLicenseListRequest withTeamHistory(Boolean teamHistory) {
+        this.teamHistory = teamHistory;
+        return this;
+    }
+    
+    /**
+     * Filter licenses by username of licensee
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
+    public String username;
+    public GetImageLicenseListRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

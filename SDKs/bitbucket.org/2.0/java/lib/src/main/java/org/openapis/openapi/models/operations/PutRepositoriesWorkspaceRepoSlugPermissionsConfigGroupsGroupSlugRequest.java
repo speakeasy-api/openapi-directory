@@ -4,20 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest {
-    
-    public PutRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugPathParams pathParams;
-    public PutRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest withPathParams(PutRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Slug of the requested group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_slug")
+    public String groupSlug;
+    public PutRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest withGroupSlug(String groupSlug) {
+        this.groupSlug = groupSlug;
         return this;
     }
     
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public PutRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
     
-    public PutRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugSecurity security;
-    public PutRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest withSecurity(PutRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public PutRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

@@ -7,24 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutWorkspaceSlugOrganizationsOrganizationIdRequest {
-    
-    public PutWorkspaceSlugOrganizationsOrganizationIdPathParams pathParams;
-    public PutWorkspaceSlugOrganizationsOrganizationIdRequest withPathParams(PutWorkspaceSlugOrganizationsOrganizationIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Organization request;
-    public PutWorkspaceSlugOrganizationsOrganizationIdRequest withRequest(org.openapis.openapi.models.shared.Organization request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Organization organization;
+    public PutWorkspaceSlugOrganizationsOrganizationIdRequest withOrganization(org.openapis.openapi.models.shared.Organization organization) {
+        this.organization = organization;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organization_id")
+    public String organizationId;
+    public PutWorkspaceSlugOrganizationsOrganizationIdRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
     
-    public PutWorkspaceSlugOrganizationsOrganizationIdSecurity security;
-    public PutWorkspaceSlugOrganizationsOrganizationIdRequest withSecurity(PutWorkspaceSlugOrganizationsOrganizationIdSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_slug")
+    public String workspaceSlug;
+    public PutWorkspaceSlugOrganizationsOrganizationIdRequest withWorkspaceSlug(String workspaceSlug) {
+        this.workspaceSlug = workspaceSlug;
         return this;
     }
     

@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WorkTypeApiDetailsRequest {
-    
-    public WorkTypeApiDetailsQueryParams queryParams;
-    public WorkTypeApiDetailsRequest withQueryParams(WorkTypeApiDetailsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=workTypeId")
+    public Integer workTypeId;
+    public WorkTypeApiDetailsRequest withWorkTypeId(Integer workTypeId) {
+        this.workTypeId = workTypeId;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
+    public String xAuthKey;
+    public WorkTypeApiDetailsRequest withXAuthKey(String xAuthKey) {
+        this.xAuthKey = xAuthKey;
+        return this;
+    }
     
-    public WorkTypeApiDetailsHeaders headers;
-    public WorkTypeApiDetailsRequest withHeaders(WorkTypeApiDetailsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
+    public String xAuthSecret;
+    public WorkTypeApiDetailsRequest withXAuthSecret(String xAuthSecret) {
+        this.xAuthSecret = xAuthSecret;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutCourseMappingsOfferingIdExternalCourseIdRequest {
+    /**
+     * external course's id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=externalCourseId")
+    public String externalCourseId;
+    public PutCourseMappingsOfferingIdExternalCourseIdRequest withExternalCourseId(String externalCourseId) {
+        this.externalCourseId = externalCourseId;
+        return this;
+    }
     
-    public PutCourseMappingsOfferingIdExternalCourseIdPathParams pathParams;
-    public PutCourseMappingsOfferingIdExternalCourseIdRequest withPathParams(PutCourseMappingsOfferingIdExternalCourseIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * offering's id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offeringId")
+    public String offeringId;
+    public PutCourseMappingsOfferingIdExternalCourseIdRequest withOfferingId(String offeringId) {
+        this.offeringId = offeringId;
         return this;
     }
     

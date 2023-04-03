@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.PostRemovebgFormRequest;
 import org.openapis.openapi.models.operations.PostRemovebgFormResponse;
 import org.openapis.openapi.models.shared.RemoveBgJsonChannelsEnum;
 import org.openapis.openapi.models.shared.RemoveBgJsonFormatEnum;
@@ -31,32 +30,28 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    apiKeyHeader = new SchemeAPIKeyHeader() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    apiKeyHeader = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            PostRemovebgFormRequest req = new PostRemovebgFormRequest() {{
-                request = new RemoveBgJson() {{
-                    addShadow = false;
-                    bgColor = "corrupti";
-                    bgImageUrl = "provident";
-                    channels = "alpha";
-                    crop = false;
-                    cropMargin = "quibusdam";
-                    format = "jpg";
-                    imageFileB64 = "nulla";
-                    imageUrl = "https://www.remove.bg/example-hd.jpg";
-                    position = "corrupti";
-                    roi = "illum";
-                    scale = "vel";
-                    semitransparency = false;
-                    size = "full";
-                    type = "product";
-                    typeLevel = "1";
-                }};
-            }};            
+            org.openapis.openapi.models.shared.RemoveBgJson req = new RemoveBgJson() {{
+                addShadow = false;
+                bgColor = "corrupti";
+                bgImageUrl = "provident";
+                channels = "alpha";
+                crop = false;
+                cropMargin = "quibusdam";
+                format = "jpg";
+                imageFileB64 = "nulla";
+                imageUrl = "https://www.remove.bg/example-hd.jpg";
+                position = "corrupti";
+                roi = "illum";
+                scale = "vel";
+                semitransparency = false;
+                size = "full";
+                type = "product";
+                typeLevel = "1";
+            }}            
 
             PostRemovebgFormResponse res = sdk.backgroundRemoval.postRemovebgForm(req);
 
@@ -70,7 +65,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### backgroundRemoval

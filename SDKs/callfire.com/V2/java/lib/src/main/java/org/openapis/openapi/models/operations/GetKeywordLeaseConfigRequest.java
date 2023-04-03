@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetKeywordLeaseConfigRequest {
-    
-    public GetKeywordLeaseConfigPathParams pathParams;
-    public GetKeywordLeaseConfigRequest withPathParams(GetKeywordLeaseConfigPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public GetKeywordLeaseConfigRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     
-    
-    public GetKeywordLeaseConfigQueryParams queryParams;
-    public GetKeywordLeaseConfigRequest withQueryParams(GetKeywordLeaseConfigQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetKeywordLeaseConfigSecurity security;
-    public GetKeywordLeaseConfigRequest withSecurity(GetKeywordLeaseConfigSecurity security) {
-        this.security = security;
+    /**
+     * A Keyword to get KeywordConfig by
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=keyword")
+    public String keyword;
+    public GetKeywordLeaseConfigRequest withKeyword(String keyword) {
+        this.keyword = keyword;
         return this;
     }
     

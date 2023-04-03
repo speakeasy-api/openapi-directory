@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateConnectionPolicyRequest {
-    
-    public UpdateConnectionPolicyPathParams pathParams;
-    public UpdateConnectionPolicyRequest withPathParams(UpdateConnectionPolicyPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateConnectionPolicyUpdateConnectionPolicyRequest request;
-    public UpdateConnectionPolicyRequest withRequest(UpdateConnectionPolicyUpdateConnectionPolicyRequest request) {
-        this.request = request;
+    public UpdateConnectionPolicyUpdateConnectionPolicyRequest requestBody;
+    public UpdateConnectionPolicyRequest withRequestBody(UpdateConnectionPolicyUpdateConnectionPolicyRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateConnectionPolicySecurity security;
-    public UpdateConnectionPolicyRequest withSecurity(UpdateConnectionPolicySecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateConnectionPolicyRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique string that we created to identify the Connection Policy resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateConnectionPolicyRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

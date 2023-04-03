@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MigrationsSetLfsPreferenceRequest {
-    
-    public MigrationsSetLfsPreferencePathParams pathParams;
-    public MigrationsSetLfsPreferenceRequest withPathParams(MigrationsSetLfsPreferencePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public MigrationsSetLfsPreferenceRequestBody requestBody;
+    public MigrationsSetLfsPreferenceRequest withRequestBody(MigrationsSetLfsPreferenceRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public MigrationsSetLfsPreferenceRequestBody request;
-    public MigrationsSetLfsPreferenceRequest withRequest(MigrationsSetLfsPreferenceRequestBody request) {
-        this.request = request;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public MigrationsSetLfsPreferenceRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public MigrationsSetLfsPreferenceRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

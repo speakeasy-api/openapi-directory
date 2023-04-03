@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AddCustomAttributesXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AddCustomAttributesHeaders;
 import org.openapis.openapi.models.operations.AddCustomAttributesRequest;
 import org.openapis.openapi.models.operations.AddCustomAttributesResponse;
 import org.openapis.openapi.models.shared.AddCustomAttributesRequest;
@@ -19,89 +18,70 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AddCustomAttributesRequest req = new AddCustomAttributesRequest() {{
-                headers = new AddCustomAttributesHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "AWSCognitoIdentityProviderService.AddCustomAttributes";
-                }};
-                request = new AddCustomAttributesRequest() {{
+                addCustomAttributesRequest = new AddCustomAttributesRequest() {{
                     customAttributes = new org.openapis.openapi.models.shared.SchemaAttributeType[]{{
                         add(new SchemaAttributeType() {{
-                            attributeDataType = "Number";
+                            attributeDataType = "DateTime";
                             developerOnlyAttribute = false;
                             mutable = false;
-                            name = "error";
+                            name = "distinctio";
                             numberAttributeConstraints = new NumberAttributeConstraintsType() {{
-                                maxValue = "deserunt";
-                                minValue = "suscipit";
+                                maxValue = "quibusdam";
+                                minValue = "unde";
                             }};
                             required = false;
                             stringAttributeConstraints = new StringAttributeConstraintsType() {{
-                                maxLength = "iure";
-                                minLength = "magnam";
+                                maxLength = "nulla";
+                                minLength = "corrupti";
                             }};
                         }}),
                         add(new SchemaAttributeType() {{
                             attributeDataType = "Boolean";
                             developerOnlyAttribute = false;
                             mutable = false;
-                            name = "ipsa";
+                            name = "vel";
                             numberAttributeConstraints = new NumberAttributeConstraintsType() {{
-                                maxValue = "delectus";
-                                minValue = "tempora";
+                                maxValue = "error";
+                                minValue = "deserunt";
                             }};
                             required = false;
                             stringAttributeConstraints = new StringAttributeConstraintsType() {{
                                 maxLength = "suscipit";
-                                minLength = "molestiae";
+                                minLength = "iure";
                             }};
                         }}),
                         add(new SchemaAttributeType() {{
-                            attributeDataType = "Boolean";
+                            attributeDataType = "Number";
                             developerOnlyAttribute = false;
                             mutable = false;
-                            name = "placeat";
+                            name = "debitis";
                             numberAttributeConstraints = new NumberAttributeConstraintsType() {{
-                                maxValue = "voluptatum";
-                                minValue = "iusto";
+                                maxValue = "ipsa";
+                                minValue = "delectus";
                             }};
                             required = false;
                             stringAttributeConstraints = new StringAttributeConstraintsType() {{
-                                maxLength = "excepturi";
-                                minLength = "nisi";
-                            }};
-                        }}),
-                        add(new SchemaAttributeType() {{
-                            attributeDataType = "Boolean";
-                            developerOnlyAttribute = false;
-                            mutable = false;
-                            name = "temporibus";
-                            numberAttributeConstraints = new NumberAttributeConstraintsType() {{
-                                maxValue = "ab";
-                                minValue = "quis";
-                            }};
-                            required = false;
-                            stringAttributeConstraints = new StringAttributeConstraintsType() {{
-                                maxLength = "veritatis";
-                                minLength = "deserunt";
+                                maxLength = "tempora";
+                                minLength = "suscipit";
                             }};
                         }}),
                     }};
-                    userPoolId = "perferendis";
+                    userPoolId = "molestiae";
                 }};
-            }};            
+                xAmzAlgorithm = "minus";
+                xAmzContentSha256 = "placeat";
+                xAmzCredential = "voluptatum";
+                xAmzDate = "iusto";
+                xAmzSecurityToken = "excepturi";
+                xAmzSignature = "nisi";
+                xAmzSignedHeaders = "recusandae";
+                xAmzTarget = "AWSCognitoIdentityProviderService.AddCustomAttributes";
+            }}            
 
             AddCustomAttributesResponse res = sdk.addCustomAttributes(req);
 

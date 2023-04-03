@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetQuestionsRequest {
-    
-    public GetQuestionsPathParams pathParams;
-    public GetQuestionsRequest withPathParams(GetQuestionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Project ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=attach_answers_for_project")
+    public Long attachAnswersForProject;
+    public GetQuestionsRequest withAttachAnswersForProject(Long attachAnswersForProject) {
+        this.attachAnswersForProject = attachAnswersForProject;
         return this;
     }
     
+    /**
+     * Scope
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scope")
+    public String scope;
+    public GetQuestionsRequest withScope(String scope) {
+        this.scope = scope;
+        return this;
+    }
     
-    public GetQuestionsQueryParams queryParams;
-    public GetQuestionsRequest withQueryParams(GetQuestionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Type
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
+    public String type;
+    public GetQuestionsRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

@@ -4,13 +4,73 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUpdatePathwayRequest {
+    /**
+     * The authentication key
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=auth")
+    public String auth;
+    public GetUpdatePathwayRequest withAuth(String auth) {
+        this.auth = auth;
+        return this;
+    }
     
-    public GetUpdatePathwayQueryParams queryParams;
-    public GetUpdatePathwayRequest withQueryParams(GetUpdatePathwayQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A description of the modifications
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
+    public String description;
+    public GetUpdatePathwayRequest withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public GetUpdatePathwayFormatEnum format;
+    public GetUpdatePathwayRequest withFormat(GetUpdatePathwayFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * The updated GPML code
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gpml")
+    public String gpml;
+    public GetUpdatePathwayRequest withGpml(String gpml) {
+        this.gpml = gpml;
+        return this;
+    }
+    
+    /**
+     * The pathway identifier
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pwId")
+    public String pwId;
+    public GetUpdatePathwayRequest withPwId(String pwId) {
+        this.pwId = pwId;
+        return this;
+    }
+    
+    /**
+     * The revision the GPML code is based on
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=revision")
+    public Long revision;
+    public GetUpdatePathwayRequest withRevision(Long revision) {
+        this.revision = revision;
+        return this;
+    }
+    
+    /**
+     * The username
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
+    public String username;
+    public GetUpdatePathwayRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

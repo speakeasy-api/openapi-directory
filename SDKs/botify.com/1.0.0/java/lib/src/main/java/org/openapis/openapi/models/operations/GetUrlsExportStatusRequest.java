@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUrlsExportStatusRequest {
+    /**
+     * Analysis' identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=analysis_slug")
+    public String analysisSlug;
+    public GetUrlsExportStatusRequest withAnalysisSlug(String analysisSlug) {
+        this.analysisSlug = analysisSlug;
+        return this;
+    }
     
-    public GetUrlsExportStatusPathParams pathParams;
-    public GetUrlsExportStatusRequest withPathParams(GetUrlsExportStatusPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Project's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_slug")
+    public String projectSlug;
+    public GetUrlsExportStatusRequest withProjectSlug(String projectSlug) {
+        this.projectSlug = projectSlug;
+        return this;
+    }
+    
+    /**
+     * Url Export ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=url_export_id")
+    public String urlExportId;
+    public GetUrlsExportStatusRequest withUrlExportId(String urlExportId) {
+        this.urlExportId = urlExportId;
+        return this;
+    }
+    
+    /**
+     * User's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public GetUrlsExportStatusRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

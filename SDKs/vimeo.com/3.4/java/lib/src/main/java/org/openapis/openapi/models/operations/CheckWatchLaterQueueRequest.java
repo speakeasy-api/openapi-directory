@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CheckWatchLaterQueueRequest {
-    
-    public CheckWatchLaterQueuePathParams pathParams;
-    public CheckWatchLaterQueueRequest withPathParams(CheckWatchLaterQueuePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public CheckWatchLaterQueueRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     
-    
-    public CheckWatchLaterQueueSecurity security;
-    public CheckWatchLaterQueueRequest withSecurity(CheckWatchLaterQueueSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public CheckWatchLaterQueueRequest withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

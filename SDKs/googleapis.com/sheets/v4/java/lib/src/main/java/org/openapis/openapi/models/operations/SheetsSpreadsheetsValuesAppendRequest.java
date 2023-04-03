@@ -7,31 +7,190 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SheetsSpreadsheetsValuesAppendRequest {
-    
-    public SheetsSpreadsheetsValuesAppendPathParams pathParams;
-    public SheetsSpreadsheetsValuesAppendRequest withPathParams(SheetsSpreadsheetsValuesAppendPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public SheetsSpreadsheetsValuesAppendQueryParams queryParams;
-    public SheetsSpreadsheetsValuesAppendRequest withQueryParams(SheetsSpreadsheetsValuesAppendQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public SheetsSpreadsheetsValuesAppendRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ValueRange request;
-    public SheetsSpreadsheetsValuesAppendRequest withRequest(org.openapis.openapi.models.shared.ValueRange request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ValueRange valueRange;
+    public SheetsSpreadsheetsValuesAppendRequest withValueRange(org.openapis.openapi.models.shared.ValueRange valueRange) {
+        this.valueRange = valueRange;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public SheetsSpreadsheetsValuesAppendRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public SheetsSpreadsheetsValuesAppendSecurity security;
-    public SheetsSpreadsheetsValuesAppendRequest withSecurity(SheetsSpreadsheetsValuesAppendSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public SheetsSpreadsheetsValuesAppendRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public SheetsSpreadsheetsValuesAppendRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public SheetsSpreadsheetsValuesAppendRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Determines if the update response should include the values of the cells that were appended. By default, responses do not include the updated values.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeValuesInResponse")
+    public Boolean includeValuesInResponse;
+    public SheetsSpreadsheetsValuesAppendRequest withIncludeValuesInResponse(Boolean includeValuesInResponse) {
+        this.includeValuesInResponse = includeValuesInResponse;
+        return this;
+    }
+    
+    /**
+     * How the input data should be inserted.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=insertDataOption")
+    public SheetsSpreadsheetsValuesAppendInsertDataOptionEnum insertDataOption;
+    public SheetsSpreadsheetsValuesAppendRequest withInsertDataOption(SheetsSpreadsheetsValuesAppendInsertDataOptionEnum insertDataOption) {
+        this.insertDataOption = insertDataOption;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public SheetsSpreadsheetsValuesAppendRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public SheetsSpreadsheetsValuesAppendRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public SheetsSpreadsheetsValuesAppendRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public SheetsSpreadsheetsValuesAppendRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * The [A1 notation](/sheets/api/guides/concepts#cell) of a range to search for a logical table of data. Values are appended after the last row of the table.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=range")
+    public String range;
+    public SheetsSpreadsheetsValuesAppendRequest withRange(String range) {
+        this.range = range;
+        return this;
+    }
+    
+    /**
+     * Determines how dates, times, and durations in the response should be rendered. This is ignored if response_value_render_option is FORMATTED_VALUE. The default dateTime render option is SERIAL_NUMBER.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=responseDateTimeRenderOption")
+    public SheetsSpreadsheetsValuesAppendResponseDateTimeRenderOptionEnum responseDateTimeRenderOption;
+    public SheetsSpreadsheetsValuesAppendRequest withResponseDateTimeRenderOption(SheetsSpreadsheetsValuesAppendResponseDateTimeRenderOptionEnum responseDateTimeRenderOption) {
+        this.responseDateTimeRenderOption = responseDateTimeRenderOption;
+        return this;
+    }
+    
+    /**
+     * Determines how values in the response should be rendered. The default render option is FORMATTED_VALUE.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=responseValueRenderOption")
+    public SheetsSpreadsheetsValuesAppendResponseValueRenderOptionEnum responseValueRenderOption;
+    public SheetsSpreadsheetsValuesAppendRequest withResponseValueRenderOption(SheetsSpreadsheetsValuesAppendResponseValueRenderOptionEnum responseValueRenderOption) {
+        this.responseValueRenderOption = responseValueRenderOption;
+        return this;
+    }
+    
+    /**
+     * The ID of the spreadsheet to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spreadsheetId")
+    public String spreadsheetId;
+    public SheetsSpreadsheetsValuesAppendRequest withSpreadsheetId(String spreadsheetId) {
+        this.spreadsheetId = spreadsheetId;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public SheetsSpreadsheetsValuesAppendRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public SheetsSpreadsheetsValuesAppendRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
+        return this;
+    }
+    
+    /**
+     * How the input data should be interpreted.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=valueInputOption")
+    public SheetsSpreadsheetsValuesAppendValueInputOptionEnum valueInputOption;
+    public SheetsSpreadsheetsValuesAppendRequest withValueInputOption(SheetsSpreadsheetsValuesAppendValueInputOptionEnum valueInputOption) {
+        this.valueInputOption = valueInputOption;
         return this;
     }
     

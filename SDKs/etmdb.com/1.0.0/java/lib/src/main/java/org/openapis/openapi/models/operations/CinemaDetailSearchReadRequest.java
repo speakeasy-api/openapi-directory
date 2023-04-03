@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CinemaDetailSearchReadRequest {
-    
-    public CinemaDetailSearchReadPathParams pathParams;
-    public CinemaDetailSearchReadRequest withPathParams(CinemaDetailSearchReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cinema_name")
+    public String cinemaName;
+    public CinemaDetailSearchReadRequest withCinemaName(String cinemaName) {
+        this.cinemaName = cinemaName;
         return this;
     }
     

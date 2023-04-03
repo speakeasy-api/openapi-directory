@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteADeviceRequest {
-    
-    public DeleteADevicePathParams pathParams;
-    public DeleteADeviceRequest withPathParams(DeleteADevicePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteADeviceSecurity security;
-    public DeleteADeviceRequest withSecurity(DeleteADeviceSecurity security) {
-        this.security = security;
+    /**
+     * Unique Identifier of the device.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deviceId")
+    public String deviceId;
+    public DeleteADeviceRequest withDeviceId(String deviceId) {
+        this.deviceId = deviceId;
         return this;
     }
     

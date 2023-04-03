@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostApiV1AdminAccountsIdUnsilenceRequest {
-    
-    public PostApiV1AdminAccountsIdUnsilencePathParams pathParams;
-    public PostApiV1AdminAccountsIdUnsilenceRequest withPathParams(PostApiV1AdminAccountsIdUnsilencePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostApiV1AdminAccountsIdUnsilenceSecurity security;
-    public PostApiV1AdminAccountsIdUnsilenceRequest withSecurity(PostApiV1AdminAccountsIdUnsilenceSecurity security) {
-        this.security = security;
+    /**
+     * ID of the account
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostApiV1AdminAccountsIdUnsilenceRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

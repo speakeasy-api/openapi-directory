@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateWebChannelRequest {
-    
-    public UpdateWebChannelPathParams pathParams;
-    public UpdateWebChannelRequest withPathParams(UpdateWebChannelPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateWebChannelUpdateWebChannelRequest request;
-    public UpdateWebChannelRequest withRequest(UpdateWebChannelUpdateWebChannelRequest request) {
-        this.request = request;
+    public UpdateWebChannelUpdateWebChannelRequest requestBody;
+    public UpdateWebChannelRequest withRequestBody(UpdateWebChannelUpdateWebChannelRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateWebChannelSecurity security;
-    public UpdateWebChannelRequest withSecurity(UpdateWebChannelSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateWebChannelRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the WebChannel resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateWebChannelRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

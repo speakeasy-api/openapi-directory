@@ -33,7 +33,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetAddonEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLangEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPackageEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetResponse.java
 USAGE.md

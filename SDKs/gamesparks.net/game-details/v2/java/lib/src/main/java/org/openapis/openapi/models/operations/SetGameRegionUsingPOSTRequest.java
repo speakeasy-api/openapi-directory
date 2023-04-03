@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetGameRegionUsingPOSTRequest {
+    /**
+     * gameApiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=gameApiKey")
+    public String gameApiKey;
+    public SetGameRegionUsingPOSTRequest withGameApiKey(String gameApiKey) {
+        this.gameApiKey = gameApiKey;
+        return this;
+    }
     
-    public SetGameRegionUsingPOSTPathParams pathParams;
-    public SetGameRegionUsingPOSTRequest withPathParams(SetGameRegionUsingPOSTPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * regionCode
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=regionCode")
+    public String regionCode;
+    public SetGameRegionUsingPOSTRequest withRegionCode(String regionCode) {
+        this.regionCode = regionCode;
         return this;
     }
     

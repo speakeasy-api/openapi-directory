@@ -144,19 +144,20 @@ public class SDK {
      * Show me metadata of selected package
      * Show me metadata of selected package
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LatestPackageResponse latestPackage(org.openapis.openapi.models.operations.LatestPackageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LatestPackageResponse latestPackage(org.openapis.openapi.models.operations.LatestPackageRequest request, org.openapis.openapi.models.operations.LatestPackageSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LatestPackagePathParams.class, baseUrl, "/api/patch/v1/packages/{package_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LatestPackageRequest.class, baseUrl, "/api/patch/v1/packages/{package_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -184,19 +185,20 @@ public class SDK {
      * Delete system by inventory id
      * Delete system by inventory id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeletesystemResponse deletesystem(org.openapis.openapi.models.operations.DeletesystemRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeletesystemResponse deletesystem(org.openapis.openapi.models.operations.DeletesystemRequest request, org.openapis.openapi.models.operations.DeletesystemSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletesystemPathParams.class, baseUrl, "/api/patch/v1/systems/{inventory_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletesystemRequest.class, baseUrl, "/api/patch/v1/systems/{inventory_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -218,19 +220,20 @@ public class SDK {
      * Show me details an advisory by given advisory name
      * Show me details an advisory by given advisory name
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DetailAdvisoryResponse detailAdvisory(org.openapis.openapi.models.operations.DetailAdvisoryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DetailAdvisoryResponse detailAdvisory(org.openapis.openapi.models.operations.DetailAdvisoryRequest request, org.openapis.openapi.models.operations.DetailAdvisorySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DetailAdvisoryPathParams.class, baseUrl, "/api/patch/v1/advisories/{advisory_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DetailAdvisoryRequest.class, baseUrl, "/api/patch/v1/advisories/{advisory_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -258,19 +261,20 @@ public class SDK {
      * Show me details about a system by given inventory id
      * Show me details about a system by given inventory id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DetailSystemResponse detailSystem(org.openapis.openapi.models.operations.DetailSystemRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DetailSystemResponse detailSystem(org.openapis.openapi.models.operations.DetailSystemRequest request, org.openapis.openapi.models.operations.DetailSystemSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DetailSystemPathParams.class, baseUrl, "/api/patch/v1/systems/{inventory_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DetailSystemRequest.class, baseUrl, "/api/patch/v1/systems/{inventory_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -298,10 +302,11 @@ public class SDK {
      * Export applicable advisories for all my systems
      * Export applicable advisories for all my systems
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportAdvisoriesResponse exportAdvisories(org.openapis.openapi.models.operations.ExportAdvisoriesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportAdvisoriesResponse exportAdvisories(org.openapis.openapi.models.operations.ExportAdvisoriesRequest request, org.openapis.openapi.models.operations.ExportAdvisoriesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/patch/v1/export/advisories");
         
@@ -309,14 +314,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportAdvisoriesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportAdvisoriesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -349,25 +354,26 @@ public class SDK {
      * Export systems for my account
      * Export systems for my account
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportAdvisorySystemsResponse exportAdvisorySystems(org.openapis.openapi.models.operations.ExportAdvisorySystemsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportAdvisorySystemsResponse exportAdvisorySystems(org.openapis.openapi.models.operations.ExportAdvisorySystemsRequest request, org.openapis.openapi.models.operations.ExportAdvisorySystemsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExportAdvisorySystemsPathParams.class, baseUrl, "/api/patch/v1/export/advisories/{advisory_id}/systems", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExportAdvisorySystemsRequest.class, baseUrl, "/api/patch/v1/export/advisories/{advisory_id}/systems", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportAdvisorySystemsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportAdvisorySystemsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -400,25 +406,26 @@ public class SDK {
      * Show me all my systems which have a package installed
      * Show me all my systems which have a package installed
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportPackageSystemsResponse exportPackageSystems(org.openapis.openapi.models.operations.ExportPackageSystemsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportPackageSystemsResponse exportPackageSystems(org.openapis.openapi.models.operations.ExportPackageSystemsRequest request, org.openapis.openapi.models.operations.ExportPackageSystemsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExportPackageSystemsPathParams.class, baseUrl, "/api/patch/v1/export/packages/{package_name}/systems", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExportPackageSystemsRequest.class, baseUrl, "/api/patch/v1/export/packages/{package_name}/systems", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportPackageSystemsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportPackageSystemsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -446,10 +453,11 @@ public class SDK {
      * Show me all installed packages across my systems
      * Show me all installed packages across my systems
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportPackagesResponse exportPackages(org.openapis.openapi.models.operations.ExportPackagesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportPackagesResponse exportPackages(org.openapis.openapi.models.operations.ExportPackagesRequest request, org.openapis.openapi.models.operations.ExportPackagesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/patch/v1/export/packages");
         
@@ -457,14 +465,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportPackagesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportPackagesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -497,25 +505,26 @@ public class SDK {
      * Export applicable advisories for all my systems
      * Export applicable advisories for all my systems
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportSystemAdvisoriesResponse exportSystemAdvisories(org.openapis.openapi.models.operations.ExportSystemAdvisoriesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportSystemAdvisoriesResponse exportSystemAdvisories(org.openapis.openapi.models.operations.ExportSystemAdvisoriesRequest request, org.openapis.openapi.models.operations.ExportSystemAdvisoriesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExportSystemAdvisoriesPathParams.class, baseUrl, "/api/patch/v1/export/systems/{inventory_id}/advisories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExportSystemAdvisoriesRequest.class, baseUrl, "/api/patch/v1/export/systems/{inventory_id}/advisories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportSystemAdvisoriesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportSystemAdvisoriesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -548,25 +557,26 @@ public class SDK {
      * Show me details about a system packages by given inventory id
      * Show me details about a system packages by given inventory id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportSystemPackagesResponse exportSystemPackages(org.openapis.openapi.models.operations.ExportSystemPackagesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportSystemPackagesResponse exportSystemPackages(org.openapis.openapi.models.operations.ExportSystemPackagesRequest request, org.openapis.openapi.models.operations.ExportSystemPackagesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExportSystemPackagesPathParams.class, baseUrl, "/api/patch/v1/export/systems/{inventory_id}/packages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExportSystemPackagesRequest.class, baseUrl, "/api/patch/v1/export/systems/{inventory_id}/packages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportSystemPackagesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportSystemPackagesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -594,10 +604,11 @@ public class SDK {
      * Export systems for my account
      * Export systems for my account
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportSystemsResponse exportSystems(org.openapis.openapi.models.operations.ExportSystemsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportSystemsResponse exportSystems(org.openapis.openapi.models.operations.ExportSystemsRequest request, org.openapis.openapi.models.operations.ExportSystemsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/patch/v1/export/systems");
         
@@ -605,14 +616,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportSystemsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportSystemsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -645,10 +656,11 @@ public class SDK {
      * Show me all applicable advisories for all my systems
      * Show me all applicable advisories for all my systems
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListAdvisoriesResponse listAdvisories(org.openapis.openapi.models.operations.ListAdvisoriesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListAdvisoriesResponse listAdvisories(org.openapis.openapi.models.operations.ListAdvisoriesRequest request, org.openapis.openapi.models.operations.ListAdvisoriesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/patch/v1/advisories");
         
@@ -656,14 +668,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListAdvisoriesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListAdvisoriesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -691,25 +703,26 @@ public class SDK {
      * Show me systems on which the given advisory is applicable
      * Show me systems on which the given advisory is applicable
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListAdvisorySystemsResponse listAdvisorySystems(org.openapis.openapi.models.operations.ListAdvisorySystemsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListAdvisorySystemsResponse listAdvisorySystems(org.openapis.openapi.models.operations.ListAdvisorySystemsRequest request, org.openapis.openapi.models.operations.ListAdvisorySystemsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListAdvisorySystemsPathParams.class, baseUrl, "/api/patch/v1/advisories/{advisory_id}/systems", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListAdvisorySystemsRequest.class, baseUrl, "/api/patch/v1/advisories/{advisory_id}/systems", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListAdvisorySystemsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListAdvisorySystemsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -737,10 +750,11 @@ public class SDK {
      * Show me all installed packages across my systems
      * Show me all installed packages across my systems
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListPackagesResponse listPackages(org.openapis.openapi.models.operations.ListPackagesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListPackagesResponse listPackages(org.openapis.openapi.models.operations.ListPackagesRequest request, org.openapis.openapi.models.operations.ListPackagesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/patch/v1/packages/");
         
@@ -748,14 +762,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListPackagesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListPackagesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -783,25 +797,26 @@ public class SDK {
      * Show me advisories for a system by given inventory id
      * Show me advisories for a system by given inventory id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListSystemAdvisoriesResponse listSystemAdvisories(org.openapis.openapi.models.operations.ListSystemAdvisoriesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListSystemAdvisoriesResponse listSystemAdvisories(org.openapis.openapi.models.operations.ListSystemAdvisoriesRequest request, org.openapis.openapi.models.operations.ListSystemAdvisoriesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListSystemAdvisoriesPathParams.class, baseUrl, "/api/patch/v1/systems/{inventory_id}/advisories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListSystemAdvisoriesRequest.class, baseUrl, "/api/patch/v1/systems/{inventory_id}/advisories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListSystemAdvisoriesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListSystemAdvisoriesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -829,10 +844,11 @@ public class SDK {
      * Show me all my systems
      * Show me all my systems
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListSystemsResponse listSystems(org.openapis.openapi.models.operations.ListSystemsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListSystemsResponse listSystems(org.openapis.openapi.models.operations.ListSystemsRequest request, org.openapis.openapi.models.operations.ListSystemsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/patch/v1/systems");
         
@@ -840,14 +856,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListSystemsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListSystemsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -875,25 +891,26 @@ public class SDK {
      * Show me all my systems which have a package installed
      * Show me all my systems which have a package installed
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PackageSystemsResponse packageSystems(org.openapis.openapi.models.operations.PackageSystemsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PackageSystemsResponse packageSystems(org.openapis.openapi.models.operations.PackageSystemsRequest request, org.openapis.openapi.models.operations.PackageSystemsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackageSystemsPathParams.class, baseUrl, "/api/patch/v1/packages/{package_name}/systems", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackageSystemsRequest.class, baseUrl, "/api/patch/v1/packages/{package_name}/systems", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PackageSystemsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PackageSystemsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -921,25 +938,26 @@ public class SDK {
      * Show me all package versions installed on some system
      * Show me all package versions installed on some system
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PackageVersionsResponse packageVersions(org.openapis.openapi.models.operations.PackageVersionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PackageVersionsResponse packageVersions(org.openapis.openapi.models.operations.PackageVersionsRequest request, org.openapis.openapi.models.operations.PackageVersionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackageVersionsPathParams.class, baseUrl, "/api/patch/v1/packages/{package_name}/versions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackageVersionsRequest.class, baseUrl, "/api/patch/v1/packages/{package_name}/versions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PackageVersionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PackageVersionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -967,25 +985,26 @@ public class SDK {
      * Show me details about a system packages by given inventory id
      * Show me details about a system packages by given inventory id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SystemPackagesResponse systemPackages(org.openapis.openapi.models.operations.SystemPackagesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SystemPackagesResponse systemPackages(org.openapis.openapi.models.operations.SystemPackagesRequest request, org.openapis.openapi.models.operations.SystemPackagesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SystemPackagesPathParams.class, baseUrl, "/api/patch/v1/systems/{inventory_id}/packages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SystemPackagesRequest.class, baseUrl, "/api/patch/v1/systems/{inventory_id}/packages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SystemPackagesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SystemPackagesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1013,10 +1032,11 @@ public class SDK {
      * View advisory-system pairs for selected systems and advisories
      * View advisory-system pairs for selected systems and advisories
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ViewAdvisoriesSystemsResponse viewAdvisoriesSystems(org.openapis.openapi.models.operations.ViewAdvisoriesSystemsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ViewAdvisoriesSystemsResponse viewAdvisoriesSystems(org.openapis.openapi.models.shared.ControllersSystemsAdvisoriesRequest request, org.openapis.openapi.models.operations.ViewAdvisoriesSystemsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/patch/v1/views/advisories/systems");
         
@@ -1030,7 +1050,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1058,10 +1078,11 @@ public class SDK {
      * View system-advisory pairs for selected systems and advisories
      * View system-advisory pairs for selected systems and advisories
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ViewSystemsAdvisoriesResponse viewSystemsAdvisories(org.openapis.openapi.models.operations.ViewSystemsAdvisoriesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ViewSystemsAdvisoriesResponse viewSystemsAdvisories(org.openapis.openapi.models.shared.ControllersSystemsAdvisoriesRequest request, org.openapis.openapi.models.operations.ViewSystemsAdvisoriesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/patch/v1/views/systems/advisories");
         
@@ -1075,7 +1096,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

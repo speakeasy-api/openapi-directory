@@ -34,25 +34,26 @@ public class Customchannels {
     /**
      * Delete a specific custom channel from the host AdSense account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdsensehostCustomchannelsDeleteResponse adsensehostCustomchannelsDelete(org.openapis.openapi.models.operations.AdsensehostCustomchannelsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdsensehostCustomchannelsDeleteResponse adsensehostCustomchannelsDelete(org.openapis.openapi.models.operations.AdsensehostCustomchannelsDeleteRequest request, org.openapis.openapi.models.operations.AdsensehostCustomchannelsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsensehostCustomchannelsDeletePathParams.class, baseUrl, "/adclients/{adClientId}/customchannels/{customChannelId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsensehostCustomchannelsDeleteRequest.class, baseUrl, "/adclients/{adClientId}/customchannels/{customChannelId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsensehostCustomchannelsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsensehostCustomchannelsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class Customchannels {
     /**
      * Get a specific custom channel from the host AdSense account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdsensehostCustomchannelsGetResponse adsensehostCustomchannelsGet(org.openapis.openapi.models.operations.AdsensehostCustomchannelsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdsensehostCustomchannelsGetResponse adsensehostCustomchannelsGet(org.openapis.openapi.models.operations.AdsensehostCustomchannelsGetRequest request, org.openapis.openapi.models.operations.AdsensehostCustomchannelsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsensehostCustomchannelsGetPathParams.class, baseUrl, "/adclients/{adClientId}/customchannels/{customChannelId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsensehostCustomchannelsGetRequest.class, baseUrl, "/adclients/{adClientId}/customchannels/{customChannelId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsensehostCustomchannelsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsensehostCustomchannelsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,27 +126,28 @@ public class Customchannels {
     /**
      * Add a new custom channel to the host AdSense account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdsensehostCustomchannelsInsertResponse adsensehostCustomchannelsInsert(org.openapis.openapi.models.operations.AdsensehostCustomchannelsInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdsensehostCustomchannelsInsertResponse adsensehostCustomchannelsInsert(org.openapis.openapi.models.operations.AdsensehostCustomchannelsInsertRequest request, org.openapis.openapi.models.operations.AdsensehostCustomchannelsInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsensehostCustomchannelsInsertPathParams.class, baseUrl, "/adclients/{adClientId}/customchannels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsensehostCustomchannelsInsertRequest.class, baseUrl, "/adclients/{adClientId}/customchannels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "customChannel", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsensehostCustomchannelsInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsensehostCustomchannelsInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,25 +174,26 @@ public class Customchannels {
     /**
      * List all host custom channels in this AdSense account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdsensehostCustomchannelsListResponse adsensehostCustomchannelsList(org.openapis.openapi.models.operations.AdsensehostCustomchannelsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdsensehostCustomchannelsListResponse adsensehostCustomchannelsList(org.openapis.openapi.models.operations.AdsensehostCustomchannelsListRequest request, org.openapis.openapi.models.operations.AdsensehostCustomchannelsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsensehostCustomchannelsListPathParams.class, baseUrl, "/adclients/{adClientId}/customchannels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsensehostCustomchannelsListRequest.class, baseUrl, "/adclients/{adClientId}/customchannels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsensehostCustomchannelsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsensehostCustomchannelsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -216,27 +220,28 @@ public class Customchannels {
     /**
      * Update a custom channel in the host AdSense account. This method supports patch semantics.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdsensehostCustomchannelsPatchResponse adsensehostCustomchannelsPatch(org.openapis.openapi.models.operations.AdsensehostCustomchannelsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdsensehostCustomchannelsPatchResponse adsensehostCustomchannelsPatch(org.openapis.openapi.models.operations.AdsensehostCustomchannelsPatchRequest request, org.openapis.openapi.models.operations.AdsensehostCustomchannelsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsensehostCustomchannelsPatchPathParams.class, baseUrl, "/adclients/{adClientId}/customchannels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsensehostCustomchannelsPatchRequest.class, baseUrl, "/adclients/{adClientId}/customchannels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "customChannel", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsensehostCustomchannelsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsensehostCustomchannelsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -263,27 +268,28 @@ public class Customchannels {
     /**
      * Update a custom channel in the host AdSense account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdsensehostCustomchannelsUpdateResponse adsensehostCustomchannelsUpdate(org.openapis.openapi.models.operations.AdsensehostCustomchannelsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdsensehostCustomchannelsUpdateResponse adsensehostCustomchannelsUpdate(org.openapis.openapi.models.operations.AdsensehostCustomchannelsUpdateRequest request, org.openapis.openapi.models.operations.AdsensehostCustomchannelsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsensehostCustomchannelsUpdatePathParams.class, baseUrl, "/adclients/{adClientId}/customchannels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsensehostCustomchannelsUpdateRequest.class, baseUrl, "/adclients/{adClientId}/customchannels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "customChannel", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsensehostCustomchannelsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsensehostCustomchannelsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

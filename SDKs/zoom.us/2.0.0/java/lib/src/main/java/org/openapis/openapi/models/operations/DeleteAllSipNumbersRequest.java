@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAllSipNumbersRequest {
-    
-    public DeleteAllSipNumbersPathParams pathParams;
-    public DeleteAllSipNumbersRequest withPathParams(DeleteAllSipNumbersPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteAllSipNumbersSecurity security;
-    public DeleteAllSipNumbersRequest withSecurity(DeleteAllSipNumbersSecurity security) {
-        this.security = security;
+    /**
+     * Account ID of the sub account from which the numbers are to be deleted. This can be retrieved from [List sub accounts](https://marketplace.zoom.us/docs/api-reference/zoom-api/accounts/account) API.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public DeleteAllSipNumbersRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     

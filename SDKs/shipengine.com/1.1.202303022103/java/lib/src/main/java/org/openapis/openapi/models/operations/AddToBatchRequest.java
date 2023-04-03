@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddToBatchRequest {
-    
-    public AddToBatchPathParams pathParams;
-    public AddToBatchRequest withPathParams(AddToBatchPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.AddToBatchRequestBody addToBatchRequestBody;
+    public AddToBatchRequest withAddToBatchRequestBody(org.openapis.openapi.models.shared.AddToBatchRequestBody addToBatchRequestBody) {
+        this.addToBatchRequestBody = addToBatchRequestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AddToBatchRequestBody request;
-    public AddToBatchRequest withRequest(org.openapis.openapi.models.shared.AddToBatchRequestBody request) {
-        this.request = request;
+    /**
+     * Batch ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=batch_id")
+    public String batchId;
+    public AddToBatchRequest withBatchId(String batchId) {
+        this.batchId = batchId;
         return this;
     }
     

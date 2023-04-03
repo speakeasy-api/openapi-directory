@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCustomersIdFieldsFieldIdRequest {
-    
-    public DeleteCustomersIdFieldsFieldIdPathParams pathParams;
-    public DeleteCustomersIdFieldsFieldIdRequest withPathParams(DeleteCustomersIdFieldsFieldIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public DeleteCustomersIdFieldsFieldIdRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
         return this;
     }
     
+    /**
+     * Id of the Customer Additional Field
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=field_id")
+    public Integer fieldId;
+    public DeleteCustomersIdFieldsFieldIdRequest withFieldId(Integer fieldId) {
+        this.fieldId = fieldId;
+        return this;
+    }
     
-    public DeleteCustomersIdFieldsFieldIdQueryParams queryParams;
-    public DeleteCustomersIdFieldsFieldIdRequest withQueryParams(DeleteCustomersIdFieldsFieldIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Id of the Customer
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public DeleteCustomersIdFieldsFieldIdRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public DeleteCustomersIdFieldsFieldIdRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

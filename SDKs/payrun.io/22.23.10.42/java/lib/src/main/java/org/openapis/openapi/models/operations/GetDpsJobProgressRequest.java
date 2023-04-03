@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDpsJobProgressRequest {
-    
-    public GetDpsJobProgressPathParams pathParams;
-    public GetDpsJobProgressRequest withPathParams(GetDpsJobProgressPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The version of the api to target. Omit or set as &amp;apos;default&amp;apos; to target the current api version.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Version")
+    public String apiVersion;
+    public GetDpsJobProgressRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
+    /**
+     * The OAuth 1 authorization header. &amp;apos;Auto&amp;apos; enables auto complete.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public GetDpsJobProgressRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
+        return this;
+    }
     
-    public GetDpsJobProgressHeaders headers;
-    public GetDpsJobProgressRequest withHeaders(GetDpsJobProgressHeaders headers) {
-        this.headers = headers;
+    /**
+     * The job unique identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=JobId")
+    public String jobId;
+    public GetDpsJobProgressRequest withJobId(String jobId) {
+        this.jobId = jobId;
         return this;
     }
     

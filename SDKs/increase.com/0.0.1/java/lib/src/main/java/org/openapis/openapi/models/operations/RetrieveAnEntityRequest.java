@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveAnEntityRequest {
-    
-    public RetrieveAnEntityPathParams pathParams;
-    public RetrieveAnEntityRequest withPathParams(RetrieveAnEntityPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=entity_id")
+    public String entityId;
+    public RetrieveAnEntityRequest withEntityId(String entityId) {
+        this.entityId = entityId;
         return this;
     }
     

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateAlbumLogoRequest {
-    
-    public CreateAlbumLogoPathParams pathParams;
-    public CreateAlbumLogoRequest withPathParams(CreateAlbumLogoPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the album.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=album_id")
+    public Double albumId;
+    public CreateAlbumLogoRequest withAlbumId(Double albumId) {
+        this.albumId = albumId;
         return this;
     }
     
-    
-    public CreateAlbumLogoSecurity security;
-    public CreateAlbumLogoRequest withSecurity(CreateAlbumLogoSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public CreateAlbumLogoRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

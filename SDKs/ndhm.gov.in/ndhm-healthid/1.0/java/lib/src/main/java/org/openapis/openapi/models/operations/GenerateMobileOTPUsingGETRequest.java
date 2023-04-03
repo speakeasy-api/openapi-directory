@@ -4,20 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GenerateMobileOTPUsingGETRequest {
-    
-    public GenerateMobileOTPUsingGETHeaders headers;
-    public GenerateMobileOTPUsingGETRequest withHeaders(GenerateMobileOTPUsingGETHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public GenerateMobileOTPUsingGETRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
-    
-    public GenerateMobileOTPUsingGETSecurity security;
-    public GenerateMobileOTPUsingGETRequest withSecurity(GenerateMobileOTPUsingGETSecurity security) {
-        this.security = security;
+    /**
+     * Auth Token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Token")
+    public String xToken;
+    public GenerateMobileOTPUsingGETRequest withXToken(String xToken) {
+        this.xToken = xToken;
         return this;
     }
     

@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreatePayrollCalendarRequest {
-    
-    public CreatePayrollCalendarHeaders headers;
-    public CreatePayrollCalendarRequest withHeaders(CreatePayrollCalendarHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PayrollCalendarInput[] request;
-    public CreatePayrollCalendarRequest withRequest(org.openapis.openapi.models.shared.PayrollCalendarInput[] request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PayrollCalendarInput[] requestBody;
+    public CreatePayrollCalendarRequest withRequestBody(org.openapis.openapi.models.shared.PayrollCalendarInput[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreatePayrollCalendarSecurity security;
-    public CreatePayrollCalendarRequest withSecurity(CreatePayrollCalendarSecurity security) {
-        this.security = security;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
+    public String xeroTenantId;
+    public CreatePayrollCalendarRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     

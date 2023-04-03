@@ -4,20 +4,17 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGroupDetailsRequest {
-    
-    public GetGroupDetailsPathParams pathParams;
-    public GetGroupDetailsRequest withPathParams(GetGroupDetailsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetGroupDetailsSecurity security;
-    public GetGroupDetailsRequest withSecurity(GetGroupDetailsSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of a Flat group
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group")
+    public String group;
+    public GetGroupDetailsRequest withGroup(String group) {
+        this.group = group;
         return this;
     }
     

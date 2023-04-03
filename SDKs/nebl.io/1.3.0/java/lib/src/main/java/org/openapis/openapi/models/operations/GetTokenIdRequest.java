@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTokenIdRequest {
-    
-    public GetTokenIdPathParams pathParams;
-    public GetTokenIdRequest withPathParams(GetTokenIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Token symbol
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tokensymbol")
+    public String tokensymbol;
+    public GetTokenIdRequest withTokensymbol(String tokensymbol) {
+        this.tokensymbol = tokensymbol;
         return this;
     }
     

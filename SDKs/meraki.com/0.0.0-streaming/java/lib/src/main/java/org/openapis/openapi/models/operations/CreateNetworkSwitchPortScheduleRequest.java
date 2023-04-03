@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateNetworkSwitchPortScheduleRequest {
-    
-    public CreateNetworkSwitchPortSchedulePathParams pathParams;
-    public CreateNetworkSwitchPortScheduleRequest withPathParams(CreateNetworkSwitchPortSchedulePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateNetworkSwitchPortScheduleRequestBody requestBody;
+    public CreateNetworkSwitchPortScheduleRequest withRequestBody(CreateNetworkSwitchPortScheduleRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateNetworkSwitchPortScheduleRequestBody request;
-    public CreateNetworkSwitchPortScheduleRequest withRequest(CreateNetworkSwitchPortScheduleRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public CreateNetworkSwitchPortScheduleRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

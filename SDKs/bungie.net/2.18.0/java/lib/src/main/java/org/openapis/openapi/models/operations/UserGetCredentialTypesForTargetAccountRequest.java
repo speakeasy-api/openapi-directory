@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserGetCredentialTypesForTargetAccountRequest {
-    
-    public UserGetCredentialTypesForTargetAccountPathParams pathParams;
-    public UserGetCredentialTypesForTargetAccountRequest withPathParams(UserGetCredentialTypesForTargetAccountPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The user's membership id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipId")
+    public Long membershipId;
+    public UserGetCredentialTypesForTargetAccountRequest withMembershipId(Long membershipId) {
+        this.membershipId = membershipId;
         return this;
     }
     

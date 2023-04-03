@@ -33,19 +33,20 @@ public class General {
     /**
      * Infer the likely type of a proper noun (personal name, brand name, place name etc.)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.NameTypeResponse nameType(org.openapis.openapi.models.operations.NameTypeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.NameTypeResponse nameType(org.openapis.openapi.models.operations.NameTypeRequest request, org.openapis.openapi.models.operations.NameTypeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NameTypePathParams.class, baseUrl, "/api2/json/nameType/{properNoun}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NameTypeRequest.class, baseUrl, "/api2/json/nameType/{properNoun}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -74,10 +75,11 @@ public class General {
     /**
      * Infer the likely common type of up to 100 proper nouns (personal name, brand name, place name etc.)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.NameTypeBatchResponse nameTypeBatch(org.openapis.openapi.models.operations.NameTypeBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.NameTypeBatchResponse nameTypeBatch(org.openapis.openapi.models.shared.BatchNameIn request, org.openapis.openapi.models.operations.NameTypeBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/nameTypeBatch");
         
@@ -88,7 +90,7 @@ public class General {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -117,19 +119,20 @@ public class General {
     /**
      * Infer the likely type of a proper noun (personal name, brand name, place name etc.)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.NameTypeGeoResponse nameTypeGeo(org.openapis.openapi.models.operations.NameTypeGeoRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.NameTypeGeoResponse nameTypeGeo(org.openapis.openapi.models.operations.NameTypeGeoRequest request, org.openapis.openapi.models.operations.NameTypeGeoSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NameTypeGeoPathParams.class, baseUrl, "/api2/json/nameTypeGeo/{properNoun}/{countryIso2}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NameTypeGeoRequest.class, baseUrl, "/api2/json/nameTypeGeo/{properNoun}/{countryIso2}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -158,10 +161,11 @@ public class General {
     /**
      * Infer the likely common type of up to 100 proper nouns (personal name, brand name, place name etc.)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.NameTypeGeoBatchResponse nameTypeGeoBatch(org.openapis.openapi.models.operations.NameTypeGeoBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.NameTypeGeoBatchResponse nameTypeGeoBatch(org.openapis.openapi.models.shared.BatchNameGeoIn request, org.openapis.openapi.models.operations.NameTypeGeoBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/nameTypeGeoBatch");
         
@@ -172,7 +176,7 @@ public class General {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

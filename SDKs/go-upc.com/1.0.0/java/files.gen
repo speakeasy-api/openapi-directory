@@ -30,13 +30,11 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/GetProductInfoPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetProductInfoRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetProductInfo200ApplicationJSONCodeTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetProductInfo200ApplicationJSONProduct.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetProductInfo200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetProductInfoResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Error.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKeyAuth.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

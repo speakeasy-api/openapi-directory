@@ -6,8 +6,6 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GETAcceptReservedNodeExchangeActionEnum;
 import org.openapis.openapi.models.operations.GETAcceptReservedNodeExchangeVersionEnum;
-import org.openapis.openapi.models.operations.GETAcceptReservedNodeExchangeQueryParams;
-import org.openapis.openapi.models.operations.GETAcceptReservedNodeExchangeHeaders;
 import org.openapis.openapi.models.operations.GETAcceptReservedNodeExchangeRequest;
 import org.openapis.openapi.models.operations.GETAcceptReservedNodeExchangeResponse;
 
@@ -16,29 +14,23 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GETAcceptReservedNodeExchangeRequest req = new GETAcceptReservedNodeExchangeRequest() {{
-                queryParams = new GETAcceptReservedNodeExchangeQueryParams() {{
-                    action = "AcceptReservedNodeExchange";
-                    reservedNodeId = "corrupti";
-                    targetReservedNodeOfferingId = "provident";
-                    version = "2012-12-01";
-                }};
-                headers = new GETAcceptReservedNodeExchangeHeaders() {{
-                    xAmzAlgorithm = "distinctio";
-                    xAmzContentSha256 = "quibusdam";
-                    xAmzCredential = "unde";
-                    xAmzDate = "nulla";
-                    xAmzSecurityToken = "corrupti";
-                    xAmzSignature = "illum";
-                    xAmzSignedHeaders = "vel";
-                }};
-            }};            
+                action = "AcceptReservedNodeExchange";
+                reservedNodeId = "corrupti";
+                targetReservedNodeOfferingId = "provident";
+                version = "2012-12-01";
+                xAmzAlgorithm = "distinctio";
+                xAmzContentSha256 = "quibusdam";
+                xAmzCredential = "unde";
+                xAmzDate = "nulla";
+                xAmzSecurityToken = "corrupti";
+                xAmzSignature = "illum";
+                xAmzSignedHeaders = "vel";
+            }}            
 
             GETAcceptReservedNodeExchangeResponse res = sdk.getAcceptReservedNodeExchange(req);
 

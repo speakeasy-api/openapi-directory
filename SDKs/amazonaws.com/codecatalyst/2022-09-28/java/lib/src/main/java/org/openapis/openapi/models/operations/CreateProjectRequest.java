@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateProjectRequest {
-    
-    public CreateProjectPathParams pathParams;
-    public CreateProjectRequest withPathParams(CreateProjectPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateProjectRequestBody requestBody;
+    public CreateProjectRequest withRequestBody(CreateProjectRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateProjectRequestBody request;
-    public CreateProjectRequest withRequest(CreateProjectRequestBody request) {
-        this.request = request;
+    /**
+     * The name of the space.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceName")
+    public String spaceName;
+    public CreateProjectRequest withSpaceName(String spaceName) {
+        this.spaceName = spaceName;
         return this;
     }
     

@@ -17,9 +17,7 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.DescribeServicesQueryParams;
 import org.openapis.openapi.models.operations.DescribeServicesXAmzTargetEnum;
-import org.openapis.openapi.models.operations.DescribeServicesHeaders;
 import org.openapis.openapi.models.operations.DescribeServicesRequest;
 import org.openapis.openapi.models.operations.DescribeServicesResponse;
 import org.openapis.openapi.models.shared.DescribeServicesRequest;
@@ -29,34 +27,28 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             DescribeServicesRequest req = new DescribeServicesRequest() {{
-                queryParams = new DescribeServicesQueryParams() {{
-                    maxResults = "corrupti";
-                    nextToken = "provident";
+                describeServicesRequest = new DescribeServicesRequest() {{
+                    formatVersion = "corrupti";
+                    maxResults = 592845;
+                    nextToken = "distinctio";
+                    serviceCode = "quibusdam";
                 }};
-                headers = new DescribeServicesHeaders() {{
-                    xAmzAlgorithm = "distinctio";
-                    xAmzContentSha256 = "quibusdam";
-                    xAmzCredential = "unde";
-                    xAmzDate = "nulla";
-                    xAmzSecurityToken = "corrupti";
-                    xAmzSignature = "illum";
-                    xAmzSignedHeaders = "vel";
-                    xAmzTarget = "AWSPriceListService.DescribeServices";
-                }};
-                request = new DescribeServicesRequest() {{
-                    formatVersion = "error";
-                    maxResults = 645894;
-                    nextToken = "suscipit";
-                    serviceCode = "iure";
-                }};
-            }};            
+                maxResults = "unde";
+                nextToken = "nulla";
+                xAmzAlgorithm = "corrupti";
+                xAmzContentSha256 = "illum";
+                xAmzCredential = "vel";
+                xAmzDate = "error";
+                xAmzSecurityToken = "deserunt";
+                xAmzSignature = "suscipit";
+                xAmzSignedHeaders = "iure";
+                xAmzTarget = "AWSPriceListService.DescribeServices";
+            }}            
 
             DescribeServicesResponse res = sdk.describeServices(req);
 
@@ -70,7 +62,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AssignMsisdnRequest {
-    
-    public AssignMsisdnQueryParams queryParams;
-    public AssignMsisdnRequest withQueryParams(AssignMsisdnQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Details of an assign request.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ItvAssignMsisdnRequest request;
-    public AssignMsisdnRequest withRequest(org.openapis.openapi.models.shared.ItvAssignMsisdnRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ItvAssignMsisdnRequest itvAssignMsisdnRequest;
+    public AssignMsisdnRequest withItvAssignMsisdnRequest(org.openapis.openapi.models.shared.ItvAssignMsisdnRequest itvAssignMsisdnRequest) {
+        this.itvAssignMsisdnRequest = itvAssignMsisdnRequest;
         return this;
     }
     
-    
-    public AssignMsisdnSecurity security;
-    public AssignMsisdnRequest withSecurity(AssignMsisdnSecurity security) {
-        this.security = security;
+    /**
+     * Language code for the preferred language to be returned in the response.
+     * 
+     * Parameter value is case-insensitive and should be
+     *   - a valid 2 letter language code without region such as en, de
+     *   - or with region such as en_us, en_au
+     * 
+     * If undefined then defaults to 'en', unless the server has been configured
+     * with a custom default.
+     * 
+     * See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public String lang;
+    public AssignMsisdnRequest withLang(String lang) {
+        this.lang = lang;
         return this;
     }
     

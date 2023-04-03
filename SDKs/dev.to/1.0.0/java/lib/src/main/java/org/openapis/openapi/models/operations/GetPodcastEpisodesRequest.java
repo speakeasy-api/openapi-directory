@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPodcastEpisodesRequest {
+    /**
+     * Pagination page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetPodcastEpisodesRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetPodcastEpisodesQueryParams queryParams;
-    public GetPodcastEpisodesRequest withQueryParams(GetPodcastEpisodesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page size (the number of items to return per page). The default maximum value can be overridden by "API_PER_PAGE_MAX" environment variable.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetPodcastEpisodesRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Using this parameter will retrieve episodes belonging to a specific podcast.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
+    public String username;
+    public GetPodcastEpisodesRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

@@ -4,20 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UsersListGpgKeysForUserRequest {
-    
-    public UsersListGpgKeysForUserPathParams pathParams;
-    public UsersListGpgKeysForUserRequest withPathParams(UsersListGpgKeysForUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public UsersListGpgKeysForUserRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public UsersListGpgKeysForUserRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
     
-    public UsersListGpgKeysForUserQueryParams queryParams;
-    public UsersListGpgKeysForUserRequest withQueryParams(UsersListGpgKeysForUserQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public UsersListGpgKeysForUserRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

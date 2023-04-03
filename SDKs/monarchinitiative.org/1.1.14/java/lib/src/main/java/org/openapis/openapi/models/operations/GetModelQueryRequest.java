@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetModelQueryRequest {
+    /**
+     * string to search for in contributor of model
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contributor")
+    public String contributor;
+    public GetModelQueryRequest withContributor(String contributor) {
+        this.contributor = contributor;
+        return this;
+    }
     
-    public GetModelQueryQueryParams queryParams;
-    public GetModelQueryRequest withQueryParams(GetModelQueryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * string to search for in title of model
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=title")
+    public String title;
+    public GetModelQueryRequest withTitle(String title) {
+        this.title = title;
         return this;
     }
     

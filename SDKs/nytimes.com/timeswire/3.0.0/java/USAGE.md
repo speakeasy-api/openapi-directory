@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.GetContentJsonQueryParams;
 import org.openapis.openapi.models.operations.GetContentJsonRequest;
 import org.openapis.openapi.models.operations.GetContentJsonResponse;
 
@@ -13,17 +12,13 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    apikey = new SchemeApikey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    apikey = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GetContentJsonRequest req = new GetContentJsonRequest() {{
-                queryParams = new GetContentJsonQueryParams() {{
-                    url = "corrupti";
-                }};
-            }};            
+                url = "corrupti";
+            }}            
 
             GetContentJsonResponse res = sdk.getContentJson(req);
 

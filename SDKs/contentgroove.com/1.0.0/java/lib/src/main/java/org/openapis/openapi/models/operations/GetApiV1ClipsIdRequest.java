@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1ClipsIdRequest {
-    
-    public GetApiV1ClipsIdPathParams pathParams;
-    public GetApiV1ClipsIdRequest withPathParams(GetApiV1ClipsIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetApiV1ClipsIdSecurity security;
-    public GetApiV1ClipsIdRequest withSecurity(GetApiV1ClipsIdSecurity security) {
-        this.security = security;
+    /**
+     * The id of the clip to be retrieved
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetApiV1ClipsIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

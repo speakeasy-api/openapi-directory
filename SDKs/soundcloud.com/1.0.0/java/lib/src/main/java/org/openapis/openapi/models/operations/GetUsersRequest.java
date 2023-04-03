@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersRequest {
-    
-    public GetUsersQueryParams queryParams;
-    public GetUsersRequest withQueryParams(GetUsersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A comma separated list of track ids to filter on
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids")
+    public String ids;
+    public GetUsersRequest withIds(String ids) {
+        this.ids = ids;
         return this;
     }
     
+    /**
+     * Number of results to return in the collection.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetUsersRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetUsersSecurity security;
-    public GetUsersRequest withSecurity(GetUsersSecurity security) {
-        this.security = security;
+    /**
+     * Returns paginated collection of items (recommended, returning a list without pagination is deprecated and should not be used)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=linked_partitioning")
+    public Boolean linkedPartitioning;
+    public GetUsersRequest withLinkedPartitioning(Boolean linkedPartitioning) {
+        this.linkedPartitioning = linkedPartitioning;
+        return this;
+    }
+    
+    /**
+     * Offset of first result. Deprecated, use `linked_partitioning` instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetUsersRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public GetUsersRequest withQ(String q) {
+        this.q = q;
         return this;
     }
     

@@ -39,7 +39,7 @@ public class Task {
      */
     public org.openapis.openapi.models.operations.TaskPriorityListResponse taskPriorityList(org.openapis.openapi.models.operations.TaskPriorityListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TaskPriorityListPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/defaultTaskPriority", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TaskPriorityListRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/defaultTaskPriority", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -158,7 +158,7 @@ public class Task {
      */
     public org.openapis.openapi.models.operations.GetCustomTaskTypesOfWgResponse getCustomTaskTypesOfWg(org.openapis.openapi.models.operations.GetCustomTaskTypesOfWgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomTaskTypesOfWgPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/customTaskTypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomTaskTypesOfWgRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/customTaskTypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -277,7 +277,7 @@ public class Task {
      */
     public org.openapis.openapi.models.operations.GetDefaultTaskStatusListResponse getDefaultTaskStatusList(org.openapis.openapi.models.operations.GetDefaultTaskStatusListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDefaultTaskStatusListPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/defaultTaskStatus", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDefaultTaskStatusListRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/defaultTaskStatus", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -396,7 +396,7 @@ public class Task {
      */
     public org.openapis.openapi.models.operations.GetTaskListOfProjectResponse getTaskListOfProject(org.openapis.openapi.models.operations.GetTaskListOfProjectRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTaskListOfProjectPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/tasks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTaskListOfProjectRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/tasks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -515,7 +515,7 @@ public class Task {
      */
     public org.openapis.openapi.models.operations.GetTaskListOfWorkgroupResponse getTaskListOfWorkgroup(org.openapis.openapi.models.operations.GetTaskListOfWorkgroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTaskListOfWorkgroupPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/tasks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTaskListOfWorkgroupRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/tasks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -634,7 +634,7 @@ public class Task {
      */
     public org.openapis.openapi.models.operations.GetTaskOfProjectResponse getTaskOfProject(org.openapis.openapi.models.operations.GetTaskOfProjectRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTaskOfProjectPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/tasks/{task_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTaskOfProjectRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/tasks/{task_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -753,7 +753,7 @@ public class Task {
      */
     public org.openapis.openapi.models.operations.GetTaskOfWorkgroupResponse getTaskOfWorkgroup(org.openapis.openapi.models.operations.GetTaskOfWorkgroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTaskOfWorkgroupPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/tasks/{task_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTaskOfWorkgroupRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/tasks/{task_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -872,7 +872,7 @@ public class Task {
      */
     public org.openapis.openapi.models.operations.GetTaskTypesOfWorkgroupResponse getTaskTypesOfWorkgroup(org.openapis.openapi.models.operations.GetTaskTypesOfWorkgroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTaskTypesOfWorkgroupPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/taskTypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTaskTypesOfWorkgroupRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/taskTypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -991,7 +991,7 @@ public class Task {
      */
     public org.openapis.openapi.models.operations.GetWgTaskStatusListOfWorkgroupResponse getWgTaskStatusListOfWorkgroup(org.openapis.openapi.models.operations.GetWgTaskStatusListOfWorkgroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWgTaskStatusListOfWorkgroupPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/customTaskStatus", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWgTaskStatusListOfWorkgroupRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/customTaskStatus", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1110,12 +1110,12 @@ public class Task {
      */
     public org.openapis.openapi.models.operations.PostTaskForProjectJsonResponse postTaskForProjectJson(org.openapis.openapi.models.operations.PostTaskForProjectJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTaskForProjectJsonPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/tasks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTaskForProjectJsonRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/tasks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "taskPersistVO", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1231,12 +1231,12 @@ public class Task {
      */
     public org.openapis.openapi.models.operations.PostTaskForProjectRawResponse postTaskForProjectRaw(org.openapis.openapi.models.operations.PostTaskForProjectRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTaskForProjectRawPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/tasks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTaskForProjectRawRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/tasks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
         

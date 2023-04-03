@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateProjectQueryParams;
-import org.openapis.openapi.models.operations.CreateProjectHeaders;
 import org.openapis.openapi.models.operations.CreateProjectRequestBody;
 import org.openapis.openapi.models.operations.CreateProjectRequest;
 import org.openapis.openapi.models.operations.CreateProjectResponse;
@@ -28,31 +26,25 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateProjectRequest req = new CreateProjectRequest() {{
-                queryParams = new CreateProjectQueryParams() {{
-                    name = "corrupti";
-                    region = "provident";
-                    snapshotId = "distinctio";
+                requestBody = new CreateProjectRequestBody() {{
+                    contents = "corrupti";
                 }};
-                headers = new CreateProjectHeaders() {{
-                    xAmzAlgorithm = "quibusdam";
-                    xAmzContentSha256 = "unde";
-                    xAmzCredential = "nulla";
-                    xAmzDate = "corrupti";
-                    xAmzSecurityToken = "illum";
-                    xAmzSignature = "vel";
-                    xAmzSignedHeaders = "error";
-                }};
-                request = new CreateProjectRequestBody() {{
-                    contents = "deserunt";
-                }};
-            }};            
+                xAmzAlgorithm = "provident";
+                xAmzContentSha256 = "distinctio";
+                xAmzCredential = "quibusdam";
+                xAmzDate = "unde";
+                xAmzSecurityToken = "nulla";
+                xAmzSignature = "corrupti";
+                xAmzSignedHeaders = "illum";
+                name = "vel";
+                region = "error";
+                snapshotId = "deserunt";
+            }}            
 
             CreateProjectResponse res = sdk.createProject(req);
 
@@ -66,7 +58,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

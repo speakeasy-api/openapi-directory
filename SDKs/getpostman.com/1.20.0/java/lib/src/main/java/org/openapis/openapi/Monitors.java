@@ -100,7 +100,7 @@ public class Monitors {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateMonitorResponse createMonitor(org.openapis.openapi.models.operations.CreateMonitorRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateMonitorResponse createMonitor(org.openapis.openapi.models.operations.CreateMonitorRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/monitors");
         
@@ -153,7 +153,7 @@ public class Monitors {
      */
     public org.openapis.openapi.models.operations.DeleteMonitorResponse deleteMonitor(org.openapis.openapi.models.operations.DeleteMonitorRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteMonitorPathParams.class, baseUrl, "/monitors/{monitor_uid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteMonitorRequest.class, baseUrl, "/monitors/{monitor_uid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -202,7 +202,7 @@ public class Monitors {
      */
     public org.openapis.openapi.models.operations.RunAMonitorResponse runAMonitor(org.openapis.openapi.models.operations.RunAMonitorRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunAMonitorPathParams.class, baseUrl, "/monitors/{monitor_uid}/run", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunAMonitorRequest.class, baseUrl, "/monitors/{monitor_uid}/run", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -243,7 +243,7 @@ public class Monitors {
      */
     public org.openapis.openapi.models.operations.SingleMonitorResponse singleMonitor(org.openapis.openapi.models.operations.SingleMonitorRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SingleMonitorPathParams.class, baseUrl, "/monitors/{monitor_uid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SingleMonitorRequest.class, baseUrl, "/monitors/{monitor_uid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -308,12 +308,12 @@ public class Monitors {
      */
     public org.openapis.openapi.models.operations.UpdateMonitorResponse updateMonitor(org.openapis.openapi.models.operations.UpdateMonitorRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateMonitorPathParams.class, baseUrl, "/monitors/{monitor_uid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateMonitorRequest.class, baseUrl, "/monitors/{monitor_uid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

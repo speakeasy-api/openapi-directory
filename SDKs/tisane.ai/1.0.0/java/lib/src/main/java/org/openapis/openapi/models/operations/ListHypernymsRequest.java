@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListHypernymsRequest {
-    
-    public ListHypernymsQueryParams queryParams;
-    public ListHypernymsRequest withQueryParams(ListHypernymsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * {{apiKeyDescription}}
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Ocp-Apim-Subscription-Key")
+    public String ocpApimSubscriptionKey;
+    public ListHypernymsRequest withOcpApimSubscriptionKey(String ocpApimSubscriptionKey) {
+        this.ocpApimSubscriptionKey = ocpApimSubscriptionKey;
         return this;
     }
     
+    /**
+     * (Required) a numeric identifier of the family
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=family")
+    public String family;
+    public ListHypernymsRequest withFamily(String family) {
+        this.family = family;
+        return this;
+    }
     
-    public ListHypernymsHeaders headers;
-    public ListHypernymsRequest withHeaders(ListHypernymsHeaders headers) {
-        this.headers = headers;
+    /**
+     * (Required) maximum distance from the family
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxLevel")
+    public String maxLevel;
+    public ListHypernymsRequest withMaxLevel(String maxLevel) {
+        this.maxLevel = maxLevel;
         return this;
     }
     

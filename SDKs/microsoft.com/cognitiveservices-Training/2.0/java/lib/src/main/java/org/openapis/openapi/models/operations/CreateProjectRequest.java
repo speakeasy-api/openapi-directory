@@ -4,20 +4,43 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateProjectRequest {
-    
-    public CreateProjectQueryParams queryParams;
-    public CreateProjectRequest withQueryParams(CreateProjectQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
+    public String trainingKey;
+    public CreateProjectRequest withTrainingKey(String trainingKey) {
+        this.trainingKey = trainingKey;
         return this;
     }
     
+    /**
+     * The description of the project
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
+    public String description;
+    public CreateProjectRequest withDescription(String description) {
+        this.description = description;
+        return this;
+    }
     
-    public CreateProjectHeaders headers;
-    public CreateProjectRequest withHeaders(CreateProjectHeaders headers) {
-        this.headers = headers;
+    /**
+     * The id of the domain to use for this project. Defaults to General
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domainId")
+    public String domainId;
+    public CreateProjectRequest withDomainId(String domainId) {
+        this.domainId = domainId;
+        return this;
+    }
+    
+    /**
+     * Name of the project
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public CreateProjectRequest withName(String name) {
+        this.name = name;
         return this;
     }
     

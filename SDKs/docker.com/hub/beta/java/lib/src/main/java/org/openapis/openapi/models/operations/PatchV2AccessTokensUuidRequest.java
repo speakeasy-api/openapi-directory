@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchV2AccessTokensUuidRequest {
-    
-    public PatchV2AccessTokensUuidPathParams pathParams;
-    public PatchV2AccessTokensUuidRequest withPathParams(PatchV2AccessTokensUuidPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.PatchAccessTokenRequest patchAccessTokenRequest;
+    public PatchV2AccessTokensUuidRequest withPatchAccessTokenRequest(org.openapis.openapi.models.shared.PatchAccessTokenRequest patchAccessTokenRequest) {
+        this.patchAccessTokenRequest = patchAccessTokenRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PatchAccessTokenRequest request;
-    public PatchV2AccessTokensUuidRequest withRequest(org.openapis.openapi.models.shared.PatchAccessTokenRequest request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=uuid")
+    public String uuid;
+    public PatchV2AccessTokensUuidRequest withUuid(String uuid) {
+        this.uuid = uuid;
         return this;
     }
     

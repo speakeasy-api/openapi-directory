@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EstimationApiUpdateJsonRequest {
-    
-    public EstimationApiUpdateJsonHeaders headers;
-    public EstimationApiUpdateJsonRequest withHeaders(EstimationApiUpdateJsonHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.EstimationUpdateApiModel estimationUpdateApiModel;
+    public EstimationApiUpdateJsonRequest withEstimationUpdateApiModel(org.openapis.openapi.models.shared.EstimationUpdateApiModel estimationUpdateApiModel) {
+        this.estimationUpdateApiModel = estimationUpdateApiModel;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.EstimationUpdateApiModel request;
-    public EstimationApiUpdateJsonRequest withRequest(org.openapis.openapi.models.shared.EstimationUpdateApiModel request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
+    public String xAuthKey;
+    public EstimationApiUpdateJsonRequest withXAuthKey(String xAuthKey) {
+        this.xAuthKey = xAuthKey;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
+    public String xAuthSecret;
+    public EstimationApiUpdateJsonRequest withXAuthSecret(String xAuthSecret) {
+        this.xAuthSecret = xAuthSecret;
         return this;
     }
     

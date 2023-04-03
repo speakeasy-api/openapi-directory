@@ -4,20 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisconnectPlayerRequest {
-    
-    public DisconnectPlayerPathParams pathParams;
-    public DisconnectPlayerRequest withPathParams(DisconnectPlayerPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the game.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=GameName")
+    public String gameName;
+    public DisconnectPlayerRequest withGameName(String gameName) {
+        this.gameName = gameName;
         return this;
     }
     
+    /**
+     * The unique identifier representing a player.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=PlayerId")
+    public String playerId;
+    public DisconnectPlayerRequest withPlayerId(String playerId) {
+        this.playerId = playerId;
+        return this;
+    }
     
-    public DisconnectPlayerHeaders headers;
-    public DisconnectPlayerRequest withHeaders(DisconnectPlayerHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name of the stage.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=StageName")
+    public String stageName;
+    public DisconnectPlayerRequest withStageName(String stageName) {
+        this.stageName = stageName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DisconnectPlayerRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DisconnectPlayerRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DisconnectPlayerRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DisconnectPlayerRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DisconnectPlayerRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DisconnectPlayerRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DisconnectPlayerRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

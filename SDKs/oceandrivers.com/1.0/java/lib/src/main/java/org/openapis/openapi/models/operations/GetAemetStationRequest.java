@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAemetStationRequest {
+    /**
+     * Period of time to get the data. Options: lastdata lastday
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=period")
+    public String period;
+    public GetAemetStationRequest withPeriod(String period) {
+        this.period = period;
+        return this;
+    }
     
-    public GetAemetStationPathParams pathParams;
-    public GetAemetStationRequest withPathParams(GetAemetStationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * station name currently: aeropuertopalma | caboblanco 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=stationName")
+    public String stationName;
+    public GetAemetStationRequest withStationName(String stationName) {
+        this.stationName = stationName;
         return this;
     }
     

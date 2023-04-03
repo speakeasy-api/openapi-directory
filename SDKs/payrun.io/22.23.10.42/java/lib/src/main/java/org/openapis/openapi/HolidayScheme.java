@@ -39,13 +39,13 @@ public class HolidayScheme {
      */
     public org.openapis.openapi.models.operations.DeleteHolidaySchemeResponse deleteHolidayScheme(org.openapis.openapi.models.operations.DeleteHolidaySchemeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteHolidaySchemePathParams.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteHolidaySchemeRequest.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -88,13 +88,13 @@ public class HolidayScheme {
      */
     public org.openapis.openapi.models.operations.DeleteHolidaySchemeRevisionResponse deleteHolidaySchemeRevision(org.openapis.openapi.models.operations.DeleteHolidaySchemeRevisionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteHolidaySchemeRevisionPathParams.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/{EffectiveDate}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteHolidaySchemeRevisionRequest.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/{EffectiveDate}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -137,13 +137,13 @@ public class HolidayScheme {
      */
     public org.openapis.openapi.models.operations.DeleteHolidaySchemeRevisionByNumberResponse deleteHolidaySchemeRevisionByNumber(org.openapis.openapi.models.operations.DeleteHolidaySchemeRevisionByNumberRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteHolidaySchemeRevisionByNumberPathParams.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Revision/{RevisionNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteHolidaySchemeRevisionByNumberRequest.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Revision/{RevisionNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -186,13 +186,13 @@ public class HolidayScheme {
      */
     public org.openapis.openapi.models.operations.DeleteHolidaySchemeTagResponse deleteHolidaySchemeTag(org.openapis.openapi.models.operations.DeleteHolidaySchemeTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteHolidaySchemeTagPathParams.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteHolidaySchemeTagRequest.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -235,13 +235,13 @@ public class HolidayScheme {
      */
     public org.openapis.openapi.models.operations.GetAllHolidaySchemeTagsResponse getAllHolidaySchemeTags(org.openapis.openapi.models.operations.GetAllHolidaySchemeTagsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllHolidaySchemeTagsPathParams.class, baseUrl, "/Employer/{EmployerId}/HolidaySchemes/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllHolidaySchemeTagsRequest.class, baseUrl, "/Employer/{EmployerId}/HolidaySchemes/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -290,13 +290,13 @@ public class HolidayScheme {
      */
     public org.openapis.openapi.models.operations.GetHolidaySchemeByEffectiveDateResponse getHolidaySchemeByEffectiveDate(org.openapis.openapi.models.operations.GetHolidaySchemeByEffectiveDateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetHolidaySchemeByEffectiveDatePathParams.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/{EffectiveDate}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetHolidaySchemeByEffectiveDateRequest.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/{EffectiveDate}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -345,13 +345,13 @@ public class HolidayScheme {
      */
     public org.openapis.openapi.models.operations.GetHolidaySchemeFromEmployerResponse getHolidaySchemeFromEmployer(org.openapis.openapi.models.operations.GetHolidaySchemeFromEmployerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetHolidaySchemeFromEmployerPathParams.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetHolidaySchemeFromEmployerRequest.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -400,13 +400,13 @@ public class HolidayScheme {
      */
     public org.openapis.openapi.models.operations.GetHolidaySchemeRevisionByNumberResponse getHolidaySchemeRevisionByNumber(org.openapis.openapi.models.operations.GetHolidaySchemeRevisionByNumberRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetHolidaySchemeRevisionByNumberPathParams.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Revision/{RevisionNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetHolidaySchemeRevisionByNumberRequest.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Revision/{RevisionNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -455,13 +455,13 @@ public class HolidayScheme {
      */
     public org.openapis.openapi.models.operations.GetHolidaySchemeRevisionsResponse getHolidaySchemeRevisions(org.openapis.openapi.models.operations.GetHolidaySchemeRevisionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetHolidaySchemeRevisionsPathParams.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Revisions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetHolidaySchemeRevisionsRequest.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Revisions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -510,13 +510,13 @@ public class HolidayScheme {
      */
     public org.openapis.openapi.models.operations.GetHolidaySchemesByEffectiveDateResponse getHolidaySchemesByEffectiveDate(org.openapis.openapi.models.operations.GetHolidaySchemesByEffectiveDateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetHolidaySchemesByEffectiveDatePathParams.class, baseUrl, "/Employer/{EmployerId}/HolidaySchemes/{EffectiveDate}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetHolidaySchemesByEffectiveDateRequest.class, baseUrl, "/Employer/{EmployerId}/HolidaySchemes/{EffectiveDate}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -565,13 +565,13 @@ public class HolidayScheme {
      */
     public org.openapis.openapi.models.operations.GetHolidaySchemesFromEmployerResponse getHolidaySchemesFromEmployer(org.openapis.openapi.models.operations.GetHolidaySchemesFromEmployerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetHolidaySchemesFromEmployerPathParams.class, baseUrl, "/Employer/{EmployerId}/HolidaySchemes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetHolidaySchemesFromEmployerRequest.class, baseUrl, "/Employer/{EmployerId}/HolidaySchemes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -620,13 +620,13 @@ public class HolidayScheme {
      */
     public org.openapis.openapi.models.operations.GetHolidaySchemesWithTagResponse getHolidaySchemesWithTag(org.openapis.openapi.models.operations.GetHolidaySchemesWithTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetHolidaySchemesWithTagPathParams.class, baseUrl, "/Employer/{EmployerId}/HolidaySchemes/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetHolidaySchemesWithTagRequest.class, baseUrl, "/Employer/{EmployerId}/HolidaySchemes/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -675,13 +675,13 @@ public class HolidayScheme {
      */
     public org.openapis.openapi.models.operations.GetTagFromHolidaySchemeResponse getTagFromHolidayScheme(org.openapis.openapi.models.operations.GetTagFromHolidaySchemeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromHolidaySchemePathParams.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromHolidaySchemeRequest.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -730,13 +730,13 @@ public class HolidayScheme {
      */
     public org.openapis.openapi.models.operations.GetTagFromHolidaySchemeRevisionResponse getTagFromHolidaySchemeRevision(org.openapis.openapi.models.operations.GetTagFromHolidaySchemeRevisionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromHolidaySchemeRevisionPathParams.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tag/{TagId}/{EffectiveDate}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromHolidaySchemeRevisionRequest.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tag/{TagId}/{EffectiveDate}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -785,13 +785,13 @@ public class HolidayScheme {
      */
     public org.openapis.openapi.models.operations.GetTagsFromHolidaySchemeResponse getTagsFromHolidayScheme(org.openapis.openapi.models.operations.GetTagsFromHolidaySchemeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromHolidaySchemePathParams.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromHolidaySchemeRequest.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -840,13 +840,13 @@ public class HolidayScheme {
      */
     public org.openapis.openapi.models.operations.GetTagsFromHolidaySchemeRevisionResponse getTagsFromHolidaySchemeRevision(org.openapis.openapi.models.operations.GetTagsFromHolidaySchemeRevisionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromHolidaySchemeRevisionPathParams.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tags/{EffectiveDate}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromHolidaySchemeRevisionRequest.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tags/{EffectiveDate}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -895,18 +895,18 @@ public class HolidayScheme {
      */
     public org.openapis.openapi.models.operations.PatchHolidaySchemeResponse patchHolidayScheme(org.openapis.openapi.models.operations.PatchHolidaySchemeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchHolidaySchemePathParams.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchHolidaySchemeRequest.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "holidayScheme", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -955,18 +955,18 @@ public class HolidayScheme {
      */
     public org.openapis.openapi.models.operations.PostHolidaySchemeIntoEmployerResponse postHolidaySchemeIntoEmployer(org.openapis.openapi.models.operations.PostHolidaySchemeIntoEmployerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostHolidaySchemeIntoEmployerPathParams.class, baseUrl, "/Employer/{EmployerId}/HolidaySchemes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostHolidaySchemeIntoEmployerRequest.class, baseUrl, "/Employer/{EmployerId}/HolidaySchemes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "holidayScheme", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1015,18 +1015,18 @@ public class HolidayScheme {
      */
     public org.openapis.openapi.models.operations.PutHolidaySchemeIntoEmployerResponse putHolidaySchemeIntoEmployer(org.openapis.openapi.models.operations.PutHolidaySchemeIntoEmployerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutHolidaySchemeIntoEmployerPathParams.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutHolidaySchemeIntoEmployerRequest.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "holidayScheme", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1075,13 +1075,13 @@ public class HolidayScheme {
      */
     public org.openapis.openapi.models.operations.PutHolidaySchemeTagResponse putHolidaySchemeTag(org.openapis.openapi.models.operations.PutHolidaySchemeTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutHolidaySchemeTagPathParams.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutHolidaySchemeTagRequest.class, baseUrl, "/Employer/{EmployerId}/HolidayScheme/{HolidaySchemeId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

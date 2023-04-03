@@ -4,20 +4,83 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAddSourceIdentifierToSubscriptionRequest {
-    
-    public GETAddSourceIdentifierToSubscriptionQueryParams queryParams;
-    public GETAddSourceIdentifierToSubscriptionRequest withQueryParams(GETAddSourceIdentifierToSubscriptionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETAddSourceIdentifierToSubscriptionActionEnum action;
+    public GETAddSourceIdentifierToSubscriptionRequest withAction(GETAddSourceIdentifierToSubscriptionActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SourceIdentifier")
+    public String sourceIdentifier;
+    public GETAddSourceIdentifierToSubscriptionRequest withSourceIdentifier(String sourceIdentifier) {
+        this.sourceIdentifier = sourceIdentifier;
+        return this;
+    }
     
-    public GETAddSourceIdentifierToSubscriptionHeaders headers;
-    public GETAddSourceIdentifierToSubscriptionRequest withHeaders(GETAddSourceIdentifierToSubscriptionHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SubscriptionName")
+    public String subscriptionName;
+    public GETAddSourceIdentifierToSubscriptionRequest withSubscriptionName(String subscriptionName) {
+        this.subscriptionName = subscriptionName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETAddSourceIdentifierToSubscriptionVersionEnum version;
+    public GETAddSourceIdentifierToSubscriptionRequest withVersion(GETAddSourceIdentifierToSubscriptionVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETAddSourceIdentifierToSubscriptionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETAddSourceIdentifierToSubscriptionRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETAddSourceIdentifierToSubscriptionRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETAddSourceIdentifierToSubscriptionRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETAddSourceIdentifierToSubscriptionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETAddSourceIdentifierToSubscriptionRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETAddSourceIdentifierToSubscriptionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

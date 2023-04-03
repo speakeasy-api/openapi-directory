@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminAddCustomLabelsToSelfHostedRunnerForEnterpriseRequest {
-    
-    public EnterpriseAdminAddCustomLabelsToSelfHostedRunnerForEnterprisePathParams pathParams;
-    public EnterpriseAdminAddCustomLabelsToSelfHostedRunnerForEnterpriseRequest withPathParams(EnterpriseAdminAddCustomLabelsToSelfHostedRunnerForEnterprisePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public EnterpriseAdminAddCustomLabelsToSelfHostedRunnerForEnterpriseRequestBody requestBody;
+    public EnterpriseAdminAddCustomLabelsToSelfHostedRunnerForEnterpriseRequest withRequestBody(EnterpriseAdminAddCustomLabelsToSelfHostedRunnerForEnterpriseRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public EnterpriseAdminAddCustomLabelsToSelfHostedRunnerForEnterpriseRequestBody request;
-    public EnterpriseAdminAddCustomLabelsToSelfHostedRunnerForEnterpriseRequest withRequest(EnterpriseAdminAddCustomLabelsToSelfHostedRunnerForEnterpriseRequestBody request) {
-        this.request = request;
+    /**
+     * The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
+    public String enterprise;
+    public EnterpriseAdminAddCustomLabelsToSelfHostedRunnerForEnterpriseRequest withEnterprise(String enterprise) {
+        this.enterprise = enterprise;
+        return this;
+    }
+    
+    /**
+     * Unique identifier of the self-hosted runner.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=runner_id")
+    public Long runnerId;
+    public EnterpriseAdminAddCustomLabelsToSelfHostedRunnerForEnterpriseRequest withRunnerId(Long runnerId) {
+        this.runnerId = runnerId;
         return this;
     }
     

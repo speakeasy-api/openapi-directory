@@ -4,34 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSipIpAddressRequest {
-    
-    public ListSipIpAddressPathParams pathParams;
-    public ListSipIpAddressRequest withPathParams(ListSipIpAddressPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public ListSipIpAddressRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public ListSipIpAddressQueryParams queryParams;
-    public ListSipIpAddressRequest withQueryParams(ListSipIpAddressQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The IpAccessControlList Sid that identifies the IpAddress resources to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=IpAccessControlListSid")
+    public String ipAccessControlListSid;
+    public ListSipIpAddressRequest withIpAccessControlListSid(String ipAccessControlListSid) {
+        this.ipAccessControlListSid = ipAccessControlListSid;
         return this;
     }
     
-    
-    public ListSipIpAddressSecurity security;
-    public ListSipIpAddressRequest withSecurity(ListSipIpAddressSecurity security) {
-        this.security = security;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListSipIpAddressRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListSipIpAddressRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public String serverURL;
-    public ListSipIpAddressRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListSipIpAddressRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

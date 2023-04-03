@@ -17,10 +17,7 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.AllApiKeysSecurity;
-import org.openapis.openapi.models.operations.AllApiKeysRequest;
 import org.openapis.openapi.models.operations.AllApiKeysResponse;
-import org.openapis.openapi.models.shared.SchemeOtoroshiAuth;
 
 public class Application {
     public static void main(String[] args) {
@@ -28,16 +25,7 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            AllApiKeysRequest req = new AllApiKeysRequest() {{
-                security = new AllApiKeysSecurity() {{
-                    otoroshiAuth = new SchemeOtoroshiAuth() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
-                }};
-            }};            
-
-            AllApiKeysResponse res = sdk.apikeys.allApiKeys(req);
+            AllApiKeysResponse res = sdk.apikeys.allApiKeys();
 
             if (res.apiKeys.isPresent()) {
                 // handle response
@@ -49,7 +37,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### apikeys

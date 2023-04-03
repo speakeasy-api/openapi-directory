@@ -4,27 +4,47 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersUserIdLikesTracksRequest {
-    
-    public GetUsersUserIdLikesTracksPathParams pathParams;
-    public GetUsersUserIdLikesTracksRequest withPathParams(GetUsersUserIdLikesTracksPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filters content by level of access the user (logged in or anonymous) has to the track. The result list will include only tracks with the specified access. Include all options if you'd like to see all possible tracks. See `Track#access` schema for more details.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=access")
+    public org.openapis.openapi.models.shared.AccessEnum[] access;
+    public GetUsersUserIdLikesTracksRequest withAccess(org.openapis.openapi.models.shared.AccessEnum[] access) {
+        this.access = access;
         return this;
     }
     
-    
-    public GetUsersUserIdLikesTracksQueryParams queryParams;
-    public GetUsersUserIdLikesTracksRequest withQueryParams(GetUsersUserIdLikesTracksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Number of results to return in the collection.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetUsersUserIdLikesTracksRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * Returns paginated collection of items (recommended, returning a list without pagination is deprecated and should not be used)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=linked_partitioning")
+    public Boolean linkedPartitioning;
+    public GetUsersUserIdLikesTracksRequest withLinkedPartitioning(Boolean linkedPartitioning) {
+        this.linkedPartitioning = linkedPartitioning;
+        return this;
+    }
     
-    public GetUsersUserIdLikesTracksSecurity security;
-    public GetUsersUserIdLikesTracksRequest withSecurity(GetUsersUserIdLikesTracksSecurity security) {
-        this.security = security;
+    /**
+     * SoundCloud User id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Long userId;
+    public GetUsersUserIdLikesTracksRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateCallFeedbackSummaryRequest {
-    
-    public CreateCallFeedbackSummaryPathParams pathParams;
-    public CreateCallFeedbackSummaryRequest withPathParams(CreateCallFeedbackSummaryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public CreateCallFeedbackSummaryRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateCallFeedbackSummaryCreateCallFeedbackSummaryRequest request;
-    public CreateCallFeedbackSummaryRequest withRequest(CreateCallFeedbackSummaryCreateCallFeedbackSummaryRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateCallFeedbackSummarySecurity security;
-    public CreateCallFeedbackSummaryRequest withSecurity(CreateCallFeedbackSummarySecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateCallFeedbackSummaryRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateCallFeedbackSummaryCreateCallFeedbackSummaryRequest requestBody;
+    public CreateCallFeedbackSummaryRequest withRequestBody(CreateCallFeedbackSummaryCreateCallFeedbackSummaryRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

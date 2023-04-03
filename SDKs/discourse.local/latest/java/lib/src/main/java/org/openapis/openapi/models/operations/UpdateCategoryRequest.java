@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCategoryRequest {
-    
-    public UpdateCategoryPathParams pathParams;
-    public UpdateCategoryRequest withPathParams(UpdateCategoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateCategoryRequestBody requestBody;
+    public UpdateCategoryRequest withRequestBody(UpdateCategoryRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateCategoryRequestBody request;
-    public UpdateCategoryRequest withRequest(UpdateCategoryRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public UpdateCategoryRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateTaskChannelRequest {
-    
-    public CreateTaskChannelPathParams pathParams;
-    public CreateTaskChannelRequest withPathParams(CreateTaskChannelPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateTaskChannelCreateTaskChannelRequest request;
-    public CreateTaskChannelRequest withRequest(CreateTaskChannelCreateTaskChannelRequest request) {
-        this.request = request;
+    public CreateTaskChannelCreateTaskChannelRequest requestBody;
+    public CreateTaskChannelRequest withRequestBody(CreateTaskChannelCreateTaskChannelRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateTaskChannelSecurity security;
-    public CreateTaskChannelRequest withSecurity(CreateTaskChannelSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateTaskChannelRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Workspace that the new Task Channel belongs to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkspaceSid")
+    public String workspaceSid;
+    public CreateTaskChannelRequest withWorkspaceSid(String workspaceSid) {
+        this.workspaceSid = workspaceSid;
         return this;
     }
     

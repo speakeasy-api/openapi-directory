@@ -42,7 +42,7 @@ public class Admin {
      */
     public org.openapis.openapi.models.operations.AdminAdoptRepositoryResponse adminAdoptRepository(org.openapis.openapi.models.operations.AdminAdoptRepositoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminAdoptRepositoryPathParams.class, baseUrl, "/admin/unadopted/{owner}/{repo}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminAdoptRepositoryRequest.class, baseUrl, "/admin/unadopted/{owner}/{repo}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -77,7 +77,7 @@ public class Admin {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdminCreateHookResponse adminCreateHook(org.openapis.openapi.models.operations.AdminCreateHookRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdminCreateHookResponse adminCreateHook(org.openapis.openapi.models.shared.CreateHookOption request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/admin/hooks");
         
@@ -128,12 +128,12 @@ public class Admin {
      */
     public org.openapis.openapi.models.operations.AdminCreateOrgResponse adminCreateOrg(org.openapis.openapi.models.operations.AdminCreateOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminCreateOrgPathParams.class, baseUrl, "/admin/users/{username}/orgs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminCreateOrgRequest.class, baseUrl, "/admin/users/{username}/orgs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createOrgOption", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -181,12 +181,12 @@ public class Admin {
      */
     public org.openapis.openapi.models.operations.AdminCreatePublicKeyResponse adminCreatePublicKey(org.openapis.openapi.models.operations.AdminCreatePublicKeyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminCreatePublicKeyPathParams.class, baseUrl, "/admin/users/{username}/keys", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminCreatePublicKeyRequest.class, baseUrl, "/admin/users/{username}/keys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createKeyOption", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -231,12 +231,12 @@ public class Admin {
      */
     public org.openapis.openapi.models.operations.AdminCreateRepoResponse adminCreateRepo(org.openapis.openapi.models.operations.AdminCreateRepoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminCreateRepoPathParams.class, baseUrl, "/admin/users/{username}/repos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminCreateRepoRequest.class, baseUrl, "/admin/users/{username}/repos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createRepoOption", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -284,7 +284,7 @@ public class Admin {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdminCreateUserResponse adminCreateUser(org.openapis.openapi.models.operations.AdminCreateUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdminCreateUserResponse adminCreateUser(org.openapis.openapi.models.shared.CreateUserOption request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/admin/users");
         
@@ -342,7 +342,7 @@ public class Admin {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminCronListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminCronListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -390,7 +390,7 @@ public class Admin {
      */
     public org.openapis.openapi.models.operations.AdminCronRunResponse adminCronRun(org.openapis.openapi.models.operations.AdminCronRunRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminCronRunPathParams.class, baseUrl, "/admin/cron/{task}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminCronRunRequest.class, baseUrl, "/admin/cron/{task}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -423,7 +423,7 @@ public class Admin {
      */
     public org.openapis.openapi.models.operations.AdminDeleteHookResponse adminDeleteHook(org.openapis.openapi.models.operations.AdminDeleteHookRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminDeleteHookPathParams.class, baseUrl, "/amdin/hooks/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminDeleteHookRequest.class, baseUrl, "/amdin/hooks/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -456,7 +456,7 @@ public class Admin {
      */
     public org.openapis.openapi.models.operations.AdminDeleteUnadoptedRepositoryResponse adminDeleteUnadoptedRepository(org.openapis.openapi.models.operations.AdminDeleteUnadoptedRepositoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminDeleteUnadoptedRepositoryPathParams.class, baseUrl, "/admin/unadopted/{owner}/{repo}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminDeleteUnadoptedRepositoryRequest.class, baseUrl, "/admin/unadopted/{owner}/{repo}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -493,7 +493,7 @@ public class Admin {
      */
     public org.openapis.openapi.models.operations.AdminDeleteUserResponse adminDeleteUser(org.openapis.openapi.models.operations.AdminDeleteUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminDeleteUserPathParams.class, baseUrl, "/admin/users/{username}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminDeleteUserRequest.class, baseUrl, "/admin/users/{username}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -530,7 +530,7 @@ public class Admin {
      */
     public org.openapis.openapi.models.operations.AdminDeleteUserPublicKeyResponse adminDeleteUserPublicKey(org.openapis.openapi.models.operations.AdminDeleteUserPublicKeyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminDeleteUserPublicKeyPathParams.class, baseUrl, "/admin/users/{username}/keys/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminDeleteUserPublicKeyRequest.class, baseUrl, "/admin/users/{username}/keys/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -567,12 +567,12 @@ public class Admin {
      */
     public org.openapis.openapi.models.operations.AdminEditHookResponse adminEditHook(org.openapis.openapi.models.operations.AdminEditHookRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminEditHookPathParams.class, baseUrl, "/admin/hooks/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminEditHookRequest.class, baseUrl, "/admin/hooks/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "editHookOption", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -613,12 +613,12 @@ public class Admin {
      */
     public org.openapis.openapi.models.operations.AdminEditUserResponse adminEditUser(org.openapis.openapi.models.operations.AdminEditUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminEditUserPathParams.class, baseUrl, "/admin/users/{username}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminEditUserRequest.class, baseUrl, "/admin/users/{username}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "editUserOption", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -669,7 +669,7 @@ public class Admin {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminGetAllOrgsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminGetAllOrgsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -723,7 +723,7 @@ public class Admin {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminGetAllUsersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminGetAllUsersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -771,7 +771,7 @@ public class Admin {
      */
     public org.openapis.openapi.models.operations.AdminGetHookResponse adminGetHook(org.openapis.openapi.models.operations.AdminGetHookRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminGetHookPathParams.class, baseUrl, "/admin/hooks/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminGetHookRequest.class, baseUrl, "/admin/hooks/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -821,7 +821,7 @@ public class Admin {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminListHooksQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminListHooksRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -871,7 +871,7 @@ public class Admin {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminUnadoptedListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminUnadoptedListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

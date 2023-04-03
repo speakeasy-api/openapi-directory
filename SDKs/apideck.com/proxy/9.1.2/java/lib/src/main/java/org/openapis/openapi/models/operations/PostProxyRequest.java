@@ -7,27 +7,63 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostProxyRequest {
-    
-    public PostProxyHeaders headers;
-    public PostProxyRequest withHeaders(PostProxyHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * Depending on the verb/method of the request this will contain the request body you want to POST/PATCH/PUT.
      */
     @SpeakeasyMetadata("request:mediaType=*/*")
-    public byte[] request;
-    public PostProxyRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public PostProxyRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public PostProxyRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
+        return this;
+    }
     
-    public PostProxySecurity security;
-    public PostProxyRequest withSecurity(PostProxySecurity security) {
-        this.security = security;
+    /**
+     * ID of the consumer which you want to get or push data from
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-consumer-id")
+    public String xApideckConsumerId;
+    public PostProxyRequest withXApideckConsumerId(String xApideckConsumerId) {
+        this.xApideckConsumerId = xApideckConsumerId;
+        return this;
+    }
+    
+    /**
+     * Downstream authorization header. This will skip the Vault token injection.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-downstream-authorization")
+    public String xApideckDownstreamAuthorization;
+    public PostProxyRequest withXApideckDownstreamAuthorization(String xApideckDownstreamAuthorization) {
+        this.xApideckDownstreamAuthorization = xApideckDownstreamAuthorization;
+        return this;
+    }
+    
+    /**
+     * Downstream URL
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-downstream-url")
+    public String xApideckDownstreamUrl;
+    public PostProxyRequest withXApideckDownstreamUrl(String xApideckDownstreamUrl) {
+        this.xApideckDownstreamUrl = xApideckDownstreamUrl;
+        return this;
+    }
+    
+    /**
+     * Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-service-id")
+    public String xApideckServiceId;
+    public PostProxyRequest withXApideckServiceId(String xApideckServiceId) {
+        this.xApideckServiceId = xApideckServiceId;
         return this;
     }
     

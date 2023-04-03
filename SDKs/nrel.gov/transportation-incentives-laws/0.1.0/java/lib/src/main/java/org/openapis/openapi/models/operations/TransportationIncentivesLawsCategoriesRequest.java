@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TransportationIncentivesLawsCategoriesRequest {
-    
-    public TransportationIncentivesLawsCategoriesPathParams pathParams;
-    public TransportationIncentivesLawsCategoriesRequest withPathParams(TransportationIncentivesLawsCategoriesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API Key
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public TransportationIncentivesLawsCategoriesRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    /**
+     * Response format
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=output_format")
+    public TransportationIncentivesLawsCategoriesOutputFormatEnum outputFormat;
+    public TransportationIncentivesLawsCategoriesRequest withOutputFormat(TransportationIncentivesLawsCategoriesOutputFormatEnum outputFormat) {
+        this.outputFormat = outputFormat;
+        return this;
+    }
     
-    public TransportationIncentivesLawsCategoriesQueryParams queryParams;
-    public TransportationIncentivesLawsCategoriesRequest withQueryParams(TransportationIncentivesLawsCategoriesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Search by the category type.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public TransportationIncentivesLawsCategoriesTypeEnum type;
+    public TransportationIncentivesLawsCategoriesRequest withType(TransportationIncentivesLawsCategoriesTypeEnum type) {
+        this.type = type;
         return this;
     }
     

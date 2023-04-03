@@ -4,27 +4,78 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUnmaskedAddressByVersionRequest {
-    
-    public GetUnmaskedAddressByVersionPathParams pathParams;
-    public GetUnmaskedAddressByVersionRequest withPathParams(GetUnmaskedAddressByVersionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetUnmaskedAddressByVersionRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public GetUnmaskedAddressByVersionQueryParams queryParams;
-    public GetUnmaskedAddressByVersionRequest withQueryParams(GetUnmaskedAddressByVersionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetUnmaskedAddressByVersionRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
+    /**
+     * ID of a client's specific address as returned in the Create client address endpoint's response, in the `id` field.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=addressId")
+    public String addressId;
+    public GetUnmaskedAddressByVersionRequest withAddressId(String addressId) {
+        this.addressId = addressId;
+        return this;
+    }
     
-    public GetUnmaskedAddressByVersionHeaders headers;
-    public GetUnmaskedAddressByVersionRequest withHeaders(GetUnmaskedAddressByVersionHeaders headers) {
-        this.headers = headers;
+    /**
+     * ID of the version of a given client's address as returned by endpoints that create or update address information in the `version` field.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=addressVersionId")
+    public String addressVersionId;
+    public GetUnmaskedAddressByVersionRequest withAddressVersionId(String addressVersionId) {
+        this.addressVersionId = addressVersionId;
+        return this;
+    }
+    
+    /**
+     * The `profileId` path parameter may be substituted by other profile fields in this request. When making this request, send the `alternativeKey` parameter with a value equal to the key of the field you wish to use as `profileId`.
+     * 
+     * &gt; Currently, there are two possible values for this parameter: `email` and `document`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alternativeKey")
+    public String alternativeKey;
+    public GetUnmaskedAddressByVersionRequest withAlternativeKey(String alternativeKey) {
+        this.alternativeKey = alternativeKey;
+        return this;
+    }
+    
+    /**
+     * ID of the client's profile as returned by the Create profile endpoint's response, in the `id` field. It can also be an `alternativeKey` according to your custom profile schema. In this case, this request should also send the `alternativeKey` parameter.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
+    public String profileId;
+    public GetUnmaskedAddressByVersionRequest withProfileId(String profileId) {
+        this.profileId = profileId;
+        return this;
+    }
+    
+    /**
+     * Reason for requesting unmasked data.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reason")
+    public String reason;
+    public GetUnmaskedAddressByVersionRequest withReason(String reason) {
+        this.reason = reason;
         return this;
     }
     

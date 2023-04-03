@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostTransactionsTransactionIdRequest {
-    
-    public PostTransactionsTransactionIdPathParams pathParams;
-    public PostTransactionsTransactionIdRequest withPathParams(PostTransactionsTransactionIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A custom JSON object that you can create and attach to this record
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customData")
+    public String customData;
+    public PostTransactionsTransactionIdRequest withCustomData(String customData) {
+        this.customData = customData;
         return this;
     }
     
-    
-    public PostTransactionsTransactionIdQueryParams queryParams;
-    public PostTransactionsTransactionIdRequest withQueryParams(PostTransactionsTransactionIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The id of the transaction to be updated
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transactionId")
+    public String transactionId;
+    public PostTransactionsTransactionIdRequest withTransactionId(String transactionId) {
+        this.transactionId = transactionId;
         return this;
     }
     

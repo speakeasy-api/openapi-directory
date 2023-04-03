@@ -7,24 +7,45 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTRSforCreditMemoItemManualDistributionRequest {
-    
-    public POSTRSforCreditMemoItemManualDistributionPathParams pathParams;
-    public POSTRSforCreditMemoItemManualDistributionRequest withPathParams(POSTRSforCreditMemoItemManualDistributionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public POSTRSforCreditMemoItemManualDistributionHeaders headers;
-    public POSTRSforCreditMemoItemManualDistributionRequest withHeaders(POSTRSforCreditMemoItemManualDistributionHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.POSTRevenueScheduleByTransactionType request;
-    public POSTRSforCreditMemoItemManualDistributionRequest withRequest(org.openapis.openapi.models.shared.POSTRevenueScheduleByTransactionType request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.POSTRevenueScheduleByTransactionType postRevenueScheduleByTransactionType;
+    public POSTRSforCreditMemoItemManualDistributionRequest withPOSTRevenueScheduleByTransactionType(org.openapis.openapi.models.shared.POSTRevenueScheduleByTransactionType postRevenueScheduleByTransactionType) {
+        this.postRevenueScheduleByTransactionType = postRevenueScheduleByTransactionType;
+        return this;
+    }
+    
+    /**
+     * An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Entity-Ids")
+    public String zuoraEntityIds;
+    public POSTRSforCreditMemoItemManualDistributionRequest withZuoraEntityIds(String zuoraEntityIds) {
+        this.zuoraEntityIds = zuoraEntityIds;
+        return this;
+    }
+    
+    /**
+     * A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+     * 
+     * The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Track-Id")
+    public String zuoraTrackId;
+    public POSTRSforCreditMemoItemManualDistributionRequest withZuoraTrackId(String zuoraTrackId) {
+        this.zuoraTrackId = zuoraTrackId;
+        return this;
+    }
+    
+    /**
+     * The unique ID of a credit memo item. You can get the credit memo item ID from the response of [Get credit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoItems).
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cmi-id")
+    public String cmiId;
+    public POSTRSforCreditMemoItemManualDistributionRequest withCmiId(String cmiId) {
+        this.cmiId = cmiId;
         return this;
     }
     

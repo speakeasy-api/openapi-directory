@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCustomersEmailEmailJsonRequest {
-    
-    public GetCustomersEmailEmailJsonPathParams pathParams;
-    public GetCustomersEmailEmailJsonRequest withPathParams(GetCustomersEmailEmailJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public GetCustomersEmailEmailJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
         return this;
     }
     
+    /**
+     * Email of the Customer
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=email")
+    public String email;
+    public GetCustomersEmailEmailJsonRequest withEmail(String email) {
+        this.email = email;
+        return this;
+    }
     
-    public GetCustomersEmailEmailJsonQueryParams queryParams;
-    public GetCustomersEmailEmailJsonRequest withQueryParams(GetCustomersEmailEmailJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public GetCustomersEmailEmailJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProjectRequest {
-    
-    public GetProjectPathParams pathParams;
-    public GetProjectRequest withPathParams(GetProjectPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetProjectRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetProjectQueryParams queryParams;
-    public GetProjectRequest withQueryParams(GetProjectQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Include detailed information. Possible values 'client', 'vendor', 'score'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=with[]")
+    public GetProjectWithEnum[] with;
+    public GetProjectRequest withWith(GetProjectWithEnum[] with) {
+        this.with = with;
         return this;
     }
     

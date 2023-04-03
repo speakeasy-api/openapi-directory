@@ -91,7 +91,7 @@ public class Taxonomies {
      */
     public org.openapis.openapi.models.operations.TaxonomiesReadResponse taxonomiesRead(org.openapis.openapi.models.operations.TaxonomiesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TaxonomiesReadPathParams.class, baseUrl, "/taxonomies/{taxonomy_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TaxonomiesReadRequest.class, baseUrl, "/taxonomies/{taxonomy_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

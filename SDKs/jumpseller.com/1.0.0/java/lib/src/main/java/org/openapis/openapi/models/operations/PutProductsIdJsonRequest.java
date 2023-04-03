@@ -7,27 +7,53 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutProductsIdJsonRequest {
-    
-    public PutProductsIdJsonPathParams pathParams;
-    public PutProductsIdJsonRequest withPathParams(PutProductsIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutProductsIdJsonQueryParams queryParams;
-    public PutProductsIdJsonRequest withQueryParams(PutProductsIdJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Product parameters to change
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ProductEdit request;
-    public PutProductsIdJsonRequest withRequest(org.openapis.openapi.models.shared.ProductEdit request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ProductEdit productEdit;
+    public PutProductsIdJsonRequest withProductEdit(org.openapis.openapi.models.shared.ProductEdit productEdit) {
+        this.productEdit = productEdit;
+        return this;
+    }
+    
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public PutProductsIdJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
+        return this;
+    }
+    
+    /**
+     * Id of the Product
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PutProductsIdJsonRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Locale code of the translation
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
+    public String locale;
+    public PutProductsIdJsonRequest withLocale(String locale) {
+        this.locale = locale;
+        return this;
+    }
+    
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public PutProductsIdJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

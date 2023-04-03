@@ -40,15 +40,15 @@ public class Partners {
      */
     public org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersCustomersCreateResponse androiddeviceprovisioningPartnersCustomersCreate(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersCustomersCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersCustomersCreatePathParams.class, baseUrl, "/v1/{parent}/customers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersCustomersCreateRequest.class, baseUrl, "/v1/{parent}/customers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createCustomerRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersCustomersCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersCustomersCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -86,13 +86,13 @@ public class Partners {
      */
     public org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersCustomersListResponse androiddeviceprovisioningPartnersCustomersList(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersCustomersListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersCustomersListPathParams.class, baseUrl, "/v1/partners/{partnerId}/customers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersCustomersListRequest.class, baseUrl, "/v1/partners/{partnerId}/customers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersCustomersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersCustomersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -130,15 +130,15 @@ public class Partners {
      */
     public org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesClaimResponse androiddeviceprovisioningPartnersDevicesClaim(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesClaimRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesClaimPathParams.class, baseUrl, "/v1/partners/{partnerId}/devices:claim", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesClaimRequest.class, baseUrl, "/v1/partners/{partnerId}/devices:claim", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "claimDeviceRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesClaimQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesClaimRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -176,15 +176,15 @@ public class Partners {
      */
     public org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesClaimAsyncResponse androiddeviceprovisioningPartnersDevicesClaimAsync(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesClaimAsyncRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesClaimAsyncPathParams.class, baseUrl, "/v1/partners/{partnerId}/devices:claimAsync", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesClaimAsyncRequest.class, baseUrl, "/v1/partners/{partnerId}/devices:claimAsync", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "claimDevicesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesClaimAsyncQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesClaimAsyncRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -222,15 +222,15 @@ public class Partners {
      */
     public org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesFindByIdentifierResponse androiddeviceprovisioningPartnersDevicesFindByIdentifier(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesFindByIdentifierRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesFindByIdentifierPathParams.class, baseUrl, "/v1/partners/{partnerId}/devices:findByIdentifier", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesFindByIdentifierRequest.class, baseUrl, "/v1/partners/{partnerId}/devices:findByIdentifier", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "findDevicesByDeviceIdentifierRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesFindByIdentifierQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesFindByIdentifierRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -268,15 +268,15 @@ public class Partners {
      */
     public org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesFindByOwnerResponse androiddeviceprovisioningPartnersDevicesFindByOwner(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesFindByOwnerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesFindByOwnerPathParams.class, baseUrl, "/v1/partners/{partnerId}/devices:findByOwner", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesFindByOwnerRequest.class, baseUrl, "/v1/partners/{partnerId}/devices:findByOwner", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "findDevicesByOwnerRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesFindByOwnerQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesFindByOwnerRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -314,13 +314,13 @@ public class Partners {
      */
     public org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesGetResponse androiddeviceprovisioningPartnersDevicesGet(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesGetPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesGetRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -358,15 +358,15 @@ public class Partners {
      */
     public org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesMetadataResponse androiddeviceprovisioningPartnersDevicesMetadata(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesMetadataRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesMetadataPathParams.class, baseUrl, "/v1/partners/{metadataOwnerId}/devices/{deviceId}/metadata", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesMetadataRequest.class, baseUrl, "/v1/partners/{metadataOwnerId}/devices/{deviceId}/metadata", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateDeviceMetadataRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesMetadataQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesMetadataRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -404,15 +404,15 @@ public class Partners {
      */
     public org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesUnclaimResponse androiddeviceprovisioningPartnersDevicesUnclaim(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesUnclaimRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesUnclaimPathParams.class, baseUrl, "/v1/partners/{partnerId}/devices:unclaim", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesUnclaimRequest.class, baseUrl, "/v1/partners/{partnerId}/devices:unclaim", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "unclaimDeviceRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesUnclaimQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesUnclaimRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -450,15 +450,15 @@ public class Partners {
      */
     public org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesUnclaimAsyncResponse androiddeviceprovisioningPartnersDevicesUnclaimAsync(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesUnclaimAsyncRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesUnclaimAsyncPathParams.class, baseUrl, "/v1/partners/{partnerId}/devices:unclaimAsync", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesUnclaimAsyncRequest.class, baseUrl, "/v1/partners/{partnerId}/devices:unclaimAsync", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "unclaimDevicesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesUnclaimAsyncQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesUnclaimAsyncRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -496,15 +496,15 @@ public class Partners {
      */
     public org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesUpdateMetadataAsyncResponse androiddeviceprovisioningPartnersDevicesUpdateMetadataAsync(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesUpdateMetadataAsyncRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesUpdateMetadataAsyncPathParams.class, baseUrl, "/v1/partners/{partnerId}/devices:updateMetadataAsync", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesUpdateMetadataAsyncRequest.class, baseUrl, "/v1/partners/{partnerId}/devices:updateMetadataAsync", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateDeviceMetadataInBatchRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesUpdateMetadataAsyncQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesUpdateMetadataAsyncRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -542,13 +542,13 @@ public class Partners {
      */
     public org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersVendorsCustomersListResponse androiddeviceprovisioningPartnersVendorsCustomersList(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersVendorsCustomersListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersVendorsCustomersListPathParams.class, baseUrl, "/v1/{parent}/customers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersVendorsCustomersListRequest.class, baseUrl, "/v1/{parent}/customers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersVendorsCustomersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersVendorsCustomersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -586,13 +586,13 @@ public class Partners {
      */
     public org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersVendorsListResponse androiddeviceprovisioningPartnersVendorsList(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersVendorsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersVendorsListPathParams.class, baseUrl, "/v1/{parent}/vendors", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersVendorsListRequest.class, baseUrl, "/v1/{parent}/vendors", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersVendorsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersVendorsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

@@ -36,19 +36,20 @@ public class Social {
     /**
      * [USES 11 UNITS PER NAME] Infer the likely country and phone prefix, given a personal name and formatted / unformatted phone number.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PhoneCodeResponse phoneCode(org.openapis.openapi.models.operations.PhoneCodeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PhoneCodeResponse phoneCode(org.openapis.openapi.models.operations.PhoneCodeRequest request, org.openapis.openapi.models.operations.PhoneCodeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PhoneCodePathParams.class, baseUrl, "/api2/json/phoneCode/{firstName}/{lastName}/{phoneNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PhoneCodeRequest.class, baseUrl, "/api2/json/phoneCode/{firstName}/{lastName}/{phoneNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -77,10 +78,11 @@ public class Social {
     /**
      * [USES 11 UNITS PER NAME] Infer the likely country and phone prefix, of up to 100 personal names, detecting automatically the local context given a name and formatted / unformatted phone number.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PhoneCodeBatchResponse phoneCodeBatch(org.openapis.openapi.models.operations.PhoneCodeBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PhoneCodeBatchResponse phoneCodeBatch(org.openapis.openapi.models.shared.BatchFirstLastNamePhoneNumberIn request, org.openapis.openapi.models.operations.PhoneCodeBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/phoneCodeBatch");
         
@@ -91,7 +93,7 @@ public class Social {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -120,19 +122,20 @@ public class Social {
     /**
      * [USES 11 UNITS PER NAME] Infer the likely phone prefix, given a personal name and formatted / unformatted phone number, with a local context (ISO2 country of residence).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PhoneCodeGeoResponse phoneCodeGeo(org.openapis.openapi.models.operations.PhoneCodeGeoRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PhoneCodeGeoResponse phoneCodeGeo(org.openapis.openapi.models.operations.PhoneCodeGeoRequest request, org.openapis.openapi.models.operations.PhoneCodeGeoSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PhoneCodeGeoPathParams.class, baseUrl, "/api2/json/phoneCodeGeo/{firstName}/{lastName}/{phoneNumber}/{countryIso2}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PhoneCodeGeoRequest.class, baseUrl, "/api2/json/phoneCodeGeo/{firstName}/{lastName}/{phoneNumber}/{countryIso2}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -161,10 +164,11 @@ public class Social {
     /**
      * [USES 11 UNITS PER NAME] Infer the likely country and phone prefix, of up to 100 personal names, with a local context (ISO2 country of residence).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PhoneCodeGeoBatchResponse phoneCodeGeoBatch(org.openapis.openapi.models.operations.PhoneCodeGeoBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PhoneCodeGeoBatchResponse phoneCodeGeoBatch(org.openapis.openapi.models.shared.BatchFirstLastNamePhoneNumberGeoIn request, org.openapis.openapi.models.operations.PhoneCodeGeoBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/phoneCodeGeoBatch");
         
@@ -175,7 +179,7 @@ public class Social {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -204,19 +208,20 @@ public class Social {
     /**
      * [CREDITS 1 UNIT] Feedback loop to better infer the likely phone prefix, given a personal name and formatted / unformatted phone number, with a local context (ISO2 country of residence).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PhoneCodeGeoFeedbackLoopResponse phoneCodeGeoFeedbackLoop(org.openapis.openapi.models.operations.PhoneCodeGeoFeedbackLoopRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PhoneCodeGeoFeedbackLoopResponse phoneCodeGeoFeedbackLoop(org.openapis.openapi.models.operations.PhoneCodeGeoFeedbackLoopRequest request, org.openapis.openapi.models.operations.PhoneCodeGeoFeedbackLoopSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PhoneCodeGeoFeedbackLoopPathParams.class, baseUrl, "/api2/json/phoneCodeGeoFeedbackLoop/{firstName}/{lastName}/{phoneNumber}/{phoneNumberE164}/{countryIso2}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PhoneCodeGeoFeedbackLoopRequest.class, baseUrl, "/api2/json/phoneCodeGeoFeedbackLoop/{firstName}/{lastName}/{phoneNumber}/{phoneNumberE164}/{countryIso2}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

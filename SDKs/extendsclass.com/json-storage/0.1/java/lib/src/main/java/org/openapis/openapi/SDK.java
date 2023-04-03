@@ -128,7 +128,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteBinIdResponse deleteBinId(org.openapis.openapi.models.operations.DeleteBinIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteBinIdPathParams.class, baseUrl, "/bin/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteBinIdRequest.class, baseUrl, "/bin/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -174,7 +174,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetBinIdResponse getBinId(org.openapis.openapi.models.operations.GetBinIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBinIdPathParams.class, baseUrl, "/bin/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBinIdRequest.class, baseUrl, "/bin/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -220,7 +220,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PatchBinIdResponse patchBinId(org.openapis.openapi.models.operations.PatchBinIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchBinIdPathParams.class, baseUrl, "/bin/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchBinIdRequest.class, baseUrl, "/bin/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
@@ -311,7 +311,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PutBinIdResponse putBinId(org.openapis.openapi.models.operations.PutBinIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutBinIdPathParams.class, baseUrl, "/bin/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutBinIdRequest.class, baseUrl, "/bin/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

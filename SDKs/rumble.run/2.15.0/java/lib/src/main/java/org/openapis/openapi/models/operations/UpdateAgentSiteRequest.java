@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateAgentSiteRequest {
-    
-    public UpdateAgentSitePathParams pathParams;
-    public UpdateAgentSiteRequest withPathParams(UpdateAgentSitePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * site_id to associate with the agent
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AgentSiteID request;
-    public UpdateAgentSiteRequest withRequest(org.openapis.openapi.models.shared.AgentSiteID request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AgentSiteID agentSiteID;
+    public UpdateAgentSiteRequest withAgentSiteID(org.openapis.openapi.models.shared.AgentSiteID agentSiteID) {
+        this.agentSiteID = agentSiteID;
         return this;
     }
     
-    
-    public UpdateAgentSiteSecurity security;
-    public UpdateAgentSiteRequest withSecurity(UpdateAgentSiteSecurity security) {
-        this.security = security;
+    /**
+     * UUID of the agent to update
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agent_id")
+    public String agentId;
+    public UpdateAgentSiteRequest withAgentId(String agentId) {
+        this.agentId = agentId;
         return this;
     }
     

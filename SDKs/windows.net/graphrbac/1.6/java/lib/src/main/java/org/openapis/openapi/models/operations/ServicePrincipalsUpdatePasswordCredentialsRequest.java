@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ServicePrincipalsUpdatePasswordCredentialsRequest {
-    
-    public ServicePrincipalsUpdatePasswordCredentialsPathParams pathParams;
-    public ServicePrincipalsUpdatePasswordCredentialsRequest withPathParams(ServicePrincipalsUpdatePasswordCredentialsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ServicePrincipalsUpdatePasswordCredentialsQueryParams queryParams;
-    public ServicePrincipalsUpdatePasswordCredentialsRequest withQueryParams(ServicePrincipalsUpdatePasswordCredentialsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Parameters to update the passwordCredentials of an existing service principal.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PasswordCredentialsUpdateParameters request;
-    public ServicePrincipalsUpdatePasswordCredentialsRequest withRequest(org.openapis.openapi.models.shared.PasswordCredentialsUpdateParameters request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PasswordCredentialsUpdateParameters passwordCredentialsUpdateParameters;
+    public ServicePrincipalsUpdatePasswordCredentialsRequest withPasswordCredentialsUpdateParameters(org.openapis.openapi.models.shared.PasswordCredentialsUpdateParameters passwordCredentialsUpdateParameters) {
+        this.passwordCredentialsUpdateParameters = passwordCredentialsUpdateParameters;
+        return this;
+    }
+    
+    /**
+     * Client API version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public ServicePrincipalsUpdatePasswordCredentialsRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
+    
+    /**
+     * The object ID of the service principal.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=objectId")
+    public String objectId;
+    public ServicePrincipalsUpdatePasswordCredentialsRequest withObjectId(String objectId) {
+        this.objectId = objectId;
+        return this;
+    }
+    
+    /**
+     * The tenant ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tenantID")
+    public String tenantID;
+    public ServicePrincipalsUpdatePasswordCredentialsRequest withTenantID(String tenantID) {
+        this.tenantID = tenantID;
         return this;
     }
     

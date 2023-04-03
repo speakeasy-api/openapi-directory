@@ -7,31 +7,140 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AssuredworkloadsOrganizationsLocationsWorkloadsPatchRequest {
-    
-    public AssuredworkloadsOrganizationsLocationsWorkloadsPatchPathParams pathParams;
-    public AssuredworkloadsOrganizationsLocationsWorkloadsPatchRequest withPathParams(AssuredworkloadsOrganizationsLocationsWorkloadsPatchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AssuredworkloadsOrganizationsLocationsWorkloadsPatchQueryParams queryParams;
-    public AssuredworkloadsOrganizationsLocationsWorkloadsPatchRequest withQueryParams(AssuredworkloadsOrganizationsLocationsWorkloadsPatchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsPatchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GoogleCloudAssuredworkloadsV1WorkloadInput request;
-    public AssuredworkloadsOrganizationsLocationsWorkloadsPatchRequest withRequest(org.openapis.openapi.models.shared.GoogleCloudAssuredworkloadsV1WorkloadInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GoogleCloudAssuredworkloadsV1WorkloadInput googleCloudAssuredworkloadsV1WorkloadInput;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsPatchRequest withGoogleCloudAssuredworkloadsV1WorkloadInput(org.openapis.openapi.models.shared.GoogleCloudAssuredworkloadsV1WorkloadInput googleCloudAssuredworkloadsV1WorkloadInput) {
+        this.googleCloudAssuredworkloadsV1WorkloadInput = googleCloudAssuredworkloadsV1WorkloadInput;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsPatchRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public AssuredworkloadsOrganizationsLocationsWorkloadsPatchSecurity security;
-    public AssuredworkloadsOrganizationsLocationsWorkloadsPatchRequest withSecurity(AssuredworkloadsOrganizationsLocationsWorkloadsPatchSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsPatchRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsPatchRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsPatchRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Optional. The resource name of the workload. Format: organizations/{organization}/locations/{location}/workloads/{workload} Read-only.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsPatchRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsPatchRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsPatchRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsPatchRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Required. The list of fields to be updated.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updateMask")
+    public String updateMask;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsPatchRequest withUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsPatchRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public AssuredworkloadsOrganizationsLocationsWorkloadsPatchRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

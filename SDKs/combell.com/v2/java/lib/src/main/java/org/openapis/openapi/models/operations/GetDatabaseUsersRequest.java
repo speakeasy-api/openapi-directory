@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDatabaseUsersRequest {
-    
-    public GetDatabaseUsersPathParams pathParams;
-    public GetDatabaseUsersRequest withPathParams(GetDatabaseUsersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=databaseName")
+    public String databaseNamePathParameter;
+    public GetDatabaseUsersRequest withDatabaseNamePathParameter(String databaseNamePathParameter) {
+        this.databaseNamePathParameter = databaseNamePathParameter;
         return this;
     }
     
-    
-    public GetDatabaseUsersQueryParams queryParams;
-    public GetDatabaseUsersRequest withQueryParams(GetDatabaseUsersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Name of the database.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=database_name")
+    public String databaseNameQueryParameter;
+    public GetDatabaseUsersRequest withDatabaseNameQueryParameter(String databaseNameQueryParameter) {
+        this.databaseNameQueryParameter = databaseNameQueryParameter;
         return this;
     }
     

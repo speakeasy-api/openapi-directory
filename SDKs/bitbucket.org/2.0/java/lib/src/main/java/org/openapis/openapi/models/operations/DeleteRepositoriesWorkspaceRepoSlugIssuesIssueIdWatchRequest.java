@@ -4,20 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchRequest {
-    
-    public DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchPathParams pathParams;
-    public DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchRequest withPathParams(DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The issue id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=issue_id")
+    public String issueId;
+    public DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchRequest withIssueId(String issueId) {
+        this.issueId = issueId;
         return this;
     }
     
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
     
-    public DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchSecurity security;
-    public DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchRequest withSecurity(DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

@@ -34,25 +34,26 @@ public class Instances {
     /**
      * Adds a new trusted Certificate Authority (CA) version for the specified instance. Required to prepare for a certificate rotation. If a CA version was previously added but never used in a certificate rotation, this operation replaces that version. There cannot be more than one CA version waiting to be rotated in.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SqlInstancesAddServerCaResponse sqlInstancesAddServerCa(org.openapis.openapi.models.operations.SqlInstancesAddServerCaRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SqlInstancesAddServerCaResponse sqlInstancesAddServerCa(org.openapis.openapi.models.operations.SqlInstancesAddServerCaRequest request, org.openapis.openapi.models.operations.SqlInstancesAddServerCaSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesAddServerCaPathParams.class, baseUrl, "/v1/projects/{project}/instances/{instance}/addServerCa", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesAddServerCaRequest.class, baseUrl, "/v1/projects/{project}/instances/{instance}/addServerCa", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesAddServerCaQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesAddServerCaRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,27 +80,28 @@ public class Instances {
     /**
      * Creates a Cloud SQL instance as a clone of the source instance. Using this operation might cause your instance to restart.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SqlInstancesCloneResponse sqlInstancesClone(org.openapis.openapi.models.operations.SqlInstancesCloneRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SqlInstancesCloneResponse sqlInstancesClone(org.openapis.openapi.models.operations.SqlInstancesCloneRequest request, org.openapis.openapi.models.operations.SqlInstancesCloneSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesClonePathParams.class, baseUrl, "/v1/projects/{project}/instances/{instance}/clone", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesCloneRequest.class, baseUrl, "/v1/projects/{project}/instances/{instance}/clone", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "instancesCloneRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesCloneQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesCloneRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,25 +128,26 @@ public class Instances {
     /**
      * Deletes a Cloud SQL instance.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SqlInstancesDeleteResponse sqlInstancesDelete(org.openapis.openapi.models.operations.SqlInstancesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SqlInstancesDeleteResponse sqlInstancesDelete(org.openapis.openapi.models.operations.SqlInstancesDeleteRequest request, org.openapis.openapi.models.operations.SqlInstancesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesDeletePathParams.class, baseUrl, "/v1/projects/{project}/instances/{instance}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesDeleteRequest.class, baseUrl, "/v1/projects/{project}/instances/{instance}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,27 +174,28 @@ public class Instances {
     /**
      * Demotes the stand-alone instance to be a Cloud SQL read replica for an external database server.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SqlInstancesDemoteMasterResponse sqlInstancesDemoteMaster(org.openapis.openapi.models.operations.SqlInstancesDemoteMasterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SqlInstancesDemoteMasterResponse sqlInstancesDemoteMaster(org.openapis.openapi.models.operations.SqlInstancesDemoteMasterRequest request, org.openapis.openapi.models.operations.SqlInstancesDemoteMasterSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesDemoteMasterPathParams.class, baseUrl, "/v1/projects/{project}/instances/{instance}/demoteMaster", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesDemoteMasterRequest.class, baseUrl, "/v1/projects/{project}/instances/{instance}/demoteMaster", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "instancesDemoteMasterRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesDemoteMasterQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesDemoteMasterRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -218,27 +222,28 @@ public class Instances {
     /**
      * Exports data from a Cloud SQL instance to a Cloud Storage bucket as a SQL dump or CSV file.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SqlInstancesExportResponse sqlInstancesExport(org.openapis.openapi.models.operations.SqlInstancesExportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SqlInstancesExportResponse sqlInstancesExport(org.openapis.openapi.models.operations.SqlInstancesExportRequest request, org.openapis.openapi.models.operations.SqlInstancesExportSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesExportPathParams.class, baseUrl, "/v1/projects/{project}/instances/{instance}/export", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesExportRequest.class, baseUrl, "/v1/projects/{project}/instances/{instance}/export", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "instancesExportRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesExportQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesExportRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -265,27 +270,28 @@ public class Instances {
     /**
      * Initiates a manual failover of a high availability (HA) primary instance to a standby instance, which becomes the primary instance. Users are then rerouted to the new primary. For more information, see the [Overview of high availability](https://cloud.google.com/sql/docs/mysql/high-availability) page in the Cloud SQL documentation. If using Legacy HA (MySQL only), this causes the instance to failover to its failover replica instance.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SqlInstancesFailoverResponse sqlInstancesFailover(org.openapis.openapi.models.operations.SqlInstancesFailoverRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SqlInstancesFailoverResponse sqlInstancesFailover(org.openapis.openapi.models.operations.SqlInstancesFailoverRequest request, org.openapis.openapi.models.operations.SqlInstancesFailoverSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesFailoverPathParams.class, baseUrl, "/v1/projects/{project}/instances/{instance}/failover", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesFailoverRequest.class, baseUrl, "/v1/projects/{project}/instances/{instance}/failover", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "instancesFailoverRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesFailoverQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesFailoverRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -312,25 +318,26 @@ public class Instances {
     /**
      * Retrieves a resource containing information about a Cloud SQL instance.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SqlInstancesGetResponse sqlInstancesGet(org.openapis.openapi.models.operations.SqlInstancesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SqlInstancesGetResponse sqlInstancesGet(org.openapis.openapi.models.operations.SqlInstancesGetRequest request, org.openapis.openapi.models.operations.SqlInstancesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesGetPathParams.class, baseUrl, "/v1/projects/{project}/instances/{instance}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesGetRequest.class, baseUrl, "/v1/projects/{project}/instances/{instance}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -357,27 +364,28 @@ public class Instances {
     /**
      * Imports data into a Cloud SQL instance from a SQL dump or CSV file in Cloud Storage.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SqlInstancesImportResponse sqlInstancesImport(org.openapis.openapi.models.operations.SqlInstancesImportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SqlInstancesImportResponse sqlInstancesImport(org.openapis.openapi.models.operations.SqlInstancesImportRequest request, org.openapis.openapi.models.operations.SqlInstancesImportSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesImportPathParams.class, baseUrl, "/v1/projects/{project}/instances/{instance}/import", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesImportRequest.class, baseUrl, "/v1/projects/{project}/instances/{instance}/import", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "instancesImportRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesImportQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesImportRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -404,27 +412,28 @@ public class Instances {
     /**
      * Creates a new Cloud SQL instance.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SqlInstancesInsertResponse sqlInstancesInsert(org.openapis.openapi.models.operations.SqlInstancesInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SqlInstancesInsertResponse sqlInstancesInsert(org.openapis.openapi.models.operations.SqlInstancesInsertRequest request, org.openapis.openapi.models.operations.SqlInstancesInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesInsertPathParams.class, baseUrl, "/v1/projects/{project}/instances", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesInsertRequest.class, baseUrl, "/v1/projects/{project}/instances", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "databaseInstanceInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -451,25 +460,26 @@ public class Instances {
     /**
      * Lists instances under a given project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SqlInstancesListResponse sqlInstancesList(org.openapis.openapi.models.operations.SqlInstancesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SqlInstancesListResponse sqlInstancesList(org.openapis.openapi.models.operations.SqlInstancesListRequest request, org.openapis.openapi.models.operations.SqlInstancesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesListPathParams.class, baseUrl, "/v1/projects/{project}/instances", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesListRequest.class, baseUrl, "/v1/projects/{project}/instances", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -496,25 +506,26 @@ public class Instances {
     /**
      * Lists all of the trusted Certificate Authorities (CAs) for the specified instance. There can be up to three CAs listed: the CA that was used to sign the certificate that is currently in use, a CA that has been added but not yet used to sign a certificate, and a CA used to sign a certificate that has previously rotated out.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SqlInstancesListServerCasResponse sqlInstancesListServerCas(org.openapis.openapi.models.operations.SqlInstancesListServerCasRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SqlInstancesListServerCasResponse sqlInstancesListServerCas(org.openapis.openapi.models.operations.SqlInstancesListServerCasRequest request, org.openapis.openapi.models.operations.SqlInstancesListServerCasSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesListServerCasPathParams.class, baseUrl, "/v1/projects/{project}/instances/{instance}/listServerCas", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesListServerCasRequest.class, baseUrl, "/v1/projects/{project}/instances/{instance}/listServerCas", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesListServerCasQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesListServerCasRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -541,27 +552,28 @@ public class Instances {
     /**
      * Partially updates settings of a Cloud SQL instance by merging the request with the current configuration. This method supports patch semantics.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SqlInstancesPatchResponse sqlInstancesPatch(org.openapis.openapi.models.operations.SqlInstancesPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SqlInstancesPatchResponse sqlInstancesPatch(org.openapis.openapi.models.operations.SqlInstancesPatchRequest request, org.openapis.openapi.models.operations.SqlInstancesPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesPatchPathParams.class, baseUrl, "/v1/projects/{project}/instances/{instance}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesPatchRequest.class, baseUrl, "/v1/projects/{project}/instances/{instance}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "databaseInstanceInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -588,25 +600,26 @@ public class Instances {
     /**
      * Promotes the read replica instance to be a stand-alone Cloud SQL instance. Using this operation might cause your instance to restart.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SqlInstancesPromoteReplicaResponse sqlInstancesPromoteReplica(org.openapis.openapi.models.operations.SqlInstancesPromoteReplicaRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SqlInstancesPromoteReplicaResponse sqlInstancesPromoteReplica(org.openapis.openapi.models.operations.SqlInstancesPromoteReplicaRequest request, org.openapis.openapi.models.operations.SqlInstancesPromoteReplicaSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesPromoteReplicaPathParams.class, baseUrl, "/v1/projects/{project}/instances/{instance}/promoteReplica", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesPromoteReplicaRequest.class, baseUrl, "/v1/projects/{project}/instances/{instance}/promoteReplica", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesPromoteReplicaQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesPromoteReplicaRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -633,25 +646,26 @@ public class Instances {
     /**
      * Deletes all client certificates and generates a new server SSL certificate for the instance.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SqlInstancesResetSslConfigResponse sqlInstancesResetSslConfig(org.openapis.openapi.models.operations.SqlInstancesResetSslConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SqlInstancesResetSslConfigResponse sqlInstancesResetSslConfig(org.openapis.openapi.models.operations.SqlInstancesResetSslConfigRequest request, org.openapis.openapi.models.operations.SqlInstancesResetSslConfigSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesResetSslConfigPathParams.class, baseUrl, "/v1/projects/{project}/instances/{instance}/resetSslConfig", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesResetSslConfigRequest.class, baseUrl, "/v1/projects/{project}/instances/{instance}/resetSslConfig", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesResetSslConfigQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesResetSslConfigRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -678,25 +692,26 @@ public class Instances {
     /**
      * Restarts a Cloud SQL instance.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SqlInstancesRestartResponse sqlInstancesRestart(org.openapis.openapi.models.operations.SqlInstancesRestartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SqlInstancesRestartResponse sqlInstancesRestart(org.openapis.openapi.models.operations.SqlInstancesRestartRequest request, org.openapis.openapi.models.operations.SqlInstancesRestartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesRestartPathParams.class, baseUrl, "/v1/projects/{project}/instances/{instance}/restart", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesRestartRequest.class, baseUrl, "/v1/projects/{project}/instances/{instance}/restart", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesRestartQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesRestartRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -723,27 +738,28 @@ public class Instances {
     /**
      * Restores a backup of a Cloud SQL instance. Using this operation might cause your instance to restart.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SqlInstancesRestoreBackupResponse sqlInstancesRestoreBackup(org.openapis.openapi.models.operations.SqlInstancesRestoreBackupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SqlInstancesRestoreBackupResponse sqlInstancesRestoreBackup(org.openapis.openapi.models.operations.SqlInstancesRestoreBackupRequest request, org.openapis.openapi.models.operations.SqlInstancesRestoreBackupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesRestoreBackupPathParams.class, baseUrl, "/v1/projects/{project}/instances/{instance}/restoreBackup", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesRestoreBackupRequest.class, baseUrl, "/v1/projects/{project}/instances/{instance}/restoreBackup", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "instancesRestoreBackupRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesRestoreBackupQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesRestoreBackupRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -770,27 +786,28 @@ public class Instances {
     /**
      * Rotates the server certificate to one signed by the Certificate Authority (CA) version previously added with the addServerCA method.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SqlInstancesRotateServerCaResponse sqlInstancesRotateServerCa(org.openapis.openapi.models.operations.SqlInstancesRotateServerCaRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SqlInstancesRotateServerCaResponse sqlInstancesRotateServerCa(org.openapis.openapi.models.operations.SqlInstancesRotateServerCaRequest request, org.openapis.openapi.models.operations.SqlInstancesRotateServerCaSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesRotateServerCaPathParams.class, baseUrl, "/v1/projects/{project}/instances/{instance}/rotateServerCa", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesRotateServerCaRequest.class, baseUrl, "/v1/projects/{project}/instances/{instance}/rotateServerCa", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "instancesRotateServerCaRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesRotateServerCaQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesRotateServerCaRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -817,25 +834,26 @@ public class Instances {
     /**
      * Starts the replication in the read replica instance.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SqlInstancesStartReplicaResponse sqlInstancesStartReplica(org.openapis.openapi.models.operations.SqlInstancesStartReplicaRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SqlInstancesStartReplicaResponse sqlInstancesStartReplica(org.openapis.openapi.models.operations.SqlInstancesStartReplicaRequest request, org.openapis.openapi.models.operations.SqlInstancesStartReplicaSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesStartReplicaPathParams.class, baseUrl, "/v1/projects/{project}/instances/{instance}/startReplica", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesStartReplicaRequest.class, baseUrl, "/v1/projects/{project}/instances/{instance}/startReplica", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesStartReplicaQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesStartReplicaRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -862,25 +880,26 @@ public class Instances {
     /**
      * Stops the replication in the read replica instance.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SqlInstancesStopReplicaResponse sqlInstancesStopReplica(org.openapis.openapi.models.operations.SqlInstancesStopReplicaRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SqlInstancesStopReplicaResponse sqlInstancesStopReplica(org.openapis.openapi.models.operations.SqlInstancesStopReplicaRequest request, org.openapis.openapi.models.operations.SqlInstancesStopReplicaSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesStopReplicaPathParams.class, baseUrl, "/v1/projects/{project}/instances/{instance}/stopReplica", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesStopReplicaRequest.class, baseUrl, "/v1/projects/{project}/instances/{instance}/stopReplica", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesStopReplicaQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesStopReplicaRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -907,27 +926,28 @@ public class Instances {
     /**
      * Truncate MySQL general and slow query log tables MySQL only.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SqlInstancesTruncateLogResponse sqlInstancesTruncateLog(org.openapis.openapi.models.operations.SqlInstancesTruncateLogRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SqlInstancesTruncateLogResponse sqlInstancesTruncateLog(org.openapis.openapi.models.operations.SqlInstancesTruncateLogRequest request, org.openapis.openapi.models.operations.SqlInstancesTruncateLogSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesTruncateLogPathParams.class, baseUrl, "/v1/projects/{project}/instances/{instance}/truncateLog", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesTruncateLogRequest.class, baseUrl, "/v1/projects/{project}/instances/{instance}/truncateLog", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "instancesTruncateLogRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesTruncateLogQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesTruncateLogRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -954,27 +974,28 @@ public class Instances {
     /**
      * Updates settings of a Cloud SQL instance. Using this operation might cause your instance to restart.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SqlInstancesUpdateResponse sqlInstancesUpdate(org.openapis.openapi.models.operations.SqlInstancesUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SqlInstancesUpdateResponse sqlInstancesUpdate(org.openapis.openapi.models.operations.SqlInstancesUpdateRequest request, org.openapis.openapi.models.operations.SqlInstancesUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesUpdatePathParams.class, baseUrl, "/v1/projects/{project}/instances/{instance}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlInstancesUpdateRequest.class, baseUrl, "/v1/projects/{project}/instances/{instance}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "databaseInstanceInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlInstancesUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

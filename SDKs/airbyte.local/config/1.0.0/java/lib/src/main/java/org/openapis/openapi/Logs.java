@@ -36,7 +36,7 @@ public class Logs {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetLogsResponse getLogs(org.openapis.openapi.models.operations.GetLogsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetLogsResponse getLogs(org.openapis.openapi.models.shared.LogsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/logs/get");
         

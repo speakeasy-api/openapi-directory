@@ -7,24 +7,31 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiChangeShippingDetailsJsonRequest {
-    
-    public OrderApiChangeShippingDetailsJsonQueryParams queryParams;
-    public OrderApiChangeShippingDetailsJsonRequest withQueryParams(OrderApiChangeShippingDetailsJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public OrderApiChangeShippingDetailsJsonHeaders headers;
-    public OrderApiChangeShippingDetailsJsonRequest withHeaders(OrderApiChangeShippingDetailsJsonHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.OrderShippingDetailsApiModel request;
-    public OrderApiChangeShippingDetailsJsonRequest withRequest(org.openapis.openapi.models.shared.OrderShippingDetailsApiModel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.OrderShippingDetailsApiModel orderShippingDetailsApiModel;
+    public OrderApiChangeShippingDetailsJsonRequest withOrderShippingDetailsApiModel(org.openapis.openapi.models.shared.OrderShippingDetailsApiModel orderShippingDetailsApiModel) {
+        this.orderShippingDetailsApiModel = orderShippingDetailsApiModel;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderId")
+    public Integer orderId;
+    public OrderApiChangeShippingDetailsJsonRequest withOrderId(Integer orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
+    public String xAuthKey;
+    public OrderApiChangeShippingDetailsJsonRequest withXAuthKey(String xAuthKey) {
+        this.xAuthKey = xAuthKey;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
+    public String xAuthSecret;
+    public OrderApiChangeShippingDetailsJsonRequest withXAuthSecret(String xAuthSecret) {
+        this.xAuthSecret = xAuthSecret;
         return this;
     }
     

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPDFRequest {
-    
-    public GetPDFPathParams pathParams;
-    public GetPDFRequest withPathParams(GetPDFPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the check
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=check_id")
+    public String checkId;
+    public GetPDFRequest withCheckId(String checkId) {
+        this.checkId = checkId;
         return this;
     }
     
-    
-    public GetPDFQueryParams queryParams;
-    public GetPDFRequest withQueryParams(GetPDFQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Used to specify the language for the PDF, if not specified the PDF will be downloaded in Spanish.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public String lang;
+    public GetPDFRequest withLang(String lang) {
+        this.lang = lang;
         return this;
     }
     

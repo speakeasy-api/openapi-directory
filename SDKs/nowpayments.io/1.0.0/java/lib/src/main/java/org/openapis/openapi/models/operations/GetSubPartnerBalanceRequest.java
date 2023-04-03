@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSubPartnerBalanceRequest {
-    
-    public GetSubPartnerBalancePathParams pathParams;
-    public GetSubPartnerBalanceRequest withPathParams(GetSubPartnerBalancePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSubPartnerBalanceRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetSubPartnerBalanceHeaders headers;
-    public GetSubPartnerBalanceRequest withHeaders(GetSubPartnerBalanceHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public GetSubPartnerBalanceRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

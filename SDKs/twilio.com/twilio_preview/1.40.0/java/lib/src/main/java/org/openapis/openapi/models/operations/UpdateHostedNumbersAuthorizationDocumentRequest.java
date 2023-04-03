@@ -7,31 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateHostedNumbersAuthorizationDocumentRequest {
-    
-    public UpdateHostedNumbersAuthorizationDocumentPathParams pathParams;
-    public UpdateHostedNumbersAuthorizationDocumentRequest withPathParams(UpdateHostedNumbersAuthorizationDocumentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateHostedNumbersAuthorizationDocumentUpdateHostedNumbersAuthorizationDocumentRequest request;
-    public UpdateHostedNumbersAuthorizationDocumentRequest withRequest(UpdateHostedNumbersAuthorizationDocumentUpdateHostedNumbersAuthorizationDocumentRequest request) {
-        this.request = request;
+    public UpdateHostedNumbersAuthorizationDocumentUpdateHostedNumbersAuthorizationDocumentRequest requestBody;
+    public UpdateHostedNumbersAuthorizationDocumentRequest withRequestBody(UpdateHostedNumbersAuthorizationDocumentUpdateHostedNumbersAuthorizationDocumentRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateHostedNumbersAuthorizationDocumentSecurity security;
-    public UpdateHostedNumbersAuthorizationDocumentRequest withSecurity(UpdateHostedNumbersAuthorizationDocumentSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateHostedNumbersAuthorizationDocumentRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateHostedNumbersAuthorizationDocumentRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

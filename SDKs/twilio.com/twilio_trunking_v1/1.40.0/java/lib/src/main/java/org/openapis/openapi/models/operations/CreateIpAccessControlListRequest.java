@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateIpAccessControlListRequest {
-    
-    public CreateIpAccessControlListPathParams pathParams;
-    public CreateIpAccessControlListRequest withPathParams(CreateIpAccessControlListPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateIpAccessControlListCreateIpAccessControlListRequest request;
-    public CreateIpAccessControlListRequest withRequest(CreateIpAccessControlListCreateIpAccessControlListRequest request) {
-        this.request = request;
+    public CreateIpAccessControlListCreateIpAccessControlListRequest requestBody;
+    public CreateIpAccessControlListRequest withRequestBody(CreateIpAccessControlListCreateIpAccessControlListRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateIpAccessControlListSecurity security;
-    public CreateIpAccessControlListRequest withSecurity(CreateIpAccessControlListSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateIpAccessControlListRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Trunk to associate the IP Access Control List with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TrunkSid")
+    public String trunkSid;
+    public CreateIpAccessControlListRequest withTrunkSid(String trunkSid) {
+        this.trunkSid = trunkSid;
         return this;
     }
     

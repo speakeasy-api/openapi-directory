@@ -7,10 +7,10 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VerifyBioUsingPOSTRequest {
-    
-    public VerifyBioUsingPOSTHeaders headers;
-    public VerifyBioUsingPOSTRequest withHeaders(VerifyBioUsingPOSTHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public VerifyBioUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
@@ -18,16 +18,9 @@ public class VerifyBioUsingPOSTRequest {
      * createHidBiometricRequest
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateHidBiometricRequest request;
-    public VerifyBioUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.CreateHidBiometricRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public VerifyBioUsingPOSTSecurity security;
-    public VerifyBioUsingPOSTRequest withSecurity(VerifyBioUsingPOSTSecurity security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.CreateHidBiometricRequest createHidBiometricRequest;
+    public VerifyBioUsingPOSTRequest withCreateHidBiometricRequest(org.openapis.openapi.models.shared.CreateHidBiometricRequest createHidBiometricRequest) {
+        this.createHidBiometricRequest = createHidBiometricRequest;
         return this;
     }
     

@@ -5,10 +5,9 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesCreateSecurity;
-import org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesCreatePathParams;
-import org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesCreateQueryParams;
 import org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesCreateRequest;
 import org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.JobTemplate;
 import org.openapis.openapi.models.shared.JobConfig;
 import org.openapis.openapi.models.shared.SpriteSheet;
@@ -49,10 +48,7 @@ import org.openapis.openapi.models.shared.AudioChannel;
 import org.openapis.openapi.models.shared.AudioChannelInput;
 import org.openapis.openapi.models.shared.EditAtom;
 import org.openapis.openapi.models.shared.AdBreak;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -61,990 +57,716 @@ public class Application {
                 .build();
 
             TranscoderProjectsLocationsJobTemplatesCreateRequest req = new TranscoderProjectsLocationsJobTemplatesCreateRequest() {{
-                security = new TranscoderProjectsLocationsJobTemplatesCreateSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new TranscoderProjectsLocationsJobTemplatesCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new TranscoderProjectsLocationsJobTemplatesCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    jobTemplateId = "corrupti";
-                    key = "illum";
-                    oauthToken = "vel";
-                    prettyPrint = false;
-                    quotaUser = "error";
-                    uploadType = "deserunt";
-                    uploadProtocol = "suscipit";
-                }};
-                request = new JobTemplate() {{
+                dollarXgafv = "2";
+                jobTemplate = new JobTemplate() {{
                     config = new JobConfig() {{
                         adBreaks = new org.openapis.openapi.models.shared.AdBreak[]{{
                             add(new AdBreak() {{
-                                startTimeOffset = "magnam";
+                                startTimeOffset = "distinctio";
                             }}),
                             add(new AdBreak() {{
-                                startTimeOffset = "debitis";
+                                startTimeOffset = "quibusdam";
+                            }}),
+                            add(new AdBreak() {{
+                                startTimeOffset = "unde";
                             }}),
                         }};
                         editList = new org.openapis.openapi.models.shared.EditAtom[]{{
                             add(new EditAtom() {{
-                                endTimeOffset = "delectus";
+                                endTimeOffset = "corrupti";
                                 inputs = new String[]{{
+                                    add("vel"),
+                                    add("error"),
+                                    add("deserunt"),
                                     add("suscipit"),
-                                    add("molestiae"),
                                 }};
-                                key = "minus";
-                                startTimeOffset = "placeat";
+                                key = "iure";
+                                startTimeOffset = "magnam";
+                            }}),
+                            add(new EditAtom() {{
+                                endTimeOffset = "debitis";
+                                inputs = new String[]{{
+                                    add("delectus"),
+                                }};
+                                key = "tempora";
+                                startTimeOffset = "suscipit";
+                            }}),
+                            add(new EditAtom() {{
+                                endTimeOffset = "molestiae";
+                                inputs = new String[]{{
+                                    add("placeat"),
+                                    add("voluptatum"),
+                                    add("iusto"),
+                                    add("excepturi"),
+                                }};
+                                key = "nisi";
+                                startTimeOffset = "recusandae";
+                            }}),
+                            add(new EditAtom() {{
+                                endTimeOffset = "temporibus";
+                                inputs = new String[]{{
+                                    add("quis"),
+                                }};
+                                key = "veritatis";
+                                startTimeOffset = "deserunt";
                             }}),
                         }};
                         elementaryStreams = new org.openapis.openapi.models.shared.ElementaryStream[]{{
                             add(new ElementaryStream() {{
                                 audioStream = new AudioStream() {{
-                                    bitrateBps = 479977;
-                                    channelCount = 568045;
+                                    bitrateBps = 368241;
+                                    channelCount = 832620;
                                     channelLayout = new String[]{{
-                                        add("recusandae"),
-                                        add("temporibus"),
+                                        add("quo"),
+                                        add("odit"),
+                                        add("at"),
+                                        add("at"),
                                     }};
-                                    codec = "ab";
+                                    codec = "maiores";
                                     mapping = new org.openapis.openapi.models.shared.AudioAtom[]{{
                                         add(new AudioAtom() {{
                                             channels = new org.openapis.openapi.models.shared.AudioChannel[]{{
                                                 add(new AudioChannel() {{
                                                     inputs = new org.openapis.openapi.models.shared.AudioChannelInput[]{{
                                                         add(new AudioChannelInput() {{
-                                                            channel = 20218;
-                                                            gainDb = 3682.41;
-                                                            key = "repellendus";
-                                                            track = 957156;
+                                                            channel = 461479;
+                                                            gainDb = 5204.78;
+                                                            key = "porro";
+                                                            track = 678880;
                                                         }}),
                                                         add(new AudioChannelInput() {{
-                                                            channel = 778157;
-                                                            gainDb = 1403.5;
-                                                            key = "at";
-                                                            track = 870088;
+                                                            channel = 118274;
+                                                            gainDb = 7206.33;
+                                                            key = "officia";
+                                                            track = 582020;
                                                         }}),
                                                         add(new AudioChannelInput() {{
-                                                            channel = 978619;
-                                                            gainDb = 4736.08;
-                                                            key = "quod";
-                                                            track = 800911;
-                                                        }}),
-                                                    }};
-                                                }}),
-                                            }};
-                                            key = "esse";
-                                        }}),
-                                        add(new AudioAtom() {{
-                                            channels = new org.openapis.openapi.models.shared.AudioChannel[]{{
-                                                add(new AudioChannel() {{
-                                                    inputs = new org.openapis.openapi.models.shared.AudioChannelInput[]{{
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 678880;
-                                                            gainDb = 1182.74;
-                                                            key = "nam";
-                                                            track = 639921;
+                                                            channel = 143353;
+                                                            gainDb = 5373.73;
+                                                            key = "hic";
+                                                            track = 758616;
                                                         }}),
                                                         add(new AudioChannelInput() {{
-                                                            channel = 582020;
-                                                            gainDb = 1433.53;
-                                                            key = "deleniti";
-                                                            track = 944669;
-                                                        }}),
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 758616;
-                                                            gainDb = 5218.48;
-                                                            key = "beatae";
-                                                            track = 414662;
-                                                        }}),
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 473600;
-                                                            gainDb = 2645.55;
-                                                            key = "qui";
-                                                            track = 774234;
+                                                            channel = 521848;
+                                                            gainDb = 1059.07;
+                                                            key = "commodi";
+                                                            track = 473600;
                                                         }}),
                                                     }};
                                                 }}),
                                                 add(new AudioChannel() {{
                                                     inputs = new org.openapis.openapi.models.shared.AudioChannelInput[]{{
                                                         add(new AudioChannelInput() {{
-                                                            channel = 456150;
-                                                            gainDb = 2165.5;
-                                                            key = "excepturi";
-                                                            track = 135218;
-                                                        }}),
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 18789;
-                                                            gainDb = 3241.41;
-                                                            key = "natus";
-                                                            track = 149675;
-                                                        }}),
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 612096;
-                                                            gainDb = 2223.21;
-                                                            key = "natus";
-                                                            track = 386489;
-                                                        }}),
-                                                    }};
-                                                }}),
-                                                add(new AudioChannel() {{
-                                                    inputs = new org.openapis.openapi.models.shared.AudioChannelInput[]{{
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 902599;
-                                                            gainDb = 6818.2;
-                                                            key = "in";
-                                                            track = 359508;
-                                                        }}),
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 613064;
-                                                            gainDb = 4370.32;
-                                                            key = "saepe";
-                                                            track = 697631;
-                                                        }}),
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 99280;
-                                                            gainDb = 602.25;
-                                                            key = "reiciendis";
-                                                            track = 666767;
-                                                        }}),
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 653140;
-                                                            gainDb = 6706.38;
-                                                            key = "dolores";
-                                                            track = 210382;
-                                                        }}),
-                                                    }};
-                                                }}),
-                                            }};
-                                            key = "corporis";
-                                        }}),
-                                    }};
-                                    sampleRateHertz = 128926;
-                                }};
-                                key = "nobis";
-                                textStream = new TextStream() {{
-                                    codec = "enim";
-                                    languageCode = "omnis";
-                                    mapping = new org.openapis.openapi.models.shared.TextAtom[]{{
-                                        add(new TextAtom() {{
-                                            inputs = new org.openapis.openapi.models.shared.TextInput[]{{
-                                                add(new TextInput() {{
-                                                    key = "excepturi";
-                                                    track = 38425;
-                                                }}),
-                                                add(new TextInput() {{
-                                                    key = "iure";
-                                                    track = 634274;
-                                                }}),
-                                            }};
-                                            key = "doloribus";
-                                        }}),
-                                        add(new TextAtom() {{
-                                            inputs = new org.openapis.openapi.models.shared.TextInput[]{{
-                                                add(new TextInput() {{
-                                                    key = "architecto";
-                                                    track = 652790;
-                                                }}),
-                                                add(new TextInput() {{
-                                                    key = "dolorem";
-                                                    track = 635059;
-                                                }}),
-                                                add(new TextInput() {{
-                                                    key = "consequuntur";
-                                                    track = 995300;
-                                                }}),
-                                                add(new TextInput() {{
-                                                    key = "mollitia";
-                                                    track = 581850;
-                                                }}),
-                                            }};
-                                            key = "numquam";
-                                        }}),
-                                    }};
-                                }};
-                                videoStream = new VideoStream() {{
-                                    allowOpenGop = false;
-                                    aqStrength = 4143.69;
-                                    bFrameCount = 466311;
-                                    bPyramid = false;
-                                    bitrateBps = 474697;
-                                    codec = "velit";
-                                    crfLevel = 623510;
-                                    enableTwoPass = false;
-                                    entropyCoder = "quia";
-                                    frameRate = 3380.07;
-                                    gopDuration = "vitae";
-                                    gopFrameCount = 674752;
-                                    heightPixels = 656330;
-                                    pixelFormat = "enim";
-                                    preset = "odit";
-                                    profile = "quo";
-                                    rateControlMode = "sequi";
-                                    tune = "tenetur";
-                                    vbvFullnessBits = 368725;
-                                    vbvSizeBits = 662527;
-                                    widthPixels = 820994;
-                                }};
-                            }}),
-                            add(new ElementaryStream() {{
-                                audioStream = new AudioStream() {{
-                                    bitrateBps = 13571;
-                                    channelCount = 97101;
-                                    channelLayout = new String[]{{
-                                        add("temporibus"),
-                                        add("laborum"),
-                                        add("quasi"),
-                                    }};
-                                    codec = "reiciendis";
-                                    mapping = new org.openapis.openapi.models.shared.AudioAtom[]{{
-                                        add(new AudioAtom() {{
-                                            channels = new org.openapis.openapi.models.shared.AudioChannel[]{{
-                                                add(new AudioChannel() {{
-                                                    inputs = new org.openapis.openapi.models.shared.AudioChannelInput[]{{
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 509624;
-                                                            gainDb = 9767.62;
-                                                            key = "ipsa";
-                                                            track = 604846;
-                                                        }}),
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 451159;
-                                                            gainDb = 7392.64;
-                                                            key = "perferendis";
-                                                            track = 39187;
-                                                        }}),
-                                                    }};
-                                                }}),
-                                                add(new AudioChannel() {{
-                                                    inputs = new org.openapis.openapi.models.shared.AudioChannelInput[]{{
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 282807;
-                                                            gainDb = 9795.87;
-                                                            key = "dicta";
-                                                            track = 359444;
-                                                        }}),
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 296140;
-                                                            gainDb = 4808.94;
-                                                            key = "dicta";
-                                                            track = 688661;
-                                                        }}),
-                                                    }};
-                                                }}),
-                                                add(new AudioChannel() {{
-                                                    inputs = new org.openapis.openapi.models.shared.AudioChannelInput[]{{
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 880476;
-                                                            gainDb = 4142.63;
-                                                            key = "repudiandae";
-                                                            track = 64147;
-                                                        }}),
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 216822;
-                                                            gainDb = 6924.72;
-                                                            key = "molestias";
-                                                            track = 566602;
-                                                        }}),
-                                                    }};
-                                                }}),
-                                                add(new AudioChannel() {{
-                                                    inputs = new org.openapis.openapi.models.shared.AudioChannelInput[]{{
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 265389;
-                                                            gainDb = 5089.69;
-                                                            key = "rem";
-                                                            track = 916723;
-                                                        }}),
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 93940;
-                                                            gainDb = 9211.58;
-                                                            key = "sint";
-                                                            track = 83112;
-                                                        }}),
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 929297;
-                                                            gainDb = 2777.18;
-                                                            key = "enim";
-                                                            track = 9356;
-                                                        }}),
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 667411;
-                                                            gainDb = 8423.42;
-                                                            key = "explicabo";
-                                                            track = 647174;
-                                                        }}),
-                                                    }};
-                                                }}),
-                                            }};
-                                            key = "distinctio";
-                                        }}),
-                                        add(new AudioAtom() {{
-                                            channels = new org.openapis.openapi.models.shared.AudioChannel[]{{
-                                                add(new AudioChannel() {{
-                                                    inputs = new org.openapis.openapi.models.shared.AudioChannelInput[]{{
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 264730;
-                                                            gainDb = 1831.91;
-                                                            key = "aliquid";
-                                                            track = 586513;
-                                                        }}),
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 552822;
-                                                            gainDb = 201.07;
-                                                            key = "magni";
-                                                            track = 828940;
-                                                        }}),
-                                                    }};
-                                                }}),
-                                                add(new AudioChannel() {{
-                                                    inputs = new org.openapis.openapi.models.shared.AudioChannelInput[]{{
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 4695;
-                                                            gainDb = 1464.41;
-                                                            key = "dolorum";
-                                                            track = 569618;
-                                                        }}),
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 270008;
-                                                            gainDb = 7037.37;
-                                                            key = "tempore";
-                                                            track = 288476;
-                                                        }}),
-                                                    }};
-                                                }}),
-                                                add(new AudioChannel() {{
-                                                    inputs = new org.openapis.openapi.models.shared.AudioChannelInput[]{{
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 433288;
-                                                            gainDb = 2487.53;
-                                                            key = "eligendi";
-                                                            track = 576157;
-                                                        }}),
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 396098;
-                                                            gainDb = 5920.42;
-                                                            key = "necessitatibus";
-                                                            track = 572252;
-                                                        }}),
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 638921;
-                                                            gainDb = 2230.81;
-                                                            key = "debitis";
-                                                            track = 952749;
-                                                        }}),
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 680056;
-                                                            gainDb = 4471.25;
-                                                            key = "in";
-                                                            track = 846409;
-                                                        }}),
-                                                    }};
-                                                }}),
-                                                add(new AudioChannel() {{
-                                                    inputs = new org.openapis.openapi.models.shared.AudioChannelInput[]{{
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 699479;
-                                                            gainDb = 1162.02;
-                                                            key = "magnam";
-                                                            track = 767024;
-                                                        }}),
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 813798;
-                                                            gainDb = 4118.2;
-                                                            key = "aliquid";
-                                                            track = 675439;
-                                                        }}),
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 881104;
-                                                            gainDb = 2497.96;
-                                                            key = "occaecati";
-                                                            track = 313218;
-                                                        }}),
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 881736;
-                                                            gainDb = 9654.17;
-                                                            key = "quidem";
-                                                            track = 588465;
-                                                        }}),
-                                                    }};
-                                                }}),
-                                            }};
-                                            key = "nam";
-                                        }}),
-                                        add(new AudioAtom() {{
-                                            channels = new org.openapis.openapi.models.shared.AudioChannel[]{{
-                                                add(new AudioChannel() {{
-                                                    inputs = new org.openapis.openapi.models.shared.AudioChannelInput[]{{
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 533206;
-                                                            gainDb = 9560.84;
-                                                            key = "amet";
-                                                            track = 643990;
-                                                        }}),
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 394869;
-                                                            gainDb = 4238.55;
-                                                            key = "natus";
-                                                            track = 606393;
-                                                        }}),
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 474867;
-                                                            gainDb = 191.93;
-                                                            key = "nihil";
-                                                            track = 301575;
-                                                        }}),
-                                                    }};
-                                                }}),
-                                                add(new AudioChannel() {{
-                                                    inputs = new org.openapis.openapi.models.shared.AudioChannelInput[]{{
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 660174;
-                                                            gainDb = 2879.91;
-                                                            key = "labore";
-                                                            track = 383462;
-                                                        }}),
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 618016;
-                                                            gainDb = 7491.7;
-                                                            key = "eum";
-                                                            track = 878453;
-                                                        }}),
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 135474;
-                                                            gainDb = 1028.63;
-                                                            key = "magnam";
-                                                            track = 92373;
-                                                        }}),
-                                                    }};
-                                                }}),
-                                                add(new AudioChannel() {{
-                                                    inputs = new org.openapis.openapi.models.shared.AudioChannelInput[]{{
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 354047;
-                                                            gainDb = 5908.73;
-                                                            key = "quos";
-                                                            track = 574325;
-                                                        }}),
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 33625;
-                                                            gainDb = 6532.01;
-                                                            key = "reiciendis";
-                                                            track = 652103;
-                                                        }}),
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 320997;
-                                                            gainDb = 4314.18;
-                                                            key = "dolor";
-                                                            track = 896547;
-                                                        }}),
-                                                    }};
-                                                }}),
-                                            }};
-                                            key = "odit";
-                                        }}),
-                                        add(new AudioAtom() {{
-                                            channels = new org.openapis.openapi.models.shared.AudioChannel[]{{
-                                                add(new AudioChannel() {{
-                                                    inputs = new org.openapis.openapi.models.shared.AudioChannelInput[]{{
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 435865;
-                                                            gainDb = 9840.43;
-                                                            key = "debitis";
-                                                            track = 260341;
-                                                        }}),
-                                                    }};
-                                                }}),
-                                                add(new AudioChannel() {{
-                                                    inputs = new org.openapis.openapi.models.shared.AudioChannelInput[]{{
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 537023;
-                                                            gainDb = 7038.89;
-                                                            key = "in";
-                                                            track = 100226;
-                                                        }}),
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 99569;
-                                                            gainDb = 9194.83;
-                                                            key = "ullam";
-                                                            track = 714242;
-                                                        }}),
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 469249;
-                                                            gainDb = 9988.48;
-                                                            key = "quibusdam";
-                                                            track = 149448;
-                                                        }}),
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 904648;
-                                                            gainDb = 8681.26;
-                                                            key = "accusantium";
-                                                            track = 162493;
-                                                        }}),
-                                                    }};
-                                                }}),
-                                            }};
-                                            key = "praesentium";
-                                        }}),
-                                    }};
-                                    sampleRateHertz = 615560;
-                                }};
-                                key = "magni";
-                                textStream = new TextStream() {{
-                                    codec = "sunt";
-                                    languageCode = "quo";
-                                    mapping = new org.openapis.openapi.models.shared.TextAtom[]{{
-                                        add(new TextAtom() {{
-                                            inputs = new org.openapis.openapi.models.shared.TextInput[]{{
-                                                add(new TextInput() {{
-                                                    key = "maxime";
-                                                    track = 411397;
-                                                }}),
-                                                add(new TextInput() {{
-                                                    key = "excepturi";
-                                                    track = 139972;
-                                                }}),
-                                                add(new TextInput() {{
-                                                    key = "ea";
-                                                    track = 33222;
-                                                }}),
-                                                add(new TextInput() {{
-                                                    key = "ab";
-                                                    track = 982575;
-                                                }}),
-                                            }};
-                                            key = "quidem";
-                                        }}),
-                                        add(new TextAtom() {{
-                                            inputs = new org.openapis.openapi.models.shared.TextInput[]{{
-                                                add(new TextInput() {{
-                                                    key = "voluptate";
-                                                    track = 420075;
-                                                }}),
-                                                add(new TextInput() {{
-                                                    key = "nam";
-                                                    track = 50588;
-                                                }}),
-                                            }};
-                                            key = "pariatur";
-                                        }}),
-                                        add(new TextAtom() {{
-                                            inputs = new org.openapis.openapi.models.shared.TextInput[]{{
-                                                add(new TextInput() {{
-                                                    key = "voluptatibus";
-                                                    track = 16627;
-                                                }}),
-                                                add(new TextInput() {{
-                                                    key = "fugiat";
-                                                    track = 230742;
-                                                }}),
-                                            }};
-                                            key = "aut";
-                                        }}),
-                                        add(new TextAtom() {{
-                                            inputs = new org.openapis.openapi.models.shared.TextInput[]{{
-                                                add(new TextInput() {{
-                                                    key = "corporis";
-                                                    track = 944124;
-                                                }}),
-                                                add(new TextInput() {{
-                                                    key = "libero";
-                                                    track = 749999;
-                                                }}),
-                                                add(new TextInput() {{
-                                                    key = "dolores";
-                                                    track = 339404;
-                                                }}),
-                                                add(new TextInput() {{
-                                                    key = "totam";
-                                                    track = 489549;
-                                                }}),
-                                            }};
-                                            key = "eaque";
-                                        }}),
-                                    }};
-                                }};
-                                videoStream = new VideoStream() {{
-                                    allowOpenGop = false;
-                                    aqStrength = 3389.85;
-                                    bFrameCount = 199996;
-                                    bPyramid = false;
-                                    bitrateBps = 179490;
-                                    codec = "perferendis";
-                                    crfLevel = 170986;
-                                    enableTwoPass = false;
-                                    entropyCoder = "minus";
-                                    frameRate = 4634.51;
-                                    gopDuration = "dolor";
-                                    gopFrameCount = 874573;
-                                    heightPixels = 345352;
-                                    pixelFormat = "hic";
-                                    preset = "recusandae";
-                                    profile = "omnis";
-                                    rateControlMode = "facilis";
-                                    tune = "perspiciatis";
-                                    vbvFullnessBits = 31838;
-                                    vbvSizeBits = 783645;
-                                    widthPixels = 164694;
-                                }};
-                            }}),
-                            add(new ElementaryStream() {{
-                                audioStream = new AudioStream() {{
-                                    bitrateBps = 500026;
-                                    channelCount = 621479;
-                                    channelLayout = new String[]{{
-                                        add("occaecati"),
-                                    }};
-                                    codec = "rerum";
-                                    mapping = new org.openapis.openapi.models.shared.AudioAtom[]{{
-                                        add(new AudioAtom() {{
-                                            channels = new org.openapis.openapi.models.shared.AudioChannel[]{{
-                                                add(new AudioChannel() {{
-                                                    inputs = new org.openapis.openapi.models.shared.AudioChannelInput[]{{
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 267262;
-                                                            gainDb = 6139.66;
-                                                            key = "dolorum";
-                                                            track = 535633;
-                                                        }}),
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 864282;
-                                                            gainDb = 5899.1;
-                                                            key = "nobis";
-                                                            track = 730122;
-                                                        }}),
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 964490;
-                                                            gainDb = 3119.45;
-                                                            key = "quos";
-                                                            track = 398221;
-                                                        }}),
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 212390;
-                                                            gainDb = 2098.43;
-                                                            key = "dolor";
-                                                            track = 186193;
-                                                        }}),
-                                                    }};
-                                                }}),
-                                                add(new AudioChannel() {{
-                                                    inputs = new org.openapis.openapi.models.shared.AudioChannelInput[]{{
-                                                        add(new AudioChannelInput() {{
-                                                            channel = 944373;
-                                                            gainDb = 5695.74;
+                                                            channel = 186332;
+                                                            gainDb = 7742.34;
                                                             key = "cum";
-                                                            track = 452109;
+                                                            track = 456150;
+                                                        }}),
+                                                        add(new AudioChannelInput() {{
+                                                            channel = 216550;
+                                                            gainDb = 5684.34;
+                                                            key = "aspernatur";
+                                                            track = 18789;
                                                         }}),
                                                     }};
                                                 }}),
                                                 add(new AudioChannel() {{
                                                     inputs = new org.openapis.openapi.models.shared.AudioChannelInput[]{{
                                                         add(new AudioChannelInput() {{
-                                                            channel = 970237;
-                                                            gainDb = 2274.14;
-                                                            key = "dolorum";
-                                                            track = 254356;
+                                                            channel = 617636;
+                                                            gainDb = 1496.75;
+                                                            key = "iste";
+                                                            track = 222321;
                                                         }}),
                                                         add(new AudioChannelInput() {{
-                                                            channel = 85295;
-                                                            gainDb = 580.29;
-                                                            key = "ipsa";
-                                                            track = 434417;
+                                                            channel = 616934;
+                                                            gainDb = 3864.89;
+                                                            key = "hic";
+                                                            track = 902599;
                                                         }}),
                                                     }};
                                                 }}),
                                                 add(new AudioChannel() {{
                                                     inputs = new org.openapis.openapi.models.shared.AudioChannelInput[]{{
                                                         add(new AudioChannelInput() {{
-                                                            channel = 311796;
-                                                            gainDb = 8810.05;
-                                                            key = "quidem";
-                                                            track = 976405;
+                                                            channel = 449950;
+                                                            gainDb = 3595.08;
+                                                            key = "iste";
+                                                            track = 437032;
                                                         }}),
                                                         add(new AudioChannelInput() {{
-                                                            channel = 377752;
-                                                            gainDb = 6176.58;
-                                                            key = "eos";
-                                                            track = 542499;
+                                                            channel = 902349;
+                                                            gainDb = 6976.31;
+                                                            key = "architecto";
+                                                            track = 60225;
+                                                        }}),
+                                                        add(new AudioChannelInput() {{
+                                                            channel = 969810;
+                                                            gainDb = 6667.67;
+                                                            key = "mollitia";
+                                                            track = 670638;
                                                         }}),
                                                     }};
                                                 }}),
                                             }};
-                                            key = "sit";
+                                            key = "dolores";
+                                        }}),
+                                        add(new AudioAtom() {{
+                                            channels = new org.openapis.openapi.models.shared.AudioChannel[]{{
+                                                add(new AudioChannel() {{
+                                                    inputs = new org.openapis.openapi.models.shared.AudioChannelInput[]{{
+                                                        add(new AudioChannelInput() {{
+                                                            channel = 128926;
+                                                            gainDb = 7506.86;
+                                                            key = "enim";
+                                                            track = 607831;
+                                                        }}),
+                                                        add(new AudioChannelInput() {{
+                                                            channel = 363711;
+                                                            gainDb = 3250.47;
+                                                            key = "excepturi";
+                                                            track = 38425;
+                                                        }}),
+                                                    }};
+                                                }}),
+                                            }};
+                                            key = "iure";
                                         }}),
                                     }};
-                                    sampleRateHertz = 854614;
+                                    sampleRateHertz = 634274;
                                 }};
-                                key = "ab";
+                                key = "doloribus";
                                 textStream = new TextStream() {{
-                                    codec = "soluta";
-                                    languageCode = "dolorum";
+                                    codec = "sapiente";
+                                    languageCode = "architecto";
                                     mapping = new org.openapis.openapi.models.shared.TextAtom[]{{
                                         add(new TextAtom() {{
                                             inputs = new org.openapis.openapi.models.shared.TextInput[]{{
                                                 add(new TextInput() {{
-                                                    key = "dolorum";
-                                                    track = 536579;
-                                                }}),
-                                                add(new TextInput() {{
-                                                    key = "omnis";
-                                                    track = 896672;
+                                                    key = "culpa";
+                                                    track = 161309;
                                                 }}),
                                             }};
-                                            key = "distinctio";
+                                            key = "repellat";
                                         }}),
                                         add(new TextAtom() {{
                                             inputs = new org.openapis.openapi.models.shared.TextInput[]{{
                                                 add(new TextInput() {{
-                                                    key = "nihil";
-                                                    track = 216897;
+                                                    key = "occaecati";
+                                                    track = 253291;
                                                 }}),
                                                 add(new TextInput() {{
-                                                    key = "voluptate";
-                                                    track = 663078;
+                                                    key = "commodi";
+                                                    track = 466311;
                                                 }}),
                                                 add(new TextInput() {{
-                                                    key = "saepe";
-                                                    track = 263322;
-                                                }}),
-                                                add(new TextInput() {{
-                                                    key = "aspernatur";
-                                                    track = 20651;
+                                                    key = "molestiae";
+                                                    track = 244425;
                                                 }}),
                                             }};
-                                            key = "amet";
+                                            key = "error";
+                                        }}),
+                                        add(new TextAtom() {{
+                                            inputs = new org.openapis.openapi.models.shared.TextInput[]{{
+                                                add(new TextInput() {{
+                                                    key = "quis";
+                                                    track = 110375;
+                                                }}),
+                                            }};
+                                            key = "laborum";
                                         }}),
                                     }};
                                 }};
                                 videoStream = new VideoStream() {{
                                     allowOpenGop = false;
-                                    aqStrength = 7583.79;
-                                    bFrameCount = 881586;
+                                    aqStrength = 6563.3;
+                                    bFrameCount = 317202;
                                     bPyramid = false;
-                                    bitrateBps = 320017;
-                                    codec = "saepe";
-                                    crfLevel = 383464;
+                                    bitrateBps = 138183;
+                                    codec = "quo";
+                                    crfLevel = 196582;
                                     enableTwoPass = false;
-                                    entropyCoder = "deserunt";
-                                    frameRate = 5883.17;
-                                    gopDuration = "minima";
-                                    gopFrameCount = 831049;
-                                    heightPixels = 519711;
-                                    pixelFormat = "similique";
-                                    preset = "alias";
-                                    profile = "at";
-                                    rateControlMode = "quaerat";
-                                    tune = "tempora";
-                                    vbvFullnessBits = 425451;
-                                    vbvSizeBits = 798047;
-                                    widthPixels = 885338;
+                                    entropyCoder = "tenetur";
+                                    frameRate = 3687.25;
+                                    gopDuration = "id";
+                                    gopFrameCount = 820994;
+                                    heightPixels = 13571;
+                                    pixelFormat = "quasi";
+                                    preset = "error";
+                                    profile = "temporibus";
+                                    rateControlMode = "laborum";
+                                    tune = "quasi";
+                                    vbvFullnessBits = 971945;
+                                    vbvSizeBits = 976460;
+                                    widthPixels = 878194;
                                 }};
                             }}),
                         }};
                         inputs = new org.openapis.openapi.models.shared.Input[]{{
                             add(new Input() {{
-                                key = "dolorum";
+                                key = "praesentium";
                                 preprocessingConfig = new PreprocessingConfig() {{
                                     audio = new Audio() {{
                                         highBoost = false;
                                         lowBoost = false;
-                                        lufs = 9527.92;
+                                        lufs = 9767.62;
                                     }};
                                     color = new Color() {{
-                                        brightness = 4561.3;
-                                        contrast = 6874.88;
-                                        saturation = 4834.09;
+                                        brightness = 557.14;
+                                        contrast = 6048.46;
+                                        saturation = 4511.59;
                                     }};
                                     crop = new Crop() {{
-                                        bottomPixels = 215507;
-                                        leftPixels = 788740;
-                                        rightPixels = 947371;
-                                        topPixels = 229442;
+                                        bottomPixels = 739264;
+                                        leftPixels = 19987;
+                                        rightPixels = 39187;
+                                        topPixels = 441711;
                                     }};
                                     deblock = new Deblock() {{
                                         enabled = false;
-                                        strength = 7308.56;
+                                        strength = 2828.07;
                                     }};
                                     denoise = new Denoise() {{
-                                        strength = 8802.98;
-                                        tune = "numquam";
+                                        strength = 9795.87;
+                                        tune = "dicta";
                                     }};
                                     pad = new Pad() {{
-                                        bottomPixels = 313692;
-                                        leftPixels = 213312;
-                                        rightPixels = 957451;
-                                        topPixels = 518201;
+                                        bottomPixels = 359444;
+                                        leftPixels = 296140;
+                                        rightPixels = 480894;
+                                        topPixels = 118727;
                                     }};
                                 }};
-                                uri = "http://alienated-quality.biz";
+                                uri = "https://frugal-sympathy.info";
+                            }}),
+                            add(new Input() {{
+                                key = "repudiandae";
+                                preprocessingConfig = new PreprocessingConfig() {{
+                                    audio = new Audio() {{
+                                        highBoost = false;
+                                        lowBoost = false;
+                                        lufs = 641.47;
+                                    }};
+                                    color = new Color() {{
+                                        brightness = 2168.22;
+                                        contrast = 6924.72;
+                                        saturation = 5651.89;
+                                    }};
+                                    crop = new Crop() {{
+                                        bottomPixels = 566602;
+                                        leftPixels = 865103;
+                                        rightPixels = 265389;
+                                        topPixels = 508969;
+                                    }};
+                                    deblock = new Deblock() {{
+                                        enabled = false;
+                                        strength = 5232.48;
+                                    }};
+                                    denoise = new Denoise() {{
+                                        strength = 9167.23;
+                                        tune = "quasi";
+                                    }};
+                                    pad = new Pad() {{
+                                        bottomPixels = 921158;
+                                        leftPixels = 575947;
+                                        rightPixels = 83112;
+                                        topPixels = 929297;
+                                    }};
+                                }};
+                                uri = "http://fruitful-adjective.net";
                             }}),
                         }};
                         manifests = new org.openapis.openapi.models.shared.Manifest[]{{
                             add(new Manifest() {{
-                                fileName = "vel";
+                                fileName = "explicabo";
                                 muxStreams = new String[]{{
-                                    add("voluptas"),
-                                    add("deserunt"),
-                                    add("quam"),
+                                    add("distinctio"),
+                                    add("quibusdam"),
+                                    add("labore"),
                                 }};
                                 type = "MANIFEST_TYPE_UNSPECIFIED";
+                            }}),
+                            add(new Manifest() {{
+                                fileName = "qui";
+                                muxStreams = new String[]{{
+                                    add("cupiditate"),
+                                    add("quos"),
+                                }};
+                                type = "MANIFEST_TYPE_UNSPECIFIED";
+                            }}),
+                            add(new Manifest() {{
+                                fileName = "magni";
+                                muxStreams = new String[]{{
+                                    add("ipsam"),
+                                    add("alias"),
+                                    add("fugit"),
+                                    add("dolorum"),
+                                }};
+                                type = "HLS";
+                            }}),
+                            add(new Manifest() {{
+                                fileName = "tempora";
+                                muxStreams = new String[]{{
+                                    add("tempore"),
+                                    add("labore"),
+                                    add("delectus"),
+                                }};
+                                type = "HLS";
                             }}),
                         }};
                         muxStreams = new org.openapis.openapi.models.shared.MuxStream[]{{
                             add(new MuxStream() {{
-                                container = "qui";
+                                container = "eligendi";
                                 elementaryStreams = new String[]{{
-                                    add("maxime"),
-                                    add("pariatur"),
-                                    add("soluta"),
+                                    add("aliquid"),
+                                    add("provident"),
+                                    add("necessitatibus"),
                                 }};
                                 encryption = new Encryption() {{
                                     aes128 = new Aes128Encryption() {{
-                                        keyUri = "dicta";
+                                        keyUri = "sint";
                                     }};
-                                    iv = "laborum";
-                                    key = "totam";
+                                    iv = "officia";
+                                    key = "dolor";
                                     mpegCenc = new MpegCommonEncryption() {{
-                                        keyId = "incidunt";
-                                        scheme = "aspernatur";
+                                        keyId = "debitis";
+                                        scheme = "a";
                                     }};
                                     sampleAes = new SampleAesEncryption() {{
-                                        keyUri = "dolores";
+                                        keyUri = "dolorum";
                                     }};
                                 }};
-                                fileName = "distinctio";
-                                key = "facilis";
+                                fileName = "in";
+                                key = "in";
                                 segmentSettings = new SegmentSettings() {{
                                     individualSegments = false;
-                                    segmentDuration = "aliquid";
-                                }};
-                            }}),
-                            add(new MuxStream() {{
-                                container = "quam";
-                                elementaryStreams = new String[]{{
-                                    add("temporibus"),
-                                    add("qui"),
-                                    add("neque"),
-                                }};
-                                encryption = new Encryption() {{
-                                    aes128 = new Aes128Encryption() {{
-                                        keyUri = "fugit";
-                                    }};
-                                    iv = "magni";
-                                    key = "odio";
-                                    mpegCenc = new MpegCommonEncryption() {{
-                                        keyId = "sunt";
-                                        scheme = "ullam";
-                                    }};
-                                    sampleAes = new SampleAesEncryption() {{
-                                        keyUri = "nam";
-                                    }};
-                                }};
-                                fileName = "hic";
-                                key = "voluptatem";
-                                segmentSettings = new SegmentSettings() {{
-                                    individualSegments = false;
-                                    segmentDuration = "cumque";
+                                    segmentDuration = "illum";
                                 }};
                             }}),
                         }};
                         output = new Output() {{
-                            uri = "https://showy-bomb.org";
+                            uri = "https://right-burn.biz";
                         }};
                         overlays = new org.openapis.openapi.models.shared.Overlay[]{{
                             add(new Overlay() {{
                                 animations = new org.openapis.openapi.models.shared.Animation[]{{
                                     add(new Animation() {{
                                         animationEnd = new AnimationEnd() {{
-                                            startTimeOffset = "nobis";
+                                            startTimeOffset = "ea";
                                         }};
                                         animationFade = new AnimationFade() {{
-                                            endTimeOffset = "quos";
+                                            endTimeOffset = "aliquid";
                                             fadeType = "FADE_OUT";
-                                            startTimeOffset = "cupiditate";
+                                            startTimeOffset = "accusamus";
                                             xy = new NormalizedCoordinate() {{
-                                                x = 456.14;
-                                                y = 9619.37;
+                                                x = 2497.96;
+                                                y = 5812.73;
                                             }};
                                         }};
                                         animationStatic = new AnimationStatic() {{
-                                            startTimeOffset = "dolorem";
+                                            startTimeOffset = "enim";
                                             xy = new NormalizedCoordinate() {{
-                                                x = 2921.47;
-                                                y = 2869.15;
+                                                x = 8817.36;
+                                                y = 9654.17;
+                                            }};
+                                        }};
+                                    }}),
+                                    add(new Animation() {{
+                                        animationEnd = new AnimationEnd() {{
+                                            startTimeOffset = "quidem";
+                                        }};
+                                        animationFade = new AnimationFade() {{
+                                            endTimeOffset = "provident";
+                                            fadeType = "FADE_OUT";
+                                            startTimeOffset = "id";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 5013.24;
+                                                y = 5332.06;
+                                            }};
+                                        }};
+                                        animationStatic = new AnimationStatic() {{
+                                            startTimeOffset = "sapiente";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 2305.33;
+                                                y = 6439.9;
+                                            }};
+                                        }};
+                                    }}),
+                                    add(new Animation() {{
+                                        animationEnd = new AnimationEnd() {{
+                                            startTimeOffset = "nisi";
+                                        }};
+                                        animationFade = new AnimationFade() {{
+                                            endTimeOffset = "vel";
+                                            fadeType = "FADE_IN";
+                                            startTimeOffset = "omnis";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 4748.67;
+                                                y = 191.93;
+                                            }};
+                                        }};
+                                        animationStatic = new AnimationStatic() {{
+                                            startTimeOffset = "nihil";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 3015.75;
+                                                y = 7160.75;
+                                            }};
+                                        }};
+                                    }}),
+                                    add(new Animation() {{
+                                        animationEnd = new AnimationEnd() {{
+                                            startTimeOffset = "id";
+                                        }};
+                                        animationFade = new AnimationFade() {{
+                                            endTimeOffset = "labore";
+                                            fadeType = "FADE_TYPE_UNSPECIFIED";
+                                            startTimeOffset = "suscipit";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 6180.16;
+                                                y = 7491.7;
+                                            }};
+                                        }};
+                                        animationStatic = new AnimationStatic() {{
+                                            startTimeOffset = "eum";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 8784.53;
+                                                y = 1354.74;
                                             }};
                                         }};
                                     }}),
                                 }};
                                 image = new Image() {{
-                                    alpha = 2408.29;
+                                    alpha = 1028.63;
                                     resolution = new NormalizedCoordinate() {{
-                                        x = 6772.63;
-                                        y = 1002.94;
+                                        x = 2982.82;
+                                        y = 923.73;
                                     }};
-                                    uri = "http://afraid-merit.org";
+                                    uri = "https://grizzled-nest.name";
+                                }};
+                            }}),
+                            add(new Overlay() {{
+                                animations = new org.openapis.openapi.models.shared.Animation[]{{
+                                    add(new Animation() {{
+                                        animationEnd = new AnimationEnd() {{
+                                            startTimeOffset = "accusantium";
+                                        }};
+                                        animationFade = new AnimationFade() {{
+                                            endTimeOffset = "mollitia";
+                                            fadeType = "FADE_OUT";
+                                            startTimeOffset = "mollitia";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 3209.97;
+                                                y = 4314.18;
+                                            }};
+                                        }};
+                                        animationStatic = new AnimationStatic() {{
+                                            startTimeOffset = "dolor";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 8965.47;
+                                                y = 1412.64;
+                                            }};
+                                        }};
+                                    }}),
+                                    add(new Animation() {{
+                                        animationEnd = new AnimationEnd() {{
+                                            startTimeOffset = "nemo";
+                                        }};
+                                        animationFade = new AnimationFade() {{
+                                            endTimeOffset = "quasi";
+                                            fadeType = "FADE_IN";
+                                            startTimeOffset = "doloribus";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 8919.24;
+                                                y = 2603.41;
+                                            }};
+                                        }};
+                                        animationStatic = new AnimationStatic() {{
+                                            startTimeOffset = "maxime";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 5370.23;
+                                                y = 7038.89;
+                                            }};
+                                        }};
+                                    }}),
+                                    add(new Animation() {{
+                                        animationEnd = new AnimationEnd() {{
+                                            startTimeOffset = "in";
+                                        }};
+                                        animationFade = new AnimationFade() {{
+                                            endTimeOffset = "architecto";
+                                            fadeType = "FADE_TYPE_UNSPECIFIED";
+                                            startTimeOffset = "repudiandae";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 3523.12;
+                                                y = 7142.42;
+                                            }};
+                                        }};
+                                        animationStatic = new AnimationStatic() {{
+                                            startTimeOffset = "nihil";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 9988.48;
+                                                y = 8411.4;
+                                            }};
+                                        }};
+                                    }}),
+                                }};
+                                image = new Image() {{
+                                    alpha = 1494.48;
+                                    resolution = new NormalizedCoordinate() {{
+                                        x = 9046.48;
+                                        y = 8681.26;
+                                    }};
+                                    uri = "http://cute-lens.name";
+                                }};
+                            }}),
+                            add(new Overlay() {{
+                                animations = new org.openapis.openapi.models.shared.Animation[]{{
+                                    add(new Animation() {{
+                                        animationEnd = new AnimationEnd() {{
+                                            startTimeOffset = "sunt";
+                                        }};
+                                        animationFade = new AnimationFade() {{
+                                            endTimeOffset = "quo";
+                                            fadeType = "FADE_OUT";
+                                            startTimeOffset = "pariatur";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 8073.19;
+                                                y = 4113.97;
+                                            }};
+                                        }};
+                                        animationStatic = new AnimationStatic() {{
+                                            startTimeOffset = "excepturi";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 1399.72;
+                                                y = 4071.83;
+                                            }};
+                                        }};
+                                    }}),
+                                }};
+                                image = new Image() {{
+                                    alpha = 332.22;
+                                    resolution = new NormalizedCoordinate() {{
+                                        x = 691.67;
+                                        y = 9825.75;
+                                    }};
+                                    uri = "https://harmonious-in-joke.info";
+                                }};
+                            }}),
+                            add(new Overlay() {{
+                                animations = new org.openapis.openapi.models.shared.Animation[]{{
+                                    add(new Animation() {{
+                                        animationEnd = new AnimationEnd() {{
+                                            startTimeOffset = "eaque";
+                                        }};
+                                        animationFade = new AnimationFade() {{
+                                            endTimeOffset = "pariatur";
+                                            fadeType = "FADE_IN";
+                                            startTimeOffset = "voluptatibus";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 166.27;
+                                                y = 8558.04;
+                                            }};
+                                        }};
+                                        animationStatic = new AnimationStatic() {{
+                                            startTimeOffset = "amet";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 117.14;
+                                                y = 7649.12;
+                                            }};
+                                        }};
+                                    }}),
+                                    add(new Animation() {{
+                                        animationEnd = new AnimationEnd() {{
+                                            startTimeOffset = "corporis";
+                                        }};
+                                        animationFade = new AnimationFade() {{
+                                            endTimeOffset = "hic";
+                                            fadeType = "FADE_OUT";
+                                            startTimeOffset = "nobis";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 1716.29;
+                                                y = 3394.04;
+                                            }};
+                                        }};
+                                        animationStatic = new AnimationStatic() {{
+                                            startTimeOffset = "totam";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 4895.49;
+                                                y = 543.38;
+                                            }};
+                                        }};
+                                    }}),
+                                    add(new Animation() {{
+                                        animationEnd = new AnimationEnd() {{
+                                            startTimeOffset = "quis";
+                                        }};
+                                        animationFade = new AnimationFade() {{
+                                            endTimeOffset = "nesciunt";
+                                            fadeType = "FADE_TYPE_UNSPECIFIED";
+                                            startTimeOffset = "perferendis";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 1709.86;
+                                                y = 7936.98;
+                                            }};
+                                        }};
+                                        animationStatic = new AnimationStatic() {{
+                                            startTimeOffset = "quam";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 2239.24;
+                                                y = 8745.73;
+                                            }};
+                                        }};
+                                    }}),
+                                }};
+                                image = new Image() {{
+                                    alpha = 3453.52;
+                                    resolution = new NormalizedCoordinate() {{
+                                        x = 9441.2;
+                                        y = 9280.82;
+                                    }};
+                                    uri = "https://rotten-noir.com";
                                 }};
                             }}),
                         }};
                         pubsubDestination = new PubsubDestination() {{
-                            topic = "consequatur";
+                            topic = "porro";
                         }};
                         spriteSheets = new org.openapis.openapi.models.shared.SpriteSheet[]{{
                             add(new SpriteSheet() {{
-                                columnCount = 833038;
-                                endTimeOffset = "porro";
-                                filePrefix = "doloribus";
-                                format = "ut";
-                                interval = "facilis";
-                                quality = 586410;
-                                rowCount = 181631;
-                                spriteHeightPixels = 63955;
-                                spriteWidthPixels = 512393;
-                                startTimeOffset = "odio";
-                                totalCount = 580447;
-                            }}),
-                            add(new SpriteSheet() {{
-                                columnCount = 977496;
-                                endTimeOffset = "quisquam";
-                                filePrefix = "vero";
-                                format = "omnis";
-                                interval = "quis";
-                                quality = 218403;
-                                rowCount = 961571;
-                                spriteHeightPixels = 455169;
-                                spriteWidthPixels = 231701;
-                                startTimeOffset = "vero";
-                                totalCount = 949319;
-                            }}),
-                            add(new SpriteSheet() {{
-                                columnCount = 492268;
-                                endTimeOffset = "hic";
-                                filePrefix = "distinctio";
-                                format = "quod";
-                                interval = "odio";
-                                quality = 630448;
-                                rowCount = 708548;
-                                spriteHeightPixels = 874288;
-                                spriteWidthPixels = 498140;
-                                startTimeOffset = "dolore";
-                                totalCount = 844550;
+                                columnCount = 500026;
+                                endTimeOffset = "error";
+                                filePrefix = "eaque";
+                                format = "occaecati";
+                                interval = "rerum";
+                                quality = 237893;
+                                rowCount = 992397;
+                                spriteHeightPixels = 934214;
+                                spriteWidthPixels = 267262;
+                                startTimeOffset = "iste";
+                                totalCount = 679091;
                             }}),
                         }};
                     }};
-                    name = "illum";
+                    name = "deleniti";
                 }};
-            }};            
+                accessToken = "pariatur";
+                alt = "media";
+                callback = "nobis";
+                fields = "libero";
+                jobTemplateId = "delectus";
+                key = "quaerat";
+                oauthToken = "quos";
+                parent = "aliquid";
+                prettyPrint = false;
+                quotaUser = "dolorem";
+                uploadType = "dolorem";
+                uploadProtocol = "dolor";
+            }}            
 
-            TranscoderProjectsLocationsJobTemplatesCreateResponse res = sdk.projects.transcoderProjectsLocationsJobTemplatesCreate(req);
+            TranscoderProjectsLocationsJobTemplatesCreateResponse res = sdk.projects.transcoderProjectsLocationsJobTemplatesCreate(req, new TranscoderProjectsLocationsJobTemplatesCreateSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.jobTemplate.isPresent()) {
                 // handle response

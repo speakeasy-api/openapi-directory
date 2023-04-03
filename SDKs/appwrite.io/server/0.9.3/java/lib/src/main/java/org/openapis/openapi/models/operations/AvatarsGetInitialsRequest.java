@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AvatarsGetInitialsRequest {
-    
-    public AvatarsGetInitialsQueryParams queryParams;
-    public AvatarsGetInitialsRequest withQueryParams(AvatarsGetInitialsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Changes background color. By default a random color will be picked and stay will persistent to the given name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=background")
+    public String background;
+    public AvatarsGetInitialsRequest withBackground(String background) {
+        this.background = background;
         return this;
     }
     
+    /**
+     * Changes text color. By default a random color will be picked and stay will persistent to the given name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=color")
+    public String color;
+    public AvatarsGetInitialsRequest withColor(String color) {
+        this.color = color;
+        return this;
+    }
     
-    public AvatarsGetInitialsSecurity security;
-    public AvatarsGetInitialsRequest withSecurity(AvatarsGetInitialsSecurity security) {
-        this.security = security;
+    /**
+     * Image height. Pass an integer between 0 to 2000. Defaults to 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=height")
+    public Integer height;
+    public AvatarsGetInitialsRequest withHeight(Integer height) {
+        this.height = height;
+        return this;
+    }
+    
+    /**
+     * Full Name. When empty, current user name or email will be used. Max length: 128 chars.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public AvatarsGetInitialsRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Image width. Pass an integer between 0 to 2000. Defaults to 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=width")
+    public Integer width;
+    public AvatarsGetInitialsRequest withWidth(Integer width) {
+        this.width = width;
         return this;
     }
     

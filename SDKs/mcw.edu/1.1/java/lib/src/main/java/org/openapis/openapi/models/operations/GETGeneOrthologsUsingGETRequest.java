@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGeneOrthologsUsingGETRequest {
-    
-    public GETGeneOrthologsUsingGETPathParams pathParams;
-    public GETGeneOrthologsUsingGETRequest withPathParams(GETGeneOrthologsUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * RGD ID of a gene
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rgdId")
+    public Integer rgdId;
+    public GETGeneOrthologsUsingGETRequest withRgdId(Integer rgdId) {
+        this.rgdId = rgdId;
         return this;
     }
     

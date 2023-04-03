@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContinuousCheckRequest {
-    
-    public GetContinuousCheckPathParams pathParams;
-    public GetContinuousCheckRequest withPathParams(GetContinuousCheckPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetContinuousCheckSecurity security;
-    public GetContinuousCheckRequest withSecurity(GetContinuousCheckSecurity security) {
-        this.security = security;
+    /**
+     * ID resulting from calling CreateContinuousCheck
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=continuous_check_id")
+    public Double continuousCheckId;
+    public GetContinuousCheckRequest withContinuousCheckId(Double continuousCheckId) {
+        this.continuousCheckId = continuousCheckId;
         return this;
     }
     

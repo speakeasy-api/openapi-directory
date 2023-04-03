@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AuthVerifyotpGetRequest {
-    
-    public AuthVerifyotpGetQueryParams queryParams;
-    public AuthVerifyotpGetRequest withQueryParams(AuthVerifyotpGetQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public AuthVerifyotpGetSecurity security;
-    public AuthVerifyotpGetRequest withSecurity(AuthVerifyotpGetSecurity security) {
-        this.security = security;
+    /**
+     * YubiKey OTP code
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=otp")
+    public String otp;
+    public AuthVerifyotpGetRequest withOtp(String otp) {
+        this.otp = otp;
         return this;
     }
     

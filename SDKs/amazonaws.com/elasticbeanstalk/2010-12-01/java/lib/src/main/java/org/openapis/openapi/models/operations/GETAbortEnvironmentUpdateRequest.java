@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAbortEnvironmentUpdateRequest {
-    
-    public GETAbortEnvironmentUpdateQueryParams queryParams;
-    public GETAbortEnvironmentUpdateRequest withQueryParams(GETAbortEnvironmentUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETAbortEnvironmentUpdateActionEnum action;
+    public GETAbortEnvironmentUpdateRequest withAction(GETAbortEnvironmentUpdateActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * This specifies the ID of the environment with the in-progress update that you want to cancel.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnvironmentId")
+    public String environmentId;
+    public GETAbortEnvironmentUpdateRequest withEnvironmentId(String environmentId) {
+        this.environmentId = environmentId;
+        return this;
+    }
     
-    public GETAbortEnvironmentUpdateHeaders headers;
-    public GETAbortEnvironmentUpdateRequest withHeaders(GETAbortEnvironmentUpdateHeaders headers) {
-        this.headers = headers;
+    /**
+     * This specifies the name of the environment with the in-progress update that you want to cancel.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnvironmentName")
+    public String environmentName;
+    public GETAbortEnvironmentUpdateRequest withEnvironmentName(String environmentName) {
+        this.environmentName = environmentName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETAbortEnvironmentUpdateVersionEnum version;
+    public GETAbortEnvironmentUpdateRequest withVersion(GETAbortEnvironmentUpdateVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETAbortEnvironmentUpdateRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETAbortEnvironmentUpdateRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETAbortEnvironmentUpdateRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETAbortEnvironmentUpdateRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETAbortEnvironmentUpdateRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETAbortEnvironmentUpdateRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETAbortEnvironmentUpdateRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

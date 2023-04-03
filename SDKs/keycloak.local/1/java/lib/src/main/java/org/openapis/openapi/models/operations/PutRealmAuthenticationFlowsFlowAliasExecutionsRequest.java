@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutRealmAuthenticationFlowsFlowAliasExecutionsRequest {
-    
-    public PutRealmAuthenticationFlowsFlowAliasExecutionsPathParams pathParams;
-    public PutRealmAuthenticationFlowsFlowAliasExecutionsRequest withPathParams(PutRealmAuthenticationFlowsFlowAliasExecutionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.AuthenticationExecutionInfoRepresentation authenticationExecutionInfoRepresentation;
+    public PutRealmAuthenticationFlowsFlowAliasExecutionsRequest withAuthenticationExecutionInfoRepresentation(org.openapis.openapi.models.shared.AuthenticationExecutionInfoRepresentation authenticationExecutionInfoRepresentation) {
+        this.authenticationExecutionInfoRepresentation = authenticationExecutionInfoRepresentation;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AuthenticationExecutionInfoRepresentation request;
-    public PutRealmAuthenticationFlowsFlowAliasExecutionsRequest withRequest(org.openapis.openapi.models.shared.AuthenticationExecutionInfoRepresentation request) {
-        this.request = request;
+    /**
+     * Flow alias
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=flowAlias")
+    public String flowAlias;
+    public PutRealmAuthenticationFlowsFlowAliasExecutionsRequest withFlowAlias(String flowAlias) {
+        this.flowAlias = flowAlias;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PutRealmAuthenticationFlowsFlowAliasExecutionsRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimRegionsReadRequest {
-    
-    public DcimRegionsReadPathParams pathParams;
-    public DcimRegionsReadRequest withPathParams(DcimRegionsReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this region.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimRegionsReadRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

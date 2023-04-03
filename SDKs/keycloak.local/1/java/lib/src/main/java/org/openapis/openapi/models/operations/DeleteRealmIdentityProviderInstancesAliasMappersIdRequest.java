@@ -4,13 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRealmIdentityProviderInstancesAliasMappersIdRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=alias")
+    public String alias;
+    public DeleteRealmIdentityProviderInstancesAliasMappersIdRequest withAlias(String alias) {
+        this.alias = alias;
+        return this;
+    }
     
-    public DeleteRealmIdentityProviderInstancesAliasMappersIdPathParams pathParams;
-    public DeleteRealmIdentityProviderInstancesAliasMappersIdRequest withPathParams(DeleteRealmIdentityProviderInstancesAliasMappersIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Mapper id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteRealmIdentityProviderInstancesAliasMappersIdRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public DeleteRealmIdentityProviderInstancesAliasMappersIdRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

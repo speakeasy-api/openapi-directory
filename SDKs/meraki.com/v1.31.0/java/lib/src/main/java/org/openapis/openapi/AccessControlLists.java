@@ -39,7 +39,7 @@ public class AccessControlLists {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchAccessControlListsResponse getNetworkSwitchAccessControlLists(org.openapis.openapi.models.operations.GetNetworkSwitchAccessControlListsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchAccessControlListsPathParams.class, baseUrl, "/networks/{networkId}/switch/accessControlLists", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchAccessControlListsRequest.class, baseUrl, "/networks/{networkId}/switch/accessControlLists", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -79,12 +79,12 @@ public class AccessControlLists {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSwitchAccessControlListsResponse updateNetworkSwitchAccessControlLists(org.openapis.openapi.models.operations.UpdateNetworkSwitchAccessControlListsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchAccessControlListsPathParams.class, baseUrl, "/networks/{networkId}/switch/accessControlLists", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchAccessControlListsRequest.class, baseUrl, "/networks/{networkId}/switch/accessControlLists", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

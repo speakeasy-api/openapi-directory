@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExtrasExportTemplatesReadRequest {
-    
-    public ExtrasExportTemplatesReadPathParams pathParams;
-    public ExtrasExportTemplatesReadRequest withPathParams(ExtrasExportTemplatesReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this export template.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public ExtrasExportTemplatesReadRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

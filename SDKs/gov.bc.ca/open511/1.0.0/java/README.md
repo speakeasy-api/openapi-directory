@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GetAreasFormatEnum;
-import org.openapis.openapi.models.operations.GetAreasQueryParams;
 import org.openapis.openapi.models.operations.GetAreasRequest;
 import org.openapis.openapi.models.operations.GetAreasResponse;
 
@@ -29,10 +28,8 @@ public class Application {
                 .build();
 
             GetAreasRequest req = new GetAreasRequest() {{
-                queryParams = new GetAreasQueryParams() {{
-                    format = "xml";
-                }};
-            }};            
+                format = "xml";
+            }}            
 
             GetAreasResponse res = sdk.resources.getAreas(req);
 
@@ -46,7 +43,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### resources

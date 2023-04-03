@@ -4,20 +4,105 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListAuditMitigationActionsExecutionsRequest {
-    
-    public ListAuditMitigationActionsExecutionsQueryParams queryParams;
-    public ListAuditMitigationActionsExecutionsRequest withQueryParams(ListAuditMitigationActionsExecutionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListAuditMitigationActionsExecutionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListAuditMitigationActionsExecutionsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public ListAuditMitigationActionsExecutionsHeaders headers;
-    public ListAuditMitigationActionsExecutionsRequest withHeaders(ListAuditMitigationActionsExecutionsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListAuditMitigationActionsExecutionsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListAuditMitigationActionsExecutionsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListAuditMitigationActionsExecutionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListAuditMitigationActionsExecutionsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListAuditMitigationActionsExecutionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * Specify this filter to limit results to those with a specific status.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=actionStatus")
+    public ListAuditMitigationActionsExecutionsActionStatusEnum actionStatus;
+    public ListAuditMitigationActionsExecutionsRequest withActionStatus(ListAuditMitigationActionsExecutionsActionStatusEnum actionStatus) {
+        this.actionStatus = actionStatus;
+        return this;
+    }
+    
+    /**
+     * Specify this filter to limit results to those that were applied to a specific audit finding.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=findingId")
+    public String findingId;
+    public ListAuditMitigationActionsExecutionsRequest withFindingId(String findingId) {
+        this.findingId = findingId;
+        return this;
+    }
+    
+    /**
+     * The maximum number of results to return at one time. The default is 25.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public ListAuditMitigationActionsExecutionsRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * The token for the next set of results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
+    public String nextToken;
+    public ListAuditMitigationActionsExecutionsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * Specify this filter to limit results to actions for a specific audit mitigation actions task.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=taskId")
+    public String taskId;
+    public ListAuditMitigationActionsExecutionsRequest withTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
     

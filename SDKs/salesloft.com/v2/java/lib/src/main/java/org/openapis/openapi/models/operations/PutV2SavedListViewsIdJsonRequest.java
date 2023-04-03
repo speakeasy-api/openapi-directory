@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutV2SavedListViewsIdJsonRequest {
-    
-    public PutV2SavedListViewsIdJsonPathParams pathParams;
-    public PutV2SavedListViewsIdJsonRequest withPathParams(PutV2SavedListViewsIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
+    public PutV2SavedListViewsIdJsonRequestBody requestBody;
+    public PutV2SavedListViewsIdJsonRequest withRequestBody(PutV2SavedListViewsIdJsonRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public PutV2SavedListViewsIdJsonRequestBody request;
-    public PutV2SavedListViewsIdJsonRequest withRequest(PutV2SavedListViewsIdJsonRequestBody request) {
-        this.request = request;
+    /**
+     * Saved List View ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutV2SavedListViewsIdJsonRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

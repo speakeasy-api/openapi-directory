@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodePushDeploymentUploadCreateRequest {
-    
-    public CodePushDeploymentUploadCreatePathParams pathParams;
-    public CodePushDeploymentUploadCreateRequest withPathParams(CodePushDeploymentUploadCreatePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public CodePushDeploymentUploadCreateRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * deployment name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deployment_name")
+    public String deploymentName;
+    public CodePushDeploymentUploadCreateRequest withDeploymentName(String deploymentName) {
+        this.deploymentName = deploymentName;
+        return this;
+    }
     
-    public CodePushDeploymentUploadCreateSecurity security;
-    public CodePushDeploymentUploadCreateRequest withSecurity(CodePushDeploymentUploadCreateSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public CodePushDeploymentUploadCreateRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

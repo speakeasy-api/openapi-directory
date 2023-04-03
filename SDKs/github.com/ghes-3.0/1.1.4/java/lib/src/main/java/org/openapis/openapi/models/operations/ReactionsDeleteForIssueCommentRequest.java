@@ -4,13 +4,37 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsDeleteForIssueCommentRequest {
+    /**
+     * comment_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_id")
+    public Long commentId;
+    public ReactionsDeleteForIssueCommentRequest withCommentId(Long commentId) {
+        this.commentId = commentId;
+        return this;
+    }
     
-    public ReactionsDeleteForIssueCommentPathParams pathParams;
-    public ReactionsDeleteForIssueCommentRequest withPathParams(ReactionsDeleteForIssueCommentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReactionsDeleteForIssueCommentRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reaction_id")
+    public Long reactionId;
+    public ReactionsDeleteForIssueCommentRequest withReactionId(Long reactionId) {
+        this.reactionId = reactionId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReactionsDeleteForIssueCommentRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

@@ -4,13 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostAlmawsV1TaskListsRequestedResourcesRequest {
+    /**
+     * The circulation desk where the action is being performed. Mandatory.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=circ_desk")
+    public String circDesk;
+    public PostAlmawsV1TaskListsRequestedResourcesRequest withCircDesk(String circDesk) {
+        this.circDesk = circDesk;
+        return this;
+    }
     
-    public PostAlmawsV1TaskListsRequestedResourcesQueryParams queryParams;
-    public PostAlmawsV1TaskListsRequestedResourcesRequest withQueryParams(PostAlmawsV1TaskListsRequestedResourcesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The library of the given circulation desk or department where the resources are located. Mandatory.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=library")
+    public String library;
+    public PostAlmawsV1TaskListsRequestedResourcesRequest withLibrary(String library) {
+        this.library = library;
+        return this;
+    }
+    
+    /**
+     * The location code. Optional.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location")
+    public String location;
+    public PostAlmawsV1TaskListsRequestedResourcesRequest withLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    
+    /**
+     * Operation to be preformed on the list of given requests. Currently the only supported action is 'mark_reported'. Mandatory.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=op")
+    public String op;
+    public PostAlmawsV1TaskListsRequestedResourcesRequest withOp(String op) {
+        this.op = op;
+        return this;
+    }
+    
+    /**
+     * The pickup institution. Optional.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pickup_inst")
+    public String pickupInst;
+    public PostAlmawsV1TaskListsRequestedResourcesRequest withPickupInst(String pickupInst) {
+        this.pickupInst = pickupInst;
+        return this;
+    }
+    
+    /**
+     * Show printed results: Y/N. Optional.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=printed")
+    public String printed;
+    public PostAlmawsV1TaskListsRequestedResourcesRequest withPrinted(String printed) {
+        this.printed = printed;
+        return this;
+    }
+    
+    /**
+     * Show reported results: Y/N. Optional.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reported")
+    public String reported;
+    public PostAlmawsV1TaskListsRequestedResourcesRequest withReported(String reported) {
+        this.reported = reported;
         return this;
     }
     

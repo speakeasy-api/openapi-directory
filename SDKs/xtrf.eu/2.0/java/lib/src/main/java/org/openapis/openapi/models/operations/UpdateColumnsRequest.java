@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateColumnsRequest {
-    
-    public UpdateColumnsPathParams pathParams;
-    public UpdateColumnsRequest withPathParams(UpdateColumnsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated columns in view.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ColumnDTO[] request;
-    public UpdateColumnsRequest withRequest(org.openapis.openapi.models.shared.ColumnDTO[] request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ColumnDTO[] requestBody;
+    public UpdateColumnsRequest withRequestBody(org.openapis.openapi.models.shared.ColumnDTO[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * view's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=viewId")
+    public Long viewId;
+    public UpdateColumnsRequest withViewId(Long viewId) {
+        this.viewId = viewId;
         return this;
     }
     

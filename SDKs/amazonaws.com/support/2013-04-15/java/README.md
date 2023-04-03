@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AddAttachmentsToSetXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AddAttachmentsToSetHeaders;
 import org.openapis.openapi.models.operations.AddAttachmentsToSetRequest;
 import org.openapis.openapi.models.operations.AddAttachmentsToSetResponse;
 import org.openapis.openapi.models.shared.AddAttachmentsToSetRequest;
@@ -29,37 +28,37 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AddAttachmentsToSetRequest req = new AddAttachmentsToSetRequest() {{
-                headers = new AddAttachmentsToSetHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "AWSSupport_20130415.AddAttachmentsToSet";
-                }};
-                request = new AddAttachmentsToSetRequest() {{
-                    attachmentSetId = "illum";
+                addAttachmentsToSetRequest = new AddAttachmentsToSetRequest() {{
+                    attachmentSetId = "corrupti";
                     attachments = new org.openapis.openapi.models.shared.Attachment[]{{
                         add(new Attachment() {{
-                            data = "error";
-                            fileName = "deserunt";
+                            data = "distinctio";
+                            fileName = "quibusdam";
                         }}),
                         add(new Attachment() {{
-                            data = "suscipit";
-                            fileName = "iure";
+                            data = "unde";
+                            fileName = "nulla";
+                        }}),
+                        add(new Attachment() {{
+                            data = "corrupti";
+                            fileName = "illum";
                         }}),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "vel";
+                xAmzContentSha256 = "error";
+                xAmzCredential = "deserunt";
+                xAmzDate = "suscipit";
+                xAmzSecurityToken = "iure";
+                xAmzSignature = "magnam";
+                xAmzSignedHeaders = "debitis";
+                xAmzTarget = "AWSSupport_20130415.AddAttachmentsToSet";
+            }}            
 
             AddAttachmentsToSetResponse res = sdk.addAttachmentsToSet(req);
 
@@ -73,7 +72,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

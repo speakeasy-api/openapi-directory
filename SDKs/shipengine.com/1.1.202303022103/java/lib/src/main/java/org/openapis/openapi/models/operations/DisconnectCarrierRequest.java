@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisconnectCarrierRequest {
+    /**
+     * Carrier ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=carrier_id")
+    public String carrierId;
+    public DisconnectCarrierRequest withCarrierId(String carrierId) {
+        this.carrierId = carrierId;
+        return this;
+    }
     
-    public DisconnectCarrierPathParams pathParams;
-    public DisconnectCarrierRequest withPathParams(DisconnectCarrierPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The carrier name, such as `stamps_com`, `ups`, `fedex`, or `dhl_express`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=carrier_name")
+    public org.openapis.openapi.models.shared.CarrierNameEnum carrierName;
+    public DisconnectCarrierRequest withCarrierName(org.openapis.openapi.models.shared.CarrierNameEnum carrierName) {
+        this.carrierName = carrierName;
         return this;
     }
     

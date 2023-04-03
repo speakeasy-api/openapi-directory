@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostGPXRequest {
+    /**
+     * Specify the precision of a point, in meter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gps_accuracy")
+    public Long gpsAccuracy;
+    public PostGPXRequest withGpsAccuracy(Long gpsAccuracy) {
+        this.gpsAccuracy = gpsAccuracy;
+        return this;
+    }
     
-    public PostGPXQueryParams queryParams;
-    public PostGPXRequest withQueryParams(PostGPXQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Specify the vehicle profile like car
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicle")
+    public String vehicle;
+    public PostGPXRequest withVehicle(String vehicle) {
+        this.vehicle = vehicle;
         return this;
     }
     

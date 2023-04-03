@@ -4,20 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListRatePlanForHotelForRatePlanIdRequest {
-    
-    public ListRatePlanForHotelForRatePlanIdPathParams pathParams;
-    public ListRatePlanForHotelForRatePlanIdRequest withPathParams(ListRatePlanForHotelForRatePlanIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Start date of the considered time window for the returned rate plan.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
+    public String end;
+    public ListRatePlanForHotelForRatePlanIdRequest withEnd(String end) {
+        this.end = end;
         return this;
     }
     
+    /**
+     * The uuid of hotel for which rate plans are being fetched.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hotelId")
+    public String hotelId;
+    public ListRatePlanForHotelForRatePlanIdRequest withHotelId(String hotelId) {
+        this.hotelId = hotelId;
+        return this;
+    }
     
-    public ListRatePlanForHotelForRatePlanIdQueryParams queryParams;
-    public ListRatePlanForHotelForRatePlanIdRequest withQueryParams(ListRatePlanForHotelForRatePlanIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Offset from the first rate plan in the result (for pagination).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Double offset;
+    public ListRatePlanForHotelForRatePlanIdRequest withOffset(Double offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * The id of requested rateplan
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ratePlanId")
+    public Long ratePlanId;
+    public ListRatePlanForHotelForRatePlanIdRequest withRatePlanId(Long ratePlanId) {
+        this.ratePlanId = ratePlanId;
+        return this;
+    }
+    
+    /**
+     * The uuid of room for which rate plans are being fetched.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=roomTypeId")
+    public String roomTypeId;
+    public ListRatePlanForHotelForRatePlanIdRequest withRoomTypeId(String roomTypeId) {
+        this.roomTypeId = roomTypeId;
+        return this;
+    }
+    
+    /**
+     * Number of rate plans returned on a given page (pagination).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
+    public Double size;
+    public ListRatePlanForHotelForRatePlanIdRequest withSize(Double size) {
+        this.size = size;
+        return this;
+    }
+    
+    /**
+     * Start date of the considered time window for the returned rate plan.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public String start;
+    public ListRatePlanForHotelForRatePlanIdRequest withStart(String start) {
+        this.start = start;
+        return this;
+    }
+    
+    /**
+     * Returns rate plans changed after the supplied date.
+     */
+    @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=updatedAt")
+    public java.util.Map<String, Object> updatedAt;
+    public ListRatePlanForHotelForRatePlanIdRequest withUpdatedAt(java.util.Map<String, Object> updatedAt) {
+        this.updatedAt = updatedAt;
         return this;
     }
     

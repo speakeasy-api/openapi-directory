@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PackageVersionsRequest {
-    
-    public PackageVersionsPathParams pathParams;
-    public PackageVersionsRequest withPathParams(PackageVersionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Limit for paging, set -1 to return all
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public PackageVersionsRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
-    
-    public PackageVersionsQueryParams queryParams;
-    public PackageVersionsRequest withQueryParams(PackageVersionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Offset for paging
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public PackageVersionsRequest withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     
-    
-    public PackageVersionsSecurity security;
-    public PackageVersionsRequest withSecurity(PackageVersionsSecurity security) {
-        this.security = security;
+    /**
+     * Package name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=package_name")
+    public String packageName;
+    public PackageVersionsRequest withPackageName(String packageName) {
+        this.packageName = packageName;
         return this;
     }
     

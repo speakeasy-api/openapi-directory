@@ -42,7 +42,7 @@ public class Webhooks {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateWebhookResponse createWebhook(org.openapis.openapi.models.operations.CreateWebhookRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateWebhookResponse createWebhook(org.openapis.openapi.models.shared.CreateWebhookRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/environment/webhooks");
         
@@ -97,7 +97,7 @@ public class Webhooks {
      */
     public org.openapis.openapi.models.operations.DeleteWebhookResponse deleteWebhook(org.openapis.openapi.models.operations.DeleteWebhookRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteWebhookPathParams.class, baseUrl, "/v1/environment/webhooks/{webhook_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteWebhookRequest.class, baseUrl, "/v1/environment/webhooks/{webhook_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -149,7 +149,7 @@ public class Webhooks {
      */
     public org.openapis.openapi.models.operations.GetWebhookByIdResponse getWebhookById(org.openapis.openapi.models.operations.GetWebhookByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWebhookByIdPathParams.class, baseUrl, "/v1/environment/webhooks/{webhook_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWebhookByIdRequest.class, baseUrl, "/v1/environment/webhooks/{webhook_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -244,12 +244,12 @@ public class Webhooks {
      */
     public org.openapis.openapi.models.operations.UpdateWebhookResponse updateWebhook(org.openapis.openapi.models.operations.UpdateWebhookRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateWebhookPathParams.class, baseUrl, "/v1/environment/webhooks/{webhook_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateWebhookRequest.class, baseUrl, "/v1/environment/webhooks/{webhook_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateWebhookRequestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

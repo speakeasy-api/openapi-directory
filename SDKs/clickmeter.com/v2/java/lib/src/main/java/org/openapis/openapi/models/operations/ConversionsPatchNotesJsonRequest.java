@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConversionsPatchNotesJsonRequest {
-    
-    public ConversionsPatchNotesJsonPathParams pathParams;
-    public ConversionsPatchNotesJsonRequest withPathParams(ConversionsPatchNotesJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Patch requests
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ApiCoreRequestsGenericTextPatch request;
-    public ConversionsPatchNotesJsonRequest withRequest(org.openapis.openapi.models.shared.ApiCoreRequestsGenericTextPatch request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ApiCoreRequestsGenericTextPatch apiCoreRequestsGenericTextPatch;
+    public ConversionsPatchNotesJsonRequest withApiCoreRequestsGenericTextPatch(org.openapis.openapi.models.shared.ApiCoreRequestsGenericTextPatch apiCoreRequestsGenericTextPatch) {
+        this.apiCoreRequestsGenericTextPatch = apiCoreRequestsGenericTextPatch;
+        return this;
+    }
+    
+    /**
+     * Id of the conversion
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversionId")
+    public Long conversionId;
+    public ConversionsPatchNotesJsonRequest withConversionId(Long conversionId) {
+        this.conversionId = conversionId;
         return this;
     }
     

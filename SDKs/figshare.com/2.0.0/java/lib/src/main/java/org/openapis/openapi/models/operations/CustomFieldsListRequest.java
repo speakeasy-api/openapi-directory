@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CustomFieldsListRequest {
-    
-    public CustomFieldsListQueryParams queryParams;
-    public CustomFieldsListRequest withQueryParams(CustomFieldsListQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public CustomFieldsListSecurity security;
-    public CustomFieldsListRequest withSecurity(CustomFieldsListSecurity security) {
-        this.security = security;
+    /**
+     * Group_id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group_id")
+    public Long groupId;
+    public CustomFieldsListRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
         return this;
     }
     

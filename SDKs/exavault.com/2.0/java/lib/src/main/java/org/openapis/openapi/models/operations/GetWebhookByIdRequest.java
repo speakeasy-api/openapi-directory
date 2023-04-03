@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWebhookByIdRequest {
-    
-    public GetWebhookByIdPathParams pathParams;
-    public GetWebhookByIdRequest withPathParams(GetWebhookByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Access token required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-access-token")
+    public String evAccessToken;
+    public GetWebhookByIdRequest withEvAccessToken(String evAccessToken) {
+        this.evAccessToken = evAccessToken;
         return this;
     }
     
-    
-    public GetWebhookByIdQueryParams queryParams;
-    public GetWebhookByIdRequest withQueryParams(GetWebhookByIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * API key required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-api-key")
+    public String evApiKey;
+    public GetWebhookByIdRequest withEvApiKey(String evApiKey) {
+        this.evApiKey = evApiKey;
         return this;
     }
     
+    /**
+     * Webhook endpoint ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetWebhookByIdRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetWebhookByIdHeaders headers;
-    public GetWebhookByIdRequest withHeaders(GetWebhookByIdHeaders headers) {
-        this.headers = headers;
+    /**
+     *  Include metadata for related items; `ownerAccount` and/or `resource` 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include")
+    public String include;
+    public GetWebhookByIdRequest withInclude(String include) {
+        this.include = include;
         return this;
     }
     

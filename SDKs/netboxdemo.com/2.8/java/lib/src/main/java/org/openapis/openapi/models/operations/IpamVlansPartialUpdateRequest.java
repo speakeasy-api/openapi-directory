@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IpamVlansPartialUpdateRequest {
-    
-    public IpamVlansPartialUpdatePathParams pathParams;
-    public IpamVlansPartialUpdateRequest withPathParams(IpamVlansPartialUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.WritableVLANInput writableVLANInput;
+    public IpamVlansPartialUpdateRequest withWritableVLANInput(org.openapis.openapi.models.shared.WritableVLANInput writableVLANInput) {
+        this.writableVLANInput = writableVLANInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WritableVLANInput request;
-    public IpamVlansPartialUpdateRequest withRequest(org.openapis.openapi.models.shared.WritableVLANInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this VLAN.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public IpamVlansPartialUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

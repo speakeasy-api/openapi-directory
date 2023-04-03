@@ -39,21 +39,22 @@ public class VisionExamples {
      * Create an Example
      * Adds an example with the specified label to a dataset.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddExampleResponse addExample(org.openapis.openapi.models.operations.AddExampleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddExampleResponse addExample(org.openapis.openapi.models.operations.AddExampleRequest request, org.openapis.openapi.models.operations.AddExampleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddExamplePathParams.class, baseUrl, "/v2/vision/datasets/{datasetId}/examples", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddExampleRequest.class, baseUrl, "/v2/vision/datasets/{datasetId}/examples", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,10 +82,11 @@ public class VisionExamples {
      * Get All Examples for Label
      * Returns all the examples for the specified label. Returns both uploaded examples and feedback examples.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetExamplesByLabel1Response getExamplesByLabel1(org.openapis.openapi.models.operations.GetExamplesByLabel1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.GetExamplesByLabel1Response getExamplesByLabel1(org.openapis.openapi.models.operations.GetExamplesByLabel1Request request, org.openapis.openapi.models.operations.GetExamplesByLabel1Security security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/vision/examples");
         
@@ -92,14 +94,14 @@ public class VisionExamples {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetExamplesByLabel1QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetExamplesByLabel1Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,25 +129,26 @@ public class VisionExamples {
      * Get All Examples
      * Returns all the examples for the specified dataset. By default, returns examples created by uploading them from a .zip file.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetExamples1Response getExamples1(org.openapis.openapi.models.operations.GetExamples1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.GetExamples1Response getExamples1(org.openapis.openapi.models.operations.GetExamples1Request request, org.openapis.openapi.models.operations.GetExamples1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetExamples1PathParams.class, baseUrl, "/v2/vision/datasets/{datasetId}/examples", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetExamples1Request.class, baseUrl, "/v2/vision/datasets/{datasetId}/examples", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetExamples1QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetExamples1Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -173,10 +176,11 @@ public class VisionExamples {
      * Create a Feedback Example
      * Adds a feedback example to the dataset associated with the specified model.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProvideFeedback1Response provideFeedback1(org.openapis.openapi.models.operations.ProvideFeedback1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.ProvideFeedback1Response provideFeedback1(org.openapis.openapi.models.operations.ProvideFeedback1RequestBody request, org.openapis.openapi.models.operations.ProvideFeedback1Security security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/vision/feedback");
         
@@ -187,7 +191,7 @@ public class VisionExamples {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -215,10 +219,11 @@ public class VisionExamples {
      * Create Feedback Examples From a Zip File
      * Adds feedback examples to the dataset associated with the specified object detection model.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateDatasetAsync1Response updateDatasetAsync1(org.openapis.openapi.models.operations.UpdateDatasetAsync1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateDatasetAsync1Response updateDatasetAsync1(org.openapis.openapi.models.operations.UpdateDatasetAsync1RequestBody request, org.openapis.openapi.models.operations.UpdateDatasetAsync1Security security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/vision/bulkfeedback");
         
@@ -229,7 +234,7 @@ public class VisionExamples {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -257,21 +262,22 @@ public class VisionExamples {
      * Create Examples From a Zip File
      * Adds examples from a .zip file to a dataset. You can use this call only with a dataset that was created from a .zip file.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateDatasetAsync2Response updateDatasetAsync2(org.openapis.openapi.models.operations.UpdateDatasetAsync2Request request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateDatasetAsync2Response updateDatasetAsync2(org.openapis.openapi.models.operations.UpdateDatasetAsync2Request request, org.openapis.openapi.models.operations.UpdateDatasetAsync2Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDatasetAsync2PathParams.class, baseUrl, "/v2/vision/datasets/{datasetId}/upload", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDatasetAsync2Request.class, baseUrl, "/v2/vision/datasets/{datasetId}/upload", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

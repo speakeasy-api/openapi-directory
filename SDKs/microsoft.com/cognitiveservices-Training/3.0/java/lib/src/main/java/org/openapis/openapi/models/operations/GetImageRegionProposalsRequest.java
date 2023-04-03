@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetImageRegionProposalsRequest {
-    
-    public GetImageRegionProposalsPathParams pathParams;
-    public GetImageRegionProposalsRequest withPathParams(GetImageRegionProposalsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API key.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
+    public String trainingKey;
+    public GetImageRegionProposalsRequest withTrainingKey(String trainingKey) {
+        this.trainingKey = trainingKey;
         return this;
     }
     
+    /**
+     * The image id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=imageId")
+    public String imageId;
+    public GetImageRegionProposalsRequest withImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
     
-    public GetImageRegionProposalsHeaders headers;
-    public GetImageRegionProposalsRequest withHeaders(GetImageRegionProposalsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public GetImageRegionProposalsRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

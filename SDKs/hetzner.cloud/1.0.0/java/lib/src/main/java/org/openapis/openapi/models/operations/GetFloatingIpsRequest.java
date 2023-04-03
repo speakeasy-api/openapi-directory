@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFloatingIpsRequest {
+    /**
+     * Can be used to filter Floating IPs by labels. The response will only contain Floating IPs matching the label selector.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=label_selector")
+    public String labelSelector;
+    public GetFloatingIpsRequest withLabelSelector(String labelSelector) {
+        this.labelSelector = labelSelector;
+        return this;
+    }
     
-    public GetFloatingIpsQueryParams queryParams;
-    public GetFloatingIpsRequest withQueryParams(GetFloatingIpsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Can be used to filter Floating IPs by their name. The response will only contain the Floating IP matching the specified name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public GetFloatingIpsRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Can be used multiple times. Choices id id:asc id:desc created created:asc created:desc
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetFloatingIpsSortEnum sort;
+    public GetFloatingIpsRequest withSort(GetFloatingIpsSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

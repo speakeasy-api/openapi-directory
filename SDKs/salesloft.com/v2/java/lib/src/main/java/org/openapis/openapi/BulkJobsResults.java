@@ -39,13 +39,13 @@ public class BulkJobsResults {
      */
     public org.openapis.openapi.models.operations.GetV2BulkJobsBulkJobsIdResultsResponse getV2BulkJobsBulkJobsIdResults(org.openapis.openapi.models.operations.GetV2BulkJobsBulkJobsIdResultsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2BulkJobsBulkJobsIdResultsPathParams.class, baseUrl, "/v2/bulk_jobs/{bulk_jobs_id}/results", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2BulkJobsBulkJobsIdResultsRequest.class, baseUrl, "/v2/bulk_jobs/{bulk_jobs_id}/results", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV2BulkJobsBulkJobsIdResultsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV2BulkJobsBulkJobsIdResultsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

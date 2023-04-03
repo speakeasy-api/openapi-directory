@@ -39,7 +39,7 @@ public class Destination {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CheckConnectionToDestinationResponse checkConnectionToDestination(org.openapis.openapi.models.operations.CheckConnectionToDestinationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CheckConnectionToDestinationResponse checkConnectionToDestination(org.openapis.openapi.models.shared.DestinationIdRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/destinations/check_connection");
         
@@ -98,7 +98,7 @@ public class Destination {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CheckConnectionToDestinationForUpdateResponse checkConnectionToDestinationForUpdate(org.openapis.openapi.models.operations.CheckConnectionToDestinationForUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CheckConnectionToDestinationForUpdateResponse checkConnectionToDestinationForUpdate(org.openapis.openapi.models.shared.DestinationUpdate request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/destinations/check_connection_for_update");
         
@@ -157,7 +157,7 @@ public class Destination {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloneDestinationResponse cloneDestination(org.openapis.openapi.models.operations.CloneDestinationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloneDestinationResponse cloneDestination(org.openapis.openapi.models.shared.DestinationCloneRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/destinations/clone");
         
@@ -216,7 +216,7 @@ public class Destination {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateDestinationResponse createDestination(org.openapis.openapi.models.operations.CreateDestinationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateDestinationResponse createDestination(org.openapis.openapi.models.shared.DestinationCreate request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/destinations/create");
         
@@ -267,7 +267,7 @@ public class Destination {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteDestinationResponse deleteDestination(org.openapis.openapi.models.operations.DeleteDestinationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteDestinationResponse deleteDestination(org.openapis.openapi.models.shared.DestinationIdRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/destinations/delete");
         
@@ -320,7 +320,7 @@ public class Destination {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetDestinationResponse getDestination(org.openapis.openapi.models.operations.GetDestinationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetDestinationResponse getDestination(org.openapis.openapi.models.shared.DestinationIdRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/destinations/get");
         
@@ -379,7 +379,7 @@ public class Destination {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListDestinationsForWorkspaceResponse listDestinationsForWorkspace(org.openapis.openapi.models.operations.ListDestinationsForWorkspaceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListDestinationsForWorkspaceResponse listDestinationsForWorkspace(org.openapis.openapi.models.shared.WorkspaceIdRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/destinations/list");
         
@@ -438,7 +438,7 @@ public class Destination {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SearchDestinationsResponse searchDestinations(org.openapis.openapi.models.operations.SearchDestinationsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SearchDestinationsResponse searchDestinations(org.openapis.openapi.models.shared.DestinationSearch request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/destinations/search");
         
@@ -489,7 +489,7 @@ public class Destination {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateDestinationResponse updateDestination(org.openapis.openapi.models.operations.UpdateDestinationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateDestinationResponse updateDestination(org.openapis.openapi.models.shared.DestinationUpdate request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/destinations/update");
         

@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkAppliancePortRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appliancePortId")
+    public String appliancePortId;
+    public GetNetworkAppliancePortRequest withAppliancePortId(String appliancePortId) {
+        this.appliancePortId = appliancePortId;
+        return this;
+    }
     
-    public GetNetworkAppliancePortPathParams pathParams;
-    public GetNetworkAppliancePortRequest withPathParams(GetNetworkAppliancePortPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkAppliancePortRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutVCustomPricesRulesPriceAssociationIdRequest {
-    
-    public PutVCustomPricesRulesPriceAssociationIdPathParams pathParams;
-    public PutVCustomPricesRulesPriceAssociationIdRequest withPathParams(PutVCustomPricesRulesPriceAssociationIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public PutVCustomPricesRulesPriceAssociationIdRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public PutVCustomPricesRulesPriceAssociationIdHeaders headers;
-    public PutVCustomPricesRulesPriceAssociationIdRequest withHeaders(PutVCustomPricesRulesPriceAssociationIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * Describes the type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public PutVCustomPricesRulesPriceAssociationIdRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PutVCustomPricesRulesPriceAssociationIdRequestBody request;
-    public PutVCustomPricesRulesPriceAssociationIdRequest withRequest(PutVCustomPricesRulesPriceAssociationIdRequestBody request) {
-        this.request = request;
+    public PutVCustomPricesRulesPriceAssociationIdRequestBody requestBody;
+    public PutVCustomPricesRulesPriceAssociationIdRequest withRequestBody(PutVCustomPricesRulesPriceAssociationIdRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Price Association unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=priceAssociationId")
+    public Long priceAssociationId;
+    public PutVCustomPricesRulesPriceAssociationIdRequest withPriceAssociationId(Long priceAssociationId) {
+        this.priceAssociationId = priceAssociationId;
         return this;
     }
     

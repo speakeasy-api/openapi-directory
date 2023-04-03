@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSellOrderOfWorkgroupRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=order_id")
+    public String orderId;
+    public GetSellOrderOfWorkgroupRequest withOrderId(String orderId) {
+        this.orderId = orderId;
+        return this;
+    }
     
-    public GetSellOrderOfWorkgroupPathParams pathParams;
-    public GetSellOrderOfWorkgroupRequest withPathParams(GetSellOrderOfWorkgroupPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
+    public String workgroupId;
+    public GetSellOrderOfWorkgroupRequest withWorkgroupId(String workgroupId) {
+        this.workgroupId = workgroupId;
         return this;
     }
     

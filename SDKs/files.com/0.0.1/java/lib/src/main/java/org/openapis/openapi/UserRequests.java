@@ -43,7 +43,7 @@ public class UserRequests {
      */
     public org.openapis.openapi.models.operations.DeleteUserRequestsIdResponse deleteUserRequestsId(org.openapis.openapi.models.operations.DeleteUserRequestsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserRequestsIdPathParams.class, baseUrl, "/user_requests/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserRequestsIdRequest.class, baseUrl, "/user_requests/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -82,7 +82,7 @@ public class UserRequests {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserRequestsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserRequestsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -123,7 +123,7 @@ public class UserRequests {
      */
     public org.openapis.openapi.models.operations.GetUserRequestsIdResponse getUserRequestsId(org.openapis.openapi.models.operations.GetUserRequestsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserRequestsIdPathParams.class, baseUrl, "/user_requests/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserRequestsIdRequest.class, baseUrl, "/user_requests/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -162,7 +162,7 @@ public class UserRequests {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostUserRequestsResponse postUserRequests(org.openapis.openapi.models.operations.PostUserRequestsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostUserRequestsResponse postUserRequests(org.openapis.openapi.models.operations.PostUserRequestsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/user_requests");
         

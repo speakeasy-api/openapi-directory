@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchMediaRequest {
-    
-    public FetchMediaPathParams pathParams;
-    public FetchMediaRequest withPathParams(FetchMediaPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Media resource(s) to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public FetchMediaRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public FetchMediaSecurity security;
-    public FetchMediaRequest withSecurity(FetchMediaSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the Message resource that this Media resource belongs to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=MessageSid")
+    public String messageSid;
+    public FetchMediaRequest withMessageSid(String messageSid) {
+        this.messageSid = messageSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public FetchMediaRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the Media resource to fetch
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchMediaRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

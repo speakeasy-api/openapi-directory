@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GenderFullGeoRequest {
-    
-    public GenderFullGeoPathParams pathParams;
-    public GenderFullGeoRequest withPathParams(GenderFullGeoPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=countryIso2")
+    public String countryIso2;
+    public GenderFullGeoRequest withCountryIso2(String countryIso2) {
+        this.countryIso2 = countryIso2;
         return this;
     }
     
-    
-    public GenderFullGeoSecurity security;
-    public GenderFullGeoRequest withSecurity(GenderFullGeoSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fullName")
+    public String fullName;
+    public GenderFullGeoRequest withFullName(String fullName) {
+        this.fullName = fullName;
         return this;
     }
     

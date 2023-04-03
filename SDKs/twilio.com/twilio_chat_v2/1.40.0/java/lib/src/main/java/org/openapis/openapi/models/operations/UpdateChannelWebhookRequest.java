@@ -7,31 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateChannelWebhookRequest {
-    
-    public UpdateChannelWebhookPathParams pathParams;
-    public UpdateChannelWebhookRequest withPathParams(UpdateChannelWebhookPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Channel](https://www.twilio.com/docs/chat/channels) the Channel Webhook resource to update belongs to. This value can be the Channel resource's `sid` or `unique_name`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChannelSid")
+    public String channelSid;
+    public UpdateChannelWebhookRequest withChannelSid(String channelSid) {
+        this.channelSid = channelSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateChannelWebhookUpdateChannelWebhookRequest request;
-    public UpdateChannelWebhookRequest withRequest(UpdateChannelWebhookUpdateChannelWebhookRequest request) {
-        this.request = request;
+    public UpdateChannelWebhookUpdateChannelWebhookRequest requestBody;
+    public UpdateChannelWebhookRequest withRequestBody(UpdateChannelWebhookUpdateChannelWebhookRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateChannelWebhookSecurity security;
-    public UpdateChannelWebhookRequest withSecurity(UpdateChannelWebhookSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) with the Channel that has the Webhook resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public UpdateChannelWebhookRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public UpdateChannelWebhookRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Channel Webhook resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateChannelWebhookRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

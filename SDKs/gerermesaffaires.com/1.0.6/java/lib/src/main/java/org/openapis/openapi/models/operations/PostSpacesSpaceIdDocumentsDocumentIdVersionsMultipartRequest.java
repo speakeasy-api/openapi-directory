@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesSpaceIdDocumentsDocumentIdVersionsMultipartRequest {
-    
-    public PostSpacesSpaceIdDocumentsDocumentIdVersionsMultipartPathParams pathParams;
-    public PostSpacesSpaceIdDocumentsDocumentIdVersionsMultipartRequest withPathParams(PostSpacesSpaceIdDocumentsDocumentIdVersionsMultipartPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Version to add
      */
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PostSpacesSpaceIdDocumentsDocumentIdVersionsMultipartFormData request;
-    public PostSpacesSpaceIdDocumentsDocumentIdVersionsMultipartRequest withRequest(PostSpacesSpaceIdDocumentsDocumentIdVersionsMultipartFormData request) {
-        this.request = request;
+    public PostSpacesSpaceIdDocumentsDocumentIdVersionsMultipartFormData requestBody;
+    public PostSpacesSpaceIdDocumentsDocumentIdVersionsMultipartRequest withRequestBody(PostSpacesSpaceIdDocumentsDocumentIdVersionsMultipartFormData requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Id of the document
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=documentId")
+    public String documentId;
+    public PostSpacesSpaceIdDocumentsDocumentIdVersionsMultipartRequest withDocumentId(String documentId) {
+        this.documentId = documentId;
+        return this;
+    }
     
-    public PostSpacesSpaceIdDocumentsDocumentIdVersionsMultipartSecurity security;
-    public PostSpacesSpaceIdDocumentsDocumentIdVersionsMultipartRequest withSecurity(PostSpacesSpaceIdDocumentsDocumentIdVersionsMultipartSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PostSpacesSpaceIdDocumentsDocumentIdVersionsMultipartRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

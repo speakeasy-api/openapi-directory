@@ -4,27 +4,90 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCollectionsRequest {
-    
-    public GetCollectionsPathParams pathParams;
-    public GetCollectionsRequest withPathParams(GetCollectionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
+    public String ifMatch;
+    public GetCollectionsRequest withIfMatch(String ifMatch) {
+        this.ifMatch = ifMatch;
         return this;
     }
     
-    
-    public GetCollectionsQueryParams queryParams;
-    public GetCollectionsRequest withQueryParams(GetCollectionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
+    public String ifNoneMatch;
+    public GetCollectionsRequest withIfNoneMatch(String ifNoneMatch) {
+        this.ifNoneMatch = ifNoneMatch;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_before")
+    public Long before;
+    public GetCollectionsRequest withBefore(Long before) {
+        this.before = before;
+        return this;
+    }
     
-    public GetCollectionsHeaders headers;
-    public GetCollectionsRequest withHeaders(GetCollectionsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=_fields")
+    public String[] fields;
+    public GetCollectionsRequest withFields(String[] fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_limit")
+    public Long limit;
+    public GetCollectionsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_since")
+    public Long since;
+    public GetCollectionsRequest withSince(Long since) {
+        this.since = since;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=_sort")
+    public String[] sort;
+    public GetCollectionsRequest withSort(String[] sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_to")
+    public Long to;
+    public GetCollectionsRequest withTo(Long to) {
+        this.to = to;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_token")
+    public String token;
+    public GetCollectionsRequest withToken(String token) {
+        this.token = token;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bucket_id")
+    public String bucketId;
+    public GetCollectionsRequest withBucketId(String bucketId) {
+        this.bucketId = bucketId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public GetCollectionsRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_modified")
+    public Long lastModified;
+    public GetCollectionsRequest withLastModified(Long lastModified) {
+        this.lastModified = lastModified;
         return this;
     }
     

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetQuoteImageFontListRequest {
-    
-    public GetQuoteImageFontListQueryParams queryParams;
-    public GetQuoteImageFontListRequest withQueryParams(GetQuoteImageFontListQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetQuoteImageFontListSecurity security;
-    public GetQuoteImageFontListRequest withSecurity(GetQuoteImageFontListSecurity security) {
-        this.security = security;
+    /**
+     * Response is paged. This parameter determines where the response should start.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public Long start;
+    public GetQuoteImageFontListRequest withStart(Long start) {
+        this.start = start;
         return this;
     }
     

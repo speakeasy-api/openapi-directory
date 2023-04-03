@@ -38,7 +38,7 @@ public class FollowedPeople {
      */
     public org.openapis.openapi.models.operations.DeleteUserFollowsPeoplePersonIdResponse deleteUserFollowsPeoplePersonId(org.openapis.openapi.models.operations.DeleteUserFollowsPeoplePersonIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserFollowsPeoplePersonIdPathParams.class, baseUrl, "/user/follows/people/{person_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserFollowsPeoplePersonIdRequest.class, baseUrl, "/user/follows/people/{person_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -77,7 +77,7 @@ public class FollowedPeople {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserFollowsPeopleQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserFollowsPeopleRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -116,7 +116,7 @@ public class FollowedPeople {
      */
     public org.openapis.openapi.models.operations.GetUserFollowsPeoplePersonIdResponse getUserFollowsPeoplePersonId(org.openapis.openapi.models.operations.GetUserFollowsPeoplePersonIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserFollowsPeoplePersonIdPathParams.class, baseUrl, "/user/follows/people/{person_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserFollowsPeoplePersonIdRequest.class, baseUrl, "/user/follows/people/{person_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -157,7 +157,7 @@ public class FollowedPeople {
      */
     public org.openapis.openapi.models.operations.PutUserFollowsPeoplePersonIdResponse putUserFollowsPeoplePersonId(org.openapis.openapi.models.operations.PutUserFollowsPeoplePersonIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutUserFollowsPeoplePersonIdPathParams.class, baseUrl, "/user/follows/people/{person_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutUserFollowsPeoplePersonIdRequest.class, baseUrl, "/user/follows/people/{person_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

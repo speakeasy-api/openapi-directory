@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountDisassociateRequest {
-    
-    public AccountDisassociatePathParams pathParams;
-    public AccountDisassociateRequest withPathParams(AccountDisassociatePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The account ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public AccountDisassociateRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     

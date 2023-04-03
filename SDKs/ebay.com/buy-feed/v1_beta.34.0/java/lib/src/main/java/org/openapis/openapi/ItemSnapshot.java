@@ -35,10 +35,11 @@ public class ItemSnapshot {
     /**
      *  &lt;p&gt;The &lt;b&gt; Hourly Snapshot&lt;/b&gt; feed file is generated each hour every day for most categories. This method lets you download an &lt;b&gt; Hourly Snapshot&lt;/b&gt; TSV_GZIP (tab-separated value gzip) feed file containing the details of all the items that have &lt;a href="/api-docs/buy/static/api-feed.html#changed-items"&gt;changed&lt;/a&gt; &lt;i&gt; within&lt;/i&gt; the specified day and hour for a specific category.  This means to generate the 8AM file of items that have changed from 8AM and 8:59AM, the service starts at 9AM. You can retrieve the 8AM snapshot file at 10AM.&lt;/p&gt;    &lt;p&gt;Snapshot feeds now include new listings. You can check &lt;a href="/api-docs/buy/feed/resources/item_snapshot/methods/getItemSnapshotFeed#response.items.itemCreationDate"&gt;itemCreationDate&lt;/a&gt; to identify listings that were newly created within the specified hour.&lt;/p&gt;     &lt;p&gt;&lt;span class="tablenote"&gt;&lt;b&gt;Note: &lt;/b&gt;  Filters are applied to the feed files. For details, see &lt;a href="/api-docs/buy/static/api-feed.html#feed-filters"&gt;Feed File Filters&lt;/a&gt;.  When curating the items returned, be sure to code as if these filters are not applied as they can be changed or removed in the future.&lt;/span&gt;&lt;/p&gt;                  &lt;p&gt;You can use the response from this method to update the item details of items stored in your database. By looking at the value of &lt;a href="/api-docs/buy/feed/resources/item_snapshot/methods/getItemSnapshotFeed#response.items.itemSnapshotDate"&gt;itemSnapshotDate&lt;/a&gt; for a given item, you will be able to tell which information is the latest.&lt;/p&gt;   &lt;p&gt;&lt;span class="tablenote"&gt;&lt;span style="color:#FF0000"&gt; &lt;b&gt; Important:&lt;/b&gt; &lt;/span&gt; When the value of the &lt;b&gt; availability&lt;/b&gt; column is &lt;code&gt;UNAVAILABLE&lt;/code&gt;, only the &lt;b&gt;itemId&lt;/b&gt; and &lt;b&gt; availability&lt;/b&gt; columns are populated. &lt;/span&gt;&lt;/p&gt;&lt;h3&gt;&lt;b&gt;Downloading feed files &lt;/b&gt;&lt;/h3&gt;&lt;p&gt;Hourly snapshot feed files are binary gzip files. If the file is larger than 100 MB, the download must be streamed in chunks. You specify the size of the chunks in bytes using the &lt;a href="#range-header"&gt;Range&lt;/a&gt; request header. The &lt;a href="#content-range"&gt;Content-range&lt;/a&gt; response header indicates where in the full resource this partial chunk of data belongs and the total number of bytes in the file.       For more information about using these headers, see &lt;a href="/api-docs/buy/static/api-feed_beta.html#retrv-gzip"&gt;Retrieving a gzip feed file&lt;/a&gt;.  &lt;/p&gt;                                &lt;p&gt;&lt;span class="tablenote"&gt;  &lt;b&gt; Note:&lt;/b&gt; A successful call will always return a TSV.GZIP file; however, unsuccessful calls generate errors that are returned in JSON format. For documentation purposes, the successful call response is shown below as JSON fields so that the value returned in each column can be explained. The order of the response fields shows the order of the columns in the feed file.&lt;/span&gt;&lt;/p&gt;&lt;h3&gt;&lt;b&gt;Restrictions &lt;/b&gt;&lt;/h3&gt;&lt;p&gt;For a list of supported sites and other restrictions, see &lt;a href="/api-docs/buy/feed/overview.html#API"&gt;API Restrictions&lt;/a&gt;.&lt;/p&gt;  
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetItemSnapshotFeedResponse getItemSnapshotFeed(org.openapis.openapi.models.operations.GetItemSnapshotFeedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetItemSnapshotFeedResponse getItemSnapshotFeed(org.openapis.openapi.models.operations.GetItemSnapshotFeedRequest request, org.openapis.openapi.models.operations.GetItemSnapshotFeedSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/item_snapshot");
         
@@ -46,13 +47,13 @@ public class ItemSnapshot {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetItemSnapshotFeedQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetItemSnapshotFeedRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -61,7 +62,7 @@ public class ItemSnapshot {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

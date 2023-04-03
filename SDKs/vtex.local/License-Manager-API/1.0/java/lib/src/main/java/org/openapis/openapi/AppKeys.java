@@ -38,7 +38,7 @@ public class AppKeys {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreatenewappkeyResponse createnewappkey(org.openapis.openapi.models.operations.CreatenewappkeyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreatenewappkeyResponse createnewappkey(org.openapis.openapi.models.shared.CreatenewappkeyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/vlm/appkeys");
         
@@ -91,7 +91,7 @@ public class AppKeys {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -133,12 +133,12 @@ public class AppKeys {
      */
     public org.openapis.openapi.models.operations.UpdateappkeyResponse updateappkey(org.openapis.openapi.models.operations.UpdateappkeyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateappkeyPathParams.class, baseUrl, "/api/vlm/appkeys/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateappkeyRequest.class, baseUrl, "/api/vlm/appkeys/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateappkeyRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

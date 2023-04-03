@@ -37,19 +37,20 @@ public class Tracks {
     /**
      * Deletes a track.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteTracksTrackIdResponse deleteTracksTrackId(org.openapis.openapi.models.operations.DeleteTracksTrackIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteTracksTrackIdResponse deleteTracksTrackId(org.openapis.openapi.models.operations.DeleteTracksTrackIdRequest request, org.openapis.openapi.models.operations.DeleteTracksTrackIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteTracksTrackIdPathParams.class, baseUrl, "/tracks/{track_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteTracksTrackIdRequest.class, baseUrl, "/tracks/{track_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,25 +79,26 @@ public class Tracks {
     /**
      * Returns a track.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTracksTrackIdResponse getTracksTrackId(org.openapis.openapi.models.operations.GetTracksTrackIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTracksTrackIdResponse getTracksTrackId(org.openapis.openapi.models.operations.GetTracksTrackIdRequest request, org.openapis.openapi.models.operations.GetTracksTrackIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTracksTrackIdPathParams.class, baseUrl, "/tracks/{track_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTracksTrackIdRequest.class, baseUrl, "/tracks/{track_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTracksTrackIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTracksTrackIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -139,25 +141,26 @@ public class Tracks {
     /**
      * Returns the comments posted on the track(track_id).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTracksTrackIdCommentsResponse getTracksTrackIdComments(org.openapis.openapi.models.operations.GetTracksTrackIdCommentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTracksTrackIdCommentsResponse getTracksTrackIdComments(org.openapis.openapi.models.operations.GetTracksTrackIdCommentsRequest request, org.openapis.openapi.models.operations.GetTracksTrackIdCommentsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTracksTrackIdCommentsPathParams.class, baseUrl, "/tracks/{track_id}/comments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTracksTrackIdCommentsRequest.class, baseUrl, "/tracks/{track_id}/comments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTracksTrackIdCommentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTracksTrackIdCommentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -200,25 +203,26 @@ public class Tracks {
     /**
      * Returns a list of users who have favorited or liked the track.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTracksTrackIdFavoritersResponse getTracksTrackIdFavoriters(org.openapis.openapi.models.operations.GetTracksTrackIdFavoritersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTracksTrackIdFavoritersResponse getTracksTrackIdFavoriters(org.openapis.openapi.models.operations.GetTracksTrackIdFavoritersRequest request, org.openapis.openapi.models.operations.GetTracksTrackIdFavoritersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTracksTrackIdFavoritersPathParams.class, baseUrl, "/tracks/{track_id}/favoriters", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTracksTrackIdFavoritersRequest.class, baseUrl, "/tracks/{track_id}/favoriters", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTracksTrackIdFavoritersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTracksTrackIdFavoritersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -261,25 +265,26 @@ public class Tracks {
     /**
      * Returns all related tracks of track on SoundCloud.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTracksTrackIdRelatedResponse getTracksTrackIdRelated(org.openapis.openapi.models.operations.GetTracksTrackIdRelatedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTracksTrackIdRelatedResponse getTracksTrackIdRelated(org.openapis.openapi.models.operations.GetTracksTrackIdRelatedRequest request, org.openapis.openapi.models.operations.GetTracksTrackIdRelatedSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTracksTrackIdRelatedPathParams.class, baseUrl, "/tracks/{track_id}/related", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTracksTrackIdRelatedRequest.class, baseUrl, "/tracks/{track_id}/related", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTracksTrackIdRelatedQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTracksTrackIdRelatedRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -322,25 +327,26 @@ public class Tracks {
     /**
      * Returns a collection of track's reposters.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTracksTrackIdRepostersResponse getTracksTrackIdReposters(org.openapis.openapi.models.operations.GetTracksTrackIdRepostersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTracksTrackIdRepostersResponse getTracksTrackIdReposters(org.openapis.openapi.models.operations.GetTracksTrackIdRepostersRequest request, org.openapis.openapi.models.operations.GetTracksTrackIdRepostersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTracksTrackIdRepostersPathParams.class, baseUrl, "/tracks/{track_id}/reposters", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTracksTrackIdRepostersRequest.class, baseUrl, "/tracks/{track_id}/reposters", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTracksTrackIdRepostersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTracksTrackIdRepostersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -383,25 +389,26 @@ public class Tracks {
     /**
      * Returns a track's streamable URLs
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTracksTrackIdStreamsResponse getTracksTrackIdStreams(org.openapis.openapi.models.operations.GetTracksTrackIdStreamsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTracksTrackIdStreamsResponse getTracksTrackIdStreams(org.openapis.openapi.models.operations.GetTracksTrackIdStreamsRequest request, org.openapis.openapi.models.operations.GetTracksTrackIdStreamsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTracksTrackIdStreamsPathParams.class, baseUrl, "/tracks/{track_id}/streams", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTracksTrackIdStreamsRequest.class, baseUrl, "/tracks/{track_id}/streams", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTracksTrackIdStreamsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTracksTrackIdStreamsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -444,10 +451,11 @@ public class Tracks {
     /**
      * Uploads a new track.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostTracksResponse postTracks(org.openapis.openapi.models.operations.PostTracksRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostTracksResponse postTracks(org.openapis.openapi.models.shared.TrackDataRequest request, org.openapis.openapi.models.operations.PostTracksSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/tracks");
         
@@ -458,7 +466,7 @@ public class Tracks {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -493,24 +501,25 @@ public class Tracks {
     /**
      * Returns the newly created comment on success
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostTracksTrackIdCommentsResponse postTracksTrackIdComments(org.openapis.openapi.models.operations.PostTracksTrackIdCommentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostTracksTrackIdCommentsResponse postTracksTrackIdComments(org.openapis.openapi.models.operations.PostTracksTrackIdCommentsRequest request, org.openapis.openapi.models.operations.PostTracksTrackIdCommentsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTracksTrackIdCommentsPathParams.class, baseUrl, "/tracks/{track_id}/comments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTracksTrackIdCommentsRequest.class, baseUrl, "/tracks/{track_id}/comments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -553,21 +562,22 @@ public class Tracks {
     /**
      * Updates a track's information.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutTracksTrackIdJsonResponse putTracksTrackIdJson(org.openapis.openapi.models.operations.PutTracksTrackIdJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutTracksTrackIdJsonResponse putTracksTrackIdJson(org.openapis.openapi.models.operations.PutTracksTrackIdJsonRequest request, org.openapis.openapi.models.operations.PutTracksTrackIdJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutTracksTrackIdJsonPathParams.class, baseUrl, "/tracks/{track_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutTracksTrackIdJsonRequest.class, baseUrl, "/tracks/{track_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "trackMetadataRequest", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -602,21 +612,22 @@ public class Tracks {
     /**
      * Updates a track's information.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutTracksTrackIdMultipartResponse putTracksTrackIdMultipart(org.openapis.openapi.models.operations.PutTracksTrackIdMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutTracksTrackIdMultipartResponse putTracksTrackIdMultipart(org.openapis.openapi.models.operations.PutTracksTrackIdMultipartRequest request, org.openapis.openapi.models.operations.PutTracksTrackIdMultipartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutTracksTrackIdMultipartPathParams.class, baseUrl, "/tracks/{track_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutTracksTrackIdMultipartRequest.class, baseUrl, "/tracks/{track_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "trackDataRequest", "multipart");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

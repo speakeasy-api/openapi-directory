@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.ActionARealTimeDecisionPathParams;
 import org.openapis.openapi.models.operations.ActionARealTimeDecisionRequest;
 import org.openapis.openapi.models.operations.ActionARealTimeDecisionResponse;
 import org.openapis.openapi.models.shared.ActionARealTimeDecisionParametersCardAuthorizationDecisionEnum;
@@ -34,17 +33,12 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    bearerAuth = new SchemeBearerAuth() {{
-                        authorization = "Bearer YOUR_BEARER_TOKEN_HERE";
-                    }};
+                    bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
             ActionARealTimeDecisionRequest req = new ActionARealTimeDecisionRequest() {{
-                pathParams = new ActionARealTimeDecisionPathParams() {{
-                    realTimeDecisionId = "corrupti";
-                }};
-                request = new ActionARealTimeDecisionParameters() {{
+                actionARealTimeDecisionParameters = new ActionARealTimeDecisionParameters() {{
                     cardAuthorization = new ActionARealTimeDecisionParametersCardAuthorization() {{
                         decision = "decline";
                     }};
@@ -53,16 +47,17 @@ public class Application {
                     }};
                     digitalWalletToken = new ActionARealTimeDecisionParametersDigitalWalletToken() {{
                         approval = new ActionARealTimeDecisionParametersDigitalWalletTokenApproval() {{
-                            cardProfileId = "quibusdam";
-                            email = "Ryan.Little62@yahoo.com";
-                            phone = "1-542-909-2347 x8545";
+                            cardProfileId = "distinctio";
+                            email = "Leda_Stiedemann@hotmail.com";
+                            phone = "1-663-528-0923 x478";
                         }};
                         decline = new ActionARealTimeDecisionParametersDigitalWalletTokenDecline() {{
-                            reason = "nisi";
+                            reason = "voluptatum";
                         }};
                     }};
                 }};
-            }};            
+                realTimeDecisionId = "iusto";
+            }}            
 
             ActionARealTimeDecisionResponse res = sdk.actionARealTimeDecision(req);
 
@@ -76,7 +71,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

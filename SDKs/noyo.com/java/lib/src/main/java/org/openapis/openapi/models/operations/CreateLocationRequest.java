@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateLocationRequest {
-    
-    public CreateLocationPathParams pathParams;
-    public CreateLocationRequest withPathParams(CreateLocationPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.LocationCreateRequest locationCreateRequest;
+    public CreateLocationRequest withLocationCreateRequest(org.openapis.openapi.models.shared.LocationCreateRequest locationCreateRequest) {
+        this.locationCreateRequest = locationCreateRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.LocationCreateRequest request;
-    public CreateLocationRequest withRequest(org.openapis.openapi.models.shared.LocationCreateRequest request) {
-        this.request = request;
+    /**
+     * The unique identifier of the group in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public String groupId;
+    public CreateLocationRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     

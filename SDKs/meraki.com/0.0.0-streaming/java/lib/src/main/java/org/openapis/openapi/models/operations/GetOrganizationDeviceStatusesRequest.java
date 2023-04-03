@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationDeviceStatusesRequest {
-    
-    public GetOrganizationDeviceStatusesPathParams pathParams;
-    public GetOrganizationDeviceStatusesRequest withPathParams(GetOrganizationDeviceStatusesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public GetOrganizationDeviceStatusesRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

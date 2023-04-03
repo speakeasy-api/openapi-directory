@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAssetRequest {
-    
-    public GetAssetPathParams pathParams;
-    public GetAssetRequest withPathParams(GetAssetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Flag to display Legacy and Provider Ids.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aliases")
+    public Boolean aliases;
+    public GetAssetRequest withAliases(Boolean aliases) {
+        this.aliases = aliases;
         return this;
     }
     
-    
-    public GetAssetQueryParams queryParams;
-    public GetAssetRequest withQueryParams(GetAssetQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetAssetSecurity security;
-    public GetAssetRequest withSecurity(GetAssetSecurity security) {
-        this.security = security;
+    /**
+     * A asset ID filter for the schedule collection. This can be a reference to any type of asset i.e. movie, season, series or episode.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assetId")
+    public String assetId;
+    public GetAssetRequest withAssetId(String assetId) {
+        this.assetId = assetId;
         return this;
     }
     

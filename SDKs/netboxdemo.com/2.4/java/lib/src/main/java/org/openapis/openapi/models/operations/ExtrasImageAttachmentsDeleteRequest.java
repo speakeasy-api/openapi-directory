@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExtrasImageAttachmentsDeleteRequest {
-    
-    public ExtrasImageAttachmentsDeletePathParams pathParams;
-    public ExtrasImageAttachmentsDeleteRequest withPathParams(ExtrasImageAttachmentsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this image attachment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public ExtrasImageAttachmentsDeleteRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

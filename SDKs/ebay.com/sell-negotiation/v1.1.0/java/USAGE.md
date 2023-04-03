@@ -5,11 +5,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.FindEligibleItemsSecurity;
-import org.openapis.openapi.models.operations.FindEligibleItemsQueryParams;
-import org.openapis.openapi.models.operations.FindEligibleItemsHeaders;
 import org.openapis.openapi.models.operations.FindEligibleItemsRequest;
 import org.openapis.openapi.models.operations.FindEligibleItemsResponse;
-import org.openapis.openapi.models.shared.SchemeAPIAuth;
 
 public class Application {
     public static void main(String[] args) {
@@ -18,21 +15,14 @@ public class Application {
                 .build();
 
             FindEligibleItemsRequest req = new FindEligibleItemsRequest() {{
-                security = new FindEligibleItemsSecurity() {{
-                    apiAuth = new SchemeAPIAuth() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                queryParams = new FindEligibleItemsQueryParams() {{
-                    limit = "corrupti";
-                    offset = "provident";
-                }};
-                headers = new FindEligibleItemsHeaders() {{
-                    xEbayCMarketplaceId = "distinctio";
-                }};
-            }};            
+                xEbayCMarketplaceId = "corrupti";
+                limit = "provident";
+                offset = "distinctio";
+            }}            
 
-            FindEligibleItemsResponse res = sdk.offer.findEligibleItems(req);
+            FindEligibleItemsResponse res = sdk.offer.findEligibleItems(req, new FindEligibleItemsSecurity() {{
+                apiAuth = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.pagedEligibleItemCollection.isPresent()) {
                 // handle response

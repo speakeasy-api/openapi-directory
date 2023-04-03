@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostJsappsJsonRequest {
-    
-    public PostJsappsJsonQueryParams queryParams;
-    public PostJsappsJsonRequest withQueryParams(PostJsappsJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * JSApp parameters to create
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.JSAppEdit request;
-    public PostJsappsJsonRequest withRequest(org.openapis.openapi.models.shared.JSAppEdit request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.JSAppEdit jsAppEdit;
+    public PostJsappsJsonRequest withJSAppEdit(org.openapis.openapi.models.shared.JSAppEdit jsAppEdit) {
+        this.jsAppEdit = jsAppEdit;
+        return this;
+    }
+    
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public PostJsappsJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
+        return this;
+    }
+    
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public PostJsappsJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

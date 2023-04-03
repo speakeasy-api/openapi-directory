@@ -7,9 +7,9 @@ package org.openapis.openapi.models.shared;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Security {
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public SchemeAzureAuth azureAuth;
-    public Security withAzureAuth(SchemeAzureAuth azureAuth) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String azureAuth;
+    public Security withAzureAuth(String azureAuth) {
         this.azureAuth = azureAuth;
         return this;
     }

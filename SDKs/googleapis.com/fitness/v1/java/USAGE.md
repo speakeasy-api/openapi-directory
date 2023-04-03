@@ -16,10 +16,9 @@ import org.openapis.openapi.models.operations.FitnessUsersDataSourcesCreateSecur
 import org.openapis.openapi.models.operations.FitnessUsersDataSourcesCreateSecurityOption8;
 import org.openapis.openapi.models.operations.FitnessUsersDataSourcesCreateSecurityOption9;
 import org.openapis.openapi.models.operations.FitnessUsersDataSourcesCreateSecurity;
-import org.openapis.openapi.models.operations.FitnessUsersDataSourcesCreatePathParams;
-import org.openapis.openapi.models.operations.FitnessUsersDataSourcesCreateQueryParams;
 import org.openapis.openapi.models.operations.FitnessUsersDataSourcesCreateRequest;
 import org.openapis.openapi.models.operations.FitnessUsersDataSourcesCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.DataSourceDataQualityStandardEnum;
 import org.openapis.openapi.models.shared.DataSourceTypeEnum;
 import org.openapis.openapi.models.shared.DataSource;
@@ -29,10 +28,7 @@ import org.openapis.openapi.models.shared.DataType;
 import org.openapis.openapi.models.shared.DataTypeFieldFormatEnum;
 import org.openapis.openapi.models.shared.DataTypeField;
 import org.openapis.openapi.models.shared.Application;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -41,72 +37,66 @@ public class Application {
                 .build();
 
             FitnessUsersDataSourcesCreateRequest req = new FitnessUsersDataSourcesCreateRequest() {{
-                security = new FitnessUsersDataSourcesCreateSecurity() {{
-                    option1 = new FitnessUsersDataSourcesCreateSecurityOption1() {{
-                        oauth2 = new SchemeOauth2() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                        oauth2c = new SchemeOauth2c() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                    }};
-                }};
-                pathParams = new FitnessUsersDataSourcesCreatePathParams() {{
-                    userId = "corrupti";
-                }};
-                queryParams = new FitnessUsersDataSourcesCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new DataSource() {{
+                dollarXgafv = "2";
+                dataSource = new DataSource() {{
                     application = new Application() {{
-                        detailsUrl = "suscipit";
-                        name = "iure";
-                        packageName = "magnam";
-                        version = "debitis";
+                        detailsUrl = "provident";
+                        name = "distinctio";
+                        packageName = "quibusdam";
+                        version = "unde";
                     }};
                     dataQualityStandard = new org.openapis.openapi.models.shared.DataSourceDataQualityStandardEnum[]{{
-                        add("dataQualityBloodGlucoseIso151972013"),
+                        add("dataQualityBloodPressureBhsAB"),
+                        add("dataQualityBloodGlucoseIso151972003"),
+                        add("dataQualityBloodPressureBhsAA"),
+                        add("dataQualityBloodPressureBhsBA"),
                     }};
-                    dataStreamId = "tempora";
+                    dataStreamId = "deserunt";
                     dataStreamName = "suscipit";
                     dataType = new DataType() {{
                         field = new org.openapis.openapi.models.shared.DataTypeField[]{{
                             add(new DataTypeField() {{
-                                format = "floatList";
-                                name = "placeat";
+                                format = "string";
+                                name = "debitis";
                                 optional = false;
                             }}),
                             add(new DataTypeField() {{
-                                format = "map";
-                                name = "iusto";
+                                format = "integer";
+                                name = "delectus";
                                 optional = false;
                             }}),
                         }};
-                        name = "excepturi";
+                        name = "tempora";
                     }};
                     device = new Device() {{
-                        manufacturer = "nisi";
-                        model = "recusandae";
+                        manufacturer = "suscipit";
+                        model = "molestiae";
                         type = "headMounted";
-                        uid = "ab";
-                        version = "quis";
+                        uid = "placeat";
+                        version = "voluptatum";
                     }};
-                    name = "veritatis";
+                    name = "iusto";
                     type = "derived";
                 }};
-            }};            
+                accessToken = "nisi";
+                alt = "proto";
+                callback = "temporibus";
+                fields = "ab";
+                key = "quis";
+                oauthToken = "veritatis";
+                prettyPrint = false;
+                quotaUser = "deserunt";
+                uploadType = "perferendis";
+                uploadProtocol = "ipsam";
+                userId = "repellendus";
+            }}            
 
-            FitnessUsersDataSourcesCreateResponse res = sdk.users.fitnessUsersDataSourcesCreate(req);
+            FitnessUsersDataSourcesCreateResponse res = sdk.users.fitnessUsersDataSourcesCreate(req, new FitnessUsersDataSourcesCreateSecurity() {{
+                option1 = new FitnessUsersDataSourcesCreateSecurityOption1() {{
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                }};
+            }});
 
             if (res.dataSource.isPresent()) {
                 // handle response

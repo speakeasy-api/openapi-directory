@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsCreateRemoveTokenForOrgRequest {
-    
-    public ActionsCreateRemoveTokenForOrgPathParams pathParams;
-    public ActionsCreateRemoveTokenForOrgRequest withPathParams(ActionsCreateRemoveTokenForOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ActionsCreateRemoveTokenForOrgRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListWorkweekConfigsRequest {
-    
-    public ListWorkweekConfigsQueryParams queryParams;
-    public ListWorkweekConfigsRequest withQueryParams(ListWorkweekConfigsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A pointer to the next page of `WorkweekConfig` results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public ListWorkweekConfigsRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
-    
-    public ListWorkweekConfigsSecurity security;
-    public ListWorkweekConfigsRequest withSecurity(ListWorkweekConfigsSecurity security) {
-        this.security = security;
+    /**
+     * The maximum number of `WorkweekConfigs` results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListWorkweekConfigsRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     

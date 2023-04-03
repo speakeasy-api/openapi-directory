@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PhoneCodeRequest {
-    
-    public PhoneCodePathParams pathParams;
-    public PhoneCodeRequest withPathParams(PhoneCodePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=firstName")
+    public String firstName;
+    public PhoneCodeRequest withFirstName(String firstName) {
+        this.firstName = firstName;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=lastName")
+    public String lastName;
+    public PhoneCodeRequest withLastName(String lastName) {
+        this.lastName = lastName;
+        return this;
+    }
     
-    public PhoneCodeSecurity security;
-    public PhoneCodeRequest withSecurity(PhoneCodeSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=phoneNumber")
+    public String phoneNumber;
+    public PhoneCodeRequest withPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
         return this;
     }
     

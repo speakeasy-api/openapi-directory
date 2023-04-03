@@ -4,27 +4,48 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ClinicalNoteFieldValuesUpdateRequest {
-    
-    public ClinicalNoteFieldValuesUpdatePathParams pathParams;
-    public ClinicalNoteFieldValuesUpdateRequest withPathParams(ClinicalNoteFieldValuesUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointment")
+    public Long appointment;
+    public ClinicalNoteFieldValuesUpdateRequest withAppointment(Long appointment) {
+        this.appointment = appointment;
         return this;
     }
     
-    
-    public ClinicalNoteFieldValuesUpdateQueryParams queryParams;
-    public ClinicalNoteFieldValuesUpdateRequest withQueryParams(ClinicalNoteFieldValuesUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clinical_note_field")
+    public Long clinicalNoteField;
+    public ClinicalNoteFieldValuesUpdateRequest withClinicalNoteField(Long clinicalNoteField) {
+        this.clinicalNoteField = clinicalNoteField;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clinical_note_template")
+    public Long clinicalNoteTemplate;
+    public ClinicalNoteFieldValuesUpdateRequest withClinicalNoteTemplate(Long clinicalNoteTemplate) {
+        this.clinicalNoteTemplate = clinicalNoteTemplate;
+        return this;
+    }
     
-    public ClinicalNoteFieldValuesUpdateSecurity security;
-    public ClinicalNoteFieldValuesUpdateRequest withSecurity(ClinicalNoteFieldValuesUpdateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public ClinicalNoteFieldValuesUpdateRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public ClinicalNoteFieldValuesUpdateRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public ClinicalNoteFieldValuesUpdateRequest withSince(String since) {
+        this.since = since;
         return this;
     }
     

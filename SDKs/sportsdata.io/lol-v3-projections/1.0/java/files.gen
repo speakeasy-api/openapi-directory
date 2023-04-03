@@ -30,15 +30,12 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/DfsSlatesByDateFormatEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/DfsSlatesByDatePathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DfsSlatesByDateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DfsSlatesByDateResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ProjectedPlayerGameStatsByDateFormatEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/ProjectedPlayerGameStatsByDatePathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ProjectedPlayerGameStatsByDateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ProjectedPlayerGameStatsByDateResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ProjectedPlayerGameStatsByPlayerFormatEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/ProjectedPlayerGameStatsByPlayerPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ProjectedPlayerGameStatsByPlayerRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ProjectedPlayerGameStatsByPlayerResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/DfsSlate.java
@@ -46,7 +43,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/DfsSlatePlayer.java
 lib/src/main/java/org/openapis/openapi/models/shared/DfsSlateGame.java
 lib/src/main/java/org/openapis/openapi/models/shared/Game.java
 lib/src/main/java/org/openapis/openapi/models/shared/PlayerGameProjection.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKeyHeader.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKeyQuery.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

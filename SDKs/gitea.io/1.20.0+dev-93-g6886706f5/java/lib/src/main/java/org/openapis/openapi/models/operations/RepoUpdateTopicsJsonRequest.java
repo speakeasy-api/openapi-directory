@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoUpdateTopicsJsonRequest {
-    
-    public RepoUpdateTopicsJsonPathParams pathParams;
-    public RepoUpdateTopicsJsonRequest withPathParams(RepoUpdateTopicsJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.RepoTopicOptions repoTopicOptions;
+    public RepoUpdateTopicsJsonRequest withRepoTopicOptions(org.openapis.openapi.models.shared.RepoTopicOptions repoTopicOptions) {
+        this.repoTopicOptions = repoTopicOptions;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RepoTopicOptions request;
-    public RepoUpdateTopicsJsonRequest withRequest(org.openapis.openapi.models.shared.RepoTopicOptions request) {
-        this.request = request;
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoUpdateTopicsJsonRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoUpdateTopicsJsonRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

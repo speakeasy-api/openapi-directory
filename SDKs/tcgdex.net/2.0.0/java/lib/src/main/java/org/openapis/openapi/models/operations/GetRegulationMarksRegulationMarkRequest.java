@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRegulationMarksRegulationMarkRequest {
-    
-    public GetRegulationMarksRegulationMarkPathParams pathParams;
-    public GetRegulationMarksRegulationMarkRequest withPathParams(GetRegulationMarksRegulationMarkPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=regulation-mark")
+    public String regulationMark;
+    public GetRegulationMarksRegulationMarkRequest withRegulationMark(String regulationMark) {
+        this.regulationMark = regulationMark;
         return this;
     }
     

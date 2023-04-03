@@ -39,7 +39,7 @@ public class Pages {
      */
     public org.openapis.openapi.models.operations.GetAllContentTypesResponse getAllContentTypes(org.openapis.openapi.models.operations.GetAllContentTypesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllContentTypesPathParams.class, baseUrl, "/_v/cms/api/{builderId}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllContentTypesRequest.class, baseUrl, "/_v/cms/api/{builderId}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,13 +80,13 @@ public class Pages {
      */
     public org.openapis.openapi.models.operations.GetCMSpageResponse getCMSpage(org.openapis.openapi.models.operations.GetCMSpageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCMSpagePathParams.class, baseUrl, "/_v/cms/api/{builderId}/{content-type}/{document-id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCMSpageRequest.class, baseUrl, "/_v/cms/api/{builderId}/{content-type}/{document-id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCMSpageQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCMSpageRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -127,13 +127,13 @@ public class Pages {
      */
     public org.openapis.openapi.models.operations.GetPagesbyContentTypeResponse getPagesbyContentType(org.openapis.openapi.models.operations.GetPagesbyContentTypeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPagesbyContentTypePathParams.class, baseUrl, "/_v/cms/api/{builderId}/{content-type}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPagesbyContentTypeRequest.class, baseUrl, "/_v/cms/api/{builderId}/{content-type}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPagesbyContentTypeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPagesbyContentTypeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

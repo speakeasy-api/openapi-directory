@@ -4,34 +4,60 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListUnderstandFieldValueRequest {
-    
-    public ListUnderstandFieldValuePathParams pathParams;
-    public ListUnderstandFieldValueRequest withPathParams(ListUnderstandFieldValuePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public ListUnderstandFieldValueRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
-    
-    public ListUnderstandFieldValueQueryParams queryParams;
-    public ListUnderstandFieldValueRequest withQueryParams(ListUnderstandFieldValueQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FieldTypeSid")
+    public String fieldTypeSid;
+    public ListUnderstandFieldValueRequest withFieldTypeSid(String fieldTypeSid) {
+        this.fieldTypeSid = fieldTypeSid;
         return this;
     }
     
-    
-    public ListUnderstandFieldValueSecurity security;
-    public ListUnderstandFieldValueRequest withSecurity(ListUnderstandFieldValueSecurity security) {
-        this.security = security;
+    /**
+     * An ISO language-country string of the value. For example: *en-US*
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Language")
+    public String language;
+    public ListUnderstandFieldValueRequest withLanguage(String language) {
+        this.language = language;
         return this;
     }
     
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListUnderstandFieldValueRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public String serverURL;
-    public ListUnderstandFieldValueRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListUnderstandFieldValueRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListUnderstandFieldValueRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

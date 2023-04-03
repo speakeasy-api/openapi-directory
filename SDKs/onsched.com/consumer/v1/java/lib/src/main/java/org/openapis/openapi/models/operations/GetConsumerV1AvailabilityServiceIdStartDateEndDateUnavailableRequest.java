@@ -4,20 +4,87 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableRequest {
-    
-    public GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailablePathParams pathParams;
-    public GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableRequest withPathParams(GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailablePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Duration of the service if different from default
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=duration")
+    public Integer duration;
+    public GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableRequest withDuration(Integer duration) {
+        this.duration = duration;
         return this;
     }
     
+    /**
+     * Format YYYY-MM-DD: End Date for unavailable time search
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=endDate")
+    public OffsetDateTime endDate;
+    public GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableRequest withEndDate(OffsetDateTime endDate) {
+        this.endDate = endDate;
+        return this;
+    }
     
-    public GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableQueryParams queryParams;
-    public GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableRequest withQueryParams(GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Id of business location, defaults to primary business location
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locationId")
+    public String locationId;
+    public GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableRequest withLocationId(String locationId) {
+        this.locationId = locationId;
+        return this;
+    }
+    
+    /**
+     * Resource Id to filter on
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resourceId")
+    public String resourceId;
+    public GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableRequest withResourceId(String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    
+    /**
+     * Service Id for availability search
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serviceId")
+    public String serviceId;
+    public GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableRequest withServiceId(String serviceId) {
+        this.serviceId = serviceId;
+        return this;
+    }
+    
+    /**
+     * Set as true to remove Time Past (TP) blocks in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skipTimePastUnavailability")
+    public Boolean skipTimePastUnavailability;
+    public GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableRequest withSkipTimePastUnavailability(Boolean skipTimePastUnavailability) {
+        this.skipTimePastUnavailability = skipTimePastUnavailability;
+        return this;
+    }
+    
+    /**
+     * Format YYYY-MM-DD: Start Date for unavailable time search
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=startDate")
+    public OffsetDateTime startDate;
+    public GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableRequest withStartDate(OffsetDateTime startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    
+    /**
+     * Request timezone offset to view unavailable times
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tzOffset")
+    public Integer tzOffset;
+    public GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableRequest withTzOffset(Integer tzOffset) {
+        this.tzOffset = tzOffset;
         return this;
     }
     

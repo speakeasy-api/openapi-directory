@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStripeGatewayDeveloperDeveloperIdAccountsRequest {
-    
-    public GetStripeGatewayDeveloperDeveloperIdAccountsPathParams pathParams;
-    public GetStripeGatewayDeveloperDeveloperIdAccountsRequest withPathParams(GetStripeGatewayDeveloperDeveloperIdAccountsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the developer connecting their Stripe account
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=developerId")
+    public String developerId;
+    public GetStripeGatewayDeveloperDeveloperIdAccountsRequest withDeveloperId(String developerId) {
+        this.developerId = developerId;
         return this;
     }
     

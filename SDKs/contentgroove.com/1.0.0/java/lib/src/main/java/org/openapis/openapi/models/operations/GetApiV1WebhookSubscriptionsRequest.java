@@ -4,20 +4,34 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1WebhookSubscriptionsRequest {
-    
-    public GetApiV1WebhookSubscriptionsQueryParams queryParams;
-    public GetApiV1WebhookSubscriptionsRequest withQueryParams(GetApiV1WebhookSubscriptionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filters to be applied to the query.
+     * 
+     * Query params in the url must look like this: "filter[attributeName_*matcher*]"
+     * 
+     * (i.e. filter[name_eq]=chimp%20into%20space)
+     * 
+     * Available matchers can be found here: https://activerecord-hackery.github.io/ransack/getting-started/search-matches/
+     * 
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=filter")
+    public java.util.Map<String, Object> filter;
+    public GetApiV1WebhookSubscriptionsRequest withFilter(java.util.Map<String, Object> filter) {
+        this.filter = filter;
         return this;
     }
     
-    
-    public GetApiV1WebhookSubscriptionsSecurity security;
-    public GetApiV1WebhookSubscriptionsRequest withSecurity(GetApiV1WebhookSubscriptionsSecurity security) {
-        this.security = security;
+    /**
+     * Sorting to be applied to the query. For more info: https://jsonapi.org/format/#fetching-sorting
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetApiV1WebhookSubscriptionsSortEnum sort;
+    public GetApiV1WebhookSubscriptionsRequest withSort(GetApiV1WebhookSubscriptionsSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

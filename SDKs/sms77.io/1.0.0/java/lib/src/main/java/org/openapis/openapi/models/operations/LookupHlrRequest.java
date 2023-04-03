@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LookupHlrRequest {
-    
-    public LookupHlrQueryParams queryParams;
-    public LookupHlrRequest withQueryParams(LookupHlrQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The phone number to look up.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=number")
+    public String[] number;
+    public LookupHlrRequest withNumber(String[] number) {
+        this.number = number;
         return this;
     }
     

@@ -7,31 +7,260 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StorageObjectsCopyRequest {
-    
-    public StorageObjectsCopyPathParams pathParams;
-    public StorageObjectsCopyRequest withPathParams(StorageObjectsCopyPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public StorageObjectsCopyQueryParams queryParams;
-    public StorageObjectsCopyRequest withQueryParams(StorageObjectsCopyQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Object request;
-    public StorageObjectsCopyRequest withRequest(org.openapis.openapi.models.shared.Object request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Object object;
+    public StorageObjectsCopyRequest withObject(org.openapis.openapi.models.shared.Object object) {
+        this.object = object;
         return this;
     }
     
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public StorageObjectsCopyRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public StorageObjectsCopySecurity security;
-    public StorageObjectsCopyRequest withSecurity(StorageObjectsCopySecurity security) {
-        this.security = security;
+    /**
+     * Name of the bucket in which to store the new object. Overrides the provided object metadata's bucket value, if any.For information about how to URL encode object names to be path safe, see Encoding URI Path Parts.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destinationBucket")
+    public String destinationBucket;
+    public StorageObjectsCopyRequest withDestinationBucket(String destinationBucket) {
+        this.destinationBucket = destinationBucket;
+        return this;
+    }
+    
+    /**
+     * Resource name of the Cloud KMS key, of the form projects/my-project/locations/global/keyRings/my-kr/cryptoKeys/my-key, that will be used to encrypt the object. Overrides the object metadata's kms_key_name value, if any.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destinationKmsKeyName")
+    public String destinationKmsKeyName;
+    public StorageObjectsCopyRequest withDestinationKmsKeyName(String destinationKmsKeyName) {
+        this.destinationKmsKeyName = destinationKmsKeyName;
+        return this;
+    }
+    
+    /**
+     * Name of the new object. Required when the object metadata is not otherwise provided. Overrides the object metadata's name value, if any.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destinationObject")
+    public String destinationObject;
+    public StorageObjectsCopyRequest withDestinationObject(String destinationObject) {
+        this.destinationObject = destinationObject;
+        return this;
+    }
+    
+    /**
+     * Apply a predefined set of access controls to the destination object.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destinationPredefinedAcl")
+    public StorageObjectsCopyDestinationPredefinedACLEnum destinationPredefinedAcl;
+    public StorageObjectsCopyRequest withDestinationPredefinedAcl(StorageObjectsCopyDestinationPredefinedACLEnum destinationPredefinedAcl) {
+        this.destinationPredefinedAcl = destinationPredefinedAcl;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public StorageObjectsCopyRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Makes the operation conditional on whether the destination object's current generation matches the given value. Setting to 0 makes the operation succeed only if there are no live versions of the object.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifGenerationMatch")
+    public String ifGenerationMatch;
+    public StorageObjectsCopyRequest withIfGenerationMatch(String ifGenerationMatch) {
+        this.ifGenerationMatch = ifGenerationMatch;
+        return this;
+    }
+    
+    /**
+     * Makes the operation conditional on whether the destination object's current generation does not match the given value. If no live object exists, the precondition fails. Setting to 0 makes the operation succeed only if there is a live version of the object.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifGenerationNotMatch")
+    public String ifGenerationNotMatch;
+    public StorageObjectsCopyRequest withIfGenerationNotMatch(String ifGenerationNotMatch) {
+        this.ifGenerationNotMatch = ifGenerationNotMatch;
+        return this;
+    }
+    
+    /**
+     * Makes the operation conditional on whether the destination object's current metageneration matches the given value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifMetagenerationMatch")
+    public String ifMetagenerationMatch;
+    public StorageObjectsCopyRequest withIfMetagenerationMatch(String ifMetagenerationMatch) {
+        this.ifMetagenerationMatch = ifMetagenerationMatch;
+        return this;
+    }
+    
+    /**
+     * Makes the operation conditional on whether the destination object's current metageneration does not match the given value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifMetagenerationNotMatch")
+    public String ifMetagenerationNotMatch;
+    public StorageObjectsCopyRequest withIfMetagenerationNotMatch(String ifMetagenerationNotMatch) {
+        this.ifMetagenerationNotMatch = ifMetagenerationNotMatch;
+        return this;
+    }
+    
+    /**
+     * Makes the operation conditional on whether the source object's current generation matches the given value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifSourceGenerationMatch")
+    public String ifSourceGenerationMatch;
+    public StorageObjectsCopyRequest withIfSourceGenerationMatch(String ifSourceGenerationMatch) {
+        this.ifSourceGenerationMatch = ifSourceGenerationMatch;
+        return this;
+    }
+    
+    /**
+     * Makes the operation conditional on whether the source object's current generation does not match the given value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifSourceGenerationNotMatch")
+    public String ifSourceGenerationNotMatch;
+    public StorageObjectsCopyRequest withIfSourceGenerationNotMatch(String ifSourceGenerationNotMatch) {
+        this.ifSourceGenerationNotMatch = ifSourceGenerationNotMatch;
+        return this;
+    }
+    
+    /**
+     * Makes the operation conditional on whether the source object's current metageneration matches the given value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifSourceMetagenerationMatch")
+    public String ifSourceMetagenerationMatch;
+    public StorageObjectsCopyRequest withIfSourceMetagenerationMatch(String ifSourceMetagenerationMatch) {
+        this.ifSourceMetagenerationMatch = ifSourceMetagenerationMatch;
+        return this;
+    }
+    
+    /**
+     * Makes the operation conditional on whether the source object's current metageneration does not match the given value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifSourceMetagenerationNotMatch")
+    public String ifSourceMetagenerationNotMatch;
+    public StorageObjectsCopyRequest withIfSourceMetagenerationNotMatch(String ifSourceMetagenerationNotMatch) {
+        this.ifSourceMetagenerationNotMatch = ifSourceMetagenerationNotMatch;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public StorageObjectsCopyRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public StorageObjectsCopyRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public StorageObjectsCopyRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Set of properties to return. Defaults to noAcl, unless the object resource specifies the acl property, when it defaults to full.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=projection")
+    public StorageObjectsCopyProjectionEnum projection;
+    public StorageObjectsCopyRequest withProjection(StorageObjectsCopyProjectionEnum projection) {
+        this.projection = projection;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public StorageObjectsCopyRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Name of the bucket in which to find the source object.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sourceBucket")
+    public String sourceBucket;
+    public StorageObjectsCopyRequest withSourceBucket(String sourceBucket) {
+        this.sourceBucket = sourceBucket;
+        return this;
+    }
+    
+    /**
+     * If present, selects a specific revision of the source object (as opposed to the latest version, the default).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sourceGeneration")
+    public String sourceGeneration;
+    public StorageObjectsCopyRequest withSourceGeneration(String sourceGeneration) {
+        this.sourceGeneration = sourceGeneration;
+        return this;
+    }
+    
+    /**
+     * Name of the source object. For information about how to URL encode object names to be path safe, see Encoding URI Path Parts.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sourceObject")
+    public String sourceObject;
+    public StorageObjectsCopyRequest withSourceObject(String sourceObject) {
+        this.sourceObject = sourceObject;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "media", "multipart", "resumable").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public StorageObjectsCopyRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public StorageObjectsCopyRequest withUserIp(String userIp) {
+        this.userIp = userIp;
+        return this;
+    }
+    
+    /**
+     * The project to be billed for this request. Required for Requester Pays buckets.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userProject")
+    public String userProject;
+    public StorageObjectsCopyRequest withUserProject(String userProject) {
+        this.userProject = userProject;
         return this;
     }
     

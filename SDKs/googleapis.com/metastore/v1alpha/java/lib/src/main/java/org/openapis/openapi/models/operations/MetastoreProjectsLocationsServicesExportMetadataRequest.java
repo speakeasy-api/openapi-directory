@@ -7,31 +7,130 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MetastoreProjectsLocationsServicesExportMetadataRequest {
-    
-    public MetastoreProjectsLocationsServicesExportMetadataPathParams pathParams;
-    public MetastoreProjectsLocationsServicesExportMetadataRequest withPathParams(MetastoreProjectsLocationsServicesExportMetadataPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public MetastoreProjectsLocationsServicesExportMetadataQueryParams queryParams;
-    public MetastoreProjectsLocationsServicesExportMetadataRequest withQueryParams(MetastoreProjectsLocationsServicesExportMetadataQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public MetastoreProjectsLocationsServicesExportMetadataRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ExportMetadataRequest request;
-    public MetastoreProjectsLocationsServicesExportMetadataRequest withRequest(org.openapis.openapi.models.shared.ExportMetadataRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ExportMetadataRequest exportMetadataRequest;
+    public MetastoreProjectsLocationsServicesExportMetadataRequest withExportMetadataRequest(org.openapis.openapi.models.shared.ExportMetadataRequest exportMetadataRequest) {
+        this.exportMetadataRequest = exportMetadataRequest;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public MetastoreProjectsLocationsServicesExportMetadataRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public MetastoreProjectsLocationsServicesExportMetadataSecurity security;
-    public MetastoreProjectsLocationsServicesExportMetadataRequest withSecurity(MetastoreProjectsLocationsServicesExportMetadataSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public MetastoreProjectsLocationsServicesExportMetadataRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public MetastoreProjectsLocationsServicesExportMetadataRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public MetastoreProjectsLocationsServicesExportMetadataRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public MetastoreProjectsLocationsServicesExportMetadataRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public MetastoreProjectsLocationsServicesExportMetadataRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public MetastoreProjectsLocationsServicesExportMetadataRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public MetastoreProjectsLocationsServicesExportMetadataRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Required. The relative resource name of the metastore service to run export, in the following form:projects/{project_id}/locations/{location_id}/services/{service_id}.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=service")
+    public String service;
+    public MetastoreProjectsLocationsServicesExportMetadataRequest withService(String service) {
+        this.service = service;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public MetastoreProjectsLocationsServicesExportMetadataRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public MetastoreProjectsLocationsServicesExportMetadataRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

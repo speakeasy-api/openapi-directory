@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveNEOFeedTodayRequest {
-    
-    public RetrieveNEOFeedTodayQueryParams queryParams;
-    public RetrieveNEOFeedTodayRequest withQueryParams(RetrieveNEOFeedTodayQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * detailed
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=detailed")
+    public Boolean detailed;
+    public RetrieveNEOFeedTodayRequest withDetailed(Boolean detailed) {
+        this.detailed = detailed;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminRemoveAllCustomLabelsFromSelfHostedRunnerForEnterpriseRequest {
+    /**
+     * The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
+    public String enterprise;
+    public EnterpriseAdminRemoveAllCustomLabelsFromSelfHostedRunnerForEnterpriseRequest withEnterprise(String enterprise) {
+        this.enterprise = enterprise;
+        return this;
+    }
     
-    public EnterpriseAdminRemoveAllCustomLabelsFromSelfHostedRunnerForEnterprisePathParams pathParams;
-    public EnterpriseAdminRemoveAllCustomLabelsFromSelfHostedRunnerForEnterpriseRequest withPathParams(EnterpriseAdminRemoveAllCustomLabelsFromSelfHostedRunnerForEnterprisePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the self-hosted runner.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=runner_id")
+    public Long runnerId;
+    public EnterpriseAdminRemoveAllCustomLabelsFromSelfHostedRunnerForEnterpriseRequest withRunnerId(Long runnerId) {
+        this.runnerId = runnerId;
         return this;
     }
     

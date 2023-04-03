@@ -7,44 +7,44 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVehiclesSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeUserAccessToken userAccessToken;
-    public GetVehiclesSecurity withUserAccessToken(org.openapis.openapi.models.shared.SchemeUserAccessToken userAccessToken) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String userAccessToken;
+    public GetVehiclesSecurity withUserAccessToken(String userAccessToken) {
         this.userAccessToken = userAccessToken;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeUserAccessToken userAccessToken1;
-    public GetVehiclesSecurity withUserAccessToken1(org.openapis.openapi.models.shared.SchemeUserAccessToken userAccessToken1) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String userAccessToken1;
+    public GetVehiclesSecurity withUserAccessToken1(String userAccessToken1) {
         this.userAccessToken1 = userAccessToken1;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeUserAccessToken userAccessToken2;
-    public GetVehiclesSecurity withUserAccessToken2(org.openapis.openapi.models.shared.SchemeUserAccessToken userAccessToken2) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String userAccessToken2;
+    public GetVehiclesSecurity withUserAccessToken2(String userAccessToken2) {
         this.userAccessToken2 = userAccessToken2;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeUserAccessToken userAccessToken3;
-    public GetVehiclesSecurity withUserAccessToken3(org.openapis.openapi.models.shared.SchemeUserAccessToken userAccessToken3) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String userAccessToken3;
+    public GetVehiclesSecurity withUserAccessToken3(String userAccessToken3) {
         this.userAccessToken3 = userAccessToken3;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeUserAccessToken userAccessToken4;
-    public GetVehiclesSecurity withUserAccessToken4(org.openapis.openapi.models.shared.SchemeUserAccessToken userAccessToken4) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String userAccessToken4;
+    public GetVehiclesSecurity withUserAccessToken4(String userAccessToken4) {
         this.userAccessToken4 = userAccessToken4;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeUserAccessToken userAccessToken5;
-    public GetVehiclesSecurity withUserAccessToken5(org.openapis.openapi.models.shared.SchemeUserAccessToken userAccessToken5) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String userAccessToken5;
+    public GetVehiclesSecurity withUserAccessToken5(String userAccessToken5) {
         this.userAccessToken5 = userAccessToken5;
         return this;
     }

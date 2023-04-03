@@ -43,7 +43,7 @@ public class Filmography {
      */
     public org.openapis.openapi.models.operations.FilmographySearchReadResponse filmographySearchRead(org.openapis.openapi.models.operations.FilmographySearchReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FilmographySearchReadPathParams.class, baseUrl, "/api/v1/filmography/search/{movie_title}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FilmographySearchReadRequest.class, baseUrl, "/api/v1/filmography/search/{movie_title}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -87,7 +87,7 @@ public class Filmography {
      */
     public org.openapis.openapi.models.operations.FilmographySearchallReadResponse filmographySearchallRead(org.openapis.openapi.models.operations.FilmographySearchallReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FilmographySearchallReadPathParams.class, baseUrl, "/api/v1/filmography/searchall/{param}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FilmographySearchallReadRequest.class, baseUrl, "/api/v1/filmography/searchall/{param}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

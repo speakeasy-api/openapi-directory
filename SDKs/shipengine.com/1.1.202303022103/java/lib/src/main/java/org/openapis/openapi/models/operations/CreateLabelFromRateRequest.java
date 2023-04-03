@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateLabelFromRateRequest {
-    
-    public CreateLabelFromRatePathParams pathParams;
-    public CreateLabelFromRateRequest withPathParams(CreateLabelFromRatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateLabelFromRateRequestBody createLabelFromRateRequestBody;
+    public CreateLabelFromRateRequest withCreateLabelFromRateRequestBody(org.openapis.openapi.models.shared.CreateLabelFromRateRequestBody createLabelFromRateRequestBody) {
+        this.createLabelFromRateRequestBody = createLabelFromRateRequestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateLabelFromRateRequestBody request;
-    public CreateLabelFromRateRequest withRequest(org.openapis.openapi.models.shared.CreateLabelFromRateRequestBody request) {
-        this.request = request;
+    /**
+     * Rate ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rate_id")
+    public String rateId;
+    public CreateLabelFromRateRequest withRateId(String rateId) {
+        this.rateId = rateId;
         return this;
     }
     

@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePaymentMethodRequest {
-    
-    public UpdatePaymentMethodPathParams pathParams;
-    public UpdatePaymentMethodRequest withPathParams(UpdatePaymentMethodPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdatePaymentMethodRequestBody request;
-    public UpdatePaymentMethodRequest withRequest(UpdatePaymentMethodRequestBody request) {
-        this.request = request;
+    public UpdatePaymentMethodRequestBody requestBody;
+    public UpdatePaymentMethodRequest withRequestBody(UpdatePaymentMethodRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdatePaymentMethodSecurity security;
-    public UpdatePaymentMethodRequest withSecurity(UpdatePaymentMethodSecurity security) {
-        this.security = security;
+    /**
+     * Payment method number
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=paymentMethodNumber")
+    public String paymentMethodNumber;
+    public UpdatePaymentMethodRequest withPaymentMethodNumber(String paymentMethodNumber) {
+        this.paymentMethodNumber = paymentMethodNumber;
         return this;
     }
     

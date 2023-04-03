@@ -4,34 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchTaskQueueRealTimeStatisticsRequest {
-    
-    public FetchTaskQueueRealTimeStatisticsPathParams pathParams;
-    public FetchTaskQueueRealTimeStatisticsRequest withPathParams(FetchTaskQueueRealTimeStatisticsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The TaskChannel for which to fetch statistics. Can be the TaskChannel's SID or its `unique_name`, such as `voice`, `sms`, or `default`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TaskChannel")
+    public String taskChannel;
+    public FetchTaskQueueRealTimeStatisticsRequest withTaskChannel(String taskChannel) {
+        this.taskChannel = taskChannel;
         return this;
     }
     
-    
-    public FetchTaskQueueRealTimeStatisticsQueryParams queryParams;
-    public FetchTaskQueueRealTimeStatisticsRequest withQueryParams(FetchTaskQueueRealTimeStatisticsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The SID of the TaskQueue for which to fetch statistics.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TaskQueueSid")
+    public String taskQueueSid;
+    public FetchTaskQueueRealTimeStatisticsRequest withTaskQueueSid(String taskQueueSid) {
+        this.taskQueueSid = taskQueueSid;
         return this;
     }
     
-    
-    public FetchTaskQueueRealTimeStatisticsSecurity security;
-    public FetchTaskQueueRealTimeStatisticsRequest withSecurity(FetchTaskQueueRealTimeStatisticsSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchTaskQueueRealTimeStatisticsRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Workspace with the TaskQueue to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkspaceSid")
+    public String workspaceSid;
+    public FetchTaskQueueRealTimeStatisticsRequest withWorkspaceSid(String workspaceSid) {
+        this.workspaceSid = workspaceSid;
         return this;
     }
     

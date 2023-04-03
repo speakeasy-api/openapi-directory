@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppDIdGETRequest {
-    
-    public AppDIdGETPathParams pathParams;
-    public AppDIdGETRequest withPathParams(AppDIdGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Identifier of an application descriptor
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appDId")
+    public String appDId;
+    public AppDIdGETRequest withAppDId(String appDId) {
+        this.appDId = appDId;
         return this;
     }
     

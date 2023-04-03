@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMerchantsMerchantIdTerminalProductsRequest {
-    
-    public GetMerchantsMerchantIdTerminalProductsPathParams pathParams;
-    public GetMerchantsMerchantIdTerminalProductsRequest withPathParams(GetMerchantsMerchantIdTerminalProductsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The country to return products for, in [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format. For example, **US**
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public String country;
+    public GetMerchantsMerchantIdTerminalProductsRequest withCountry(String country) {
+        this.country = country;
         return this;
     }
     
-    
-    public GetMerchantsMerchantIdTerminalProductsQueryParams queryParams;
-    public GetMerchantsMerchantIdTerminalProductsRequest withQueryParams(GetMerchantsMerchantIdTerminalProductsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of products to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetMerchantsMerchantIdTerminalProductsRequest withLimit(Integer limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * The unique identifier of the merchant account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
+    public String merchantId;
+    public GetMerchantsMerchantIdTerminalProductsRequest withMerchantId(String merchantId) {
+        this.merchantId = merchantId;
+        return this;
+    }
     
-    public GetMerchantsMerchantIdTerminalProductsSecurity security;
-    public GetMerchantsMerchantIdTerminalProductsRequest withSecurity(GetMerchantsMerchantIdTerminalProductsSecurity security) {
-        this.security = security;
+    /**
+     * The number of products to skip.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public GetMerchantsMerchantIdTerminalProductsRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * The terminal model to return products for. Use the ID returned in the [GET `/terminalModels`](https://docs.adyen.com/api-explorer/#/ManagementService/latest/get/merchants/{merchantId}/terminalModels) response. For example, **Verifone.M400**
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=terminalModelId")
+    public String terminalModelId;
+    public GetMerchantsMerchantIdTerminalProductsRequest withTerminalModelId(String terminalModelId) {
+        this.terminalModelId = terminalModelId;
         return this;
     }
     

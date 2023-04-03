@@ -32,19 +32,20 @@ public class Alerting {
     /**
      * Get project issue related to a crash group
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BugTrackerGetRepoIssueFromCrashResponse bugTrackerGetRepoIssueFromCrash(org.openapis.openapi.models.operations.BugTrackerGetRepoIssueFromCrashRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BugTrackerGetRepoIssueFromCrashResponse bugTrackerGetRepoIssueFromCrash(org.openapis.openapi.models.operations.BugTrackerGetRepoIssueFromCrashRequest request, org.openapis.openapi.models.operations.BugTrackerGetRepoIssueFromCrashSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BugTrackerGetRepoIssueFromCrashPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/bugtracker/crashGroup/{crash_group_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BugTrackerGetRepoIssueFromCrashRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/bugtracker/crashGroup/{crash_group_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,19 +80,20 @@ public class Alerting {
     /**
      * Get bug tracker settings for a particular app
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BugtrackerGetSettingsResponse bugtrackerGetSettings(org.openapis.openapi.models.operations.BugtrackerGetSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BugtrackerGetSettingsResponse bugtrackerGetSettings(org.openapis.openapi.models.operations.BugtrackerGetSettingsRequest request, org.openapis.openapi.models.operations.BugtrackerGetSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BugtrackerGetSettingsPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/bugtracker", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BugtrackerGetSettingsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/bugtracker", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,19 +128,20 @@ public class Alerting {
     /**
      * Get Email notification settings of user for a particular app
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.NotificationsGetAppEmailSettingsResponse notificationsGetAppEmailSettings(org.openapis.openapi.models.operations.NotificationsGetAppEmailSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.NotificationsGetAppEmailSettingsResponse notificationsGetAppEmailSettings(org.openapis.openapi.models.operations.NotificationsGetAppEmailSettingsRequest request, org.openapis.openapi.models.operations.NotificationsGetAppEmailSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NotificationsGetAppEmailSettingsPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/notifications/emailSettings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NotificationsGetAppEmailSettingsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/notifications/emailSettings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -172,11 +175,10 @@ public class Alerting {
 
     /**
      * Get Default email notification settings for the user
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.NotificationsGetUserEmailSettingsResponse notificationsGetUserEmailSettings(org.openapis.openapi.models.operations.NotificationsGetUserEmailSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.NotificationsGetUserEmailSettingsResponse notificationsGetUserEmailSettings() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/user/notifications/emailSettings");
         
@@ -185,8 +187,7 @@ public class Alerting {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -220,19 +221,20 @@ public class Alerting {
     /**
      * Get web hooks configured for a particular app
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebhooksListResponse webhooksList(org.openapis.openapi.models.operations.WebhooksListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebhooksListResponse webhooksList(org.openapis.openapi.models.operations.WebhooksListRequest request, org.openapis.openapi.models.operations.WebhooksListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebhooksListPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/webhooks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebhooksListRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/webhooks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpacesIdCompanyEntitiesAllRequest {
-    
-    public GetSpacesIdCompanyEntitiesAllPathParams pathParams;
-    public GetSpacesIdCompanyEntitiesAllRequest withPathParams(GetSpacesIdCompanyEntitiesAllPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Name of the company entity
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Name")
+    public String name;
+    public GetSpacesIdCompanyEntitiesAllRequest withName(String name) {
+        this.name = name;
         return this;
     }
     
+    /**
+     * registration number of the company entity
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RegistrationNumber")
+    public String registrationNumber;
+    public GetSpacesIdCompanyEntitiesAllRequest withRegistrationNumber(String registrationNumber) {
+        this.registrationNumber = registrationNumber;
+        return this;
+    }
     
-    public GetSpacesIdCompanyEntitiesAllQueryParams queryParams;
-    public GetSpacesIdCompanyEntitiesAllRequest withQueryParams(GetSpacesIdCompanyEntitiesAllQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSpacesIdCompanyEntitiesAllRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

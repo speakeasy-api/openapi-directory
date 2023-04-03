@@ -44,7 +44,7 @@ public class Representatives {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CivicinfoRepresentativesRepresentativeInfoByAddressQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CivicinfoRepresentativesRepresentativeInfoByAddressRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -82,13 +82,13 @@ public class Representatives {
      */
     public org.openapis.openapi.models.operations.CivicinfoRepresentativesRepresentativeInfoByDivisionResponse civicinfoRepresentativesRepresentativeInfoByDivision(org.openapis.openapi.models.operations.CivicinfoRepresentativesRepresentativeInfoByDivisionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CivicinfoRepresentativesRepresentativeInfoByDivisionPathParams.class, baseUrl, "/civicinfo/v2/representatives/{ocdId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CivicinfoRepresentativesRepresentativeInfoByDivisionRequest.class, baseUrl, "/civicinfo/v2/representatives/{ocdId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CivicinfoRepresentativesRepresentativeInfoByDivisionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CivicinfoRepresentativesRepresentativeInfoByDivisionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

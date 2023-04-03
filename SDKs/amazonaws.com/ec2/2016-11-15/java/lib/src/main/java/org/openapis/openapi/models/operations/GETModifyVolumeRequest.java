@@ -4,20 +4,139 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyVolumeRequest {
-    
-    public GETModifyVolumeQueryParams queryParams;
-    public GETModifyVolumeRequest withQueryParams(GETModifyVolumeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyVolumeActionEnum action;
+    public GETModifyVolumeRequest withAction(GETModifyVolumeActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETModifyVolumeRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
     
-    public GETModifyVolumeHeaders headers;
-    public GETModifyVolumeRequest withHeaders(GETModifyVolumeHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The target IOPS rate of the volume. This parameter is valid only for &lt;code&gt;gp3&lt;/code&gt;, &lt;code&gt;io1&lt;/code&gt;, and &lt;code&gt;io2&lt;/code&gt; volumes.&lt;/p&gt; &lt;p&gt;The following are the supported values for each volume type:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;gp3&lt;/code&gt;: 3,000-16,000 IOPS&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;io1&lt;/code&gt;: 100-64,000 IOPS&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;io2&lt;/code&gt;: 100-64,000 IOPS&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Default: The existing value is retained if you keep the same volume type. If you change the volume type to &lt;code&gt;io1&lt;/code&gt;, &lt;code&gt;io2&lt;/code&gt;, or &lt;code&gt;gp3&lt;/code&gt;, the default is 3,000.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Iops")
+    public Long iops;
+    public GETModifyVolumeRequest withIops(Long iops) {
+        this.iops = iops;
+        return this;
+    }
+    
+    /**
+     * Specifies whether to enable Amazon EBS Multi-Attach. If you enable Multi-Attach, you can attach the volume to up to 16 &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances"&gt; Nitro-based instances&lt;/a&gt; in the same Availability Zone. This parameter is supported with &lt;code&gt;io1&lt;/code&gt; and &lt;code&gt;io2&lt;/code&gt; volumes only. For more information, see &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volumes-multi.html"&gt; Amazon EBS Multi-Attach&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Compute Cloud User Guide&lt;/i&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MultiAttachEnabled")
+    public Boolean multiAttachEnabled;
+    public GETModifyVolumeRequest withMultiAttachEnabled(Boolean multiAttachEnabled) {
+        this.multiAttachEnabled = multiAttachEnabled;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The target size of the volume, in GiB. The target volume size must be greater than or equal to the existing size of the volume.&lt;/p&gt; &lt;p&gt;The following are the supported volumes sizes for each volume type:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;gp2&lt;/code&gt; and &lt;code&gt;gp3&lt;/code&gt;: 1-16,384&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;io1&lt;/code&gt; and &lt;code&gt;io2&lt;/code&gt;: 4-16,384&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;st1&lt;/code&gt; and &lt;code&gt;sc1&lt;/code&gt;: 125-16,384&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;standard&lt;/code&gt;: 1-1,024&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Default: The existing size is retained.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Size")
+    public Long size;
+    public GETModifyVolumeRequest withSize(Long size) {
+        this.size = size;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The target throughput of the volume, in MiB/s. This parameter is valid only for &lt;code&gt;gp3&lt;/code&gt; volumes. The maximum value is 1,000.&lt;/p&gt; &lt;p&gt;Default: The existing value is retained if the source and target volume type is &lt;code&gt;gp3&lt;/code&gt;. Otherwise, the default value is 125.&lt;/p&gt; &lt;p&gt;Valid Range: Minimum value of 125. Maximum value of 1000.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Throughput")
+    public Long throughput;
+    public GETModifyVolumeRequest withThroughput(Long throughput) {
+        this.throughput = throughput;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyVolumeVersionEnum version;
+    public GETModifyVolumeRequest withVersion(GETModifyVolumeVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    /**
+     * The ID of the volume.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VolumeId")
+    public String volumeId;
+    public GETModifyVolumeRequest withVolumeId(String volumeId) {
+        this.volumeId = volumeId;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The target EBS volume type of the volume. For more information, see &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html"&gt;Amazon EBS volume types&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Compute Cloud User Guide&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;Default: The existing type is retained.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VolumeType")
+    public GETModifyVolumeVolumeTypeEnum volumeType;
+    public GETModifyVolumeRequest withVolumeType(GETModifyVolumeVolumeTypeEnum volumeType) {
+        this.volumeType = volumeType;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyVolumeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyVolumeRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyVolumeRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyVolumeRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyVolumeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyVolumeRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyVolumeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

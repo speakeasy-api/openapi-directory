@@ -4,20 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMapVersionNumberTileLayerStyleZoomXYPbfRequest {
-    
-    public GetMapVersionNumberTileLayerStyleZoomXYPbfPathParams pathParams;
-    public GetMapVersionNumberTileLayerStyleZoomXYPbfRequest withPathParams(GetMapVersionNumberTileLayerStyleZoomXYPbfPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * x coordinate of tile on zoom grid
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=X")
+    public Long x;
+    public GetMapVersionNumberTileLayerStyleZoomXYPbfRequest withX(Long x) {
+        this.x = x;
         return this;
     }
     
+    /**
+     * y coordinate of tile on zoom grid
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Y")
+    public Long y;
+    public GetMapVersionNumberTileLayerStyleZoomXYPbfRequest withY(Long y) {
+        this.y = y;
+        return this;
+    }
     
-    public GetMapVersionNumberTileLayerStyleZoomXYPbfQueryParams queryParams;
-    public GetMapVersionNumberTileLayerStyleZoomXYPbfRequest withQueryParams(GetMapVersionNumberTileLayerStyleZoomXYPbfQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Language to be used for labels in the response. The default is NGT: Neutral Ground Truth, which uses each place's local official language and script (where available). See the &lt;a href="/maps-api/maps-api-documentation-vector/tile"&gt;documentation&lt;/a&gt; for a full list of options.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public String language;
+    public GetMapVersionNumberTileLayerStyleZoomXYPbfRequest withLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    
+    /**
+     * Layer of tile to be rendered
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=layer")
+    public GetMapVersionNumberTileLayerStyleZoomXYPbfLayerEnum layer;
+    public GetMapVersionNumberTileLayerStyleZoomXYPbfRequest withLayer(GetMapVersionNumberTileLayerStyleZoomXYPbfLayerEnum layer) {
+        this.layer = layer;
+        return this;
+    }
+    
+    /**
+     * Style of tile to be rendered
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=style")
+    public GetMapVersionNumberTileLayerStyleZoomXYPbfStyleEnum style;
+    public GetMapVersionNumberTileLayerStyleZoomXYPbfRequest withStyle(GetMapVersionNumberTileLayerStyleZoomXYPbfStyleEnum style) {
+        this.style = style;
+        return this;
+    }
+    
+    /**
+     * Version of the service to call. The current version is 1
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
+    public GetMapVersionNumberTileLayerStyleZoomXYPbfVersionNumberEnum versionNumber;
+    public GetMapVersionNumberTileLayerStyleZoomXYPbfRequest withVersionNumber(GetMapVersionNumberTileLayerStyleZoomXYPbfVersionNumberEnum versionNumber) {
+        this.versionNumber = versionNumber;
+        return this;
+    }
+    
+    /**
+     * Geopolitical view. Determines rendering of disputed areas. See the &lt;a href="/maps-api/maps-api-documentation-vector/tile"&gt;documentation&lt;/a&gt; for an explanation of how this works in live services.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
+    public GetMapVersionNumberTileLayerStyleZoomXYPbfViewEnum view;
+    public GetMapVersionNumberTileLayerStyleZoomXYPbfRequest withView(GetMapVersionNumberTileLayerStyleZoomXYPbfViewEnum view) {
+        this.view = view;
+        return this;
+    }
+    
+    /**
+     * Zoom level of tile to be rendered
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=zoom")
+    public GetMapVersionNumberTileLayerStyleZoomXYPbfZoomEnum zoom;
+    public GetMapVersionNumberTileLayerStyleZoomXYPbfRequest withZoom(GetMapVersionNumberTileLayerStyleZoomXYPbfZoomEnum zoom) {
+        this.zoom = zoom;
         return this;
     }
     

@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoGetPullRequestCommitsRequest {
-    
-    public RepoGetPullRequestCommitsPathParams pathParams;
-    public RepoGetPullRequestCommitsRequest withPathParams(RepoGetPullRequestCommitsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * index of the pull request to get
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=index")
+    public Long index;
+    public RepoGetPullRequestCommitsRequest withIndex(Long index) {
+        this.index = index;
         return this;
     }
     
+    /**
+     * page size of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public RepoGetPullRequestCommitsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public RepoGetPullRequestCommitsQueryParams queryParams;
-    public RepoGetPullRequestCommitsRequest withQueryParams(RepoGetPullRequestCommitsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoGetPullRequestCommitsRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * page number of results to return (1-based)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public RepoGetPullRequestCommitsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoGetPullRequestCommitsRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

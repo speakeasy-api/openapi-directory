@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConfigPropertyRequest {
-    
-    public GetConfigPropertyPathParams pathParams;
-    public GetConfigPropertyRequest withPathParams(GetConfigPropertyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of a configuration property.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=propertyName")
+    public String propertyName;
+    public GetConfigPropertyRequest withPropertyName(String propertyName) {
+        this.propertyName = propertyName;
         return this;
     }
     

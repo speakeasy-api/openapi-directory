@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSubscriptionRequest {
-    
-    public GetSubscriptionPathParams pathParams;
-    public GetSubscriptionRequest withPathParams(GetSubscriptionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the space.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceName")
+    public String spaceName;
+    public GetSubscriptionRequest withSpaceName(String spaceName) {
+        this.spaceName = spaceName;
         return this;
     }
     

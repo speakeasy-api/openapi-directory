@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AreGamesInProgressFormatEnum;
-import org.openapis.openapi.models.operations.AreGamesInProgressPathParams;
 import org.openapis.openapi.models.operations.AreGamesInProgressRequest;
 import org.openapis.openapi.models.operations.AreGamesInProgressResponse;
 
@@ -27,17 +26,13 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    apiKeyHeader = new SchemeAPIKeyHeader() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    apiKeyHeader = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AreGamesInProgressRequest req = new AreGamesInProgressRequest() {{
-                pathParams = new AreGamesInProgressPathParams() {{
-                    format = "JSON";
-                }};
-            }};            
+                format = "JSON";
+            }}            
 
             AreGamesInProgressResponse res = sdk.areGamesInProgress(req);
 
@@ -51,7 +46,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

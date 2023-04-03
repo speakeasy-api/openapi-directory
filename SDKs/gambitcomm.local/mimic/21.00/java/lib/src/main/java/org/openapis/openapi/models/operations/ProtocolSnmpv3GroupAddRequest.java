@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolSnmpv3GroupAddRequest {
+    /**
+     * Agent to add the SNMPv3 group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolSnmpv3GroupAddRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolSnmpv3GroupAddPathParams pathParams;
-    public ProtocolSnmpv3GroupAddRequest withPathParams(ProtocolSnmpv3GroupAddPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * SNMPv3 group name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupName")
+    public String groupName;
+    public ProtocolSnmpv3GroupAddRequest withGroupName(String groupName) {
+        this.groupName = groupName;
+        return this;
+    }
+    
+    /**
+     * SNMPv3 group security model
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=securityModel")
+    public String securityModel;
+    public ProtocolSnmpv3GroupAddRequest withSecurityModel(String securityModel) {
+        this.securityModel = securityModel;
+        return this;
+    }
+    
+    /**
+     * SNMPv3 group security name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=securityName")
+    public String securityName;
+    public ProtocolSnmpv3GroupAddRequest withSecurityName(String securityName) {
+        this.securityName = securityName;
         return this;
     }
     

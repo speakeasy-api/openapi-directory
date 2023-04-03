@@ -4,13 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCancelJobRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=APIVersion")
+    public String apiVersion;
+    public GETCancelJobRequest withAPIVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
     
-    public GETCancelJobQueryParams queryParams;
-    public GETCancelJobRequest withQueryParams(GETCancelJobQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AWSAccessKeyId")
+    public String awsAccessKeyId;
+    public GETCancelJobRequest withAWSAccessKeyId(String awsAccessKeyId) {
+        this.awsAccessKeyId = awsAccessKeyId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETCancelJobActionEnum action;
+    public GETCancelJobRequest withAction(GETCancelJobActionEnum action) {
+        this.action = action;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=JobId")
+    public String jobId;
+    public GETCancelJobRequest withJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Operation")
+    public GETCancelJobOperationEnum operation;
+    public GETCancelJobRequest withOperation(GETCancelJobOperationEnum operation) {
+        this.operation = operation;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Signature")
+    public String signature;
+    public GETCancelJobRequest withSignature(String signature) {
+        this.signature = signature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureMethod")
+    public String signatureMethod;
+    public GETCancelJobRequest withSignatureMethod(String signatureMethod) {
+        this.signatureMethod = signatureMethod;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureVersion")
+    public String signatureVersion;
+    public GETCancelJobRequest withSignatureVersion(String signatureVersion) {
+        this.signatureVersion = signatureVersion;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Timestamp")
+    public String timestamp;
+    public GETCancelJobRequest withTimestamp(String timestamp) {
+        this.timestamp = timestamp;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETCancelJobVersionEnum version;
+    public GETCancelJobRequest withVersion(GETCancelJobVersionEnum version) {
+        this.version = version;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContentRssNewsArticlesRequest {
-    
-    public ContentRssNewsArticlesPathParams pathParams;
-    public ContentRssNewsArticlesRequest withPathParams(ContentRssNewsArticlesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Optionally filter response to only include news items in a certain category.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=categoryfilter")
+    public String categoryfilter;
+    public ContentRssNewsArticlesRequest withCategoryfilter(String categoryfilter) {
+        this.categoryfilter = categoryfilter;
         return this;
     }
     
+    /**
+     * Optionally include full content body for each news item.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includebody")
+    public Boolean includebody;
+    public ContentRssNewsArticlesRequest withIncludebody(Boolean includebody) {
+        this.includebody = includebody;
+        return this;
+    }
     
-    public ContentRssNewsArticlesQueryParams queryParams;
-    public ContentRssNewsArticlesRequest withQueryParams(ContentRssNewsArticlesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Zero-based pagination token for paging through result sets.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pageToken")
+    public String pageToken;
+    public ContentRssNewsArticlesRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

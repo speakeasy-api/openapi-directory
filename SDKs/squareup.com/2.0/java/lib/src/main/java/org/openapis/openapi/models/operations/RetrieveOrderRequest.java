@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveOrderRequest {
-    
-    public RetrieveOrderPathParams pathParams;
-    public RetrieveOrderRequest withPathParams(RetrieveOrderPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the order's associated location.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
+    public String locationId;
+    public RetrieveOrderRequest withLocationId(String locationId) {
+        this.locationId = locationId;
         return this;
     }
     
-    
-    public RetrieveOrderSecurity security;
-    public RetrieveOrderRequest withSecurity(RetrieveOrderSecurity security) {
-        this.security = security;
+    /**
+     * The order's Square-issued ID. You obtain this value from Order objects returned by the List Orders endpoint
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=order_id")
+    public String orderId;
+    public RetrieveOrderRequest withOrderId(String orderId) {
+        this.orderId = orderId;
         return this;
     }
     

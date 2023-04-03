@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSourceIpMappingRequest {
-    
-    public DeleteSourceIpMappingPathParams pathParams;
-    public DeleteSourceIpMappingRequest withPathParams(DeleteSourceIpMappingPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteSourceIpMappingSecurity security;
-    public DeleteSourceIpMappingRequest withSecurity(DeleteSourceIpMappingSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteSourceIpMappingRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the IP Record resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteSourceIpMappingRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

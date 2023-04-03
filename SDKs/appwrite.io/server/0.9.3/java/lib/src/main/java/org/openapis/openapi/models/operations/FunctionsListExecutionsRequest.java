@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FunctionsListExecutionsRequest {
-    
-    public FunctionsListExecutionsPathParams pathParams;
-    public FunctionsListExecutionsRequest withPathParams(FunctionsListExecutionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Function unique ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=functionId")
+    public String functionId;
+    public FunctionsListExecutionsRequest withFunctionId(String functionId) {
+        this.functionId = functionId;
         return this;
     }
     
-    
-    public FunctionsListExecutionsQueryParams queryParams;
-    public FunctionsListExecutionsRequest withQueryParams(FunctionsListExecutionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Results limit value. By default will return maximum 25 results. Maximum of 100 results allowed per request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public FunctionsListExecutionsRequest withLimit(Integer limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * Results offset. The default value is 0. Use this param to manage pagination.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public FunctionsListExecutionsRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
     
-    public FunctionsListExecutionsSecurity security;
-    public FunctionsListExecutionsRequest withSecurity(FunctionsListExecutionsSecurity security) {
-        this.security = security;
+    /**
+     * Order result by ASC or DESC order.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderType")
+    public String orderType;
+    public FunctionsListExecutionsRequest withOrderType(String orderType) {
+        this.orderType = orderType;
+        return this;
+    }
+    
+    /**
+     * Search term to filter your list results. Max length: 256 chars.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public FunctionsListExecutionsRequest withSearch(String search) {
+        this.search = search;
         return this;
     }
     

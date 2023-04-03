@@ -32,17 +32,12 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetUuidSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetUuidQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetUuidRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetUuidResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetUuidVersionVersionSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetUuidVersionVersionPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetUuidVersionVersionQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetUuidVersionVersionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetUuidVersionVersionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostUuidSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostUuidQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostUuidRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostUuidResponse.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeXFungeneratorsAPISecret.java
 USAGE.md

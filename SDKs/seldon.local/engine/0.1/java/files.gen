@@ -31,19 +31,15 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/PredictJsonSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/PredictJsonPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PredictJsonRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PredictJsonResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PredictRawSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/PredictRawPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PredictRawRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PredictRawResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PredictStringSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/PredictStringPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PredictStringRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PredictStringResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/SendFeedbackSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/SendFeedbackPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/SendFeedbackRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SendFeedbackResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/SeldonMessage.java
@@ -60,6 +56,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/TensorShapeProtoDim.java
 lib/src/main/java/org/openapis/openapi/models/shared/TensorflowResourceHandleProto.java
 lib/src/main/java/org/openapis/openapi/models/shared/TensorflowDataTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Tensor.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeHTTPBearer.java
 lib/src/main/java/org/openapis/openapi/models/shared/Feedback.java
 USAGE.md

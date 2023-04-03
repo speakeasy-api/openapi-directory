@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMediaDataBinaryRequest {
-    
-    public GetMediaDataBinaryPathParams pathParams;
-    public GetMediaDataBinaryRequest withPathParams(GetMediaDataBinaryPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetMediaDataBinarySecurity security;
-    public GetMediaDataBinaryRequest withSecurity(GetMediaDataBinarySecurity security) {
-        this.security = security;
+    /**
+     * An id of a media resource
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetMediaDataBinaryRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETSwaggerDocNameFormatRequest {
-    
-    public GETSwaggerDocNameFormatPathParams pathParams;
-    public GETSwaggerDocNameFormatRequest withPathParams(GETSwaggerDocNameFormatPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Resource name of mounted API
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public GETSwaggerDocNameFormatRequest withName(String name) {
+        this.name = name;
         return this;
     }
     

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AcceptDisputeRequest {
-    
-    public AcceptDisputePathParams pathParams;
-    public AcceptDisputeRequest withPathParams(AcceptDisputePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AcceptDisputeSecurity security;
-    public AcceptDisputeRequest withSecurity(AcceptDisputeSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the dispute you want to accept.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dispute_id")
+    public String disputeId;
+    public AcceptDisputeRequest withDisputeId(String disputeId) {
+        this.disputeId = disputeId;
         return this;
     }
     

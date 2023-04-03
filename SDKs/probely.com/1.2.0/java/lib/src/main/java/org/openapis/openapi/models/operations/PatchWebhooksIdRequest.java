@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchWebhooksIdRequest {
-    
-    public PatchWebhooksIdPathParams pathParams;
-    public PatchWebhooksIdRequest withPathParams(PatchWebhooksIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.WebhookInput webhookInput;
+    public PatchWebhooksIdRequest withWebhookInput(org.openapis.openapi.models.shared.WebhookInput webhookInput) {
+        this.webhookInput = webhookInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WebhookInput request;
-    public PatchWebhooksIdRequest withRequest(org.openapis.openapi.models.shared.WebhookInput request) {
-        this.request = request;
+    /**
+     * Object Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatchWebhooksIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

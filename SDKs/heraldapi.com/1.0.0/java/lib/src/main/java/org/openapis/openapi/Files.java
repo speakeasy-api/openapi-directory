@@ -40,7 +40,7 @@ public class Files {
      */
     public org.openapis.openapi.models.operations.GetFilesFileIdResponse getFilesFileId(org.openapis.openapi.models.operations.GetFilesFileIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFilesFileIdPathParams.class, baseUrl, "/files/{file_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFilesFileIdRequest.class, baseUrl, "/files/{file_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -103,7 +103,7 @@ public class Files {
      */
     public org.openapis.openapi.models.operations.PostFilesFileIdGetTemporaryLinkResponse postFilesFileIdGetTemporaryLink(org.openapis.openapi.models.operations.PostFilesFileIdGetTemporaryLinkRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostFilesFileIdGetTemporaryLinkPathParams.class, baseUrl, "/files/{file_id}/get_temporary_link", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostFilesFileIdGetTemporaryLinkRequest.class, baseUrl, "/files/{file_id}/get_temporary_link", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");

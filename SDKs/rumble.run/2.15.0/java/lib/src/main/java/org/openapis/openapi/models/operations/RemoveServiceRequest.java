@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveServiceRequest {
-    
-    public RemoveServicePathParams pathParams;
-    public RemoveServiceRequest withPathParams(RemoveServicePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RemoveServiceSecurity security;
-    public RemoveServiceRequest withSecurity(RemoveServiceSecurity security) {
-        this.security = security;
+    /**
+     * UUID of the service to remove
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=service_id")
+    public String serviceId;
+    public RemoveServiceRequest withServiceId(String serviceId) {
+        this.serviceId = serviceId;
         return this;
     }
     

@@ -4,13 +4,17 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTeamTeamnameRequest {
-    
-    public GetTeamTeamnamePathParams pathParams;
-    public GetTeamTeamnameRequest withPathParams(GetTeamTeamnamePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The identifier or email address of the team; it is integrated in the `sub` property and is the basis of the other generated properties.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=teamname")
+    public String teamname;
+    public GetTeamTeamnameRequest withTeamname(String teamname) {
+        this.teamname = teamname;
         return this;
     }
     

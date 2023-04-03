@@ -38,13 +38,13 @@ public class Platforms {
      */
     public org.openapis.openapi.models.operations.VersionhistoryPlatformsChannelsListResponse versionhistoryPlatformsChannelsList(org.openapis.openapi.models.operations.VersionhistoryPlatformsChannelsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VersionhistoryPlatformsChannelsListPathParams.class, baseUrl, "/v1/{parent}/channels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VersionhistoryPlatformsChannelsListRequest.class, baseUrl, "/v1/{parent}/channels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.VersionhistoryPlatformsChannelsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.VersionhistoryPlatformsChannelsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -82,13 +82,13 @@ public class Platforms {
      */
     public org.openapis.openapi.models.operations.VersionhistoryPlatformsChannelsVersionsListResponse versionhistoryPlatformsChannelsVersionsList(org.openapis.openapi.models.operations.VersionhistoryPlatformsChannelsVersionsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VersionhistoryPlatformsChannelsVersionsListPathParams.class, baseUrl, "/v1/{parent}/versions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VersionhistoryPlatformsChannelsVersionsListRequest.class, baseUrl, "/v1/{parent}/versions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.VersionhistoryPlatformsChannelsVersionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.VersionhistoryPlatformsChannelsVersionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -126,13 +126,13 @@ public class Platforms {
      */
     public org.openapis.openapi.models.operations.VersionhistoryPlatformsChannelsVersionsReleasesListResponse versionhistoryPlatformsChannelsVersionsReleasesList(org.openapis.openapi.models.operations.VersionhistoryPlatformsChannelsVersionsReleasesListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VersionhistoryPlatformsChannelsVersionsReleasesListPathParams.class, baseUrl, "/v1/{parent}/releases", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VersionhistoryPlatformsChannelsVersionsReleasesListRequest.class, baseUrl, "/v1/{parent}/releases", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.VersionhistoryPlatformsChannelsVersionsReleasesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.VersionhistoryPlatformsChannelsVersionsReleasesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -170,13 +170,13 @@ public class Platforms {
      */
     public org.openapis.openapi.models.operations.VersionhistoryPlatformsListResponse versionhistoryPlatformsList(org.openapis.openapi.models.operations.VersionhistoryPlatformsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VersionhistoryPlatformsListPathParams.class, baseUrl, "/v1/{parent}/platforms", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VersionhistoryPlatformsListRequest.class, baseUrl, "/v1/{parent}/platforms", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.VersionhistoryPlatformsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.VersionhistoryPlatformsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

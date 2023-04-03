@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCategoryRequest {
-    
-    public DeleteCategoryPathParams pathParams;
-    public DeleteCategoryRequest withPathParams(DeleteCategoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=categoryUuid")
+    public String categoryUuid;
+    public DeleteCategoryRequest withCategoryUuid(String categoryUuid) {
+        this.categoryUuid = categoryUuid;
         return this;
     }
     
-    
-    public DeleteCategorySecurity security;
-    public DeleteCategoryRequest withSecurity(DeleteCategorySecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationUuid")
+    public String organizationUuid;
+    public DeleteCategoryRequest withOrganizationUuid(String organizationUuid) {
+        this.organizationUuid = organizationUuid;
         return this;
     }
     

@@ -7,24 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PriceChangeRequest {
-    
-    public PriceChangePathParams pathParams;
-    public PriceChangeRequest withPathParams(PriceChangePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public PriceChangeRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public PriceChangeHeaders headers;
-    public PriceChangeRequest withHeaders(PriceChangeHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public PriceChangeRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PriceChangeRequest request;
-    public PriceChangeRequest withRequest(org.openapis.openapi.models.shared.PriceChangeRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PriceChangeRequest priceChangeRequest;
+    public PriceChangeRequest withPriceChangeRequest(org.openapis.openapi.models.shared.PriceChangeRequest priceChangeRequest) {
+        this.priceChangeRequest = priceChangeRequest;
+        return this;
+    }
+    
+    /**
+     * The index of the item in the cart. Each cart item is identified by an index, starting in 0.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=itemIndex")
+    public String itemIndex;
+    public PriceChangeRequest withItemIndex(String itemIndex) {
+        this.itemIndex = itemIndex;
+        return this;
+    }
+    
+    /**
+     * ID of the orderForm corresponding to the cart whose items will have the price changed.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderFormId")
+    public String orderFormId;
+    public PriceChangeRequest withOrderFormId(String orderFormId) {
+        this.orderFormId = orderFormId;
         return this;
     }
     

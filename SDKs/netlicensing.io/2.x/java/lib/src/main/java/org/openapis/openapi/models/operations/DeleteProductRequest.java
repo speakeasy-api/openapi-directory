@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteProductRequest {
-    
-    public DeleteProductPathParams pathParams;
-    public DeleteProductRequest withPathParams(DeleteProductPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Force object deletion and all descendants.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=forceCascade")
+    public Boolean forceCascade;
+    public DeleteProductRequest withForceCascade(Boolean forceCascade) {
+        this.forceCascade = forceCascade;
         return this;
     }
     
-    
-    public DeleteProductQueryParams queryParams;
-    public DeleteProductRequest withQueryParams(DeleteProductQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public DeleteProductSecurity security;
-    public DeleteProductRequest withSecurity(DeleteProductSecurity security) {
-        this.security = security;
+    /**
+     * Unique number that identifies the Product.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productNumber")
+    public String productNumber;
+    public DeleteProductRequest withProductNumber(String productNumber) {
+        this.productNumber = productNumber;
         return this;
     }
     

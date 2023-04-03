@@ -7,27 +7,75 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDocumentWithPathRequest {
-    
-    public GetDocumentWithPathPathParams pathParams;
-    public GetDocumentWithPathRequest withPathParams(GetDocumentWithPathPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetDocumentWithPathQueryParams queryParams;
-    public GetDocumentWithPathRequest withQueryParams(GetDocumentWithPathQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * The input document (in JSON format)
      */
     @SpeakeasyMetadata("request:mediaType=application/x-yaml")
-    public byte[] request;
-    public GetDocumentWithPathRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public GetDocumentWithPathRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * If set to *full*, response will include query explanations in addition to the result.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=explain")
+    public String explain;
+    public GetDocumentWithPathRequest withExplain(String explain) {
+        this.explain = explain;
+        return this;
+    }
+    
+    /**
+     * If true, response will return additional performance metrics in addition to the result and the standard metrics.
+     * 
+     * **Caution:** This can add significant overhead to query evaluation. The recommendation is to only use this parameter if you are debugging a performance problem.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=instrument")
+    public Boolean instrument;
+    public GetDocumentWithPathRequest withInstrument(Boolean instrument) {
+        this.instrument = instrument;
+        return this;
+    }
+    
+    /**
+     * If true, compiler performance metrics will be returned in the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=metrics")
+    public Boolean metrics;
+    public GetDocumentWithPathRequest withMetrics(Boolean metrics) {
+        this.metrics = metrics;
+        return this;
+    }
+    
+    /**
+     * A backslash (/) delimited path to access values inside object and array documents. If the path points to an array, the server will attempt to convert the array index to an integer. If the path element cannot be converted to an integer, the server will respond with 404.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
+    public String path;
+    public GetDocumentWithPathRequest withPath(String path) {
+        this.path = path;
+        return this;
+    }
+    
+    /**
+     * If true, response will be in a human-readable format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pretty")
+    public Boolean pretty;
+    public GetDocumentWithPathRequest withPretty(Boolean pretty) {
+        this.pretty = pretty;
+        return this;
+    }
+    
+    /**
+     * If true, response will include build and version information in addition to the result.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=provenance")
+    public Boolean provenance;
+    public GetDocumentWithPathRequest withProvenance(Boolean provenance) {
+        this.provenance = provenance;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSubmissionHistoryRequest {
-    
-    public GetSubmissionHistoryPathParams pathParams;
-    public GetSubmissionHistoryRequest withPathParams(GetSubmissionHistoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the assignment
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assignment")
+    public String assignment;
+    public GetSubmissionHistoryRequest withAssignment(String assignment) {
+        this.assignment = assignment;
         return this;
     }
     
+    /**
+     * Unique identifier of the class
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=class")
+    public String class_;
+    public GetSubmissionHistoryRequest withClass(String class_) {
+        this.class_ = class_;
+        return this;
+    }
     
-    public GetSubmissionHistorySecurity security;
-    public GetSubmissionHistoryRequest withSecurity(GetSubmissionHistorySecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the submission
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=submission")
+    public String submission;
+    public GetSubmissionHistoryRequest withSubmission(String submission) {
+        this.submission = submission;
         return this;
     }
     

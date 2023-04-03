@@ -33,25 +33,26 @@ public class CustomerUsageReports {
     /**
      * Retrieves a report which is a collection of properties and statistics for a specific customer's account. For more information, see the Customers Usage Report guide. For more information about the customer report's parameters, see the Customers Usage parameters reference guides. 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReportsCustomerUsageReportsGetResponse reportsCustomerUsageReportsGet(org.openapis.openapi.models.operations.ReportsCustomerUsageReportsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReportsCustomerUsageReportsGetResponse reportsCustomerUsageReportsGet(org.openapis.openapi.models.operations.ReportsCustomerUsageReportsGetRequest request, org.openapis.openapi.models.operations.ReportsCustomerUsageReportsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReportsCustomerUsageReportsGetPathParams.class, baseUrl, "/admin/reports/v1/usage/dates/{date}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReportsCustomerUsageReportsGetRequest.class, baseUrl, "/admin/reports/v1/usage/dates/{date}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReportsCustomerUsageReportsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReportsCustomerUsageReportsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

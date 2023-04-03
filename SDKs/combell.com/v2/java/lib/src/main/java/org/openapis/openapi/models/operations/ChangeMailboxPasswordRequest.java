@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangeMailboxPasswordRequest {
-    
-    public ChangeMailboxPasswordPathParams pathParams;
-    public ChangeMailboxPasswordRequest withPathParams(ChangeMailboxPasswordPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ChangeMailboxPasswordQueryParams queryParams;
-    public ChangeMailboxPasswordRequest withQueryParams(ChangeMailboxPasswordQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Contains the new password.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateMailboxPasswordRequest request;
-    public ChangeMailboxPasswordRequest withRequest(org.openapis.openapi.models.shared.UpdateMailboxPasswordRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateMailboxPasswordRequest updateMailboxPasswordRequest;
+    public ChangeMailboxPasswordRequest withUpdateMailboxPasswordRequest(org.openapis.openapi.models.shared.UpdateMailboxPasswordRequest updateMailboxPasswordRequest) {
+        this.updateMailboxPasswordRequest = updateMailboxPasswordRequest;
+        return this;
+    }
+    
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mailboxName")
+    public String mailboxNamePathParameter;
+    public ChangeMailboxPasswordRequest withMailboxNamePathParameter(String mailboxNamePathParameter) {
+        this.mailboxNamePathParameter = mailboxNamePathParameter;
+        return this;
+    }
+    
+    /**
+     * Mailbox name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mailbox_name")
+    public String mailboxNameQueryParameter;
+    public ChangeMailboxPasswordRequest withMailboxNameQueryParameter(String mailboxNameQueryParameter) {
+        this.mailboxNameQueryParameter = mailboxNameQueryParameter;
         return this;
     }
     

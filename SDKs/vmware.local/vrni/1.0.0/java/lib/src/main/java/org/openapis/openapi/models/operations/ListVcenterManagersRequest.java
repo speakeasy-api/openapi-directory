@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListVcenterManagersRequest {
-    
-    public ListVcenterManagersQueryParams queryParams;
-    public ListVcenterManagersRequest withQueryParams(ListVcenterManagersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * cursor from previous response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public ListVcenterManagersRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
+    /**
+     * end time for query in epoch seconds
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_time")
+    public Double endTime;
+    public ListVcenterManagersRequest withEndTime(Double endTime) {
+        this.endTime = endTime;
+        return this;
+    }
     
-    public ListVcenterManagersSecurity security;
-    public ListVcenterManagersRequest withSecurity(ListVcenterManagersSecurity security) {
-        this.security = security;
+    /**
+     * page size of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
+    public Double size;
+    public ListVcenterManagersRequest withSize(Double size) {
+        this.size = size;
+        return this;
+    }
+    
+    /**
+     * start time for query in epoch seconds
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_time")
+    public Double startTime;
+    public ListVcenterManagersRequest withStartTime(Double startTime) {
+        this.startTime = startTime;
         return this;
     }
     

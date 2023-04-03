@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUserFollowsShowsRequest {
-    
-    public GetUserFollowsShowsQueryParams queryParams;
-    public GetUserFollowsShowsRequest withQueryParams(GetUserFollowsShowsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Embed full show info
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=embed")
+    public GetUserFollowsShowsEmbedEnum embed;
+    public GetUserFollowsShowsRequest withEmbed(GetUserFollowsShowsEmbedEnum embed) {
+        this.embed = embed;
         return this;
     }
     

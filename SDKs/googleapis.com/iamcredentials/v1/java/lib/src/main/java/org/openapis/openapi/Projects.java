@@ -34,27 +34,28 @@ public class Projects {
     /**
      * Generates an OAuth 2.0 access token for a service account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenResponse iamcredentialsProjectsServiceAccountsGenerateAccessToken(org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenResponse iamcredentialsProjectsServiceAccountsGenerateAccessToken(org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenRequest request, org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenPathParams.class, baseUrl, "/v1/{name}:generateAccessToken", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenRequest.class, baseUrl, "/v1/{name}:generateAccessToken", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "generateAccessTokenRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,27 +82,28 @@ public class Projects {
     /**
      * Generates an OpenID Connect ID token for a service account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsGenerateIdTokenResponse iamcredentialsProjectsServiceAccountsGenerateIdToken(org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsGenerateIdTokenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsGenerateIdTokenResponse iamcredentialsProjectsServiceAccountsGenerateIdToken(org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsGenerateIdTokenRequest request, org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsGenerateIdTokenSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsGenerateIdTokenPathParams.class, baseUrl, "/v1/{name}:generateIdToken", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsGenerateIdTokenRequest.class, baseUrl, "/v1/{name}:generateIdToken", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "generateIdTokenRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsGenerateIdTokenQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsGenerateIdTokenRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -128,27 +130,28 @@ public class Projects {
     /**
      * Signs a blob using a service account's system-managed private key.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsSignBlobResponse iamcredentialsProjectsServiceAccountsSignBlob(org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsSignBlobRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsSignBlobResponse iamcredentialsProjectsServiceAccountsSignBlob(org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsSignBlobRequest request, org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsSignBlobSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsSignBlobPathParams.class, baseUrl, "/v1/{name}:signBlob", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsSignBlobRequest.class, baseUrl, "/v1/{name}:signBlob", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "signBlobRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsSignBlobQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsSignBlobRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -175,27 +178,28 @@ public class Projects {
     /**
      * Signs a JWT using a service account's system-managed private key.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsSignJwtResponse iamcredentialsProjectsServiceAccountsSignJwt(org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsSignJwtRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsSignJwtResponse iamcredentialsProjectsServiceAccountsSignJwt(org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsSignJwtRequest request, org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsSignJwtSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsSignJwtPathParams.class, baseUrl, "/v1/{name}:signJwt", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsSignJwtRequest.class, baseUrl, "/v1/{name}:signJwt", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "signJwtRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsSignJwtQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsSignJwtRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

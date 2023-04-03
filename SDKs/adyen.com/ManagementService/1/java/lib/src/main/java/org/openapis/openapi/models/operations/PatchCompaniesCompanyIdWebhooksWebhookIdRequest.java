@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchCompaniesCompanyIdWebhooksWebhookIdRequest {
-    
-    public PatchCompaniesCompanyIdWebhooksWebhookIdPathParams pathParams;
-    public PatchCompaniesCompanyIdWebhooksWebhookIdRequest withPathParams(PatchCompaniesCompanyIdWebhooksWebhookIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateCompanyWebhookRequest request;
-    public PatchCompaniesCompanyIdWebhooksWebhookIdRequest withRequest(org.openapis.openapi.models.shared.UpdateCompanyWebhookRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateCompanyWebhookRequest updateCompanyWebhookRequest;
+    public PatchCompaniesCompanyIdWebhooksWebhookIdRequest withUpdateCompanyWebhookRequest(org.openapis.openapi.models.shared.UpdateCompanyWebhookRequest updateCompanyWebhookRequest) {
+        this.updateCompanyWebhookRequest = updateCompanyWebhookRequest;
         return this;
     }
     
+    /**
+     * The unique identifier of the company account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public PatchCompaniesCompanyIdWebhooksWebhookIdRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
+        return this;
+    }
     
-    public PatchCompaniesCompanyIdWebhooksWebhookIdSecurity security;
-    public PatchCompaniesCompanyIdWebhooksWebhookIdRequest withSecurity(PatchCompaniesCompanyIdWebhooksWebhookIdSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the webhook configuration.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webhookId")
+    public String webhookId;
+    public PatchCompaniesCompanyIdWebhooksWebhookIdRequest withWebhookId(String webhookId) {
+        this.webhookId = webhookId;
         return this;
     }
     

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAristaSwitchRequest {
-    
-    public DeleteAristaSwitchPathParams pathParams;
-    public DeleteAristaSwitchRequest withPathParams(DeleteAristaSwitchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteAristaSwitchSecurity security;
-    public DeleteAristaSwitchRequest withSecurity(DeleteAristaSwitchSecurity security) {
-        this.security = security;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteAristaSwitchRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

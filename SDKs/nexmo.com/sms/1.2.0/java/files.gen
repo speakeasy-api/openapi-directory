@@ -30,7 +30,6 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/SendAnSmsFormatEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/SendAnSmsPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/SendAnSmsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SendAnSmsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Sms.java
@@ -44,5 +43,4 @@ lib/src/main/java/org/openapis/openapi/models/shared/NewMessageTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/NewMessage.java
 lib/src/main/java/org/openapis/openapi/models/shared/DeliveryReceipt.java
 lib/src/main/java/org/openapis/openapi/models/callbacks/SendAnSmsDeliveryReceiptResponse.java
-lib/src/main/java/org/openapis/openapi/models/callbacks/SendAnSmsDeliveryReceiptRequest.java
 USAGE.md

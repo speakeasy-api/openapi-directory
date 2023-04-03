@@ -38,7 +38,7 @@ public class Webhooks {
      */
     public org.openapis.openapi.models.operations.DeleteWebhooksIdResponse deleteWebhooksId(org.openapis.openapi.models.operations.DeleteWebhooksIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteWebhooksIdPathParams.class, baseUrl, "/webhooks/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteWebhooksIdRequest.class, baseUrl, "/webhooks/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -74,11 +74,10 @@ public class Webhooks {
     /**
      * List webhooks
      * Contains a list of your webhooks
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetWebhooksResponse getWebhooks(org.openapis.openapi.models.operations.GetWebhooksRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetWebhooksResponse getWebhooks() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/webhooks");
         
@@ -87,7 +86,7 @@ public class Webhooks {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = this._securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -119,7 +118,7 @@ public class Webhooks {
      */
     public org.openapis.openapi.models.operations.GetWebhooksIdResponse getWebhooksId(org.openapis.openapi.models.operations.GetWebhooksIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWebhooksIdPathParams.class, baseUrl, "/webhooks/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWebhooksIdRequest.class, baseUrl, "/webhooks/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -215,10 +214,11 @@ public class Webhooks {
      *  - A __message discarded__ email is sent after failure email is send when a message is discarded as a consequence of a non-retry-able error.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostWebhooksResponse postWebhooks(org.openapis.openapi.models.operations.PostWebhooksRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostWebhooksResponse postWebhooks(org.openapis.openapi.models.shared.WebhookEntry request, org.openapis.openapi.models.operations.PostWebhooksSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/webhooks");
         
@@ -232,7 +232,7 @@ public class Webhooks {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -272,12 +272,12 @@ public class Webhooks {
      */
     public org.openapis.openapi.models.operations.PostWebhooksIdResponse postWebhooksId(org.openapis.openapi.models.operations.PostWebhooksIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostWebhooksIdPathParams.class, baseUrl, "/webhooks/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostWebhooksIdRequest.class, baseUrl, "/webhooks/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "webhookEntry", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

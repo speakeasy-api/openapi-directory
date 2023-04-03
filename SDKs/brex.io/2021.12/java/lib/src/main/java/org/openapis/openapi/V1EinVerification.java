@@ -37,10 +37,11 @@ public class V1EinVerification {
      * Verifies an EIN number
      * Performs a basic verification check of a given EIN tax number.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EinVerificationBasicResponse einVerificationBasic(org.openapis.openapi.models.operations.EinVerificationBasicRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EinVerificationBasicResponse einVerificationBasic(org.openapis.openapi.models.operations.EinVerificationBasicRequest request, org.openapis.openapi.models.operations.EinVerificationBasicSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/ein-verification/basic-check");
         
@@ -48,14 +49,14 @@ public class V1EinVerification {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EinVerificationBasicQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EinVerificationBasicRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -91,10 +92,11 @@ public class V1EinVerification {
      * Verifies EIN number and retrieves company data
      * Comprehensive verification of a given EIN number. Additionally to the basic verification it will lookup company details
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EinVerificationComprehensiveResponse einVerificationComprehensive(org.openapis.openapi.models.operations.EinVerificationComprehensiveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EinVerificationComprehensiveResponse einVerificationComprehensive(org.openapis.openapi.models.operations.EinVerificationComprehensiveRequest request, org.openapis.openapi.models.operations.EinVerificationComprehensiveSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/ein-verification/comprehensive-check");
         
@@ -102,14 +104,14 @@ public class V1EinVerification {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EinVerificationComprehensiveQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EinVerificationComprehensiveRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -145,10 +147,11 @@ public class V1EinVerification {
      * Retrieves a list of EIN numbers
      * Lookup EIN number for a company by its company name
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EinVerificationLookupResponse einVerificationLookup(org.openapis.openapi.models.operations.EinVerificationLookupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EinVerificationLookupResponse einVerificationLookup(org.openapis.openapi.models.operations.EinVerificationLookupRequest request, org.openapis.openapi.models.operations.EinVerificationLookupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/ein-verification/lookup");
         
@@ -156,14 +159,14 @@ public class V1EinVerification {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EinVerificationLookupQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EinVerificationLookupRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

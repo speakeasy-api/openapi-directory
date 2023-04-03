@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAliasRequest {
-    
-    public DeleteAliasQueryParams queryParams;
-    public DeleteAliasRequest withQueryParams(DeleteAliasQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * alias (without `/` at the beginning)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aliasName")
+    public String aliasName;
+    public DeleteAliasRequest withAliasName(String aliasName) {
+        this.aliasName = aliasName;
         return this;
     }
     
-    
-    public DeleteAliasSecurity security;
-    public DeleteAliasRequest withSecurity(DeleteAliasSecurity security) {
-        this.security = security;
+    /**
+     * domain which alias belongs to (string without `http/https` or `/`)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domainName")
+    public String domainName;
+    public DeleteAliasRequest withDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
     

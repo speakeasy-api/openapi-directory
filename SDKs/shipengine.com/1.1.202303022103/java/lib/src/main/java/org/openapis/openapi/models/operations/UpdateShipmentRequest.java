@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateShipmentRequest {
-    
-    public UpdateShipmentPathParams pathParams;
-    public UpdateShipmentRequest withPathParams(UpdateShipmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Shipment ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shipment_id")
+    public String shipmentId;
+    public UpdateShipmentRequest withShipmentId(String shipmentId) {
+        this.shipmentId = shipmentId;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateShipmentRequestBodyInput request;
-    public UpdateShipmentRequest withRequest(org.openapis.openapi.models.shared.UpdateShipmentRequestBodyInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateShipmentRequestBodyInput updateShipmentRequestBodyInput;
+    public UpdateShipmentRequest withUpdateShipmentRequestBodyInput(org.openapis.openapi.models.shared.UpdateShipmentRequestBodyInput updateShipmentRequestBodyInput) {
+        this.updateShipmentRequestBodyInput = updateShipmentRequestBodyInput;
         return this;
     }
     

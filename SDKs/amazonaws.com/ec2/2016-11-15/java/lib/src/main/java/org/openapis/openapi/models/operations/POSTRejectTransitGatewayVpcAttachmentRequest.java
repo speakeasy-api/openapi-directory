@@ -7,24 +7,73 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTRejectTransitGatewayVpcAttachmentRequest {
-    
-    public POSTRejectTransitGatewayVpcAttachmentQueryParams queryParams;
-    public POSTRejectTransitGatewayVpcAttachmentRequest withQueryParams(POSTRejectTransitGatewayVpcAttachmentQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public POSTRejectTransitGatewayVpcAttachmentHeaders headers;
-    public POSTRejectTransitGatewayVpcAttachmentRequest withHeaders(POSTRejectTransitGatewayVpcAttachmentHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public POSTRejectTransitGatewayVpcAttachmentActionEnum action;
+    public POSTRejectTransitGatewayVpcAttachmentRequest withAction(POSTRejectTransitGatewayVpcAttachmentActionEnum action) {
+        this.action = action;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public POSTRejectTransitGatewayVpcAttachmentRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public POSTRejectTransitGatewayVpcAttachmentRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public POSTRejectTransitGatewayVpcAttachmentVersionEnum version;
+    public POSTRejectTransitGatewayVpcAttachmentRequest withVersion(POSTRejectTransitGatewayVpcAttachmentVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public POSTRejectTransitGatewayVpcAttachmentRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public POSTRejectTransitGatewayVpcAttachmentRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public POSTRejectTransitGatewayVpcAttachmentRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public POSTRejectTransitGatewayVpcAttachmentRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public POSTRejectTransitGatewayVpcAttachmentRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public POSTRejectTransitGatewayVpcAttachmentRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public POSTRejectTransitGatewayVpcAttachmentRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

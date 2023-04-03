@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsGetRepoRequiredWorkflowUsageRequest {
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ActionsGetRepoRequiredWorkflowUsageRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
     
-    public ActionsGetRepoRequiredWorkflowUsagePathParams pathParams;
-    public ActionsGetRepoRequiredWorkflowUsageRequest withPathParams(ActionsGetRepoRequiredWorkflowUsagePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ActionsGetRepoRequiredWorkflowUsageRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * The ID of the required workflow that has run at least once in a repository.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=required_workflow_id_for_repo")
+    public Long requiredWorkflowIdForRepo;
+    public ActionsGetRepoRequiredWorkflowUsageRequest withRequiredWorkflowIdForRepo(Long requiredWorkflowIdForRepo) {
+        this.requiredWorkflowIdForRepo = requiredWorkflowIdForRepo;
         return this;
     }
     

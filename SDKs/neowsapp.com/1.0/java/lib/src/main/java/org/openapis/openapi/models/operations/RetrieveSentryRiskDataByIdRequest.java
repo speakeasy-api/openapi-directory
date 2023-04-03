@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveSentryRiskDataByIdRequest {
-    
-    public RetrieveSentryRiskDataByIdPathParams pathParams;
-    public RetrieveSentryRiskDataByIdRequest withPathParams(RetrieveSentryRiskDataByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of NearEarth object.  ID can be SPK_ID, Asteroid des (designation) or Sentry ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=asteroid_id")
+    public String asteroidId;
+    public RetrieveSentryRiskDataByIdRequest withAsteroidId(String asteroidId) {
+        this.asteroidId = asteroidId;
         return this;
     }
     

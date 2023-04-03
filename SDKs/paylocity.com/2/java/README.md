@@ -18,11 +18,9 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.AddOrUpdateAdditionalRatesSecurity;
-import org.openapis.openapi.models.operations.AddOrUpdateAdditionalRatesPathParams;
 import org.openapis.openapi.models.operations.AddOrUpdateAdditionalRatesRequest;
 import org.openapis.openapi.models.operations.AddOrUpdateAdditionalRatesResponse;
 import org.openapis.openapi.models.shared.AdditionalRate;
-import org.openapis.openapi.models.shared.SchemePaylocityAuth;
 
 public class Application {
     public static void main(String[] args) {
@@ -31,32 +29,27 @@ public class Application {
                 .build();
 
             AddOrUpdateAdditionalRatesRequest req = new AddOrUpdateAdditionalRatesRequest() {{
-                security = new AddOrUpdateAdditionalRatesSecurity() {{
-                    paylocityAuth = new SchemePaylocityAuth() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
+                additionalRate = new AdditionalRate() {{
+                    changeReason = "corrupti";
+                    costCenter1 = "provident";
+                    costCenter2 = "distinctio";
+                    costCenter3 = "quibusdam";
+                    effectiveDate = "unde";
+                    endCheckDate = "nulla";
+                    job = "corrupti";
+                    rate = 8472.52;
+                    rateCode = "vel";
+                    rateNotes = "error";
+                    ratePer = "deserunt";
+                    shift = "suscipit";
                 }};
-                pathParams = new AddOrUpdateAdditionalRatesPathParams() {{
-                    companyId = "corrupti";
-                    employeeId = "provident";
-                }};
-                request = new AdditionalRate() {{
-                    changeReason = "distinctio";
-                    costCenter1 = "quibusdam";
-                    costCenter2 = "unde";
-                    costCenter3 = "nulla";
-                    effectiveDate = "corrupti";
-                    endCheckDate = "illum";
-                    job = "vel";
-                    rate = 6235.64;
-                    rateCode = "deserunt";
-                    rateNotes = "suscipit";
-                    ratePer = "iure";
-                    shift = "magnam";
-                }};
-            }};            
+                companyId = "iure";
+                employeeId = "magnam";
+            }}            
 
-            AddOrUpdateAdditionalRatesResponse res = sdk.additionalRates.addOrUpdateAdditionalRates(req);
+            AddOrUpdateAdditionalRatesResponse res = sdk.additionalRates.addOrUpdateAdditionalRates(req, new AddOrUpdateAdditionalRatesSecurity() {{
+                paylocityAuth = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.statusCode == 200) {
                 // handle response
@@ -68,7 +61,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### additionalRates

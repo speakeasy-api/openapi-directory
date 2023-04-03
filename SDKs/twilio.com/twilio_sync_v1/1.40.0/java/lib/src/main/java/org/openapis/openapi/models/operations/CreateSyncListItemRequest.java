@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSyncListItemRequest {
-    
-    public CreateSyncListItemPathParams pathParams;
-    public CreateSyncListItemRequest withPathParams(CreateSyncListItemPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Sync List to add the new List Item to. Can be the Sync List resource's `sid` or its `unique_name`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ListSid")
+    public String listSid;
+    public CreateSyncListItemRequest withListSid(String listSid) {
+        this.listSid = listSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateSyncListItemCreateSyncListItemRequest request;
-    public CreateSyncListItemRequest withRequest(CreateSyncListItemCreateSyncListItemRequest request) {
-        this.request = request;
+    public CreateSyncListItemCreateSyncListItemRequest requestBody;
+    public CreateSyncListItemRequest withRequestBody(CreateSyncListItemCreateSyncListItemRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateSyncListItemSecurity security;
-    public CreateSyncListItemRequest withSecurity(CreateSyncListItemSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateSyncListItemRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) to create the new List Item in.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public CreateSyncListItemRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

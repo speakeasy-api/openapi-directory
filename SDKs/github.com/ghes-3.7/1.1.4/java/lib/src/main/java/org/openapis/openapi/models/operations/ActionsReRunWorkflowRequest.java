@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsReRunWorkflowRequest {
-    
-    public ActionsReRunWorkflowPathParams pathParams;
-    public ActionsReRunWorkflowRequest withPathParams(ActionsReRunWorkflowPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ActionsReRunWorkflowRequestBody requestBody;
+    public ActionsReRunWorkflowRequest withRequestBody(ActionsReRunWorkflowRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ActionsReRunWorkflowRequestBody request;
-    public ActionsReRunWorkflowRequest withRequest(ActionsReRunWorkflowRequestBody request) {
-        this.request = request;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ActionsReRunWorkflowRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ActionsReRunWorkflowRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the workflow run.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=run_id")
+    public Long runId;
+    public ActionsReRunWorkflowRequest withRunId(Long runId) {
+        this.runId = runId;
         return this;
     }
     

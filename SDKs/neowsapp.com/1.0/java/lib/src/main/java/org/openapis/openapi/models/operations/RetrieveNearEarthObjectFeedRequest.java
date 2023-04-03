@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveNearEarthObjectFeedRequest {
+    /**
+     * detailed
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=detailed")
+    public Boolean detailed;
+    public RetrieveNearEarthObjectFeedRequest withDetailed(Boolean detailed) {
+        this.detailed = detailed;
+        return this;
+    }
     
-    public RetrieveNearEarthObjectFeedQueryParams queryParams;
-    public RetrieveNearEarthObjectFeedRequest withQueryParams(RetrieveNearEarthObjectFeedQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * End of date range search, format: yyyy-MM-dd - (ex: 2015-04-28). If left off search will extends 7 days from start_date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
+    public String endDate;
+    public RetrieveNearEarthObjectFeedRequest withEndDate(String endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    
+    /**
+     * Start of date range search, format: yyyy-MM-dd - (ex: 2015-04-28)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
+    public String startDate;
+    public RetrieveNearEarthObjectFeedRequest withStartDate(String startDate) {
+        this.startDate = startDate;
         return this;
     }
     

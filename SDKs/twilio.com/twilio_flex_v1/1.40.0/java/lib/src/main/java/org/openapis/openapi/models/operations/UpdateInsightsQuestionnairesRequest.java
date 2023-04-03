@@ -7,38 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateInsightsQuestionnairesRequest {
-    
-    public UpdateInsightsQuestionnairesPathParams pathParams;
-    public UpdateInsightsQuestionnairesRequest withPathParams(UpdateInsightsQuestionnairesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateInsightsQuestionnairesHeaders headers;
-    public UpdateInsightsQuestionnairesRequest withHeaders(UpdateInsightsQuestionnairesHeaders headers) {
-        this.headers = headers;
+    /**
+     * The unique ID of the questionnaire
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Id")
+    public String id;
+    public UpdateInsightsQuestionnairesRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateInsightsQuestionnairesUpdateInsightsQuestionnairesRequest request;
-    public UpdateInsightsQuestionnairesRequest withRequest(UpdateInsightsQuestionnairesUpdateInsightsQuestionnairesRequest request) {
-        this.request = request;
+    public UpdateInsightsQuestionnairesUpdateInsightsQuestionnairesRequest requestBody;
+    public UpdateInsightsQuestionnairesRequest withRequestBody(UpdateInsightsQuestionnairesUpdateInsightsQuestionnairesRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateInsightsQuestionnairesSecurity security;
-    public UpdateInsightsQuestionnairesRequest withSecurity(UpdateInsightsQuestionnairesSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateInsightsQuestionnairesRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Token HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Token")
+    public String token;
+    public UpdateInsightsQuestionnairesRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

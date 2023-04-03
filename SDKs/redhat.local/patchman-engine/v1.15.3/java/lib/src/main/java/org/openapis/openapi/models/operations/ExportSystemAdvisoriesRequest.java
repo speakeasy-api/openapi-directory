@@ -4,27 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExportSystemAdvisoriesRequest {
-    
-    public ExportSystemAdvisoriesPathParams pathParams;
-    public ExportSystemAdvisoriesRequest withPathParams(ExportSystemAdvisoriesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[advisory_type]")
+    public String filterAdvisoryType;
+    public ExportSystemAdvisoriesRequest withFilterAdvisoryType(String filterAdvisoryType) {
+        this.filterAdvisoryType = filterAdvisoryType;
         return this;
     }
     
-    
-    public ExportSystemAdvisoriesQueryParams queryParams;
-    public ExportSystemAdvisoriesRequest withQueryParams(ExportSystemAdvisoriesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[description]")
+    public String filterDescription;
+    public ExportSystemAdvisoriesRequest withFilterDescription(String filterDescription) {
+        this.filterDescription = filterDescription;
         return this;
     }
     
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[id]")
+    public String filterId;
+    public ExportSystemAdvisoriesRequest withFilterId(String filterId) {
+        this.filterId = filterId;
+        return this;
+    }
     
-    public ExportSystemAdvisoriesSecurity security;
-    public ExportSystemAdvisoriesRequest withSecurity(ExportSystemAdvisoriesSecurity security) {
-        this.security = security;
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[public_date]")
+    public String filterPublicDate;
+    public ExportSystemAdvisoriesRequest withFilterPublicDate(String filterPublicDate) {
+        this.filterPublicDate = filterPublicDate;
+        return this;
+    }
+    
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[severity]")
+    public String filterSeverity;
+    public ExportSystemAdvisoriesRequest withFilterSeverity(String filterSeverity) {
+        this.filterSeverity = filterSeverity;
+        return this;
+    }
+    
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[synopsis]")
+    public String filterSynopsis;
+    public ExportSystemAdvisoriesRequest withFilterSynopsis(String filterSynopsis) {
+        this.filterSynopsis = filterSynopsis;
+        return this;
+    }
+    
+    /**
+     * Inventory ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=inventory_id")
+    public String inventoryId;
+    public ExportSystemAdvisoriesRequest withInventoryId(String inventoryId) {
+        this.inventoryId = inventoryId;
+        return this;
+    }
+    
+    /**
+     * Find matching text
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public ExportSystemAdvisoriesRequest withSearch(String search) {
+        this.search = search;
         return this;
     }
     

@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EditChatbotMessageRequest {
-    
-    public EditChatbotMessagePathParams pathParams;
-    public EditChatbotMessageRequest withPathParams(EditChatbotMessagePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public EditChatbotMessageApplicationJSON request;
-    public EditChatbotMessageRequest withRequest(EditChatbotMessageApplicationJSON request) {
-        this.request = request;
+    public EditChatbotMessageApplicationJSON requestBody;
+    public EditChatbotMessageRequest withRequestBody(EditChatbotMessageApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public EditChatbotMessageSecurity security;
-    public EditChatbotMessageRequest withSecurity(EditChatbotMessageSecurity security) {
-        this.security = security;
+    /**
+     * Unique Identifier of the message that needs to be updated. This should be retrieved from the response of [Send Chatbot Message API](https://marketplace.zoom.us/docs/api-reference/zoom-api/im-chat/sendchatbot).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=message_id")
+    public String messageId;
+    public EditChatbotMessageRequest withMessageId(String messageId) {
+        this.messageId = messageId;
         return this;
     }
     

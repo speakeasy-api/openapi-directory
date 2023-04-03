@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationSecurityIntrusionSettingsRequest {
-    
-    public GetOrganizationSecurityIntrusionSettingsPathParams pathParams;
-    public GetOrganizationSecurityIntrusionSettingsRequest withPathParams(GetOrganizationSecurityIntrusionSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public GetOrganizationSecurityIntrusionSettingsRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

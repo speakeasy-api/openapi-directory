@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetShiftRequest {
-    
-    public GetShiftPathParams pathParams;
-    public GetShiftRequest withPathParams(GetShiftPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetShiftSecurity security;
-    public GetShiftRequest withSecurity(GetShiftSecurity security) {
-        this.security = security;
+    /**
+     * The UUID for the `Shift` being retrieved.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetShiftRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

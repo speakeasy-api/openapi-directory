@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountScanTemplateRequest {
-    
-    public GetAccountScanTemplatePathParams pathParams;
-    public GetAccountScanTemplateRequest withPathParams(GetAccountScanTemplatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetAccountScanTemplateSecurity security;
-    public GetAccountScanTemplateRequest withSecurity(GetAccountScanTemplateSecurity security) {
-        this.security = security;
+    /**
+     * UUID of the scan template to retrieve
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scan_template_id")
+    public String scanTemplateId;
+    public GetAccountScanTemplateRequest withScanTemplateId(String scanTemplateId) {
+        this.scanTemplateId = scanTemplateId;
         return this;
     }
     

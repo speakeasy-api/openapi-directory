@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserTrackedTimesRequest {
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public UserTrackedTimesRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public UserTrackedTimesPathParams pathParams;
-    public UserTrackedTimesRequest withPathParams(UserTrackedTimesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public UserTrackedTimesRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * username of user
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user")
+    public String user;
+    public UserTrackedTimesRequest withUser(String user) {
+        this.user = user;
         return this;
     }
     

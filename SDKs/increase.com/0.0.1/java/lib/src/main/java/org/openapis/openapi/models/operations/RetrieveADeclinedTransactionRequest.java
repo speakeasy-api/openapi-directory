@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveADeclinedTransactionRequest {
-    
-    public RetrieveADeclinedTransactionPathParams pathParams;
-    public RetrieveADeclinedTransactionRequest withPathParams(RetrieveADeclinedTransactionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=declined_transaction_id")
+    public String declinedTransactionId;
+    public RetrieveADeclinedTransactionRequest withDeclinedTransactionId(String declinedTransactionId) {
+        this.declinedTransactionId = declinedTransactionId;
         return this;
     }
     

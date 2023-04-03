@@ -38,7 +38,7 @@ public class DeviceProfiles {
      */
     public org.openapis.openapi.models.operations.GetNetworkSmDeviceDeviceProfilesResponse getNetworkSmDeviceDeviceProfiles(org.openapis.openapi.models.operations.GetNetworkSmDeviceDeviceProfilesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSmDeviceDeviceProfilesPathParams.class, baseUrl, "/networks/{networkId}/sm/devices/{deviceId}/deviceProfiles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSmDeviceDeviceProfilesRequest.class, baseUrl, "/networks/{networkId}/sm/devices/{deviceId}/deviceProfiles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -78,7 +78,7 @@ public class DeviceProfiles {
      */
     public org.openapis.openapi.models.operations.GetNetworkSmUserDeviceProfilesResponse getNetworkSmUserDeviceProfiles(org.openapis.openapi.models.operations.GetNetworkSmUserDeviceProfilesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSmUserDeviceProfilesPathParams.class, baseUrl, "/networks/{networkId}/sm/users/{userId}/deviceProfiles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSmUserDeviceProfilesRequest.class, baseUrl, "/networks/{networkId}/sm/users/{userId}/deviceProfiles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

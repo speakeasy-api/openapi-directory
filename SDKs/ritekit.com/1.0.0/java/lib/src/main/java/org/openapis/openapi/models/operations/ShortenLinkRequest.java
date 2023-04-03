@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ShortenLinkRequest {
+    /**
+     * cta id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cta")
+    public Long cta;
+    public ShortenLinkRequest withCta(Long cta) {
+        this.cta = cta;
+        return this;
+    }
     
-    public ShortenLinkQueryParams queryParams;
-    public ShortenLinkRequest withQueryParams(ShortenLinkQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * URL
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=url")
+    public String url;
+    public ShortenLinkRequest withUrl(String url) {
+        this.url = url;
         return this;
     }
     

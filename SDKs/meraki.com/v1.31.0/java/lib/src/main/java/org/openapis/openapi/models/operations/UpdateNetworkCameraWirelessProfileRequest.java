@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkCameraWirelessProfileRequest {
-    
-    public UpdateNetworkCameraWirelessProfilePathParams pathParams;
-    public UpdateNetworkCameraWirelessProfileRequest withPathParams(UpdateNetworkCameraWirelessProfilePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkCameraWirelessProfileRequestBody requestBody;
+    public UpdateNetworkCameraWirelessProfileRequest withRequestBody(UpdateNetworkCameraWirelessProfileRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkCameraWirelessProfileRequestBody request;
-    public UpdateNetworkCameraWirelessProfileRequest withRequest(UpdateNetworkCameraWirelessProfileRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkCameraWirelessProfileRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=wirelessProfileId")
+    public String wirelessProfileId;
+    public UpdateNetworkCameraWirelessProfileRequest withWirelessProfileId(String wirelessProfileId) {
+        this.wirelessProfileId = wirelessProfileId;
         return this;
     }
     

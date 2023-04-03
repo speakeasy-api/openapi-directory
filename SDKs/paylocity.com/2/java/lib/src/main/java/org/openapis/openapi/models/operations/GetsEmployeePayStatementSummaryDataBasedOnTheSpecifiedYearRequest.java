@@ -4,27 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearRequest {
-    
-    public GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearPathParams pathParams;
-    public GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearRequest withPathParams(GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Retrieve pay statement details related to specific deduction, earning or tax types. Common values include 401k, Memo, Reg, OT, Cash Tips, FED and SITW.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=codegroup")
+    public String codegroup;
+    public GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearRequest withCodegroup(String codegroup) {
+        this.codegroup = codegroup;
         return this;
     }
     
-    
-    public GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearQueryParams queryParams;
-    public GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearRequest withQueryParams(GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Company Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
         return this;
     }
     
+    /**
+     * Employee Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=employeeId")
+    public String employeeId;
+    public GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearRequest withEmployeeId(String employeeId) {
+        this.employeeId = employeeId;
+        return this;
+    }
     
-    public GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearSecurity security;
-    public GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearRequest withSecurity(GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearSecurity security) {
-        this.security = security;
+    /**
+     * Whether to include the total record count in the header's X-Pcty-Total-Count property. Default value is true.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includetotalcount")
+    public Boolean includetotalcount;
+    public GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearRequest withIncludetotalcount(Boolean includetotalcount) {
+        this.includetotalcount = includetotalcount;
+        return this;
+    }
+    
+    /**
+     * Page number to retrieve; page numbers are 0-based (so to get the first page of results, pass pagenumber=0). Default value is 0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagenumber")
+    public Long pagenumber;
+    public GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearRequest withPagenumber(Long pagenumber) {
+        this.pagenumber = pagenumber;
+        return this;
+    }
+    
+    /**
+     * Number of records per page. Default value is 25.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagesize")
+    public Long pagesize;
+    public GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearRequest withPagesize(Long pagesize) {
+        this.pagesize = pagesize;
+        return this;
+    }
+    
+    /**
+     * The year for which to retrieve pay statement data
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=year")
+    public String year;
+    public GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearRequest withYear(String year) {
+        this.year = year;
         return this;
     }
     

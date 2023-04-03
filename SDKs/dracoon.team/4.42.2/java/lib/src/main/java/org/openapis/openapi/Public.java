@@ -54,7 +54,7 @@ public class Public {
      */
     public org.openapis.openapi.models.operations.CancelFileUploadViaShareResponse cancelFileUploadViaShare(org.openapis.openapi.models.operations.CancelFileUploadViaShareRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelFileUploadViaSharePathParams.class, baseUrl, "/v4/public/shares/uploads/{access_key}/{upload_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelFileUploadViaShareRequest.class, baseUrl, "/v4/public/shares/uploads/{access_key}/{upload_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -108,13 +108,13 @@ public class Public {
      */
     public org.openapis.openapi.models.operations.CheckPublicDownloadSharePasswordResponse checkPublicDownloadSharePassword(org.openapis.openapi.models.operations.CheckPublicDownloadSharePasswordRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CheckPublicDownloadSharePasswordPathParams.class, baseUrl, "/v4/public/shares/downloads/{access_key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CheckPublicDownloadSharePasswordRequest.class, baseUrl, "/v4/public/shares/downloads/{access_key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("HEAD");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CheckPublicDownloadSharePasswordQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CheckPublicDownloadSharePasswordRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -164,15 +164,15 @@ public class Public {
      */
     public org.openapis.openapi.models.operations.CompleteFileUploadViaShareResponse completeFileUploadViaShare(org.openapis.openapi.models.operations.CompleteFileUploadViaShareRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompleteFileUploadViaSharePathParams.class, baseUrl, "/v4/public/shares/uploads/{access_key}/{upload_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompleteFileUploadViaShareRequest.class, baseUrl, "/v4/public/shares/uploads/{access_key}/{upload_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "userFileKeyList", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -236,12 +236,12 @@ public class Public {
      */
     public org.openapis.openapi.models.operations.CompleteS3FileUploadViaShareResponse completeS3FileUploadViaShare(org.openapis.openapi.models.operations.CompleteS3FileUploadViaShareRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompleteS3FileUploadViaSharePathParams.class, baseUrl, "/v4/public/shares/uploads/{access_key}/{upload_id}/s3", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompleteS3FileUploadViaShareRequest.class, baseUrl, "/v4/public/shares/uploads/{access_key}/{upload_id}/s3", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "completeS3ShareUploadRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -303,12 +303,12 @@ public class Public {
      */
     public org.openapis.openapi.models.operations.CreateShareUploadChannelResponse createShareUploadChannel(org.openapis.openapi.models.operations.CreateShareUploadChannelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateShareUploadChannelPathParams.class, baseUrl, "/v4/public/shares/uploads/{access_key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateShareUploadChannelRequest.class, baseUrl, "/v4/public/shares/uploads/{access_key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createShareUploadChannelRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -368,19 +368,19 @@ public class Public {
      */
     public org.openapis.openapi.models.operations.DownloadFileViaTokenPublicResponse downloadFileViaTokenPublic(org.openapis.openapi.models.operations.DownloadFileViaTokenPublicRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadFileViaTokenPublicPathParams.class, baseUrl, "/v4/public/shares/downloads/{access_key}/{token}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadFileViaTokenPublicRequest.class, baseUrl, "/v4/public/shares/downloads/{access_key}/{token}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DownloadFileViaTokenPublicQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DownloadFileViaTokenPublicRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -435,19 +435,19 @@ public class Public {
      */
     public org.openapis.openapi.models.operations.DownloadFileViaTokenPublic1Response downloadFileViaTokenPublic1(org.openapis.openapi.models.operations.DownloadFileViaTokenPublic1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadFileViaTokenPublic1PathParams.class, baseUrl, "/v4/public/shares/downloads/{access_key}/{token}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadFileViaTokenPublic1Request.class, baseUrl, "/v4/public/shares/downloads/{access_key}/{token}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("HEAD");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DownloadFileViaTokenPublic1QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DownloadFileViaTokenPublic1Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -500,12 +500,12 @@ public class Public {
      */
     public org.openapis.openapi.models.operations.GenerateDownloadUrlPublicResponse generateDownloadUrlPublic(org.openapis.openapi.models.operations.GenerateDownloadUrlPublicRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GenerateDownloadUrlPublicPathParams.class, baseUrl, "/v4/public/shares/downloads/{access_key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GenerateDownloadUrlPublicRequest.class, baseUrl, "/v4/public/shares/downloads/{access_key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "publicDownloadTokenGenerateRequest", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -564,18 +564,18 @@ public class Public {
      */
     public org.openapis.openapi.models.operations.GeneratePresignedUrlsPublicResponse generatePresignedUrlsPublic(org.openapis.openapi.models.operations.GeneratePresignedUrlsPublicRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GeneratePresignedUrlsPublicPathParams.class, baseUrl, "/v4/public/shares/uploads/{access_key}/{upload_id}/s3_urls", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GeneratePresignedUrlsPublicRequest.class, baseUrl, "/v4/public/shares/uploads/{access_key}/{upload_id}/s3_urls", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "generatePresignedUrlsRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -641,7 +641,7 @@ public class Public {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RequestActiveDirectoryAuthInfoQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RequestActiveDirectoryAuthInfoRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -705,7 +705,7 @@ public class Public {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RequestOpenIdAuthInfoQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RequestOpenIdAuthInfoRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -763,13 +763,13 @@ public class Public {
      */
     public org.openapis.openapi.models.operations.RequestPublicDownloadShareInfoResponse requestPublicDownloadShareInfo(org.openapis.openapi.models.operations.RequestPublicDownloadShareInfoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RequestPublicDownloadShareInfoPathParams.class, baseUrl, "/v4/public/shares/downloads/{access_key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RequestPublicDownloadShareInfoRequest.class, baseUrl, "/v4/public/shares/downloads/{access_key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -839,13 +839,13 @@ public class Public {
      */
     public org.openapis.openapi.models.operations.RequestPublicUploadShareInfoResponse requestPublicUploadShareInfo(org.openapis.openapi.models.operations.RequestPublicUploadShareInfoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RequestPublicUploadShareInfoPathParams.class, baseUrl, "/v4/public/shares/uploads/{access_key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RequestPublicUploadShareInfoRequest.class, baseUrl, "/v4/public/shares/uploads/{access_key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -915,7 +915,7 @@ public class Public {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1012,7 +1012,7 @@ public class Public {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RequestSystemInfoQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RequestSystemInfoRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1076,7 +1076,7 @@ public class Public {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1228,7 +1228,7 @@ public class Public {
      */
     public org.openapis.openapi.models.operations.RequestUploadStatusPublicResponse requestUploadStatusPublic(org.openapis.openapi.models.operations.RequestUploadStatusPublicRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RequestUploadStatusPublicPathParams.class, baseUrl, "/v4/public/shares/uploads/{access_key}/{upload_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RequestUploadStatusPublicRequest.class, baseUrl, "/v4/public/shares/uploads/{access_key}/{upload_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1326,15 +1326,15 @@ public class Public {
      */
     public org.openapis.openapi.models.operations.UploadFileAsMultipartPublic1Response uploadFileAsMultipartPublic1(org.openapis.openapi.models.operations.UploadFileAsMultipartPublic1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UploadFileAsMultipartPublic1PathParams.class, baseUrl, "/v4/public/shares/uploads/{access_key}/{upload_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UploadFileAsMultipartPublic1Request.class, baseUrl, "/v4/public/shares/uploads/{access_key}/{upload_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

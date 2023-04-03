@@ -38,7 +38,7 @@ public class Previews {
      */
     public org.openapis.openapi.models.operations.PreviewsReadResponse previewsRead(org.openapis.openapi.models.operations.PreviewsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PreviewsReadPathParams.class, baseUrl, "/previews/{file_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PreviewsReadRequest.class, baseUrl, "/previews/{file_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

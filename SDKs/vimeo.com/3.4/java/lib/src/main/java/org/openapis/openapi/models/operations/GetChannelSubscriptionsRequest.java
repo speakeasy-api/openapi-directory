@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetChannelSubscriptionsRequest {
-    
-    public GetChannelSubscriptionsPathParams pathParams;
-    public GetChannelSubscriptionsRequest withPathParams(GetChannelSubscriptionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The sort direction of the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public GetChannelSubscriptionsDirectionEnum direction;
+    public GetChannelSubscriptionsRequest withDirection(GetChannelSubscriptionsDirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
+    /**
+     * The attribute by which to filter the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public GetChannelSubscriptionsFilterEnum filter;
+    public GetChannelSubscriptionsRequest withFilter(GetChannelSubscriptionsFilterEnum filter) {
+        this.filter = filter;
+        return this;
+    }
     
-    public GetChannelSubscriptionsQueryParams queryParams;
-    public GetChannelSubscriptionsRequest withQueryParams(GetChannelSubscriptionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetChannelSubscriptionsRequest withPage(Double page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetChannelSubscriptionsRequest withPerPage(Double perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The search query to use to filter the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public GetChannelSubscriptionsRequest withQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    
+    /**
+     * The way to sort the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetChannelSubscriptionsSortEnum sort;
+    public GetChannelSubscriptionsRequest withSort(GetChannelSubscriptionsSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public GetChannelSubscriptionsRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

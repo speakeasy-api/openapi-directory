@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetWriteCommunityRequest {
+    /**
+     * Agent to set the SNMP write community string
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public SetWriteCommunityRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public SetWriteCommunityPathParams pathParams;
-    public SetWriteCommunityRequest withPathParams(SetWriteCommunityPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * SNMP write community string
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=write")
+    public String write;
+    public SetWriteCommunityRequest withWrite(String write) {
+        this.write = write;
         return this;
     }
     

@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRealmAuthenticationFlowsRequest {
-    
-    public PostRealmAuthenticationFlowsPathParams pathParams;
-    public PostRealmAuthenticationFlowsRequest withPathParams(PostRealmAuthenticationFlowsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Authentication flow representation
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AuthenticationFlowRepresentation request;
-    public PostRealmAuthenticationFlowsRequest withRequest(org.openapis.openapi.models.shared.AuthenticationFlowRepresentation request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AuthenticationFlowRepresentation authenticationFlowRepresentation;
+    public PostRealmAuthenticationFlowsRequest withAuthenticationFlowRepresentation(org.openapis.openapi.models.shared.AuthenticationFlowRepresentation authenticationFlowRepresentation) {
+        this.authenticationFlowRepresentation = authenticationFlowRepresentation;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PostRealmAuthenticationFlowsRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

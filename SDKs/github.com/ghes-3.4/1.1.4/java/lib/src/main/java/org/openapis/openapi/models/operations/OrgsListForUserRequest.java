@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgsListForUserRequest {
-    
-    public OrgsListForUserPathParams pathParams;
-    public OrgsListForUserRequest withPathParams(OrgsListForUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public OrgsListForUserRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public OrgsListForUserRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
     
-    public OrgsListForUserQueryParams queryParams;
-    public OrgsListForUserRequest withQueryParams(OrgsListForUserQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The handle for the GitHub user account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public OrgsListForUserRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

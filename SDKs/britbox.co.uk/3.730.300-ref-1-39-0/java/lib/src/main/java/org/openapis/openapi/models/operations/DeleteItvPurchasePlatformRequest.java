@@ -7,34 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteItvPurchasePlatformRequest {
-    
-    public DeleteItvPurchasePlatformPathParams pathParams;
-    public DeleteItvPurchasePlatformRequest withPathParams(DeleteItvPurchasePlatformPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteItvPurchasePlatformQueryParams queryParams;
-    public DeleteItvPurchasePlatformRequest withQueryParams(DeleteItvPurchasePlatformQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Details of a cancellation request.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ItvCancelSubscriptionRequest request;
-    public DeleteItvPurchasePlatformRequest withRequest(org.openapis.openapi.models.shared.ItvCancelSubscriptionRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ItvCancelSubscriptionRequest itvCancelSubscriptionRequest;
+    public DeleteItvPurchasePlatformRequest withItvCancelSubscriptionRequest(org.openapis.openapi.models.shared.ItvCancelSubscriptionRequest itvCancelSubscriptionRequest) {
+        this.itvCancelSubscriptionRequest = itvCancelSubscriptionRequest;
         return this;
     }
     
+    /**
+     * Language code for the preferred language to be returned in the response.
+     * 
+     * Parameter value is case-insensitive and should be
+     *   - a valid 2 letter language code without region such as en, de
+     *   - or with region such as en_us, en_au
+     * 
+     * If undefined then defaults to 'en', unless the server has been configured
+     * with a custom default.
+     * 
+     * See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public String lang;
+    public DeleteItvPurchasePlatformRequest withLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
     
-    public DeleteItvPurchasePlatformSecurity security;
-    public DeleteItvPurchasePlatformRequest withSecurity(DeleteItvPurchasePlatformSecurity security) {
-        this.security = security;
+    /**
+     * The identifier of the payment platform (stripe/itunes).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=platform")
+    public String platform;
+    public DeleteItvPurchasePlatformRequest withPlatform(String platform) {
+        this.platform = platform;
         return this;
     }
     

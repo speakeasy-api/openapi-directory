@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRepositoryPipelineVariableRequest {
+    /**
+     * The repository.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public DeleteRepositoryPipelineVariableRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
     
-    public DeleteRepositoryPipelineVariablePathParams pathParams;
-    public DeleteRepositoryPipelineVariableRequest withPathParams(DeleteRepositoryPipelineVariablePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The UUID of the variable to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=variable_uuid")
+    public String variableUuid;
+    public DeleteRepositoryPipelineVariableRequest withVariableUuid(String variableUuid) {
+        this.variableUuid = variableUuid;
+        return this;
+    }
+    
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public DeleteRepositoryPipelineVariableRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

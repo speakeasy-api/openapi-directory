@@ -4,13 +4,78 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CustomEventsAnalyticsRequest {
+    /**
+     * (Optional) String
+     * 
+     * App API identifier retrieved from the Developer Console to limit analytics to a specific app
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=app_id")
+    public String appId;
+    public CustomEventsAnalyticsRequest withAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
     
-    public CustomEventsAnalyticsQueryParams queryParams;
-    public CustomEventsAnalyticsRequest withQueryParams(CustomEventsAnalyticsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * (Optional) DateTime (ISO 8601 string)
+     * 
+     * Point in time when the data series should end - defaults to time of the request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ending_at")
+    public String endingAt;
+    public CustomEventsAnalyticsRequest withEndingAt(String endingAt) {
+        this.endingAt = endingAt;
+        return this;
+    }
+    
+    /**
+     * (Required) String
+     * 
+     * The name of the custom event for which to return analytics 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=event")
+    public String event;
+    public CustomEventsAnalyticsRequest withEvent(String event) {
+        this.event = event;
+        return this;
+    }
+    
+    /**
+     * (Required) Integer
+     * 
+     * Max number of units (days or hours) before ending_at to include in the returned series - must be between 1 and 100 inclusive
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=length")
+    public String length;
+    public CustomEventsAnalyticsRequest withLength(String length) {
+        this.length = length;
+        return this;
+    }
+    
+    /**
+     * (Optional) String
+     * 
+     * Segment API identifier indicating the analytics enabled segment for which event analytics should be returned
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=segment_id")
+    public String segmentId;
+    public CustomEventsAnalyticsRequest withSegmentId(String segmentId) {
+        this.segmentId = segmentId;
+        return this;
+    }
+    
+    /**
+     * (Optional) String
+     * 
+     * Unit of time between data points - can be "day" or "hour" (defaults to "day")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unit")
+    public String unit;
+    public CustomEventsAnalyticsRequest withUnit(String unit) {
+        this.unit = unit;
         return this;
     }
     

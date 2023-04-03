@@ -4,13 +4,73 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TaxRatesByCountryCodeRequest {
+    /**
+     * Country code alpha 2
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country_code")
+    public String countryCode;
+    public TaxRatesByCountryCodeRequest withCountryCode(String countryCode) {
+        this.countryCode = countryCode;
+        return this;
+    }
     
-    public TaxRatesByCountryCodeQueryParams queryParams;
-    public TaxRatesByCountryCodeRequest withQueryParams(TaxRatesByCountryCodeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
+    public String date;
+    public TaxRatesByCountryCodeRequest withDate(String date) {
+        this.date = date;
+        return this;
+    }
+    
+    /**
+     * Domain name: api.taxrates.io
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain")
+    public String domain;
+    public TaxRatesByCountryCodeRequest withDomain(String domain) {
+        this.domain = domain;
+        return this;
+    }
+    
+    /**
+     * You can filter your taxes by one of following types: 'standard', 'reduced', 'second reduced', 'third reduced' and 'super reduced'.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public TaxRatesByCountryCodeRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
+    
+    /**
+     * Use one or many product code/s.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=product_codes[]")
+    public String productCodes;
+    public TaxRatesByCountryCodeRequest withProductCodes(String productCodes) {
+        this.productCodes = productCodes;
+        return this;
+    }
+    
+    /**
+     * Use for Canada
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=province ")
+    public String province;
+    public TaxRatesByCountryCodeRequest withProvince(String province) {
+        this.province = province;
+        return this;
+    }
+    
+    /**
+     * You must provide a zip code if one of your selected countries is United States and you've had selected a state on your Taxrates.io member's dashboard.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=zip")
+    public String zip;
+    public TaxRatesByCountryCodeRequest withZip(String zip) {
+        this.zip = zip;
         return this;
     }
     

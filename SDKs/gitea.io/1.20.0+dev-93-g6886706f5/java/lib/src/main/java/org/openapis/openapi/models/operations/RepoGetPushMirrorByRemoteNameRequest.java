@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoGetPushMirrorByRemoteNameRequest {
+    /**
+     * remote name of push mirror
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public RepoGetPushMirrorByRemoteNameRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
     
-    public RepoGetPushMirrorByRemoteNamePathParams pathParams;
-    public RepoGetPushMirrorByRemoteNameRequest withPathParams(RepoGetPushMirrorByRemoteNamePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoGetPushMirrorByRemoteNameRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoGetPushMirrorByRemoteNameRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

@@ -4,13 +4,48 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BoxScoresDeltaByDateByCompetitionRequest {
+    /**
+     * An indication of a soccer competition/league. This value can be the CompetitionId or the Competition Key. Possible values include: &lt;code&gt;EPL&lt;/code&gt;, &lt;code&gt;1&lt;/code&gt;, &lt;code&gt;MLS&lt;/code&gt;, &lt;code&gt;8&lt;/code&gt;, etc.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=competition")
+    public String competition;
+    public BoxScoresDeltaByDateByCompetitionRequest withCompetition(String competition) {
+        this.competition = competition;
+        return this;
+    }
     
-    public BoxScoresDeltaByDateByCompetitionPathParams pathParams;
-    public BoxScoresDeltaByDateByCompetitionRequest withPathParams(BoxScoresDeltaByDateByCompetitionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The date of the game(s).
+     * &lt;br&gt;Examples: &lt;code&gt;2017-02-27&lt;/code&gt;, &lt;code&gt;2017-09-01&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=date")
+    public String date;
+    public BoxScoresDeltaByDateByCompetitionRequest withDate(String date) {
+        this.date = date;
+        return this;
+    }
+    
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public BoxScoresDeltaByDateByCompetitionFormatEnum format;
+    public BoxScoresDeltaByDateByCompetitionRequest withFormat(BoxScoresDeltaByDateByCompetitionFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * Only returns player statistics that have changed in the last X minutes.  You specify how many minutes in time to go back. Valid entries are:
+     * &lt;code&gt;1&lt;/code&gt;, &lt;code&gt;2&lt;/code&gt; ... &lt;code&gt;all&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=minutes")
+    public String minutes;
+    public BoxScoresDeltaByDateByCompetitionRequest withMinutes(String minutes) {
+        this.minutes = minutes;
         return this;
     }
     

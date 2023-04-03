@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSipIpAccessControlListMappingRequest {
-    
-    public DeleteSipIpAccessControlListMappingPathParams pathParams;
-    public DeleteSipIpAccessControlListMappingRequest withPathParams(DeleteSipIpAccessControlListMappingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique id of the Account that is responsible for this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public DeleteSipIpAccessControlListMappingRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public DeleteSipIpAccessControlListMappingSecurity security;
-    public DeleteSipIpAccessControlListMappingRequest withSecurity(DeleteSipIpAccessControlListMappingSecurity security) {
-        this.security = security;
+    /**
+     * A 34 character string that uniquely identifies the SIP domain.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DomainSid")
+    public String domainSid;
+    public DeleteSipIpAccessControlListMappingRequest withDomainSid(String domainSid) {
+        this.domainSid = domainSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public DeleteSipIpAccessControlListMappingRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * A 34 character string that uniquely identifies the resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteSipIpAccessControlListMappingRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

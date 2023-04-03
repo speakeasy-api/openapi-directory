@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangeZoomRoomsAppVersionRequest {
-    
-    public ChangeZoomRoomsAppVersionPathParams pathParams;
-    public ChangeZoomRoomsAppVersionRequest withPathParams(ChangeZoomRoomsAppVersionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ChangeZoomRoomsAppVersionApplicationJSON requestBody;
+    public ChangeZoomRoomsAppVersionRequest withRequestBody(ChangeZoomRoomsAppVersionApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ChangeZoomRoomsAppVersionApplicationJSON request;
-    public ChangeZoomRoomsAppVersionRequest withRequest(ChangeZoomRoomsAppVersionApplicationJSON request) {
-        this.request = request;
+    /**
+     * Unique Identifier of the Mac or the Windows device. The value of this field can be retrieved from the [List Zoom Room Devices API](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms/listzrdevices).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deviceId")
+    public String deviceId;
+    public ChangeZoomRoomsAppVersionRequest withDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
+    
+    /**
+     * Unique Identifier of the Zoom Room.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=roomId")
+    public String roomId;
+    public ChangeZoomRoomsAppVersionRequest withRoomId(String roomId) {
+        this.roomId = roomId;
         return this;
     }
     

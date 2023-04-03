@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TransferLicensesRequest {
-    
-    public TransferLicensesPathParams pathParams;
-    public TransferLicensesRequest withPathParams(TransferLicensesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public TransferLicensesRequestBody request;
-    public TransferLicensesRequest withRequest(TransferLicensesRequestBody request) {
-        this.request = request;
+    public TransferLicensesRequestBody requestBody;
+    public TransferLicensesRequest withRequestBody(TransferLicensesRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public TransferLicensesSecurity security;
-    public TransferLicensesRequest withSecurity(TransferLicensesSecurity security) {
-        this.security = security;
+    /**
+     * Licensee number with a maximum length of 1000 characters
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=licenseeNumber")
+    public String licenseeNumber;
+    public TransferLicensesRequest withLicenseeNumber(String licenseeNumber) {
+        this.licenseeNumber = licenseeNumber;
         return this;
     }
     

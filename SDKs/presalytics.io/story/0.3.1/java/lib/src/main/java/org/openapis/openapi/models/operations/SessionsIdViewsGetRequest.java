@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SessionsIdViewsGetRequest {
-    
-    public SessionsIdViewsGetPathParams pathParams;
-    public SessionsIdViewsGetRequest withPathParams(SessionsIdViewsGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The primary key for a view session
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=session_id")
+    public String sessionId;
+    public SessionsIdViewsGetRequest withSessionId(String sessionId) {
+        this.sessionId = sessionId;
         return this;
     }
     

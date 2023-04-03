@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersUserIdCommentsRequest {
-    
-    public GetUsersUserIdCommentsPathParams pathParams;
-    public GetUsersUserIdCommentsRequest withPathParams(GetUsersUserIdCommentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Number of results to return in the collection.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetUsersUserIdCommentsRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
-    
-    public GetUsersUserIdCommentsQueryParams queryParams;
-    public GetUsersUserIdCommentsRequest withQueryParams(GetUsersUserIdCommentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Offset of first result. Deprecated, use `linked_partitioning` instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetUsersUserIdCommentsRequest withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     
-    
-    public GetUsersUserIdCommentsSecurity security;
-    public GetUsersUserIdCommentsRequest withSecurity(GetUsersUserIdCommentsSecurity security) {
-        this.security = security;
+    /**
+     * SoundCloud User id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Long userId;
+    public GetUsersUserIdCommentsRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class QuerySuggestedImageCountJsonRequest {
-    
-    public QuerySuggestedImageCountJsonPathParams pathParams;
-    public QuerySuggestedImageCountJsonRequest withPathParams(QuerySuggestedImageCountJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public QuerySuggestedImageCountJsonQueryParams queryParams;
-    public QuerySuggestedImageCountJsonRequest withQueryParams(QuerySuggestedImageCountJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Model that contains tagIds, threshold and projectType to query by.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TagFilter request;
-    public QuerySuggestedImageCountJsonRequest withRequest(org.openapis.openapi.models.shared.TagFilter request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TagFilter tagFilter;
+    public QuerySuggestedImageCountJsonRequest withTagFilter(org.openapis.openapi.models.shared.TagFilter tagFilter) {
+        this.tagFilter = tagFilter;
+        return this;
+    }
+    
+    /**
+     * IterationId to use for the suggested tags and regions.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=iterationId")
+    public String iterationId;
+    public QuerySuggestedImageCountJsonRequest withIterationId(String iterationId) {
+        this.iterationId = iterationId;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public QuerySuggestedImageCountJsonRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

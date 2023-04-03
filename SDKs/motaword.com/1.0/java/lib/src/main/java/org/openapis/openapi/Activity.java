@@ -40,13 +40,13 @@ public class Activity {
      */
     public org.openapis.openapi.models.operations.GetActivitiesResponse getActivities(org.openapis.openapi.models.operations.GetActivitiesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetActivitiesPathParams.class, baseUrl, "/projects/{projectId}/activities", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetActivitiesRequest.class, baseUrl, "/projects/{projectId}/activities", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetActivitiesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetActivitiesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -94,7 +94,7 @@ public class Activity {
      */
     public org.openapis.openapi.models.operations.GetActivityResponse getActivity(org.openapis.openapi.models.operations.GetActivityRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetActivityPathParams.class, baseUrl, "/projects/{projectId}/activities/{activityId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetActivityRequest.class, baseUrl, "/projects/{projectId}/activities/{activityId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -142,7 +142,7 @@ public class Activity {
      */
     public org.openapis.openapi.models.operations.GetActivityCommentsResponse getActivityComments(org.openapis.openapi.models.operations.GetActivityCommentsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetActivityCommentsPathParams.class, baseUrl, "/projects/{projectId}/activities/{activityId}/comments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetActivityCommentsRequest.class, baseUrl, "/projects/{projectId}/activities/{activityId}/comments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -190,13 +190,13 @@ public class Activity {
      */
     public org.openapis.openapi.models.operations.GetCommentsResponse getComments(org.openapis.openapi.models.operations.GetCommentsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCommentsPathParams.class, baseUrl, "/projects/{projectId}/comments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCommentsRequest.class, baseUrl, "/projects/{projectId}/comments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCommentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCommentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -243,13 +243,13 @@ public class Activity {
      */
     public org.openapis.openapi.models.operations.GetSalesActivitiesResponse getSalesActivities(org.openapis.openapi.models.operations.GetSalesActivitiesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSalesActivitiesPathParams.class, baseUrl, "/projects/{id}/sales/activities", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSalesActivitiesRequest.class, baseUrl, "/projects/{id}/sales/activities", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSalesActivitiesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSalesActivitiesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -296,12 +296,12 @@ public class Activity {
      */
     public org.openapis.openapi.models.operations.InsertSalesActivityResponse insertSalesActivity(org.openapis.openapi.models.operations.InsertSalesActivityRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InsertSalesActivityPathParams.class, baseUrl, "/projects/{id}/sales/activities", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InsertSalesActivityRequest.class, baseUrl, "/projects/{id}/sales/activities", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "newSalesActivity", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -346,12 +346,12 @@ public class Activity {
      */
     public org.openapis.openapi.models.operations.SubmitCommentJsonResponse submitCommentJson(org.openapis.openapi.models.operations.SubmitCommentJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubmitCommentJsonPathParams.class, baseUrl, "/projects/{projectId}/activities/{activityId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubmitCommentJsonRequest.class, baseUrl, "/projects/{projectId}/activities/{activityId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "comment", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -396,12 +396,12 @@ public class Activity {
      */
     public org.openapis.openapi.models.operations.SubmitCommentMultipartResponse submitCommentMultipart(org.openapis.openapi.models.operations.SubmitCommentMultipartRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubmitCommentMultipartPathParams.class, baseUrl, "/projects/{projectId}/activities/{activityId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubmitCommentMultipartRequest.class, baseUrl, "/projects/{projectId}/activities/{activityId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "comment1", "multipart");
         req.setBody(serializedRequestBody);
         
         

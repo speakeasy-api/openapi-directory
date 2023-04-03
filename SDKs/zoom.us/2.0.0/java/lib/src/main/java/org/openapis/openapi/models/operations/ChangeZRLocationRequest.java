@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangeZRLocationRequest {
-    
-    public ChangeZRLocationPathParams pathParams;
-    public ChangeZRLocationRequest withPathParams(ChangeZRLocationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public ChangeZRLocationApplicationJSON request;
-    public ChangeZRLocationRequest withRequest(ChangeZRLocationApplicationJSON request) {
-        this.request = request;
+    public ChangeZRLocationApplicationJSON requestBody;
+    public ChangeZRLocationRequest withRequestBody(ChangeZRLocationApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public ChangeZRLocationSecurity security;
-    public ChangeZRLocationRequest withSecurity(ChangeZRLocationSecurity security) {
-        this.security = security;
+    /**
+     * Unique Identifier of the Zoom Room.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=roomId")
+    public String roomId;
+    public ChangeZRLocationRequest withRoomId(String roomId) {
+        this.roomId = roomId;
         return this;
     }
     

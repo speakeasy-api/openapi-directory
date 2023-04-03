@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1AccountsRelationshipsRequest {
-    
-    public GetApiV1AccountsRelationshipsQueryParams queryParams;
-    public GetApiV1AccountsRelationshipsRequest withQueryParams(GetApiV1AccountsRelationshipsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetApiV1AccountsRelationshipsSecurity security;
-    public GetApiV1AccountsRelationshipsRequest withSecurity(GetApiV1AccountsRelationshipsSecurity security) {
-        this.security = security;
+    /**
+     * Array of account IDs to check
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String[] id;
+    public GetApiV1AccountsRelationshipsRequest withId(String[] id) {
+        this.id = id;
         return this;
     }
     

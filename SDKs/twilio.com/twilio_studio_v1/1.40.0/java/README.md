@@ -18,11 +18,9 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.CreateEngagementSecurity;
-import org.openapis.openapi.models.operations.CreateEngagementPathParams;
 import org.openapis.openapi.models.operations.CreateEngagementCreateEngagementRequest;
 import org.openapis.openapi.models.operations.CreateEngagementRequest;
 import org.openapis.openapi.models.operations.CreateEngagementResponse;
-import org.openapis.openapi.models.shared.SchemeAccountSidAuthToken;
 
 public class Application {
     public static void main(String[] args) {
@@ -31,23 +29,18 @@ public class Application {
                 .build();
 
             CreateEngagementRequest req = new CreateEngagementRequest() {{
-                security = new CreateEngagementSecurity() {{
-                    accountSidAuthToken = new SchemeAccountSidAuthToken() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
-                }};
-                pathParams = new CreateEngagementPathParams() {{
-                    flowSid = "corrupti";
-                }};
-                request = new CreateEngagementCreateEngagementRequest() {{
+                flowSid = "corrupti";
+                requestBody = new CreateEngagementCreateEngagementRequest() {{
                     from = "provident";
                     parameters = "distinctio";
                     to = "quibusdam";
                 }};
-            }};            
+            }}            
 
-            CreateEngagementResponse res = sdk.createEngagement(req);
+            CreateEngagementResponse res = sdk.createEngagement(req, new CreateEngagementSecurity() {{
+                password = "YOUR_PASSWORD_HERE";
+                username = "YOUR_USERNAME_HERE";
+            }});
 
             if (res.studioV1FlowEngagement.isPresent()) {
                 // handle response
@@ -59,7 +52,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

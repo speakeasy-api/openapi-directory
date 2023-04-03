@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutApiV1MediasIdRequest {
-    
-    public PutApiV1MediasIdPathParams pathParams;
-    public PutApiV1MediasIdRequest withPathParams(PutApiV1MediasIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PutApiV1MediasIdRequestBody request;
-    public PutApiV1MediasIdRequest withRequest(PutApiV1MediasIdRequestBody request) {
-        this.request = request;
+    public PutApiV1MediasIdRequestBody requestBody;
+    public PutApiV1MediasIdRequest withRequestBody(PutApiV1MediasIdRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public PutApiV1MediasIdSecurity security;
-    public PutApiV1MediasIdRequest withSecurity(PutApiV1MediasIdSecurity security) {
-        this.security = security;
+    /**
+     * id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutApiV1MediasIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateRateLimitRequest {
-    
-    public UpdateRateLimitPathParams pathParams;
-    public UpdateRateLimitRequest withPathParams(UpdateRateLimitPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateRateLimitUpdateRateLimitRequest request;
-    public UpdateRateLimitRequest withRequest(UpdateRateLimitUpdateRateLimitRequest request) {
-        this.request = request;
+    public UpdateRateLimitUpdateRateLimitRequest requestBody;
+    public UpdateRateLimitRequest withRequestBody(UpdateRateLimitUpdateRateLimitRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateRateLimitSecurity security;
-    public UpdateRateLimitRequest withSecurity(UpdateRateLimitSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the [Service](https://www.twilio.com/docs/verify/api/service) the resource is associated with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public UpdateRateLimitRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public UpdateRateLimitRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the Rate Limit resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateRateLimitRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

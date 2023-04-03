@@ -7,17 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostPayInstructionRequest {
-    
-    public PostPayInstructionPathParams pathParams;
-    public PostPayInstructionRequest withPathParams(PostPayInstructionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The version of the api to target. Omit or set as &amp;apos;default&amp;apos; to target the current api version.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Version")
+    public String apiVersion;
+    public PostPayInstructionRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
+    /**
+     * The OAuth 1 authorization header. &amp;apos;Auto&amp;apos; enables auto complete.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostPayInstructionRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
+        return this;
+    }
     
-    public PostPayInstructionHeaders headers;
-    public PostPayInstructionRequest withHeaders(PostPayInstructionHeaders headers) {
-        this.headers = headers;
+    /**
+     * The employees' unique identifier. E.g EE001
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EmployeeId")
+    public String employeeId;
+    public PostPayInstructionRequest withEmployeeId(String employeeId) {
+        this.employeeId = employeeId;
+        return this;
+    }
+    
+    /**
+     * The employers' unique identifier. E.g ER001
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EmployerId")
+    public String employerId;
+    public PostPayInstructionRequest withEmployerId(String employerId) {
+        this.employerId = employerId;
         return this;
     }
     
@@ -25,9 +51,9 @@ public class PostPayInstructionRequest {
      * The pay instruction object.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PayInstruction request;
-    public PostPayInstructionRequest withRequest(org.openapis.openapi.models.shared.PayInstruction request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PayInstruction payInstruction;
+    public PostPayInstructionRequest withPayInstruction(org.openapis.openapi.models.shared.PayInstruction payInstruction) {
+        this.payInstruction = payInstruction;
         return this;
     }
     

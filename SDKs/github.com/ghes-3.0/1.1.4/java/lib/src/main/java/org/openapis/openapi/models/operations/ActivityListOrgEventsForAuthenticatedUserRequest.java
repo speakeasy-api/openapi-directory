@@ -4,20 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActivityListOrgEventsForAuthenticatedUserRequest {
-    
-    public ActivityListOrgEventsForAuthenticatedUserPathParams pathParams;
-    public ActivityListOrgEventsForAuthenticatedUserRequest withPathParams(ActivityListOrgEventsForAuthenticatedUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ActivityListOrgEventsForAuthenticatedUserRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ActivityListOrgEventsForAuthenticatedUserRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public ActivityListOrgEventsForAuthenticatedUserQueryParams queryParams;
-    public ActivityListOrgEventsForAuthenticatedUserRequest withQueryParams(ActivityListOrgEventsForAuthenticatedUserQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ActivityListOrgEventsForAuthenticatedUserRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public ActivityListOrgEventsForAuthenticatedUserRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

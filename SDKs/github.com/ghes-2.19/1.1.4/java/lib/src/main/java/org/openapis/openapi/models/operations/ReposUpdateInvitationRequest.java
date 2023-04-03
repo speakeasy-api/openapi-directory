@@ -7,17 +7,34 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposUpdateInvitationRequest {
-    
-    public ReposUpdateInvitationPathParams pathParams;
-    public ReposUpdateInvitationRequest withPathParams(ReposUpdateInvitationPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ReposUpdateInvitationRequestBody requestBody;
+    public ReposUpdateInvitationRequest withRequestBody(ReposUpdateInvitationRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ReposUpdateInvitationRequestBody request;
-    public ReposUpdateInvitationRequest withRequest(ReposUpdateInvitationRequestBody request) {
-        this.request = request;
+    /**
+     * invitation_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=invitation_id")
+    public Long invitationId;
+    public ReposUpdateInvitationRequest withInvitationId(Long invitationId) {
+        this.invitationId = invitationId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposUpdateInvitationRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposUpdateInvitationRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

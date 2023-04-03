@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteUserSettingRequest {
-    
-    public DeleteUserSettingPathParams pathParams;
-    public DeleteUserSettingRequest withPathParams(DeleteUserSettingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Corresponds to the setting item you wish to remove. Allowed values: `voice_mail`
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=settingType")
+    public String settingType;
+    public DeleteUserSettingRequest withSettingType(String settingType) {
+        this.settingType = settingType;
         return this;
     }
     
-    
-    public DeleteUserSettingQueryParams queryParams;
-    public DeleteUserSettingRequest withQueryParams(DeleteUserSettingQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Required only for voicemail setting type.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=shared_id")
+    public String sharedId;
+    public DeleteUserSettingRequest withSharedId(String sharedId) {
+        this.sharedId = sharedId;
         return this;
     }
     
-    
-    public DeleteUserSettingSecurity security;
-    public DeleteUserSettingRequest withSecurity(DeleteUserSettingSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public DeleteUserSettingRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

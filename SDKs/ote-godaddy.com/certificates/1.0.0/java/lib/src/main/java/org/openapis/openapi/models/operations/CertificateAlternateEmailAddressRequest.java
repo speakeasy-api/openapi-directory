@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CertificateAlternateEmailAddressRequest {
+    /**
+     * Certificate id to resend emails
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=certificateId")
+    public String certificateId;
+    public CertificateAlternateEmailAddressRequest withCertificateId(String certificateId) {
+        this.certificateId = certificateId;
+        return this;
+    }
     
-    public CertificateAlternateEmailAddressPathParams pathParams;
-    public CertificateAlternateEmailAddressRequest withPathParams(CertificateAlternateEmailAddressPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Specific email address to resend email
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=emailAddress")
+    public String emailAddress;
+    public CertificateAlternateEmailAddressRequest withEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
         return this;
     }
     

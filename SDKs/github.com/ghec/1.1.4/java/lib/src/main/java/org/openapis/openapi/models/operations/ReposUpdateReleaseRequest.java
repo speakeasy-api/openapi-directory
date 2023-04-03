@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposUpdateReleaseRequest {
-    
-    public ReposUpdateReleasePathParams pathParams;
-    public ReposUpdateReleaseRequest withPathParams(ReposUpdateReleasePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ReposUpdateReleaseRequestBody requestBody;
+    public ReposUpdateReleaseRequest withRequestBody(ReposUpdateReleaseRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ReposUpdateReleaseRequestBody request;
-    public ReposUpdateReleaseRequest withRequest(ReposUpdateReleaseRequestBody request) {
-        this.request = request;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposUpdateReleaseRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the release.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_id")
+    public Long releaseId;
+    public ReposUpdateReleaseRequest withReleaseId(Long releaseId) {
+        this.releaseId = releaseId;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposUpdateReleaseRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserCurrentListSubscriptionsRequest {
+    /**
+     * page size of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public UserCurrentListSubscriptionsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public UserCurrentListSubscriptionsQueryParams queryParams;
-    public UserCurrentListSubscriptionsRequest withQueryParams(UserCurrentListSubscriptionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * page number of results to return (1-based)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public UserCurrentListSubscriptionsRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     

@@ -4,27 +4,53 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMerchantsMerchantIdTerminalOrdersRequest {
-    
-    public GetMerchantsMerchantIdTerminalOrdersPathParams pathParams;
-    public GetMerchantsMerchantIdTerminalOrdersRequest withPathParams(GetMerchantsMerchantIdTerminalOrdersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Your purchase order number.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customerOrderReference")
+    public String customerOrderReference;
+    public GetMerchantsMerchantIdTerminalOrdersRequest withCustomerOrderReference(String customerOrderReference) {
+        this.customerOrderReference = customerOrderReference;
         return this;
     }
     
-    
-    public GetMerchantsMerchantIdTerminalOrdersQueryParams queryParams;
-    public GetMerchantsMerchantIdTerminalOrdersRequest withQueryParams(GetMerchantsMerchantIdTerminalOrdersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of orders to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetMerchantsMerchantIdTerminalOrdersRequest withLimit(Integer limit) {
+        this.limit = limit;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
+    public String merchantId;
+    public GetMerchantsMerchantIdTerminalOrdersRequest withMerchantId(String merchantId) {
+        this.merchantId = merchantId;
+        return this;
+    }
     
-    public GetMerchantsMerchantIdTerminalOrdersSecurity security;
-    public GetMerchantsMerchantIdTerminalOrdersRequest withSecurity(GetMerchantsMerchantIdTerminalOrdersSecurity security) {
-        this.security = security;
+    /**
+     * The number of orders to skip.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public GetMerchantsMerchantIdTerminalOrdersRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * The order status. Possible values (not case-sensitive): Placed, Confirmed, Cancelled, Shipped, Delivered.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public String status;
+    public GetMerchantsMerchantIdTerminalOrdersRequest withStatus(String status) {
+        this.status = status;
         return this;
     }
     

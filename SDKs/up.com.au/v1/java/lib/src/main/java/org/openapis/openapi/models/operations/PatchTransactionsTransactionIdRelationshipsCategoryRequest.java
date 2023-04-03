@@ -7,17 +7,21 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchTransactionsTransactionIdRelationshipsCategoryRequest {
-    
-    public PatchTransactionsTransactionIdRelationshipsCategoryPathParams pathParams;
-    public PatchTransactionsTransactionIdRelationshipsCategoryRequest withPathParams(PatchTransactionsTransactionIdRelationshipsCategoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.UpdateTransactionCategoryRequest updateTransactionCategoryRequest;
+    public PatchTransactionsTransactionIdRelationshipsCategoryRequest withUpdateTransactionCategoryRequest(org.openapis.openapi.models.shared.UpdateTransactionCategoryRequest updateTransactionCategoryRequest) {
+        this.updateTransactionCategoryRequest = updateTransactionCategoryRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateTransactionCategoryRequest request;
-    public PatchTransactionsTransactionIdRelationshipsCategoryRequest withRequest(org.openapis.openapi.models.shared.UpdateTransactionCategoryRequest request) {
-        this.request = request;
+    /**
+     * The unique identifier for the transaction.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transactionId")
+    public String transactionId;
+    public PatchTransactionsTransactionIdRelationshipsCategoryRequest withTransactionId(String transactionId) {
+        this.transactionId = transactionId;
         return this;
     }
     

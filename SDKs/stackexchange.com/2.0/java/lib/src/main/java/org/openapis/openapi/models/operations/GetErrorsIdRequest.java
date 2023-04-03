@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetErrorsIdRequest {
-    
-    public GetErrorsIdPathParams pathParams;
-    public GetErrorsIdRequest withPathParams(GetErrorsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetErrorsIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

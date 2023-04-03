@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletesystemRequest {
-    
-    public DeletesystemPathParams pathParams;
-    public DeletesystemRequest withPathParams(DeletesystemPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeletesystemSecurity security;
-    public DeletesystemRequest withSecurity(DeletesystemSecurity security) {
-        this.security = security;
+    /**
+     * Inventory ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=inventory_id")
+    public String inventoryId;
+    public DeletesystemRequest withInventoryId(String inventoryId) {
+        this.inventoryId = inventoryId;
         return this;
     }
     

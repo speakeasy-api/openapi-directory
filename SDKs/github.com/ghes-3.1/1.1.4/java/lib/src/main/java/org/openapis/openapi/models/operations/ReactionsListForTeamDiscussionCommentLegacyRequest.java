@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsListForTeamDiscussionCommentLegacyRequest {
-    
-    public ReactionsListForTeamDiscussionCommentLegacyPathParams pathParams;
-    public ReactionsListForTeamDiscussionCommentLegacyRequest withPathParams(ReactionsListForTeamDiscussionCommentLegacyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The number that identifies the comment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_number")
+    public Long commentNumber;
+    public ReactionsListForTeamDiscussionCommentLegacyRequest withCommentNumber(Long commentNumber) {
+        this.commentNumber = commentNumber;
         return this;
     }
     
+    /**
+     * Returns a single [reaction type](https://docs.github.com/enterprise-server@3.1/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a team discussion comment.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=content")
+    public ReactionsListForTeamDiscussionCommentLegacyContentEnum content;
+    public ReactionsListForTeamDiscussionCommentLegacyRequest withContent(ReactionsListForTeamDiscussionCommentLegacyContentEnum content) {
+        this.content = content;
+        return this;
+    }
     
-    public ReactionsListForTeamDiscussionCommentLegacyQueryParams queryParams;
-    public ReactionsListForTeamDiscussionCommentLegacyRequest withQueryParams(ReactionsListForTeamDiscussionCommentLegacyQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number that identifies the discussion.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=discussion_number")
+    public Long discussionNumber;
+    public ReactionsListForTeamDiscussionCommentLegacyRequest withDiscussionNumber(Long discussionNumber) {
+        this.discussionNumber = discussionNumber;
+        return this;
+    }
+    
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ReactionsListForTeamDiscussionCommentLegacyRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ReactionsListForTeamDiscussionCommentLegacyRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the team.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
+    public Long teamId;
+    public ReactionsListForTeamDiscussionCommentLegacyRequest withTeamId(Long teamId) {
+        this.teamId = teamId;
         return this;
     }
     

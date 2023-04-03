@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMerchantsMerchantIdStoresReferenceTerminalLogosRequest {
-    
-    public GetMerchantsMerchantIdStoresReferenceTerminalLogosPathParams pathParams;
-    public GetMerchantsMerchantIdStoresReferenceTerminalLogosRequest withPathParams(GetMerchantsMerchantIdStoresReferenceTerminalLogosPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the merchant account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
+    public String merchantId;
+    public GetMerchantsMerchantIdStoresReferenceTerminalLogosRequest withMerchantId(String merchantId) {
+        this.merchantId = merchantId;
         return this;
     }
     
-    
-    public GetMerchantsMerchantIdStoresReferenceTerminalLogosQueryParams queryParams;
-    public GetMerchantsMerchantIdStoresReferenceTerminalLogosRequest withQueryParams(GetMerchantsMerchantIdStoresReferenceTerminalLogosQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The terminal model. Possible values: E355, VX675WIFIBT, VX680, VX690, VX700, VX820, M400, MX925, P400Plus, UX300, UX410, V200cPlus, V240mPlus, V400cPlus, V400m, e280, e285, e285p, S1E, S1EL, S1F2, S1L, S1U, S7T.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=model")
+    public String model;
+    public GetMerchantsMerchantIdStoresReferenceTerminalLogosRequest withModel(String model) {
+        this.model = model;
         return this;
     }
     
-    
-    public GetMerchantsMerchantIdStoresReferenceTerminalLogosSecurity security;
-    public GetMerchantsMerchantIdStoresReferenceTerminalLogosRequest withSecurity(GetMerchantsMerchantIdStoresReferenceTerminalLogosSecurity security) {
-        this.security = security;
+    /**
+     * The reference that identifies the store.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reference")
+    public String reference;
+    public GetMerchantsMerchantIdStoresReferenceTerminalLogosRequest withReference(String reference) {
+        this.reference = reference;
         return this;
     }
     

@@ -4,27 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InventoryNotificationRequest {
-    
-    public InventoryNotificationPathParams pathParams;
-    public InventoryNotificationRequest withPathParams(InventoryNotificationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public InventoryNotificationRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public InventoryNotificationQueryParams queryParams;
-    public InventoryNotificationRequest withQueryParams(InventoryNotificationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public InventoryNotificationRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
+    /**
+     * Name of the VTEX account that belongs to the marketplace. The notification will be posted into this account.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
+    public String accountName;
+    public InventoryNotificationRequest withAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
     
-    public InventoryNotificationHeaders headers;
-    public InventoryNotificationRequest withHeaders(InventoryNotificationHeaders headers) {
-        this.headers = headers;
+    /**
+     * Environment to use. Used as part of the URL.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=environment")
+    public String environment;
+    public InventoryNotificationRequest withEnvironment(String environment) {
+        this.environment = environment;
+        return this;
+    }
+    
+    /**
+     * A string that identifies the seller in the marketplace. This ID must be created by the marketplace and informed to the seller before the integration is built.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerId")
+    public String sellerId;
+    public InventoryNotificationRequest withSellerId(String sellerId) {
+        this.sellerId = sellerId;
+        return this;
+    }
+    
+    /**
+     * A string that identifies the SKU in the seller, that suffered the change. This is the ID that the marketplace will use for all  references to this SKU, such as price and inventory notifications.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=skuId")
+    public String skuId;
+    public InventoryNotificationRequest withSkuId(String skuId) {
+        this.skuId = skuId;
         return this;
     }
     

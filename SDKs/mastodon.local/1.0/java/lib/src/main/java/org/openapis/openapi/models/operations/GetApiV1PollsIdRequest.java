@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1PollsIdRequest {
-    
-    public GetApiV1PollsIdPathParams pathParams;
-    public GetApiV1PollsIdRequest withPathParams(GetApiV1PollsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the poll in the database.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetApiV1PollsIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

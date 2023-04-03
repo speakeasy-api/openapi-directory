@@ -4,20 +4,79 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDisableVpcClassicLinkDnsSupportRequest {
-    
-    public GETDisableVpcClassicLinkDnsSupportQueryParams queryParams;
-    public GETDisableVpcClassicLinkDnsSupportRequest withQueryParams(GETDisableVpcClassicLinkDnsSupportQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDisableVpcClassicLinkDnsSupportActionEnum action;
+    public GETDisableVpcClassicLinkDnsSupportRequest withAction(GETDisableVpcClassicLinkDnsSupportActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDisableVpcClassicLinkDnsSupportVersionEnum version;
+    public GETDisableVpcClassicLinkDnsSupportRequest withVersion(GETDisableVpcClassicLinkDnsSupportVersionEnum version) {
+        this.version = version;
+        return this;
+    }
     
-    public GETDisableVpcClassicLinkDnsSupportHeaders headers;
-    public GETDisableVpcClassicLinkDnsSupportRequest withHeaders(GETDisableVpcClassicLinkDnsSupportHeaders headers) {
-        this.headers = headers;
+    /**
+     * The ID of the VPC.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcId")
+    public String vpcId;
+    public GETDisableVpcClassicLinkDnsSupportRequest withVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDisableVpcClassicLinkDnsSupportRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDisableVpcClassicLinkDnsSupportRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDisableVpcClassicLinkDnsSupportRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDisableVpcClassicLinkDnsSupportRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDisableVpcClassicLinkDnsSupportRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDisableVpcClassicLinkDnsSupportRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDisableVpcClassicLinkDnsSupportRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

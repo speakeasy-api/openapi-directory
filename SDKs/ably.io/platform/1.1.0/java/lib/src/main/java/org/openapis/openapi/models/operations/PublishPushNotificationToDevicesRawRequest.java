@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PublishPushNotificationToDevicesRawRequest {
-    
-    public PublishPushNotificationToDevicesRawQueryParams queryParams;
-    public PublishPushNotificationToDevicesRawRequest withQueryParams(PublishPushNotificationToDevicesRawQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public PublishPushNotificationToDevicesRawHeaders headers;
-    public PublishPushNotificationToDevicesRawRequest withHeaders(PublishPushNotificationToDevicesRawHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-msgpack")
-    public byte[] request;
-    public PublishPushNotificationToDevicesRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public PublishPushNotificationToDevicesRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The version of the API you wish to use.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Ably-Version")
+    public String xAblyVersion;
+    public PublishPushNotificationToDevicesRawRequest withXAblyVersion(String xAblyVersion) {
+        this.xAblyVersion = xAblyVersion;
+        return this;
+    }
+    
+    /**
+     * The response format you would like
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public org.openapis.openapi.models.shared.ResponseFormatEnum format;
+    public PublishPushNotificationToDevicesRawRequest withFormat(org.openapis.openapi.models.shared.ResponseFormatEnum format) {
+        this.format = format;
         return this;
     }
     

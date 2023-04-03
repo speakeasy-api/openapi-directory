@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOntolIdentifierResourceRequest {
-    
-    public GetOntolIdentifierResourceQueryParams queryParams;
-    public GetOntolIdentifierResourceRequest withQueryParams(GetOntolIdentifierResourceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * List of labels
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=label")
+    public String[] label;
+    public GetOntolIdentifierResourceRequest withLabel(String[] label) {
+        this.label = label;
         return this;
     }
     

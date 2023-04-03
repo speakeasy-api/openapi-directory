@@ -4,20 +4,95 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListEventSourceMappingsRequest {
-    
-    public ListEventSourceMappingsQueryParams queryParams;
-    public ListEventSourceMappingsRequest withQueryParams(ListEventSourceMappingsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * &lt;p&gt;The Amazon Resource Name (ARN) of the event source.&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Amazon Kinesis&lt;/b&gt; \u2013 The ARN of the data stream or a stream consumer.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Amazon DynamoDB Streams&lt;/b&gt; \u2013 The ARN of the stream.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Amazon Simple Queue Service&lt;/b&gt; \u2013 The ARN of the queue.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Amazon Managed Streaming for Apache Kafka&lt;/b&gt; \u2013 The ARN of the cluster.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Amazon MQ&lt;/b&gt; \u2013 The ARN of the broker.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EventSourceArn")
+    public String eventSourceArn;
+    public ListEventSourceMappingsRequest withEventSourceArn(String eventSourceArn) {
+        this.eventSourceArn = eventSourceArn;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The name of the Lambda function.&lt;/p&gt; &lt;p class="title"&gt; &lt;b&gt;Name formats&lt;/b&gt; &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Function name&lt;/b&gt; \u2013 &lt;code&gt;MyFunction&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Function ARN&lt;/b&gt; \u2013 &lt;code&gt;arn:aws:lambda:us-west-2:123456789012:function:MyFunction&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Version or Alias ARN&lt;/b&gt; \u2013 &lt;code&gt;arn:aws:lambda:us-west-2:123456789012:function:MyFunction:PROD&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Partial ARN&lt;/b&gt; \u2013 &lt;code&gt;123456789012:function:MyFunction&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;The length constraint applies only to the full ARN. If you specify only the function name, it's limited to 64 characters in length.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FunctionName")
+    public String functionName;
+    public ListEventSourceMappingsRequest withFunctionName(String functionName) {
+        this.functionName = functionName;
+        return this;
+    }
     
-    public ListEventSourceMappingsHeaders headers;
-    public ListEventSourceMappingsRequest withHeaders(ListEventSourceMappingsHeaders headers) {
-        this.headers = headers;
+    /**
+     * A pagination token returned by a previous call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
+    public String marker;
+    public ListEventSourceMappingsRequest withMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
+    
+    /**
+     * The maximum number of event source mappings to return. Note that ListEventSourceMappings returns a maximum of 100 items in each response, even if you set the number higher.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxItems")
+    public Long maxItems;
+    public ListEventSourceMappingsRequest withMaxItems(Long maxItems) {
+        this.maxItems = maxItems;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListEventSourceMappingsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListEventSourceMappingsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListEventSourceMappingsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListEventSourceMappingsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListEventSourceMappingsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListEventSourceMappingsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListEventSourceMappingsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

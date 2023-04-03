@@ -37,10 +37,11 @@ public class General {
      * 
      * For more information, refer to [Disable stored details](https://docs.adyen.com/classic-integration/recurring-payments/disable-stored-details/).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostDisableResponse postDisable(org.openapis.openapi.models.operations.PostDisableRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostDisableResponse postDisable(org.openapis.openapi.models.shared.DisableRequest request, org.openapis.openapi.models.operations.PostDisableSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/disable");
         
@@ -51,7 +52,7 @@ public class General {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -89,10 +90,11 @@ public class General {
      * 
      * For more information, refer to [Retrieve stored details](https://docs.adyen.com/classic-integration/recurring-payments/retrieve-stored-details/).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostListRecurringDetailsResponse postListRecurringDetails(org.openapis.openapi.models.operations.PostListRecurringDetailsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostListRecurringDetailsResponse postListRecurringDetails(org.openapis.openapi.models.shared.RecurringDetailsRequest request, org.openapis.openapi.models.operations.PostListRecurringDetailsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/listRecurringDetails");
         
@@ -103,7 +105,7 @@ public class General {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -139,10 +141,11 @@ public class General {
      * Ask issuer to notify the shopper
      * Sends a request to the issuer so they can inform the shopper about the upcoming recurring payment. This endpoint is used only for local acquiring in India. For more information, refer to [Recurring card payments in India](https://docs.adyen.com/payment-methods/cards/cards-recurring-india).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostNotifyShopperResponse postNotifyShopper(org.openapis.openapi.models.operations.PostNotifyShopperRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostNotifyShopperResponse postNotifyShopper(org.openapis.openapi.models.shared.NotifyShopperRequest request, org.openapis.openapi.models.operations.PostNotifyShopperSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/notifyShopper");
         
@@ -153,7 +156,7 @@ public class General {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -191,10 +194,11 @@ public class General {
      * * If the card information is provided, all the sub-fields for `card` are mandatory.
      * * If the recurring detail reference is provided, the fields for `shopperReference` and `selectedRecurringDetailReference` are mandatory.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostScheduleAccountUpdaterResponse postScheduleAccountUpdater(org.openapis.openapi.models.operations.PostScheduleAccountUpdaterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostScheduleAccountUpdaterResponse postScheduleAccountUpdater(org.openapis.openapi.models.shared.ScheduleAccountUpdaterRequest request, org.openapis.openapi.models.operations.PostScheduleAccountUpdaterSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/scheduleAccountUpdater");
         
@@ -205,7 +209,7 @@ public class General {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

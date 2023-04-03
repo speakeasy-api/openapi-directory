@@ -4,13 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ArticleUpdateStatusRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ArticleId")
+    public Integer articleId;
+    public ArticleUpdateStatusRequest withArticleId(Integer articleId) {
+        this.articleId = articleId;
+        return this;
+    }
     
-    public ArticleUpdateStatusQueryParams queryParams;
-    public ArticleUpdateStatusRequest withQueryParams(ArticleUpdateStatusQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * 1 : activate , 2 deactivate
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public Integer status;
+    public ArticleUpdateStatusRequest withStatus(Integer status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * Updating user
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userName")
+    public String userName;
+    public ArticleUpdateStatusRequest withUserName(String userName) {
+        this.userName = userName;
         return this;
     }
     

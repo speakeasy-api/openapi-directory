@@ -39,7 +39,7 @@ public class ServicePoints {
      */
     public org.openapis.openapi.models.operations.ServicePointsGetByIdResponse servicePointsGetById(org.openapis.openapi.models.operations.ServicePointsGetByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicePointsGetByIdPathParams.class, baseUrl, "/v1/service_points/{carrier_code}/{country_code}/{service_point_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicePointsGetByIdRequest.class, baseUrl, "/v1/service_points/{carrier_code}/{country_code}/{service_point_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -85,7 +85,7 @@ public class ServicePoints {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServicePointsListResponse servicePointsList(org.openapis.openapi.models.operations.ServicePointsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServicePointsListResponse servicePointsList(Object request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/service_points/list");
         

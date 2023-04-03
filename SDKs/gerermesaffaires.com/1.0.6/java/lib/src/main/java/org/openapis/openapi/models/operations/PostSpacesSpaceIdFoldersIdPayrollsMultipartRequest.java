@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesSpaceIdFoldersIdPayrollsMultipartRequest {
-    
-    public PostSpacesSpaceIdFoldersIdPayrollsMultipartPathParams pathParams;
-    public PostSpacesSpaceIdFoldersIdPayrollsMultipartRequest withPathParams(PostSpacesSpaceIdFoldersIdPayrollsMultipartPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Payroll to add or to generate
      */
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PostSpacesSpaceIdFoldersIdPayrollsMultipartFormData1 request;
-    public PostSpacesSpaceIdFoldersIdPayrollsMultipartRequest withRequest(PostSpacesSpaceIdFoldersIdPayrollsMultipartFormData1 request) {
-        this.request = request;
+    public PostSpacesSpaceIdFoldersIdPayrollsMultipartFormData1 requestBody;
+    public PostSpacesSpaceIdFoldersIdPayrollsMultipartRequest withRequestBody(PostSpacesSpaceIdFoldersIdPayrollsMultipartFormData1 requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Id of the folder social
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSpacesSpaceIdFoldersIdPayrollsMultipartRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PostSpacesSpaceIdFoldersIdPayrollsMultipartSecurity security;
-    public PostSpacesSpaceIdFoldersIdPayrollsMultipartRequest withSecurity(PostSpacesSpaceIdFoldersIdPayrollsMultipartSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PostSpacesSpaceIdFoldersIdPayrollsMultipartRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

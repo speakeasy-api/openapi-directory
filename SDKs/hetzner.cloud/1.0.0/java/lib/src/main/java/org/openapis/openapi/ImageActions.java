@@ -40,13 +40,13 @@ public class ImageActions {
      */
     public org.openapis.openapi.models.operations.GetImagesIdActionsResponse getImagesIdActions(org.openapis.openapi.models.operations.GetImagesIdActionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetImagesIdActionsPathParams.class, baseUrl, "/images/{id}/actions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetImagesIdActionsRequest.class, baseUrl, "/images/{id}/actions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetImagesIdActionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetImagesIdActionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -85,7 +85,7 @@ public class ImageActions {
      */
     public org.openapis.openapi.models.operations.GetImagesIdActionsActionIdResponse getImagesIdActionsActionId(org.openapis.openapi.models.operations.GetImagesIdActionsActionIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetImagesIdActionsActionIdPathParams.class, baseUrl, "/images/{id}/actions/{action_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetImagesIdActionsActionIdRequest.class, baseUrl, "/images/{id}/actions/{action_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -124,12 +124,12 @@ public class ImageActions {
      */
     public org.openapis.openapi.models.operations.PostImagesIdActionsChangeProtectionResponse postImagesIdActionsChangeProtection(org.openapis.openapi.models.operations.PostImagesIdActionsChangeProtectionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostImagesIdActionsChangeProtectionPathParams.class, baseUrl, "/images/{id}/actions/change_protection", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostImagesIdActionsChangeProtectionRequest.class, baseUrl, "/images/{id}/actions/change_protection", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUserFollowsNetworksNetworkIdRequest {
-    
-    public GetUserFollowsNetworksNetworkIdPathParams pathParams;
-    public GetUserFollowsNetworksNetworkIdRequest withPathParams(GetUserFollowsNetworksNetworkIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=network_id")
+    public Long networkId;
+    public GetUserFollowsNetworksNetworkIdRequest withNetworkId(Long networkId) {
+        this.networkId = networkId;
         return this;
     }
     

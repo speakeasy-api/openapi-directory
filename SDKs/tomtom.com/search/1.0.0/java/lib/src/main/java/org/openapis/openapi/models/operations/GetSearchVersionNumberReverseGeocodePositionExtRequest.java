@@ -4,20 +4,116 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSearchVersionNumberReverseGeocodePositionExtRequest {
-    
-    public GetSearchVersionNumberReverseGeocodePositionExtPathParams pathParams;
-    public GetSearchVersionNumberReverseGeocodePositionExtRequest withPathParams(GetSearchVersionNumberReverseGeocodePositionExtPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Specifies the jsonp callback method.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public GetSearchVersionNumberReverseGeocodePositionExtRequest withCallback(String callback) {
+        this.callback = callback;
         return this;
     }
     
+    /**
+     * Expected response format.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ext")
+    public org.openapis.openapi.models.shared.ExtEnum ext;
+    public GetSearchVersionNumberReverseGeocodePositionExtRequest withExt(org.openapis.openapi.models.shared.ExtEnum ext) {
+        this.ext = ext;
+        return this;
+    }
     
-    public GetSearchVersionNumberReverseGeocodePositionExtQueryParams queryParams;
-    public GetSearchVersionNumberReverseGeocodePositionExtRequest withQueryParams(GetSearchVersionNumberReverseGeocodePositionExtQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The directional heading in degrees, usually similar to the course along a road segment. Entered in degrees, measured clockwise from north (so north is 0, east is 90, etc.)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=heading")
+    public Float heading;
+    public GetSearchVersionNumberReverseGeocodePositionExtRequest withHeading(Float heading) {
+        this.heading = heading;
+        return this;
+    }
+    
+    /**
+     * If a number is sent in along with the request, the response may include the side of the street (Left/Right) and an offset position for that number.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
+    public String number;
+    public GetSearchVersionNumberReverseGeocodePositionExtRequest withNumber(String number) {
+        this.number = number;
+        return this;
+    }
+    
+    /**
+     * This is specified as a comma separated string composed of lat., lon.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=position")
+    public String position;
+    public GetSearchVersionNumberReverseGeocodePositionExtRequest withPosition(String position) {
+        this.position = position;
+        return this;
+    }
+    
+    /**
+     * The maximum distance in meters from the specified position for the reverse geocoder to consider.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=radius")
+    public Long radius;
+    public GetSearchVersionNumberReverseGeocodePositionExtRequest withRadius(Long radius) {
+        this.radius = radius;
+        return this;
+    }
+    
+    /**
+     * Enables return of the road use array for reverse geocodes at street level.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=returnRoadUse")
+    public Boolean returnRoadUse;
+    public GetSearchVersionNumberReverseGeocodePositionExtRequest withReturnRoadUse(Boolean returnRoadUse) {
+        this.returnRoadUse = returnRoadUse;
+        return this;
+    }
+    
+    /**
+     * To enable return of the posted speed limit (where available).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=returnSpeedLimit")
+    public Boolean returnSpeedLimit;
+    public GetSearchVersionNumberReverseGeocodePositionExtRequest withReturnSpeedLimit(Boolean returnSpeedLimit) {
+        this.returnSpeedLimit = returnSpeedLimit;
+        return this;
+    }
+    
+    /**
+     * Restricts reverse geocodes to a certain type of road use. The road use array for reverse geocodes can be one or more of: ["LimitedAccess", "Arterial", "Terminal", "Ramp", "Rotary", "LocalStreet"].
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=roadUse")
+    public String roadUse;
+    public GetSearchVersionNumberReverseGeocodePositionExtRequest withRoadUse(String roadUse) {
+        this.roadUse = roadUse;
+        return this;
+    }
+    
+    /**
+     * If the "spatialKeys" flag is set, the response will also contain a proprietary geospatial keys for a specified location.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=spatialKeys")
+    public Boolean spatialKeys;
+    public GetSearchVersionNumberReverseGeocodePositionExtRequest withSpatialKeys(Boolean spatialKeys) {
+        this.spatialKeys = spatialKeys;
+        return this;
+    }
+    
+    /**
+     * Service version number. The current value is 2.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
+    public org.openapis.openapi.models.shared.VersionNumberEnum versionNumber;
+    public GetSearchVersionNumberReverseGeocodePositionExtRequest withVersionNumber(org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
+        this.versionNumber = versionNumber;
         return this;
     }
     

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimDeviceTypesUpdateRequest {
-    
-    public DcimDeviceTypesUpdatePathParams pathParams;
-    public DcimDeviceTypesUpdateRequest withPathParams(DcimDeviceTypesUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.WritableDeviceTypeInput writableDeviceTypeInput;
+    public DcimDeviceTypesUpdateRequest withWritableDeviceTypeInput(org.openapis.openapi.models.shared.WritableDeviceTypeInput writableDeviceTypeInput) {
+        this.writableDeviceTypeInput = writableDeviceTypeInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WritableDeviceTypeInput request;
-    public DcimDeviceTypesUpdateRequest withRequest(org.openapis.openapi.models.shared.WritableDeviceTypeInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this device type.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimDeviceTypesUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

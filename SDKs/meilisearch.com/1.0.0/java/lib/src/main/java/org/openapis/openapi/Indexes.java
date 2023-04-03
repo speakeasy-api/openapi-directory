@@ -35,7 +35,7 @@ public class Indexes {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateIndexWithPrimaryKeyResponse createIndexWithPrimaryKey(org.openapis.openapi.models.operations.CreateIndexWithPrimaryKeyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateIndexWithPrimaryKeyResponse createIndexWithPrimaryKey(org.openapis.openapi.models.operations.CreateIndexWithPrimaryKeyRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/indexes");
         
@@ -110,7 +110,7 @@ public class Indexes {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetIndexesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetIndexesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -173,7 +173,7 @@ public class Indexes {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SwapIndexesResponse swapIndexes(org.openapis.openapi.models.operations.SwapIndexesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SwapIndexesResponse swapIndexes(org.openapis.openapi.models.operations.SwapIndexesRequestBody[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/indexes/swap-indexes");
         
@@ -208,7 +208,7 @@ public class Indexes {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UdpateIndexResponse udpateIndex(org.openapis.openapi.models.operations.UdpateIndexRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UdpateIndexResponse udpateIndex(org.openapis.openapi.models.operations.UdpateIndexRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/indexes/books");
         

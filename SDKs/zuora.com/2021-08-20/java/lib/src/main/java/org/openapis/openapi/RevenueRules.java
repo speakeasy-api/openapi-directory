@@ -49,7 +49,7 @@ public class RevenueRules {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -95,13 +95,13 @@ public class RevenueRules {
      */
     public org.openapis.openapi.models.operations.GETRevenueRecRulebyProductRatePlanChargeResponse getRevenueRecRulebyProductRatePlanCharge(org.openapis.openapi.models.operations.GETRevenueRecRulebyProductRatePlanChargeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRevenueRecRulebyProductRatePlanChargePathParams.class, baseUrl, "/v1/revenue-recognition-rules/product-charges/{charge-key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRevenueRecRulebyProductRatePlanChargeRequest.class, baseUrl, "/v1/revenue-recognition-rules/product-charges/{charge-key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -145,13 +145,13 @@ public class RevenueRules {
      */
     public org.openapis.openapi.models.operations.GETRevenueRecRulesResponse getRevenueRecRules(org.openapis.openapi.models.operations.GETRevenueRecRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRevenueRecRulesPathParams.class, baseUrl, "/v1/revenue-recognition-rules/subscription-charges/{charge-key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRevenueRecRulesRequest.class, baseUrl, "/v1/revenue-recognition-rules/subscription-charges/{charge-key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetJobFiles1Request {
+    /**
+     * file's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileId")
+    public Long fileId;
+    public GetJobFiles1Request withFileId(Long fileId) {
+        this.fileId = fileId;
+        return this;
+    }
     
-    public GetJobFiles1PathParams pathParams;
-    public GetJobFiles1Request withPathParams(GetJobFiles1PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * job's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
+    public String jobId;
+    public GetJobFiles1Request withJobId(String jobId) {
+        this.jobId = jobId;
         return this;
     }
     

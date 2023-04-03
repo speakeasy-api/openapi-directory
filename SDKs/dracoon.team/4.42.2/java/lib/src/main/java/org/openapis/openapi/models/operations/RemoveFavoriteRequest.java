@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveFavoriteRequest {
-    
-    public RemoveFavoritePathParams pathParams;
-    public RemoveFavoriteRequest withPathParams(RemoveFavoritePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RemoveFavoriteRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public RemoveFavoriteHeaders headers;
-    public RemoveFavoriteRequest withHeaders(RemoveFavoriteHeaders headers) {
-        this.headers = headers;
+    /**
+     * Node ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=node_id")
+    public Long nodeId;
+    public RemoveFavoriteRequest withNodeId(Long nodeId) {
+        this.nodeId = nodeId;
         return this;
     }
     

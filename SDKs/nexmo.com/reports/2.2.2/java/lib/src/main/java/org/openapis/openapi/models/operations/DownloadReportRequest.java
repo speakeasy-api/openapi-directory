@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DownloadReportRequest {
-    
-    public DownloadReportPathParams pathParams;
-    public DownloadReportRequest withPathParams(DownloadReportPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DownloadReportSecurity security;
-    public DownloadReportRequest withSecurity(DownloadReportSecurity security) {
-        this.security = security;
+    /**
+     * UUID of the file.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=file_id")
+    public String fileId;
+    public DownloadReportRequest withFileId(String fileId) {
+        this.fileId = fileId;
         return this;
     }
     

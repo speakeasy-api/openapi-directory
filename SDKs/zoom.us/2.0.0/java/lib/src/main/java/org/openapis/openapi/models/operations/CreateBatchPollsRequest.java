@@ -7,20 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateBatchPollsRequest {
-    
-    public CreateBatchPollsPathParams pathParams;
-    public CreateBatchPollsRequest withPathParams(CreateBatchPollsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Batch Meeting poll object
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateBatchPollsApplicationJSON request;
-    public CreateBatchPollsRequest withRequest(CreateBatchPollsApplicationJSON request) {
-        this.request = request;
+    public CreateBatchPollsApplicationJSON requestBody;
+    public CreateBatchPollsRequest withRequestBody(CreateBatchPollsApplicationJSON requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=meetingId")
+    public String meetingId;
+    public CreateBatchPollsRequest withMeetingId(String meetingId) {
+        this.meetingId = meetingId;
         return this;
     }
     

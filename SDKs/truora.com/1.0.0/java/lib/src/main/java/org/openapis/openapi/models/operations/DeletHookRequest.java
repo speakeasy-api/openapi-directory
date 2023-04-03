@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletHookRequest {
-    
-    public DeletHookPathParams pathParams;
-    public DeletHookRequest withPathParams(DeletHookPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeletHookSecurity security;
-    public DeletHookRequest withSecurity(DeletHookSecurity security) {
-        this.security = security;
+    /**
+     * Hook ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hook_id")
+    public String hookId;
+    public DeletHookRequest withHookId(String hookId) {
+        this.hookId = hookId;
         return this;
     }
     

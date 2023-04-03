@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCredentialListRequest {
-    
-    public DeleteCredentialListPathParams pathParams;
-    public DeleteCredentialListRequest withPathParams(DeleteCredentialListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique string that we created to identify the CredentialList resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteCredentialListRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public DeleteCredentialListSecurity security;
-    public DeleteCredentialListRequest withSecurity(DeleteCredentialListSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteCredentialListRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Trunk from which to delete the credential list.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TrunkSid")
+    public String trunkSid;
+    public DeleteCredentialListRequest withTrunkSid(String trunkSid) {
+        this.trunkSid = trunkSid;
         return this;
     }
     

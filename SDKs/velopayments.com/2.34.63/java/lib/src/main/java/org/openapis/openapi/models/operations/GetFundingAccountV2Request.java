@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFundingAccountV2Request {
-    
-    public GetFundingAccountV2PathParams pathParams;
-    public GetFundingAccountV2Request withPathParams(GetFundingAccountV2PathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fundingAccountId")
+    public String fundingAccountId;
+    public GetFundingAccountV2Request withFundingAccountId(String fundingAccountId) {
+        this.fundingAccountId = fundingAccountId;
         return this;
     }
     
-    
-    public GetFundingAccountV2QueryParams queryParams;
-    public GetFundingAccountV2Request withQueryParams(GetFundingAccountV2QueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sensitive")
+    public Boolean sensitive;
+    public GetFundingAccountV2Request withSensitive(Boolean sensitive) {
+        this.sensitive = sensitive;
         return this;
     }
     

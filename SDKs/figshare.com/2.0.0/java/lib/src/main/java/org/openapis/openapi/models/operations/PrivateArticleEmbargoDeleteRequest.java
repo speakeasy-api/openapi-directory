@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateArticleEmbargoDeleteRequest {
-    
-    public PrivateArticleEmbargoDeletePathParams pathParams;
-    public PrivateArticleEmbargoDeleteRequest withPathParams(PrivateArticleEmbargoDeletePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PrivateArticleEmbargoDeleteSecurity security;
-    public PrivateArticleEmbargoDeleteRequest withSecurity(PrivateArticleEmbargoDeleteSecurity security) {
-        this.security = security;
+    /**
+     * Article unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=article_id")
+    public Long articleId;
+    public PrivateArticleEmbargoDeleteRequest withArticleId(Long articleId) {
+        this.articleId = articleId;
         return this;
     }
     

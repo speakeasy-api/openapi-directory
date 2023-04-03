@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupsDeleteRequest {
-    
-    public GroupsDeletePathParams pathParams;
-    public GroupsDeleteRequest withPathParams(GroupsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Client API version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public GroupsDeleteRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
+    /**
+     * The object ID of the group to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=objectId")
+    public String objectId;
+    public GroupsDeleteRequest withObjectId(String objectId) {
+        this.objectId = objectId;
+        return this;
+    }
     
-    public GroupsDeleteQueryParams queryParams;
-    public GroupsDeleteRequest withQueryParams(GroupsDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The tenant ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tenantID")
+    public String tenantID;
+    public GroupsDeleteRequest withTenantID(String tenantID) {
+        this.tenantID = tenantID;
         return this;
     }
     

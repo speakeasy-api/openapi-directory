@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLookupSha256Request {
-    
-    public GetLookupSha256PathParams pathParams;
-    public GetLookupSha256Request withPathParams(GetLookupSha256PathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sha256")
+    public String sha256;
+    public GetLookupSha256Request withSha256(String sha256) {
+        this.sha256 = sha256;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CollectionsLinkedPreprintsListRequest {
-    
-    public CollectionsLinkedPreprintsListPathParams pathParams;
-    public CollectionsLinkedPreprintsListRequest withPathParams(CollectionsLinkedPreprintsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A short id for that collection
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection_id")
+    public String collectionId;
+    public CollectionsLinkedPreprintsListRequest withCollectionId(String collectionId) {
+        this.collectionId = collectionId;
         return this;
     }
     

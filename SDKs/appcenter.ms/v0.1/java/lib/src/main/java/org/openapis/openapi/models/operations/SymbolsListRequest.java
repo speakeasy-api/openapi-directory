@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SymbolsListRequest {
-    
-    public SymbolsListPathParams pathParams;
-    public SymbolsListRequest withPathParams(SymbolsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public SymbolsListRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public SymbolsListSecurity security;
-    public SymbolsListRequest withSecurity(SymbolsListSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public SymbolsListRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

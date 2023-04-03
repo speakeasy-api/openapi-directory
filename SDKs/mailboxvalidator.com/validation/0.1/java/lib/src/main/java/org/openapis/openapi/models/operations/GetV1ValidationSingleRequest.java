@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV1ValidationSingleRequest {
+    /**
+     * The email address to be validated.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public GetV1ValidationSingleRequest withEmail(String email) {
+        this.email = email;
+        return this;
+    }
     
-    public GetV1ValidationSingleQueryParams queryParams;
-    public GetV1ValidationSingleRequest withQueryParams(GetV1ValidationSingleQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Return the result in json (default) or xml format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public GetV1ValidationSingleFormatEnum format;
+    public GetV1ValidationSingleRequest withFormat(GetV1ValidationSingleFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * API key.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public GetV1ValidationSingleRequest withKey(String key) {
+        this.key = key;
         return this;
     }
     

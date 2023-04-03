@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPictureRequest {
+    /**
+     * The ID of the picture.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=portraitset_id")
+    public Double portraitsetId;
+    public GetPictureRequest withPortraitsetId(Double portraitsetId) {
+        this.portraitsetId = portraitsetId;
+        return this;
+    }
     
-    public GetPicturePathParams pathParams;
-    public GetPictureRequest withPathParams(GetPicturePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public GetPictureRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

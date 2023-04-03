@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutBenefitsDocumentUploadRequest {
-    
-    public PutBenefitsDocumentUploadHeaders headers;
-    public PutBenefitsDocumentUploadRequest withHeaders(PutBenefitsDocumentUploadHeaders headers) {
-        this.headers = headers;
+    /**
+     * Base64-encoded 128-bit MD5 digest of the message. Use for integrity control
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-MD5")
+    public String contentMd5;
+    public PutBenefitsDocumentUploadRequest withContentMd5(String contentMd5) {
+        this.contentMd5 = contentMd5;
         return this;
     }
     

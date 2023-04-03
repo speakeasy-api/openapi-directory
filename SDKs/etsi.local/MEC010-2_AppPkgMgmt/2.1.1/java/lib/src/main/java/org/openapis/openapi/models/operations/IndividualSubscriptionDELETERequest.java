@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IndividualSubscriptionDELETERequest {
-    
-    public IndividualSubscriptionDELETEPathParams pathParams;
-    public IndividualSubscriptionDELETERequest withPathParams(IndividualSubscriptionDELETEPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Identifier of an individual subscription to notifications about application package changes
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subscriptionId")
+    public String subscriptionId;
+    public IndividualSubscriptionDELETERequest withSubscriptionId(String subscriptionId) {
+        this.subscriptionId = subscriptionId;
         return this;
     }
     

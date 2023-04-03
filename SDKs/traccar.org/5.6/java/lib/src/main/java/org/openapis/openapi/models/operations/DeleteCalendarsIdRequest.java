@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCalendarsIdRequest {
-    
-    public DeleteCalendarsIdPathParams pathParams;
-    public DeleteCalendarsIdRequest withPathParams(DeleteCalendarsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DeleteCalendarsIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

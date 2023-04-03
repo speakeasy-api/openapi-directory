@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActivitySetThreadSubscriptionRequest {
-    
-    public ActivitySetThreadSubscriptionPathParams pathParams;
-    public ActivitySetThreadSubscriptionRequest withPathParams(ActivitySetThreadSubscriptionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ActivitySetThreadSubscriptionRequestBody requestBody;
+    public ActivitySetThreadSubscriptionRequest withRequestBody(ActivitySetThreadSubscriptionRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ActivitySetThreadSubscriptionRequestBody request;
-    public ActivitySetThreadSubscriptionRequest withRequest(ActivitySetThreadSubscriptionRequestBody request) {
-        this.request = request;
+    /**
+     * The unique identifier of the notification thread. This corresponds to the value returned in the `id` field when you retrieve notifications (for example with the [`GET /notifications` operation](https://docs.github.com/enterprise-cloud@latest//rest/reference/activity#list-notifications-for-the-authenticated-user)).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=thread_id")
+    public Long threadId;
+    public ActivitySetThreadSubscriptionRequest withThreadId(Long threadId) {
+        this.threadId = threadId;
         return this;
     }
     

@@ -41,13 +41,13 @@ public class TrustedAccessConfigs {
      */
     public org.openapis.openapi.models.operations.GetNetworkSmTrustedAccessConfigsResponse getNetworkSmTrustedAccessConfigs(org.openapis.openapi.models.operations.GetNetworkSmTrustedAccessConfigsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSmTrustedAccessConfigsPathParams.class, baseUrl, "/networks/{networkId}/sm/trustedAccessConfigs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSmTrustedAccessConfigsRequest.class, baseUrl, "/networks/{networkId}/sm/trustedAccessConfigs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkSmTrustedAccessConfigsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkSmTrustedAccessConfigsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

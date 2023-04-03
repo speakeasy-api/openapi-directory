@@ -33,10 +33,11 @@ public class PromotionSummaryReport {
     /**
      * This method generates a report that summarizes the seller's promotions for the specified eBay marketplace. The report returns information on &lt;code&gt;RUNNING&lt;/code&gt;, &lt;code&gt;PAUSED&lt;/code&gt;, and &lt;code&gt;ENDED&lt;/code&gt; promotions (deleted reports are not returned) and summarizes the seller's campaign performance for all promotions on a given site.  &lt;br&gt;&lt;br&gt;For information about summary reports, see &lt;a href="/api-docs/sell/static/marketing/pm-summary-report.html"&gt;Reading the item promotion Summary report&lt;/a&gt;.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPromotionSummaryReportResponse getPromotionSummaryReport(org.openapis.openapi.models.operations.GetPromotionSummaryReportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPromotionSummaryReportResponse getPromotionSummaryReport(org.openapis.openapi.models.operations.GetPromotionSummaryReportRequest request, org.openapis.openapi.models.operations.GetPromotionSummaryReportSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/promotion_summary_report");
         
@@ -44,14 +45,14 @@ public class PromotionSummaryReport {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPromotionSummaryReportQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPromotionSummaryReportRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

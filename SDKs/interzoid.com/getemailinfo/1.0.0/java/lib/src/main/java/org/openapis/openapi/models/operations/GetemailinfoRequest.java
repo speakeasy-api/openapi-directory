@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetemailinfoRequest {
+    /**
+     * Email address to retrieve validation information
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public GetemailinfoRequest withEmail(String email) {
+        this.email = email;
+        return this;
+    }
     
-    public GetemailinfoQueryParams queryParams;
-    public GetemailinfoRequest withQueryParams(GetemailinfoQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Your Interzoid license API key. Register at www.interzoid.com/register
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
+    public String license;
+    public GetemailinfoRequest withLicense(String license) {
+        this.license = license;
         return this;
     }
     

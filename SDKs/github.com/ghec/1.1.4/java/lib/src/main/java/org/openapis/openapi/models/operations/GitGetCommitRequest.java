@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GitGetCommitRequest {
+    /**
+     * The SHA of the commit.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commit_sha")
+    public String commitSha;
+    public GitGetCommitRequest withCommitSha(String commitSha) {
+        this.commitSha = commitSha;
+        return this;
+    }
     
-    public GitGetCommitPathParams pathParams;
-    public GitGetCommitRequest withPathParams(GitGetCommitPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public GitGetCommitRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public GitGetCommitRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

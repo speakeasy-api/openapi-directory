@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LineRouteByModeRequest {
-    
-    public LineRouteByModePathParams pathParams;
-    public LineRouteByModeRequest withPathParams(LineRouteByModePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A comma-separated list of modes e.g. tube,dlr
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=modes")
+    public String[] modes;
+    public LineRouteByModeRequest withModes(String[] modes) {
+        this.modes = modes;
         return this;
     }
     
-    
-    public LineRouteByModeQueryParams queryParams;
-    public LineRouteByModeRequest withQueryParams(LineRouteByModeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A comma seperated list of service types to filter on. Supported values: Regular, Night. Defaulted to 'Regular' if not specified
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceTypes")
+    public LineRouteByModeServiceTypesEnum[] serviceTypes;
+    public LineRouteByModeRequest withServiceTypes(LineRouteByModeServiceTypesEnum[] serviceTypes) {
+        this.serviceTypes = serviceTypes;
         return this;
     }
     

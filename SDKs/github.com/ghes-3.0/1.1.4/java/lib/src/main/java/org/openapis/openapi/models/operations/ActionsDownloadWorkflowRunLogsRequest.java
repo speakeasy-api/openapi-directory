@@ -4,13 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsDownloadWorkflowRunLogsRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ActionsDownloadWorkflowRunLogsRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public ActionsDownloadWorkflowRunLogsPathParams pathParams;
-    public ActionsDownloadWorkflowRunLogsRequest withPathParams(ActionsDownloadWorkflowRunLogsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ActionsDownloadWorkflowRunLogsRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * The id of the workflow run.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=run_id")
+    public Long runId;
+    public ActionsDownloadWorkflowRunLogsRequest withRunId(Long runId) {
+        this.runId = runId;
         return this;
     }
     

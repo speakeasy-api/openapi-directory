@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateClientDeadlineRequest {
-    
-    public UpdateClientDeadlinePathParams pathParams;
-    public UpdateClientDeadlineRequest withPathParams(UpdateClientDeadlinePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated Client Deadline for a project.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TimeDTO request;
-    public UpdateClientDeadlineRequest withRequest(org.openapis.openapi.models.shared.TimeDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TimeDTO timeDTO;
+    public UpdateClientDeadlineRequest withTimeDTO(org.openapis.openapi.models.shared.TimeDTO timeDTO) {
+        this.timeDTO = timeDTO;
+        return this;
+    }
+    
+    /**
+     * project's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public UpdateClientDeadlineRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetResourcesLanguagesIdJsonRequest {
-    
-    public GetResourcesLanguagesIdJsonPathParams pathParams;
-    public GetResourcesLanguagesIdJsonRequest withPathParams(GetResourcesLanguagesIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the language to look up
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetResourcesLanguagesIdJsonRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

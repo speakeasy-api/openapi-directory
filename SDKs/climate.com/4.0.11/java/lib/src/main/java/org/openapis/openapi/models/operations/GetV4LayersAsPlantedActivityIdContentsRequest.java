@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV4LayersAsPlantedActivityIdContentsRequest {
-    
-    public GetV4LayersAsPlantedActivityIdContentsPathParams pathParams;
-    public GetV4LayersAsPlantedActivityIdContentsRequest withPathParams(GetV4LayersAsPlantedActivityIdContentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Must be either \* /* or application/octet-stream,application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetV4LayersAsPlantedActivityIdContentsRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public GetV4LayersAsPlantedActivityIdContentsHeaders headers;
-    public GetV4LayersAsPlantedActivityIdContentsRequest withHeaders(GetV4LayersAsPlantedActivityIdContentsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Byte range `bytes=start-end` (https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.35.1). e.g. bytes=0-1048576. Currently only single range value is supported. Both start and end need to be specified, end value should be greater than start and end - start should not be greater than 5MiB.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Range")
+    public String range;
+    public GetV4LayersAsPlantedActivityIdContentsRequest withRange(String range) {
+        this.range = range;
         return this;
     }
     
-    
-    public GetV4LayersAsPlantedActivityIdContentsSecurity security;
-    public GetV4LayersAsPlantedActivityIdContentsRequest withSecurity(GetV4LayersAsPlantedActivityIdContentsSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the Planting Activity.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=activityId")
+    public String activityId;
+    public GetV4LayersAsPlantedActivityIdContentsRequest withActivityId(String activityId) {
+        this.activityId = activityId;
         return this;
     }
     

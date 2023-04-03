@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateChannelRequest {
-    
-    public UpdateChannelPathParams pathParams;
-    public UpdateChannelRequest withPathParams(UpdateChannelPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateChannelApplicationJSON request;
-    public UpdateChannelRequest withRequest(UpdateChannelApplicationJSON request) {
-        this.request = request;
+    public UpdateChannelApplicationJSON requestBody;
+    public UpdateChannelRequest withRequestBody(UpdateChannelApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Channel Id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelId")
+    public String channelId;
+    public UpdateChannelRequest withChannelId(String channelId) {
+        this.channelId = channelId;
+        return this;
+    }
     
-    public UpdateChannelSecurity security;
-    public UpdateChannelRequest withSecurity(UpdateChannelSecurity security) {
-        this.security = security;
+    /**
+     * Unique Identifier of the Zoom user who is the owner of the channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public UpdateChannelRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

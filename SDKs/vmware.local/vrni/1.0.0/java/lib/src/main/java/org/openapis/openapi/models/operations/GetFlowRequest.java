@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFlowRequest {
-    
-    public GetFlowPathParams pathParams;
-    public GetFlowRequest withPathParams(GetFlowPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetFlowRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetFlowQueryParams queryParams;
-    public GetFlowRequest withQueryParams(GetFlowQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetFlowSecurity security;
-    public GetFlowRequest withSecurity(GetFlowSecurity security) {
-        this.security = security;
+    /**
+     * time in epoch seconds
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=time")
+    public Long time;
+    public GetFlowRequest withTime(Long time) {
+        this.time = time;
         return this;
     }
     

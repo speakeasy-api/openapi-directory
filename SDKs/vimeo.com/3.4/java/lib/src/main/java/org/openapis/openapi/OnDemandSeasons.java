@@ -38,7 +38,7 @@ public class OnDemandSeasons {
      */
     public org.openapis.openapi.models.operations.GetVodSeasonResponse getVodSeason(org.openapis.openapi.models.operations.GetVodSeasonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVodSeasonPathParams.class, baseUrl, "/ondemand/pages/{ondemand_id}/seasons/{season_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVodSeasonRequest.class, baseUrl, "/ondemand/pages/{ondemand_id}/seasons/{season_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -85,13 +85,13 @@ public class OnDemandSeasons {
      */
     public org.openapis.openapi.models.operations.GetVodSeasonVideosResponse getVodSeasonVideos(org.openapis.openapi.models.operations.GetVodSeasonVideosRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVodSeasonVideosPathParams.class, baseUrl, "/ondemand/pages/{ondemand_id}/seasons/{season_id}/videos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVodSeasonVideosRequest.class, baseUrl, "/ondemand/pages/{ondemand_id}/seasons/{season_id}/videos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVodSeasonVideosQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVodSeasonVideosRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -130,13 +130,13 @@ public class OnDemandSeasons {
      */
     public org.openapis.openapi.models.operations.GetVodSeasonsResponse getVodSeasons(org.openapis.openapi.models.operations.GetVodSeasonsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVodSeasonsPathParams.class, baseUrl, "/ondemand/pages/{ondemand_id}/seasons", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVodSeasonsRequest.class, baseUrl, "/ondemand/pages/{ondemand_id}/seasons", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVodSeasonsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVodSeasonsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

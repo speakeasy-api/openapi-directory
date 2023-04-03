@@ -20,7 +20,6 @@ import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GETCancelJobActionEnum;
 import org.openapis.openapi.models.operations.GETCancelJobOperationEnum;
 import org.openapis.openapi.models.operations.GETCancelJobVersionEnum;
-import org.openapis.openapi.models.operations.GETCancelJobQueryParams;
 import org.openapis.openapi.models.operations.GETCancelJobRequest;
 import org.openapis.openapi.models.operations.GETCancelJobResponse;
 
@@ -29,26 +28,22 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GETCancelJobRequest req = new GETCancelJobRequest() {{
-                queryParams = new GETCancelJobQueryParams() {{
-                    apiVersion = "corrupti";
-                    awsAccessKeyId = "provident";
-                    action = "CancelJob";
-                    jobId = "distinctio";
-                    operation = "CancelJob";
-                    signature = "quibusdam";
-                    signatureMethod = "unde";
-                    signatureVersion = "nulla";
-                    timestamp = "corrupti";
-                    version = "2010-06-01";
-                }};
-            }};            
+                apiVersion = "corrupti";
+                awsAccessKeyId = "provident";
+                action = "CancelJob";
+                jobId = "distinctio";
+                operation = "CancelJob";
+                signature = "quibusdam";
+                signatureMethod = "unde";
+                signatureVersion = "nulla";
+                timestamp = "corrupti";
+                version = "2010-06-01";
+            }}            
 
             GETCancelJobResponse res = sdk.getCancelJob(req);
 
@@ -62,7 +57,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

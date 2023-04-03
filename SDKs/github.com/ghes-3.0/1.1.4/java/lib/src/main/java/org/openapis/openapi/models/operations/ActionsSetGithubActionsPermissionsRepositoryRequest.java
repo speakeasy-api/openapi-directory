@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsSetGithubActionsPermissionsRepositoryRequest {
-    
-    public ActionsSetGithubActionsPermissionsRepositoryPathParams pathParams;
-    public ActionsSetGithubActionsPermissionsRepositoryRequest withPathParams(ActionsSetGithubActionsPermissionsRepositoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ActionsSetGithubActionsPermissionsRepositoryRequestBody requestBody;
+    public ActionsSetGithubActionsPermissionsRepositoryRequest withRequestBody(ActionsSetGithubActionsPermissionsRepositoryRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ActionsSetGithubActionsPermissionsRepositoryRequestBody request;
-    public ActionsSetGithubActionsPermissionsRepositoryRequest withRequest(ActionsSetGithubActionsPermissionsRepositoryRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ActionsSetGithubActionsPermissionsRepositoryRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ActionsSetGithubActionsPermissionsRepositoryRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

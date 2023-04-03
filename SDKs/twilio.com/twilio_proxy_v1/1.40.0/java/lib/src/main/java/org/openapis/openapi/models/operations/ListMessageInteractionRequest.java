@@ -4,34 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListMessageInteractionRequest {
-    
-    public ListMessageInteractionPathParams pathParams;
-    public ListMessageInteractionRequest withPathParams(ListMessageInteractionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListMessageInteractionRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListMessageInteractionQueryParams queryParams;
-    public ListMessageInteractionRequest withQueryParams(ListMessageInteractionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListMessageInteractionRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
-    
-    public ListMessageInteractionSecurity security;
-    public ListMessageInteractionRequest withSecurity(ListMessageInteractionSecurity security) {
-        this.security = security;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListMessageInteractionRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     
+    /**
+     * The SID of the [Participant](https://www.twilio.com/docs/proxy/api/participant) to read the resources from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ParticipantSid")
+    public String participantSid;
+    public ListMessageInteractionRequest withParticipantSid(String participantSid) {
+        this.participantSid = participantSid;
+        return this;
+    }
     
-    public String serverURL;
-    public ListMessageInteractionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) to read the resources from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public ListMessageInteractionRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
+        return this;
+    }
+    
+    /**
+     * The SID of the parent [Session](https://www.twilio.com/docs/proxy/api/session) to read the resources from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=SessionSid")
+    public String sessionSid;
+    public ListMessageInteractionRequest withSessionSid(String sessionSid) {
+        this.sessionSid = sessionSid;
         return this;
     }
     

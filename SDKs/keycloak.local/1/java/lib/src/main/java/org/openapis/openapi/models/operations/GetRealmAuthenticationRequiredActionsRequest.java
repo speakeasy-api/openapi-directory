@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRealmAuthenticationRequiredActionsRequest {
-    
-    public GetRealmAuthenticationRequiredActionsPathParams pathParams;
-    public GetRealmAuthenticationRequiredActionsRequest withPathParams(GetRealmAuthenticationRequiredActionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public GetRealmAuthenticationRequiredActionsRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

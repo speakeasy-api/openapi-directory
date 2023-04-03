@@ -40,7 +40,7 @@ public class Pam {
      */
     public org.openapis.openapi.models.operations.GetClientProfileForPamResponse getClientProfileForPam(org.openapis.openapi.models.operations.GetClientProfileForPamRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetClientProfileForPamPathParams.class, baseUrl, "/pam/profiles/client/{clientId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetClientProfileForPamRequest.class, baseUrl, "/pam/profiles/client/{clientId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -88,7 +88,7 @@ public class Pam {
      */
     public org.openapis.openapi.models.operations.GetProjectCompletionReportForPamResponse getProjectCompletionReportForPam(org.openapis.openapi.models.operations.GetProjectCompletionReportForPamRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectCompletionReportForPamPathParams.class, baseUrl, "/pam/projects/{projectId}/completion-report", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectCompletionReportForPamRequest.class, baseUrl, "/pam/projects/{projectId}/completion-report", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -134,7 +134,7 @@ public class Pam {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostMessageResponse postMessage(org.openapis.openapi.models.operations.PostMessageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostMessageResponse postMessage(org.openapis.openapi.models.shared.PamMessage request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/pam/chat");
         

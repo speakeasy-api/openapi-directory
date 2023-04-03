@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNumbersPiRequest {
-    
-    public GetNumbersPiQueryParams queryParams;
-    public GetNumbersPiRequest withQueryParams(GetNumbersPiQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Optional start position
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
+    public Long from;
+    public GetNumbersPiRequest withFrom(Long from) {
+        this.from = from;
         return this;
     }
     
-    
-    public GetNumbersPiSecurity security;
-    public GetNumbersPiRequest withSecurity(GetNumbersPiSecurity security) {
-        this.security = security;
+    /**
+     * Optional start position
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
+    public Long to;
+    public GetNumbersPiRequest withTo(Long to) {
+        this.to = to;
         return this;
     }
     

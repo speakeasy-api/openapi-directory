@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEpisodeRecommendationsRequest {
-    
-    public GetEpisodeRecommendationsPathParams pathParams;
-    public GetEpisodeRecommendationsRequest withPathParams(GetEpisodeRecommendationsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Get API Key on listennotes.com/api
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-ListenAPI-Key")
+    public String xListenAPIKey;
+    public GetEpisodeRecommendationsRequest withXListenAPIKey(String xListenAPIKey) {
+        this.xListenAPIKey = xListenAPIKey;
         return this;
     }
     
-    
-    public GetEpisodeRecommendationsQueryParams queryParams;
-    public GetEpisodeRecommendationsRequest withQueryParams(GetEpisodeRecommendationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Episode id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetEpisodeRecommendationsRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetEpisodeRecommendationsHeaders headers;
-    public GetEpisodeRecommendationsRequest withHeaders(GetEpisodeRecommendationsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Whether or not to exclude podcasts with explicit language. 1 is yes, and 0 is no.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=safe_mode")
+    public org.openapis.openapi.models.shared.SafeModeParamEnum safeMode;
+    public GetEpisodeRecommendationsRequest withSafeMode(org.openapis.openapi.models.shared.SafeModeParamEnum safeMode) {
+        this.safeMode = safeMode;
         return this;
     }
     

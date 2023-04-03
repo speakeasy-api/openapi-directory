@@ -7,17 +7,37 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRealmClientsIdScopeMappingsClientsClientRequest {
-    
-    public PostRealmClientsIdScopeMappingsClientsClientPathParams pathParams;
-    public PostRealmClientsIdScopeMappingsClientsClientRequest withPathParams(PostRealmClientsIdScopeMappingsClientsClientPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.RoleRepresentation[] requestBody;
+    public PostRealmClientsIdScopeMappingsClientsClientRequest withRequestBody(org.openapis.openapi.models.shared.RoleRepresentation[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RoleRepresentation[] request;
-    public PostRealmClientsIdScopeMappingsClientsClientRequest withRequest(org.openapis.openapi.models.shared.RoleRepresentation[] request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=client")
+    public String client;
+    public PostRealmClientsIdScopeMappingsClientsClientRequest withClient(String client) {
+        this.client = client;
+        return this;
+    }
+    
+    /**
+     * id of client (not client-id)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostRealmClientsIdScopeMappingsClientsClientRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PostRealmClientsIdScopeMappingsClientsClientRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

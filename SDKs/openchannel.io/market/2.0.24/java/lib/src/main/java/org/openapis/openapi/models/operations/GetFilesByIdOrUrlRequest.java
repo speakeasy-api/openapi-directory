@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFilesByIdOrUrlRequest {
-    
-    public GetFilesByIdOrUrlQueryParams queryParams;
-    public GetFilesByIdOrUrlRequest withQueryParams(GetFilesByIdOrUrlQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The fileId or fileUrl of the file to be returned
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fileIdOrUrl")
+    public String fileIdOrUrl;
+    public GetFilesByIdOrUrlRequest withFileIdOrUrl(String fileIdOrUrl) {
+        this.fileIdOrUrl = fileIdOrUrl;
         return this;
     }
     

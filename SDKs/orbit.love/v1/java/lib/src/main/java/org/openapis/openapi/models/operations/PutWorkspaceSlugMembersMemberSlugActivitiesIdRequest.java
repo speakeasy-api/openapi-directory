@@ -7,24 +7,31 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutWorkspaceSlugMembersMemberSlugActivitiesIdRequest {
-    
-    public PutWorkspaceSlugMembersMemberSlugActivitiesIdPathParams pathParams;
-    public PutWorkspaceSlugMembersMemberSlugActivitiesIdRequest withPathParams(PutWorkspaceSlugMembersMemberSlugActivitiesIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Activity request;
-    public PutWorkspaceSlugMembersMemberSlugActivitiesIdRequest withRequest(org.openapis.openapi.models.shared.Activity request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Activity activity;
+    public PutWorkspaceSlugMembersMemberSlugActivitiesIdRequest withActivity(org.openapis.openapi.models.shared.Activity activity) {
+        this.activity = activity;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutWorkspaceSlugMembersMemberSlugActivitiesIdRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PutWorkspaceSlugMembersMemberSlugActivitiesIdSecurity security;
-    public PutWorkspaceSlugMembersMemberSlugActivitiesIdRequest withSecurity(PutWorkspaceSlugMembersMemberSlugActivitiesIdSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=member_slug")
+    public String memberSlug;
+    public PutWorkspaceSlugMembersMemberSlugActivitiesIdRequest withMemberSlug(String memberSlug) {
+        this.memberSlug = memberSlug;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_slug")
+    public String workspaceSlug;
+    public PutWorkspaceSlugMembersMemberSlugActivitiesIdRequest withWorkspaceSlug(String workspaceSlug) {
+        this.workspaceSlug = workspaceSlug;
         return this;
     }
     

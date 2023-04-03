@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContactsGetRequest {
+    /**
+     * Determines the action to execute.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=action")
+    public ContactsGetActionEnum action;
+    public ContactsGetRequest withAction(ContactsGetActionEnum action) {
+        this.action = action;
+        return this;
+    }
     
-    public ContactsGetQueryParams queryParams;
-    public ContactsGetRequest withQueryParams(ContactsGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Defines whether to return the response as JSON or CSV separated by semicolon.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=json")
+    public ContactsGetJSONEnum json;
+    public ContactsGetRequest withJson(ContactsGetJSONEnum json) {
+        this.json = json;
         return this;
     }
     

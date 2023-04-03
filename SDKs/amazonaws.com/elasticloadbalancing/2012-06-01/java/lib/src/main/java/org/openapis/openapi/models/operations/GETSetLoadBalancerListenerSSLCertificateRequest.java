@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETSetLoadBalancerListenerSSLCertificateRequest {
-    
-    public GETSetLoadBalancerListenerSSLCertificateQueryParams queryParams;
-    public GETSetLoadBalancerListenerSSLCertificateRequest withQueryParams(GETSetLoadBalancerListenerSSLCertificateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETSetLoadBalancerListenerSSLCertificateActionEnum action;
+    public GETSetLoadBalancerListenerSSLCertificateRequest withAction(GETSetLoadBalancerListenerSSLCertificateActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the load balancer.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LoadBalancerName")
+    public String loadBalancerName;
+    public GETSetLoadBalancerListenerSSLCertificateRequest withLoadBalancerName(String loadBalancerName) {
+        this.loadBalancerName = loadBalancerName;
+        return this;
+    }
     
-    public GETSetLoadBalancerListenerSSLCertificateHeaders headers;
-    public GETSetLoadBalancerListenerSSLCertificateRequest withHeaders(GETSetLoadBalancerListenerSSLCertificateHeaders headers) {
-        this.headers = headers;
+    /**
+     * The port that uses the specified SSL certificate.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LoadBalancerPort")
+    public Long loadBalancerPort;
+    public GETSetLoadBalancerListenerSSLCertificateRequest withLoadBalancerPort(Long loadBalancerPort) {
+        this.loadBalancerPort = loadBalancerPort;
+        return this;
+    }
+    
+    /**
+     * The Amazon Resource Name (ARN) of the SSL certificate.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SSLCertificateId")
+    public String sslCertificateId;
+    public GETSetLoadBalancerListenerSSLCertificateRequest withSSLCertificateId(String sslCertificateId) {
+        this.sslCertificateId = sslCertificateId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETSetLoadBalancerListenerSSLCertificateVersionEnum version;
+    public GETSetLoadBalancerListenerSSLCertificateRequest withVersion(GETSetLoadBalancerListenerSSLCertificateVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETSetLoadBalancerListenerSSLCertificateRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETSetLoadBalancerListenerSSLCertificateRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETSetLoadBalancerListenerSSLCertificateRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETSetLoadBalancerListenerSSLCertificateRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETSetLoadBalancerListenerSSLCertificateRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETSetLoadBalancerListenerSSLCertificateRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETSetLoadBalancerListenerSSLCertificateRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

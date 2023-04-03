@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostUsersUserIdRequest {
-    
-    public PostUsersUserIdPathParams pathParams;
-    public PostUsersUserIdRequest withPathParams(PostUsersUserIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A custom JSON object that you can create and attach to this record
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customData")
+    public String customData;
+    public PostUsersUserIdRequest withCustomData(String customData) {
+        this.customData = customData;
         return this;
     }
     
+    /**
+     * The user's email
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public PostUsersUserIdRequest withEmail(String email) {
+        this.email = email;
+        return this;
+    }
     
-    public PostUsersUserIdQueryParams queryParams;
-    public PostUsersUserIdRequest withQueryParams(PostUsersUserIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The user's name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public PostUsersUserIdRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * The type for this user
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public PostUsersUserIdRequest withType(String type) {
+        this.type = type;
+        return this;
+    }
+    
+    /**
+     * The id of the user to be updated
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public PostUsersUserIdRequest withUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    
+    /**
+     * The user's username
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
+    public String username;
+    public PostUsersUserIdRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

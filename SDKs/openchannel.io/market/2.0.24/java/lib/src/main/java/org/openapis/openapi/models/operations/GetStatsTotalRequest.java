@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStatsTotalRequest {
+    /**
+     * The end date for this total (in millis)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
+    public Long end;
+    public GetStatsTotalRequest withEnd(Long end) {
+        this.end = end;
+        return this;
+    }
     
-    public GetStatsTotalQueryParams queryParams;
-    public GetStatsTotalRequest withQueryParams(GetStatsTotalQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A comma seperated list of all the fields to be returned in the total (available by default: dislikes, likes, reviews, totalSales, developerSales, marketplaceSales, downloads, ownerships, views)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public GetStatsTotalRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * A query document. Example: {'developerId': '112'} matches all the apps that have the developer with id 112
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public GetStatsTotalRequest withQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    
+    /**
+     * The start date for this total (in millis)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public Long start;
+    public GetStatsTotalRequest withStart(Long start) {
+        this.start = start;
         return this;
     }
     

@@ -7,31 +7,62 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateClientAddressRequest {
-    
-    public UpdateClientAddressPathParams pathParams;
-    public UpdateClientAddressRequest withPathParams(UpdateClientAddressPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public UpdateClientAddressRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public UpdateClientAddressQueryParams queryParams;
-    public UpdateClientAddressRequest withQueryParams(UpdateClientAddressQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public UpdateClientAddressHeaders headers;
-    public UpdateClientAddressRequest withHeaders(UpdateClientAddressHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public UpdateClientAddressRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateClientAddressRequestBody request;
-    public UpdateClientAddressRequest withRequest(UpdateClientAddressRequestBody request) {
-        this.request = request;
+    public UpdateClientAddressRequestBody requestBody;
+    public UpdateClientAddressRequest withRequestBody(UpdateClientAddressRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * ID of a client's specific address as returned in the Create client address endpoint's response, in the `id` field.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=addressId")
+    public String addressId;
+    public UpdateClientAddressRequest withAddressId(String addressId) {
+        this.addressId = addressId;
+        return this;
+    }
+    
+    /**
+     * The `profileId` path parameter may be substituted by other profile fields in this request. When making this request, send the `alternativeKey` parameter with a value equal to the key of the field you wish to use as `profileId`.
+     * 
+     * &gt; Currently, there are two possible values for this parameter: `email` and `document`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alternativeKey")
+    public String alternativeKey;
+    public UpdateClientAddressRequest withAlternativeKey(String alternativeKey) {
+        this.alternativeKey = alternativeKey;
+        return this;
+    }
+    
+    /**
+     * ID of the client's profile as returned by the Create profile endpoint's response, in the `id` field. It can also be an `alternativeKey` according to your custom profile schema. In this case, this request should also send the `alternativeKey` parameter.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
+    public String profileId;
+    public UpdateClientAddressRequest withProfileId(String profileId) {
+        this.profileId = profileId;
         return this;
     }
     

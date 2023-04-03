@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchSupportingDocumentRequest {
-    
-    public FetchSupportingDocumentPathParams pathParams;
-    public FetchSupportingDocumentRequest withPathParams(FetchSupportingDocumentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchSupportingDocumentSecurity security;
-    public FetchSupportingDocumentRequest withSecurity(FetchSupportingDocumentSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchSupportingDocumentRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique string created by Twilio to identify the Supporting Document resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchSupportingDocumentRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

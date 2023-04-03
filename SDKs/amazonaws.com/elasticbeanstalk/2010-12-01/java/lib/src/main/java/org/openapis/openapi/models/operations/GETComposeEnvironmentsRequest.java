@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETComposeEnvironmentsRequest {
-    
-    public GETComposeEnvironmentsQueryParams queryParams;
-    public GETComposeEnvironmentsRequest withQueryParams(GETComposeEnvironmentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETComposeEnvironmentsActionEnum action;
+    public GETComposeEnvironmentsRequest withAction(GETComposeEnvironmentsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the application to which the specified source bundles belong.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ApplicationName")
+    public String applicationName;
+    public GETComposeEnvironmentsRequest withApplicationName(String applicationName) {
+        this.applicationName = applicationName;
+        return this;
+    }
     
-    public GETComposeEnvironmentsHeaders headers;
-    public GETComposeEnvironmentsRequest withHeaders(GETComposeEnvironmentsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name of the group to which the target environments belong. Specify a group name only if the environment name defined in each target environment's manifest ends with a + (plus) character. See &lt;a href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environment-cfg-manifest.html"&gt;Environment Manifest (env.yaml)&lt;/a&gt; for details.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GroupName")
+    public String groupName;
+    public GETComposeEnvironmentsRequest withGroupName(String groupName) {
+        this.groupName = groupName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETComposeEnvironmentsVersionEnum version;
+    public GETComposeEnvironmentsRequest withVersion(GETComposeEnvironmentsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    /**
+     * A list of version labels, specifying one or more application source bundles that belong to the target application. Each source bundle must include an environment manifest that specifies the name of the environment and the name of the solution stack to use, and optionally can specify environment links to create.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VersionLabels")
+    public String[] versionLabels;
+    public GETComposeEnvironmentsRequest withVersionLabels(String[] versionLabels) {
+        this.versionLabels = versionLabels;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETComposeEnvironmentsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETComposeEnvironmentsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETComposeEnvironmentsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETComposeEnvironmentsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETComposeEnvironmentsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETComposeEnvironmentsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETComposeEnvironmentsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

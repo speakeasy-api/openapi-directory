@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KkidChorelistGetRequest {
-    
-    public KkidChorelistGetQueryParams queryParams;
-    public KkidChorelistGetRequest withQueryParams(KkidChorelistGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter results by blockDash parameter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=blockDash")
+    public Boolean blockDash;
+    public KkidChorelistGetRequest withBlockDash(Boolean blockDash) {
+        this.blockDash = blockDash;
         return this;
     }
     
+    /**
+     * Filter results by canSteal parameter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=canSteal")
+    public Boolean canSteal;
+    public KkidChorelistGetRequest withCanSteal(Boolean canSteal) {
+        this.canSteal = canSteal;
+        return this;
+    }
     
-    public KkidChorelistGetSecurity security;
-    public KkidChorelistGetRequest withSecurity(KkidChorelistGetSecurity security) {
-        this.security = security;
+    /**
+     * Day of week for chores (Weekly for weekly chores)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=day")
+    public KkidChorelistGetDayEnum day;
+    public KkidChorelistGetRequest withDay(KkidChorelistGetDayEnum day) {
+        this.day = day;
+        return this;
+    }
+    
+    /**
+     * include calendar notations (default is false)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeCalendar")
+    public Boolean includeCalendar;
+    public KkidChorelistGetRequest withIncludeCalendar(Boolean includeCalendar) {
+        this.includeCalendar = includeCalendar;
+        return this;
+    }
+    
+    /**
+     * Username of kid you wish to search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=kidUsername")
+    public String kidUsername;
+    public KkidChorelistGetRequest withKidUsername(String kidUsername) {
+        this.kidUsername = kidUsername;
+        return this;
+    }
+    
+    /**
+     * Filter results by optional parameter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=optional")
+    public Boolean optional;
+    public KkidChorelistGetRequest withOptional(Boolean optional) {
+        this.optional = optional;
+        return this;
+    }
+    
+    /**
+     * Status of Chore to search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public String status;
+    public KkidChorelistGetRequest withStatus(String status) {
+        this.status = status;
         return this;
     }
     

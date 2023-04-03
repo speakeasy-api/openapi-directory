@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VirtualizationClusterTypesDeleteRequest {
-    
-    public VirtualizationClusterTypesDeletePathParams pathParams;
-    public VirtualizationClusterTypesDeleteRequest withPathParams(VirtualizationClusterTypesDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this cluster type.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public VirtualizationClusterTypesDeleteRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

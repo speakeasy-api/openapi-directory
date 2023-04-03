@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSubscriptionRequest {
-    
-    public UpdateSubscriptionPathParams pathParams;
-    public UpdateSubscriptionRequest withPathParams(UpdateSubscriptionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * A JSON object containing sibscription information
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SubscriptionInput request;
-    public UpdateSubscriptionRequest withRequest(org.openapis.openapi.models.shared.SubscriptionInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SubscriptionInput subscriptionInput;
+    public UpdateSubscriptionRequest withSubscriptionInput(org.openapis.openapi.models.shared.SubscriptionInput subscriptionInput) {
+        this.subscriptionInput = subscriptionInput;
+        return this;
+    }
+    
+    /**
+     * Unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UpdateSubscriptionRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

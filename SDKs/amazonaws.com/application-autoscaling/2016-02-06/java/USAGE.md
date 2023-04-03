@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.DeleteScalingPolicyXAmzTargetEnum;
-import org.openapis.openapi.models.operations.DeleteScalingPolicyHeaders;
 import org.openapis.openapi.models.operations.DeleteScalingPolicyRequest;
 import org.openapis.openapi.models.operations.DeleteScalingPolicyResponse;
 import org.openapis.openapi.models.shared.DeleteScalingPolicyRequest;
@@ -17,30 +16,26 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             DeleteScalingPolicyRequest req = new DeleteScalingPolicyRequest() {{
-                headers = new DeleteScalingPolicyHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "AnyScaleFrontendService.DeleteScalingPolicy";
+                deleteScalingPolicyRequest = new DeleteScalingPolicyRequest() {{
+                    policyName = "corrupti";
+                    resourceId = "provident";
+                    scalableDimension = "cassandra:table:ReadCapacityUnits";
+                    serviceNamespace = "kafka";
                 }};
-                request = new DeleteScalingPolicyRequest() {{
-                    policyName = "illum";
-                    resourceId = "vel";
-                    scalableDimension = "comprehend:entity-recognizer-endpoint:DesiredInferenceUnits";
-                    serviceNamespace = "lambda";
-                }};
-            }};            
+                xAmzAlgorithm = "unde";
+                xAmzContentSha256 = "nulla";
+                xAmzCredential = "corrupti";
+                xAmzDate = "illum";
+                xAmzSecurityToken = "vel";
+                xAmzSignature = "error";
+                xAmzSignedHeaders = "deserunt";
+                xAmzTarget = "AnyScaleFrontendService.DeleteScalingPolicy";
+            }}            
 
             DeleteScalingPolicyResponse res = sdk.deleteScalingPolicy(req);
 

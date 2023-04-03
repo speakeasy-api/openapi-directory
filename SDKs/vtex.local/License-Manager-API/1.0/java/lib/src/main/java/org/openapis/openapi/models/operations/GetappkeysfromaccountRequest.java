@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetappkeysfromaccountRequest {
-    
-    public GetappkeysfromaccountHeaders headers;
-    public GetappkeysfromaccountRequest withHeaders(GetappkeysfromaccountHeaders headers) {
-        this.headers = headers;
+    /**
+     * The media type of the body of the request. Default value for license manager protocol is application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetappkeysfromaccountRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     

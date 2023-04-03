@@ -4,20 +4,34 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DiscordGetDiscordGetRequest {
-    
-    public DiscordGetDiscordGetQueryParams queryParams;
-    public DiscordGetDiscordGetRequest withQueryParams(DiscordGetDiscordGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=authorization")
+    public String authorization;
+    public DiscordGetDiscordGetRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=base64_message")
+    public String base64Message;
+    public DiscordGetDiscordGetRequest withBase64Message(String base64Message) {
+        this.base64Message = base64Message;
+        return this;
+    }
     
-    public DiscordGetDiscordGetHeaders headers;
-    public DiscordGetDiscordGetRequest withHeaders(DiscordGetDiscordGetHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=channel")
+    public String channel;
+    public DiscordGetDiscordGetRequest withChannel(String channel) {
+        this.channel = channel;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=message")
+    public String message;
+    public DiscordGetDiscordGetRequest withMessage(String message) {
+        this.message = message;
         return this;
     }
     

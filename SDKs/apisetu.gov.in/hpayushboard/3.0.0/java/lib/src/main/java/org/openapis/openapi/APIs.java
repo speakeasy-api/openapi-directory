@@ -34,10 +34,11 @@ public class APIs {
      * Pharmacist Registration Certificate
      * API to verify Pharmacist Registration Certificate.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PhcerResponse phcer(org.openapis.openapi.models.operations.PhcerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PhcerResponse phcer(org.openapis.openapi.models.operations.PhcerRequestBody request, org.openapis.openapi.models.operations.PhcerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/phcer/certificate");
         
@@ -48,7 +49,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,10 +127,11 @@ public class APIs {
      * Pharmacist Renewal certificate
      * API to verify Pharmacist Renewal certificate.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RpcerResponse rpcer(org.openapis.openapi.models.operations.RpcerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RpcerResponse rpcer(org.openapis.openapi.models.operations.RpcerRequestBody request, org.openapis.openapi.models.operations.RpcerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/rpcer/certificate");
         
@@ -140,7 +142,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AquiferCodesWaterUseListRequest {
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public AquiferCodesWaterUseListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public AquiferCodesWaterUseListQueryParams queryParams;
-    public AquiferCodesWaterUseListRequest withQueryParams(AquiferCodesWaterUseListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public AquiferCodesWaterUseListRequest withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     

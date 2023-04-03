@@ -7,24 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutClientsIdClientRequest {
-    
-    public PutClientsIdClientPathParams pathParams;
-    public PutClientsIdClientRequest withPathParams(PutClientsIdClientPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutClientsIdClientQueryParams queryParams;
-    public PutClientsIdClientRequest withQueryParams(PutClientsIdClientQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PutClientsIdClientRequestBody request;
-    public PutClientsIdClientRequest withRequest(PutClientsIdClientRequestBody request) {
-        this.request = request;
+    public PutClientsIdClientRequestBody requestBody;
+    public PutClientsIdClientRequest withRequestBody(PutClientsIdClientRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public PutClientsIdClientRequest withExpand(String expand) {
+        this.expand = expand;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_client")
+    public Long idClient;
+    public PutClientsIdClientRequest withIdClient(Long idClient) {
+        this.idClient = idClient;
         return this;
     }
     

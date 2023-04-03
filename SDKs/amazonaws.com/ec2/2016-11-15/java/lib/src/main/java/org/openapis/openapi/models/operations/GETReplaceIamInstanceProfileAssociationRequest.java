@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETReplaceIamInstanceProfileAssociationRequest {
-    
-    public GETReplaceIamInstanceProfileAssociationQueryParams queryParams;
-    public GETReplaceIamInstanceProfileAssociationRequest withQueryParams(GETReplaceIamInstanceProfileAssociationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETReplaceIamInstanceProfileAssociationActionEnum action;
+    public GETReplaceIamInstanceProfileAssociationRequest withAction(GETReplaceIamInstanceProfileAssociationActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The ID of the existing IAM instance profile association.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AssociationId")
+    public String associationId;
+    public GETReplaceIamInstanceProfileAssociationRequest withAssociationId(String associationId) {
+        this.associationId = associationId;
+        return this;
+    }
     
-    public GETReplaceIamInstanceProfileAssociationHeaders headers;
-    public GETReplaceIamInstanceProfileAssociationRequest withHeaders(GETReplaceIamInstanceProfileAssociationHeaders headers) {
-        this.headers = headers;
+    /**
+     * The IAM instance profile.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=IamInstanceProfile")
+    public GETReplaceIamInstanceProfileAssociationIamInstanceProfile iamInstanceProfile;
+    public GETReplaceIamInstanceProfileAssociationRequest withIamInstanceProfile(GETReplaceIamInstanceProfileAssociationIamInstanceProfile iamInstanceProfile) {
+        this.iamInstanceProfile = iamInstanceProfile;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETReplaceIamInstanceProfileAssociationVersionEnum version;
+    public GETReplaceIamInstanceProfileAssociationRequest withVersion(GETReplaceIamInstanceProfileAssociationVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETReplaceIamInstanceProfileAssociationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETReplaceIamInstanceProfileAssociationRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETReplaceIamInstanceProfileAssociationRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETReplaceIamInstanceProfileAssociationRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETReplaceIamInstanceProfileAssociationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETReplaceIamInstanceProfileAssociationRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETReplaceIamInstanceProfileAssociationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

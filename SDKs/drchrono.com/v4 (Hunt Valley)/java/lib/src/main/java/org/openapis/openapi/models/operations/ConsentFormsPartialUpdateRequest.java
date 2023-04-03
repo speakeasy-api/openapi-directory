@@ -4,27 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConsentFormsPartialUpdateRequest {
-    
-    public ConsentFormsPartialUpdatePathParams pathParams;
-    public ConsentFormsPartialUpdateRequest withPathParams(ConsentFormsPartialUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public ConsentFormsPartialUpdateRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     
-    
-    public ConsentFormsPartialUpdateQueryParams queryParams;
-    public ConsentFormsPartialUpdateRequest withQueryParams(ConsentFormsPartialUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ConsentFormsPartialUpdateSecurity security;
-    public ConsentFormsPartialUpdateRequest withSecurity(ConsentFormsPartialUpdateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public ConsentFormsPartialUpdateRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

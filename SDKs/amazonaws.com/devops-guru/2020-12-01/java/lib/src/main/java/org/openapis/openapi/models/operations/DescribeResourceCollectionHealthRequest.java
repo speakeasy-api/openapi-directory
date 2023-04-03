@@ -4,27 +4,75 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeResourceCollectionHealthRequest {
-    
-    public DescribeResourceCollectionHealthPathParams pathParams;
-    public DescribeResourceCollectionHealthRequest withPathParams(DescribeResourceCollectionHealthPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The pagination token to use to retrieve the next page of results for this operation. If this value is null, it retrieves the first page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public DescribeResourceCollectionHealthRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
     
-    
-    public DescribeResourceCollectionHealthQueryParams queryParams;
-    public DescribeResourceCollectionHealthRequest withQueryParams(DescribeResourceCollectionHealthQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     *  An Amazon Web Services resource collection type. This type specifies how analyzed Amazon Web Services resources are defined. The two types of Amazon Web Services resource collections supported are Amazon Web Services CloudFormation stacks and Amazon Web Services resources that contain the same Amazon Web Services tag. DevOps Guru can be configured to analyze the Amazon Web Services resources that are defined in the stacks or that are tagged using the same tag &lt;i&gt;key&lt;/i&gt;. You can specify up to 500 Amazon Web Services CloudFormation stacks. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ResourceCollectionType")
+    public DescribeResourceCollectionHealthResourceCollectionTypeEnum resourceCollectionType;
+    public DescribeResourceCollectionHealthRequest withResourceCollectionType(DescribeResourceCollectionHealthResourceCollectionTypeEnum resourceCollectionType) {
+        this.resourceCollectionType = resourceCollectionType;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DescribeResourceCollectionHealthRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
     
-    public DescribeResourceCollectionHealthHeaders headers;
-    public DescribeResourceCollectionHealthRequest withHeaders(DescribeResourceCollectionHealthHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DescribeResourceCollectionHealthRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DescribeResourceCollectionHealthRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DescribeResourceCollectionHealthRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DescribeResourceCollectionHealthRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DescribeResourceCollectionHealthRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DescribeResourceCollectionHealthRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

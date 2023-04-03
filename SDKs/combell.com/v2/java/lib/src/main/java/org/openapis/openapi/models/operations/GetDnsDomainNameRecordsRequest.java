@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDnsDomainNameRecordsRequest {
-    
-    public GetDnsDomainNameRecordsPathParams pathParams;
-    public GetDnsDomainNameRecordsRequest withPathParams(GetDnsDomainNameRecordsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
+    public String domainNamePathParameter;
+    public GetDnsDomainNameRecordsRequest withDomainNamePathParameter(String domainNamePathParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
         return this;
     }
     
+    /**
+     * The domain name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
+    public String domainNameQueryParameter;
+    public GetDnsDomainNameRecordsRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
+        this.domainNameQueryParameter = domainNameQueryParameter;
+        return this;
+    }
     
-    public GetDnsDomainNameRecordsQueryParams queryParams;
-    public GetDnsDomainNameRecordsRequest withQueryParams(GetDnsDomainNameRecordsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filters records matching the record name. This filter only applies to lookups of A, CNAME, TXT, CAA, ALIAS and TLSA records.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=record_name")
+    public String recordName;
+    public GetDnsDomainNameRecordsRequest withRecordName(String recordName) {
+        this.recordName = recordName;
+        return this;
+    }
+    
+    /**
+     * Filters records for the service. This filter only applies to lookups of SRV records.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=service")
+    public String service;
+    public GetDnsDomainNameRecordsRequest withService(String service) {
+        this.service = service;
+        return this;
+    }
+    
+    /**
+     * The number of items to skip in the resultset.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
+    public Integer skip;
+    public GetDnsDomainNameRecordsRequest withSkip(Integer skip) {
+        this.skip = skip;
+        return this;
+    }
+    
+    /**
+     * The number of items to return in the resultset. The returned count can be equal or less than this number.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=take")
+    public Integer take;
+    public GetDnsDomainNameRecordsRequest withTake(Integer take) {
+        this.take = take;
+        return this;
+    }
+    
+    /**
+     * Filters records matching the type. Most other filters only apply when this filter is specified.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public GetDnsDomainNameRecordsRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

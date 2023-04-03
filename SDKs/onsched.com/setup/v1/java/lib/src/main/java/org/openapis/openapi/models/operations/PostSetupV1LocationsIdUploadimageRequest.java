@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSetupV1LocationsIdUploadimageRequest {
-    
-    public PostSetupV1LocationsIdUploadimagePathParams pathParams;
-    public PostSetupV1LocationsIdUploadimageRequest withPathParams(PostSetupV1LocationsIdUploadimagePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Input model for image upload
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ResourceImageInputModel request;
-    public PostSetupV1LocationsIdUploadimageRequest withRequest(org.openapis.openapi.models.shared.ResourceImageInputModel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ResourceImageInputModel resourceImageInputModel;
+    public PostSetupV1LocationsIdUploadimageRequest withResourceImageInputModel(org.openapis.openapi.models.shared.ResourceImageInputModel resourceImageInputModel) {
+        this.resourceImageInputModel = resourceImageInputModel;
+        return this;
+    }
+    
+    /**
+     * id of business location, defaults to primary business location
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSetupV1LocationsIdUploadimageRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

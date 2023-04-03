@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SilenceUserRequest {
-    
-    public SilenceUserPathParams pathParams;
-    public SilenceUserRequest withPathParams(SilenceUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public SilenceUserRequestBody requestBody;
+    public SilenceUserRequest withRequestBody(SilenceUserRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public SilenceUserRequestBody request;
-    public SilenceUserRequest withRequest(SilenceUserRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public SilenceUserRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

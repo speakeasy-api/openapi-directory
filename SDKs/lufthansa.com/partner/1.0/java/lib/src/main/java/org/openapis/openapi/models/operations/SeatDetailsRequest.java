@@ -4,34 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SeatDetailsRequest {
-    
-    public SeatDetailsPathParams pathParams;
-    public SeatDetailsRequest withPathParams(SeatDetailsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public SeatDetailsRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public SeatDetailsQueryParams queryParams;
-    public SeatDetailsRequest withQueryParams(SeatDetailsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Aircraft type. 3-character IATA equipment code
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=aircraftCode")
+    public String aircraftCode;
+    public SeatDetailsRequest withAircraftCode(String aircraftCode) {
+        this.aircraftCode = aircraftCode;
         return this;
     }
     
-    
-    public SeatDetailsHeaders headers;
-    public SeatDetailsRequest withHeaders(SeatDetailsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Cabin class: M, E, C, F (Acceptable values are: "", "M", "E", "C", "F")
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cabinCode")
+    public String cabinCode;
+    public SeatDetailsRequest withCabinCode(String cabinCode) {
+        this.cabinCode = cabinCode;
         return this;
     }
     
-    
-    public SeatDetailsSecurity security;
-    public SeatDetailsRequest withSecurity(SeatDetailsSecurity security) {
-        this.security = security;
+    /**
+     * 2-letter ISO 3166-1 language code
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public String lang;
+    public SeatDetailsRequest withLang(String lang) {
+        this.lang = lang;
         return this;
     }
     

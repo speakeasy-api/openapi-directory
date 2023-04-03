@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateBundleCopyRequest {
-    
-    public CreateBundleCopyPathParams pathParams;
-    public CreateBundleCopyRequest withPathParams(CreateBundleCopyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique string that identifies the Bundle to be copied.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=BundleSid")
+    public String bundleSid;
+    public CreateBundleCopyRequest withBundleSid(String bundleSid) {
+        this.bundleSid = bundleSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateBundleCopyCreateBundleCopyRequest request;
-    public CreateBundleCopyRequest withRequest(CreateBundleCopyCreateBundleCopyRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateBundleCopySecurity security;
-    public CreateBundleCopyRequest withSecurity(CreateBundleCopySecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateBundleCopyRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateBundleCopyCreateBundleCopyRequest requestBody;
+    public CreateBundleCopyRequest withRequestBody(CreateBundleCopyCreateBundleCopyRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

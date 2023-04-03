@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BinLookupRequest {
-    
-    public BinLookupPathParams pathParams;
-    public BinLookupRequest withPathParams(BinLookupPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The API key, which you can get from bintable.com website.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public BinLookupRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
-    
-    public BinLookupQueryParams queryParams;
-    public BinLookupRequest withQueryParams(BinLookupQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * pass the required BIN code
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bin")
+    public String bin;
+    public BinLookupRequest withBin(String bin) {
+        this.bin = bin;
         return this;
     }
     

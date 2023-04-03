@@ -4,20 +4,189 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCreateTrafficMirrorFilterRuleRequest {
-    
-    public GETCreateTrafficMirrorFilterRuleQueryParams queryParams;
-    public GETCreateTrafficMirrorFilterRuleRequest withQueryParams(GETCreateTrafficMirrorFilterRuleQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETCreateTrafficMirrorFilterRuleActionEnum action;
+    public GETCreateTrafficMirrorFilterRuleRequest withAction(GETCreateTrafficMirrorFilterRuleActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. For more information, see &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html"&gt;How to ensure idempotency&lt;/a&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClientToken")
+    public String clientToken;
+    public GETCreateTrafficMirrorFilterRuleRequest withClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
     
-    public GETCreateTrafficMirrorFilterRuleHeaders headers;
-    public GETCreateTrafficMirrorFilterRuleRequest withHeaders(GETCreateTrafficMirrorFilterRuleHeaders headers) {
-        this.headers = headers;
+    /**
+     * The description of the Traffic Mirror rule.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Description")
+    public String description;
+    public GETCreateTrafficMirrorFilterRuleRequest withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    
+    /**
+     * The destination CIDR block to assign to the Traffic Mirror rule.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DestinationCidrBlock")
+    public String destinationCidrBlock;
+    public GETCreateTrafficMirrorFilterRuleRequest withDestinationCidrBlock(String destinationCidrBlock) {
+        this.destinationCidrBlock = destinationCidrBlock;
+        return this;
+    }
+    
+    /**
+     * The destination port range.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DestinationPortRange")
+    public GETCreateTrafficMirrorFilterRuleDestinationPortRange destinationPortRange;
+    public GETCreateTrafficMirrorFilterRuleRequest withDestinationPortRange(GETCreateTrafficMirrorFilterRuleDestinationPortRange destinationPortRange) {
+        this.destinationPortRange = destinationPortRange;
+        return this;
+    }
+    
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETCreateTrafficMirrorFilterRuleRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The protocol, for example UDP, to assign to the Traffic Mirror rule.&lt;/p&gt; &lt;p&gt;For information about the protocol value, see &lt;a href="https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml"&gt;Protocol Numbers&lt;/a&gt; on the Internet Assigned Numbers Authority (IANA) website.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Protocol")
+    public Long protocol;
+    public GETCreateTrafficMirrorFilterRuleRequest withProtocol(Long protocol) {
+        this.protocol = protocol;
+        return this;
+    }
+    
+    /**
+     * The action to take on the filtered traffic.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RuleAction")
+    public GETCreateTrafficMirrorFilterRuleRuleActionEnum ruleAction;
+    public GETCreateTrafficMirrorFilterRuleRequest withRuleAction(GETCreateTrafficMirrorFilterRuleRuleActionEnum ruleAction) {
+        this.ruleAction = ruleAction;
+        return this;
+    }
+    
+    /**
+     * The number of the Traffic Mirror rule. This number must be unique for each Traffic Mirror rule in a given direction. The rules are processed in ascending order by rule number.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RuleNumber")
+    public Long ruleNumber;
+    public GETCreateTrafficMirrorFilterRuleRequest withRuleNumber(Long ruleNumber) {
+        this.ruleNumber = ruleNumber;
+        return this;
+    }
+    
+    /**
+     * The source CIDR block to assign to the Traffic Mirror rule.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SourceCidrBlock")
+    public String sourceCidrBlock;
+    public GETCreateTrafficMirrorFilterRuleRequest withSourceCidrBlock(String sourceCidrBlock) {
+        this.sourceCidrBlock = sourceCidrBlock;
+        return this;
+    }
+    
+    /**
+     * The source port range.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SourcePortRange")
+    public GETCreateTrafficMirrorFilterRuleSourcePortRange sourcePortRange;
+    public GETCreateTrafficMirrorFilterRuleRequest withSourcePortRange(GETCreateTrafficMirrorFilterRuleSourcePortRange sourcePortRange) {
+        this.sourcePortRange = sourcePortRange;
+        return this;
+    }
+    
+    /**
+     * The type of traffic.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TrafficDirection")
+    public GETCreateTrafficMirrorFilterRuleTrafficDirectionEnum trafficDirection;
+    public GETCreateTrafficMirrorFilterRuleRequest withTrafficDirection(GETCreateTrafficMirrorFilterRuleTrafficDirectionEnum trafficDirection) {
+        this.trafficDirection = trafficDirection;
+        return this;
+    }
+    
+    /**
+     * The ID of the filter that this rule is associated with.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TrafficMirrorFilterId")
+    public String trafficMirrorFilterId;
+    public GETCreateTrafficMirrorFilterRuleRequest withTrafficMirrorFilterId(String trafficMirrorFilterId) {
+        this.trafficMirrorFilterId = trafficMirrorFilterId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETCreateTrafficMirrorFilterRuleVersionEnum version;
+    public GETCreateTrafficMirrorFilterRuleRequest withVersion(GETCreateTrafficMirrorFilterRuleVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETCreateTrafficMirrorFilterRuleRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETCreateTrafficMirrorFilterRuleRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETCreateTrafficMirrorFilterRuleRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETCreateTrafficMirrorFilterRuleRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETCreateTrafficMirrorFilterRuleRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETCreateTrafficMirrorFilterRuleRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETCreateTrafficMirrorFilterRuleRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

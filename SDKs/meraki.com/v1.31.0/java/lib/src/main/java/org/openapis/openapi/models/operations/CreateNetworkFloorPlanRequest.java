@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateNetworkFloorPlanRequest {
-    
-    public CreateNetworkFloorPlanPathParams pathParams;
-    public CreateNetworkFloorPlanRequest withPathParams(CreateNetworkFloorPlanPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateNetworkFloorPlanRequestBody requestBody;
+    public CreateNetworkFloorPlanRequest withRequestBody(CreateNetworkFloorPlanRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateNetworkFloorPlanRequestBody request;
-    public CreateNetworkFloorPlanRequest withRequest(CreateNetworkFloorPlanRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public CreateNetworkFloorPlanRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

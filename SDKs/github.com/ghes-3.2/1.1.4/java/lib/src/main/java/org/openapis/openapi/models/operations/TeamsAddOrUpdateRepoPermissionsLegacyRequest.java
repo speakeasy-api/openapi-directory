@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsAddOrUpdateRepoPermissionsLegacyRequest {
-    
-    public TeamsAddOrUpdateRepoPermissionsLegacyPathParams pathParams;
-    public TeamsAddOrUpdateRepoPermissionsLegacyRequest withPathParams(TeamsAddOrUpdateRepoPermissionsLegacyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public TeamsAddOrUpdateRepoPermissionsLegacyRequestBody requestBody;
+    public TeamsAddOrUpdateRepoPermissionsLegacyRequest withRequestBody(TeamsAddOrUpdateRepoPermissionsLegacyRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public TeamsAddOrUpdateRepoPermissionsLegacyRequestBody request;
-    public TeamsAddOrUpdateRepoPermissionsLegacyRequest withRequest(TeamsAddOrUpdateRepoPermissionsLegacyRequestBody request) {
-        this.request = request;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public TeamsAddOrUpdateRepoPermissionsLegacyRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public TeamsAddOrUpdateRepoPermissionsLegacyRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the team.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
+    public Long teamId;
+    public TeamsAddOrUpdateRepoPermissionsLegacyRequest withTeamId(Long teamId) {
+        this.teamId = teamId;
         return this;
     }
     

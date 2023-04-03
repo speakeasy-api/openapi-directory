@@ -4,34 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListTrustProductChannelEndpointAssignmentRequest {
-    
-    public ListTrustProductChannelEndpointAssignmentPathParams pathParams;
-    public ListTrustProductChannelEndpointAssignmentRequest withPathParams(ListTrustProductChannelEndpointAssignmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of an channel endpoint
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ChannelEndpointSid")
+    public String channelEndpointSid;
+    public ListTrustProductChannelEndpointAssignmentRequest withChannelEndpointSid(String channelEndpointSid) {
+        this.channelEndpointSid = channelEndpointSid;
         return this;
     }
     
-    
-    public ListTrustProductChannelEndpointAssignmentQueryParams queryParams;
-    public ListTrustProductChannelEndpointAssignmentRequest withQueryParams(ListTrustProductChannelEndpointAssignmentQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * comma separated list of channel endpoint sids
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ChannelEndpointSids")
+    public String channelEndpointSids;
+    public ListTrustProductChannelEndpointAssignmentRequest withChannelEndpointSids(String channelEndpointSids) {
+        this.channelEndpointSids = channelEndpointSids;
         return this;
     }
     
-    
-    public ListTrustProductChannelEndpointAssignmentSecurity security;
-    public ListTrustProductChannelEndpointAssignmentRequest withSecurity(ListTrustProductChannelEndpointAssignmentSecurity security) {
-        this.security = security;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListTrustProductChannelEndpointAssignmentRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListTrustProductChannelEndpointAssignmentRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public String serverURL;
-    public ListTrustProductChannelEndpointAssignmentRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListTrustProductChannelEndpointAssignmentRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * The unique string that we created to identify the CustomerProfile resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TrustProductSid")
+    public String trustProductSid;
+    public ListTrustProductChannelEndpointAssignmentRequest withTrustProductSid(String trustProductSid) {
+        this.trustProductSid = trustProductSid;
         return this;
     }
     

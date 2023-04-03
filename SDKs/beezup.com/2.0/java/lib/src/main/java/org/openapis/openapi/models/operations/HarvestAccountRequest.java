@@ -4,20 +4,37 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class HarvestAccountRequest {
-    
-    public HarvestAccountPathParams pathParams;
-    public HarvestAccountRequest withPathParams(HarvestAccountPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public Integer accountId;
+    public HarvestAccountRequest withAccountId(Integer accountId) {
+        this.accountId = accountId;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=beezUPOrderId")
+    public String beezUPOrderId;
+    public HarvestAccountRequest withBeezUPOrderId(String beezUPOrderId) {
+        this.beezUPOrderId = beezUPOrderId;
+        return this;
+    }
     
-    public HarvestAccountQueryParams queryParams;
-    public HarvestAccountRequest withQueryParams(HarvestAccountQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=marketplaceOrderId")
+    public String marketplaceOrderId;
+    public HarvestAccountRequest withMarketplaceOrderId(String marketplaceOrderId) {
+        this.marketplaceOrderId = marketplaceOrderId;
+        return this;
+    }
+    
+    /**
+     * The marketplace technical code
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=marketplaceTechnicalCode")
+    public String marketplaceTechnicalCode;
+    public HarvestAccountRequest withMarketplaceTechnicalCode(String marketplaceTechnicalCode) {
+        this.marketplaceTechnicalCode = marketplaceTechnicalCode;
         return this;
     }
     

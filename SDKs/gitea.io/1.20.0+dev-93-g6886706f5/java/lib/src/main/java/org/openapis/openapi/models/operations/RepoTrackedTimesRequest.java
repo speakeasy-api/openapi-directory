@@ -4,20 +4,77 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoTrackedTimesRequest {
-    
-    public RepoTrackedTimesPathParams pathParams;
-    public RepoTrackedTimesRequest withPathParams(RepoTrackedTimesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Only show times updated before the given time. This is a timestamp in RFC 3339 format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=before")
+    public OffsetDateTime before;
+    public RepoTrackedTimesRequest withBefore(OffsetDateTime before) {
+        this.before = before;
         return this;
     }
     
+    /**
+     * page size of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public RepoTrackedTimesRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public RepoTrackedTimesQueryParams queryParams;
-    public RepoTrackedTimesRequest withQueryParams(RepoTrackedTimesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoTrackedTimesRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * page number of results to return (1-based)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public RepoTrackedTimesRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoTrackedTimesRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * Only show times updated after the given time. This is a timestamp in RFC 3339 format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public OffsetDateTime since;
+    public RepoTrackedTimesRequest withSince(OffsetDateTime since) {
+        this.since = since;
+        return this;
+    }
+    
+    /**
+     * optional filter by user (available for issue managers)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user")
+    public String user;
+    public RepoTrackedTimesRequest withUser(String user) {
+        this.user = user;
         return this;
     }
     

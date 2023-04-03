@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetIndividualsPartyIdElectronicAddressesAddressIdRequest {
-    
-    public GetIndividualsPartyIdElectronicAddressesAddressIdPathParams pathParams;
-    public GetIndividualsPartyIdElectronicAddressesAddressIdRequest withPathParams(GetIndividualsPartyIdElectronicAddressesAddressIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The address identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=addressId")
+    public String addressId;
+    public GetIndividualsPartyIdElectronicAddressesAddressIdRequest withAddressId(String addressId) {
+        this.addressId = addressId;
         return this;
     }
     
+    /**
+     * The API key.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public GetIndividualsPartyIdElectronicAddressesAddressIdRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public GetIndividualsPartyIdElectronicAddressesAddressIdHeaders headers;
-    public GetIndividualsPartyIdElectronicAddressesAddressIdRequest withHeaders(GetIndividualsPartyIdElectronicAddressesAddressIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * The party identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=partyId")
+    public String partyId;
+    public GetIndividualsPartyIdElectronicAddressesAddressIdRequest withPartyId(String partyId) {
+        this.partyId = partyId;
         return this;
     }
     

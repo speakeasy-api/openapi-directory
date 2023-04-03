@@ -73,7 +73,7 @@ public class Notifications {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MarkNotificationsAsReadResponse markNotificationsAsRead(org.openapis.openapi.models.operations.MarkNotificationsAsReadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MarkNotificationsAsReadResponse markNotificationsAsRead(org.openapis.openapi.models.operations.MarkNotificationsAsReadRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/notifications/mark-read.json");
         

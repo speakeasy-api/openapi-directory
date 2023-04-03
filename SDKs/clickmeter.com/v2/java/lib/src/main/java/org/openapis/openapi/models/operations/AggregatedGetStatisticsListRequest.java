@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AggregatedGetStatisticsListRequest {
+    /**
+     * If using a "custom" timeFrame you can specify the starting day (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDay")
+    public String fromDay;
+    public AggregatedGetStatisticsListRequest withFromDay(String fromDay) {
+        this.fromDay = fromDay;
+        return this;
+    }
     
-    public AggregatedGetStatisticsListQueryParams queryParams;
-    public AggregatedGetStatisticsListRequest withQueryParams(AggregatedGetStatisticsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The temporal entity you want to group by ("week"/"month"). If unspecified is "day".
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupBy")
+    public AggregatedGetStatisticsListGroupByEnum groupBy;
+    public AggregatedGetStatisticsListRequest withGroupBy(AggregatedGetStatisticsListGroupByEnum groupBy) {
+        this.groupBy = groupBy;
+        return this;
+    }
+    
+    /**
+     * Timeframe of the request. See list at $timeframeList
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeFrame")
+    public AggregatedGetStatisticsListTimeFrameEnum timeFrame;
+    public AggregatedGetStatisticsListRequest withTimeFrame(AggregatedGetStatisticsListTimeFrameEnum timeFrame) {
+        this.timeFrame = timeFrame;
+        return this;
+    }
+    
+    /**
+     * If using a "custom" timeFrame you can specify the ending day (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDay")
+    public String toDay;
+    public AggregatedGetStatisticsListRequest withToDay(String toDay) {
+        this.toDay = toDay;
         return this;
     }
     

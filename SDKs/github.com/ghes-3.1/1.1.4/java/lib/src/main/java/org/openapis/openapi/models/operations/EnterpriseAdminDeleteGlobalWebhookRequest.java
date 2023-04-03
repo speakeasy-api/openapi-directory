@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminDeleteGlobalWebhookRequest {
-    
-    public EnterpriseAdminDeleteGlobalWebhookPathParams pathParams;
-    public EnterpriseAdminDeleteGlobalWebhookRequest withPathParams(EnterpriseAdminDeleteGlobalWebhookPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the hook.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hook_id")
+    public Long hookId;
+    public EnterpriseAdminDeleteGlobalWebhookRequest withHookId(Long hookId) {
+        this.hookId = hookId;
         return this;
     }
     

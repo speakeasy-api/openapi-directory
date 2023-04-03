@@ -7,27 +7,63 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PriceBulkUploadsRequest {
-    
-    public PriceBulkUploadsQueryParams queryParams;
-    public PriceBulkUploadsRequest withQueryParams(PriceBulkUploadsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public PriceBulkUploadsHeaders headers;
-    public PriceBulkUploadsRequest withHeaders(PriceBulkUploadsHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * The request body consists of a Feed file attached to the request based on the feedType selected 
      */
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PriceBulkUploadsRequestBody request;
-    public PriceBulkUploadsRequest withRequest(PriceBulkUploadsRequestBody request) {
-        this.request = request;
+    public PriceBulkUploadsRequestBody requestBody;
+    public PriceBulkUploadsRequest withRequestBody(PriceBulkUploadsRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * A unique ID to track the consumer request by channel. Use the Consumer Channel Type received during onboarding
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_CONSUMER.CHANNEL.TYPE")
+    public String wmConsumerChannelType;
+    public PriceBulkUploadsRequest withWmConsumerChannelType(String wmConsumerChannelType) {
+        this.wmConsumerChannelType = wmConsumerChannelType;
+        return this;
+    }
+    
+    /**
+     * A unique ID which identifies each API call and used to track and debug issues; use a random generated GUID for this ID
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_QOS.CORRELATION_ID")
+    public String wmQosCorrelationId;
+    public PriceBulkUploadsRequest withWmQosCorrelationId(String wmQosCorrelationId) {
+        this.wmQosCorrelationId = wmQosCorrelationId;
+        return this;
+    }
+    
+    /**
+     * The access token retrieved in the Token API call
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_SEC.ACCESS_TOKEN")
+    public String wmSecAccessToken;
+    public PriceBulkUploadsRequest withWmSecAccessToken(String wmSecAccessToken) {
+        this.wmSecAccessToken = wmSecAccessToken;
+        return this;
+    }
+    
+    /**
+     * Walmart Service Name
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_SVC.NAME")
+    public String wmSvcName;
+    public PriceBulkUploadsRequest withWmSvcName(String wmSvcName) {
+        this.wmSvcName = wmSvcName;
+        return this;
+    }
+    
+    /**
+     * The feed Type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=feedType")
+    public PriceBulkUploadsFeedTypeEnum feedType;
+    public PriceBulkUploadsRequest withFeedType(PriceBulkUploadsFeedTypeEnum feedType) {
+        this.feedType = feedType;
         return this;
     }
     

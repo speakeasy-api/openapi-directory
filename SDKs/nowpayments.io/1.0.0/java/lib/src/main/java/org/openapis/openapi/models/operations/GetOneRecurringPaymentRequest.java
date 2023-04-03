@@ -7,24 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOneRecurringPaymentRequest {
-    
-    public GetOneRecurringPaymentPathParams pathParams;
-    public GetOneRecurringPaymentRequest withPathParams(GetOneRecurringPaymentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetOneRecurringPaymentHeaders headers;
-    public GetOneRecurringPaymentRequest withHeaders(GetOneRecurringPaymentHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=text/plain")
-    public byte[] request;
-    public GetOneRecurringPaymentRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public GetOneRecurringPaymentRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sub_id")
+    public String subId;
+    public GetOneRecurringPaymentRequest withSubId(String subId) {
+        this.subId = subId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public GetOneRecurringPaymentRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

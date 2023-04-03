@@ -31,18 +31,12 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/ServicebrokerGetIamPolicySecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/ServicebrokerGetIamPolicyPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/ServicebrokerGetIamPolicyQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ServicebrokerGetIamPolicyRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ServicebrokerGetIamPolicyResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ServicebrokerSetIamPolicySecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/ServicebrokerSetIamPolicyPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/ServicebrokerSetIamPolicyQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ServicebrokerSetIamPolicyRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ServicebrokerSetIamPolicyResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ServicebrokerTestIamPermissionsSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/ServicebrokerTestIamPermissionsPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/ServicebrokerTestIamPermissionsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ServicebrokerTestIamPermissionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ServicebrokerTestIamPermissionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleIamV1Policy.java
@@ -50,8 +44,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleIamV1Binding.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleTypeExpr.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2c.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleIamV1SetIamPolicyRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleIamV1TestIamPermissionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleIamV1TestIamPermissionsRequest.java

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPirateGenerateLoremIpsumRequest {
-    
-    public GetPirateGenerateLoremIpsumQueryParams queryParams;
-    public GetPirateGenerateLoremIpsumRequest withQueryParams(GetPirateGenerateLoremIpsumQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * No of elements to generate
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetPirateGenerateLoremIpsumRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
-    
-    public GetPirateGenerateLoremIpsumSecurity security;
-    public GetPirateGenerateLoremIpsumRequest withSecurity(GetPirateGenerateLoremIpsumSecurity security) {
-        this.security = security;
+    /**
+     * Type of element to generate `paragraphs/sentences/words`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public GetPirateGenerateLoremIpsumRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

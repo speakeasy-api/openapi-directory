@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProductRequest {
-    
-    public GetProductPathParams pathParams;
-    public GetProductRequest withPathParams(GetProductPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * This method also uses the &lt;code&gt;X-EBAY-C-MARKETPLACE-ID&lt;/code&gt; header to identify the seller's eBay marketplace. It is required for all marketplaces except EBAY_US, which is the default. &lt;b&gt;Note:&lt;/b&gt; This method is limited to &lt;code&gt;EBAY_US&lt;/code&gt;, &lt;code&gt;EBAY_AU&lt;/code&gt;, &lt;code&gt;EBAY_CA&lt;/code&gt;, and &lt;code&gt;EBAY_GB&lt;/code&gt; values.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
+    public String xEbayCMarketplaceId;
+    public GetProductRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
+        this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
     }
     
-    
-    public GetProductHeaders headers;
-    public GetProductRequest withHeaders(GetProductHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetProductSecurity security;
-    public GetProductRequest withSecurity(GetProductSecurity security) {
-        this.security = security;
+    /**
+     * The ePID of the product being requested. This value can be discovered by issuing the &lt;b&gt;search&lt;/b&gt; method and examining the value of the &lt;b&gt;productSummaries.epid&lt;/b&gt; field for the desired returned product summary.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=epid")
+    public String epid;
+    public GetProductRequest withEpid(String epid) {
+        this.epid = epid;
         return this;
     }
     

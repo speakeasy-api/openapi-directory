@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PersonalityRequest {
-    
-    public PersonalityQueryParams queryParams;
-    public PersonalityRequest withQueryParams(PersonalityQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.Post[] requestBody;
+    public PersonalityRequest withRequestBody(org.openapis.openapi.models.shared.Post[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Post[] request;
-    public PersonalityRequest withRequest(org.openapis.openapi.models.shared.Post[] request) {
-        this.request = request;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=all")
+    public Boolean all;
+    public PersonalityRequest withAll(Boolean all) {
+        this.all = all;
         return this;
     }
     

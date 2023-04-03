@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdminUnadoptedListRequest {
+    /**
+     * page size of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public AdminUnadoptedListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public AdminUnadoptedListQueryParams queryParams;
-    public AdminUnadoptedListRequest withQueryParams(AdminUnadoptedListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * page number of results to return (1-based)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public AdminUnadoptedListRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * pattern of repositories to search for
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pattern")
+    public String pattern;
+    public AdminUnadoptedListRequest withPattern(String pattern) {
+        this.pattern = pattern;
         return this;
     }
     

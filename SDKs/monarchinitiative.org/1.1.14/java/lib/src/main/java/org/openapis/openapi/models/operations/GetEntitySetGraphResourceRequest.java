@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEntitySetGraphResourceRequest {
+    /**
+     * Entity ids in background set, e.g. NCBIGene:84570, NCBIGene:3630; used in over-representation tests
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=background")
+    public String[] background;
+    public GetEntitySetGraphResourceRequest withBackground(String[] background) {
+        this.background = background;
+        return this;
+    }
     
-    public GetEntitySetGraphResourceQueryParams queryParams;
-    public GetEntitySetGraphResourceRequest withQueryParams(GetEntitySetGraphResourceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * E.g. phenotype, function
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=object_category")
+    public String objectCategory;
+    public GetEntitySetGraphResourceRequest withObjectCategory(String objectCategory) {
+        this.objectCategory = objectCategory;
+        return this;
+    }
+    
+    /**
+     * Slim or subset to which the descriptors are to be mapped, NOT IMPLEMENTED
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=object_slim")
+    public String objectSlim;
+    public GetEntitySetGraphResourceRequest withObjectSlim(String objectSlim) {
+        this.objectSlim = objectSlim;
+        return this;
+    }
+    
+    /**
+     * Entity ids to be examined, e.g. NCBIGene:9342, NCBIGene:7227, NCBIGene:8131, NCBIGene:157570, NCBIGene:51164, NCBIGene:6689, NCBIGene:6387
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subject")
+    public String[] subject;
+    public GetEntitySetGraphResourceRequest withSubject(String[] subject) {
+        this.subject = subject;
         return this;
     }
     

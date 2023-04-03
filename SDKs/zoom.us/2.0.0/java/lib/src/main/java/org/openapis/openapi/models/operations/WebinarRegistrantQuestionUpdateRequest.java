@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WebinarRegistrantQuestionUpdateRequest {
-    
-    public WebinarRegistrantQuestionUpdatePathParams pathParams;
-    public WebinarRegistrantQuestionUpdateRequest withPathParams(WebinarRegistrantQuestionUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Webinar Registrant Questions
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public WebinarRegistrantQuestionUpdateWebinarRegistrantQuestions request;
-    public WebinarRegistrantQuestionUpdateRequest withRequest(WebinarRegistrantQuestionUpdateWebinarRegistrantQuestions request) {
-        this.request = request;
+    public WebinarRegistrantQuestionUpdateWebinarRegistrantQuestions requestBody;
+    public WebinarRegistrantQuestionUpdateRequest withRequestBody(WebinarRegistrantQuestionUpdateWebinarRegistrantQuestions requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public WebinarRegistrantQuestionUpdateSecurity security;
-    public WebinarRegistrantQuestionUpdateRequest withSecurity(WebinarRegistrantQuestionUpdateSecurity security) {
-        this.security = security;
+    /**
+     * The webinar ID in "**long**" format(represented as int64 data type in JSON). 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webinarId")
+    public Long webinarId;
+    public WebinarRegistrantQuestionUpdateRequest withWebinarId(Long webinarId) {
+        this.webinarId = webinarId;
         return this;
     }
     

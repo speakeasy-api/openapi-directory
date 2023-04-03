@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAssociationByIdRequest {
-    
-    public GetAssociationByIdQueryParams queryParams;
-    public GetAssociationByIdRequest withQueryParams(GetAssociationByIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * An association ID usually in the form of `TARGET_ID-DISEASE_ID`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public GetAssociationByIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiCatalogSystemPubProductsOffersProductIdSkuSkuIdRequest {
-    
-    public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuIdPathParams pathParams;
-    public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuIdRequest withPathParams(GetApiCatalogSystemPubProductsOffersProductIdSkuSkuIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuIdRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuIdRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuIdHeaders headers;
-    public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuIdRequest withHeaders(GetApiCatalogSystemPubProductsOffersProductIdSkuSkuIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * Product unique number identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
+    public String productId;
+    public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuIdRequest withProductId(String productId) {
+        this.productId = productId;
+        return this;
+    }
+    
+    /**
+     * Product unique number identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=skuId")
+    public String skuId;
+    public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuIdRequest withSkuId(String skuId) {
+        this.skuId = skuId;
         return this;
     }
     

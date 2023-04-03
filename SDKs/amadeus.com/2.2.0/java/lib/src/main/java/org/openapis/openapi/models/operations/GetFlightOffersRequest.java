@@ -4,13 +4,153 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFlightOffersRequest {
+    /**
+     * the number of adult travelers (age 12 or older on date of departure).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=adults")
+    public Long adults;
+    public GetFlightOffersRequest withAdults(Long adults) {
+        this.adults = adults;
+        return this;
+    }
     
-    public GetFlightOffersQueryParams queryParams;
-    public GetFlightOffersRequest withQueryParams(GetFlightOffersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * the number of child travelers (older than age 2 and younger than age 12 on date of departure) who will each have their own separate seat. If specified, this number should be greater than or equal to 0
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=children")
+    public Long children;
+    public GetFlightOffersRequest withChildren(Long children) {
+        this.children = children;
+        return this;
+    }
+    
+    /**
+     * the preferred currency for the flight offers. Currency is specified in the [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) format, e.g. EUR for Euro
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currencyCode")
+    public String currencyCode;
+    public GetFlightOffersRequest withCurrencyCode(String currencyCode) {
+        this.currencyCode = currencyCode;
+        return this;
+    }
+    
+    /**
+     * the date on which the traveler will depart from the origin to go to the destination. Dates are specified in the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) YYYY-MM-DD format, e.g. 2017-12-25
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=departureDate")
+    public LocalDate departureDate;
+    public GetFlightOffersRequest withDepartureDate(LocalDate departureDate) {
+        this.departureDate = departureDate;
+        return this;
+    }
+    
+    /**
+     * city/airport [IATA code](http://www.iata.org/publications/Pages/code-search.aspx) to which the traveler is going, e.g. PAR for Paris
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destinationLocationCode")
+    public String destinationLocationCode;
+    public GetFlightOffersRequest withDestinationLocationCode(String destinationLocationCode) {
+        this.destinationLocationCode = destinationLocationCode;
+        return this;
+    }
+    
+    /**
+     * This option ensures that the system will ignore these airlines. This can not be cumulated with parameter includedAirlineCodes.
+     * 
+     * Airlines are specified as [IATA airline codes](http://www.iata.org/publications/Pages/code-search.aspx) and are comma-separated, e.g. 6X,7X,8X
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=excludedAirlineCodes")
+    public String excludedAirlineCodes;
+    public GetFlightOffersRequest withExcludedAirlineCodes(String excludedAirlineCodes) {
+        this.excludedAirlineCodes = excludedAirlineCodes;
+        return this;
+    }
+    
+    /**
+     * This option ensures that the system will only consider these airlines. This can not be cumulated with parameter excludedAirlineCodes.
+     * 
+     * Airlines are specified as [IATA airline codes](http://www.iata.org/publications/Pages/code-search.aspx) and are comma-separated, e.g. 6X,7X,8X
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=includedAirlineCodes")
+    public String includedAirlineCodes;
+    public GetFlightOffersRequest withIncludedAirlineCodes(String includedAirlineCodes) {
+        this.includedAirlineCodes = includedAirlineCodes;
+        return this;
+    }
+    
+    /**
+     * the number of infant travelers (whose age is less or equal to 2 on date of departure). Infants travel on the lap of an adult traveler, and thus the number of infants must not exceed the number of adults. If specified, this number should be greater than or equal to 0
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=infants")
+    public Long infants;
+    public GetFlightOffersRequest withInfants(Long infants) {
+        this.infants = infants;
+        return this;
+    }
+    
+    /**
+     * maximum number of flight offers to return. If specified, the value should be greater than or equal to 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
+    public Long max;
+    public GetFlightOffersRequest withMax(Long max) {
+        this.max = max;
+        return this;
+    }
+    
+    /**
+     * maximum price per traveler. By default, no limit is applied. If specified, the value should be a positive number with no decimals
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxPrice")
+    public Long maxPrice;
+    public GetFlightOffersRequest withMaxPrice(Long maxPrice) {
+        this.maxPrice = maxPrice;
+        return this;
+    }
+    
+    /**
+     * if set to true, the search will find only flights going from the origin to the destination with no stop in between
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nonStop")
+    public Boolean nonStop;
+    public GetFlightOffersRequest withNonStop(Boolean nonStop) {
+        this.nonStop = nonStop;
+        return this;
+    }
+    
+    /**
+     * city/airport [IATA code](http://www.iata.org/publications/Pages/code-search.aspx) from which the traveler will depart, e.g. BOS for Boston
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=originLocationCode")
+    public String originLocationCode;
+    public GetFlightOffersRequest withOriginLocationCode(String originLocationCode) {
+        this.originLocationCode = originLocationCode;
+        return this;
+    }
+    
+    /**
+     * the date on which the traveler will depart from the destination to return to the origin. If this parameter is not specified, only one-way itineraries are found. If this parameter is specified, only round-trip itineraries are found. Dates are specified in the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) YYYY-MM-DD format, e.g. 2018-02-28
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=returnDate")
+    public LocalDate returnDate;
+    public GetFlightOffersRequest withReturnDate(LocalDate returnDate) {
+        this.returnDate = returnDate;
+        return this;
+    }
+    
+    /**
+     * most of the flight time should be spent in a cabin of this quality or higher. The accepted travel class is economy, premium economy, business or first class. If no travel class is specified, the search considers any travel class
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=travelClass")
+    public GetFlightOffersTravelClassEnum travelClass;
+    public GetFlightOffersRequest withTravelClass(GetFlightOffersTravelClassEnum travelClass) {
+        this.travelClass = travelClass;
         return this;
     }
     

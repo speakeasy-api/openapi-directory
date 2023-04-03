@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateFulfillmentPolicyRequest {
-    
-    public UpdateFulfillmentPolicyPathParams pathParams;
-    public UpdateFulfillmentPolicyRequest withPathParams(UpdateFulfillmentPolicyPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Fulfillment policy request
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.FulfillmentPolicyRequest request;
-    public UpdateFulfillmentPolicyRequest withRequest(org.openapis.openapi.models.shared.FulfillmentPolicyRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.FulfillmentPolicyRequest fulfillmentPolicyRequest;
+    public UpdateFulfillmentPolicyRequest withFulfillmentPolicyRequest(org.openapis.openapi.models.shared.FulfillmentPolicyRequest fulfillmentPolicyRequest) {
+        this.fulfillmentPolicyRequest = fulfillmentPolicyRequest;
         return this;
     }
     
-    
-    public UpdateFulfillmentPolicySecurity security;
-    public UpdateFulfillmentPolicyRequest withSecurity(UpdateFulfillmentPolicySecurity security) {
-        this.security = security;
+    /**
+     * This path parameter specifies the ID of the fulfillment policy you want to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fulfillmentPolicyId")
+    public String fulfillmentPolicyId;
+    public UpdateFulfillmentPolicyRequest withFulfillmentPolicyId(String fulfillmentPolicyId) {
+        this.fulfillmentPolicyId = fulfillmentPolicyId;
         return this;
     }
     

@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AssociateFraudsterXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AssociateFraudsterHeaders;
 import org.openapis.openapi.models.operations.AssociateFraudsterRequest;
 import org.openapis.openapi.models.operations.AssociateFraudsterResponse;
 import org.openapis.openapi.models.shared.AssociateFraudsterRequest;
@@ -15,29 +14,25 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AssociateFraudsterRequest req = new AssociateFraudsterRequest() {{
-                headers = new AssociateFraudsterHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "VoiceID.AssociateFraudster";
+                associateFraudsterRequest = new AssociateFraudsterRequest() {{
+                    domainId = "corrupti";
+                    fraudsterId = "provident";
+                    watchlistId = "distinctio";
                 }};
-                request = new AssociateFraudsterRequest() {{
-                    domainId = "illum";
-                    fraudsterId = "vel";
-                    watchlistId = "error";
-                }};
-            }};            
+                xAmzAlgorithm = "quibusdam";
+                xAmzContentSha256 = "unde";
+                xAmzCredential = "nulla";
+                xAmzDate = "corrupti";
+                xAmzSecurityToken = "illum";
+                xAmzSignature = "vel";
+                xAmzSignedHeaders = "error";
+                xAmzTarget = "VoiceID.AssociateFraudster";
+            }}            
 
             AssociateFraudsterResponse res = sdk.associateFraudster(req);
 

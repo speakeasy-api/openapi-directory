@@ -33,10 +33,11 @@ public class Domains {
     /**
      * Lists the domains that have been registered by the client. The order of domains in the response is unspecified and non-deterministic. Newly created domains will not necessarily be added to the end of this list.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsListResponse gmailpostmastertoolsDomainsList(org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsListResponse gmailpostmastertoolsDomainsList(org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsListRequest request, org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1beta1/domains");
         
@@ -44,14 +45,14 @@ public class Domains {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,25 +79,26 @@ public class Domains {
     /**
      * Get traffic statistics for a domain on a specific date. Returns PERMISSION_DENIED if user does not have permission to access TrafficStats for the domain.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsTrafficStatsGetResponse gmailpostmastertoolsDomainsTrafficStatsGet(org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsTrafficStatsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsTrafficStatsGetResponse gmailpostmastertoolsDomainsTrafficStatsGet(org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsTrafficStatsGetRequest request, org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsTrafficStatsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsTrafficStatsGetPathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsTrafficStatsGetRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsTrafficStatsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsTrafficStatsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -123,25 +125,26 @@ public class Domains {
     /**
      * List traffic statistics for all available days. Returns PERMISSION_DENIED if user does not have permission to access TrafficStats for the domain.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsTrafficStatsListResponse gmailpostmastertoolsDomainsTrafficStatsList(org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsTrafficStatsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsTrafficStatsListResponse gmailpostmastertoolsDomainsTrafficStatsList(org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsTrafficStatsListRequest request, org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsTrafficStatsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsTrafficStatsListPathParams.class, baseUrl, "/v1beta1/{parent}/trafficStats", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsTrafficStatsListRequest.class, baseUrl, "/v1beta1/{parent}/trafficStats", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsTrafficStatsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsTrafficStatsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

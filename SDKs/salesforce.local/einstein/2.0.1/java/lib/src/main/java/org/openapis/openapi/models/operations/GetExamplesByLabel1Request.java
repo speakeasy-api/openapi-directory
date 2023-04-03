@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetExamplesByLabel1Request {
-    
-    public GetExamplesByLabel1QueryParams queryParams;
-    public GetExamplesByLabel1Request withQueryParams(GetExamplesByLabel1QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Number of examples to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
+    public String count;
+    public GetExamplesByLabel1Request withCount(String count) {
+        this.count = count;
         return this;
     }
     
+    /**
+     * Label Id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=labelId")
+    public String labelId;
+    public GetExamplesByLabel1Request withLabelId(String labelId) {
+        this.labelId = labelId;
+        return this;
+    }
     
-    public GetExamplesByLabel1Security security;
-    public GetExamplesByLabel1Request withSecurity(GetExamplesByLabel1Security security) {
-        this.security = security;
+    /**
+     * Index of the example from which you want to start paging.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public String offset;
+    public GetExamplesByLabel1Request withOffset(String offset) {
+        this.offset = offset;
         return this;
     }
     

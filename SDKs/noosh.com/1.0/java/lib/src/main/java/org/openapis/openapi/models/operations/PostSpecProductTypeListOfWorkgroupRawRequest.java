@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpecProductTypeListOfWorkgroupRawRequest {
-    
-    public PostSpecProductTypeListOfWorkgroupRawPathParams pathParams;
-    public PostSpecProductTypeListOfWorkgroupRawRequest withPathParams(PostSpecProductTypeListOfWorkgroupRawPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=text/xml")
+    public byte[] requestBody;
+    public PostSpecProductTypeListOfWorkgroupRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public PostSpecProductTypeListOfWorkgroupRawRequest withRequest(byte[] request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
+    public String workgroupId;
+    public PostSpecProductTypeListOfWorkgroupRawRequest withWorkgroupId(String workgroupId) {
+        this.workgroupId = workgroupId;
         return this;
     }
     

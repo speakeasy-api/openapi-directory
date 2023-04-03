@@ -7,13 +7,6 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostPrimaryIpsIdActionsChangeDnsPtrRequest {
-    
-    public PostPrimaryIpsIdActionsChangeDnsPtrPathParams pathParams;
-    public PostPrimaryIpsIdActionsChangeDnsPtrRequest withPathParams(PostPrimaryIpsIdActionsChangeDnsPtrPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Select the IP address for which to change the DNS entry by passing `ip`. For a Primary IP of type `ipv4` this must exactly match the IP address of the Primary IP. For a Primary IP of type `ipv6` this must be a single IP within the IPv6 /64 range that belongs to this Primary IP.
      * 
@@ -21,9 +14,19 @@ public class PostPrimaryIpsIdActionsChangeDnsPtrRequest {
      * 
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostPrimaryIpsIdActionsChangeDnsPtrChangeDNSPTRRequest request;
-    public PostPrimaryIpsIdActionsChangeDnsPtrRequest withRequest(PostPrimaryIpsIdActionsChangeDnsPtrChangeDNSPTRRequest request) {
-        this.request = request;
+    public PostPrimaryIpsIdActionsChangeDnsPtrChangeDNSPTRRequest requestBody;
+    public PostPrimaryIpsIdActionsChangeDnsPtrRequest withRequestBody(PostPrimaryIpsIdActionsChangeDnsPtrChangeDNSPTRRequest requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * ID of the Primary IP
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public PostPrimaryIpsIdActionsChangeDnsPtrRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

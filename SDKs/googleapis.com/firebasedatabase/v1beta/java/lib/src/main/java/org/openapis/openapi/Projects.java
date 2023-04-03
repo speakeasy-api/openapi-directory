@@ -34,27 +34,28 @@ public class Projects {
     /**
      * Requests that a new DatabaseInstance be created. The state of a successfully created DatabaseInstance is ACTIVE. Only available for projects on the Blaze plan. Projects can be upgraded using the Cloud Billing API https://cloud.google.com/billing/reference/rest/v1/projects/updateBillingInfo. Note that it might take a few minutes for billing enablement state to propagate to Firebase systems.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesCreateResponse firebasedatabaseProjectsLocationsInstancesCreate(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesCreateResponse firebasedatabaseProjectsLocationsInstancesCreate(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesCreateRequest request, org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesCreatePathParams.class, baseUrl, "/v1beta/{parent}/instances", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesCreateRequest.class, baseUrl, "/v1beta/{parent}/instances", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "databaseInstanceInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,25 +82,26 @@ public class Projects {
     /**
      * Marks a DatabaseInstance to be deleted. The DatabaseInstance will be set to the DELETED state for 20 days, and will be purged within 30 days. The default database cannot be deleted. IDs for deleted database instances may never be recovered or re-used. The Database may only be deleted if it is already in a DISABLED state.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesDeleteResponse firebasedatabaseProjectsLocationsInstancesDelete(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesDeleteResponse firebasedatabaseProjectsLocationsInstancesDelete(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesDeleteRequest request, org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesDeletePathParams.class, baseUrl, "/v1beta/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesDeleteRequest.class, baseUrl, "/v1beta/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,27 +128,28 @@ public class Projects {
     /**
      * Disables a DatabaseInstance. The database can be re-enabled later using ReenableDatabaseInstance. When a database is disabled, all reads and writes are denied, including view access in the Firebase console.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesDisableResponse firebasedatabaseProjectsLocationsInstancesDisable(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesDisableRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesDisableResponse firebasedatabaseProjectsLocationsInstancesDisable(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesDisableRequest request, org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesDisableSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesDisablePathParams.class, baseUrl, "/v1beta/{name}:disable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesDisableRequest.class, baseUrl, "/v1beta/{name}:disable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesDisableQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesDisableRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -173,25 +176,26 @@ public class Projects {
     /**
      * Gets the DatabaseInstance identified by the specified resource name.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesGetResponse firebasedatabaseProjectsLocationsInstancesGet(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesGetResponse firebasedatabaseProjectsLocationsInstancesGet(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesGetRequest request, org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesGetPathParams.class, baseUrl, "/v1beta/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesGetRequest.class, baseUrl, "/v1beta/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -218,25 +222,26 @@ public class Projects {
     /**
      * Lists each DatabaseInstance associated with the specified parent project. The list items are returned in no particular order, but will be a consistent view of the database instances when additional requests are made with a `pageToken`. The resulting list contains instances in any STATE. The list results may be stale by a few seconds. Use GetDatabaseInstance for consistent reads.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesListResponse firebasedatabaseProjectsLocationsInstancesList(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesListResponse firebasedatabaseProjectsLocationsInstancesList(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesListRequest request, org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesListPathParams.class, baseUrl, "/v1beta/{parent}/instances", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesListRequest.class, baseUrl, "/v1beta/{parent}/instances", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -263,27 +268,28 @@ public class Projects {
     /**
      * Enables a DatabaseInstance. The database must have been disabled previously using DisableDatabaseInstance. The state of a successfully reenabled DatabaseInstance is ACTIVE.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesReenableResponse firebasedatabaseProjectsLocationsInstancesReenable(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesReenableRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesReenableResponse firebasedatabaseProjectsLocationsInstancesReenable(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesReenableRequest request, org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesReenableSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesReenablePathParams.class, baseUrl, "/v1beta/{name}:reenable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesReenableRequest.class, baseUrl, "/v1beta/{name}:reenable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesReenableQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesReenableRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -310,27 +316,28 @@ public class Projects {
     /**
      * Restores a DatabaseInstance that was previously marked to be deleted. After the delete method is used, DatabaseInstances are set to the DELETED state for 20 days, and will be purged within 30 days. Databases in the DELETED state can be undeleted without losing any data. This method may only be used on a DatabaseInstance in the DELETED state. Purged DatabaseInstances may not be recovered.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesUndeleteResponse firebasedatabaseProjectsLocationsInstancesUndelete(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesUndeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesUndeleteResponse firebasedatabaseProjectsLocationsInstancesUndelete(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesUndeleteRequest request, org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesUndeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesUndeletePathParams.class, baseUrl, "/v1beta/{name}:undelete", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesUndeleteRequest.class, baseUrl, "/v1beta/{name}:undelete", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesUndeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebasedatabaseProjectsLocationsInstancesUndeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -40,7 +40,7 @@ public class ManagementInterface {
      */
     public org.openapis.openapi.models.operations.GetDeviceManagementInterfaceResponse getDeviceManagementInterface(org.openapis.openapi.models.operations.GetDeviceManagementInterfaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceManagementInterfacePathParams.class, baseUrl, "/devices/{serial}/managementInterface", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceManagementInterfaceRequest.class, baseUrl, "/devices/{serial}/managementInterface", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,12 +80,12 @@ public class ManagementInterface {
      */
     public org.openapis.openapi.models.operations.UpdateDeviceManagementInterfaceResponse updateDeviceManagementInterface(org.openapis.openapi.models.operations.UpdateDeviceManagementInterfaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceManagementInterfacePathParams.class, baseUrl, "/devices/{serial}/managementInterface", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceManagementInterfaceRequest.class, baseUrl, "/devices/{serial}/managementInterface", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

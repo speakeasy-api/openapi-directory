@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NotifyGetThreadRequest {
-    
-    public NotifyGetThreadPathParams pathParams;
-    public NotifyGetThreadRequest withPathParams(NotifyGetThreadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * id of notification thread
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public NotifyGetThreadRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

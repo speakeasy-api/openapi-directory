@@ -18,11 +18,9 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GetItemUsagesSecurity;
-import org.openapis.openapi.models.operations.GetItemUsagesRequest;
 import org.openapis.openapi.models.operations.GetItemUsagesResponse;
 import org.openapis.openapi.models.shared.Cursor;
 import org.openapis.openapi.models.shared.ResetCursor;
-import org.openapis.openapi.models.shared.SchemeJwtsa;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,20 +28,15 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetItemUsagesRequest req = new GetItemUsagesRequest() {{
-                security = new GetItemUsagesSecurity() {{
-                    jwtsa = new SchemeJwtsa() {{
-                        authorization = "Bearer YOUR_BEARER_TOKEN_HERE";
-                    }};
-                }};
-                request = new ResetCursor() {{
-                    endTime = "2020-06-11T16:32:50-03:00";
-                    limit = 5928.45;
-                    startTime = "2020-06-11T16:32:50-03:00";
-                }};
-            }};            
+            org.openapis.openapi.models.. req = new ResetCursor() {{
+                endTime = "2020-06-11T16:32:50-03:00";
+                limit = 5928.45;
+                startTime = "2020-06-11T16:32:50-03:00";
+            }}            
 
-            GetItemUsagesResponse res = sdk.apiV1.getItemUsages(req);
+            GetItemUsagesResponse res = sdk.apiV1.getItemUsages(req, new GetItemUsagesSecurity() {{
+                jwtsa = "Bearer YOUR_BEARER_TOKEN_HERE";
+            }});
 
             if (res.getItemUsages200ApplicationJSONObject.isPresent()) {
                 // handle response
@@ -55,7 +48,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### apiV1

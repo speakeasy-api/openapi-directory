@@ -4,27 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchSigningKeyRequest {
-    
-    public FetchSigningKeyPathParams pathParams;
-    public FetchSigningKeyRequest withPathParams(FetchSigningKeyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public FetchSigningKeyRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public FetchSigningKeySecurity security;
-    public FetchSigningKeyRequest withSecurity(FetchSigningKeySecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchSigningKeyRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchSigningKeyRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

@@ -111,11 +111,10 @@ public class Auth {
 
     /**
      * Verify token and return details of the owning user
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostVerifyResponse postVerify(org.openapis.openapi.models.operations.PostVerifyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostVerifyResponse postVerify() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/verify");
         
@@ -124,8 +123,7 @@ public class Auth {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");

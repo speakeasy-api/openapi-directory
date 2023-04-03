@@ -40,7 +40,7 @@ public class Workgroup {
      */
     public org.openapis.openapi.models.operations.GetClientWorkgroupListResponse getClientWorkgroupList(org.openapis.openapi.models.operations.GetClientWorkgroupListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetClientWorkgroupListPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/clientWorkgroups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetClientWorkgroupListRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/clientWorkgroups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -159,7 +159,7 @@ public class Workgroup {
      */
     public org.openapis.openapi.models.operations.GetSpecificClientWorkgroupResponse getSpecificClientWorkgroup(org.openapis.openapi.models.operations.GetSpecificClientWorkgroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpecificClientWorkgroupPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/clientWorkgroups/{client_workgroup_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpecificClientWorkgroupRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/clientWorkgroups/{client_workgroup_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -278,7 +278,7 @@ public class Workgroup {
      */
     public org.openapis.openapi.models.operations.GetSupplierWorkgroupDetailResponse getSupplierWorkgroupDetail(org.openapis.openapi.models.operations.GetSupplierWorkgroupDetailRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSupplierWorkgroupDetailPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/supplierWorkgroups/{bu_supplier_workgroup_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSupplierWorkgroupDetailRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/supplierWorkgroups/{bu_supplier_workgroup_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -397,7 +397,7 @@ public class Workgroup {
      */
     public org.openapis.openapi.models.operations.GetSupplierWorkgroupListResponse getSupplierWorkgroupList(org.openapis.openapi.models.operations.GetSupplierWorkgroupListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSupplierWorkgroupListPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/supplierWorkgroups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSupplierWorkgroupListRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/supplierWorkgroups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -516,7 +516,7 @@ public class Workgroup {
      */
     public org.openapis.openapi.models.operations.GetWorkgroupDetailResponse getWorkgroupDetail(org.openapis.openapi.models.operations.GetWorkgroupDetailRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkgroupDetailPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/detail", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkgroupDetailRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/detail", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -641,7 +641,7 @@ public class Workgroup {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWorkgroupListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWorkgroupListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -760,12 +760,12 @@ public class Workgroup {
      */
     public org.openapis.openapi.models.operations.PutWorkgroupJsonResponse putWorkgroupJson(org.openapis.openapi.models.operations.PutWorkgroupJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutWorkgroupJsonPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/detail", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutWorkgroupJsonRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/detail", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "workgroupUpdPersistVO", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -881,12 +881,12 @@ public class Workgroup {
      */
     public org.openapis.openapi.models.operations.PutWorkgroupRawResponse putWorkgroupRaw(org.openapis.openapi.models.operations.PutWorkgroupRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutWorkgroupRawPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/detail", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutWorkgroupRawRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/detail", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
         

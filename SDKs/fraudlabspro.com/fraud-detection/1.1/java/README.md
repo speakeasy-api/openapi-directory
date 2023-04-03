@@ -19,7 +19,6 @@ import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.PostV1OrderFeedbackActionEnum;
 import org.openapis.openapi.models.operations.PostV1OrderFeedbackFormatEnum;
-import org.openapis.openapi.models.operations.PostV1OrderFeedbackQueryParams;
 import org.openapis.openapi.models.operations.PostV1OrderFeedbackRequest;
 import org.openapis.openapi.models.operations.PostV1OrderFeedbackResponse;
 
@@ -30,14 +29,12 @@ public class Application {
                 .build();
 
             PostV1OrderFeedbackRequest req = new PostV1OrderFeedbackRequest() {{
-                queryParams = new PostV1OrderFeedbackQueryParams() {{
-                    action = "REJECT";
-                    format = "xml";
-                    id = "distinctio";
-                    key = "quibusdam";
-                    notes = "unde";
-                }};
-            }};            
+                action = "REJECT";
+                format = "xml";
+                id = "distinctio";
+                key = "quibusdam";
+                notes = "unde";
+            }}            
 
             PostV1OrderFeedbackResponse res = sdk.postV1OrderFeedback(req);
 
@@ -51,7 +48,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

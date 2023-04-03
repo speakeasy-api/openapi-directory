@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CollectionsLinkedRegistrationsRelationshipsCreateRequest {
-    
-    public CollectionsLinkedRegistrationsRelationshipsCreatePathParams pathParams;
-    public CollectionsLinkedRegistrationsRelationshipsCreateRequest withPathParams(CollectionsLinkedRegistrationsRelationshipsCreatePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A short id for that collection
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection_id")
+    public String collectionId;
+    public CollectionsLinkedRegistrationsRelationshipsCreateRequest withCollectionId(String collectionId) {
+        this.collectionId = collectionId;
         return this;
     }
     

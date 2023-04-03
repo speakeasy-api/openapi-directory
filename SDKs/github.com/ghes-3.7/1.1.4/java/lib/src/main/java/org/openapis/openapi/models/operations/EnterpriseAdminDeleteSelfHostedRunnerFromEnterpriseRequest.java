@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminDeleteSelfHostedRunnerFromEnterpriseRequest {
+    /**
+     * The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
+    public String enterprise;
+    public EnterpriseAdminDeleteSelfHostedRunnerFromEnterpriseRequest withEnterprise(String enterprise) {
+        this.enterprise = enterprise;
+        return this;
+    }
     
-    public EnterpriseAdminDeleteSelfHostedRunnerFromEnterprisePathParams pathParams;
-    public EnterpriseAdminDeleteSelfHostedRunnerFromEnterpriseRequest withPathParams(EnterpriseAdminDeleteSelfHostedRunnerFromEnterprisePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the self-hosted runner.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=runner_id")
+    public Long runnerId;
+    public EnterpriseAdminDeleteSelfHostedRunnerFromEnterpriseRequest withRunnerId(Long runnerId) {
+        this.runnerId = runnerId;
         return this;
     }
     

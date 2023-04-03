@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFeaturedVideoCollectionRequest {
-    
-    public GetFeaturedVideoCollectionPathParams pathParams;
-    public GetFeaturedVideoCollectionRequest withPathParams(GetFeaturedVideoCollectionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * What information to include in the response, such as a URL to the collection
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=embed")
+    public GetFeaturedVideoCollectionEmbedEnum embed;
+    public GetFeaturedVideoCollectionRequest withEmbed(GetFeaturedVideoCollectionEmbedEnum embed) {
+        this.embed = embed;
         return this;
     }
     
-    
-    public GetFeaturedVideoCollectionQueryParams queryParams;
-    public GetFeaturedVideoCollectionRequest withQueryParams(GetFeaturedVideoCollectionQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetFeaturedVideoCollectionSecurity security;
-    public GetFeaturedVideoCollectionRequest withSecurity(GetFeaturedVideoCollectionSecurity security) {
-        this.security = security;
+    /**
+     * Collection ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetFeaturedVideoCollectionRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

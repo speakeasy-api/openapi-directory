@@ -4,20 +4,55 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TaskTemplatesListRequest {
-    
-    public TaskTemplatesListQueryParams queryParams;
-    public TaskTemplatesListRequest withQueryParams(TaskTemplatesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assignee_group")
+    public Long assigneeGroup;
+    public TaskTemplatesListRequest withAssigneeGroup(Long assigneeGroup) {
+        this.assigneeGroup = assigneeGroup;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assignee_user")
+    public Long assigneeUser;
+    public TaskTemplatesListRequest withAssigneeUser(Long assigneeUser) {
+        this.assigneeUser = assigneeUser;
+        return this;
+    }
     
-    public TaskTemplatesListSecurity security;
-    public TaskTemplatesListRequest withSecurity(TaskTemplatesListSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
+    public Long category;
+    public TaskTemplatesListRequest withCategory(Long category) {
+        this.category = category;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public TaskTemplatesListRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public TaskTemplatesListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public TaskTemplatesListRequest withSince(String since) {
+        this.since = since;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public Long status;
+    public TaskTemplatesListRequest withStatus(Long status) {
+        this.status = status;
         return this;
     }
     

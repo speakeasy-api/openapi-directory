@@ -34,27 +34,28 @@ public class Spreadsheets {
     /**
      * Applies one or more updates to the spreadsheet. Each request is validated before being applied. If any request is not valid then the entire request will fail and nothing will be applied. Some requests have replies to give you some information about how they are applied. The replies will mirror the requests. For example, if you applied 4 updates and the 3rd one had a reply, then the response will have 2 empty replies, the actual reply, and another empty reply, in that order. Due to the collaborative nature of spreadsheets, it is not guaranteed that the spreadsheet will reflect exactly your changes after this completes, however it is guaranteed that the updates in the request will be applied together atomically. Your changes may be altered with respect to collaborator changes. If there are no collaborators, the spreadsheet should reflect your changes.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SheetsSpreadsheetsBatchUpdateResponse sheetsSpreadsheetsBatchUpdate(org.openapis.openapi.models.operations.SheetsSpreadsheetsBatchUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SheetsSpreadsheetsBatchUpdateResponse sheetsSpreadsheetsBatchUpdate(org.openapis.openapi.models.operations.SheetsSpreadsheetsBatchUpdateRequest request, org.openapis.openapi.models.operations.SheetsSpreadsheetsBatchUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SheetsSpreadsheetsBatchUpdatePathParams.class, baseUrl, "/v4/spreadsheets/{spreadsheetId}:batchUpdate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SheetsSpreadsheetsBatchUpdateRequest.class, baseUrl, "/v4/spreadsheets/{spreadsheetId}:batchUpdate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "batchUpdateSpreadsheetRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SheetsSpreadsheetsBatchUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SheetsSpreadsheetsBatchUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,27 +82,28 @@ public class Spreadsheets {
     /**
      * Creates a spreadsheet, returning the newly created spreadsheet.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SheetsSpreadsheetsCreateResponse sheetsSpreadsheetsCreate(org.openapis.openapi.models.operations.SheetsSpreadsheetsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SheetsSpreadsheetsCreateResponse sheetsSpreadsheetsCreate(org.openapis.openapi.models.operations.SheetsSpreadsheetsCreateRequest request, org.openapis.openapi.models.operations.SheetsSpreadsheetsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v4/spreadsheets");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "spreadsheetInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SheetsSpreadsheetsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SheetsSpreadsheetsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -128,25 +130,26 @@ public class Spreadsheets {
     /**
      * Returns the developer metadata with the specified ID. The caller must specify the spreadsheet ID and the developer metadata's unique metadataId.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SheetsSpreadsheetsDeveloperMetadataGetResponse sheetsSpreadsheetsDeveloperMetadataGet(org.openapis.openapi.models.operations.SheetsSpreadsheetsDeveloperMetadataGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SheetsSpreadsheetsDeveloperMetadataGetResponse sheetsSpreadsheetsDeveloperMetadataGet(org.openapis.openapi.models.operations.SheetsSpreadsheetsDeveloperMetadataGetRequest request, org.openapis.openapi.models.operations.SheetsSpreadsheetsDeveloperMetadataGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SheetsSpreadsheetsDeveloperMetadataGetPathParams.class, baseUrl, "/v4/spreadsheets/{spreadsheetId}/developerMetadata/{metadataId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SheetsSpreadsheetsDeveloperMetadataGetRequest.class, baseUrl, "/v4/spreadsheets/{spreadsheetId}/developerMetadata/{metadataId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SheetsSpreadsheetsDeveloperMetadataGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SheetsSpreadsheetsDeveloperMetadataGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -173,27 +176,28 @@ public class Spreadsheets {
     /**
      * Returns all developer metadata matching the specified DataFilter. If the provided DataFilter represents a DeveloperMetadataLookup object, this will return all DeveloperMetadata entries selected by it. If the DataFilter represents a location in a spreadsheet, this will return all developer metadata associated with locations intersecting that region.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SheetsSpreadsheetsDeveloperMetadataSearchResponse sheetsSpreadsheetsDeveloperMetadataSearch(org.openapis.openapi.models.operations.SheetsSpreadsheetsDeveloperMetadataSearchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SheetsSpreadsheetsDeveloperMetadataSearchResponse sheetsSpreadsheetsDeveloperMetadataSearch(org.openapis.openapi.models.operations.SheetsSpreadsheetsDeveloperMetadataSearchRequest request, org.openapis.openapi.models.operations.SheetsSpreadsheetsDeveloperMetadataSearchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SheetsSpreadsheetsDeveloperMetadataSearchPathParams.class, baseUrl, "/v4/spreadsheets/{spreadsheetId}/developerMetadata:search", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SheetsSpreadsheetsDeveloperMetadataSearchRequest.class, baseUrl, "/v4/spreadsheets/{spreadsheetId}/developerMetadata:search", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "searchDeveloperMetadataRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SheetsSpreadsheetsDeveloperMetadataSearchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SheetsSpreadsheetsDeveloperMetadataSearchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -220,25 +224,26 @@ public class Spreadsheets {
     /**
      * Returns the spreadsheet at the given ID. The caller must specify the spreadsheet ID. By default, data within grids is not returned. You can include grid data in one of 2 ways: * Specify a [field mask](https://developers.google.com/sheets/api/guides/field-masks) listing your desired fields using the `fields` URL parameter in HTTP * Set the includeGridData URL parameter to true. If a field mask is set, the `includeGridData` parameter is ignored For large spreadsheets, as a best practice, retrieve only the specific spreadsheet fields that you want. To retrieve only subsets of spreadsheet data, use the ranges URL parameter. Ranges are specified using [A1 notation](/sheets/api/guides/concepts#cell). You can define a single cell (for example, `A1`) or multiple cells (for example, `A1:D5`). You can also get cells from other sheets within the same spreadsheet (for example, `Sheet2!A1:C4`) or retrieve multiple ranges at once (for example, `?ranges=A1:D5&amp;ranges=Sheet2!A1:C4`). Limiting the range returns only the portions of the spreadsheet that intersect the requested ranges.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SheetsSpreadsheetsGetResponse sheetsSpreadsheetsGet(org.openapis.openapi.models.operations.SheetsSpreadsheetsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SheetsSpreadsheetsGetResponse sheetsSpreadsheetsGet(org.openapis.openapi.models.operations.SheetsSpreadsheetsGetRequest request, org.openapis.openapi.models.operations.SheetsSpreadsheetsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SheetsSpreadsheetsGetPathParams.class, baseUrl, "/v4/spreadsheets/{spreadsheetId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SheetsSpreadsheetsGetRequest.class, baseUrl, "/v4/spreadsheets/{spreadsheetId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SheetsSpreadsheetsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SheetsSpreadsheetsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -265,27 +270,28 @@ public class Spreadsheets {
     /**
      * Returns the spreadsheet at the given ID. The caller must specify the spreadsheet ID. This method differs from GetSpreadsheet in that it allows selecting which subsets of spreadsheet data to return by specifying a dataFilters parameter. Multiple DataFilters can be specified. Specifying one or more data filters returns the portions of the spreadsheet that intersect ranges matched by any of the filters. By default, data within grids is not returned. You can include grid data one of 2 ways: * Specify a [field mask](https://developers.google.com/sheets/api/guides/field-masks) listing your desired fields using the `fields` URL parameter in HTTP * Set the includeGridData parameter to true. If a field mask is set, the `includeGridData` parameter is ignored For large spreadsheets, as a best practice, retrieve only the specific spreadsheet fields that you want.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SheetsSpreadsheetsGetByDataFilterResponse sheetsSpreadsheetsGetByDataFilter(org.openapis.openapi.models.operations.SheetsSpreadsheetsGetByDataFilterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SheetsSpreadsheetsGetByDataFilterResponse sheetsSpreadsheetsGetByDataFilter(org.openapis.openapi.models.operations.SheetsSpreadsheetsGetByDataFilterRequest request, org.openapis.openapi.models.operations.SheetsSpreadsheetsGetByDataFilterSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SheetsSpreadsheetsGetByDataFilterPathParams.class, baseUrl, "/v4/spreadsheets/{spreadsheetId}:getByDataFilter", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SheetsSpreadsheetsGetByDataFilterRequest.class, baseUrl, "/v4/spreadsheets/{spreadsheetId}:getByDataFilter", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "getSpreadsheetByDataFilterRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SheetsSpreadsheetsGetByDataFilterQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SheetsSpreadsheetsGetByDataFilterRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -312,27 +318,28 @@ public class Spreadsheets {
     /**
      * Copies a single sheet from a spreadsheet to another spreadsheet. Returns the properties of the newly created sheet.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SheetsSpreadsheetsSheetsCopyToResponse sheetsSpreadsheetsSheetsCopyTo(org.openapis.openapi.models.operations.SheetsSpreadsheetsSheetsCopyToRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SheetsSpreadsheetsSheetsCopyToResponse sheetsSpreadsheetsSheetsCopyTo(org.openapis.openapi.models.operations.SheetsSpreadsheetsSheetsCopyToRequest request, org.openapis.openapi.models.operations.SheetsSpreadsheetsSheetsCopyToSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SheetsSpreadsheetsSheetsCopyToPathParams.class, baseUrl, "/v4/spreadsheets/{spreadsheetId}/sheets/{sheetId}:copyTo", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SheetsSpreadsheetsSheetsCopyToRequest.class, baseUrl, "/v4/spreadsheets/{spreadsheetId}/sheets/{sheetId}:copyTo", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "copySheetToAnotherSpreadsheetRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SheetsSpreadsheetsSheetsCopyToQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SheetsSpreadsheetsSheetsCopyToRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -359,27 +366,28 @@ public class Spreadsheets {
     /**
      * Appends values to a spreadsheet. The input range is used to search for existing data and find a "table" within that range. Values will be appended to the next row of the table, starting with the first column of the table. See the [guide](/sheets/api/guides/values#appending_values) and [sample code](/sheets/api/samples/writing#append_values) for specific details of how tables are detected and data is appended. The caller must specify the spreadsheet ID, range, and a valueInputOption. The `valueInputOption` only controls how the input data will be added to the sheet (column-wise or row-wise), it does not influence what cell the data starts being written to.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesAppendResponse sheetsSpreadsheetsValuesAppend(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesAppendRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesAppendResponse sheetsSpreadsheetsValuesAppend(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesAppendRequest request, org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesAppendSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesAppendPathParams.class, baseUrl, "/v4/spreadsheets/{spreadsheetId}/values/{range}:append", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesAppendRequest.class, baseUrl, "/v4/spreadsheets/{spreadsheetId}/values/{range}:append", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "valueRange", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesAppendQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesAppendRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -406,27 +414,28 @@ public class Spreadsheets {
     /**
      * Clears one or more ranges of values from a spreadsheet. The caller must specify the spreadsheet ID and one or more ranges. Only values are cleared -- all other properties of the cell (such as formatting and data validation) are kept.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchClearResponse sheetsSpreadsheetsValuesBatchClear(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchClearRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchClearResponse sheetsSpreadsheetsValuesBatchClear(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchClearRequest request, org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchClearSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchClearPathParams.class, baseUrl, "/v4/spreadsheets/{spreadsheetId}/values:batchClear", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchClearRequest.class, baseUrl, "/v4/spreadsheets/{spreadsheetId}/values:batchClear", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "batchClearValuesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchClearQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchClearRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -453,27 +462,28 @@ public class Spreadsheets {
     /**
      * Clears one or more ranges of values from a spreadsheet. The caller must specify the spreadsheet ID and one or more DataFilters. Ranges matching any of the specified data filters will be cleared. Only values are cleared -- all other properties of the cell (such as formatting, data validation, etc..) are kept.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchClearByDataFilterResponse sheetsSpreadsheetsValuesBatchClearByDataFilter(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchClearByDataFilterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchClearByDataFilterResponse sheetsSpreadsheetsValuesBatchClearByDataFilter(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchClearByDataFilterRequest request, org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchClearByDataFilterSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchClearByDataFilterPathParams.class, baseUrl, "/v4/spreadsheets/{spreadsheetId}/values:batchClearByDataFilter", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchClearByDataFilterRequest.class, baseUrl, "/v4/spreadsheets/{spreadsheetId}/values:batchClearByDataFilter", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "batchClearValuesByDataFilterRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchClearByDataFilterQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchClearByDataFilterRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -500,25 +510,26 @@ public class Spreadsheets {
     /**
      * Returns one or more ranges of values from a spreadsheet. The caller must specify the spreadsheet ID and one or more ranges.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchGetResponse sheetsSpreadsheetsValuesBatchGet(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchGetResponse sheetsSpreadsheetsValuesBatchGet(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchGetRequest request, org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchGetPathParams.class, baseUrl, "/v4/spreadsheets/{spreadsheetId}/values:batchGet", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchGetRequest.class, baseUrl, "/v4/spreadsheets/{spreadsheetId}/values:batchGet", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -545,27 +556,28 @@ public class Spreadsheets {
     /**
      * Returns one or more ranges of values that match the specified data filters. The caller must specify the spreadsheet ID and one or more DataFilters. Ranges that match any of the data filters in the request will be returned.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchGetByDataFilterResponse sheetsSpreadsheetsValuesBatchGetByDataFilter(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchGetByDataFilterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchGetByDataFilterResponse sheetsSpreadsheetsValuesBatchGetByDataFilter(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchGetByDataFilterRequest request, org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchGetByDataFilterSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchGetByDataFilterPathParams.class, baseUrl, "/v4/spreadsheets/{spreadsheetId}/values:batchGetByDataFilter", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchGetByDataFilterRequest.class, baseUrl, "/v4/spreadsheets/{spreadsheetId}/values:batchGetByDataFilter", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "batchGetValuesByDataFilterRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchGetByDataFilterQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchGetByDataFilterRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -592,27 +604,28 @@ public class Spreadsheets {
     /**
      * Sets values in one or more ranges of a spreadsheet. The caller must specify the spreadsheet ID, a valueInputOption, and one or more ValueRanges.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchUpdateResponse sheetsSpreadsheetsValuesBatchUpdate(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchUpdateResponse sheetsSpreadsheetsValuesBatchUpdate(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchUpdateRequest request, org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchUpdatePathParams.class, baseUrl, "/v4/spreadsheets/{spreadsheetId}/values:batchUpdate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchUpdateRequest.class, baseUrl, "/v4/spreadsheets/{spreadsheetId}/values:batchUpdate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "batchUpdateValuesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -639,27 +652,28 @@ public class Spreadsheets {
     /**
      * Sets values in one or more ranges of a spreadsheet. The caller must specify the spreadsheet ID, a valueInputOption, and one or more DataFilterValueRanges.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchUpdateByDataFilterResponse sheetsSpreadsheetsValuesBatchUpdateByDataFilter(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchUpdateByDataFilterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchUpdateByDataFilterResponse sheetsSpreadsheetsValuesBatchUpdateByDataFilter(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchUpdateByDataFilterRequest request, org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchUpdateByDataFilterSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchUpdateByDataFilterPathParams.class, baseUrl, "/v4/spreadsheets/{spreadsheetId}/values:batchUpdateByDataFilter", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchUpdateByDataFilterRequest.class, baseUrl, "/v4/spreadsheets/{spreadsheetId}/values:batchUpdateByDataFilter", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "batchUpdateValuesByDataFilterRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchUpdateByDataFilterQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesBatchUpdateByDataFilterRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -686,27 +700,28 @@ public class Spreadsheets {
     /**
      * Clears values from a spreadsheet. The caller must specify the spreadsheet ID and range. Only values are cleared -- all other properties of the cell (such as formatting, data validation, etc..) are kept.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesClearResponse sheetsSpreadsheetsValuesClear(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesClearRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesClearResponse sheetsSpreadsheetsValuesClear(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesClearRequest request, org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesClearSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesClearPathParams.class, baseUrl, "/v4/spreadsheets/{spreadsheetId}/values/{range}:clear", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesClearRequest.class, baseUrl, "/v4/spreadsheets/{spreadsheetId}/values/{range}:clear", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesClearQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesClearRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -733,25 +748,26 @@ public class Spreadsheets {
     /**
      * Returns a range of values from a spreadsheet. The caller must specify the spreadsheet ID and a range.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesGetResponse sheetsSpreadsheetsValuesGet(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesGetResponse sheetsSpreadsheetsValuesGet(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesGetRequest request, org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesGetPathParams.class, baseUrl, "/v4/spreadsheets/{spreadsheetId}/values/{range}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesGetRequest.class, baseUrl, "/v4/spreadsheets/{spreadsheetId}/values/{range}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -778,27 +794,28 @@ public class Spreadsheets {
     /**
      * Sets values in a range of a spreadsheet. The caller must specify the spreadsheet ID, range, and a valueInputOption.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesUpdateResponse sheetsSpreadsheetsValuesUpdate(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesUpdateResponse sheetsSpreadsheetsValuesUpdate(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesUpdateRequest request, org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesUpdatePathParams.class, baseUrl, "/v4/spreadsheets/{spreadsheetId}/values/{range}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesUpdateRequest.class, baseUrl, "/v4/spreadsheets/{spreadsheetId}/values/{range}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "valueRange", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SheetsSpreadsheetsValuesUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

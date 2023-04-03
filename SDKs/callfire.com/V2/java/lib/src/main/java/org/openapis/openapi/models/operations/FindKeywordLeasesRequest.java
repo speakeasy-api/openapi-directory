@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FindKeywordLeasesRequest {
-    
-    public FindKeywordLeasesQueryParams queryParams;
-    public FindKeywordLeasesRequest withQueryParams(FindKeywordLeasesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public FindKeywordLeasesRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     
+    /**
+     * Filter by part of Keyword name or Label name of Keyword
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public FindKeywordLeasesRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
     
-    public FindKeywordLeasesSecurity security;
-    public FindKeywordLeasesRequest withSecurity(FindKeywordLeasesSecurity security) {
-        this.security = security;
+    /**
+     * An exact label name to search by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=labelName")
+    public String labelName;
+    public FindKeywordLeasesRequest withLabelName(String labelName) {
+        this.labelName = labelName;
+        return this;
+    }
+    
+    /**
+     * To set the maximum number of records to return in a paged list response. The default is 100
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public FindKeywordLeasesRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Offset to the start of a given page. The default is 0. Check [pagination](https://developers.callfire.com/docs.html#pagination) page for more information about pagination in CallFire API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public FindKeywordLeasesRequest withOffset(Integer offset) {
+        this.offset = offset;
         return this;
     }
     

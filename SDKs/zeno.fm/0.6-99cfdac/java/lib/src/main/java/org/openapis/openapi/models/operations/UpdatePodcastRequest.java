@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePodcastRequest {
-    
-    public UpdatePodcastPathParams pathParams;
-    public UpdatePodcastRequest withPathParams(UpdatePodcastPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public UpdatePodcastRequestBody requestBody;
+    public UpdatePodcastRequest withRequestBody(UpdatePodcastRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public UpdatePodcastRequestBody request;
-    public UpdatePodcastRequest withRequest(UpdatePodcastRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=podcastKey")
+    public String podcastKey;
+    public UpdatePodcastRequest withPodcastKey(String podcastKey) {
+        this.podcastKey = podcastKey;
         return this;
     }
     

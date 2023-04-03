@@ -4,13 +4,38 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProjectedPlayerGameStatsByPlayerRequest {
+    /**
+     * The date of the game(s).
+     * &lt;br&gt;Examples: &lt;code&gt;2018-FEB-27&lt;/code&gt;, &lt;code&gt;2017-DEC-01&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=date")
+    public String date;
+    public ProjectedPlayerGameStatsByPlayerRequest withDate(String date) {
+        this.date = date;
+        return this;
+    }
     
-    public ProjectedPlayerGameStatsByPlayerPathParams pathParams;
-    public ProjectedPlayerGameStatsByPlayerRequest withPathParams(ProjectedPlayerGameStatsByPlayerPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public ProjectedPlayerGameStatsByPlayerFormatEnum format;
+    public ProjectedPlayerGameStatsByPlayerRequest withFormat(ProjectedPlayerGameStatsByPlayerFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * Unique FantasyData Player ID.
+     * Example:&lt;code&gt;60003802&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=playerid")
+    public String playerid;
+    public ProjectedPlayerGameStatsByPlayerRequest withPlayerid(String playerid) {
+        this.playerid = playerid;
         return this;
     }
     

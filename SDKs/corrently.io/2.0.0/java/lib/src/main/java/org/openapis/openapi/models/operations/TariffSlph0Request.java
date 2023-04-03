@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TariffSlph0Request {
-    
-    public TariffSlph0QueryParams queryParams;
-    public TariffSlph0Request withQueryParams(TariffSlph0QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Zipcode (Postzleitzahl) of a city in Germany.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=zipcode")
+    public String zipcode;
+    public TariffSlph0Request withZipcode(String zipcode) {
+        this.zipcode = zipcode;
         return this;
     }
     

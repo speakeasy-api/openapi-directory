@@ -4,27 +4,166 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DnsDnsKeysGetRequest {
-    
-    public DnsDnsKeysGetPathParams pathParams;
-    public DnsDnsKeysGetRequest withPathParams(DnsDnsKeysGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public DnsDnsKeysGetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public DnsDnsKeysGetQueryParams queryParams;
-    public DnsDnsKeysGetRequest withQueryParams(DnsDnsKeysGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public DnsDnsKeysGetRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DnsDnsKeysGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public DnsDnsKeysGetSecurity security;
-    public DnsDnsKeysGetRequest withSecurity(DnsDnsKeysGetSecurity security) {
-        this.security = security;
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public DnsDnsKeysGetRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * For mutating operation requests only. An optional identifier specified by the client. Must be unique for operation resources in the Operations collection.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientOperationId")
+    public String clientOperationId;
+    public DnsDnsKeysGetRequest withClientOperationId(String clientOperationId) {
+        this.clientOperationId = clientOperationId;
+        return this;
+    }
+    
+    /**
+     * An optional comma-separated list of digest types to compute and display for key signing keys. If omitted, the recommended digest type is computed and displayed.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=digestType")
+    public String digestType;
+    public DnsDnsKeysGetRequest withDigestType(String digestType) {
+        this.digestType = digestType;
+        return this;
+    }
+    
+    /**
+     * The identifier of the requested DnsKey.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dnsKeyId")
+    public String dnsKeyId;
+    public DnsDnsKeysGetRequest withDnsKeyId(String dnsKeyId) {
+        this.dnsKeyId = dnsKeyId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DnsDnsKeysGetRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DnsDnsKeysGetRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Identifies the managed zone addressed by this request. Can be the managed zone name or ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=managedZone")
+    public String managedZone;
+    public DnsDnsKeysGetRequest withManagedZone(String managedZone) {
+        this.managedZone = managedZone;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DnsDnsKeysGetRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DnsDnsKeysGetRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Identifies the project addressed by this request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public DnsDnsKeysGetRequest withProject(String project) {
+        this.project = project;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DnsDnsKeysGetRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public DnsDnsKeysGetRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public DnsDnsKeysGetRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

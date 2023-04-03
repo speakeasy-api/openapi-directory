@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteTokenRequest {
-    
-    public DeleteTokenPathParams pathParams;
-    public DeleteTokenRequest withPathParams(DeleteTokenPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteTokenSecurity security;
-    public DeleteTokenRequest withSecurity(DeleteTokenSecurity security) {
-        this.security = security;
+    /**
+     * Token number
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tokenNumber")
+    public String tokenNumber;
+    public DeleteTokenRequest withTokenNumber(String tokenNumber) {
+        this.tokenNumber = tokenNumber;
         return this;
     }
     

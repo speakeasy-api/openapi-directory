@@ -4,13 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchHealthProfilesRequest {
+    /**
+     * Comma-separated list of group ids. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, or `filter[organization]`.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[groups]")
+    public String filterGroups;
+    public FetchHealthProfilesRequest withFilterGroups(String filterGroups) {
+        this.filterGroups = filterGroups;
+        return this;
+    }
     
-    public FetchHealthProfilesQueryParams queryParams;
-    public FetchHealthProfilesRequest withQueryParams(FetchHealthProfilesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Fitbit Plus organization id. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, or `filter[organization]`.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[organization]")
+    public String filterOrganization;
+    public FetchHealthProfilesRequest withFilterOrganization(String filterOrganization) {
+        this.filterOrganization = filterOrganization;
+        return this;
+    }
+    
+    /**
+     * Patient id to fetch health profile. Note that one of the following filters must be specified: `filter[patient]`, `filter[group]`, or `filter[organization]`.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[patient]")
+    public String filterPatient;
+    public FetchHealthProfilesRequest withFilterPatient(String filterPatient) {
+        this.filterPatient = filterPatient;
+        return this;
+    }
+    
+    /**
+     * List of related resources to include in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include")
+    public FetchHealthProfilesIncludeEnum include;
+    public FetchHealthProfilesRequest withInclude(FetchHealthProfilesIncludeEnum include) {
+        this.include = include;
+        return this;
+    }
+    
+    /**
+     * Page cursor
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[cursor]")
+    public String pageCursor;
+    public FetchHealthProfilesRequest withPageCursor(String pageCursor) {
+        this.pageCursor = pageCursor;
+        return this;
+    }
+    
+    /**
+     * Page limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[limit]")
+    public Long pageLimit;
+    public FetchHealthProfilesRequest withPageLimit(Long pageLimit) {
+        this.pageLimit = pageLimit;
+        return this;
+    }
+    
+    /**
+     * Page number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[number]")
+    public Long pageNumber;
+    public FetchHealthProfilesRequest withPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    
+    /**
+     * Page size
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[size]")
+    public Long pageSize;
+    public FetchHealthProfilesRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

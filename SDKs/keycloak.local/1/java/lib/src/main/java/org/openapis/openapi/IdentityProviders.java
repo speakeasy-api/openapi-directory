@@ -40,7 +40,7 @@ public class IdentityProviders {
      */
     public org.openapis.openapi.models.operations.DeleteRealmIdentityProviderInstancesAliasResponse deleteRealmIdentityProviderInstancesAlias(org.openapis.openapi.models.operations.DeleteRealmIdentityProviderInstancesAliasRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmIdentityProviderInstancesAliasPathParams.class, baseUrl, "/{realm}/identity-provider/instances/{alias}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmIdentityProviderInstancesAliasRequest.class, baseUrl, "/{realm}/identity-provider/instances/{alias}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -73,7 +73,7 @@ public class IdentityProviders {
      */
     public org.openapis.openapi.models.operations.DeleteRealmIdentityProviderInstancesAliasMappersIdResponse deleteRealmIdentityProviderInstancesAliasMappersId(org.openapis.openapi.models.operations.DeleteRealmIdentityProviderInstancesAliasMappersIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmIdentityProviderInstancesAliasMappersIdPathParams.class, baseUrl, "/{realm}/identity-provider/instances/{alias}/mappers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmIdentityProviderInstancesAliasMappersIdRequest.class, baseUrl, "/{realm}/identity-provider/instances/{alias}/mappers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -106,7 +106,7 @@ public class IdentityProviders {
      */
     public org.openapis.openapi.models.operations.GetRealmIdentityProviderInstancesResponse getRealmIdentityProviderInstances(org.openapis.openapi.models.operations.GetRealmIdentityProviderInstancesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmIdentityProviderInstancesPathParams.class, baseUrl, "/{realm}/identity-provider/instances", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmIdentityProviderInstancesRequest.class, baseUrl, "/{realm}/identity-provider/instances", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -145,7 +145,7 @@ public class IdentityProviders {
      */
     public org.openapis.openapi.models.operations.GetRealmIdentityProviderInstancesAliasResponse getRealmIdentityProviderInstancesAlias(org.openapis.openapi.models.operations.GetRealmIdentityProviderInstancesAliasRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmIdentityProviderInstancesAliasPathParams.class, baseUrl, "/{realm}/identity-provider/instances/{alias}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmIdentityProviderInstancesAliasRequest.class, baseUrl, "/{realm}/identity-provider/instances/{alias}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -184,13 +184,13 @@ public class IdentityProviders {
      */
     public org.openapis.openapi.models.operations.GetRealmIdentityProviderInstancesAliasExportResponse getRealmIdentityProviderInstancesAliasExport(org.openapis.openapi.models.operations.GetRealmIdentityProviderInstancesAliasExportRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmIdentityProviderInstancesAliasExportPathParams.class, baseUrl, "/{realm}/identity-provider/instances/{alias}/export", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmIdentityProviderInstancesAliasExportRequest.class, baseUrl, "/{realm}/identity-provider/instances/{alias}/export", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRealmIdentityProviderInstancesAliasExportQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRealmIdentityProviderInstancesAliasExportRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -223,7 +223,7 @@ public class IdentityProviders {
      */
     public org.openapis.openapi.models.operations.GetRealmIdentityProviderInstancesAliasManagementPermissionsResponse getRealmIdentityProviderInstancesAliasManagementPermissions(org.openapis.openapi.models.operations.GetRealmIdentityProviderInstancesAliasManagementPermissionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmIdentityProviderInstancesAliasManagementPermissionsPathParams.class, baseUrl, "/{realm}/identity-provider/instances/{alias}/management/permissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmIdentityProviderInstancesAliasManagementPermissionsRequest.class, baseUrl, "/{realm}/identity-provider/instances/{alias}/management/permissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -262,7 +262,7 @@ public class IdentityProviders {
      */
     public org.openapis.openapi.models.operations.GetRealmIdentityProviderInstancesAliasMapperTypesResponse getRealmIdentityProviderInstancesAliasMapperTypes(org.openapis.openapi.models.operations.GetRealmIdentityProviderInstancesAliasMapperTypesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmIdentityProviderInstancesAliasMapperTypesPathParams.class, baseUrl, "/{realm}/identity-provider/instances/{alias}/mapper-types", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmIdentityProviderInstancesAliasMapperTypesRequest.class, baseUrl, "/{realm}/identity-provider/instances/{alias}/mapper-types", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -295,7 +295,7 @@ public class IdentityProviders {
      */
     public org.openapis.openapi.models.operations.GetRealmIdentityProviderInstancesAliasMappersResponse getRealmIdentityProviderInstancesAliasMappers(org.openapis.openapi.models.operations.GetRealmIdentityProviderInstancesAliasMappersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmIdentityProviderInstancesAliasMappersPathParams.class, baseUrl, "/{realm}/identity-provider/instances/{alias}/mappers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmIdentityProviderInstancesAliasMappersRequest.class, baseUrl, "/{realm}/identity-provider/instances/{alias}/mappers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -334,7 +334,7 @@ public class IdentityProviders {
      */
     public org.openapis.openapi.models.operations.GetRealmIdentityProviderInstancesAliasMappersIdResponse getRealmIdentityProviderInstancesAliasMappersId(org.openapis.openapi.models.operations.GetRealmIdentityProviderInstancesAliasMappersIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmIdentityProviderInstancesAliasMappersIdPathParams.class, baseUrl, "/{realm}/identity-provider/instances/{alias}/mappers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmIdentityProviderInstancesAliasMappersIdRequest.class, baseUrl, "/{realm}/identity-provider/instances/{alias}/mappers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -373,7 +373,7 @@ public class IdentityProviders {
      */
     public org.openapis.openapi.models.operations.GetRealmIdentityProviderProvidersProviderIdResponse getRealmIdentityProviderProvidersProviderId(org.openapis.openapi.models.operations.GetRealmIdentityProviderProvidersProviderIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmIdentityProviderProvidersProviderIdPathParams.class, baseUrl, "/{realm}/identity-provider/providers/{provider_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmIdentityProviderProvidersProviderIdRequest.class, baseUrl, "/{realm}/identity-provider/providers/{provider_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -406,7 +406,7 @@ public class IdentityProviders {
      */
     public org.openapis.openapi.models.operations.PostRealmIdentityProviderImportConfigResponse postRealmIdentityProviderImportConfig(org.openapis.openapi.models.operations.PostRealmIdentityProviderImportConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmIdentityProviderImportConfigPathParams.class, baseUrl, "/{realm}/identity-provider/import-config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmIdentityProviderImportConfigRequest.class, baseUrl, "/{realm}/identity-provider/import-config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -445,12 +445,12 @@ public class IdentityProviders {
      */
     public org.openapis.openapi.models.operations.PostRealmIdentityProviderInstancesResponse postRealmIdentityProviderInstances(org.openapis.openapi.models.operations.PostRealmIdentityProviderInstancesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmIdentityProviderInstancesPathParams.class, baseUrl, "/{realm}/identity-provider/instances", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmIdentityProviderInstancesRequest.class, baseUrl, "/{realm}/identity-provider/instances", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "identityProviderRepresentation", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -483,12 +483,12 @@ public class IdentityProviders {
      */
     public org.openapis.openapi.models.operations.PostRealmIdentityProviderInstancesAliasMappersResponse postRealmIdentityProviderInstancesAliasMappers(org.openapis.openapi.models.operations.PostRealmIdentityProviderInstancesAliasMappersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmIdentityProviderInstancesAliasMappersPathParams.class, baseUrl, "/{realm}/identity-provider/instances/{alias}/mappers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmIdentityProviderInstancesAliasMappersRequest.class, baseUrl, "/{realm}/identity-provider/instances/{alias}/mappers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "identityProviderMapperRepresentation", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -521,12 +521,12 @@ public class IdentityProviders {
      */
     public org.openapis.openapi.models.operations.PutRealmIdentityProviderInstancesAliasResponse putRealmIdentityProviderInstancesAlias(org.openapis.openapi.models.operations.PutRealmIdentityProviderInstancesAliasRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmIdentityProviderInstancesAliasPathParams.class, baseUrl, "/{realm}/identity-provider/instances/{alias}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmIdentityProviderInstancesAliasRequest.class, baseUrl, "/{realm}/identity-provider/instances/{alias}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "identityProviderRepresentation", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -559,12 +559,12 @@ public class IdentityProviders {
      */
     public org.openapis.openapi.models.operations.PutRealmIdentityProviderInstancesAliasManagementPermissionsResponse putRealmIdentityProviderInstancesAliasManagementPermissions(org.openapis.openapi.models.operations.PutRealmIdentityProviderInstancesAliasManagementPermissionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmIdentityProviderInstancesAliasManagementPermissionsPathParams.class, baseUrl, "/{realm}/identity-provider/instances/{alias}/management/permissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmIdentityProviderInstancesAliasManagementPermissionsRequest.class, baseUrl, "/{realm}/identity-provider/instances/{alias}/management/permissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "managementPermissionReference", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -603,12 +603,12 @@ public class IdentityProviders {
      */
     public org.openapis.openapi.models.operations.PutRealmIdentityProviderInstancesAliasMappersIdResponse putRealmIdentityProviderInstancesAliasMappersId(org.openapis.openapi.models.operations.PutRealmIdentityProviderInstancesAliasMappersIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmIdentityProviderInstancesAliasMappersIdPathParams.class, baseUrl, "/{realm}/identity-provider/instances/{alias}/mappers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmIdentityProviderInstancesAliasMappersIdRequest.class, baseUrl, "/{realm}/identity-provider/instances/{alias}/mappers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "identityProviderMapperRepresentation", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

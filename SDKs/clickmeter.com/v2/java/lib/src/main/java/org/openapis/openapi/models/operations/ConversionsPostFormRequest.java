@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConversionsPostFormRequest {
-    
-    public ConversionsPostFormPathParams pathParams;
-    public ConversionsPostFormRequest withPathParams(ConversionsPostFormPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated body of the conversion
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.ApiCoreDtoConversionsConversion request;
-    public ConversionsPostFormRequest withRequest(org.openapis.openapi.models.shared.ApiCoreDtoConversionsConversion request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ApiCoreDtoConversionsConversion apiCoreDtoConversionsConversion;
+    public ConversionsPostFormRequest withApiCoreDtoConversionsConversion(org.openapis.openapi.models.shared.ApiCoreDtoConversionsConversion apiCoreDtoConversionsConversion) {
+        this.apiCoreDtoConversionsConversion = apiCoreDtoConversionsConversion;
+        return this;
+    }
+    
+    /**
+     * Id of the conversion
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversionId")
+    public Long conversionId;
+    public ConversionsPostFormRequest withConversionId(Long conversionId) {
+        this.conversionId = conversionId;
         return this;
     }
     

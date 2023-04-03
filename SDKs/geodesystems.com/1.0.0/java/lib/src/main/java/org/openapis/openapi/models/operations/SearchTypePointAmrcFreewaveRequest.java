@@ -4,13 +4,217 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchTypePointAmrcFreewaveRequest {
+    /**
+     * Archive change date from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.from")
+    public OffsetDateTime changedateFrom;
+    public SearchTypePointAmrcFreewaveRequest withChangedateFrom(OffsetDateTime changedateFrom) {
+        this.changedateFrom = changedateFrom;
+        return this;
+    }
     
-    public SearchTypePointAmrcFreewaveQueryParams queryParams;
-    public SearchTypePointAmrcFreewaveRequest withQueryParams(SearchTypePointAmrcFreewaveQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Archive change date to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.to")
+    public OffsetDateTime changedateTo;
+    public SearchTypePointAmrcFreewaveRequest withChangedateTo(OffsetDateTime changedateTo) {
+        this.changedateTo = changedateTo;
+        return this;
+    }
+    
+    /**
+     * Archive create date from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.from")
+    public OffsetDateTime createdateFrom;
+    public SearchTypePointAmrcFreewaveRequest withCreatedateFrom(OffsetDateTime createdateFrom) {
+        this.createdateFrom = createdateFrom;
+        return this;
+    }
+    
+    /**
+     * Archive create date to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.to")
+    public OffsetDateTime createdateTo;
+    public SearchTypePointAmrcFreewaveRequest withCreatedateTo(OffsetDateTime createdateTo) {
+        this.createdateTo = createdateTo;
+        return this;
+    }
+    
+    /**
+     * Search description
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
+    public String description;
+    public SearchTypePointAmrcFreewaveRequest withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    
+    /**
+     * File suffix
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filesuffix")
+    public String filesuffix;
+    public SearchTypePointAmrcFreewaveRequest withFilesuffix(String filesuffix) {
+        this.filesuffix = filesuffix;
+        return this;
+    }
+    
+    /**
+     * From date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
+    public OffsetDateTime fromdate;
+    public SearchTypePointAmrcFreewaveRequest withFromdate(OffsetDateTime fromdate) {
+        this.fromdate = fromdate;
+        return this;
+    }
+    
+    /**
+     * Parent entry
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
+    public String group;
+    public SearchTypePointAmrcFreewaveRequest withGroup(String group) {
+        this.group = group;
+        return this;
+    }
+    
+    /**
+     * Max number of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
+    public Long max;
+    public SearchTypePointAmrcFreewaveRequest withMax(Long max) {
+        this.max = max;
+        return this;
+    }
+    
+    /**
+     * Northern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlatitude")
+    public Float maxlatitude;
+    public SearchTypePointAmrcFreewaveRequest withMaxlatitude(Float maxlatitude) {
+        this.maxlatitude = maxlatitude;
+        return this;
+    }
+    
+    /**
+     * Eastern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlongitude")
+    public Float maxlongitude;
+    public SearchTypePointAmrcFreewaveRequest withMaxlongitude(Float maxlongitude) {
+        this.maxlongitude = maxlongitude;
+        return this;
+    }
+    
+    /**
+     * Southern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlatitude")
+    public Float minlatitude;
+    public SearchTypePointAmrcFreewaveRequest withMinlatitude(Float minlatitude) {
+        this.minlatitude = minlatitude;
+        return this;
+    }
+    
+    /**
+     * Western bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlongitude")
+    public Float minlongitude;
+    public SearchTypePointAmrcFreewaveRequest withMinlongitude(Float minlongitude) {
+        this.minlongitude = minlongitude;
+        return this;
+    }
+    
+    /**
+     * Search name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public SearchTypePointAmrcFreewaveRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Data Logger Model
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_point_amrc_freewave.datalogger_model")
+    public String searchTypePointAmrcFreewaveDataloggerModel;
+    public SearchTypePointAmrcFreewaveRequest withSearchTypePointAmrcFreewaveDataloggerModel(String searchTypePointAmrcFreewaveDataloggerModel) {
+        this.searchTypePointAmrcFreewaveDataloggerModel = searchTypePointAmrcFreewaveDataloggerModel;
+        return this;
+    }
+    
+    /**
+     * Data Logger Serial
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_point_amrc_freewave.datalogger_serial")
+    public String searchTypePointAmrcFreewaveDataloggerSerial;
+    public SearchTypePointAmrcFreewaveRequest withSearchTypePointAmrcFreewaveDataloggerSerial(String searchTypePointAmrcFreewaveDataloggerSerial) {
+        this.searchTypePointAmrcFreewaveDataloggerSerial = searchTypePointAmrcFreewaveDataloggerSerial;
+        return this;
+    }
+    
+    /**
+     * File Format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_point_amrc_freewave.format")
+    public String searchTypePointAmrcFreewaveFormat;
+    public SearchTypePointAmrcFreewaveRequest withSearchTypePointAmrcFreewaveFormat(String searchTypePointAmrcFreewaveFormat) {
+        this.searchTypePointAmrcFreewaveFormat = searchTypePointAmrcFreewaveFormat;
+        return this;
+    }
+    
+    /**
+     * Station Name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_point_amrc_freewave.station_name")
+    public String searchTypePointAmrcFreewaveStationName;
+    public SearchTypePointAmrcFreewaveRequest withSearchTypePointAmrcFreewaveStationName(String searchTypePointAmrcFreewaveStationName) {
+        this.searchTypePointAmrcFreewaveStationName = searchTypePointAmrcFreewaveStationName;
+        return this;
+    }
+    
+    /**
+     * Number to skip
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
+    public Long skip;
+    public SearchTypePointAmrcFreewaveRequest withSkip(Long skip) {
+        this.skip = skip;
+        return this;
+    }
+    
+    /**
+     * Search text
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
+    public String text;
+    public SearchTypePointAmrcFreewaveRequest withText(String text) {
+        this.text = text;
+        return this;
+    }
+    
+    /**
+     * To date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
+    public OffsetDateTime todate;
+    public SearchTypePointAmrcFreewaveRequest withTodate(OffsetDateTime todate) {
+        this.todate = todate;
         return this;
     }
     

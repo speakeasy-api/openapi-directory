@@ -7,31 +7,52 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateClientAddressRequest {
-    
-    public CreateClientAddressPathParams pathParams;
-    public CreateClientAddressRequest withPathParams(CreateClientAddressPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public CreateClientAddressRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public CreateClientAddressQueryParams queryParams;
-    public CreateClientAddressRequest withQueryParams(CreateClientAddressQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public CreateClientAddressHeaders headers;
-    public CreateClientAddressRequest withHeaders(CreateClientAddressHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public CreateClientAddressRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Address request;
-    public CreateClientAddressRequest withRequest(org.openapis.openapi.models.shared.Address request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Address address;
+    public CreateClientAddressRequest withAddress(org.openapis.openapi.models.shared.Address address) {
+        this.address = address;
+        return this;
+    }
+    
+    /**
+     * The `profileId` path parameter may be substituted by other profile fields in this request. When making this request, send the `alternativeKey` parameter with a value equal to the key of the field you wish to use as `profileId`.
+     * 
+     * &gt; Currently, there are two possible values for this parameter: `email` and `document`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alternativeKey")
+    public String alternativeKey;
+    public CreateClientAddressRequest withAlternativeKey(String alternativeKey) {
+        this.alternativeKey = alternativeKey;
+        return this;
+    }
+    
+    /**
+     * ID of the client's profile as returned by the Create profile endpoint's response, in the `id` field. It can also be an `alternativeKey` according to your custom profile schema. In this case, this request should also send the `alternativeKey` parameter.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
+    public String profileId;
+    public CreateClientAddressRequest withProfileId(String profileId) {
+        this.profileId = profileId;
         return this;
     }
     

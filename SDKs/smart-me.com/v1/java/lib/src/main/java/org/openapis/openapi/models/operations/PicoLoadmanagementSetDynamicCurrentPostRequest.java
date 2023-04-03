@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PicoLoadmanagementSetDynamicCurrentPostRequest {
-    
-    public PicoLoadmanagementSetDynamicCurrentPostPathParams pathParams;
-    public PicoLoadmanagementSetDynamicCurrentPostRequest withPathParams(PicoLoadmanagementSetDynamicCurrentPostPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The dynamic current of the group (in mA)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=current")
+    public Integer current;
+    public PicoLoadmanagementSetDynamicCurrentPostRequest withCurrent(Integer current) {
+        this.current = current;
         return this;
     }
     
-    
-    public PicoLoadmanagementSetDynamicCurrentPostQueryParams queryParams;
-    public PicoLoadmanagementSetDynamicCurrentPostRequest withQueryParams(PicoLoadmanagementSetDynamicCurrentPostQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The serial number can be any pico serial in the group (e.g. 700001)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public Long serial;
+    public PicoLoadmanagementSetDynamicCurrentPostRequest withSerial(Long serial) {
+        this.serial = serial;
         return this;
     }
     

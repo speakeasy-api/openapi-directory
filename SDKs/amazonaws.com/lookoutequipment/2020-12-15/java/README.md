@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CreateDatasetXAmzTargetEnum;
-import org.openapis.openapi.models.operations.CreateDatasetHeaders;
 import org.openapis.openapi.models.operations.CreateDatasetRequest;
 import org.openapis.openapi.models.operations.CreateDatasetResponse;
 import org.openapis.openapi.models.shared.CreateDatasetRequest;
@@ -30,42 +29,42 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateDatasetRequest req = new CreateDatasetRequest() {{
-                headers = new CreateDatasetHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "AWSLookoutEquipmentFrontendService.CreateDataset";
-                }};
-                request = new CreateDatasetRequest() {{
-                    clientToken = "illum";
-                    datasetName = "vel";
+                createDatasetRequest = new CreateDatasetRequest() {{
+                    clientToken = "corrupti";
+                    datasetName = "provident";
                     datasetSchema = new DatasetSchema() {{
-                        inlineDataSchema = "error";
+                        inlineDataSchema = "distinctio";
                     }};
-                    serverSideKmsKeyId = "deserunt";
+                    serverSideKmsKeyId = "quibusdam";
                     tags = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            key = "iure";
-                            value = "magnam";
+                            key = "nulla";
+                            value = "corrupti";
                         }}),
                         add(new Tag() {{
-                            key = "debitis";
-                            value = "ipsa";
+                            key = "illum";
+                            value = "vel";
+                        }}),
+                        add(new Tag() {{
+                            key = "error";
+                            value = "deserunt";
                         }}),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "suscipit";
+                xAmzContentSha256 = "iure";
+                xAmzCredential = "magnam";
+                xAmzDate = "debitis";
+                xAmzSecurityToken = "ipsa";
+                xAmzSignature = "delectus";
+                xAmzSignedHeaders = "tempora";
+                xAmzTarget = "AWSLookoutEquipmentFrontendService.CreateDataset";
+            }}            
 
             CreateDatasetResponse res = sdk.createDataset(req);
 
@@ -79,7 +78,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

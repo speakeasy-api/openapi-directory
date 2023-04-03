@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsRemoveMembershipForUserRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
+    public Long teamId;
+    public TeamsRemoveMembershipForUserRequest withTeamId(Long teamId) {
+        this.teamId = teamId;
+        return this;
+    }
     
-    public TeamsRemoveMembershipForUserPathParams pathParams;
-    public TeamsRemoveMembershipForUserRequest withPathParams(TeamsRemoveMembershipForUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public TeamsRemoveMembershipForUserRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCustomFields5Request {
-    
-    public UpdateCustomFields5PathParams pathParams;
-    public UpdateCustomFields5Request withPathParams(UpdateCustomFields5PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated custom fields
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CustomFieldDTO[] request;
-    public UpdateCustomFields5Request withRequest(org.openapis.openapi.models.shared.CustomFieldDTO[] request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CustomFieldDTO[] requestBody;
+    public UpdateCustomFields5Request withRequestBody(org.openapis.openapi.models.shared.CustomFieldDTO[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * task's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taskId")
+    public String taskId;
+    public UpdateCustomFields5Request withTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
     

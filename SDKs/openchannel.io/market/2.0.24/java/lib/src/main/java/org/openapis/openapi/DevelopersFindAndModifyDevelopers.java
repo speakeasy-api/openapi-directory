@@ -35,7 +35,7 @@ public class DevelopersFindAndModifyDevelopers {
      */
     public org.openapis.openapi.models.operations.DeleteDevelopersDeveloperIdResponse deleteDevelopersDeveloperId(org.openapis.openapi.models.operations.DeleteDevelopersDeveloperIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDevelopersDeveloperIdPathParams.class, baseUrl, "/developers/{developerId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDevelopersDeveloperIdRequest.class, baseUrl, "/developers/{developerId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -76,7 +76,7 @@ public class DevelopersFindAndModifyDevelopers {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDevelopersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDevelopersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -116,7 +116,7 @@ public class DevelopersFindAndModifyDevelopers {
      */
     public org.openapis.openapi.models.operations.GetDevelopersDeveloperIdResponse getDevelopersDeveloperId(org.openapis.openapi.models.operations.GetDevelopersDeveloperIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDevelopersDeveloperIdPathParams.class, baseUrl, "/developers/{developerId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDevelopersDeveloperIdRequest.class, baseUrl, "/developers/{developerId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -156,13 +156,13 @@ public class DevelopersFindAndModifyDevelopers {
      */
     public org.openapis.openapi.models.operations.PatchDevelopersDeveloperIdResponse patchDevelopersDeveloperId(org.openapis.openapi.models.operations.PatchDevelopersDeveloperIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchDevelopersDeveloperIdPathParams.class, baseUrl, "/developers/{developerId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchDevelopersDeveloperIdRequest.class, baseUrl, "/developers/{developerId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatchDevelopersDeveloperIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatchDevelopersDeveloperIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -202,13 +202,13 @@ public class DevelopersFindAndModifyDevelopers {
      */
     public org.openapis.openapi.models.operations.PostDevelopersDeveloperIdResponse postDevelopersDeveloperId(org.openapis.openapi.models.operations.PostDevelopersDeveloperIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostDevelopersDeveloperIdPathParams.class, baseUrl, "/developers/{developerId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostDevelopersDeveloperIdRequest.class, baseUrl, "/developers/{developerId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostDevelopersDeveloperIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostDevelopersDeveloperIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

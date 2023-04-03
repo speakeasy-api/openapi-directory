@@ -5,10 +5,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.DevicesSecurity;
-import org.openapis.openapi.models.operations.DevicesQueryParams;
 import org.openapis.openapi.models.operations.DevicesRequest;
 import org.openapis.openapi.models.operations.DevicesResponse;
-import org.openapis.openapi.models.shared.SchemeBasicAuth;
 
 public class Application {
     public static void main(String[] args) {
@@ -17,18 +15,13 @@ public class Application {
                 .build();
 
             DevicesRequest req = new DevicesRequest() {{
-                security = new DevicesSecurity() {{
-                    basicAuth = new SchemeBasicAuth() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
-                }};
-                queryParams = new DevicesQueryParams() {{
-                    os = "corrupti";
-                }};
-            }};            
+                os = "corrupti";
+            }}            
 
-            DevicesResponse res = sdk.getDevices.devices(req);
+            DevicesResponse res = sdk.getDevices.devices(req, new DevicesSecurity() {{
+                password = "YOUR_PASSWORD_HERE";
+                username = "YOUR_USERNAME_HERE";
+            }});
 
             if (res.osDevices.isPresent()) {
                 // handle response

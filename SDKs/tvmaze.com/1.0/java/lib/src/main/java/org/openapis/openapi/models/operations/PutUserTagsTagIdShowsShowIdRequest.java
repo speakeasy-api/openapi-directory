@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutUserTagsTagIdShowsShowIdRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=show_id")
+    public Long showId;
+    public PutUserTagsTagIdShowsShowIdRequest withShowId(Long showId) {
+        this.showId = showId;
+        return this;
+    }
     
-    public PutUserTagsTagIdShowsShowIdPathParams pathParams;
-    public PutUserTagsTagIdShowsShowIdRequest withPathParams(PutUserTagsTagIdShowsShowIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tag_id")
+    public Long tagId;
+    public PutUserTagsTagIdShowsShowIdRequest withTagId(Long tagId) {
+        this.tagId = tagId;
         return this;
     }
     

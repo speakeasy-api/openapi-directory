@@ -37,19 +37,20 @@ public class Playlists {
     /**
      * Deletes a playlist.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeletePlaylistsPlaylistIdResponse deletePlaylistsPlaylistId(org.openapis.openapi.models.operations.DeletePlaylistsPlaylistIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeletePlaylistsPlaylistIdResponse deletePlaylistsPlaylistId(org.openapis.openapi.models.operations.DeletePlaylistsPlaylistIdRequest request, org.openapis.openapi.models.operations.DeletePlaylistsPlaylistIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePlaylistsPlaylistIdPathParams.class, baseUrl, "/playlists/{playlist_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePlaylistsPlaylistIdRequest.class, baseUrl, "/playlists/{playlist_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,25 +79,26 @@ public class Playlists {
     /**
      * Returns a playlist.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPlaylistsPlaylistIdResponse getPlaylistsPlaylistId(org.openapis.openapi.models.operations.GetPlaylistsPlaylistIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPlaylistsPlaylistIdResponse getPlaylistsPlaylistId(org.openapis.openapi.models.operations.GetPlaylistsPlaylistIdRequest request, org.openapis.openapi.models.operations.GetPlaylistsPlaylistIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPlaylistsPlaylistIdPathParams.class, baseUrl, "/playlists/{playlist_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPlaylistsPlaylistIdRequest.class, baseUrl, "/playlists/{playlist_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPlaylistsPlaylistIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPlaylistsPlaylistIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -131,25 +133,26 @@ public class Playlists {
     /**
      * Returns a collection of playlist's reposters.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPlaylistsPlaylistIdRepostersResponse getPlaylistsPlaylistIdReposters(org.openapis.openapi.models.operations.GetPlaylistsPlaylistIdRepostersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPlaylistsPlaylistIdRepostersResponse getPlaylistsPlaylistIdReposters(org.openapis.openapi.models.operations.GetPlaylistsPlaylistIdRepostersRequest request, org.openapis.openapi.models.operations.GetPlaylistsPlaylistIdRepostersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPlaylistsPlaylistIdRepostersPathParams.class, baseUrl, "/playlists/{playlist_id}/reposters", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPlaylistsPlaylistIdRepostersRequest.class, baseUrl, "/playlists/{playlist_id}/reposters", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPlaylistsPlaylistIdRepostersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPlaylistsPlaylistIdRepostersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -192,25 +195,26 @@ public class Playlists {
     /**
      * Returns tracks under a playlist.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPlaylistsPlaylistIdTracksResponse getPlaylistsPlaylistIdTracks(org.openapis.openapi.models.operations.GetPlaylistsPlaylistIdTracksRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPlaylistsPlaylistIdTracksResponse getPlaylistsPlaylistIdTracks(org.openapis.openapi.models.operations.GetPlaylistsPlaylistIdTracksRequest request, org.openapis.openapi.models.operations.GetPlaylistsPlaylistIdTracksSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPlaylistsPlaylistIdTracksPathParams.class, baseUrl, "/playlists/{playlist_id}/tracks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPlaylistsPlaylistIdTracksRequest.class, baseUrl, "/playlists/{playlist_id}/tracks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPlaylistsPlaylistIdTracksQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPlaylistsPlaylistIdTracksRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -245,10 +249,11 @@ public class Playlists {
     /**
      * Creates a playlist.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPlaylistsResponse postPlaylists(org.openapis.openapi.models.operations.PostPlaylistsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPlaylistsResponse postPlaylists(org.openapis.openapi.models.shared.CreateUpdatePlaylistRequest request, org.openapis.openapi.models.operations.PostPlaylistsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/playlists");
         
@@ -259,7 +264,7 @@ public class Playlists {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -302,21 +307,22 @@ public class Playlists {
     /**
      * Updates a playlist.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutPlaylistsPlaylistIdResponse putPlaylistsPlaylistId(org.openapis.openapi.models.operations.PutPlaylistsPlaylistIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutPlaylistsPlaylistIdResponse putPlaylistsPlaylistId(org.openapis.openapi.models.operations.PutPlaylistsPlaylistIdRequest request, org.openapis.openapi.models.operations.PutPlaylistsPlaylistIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutPlaylistsPlaylistIdPathParams.class, baseUrl, "/playlists/{playlist_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutPlaylistsPlaylistIdRequest.class, baseUrl, "/playlists/{playlist_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createUpdatePlaylistRequest", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

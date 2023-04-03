@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddRoomGuestUsersRequest {
-    
-    public AddRoomGuestUsersPathParams pathParams;
-    public AddRoomGuestUsersRequest withPathParams(AddRoomGuestUsersPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AddRoomGuestUsersHeaders headers;
-    public AddRoomGuestUsersRequest withHeaders(AddRoomGuestUsersHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RoomGuestUserAddRequest request;
-    public AddRoomGuestUsersRequest withRequest(org.openapis.openapi.models.shared.RoomGuestUserAddRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.RoomGuestUserAddRequest roomGuestUserAddRequest;
+    public AddRoomGuestUsersRequest withRoomGuestUserAddRequest(org.openapis.openapi.models.shared.RoomGuestUserAddRequest roomGuestUserAddRequest) {
+        this.roomGuestUserAddRequest = roomGuestUserAddRequest;
+        return this;
+    }
+    
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public AddRoomGuestUsersRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
+        return this;
+    }
+    
+    /**
+     * Room ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=room_id")
+    public Long roomId;
+    public AddRoomGuestUsersRequest withRoomId(Long roomId) {
+        this.roomId = roomId;
         return this;
     }
     

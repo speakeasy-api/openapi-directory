@@ -4,20 +4,39 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProjectTemplateRequest {
-    
-    public GetProjectTemplatePathParams pathParams;
-    public GetProjectTemplateRequest withPathParams(GetProjectTemplatePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Defines fields to return.
+     * Some requests return *compact* representations of objects in order to conserve resources and complete the request more efficiently. Other times requests return more information than you may need. This option allows you to list the exact set of fields that the API should be sure to return for the objects. The field names should be provided as paths, described below.
+     * The id of included objects will always be returned, regardless of the field options.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
+    public String[] optFields;
+    public GetProjectTemplateRequest withOptFields(String[] optFields) {
+        this.optFields = optFields;
         return this;
     }
     
+    /**
+     * Provides \u201cpretty\u201d output.
+     * Provides the response in a \u201cpretty\u201d format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
+    public Boolean optPretty;
+    public GetProjectTemplateRequest withOptPretty(Boolean optPretty) {
+        this.optPretty = optPretty;
+        return this;
+    }
     
-    public GetProjectTemplateQueryParams queryParams;
-    public GetProjectTemplateRequest withQueryParams(GetProjectTemplateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Globally unique identifier for the project template.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_template_gid")
+    public String projectTemplateGid;
+    public GetProjectTemplateRequest withProjectTemplateGid(String projectTemplateGid) {
+        this.projectTemplateGid = projectTemplateGid;
         return this;
     }
     

@@ -4,20 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAssociationsBetweenRequest {
-    
-    public GetAssociationsBetweenPathParams pathParams;
-    public GetAssociationsBetweenRequest withPathParams(GetAssociationsBetweenPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Object id, e.g. ECO:0000501 (for IEA; Includes inferred by default) or a specific publication or other supporting object, e.g. ZFIN:ZDB-PUB-060503-2
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=evidence")
+    public String evidence;
+    public GetAssociationsBetweenRequest withEvidence(String evidence) {
+        this.evidence = evidence;
         return this;
     }
     
+    /**
+     * If true, excludes associations that involve IEAs (ECO:0000501)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_automatic_assertions")
+    public Boolean excludeAutomaticAssertions;
+    public GetAssociationsBetweenRequest withExcludeAutomaticAssertions(Boolean excludeAutomaticAssertions) {
+        this.excludeAutomaticAssertions = excludeAutomaticAssertions;
+        return this;
+    }
     
-    public GetAssociationsBetweenQueryParams queryParams;
-    public GetAssociationsBetweenRequest withQueryParams(GetAssociationsBetweenQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Return associations pointing to this node, e.g. MP:0013765. Can also be a biological entity such as a gene
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=object")
+    public String object;
+    public GetAssociationsBetweenRequest withObject(String object) {
+        this.object = object;
+        return this;
+    }
+    
+    /**
+     * number of rows
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rows")
+    public Long rows;
+    public GetAssociationsBetweenRequest withRows(Long rows) {
+        this.rows = rows;
+        return this;
+    }
+    
+    /**
+     * beginning row
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public Long start;
+    public GetAssociationsBetweenRequest withStart(Long start) {
+        this.start = start;
+        return this;
+    }
+    
+    /**
+     * Return associations emanating from this node, e.g. MGI:1342287 (If ID is from an ontology then results would include inferred associations, by default)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subject")
+    public String subject;
+    public GetAssociationsBetweenRequest withSubject(String subject) {
+        this.subject = subject;
+        return this;
+    }
+    
+    /**
+     * If true, excludes evidence objects in response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unselect_evidence")
+    public Boolean unselectEvidence;
+    public GetAssociationsBetweenRequest withUnselectEvidence(Boolean unselectEvidence) {
+        this.unselectEvidence = unselectEvidence;
+        return this;
+    }
+    
+    /**
+     * If true, returns results in compact associations format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=use_compact_associations")
+    public Boolean useCompactAssociations;
+    public GetAssociationsBetweenRequest withUseCompactAssociations(Boolean useCompactAssociations) {
+        this.useCompactAssociations = useCompactAssociations;
         return this;
     }
     

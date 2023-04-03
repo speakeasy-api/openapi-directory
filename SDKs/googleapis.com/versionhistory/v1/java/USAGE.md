@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.VersionhistoryPlatformsChannelsListPathParams;
-import org.openapis.openapi.models.operations.VersionhistoryPlatformsChannelsListQueryParams;
 import org.openapis.openapi.models.operations.VersionhistoryPlatformsChannelsListRequest;
 import org.openapis.openapi.models.operations.VersionhistoryPlatformsChannelsListResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -18,25 +16,21 @@ public class Application {
                 .build();
 
             VersionhistoryPlatformsChannelsListRequest req = new VersionhistoryPlatformsChannelsListRequest() {{
-                pathParams = new VersionhistoryPlatformsChannelsListPathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new VersionhistoryPlatformsChannelsListQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    pageSize = 423655;
-                    pageToken = "error";
-                    prettyPrint = false;
-                    quotaUser = "deserunt";
-                    uploadType = "suscipit";
-                    uploadProtocol = "iure";
-                }};
-            }};            
+                dollarXgafv = "2";
+                accessToken = "provident";
+                alt = "proto";
+                callback = "quibusdam";
+                fields = "unde";
+                key = "nulla";
+                oauthToken = "corrupti";
+                pageSize = 847252;
+                pageToken = "vel";
+                parent = "error";
+                prettyPrint = false;
+                quotaUser = "deserunt";
+                uploadType = "suscipit";
+                uploadProtocol = "iure";
+            }}            
 
             VersionhistoryPlatformsChannelsListResponse res = sdk.platforms.versionhistoryPlatformsChannelsList(req);
 

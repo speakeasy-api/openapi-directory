@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeLoadBalancersRequest {
-    
-    public GETDescribeLoadBalancersQueryParams queryParams;
-    public GETDescribeLoadBalancersRequest withQueryParams(GETDescribeLoadBalancersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeLoadBalancersActionEnum action;
+    public GETDescribeLoadBalancersRequest withAction(GETDescribeLoadBalancersActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The Amazon Resource Names (ARN) of the load balancers. You can specify up to 20 load balancers in a single call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LoadBalancerArns")
+    public String[] loadBalancerArns;
+    public GETDescribeLoadBalancersRequest withLoadBalancerArns(String[] loadBalancerArns) {
+        this.loadBalancerArns = loadBalancerArns;
+        return this;
+    }
     
-    public GETDescribeLoadBalancersHeaders headers;
-    public GETDescribeLoadBalancersRequest withHeaders(GETDescribeLoadBalancersHeaders headers) {
-        this.headers = headers;
+    /**
+     * The marker for the next set of results. (You received this marker from a previous call.)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
+    public String marker;
+    public GETDescribeLoadBalancersRequest withMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
+    
+    /**
+     * The names of the load balancers.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Names")
+    public String[] names;
+    public GETDescribeLoadBalancersRequest withNames(String[] names) {
+        this.names = names;
+        return this;
+    }
+    
+    /**
+     * The maximum number of results to return with this call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public GETDescribeLoadBalancersRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeLoadBalancersVersionEnum version;
+    public GETDescribeLoadBalancersRequest withVersion(GETDescribeLoadBalancersVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeLoadBalancersRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeLoadBalancersRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeLoadBalancersRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeLoadBalancersRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeLoadBalancersRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeLoadBalancersRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeLoadBalancersRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

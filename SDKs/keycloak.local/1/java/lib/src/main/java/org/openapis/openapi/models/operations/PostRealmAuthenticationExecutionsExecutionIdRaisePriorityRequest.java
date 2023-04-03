@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRealmAuthenticationExecutionsExecutionIdRaisePriorityRequest {
+    /**
+     * Execution id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=executionId")
+    public String executionId;
+    public PostRealmAuthenticationExecutionsExecutionIdRaisePriorityRequest withExecutionId(String executionId) {
+        this.executionId = executionId;
+        return this;
+    }
     
-    public PostRealmAuthenticationExecutionsExecutionIdRaisePriorityPathParams pathParams;
-    public PostRealmAuthenticationExecutionsExecutionIdRaisePriorityRequest withPathParams(PostRealmAuthenticationExecutionsExecutionIdRaisePriorityPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PostRealmAuthenticationExecutionsExecutionIdRaisePriorityRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

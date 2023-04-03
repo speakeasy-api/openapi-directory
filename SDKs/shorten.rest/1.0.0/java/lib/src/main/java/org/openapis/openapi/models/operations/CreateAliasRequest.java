@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateAliasRequest {
-    
-    public CreateAliasQueryParams queryParams;
-    public CreateAliasRequest withQueryParams(CreateAliasQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * alias properties
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateAliasModel request;
-    public CreateAliasRequest withRequest(org.openapis.openapi.models.shared.CreateAliasModel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CreateAliasModel createAliasModel;
+    public CreateAliasRequest withCreateAliasModel(org.openapis.openapi.models.shared.CreateAliasModel createAliasModel) {
+        this.createAliasModel = createAliasModel;
         return this;
     }
     
+    /**
+     * alias (without `/` at the beginning)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aliasName")
+    public String aliasName;
+    public CreateAliasRequest withAliasName(String aliasName) {
+        this.aliasName = aliasName;
+        return this;
+    }
     
-    public CreateAliasSecurity security;
-    public CreateAliasRequest withSecurity(CreateAliasSecurity security) {
-        this.security = security;
+    /**
+     * domain which alias will belong to (string without `http/https` or `/`)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domainName")
+    public String domainName;
+    public CreateAliasRequest withDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
     

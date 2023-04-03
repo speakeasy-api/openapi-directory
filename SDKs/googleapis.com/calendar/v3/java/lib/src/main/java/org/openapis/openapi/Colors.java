@@ -34,10 +34,11 @@ public class Colors {
     /**
      * Returns the color definitions for calendars and events.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CalendarColorsGetResponse calendarColorsGet(org.openapis.openapi.models.operations.CalendarColorsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CalendarColorsGetResponse calendarColorsGet(org.openapis.openapi.models.operations.CalendarColorsGetRequest request, org.openapis.openapi.models.operations.CalendarColorsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/colors");
         
@@ -45,14 +46,14 @@ public class Colors {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CalendarColorsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CalendarColorsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -33,25 +33,26 @@ public class AcceleratorTypes {
     /**
      * Retrieves an aggregated list of accelerator types.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeAcceleratorTypesAggregatedListResponse computeAcceleratorTypesAggregatedList(org.openapis.openapi.models.operations.ComputeAcceleratorTypesAggregatedListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeAcceleratorTypesAggregatedListResponse computeAcceleratorTypesAggregatedList(org.openapis.openapi.models.operations.ComputeAcceleratorTypesAggregatedListRequest request, org.openapis.openapi.models.operations.ComputeAcceleratorTypesAggregatedListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeAcceleratorTypesAggregatedListPathParams.class, baseUrl, "/projects/{project}/aggregated/acceleratorTypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeAcceleratorTypesAggregatedListRequest.class, baseUrl, "/projects/{project}/aggregated/acceleratorTypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeAcceleratorTypesAggregatedListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeAcceleratorTypesAggregatedListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,25 +79,26 @@ public class AcceleratorTypes {
     /**
      * Returns the specified accelerator type.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeAcceleratorTypesGetResponse computeAcceleratorTypesGet(org.openapis.openapi.models.operations.ComputeAcceleratorTypesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeAcceleratorTypesGetResponse computeAcceleratorTypesGet(org.openapis.openapi.models.operations.ComputeAcceleratorTypesGetRequest request, org.openapis.openapi.models.operations.ComputeAcceleratorTypesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeAcceleratorTypesGetPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/acceleratorTypes/{acceleratorType}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeAcceleratorTypesGetRequest.class, baseUrl, "/projects/{project}/zones/{zone}/acceleratorTypes/{acceleratorType}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeAcceleratorTypesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeAcceleratorTypesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -123,25 +125,26 @@ public class AcceleratorTypes {
     /**
      * Retrieves a list of accelerator types that are available to the specified project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeAcceleratorTypesListResponse computeAcceleratorTypesList(org.openapis.openapi.models.operations.ComputeAcceleratorTypesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeAcceleratorTypesListResponse computeAcceleratorTypesList(org.openapis.openapi.models.operations.ComputeAcceleratorTypesListRequest request, org.openapis.openapi.models.operations.ComputeAcceleratorTypesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeAcceleratorTypesListPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/acceleratorTypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeAcceleratorTypesListRequest.class, baseUrl, "/projects/{project}/zones/{zone}/acceleratorTypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeAcceleratorTypesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeAcceleratorTypesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -35,15 +35,12 @@ lib/src/main/java/org/openapis/openapi/models/operations/CloudbillingBillingAcco
 lib/src/main/java/org/openapis/openapi/models/operations/CloudbillingBillingAccountsEstimateCostScenarioSecurityOption2.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudbillingBillingAccountsEstimateCostScenarioSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudbillingBillingAccountsEstimateCostScenarioSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/CloudbillingBillingAccountsEstimateCostScenarioPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/CloudbillingBillingAccountsEstimateCostScenarioQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudbillingBillingAccountsEstimateCostScenarioRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudbillingBillingAccountsEstimateCostScenarioResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudbillingEstimateCostScenarioSecurityOption1.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudbillingEstimateCostScenarioSecurityOption2.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudbillingEstimateCostScenarioSecurityOption3.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudbillingEstimateCostScenarioSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/CloudbillingEstimateCostScenarioQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudbillingEstimateCostScenarioRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudbillingEstimateCostScenarioResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/EstimateCostScenarioForBillingAccountResponse.java
@@ -60,6 +57,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/CostEstimate.java
 lib/src/main/java/org/openapis/openapi/models/shared/CreditEstimate.java
 lib/src/main/java/org/openapis/openapi/models/shared/SkuCostEstimate.java
 lib/src/main/java/org/openapis/openapi/models/shared/CommitmentCostEstimate.java
+lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/EstimateCostScenarioForBillingAccountRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/CostScenario.java
 lib/src/main/java/org/openapis/openapi/models/shared/Workload.java
@@ -104,10 +102,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/ScenarioConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/Commitment.java
 lib/src/main/java/org/openapis/openapi/models/shared/VmResourceBasedCudPlanEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/VmResourceBasedCud.java
-lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2c.java
 lib/src/main/java/org/openapis/openapi/models/shared/EstimateCostScenarioWithListPriceResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/EstimateCostScenarioWithListPriceRequest.java
 USAGE.md

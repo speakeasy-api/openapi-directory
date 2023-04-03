@@ -7,24 +7,60 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSearchVersionNumberRoutedFilterPositionHeadingExtRequest {
-    
-    public PostSearchVersionNumberRoutedFilterPositionHeadingExtPathParams pathParams;
-    public PostSearchVersionNumberRoutedFilterPositionHeadingExtRequest withPathParams(PostSearchVersionNumberRoutedFilterPositionHeadingExtPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostSearchVersionNumberRoutedFilterPositionHeadingExtQueryParams queryParams;
-    public PostSearchVersionNumberRoutedFilterPositionHeadingExtRequest withQueryParams(PostSearchVersionNumberRoutedFilterPositionHeadingExtQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostSearchVersionNumberRoutedFilterPositionHeadingExtRequestBody request;
-    public PostSearchVersionNumberRoutedFilterPositionHeadingExtRequest withRequest(PostSearchVersionNumberRoutedFilterPositionHeadingExtRequestBody request) {
-        this.request = request;
+    public PostSearchVersionNumberRoutedFilterPositionHeadingExtRequestBody requestBody;
+    public PostSearchVersionNumberRoutedFilterPositionHeadingExtRequest withRequestBody(PostSearchVersionNumberRoutedFilterPositionHeadingExtRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Expected response format.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ext")
+    public org.openapis.openapi.models.shared.ExtEnum ext;
+    public PostSearchVersionNumberRoutedFilterPositionHeadingExtRequest withExt(org.openapis.openapi.models.shared.ExtEnum ext) {
+        this.ext = ext;
+        return this;
+    }
+    
+    /**
+     * The directional heading in degrees, usually similar to the course along a road segment. Entered in degrees, measured clockwise from north (so north is 0, east is 90, etc.)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=heading")
+    public Float heading;
+    public PostSearchVersionNumberRoutedFilterPositionHeadingExtRequest withHeading(Float heading) {
+        this.heading = heading;
+        return this;
+    }
+    
+    /**
+     * This is specified as a comma separated string composed of lat., lon.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=position")
+    public String position;
+    public PostSearchVersionNumberRoutedFilterPositionHeadingExtRequest withPosition(String position) {
+        this.position = position;
+        return this;
+    }
+    
+    /**
+     * Only return results that arrive from routing engine within this time limit.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=routingTimeout")
+    public Long routingTimeout;
+    public PostSearchVersionNumberRoutedFilterPositionHeadingExtRequest withRoutingTimeout(Long routingTimeout) {
+        this.routingTimeout = routingTimeout;
+        return this;
+    }
+    
+    /**
+     * Service version number. The current value is 2.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
+    public org.openapis.openapi.models.shared.VersionNumberEnum versionNumber;
+    public PostSearchVersionNumberRoutedFilterPositionHeadingExtRequest withVersionNumber(org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
+        this.versionNumber = versionNumber;
         return this;
     }
     

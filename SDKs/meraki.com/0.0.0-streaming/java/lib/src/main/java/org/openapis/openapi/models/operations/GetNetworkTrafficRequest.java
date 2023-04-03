@@ -4,20 +4,43 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkTrafficRequest {
-    
-    public GetNetworkTrafficPathParams pathParams;
-    public GetNetworkTrafficRequest withPathParams(GetNetworkTrafficPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filter the data by device type: 'combined', 'wireless', 'switch' or 'appliance'. Defaults to 'combined'. When using 'combined', for each rule the data will come from the device type with the most usage.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deviceType")
+    public GetNetworkTrafficDeviceTypeEnum deviceType;
+    public GetNetworkTrafficRequest withDeviceType(GetNetworkTrafficDeviceTypeEnum deviceType) {
+        this.deviceType = deviceType;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkTrafficRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
     
-    public GetNetworkTrafficQueryParams queryParams;
-    public GetNetworkTrafficRequest withQueryParams(GetNetworkTrafficQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The beginning of the timespan for the data. The maximum lookback period is 30 days from today.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t0")
+    public String t0;
+    public GetNetworkTrafficRequest withT0(String t0) {
+        this.t0 = t0;
+        return this;
+    }
+    
+    /**
+     * The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 30 days.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timespan")
+    public Float timespan;
+    public GetNetworkTrafficRequest withTimespan(Float timespan) {
+        this.timespan = timespan;
         return this;
     }
     

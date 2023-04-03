@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSafelistRequest {
-    
-    public DeleteSafelistPathParams pathParams;
-    public DeleteSafelistRequest withPathParams(DeleteSafelistPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteSafelistSecurity security;
-    public DeleteSafelistRequest withSecurity(DeleteSafelistSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteSafelistRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The phone number to be removed from SafeList. Phone numbers must be in [E.164 format](https://www.twilio.com/docs/glossary/what-e164).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=PhoneNumber")
+    public String phoneNumber;
+    public DeleteSafelistRequest withPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
         return this;
     }
     

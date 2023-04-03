@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetShipmentByExternalIdRequest {
-    
-    public GetShipmentByExternalIdPathParams pathParams;
-    public GetShipmentByExternalIdRequest withPathParams(GetShipmentByExternalIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=external_shipment_id")
+    public String externalShipmentId;
+    public GetShipmentByExternalIdRequest withExternalShipmentId(String externalShipmentId) {
+        this.externalShipmentId = externalShipmentId;
         return this;
     }
     

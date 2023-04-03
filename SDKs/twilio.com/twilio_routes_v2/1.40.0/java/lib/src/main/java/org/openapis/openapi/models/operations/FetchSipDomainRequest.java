@@ -4,27 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchSipDomainRequest {
-    
-    public FetchSipDomainPathParams pathParams;
-    public FetchSipDomainRequest withPathParams(FetchSipDomainPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchSipDomainSecurity security;
-    public FetchSipDomainRequest withSecurity(FetchSipDomainSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchSipDomainRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=SipDomain")
+    public String sipDomain;
+    public FetchSipDomainRequest withSipDomain(String sipDomain) {
+        this.sipDomain = sipDomain;
         return this;
     }
     

@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateTaskActionsRequest {
-    
-    public UpdateTaskActionsPathParams pathParams;
-    public UpdateTaskActionsRequest withPathParams(UpdateTaskActionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the Task for which the task actions to update were defined.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public UpdateTaskActionsRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateTaskActionsUpdateTaskActionsRequest request;
-    public UpdateTaskActionsRequest withRequest(UpdateTaskActionsUpdateTaskActionsRequest request) {
-        this.request = request;
+    public UpdateTaskActionsUpdateTaskActionsRequest requestBody;
+    public UpdateTaskActionsRequest withRequestBody(UpdateTaskActionsUpdateTaskActionsRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateTaskActionsSecurity security;
-    public UpdateTaskActionsRequest withSecurity(UpdateTaskActionsSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateTaskActionsRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the [Task](https://www.twilio.com/docs/autopilot/api/task) for which the task actions to update were defined.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TaskSid")
+    public String taskSid;
+    public UpdateTaskActionsRequest withTaskSid(String taskSid) {
+        this.taskSid = taskSid;
         return this;
     }
     

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostNetworksIdActionsAddSubnetRequest {
-    
-    public PostNetworksIdActionsAddSubnetPathParams pathParams;
-    public PostNetworksIdActionsAddSubnetRequest withPathParams(PostNetworksIdActionsAddSubnetPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PostNetworksIdActionsAddSubnetAddSubnetRequest requestBody;
+    public PostNetworksIdActionsAddSubnetRequest withRequestBody(PostNetworksIdActionsAddSubnetAddSubnetRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostNetworksIdActionsAddSubnetAddSubnetRequest request;
-    public PostNetworksIdActionsAddSubnetRequest withRequest(PostNetworksIdActionsAddSubnetAddSubnetRequest request) {
-        this.request = request;
+    /**
+     * ID of the Network
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public PostNetworksIdActionsAddSubnetRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

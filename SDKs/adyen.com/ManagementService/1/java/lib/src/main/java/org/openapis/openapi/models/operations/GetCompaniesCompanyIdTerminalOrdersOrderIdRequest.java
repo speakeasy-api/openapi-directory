@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCompaniesCompanyIdTerminalOrdersOrderIdRequest {
-    
-    public GetCompaniesCompanyIdTerminalOrdersOrderIdPathParams pathParams;
-    public GetCompaniesCompanyIdTerminalOrdersOrderIdRequest withPathParams(GetCompaniesCompanyIdTerminalOrdersOrderIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the company account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public GetCompaniesCompanyIdTerminalOrdersOrderIdRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
         return this;
     }
     
-    
-    public GetCompaniesCompanyIdTerminalOrdersOrderIdSecurity security;
-    public GetCompaniesCompanyIdTerminalOrdersOrderIdRequest withSecurity(GetCompaniesCompanyIdTerminalOrdersOrderIdSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the order.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderId")
+    public String orderId;
+    public GetCompaniesCompanyIdTerminalOrdersOrderIdRequest withOrderId(String orderId) {
+        this.orderId = orderId;
         return this;
     }
     

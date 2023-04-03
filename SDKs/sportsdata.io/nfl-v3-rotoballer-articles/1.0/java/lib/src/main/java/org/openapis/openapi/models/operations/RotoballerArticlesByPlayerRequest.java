@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RotoballerArticlesByPlayerRequest {
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public RotoballerArticlesByPlayerFormatEnum format;
+    public RotoballerArticlesByPlayerRequest withFormat(RotoballerArticlesByPlayerFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public RotoballerArticlesByPlayerPathParams pathParams;
-    public RotoballerArticlesByPlayerRequest withPathParams(RotoballerArticlesByPlayerPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique FantasyData Player ID.
+     * Example:&lt;code&gt;10000507&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=playerid")
+    public String playerid;
+    public RotoballerArticlesByPlayerRequest withPlayerid(String playerid) {
+        this.playerid = playerid;
         return this;
     }
     

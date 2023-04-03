@@ -4,20 +4,18 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetChargersRequest {
-    
-    public GetChargersQueryParams queryParams;
-    public GetChargersRequest withQueryParams(GetChargersQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetChargersSecurity security;
-    public GetChargersRequest withSecurity(GetChargersSecurity security) {
-        this.security = security;
+    /**
+     * An optional array of Charger fields that should be included in the response, for example: `?field[]=information&amp;field[]=chargeState` 
+     * 
+     * By default, no optional fields are included and only the Charger ID will be returned. Response time will generally be slower the more fields you request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=field[]")
+    public GetChargersFieldEnum[] field;
+    public GetChargersRequest withField(GetChargersFieldEnum[] field) {
+        this.field = field;
         return this;
     }
     

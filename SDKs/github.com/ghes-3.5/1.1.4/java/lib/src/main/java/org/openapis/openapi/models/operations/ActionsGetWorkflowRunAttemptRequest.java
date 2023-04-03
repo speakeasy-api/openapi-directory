@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsGetWorkflowRunAttemptRequest {
-    
-    public ActionsGetWorkflowRunAttemptPathParams pathParams;
-    public ActionsGetWorkflowRunAttemptRequest withPathParams(ActionsGetWorkflowRunAttemptPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The attempt number of the workflow run.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=attempt_number")
+    public Long attemptNumber;
+    public ActionsGetWorkflowRunAttemptRequest withAttemptNumber(Long attemptNumber) {
+        this.attemptNumber = attemptNumber;
         return this;
     }
     
+    /**
+     * If `true` pull requests are omitted from the response (empty array).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_pull_requests")
+    public Boolean excludePullRequests;
+    public ActionsGetWorkflowRunAttemptRequest withExcludePullRequests(Boolean excludePullRequests) {
+        this.excludePullRequests = excludePullRequests;
+        return this;
+    }
     
-    public ActionsGetWorkflowRunAttemptQueryParams queryParams;
-    public ActionsGetWorkflowRunAttemptRequest withQueryParams(ActionsGetWorkflowRunAttemptQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ActionsGetWorkflowRunAttemptRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ActionsGetWorkflowRunAttemptRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the workflow run.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=run_id")
+    public Long runId;
+    public ActionsGetWorkflowRunAttemptRequest withRunId(Long runId) {
+        this.runId = runId;
         return this;
     }
     

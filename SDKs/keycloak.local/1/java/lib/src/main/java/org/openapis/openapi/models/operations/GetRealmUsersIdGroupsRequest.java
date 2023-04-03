@@ -4,20 +4,54 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRealmUsersIdGroupsRequest {
-    
-    public GetRealmUsersIdGroupsPathParams pathParams;
-    public GetRealmUsersIdGroupsRequest withPathParams(GetRealmUsersIdGroupsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=briefRepresentation")
+    public Boolean briefRepresentation;
+    public GetRealmUsersIdGroupsRequest withBriefRepresentation(Boolean briefRepresentation) {
+        this.briefRepresentation = briefRepresentation;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=first")
+    public Integer first;
+    public GetRealmUsersIdGroupsRequest withFirst(Integer first) {
+        this.first = first;
+        return this;
+    }
     
-    public GetRealmUsersIdGroupsQueryParams queryParams;
-    public GetRealmUsersIdGroupsRequest withQueryParams(GetRealmUsersIdGroupsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * User id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetRealmUsersIdGroupsRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
+    public Integer max;
+    public GetRealmUsersIdGroupsRequest withMax(Integer max) {
+        this.max = max;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public GetRealmUsersIdGroupsRequest withRealm(String realm) {
+        this.realm = realm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public GetRealmUsersIdGroupsRequest withSearch(String search) {
+        this.search = search;
         return this;
     }
     

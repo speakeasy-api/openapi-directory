@@ -4,13 +4,34 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostQueryRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=1_property")
+    public String oneProperty;
+    public PostQueryRequest withOneProperty(String oneProperty) {
+        this.oneProperty = oneProperty;
+        return this;
+    }
     
-    public PostQueryQueryParams queryParams;
-    public PostQueryRequest withQueryParams(PostQueryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=1_property.value")
+    public String onePropertyValue;
+    public PostQueryRequest withOnePropertyValue(String onePropertyValue) {
+        this.onePropertyValue = onePropertyValue;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=p.limit")
+    public Double pLimit;
+    public PostQueryRequest withPLimit(Double pLimit) {
+        this.pLimit = pLimit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=path")
+    public String path;
+    public PostQueryRequest withPath(String path) {
+        this.path = path;
         return this;
     }
     

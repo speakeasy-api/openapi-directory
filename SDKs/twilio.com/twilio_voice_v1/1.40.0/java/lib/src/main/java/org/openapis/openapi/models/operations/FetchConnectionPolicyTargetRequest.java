@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchConnectionPolicyTargetRequest {
-    
-    public FetchConnectionPolicyTargetPathParams pathParams;
-    public FetchConnectionPolicyTargetRequest withPathParams(FetchConnectionPolicyTargetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Connection Policy that owns the Target.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConnectionPolicySid")
+    public String connectionPolicySid;
+    public FetchConnectionPolicyTargetRequest withConnectionPolicySid(String connectionPolicySid) {
+        this.connectionPolicySid = connectionPolicySid;
         return this;
     }
     
-    
-    public FetchConnectionPolicyTargetSecurity security;
-    public FetchConnectionPolicyTargetRequest withSecurity(FetchConnectionPolicyTargetSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchConnectionPolicyTargetRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique string that we created to identify the Target resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchConnectionPolicyTargetRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

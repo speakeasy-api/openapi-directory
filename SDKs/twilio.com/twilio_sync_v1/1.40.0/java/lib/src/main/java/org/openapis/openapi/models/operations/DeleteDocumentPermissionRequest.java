@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteDocumentPermissionRequest {
-    
-    public DeleteDocumentPermissionPathParams pathParams;
-    public DeleteDocumentPermissionRequest withPathParams(DeleteDocumentPermissionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Sync Document with the Document Permission resource to delete. Can be the Document resource's `sid` or its `unique_name`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DocumentSid")
+    public String documentSid;
+    public DeleteDocumentPermissionRequest withDocumentSid(String documentSid) {
+        this.documentSid = documentSid;
         return this;
     }
     
-    
-    public DeleteDocumentPermissionSecurity security;
-    public DeleteDocumentPermissionRequest withSecurity(DeleteDocumentPermissionSecurity security) {
-        this.security = security;
+    /**
+     * The application-defined string that uniquely identifies the User's Document Permission resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Identity")
+    public String identity;
+    public DeleteDocumentPermissionRequest withIdentity(String identity) {
+        this.identity = identity;
         return this;
     }
     
-    
-    public String serverURL;
-    public DeleteDocumentPermissionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Document Permission resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public DeleteDocumentPermissionRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

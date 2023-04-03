@@ -7,10 +7,10 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchUserByMobileUsingPOSTRequest {
-    
-    public SearchUserByMobileUsingPOSTHeaders headers;
-    public SearchUserByMobileUsingPOSTRequest withHeaders(SearchUserByMobileUsingPOSTHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public SearchUserByMobileUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
@@ -18,16 +18,9 @@ public class SearchUserByMobileUsingPOSTRequest {
      * searchRequest
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SearchByMobileRequest request;
-    public SearchUserByMobileUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.SearchByMobileRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public SearchUserByMobileUsingPOSTSecurity security;
-    public SearchUserByMobileUsingPOSTRequest withSecurity(SearchUserByMobileUsingPOSTSecurity security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.SearchByMobileRequest searchByMobileRequest;
+    public SearchUserByMobileUsingPOSTRequest withSearchByMobileRequest(org.openapis.openapi.models.shared.SearchByMobileRequest searchByMobileRequest) {
+        this.searchByMobileRequest = searchByMobileRequest;
         return this;
     }
     

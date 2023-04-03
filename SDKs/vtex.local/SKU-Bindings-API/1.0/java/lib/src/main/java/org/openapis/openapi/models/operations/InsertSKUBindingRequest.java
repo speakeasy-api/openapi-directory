@@ -7,10 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InsertSKUBindingRequest {
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public InsertSKUBindingRequest withAccept(String accept) {
+        this.accept = accept;
+        return this;
+    }
     
-    public InsertSKUBindingHeaders headers;
-    public InsertSKUBindingRequest withHeaders(InsertSKUBindingHeaders headers) {
-        this.headers = headers;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public InsertSKUBindingRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
@@ -18,9 +31,9 @@ public class InsertSKUBindingRequest {
      * Request body
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public InsertSKUBindingRequestBody request;
-    public InsertSKUBindingRequest withRequest(InsertSKUBindingRequestBody request) {
-        this.request = request;
+    public InsertSKUBindingRequestBody requestBody;
+    public InsertSKUBindingRequest withRequestBody(InsertSKUBindingRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

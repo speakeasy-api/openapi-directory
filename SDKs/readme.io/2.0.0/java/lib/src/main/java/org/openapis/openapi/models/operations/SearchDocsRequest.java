@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchDocsRequest {
-    
-    public SearchDocsQueryParams queryParams;
-    public SearchDocsRequest withQueryParams(SearchDocsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Search string to look for
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public SearchDocsRequest withSearch(String search) {
+        this.search = search;
         return this;
     }
     
-    
-    public SearchDocsHeaders headers;
-    public SearchDocsRequest withHeaders(SearchDocsHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public SearchDocsSecurity security;
-    public SearchDocsRequest withSecurity(SearchDocsSecurity security) {
-        this.security = security;
+    /**
+     * Version number of your docs project, for example, v3.0. To see all valid versions for your docs project call https://docs.readme.com/developers/reference/version#getversions.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-readme-version")
+    public String xReadmeVersion;
+    public SearchDocsRequest withXReadmeVersion(String xReadmeVersion) {
+        this.xReadmeVersion = xReadmeVersion;
         return this;
     }
     

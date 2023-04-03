@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssuesListLabelsForMilestoneRequest {
-    
-    public IssuesListLabelsForMilestonePathParams pathParams;
-    public IssuesListLabelsForMilestoneRequest withPathParams(IssuesListLabelsForMilestonePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The number that identifies the milestone.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=milestone_number")
+    public Long milestoneNumber;
+    public IssuesListLabelsForMilestoneRequest withMilestoneNumber(Long milestoneNumber) {
+        this.milestoneNumber = milestoneNumber;
         return this;
     }
     
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssuesListLabelsForMilestoneRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public IssuesListLabelsForMilestoneQueryParams queryParams;
-    public IssuesListLabelsForMilestoneRequest withQueryParams(IssuesListLabelsForMilestoneQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public IssuesListLabelsForMilestoneRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public IssuesListLabelsForMilestoneRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssuesListLabelsForMilestoneRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CircuitsProvidersPartialUpdateRequest {
-    
-    public CircuitsProvidersPartialUpdatePathParams pathParams;
-    public CircuitsProvidersPartialUpdateRequest withPathParams(CircuitsProvidersPartialUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ProviderInput providerInput;
+    public CircuitsProvidersPartialUpdateRequest withProviderInput(org.openapis.openapi.models.shared.ProviderInput providerInput) {
+        this.providerInput = providerInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ProviderInput request;
-    public CircuitsProvidersPartialUpdateRequest withRequest(org.openapis.openapi.models.shared.ProviderInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this provider.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public CircuitsProvidersPartialUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

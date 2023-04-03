@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoUpdateFileRequest {
-    
-    public RepoUpdateFilePathParams pathParams;
-    public RepoUpdateFileRequest withPathParams(RepoUpdateFilePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.UpdateFileOptions updateFileOptions;
+    public RepoUpdateFileRequest withUpdateFileOptions(org.openapis.openapi.models.shared.UpdateFileOptions updateFileOptions) {
+        this.updateFileOptions = updateFileOptions;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateFileOptions request;
-    public RepoUpdateFileRequest withRequest(org.openapis.openapi.models.shared.UpdateFileOptions request) {
-        this.request = request;
+    /**
+     * path of the file to update
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=filepath")
+    public String filepath;
+    public RepoUpdateFileRequest withFilepath(String filepath) {
+        this.filepath = filepath;
+        return this;
+    }
+    
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoUpdateFileRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoUpdateFileRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoreSetRequest {
-    
-    public StoreSetPathParams pathParams;
-    public StoreSetRequest withPathParams(StoreSetPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Value
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public String request;
-    public StoreSetRequest withRequest(String request) {
-        this.request = request;
+    public String requestBody;
+    public StoreSetRequest withRequestBody(String requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Persistent setting
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=persist")
+    public Integer persist;
+    public StoreSetRequest withPersist(Integer persist) {
+        this.persist = persist;
+        return this;
+    }
+    
+    /**
+     * Variable name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=var")
+    public String var;
+    public StoreSetRequest withVar(String var) {
+        this.var = var;
         return this;
     }
     

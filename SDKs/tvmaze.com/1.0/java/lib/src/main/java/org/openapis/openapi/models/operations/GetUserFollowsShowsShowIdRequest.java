@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUserFollowsShowsShowIdRequest {
-    
-    public GetUserFollowsShowsShowIdPathParams pathParams;
-    public GetUserFollowsShowsShowIdRequest withPathParams(GetUserFollowsShowsShowIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=show_id")
+    public Long showId;
+    public GetUserFollowsShowsShowIdRequest withShowId(Long showId) {
+        this.showId = showId;
         return this;
     }
     

@@ -40,7 +40,7 @@ public class Views {
      */
     public org.openapis.openapi.models.operations.SessionsIdViewsGetResponse sessionsIdViewsGet(org.openapis.openapi.models.operations.SessionsIdViewsGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SessionsIdViewsGetPathParams.class, baseUrl, "/sessions/{session_id}/views", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SessionsIdViewsGetRequest.class, baseUrl, "/sessions/{session_id}/views", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -87,12 +87,12 @@ public class Views {
      */
     public org.openapis.openapi.models.operations.SessionsIdViewsPostResponse sessionsIdViewsPost(org.openapis.openapi.models.operations.SessionsIdViewsPostRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SessionsIdViewsPostPathParams.class, baseUrl, "/sessions/{session_id}/views", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SessionsIdViewsPostRequest.class, baseUrl, "/sessions/{session_id}/views", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -139,7 +139,7 @@ public class Views {
      */
     public org.openapis.openapi.models.operations.ViewsIdDeleteResponse viewsIdDelete(org.openapis.openapi.models.operations.ViewsIdDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ViewsIdDeletePathParams.class, baseUrl, "/views/{view_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ViewsIdDeleteRequest.class, baseUrl, "/views/{view_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -180,7 +180,7 @@ public class Views {
      */
     public org.openapis.openapi.models.operations.ViewsIdGetResponse viewsIdGet(org.openapis.openapi.models.operations.ViewsIdGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ViewsIdGetPathParams.class, baseUrl, "/views/{view_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ViewsIdGetRequest.class, baseUrl, "/views/{view_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

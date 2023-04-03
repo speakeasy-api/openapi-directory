@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Create a custom class.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SpeechProjectsLocationsCustomClassesCreateResponse speechProjectsLocationsCustomClassesCreate(org.openapis.openapi.models.operations.SpeechProjectsLocationsCustomClassesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SpeechProjectsLocationsCustomClassesCreateResponse speechProjectsLocationsCustomClassesCreate(org.openapis.openapi.models.operations.SpeechProjectsLocationsCustomClassesCreateRequest request, org.openapis.openapi.models.operations.SpeechProjectsLocationsCustomClassesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SpeechProjectsLocationsCustomClassesCreatePathParams.class, baseUrl, "/v1/{parent}/customClasses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SpeechProjectsLocationsCustomClassesCreateRequest.class, baseUrl, "/v1/{parent}/customClasses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createCustomClassRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SpeechProjectsLocationsCustomClassesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SpeechProjectsLocationsCustomClassesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,25 +83,26 @@ public class Projects {
     /**
      * List custom classes.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SpeechProjectsLocationsCustomClassesListResponse speechProjectsLocationsCustomClassesList(org.openapis.openapi.models.operations.SpeechProjectsLocationsCustomClassesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SpeechProjectsLocationsCustomClassesListResponse speechProjectsLocationsCustomClassesList(org.openapis.openapi.models.operations.SpeechProjectsLocationsCustomClassesListRequest request, org.openapis.openapi.models.operations.SpeechProjectsLocationsCustomClassesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SpeechProjectsLocationsCustomClassesListPathParams.class, baseUrl, "/v1/{parent}/customClasses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SpeechProjectsLocationsCustomClassesListRequest.class, baseUrl, "/v1/{parent}/customClasses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SpeechProjectsLocationsCustomClassesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SpeechProjectsLocationsCustomClassesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,27 +129,28 @@ public class Projects {
     /**
      * Create a set of phrase hints. Each item in the set can be a single word or a multi-word phrase. The items in the PhraseSet are favored by the recognition model when you send a call that includes the PhraseSet.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsCreateResponse speechProjectsLocationsPhraseSetsCreate(org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsCreateResponse speechProjectsLocationsPhraseSetsCreate(org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsCreateRequest request, org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsCreatePathParams.class, baseUrl, "/v1/{parent}/phraseSets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsCreateRequest.class, baseUrl, "/v1/{parent}/phraseSets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createPhraseSetRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,25 +177,26 @@ public class Projects {
     /**
      * Delete a phrase set.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsDeleteResponse speechProjectsLocationsPhraseSetsDelete(org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsDeleteResponse speechProjectsLocationsPhraseSetsDelete(org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsDeleteRequest request, org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsDeletePathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsDeleteRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -219,25 +223,26 @@ public class Projects {
     /**
      * Get a phrase set.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsGetResponse speechProjectsLocationsPhraseSetsGet(org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsGetResponse speechProjectsLocationsPhraseSetsGet(org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsGetRequest request, org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsGetPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsGetRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -264,25 +269,26 @@ public class Projects {
     /**
      * List phrase sets.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsListResponse speechProjectsLocationsPhraseSetsList(org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsListResponse speechProjectsLocationsPhraseSetsList(org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsListRequest request, org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsListPathParams.class, baseUrl, "/v1/{parent}/phraseSets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsListRequest.class, baseUrl, "/v1/{parent}/phraseSets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -309,27 +315,28 @@ public class Projects {
     /**
      * Update a phrase set.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsPatchResponse speechProjectsLocationsPhraseSetsPatch(org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsPatchResponse speechProjectsLocationsPhraseSetsPatch(org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsPatchRequest request, org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsPatchPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsPatchRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "phraseSet", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

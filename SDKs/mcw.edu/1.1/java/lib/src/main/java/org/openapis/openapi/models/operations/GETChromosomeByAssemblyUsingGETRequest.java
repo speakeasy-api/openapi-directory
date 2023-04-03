@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETChromosomeByAssemblyUsingGETRequest {
+    /**
+     * chromosome
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=chromosome")
+    public String chromosome;
+    public GETChromosomeByAssemblyUsingGETRequest withChromosome(String chromosome) {
+        this.chromosome = chromosome;
+        return this;
+    }
     
-    public GETChromosomeByAssemblyUsingGETPathParams pathParams;
-    public GETChromosomeByAssemblyUsingGETRequest withPathParams(GETChromosomeByAssemblyUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * mapKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mapKey")
+    public Integer mapKey;
+    public GETChromosomeByAssemblyUsingGETRequest withMapKey(Integer mapKey) {
+        this.mapKey = mapKey;
         return this;
     }
     

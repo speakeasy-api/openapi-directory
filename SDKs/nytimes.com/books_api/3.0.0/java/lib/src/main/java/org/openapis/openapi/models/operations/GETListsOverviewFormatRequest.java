@@ -4,27 +4,34 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETListsOverviewFormatRequest {
-    
-    public GETListsOverviewFormatPathParams pathParams;
-    public GETListsOverviewFormatRequest withPathParams(GETListsOverviewFormatPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-key")
+    public String apiKey;
+    public GETListsOverviewFormatRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
-    
-    public GETListsOverviewFormatQueryParams queryParams;
-    public GETListsOverviewFormatRequest withQueryParams(GETListsOverviewFormatQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public GETListsOverviewFormatFormatEnum format;
+    public GETListsOverviewFormatRequest withFormat(GETListsOverviewFormatFormatEnum format) {
+        this.format = format;
         return this;
     }
     
-    
-    public GETListsOverviewFormatSecurity security;
-    public GETListsOverviewFormatRequest withSecurity(GETListsOverviewFormatSecurity security) {
-        this.security = security;
+    /**
+     * The best-seller list publication date. YYYY-MM-DD
+     * 
+     * You do not have to specify the exact date the list was published. The service will search forward (into the future) for the closest publication date to the date you specify. For example, a request for lists/overview/2013-05-22 will retrieve the list that was published on 05-26.
+     * 
+     * If you do not include a published_date, the current week's best-sellers lists will be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=published_date")
+    public String publishedDate;
+    public GETListsOverviewFormatRequest withPublishedDate(String publishedDate) {
+        this.publishedDate = publishedDate;
         return this;
     }
     

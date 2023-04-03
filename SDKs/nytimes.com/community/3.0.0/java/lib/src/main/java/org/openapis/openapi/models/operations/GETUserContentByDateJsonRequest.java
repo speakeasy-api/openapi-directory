@@ -4,20 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETUserContentByDateJsonRequest {
-    
-    public GETUserContentByDateJsonQueryParams queryParams;
-    public GETUserContentByDateJsonRequest withQueryParams(GETUserContentByDateJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GETUserContentByDateJsonSecurity security;
-    public GETUserContentByDateJsonRequest withSecurity(GETUserContentByDateJsonSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
+    public String date;
+    public GETUserContentByDateJsonRequest withDate(String date) {
+        this.date = date;
         return this;
     }
     

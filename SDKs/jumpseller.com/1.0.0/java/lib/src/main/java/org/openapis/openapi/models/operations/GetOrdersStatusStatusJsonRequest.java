@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrdersStatusStatusJsonRequest {
-    
-    public GetOrdersStatusStatusJsonPathParams pathParams;
-    public GetOrdersStatusStatusJsonRequest withPathParams(GetOrdersStatusStatusJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public GetOrdersStatusStatusJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
         return this;
     }
     
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public GetOrdersStatusStatusJsonRequest withLogin(String login) {
+        this.login = login;
+        return this;
+    }
     
-    public GetOrdersStatusStatusJsonQueryParams queryParams;
-    public GetOrdersStatusStatusJsonRequest withQueryParams(GetOrdersStatusStatusJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Status of the Order used as filter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=status")
+    public GetOrdersStatusStatusJsonStatusEnum status;
+    public GetOrdersStatusStatusJsonRequest withStatus(GetOrdersStatusStatusJsonStatusEnum status) {
+        this.status = status;
         return this;
     }
     

@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETMetricWidgetImageRequest {
-    
-    public GETGETMetricWidgetImageQueryParams queryParams;
-    public GETGETMetricWidgetImageRequest withQueryParams(GETGETMetricWidgetImageQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETGETMetricWidgetImageActionEnum action;
+    public GETGETMetricWidgetImageRequest withAction(GETGETMetricWidgetImageActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;A JSON string that defines the bitmap graph to be retrieved. The string includes the metrics to include in the graph, statistics, annotations, title, axis limits, and so on. You can include only one &lt;code&gt;MetricWidget&lt;/code&gt; parameter in each &lt;code&gt;GetMetricWidgetImage&lt;/code&gt; call.&lt;/p&gt; &lt;p&gt;For more information about the syntax of &lt;code&gt;MetricWidget&lt;/code&gt; see &lt;a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/CloudWatch-Metric-Widget-Structure.html"&gt;GetMetricWidgetImage: Metric Widget Structure and Syntax&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;If any metric on the graph could not load all the requested data points, an orange triangle with an exclamation point appears next to the graph legend.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MetricWidget")
+    public String metricWidget;
+    public GETGETMetricWidgetImageRequest withMetricWidget(String metricWidget) {
+        this.metricWidget = metricWidget;
+        return this;
+    }
     
-    public GETGETMetricWidgetImageHeaders headers;
-    public GETGETMetricWidgetImageRequest withHeaders(GETGETMetricWidgetImageHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The format of the resulting image. Only PNG images are supported.&lt;/p&gt; &lt;p&gt;The default is &lt;code&gt;png&lt;/code&gt;. If you specify &lt;code&gt;png&lt;/code&gt;, the API returns an HTTP response with the content-type set to &lt;code&gt;text/xml&lt;/code&gt;. The image data is in a &lt;code&gt;MetricWidgetImage&lt;/code&gt; field. For example:&lt;/p&gt; &lt;p&gt; &lt;code&gt; &amp;lt;GetMetricWidgetImageResponse xmlns=&amp;lt;URLstring&amp;gt;&amp;gt;&lt;/code&gt; &lt;/p&gt; &lt;p&gt; &lt;code&gt; &amp;lt;GetMetricWidgetImageResult&amp;gt;&lt;/code&gt; &lt;/p&gt; &lt;p&gt; &lt;code&gt; &amp;lt;MetricWidgetImage&amp;gt;&lt;/code&gt; &lt;/p&gt; &lt;p&gt; &lt;code&gt; iVBORw0KGgoAAAANSUhEUgAAAlgAAAGQEAYAAAAip...&lt;/code&gt; &lt;/p&gt; &lt;p&gt; &lt;code&gt; &amp;lt;/MetricWidgetImage&amp;gt;&lt;/code&gt; &lt;/p&gt; &lt;p&gt; &lt;code&gt; &amp;lt;/GetMetricWidgetImageResult&amp;gt;&lt;/code&gt; &lt;/p&gt; &lt;p&gt; &lt;code&gt; &amp;lt;ResponseMetadata&amp;gt;&lt;/code&gt; &lt;/p&gt; &lt;p&gt; &lt;code&gt; &amp;lt;RequestId&amp;gt;6f0d4192-4d42-11e8-82c1-f539a07e0e3b&amp;lt;/RequestId&amp;gt;&lt;/code&gt; &lt;/p&gt; &lt;p&gt; &lt;code&gt; &amp;lt;/ResponseMetadata&amp;gt;&lt;/code&gt; &lt;/p&gt; &lt;p&gt; &lt;code&gt;&amp;lt;/GetMetricWidgetImageResponse&amp;gt;&lt;/code&gt; &lt;/p&gt; &lt;p&gt;The &lt;code&gt;image/png&lt;/code&gt; setting is intended only for custom HTTP requests. For most use cases, and all actions using an Amazon Web Services SDK, you should use &lt;code&gt;png&lt;/code&gt;. If you specify &lt;code&gt;image/png&lt;/code&gt;, the HTTP response has a content-type set to &lt;code&gt;image/png&lt;/code&gt;, and the body of the response is a PNG image. &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OutputFormat")
+    public String outputFormat;
+    public GETGETMetricWidgetImageRequest withOutputFormat(String outputFormat) {
+        this.outputFormat = outputFormat;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETGETMetricWidgetImageVersionEnum version;
+    public GETGETMetricWidgetImageRequest withVersion(GETGETMetricWidgetImageVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETGETMetricWidgetImageRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETGETMetricWidgetImageRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETGETMetricWidgetImageRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETGETMetricWidgetImageRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETGETMetricWidgetImageRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETGETMetricWidgetImageRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETGETMetricWidgetImageRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

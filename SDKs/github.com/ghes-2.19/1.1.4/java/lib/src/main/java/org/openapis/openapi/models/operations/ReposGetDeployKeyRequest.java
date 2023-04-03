@@ -4,13 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposGetDeployKeyRequest {
+    /**
+     * key_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key_id")
+    public Long keyId;
+    public ReposGetDeployKeyRequest withKeyId(Long keyId) {
+        this.keyId = keyId;
+        return this;
+    }
     
-    public ReposGetDeployKeyPathParams pathParams;
-    public ReposGetDeployKeyRequest withPathParams(ReposGetDeployKeyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposGetDeployKeyRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposGetDeployKeyRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

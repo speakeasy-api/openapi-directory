@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAssociationObjectRequest {
-    
-    public GetAssociationObjectPathParams pathParams;
-    public GetAssociationObjectRequest withPathParams(GetAssociationObjectPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * identifier for an association, e.g. f5ba436c-f851-41b3-9d9d-bb2b5fc879d4
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetAssociationObjectRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

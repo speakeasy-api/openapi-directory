@@ -7,38 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSyncListItemRequest {
-    
-    public UpdateSyncListItemPathParams pathParams;
-    public UpdateSyncListItemRequest withPathParams(UpdateSyncListItemPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * If provided, applies this mutation if (and only if) the \u201crevision\u201d field of this [map item] matches the provided value. This matches the semantics of (and is implemented with) the HTTP [If-Match header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Match).
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
+    public String ifMatch;
+    public UpdateSyncListItemRequest withIfMatch(String ifMatch) {
+        this.ifMatch = ifMatch;
         return this;
     }
     
+    /**
+     * The index of the Sync List Item resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Index")
+    public Long index;
+    public UpdateSyncListItemRequest withIndex(Long index) {
+        this.index = index;
+        return this;
+    }
     
-    public UpdateSyncListItemHeaders headers;
-    public UpdateSyncListItemRequest withHeaders(UpdateSyncListItemHeaders headers) {
-        this.headers = headers;
+    /**
+     * The SID of the Sync List with the Sync List Item resource to update. Can be the Sync List resource's `sid` or its `unique_name`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ListSid")
+    public String listSid;
+    public UpdateSyncListItemRequest withListSid(String listSid) {
+        this.listSid = listSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateSyncListItemUpdateSyncListItemRequest request;
-    public UpdateSyncListItemRequest withRequest(UpdateSyncListItemUpdateSyncListItemRequest request) {
-        this.request = request;
+    public UpdateSyncListItemUpdateSyncListItemRequest requestBody;
+    public UpdateSyncListItemRequest withRequestBody(UpdateSyncListItemUpdateSyncListItemRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateSyncListItemSecurity security;
-    public UpdateSyncListItemRequest withSecurity(UpdateSyncListItemSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateSyncListItemRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync List Item resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public UpdateSyncListItemRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

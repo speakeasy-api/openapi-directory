@@ -7,24 +7,60 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ThreeSendAdditionalDataRequest {
-    
-    public ThreeSendAdditionalDataPathParams pathParams;
-    public ThreeSendAdditionalDataRequest withPathParams(ThreeSendAdditionalDataPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Media type(s) that is/are acceptable for the response. Default value for payment provider protocol is application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public ThreeSendAdditionalDataRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public ThreeSendAdditionalDataHeaders headers;
-    public ThreeSendAdditionalDataRequest withHeaders(ThreeSendAdditionalDataHeaders headers) {
-        this.headers = headers;
+    /**
+     * The Media type of the body of the request.  Default value for payment provider protocol is application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public ThreeSendAdditionalDataRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public Object[][] request;
-    public ThreeSendAdditionalDataRequest withRequest(Object[][] request) {
-        this.request = request;
+    public Object[][] requestBody;
+    public ThreeSendAdditionalDataRequest withRequestBody(Object[][] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The AppKey configured by the merchant (optional configuration)
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-PROVIDER-API-AppKey")
+    public String xPROVIDERAPIAppKey;
+    public ThreeSendAdditionalDataRequest withXPROVIDERAPIAppKey(String xPROVIDERAPIAppKey) {
+        this.xPROVIDERAPIAppKey = xPROVIDERAPIAppKey;
+        return this;
+    }
+    
+    /**
+     * The AppToken configured by the merchant (optional configuration)
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-PROVIDER-API-AppToken")
+    public String xPROVIDERAPIAppToken;
+    public ThreeSendAdditionalDataRequest withXPROVIDERAPIAppToken(String xPROVIDERAPIAppToken) {
+        this.xPROVIDERAPIAppToken = xPROVIDERAPIAppToken;
+        return this;
+    }
+    
+    /**
+     * Transaction identification.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transactionId")
+    public String transactionId;
+    public ThreeSendAdditionalDataRequest withTransactionId(String transactionId) {
+        this.transactionId = transactionId;
         return this;
     }
     

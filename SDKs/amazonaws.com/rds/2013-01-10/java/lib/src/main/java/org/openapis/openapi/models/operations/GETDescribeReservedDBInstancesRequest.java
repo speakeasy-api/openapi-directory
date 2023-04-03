@@ -4,20 +4,132 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeReservedDBInstancesRequest {
-    
-    public GETDescribeReservedDBInstancesQueryParams queryParams;
-    public GETDescribeReservedDBInstancesRequest withQueryParams(GETDescribeReservedDBInstancesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeReservedDBInstancesActionEnum action;
+    public GETDescribeReservedDBInstancesRequest withAction(GETDescribeReservedDBInstancesActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBInstanceClass")
+    public String dbInstanceClass;
+    public GETDescribeReservedDBInstancesRequest withDBInstanceClass(String dbInstanceClass) {
+        this.dbInstanceClass = dbInstanceClass;
+        return this;
+    }
     
-    public GETDescribeReservedDBInstancesHeaders headers;
-    public GETDescribeReservedDBInstancesRequest withHeaders(GETDescribeReservedDBInstancesHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Duration")
+    public String duration;
+    public GETDescribeReservedDBInstancesRequest withDuration(String duration) {
+        this.duration = duration;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
+    public String marker;
+    public GETDescribeReservedDBInstancesRequest withMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
+    public Long maxRecords;
+    public GETDescribeReservedDBInstancesRequest withMaxRecords(Long maxRecords) {
+        this.maxRecords = maxRecords;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MultiAZ")
+    public Boolean multiAZ;
+    public GETDescribeReservedDBInstancesRequest withMultiAZ(Boolean multiAZ) {
+        this.multiAZ = multiAZ;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OfferingType")
+    public String offeringType;
+    public GETDescribeReservedDBInstancesRequest withOfferingType(String offeringType) {
+        this.offeringType = offeringType;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ProductDescription")
+    public String productDescription;
+    public GETDescribeReservedDBInstancesRequest withProductDescription(String productDescription) {
+        this.productDescription = productDescription;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ReservedDBInstanceId")
+    public String reservedDBInstanceId;
+    public GETDescribeReservedDBInstancesRequest withReservedDBInstanceId(String reservedDBInstanceId) {
+        this.reservedDBInstanceId = reservedDBInstanceId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ReservedDBInstancesOfferingId")
+    public String reservedDBInstancesOfferingId;
+    public GETDescribeReservedDBInstancesRequest withReservedDBInstancesOfferingId(String reservedDBInstancesOfferingId) {
+        this.reservedDBInstancesOfferingId = reservedDBInstancesOfferingId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeReservedDBInstancesVersionEnum version;
+    public GETDescribeReservedDBInstancesRequest withVersion(GETDescribeReservedDBInstancesVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeReservedDBInstancesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeReservedDBInstancesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeReservedDBInstancesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeReservedDBInstancesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeReservedDBInstancesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeReservedDBInstancesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeReservedDBInstancesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

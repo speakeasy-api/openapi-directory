@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.BatchGetAggregateResourceConfigXAmzTargetEnum;
-import org.openapis.openapi.models.operations.BatchGetAggregateResourceConfigHeaders;
 import org.openapis.openapi.models.operations.BatchGetAggregateResourceConfigRequest;
 import org.openapis.openapi.models.operations.BatchGetAggregateResourceConfigResponse;
 import org.openapis.openapi.models.shared.BatchGetAggregateResourceConfigRequest;
@@ -30,43 +29,46 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             BatchGetAggregateResourceConfigRequest req = new BatchGetAggregateResourceConfigRequest() {{
-                headers = new BatchGetAggregateResourceConfigHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "StarlingDoveService.BatchGetAggregateResourceConfig";
-                }};
-                request = new BatchGetAggregateResourceConfigRequest() {{
-                    configurationAggregatorName = "illum";
+                batchGetAggregateResourceConfigRequest = new BatchGetAggregateResourceConfigRequest() {{
+                    configurationAggregatorName = "corrupti";
                     resourceIdentifiers = new org.openapis.openapi.models.shared.AggregateResourceIdentifier[]{{
                         add(new AggregateResourceIdentifier() {{
-                            resourceId = "error";
-                            resourceName = "deserunt";
-                            resourceType = "AWS::SSM::FileData";
-                            sourceAccountId = "iure";
-                            sourceRegion = "magnam";
+                            resourceId = "distinctio";
+                            resourceName = "quibusdam";
+                            resourceType = "AWS::DataSync::LocationNFS";
+                            sourceAccountId = "nulla";
+                            sourceRegion = "corrupti";
                         }}),
                         add(new AggregateResourceIdentifier() {{
-                            resourceId = "debitis";
-                            resourceName = "ipsa";
-                            resourceType = "AWS::IoTSiteWise::Gateway";
-                            sourceAccountId = "tempora";
+                            resourceId = "illum";
+                            resourceName = "vel";
+                            resourceType = "AWS::GuardDuty::IPSet";
+                            sourceAccountId = "deserunt";
                             sourceRegion = "suscipit";
+                        }}),
+                        add(new AggregateResourceIdentifier() {{
+                            resourceId = "iure";
+                            resourceName = "magnam";
+                            resourceType = "AWS::IoTSiteWise::Dashboard";
+                            sourceAccountId = "ipsa";
+                            sourceRegion = "delectus";
                         }}),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "tempora";
+                xAmzContentSha256 = "suscipit";
+                xAmzCredential = "molestiae";
+                xAmzDate = "minus";
+                xAmzSecurityToken = "placeat";
+                xAmzSignature = "voluptatum";
+                xAmzSignedHeaders = "iusto";
+                xAmzTarget = "StarlingDoveService.BatchGetAggregateResourceConfig";
+            }}            
 
             BatchGetAggregateResourceConfigResponse res = sdk.batchGetAggregateResourceConfig(req);
 
@@ -80,7 +82,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

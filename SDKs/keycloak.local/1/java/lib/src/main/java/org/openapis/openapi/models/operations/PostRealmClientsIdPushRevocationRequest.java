@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRealmClientsIdPushRevocationRequest {
+    /**
+     * id of client (not client-id)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostRealmClientsIdPushRevocationRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PostRealmClientsIdPushRevocationPathParams pathParams;
-    public PostRealmClientsIdPushRevocationRequest withPathParams(PostRealmClientsIdPushRevocationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PostRealmClientsIdPushRevocationRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

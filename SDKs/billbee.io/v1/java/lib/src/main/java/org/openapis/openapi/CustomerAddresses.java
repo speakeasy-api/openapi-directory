@@ -37,7 +37,7 @@ public class CustomerAddresses {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CustomerAddressesCreateFormResponse customerAddressesCreateForm(org.openapis.openapi.models.operations.CustomerAddressesCreateFormRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CustomerAddressesCreateFormResponse customerAddressesCreateForm(org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/customer-addresses");
         
@@ -96,7 +96,7 @@ public class CustomerAddresses {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CustomerAddressesCreateJsonResponse customerAddressesCreateJson(org.openapis.openapi.models.operations.CustomerAddressesCreateJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CustomerAddressesCreateJsonResponse customerAddressesCreateJson(org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/customer-addresses");
         
@@ -155,7 +155,7 @@ public class CustomerAddresses {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CustomerAddressesCreateRawResponse customerAddressesCreateRaw(org.openapis.openapi.models.operations.CustomerAddressesCreateRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CustomerAddressesCreateRawResponse customerAddressesCreateRaw(byte[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/customer-addresses");
         
@@ -222,7 +222,7 @@ public class CustomerAddresses {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CustomerAddressesGetAllQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CustomerAddressesGetAllRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -276,7 +276,7 @@ public class CustomerAddresses {
      */
     public org.openapis.openapi.models.operations.CustomerAddressesGetOneResponse customerAddressesGetOne(org.openapis.openapi.models.operations.CustomerAddressesGetOneRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CustomerAddressesGetOnePathParams.class, baseUrl, "/api/v1/customer-addresses/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CustomerAddressesGetOneRequest.class, baseUrl, "/api/v1/customer-addresses/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -330,12 +330,12 @@ public class CustomerAddresses {
      */
     public org.openapis.openapi.models.operations.CustomerAddressesUpdateFormResponse customerAddressesUpdateForm(org.openapis.openapi.models.operations.CustomerAddressesUpdateFormRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CustomerAddressesUpdateFormPathParams.class, baseUrl, "/api/v1/customer-addresses/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CustomerAddressesUpdateFormRequest.class, baseUrl, "/api/v1/customer-addresses/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "billbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -389,12 +389,12 @@ public class CustomerAddresses {
      */
     public org.openapis.openapi.models.operations.CustomerAddressesUpdateJsonResponse customerAddressesUpdateJson(org.openapis.openapi.models.operations.CustomerAddressesUpdateJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CustomerAddressesUpdateJsonPathParams.class, baseUrl, "/api/v1/customer-addresses/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CustomerAddressesUpdateJsonRequest.class, baseUrl, "/api/v1/customer-addresses/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "billbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -448,12 +448,12 @@ public class CustomerAddresses {
      */
     public org.openapis.openapi.models.operations.CustomerAddressesUpdateRawResponse customerAddressesUpdateRaw(org.openapis.openapi.models.operations.CustomerAddressesUpdateRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CustomerAddressesUpdateRawPathParams.class, baseUrl, "/api/v1/customer-addresses/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CustomerAddressesUpdateRawRequest.class, baseUrl, "/api/v1/customer-addresses/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

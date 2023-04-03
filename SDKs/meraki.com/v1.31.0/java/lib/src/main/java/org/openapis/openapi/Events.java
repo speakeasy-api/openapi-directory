@@ -43,12 +43,12 @@ public class Events {
      */
     public org.openapis.openapi.models.operations.CreateNetworkFirmwareUpgradesStagedEventResponse createNetworkFirmwareUpgradesStagedEvent(org.openapis.openapi.models.operations.CreateNetworkFirmwareUpgradesStagedEventRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkFirmwareUpgradesStagedEventPathParams.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/events", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkFirmwareUpgradesStagedEventRequest.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/events", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -88,7 +88,7 @@ public class Events {
      */
     public org.openapis.openapi.models.operations.DeferNetworkFirmwareUpgradesStagedEventsResponse deferNetworkFirmwareUpgradesStagedEvents(org.openapis.openapi.models.operations.DeferNetworkFirmwareUpgradesStagedEventsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeferNetworkFirmwareUpgradesStagedEventsPathParams.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/events/defer", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeferNetworkFirmwareUpgradesStagedEventsRequest.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/events/defer", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -128,13 +128,13 @@ public class Events {
      */
     public org.openapis.openapi.models.operations.GetNetworkApplianceClientSecurityEventsResponse getNetworkApplianceClientSecurityEvents(org.openapis.openapi.models.operations.GetNetworkApplianceClientSecurityEventsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceClientSecurityEventsPathParams.class, baseUrl, "/networks/{networkId}/appliance/clients/{clientId}/security/events", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceClientSecurityEventsRequest.class, baseUrl, "/networks/{networkId}/appliance/clients/{clientId}/security/events", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkApplianceClientSecurityEventsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkApplianceClientSecurityEventsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -176,13 +176,13 @@ public class Events {
      */
     public org.openapis.openapi.models.operations.GetNetworkApplianceSecurityEventsResponse getNetworkApplianceSecurityEvents(org.openapis.openapi.models.operations.GetNetworkApplianceSecurityEventsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceSecurityEventsPathParams.class, baseUrl, "/networks/{networkId}/appliance/security/events", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceSecurityEventsRequest.class, baseUrl, "/networks/{networkId}/appliance/security/events", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkApplianceSecurityEventsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkApplianceSecurityEventsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -224,13 +224,13 @@ public class Events {
      */
     public org.openapis.openapi.models.operations.GetNetworkEventsResponse getNetworkEvents(org.openapis.openapi.models.operations.GetNetworkEventsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkEventsPathParams.class, baseUrl, "/networks/{networkId}/events", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkEventsRequest.class, baseUrl, "/networks/{networkId}/events", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkEventsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkEventsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -272,7 +272,7 @@ public class Events {
      */
     public org.openapis.openapi.models.operations.GetNetworkEventsEventTypesResponse getNetworkEventsEventTypes(org.openapis.openapi.models.operations.GetNetworkEventsEventTypesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkEventsEventTypesPathParams.class, baseUrl, "/networks/{networkId}/events/eventTypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkEventsEventTypesRequest.class, baseUrl, "/networks/{networkId}/events/eventTypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -312,7 +312,7 @@ public class Events {
      */
     public org.openapis.openapi.models.operations.GetNetworkFirmwareUpgradesStagedEventsResponse getNetworkFirmwareUpgradesStagedEvents(org.openapis.openapi.models.operations.GetNetworkFirmwareUpgradesStagedEventsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkFirmwareUpgradesStagedEventsPathParams.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/events", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkFirmwareUpgradesStagedEventsRequest.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/events", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -352,13 +352,13 @@ public class Events {
      */
     public org.openapis.openapi.models.operations.GetOrganizationApplianceSecurityEventsResponse getOrganizationApplianceSecurityEvents(org.openapis.openapi.models.operations.GetOrganizationApplianceSecurityEventsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationApplianceSecurityEventsPathParams.class, baseUrl, "/organizations/{organizationId}/appliance/security/events", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationApplianceSecurityEventsRequest.class, baseUrl, "/organizations/{organizationId}/appliance/security/events", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationApplianceSecurityEventsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationApplianceSecurityEventsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -400,12 +400,12 @@ public class Events {
      */
     public org.openapis.openapi.models.operations.RollbacksNetworkFirmwareUpgradesStagedEventsResponse rollbacksNetworkFirmwareUpgradesStagedEvents(org.openapis.openapi.models.operations.RollbacksNetworkFirmwareUpgradesStagedEventsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RollbacksNetworkFirmwareUpgradesStagedEventsPathParams.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/events/rollbacks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RollbacksNetworkFirmwareUpgradesStagedEventsRequest.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/events/rollbacks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -445,12 +445,12 @@ public class Events {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkFirmwareUpgradesStagedEventsResponse updateNetworkFirmwareUpgradesStagedEvents(org.openapis.openapi.models.operations.UpdateNetworkFirmwareUpgradesStagedEventsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkFirmwareUpgradesStagedEventsPathParams.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/events", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkFirmwareUpgradesStagedEventsRequest.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/events", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

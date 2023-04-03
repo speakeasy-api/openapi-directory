@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateOAuthClientRequest {
-    
-    public CreateOAuthClientHeaders headers;
-    public CreateOAuthClientRequest withHeaders(CreateOAuthClientHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateOAuthClientRequest createOAuthClientRequest;
+    public CreateOAuthClientRequest withCreateOAuthClientRequest(org.openapis.openapi.models.shared.CreateOAuthClientRequest createOAuthClientRequest) {
+        this.createOAuthClientRequest = createOAuthClientRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateOAuthClientRequest request;
-    public CreateOAuthClientRequest withRequest(org.openapis.openapi.models.shared.CreateOAuthClientRequest request) {
-        this.request = request;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public CreateOAuthClientRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     

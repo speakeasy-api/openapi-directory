@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateProductRequest {
-    
-    public CreateProductPathParams pathParams;
-    public CreateProductRequest withPathParams(CreateProductPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateProductRequest createProductRequest;
+    public CreateProductRequest withCreateProductRequest(org.openapis.openapi.models.shared.CreateProductRequest createProductRequest) {
+        this.createProductRequest = createProductRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateProductRequest request;
-    public CreateProductRequest withRequest(org.openapis.openapi.models.shared.CreateProductRequest request) {
-        this.request = request;
+    /**
+     * The identifier of the Organization.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public CreateProductRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

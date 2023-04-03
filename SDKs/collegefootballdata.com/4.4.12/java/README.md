@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.GetLinesQueryParams;
 import org.openapis.openapi.models.operations.GetLinesRequest;
 import org.openapis.openapi.models.operations.GetLinesResponse;
 
@@ -26,24 +25,20 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    apiKeyAuth = new SchemeAPIKeyAuth() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    apiKeyAuth = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GetLinesRequest req = new GetLinesRequest() {{
-                queryParams = new GetLinesQueryParams() {{
-                    away = "corrupti";
-                    conference = "provident";
-                    gameId = 715190;
-                    home = "quibusdam";
-                    seasonType = "unde";
-                    team = "nulla";
-                    week = 544883;
-                    year = 847252;
-                }};
-            }};            
+                away = "corrupti";
+                conference = "provident";
+                gameId = 715190;
+                home = "quibusdam";
+                seasonType = "unde";
+                team = "nulla";
+                week = 544883;
+                year = 847252;
+            }}            
 
             GetLinesResponse res = sdk.betting.getLines(req);
 
@@ -57,7 +52,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### betting

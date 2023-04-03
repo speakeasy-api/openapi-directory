@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetIndividualsPartyIdRolesRoleIdRequest {
-    
-    public GetIndividualsPartyIdRolesRoleIdPathParams pathParams;
-    public GetIndividualsPartyIdRolesRoleIdRequest withPathParams(GetIndividualsPartyIdRolesRoleIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The API key.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public GetIndividualsPartyIdRolesRoleIdRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    /**
+     * The party identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=partyId")
+    public String partyId;
+    public GetIndividualsPartyIdRolesRoleIdRequest withPartyId(String partyId) {
+        this.partyId = partyId;
+        return this;
+    }
     
-    public GetIndividualsPartyIdRolesRoleIdHeaders headers;
-    public GetIndividualsPartyIdRolesRoleIdRequest withHeaders(GetIndividualsPartyIdRolesRoleIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * The role identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=roleId")
+    public String roleId;
+    public GetIndividualsPartyIdRolesRoleIdRequest withRoleId(String roleId) {
+        this.roleId = roleId;
         return this;
     }
     

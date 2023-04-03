@@ -7,13 +7,9 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.operations.BigqueryDatasetsDeleteSecurityOption1;
 import org.openapis.openapi.models.operations.BigqueryDatasetsDeleteSecurityOption2;
 import org.openapis.openapi.models.operations.BigqueryDatasetsDeleteSecurity;
-import org.openapis.openapi.models.operations.BigqueryDatasetsDeletePathParams;
-import org.openapis.openapi.models.operations.BigqueryDatasetsDeleteQueryParams;
 import org.openapis.openapi.models.operations.BigqueryDatasetsDeleteRequest;
 import org.openapis.openapi.models.operations.BigqueryDatasetsDeleteResponse;
 import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -22,33 +18,24 @@ public class Application {
                 .build();
 
             BigqueryDatasetsDeleteRequest req = new BigqueryDatasetsDeleteRequest() {{
-                security = new BigqueryDatasetsDeleteSecurity() {{
-                    option1 = new BigqueryDatasetsDeleteSecurityOption1() {{
-                        oauth2 = new SchemeOauth2() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                        oauth2c = new SchemeOauth2c() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                    }};
-                }};
-                pathParams = new BigqueryDatasetsDeletePathParams() {{
-                    datasetId = "corrupti";
-                    projectId = "provident";
-                }};
-                queryParams = new BigqueryDatasetsDeleteQueryParams() {{
-                    alt = "json";
-                    deleteContents = false;
-                    fields = "distinctio";
-                    key = "quibusdam";
-                    oauthToken = "unde";
-                    prettyPrint = false;
-                    quotaUser = "nulla";
-                    userIp = "corrupti";
-                }};
-            }};            
+                alt = "json";
+                datasetId = "corrupti";
+                deleteContents = false;
+                fields = "provident";
+                key = "distinctio";
+                oauthToken = "quibusdam";
+                prettyPrint = false;
+                projectId = "unde";
+                quotaUser = "nulla";
+                userIp = "corrupti";
+            }}            
 
-            BigqueryDatasetsDeleteResponse res = sdk.datasets.bigqueryDatasetsDelete(req);
+            BigqueryDatasetsDeleteResponse res = sdk.datasets.bigqueryDatasetsDelete(req, new BigqueryDatasetsDeleteSecurity() {{
+                option1 = new BigqueryDatasetsDeleteSecurityOption1() {{
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                }};
+            }});
 
             if (res.statusCode == 200) {
                 // handle response

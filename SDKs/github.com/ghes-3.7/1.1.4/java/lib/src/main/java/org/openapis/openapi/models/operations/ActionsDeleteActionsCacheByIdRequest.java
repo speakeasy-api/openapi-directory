@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsDeleteActionsCacheByIdRequest {
+    /**
+     * The unique identifier of the GitHub Actions cache.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cache_id")
+    public Long cacheId;
+    public ActionsDeleteActionsCacheByIdRequest withCacheId(Long cacheId) {
+        this.cacheId = cacheId;
+        return this;
+    }
     
-    public ActionsDeleteActionsCacheByIdPathParams pathParams;
-    public ActionsDeleteActionsCacheByIdRequest withPathParams(ActionsDeleteActionsCacheByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ActionsDeleteActionsCacheByIdRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ActionsDeleteActionsCacheByIdRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

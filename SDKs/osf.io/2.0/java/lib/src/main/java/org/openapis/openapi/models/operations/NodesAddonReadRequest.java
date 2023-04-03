@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NodesAddonReadRequest {
+    /**
+     * The unique identifier of the node.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=node_id")
+    public String nodeId;
+    public NodesAddonReadRequest withNodeId(String nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
     
-    public NodesAddonReadPathParams pathParams;
-    public NodesAddonReadRequest withPathParams(NodesAddonReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the addon.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=provider")
+    public String provider;
+    public NodesAddonReadRequest withProvider(String provider) {
+        this.provider = provider;
         return this;
     }
     

@@ -4,27 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRecordRequest {
-    
-    public GetRecordPathParams pathParams;
-    public GetRecordRequest withPathParams(GetRecordPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the feature group from which you want to retrieve a record.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FeatureGroupName")
+    public String featureGroupName;
+    public GetRecordRequest withFeatureGroupName(String featureGroupName) {
+        this.featureGroupName = featureGroupName;
         return this;
     }
     
-    
-    public GetRecordQueryParams queryParams;
-    public GetRecordRequest withQueryParams(GetRecordQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * List of names of Features to be retrieved. If not specified, the latest value for all the Features are returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FeatureName")
+    public String[] featureName;
+    public GetRecordRequest withFeatureName(String[] featureName) {
+        this.featureName = featureName;
         return this;
     }
     
+    /**
+     * The value that corresponds to &lt;code&gt;RecordIdentifier&lt;/code&gt; type and uniquely identifies the record in the &lt;code&gt;FeatureGroup&lt;/code&gt;. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RecordIdentifierValueAsString")
+    public String recordIdentifierValueAsString;
+    public GetRecordRequest withRecordIdentifierValueAsString(String recordIdentifierValueAsString) {
+        this.recordIdentifierValueAsString = recordIdentifierValueAsString;
+        return this;
+    }
     
-    public GetRecordHeaders headers;
-    public GetRecordRequest withHeaders(GetRecordHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetRecordRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetRecordRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetRecordRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetRecordRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetRecordRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetRecordRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetRecordRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

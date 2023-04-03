@@ -4,13 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGetPathwayHistoryRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public GetGetPathwayHistoryFormatEnum format;
+    public GetGetPathwayHistoryRequest withFormat(GetGetPathwayHistoryFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public GetGetPathwayHistoryQueryParams queryParams;
-    public GetGetPathwayHistoryRequest withQueryParams(GetGetPathwayHistoryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The pathway identifier
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pwId")
+    public String pwId;
+    public GetGetPathwayHistoryRequest withPwId(String pwId) {
+        this.pwId = pwId;
+        return this;
+    }
+    
+    /**
+     * Limit by time, only history items after the given
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timestamp")
+    public String timestamp;
+    public GetGetPathwayHistoryRequest withTimestamp(String timestamp) {
+        this.timestamp = timestamp;
         return this;
     }
     

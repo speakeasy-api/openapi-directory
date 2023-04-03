@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllEmployeesRequest {
-    
-    public GetAllEmployeesPathParams pathParams;
-    public GetAllEmployeesRequest withPathParams(GetAllEmployeesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Company Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public GetAllEmployeesRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
         return this;
     }
     
-    
-    public GetAllEmployeesQueryParams queryParams;
-    public GetAllEmployeesRequest withQueryParams(GetAllEmployeesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Whether to include the total record count in the header's X-Pcty-Total-Count property. Default value is true.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includetotalcount")
+    public Boolean includetotalcount;
+    public GetAllEmployeesRequest withIncludetotalcount(Boolean includetotalcount) {
+        this.includetotalcount = includetotalcount;
         return this;
     }
     
+    /**
+     * Page number to retrieve; page numbers are 0-based (so to get the first page of results, pass pagenumber=0). Default value is 0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagenumber")
+    public Long pagenumber;
+    public GetAllEmployeesRequest withPagenumber(Long pagenumber) {
+        this.pagenumber = pagenumber;
+        return this;
+    }
     
-    public GetAllEmployeesSecurity security;
-    public GetAllEmployeesRequest withSecurity(GetAllEmployeesSecurity security) {
-        this.security = security;
+    /**
+     * Number of records per page. Default value is 25.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagesize")
+    public Long pagesize;
+    public GetAllEmployeesRequest withPagesize(Long pagesize) {
+        this.pagesize = pagesize;
         return this;
     }
     

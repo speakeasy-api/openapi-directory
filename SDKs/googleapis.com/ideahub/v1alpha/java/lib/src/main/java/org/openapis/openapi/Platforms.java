@@ -39,15 +39,15 @@ public class Platforms {
      */
     public org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesIdeaActivitiesCreateResponse ideahubPlatformsPropertiesIdeaActivitiesCreate(org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesIdeaActivitiesCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesIdeaActivitiesCreatePathParams.class, baseUrl, "/v1alpha/{parent}/ideaActivities", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesIdeaActivitiesCreateRequest.class, baseUrl, "/v1alpha/{parent}/ideaActivities", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleSearchIdeahubV1alphaIdeaActivity", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesIdeaActivitiesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesIdeaActivitiesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -85,13 +85,13 @@ public class Platforms {
      */
     public org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesIdeasListResponse ideahubPlatformsPropertiesIdeasList(org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesIdeasListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesIdeasListPathParams.class, baseUrl, "/v1alpha/{parent}/ideas", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesIdeasListRequest.class, baseUrl, "/v1alpha/{parent}/ideas", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesIdeasListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesIdeasListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -129,13 +129,13 @@ public class Platforms {
      */
     public org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesLocalesListResponse ideahubPlatformsPropertiesLocalesList(org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesLocalesListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesLocalesListPathParams.class, baseUrl, "/v1alpha/{parent}/locales", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesLocalesListRequest.class, baseUrl, "/v1alpha/{parent}/locales", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesLocalesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesLocalesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -173,15 +173,15 @@ public class Platforms {
      */
     public org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesTopicStatesPatchResponse ideahubPlatformsPropertiesTopicStatesPatch(org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesTopicStatesPatchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesTopicStatesPatchPathParams.class, baseUrl, "/v1alpha/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesTopicStatesPatchRequest.class, baseUrl, "/v1alpha/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleSearchIdeahubV1alphaTopicState", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesTopicStatesPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesTopicStatesPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

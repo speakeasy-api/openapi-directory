@@ -34,25 +34,26 @@ public class Accounts {
     /**
      * Combines Containers.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersCombineResponse tagmanagerAccountsContainersCombine(org.openapis.openapi.models.operations.TagmanagerAccountsContainersCombineRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersCombineResponse tagmanagerAccountsContainersCombine(org.openapis.openapi.models.operations.TagmanagerAccountsContainersCombineRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersCombineSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersCombinePathParams.class, baseUrl, "/tagmanager/v2/{path}:combine", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersCombineRequest.class, baseUrl, "/tagmanager/v2/{path}:combine", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersCombineQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersCombineRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,27 +80,28 @@ public class Accounts {
     /**
      * Creates a Container.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersCreateResponse tagmanagerAccountsContainersCreate(org.openapis.openapi.models.operations.TagmanagerAccountsContainersCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersCreateResponse tagmanagerAccountsContainersCreate(org.openapis.openapi.models.operations.TagmanagerAccountsContainersCreateRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersCreatePathParams.class, baseUrl, "/tagmanager/v2/{parent}/containers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersCreateRequest.class, baseUrl, "/tagmanager/v2/{parent}/containers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "container", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,25 +128,26 @@ public class Accounts {
     /**
      * Adds a Destination to this Container and removes it from the Container to which it is currently linked.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersDestinationsLinkResponse tagmanagerAccountsContainersDestinationsLink(org.openapis.openapi.models.operations.TagmanagerAccountsContainersDestinationsLinkRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersDestinationsLinkResponse tagmanagerAccountsContainersDestinationsLink(org.openapis.openapi.models.operations.TagmanagerAccountsContainersDestinationsLinkRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersDestinationsLinkSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersDestinationsLinkPathParams.class, baseUrl, "/tagmanager/v2/{parent}/destinations:link", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersDestinationsLinkRequest.class, baseUrl, "/tagmanager/v2/{parent}/destinations:link", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersDestinationsLinkQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersDestinationsLinkRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,25 +174,26 @@ public class Accounts {
     /**
      * Lists all Destinations linked to a GTM Container.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersDestinationsListResponse tagmanagerAccountsContainersDestinationsList(org.openapis.openapi.models.operations.TagmanagerAccountsContainersDestinationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersDestinationsListResponse tagmanagerAccountsContainersDestinationsList(org.openapis.openapi.models.operations.TagmanagerAccountsContainersDestinationsListRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersDestinationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersDestinationsListPathParams.class, baseUrl, "/tagmanager/v2/{parent}/destinations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersDestinationsListRequest.class, baseUrl, "/tagmanager/v2/{parent}/destinations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersDestinationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersDestinationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -216,27 +220,28 @@ public class Accounts {
     /**
      * Creates a GTM Environment.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsCreateResponse tagmanagerAccountsContainersEnvironmentsCreate(org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsCreateResponse tagmanagerAccountsContainersEnvironmentsCreate(org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsCreateRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsCreatePathParams.class, baseUrl, "/tagmanager/v2/{parent}/environments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsCreateRequest.class, baseUrl, "/tagmanager/v2/{parent}/environments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "environment", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -263,25 +268,26 @@ public class Accounts {
     /**
      * Lists all GTM Environments of a GTM Container.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsListResponse tagmanagerAccountsContainersEnvironmentsList(org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsListResponse tagmanagerAccountsContainersEnvironmentsList(org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsListRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsListPathParams.class, baseUrl, "/tagmanager/v2/{parent}/environments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsListRequest.class, baseUrl, "/tagmanager/v2/{parent}/environments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -308,27 +314,28 @@ public class Accounts {
     /**
      * Re-generates the authorization code for a GTM Environment.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsReauthorizeResponse tagmanagerAccountsContainersEnvironmentsReauthorize(org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsReauthorizeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsReauthorizeResponse tagmanagerAccountsContainersEnvironmentsReauthorize(org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsReauthorizeRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsReauthorizeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsReauthorizePathParams.class, baseUrl, "/tagmanager/v2/{path}:reauthorize", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsReauthorizeRequest.class, baseUrl, "/tagmanager/v2/{path}:reauthorize", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "environment", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsReauthorizeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsReauthorizeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -355,25 +362,26 @@ public class Accounts {
     /**
      * Lists all Containers that belongs to a GTM Account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersListResponse tagmanagerAccountsContainersList(org.openapis.openapi.models.operations.TagmanagerAccountsContainersListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersListResponse tagmanagerAccountsContainersList(org.openapis.openapi.models.operations.TagmanagerAccountsContainersListRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersListPathParams.class, baseUrl, "/tagmanager/v2/{parent}/containers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersListRequest.class, baseUrl, "/tagmanager/v2/{parent}/containers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -400,10 +408,11 @@ public class Accounts {
     /**
      * Looks up a Container by destination ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersLookupResponse tagmanagerAccountsContainersLookup(org.openapis.openapi.models.operations.TagmanagerAccountsContainersLookupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersLookupResponse tagmanagerAccountsContainersLookup(org.openapis.openapi.models.operations.TagmanagerAccountsContainersLookupRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersLookupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/tagmanager/v2/accounts/containers:lookup");
         
@@ -411,14 +420,14 @@ public class Accounts {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersLookupQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersLookupRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -445,25 +454,26 @@ public class Accounts {
     /**
      * Move Tag ID out of a Container.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersMoveTagIdResponse tagmanagerAccountsContainersMoveTagId(org.openapis.openapi.models.operations.TagmanagerAccountsContainersMoveTagIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersMoveTagIdResponse tagmanagerAccountsContainersMoveTagId(org.openapis.openapi.models.operations.TagmanagerAccountsContainersMoveTagIdRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersMoveTagIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersMoveTagIdPathParams.class, baseUrl, "/tagmanager/v2/{path}:move_tag_id", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersMoveTagIdRequest.class, baseUrl, "/tagmanager/v2/{path}:move_tag_id", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersMoveTagIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersMoveTagIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -490,25 +500,26 @@ public class Accounts {
     /**
      * Gets the tagging snippet for a Container.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersSnippetResponse tagmanagerAccountsContainersSnippet(org.openapis.openapi.models.operations.TagmanagerAccountsContainersSnippetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersSnippetResponse tagmanagerAccountsContainersSnippet(org.openapis.openapi.models.operations.TagmanagerAccountsContainersSnippetRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersSnippetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersSnippetPathParams.class, baseUrl, "/tagmanager/v2/{path}:snippet", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersSnippetRequest.class, baseUrl, "/tagmanager/v2/{path}:snippet", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersSnippetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersSnippetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -535,25 +546,26 @@ public class Accounts {
     /**
      * Gets the latest container version header
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionHeadersLatestResponse tagmanagerAccountsContainersVersionHeadersLatest(org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionHeadersLatestRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionHeadersLatestResponse tagmanagerAccountsContainersVersionHeadersLatest(org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionHeadersLatestRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionHeadersLatestSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionHeadersLatestPathParams.class, baseUrl, "/tagmanager/v2/{parent}/version_headers:latest", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionHeadersLatestRequest.class, baseUrl, "/tagmanager/v2/{parent}/version_headers:latest", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionHeadersLatestQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionHeadersLatestRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -580,25 +592,26 @@ public class Accounts {
     /**
      * Lists all Container Versions of a GTM Container.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionHeadersListResponse tagmanagerAccountsContainersVersionHeadersList(org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionHeadersListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionHeadersListResponse tagmanagerAccountsContainersVersionHeadersList(org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionHeadersListRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionHeadersListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionHeadersListPathParams.class, baseUrl, "/tagmanager/v2/{parent}/version_headers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionHeadersListRequest.class, baseUrl, "/tagmanager/v2/{parent}/version_headers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionHeadersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionHeadersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -625,25 +638,26 @@ public class Accounts {
     /**
      * Gets the live (i.e. published) container version
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsLiveResponse tagmanagerAccountsContainersVersionsLive(org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsLiveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsLiveResponse tagmanagerAccountsContainersVersionsLive(org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsLiveRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsLiveSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsLivePathParams.class, baseUrl, "/tagmanager/v2/{parent}/versions:live", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsLiveRequest.class, baseUrl, "/tagmanager/v2/{parent}/versions:live", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsLiveQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsLiveRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -670,25 +684,26 @@ public class Accounts {
     /**
      * Publishes a Container Version.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsPublishResponse tagmanagerAccountsContainersVersionsPublish(org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsPublishRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsPublishResponse tagmanagerAccountsContainersVersionsPublish(org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsPublishRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsPublishSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsPublishPathParams.class, baseUrl, "/tagmanager/v2/{path}:publish", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsPublishRequest.class, baseUrl, "/tagmanager/v2/{path}:publish", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsPublishQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsPublishRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -715,25 +730,26 @@ public class Accounts {
     /**
      * Sets the latest version used for synchronization of workspaces when detecting conflicts and errors.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsSetLatestResponse tagmanagerAccountsContainersVersionsSetLatest(org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsSetLatestRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsSetLatestResponse tagmanagerAccountsContainersVersionsSetLatest(org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsSetLatestRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsSetLatestSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsSetLatestPathParams.class, baseUrl, "/tagmanager/v2/{path}:set_latest", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsSetLatestRequest.class, baseUrl, "/tagmanager/v2/{path}:set_latest", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsSetLatestQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsSetLatestRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -760,25 +776,26 @@ public class Accounts {
     /**
      * Undeletes a Container Version.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsUndeleteResponse tagmanagerAccountsContainersVersionsUndelete(org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsUndeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsUndeleteResponse tagmanagerAccountsContainersVersionsUndelete(org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsUndeleteRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsUndeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsUndeletePathParams.class, baseUrl, "/tagmanager/v2/{path}:undelete", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsUndeleteRequest.class, baseUrl, "/tagmanager/v2/{path}:undelete", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsUndeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsUndeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -805,25 +822,26 @@ public class Accounts {
     /**
      * Creates one or more GTM Built-In Variables.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesBuiltInVariablesCreateResponse tagmanagerAccountsContainersWorkspacesBuiltInVariablesCreate(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesBuiltInVariablesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesBuiltInVariablesCreateResponse tagmanagerAccountsContainersWorkspacesBuiltInVariablesCreate(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesBuiltInVariablesCreateRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesBuiltInVariablesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesBuiltInVariablesCreatePathParams.class, baseUrl, "/tagmanager/v2/{parent}/built_in_variables", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesBuiltInVariablesCreateRequest.class, baseUrl, "/tagmanager/v2/{parent}/built_in_variables", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesBuiltInVariablesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesBuiltInVariablesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -850,25 +868,26 @@ public class Accounts {
     /**
      * Lists all the enabled Built-In Variables of a GTM Container.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesBuiltInVariablesListResponse tagmanagerAccountsContainersWorkspacesBuiltInVariablesList(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesBuiltInVariablesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesBuiltInVariablesListResponse tagmanagerAccountsContainersWorkspacesBuiltInVariablesList(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesBuiltInVariablesListRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesBuiltInVariablesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesBuiltInVariablesListPathParams.class, baseUrl, "/tagmanager/v2/{parent}/built_in_variables", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesBuiltInVariablesListRequest.class, baseUrl, "/tagmanager/v2/{parent}/built_in_variables", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesBuiltInVariablesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesBuiltInVariablesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -895,25 +914,26 @@ public class Accounts {
     /**
      * Reverts changes to a GTM Built-In Variables in a GTM Workspace.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertResponse tagmanagerAccountsContainersWorkspacesBuiltInVariablesRevert(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertResponse tagmanagerAccountsContainersWorkspacesBuiltInVariablesRevert(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertPathParams.class, baseUrl, "/tagmanager/v2/{path}/built_in_variables:revert", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertRequest.class, baseUrl, "/tagmanager/v2/{path}/built_in_variables:revert", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -940,27 +960,28 @@ public class Accounts {
     /**
      * Creates a GTM Client.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesClientsCreateResponse tagmanagerAccountsContainersWorkspacesClientsCreate(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesClientsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesClientsCreateResponse tagmanagerAccountsContainersWorkspacesClientsCreate(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesClientsCreateRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesClientsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesClientsCreatePathParams.class, baseUrl, "/tagmanager/v2/{parent}/clients", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesClientsCreateRequest.class, baseUrl, "/tagmanager/v2/{parent}/clients", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "client", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesClientsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesClientsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -987,25 +1008,26 @@ public class Accounts {
     /**
      * Lists all GTM Clients of a GTM container workspace.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesClientsListResponse tagmanagerAccountsContainersWorkspacesClientsList(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesClientsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesClientsListResponse tagmanagerAccountsContainersWorkspacesClientsList(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesClientsListRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesClientsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesClientsListPathParams.class, baseUrl, "/tagmanager/v2/{parent}/clients", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesClientsListRequest.class, baseUrl, "/tagmanager/v2/{parent}/clients", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesClientsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesClientsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1032,27 +1054,28 @@ public class Accounts {
     /**
      * Creates a Workspace.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesCreateResponse tagmanagerAccountsContainersWorkspacesCreate(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesCreateResponse tagmanagerAccountsContainersWorkspacesCreate(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesCreateRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesCreatePathParams.class, baseUrl, "/tagmanager/v2/{parent}/workspaces", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesCreateRequest.class, baseUrl, "/tagmanager/v2/{parent}/workspaces", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "workspace", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1079,27 +1102,28 @@ public class Accounts {
     /**
      * Creates a Container Version from the entities present in the workspace, deletes the workspace, and sets the base container version to the newly created version.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesCreateVersionResponse tagmanagerAccountsContainersWorkspacesCreateVersion(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesCreateVersionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesCreateVersionResponse tagmanagerAccountsContainersWorkspacesCreateVersion(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesCreateVersionRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesCreateVersionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesCreateVersionPathParams.class, baseUrl, "/tagmanager/v2/{path}:create_version", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesCreateVersionRequest.class, baseUrl, "/tagmanager/v2/{path}:create_version", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createContainerVersionRequestVersionOptions", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesCreateVersionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesCreateVersionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1126,27 +1150,28 @@ public class Accounts {
     /**
      * Creates a GTM Folder.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesFoldersCreateResponse tagmanagerAccountsContainersWorkspacesFoldersCreate(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesFoldersCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesFoldersCreateResponse tagmanagerAccountsContainersWorkspacesFoldersCreate(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesFoldersCreateRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesFoldersCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesFoldersCreatePathParams.class, baseUrl, "/tagmanager/v2/{parent}/folders", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesFoldersCreateRequest.class, baseUrl, "/tagmanager/v2/{parent}/folders", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "folder", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesFoldersCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesFoldersCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1173,25 +1198,26 @@ public class Accounts {
     /**
      * List all entities in a GTM Folder.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesFoldersEntitiesResponse tagmanagerAccountsContainersWorkspacesFoldersEntities(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesFoldersEntitiesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesFoldersEntitiesResponse tagmanagerAccountsContainersWorkspacesFoldersEntities(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesFoldersEntitiesRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesFoldersEntitiesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesFoldersEntitiesPathParams.class, baseUrl, "/tagmanager/v2/{path}:entities", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesFoldersEntitiesRequest.class, baseUrl, "/tagmanager/v2/{path}:entities", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesFoldersEntitiesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesFoldersEntitiesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1218,25 +1244,26 @@ public class Accounts {
     /**
      * Lists all GTM Folders of a Container.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesFoldersListResponse tagmanagerAccountsContainersWorkspacesFoldersList(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesFoldersListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesFoldersListResponse tagmanagerAccountsContainersWorkspacesFoldersList(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesFoldersListRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesFoldersListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesFoldersListPathParams.class, baseUrl, "/tagmanager/v2/{parent}/folders", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesFoldersListRequest.class, baseUrl, "/tagmanager/v2/{parent}/folders", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesFoldersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesFoldersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1263,27 +1290,28 @@ public class Accounts {
     /**
      * Moves entities to a GTM Folder.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesFoldersMoveEntitiesToFolderResponse tagmanagerAccountsContainersWorkspacesFoldersMoveEntitiesToFolder(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesFoldersMoveEntitiesToFolderRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesFoldersMoveEntitiesToFolderResponse tagmanagerAccountsContainersWorkspacesFoldersMoveEntitiesToFolder(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesFoldersMoveEntitiesToFolderRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesFoldersMoveEntitiesToFolderSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesFoldersMoveEntitiesToFolderPathParams.class, baseUrl, "/tagmanager/v2/{path}:move_entities_to_folder", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesFoldersMoveEntitiesToFolderRequest.class, baseUrl, "/tagmanager/v2/{path}:move_entities_to_folder", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "folder", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesFoldersMoveEntitiesToFolderQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesFoldersMoveEntitiesToFolderRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1304,25 +1332,26 @@ public class Accounts {
     /**
      * Finds conflicting and modified entities in the workspace.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesGetStatusResponse tagmanagerAccountsContainersWorkspacesGetStatus(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesGetStatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesGetStatusResponse tagmanagerAccountsContainersWorkspacesGetStatus(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesGetStatusRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesGetStatusSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesGetStatusPathParams.class, baseUrl, "/tagmanager/v2/{path}/status", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesGetStatusRequest.class, baseUrl, "/tagmanager/v2/{path}/status", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesGetStatusQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesGetStatusRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1349,27 +1378,28 @@ public class Accounts {
     /**
      * Creates a Google tag config.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesGtagConfigCreateResponse tagmanagerAccountsContainersWorkspacesGtagConfigCreate(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesGtagConfigCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesGtagConfigCreateResponse tagmanagerAccountsContainersWorkspacesGtagConfigCreate(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesGtagConfigCreateRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesGtagConfigCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesGtagConfigCreatePathParams.class, baseUrl, "/tagmanager/v2/{parent}/gtag_config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesGtagConfigCreateRequest.class, baseUrl, "/tagmanager/v2/{parent}/gtag_config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "gtagConfig", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesGtagConfigCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesGtagConfigCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1396,25 +1426,26 @@ public class Accounts {
     /**
      * Lists all Google tag configs in a Container.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesGtagConfigListResponse tagmanagerAccountsContainersWorkspacesGtagConfigList(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesGtagConfigListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesGtagConfigListResponse tagmanagerAccountsContainersWorkspacesGtagConfigList(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesGtagConfigListRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesGtagConfigListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesGtagConfigListPathParams.class, baseUrl, "/tagmanager/v2/{parent}/gtag_config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesGtagConfigListRequest.class, baseUrl, "/tagmanager/v2/{parent}/gtag_config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesGtagConfigListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesGtagConfigListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1441,25 +1472,26 @@ public class Accounts {
     /**
      * Lists all Workspaces that belong to a GTM Container.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesListResponse tagmanagerAccountsContainersWorkspacesList(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesListResponse tagmanagerAccountsContainersWorkspacesList(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesListRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesListPathParams.class, baseUrl, "/tagmanager/v2/{parent}/workspaces", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesListRequest.class, baseUrl, "/tagmanager/v2/{parent}/workspaces", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1486,25 +1518,26 @@ public class Accounts {
     /**
      * Quick previews a workspace by creating a fake container version from all entities in the provided workspace.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesQuickPreviewResponse tagmanagerAccountsContainersWorkspacesQuickPreview(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesQuickPreviewRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesQuickPreviewResponse tagmanagerAccountsContainersWorkspacesQuickPreview(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesQuickPreviewRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesQuickPreviewSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesQuickPreviewPathParams.class, baseUrl, "/tagmanager/v2/{path}:quick_preview", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesQuickPreviewRequest.class, baseUrl, "/tagmanager/v2/{path}:quick_preview", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesQuickPreviewQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesQuickPreviewRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1531,27 +1564,28 @@ public class Accounts {
     /**
      * Resolves a merge conflict for a workspace entity by updating it to the resolved entity passed in the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesResolveConflictResponse tagmanagerAccountsContainersWorkspacesResolveConflict(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesResolveConflictRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesResolveConflictResponse tagmanagerAccountsContainersWorkspacesResolveConflict(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesResolveConflictRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesResolveConflictSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesResolveConflictPathParams.class, baseUrl, "/tagmanager/v2/{path}:resolve_conflict", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesResolveConflictRequest.class, baseUrl, "/tagmanager/v2/{path}:resolve_conflict", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "entity", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesResolveConflictQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesResolveConflictRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1572,25 +1606,26 @@ public class Accounts {
     /**
      * Syncs a workspace to the latest container version by updating all unmodified workspace entities and displaying conflicts for modified entities.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesSyncResponse tagmanagerAccountsContainersWorkspacesSync(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesSyncRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesSyncResponse tagmanagerAccountsContainersWorkspacesSync(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesSyncRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesSyncSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesSyncPathParams.class, baseUrl, "/tagmanager/v2/{path}:sync", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesSyncRequest.class, baseUrl, "/tagmanager/v2/{path}:sync", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesSyncQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesSyncRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1617,27 +1652,28 @@ public class Accounts {
     /**
      * Creates a GTM Tag.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTagsCreateResponse tagmanagerAccountsContainersWorkspacesTagsCreate(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTagsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTagsCreateResponse tagmanagerAccountsContainersWorkspacesTagsCreate(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTagsCreateRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTagsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTagsCreatePathParams.class, baseUrl, "/tagmanager/v2/{parent}/tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTagsCreateRequest.class, baseUrl, "/tagmanager/v2/{parent}/tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "tag", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTagsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTagsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1664,25 +1700,26 @@ public class Accounts {
     /**
      * Lists all GTM Tags of a Container.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTagsListResponse tagmanagerAccountsContainersWorkspacesTagsList(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTagsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTagsListResponse tagmanagerAccountsContainersWorkspacesTagsList(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTagsListRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTagsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTagsListPathParams.class, baseUrl, "/tagmanager/v2/{parent}/tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTagsListRequest.class, baseUrl, "/tagmanager/v2/{parent}/tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTagsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTagsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1709,27 +1746,28 @@ public class Accounts {
     /**
      * Creates a GTM Custom Template.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTemplatesCreateResponse tagmanagerAccountsContainersWorkspacesTemplatesCreate(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTemplatesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTemplatesCreateResponse tagmanagerAccountsContainersWorkspacesTemplatesCreate(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTemplatesCreateRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTemplatesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTemplatesCreatePathParams.class, baseUrl, "/tagmanager/v2/{parent}/templates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTemplatesCreateRequest.class, baseUrl, "/tagmanager/v2/{parent}/templates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "customTemplate", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTemplatesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTemplatesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1756,25 +1794,26 @@ public class Accounts {
     /**
      * Lists all GTM Templates of a GTM container workspace.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTemplatesListResponse tagmanagerAccountsContainersWorkspacesTemplatesList(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTemplatesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTemplatesListResponse tagmanagerAccountsContainersWorkspacesTemplatesList(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTemplatesListRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTemplatesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTemplatesListPathParams.class, baseUrl, "/tagmanager/v2/{parent}/templates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTemplatesListRequest.class, baseUrl, "/tagmanager/v2/{parent}/templates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTemplatesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTemplatesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1801,27 +1840,28 @@ public class Accounts {
     /**
      * Creates a GTM Trigger.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTriggersCreateResponse tagmanagerAccountsContainersWorkspacesTriggersCreate(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTriggersCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTriggersCreateResponse tagmanagerAccountsContainersWorkspacesTriggersCreate(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTriggersCreateRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTriggersCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTriggersCreatePathParams.class, baseUrl, "/tagmanager/v2/{parent}/triggers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTriggersCreateRequest.class, baseUrl, "/tagmanager/v2/{parent}/triggers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "trigger", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTriggersCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTriggersCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1848,25 +1888,26 @@ public class Accounts {
     /**
      * Lists all GTM Triggers of a Container.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTriggersListResponse tagmanagerAccountsContainersWorkspacesTriggersList(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTriggersListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTriggersListResponse tagmanagerAccountsContainersWorkspacesTriggersList(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTriggersListRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTriggersListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTriggersListPathParams.class, baseUrl, "/tagmanager/v2/{parent}/triggers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTriggersListRequest.class, baseUrl, "/tagmanager/v2/{parent}/triggers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTriggersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesTriggersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1893,27 +1934,28 @@ public class Accounts {
     /**
      * Creates a GTM Variable.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesVariablesCreateResponse tagmanagerAccountsContainersWorkspacesVariablesCreate(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesVariablesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesVariablesCreateResponse tagmanagerAccountsContainersWorkspacesVariablesCreate(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesVariablesCreateRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesVariablesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesVariablesCreatePathParams.class, baseUrl, "/tagmanager/v2/{parent}/variables", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesVariablesCreateRequest.class, baseUrl, "/tagmanager/v2/{parent}/variables", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "variable", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesVariablesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesVariablesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1940,25 +1982,26 @@ public class Accounts {
     /**
      * Lists all GTM Variables of a Container.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesVariablesListResponse tagmanagerAccountsContainersWorkspacesVariablesList(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesVariablesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesVariablesListResponse tagmanagerAccountsContainersWorkspacesVariablesList(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesVariablesListRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesVariablesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesVariablesListPathParams.class, baseUrl, "/tagmanager/v2/{parent}/variables", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesVariablesListRequest.class, baseUrl, "/tagmanager/v2/{parent}/variables", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesVariablesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesVariablesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1985,27 +2028,28 @@ public class Accounts {
     /**
      * Creates a GTM Zone.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesZonesCreateResponse tagmanagerAccountsContainersWorkspacesZonesCreate(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesZonesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesZonesCreateResponse tagmanagerAccountsContainersWorkspacesZonesCreate(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesZonesCreateRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesZonesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesZonesCreatePathParams.class, baseUrl, "/tagmanager/v2/{parent}/zones", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesZonesCreateRequest.class, baseUrl, "/tagmanager/v2/{parent}/zones", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "zone", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesZonesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesZonesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2032,25 +2076,26 @@ public class Accounts {
     /**
      * Lists all GTM Zones of a GTM container workspace.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesZonesListResponse tagmanagerAccountsContainersWorkspacesZonesList(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesZonesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesZonesListResponse tagmanagerAccountsContainersWorkspacesZonesList(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesZonesListRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesZonesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesZonesListPathParams.class, baseUrl, "/tagmanager/v2/{parent}/zones", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesZonesListRequest.class, baseUrl, "/tagmanager/v2/{parent}/zones", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesZonesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesZonesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2077,25 +2122,26 @@ public class Accounts {
     /**
      * Reverts changes to a GTM Zone in a GTM Workspace.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesZonesRevertResponse tagmanagerAccountsContainersWorkspacesZonesRevert(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesZonesRevertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesZonesRevertResponse tagmanagerAccountsContainersWorkspacesZonesRevert(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesZonesRevertRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesZonesRevertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesZonesRevertPathParams.class, baseUrl, "/tagmanager/v2/{path}:revert", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesZonesRevertRequest.class, baseUrl, "/tagmanager/v2/{path}:revert", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesZonesRevertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsContainersWorkspacesZonesRevertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2122,10 +2168,11 @@ public class Accounts {
     /**
      * Lists all GTM Accounts that a user has access to.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsListResponse tagmanagerAccountsList(org.openapis.openapi.models.operations.TagmanagerAccountsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsListResponse tagmanagerAccountsList(org.openapis.openapi.models.operations.TagmanagerAccountsListRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/tagmanager/v2/accounts");
         
@@ -2133,14 +2180,14 @@ public class Accounts {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2167,27 +2214,28 @@ public class Accounts {
     /**
      * Creates a user's Account &amp; Container access.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsCreateResponse tagmanagerAccountsUserPermissionsCreate(org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsCreateResponse tagmanagerAccountsUserPermissionsCreate(org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsCreateRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsCreatePathParams.class, baseUrl, "/tagmanager/v2/{parent}/user_permissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsCreateRequest.class, baseUrl, "/tagmanager/v2/{parent}/user_permissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "userPermission", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2214,25 +2262,26 @@ public class Accounts {
     /**
      * Removes a user from the account, revoking access to it and all of its containers.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsDeleteResponse tagmanagerAccountsUserPermissionsDelete(org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsDeleteResponse tagmanagerAccountsUserPermissionsDelete(org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsDeleteRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsDeletePathParams.class, baseUrl, "/tagmanager/v2/{path}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsDeleteRequest.class, baseUrl, "/tagmanager/v2/{path}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2253,25 +2302,26 @@ public class Accounts {
     /**
      * Gets a user's Account &amp; Container access.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsGetResponse tagmanagerAccountsUserPermissionsGet(org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsGetResponse tagmanagerAccountsUserPermissionsGet(org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsGetRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsGetPathParams.class, baseUrl, "/tagmanager/v2/{path}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsGetRequest.class, baseUrl, "/tagmanager/v2/{path}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2298,25 +2348,26 @@ public class Accounts {
     /**
      * List all users that have access to the account along with Account and Container user access granted to each of them.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsListResponse tagmanagerAccountsUserPermissionsList(org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsListResponse tagmanagerAccountsUserPermissionsList(org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsListRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsListPathParams.class, baseUrl, "/tagmanager/v2/{parent}/user_permissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsListRequest.class, baseUrl, "/tagmanager/v2/{parent}/user_permissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2343,27 +2394,28 @@ public class Accounts {
     /**
      * Updates a user's Account &amp; Container access.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsUpdateResponse tagmanagerAccountsUserPermissionsUpdate(org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsUpdateResponse tagmanagerAccountsUserPermissionsUpdate(org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsUpdateRequest request, org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsUpdatePathParams.class, baseUrl, "/tagmanager/v2/{path}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsUpdateRequest.class, baseUrl, "/tagmanager/v2/{path}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "userPermission", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TagmanagerAccountsUserPermissionsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

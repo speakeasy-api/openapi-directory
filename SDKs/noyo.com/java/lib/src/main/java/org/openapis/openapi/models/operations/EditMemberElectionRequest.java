@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EditMemberElectionRequest {
-    
-    public EditMemberElectionPathParams pathParams;
-    public EditMemberElectionRequest withPathParams(EditMemberElectionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.MemberElectionEditRequest memberElectionEditRequest;
+    public EditMemberElectionRequest withMemberElectionEditRequest(org.openapis.openapi.models.shared.MemberElectionEditRequest memberElectionEditRequest) {
+        this.memberElectionEditRequest = memberElectionEditRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.MemberElectionEditRequest request;
-    public EditMemberElectionRequest withRequest(org.openapis.openapi.models.shared.MemberElectionEditRequest request) {
-        this.request = request;
+    /**
+     * The unique identifier of the member election in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=member_election_id")
+    public String memberElectionId;
+    public EditMemberElectionRequest withMemberElectionId(String memberElectionId) {
+        this.memberElectionId = memberElectionId;
+        return this;
+    }
+    
+    /**
+     * The current version identifier of the member election
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public String version;
+    public EditMemberElectionRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

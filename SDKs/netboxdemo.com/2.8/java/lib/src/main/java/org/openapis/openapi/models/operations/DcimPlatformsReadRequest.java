@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimPlatformsReadRequest {
-    
-    public DcimPlatformsReadPathParams pathParams;
-    public DcimPlatformsReadRequest withPathParams(DcimPlatformsReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this platform.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimPlatformsReadRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

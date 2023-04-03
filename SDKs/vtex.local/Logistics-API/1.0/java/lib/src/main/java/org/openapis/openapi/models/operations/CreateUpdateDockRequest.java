@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateUpdateDockRequest {
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public CreateUpdateDockRequest withAccept(String accept) {
+        this.accept = accept;
+        return this;
+    }
     
-    public CreateUpdateDockHeaders headers;
-    public CreateUpdateDockRequest withHeaders(CreateUpdateDockHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public CreateUpdateDockRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateUpdateDockCreateUpdateDockRequest request;
-    public CreateUpdateDockRequest withRequest(CreateUpdateDockCreateUpdateDockRequest request) {
-        this.request = request;
+    public CreateUpdateDockCreateUpdateDockRequest requestBody;
+    public CreateUpdateDockRequest withRequestBody(CreateUpdateDockCreateUpdateDockRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

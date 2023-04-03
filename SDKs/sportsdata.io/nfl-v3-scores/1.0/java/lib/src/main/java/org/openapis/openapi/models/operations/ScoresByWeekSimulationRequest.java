@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ScoresByWeekSimulationRequest {
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public ScoresByWeekSimulationFormatEnum format;
+    public ScoresByWeekSimulationRequest withFormat(ScoresByWeekSimulationFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public ScoresByWeekSimulationPathParams pathParams;
-    public ScoresByWeekSimulationRequest withPathParams(ScoresByWeekSimulationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The number of plays to progress in this NFL live game simulation. Example entries are &lt;code&gt;0&lt;/code&gt;, &lt;code&gt;1&lt;/code&gt;, &lt;code&gt;2&lt;/code&gt;, &lt;code&gt;3&lt;/code&gt;, &lt;code&gt;150&lt;/code&gt;, &lt;code&gt;200&lt;/code&gt;, etc.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=numberofplays")
+    public String numberofplays;
+    public ScoresByWeekSimulationRequest withNumberofplays(String numberofplays) {
+        this.numberofplays = numberofplays;
         return this;
     }
     

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgEditTeamRequest {
-    
-    public OrgEditTeamPathParams pathParams;
-    public OrgEditTeamRequest withPathParams(OrgEditTeamPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.EditTeamOption editTeamOption;
+    public OrgEditTeamRequest withEditTeamOption(org.openapis.openapi.models.shared.EditTeamOption editTeamOption) {
+        this.editTeamOption = editTeamOption;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.EditTeamOption request;
-    public OrgEditTeamRequest withRequest(org.openapis.openapi.models.shared.EditTeamOption request) {
-        this.request = request;
+    /**
+     * id of the team to edit
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public OrgEditTeamRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

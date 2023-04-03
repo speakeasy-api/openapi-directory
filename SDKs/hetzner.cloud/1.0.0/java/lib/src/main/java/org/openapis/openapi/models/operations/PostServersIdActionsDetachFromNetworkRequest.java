@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostServersIdActionsDetachFromNetworkRequest {
-    
-    public PostServersIdActionsDetachFromNetworkPathParams pathParams;
-    public PostServersIdActionsDetachFromNetworkRequest withPathParams(PostServersIdActionsDetachFromNetworkPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PostServersIdActionsDetachFromNetworkDetachFromNetworkRequest requestBody;
+    public PostServersIdActionsDetachFromNetworkRequest withRequestBody(PostServersIdActionsDetachFromNetworkDetachFromNetworkRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostServersIdActionsDetachFromNetworkDetachFromNetworkRequest request;
-    public PostServersIdActionsDetachFromNetworkRequest withRequest(PostServersIdActionsDetachFromNetworkDetachFromNetworkRequest request) {
-        this.request = request;
+    /**
+     * ID of the Server
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public PostServersIdActionsDetachFromNetworkRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

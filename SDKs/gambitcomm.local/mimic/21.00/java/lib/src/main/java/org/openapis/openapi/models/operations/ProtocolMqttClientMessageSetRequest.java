@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolMqttClientMessageSetRequest {
+    /**
+     * Agent to show MQTT state
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolMqttClientMessageSetRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolMqttClientMessageSetPathParams pathParams;
-    public ProtocolMqttClientMessageSetRequest withPathParams(ProtocolMqttClientMessageSetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Attribute
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=attr")
+    public String attr;
+    public ProtocolMqttClientMessageSetRequest withAttr(String attr) {
+        this.attr = attr;
+        return this;
+    }
+    
+    /**
+     * Message Number
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=msgNum")
+    public Integer msgNum;
+    public ProtocolMqttClientMessageSetRequest withMsgNum(Integer msgNum) {
+        this.msgNum = msgNum;
+        return this;
+    }
+    
+    /**
+     * Value
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=value")
+    public String value;
+    public ProtocolMqttClientMessageSetRequest withValue(String value) {
+        this.value = value;
         return this;
     }
     

@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetzipcodeinfoQueryParams;
 import org.openapis.openapi.models.operations.GetzipcodeinfoRequest;
 import org.openapis.openapi.models.operations.GetzipcodeinfoResponse;
 
@@ -15,11 +14,9 @@ public class Application {
                 .build();
 
             GetzipcodeinfoRequest req = new GetzipcodeinfoRequest() {{
-                queryParams = new GetzipcodeinfoQueryParams() {{
-                    license = "corrupti";
-                    zip = "provident";
-                }};
-            }};            
+                license = "corrupti";
+                zip = "provident";
+            }}            
 
             GetzipcodeinfoResponse res = sdk.detailedZipCodeInformation.getzipcodeinfo(req);
 

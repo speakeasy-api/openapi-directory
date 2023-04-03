@@ -34,24 +34,25 @@ public class NonPrimaryStateTax {
      * Add/update non-primary state tax
      * Sends new or updated employee non-primary state tax information directly to Web Pay.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddOrUpdateNonPrimaryStateTaxResponse addOrUpdateNonPrimaryStateTax(org.openapis.openapi.models.operations.AddOrUpdateNonPrimaryStateTaxRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddOrUpdateNonPrimaryStateTaxResponse addOrUpdateNonPrimaryStateTax(org.openapis.openapi.models.operations.AddOrUpdateNonPrimaryStateTaxRequest request, org.openapis.openapi.models.operations.AddOrUpdateNonPrimaryStateTaxSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddOrUpdateNonPrimaryStateTaxPathParams.class, baseUrl, "/v2/companies/{companyId}/employees/{employeeId}/nonprimaryStateTax", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddOrUpdateNonPrimaryStateTaxRequest.class, baseUrl, "/v2/companies/{companyId}/employees/{employeeId}/nonprimaryStateTax", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "nonPrimaryStateTax", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

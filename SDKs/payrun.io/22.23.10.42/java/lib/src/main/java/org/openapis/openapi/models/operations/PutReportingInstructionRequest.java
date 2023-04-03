@@ -7,17 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutReportingInstructionRequest {
-    
-    public PutReportingInstructionPathParams pathParams;
-    public PutReportingInstructionRequest withPathParams(PutReportingInstructionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The version of the api to target. Omit or set as &amp;apos;default&amp;apos; to target the current api version.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Version")
+    public String apiVersion;
+    public PutReportingInstructionRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
+    /**
+     * The OAuth 1 authorization header. &amp;apos;Auto&amp;apos; enables auto complete.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PutReportingInstructionRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
+        return this;
+    }
     
-    public PutReportingInstructionHeaders headers;
-    public PutReportingInstructionRequest withHeaders(PutReportingInstructionHeaders headers) {
-        this.headers = headers;
+    /**
+     * The employers' unique identifier. E.g ER001
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EmployerId")
+    public String employerId;
+    public PutReportingInstructionRequest withEmployerId(String employerId) {
+        this.employerId = employerId;
         return this;
     }
     
@@ -25,9 +41,19 @@ public class PutReportingInstructionRequest {
      * The reporting instruction object.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ReportingInstruction request;
-    public PutReportingInstructionRequest withRequest(org.openapis.openapi.models.shared.ReportingInstruction request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ReportingInstruction reportingInstruction;
+    public PutReportingInstructionRequest withReportingInstruction(org.openapis.openapi.models.shared.ReportingInstruction reportingInstruction) {
+        this.reportingInstruction = reportingInstruction;
+        return this;
+    }
+    
+    /**
+     * The reporting instruction unique identifier. E.g. SERRPT001
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ReportingInstructionId")
+    public String reportingInstructionId;
+    public PutReportingInstructionRequest withReportingInstructionId(String reportingInstructionId) {
+        this.reportingInstructionId = reportingInstructionId;
         return this;
     }
     

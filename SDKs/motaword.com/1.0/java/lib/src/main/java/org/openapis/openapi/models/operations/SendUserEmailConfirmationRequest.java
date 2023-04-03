@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SendUserEmailConfirmationRequest {
-    
-    public SendUserEmailConfirmationPathParams pathParams;
-    public SendUserEmailConfirmationRequest withPathParams(SendUserEmailConfirmationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public SendUserEmailConfirmationSecurity security;
-    public SendUserEmailConfirmationRequest withSecurity(SendUserEmailConfirmationSecurity security) {
-        this.security = security;
+    /**
+     * User ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public Long userId;
+    public SendUserEmailConfirmationRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

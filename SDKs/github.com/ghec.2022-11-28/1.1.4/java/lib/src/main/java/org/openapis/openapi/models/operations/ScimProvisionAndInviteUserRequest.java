@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ScimProvisionAndInviteUserRequest {
-    
-    public ScimProvisionAndInviteUserPathParams pathParams;
-    public ScimProvisionAndInviteUserRequest withPathParams(ScimProvisionAndInviteUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ScimProvisionAndInviteUserRequestBody requestBody;
+    public ScimProvisionAndInviteUserRequest withRequestBody(ScimProvisionAndInviteUserRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ScimProvisionAndInviteUserRequestBody request;
-    public ScimProvisionAndInviteUserRequest withRequest(ScimProvisionAndInviteUserRequestBody request) {
-        this.request = request;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ScimProvisionAndInviteUserRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

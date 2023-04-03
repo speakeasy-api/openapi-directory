@@ -41,12 +41,12 @@ public class Insight {
      */
     public org.openapis.openapi.models.operations.CreateOrganizationInsightMonitoredMediaServerResponse createOrganizationInsightMonitoredMediaServer(org.openapis.openapi.models.operations.CreateOrganizationInsightMonitoredMediaServerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationInsightMonitoredMediaServerPathParams.class, baseUrl, "/organizations/{organizationId}/insight/monitoredMediaServers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationInsightMonitoredMediaServerRequest.class, baseUrl, "/organizations/{organizationId}/insight/monitoredMediaServers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -86,7 +86,7 @@ public class Insight {
      */
     public org.openapis.openapi.models.operations.DeleteOrganizationInsightMonitoredMediaServerResponse deleteOrganizationInsightMonitoredMediaServer(org.openapis.openapi.models.operations.DeleteOrganizationInsightMonitoredMediaServerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationInsightMonitoredMediaServerPathParams.class, baseUrl, "/organizations/{organizationId}/insight/monitoredMediaServers/{monitoredMediaServerId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationInsightMonitoredMediaServerRequest.class, baseUrl, "/organizations/{organizationId}/insight/monitoredMediaServers/{monitoredMediaServerId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -120,13 +120,13 @@ public class Insight {
      */
     public org.openapis.openapi.models.operations.GetNetworkInsightApplicationHealthByTimeResponse getNetworkInsightApplicationHealthByTime(org.openapis.openapi.models.operations.GetNetworkInsightApplicationHealthByTimeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkInsightApplicationHealthByTimePathParams.class, baseUrl, "/networks/{networkId}/insight/applications/{applicationId}/healthByTime", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkInsightApplicationHealthByTimeRequest.class, baseUrl, "/networks/{networkId}/insight/applications/{applicationId}/healthByTime", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkInsightApplicationHealthByTimeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkInsightApplicationHealthByTimeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -166,7 +166,7 @@ public class Insight {
      */
     public org.openapis.openapi.models.operations.GetOrganizationInsightApplicationsResponse getOrganizationInsightApplications(org.openapis.openapi.models.operations.GetOrganizationInsightApplicationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationInsightApplicationsPathParams.class, baseUrl, "/organizations/{organizationId}/insight/applications", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationInsightApplicationsRequest.class, baseUrl, "/organizations/{organizationId}/insight/applications", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -206,7 +206,7 @@ public class Insight {
      */
     public org.openapis.openapi.models.operations.GetOrganizationInsightMonitoredMediaServerResponse getOrganizationInsightMonitoredMediaServer(org.openapis.openapi.models.operations.GetOrganizationInsightMonitoredMediaServerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationInsightMonitoredMediaServerPathParams.class, baseUrl, "/organizations/{organizationId}/insight/monitoredMediaServers/{monitoredMediaServerId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationInsightMonitoredMediaServerRequest.class, baseUrl, "/organizations/{organizationId}/insight/monitoredMediaServers/{monitoredMediaServerId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -246,7 +246,7 @@ public class Insight {
      */
     public org.openapis.openapi.models.operations.GetOrganizationInsightMonitoredMediaServersResponse getOrganizationInsightMonitoredMediaServers(org.openapis.openapi.models.operations.GetOrganizationInsightMonitoredMediaServersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationInsightMonitoredMediaServersPathParams.class, baseUrl, "/organizations/{organizationId}/insight/monitoredMediaServers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationInsightMonitoredMediaServersRequest.class, baseUrl, "/organizations/{organizationId}/insight/monitoredMediaServers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -286,12 +286,12 @@ public class Insight {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationInsightMonitoredMediaServerResponse updateOrganizationInsightMonitoredMediaServer(org.openapis.openapi.models.operations.UpdateOrganizationInsightMonitoredMediaServerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationInsightMonitoredMediaServerPathParams.class, baseUrl, "/organizations/{organizationId}/insight/monitoredMediaServers/{monitoredMediaServerId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationInsightMonitoredMediaServerRequest.class, baseUrl, "/organizations/{organizationId}/insight/monitoredMediaServers/{monitoredMediaServerId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

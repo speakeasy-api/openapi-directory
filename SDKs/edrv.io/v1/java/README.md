@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.DeleteChargeStationPathParams;
 import org.openapis.openapi.models.operations.DeleteChargeStationRequest;
 import org.openapis.openapi.models.operations.DeleteChargeStationResponse;
 
@@ -26,17 +25,13 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }})
                 .build();
 
             DeleteChargeStationRequest req = new DeleteChargeStationRequest() {{
-                pathParams = new DeleteChargeStationPathParams() {{
-                    id = "corrupti";
-                }};
-            }};            
+                id = "corrupti";
+            }}            
 
             DeleteChargeStationResponse res = sdk.chargeStations.deleteChargeStation(req);
 
@@ -50,7 +45,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### chargeStations

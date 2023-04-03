@@ -39,18 +39,18 @@ public class ServicePrincipalOwners {
      */
     public org.openapis.openapi.models.operations.ServicePrincipalsAddOwnerResponse servicePrincipalsAddOwner(org.openapis.openapi.models.operations.ServicePrincipalsAddOwnerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicePrincipalsAddOwnerPathParams.class, baseUrl, "/{tenantID}/servicePrincipals/{objectId}/$links/owners", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicePrincipalsAddOwnerRequest.class, baseUrl, "/{tenantID}/servicePrincipals/{objectId}/$links/owners", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicePrincipalsAddOwnerQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicePrincipalsAddOwnerRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -98,13 +98,13 @@ public class ServicePrincipalOwners {
      */
     public org.openapis.openapi.models.operations.ServicePrincipalsListOwnersResponse servicePrincipalsListOwners(org.openapis.openapi.models.operations.ServicePrincipalsListOwnersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicePrincipalsListOwnersPathParams.class, baseUrl, "/{tenantID}/servicePrincipals/{objectId}/owners", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicePrincipalsListOwnersRequest.class, baseUrl, "/{tenantID}/servicePrincipals/{objectId}/owners", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicePrincipalsListOwnersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicePrincipalsListOwnersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -163,13 +163,13 @@ public class ServicePrincipalOwners {
      */
     public org.openapis.openapi.models.operations.ServicePrincipalsRemoveOwnerResponse servicePrincipalsRemoveOwner(org.openapis.openapi.models.operations.ServicePrincipalsRemoveOwnerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicePrincipalsRemoveOwnerPathParams.class, baseUrl, "/{tenantID}/servicePrincipals/{objectId}/$links/owners/{ownerObjectId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicePrincipalsRemoveOwnerRequest.class, baseUrl, "/{tenantID}/servicePrincipals/{objectId}/$links/owners/{ownerObjectId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicePrincipalsRemoveOwnerQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicePrincipalsRemoveOwnerRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWebhooksRequest {
-    
-    public GetWebhooksQueryParams queryParams;
-    public GetWebhooksRequest withQueryParams(GetWebhooksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public GetWebhooksRequest withExpand(String expand) {
+        this.expand = expand;
         return this;
     }
     

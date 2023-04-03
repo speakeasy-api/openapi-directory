@@ -50,7 +50,7 @@ public class PayeeInvitation {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreatePayeeV3JsonResponse createPayeeV3Json(org.openapis.openapi.models.operations.CreatePayeeV3JsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreatePayeeV3JsonResponse createPayeeV3Json(org.openapis.openapi.models.shared.CreatePayeesRequestV3Input request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v3/payees");
         
@@ -131,7 +131,7 @@ public class PayeeInvitation {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreatePayeeV3MultipartResponse createPayeeV3Multipart(org.openapis.openapi.models.operations.CreatePayeeV3MultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreatePayeeV3MultipartResponse createPayeeV3Multipart(org.openapis.openapi.models.operations.CreatePayeeV3MultipartFormData request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v3/payees");
         
@@ -209,13 +209,13 @@ public class PayeeInvitation {
      */
     public org.openapis.openapi.models.operations.GetPayeesInvitationStatusV3Response getPayeesInvitationStatusV3(org.openapis.openapi.models.operations.GetPayeesInvitationStatusV3Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayeesInvitationStatusV3PathParams.class, baseUrl, "/v3/payees/payors/{payorId}/invitationStatus", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayeesInvitationStatusV3Request.class, baseUrl, "/v3/payees/payors/{payorId}/invitationStatus", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPayeesInvitationStatusV3QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPayeesInvitationStatusV3Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -288,13 +288,13 @@ public class PayeeInvitation {
      */
     public org.openapis.openapi.models.operations.GetPayeesInvitationStatusV4Response getPayeesInvitationStatusV4(org.openapis.openapi.models.operations.GetPayeesInvitationStatusV4Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayeesInvitationStatusV4PathParams.class, baseUrl, "/v4/payees/payors/{payorId}/invitationStatus", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayeesInvitationStatusV4Request.class, baseUrl, "/v4/payees/payors/{payorId}/invitationStatus", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPayeesInvitationStatusV4QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPayeesInvitationStatusV4Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -368,7 +368,7 @@ public class PayeeInvitation {
      */
     public org.openapis.openapi.models.operations.QueryBatchStatusV3Response queryBatchStatusV3(org.openapis.openapi.models.operations.QueryBatchStatusV3Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.QueryBatchStatusV3PathParams.class, baseUrl, "/v3/payees/batch/{batchId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.QueryBatchStatusV3Request.class, baseUrl, "/v3/payees/batch/{batchId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -441,7 +441,7 @@ public class PayeeInvitation {
      */
     public org.openapis.openapi.models.operations.QueryBatchStatusV4Response queryBatchStatusV4(org.openapis.openapi.models.operations.QueryBatchStatusV4Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.QueryBatchStatusV4PathParams.class, baseUrl, "/v4/payees/batch/{batchId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.QueryBatchStatusV4Request.class, baseUrl, "/v4/payees/batch/{batchId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -516,12 +516,12 @@ public class PayeeInvitation {
      */
     public org.openapis.openapi.models.operations.ResendPayeeInviteV3Response resendPayeeInviteV3(org.openapis.openapi.models.operations.ResendPayeeInviteV3Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ResendPayeeInviteV3PathParams.class, baseUrl, "/v3/payees/{payeeId}/invite", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ResendPayeeInviteV3Request.class, baseUrl, "/v3/payees/{payeeId}/invite", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "invitePayeeRequestV3", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -597,12 +597,12 @@ public class PayeeInvitation {
      */
     public org.openapis.openapi.models.operations.ResendPayeeInviteV4Response resendPayeeInviteV4(org.openapis.openapi.models.operations.ResendPayeeInviteV4Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ResendPayeeInviteV4PathParams.class, baseUrl, "/v4/payees/{payeeId}/invite", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ResendPayeeInviteV4Request.class, baseUrl, "/v4/payees/{payeeId}/invite", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "invitePayeeRequestV4", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -684,7 +684,7 @@ public class PayeeInvitation {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.V4CreatePayeeJsonResponse v4CreatePayeeJson(org.openapis.openapi.models.operations.V4CreatePayeeJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.V4CreatePayeeJsonResponse v4CreatePayeeJson(org.openapis.openapi.models.shared.CreatePayeesRequestV4 request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v4/payees");
         
@@ -770,7 +770,7 @@ public class PayeeInvitation {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.V4CreatePayeeMultipartResponse v4CreatePayeeMultipart(org.openapis.openapi.models.operations.V4CreatePayeeMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.V4CreatePayeeMultipartResponse v4CreatePayeeMultipart(org.openapis.openapi.models.operations.V4CreatePayeeMultipartFormData request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v4/payees");
         

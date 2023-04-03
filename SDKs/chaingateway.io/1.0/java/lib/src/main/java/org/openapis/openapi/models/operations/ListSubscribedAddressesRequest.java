@@ -4,13 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSubscribedAddressesRequest {
+    /**
+     * API Key
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public ListSubscribedAddressesRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
+        return this;
+    }
     
-    public ListSubscribedAddressesHeaders headers;
-    public ListSubscribedAddressesRequest withHeaders(ListSubscribedAddressesHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public ListSubscribedAddressesRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     

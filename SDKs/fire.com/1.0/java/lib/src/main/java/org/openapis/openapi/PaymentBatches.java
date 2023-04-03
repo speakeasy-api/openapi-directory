@@ -89,12 +89,12 @@ public class PaymentBatches {
      */
     public org.openapis.openapi.models.operations.AddBankTransferBatchPaymentResponse addBankTransferBatchPayment(org.openapis.openapi.models.operations.AddBankTransferBatchPaymentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddBankTransferBatchPaymentPathParams.class, baseUrl, "/v1/batches/{batchUuid}/banktransfers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddBankTransferBatchPaymentRequest.class, baseUrl, "/v1/batches/{batchUuid}/banktransfers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -134,12 +134,12 @@ public class PaymentBatches {
      */
     public org.openapis.openapi.models.operations.AddInternalTransferBatchPaymentResponse addInternalTransferBatchPayment(org.openapis.openapi.models.operations.AddInternalTransferBatchPaymentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddInternalTransferBatchPaymentPathParams.class, baseUrl, "/v1/batches/{batchUuid}/internaltransfers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddInternalTransferBatchPaymentRequest.class, baseUrl, "/v1/batches/{batchUuid}/internaltransfers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -179,7 +179,7 @@ public class PaymentBatches {
      */
     public org.openapis.openapi.models.operations.CancelBatchPaymentResponse cancelBatchPayment(org.openapis.openapi.models.operations.CancelBatchPaymentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelBatchPaymentPathParams.class, baseUrl, "/v1/batches/{batchUuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelBatchPaymentRequest.class, baseUrl, "/v1/batches/{batchUuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -253,7 +253,7 @@ public class PaymentBatches {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateBatchPaymentResponse createBatchPayment(org.openapis.openapi.models.operations.CreateBatchPaymentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateBatchPaymentResponse createBatchPayment(org.openapis.openapi.models.operations.CreateBatchPaymentNewBatch request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/batches");
         
@@ -300,7 +300,7 @@ public class PaymentBatches {
      */
     public org.openapis.openapi.models.operations.DeleteBankTransferBatchPaymentResponse deleteBankTransferBatchPayment(org.openapis.openapi.models.operations.DeleteBankTransferBatchPaymentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteBankTransferBatchPaymentPathParams.class, baseUrl, "/v1/batches/{batchUuid}/banktransfers/{itemUuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteBankTransferBatchPaymentRequest.class, baseUrl, "/v1/batches/{batchUuid}/banktransfers/{itemUuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -334,7 +334,7 @@ public class PaymentBatches {
      */
     public org.openapis.openapi.models.operations.DeleteInternalTransferBatchPaymentResponse deleteInternalTransferBatchPayment(org.openapis.openapi.models.operations.DeleteInternalTransferBatchPaymentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteInternalTransferBatchPaymentPathParams.class, baseUrl, "/v1/batches/{batchUuid}/internaltransfers/{itemUuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteInternalTransferBatchPaymentRequest.class, baseUrl, "/v1/batches/{batchUuid}/internaltransfers/{itemUuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -375,7 +375,7 @@ public class PaymentBatches {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBatchesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBatchesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -415,7 +415,7 @@ public class PaymentBatches {
      */
     public org.openapis.openapi.models.operations.GetDetailsSingleBatchResponse getDetailsSingleBatch(org.openapis.openapi.models.operations.GetDetailsSingleBatchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDetailsSingleBatchPathParams.class, baseUrl, "/v1/batches/{batchUuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDetailsSingleBatchRequest.class, baseUrl, "/v1/batches/{batchUuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -455,13 +455,13 @@ public class PaymentBatches {
      */
     public org.openapis.openapi.models.operations.GetItemsBatchBankTransferResponse getItemsBatchBankTransfer(org.openapis.openapi.models.operations.GetItemsBatchBankTransferRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetItemsBatchBankTransferPathParams.class, baseUrl, "/v1/batches/{batchUuid}/banktransfers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetItemsBatchBankTransferRequest.class, baseUrl, "/v1/batches/{batchUuid}/banktransfers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetItemsBatchBankTransferQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetItemsBatchBankTransferRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -501,13 +501,13 @@ public class PaymentBatches {
      */
     public org.openapis.openapi.models.operations.GetItemsBatchInternalTrasnferResponse getItemsBatchInternalTrasnfer(org.openapis.openapi.models.operations.GetItemsBatchInternalTrasnferRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetItemsBatchInternalTrasnferPathParams.class, baseUrl, "/v1/batches/{batchUuid}/internaltransfers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetItemsBatchInternalTrasnferRequest.class, baseUrl, "/v1/batches/{batchUuid}/internaltransfers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetItemsBatchInternalTrasnferQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetItemsBatchInternalTrasnferRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -547,7 +547,7 @@ public class PaymentBatches {
      */
     public org.openapis.openapi.models.operations.GetListofApproversForBatchResponse getListofApproversForBatch(org.openapis.openapi.models.operations.GetListofApproversForBatchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetListofApproversForBatchPathParams.class, baseUrl, "/v1/batches/{batchUuid}/approvals", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetListofApproversForBatchRequest.class, baseUrl, "/v1/batches/{batchUuid}/approvals", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -590,7 +590,7 @@ public class PaymentBatches {
      */
     public org.openapis.openapi.models.operations.SubmitBatchResponse submitBatch(org.openapis.openapi.models.operations.SubmitBatchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubmitBatchPathParams.class, baseUrl, "/v1/batches/{batchUuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubmitBatchRequest.class, baseUrl, "/v1/batches/{batchUuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

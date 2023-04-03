@@ -30,15 +30,11 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetEventSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetEventPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetEventRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetEventResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetEventsSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetEventsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetEventsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetEventsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetEventsOptionsSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetEventsOptionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetEventsOptionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ErrorUnauthorized.java
 lib/src/main/java/org/openapis/openapi/models/shared/ErrorNotFound.java
@@ -55,7 +51,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/ContextNumberUpdateVoiceTyp
 lib/src/main/java/org/openapis/openapi/models/shared/ContextNumberUpdate.java
 lib/src/main/java/org/openapis/openapi/models/shared/EventLinkSelf.java
 lib/src/main/java/org/openapis/openapi/models/shared/EventLink.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeBasicAuth.java
 lib/src/main/java/org/openapis/openapi/models/shared/ErrorForbidden.java
 lib/src/main/java/org/openapis/openapi/models/shared/AuditRespEmbedded.java
 lib/src/main/java/org/openapis/openapi/models/shared/AuditResp.java

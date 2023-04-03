@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGetUsersForTopicRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetGetUsersForTopicRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetGetUsersForTopicQueryParams queryParams;
-    public GetGetUsersForTopicRequest withQueryParams(GetGetUsersForTopicQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public GetGetUsersForTopicRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=topic_id")
+    public Long topicId;
+    public GetGetUsersForTopicRequest withTopicId(Long topicId) {
+        this.topicId = topicId;
         return this;
     }
     

@@ -37,7 +37,7 @@ public class PublicSecuritySecurity {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LoginResponse login(org.openapis.openapi.models.operations.LoginRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LoginResponse login(org.openapis.openapi.models.shared.LoginRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/public/security/login");
         
@@ -91,7 +91,7 @@ public class PublicSecuritySecurity {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LostPasswordResponse lostPassword(org.openapis.openapi.models.operations.LostPasswordRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LostPasswordResponse lostPassword(String request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/public/security/lostpassword");
         
@@ -137,7 +137,7 @@ public class PublicSecuritySecurity {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RegisterResponse register(org.openapis.openapi.models.operations.RegisterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RegisterResponse register(org.openapis.openapi.models.shared.RegisterRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/public/security/register");
         

@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateRuleRequest {
+    /**
+     * Your rule identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ruleId")
+    public String ruleId;
+    public UpdateRuleRequest withRuleId(String ruleId) {
+        this.ruleId = ruleId;
+        return this;
+    }
     
-    public UpdateRulePathParams pathParams;
-    public UpdateRuleRequest withPathParams(UpdateRulePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Your store identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public UpdateRuleRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateRuleRequest request;
-    public UpdateRuleRequest withRequest(org.openapis.openapi.models.shared.UpdateRuleRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateRuleRequest updateRuleRequest;
+    public UpdateRuleRequest withUpdateRuleRequest(org.openapis.openapi.models.shared.UpdateRuleRequest updateRuleRequest) {
+        this.updateRuleRequest = updateRuleRequest;
         return this;
     }
     

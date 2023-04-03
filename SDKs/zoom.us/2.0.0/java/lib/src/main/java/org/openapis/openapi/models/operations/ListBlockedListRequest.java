@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListBlockedListRequest {
-    
-    public ListBlockedListQueryParams queryParams;
-    public ListBlockedListRequest withQueryParams(ListBlockedListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next_page_token")
+    public String nextPageToken;
+    public ListBlockedListRequest withNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
         return this;
     }
     
-    
-    public ListBlockedListSecurity security;
-    public ListBlockedListRequest withSecurity(ListBlockedListSecurity security) {
-        this.security = security;
+    /**
+     * The total number of records returned from a single API call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public ListBlockedListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

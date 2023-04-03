@@ -4,13 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgsRemoveSamlSsoAuthorizationRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=credential_id")
+    public Long credentialId;
+    public OrgsRemoveSamlSsoAuthorizationRequest withCredentialId(Long credentialId) {
+        this.credentialId = credentialId;
+        return this;
+    }
     
-    public OrgsRemoveSamlSsoAuthorizationPathParams pathParams;
-    public OrgsRemoveSamlSsoAuthorizationRequest withPathParams(OrgsRemoveSamlSsoAuthorizationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public OrgsRemoveSamlSsoAuthorizationRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

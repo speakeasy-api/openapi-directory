@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsEventsDeleteRequest {
-    
-    public AnalyticsEventsDeletePathParams pathParams;
-    public AnalyticsEventsDeleteRequest withPathParams(AnalyticsEventsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public AnalyticsEventsDeleteRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * The id of the event.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=event_name")
+    public String eventName;
+    public AnalyticsEventsDeleteRequest withEventName(String eventName) {
+        this.eventName = eventName;
+        return this;
+    }
     
-    public AnalyticsEventsDeleteSecurity security;
-    public AnalyticsEventsDeleteRequest withSecurity(AnalyticsEventsDeleteSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public AnalyticsEventsDeleteRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

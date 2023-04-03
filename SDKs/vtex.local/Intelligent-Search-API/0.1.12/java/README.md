@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetAutocompleteSuggestionsQueryParams;
 import org.openapis.openapi.models.operations.GetAutocompleteSuggestionsRequest;
 import org.openapis.openapi.models.operations.GetAutocompleteSuggestionsResponse;
 
@@ -28,11 +27,9 @@ public class Application {
                 .build();
 
             GetAutocompleteSuggestionsRequest req = new GetAutocompleteSuggestionsRequest() {{
-                queryParams = new GetAutocompleteSuggestionsQueryParams() {{
-                    locale = "corrupti";
-                    query = "provident";
-                }};
-            }};            
+                locale = "corrupti";
+                query = "provident";
+            }}            
 
             GetAutocompleteSuggestionsResponse res = sdk.autocomplete.getAutocompleteSuggestions(req);
 
@@ -46,7 +43,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### autocomplete

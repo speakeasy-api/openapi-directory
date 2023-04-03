@@ -4,20 +4,119 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAuthorizeDBSecurityGroupIngressRequest {
-    
-    public GETAuthorizeDBSecurityGroupIngressQueryParams queryParams;
-    public GETAuthorizeDBSecurityGroupIngressRequest withQueryParams(GETAuthorizeDBSecurityGroupIngressQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETAuthorizeDBSecurityGroupIngressActionEnum action;
+    public GETAuthorizeDBSecurityGroupIngressRequest withAction(GETAuthorizeDBSecurityGroupIngressActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The IP range to authorize.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CIDRIP")
+    public String cidrip;
+    public GETAuthorizeDBSecurityGroupIngressRequest withCidrip(String cidrip) {
+        this.cidrip = cidrip;
+        return this;
+    }
     
-    public GETAuthorizeDBSecurityGroupIngressHeaders headers;
-    public GETAuthorizeDBSecurityGroupIngressRequest withHeaders(GETAuthorizeDBSecurityGroupIngressHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name of the DB security group to add authorization to.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBSecurityGroupName")
+    public String dbSecurityGroupName;
+    public GETAuthorizeDBSecurityGroupIngressRequest withDBSecurityGroupName(String dbSecurityGroupName) {
+        this.dbSecurityGroupName = dbSecurityGroupName;
+        return this;
+    }
+    
+    /**
+     * Id of the EC2 security group to authorize. For VPC DB security groups, &lt;code&gt;EC2SecurityGroupId&lt;/code&gt; must be provided. Otherwise, &lt;code&gt;EC2SecurityGroupOwnerId&lt;/code&gt; and either &lt;code&gt;EC2SecurityGroupName&lt;/code&gt; or &lt;code&gt;EC2SecurityGroupId&lt;/code&gt; must be provided.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EC2SecurityGroupId")
+    public String ec2SecurityGroupId;
+    public GETAuthorizeDBSecurityGroupIngressRequest withEc2SecurityGroupId(String ec2SecurityGroupId) {
+        this.ec2SecurityGroupId = ec2SecurityGroupId;
+        return this;
+    }
+    
+    /**
+     * Name of the EC2 security group to authorize. For VPC DB security groups, &lt;code&gt;EC2SecurityGroupId&lt;/code&gt; must be provided. Otherwise, &lt;code&gt;EC2SecurityGroupOwnerId&lt;/code&gt; and either &lt;code&gt;EC2SecurityGroupName&lt;/code&gt; or &lt;code&gt;EC2SecurityGroupId&lt;/code&gt; must be provided.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EC2SecurityGroupName")
+    public String ec2SecurityGroupName;
+    public GETAuthorizeDBSecurityGroupIngressRequest withEc2SecurityGroupName(String ec2SecurityGroupName) {
+        this.ec2SecurityGroupName = ec2SecurityGroupName;
+        return this;
+    }
+    
+    /**
+     * Amazon Web Services account number of the owner of the EC2 security group specified in the &lt;code&gt;EC2SecurityGroupName&lt;/code&gt; parameter. The Amazon Web Services access key ID isn't an acceptable value. For VPC DB security groups, &lt;code&gt;EC2SecurityGroupId&lt;/code&gt; must be provided. Otherwise, &lt;code&gt;EC2SecurityGroupOwnerId&lt;/code&gt; and either &lt;code&gt;EC2SecurityGroupName&lt;/code&gt; or &lt;code&gt;EC2SecurityGroupId&lt;/code&gt; must be provided.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EC2SecurityGroupOwnerId")
+    public String ec2SecurityGroupOwnerId;
+    public GETAuthorizeDBSecurityGroupIngressRequest withEc2SecurityGroupOwnerId(String ec2SecurityGroupOwnerId) {
+        this.ec2SecurityGroupOwnerId = ec2SecurityGroupOwnerId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETAuthorizeDBSecurityGroupIngressVersionEnum version;
+    public GETAuthorizeDBSecurityGroupIngressRequest withVersion(GETAuthorizeDBSecurityGroupIngressVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETAuthorizeDBSecurityGroupIngressRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETAuthorizeDBSecurityGroupIngressRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETAuthorizeDBSecurityGroupIngressRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETAuthorizeDBSecurityGroupIngressRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETAuthorizeDBSecurityGroupIngressRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETAuthorizeDBSecurityGroupIngressRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETAuthorizeDBSecurityGroupIngressRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

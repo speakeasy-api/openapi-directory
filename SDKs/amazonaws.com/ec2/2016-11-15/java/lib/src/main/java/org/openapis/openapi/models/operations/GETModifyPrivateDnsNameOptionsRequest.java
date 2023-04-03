@@ -4,20 +4,119 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyPrivateDnsNameOptionsRequest {
-    
-    public GETModifyPrivateDnsNameOptionsQueryParams queryParams;
-    public GETModifyPrivateDnsNameOptionsRequest withQueryParams(GETModifyPrivateDnsNameOptionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyPrivateDnsNameOptionsActionEnum action;
+    public GETModifyPrivateDnsNameOptionsRequest withAction(GETModifyPrivateDnsNameOptionsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETModifyPrivateDnsNameOptionsRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
     
-    public GETModifyPrivateDnsNameOptionsHeaders headers;
-    public GETModifyPrivateDnsNameOptionsRequest withHeaders(GETModifyPrivateDnsNameOptionsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Indicates whether to respond to DNS queries for instance hostnames with DNS AAAA records.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnableResourceNameDnsAAAARecord")
+    public Boolean enableResourceNameDnsAAAARecord;
+    public GETModifyPrivateDnsNameOptionsRequest withEnableResourceNameDnsAAAARecord(Boolean enableResourceNameDnsAAAARecord) {
+        this.enableResourceNameDnsAAAARecord = enableResourceNameDnsAAAARecord;
+        return this;
+    }
+    
+    /**
+     * Indicates whether to respond to DNS queries for instance hostnames with DNS A records.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnableResourceNameDnsARecord")
+    public Boolean enableResourceNameDnsARecord;
+    public GETModifyPrivateDnsNameOptionsRequest withEnableResourceNameDnsARecord(Boolean enableResourceNameDnsARecord) {
+        this.enableResourceNameDnsARecord = enableResourceNameDnsARecord;
+        return this;
+    }
+    
+    /**
+     * The ID of the instance.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceId")
+    public String instanceId;
+    public GETModifyPrivateDnsNameOptionsRequest withInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    
+    /**
+     * The type of hostname for EC2 instances. For IPv4 only subnets, an instance DNS name must be based on the instance IPv4 address. For IPv6 only subnets, an instance DNS name must be based on the instance ID. For dual-stack subnets, you can specify whether DNS names use the instance IPv4 address or the instance ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PrivateDnsHostnameType")
+    public GETModifyPrivateDNSNameOptionsPrivateDNSHostnameTypeEnum privateDnsHostnameType;
+    public GETModifyPrivateDnsNameOptionsRequest withPrivateDnsHostnameType(GETModifyPrivateDNSNameOptionsPrivateDNSHostnameTypeEnum privateDnsHostnameType) {
+        this.privateDnsHostnameType = privateDnsHostnameType;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyPrivateDnsNameOptionsVersionEnum version;
+    public GETModifyPrivateDnsNameOptionsRequest withVersion(GETModifyPrivateDnsNameOptionsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyPrivateDnsNameOptionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyPrivateDnsNameOptionsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyPrivateDnsNameOptionsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyPrivateDnsNameOptionsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyPrivateDnsNameOptionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyPrivateDnsNameOptionsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyPrivateDnsNameOptionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

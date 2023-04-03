@@ -4,20 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDomainsTldZoneIdDownloadRequest {
-    
-    public GetDomainsTldZoneIdDownloadPathParams pathParams;
-    public GetDomainsTldZoneIdDownloadRequest withPathParams(GetDomainsTldZoneIdDownloadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API key
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetDomainsTldZoneIdDownloadRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    /**
+     * Request date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
+    public String date;
+    public GetDomainsTldZoneIdDownloadRequest withDate(String date) {
+        this.date = date;
+        return this;
+    }
     
-    public GetDomainsTldZoneIdDownloadQueryParams queryParams;
-    public GetDomainsTldZoneIdDownloadRequest withQueryParams(GetDomainsTldZoneIdDownloadQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=zone_id")
+    public String zoneId;
+    public GetDomainsTldZoneIdDownloadRequest withZoneId(String zoneId) {
+        this.zoneId = zoneId;
         return this;
     }
     

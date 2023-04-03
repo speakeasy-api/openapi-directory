@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiAddShipmentJsonRequest {
-    
-    public OrderApiAddShipmentJsonPathParams pathParams;
-    public OrderApiAddShipmentJsonRequest withPathParams(OrderApiAddShipmentJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The shipment data to create the shipment
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiApiAddShipmentToOrderModel request;
-    public OrderApiAddShipmentJsonRequest withRequest(org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiApiAddShipmentToOrderModel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiApiAddShipmentToOrderModel rechnungsdruckWebAppControllersApiApiAddShipmentToOrderModel;
+    public OrderApiAddShipmentJsonRequest withRechnungsdruckWebAppControllersApiApiAddShipmentToOrderModel(org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiApiAddShipmentToOrderModel rechnungsdruckWebAppControllersApiApiAddShipmentToOrderModel) {
+        this.rechnungsdruckWebAppControllersApiApiAddShipmentToOrderModel = rechnungsdruckWebAppControllersApiApiAddShipmentToOrderModel;
+        return this;
+    }
+    
+    /**
+     * The internal billbee id of the order
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public OrderApiAddShipmentJsonRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

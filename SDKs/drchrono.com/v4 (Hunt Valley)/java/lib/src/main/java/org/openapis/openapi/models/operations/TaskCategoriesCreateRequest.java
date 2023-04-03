@@ -4,20 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TaskCategoriesCreateRequest {
-    
-    public TaskCategoriesCreateQueryParams queryParams;
-    public TaskCategoriesCreateRequest withQueryParams(TaskCategoriesCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public TaskCategoriesCreateSecurity security;
-    public TaskCategoriesCreateRequest withSecurity(TaskCategoriesCreateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public TaskCategoriesCreateRequest withSince(String since) {
+        this.since = since;
         return this;
     }
     

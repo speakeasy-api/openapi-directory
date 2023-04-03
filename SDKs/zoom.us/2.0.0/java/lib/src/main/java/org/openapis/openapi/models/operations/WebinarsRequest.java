@@ -4,27 +4,38 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WebinarsRequest {
-    
-    public WebinarsPathParams pathParams;
-    public WebinarsRequest withPathParams(WebinarsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * **Deprecated** - This field has been deprecated and we will stop supporting it completely in a future release. Please use "next_page_token" for pagination instead of this field.
+     * 
+     * The page number of the current page in the returned records.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_number")
+    public Long pageNumber;
+    public WebinarsRequest withPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
     
-    
-    public WebinarsQueryParams queryParams;
-    public WebinarsRequest withQueryParams(WebinarsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of records returned within a single API call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public WebinarsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
-    
-    public WebinarsSecurity security;
-    public WebinarsRequest withSecurity(WebinarsSecurity security) {
-        this.security = security;
+    /**
+     * The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public WebinarsRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

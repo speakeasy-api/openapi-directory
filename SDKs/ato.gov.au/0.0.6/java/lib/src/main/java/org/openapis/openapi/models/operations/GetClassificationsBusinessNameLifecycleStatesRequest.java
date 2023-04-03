@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetClassificationsBusinessNameLifecycleStatesRequest {
-    
-    public GetClassificationsBusinessNameLifecycleStatesHeaders headers;
-    public GetClassificationsBusinessNameLifecycleStatesRequest withHeaders(GetClassificationsBusinessNameLifecycleStatesHeaders headers) {
-        this.headers = headers;
+    /**
+     * The API key.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public GetClassificationsBusinessNameLifecycleStatesRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     

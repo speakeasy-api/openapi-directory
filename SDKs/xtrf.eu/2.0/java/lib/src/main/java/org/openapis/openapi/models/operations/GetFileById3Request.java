@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFileById3Request {
-    
-    public GetFileById3PathParams pathParams;
-    public GetFileById3Request withPathParams(GetFileById3PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * file's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileId")
+    public String fileId;
+    public GetFileById3Request withFileId(String fileId) {
+        this.fileId = fileId;
         return this;
     }
     

@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchRoomParticipantSubscribeRuleRequest {
-    
-    public FetchRoomParticipantSubscribeRulePathParams pathParams;
-    public FetchRoomParticipantSubscribeRuleRequest withPathParams(FetchRoomParticipantSubscribeRulePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Participant resource with the subscribe rules to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ParticipantSid")
+    public String participantSid;
+    public FetchRoomParticipantSubscribeRuleRequest withParticipantSid(String participantSid) {
+        this.participantSid = participantSid;
         return this;
     }
     
-    
-    public FetchRoomParticipantSubscribeRuleSecurity security;
-    public FetchRoomParticipantSubscribeRuleRequest withSecurity(FetchRoomParticipantSubscribeRuleSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchRoomParticipantSubscribeRuleRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Room resource where the subscribe rules to fetch apply.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=RoomSid")
+    public String roomSid;
+    public FetchRoomParticipantSubscribeRuleRequest withRoomSid(String roomSid) {
+        this.roomSid = roomSid;
         return this;
     }
     

@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PaymentLinkApiNewJsonRequest {
-    
-    public PaymentLinkApiNewJsonHeaders headers;
-    public PaymentLinkApiNewJsonRequest withHeaders(PaymentLinkApiNewJsonHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.PaymentLink paymentLink;
+    public PaymentLinkApiNewJsonRequest withPaymentLink(org.openapis.openapi.models.shared.PaymentLink paymentLink) {
+        this.paymentLink = paymentLink;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PaymentLink request;
-    public PaymentLinkApiNewJsonRequest withRequest(org.openapis.openapi.models.shared.PaymentLink request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
+    public String xAuthKey;
+    public PaymentLinkApiNewJsonRequest withXAuthKey(String xAuthKey) {
+        this.xAuthKey = xAuthKey;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
+    public String xAuthSecret;
+    public PaymentLinkApiNewJsonRequest withXAuthSecret(String xAuthSecret) {
+        this.xAuthSecret = xAuthSecret;
         return this;
     }
     

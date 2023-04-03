@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsAddOrUpdateMembershipForUserInOrgRequest {
-    
-    public TeamsAddOrUpdateMembershipForUserInOrgPathParams pathParams;
-    public TeamsAddOrUpdateMembershipForUserInOrgRequest withPathParams(TeamsAddOrUpdateMembershipForUserInOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public TeamsAddOrUpdateMembershipForUserInOrgRequestBody requestBody;
+    public TeamsAddOrUpdateMembershipForUserInOrgRequest withRequestBody(TeamsAddOrUpdateMembershipForUserInOrgRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public TeamsAddOrUpdateMembershipForUserInOrgRequestBody request;
-    public TeamsAddOrUpdateMembershipForUserInOrgRequest withRequest(TeamsAddOrUpdateMembershipForUserInOrgRequestBody request) {
-        this.request = request;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public TeamsAddOrUpdateMembershipForUserInOrgRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
+    
+    /**
+     * The slug of the team name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_slug")
+    public String teamSlug;
+    public TeamsAddOrUpdateMembershipForUserInOrgRequest withTeamSlug(String teamSlug) {
+        this.teamSlug = teamSlug;
+        return this;
+    }
+    
+    /**
+     * The handle for the GitHub user account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public TeamsAddOrUpdateMembershipForUserInOrgRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

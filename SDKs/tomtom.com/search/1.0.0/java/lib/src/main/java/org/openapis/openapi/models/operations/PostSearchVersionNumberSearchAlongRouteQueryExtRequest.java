@@ -7,24 +7,60 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSearchVersionNumberSearchAlongRouteQueryExtRequest {
-    
-    public PostSearchVersionNumberSearchAlongRouteQueryExtPathParams pathParams;
-    public PostSearchVersionNumberSearchAlongRouteQueryExtRequest withPathParams(PostSearchVersionNumberSearchAlongRouteQueryExtPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostSearchVersionNumberSearchAlongRouteQueryExtQueryParams queryParams;
-    public PostSearchVersionNumberSearchAlongRouteQueryExtRequest withQueryParams(PostSearchVersionNumberSearchAlongRouteQueryExtQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostSearchVersionNumberSearchAlongRouteQueryExtRequestBody request;
-    public PostSearchVersionNumberSearchAlongRouteQueryExtRequest withRequest(PostSearchVersionNumberSearchAlongRouteQueryExtRequestBody request) {
-        this.request = request;
+    public PostSearchVersionNumberSearchAlongRouteQueryExtRequestBody requestBody;
+    public PostSearchVersionNumberSearchAlongRouteQueryExtRequest withRequestBody(PostSearchVersionNumberSearchAlongRouteQueryExtRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Expected response format.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ext")
+    public org.openapis.openapi.models.shared.ExtEnum ext;
+    public PostSearchVersionNumberSearchAlongRouteQueryExtRequest withExt(org.openapis.openapi.models.shared.ExtEnum ext) {
+        this.ext = ext;
+        return this;
+    }
+    
+    /**
+     * Maximum number of search results that will be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public PostSearchVersionNumberSearchAlongRouteQueryExtRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Maximum detour time
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxDetourTime")
+    public Long maxDetourTime;
+    public PostSearchVersionNumberSearchAlongRouteQueryExtRequest withMaxDetourTime(Long maxDetourTime) {
+        this.maxDetourTime = maxDetourTime;
+        return this;
+    }
+    
+    /**
+     * Query string. Must be properly URL encoded.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=query")
+    public String query;
+    public PostSearchVersionNumberSearchAlongRouteQueryExtRequest withQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    
+    /**
+     * Service version number. The current value is 2.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
+    public org.openapis.openapi.models.shared.VersionNumberEnum versionNumber;
+    public PostSearchVersionNumberSearchAlongRouteQueryExtRequest withVersionNumber(org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
+        this.versionNumber = versionNumber;
         return this;
     }
     

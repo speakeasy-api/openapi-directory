@@ -4,27 +4,256 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DfareportingCampaignsListRequest {
-    
-    public DfareportingCampaignsListPathParams pathParams;
-    public DfareportingCampaignsListRequest withPathParams(DfareportingCampaignsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public DfareportingCampaignsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public DfareportingCampaignsListQueryParams queryParams;
-    public DfareportingCampaignsListRequest withQueryParams(DfareportingCampaignsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public DfareportingCampaignsListRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Select only campaigns whose advertisers belong to these advertiser groups.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=advertiserGroupIds")
+    public String[] advertiserGroupIds;
+    public DfareportingCampaignsListRequest withAdvertiserGroupIds(String[] advertiserGroupIds) {
+        this.advertiserGroupIds = advertiserGroupIds;
+        return this;
+    }
     
-    public DfareportingCampaignsListSecurity security;
-    public DfareportingCampaignsListRequest withSecurity(DfareportingCampaignsListSecurity security) {
-        this.security = security;
+    /**
+     * Select only campaigns that belong to these advertisers.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=advertiserIds")
+    public String[] advertiserIds;
+    public DfareportingCampaignsListRequest withAdvertiserIds(String[] advertiserIds) {
+        this.advertiserIds = advertiserIds;
+        return this;
+    }
+    
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DfareportingCampaignsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * Select only archived campaigns. Don't set this field to select both archived and non-archived campaigns.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=archived")
+    public Boolean archived;
+    public DfareportingCampaignsListRequest withArchived(Boolean archived) {
+        this.archived = archived;
+        return this;
+    }
+    
+    /**
+     * Select only campaigns that have at least one optimization activity.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=atLeastOneOptimizationActivity")
+    public Boolean atLeastOneOptimizationActivity;
+    public DfareportingCampaignsListRequest withAtLeastOneOptimizationActivity(Boolean atLeastOneOptimizationActivity) {
+        this.atLeastOneOptimizationActivity = atLeastOneOptimizationActivity;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public DfareportingCampaignsListRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Exclude campaigns with these IDs.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=excludedIds")
+    public String[] excludedIds;
+    public DfareportingCampaignsListRequest withExcludedIds(String[] excludedIds) {
+        this.excludedIds = excludedIds;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DfareportingCampaignsListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Select only campaigns with these IDs.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids")
+    public String[] ids;
+    public DfareportingCampaignsListRequest withIds(String[] ids) {
+        this.ids = ids;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DfareportingCampaignsListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Maximum number of results to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public DfareportingCampaignsListRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DfareportingCampaignsListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Select only campaigns that have overridden this event tag ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=overriddenEventTagId")
+    public String overriddenEventTagId;
+    public DfareportingCampaignsListRequest withOverriddenEventTagId(String overriddenEventTagId) {
+        this.overriddenEventTagId = overriddenEventTagId;
+        return this;
+    }
+    
+    /**
+     * Value of the nextPageToken from the previous result page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public DfareportingCampaignsListRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DfareportingCampaignsListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * User profile ID associated with this request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
+    public String profileId;
+    public DfareportingCampaignsListRequest withProfileId(String profileId) {
+        this.profileId = profileId;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DfareportingCampaignsListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Allows searching for campaigns by name or ID. Wildcards (*) are allowed. For example, "campaign*2015" will return campaigns with names like "campaign June 2015", "campaign April 2015", or simply "campaign 2015". Most of the searches also add wildcards implicitly at the start and the end of the search string. For example, a search string of "campaign" will match campaigns with name "my campaign", "campaign 2015", or simply "campaign".
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=searchString")
+    public String searchString;
+    public DfareportingCampaignsListRequest withSearchString(String searchString) {
+        this.searchString = searchString;
+        return this;
+    }
+    
+    /**
+     * Field by which to sort the list.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortField")
+    public DfareportingCampaignsListSortFieldEnum sortField;
+    public DfareportingCampaignsListRequest withSortField(DfareportingCampaignsListSortFieldEnum sortField) {
+        this.sortField = sortField;
+        return this;
+    }
+    
+    /**
+     * Order of sorted results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortOrder")
+    public DfareportingCampaignsListSortOrderEnum sortOrder;
+    public DfareportingCampaignsListRequest withSortOrder(DfareportingCampaignsListSortOrderEnum sortOrder) {
+        this.sortOrder = sortOrder;
+        return this;
+    }
+    
+    /**
+     * Select only campaigns that belong to this subaccount.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subaccountId")
+    public String subaccountId;
+    public DfareportingCampaignsListRequest withSubaccountId(String subaccountId) {
+        this.subaccountId = subaccountId;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public DfareportingCampaignsListRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public DfareportingCampaignsListRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

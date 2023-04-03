@@ -44,7 +44,7 @@ public class Genres {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GenresListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GenresListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -82,7 +82,7 @@ public class Genres {
      */
     public org.openapis.openapi.models.operations.GenresReadResponse genresRead(org.openapis.openapi.models.operations.GenresReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GenresReadPathParams.class, baseUrl, "/genres/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GenresReadRequest.class, baseUrl, "/genres/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostAppsAppIdPublishRequest {
-    
-    public PostAppsAppIdPublishPathParams pathParams;
-    public PostAppsAppIdPublishRequest withPathParams(PostAppsAppIdPublishPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the app to be published
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
+    public String appId;
+    public PostAppsAppIdPublishRequest withAppId(String appId) {
+        this.appId = appId;
         return this;
     }
     
+    /**
+     * If true, this AppVersion is automatically approved and becomes immediately available to end users
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=autoApprove")
+    public Boolean autoApprove;
+    public PostAppsAppIdPublishRequest withAutoApprove(Boolean autoApprove) {
+        this.autoApprove = autoApprove;
+        return this;
+    }
     
-    public PostAppsAppIdPublishQueryParams queryParams;
-    public PostAppsAppIdPublishRequest withQueryParams(PostAppsAppIdPublishQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The unique id of the developer that is modifying this app
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=developerId")
+    public String developerId;
+    public PostAppsAppIdPublishRequest withDeveloperId(String developerId) {
+        this.developerId = developerId;
+        return this;
+    }
+    
+    /**
+     * The version of the app to be published
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
+    public Long version;
+    public PostAppsAppIdPublishRequest withVersion(Long version) {
+        this.version = version;
         return this;
     }
     

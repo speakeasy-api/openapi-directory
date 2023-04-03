@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchDayRequest {
-    
-    public FetchDayPathParams pathParams;
-    public FetchDayRequest withPathParams(FetchDayPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ISO 8601 format date of the resources in the file, for a UTC day
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Day")
+    public String day;
+    public FetchDayRequest withDay(String day) {
+        this.day = day;
         return this;
     }
     
-    
-    public FetchDaySecurity security;
-    public FetchDayRequest withSecurity(FetchDaySecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchDayRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The type of communication \u2013 Messages, Calls, Conferences, and Participants
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ResourceType")
+    public String resourceType;
+    public FetchDayRequest withResourceType(String resourceType) {
+        this.resourceType = resourceType;
         return this;
     }
     

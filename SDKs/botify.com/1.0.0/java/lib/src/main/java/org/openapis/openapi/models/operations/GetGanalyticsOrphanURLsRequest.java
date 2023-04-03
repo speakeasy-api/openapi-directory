@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGanalyticsOrphanURLsRequest {
-    
-    public GetGanalyticsOrphanURLsPathParams pathParams;
-    public GetGanalyticsOrphanURLsRequest withPathParams(GetGanalyticsOrphanURLsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Analysis' identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=analysis_slug")
+    public String analysisSlug;
+    public GetGanalyticsOrphanURLsRequest withAnalysisSlug(String analysisSlug) {
+        this.analysisSlug = analysisSlug;
         return this;
     }
     
+    /**
+     * Type of traffic, value: 'organic' (from search engine)or 'social' (from a social network)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=medium")
+    public GetGanalyticsOrphanURLsMediumEnum medium;
+    public GetGanalyticsOrphanURLsRequest withMedium(GetGanalyticsOrphanURLsMediumEnum medium) {
+        this.medium = medium;
+        return this;
+    }
     
-    public GetGanalyticsOrphanURLsQueryParams queryParams;
-    public GetGanalyticsOrphanURLsRequest withQueryParams(GetGanalyticsOrphanURLsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page Number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetGanalyticsOrphanURLsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Project's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_slug")
+    public String projectSlug;
+    public GetGanalyticsOrphanURLsRequest withProjectSlug(String projectSlug) {
+        this.projectSlug = projectSlug;
+        return this;
+    }
+    
+    /**
+     * Page Size
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
+    public Long size;
+    public GetGanalyticsOrphanURLsRequest withSize(Long size) {
+        this.size = size;
+        return this;
+    }
+    
+    /**
+     * Traffic source, value: name of the search engine or social network
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=source")
+    public GetGanalyticsOrphanURLsSourceEnum source;
+    public GetGanalyticsOrphanURLsRequest withSource(GetGanalyticsOrphanURLsSourceEnum source) {
+        this.source = source;
+        return this;
+    }
+    
+    /**
+     * User's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public GetGanalyticsOrphanURLsRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

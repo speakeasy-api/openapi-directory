@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutWebhooksV3AppIdSettingsConfigureSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query")
-    public org.openapis.openapi.models.shared.SchemeDeveloperHapikey developerHapikey;
-    public PutWebhooksV3AppIdSettingsConfigureSecurity withDeveloperHapikey(org.openapis.openapi.models.shared.SchemeDeveloperHapikey developerHapikey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=hapikey")
+    public String developerHapikey;
+    public PutWebhooksV3AppIdSettingsConfigureSecurity withDeveloperHapikey(String developerHapikey) {
         this.developerHapikey = developerHapikey;
         return this;
     }

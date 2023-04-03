@@ -35,11 +35,10 @@ public class Export {
 
     /**
      * Top asset hardware products as CSV
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportAssetTopHWCSVResponse exportAssetTopHWCSV(org.openapis.openapi.models.operations.ExportAssetTopHWCSVRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportAssetTopHWCSVResponse exportAssetTopHWCSV() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/org/assets/top.hw.csv");
         
@@ -48,8 +47,7 @@ public class Export {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -75,11 +73,10 @@ public class Export {
 
     /**
      * Top asset operating systems as CSV
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportAssetTopOSCSVResponse exportAssetTopOSCSV(org.openapis.openapi.models.operations.ExportAssetTopOSCSVRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportAssetTopOSCSVResponse exportAssetTopOSCSV() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/org/assets/top.os.csv");
         
@@ -88,8 +85,7 @@ public class Export {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -115,11 +111,10 @@ public class Export {
 
     /**
      * Top asset tags as CSV
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportAssetTopTagsCSVResponse exportAssetTopTagsCSV(org.openapis.openapi.models.operations.ExportAssetTopTagsCSVRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportAssetTopTagsCSVResponse exportAssetTopTagsCSV() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/org/assets/top.tags.csv");
         
@@ -128,8 +123,7 @@ public class Export {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -155,11 +149,10 @@ public class Export {
 
     /**
      * Top asset types as CSV
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportAssetTopTypesCSVResponse exportAssetTopTypesCSV(org.openapis.openapi.models.operations.ExportAssetTopTypesCSVRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportAssetTopTypesCSVResponse exportAssetTopTypesCSV() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/org/assets/top.types.csv");
         
@@ -168,8 +161,7 @@ public class Export {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -196,10 +188,11 @@ public class Export {
     /**
      * Asset inventory as CSV
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportAssetsCSVResponse exportAssetsCSV(org.openapis.openapi.models.operations.ExportAssetsCSVRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportAssetsCSVResponse exportAssetsCSV(org.openapis.openapi.models.operations.ExportAssetsCSVRequest request, org.openapis.openapi.models.operations.ExportAssetsCSVSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/export/org/assets.csv");
         
@@ -207,14 +200,14 @@ public class Export {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportAssetsCSVQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportAssetsCSVRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -242,10 +235,11 @@ public class Export {
     /**
      * Exports the asset inventory
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportAssetsJSONResponse exportAssetsJSON(org.openapis.openapi.models.operations.ExportAssetsJSONRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportAssetsJSONResponse exportAssetsJSON(org.openapis.openapi.models.operations.ExportAssetsJSONRequest request, org.openapis.openapi.models.operations.ExportAssetsJSONSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/export/org/assets.json");
         
@@ -253,14 +247,14 @@ public class Export {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportAssetsJSONQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportAssetsJSONRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -289,10 +283,11 @@ public class Export {
     /**
      * Asset inventory as JSON line-delimited
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportAssetsJSONLResponse exportAssetsJSONL(org.openapis.openapi.models.operations.ExportAssetsJSONLRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportAssetsJSONLResponse exportAssetsJSONL(org.openapis.openapi.models.operations.ExportAssetsJSONLRequest request, org.openapis.openapi.models.operations.ExportAssetsJSONLSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/export/org/assets.jsonl");
         
@@ -300,14 +295,14 @@ public class Export {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportAssetsJSONLQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportAssetsJSONLRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -336,10 +331,11 @@ public class Export {
     /**
      * Asset inventory as Nmap-style XML
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportAssetsNmapXMLResponse exportAssetsNmapXML(org.openapis.openapi.models.operations.ExportAssetsNmapXMLRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportAssetsNmapXMLResponse exportAssetsNmapXML(org.openapis.openapi.models.operations.ExportAssetsNmapXMLRequest request, org.openapis.openapi.models.operations.ExportAssetsNmapXMLSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/export/org/assets.nmap.xml");
         
@@ -347,14 +343,14 @@ public class Export {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportAssetsNmapXMLQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportAssetsNmapXMLRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -382,10 +378,11 @@ public class Export {
     /**
      * Service inventory as CSV
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportServicesCSVResponse exportServicesCSV(org.openapis.openapi.models.operations.ExportServicesCSVRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportServicesCSVResponse exportServicesCSV(org.openapis.openapi.models.operations.ExportServicesCSVRequest request, org.openapis.openapi.models.operations.ExportServicesCSVSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/export/org/services.csv");
         
@@ -393,14 +390,14 @@ public class Export {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportServicesCSVQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportServicesCSVRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -428,10 +425,11 @@ public class Export {
     /**
      * Service inventory as JSON
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportServicesJSONResponse exportServicesJSON(org.openapis.openapi.models.operations.ExportServicesJSONRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportServicesJSONResponse exportServicesJSON(org.openapis.openapi.models.operations.ExportServicesJSONRequest request, org.openapis.openapi.models.operations.ExportServicesJSONSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/export/org/services.json");
         
@@ -439,14 +437,14 @@ public class Export {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportServicesJSONQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportServicesJSONRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -475,10 +473,11 @@ public class Export {
     /**
      * Service inventory as JSON line-delimited
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportServicesJSONLResponse exportServicesJSONL(org.openapis.openapi.models.operations.ExportServicesJSONLRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportServicesJSONLResponse exportServicesJSONL(org.openapis.openapi.models.operations.ExportServicesJSONLRequest request, org.openapis.openapi.models.operations.ExportServicesJSONLSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/export/org/services.jsonl");
         
@@ -486,14 +485,14 @@ public class Export {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportServicesJSONLQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportServicesJSONLRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -521,11 +520,10 @@ public class Export {
 
     /**
      * Top service products as CSV
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportServicesTopProductsCSVResponse exportServicesTopProductsCSV(org.openapis.openapi.models.operations.ExportServicesTopProductsCSVRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportServicesTopProductsCSVResponse exportServicesTopProductsCSV() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/org/services/top.products.csv");
         
@@ -534,8 +532,7 @@ public class Export {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -561,11 +558,10 @@ public class Export {
 
     /**
      * Top service protocols as CSV
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportServicesTopProtocolsCSVResponse exportServicesTopProtocolsCSV(org.openapis.openapi.models.operations.ExportServicesTopProtocolsCSVRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportServicesTopProtocolsCSVResponse exportServicesTopProtocolsCSV() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/org/services/top.protocols.csv");
         
@@ -574,8 +570,7 @@ public class Export {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -601,11 +596,10 @@ public class Export {
 
     /**
      * Top TCP services as CSV
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportServicesTopTCPCSVResponse exportServicesTopTCPCSV(org.openapis.openapi.models.operations.ExportServicesTopTCPCSVRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportServicesTopTCPCSVResponse exportServicesTopTCPCSV() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/org/services/top.tcp.csv");
         
@@ -614,8 +608,7 @@ public class Export {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -641,11 +634,10 @@ public class Export {
 
     /**
      * Top UDP services as CSV
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportServicesTopUDPCSVResponse exportServicesTopUDPCSV(org.openapis.openapi.models.operations.ExportServicesTopUDPCSVRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportServicesTopUDPCSVResponse exportServicesTopUDPCSV() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/org/services/top.udp.csv");
         
@@ -654,8 +646,7 @@ public class Export {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -681,11 +672,10 @@ public class Export {
 
     /**
      * Site list as CSV
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportSitesCSVResponse exportSitesCSV(org.openapis.openapi.models.operations.ExportSitesCSVRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportSitesCSVResponse exportSitesCSV() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/export/org/sites.csv");
         
@@ -694,8 +684,7 @@ public class Export {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -722,10 +711,11 @@ public class Export {
     /**
      * Export all sites
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportSitesJSONResponse exportSitesJSON(org.openapis.openapi.models.operations.ExportSitesJSONRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportSitesJSONResponse exportSitesJSON(org.openapis.openapi.models.operations.ExportSitesJSONRequest request, org.openapis.openapi.models.operations.ExportSitesJSONSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/export/org/sites.json");
         
@@ -733,14 +723,14 @@ public class Export {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportSitesJSONQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportSitesJSONRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -769,10 +759,11 @@ public class Export {
     /**
      * Site list as JSON line-delimited
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportSitesJSONLResponse exportSitesJSONL(org.openapis.openapi.models.operations.ExportSitesJSONLRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportSitesJSONLResponse exportSitesJSONL(org.openapis.openapi.models.operations.ExportSitesJSONLRequest request, org.openapis.openapi.models.operations.ExportSitesJSONLSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/export/org/sites.jsonl");
         
@@ -780,14 +771,14 @@ public class Export {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportSitesJSONLQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportSitesJSONLRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -816,10 +807,11 @@ public class Export {
     /**
      * Subnet utilization statistics as as CSV
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportSubnetUtilizationStatsCSVResponse exportSubnetUtilizationStatsCSV(org.openapis.openapi.models.operations.ExportSubnetUtilizationStatsCSVRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportSubnetUtilizationStatsCSVResponse exportSubnetUtilizationStatsCSV(org.openapis.openapi.models.operations.ExportSubnetUtilizationStatsCSVRequest request, org.openapis.openapi.models.operations.ExportSubnetUtilizationStatsCSVSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/org/services/subnet.stats.csv");
         
@@ -827,14 +819,14 @@ public class Export {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportSubnetUtilizationStatsCSVQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportSubnetUtilizationStatsCSVRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -862,10 +854,11 @@ public class Export {
     /**
      * Wireless inventory as CSV
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportWirelessCSVResponse exportWirelessCSV(org.openapis.openapi.models.operations.ExportWirelessCSVRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportWirelessCSVResponse exportWirelessCSV(org.openapis.openapi.models.operations.ExportWirelessCSVRequest request, org.openapis.openapi.models.operations.ExportWirelessCSVSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/export/org/wireless.csv");
         
@@ -873,14 +866,14 @@ public class Export {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportWirelessCSVQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportWirelessCSVRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -908,10 +901,11 @@ public class Export {
     /**
      * Wireless inventory as JSON
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportWirelessJSONResponse exportWirelessJSON(org.openapis.openapi.models.operations.ExportWirelessJSONRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportWirelessJSONResponse exportWirelessJSON(org.openapis.openapi.models.operations.ExportWirelessJSONRequest request, org.openapis.openapi.models.operations.ExportWirelessJSONSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/export/org/wireless.json");
         
@@ -919,14 +913,14 @@ public class Export {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportWirelessJSONQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportWirelessJSONRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -955,10 +949,11 @@ public class Export {
     /**
      * Wireless inventory as JSON line-delimited
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportWirelessJSONLResponse exportWirelessJSONL(org.openapis.openapi.models.operations.ExportWirelessJSONLRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportWirelessJSONLResponse exportWirelessJSONL(org.openapis.openapi.models.operations.ExportWirelessJSONLRequest request, org.openapis.openapi.models.operations.ExportWirelessJSONLSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/export/org/wireless.jsonl");
         
@@ -966,14 +961,14 @@ public class Export {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportWirelessJSONLQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportWirelessJSONLRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

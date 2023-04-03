@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SuggestTagsAndRegionsRequest {
-    
-    public SuggestTagsAndRegionsPathParams pathParams;
-    public SuggestTagsAndRegionsRequest withPathParams(SuggestTagsAndRegionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Array of image ids tag suggestion are needed for. Use GetUntaggedImages API to get imageIds.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=imageIds")
+    public String[] imageIds;
+    public SuggestTagsAndRegionsRequest withImageIds(String[] imageIds) {
+        this.imageIds = imageIds;
         return this;
     }
     
+    /**
+     * IterationId to use for tag and region suggestion.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=iterationId")
+    public String iterationId;
+    public SuggestTagsAndRegionsRequest withIterationId(String iterationId) {
+        this.iterationId = iterationId;
+        return this;
+    }
     
-    public SuggestTagsAndRegionsQueryParams queryParams;
-    public SuggestTagsAndRegionsRequest withQueryParams(SuggestTagsAndRegionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public SuggestTagsAndRegionsRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

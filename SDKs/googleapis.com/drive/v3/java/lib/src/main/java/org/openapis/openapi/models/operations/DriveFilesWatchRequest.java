@@ -7,31 +7,140 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DriveFilesWatchRequest {
-    
-    public DriveFilesWatchPathParams pathParams;
-    public DriveFilesWatchRequest withPathParams(DriveFilesWatchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DriveFilesWatchQueryParams queryParams;
-    public DriveFilesWatchRequest withQueryParams(DriveFilesWatchQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Channel request;
-    public DriveFilesWatchRequest withRequest(org.openapis.openapi.models.shared.Channel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Channel channel;
+    public DriveFilesWatchRequest withChannel(org.openapis.openapi.models.shared.Channel channel) {
+        this.channel = channel;
         return this;
     }
     
+    /**
+     * Whether the user is acknowledging the risk of downloading known malware or other abusive files. This is only applicable when alt=media.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=acknowledgeAbuse")
+    public Boolean acknowledgeAbuse;
+    public DriveFilesWatchRequest withAcknowledgeAbuse(Boolean acknowledgeAbuse) {
+        this.acknowledgeAbuse = acknowledgeAbuse;
+        return this;
+    }
     
-    public DriveFilesWatchSecurity security;
-    public DriveFilesWatchRequest withSecurity(DriveFilesWatchSecurity security) {
-        this.security = security;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DriveFilesWatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DriveFilesWatchRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * The ID of the file.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileId")
+    public String fileId;
+    public DriveFilesWatchRequest withFileId(String fileId) {
+        this.fileId = fileId;
+        return this;
+    }
+    
+    /**
+     * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeLabels")
+    public String includeLabels;
+    public DriveFilesWatchRequest withIncludeLabels(String includeLabels) {
+        this.includeLabels = includeLabels;
+        return this;
+    }
+    
+    /**
+     * Specifies which additional view's permissions to include in the response. Only 'published' is supported.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includePermissionsForView")
+    public String includePermissionsForView;
+    public DriveFilesWatchRequest withIncludePermissionsForView(String includePermissionsForView) {
+        this.includePermissionsForView = includePermissionsForView;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DriveFilesWatchRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DriveFilesWatchRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DriveFilesWatchRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DriveFilesWatchRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Whether the requesting application supports both My Drives and shared drives.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supportsAllDrives")
+    public Boolean supportsAllDrives;
+    public DriveFilesWatchRequest withSupportsAllDrives(Boolean supportsAllDrives) {
+        this.supportsAllDrives = supportsAllDrives;
+        return this;
+    }
+    
+    /**
+     * Deprecated use supportsAllDrives instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supportsTeamDrives")
+    public Boolean supportsTeamDrives;
+    public DriveFilesWatchRequest withSupportsTeamDrives(Boolean supportsTeamDrives) {
+        this.supportsTeamDrives = supportsTeamDrives;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public DriveFilesWatchRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

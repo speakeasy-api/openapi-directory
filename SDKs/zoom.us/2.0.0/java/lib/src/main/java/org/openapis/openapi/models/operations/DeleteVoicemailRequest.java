@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteVoicemailRequest {
-    
-    public DeleteVoicemailPathParams pathParams;
-    public DeleteVoicemailRequest withPathParams(DeleteVoicemailPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the voicemail. Retrieve the value for this field by calling the [Get voicemails](https://marketplace.zoom.us/docs/api-reference/zoom-api/phone/phoneuservoicemails) API.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=voicemailId")
+    public String voicemailId;
+    public DeleteVoicemailRequest withVoicemailId(String voicemailId) {
+        this.voicemailId = voicemailId;
         return this;
     }
     

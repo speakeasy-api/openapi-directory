@@ -18,10 +18,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.CancelReportSecurity;
-import org.openapis.openapi.models.operations.CancelReportPathParams;
 import org.openapis.openapi.models.operations.CancelReportRequest;
 import org.openapis.openapi.models.operations.CancelReportResponse;
-import org.openapis.openapi.models.shared.SchemeBasicAuth;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,18 +28,13 @@ public class Application {
                 .build();
 
             CancelReportRequest req = new CancelReportRequest() {{
-                security = new CancelReportSecurity() {{
-                    basicAuth = new SchemeBasicAuth() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
-                }};
-                pathParams = new CancelReportPathParams() {{
-                    reportId = "aaaaaaaa-bbbb-cccc-dddd-0123456789ab";
-                }};
-            }};            
+                reportId = "aaaaaaaa-bbbb-cccc-dddd-0123456789ab";
+            }}            
 
-            CancelReportResponse res = sdk.cancelReport(req);
+            CancelReportResponse res = sdk.cancelReport(req, new CancelReportSecurity() {{
+                password = "YOUR_PASSWORD_HERE";
+                username = "YOUR_USERNAME_HERE";
+            }});
 
             if (res.cancelReport200ApplicationJSONOneOf.isPresent()) {
                 // handle response
@@ -53,7 +46,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

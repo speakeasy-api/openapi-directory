@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostShipmentJsonRequest {
-    
-    public PostShipmentJsonPathParams pathParams;
-    public PostShipmentJsonRequest withPathParams(PostShipmentJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ShipmentLocationPostPersistVO shipmentLocationPostPersistVO;
+    public PostShipmentJsonRequest withShipmentLocationPostPersistVO(org.openapis.openapi.models.shared.ShipmentLocationPostPersistVO shipmentLocationPostPersistVO) {
+        this.shipmentLocationPostPersistVO = shipmentLocationPostPersistVO;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ShipmentLocationPostPersistVO request;
-    public PostShipmentJsonRequest withRequest(org.openapis.openapi.models.shared.ShipmentLocationPostPersistVO request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public String projectId;
+    public PostShipmentJsonRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
+    public String workgroupId;
+    public PostShipmentJsonRequest withWorkgroupId(String workgroupId) {
+        this.workgroupId = workgroupId;
         return this;
     }
     

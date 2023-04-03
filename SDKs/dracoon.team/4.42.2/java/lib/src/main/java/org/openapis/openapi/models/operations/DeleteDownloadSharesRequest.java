@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteDownloadSharesRequest {
-    
-    public DeleteDownloadSharesHeaders headers;
-    public DeleteDownloadSharesRequest withHeaders(DeleteDownloadSharesHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.DeleteDownloadSharesRequest deleteDownloadSharesRequest;
+    public DeleteDownloadSharesRequest withDeleteDownloadSharesRequest(org.openapis.openapi.models.shared.DeleteDownloadSharesRequest deleteDownloadSharesRequest) {
+        this.deleteDownloadSharesRequest = deleteDownloadSharesRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DeleteDownloadSharesRequest request;
-    public DeleteDownloadSharesRequest withRequest(org.openapis.openapi.models.shared.DeleteDownloadSharesRequest request) {
-        this.request = request;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public DeleteDownloadSharesRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     

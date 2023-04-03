@@ -4,13 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ClearMerchantOrderInfoRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public Integer accountId;
+    public ClearMerchantOrderInfoRequest withAccountId(Integer accountId) {
+        this.accountId = accountId;
+        return this;
+    }
     
-    public ClearMerchantOrderInfoPathParams pathParams;
-    public ClearMerchantOrderInfoRequest withPathParams(ClearMerchantOrderInfoPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The BeezUP Order identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=beezUPOrderId")
+    public String beezUPOrderId;
+    public ClearMerchantOrderInfoRequest withBeezUPOrderId(String beezUPOrderId) {
+        this.beezUPOrderId = beezUPOrderId;
+        return this;
+    }
+    
+    /**
+     * The marketplace technical code
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=marketplaceTechnicalCode")
+    public String marketplaceTechnicalCode;
+    public ClearMerchantOrderInfoRequest withMarketplaceTechnicalCode(String marketplaceTechnicalCode) {
+        this.marketplaceTechnicalCode = marketplaceTechnicalCode;
         return this;
     }
     

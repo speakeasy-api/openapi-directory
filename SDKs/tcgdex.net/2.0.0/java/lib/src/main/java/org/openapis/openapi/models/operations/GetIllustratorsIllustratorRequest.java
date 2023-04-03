@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetIllustratorsIllustratorRequest {
-    
-    public GetIllustratorsIllustratorPathParams pathParams;
-    public GetIllustratorsIllustratorRequest withPathParams(GetIllustratorsIllustratorPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=illustrator")
+    public String illustrator;
+    public GetIllustratorsIllustratorRequest withIllustrator(String illustrator) {
+        this.illustrator = illustrator;
         return this;
     }
     

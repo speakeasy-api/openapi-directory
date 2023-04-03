@@ -4,27 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSimRequest {
-    
-    public ListSimQueryParams queryParams;
-    public ListSimRequest withQueryParams(ListSimQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The SID or unique name of the Fleet to which a list of Sims are assigned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Fleet")
+    public String fleet;
+    public ListSimRequest withFleet(String fleet) {
+        this.fleet = fleet;
         return this;
     }
     
-    
-    public ListSimSecurity security;
-    public ListSimRequest withSecurity(ListSimSecurity security) {
-        this.security = security;
+    /**
+     * The [ICCID](https://en.wikipedia.org/wiki/Subscriber_identity_module#ICCID) associated with a Super SIM to filter the list by. Passing this parameter will always return a list containing zero or one SIMs.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Iccid")
+    public String iccid;
+    public ListSimRequest withIccid(String iccid) {
+        this.iccid = iccid;
         return this;
     }
     
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListSimRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public String serverURL;
-    public ListSimRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListSimRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListSimRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * The status of the Sim resources to read. Can be `new`, `ready`, `active`, `inactive`, or `scheduled`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Status")
+    public org.openapis.openapi.models.shared.SimEnumStatusEnum status;
+    public ListSimRequest withStatus(org.openapis.openapi.models.shared.SimEnumStatusEnum status) {
+        this.status = status;
         return this;
     }
     

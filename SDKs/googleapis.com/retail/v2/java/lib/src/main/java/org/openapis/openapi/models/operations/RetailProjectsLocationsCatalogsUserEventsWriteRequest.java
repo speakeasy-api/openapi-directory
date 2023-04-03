@@ -7,31 +7,140 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetailProjectsLocationsCatalogsUserEventsWriteRequest {
-    
-    public RetailProjectsLocationsCatalogsUserEventsWritePathParams pathParams;
-    public RetailProjectsLocationsCatalogsUserEventsWriteRequest withPathParams(RetailProjectsLocationsCatalogsUserEventsWritePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RetailProjectsLocationsCatalogsUserEventsWriteQueryParams queryParams;
-    public RetailProjectsLocationsCatalogsUserEventsWriteRequest withQueryParams(RetailProjectsLocationsCatalogsUserEventsWriteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public RetailProjectsLocationsCatalogsUserEventsWriteRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GoogleCloudRetailV2UserEventInput request;
-    public RetailProjectsLocationsCatalogsUserEventsWriteRequest withRequest(org.openapis.openapi.models.shared.GoogleCloudRetailV2UserEventInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GoogleCloudRetailV2UserEventInput googleCloudRetailV2UserEventInput;
+    public RetailProjectsLocationsCatalogsUserEventsWriteRequest withGoogleCloudRetailV2UserEventInput(org.openapis.openapi.models.shared.GoogleCloudRetailV2UserEventInput googleCloudRetailV2UserEventInput) {
+        this.googleCloudRetailV2UserEventInput = googleCloudRetailV2UserEventInput;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public RetailProjectsLocationsCatalogsUserEventsWriteRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public RetailProjectsLocationsCatalogsUserEventsWriteSecurity security;
-    public RetailProjectsLocationsCatalogsUserEventsWriteRequest withSecurity(RetailProjectsLocationsCatalogsUserEventsWriteSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public RetailProjectsLocationsCatalogsUserEventsWriteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public RetailProjectsLocationsCatalogsUserEventsWriteRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public RetailProjectsLocationsCatalogsUserEventsWriteRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public RetailProjectsLocationsCatalogsUserEventsWriteRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public RetailProjectsLocationsCatalogsUserEventsWriteRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Required. The parent catalog resource name, such as `projects/1234/locations/global/catalogs/default_catalog`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public RetailProjectsLocationsCatalogsUserEventsWriteRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public RetailProjectsLocationsCatalogsUserEventsWriteRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public RetailProjectsLocationsCatalogsUserEventsWriteRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public RetailProjectsLocationsCatalogsUserEventsWriteRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public RetailProjectsLocationsCatalogsUserEventsWriteRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
+        return this;
+    }
+    
+    /**
+     * If set to true, the user event will be written asynchronously after validation, and the API will respond without waiting for the write. Therefore, silent failures can occur even if the API returns success. In case of silent failures, error messages can be found in Stackdriver logs.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=writeAsync")
+    public Boolean writeAsync;
+    public RetailProjectsLocationsCatalogsUserEventsWriteRequest withWriteAsync(Boolean writeAsync) {
+        this.writeAsync = writeAsync;
         return this;
     }
     

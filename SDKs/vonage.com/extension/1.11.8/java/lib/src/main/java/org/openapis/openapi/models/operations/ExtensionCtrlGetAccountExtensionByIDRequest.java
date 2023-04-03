@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExtensionCtrlGetAccountExtensionByIDRequest {
-    
-    public ExtensionCtrlGetAccountExtensionByIDPathParams pathParams;
-    public ExtensionCtrlGetAccountExtensionByIDRequest withPathParams(ExtensionCtrlGetAccountExtensionByIDPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The Vonage Business Cloud account ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account_id")
+    public String accountId;
+    public ExtensionCtrlGetAccountExtensionByIDRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
-    
-    public ExtensionCtrlGetAccountExtensionByIDSecurity security;
-    public ExtensionCtrlGetAccountExtensionByIDRequest withSecurity(ExtensionCtrlGetAccountExtensionByIDSecurity security) {
-        this.security = security;
+    /**
+     * The extension number
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=extension_number")
+    public Double extensionNumber;
+    public ExtensionCtrlGetAccountExtensionByIDRequest withExtensionNumber(Double extensionNumber) {
+        this.extensionNumber = extensionNumber;
         return this;
     }
     

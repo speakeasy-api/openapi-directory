@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountDeleteGuestRequest {
-    
-    public AccountDeleteGuestPathParams pathParams;
-    public AccountDeleteGuestRequest withPathParams(AccountDeleteGuestPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of the guest
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=guestId")
+    public Long guestId;
+    public AccountDeleteGuestRequest withGuestId(Long guestId) {
+        this.guestId = guestId;
         return this;
     }
     

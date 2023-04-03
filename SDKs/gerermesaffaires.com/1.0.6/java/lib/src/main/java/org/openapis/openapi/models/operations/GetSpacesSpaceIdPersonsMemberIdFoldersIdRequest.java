@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpacesSpaceIdPersonsMemberIdFoldersIdRequest {
+    /**
+     * Id of the folder
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSpacesSpaceIdPersonsMemberIdFoldersIdRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetSpacesSpaceIdPersonsMemberIdFoldersIdPathParams pathParams;
-    public GetSpacesSpaceIdPersonsMemberIdFoldersIdRequest withPathParams(GetSpacesSpaceIdPersonsMemberIdFoldersIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * memberId of the person
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=memberId")
+    public String memberId;
+    public GetSpacesSpaceIdPersonsMemberIdFoldersIdRequest withMemberId(String memberId) {
+        this.memberId = memberId;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public GetSpacesSpaceIdPersonsMemberIdFoldersIdRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

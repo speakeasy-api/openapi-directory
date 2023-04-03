@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveAccountGroupMappingRequest {
-    
-    public RemoveAccountGroupMappingPathParams pathParams;
-    public RemoveAccountGroupMappingRequest withPathParams(RemoveAccountGroupMappingPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RemoveAccountGroupMappingSecurity security;
-    public RemoveAccountGroupMappingRequest withSecurity(RemoveAccountGroupMappingSecurity security) {
-        this.security = security;
+    /**
+     * UUID of the SSO group mapping
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_mapping_id")
+    public String groupMappingId;
+    public RemoveAccountGroupMappingRequest withGroupMappingId(String groupMappingId) {
+        this.groupMappingId = groupMappingId;
         return this;
     }
     

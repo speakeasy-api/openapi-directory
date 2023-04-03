@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DistributionGroupsDeleteRequest {
-    
-    public DistributionGroupsDeletePathParams pathParams;
-    public DistributionGroupsDeleteRequest withPathParams(DistributionGroupsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public DistributionGroupsDeleteRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * The name of the distribution group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=distribution_group_name")
+    public String distributionGroupName;
+    public DistributionGroupsDeleteRequest withDistributionGroupName(String distributionGroupName) {
+        this.distributionGroupName = distributionGroupName;
+        return this;
+    }
     
-    public DistributionGroupsDeleteSecurity security;
-    public DistributionGroupsDeleteRequest withSecurity(DistributionGroupsDeleteSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public DistributionGroupsDeleteRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

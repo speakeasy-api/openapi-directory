@@ -4,13 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCoachesRequest {
+    /**
+     * First name filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=firstName")
+    public String firstName;
+    public GetCoachesRequest withFirstName(String firstName) {
+        this.firstName = firstName;
+        return this;
+    }
     
-    public GetCoachesQueryParams queryParams;
-    public GetCoachesRequest withQueryParams(GetCoachesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Last name filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lastName")
+    public String lastName;
+    public GetCoachesRequest withLastName(String lastName) {
+        this.lastName = lastName;
+        return this;
+    }
+    
+    /**
+     * Maximum year filter (inclusive)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxYear")
+    public Long maxYear;
+    public GetCoachesRequest withMaxYear(Long maxYear) {
+        this.maxYear = maxYear;
+        return this;
+    }
+    
+    /**
+     * Minimum year filter (inclusive)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minYear")
+    public Long minYear;
+    public GetCoachesRequest withMinYear(Long minYear) {
+        this.minYear = minYear;
+        return this;
+    }
+    
+    /**
+     * Team name filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team")
+    public String team;
+    public GetCoachesRequest withTeam(String team) {
+        this.team = team;
+        return this;
+    }
+    
+    /**
+     * Year filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public Long year;
+    public GetCoachesRequest withYear(Long year) {
+        this.year = year;
         return this;
     }
     

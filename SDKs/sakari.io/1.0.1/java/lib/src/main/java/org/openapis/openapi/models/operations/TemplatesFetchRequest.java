@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TemplatesFetchRequest {
-    
-    public TemplatesFetchPathParams pathParams;
-    public TemplatesFetchRequest withPathParams(TemplatesFetchPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Account to apply operations to
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public TemplatesFetchRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
-    
-    public TemplatesFetchSecurity security;
-    public TemplatesFetchRequest withSecurity(TemplatesFetchSecurity security) {
-        this.security = security;
+    /**
+     * ID of template to return
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=templateId")
+    public String templateId;
+    public TemplatesFetchRequest withTemplateId(String templateId) {
+        this.templateId = templateId;
         return this;
     }
     

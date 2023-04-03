@@ -4,20 +4,68 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSitesSiteIDSubsitesOutputFormatRequest {
-    
-    public GetSitesSiteIDSubsitesOutputFormatPathParams pathParams;
-    public GetSitesSiteIDSubsitesOutputFormatRequest withPathParams(GetSitesSiteIDSubsitesOutputFormatPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * If true, include only basic match and address details in results. Not supported for shp, csv, and gml formats.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=brief")
+    public Boolean brief;
+    public GetSitesSiteIDSubsitesOutputFormatRequest withBrief(Boolean brief) {
+        this.brief = brief;
         return this;
     }
     
+    /**
+     * Describes the nature of the address location. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#locationDescriptor target="_blank"&gt;locationDescriptor&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locationDescriptor")
+    public GetSitesSiteIDSubsitesOutputFormatLocationDescriptorEnum locationDescriptor;
+    public GetSitesSiteIDSubsitesOutputFormatRequest withLocationDescriptor(GetSitesSiteIDSubsitesOutputFormatLocationDescriptorEnum locationDescriptor) {
+        this.locationDescriptor = locationDescriptor;
+        return this;
+    }
     
-    public GetSitesSiteIDSubsitesOutputFormatQueryParams queryParams;
-    public GetSitesSiteIDSubsitesOutputFormatRequest withQueryParams(GetSitesSiteIDSubsitesOutputFormatQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Results format. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank"&gt;outputFormat&lt;/a&gt;. 
+     * 
+     * Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=outputFormat")
+    public GetSitesSiteIDSubsitesOutputFormatOutputFormatEnum outputFormat;
+    public GetSitesSiteIDSubsitesOutputFormatRequest withOutputFormat(GetSitesSiteIDSubsitesOutputFormatOutputFormatEnum outputFormat) {
+        this.outputFormat = outputFormat;
+        return this;
+    }
+    
+    /**
+     * The EPSG code of the spatial reference system (SRS) to use for output geometries. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank"&gt;outputSRS&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputSRS")
+    public GetSitesSiteIDSubsitesOutputFormatOutputSrsEnum outputSRS;
+    public GetSitesSiteIDSubsitesOutputFormatRequest withOutputSRS(GetSitesSiteIDSubsitesOutputFormatOutputSrsEnum outputSRS) {
+        this.outputSRS = outputSRS;
+        return this;
+    }
+    
+    /**
+     * The distance to move the accessPoint away from the curb and towards the inside of the parcel (in metres). Ignored if locationDescriptor not set to accessPoint.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=setBack")
+    public Long setBack;
+    public GetSitesSiteIDSubsitesOutputFormatRequest withSetBack(Long setBack) {
+        this.setBack = setBack;
+        return this;
+    }
+    
+    /**
+     * A unique, but not immutable, site identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=siteID")
+    public String siteID;
+    public GetSitesSiteIDSubsitesOutputFormatRequest withSiteID(String siteID) {
+        this.siteID = siteID;
         return this;
     }
     

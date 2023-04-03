@@ -4,27 +4,116 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsManagementProfileFilterLinksDeleteRequest {
-    
-    public AnalyticsManagementProfileFilterLinksDeletePathParams pathParams;
-    public AnalyticsManagementProfileFilterLinksDeleteRequest withPathParams(AnalyticsManagementProfileFilterLinksDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Account ID to which the profile filter link belongs.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public AnalyticsManagementProfileFilterLinksDeleteRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
-    
-    public AnalyticsManagementProfileFilterLinksDeleteQueryParams queryParams;
-    public AnalyticsManagementProfileFilterLinksDeleteRequest withQueryParams(AnalyticsManagementProfileFilterLinksDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AnalyticsManagementProfileFilterLinksDeleteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
         return this;
     }
     
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AnalyticsManagementProfileFilterLinksDeleteRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
     
-    public AnalyticsManagementProfileFilterLinksDeleteSecurity security;
-    public AnalyticsManagementProfileFilterLinksDeleteRequest withSecurity(AnalyticsManagementProfileFilterLinksDeleteSecurity security) {
-        this.security = security;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AnalyticsManagementProfileFilterLinksDeleteRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * ID of the profile filter link to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=linkId")
+    public String linkId;
+    public AnalyticsManagementProfileFilterLinksDeleteRequest withLinkId(String linkId) {
+        this.linkId = linkId;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AnalyticsManagementProfileFilterLinksDeleteRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AnalyticsManagementProfileFilterLinksDeleteRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Profile ID to which the filter link belongs.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
+    public String profileId;
+    public AnalyticsManagementProfileFilterLinksDeleteRequest withProfileId(String profileId) {
+        this.profileId = profileId;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AnalyticsManagementProfileFilterLinksDeleteRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public AnalyticsManagementProfileFilterLinksDeleteRequest withUserIp(String userIp) {
+        this.userIp = userIp;
+        return this;
+    }
+    
+    /**
+     * Web property Id to which the profile filter link belongs.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webPropertyId")
+    public String webPropertyId;
+    public AnalyticsManagementProfileFilterLinksDeleteRequest withWebPropertyId(String webPropertyId) {
+        this.webPropertyId = webPropertyId;
         return this;
     }
     

@@ -4,20 +4,53 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDeviceCameraAnalyticsOverviewRequest {
-    
-    public GetDeviceCameraAnalyticsOverviewPathParams pathParams;
-    public GetDeviceCameraAnalyticsOverviewRequest withPathParams(GetDeviceCameraAnalyticsOverviewPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * [optional] The object type for which analytics will be retrieved. The default object type is person. The available types are [person, vehicle].
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=objectType")
+    public GetDeviceCameraAnalyticsOverviewObjectTypeEnum objectType;
+    public GetDeviceCameraAnalyticsOverviewRequest withObjectType(GetDeviceCameraAnalyticsOverviewObjectTypeEnum objectType) {
+        this.objectType = objectType;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public GetDeviceCameraAnalyticsOverviewRequest withSerial(String serial) {
+        this.serial = serial;
+        return this;
+    }
     
-    public GetDeviceCameraAnalyticsOverviewQueryParams queryParams;
-    public GetDeviceCameraAnalyticsOverviewRequest withQueryParams(GetDeviceCameraAnalyticsOverviewQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The beginning of the timespan for the data. The maximum lookback period is 365 days from today.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t0")
+    public String t0;
+    public GetDeviceCameraAnalyticsOverviewRequest withT0(String t0) {
+        this.t0 = t0;
+        return this;
+    }
+    
+    /**
+     * The end of the timespan for the data. t1 can be a maximum of 7 days after t0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t1")
+    public String t1;
+    public GetDeviceCameraAnalyticsOverviewRequest withT1(String t1) {
+        this.t1 = t1;
+        return this;
+    }
+    
+    /**
+     * The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. The default is 1 hour.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timespan")
+    public Float timespan;
+    public GetDeviceCameraAnalyticsOverviewRequest withTimespan(Float timespan) {
+        this.timespan = timespan;
         return this;
     }
     

@@ -7,20 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchSpacesIdGroupsGroupIdFoldersFolderIdRequest {
-    
-    public PatchSpacesIdGroupsGroupIdFoldersFolderIdPathParams pathParams;
-    public PatchSpacesIdGroupsGroupIdFoldersFolderIdRequest withPathParams(PatchSpacesIdGroupsGroupIdFoldersFolderIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Group to modify to add folder access
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PatchSpacesIdGroupsGroupIdFoldersFolderIdRequestBody request;
-    public PatchSpacesIdGroupsGroupIdFoldersFolderIdRequest withRequest(PatchSpacesIdGroupsGroupIdFoldersFolderIdRequestBody request) {
-        this.request = request;
+    public PatchSpacesIdGroupsGroupIdFoldersFolderIdRequestBody requestBody;
+    public PatchSpacesIdGroupsGroupIdFoldersFolderIdRequest withRequestBody(PatchSpacesIdGroupsGroupIdFoldersFolderIdRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Id of the folder
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=folderId")
+    public String folderId;
+    public PatchSpacesIdGroupsGroupIdFoldersFolderIdRequest withFolderId(String folderId) {
+        this.folderId = folderId;
+        return this;
+    }
+    
+    /**
+     * Id of the group to modify
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public String groupId;
+    public PatchSpacesIdGroupsGroupIdFoldersFolderIdRequest withGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatchSpacesIdGroupsGroupIdFoldersFolderIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

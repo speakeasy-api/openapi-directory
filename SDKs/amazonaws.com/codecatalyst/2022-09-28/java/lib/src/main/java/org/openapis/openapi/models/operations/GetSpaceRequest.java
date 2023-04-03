@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpaceRequest {
-    
-    public GetSpacePathParams pathParams;
-    public GetSpaceRequest withPathParams(GetSpacePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the space.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public GetSpaceRequest withName(String name) {
+        this.name = name;
         return this;
     }
     

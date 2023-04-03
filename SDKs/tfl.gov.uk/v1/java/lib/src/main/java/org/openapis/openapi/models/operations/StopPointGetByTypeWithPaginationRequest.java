@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopPointGetByTypeWithPaginationRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=page")
+    public Integer page;
+    public StopPointGetByTypeWithPaginationRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
     
-    public StopPointGetByTypeWithPaginationPathParams pathParams;
-    public StopPointGetByTypeWithPaginationRequest withPathParams(StopPointGetByTypeWithPaginationPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=types")
+    public String[] types;
+    public StopPointGetByTypeWithPaginationRequest withTypes(String[] types) {
+        this.types = types;
         return this;
     }
     

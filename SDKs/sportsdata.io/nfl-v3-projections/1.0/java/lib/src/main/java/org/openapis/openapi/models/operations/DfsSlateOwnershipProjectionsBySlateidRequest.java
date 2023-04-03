@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DfsSlateOwnershipProjectionsBySlateidRequest {
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public DfsSlateOwnershipProjectionsBySlateidFormatEnum format;
+    public DfsSlateOwnershipProjectionsBySlateidRequest withFormat(DfsSlateOwnershipProjectionsBySlateidFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public DfsSlateOwnershipProjectionsBySlateidPathParams pathParams;
-    public DfsSlateOwnershipProjectionsBySlateidRequest withPathParams(DfsSlateOwnershipProjectionsBySlateidPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * SlateID of the DFS Slate you wish to get ownership projections for. Will have an empty SlateOwnershipProjections if this slate was not projected
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=slateId")
+    public String slateId;
+    public DfsSlateOwnershipProjectionsBySlateidRequest withSlateId(String slateId) {
+        this.slateId = slateId;
         return this;
     }
     

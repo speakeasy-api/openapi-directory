@@ -38,13 +38,13 @@ public class Quality {
      */
     public org.openapis.openapi.models.operations.QualityGetDailyDataQualityForSiteResponse qualityGetDailyDataQualityForSite(org.openapis.openapi.models.operations.QualityGetDailyDataQualityForSiteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.QualityGetDailyDataQualityForSitePathParams.class, baseUrl, "/v{version}/quality/daily", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.QualityGetDailyDataQualityForSiteRequest.class, baseUrl, "/v{version}/quality/daily", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.QualityGetDailyDataQualityForSiteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.QualityGetDailyDataQualityForSiteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -84,13 +84,13 @@ public class Quality {
      */
     public org.openapis.openapi.models.operations.QualityGetOverallDataQualityForSitesResponse qualityGetOverallDataQualityForSites(org.openapis.openapi.models.operations.QualityGetOverallDataQualityForSitesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.QualityGetOverallDataQualityForSitesPathParams.class, baseUrl, "/v{version}/quality/overall", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.QualityGetOverallDataQualityForSitesRequest.class, baseUrl, "/v{version}/quality/overall", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.QualityGetOverallDataQualityForSitesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.QualityGetOverallDataQualityForSitesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

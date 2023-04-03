@@ -4,20 +4,28 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveScoreCollaboratorRequest {
-    
-    public RemoveScoreCollaboratorPathParams pathParams;
-    public RemoveScoreCollaboratorRequest withPathParams(RemoveScoreCollaboratorPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of a **collaborator permission**, or unique identifier of a **User**, or unique identifier of a **Group**
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collaborator")
+    public String collaborator;
+    public RemoveScoreCollaboratorRequest withCollaborator(String collaborator) {
+        this.collaborator = collaborator;
         return this;
     }
     
-    
-    public RemoveScoreCollaboratorSecurity security;
-    public RemoveScoreCollaboratorRequest withSecurity(RemoveScoreCollaboratorSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the score document. This can be a Flat Score unique identifier (i.e. `ScoreDetails.id`) or, if the score is also a Google Drive file, the Drive file unique identifier prefixed with `drive-` (e.g. `drive-0B000000000`).
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=score")
+    public String score;
+    public RemoveScoreCollaboratorRequest withScore(String score) {
+        this.score = score;
         return this;
     }
     

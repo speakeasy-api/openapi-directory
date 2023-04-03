@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutUserFollowsWebchannelsWebchannelIdRequest {
-    
-    public PutUserFollowsWebchannelsWebchannelIdPathParams pathParams;
-    public PutUserFollowsWebchannelsWebchannelIdRequest withPathParams(PutUserFollowsWebchannelsWebchannelIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webchannel_id")
+    public Long webchannelId;
+    public PutUserFollowsWebchannelsWebchannelIdRequest withWebchannelId(Long webchannelId) {
+        this.webchannelId = webchannelId;
         return this;
     }
     

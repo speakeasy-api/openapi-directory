@@ -4,20 +4,79 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETServiceLinkedRoleDeletionStatusRequest {
-    
-    public GETGETServiceLinkedRoleDeletionStatusQueryParams queryParams;
-    public GETGETServiceLinkedRoleDeletionStatusRequest withQueryParams(GETGETServiceLinkedRoleDeletionStatusQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETGETServiceLinkedRoleDeletionStatusActionEnum action;
+    public GETGETServiceLinkedRoleDeletionStatusRequest withAction(GETGETServiceLinkedRoleDeletionStatusActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The deletion task identifier. This identifier is returned by the &lt;a&gt;DeleteServiceLinkedRole&lt;/a&gt; operation in the format &lt;code&gt;task/aws-service-role/&amp;lt;service-principal-name&amp;gt;/&amp;lt;role-name&amp;gt;/&amp;lt;task-uuid&amp;gt;&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DeletionTaskId")
+    public String deletionTaskId;
+    public GETGETServiceLinkedRoleDeletionStatusRequest withDeletionTaskId(String deletionTaskId) {
+        this.deletionTaskId = deletionTaskId;
+        return this;
+    }
     
-    public GETGETServiceLinkedRoleDeletionStatusHeaders headers;
-    public GETGETServiceLinkedRoleDeletionStatusRequest withHeaders(GETGETServiceLinkedRoleDeletionStatusHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETGETServiceLinkedRoleDeletionStatusVersionEnum version;
+    public GETGETServiceLinkedRoleDeletionStatusRequest withVersion(GETGETServiceLinkedRoleDeletionStatusVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETGETServiceLinkedRoleDeletionStatusRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETGETServiceLinkedRoleDeletionStatusRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETGETServiceLinkedRoleDeletionStatusRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETGETServiceLinkedRoleDeletionStatusRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETGETServiceLinkedRoleDeletionStatusRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETGETServiceLinkedRoleDeletionStatusRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETGETServiceLinkedRoleDeletionStatusRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

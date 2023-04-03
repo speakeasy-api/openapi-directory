@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StromkontoBalancesRequest {
-    
-    public StromkontoBalancesQueryParams queryParams;
-    public StromkontoBalancesRequest withQueryParams(StromkontoBalancesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Ethereum style address referencing a valid account (AKA Stromkonto).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=account")
+    public String account;
+    public StromkontoBalancesRequest withAccount(String account) {
+        this.account = account;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetHostRequest {
-    
-    public GetHostPathParams pathParams;
-    public GetHostRequest withPathParams(GetHostPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to return the primary IP
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Long agentNum;
+    public GetHostRequest withAgentNum(Long agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

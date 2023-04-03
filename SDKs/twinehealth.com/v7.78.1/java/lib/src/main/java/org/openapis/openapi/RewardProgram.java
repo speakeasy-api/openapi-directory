@@ -41,7 +41,7 @@ public class RewardProgram {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateRewardProgramResponse createRewardProgram(org.openapis.openapi.models.operations.CreateRewardProgramRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateRewardProgramResponse createRewardProgram(org.openapis.openapi.models.shared.CreateRewardProgramRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/reward_program");
         
@@ -95,7 +95,7 @@ public class RewardProgram {
      */
     public org.openapis.openapi.models.operations.FetchRewardProgramResponse fetchRewardProgram(org.openapis.openapi.models.operations.FetchRewardProgramRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchRewardProgramPathParams.class, baseUrl, "/reward_program/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchRewardProgramRequest.class, baseUrl, "/reward_program/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -142,7 +142,7 @@ public class RewardProgram {
      */
     public org.openapis.openapi.models.operations.FetchRewardProgramGroupResponse fetchRewardProgramGroup(org.openapis.openapi.models.operations.FetchRewardProgramGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchRewardProgramGroupPathParams.class, baseUrl, "/reward_program/{id}/group", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchRewardProgramGroupRequest.class, baseUrl, "/reward_program/{id}/group", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -195,7 +195,7 @@ public class RewardProgram {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FetchRewardProgramsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FetchRewardProgramsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

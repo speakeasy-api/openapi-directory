@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSettingValuesRequest {
+    /**
+     * The identifier of the Config.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=configId")
+    public String configId;
+    public GetSettingValuesRequest withConfigId(String configId) {
+        this.configId = configId;
+        return this;
+    }
     
-    public GetSettingValuesPathParams pathParams;
-    public GetSettingValuesRequest withPathParams(GetSettingValuesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The identifier of the Environment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environmentId")
+    public String environmentId;
+    public GetSettingValuesRequest withEnvironmentId(String environmentId) {
+        this.environmentId = environmentId;
         return this;
     }
     

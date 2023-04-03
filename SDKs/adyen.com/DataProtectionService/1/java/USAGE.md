@@ -5,10 +5,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.PostRequestSubjectErasureSecurity;
-import org.openapis.openapi.models.operations.PostRequestSubjectErasureRequest;
 import org.openapis.openapi.models.operations.PostRequestSubjectErasureResponse;
 import org.openapis.openapi.models.shared.SubjectErasureByPspReferenceRequest;
-import org.openapis.openapi.models.shared.SchemeAPIKeyAuth;
 import org.openapis.openapi.models.shared.SchemeBasicAuth;
 
 public class Application {
@@ -17,20 +15,15 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            PostRequestSubjectErasureRequest req = new PostRequestSubjectErasureRequest() {{
-                security = new PostRequestSubjectErasureSecurity() {{
-                    apiKeyAuth = new SchemeAPIKeyAuth() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }};
-                request = new SubjectErasureByPspReferenceRequest() {{
-                    forceErasure = false;
-                    merchantAccount = "corrupti";
-                    pspReference = "provident";
-                }};
-            }};            
+            org.openapis.openapi.models.shared.SubjectErasureByPspReferenceRequest req = new SubjectErasureByPspReferenceRequest() {{
+                forceErasure = false;
+                merchantAccount = "corrupti";
+                pspReference = "provident";
+            }}            
 
-            PostRequestSubjectErasureResponse res = sdk.general.postRequestSubjectErasure(req);
+            PostRequestSubjectErasureResponse res = sdk.general.postRequestSubjectErasure(req, new PostRequestSubjectErasureSecurity() {{
+                apiKeyAuth = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.subjectErasureResponse.isPresent()) {
                 // handle response

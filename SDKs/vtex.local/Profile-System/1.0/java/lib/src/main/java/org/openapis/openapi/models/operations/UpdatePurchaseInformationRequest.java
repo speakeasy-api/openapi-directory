@@ -7,31 +7,52 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePurchaseInformationRequest {
-    
-    public UpdatePurchaseInformationPathParams pathParams;
-    public UpdatePurchaseInformationRequest withPathParams(UpdatePurchaseInformationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public UpdatePurchaseInformationRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public UpdatePurchaseInformationQueryParams queryParams;
-    public UpdatePurchaseInformationRequest withQueryParams(UpdatePurchaseInformationQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public UpdatePurchaseInformationHeaders headers;
-    public UpdatePurchaseInformationRequest withHeaders(UpdatePurchaseInformationHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public UpdatePurchaseInformationRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public Object request;
-    public UpdatePurchaseInformationRequest withRequest(Object request) {
-        this.request = request;
+    public Object requestBody;
+    public UpdatePurchaseInformationRequest withRequestBody(Object requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The `profileId` path parameter may be substituted by other profile fields in this request. When making this request, send the `alternativeKey` parameter with a value equal to the key of the field you wish to use as `profileId`.
+     * 
+     * &gt; Currently, there are two possible values for this parameter: `email` and `document`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alternativeKey")
+    public String alternativeKey;
+    public UpdatePurchaseInformationRequest withAlternativeKey(String alternativeKey) {
+        this.alternativeKey = alternativeKey;
+        return this;
+    }
+    
+    /**
+     * ID of the client's profile as returned by the Create profile endpoint's response, in the `id` field. It can also be an `alternativeKey` according to your custom profile schema. In this case, this request should also send the `alternativeKey` parameter.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
+    public String profileId;
+    public UpdatePurchaseInformationRequest withProfileId(String profileId) {
+        this.profileId = profileId;
         return this;
     }
     

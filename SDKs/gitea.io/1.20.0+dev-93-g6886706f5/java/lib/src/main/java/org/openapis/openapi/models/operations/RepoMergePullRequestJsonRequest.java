@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoMergePullRequestJsonRequest {
-    
-    public RepoMergePullRequestJsonPathParams pathParams;
-    public RepoMergePullRequestJsonRequest withPathParams(RepoMergePullRequestJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.MergePullRequestOption mergePullRequestOption;
+    public RepoMergePullRequestJsonRequest withMergePullRequestOption(org.openapis.openapi.models.shared.MergePullRequestOption mergePullRequestOption) {
+        this.mergePullRequestOption = mergePullRequestOption;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.MergePullRequestOption request;
-    public RepoMergePullRequestJsonRequest withRequest(org.openapis.openapi.models.shared.MergePullRequestOption request) {
-        this.request = request;
+    /**
+     * index of the pull request to merge
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=index")
+    public Long index;
+    public RepoMergePullRequestJsonRequest withIndex(Long index) {
+        this.index = index;
+        return this;
+    }
+    
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoMergePullRequestJsonRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoMergePullRequestJsonRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

@@ -7,17 +7,31 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdJsonRequest {
-    
-    public PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdJsonPathParams pathParams;
-    public PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdJsonRequest withPathParams(PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.SpecUpdatePersistVO specUpdatePersistVO;
+    public PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdJsonRequest withSpecUpdatePersistVO(org.openapis.openapi.models.shared.SpecUpdatePersistVO specUpdatePersistVO) {
+        this.specUpdatePersistVO = specUpdatePersistVO;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SpecUpdatePersistVO request;
-    public PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdJsonRequest withRequest(org.openapis.openapi.models.shared.SpecUpdatePersistVO request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public String projectId;
+    public PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdJsonRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spec_id")
+    public String specId;
+    public PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdJsonRequest withSpecId(String specId) {
+        this.specId = specId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
+    public String workgroupId;
+    public PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdJsonRequest withWorkgroupId(String workgroupId) {
+        this.workgroupId = workgroupId;
         return this;
     }
     

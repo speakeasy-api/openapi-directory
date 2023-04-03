@@ -4,13 +4,77 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NotifyGetListRequest {
+    /**
+     * If true, show notifications marked as read. Default value is false
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=all")
+    public Boolean all;
+    public NotifyGetListRequest withAll(Boolean all) {
+        this.all = all;
+        return this;
+    }
     
-    public NotifyGetListQueryParams queryParams;
-    public NotifyGetListRequest withQueryParams(NotifyGetListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Only show notifications updated before the given time. This is a timestamp in RFC 3339 format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=before")
+    public OffsetDateTime before;
+    public NotifyGetListRequest withBefore(OffsetDateTime before) {
+        this.before = before;
+        return this;
+    }
+    
+    /**
+     * page size of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public NotifyGetListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * page number of results to return (1-based)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public NotifyGetListRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Only show notifications updated after the given time. This is a timestamp in RFC 3339 format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public OffsetDateTime since;
+    public NotifyGetListRequest withSince(OffsetDateTime since) {
+        this.since = since;
+        return this;
+    }
+    
+    /**
+     * Show notifications with the provided status types. Options are: unread, read and/or pinned. Defaults to unread &amp; pinned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status-types")
+    public String[] statusTypes;
+    public NotifyGetListRequest withStatusTypes(String[] statusTypes) {
+        this.statusTypes = statusTypes;
+        return this;
+    }
+    
+    /**
+     * filter notifications by subject type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subject-type")
+    public NotifyGetListSubjectTypeEnum[] subjectType;
+    public NotifyGetListRequest withSubjectType(NotifyGetListSubjectTypeEnum[] subjectType) {
+        this.subjectType = subjectType;
         return this;
     }
     

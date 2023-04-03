@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Creates a new, empty script project with no script files and a base manifest file.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ScriptProjectsCreateResponse scriptProjectsCreate(org.openapis.openapi.models.operations.ScriptProjectsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ScriptProjectsCreateResponse scriptProjectsCreate(org.openapis.openapi.models.operations.ScriptProjectsCreateRequest request, org.openapis.openapi.models.operations.ScriptProjectsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/projects");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createProjectRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ScriptProjectsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ScriptProjectsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,27 +83,28 @@ public class Projects {
     /**
      * Creates a deployment of an Apps Script project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ScriptProjectsDeploymentsCreateResponse scriptProjectsDeploymentsCreate(org.openapis.openapi.models.operations.ScriptProjectsDeploymentsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ScriptProjectsDeploymentsCreateResponse scriptProjectsDeploymentsCreate(org.openapis.openapi.models.operations.ScriptProjectsDeploymentsCreateRequest request, org.openapis.openapi.models.operations.ScriptProjectsDeploymentsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScriptProjectsDeploymentsCreatePathParams.class, baseUrl, "/v1/projects/{scriptId}/deployments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScriptProjectsDeploymentsCreateRequest.class, baseUrl, "/v1/projects/{scriptId}/deployments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "deploymentConfig", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ScriptProjectsDeploymentsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ScriptProjectsDeploymentsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -129,25 +131,26 @@ public class Projects {
     /**
      * Deletes a deployment of an Apps Script project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ScriptProjectsDeploymentsDeleteResponse scriptProjectsDeploymentsDelete(org.openapis.openapi.models.operations.ScriptProjectsDeploymentsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ScriptProjectsDeploymentsDeleteResponse scriptProjectsDeploymentsDelete(org.openapis.openapi.models.operations.ScriptProjectsDeploymentsDeleteRequest request, org.openapis.openapi.models.operations.ScriptProjectsDeploymentsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScriptProjectsDeploymentsDeletePathParams.class, baseUrl, "/v1/projects/{scriptId}/deployments/{deploymentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScriptProjectsDeploymentsDeleteRequest.class, baseUrl, "/v1/projects/{scriptId}/deployments/{deploymentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ScriptProjectsDeploymentsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ScriptProjectsDeploymentsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,25 +177,26 @@ public class Projects {
     /**
      * Gets a deployment of an Apps Script project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ScriptProjectsDeploymentsGetResponse scriptProjectsDeploymentsGet(org.openapis.openapi.models.operations.ScriptProjectsDeploymentsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ScriptProjectsDeploymentsGetResponse scriptProjectsDeploymentsGet(org.openapis.openapi.models.operations.ScriptProjectsDeploymentsGetRequest request, org.openapis.openapi.models.operations.ScriptProjectsDeploymentsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScriptProjectsDeploymentsGetPathParams.class, baseUrl, "/v1/projects/{scriptId}/deployments/{deploymentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScriptProjectsDeploymentsGetRequest.class, baseUrl, "/v1/projects/{scriptId}/deployments/{deploymentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ScriptProjectsDeploymentsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ScriptProjectsDeploymentsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -219,25 +223,26 @@ public class Projects {
     /**
      * Lists the deployments of an Apps Script project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ScriptProjectsDeploymentsListResponse scriptProjectsDeploymentsList(org.openapis.openapi.models.operations.ScriptProjectsDeploymentsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ScriptProjectsDeploymentsListResponse scriptProjectsDeploymentsList(org.openapis.openapi.models.operations.ScriptProjectsDeploymentsListRequest request, org.openapis.openapi.models.operations.ScriptProjectsDeploymentsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScriptProjectsDeploymentsListPathParams.class, baseUrl, "/v1/projects/{scriptId}/deployments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScriptProjectsDeploymentsListRequest.class, baseUrl, "/v1/projects/{scriptId}/deployments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ScriptProjectsDeploymentsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ScriptProjectsDeploymentsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -264,27 +269,28 @@ public class Projects {
     /**
      * Updates a deployment of an Apps Script project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ScriptProjectsDeploymentsUpdateResponse scriptProjectsDeploymentsUpdate(org.openapis.openapi.models.operations.ScriptProjectsDeploymentsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ScriptProjectsDeploymentsUpdateResponse scriptProjectsDeploymentsUpdate(org.openapis.openapi.models.operations.ScriptProjectsDeploymentsUpdateRequest request, org.openapis.openapi.models.operations.ScriptProjectsDeploymentsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScriptProjectsDeploymentsUpdatePathParams.class, baseUrl, "/v1/projects/{scriptId}/deployments/{deploymentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScriptProjectsDeploymentsUpdateRequest.class, baseUrl, "/v1/projects/{scriptId}/deployments/{deploymentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateDeploymentRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ScriptProjectsDeploymentsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ScriptProjectsDeploymentsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -311,25 +317,26 @@ public class Projects {
     /**
      * Gets a script project's metadata.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ScriptProjectsGetResponse scriptProjectsGet(org.openapis.openapi.models.operations.ScriptProjectsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ScriptProjectsGetResponse scriptProjectsGet(org.openapis.openapi.models.operations.ScriptProjectsGetRequest request, org.openapis.openapi.models.operations.ScriptProjectsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScriptProjectsGetPathParams.class, baseUrl, "/v1/projects/{scriptId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScriptProjectsGetRequest.class, baseUrl, "/v1/projects/{scriptId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ScriptProjectsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ScriptProjectsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -356,25 +363,26 @@ public class Projects {
     /**
      * Gets the content of the script project, including the code source and metadata for each script file.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ScriptProjectsGetContentResponse scriptProjectsGetContent(org.openapis.openapi.models.operations.ScriptProjectsGetContentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ScriptProjectsGetContentResponse scriptProjectsGetContent(org.openapis.openapi.models.operations.ScriptProjectsGetContentRequest request, org.openapis.openapi.models.operations.ScriptProjectsGetContentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScriptProjectsGetContentPathParams.class, baseUrl, "/v1/projects/{scriptId}/content", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScriptProjectsGetContentRequest.class, baseUrl, "/v1/projects/{scriptId}/content", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ScriptProjectsGetContentQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ScriptProjectsGetContentRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -401,25 +409,26 @@ public class Projects {
     /**
      * Get metrics data for scripts, such as number of executions and active users.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ScriptProjectsGetMetricsResponse scriptProjectsGetMetrics(org.openapis.openapi.models.operations.ScriptProjectsGetMetricsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ScriptProjectsGetMetricsResponse scriptProjectsGetMetrics(org.openapis.openapi.models.operations.ScriptProjectsGetMetricsRequest request, org.openapis.openapi.models.operations.ScriptProjectsGetMetricsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScriptProjectsGetMetricsPathParams.class, baseUrl, "/v1/projects/{scriptId}/metrics", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScriptProjectsGetMetricsRequest.class, baseUrl, "/v1/projects/{scriptId}/metrics", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ScriptProjectsGetMetricsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ScriptProjectsGetMetricsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -446,27 +455,28 @@ public class Projects {
     /**
      * Updates the content of the specified script project. This content is stored as the HEAD version, and is used when the script is executed as a trigger, in the script editor, in add-on preview mode, or as a web app or Apps Script API in development mode. This clears all the existing files in the project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ScriptProjectsUpdateContentResponse scriptProjectsUpdateContent(org.openapis.openapi.models.operations.ScriptProjectsUpdateContentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ScriptProjectsUpdateContentResponse scriptProjectsUpdateContent(org.openapis.openapi.models.operations.ScriptProjectsUpdateContentRequest request, org.openapis.openapi.models.operations.ScriptProjectsUpdateContentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScriptProjectsUpdateContentPathParams.class, baseUrl, "/v1/projects/{scriptId}/content", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScriptProjectsUpdateContentRequest.class, baseUrl, "/v1/projects/{scriptId}/content", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "content", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ScriptProjectsUpdateContentQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ScriptProjectsUpdateContentRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -493,27 +503,28 @@ public class Projects {
     /**
      * Creates a new immutable version using the current code, with a unique version number.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ScriptProjectsVersionsCreateResponse scriptProjectsVersionsCreate(org.openapis.openapi.models.operations.ScriptProjectsVersionsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ScriptProjectsVersionsCreateResponse scriptProjectsVersionsCreate(org.openapis.openapi.models.operations.ScriptProjectsVersionsCreateRequest request, org.openapis.openapi.models.operations.ScriptProjectsVersionsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScriptProjectsVersionsCreatePathParams.class, baseUrl, "/v1/projects/{scriptId}/versions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScriptProjectsVersionsCreateRequest.class, baseUrl, "/v1/projects/{scriptId}/versions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "version", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ScriptProjectsVersionsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ScriptProjectsVersionsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -540,25 +551,26 @@ public class Projects {
     /**
      * Gets a version of a script project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ScriptProjectsVersionsGetResponse scriptProjectsVersionsGet(org.openapis.openapi.models.operations.ScriptProjectsVersionsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ScriptProjectsVersionsGetResponse scriptProjectsVersionsGet(org.openapis.openapi.models.operations.ScriptProjectsVersionsGetRequest request, org.openapis.openapi.models.operations.ScriptProjectsVersionsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScriptProjectsVersionsGetPathParams.class, baseUrl, "/v1/projects/{scriptId}/versions/{versionNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScriptProjectsVersionsGetRequest.class, baseUrl, "/v1/projects/{scriptId}/versions/{versionNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ScriptProjectsVersionsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ScriptProjectsVersionsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -585,25 +597,26 @@ public class Projects {
     /**
      * List the versions of a script project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ScriptProjectsVersionsListResponse scriptProjectsVersionsList(org.openapis.openapi.models.operations.ScriptProjectsVersionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ScriptProjectsVersionsListResponse scriptProjectsVersionsList(org.openapis.openapi.models.operations.ScriptProjectsVersionsListRequest request, org.openapis.openapi.models.operations.ScriptProjectsVersionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScriptProjectsVersionsListPathParams.class, baseUrl, "/v1/projects/{scriptId}/versions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScriptProjectsVersionsListRequest.class, baseUrl, "/v1/projects/{scriptId}/versions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ScriptProjectsVersionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ScriptProjectsVersionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

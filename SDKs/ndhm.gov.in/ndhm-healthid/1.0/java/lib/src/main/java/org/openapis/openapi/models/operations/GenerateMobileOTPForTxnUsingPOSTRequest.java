@@ -7,10 +7,10 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GenerateMobileOTPForTxnUsingPOSTRequest {
-    
-    public GenerateMobileOTPForTxnUsingPOSTHeaders headers;
-    public GenerateMobileOTPForTxnUsingPOSTRequest withHeaders(GenerateMobileOTPForTxnUsingPOSTHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public GenerateMobileOTPForTxnUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
@@ -18,16 +18,9 @@ public class GenerateMobileOTPForTxnUsingPOSTRequest {
      * request
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GenerateMobileOTPForTxnRequest request;
-    public GenerateMobileOTPForTxnUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.GenerateMobileOTPForTxnRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public GenerateMobileOTPForTxnUsingPOSTSecurity security;
-    public GenerateMobileOTPForTxnUsingPOSTRequest withSecurity(GenerateMobileOTPForTxnUsingPOSTSecurity security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.GenerateMobileOTPForTxnRequest generateMobileOTPForTxnRequest;
+    public GenerateMobileOTPForTxnUsingPOSTRequest withGenerateMobileOTPForTxnRequest(org.openapis.openapi.models.shared.GenerateMobileOTPForTxnRequest generateMobileOTPForTxnRequest) {
+        this.generateMobileOTPForTxnRequest = generateMobileOTPForTxnRequest;
         return this;
     }
     

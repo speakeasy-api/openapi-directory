@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateTenantWebhookRequest {
-    
-    public CreateTenantWebhookHeaders headers;
-    public CreateTenantWebhookRequest withHeaders(CreateTenantWebhookHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateWebhookRequest createWebhookRequest;
+    public CreateTenantWebhookRequest withCreateWebhookRequest(org.openapis.openapi.models.shared.CreateWebhookRequest createWebhookRequest) {
+        this.createWebhookRequest = createWebhookRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateWebhookRequest request;
-    public CreateTenantWebhookRequest withRequest(org.openapis.openapi.models.shared.CreateWebhookRequest request) {
-        this.request = request;
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public CreateTenantWebhookXSdsDateFormatEnum xSdsDateFormat;
+    public CreateTenantWebhookRequest withXSdsDateFormat(CreateTenantWebhookXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
+        return this;
+    }
+    
+    /**
+     * Service Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Service-Token")
+    public String xSdsServiceToken;
+    public CreateTenantWebhookRequest withXSdsServiceToken(String xSdsServiceToken) {
+        this.xSdsServiceToken = xSdsServiceToken;
         return this;
     }
     

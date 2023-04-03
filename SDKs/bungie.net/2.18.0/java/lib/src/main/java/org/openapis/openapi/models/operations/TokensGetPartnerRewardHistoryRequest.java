@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TokensGetPartnerRewardHistoryRequest {
-    
-    public TokensGetPartnerRewardHistoryPathParams pathParams;
-    public TokensGetPartnerRewardHistoryRequest withPathParams(TokensGetPartnerRewardHistoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The partner application identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=partnerApplicationId")
+    public Integer partnerApplicationId;
+    public TokensGetPartnerRewardHistoryRequest withPartnerApplicationId(Integer partnerApplicationId) {
+        this.partnerApplicationId = partnerApplicationId;
         return this;
     }
     
-    
-    public TokensGetPartnerRewardHistorySecurity security;
-    public TokensGetPartnerRewardHistoryRequest withSecurity(TokensGetPartnerRewardHistorySecurity security) {
-        this.security = security;
+    /**
+     * The bungie.net user to return reward history for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=targetBnetMembershipId")
+    public Long targetBnetMembershipId;
+    public TokensGetPartnerRewardHistoryRequest withTargetBnetMembershipId(Long targetBnetMembershipId) {
+        this.targetBnetMembershipId = targetBnetMembershipId;
         return this;
     }
     

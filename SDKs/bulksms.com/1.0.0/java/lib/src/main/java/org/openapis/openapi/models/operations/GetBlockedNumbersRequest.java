@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBlockedNumbersRequest {
-    
-    public GetBlockedNumbersQueryParams queryParams;
-    public GetBlockedNumbersRequest withQueryParams(GetBlockedNumbersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The maximum number of records to return. The default value is `10000`. The value cannot be greater than 10000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetBlockedNumbersRequest withLimit(Integer limit) {
+        this.limit = limit;
         return this;
     }
     
-    
-    public GetBlockedNumbersSecurity security;
-    public GetBlockedNumbersRequest withSecurity(GetBlockedNumbersSecurity security) {
-        this.security = security;
+    /**
+     * Records with an `id` that is greater or equal to min-id will be returned. The default value is `0`.  You can add 1 to an id that you previously retrieved, to return subsequent records.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min-id")
+    public Integer minId;
+    public GetBlockedNumbersRequest withMinId(Integer minId) {
+        this.minId = minId;
         return this;
     }
     

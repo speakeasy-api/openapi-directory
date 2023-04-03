@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CatalogChangeCatalogColumnUserNameRequest {
-    
-    public CatalogChangeCatalogColumnUserNamePathParams pathParams;
-    public CatalogChangeCatalogColumnUserNameRequest withPathParams(CatalogChangeCatalogColumnUserNamePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ChangeUserColumnNameRequest changeUserColumnNameRequest;
+    public CatalogChangeCatalogColumnUserNameRequest withChangeUserColumnNameRequest(org.openapis.openapi.models.shared.ChangeUserColumnNameRequest changeUserColumnNameRequest) {
+        this.changeUserColumnNameRequest = changeUserColumnNameRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ChangeUserColumnNameRequest request;
-    public CatalogChangeCatalogColumnUserNameRequest withRequest(org.openapis.openapi.models.shared.ChangeUserColumnNameRequest request) {
-        this.request = request;
+    /**
+     * The catalog column identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=columnId")
+    public String columnId;
+    public CatalogChangeCatalogColumnUserNameRequest withColumnId(String columnId) {
+        this.columnId = columnId;
+        return this;
+    }
+    
+    /**
+     * Your store identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public CatalogChangeCatalogColumnUserNameRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

@@ -7,17 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PublishEventVideosRequest {
-    
-    public PublishEventVideosPathParams pathParams;
-    public PublishEventVideosRequest withPathParams(PublishEventVideosPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PublishEventVideosHeaders headers;
-    public PublishEventVideosRequest withHeaders(PublishEventVideosHeaders headers) {
-        this.headers = headers;
+    /**
+     * Unique correlation id to be able to trace the request in our system
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=TMPS-Correlation-Id")
+    public String tmpsCorrelationId;
+    public PublishEventVideosRequest withTMPSCorrelationId(String tmpsCorrelationId) {
+        this.tmpsCorrelationId = tmpsCorrelationId;
         return this;
     }
     
@@ -25,9 +21,19 @@ public class PublishEventVideosRequest {
      * Video data
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Video request;
-    public PublishEventVideosRequest withRequest(org.openapis.openapi.models.shared.Video request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Video video;
+    public PublishEventVideosRequest withVideo(org.openapis.openapi.models.shared.Video video) {
+        this.video = video;
+        return this;
+    }
+    
+    /**
+     * ID of the event the video is linked to
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PublishEventVideosRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

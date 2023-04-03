@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolSyslogSendRequest {
-    
-    public ProtocolSyslogSendPathParams pathParams;
-    public ProtocolSyslogSendRequest withPathParams(ProtocolSyslogSendPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.SyslogMsg syslogMsg;
+    public ProtocolSyslogSendRequest withSyslogMsg(org.openapis.openapi.models.shared.SyslogMsg syslogMsg) {
+        this.syslogMsg = syslogMsg;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SyslogMsg request;
-    public ProtocolSyslogSendRequest withRequest(org.openapis.openapi.models.shared.SyslogMsg request) {
-        this.request = request;
+    /**
+     * Agent to set the SYSLOG tracing
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolSyslogSendRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
+    
+    /**
+     * Message Priority
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pri")
+    public Integer pri;
+    public ProtocolSyslogSendRequest withPri(Integer pri) {
+        this.pri = pri;
         return this;
     }
     

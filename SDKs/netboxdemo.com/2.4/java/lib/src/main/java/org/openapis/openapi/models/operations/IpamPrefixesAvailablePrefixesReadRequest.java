@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IpamPrefixesAvailablePrefixesReadRequest {
-    
-    public IpamPrefixesAvailablePrefixesReadPathParams pathParams;
-    public IpamPrefixesAvailablePrefixesReadRequest withPathParams(IpamPrefixesAvailablePrefixesReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this prefix.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public IpamPrefixesAvailablePrefixesReadRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

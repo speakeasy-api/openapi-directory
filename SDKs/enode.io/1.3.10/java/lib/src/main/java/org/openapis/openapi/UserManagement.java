@@ -34,19 +34,20 @@ public class UserManagement {
      * Unlink User
      * Deletes a User and all of their data permanently, and invalidates any associated sessions, authorization codes, and access/refresh tokens
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteUsersUseridResponse deleteUsersUserid(org.openapis.openapi.models.operations.DeleteUsersUseridRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteUsersUseridResponse deleteUsersUserid(org.openapis.openapi.models.operations.DeleteUsersUseridRequest request, org.openapis.openapi.models.operations.DeleteUsersUseridSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUsersUseridPathParams.class, baseUrl, "/users/{userId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUsersUseridRequest.class, baseUrl, "/users/{userId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -72,19 +73,20 @@ public class UserManagement {
      * 
      * No webhook events will be generated for a deauthorized user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteUsersUseridAuthorizationResponse deleteUsersUseridAuthorization(org.openapis.openapi.models.operations.DeleteUsersUseridAuthorizationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteUsersUseridAuthorizationResponse deleteUsersUseridAuthorization(org.openapis.openapi.models.operations.DeleteUsersUseridAuthorizationRequest request, org.openapis.openapi.models.operations.DeleteUsersUseridAuthorizationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUsersUseridAuthorizationPathParams.class, baseUrl, "/users/{userId}/authorization", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUsersUseridAuthorizationRequest.class, baseUrl, "/users/{userId}/authorization", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -106,21 +108,22 @@ public class UserManagement {
      * Link User
      * Creates an Enode Link session attached to the provided User ID. If this User does not exist, it will be created. The returned `linkState` gives the user short-lived access to Enode Link.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostUsersUseridLinkResponse postUsersUseridLink(org.openapis.openapi.models.operations.PostUsersUseridLinkRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostUsersUseridLinkResponse postUsersUseridLink(org.openapis.openapi.models.operations.PostUsersUseridLinkRequest request, org.openapis.openapi.models.operations.PostUsersUseridLinkSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostUsersUseridLinkPathParams.class, baseUrl, "/users/{userId}/link", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostUsersUseridLinkRequest.class, baseUrl, "/users/{userId}/link", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -7,31 +7,80 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MatchRequest {
-    
-    public MatchPathParams pathParams;
-    public MatchRequest withPathParams(MatchPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public MatchRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public MatchQueryParams queryParams;
-    public MatchRequest withQueryParams(MatchQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public MatchHeaders headers;
-    public MatchRequest withHeaders(MatchHeaders headers) {
-        this.headers = headers;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public MatchRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.MatchRequest request;
-    public MatchRequest withRequest(org.openapis.openapi.models.shared.MatchRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.MatchRequest matchRequest;
+    public MatchRequest withMatchRequest(org.openapis.openapi.models.shared.MatchRequest matchRequest) {
+        this.matchRequest = matchRequest;
+        return this;
+    }
+    
+    /**
+     * Name of the VTEX account. Used as part of the URL
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
+    public String accountName;
+    public MatchRequest withAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    
+    /**
+     * Whenever an SKU suggestion is matched, it is associated to a unique ID. Fill in this field with the matchId you wish to filter by. The `matchId`'s value can be obtained through the *[Get SKU Suggestion by ID](https://developers.vtex.com/vtex-rest-api/reference/getsuggestion) endpoint.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=matchid")
+    public String matchid;
+    public MatchRequest withMatchid(String matchid) {
+        this.matchid = matchid;
+        return this;
+    }
+    
+    /**
+     * A string that identifies the seller in the marketplace. This ID must be created by the marketplace and informed to the seller before the integration is built.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerId")
+    public String sellerId;
+    public MatchRequest withSellerId(String sellerId) {
+        this.sellerId = sellerId;
+        return this;
+    }
+    
+    /**
+     * A string that identifies the SKU in the marketplace. This is the ID that the marketplace will use for future references to this SKU, such as price and inventory notifications.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerskuid")
+    public String sellerskuid;
+    public MatchRequest withSellerskuid(String sellerskuid) {
+        this.sellerskuid = sellerskuid;
+        return this;
+    }
+    
+    /**
+     * Whenever an SKU Suggestion is updated or changed, a new version of the original one is created. All versions are logged, so you can search for previous our current states of SKU suggestions. This field is the versionId associated to the version you choose to search for. You can get this field's value through the[Get SKU Suggestion by ID](https://developers.vtex.com/vtex-rest-api/reference/getsuggestion). through the `latestVersionId` field.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public String version;
+    public MatchRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

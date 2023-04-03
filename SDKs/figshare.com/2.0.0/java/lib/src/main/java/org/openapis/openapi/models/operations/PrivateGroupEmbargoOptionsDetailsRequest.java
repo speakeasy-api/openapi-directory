@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateGroupEmbargoOptionsDetailsRequest {
-    
-    public PrivateGroupEmbargoOptionsDetailsPathParams pathParams;
-    public PrivateGroupEmbargoOptionsDetailsRequest withPathParams(PrivateGroupEmbargoOptionsDetailsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PrivateGroupEmbargoOptionsDetailsSecurity security;
-    public PrivateGroupEmbargoOptionsDetailsRequest withSecurity(PrivateGroupEmbargoOptionsDetailsSecurity security) {
-        this.security = security;
+    /**
+     * Group identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public Long groupId;
+    public PrivateGroupEmbargoOptionsDetailsRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
         return this;
     }
     

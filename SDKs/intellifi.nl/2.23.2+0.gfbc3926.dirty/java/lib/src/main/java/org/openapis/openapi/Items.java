@@ -44,7 +44,7 @@ public class Items {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddItemResponse addItem(org.openapis.openapi.models.operations.AddItemRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddItemResponse addItem(Object request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/items");
         
@@ -90,7 +90,7 @@ public class Items {
      */
     public org.openapis.openapi.models.operations.DeleteItemResponse deleteItem(org.openapis.openapi.models.operations.DeleteItemRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteItemPathParams.class, baseUrl, "/items/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteItemRequest.class, baseUrl, "/items/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -129,7 +129,7 @@ public class Items {
      */
     public org.openapis.openapi.models.operations.GetItemByIdResponse getItemById(org.openapis.openapi.models.operations.GetItemByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetItemByIdPathParams.class, baseUrl, "/items/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetItemByIdRequest.class, baseUrl, "/items/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -174,7 +174,7 @@ public class Items {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetItemsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetItemsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -213,12 +213,12 @@ public class Items {
      */
     public org.openapis.openapi.models.operations.UpdateItemResponse updateItem(org.openapis.openapi.models.operations.UpdateItemRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateItemPathParams.class, baseUrl, "/items/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateItemRequest.class, baseUrl, "/items/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "itemUpdate", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

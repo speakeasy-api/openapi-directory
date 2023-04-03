@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LogsReadRequest {
-    
-    public LogsReadPathParams pathParams;
-    public LogsReadRequest withPathParams(LogsReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the log you wish to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=log_id")
+    public String logId;
+    public LogsReadRequest withLogId(String logId) {
+        this.logId = logId;
         return this;
     }
     

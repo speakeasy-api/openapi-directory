@@ -4,13 +4,133 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEfileReportsPresidentialRequest {
+    /**
+     * API key for https://api.data.gov. Get one at https://api.data.gov/signup.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetEfileReportsPresidentialRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public GetEfileReportsPresidentialQueryParams queryParams;
-    public GetEfileReportsPresidentialRequest withQueryParams(GetEfileReportsPresidentialQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=committee_id")
+    public String[] committeeId;
+    public GetEfileReportsPresidentialRequest withCommitteeId(String[] committeeId) {
+        this.committeeId = committeeId;
+        return this;
+    }
+    
+    /**
+     * Filing ID number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=file_number")
+    public Integer[] fileNumber;
+    public GetEfileReportsPresidentialRequest withFileNumber(Integer[] fileNumber) {
+        this.fileNumber = fileNumber;
+        return this;
+    }
+    
+    /**
+     * Selects all filings received before this date(MM/DD/YYYY or YYYY-MM-DD)
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_receipt_date")
+    public LocalDate maxReceiptDate;
+    public GetEfileReportsPresidentialRequest withMaxReceiptDate(LocalDate maxReceiptDate) {
+        this.maxReceiptDate = maxReceiptDate;
+        return this;
+    }
+    
+    /**
+     * Selects all filings received after this date(MM/DD/YYYY or YYYY-MM-DD)
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_receipt_date")
+    public LocalDate minReceiptDate;
+    public GetEfileReportsPresidentialRequest withMinReceiptDate(LocalDate minReceiptDate) {
+        this.minReceiptDate = minReceiptDate;
+        return this;
+    }
+    
+    /**
+     * For paginating through results, starting at page 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetEfileReportsPresidentialRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results returned per page. Defaults to 20.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetEfileReportsPresidentialRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Keyword search for filer name or ID
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q_filer")
+    public String[] qFiler;
+    public GetEfileReportsPresidentialRequest withQFiler(String[] qFiler) {
+        this.qFiler = qFiler;
+        return this;
+    }
+    
+    /**
+     * Provide a field to sort by. Use `-` for descending order.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetEfileReportsPresidentialRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Hide null values on sorted column(s).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
+    public Boolean sortHideNull;
+    public GetEfileReportsPresidentialRequest withSortHideNull(Boolean sortHideNull) {
+        this.sortHideNull = sortHideNull;
+        return this;
+    }
+    
+    /**
+     * Toggle that filters out all rows having sort column that is non-null
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
+    public Boolean sortNullOnly;
+    public GetEfileReportsPresidentialRequest withSortNullOnly(Boolean sortNullOnly) {
+        this.sortNullOnly = sortNullOnly;
+        return this;
+    }
+    
+    /**
+     * Toggle that sorts null values last
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
+    public Boolean sortNullsLast;
+    public GetEfileReportsPresidentialRequest withSortNullsLast(Boolean sortNullsLast) {
+        this.sortNullsLast = sortNullsLast;
         return this;
     }
     

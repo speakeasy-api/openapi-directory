@@ -4,27 +4,70 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestListOfWebhooksForRoomRequest {
-    
-    public RequestListOfWebhooksForRoomPathParams pathParams;
-    public RequestListOfWebhooksForRoomRequest withPathParams(RequestListOfWebhooksForRoomPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestListOfWebhooksForRoomRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public RequestListOfWebhooksForRoomQueryParams queryParams;
-    public RequestListOfWebhooksForRoomRequest withQueryParams(RequestListOfWebhooksForRoomQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public RequestListOfWebhooksForRoomXSdsDateFormatEnum xSdsDateFormat;
+    public RequestListOfWebhooksForRoomRequest withXSdsDateFormat(RequestListOfWebhooksForRoomXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
         return this;
     }
     
+    /**
+     * Filter string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public RequestListOfWebhooksForRoomRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
     
-    public RequestListOfWebhooksForRoomHeaders headers;
-    public RequestListOfWebhooksForRoomRequest withHeaders(RequestListOfWebhooksForRoomHeaders headers) {
-        this.headers = headers;
+    /**
+     * Range limit.
+     * 
+     * Maximum 500.
+     * 
+     *  For more results please use paging (`offset` + `limit`).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public RequestListOfWebhooksForRoomRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Range offset
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public RequestListOfWebhooksForRoomRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Room ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=room_id")
+    public Long roomId;
+    public RequestListOfWebhooksForRoomRequest withRoomId(Long roomId) {
+        this.roomId = roomId;
         return this;
     }
     

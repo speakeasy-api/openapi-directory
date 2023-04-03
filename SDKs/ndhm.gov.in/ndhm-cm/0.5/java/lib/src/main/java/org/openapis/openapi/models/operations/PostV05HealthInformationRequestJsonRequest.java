@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05HealthInformationRequestJsonRequest {
-    
-    public PostV05HealthInformationRequestJsonHeaders headers;
-    public PostV05HealthInformationRequestJsonRequest withHeaders(PostV05HealthInformationRequestJsonHeaders headers) {
-        this.headers = headers;
+    /**
+     * Access token which was issued after successful login with gateway auth server.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostV05HealthInformationRequestJsonRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.HIRequest request;
-    public PostV05HealthInformationRequestJsonRequest withRequest(org.openapis.openapi.models.shared.HIRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.HIRequest hiRequest;
+    public PostV05HealthInformationRequestJsonRequest withHIRequest(org.openapis.openapi.models.shared.HIRequest hiRequest) {
+        this.hiRequest = hiRequest;
         return this;
     }
     

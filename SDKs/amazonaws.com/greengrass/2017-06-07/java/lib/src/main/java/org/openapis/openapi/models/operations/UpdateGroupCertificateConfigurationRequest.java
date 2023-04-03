@@ -7,24 +7,69 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateGroupCertificateConfigurationRequest {
-    
-    public UpdateGroupCertificateConfigurationPathParams pathParams;
-    public UpdateGroupCertificateConfigurationRequest withPathParams(UpdateGroupCertificateConfigurationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateGroupCertificateConfigurationHeaders headers;
-    public UpdateGroupCertificateConfigurationRequest withHeaders(UpdateGroupCertificateConfigurationHeaders headers) {
-        this.headers = headers;
+    /**
+     * The ID of the Greengrass group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=GroupId")
+    public String groupId;
+    public UpdateGroupCertificateConfigurationRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateGroupCertificateConfigurationRequestBody request;
-    public UpdateGroupCertificateConfigurationRequest withRequest(UpdateGroupCertificateConfigurationRequestBody request) {
-        this.request = request;
+    public UpdateGroupCertificateConfigurationRequestBody requestBody;
+    public UpdateGroupCertificateConfigurationRequest withRequestBody(UpdateGroupCertificateConfigurationRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public UpdateGroupCertificateConfigurationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public UpdateGroupCertificateConfigurationRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public UpdateGroupCertificateConfigurationRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public UpdateGroupCertificateConfigurationRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public UpdateGroupCertificateConfigurationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public UpdateGroupCertificateConfigurationRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public UpdateGroupCertificateConfigurationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

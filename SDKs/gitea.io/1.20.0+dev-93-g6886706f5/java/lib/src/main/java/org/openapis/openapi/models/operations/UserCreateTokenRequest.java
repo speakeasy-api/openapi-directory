@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserCreateTokenRequest {
-    
-    public UserCreateTokenPathParams pathParams;
-    public UserCreateTokenRequest withPathParams(UserCreateTokenPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateAccessTokenOption createAccessTokenOption;
+    public UserCreateTokenRequest withCreateAccessTokenOption(org.openapis.openapi.models.shared.CreateAccessTokenOption createAccessTokenOption) {
+        this.createAccessTokenOption = createAccessTokenOption;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateAccessTokenOption request;
-    public UserCreateTokenRequest withRequest(org.openapis.openapi.models.shared.CreateAccessTokenOption request) {
-        this.request = request;
+    /**
+     * username of user
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public UserCreateTokenRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

@@ -18,18 +18,14 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.FirebasemlProjectsModelsCreateSecurity;
-import org.openapis.openapi.models.operations.FirebasemlProjectsModelsCreatePathParams;
-import org.openapis.openapi.models.operations.FirebasemlProjectsModelsCreateQueryParams;
 import org.openapis.openapi.models.operations.FirebasemlProjectsModelsCreateRequest;
 import org.openapis.openapi.models.operations.FirebasemlProjectsModelsCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.ModelInput;
 import org.openapis.openapi.models.shared.TfLiteModelInput;
 import org.openapis.openapi.models.shared.ModelState;
 import org.openapis.openapi.models.shared.Status;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -38,42 +34,24 @@ public class Application {
                 .build();
 
             FirebasemlProjectsModelsCreateRequest req = new FirebasemlProjectsModelsCreateRequest() {{
-                security = new FirebasemlProjectsModelsCreateSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new FirebasemlProjectsModelsCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new FirebasemlProjectsModelsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new ModelInput() {{
-                    displayName = "suscipit";
-                    name = "iure";
+                dollarXgafv = "2";
+                modelInput = new ModelInput() {{
+                    displayName = "provident";
+                    name = "distinctio";
                     state = new ModelState() {{
                         published = false;
                         validationError = new Status() {{
-                            code = 297534;
+                            code = 844266;
                             details = new java.util.HashMap<String, Object>[]{{
                                 add(new java.util.HashMap<String, Object>() {{
-                                    put("delectus", "tempora");
+                                    put("corrupti", "illum");
+                                    put("vel", "error");
+                                    put("deserunt", "suscipit");
+                                    put("iure", "magnam");
                                 }}),
                                 add(new java.util.HashMap<String, Object>() {{
+                                    put("ipsa", "delectus");
+                                    put("tempora", "suscipit");
                                     put("molestiae", "minus");
                                     put("placeat", "voluptatum");
                                 }}),
@@ -81,24 +59,36 @@ public class Application {
                                     put("excepturi", "nisi");
                                     put("recusandae", "temporibus");
                                 }}),
-                                add(new java.util.HashMap<String, Object>() {{
-                                    put("quis", "veritatis");
-                                }}),
                             }};
-                            message = "deserunt";
+                            message = "ab";
                         }};
                     }};
                     tags = new String[]{{
-                        add("ipsam"),
+                        add("veritatis"),
+                        add("deserunt"),
                     }};
                     tfliteModel = new TfLiteModelInput() {{
-                        automlModel = "repellendus";
-                        gcsTfliteUri = "sapiente";
+                        automlModel = "perferendis";
+                        gcsTfliteUri = "ipsam";
                     }};
                 }};
-            }};            
+                accessToken = "repellendus";
+                alt = "proto";
+                callback = "quo";
+                fields = "odit";
+                key = "at";
+                oauthToken = "at";
+                parent = "maiores";
+                prettyPrint = false;
+                quotaUser = "molestiae";
+                uploadType = "quod";
+                uploadProtocol = "quod";
+            }}            
 
-            FirebasemlProjectsModelsCreateResponse res = sdk.projects.firebasemlProjectsModelsCreate(req);
+            FirebasemlProjectsModelsCreateResponse res = sdk.projects.firebasemlProjectsModelsCreate(req, new FirebasemlProjectsModelsCreateSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.operation.isPresent()) {
                 // handle response
@@ -110,7 +100,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### projects

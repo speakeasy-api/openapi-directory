@@ -42,7 +42,7 @@ public class Maintenance {
      */
     public org.openapis.openapi.models.operations.DeleteMaintenanceIdResponse deleteMaintenanceId(org.openapis.openapi.models.operations.DeleteMaintenanceIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteMaintenanceIdPathParams.class, baseUrl, "/maintenance/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteMaintenanceIdRequest.class, baseUrl, "/maintenance/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -82,7 +82,7 @@ public class Maintenance {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMaintenanceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMaintenanceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -119,7 +119,7 @@ public class Maintenance {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostMaintenanceResponse postMaintenance(org.openapis.openapi.models.operations.PostMaintenanceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostMaintenanceResponse postMaintenance(org.openapis.openapi.models.shared.Maintenance request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/maintenance");
         
@@ -165,12 +165,12 @@ public class Maintenance {
      */
     public org.openapis.openapi.models.operations.PutMaintenanceIdResponse putMaintenanceId(org.openapis.openapi.models.operations.PutMaintenanceIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutMaintenanceIdPathParams.class, baseUrl, "/maintenance/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutMaintenanceIdRequest.class, baseUrl, "/maintenance/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "maintenance", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

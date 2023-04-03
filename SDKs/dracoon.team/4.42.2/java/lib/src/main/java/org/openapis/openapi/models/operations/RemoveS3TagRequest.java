@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveS3TagRequest {
-    
-    public RemoveS3TagPathParams pathParams;
-    public RemoveS3TagRequest withPathParams(RemoveS3TagPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RemoveS3TagRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public RemoveS3TagHeaders headers;
-    public RemoveS3TagRequest withHeaders(RemoveS3TagHeaders headers) {
-        this.headers = headers;
+    /**
+     * S3 tag ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public RemoveS3TagRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

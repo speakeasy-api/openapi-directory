@@ -96,7 +96,7 @@ public class Tsp {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TspUpdateResponse tspUpdate(org.openapis.openapi.models.operations.TspUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TspUpdateResponse tspUpdate(org.openapis.openapi.models.operations.TspUpdateApplicationJSON request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/tsp");
         
@@ -136,21 +136,22 @@ public class Tsp {
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TspUrlUpdateResponse tspUrlUpdate(org.openapis.openapi.models.operations.TspUrlUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TspUrlUpdateResponse tspUrlUpdate(org.openapis.openapi.models.operations.TspUrlUpdateRequest request, org.openapis.openapi.models.operations.TspUrlUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TspUrlUpdatePathParams.class, baseUrl, "/users/{userId}/tsp/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TspUrlUpdateRequest.class, baseUrl, "/users/{userId}/tsp/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -181,7 +182,7 @@ public class Tsp {
      */
     public org.openapis.openapi.models.operations.UserTSPResponse userTSP(org.openapis.openapi.models.operations.UserTSPRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UserTSPPathParams.class, baseUrl, "/users/{userId}/tsp/{tspId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UserTSPRequest.class, baseUrl, "/users/{userId}/tsp/{tspId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -232,12 +233,12 @@ public class Tsp {
      */
     public org.openapis.openapi.models.operations.UserTSPCreateResponse userTSPCreate(org.openapis.openapi.models.operations.UserTSPCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UserTSPCreatePathParams.class, baseUrl, "/users/{userId}/tsp", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UserTSPCreateRequest.class, baseUrl, "/users/{userId}/tsp", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -288,7 +289,7 @@ public class Tsp {
      */
     public org.openapis.openapi.models.operations.UserTSPDeleteResponse userTSPDelete(org.openapis.openapi.models.operations.UserTSPDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UserTSPDeletePathParams.class, baseUrl, "/users/{userId}/tsp/{tspId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UserTSPDeleteRequest.class, baseUrl, "/users/{userId}/tsp/{tspId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -326,12 +327,12 @@ public class Tsp {
      */
     public org.openapis.openapi.models.operations.UserTSPUpdateResponse userTSPUpdate(org.openapis.openapi.models.operations.UserTSPUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UserTSPUpdatePathParams.class, baseUrl, "/users/{userId}/tsp/{tspId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UserTSPUpdateRequest.class, baseUrl, "/users/{userId}/tsp/{tspId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -368,7 +369,7 @@ public class Tsp {
      */
     public org.openapis.openapi.models.operations.UserTSPsResponse userTSPs(org.openapis.openapi.models.operations.UserTSPsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UserTSPsPathParams.class, baseUrl, "/users/{userId}/tsp", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UserTSPsRequest.class, baseUrl, "/users/{userId}/tsp", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

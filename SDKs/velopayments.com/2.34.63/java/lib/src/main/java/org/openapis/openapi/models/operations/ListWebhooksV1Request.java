@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListWebhooksV1Request {
+    /**
+     * Page number. Default is 1.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public ListWebhooksV1Request withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
     
-    public ListWebhooksV1QueryParams queryParams;
-    public ListWebhooksV1Request withQueryParams(ListWebhooksV1QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of results to return in a page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public ListWebhooksV1Request withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The Payor ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=payorId")
+    public String payorId;
+    public ListWebhooksV1Request withPayorId(String payorId) {
+        this.payorId = payorId;
         return this;
     }
     

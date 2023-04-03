@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.ConfigConfigGetHeaders;
 import org.openapis.openapi.models.operations.ConfigConfigGetRequest;
 import org.openapis.openapi.models.operations.ConfigConfigGetResponse;
 
@@ -15,10 +14,8 @@ public class Application {
                 .build();
 
             ConfigConfigGetRequest req = new ConfigConfigGetRequest() {{
-                headers = new ConfigConfigGetHeaders() {{
-                    authorization = "corrupti";
-                }};
-            }};            
+                authorization = "corrupti";
+            }}            
 
             ConfigConfigGetResponse res = sdk.configConfigGet(req);
 

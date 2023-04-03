@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AddTagsToOnPremisesInstancesXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AddTagsToOnPremisesInstancesHeaders;
 import org.openapis.openapi.models.operations.AddTagsToOnPremisesInstancesRequest;
 import org.openapis.openapi.models.operations.AddTagsToOnPremisesInstancesResponse;
 import org.openapis.openapi.models.shared.AddTagsToOnPremisesInstancesInput;
@@ -16,42 +15,41 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AddTagsToOnPremisesInstancesRequest req = new AddTagsToOnPremisesInstancesRequest() {{
-                headers = new AddTagsToOnPremisesInstancesHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "CodeDeploy_20141006.AddTagsToOnPremisesInstances";
-                }};
-                request = new AddTagsToOnPremisesInstancesInput() {{
+                addTagsToOnPremisesInstancesInput = new AddTagsToOnPremisesInstancesInput() {{
                     instanceNames = new String[]{{
-                        add("vel"),
-                        add("error"),
-                        add("deserunt"),
-                        add("suscipit"),
+                        add("provident"),
+                        add("distinctio"),
+                        add("quibusdam"),
                     }};
                     tags = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            key = "magnam";
-                            value = "debitis";
+                            key = "nulla";
+                            value = "corrupti";
                         }}),
                         add(new Tag() {{
-                            key = "ipsa";
-                            value = "delectus";
+                            key = "illum";
+                            value = "vel";
+                        }}),
+                        add(new Tag() {{
+                            key = "error";
+                            value = "deserunt";
                         }}),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "suscipit";
+                xAmzContentSha256 = "iure";
+                xAmzCredential = "magnam";
+                xAmzDate = "debitis";
+                xAmzSecurityToken = "ipsa";
+                xAmzSignature = "delectus";
+                xAmzSignedHeaders = "tempora";
+                xAmzTarget = "CodeDeploy_20141006.AddTagsToOnPremisesInstances";
+            }}            
 
             AddTagsToOnPremisesInstancesResponse res = sdk.addTagsToOnPremisesInstances(req);
 

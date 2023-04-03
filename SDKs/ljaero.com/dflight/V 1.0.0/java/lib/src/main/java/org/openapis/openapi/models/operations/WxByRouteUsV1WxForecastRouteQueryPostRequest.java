@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WxByRouteUsV1WxForecastRouteQueryPostRequest {
-    
-    public WxByRouteUsV1WxForecastRouteQueryPostHeaders headers;
-    public WxByRouteUsV1WxForecastRouteQueryPostRequest withHeaders(WxByRouteUsV1WxForecastRouteQueryPostHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.WxByRoute wxByRoute;
+    public WxByRouteUsV1WxForecastRouteQueryPostRequest withWxByRoute(org.openapis.openapi.models.shared.WxByRoute wxByRoute) {
+        this.wxByRoute = wxByRoute;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WxByRoute request;
-    public WxByRouteUsV1WxForecastRouteQueryPostRequest withRequest(org.openapis.openapi.models.shared.WxByRoute request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public WxByRouteUsV1WxForecastRouteQueryPostRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

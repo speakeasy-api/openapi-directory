@@ -4,34 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListConversationMessageReceiptRequest {
-    
-    public ListConversationMessageReceiptPathParams pathParams;
-    public ListConversationMessageReceiptRequest withPathParams(ListConversationMessageReceiptPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this message.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConversationSid")
+    public String conversationSid;
+    public ListConversationMessageReceiptRequest withConversationSid(String conversationSid) {
+        this.conversationSid = conversationSid;
         return this;
     }
     
-    
-    public ListConversationMessageReceiptQueryParams queryParams;
-    public ListConversationMessageReceiptRequest withQueryParams(ListConversationMessageReceiptQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The SID of the message within a [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) the delivery receipt belongs to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=MessageSid")
+    public String messageSid;
+    public ListConversationMessageReceiptRequest withMessageSid(String messageSid) {
+        this.messageSid = messageSid;
         return this;
     }
     
-    
-    public ListConversationMessageReceiptSecurity security;
-    public ListConversationMessageReceiptRequest withSecurity(ListConversationMessageReceiptSecurity security) {
-        this.security = security;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListConversationMessageReceiptRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListConversationMessageReceiptRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public String serverURL;
-    public ListConversationMessageReceiptRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListConversationMessageReceiptRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

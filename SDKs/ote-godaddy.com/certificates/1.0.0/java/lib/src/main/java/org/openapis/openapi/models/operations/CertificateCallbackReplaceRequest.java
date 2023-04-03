@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CertificateCallbackReplaceRequest {
-    
-    public CertificateCallbackReplacePathParams pathParams;
-    public CertificateCallbackReplaceRequest withPathParams(CertificateCallbackReplacePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Callback url registered/replaced to receive stateful actions
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callbackUrl")
+    public String callbackUrl;
+    public CertificateCallbackReplaceRequest withCallbackUrl(String callbackUrl) {
+        this.callbackUrl = callbackUrl;
         return this;
     }
     
-    
-    public CertificateCallbackReplaceQueryParams queryParams;
-    public CertificateCallbackReplaceRequest withQueryParams(CertificateCallbackReplaceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Certificate id to register/replace for callback
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=certificateId")
+    public String certificateId;
+    public CertificateCallbackReplaceRequest withCertificateId(String certificateId) {
+        this.certificateId = certificateId;
         return this;
     }
     

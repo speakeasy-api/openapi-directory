@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoGetPullRequestFilesRequest {
-    
-    public RepoGetPullRequestFilesPathParams pathParams;
-    public RepoGetPullRequestFilesRequest withPathParams(RepoGetPullRequestFilesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * index of the pull request to get
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=index")
+    public Long index;
+    public RepoGetPullRequestFilesRequest withIndex(Long index) {
+        this.index = index;
         return this;
     }
     
+    /**
+     * page size of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public RepoGetPullRequestFilesRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public RepoGetPullRequestFilesQueryParams queryParams;
-    public RepoGetPullRequestFilesRequest withQueryParams(RepoGetPullRequestFilesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoGetPullRequestFilesRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * page number of results to return (1-based)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public RepoGetPullRequestFilesRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoGetPullRequestFilesRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * skip to given file
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip-to")
+    public String skipTo;
+    public RepoGetPullRequestFilesRequest withSkipTo(String skipTo) {
+        this.skipTo = skipTo;
+        return this;
+    }
+    
+    /**
+     * whitespace behavior
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=whitespace")
+    public RepoGetPullRequestFilesWhitespaceEnum whitespace;
+    public RepoGetPullRequestFilesRequest withWhitespace(RepoGetPullRequestFilesWhitespaceEnum whitespace) {
+        this.whitespace = whitespace;
         return this;
     }
     

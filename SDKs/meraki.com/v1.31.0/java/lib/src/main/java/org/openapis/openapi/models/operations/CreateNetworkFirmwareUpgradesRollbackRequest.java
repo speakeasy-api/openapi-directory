@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateNetworkFirmwareUpgradesRollbackRequest {
-    
-    public CreateNetworkFirmwareUpgradesRollbackPathParams pathParams;
-    public CreateNetworkFirmwareUpgradesRollbackRequest withPathParams(CreateNetworkFirmwareUpgradesRollbackPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateNetworkFirmwareUpgradesRollbackRequestBody requestBody;
+    public CreateNetworkFirmwareUpgradesRollbackRequest withRequestBody(CreateNetworkFirmwareUpgradesRollbackRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateNetworkFirmwareUpgradesRollbackRequestBody request;
-    public CreateNetworkFirmwareUpgradesRollbackRequest withRequest(CreateNetworkFirmwareUpgradesRollbackRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public CreateNetworkFirmwareUpgradesRollbackRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

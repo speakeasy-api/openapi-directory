@@ -4,13 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsAddSelectedRepoToOrgSecretRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ActionsAddSelectedRepoToOrgSecretRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
     
-    public ActionsAddSelectedRepoToOrgSecretPathParams pathParams;
-    public ActionsAddSelectedRepoToOrgSecretRequest withPathParams(ActionsAddSelectedRepoToOrgSecretPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repository_id")
+    public Long repositoryId;
+    public ActionsAddSelectedRepoToOrgSecretRequest withRepositoryId(Long repositoryId) {
+        this.repositoryId = repositoryId;
+        return this;
+    }
+    
+    /**
+     * secret_name parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=secret_name")
+    public String secretName;
+    public ActionsAddSelectedRepoToOrgSecretRequest withSecretName(String secretName) {
+        this.secretName = secretName;
         return this;
     }
     

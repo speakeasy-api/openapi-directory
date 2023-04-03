@@ -34,25 +34,26 @@ public class Shoppingadsprogram {
     /**
      * Retrieves the status and review eligibility for the Shopping Ads program. Returns errors and warnings if they require action to resolve, will become disapprovals, or impact impressions. Use `accountstatuses` to view all issues for an account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentShoppingadsprogramGetResponse contentShoppingadsprogramGet(org.openapis.openapi.models.operations.ContentShoppingadsprogramGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentShoppingadsprogramGetResponse contentShoppingadsprogramGet(org.openapis.openapi.models.operations.ContentShoppingadsprogramGetRequest request, org.openapis.openapi.models.operations.ContentShoppingadsprogramGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentShoppingadsprogramGetPathParams.class, baseUrl, "/{merchantId}/shoppingadsprogram", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentShoppingadsprogramGetRequest.class, baseUrl, "/{merchantId}/shoppingadsprogram", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentShoppingadsprogramGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentShoppingadsprogramGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,27 +80,28 @@ public class Shoppingadsprogram {
     /**
      * Requests a review of Shopping ads in a specific region. This method is only available to selected merchants.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentShoppingadsprogramRequestreviewResponse contentShoppingadsprogramRequestreview(org.openapis.openapi.models.operations.ContentShoppingadsprogramRequestreviewRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentShoppingadsprogramRequestreviewResponse contentShoppingadsprogramRequestreview(org.openapis.openapi.models.operations.ContentShoppingadsprogramRequestreviewRequest request, org.openapis.openapi.models.operations.ContentShoppingadsprogramRequestreviewSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentShoppingadsprogramRequestreviewPathParams.class, baseUrl, "/{merchantId}/shoppingadsprogram/requestreview", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentShoppingadsprogramRequestreviewRequest.class, baseUrl, "/{merchantId}/shoppingadsprogram/requestreview", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestReviewShoppingAdsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentShoppingadsprogramRequestreviewQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentShoppingadsprogramRequestreviewRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV1CustomersIdRequest {
-    
-    public GetV1CustomersIdPathParams pathParams;
-    public GetV1CustomersIdRequest withPathParams(GetV1CustomersIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of Customer to return.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetV1CustomersIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetV1CustomersIdQueryParams queryParams;
-    public GetV1CustomersIdRequest withQueryParams(GetV1CustomersIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * If "true" then Customer's ledger balance will be calculated; otherwise balance will be returned as 0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=needBalance")
+    public Boolean needBalance;
+    public GetV1CustomersIdRequest withNeedBalance(Boolean needBalance) {
+        this.needBalance = needBalance;
         return this;
     }
     

@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ApiResourcesOneRequest {
-    
-    public ApiResourcesOnePathParams pathParams;
-    public ApiResourcesOneRequest withPathParams(ApiResourcesOnePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the record you are acting upon.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public ApiResourcesOneRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public ApiResourcesOneHeaders headers;
-    public ApiResourcesOneRequest withHeaders(ApiResourcesOneHeaders headers) {
-        this.headers = headers;
+    /**
+     * ID of the resource you are acting upon.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=resource_id")
+    public String resourceId;
+    public ApiResourcesOneRequest withResourceId(String resourceId) {
+        this.resourceId = resourceId;
         return this;
     }
     
-    
-    public ApiResourcesOneSecurity security;
-    public ApiResourcesOneRequest withSecurity(ApiResourcesOneSecurity security) {
-        this.security = security;
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public ApiResourcesOneRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
         return this;
     }
     

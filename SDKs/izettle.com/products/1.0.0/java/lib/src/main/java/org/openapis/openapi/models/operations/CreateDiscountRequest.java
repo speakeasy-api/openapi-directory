@@ -7,24 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateDiscountRequest {
-    
-    public CreateDiscountPathParams pathParams;
-    public CreateDiscountRequest withPathParams(CreateDiscountPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DiscountRequest request;
-    public CreateDiscountRequest withRequest(org.openapis.openapi.models.shared.DiscountRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.DiscountRequest discountRequest;
+    public CreateDiscountRequest withDiscountRequest(org.openapis.openapi.models.shared.DiscountRequest discountRequest) {
+        this.discountRequest = discountRequest;
         return this;
     }
     
-    
-    public CreateDiscountSecurity security;
-    public CreateDiscountRequest withSecurity(CreateDiscountSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationUuid")
+    public String organizationUuid;
+    public CreateDiscountRequest withOrganizationUuid(String organizationUuid) {
+        this.organizationUuid = organizationUuid;
         return this;
     }
     

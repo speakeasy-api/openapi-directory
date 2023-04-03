@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateServiceConfigurationRequest {
-    
-    public UpdateServiceConfigurationPathParams pathParams;
-    public UpdateServiceConfigurationRequest withPathParams(UpdateServiceConfigurationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Service configuration resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChatServiceSid")
+    public String chatServiceSid;
+    public UpdateServiceConfigurationRequest withChatServiceSid(String chatServiceSid) {
+        this.chatServiceSid = chatServiceSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateServiceConfigurationUpdateServiceConfigurationRequest request;
-    public UpdateServiceConfigurationRequest withRequest(UpdateServiceConfigurationUpdateServiceConfigurationRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public UpdateServiceConfigurationSecurity security;
-    public UpdateServiceConfigurationRequest withSecurity(UpdateServiceConfigurationSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateServiceConfigurationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public UpdateServiceConfigurationUpdateServiceConfigurationRequest requestBody;
+    public UpdateServiceConfigurationRequest withRequestBody(UpdateServiceConfigurationUpdateServiceConfigurationRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

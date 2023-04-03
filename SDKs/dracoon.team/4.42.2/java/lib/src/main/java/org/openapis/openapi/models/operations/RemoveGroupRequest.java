@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveGroupRequest {
-    
-    public RemoveGroupPathParams pathParams;
-    public RemoveGroupRequest withPathParams(RemoveGroupPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RemoveGroupRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public RemoveGroupHeaders headers;
-    public RemoveGroupRequest withHeaders(RemoveGroupHeaders headers) {
-        this.headers = headers;
+    /**
+     * Group ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public Long groupId;
+    public RemoveGroupRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
         return this;
     }
     

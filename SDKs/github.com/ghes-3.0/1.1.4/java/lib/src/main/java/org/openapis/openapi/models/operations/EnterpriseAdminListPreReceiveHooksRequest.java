@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminListPreReceiveHooksRequest {
+    /**
+     * One of `asc` (ascending) or `desc` (descending).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public org.openapis.openapi.models.shared.DirectionEnum direction;
+    public EnterpriseAdminListPreReceiveHooksRequest withDirection(org.openapis.openapi.models.shared.DirectionEnum direction) {
+        this.direction = direction;
+        return this;
+    }
     
-    public EnterpriseAdminListPreReceiveHooksQueryParams queryParams;
-    public EnterpriseAdminListPreReceiveHooksRequest withQueryParams(EnterpriseAdminListPreReceiveHooksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public EnterpriseAdminListPreReceiveHooksRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public EnterpriseAdminListPreReceiveHooksRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * One of `created` (when the repository was starred) or `updated` (when it was last pushed to) or `name`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public EnterpriseAdminListPreReceiveHooksSortEnum sort;
+    public EnterpriseAdminListPreReceiveHooksRequest withSort(EnterpriseAdminListPreReceiveHooksSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

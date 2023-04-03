@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostApiV1AccountsIdNoteRequest {
-    
-    public PostApiV1AccountsIdNotePathParams pathParams;
-    public PostApiV1AccountsIdNoteRequest withPathParams(PostApiV1AccountsIdNotePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/form-data")
-    public byte[] request;
-    public PostApiV1AccountsIdNoteRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public PostApiV1AccountsIdNoteRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public PostApiV1AccountsIdNoteSecurity security;
-    public PostApiV1AccountsIdNoteRequest withSecurity(PostApiV1AccountsIdNoteSecurity security) {
-        this.security = security;
+    /**
+     * The id of the account in the database
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostApiV1AccountsIdNoteRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

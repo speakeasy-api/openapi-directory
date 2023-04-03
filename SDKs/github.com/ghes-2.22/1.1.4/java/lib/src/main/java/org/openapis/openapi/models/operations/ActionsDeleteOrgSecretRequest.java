@@ -4,13 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsDeleteOrgSecretRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ActionsDeleteOrgSecretRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
     
-    public ActionsDeleteOrgSecretPathParams pathParams;
-    public ActionsDeleteOrgSecretRequest withPathParams(ActionsDeleteOrgSecretPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * secret_name parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=secret_name")
+    public String secretName;
+    public ActionsDeleteOrgSecretRequest withSecretName(String secretName) {
+        this.secretName = secretName;
         return this;
     }
     

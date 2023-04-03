@@ -4,27 +4,75 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSiteAddressRequest {
-    
-    public GetSiteAddressPathParams pathParams;
-    public GetSiteAddressRequest withPathParams(GetSiteAddressPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The type of the address you request. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AddressType")
+    public GetSiteAddressAddressTypeEnum addressType;
+    public GetSiteAddressRequest withAddressType(GetSiteAddressAddressTypeEnum addressType) {
+        this.addressType = addressType;
         return this;
     }
     
-    
-    public GetSiteAddressQueryParams queryParams;
-    public GetSiteAddressRequest withQueryParams(GetSiteAddressQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     *  The ID or the Amazon Resource Name (ARN) of the site. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=SiteId")
+    public String siteId;
+    public GetSiteAddressRequest withSiteId(String siteId) {
+        this.siteId = siteId;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetSiteAddressRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
     
-    public GetSiteAddressHeaders headers;
-    public GetSiteAddressRequest withHeaders(GetSiteAddressHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetSiteAddressRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetSiteAddressRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetSiteAddressRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetSiteAddressRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetSiteAddressRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetSiteAddressRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

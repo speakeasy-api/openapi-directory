@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFloatingIpsIdActionsRequest {
-    
-    public GetFloatingIpsIdActionsPathParams pathParams;
-    public GetFloatingIpsIdActionsRequest withPathParams(GetFloatingIpsIdActionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the Floating IP
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetFloatingIpsIdActionsRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * Can be used multiple times.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetFloatingIpsIdActionsSortParameterSortEnum sort;
+    public GetFloatingIpsIdActionsRequest withSort(GetFloatingIpsIdActionsSortParameterSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
     
-    public GetFloatingIpsIdActionsQueryParams queryParams;
-    public GetFloatingIpsIdActionsRequest withQueryParams(GetFloatingIpsIdActionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Can be used multiple times, the response will contain only Actions with specified statuses
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public GetFloatingIpsIdActionsStatusParameterStatusEnum status;
+    public GetFloatingIpsIdActionsRequest withStatus(GetFloatingIpsIdActionsStatusParameterStatusEnum status) {
+        this.status = status;
         return this;
     }
     

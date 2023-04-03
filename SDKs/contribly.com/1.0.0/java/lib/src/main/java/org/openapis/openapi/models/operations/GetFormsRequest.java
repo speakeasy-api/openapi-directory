@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFormsRequest {
-    
-    public GetFormsQueryParams queryParams;
-    public GetFormsRequest withQueryParams(GetFormsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Restrict results to forms owned by this user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ownedBy")
+    public String ownedBy;
+    public GetFormsRequest withOwnedBy(String ownedBy) {
+        this.ownedBy = ownedBy;
         return this;
     }
     

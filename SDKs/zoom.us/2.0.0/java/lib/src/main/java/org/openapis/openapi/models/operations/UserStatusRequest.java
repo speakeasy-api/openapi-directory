@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserStatusRequest {
-    
-    public UserStatusPathParams pathParams;
-    public UserStatusRequest withPathParams(UserStatusPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * User status.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UserStatusApplicationJSON request;
-    public UserStatusRequest withRequest(UserStatusApplicationJSON request) {
-        this.request = request;
+    public UserStatusApplicationJSON requestBody;
+    public UserStatusRequest withRequestBody(UserStatusApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UserStatusSecurity security;
-    public UserStatusRequest withSecurity(UserStatusSecurity security) {
-        this.security = security;
+    /**
+     * The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public UserStatusRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

@@ -7,31 +7,90 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdexchangebuyerMarketplacedealsDeleteRequest {
-    
-    public AdexchangebuyerMarketplacedealsDeletePathParams pathParams;
-    public AdexchangebuyerMarketplacedealsDeleteRequest withPathParams(AdexchangebuyerMarketplacedealsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AdexchangebuyerMarketplacedealsDeleteQueryParams queryParams;
-    public AdexchangebuyerMarketplacedealsDeleteRequest withQueryParams(AdexchangebuyerMarketplacedealsDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DeleteOrderDealsRequest request;
-    public AdexchangebuyerMarketplacedealsDeleteRequest withRequest(org.openapis.openapi.models.shared.DeleteOrderDealsRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.DeleteOrderDealsRequest deleteOrderDealsRequest;
+    public AdexchangebuyerMarketplacedealsDeleteRequest withDeleteOrderDealsRequest(org.openapis.openapi.models.shared.DeleteOrderDealsRequest deleteOrderDealsRequest) {
+        this.deleteOrderDealsRequest = deleteOrderDealsRequest;
         return this;
     }
     
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AdexchangebuyerMarketplacedealsDeleteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public AdexchangebuyerMarketplacedealsDeleteSecurity security;
-    public AdexchangebuyerMarketplacedealsDeleteRequest withSecurity(AdexchangebuyerMarketplacedealsDeleteSecurity security) {
-        this.security = security;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AdexchangebuyerMarketplacedealsDeleteRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AdexchangebuyerMarketplacedealsDeleteRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AdexchangebuyerMarketplacedealsDeleteRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AdexchangebuyerMarketplacedealsDeleteRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * The proposalId to delete deals from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=proposalId")
+    public String proposalId;
+    public AdexchangebuyerMarketplacedealsDeleteRequest withProposalId(String proposalId) {
+        this.proposalId = proposalId;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AdexchangebuyerMarketplacedealsDeleteRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public AdexchangebuyerMarketplacedealsDeleteRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

@@ -5,15 +5,11 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.DatalineageProjectsLocationsBatchSearchLinkProcessesSecurity;
-import org.openapis.openapi.models.operations.DatalineageProjectsLocationsBatchSearchLinkProcessesPathParams;
-import org.openapis.openapi.models.operations.DatalineageProjectsLocationsBatchSearchLinkProcessesQueryParams;
 import org.openapis.openapi.models.operations.DatalineageProjectsLocationsBatchSearchLinkProcessesRequest;
 import org.openapis.openapi.models.operations.DatalineageProjectsLocationsBatchSearchLinkProcessesResponse;
-import org.openapis.openapi.models.shared.GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesRequest;
 import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesRequest;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -22,41 +18,33 @@ public class Application {
                 .build();
 
             DatalineageProjectsLocationsBatchSearchLinkProcessesRequest req = new DatalineageProjectsLocationsBatchSearchLinkProcessesRequest() {{
-                security = new DatalineageProjectsLocationsBatchSearchLinkProcessesSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new DatalineageProjectsLocationsBatchSearchLinkProcessesPathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new DatalineageProjectsLocationsBatchSearchLinkProcessesQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesRequest() {{
+                dollarXgafv = "2";
+                googleCloudDatacatalogLineageV1BatchSearchLinkProcessesRequest = new GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesRequest() {{
                     links = new String[]{{
-                        add("iure"),
-                        add("magnam"),
+                        add("distinctio"),
+                        add("quibusdam"),
+                        add("unde"),
                     }};
-                    pageSize = 891773;
-                    pageToken = "ipsa";
+                    pageSize = 857946;
+                    pageToken = "corrupti";
                 }};
-            }};            
+                accessToken = "illum";
+                alt = "media";
+                callback = "error";
+                fields = "deserunt";
+                key = "suscipit";
+                oauthToken = "iure";
+                parent = "magnam";
+                prettyPrint = false;
+                quotaUser = "debitis";
+                uploadType = "ipsa";
+                uploadProtocol = "delectus";
+            }}            
 
-            DatalineageProjectsLocationsBatchSearchLinkProcessesResponse res = sdk.projects.datalineageProjectsLocationsBatchSearchLinkProcesses(req);
+            DatalineageProjectsLocationsBatchSearchLinkProcessesResponse res = sdk.projects.datalineageProjectsLocationsBatchSearchLinkProcesses(req, new DatalineageProjectsLocationsBatchSearchLinkProcessesSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.googleCloudDatacatalogLineageV1BatchSearchLinkProcessesResponse.isPresent()) {
                 // handle response

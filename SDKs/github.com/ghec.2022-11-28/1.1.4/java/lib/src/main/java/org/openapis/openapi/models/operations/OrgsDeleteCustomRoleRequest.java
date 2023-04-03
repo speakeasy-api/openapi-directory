@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgsDeleteCustomRoleRequest {
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public OrgsDeleteCustomRoleRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
     
-    public OrgsDeleteCustomRolePathParams pathParams;
-    public OrgsDeleteCustomRoleRequest withPathParams(OrgsDeleteCustomRolePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the role.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=role_id")
+    public Long roleId;
+    public OrgsDeleteCustomRoleRequest withRoleId(Long roleId) {
+        this.roleId = roleId;
         return this;
     }
     

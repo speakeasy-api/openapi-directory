@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ValidateIBANBasicSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query")
-    public org.openapis.openapi.models.shared.SchemeAPIKeySecurity apiKeySecurity;
-    public ValidateIBANBasicSecurity withApiKeySecurity(org.openapis.openapi.models.shared.SchemeAPIKeySecurity apiKeySecurity) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=api_key")
+    public String apiKeySecurity;
+    public ValidateIBANBasicSecurity withApiKeySecurity(String apiKeySecurity) {
         this.apiKeySecurity = apiKeySecurity;
         return this;
     }

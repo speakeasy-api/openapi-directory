@@ -40,7 +40,7 @@ public class DscpToCosMappings {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchDscpToCosMappingsResponse getNetworkSwitchDscpToCosMappings(org.openapis.openapi.models.operations.GetNetworkSwitchDscpToCosMappingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchDscpToCosMappingsPathParams.class, baseUrl, "/networks/{networkId}/switch/dscpToCosMappings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchDscpToCosMappingsRequest.class, baseUrl, "/networks/{networkId}/switch/dscpToCosMappings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,12 +80,12 @@ public class DscpToCosMappings {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSwitchDscpToCosMappingsResponse updateNetworkSwitchDscpToCosMappings(org.openapis.openapi.models.operations.UpdateNetworkSwitchDscpToCosMappingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchDscpToCosMappingsPathParams.class, baseUrl, "/networks/{networkId}/switch/dscpToCosMappings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchDscpToCosMappingsRequest.class, baseUrl, "/networks/{networkId}/switch/dscpToCosMappings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

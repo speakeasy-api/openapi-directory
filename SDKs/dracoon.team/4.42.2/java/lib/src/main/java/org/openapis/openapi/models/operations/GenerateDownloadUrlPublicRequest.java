@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GenerateDownloadUrlPublicRequest {
-    
-    public GenerateDownloadUrlPublicPathParams pathParams;
-    public GenerateDownloadUrlPublicRequest withPathParams(GenerateDownloadUrlPublicPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.PublicDownloadTokenGenerateRequest publicDownloadTokenGenerateRequest;
+    public GenerateDownloadUrlPublicRequest withPublicDownloadTokenGenerateRequest(org.openapis.openapi.models.shared.PublicDownloadTokenGenerateRequest publicDownloadTokenGenerateRequest) {
+        this.publicDownloadTokenGenerateRequest = publicDownloadTokenGenerateRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PublicDownloadTokenGenerateRequest request;
-    public GenerateDownloadUrlPublicRequest withRequest(org.openapis.openapi.models.shared.PublicDownloadTokenGenerateRequest request) {
-        this.request = request;
+    /**
+     * Access key
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=access_key")
+    public String accessKey;
+    public GenerateDownloadUrlPublicRequest withAccessKey(String accessKey) {
+        this.accessKey = accessKey;
         return this;
     }
     

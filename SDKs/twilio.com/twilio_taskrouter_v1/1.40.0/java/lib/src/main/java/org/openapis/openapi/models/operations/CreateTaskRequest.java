@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateTaskRequest {
-    
-    public CreateTaskPathParams pathParams;
-    public CreateTaskRequest withPathParams(CreateTaskPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateTaskCreateTaskRequest request;
-    public CreateTaskRequest withRequest(CreateTaskCreateTaskRequest request) {
-        this.request = request;
+    public CreateTaskCreateTaskRequest requestBody;
+    public CreateTaskRequest withRequestBody(CreateTaskCreateTaskRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateTaskSecurity security;
-    public CreateTaskRequest withSecurity(CreateTaskSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateTaskRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Workspace that the new Task belongs to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkspaceSid")
+    public String workspaceSid;
+    public CreateTaskRequest withWorkspaceSid(String workspaceSid) {
+        this.workspaceSid = workspaceSid;
         return this;
     }
     

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SaveCorporateUserGroupByIdRequest {
-    
-    public SaveCorporateUserGroupByIdPathParams pathParams;
-    public SaveCorporateUserGroupByIdRequest withPathParams(SaveCorporateUserGroupByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.UserGroup userGroup;
+    public SaveCorporateUserGroupByIdRequest withUserGroup(org.openapis.openapi.models.shared.UserGroup userGroup) {
+        this.userGroup = userGroup;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UserGroup request;
-    public SaveCorporateUserGroupByIdRequest withRequest(org.openapis.openapi.models.shared.UserGroup request) {
-        this.request = request;
+    /**
+     * Corporate ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=corporateId")
+    public Long corporateId;
+    public SaveCorporateUserGroupByIdRequest withCorporateId(Long corporateId) {
+        this.corporateId = corporateId;
         return this;
     }
     

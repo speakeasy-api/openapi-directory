@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Sends new traces to Cloud Trace or updates existing traces. If the ID of a trace that you send matches that of an existing trace, any fields in the existing trace and its spans are overwritten by the provided values, and any new fields provided are merged with the existing trace data. If the ID does not match, a new trace is created.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudtraceProjectsPatchTracesResponse cloudtraceProjectsPatchTraces(org.openapis.openapi.models.operations.CloudtraceProjectsPatchTracesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudtraceProjectsPatchTracesResponse cloudtraceProjectsPatchTraces(org.openapis.openapi.models.operations.CloudtraceProjectsPatchTracesRequest request, org.openapis.openapi.models.operations.CloudtraceProjectsPatchTracesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudtraceProjectsPatchTracesPathParams.class, baseUrl, "/v1/projects/{projectId}/traces", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudtraceProjectsPatchTracesRequest.class, baseUrl, "/v1/projects/{projectId}/traces", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "traces", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudtraceProjectsPatchTracesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudtraceProjectsPatchTracesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,25 +83,26 @@ public class Projects {
     /**
      * Gets a single trace by its ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudtraceProjectsTracesGetResponse cloudtraceProjectsTracesGet(org.openapis.openapi.models.operations.CloudtraceProjectsTracesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudtraceProjectsTracesGetResponse cloudtraceProjectsTracesGet(org.openapis.openapi.models.operations.CloudtraceProjectsTracesGetRequest request, org.openapis.openapi.models.operations.CloudtraceProjectsTracesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudtraceProjectsTracesGetPathParams.class, baseUrl, "/v1/projects/{projectId}/traces/{traceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudtraceProjectsTracesGetRequest.class, baseUrl, "/v1/projects/{projectId}/traces/{traceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudtraceProjectsTracesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudtraceProjectsTracesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,25 +129,26 @@ public class Projects {
     /**
      * Returns a list of traces that match the specified filter conditions.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudtraceProjectsTracesListResponse cloudtraceProjectsTracesList(org.openapis.openapi.models.operations.CloudtraceProjectsTracesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudtraceProjectsTracesListResponse cloudtraceProjectsTracesList(org.openapis.openapi.models.operations.CloudtraceProjectsTracesListRequest request, org.openapis.openapi.models.operations.CloudtraceProjectsTracesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudtraceProjectsTracesListPathParams.class, baseUrl, "/v1/projects/{projectId}/traces", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudtraceProjectsTracesListRequest.class, baseUrl, "/v1/projects/{projectId}/traces", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudtraceProjectsTracesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudtraceProjectsTracesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

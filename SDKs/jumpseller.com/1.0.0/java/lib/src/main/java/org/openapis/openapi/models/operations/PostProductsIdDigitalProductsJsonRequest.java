@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostProductsIdDigitalProductsJsonRequest {
-    
-    public PostProductsIdDigitalProductsJsonPathParams pathParams;
-    public PostProductsIdDigitalProductsJsonRequest withPathParams(PostProductsIdDigitalProductsJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostProductsIdDigitalProductsJsonQueryParams queryParams;
-    public PostProductsIdDigitalProductsJsonRequest withQueryParams(PostProductsIdDigitalProductsJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Product DigitalProduct parameters.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DigitalProductEdit request;
-    public PostProductsIdDigitalProductsJsonRequest withRequest(org.openapis.openapi.models.shared.DigitalProductEdit request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.DigitalProductEdit digitalProductEdit;
+    public PostProductsIdDigitalProductsJsonRequest withDigitalProductEdit(org.openapis.openapi.models.shared.DigitalProductEdit digitalProductEdit) {
+        this.digitalProductEdit = digitalProductEdit;
+        return this;
+    }
+    
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public PostProductsIdDigitalProductsJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
+        return this;
+    }
+    
+    /**
+     * Id of the Product
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PostProductsIdDigitalProductsJsonRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public PostProductsIdDigitalProductsJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVolumesRequest {
+    /**
+     * Can be used to filter resources by labels. The response will only contain resources matching the label selector.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=label_selector")
+    public String labelSelector;
+    public GetVolumesRequest withLabelSelector(String labelSelector) {
+        this.labelSelector = labelSelector;
+        return this;
+    }
     
-    public GetVolumesQueryParams queryParams;
-    public GetVolumesRequest withQueryParams(GetVolumesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Can be used to filter resources by their name. The response will only contain the resources matching the specified name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public GetVolumesRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Can be used multiple times.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetVolumesSortEnum sort;
+    public GetVolumesRequest withSort(GetVolumesSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Can be used multiple times. The response will only contain Volumes matching the status.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public GetVolumesStatusEnum status;
+    public GetVolumesRequest withStatus(GetVolumesStatusEnum status) {
+        this.status = status;
         return this;
     }
     

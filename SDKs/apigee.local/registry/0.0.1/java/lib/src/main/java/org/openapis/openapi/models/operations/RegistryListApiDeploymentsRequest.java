@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryListApiDeploymentsRequest {
-    
-    public RegistryListApiDeploymentsPathParams pathParams;
-    public RegistryListApiDeploymentsRequest withPathParams(RegistryListApiDeploymentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The api id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api")
+    public String api;
+    public RegistryListApiDeploymentsRequest withApi(String api) {
+        this.api = api;
         return this;
     }
     
+    /**
+     * An expression that can be used to filter the list. Filters use the Common Expression Language and can refer to all message fields.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public RegistryListApiDeploymentsRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
     
-    public RegistryListApiDeploymentsQueryParams queryParams;
-    public RegistryListApiDeploymentsRequest withQueryParams(RegistryListApiDeploymentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The location id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
+    public String location;
+    public RegistryListApiDeploymentsRequest withLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    
+    /**
+     * The maximum number of deployments to return. The service may return fewer than this value. If unspecified, at most 50 values will be returned. The maximum is 1000; values above 1000 will be coerced to 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public RegistryListApiDeploymentsRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * A page token, received from a previous `ListApiDeployments` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListApiDeployments` must match the call that provided the page token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public RegistryListApiDeploymentsRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public RegistryListApiDeploymentsRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

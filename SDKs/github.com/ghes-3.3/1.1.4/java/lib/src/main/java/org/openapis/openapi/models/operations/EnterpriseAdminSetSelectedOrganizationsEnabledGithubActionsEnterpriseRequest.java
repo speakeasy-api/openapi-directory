@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseRequest {
-    
-    public EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterprisePathParams pathParams;
-    public EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseRequest withPathParams(EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterprisePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseRequestBody requestBody;
+    public EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseRequest withRequestBody(EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseRequestBody request;
-    public EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseRequest withRequest(EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseRequestBody request) {
-        this.request = request;
+    /**
+     * The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
+    public String enterprise;
+    public EnterpriseAdminSetSelectedOrganizationsEnabledGithubActionsEnterpriseRequest withEnterprise(String enterprise) {
+        this.enterprise = enterprise;
         return this;
     }
     

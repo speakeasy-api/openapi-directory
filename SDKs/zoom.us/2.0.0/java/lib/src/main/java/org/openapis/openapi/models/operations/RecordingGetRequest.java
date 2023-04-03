@@ -4,27 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RecordingGetRequest {
-    
-    public RecordingGetPathParams pathParams;
-    public RecordingGetRequest withPathParams(RecordingGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Get the `download_access_token` field for downloading meeting recordings.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_fields")
+    public String includeFields;
+    public RecordingGetRequest withIncludeFields(String includeFields) {
+        this.includeFields = includeFields;
         return this;
     }
     
-    
-    public RecordingGetQueryParams queryParams;
-    public RecordingGetRequest withQueryParams(RecordingGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance. 
+     * 
+     * To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance. 
+     * 
+     * If a UUID starts with "/" or contains "//" (example: "/ajXp112QmuoKj4854875=="), you must **double encode** the UUID before making an API request. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=meetingId")
+    public String meetingId;
+    public RecordingGetRequest withMeetingId(String meetingId) {
+        this.meetingId = meetingId;
         return this;
     }
     
-    
-    public RecordingGetSecurity security;
-    public RecordingGetRequest withSecurity(RecordingGetSecurity security) {
-        this.security = security;
+    /**
+     * Time to live (TTL) of the `download_access_token`. This is only valid if the `include_fields` query parameter contains `download_access_token`. The range is between 0-604800.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ttl")
+    public Long ttl;
+    public RecordingGetRequest withTtl(Long ttl) {
+        this.ttl = ttl;
         return this;
     }
     

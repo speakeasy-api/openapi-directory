@@ -4,20 +4,79 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteRolePermissionsBoundaryRequest {
-    
-    public GETDeleteRolePermissionsBoundaryQueryParams queryParams;
-    public GETDeleteRolePermissionsBoundaryRequest withQueryParams(GETDeleteRolePermissionsBoundaryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDeleteRolePermissionsBoundaryActionEnum action;
+    public GETDeleteRolePermissionsBoundaryRequest withAction(GETDeleteRolePermissionsBoundaryActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name (friendly name, not ARN) of the IAM role from which you want to remove the permissions boundary.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RoleName")
+    public String roleName;
+    public GETDeleteRolePermissionsBoundaryRequest withRoleName(String roleName) {
+        this.roleName = roleName;
+        return this;
+    }
     
-    public GETDeleteRolePermissionsBoundaryHeaders headers;
-    public GETDeleteRolePermissionsBoundaryRequest withHeaders(GETDeleteRolePermissionsBoundaryHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDeleteRolePermissionsBoundaryVersionEnum version;
+    public GETDeleteRolePermissionsBoundaryRequest withVersion(GETDeleteRolePermissionsBoundaryVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDeleteRolePermissionsBoundaryRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDeleteRolePermissionsBoundaryRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDeleteRolePermissionsBoundaryRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDeleteRolePermissionsBoundaryRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDeleteRolePermissionsBoundaryRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDeleteRolePermissionsBoundaryRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDeleteRolePermissionsBoundaryRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

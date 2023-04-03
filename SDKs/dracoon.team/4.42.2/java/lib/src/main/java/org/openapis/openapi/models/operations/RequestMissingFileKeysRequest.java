@@ -4,20 +4,80 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestMissingFileKeysRequest {
-    
-    public RequestMissingFileKeysQueryParams queryParams;
-    public RequestMissingFileKeysRequest withQueryParams(RequestMissingFileKeysQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestMissingFileKeysRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
+    /**
+     * File ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=file_id")
+    public Long fileId;
+    public RequestMissingFileKeysRequest withFileId(Long fileId) {
+        this.fileId = fileId;
+        return this;
+    }
     
-    public RequestMissingFileKeysHeaders headers;
-    public RequestMissingFileKeysRequest withHeaders(RequestMissingFileKeysHeaders headers) {
-        this.headers = headers;
+    /**
+     * Range limit.
+     * 
+     * Maximum 500.
+     * 
+     *  For more results please use paging (`offset` + `limit`).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public RequestMissingFileKeysRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Range offset
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public RequestMissingFileKeysRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Room ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=room_id")
+    public Long roomId;
+    public RequestMissingFileKeysRequest withRoomId(Long roomId) {
+        this.roomId = roomId;
+        return this;
+    }
+    
+    /**
+     * Determines which key should be used (NEW)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=use_key")
+    public RequestMissingFileKeysUseKeyEnum useKey;
+    public RequestMissingFileKeysRequest withUseKey(RequestMissingFileKeysUseKeyEnum useKey) {
+        this.useKey = useKey;
+        return this;
+    }
+    
+    /**
+     * User ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
+    public Long userId;
+    public RequestMissingFileKeysRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

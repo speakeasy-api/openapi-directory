@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutApiV1FiltersIdRequest {
-    
-    public PutApiV1FiltersIdPathParams pathParams;
-    public PutApiV1FiltersIdRequest withPathParams(PutApiV1FiltersIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/form-data")
-    public byte[] request;
-    public PutApiV1FiltersIdRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public PutApiV1FiltersIdRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public PutApiV1FiltersIdSecurity security;
-    public PutApiV1FiltersIdRequest withSecurity(PutApiV1FiltersIdSecurity security) {
-        this.security = security;
+    /**
+     * The id of the account in the database
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutApiV1FiltersIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

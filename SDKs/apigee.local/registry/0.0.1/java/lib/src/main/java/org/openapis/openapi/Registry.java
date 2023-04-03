@@ -40,18 +40,18 @@ public class Registry {
      */
     public org.openapis.openapi.models.operations.RegistryCreateApiResponse registryCreateApi(org.openapis.openapi.models.operations.RegistryCreateApiRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryCreateApiPathParams.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryCreateApiRequest.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryCreateApiQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryCreateApiRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -97,18 +97,18 @@ public class Registry {
      */
     public org.openapis.openapi.models.operations.RegistryCreateApiDeploymentResponse registryCreateApiDeployment(org.openapis.openapi.models.operations.RegistryCreateApiDeploymentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryCreateApiDeploymentPathParams.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/deployments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryCreateApiDeploymentRequest.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/deployments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiDeploymentInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryCreateApiDeploymentQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryCreateApiDeploymentRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -154,18 +154,18 @@ public class Registry {
      */
     public org.openapis.openapi.models.operations.RegistryCreateApiSpecResponse registryCreateApiSpec(org.openapis.openapi.models.operations.RegistryCreateApiSpecRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryCreateApiSpecPathParams.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryCreateApiSpecRequest.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiSpecInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryCreateApiSpecQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryCreateApiSpecRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -211,18 +211,18 @@ public class Registry {
      */
     public org.openapis.openapi.models.operations.RegistryCreateApiVersionResponse registryCreateApiVersion(org.openapis.openapi.models.operations.RegistryCreateApiVersionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryCreateApiVersionPathParams.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/versions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryCreateApiVersionRequest.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/versions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiVersionInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryCreateApiVersionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryCreateApiVersionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -268,18 +268,18 @@ public class Registry {
      */
     public org.openapis.openapi.models.operations.RegistryCreateArtifactResponse registryCreateArtifact(org.openapis.openapi.models.operations.RegistryCreateArtifactRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryCreateArtifactPathParams.class, baseUrl, "/v1/projects/{project}/locations/{location}/artifacts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryCreateArtifactRequest.class, baseUrl, "/v1/projects/{project}/locations/{location}/artifacts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "artifactInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryCreateArtifactQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryCreateArtifactRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -325,13 +325,13 @@ public class Registry {
      */
     public org.openapis.openapi.models.operations.RegistryDeleteApiResponse registryDeleteApi(org.openapis.openapi.models.operations.RegistryDeleteApiRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryDeleteApiPathParams.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryDeleteApiRequest.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryDeleteApiQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryDeleteApiRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -371,13 +371,13 @@ public class Registry {
      */
     public org.openapis.openapi.models.operations.RegistryDeleteApiDeploymentResponse registryDeleteApiDeployment(org.openapis.openapi.models.operations.RegistryDeleteApiDeploymentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryDeleteApiDeploymentPathParams.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/deployments/{deployment}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryDeleteApiDeploymentRequest.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/deployments/{deployment}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryDeleteApiDeploymentQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryDeleteApiDeploymentRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -417,7 +417,7 @@ public class Registry {
      */
     public org.openapis.openapi.models.operations.RegistryDeleteApiDeploymentRevisionResponse registryDeleteApiDeploymentRevision(org.openapis.openapi.models.operations.RegistryDeleteApiDeploymentRevisionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryDeleteApiDeploymentRevisionPathParams.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/deployments/{deployment}:deleteRevision", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryDeleteApiDeploymentRevisionRequest.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/deployments/{deployment}:deleteRevision", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -463,13 +463,13 @@ public class Registry {
      */
     public org.openapis.openapi.models.operations.RegistryDeleteApiSpecResponse registryDeleteApiSpec(org.openapis.openapi.models.operations.RegistryDeleteApiSpecRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryDeleteApiSpecPathParams.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryDeleteApiSpecRequest.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryDeleteApiSpecQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryDeleteApiSpecRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -509,7 +509,7 @@ public class Registry {
      */
     public org.openapis.openapi.models.operations.RegistryDeleteApiSpecRevisionResponse registryDeleteApiSpecRevision(org.openapis.openapi.models.operations.RegistryDeleteApiSpecRevisionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryDeleteApiSpecRevisionPathParams.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}:deleteRevision", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryDeleteApiSpecRevisionRequest.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}:deleteRevision", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -555,13 +555,13 @@ public class Registry {
      */
     public org.openapis.openapi.models.operations.RegistryDeleteApiVersionResponse registryDeleteApiVersion(org.openapis.openapi.models.operations.RegistryDeleteApiVersionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryDeleteApiVersionPathParams.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryDeleteApiVersionRequest.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryDeleteApiVersionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryDeleteApiVersionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -601,7 +601,7 @@ public class Registry {
      */
     public org.openapis.openapi.models.operations.RegistryDeleteArtifactResponse registryDeleteArtifact(org.openapis.openapi.models.operations.RegistryDeleteArtifactRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryDeleteArtifactPathParams.class, baseUrl, "/v1/projects/{project}/locations/{location}/artifacts/{artifact}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryDeleteArtifactRequest.class, baseUrl, "/v1/projects/{project}/locations/{location}/artifacts/{artifact}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -641,7 +641,7 @@ public class Registry {
      */
     public org.openapis.openapi.models.operations.RegistryGetApiResponse registryGetApi(org.openapis.openapi.models.operations.RegistryGetApiRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryGetApiPathParams.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryGetApiRequest.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -687,7 +687,7 @@ public class Registry {
      */
     public org.openapis.openapi.models.operations.RegistryGetApiDeploymentResponse registryGetApiDeployment(org.openapis.openapi.models.operations.RegistryGetApiDeploymentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryGetApiDeploymentPathParams.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/deployments/{deployment}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryGetApiDeploymentRequest.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/deployments/{deployment}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -733,7 +733,7 @@ public class Registry {
      */
     public org.openapis.openapi.models.operations.RegistryGetApiSpecResponse registryGetApiSpec(org.openapis.openapi.models.operations.RegistryGetApiSpecRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryGetApiSpecPathParams.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryGetApiSpecRequest.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -779,7 +779,7 @@ public class Registry {
      */
     public org.openapis.openapi.models.operations.RegistryGetApiSpecContentsResponse registryGetApiSpecContents(org.openapis.openapi.models.operations.RegistryGetApiSpecContentsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryGetApiSpecContentsPathParams.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}:getContents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryGetApiSpecContentsRequest.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}:getContents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -819,7 +819,7 @@ public class Registry {
      */
     public org.openapis.openapi.models.operations.RegistryGetApiVersionResponse registryGetApiVersion(org.openapis.openapi.models.operations.RegistryGetApiVersionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryGetApiVersionPathParams.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryGetApiVersionRequest.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -865,7 +865,7 @@ public class Registry {
      */
     public org.openapis.openapi.models.operations.RegistryGetArtifactResponse registryGetArtifact(org.openapis.openapi.models.operations.RegistryGetArtifactRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryGetArtifactPathParams.class, baseUrl, "/v1/projects/{project}/locations/{location}/artifacts/{artifact}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryGetArtifactRequest.class, baseUrl, "/v1/projects/{project}/locations/{location}/artifacts/{artifact}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -911,7 +911,7 @@ public class Registry {
      */
     public org.openapis.openapi.models.operations.RegistryGetArtifactContentsResponse registryGetArtifactContents(org.openapis.openapi.models.operations.RegistryGetArtifactContentsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryGetArtifactContentsPathParams.class, baseUrl, "/v1/projects/{project}/locations/{location}/artifacts/{artifact}:getContents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryGetArtifactContentsRequest.class, baseUrl, "/v1/projects/{project}/locations/{location}/artifacts/{artifact}:getContents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -951,13 +951,13 @@ public class Registry {
      */
     public org.openapis.openapi.models.operations.RegistryListApiDeploymentRevisionsResponse registryListApiDeploymentRevisions(org.openapis.openapi.models.operations.RegistryListApiDeploymentRevisionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryListApiDeploymentRevisionsPathParams.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/deployments/{deployment}:listRevisions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryListApiDeploymentRevisionsRequest.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/deployments/{deployment}:listRevisions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryListApiDeploymentRevisionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryListApiDeploymentRevisionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1003,13 +1003,13 @@ public class Registry {
      */
     public org.openapis.openapi.models.operations.RegistryListApiDeploymentsResponse registryListApiDeployments(org.openapis.openapi.models.operations.RegistryListApiDeploymentsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryListApiDeploymentsPathParams.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/deployments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryListApiDeploymentsRequest.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/deployments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryListApiDeploymentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryListApiDeploymentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1055,13 +1055,13 @@ public class Registry {
      */
     public org.openapis.openapi.models.operations.RegistryListApiSpecRevisionsResponse registryListApiSpecRevisions(org.openapis.openapi.models.operations.RegistryListApiSpecRevisionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryListApiSpecRevisionsPathParams.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}:listRevisions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryListApiSpecRevisionsRequest.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}:listRevisions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryListApiSpecRevisionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryListApiSpecRevisionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1107,13 +1107,13 @@ public class Registry {
      */
     public org.openapis.openapi.models.operations.RegistryListApiSpecsResponse registryListApiSpecs(org.openapis.openapi.models.operations.RegistryListApiSpecsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryListApiSpecsPathParams.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryListApiSpecsRequest.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryListApiSpecsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryListApiSpecsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1159,13 +1159,13 @@ public class Registry {
      */
     public org.openapis.openapi.models.operations.RegistryListApiVersionsResponse registryListApiVersions(org.openapis.openapi.models.operations.RegistryListApiVersionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryListApiVersionsPathParams.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/versions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryListApiVersionsRequest.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/versions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryListApiVersionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryListApiVersionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1211,13 +1211,13 @@ public class Registry {
      */
     public org.openapis.openapi.models.operations.RegistryListApisResponse registryListApis(org.openapis.openapi.models.operations.RegistryListApisRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryListApisPathParams.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryListApisRequest.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryListApisQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryListApisRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1263,13 +1263,13 @@ public class Registry {
      */
     public org.openapis.openapi.models.operations.RegistryListArtifactsResponse registryListArtifacts(org.openapis.openapi.models.operations.RegistryListArtifactsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryListArtifactsPathParams.class, baseUrl, "/v1/projects/{project}/locations/{location}/artifacts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryListArtifactsRequest.class, baseUrl, "/v1/projects/{project}/locations/{location}/artifacts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryListArtifactsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryListArtifactsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1315,12 +1315,12 @@ public class Registry {
      */
     public org.openapis.openapi.models.operations.RegistryReplaceArtifactResponse registryReplaceArtifact(org.openapis.openapi.models.operations.RegistryReplaceArtifactRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryReplaceArtifactPathParams.class, baseUrl, "/v1/projects/{project}/locations/{location}/artifacts/{artifact}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryReplaceArtifactRequest.class, baseUrl, "/v1/projects/{project}/locations/{location}/artifacts/{artifact}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "artifactInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1366,12 +1366,12 @@ public class Registry {
      */
     public org.openapis.openapi.models.operations.RegistryRollbackApiDeploymentResponse registryRollbackApiDeployment(org.openapis.openapi.models.operations.RegistryRollbackApiDeploymentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryRollbackApiDeploymentPathParams.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/deployments/{deployment}:rollback", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryRollbackApiDeploymentRequest.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/deployments/{deployment}:rollback", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "rollbackApiDeploymentRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1417,12 +1417,12 @@ public class Registry {
      */
     public org.openapis.openapi.models.operations.RegistryRollbackApiSpecResponse registryRollbackApiSpec(org.openapis.openapi.models.operations.RegistryRollbackApiSpecRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryRollbackApiSpecPathParams.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}:rollback", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryRollbackApiSpecRequest.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}:rollback", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "rollbackApiSpecRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1468,12 +1468,12 @@ public class Registry {
      */
     public org.openapis.openapi.models.operations.RegistryTagApiDeploymentRevisionResponse registryTagApiDeploymentRevision(org.openapis.openapi.models.operations.RegistryTagApiDeploymentRevisionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryTagApiDeploymentRevisionPathParams.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/deployments/{deployment}:tagRevision", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryTagApiDeploymentRevisionRequest.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/deployments/{deployment}:tagRevision", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "tagApiDeploymentRevisionRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1519,12 +1519,12 @@ public class Registry {
      */
     public org.openapis.openapi.models.operations.RegistryTagApiSpecRevisionResponse registryTagApiSpecRevision(org.openapis.openapi.models.operations.RegistryTagApiSpecRevisionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryTagApiSpecRevisionPathParams.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}:tagRevision", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryTagApiSpecRevisionRequest.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}:tagRevision", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "tagApiSpecRevisionRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1570,18 +1570,18 @@ public class Registry {
      */
     public org.openapis.openapi.models.operations.RegistryUpdateApiResponse registryUpdateApi(org.openapis.openapi.models.operations.RegistryUpdateApiRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryUpdateApiPathParams.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryUpdateApiRequest.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryUpdateApiQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryUpdateApiRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1627,18 +1627,18 @@ public class Registry {
      */
     public org.openapis.openapi.models.operations.RegistryUpdateApiDeploymentResponse registryUpdateApiDeployment(org.openapis.openapi.models.operations.RegistryUpdateApiDeploymentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryUpdateApiDeploymentPathParams.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/deployments/{deployment}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryUpdateApiDeploymentRequest.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/deployments/{deployment}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiDeploymentInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryUpdateApiDeploymentQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryUpdateApiDeploymentRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1684,18 +1684,18 @@ public class Registry {
      */
     public org.openapis.openapi.models.operations.RegistryUpdateApiSpecResponse registryUpdateApiSpec(org.openapis.openapi.models.operations.RegistryUpdateApiSpecRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryUpdateApiSpecPathParams.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryUpdateApiSpecRequest.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiSpecInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryUpdateApiSpecQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryUpdateApiSpecRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1741,18 +1741,18 @@ public class Registry {
      */
     public org.openapis.openapi.models.operations.RegistryUpdateApiVersionResponse registryUpdateApiVersion(org.openapis.openapi.models.operations.RegistryUpdateApiVersionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryUpdateApiVersionPathParams.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistryUpdateApiVersionRequest.class, baseUrl, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiVersionInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryUpdateApiVersionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegistryUpdateApiVersionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

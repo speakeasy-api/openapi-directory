@@ -4,27 +4,82 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLensVersionDifferenceRequest {
-    
-    public GetLensVersionDifferencePathParams pathParams;
-    public GetLensVersionDifferenceRequest withPathParams(GetLensVersionDifferencePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The base version of the lens.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=BaseLensVersion")
+    public String baseLensVersion;
+    public GetLensVersionDifferenceRequest withBaseLensVersion(String baseLensVersion) {
+        this.baseLensVersion = baseLensVersion;
         return this;
     }
     
-    
-    public GetLensVersionDifferenceQueryParams queryParams;
-    public GetLensVersionDifferenceRequest withQueryParams(GetLensVersionDifferenceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=LensAlias")
+    public String lensAlias;
+    public GetLensVersionDifferenceRequest withLensAlias(String lensAlias) {
+        this.lensAlias = lensAlias;
         return this;
     }
     
+    /**
+     * The lens version to target a difference for.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TargetLensVersion")
+    public String targetLensVersion;
+    public GetLensVersionDifferenceRequest withTargetLensVersion(String targetLensVersion) {
+        this.targetLensVersion = targetLensVersion;
+        return this;
+    }
     
-    public GetLensVersionDifferenceHeaders headers;
-    public GetLensVersionDifferenceRequest withHeaders(GetLensVersionDifferenceHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetLensVersionDifferenceRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetLensVersionDifferenceRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetLensVersionDifferenceRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetLensVersionDifferenceRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetLensVersionDifferenceRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetLensVersionDifferenceRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetLensVersionDifferenceRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

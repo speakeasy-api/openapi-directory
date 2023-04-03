@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExportWirelessCSVRequest {
-    
-    public ExportWirelessCSVQueryParams queryParams;
-    public ExportWirelessCSVRequest withQueryParams(ExportWirelessCSVQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ExportWirelessCSVSecurity security;
-    public ExportWirelessCSVRequest withSecurity(ExportWirelessCSVSecurity security) {
-        this.security = security;
+    /**
+     * an optional search string for filtering results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public ExportWirelessCSVRequest withSearch(String search) {
+        this.search = search;
         return this;
     }
     

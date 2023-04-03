@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateNetworkMqttBrokerRequest {
-    
-    public CreateNetworkMqttBrokerPathParams pathParams;
-    public CreateNetworkMqttBrokerRequest withPathParams(CreateNetworkMqttBrokerPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateNetworkMqttBrokerRequestBody requestBody;
+    public CreateNetworkMqttBrokerRequest withRequestBody(CreateNetworkMqttBrokerRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateNetworkMqttBrokerRequestBody request;
-    public CreateNetworkMqttBrokerRequest withRequest(CreateNetworkMqttBrokerRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public CreateNetworkMqttBrokerRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

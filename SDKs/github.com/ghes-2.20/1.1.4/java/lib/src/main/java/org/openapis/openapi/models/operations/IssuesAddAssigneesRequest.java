@@ -7,17 +7,34 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssuesAddAssigneesRequest {
-    
-    public IssuesAddAssigneesPathParams pathParams;
-    public IssuesAddAssigneesRequest withPathParams(IssuesAddAssigneesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public IssuesAddAssigneesRequestBody requestBody;
+    public IssuesAddAssigneesRequest withRequestBody(IssuesAddAssigneesRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public IssuesAddAssigneesRequestBody request;
-    public IssuesAddAssigneesRequest withRequest(IssuesAddAssigneesRequestBody request) {
-        this.request = request;
+    /**
+     * issue_number parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=issue_number")
+    public Long issueNumber;
+    public IssuesAddAssigneesRequest withIssueNumber(Long issueNumber) {
+        this.issueNumber = issueNumber;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssuesAddAssigneesRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssuesAddAssigneesRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

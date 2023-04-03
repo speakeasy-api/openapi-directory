@@ -38,7 +38,7 @@ public class PatientController {
      */
     public org.openapis.openapi.models.operations.GetBasicPatientDetailsResponse getBasicPatientDetails(org.openapis.openapi.models.operations.GetBasicPatientDetailsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBasicPatientDetailsPathParams.class, baseUrl, "/patient/{userId}/basic", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBasicPatientDetailsRequest.class, baseUrl, "/patient/{userId}/basic", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

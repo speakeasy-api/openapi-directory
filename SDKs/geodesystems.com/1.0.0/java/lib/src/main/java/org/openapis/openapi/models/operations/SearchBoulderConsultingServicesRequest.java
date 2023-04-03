@@ -4,13 +4,287 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchBoulderConsultingServicesRequest {
+    /**
+     * Archive change date from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.from")
+    public OffsetDateTime changedateFrom;
+    public SearchBoulderConsultingServicesRequest withChangedateFrom(OffsetDateTime changedateFrom) {
+        this.changedateFrom = changedateFrom;
+        return this;
+    }
     
-    public SearchBoulderConsultingServicesQueryParams queryParams;
-    public SearchBoulderConsultingServicesRequest withQueryParams(SearchBoulderConsultingServicesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Archive change date to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.to")
+    public OffsetDateTime changedateTo;
+    public SearchBoulderConsultingServicesRequest withChangedateTo(OffsetDateTime changedateTo) {
+        this.changedateTo = changedateTo;
+        return this;
+    }
+    
+    /**
+     * Archive create date from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.from")
+    public OffsetDateTime createdateFrom;
+    public SearchBoulderConsultingServicesRequest withCreatedateFrom(OffsetDateTime createdateFrom) {
+        this.createdateFrom = createdateFrom;
+        return this;
+    }
+    
+    /**
+     * Archive create date to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.to")
+    public OffsetDateTime createdateTo;
+    public SearchBoulderConsultingServicesRequest withCreatedateTo(OffsetDateTime createdateTo) {
+        this.createdateTo = createdateTo;
+        return this;
+    }
+    
+    /**
+     * Search description
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
+    public String description;
+    public SearchBoulderConsultingServicesRequest withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    
+    /**
+     * File suffix
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filesuffix")
+    public String filesuffix;
+    public SearchBoulderConsultingServicesRequest withFilesuffix(String filesuffix) {
+        this.filesuffix = filesuffix;
+        return this;
+    }
+    
+    /**
+     * From date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
+    public OffsetDateTime fromdate;
+    public SearchBoulderConsultingServicesRequest withFromdate(OffsetDateTime fromdate) {
+        this.fromdate = fromdate;
+        return this;
+    }
+    
+    /**
+     * Parent entry
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
+    public String group;
+    public SearchBoulderConsultingServicesRequest withGroup(String group) {
+        this.group = group;
+        return this;
+    }
+    
+    /**
+     * Max number of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
+    public Long max;
+    public SearchBoulderConsultingServicesRequest withMax(Long max) {
+        this.max = max;
+        return this;
+    }
+    
+    /**
+     * Northern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlatitude")
+    public Float maxlatitude;
+    public SearchBoulderConsultingServicesRequest withMaxlatitude(Float maxlatitude) {
+        this.maxlatitude = maxlatitude;
+        return this;
+    }
+    
+    /**
+     * Eastern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlongitude")
+    public Float maxlongitude;
+    public SearchBoulderConsultingServicesRequest withMaxlongitude(Float maxlongitude) {
+        this.maxlongitude = maxlongitude;
+        return this;
+    }
+    
+    /**
+     * Southern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlatitude")
+    public Float minlatitude;
+    public SearchBoulderConsultingServicesRequest withMinlatitude(Float minlatitude) {
+        this.minlatitude = minlatitude;
+        return this;
+    }
+    
+    /**
+     * Western bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlongitude")
+    public Float minlongitude;
+    public SearchBoulderConsultingServicesRequest withMinlongitude(Float minlongitude) {
+        this.minlongitude = minlongitude;
+        return this;
+    }
+    
+    /**
+     * Search name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public SearchBoulderConsultingServicesRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Account Description
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_consulting_services.account_description")
+    public String searchDbBoulderConsultingServicesAccountDescription;
+    public SearchBoulderConsultingServicesRequest withSearchDbBoulderConsultingServicesAccountDescription(String searchDbBoulderConsultingServicesAccountDescription) {
+        this.searchDbBoulderConsultingServicesAccountDescription = searchDbBoulderConsultingServicesAccountDescription;
+        return this;
+    }
+    
+    /**
+     * Amount
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_consulting_services.amount")
+    public Double searchDbBoulderConsultingServicesAmount;
+    public SearchBoulderConsultingServicesRequest withSearchDbBoulderConsultingServicesAmount(Double searchDbBoulderConsultingServicesAmount) {
+        this.searchDbBoulderConsultingServicesAmount = searchDbBoulderConsultingServicesAmount;
+        return this;
+    }
+    
+    /**
+     * Comment
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_consulting_services.comment")
+    public String searchDbBoulderConsultingServicesComment;
+    public SearchBoulderConsultingServicesRequest withSearchDbBoulderConsultingServicesComment(String searchDbBoulderConsultingServicesComment) {
+        this.searchDbBoulderConsultingServicesComment = searchDbBoulderConsultingServicesComment;
+        return this;
+    }
+    
+    /**
+     * Date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_consulting_services.date")
+    public String searchDbBoulderConsultingServicesDate;
+    public SearchBoulderConsultingServicesRequest withSearchDbBoulderConsultingServicesDate(String searchDbBoulderConsultingServicesDate) {
+        this.searchDbBoulderConsultingServicesDate = searchDbBoulderConsultingServicesDate;
+        return this;
+    }
+    
+    /**
+     * Department
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_consulting_services.department")
+    public String searchDbBoulderConsultingServicesDepartment;
+    public SearchBoulderConsultingServicesRequest withSearchDbBoulderConsultingServicesDepartment(String searchDbBoulderConsultingServicesDepartment) {
+        this.searchDbBoulderConsultingServicesDepartment = searchDbBoulderConsultingServicesDepartment;
+        return this;
+    }
+    
+    /**
+     * Fund
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_consulting_services.fund")
+    public String searchDbBoulderConsultingServicesFund;
+    public SearchBoulderConsultingServicesRequest withSearchDbBoulderConsultingServicesFund(String searchDbBoulderConsultingServicesFund) {
+        this.searchDbBoulderConsultingServicesFund = searchDbBoulderConsultingServicesFund;
+        return this;
+    }
+    
+    /**
+     * Object
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_consulting_services.object")
+    public String searchDbBoulderConsultingServicesObject;
+    public SearchBoulderConsultingServicesRequest withSearchDbBoulderConsultingServicesObject(String searchDbBoulderConsultingServicesObject) {
+        this.searchDbBoulderConsultingServicesObject = searchDbBoulderConsultingServicesObject;
+        return this;
+    }
+    
+    /**
+     * Organization
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_consulting_services.organization")
+    public String searchDbBoulderConsultingServicesOrganization;
+    public SearchBoulderConsultingServicesRequest withSearchDbBoulderConsultingServicesOrganization(String searchDbBoulderConsultingServicesOrganization) {
+        this.searchDbBoulderConsultingServicesOrganization = searchDbBoulderConsultingServicesOrganization;
+        return this;
+    }
+    
+    /**
+     * Project
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_consulting_services.project")
+    public String searchDbBoulderConsultingServicesProject;
+    public SearchBoulderConsultingServicesRequest withSearchDbBoulderConsultingServicesProject(String searchDbBoulderConsultingServicesProject) {
+        this.searchDbBoulderConsultingServicesProject = searchDbBoulderConsultingServicesProject;
+        return this;
+    }
+    
+    /**
+     * Purchase Order
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_consulting_services.purchase_order")
+    public String searchDbBoulderConsultingServicesPurchaseOrder;
+    public SearchBoulderConsultingServicesRequest withSearchDbBoulderConsultingServicesPurchaseOrder(String searchDbBoulderConsultingServicesPurchaseOrder) {
+        this.searchDbBoulderConsultingServicesPurchaseOrder = searchDbBoulderConsultingServicesPurchaseOrder;
+        return this;
+    }
+    
+    /**
+     * Vendor Name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_consulting_services.vendor_name")
+    public String searchDbBoulderConsultingServicesVendorName;
+    public SearchBoulderConsultingServicesRequest withSearchDbBoulderConsultingServicesVendorName(String searchDbBoulderConsultingServicesVendorName) {
+        this.searchDbBoulderConsultingServicesVendorName = searchDbBoulderConsultingServicesVendorName;
+        return this;
+    }
+    
+    /**
+     * Number to skip
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
+    public Long skip;
+    public SearchBoulderConsultingServicesRequest withSkip(Long skip) {
+        this.skip = skip;
+        return this;
+    }
+    
+    /**
+     * Search text
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
+    public String text;
+    public SearchBoulderConsultingServicesRequest withText(String text) {
+        this.text = text;
+        return this;
+    }
+    
+    /**
+     * To date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
+    public OffsetDateTime todate;
+    public SearchBoulderConsultingServicesRequest withTodate(OffsetDateTime todate) {
+        this.todate = todate;
         return this;
     }
     

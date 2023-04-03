@@ -35,7 +35,7 @@ public class TanzaniaRegions {
      */
     public org.openapis.openapi.models.operations.TanzaniaRegionsResponse tanzaniaRegions(org.openapis.openapi.models.operations.TanzaniaRegionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TanzaniaRegionsPathParams.class, baseUrl, "/{country}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TanzaniaRegionsRequest.class, baseUrl, "/{country}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

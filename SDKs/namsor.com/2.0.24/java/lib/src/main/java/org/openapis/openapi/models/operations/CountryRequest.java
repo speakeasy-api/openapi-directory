@@ -4,20 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CountryRequest {
-    
-    public CountryPathParams pathParams;
-    public CountryRequest withPathParams(CountryPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CountrySecurity security;
-    public CountryRequest withSecurity(CountrySecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=personalNameFull")
+    public String personalNameFull;
+    public CountryRequest withPersonalNameFull(String personalNameFull) {
+        this.personalNameFull = personalNameFull;
         return this;
     }
     

@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExportPackageSystemsRequest {
-    
-    public ExportPackageSystemsPathParams pathParams;
-    public ExportPackageSystemsRequest withPathParams(ExportPackageSystemsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filter systems by their SAP SIDs
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[system_profile][sap_sids][in]")
+    public String[] filterSystemProfileSapSidsIn;
+    public ExportPackageSystemsRequest withFilterSystemProfileSapSidsIn(String[] filterSystemProfileSapSidsIn) {
+        this.filterSystemProfileSapSidsIn = filterSystemProfileSapSidsIn;
         return this;
     }
     
-    
-    public ExportPackageSystemsQueryParams queryParams;
-    public ExportPackageSystemsRequest withQueryParams(ExportPackageSystemsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter only SAP systems
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[system_profile][sap_system]")
+    public String filterSystemProfileSapSystem;
+    public ExportPackageSystemsRequest withFilterSystemProfileSapSystem(String filterSystemProfileSapSystem) {
+        this.filterSystemProfileSapSystem = filterSystemProfileSapSystem;
         return this;
     }
     
+    /**
+     * Package name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=package_name")
+    public String packageName;
+    public ExportPackageSystemsRequest withPackageName(String packageName) {
+        this.packageName = packageName;
+        return this;
+    }
     
-    public ExportPackageSystemsSecurity security;
-    public ExportPackageSystemsRequest withSecurity(ExportPackageSystemsSecurity security) {
-        this.security = security;
+    /**
+     * Tag filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
+    public String[] tags;
+    public ExportPackageSystemsRequest withTags(String[] tags) {
+        this.tags = tags;
         return this;
     }
     

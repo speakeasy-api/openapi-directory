@@ -40,12 +40,12 @@ public class Vlans {
      */
     public org.openapis.openapi.models.operations.CreateNetworkApplianceVlanResponse createNetworkApplianceVlan(org.openapis.openapi.models.operations.CreateNetworkApplianceVlanRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkApplianceVlanPathParams.class, baseUrl, "/networks/{networkId}/appliance/vlans", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkApplianceVlanRequest.class, baseUrl, "/networks/{networkId}/appliance/vlans", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -85,7 +85,7 @@ public class Vlans {
      */
     public org.openapis.openapi.models.operations.DeleteNetworkApplianceVlanResponse deleteNetworkApplianceVlan(org.openapis.openapi.models.operations.DeleteNetworkApplianceVlanRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkApplianceVlanPathParams.class, baseUrl, "/networks/{networkId}/appliance/vlans/{vlanId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkApplianceVlanRequest.class, baseUrl, "/networks/{networkId}/appliance/vlans/{vlanId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -119,7 +119,7 @@ public class Vlans {
      */
     public org.openapis.openapi.models.operations.GetNetworkApplianceVlanResponse getNetworkApplianceVlan(org.openapis.openapi.models.operations.GetNetworkApplianceVlanRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceVlanPathParams.class, baseUrl, "/networks/{networkId}/appliance/vlans/{vlanId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceVlanRequest.class, baseUrl, "/networks/{networkId}/appliance/vlans/{vlanId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -159,7 +159,7 @@ public class Vlans {
      */
     public org.openapis.openapi.models.operations.GetNetworkApplianceVlansResponse getNetworkApplianceVlans(org.openapis.openapi.models.operations.GetNetworkApplianceVlansRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceVlansPathParams.class, baseUrl, "/networks/{networkId}/appliance/vlans", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceVlansRequest.class, baseUrl, "/networks/{networkId}/appliance/vlans", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -199,7 +199,7 @@ public class Vlans {
      */
     public org.openapis.openapi.models.operations.GetNetworkApplianceVlansSettingsResponse getNetworkApplianceVlansSettings(org.openapis.openapi.models.operations.GetNetworkApplianceVlansSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceVlansSettingsPathParams.class, baseUrl, "/networks/{networkId}/appliance/vlans/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceVlansSettingsRequest.class, baseUrl, "/networks/{networkId}/appliance/vlans/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -239,12 +239,12 @@ public class Vlans {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkApplianceVlanResponse updateNetworkApplianceVlan(org.openapis.openapi.models.operations.UpdateNetworkApplianceVlanRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceVlanPathParams.class, baseUrl, "/networks/{networkId}/appliance/vlans/{vlanId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceVlanRequest.class, baseUrl, "/networks/{networkId}/appliance/vlans/{vlanId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -281,12 +281,12 @@ public class Vlans {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkApplianceVlansSettingsResponse updateNetworkApplianceVlansSettings(org.openapis.openapi.models.operations.UpdateNetworkApplianceVlansSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceVlansSettingsPathParams.class, baseUrl, "/networks/{networkId}/appliance/vlans/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceVlansSettingsRequest.class, baseUrl, "/networks/{networkId}/appliance/vlans/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

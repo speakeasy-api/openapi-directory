@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExecuteBuyTrasactionRequest {
-    
-    public ExecuteBuyTrasactionHeaders headers;
-    public ExecuteBuyTrasactionRequest withHeaders(ExecuteBuyTrasactionHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public ExecuteBuyTrasactionBuyTransactionRequest request;
-    public ExecuteBuyTrasactionRequest withRequest(ExecuteBuyTrasactionBuyTransactionRequest request) {
-        this.request = request;
+    public ExecuteBuyTrasactionBuyTransactionRequest requestBody;
+    public ExecuteBuyTrasactionRequest withRequestBody(ExecuteBuyTrasactionBuyTransactionRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public ExecuteBuyTrasactionSecurity security;
-    public ExecuteBuyTrasactionRequest withSecurity(ExecuteBuyTrasactionSecurity security) {
-        this.security = security;
+    /**
+     * ApiSecretKey
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public ExecuteBuyTrasactionRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

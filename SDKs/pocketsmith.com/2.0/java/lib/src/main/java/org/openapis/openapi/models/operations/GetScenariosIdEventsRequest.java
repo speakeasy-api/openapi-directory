@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetScenariosIdEventsRequest {
-    
-    public GetScenariosIdEventsPathParams pathParams;
-    public GetScenariosIdEventsRequest withPathParams(GetScenariosIdEventsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Return the events until and including this date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
+    public String endDate;
+    public GetScenariosIdEventsRequest withEndDate(String endDate) {
+        this.endDate = endDate;
         return this;
     }
     
+    /**
+     * The unique identifier of the scenario.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetScenariosIdEventsRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetScenariosIdEventsQueryParams queryParams;
-    public GetScenariosIdEventsRequest withQueryParams(GetScenariosIdEventsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Return the events from and including this date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
+    public String startDate;
+    public GetScenariosIdEventsRequest withStartDate(String startDate) {
+        this.startDate = startDate;
         return this;
     }
     

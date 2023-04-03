@@ -7,24 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImportLibraryV2Request {
-    
-    public ImportLibraryV2PathParams pathParams;
-    public ImportLibraryV2Request withPathParams(ImportLibraryV2PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.BulkImportRequest request;
-    public ImportLibraryV2Request withRequest(org.openapis.openapi.models.shared.BulkImportRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.BulkImportRequest bulkImportRequest;
+    public ImportLibraryV2Request withBulkImportRequest(org.openapis.openapi.models.shared.BulkImportRequest bulkImportRequest) {
+        this.bulkImportRequest = bulkImportRequest;
         return this;
     }
     
-    
-    public ImportLibraryV2Security security;
-    public ImportLibraryV2Request withSecurity(ImportLibraryV2Security security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationUuid")
+    public String organizationUuid;
+    public ImportLibraryV2Request withOrganizationUuid(String organizationUuid) {
+        this.organizationUuid = organizationUuid;
         return this;
     }
     

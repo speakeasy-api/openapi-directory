@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostVolumesFsCreateRequest {
-    
-    public PostVolumesFsCreateHeaders headers;
-    public PostVolumesFsCreateRequest withHeaders(PostVolumesFsCreateHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * The input parameter to create a new file share in a space.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.FileshareParam request;
-    public PostVolumesFsCreateRequest withRequest(org.openapis.openapi.models.shared.FileshareParam request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.FileshareParam fileshareParam;
+    public PostVolumesFsCreateRequest withFileshareParam(org.openapis.openapi.models.shared.FileshareParam fileshareParam) {
+        this.fileshareParam = fileshareParam;
+        return this;
+    }
+    
+    /**
+     * The unique ID of your organization space where you want to create or work with your containers. Run `cf space &lt;space_name&gt; --guid`, where `&lt;space_name&gt;` is the name of your space, to retrieve your space ID.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Project-Id")
+    public String xAuthProjectId;
+    public PostVolumesFsCreateRequest withXAuthProjectId(String xAuthProjectId) {
+        this.xAuthProjectId = xAuthProjectId;
+        return this;
+    }
+    
+    /**
+     * The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Token")
+    public String xAuthToken;
+    public PostVolumesFsCreateRequest withXAuthToken(String xAuthToken) {
+        this.xAuthToken = xAuthToken;
         return this;
     }
     

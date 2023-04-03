@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountManagedDomainRequest {
-    
-    public AccountManagedDomainPathParams pathParams;
-    public AccountManagedDomainRequest withPathParams(AccountManagedDomainPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AccountManagedDomainSecurity security;
-    public AccountManagedDomainRequest withSecurity(AccountManagedDomainSecurity security) {
-        this.security = security;
+    /**
+     * Unique Identifier of the account. To retrieve locked settings of the master account or a regular account, provide "me" as the value of this field. &lt;br&gt; To retrieve locked settings of a sub account, provide the Account ID of the sub account in this field.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public AccountManagedDomainRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     

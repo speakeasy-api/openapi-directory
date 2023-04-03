@@ -40,7 +40,7 @@ public class SourceOauth {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CompleteSourceOAuthResponse completeSourceOAuth(org.openapis.openapi.models.operations.CompleteSourceOAuthRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CompleteSourceOAuthResponse completeSourceOAuth(org.openapis.openapi.models.shared.CompleteSourceOauthRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/source_oauths/complete_oauth");
         
@@ -99,7 +99,7 @@ public class SourceOauth {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSourceOAuthConsentResponse getSourceOAuthConsent(org.openapis.openapi.models.operations.GetSourceOAuthConsentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSourceOAuthConsentResponse getSourceOAuthConsent(org.openapis.openapi.models.shared.SourceOauthConsentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/source_oauths/get_consent_url");
         
@@ -158,7 +158,7 @@ public class SourceOauth {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SetInstancewideSourceOauthParamsResponse setInstancewideSourceOauthParams(org.openapis.openapi.models.operations.SetInstancewideSourceOauthParamsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SetInstancewideSourceOauthParamsResponse setInstancewideSourceOauthParams(org.openapis.openapi.models.shared.SetInstancewideSourceOauthParamsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/source_oauths/oauth_params/create");
         

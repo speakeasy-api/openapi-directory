@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StatusIpaliasRequest {
+    /**
+     * IP address , IPv4 or IPv6
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=IP")
+    public String ip;
+    public StatusIpaliasRequest withIp(String ip) {
+        this.ip = ip;
+        return this;
+    }
     
-    public StatusIpaliasPathParams pathParams;
-    public StatusIpaliasRequest withPathParams(StatusIpaliasPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to show status of the IP alias
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public StatusIpaliasRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
+    
+    /**
+     * SNMP port , 0 or empty for default
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=port")
+    public Integer port;
+    public StatusIpaliasRequest withPort(Integer port) {
+        this.port = port;
         return this;
     }
     

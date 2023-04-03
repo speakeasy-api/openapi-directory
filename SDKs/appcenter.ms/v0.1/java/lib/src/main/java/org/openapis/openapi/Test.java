@@ -36,19 +36,20 @@ public class Test {
     /**
      * Logically deletes a test run
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestArchiveTestRunResponse testArchiveTestRun(org.openapis.openapi.models.operations.TestArchiveTestRunRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestArchiveTestRunResponse testArchiveTestRun(org.openapis.openapi.models.operations.TestArchiveTestRunRequest request, org.openapis.openapi.models.operations.TestArchiveTestRunSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestArchiveTestRunPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test_runs/{test_run_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestArchiveTestRunRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test_runs/{test_run_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -77,24 +78,25 @@ public class Test {
     /**
      * Creates a short ID for a list of devices
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestCreateDeviceSelectionResponse testCreateDeviceSelection(org.openapis.openapi.models.operations.TestCreateDeviceSelectionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestCreateDeviceSelectionResponse testCreateDeviceSelection(org.openapis.openapi.models.operations.TestCreateDeviceSelectionRequest request, org.openapis.openapi.models.operations.TestCreateDeviceSelectionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestCreateDeviceSelectionPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/device_selection", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestCreateDeviceSelectionRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/device_selection", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -129,24 +131,25 @@ public class Test {
     /**
      * Creates a device set belonging to the owner
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestCreateDeviceSetOfOwnerResponse testCreateDeviceSetOfOwner(org.openapis.openapi.models.operations.TestCreateDeviceSetOfOwnerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestCreateDeviceSetOfOwnerResponse testCreateDeviceSetOfOwner(org.openapis.openapi.models.operations.TestCreateDeviceSetOfOwnerRequest request, org.openapis.openapi.models.operations.TestCreateDeviceSetOfOwnerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestCreateDeviceSetOfOwnerPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/owner/device_sets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestCreateDeviceSetOfOwnerRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/owner/device_sets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -181,24 +184,25 @@ public class Test {
     /**
      * Creates a device set belonging to the user
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestCreateDeviceSetOfUserResponse testCreateDeviceSetOfUser(org.openapis.openapi.models.operations.TestCreateDeviceSetOfUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestCreateDeviceSetOfUserResponse testCreateDeviceSetOfUser(org.openapis.openapi.models.operations.TestCreateDeviceSetOfUserRequest request, org.openapis.openapi.models.operations.TestCreateDeviceSetOfUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestCreateDeviceSetOfUserPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/user/device_sets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestCreateDeviceSetOfUserRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/user/device_sets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -233,19 +237,20 @@ public class Test {
     /**
      * Accept a free trial subscription
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestCreateSubscriptionResponse testCreateSubscription(org.openapis.openapi.models.operations.TestCreateSubscriptionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestCreateSubscriptionResponse testCreateSubscription(org.openapis.openapi.models.operations.TestCreateSubscriptionRequest request, org.openapis.openapi.models.operations.TestCreateSubscriptionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestCreateSubscriptionPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/subscriptions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestCreateSubscriptionRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/subscriptions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -272,19 +277,20 @@ public class Test {
     /**
      * Creates a new test run
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestCreateTestRunResponse testCreateTestRun(org.openapis.openapi.models.operations.TestCreateTestRunRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestCreateTestRunResponse testCreateTestRun(org.openapis.openapi.models.operations.TestCreateTestRunRequest request, org.openapis.openapi.models.operations.TestCreateTestRunSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestCreateTestRunPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test_runs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestCreateTestRunRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test_runs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -307,24 +313,25 @@ public class Test {
     /**
      * Creates new test series for an application
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestCreateTestSeriesResponse testCreateTestSeries(org.openapis.openapi.models.operations.TestCreateTestSeriesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestCreateTestSeriesResponse testCreateTestSeries(org.openapis.openapi.models.operations.TestCreateTestSeriesRequest request, org.openapis.openapi.models.operations.TestCreateTestSeriesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestCreateTestSeriesPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test_series", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestCreateTestSeriesRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test_series", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -359,19 +366,20 @@ public class Test {
     /**
      * Deletes a device set belonging to the owner
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestDeleteDeviceSetOfOwnerResponse testDeleteDeviceSetOfOwner(org.openapis.openapi.models.operations.TestDeleteDeviceSetOfOwnerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestDeleteDeviceSetOfOwnerResponse testDeleteDeviceSetOfOwner(org.openapis.openapi.models.operations.TestDeleteDeviceSetOfOwnerRequest request, org.openapis.openapi.models.operations.TestDeleteDeviceSetOfOwnerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestDeleteDeviceSetOfOwnerPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/owner/device_sets/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestDeleteDeviceSetOfOwnerRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/owner/device_sets/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -392,19 +400,20 @@ public class Test {
     /**
      * Deletes a device set belonging to the user
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestDeleteDeviceSetOfUserResponse testDeleteDeviceSetOfUser(org.openapis.openapi.models.operations.TestDeleteDeviceSetOfUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestDeleteDeviceSetOfUserResponse testDeleteDeviceSetOfUser(org.openapis.openapi.models.operations.TestDeleteDeviceSetOfUserRequest request, org.openapis.openapi.models.operations.TestDeleteDeviceSetOfUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestDeleteDeviceSetOfUserPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/user/device_sets/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestDeleteDeviceSetOfUserRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/user/device_sets/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -425,19 +434,20 @@ public class Test {
     /**
      * Deletes a single test series
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestDeleteTestSeriesResponse testDeleteTestSeries(org.openapis.openapi.models.operations.TestDeleteTestSeriesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestDeleteTestSeriesResponse testDeleteTestSeries(org.openapis.openapi.models.operations.TestDeleteTestSeriesRequest request, org.openapis.openapi.models.operations.TestDeleteTestSeriesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestDeleteTestSeriesPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test_series/{test_series_slug}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestDeleteTestSeriesRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test_series/{test_series_slug}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -457,11 +467,10 @@ public class Test {
 
     /**
      * Lists account data
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestGdprExportAccountResponse testGdprExportAccount(org.openapis.openapi.models.operations.TestGdprExportAccountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestGdprExportAccountResponse testGdprExportAccount() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/account/test/export/accounts");
         
@@ -470,8 +479,7 @@ public class Test {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -496,11 +504,10 @@ public class Test {
 
     /**
      * Lists all the endpoints available for Test accounts data
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestGdprExportAccountsResponse testGdprExportAccounts(org.openapis.openapi.models.operations.TestGdprExportAccountsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestGdprExportAccountsResponse testGdprExportAccounts() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/account/test/export");
         
@@ -509,8 +516,7 @@ public class Test {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -536,19 +542,20 @@ public class Test {
     /**
      * Lists app data
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestGdprExportAppResponse testGdprExportApp(org.openapis.openapi.models.operations.TestGdprExportAppRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestGdprExportAppResponse testGdprExportApp(org.openapis.openapi.models.operations.TestGdprExportAppRequest request, org.openapis.openapi.models.operations.TestGdprExportAppSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestGdprExportAppPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test/export/apps", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestGdprExportAppRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test/export/apps", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -575,19 +582,20 @@ public class Test {
     /**
      * Lists all the endpoints available for Test apps data
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestGdprExportAppsResponse testGdprExportApps(org.openapis.openapi.models.operations.TestGdprExportAppsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestGdprExportAppsResponse testGdprExportApps(org.openapis.openapi.models.operations.TestGdprExportAppsRequest request, org.openapis.openapi.models.operations.TestGdprExportAppsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestGdprExportAppsPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test/export", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestGdprExportAppsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test/export", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -613,11 +621,10 @@ public class Test {
 
     /**
      * Lists feature flag data
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestGdprExportFeatureFlagResponse testGdprExportFeatureFlag(org.openapis.openapi.models.operations.TestGdprExportFeatureFlagRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestGdprExportFeatureFlagResponse testGdprExportFeatureFlag() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/account/test/export/featureFlags");
         
@@ -626,8 +633,7 @@ public class Test {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -653,19 +659,20 @@ public class Test {
     /**
      * Lists file set file data
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestGdprExportFileSetFileResponse testGdprExportFileSetFile(org.openapis.openapi.models.operations.TestGdprExportFileSetFileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestGdprExportFileSetFileResponse testGdprExportFileSetFile(org.openapis.openapi.models.operations.TestGdprExportFileSetFileRequest request, org.openapis.openapi.models.operations.TestGdprExportFileSetFileSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestGdprExportFileSetFilePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test/export/fileSetFiles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestGdprExportFileSetFileRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test/export/fileSetFiles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -692,19 +699,20 @@ public class Test {
     /**
      * Lists hash file data
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestGdprExportHashFileResponse testGdprExportHashFile(org.openapis.openapi.models.operations.TestGdprExportHashFileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestGdprExportHashFileResponse testGdprExportHashFile(org.openapis.openapi.models.operations.TestGdprExportHashFileRequest request, org.openapis.openapi.models.operations.TestGdprExportHashFileSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestGdprExportHashFilePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test/export/hashFiles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestGdprExportHashFileRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test/export/hashFiles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -731,19 +739,20 @@ public class Test {
     /**
      * Lists pipeline test data
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestGdprExportPipelineTestResponse testGdprExportPipelineTest(org.openapis.openapi.models.operations.TestGdprExportPipelineTestRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestGdprExportPipelineTestResponse testGdprExportPipelineTest(org.openapis.openapi.models.operations.TestGdprExportPipelineTestRequest request, org.openapis.openapi.models.operations.TestGdprExportPipelineTestSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestGdprExportPipelineTestPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test/export/pipelineTests", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestGdprExportPipelineTestRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test/export/pipelineTests", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -770,19 +779,20 @@ public class Test {
     /**
      * Lists test run data
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestGdprExportTestRunResponse testGdprExportTestRun(org.openapis.openapi.models.operations.TestGdprExportTestRunRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestGdprExportTestRunResponse testGdprExportTestRun(org.openapis.openapi.models.operations.TestGdprExportTestRunRequest request, org.openapis.openapi.models.operations.TestGdprExportTestRunSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestGdprExportTestRunPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test/export/testRuns", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestGdprExportTestRunRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test/export/testRuns", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -809,19 +819,20 @@ public class Test {
     /**
      * Returns list of all test runs for a given test series
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestGetAllTestRunsForSeriesResponse testGetAllTestRunsForSeries(org.openapis.openapi.models.operations.TestGetAllTestRunsForSeriesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestGetAllTestRunsForSeriesResponse testGetAllTestRunsForSeries(org.openapis.openapi.models.operations.TestGetAllTestRunsForSeriesRequest request, org.openapis.openapi.models.operations.TestGetAllTestRunsForSeriesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestGetAllTestRunsForSeriesPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test_series/{test_series_slug}/test_runs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestGetAllTestRunsForSeriesRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test_series/{test_series_slug}/test_runs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -848,25 +859,26 @@ public class Test {
     /**
      * Returns list of all test series for an application
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestGetAllTestSeriesResponse testGetAllTestSeries(org.openapis.openapi.models.operations.TestGetAllTestSeriesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestGetAllTestSeriesResponse testGetAllTestSeries(org.openapis.openapi.models.operations.TestGetAllTestSeriesRequest request, org.openapis.openapi.models.operations.TestGetAllTestSeriesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestGetAllTestSeriesPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test_series", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestGetAllTestSeriesRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test_series", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TestGetAllTestSeriesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TestGetAllTestSeriesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -893,25 +905,26 @@ public class Test {
     /**
      * Returns a list of available devices
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestGetDeviceConfigurationsResponse testGetDeviceConfigurations(org.openapis.openapi.models.operations.TestGetDeviceConfigurationsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestGetDeviceConfigurationsResponse testGetDeviceConfigurations(org.openapis.openapi.models.operations.TestGetDeviceConfigurationsRequest request, org.openapis.openapi.models.operations.TestGetDeviceConfigurationsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestGetDeviceConfigurationsPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/device_configurations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestGetDeviceConfigurationsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/device_configurations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TestGetDeviceConfigurationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TestGetDeviceConfigurationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -938,19 +951,20 @@ public class Test {
     /**
      * Gets a device set belonging to the owner
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestGetDeviceSetOfOwnerResponse testGetDeviceSetOfOwner(org.openapis.openapi.models.operations.TestGetDeviceSetOfOwnerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestGetDeviceSetOfOwnerResponse testGetDeviceSetOfOwner(org.openapis.openapi.models.operations.TestGetDeviceSetOfOwnerRequest request, org.openapis.openapi.models.operations.TestGetDeviceSetOfOwnerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestGetDeviceSetOfOwnerPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/owner/device_sets/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestGetDeviceSetOfOwnerRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/owner/device_sets/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -979,19 +993,20 @@ public class Test {
     /**
      * Gets a device set belonging to the user
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestGetDeviceSetOfUserResponse testGetDeviceSetOfUser(org.openapis.openapi.models.operations.TestGetDeviceSetOfUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestGetDeviceSetOfUserResponse testGetDeviceSetOfUser(org.openapis.openapi.models.operations.TestGetDeviceSetOfUserRequest request, org.openapis.openapi.models.operations.TestGetDeviceSetOfUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestGetDeviceSetOfUserPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/user/device_sets/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestGetDeviceSetOfUserRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/user/device_sets/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1020,19 +1035,20 @@ public class Test {
     /**
      * Get information about the currently active subscriptions, if any
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestGetSubscriptionsResponse testGetSubscriptions(org.openapis.openapi.models.operations.TestGetSubscriptionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestGetSubscriptionsResponse testGetSubscriptions(org.openapis.openapi.models.operations.TestGetSubscriptionsRequest request, org.openapis.openapi.models.operations.TestGetSubscriptionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestGetSubscriptionsPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/subscriptions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestGetSubscriptionsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/subscriptions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1059,19 +1075,20 @@ public class Test {
     /**
      * Returns a single test report
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestGetTestReportResponse testGetTestReport(org.openapis.openapi.models.operations.TestGetTestReportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestGetTestReportResponse testGetTestReport(org.openapis.openapi.models.operations.TestGetTestReportRequest request, org.openapis.openapi.models.operations.TestGetTestReportSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestGetTestReportPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test_runs/{test_run_id}/report", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestGetTestReportRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test_runs/{test_run_id}/report", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1098,19 +1115,20 @@ public class Test {
     /**
      * Returns a single test runs
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestGetTestRunResponse testGetTestRun(org.openapis.openapi.models.operations.TestGetTestRunRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestGetTestRunResponse testGetTestRun(org.openapis.openapi.models.operations.TestGetTestRunRequest request, org.openapis.openapi.models.operations.TestGetTestRunSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestGetTestRunPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test_runs/{test_run_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestGetTestRunRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test_runs/{test_run_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1137,19 +1155,20 @@ public class Test {
     /**
      * Gets state of the test run
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestGetTestRunStateResponse testGetTestRunState(org.openapis.openapi.models.operations.TestGetTestRunStateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestGetTestRunStateResponse testGetTestRunState(org.openapis.openapi.models.operations.TestGetTestRunStateRequest request, org.openapis.openapi.models.operations.TestGetTestRunStateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestGetTestRunStatePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test_runs/{test_run_id}/state", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestGetTestRunStateRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test_runs/{test_run_id}/state", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1176,19 +1195,20 @@ public class Test {
     /**
      * Returns a list of test runs
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestGetTestRunsResponse testGetTestRuns(org.openapis.openapi.models.operations.TestGetTestRunsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestGetTestRunsResponse testGetTestRuns(org.openapis.openapi.models.operations.TestGetTestRunsRequest request, org.openapis.openapi.models.operations.TestGetTestRunsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestGetTestRunsPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test_runs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestGetTestRunsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test_runs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1215,19 +1235,20 @@ public class Test {
     /**
      * Lists device sets belonging to the owner
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestListDeviceSetsOfOwnerResponse testListDeviceSetsOfOwner(org.openapis.openapi.models.operations.TestListDeviceSetsOfOwnerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestListDeviceSetsOfOwnerResponse testListDeviceSetsOfOwner(org.openapis.openapi.models.operations.TestListDeviceSetsOfOwnerRequest request, org.openapis.openapi.models.operations.TestListDeviceSetsOfOwnerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestListDeviceSetsOfOwnerPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/owner/device_sets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestListDeviceSetsOfOwnerRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/owner/device_sets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1254,19 +1275,20 @@ public class Test {
     /**
      * Lists device sets belonging to the user
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestListDeviceSetsOfUserResponse testListDeviceSetsOfUser(org.openapis.openapi.models.operations.TestListDeviceSetsOfUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestListDeviceSetsOfUserResponse testListDeviceSetsOfUser(org.openapis.openapi.models.operations.TestListDeviceSetsOfUserRequest request, org.openapis.openapi.models.operations.TestListDeviceSetsOfUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestListDeviceSetsOfUserPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/user/device_sets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestListDeviceSetsOfUserRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/user/device_sets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1293,24 +1315,25 @@ public class Test {
     /**
      * Updates name and slug of a test series
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestPatchTestSeriesResponse testPatchTestSeries(org.openapis.openapi.models.operations.TestPatchTestSeriesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestPatchTestSeriesResponse testPatchTestSeries(org.openapis.openapi.models.operations.TestPatchTestSeriesRequest request, org.openapis.openapi.models.operations.TestPatchTestSeriesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestPatchTestSeriesPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test_series/{test_series_slug}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestPatchTestSeriesRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test_series/{test_series_slug}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1339,24 +1362,25 @@ public class Test {
     /**
      * Starts test run
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestStartTestRunResponse testStartTestRun(org.openapis.openapi.models.operations.TestStartTestRunRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestStartTestRunResponse testStartTestRun(org.openapis.openapi.models.operations.TestStartTestRunRequest request, org.openapis.openapi.models.operations.TestStartTestRunSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestStartTestRunPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test_runs/{test_run_id}/start", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestStartTestRunRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test_runs/{test_run_id}/start", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1383,19 +1407,20 @@ public class Test {
     /**
      * Uploads file for a test run
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestStartUploadingFileResponse testStartUploadingFile(org.openapis.openapi.models.operations.TestStartUploadingFileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestStartUploadingFileResponse testStartUploadingFile(org.openapis.openapi.models.operations.TestStartUploadingFileRequest request, org.openapis.openapi.models.operations.TestStartUploadingFileSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestStartUploadingFilePathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test_runs/{test_run_id}/files", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestStartUploadingFileRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test_runs/{test_run_id}/files", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1420,19 +1445,20 @@ public class Test {
     /**
      * Stop a test run execution
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestStopTestRunResponse testStopTestRun(org.openapis.openapi.models.operations.TestStopTestRunRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestStopTestRunResponse testStopTestRun(org.openapis.openapi.models.operations.TestStopTestRunRequest request, org.openapis.openapi.models.operations.TestStopTestRunSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestStopTestRunPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test_runs/{test_run_id}/stop", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestStopTestRunRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test_runs/{test_run_id}/stop", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1461,24 +1487,25 @@ public class Test {
     /**
      * Updates a device set belonging to the owner
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestUpdateDeviceSetOfOwnerResponse testUpdateDeviceSetOfOwner(org.openapis.openapi.models.operations.TestUpdateDeviceSetOfOwnerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestUpdateDeviceSetOfOwnerResponse testUpdateDeviceSetOfOwner(org.openapis.openapi.models.operations.TestUpdateDeviceSetOfOwnerRequest request, org.openapis.openapi.models.operations.TestUpdateDeviceSetOfOwnerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestUpdateDeviceSetOfOwnerPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/owner/device_sets/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestUpdateDeviceSetOfOwnerRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/owner/device_sets/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1515,24 +1542,25 @@ public class Test {
     /**
      * Updates a device set belonging to the user
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestUpdateDeviceSetOfUserResponse testUpdateDeviceSetOfUser(org.openapis.openapi.models.operations.TestUpdateDeviceSetOfUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestUpdateDeviceSetOfUserResponse testUpdateDeviceSetOfUser(org.openapis.openapi.models.operations.TestUpdateDeviceSetOfUserRequest request, org.openapis.openapi.models.operations.TestUpdateDeviceSetOfUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestUpdateDeviceSetOfUserPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/user/device_sets/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestUpdateDeviceSetOfUserRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/user/device_sets/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1569,24 +1597,25 @@ public class Test {
     /**
      * Adds file with the given hash to a test run
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestUploadHashResponse testUploadHash(org.openapis.openapi.models.operations.TestUploadHashRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestUploadHashResponse testUploadHash(org.openapis.openapi.models.operations.TestUploadHashRequest request, org.openapis.openapi.models.operations.TestUploadHashSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestUploadHashPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test_runs/{test_run_id}/hashes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestUploadHashRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test_runs/{test_run_id}/hashes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1611,24 +1640,25 @@ public class Test {
     /**
      * Adds file with the given hash to a test run
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TestUploadHashesBatchResponse testUploadHashesBatch(org.openapis.openapi.models.operations.TestUploadHashesBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TestUploadHashesBatchResponse testUploadHashesBatch(org.openapis.openapi.models.operations.TestUploadHashesBatchRequest request, org.openapis.openapi.models.operations.TestUploadHashesBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestUploadHashesBatchPathParams.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test_runs/{test_run_id}/hashes/batch", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestUploadHashesBatchRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/test_runs/{test_run_id}/hashes/batch", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

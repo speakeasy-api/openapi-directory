@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVideoLikesRequest {
-    
-    public GetVideoLikesPathParams pathParams;
-    public GetVideoLikesRequest withPathParams(GetVideoLikesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The sort direction of the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public GetVideoLikesDirectionEnum direction;
+    public GetVideoLikesRequest withDirection(GetVideoLikesDirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetVideoLikesRequest withPage(Double page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetVideoLikesQueryParams queryParams;
-    public GetVideoLikesRequest withQueryParams(GetVideoLikesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetVideoLikesRequest withPerPage(Double perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The way to sort the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetVideoLikesSortEnum sort;
+    public GetVideoLikesRequest withSort(GetVideoLikesSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public GetVideoLikesRequest withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

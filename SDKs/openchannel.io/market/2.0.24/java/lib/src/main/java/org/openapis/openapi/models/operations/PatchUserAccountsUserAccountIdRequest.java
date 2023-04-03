@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchUserAccountsUserAccountIdRequest {
-    
-    public PatchUserAccountsUserAccountIdPathParams pathParams;
-    public PatchUserAccountsUserAccountIdRequest withPathParams(PatchUserAccountsUserAccountIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A custom JSON object that you can create and attach to this record
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customData")
+    public String customData;
+    public PatchUserAccountsUserAccountIdRequest withCustomData(String customData) {
+        this.customData = customData;
         return this;
     }
     
+    /**
+     * The contact email address
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public PatchUserAccountsUserAccountIdRequest withEmail(String email) {
+        this.email = email;
+        return this;
+    }
     
-    public PatchUserAccountsUserAccountIdQueryParams queryParams;
-    public PatchUserAccountsUserAccountIdRequest withQueryParams(PatchUserAccountsUserAccountIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The user account name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public PatchUserAccountsUserAccountIdRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * The id of the user account to be updated
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userAccountId")
+    public String userAccountId;
+    public PatchUserAccountsUserAccountIdRequest withUserAccountId(String userAccountId) {
+        this.userAccountId = userAccountId;
+        return this;
+    }
+    
+    /**
+     * The Id of the user that this account belongs to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userId")
+    public String userId;
+    public PatchUserAccountsUserAccountIdRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

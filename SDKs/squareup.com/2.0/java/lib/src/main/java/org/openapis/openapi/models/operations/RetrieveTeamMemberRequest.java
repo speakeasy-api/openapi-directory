@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveTeamMemberRequest {
-    
-    public RetrieveTeamMemberPathParams pathParams;
-    public RetrieveTeamMemberRequest withPathParams(RetrieveTeamMemberPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RetrieveTeamMemberSecurity security;
-    public RetrieveTeamMemberRequest withSecurity(RetrieveTeamMemberSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the team member to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_member_id")
+    public String teamMemberId;
+    public RetrieveTeamMemberRequest withTeamMemberId(String teamMemberId) {
+        this.teamMemberId = teamMemberId;
         return this;
     }
     

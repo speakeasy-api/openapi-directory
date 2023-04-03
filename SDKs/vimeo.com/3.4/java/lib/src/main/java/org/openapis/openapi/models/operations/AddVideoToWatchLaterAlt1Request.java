@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddVideoToWatchLaterAlt1Request {
-    
-    public AddVideoToWatchLaterAlt1PathParams pathParams;
-    public AddVideoToWatchLaterAlt1Request withPathParams(AddVideoToWatchLaterAlt1PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AddVideoToWatchLaterAlt1Security security;
-    public AddVideoToWatchLaterAlt1Request withSecurity(AddVideoToWatchLaterAlt1Security security) {
-        this.security = security;
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public AddVideoToWatchLaterAlt1Request withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

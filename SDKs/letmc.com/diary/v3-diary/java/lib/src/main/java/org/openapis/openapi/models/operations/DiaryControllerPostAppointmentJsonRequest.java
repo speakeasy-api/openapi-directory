@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DiaryControllerPostAppointmentJsonRequest {
-    
-    public DiaryControllerPostAppointmentJsonPathParams pathParams;
-    public DiaryControllerPostAppointmentJsonRequest withPathParams(DiaryControllerPostAppointmentJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DiaryControllerPostAppointmentJsonQueryParams queryParams;
-    public DiaryControllerPostAppointmentJsonRequest withQueryParams(DiaryControllerPostAppointmentJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * The appointment details model
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DiaryAppointmentDetails request;
-    public DiaryControllerPostAppointmentJsonRequest withRequest(org.openapis.openapi.models.shared.DiaryAppointmentDetails request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.DiaryAppointmentDetails diaryAppointmentDetails;
+    public DiaryControllerPostAppointmentJsonRequest withDiaryAppointmentDetails(org.openapis.openapi.models.shared.DiaryAppointmentDetails diaryAppointmentDetails) {
+        this.diaryAppointmentDetails = diaryAppointmentDetails;
+        return this;
+    }
+    
+    /**
+     * Sales or Lettings property?
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lettings")
+    public Boolean lettings;
+    public DiaryControllerPostAppointmentJsonRequest withLettings(Boolean lettings) {
+        this.lettings = lettings;
+        return this;
+    }
+    
+    /**
+     * The unique property identifier (Sales or Lettings)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=propertyIdentifier")
+    public String[] propertyIdentifier;
+    public DiaryControllerPostAppointmentJsonRequest withPropertyIdentifier(String[] propertyIdentifier) {
+        this.propertyIdentifier = propertyIdentifier;
+        return this;
+    }
+    
+    /**
+     * The unique client short-name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
+    public String shortName;
+    public DiaryControllerPostAppointmentJsonRequest withShortName(String shortName) {
+        this.shortName = shortName;
         return this;
     }
     

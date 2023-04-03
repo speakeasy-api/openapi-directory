@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetglobalnumberinfoRequest {
+    /**
+     * International number (with country code) to retrieve information for
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=intlnumber")
+    public String intlnumber;
+    public GetglobalnumberinfoRequest withIntlnumber(String intlnumber) {
+        this.intlnumber = intlnumber;
+        return this;
+    }
     
-    public GetglobalnumberinfoQueryParams queryParams;
-    public GetglobalnumberinfoRequest withQueryParams(GetglobalnumberinfoQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Your Interzoid license API key. Register at www.interzoid.com/register
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
+    public String license;
+    public GetglobalnumberinfoRequest withLicense(String license) {
+        this.license = license;
         return this;
     }
     

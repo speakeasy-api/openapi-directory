@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpacesIdCompanyEntitiesRequest {
-    
-    public GetSpacesIdCompanyEntitiesPathParams pathParams;
-    public GetSpacesIdCompanyEntitiesRequest withPathParams(GetSpacesIdCompanyEntitiesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Legal name of the company entity
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LegalName")
+    public String legalName;
+    public GetSpacesIdCompanyEntitiesRequest withLegalName(String legalName) {
+        this.legalName = legalName;
         return this;
     }
     
+    /**
+     * Name of the company entity
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Name")
+    public String name;
+    public GetSpacesIdCompanyEntitiesRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
     
-    public GetSpacesIdCompanyEntitiesQueryParams queryParams;
-    public GetSpacesIdCompanyEntitiesRequest withQueryParams(GetSpacesIdCompanyEntitiesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * registration number of the company entity
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RegistrationNumber")
+    public String registrationNumber;
+    public GetSpacesIdCompanyEntitiesRequest withRegistrationNumber(String registrationNumber) {
+        this.registrationNumber = registrationNumber;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSpacesIdCompanyEntitiesRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

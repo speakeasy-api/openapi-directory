@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsGetUsersRequest {
-    
-    public TeamsGetUsersPathParams pathParams;
-    public TeamsGetUsersRequest withPathParams(TeamsGetUsersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The organization's name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_name")
+    public String orgName;
+    public TeamsGetUsersRequest withOrgName(String orgName) {
+        this.orgName = orgName;
         return this;
     }
     
-    
-    public TeamsGetUsersSecurity security;
-    public TeamsGetUsersRequest withSecurity(TeamsGetUsersSecurity security) {
-        this.security = security;
+    /**
+     * The team's name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_name")
+    public String teamName;
+    public TeamsGetUsersRequest withTeamName(String teamName) {
+        this.teamName = teamName;
         return this;
     }
     

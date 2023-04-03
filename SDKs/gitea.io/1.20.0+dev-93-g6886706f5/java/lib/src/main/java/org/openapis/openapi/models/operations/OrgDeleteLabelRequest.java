@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgDeleteLabelRequest {
+    /**
+     * id of the label to delete
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public OrgDeleteLabelRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
     
-    public OrgDeleteLabelPathParams pathParams;
-    public OrgDeleteLabelRequest withPathParams(OrgDeleteLabelPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * name of the organization
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public OrgDeleteLabelRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

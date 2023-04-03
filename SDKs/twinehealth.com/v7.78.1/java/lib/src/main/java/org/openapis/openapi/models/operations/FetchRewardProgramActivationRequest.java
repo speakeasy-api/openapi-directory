@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchRewardProgramActivationRequest {
-    
-    public FetchRewardProgramActivationPathParams pathParams;
-    public FetchRewardProgramActivationRequest withPathParams(FetchRewardProgramActivationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Reward program activation identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public FetchRewardProgramActivationRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

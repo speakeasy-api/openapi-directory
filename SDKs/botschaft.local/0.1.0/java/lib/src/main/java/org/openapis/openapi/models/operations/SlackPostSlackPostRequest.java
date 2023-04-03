@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SlackPostSlackPostRequest {
-    
-    public SlackPostSlackPostHeaders headers;
-    public SlackPostSlackPostRequest withHeaders(SlackPostSlackPostHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.SlackMessageRequest slackMessageRequest;
+    public SlackPostSlackPostRequest withSlackMessageRequest(org.openapis.openapi.models.shared.SlackMessageRequest slackMessageRequest) {
+        this.slackMessageRequest = slackMessageRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SlackMessageRequest request;
-    public SlackPostSlackPostRequest withRequest(org.openapis.openapi.models.shared.SlackMessageRequest request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=authorization")
+    public String authorization;
+    public SlackPostSlackPostRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     

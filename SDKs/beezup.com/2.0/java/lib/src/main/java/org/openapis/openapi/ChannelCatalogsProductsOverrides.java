@@ -38,7 +38,7 @@ public class ChannelCatalogsProductsOverrides {
      */
     public org.openapis.openapi.models.operations.ConfigureChannelCatalogProductValueOverrideCopyResponse configureChannelCatalogProductValueOverrideCopy(org.openapis.openapi.models.operations.ConfigureChannelCatalogProductValueOverrideCopyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConfigureChannelCatalogProductValueOverrideCopyPathParams.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/products/{productId}/overrides/copy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConfigureChannelCatalogProductValueOverrideCopyRequest.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/products/{productId}/overrides/copy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -78,7 +78,7 @@ public class ChannelCatalogsProductsOverrides {
      */
     public org.openapis.openapi.models.operations.DeleteChannelCatalogProductValueOverrideResponse deleteChannelCatalogProductValueOverride(org.openapis.openapi.models.operations.DeleteChannelCatalogProductValueOverrideRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteChannelCatalogProductValueOverridePathParams.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/products/{productId}/overrides/{channelColumnId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteChannelCatalogProductValueOverrideRequest.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/products/{productId}/overrides/{channelColumnId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -118,7 +118,7 @@ public class ChannelCatalogsProductsOverrides {
      */
     public org.openapis.openapi.models.operations.GetChannelCatalogProductValueOverrideCopyResponse getChannelCatalogProductValueOverrideCopy(org.openapis.openapi.models.operations.GetChannelCatalogProductValueOverrideCopyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelCatalogProductValueOverrideCopyPathParams.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/products/{productId}/overrides/copy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelCatalogProductValueOverrideCopyRequest.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/products/{productId}/overrides/copy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -158,12 +158,12 @@ public class ChannelCatalogsProductsOverrides {
      */
     public org.openapis.openapi.models.operations.OverrideChannelCatalogProductValuesResponse overrideChannelCatalogProductValues(org.openapis.openapi.models.operations.OverrideChannelCatalogProductValuesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OverrideChannelCatalogProductValuesPathParams.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/products/{productId}/overrides", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OverrideChannelCatalogProductValuesRequest.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/products/{productId}/overrides", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

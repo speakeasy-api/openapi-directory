@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateQuoteForPayoutV3Request {
-    
-    public CreateQuoteForPayoutV3PathParams pathParams;
-    public CreateQuoteForPayoutV3Request withPathParams(CreateQuoteForPayoutV3PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of the payout
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payoutId")
+    public String payoutId;
+    public CreateQuoteForPayoutV3Request withPayoutId(String payoutId) {
+        this.payoutId = payoutId;
         return this;
     }
     

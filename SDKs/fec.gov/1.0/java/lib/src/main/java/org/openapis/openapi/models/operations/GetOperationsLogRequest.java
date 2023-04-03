@@ -4,13 +4,303 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOperationsLogRequest {
+    /**
+     * Amendent types:
+     *     -N   new
+     *     -A   amendment
+     *     -T   terminated
+     *     -C   consolidated
+     *     -M   multi-candidate
+     *     -S   secondary
+     * 
+     * NULL might be new or amendment. If amendment indicator is null and the filings is the first or first in a chain treat it as if it was a new. If it is not the first or first in a chain then treat the filing as an amendment.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=amendment_indicator")
+    public String[] amendmentIndicator;
+    public GetOperationsLogRequest withAmendmentIndicator(String[] amendmentIndicator) {
+        this.amendmentIndicator = amendmentIndicator;
+        return this;
+    }
     
-    public GetOperationsLogQueryParams queryParams;
-    public GetOperationsLogRequest withQueryParams(GetOperationsLogQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * API key for https://api.data.gov. Get one at https://api.data.gov/signup.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetOperationsLogRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
+    
+    /**
+     * Unique identifier for the electronic or paper report. This number is used to construct
+     * PDF URLs to the original document.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=beginning_image_number")
+    public String[] beginningImageNumber;
+    public GetOperationsLogRequest withBeginningImageNumber(String[] beginningImageNumber) {
+        this.beginningImageNumber = beginningImageNumber;
+        return this;
+    }
+    
+    /**
+     * A unique identifier of the registered filer.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=candidate_committee_id")
+    public String[] candidateCommitteeId;
+    public GetOperationsLogRequest withCandidateCommitteeId(String[] candidateCommitteeId) {
+        this.candidateCommitteeId = candidateCommitteeId;
+        return this;
+    }
+    
+    /**
+     * The form where the underlying data comes from, for example, Form 1 would appear as F1:
+     *     - F1   Statement of Organization
+     *     - F1M  Notification of Multicandidate Status
+     *     - F2   Statement of Candidacy
+     *     - F3   Report of Receipts and Disbursements for an Authorized Committee
+     *     - F3P  Report of Receipts and Disbursements by an Authorized Committee of a Candidate for     The Office of President or Vice President
+     *     - F3L  Report of Contributions Bundled by Lobbyists/Registrants and Lobbyist/Registrant PACs
+     *     - F3X  Report of Receipts and Disbursements for other than an Authorized Committee
+     *     - F4   Report of Receipts and Disbursements for a Committee or Organization Supporting a Nomination Convention
+     *     - F5   Report of Independent Expenditures Made and Contributions Received
+     *     - F6   48 Hour Notice of Contributions/Loans Received
+     *     - F7   Report of Communication Costs by Corporations and Membership Organizations
+     *     - F8   Debt Settlement Plan
+     *     - F9   24 Hour Notice of Disbursements for Electioneering Communications
+     *     - F13  Report of Donations Accepted for Inaugural Committee
+     *     - F99  Miscellaneous Text
+     *     - FRQ  Request for Additional Information
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=form_type")
+    public String[] formType;
+    public GetOperationsLogRequest withFormType(String[] formType) {
+        this.formType = formType;
+        return this;
+    }
+    
+    /**
+     * Ending date of the reporting period before this date(MM/DD/YYYY or YYYY-MM-DD)
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_coverage_end_date")
+    public LocalDate maxCoverageEndDate;
+    public GetOperationsLogRequest withMaxCoverageEndDate(LocalDate maxCoverageEndDate) {
+        this.maxCoverageEndDate = maxCoverageEndDate;
+        return this;
+    }
+    
+    /**
+     * Selects all filings received before this date(MM/DD/YYYY or YYYY-MM-DD)
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_receipt_date")
+    public LocalDate maxReceiptDate;
+    public GetOperationsLogRequest withMaxReceiptDate(LocalDate maxReceiptDate) {
+        this.maxReceiptDate = maxReceiptDate;
+        return this;
+    }
+    
+    /**
+     * Select all filings processed completely before this date(MM/DD/YYYY or YYYY-MM-DD)
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_transaction_data_complete_date")
+    public LocalDate maxTransactionDataCompleteDate;
+    public GetOperationsLogRequest withMaxTransactionDataCompleteDate(LocalDate maxTransactionDataCompleteDate) {
+        this.maxTransactionDataCompleteDate = maxTransactionDataCompleteDate;
+        return this;
+    }
+    
+    /**
+     * Ending date of the reporting period after this date(MM/DD/YYYY or YYYY-MM-DD)
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_coverage_end_date")
+    public LocalDate minCoverageEndDate;
+    public GetOperationsLogRequest withMinCoverageEndDate(LocalDate minCoverageEndDate) {
+        this.minCoverageEndDate = minCoverageEndDate;
+        return this;
+    }
+    
+    /**
+     * Selects all filings received after this date(MM/DD/YYYY or YYYY-MM-DD)
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_receipt_date")
+    public LocalDate minReceiptDate;
+    public GetOperationsLogRequest withMinReceiptDate(LocalDate minReceiptDate) {
+        this.minReceiptDate = minReceiptDate;
+        return this;
+    }
+    
+    /**
+     * Select all filings processed completely after this date(MM/DD/YYYY or YYYY-MM-DD)
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_transaction_data_complete_date")
+    public LocalDate minTransactionDataCompleteDate;
+    public GetOperationsLogRequest withMinTransactionDataCompleteDate(LocalDate minTransactionDataCompleteDate) {
+        this.minTransactionDataCompleteDate = minTransactionDataCompleteDate;
+        return this;
+    }
+    
+    /**
+     * For paginating through results, starting at page 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetOperationsLogRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results returned per page. Defaults to 20.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetOperationsLogRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Name of report where the underlying data comes from:
+     *     - 10D Pre-Election
+     *     - 10G Pre-General
+     *     - 10P Pre-Primary
+     *     - 10R Pre-Run-Off
+     *     - 10S Pre-Special
+     *     - 12C Pre-Convention
+     *     - 12G Pre-General
+     *     - 12P Pre-Primary
+     *     - 12R Pre-Run-Off
+     *     - 12S Pre-Special
+     *     - 30D Post-Election
+     *     - 30G Post-General
+     *     - 30P Post-Primary
+     *     - 30R Post-Run-Off
+     *     - 30S Post-Special
+     *     - 60D Post-Convention
+     *     - M1  January Monthly
+     *     - M10 October Monthly
+     *     - M11 November Monthly
+     *     - M12 December Monthly
+     *     - M2  February Monthly
+     *     - M3  March Monthly
+     *     - M4  April Monthly
+     *     - M5  May Monthly
+     *     - M6  June Monthly
+     *     - M7  July Monthly
+     *     - M8  August Monthly
+     *     - M9  September Monthly
+     *     - MY  Mid-Year Report
+     *     - Q1  April Quarterly
+     *     - Q2  July Quarterly
+     *     - Q3  October Quarterly
+     *     - TER Termination Report
+     *     - YE  Year-End
+     *     - ADJ COMP ADJUST AMEND
+     *     - CA  COMPREHENSIVE AMEND
+     *     - 90S Post Inaugural Supplement
+     *     - 90D Post Inaugural
+     *     - 48  48 Hour Notification
+     *     - 24  24 Hour Notification
+     *     - M7S July Monthly/Semi-Annual
+     *     - MSA Monthly Semi-Annual (MY)
+     *     - MYS Monthly Year End/Semi-Annual
+     *     - Q2S July Quarterly/Semi-Annual
+     *     - QSA Quarterly Semi-Annual (MY)
+     *     - QYS Quarterly Year End/Semi-Annual
+     *     - QYE Quarterly Semi-Annual (YE)
+     *     - QMS Quarterly Mid-Year/ Semi-Annual
+     *     - MSY Monthly Semi-Annual (YE)
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=report_type")
+    public String[] reportType;
+    public GetOperationsLogRequest withReportType(String[] reportType) {
+        this.reportType = reportType;
+        return this;
+    }
+    
+    /**
+     * Forms with coverage date - 
+     *     year from the coverage ending date.
+     * Forms without coverage date - 
+     *     year from the receipt date.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=report_year")
+    public Integer[] reportYear;
+    public GetOperationsLogRequest withReportYear(Integer[] reportYear) {
+        this.reportYear = reportYear;
+        return this;
+    }
+    
+    /**
+     * Provide a field to sort by. Use `-` for descending order. ex: `-case_no`
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String[] sort;
+    public GetOperationsLogRequest withSort(String[] sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Hide null values on sorted column(s).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
+    public Boolean sortHideNull;
+    public GetOperationsLogRequest withSortHideNull(Boolean sortHideNull) {
+        this.sortHideNull = sortHideNull;
+        return this;
+    }
+    
+    /**
+     * Toggle that filters out all rows having sort column that is non-null
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
+    public Boolean sortNullOnly;
+    public GetOperationsLogRequest withSortNullOnly(Boolean sortNullOnly) {
+        this.sortNullOnly = sortNullOnly;
+        return this;
+    }
+    
+    /**
+     * Toggle that sorts null values last
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
+    public Boolean sortNullsLast;
+    public GetOperationsLogRequest withSortNullsLast(Boolean sortNullsLast) {
+        this.sortNullsLast = sortNullsLast;
+        return this;
+    }
+    
+    /**
+     * Status of the transactional report.
+     *     -0- Transaction is entered 
+     *           into the system.
+     *           But not verified.
+     *     -1- Transaction is verified.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status_num")
+    public GetOperationsLogStatusNumEnum[] statusNum;
+    public GetOperationsLogRequest withStatusNum(GetOperationsLogStatusNumEnum[] statusNum) {
+        this.statusNum = statusNum;
         return this;
     }
     

@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutConnectorsIdConnectorLogosRequest {
-    
-    public PutConnectorsIdConnectorLogosPathParams pathParams;
-    public PutConnectorsIdConnectorLogosRequest withPathParams(PutConnectorsIdConnectorLogosPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public PutConnectorsIdConnectorLogosRequest withExpand(String expand) {
+        this.expand = expand;
         return this;
     }
     
-    
-    public PutConnectorsIdConnectorLogosQueryParams queryParams;
-    public PutConnectorsIdConnectorLogosRequest withQueryParams(PutConnectorsIdConnectorLogosQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connector")
+    public Long idConnector;
+    public PutConnectorsIdConnectorLogosRequest withIdConnector(Long idConnector) {
+        this.idConnector = idConnector;
         return this;
     }
     

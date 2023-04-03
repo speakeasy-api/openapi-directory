@@ -35,10 +35,11 @@ public class Cards {
      * CreateCard
      * Adds a card on file to an existing merchant.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateCardResponse createCard(org.openapis.openapi.models.operations.CreateCardRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateCardResponse createCard(org.openapis.openapi.models.shared.CreateCardRequest request, org.openapis.openapi.models.operations.CreateCardSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/cards");
         
@@ -52,7 +53,7 @@ public class Cards {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,19 +82,20 @@ public class Cards {
      * Disables the card, preventing any further updates or charges.
      * Disabling an already disabled card is allowed but has no effect.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisableCardResponse disableCard(org.openapis.openapi.models.operations.DisableCardRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisableCardResponse disableCard(org.openapis.openapi.models.operations.DisableCardRequest request, org.openapis.openapi.models.operations.DisableCardSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisableCardPathParams.class, baseUrl, "/v2/cards/{card_id}/disable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisableCardRequest.class, baseUrl, "/v2/cards/{card_id}/disable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -122,10 +124,11 @@ public class Cards {
      * Retrieves a list of cards owned by the account making the request.
      * A max of 25 cards will be returned.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListCardsResponse listCards(org.openapis.openapi.models.operations.ListCardsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListCardsResponse listCards(org.openapis.openapi.models.operations.ListCardsRequest request, org.openapis.openapi.models.operations.ListCardsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/cards");
         
@@ -133,14 +136,14 @@ public class Cards {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCardsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCardsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -168,19 +171,20 @@ public class Cards {
      * RetrieveCard
      * Retrieves details for a specific Card.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrieveCardResponse retrieveCard(org.openapis.openapi.models.operations.RetrieveCardRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveCardResponse retrieveCard(org.openapis.openapi.models.operations.RetrieveCardRequest request, org.openapis.openapi.models.operations.RetrieveCardSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveCardPathParams.class, baseUrl, "/v2/cards/{card_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveCardRequest.class, baseUrl, "/v2/cards/{card_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

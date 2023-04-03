@@ -4,27 +4,60 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsListForTeamDiscussionRequest {
-    
-    public ReactionsListForTeamDiscussionPathParams pathParams;
-    public ReactionsListForTeamDiscussionRequest withPathParams(ReactionsListForTeamDiscussionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * This API is under preview and subject to change.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=accept")
+    public String accept;
+    public ReactionsListForTeamDiscussionRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public ReactionsListForTeamDiscussionQueryParams queryParams;
-    public ReactionsListForTeamDiscussionRequest withQueryParams(ReactionsListForTeamDiscussionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Returns a single [reaction type](https://docs.github.com/enterprise-server@2.20/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a team discussion.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=content")
+    public ReactionsListForTeamDiscussionContentEnum content;
+    public ReactionsListForTeamDiscussionRequest withContent(ReactionsListForTeamDiscussionContentEnum content) {
+        this.content = content;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=discussion_number")
+    public Long discussionNumber;
+    public ReactionsListForTeamDiscussionRequest withDiscussionNumber(Long discussionNumber) {
+        this.discussionNumber = discussionNumber;
+        return this;
+    }
     
-    public ReactionsListForTeamDiscussionHeaders headers;
-    public ReactionsListForTeamDiscussionRequest withHeaders(ReactionsListForTeamDiscussionHeaders headers) {
-        this.headers = headers;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ReactionsListForTeamDiscussionRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ReactionsListForTeamDiscussionRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
+    public Long teamId;
+    public ReactionsListForTeamDiscussionRequest withTeamId(Long teamId) {
+        this.teamId = teamId;
         return this;
     }
     

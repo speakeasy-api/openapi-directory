@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostMerchantsMerchantIdApiCredentialsRequest {
-    
-    public PostMerchantsMerchantIdApiCredentialsPathParams pathParams;
-    public PostMerchantsMerchantIdApiCredentialsRequest withPathParams(PostMerchantsMerchantIdApiCredentialsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateMerchantApiCredentialRequest request;
-    public PostMerchantsMerchantIdApiCredentialsRequest withRequest(org.openapis.openapi.models.shared.CreateMerchantApiCredentialRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CreateMerchantApiCredentialRequest createMerchantApiCredentialRequest;
+    public PostMerchantsMerchantIdApiCredentialsRequest withCreateMerchantApiCredentialRequest(org.openapis.openapi.models.shared.CreateMerchantApiCredentialRequest createMerchantApiCredentialRequest) {
+        this.createMerchantApiCredentialRequest = createMerchantApiCredentialRequest;
         return this;
     }
     
-    
-    public PostMerchantsMerchantIdApiCredentialsSecurity security;
-    public PostMerchantsMerchantIdApiCredentialsRequest withSecurity(PostMerchantsMerchantIdApiCredentialsSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the merchant account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
+    public String merchantId;
+    public PostMerchantsMerchantIdApiCredentialsRequest withMerchantId(String merchantId) {
+        this.merchantId = merchantId;
         return this;
     }
     

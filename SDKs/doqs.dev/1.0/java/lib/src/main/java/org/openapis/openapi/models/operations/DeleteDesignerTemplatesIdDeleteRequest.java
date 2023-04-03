@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteDesignerTemplatesIdDeleteRequest {
-    
-    public DeleteDesignerTemplatesIdDeletePathParams pathParams;
-    public DeleteDesignerTemplatesIdDeleteRequest withPathParams(DeleteDesignerTemplatesIdDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteDesignerTemplatesIdDeleteRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateRoomRequest {
-    
-    public UpdateRoomPathParams pathParams;
-    public UpdateRoomRequest withPathParams(UpdateRoomPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateRoomUpdateRoomRequest request;
-    public UpdateRoomRequest withRequest(UpdateRoomUpdateRoomRequest request) {
-        this.request = request;
+    public UpdateRoomUpdateRoomRequest requestBody;
+    public UpdateRoomRequest withRequestBody(UpdateRoomUpdateRoomRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateRoomSecurity security;
-    public UpdateRoomRequest withSecurity(UpdateRoomSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateRoomRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Room resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateRoomRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

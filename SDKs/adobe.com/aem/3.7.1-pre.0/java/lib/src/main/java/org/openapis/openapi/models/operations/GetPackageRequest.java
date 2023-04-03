@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPackageRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group")
+    public String group;
+    public GetPackageRequest withGroup(String group) {
+        this.group = group;
+        return this;
+    }
     
-    public GetPackagePathParams pathParams;
-    public GetPackageRequest withPathParams(GetPackagePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public GetPackageRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public String version;
+    public GetPackageRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MembershipsRecentlyChangedRequest {
+    /**
+     * The number of days since memberships were updated. For example, if you pass &lt;code&gt;3&lt;/code&gt;, you'll receive all memberships that have been updated in the past 3 days. Valid entries are: &lt;code&gt;1&lt;/code&gt;, &lt;code&gt;2&lt;/code&gt; ... &lt;code&gt;30&lt;/code&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=days")
+    public String days;
+    public MembershipsRecentlyChangedRequest withDays(String days) {
+        this.days = days;
+        return this;
+    }
     
-    public MembershipsRecentlyChangedPathParams pathParams;
-    public MembershipsRecentlyChangedRequest withPathParams(MembershipsRecentlyChangedPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public MembershipsRecentlyChangedFormatEnum format;
+    public MembershipsRecentlyChangedRequest withFormat(MembershipsRecentlyChangedFormatEnum format) {
+        this.format = format;
         return this;
     }
     

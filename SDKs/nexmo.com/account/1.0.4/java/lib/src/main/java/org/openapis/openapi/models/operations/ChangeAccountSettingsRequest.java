@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangeAccountSettingsRequest {
-    
-    public ChangeAccountSettingsQueryParams queryParams;
-    public ChangeAccountSettingsRequest withQueryParams(ChangeAccountSettingsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.AccountSettingsRequest request;
-    public ChangeAccountSettingsRequest withRequest(org.openapis.openapi.models.shared.AccountSettingsRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AccountSettingsRequest accountSettingsRequest;
+    public ChangeAccountSettingsRequest withAccountSettingsRequest(org.openapis.openapi.models.shared.AccountSettingsRequest accountSettingsRequest) {
+        this.accountSettingsRequest = accountSettingsRequest;
         return this;
     }
     
+    /**
+     * Your Vonage API key. You can find this in the [dashboard](https://dashboard.nexmo.com)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public ChangeAccountSettingsRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public String serverURL;
-    public ChangeAccountSettingsRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Your Vonage API secret. You can find this in the [dashboard](https://dashboard.nexmo.com)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_secret")
+    public String apiSecret;
+    public ChangeAccountSettingsRequest withApiSecret(String apiSecret) {
+        this.apiSecret = apiSecret;
         return this;
     }
     

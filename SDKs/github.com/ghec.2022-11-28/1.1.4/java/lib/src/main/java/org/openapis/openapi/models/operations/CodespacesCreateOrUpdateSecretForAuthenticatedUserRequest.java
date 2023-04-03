@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodespacesCreateOrUpdateSecretForAuthenticatedUserRequest {
-    
-    public CodespacesCreateOrUpdateSecretForAuthenticatedUserPathParams pathParams;
-    public CodespacesCreateOrUpdateSecretForAuthenticatedUserRequest withPathParams(CodespacesCreateOrUpdateSecretForAuthenticatedUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CodespacesCreateOrUpdateSecretForAuthenticatedUserRequestBody requestBody;
+    public CodespacesCreateOrUpdateSecretForAuthenticatedUserRequest withRequestBody(CodespacesCreateOrUpdateSecretForAuthenticatedUserRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public CodespacesCreateOrUpdateSecretForAuthenticatedUserRequestBody request;
-    public CodespacesCreateOrUpdateSecretForAuthenticatedUserRequest withRequest(CodespacesCreateOrUpdateSecretForAuthenticatedUserRequestBody request) {
-        this.request = request;
+    /**
+     * The name of the secret.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=secret_name")
+    public String secretName;
+    public CodespacesCreateOrUpdateSecretForAuthenticatedUserRequest withSecretName(String secretName) {
+        this.secretName = secretName;
         return this;
     }
     

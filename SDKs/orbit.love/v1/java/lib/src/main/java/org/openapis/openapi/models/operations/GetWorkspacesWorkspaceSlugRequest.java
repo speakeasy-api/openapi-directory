@@ -4,27 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWorkspacesWorkspaceSlugRequest {
-    
-    public GetWorkspacesWorkspaceSlugPathParams pathParams;
-    public GetWorkspacesWorkspaceSlugRequest withPathParams(GetWorkspacesWorkspaceSlugPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Include the number of members by Orbit Level in the attributes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_orbit_level_counts")
+    public Boolean includeOrbitLevelCounts;
+    public GetWorkspacesWorkspaceSlugRequest withIncludeOrbitLevelCounts(Boolean includeOrbitLevelCounts) {
+        this.includeOrbitLevelCounts = includeOrbitLevelCounts;
         return this;
     }
     
-    
-    public GetWorkspacesWorkspaceSlugQueryParams queryParams;
-    public GetWorkspacesWorkspaceSlugRequest withQueryParams(GetWorkspacesWorkspaceSlugQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetWorkspacesWorkspaceSlugSecurity security;
-    public GetWorkspacesWorkspaceSlugRequest withSecurity(GetWorkspacesWorkspaceSlugSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_slug")
+    public String workspaceSlug;
+    public GetWorkspacesWorkspaceSlugRequest withWorkspaceSlug(String workspaceSlug) {
+        this.workspaceSlug = workspaceSlug;
         return this;
     }
     

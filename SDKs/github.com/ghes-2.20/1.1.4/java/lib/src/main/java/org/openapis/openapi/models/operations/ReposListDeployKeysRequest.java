@@ -4,20 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposListDeployKeysRequest {
-    
-    public ReposListDeployKeysPathParams pathParams;
-    public ReposListDeployKeysRequest withPathParams(ReposListDeployKeysPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposListDeployKeysRequest withOwner(String owner) {
+        this.owner = owner;
         return this;
     }
     
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ReposListDeployKeysRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public ReposListDeployKeysQueryParams queryParams;
-    public ReposListDeployKeysRequest withQueryParams(ReposListDeployKeysQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ReposListDeployKeysRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposListDeployKeysRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

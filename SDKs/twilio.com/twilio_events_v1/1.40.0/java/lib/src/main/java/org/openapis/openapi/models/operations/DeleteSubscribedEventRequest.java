@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSubscribedEventRequest {
-    
-    public DeleteSubscribedEventPathParams pathParams;
-    public DeleteSubscribedEventRequest withPathParams(DeleteSubscribedEventPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique SID identifier of the Subscription.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=SubscriptionSid")
+    public String subscriptionSid;
+    public DeleteSubscribedEventRequest withSubscriptionSid(String subscriptionSid) {
+        this.subscriptionSid = subscriptionSid;
         return this;
     }
     
-    
-    public DeleteSubscribedEventSecurity security;
-    public DeleteSubscribedEventRequest withSecurity(DeleteSubscribedEventSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteSubscribedEventRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Type of event being subscribed to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Type")
+    public String type;
+    public DeleteSubscribedEventRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

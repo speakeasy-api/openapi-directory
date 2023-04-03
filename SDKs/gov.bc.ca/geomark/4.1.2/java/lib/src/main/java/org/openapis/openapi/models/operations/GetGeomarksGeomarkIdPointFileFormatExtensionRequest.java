@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGeomarksGeomarkIdPointFileFormatExtensionRequest {
-    
-    public GetGeomarksGeomarkIdPointFileFormatExtensionPathParams pathParams;
-    public GetGeomarksGeomarkIdPointFileFormatExtensionRequest withPathParams(GetGeomarksGeomarkIdPointFileFormatExtensionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The file format name extension used to represent the geomark download.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileFormatExtension")
+    public GetGeomarksGeomarkIdPointFileFormatExtensionFileFormatExtensionEnum fileFormatExtension;
+    public GetGeomarksGeomarkIdPointFileFormatExtensionRequest withFileFormatExtension(GetGeomarksGeomarkIdPointFileFormatExtensionFileFormatExtensionEnum fileFormatExtension) {
+        this.fileFormatExtension = fileFormatExtension;
         return this;
     }
     
+    /**
+     * The unique identifier for the geomark.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=geomarkId")
+    public String geomarkId;
+    public GetGeomarksGeomarkIdPointFileFormatExtensionRequest withGeomarkId(String geomarkId) {
+        this.geomarkId = geomarkId;
+        return this;
+    }
     
-    public GetGeomarksGeomarkIdPointFileFormatExtensionQueryParams queryParams;
-    public GetGeomarksGeomarkIdPointFileFormatExtensionRequest withQueryParams(GetGeomarksGeomarkIdPointFileFormatExtensionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The srid of the coordinate system the geometry should be converted to.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=srid")
+    public GetGeomarksGeomarkIdPointFileFormatExtensionSridEnum srid;
+    public GetGeomarksGeomarkIdPointFileFormatExtensionRequest withSrid(GetGeomarksGeomarkIdPointFileFormatExtensionSridEnum srid) {
+        this.srid = srid;
         return this;
     }
     

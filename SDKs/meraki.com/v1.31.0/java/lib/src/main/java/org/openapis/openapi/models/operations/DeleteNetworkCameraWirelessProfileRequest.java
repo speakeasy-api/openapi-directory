@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteNetworkCameraWirelessProfileRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public DeleteNetworkCameraWirelessProfileRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
     
-    public DeleteNetworkCameraWirelessProfilePathParams pathParams;
-    public DeleteNetworkCameraWirelessProfileRequest withPathParams(DeleteNetworkCameraWirelessProfilePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=wirelessProfileId")
+    public String wirelessProfileId;
+    public DeleteNetworkCameraWirelessProfileRequest withWirelessProfileId(String wirelessProfileId) {
+        this.wirelessProfileId = wirelessProfileId;
         return this;
     }
     

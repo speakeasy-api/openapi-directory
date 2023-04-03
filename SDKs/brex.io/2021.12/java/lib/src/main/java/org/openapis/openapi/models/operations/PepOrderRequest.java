@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PepOrderRequest {
-    
-    public PepOrderPathParams pathParams;
-    public PepOrderRequest withPathParams(PepOrderPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Optional parameters to enhance search
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public PepOrderRequestBody request;
-    public PepOrderRequest withRequest(PepOrderRequestBody request) {
-        this.request = request;
+    public PepOrderRequestBody requestBody;
+    public PepOrderRequest withRequestBody(PepOrderRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Search string for the Pep Sanction Check
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=search")
+    public String search;
+    public PepOrderRequest withSearch(String search) {
+        this.search = search;
+        return this;
+    }
     
-    public PepOrderSecurity security;
-    public PepOrderRequest withSecurity(PepOrderSecurity security) {
-        this.security = security;
+    /**
+     * Type (Business or Person) of the requested Pep Sanction Check
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
+    public PepOrderTypeEnum type;
+    public PepOrderRequest withType(PepOrderTypeEnum type) {
+        this.type = type;
         return this;
     }
     

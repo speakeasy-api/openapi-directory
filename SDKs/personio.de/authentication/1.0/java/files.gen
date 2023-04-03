@@ -29,7 +29,6 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/PostAuthQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostAuthRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostAuthResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/AuthenticationTokenResponseData.java

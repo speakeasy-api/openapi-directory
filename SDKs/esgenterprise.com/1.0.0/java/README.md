@@ -18,10 +18,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GetSearchSecurity;
-import org.openapis.openapi.models.operations.GetSearchQueryParams;
 import org.openapis.openapi.models.operations.GetSearchRequest;
 import org.openapis.openapi.models.operations.GetSearchResponse;
-import org.openapis.openapi.models.shared.SchemeAPIKey;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,17 +28,12 @@ public class Application {
                 .build();
 
             GetSearchRequest req = new GetSearchRequest() {{
-                security = new GetSearchSecurity() {{
-                    apiKey = new SchemeAPIKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }};
-                queryParams = new GetSearchQueryParams() {{
-                    q = "corrupti";
-                }};
-            }};            
+                q = "corrupti";
+            }}            
 
-            GetSearchResponse res = sdk.rating.getSearch(req);
+            GetSearchResponse res = sdk.rating.getSearch(req, new GetSearchSecurity() {{
+                apiKey = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.getSearch200ApplicationJSONObject.isPresent()) {
                 // handle response
@@ -52,7 +45,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### rating

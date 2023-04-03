@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringRequest {
+    /**
+     * The identifier of the 'aspect' (content group) to search
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=aspectId")
+    public GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDSearchSearchStringAspectIDEnum aspectId;
+    public GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringRequest withAspectId(GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDSearchSearchStringAspectIDEnum aspectId) {
+        this.aspectId = aspectId;
+        return this;
+    }
     
-    public GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringPathParams pathParams;
-    public GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringRequest withPathParams(GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The document identification code for an index or directory
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=civixDocumentId")
+    public String civixDocumentId;
+    public GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringRequest withCivixDocumentId(String civixDocumentId) {
+        this.civixDocumentId = civixDocumentId;
+        return this;
+    }
+    
+    /**
+     * Index identification code
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=civixIndexId")
+    public String civixIndexId;
+    public GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringRequest withCivixIndexId(String civixIndexId) {
+        this.civixIndexId = civixIndexId;
+        return this;
+    }
+    
+    /**
+     * The text to search for within the document
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=searchString")
+    public String searchString;
+    public GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringRequest withSearchString(String searchString) {
+        this.searchString = searchString;
         return this;
     }
     

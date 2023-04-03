@@ -37,10 +37,11 @@ public class AuthConfig {
      * Create one global auth. module config
      * Create one global auth. module config
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateGlobalAuthModuleResponse createGlobalAuthModule(org.openapis.openapi.models.operations.CreateGlobalAuthModuleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateGlobalAuthModuleResponse createGlobalAuthModule(Object request, org.openapis.openapi.models.operations.CreateGlobalAuthModuleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/auths");
         
@@ -51,7 +52,7 @@ public class AuthConfig {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,19 +82,20 @@ public class AuthConfig {
      * Delete one global auth. module config
      * Delete one global auth. module config
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteGlobalAuthModuleResponse deleteGlobalAuthModule(org.openapis.openapi.models.operations.DeleteGlobalAuthModuleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteGlobalAuthModuleResponse deleteGlobalAuthModule(org.openapis.openapi.models.operations.DeleteGlobalAuthModuleRequest request, org.openapis.openapi.models.operations.DeleteGlobalAuthModuleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteGlobalAuthModulePathParams.class, baseUrl, "/api/auths/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteGlobalAuthModuleRequest.class, baseUrl, "/api/auths/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -122,11 +124,10 @@ public class AuthConfig {
     /**
      * Get all global auth. module configs
      * Get all global auth. module configs
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindAllGlobalAuthModulesResponse findAllGlobalAuthModules(org.openapis.openapi.models.operations.FindAllGlobalAuthModulesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FindAllGlobalAuthModulesResponse findAllGlobalAuthModules() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/auths");
         
@@ -135,8 +136,7 @@ public class AuthConfig {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -165,19 +165,20 @@ public class AuthConfig {
      * Get one global auth. module configs
      * Get one global auth. module configs
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindGlobalAuthModuleByIdResponse findGlobalAuthModuleById(org.openapis.openapi.models.operations.FindGlobalAuthModuleByIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FindGlobalAuthModuleByIdResponse findGlobalAuthModuleById(org.openapis.openapi.models.operations.FindGlobalAuthModuleByIdRequest request, org.openapis.openapi.models.operations.FindGlobalAuthModuleByIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FindGlobalAuthModuleByIdPathParams.class, baseUrl, "/api/auths/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FindGlobalAuthModuleByIdRequest.class, baseUrl, "/api/auths/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -207,21 +208,22 @@ public class AuthConfig {
      * Update one global auth. module config
      * Update one global auth. module config
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchGlobalAuthModuleResponse patchGlobalAuthModule(org.openapis.openapi.models.operations.PatchGlobalAuthModuleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchGlobalAuthModuleResponse patchGlobalAuthModule(org.openapis.openapi.models.operations.PatchGlobalAuthModuleRequest request, org.openapis.openapi.models.operations.PatchGlobalAuthModuleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchGlobalAuthModulePathParams.class, baseUrl, "/api/auths/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchGlobalAuthModuleRequest.class, baseUrl, "/api/auths/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -251,21 +253,22 @@ public class AuthConfig {
      * Update one global auth. module config
      * Update one global auth. module config
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateGlobalAuthModuleResponse updateGlobalAuthModule(org.openapis.openapi.models.operations.UpdateGlobalAuthModuleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateGlobalAuthModuleResponse updateGlobalAuthModule(org.openapis.openapi.models.operations.UpdateGlobalAuthModuleRequest request, org.openapis.openapi.models.operations.UpdateGlobalAuthModuleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateGlobalAuthModulePathParams.class, baseUrl, "/api/auths/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateGlobalAuthModuleRequest.class, baseUrl, "/api/auths/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

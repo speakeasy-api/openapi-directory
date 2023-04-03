@@ -31,25 +31,26 @@ public class Purchases {
     /**
      * Checks the purchase and consumption status of an inapp item.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherPurchasesProductsGetResponse androidpublisherPurchasesProductsGet(org.openapis.openapi.models.operations.AndroidpublisherPurchasesProductsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherPurchasesProductsGetResponse androidpublisherPurchasesProductsGet(org.openapis.openapi.models.operations.AndroidpublisherPurchasesProductsGetRequest request, org.openapis.openapi.models.operations.AndroidpublisherPurchasesProductsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherPurchasesProductsGetPathParams.class, baseUrl, "/{packageName}/purchases/products/{productId}/tokens/{token}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherPurchasesProductsGetRequest.class, baseUrl, "/{packageName}/purchases/products/{productId}/tokens/{token}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherPurchasesProductsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherPurchasesProductsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -75,25 +76,26 @@ public class Purchases {
     /**
      * Cancels a user's subscription purchase. The subscription remains valid until its expiration time.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsCancelResponse androidpublisherPurchasesSubscriptionsCancel(org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsCancelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsCancelResponse androidpublisherPurchasesSubscriptionsCancel(org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsCancelRequest request, org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsCancelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsCancelPathParams.class, baseUrl, "/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsCancelRequest.class, baseUrl, "/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsCancelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsCancelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -114,27 +116,28 @@ public class Purchases {
     /**
      * Defers a user's subscription purchase until a specified future expiration time.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsDeferResponse androidpublisherPurchasesSubscriptionsDefer(org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsDeferRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsDeferResponse androidpublisherPurchasesSubscriptionsDefer(org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsDeferRequest request, org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsDeferSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsDeferPathParams.class, baseUrl, "/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:defer", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsDeferRequest.class, baseUrl, "/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:defer", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "subscriptionPurchasesDeferRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsDeferQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsDeferRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -160,25 +163,26 @@ public class Purchases {
     /**
      * Checks whether a user's subscription purchase is valid and returns its expiry time.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsGetResponse androidpublisherPurchasesSubscriptionsGet(org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsGetResponse androidpublisherPurchasesSubscriptionsGet(org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsGetRequest request, org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsGetPathParams.class, baseUrl, "/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsGetRequest.class, baseUrl, "/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -204,25 +208,26 @@ public class Purchases {
     /**
      * Refunds a user's subscription purchase, but the subscription remains valid until its expiration time and it will continue to recur.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsRefundResponse androidpublisherPurchasesSubscriptionsRefund(org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsRefundRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsRefundResponse androidpublisherPurchasesSubscriptionsRefund(org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsRefundRequest request, org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsRefundSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsRefundPathParams.class, baseUrl, "/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:refund", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsRefundRequest.class, baseUrl, "/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:refund", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsRefundQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsRefundRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -243,25 +248,26 @@ public class Purchases {
     /**
      * Refunds and immediately revokes a user's subscription purchase. Access to the subscription will be terminated immediately and it will stop recurring.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsRevokeResponse androidpublisherPurchasesSubscriptionsRevoke(org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsRevokeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsRevokeResponse androidpublisherPurchasesSubscriptionsRevoke(org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsRevokeRequest request, org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsRevokeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsRevokePathParams.class, baseUrl, "/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:revoke", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsRevokeRequest.class, baseUrl, "/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:revoke", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsRevokeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherPurchasesSubscriptionsRevokeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -282,25 +288,26 @@ public class Purchases {
     /**
      * Lists the purchases that were canceled, refunded or charged-back.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherPurchasesVoidedpurchasesListResponse androidpublisherPurchasesVoidedpurchasesList(org.openapis.openapi.models.operations.AndroidpublisherPurchasesVoidedpurchasesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherPurchasesVoidedpurchasesListResponse androidpublisherPurchasesVoidedpurchasesList(org.openapis.openapi.models.operations.AndroidpublisherPurchasesVoidedpurchasesListRequest request, org.openapis.openapi.models.operations.AndroidpublisherPurchasesVoidedpurchasesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherPurchasesVoidedpurchasesListPathParams.class, baseUrl, "/{packageName}/purchases/voidedpurchases", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherPurchasesVoidedpurchasesListRequest.class, baseUrl, "/{packageName}/purchases/voidedpurchases", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherPurchasesVoidedpurchasesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherPurchasesVoidedpurchasesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

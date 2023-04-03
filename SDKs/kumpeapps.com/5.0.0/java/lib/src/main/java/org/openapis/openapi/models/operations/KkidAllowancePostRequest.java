@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KkidAllowancePostRequest {
-    
-    public KkidAllowancePostQueryParams queryParams;
-    public KkidAllowancePostRequest withQueryParams(KkidAllowancePostQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * amount you wish to Add/Subtract (subtract value should be a negative value)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=amount")
+    public Double amount;
+    public KkidAllowancePostRequest withAmount(Double amount) {
+        this.amount = amount;
         return this;
     }
     
+    /**
+     * Description (reason) of allowance transaction
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
+    public String description;
+    public KkidAllowancePostRequest withDescription(String description) {
+        this.description = description;
+        return this;
+    }
     
-    public KkidAllowancePostSecurity security;
-    public KkidAllowancePostRequest withSecurity(KkidAllowancePostSecurity security) {
-        this.security = security;
+    /**
+     * userID of the kid
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=kidUserId")
+    public Long kidUserId;
+    public KkidAllowancePostRequest withKidUserId(Long kidUserId) {
+        this.kidUserId = kidUserId;
+        return this;
+    }
+    
+    /**
+     * Transaction Type (Add/Subtract)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=transactionType")
+    public KkidAllowancePostTransactionTypeEnum transactionType;
+    public KkidAllowancePostRequest withTransactionType(KkidAllowancePostTransactionTypeEnum transactionType) {
+        this.transactionType = transactionType;
         return this;
     }
     

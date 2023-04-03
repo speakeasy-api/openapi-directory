@@ -139,7 +139,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PremiumNewsResponse premiumNews(org.openapis.openapi.models.operations.PremiumNewsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PremiumNewsPathParams.class, baseUrl, "/{format}/RotoBallerPremiumNews", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PremiumNewsRequest.class, baseUrl, "/{format}/RotoBallerPremiumNews", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -178,7 +178,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PremiumNewsByDateResponse premiumNewsByDate(org.openapis.openapi.models.operations.PremiumNewsByDateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PremiumNewsByDatePathParams.class, baseUrl, "/{format}/RotoBallerPremiumNewsByDate/{date}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PremiumNewsByDateRequest.class, baseUrl, "/{format}/RotoBallerPremiumNewsByDate/{date}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -217,7 +217,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PremiumNewsByPlayerResponse premiumNewsByPlayer(org.openapis.openapi.models.operations.PremiumNewsByPlayerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PremiumNewsByPlayerPathParams.class, baseUrl, "/{format}/RotoBallerPremiumNewsByPlayerID/{playerid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PremiumNewsByPlayerRequest.class, baseUrl, "/{format}/RotoBallerPremiumNewsByPlayerID/{playerid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -256,7 +256,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.PremiumNewsByTeamResponse premiumNewsByTeam(org.openapis.openapi.models.operations.PremiumNewsByTeamRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PremiumNewsByTeamPathParams.class, baseUrl, "/{format}/RotoBallerPremiumNewsByTeam/{team}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PremiumNewsByTeamRequest.class, baseUrl, "/{format}/RotoBallerPremiumNewsByTeam/{team}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

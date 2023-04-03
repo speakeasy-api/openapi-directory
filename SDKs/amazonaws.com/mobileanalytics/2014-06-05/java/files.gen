@@ -29,13 +29,11 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/PutEventsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutEventsRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutEventsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutEventsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/BadRequestException.java
 lib/src/main/java/org/openapis/openapi/models/shared/Event.java
 lib/src/main/java/org/openapis/openapi/models/shared/Session.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeHmac.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

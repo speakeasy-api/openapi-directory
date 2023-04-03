@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IpamRolesUpdateRequest {
-    
-    public IpamRolesUpdatePathParams pathParams;
-    public IpamRolesUpdateRequest withPathParams(IpamRolesUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.RoleInput roleInput;
+    public IpamRolesUpdateRequest withRoleInput(org.openapis.openapi.models.shared.RoleInput roleInput) {
+        this.roleInput = roleInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RoleInput request;
-    public IpamRolesUpdateRequest withRequest(org.openapis.openapi.models.shared.RoleInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this role.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public IpamRolesUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

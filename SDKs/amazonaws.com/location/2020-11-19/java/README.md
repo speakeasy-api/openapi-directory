@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AssociateTrackerConsumerPathParams;
-import org.openapis.openapi.models.operations.AssociateTrackerConsumerHeaders;
 import org.openapis.openapi.models.operations.AssociateTrackerConsumerRequestBody;
 import org.openapis.openapi.models.operations.AssociateTrackerConsumerRequest;
 import org.openapis.openapi.models.operations.AssociateTrackerConsumerResponse;
@@ -28,29 +26,23 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AssociateTrackerConsumerRequest req = new AssociateTrackerConsumerRequest() {{
-                pathParams = new AssociateTrackerConsumerPathParams() {{
-                    trackerName = "corrupti";
+                requestBody = new AssociateTrackerConsumerRequestBody() {{
+                    consumerArn = "corrupti";
                 }};
-                headers = new AssociateTrackerConsumerHeaders() {{
-                    xAmzAlgorithm = "provident";
-                    xAmzContentSha256 = "distinctio";
-                    xAmzCredential = "quibusdam";
-                    xAmzDate = "unde";
-                    xAmzSecurityToken = "nulla";
-                    xAmzSignature = "corrupti";
-                    xAmzSignedHeaders = "illum";
-                }};
-                request = new AssociateTrackerConsumerRequestBody() {{
-                    consumerArn = "vel";
-                }};
-            }};            
+                trackerName = "provident";
+                xAmzAlgorithm = "distinctio";
+                xAmzContentSha256 = "quibusdam";
+                xAmzCredential = "unde";
+                xAmzDate = "nulla";
+                xAmzSecurityToken = "corrupti";
+                xAmzSignature = "illum";
+                xAmzSignedHeaders = "vel";
+            }}            
 
             AssociateTrackerConsumerResponse res = sdk.associateTrackerConsumer(req);
 
@@ -64,7 +56,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

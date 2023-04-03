@@ -4,13 +4,42 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CampaignAnalyticsRequest {
+    /**
+     * (Required) String
+     * 
+     * Campaign API identifier
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=campaign_id")
+    public String campaignId;
+    public CampaignAnalyticsRequest withCampaignId(String campaignId) {
+        this.campaignId = campaignId;
+        return this;
+    }
     
-    public CampaignAnalyticsQueryParams queryParams;
-    public CampaignAnalyticsRequest withQueryParams(CampaignAnalyticsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * (Optional) DateTime (ISO 8601 string)
+     * 
+     * Date on which the data series should end - defaults to time of the request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ending_at")
+    public String endingAt;
+    public CampaignAnalyticsRequest withEndingAt(String endingAt) {
+        this.endingAt = endingAt;
+        return this;
+    }
+    
+    /**
+     * (Required) Integer
+     * 
+     * Max number of days before ending_at to include in the returned series - must be between 1 and 100 inclusive
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=length")
+    public String length;
+    public CampaignAnalyticsRequest withLength(String length) {
+        this.length = length;
         return this;
     }
     

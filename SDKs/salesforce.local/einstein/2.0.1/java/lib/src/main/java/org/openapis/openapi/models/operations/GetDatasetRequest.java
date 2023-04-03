@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDatasetRequest {
-    
-    public GetDatasetPathParams pathParams;
-    public GetDatasetRequest withPathParams(GetDatasetPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetDatasetSecurity security;
-    public GetDatasetRequest withSecurity(GetDatasetSecurity security) {
-        this.security = security;
+    /**
+     * Dataset Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=datasetId")
+    public String datasetId;
+    public GetDatasetRequest withDatasetId(String datasetId) {
+        this.datasetId = datasetId;
         return this;
     }
     

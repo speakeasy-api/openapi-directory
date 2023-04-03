@@ -35,25 +35,26 @@ public class Projects {
     /**
      * Lists subnetworks that are usable for creating clusters in a project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsAggregatedUsableSubnetworksListResponse containerProjectsAggregatedUsableSubnetworksList(org.openapis.openapi.models.operations.ContainerProjectsAggregatedUsableSubnetworksListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsAggregatedUsableSubnetworksListResponse containerProjectsAggregatedUsableSubnetworksList(org.openapis.openapi.models.operations.ContainerProjectsAggregatedUsableSubnetworksListRequest request, org.openapis.openapi.models.operations.ContainerProjectsAggregatedUsableSubnetworksListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsAggregatedUsableSubnetworksListPathParams.class, baseUrl, "/v1/{parent}/aggregated/usableSubnetworks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsAggregatedUsableSubnetworksListRequest.class, baseUrl, "/v1/{parent}/aggregated/usableSubnetworks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsAggregatedUsableSubnetworksListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsAggregatedUsableSubnetworksListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -80,27 +81,28 @@ public class Projects {
     /**
      * Completes master IP rotation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersCompleteIpRotationResponse containerProjectsLocationsClustersCompleteIpRotation(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersCompleteIpRotationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersCompleteIpRotationResponse containerProjectsLocationsClustersCompleteIpRotation(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersCompleteIpRotationRequest request, org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersCompleteIpRotationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersCompleteIpRotationPathParams.class, baseUrl, "/v1/{name}:completeIpRotation", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersCompleteIpRotationRequest.class, baseUrl, "/v1/{name}:completeIpRotation", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "completeIPRotationRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersCompleteIpRotationQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersCompleteIpRotationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,27 +129,28 @@ public class Projects {
     /**
      * Creates a cluster, consisting of the specified number and type of Google Compute Engine instances. By default, the cluster is created in the project's [default network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks). One firewall is added for the cluster. After cluster creation, the Kubelet creates routes for each node to allow the containers on that node to communicate with all other instances in the cluster. Finally, an entry is added to the project's global metadata indicating which CIDR range the cluster is using.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersCreateResponse containerProjectsLocationsClustersCreate(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersCreateResponse containerProjectsLocationsClustersCreate(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersCreateRequest request, org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersCreatePathParams.class, baseUrl, "/v1/{parent}/clusters", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersCreateRequest.class, baseUrl, "/v1/{parent}/clusters", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createClusterRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -179,13 +182,13 @@ public class Projects {
      */
     public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersGetJwksResponse containerProjectsLocationsClustersGetJwks(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersGetJwksRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersGetJwksPathParams.class, baseUrl, "/v1/{parent}/jwks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersGetJwksRequest.class, baseUrl, "/v1/{parent}/jwks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersGetJwksQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersGetJwksRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -218,25 +221,26 @@ public class Projects {
     /**
      * Lists all clusters owned by a project in either the specified zone or all zones.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersListResponse containerProjectsLocationsClustersList(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersListResponse containerProjectsLocationsClustersList(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersListRequest request, org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersListPathParams.class, baseUrl, "/v1/{parent}/clusters", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersListRequest.class, baseUrl, "/v1/{parent}/clusters", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -263,27 +267,28 @@ public class Projects {
     /**
      * CompleteNodePoolUpgrade will signal an on-going node pool upgrade to complete.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsCompleteUpgradeResponse containerProjectsLocationsClustersNodePoolsCompleteUpgrade(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsCompleteUpgradeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsCompleteUpgradeResponse containerProjectsLocationsClustersNodePoolsCompleteUpgrade(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsCompleteUpgradeRequest request, org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsCompleteUpgradeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsCompleteUpgradePathParams.class, baseUrl, "/v1/{name}:completeUpgrade", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsCompleteUpgradeRequest.class, baseUrl, "/v1/{name}:completeUpgrade", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsCompleteUpgradeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsCompleteUpgradeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -310,27 +315,28 @@ public class Projects {
     /**
      * Creates a node pool for a cluster.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsCreateResponse containerProjectsLocationsClustersNodePoolsCreate(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsCreateResponse containerProjectsLocationsClustersNodePoolsCreate(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsCreateRequest request, org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsCreatePathParams.class, baseUrl, "/v1/{parent}/nodePools", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsCreateRequest.class, baseUrl, "/v1/{parent}/nodePools", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createNodePoolRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -357,25 +363,26 @@ public class Projects {
     /**
      * Deletes a node pool from a cluster.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsDeleteResponse containerProjectsLocationsClustersNodePoolsDelete(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsDeleteResponse containerProjectsLocationsClustersNodePoolsDelete(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsDeleteRequest request, org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsDeletePathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsDeleteRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -402,25 +409,26 @@ public class Projects {
     /**
      * Lists the node pools for a cluster.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsListResponse containerProjectsLocationsClustersNodePoolsList(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsListResponse containerProjectsLocationsClustersNodePoolsList(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsListRequest request, org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsListPathParams.class, baseUrl, "/v1/{parent}/nodePools", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsListRequest.class, baseUrl, "/v1/{parent}/nodePools", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -447,27 +455,28 @@ public class Projects {
     /**
      * Rolls back a previously Aborted or Failed NodePool upgrade. This makes no changes if the last upgrade successfully completed.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsRollbackResponse containerProjectsLocationsClustersNodePoolsRollback(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsRollbackRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsRollbackResponse containerProjectsLocationsClustersNodePoolsRollback(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsRollbackRequest request, org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsRollbackSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsRollbackPathParams.class, baseUrl, "/v1/{name}:rollback", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsRollbackRequest.class, baseUrl, "/v1/{name}:rollback", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "rollbackNodePoolUpgradeRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsRollbackQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsRollbackRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -494,27 +503,28 @@ public class Projects {
     /**
      * Sets the autoscaling settings for the specified node pool.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsSetAutoscalingResponse containerProjectsLocationsClustersNodePoolsSetAutoscaling(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsSetAutoscalingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsSetAutoscalingResponse containerProjectsLocationsClustersNodePoolsSetAutoscaling(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsSetAutoscalingRequest request, org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsSetAutoscalingSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsSetAutoscalingPathParams.class, baseUrl, "/v1/{name}:setAutoscaling", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsSetAutoscalingRequest.class, baseUrl, "/v1/{name}:setAutoscaling", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setNodePoolAutoscalingRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsSetAutoscalingQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsSetAutoscalingRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -541,27 +551,28 @@ public class Projects {
     /**
      * Sets the NodeManagement options for a node pool.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsSetManagementResponse containerProjectsLocationsClustersNodePoolsSetManagement(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsSetManagementRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsSetManagementResponse containerProjectsLocationsClustersNodePoolsSetManagement(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsSetManagementRequest request, org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsSetManagementSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsSetManagementPathParams.class, baseUrl, "/v1/{name}:setManagement", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsSetManagementRequest.class, baseUrl, "/v1/{name}:setManagement", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setNodePoolManagementRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsSetManagementQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsSetManagementRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -588,27 +599,28 @@ public class Projects {
     /**
      * Sets the size for a specific node pool. The new size will be used for all replicas, including future replicas created by modifying NodePool.locations.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsSetSizeResponse containerProjectsLocationsClustersNodePoolsSetSize(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsSetSizeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsSetSizeResponse containerProjectsLocationsClustersNodePoolsSetSize(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsSetSizeRequest request, org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsSetSizeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsSetSizePathParams.class, baseUrl, "/v1/{name}:setSize", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsSetSizeRequest.class, baseUrl, "/v1/{name}:setSize", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setNodePoolSizeRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsSetSizeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsSetSizeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -635,27 +647,28 @@ public class Projects {
     /**
      * Updates the version and/or image type for the specified node pool.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsUpdateResponse containerProjectsLocationsClustersNodePoolsUpdate(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsUpdateResponse containerProjectsLocationsClustersNodePoolsUpdate(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsUpdateRequest request, org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsUpdatePathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsUpdateRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateNodePoolRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersNodePoolsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -682,27 +695,28 @@ public class Projects {
     /**
      * Sets the addons for a specific cluster.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetAddonsResponse containerProjectsLocationsClustersSetAddons(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetAddonsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetAddonsResponse containerProjectsLocationsClustersSetAddons(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetAddonsRequest request, org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetAddonsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetAddonsPathParams.class, baseUrl, "/v1/{name}:setAddons", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetAddonsRequest.class, baseUrl, "/v1/{name}:setAddons", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setAddonsConfigRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetAddonsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetAddonsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -729,27 +743,28 @@ public class Projects {
     /**
      * Enables or disables the ABAC authorization mechanism on a cluster.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetLegacyAbacResponse containerProjectsLocationsClustersSetLegacyAbac(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetLegacyAbacRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetLegacyAbacResponse containerProjectsLocationsClustersSetLegacyAbac(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetLegacyAbacRequest request, org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetLegacyAbacSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetLegacyAbacPathParams.class, baseUrl, "/v1/{name}:setLegacyAbac", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetLegacyAbacRequest.class, baseUrl, "/v1/{name}:setLegacyAbac", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setLegacyAbacRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetLegacyAbacQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetLegacyAbacRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -776,27 +791,28 @@ public class Projects {
     /**
      * Sets the locations for a specific cluster. Deprecated. Use [projects.locations.clusters.update](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters/update) instead.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetLocationsResponse containerProjectsLocationsClustersSetLocations(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetLocationsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetLocationsResponse containerProjectsLocationsClustersSetLocations(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetLocationsRequest request, org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetLocationsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetLocationsPathParams.class, baseUrl, "/v1/{name}:setLocations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetLocationsRequest.class, baseUrl, "/v1/{name}:setLocations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setLocationsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetLocationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetLocationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -823,27 +839,28 @@ public class Projects {
     /**
      * Sets the logging service for a specific cluster.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetLoggingResponse containerProjectsLocationsClustersSetLogging(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetLoggingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetLoggingResponse containerProjectsLocationsClustersSetLogging(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetLoggingRequest request, org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetLoggingSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetLoggingPathParams.class, baseUrl, "/v1/{name}:setLogging", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetLoggingRequest.class, baseUrl, "/v1/{name}:setLogging", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setLoggingServiceRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetLoggingQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetLoggingRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -870,27 +887,28 @@ public class Projects {
     /**
      * Sets the maintenance policy for a cluster.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetMaintenancePolicyResponse containerProjectsLocationsClustersSetMaintenancePolicy(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetMaintenancePolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetMaintenancePolicyResponse containerProjectsLocationsClustersSetMaintenancePolicy(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetMaintenancePolicyRequest request, org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetMaintenancePolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetMaintenancePolicyPathParams.class, baseUrl, "/v1/{name}:setMaintenancePolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetMaintenancePolicyRequest.class, baseUrl, "/v1/{name}:setMaintenancePolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setMaintenancePolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetMaintenancePolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetMaintenancePolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -917,27 +935,28 @@ public class Projects {
     /**
      * Sets master auth materials. Currently supports changing the admin password or a specific cluster, either via password generation or explicitly setting the password.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetMasterAuthResponse containerProjectsLocationsClustersSetMasterAuth(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetMasterAuthRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetMasterAuthResponse containerProjectsLocationsClustersSetMasterAuth(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetMasterAuthRequest request, org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetMasterAuthSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetMasterAuthPathParams.class, baseUrl, "/v1/{name}:setMasterAuth", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetMasterAuthRequest.class, baseUrl, "/v1/{name}:setMasterAuth", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setMasterAuthRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetMasterAuthQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetMasterAuthRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -964,27 +983,28 @@ public class Projects {
     /**
      * Sets the monitoring service for a specific cluster.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetMonitoringResponse containerProjectsLocationsClustersSetMonitoring(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetMonitoringRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetMonitoringResponse containerProjectsLocationsClustersSetMonitoring(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetMonitoringRequest request, org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetMonitoringSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetMonitoringPathParams.class, baseUrl, "/v1/{name}:setMonitoring", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetMonitoringRequest.class, baseUrl, "/v1/{name}:setMonitoring", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setMonitoringServiceRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetMonitoringQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetMonitoringRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1011,27 +1031,28 @@ public class Projects {
     /**
      * Enables or disables Network Policy for a cluster.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetNetworkPolicyResponse containerProjectsLocationsClustersSetNetworkPolicy(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetNetworkPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetNetworkPolicyResponse containerProjectsLocationsClustersSetNetworkPolicy(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetNetworkPolicyRequest request, org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetNetworkPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetNetworkPolicyPathParams.class, baseUrl, "/v1/{name}:setNetworkPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetNetworkPolicyRequest.class, baseUrl, "/v1/{name}:setNetworkPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setNetworkPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetNetworkPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetNetworkPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1058,27 +1079,28 @@ public class Projects {
     /**
      * Sets labels on a cluster.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetResourceLabelsResponse containerProjectsLocationsClustersSetResourceLabels(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetResourceLabelsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetResourceLabelsResponse containerProjectsLocationsClustersSetResourceLabels(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetResourceLabelsRequest request, org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetResourceLabelsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetResourceLabelsPathParams.class, baseUrl, "/v1/{name}:setResourceLabels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetResourceLabelsRequest.class, baseUrl, "/v1/{name}:setResourceLabels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setLabelsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetResourceLabelsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersSetResourceLabelsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1105,27 +1127,28 @@ public class Projects {
     /**
      * Starts master IP rotation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersStartIpRotationResponse containerProjectsLocationsClustersStartIpRotation(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersStartIpRotationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersStartIpRotationResponse containerProjectsLocationsClustersStartIpRotation(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersStartIpRotationRequest request, org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersStartIpRotationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersStartIpRotationPathParams.class, baseUrl, "/v1/{name}:startIpRotation", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersStartIpRotationRequest.class, baseUrl, "/v1/{name}:startIpRotation", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "startIPRotationRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersStartIpRotationQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersStartIpRotationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1152,27 +1175,28 @@ public class Projects {
     /**
      * Updates the master for a specific cluster.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersUpdateMasterResponse containerProjectsLocationsClustersUpdateMaster(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersUpdateMasterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersUpdateMasterResponse containerProjectsLocationsClustersUpdateMaster(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersUpdateMasterRequest request, org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersUpdateMasterSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersUpdateMasterPathParams.class, baseUrl, "/v1/{name}:updateMaster", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersUpdateMasterRequest.class, baseUrl, "/v1/{name}:updateMaster", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateMasterRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersUpdateMasterQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersUpdateMasterRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1204,13 +1228,13 @@ public class Projects {
      */
     public org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersWellKnownGetOpenidConfigurationResponse containerProjectsLocationsClustersWellKnownGetOpenidConfiguration(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersWellKnownGetOpenidConfigurationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersWellKnownGetOpenidConfigurationPathParams.class, baseUrl, "/v1/{parent}/.well-known/openid-configuration", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersWellKnownGetOpenidConfigurationRequest.class, baseUrl, "/v1/{parent}/.well-known/openid-configuration", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersWellKnownGetOpenidConfigurationQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsClustersWellKnownGetOpenidConfigurationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1243,25 +1267,26 @@ public class Projects {
     /**
      * Returns configuration info about the Google Kubernetes Engine service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsLocationsGetServerConfigResponse containerProjectsLocationsGetServerConfig(org.openapis.openapi.models.operations.ContainerProjectsLocationsGetServerConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsLocationsGetServerConfigResponse containerProjectsLocationsGetServerConfig(org.openapis.openapi.models.operations.ContainerProjectsLocationsGetServerConfigRequest request, org.openapis.openapi.models.operations.ContainerProjectsLocationsGetServerConfigSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsGetServerConfigPathParams.class, baseUrl, "/v1/{name}/serverConfig", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsGetServerConfigRequest.class, baseUrl, "/v1/{name}/serverConfig", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsGetServerConfigQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsGetServerConfigRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1288,27 +1313,28 @@ public class Projects {
     /**
      * Cancels the specified operation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsLocationsOperationsCancelResponse containerProjectsLocationsOperationsCancel(org.openapis.openapi.models.operations.ContainerProjectsLocationsOperationsCancelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsLocationsOperationsCancelResponse containerProjectsLocationsOperationsCancel(org.openapis.openapi.models.operations.ContainerProjectsLocationsOperationsCancelRequest request, org.openapis.openapi.models.operations.ContainerProjectsLocationsOperationsCancelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsOperationsCancelPathParams.class, baseUrl, "/v1/{name}:cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsOperationsCancelRequest.class, baseUrl, "/v1/{name}:cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "cancelOperationRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsOperationsCancelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsOperationsCancelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1335,25 +1361,26 @@ public class Projects {
     /**
      * Gets the specified operation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsLocationsOperationsGetResponse containerProjectsLocationsOperationsGet(org.openapis.openapi.models.operations.ContainerProjectsLocationsOperationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsLocationsOperationsGetResponse containerProjectsLocationsOperationsGet(org.openapis.openapi.models.operations.ContainerProjectsLocationsOperationsGetRequest request, org.openapis.openapi.models.operations.ContainerProjectsLocationsOperationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsOperationsGetPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsOperationsGetRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsOperationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsOperationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1380,25 +1407,26 @@ public class Projects {
     /**
      * Lists all operations in a project in a specific zone or all zones.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsLocationsOperationsListResponse containerProjectsLocationsOperationsList(org.openapis.openapi.models.operations.ContainerProjectsLocationsOperationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsLocationsOperationsListResponse containerProjectsLocationsOperationsList(org.openapis.openapi.models.operations.ContainerProjectsLocationsOperationsListRequest request, org.openapis.openapi.models.operations.ContainerProjectsLocationsOperationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsOperationsListPathParams.class, baseUrl, "/v1/{parent}/operations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsLocationsOperationsListRequest.class, baseUrl, "/v1/{parent}/operations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsOperationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsLocationsOperationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1425,27 +1453,28 @@ public class Projects {
     /**
      * Sets the addons for a specific cluster.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersAddonsResponse containerProjectsZonesClustersAddons(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersAddonsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersAddonsResponse containerProjectsZonesClustersAddons(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersAddonsRequest request, org.openapis.openapi.models.operations.ContainerProjectsZonesClustersAddonsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersAddonsPathParams.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/addons", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersAddonsRequest.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/addons", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setAddonsConfigRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersAddonsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersAddonsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1472,27 +1501,28 @@ public class Projects {
     /**
      * Completes master IP rotation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersCompleteIpRotationResponse containerProjectsZonesClustersCompleteIpRotation(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersCompleteIpRotationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersCompleteIpRotationResponse containerProjectsZonesClustersCompleteIpRotation(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersCompleteIpRotationRequest request, org.openapis.openapi.models.operations.ContainerProjectsZonesClustersCompleteIpRotationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersCompleteIpRotationPathParams.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}:completeIpRotation", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersCompleteIpRotationRequest.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}:completeIpRotation", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "completeIPRotationRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersCompleteIpRotationQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersCompleteIpRotationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1519,27 +1549,28 @@ public class Projects {
     /**
      * Creates a cluster, consisting of the specified number and type of Google Compute Engine instances. By default, the cluster is created in the project's [default network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks). One firewall is added for the cluster. After cluster creation, the Kubelet creates routes for each node to allow the containers on that node to communicate with all other instances in the cluster. Finally, an entry is added to the project's global metadata indicating which CIDR range the cluster is using.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersCreateResponse containerProjectsZonesClustersCreate(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersCreateResponse containerProjectsZonesClustersCreate(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersCreateRequest request, org.openapis.openapi.models.operations.ContainerProjectsZonesClustersCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersCreatePathParams.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersCreateRequest.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createClusterRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1566,25 +1597,26 @@ public class Projects {
     /**
      * Deletes the cluster, including the Kubernetes endpoint and all worker nodes. Firewalls and routes that were configured during cluster creation are also deleted. Other Google Compute Engine resources that might be in use by the cluster, such as load balancer resources, are not deleted if they weren't present when the cluster was initially created.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersDeleteResponse containerProjectsZonesClustersDelete(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersDeleteResponse containerProjectsZonesClustersDelete(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersDeleteRequest request, org.openapis.openapi.models.operations.ContainerProjectsZonesClustersDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersDeletePathParams.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersDeleteRequest.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1611,25 +1643,26 @@ public class Projects {
     /**
      * Gets the details of a specific cluster.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersGetResponse containerProjectsZonesClustersGet(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersGetResponse containerProjectsZonesClustersGet(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersGetRequest request, org.openapis.openapi.models.operations.ContainerProjectsZonesClustersGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersGetPathParams.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersGetRequest.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1656,27 +1689,28 @@ public class Projects {
     /**
      * Enables or disables the ABAC authorization mechanism on a cluster.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersLegacyAbacResponse containerProjectsZonesClustersLegacyAbac(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersLegacyAbacRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersLegacyAbacResponse containerProjectsZonesClustersLegacyAbac(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersLegacyAbacRequest request, org.openapis.openapi.models.operations.ContainerProjectsZonesClustersLegacyAbacSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersLegacyAbacPathParams.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/legacyAbac", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersLegacyAbacRequest.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/legacyAbac", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setLegacyAbacRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersLegacyAbacQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersLegacyAbacRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1703,25 +1737,26 @@ public class Projects {
     /**
      * Lists all clusters owned by a project in either the specified zone or all zones.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersListResponse containerProjectsZonesClustersList(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersListResponse containerProjectsZonesClustersList(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersListRequest request, org.openapis.openapi.models.operations.ContainerProjectsZonesClustersListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersListPathParams.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersListRequest.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1748,27 +1783,28 @@ public class Projects {
     /**
      * Sets the locations for a specific cluster. Deprecated. Use [projects.locations.clusters.update](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters/update) instead.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersLocationsResponse containerProjectsZonesClustersLocations(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersLocationsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersLocationsResponse containerProjectsZonesClustersLocations(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersLocationsRequest request, org.openapis.openapi.models.operations.ContainerProjectsZonesClustersLocationsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersLocationsPathParams.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/locations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersLocationsRequest.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/locations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setLocationsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersLocationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersLocationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1795,27 +1831,28 @@ public class Projects {
     /**
      * Sets the logging service for a specific cluster.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersLoggingResponse containerProjectsZonesClustersLogging(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersLoggingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersLoggingResponse containerProjectsZonesClustersLogging(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersLoggingRequest request, org.openapis.openapi.models.operations.ContainerProjectsZonesClustersLoggingSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersLoggingPathParams.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/logging", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersLoggingRequest.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/logging", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setLoggingServiceRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersLoggingQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersLoggingRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1842,27 +1879,28 @@ public class Projects {
     /**
      * Updates the master for a specific cluster.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersMasterResponse containerProjectsZonesClustersMaster(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersMasterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersMasterResponse containerProjectsZonesClustersMaster(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersMasterRequest request, org.openapis.openapi.models.operations.ContainerProjectsZonesClustersMasterSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersMasterPathParams.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/master", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersMasterRequest.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/master", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateMasterRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersMasterQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersMasterRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1889,27 +1927,28 @@ public class Projects {
     /**
      * Sets the monitoring service for a specific cluster.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersMonitoringResponse containerProjectsZonesClustersMonitoring(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersMonitoringRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersMonitoringResponse containerProjectsZonesClustersMonitoring(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersMonitoringRequest request, org.openapis.openapi.models.operations.ContainerProjectsZonesClustersMonitoringSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersMonitoringPathParams.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/monitoring", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersMonitoringRequest.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/monitoring", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setMonitoringServiceRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersMonitoringQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersMonitoringRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1936,27 +1975,28 @@ public class Projects {
     /**
      * Sets the autoscaling settings for the specified node pool.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsAutoscalingResponse containerProjectsZonesClustersNodePoolsAutoscaling(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsAutoscalingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsAutoscalingResponse containerProjectsZonesClustersNodePoolsAutoscaling(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsAutoscalingRequest request, org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsAutoscalingSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsAutoscalingPathParams.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools/{nodePoolId}/autoscaling", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsAutoscalingRequest.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools/{nodePoolId}/autoscaling", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setNodePoolAutoscalingRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsAutoscalingQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsAutoscalingRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1983,27 +2023,28 @@ public class Projects {
     /**
      * Creates a node pool for a cluster.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsCreateResponse containerProjectsZonesClustersNodePoolsCreate(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsCreateResponse containerProjectsZonesClustersNodePoolsCreate(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsCreateRequest request, org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsCreatePathParams.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsCreateRequest.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createNodePoolRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2030,25 +2071,26 @@ public class Projects {
     /**
      * Deletes a node pool from a cluster.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsDeleteResponse containerProjectsZonesClustersNodePoolsDelete(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsDeleteResponse containerProjectsZonesClustersNodePoolsDelete(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsDeleteRequest request, org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsDeletePathParams.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools/{nodePoolId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsDeleteRequest.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools/{nodePoolId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2075,25 +2117,26 @@ public class Projects {
     /**
      * Retrieves the requested node pool.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsGetResponse containerProjectsZonesClustersNodePoolsGet(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsGetResponse containerProjectsZonesClustersNodePoolsGet(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsGetRequest request, org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsGetPathParams.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools/{nodePoolId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsGetRequest.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools/{nodePoolId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2120,25 +2163,26 @@ public class Projects {
     /**
      * Lists the node pools for a cluster.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsListResponse containerProjectsZonesClustersNodePoolsList(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsListResponse containerProjectsZonesClustersNodePoolsList(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsListRequest request, org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsListPathParams.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsListRequest.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2165,27 +2209,28 @@ public class Projects {
     /**
      * Rolls back a previously Aborted or Failed NodePool upgrade. This makes no changes if the last upgrade successfully completed.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsRollbackResponse containerProjectsZonesClustersNodePoolsRollback(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsRollbackRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsRollbackResponse containerProjectsZonesClustersNodePoolsRollback(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsRollbackRequest request, org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsRollbackSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsRollbackPathParams.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools/{nodePoolId}:rollback", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsRollbackRequest.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools/{nodePoolId}:rollback", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "rollbackNodePoolUpgradeRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsRollbackQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsRollbackRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2212,27 +2257,28 @@ public class Projects {
     /**
      * Sets the NodeManagement options for a node pool.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsSetManagementResponse containerProjectsZonesClustersNodePoolsSetManagement(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsSetManagementRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsSetManagementResponse containerProjectsZonesClustersNodePoolsSetManagement(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsSetManagementRequest request, org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsSetManagementSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsSetManagementPathParams.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools/{nodePoolId}/setManagement", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsSetManagementRequest.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools/{nodePoolId}/setManagement", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setNodePoolManagementRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsSetManagementQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsSetManagementRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2259,27 +2305,28 @@ public class Projects {
     /**
      * Sets the size for a specific node pool. The new size will be used for all replicas, including future replicas created by modifying NodePool.locations.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsSetSizeResponse containerProjectsZonesClustersNodePoolsSetSize(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsSetSizeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsSetSizeResponse containerProjectsZonesClustersNodePoolsSetSize(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsSetSizeRequest request, org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsSetSizeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsSetSizePathParams.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools/{nodePoolId}/setSize", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsSetSizeRequest.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools/{nodePoolId}/setSize", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setNodePoolSizeRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsSetSizeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsSetSizeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2306,27 +2353,28 @@ public class Projects {
     /**
      * Updates the version and/or image type for the specified node pool.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsUpdateResponse containerProjectsZonesClustersNodePoolsUpdate(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsUpdateResponse containerProjectsZonesClustersNodePoolsUpdate(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsUpdateRequest request, org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsUpdatePathParams.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools/{nodePoolId}/update", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsUpdateRequest.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/nodePools/{nodePoolId}/update", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateNodePoolRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersNodePoolsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2353,27 +2401,28 @@ public class Projects {
     /**
      * Sets labels on a cluster.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersResourceLabelsResponse containerProjectsZonesClustersResourceLabels(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersResourceLabelsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersResourceLabelsResponse containerProjectsZonesClustersResourceLabels(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersResourceLabelsRequest request, org.openapis.openapi.models.operations.ContainerProjectsZonesClustersResourceLabelsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersResourceLabelsPathParams.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/resourceLabels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersResourceLabelsRequest.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}/resourceLabels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setLabelsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersResourceLabelsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersResourceLabelsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2400,27 +2449,28 @@ public class Projects {
     /**
      * Sets the maintenance policy for a cluster.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersSetMaintenancePolicyResponse containerProjectsZonesClustersSetMaintenancePolicy(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersSetMaintenancePolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersSetMaintenancePolicyResponse containerProjectsZonesClustersSetMaintenancePolicy(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersSetMaintenancePolicyRequest request, org.openapis.openapi.models.operations.ContainerProjectsZonesClustersSetMaintenancePolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersSetMaintenancePolicyPathParams.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}:setMaintenancePolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersSetMaintenancePolicyRequest.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}:setMaintenancePolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setMaintenancePolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersSetMaintenancePolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersSetMaintenancePolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2447,27 +2497,28 @@ public class Projects {
     /**
      * Sets master auth materials. Currently supports changing the admin password or a specific cluster, either via password generation or explicitly setting the password.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersSetMasterAuthResponse containerProjectsZonesClustersSetMasterAuth(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersSetMasterAuthRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersSetMasterAuthResponse containerProjectsZonesClustersSetMasterAuth(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersSetMasterAuthRequest request, org.openapis.openapi.models.operations.ContainerProjectsZonesClustersSetMasterAuthSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersSetMasterAuthPathParams.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}:setMasterAuth", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersSetMasterAuthRequest.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}:setMasterAuth", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setMasterAuthRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersSetMasterAuthQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersSetMasterAuthRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2494,27 +2545,28 @@ public class Projects {
     /**
      * Enables or disables Network Policy for a cluster.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersSetNetworkPolicyResponse containerProjectsZonesClustersSetNetworkPolicy(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersSetNetworkPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersSetNetworkPolicyResponse containerProjectsZonesClustersSetNetworkPolicy(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersSetNetworkPolicyRequest request, org.openapis.openapi.models.operations.ContainerProjectsZonesClustersSetNetworkPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersSetNetworkPolicyPathParams.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}:setNetworkPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersSetNetworkPolicyRequest.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}:setNetworkPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setNetworkPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersSetNetworkPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersSetNetworkPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2541,27 +2593,28 @@ public class Projects {
     /**
      * Starts master IP rotation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersStartIpRotationResponse containerProjectsZonesClustersStartIpRotation(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersStartIpRotationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersStartIpRotationResponse containerProjectsZonesClustersStartIpRotation(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersStartIpRotationRequest request, org.openapis.openapi.models.operations.ContainerProjectsZonesClustersStartIpRotationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersStartIpRotationPathParams.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}:startIpRotation", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersStartIpRotationRequest.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}:startIpRotation", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "startIPRotationRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersStartIpRotationQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersStartIpRotationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2588,27 +2641,28 @@ public class Projects {
     /**
      * Updates the settings of a specific cluster.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersUpdateResponse containerProjectsZonesClustersUpdate(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsZonesClustersUpdateResponse containerProjectsZonesClustersUpdate(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersUpdateRequest request, org.openapis.openapi.models.operations.ContainerProjectsZonesClustersUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersUpdatePathParams.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersUpdateRequest.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/clusters/{clusterId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateClusterRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesClustersUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2635,25 +2689,26 @@ public class Projects {
     /**
      * Returns configuration info about the Google Kubernetes Engine service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsZonesGetServerconfigResponse containerProjectsZonesGetServerconfig(org.openapis.openapi.models.operations.ContainerProjectsZonesGetServerconfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsZonesGetServerconfigResponse containerProjectsZonesGetServerconfig(org.openapis.openapi.models.operations.ContainerProjectsZonesGetServerconfigRequest request, org.openapis.openapi.models.operations.ContainerProjectsZonesGetServerconfigSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesGetServerconfigPathParams.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/serverconfig", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesGetServerconfigRequest.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/serverconfig", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesGetServerconfigQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesGetServerconfigRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2680,27 +2735,28 @@ public class Projects {
     /**
      * Cancels the specified operation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsZonesOperationsCancelResponse containerProjectsZonesOperationsCancel(org.openapis.openapi.models.operations.ContainerProjectsZonesOperationsCancelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsZonesOperationsCancelResponse containerProjectsZonesOperationsCancel(org.openapis.openapi.models.operations.ContainerProjectsZonesOperationsCancelRequest request, org.openapis.openapi.models.operations.ContainerProjectsZonesOperationsCancelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesOperationsCancelPathParams.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/operations/{operationId}:cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesOperationsCancelRequest.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/operations/{operationId}:cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "cancelOperationRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesOperationsCancelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesOperationsCancelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2727,25 +2783,26 @@ public class Projects {
     /**
      * Gets the specified operation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsZonesOperationsGetResponse containerProjectsZonesOperationsGet(org.openapis.openapi.models.operations.ContainerProjectsZonesOperationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsZonesOperationsGetResponse containerProjectsZonesOperationsGet(org.openapis.openapi.models.operations.ContainerProjectsZonesOperationsGetRequest request, org.openapis.openapi.models.operations.ContainerProjectsZonesOperationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesOperationsGetPathParams.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/operations/{operationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesOperationsGetRequest.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/operations/{operationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesOperationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesOperationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2772,25 +2829,26 @@ public class Projects {
     /**
      * Lists all operations in a project in a specific zone or all zones.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContainerProjectsZonesOperationsListResponse containerProjectsZonesOperationsList(org.openapis.openapi.models.operations.ContainerProjectsZonesOperationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContainerProjectsZonesOperationsListResponse containerProjectsZonesOperationsList(org.openapis.openapi.models.operations.ContainerProjectsZonesOperationsListRequest request, org.openapis.openapi.models.operations.ContainerProjectsZonesOperationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesOperationsListPathParams.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/operations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContainerProjectsZonesOperationsListRequest.class, baseUrl, "/v1/projects/{projectId}/zones/{zone}/operations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesOperationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContainerProjectsZonesOperationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

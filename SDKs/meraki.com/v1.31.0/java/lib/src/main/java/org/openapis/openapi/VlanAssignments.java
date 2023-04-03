@@ -39,7 +39,7 @@ public class VlanAssignments {
      */
     public org.openapis.openapi.models.operations.GetDeviceAppliancePrefixesDelegatedVlanAssignmentsResponse getDeviceAppliancePrefixesDelegatedVlanAssignments(org.openapis.openapi.models.operations.GetDeviceAppliancePrefixesDelegatedVlanAssignmentsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceAppliancePrefixesDelegatedVlanAssignmentsPathParams.class, baseUrl, "/devices/{serial}/appliance/prefixes/delegated/vlanAssignments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceAppliancePrefixesDelegatedVlanAssignmentsRequest.class, baseUrl, "/devices/{serial}/appliance/prefixes/delegated/vlanAssignments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetweatherRequest {
+    /**
+     * City for weather information
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=city")
+    public String city;
+    public GetweatherRequest withCity(String city) {
+        this.city = city;
+        return this;
+    }
     
-    public GetweatherQueryParams queryParams;
-    public GetweatherRequest withQueryParams(GetweatherQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Your Interzoid license API key. Register at www.interzoid.com/register
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
+    public String license;
+    public GetweatherRequest withLicense(String license) {
+        this.license = license;
+        return this;
+    }
+    
+    /**
+     * State for weather information
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public String state;
+    public GetweatherRequest withState(String state) {
+        this.state = state;
         return this;
     }
     

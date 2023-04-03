@@ -4,27 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchSyncDocumentPermissionRequest {
-    
-    public FetchSyncDocumentPermissionPathParams pathParams;
-    public FetchSyncDocumentPermissionRequest withPathParams(FetchSyncDocumentPermissionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Identifier of the Sync Document. Either a SID or a unique name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DocumentSid")
+    public String documentSid;
+    public FetchSyncDocumentPermissionRequest withDocumentSid(String documentSid) {
+        this.documentSid = documentSid;
         return this;
     }
     
-    
-    public FetchSyncDocumentPermissionSecurity security;
-    public FetchSyncDocumentPermissionRequest withSecurity(FetchSyncDocumentPermissionSecurity security) {
-        this.security = security;
+    /**
+     * Arbitrary string identifier representing a user associated with an FPA token, assigned by the developer.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Identity")
+    public String identity;
+    public FetchSyncDocumentPermissionRequest withIdentity(String identity) {
+        this.identity = identity;
         return this;
     }
     
-    
-    public String serverURL;
-    public FetchSyncDocumentPermissionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public FetchSyncDocumentPermissionRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

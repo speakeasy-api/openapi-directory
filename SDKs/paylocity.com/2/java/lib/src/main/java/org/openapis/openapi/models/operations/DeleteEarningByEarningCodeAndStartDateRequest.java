@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteEarningByEarningCodeAndStartDateRequest {
-    
-    public DeleteEarningByEarningCodeAndStartDatePathParams pathParams;
-    public DeleteEarningByEarningCodeAndStartDateRequest withPathParams(DeleteEarningByEarningCodeAndStartDatePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Company Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public DeleteEarningByEarningCodeAndStartDateRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
         return this;
     }
     
+    /**
+     * Earning Code
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=earningCode")
+    public String earningCode;
+    public DeleteEarningByEarningCodeAndStartDateRequest withEarningCode(String earningCode) {
+        this.earningCode = earningCode;
+        return this;
+    }
     
-    public DeleteEarningByEarningCodeAndStartDateSecurity security;
-    public DeleteEarningByEarningCodeAndStartDateRequest withSecurity(DeleteEarningByEarningCodeAndStartDateSecurity security) {
-        this.security = security;
+    /**
+     * Employee Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=employeeId")
+    public String employeeId;
+    public DeleteEarningByEarningCodeAndStartDateRequest withEmployeeId(String employeeId) {
+        this.employeeId = employeeId;
+        return this;
+    }
+    
+    /**
+     * Start Date
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=startDate")
+    public String startDate;
+    public DeleteEarningByEarningCodeAndStartDateRequest withStartDate(String startDate) {
+        this.startDate = startDate;
         return this;
     }
     

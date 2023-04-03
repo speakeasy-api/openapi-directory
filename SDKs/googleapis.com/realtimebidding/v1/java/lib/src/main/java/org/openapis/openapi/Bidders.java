@@ -35,27 +35,28 @@ public class Bidders {
     /**
      * Watches all creatives pertaining to a bidder. It is sufficient to invoke this endpoint once per bidder. A Pub/Sub topic will be created and notifications will be pushed to the topic when any of the bidder's creatives change status. All of the bidder's service accounts will have access to read from the topic. Subsequent invocations of this method will return the existing Pub/Sub configuration.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RealtimebiddingBiddersCreativesWatchResponse realtimebiddingBiddersCreativesWatch(org.openapis.openapi.models.operations.RealtimebiddingBiddersCreativesWatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RealtimebiddingBiddersCreativesWatchResponse realtimebiddingBiddersCreativesWatch(org.openapis.openapi.models.operations.RealtimebiddingBiddersCreativesWatchRequest request, org.openapis.openapi.models.operations.RealtimebiddingBiddersCreativesWatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersCreativesWatchPathParams.class, baseUrl, "/v1/{parent}/creatives:watch", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersCreativesWatchRequest.class, baseUrl, "/v1/{parent}/creatives:watch", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersCreativesWatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersCreativesWatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,25 +83,26 @@ public class Bidders {
     /**
      * Lists all the bidder's endpoints.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RealtimebiddingBiddersEndpointsListResponse realtimebiddingBiddersEndpointsList(org.openapis.openapi.models.operations.RealtimebiddingBiddersEndpointsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RealtimebiddingBiddersEndpointsListResponse realtimebiddingBiddersEndpointsList(org.openapis.openapi.models.operations.RealtimebiddingBiddersEndpointsListRequest request, org.openapis.openapi.models.operations.RealtimebiddingBiddersEndpointsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersEndpointsListPathParams.class, baseUrl, "/v1/{parent}/endpoints", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersEndpointsListRequest.class, baseUrl, "/v1/{parent}/endpoints", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersEndpointsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersEndpointsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,10 +129,11 @@ public class Bidders {
     /**
      * Lists all the bidder accounts that belong to the caller.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RealtimebiddingBiddersListResponse realtimebiddingBiddersList(org.openapis.openapi.models.operations.RealtimebiddingBiddersListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RealtimebiddingBiddersListResponse realtimebiddingBiddersList(org.openapis.openapi.models.operations.RealtimebiddingBiddersListRequest request, org.openapis.openapi.models.operations.RealtimebiddingBiddersListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/bidders");
         
@@ -138,14 +141,14 @@ public class Bidders {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -172,27 +175,28 @@ public class Bidders {
     /**
      * Activates a pretargeting configuration.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsActivateResponse realtimebiddingBiddersPretargetingConfigsActivate(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsActivateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsActivateResponse realtimebiddingBiddersPretargetingConfigsActivate(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsActivateRequest request, org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsActivateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsActivatePathParams.class, baseUrl, "/v1/{name}:activate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsActivateRequest.class, baseUrl, "/v1/{name}:activate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsActivateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsActivateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -219,27 +223,28 @@ public class Bidders {
     /**
      * Adds targeted apps to the pretargeting configuration.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedAppsResponse realtimebiddingBiddersPretargetingConfigsAddTargetedApps(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedAppsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedAppsResponse realtimebiddingBiddersPretargetingConfigsAddTargetedApps(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedAppsRequest request, org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedAppsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedAppsPathParams.class, baseUrl, "/v1/{pretargetingConfig}:addTargetedApps", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedAppsRequest.class, baseUrl, "/v1/{pretargetingConfig}:addTargetedApps", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "addTargetedAppsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedAppsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedAppsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -266,27 +271,28 @@ public class Bidders {
     /**
      * Adds targeted publishers to the pretargeting config.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedPublishersResponse realtimebiddingBiddersPretargetingConfigsAddTargetedPublishers(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedPublishersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedPublishersResponse realtimebiddingBiddersPretargetingConfigsAddTargetedPublishers(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedPublishersRequest request, org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedPublishersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedPublishersPathParams.class, baseUrl, "/v1/{pretargetingConfig}:addTargetedPublishers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedPublishersRequest.class, baseUrl, "/v1/{pretargetingConfig}:addTargetedPublishers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "addTargetedPublishersRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedPublishersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedPublishersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -313,27 +319,28 @@ public class Bidders {
     /**
      * Adds targeted sites to the pretargeting configuration.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedSitesResponse realtimebiddingBiddersPretargetingConfigsAddTargetedSites(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedSitesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedSitesResponse realtimebiddingBiddersPretargetingConfigsAddTargetedSites(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedSitesRequest request, org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedSitesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedSitesPathParams.class, baseUrl, "/v1/{pretargetingConfig}:addTargetedSites", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedSitesRequest.class, baseUrl, "/v1/{pretargetingConfig}:addTargetedSites", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "addTargetedSitesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedSitesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedSitesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -360,27 +367,28 @@ public class Bidders {
     /**
      * Creates a pretargeting configuration. A pretargeting configuration's state (PretargetingConfig.state) is active upon creation, and it will start to affect traffic shortly after. A bidder may create a maximum of 10 pretargeting configurations. Attempts to exceed this maximum results in a 400 bad request error.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsCreateResponse realtimebiddingBiddersPretargetingConfigsCreate(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsCreateResponse realtimebiddingBiddersPretargetingConfigsCreate(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsCreateRequest request, org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsCreatePathParams.class, baseUrl, "/v1/{parent}/pretargetingConfigs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsCreateRequest.class, baseUrl, "/v1/{parent}/pretargetingConfigs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "pretargetingConfigInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -407,25 +415,26 @@ public class Bidders {
     /**
      * Deletes a pretargeting configuration.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsDeleteResponse realtimebiddingBiddersPretargetingConfigsDelete(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsDeleteResponse realtimebiddingBiddersPretargetingConfigsDelete(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsDeleteRequest request, org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsDeletePathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsDeleteRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -452,25 +461,26 @@ public class Bidders {
     /**
      * Lists all pretargeting configurations for a single bidder.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsListResponse realtimebiddingBiddersPretargetingConfigsList(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsListResponse realtimebiddingBiddersPretargetingConfigsList(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsListRequest request, org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsListPathParams.class, baseUrl, "/v1/{parent}/pretargetingConfigs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsListRequest.class, baseUrl, "/v1/{parent}/pretargetingConfigs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -497,27 +507,28 @@ public class Bidders {
     /**
      * Removes targeted apps from the pretargeting configuration.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedAppsResponse realtimebiddingBiddersPretargetingConfigsRemoveTargetedApps(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedAppsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedAppsResponse realtimebiddingBiddersPretargetingConfigsRemoveTargetedApps(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedAppsRequest request, org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedAppsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedAppsPathParams.class, baseUrl, "/v1/{pretargetingConfig}:removeTargetedApps", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedAppsRequest.class, baseUrl, "/v1/{pretargetingConfig}:removeTargetedApps", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "removeTargetedAppsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedAppsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedAppsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -544,27 +555,28 @@ public class Bidders {
     /**
      * Removes targeted publishers from the pretargeting config.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedPublishersResponse realtimebiddingBiddersPretargetingConfigsRemoveTargetedPublishers(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedPublishersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedPublishersResponse realtimebiddingBiddersPretargetingConfigsRemoveTargetedPublishers(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedPublishersRequest request, org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedPublishersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedPublishersPathParams.class, baseUrl, "/v1/{pretargetingConfig}:removeTargetedPublishers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedPublishersRequest.class, baseUrl, "/v1/{pretargetingConfig}:removeTargetedPublishers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "removeTargetedPublishersRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedPublishersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedPublishersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -591,27 +603,28 @@ public class Bidders {
     /**
      * Removes targeted sites from the pretargeting configuration.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedSitesResponse realtimebiddingBiddersPretargetingConfigsRemoveTargetedSites(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedSitesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedSitesResponse realtimebiddingBiddersPretargetingConfigsRemoveTargetedSites(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedSitesRequest request, org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedSitesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedSitesPathParams.class, baseUrl, "/v1/{pretargetingConfig}:removeTargetedSites", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedSitesRequest.class, baseUrl, "/v1/{pretargetingConfig}:removeTargetedSites", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "removeTargetedSitesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedSitesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedSitesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -638,27 +651,28 @@ public class Bidders {
     /**
      * Suspends a pretargeting configuration.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsSuspendResponse realtimebiddingBiddersPretargetingConfigsSuspend(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsSuspendRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsSuspendResponse realtimebiddingBiddersPretargetingConfigsSuspend(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsSuspendRequest request, org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsSuspendSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsSuspendPathParams.class, baseUrl, "/v1/{name}:suspend", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsSuspendRequest.class, baseUrl, "/v1/{name}:suspend", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsSuspendQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersPretargetingConfigsSuspendRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -685,27 +699,28 @@ public class Bidders {
     /**
      * Batch approves multiple publisher connections.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RealtimebiddingBiddersPublisherConnectionsBatchApproveResponse realtimebiddingBiddersPublisherConnectionsBatchApprove(org.openapis.openapi.models.operations.RealtimebiddingBiddersPublisherConnectionsBatchApproveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RealtimebiddingBiddersPublisherConnectionsBatchApproveResponse realtimebiddingBiddersPublisherConnectionsBatchApprove(org.openapis.openapi.models.operations.RealtimebiddingBiddersPublisherConnectionsBatchApproveRequest request, org.openapis.openapi.models.operations.RealtimebiddingBiddersPublisherConnectionsBatchApproveSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersPublisherConnectionsBatchApprovePathParams.class, baseUrl, "/v1/{parent}/publisherConnections:batchApprove", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersPublisherConnectionsBatchApproveRequest.class, baseUrl, "/v1/{parent}/publisherConnections:batchApprove", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "batchApprovePublisherConnectionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersPublisherConnectionsBatchApproveQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersPublisherConnectionsBatchApproveRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -732,27 +747,28 @@ public class Bidders {
     /**
      * Batch rejects multiple publisher connections.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RealtimebiddingBiddersPublisherConnectionsBatchRejectResponse realtimebiddingBiddersPublisherConnectionsBatchReject(org.openapis.openapi.models.operations.RealtimebiddingBiddersPublisherConnectionsBatchRejectRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RealtimebiddingBiddersPublisherConnectionsBatchRejectResponse realtimebiddingBiddersPublisherConnectionsBatchReject(org.openapis.openapi.models.operations.RealtimebiddingBiddersPublisherConnectionsBatchRejectRequest request, org.openapis.openapi.models.operations.RealtimebiddingBiddersPublisherConnectionsBatchRejectSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersPublisherConnectionsBatchRejectPathParams.class, baseUrl, "/v1/{parent}/publisherConnections:batchReject", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersPublisherConnectionsBatchRejectRequest.class, baseUrl, "/v1/{parent}/publisherConnections:batchReject", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "batchRejectPublisherConnectionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersPublisherConnectionsBatchRejectQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersPublisherConnectionsBatchRejectRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -779,25 +795,26 @@ public class Bidders {
     /**
      * Lists publisher connections for a given bidder.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RealtimebiddingBiddersPublisherConnectionsListResponse realtimebiddingBiddersPublisherConnectionsList(org.openapis.openapi.models.operations.RealtimebiddingBiddersPublisherConnectionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RealtimebiddingBiddersPublisherConnectionsListResponse realtimebiddingBiddersPublisherConnectionsList(org.openapis.openapi.models.operations.RealtimebiddingBiddersPublisherConnectionsListRequest request, org.openapis.openapi.models.operations.RealtimebiddingBiddersPublisherConnectionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersPublisherConnectionsListPathParams.class, baseUrl, "/v1/{parent}/publisherConnections", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersPublisherConnectionsListRequest.class, baseUrl, "/v1/{parent}/publisherConnections", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersPublisherConnectionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersPublisherConnectionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

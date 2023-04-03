@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostProductsIdVariantsJsonRequest {
-    
-    public PostProductsIdVariantsJsonPathParams pathParams;
-    public PostProductsIdVariantsJsonRequest withPathParams(PostProductsIdVariantsJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostProductsIdVariantsJsonQueryParams queryParams;
-    public PostProductsIdVariantsJsonRequest withQueryParams(PostProductsIdVariantsJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Product Variant parameters.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.VariantEdit request;
-    public PostProductsIdVariantsJsonRequest withRequest(org.openapis.openapi.models.shared.VariantEdit request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.VariantEdit variantEdit;
+    public PostProductsIdVariantsJsonRequest withVariantEdit(org.openapis.openapi.models.shared.VariantEdit variantEdit) {
+        this.variantEdit = variantEdit;
+        return this;
+    }
+    
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public PostProductsIdVariantsJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
+        return this;
+    }
+    
+    /**
+     * Id of the Product
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PostProductsIdVariantsJsonRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public PostProductsIdVariantsJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAdminMappingsStubMappingIdRequest {
-    
-    public GetAdminMappingsStubMappingIdPathParams pathParams;
-    public GetAdminMappingsStubMappingIdRequest withPathParams(GetAdminMappingsStubMappingIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The UUID of stub mapping
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=stubMappingId")
+    public String stubMappingId;
+    public GetAdminMappingsStubMappingIdRequest withStubMappingId(String stubMappingId) {
+        this.stubMappingId = stubMappingId;
         return this;
     }
     

@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetselleraccountconfigRequest {
-    
-    public GetselleraccountconfigPathParams pathParams;
-    public GetselleraccountconfigRequest withPathParams(GetselleraccountconfigPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetselleraccountconfigRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public GetselleraccountconfigQueryParams queryParams;
-    public GetselleraccountconfigRequest withQueryParams(GetselleraccountconfigQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetselleraccountconfigRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
+    /**
+     * Name of the VTEX account that belongs to the marketplace. All data extracted, and changes added will be posted into this account.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
+    public String accountName;
+    public GetselleraccountconfigRequest withAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
     
-    public GetselleraccountconfigHeaders headers;
-    public GetselleraccountconfigRequest withHeaders(GetselleraccountconfigHeaders headers) {
-        this.headers = headers;
+    /**
+     * A string that identifies the seller in the marketplace. This ID must be created by the marketplace.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerId")
+    public String sellerId;
+    public GetselleraccountconfigRequest withSellerId(String sellerId) {
+        this.sellerId = sellerId;
         return this;
     }
     

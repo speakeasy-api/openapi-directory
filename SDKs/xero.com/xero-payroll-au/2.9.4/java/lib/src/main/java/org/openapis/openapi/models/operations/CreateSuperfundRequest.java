@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSuperfundRequest {
-    
-    public CreateSuperfundHeaders headers;
-    public CreateSuperfundRequest withHeaders(CreateSuperfundHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SuperFundInput[] request;
-    public CreateSuperfundRequest withRequest(org.openapis.openapi.models.shared.SuperFundInput[] request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SuperFundInput[] requestBody;
+    public CreateSuperfundRequest withRequestBody(org.openapis.openapi.models.shared.SuperFundInput[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateSuperfundSecurity security;
-    public CreateSuperfundRequest withSecurity(CreateSuperfundSecurity security) {
-        this.security = security;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
+    public String xeroTenantId;
+    public CreateSuperfundRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     

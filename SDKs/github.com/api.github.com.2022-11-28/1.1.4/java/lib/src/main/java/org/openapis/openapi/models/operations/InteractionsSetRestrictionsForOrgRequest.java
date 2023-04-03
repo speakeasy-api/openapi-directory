@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InteractionsSetRestrictionsForOrgRequest {
-    
-    public InteractionsSetRestrictionsForOrgPathParams pathParams;
-    public InteractionsSetRestrictionsForOrgRequest withPathParams(InteractionsSetRestrictionsForOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.InteractionLimit interactionLimit;
+    public InteractionsSetRestrictionsForOrgRequest withInteractionLimit(org.openapis.openapi.models.shared.InteractionLimit interactionLimit) {
+        this.interactionLimit = interactionLimit;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.InteractionLimit request;
-    public InteractionsSetRestrictionsForOrgRequest withRequest(org.openapis.openapi.models.shared.InteractionLimit request) {
-        this.request = request;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public InteractionsSetRestrictionsForOrgRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

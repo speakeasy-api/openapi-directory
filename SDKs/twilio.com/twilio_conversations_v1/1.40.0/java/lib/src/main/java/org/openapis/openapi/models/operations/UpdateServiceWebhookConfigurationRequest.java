@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateServiceWebhookConfigurationRequest {
-    
-    public UpdateServiceWebhookConfigurationPathParams pathParams;
-    public UpdateServiceWebhookConfigurationRequest withPathParams(UpdateServiceWebhookConfigurationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique ID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) this conversation belongs to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChatServiceSid")
+    public String chatServiceSid;
+    public UpdateServiceWebhookConfigurationRequest withChatServiceSid(String chatServiceSid) {
+        this.chatServiceSid = chatServiceSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateServiceWebhookConfigurationUpdateServiceWebhookConfigurationRequest request;
-    public UpdateServiceWebhookConfigurationRequest withRequest(UpdateServiceWebhookConfigurationUpdateServiceWebhookConfigurationRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public UpdateServiceWebhookConfigurationSecurity security;
-    public UpdateServiceWebhookConfigurationRequest withSecurity(UpdateServiceWebhookConfigurationSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateServiceWebhookConfigurationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public UpdateServiceWebhookConfigurationUpdateServiceWebhookConfigurationRequest requestBody;
+    public UpdateServiceWebhookConfigurationRequest withRequestBody(UpdateServiceWebhookConfigurationUpdateServiceWebhookConfigurationRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

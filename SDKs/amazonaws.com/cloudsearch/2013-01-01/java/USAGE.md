@@ -6,8 +6,6 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GETBuildSuggestersActionEnum;
 import org.openapis.openapi.models.operations.GETBuildSuggestersVersionEnum;
-import org.openapis.openapi.models.operations.GETBuildSuggestersQueryParams;
-import org.openapis.openapi.models.operations.GETBuildSuggestersHeaders;
 import org.openapis.openapi.models.operations.GETBuildSuggestersRequest;
 import org.openapis.openapi.models.operations.GETBuildSuggestersResponse;
 
@@ -16,28 +14,22 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GETBuildSuggestersRequest req = new GETBuildSuggestersRequest() {{
-                queryParams = new GETBuildSuggestersQueryParams() {{
-                    action = "BuildSuggesters";
-                    domainName = "corrupti";
-                    version = "2013-01-01";
-                }};
-                headers = new GETBuildSuggestersHeaders() {{
-                    xAmzAlgorithm = "provident";
-                    xAmzContentSha256 = "distinctio";
-                    xAmzCredential = "quibusdam";
-                    xAmzDate = "unde";
-                    xAmzSecurityToken = "nulla";
-                    xAmzSignature = "corrupti";
-                    xAmzSignedHeaders = "illum";
-                }};
-            }};            
+                action = "BuildSuggesters";
+                domainName = "corrupti";
+                version = "2013-01-01";
+                xAmzAlgorithm = "provident";
+                xAmzContentSha256 = "distinctio";
+                xAmzCredential = "quibusdam";
+                xAmzDate = "unde";
+                xAmzSecurityToken = "nulla";
+                xAmzSignature = "corrupti";
+                xAmzSignedHeaders = "illum";
+            }}            
 
             GETBuildSuggestersResponse res = sdk.getBuildSuggesters(req);
 

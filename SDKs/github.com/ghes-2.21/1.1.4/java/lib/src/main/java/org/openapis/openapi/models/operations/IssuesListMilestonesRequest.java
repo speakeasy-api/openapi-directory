@@ -4,20 +4,70 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssuesListMilestonesRequest {
-    
-    public IssuesListMilestonesPathParams pathParams;
-    public IssuesListMilestonesRequest withPathParams(IssuesListMilestonesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The direction of the sort. Either `asc` or `desc`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public IssuesListMilestonesDirectionEnum direction;
+    public IssuesListMilestonesRequest withDirection(IssuesListMilestonesDirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssuesListMilestonesRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public IssuesListMilestonesQueryParams queryParams;
-    public IssuesListMilestonesRequest withQueryParams(IssuesListMilestonesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public IssuesListMilestonesRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public IssuesListMilestonesRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssuesListMilestonesRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * What to sort results by. Either `due_on` or `completeness`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public IssuesListMilestonesSortEnum sort;
+    public IssuesListMilestonesRequest withSort(IssuesListMilestonesSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * The state of the milestone. Either `open`, `closed`, or `all`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public IssuesListMilestonesStateEnum state;
+    public IssuesListMilestonesRequest withState(IssuesListMilestonesStateEnum state) {
+        this.state = state;
         return this;
     }
     

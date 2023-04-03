@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActivityListReposStarredByUserRequest {
-    
-    public ActivityListReposStarredByUserPathParams pathParams;
-    public ActivityListReposStarredByUserRequest withPathParams(ActivityListReposStarredByUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The direction to sort the results by.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public org.openapis.openapi.models.shared.DirectionEnum direction;
+    public ActivityListReposStarredByUserRequest withDirection(org.openapis.openapi.models.shared.DirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ActivityListReposStarredByUserRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public ActivityListReposStarredByUserQueryParams queryParams;
-    public ActivityListReposStarredByUserRequest withQueryParams(ActivityListReposStarredByUserQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ActivityListReposStarredByUserRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The property to sort the results by. `created` means when the repository was starred. `updated` means when the repository was last pushed to.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public org.openapis.openapi.models.shared.SortEnum sort;
+    public ActivityListReposStarredByUserRequest withSort(org.openapis.openapi.models.shared.SortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * The handle for the GitHub user account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public ActivityListReposStarredByUserRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

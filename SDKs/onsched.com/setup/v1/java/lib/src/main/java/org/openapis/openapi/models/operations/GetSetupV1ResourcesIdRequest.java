@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSetupV1ResourcesIdRequest {
-    
-    public GetSetupV1ResourcesIdPathParams pathParams;
-    public GetSetupV1ResourcesIdRequest withPathParams(GetSetupV1ResourcesIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Google calendar authorization return url
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=googleAuthReturnUrl")
+    public String googleAuthReturnUrl;
+    public GetSetupV1ResourcesIdRequest withGoogleAuthReturnUrl(String googleAuthReturnUrl) {
+        this.googleAuthReturnUrl = googleAuthReturnUrl;
         return this;
     }
     
+    /**
+     * id of resource object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSetupV1ResourcesIdRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetSetupV1ResourcesIdQueryParams queryParams;
-    public GetSetupV1ResourcesIdRequest withQueryParams(GetSetupV1ResourcesIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Outlook calendar authorization return url
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outlookAuthReturnUrl")
+    public String outlookAuthReturnUrl;
+    public GetSetupV1ResourcesIdRequest withOutlookAuthReturnUrl(String outlookAuthReturnUrl) {
+        this.outlookAuthReturnUrl = outlookAuthReturnUrl;
         return this;
     }
     

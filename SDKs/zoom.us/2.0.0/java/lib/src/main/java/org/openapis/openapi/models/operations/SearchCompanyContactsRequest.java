@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchCompanyContactsRequest {
+    /**
+     * The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next_page_token")
+    public String nextPageToken;
+    public SearchCompanyContactsRequest withNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
+        return this;
+    }
     
-    public SearchCompanyContactsQueryParams queryParams;
-    public SearchCompanyContactsRequest withQueryParams(SearchCompanyContactsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of records to be returned with a single API call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public SearchCompanyContactsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * Set `query_presence_status` to `true` in order to include the presence status of a contact in the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query_presence_status")
+    public String queryPresenceStatus;
+    public SearchCompanyContactsRequest withQueryPresenceStatus(String queryPresenceStatus) {
+        this.queryPresenceStatus = queryPresenceStatus;
+        return this;
+    }
+    
+    /**
+     * Provide the keyword - either first name, last name or email of the contact whom you have to search for.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_key")
+    public String searchKey;
+    public SearchCompanyContactsRequest withSearchKey(String searchKey) {
+        this.searchKey = searchKey;
         return this;
     }
     

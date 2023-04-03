@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminSetAllowedActionsEnterpriseRequest {
-    
-    public EnterpriseAdminSetAllowedActionsEnterprisePathParams pathParams;
-    public EnterpriseAdminSetAllowedActionsEnterpriseRequest withPathParams(EnterpriseAdminSetAllowedActionsEnterprisePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
+    public String enterprise;
+    public EnterpriseAdminSetAllowedActionsEnterpriseRequest withEnterprise(String enterprise) {
+        this.enterprise = enterprise;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SelectedActions request;
-    public EnterpriseAdminSetAllowedActionsEnterpriseRequest withRequest(org.openapis.openapi.models.shared.SelectedActions request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SelectedActions selectedActions;
+    public EnterpriseAdminSetAllowedActionsEnterpriseRequest withSelectedActions(org.openapis.openapi.models.shared.SelectedActions selectedActions) {
+        this.selectedActions = selectedActions;
         return this;
     }
     

@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETTestFailoverRequest {
-    
-    public GETTestFailoverQueryParams queryParams;
-    public GETTestFailoverRequest withQueryParams(GETTestFailoverQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETTestFailoverActionEnum action;
+    public GETTestFailoverRequest withAction(GETTestFailoverActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the node group (called shard in the console) in this replication group on which automatic failover is to be tested. You may test automatic failover on up to 5 node groups in any rolling 24-hour period.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NodeGroupId")
+    public String nodeGroupId;
+    public GETTestFailoverRequest withNodeGroupId(String nodeGroupId) {
+        this.nodeGroupId = nodeGroupId;
+        return this;
+    }
     
-    public GETTestFailoverHeaders headers;
-    public GETTestFailoverRequest withHeaders(GETTestFailoverHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name of the replication group (console: cluster) whose automatic failover is being tested by this operation.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ReplicationGroupId")
+    public String replicationGroupId;
+    public GETTestFailoverRequest withReplicationGroupId(String replicationGroupId) {
+        this.replicationGroupId = replicationGroupId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETTestFailoverVersionEnum version;
+    public GETTestFailoverRequest withVersion(GETTestFailoverVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETTestFailoverRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETTestFailoverRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETTestFailoverRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETTestFailoverRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETTestFailoverRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETTestFailoverRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETTestFailoverRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

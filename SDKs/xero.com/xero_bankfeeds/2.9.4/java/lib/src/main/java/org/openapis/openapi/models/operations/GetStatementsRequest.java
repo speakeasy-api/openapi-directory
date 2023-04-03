@@ -4,27 +4,50 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStatementsRequest {
-    
-    public GetStatementsQueryParams queryParams;
-    public GetStatementsRequest withQueryParams(GetStatementsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Application-Id")
+    public String xeroApplicationId;
+    public GetStatementsRequest withXeroApplicationId(String xeroApplicationId) {
+        this.xeroApplicationId = xeroApplicationId;
         return this;
     }
     
-    
-    public GetStatementsHeaders headers;
-    public GetStatementsRequest withHeaders(GetStatementsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
+    public String xeroTenantId;
+    public GetStatementsRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-User-Id")
+    public String xeroUserId;
+    public GetStatementsRequest withXeroUserId(String xeroUserId) {
+        this.xeroUserId = xeroUserId;
+        return this;
+    }
     
-    public GetStatementsSecurity security;
-    public GetStatementsRequest withSecurity(GetStatementsSecurity security) {
-        this.security = security;
+    /**
+     * unique id for single object
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetStatementsRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Page size which specifies how many records per page will be returned (default 10). Example - https://api.xero.com/bankfeeds.xro/1.0/Statements?pageSize=100 to specify page size of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public GetStatementsRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

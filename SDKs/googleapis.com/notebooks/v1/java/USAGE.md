@@ -5,17 +5,13 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.NotebooksProjectsLocationsEnvironmentsCreateSecurity;
-import org.openapis.openapi.models.operations.NotebooksProjectsLocationsEnvironmentsCreatePathParams;
-import org.openapis.openapi.models.operations.NotebooksProjectsLocationsEnvironmentsCreateQueryParams;
 import org.openapis.openapi.models.operations.NotebooksProjectsLocationsEnvironmentsCreateRequest;
 import org.openapis.openapi.models.operations.NotebooksProjectsLocationsEnvironmentsCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.EnvironmentInput;
 import org.openapis.openapi.models.shared.VmImage;
 import org.openapis.openapi.models.shared.ContainerImage;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -24,48 +20,39 @@ public class Application {
                 .build();
 
             NotebooksProjectsLocationsEnvironmentsCreateRequest req = new NotebooksProjectsLocationsEnvironmentsCreateRequest() {{
-                security = new NotebooksProjectsLocationsEnvironmentsCreateSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new NotebooksProjectsLocationsEnvironmentsCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new NotebooksProjectsLocationsEnvironmentsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    environmentId = "nulla";
-                    fields = "corrupti";
-                    key = "illum";
-                    oauthToken = "vel";
-                    prettyPrint = false;
-                    quotaUser = "error";
-                    uploadType = "deserunt";
-                    uploadProtocol = "suscipit";
-                }};
-                request = new EnvironmentInput() {{
+                dollarXgafv = "2";
+                environmentInput = new EnvironmentInput() {{
                     containerImage = new ContainerImage() {{
-                        repository = "iure";
-                        tag = "magnam";
+                        repository = "provident";
+                        tag = "distinctio";
                     }};
-                    description = "debitis";
-                    displayName = "ipsa";
-                    postStartupScript = "delectus";
+                    description = "quibusdam";
+                    displayName = "unde";
+                    postStartupScript = "nulla";
                     vmImage = new VmImage() {{
-                        imageFamily = "tempora";
-                        imageName = "suscipit";
-                        project = "molestiae";
+                        imageFamily = "corrupti";
+                        imageName = "illum";
+                        project = "vel";
                     }};
                 }};
-            }};            
+                accessToken = "error";
+                alt = "media";
+                callback = "suscipit";
+                environmentId = "iure";
+                fields = "magnam";
+                key = "debitis";
+                oauthToken = "ipsa";
+                parent = "delectus";
+                prettyPrint = false;
+                quotaUser = "tempora";
+                uploadType = "suscipit";
+                uploadProtocol = "molestiae";
+            }}            
 
-            NotebooksProjectsLocationsEnvironmentsCreateResponse res = sdk.projects.notebooksProjectsLocationsEnvironmentsCreate(req);
+            NotebooksProjectsLocationsEnvironmentsCreateResponse res = sdk.projects.notebooksProjectsLocationsEnvironmentsCreate(req, new NotebooksProjectsLocationsEnvironmentsCreateSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.operation.isPresent()) {
                 // handle response

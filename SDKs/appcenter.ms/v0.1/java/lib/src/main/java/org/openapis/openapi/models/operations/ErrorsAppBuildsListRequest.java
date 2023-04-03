@@ -4,27 +4,74 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ErrorsAppBuildsListRequest {
-    
-    public ErrorsAppBuildsListPathParams pathParams;
-    public ErrorsAppBuildsListRequest withPathParams(ErrorsAppBuildsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The maximum number of results to return. (0 will fetch all results till the max number.)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$top")
+    public Long dollarTop;
+    public ErrorsAppBuildsListRequest withDollarTop(Long dollarTop) {
+        this.dollarTop = dollarTop;
         return this;
     }
     
-    
-    public ErrorsAppBuildsListQueryParams queryParams;
-    public ErrorsAppBuildsListRequest withQueryParams(ErrorsAppBuildsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public ErrorsAppBuildsListRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * Last date time in data in ISO 8601 date time format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
+    public OffsetDateTime end;
+    public ErrorsAppBuildsListRequest withEnd(OffsetDateTime end) {
+        this.end = end;
+        return this;
+    }
     
-    public ErrorsAppBuildsListSecurity security;
-    public ErrorsAppBuildsListRequest withSecurity(ErrorsAppBuildsListSecurity security) {
-        this.security = security;
+    /**
+     * Type of error (handled vs unhandled), including All
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=errorType")
+    public ErrorsAppBuildsListErrorTypeEnum errorType;
+    public ErrorsAppBuildsListRequest withErrorType(ErrorsAppBuildsListErrorTypeEnum errorType) {
+        this.errorType = errorType;
+        return this;
+    }
+    
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public ErrorsAppBuildsListRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
+    
+    /**
+     * Start date time in data in ISO 8601 date time format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public OffsetDateTime start;
+    public ErrorsAppBuildsListRequest withStart(OffsetDateTime start) {
+        this.start = start;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
+    public String version;
+    public ErrorsAppBuildsListRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

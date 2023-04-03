@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TrackPackageRequest {
-    
-    public TrackPackagePathParams pathParams;
-    public TrackPackageRequest withPathParams(TrackPackagePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public TrackPackageRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     
-    
-    public TrackPackageQueryParams queryParams;
-    public TrackPackageRequest withQueryParams(TrackPackageQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * This is the package tracking key provided in the response of a /package call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public TrackPackageRequest withKey(String key) {
+        this.key = key;
         return this;
     }
     

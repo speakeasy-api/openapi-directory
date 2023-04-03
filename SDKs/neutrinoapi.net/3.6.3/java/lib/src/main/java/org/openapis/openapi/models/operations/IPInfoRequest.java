@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IPInfoRequest {
+    /**
+     * IPv4 or IPv6 address
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ip")
+    public String ip;
+    public IPInfoRequest withIp(String ip) {
+        this.ip = ip;
+        return this;
+    }
     
-    public IPInfoQueryParams queryParams;
-    public IPInfoRequest withQueryParams(IPInfoQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Do a reverse DNS (PTR) lookup. This option can add extra delay to the request so only use it if you need it
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reverse-lookup")
+    public Boolean reverseLookup;
+    public IPInfoRequest withReverseLookup(Boolean reverseLookup) {
+        this.reverseLookup = reverseLookup;
         return this;
     }
     

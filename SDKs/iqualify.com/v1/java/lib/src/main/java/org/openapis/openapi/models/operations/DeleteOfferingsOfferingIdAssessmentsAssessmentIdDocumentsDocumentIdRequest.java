@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteOfferingsOfferingIdAssessmentsAssessmentIdDocumentsDocumentIdRequest {
+    /**
+     * assessment's id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assessmentId")
+    public String assessmentId;
+    public DeleteOfferingsOfferingIdAssessmentsAssessmentIdDocumentsDocumentIdRequest withAssessmentId(String assessmentId) {
+        this.assessmentId = assessmentId;
+        return this;
+    }
     
-    public DeleteOfferingsOfferingIdAssessmentsAssessmentIdDocumentsDocumentIdPathParams pathParams;
-    public DeleteOfferingsOfferingIdAssessmentsAssessmentIdDocumentsDocumentIdRequest withPathParams(DeleteOfferingsOfferingIdAssessmentsAssessmentIdDocumentsDocumentIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * documents's id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=documentId")
+    public String documentId;
+    public DeleteOfferingsOfferingIdAssessmentsAssessmentIdDocumentsDocumentIdRequest withDocumentId(String documentId) {
+        this.documentId = documentId;
+        return this;
+    }
+    
+    /**
+     * offering's id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offeringId")
+    public String offeringId;
+    public DeleteOfferingsOfferingIdAssessmentsAssessmentIdDocumentsDocumentIdRequest withOfferingId(String offeringId) {
+        this.offeringId = offeringId;
         return this;
     }
     

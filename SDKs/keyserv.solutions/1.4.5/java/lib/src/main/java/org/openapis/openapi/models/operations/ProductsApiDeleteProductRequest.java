@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProductsApiDeleteProductRequest {
-    
-    public ProductsApiDeleteProductPathParams pathParams;
-    public ProductsApiDeleteProductRequest withPathParams(ProductsApiDeleteProductPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Api-Key")
+    public String xApiKey;
+    public ProductsApiDeleteProductRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     
-    
-    public ProductsApiDeleteProductHeaders headers;
-    public ProductsApiDeleteProductRequest withHeaders(ProductsApiDeleteProductHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public ProductsApiDeleteProductRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

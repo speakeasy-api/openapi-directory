@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutAttachmentsIdRequest {
-    
-    public PutAttachmentsIdPathParams pathParams;
-    public PutAttachmentsIdRequest withPathParams(PutAttachmentsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PutAttachmentsIdRequestBody requestBody;
+    public PutAttachmentsIdRequest withRequestBody(PutAttachmentsIdRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PutAttachmentsIdRequestBody request;
-    public PutAttachmentsIdRequest withRequest(PutAttachmentsIdRequestBody request) {
-        this.request = request;
+    /**
+     * The unique identifier of the attachment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public PutAttachmentsIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

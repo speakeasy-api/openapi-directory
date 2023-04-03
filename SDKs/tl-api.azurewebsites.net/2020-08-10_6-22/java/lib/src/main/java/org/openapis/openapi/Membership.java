@@ -32,11 +32,10 @@ public class Membership {
 
     /**
      * Get all of the members details - This will return all properties related to member entity -             
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MembershipGetResponse membershipGet(org.openapis.openapi.models.operations.MembershipGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MembershipGetResponse membershipGet() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/Membership");
         
@@ -45,7 +44,7 @@ public class Membership {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = this._securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -83,7 +82,7 @@ public class Membership {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MembershipPostResponse membershipPost(org.openapis.openapi.models.operations.MembershipPostRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MembershipPostResponse membershipPost(org.openapis.openapi.models.shared.MemberDTO request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/Membership");
         

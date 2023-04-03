@@ -4,20 +4,126 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupsGetDatapointsRequest {
-    
-    public GroupsGetDatapointsPathParams pathParams;
-    public GroupsGetDatapointsRequest withPathParams(GroupsGetDatapointsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Exclude datapoints created before this date (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAfter")
+    public String createdAfter;
+    public GroupsGetDatapointsRequest withCreatedAfter(String createdAfter) {
+        this.createdAfter = createdAfter;
         return this;
     }
     
+    /**
+     * Exclude datapoints created after this date (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdBefore")
+    public String createdBefore;
+    public GroupsGetDatapointsRequest withCreatedBefore(String createdBefore) {
+        this.createdBefore = createdBefore;
+        return this;
+    }
     
-    public GroupsGetDatapointsQueryParams queryParams;
-    public GroupsGetDatapointsRequest withQueryParams(GroupsGetDatapointsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Id of the group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GroupsGetDatapointsRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Maximum elements to retrieve. Default to 20 if not specified.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GroupsGetDatapointsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Where to start when retrieving elements. Default is 0 if not specified.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public GroupsGetDatapointsRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Filter fields by favourite status
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onlyFavorites")
+    public Boolean onlyFavorites;
+    public GroupsGetDatapointsRequest withOnlyFavorites(Boolean onlyFavorites) {
+        this.onlyFavorites = onlyFavorites;
+        return this;
+    }
+    
+    /**
+     * Field to sort by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortBy")
+    public String sortBy;
+    public GroupsGetDatapointsRequest withSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    
+    /**
+     * Direction of sort "asc" or "desc"
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortDirection")
+    public GroupsGetDatapointsSortDirectionEnum sortDirection;
+    public GroupsGetDatapointsRequest withSortDirection(GroupsGetDatapointsSortDirectionEnum sortDirection) {
+        this.sortDirection = sortDirection;
+        return this;
+    }
+    
+    /**
+     * Status of the datapoint
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public GroupsGetDatapointsStatusEnum status;
+    public GroupsGetDatapointsRequest withStatus(GroupsGetDatapointsStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * A comma separated list of tags you want to filter with.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
+    public String tags;
+    public GroupsGetDatapointsRequest withTags(String tags) {
+        this.tags = tags;
+        return this;
+    }
+    
+    /**
+     * Filter fields by this pattern
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=textSearch")
+    public String textSearch;
+    public GroupsGetDatapointsRequest withTextSearch(String textSearch) {
+        this.textSearch = textSearch;
+        return this;
+    }
+    
+    /**
+     * Type of the datapoint ("tp"/"tl")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public GroupsGetDatapointsTypeEnum type;
+    public GroupsGetDatapointsRequest withType(GroupsGetDatapointsTypeEnum type) {
+        this.type = type;
         return this;
     }
     

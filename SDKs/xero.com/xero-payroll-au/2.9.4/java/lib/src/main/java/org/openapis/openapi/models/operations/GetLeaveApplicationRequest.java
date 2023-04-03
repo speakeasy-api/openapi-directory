@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLeaveApplicationRequest {
-    
-    public GetLeaveApplicationPathParams pathParams;
-    public GetLeaveApplicationRequest withPathParams(GetLeaveApplicationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Leave Application id for single object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=LeaveApplicationID")
+    public String leaveApplicationID;
+    public GetLeaveApplicationRequest withLeaveApplicationID(String leaveApplicationID) {
+        this.leaveApplicationID = leaveApplicationID;
         return this;
     }
     
-    
-    public GetLeaveApplicationHeaders headers;
-    public GetLeaveApplicationRequest withHeaders(GetLeaveApplicationHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetLeaveApplicationSecurity security;
-    public GetLeaveApplicationRequest withSecurity(GetLeaveApplicationSecurity security) {
-        this.security = security;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
+    public String xeroTenantId;
+    public GetLeaveApplicationRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     

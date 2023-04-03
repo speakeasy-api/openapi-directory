@@ -34,19 +34,20 @@ public class AlbumsCustomAlbumThumbnails {
     /**
      * Add a custom uploaded thumbnail
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateAlbumCustomThumbResponse createAlbumCustomThumb(org.openapis.openapi.models.operations.CreateAlbumCustomThumbRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateAlbumCustomThumbResponse createAlbumCustomThumb(org.openapis.openapi.models.operations.CreateAlbumCustomThumbRequest request, org.openapis.openapi.models.operations.CreateAlbumCustomThumbSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateAlbumCustomThumbPathParams.class, baseUrl, "/users/{user_id}/albums/{album_id}/custom_thumbnails", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateAlbumCustomThumbRequest.class, baseUrl, "/users/{user_id}/albums/{album_id}/custom_thumbnails", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,19 +83,20 @@ public class AlbumsCustomAlbumThumbnails {
      * Remove a custom uploaded album thumbnail
      * This method removes a custom uploaded thumbnail from the specified album.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteAlbumCustomThumbnailResponse deleteAlbumCustomThumbnail(org.openapis.openapi.models.operations.DeleteAlbumCustomThumbnailRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteAlbumCustomThumbnailResponse deleteAlbumCustomThumbnail(org.openapis.openapi.models.operations.DeleteAlbumCustomThumbnailRequest request, org.openapis.openapi.models.operations.DeleteAlbumCustomThumbnailSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAlbumCustomThumbnailPathParams.class, baseUrl, "/users/{user_id}/albums/{album_id}/custom_thumbnails/{thumbnail_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAlbumCustomThumbnailRequest.class, baseUrl, "/users/{user_id}/albums/{album_id}/custom_thumbnails/{thumbnail_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -128,7 +130,7 @@ public class AlbumsCustomAlbumThumbnails {
      */
     public org.openapis.openapi.models.operations.GetAlbumCustomThumbnailResponse getAlbumCustomThumbnail(org.openapis.openapi.models.operations.GetAlbumCustomThumbnailRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAlbumCustomThumbnailPathParams.class, baseUrl, "/users/{user_id}/albums/{album_id}/custom_thumbnails/{thumbnail_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAlbumCustomThumbnailRequest.class, baseUrl, "/users/{user_id}/albums/{album_id}/custom_thumbnails/{thumbnail_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -175,13 +177,13 @@ public class AlbumsCustomAlbumThumbnails {
      */
     public org.openapis.openapi.models.operations.GetAlbumCustomThumbsResponse getAlbumCustomThumbs(org.openapis.openapi.models.operations.GetAlbumCustomThumbsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAlbumCustomThumbsPathParams.class, baseUrl, "/users/{user_id}/albums/{album_id}/custom_thumbnails", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAlbumCustomThumbsRequest.class, baseUrl, "/users/{user_id}/albums/{album_id}/custom_thumbnails", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAlbumCustomThumbsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAlbumCustomThumbsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -223,21 +225,22 @@ public class AlbumsCustomAlbumThumbnails {
     /**
      * Replace a custom uploaded album thumbnail
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReplaceAlbumCustomThumbResponse replaceAlbumCustomThumb(org.openapis.openapi.models.operations.ReplaceAlbumCustomThumbRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReplaceAlbumCustomThumbResponse replaceAlbumCustomThumb(org.openapis.openapi.models.operations.ReplaceAlbumCustomThumbRequest request, org.openapis.openapi.models.operations.ReplaceAlbumCustomThumbSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReplaceAlbumCustomThumbPathParams.class, baseUrl, "/users/{user_id}/albums/{album_id}/custom_thumbnails/{thumbnail_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReplaceAlbumCustomThumbRequest.class, baseUrl, "/users/{user_id}/albums/{album_id}/custom_thumbnails/{thumbnail_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

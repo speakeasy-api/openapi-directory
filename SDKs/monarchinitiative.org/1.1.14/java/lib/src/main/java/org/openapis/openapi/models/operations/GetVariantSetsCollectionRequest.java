@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVariantSetsCollectionRequest {
+    /**
+     * Page number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetVariantSetsCollectionRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetVariantSetsCollectionQueryParams queryParams;
-    public GetVariantSetsCollectionRequest withQueryParams(GetVariantSetsCollectionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Results per page {error_msg}
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public GetVariantSetsCollectionPerPageEnum perPage;
+    public GetVariantSetsCollectionRequest withPerPage(GetVariantSetsCollectionPerPageEnum perPage) {
+        this.perPage = perPage;
         return this;
     }
     

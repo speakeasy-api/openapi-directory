@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BaggageTripAndContactRequest {
-    
-    public BaggageTripAndContactPathParams pathParams;
-    public BaggageTripAndContactRequest withPathParams(BaggageTripAndContactPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public BaggageTripAndContactRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public BaggageTripAndContactHeaders headers;
-    public BaggageTripAndContactRequest withHeaders(BaggageTripAndContactHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public BaggageTripAndContactSecurity security;
-    public BaggageTripAndContactRequest withSecurity(BaggageTripAndContactSecurity security) {
-        this.security = security;
+    /**
+     * Bag tag number, PNR, boarding card or FQTV ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=searchID")
+    public String searchID;
+    public BaggageTripAndContactRequest withSearchID(String searchID) {
+        this.searchID = searchID;
         return this;
     }
     

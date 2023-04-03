@@ -4,27 +4,48 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TaskTemplatesPartialUpdateRequest {
-    
-    public TaskTemplatesPartialUpdatePathParams pathParams;
-    public TaskTemplatesPartialUpdateRequest withPathParams(TaskTemplatesPartialUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assignee_group")
+    public Long assigneeGroup;
+    public TaskTemplatesPartialUpdateRequest withAssigneeGroup(Long assigneeGroup) {
+        this.assigneeGroup = assigneeGroup;
         return this;
     }
     
-    
-    public TaskTemplatesPartialUpdateQueryParams queryParams;
-    public TaskTemplatesPartialUpdateRequest withQueryParams(TaskTemplatesPartialUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assignee_user")
+    public Long assigneeUser;
+    public TaskTemplatesPartialUpdateRequest withAssigneeUser(Long assigneeUser) {
+        this.assigneeUser = assigneeUser;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
+    public Long category;
+    public TaskTemplatesPartialUpdateRequest withCategory(Long category) {
+        this.category = category;
+        return this;
+    }
     
-    public TaskTemplatesPartialUpdateSecurity security;
-    public TaskTemplatesPartialUpdateRequest withSecurity(TaskTemplatesPartialUpdateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public TaskTemplatesPartialUpdateRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public TaskTemplatesPartialUpdateRequest withSince(String since) {
+        this.since = since;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public Long status;
+    public TaskTemplatesPartialUpdateRequest withStatus(Long status) {
+        this.status = status;
         return this;
     }
     

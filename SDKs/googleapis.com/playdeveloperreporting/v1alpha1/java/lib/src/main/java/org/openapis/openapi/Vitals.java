@@ -34,25 +34,26 @@ public class Vitals {
     /**
      * Searches all error issues in which reports have been grouped.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsErrorsIssuesSearchResponse playdeveloperreportingVitalsErrorsIssuesSearch(org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsErrorsIssuesSearchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsErrorsIssuesSearchResponse playdeveloperreportingVitalsErrorsIssuesSearch(org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsErrorsIssuesSearchRequest request, org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsErrorsIssuesSearchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsErrorsIssuesSearchPathParams.class, baseUrl, "/v1alpha1/{parent}/errorIssues:search", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsErrorsIssuesSearchRequest.class, baseUrl, "/v1alpha1/{parent}/errorIssues:search", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsErrorsIssuesSearchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsErrorsIssuesSearchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class Vitals {
     /**
      * Searches all error reports received for an app.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsErrorsReportsSearchResponse playdeveloperreportingVitalsErrorsReportsSearch(org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsErrorsReportsSearchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsErrorsReportsSearchResponse playdeveloperreportingVitalsErrorsReportsSearch(org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsErrorsReportsSearchRequest request, org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsErrorsReportsSearchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsErrorsReportsSearchPathParams.class, baseUrl, "/v1alpha1/{parent}/errorReports:search", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsErrorsReportsSearchRequest.class, baseUrl, "/v1alpha1/{parent}/errorReports:search", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsErrorsReportsSearchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsErrorsReportsSearchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,25 +126,26 @@ public class Vitals {
     /**
      * Describes the properties of the metric set.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGetResponse playdeveloperreportingVitalsStuckbackgroundwakelockrateGet(org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGetResponse playdeveloperreportingVitalsStuckbackgroundwakelockrateGet(org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGetRequest request, org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGetPathParams.class, baseUrl, "/v1alpha1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGetRequest.class, baseUrl, "/v1alpha1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -169,27 +172,28 @@ public class Vitals {
     /**
      * Queries the metrics in the metric set.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQueryResponse playdeveloperreportingVitalsStuckbackgroundwakelockrateQuery(org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQueryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQueryResponse playdeveloperreportingVitalsStuckbackgroundwakelockrateQuery(org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQueryRequest request, org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQuerySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQueryPathParams.class, baseUrl, "/v1alpha1/{name}:query", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQueryRequest.class, baseUrl, "/v1alpha1/{name}:query", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googlePlayDeveloperReportingV1alpha1QueryStuckBackgroundWakelockRateMetricSetRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQueryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQueryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

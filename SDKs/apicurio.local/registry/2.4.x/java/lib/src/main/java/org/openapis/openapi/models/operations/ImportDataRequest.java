@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImportDataRequest {
-    
-    public ImportDataHeaders headers;
-    public ImportDataRequest withHeaders(ImportDataHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * The ZIP file representing the previously exported registry data.
      */
     @SpeakeasyMetadata("request:mediaType=application/zip")
-    public byte[] request;
-    public ImportDataRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public ImportDataRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * If this header is set to false, content ids of imported data will be ignored and replaced by next id in content id sequence. The mapping between content and artifacts will be preserved. This allows to import any data even thought the content ids would cause a conflict.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-Preserve-ContentId")
+    public Boolean xRegistryPreserveContentId;
+    public ImportDataRequest withXRegistryPreserveContentId(Boolean xRegistryPreserveContentId) {
+        this.xRegistryPreserveContentId = xRegistryPreserveContentId;
+        return this;
+    }
+    
+    /**
+     * If this header is set to false, global ids of imported data will be ignored and replaced by next id in global id sequence. This allows to import any data even thought the global ids would cause a conflict.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-Preserve-GlobalId")
+    public Boolean xRegistryPreserveGlobalId;
+    public ImportDataRequest withXRegistryPreserveGlobalId(Boolean xRegistryPreserveGlobalId) {
+        this.xRegistryPreserveGlobalId = xRegistryPreserveGlobalId;
         return this;
     }
     

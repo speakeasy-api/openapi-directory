@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetJuniperSwitchSnmpConfigRequest {
-    
-    public GetJuniperSwitchSnmpConfigPathParams pathParams;
-    public GetJuniperSwitchSnmpConfigRequest withPathParams(GetJuniperSwitchSnmpConfigPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetJuniperSwitchSnmpConfigSecurity security;
-    public GetJuniperSwitchSnmpConfigRequest withSecurity(GetJuniperSwitchSnmpConfigSecurity security) {
-        this.security = security;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetJuniperSwitchSnmpConfigRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

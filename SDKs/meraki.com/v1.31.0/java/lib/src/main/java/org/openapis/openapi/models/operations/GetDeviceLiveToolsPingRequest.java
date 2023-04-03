@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDeviceLiveToolsPingRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetDeviceLiveToolsPingRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetDeviceLiveToolsPingPathParams pathParams;
-    public GetDeviceLiveToolsPingRequest withPathParams(GetDeviceLiveToolsPingPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public GetDeviceLiveToolsPingRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

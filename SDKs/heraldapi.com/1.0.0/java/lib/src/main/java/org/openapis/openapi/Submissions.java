@@ -41,7 +41,7 @@ public class Submissions {
      */
     public org.openapis.openapi.models.operations.GetSubmissionsSubmissionIdResponse getSubmissionsSubmissionId(org.openapis.openapi.models.operations.GetSubmissionsSubmissionIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubmissionsSubmissionIdPathParams.class, baseUrl, "/submissions/{submission_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubmissionsSubmissionIdRequest.class, baseUrl, "/submissions/{submission_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -83,7 +83,7 @@ public class Submissions {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSubmissionsResponse postSubmissions(org.openapis.openapi.models.operations.PostSubmissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSubmissionsResponse postSubmissions(org.openapis.openapi.models.operations.PostSubmissionsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/submissions");
         

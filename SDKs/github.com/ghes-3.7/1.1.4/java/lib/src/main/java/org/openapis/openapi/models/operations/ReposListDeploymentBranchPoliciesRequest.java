@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposListDeploymentBranchPoliciesRequest {
-    
-    public ReposListDeploymentBranchPoliciesPathParams pathParams;
-    public ReposListDeploymentBranchPoliciesRequest withPathParams(ReposListDeploymentBranchPoliciesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the environment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environment_name")
+    public String environmentName;
+    public ReposListDeploymentBranchPoliciesRequest withEnvironmentName(String environmentName) {
+        this.environmentName = environmentName;
         return this;
     }
     
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposListDeploymentBranchPoliciesRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public ReposListDeploymentBranchPoliciesQueryParams queryParams;
-    public ReposListDeploymentBranchPoliciesRequest withQueryParams(ReposListDeploymentBranchPoliciesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ReposListDeploymentBranchPoliciesRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ReposListDeploymentBranchPoliciesRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposListDeploymentBranchPoliciesRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

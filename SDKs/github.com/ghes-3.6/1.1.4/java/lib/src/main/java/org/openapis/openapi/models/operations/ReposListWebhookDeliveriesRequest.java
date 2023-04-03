@@ -4,20 +4,63 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposListWebhookDeliveriesRequest {
-    
-    public ReposListWebhookDeliveriesPathParams pathParams;
-    public ReposListWebhookDeliveriesRequest withPathParams(ReposListWebhookDeliveriesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Used for pagination: the starting delivery from which the page of deliveries is fetched. Refer to the `link` header for the next and previous page cursors.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public ReposListWebhookDeliveriesRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
+    /**
+     * The unique identifier of the hook.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hook_id")
+    public Long hookId;
+    public ReposListWebhookDeliveriesRequest withHookId(Long hookId) {
+        this.hookId = hookId;
+        return this;
+    }
     
-    public ReposListWebhookDeliveriesQueryParams queryParams;
-    public ReposListWebhookDeliveriesRequest withQueryParams(ReposListWebhookDeliveriesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposListWebhookDeliveriesRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ReposListWebhookDeliveriesRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=redelivery")
+    public Boolean redelivery;
+    public ReposListWebhookDeliveriesRequest withRedelivery(Boolean redelivery) {
+        this.redelivery = redelivery;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposListWebhookDeliveriesRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

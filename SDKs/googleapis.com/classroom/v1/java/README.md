@@ -18,15 +18,11 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.ClassroomCoursesAliasesCreateSecurity;
-import org.openapis.openapi.models.operations.ClassroomCoursesAliasesCreatePathParams;
-import org.openapis.openapi.models.operations.ClassroomCoursesAliasesCreateQueryParams;
 import org.openapis.openapi.models.operations.ClassroomCoursesAliasesCreateRequest;
 import org.openapis.openapi.models.operations.ClassroomCoursesAliasesCreateResponse;
-import org.openapis.openapi.models.shared.CourseAlias;
 import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.CourseAlias;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -35,36 +31,27 @@ public class Application {
                 .build();
 
             ClassroomCoursesAliasesCreateRequest req = new ClassroomCoursesAliasesCreateRequest() {{
-                security = new ClassroomCoursesAliasesCreateSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
+                dollarXgafv = "2";
+                courseAlias = new CourseAlias() {{
+                    alias = "provident";
                 }};
-                pathParams = new ClassroomCoursesAliasesCreatePathParams() {{
-                    courseId = "corrupti";
-                }};
-                queryParams = new ClassroomCoursesAliasesCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new CourseAlias() {{
-                    alias = "suscipit";
-                }};
-            }};            
+                accessToken = "distinctio";
+                alt = "proto";
+                callback = "unde";
+                courseId = "nulla";
+                fields = "corrupti";
+                key = "illum";
+                oauthToken = "vel";
+                prettyPrint = false;
+                quotaUser = "error";
+                uploadType = "deserunt";
+                uploadProtocol = "suscipit";
+            }}            
 
-            ClassroomCoursesAliasesCreateResponse res = sdk.courses.classroomCoursesAliasesCreate(req);
+            ClassroomCoursesAliasesCreateResponse res = sdk.courses.classroomCoursesAliasesCreate(req, new ClassroomCoursesAliasesCreateSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.courseAlias.isPresent()) {
                 // handle response
@@ -76,7 +63,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### courses

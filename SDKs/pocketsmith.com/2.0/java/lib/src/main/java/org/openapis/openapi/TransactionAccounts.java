@@ -39,7 +39,7 @@ public class TransactionAccounts {
      */
     public org.openapis.openapi.models.operations.GetTransactionAccountsIdResponse getTransactionAccountsId(org.openapis.openapi.models.operations.GetTransactionAccountsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTransactionAccountsIdPathParams.class, baseUrl, "/transaction_accounts/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTransactionAccountsIdRequest.class, baseUrl, "/transaction_accounts/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -87,7 +87,7 @@ public class TransactionAccounts {
      */
     public org.openapis.openapi.models.operations.GetUsersIdTransactionAccountsResponse getUsersIdTransactionAccounts(org.openapis.openapi.models.operations.GetUsersIdTransactionAccountsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdTransactionAccountsPathParams.class, baseUrl, "/users/{id}/transaction_accounts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdTransactionAccountsRequest.class, baseUrl, "/users/{id}/transaction_accounts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -135,12 +135,12 @@ public class TransactionAccounts {
      */
     public org.openapis.openapi.models.operations.PutTransactionAccountsIdResponse putTransactionAccountsId(org.openapis.openapi.models.operations.PutTransactionAccountsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutTransactionAccountsIdPathParams.class, baseUrl, "/transaction_accounts/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutTransactionAccountsIdRequest.class, baseUrl, "/transaction_accounts/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

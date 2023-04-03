@@ -4,13 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodespacesRemoveSelectedRepoFromOrgSecretRequest {
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public CodespacesRemoveSelectedRepoFromOrgSecretRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
     
-    public CodespacesRemoveSelectedRepoFromOrgSecretPathParams pathParams;
-    public CodespacesRemoveSelectedRepoFromOrgSecretRequest withPathParams(CodespacesRemoveSelectedRepoFromOrgSecretPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repository_id")
+    public Long repositoryId;
+    public CodespacesRemoveSelectedRepoFromOrgSecretRequest withRepositoryId(Long repositoryId) {
+        this.repositoryId = repositoryId;
+        return this;
+    }
+    
+    /**
+     * The name of the secret.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=secret_name")
+    public String secretName;
+    public CodespacesRemoveSelectedRepoFromOrgSecretRequest withSecretName(String secretName) {
+        this.secretName = secretName;
         return this;
     }
     

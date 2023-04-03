@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2ActionDetailsCallInstructionsIdJsonRequest {
-    
-    public GetV2ActionDetailsCallInstructionsIdJsonPathParams pathParams;
-    public GetV2ActionDetailsCallInstructionsIdJsonRequest withPathParams(GetV2ActionDetailsCallInstructionsIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Call instructions ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetV2ActionDetailsCallInstructionsIdJsonRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

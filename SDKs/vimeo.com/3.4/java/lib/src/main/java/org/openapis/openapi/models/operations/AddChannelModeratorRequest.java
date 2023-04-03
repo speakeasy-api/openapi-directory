@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddChannelModeratorRequest {
-    
-    public AddChannelModeratorPathParams pathParams;
-    public AddChannelModeratorRequest withPathParams(AddChannelModeratorPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel_id")
+    public Double channelId;
+    public AddChannelModeratorRequest withChannelId(Double channelId) {
+        this.channelId = channelId;
         return this;
     }
     
-    
-    public AddChannelModeratorSecurity security;
-    public AddChannelModeratorRequest withSecurity(AddChannelModeratorSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public AddChannelModeratorRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

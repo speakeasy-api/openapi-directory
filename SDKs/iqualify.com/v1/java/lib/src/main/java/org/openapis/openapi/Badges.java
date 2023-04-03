@@ -38,7 +38,7 @@ public class Badges {
      */
     public org.openapis.openapi.models.operations.GetOfferingsOfferingIdBadgesResponse getOfferingsOfferingIdBadges(org.openapis.openapi.models.operations.GetOfferingsOfferingIdBadgesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdBadgesPathParams.class, baseUrl, "/offerings/{offeringId}/badges", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdBadgesRequest.class, baseUrl, "/offerings/{offeringId}/badges", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -86,7 +86,7 @@ public class Badges {
      */
     public org.openapis.openapi.models.operations.GetUsersUserEmailBadgesResponse getUsersUserEmailBadges(org.openapis.openapi.models.operations.GetUsersUserEmailBadgesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersUserEmailBadgesPathParams.class, baseUrl, "/users/{userEmail}/badges", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersUserEmailBadgesRequest.class, baseUrl, "/users/{userEmail}/badges", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -134,7 +134,7 @@ public class Badges {
      */
     public org.openapis.openapi.models.operations.PostOfferingsOfferingIdUsersUserEmailBadgesAwardResponse postOfferingsOfferingIdUsersUserEmailBadgesAward(org.openapis.openapi.models.operations.PostOfferingsOfferingIdUsersUserEmailBadgesAwardRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostOfferingsOfferingIdUsersUserEmailBadgesAwardPathParams.class, baseUrl, "/offerings/{offeringId}/users/{userEmail}/badges/award", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostOfferingsOfferingIdUsersUserEmailBadgesAwardRequest.class, baseUrl, "/offerings/{offeringId}/users/{userEmail}/badges/award", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");

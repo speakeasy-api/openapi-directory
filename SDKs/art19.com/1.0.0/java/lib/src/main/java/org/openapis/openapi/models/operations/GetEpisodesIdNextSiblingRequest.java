@@ -4,27 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEpisodesIdNextSiblingRequest {
-    
-    public GetEpisodesIdNextSiblingPathParams pathParams;
-    public GetEpisodesIdNextSiblingRequest withPathParams(GetEpisodesIdNextSiblingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the episode to find the one episode released right after it.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetEpisodesIdNextSiblingRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetEpisodesIdNextSiblingQueryParams queryParams;
-    public GetEpisodesIdNextSiblingRequest withQueryParams(GetEpisodesIdNextSiblingQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetEpisodesIdNextSiblingSecurity security;
-    public GetEpisodesIdNextSiblingRequest withSecurity(GetEpisodesIdNextSiblingSecurity security) {
-        this.security = security;
+    /**
+     * If `true`, get the next released and published episode with an available media file.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rss")
+    public Boolean rss;
+    public GetEpisodesIdNextSiblingRequest withRss(Boolean rss) {
+        this.rss = rss;
         return this;
     }
     

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AssignSIPTrunksRequest {
-    
-    public AssignSIPTrunksPathParams pathParams;
-    public AssignSIPTrunksRequest withPathParams(AssignSIPTrunksPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public AssignSIPTrunksApplicationJSON requestBody;
+    public AssignSIPTrunksRequest withRequestBody(AssignSIPTrunksApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public AssignSIPTrunksApplicationJSON request;
-    public AssignSIPTrunksRequest withRequest(AssignSIPTrunksApplicationJSON request) {
-        this.request = request;
+    /**
+     * Unique Identifier of the sub account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public AssignSIPTrunksRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     

@@ -4,13 +4,34 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostTreeActivationRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cmd")
+    public String cmd;
+    public PostTreeActivationRequest withCmd(String cmd) {
+        this.cmd = cmd;
+        return this;
+    }
     
-    public PostTreeActivationQueryParams queryParams;
-    public PostTreeActivationRequest withQueryParams(PostTreeActivationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ignoredeactivated")
+    public Boolean ignoredeactivated;
+    public PostTreeActivationRequest withIgnoredeactivated(Boolean ignoredeactivated) {
+        this.ignoredeactivated = ignoredeactivated;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onlymodified")
+    public Boolean onlymodified;
+    public PostTreeActivationRequest withOnlymodified(Boolean onlymodified) {
+        this.onlymodified = onlymodified;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=path")
+    public String path;
+    public PostTreeActivationRequest withPath(String path) {
+        this.path = path;
         return this;
     }
     

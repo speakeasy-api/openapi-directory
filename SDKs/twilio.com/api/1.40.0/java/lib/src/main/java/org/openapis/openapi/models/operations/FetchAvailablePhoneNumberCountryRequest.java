@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchAvailablePhoneNumberCountryRequest {
-    
-    public FetchAvailablePhoneNumberCountryPathParams pathParams;
-    public FetchAvailablePhoneNumberCountryRequest withPathParams(FetchAvailablePhoneNumberCountryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) requesting the available phone number Country resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public FetchAvailablePhoneNumberCountryRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public FetchAvailablePhoneNumberCountrySecurity security;
-    public FetchAvailablePhoneNumberCountryRequest withSecurity(FetchAvailablePhoneNumberCountrySecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchAvailablePhoneNumberCountryRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The [ISO-3166-1](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) country code of the country to fetch available phone number information about.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CountryCode")
+    public String countryCode;
+    public FetchAvailablePhoneNumberCountryRequest withCountryCode(String countryCode) {
+        this.countryCode = countryCode;
         return this;
     }
     

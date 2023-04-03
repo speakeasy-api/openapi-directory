@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Creates a batch workload that executes asynchronously.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataprocProjectsLocationsBatchesCreateResponse dataprocProjectsLocationsBatchesCreate(org.openapis.openapi.models.operations.DataprocProjectsLocationsBatchesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataprocProjectsLocationsBatchesCreateResponse dataprocProjectsLocationsBatchesCreate(org.openapis.openapi.models.operations.DataprocProjectsLocationsBatchesCreateRequest request, org.openapis.openapi.models.operations.DataprocProjectsLocationsBatchesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsLocationsBatchesCreatePathParams.class, baseUrl, "/v1/{parent}/batches", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsLocationsBatchesCreateRequest.class, baseUrl, "/v1/{parent}/batches", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "batchInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsLocationsBatchesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsLocationsBatchesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,25 +83,26 @@ public class Projects {
     /**
      * Lists batch workloads.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataprocProjectsLocationsBatchesListResponse dataprocProjectsLocationsBatchesList(org.openapis.openapi.models.operations.DataprocProjectsLocationsBatchesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataprocProjectsLocationsBatchesListResponse dataprocProjectsLocationsBatchesList(org.openapis.openapi.models.operations.DataprocProjectsLocationsBatchesListRequest request, org.openapis.openapi.models.operations.DataprocProjectsLocationsBatchesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsLocationsBatchesListPathParams.class, baseUrl, "/v1/{parent}/batches", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsLocationsBatchesListRequest.class, baseUrl, "/v1/{parent}/batches", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsLocationsBatchesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsLocationsBatchesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,27 +129,28 @@ public class Projects {
     /**
      * Creates new autoscaling policy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataprocProjectsRegionsAutoscalingPoliciesCreateResponse dataprocProjectsRegionsAutoscalingPoliciesCreate(org.openapis.openapi.models.operations.DataprocProjectsRegionsAutoscalingPoliciesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataprocProjectsRegionsAutoscalingPoliciesCreateResponse dataprocProjectsRegionsAutoscalingPoliciesCreate(org.openapis.openapi.models.operations.DataprocProjectsRegionsAutoscalingPoliciesCreateRequest request, org.openapis.openapi.models.operations.DataprocProjectsRegionsAutoscalingPoliciesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsAutoscalingPoliciesCreatePathParams.class, baseUrl, "/v1/{parent}/autoscalingPolicies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsAutoscalingPoliciesCreateRequest.class, baseUrl, "/v1/{parent}/autoscalingPolicies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "autoscalingPolicyInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsAutoscalingPoliciesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsAutoscalingPoliciesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,25 +177,26 @@ public class Projects {
     /**
      * Lists autoscaling policies in the project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataprocProjectsRegionsAutoscalingPoliciesListResponse dataprocProjectsRegionsAutoscalingPoliciesList(org.openapis.openapi.models.operations.DataprocProjectsRegionsAutoscalingPoliciesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataprocProjectsRegionsAutoscalingPoliciesListResponse dataprocProjectsRegionsAutoscalingPoliciesList(org.openapis.openapi.models.operations.DataprocProjectsRegionsAutoscalingPoliciesListRequest request, org.openapis.openapi.models.operations.DataprocProjectsRegionsAutoscalingPoliciesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsAutoscalingPoliciesListPathParams.class, baseUrl, "/v1/{parent}/autoscalingPolicies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsAutoscalingPoliciesListRequest.class, baseUrl, "/v1/{parent}/autoscalingPolicies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsAutoscalingPoliciesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsAutoscalingPoliciesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -219,27 +223,28 @@ public class Projects {
     /**
      * Creates a cluster in a project. The returned Operation.metadata will be ClusterOperationMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersCreateResponse dataprocProjectsRegionsClustersCreate(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersCreateResponse dataprocProjectsRegionsClustersCreate(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersCreateRequest request, org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersCreatePathParams.class, baseUrl, "/v1/projects/{projectId}/regions/{region}/clusters", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersCreateRequest.class, baseUrl, "/v1/projects/{projectId}/regions/{region}/clusters", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "clusterInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -266,25 +271,26 @@ public class Projects {
     /**
      * Deletes a cluster in a project. The returned Operation.metadata will be ClusterOperationMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersDeleteResponse dataprocProjectsRegionsClustersDelete(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersDeleteResponse dataprocProjectsRegionsClustersDelete(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersDeleteRequest request, org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersDeletePathParams.class, baseUrl, "/v1/projects/{projectId}/regions/{region}/clusters/{clusterName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersDeleteRequest.class, baseUrl, "/v1/projects/{projectId}/regions/{region}/clusters/{clusterName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -311,27 +317,28 @@ public class Projects {
     /**
      * Gets cluster diagnostic information. The returned Operation.metadata will be ClusterOperationMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata). After the operation completes, Operation.response contains DiagnoseClusterResults (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#diagnoseclusterresults).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersDiagnoseResponse dataprocProjectsRegionsClustersDiagnose(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersDiagnoseRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersDiagnoseResponse dataprocProjectsRegionsClustersDiagnose(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersDiagnoseRequest request, org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersDiagnoseSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersDiagnosePathParams.class, baseUrl, "/v1/projects/{projectId}/regions/{region}/clusters/{clusterName}:diagnose", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersDiagnoseRequest.class, baseUrl, "/v1/projects/{projectId}/regions/{region}/clusters/{clusterName}:diagnose", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "diagnoseClusterRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersDiagnoseQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersDiagnoseRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -358,25 +365,26 @@ public class Projects {
     /**
      * Gets the resource representation for a cluster in a project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersGetResponse dataprocProjectsRegionsClustersGet(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersGetResponse dataprocProjectsRegionsClustersGet(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersGetRequest request, org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersGetPathParams.class, baseUrl, "/v1/projects/{projectId}/regions/{region}/clusters/{clusterName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersGetRequest.class, baseUrl, "/v1/projects/{projectId}/regions/{region}/clusters/{clusterName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -403,27 +411,28 @@ public class Projects {
     /**
      * Inject encrypted credentials into all of the VMs in a cluster.The target cluster must be a personal auth cluster assigned to the user who is issuing the RPC.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersInjectCredentialsResponse dataprocProjectsRegionsClustersInjectCredentials(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersInjectCredentialsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersInjectCredentialsResponse dataprocProjectsRegionsClustersInjectCredentials(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersInjectCredentialsRequest request, org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersInjectCredentialsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersInjectCredentialsPathParams.class, baseUrl, "/v1/{project}/{region}/{cluster}:injectCredentials", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersInjectCredentialsRequest.class, baseUrl, "/v1/{project}/{region}/{cluster}:injectCredentials", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "injectCredentialsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersInjectCredentialsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersInjectCredentialsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -450,25 +459,26 @@ public class Projects {
     /**
      * Lists all regions/{region}/clusters in a project alphabetically.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersListResponse dataprocProjectsRegionsClustersList(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersListResponse dataprocProjectsRegionsClustersList(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersListRequest request, org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersListPathParams.class, baseUrl, "/v1/projects/{projectId}/regions/{region}/clusters", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersListRequest.class, baseUrl, "/v1/projects/{projectId}/regions/{region}/clusters", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -495,27 +505,28 @@ public class Projects {
     /**
      * Creates a node group in a cluster. The returned Operation.metadata is NodeGroupOperationMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#nodegroupoperationmetadata).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersNodeGroupsCreateResponse dataprocProjectsRegionsClustersNodeGroupsCreate(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersNodeGroupsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersNodeGroupsCreateResponse dataprocProjectsRegionsClustersNodeGroupsCreate(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersNodeGroupsCreateRequest request, org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersNodeGroupsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersNodeGroupsCreatePathParams.class, baseUrl, "/v1/{parent}/nodeGroups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersNodeGroupsCreateRequest.class, baseUrl, "/v1/{parent}/nodeGroups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "nodeGroupInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersNodeGroupsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersNodeGroupsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -542,27 +553,28 @@ public class Projects {
     /**
      * Resizes a node group in a cluster. The returned Operation.metadata is NodeGroupOperationMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#nodegroupoperationmetadata).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersNodeGroupsResizeResponse dataprocProjectsRegionsClustersNodeGroupsResize(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersNodeGroupsResizeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersNodeGroupsResizeResponse dataprocProjectsRegionsClustersNodeGroupsResize(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersNodeGroupsResizeRequest request, org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersNodeGroupsResizeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersNodeGroupsResizePathParams.class, baseUrl, "/v1/{name}:resize", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersNodeGroupsResizeRequest.class, baseUrl, "/v1/{name}:resize", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "resizeNodeGroupRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersNodeGroupsResizeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersNodeGroupsResizeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -589,27 +601,28 @@ public class Projects {
     /**
      * Updates a cluster in a project. The returned Operation.metadata will be ClusterOperationMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata). The cluster must be in a RUNNING state or an error is returned.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersPatchResponse dataprocProjectsRegionsClustersPatch(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersPatchResponse dataprocProjectsRegionsClustersPatch(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersPatchRequest request, org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersPatchPathParams.class, baseUrl, "/v1/projects/{projectId}/regions/{region}/clusters/{clusterName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersPatchRequest.class, baseUrl, "/v1/projects/{projectId}/regions/{region}/clusters/{clusterName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "clusterInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -636,27 +649,28 @@ public class Projects {
     /**
      * Repairs a cluster.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersRepairResponse dataprocProjectsRegionsClustersRepair(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersRepairRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersRepairResponse dataprocProjectsRegionsClustersRepair(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersRepairRequest request, org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersRepairSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersRepairPathParams.class, baseUrl, "/v1/projects/{projectId}/regions/{region}/clusters/{clusterName}:repair", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersRepairRequest.class, baseUrl, "/v1/projects/{projectId}/regions/{region}/clusters/{clusterName}:repair", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "repairClusterRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersRepairQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersRepairRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -683,27 +697,28 @@ public class Projects {
     /**
      * Starts a cluster in a project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersStartResponse dataprocProjectsRegionsClustersStart(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersStartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersStartResponse dataprocProjectsRegionsClustersStart(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersStartRequest request, org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersStartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersStartPathParams.class, baseUrl, "/v1/projects/{projectId}/regions/{region}/clusters/{clusterName}:start", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersStartRequest.class, baseUrl, "/v1/projects/{projectId}/regions/{region}/clusters/{clusterName}:start", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "startClusterRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersStartQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersStartRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -730,27 +745,28 @@ public class Projects {
     /**
      * Stops a cluster in a project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersStopResponse dataprocProjectsRegionsClustersStop(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersStopRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersStopResponse dataprocProjectsRegionsClustersStop(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersStopRequest request, org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersStopSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersStopPathParams.class, baseUrl, "/v1/projects/{projectId}/regions/{region}/clusters/{clusterName}:stop", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersStopRequest.class, baseUrl, "/v1/projects/{projectId}/regions/{region}/clusters/{clusterName}:stop", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "stopClusterRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersStopQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersStopRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -777,27 +793,28 @@ public class Projects {
     /**
      * Starts a job cancellation request. To access the job resource after cancellation, call regions/{region}/jobs.list (https://cloud.google.com/dataproc/docs/reference/rest/v1/projects.regions.jobs/list) or regions/{region}/jobs.get (https://cloud.google.com/dataproc/docs/reference/rest/v1/projects.regions.jobs/get).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsCancelResponse dataprocProjectsRegionsJobsCancel(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsCancelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsCancelResponse dataprocProjectsRegionsJobsCancel(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsCancelRequest request, org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsCancelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsCancelPathParams.class, baseUrl, "/v1/projects/{projectId}/regions/{region}/jobs/{jobId}:cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsCancelRequest.class, baseUrl, "/v1/projects/{projectId}/regions/{region}/jobs/{jobId}:cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsCancelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsCancelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -824,25 +841,26 @@ public class Projects {
     /**
      * Deletes the job from the project. If the job is active, the delete fails, and the response returns FAILED_PRECONDITION.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsDeleteResponse dataprocProjectsRegionsJobsDelete(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsDeleteResponse dataprocProjectsRegionsJobsDelete(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsDeleteRequest request, org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsDeletePathParams.class, baseUrl, "/v1/projects/{projectId}/regions/{region}/jobs/{jobId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsDeleteRequest.class, baseUrl, "/v1/projects/{projectId}/regions/{region}/jobs/{jobId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -869,25 +887,26 @@ public class Projects {
     /**
      * Gets the resource representation for a job in a project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsGetResponse dataprocProjectsRegionsJobsGet(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsGetResponse dataprocProjectsRegionsJobsGet(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsGetRequest request, org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsGetPathParams.class, baseUrl, "/v1/projects/{projectId}/regions/{region}/jobs/{jobId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsGetRequest.class, baseUrl, "/v1/projects/{projectId}/regions/{region}/jobs/{jobId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -914,25 +933,26 @@ public class Projects {
     /**
      * Lists regions/{region}/jobs in a project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsListResponse dataprocProjectsRegionsJobsList(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsListResponse dataprocProjectsRegionsJobsList(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsListRequest request, org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsListPathParams.class, baseUrl, "/v1/projects/{projectId}/regions/{region}/jobs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsListRequest.class, baseUrl, "/v1/projects/{projectId}/regions/{region}/jobs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -959,27 +979,28 @@ public class Projects {
     /**
      * Updates a job in a project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsPatchResponse dataprocProjectsRegionsJobsPatch(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsPatchResponse dataprocProjectsRegionsJobsPatch(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsPatchRequest request, org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsPatchPathParams.class, baseUrl, "/v1/projects/{projectId}/regions/{region}/jobs/{jobId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsPatchRequest.class, baseUrl, "/v1/projects/{projectId}/regions/{region}/jobs/{jobId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "jobInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1006,27 +1027,28 @@ public class Projects {
     /**
      * Submits a job to a cluster.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsSubmitResponse dataprocProjectsRegionsJobsSubmit(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsSubmitRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsSubmitResponse dataprocProjectsRegionsJobsSubmit(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsSubmitRequest request, org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsSubmitSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsSubmitPathParams.class, baseUrl, "/v1/projects/{projectId}/regions/{region}/jobs:submit", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsSubmitRequest.class, baseUrl, "/v1/projects/{projectId}/regions/{region}/jobs:submit", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "submitJobRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsSubmitQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsSubmitRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1053,27 +1075,28 @@ public class Projects {
     /**
      * Submits job to a cluster.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsSubmitAsOperationResponse dataprocProjectsRegionsJobsSubmitAsOperation(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsSubmitAsOperationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsSubmitAsOperationResponse dataprocProjectsRegionsJobsSubmitAsOperation(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsSubmitAsOperationRequest request, org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsSubmitAsOperationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsSubmitAsOperationPathParams.class, baseUrl, "/v1/projects/{projectId}/regions/{region}/jobs:submitAsOperation", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsSubmitAsOperationRequest.class, baseUrl, "/v1/projects/{projectId}/regions/{region}/jobs:submitAsOperation", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "submitJobRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsSubmitAsOperationQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsSubmitAsOperationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1100,25 +1123,26 @@ public class Projects {
     /**
      * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns google.rpc.Code.UNIMPLEMENTED. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to Code.CANCELLED.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataprocProjectsRegionsOperationsCancelResponse dataprocProjectsRegionsOperationsCancel(org.openapis.openapi.models.operations.DataprocProjectsRegionsOperationsCancelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataprocProjectsRegionsOperationsCancelResponse dataprocProjectsRegionsOperationsCancel(org.openapis.openapi.models.operations.DataprocProjectsRegionsOperationsCancelRequest request, org.openapis.openapi.models.operations.DataprocProjectsRegionsOperationsCancelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsOperationsCancelPathParams.class, baseUrl, "/v1/{name}:cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsOperationsCancelRequest.class, baseUrl, "/v1/{name}:cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsOperationsCancelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsOperationsCancelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1145,27 +1169,28 @@ public class Projects {
     /**
      * Creates new workflow template.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesCreateResponse dataprocProjectsRegionsWorkflowTemplatesCreate(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesCreateResponse dataprocProjectsRegionsWorkflowTemplatesCreate(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesCreateRequest request, org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesCreatePathParams.class, baseUrl, "/v1/{parent}/workflowTemplates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesCreateRequest.class, baseUrl, "/v1/{parent}/workflowTemplates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "workflowTemplateInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1192,25 +1217,26 @@ public class Projects {
     /**
      * Deletes a workflow template. It does not cancel in-progress workflows.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesDeleteResponse dataprocProjectsRegionsWorkflowTemplatesDelete(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesDeleteResponse dataprocProjectsRegionsWorkflowTemplatesDelete(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesDeleteRequest request, org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesDeletePathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesDeleteRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1237,25 +1263,26 @@ public class Projects {
     /**
      * Retrieves the latest workflow template.Can retrieve previously instantiated template by specifying optional version parameter.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesGetResponse dataprocProjectsRegionsWorkflowTemplatesGet(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesGetResponse dataprocProjectsRegionsWorkflowTemplatesGet(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesGetRequest request, org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesGetPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesGetRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1282,27 +1309,28 @@ public class Projects {
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesGetIamPolicyResponse dataprocProjectsRegionsWorkflowTemplatesGetIamPolicy(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesGetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesGetIamPolicyResponse dataprocProjectsRegionsWorkflowTemplatesGetIamPolicy(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesGetIamPolicyRequest request, org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesGetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesGetIamPolicyPathParams.class, baseUrl, "/v1/{resource}:getIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesGetIamPolicyRequest.class, baseUrl, "/v1/{resource}:getIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "getIamPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesGetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesGetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1329,27 +1357,28 @@ public class Projects {
     /**
      * Instantiates a template and begins execution.The returned Operation can be used to track execution of workflow by polling operations.get. The Operation will complete when entire workflow is finished.The running workflow can be aborted via operations.cancel. This will cause any inflight jobs to be cancelled and workflow-owned clusters to be deleted.The Operation.metadata will be WorkflowMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#workflowmetadata). Also see Using WorkflowMetadata (https://cloud.google.com/dataproc/docs/concepts/workflows/debugging#using_workflowmetadata).On successful completion, Operation.response will be Empty.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesInstantiateResponse dataprocProjectsRegionsWorkflowTemplatesInstantiate(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesInstantiateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesInstantiateResponse dataprocProjectsRegionsWorkflowTemplatesInstantiate(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesInstantiateRequest request, org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesInstantiateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesInstantiatePathParams.class, baseUrl, "/v1/{name}:instantiate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesInstantiateRequest.class, baseUrl, "/v1/{name}:instantiate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "instantiateWorkflowTemplateRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesInstantiateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesInstantiateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1376,27 +1405,28 @@ public class Projects {
     /**
      * Instantiates a template and begins execution.This method is equivalent to executing the sequence CreateWorkflowTemplate, InstantiateWorkflowTemplate, DeleteWorkflowTemplate.The returned Operation can be used to track execution of workflow by polling operations.get. The Operation will complete when entire workflow is finished.The running workflow can be aborted via operations.cancel. This will cause any inflight jobs to be cancelled and workflow-owned clusters to be deleted.The Operation.metadata will be WorkflowMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#workflowmetadata). Also see Using WorkflowMetadata (https://cloud.google.com/dataproc/docs/concepts/workflows/debugging#using_workflowmetadata).On successful completion, Operation.response will be Empty.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesInstantiateInlineResponse dataprocProjectsRegionsWorkflowTemplatesInstantiateInline(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesInstantiateInlineRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesInstantiateInlineResponse dataprocProjectsRegionsWorkflowTemplatesInstantiateInline(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesInstantiateInlineRequest request, org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesInstantiateInlineSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesInstantiateInlinePathParams.class, baseUrl, "/v1/{parent}/workflowTemplates:instantiateInline", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesInstantiateInlineRequest.class, baseUrl, "/v1/{parent}/workflowTemplates:instantiateInline", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "workflowTemplateInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesInstantiateInlineQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesInstantiateInlineRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1423,25 +1453,26 @@ public class Projects {
     /**
      * Lists workflows that match the specified filter in the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesListResponse dataprocProjectsRegionsWorkflowTemplatesList(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesListResponse dataprocProjectsRegionsWorkflowTemplatesList(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesListRequest request, org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesListPathParams.class, baseUrl, "/v1/{parent}/workflowTemplates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesListRequest.class, baseUrl, "/v1/{parent}/workflowTemplates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1468,27 +1499,28 @@ public class Projects {
     /**
      * Sets the access control policy on the specified resource. Replaces any existing policy.Can return NOT_FOUND, INVALID_ARGUMENT, and PERMISSION_DENIED errors.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesSetIamPolicyResponse dataprocProjectsRegionsWorkflowTemplatesSetIamPolicy(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesSetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesSetIamPolicyResponse dataprocProjectsRegionsWorkflowTemplatesSetIamPolicy(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesSetIamPolicyRequest request, org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesSetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesSetIamPolicyPathParams.class, baseUrl, "/v1/{resource}:setIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesSetIamPolicyRequest.class, baseUrl, "/v1/{resource}:setIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setIamPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesSetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesSetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1515,27 +1547,28 @@ public class Projects {
     /**
      * Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a NOT_FOUND error.Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesTestIamPermissionsResponse dataprocProjectsRegionsWorkflowTemplatesTestIamPermissions(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesTestIamPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesTestIamPermissionsResponse dataprocProjectsRegionsWorkflowTemplatesTestIamPermissions(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesTestIamPermissionsRequest request, org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesTestIamPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesTestIamPermissionsPathParams.class, baseUrl, "/v1/{resource}:testIamPermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesTestIamPermissionsRequest.class, baseUrl, "/v1/{resource}:testIamPermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testIamPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesTestIamPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesTestIamPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1562,27 +1595,28 @@ public class Projects {
     /**
      * Updates (replaces) workflow template. The updated template must contain version that matches the current server version.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesUpdateResponse dataprocProjectsRegionsWorkflowTemplatesUpdate(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesUpdateResponse dataprocProjectsRegionsWorkflowTemplatesUpdate(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesUpdateRequest request, org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesUpdatePathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesUpdateRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "workflowTemplateInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

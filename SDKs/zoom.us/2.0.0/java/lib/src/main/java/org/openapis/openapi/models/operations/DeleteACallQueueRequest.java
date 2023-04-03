@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteACallQueueRequest {
-    
-    public DeleteACallQueuePathParams pathParams;
-    public DeleteACallQueueRequest withPathParams(DeleteACallQueuePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteACallQueueSecurity security;
-    public DeleteACallQueueRequest withSecurity(DeleteACallQueueSecurity security) {
-        this.security = security;
+    /**
+     * Unique Identifier of the call queue.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=callQueueId")
+    public String callQueueId;
+    public DeleteACallQueueRequest withCallQueueId(String callQueueId) {
+        this.callQueueId = callQueueId;
         return this;
     }
     

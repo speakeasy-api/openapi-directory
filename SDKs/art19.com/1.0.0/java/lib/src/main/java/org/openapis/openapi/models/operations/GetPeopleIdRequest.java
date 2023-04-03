@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPeopleIdRequest {
-    
-    public GetPeopleIdPathParams pathParams;
-    public GetPeopleIdRequest withPathParams(GetPeopleIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetPeopleIdSecurity security;
-    public GetPeopleIdRequest withSecurity(GetPeopleIdSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the person resource to load.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetPeopleIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

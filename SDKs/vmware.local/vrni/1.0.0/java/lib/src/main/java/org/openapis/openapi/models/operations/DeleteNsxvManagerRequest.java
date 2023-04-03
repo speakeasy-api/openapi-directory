@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteNsxvManagerRequest {
-    
-    public DeleteNsxvManagerPathParams pathParams;
-    public DeleteNsxvManagerRequest withPathParams(DeleteNsxvManagerPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteNsxvManagerSecurity security;
-    public DeleteNsxvManagerRequest withSecurity(DeleteNsxvManagerSecurity security) {
-        this.security = security;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteNsxvManagerRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

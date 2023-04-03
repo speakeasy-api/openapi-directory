@@ -4,13 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchEverywhereRequest {
+    /**
+     * Search in these entities. Current oprions are projects, documents, strings. Can be multiple. When not provided, we'll search through all entities.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include[]")
+    public SearchEverywhereIncludeEnum[] include;
+    public SearchEverywhereRequest withInclude(SearchEverywhereIncludeEnum[] include) {
+        this.include = include;
+        return this;
+    }
     
-    public SearchEverywhereQueryParams queryParams;
-    public SearchEverywhereRequest withQueryParams(SearchEverywhereQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public SearchEverywhereRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public SearchEverywhereRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Search query term
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public SearchEverywhereRequest withQuery(String query) {
+        this.query = query;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetResourcesMediaMostPopularMediaFormatRequest {
-    
-    public GetResourcesMediaMostPopularMediaFormatPathParams pathParams;
-    public GetResourcesMediaMostPopularMediaFormatRequest withPathParams(GetResourcesMediaMostPopularMediaFormatPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public String format;
+    public GetResourcesMediaMostPopularMediaFormatRequest withFormat(String format) {
+        this.format = format;
         return this;
     }
     
+    /**
+     * The maximum number of records to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=max")
+    public Integer max;
+    public GetResourcesMediaMostPopularMediaFormatRequest withMax(Integer max) {
+        this.max = max;
+        return this;
+    }
     
-    public GetResourcesMediaMostPopularMediaFormatQueryParams queryParams;
-    public GetResourcesMediaMostPopularMediaFormatRequest withQueryParams(GetResourcesMediaMostPopularMediaFormatQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The offset of the records set to return for pagination.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=offset")
+    public Integer offset;
+    public GetResourcesMediaMostPopularMediaFormatRequest withOffset(Integer offset) {
+        this.offset = offset;
         return this;
     }
     

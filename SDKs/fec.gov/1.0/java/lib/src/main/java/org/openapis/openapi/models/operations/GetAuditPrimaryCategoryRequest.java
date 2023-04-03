@@ -4,13 +4,114 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAuditPrimaryCategoryRequest {
+    /**
+     * API key for https://api.data.gov. Get one at https://api.data.gov/signup.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetAuditPrimaryCategoryRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public GetAuditPrimaryCategoryQueryParams queryParams;
-    public GetAuditPrimaryCategoryRequest withQueryParams(GetAuditPrimaryCategoryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * For paginating through results, starting at page 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetAuditPrimaryCategoryRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results returned per page. Defaults to 20.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetAuditPrimaryCategoryRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Audit category ID (table PK)
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=primary_category_id")
+    public String[] primaryCategoryId;
+    public GetAuditPrimaryCategoryRequest withPrimaryCategoryId(String[] primaryCategoryId) {
+        this.primaryCategoryId = primaryCategoryId;
+        return this;
+    }
+    
+    /**
+     * Primary Audit Category
+     *     - No Findings or Issues/Not a Committee
+     *     - Net Outstanding Campaign/Convention Expenditures/Obligations
+     *     - Payments/Disgorgements
+     *     - Allocation Issues
+     *     - Prohibited Contributions
+     *     - Disclosure
+     *     - Recordkeeping
+     *     - Repayment to US Treasury
+     *     - Other
+     *     - Misstatement of Financial Activity
+     *     - Excessive Contributions
+     *     - Failure to File Reports/Schedules/Notices
+     *     - Loans
+     *     - Referred Findings Not Listed
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=primary_category_name")
+    public String[] primaryCategoryName;
+    public GetAuditPrimaryCategoryRequest withPrimaryCategoryName(String[] primaryCategoryName) {
+        this.primaryCategoryName = primaryCategoryName;
+        return this;
+    }
+    
+    /**
+     * Provide a field to sort by. Use `-` for descending order.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetAuditPrimaryCategoryRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Hide null values on sorted column(s).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
+    public Boolean sortHideNull;
+    public GetAuditPrimaryCategoryRequest withSortHideNull(Boolean sortHideNull) {
+        this.sortHideNull = sortHideNull;
+        return this;
+    }
+    
+    /**
+     * Toggle that filters out all rows having sort column that is non-null
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
+    public Boolean sortNullOnly;
+    public GetAuditPrimaryCategoryRequest withSortNullOnly(Boolean sortNullOnly) {
+        this.sortNullOnly = sortNullOnly;
+        return this;
+    }
+    
+    /**
+     * Toggle that sorts null values last
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
+    public Boolean sortNullsLast;
+    public GetAuditPrimaryCategoryRequest withSortNullsLast(Boolean sortNullsLast) {
+        this.sortNullsLast = sortNullsLast;
         return this;
     }
     

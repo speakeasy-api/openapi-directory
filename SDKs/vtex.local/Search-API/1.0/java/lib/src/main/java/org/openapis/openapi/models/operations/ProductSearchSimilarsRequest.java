@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProductSearchSimilarsRequest {
-    
-    public ProductSearchSimilarsPathParams pathParams;
-    public ProductSearchSimilarsRequest withPathParams(ProductSearchSimilarsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public ProductSearchSimilarsRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public ProductSearchSimilarsHeaders headers;
-    public ProductSearchSimilarsRequest withHeaders(ProductSearchSimilarsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public ProductSearchSimilarsRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
-    
-    public String serverURL;
-    public ProductSearchSimilarsRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Product's unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
+    public Long productId;
+    public ProductSearchSimilarsRequest withProductId(Long productId) {
+        this.productId = productId;
         return this;
     }
     

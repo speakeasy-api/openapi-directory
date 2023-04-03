@@ -4,20 +4,79 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDecodeAuthorizationMessageRequest {
-    
-    public GETDecodeAuthorizationMessageQueryParams queryParams;
-    public GETDecodeAuthorizationMessageRequest withQueryParams(GETDecodeAuthorizationMessageQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDecodeAuthorizationMessageActionEnum action;
+    public GETDecodeAuthorizationMessageRequest withAction(GETDecodeAuthorizationMessageActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The encoded message that was returned with the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EncodedMessage")
+    public String encodedMessage;
+    public GETDecodeAuthorizationMessageRequest withEncodedMessage(String encodedMessage) {
+        this.encodedMessage = encodedMessage;
+        return this;
+    }
     
-    public GETDecodeAuthorizationMessageHeaders headers;
-    public GETDecodeAuthorizationMessageRequest withHeaders(GETDecodeAuthorizationMessageHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDecodeAuthorizationMessageVersionEnum version;
+    public GETDecodeAuthorizationMessageRequest withVersion(GETDecodeAuthorizationMessageVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDecodeAuthorizationMessageRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDecodeAuthorizationMessageRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDecodeAuthorizationMessageRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDecodeAuthorizationMessageRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDecodeAuthorizationMessageRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDecodeAuthorizationMessageRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDecodeAuthorizationMessageRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

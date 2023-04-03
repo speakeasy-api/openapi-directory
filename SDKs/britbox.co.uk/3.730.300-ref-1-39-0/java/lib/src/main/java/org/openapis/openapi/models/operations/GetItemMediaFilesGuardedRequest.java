@@ -4,27 +4,133 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetItemMediaFilesGuardedRequest {
-    
-    public GetItemMediaFilesGuardedPathParams pathParams;
-    public GetItemMediaFilesGuardedRequest withPathParams(GetItemMediaFilesGuardedPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The video delivery type you require.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=delivery")
+    public org.openapis.openapi.models.shared.MediaFileDeliveryEnum[] delivery;
+    public GetItemMediaFilesGuardedRequest withDelivery(org.openapis.openapi.models.shared.MediaFileDeliveryEnum[] delivery) {
+        this.delivery = delivery;
         return this;
     }
     
-    
-    public GetItemMediaFilesGuardedQueryParams queryParams;
-    public GetItemMediaFilesGuardedRequest withQueryParams(GetItemMediaFilesGuardedQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The type of device the content is targeting.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device")
+    public String device;
+    public GetItemMediaFilesGuardedRequest withDevice(String device) {
+        this.device = device;
         return this;
     }
     
+    /**
+     * The set of opt in feature flags which cause breaking changes to responses.
+     * 
+     * While Rocket APIs look to avoid breaking changes under the active major version, the formats of responses
+     * may need to evolve over this time.
+     * 
+     * These feature flags allow clients to select which response formats they expect and avoid breaking
+     * clients as these formats evolve under the current major version.
+     * 
+     * ### Flags
+     * 
+     * - `all` - Enable all flags. Useful for testing. _Don't use in production_.
+     * - `idp` - Dynamic item detail pages with schedulable rows.
+     * - `ldp` - Dynamic list detail pages with schedulable rows.
+     * - `hb` - Hubble formatted image urls.
+     * - `rpt` - Updated resume point threshold logic.
+     * - `cas` - "Custom Asset Search", inlcude `customAssets` in search results.
+     * - `lrl` - Do not pre-populate related list if more than `max_list_prefetch` down the page.
+     * - `cd` - Custom Destination support.
+     * 
+     * See the `feature-flags.md` for available flag details.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
+    public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+    public GetItemMediaFilesGuardedRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
+        this.ff = ff;
+        return this;
+    }
     
-    public GetItemMediaFilesGuardedSecurity security;
-    public GetItemMediaFilesGuardedRequest withSecurity(GetItemMediaFilesGuardedSecurity security) {
-        this.security = security;
+    /**
+     * The set of media file formats that the device supports, in the order of preference.
+     * 
+     * When provided, Rocket API returns only media files in formats specified in this parameter. For each resolution, only the first media file of matching supported format is returned. Files of different resolutions may be of different supported media file formats.
+     * 
+     * `external` value is reserved for project customizations where the real MIME type of the file on the specified URL is unknown at the time of ingestion.
+     * 
+     * When not provided, Rocket API uses the legacy `User-Agent` header-based logic to find matching media files.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=formats")
+    public org.openapis.openapi.models.shared.MediaFileFormatsEnum[] formats;
+    public GetItemMediaFilesGuardedRequest withFormats(org.openapis.openapi.models.shared.MediaFileFormatsEnum[] formats) {
+        this.formats = formats;
+        return this;
+    }
+    
+    /**
+     * The identifier of the item whose video files to load.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetItemMediaFilesGuardedRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Language code for the preferred language to be returned in the response.
+     * 
+     * Parameter value is case-insensitive and should be
+     *   - a valid 2 letter language code without region such as en, de
+     *   - or with region such as en_us, en_au
+     * 
+     * If undefined then defaults to 'en', unless the server has been configured
+     * with a custom default.
+     * 
+     * See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public String lang;
+    public GetItemMediaFilesGuardedRequest withLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    
+    /**
+     * The maximum resolution the device to playback the media can present.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resolution")
+    public org.openapis.openapi.models.shared.MediaFileResolutionEnum resolution;
+    public GetItemMediaFilesGuardedRequest withResolution(org.openapis.openapi.models.shared.MediaFileResolutionEnum resolution) {
+        this.resolution = resolution;
+        return this;
+    }
+    
+    /**
+     * The list of segments to filter the response by.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=segments")
+    public String[] segments;
+    public GetItemMediaFilesGuardedRequest withSegments(String[] segments) {
+        this.segments = segments;
+        return this;
+    }
+    
+    /**
+     * The active subscription code.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sub")
+    public String sub;
+    public GetItemMediaFilesGuardedRequest withSub(String sub) {
+        this.sub = sub;
         return this;
     }
     

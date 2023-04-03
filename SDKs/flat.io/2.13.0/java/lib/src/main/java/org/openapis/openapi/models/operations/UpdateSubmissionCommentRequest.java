@@ -7,24 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSubmissionCommentRequest {
-    
-    public UpdateSubmissionCommentPathParams pathParams;
-    public UpdateSubmissionCommentRequest withPathParams(UpdateSubmissionCommentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AssignmentSubmissionCommentCreation request;
-    public UpdateSubmissionCommentRequest withRequest(org.openapis.openapi.models.shared.AssignmentSubmissionCommentCreation request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AssignmentSubmissionCommentCreation assignmentSubmissionCommentCreation;
+    public UpdateSubmissionCommentRequest withAssignmentSubmissionCommentCreation(org.openapis.openapi.models.shared.AssignmentSubmissionCommentCreation assignmentSubmissionCommentCreation) {
+        this.assignmentSubmissionCommentCreation = assignmentSubmissionCommentCreation;
         return this;
     }
     
+    /**
+     * Unique identifier of the assignment
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assignment")
+    public String assignment;
+    public UpdateSubmissionCommentRequest withAssignment(String assignment) {
+        this.assignment = assignment;
+        return this;
+    }
     
-    public UpdateSubmissionCommentSecurity security;
-    public UpdateSubmissionCommentRequest withSecurity(UpdateSubmissionCommentSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the class
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=class")
+    public String class_;
+    public UpdateSubmissionCommentRequest withClass(String class_) {
+        this.class_ = class_;
+        return this;
+    }
+    
+    /**
+     * Unique identifier of the comment
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment")
+    public String comment;
+    public UpdateSubmissionCommentRequest withComment(String comment) {
+        this.comment = comment;
+        return this;
+    }
+    
+    /**
+     * Unique identifier of the submission
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=submission")
+    public String submission;
+    public UpdateSubmissionCommentRequest withSubmission(String submission) {
+        this.submission = submission;
         return this;
     }
     

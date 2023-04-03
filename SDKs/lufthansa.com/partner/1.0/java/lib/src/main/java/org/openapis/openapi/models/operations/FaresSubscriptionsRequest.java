@@ -4,27 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FaresSubscriptionsRequest {
-    
-    public FaresSubscriptionsQueryParams queryParams;
-    public FaresSubscriptionsRequest withQueryParams(FaresSubscriptionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public FaresSubscriptionsRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public FaresSubscriptionsHeaders headers;
-    public FaresSubscriptionsRequest withHeaders(FaresSubscriptionsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Cabin class: 'economy', 'premium_economy', 'business', 'first' (Acceptable values are: "", "economy", "premium_economy", "business", "first")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cabin-class")
+    public String cabinClass;
+    public FaresSubscriptionsRequest withCabinClass(String cabinClass) {
+        this.cabinClass = cabinClass;
         return this;
     }
     
+    /**
+     * 2-letter ISO 3166-1 country code
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public String country;
+    public FaresSubscriptionsRequest withCountry(String country) {
+        this.country = country;
+        return this;
+    }
     
-    public FaresSubscriptionsSecurity security;
-    public FaresSubscriptionsRequest withSecurity(FaresSubscriptionsSecurity security) {
-        this.security = security;
+    /**
+     * Journey destination. 3-letter IATA airport code (e.g. 'MAD')
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destination")
+    public String destination;
+    public FaresSubscriptionsRequest withDestination(String destination) {
+        this.destination = destination;
+        return this;
+    }
+    
+    /**
+     * Email Address')
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public FaresSubscriptionsRequest withEmail(String email) {
+        this.email = email;
+        return this;
+    }
+    
+    /**
+     * 2-letter ISO 3166-1 language code
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public String lang;
+    public FaresSubscriptionsRequest withLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    
+    /**
+     * Journey origin. 3-leter IATA airport code (e.g. 'FRA')
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=origin")
+    public String origin;
+    public FaresSubscriptionsRequest withOrigin(String origin) {
+        this.origin = origin;
+        return this;
+    }
+    
+    /**
+     * Tracking parameter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=trackingid")
+    public String trackingid;
+    public FaresSubscriptionsRequest withTrackingid(String trackingid) {
+        this.trackingid = trackingid;
+        return this;
+    }
+    
+    /**
+     * Trip duration in days (e.g. '7')
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=trip-duration")
+    public String tripDuration;
+    public FaresSubscriptionsRequest withTripDuration(String tripDuration) {
+        this.tripDuration = tripDuration;
         return this;
     }
     

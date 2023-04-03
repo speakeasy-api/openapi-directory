@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminListGlobalWebhooksRequest {
-    
-    public EnterpriseAdminListGlobalWebhooksQueryParams queryParams;
-    public EnterpriseAdminListGlobalWebhooksRequest withQueryParams(EnterpriseAdminListGlobalWebhooksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * This API is under preview and subject to change.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=accept")
+    public String accept;
+    public EnterpriseAdminListGlobalWebhooksRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public EnterpriseAdminListGlobalWebhooksRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public EnterpriseAdminListGlobalWebhooksHeaders headers;
-    public EnterpriseAdminListGlobalWebhooksRequest withHeaders(EnterpriseAdminListGlobalWebhooksHeaders headers) {
-        this.headers = headers;
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public EnterpriseAdminListGlobalWebhooksRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
         return this;
     }
     

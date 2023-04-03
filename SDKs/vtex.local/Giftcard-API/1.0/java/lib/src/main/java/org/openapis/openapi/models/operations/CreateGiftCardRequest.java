@@ -7,17 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateGiftCardRequest {
+    /**
+     * Media type(s) that is/are acceptable for the response. Default value for payment provider protocol is application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public CreateGiftCardRequest withAccept(String accept) {
+        this.accept = accept;
+        return this;
+    }
     
-    public CreateGiftCardHeaders headers;
-    public CreateGiftCardRequest withHeaders(CreateGiftCardHeaders headers) {
-        this.headers = headers;
+    /**
+     * The Media type of the body of the request. Default value for payment provider protocol is application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public CreateGiftCardRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/vnd.vtex.giftcard.v1+json")
-    public org.openapis.openapi.models.shared.CreateGiftCardRequest request;
-    public CreateGiftCardRequest withRequest(org.openapis.openapi.models.shared.CreateGiftCardRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CreateGiftCardRequest createGiftCardRequest;
+    public CreateGiftCardRequest withCreateGiftCardRequest(org.openapis.openapi.models.shared.CreateGiftCardRequest createGiftCardRequest) {
+        this.createGiftCardRequest = createGiftCardRequest;
+        return this;
+    }
+    
+    /**
+     * The AppKey configured by the merchant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-VTEX-API-AppKey")
+    public String xVTEXAPIAppKey;
+    public CreateGiftCardRequest withXVTEXAPIAppKey(String xVTEXAPIAppKey) {
+        this.xVTEXAPIAppKey = xVTEXAPIAppKey;
+        return this;
+    }
+    
+    /**
+     * The AppToken configured by the merchant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-VTEX-API-AppToken")
+    public String xVTEXAPIAppToken;
+    public CreateGiftCardRequest withXVTEXAPIAppToken(String xVTEXAPIAppToken) {
+        this.xVTEXAPIAppToken = xVTEXAPIAppToken;
         return this;
     }
     

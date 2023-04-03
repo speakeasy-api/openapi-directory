@@ -4,34 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListExecutionStepRequest {
-    
-    public ListExecutionStepPathParams pathParams;
-    public ListExecutionStepRequest withPathParams(ListExecutionStepPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Execution with the Steps to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ExecutionSid")
+    public String executionSid;
+    public ListExecutionStepRequest withExecutionSid(String executionSid) {
+        this.executionSid = executionSid;
         return this;
     }
     
-    
-    public ListExecutionStepQueryParams queryParams;
-    public ListExecutionStepRequest withQueryParams(ListExecutionStepQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The SID of the Flow with the Steps to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FlowSid")
+    public String flowSid;
+    public ListExecutionStepRequest withFlowSid(String flowSid) {
+        this.flowSid = flowSid;
         return this;
     }
     
-    
-    public ListExecutionStepSecurity security;
-    public ListExecutionStepRequest withSecurity(ListExecutionStepSecurity security) {
-        this.security = security;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListExecutionStepRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListExecutionStepRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public String serverURL;
-    public ListExecutionStepRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListExecutionStepRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

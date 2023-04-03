@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetResourcesMediaSearchResultsJsonRequest {
+    /**
+     * The maximum number of records to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=max")
+    public Integer max;
+    public GetResourcesMediaSearchResultsJsonRequest withMax(Integer max) {
+        this.max = max;
+        return this;
+    }
     
-    public GetResourcesMediaSearchResultsJsonQueryParams queryParams;
-    public GetResourcesMediaSearchResultsJsonRequest withQueryParams(GetResourcesMediaSearchResultsJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The offset of the records set to return for pagination.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=offset")
+    public Integer offset;
+    public GetResourcesMediaSearchResultsJsonRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * The search query supplied by the user
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=q")
+    public String q;
+    public GetResourcesMediaSearchResultsJsonRequest withQ(String q) {
+        this.q = q;
         return this;
     }
     

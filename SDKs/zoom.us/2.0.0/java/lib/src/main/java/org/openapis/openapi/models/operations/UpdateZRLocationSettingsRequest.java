@@ -7,31 +7,32 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateZRLocationSettingsRequest {
-    
-    public UpdateZRLocationSettingsPathParams pathParams;
-    public UpdateZRLocationSettingsRequest withPathParams(UpdateZRLocationSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateZRLocationSettingsQueryParams queryParams;
-    public UpdateZRLocationSettingsRequest withQueryParams(UpdateZRLocationSettingsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public Object request;
-    public UpdateZRLocationSettingsRequest withRequest(Object request) {
-        this.request = request;
+    public Object requestBody;
+    public UpdateZRLocationSettingsRequest withRequestBody(Object requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Unique identifier of the location type. This can be retrieved using the [List Zoom Room Location API](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms-location/listzrlocations) (Id property in the response).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=locationId")
+    public String locationId;
+    public UpdateZRLocationSettingsRequest withLocationId(String locationId) {
+        this.locationId = locationId;
+        return this;
+    }
     
-    public UpdateZRLocationSettingsSecurity security;
-    public UpdateZRLocationSettingsRequest withSecurity(UpdateZRLocationSettingsSecurity security) {
-        this.security = security;
+    /**
+     * The type of setting that you would like to update.&lt;br&gt; `alert`: Alert Settings applied on the Zoom Rooms Account.&lt;br&gt;
+     * `meeting`: Meeting settings of the Zoom Rooms Account.&lt;br&gt;
+     * `signage`: Digital signage settings.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=setting_type")
+    public String settingType;
+    public UpdateZRLocationSettingsRequest withSettingType(String settingType) {
+        this.settingType = settingType;
         return this;
     }
     

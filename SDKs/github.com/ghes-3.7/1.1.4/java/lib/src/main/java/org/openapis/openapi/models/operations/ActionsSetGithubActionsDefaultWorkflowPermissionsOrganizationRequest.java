@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsSetGithubActionsDefaultWorkflowPermissionsOrganizationRequest {
-    
-    public ActionsSetGithubActionsDefaultWorkflowPermissionsOrganizationPathParams pathParams;
-    public ActionsSetGithubActionsDefaultWorkflowPermissionsOrganizationRequest withPathParams(ActionsSetGithubActionsDefaultWorkflowPermissionsOrganizationPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ActionsSetDefaultWorkflowPermissions actionsSetDefaultWorkflowPermissions;
+    public ActionsSetGithubActionsDefaultWorkflowPermissionsOrganizationRequest withActionsSetDefaultWorkflowPermissions(org.openapis.openapi.models.shared.ActionsSetDefaultWorkflowPermissions actionsSetDefaultWorkflowPermissions) {
+        this.actionsSetDefaultWorkflowPermissions = actionsSetDefaultWorkflowPermissions;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ActionsSetDefaultWorkflowPermissions request;
-    public ActionsSetGithubActionsDefaultWorkflowPermissionsOrganizationRequest withRequest(org.openapis.openapi.models.shared.ActionsSetDefaultWorkflowPermissions request) {
-        this.request = request;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ActionsSetGithubActionsDefaultWorkflowPermissionsOrganizationRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

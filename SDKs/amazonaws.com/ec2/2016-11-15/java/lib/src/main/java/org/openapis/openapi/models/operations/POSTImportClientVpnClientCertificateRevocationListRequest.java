@@ -7,24 +7,73 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTImportClientVpnClientCertificateRevocationListRequest {
-    
-    public POSTImportClientVpnClientCertificateRevocationListQueryParams queryParams;
-    public POSTImportClientVpnClientCertificateRevocationListRequest withQueryParams(POSTImportClientVpnClientCertificateRevocationListQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public POSTImportClientVpnClientCertificateRevocationListHeaders headers;
-    public POSTImportClientVpnClientCertificateRevocationListRequest withHeaders(POSTImportClientVpnClientCertificateRevocationListHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public POSTImportClientVpnClientCertificateRevocationListActionEnum action;
+    public POSTImportClientVpnClientCertificateRevocationListRequest withAction(POSTImportClientVpnClientCertificateRevocationListActionEnum action) {
+        this.action = action;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public POSTImportClientVpnClientCertificateRevocationListRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public POSTImportClientVpnClientCertificateRevocationListRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public POSTImportClientVpnClientCertificateRevocationListVersionEnum version;
+    public POSTImportClientVpnClientCertificateRevocationListRequest withVersion(POSTImportClientVpnClientCertificateRevocationListVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public POSTImportClientVpnClientCertificateRevocationListRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public POSTImportClientVpnClientCertificateRevocationListRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public POSTImportClientVpnClientCertificateRevocationListRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public POSTImportClientVpnClientCertificateRevocationListRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public POSTImportClientVpnClientCertificateRevocationListRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public POSTImportClientVpnClientCertificateRevocationListRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public POSTImportClientVpnClientCertificateRevocationListRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

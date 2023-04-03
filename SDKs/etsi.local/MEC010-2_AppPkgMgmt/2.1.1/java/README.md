@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.AppDGETPathParams;
-import org.openapis.openapi.models.operations.AppDGETQueryParams;
 import org.openapis.openapi.models.operations.AppDGETRequest;
 import org.openapis.openapi.models.operations.AppDGETResponse;
 
@@ -29,17 +27,13 @@ public class Application {
                 .build();
 
             AppDGETRequest req = new AppDGETRequest() {{
-                pathParams = new AppDGETPathParams() {{
-                    appDId = "corrupti";
-                }};
-                queryParams = new AppDGETQueryParams() {{
-                    allFields = "provident";
-                    excludeDefault = "distinctio";
-                    excludeFields = "quibusdam";
-                    fields = "unde";
-                    filter = "nulla";
-                }};
-            }};            
+                allFields = "corrupti";
+                appDId = "provident";
+                excludeDefault = "distinctio";
+                excludeFields = "quibusdam";
+                fields = "unde";
+                filter = "nulla";
+            }}            
 
             AppDGETResponse res = sdk.appPkgm.appDGET(req);
 
@@ -53,7 +47,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### appPkgm

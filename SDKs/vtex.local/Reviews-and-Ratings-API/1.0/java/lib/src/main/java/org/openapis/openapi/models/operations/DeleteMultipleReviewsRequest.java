@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteMultipleReviewsRequest {
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public DeleteMultipleReviewsRequest withAccept(String accept) {
+        this.accept = accept;
+        return this;
+    }
     
-    public DeleteMultipleReviewsHeaders headers;
-    public DeleteMultipleReviewsRequest withHeaders(DeleteMultipleReviewsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public DeleteMultipleReviewsRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public String[] request;
-    public DeleteMultipleReviewsRequest withRequest(String[] request) {
-        this.request = request;
+    public String[] requestBody;
+    public DeleteMultipleReviewsRequest withRequestBody(String[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

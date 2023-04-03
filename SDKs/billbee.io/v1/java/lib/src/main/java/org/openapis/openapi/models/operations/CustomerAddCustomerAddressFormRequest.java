@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CustomerAddCustomerAddressFormRequest {
-    
-    public CustomerAddCustomerAddressFormPathParams pathParams;
-    public CustomerAddCustomerAddressFormRequest withPathParams(CustomerAddCustomerAddressFormPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Model containing the address, that should be attached.
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel request;
-    public CustomerAddCustomerAddressFormRequest withRequest(org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel billbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel;
+    public CustomerAddCustomerAddressFormRequest withBillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel(org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel billbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel) {
+        this.billbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel = billbeeInterfacesBillbeeAPIModelCustomerAddressAPIModel;
+        return this;
+    }
+    
+    /**
+     * CustomerId to attach the new address to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public CustomerAddCustomerAddressFormRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

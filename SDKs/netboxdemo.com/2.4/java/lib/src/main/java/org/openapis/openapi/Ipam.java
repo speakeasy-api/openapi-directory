@@ -62,7 +62,7 @@ public class Ipam {
 
     public org.openapis.openapi.models.operations.IpamChoicesReadResponse ipamChoicesRead(org.openapis.openapi.models.operations.IpamChoicesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamChoicesReadPathParams.class, baseUrl, "/ipam/_choices/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamChoicesReadRequest.class, baseUrl, "/ipam/_choices/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -87,7 +87,7 @@ public class Ipam {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.IpamAggregatesCreateResponse ipamAggregatesCreate(org.openapis.openapi.models.operations.IpamAggregatesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IpamAggregatesCreateResponse ipamAggregatesCreate(org.openapis.openapi.models.shared.WritableAggregateInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/ipam/aggregates/");
         
@@ -127,7 +127,7 @@ public class Ipam {
 
     public org.openapis.openapi.models.operations.IpamAggregatesDeleteResponse ipamAggregatesDelete(org.openapis.openapi.models.operations.IpamAggregatesDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamAggregatesDeletePathParams.class, baseUrl, "/ipam/aggregates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamAggregatesDeleteRequest.class, baseUrl, "/ipam/aggregates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -160,7 +160,7 @@ public class Ipam {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IpamAggregatesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IpamAggregatesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -193,12 +193,12 @@ public class Ipam {
 
     public org.openapis.openapi.models.operations.IpamAggregatesPartialUpdateResponse ipamAggregatesPartialUpdate(org.openapis.openapi.models.operations.IpamAggregatesPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamAggregatesPartialUpdatePathParams.class, baseUrl, "/ipam/aggregates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamAggregatesPartialUpdateRequest.class, baseUrl, "/ipam/aggregates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableAggregateInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -231,7 +231,7 @@ public class Ipam {
 
     public org.openapis.openapi.models.operations.IpamAggregatesReadResponse ipamAggregatesRead(org.openapis.openapi.models.operations.IpamAggregatesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamAggregatesReadPathParams.class, baseUrl, "/ipam/aggregates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamAggregatesReadRequest.class, baseUrl, "/ipam/aggregates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -264,12 +264,12 @@ public class Ipam {
 
     public org.openapis.openapi.models.operations.IpamAggregatesUpdateResponse ipamAggregatesUpdate(org.openapis.openapi.models.operations.IpamAggregatesUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamAggregatesUpdatePathParams.class, baseUrl, "/ipam/aggregates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamAggregatesUpdateRequest.class, baseUrl, "/ipam/aggregates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableAggregateInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -300,7 +300,7 @@ public class Ipam {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.IpamIpAddressesCreateResponse ipamIpAddressesCreate(org.openapis.openapi.models.operations.IpamIpAddressesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IpamIpAddressesCreateResponse ipamIpAddressesCreate(org.openapis.openapi.models.shared.WritableIPAddressInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/ipam/ip-addresses/");
         
@@ -340,7 +340,7 @@ public class Ipam {
 
     public org.openapis.openapi.models.operations.IpamIpAddressesDeleteResponse ipamIpAddressesDelete(org.openapis.openapi.models.operations.IpamIpAddressesDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamIpAddressesDeletePathParams.class, baseUrl, "/ipam/ip-addresses/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamIpAddressesDeleteRequest.class, baseUrl, "/ipam/ip-addresses/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -373,7 +373,7 @@ public class Ipam {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IpamIpAddressesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IpamIpAddressesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -406,12 +406,12 @@ public class Ipam {
 
     public org.openapis.openapi.models.operations.IpamIpAddressesPartialUpdateResponse ipamIpAddressesPartialUpdate(org.openapis.openapi.models.operations.IpamIpAddressesPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamIpAddressesPartialUpdatePathParams.class, baseUrl, "/ipam/ip-addresses/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamIpAddressesPartialUpdateRequest.class, baseUrl, "/ipam/ip-addresses/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableIPAddressInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -444,7 +444,7 @@ public class Ipam {
 
     public org.openapis.openapi.models.operations.IpamIpAddressesReadResponse ipamIpAddressesRead(org.openapis.openapi.models.operations.IpamIpAddressesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamIpAddressesReadPathParams.class, baseUrl, "/ipam/ip-addresses/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamIpAddressesReadRequest.class, baseUrl, "/ipam/ip-addresses/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -477,12 +477,12 @@ public class Ipam {
 
     public org.openapis.openapi.models.operations.IpamIpAddressesUpdateResponse ipamIpAddressesUpdate(org.openapis.openapi.models.operations.IpamIpAddressesUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamIpAddressesUpdatePathParams.class, baseUrl, "/ipam/ip-addresses/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamIpAddressesUpdateRequest.class, baseUrl, "/ipam/ip-addresses/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableIPAddressInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -521,12 +521,12 @@ public class Ipam {
      */
     public org.openapis.openapi.models.operations.IpamPrefixesAvailableIpsCreateResponse ipamPrefixesAvailableIpsCreate(org.openapis.openapi.models.operations.IpamPrefixesAvailableIpsCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamPrefixesAvailableIpsCreatePathParams.class, baseUrl, "/ipam/prefixes/{id}/available-ips/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamPrefixesAvailableIpsCreateRequest.class, baseUrl, "/ipam/prefixes/{id}/available-ips/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writablePrefixInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -565,7 +565,7 @@ public class Ipam {
      */
     public org.openapis.openapi.models.operations.IpamPrefixesAvailableIpsReadResponse ipamPrefixesAvailableIpsRead(org.openapis.openapi.models.operations.IpamPrefixesAvailableIpsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamPrefixesAvailableIpsReadPathParams.class, baseUrl, "/ipam/prefixes/{id}/available-ips/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamPrefixesAvailableIpsReadRequest.class, baseUrl, "/ipam/prefixes/{id}/available-ips/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -604,12 +604,12 @@ public class Ipam {
      */
     public org.openapis.openapi.models.operations.IpamPrefixesAvailablePrefixesCreateResponse ipamPrefixesAvailablePrefixesCreate(org.openapis.openapi.models.operations.IpamPrefixesAvailablePrefixesCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamPrefixesAvailablePrefixesCreatePathParams.class, baseUrl, "/ipam/prefixes/{id}/available-prefixes/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamPrefixesAvailablePrefixesCreateRequest.class, baseUrl, "/ipam/prefixes/{id}/available-prefixes/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writablePrefixInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -648,7 +648,7 @@ public class Ipam {
      */
     public org.openapis.openapi.models.operations.IpamPrefixesAvailablePrefixesReadResponse ipamPrefixesAvailablePrefixesRead(org.openapis.openapi.models.operations.IpamPrefixesAvailablePrefixesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamPrefixesAvailablePrefixesReadPathParams.class, baseUrl, "/ipam/prefixes/{id}/available-prefixes/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamPrefixesAvailablePrefixesReadRequest.class, baseUrl, "/ipam/prefixes/{id}/available-prefixes/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -679,7 +679,7 @@ public class Ipam {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.IpamPrefixesCreateResponse ipamPrefixesCreate(org.openapis.openapi.models.operations.IpamPrefixesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IpamPrefixesCreateResponse ipamPrefixesCreate(org.openapis.openapi.models.shared.WritablePrefixInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/ipam/prefixes/");
         
@@ -719,7 +719,7 @@ public class Ipam {
 
     public org.openapis.openapi.models.operations.IpamPrefixesDeleteResponse ipamPrefixesDelete(org.openapis.openapi.models.operations.IpamPrefixesDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamPrefixesDeletePathParams.class, baseUrl, "/ipam/prefixes/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamPrefixesDeleteRequest.class, baseUrl, "/ipam/prefixes/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -752,7 +752,7 @@ public class Ipam {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IpamPrefixesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IpamPrefixesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -785,12 +785,12 @@ public class Ipam {
 
     public org.openapis.openapi.models.operations.IpamPrefixesPartialUpdateResponse ipamPrefixesPartialUpdate(org.openapis.openapi.models.operations.IpamPrefixesPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamPrefixesPartialUpdatePathParams.class, baseUrl, "/ipam/prefixes/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamPrefixesPartialUpdateRequest.class, baseUrl, "/ipam/prefixes/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writablePrefixInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -823,7 +823,7 @@ public class Ipam {
 
     public org.openapis.openapi.models.operations.IpamPrefixesReadResponse ipamPrefixesRead(org.openapis.openapi.models.operations.IpamPrefixesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamPrefixesReadPathParams.class, baseUrl, "/ipam/prefixes/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamPrefixesReadRequest.class, baseUrl, "/ipam/prefixes/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -856,12 +856,12 @@ public class Ipam {
 
     public org.openapis.openapi.models.operations.IpamPrefixesUpdateResponse ipamPrefixesUpdate(org.openapis.openapi.models.operations.IpamPrefixesUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamPrefixesUpdatePathParams.class, baseUrl, "/ipam/prefixes/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamPrefixesUpdateRequest.class, baseUrl, "/ipam/prefixes/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writablePrefixInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -892,7 +892,7 @@ public class Ipam {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.IpamRirsCreateResponse ipamRirsCreate(org.openapis.openapi.models.operations.IpamRirsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IpamRirsCreateResponse ipamRirsCreate(org.openapis.openapi.models.shared.RIRInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/ipam/rirs/");
         
@@ -932,7 +932,7 @@ public class Ipam {
 
     public org.openapis.openapi.models.operations.IpamRirsDeleteResponse ipamRirsDelete(org.openapis.openapi.models.operations.IpamRirsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamRirsDeletePathParams.class, baseUrl, "/ipam/rirs/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamRirsDeleteRequest.class, baseUrl, "/ipam/rirs/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -965,7 +965,7 @@ public class Ipam {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IpamRirsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IpamRirsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -998,12 +998,12 @@ public class Ipam {
 
     public org.openapis.openapi.models.operations.IpamRirsPartialUpdateResponse ipamRirsPartialUpdate(org.openapis.openapi.models.operations.IpamRirsPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamRirsPartialUpdatePathParams.class, baseUrl, "/ipam/rirs/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamRirsPartialUpdateRequest.class, baseUrl, "/ipam/rirs/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "rirInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1036,7 +1036,7 @@ public class Ipam {
 
     public org.openapis.openapi.models.operations.IpamRirsReadResponse ipamRirsRead(org.openapis.openapi.models.operations.IpamRirsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamRirsReadPathParams.class, baseUrl, "/ipam/rirs/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamRirsReadRequest.class, baseUrl, "/ipam/rirs/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1069,12 +1069,12 @@ public class Ipam {
 
     public org.openapis.openapi.models.operations.IpamRirsUpdateResponse ipamRirsUpdate(org.openapis.openapi.models.operations.IpamRirsUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamRirsUpdatePathParams.class, baseUrl, "/ipam/rirs/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamRirsUpdateRequest.class, baseUrl, "/ipam/rirs/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "rirInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1105,7 +1105,7 @@ public class Ipam {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.IpamRolesCreateResponse ipamRolesCreate(org.openapis.openapi.models.operations.IpamRolesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IpamRolesCreateResponse ipamRolesCreate(org.openapis.openapi.models.shared.RoleInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/ipam/roles/");
         
@@ -1145,7 +1145,7 @@ public class Ipam {
 
     public org.openapis.openapi.models.operations.IpamRolesDeleteResponse ipamRolesDelete(org.openapis.openapi.models.operations.IpamRolesDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamRolesDeletePathParams.class, baseUrl, "/ipam/roles/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamRolesDeleteRequest.class, baseUrl, "/ipam/roles/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1178,7 +1178,7 @@ public class Ipam {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IpamRolesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IpamRolesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1211,12 +1211,12 @@ public class Ipam {
 
     public org.openapis.openapi.models.operations.IpamRolesPartialUpdateResponse ipamRolesPartialUpdate(org.openapis.openapi.models.operations.IpamRolesPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamRolesPartialUpdatePathParams.class, baseUrl, "/ipam/roles/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamRolesPartialUpdateRequest.class, baseUrl, "/ipam/roles/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "roleInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1249,7 +1249,7 @@ public class Ipam {
 
     public org.openapis.openapi.models.operations.IpamRolesReadResponse ipamRolesRead(org.openapis.openapi.models.operations.IpamRolesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamRolesReadPathParams.class, baseUrl, "/ipam/roles/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamRolesReadRequest.class, baseUrl, "/ipam/roles/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1282,12 +1282,12 @@ public class Ipam {
 
     public org.openapis.openapi.models.operations.IpamRolesUpdateResponse ipamRolesUpdate(org.openapis.openapi.models.operations.IpamRolesUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamRolesUpdatePathParams.class, baseUrl, "/ipam/roles/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamRolesUpdateRequest.class, baseUrl, "/ipam/roles/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "roleInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1318,7 +1318,7 @@ public class Ipam {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.IpamServicesCreateResponse ipamServicesCreate(org.openapis.openapi.models.operations.IpamServicesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IpamServicesCreateResponse ipamServicesCreate(org.openapis.openapi.models.shared.WritableServiceInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/ipam/services/");
         
@@ -1358,7 +1358,7 @@ public class Ipam {
 
     public org.openapis.openapi.models.operations.IpamServicesDeleteResponse ipamServicesDelete(org.openapis.openapi.models.operations.IpamServicesDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamServicesDeletePathParams.class, baseUrl, "/ipam/services/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamServicesDeleteRequest.class, baseUrl, "/ipam/services/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1391,7 +1391,7 @@ public class Ipam {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IpamServicesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IpamServicesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1424,12 +1424,12 @@ public class Ipam {
 
     public org.openapis.openapi.models.operations.IpamServicesPartialUpdateResponse ipamServicesPartialUpdate(org.openapis.openapi.models.operations.IpamServicesPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamServicesPartialUpdatePathParams.class, baseUrl, "/ipam/services/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamServicesPartialUpdateRequest.class, baseUrl, "/ipam/services/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableServiceInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1462,7 +1462,7 @@ public class Ipam {
 
     public org.openapis.openapi.models.operations.IpamServicesReadResponse ipamServicesRead(org.openapis.openapi.models.operations.IpamServicesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamServicesReadPathParams.class, baseUrl, "/ipam/services/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamServicesReadRequest.class, baseUrl, "/ipam/services/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1495,12 +1495,12 @@ public class Ipam {
 
     public org.openapis.openapi.models.operations.IpamServicesUpdateResponse ipamServicesUpdate(org.openapis.openapi.models.operations.IpamServicesUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamServicesUpdatePathParams.class, baseUrl, "/ipam/services/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamServicesUpdateRequest.class, baseUrl, "/ipam/services/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableServiceInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1531,7 +1531,7 @@ public class Ipam {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.IpamVlanGroupsCreateResponse ipamVlanGroupsCreate(org.openapis.openapi.models.operations.IpamVlanGroupsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IpamVlanGroupsCreateResponse ipamVlanGroupsCreate(org.openapis.openapi.models.shared.WritableVLANGroupInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/ipam/vlan-groups/");
         
@@ -1571,7 +1571,7 @@ public class Ipam {
 
     public org.openapis.openapi.models.operations.IpamVlanGroupsDeleteResponse ipamVlanGroupsDelete(org.openapis.openapi.models.operations.IpamVlanGroupsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamVlanGroupsDeletePathParams.class, baseUrl, "/ipam/vlan-groups/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamVlanGroupsDeleteRequest.class, baseUrl, "/ipam/vlan-groups/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1604,7 +1604,7 @@ public class Ipam {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IpamVlanGroupsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IpamVlanGroupsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1637,12 +1637,12 @@ public class Ipam {
 
     public org.openapis.openapi.models.operations.IpamVlanGroupsPartialUpdateResponse ipamVlanGroupsPartialUpdate(org.openapis.openapi.models.operations.IpamVlanGroupsPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamVlanGroupsPartialUpdatePathParams.class, baseUrl, "/ipam/vlan-groups/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamVlanGroupsPartialUpdateRequest.class, baseUrl, "/ipam/vlan-groups/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableVLANGroupInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1675,7 +1675,7 @@ public class Ipam {
 
     public org.openapis.openapi.models.operations.IpamVlanGroupsReadResponse ipamVlanGroupsRead(org.openapis.openapi.models.operations.IpamVlanGroupsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamVlanGroupsReadPathParams.class, baseUrl, "/ipam/vlan-groups/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamVlanGroupsReadRequest.class, baseUrl, "/ipam/vlan-groups/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1708,12 +1708,12 @@ public class Ipam {
 
     public org.openapis.openapi.models.operations.IpamVlanGroupsUpdateResponse ipamVlanGroupsUpdate(org.openapis.openapi.models.operations.IpamVlanGroupsUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamVlanGroupsUpdatePathParams.class, baseUrl, "/ipam/vlan-groups/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamVlanGroupsUpdateRequest.class, baseUrl, "/ipam/vlan-groups/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableVLANGroupInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1744,7 +1744,7 @@ public class Ipam {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.IpamVlansCreateResponse ipamVlansCreate(org.openapis.openapi.models.operations.IpamVlansCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IpamVlansCreateResponse ipamVlansCreate(org.openapis.openapi.models.shared.WritableVLANInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/ipam/vlans/");
         
@@ -1784,7 +1784,7 @@ public class Ipam {
 
     public org.openapis.openapi.models.operations.IpamVlansDeleteResponse ipamVlansDelete(org.openapis.openapi.models.operations.IpamVlansDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamVlansDeletePathParams.class, baseUrl, "/ipam/vlans/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamVlansDeleteRequest.class, baseUrl, "/ipam/vlans/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1817,7 +1817,7 @@ public class Ipam {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IpamVlansListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IpamVlansListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1850,12 +1850,12 @@ public class Ipam {
 
     public org.openapis.openapi.models.operations.IpamVlansPartialUpdateResponse ipamVlansPartialUpdate(org.openapis.openapi.models.operations.IpamVlansPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamVlansPartialUpdatePathParams.class, baseUrl, "/ipam/vlans/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamVlansPartialUpdateRequest.class, baseUrl, "/ipam/vlans/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableVLANInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1888,7 +1888,7 @@ public class Ipam {
 
     public org.openapis.openapi.models.operations.IpamVlansReadResponse ipamVlansRead(org.openapis.openapi.models.operations.IpamVlansReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamVlansReadPathParams.class, baseUrl, "/ipam/vlans/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamVlansReadRequest.class, baseUrl, "/ipam/vlans/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1921,12 +1921,12 @@ public class Ipam {
 
     public org.openapis.openapi.models.operations.IpamVlansUpdateResponse ipamVlansUpdate(org.openapis.openapi.models.operations.IpamVlansUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamVlansUpdatePathParams.class, baseUrl, "/ipam/vlans/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamVlansUpdateRequest.class, baseUrl, "/ipam/vlans/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableVLANInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1957,7 +1957,7 @@ public class Ipam {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.IpamVrfsCreateResponse ipamVrfsCreate(org.openapis.openapi.models.operations.IpamVrfsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IpamVrfsCreateResponse ipamVrfsCreate(org.openapis.openapi.models.shared.WritableVRFInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/ipam/vrfs/");
         
@@ -1997,7 +1997,7 @@ public class Ipam {
 
     public org.openapis.openapi.models.operations.IpamVrfsDeleteResponse ipamVrfsDelete(org.openapis.openapi.models.operations.IpamVrfsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamVrfsDeletePathParams.class, baseUrl, "/ipam/vrfs/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamVrfsDeleteRequest.class, baseUrl, "/ipam/vrfs/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -2030,7 +2030,7 @@ public class Ipam {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IpamVrfsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IpamVrfsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2063,12 +2063,12 @@ public class Ipam {
 
     public org.openapis.openapi.models.operations.IpamVrfsPartialUpdateResponse ipamVrfsPartialUpdate(org.openapis.openapi.models.operations.IpamVrfsPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamVrfsPartialUpdatePathParams.class, baseUrl, "/ipam/vrfs/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamVrfsPartialUpdateRequest.class, baseUrl, "/ipam/vrfs/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableVRFInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -2101,7 +2101,7 @@ public class Ipam {
 
     public org.openapis.openapi.models.operations.IpamVrfsReadResponse ipamVrfsRead(org.openapis.openapi.models.operations.IpamVrfsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamVrfsReadPathParams.class, baseUrl, "/ipam/vrfs/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamVrfsReadRequest.class, baseUrl, "/ipam/vrfs/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2134,12 +2134,12 @@ public class Ipam {
 
     public org.openapis.openapi.models.operations.IpamVrfsUpdateResponse ipamVrfsUpdate(org.openapis.openapi.models.operations.IpamVrfsUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamVrfsUpdatePathParams.class, baseUrl, "/ipam/vrfs/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IpamVrfsUpdateRequest.class, baseUrl, "/ipam/vrfs/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableVRFInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

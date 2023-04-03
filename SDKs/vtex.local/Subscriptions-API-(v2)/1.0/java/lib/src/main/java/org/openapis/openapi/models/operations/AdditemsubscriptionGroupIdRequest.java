@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdditemsubscriptionGroupIdRequest {
-    
-    public AdditemsubscriptionGroupIdPathParams pathParams;
-    public AdditemsubscriptionGroupIdRequest withPathParams(AdditemsubscriptionGroupIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AdditemsubscriptionGroupIdHeaders headers;
-    public AdditemsubscriptionGroupIdRequest withHeaders(AdditemsubscriptionGroupIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public AdditemsubscriptionGroupIdRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AdditemsubscriptionGroupIdRequest request;
-    public AdditemsubscriptionGroupIdRequest withRequest(org.openapis.openapi.models.shared.AdditemsubscriptionGroupIdRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AdditemsubscriptionGroupIdRequest additemsubscriptionGroupIdRequest;
+    public AdditemsubscriptionGroupIdRequest withAdditemsubscriptionGroupIdRequest(org.openapis.openapi.models.shared.AdditemsubscriptionGroupIdRequest additemsubscriptionGroupIdRequest) {
+        this.additemsubscriptionGroupIdRequest = additemsubscriptionGroupIdRequest;
+        return this;
+    }
+    
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public AdditemsubscriptionGroupIdRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
+    
+    /**
+     * Group ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public String groupId;
+    public AdditemsubscriptionGroupIdRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     

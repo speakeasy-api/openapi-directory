@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodePushDeploymentReleasesCreateRequest {
-    
-    public CodePushDeploymentReleasesCreatePathParams pathParams;
-    public CodePushDeploymentReleasesCreateRequest withPathParams(CodePushDeploymentReleasesCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The necessary information required to download the bundle and being the release process.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public CodePushDeploymentReleasesCreateRequestBody request;
-    public CodePushDeploymentReleasesCreateRequest withRequest(CodePushDeploymentReleasesCreateRequestBody request) {
-        this.request = request;
+    public CodePushDeploymentReleasesCreateRequestBody requestBody;
+    public CodePushDeploymentReleasesCreateRequest withRequestBody(CodePushDeploymentReleasesCreateRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public CodePushDeploymentReleasesCreateRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public CodePushDeploymentReleasesCreateSecurity security;
-    public CodePushDeploymentReleasesCreateRequest withSecurity(CodePushDeploymentReleasesCreateSecurity security) {
-        this.security = security;
+    /**
+     * deployment name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deployment_name")
+    public String deploymentName;
+    public CodePushDeploymentReleasesCreateRequest withDeploymentName(String deploymentName) {
+        this.deploymentName = deploymentName;
+        return this;
+    }
+    
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public CodePushDeploymentReleasesCreateRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

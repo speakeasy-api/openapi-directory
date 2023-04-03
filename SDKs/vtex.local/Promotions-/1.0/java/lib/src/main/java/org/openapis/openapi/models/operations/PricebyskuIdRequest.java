@@ -4,34 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PricebyskuIdRequest {
-    
-    public PricebyskuIdPathParams pathParams;
-    public PricebyskuIdRequest withPathParams(PricebyskuIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public PricebyskuIdRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public PricebyskuIdQueryParams queryParams;
-    public PricebyskuIdRequest withQueryParams(PricebyskuIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public PricebyskuIdRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
-    
-    public PricebyskuIdHeaders headers;
-    public PricebyskuIdRequest withHeaders(PricebyskuIdHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=an")
+    public String an;
+    public PricebyskuIdRequest withAn(String an) {
+        this.an = an;
         return this;
     }
     
-    
-    public String serverURL;
-    public PricebyskuIdRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=skuId")
+    public String skuId;
+    public PricebyskuIdRequest withSkuId(String skuId) {
+        this.skuId = skuId;
         return this;
     }
     

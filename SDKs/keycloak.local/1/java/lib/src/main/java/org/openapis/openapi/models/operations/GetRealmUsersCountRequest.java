@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRealmUsersCountRequest {
-    
-    public GetRealmUsersCountPathParams pathParams;
-    public GetRealmUsersCountRequest withPathParams(GetRealmUsersCountPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * email filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public GetRealmUsersCountRequest withEmail(String email) {
+        this.email = email;
         return this;
     }
     
+    /**
+     * first name filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=firstName")
+    public String firstName;
+    public GetRealmUsersCountRequest withFirstName(String firstName) {
+        this.firstName = firstName;
+        return this;
+    }
     
-    public GetRealmUsersCountQueryParams queryParams;
-    public GetRealmUsersCountRequest withQueryParams(GetRealmUsersCountQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * last name filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lastName")
+    public String lastName;
+    public GetRealmUsersCountRequest withLastName(String lastName) {
+        this.lastName = lastName;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public GetRealmUsersCountRequest withRealm(String realm) {
+        this.realm = realm;
+        return this;
+    }
+    
+    /**
+     * arbitrary search string for all the fields below
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public GetRealmUsersCountRequest withSearch(String search) {
+        this.search = search;
+        return this;
+    }
+    
+    /**
+     * username filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
+    public String username;
+    public GetRealmUsersCountRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

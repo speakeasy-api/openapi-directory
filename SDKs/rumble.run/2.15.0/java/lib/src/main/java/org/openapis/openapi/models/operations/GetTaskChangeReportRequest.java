@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTaskChangeReportRequest {
-    
-    public GetTaskChangeReportPathParams pathParams;
-    public GetTaskChangeReportRequest withPathParams(GetTaskChangeReportPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetTaskChangeReportSecurity security;
-    public GetTaskChangeReportRequest withSecurity(GetTaskChangeReportSecurity security) {
-        this.security = security;
+    /**
+     * UUID of the task
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=task_id")
+    public String taskId;
+    public GetTaskChangeReportRequest withTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
     

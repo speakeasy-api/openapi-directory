@@ -4,27 +4,166 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BigqueryJobsListRequest {
-    
-    public BigqueryJobsListPathParams pathParams;
-    public BigqueryJobsListRequest withPathParams(BigqueryJobsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Whether to display jobs owned by all users in the project. Default false
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=allUsers")
+    public Boolean allUsers;
+    public BigqueryJobsListRequest withAllUsers(Boolean allUsers) {
+        this.allUsers = allUsers;
         return this;
     }
     
-    
-    public BigqueryJobsListQueryParams queryParams;
-    public BigqueryJobsListRequest withQueryParams(BigqueryJobsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public BigqueryJobsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
         return this;
     }
     
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public BigqueryJobsListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
     
-    public BigqueryJobsListSecurity security;
-    public BigqueryJobsListRequest withSecurity(BigqueryJobsListSecurity security) {
-        this.security = security;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public BigqueryJobsListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Max value for job creation time, in milliseconds since the POSIX epoch. If set, only jobs created before or at this timestamp are returned
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxCreationTime")
+    public String maxCreationTime;
+    public BigqueryJobsListRequest withMaxCreationTime(String maxCreationTime) {
+        this.maxCreationTime = maxCreationTime;
+        return this;
+    }
+    
+    /**
+     * Maximum number of results to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public BigqueryJobsListRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * Min value for job creation time, in milliseconds since the POSIX epoch. If set, only jobs created after or at this timestamp are returned
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minCreationTime")
+    public String minCreationTime;
+    public BigqueryJobsListRequest withMinCreationTime(String minCreationTime) {
+        this.minCreationTime = minCreationTime;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public BigqueryJobsListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Page token, returned by a previous call, to request the next page of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public BigqueryJobsListRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * If set, retrieves only jobs whose parent is this job. Otherwise, retrieves only jobs which have no parent
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parentJobId")
+    public String parentJobId;
+    public BigqueryJobsListRequest withParentJobId(String parentJobId) {
+        this.parentJobId = parentJobId;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public BigqueryJobsListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Project ID of the jobs to list
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public BigqueryJobsListRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    /**
+     * Restrict information returned to a set of selected fields
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=projection")
+    public BigqueryJobsListProjectionEnum projection;
+    public BigqueryJobsListRequest withProjection(BigqueryJobsListProjectionEnum projection) {
+        this.projection = projection;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public BigqueryJobsListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Filter for job state
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stateFilter")
+    public BigqueryJobsListStateFilterEnum[] stateFilter;
+    public BigqueryJobsListRequest withStateFilter(BigqueryJobsListStateFilterEnum[] stateFilter) {
+        this.stateFilter = stateFilter;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public BigqueryJobsListRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

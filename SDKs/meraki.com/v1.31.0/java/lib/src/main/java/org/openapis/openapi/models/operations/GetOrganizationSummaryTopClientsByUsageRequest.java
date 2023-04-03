@@ -4,20 +4,43 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationSummaryTopClientsByUsageRequest {
-    
-    public GetOrganizationSummaryTopClientsByUsagePathParams pathParams;
-    public GetOrganizationSummaryTopClientsByUsageRequest withPathParams(GetOrganizationSummaryTopClientsByUsagePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public GetOrganizationSummaryTopClientsByUsageRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     
+    /**
+     * The beginning of the timespan for the data.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t0")
+    public String t0;
+    public GetOrganizationSummaryTopClientsByUsageRequest withT0(String t0) {
+        this.t0 = t0;
+        return this;
+    }
     
-    public GetOrganizationSummaryTopClientsByUsageQueryParams queryParams;
-    public GetOrganizationSummaryTopClientsByUsageRequest withQueryParams(GetOrganizationSummaryTopClientsByUsageQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t1")
+    public String t1;
+    public GetOrganizationSummaryTopClientsByUsageRequest withT1(String t1) {
+        this.t1 = t1;
+        return this;
+    }
+    
+    /**
+     * The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 1 day.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timespan")
+    public Float timespan;
+    public GetOrganizationSummaryTopClientsByUsageRequest withTimespan(Float timespan) {
+        this.timespan = timespan;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCustomFieldRequest {
+    /**
+     * custom field's key
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customFieldKey")
+    public String customFieldKey;
+    public GetCustomFieldRequest withCustomFieldKey(String customFieldKey) {
+        this.customFieldKey = customFieldKey;
+        return this;
+    }
     
-    public GetCustomFieldPathParams pathParams;
-    public GetCustomFieldRequest withPathParams(GetCustomFieldPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * client's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customerId")
+    public Long customerId;
+    public GetCustomFieldRequest withCustomerId(Long customerId) {
+        this.customerId = customerId;
         return this;
     }
     

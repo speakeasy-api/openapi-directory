@@ -39,13 +39,13 @@ public class ProductCustomFields {
      */
     public org.openapis.openapi.models.operations.DeleteProductsProductIdFieldsFieldIdJsonResponse deleteProductsProductIdFieldsFieldIdJson(org.openapis.openapi.models.operations.DeleteProductsProductIdFieldsFieldIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteProductsProductIdFieldsFieldIdJsonPathParams.class, baseUrl, "/products/{product_id}/fields/{field_id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteProductsProductIdFieldsFieldIdJsonRequest.class, baseUrl, "/products/{product_id}/fields/{field_id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteProductsProductIdFieldsFieldIdJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteProductsProductIdFieldsFieldIdJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -91,13 +91,13 @@ public class ProductCustomFields {
      */
     public org.openapis.openapi.models.operations.GetProductsIdFieldsJsonResponse getProductsIdFieldsJson(org.openapis.openapi.models.operations.GetProductsIdFieldsJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProductsIdFieldsJsonPathParams.class, baseUrl, "/products/{id}/fields.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProductsIdFieldsJsonRequest.class, baseUrl, "/products/{id}/fields.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProductsIdFieldsJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProductsIdFieldsJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -143,13 +143,13 @@ public class ProductCustomFields {
      */
     public org.openapis.openapi.models.operations.GetProductsIdFieldsCountJsonResponse getProductsIdFieldsCountJson(org.openapis.openapi.models.operations.GetProductsIdFieldsCountJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProductsIdFieldsCountJsonPathParams.class, baseUrl, "/products/{id}/fields/count.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProductsIdFieldsCountJsonRequest.class, baseUrl, "/products/{id}/fields/count.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProductsIdFieldsCountJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProductsIdFieldsCountJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -195,18 +195,18 @@ public class ProductCustomFields {
      */
     public org.openapis.openapi.models.operations.PostProductsIdFieldsJsonResponse postProductsIdFieldsJson(org.openapis.openapi.models.operations.PostProductsIdFieldsJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostProductsIdFieldsJsonPathParams.class, baseUrl, "/products/{id}/fields.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostProductsIdFieldsJsonRequest.class, baseUrl, "/products/{id}/fields.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "addProductCustomField", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostProductsIdFieldsJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostProductsIdFieldsJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -252,13 +252,13 @@ public class ProductCustomFields {
      */
     public org.openapis.openapi.models.operations.PutProductsProductIdFieldsFieldIdJsonResponse putProductsProductIdFieldsFieldIdJson(org.openapis.openapi.models.operations.PutProductsProductIdFieldsFieldIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutProductsProductIdFieldsFieldIdJsonPathParams.class, baseUrl, "/products/{product_id}/fields/{field_id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutProductsProductIdFieldsFieldIdJsonRequest.class, baseUrl, "/products/{product_id}/fields/{field_id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutProductsProductIdFieldsFieldIdJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutProductsProductIdFieldsFieldIdJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

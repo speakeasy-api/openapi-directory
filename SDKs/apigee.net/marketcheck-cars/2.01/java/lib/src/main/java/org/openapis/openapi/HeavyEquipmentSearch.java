@@ -39,13 +39,13 @@ public class HeavyEquipmentSearch {
      */
     public org.openapis.openapi.models.operations.GetListingHeavyEquipmentIdResponse getListingHeavyEquipmentId(org.openapis.openapi.models.operations.GetListingHeavyEquipmentIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetListingHeavyEquipmentIdPathParams.class, baseUrl, "/listing/heavy-equipment/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetListingHeavyEquipmentIdRequest.class, baseUrl, "/listing/heavy-equipment/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetListingHeavyEquipmentIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetListingHeavyEquipmentIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -93,13 +93,13 @@ public class HeavyEquipmentSearch {
      */
     public org.openapis.openapi.models.operations.GetListingHeavyEquipmentIdExtraResponse getListingHeavyEquipmentIdExtra(org.openapis.openapi.models.operations.GetListingHeavyEquipmentIdExtraRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetListingHeavyEquipmentIdExtraPathParams.class, baseUrl, "/listing/heavy-equipment/{id}/extra", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetListingHeavyEquipmentIdExtraRequest.class, baseUrl, "/listing/heavy-equipment/{id}/extra", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetListingHeavyEquipmentIdExtraQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetListingHeavyEquipmentIdExtraRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -147,13 +147,13 @@ public class HeavyEquipmentSearch {
      */
     public org.openapis.openapi.models.operations.GetListingHeavyEquipmentIdMediaResponse getListingHeavyEquipmentIdMedia(org.openapis.openapi.models.operations.GetListingHeavyEquipmentIdMediaRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetListingHeavyEquipmentIdMediaPathParams.class, baseUrl, "/listing/heavy-equipment/{id}/media", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetListingHeavyEquipmentIdMediaRequest.class, baseUrl, "/listing/heavy-equipment/{id}/media", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetListingHeavyEquipmentIdMediaQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetListingHeavyEquipmentIdMediaRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -217,7 +217,7 @@ public class HeavyEquipmentSearch {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSearchHeavyEquipmentActiveQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSearchHeavyEquipmentActiveRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -271,7 +271,7 @@ public class HeavyEquipmentSearch {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSearchHeavyEquipmentAutoCompleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSearchHeavyEquipmentAutoCompleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

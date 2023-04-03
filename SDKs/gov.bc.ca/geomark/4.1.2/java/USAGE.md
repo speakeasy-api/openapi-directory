@@ -5,9 +5,7 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionFileFormatExtensionEnum;
-import org.openapis.openapi.models.operations.GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionPathParams;
 import org.openapis.openapi.models.operations.GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionSridEnum;
-import org.openapis.openapi.models.operations.GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionQueryParams;
 import org.openapis.openapi.models.operations.GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionRequest;
 import org.openapis.openapi.models.operations.GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionResponse;
 
@@ -18,14 +16,10 @@ public class Application {
                 .build();
 
             GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionRequest req = new GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionRequest() {{
-                pathParams = new GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionPathParams() {{
-                    fileFormatExtension = "shpz";
-                    geomarkId = "provident";
-                }};
-                queryParams = new GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionQueryParams() {{
-                    srid = "26909";
-                }};
-            }};            
+                fileFormatExtension = "shpz";
+                geomarkId = "provident";
+                srid = "26909";
+            }}            
 
             GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionResponse res = sdk.boundingBox.getGeomarksGeomarkIdBoundingBoxFileFormatExtension(req);
 

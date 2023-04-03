@@ -7,9 +7,9 @@ package org.openapis.openapi.models.shared;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Security {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query")
-    public SchemeAPIKeyAuth apiKeyAuth;
-    public Security withApiKeyAuth(SchemeAPIKeyAuth apiKeyAuth) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=key")
+    public String apiKeyAuth;
+    public Security withApiKeyAuth(String apiKeyAuth) {
         this.apiKeyAuth = apiKeyAuth;
         return this;
     }

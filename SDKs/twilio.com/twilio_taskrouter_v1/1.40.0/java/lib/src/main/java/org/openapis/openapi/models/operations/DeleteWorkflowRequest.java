@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteWorkflowRequest {
-    
-    public DeleteWorkflowPathParams pathParams;
-    public DeleteWorkflowRequest withPathParams(DeleteWorkflowPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Workflow resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteWorkflowRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public DeleteWorkflowSecurity security;
-    public DeleteWorkflowRequest withSecurity(DeleteWorkflowSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteWorkflowRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Workspace with the Workflow to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkspaceSid")
+    public String workspaceSid;
+    public DeleteWorkflowRequest withWorkspaceSid(String workspaceSid) {
+        this.workspaceSid = workspaceSid;
         return this;
     }
     

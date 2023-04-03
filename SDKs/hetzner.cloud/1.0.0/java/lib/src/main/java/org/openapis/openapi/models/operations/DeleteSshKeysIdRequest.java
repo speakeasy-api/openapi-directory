@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSshKeysIdRequest {
-    
-    public DeleteSshKeysIdPathParams pathParams;
-    public DeleteSshKeysIdRequest withPathParams(DeleteSshKeysIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the SSH key
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteSshKeysIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

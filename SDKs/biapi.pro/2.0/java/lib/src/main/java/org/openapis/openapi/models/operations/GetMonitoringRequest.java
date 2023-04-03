@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMonitoringRequest {
-    
-    public GetMonitoringQueryParams queryParams;
-    public GetMonitoringRequest withQueryParams(GetMonitoringQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * number on days on which stats on synchronization have to be done per worker (Default: 1)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=period")
+    public Long period;
+    public GetMonitoringRequest withPeriod(Long period) {
+        this.period = period;
         return this;
     }
     

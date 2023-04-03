@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupV2KickMemberRequest {
-    
-    public GroupV2KickMemberPathParams pathParams;
-    public GroupV2KickMemberRequest withPathParams(GroupV2KickMemberPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Group ID to kick the user from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public Long groupId;
+    public GroupV2KickMemberRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
         return this;
     }
     
+    /**
+     * Membership ID to kick.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipId")
+    public Long membershipId;
+    public GroupV2KickMemberRequest withMembershipId(Long membershipId) {
+        this.membershipId = membershipId;
+        return this;
+    }
     
-    public GroupV2KickMemberSecurity security;
-    public GroupV2KickMemberRequest withSecurity(GroupV2KickMemberSecurity security) {
-        this.security = security;
+    /**
+     * Membership type of the provided membership ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
+    public Integer membershipType;
+    public GroupV2KickMemberRequest withMembershipType(Integer membershipType) {
+        this.membershipType = membershipType;
         return this;
     }
     

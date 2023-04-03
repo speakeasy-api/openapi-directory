@@ -38,7 +38,7 @@ public class LearnerActivity {
      */
     public org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsLearnersProgressResponse getOfferingsOfferingIdAnalyticsLearnersProgress(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsLearnersProgressRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsLearnersProgressPathParams.class, baseUrl, "/offerings/{offeringId}/analytics/learners-progress", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsLearnersProgressRequest.class, baseUrl, "/offerings/{offeringId}/analytics/learners-progress", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -86,7 +86,7 @@ public class LearnerActivity {
      */
     public org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsSocialNotesResponse getOfferingsOfferingIdAnalyticsSocialNotes(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsSocialNotesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsSocialNotesPathParams.class, baseUrl, "/offerings/{offeringId}/analytics/social-notes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsSocialNotesRequest.class, baseUrl, "/offerings/{offeringId}/analytics/social-notes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -134,7 +134,7 @@ public class LearnerActivity {
      */
     public org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsUnitReactionsResponse getOfferingsOfferingIdAnalyticsUnitReactions(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsUnitReactionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsUnitReactionsPathParams.class, baseUrl, "/offerings/{offeringId}/analytics/unit-reactions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsUnitReactionsRequest.class, baseUrl, "/offerings/{offeringId}/analytics/unit-reactions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -182,7 +182,7 @@ public class LearnerActivity {
      */
     public org.openapis.openapi.models.operations.GetUsersUserEmailOfferingsOfferingIdProgressResponse getUsersUserEmailOfferingsOfferingIdProgress(org.openapis.openapi.models.operations.GetUsersUserEmailOfferingsOfferingIdProgressRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersUserEmailOfferingsOfferingIdProgressPathParams.class, baseUrl, "/users/{userEmail}/offerings/{offeringId}/progress", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersUserEmailOfferingsOfferingIdProgressRequest.class, baseUrl, "/users/{userEmail}/offerings/{offeringId}/progress", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -230,7 +230,7 @@ public class LearnerActivity {
      */
     public org.openapis.openapi.models.operations.GetUsersUserEmailProgressResponse getUsersUserEmailProgress(org.openapis.openapi.models.operations.GetUsersUserEmailProgressRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersUserEmailProgressPathParams.class, baseUrl, "/users/{userEmail}/progress", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersUserEmailProgressRequest.class, baseUrl, "/users/{userEmail}/progress", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

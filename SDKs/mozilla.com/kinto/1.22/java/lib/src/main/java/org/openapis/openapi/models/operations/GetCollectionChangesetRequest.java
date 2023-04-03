@@ -4,20 +4,55 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCollectionChangesetRequest {
-    
-    public GetCollectionChangesetPathParams pathParams;
-    public GetCollectionChangesetRequest withPathParams(GetCollectionChangesetPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_expected")
+    public String expected;
+    public GetCollectionChangesetRequest withExpected(String expected) {
+        this.expected = expected;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_limit")
+    public Long limit;
+    public GetCollectionChangesetRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetCollectionChangesetQueryParams queryParams;
-    public GetCollectionChangesetRequest withQueryParams(GetCollectionChangesetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_since")
+    public String since;
+    public GetCollectionChangesetRequest withSince(String since) {
+        this.since = since;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bid")
+    public String bid;
+    public GetCollectionChangesetRequest withBid(String bid) {
+        this.bid = bid;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bucket")
+    public String bucket;
+    public GetCollectionChangesetRequest withBucket(String bucket) {
+        this.bucket = bucket;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cid")
+    public String cid;
+    public GetCollectionChangesetRequest withCid(String cid) {
+        this.cid = cid;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=collection")
+    public String collection;
+    public GetCollectionChangesetRequest withCollection(String collection) {
+        this.collection = collection;
         return this;
     }
     

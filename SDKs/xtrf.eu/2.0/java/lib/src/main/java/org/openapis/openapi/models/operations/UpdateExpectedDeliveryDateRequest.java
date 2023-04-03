@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateExpectedDeliveryDateRequest {
-    
-    public UpdateExpectedDeliveryDatePathParams pathParams;
-    public UpdateExpectedDeliveryDateRequest withPathParams(UpdateExpectedDeliveryDatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated Expected Delivery Date for a quote.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TimeDTO request;
-    public UpdateExpectedDeliveryDateRequest withRequest(org.openapis.openapi.models.shared.TimeDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TimeDTO timeDTO;
+    public UpdateExpectedDeliveryDateRequest withTimeDTO(org.openapis.openapi.models.shared.TimeDTO timeDTO) {
+        this.timeDTO = timeDTO;
+        return this;
+    }
+    
+    /**
+     * quote's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=quoteId")
+    public String quoteId;
+    public UpdateExpectedDeliveryDateRequest withQuoteId(String quoteId) {
+        this.quoteId = quoteId;
         return this;
     }
     

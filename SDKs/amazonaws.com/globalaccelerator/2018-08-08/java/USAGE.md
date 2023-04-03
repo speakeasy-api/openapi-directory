@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AddCustomRoutingEndpointsXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AddCustomRoutingEndpointsHeaders;
 import org.openapis.openapi.models.operations.AddCustomRoutingEndpointsRequest;
 import org.openapis.openapi.models.operations.AddCustomRoutingEndpointsResponse;
 import org.openapis.openapi.models.shared.AddCustomRoutingEndpointsRequest;
@@ -16,41 +15,34 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AddCustomRoutingEndpointsRequest req = new AddCustomRoutingEndpointsRequest() {{
-                headers = new AddCustomRoutingEndpointsHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "GlobalAccelerator_V20180706.AddCustomRoutingEndpoints";
-                }};
-                request = new AddCustomRoutingEndpointsRequest() {{
+                addCustomRoutingEndpointsRequest = new AddCustomRoutingEndpointsRequest() {{
                     endpointConfigurations = new org.openapis.openapi.models.shared.CustomRoutingEndpointConfiguration[]{{
                         add(new CustomRoutingEndpointConfiguration() {{
-                            endpointId = "vel";
+                            endpointId = "provident";
                         }}),
                         add(new CustomRoutingEndpointConfiguration() {{
-                            endpointId = "error";
+                            endpointId = "distinctio";
                         }}),
                         add(new CustomRoutingEndpointConfiguration() {{
-                            endpointId = "deserunt";
-                        }}),
-                        add(new CustomRoutingEndpointConfiguration() {{
-                            endpointId = "suscipit";
+                            endpointId = "quibusdam";
                         }}),
                     }};
-                    endpointGroupArn = "iure";
+                    endpointGroupArn = "unde";
                 }};
-            }};            
+                xAmzAlgorithm = "nulla";
+                xAmzContentSha256 = "corrupti";
+                xAmzCredential = "illum";
+                xAmzDate = "vel";
+                xAmzSecurityToken = "error";
+                xAmzSignature = "deserunt";
+                xAmzSignedHeaders = "suscipit";
+                xAmzTarget = "GlobalAccelerator_V20180706.AddCustomRoutingEndpoints";
+            }}            
 
             AddCustomRoutingEndpointsResponse res = sdk.addCustomRoutingEndpoints(req);
 

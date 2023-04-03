@@ -40,7 +40,7 @@ public class UsersInIQualify {
      */
     public org.openapis.openapi.models.operations.GetUsersUserEmailResponse getUsersUserEmail(org.openapis.openapi.models.operations.GetUsersUserEmailRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersUserEmailPathParams.class, baseUrl, "/users/{userEmail}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersUserEmailRequest.class, baseUrl, "/users/{userEmail}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -88,7 +88,7 @@ public class UsersInIQualify {
      */
     public org.openapis.openapi.models.operations.GetUsersUserEmailOfferingsResponse getUsersUserEmailOfferings(org.openapis.openapi.models.operations.GetUsersUserEmailOfferingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersUserEmailOfferingsPathParams.class, baseUrl, "/users/{userEmail}/offerings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersUserEmailOfferingsRequest.class, baseUrl, "/users/{userEmail}/offerings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -136,12 +136,12 @@ public class UsersInIQualify {
      */
     public org.openapis.openapi.models.operations.PatchUsersUserEmailResponse patchUsersUserEmail(org.openapis.openapi.models.operations.PatchUsersUserEmailRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchUsersUserEmailPathParams.class, baseUrl, "/users/{userEmail}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchUsersUserEmailRequest.class, baseUrl, "/users/{userEmail}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "user", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -184,7 +184,7 @@ public class UsersInIQualify {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostUsersResponse postUsers(org.openapis.openapi.models.operations.PostUsersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostUsersResponse postUsers(org.openapis.openapi.models.shared.User request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/users");
         
@@ -239,7 +239,7 @@ public class UsersInIQualify {
      */
     public org.openapis.openapi.models.operations.PostUsersUserEmailInviteEmailResponse postUsersUserEmailInviteEmail(org.openapis.openapi.models.operations.PostUsersUserEmailInviteEmailRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostUsersUserEmailInviteEmailPathParams.class, baseUrl, "/users/{userEmail}/invite-email", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostUsersUserEmailInviteEmailRequest.class, baseUrl, "/users/{userEmail}/invite-email", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -281,12 +281,12 @@ public class UsersInIQualify {
      */
     public org.openapis.openapi.models.operations.PostUsersUserEmailOfferingsResponse postUsersUserEmailOfferings(org.openapis.openapi.models.operations.PostUsersUserEmailOfferingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostUsersUserEmailOfferingsPathParams.class, baseUrl, "/users/{userEmail}/offerings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostUsersUserEmailOfferingsRequest.class, baseUrl, "/users/{userEmail}/offerings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -334,7 +334,7 @@ public class UsersInIQualify {
      */
     public org.openapis.openapi.models.operations.PostUsersUserEmailPermissionsPermissionNameResponse postUsersUserEmailPermissionsPermissionName(org.openapis.openapi.models.operations.PostUsersUserEmailPermissionsPermissionNameRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostUsersUserEmailPermissionsPermissionNamePathParams.class, baseUrl, "/users/{userEmail}/permissions/{permissionName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostUsersUserEmailPermissionsPermissionNameRequest.class, baseUrl, "/users/{userEmail}/permissions/{permissionName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -382,12 +382,12 @@ public class UsersInIQualify {
      */
     public org.openapis.openapi.models.operations.PutUsersUserEmailSuspendResponse putUsersUserEmailSuspend(org.openapis.openapi.models.operations.PutUsersUserEmailSuspendRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutUsersUserEmailSuspendPathParams.class, baseUrl, "/users/{userEmail}/suspend", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutUsersUserEmailSuspendRequest.class, baseUrl, "/users/{userEmail}/suspend", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "suspendedRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

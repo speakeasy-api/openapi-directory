@@ -4,27 +4,105 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLaunchProfileInitializationRequest {
-    
-    public GetLaunchProfileInitializationPathParams pathParams;
-    public GetLaunchProfileInitializationRequest withPathParams(GetLaunchProfileInitializationPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetLaunchProfileInitializationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public GetLaunchProfileInitializationQueryParams queryParams;
-    public GetLaunchProfileInitializationRequest withQueryParams(GetLaunchProfileInitializationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetLaunchProfileInitializationRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetLaunchProfileInitializationRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public GetLaunchProfileInitializationHeaders headers;
-    public GetLaunchProfileInitializationRequest withHeaders(GetLaunchProfileInitializationHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetLaunchProfileInitializationRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetLaunchProfileInitializationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetLaunchProfileInitializationRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetLaunchProfileInitializationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The ID of the launch profile used to control access from the streaming session.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=launchProfileId")
+    public String launchProfileId;
+    public GetLaunchProfileInitializationRequest withLaunchProfileId(String launchProfileId) {
+        this.launchProfileId = launchProfileId;
+        return this;
+    }
+    
+    /**
+     * The launch profile protocol versions supported by the client.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=launchProfileProtocolVersions")
+    public String[] launchProfileProtocolVersions;
+    public GetLaunchProfileInitializationRequest withLaunchProfileProtocolVersions(String[] launchProfileProtocolVersions) {
+        this.launchProfileProtocolVersions = launchProfileProtocolVersions;
+        return this;
+    }
+    
+    /**
+     * The launch purpose.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=launchPurpose")
+    public String launchPurpose;
+    public GetLaunchProfileInitializationRequest withLaunchPurpose(String launchPurpose) {
+        this.launchPurpose = launchPurpose;
+        return this;
+    }
+    
+    /**
+     * The platform where this Launch Profile will be used, either Windows or Linux.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=platform")
+    public String platform;
+    public GetLaunchProfileInitializationRequest withPlatform(String platform) {
+        this.platform = platform;
+        return this;
+    }
+    
+    /**
+     * The studio ID. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=studioId")
+    public String studioId;
+    public GetLaunchProfileInitializationRequest withStudioId(String studioId) {
+        this.studioId = studioId;
         return this;
     }
     

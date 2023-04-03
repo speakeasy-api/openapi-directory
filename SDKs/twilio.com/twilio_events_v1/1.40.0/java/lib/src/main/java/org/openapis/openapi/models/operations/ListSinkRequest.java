@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSinkRequest {
-    
-    public ListSinkQueryParams queryParams;
-    public ListSinkRequest withQueryParams(ListSinkQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A boolean query parameter filtering the results to return sinks used/not used by a subscription.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InUse")
+    public Boolean inUse;
+    public ListSinkRequest withInUse(Boolean inUse) {
+        this.inUse = inUse;
         return this;
     }
     
-    
-    public ListSinkSecurity security;
-    public ListSinkRequest withSecurity(ListSinkSecurity security) {
-        this.security = security;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListSinkRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListSinkRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public String serverURL;
-    public ListSinkRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListSinkRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * A String query parameter filtering the results by status `initialized`, `validating`, `active` or `failed`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Status")
+    public String status;
+    public ListSinkRequest withStatus(String status) {
+        this.status = status;
         return this;
     }
     

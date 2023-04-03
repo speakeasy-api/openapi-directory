@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPirateGenerateNameRequest {
-    
-    public GetPirateGenerateNameQueryParams queryParams;
-    public GetPirateGenerateNameRequest withQueryParams(GetPirateGenerateNameQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * No of names to generate
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetPirateGenerateNameRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
-    
-    public GetPirateGenerateNameSecurity security;
-    public GetPirateGenerateNameRequest withSecurity(GetPirateGenerateNameSecurity security) {
-        this.security = security;
+    /**
+     * Variation to generate `male/female`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=variation")
+    public String variation;
+    public GetPirateGenerateNameRequest withVariation(String variation) {
+        this.variation = variation;
         return this;
     }
     

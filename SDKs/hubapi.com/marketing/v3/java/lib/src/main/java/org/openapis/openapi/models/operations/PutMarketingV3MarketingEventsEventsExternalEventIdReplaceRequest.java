@@ -7,24 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutMarketingV3MarketingEventsEventsExternalEventIdReplaceRequest {
-    
-    public PutMarketingV3MarketingEventsEventsExternalEventIdReplacePathParams pathParams;
-    public PutMarketingV3MarketingEventsEventsExternalEventIdReplaceRequest withPathParams(PutMarketingV3MarketingEventsEventsExternalEventIdReplacePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.MarketingEventCreateRequestParams request;
-    public PutMarketingV3MarketingEventsEventsExternalEventIdReplaceRequest withRequest(org.openapis.openapi.models.shared.MarketingEventCreateRequestParams request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.MarketingEventCreateRequestParams marketingEventCreateRequestParams;
+    public PutMarketingV3MarketingEventsEventsExternalEventIdReplaceRequest withMarketingEventCreateRequestParams(org.openapis.openapi.models.shared.MarketingEventCreateRequestParams marketingEventCreateRequestParams) {
+        this.marketingEventCreateRequestParams = marketingEventCreateRequestParams;
         return this;
     }
     
-    
-    public PutMarketingV3MarketingEventsEventsExternalEventIdReplaceSecurity security;
-    public PutMarketingV3MarketingEventsEventsExternalEventIdReplaceRequest withSecurity(PutMarketingV3MarketingEventsEventsExternalEventIdReplaceSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=externalEventId")
+    public String externalEventId;
+    public PutMarketingV3MarketingEventsEventsExternalEventIdReplaceRequest withExternalEventId(String externalEventId) {
+        this.externalEventId = externalEventId;
         return this;
     }
     

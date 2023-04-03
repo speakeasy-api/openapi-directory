@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolMqttClientSetOnDisconnectRequest {
+    /**
+     * Action to take
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=action")
+    public String action;
+    public ProtocolMqttClientSetOnDisconnectRequest withAction(String action) {
+        this.action = action;
+        return this;
+    }
     
-    public ProtocolMqttClientSetOnDisconnectPathParams pathParams;
-    public ProtocolMqttClientSetOnDisconnectRequest withPathParams(ProtocolMqttClientSetOnDisconnectPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to set MQTT config
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolMqttClientSetOnDisconnectRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

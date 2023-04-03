@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppliedInventoriesTagsForServiceOfferingRequest {
-    
-    public AppliedInventoriesTagsForServiceOfferingPathParams pathParams;
-    public AppliedInventoriesTagsForServiceOfferingRequest withPathParams(AppliedInventoriesTagsForServiceOfferingPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Parameters defining input data for computing inventories
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AppliedInventoriesParametersServicePlan request;
-    public AppliedInventoriesTagsForServiceOfferingRequest withRequest(org.openapis.openapi.models.shared.AppliedInventoriesParametersServicePlan request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AppliedInventoriesParametersServicePlan appliedInventoriesParametersServicePlan;
+    public AppliedInventoriesTagsForServiceOfferingRequest withAppliedInventoriesParametersServicePlan(org.openapis.openapi.models.shared.AppliedInventoriesParametersServicePlan appliedInventoriesParametersServicePlan) {
+        this.appliedInventoriesParametersServicePlan = appliedInventoriesParametersServicePlan;
+        return this;
+    }
+    
+    /**
+     * ID of the resource
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public AppliedInventoriesTagsForServiceOfferingRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

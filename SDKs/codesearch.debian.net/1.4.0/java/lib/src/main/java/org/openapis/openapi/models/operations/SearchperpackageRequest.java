@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchperpackageRequest {
-    
-    public SearchperpackageQueryParams queryParams;
-    public SearchperpackageRequest withQueryParams(SearchperpackageQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Whether the query is to be interpreted as a literal (`literal`) instead of as an RE2 regular expression (`regexp`). Literal searches are faster and do not require escaping special characters, regular expression searches are more powerful.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=match_mode")
+    public SearchperpackageMatchModeEnum matchMode;
+    public SearchperpackageRequest withMatchMode(SearchperpackageMatchModeEnum matchMode) {
+        this.matchMode = matchMode;
         return this;
     }
     
-    
-    public SearchperpackageSecurity security;
-    public SearchperpackageRequest withSecurity(SearchperpackageSecurity security) {
-        this.security = security;
+    /**
+     * The search query, for example `who knows...` (literal) or `who knows\.\.\.` (regular expression). See https://codesearch.debian.net/faq for more details about which keywords are supported. The regular expression flavor is RE2, see https://github.com/google/re2/blob/master/doc/syntax.txt
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public SearchperpackageRequest withQuery(String query) {
+        this.query = query;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEventStationsRequest {
-    
-    public GetEventStationsPathParams pathParams;
-    public GetEventStationsRequest withPathParams(GetEventStationsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * currently: 'trofeoprincesasofia|palmavela'
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=eventId")
+    public String eventId;
+    public GetEventStationsRequest withEventId(String eventId) {
+        this.eventId = eventId;
         return this;
     }
     

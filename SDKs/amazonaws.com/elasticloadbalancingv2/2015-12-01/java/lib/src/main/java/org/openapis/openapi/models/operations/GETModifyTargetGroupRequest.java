@@ -4,20 +4,169 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyTargetGroupRequest {
-    
-    public GETModifyTargetGroupQueryParams queryParams;
-    public GETModifyTargetGroupRequest withQueryParams(GETModifyTargetGroupQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyTargetGroupActionEnum action;
+    public GETModifyTargetGroupRequest withAction(GETModifyTargetGroupActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Indicates whether health checks are enabled.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HealthCheckEnabled")
+    public Boolean healthCheckEnabled;
+    public GETModifyTargetGroupRequest withHealthCheckEnabled(Boolean healthCheckEnabled) {
+        this.healthCheckEnabled = healthCheckEnabled;
+        return this;
+    }
     
-    public GETModifyTargetGroupHeaders headers;
-    public GETModifyTargetGroupRequest withHeaders(GETModifyTargetGroupHeaders headers) {
-        this.headers = headers;
+    /**
+     * The approximate amount of time, in seconds, between health checks of an individual target.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HealthCheckIntervalSeconds")
+    public Long healthCheckIntervalSeconds;
+    public GETModifyTargetGroupRequest withHealthCheckIntervalSeconds(Long healthCheckIntervalSeconds) {
+        this.healthCheckIntervalSeconds = healthCheckIntervalSeconds;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;[HTTP/HTTPS health checks] The destination for health checks on the targets.&lt;/p&gt; &lt;p&gt;[HTTP1 or HTTP2 protocol version] The ping path. The default is /.&lt;/p&gt; &lt;p&gt;[GRPC protocol version] The path of a custom health check method with the format /package.service/method. The default is /Amazon Web Services.ALB/healthcheck.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HealthCheckPath")
+    public String healthCheckPath;
+    public GETModifyTargetGroupRequest withHealthCheckPath(String healthCheckPath) {
+        this.healthCheckPath = healthCheckPath;
+        return this;
+    }
+    
+    /**
+     * The port the load balancer uses when performing health checks on targets.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HealthCheckPort")
+    public String healthCheckPort;
+    public GETModifyTargetGroupRequest withHealthCheckPort(String healthCheckPort) {
+        this.healthCheckPort = healthCheckPort;
+        return this;
+    }
+    
+    /**
+     * The protocol the load balancer uses when performing health checks on targets. For Application Load Balancers, the default is HTTP. For Network Load Balancers and Gateway Load Balancers, the default is TCP. The TCP protocol is not supported for health checks if the protocol of the target group is HTTP or HTTPS. It is supported for health checks only if the protocol of the target group is TCP, TLS, UDP, or TCP_UDP. The GENEVE, TLS, UDP, and TCP_UDP protocols are not supported for health checks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HealthCheckProtocol")
+    public GETModifyTargetGroupHealthCheckProtocolEnum healthCheckProtocol;
+    public GETModifyTargetGroupRequest withHealthCheckProtocol(GETModifyTargetGroupHealthCheckProtocolEnum healthCheckProtocol) {
+        this.healthCheckProtocol = healthCheckProtocol;
+        return this;
+    }
+    
+    /**
+     * [HTTP/HTTPS health checks] The amount of time, in seconds, during which no response means a failed health check.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HealthCheckTimeoutSeconds")
+    public Long healthCheckTimeoutSeconds;
+    public GETModifyTargetGroupRequest withHealthCheckTimeoutSeconds(Long healthCheckTimeoutSeconds) {
+        this.healthCheckTimeoutSeconds = healthCheckTimeoutSeconds;
+        return this;
+    }
+    
+    /**
+     * The number of consecutive health checks successes required before considering an unhealthy target healthy.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HealthyThresholdCount")
+    public Long healthyThresholdCount;
+    public GETModifyTargetGroupRequest withHealthyThresholdCount(Long healthyThresholdCount) {
+        this.healthyThresholdCount = healthyThresholdCount;
+        return this;
+    }
+    
+    /**
+     * [HTTP/HTTPS health checks] The HTTP or gRPC codes to use when checking for a successful response from a target. For target groups with a protocol of TCP, TCP_UDP, UDP or TLS the range is 200-599. For target groups with a protocol of HTTP or HTTPS, the range is 200-499. For target groups with a protocol of GENEVE, the range is 200-399.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Matcher")
+    public GETModifyTargetGroupMatcher matcher;
+    public GETModifyTargetGroupRequest withMatcher(GETModifyTargetGroupMatcher matcher) {
+        this.matcher = matcher;
+        return this;
+    }
+    
+    /**
+     * The Amazon Resource Name (ARN) of the target group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TargetGroupArn")
+    public String targetGroupArn;
+    public GETModifyTargetGroupRequest withTargetGroupArn(String targetGroupArn) {
+        this.targetGroupArn = targetGroupArn;
+        return this;
+    }
+    
+    /**
+     * The number of consecutive health check failures required before considering the target unhealthy.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UnhealthyThresholdCount")
+    public Long unhealthyThresholdCount;
+    public GETModifyTargetGroupRequest withUnhealthyThresholdCount(Long unhealthyThresholdCount) {
+        this.unhealthyThresholdCount = unhealthyThresholdCount;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyTargetGroupVersionEnum version;
+    public GETModifyTargetGroupRequest withVersion(GETModifyTargetGroupVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyTargetGroupRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyTargetGroupRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyTargetGroupRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyTargetGroupRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyTargetGroupRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyTargetGroupRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyTargetGroupRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

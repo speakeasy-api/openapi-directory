@@ -39,12 +39,12 @@ public class Glossary {
      */
     public org.openapis.openapi.models.operations.CreateGlossaryJsonResponse createGlossaryJson(org.openapis.openapi.models.operations.CreateGlossaryJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateGlossaryJsonPathParams.class, baseUrl, "/projects/{projectId}/glossaries", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateGlossaryJsonRequest.class, baseUrl, "/projects/{projectId}/glossaries", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "glossaryUploadRequest", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -89,12 +89,12 @@ public class Glossary {
      */
     public org.openapis.openapi.models.operations.CreateGlossaryMultipartResponse createGlossaryMultipart(org.openapis.openapi.models.operations.CreateGlossaryMultipartRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateGlossaryMultipartPathParams.class, baseUrl, "/projects/{projectId}/glossaries", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateGlossaryMultipartRequest.class, baseUrl, "/projects/{projectId}/glossaries", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "glossaryUploadRequest1", "multipart");
         req.setBody(serializedRequestBody);
         
         
@@ -139,7 +139,7 @@ public class Glossary {
      */
     public org.openapis.openapi.models.operations.DeleteGlossaryResponse deleteGlossary(org.openapis.openapi.models.operations.DeleteGlossaryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteGlossaryPathParams.class, baseUrl, "/projects/{projectId}/glossaries/{glossaryId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteGlossaryRequest.class, baseUrl, "/projects/{projectId}/glossaries/{glossaryId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -233,7 +233,7 @@ public class Glossary {
      */
     public org.openapis.openapi.models.operations.DownloadGlossaryResponse downloadGlossary(org.openapis.openapi.models.operations.DownloadGlossaryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadGlossaryPathParams.class, baseUrl, "/projects/{projectId}/glossaries/{glossaryId}/download", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadGlossaryRequest.class, baseUrl, "/projects/{projectId}/glossaries/{glossaryId}/download", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -280,7 +280,7 @@ public class Glossary {
      */
     public org.openapis.openapi.models.operations.GetGlossariesResponse getGlossaries(org.openapis.openapi.models.operations.GetGlossariesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGlossariesPathParams.class, baseUrl, "/projects/{projectId}/glossaries", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGlossariesRequest.class, baseUrl, "/projects/{projectId}/glossaries", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -328,7 +328,7 @@ public class Glossary {
      */
     public org.openapis.openapi.models.operations.GetGlossaryResponse getGlossary(org.openapis.openapi.models.operations.GetGlossaryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGlossaryPathParams.class, baseUrl, "/projects/{projectId}/glossaries/{glossaryId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGlossaryRequest.class, baseUrl, "/projects/{projectId}/glossaries/{glossaryId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -374,7 +374,7 @@ public class Glossary {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateGlobalGlossaryJsonResponse updateGlobalGlossaryJson(org.openapis.openapi.models.operations.UpdateGlobalGlossaryJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateGlobalGlossaryJsonResponse updateGlobalGlossaryJson(org.openapis.openapi.models.shared.AccountGlossaryUploadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/glossary");
         
@@ -424,7 +424,7 @@ public class Glossary {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateGlobalGlossaryMultipartResponse updateGlobalGlossaryMultipart(org.openapis.openapi.models.operations.UpdateGlobalGlossaryMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateGlobalGlossaryMultipartResponse updateGlobalGlossaryMultipart(org.openapis.openapi.models.shared.AccountGlossaryUploadRequest1 request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/glossary");
         
@@ -476,12 +476,12 @@ public class Glossary {
      */
     public org.openapis.openapi.models.operations.UpdateGlossaryJsonResponse updateGlossaryJson(org.openapis.openapi.models.operations.UpdateGlossaryJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateGlossaryJsonPathParams.class, baseUrl, "/projects/{projectId}/glossaries/{glossaryId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateGlossaryJsonRequest.class, baseUrl, "/projects/{projectId}/glossaries/{glossaryId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "glossaryUploadRequest", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -526,12 +526,12 @@ public class Glossary {
      */
     public org.openapis.openapi.models.operations.UpdateGlossaryMultipartResponse updateGlossaryMultipart(org.openapis.openapi.models.operations.UpdateGlossaryMultipartRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateGlossaryMultipartPathParams.class, baseUrl, "/projects/{projectId}/glossaries/{glossaryId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateGlossaryMultipartRequest.class, baseUrl, "/projects/{projectId}/glossaries/{glossaryId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "glossaryUploadRequest1", "multipart");
         req.setBody(serializedRequestBody);
         
         

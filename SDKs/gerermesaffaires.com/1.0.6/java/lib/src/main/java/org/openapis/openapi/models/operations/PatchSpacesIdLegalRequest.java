@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchSpacesIdLegalRequest {
-    
-    public PatchSpacesIdLegalPathParams pathParams;
-    public PatchSpacesIdLegalRequest withPathParams(PatchSpacesIdLegalPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Legal information to modify
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Legal request;
-    public PatchSpacesIdLegalRequest withRequest(org.openapis.openapi.models.shared.Legal request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Legal legal;
+    public PatchSpacesIdLegalRequest withLegal(org.openapis.openapi.models.shared.Legal legal) {
+        this.legal = legal;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatchSpacesIdLegalRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

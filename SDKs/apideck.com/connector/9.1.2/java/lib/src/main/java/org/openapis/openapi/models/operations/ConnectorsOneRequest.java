@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConnectorsOneRequest {
-    
-    public ConnectorsOnePathParams pathParams;
-    public ConnectorsOneRequest withPathParams(ConnectorsOnePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the record you are acting upon.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public ConnectorsOneRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public ConnectorsOneHeaders headers;
-    public ConnectorsOneRequest withHeaders(ConnectorsOneHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public ConnectorsOneSecurity security;
-    public ConnectorsOneRequest withSecurity(ConnectorsOneSecurity security) {
-        this.security = security;
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public ConnectorsOneRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
         return this;
     }
     

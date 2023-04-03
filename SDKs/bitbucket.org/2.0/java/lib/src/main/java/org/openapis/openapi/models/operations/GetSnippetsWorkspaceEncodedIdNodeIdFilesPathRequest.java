@@ -4,20 +4,48 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSnippetsWorkspaceEncodedIdNodeIdFilesPathRequest {
-    
-    public GetSnippetsWorkspaceEncodedIdNodeIdFilesPathPathParams pathParams;
-    public GetSnippetsWorkspaceEncodedIdNodeIdFilesPathRequest withPathParams(GetSnippetsWorkspaceEncodedIdNodeIdFilesPathPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The snippet id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=encoded_id")
+    public String encodedId;
+    public GetSnippetsWorkspaceEncodedIdNodeIdFilesPathRequest withEncodedId(String encodedId) {
+        this.encodedId = encodedId;
         return this;
     }
     
+    /**
+     * A commit revision (SHA1).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=node_id")
+    public String nodeId;
+    public GetSnippetsWorkspaceEncodedIdNodeIdFilesPathRequest withNodeId(String nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
     
-    public GetSnippetsWorkspaceEncodedIdNodeIdFilesPathSecurity security;
-    public GetSnippetsWorkspaceEncodedIdNodeIdFilesPathRequest withSecurity(GetSnippetsWorkspaceEncodedIdNodeIdFilesPathSecurity security) {
-        this.security = security;
+    /**
+     * Path to the file.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
+    public String path;
+    public GetSnippetsWorkspaceEncodedIdNodeIdFilesPathRequest withPath(String path) {
+        this.path = path;
+        return this;
+    }
+    
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetSnippetsWorkspaceEncodedIdNodeIdFilesPathRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

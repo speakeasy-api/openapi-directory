@@ -37,21 +37,22 @@ public class ChatbotMessages {
      * You will need to send your ClientID and Secret as a Basic base64 encoded AUthorization header. Ex. `Basic base64Encode({client_id}:{client_sceret})`&lt;br&gt;&lt;br&gt; Next, use the token received (access_token) as a bearer token while making the DELETE /im/chat/messages/{message_id} request to delete a message.&lt;br&gt;&lt;br&gt;
      * Learn more about how to authotize chatbots in the [Chatbot Authorization](https://marketplace.zoom.us/docs/guides/chatbots/authorization) guide.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteAChatbotMessageResponse deleteAChatbotMessage(org.openapis.openapi.models.operations.DeleteAChatbotMessageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteAChatbotMessageResponse deleteAChatbotMessage(org.openapis.openapi.models.operations.DeleteAChatbotMessageRequest request, org.openapis.openapi.models.operations.DeleteAChatbotMessageSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAChatbotMessagePathParams.class, baseUrl, "/im/chat/messages/{message_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAChatbotMessageRequest.class, baseUrl, "/im/chat/messages/{message_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -91,21 +92,22 @@ public class ChatbotMessages {
      * You will need to send your ClientID and Secret as a Basic base64 encoded AUthorization header. Ex. `Basic base64Encode({client_id}:{client_sceret})`&lt;br&gt;&lt;br&gt; Next, use the token received (access_token) as a bearer token while making the PUT /im/chat/messages/{message_id} request to edit a chatbot message.&lt;br&gt;&lt;br&gt;
      * Learn more about how to authotize chatbots in the [Chatbot Authorization](https://marketplace.zoom.us/docs/guides/chatbots/authorization) guide.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EditChatbotMessageResponse editChatbotMessage(org.openapis.openapi.models.operations.EditChatbotMessageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EditChatbotMessageResponse editChatbotMessage(org.openapis.openapi.models.operations.EditChatbotMessageRequest request, org.openapis.openapi.models.operations.EditChatbotMessageSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditChatbotMessagePathParams.class, baseUrl, "/im/chat/messages/{message_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditChatbotMessageRequest.class, baseUrl, "/im/chat/messages/{message_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -144,10 +146,11 @@ public class ChatbotMessages {
      * You will need to send your ClientID and Secret as a Basic base64 encoded AUthorization header. Ex. `Basic base64Encode({client_id}:{client_sceret})`&lt;br&gt;&lt;br&gt; Next, use the token recieved (access_token) as a bearer token while making the POST /im/chat/messages request to send chatbot messages.&lt;br&gt;&lt;br&gt;
      * Learn more about how to authorize chatbots in the [Chatbot Authorization](https://marketplace.zoom.us/docs/guides/chatbots/authorization) guide.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SendchatbotResponse sendchatbot(org.openapis.openapi.models.operations.SendchatbotRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SendchatbotResponse sendchatbot(org.openapis.openapi.models.operations.SendchatbotApplicationJSON request, org.openapis.openapi.models.operations.SendchatbotSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/im/chat/messages");
         
@@ -158,7 +161,7 @@ public class ChatbotMessages {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

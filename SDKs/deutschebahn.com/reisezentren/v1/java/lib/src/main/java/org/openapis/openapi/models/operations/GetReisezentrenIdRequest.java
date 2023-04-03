@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetReisezentrenIdRequest {
-    
-    public GetReisezentrenIdPathParams pathParams;
-    public GetReisezentrenIdRequest withPathParams(GetReisezentrenIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Station id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetReisezentrenIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

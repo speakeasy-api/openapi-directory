@@ -4,20 +4,93 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationConfigurationChangesRequest {
-    
-    public GetOrganizationConfigurationChangesPathParams pathParams;
-    public GetOrganizationConfigurationChangesRequest withPathParams(GetOrganizationConfigurationChangesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filters on the given Admin
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=adminId")
+    public String adminId;
+    public GetOrganizationConfigurationChangesRequest withAdminId(String adminId) {
+        this.adminId = adminId;
         return this;
     }
     
+    /**
+     * A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endingBefore")
+    public String endingBefore;
+    public GetOrganizationConfigurationChangesRequest withEndingBefore(String endingBefore) {
+        this.endingBefore = endingBefore;
+        return this;
+    }
     
-    public GetOrganizationConfigurationChangesQueryParams queryParams;
-    public GetOrganizationConfigurationChangesRequest withQueryParams(GetOrganizationConfigurationChangesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filters on the given network
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=networkId")
+    public String networkId;
+    public GetOrganizationConfigurationChangesRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public GetOrganizationConfigurationChangesRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
+    
+    /**
+     * The number of entries per page returned. Acceptable range is 3 - 5000. Default is 5000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=perPage")
+    public Long perPage;
+    public GetOrganizationConfigurationChangesRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startingAfter")
+    public String startingAfter;
+    public GetOrganizationConfigurationChangesRequest withStartingAfter(String startingAfter) {
+        this.startingAfter = startingAfter;
+        return this;
+    }
+    
+    /**
+     * The beginning of the timespan for the data. The maximum lookback period is 365 days from today.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t0")
+    public String t0;
+    public GetOrganizationConfigurationChangesRequest withT0(String t0) {
+        this.t0 = t0;
+        return this;
+    }
+    
+    /**
+     * The end of the timespan for the data. t1 can be a maximum of 365 days after t0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t1")
+    public String t1;
+    public GetOrganizationConfigurationChangesRequest withT1(String t1) {
+        this.t1 = t1;
+        return this;
+    }
+    
+    /**
+     * The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 365 days. The default is 365 days.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timespan")
+    public Float timespan;
+    public GetOrganizationConfigurationChangesRequest withTimespan(Float timespan) {
+        this.timespan = timespan;
         return this;
     }
     

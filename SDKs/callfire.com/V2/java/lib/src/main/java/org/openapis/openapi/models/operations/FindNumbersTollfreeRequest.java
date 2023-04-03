@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FindNumbersTollfreeRequest {
-    
-    public FindNumbersTollfreeQueryParams queryParams;
-    public FindNumbersTollfreeRequest withQueryParams(FindNumbersTollfreeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public FindNumbersTollfreeRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     
+    /**
+     * To set the maximum number of records to return in a paged list response. The default is 100
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public FindNumbersTollfreeRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public FindNumbersTollfreeSecurity security;
-    public FindNumbersTollfreeRequest withSecurity(FindNumbersTollfreeSecurity security) {
-        this.security = security;
+    /**
+     * Filter toll free numbers by prefix, pattern must be 3 char long and should end with '*'. Examples: 8**, 85*, 87* (but 855 will fail because pattern must end with '*').
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pattern")
+    public String pattern;
+    public FindNumbersTollfreeRequest withPattern(String pattern) {
+        this.pattern = pattern;
         return this;
     }
     

@@ -7,24 +7,230 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DriveChangesWatchRequest {
-    
-    public DriveChangesWatchQueryParams queryParams;
-    public DriveChangesWatchRequest withQueryParams(DriveChangesWatchQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Channel request;
-    public DriveChangesWatchRequest withRequest(org.openapis.openapi.models.shared.Channel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Channel channel;
+    public DriveChangesWatchRequest withChannel(org.openapis.openapi.models.shared.Channel channel) {
+        this.channel = channel;
         return this;
     }
     
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DriveChangesWatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public DriveChangesWatchSecurity security;
-    public DriveChangesWatchRequest withSecurity(DriveChangesWatchSecurity security) {
-        this.security = security;
+    /**
+     * The shared drive from which changes are returned. If specified the change IDs will be reflective of the shared drive; use the combined drive ID and change ID as an identifier.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=driveId")
+    public String driveId;
+    public DriveChangesWatchRequest withDriveId(String driveId) {
+        this.driveId = driveId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DriveChangesWatchRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Whether changes should include the file resource if the file is still accessible by the user at the time of the request, even when a file was removed from the list of changes and there will be no further change entries for this file.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeCorpusRemovals")
+    public Boolean includeCorpusRemovals;
+    public DriveChangesWatchRequest withIncludeCorpusRemovals(Boolean includeCorpusRemovals) {
+        this.includeCorpusRemovals = includeCorpusRemovals;
+        return this;
+    }
+    
+    /**
+     * Whether to include changes indicating that items have been removed from the list of changes, for example by deletion or loss of access.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeDeleted")
+    public Boolean includeDeleted;
+    public DriveChangesWatchRequest withIncludeDeleted(Boolean includeDeleted) {
+        this.includeDeleted = includeDeleted;
+        return this;
+    }
+    
+    /**
+     * Whether both My Drive and shared drive items should be included in results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeItemsFromAllDrives")
+    public Boolean includeItemsFromAllDrives;
+    public DriveChangesWatchRequest withIncludeItemsFromAllDrives(Boolean includeItemsFromAllDrives) {
+        this.includeItemsFromAllDrives = includeItemsFromAllDrives;
+        return this;
+    }
+    
+    /**
+     * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeLabels")
+    public String includeLabels;
+    public DriveChangesWatchRequest withIncludeLabels(String includeLabels) {
+        this.includeLabels = includeLabels;
+        return this;
+    }
+    
+    /**
+     * Specifies which additional view's permissions to include in the response. Only 'published' is supported.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includePermissionsForView")
+    public String includePermissionsForView;
+    public DriveChangesWatchRequest withIncludePermissionsForView(String includePermissionsForView) {
+        this.includePermissionsForView = includePermissionsForView;
+        return this;
+    }
+    
+    /**
+     * Whether to include changes outside the My Drive hierarchy in the result. When set to false, changes to files such as those in the Application Data folder or shared files which have not been added to My Drive are omitted from the result.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeSubscribed")
+    public Boolean includeSubscribed;
+    public DriveChangesWatchRequest withIncludeSubscribed(Boolean includeSubscribed) {
+        this.includeSubscribed = includeSubscribed;
+        return this;
+    }
+    
+    /**
+     * Deprecated use includeItemsFromAllDrives instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeTeamDriveItems")
+    public Boolean includeTeamDriveItems;
+    public DriveChangesWatchRequest withIncludeTeamDriveItems(Boolean includeTeamDriveItems) {
+        this.includeTeamDriveItems = includeTeamDriveItems;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DriveChangesWatchRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Maximum number of changes to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public DriveChangesWatchRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DriveChangesWatchRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * The token for continuing a previous list request on the next page. This should be set to the value of 'nextPageToken' from the previous response or to the response from the getStartPageToken method.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public DriveChangesWatchRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DriveChangesWatchRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DriveChangesWatchRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * A comma-separated list of spaces to query. Supported values are 'drive', 'appDataFolder' and 'photos'.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=spaces")
+    public String spaces;
+    public DriveChangesWatchRequest withSpaces(String spaces) {
+        this.spaces = spaces;
+        return this;
+    }
+    
+    /**
+     * Deprecated - use pageToken instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startChangeId")
+    public String startChangeId;
+    public DriveChangesWatchRequest withStartChangeId(String startChangeId) {
+        this.startChangeId = startChangeId;
+        return this;
+    }
+    
+    /**
+     * Whether the requesting application supports both My Drives and shared drives.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supportsAllDrives")
+    public Boolean supportsAllDrives;
+    public DriveChangesWatchRequest withSupportsAllDrives(Boolean supportsAllDrives) {
+        this.supportsAllDrives = supportsAllDrives;
+        return this;
+    }
+    
+    /**
+     * Deprecated use supportsAllDrives instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supportsTeamDrives")
+    public Boolean supportsTeamDrives;
+    public DriveChangesWatchRequest withSupportsTeamDrives(Boolean supportsTeamDrives) {
+        this.supportsTeamDrives = supportsTeamDrives;
+        return this;
+    }
+    
+    /**
+     * Deprecated use driveId instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=teamDriveId")
+    public String teamDriveId;
+    public DriveChangesWatchRequest withTeamDriveId(String teamDriveId) {
+        this.teamDriveId = teamDriveId;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public DriveChangesWatchRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

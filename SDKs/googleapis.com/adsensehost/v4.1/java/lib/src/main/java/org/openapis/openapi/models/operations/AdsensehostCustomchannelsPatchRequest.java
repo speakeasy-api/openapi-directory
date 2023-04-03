@@ -7,31 +7,100 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdsensehostCustomchannelsPatchRequest {
-    
-    public AdsensehostCustomchannelsPatchPathParams pathParams;
-    public AdsensehostCustomchannelsPatchRequest withPathParams(AdsensehostCustomchannelsPatchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AdsensehostCustomchannelsPatchQueryParams queryParams;
-    public AdsensehostCustomchannelsPatchRequest withQueryParams(AdsensehostCustomchannelsPatchQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CustomChannel request;
-    public AdsensehostCustomchannelsPatchRequest withRequest(org.openapis.openapi.models.shared.CustomChannel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CustomChannel customChannel;
+    public AdsensehostCustomchannelsPatchRequest withCustomChannel(org.openapis.openapi.models.shared.CustomChannel customChannel) {
+        this.customChannel = customChannel;
         return this;
     }
     
+    /**
+     * Ad client in which the custom channel will be updated.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=adClientId")
+    public String adClientId;
+    public AdsensehostCustomchannelsPatchRequest withAdClientId(String adClientId) {
+        this.adClientId = adClientId;
+        return this;
+    }
     
-    public AdsensehostCustomchannelsPatchSecurity security;
-    public AdsensehostCustomchannelsPatchRequest withSecurity(AdsensehostCustomchannelsPatchSecurity security) {
-        this.security = security;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AdsensehostCustomchannelsPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * Custom channel to get.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customChannelId")
+    public String customChannelId;
+    public AdsensehostCustomchannelsPatchRequest withCustomChannelId(String customChannelId) {
+        this.customChannelId = customChannelId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AdsensehostCustomchannelsPatchRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AdsensehostCustomchannelsPatchRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AdsensehostCustomchannelsPatchRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AdsensehostCustomchannelsPatchRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AdsensehostCustomchannelsPatchRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public AdsensehostCustomchannelsPatchRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

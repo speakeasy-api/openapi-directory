@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestUploadShareRequest {
-    
-    public RequestUploadSharePathParams pathParams;
-    public RequestUploadShareRequest withPathParams(RequestUploadSharePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestUploadShareRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public RequestUploadShareXSdsDateFormatEnum xSdsDateFormat;
+    public RequestUploadShareRequest withXSdsDateFormat(RequestUploadShareXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
+        return this;
+    }
     
-    public RequestUploadShareHeaders headers;
-    public RequestUploadShareRequest withHeaders(RequestUploadShareHeaders headers) {
-        this.headers = headers;
+    /**
+     * Share ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=share_id")
+    public Long shareId;
+    public RequestUploadShareRequest withShareId(Long shareId) {
+        this.shareId = shareId;
         return this;
     }
     

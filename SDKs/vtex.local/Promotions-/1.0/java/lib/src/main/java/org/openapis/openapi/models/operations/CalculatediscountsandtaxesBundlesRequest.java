@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CalculatediscountsandtaxesBundlesRequest {
-    
-    public CalculatediscountsandtaxesBundlesHeaders headers;
-    public CalculatediscountsandtaxesBundlesRequest withHeaders(CalculatediscountsandtaxesBundlesHeaders headers) {
-        this.headers = headers;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public CalculatediscountsandtaxesBundlesRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CalculatediscountsandtaxesBundlesRequest request;
-    public CalculatediscountsandtaxesBundlesRequest withRequest(org.openapis.openapi.models.shared.CalculatediscountsandtaxesBundlesRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CalculatediscountsandtaxesBundlesRequest calculatediscountsandtaxesBundlesRequest;
+    public CalculatediscountsandtaxesBundlesRequest withCalculatediscountsandtaxesBundlesRequest(org.openapis.openapi.models.shared.CalculatediscountsandtaxesBundlesRequest calculatediscountsandtaxesBundlesRequest) {
+        this.calculatediscountsandtaxesBundlesRequest = calculatediscountsandtaxesBundlesRequest;
         return this;
     }
     
-    
-    public String serverURL;
-    public CalculatediscountsandtaxesBundlesRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public CalculatediscountsandtaxesBundlesRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     

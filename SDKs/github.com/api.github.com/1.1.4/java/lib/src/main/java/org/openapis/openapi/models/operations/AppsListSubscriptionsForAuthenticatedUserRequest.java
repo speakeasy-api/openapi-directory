@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsListSubscriptionsForAuthenticatedUserRequest {
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public AppsListSubscriptionsForAuthenticatedUserRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public AppsListSubscriptionsForAuthenticatedUserQueryParams queryParams;
-    public AppsListSubscriptionsForAuthenticatedUserRequest withQueryParams(AppsListSubscriptionsForAuthenticatedUserQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public AppsListSubscriptionsForAuthenticatedUserRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
         return this;
     }
     

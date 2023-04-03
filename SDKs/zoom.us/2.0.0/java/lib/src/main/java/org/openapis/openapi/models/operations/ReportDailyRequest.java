@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReportDailyRequest {
-    
-    public ReportDailyQueryParams queryParams;
-    public ReportDailyRequest withQueryParams(ReportDailyQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Month for this report
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=month")
+    public Long month;
+    public ReportDailyRequest withMonth(Long month) {
+        this.month = month;
         return this;
     }
     
-    
-    public ReportDailySecurity security;
-    public ReportDailyRequest withSecurity(ReportDailySecurity security) {
-        this.security = security;
+    /**
+     * Year for this report
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public Long year;
+    public ReportDailyRequest withYear(Long year) {
+        this.year = year;
         return this;
     }
     

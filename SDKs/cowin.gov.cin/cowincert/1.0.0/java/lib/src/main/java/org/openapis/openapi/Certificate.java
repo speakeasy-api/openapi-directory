@@ -33,10 +33,11 @@ public class Certificate {
     /**
      * Download the certificate in pdf format
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCertificatePdfResponse getCertificatePdf(org.openapis.openapi.models.operations.GetCertificatePdfRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCertificatePdfResponse getCertificatePdf(org.openapis.openapi.models.shared.CertificateRequest request, org.openapis.openapi.models.operations.GetCertificatePdfSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/pdf/certificate");
         
@@ -50,7 +51,7 @@ public class Certificate {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

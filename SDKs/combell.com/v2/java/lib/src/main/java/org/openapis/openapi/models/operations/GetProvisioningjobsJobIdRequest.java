@@ -4,20 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProvisioningjobsJobIdRequest {
-    
-    public GetProvisioningjobsJobIdPathParams pathParams;
-    public GetProvisioningjobsJobIdRequest withPathParams(GetProvisioningjobsJobIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
+    public String jobIdPathParameter;
+    public GetProvisioningjobsJobIdRequest withJobIdPathParameter(String jobIdPathParameter) {
+        this.jobIdPathParameter = jobIdPathParameter;
         return this;
     }
     
-    
-    public GetProvisioningjobsJobIdQueryParams queryParams;
-    public GetProvisioningjobsJobIdRequest withQueryParams(GetProvisioningjobsJobIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=job_id")
+    public String jobIdQueryParameter;
+    public GetProvisioningjobsJobIdRequest withJobIdQueryParameter(String jobIdQueryParameter) {
+        this.jobIdQueryParameter = jobIdQueryParameter;
         return this;
     }
     

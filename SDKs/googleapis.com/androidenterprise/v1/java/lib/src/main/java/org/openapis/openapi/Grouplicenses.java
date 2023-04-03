@@ -33,25 +33,26 @@ public class Grouplicenses {
     /**
      * Retrieves details of an enterprise's group license for a product. **Note:** This item has been deprecated. New integrations cannot use this method and can refer to our new recommendations.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidenterpriseGrouplicensesGetResponse androidenterpriseGrouplicensesGet(org.openapis.openapi.models.operations.AndroidenterpriseGrouplicensesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidenterpriseGrouplicensesGetResponse androidenterpriseGrouplicensesGet(org.openapis.openapi.models.operations.AndroidenterpriseGrouplicensesGetRequest request, org.openapis.openapi.models.operations.AndroidenterpriseGrouplicensesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseGrouplicensesGetPathParams.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/groupLicenses/{groupLicenseId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseGrouplicensesGetRequest.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/groupLicenses/{groupLicenseId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseGrouplicensesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseGrouplicensesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,25 +79,26 @@ public class Grouplicenses {
     /**
      * Retrieves IDs of all products for which the enterprise has a group license. **Note:** This item has been deprecated. New integrations cannot use this method and can refer to our new recommendations.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidenterpriseGrouplicensesListResponse androidenterpriseGrouplicensesList(org.openapis.openapi.models.operations.AndroidenterpriseGrouplicensesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidenterpriseGrouplicensesListResponse androidenterpriseGrouplicensesList(org.openapis.openapi.models.operations.AndroidenterpriseGrouplicensesListRequest request, org.openapis.openapi.models.operations.AndroidenterpriseGrouplicensesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseGrouplicensesListPathParams.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/groupLicenses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseGrouplicensesListRequest.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/groupLicenses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseGrouplicensesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseGrouplicensesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

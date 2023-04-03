@@ -34,27 +34,28 @@ public class Organizations {
     /**
      * Creates a GcpUserAccessBinding. If the client specifies a name, the server ignores it. Fails if a resource already exists with the same group_key. Completion of this long-running operation does not necessarily signify that the new binding is deployed onto all affected users, which may take more time.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsCreateResponse accesscontextmanagerOrganizationsGcpUserAccessBindingsCreate(org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsCreateResponse accesscontextmanagerOrganizationsGcpUserAccessBindingsCreate(org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsCreateRequest request, org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsCreatePathParams.class, baseUrl, "/v1/{parent}/gcpUserAccessBindings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsCreateRequest.class, baseUrl, "/v1/{parent}/gcpUserAccessBindings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "gcpUserAccessBinding", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,25 +82,26 @@ public class Organizations {
     /**
      * Deletes a GcpUserAccessBinding. Completion of this long-running operation does not necessarily signify that the binding deletion is deployed onto all affected users, which may take more time.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsDeleteResponse accesscontextmanagerOrganizationsGcpUserAccessBindingsDelete(org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsDeleteResponse accesscontextmanagerOrganizationsGcpUserAccessBindingsDelete(org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsDeleteRequest request, org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsDeletePathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsDeleteRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,25 +128,26 @@ public class Organizations {
     /**
      * Gets the GcpUserAccessBinding with the given name.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsGetResponse accesscontextmanagerOrganizationsGcpUserAccessBindingsGet(org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsGetResponse accesscontextmanagerOrganizationsGcpUserAccessBindingsGet(org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsGetRequest request, org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsGetPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsGetRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,25 +174,26 @@ public class Organizations {
     /**
      * Lists all GcpUserAccessBindings for a Google Cloud organization.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsListResponse accesscontextmanagerOrganizationsGcpUserAccessBindingsList(org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsListResponse accesscontextmanagerOrganizationsGcpUserAccessBindingsList(org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsListRequest request, org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsListPathParams.class, baseUrl, "/v1/{parent}/gcpUserAccessBindings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsListRequest.class, baseUrl, "/v1/{parent}/gcpUserAccessBindings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -216,27 +220,28 @@ public class Organizations {
     /**
      * Updates a GcpUserAccessBinding. Completion of this long-running operation does not necessarily signify that the changed binding is deployed onto all affected users, which may take more time.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchResponse accesscontextmanagerOrganizationsGcpUserAccessBindingsPatch(org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchResponse accesscontextmanagerOrganizationsGcpUserAccessBindingsPatch(org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchRequest request, org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "gcpUserAccessBinding", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

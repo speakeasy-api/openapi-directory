@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpacesSpaceIdSpacesInvoicingsRequest {
-    
-    public GetSpacesSpaceIdSpacesInvoicingsPathParams pathParams;
-    public GetSpacesSpaceIdSpacesInvoicingsRequest withPathParams(GetSpacesSpaceIdSpacesInvoicingsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * date range of the documents
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Date")
+    public String date;
+    public GetSpacesSpaceIdSpacesInvoicingsRequest withDate(String date) {
+        this.date = date;
         return this;
     }
     
-    
-    public GetSpacesSpaceIdSpacesInvoicingsQueryParams queryParams;
-    public GetSpacesSpaceIdSpacesInvoicingsRequest withQueryParams(GetSpacesSpaceIdSpacesInvoicingsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public GetSpacesSpaceIdSpacesInvoicingsRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

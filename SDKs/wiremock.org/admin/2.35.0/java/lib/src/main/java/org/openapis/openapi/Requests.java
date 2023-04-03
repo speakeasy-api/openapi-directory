@@ -74,7 +74,7 @@ public class Requests {
      */
     public org.openapis.openapi.models.operations.DeleteAdminRequestsRequestIdResponse deleteAdminRequestsRequestId(org.openapis.openapi.models.operations.DeleteAdminRequestsRequestIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAdminRequestsRequestIdPathParams.class, baseUrl, "/__admin/requests/{requestId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAdminRequestsRequestIdRequest.class, baseUrl, "/__admin/requests/{requestId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -112,7 +112,7 @@ public class Requests {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAdminRequestsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAdminRequestsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -176,7 +176,7 @@ public class Requests {
      */
     public org.openapis.openapi.models.operations.GetAdminRequestsRequestIdResponse getAdminRequestsRequestId(org.openapis.openapi.models.operations.GetAdminRequestsRequestIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAdminRequestsRequestIdPathParams.class, baseUrl, "/__admin/requests/{requestId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAdminRequestsRequestIdRequest.class, baseUrl, "/__admin/requests/{requestId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -207,7 +207,7 @@ public class Requests {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAdminRequestsCountResponse postAdminRequestsCount(org.openapis.openapi.models.operations.PostAdminRequestsCountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAdminRequestsCountResponse postAdminRequestsCount(org.openapis.openapi.models.operations.PostAdminRequestsCountRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/__admin/requests/count");
         
@@ -251,7 +251,7 @@ public class Requests {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAdminRequestsFindResponse postAdminRequestsFind(org.openapis.openapi.models.operations.PostAdminRequestsFindRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAdminRequestsFindResponse postAdminRequestsFind(org.openapis.openapi.models.operations.PostAdminRequestsFindRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/__admin/requests/find");
         
@@ -289,7 +289,7 @@ public class Requests {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAdminRequestsRemoveResponse postAdminRequestsRemove(org.openapis.openapi.models.operations.PostAdminRequestsRemoveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAdminRequestsRemoveResponse postAdminRequestsRemove(org.openapis.openapi.models.operations.PostAdminRequestsRemoveRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/__admin/requests/remove");
         
@@ -326,7 +326,7 @@ public class Requests {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAdminRequestsRemoveByMetadataResponse postAdminRequestsRemoveByMetadata(org.openapis.openapi.models.operations.PostAdminRequestsRemoveByMetadataRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAdminRequestsRemoveByMetadataResponse postAdminRequestsRemoveByMetadata(Object request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/__admin/requests/remove-by-metadata");
         

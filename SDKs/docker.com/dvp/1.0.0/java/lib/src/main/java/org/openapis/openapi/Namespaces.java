@@ -38,7 +38,7 @@ public class Namespaces {
      */
     public org.openapis.openapi.models.operations.GetNamespaceDataByTimespanResponse getNamespaceDataByTimespan(org.openapis.openapi.models.operations.GetNamespaceDataByTimespanRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNamespaceDataByTimespanPathParams.class, baseUrl, "/namespaces/{namespace}/pulls/exports/years/{year}/{timespantype}/{timespan}/{dataview}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNamespaceDataByTimespanRequest.class, baseUrl, "/namespaces/{namespace}/pulls/exports/years/{year}/{timespantype}/{timespan}/{dataview}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -78,7 +78,7 @@ public class Namespaces {
      */
     public org.openapis.openapi.models.operations.GetNamespaceTimespanMetadataResponse getNamespaceTimespanMetadata(org.openapis.openapi.models.operations.GetNamespaceTimespanMetadataRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNamespaceTimespanMetadataPathParams.class, baseUrl, "/namespaces/{namespace}/pulls/exports/years/{year}/{timespantype}/{timespan}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNamespaceTimespanMetadataRequest.class, baseUrl, "/namespaces/{namespace}/pulls/exports/years/{year}/{timespantype}/{timespan}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -120,7 +120,7 @@ public class Namespaces {
      */
     public org.openapis.openapi.models.operations.GetNamespaceTimespansResponse getNamespaceTimespans(org.openapis.openapi.models.operations.GetNamespaceTimespansRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNamespaceTimespansPathParams.class, baseUrl, "/namespaces/{namespace}/pulls/exports/years/{year}/{timespantype}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNamespaceTimespansRequest.class, baseUrl, "/namespaces/{namespace}/pulls/exports/years/{year}/{timespantype}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -160,7 +160,7 @@ public class Namespaces {
      */
     public org.openapis.openapi.models.operations.GetNamespaceYearsResponse getNamespaceYears(org.openapis.openapi.models.operations.GetNamespaceYearsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNamespaceYearsPathParams.class, baseUrl, "/namespaces/{namespace}/pulls/exports/years", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNamespaceYearsRequest.class, baseUrl, "/namespaces/{namespace}/pulls/exports/years", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

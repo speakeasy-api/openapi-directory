@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsDeleteInstallationRequest {
-    
-    public AppsDeleteInstallationPathParams pathParams;
-    public AppsDeleteInstallationRequest withPathParams(AppsDeleteInstallationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * This API is under preview and subject to change.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=accept")
+    public String accept;
+    public AppsDeleteInstallationRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public AppsDeleteInstallationHeaders headers;
-    public AppsDeleteInstallationRequest withHeaders(AppsDeleteInstallationHeaders headers) {
-        this.headers = headers;
+    /**
+     * installation_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=installation_id")
+    public Long installationId;
+    public AppsDeleteInstallationRequest withInstallationId(Long installationId) {
+        this.installationId = installationId;
         return this;
     }
     

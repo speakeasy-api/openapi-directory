@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CancelJobRunPathParams;
-import org.openapis.openapi.models.operations.CancelJobRunHeaders;
 import org.openapis.openapi.models.operations.CancelJobRunRequest;
 import org.openapis.openapi.models.operations.CancelJobRunResponse;
 
@@ -14,27 +12,21 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CancelJobRunRequest req = new CancelJobRunRequest() {{
-                pathParams = new CancelJobRunPathParams() {{
-                    jobRunId = "corrupti";
-                    virtualClusterId = "provident";
-                }};
-                headers = new CancelJobRunHeaders() {{
-                    xAmzAlgorithm = "distinctio";
-                    xAmzContentSha256 = "quibusdam";
-                    xAmzCredential = "unde";
-                    xAmzDate = "nulla";
-                    xAmzSecurityToken = "corrupti";
-                    xAmzSignature = "illum";
-                    xAmzSignedHeaders = "vel";
-                }};
-            }};            
+                xAmzAlgorithm = "corrupti";
+                xAmzContentSha256 = "provident";
+                xAmzCredential = "distinctio";
+                xAmzDate = "quibusdam";
+                xAmzSecurityToken = "unde";
+                xAmzSignature = "nulla";
+                xAmzSignedHeaders = "corrupti";
+                jobRunId = "illum";
+                virtualClusterId = "vel";
+            }}            
 
             CancelJobRunResponse res = sdk.cancelJobRun(req);
 

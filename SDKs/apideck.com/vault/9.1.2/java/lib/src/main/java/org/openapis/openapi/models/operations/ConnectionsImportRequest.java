@@ -7,34 +7,53 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConnectionsImportRequest {
-    
-    public ConnectionsImportPathParams pathParams;
-    public ConnectionsImportRequest withPathParams(ConnectionsImportPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ConnectionsImportHeaders headers;
-    public ConnectionsImportRequest withHeaders(ConnectionsImportHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * Fields that need to be persisted on the resource
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ConnectionImportData request;
-    public ConnectionsImportRequest withRequest(org.openapis.openapi.models.shared.ConnectionImportData request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ConnectionImportData connectionImportData;
+    public ConnectionsImportRequest withConnectionImportData(org.openapis.openapi.models.shared.ConnectionImportData connectionImportData) {
+        this.connectionImportData = connectionImportData;
         return this;
     }
     
+    /**
+     * Service ID of the resource to return
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=service_id")
+    public String serviceId;
+    public ConnectionsImportRequest withServiceId(String serviceId) {
+        this.serviceId = serviceId;
+        return this;
+    }
     
-    public ConnectionsImportSecurity security;
-    public ConnectionsImportRequest withSecurity(ConnectionsImportSecurity security) {
-        this.security = security;
+    /**
+     * Unified API
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=unified_api")
+    public String unifiedApi;
+    public ConnectionsImportRequest withUnifiedApi(String unifiedApi) {
+        this.unifiedApi = unifiedApi;
+        return this;
+    }
+    
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public ConnectionsImportRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
+        return this;
+    }
+    
+    /**
+     * ID of the consumer which you want to get or push data from
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-consumer-id")
+    public String xApideckConsumerId;
+    public ConnectionsImportRequest withXApideckConsumerId(String xApideckConsumerId) {
+        this.xApideckConsumerId = xApideckConsumerId;
         return this;
     }
     

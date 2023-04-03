@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCommentsRequest {
-    
-    public GetCommentsPathParams pathParams;
-    public GetCommentsRequest withPathParams(GetCommentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The sort direction of the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public GetCommentsDirectionEnum direction;
+    public GetCommentsRequest withDirection(GetCommentsDirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetCommentsRequest withPage(Double page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetCommentsQueryParams queryParams;
-    public GetCommentsRequest withQueryParams(GetCommentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetCommentsRequest withPerPage(Double perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public GetCommentsRequest withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

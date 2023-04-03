@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VerifySecurityCodeRequest {
+    /**
+     * If set then enable additional brute-force protection by limiting the number of attempts by the supplied value. This can be set to any unique identifier you would like to limit by, for example a hash of the users email, phone number or IP address. Requests to this API will be ignored after approximately 10 failed verification attempts
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit-by")
+    public String limitBy;
+    public VerifySecurityCodeRequest withLimitBy(String limitBy) {
+        this.limitBy = limitBy;
+        return this;
+    }
     
-    public VerifySecurityCodeQueryParams queryParams;
-    public VerifySecurityCodeRequest withQueryParams(VerifySecurityCodeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The security code to verify
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=security-code")
+    public String securityCode;
+    public VerifySecurityCodeRequest withSecurityCode(String securityCode) {
+        this.securityCode = securityCode;
         return this;
     }
     

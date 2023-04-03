@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteDellSwitchRequest {
-    
-    public DeleteDellSwitchPathParams pathParams;
-    public DeleteDellSwitchRequest withPathParams(DeleteDellSwitchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteDellSwitchSecurity security;
-    public DeleteDellSwitchRequest withSecurity(DeleteDellSwitchSecurity security) {
-        this.security = security;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteDellSwitchRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

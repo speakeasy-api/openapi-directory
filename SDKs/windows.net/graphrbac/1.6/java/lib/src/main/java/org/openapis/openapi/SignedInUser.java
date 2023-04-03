@@ -39,13 +39,13 @@ public class SignedInUser {
      */
     public org.openapis.openapi.models.operations.SignedInUserGetResponse signedInUserGet(org.openapis.openapi.models.operations.SignedInUserGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SignedInUserGetPathParams.class, baseUrl, "/{tenantID}/me", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SignedInUserGetRequest.class, baseUrl, "/{tenantID}/me", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SignedInUserGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SignedInUserGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -104,13 +104,13 @@ public class SignedInUser {
      */
     public org.openapis.openapi.models.operations.SignedInUserListOwnedObjectsResponse signedInUserListOwnedObjects(org.openapis.openapi.models.operations.SignedInUserListOwnedObjectsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SignedInUserListOwnedObjectsPathParams.class, baseUrl, "/{tenantID}/me/ownedObjects", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SignedInUserListOwnedObjectsRequest.class, baseUrl, "/{tenantID}/me/ownedObjects", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SignedInUserListOwnedObjectsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SignedInUserListOwnedObjectsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

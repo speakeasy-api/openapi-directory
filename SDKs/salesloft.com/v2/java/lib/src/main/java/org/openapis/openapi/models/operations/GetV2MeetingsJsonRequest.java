@@ -4,13 +4,190 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2MeetingsJsonRequest {
+    /**
+     * Filters meetings by account_id. Multiple account ids can be applied
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=account_id")
+    public String accountId;
+    public GetV2MeetingsJsonRequest withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
     
-    public GetV2MeetingsJsonQueryParams queryParams;
-    public GetV2MeetingsJsonRequest withQueryParams(GetV2MeetingsJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filters meetings by event IDs
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=event_ids")
+    public Long[] eventIds;
+    public GetV2MeetingsJsonRequest withEventIds(Long[] eventIds) {
+        this.eventIds = eventIds;
+        return this;
+    }
+    
+    /**
+     * Filters meetings by UIDs provided by calendar provider
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=i_cal_uids")
+    public String[] iCalUids;
+    public GetV2MeetingsJsonRequest withICalUids(String[] iCalUids) {
+        this.iCalUids = iCalUids;
+        return this;
+    }
+    
+    /**
+     * IDs of meetings to fetch. If a record can't be found, that record won't be returned and your request will be successful
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ids")
+    public Long[] ids;
+    public GetV2MeetingsJsonRequest withIds(Long[] ids) {
+        this.ids = ids;
+        return this;
+    }
+    
+    /**
+     * Flag to indicate whether to include owned_by_meetings_settings and booked_by_meetings_settings objects
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_meetings_settings")
+    public Boolean includeMeetingsSettings;
+    public GetV2MeetingsJsonRequest withIncludeMeetingsSettings(Boolean includeMeetingsSettings) {
+        this.includeMeetingsSettings = includeMeetingsSettings;
+        return this;
+    }
+    
+    /**
+     * Whether to include total_pages and total_count in the metadata. Defaults to false
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_paging_counts")
+    public Boolean includePagingCounts;
+    public GetV2MeetingsJsonRequest withIncludePagingCounts(Boolean includePagingCounts) {
+        this.includePagingCounts = includePagingCounts;
+        return this;
+    }
+    
+    /**
+     * Specifies whether the max limit of 10k records should be applied to pagination counts. Affects the total_count and total_pages data
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit_paging_counts")
+    public Boolean limitPagingCounts;
+    public GetV2MeetingsJsonRequest withLimitPagingCounts(Boolean limitPagingCounts) {
+        this.limitPagingCounts = limitPagingCounts;
+        return this;
+    }
+    
+    /**
+     * The current page to fetch results from. Defaults to 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetV2MeetingsJsonRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * How many records to show per page in the range [1, 100]. Defaults to 25
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetV2MeetingsJsonRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Filters meetings by person_id. Multiple person ids can be applied
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=person_id")
+    public String personId;
+    public GetV2MeetingsJsonRequest withPersonId(String personId) {
+        this.personId = personId;
+        return this;
+    }
+    
+    /**
+     * Filters meetings by person_id. Multiple person ids can be applied
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=person_ids")
+    public Long[] personIds;
+    public GetV2MeetingsJsonRequest withPersonIds(Long[] personIds) {
+        this.personIds = personIds;
+        return this;
+    }
+    
+    /**
+     * Whether to include deleted events in the result
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=show_deleted")
+    public Boolean showDeleted;
+    public GetV2MeetingsJsonRequest withShowDeleted(Boolean showDeleted) {
+        this.showDeleted = showDeleted;
+        return this;
+    }
+    
+    /**
+     * Key to sort on, must be one of: start_time, created_at, updated_at. Defaults to start_time
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
+    public String sortBy;
+    public GetV2MeetingsJsonRequest withSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    
+    /**
+     * Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_direction")
+    public String sortDirection;
+    public GetV2MeetingsJsonRequest withSortDirection(String sortDirection) {
+        this.sortDirection = sortDirection;
+        return this;
+    }
+    
+    /**
+     * Equality filters that are applied to the start_time field. A single filter can be used by itself or combined with other filters to create a range.
+     * 
+     * ---CUSTOM---
+     * {"type":"object","keys":[{"name":"gt","type":"iso8601 string","description":"Returns all matching records that are greater than the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"gte","type":"iso8601 string","description":"Returns all matching records that are greater than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"lt","type":"iso8601 string","description":"Returns all matching records that are less than the provided iso8601 timestamp. The comparison is done using microsecond precision."},{"name":"lte","type":"iso8601 string","description":"Returns all matching records that are less than or equal to the provided iso8601 timestamp. The comparison is done using microsecond precision."}]}
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=start_time")
+    public String[] startTime;
+    public GetV2MeetingsJsonRequest withStartTime(String[] startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    
+    /**
+     * Filters meetings by status. Possible values are: pending, booked, failed, retry
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public String status;
+    public GetV2MeetingsJsonRequest withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * Filters meetings by task_id. Multiple task ids can be applied
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=task_ids")
+    public Long[] taskIds;
+    public GetV2MeetingsJsonRequest withTaskIds(Long[] taskIds) {
+        this.taskIds = taskIds;
+        return this;
+    }
+    
+    /**
+     * Filters meetings by user_guid. Multiple user guids can be applied
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=user_guids")
+    public String[] userGuids;
+    public GetV2MeetingsJsonRequest withUserGuids(String[] userGuids) {
+        this.userGuids = userGuids;
         return this;
     }
     

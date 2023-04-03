@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesSpaceIdDocumentsDocumentIdVersionsJsonRequest {
-    
-    public PostSpacesSpaceIdDocumentsDocumentIdVersionsJsonPathParams pathParams;
-    public PostSpacesSpaceIdDocumentsDocumentIdVersionsJsonRequest withPathParams(PostSpacesSpaceIdDocumentsDocumentIdVersionsJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Version to add
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostSpacesSpaceIdDocumentsDocumentIdVersionsApplicationJSON request;
-    public PostSpacesSpaceIdDocumentsDocumentIdVersionsJsonRequest withRequest(PostSpacesSpaceIdDocumentsDocumentIdVersionsApplicationJSON request) {
-        this.request = request;
+    public PostSpacesSpaceIdDocumentsDocumentIdVersionsApplicationJSON requestBody;
+    public PostSpacesSpaceIdDocumentsDocumentIdVersionsJsonRequest withRequestBody(PostSpacesSpaceIdDocumentsDocumentIdVersionsApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Id of the document
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=documentId")
+    public String documentId;
+    public PostSpacesSpaceIdDocumentsDocumentIdVersionsJsonRequest withDocumentId(String documentId) {
+        this.documentId = documentId;
+        return this;
+    }
     
-    public PostSpacesSpaceIdDocumentsDocumentIdVersionsJsonSecurity security;
-    public PostSpacesSpaceIdDocumentsDocumentIdVersionsJsonRequest withSecurity(PostSpacesSpaceIdDocumentsDocumentIdVersionsJsonSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PostSpacesSpaceIdDocumentsDocumentIdVersionsJsonRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

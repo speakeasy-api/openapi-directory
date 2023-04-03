@@ -37,7 +37,7 @@ public class ClientRegistrationPolicy {
      */
     public org.openapis.openapi.models.operations.GetRealmClientRegistrationPolicyProvidersResponse getRealmClientRegistrationPolicyProviders(org.openapis.openapi.models.operations.GetRealmClientRegistrationPolicyProvidersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmClientRegistrationPolicyProvidersPathParams.class, baseUrl, "/{realm}/client-registration-policy/providers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmClientRegistrationPolicyProvidersRequest.class, baseUrl, "/{realm}/client-registration-policy/providers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

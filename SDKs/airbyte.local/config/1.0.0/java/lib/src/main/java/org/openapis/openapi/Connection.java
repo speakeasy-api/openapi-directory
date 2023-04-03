@@ -39,7 +39,7 @@ public class Connection {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateConnectionResponse createConnection(org.openapis.openapi.models.operations.CreateConnectionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateConnectionResponse createConnection(org.openapis.openapi.models.shared.ConnectionCreate request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/connections/create");
         
@@ -90,7 +90,7 @@ public class Connection {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteConnectionResponse deleteConnection(org.openapis.openapi.models.operations.DeleteConnectionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteConnectionResponse deleteConnection(org.openapis.openapi.models.shared.ConnectionIdRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/connections/delete");
         
@@ -143,7 +143,7 @@ public class Connection {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetConnectionResponse getConnection(org.openapis.openapi.models.operations.GetConnectionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetConnectionResponse getConnection(org.openapis.openapi.models.shared.ConnectionIdRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/connections/get");
         
@@ -203,7 +203,7 @@ public class Connection {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListAllConnectionsForWorkspaceResponse listAllConnectionsForWorkspace(org.openapis.openapi.models.operations.ListAllConnectionsForWorkspaceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListAllConnectionsForWorkspaceResponse listAllConnectionsForWorkspace(org.openapis.openapi.models.shared.WorkspaceIdRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/connections/list_all");
         
@@ -263,7 +263,7 @@ public class Connection {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListConnectionsForWorkspaceResponse listConnectionsForWorkspace(org.openapis.openapi.models.operations.ListConnectionsForWorkspaceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListConnectionsForWorkspaceResponse listConnectionsForWorkspace(org.openapis.openapi.models.shared.WorkspaceIdRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/connections/list");
         
@@ -322,7 +322,7 @@ public class Connection {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ResetConnectionResponse resetConnection(org.openapis.openapi.models.operations.ResetConnectionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ResetConnectionResponse resetConnection(org.openapis.openapi.models.shared.ConnectionIdRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/connections/reset");
         
@@ -381,7 +381,7 @@ public class Connection {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SearchConnectionsResponse searchConnections(org.openapis.openapi.models.operations.SearchConnectionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SearchConnectionsResponse searchConnections(org.openapis.openapi.models.shared.ConnectionSearch request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/connections/search");
         
@@ -432,7 +432,7 @@ public class Connection {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SyncConnectionResponse syncConnection(org.openapis.openapi.models.operations.SyncConnectionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SyncConnectionResponse syncConnection(org.openapis.openapi.models.shared.ConnectionIdRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/connections/sync");
         
@@ -496,7 +496,7 @@ public class Connection {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateConnectionResponse updateConnection(org.openapis.openapi.models.operations.UpdateConnectionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateConnectionResponse updateConnection(org.openapis.openapi.models.shared.ConnectionUpdate request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/connections/update");
         

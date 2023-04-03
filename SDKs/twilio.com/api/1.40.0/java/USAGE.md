@@ -6,9 +6,7 @@ import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.CreateAccountSecurity;
 import org.openapis.openapi.models.operations.CreateAccountCreateAccountRequest;
-import org.openapis.openapi.models.operations.CreateAccountRequest;
 import org.openapis.openapi.models.operations.CreateAccountResponse;
-import org.openapis.openapi.models.shared.SchemeAccountSidAuthToken;
 
 public class Application {
     public static void main(String[] args) {
@@ -16,19 +14,14 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CreateAccountRequest req = new CreateAccountRequest() {{
-                security = new CreateAccountSecurity() {{
-                    accountSidAuthToken = new SchemeAccountSidAuthToken() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
-                }};
-                request = new CreateAccountCreateAccountRequest() {{
-                    friendlyName = "corrupti";
-                }};
-            }};            
+            CreateAccountCreateAccountRequest req = new CreateAccountCreateAccountRequest() {{
+                friendlyName = "corrupti";
+            }}            
 
-            CreateAccountResponse res = sdk.createAccount(req);
+            CreateAccountResponse res = sdk.createAccount(req, new CreateAccountSecurity() {{
+                password = "YOUR_PASSWORD_HERE";
+                username = "YOUR_USERNAME_HERE";
+            }});
 
             if (res.apiV2010Account.isPresent()) {
                 // handle response

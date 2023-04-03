@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DrillersListRequest {
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public DrillersListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public DrillersListQueryParams queryParams;
-    public DrillersListRequest withQueryParams(DrillersListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public DrillersListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Which field to use when ordering the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ordering")
+    public String ordering;
+    public DrillersListRequest withOrdering(String ordering) {
+        this.ordering = ordering;
+        return this;
+    }
+    
+    /**
+     * A search term.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public DrillersListRequest withSearch(String search) {
+        this.search = search;
         return this;
     }
     

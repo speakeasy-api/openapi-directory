@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchUploadStatusByIdRequest {
-    
-    public FetchUploadStatusByIdPathParams pathParams;
-    public FetchUploadStatusByIdRequest withPathParams(FetchUploadStatusByIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchUploadStatusByIdSecurity security;
-    public FetchUploadStatusByIdRequest withSecurity(FetchUploadStatusByIdSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of an Upload.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=uploadId")
+    public String uploadId;
+    public FetchUploadStatusByIdRequest withUploadId(String uploadId) {
+        this.uploadId = uploadId;
         return this;
     }
     

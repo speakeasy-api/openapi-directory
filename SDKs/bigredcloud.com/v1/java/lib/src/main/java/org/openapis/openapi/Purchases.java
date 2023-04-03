@@ -41,13 +41,13 @@ public class Purchases {
      */
     public org.openapis.openapi.models.operations.PurchasesDeleteResponse purchasesDelete(org.openapis.openapi.models.operations.PurchasesDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PurchasesDeletePathParams.class, baseUrl, "/v1/purchases/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PurchasesDeleteRequest.class, baseUrl, "/v1/purchases/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PurchasesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PurchasesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -120,7 +120,7 @@ public class Purchases {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PurchasesPostResponse purchasesPost(org.openapis.openapi.models.operations.PurchasesPostRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PurchasesPostResponse purchasesPost(org.openapis.openapi.models.shared.PurchaseDto request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/purchases");
         
@@ -163,7 +163,7 @@ public class Purchases {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PurchasesProcessBatchResponse purchasesProcessBatch(org.openapis.openapi.models.operations.PurchasesProcessBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PurchasesProcessBatchResponse purchasesProcessBatch(org.openapis.openapi.models.shared.BatchItemPurchaseDto[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/purchases/batch");
         
@@ -208,12 +208,12 @@ public class Purchases {
      */
     public org.openapis.openapi.models.operations.PurchasesPutResponse purchasesPut(org.openapis.openapi.models.operations.PurchasesPutRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PurchasesPutPathParams.class, baseUrl, "/v1/purchases/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PurchasesPutRequest.class, baseUrl, "/v1/purchases/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "purchaseDto", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -251,7 +251,7 @@ public class Purchases {
      */
     public org.openapis.openapi.models.operations.GetV1PurchasesIdResponse getV1PurchasesId(org.openapis.openapi.models.operations.GetV1PurchasesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV1PurchasesIdPathParams.class, baseUrl, "/v1/purchases/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV1PurchasesIdRequest.class, baseUrl, "/v1/purchases/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

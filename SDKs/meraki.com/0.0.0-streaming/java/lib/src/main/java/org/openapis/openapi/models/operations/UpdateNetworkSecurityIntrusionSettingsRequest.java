@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkSecurityIntrusionSettingsRequest {
-    
-    public UpdateNetworkSecurityIntrusionSettingsPathParams pathParams;
-    public UpdateNetworkSecurityIntrusionSettingsRequest withPathParams(UpdateNetworkSecurityIntrusionSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkSecurityIntrusionSettingsRequestBody requestBody;
+    public UpdateNetworkSecurityIntrusionSettingsRequest withRequestBody(UpdateNetworkSecurityIntrusionSettingsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkSecurityIntrusionSettingsRequestBody request;
-    public UpdateNetworkSecurityIntrusionSettingsRequest withRequest(UpdateNetworkSecurityIntrusionSettingsRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkSecurityIntrusionSettingsRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

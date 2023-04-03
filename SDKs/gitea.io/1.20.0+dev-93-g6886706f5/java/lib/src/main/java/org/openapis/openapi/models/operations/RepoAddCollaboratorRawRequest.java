@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoAddCollaboratorRawRequest {
-    
-    public RepoAddCollaboratorRawPathParams pathParams;
-    public RepoAddCollaboratorRawRequest withPathParams(RepoAddCollaboratorRawPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=text/plain")
+    public byte[] requestBody;
+    public RepoAddCollaboratorRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=text/plain")
-    public byte[] request;
-    public RepoAddCollaboratorRawRequest withRequest(byte[] request) {
-        this.request = request;
+    /**
+     * username of the collaborator to add
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collaborator")
+    public String collaborator;
+    public RepoAddCollaboratorRawRequest withCollaborator(String collaborator) {
+        this.collaborator = collaborator;
+        return this;
+    }
+    
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoAddCollaboratorRawRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoAddCollaboratorRawRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

@@ -4,13 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEventsRequest {
+    /**
+     * pass an optional company Id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=company")
+    public String company;
+    public GetEventsRequest withCompany(String company) {
+        this.company = company;
+        return this;
+    }
     
-    public GetEventsQueryParams queryParams;
-    public GetEventsRequest withQueryParams(GetEventsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * pass an optional deal Id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deal")
+    public String deal;
+    public GetEventsRequest withDeal(String deal) {
+        this.deal = deal;
+        return this;
+    }
+    
+    /**
+     * next token to start returning records from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nexttoken")
+    public String nexttoken;
+    public GetEventsRequest withNexttoken(String nexttoken) {
+        this.nexttoken = nexttoken;
+        return this;
+    }
+    
+    /**
+     * id of execution to get more records based on next token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=queryexecutionid")
+    public String queryexecutionid;
+    public GetEventsRequest withQueryexecutionid(String queryexecutionid) {
+        this.queryexecutionid = queryexecutionid;
+        return this;
+    }
+    
+    /**
+     * pass an optional site Id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site")
+    public String site;
+    public GetEventsRequest withSite(String site) {
+        this.site = site;
+        return this;
+    }
+    
+    /**
+     * type of records to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public GetEventsTypeEnum type;
+    public GetEventsRequest withType(GetEventsTypeEnum type) {
+        this.type = type;
         return this;
     }
     

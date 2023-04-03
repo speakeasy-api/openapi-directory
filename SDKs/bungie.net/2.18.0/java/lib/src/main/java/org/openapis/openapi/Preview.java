@@ -35,13 +35,13 @@ public class Preview {
      */
     public org.openapis.openapi.models.operations.Destiny2GetClanAggregateStatsResponse destiny2GetClanAggregateStats(org.openapis.openapi.models.operations.Destiny2GetClanAggregateStatsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetClanAggregateStatsPathParams.class, baseUrl, "/Destiny2/Stats/AggregateClanStats/{groupId}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetClanAggregateStatsRequest.class, baseUrl, "/Destiny2/Stats/AggregateClanStats/{groupId}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetClanAggregateStatsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetClanAggregateStatsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -78,13 +78,13 @@ public class Preview {
      */
     public org.openapis.openapi.models.operations.Destiny2GetClanLeaderboardsResponse destiny2GetClanLeaderboards(org.openapis.openapi.models.operations.Destiny2GetClanLeaderboardsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetClanLeaderboardsPathParams.class, baseUrl, "/Destiny2/Stats/Leaderboards/Clans/{groupId}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetClanLeaderboardsRequest.class, baseUrl, "/Destiny2/Stats/Leaderboards/Clans/{groupId}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetClanLeaderboardsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetClanLeaderboardsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -121,13 +121,13 @@ public class Preview {
      */
     public org.openapis.openapi.models.operations.Destiny2GetLeaderboardsResponse destiny2GetLeaderboards(org.openapis.openapi.models.operations.Destiny2GetLeaderboardsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetLeaderboardsPathParams.class, baseUrl, "/Destiny2/{membershipType}/Account/{destinyMembershipId}/Stats/Leaderboards/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetLeaderboardsRequest.class, baseUrl, "/Destiny2/{membershipType}/Account/{destinyMembershipId}/Stats/Leaderboards/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetLeaderboardsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetLeaderboardsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -164,13 +164,13 @@ public class Preview {
      */
     public org.openapis.openapi.models.operations.Destiny2GetLeaderboardsForCharacterResponse destiny2GetLeaderboardsForCharacter(org.openapis.openapi.models.operations.Destiny2GetLeaderboardsForCharacterRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetLeaderboardsForCharacterPathParams.class, baseUrl, "/Destiny2/Stats/Leaderboards/{membershipType}/{destinyMembershipId}/{characterId}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetLeaderboardsForCharacterRequest.class, baseUrl, "/Destiny2/Stats/Leaderboards/{membershipType}/{destinyMembershipId}/{characterId}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetLeaderboardsForCharacterQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetLeaderboardsForCharacterRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -213,7 +213,7 @@ public class Preview {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetPublicVendorsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetPublicVendorsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -244,11 +244,10 @@ public class Preview {
 
     /**
      * Insert a plug into a socketed item. I know how it sounds, but I assure you it's much more G-rated than you might be guessing. We haven't decided yet whether this will be able to insert plugs that have side effects, but if we do it will require special scope permission for an application attempting to do so. You must have a valid Destiny Account, and either be in a social space, in orbit, or offline. Request must include proof of permission for 'InsertPlugs' from the account owner.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Destiny2InsertSocketPlugResponse destiny2InsertSocketPlug(org.openapis.openapi.models.operations.Destiny2InsertSocketPlugRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Destiny2InsertSocketPlugResponse destiny2InsertSocketPlug() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/Destiny2/Actions/Items/InsertSocketPlug/");
         
@@ -257,8 +256,7 @@ public class Preview {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -282,11 +280,10 @@ public class Preview {
 
     /**
      * Insert a 'free' plug into an item's socket. This does not require 'Advanced Write Action' authorization and is available to 3rd-party apps, but will only work on 'free and reversible' socket actions (Perks, Armor Mods, Shaders, Ornaments, etc.). You must have a valid Destiny Account, and the character must either be in a social space, in orbit, or offline.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Destiny2InsertSocketPlugFreeResponse destiny2InsertSocketPlugFree(org.openapis.openapi.models.operations.Destiny2InsertSocketPlugFreeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Destiny2InsertSocketPlugFreeResponse destiny2InsertSocketPlugFree() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/Destiny2/Actions/Items/InsertSocketPlugFree/");
         
@@ -295,8 +292,7 @@ public class Preview {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");

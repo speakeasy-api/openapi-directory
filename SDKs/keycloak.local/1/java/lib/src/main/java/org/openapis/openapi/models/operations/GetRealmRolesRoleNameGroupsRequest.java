@@ -4,20 +4,47 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRealmRolesRoleNameGroupsRequest {
-    
-    public GetRealmRolesRoleNameGroupsPathParams pathParams;
-    public GetRealmRolesRoleNameGroupsRequest withPathParams(GetRealmRolesRoleNameGroupsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * if false, return a full representation of the GroupRepresentation objects
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=briefRepresentation")
+    public Boolean briefRepresentation;
+    public GetRealmRolesRoleNameGroupsRequest withBriefRepresentation(Boolean briefRepresentation) {
+        this.briefRepresentation = briefRepresentation;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=first")
+    public Integer first;
+    public GetRealmRolesRoleNameGroupsRequest withFirst(Integer first) {
+        this.first = first;
+        return this;
+    }
     
-    public GetRealmRolesRoleNameGroupsQueryParams queryParams;
-    public GetRealmRolesRoleNameGroupsRequest withQueryParams(GetRealmRolesRoleNameGroupsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
+    public Integer max;
+    public GetRealmRolesRoleNameGroupsRequest withMax(Integer max) {
+        this.max = max;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public GetRealmRolesRoleNameGroupsRequest withRealm(String realm) {
+        this.realm = realm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=role-name")
+    public String roleName;
+    public GetRealmRolesRoleNameGroupsRequest withRoleName(String roleName) {
+        this.roleName = roleName;
         return this;
     }
     

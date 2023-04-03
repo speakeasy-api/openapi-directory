@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateAnEventSubscriptionRequest {
-    
-    public UpdateAnEventSubscriptionPathParams pathParams;
-    public UpdateAnEventSubscriptionRequest withPathParams(UpdateAnEventSubscriptionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=event_subscription_id")
+    public String eventSubscriptionId;
+    public UpdateAnEventSubscriptionRequest withEventSubscriptionId(String eventSubscriptionId) {
+        this.eventSubscriptionId = eventSubscriptionId;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateAnEventSubscriptionParameters request;
-    public UpdateAnEventSubscriptionRequest withRequest(org.openapis.openapi.models.shared.UpdateAnEventSubscriptionParameters request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateAnEventSubscriptionParameters updateAnEventSubscriptionParameters;
+    public UpdateAnEventSubscriptionRequest withUpdateAnEventSubscriptionParameters(org.openapis.openapi.models.shared.UpdateAnEventSubscriptionParameters updateAnEventSubscriptionParameters) {
+        this.updateAnEventSubscriptionParameters = updateAnEventSubscriptionParameters;
         return this;
     }
     

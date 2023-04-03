@@ -7,20 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MergeTemplatesRequest {
-    
-    public MergeTemplatesQueryParams queryParams;
-    public MergeTemplatesRequest withQueryParams(MergeTemplatesQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Data used to specify templates and data objects which are used to merge the template
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.BatchData[] request;
-    public MergeTemplatesRequest withRequest(org.openapis.openapi.models.shared.BatchData[] request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.BatchData[] requestBody;
+    public MergeTemplatesRequest withRequestBody(org.openapis.openapi.models.shared.BatchData[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Document format. The zip option will return a ZIP file with PDF files.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public org.openapis.openapi.models.shared.FormatEnum format;
+    public MergeTemplatesRequest withFormat(org.openapis.openapi.models.shared.FormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * Document name, returned in the meta data.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public MergeTemplatesRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Response format. With the url option, the document is stored for 30 days and automatically deleted.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=output")
+    public org.openapis.openapi.models.shared.OutputEnum output;
+    public MergeTemplatesRequest withOutput(org.openapis.openapi.models.shared.OutputEnum output) {
+        this.output = output;
         return this;
     }
     

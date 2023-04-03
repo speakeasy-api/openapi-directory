@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListDevicesRequest {
-    
-    public ListDevicesQueryParams queryParams;
-    public ListDevicesRequest withQueryParams(ListDevicesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:serialization=json,name=user_id")
+    public String userId;
+    public ListDevicesRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

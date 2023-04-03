@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DistributionGroupsPatchForOrgRequest {
-    
-    public DistributionGroupsPatchForOrgPathParams pathParams;
-    public DistributionGroupsPatchForOrgRequest withPathParams(DistributionGroupsPatchForOrgPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The attributes to update for the distribution group
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public DistributionGroupsPatchForOrgRequestBody request;
-    public DistributionGroupsPatchForOrgRequest withRequest(DistributionGroupsPatchForOrgRequestBody request) {
-        this.request = request;
+    public DistributionGroupsPatchForOrgRequestBody requestBody;
+    public DistributionGroupsPatchForOrgRequest withRequestBody(DistributionGroupsPatchForOrgRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the distribution group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=distribution_group_name")
+    public String distributionGroupName;
+    public DistributionGroupsPatchForOrgRequest withDistributionGroupName(String distributionGroupName) {
+        this.distributionGroupName = distributionGroupName;
+        return this;
+    }
     
-    public DistributionGroupsPatchForOrgSecurity security;
-    public DistributionGroupsPatchForOrgRequest withSecurity(DistributionGroupsPatchForOrgSecurity security) {
-        this.security = security;
+    /**
+     * The organization's name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_name")
+    public String orgName;
+    public DistributionGroupsPatchForOrgRequest withOrgName(String orgName) {
+        this.orgName = orgName;
         return this;
     }
     

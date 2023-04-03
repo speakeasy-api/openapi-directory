@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetHostRequest {
+    /**
+     * Agent to set the primary IP
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Long agentNum;
+    public SetHostRequest withAgentNum(Long agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public SetHostPathParams pathParams;
-    public SetHostRequest withPathParams(SetHostPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Primary IP of the agent
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=host")
+    public String host;
+    public SetHostRequest withHost(String host) {
+        this.host = host;
         return this;
     }
     

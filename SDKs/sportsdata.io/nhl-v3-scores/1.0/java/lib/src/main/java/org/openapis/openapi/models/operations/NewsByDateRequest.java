@@ -4,13 +4,28 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NewsByDateRequest {
+    /**
+     * The date of the news.
+     *  &lt;br&gt;Examples: &lt;code&gt;2018-JAN-31&lt;/code&gt;, &lt;code&gt;2017-OCT-01&lt;/code&gt;.
+     *  
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=date")
+    public String date;
+    public NewsByDateRequest withDate(String date) {
+        this.date = date;
+        return this;
+    }
     
-    public NewsByDatePathParams pathParams;
-    public NewsByDateRequest withPathParams(NewsByDatePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public NewsByDateFormatEnum format;
+    public NewsByDateRequest withFormat(NewsByDateFormatEnum format) {
+        this.format = format;
         return this;
     }
     

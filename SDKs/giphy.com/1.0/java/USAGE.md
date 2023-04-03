@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.GetGifByIdPathParams;
 import org.openapis.openapi.models.operations.GetGifByIdRequest;
 import org.openapis.openapi.models.operations.GetGifByIdResponse;
 
@@ -13,17 +12,13 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    apiKey = new SchemeAPIKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    apiKey = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GetGifByIdRequest req = new GetGifByIdRequest() {{
-                pathParams = new GetGifByIdPathParams() {{
-                    gifId = 548814;
-                }};
-            }};            
+                gifId = 548814;
+            }}            
 
             GetGifByIdResponse res = sdk.gifs.getGifById(req);
 

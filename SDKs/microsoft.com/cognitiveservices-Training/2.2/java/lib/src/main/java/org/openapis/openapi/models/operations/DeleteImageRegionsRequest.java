@@ -4,27 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteImageRegionsRequest {
-    
-    public DeleteImageRegionsPathParams pathParams;
-    public DeleteImageRegionsRequest withPathParams(DeleteImageRegionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
+    public String trainingKey;
+    public DeleteImageRegionsRequest withTrainingKey(String trainingKey) {
+        this.trainingKey = trainingKey;
         return this;
     }
     
-    
-    public DeleteImageRegionsQueryParams queryParams;
-    public DeleteImageRegionsRequest withQueryParams(DeleteImageRegionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public DeleteImageRegionsRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     
-    
-    public DeleteImageRegionsHeaders headers;
-    public DeleteImageRegionsRequest withHeaders(DeleteImageRegionsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Regions to delete. Limited to 64.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=regionIds")
+    public String[] regionIds;
+    public DeleteImageRegionsRequest withRegionIds(String[] regionIds) {
+        this.regionIds = regionIds;
         return this;
     }
     

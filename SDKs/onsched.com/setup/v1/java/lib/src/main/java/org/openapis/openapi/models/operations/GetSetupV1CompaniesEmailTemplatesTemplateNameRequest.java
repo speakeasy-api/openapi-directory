@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSetupV1CompaniesEmailTemplatesTemplateNameRequest {
-    
-    public GetSetupV1CompaniesEmailTemplatesTemplateNamePathParams pathParams;
-    public GetSetupV1CompaniesEmailTemplatesTemplateNameRequest withPathParams(GetSetupV1CompaniesEmailTemplatesTemplateNamePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Email template name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=templateName")
+    public String templateName;
+    public GetSetupV1CompaniesEmailTemplatesTemplateNameRequest withTemplateName(String templateName) {
+        this.templateName = templateName;
         return this;
     }
     

@@ -7,31 +7,140 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GkebackupProjectsLocationsRestorePlansRestoresCreateRequest {
-    
-    public GkebackupProjectsLocationsRestorePlansRestoresCreatePathParams pathParams;
-    public GkebackupProjectsLocationsRestorePlansRestoresCreateRequest withPathParams(GkebackupProjectsLocationsRestorePlansRestoresCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GkebackupProjectsLocationsRestorePlansRestoresCreateQueryParams queryParams;
-    public GkebackupProjectsLocationsRestorePlansRestoresCreateRequest withQueryParams(GkebackupProjectsLocationsRestorePlansRestoresCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public GkebackupProjectsLocationsRestorePlansRestoresCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RestoreInput request;
-    public GkebackupProjectsLocationsRestorePlansRestoresCreateRequest withRequest(org.openapis.openapi.models.shared.RestoreInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.RestoreInput restoreInput;
+    public GkebackupProjectsLocationsRestorePlansRestoresCreateRequest withRestoreInput(org.openapis.openapi.models.shared.RestoreInput restoreInput) {
+        this.restoreInput = restoreInput;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public GkebackupProjectsLocationsRestorePlansRestoresCreateRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public GkebackupProjectsLocationsRestorePlansRestoresCreateSecurity security;
-    public GkebackupProjectsLocationsRestorePlansRestoresCreateRequest withSecurity(GkebackupProjectsLocationsRestorePlansRestoresCreateSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public GkebackupProjectsLocationsRestorePlansRestoresCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public GkebackupProjectsLocationsRestorePlansRestoresCreateRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public GkebackupProjectsLocationsRestorePlansRestoresCreateRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public GkebackupProjectsLocationsRestorePlansRestoresCreateRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public GkebackupProjectsLocationsRestorePlansRestoresCreateRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Required. The RestorePlan within which to create the Restore. Format: `projects/* /locations/* /restorePlans/*`
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public GkebackupProjectsLocationsRestorePlansRestoresCreateRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public GkebackupProjectsLocationsRestorePlansRestoresCreateRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public GkebackupProjectsLocationsRestorePlansRestoresCreateRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Required. The client-provided short name for the Restore resource. This name must: - be between 1 and 63 characters long (inclusive) - consist of only lower-case ASCII letters, numbers, and dashes - start with a lower-case letter - end with a lower-case letter or number - be unique within the set of Restores in this RestorePlan.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=restoreId")
+    public String restoreId;
+    public GkebackupProjectsLocationsRestorePlansRestoresCreateRequest withRestoreId(String restoreId) {
+        this.restoreId = restoreId;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public GkebackupProjectsLocationsRestorePlansRestoresCreateRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public GkebackupProjectsLocationsRestorePlansRestoresCreateRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

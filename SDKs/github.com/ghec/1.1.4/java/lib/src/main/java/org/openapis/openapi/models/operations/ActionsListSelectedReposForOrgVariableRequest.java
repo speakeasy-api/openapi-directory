@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsListSelectedReposForOrgVariableRequest {
-    
-    public ActionsListSelectedReposForOrgVariablePathParams pathParams;
-    public ActionsListSelectedReposForOrgVariableRequest withPathParams(ActionsListSelectedReposForOrgVariablePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the variable.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public ActionsListSelectedReposForOrgVariableRequest withName(String name) {
+        this.name = name;
         return this;
     }
     
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ActionsListSelectedReposForOrgVariableRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
     
-    public ActionsListSelectedReposForOrgVariableQueryParams queryParams;
-    public ActionsListSelectedReposForOrgVariableRequest withQueryParams(ActionsListSelectedReposForOrgVariableQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ActionsListSelectedReposForOrgVariableRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ActionsListSelectedReposForOrgVariableRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
         return this;
     }
     

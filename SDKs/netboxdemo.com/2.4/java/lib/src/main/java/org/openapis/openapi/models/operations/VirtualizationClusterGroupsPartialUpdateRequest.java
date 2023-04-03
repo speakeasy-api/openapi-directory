@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VirtualizationClusterGroupsPartialUpdateRequest {
-    
-    public VirtualizationClusterGroupsPartialUpdatePathParams pathParams;
-    public VirtualizationClusterGroupsPartialUpdateRequest withPathParams(VirtualizationClusterGroupsPartialUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ClusterGroupInput clusterGroupInput;
+    public VirtualizationClusterGroupsPartialUpdateRequest withClusterGroupInput(org.openapis.openapi.models.shared.ClusterGroupInput clusterGroupInput) {
+        this.clusterGroupInput = clusterGroupInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ClusterGroupInput request;
-    public VirtualizationClusterGroupsPartialUpdateRequest withRequest(org.openapis.openapi.models.shared.ClusterGroupInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this cluster group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public VirtualizationClusterGroupsPartialUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

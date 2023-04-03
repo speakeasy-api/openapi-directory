@@ -50,7 +50,7 @@ public class User {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUsersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUsersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -90,7 +90,7 @@ public class User {
      */
     public org.openapis.openapi.models.operations.GetUsersIdResponse getUsersId(org.openapis.openapi.models.operations.GetUsersIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdPathParams.class, baseUrl, "/users/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdRequest.class, baseUrl, "/users/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -130,7 +130,7 @@ public class User {
      */
     public org.openapis.openapi.models.operations.GetUsersIdLinkedTypeResponse getUsersIdLinkedType(org.openapis.openapi.models.operations.GetUsersIdLinkedTypeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdLinkedTypePathParams.class, baseUrl, "/users/{id}/linked/{type}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdLinkedTypeRequest.class, baseUrl, "/users/{id}/linked/{type}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

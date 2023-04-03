@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchFormRequest {
-    
-    public FetchFormPathParams pathParams;
-    public FetchFormRequest withPathParams(FetchFormPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchFormSecurity security;
-    public FetchFormRequest withSecurity(FetchFormSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchFormRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Type of this Form. Currently only `form-push` is supported.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FormType")
+    public org.openapis.openapi.models.shared.FormEnumFormTypesEnum formType;
+    public FetchFormRequest withFormType(org.openapis.openapi.models.shared.FormEnumFormTypesEnum formType) {
+        this.formType = formType;
         return this;
     }
     

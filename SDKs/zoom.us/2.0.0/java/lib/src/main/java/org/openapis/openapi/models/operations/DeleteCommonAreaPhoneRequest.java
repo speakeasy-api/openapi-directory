@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCommonAreaPhoneRequest {
-    
-    public DeleteCommonAreaPhonePathParams pathParams;
-    public DeleteCommonAreaPhoneRequest withPathParams(DeleteCommonAreaPhonePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteCommonAreaPhoneSecurity security;
-    public DeleteCommonAreaPhoneRequest withSecurity(DeleteCommonAreaPhoneSecurity security) {
-        this.security = security;
+    /**
+     * Unique Identifier of the common area phone.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commonAreaPhoneId")
+    public String commonAreaPhoneId;
+    public DeleteCommonAreaPhoneRequest withCommonAreaPhoneId(String commonAreaPhoneId) {
+        this.commonAreaPhoneId = commonAreaPhoneId;
         return this;
     }
     

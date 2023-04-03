@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposDeleteAutolinkRequest {
+    /**
+     * The unique identifier of the autolink.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=autolink_id")
+    public Long autolinkId;
+    public ReposDeleteAutolinkRequest withAutolinkId(Long autolinkId) {
+        this.autolinkId = autolinkId;
+        return this;
+    }
     
-    public ReposDeleteAutolinkPathParams pathParams;
-    public ReposDeleteAutolinkRequest withPathParams(ReposDeleteAutolinkPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposDeleteAutolinkRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposDeleteAutolinkRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

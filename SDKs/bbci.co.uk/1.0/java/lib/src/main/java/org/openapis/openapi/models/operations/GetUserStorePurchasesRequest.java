@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUserStorePurchasesRequest {
-    
-    public GetUserStorePurchasesQueryParams queryParams;
-    public GetUserStorePurchasesRequest withQueryParams(GetUserStorePurchasesQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetUserStorePurchasesSecurity security;
-    public GetUserStorePurchasesRequest withSecurity(GetUserStorePurchasesSecurity security) {
-        this.security = security;
+    /**
+     * The BBC-id cookie value
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=identity_cookie")
+    public Double identityCookie;
+    public GetUserStorePurchasesRequest withIdentityCookie(Double identityCookie) {
+        this.identityCookie = identityCookie;
         return this;
     }
     

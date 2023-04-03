@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateUpdatePriceOrFixedPriceRequest {
-    
-    public CreateUpdatePriceOrFixedPricePathParams pathParams;
-    public CreateUpdatePriceOrFixedPriceRequest withPathParams(CreateUpdatePriceOrFixedPricePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public CreateUpdatePriceOrFixedPriceRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public CreateUpdatePriceOrFixedPriceHeaders headers;
-    public CreateUpdatePriceOrFixedPriceRequest withHeaders(CreateUpdatePriceOrFixedPriceHeaders headers) {
-        this.headers = headers;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public CreateUpdatePriceOrFixedPriceRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateUpdatePriceOrFixedPriceRequestBody request;
-    public CreateUpdatePriceOrFixedPriceRequest withRequest(CreateUpdatePriceOrFixedPriceRequestBody request) {
-        this.request = request;
+    public CreateUpdatePriceOrFixedPriceRequestBody requestBody;
+    public CreateUpdatePriceOrFixedPriceRequest withRequestBody(CreateUpdatePriceOrFixedPriceRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * SKU unique identifier number.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=itemId")
+    public Long itemId;
+    public CreateUpdatePriceOrFixedPriceRequest withItemId(Long itemId) {
+        this.itemId = itemId;
         return this;
     }
     

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutVolumesIdRequest {
-    
-    public PutVolumesIdPathParams pathParams;
-    public PutVolumesIdRequest withPathParams(PutVolumesIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PutVolumesIdUpdateVolumeRequest requestBody;
+    public PutVolumesIdRequest withRequestBody(PutVolumesIdUpdateVolumeRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PutVolumesIdUpdateVolumeRequest request;
-    public PutVolumesIdRequest withRequest(PutVolumesIdUpdateVolumeRequest request) {
-        this.request = request;
+    /**
+     * ID of the Volume to update
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutVolumesIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

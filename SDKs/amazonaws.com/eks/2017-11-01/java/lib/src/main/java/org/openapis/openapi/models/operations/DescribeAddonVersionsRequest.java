@@ -4,20 +4,125 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeAddonVersionsRequest {
-    
-    public DescribeAddonVersionsQueryParams queryParams;
-    public DescribeAddonVersionsRequest withQueryParams(DescribeAddonVersionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DescribeAddonVersionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DescribeAddonVersionsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public DescribeAddonVersionsHeaders headers;
-    public DescribeAddonVersionsRequest withHeaders(DescribeAddonVersionsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DescribeAddonVersionsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DescribeAddonVersionsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DescribeAddonVersionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DescribeAddonVersionsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DescribeAddonVersionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The name of the add-on. The name must match one of the names returned by &lt;a href="https://docs.aws.amazon.com/eks/latest/APIReference/API_ListAddons.html"&gt; &lt;code&gt;ListAddons&lt;/code&gt; &lt;/a&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=addonName")
+    public String addonName;
+    public DescribeAddonVersionsRequest withAddonName(String addonName) {
+        this.addonName = addonName;
+        return this;
+    }
+    
+    /**
+     * The Kubernetes versions that you can use the add-on with.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=kubernetesVersion")
+    public String kubernetesVersion;
+    public DescribeAddonVersionsRequest withKubernetesVersion(String kubernetesVersion) {
+        this.kubernetesVersion = kubernetesVersion;
+        return this;
+    }
+    
+    /**
+     * The maximum number of results to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public DescribeAddonVersionsRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The &lt;code&gt;nextToken&lt;/code&gt; value returned from a previous paginated &lt;code&gt;DescribeAddonVersionsRequest&lt;/code&gt; where &lt;code&gt;maxResults&lt;/code&gt; was used and the results exceeded the value of that parameter. Pagination continues from the end of the previous results that returned the &lt;code&gt;nextToken&lt;/code&gt; value.&lt;/p&gt; &lt;note&gt; &lt;p&gt;This token should be treated as an opaque identifier that is used only to retrieve the next items in a list and not for other programmatic purposes.&lt;/p&gt; &lt;/note&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
+    public String nextToken;
+    public DescribeAddonVersionsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * The owner of the add-on. For valid &lt;code&gt;owners&lt;/code&gt;, don't specify a value for this property.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=owners")
+    public String[] owners;
+    public DescribeAddonVersionsRequest withOwners(String[] owners) {
+        this.owners = owners;
+        return this;
+    }
+    
+    /**
+     * The publisher of the add-on. For valid &lt;code&gt;publishers&lt;/code&gt;, don't specify a value for this property.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=publishers")
+    public String[] publishers;
+    public DescribeAddonVersionsRequest withPublishers(String[] publishers) {
+        this.publishers = publishers;
+        return this;
+    }
+    
+    /**
+     * The type of the add-on. For valid &lt;code&gt;types&lt;/code&gt;, don't specify a value for this property.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=types")
+    public String[] types;
+    public DescribeAddonVersionsRequest withTypes(String[] types) {
+        this.types = types;
         return this;
     }
     

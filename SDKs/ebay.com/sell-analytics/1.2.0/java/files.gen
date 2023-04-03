@@ -33,19 +33,13 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetCustomerServiceMetricSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetCustomerServiceMetricPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetCustomerServiceMetricQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCustomerServiceMetricRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCustomerServiceMetricResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/FindSellerStandardsProfilesSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/FindSellerStandardsProfilesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/FindSellerStandardsProfilesResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSellerStandardsProfileSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetSellerStandardsProfilePathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSellerStandardsProfileRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSellerStandardsProfileResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTrafficReportSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetTrafficReportQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTrafficReportRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTrafficReportResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetCustomerServiceMetricResponse.java
@@ -57,7 +51,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/Distribution.java
 lib/src/main/java/org/openapis/openapi/models/shared/MetricBenchmark.java
 lib/src/main/java/org/openapis/openapi/models/shared/BenchmarkMetadata.java
 lib/src/main/java/org/openapis/openapi/models/shared/Dimension.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIAuth.java
 lib/src/main/java/org/openapis/openapi/models/shared/FindSellerStandardsProfilesResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/StandardsProfile.java
 lib/src/main/java/org/openapis/openapi/models/shared/Cycle.java

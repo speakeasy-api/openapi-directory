@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateInviteRequest {
-    
-    public CreateInvitePathParams pathParams;
-    public CreateInviteRequest withPathParams(CreateInvitePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Channel](https://www.twilio.com/docs/api/chat/rest/channels) the new resource belongs to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChannelSid")
+    public String channelSid;
+    public CreateInviteRequest withChannelSid(String channelSid) {
+        this.channelSid = channelSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateInviteCreateInviteRequest request;
-    public CreateInviteRequest withRequest(CreateInviteCreateInviteRequest request) {
-        this.request = request;
+    public CreateInviteCreateInviteRequest requestBody;
+    public CreateInviteRequest withRequestBody(CreateInviteCreateInviteRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateInviteSecurity security;
-    public CreateInviteRequest withSecurity(CreateInviteSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateInviteRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) to create the resource under.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public CreateInviteRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

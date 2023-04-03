@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateHpovManagerRequest {
-    
-    public UpdateHpovManagerPathParams pathParams;
-    public UpdateHpovManagerRequest withPathParams(UpdateHpovManagerPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SwitchDataSource request;
-    public UpdateHpovManagerRequest withRequest(org.openapis.openapi.models.shared.SwitchDataSource request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SwitchDataSource switchDataSource;
+    public UpdateHpovManagerRequest withSwitchDataSource(org.openapis.openapi.models.shared.SwitchDataSource switchDataSource) {
+        this.switchDataSource = switchDataSource;
         return this;
     }
     
-    
-    public UpdateHpovManagerSecurity security;
-    public UpdateHpovManagerRequest withSecurity(UpdateHpovManagerSecurity security) {
-        this.security = security;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UpdateHpovManagerRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

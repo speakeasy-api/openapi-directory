@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateQueryRequest {
-    
-    public CreateQueryPathParams pathParams;
-    public CreateQueryRequest withPathParams(CreateQueryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the new resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public CreateQueryRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateQueryCreateQueryRequest request;
-    public CreateQueryRequest withRequest(CreateQueryCreateQueryRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateQuerySecurity security;
-    public CreateQueryRequest withSecurity(CreateQuerySecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateQueryRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateQueryCreateQueryRequest requestBody;
+    public CreateQueryRequest withRequestBody(CreateQueryCreateQueryRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

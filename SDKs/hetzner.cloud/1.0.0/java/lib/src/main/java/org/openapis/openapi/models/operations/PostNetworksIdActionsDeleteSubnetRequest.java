@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostNetworksIdActionsDeleteSubnetRequest {
-    
-    public PostNetworksIdActionsDeleteSubnetPathParams pathParams;
-    public PostNetworksIdActionsDeleteSubnetRequest withPathParams(PostNetworksIdActionsDeleteSubnetPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PostNetworksIdActionsDeleteSubnetDeleteSubnetRequest requestBody;
+    public PostNetworksIdActionsDeleteSubnetRequest withRequestBody(PostNetworksIdActionsDeleteSubnetDeleteSubnetRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostNetworksIdActionsDeleteSubnetDeleteSubnetRequest request;
-    public PostNetworksIdActionsDeleteSubnetRequest withRequest(PostNetworksIdActionsDeleteSubnetDeleteSubnetRequest request) {
-        this.request = request;
+    /**
+     * ID of the Network
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public PostNetworksIdActionsDeleteSubnetRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

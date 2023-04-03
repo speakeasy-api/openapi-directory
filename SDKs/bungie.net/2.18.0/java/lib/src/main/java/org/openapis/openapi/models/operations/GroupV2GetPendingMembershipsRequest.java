@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupV2GetPendingMembershipsRequest {
-    
-    public GroupV2GetPendingMembershipsPathParams pathParams;
-    public GroupV2GetPendingMembershipsRequest withPathParams(GroupV2GetPendingMembershipsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Page number (starting with 1). Each page has a fixed size of 50 items per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currentpage")
+    public Integer currentpage;
+    public GroupV2GetPendingMembershipsRequest withCurrentpage(Integer currentpage) {
+        this.currentpage = currentpage;
         return this;
     }
     
-    
-    public GroupV2GetPendingMembershipsQueryParams queryParams;
-    public GroupV2GetPendingMembershipsRequest withQueryParams(GroupV2GetPendingMembershipsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GroupV2GetPendingMembershipsSecurity security;
-    public GroupV2GetPendingMembershipsRequest withSecurity(GroupV2GetPendingMembershipsSecurity security) {
-        this.security = security;
+    /**
+     * ID of the group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public Long groupId;
+    public GroupV2GetPendingMembershipsRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
         return this;
     }
     

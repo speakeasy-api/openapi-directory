@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestnetGetFaucetRequest {
+    /**
+     * Your Neblio Testnet Address
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=address")
+    public String address;
+    public TestnetGetFaucetRequest withAddress(String address) {
+        this.address = address;
+        return this;
+    }
     
-    public TestnetGetFaucetQueryParams queryParams;
-    public TestnetGetFaucetRequest withQueryParams(TestnetGetFaucetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Amount of NEBL to withdrawal in satoshis
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=amount")
+    public Double amount;
+    public TestnetGetFaucetRequest withAmount(Double amount) {
+        this.amount = amount;
         return this;
     }
     

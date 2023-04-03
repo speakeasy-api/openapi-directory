@@ -4,27 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReminderProfilesDeleteRequest {
-    
-    public ReminderProfilesDeletePathParams pathParams;
-    public ReminderProfilesDeleteRequest withPathParams(ReminderProfilesDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public ReminderProfilesDeleteRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     
-    
-    public ReminderProfilesDeleteQueryParams queryParams;
-    public ReminderProfilesDeleteRequest withQueryParams(ReminderProfilesDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ReminderProfilesDeleteSecurity security;
-    public ReminderProfilesDeleteRequest withSecurity(ReminderProfilesDeleteSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public ReminderProfilesDeleteRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

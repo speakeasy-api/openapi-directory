@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateDeviceSecretRequest {
-    
-    public CreateDeviceSecretPathParams pathParams;
-    public CreateDeviceSecretRequest withPathParams(CreateDeviceSecretPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A 34-character string that uniquely identifies the Device.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DeviceSid")
+    public String deviceSid;
+    public CreateDeviceSecretRequest withDeviceSid(String deviceSid) {
+        this.deviceSid = deviceSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateDeviceSecretCreateDeviceSecretRequest request;
-    public CreateDeviceSecretRequest withRequest(CreateDeviceSecretCreateDeviceSecretRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateDeviceSecretSecurity security;
-    public CreateDeviceSecretRequest withSecurity(CreateDeviceSecretSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateDeviceSecretRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateDeviceSecretCreateDeviceSecretRequest requestBody;
+    public CreateDeviceSecretRequest withRequestBody(CreateDeviceSecretCreateDeviceSecretRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

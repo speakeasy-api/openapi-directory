@@ -41,12 +41,12 @@ public class RfProfiles {
      */
     public org.openapis.openapi.models.operations.CreateNetworkWirelessRfProfileResponse createNetworkWirelessRfProfile(org.openapis.openapi.models.operations.CreateNetworkWirelessRfProfileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkWirelessRfProfilePathParams.class, baseUrl, "/networks/{networkId}/wireless/rfProfiles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkWirelessRfProfileRequest.class, baseUrl, "/networks/{networkId}/wireless/rfProfiles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -86,7 +86,7 @@ public class RfProfiles {
      */
     public org.openapis.openapi.models.operations.DeleteNetworkWirelessRfProfileResponse deleteNetworkWirelessRfProfile(org.openapis.openapi.models.operations.DeleteNetworkWirelessRfProfileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkWirelessRfProfilePathParams.class, baseUrl, "/networks/{networkId}/wireless/rfProfiles/{rfProfileId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkWirelessRfProfileRequest.class, baseUrl, "/networks/{networkId}/wireless/rfProfiles/{rfProfileId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -120,7 +120,7 @@ public class RfProfiles {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessRfProfileResponse getNetworkWirelessRfProfile(org.openapis.openapi.models.operations.GetNetworkWirelessRfProfileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessRfProfilePathParams.class, baseUrl, "/networks/{networkId}/wireless/rfProfiles/{rfProfileId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessRfProfileRequest.class, baseUrl, "/networks/{networkId}/wireless/rfProfiles/{rfProfileId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -160,13 +160,13 @@ public class RfProfiles {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessRfProfilesResponse getNetworkWirelessRfProfiles(org.openapis.openapi.models.operations.GetNetworkWirelessRfProfilesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessRfProfilesPathParams.class, baseUrl, "/networks/{networkId}/wireless/rfProfiles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessRfProfilesRequest.class, baseUrl, "/networks/{networkId}/wireless/rfProfiles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessRfProfilesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessRfProfilesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -206,12 +206,12 @@ public class RfProfiles {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkWirelessRfProfileResponse updateNetworkWirelessRfProfile(org.openapis.openapi.models.operations.UpdateNetworkWirelessRfProfileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessRfProfilePathParams.class, baseUrl, "/networks/{networkId}/wireless/rfProfiles/{rfProfileId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessRfProfileRequest.class, baseUrl, "/networks/{networkId}/wireless/rfProfiles/{rfProfileId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

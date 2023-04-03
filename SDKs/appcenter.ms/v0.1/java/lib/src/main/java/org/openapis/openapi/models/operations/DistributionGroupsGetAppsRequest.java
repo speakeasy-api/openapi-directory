@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DistributionGroupsGetAppsRequest {
-    
-    public DistributionGroupsGetAppsPathParams pathParams;
-    public DistributionGroupsGetAppsRequest withPathParams(DistributionGroupsGetAppsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the distribution group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=distribution_group_name")
+    public String distributionGroupName;
+    public DistributionGroupsGetAppsRequest withDistributionGroupName(String distributionGroupName) {
+        this.distributionGroupName = distributionGroupName;
         return this;
     }
     
-    
-    public DistributionGroupsGetAppsSecurity security;
-    public DistributionGroupsGetAppsRequest withSecurity(DistributionGroupsGetAppsSecurity security) {
-        this.security = security;
+    /**
+     * The organization's name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_name")
+    public String orgName;
+    public DistributionGroupsGetAppsRequest withOrgName(String orgName) {
+        this.orgName = orgName;
         return this;
     }
     

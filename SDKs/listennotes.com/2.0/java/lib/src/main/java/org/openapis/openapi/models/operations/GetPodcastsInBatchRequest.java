@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPodcastsInBatchRequest {
-    
-    public GetPodcastsInBatchHeaders headers;
-    public GetPodcastsInBatchRequest withHeaders(GetPodcastsInBatchHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
+    public org.openapis.openapi.models.shared.GetPodcastsInBatchForm getPodcastsInBatchForm;
+    public GetPodcastsInBatchRequest withGetPodcastsInBatchForm(org.openapis.openapi.models.shared.GetPodcastsInBatchForm getPodcastsInBatchForm) {
+        this.getPodcastsInBatchForm = getPodcastsInBatchForm;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.GetPodcastsInBatchForm request;
-    public GetPodcastsInBatchRequest withRequest(org.openapis.openapi.models.shared.GetPodcastsInBatchForm request) {
-        this.request = request;
+    /**
+     * Get API Key on listennotes.com/api
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-ListenAPI-Key")
+    public String xListenAPIKey;
+    public GetPodcastsInBatchRequest withXListenAPIKey(String xListenAPIKey) {
+        this.xListenAPIKey = xListenAPIKey;
         return this;
     }
     

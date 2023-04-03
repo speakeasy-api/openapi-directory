@@ -4,27 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesListRequest {
-    
-    public ReleasesListPathParams pathParams;
-    public ReleasesListRequest withPathParams(ReleasesListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public ReleasesListRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public ReleasesListQueryParams queryParams;
-    public ReleasesListRequest withQueryParams(ReleasesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public ReleasesListRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     
+    /**
+     * When *true*, filters out releases that were uploaded but were never distributed. Releases that under deleted distribution groups will not be filtered out.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=published_only")
+    public Boolean publishedOnly;
+    public ReleasesListRequest withPublishedOnly(Boolean publishedOnly) {
+        this.publishedOnly = publishedOnly;
+        return this;
+    }
     
-    public ReleasesListSecurity security;
-    public ReleasesListRequest withSecurity(ReleasesListSecurity security) {
-        this.security = security;
+    /**
+     * The id of a release
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=releaseId")
+    public Double releaseId;
+    public ReleasesListRequest withReleaseId(Double releaseId) {
+        this.releaseId = releaseId;
+        return this;
+    }
+    
+    /**
+     * When the scope is 'tester', only includes releases that have been distributed to groups that the user belongs to.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scope")
+    public String scope;
+    public ReleasesListRequest withScope(String scope) {
+        this.scope = scope;
+        return this;
+    }
+    
+    /**
+     * The number of releases to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=top")
+    public Double top;
+    public ReleasesListRequest withTop(Double top) {
+        this.top = top;
         return this;
     }
     

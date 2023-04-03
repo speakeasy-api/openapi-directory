@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDetachLoadBalancerTargetGroupsRequest {
-    
-    public GETDetachLoadBalancerTargetGroupsQueryParams queryParams;
-    public GETDetachLoadBalancerTargetGroupsRequest withQueryParams(GETDetachLoadBalancerTargetGroupsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDetachLoadBalancerTargetGroupsActionEnum action;
+    public GETDetachLoadBalancerTargetGroupsRequest withAction(GETDetachLoadBalancerTargetGroupsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the Auto Scaling group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutoScalingGroupName")
+    public String autoScalingGroupName;
+    public GETDetachLoadBalancerTargetGroupsRequest withAutoScalingGroupName(String autoScalingGroupName) {
+        this.autoScalingGroupName = autoScalingGroupName;
+        return this;
+    }
     
-    public GETDetachLoadBalancerTargetGroupsHeaders headers;
-    public GETDetachLoadBalancerTargetGroupsRequest withHeaders(GETDetachLoadBalancerTargetGroupsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The Amazon Resource Names (ARN) of the target groups. You can specify up to 10 target groups.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TargetGroupARNs")
+    public String[] targetGroupARNs;
+    public GETDetachLoadBalancerTargetGroupsRequest withTargetGroupARNs(String[] targetGroupARNs) {
+        this.targetGroupARNs = targetGroupARNs;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDetachLoadBalancerTargetGroupsVersionEnum version;
+    public GETDetachLoadBalancerTargetGroupsRequest withVersion(GETDetachLoadBalancerTargetGroupsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDetachLoadBalancerTargetGroupsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDetachLoadBalancerTargetGroupsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDetachLoadBalancerTargetGroupsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDetachLoadBalancerTargetGroupsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDetachLoadBalancerTargetGroupsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDetachLoadBalancerTargetGroupsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDetachLoadBalancerTargetGroupsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

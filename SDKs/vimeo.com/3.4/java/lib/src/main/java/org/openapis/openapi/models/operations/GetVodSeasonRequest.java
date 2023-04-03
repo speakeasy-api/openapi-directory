@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVodSeasonRequest {
+    /**
+     * The ID of the On Demand.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ondemand_id")
+    public Double ondemandId;
+    public GetVodSeasonRequest withOndemandId(Double ondemandId) {
+        this.ondemandId = ondemandId;
+        return this;
+    }
     
-    public GetVodSeasonPathParams pathParams;
-    public GetVodSeasonRequest withPathParams(GetVodSeasonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the season.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=season_id")
+    public Double seasonId;
+    public GetVodSeasonRequest withSeasonId(Double seasonId) {
+        this.seasonId = seasonId;
         return this;
     }
     

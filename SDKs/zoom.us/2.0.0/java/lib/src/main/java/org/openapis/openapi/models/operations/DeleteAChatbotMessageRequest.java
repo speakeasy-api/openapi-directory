@@ -7,24 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAChatbotMessageRequest {
-    
-    public DeleteAChatbotMessagePathParams pathParams;
-    public DeleteAChatbotMessageRequest withPathParams(DeleteAChatbotMessagePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public DeleteAChatbotMessageApplicationJSON request;
-    public DeleteAChatbotMessageRequest withRequest(DeleteAChatbotMessageApplicationJSON request) {
-        this.request = request;
+    public DeleteAChatbotMessageApplicationJSON requestBody;
+    public DeleteAChatbotMessageRequest withRequestBody(DeleteAChatbotMessageApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public DeleteAChatbotMessageSecurity security;
-    public DeleteAChatbotMessageRequest withSecurity(DeleteAChatbotMessageSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=message_id")
+    public String messageId;
+    public DeleteAChatbotMessageRequest withMessageId(String messageId) {
+        this.messageId = messageId;
         return this;
     }
     

@@ -4,27 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRetrieveSellerRequest {
-    
-    public GetRetrieveSellerPathParams pathParams;
-    public GetRetrieveSellerRequest withPathParams(GetRetrieveSellerPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetRetrieveSellerRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public GetRetrieveSellerQueryParams queryParams;
-    public GetRetrieveSellerRequest withQueryParams(GetRetrieveSellerQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetRetrieveSellerRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
+    /**
+     * Name of the VTEX account that belongs to the marketplace.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
+    public String accountName;
+    public GetRetrieveSellerRequest withAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
     
-    public GetRetrieveSellerHeaders headers;
-    public GetRetrieveSellerRequest withHeaders(GetRetrieveSellerHeaders headers) {
-        this.headers = headers;
+    /**
+     * Environment to use. Used as part of the URL.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=environment")
+    public String environment;
+    public GetRetrieveSellerRequest withEnvironment(String environment) {
+        this.environment = environment;
+        return this;
+    }
+    
+    /**
+     * Sales channel (or [trade policy](https://help.vtex.com/en/tutorial/how-trade-policies-work--6Xef8PZiFm40kg2STrMkMV)) associated to the seller account created.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sc")
+    public String sc;
+    public GetRetrieveSellerRequest withSc(String sc) {
+        this.sc = sc;
+        return this;
+    }
+    
+    /**
+     * A string that identifies the seller in the marketplace. This ID must be created by the marketplace
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerId")
+    public String sellerId;
+    public GetRetrieveSellerRequest withSellerId(String sellerId) {
+        this.sellerId = sellerId;
         return this;
     }
     

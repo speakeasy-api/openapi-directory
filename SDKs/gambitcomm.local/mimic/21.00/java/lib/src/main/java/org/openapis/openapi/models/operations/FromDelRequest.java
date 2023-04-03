@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FromDelRequest {
+    /**
+     * IP of the source
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=IP")
+    public String ip;
+    public FromDelRequest withIp(String ip) {
+        this.ip = ip;
+        return this;
+    }
     
-    public FromDelPathParams pathParams;
-    public FromDelRequest withPathParams(FromDelPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to delete the IP source
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public FromDelRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
+    
+    /**
+     * port of the source
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=port")
+    public Integer port;
+    public FromDelRequest withPort(Integer port) {
+        this.port = port;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAs2PartnersIdRequest {
-    
-    public GetAs2PartnersIdPathParams pathParams;
-    public GetAs2PartnersIdRequest withPathParams(GetAs2PartnersIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * As2 Partner ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public GetAs2PartnersIdRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

@@ -7,38 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateInsightsQuestionnairesQuestionRequest {
-    
-    public UpdateInsightsQuestionnairesQuestionPathParams pathParams;
-    public UpdateInsightsQuestionnairesQuestionRequest withPathParams(UpdateInsightsQuestionnairesQuestionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateInsightsQuestionnairesQuestionHeaders headers;
-    public UpdateInsightsQuestionnairesQuestionRequest withHeaders(UpdateInsightsQuestionnairesQuestionHeaders headers) {
-        this.headers = headers;
+    /**
+     * The unique ID of the question
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=QuestionId")
+    public String questionId;
+    public UpdateInsightsQuestionnairesQuestionRequest withQuestionId(String questionId) {
+        this.questionId = questionId;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateInsightsQuestionnairesQuestionUpdateInsightsQuestionnairesQuestionRequest request;
-    public UpdateInsightsQuestionnairesQuestionRequest withRequest(UpdateInsightsQuestionnairesQuestionUpdateInsightsQuestionnairesQuestionRequest request) {
-        this.request = request;
+    public UpdateInsightsQuestionnairesQuestionUpdateInsightsQuestionnairesQuestionRequest requestBody;
+    public UpdateInsightsQuestionnairesQuestionRequest withRequestBody(UpdateInsightsQuestionnairesQuestionUpdateInsightsQuestionnairesQuestionRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateInsightsQuestionnairesQuestionSecurity security;
-    public UpdateInsightsQuestionnairesQuestionRequest withSecurity(UpdateInsightsQuestionnairesQuestionSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateInsightsQuestionnairesQuestionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Token HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Token")
+    public String token;
+    public UpdateInsightsQuestionnairesQuestionRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

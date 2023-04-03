@@ -4,27 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllinvestorAccountsRequest {
-    
-    public GetAllinvestorAccountsQueryParams queryParams;
-    public GetAllinvestorAccountsRequest withQueryParams(GetAllinvestorAccountsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * multiple account ids as comma seperated string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=account_id")
+    public String accountId;
+    public GetAllinvestorAccountsRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
-    
-    public GetAllinvestorAccountsHeaders headers;
-    public GetAllinvestorAccountsRequest withHeaders(GetAllinvestorAccountsHeaders headers) {
-        this.headers = headers;
+    /**
+     * multiple financial product ids as comma seperated string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=financial_product_id")
+    public String financialProductId;
+    public GetAllinvestorAccountsRequest withFinancialProductId(String financialProductId) {
+        this.financialProductId = financialProductId;
         return this;
     }
     
+    /**
+     * multiple investor ids as comma seperated string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=investor_id")
+    public String investorId;
+    public GetAllinvestorAccountsRequest withInvestorId(String investorId) {
+        this.investorId = investorId;
+        return this;
+    }
     
-    public GetAllinvestorAccountsSecurity security;
-    public GetAllinvestorAccountsRequest withSecurity(GetAllinvestorAccountsSecurity security) {
-        this.security = security;
+    /**
+     * Page number for the query. This end-point has paginations capabilities. This value should be a positive integer value. If this is not provided, both page_size and page_number will be defaulted to 1000 and 1. Results are sorted decending order of the created date &amp; time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_number")
+    public String pageNumber;
+    public GetAllinvestorAccountsRequest withPageNumber(String pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    
+    /**
+     * Page size for the query. This end-point has paginations capabilities. This value should be a positive integer value. If this is not provided, both page_size and page_number will be defaulted to 1000 and 1. Results are sorted decending order of the created date &amp; time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public String pageSize;
+    public GetAllinvestorAccountsRequest withPageSize(String pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * multiple statuses as comma seperated string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public String status;
+    public GetAllinvestorAccountsRequest withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * ApiSecretKey
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public GetAllinvestorAccountsRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

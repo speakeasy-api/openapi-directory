@@ -4,20 +4,107 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEditorialImageLicenseListRequest {
-    
-    public GetEditorialImageLicenseListQueryParams queryParams;
-    public GetEditorialImageLicenseListRequest withQueryParams(GetEditorialImageLicenseListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter licenses by download availability
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=download_availability")
+    public GetEditorialImageLicenseListDownloadAvailabilityEnum downloadAvailability;
+    public GetEditorialImageLicenseListRequest withDownloadAvailability(GetEditorialImageLicenseListDownloadAvailabilityEnum downloadAvailability) {
+        this.downloadAvailability = downloadAvailability;
         return this;
     }
     
+    /**
+     * Show licenses created before the specified date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
+    public OffsetDateTime endDate;
+    public GetEditorialImageLicenseListRequest withEndDate(OffsetDateTime endDate) {
+        this.endDate = endDate;
+        return this;
+    }
     
-    public GetEditorialImageLicenseListSecurity security;
-    public GetEditorialImageLicenseListRequest withSecurity(GetEditorialImageLicenseListSecurity security) {
-        this.security = security;
+    /**
+     * Show licenses for the specified editorial image ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=image_id")
+    public String imageId;
+    public GetEditorialImageLicenseListRequest withImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    
+    /**
+     * Show editorial images that are available with the specified license name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
+    public String license;
+    public GetEditorialImageLicenseListRequest withLicense(String license) {
+        this.license = license;
+        return this;
+    }
+    
+    /**
+     * Page number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetEditorialImageLicenseListRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Number of results per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetEditorialImageLicenseListRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Sort order
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetEditorialImageLicenseListSortEnum sort;
+    public GetEditorialImageLicenseListRequest withSort(GetEditorialImageLicenseListSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Show licenses created on or after the specified date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
+    public OffsetDateTime startDate;
+    public GetEditorialImageLicenseListRequest withStartDate(OffsetDateTime startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    
+    /**
+     * Set to true to see license history for all members of your team.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team_history")
+    public Boolean teamHistory;
+    public GetEditorialImageLicenseListRequest withTeamHistory(Boolean teamHistory) {
+        this.teamHistory = teamHistory;
+        return this;
+    }
+    
+    /**
+     * Filter licenses by username of licensee
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
+    public String username;
+    public GetEditorialImageLicenseListRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

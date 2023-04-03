@@ -7,13 +7,10 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.operations.CloudresourcemanagerEffectiveTagsListSecurityOption1;
 import org.openapis.openapi.models.operations.CloudresourcemanagerEffectiveTagsListSecurityOption2;
 import org.openapis.openapi.models.operations.CloudresourcemanagerEffectiveTagsListSecurity;
-import org.openapis.openapi.models.operations.CloudresourcemanagerEffectiveTagsListQueryParams;
 import org.openapis.openapi.models.operations.CloudresourcemanagerEffectiveTagsListRequest;
 import org.openapis.openapi.models.operations.CloudresourcemanagerEffectiveTagsListResponse;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -22,35 +19,28 @@ public class Application {
                 .build();
 
             CloudresourcemanagerEffectiveTagsListRequest req = new CloudresourcemanagerEffectiveTagsListRequest() {{
-                security = new CloudresourcemanagerEffectiveTagsListSecurity() {{
-                    option1 = new CloudresourcemanagerEffectiveTagsListSecurityOption1() {{
-                        oauth2 = new SchemeOauth2() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                        oauth2c = new SchemeOauth2c() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                    }};
-                }};
-                queryParams = new CloudresourcemanagerEffectiveTagsListQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "provident";
-                    alt = "proto";
-                    callback = "quibusdam";
-                    fields = "unde";
-                    key = "nulla";
-                    oauthToken = "corrupti";
-                    pageSize = 847252;
-                    pageToken = "vel";
-                    parent = "error";
-                    prettyPrint = false;
-                    quotaUser = "deserunt";
-                    uploadType = "suscipit";
-                    uploadProtocol = "iure";
-                }};
-            }};            
+                dollarXgafv = "2";
+                accessToken = "provident";
+                alt = "proto";
+                callback = "quibusdam";
+                fields = "unde";
+                key = "nulla";
+                oauthToken = "corrupti";
+                pageSize = 847252;
+                pageToken = "vel";
+                parent = "error";
+                prettyPrint = false;
+                quotaUser = "deserunt";
+                uploadType = "suscipit";
+                uploadProtocol = "iure";
+            }}            
 
-            CloudresourcemanagerEffectiveTagsListResponse res = sdk.effectiveTags.cloudresourcemanagerEffectiveTagsList(req);
+            CloudresourcemanagerEffectiveTagsListResponse res = sdk.effectiveTags.cloudresourcemanagerEffectiveTagsList(req, new CloudresourcemanagerEffectiveTagsListSecurity() {{
+                option1 = new CloudresourcemanagerEffectiveTagsListSecurityOption1() {{
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                }};
+            }});
 
             if (res.listEffectiveTagsResponse.isPresent()) {
                 // handle response

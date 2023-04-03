@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppkeyPutRequest {
-    
-    public AppkeyPutQueryParams queryParams;
-    public AppkeyPutRequest withQueryParams(AppkeyPutQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public AppkeyPutSecurity security;
-    public AppkeyPutRequest withSecurity(AppkeyPutSecurity security) {
-        this.security = security;
+    /**
+     * app key to deactivate
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=app_key")
+    public String appKey;
+    public AppkeyPutRequest withAppKey(String appKey) {
+        this.appKey = appKey;
         return this;
     }
     

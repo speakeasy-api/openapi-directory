@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutEmployerTagRequest {
-    
-    public PutEmployerTagPathParams pathParams;
-    public PutEmployerTagRequest withPathParams(PutEmployerTagPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The version of the api to target. Omit or set as &amp;apos;default&amp;apos; to target the current api version.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Version")
+    public String apiVersion;
+    public PutEmployerTagRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
+    /**
+     * The OAuth 1 authorization header. &amp;apos;Auto&amp;apos; enables auto complete.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PutEmployerTagRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
+        return this;
+    }
     
-    public PutEmployerTagHeaders headers;
-    public PutEmployerTagRequest withHeaders(PutEmployerTagHeaders headers) {
-        this.headers = headers;
+    /**
+     * The employers' unique identifier. E.g ER001
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EmployerId")
+    public String employerId;
+    public PutEmployerTagRequest withEmployerId(String employerId) {
+        this.employerId = employerId;
+        return this;
+    }
+    
+    /**
+     * The tag unique identifier. E.g. MyTag
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TagId")
+    public String tagId;
+    public PutEmployerTagRequest withTagId(String tagId) {
+        this.tagId = tagId;
         return this;
     }
     

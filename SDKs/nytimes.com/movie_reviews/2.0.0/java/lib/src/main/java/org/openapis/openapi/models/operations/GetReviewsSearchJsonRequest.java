@@ -4,13 +4,100 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetReviewsSearchJsonRequest {
+    /**
+     * Set this parameter to Y to limit the results to NYT Critics' Picks. To get only those movies that have not been highlighted by Times critics, specify critics-pick=N. (To get all reviews regardless of critics-pick status, simply omit this parameter.)
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=critics-pick")
+    public GetReviewsSearchJsonCriticsPickEnum criticsPick;
+    public GetReviewsSearchJsonRequest withCriticsPick(GetReviewsSearchJsonCriticsPickEnum criticsPick) {
+        this.criticsPick = criticsPick;
+        return this;
+    }
     
-    public GetReviewsSearchJsonQueryParams queryParams;
-    public GetReviewsSearchJsonRequest withQueryParams(GetReviewsSearchJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Positive integer, multiple of 20
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetReviewsSearchJsonRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Single date: YYYY-MM-DD
+     * 
+     * Start and end date: YYYY-MM-DD;YYYY-MM-DD
+     * 
+     * The opening-date is the date the movie's opening date in the New York region.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opening-date")
+    public String openingDate;
+    public GetReviewsSearchJsonRequest withOpeningDate(String openingDate) {
+        this.openingDate = openingDate;
+        return this;
+    }
+    
+    /**
+     * Sets the sort order of the results.
+     * 
+     * Results ordered by-title are in ascending alphabetical order. Results ordered by one of the date parameters are in reverse chronological order.
+     * 
+     * If you do not specify a sort order, the results will be ordered by publication-date.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public String order;
+    public GetReviewsSearchJsonRequest withOrder(String order) {
+        this.order = order;
+        return this;
+    }
+    
+    /**
+     * Single date: YYYY-MM-DD
+     * 
+     * Start and end date: YYYY-MM-DD;YYYY-MM-DD
+     * 
+     * The publication-date is the date the review was first published in The Times.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=publication-date")
+    public String publicationDate;
+    public GetReviewsSearchJsonRequest withPublicationDate(String publicationDate) {
+        this.publicationDate = publicationDate;
+        return this;
+    }
+    
+    /**
+     * Search keywords; matches movie title and indexed terms
+     * 
+     * To limit your search to exact matches only, surround your search string with single quotation marks (e.g., query='28+days+later'). Otherwise, responses will include partial matches ("head words") as well as exact matches (e.g., president will match president, presidents and presidential).
+     *   
+     *   If you specify multiple terms without quotation marks, they will be combined in an OR search.
+     *   
+     *   If you omit the query parameter, your request will be equivalent to a reviews and NYT Critics' Picks request.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public GetReviewsSearchJsonRequest withQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    
+    /**
+     * Include this parameter to limit your results to reviews by a specific critic. Reviewer names should be formatted like this: Manohla Dargis.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reviewer")
+    public String reviewer;
+    public GetReviewsSearchJsonRequest withReviewer(String reviewer) {
+        this.reviewer = reviewer;
         return this;
     }
     

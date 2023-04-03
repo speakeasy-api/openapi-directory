@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteNetworkAppliancePrefixesDelegatedStaticRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public DeleteNetworkAppliancePrefixesDelegatedStaticRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
     
-    public DeleteNetworkAppliancePrefixesDelegatedStaticPathParams pathParams;
-    public DeleteNetworkAppliancePrefixesDelegatedStaticRequest withPathParams(DeleteNetworkAppliancePrefixesDelegatedStaticPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=staticDelegatedPrefixId")
+    public String staticDelegatedPrefixId;
+    public DeleteNetworkAppliancePrefixesDelegatedStaticRequest withStaticDelegatedPrefixId(String staticDelegatedPrefixId) {
+        this.staticDelegatedPrefixId = staticDelegatedPrefixId;
         return this;
     }
     

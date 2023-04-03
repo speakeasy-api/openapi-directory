@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LatestPackageRequest {
-    
-    public LatestPackagePathParams pathParams;
-    public LatestPackageRequest withPathParams(LatestPackagePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public LatestPackageSecurity security;
-    public LatestPackageRequest withSecurity(LatestPackageSecurity security) {
-        this.security = security;
+    /**
+     * package_name - latest, nevra - exact version
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=package_name")
+    public String packageName;
+    public LatestPackageRequest withPackageName(String packageName) {
+        this.packageName = packageName;
         return this;
     }
     

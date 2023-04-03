@@ -164,20 +164,24 @@ public class SDK {
 		
 	}
 
-    public org.openapis.openapi.models.operations.FetchMessagingCountryResponse fetchMessagingCountry(org.openapis.openapi.models.operations.FetchMessagingCountryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchMessagingCountryResponse fetchMessagingCountry(org.openapis.openapi.models.operations.FetchMessagingCountryRequest request, org.openapis.openapi.models.operations.FetchMessagingCountrySecurity security) throws Exception {
+        return this.fetchMessagingCountry(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.FetchMessagingCountryResponse fetchMessagingCountry(org.openapis.openapi.models.operations.FetchMessagingCountryRequest request, org.openapis.openapi.models.operations.FetchMessagingCountrySecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_MESSAGING_COUNTRY_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchMessagingCountryPathParams.class, baseUrl, "/v1/Messaging/Countries/{IsoCountry}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchMessagingCountryRequest.class, baseUrl, "/v1/Messaging/Countries/{IsoCountry}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -201,20 +205,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.FetchPhoneNumberCountryResponse fetchPhoneNumberCountry(org.openapis.openapi.models.operations.FetchPhoneNumberCountryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchPhoneNumberCountryResponse fetchPhoneNumberCountry(org.openapis.openapi.models.operations.FetchPhoneNumberCountryRequest request, org.openapis.openapi.models.operations.FetchPhoneNumberCountrySecurity security) throws Exception {
+        return this.fetchPhoneNumberCountry(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.FetchPhoneNumberCountryResponse fetchPhoneNumberCountry(org.openapis.openapi.models.operations.FetchPhoneNumberCountryRequest request, org.openapis.openapi.models.operations.FetchPhoneNumberCountrySecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_PHONE_NUMBER_COUNTRY_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchPhoneNumberCountryPathParams.class, baseUrl, "/v1/PhoneNumbers/Countries/{IsoCountry}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchPhoneNumberCountryRequest.class, baseUrl, "/v1/PhoneNumbers/Countries/{IsoCountry}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -238,20 +246,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.FetchVoiceCountryResponse fetchVoiceCountry(org.openapis.openapi.models.operations.FetchVoiceCountryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchVoiceCountryResponse fetchVoiceCountry(org.openapis.openapi.models.operations.FetchVoiceCountryRequest request, org.openapis.openapi.models.operations.FetchVoiceCountrySecurity security) throws Exception {
+        return this.fetchVoiceCountry(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.FetchVoiceCountryResponse fetchVoiceCountry(org.openapis.openapi.models.operations.FetchVoiceCountryRequest request, org.openapis.openapi.models.operations.FetchVoiceCountrySecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_VOICE_COUNTRY_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchVoiceCountryPathParams.class, baseUrl, "/v1/Voice/Countries/{IsoCountry}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchVoiceCountryRequest.class, baseUrl, "/v1/Voice/Countries/{IsoCountry}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -275,20 +287,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.FetchVoiceNumberResponse fetchVoiceNumber(org.openapis.openapi.models.operations.FetchVoiceNumberRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchVoiceNumberResponse fetchVoiceNumber(org.openapis.openapi.models.operations.FetchVoiceNumberRequest request, org.openapis.openapi.models.operations.FetchVoiceNumberSecurity security) throws Exception {
+        return this.fetchVoiceNumber(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.FetchVoiceNumberResponse fetchVoiceNumber(org.openapis.openapi.models.operations.FetchVoiceNumberRequest request, org.openapis.openapi.models.operations.FetchVoiceNumberSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_VOICE_NUMBER_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchVoiceNumberPathParams.class, baseUrl, "/v1/Voice/Numbers/{Number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchVoiceNumberRequest.class, baseUrl, "/v1/Voice/Numbers/{Number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -312,10 +328,14 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.ListMessagingCountryResponse listMessagingCountry(org.openapis.openapi.models.operations.ListMessagingCountryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListMessagingCountryResponse listMessagingCountry(org.openapis.openapi.models.operations.ListMessagingCountryRequest request, org.openapis.openapi.models.operations.ListMessagingCountrySecurity security) throws Exception {
+        return this.listMessagingCountry(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.ListMessagingCountryResponse listMessagingCountry(org.openapis.openapi.models.operations.ListMessagingCountryRequest request, org.openapis.openapi.models.operations.ListMessagingCountrySecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_MESSAGING_COUNTRY_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Messaging/Countries");
@@ -324,14 +344,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListMessagingCountryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListMessagingCountryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -355,10 +375,14 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.ListPhoneNumberCountryResponse listPhoneNumberCountry(org.openapis.openapi.models.operations.ListPhoneNumberCountryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListPhoneNumberCountryResponse listPhoneNumberCountry(org.openapis.openapi.models.operations.ListPhoneNumberCountryRequest request, org.openapis.openapi.models.operations.ListPhoneNumberCountrySecurity security) throws Exception {
+        return this.listPhoneNumberCountry(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.ListPhoneNumberCountryResponse listPhoneNumberCountry(org.openapis.openapi.models.operations.ListPhoneNumberCountryRequest request, org.openapis.openapi.models.operations.ListPhoneNumberCountrySecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_PHONE_NUMBER_COUNTRY_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/PhoneNumbers/Countries");
@@ -367,14 +391,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListPhoneNumberCountryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListPhoneNumberCountryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -398,10 +422,14 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.ListVoiceCountryResponse listVoiceCountry(org.openapis.openapi.models.operations.ListVoiceCountryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListVoiceCountryResponse listVoiceCountry(org.openapis.openapi.models.operations.ListVoiceCountryRequest request, org.openapis.openapi.models.operations.ListVoiceCountrySecurity security) throws Exception {
+        return this.listVoiceCountry(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.ListVoiceCountryResponse listVoiceCountry(org.openapis.openapi.models.operations.ListVoiceCountryRequest request, org.openapis.openapi.models.operations.ListVoiceCountrySecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_VOICE_COUNTRY_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Voice/Countries");
@@ -410,14 +438,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListVoiceCountryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListVoiceCountryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

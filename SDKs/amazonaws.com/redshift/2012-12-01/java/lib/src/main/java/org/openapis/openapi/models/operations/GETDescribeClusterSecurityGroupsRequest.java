@@ -4,20 +4,119 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeClusterSecurityGroupsRequest {
-    
-    public GETDescribeClusterSecurityGroupsQueryParams queryParams;
-    public GETDescribeClusterSecurityGroupsRequest withQueryParams(GETDescribeClusterSecurityGroupsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeClusterSecurityGroupsActionEnum action;
+    public GETDescribeClusterSecurityGroupsRequest withAction(GETDescribeClusterSecurityGroupsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The name of a cluster security group for which you are requesting details. You must specify either the &lt;b&gt;Marker&lt;/b&gt; parameter or a &lt;b&gt;ClusterSecurityGroupName&lt;/b&gt; parameter, but not both. &lt;/p&gt; &lt;p&gt; Example: &lt;code&gt;securitygroup1&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterSecurityGroupName")
+    public String clusterSecurityGroupName;
+    public GETDescribeClusterSecurityGroupsRequest withClusterSecurityGroupName(String clusterSecurityGroupName) {
+        this.clusterSecurityGroupName = clusterSecurityGroupName;
+        return this;
+    }
     
-    public GETDescribeClusterSecurityGroupsHeaders headers;
-    public GETDescribeClusterSecurityGroupsRequest withHeaders(GETDescribeClusterSecurityGroupsHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;An optional parameter that specifies the starting point to return a set of response records. When the results of a &lt;a&gt;DescribeClusterSecurityGroups&lt;/a&gt; request exceed the value specified in &lt;code&gt;MaxRecords&lt;/code&gt;, Amazon Web Services returns a value in the &lt;code&gt;Marker&lt;/code&gt; field of the response. You can retrieve the next set of response records by providing the returned marker value in the &lt;code&gt;Marker&lt;/code&gt; parameter and retrying the request. &lt;/p&gt; &lt;p&gt;Constraints: You must specify either the &lt;b&gt;ClusterSecurityGroupName&lt;/b&gt; parameter or the &lt;b&gt;Marker&lt;/b&gt; parameter, but not both. &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
+    public String marker;
+    public GETDescribeClusterSecurityGroupsRequest withMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The maximum number of response records to return in each call. If the number of remaining response records exceeds the specified &lt;code&gt;MaxRecords&lt;/code&gt; value, a value is returned in a &lt;code&gt;marker&lt;/code&gt; field of the response. You can retrieve the next set of records by retrying the command with the returned marker value. &lt;/p&gt; &lt;p&gt;Default: &lt;code&gt;100&lt;/code&gt; &lt;/p&gt; &lt;p&gt;Constraints: minimum 20, maximum 100.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
+    public Long maxRecords;
+    public GETDescribeClusterSecurityGroupsRequest withMaxRecords(Long maxRecords) {
+        this.maxRecords = maxRecords;
+        return this;
+    }
+    
+    /**
+     * A tag key or keys for which you want to return all matching cluster security groups that are associated with the specified key or keys. For example, suppose that you have security groups that are tagged with keys called &lt;code&gt;owner&lt;/code&gt; and &lt;code&gt;environment&lt;/code&gt;. If you specify both of these tag keys in the request, Amazon Redshift returns a response with the security groups that have either or both of these tag keys associated with them.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TagKeys")
+    public String[] tagKeys;
+    public GETDescribeClusterSecurityGroupsRequest withTagKeys(String[] tagKeys) {
+        this.tagKeys = tagKeys;
+        return this;
+    }
+    
+    /**
+     * A tag value or values for which you want to return all matching cluster security groups that are associated with the specified tag value or values. For example, suppose that you have security groups that are tagged with values called &lt;code&gt;admin&lt;/code&gt; and &lt;code&gt;test&lt;/code&gt;. If you specify both of these tag values in the request, Amazon Redshift returns a response with the security groups that have either or both of these tag values associated with them.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TagValues")
+    public String[] tagValues;
+    public GETDescribeClusterSecurityGroupsRequest withTagValues(String[] tagValues) {
+        this.tagValues = tagValues;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeClusterSecurityGroupsVersionEnum version;
+    public GETDescribeClusterSecurityGroupsRequest withVersion(GETDescribeClusterSecurityGroupsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeClusterSecurityGroupsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeClusterSecurityGroupsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeClusterSecurityGroupsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeClusterSecurityGroupsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeClusterSecurityGroupsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeClusterSecurityGroupsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeClusterSecurityGroupsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

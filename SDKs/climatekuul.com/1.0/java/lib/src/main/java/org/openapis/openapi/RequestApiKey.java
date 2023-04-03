@@ -40,10 +40,21 @@ public class RequestApiKey {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RequestApiKeyResponse requestApiKey(org.openapis.openapi.models.operations.RequestApiKeyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RequestApiKeyResponse requestApiKey(org.openapis.openapi.models.operations.RequestApiKeyRequestBody request) throws Exception {
+        return this.requestApiKey(request, null);
+    }
+
+    /**
+     * requestApiKey
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.RequestApiKeyResponse requestApiKey(org.openapis.openapi.models.operations.RequestApiKeyRequestBody request, String serverURL) throws Exception {
         String baseUrl = REQUEST_API_KEY_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/requestApiKey");

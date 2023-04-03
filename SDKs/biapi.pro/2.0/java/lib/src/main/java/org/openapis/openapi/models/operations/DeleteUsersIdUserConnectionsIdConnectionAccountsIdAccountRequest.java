@@ -4,20 +4,37 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteUsersIdUserConnectionsIdConnectionAccountsIdAccountRequest {
-    
-    public DeleteUsersIdUserConnectionsIdConnectionAccountsIdAccountPathParams pathParams;
-    public DeleteUsersIdUserConnectionsIdConnectionAccountsIdAccountRequest withPathParams(DeleteUsersIdUserConnectionsIdConnectionAccountsIdAccountPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public DeleteUsersIdUserConnectionsIdConnectionAccountsIdAccountRequest withExpand(String expand) {
+        this.expand = expand;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_account")
+    public Long idAccount;
+    public DeleteUsersIdUserConnectionsIdConnectionAccountsIdAccountRequest withIdAccount(Long idAccount) {
+        this.idAccount = idAccount;
+        return this;
+    }
     
-    public DeleteUsersIdUserConnectionsIdConnectionAccountsIdAccountQueryParams queryParams;
-    public DeleteUsersIdUserConnectionsIdConnectionAccountsIdAccountRequest withQueryParams(DeleteUsersIdUserConnectionsIdConnectionAccountsIdAccountQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connection")
+    public Long idConnection;
+    public DeleteUsersIdUserConnectionsIdConnectionAccountsIdAccountRequest withIdConnection(Long idConnection) {
+        this.idConnection = idConnection;
+        return this;
+    }
+    
+    /**
+     * Hint: you can use 'me' or 'all'
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
+    public String idUser;
+    public DeleteUsersIdUserConnectionsIdConnectionAccountsIdAccountRequest withIdUser(String idUser) {
+        this.idUser = idUser;
         return this;
     }
     

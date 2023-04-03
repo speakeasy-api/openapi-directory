@@ -4,27 +4,39 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MarkScoreCommentUnresolvedRequest {
-    
-    public MarkScoreCommentUnresolvedPathParams pathParams;
-    public MarkScoreCommentUnresolvedRequest withPathParams(MarkScoreCommentUnresolvedPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of a sheet music comment
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment")
+    public String comment;
+    public MarkScoreCommentUnresolvedRequest withComment(String comment) {
+        this.comment = comment;
         return this;
     }
     
-    
-    public MarkScoreCommentUnresolvedQueryParams queryParams;
-    public MarkScoreCommentUnresolvedRequest withQueryParams(MarkScoreCommentUnresolvedQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Unique identifier of the score document. This can be a Flat Score unique identifier (i.e. `ScoreDetails.id`) or, if the score is also a Google Drive file, the Drive file unique identifier prefixed with `drive-` (e.g. `drive-0B000000000`).
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=score")
+    public String score;
+    public MarkScoreCommentUnresolvedRequest withScore(String score) {
+        this.score = score;
         return this;
     }
     
-    
-    public MarkScoreCommentUnresolvedSecurity security;
-    public MarkScoreCommentUnresolvedRequest withSecurity(MarkScoreCommentUnresolvedSecurity security) {
-        this.security = security;
+    /**
+     * This sharing key must be specified to access to a score or collection with a `privacy` mode set to `privateLink` and the current user is not a collaborator of the document.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sharingKey")
+    public String sharingKey;
+    public MarkScoreCommentUnresolvedRequest withSharingKey(String sharingKey) {
+        this.sharingKey = sharingKey;
         return this;
     }
     

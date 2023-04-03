@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ApplicationsCreateRequest {
-    
-    public ApplicationsCreatePathParams pathParams;
-    public ApplicationsCreateRequest withPathParams(ApplicationsCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ApplicationsCreateQueryParams queryParams;
-    public ApplicationsCreateRequest withQueryParams(ApplicationsCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * The parameters for creating an application.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ApplicationCreateParameters request;
-    public ApplicationsCreateRequest withRequest(org.openapis.openapi.models.shared.ApplicationCreateParameters request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ApplicationCreateParameters applicationCreateParameters;
+    public ApplicationsCreateRequest withApplicationCreateParameters(org.openapis.openapi.models.shared.ApplicationCreateParameters applicationCreateParameters) {
+        this.applicationCreateParameters = applicationCreateParameters;
+        return this;
+    }
+    
+    /**
+     * Client API version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public ApplicationsCreateRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
+    
+    /**
+     * The tenant ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tenantID")
+    public String tenantID;
+    public ApplicationsCreateRequest withTenantID(String tenantID) {
+        this.tenantID = tenantID;
         return this;
     }
     

@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.SendSSHPublicKeyXAmzTargetEnum;
-import org.openapis.openapi.models.operations.SendSSHPublicKeyHeaders;
 import org.openapis.openapi.models.operations.SendSSHPublicKeyRequest;
 import org.openapis.openapi.models.operations.SendSSHPublicKeyResponse;
 import org.openapis.openapi.models.shared.SendSSHPublicKeyRequest;
@@ -15,30 +14,26 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             SendSSHPublicKeyRequest req = new SendSSHPublicKeyRequest() {{
-                headers = new SendSSHPublicKeyHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "AWSEC2InstanceConnectService.SendSSHPublicKey";
+                sendSSHPublicKeyRequest = new SendSSHPublicKeyRequest() {{
+                    availabilityZone = "corrupti";
+                    instanceId = "provident";
+                    instanceOSUser = "distinctio";
+                    sshPublicKey = "quibusdam";
                 }};
-                request = new SendSSHPublicKeyRequest() {{
-                    availabilityZone = "illum";
-                    instanceId = "vel";
-                    instanceOSUser = "error";
-                    sshPublicKey = "deserunt";
-                }};
-            }};            
+                xAmzAlgorithm = "unde";
+                xAmzContentSha256 = "nulla";
+                xAmzCredential = "corrupti";
+                xAmzDate = "illum";
+                xAmzSecurityToken = "vel";
+                xAmzSignature = "error";
+                xAmzSignedHeaders = "deserunt";
+                xAmzTarget = "AWSEC2InstanceConnectService.SendSSHPublicKey";
+            }}            
 
             SendSSHPublicKeyResponse res = sdk.sendSSHPublicKey(req);
 

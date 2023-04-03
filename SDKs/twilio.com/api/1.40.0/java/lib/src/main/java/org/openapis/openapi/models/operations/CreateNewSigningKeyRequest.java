@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateNewSigningKeyRequest {
-    
-    public CreateNewSigningKeyPathParams pathParams;
-    public CreateNewSigningKeyRequest withPathParams(CreateNewSigningKeyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will be responsible for the new Key resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public CreateNewSigningKeyRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateNewSigningKeyCreateNewSigningKeyRequest request;
-    public CreateNewSigningKeyRequest withRequest(CreateNewSigningKeyCreateNewSigningKeyRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateNewSigningKeySecurity security;
-    public CreateNewSigningKeyRequest withSecurity(CreateNewSigningKeySecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateNewSigningKeyRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateNewSigningKeyCreateNewSigningKeyRequest requestBody;
+    public CreateNewSigningKeyRequest withRequestBody(CreateNewSigningKeyCreateNewSigningKeyRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateEmployeeRequest {
-    
-    public CreateEmployeePathParams pathParams;
-    public CreateEmployeeRequest withPathParams(CreateEmployeePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.EmployeeCreateRequest employeeCreateRequest;
+    public CreateEmployeeRequest withEmployeeCreateRequest(org.openapis.openapi.models.shared.EmployeeCreateRequest employeeCreateRequest) {
+        this.employeeCreateRequest = employeeCreateRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.EmployeeCreateRequest request;
-    public CreateEmployeeRequest withRequest(org.openapis.openapi.models.shared.EmployeeCreateRequest request) {
-        this.request = request;
+    /**
+     * The unique identifier of the group in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public String groupId;
+    public CreateEmployeeRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiActivityRequest {
-    
-    public GetApiActivityQueryParams queryParams;
-    public GetApiActivityRequest withQueryParams(GetApiActivityQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * How many API Events should be retrieved in a single request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetApiActivityRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
-    
-    public GetApiActivitySecurity security;
-    public GetApiActivityRequest withSecurity(GetApiActivitySecurity security) {
-        this.security = security;
+    /**
+     * How far into the collection of API Events should the response start
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetApiActivityRequest withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     

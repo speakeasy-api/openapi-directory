@@ -29,7 +29,7 @@ public class BabelFeeNewOfferController {
 		this._genVersion = genVersion;
 	}
 
-    public org.openapis.openapi.models.operations.DoCreateBabelBoxResponse doCreateBabelBox(org.openapis.openapi.models.operations.DoCreateBabelBoxRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DoCreateBabelBoxResponse doCreateBabelBox(java.util.Map<String, java.util.Map<String, Object>> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/mosaik/babelfee/newoffer/doit");
         
@@ -95,13 +95,13 @@ public class BabelFeeNewOfferController {
 
     public org.openapis.openapi.models.operations.ErgoPayCreateBabelBoxResponse ergoPayCreateBabelBox(org.openapis.openapi.models.operations.ErgoPayCreateBabelBoxRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErgoPayCreateBabelBoxPathParams.class, baseUrl, "/createbabel/{address}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ErgoPayCreateBabelBoxRequest.class, baseUrl, "/createbabel/{address}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ErgoPayCreateBabelBoxQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ErgoPayCreateBabelBoxRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -217,7 +217,7 @@ public class BabelFeeNewOfferController {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.ReplaceTokenAmountInputFieldsResponse replaceTokenAmountInputFields(org.openapis.openapi.models.operations.ReplaceTokenAmountInputFieldsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReplaceTokenAmountInputFieldsResponse replaceTokenAmountInputFields(java.util.Map<String, java.util.Map<String, Object>> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/mosaik/babelfee/newoffer/new-input");
         

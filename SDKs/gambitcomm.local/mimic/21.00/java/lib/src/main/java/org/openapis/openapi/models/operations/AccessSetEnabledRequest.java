@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccessSetEnabledRequest {
-    
-    public AccessSetEnabledPathParams pathParams;
-    public AccessSetEnabledRequest withPathParams(AccessSetEnabledPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * indicator
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enabledOrNot")
+    public String enabledOrNot;
+    public AccessSetEnabledRequest withEnabledOrNot(String enabledOrNot) {
+        this.enabledOrNot = enabledOrNot;
         return this;
     }
     

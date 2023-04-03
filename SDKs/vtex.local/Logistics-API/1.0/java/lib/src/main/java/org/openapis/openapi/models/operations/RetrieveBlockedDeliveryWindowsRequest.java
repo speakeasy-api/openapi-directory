@@ -4,20 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveBlockedDeliveryWindowsRequest {
-    
-    public RetrieveBlockedDeliveryWindowsPathParams pathParams;
-    public RetrieveBlockedDeliveryWindowsRequest withPathParams(RetrieveBlockedDeliveryWindowsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public RetrieveBlockedDeliveryWindowsRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public RetrieveBlockedDeliveryWindowsRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public RetrieveBlockedDeliveryWindowsHeaders headers;
-    public RetrieveBlockedDeliveryWindowsRequest withHeaders(RetrieveBlockedDeliveryWindowsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=carrierId")
+    public String carrierId;
+    public RetrieveBlockedDeliveryWindowsRequest withCarrierId(String carrierId) {
+        this.carrierId = carrierId;
         return this;
     }
     

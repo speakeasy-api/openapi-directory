@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestStartTestRunRequest {
-    
-    public TestStartTestRunPathParams pathParams;
-    public TestStartTestRunRequest withPathParams(TestStartTestRunPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Option required to start the test run
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public TestStartTestRunTestCloudStartTestRunOptions request;
-    public TestStartTestRunRequest withRequest(TestStartTestRunTestCloudStartTestRunOptions request) {
-        this.request = request;
+    public TestStartTestRunTestCloudStartTestRunOptions requestBody;
+    public TestStartTestRunRequest withRequestBody(TestStartTestRunTestCloudStartTestRunOptions requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public TestStartTestRunRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public TestStartTestRunSecurity security;
-    public TestStartTestRunRequest withSecurity(TestStartTestRunSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public TestStartTestRunRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
+    
+    /**
+     * The ID of the test run
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=test_run_id")
+    public String testRunId;
+    public TestStartTestRunRequest withTestRunId(String testRunId) {
+        this.testRunId = testRunId;
         return this;
     }
     

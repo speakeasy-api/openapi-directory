@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateInlineScriptTagRequest {
-    
-    public UpdateInlineScriptTagPathParams pathParams;
-    public UpdateInlineScriptTagRequest withPathParams(UpdateInlineScriptTagPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * \u66f4\u65b0\u3059\u308b\u30b9\u30af\u30ea\u30d7\u30c8\u30bf\u30b0\u306e\u60c5\u5831
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateInlineScriptTagRequestBody request;
-    public UpdateInlineScriptTagRequest withRequest(UpdateInlineScriptTagRequestBody request) {
-        this.request = request;
+    public UpdateInlineScriptTagRequestBody requestBody;
+    public UpdateInlineScriptTagRequest withRequestBody(UpdateInlineScriptTagRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateInlineScriptTagSecurity security;
-    public UpdateInlineScriptTagRequest withSecurity(UpdateInlineScriptTagSecurity security) {
-        this.security = security;
+    /**
+     * \u30a4\u30f3\u30e9\u30a4\u30f3\u30b9\u30af\u30ea\u30d7\u30c8\u30bf\u30b0ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=inlineScriptTagId")
+    public Long inlineScriptTagId;
+    public UpdateInlineScriptTagRequest withInlineScriptTagId(Long inlineScriptTagId) {
+        this.inlineScriptTagId = inlineScriptTagId;
         return this;
     }
     

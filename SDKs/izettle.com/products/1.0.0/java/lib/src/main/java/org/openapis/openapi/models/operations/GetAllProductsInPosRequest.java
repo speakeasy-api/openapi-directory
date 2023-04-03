@@ -4,20 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllProductsInPosRequest {
-    
-    public GetAllProductsInPosPathParams pathParams;
-    public GetAllProductsInPosRequest withPathParams(GetAllProductsInPosPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetAllProductsInPosSecurity security;
-    public GetAllProductsInPosRequest withSecurity(GetAllProductsInPosSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationUuid")
+    public String organizationUuid;
+    public GetAllProductsInPosRequest withOrganizationUuid(String organizationUuid) {
+        this.organizationUuid = organizationUuid;
         return this;
     }
     

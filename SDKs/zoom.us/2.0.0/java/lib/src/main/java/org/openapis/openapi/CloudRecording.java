@@ -51,25 +51,26 @@ public class CloudRecording {
      * To list recordings of a master account, the scope must be `account:read:admin` and the value of `accountId` should be `me`.&lt;br&gt;  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`&lt;br&gt;
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAccountCloudRecordingResponse getAccountCloudRecording(org.openapis.openapi.models.operations.GetAccountCloudRecordingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetAccountCloudRecordingResponse getAccountCloudRecording(org.openapis.openapi.models.operations.GetAccountCloudRecordingRequest request, org.openapis.openapi.models.operations.GetAccountCloudRecordingSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAccountCloudRecordingPathParams.class, baseUrl, "/accounts/{accountId}/recordings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAccountCloudRecordingRequest.class, baseUrl, "/accounts/{accountId}/recordings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAccountCloudRecordingQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAccountCloudRecordingRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -122,7 +123,7 @@ public class CloudRecording {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListArchivedFilesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListArchivedFilesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -171,24 +172,25 @@ public class CloudRecording {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MeetingRecordingRegistrantCreateResponse meetingRecordingRegistrantCreate(org.openapis.openapi.models.operations.MeetingRecordingRegistrantCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MeetingRecordingRegistrantCreateResponse meetingRecordingRegistrantCreate(org.openapis.openapi.models.operations.MeetingRecordingRegistrantCreateRequest request, org.openapis.openapi.models.operations.MeetingRecordingRegistrantCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingRecordingRegistrantCreatePathParams.class, baseUrl, "/meetings/{meetingId}/recordings/registrants", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingRecordingRegistrantCreateRequest.class, baseUrl, "/meetings/{meetingId}/recordings/registrants", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -229,24 +231,25 @@ public class CloudRecording {
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MeetingRecordingRegistrantStatusResponse meetingRecordingRegistrantStatus(org.openapis.openapi.models.operations.MeetingRecordingRegistrantStatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MeetingRecordingRegistrantStatusResponse meetingRecordingRegistrantStatus(org.openapis.openapi.models.operations.MeetingRecordingRegistrantStatusRequest request, org.openapis.openapi.models.operations.MeetingRecordingRegistrantStatusSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingRecordingRegistrantStatusPathParams.class, baseUrl, "/meetings/{meetingId}/recordings/registrants/status", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingRecordingRegistrantStatusRequest.class, baseUrl, "/meetings/{meetingId}/recordings/registrants/status", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -274,25 +277,26 @@ public class CloudRecording {
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MeetingRecordingRegistrantsResponse meetingRecordingRegistrants(org.openapis.openapi.models.operations.MeetingRecordingRegistrantsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MeetingRecordingRegistrantsResponse meetingRecordingRegistrants(org.openapis.openapi.models.operations.MeetingRecordingRegistrantsRequest request, org.openapis.openapi.models.operations.MeetingRecordingRegistrantsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingRecordingRegistrantsPathParams.class, baseUrl, "/meetings/{meetingId}/recordings/registrants", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingRecordingRegistrantsRequest.class, baseUrl, "/meetings/{meetingId}/recordings/registrants", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MeetingRecordingRegistrantsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MeetingRecordingRegistrantsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -333,25 +337,26 @@ public class CloudRecording {
      * * Cloud Recording should be enabled on the user's account.&lt;br&gt;
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecordingDeleteResponse recordingDelete(org.openapis.openapi.models.operations.RecordingDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecordingDeleteResponse recordingDelete(org.openapis.openapi.models.operations.RecordingDeleteRequest request, org.openapis.openapi.models.operations.RecordingDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecordingDeletePathParams.class, baseUrl, "/meetings/{meetingId}/recordings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecordingDeleteRequest.class, baseUrl, "/meetings/{meetingId}/recordings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecordingDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecordingDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -376,25 +381,26 @@ public class CloudRecording {
      *  &lt;br&gt;
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecordingDeleteOneResponse recordingDeleteOne(org.openapis.openapi.models.operations.RecordingDeleteOneRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecordingDeleteOneResponse recordingDeleteOne(org.openapis.openapi.models.operations.RecordingDeleteOneRequest request, org.openapis.openapi.models.operations.RecordingDeleteOneSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecordingDeleteOnePathParams.class, baseUrl, "/meetings/{meetingId}/recordings/{recordingId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecordingDeleteOneRequest.class, baseUrl, "/meetings/{meetingId}/recordings/{recordingId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecordingDeleteOneQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecordingDeleteOneRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -425,25 +431,26 @@ public class CloudRecording {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecordingGetResponse recordingGet(org.openapis.openapi.models.operations.RecordingGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecordingGetResponse recordingGet(org.openapis.openapi.models.operations.RecordingGetRequest request, org.openapis.openapi.models.operations.RecordingGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecordingGetPathParams.class, baseUrl, "/meetings/{meetingId}/recordings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecordingGetRequest.class, baseUrl, "/meetings/{meetingId}/recordings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecordingGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecordingGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -483,24 +490,25 @@ public class CloudRecording {
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`&lt;br&gt;
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecordingRegistrantQuestionUpdateResponse recordingRegistrantQuestionUpdate(org.openapis.openapi.models.operations.RecordingRegistrantQuestionUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecordingRegistrantQuestionUpdateResponse recordingRegistrantQuestionUpdate(org.openapis.openapi.models.operations.RecordingRegistrantQuestionUpdateRequest request, org.openapis.openapi.models.operations.RecordingRegistrantQuestionUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecordingRegistrantQuestionUpdatePathParams.class, baseUrl, "/meetings/{meetingId}/recordings/registrants/questions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecordingRegistrantQuestionUpdateRequest.class, baseUrl, "/meetings/{meetingId}/recordings/registrants/questions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -528,19 +536,20 @@ public class CloudRecording {
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecordingRegistrantsQuestionsGetResponse recordingRegistrantsQuestionsGet(org.openapis.openapi.models.operations.RecordingRegistrantsQuestionsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecordingRegistrantsQuestionsGetResponse recordingRegistrantsQuestionsGet(org.openapis.openapi.models.operations.RecordingRegistrantsQuestionsGetRequest request, org.openapis.openapi.models.operations.RecordingRegistrantsQuestionsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecordingRegistrantsQuestionsGetPathParams.class, baseUrl, "/meetings/{meetingId}/recordings/registrants/questions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecordingRegistrantsQuestionsGetRequest.class, baseUrl, "/meetings/{meetingId}/recordings/registrants/questions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -578,19 +587,20 @@ public class CloudRecording {
      * 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light` &lt;br&gt;
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecordingSettingUpdateResponse recordingSettingUpdate(org.openapis.openapi.models.operations.RecordingSettingUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecordingSettingUpdateResponse recordingSettingUpdate(org.openapis.openapi.models.operations.RecordingSettingUpdateRequest request, org.openapis.openapi.models.operations.RecordingSettingUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecordingSettingUpdatePathParams.class, baseUrl, "/meetings/{meetingId}/recordings/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecordingSettingUpdateRequest.class, baseUrl, "/meetings/{meetingId}/recordings/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -628,24 +638,25 @@ public class CloudRecording {
      * 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light` &lt;br&gt;
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecordingSettingsUpdateResponse recordingSettingsUpdate(org.openapis.openapi.models.operations.RecordingSettingsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecordingSettingsUpdateResponse recordingSettingsUpdate(org.openapis.openapi.models.operations.RecordingSettingsUpdateRequest request, org.openapis.openapi.models.operations.RecordingSettingsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecordingSettingsUpdatePathParams.class, baseUrl, "/meetings/{meetingId}/recordings/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecordingSettingsUpdateRequest.class, baseUrl, "/meetings/{meetingId}/recordings/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -672,24 +683,25 @@ public class CloudRecording {
      * **Prerequisites**:&lt;br&gt;
      * * A Pro user with Cloud Recording enabled.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecordingStatusUpdateResponse recordingStatusUpdate(org.openapis.openapi.models.operations.RecordingStatusUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecordingStatusUpdateResponse recordingStatusUpdate(org.openapis.openapi.models.operations.RecordingStatusUpdateRequest request, org.openapis.openapi.models.operations.RecordingStatusUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecordingStatusUpdatePathParams.class, baseUrl, "/meetings/{meetingId}/recordings/status", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecordingStatusUpdateRequest.class, baseUrl, "/meetings/{meetingId}/recordings/status", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -715,24 +727,25 @@ public class CloudRecording {
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`&lt;br&gt;
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecordingStatusUpdateOneResponse recordingStatusUpdateOne(org.openapis.openapi.models.operations.RecordingStatusUpdateOneRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecordingStatusUpdateOneResponse recordingStatusUpdateOne(org.openapis.openapi.models.operations.RecordingStatusUpdateOneRequest request, org.openapis.openapi.models.operations.RecordingStatusUpdateOneSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecordingStatusUpdateOnePathParams.class, baseUrl, "/meetings/{meetingId}/recordings/{recordingId}/status", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecordingStatusUpdateOneRequest.class, baseUrl, "/meetings/{meetingId}/recordings/{recordingId}/status", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -765,25 +778,26 @@ public class CloudRecording {
      * * Pro or a higher plan.
      * * Cloud Recording must be enabled on the user's account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecordingsListResponse recordingsList(org.openapis.openapi.models.operations.RecordingsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecordingsListResponse recordingsList(org.openapis.openapi.models.operations.RecordingsListRequest request, org.openapis.openapi.models.operations.RecordingsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecordingsListPathParams.class, baseUrl, "/users/{userId}/recordings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecordingsListRequest.class, baseUrl, "/users/{userId}/recordings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecordingsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecordingsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

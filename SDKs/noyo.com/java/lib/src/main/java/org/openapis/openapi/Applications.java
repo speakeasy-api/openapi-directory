@@ -40,7 +40,7 @@ public class Applications {
      */
     public org.openapis.openapi.models.operations.CancelGroupApplicationResponse cancelGroupApplication(org.openapis.openapi.models.operations.CancelGroupApplicationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelGroupApplicationPathParams.class, baseUrl, "/api/v1/applications/{application_id}/{version}/cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelGroupApplicationRequest.class, baseUrl, "/api/v1/applications/{application_id}/{version}/cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -79,12 +79,12 @@ public class Applications {
      */
     public org.openapis.openapi.models.operations.CreateGroupApplicationResponse createGroupApplication(org.openapis.openapi.models.operations.CreateGroupApplicationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateGroupApplicationPathParams.class, baseUrl, "/api/v1/groups/{group_id}/applications", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateGroupApplicationRequest.class, baseUrl, "/api/v1/groups/{group_id}/applications", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "applicationCreateRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -123,12 +123,12 @@ public class Applications {
      */
     public org.openapis.openapi.models.operations.EditGroupApplicationResponse editGroupApplication(org.openapis.openapi.models.operations.EditGroupApplicationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditGroupApplicationPathParams.class, baseUrl, "/api/v1/applications/{application_id}/{version}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditGroupApplicationRequest.class, baseUrl, "/api/v1/applications/{application_id}/{version}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "applicationEditRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -173,7 +173,7 @@ public class Applications {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAllApplicationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAllApplicationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -212,7 +212,7 @@ public class Applications {
      */
     public org.openapis.openapi.models.operations.GetGroupApplicationResponse getGroupApplication(org.openapis.openapi.models.operations.GetGroupApplicationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGroupApplicationPathParams.class, baseUrl, "/api/v1/applications/{application_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGroupApplicationRequest.class, baseUrl, "/api/v1/applications/{application_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -251,13 +251,13 @@ public class Applications {
      */
     public org.openapis.openapi.models.operations.GetGroupApplicationsResponse getGroupApplications(org.openapis.openapi.models.operations.GetGroupApplicationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGroupApplicationsPathParams.class, baseUrl, "/api/v1/groups/{group_id}/applications", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGroupApplicationsRequest.class, baseUrl, "/api/v1/groups/{group_id}/applications", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGroupApplicationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGroupApplicationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -296,7 +296,7 @@ public class Applications {
      */
     public org.openapis.openapi.models.operations.SubmitGroupApplicationResponse submitGroupApplication(org.openapis.openapi.models.operations.SubmitGroupApplicationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubmitGroupApplicationPathParams.class, baseUrl, "/api/v1/applications/{application_id}/{version}/submit", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubmitGroupApplicationRequest.class, baseUrl, "/api/v1/applications/{application_id}/{version}/submit", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -343,7 +343,7 @@ public class Applications {
      */
     public org.openapis.openapi.models.operations.ValidateGroupApplicationResponse validateGroupApplication(org.openapis.openapi.models.operations.ValidateGroupApplicationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ValidateGroupApplicationPathParams.class, baseUrl, "/api/v1/applications/{application_id}/validate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ValidateGroupApplicationRequest.class, baseUrl, "/api/v1/applications/{application_id}/validate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

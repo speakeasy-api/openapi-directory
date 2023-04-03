@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PayorEmailOptOutRequest {
-    
-    public PayorEmailOptOutPathParams pathParams;
-    public PayorEmailOptOutRequest withPathParams(PayorEmailOptOutPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Reminder Emails Opt-Out Request
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PayorEmailOptOutRequest request;
-    public PayorEmailOptOutRequest withRequest(org.openapis.openapi.models.shared.PayorEmailOptOutRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PayorEmailOptOutRequest payorEmailOptOutRequest;
+    public PayorEmailOptOutRequest withPayorEmailOptOutRequest(org.openapis.openapi.models.shared.PayorEmailOptOutRequest payorEmailOptOutRequest) {
+        this.payorEmailOptOutRequest = payorEmailOptOutRequest;
+        return this;
+    }
+    
+    /**
+     * The Payor Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payorId")
+    public String payorId;
+    public PayorEmailOptOutRequest withPayorId(String payorId) {
+        this.payorId = payorId;
         return this;
     }
     

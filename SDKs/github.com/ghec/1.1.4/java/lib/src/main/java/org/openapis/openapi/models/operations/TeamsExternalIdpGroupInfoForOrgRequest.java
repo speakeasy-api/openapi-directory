@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsExternalIdpGroupInfoForOrgRequest {
+    /**
+     * The unique identifier of the group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public Long groupId;
+    public TeamsExternalIdpGroupInfoForOrgRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
+        return this;
+    }
     
-    public TeamsExternalIdpGroupInfoForOrgPathParams pathParams;
-    public TeamsExternalIdpGroupInfoForOrgRequest withPathParams(TeamsExternalIdpGroupInfoForOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public TeamsExternalIdpGroupInfoForOrgRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

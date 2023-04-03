@@ -18,10 +18,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.InterferenceSecurity;
-import org.openapis.openapi.models.operations.InterferenceQueryParams;
 import org.openapis.openapi.models.operations.InterferenceRequest;
 import org.openapis.openapi.models.operations.InterferenceResponse;
-import org.openapis.openapi.models.shared.SchemeAPIKeyAuth;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,18 +28,13 @@ public class Application {
                 .build();
 
             InterferenceRequest req = new InterferenceRequest() {{
-                security = new InterferenceSecurity() {{
-                    apiKeyAuth = new SchemeAPIKeyAuth() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }};
-                queryParams = new InterferenceQueryParams() {{
-                    name = "corrupti";
-                    network = "provident";
-                }};
-            }};            
+                name = "corrupti";
+                network = "provident";
+            }}            
 
-            InterferenceResponse res = sdk.analyse.interference(req);
+            InterferenceResponse res = sdk.analyse.interference(req, new InterferenceSecurity() {{
+                apiKeyAuth = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.statusCode == 200) {
                 // handle response
@@ -53,7 +46,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### analyse

@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssueCreateIssueRequest {
-    
-    public IssueCreateIssuePathParams pathParams;
-    public IssueCreateIssueRequest withPathParams(IssueCreateIssuePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateIssueOption createIssueOption;
+    public IssueCreateIssueRequest withCreateIssueOption(org.openapis.openapi.models.shared.CreateIssueOption createIssueOption) {
+        this.createIssueOption = createIssueOption;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateIssueOption request;
-    public IssueCreateIssueRequest withRequest(org.openapis.openapi.models.shared.CreateIssueOption request) {
-        this.request = request;
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssueCreateIssueRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssueCreateIssueRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

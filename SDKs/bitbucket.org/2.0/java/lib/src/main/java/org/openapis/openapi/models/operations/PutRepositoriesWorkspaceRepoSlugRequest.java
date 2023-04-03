@@ -7,13 +7,6 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutRepositoriesWorkspaceRepoSlugRequest {
-    
-    public PutRepositoriesWorkspaceRepoSlugPathParams pathParams;
-    public PutRepositoriesWorkspaceRepoSlugRequest withPathParams(PutRepositoriesWorkspaceRepoSlugPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The repository that is to be updated.
      * 
@@ -22,16 +15,33 @@ public class PutRepositoriesWorkspaceRepoSlugRequest {
      * 
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public PutRepositoriesWorkspaceRepoSlugRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public PutRepositoriesWorkspaceRepoSlugRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public PutRepositoriesWorkspaceRepoSlugRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
     
-    public PutRepositoriesWorkspaceRepoSlugSecurity security;
-    public PutRepositoriesWorkspaceRepoSlugRequest withSecurity(PutRepositoriesWorkspaceRepoSlugSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public PutRepositoriesWorkspaceRepoSlugRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

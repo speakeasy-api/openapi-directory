@@ -7,16 +7,16 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DatalineageProjectsLocationsOperationsCancelSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeOauth2 oauth2;
-    public DatalineageProjectsLocationsOperationsCancelSecurity withOauth2(org.openapis.openapi.models.shared.SchemeOauth2 oauth2) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String oauth2;
+    public DatalineageProjectsLocationsOperationsCancelSecurity withOauth2(String oauth2) {
         this.oauth2 = oauth2;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeOauth2c oauth2c;
-    public DatalineageProjectsLocationsOperationsCancelSecurity withOauth2c(org.openapis.openapi.models.shared.SchemeOauth2c oauth2c) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String oauth2c;
+    public DatalineageProjectsLocationsOperationsCancelSecurity withOauth2c(String oauth2c) {
         this.oauth2c = oauth2c;
         return this;
     }

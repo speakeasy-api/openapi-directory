@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSurveyRequest {
-    
-    public GetSurveyPathParams pathParams;
-    public GetSurveyRequest withPathParams(GetSurveyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of survey (eg. SV_123)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=SurveyId")
+    public String surveyId;
+    public GetSurveyRequest withSurveyId(String surveyId) {
+        this.surveyId = surveyId;
         return this;
     }
     

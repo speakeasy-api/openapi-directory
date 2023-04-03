@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCancelSpotFleetRequestsRequest {
-    
-    public GETCancelSpotFleetRequestsQueryParams queryParams;
-    public GETCancelSpotFleetRequestsRequest withQueryParams(GETCancelSpotFleetRequestsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETCancelSpotFleetRequestsActionEnum action;
+    public GETCancelSpotFleetRequestsRequest withAction(GETCancelSpotFleetRequestsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETCancelSpotFleetRequestsRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
     
-    public GETCancelSpotFleetRequestsHeaders headers;
-    public GETCancelSpotFleetRequestsRequest withHeaders(GETCancelSpotFleetRequestsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The IDs of the Spot Fleet requests.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SpotFleetRequestId")
+    public String[] spotFleetRequestId;
+    public GETCancelSpotFleetRequestsRequest withSpotFleetRequestId(String[] spotFleetRequestId) {
+        this.spotFleetRequestId = spotFleetRequestId;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Indicates whether to terminate the associated instances when the Spot Fleet request is canceled. The default is to terminate the instances.&lt;/p&gt; &lt;p&gt;To let the instances continue to run after the Spot Fleet request is canceled, specify &lt;code&gt;no-terminate-instances&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TerminateInstances")
+    public Boolean terminateInstances;
+    public GETCancelSpotFleetRequestsRequest withTerminateInstances(Boolean terminateInstances) {
+        this.terminateInstances = terminateInstances;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETCancelSpotFleetRequestsVersionEnum version;
+    public GETCancelSpotFleetRequestsRequest withVersion(GETCancelSpotFleetRequestsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETCancelSpotFleetRequestsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETCancelSpotFleetRequestsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETCancelSpotFleetRequestsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETCancelSpotFleetRequestsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETCancelSpotFleetRequestsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETCancelSpotFleetRequestsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETCancelSpotFleetRequestsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

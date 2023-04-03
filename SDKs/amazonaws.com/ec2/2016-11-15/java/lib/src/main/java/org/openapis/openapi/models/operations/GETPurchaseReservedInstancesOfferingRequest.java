@@ -4,20 +4,120 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETPurchaseReservedInstancesOfferingRequest {
-    
-    public GETPurchaseReservedInstancesOfferingQueryParams queryParams;
-    public GETPurchaseReservedInstancesOfferingRequest withQueryParams(GETPurchaseReservedInstancesOfferingQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETPurchaseReservedInstancesOfferingActionEnum action;
+    public GETPurchaseReservedInstancesOfferingRequest withAction(GETPurchaseReservedInstancesOfferingActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETPurchaseReservedInstancesOfferingRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
     
-    public GETPurchaseReservedInstancesOfferingHeaders headers;
-    public GETPurchaseReservedInstancesOfferingRequest withHeaders(GETPurchaseReservedInstancesOfferingHeaders headers) {
-        this.headers = headers;
+    /**
+     * The number of Reserved Instances to purchase.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceCount")
+    public Long instanceCount;
+    public GETPurchaseReservedInstancesOfferingRequest withInstanceCount(Long instanceCount) {
+        this.instanceCount = instanceCount;
+        return this;
+    }
+    
+    /**
+     * Specified for Reserved Instance Marketplace offerings to limit the total order and ensure that the Reserved Instances are not purchased at unexpected prices.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LimitPrice")
+    public GETPurchaseReservedInstancesOfferingLimitPrice limitPrice;
+    public GETPurchaseReservedInstancesOfferingRequest withLimitPrice(GETPurchaseReservedInstancesOfferingLimitPrice limitPrice) {
+        this.limitPrice = limitPrice;
+        return this;
+    }
+    
+    /**
+     * The time at which to purchase the Reserved Instance, in UTC format (for example, &lt;i&gt;YYYY&lt;/i&gt;-&lt;i&gt;MM&lt;/i&gt;-&lt;i&gt;DD&lt;/i&gt;T&lt;i&gt;HH&lt;/i&gt;:&lt;i&gt;MM&lt;/i&gt;:&lt;i&gt;SS&lt;/i&gt;Z).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PurchaseTime")
+    public OffsetDateTime purchaseTime;
+    public GETPurchaseReservedInstancesOfferingRequest withPurchaseTime(OffsetDateTime purchaseTime) {
+        this.purchaseTime = purchaseTime;
+        return this;
+    }
+    
+    /**
+     * The ID of the Reserved Instance offering to purchase.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ReservedInstancesOfferingId")
+    public String reservedInstancesOfferingId;
+    public GETPurchaseReservedInstancesOfferingRequest withReservedInstancesOfferingId(String reservedInstancesOfferingId) {
+        this.reservedInstancesOfferingId = reservedInstancesOfferingId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETPurchaseReservedInstancesOfferingVersionEnum version;
+    public GETPurchaseReservedInstancesOfferingRequest withVersion(GETPurchaseReservedInstancesOfferingVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETPurchaseReservedInstancesOfferingRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETPurchaseReservedInstancesOfferingRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETPurchaseReservedInstancesOfferingRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETPurchaseReservedInstancesOfferingRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETPurchaseReservedInstancesOfferingRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETPurchaseReservedInstancesOfferingRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETPurchaseReservedInstancesOfferingRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

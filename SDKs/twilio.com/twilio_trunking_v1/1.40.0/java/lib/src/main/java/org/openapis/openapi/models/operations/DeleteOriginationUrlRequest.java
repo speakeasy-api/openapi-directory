@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteOriginationUrlRequest {
-    
-    public DeleteOriginationUrlPathParams pathParams;
-    public DeleteOriginationUrlRequest withPathParams(DeleteOriginationUrlPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique string that we created to identify the OriginationUrl resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteOriginationUrlRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public DeleteOriginationUrlSecurity security;
-    public DeleteOriginationUrlRequest withSecurity(DeleteOriginationUrlSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteOriginationUrlRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Trunk from which to delete the OriginationUrl.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TrunkSid")
+    public String trunkSid;
+    public DeleteOriginationUrlRequest withTrunkSid(String trunkSid) {
+        this.trunkSid = trunkSid;
         return this;
     }
     

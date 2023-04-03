@@ -7,10 +7,10 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrievalHealthIdByMobileUsingPOSTRequest {
-    
-    public RetrievalHealthIdByMobileUsingPOSTHeaders headers;
-    public RetrievalHealthIdByMobileUsingPOSTRequest withHeaders(RetrievalHealthIdByMobileUsingPOSTHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public RetrievalHealthIdByMobileUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
@@ -18,16 +18,9 @@ public class RetrievalHealthIdByMobileUsingPOSTRequest {
      * retriveHealthIdMobilePayLoad
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RetriveHealthIdMobilePayLoad request;
-    public RetrievalHealthIdByMobileUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.RetriveHealthIdMobilePayLoad request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public RetrievalHealthIdByMobileUsingPOSTSecurity security;
-    public RetrievalHealthIdByMobileUsingPOSTRequest withSecurity(RetrievalHealthIdByMobileUsingPOSTSecurity security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.RetriveHealthIdMobilePayLoad retriveHealthIdMobilePayLoad;
+    public RetrievalHealthIdByMobileUsingPOSTRequest withRetriveHealthIdMobilePayLoad(org.openapis.openapi.models.shared.RetriveHealthIdMobilePayLoad retriveHealthIdMobilePayLoad) {
+        this.retriveHealthIdMobilePayLoad = retriveHealthIdMobilePayLoad;
         return this;
     }
     

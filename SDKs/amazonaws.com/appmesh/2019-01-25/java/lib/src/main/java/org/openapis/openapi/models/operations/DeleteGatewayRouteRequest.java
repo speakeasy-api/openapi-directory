@@ -4,27 +4,95 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteGatewayRouteRequest {
-    
-    public DeleteGatewayRoutePathParams pathParams;
-    public DeleteGatewayRouteRequest withPathParams(DeleteGatewayRoutePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DeleteGatewayRouteRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public DeleteGatewayRouteQueryParams queryParams;
-    public DeleteGatewayRouteRequest withQueryParams(DeleteGatewayRouteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DeleteGatewayRouteRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DeleteGatewayRouteRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public DeleteGatewayRouteHeaders headers;
-    public DeleteGatewayRouteRequest withHeaders(DeleteGatewayRouteHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DeleteGatewayRouteRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DeleteGatewayRouteRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DeleteGatewayRouteRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DeleteGatewayRouteRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The name of the gateway route to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=gatewayRouteName")
+    public String gatewayRouteName;
+    public DeleteGatewayRouteRequest withGatewayRouteName(String gatewayRouteName) {
+        this.gatewayRouteName = gatewayRouteName;
+        return this;
+    }
+    
+    /**
+     * The name of the service mesh to delete the gateway route from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=meshName")
+    public String meshName;
+    public DeleteGatewayRouteRequest withMeshName(String meshName) {
+        this.meshName = meshName;
+        return this;
+    }
+    
+    /**
+     * The Amazon Web Services IAM account ID of the service mesh owner. If the account ID is not your own, then it's the ID of the account that shared the mesh with your account. For more information about mesh sharing, see &lt;a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html"&gt;Working with shared meshes&lt;/a&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=meshOwner")
+    public String meshOwner;
+    public DeleteGatewayRouteRequest withMeshOwner(String meshOwner) {
+        this.meshOwner = meshOwner;
+        return this;
+    }
+    
+    /**
+     * The name of the virtual gateway to delete the route from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=virtualGatewayName")
+    public String virtualGatewayName;
+    public DeleteGatewayRouteRequest withVirtualGatewayName(String virtualGatewayName) {
+        this.virtualGatewayName = virtualGatewayName;
         return this;
     }
     

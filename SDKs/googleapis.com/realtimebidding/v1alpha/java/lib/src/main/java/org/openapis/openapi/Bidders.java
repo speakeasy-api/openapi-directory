@@ -34,27 +34,28 @@ public class Bidders {
     /**
      * Activates an existing bidding function. An activated function is available for invocation for the server-side TURTLEDOVE simulations.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RealtimebiddingBiddersBiddingFunctionsActivateResponse realtimebiddingBiddersBiddingFunctionsActivate(org.openapis.openapi.models.operations.RealtimebiddingBiddersBiddingFunctionsActivateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RealtimebiddingBiddersBiddingFunctionsActivateResponse realtimebiddingBiddersBiddingFunctionsActivate(org.openapis.openapi.models.operations.RealtimebiddingBiddersBiddingFunctionsActivateRequest request, org.openapis.openapi.models.operations.RealtimebiddingBiddersBiddingFunctionsActivateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersBiddingFunctionsActivatePathParams.class, baseUrl, "/v1alpha/{name}:activate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersBiddingFunctionsActivateRequest.class, baseUrl, "/v1alpha/{name}:activate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersBiddingFunctionsActivateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersBiddingFunctionsActivateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,27 +82,28 @@ public class Bidders {
     /**
      * Archives an existing bidding function. An archived function will not be available for function invocation for the server-side TURTLEDOVE simulations unless it is activated.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RealtimebiddingBiddersBiddingFunctionsArchiveResponse realtimebiddingBiddersBiddingFunctionsArchive(org.openapis.openapi.models.operations.RealtimebiddingBiddersBiddingFunctionsArchiveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RealtimebiddingBiddersBiddingFunctionsArchiveResponse realtimebiddingBiddersBiddingFunctionsArchive(org.openapis.openapi.models.operations.RealtimebiddingBiddersBiddingFunctionsArchiveRequest request, org.openapis.openapi.models.operations.RealtimebiddingBiddersBiddingFunctionsArchiveSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersBiddingFunctionsArchivePathParams.class, baseUrl, "/v1alpha/{name}:archive", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersBiddingFunctionsArchiveRequest.class, baseUrl, "/v1alpha/{name}:archive", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersBiddingFunctionsArchiveQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersBiddingFunctionsArchiveRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -128,27 +130,28 @@ public class Bidders {
     /**
      * Creates a new bidding function.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RealtimebiddingBiddersBiddingFunctionsCreateResponse realtimebiddingBiddersBiddingFunctionsCreate(org.openapis.openapi.models.operations.RealtimebiddingBiddersBiddingFunctionsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RealtimebiddingBiddersBiddingFunctionsCreateResponse realtimebiddingBiddersBiddingFunctionsCreate(org.openapis.openapi.models.operations.RealtimebiddingBiddersBiddingFunctionsCreateRequest request, org.openapis.openapi.models.operations.RealtimebiddingBiddersBiddingFunctionsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersBiddingFunctionsCreatePathParams.class, baseUrl, "/v1alpha/{parent}/biddingFunctions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersBiddingFunctionsCreateRequest.class, baseUrl, "/v1alpha/{parent}/biddingFunctions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "biddingFunctionInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersBiddingFunctionsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersBiddingFunctionsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -175,25 +178,26 @@ public class Bidders {
     /**
      * Lists the bidding functions that a bidder currently has registered.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RealtimebiddingBiddersBiddingFunctionsListResponse realtimebiddingBiddersBiddingFunctionsList(org.openapis.openapi.models.operations.RealtimebiddingBiddersBiddingFunctionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RealtimebiddingBiddersBiddingFunctionsListResponse realtimebiddingBiddersBiddingFunctionsList(org.openapis.openapi.models.operations.RealtimebiddingBiddersBiddingFunctionsListRequest request, org.openapis.openapi.models.operations.RealtimebiddingBiddersBiddingFunctionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersBiddingFunctionsListPathParams.class, baseUrl, "/v1alpha/{parent}/biddingFunctions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RealtimebiddingBiddersBiddingFunctionsListRequest.class, baseUrl, "/v1alpha/{parent}/biddingFunctions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersBiddingFunctionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RealtimebiddingBiddersBiddingFunctionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

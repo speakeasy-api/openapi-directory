@@ -4,13 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InjuriesRequest {
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public InjuriesFormatEnum format;
+    public InjuriesRequest withFormat(InjuriesFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public InjuriesPathParams pathParams;
-    public InjuriesRequest withPathParams(InjuriesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     *           Year of the season and the season type. If no season type is provided, then the default is regular season.
+     *           &lt;br&gt;Examples: &lt;code&gt;2015REG&lt;/code&gt;, &lt;code&gt;2015PRE&lt;/code&gt;, &lt;code&gt;2015POST&lt;/code&gt;.
+     *         
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=season")
+    public String season;
+    public InjuriesRequest withSeason(String season) {
+        this.season = season;
+        return this;
+    }
+    
+    /**
+     *           Week of the season. Valid values are as follows: Preseason 0 to 4, Regular Season 1 to 17, Postseason 1 to 4.
+     *           Example: &lt;code&gt;1&lt;/code&gt;
+     *         
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=week")
+    public String week;
+    public InjuriesRequest withWeek(String week) {
+        this.week = week;
         return this;
     }
     

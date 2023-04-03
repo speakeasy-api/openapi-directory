@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSellerStandardsProfileRequest {
-    
-    public GetSellerStandardsProfilePathParams pathParams;
-    public GetSellerStandardsProfileRequest withPathParams(GetSellerStandardsProfilePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The period covered by the returned standards profile evaluation. Supply one of two values, CURRENT means the response reflects eBay's most recent monthly standards evaluation and PROJECTED means the response reflect the seller's projected monthly evaluation, as calculated at the time of the request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cycle")
+    public String cycle;
+    public GetSellerStandardsProfileRequest withCycle(String cycle) {
+        this.cycle = cycle;
         return this;
     }
     
-    
-    public GetSellerStandardsProfileSecurity security;
-    public GetSellerStandardsProfileRequest withSecurity(GetSellerStandardsProfileSecurity security) {
-        this.security = security;
+    /**
+     * This input value specifies the region used to determine the seller's standards profile. Supply one of the four following values, PROGRAM_DE, PROGRAM_UK, PROGRAM_US, or PROGRAM_GLOBAL.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=program")
+    public String program;
+    public GetSellerStandardsProfileRequest withProgram(String program) {
+        this.program = program;
         return this;
     }
     

@@ -7,10 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostNewThirdPartyJobRequest {
+    /**
+     * The version of the api to target. Omit or set as &amp;apos;default&amp;apos; to target the current api version.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Version")
+    public String apiVersion;
+    public PostNewThirdPartyJobRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
     
-    public PostNewThirdPartyJobHeaders headers;
-    public PostNewThirdPartyJobRequest withHeaders(PostNewThirdPartyJobHeaders headers) {
-        this.headers = headers;
+    /**
+     * The OAuth 1 authorization header. &amp;apos;Auto&amp;apos; enables auto complete.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostNewThirdPartyJobRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
@@ -18,9 +31,9 @@ public class PostNewThirdPartyJobRequest {
      * The the third party job instruction object.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ThirdPartyJobInstruction request;
-    public PostNewThirdPartyJobRequest withRequest(org.openapis.openapi.models.shared.ThirdPartyJobInstruction request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ThirdPartyJobInstruction thirdPartyJobInstruction;
+    public PostNewThirdPartyJobRequest withThirdPartyJobInstruction(org.openapis.openapi.models.shared.ThirdPartyJobInstruction thirdPartyJobInstruction) {
+        this.thirdPartyJobInstruction = thirdPartyJobInstruction;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRoadIdsRequest {
-    
-    public GetRoadIdsPathParams pathParams;
-    public GetRoadIdsRequest withPathParams(GetRoadIdsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Comma-separated list of road identifiers e.g. "A406, A2" (a full list of supported road identifiers can be found at the /Road/ endpoint)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ids")
+    public String[] ids;
+    public GetRoadIdsRequest withIds(String[] ids) {
+        this.ids = ids;
         return this;
     }
     

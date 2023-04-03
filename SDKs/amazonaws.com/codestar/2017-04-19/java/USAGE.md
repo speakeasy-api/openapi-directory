@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AssociateTeamMemberXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AssociateTeamMemberHeaders;
 import org.openapis.openapi.models.operations.AssociateTeamMemberRequest;
 import org.openapis.openapi.models.operations.AssociateTeamMemberResponse;
 import org.openapis.openapi.models.shared.AssociateTeamMemberRequest;
@@ -15,31 +14,27 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AssociateTeamMemberRequest req = new AssociateTeamMemberRequest() {{
-                headers = new AssociateTeamMemberHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "CodeStar_20170419.AssociateTeamMember";
-                }};
-                request = new AssociateTeamMemberRequest() {{
-                    clientRequestToken = "illum";
-                    projectId = "vel";
-                    projectRole = "error";
+                associateTeamMemberRequest = new AssociateTeamMemberRequest() {{
+                    clientRequestToken = "corrupti";
+                    projectId = "provident";
+                    projectRole = "distinctio";
                     remoteAccessAllowed = false;
-                    userArn = "deserunt";
+                    userArn = "quibusdam";
                 }};
-            }};            
+                xAmzAlgorithm = "unde";
+                xAmzContentSha256 = "nulla";
+                xAmzCredential = "corrupti";
+                xAmzDate = "illum";
+                xAmzSecurityToken = "vel";
+                xAmzSignature = "error";
+                xAmzSignedHeaders = "deserunt";
+                xAmzTarget = "CodeStar_20170419.AssociateTeamMember";
+            }}            
 
             AssociateTeamMemberResponse res = sdk.associateTeamMember(req);
 

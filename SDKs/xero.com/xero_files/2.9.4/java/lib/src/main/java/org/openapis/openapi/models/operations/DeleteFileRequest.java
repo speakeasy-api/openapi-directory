@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteFileRequest {
-    
-    public DeleteFilePathParams pathParams;
-    public DeleteFileRequest withPathParams(DeleteFilePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * File id for single object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FileId")
+    public String fileId;
+    public DeleteFileRequest withFileId(String fileId) {
+        this.fileId = fileId;
         return this;
     }
     
-    
-    public DeleteFileHeaders headers;
-    public DeleteFileRequest withHeaders(DeleteFileHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public DeleteFileSecurity security;
-    public DeleteFileRequest withSecurity(DeleteFileSecurity security) {
-        this.security = security;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=xero-tenant-id")
+    public String xeroTenantId;
+    public DeleteFileRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostAuthRequest {
+    /**
+     * Client id of the downloaded credentials file
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=client_id")
+    public String clientId;
+    public PostAuthRequest withClientId(String clientId) {
+        this.clientId = clientId;
+        return this;
+    }
     
-    public PostAuthQueryParams queryParams;
-    public PostAuthRequest withQueryParams(PostAuthQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Client secret of the downloaded credentials file
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=client_secret")
+    public String clientSecret;
+    public PostAuthRequest withClientSecret(String clientSecret) {
+        this.clientSecret = clientSecret;
         return this;
     }
     

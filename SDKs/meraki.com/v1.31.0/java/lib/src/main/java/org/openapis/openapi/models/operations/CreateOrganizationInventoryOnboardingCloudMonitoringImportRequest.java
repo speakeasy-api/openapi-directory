@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateOrganizationInventoryOnboardingCloudMonitoringImportRequest {
-    
-    public CreateOrganizationInventoryOnboardingCloudMonitoringImportPathParams pathParams;
-    public CreateOrganizationInventoryOnboardingCloudMonitoringImportRequest withPathParams(CreateOrganizationInventoryOnboardingCloudMonitoringImportPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateOrganizationInventoryOnboardingCloudMonitoringImportRequestBody requestBody;
+    public CreateOrganizationInventoryOnboardingCloudMonitoringImportRequest withRequestBody(CreateOrganizationInventoryOnboardingCloudMonitoringImportRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateOrganizationInventoryOnboardingCloudMonitoringImportRequestBody request;
-    public CreateOrganizationInventoryOnboardingCloudMonitoringImportRequest withRequest(CreateOrganizationInventoryOnboardingCloudMonitoringImportRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public CreateOrganizationInventoryOnboardingCloudMonitoringImportRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationApplianceVpnVpnFirewallRulesRequest {
-    
-    public GetOrganizationApplianceVpnVpnFirewallRulesPathParams pathParams;
-    public GetOrganizationApplianceVpnVpnFirewallRulesRequest withPathParams(GetOrganizationApplianceVpnVpnFirewallRulesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public GetOrganizationApplianceVpnVpnFirewallRulesRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

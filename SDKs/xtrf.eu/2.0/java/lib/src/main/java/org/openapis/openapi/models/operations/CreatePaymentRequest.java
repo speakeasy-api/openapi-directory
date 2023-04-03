@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreatePaymentRequest {
-    
-    public CreatePaymentPathParams pathParams;
-    public CreatePaymentRequest withPathParams(CreatePaymentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * New payment.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PaymentDTO request;
-    public CreatePaymentRequest withRequest(org.openapis.openapi.models.shared.PaymentDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PaymentDTO paymentDTO;
+    public CreatePaymentRequest withPaymentDTO(org.openapis.openapi.models.shared.PaymentDTO paymentDTO) {
+        this.paymentDTO = paymentDTO;
+        return this;
+    }
+    
+    /**
+     * client invoice's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=invoiceId")
+    public Long invoiceId;
+    public CreatePaymentRequest withInvoiceId(Long invoiceId) {
+        this.invoiceId = invoiceId;
         return this;
     }
     

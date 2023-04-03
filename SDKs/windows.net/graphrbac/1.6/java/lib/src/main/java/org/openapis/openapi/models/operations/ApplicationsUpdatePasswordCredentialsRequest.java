@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ApplicationsUpdatePasswordCredentialsRequest {
-    
-    public ApplicationsUpdatePasswordCredentialsPathParams pathParams;
-    public ApplicationsUpdatePasswordCredentialsRequest withPathParams(ApplicationsUpdatePasswordCredentialsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ApplicationsUpdatePasswordCredentialsQueryParams queryParams;
-    public ApplicationsUpdatePasswordCredentialsRequest withQueryParams(ApplicationsUpdatePasswordCredentialsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Parameters to update passwordCredentials of an existing application.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PasswordCredentialsUpdateParameters request;
-    public ApplicationsUpdatePasswordCredentialsRequest withRequest(org.openapis.openapi.models.shared.PasswordCredentialsUpdateParameters request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PasswordCredentialsUpdateParameters passwordCredentialsUpdateParameters;
+    public ApplicationsUpdatePasswordCredentialsRequest withPasswordCredentialsUpdateParameters(org.openapis.openapi.models.shared.PasswordCredentialsUpdateParameters passwordCredentialsUpdateParameters) {
+        this.passwordCredentialsUpdateParameters = passwordCredentialsUpdateParameters;
+        return this;
+    }
+    
+    /**
+     * Client API version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public ApplicationsUpdatePasswordCredentialsRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
+    
+    /**
+     * Application object ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=applicationObjectId")
+    public String applicationObjectId;
+    public ApplicationsUpdatePasswordCredentialsRequest withApplicationObjectId(String applicationObjectId) {
+        this.applicationObjectId = applicationObjectId;
+        return this;
+    }
+    
+    /**
+     * The tenant ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tenantID")
+    public String tenantID;
+    public ApplicationsUpdatePasswordCredentialsRequest withTenantID(String tenantID) {
+        this.tenantID = tenantID;
         return this;
     }
     

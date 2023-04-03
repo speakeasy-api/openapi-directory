@@ -43,12 +43,12 @@ public class ClientInvoices {
      */
     public org.openapis.openapi.models.operations.CreatePaymentResponse createPayment(org.openapis.openapi.models.operations.CreatePaymentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreatePaymentPathParams.class, baseUrl, "/accounting/customers/invoices/{invoiceId}/payments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreatePaymentRequest.class, baseUrl, "/accounting/customers/invoices/{invoiceId}/payments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "paymentDTO", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -80,7 +80,7 @@ public class ClientInvoices {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Create1Response create1(org.openapis.openapi.models.operations.Create1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.Create1Response create1(org.openapis.openapi.models.shared.CustomerInvoiceCreateDTO request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/accounting/customers/invoices");
         
@@ -127,7 +127,7 @@ public class ClientInvoices {
      */
     public org.openapis.openapi.models.operations.Delete1Response delete1(org.openapis.openapi.models.operations.Delete1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Delete1PathParams.class, baseUrl, "/accounting/customers/invoices/{invoiceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Delete1Request.class, baseUrl, "/accounting/customers/invoices/{invoiceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -161,7 +161,7 @@ public class ClientInvoices {
      */
     public org.openapis.openapi.models.operations.Delete2Response delete2(org.openapis.openapi.models.operations.Delete2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Delete2PathParams.class, baseUrl, "/accounting/customers/payments/{paymentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Delete2Request.class, baseUrl, "/accounting/customers/payments/{paymentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -193,7 +193,7 @@ public class ClientInvoices {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DownloadDocumentsResponse downloadDocuments(org.openapis.openapi.models.operations.DownloadDocumentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DownloadDocumentsResponse downloadDocuments(org.openapis.openapi.models.shared.DownloadDocumentsRequestDTO request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/accounting/customers/invoices/documents");
         
@@ -240,7 +240,7 @@ public class ClientInvoices {
      */
     public org.openapis.openapi.models.operations.DuplicateResponse duplicate(org.openapis.openapi.models.operations.DuplicateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DuplicatePathParams.class, baseUrl, "/accounting/customers/invoices/{invoiceId}/duplicate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DuplicateRequest.class, baseUrl, "/accounting/customers/invoices/{invoiceId}/duplicate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -280,7 +280,7 @@ public class ClientInvoices {
      */
     public org.openapis.openapi.models.operations.DuplicateAsProFormaResponse duplicateAsProForma(org.openapis.openapi.models.operations.DuplicateAsProFormaRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DuplicateAsProFormaPathParams.class, baseUrl, "/accounting/customers/invoices/{invoiceId}/duplicate/proForma", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DuplicateAsProFormaRequest.class, baseUrl, "/accounting/customers/invoices/{invoiceId}/duplicate/proForma", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -326,7 +326,7 @@ public class ClientInvoices {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAllQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAllRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -372,7 +372,7 @@ public class ClientInvoices {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAllIdsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAllIdsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -412,13 +412,13 @@ public class ClientInvoices {
      */
     public org.openapis.openapi.models.operations.GetByIdResponse getById(org.openapis.openapi.models.operations.GetByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetByIdPathParams.class, baseUrl, "/accounting/customers/invoices/{invoiceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetByIdRequest.class, baseUrl, "/accounting/customers/invoices/{invoiceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetByIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetByIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -458,7 +458,7 @@ public class ClientInvoices {
      */
     public org.openapis.openapi.models.operations.GetDatesResponse getDates(org.openapis.openapi.models.operations.GetDatesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDatesPathParams.class, baseUrl, "/accounting/customers/invoices/{invoiceId}/dates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDatesRequest.class, baseUrl, "/accounting/customers/invoices/{invoiceId}/dates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -498,7 +498,7 @@ public class ClientInvoices {
      */
     public org.openapis.openapi.models.operations.GetDocumentResponse getDocument(org.openapis.openapi.models.operations.GetDocumentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDocumentPathParams.class, baseUrl, "/accounting/customers/invoices/{invoiceId}/document", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDocumentRequest.class, baseUrl, "/accounting/customers/invoices/{invoiceId}/document", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -538,7 +538,7 @@ public class ClientInvoices {
      */
     public org.openapis.openapi.models.operations.GetPaymentTermsResponse getPaymentTerms(org.openapis.openapi.models.operations.GetPaymentTermsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentTermsPathParams.class, baseUrl, "/accounting/customers/invoices/{invoiceId}/paymentTerms", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentTermsRequest.class, baseUrl, "/accounting/customers/invoices/{invoiceId}/paymentTerms", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -578,7 +578,7 @@ public class ClientInvoices {
      */
     public org.openapis.openapi.models.operations.GetPaymentsResponse getPayments(org.openapis.openapi.models.operations.GetPaymentsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentsPathParams.class, baseUrl, "/accounting/customers/invoices/{invoiceId}/payments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentsRequest.class, baseUrl, "/accounting/customers/invoices/{invoiceId}/payments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -618,7 +618,7 @@ public class ClientInvoices {
      */
     public org.openapis.openapi.models.operations.SendReminderResponse sendReminder(org.openapis.openapi.models.operations.SendReminderRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SendReminderPathParams.class, baseUrl, "/accounting/customers/invoices/{invoiceId}/sendReminder", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SendReminderRequest.class, baseUrl, "/accounting/customers/invoices/{invoiceId}/sendReminder", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -650,7 +650,7 @@ public class ClientInvoices {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SendRemindersResponse sendReminders(org.openapis.openapi.models.operations.SendRemindersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SendRemindersResponse sendReminders(org.openapis.openapi.models.shared.SendRemindersRequestDTO request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/accounting/customers/invoices/sendReminders");
         

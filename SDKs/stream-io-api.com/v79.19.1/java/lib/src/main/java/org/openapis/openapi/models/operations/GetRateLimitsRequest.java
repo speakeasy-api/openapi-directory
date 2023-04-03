@@ -4,13 +4,41 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRateLimitsRequest {
+    @SpeakeasyMetadata("queryParam:serialization=json,name=android")
+    public Boolean android;
+    public GetRateLimitsRequest withAndroid(Boolean android) {
+        this.android = android;
+        return this;
+    }
     
-    public GetRateLimitsQueryParams queryParams;
-    public GetRateLimitsRequest withQueryParams(GetRateLimitsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:serialization=json,name=endpoints")
+    public String endpoints;
+    public GetRateLimitsRequest withEndpoints(String endpoints) {
+        this.endpoints = endpoints;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:serialization=json,name=ios")
+    public Boolean ios;
+    public GetRateLimitsRequest withIos(Boolean ios) {
+        this.ios = ios;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:serialization=json,name=server_side")
+    public Boolean serverSide;
+    public GetRateLimitsRequest withServerSide(Boolean serverSide) {
+        this.serverSide = serverSide;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:serialization=json,name=web")
+    public Boolean web;
+    public GetRateLimitsRequest withWeb(Boolean web) {
+        this.web = web;
         return this;
     }
     

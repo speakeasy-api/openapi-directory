@@ -86,12 +86,12 @@ public class Reports {
      */
     public org.openapis.openapi.models.operations.BulkCreateOrUpdateAnnotationsResponse bulkCreateOrUpdateAnnotations(org.openapis.openapi.models.operations.BulkCreateOrUpdateAnnotationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BulkCreateOrUpdateAnnotationsPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}/annotations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BulkCreateOrUpdateAnnotationsRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}/annotations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -155,12 +155,12 @@ public class Reports {
      */
     public org.openapis.openapi.models.operations.CreateOrUpdateAnnotationResponse createOrUpdateAnnotation(org.openapis.openapi.models.operations.CreateOrUpdateAnnotationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrUpdateAnnotationPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}/annotations/{annotationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrUpdateAnnotationRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}/annotations/{annotationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -254,12 +254,12 @@ public class Reports {
      */
     public org.openapis.openapi.models.operations.CreateOrUpdateReportResponse createOrUpdateReport(org.openapis.openapi.models.operations.CreateOrUpdateReportRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrUpdateReportPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrUpdateReportRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -306,7 +306,7 @@ public class Reports {
      */
     public org.openapis.openapi.models.operations.DeleteAnnotationResponse deleteAnnotation(org.openapis.openapi.models.operations.DeleteAnnotationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAnnotationPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}/annotations/{annotationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAnnotationRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}/annotations/{annotationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -339,7 +339,7 @@ public class Reports {
      */
     public org.openapis.openapi.models.operations.DeleteReportResponse deleteReport(org.openapis.openapi.models.operations.DeleteReportRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteReportPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteReportRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -372,7 +372,7 @@ public class Reports {
      */
     public org.openapis.openapi.models.operations.GetAnnotationResponse getAnnotation(org.openapis.openapi.models.operations.GetAnnotationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAnnotationPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}/annotations/{annotationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAnnotationRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}/annotations/{annotationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -419,7 +419,7 @@ public class Reports {
      */
     public org.openapis.openapi.models.operations.GetAnnotationsForReportResponse getAnnotationsForReport(org.openapis.openapi.models.operations.GetAnnotationsForReportRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAnnotationsForReportPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}/annotations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAnnotationsForReportRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}/annotations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -458,7 +458,7 @@ public class Reports {
      */
     public org.openapis.openapi.models.operations.GetReportResponse getReport(org.openapis.openapi.models.operations.GetReportRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetReportPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetReportRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -505,7 +505,7 @@ public class Reports {
      */
     public org.openapis.openapi.models.operations.GetReportsForCommitResponse getReportsForCommit(org.openapis.openapi.models.operations.GetReportsForCommitRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetReportsForCommitPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetReportsForCommitRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

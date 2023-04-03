@@ -4,13 +4,47 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListPaymentChangesRequest {
+    /**
+     * Page number. Default is 1.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public ListPaymentChangesRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
     
-    public ListPaymentChangesQueryParams queryParams;
-    public ListPaymentChangesRequest withQueryParams(ListPaymentChangesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of results to return in a page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public ListPaymentChangesRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The Payor ID to find associated Payments
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=payorId")
+    public String payorId;
+    public ListPaymentChangesRequest withPayorId(String payorId) {
+        this.payorId = payorId;
+        return this;
+    }
+    
+    /**
+     * The updatedSince filter in the format YYYY-MM-DDThh:mm:ss+hh:mm
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedSince")
+    public OffsetDateTime updatedSince;
+    public ListPaymentChangesRequest withUpdatedSince(OffsetDateTime updatedSince) {
+        this.updatedSince = updatedSince;
         return this;
     }
     

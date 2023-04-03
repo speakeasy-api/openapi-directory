@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OauthAuthorizationsUpdateAuthorizationRequest {
-    
-    public OauthAuthorizationsUpdateAuthorizationPathParams pathParams;
-    public OauthAuthorizationsUpdateAuthorizationRequest withPathParams(OauthAuthorizationsUpdateAuthorizationPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public OauthAuthorizationsUpdateAuthorizationRequestBody requestBody;
+    public OauthAuthorizationsUpdateAuthorizationRequest withRequestBody(OauthAuthorizationsUpdateAuthorizationRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public OauthAuthorizationsUpdateAuthorizationRequestBody request;
-    public OauthAuthorizationsUpdateAuthorizationRequest withRequest(OauthAuthorizationsUpdateAuthorizationRequestBody request) {
-        this.request = request;
+    /**
+     * The unique identifier of the authorization.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=authorization_id")
+    public Long authorizationId;
+    public OauthAuthorizationsUpdateAuthorizationRequest withAuthorizationId(Long authorizationId) {
+        this.authorizationId = authorizationId;
         return this;
     }
     

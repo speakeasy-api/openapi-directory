@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ForumGetForumTagSuggestionsRequest {
-    
-    public ForumGetForumTagSuggestionsQueryParams queryParams;
-    public ForumGetForumTagSuggestionsRequest withQueryParams(ForumGetForumTagSuggestionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The partial tag input to generate suggestions from.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=partialtag")
+    public String partialtag;
+    public ForumGetForumTagSuggestionsRequest withPartialtag(String partialtag) {
+        this.partialtag = partialtag;
         return this;
     }
     

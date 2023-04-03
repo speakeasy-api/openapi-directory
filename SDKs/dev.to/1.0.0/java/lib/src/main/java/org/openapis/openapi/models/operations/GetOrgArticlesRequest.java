@@ -4,20 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrgArticlesRequest {
-    
-    public GetOrgArticlesPathParams pathParams;
-    public GetOrgArticlesRequest withPathParams(GetOrgArticlesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Pagination page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetOrgArticlesRequest withPage(Integer page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * Page size (the number of items to return per page). The default maximum value can be overridden by "API_PER_PAGE_MAX" environment variable.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetOrgArticlesRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
     
-    public GetOrgArticlesQueryParams queryParams;
-    public GetOrgArticlesRequest withQueryParams(GetOrgArticlesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public GetOrgArticlesRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

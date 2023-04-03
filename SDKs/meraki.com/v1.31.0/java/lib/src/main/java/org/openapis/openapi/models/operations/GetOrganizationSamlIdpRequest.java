@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationSamlIdpRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=idpId")
+    public String idpId;
+    public GetOrganizationSamlIdpRequest withIdpId(String idpId) {
+        this.idpId = idpId;
+        return this;
+    }
     
-    public GetOrganizationSamlIdpPathParams pathParams;
-    public GetOrganizationSamlIdpRequest withPathParams(GetOrganizationSamlIdpPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public GetOrganizationSamlIdpRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

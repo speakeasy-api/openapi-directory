@@ -4,27 +4,38 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DashboardMeetingParticipantQOSRequest {
-    
-    public DashboardMeetingParticipantQOSPathParams pathParams;
-    public DashboardMeetingParticipantQOSRequest withPathParams(DashboardMeetingParticipantQOSPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The meeting ID or the meeting UUID.  If a meeting ID is provided in the request instead of a UUID, the response will be for the latest meeting instance.
+     * 
+     * If a UUID starts with "/" or contains "//" (example: "/ajXp112QmuoKj4854875==\"), you must **double encode** the UUID before making an API request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=meetingId")
+    public String meetingId;
+    public DashboardMeetingParticipantQOSRequest withMeetingId(String meetingId) {
+        this.meetingId = meetingId;
         return this;
     }
     
-    
-    public DashboardMeetingParticipantQOSQueryParams queryParams;
-    public DashboardMeetingParticipantQOSRequest withQueryParams(DashboardMeetingParticipantQOSQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Participant ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=participantId")
+    public String participantId;
+    public DashboardMeetingParticipantQOSRequest withParticipantId(String participantId) {
+        this.participantId = participantId;
         return this;
     }
     
-    
-    public DashboardMeetingParticipantQOSSecurity security;
-    public DashboardMeetingParticipantQOSRequest withSecurity(DashboardMeetingParticipantQOSSecurity security) {
-        this.security = security;
+    /**
+     * The meeting types: &lt;br&gt;`past` - Past meetings.&lt;br&gt;`live` - Live Meetings.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public DashboardMeetingParticipantQOSTypeEnum type;
+    public DashboardMeetingParticipantQOSRequest withType(DashboardMeetingParticipantQOSTypeEnum type) {
+        this.type = type;
         return this;
     }
     

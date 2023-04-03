@@ -38,7 +38,7 @@ public class Ontology {
      */
     public org.openapis.openapi.models.operations.GetOntologySubsetResponse getOntologySubset(org.openapis.openapi.models.operations.GetOntologySubsetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOntologySubsetPathParams.class, baseUrl, "/ontology/subset/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOntologySubsetRequest.class, baseUrl, "/ontology/subset/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -70,7 +70,7 @@ public class Ontology {
      */
     public org.openapis.openapi.models.operations.GetOntologyTermResponse getOntologyTerm(org.openapis.openapi.models.operations.GetOntologyTermRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOntologyTermPathParams.class, baseUrl, "/ontology/term/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOntologyTermRequest.class, baseUrl, "/ontology/term/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -102,13 +102,13 @@ public class Ontology {
      */
     public org.openapis.openapi.models.operations.GetOntologyTermGraphResponse getOntologyTermGraph(org.openapis.openapi.models.operations.GetOntologyTermGraphRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOntologyTermGraphPathParams.class, baseUrl, "/ontology/term/{id}/graph", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOntologyTermGraphRequest.class, baseUrl, "/ontology/term/{id}/graph", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOntologyTermGraphQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOntologyTermGraphRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -140,13 +140,13 @@ public class Ontology {
      */
     public org.openapis.openapi.models.operations.GetOntologyTermSubgraphResponse getOntologyTermSubgraph(org.openapis.openapi.models.operations.GetOntologyTermSubgraphRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOntologyTermSubgraphPathParams.class, baseUrl, "/ontology/term/{id}/subgraph", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOntologyTermSubgraphRequest.class, baseUrl, "/ontology/term/{id}/subgraph", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOntologyTermSubgraphQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOntologyTermSubgraphRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -178,7 +178,7 @@ public class Ontology {
      */
     public org.openapis.openapi.models.operations.GetOntologyTermSubsetsResponse getOntologyTermSubsets(org.openapis.openapi.models.operations.GetOntologyTermSubsetsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOntologyTermSubsetsPathParams.class, baseUrl, "/ontology/term/{id}/subsets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOntologyTermSubsetsRequest.class, baseUrl, "/ontology/term/{id}/subsets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -210,7 +210,7 @@ public class Ontology {
      */
     public org.openapis.openapi.models.operations.GetOntologyTermsSharedAncestorResponse getOntologyTermsSharedAncestor(org.openapis.openapi.models.operations.GetOntologyTermsSharedAncestorRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOntologyTermsSharedAncestorPathParams.class, baseUrl, "/ontology/shared/{subject}/{object}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOntologyTermsSharedAncestorRequest.class, baseUrl, "/ontology/shared/{subject}/{object}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTracksTrackIdCommentsRequest {
-    
-    public GetTracksTrackIdCommentsPathParams pathParams;
-    public GetTracksTrackIdCommentsRequest withPathParams(GetTracksTrackIdCommentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Number of results to return in the collection.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetTracksTrackIdCommentsRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
-    
-    public GetTracksTrackIdCommentsQueryParams queryParams;
-    public GetTracksTrackIdCommentsRequest withQueryParams(GetTracksTrackIdCommentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Returns paginated collection of items (recommended, returning a list without pagination is deprecated and should not be used)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=linked_partitioning")
+    public Boolean linkedPartitioning;
+    public GetTracksTrackIdCommentsRequest withLinkedPartitioning(Boolean linkedPartitioning) {
+        this.linkedPartitioning = linkedPartitioning;
         return this;
     }
     
+    /**
+     * Offset of first result. Deprecated, use `linked_partitioning` instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetTracksTrackIdCommentsRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
     
-    public GetTracksTrackIdCommentsSecurity security;
-    public GetTracksTrackIdCommentsRequest withSecurity(GetTracksTrackIdCommentsSecurity security) {
-        this.security = security;
+    /**
+     * SoundCloud Track id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=track_id")
+    public Long trackId;
+    public GetTracksTrackIdCommentsRequest withTrackId(Long trackId) {
+        this.trackId = trackId;
         return this;
     }
     

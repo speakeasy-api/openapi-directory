@@ -4,13 +4,120 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssuesListRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=collab")
+    public Boolean collab;
+    public IssuesListRequest withCollab(Boolean collab) {
+        this.collab = collab;
+        return this;
+    }
     
-    public IssuesListQueryParams queryParams;
-    public IssuesListRequest withQueryParams(IssuesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * One of `asc` (ascending) or `desc` (descending).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public org.openapis.openapi.models.shared.DirectionEnum direction;
+    public IssuesListRequest withDirection(org.openapis.openapi.models.shared.DirectionEnum direction) {
+        this.direction = direction;
+        return this;
+    }
+    
+    /**
+     * Indicates which sorts of issues to return. Can be one of:  
+     * \* `assigned`: Issues assigned to you  
+     * \* `created`: Issues created by you  
+     * \* `mentioned`: Issues mentioning you  
+     * \* `subscribed`: Issues you're subscribed to updates for  
+     * \* `all` or `repos`: All issues the authenticated user can see, regardless of participation or creation
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public IssuesListFilterEnum filter;
+    public IssuesListRequest withFilter(IssuesListFilterEnum filter) {
+        this.filter = filter;
+        return this;
+    }
+    
+    /**
+     * A list of comma separated label names. Example: `bug,ui,@high`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=labels")
+    public String labels;
+    public IssuesListRequest withLabels(String labels) {
+        this.labels = labels;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orgs")
+    public Boolean orgs;
+    public IssuesListRequest withOrgs(Boolean orgs) {
+        this.orgs = orgs;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=owned")
+    public Boolean owned;
+    public IssuesListRequest withOwned(Boolean owned) {
+        this.owned = owned;
+        return this;
+    }
+    
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public IssuesListRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public IssuesListRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pulls")
+    public Boolean pulls;
+    public IssuesListRequest withPulls(Boolean pulls) {
+        this.pulls = pulls;
+        return this;
+    }
+    
+    /**
+     * Only show notifications updated after the given time. This is a timestamp in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format: `YYYY-MM-DDTHH:MM:SSZ`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public OffsetDateTime since;
+    public IssuesListRequest withSince(OffsetDateTime since) {
+        this.since = since;
+        return this;
+    }
+    
+    /**
+     * What to sort results by. Can be either `created`, `updated`, `comments`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public IssuesListSortEnum sort;
+    public IssuesListRequest withSort(IssuesListSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Indicates the state of the issues to return. Can be either `open`, `closed`, or `all`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public IssuesListStateEnum state;
+    public IssuesListRequest withState(IssuesListStateEnum state) {
+        this.state = state;
         return this;
     }
     

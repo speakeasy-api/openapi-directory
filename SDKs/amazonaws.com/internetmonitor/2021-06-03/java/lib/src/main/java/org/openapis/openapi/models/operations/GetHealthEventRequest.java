@@ -4,20 +4,75 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetHealthEventRequest {
-    
-    public GetHealthEventPathParams pathParams;
-    public GetHealthEventRequest withPathParams(GetHealthEventPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The internally generated identifier of a health event. Because &lt;code&gt;EventID&lt;/code&gt; contains the forward slash (\u201c/\u201d) character, you must URL-encode the &lt;code&gt;EventID&lt;/code&gt; field in the request URL.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EventId")
+    public String eventId;
+    public GetHealthEventRequest withEventId(String eventId) {
+        this.eventId = eventId;
         return this;
     }
     
+    /**
+     * The name of the monitor.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=MonitorName")
+    public String monitorName;
+    public GetHealthEventRequest withMonitorName(String monitorName) {
+        this.monitorName = monitorName;
+        return this;
+    }
     
-    public GetHealthEventHeaders headers;
-    public GetHealthEventRequest withHeaders(GetHealthEventHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetHealthEventRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetHealthEventRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetHealthEventRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetHealthEventRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetHealthEventRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetHealthEventRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetHealthEventRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

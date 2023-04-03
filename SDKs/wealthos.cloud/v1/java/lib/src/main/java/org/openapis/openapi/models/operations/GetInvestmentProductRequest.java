@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetInvestmentProductRequest {
-    
-    public GetInvestmentProductPathParams pathParams;
-    public GetInvestmentProductRequest withPathParams(GetInvestmentProductPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Investment Product Category Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=category_id")
+    public GetInvestmentProductCategoryIDEnum categoryId;
+    public GetInvestmentProductRequest withCategoryId(GetInvestmentProductCategoryIDEnum categoryId) {
+        this.categoryId = categoryId;
         return this;
     }
     
-    
-    public GetInvestmentProductHeaders headers;
-    public GetInvestmentProductRequest withHeaders(GetInvestmentProductHeaders headers) {
-        this.headers = headers;
+    /**
+     * Investment Product Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=investment_product_id")
+    public String investmentProductId;
+    public GetInvestmentProductRequest withInvestmentProductId(String investmentProductId) {
+        this.investmentProductId = investmentProductId;
         return this;
     }
     
-    
-    public GetInvestmentProductSecurity security;
-    public GetInvestmentProductRequest withSecurity(GetInvestmentProductSecurity security) {
-        this.security = security;
+    /**
+     * ApiSecretKey
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public GetInvestmentProductRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

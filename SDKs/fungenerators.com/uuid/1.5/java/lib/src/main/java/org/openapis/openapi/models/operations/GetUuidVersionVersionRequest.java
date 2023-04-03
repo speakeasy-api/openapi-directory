@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUuidVersionVersionRequest {
-    
-    public GetUuidVersionVersionPathParams pathParams;
-    public GetUuidVersionVersionRequest withPathParams(GetUuidVersionVersionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Number of UUID's to generate (defaults to 1)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
+    public Long count;
+    public GetUuidVersionVersionRequest withCount(Long count) {
+        this.count = count;
         return this;
     }
     
-    
-    public GetUuidVersionVersionQueryParams queryParams;
-    public GetUuidVersionVersionRequest withQueryParams(GetUuidVersionVersionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * For v3 and v5 of UUID Spec supply the text value for the type specified dns/url/oid/x500/nil. For example specify a dns/domain string if the type is "dns"
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
+    public String text;
+    public GetUuidVersionVersionRequest withText(String text) {
+        this.text = text;
         return this;
     }
     
+    /**
+     * For v3 and v5 of UUID Spec you can supply the type (dns/url/oid/x500/nil).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public GetUuidVersionVersionRequest withType(String type) {
+        this.type = type;
+        return this;
+    }
     
-    public GetUuidVersionVersionSecurity security;
-    public GetUuidVersionVersionRequest withSecurity(GetUuidVersionVersionSecurity security) {
-        this.security = security;
+    /**
+     * Version of the UUID spec to use. (0-5), Use '0' for nil (00000000-0000-0000-0000-000000000000) UUID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public Long version;
+    public GetUuidVersionVersionRequest withVersion(Long version) {
+        this.version = version;
         return this;
     }
     

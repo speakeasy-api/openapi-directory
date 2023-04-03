@@ -4,20 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteProjectRequest {
-    
-    public DeleteProjectPathParams pathParams;
-    public DeleteProjectRequest withPathParams(DeleteProjectPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
+    public String trainingKey;
+    public DeleteProjectRequest withTrainingKey(String trainingKey) {
+        this.trainingKey = trainingKey;
         return this;
     }
     
-    
-    public DeleteProjectHeaders headers;
-    public DeleteProjectRequest withHeaders(DeleteProjectHeaders headers) {
-        this.headers = headers;
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public DeleteProjectRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

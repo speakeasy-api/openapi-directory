@@ -4,20 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGiftCardTransactionbyIDRequest {
-    
-    public GetGiftCardTransactionbyIDPathParams pathParams;
-    public GetGiftCardTransactionbyIDRequest withPathParams(GetGiftCardTransactionbyIDPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Media type(s) that is/are acceptable for the response. Default value for payment provider protocol is application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetGiftCardTransactionbyIDRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * The Media type of the body of the request. Default value for payment provider protocol is application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetGiftCardTransactionbyIDRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetGiftCardTransactionbyIDHeaders headers;
-    public GetGiftCardTransactionbyIDRequest withHeaders(GetGiftCardTransactionbyIDHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=giftCardID")
+    public String giftCardID;
+    public GetGiftCardTransactionbyIDRequest withGiftCardID(String giftCardID) {
+        this.giftCardID = giftCardID;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transactionID")
+    public String transactionID;
+    public GetGiftCardTransactionbyIDRequest withTransactionID(String transactionID) {
+        this.transactionID = transactionID;
         return this;
     }
     

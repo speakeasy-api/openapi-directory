@@ -7,17 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DiaryControllerPutAppointmentRawRequest {
-    
-    public DiaryControllerPutAppointmentRawPathParams pathParams;
-    public DiaryControllerPutAppointmentRawRequest withPathParams(DiaryControllerPutAppointmentRawPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DiaryControllerPutAppointmentRawQueryParams queryParams;
-    public DiaryControllerPutAppointmentRawRequest withQueryParams(DiaryControllerPutAppointmentRawQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Sales or Lettings property?
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AllowMarketingCorrespondence")
+    public Boolean allowMarketingCorrespondence;
+    public DiaryControllerPutAppointmentRawRequest withAllowMarketingCorrespondence(Boolean allowMarketingCorrespondence) {
+        this.allowMarketingCorrespondence = allowMarketingCorrespondence;
         return this;
     }
     
@@ -25,9 +21,39 @@ public class DiaryControllerPutAppointmentRawRequest {
      * The appointment details model
      */
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public DiaryControllerPutAppointmentRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public DiaryControllerPutAppointmentRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The unique appointment id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointmentID")
+    public String appointmentID;
+    public DiaryControllerPutAppointmentRawRequest withAppointmentID(String appointmentID) {
+        this.appointmentID = appointmentID;
+        return this;
+    }
+    
+    /**
+     * Sales or Lettings property?
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lettings")
+    public Boolean lettings;
+    public DiaryControllerPutAppointmentRawRequest withLettings(Boolean lettings) {
+        this.lettings = lettings;
+        return this;
+    }
+    
+    /**
+     * The unique client short-name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
+    public String shortName;
+    public DiaryControllerPutAppointmentRawRequest withShortName(String shortName) {
+        this.shortName = shortName;
         return this;
     }
     

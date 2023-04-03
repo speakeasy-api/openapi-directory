@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostAppsAppIdVersionsVersionStatusRequest {
-    
-    public PostAppsAppIdVersionsVersionStatusPathParams pathParams;
-    public PostAppsAppIdVersionsVersionStatusRequest withPathParams(PostAppsAppIdVersionsVersionStatusPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the App to be updated
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
+    public String appId;
+    public PostAppsAppIdVersionsVersionStatusRequest withAppId(String appId) {
+        this.appId = appId;
         return this;
     }
     
+    /**
+     * The unique id of the developer that is modifying this app
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=developerId")
+    public String developerId;
+    public PostAppsAppIdVersionsVersionStatusRequest withDeveloperId(String developerId) {
+        this.developerId = developerId;
+        return this;
+    }
     
-    public PostAppsAppIdVersionsVersionStatusQueryParams queryParams;
-    public PostAppsAppIdVersionsVersionStatusRequest withQueryParams(PostAppsAppIdVersionsVersionStatusQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The role initiating this status change. Can be either 'developer' or 'administrator' (default)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modifiedBy")
+    public PostAppsAppIdVersionsVersionStatusModifiedByEnum modifiedBy;
+    public PostAppsAppIdVersionsVersionStatusRequest withModifiedBy(PostAppsAppIdVersionsVersionStatusModifiedByEnum modifiedBy) {
+        this.modifiedBy = modifiedBy;
+        return this;
+    }
+    
+    /**
+     * The reason for this status change
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reason")
+    public String reason;
+    public PostAppsAppIdVersionsVersionStatusRequest withReason(String reason) {
+        this.reason = reason;
+        return this;
+    }
+    
+    /**
+     * The new status for this app. Can be either 'inReview', 'approved', 'suspended' or 'rejected'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public PostAppsAppIdVersionsVersionStatusStatusEnum status;
+    public PostAppsAppIdVersionsVersionStatusRequest withStatus(PostAppsAppIdVersionsVersionStatusStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * The version of the App to be updated
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public Long version;
+    public PostAppsAppIdVersionsVersionStatusRequest withVersion(Long version) {
+        this.version = version;
         return this;
     }
     

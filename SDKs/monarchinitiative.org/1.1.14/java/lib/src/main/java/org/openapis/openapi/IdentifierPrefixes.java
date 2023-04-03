@@ -68,7 +68,7 @@ public class IdentifierPrefixes {
      */
     public org.openapis.openapi.models.operations.GetPrefixContractResponse getPrefixContract(org.openapis.openapi.models.operations.GetPrefixContractRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPrefixContractPathParams.class, baseUrl, "/identifier/prefixes/contract/{uri}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPrefixContractRequest.class, baseUrl, "/identifier/prefixes/contract/{uri}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -100,7 +100,7 @@ public class IdentifierPrefixes {
      */
     public org.openapis.openapi.models.operations.GetPrefixExpandResponse getPrefixExpand(org.openapis.openapi.models.operations.GetPrefixExpandRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPrefixExpandPathParams.class, baseUrl, "/identifier/prefixes/expand/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPrefixExpandRequest.class, baseUrl, "/identifier/prefixes/expand/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -34,27 +34,28 @@ public class InboundSamlSsoProfiles {
     /**
      * Creates an InboundSamlSsoProfile for a customer.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesCreateResponse cloudidentityInboundSamlSsoProfilesCreate(org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesCreateResponse cloudidentityInboundSamlSsoProfilesCreate(org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesCreateRequest request, org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1beta1/inboundSamlSsoProfiles");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "inboundSamlSsoProfileInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,27 +82,28 @@ public class InboundSamlSsoProfiles {
     /**
      * Adds an IdpCredential. Up to 2 credentials are allowed.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsAddResponse cloudidentityInboundSamlSsoProfilesIdpCredentialsAdd(org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsAddRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsAddResponse cloudidentityInboundSamlSsoProfilesIdpCredentialsAdd(org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsAddRequest request, org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsAddSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsAddPathParams.class, baseUrl, "/v1beta1/{parent}/idpCredentials:add", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsAddRequest.class, baseUrl, "/v1beta1/{parent}/idpCredentials:add", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "addIdpCredentialRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsAddQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsAddRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -128,25 +130,26 @@ public class InboundSamlSsoProfiles {
     /**
      * Returns a list of IdpCredentials in an InboundSamlSsoProfile.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsListResponse cloudidentityInboundSamlSsoProfilesIdpCredentialsList(org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsListResponse cloudidentityInboundSamlSsoProfilesIdpCredentialsList(org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsListRequest request, org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsListPathParams.class, baseUrl, "/v1beta1/{parent}/idpCredentials", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsListRequest.class, baseUrl, "/v1beta1/{parent}/idpCredentials", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesIdpCredentialsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -173,10 +176,11 @@ public class InboundSamlSsoProfiles {
     /**
      * Lists InboundSamlSsoProfiles for a customer.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesListResponse cloudidentityInboundSamlSsoProfilesList(org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesListResponse cloudidentityInboundSamlSsoProfilesList(org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesListRequest request, org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1beta1/inboundSamlSsoProfiles");
         
@@ -184,14 +188,14 @@ public class InboundSamlSsoProfiles {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityInboundSamlSsoProfilesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

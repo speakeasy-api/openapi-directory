@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyVpcAttributeRequest {
-    
-    public GETModifyVpcAttributeQueryParams queryParams;
-    public GETModifyVpcAttributeRequest withQueryParams(GETModifyVpcAttributeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyVpcAttributeActionEnum action;
+    public GETModifyVpcAttributeRequest withAction(GETModifyVpcAttributeActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;Indicates whether the instances launched in the VPC get DNS hostnames. If enabled, instances in the VPC get DNS hostnames; otherwise, they do not.&lt;/p&gt; &lt;p&gt;You cannot modify the DNS resolution and DNS hostnames attributes in the same request. Use separate requests for each attribute. You can only enable DNS hostnames if you've enabled DNS support.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnableDnsHostnames")
+    public GETModifyVpcAttributeEnableDNSHostnames enableDnsHostnames;
+    public GETModifyVpcAttributeRequest withEnableDnsHostnames(GETModifyVpcAttributeEnableDNSHostnames enableDnsHostnames) {
+        this.enableDnsHostnames = enableDnsHostnames;
+        return this;
+    }
     
-    public GETModifyVpcAttributeHeaders headers;
-    public GETModifyVpcAttributeRequest withHeaders(GETModifyVpcAttributeHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;Indicates whether the DNS resolution is supported for the VPC. If enabled, queries to the Amazon provided DNS server at the 169.254.169.253 IP address, or the reserved IP address at the base of the VPC network range "plus two" succeed. If disabled, the Amazon provided DNS service in the VPC that resolves public DNS hostnames to IP addresses is not enabled.&lt;/p&gt; &lt;p&gt;You cannot modify the DNS resolution and DNS hostnames attributes in the same request. Use separate requests for each attribute.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnableDnsSupport")
+    public GETModifyVpcAttributeEnableDNSSupport enableDnsSupport;
+    public GETModifyVpcAttributeRequest withEnableDnsSupport(GETModifyVpcAttributeEnableDNSSupport enableDnsSupport) {
+        this.enableDnsSupport = enableDnsSupport;
+        return this;
+    }
+    
+    /**
+     * Indicates whether Network Address Usage metrics are enabled for your VPC.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnableNetworkAddressUsageMetrics")
+    public GETModifyVpcAttributeEnableNetworkAddressUsageMetrics enableNetworkAddressUsageMetrics;
+    public GETModifyVpcAttributeRequest withEnableNetworkAddressUsageMetrics(GETModifyVpcAttributeEnableNetworkAddressUsageMetrics enableNetworkAddressUsageMetrics) {
+        this.enableNetworkAddressUsageMetrics = enableNetworkAddressUsageMetrics;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyVpcAttributeVersionEnum version;
+    public GETModifyVpcAttributeRequest withVersion(GETModifyVpcAttributeVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    /**
+     * The ID of the VPC.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcId")
+    public String vpcId;
+    public GETModifyVpcAttributeRequest withVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyVpcAttributeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyVpcAttributeRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyVpcAttributeRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyVpcAttributeRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyVpcAttributeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyVpcAttributeRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyVpcAttributeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

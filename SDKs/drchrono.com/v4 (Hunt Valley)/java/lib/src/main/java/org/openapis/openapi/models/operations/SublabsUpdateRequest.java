@@ -4,20 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SublabsUpdateRequest {
-    
-    public SublabsUpdatePathParams pathParams;
-    public SublabsUpdateRequest withPathParams(SublabsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public SublabsUpdateSecurity security;
-    public SublabsUpdateRequest withSecurity(SublabsUpdateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public SublabsUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

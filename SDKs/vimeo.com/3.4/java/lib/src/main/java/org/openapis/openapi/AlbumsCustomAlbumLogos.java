@@ -34,19 +34,20 @@ public class AlbumsCustomAlbumLogos {
     /**
      * Add a custom album logo
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateAlbumLogoResponse createAlbumLogo(org.openapis.openapi.models.operations.CreateAlbumLogoRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateAlbumLogoResponse createAlbumLogo(org.openapis.openapi.models.operations.CreateAlbumLogoRequest request, org.openapis.openapi.models.operations.CreateAlbumLogoSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateAlbumLogoPathParams.class, baseUrl, "/users/{user_id}/albums/{album_id}/logos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateAlbumLogoRequest.class, baseUrl, "/users/{user_id}/albums/{album_id}/logos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,19 +83,20 @@ public class AlbumsCustomAlbumLogos {
      * Remove a custom album logo
      * This method removes a custom logo from the specified album.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteAlbumLogoResponse deleteAlbumLogo(org.openapis.openapi.models.operations.DeleteAlbumLogoRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteAlbumLogoResponse deleteAlbumLogo(org.openapis.openapi.models.operations.DeleteAlbumLogoRequest request, org.openapis.openapi.models.operations.DeleteAlbumLogoSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAlbumLogoPathParams.class, baseUrl, "/users/{user_id}/albums/{album_id}/logos/{logo_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAlbumLogoRequest.class, baseUrl, "/users/{user_id}/albums/{album_id}/logos/{logo_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -128,7 +130,7 @@ public class AlbumsCustomAlbumLogos {
      */
     public org.openapis.openapi.models.operations.GetAlbumLogoResponse getAlbumLogo(org.openapis.openapi.models.operations.GetAlbumLogoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAlbumLogoPathParams.class, baseUrl, "/users/{user_id}/albums/{album_id}/logos/{logo_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAlbumLogoRequest.class, baseUrl, "/users/{user_id}/albums/{album_id}/logos/{logo_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -175,13 +177,13 @@ public class AlbumsCustomAlbumLogos {
      */
     public org.openapis.openapi.models.operations.GetAlbumLogosResponse getAlbumLogos(org.openapis.openapi.models.operations.GetAlbumLogosRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAlbumLogosPathParams.class, baseUrl, "/users/{user_id}/albums/{album_id}/logos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAlbumLogosRequest.class, baseUrl, "/users/{user_id}/albums/{album_id}/logos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAlbumLogosQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAlbumLogosRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -223,21 +225,22 @@ public class AlbumsCustomAlbumLogos {
     /**
      * Replace a custom album logo
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReplaceAlbumLogoResponse replaceAlbumLogo(org.openapis.openapi.models.operations.ReplaceAlbumLogoRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReplaceAlbumLogoResponse replaceAlbumLogo(org.openapis.openapi.models.operations.ReplaceAlbumLogoRequest request, org.openapis.openapi.models.operations.ReplaceAlbumLogoSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReplaceAlbumLogoPathParams.class, baseUrl, "/users/{user_id}/albums/{album_id}/logos/{logo_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReplaceAlbumLogoRequest.class, baseUrl, "/users/{user_id}/albums/{album_id}/logos/{logo_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LockNetworkSmDevicesRequest {
-    
-    public LockNetworkSmDevicesPathParams pathParams;
-    public LockNetworkSmDevicesRequest withPathParams(LockNetworkSmDevicesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public LockNetworkSmDevicesRequestBody requestBody;
+    public LockNetworkSmDevicesRequest withRequestBody(LockNetworkSmDevicesRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public LockNetworkSmDevicesRequestBody request;
-    public LockNetworkSmDevicesRequest withRequest(LockNetworkSmDevicesRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public LockNetworkSmDevicesRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

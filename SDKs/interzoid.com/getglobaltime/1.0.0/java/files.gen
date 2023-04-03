@@ -30,7 +30,6 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/GetglobaltimeQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetglobaltimeRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Getglobaltime200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetglobaltimeResponse.java

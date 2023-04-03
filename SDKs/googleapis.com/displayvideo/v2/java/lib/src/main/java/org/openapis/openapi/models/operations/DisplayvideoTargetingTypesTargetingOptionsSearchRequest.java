@@ -7,31 +7,130 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisplayvideoTargetingTypesTargetingOptionsSearchRequest {
-    
-    public DisplayvideoTargetingTypesTargetingOptionsSearchPathParams pathParams;
-    public DisplayvideoTargetingTypesTargetingOptionsSearchRequest withPathParams(DisplayvideoTargetingTypesTargetingOptionsSearchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DisplayvideoTargetingTypesTargetingOptionsSearchQueryParams queryParams;
-    public DisplayvideoTargetingTypesTargetingOptionsSearchRequest withQueryParams(DisplayvideoTargetingTypesTargetingOptionsSearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public DisplayvideoTargetingTypesTargetingOptionsSearchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SearchTargetingOptionsRequest request;
-    public DisplayvideoTargetingTypesTargetingOptionsSearchRequest withRequest(org.openapis.openapi.models.shared.SearchTargetingOptionsRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SearchTargetingOptionsRequest searchTargetingOptionsRequest;
+    public DisplayvideoTargetingTypesTargetingOptionsSearchRequest withSearchTargetingOptionsRequest(org.openapis.openapi.models.shared.SearchTargetingOptionsRequest searchTargetingOptionsRequest) {
+        this.searchTargetingOptionsRequest = searchTargetingOptionsRequest;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public DisplayvideoTargetingTypesTargetingOptionsSearchRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public DisplayvideoTargetingTypesTargetingOptionsSearchSecurity security;
-    public DisplayvideoTargetingTypesTargetingOptionsSearchRequest withSecurity(DisplayvideoTargetingTypesTargetingOptionsSearchSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DisplayvideoTargetingTypesTargetingOptionsSearchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public DisplayvideoTargetingTypesTargetingOptionsSearchRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DisplayvideoTargetingTypesTargetingOptionsSearchRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DisplayvideoTargetingTypesTargetingOptionsSearchRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DisplayvideoTargetingTypesTargetingOptionsSearchRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DisplayvideoTargetingTypesTargetingOptionsSearchRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DisplayvideoTargetingTypesTargetingOptionsSearchRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Required. The type of targeting options to retrieve. Accepted values are: * `TARGETING_TYPE_GEO_REGION` * `TARGETING_TYPE_POI` * `TARGETING_TYPE_BUSINESS_CHAIN`
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=targetingType")
+    public DisplayvideoTargetingTypesTargetingOptionsSearchTargetingTypeEnum targetingType;
+    public DisplayvideoTargetingTypesTargetingOptionsSearchRequest withTargetingType(DisplayvideoTargetingTypesTargetingOptionsSearchTargetingTypeEnum targetingType) {
+        this.targetingType = targetingType;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public DisplayvideoTargetingTypesTargetingOptionsSearchRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public DisplayvideoTargetingTypesTargetingOptionsSearchRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

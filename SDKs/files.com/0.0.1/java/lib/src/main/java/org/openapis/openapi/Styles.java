@@ -42,7 +42,7 @@ public class Styles {
      */
     public org.openapis.openapi.models.operations.DeleteStylesPathResponse deleteStylesPath(org.openapis.openapi.models.operations.DeleteStylesPathRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteStylesPathPathParams.class, baseUrl, "/styles/{path}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteStylesPathRequest.class, baseUrl, "/styles/{path}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -75,7 +75,7 @@ public class Styles {
      */
     public org.openapis.openapi.models.operations.GetStylesPathResponse getStylesPath(org.openapis.openapi.models.operations.GetStylesPathRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStylesPathPathParams.class, baseUrl, "/styles/{path}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStylesPathRequest.class, baseUrl, "/styles/{path}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -116,12 +116,12 @@ public class Styles {
      */
     public org.openapis.openapi.models.operations.PatchStylesPathResponse patchStylesPath(org.openapis.openapi.models.operations.PatchStylesPathRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchStylesPathPathParams.class, baseUrl, "/styles/{path}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchStylesPathRequest.class, baseUrl, "/styles/{path}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

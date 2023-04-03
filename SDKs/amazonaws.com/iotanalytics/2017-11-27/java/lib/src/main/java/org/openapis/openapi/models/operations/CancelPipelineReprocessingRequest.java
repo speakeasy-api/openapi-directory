@@ -4,20 +4,75 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelPipelineReprocessingRequest {
-    
-    public CancelPipelineReprocessingPathParams pathParams;
-    public CancelPipelineReprocessingRequest withPathParams(CancelPipelineReprocessingPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public CancelPipelineReprocessingRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public CancelPipelineReprocessingRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public CancelPipelineReprocessingHeaders headers;
-    public CancelPipelineReprocessingRequest withHeaders(CancelPipelineReprocessingHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public CancelPipelineReprocessingRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public CancelPipelineReprocessingRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public CancelPipelineReprocessingRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public CancelPipelineReprocessingRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public CancelPipelineReprocessingRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The name of pipeline for which data reprocessing is canceled.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pipelineName")
+    public String pipelineName;
+    public CancelPipelineReprocessingRequest withPipelineName(String pipelineName) {
+        this.pipelineName = pipelineName;
+        return this;
+    }
+    
+    /**
+     * The ID of the reprocessing task (returned by &lt;code&gt;StartPipelineReprocessing&lt;/code&gt;).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reprocessingId")
+    public String reprocessingId;
+    public CancelPipelineReprocessingRequest withReprocessingId(String reprocessingId) {
+        this.reprocessingId = reprocessingId;
         return this;
     }
     

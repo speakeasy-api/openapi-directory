@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PreprintsContributorsCreateRequest {
-    
-    public PreprintsContributorsCreatePathParams pathParams;
-    public PreprintsContributorsCreateRequest withPathParams(PreprintsContributorsCreatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PreprintsContributorsCreateContributorInput requestBody;
+    public PreprintsContributorsCreateRequest withRequestBody(PreprintsContributorsCreateContributorInput requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PreprintsContributorsCreateContributorInput request;
-    public PreprintsContributorsCreateRequest withRequest(PreprintsContributorsCreateContributorInput request) {
-        this.request = request;
+    /**
+     * The unique identifier of the Preprint.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=preprint_id")
+    public String preprintId;
+    public PreprintsContributorsCreateRequest withPreprintId(String preprintId) {
+        this.preprintId = preprintId;
         return this;
     }
     

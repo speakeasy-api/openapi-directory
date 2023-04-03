@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRequestsRequest {
+    /**
+     * Used for pagination.  When a list request has more records available, cursors are provided in the response headers `X-Files-Cursor-Next` and `X-Files-Cursor-Prev`.  Send one of those cursor value here to resume an existing list from the next available record.  Note: many of our SDKs have iterator methods that will automatically handle cursor-based pagination.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public GetRequestsRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
     
-    public GetRequestsQueryParams queryParams;
-    public GetRequestsRequest withQueryParams(GetRequestsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Only show requests of the current user?  (Defaults to true if current user is not a site admin.)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mine")
+    public Boolean mine;
+    public GetRequestsRequest withMine(Boolean mine) {
+        this.mine = mine;
+        return this;
+    }
+    
+    /**
+     * Path to show requests for.  If omitted, shows all paths. Send `/` to represent the root directory.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=path")
+    public String path;
+    public GetRequestsRequest withPath(String path) {
+        this.path = path;
+        return this;
+    }
+    
+    /**
+     * Number of records to show per page.  (Max: 10,000, 1,000 or less is recommended).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetRequestsRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * If set, sort records by the specified field in either `asc` or `desc` direction (e.g. `sort_by[destination]=desc`). Valid fields are `destination`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
+    public java.util.Map<String, Object> sortBy;
+    public GetRequestsRequest withSortBy(java.util.Map<String, Object> sortBy) {
+        this.sortBy = sortBy;
         return this;
     }
     

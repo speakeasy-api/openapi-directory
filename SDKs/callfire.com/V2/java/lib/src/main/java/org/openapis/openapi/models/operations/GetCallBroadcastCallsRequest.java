@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCallBroadcastCallsRequest {
-    
-    public GetCallBroadcastCallsPathParams pathParams;
-    public GetCallBroadcastCallsRequest withPathParams(GetCallBroadcastCallsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * An id of a particular batch associated with broadcast
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=batchId")
+    public Long batchId;
+    public GetCallBroadcastCallsRequest withBatchId(Long batchId) {
+        this.batchId = batchId;
         return this;
     }
     
-    
-    public GetCallBroadcastCallsQueryParams queryParams;
-    public GetCallBroadcastCallsRequest withQueryParams(GetCallBroadcastCallsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public GetCallBroadcastCallsRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     
+    /**
+     * An Id of a call broadcast
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetCallBroadcastCallsRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetCallBroadcastCallsSecurity security;
-    public GetCallBroadcastCallsRequest withSecurity(GetCallBroadcastCallsSecurity security) {
-        this.security = security;
+    /**
+     * To set the maximum number of records to return in a paged list response. The default is 100
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetCallBroadcastCallsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Offset to the start of a given page. The default is 0. Check [pagination](https://developers.callfire.com/docs.html#pagination) page for more information about pagination in CallFire API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public GetCallBroadcastCallsRequest withOffset(Integer offset) {
+        this.offset = offset;
         return this;
     }
     

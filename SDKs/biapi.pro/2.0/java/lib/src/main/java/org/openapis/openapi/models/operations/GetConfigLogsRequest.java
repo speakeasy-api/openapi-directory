@@ -4,13 +4,54 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConfigLogsRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public GetConfigLogsRequest withExpand(String expand) {
+        this.expand = expand;
+        return this;
+    }
     
-    public GetConfigLogsQueryParams queryParams;
-    public GetConfigLogsRequest withQueryParams(GetConfigLogsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * maximum date of the change
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_date")
+    public LocalDate maxDate;
+    public GetConfigLogsRequest withMaxDate(LocalDate maxDate) {
+        this.maxDate = maxDate;
+        return this;
+    }
+    
+    /**
+     * minimal date of the change
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_date")
+    public LocalDate minDate;
+    public GetConfigLogsRequest withMinDate(LocalDate minDate) {
+        this.minDate = minDate;
+        return this;
+    }
+    
+    /**
+     * limit the results to keys matching the given value
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public GetConfigLogsRequest withSearch(String search) {
+        this.search = search;
+        return this;
+    }
+    
+    /**
+     * type of change done on the configuration
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public GetConfigLogsRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

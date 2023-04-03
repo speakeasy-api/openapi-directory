@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetActionResourceShowRequest {
+    /**
+     * The id of the resource
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public GetActionResourceShowRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetActionResourceShowQueryParams queryParams;
-    public GetActionResourceShowRequest withQueryParams(GetActionResourceShowQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Add tracking information to dataset
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_tracking")
+    public Boolean includeTracking;
+    public GetActionResourceShowRequest withIncludeTracking(Boolean includeTracking) {
+        this.includeTracking = includeTracking;
         return this;
     }
     

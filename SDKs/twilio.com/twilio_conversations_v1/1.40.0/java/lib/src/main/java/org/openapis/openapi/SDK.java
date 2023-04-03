@@ -827,13 +827,26 @@ public class SDK {
     /**
      * Create a new address configuration
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateConfigurationAddressResponse createConfigurationAddress(org.openapis.openapi.models.operations.CreateConfigurationAddressRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateConfigurationAddressResponse createConfigurationAddress(org.openapis.openapi.models.operations.CreateConfigurationAddressCreateConfigurationAddressRequest request, org.openapis.openapi.models.operations.CreateConfigurationAddressSecurity security) throws Exception {
+        return this.createConfigurationAddress(request, security, null);
+    }
+
+    /**
+     * Create a new address configuration
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateConfigurationAddressResponse createConfigurationAddress(org.openapis.openapi.models.operations.CreateConfigurationAddressCreateConfigurationAddressRequest request, org.openapis.openapi.models.operations.CreateConfigurationAddressSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_CONFIGURATION_ADDRESS_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Configuration/Addresses");
@@ -845,7 +858,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -872,13 +885,26 @@ public class SDK {
     /**
      * Create a new conversation in your account's default service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateConversationResponse createConversation(org.openapis.openapi.models.operations.CreateConversationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateConversationResponse createConversation(org.openapis.openapi.models.operations.CreateConversationRequest request, org.openapis.openapi.models.operations.CreateConversationSecurity security) throws Exception {
+        return this.createConversation(request, security, null);
+    }
+
+    /**
+     * Create a new conversation in your account's default service
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateConversationResponse createConversation(org.openapis.openapi.models.operations.CreateConversationRequest request, org.openapis.openapi.models.operations.CreateConversationSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_CONVERSATION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Conversations");
@@ -886,10 +912,10 @@ public class SDK {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -898,7 +924,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -925,24 +951,37 @@ public class SDK {
     /**
      * Add a new message to the conversation
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateConversationMessageResponse createConversationMessage(org.openapis.openapi.models.operations.CreateConversationMessageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateConversationMessageResponse createConversationMessage(org.openapis.openapi.models.operations.CreateConversationMessageRequest request, org.openapis.openapi.models.operations.CreateConversationMessageSecurity security) throws Exception {
+        return this.createConversationMessage(request, security, null);
+    }
+
+    /**
+     * Add a new message to the conversation
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateConversationMessageResponse createConversationMessage(org.openapis.openapi.models.operations.CreateConversationMessageRequest request, org.openapis.openapi.models.operations.CreateConversationMessageSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_CONVERSATION_MESSAGE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateConversationMessagePathParams.class, baseUrl, "/v1/Conversations/{ConversationSid}/Messages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateConversationMessageRequest.class, baseUrl, "/v1/Conversations/{ConversationSid}/Messages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -951,7 +990,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -978,24 +1017,37 @@ public class SDK {
     /**
      * Add a new participant to the conversation
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateConversationParticipantResponse createConversationParticipant(org.openapis.openapi.models.operations.CreateConversationParticipantRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateConversationParticipantResponse createConversationParticipant(org.openapis.openapi.models.operations.CreateConversationParticipantRequest request, org.openapis.openapi.models.operations.CreateConversationParticipantSecurity security) throws Exception {
+        return this.createConversationParticipant(request, security, null);
+    }
+
+    /**
+     * Add a new participant to the conversation
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateConversationParticipantResponse createConversationParticipant(org.openapis.openapi.models.operations.CreateConversationParticipantRequest request, org.openapis.openapi.models.operations.CreateConversationParticipantSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_CONVERSATION_PARTICIPANT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateConversationParticipantPathParams.class, baseUrl, "/v1/Conversations/{ConversationSid}/Participants", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateConversationParticipantRequest.class, baseUrl, "/v1/Conversations/{ConversationSid}/Participants", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1004,7 +1056,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1031,25 +1083,38 @@ public class SDK {
     /**
      * Create a new webhook scoped to the conversation
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateConversationScopedWebhookResponse createConversationScopedWebhook(org.openapis.openapi.models.operations.CreateConversationScopedWebhookRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateConversationScopedWebhookResponse createConversationScopedWebhook(org.openapis.openapi.models.operations.CreateConversationScopedWebhookRequest request, org.openapis.openapi.models.operations.CreateConversationScopedWebhookSecurity security) throws Exception {
+        return this.createConversationScopedWebhook(request, security, null);
+    }
+
+    /**
+     * Create a new webhook scoped to the conversation
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateConversationScopedWebhookResponse createConversationScopedWebhook(org.openapis.openapi.models.operations.CreateConversationScopedWebhookRequest request, org.openapis.openapi.models.operations.CreateConversationScopedWebhookSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_CONVERSATION_SCOPED_WEBHOOK_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateConversationScopedWebhookPathParams.class, baseUrl, "/v1/Conversations/{ConversationSid}/Webhooks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateConversationScopedWebhookRequest.class, baseUrl, "/v1/Conversations/{ConversationSid}/Webhooks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1076,13 +1141,26 @@ public class SDK {
     /**
      * Add a new push notification credential to your account
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateCredentialResponse createCredential(org.openapis.openapi.models.operations.CreateCredentialRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateCredentialResponse createCredential(org.openapis.openapi.models.operations.CreateCredentialCreateCredentialRequest request, org.openapis.openapi.models.operations.CreateCredentialSecurity security) throws Exception {
+        return this.createCredential(request, security, null);
+    }
+
+    /**
+     * Add a new push notification credential to your account
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateCredentialResponse createCredential(org.openapis.openapi.models.operations.CreateCredentialCreateCredentialRequest request, org.openapis.openapi.models.operations.CreateCredentialSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_CREDENTIAL_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Credentials");
@@ -1094,7 +1172,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1121,13 +1199,26 @@ public class SDK {
     /**
      * Create a new user role in your account's default service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateRoleResponse createRole(org.openapis.openapi.models.operations.CreateRoleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateRoleResponse createRole(org.openapis.openapi.models.operations.CreateRoleCreateRoleRequest request, org.openapis.openapi.models.operations.CreateRoleSecurity security) throws Exception {
+        return this.createRole(request, security, null);
+    }
+
+    /**
+     * Create a new user role in your account's default service
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateRoleResponse createRole(org.openapis.openapi.models.operations.CreateRoleCreateRoleRequest request, org.openapis.openapi.models.operations.CreateRoleSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_ROLE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Roles");
@@ -1139,7 +1230,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1166,13 +1257,26 @@ public class SDK {
     /**
      * Create a new conversation service on your account
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateServiceResponse createService(org.openapis.openapi.models.operations.CreateServiceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateServiceResponse createService(org.openapis.openapi.models.operations.CreateServiceCreateServiceRequest request, org.openapis.openapi.models.operations.CreateServiceSecurity security) throws Exception {
+        return this.createService(request, security, null);
+    }
+
+    /**
+     * Create a new conversation service on your account
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateServiceResponse createService(org.openapis.openapi.models.operations.CreateServiceCreateServiceRequest request, org.openapis.openapi.models.operations.CreateServiceSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_SERVICE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Services");
@@ -1184,7 +1288,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1211,24 +1315,37 @@ public class SDK {
     /**
      * Create a new conversation in your service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateServiceConversationResponse createServiceConversation(org.openapis.openapi.models.operations.CreateServiceConversationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateServiceConversationResponse createServiceConversation(org.openapis.openapi.models.operations.CreateServiceConversationRequest request, org.openapis.openapi.models.operations.CreateServiceConversationSecurity security) throws Exception {
+        return this.createServiceConversation(request, security, null);
+    }
+
+    /**
+     * Create a new conversation in your service
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateServiceConversationResponse createServiceConversation(org.openapis.openapi.models.operations.CreateServiceConversationRequest request, org.openapis.openapi.models.operations.CreateServiceConversationSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_SERVICE_CONVERSATION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateServiceConversationPathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateServiceConversationRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1237,7 +1354,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1264,24 +1381,37 @@ public class SDK {
     /**
      * Add a new message to the conversation in a specific service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateServiceConversationMessageResponse createServiceConversationMessage(org.openapis.openapi.models.operations.CreateServiceConversationMessageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateServiceConversationMessageResponse createServiceConversationMessage(org.openapis.openapi.models.operations.CreateServiceConversationMessageRequest request, org.openapis.openapi.models.operations.CreateServiceConversationMessageSecurity security) throws Exception {
+        return this.createServiceConversationMessage(request, security, null);
+    }
+
+    /**
+     * Add a new message to the conversation in a specific service
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateServiceConversationMessageResponse createServiceConversationMessage(org.openapis.openapi.models.operations.CreateServiceConversationMessageRequest request, org.openapis.openapi.models.operations.CreateServiceConversationMessageSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_SERVICE_CONVERSATION_MESSAGE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateServiceConversationMessagePathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateServiceConversationMessageRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1290,7 +1420,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1317,24 +1447,37 @@ public class SDK {
     /**
      * Add a new participant to the conversation in a specific service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateServiceConversationParticipantResponse createServiceConversationParticipant(org.openapis.openapi.models.operations.CreateServiceConversationParticipantRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateServiceConversationParticipantResponse createServiceConversationParticipant(org.openapis.openapi.models.operations.CreateServiceConversationParticipantRequest request, org.openapis.openapi.models.operations.CreateServiceConversationParticipantSecurity security) throws Exception {
+        return this.createServiceConversationParticipant(request, security, null);
+    }
+
+    /**
+     * Add a new participant to the conversation in a specific service
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateServiceConversationParticipantResponse createServiceConversationParticipant(org.openapis.openapi.models.operations.CreateServiceConversationParticipantRequest request, org.openapis.openapi.models.operations.CreateServiceConversationParticipantSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_SERVICE_CONVERSATION_PARTICIPANT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateServiceConversationParticipantPathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Participants", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateServiceConversationParticipantRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Participants", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1343,7 +1486,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1370,25 +1513,38 @@ public class SDK {
     /**
      * Create a new webhook scoped to the conversation in a specific service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateServiceConversationScopedWebhookResponse createServiceConversationScopedWebhook(org.openapis.openapi.models.operations.CreateServiceConversationScopedWebhookRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateServiceConversationScopedWebhookResponse createServiceConversationScopedWebhook(org.openapis.openapi.models.operations.CreateServiceConversationScopedWebhookRequest request, org.openapis.openapi.models.operations.CreateServiceConversationScopedWebhookSecurity security) throws Exception {
+        return this.createServiceConversationScopedWebhook(request, security, null);
+    }
+
+    /**
+     * Create a new webhook scoped to the conversation in a specific service
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateServiceConversationScopedWebhookResponse createServiceConversationScopedWebhook(org.openapis.openapi.models.operations.CreateServiceConversationScopedWebhookRequest request, org.openapis.openapi.models.operations.CreateServiceConversationScopedWebhookSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_SERVICE_CONVERSATION_SCOPED_WEBHOOK_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateServiceConversationScopedWebhookPathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Webhooks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateServiceConversationScopedWebhookRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Webhooks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1415,25 +1571,38 @@ public class SDK {
     /**
      * Create a new user role in your service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateServiceRoleResponse createServiceRole(org.openapis.openapi.models.operations.CreateServiceRoleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateServiceRoleResponse createServiceRole(org.openapis.openapi.models.operations.CreateServiceRoleRequest request, org.openapis.openapi.models.operations.CreateServiceRoleSecurity security) throws Exception {
+        return this.createServiceRole(request, security, null);
+    }
+
+    /**
+     * Create a new user role in your service
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateServiceRoleResponse createServiceRole(org.openapis.openapi.models.operations.CreateServiceRoleRequest request, org.openapis.openapi.models.operations.CreateServiceRoleSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_SERVICE_ROLE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateServiceRolePathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Roles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateServiceRoleRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Roles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1460,24 +1629,37 @@ public class SDK {
     /**
      * Add a new conversation user to your service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateServiceUserResponse createServiceUser(org.openapis.openapi.models.operations.CreateServiceUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateServiceUserResponse createServiceUser(org.openapis.openapi.models.operations.CreateServiceUserRequest request, org.openapis.openapi.models.operations.CreateServiceUserSecurity security) throws Exception {
+        return this.createServiceUser(request, security, null);
+    }
+
+    /**
+     * Add a new conversation user to your service
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateServiceUserResponse createServiceUser(org.openapis.openapi.models.operations.CreateServiceUserRequest request, org.openapis.openapi.models.operations.CreateServiceUserSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_SERVICE_USER_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateServiceUserPathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Users", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateServiceUserRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Users", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1486,7 +1668,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1513,13 +1695,26 @@ public class SDK {
     /**
      * Add a new conversation user to your account's default service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateUserResponse createUser(org.openapis.openapi.models.operations.CreateUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateUserResponse createUser(org.openapis.openapi.models.operations.CreateUserRequest request, org.openapis.openapi.models.operations.CreateUserSecurity security) throws Exception {
+        return this.createUser(request, security, null);
+    }
+
+    /**
+     * Add a new conversation user to your account's default service
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateUserResponse createUser(org.openapis.openapi.models.operations.CreateUserRequest request, org.openapis.openapi.models.operations.CreateUserSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_USER_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Users");
@@ -1527,10 +1722,10 @@ public class SDK {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1539,7 +1734,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1566,23 +1761,36 @@ public class SDK {
     /**
      * Remove an existing address configuration
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteConfigurationAddressResponse deleteConfigurationAddress(org.openapis.openapi.models.operations.DeleteConfigurationAddressRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteConfigurationAddressResponse deleteConfigurationAddress(org.openapis.openapi.models.operations.DeleteConfigurationAddressRequest request, org.openapis.openapi.models.operations.DeleteConfigurationAddressSecurity security) throws Exception {
+        return this.deleteConfigurationAddress(request, security, null);
+    }
+
+    /**
+     * Remove an existing address configuration
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DeleteConfigurationAddressResponse deleteConfigurationAddress(org.openapis.openapi.models.operations.DeleteConfigurationAddressRequest request, org.openapis.openapi.models.operations.DeleteConfigurationAddressSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_CONFIGURATION_ADDRESS_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteConfigurationAddressPathParams.class, baseUrl, "/v1/Configuration/Addresses/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteConfigurationAddressRequest.class, baseUrl, "/v1/Configuration/Addresses/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1603,22 +1811,35 @@ public class SDK {
     /**
      * Remove a conversation from your account's default service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteConversationResponse deleteConversation(org.openapis.openapi.models.operations.DeleteConversationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteConversationResponse deleteConversation(org.openapis.openapi.models.operations.DeleteConversationRequest request, org.openapis.openapi.models.operations.DeleteConversationSecurity security) throws Exception {
+        return this.deleteConversation(request, security, null);
+    }
+
+    /**
+     * Remove a conversation from your account's default service
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DeleteConversationResponse deleteConversation(org.openapis.openapi.models.operations.DeleteConversationRequest request, org.openapis.openapi.models.operations.DeleteConversationSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_CONVERSATION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteConversationPathParams.class, baseUrl, "/v1/Conversations/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteConversationRequest.class, baseUrl, "/v1/Conversations/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1627,7 +1848,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1648,22 +1869,35 @@ public class SDK {
     /**
      * Remove a message from the conversation
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteConversationMessageResponse deleteConversationMessage(org.openapis.openapi.models.operations.DeleteConversationMessageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteConversationMessageResponse deleteConversationMessage(org.openapis.openapi.models.operations.DeleteConversationMessageRequest request, org.openapis.openapi.models.operations.DeleteConversationMessageSecurity security) throws Exception {
+        return this.deleteConversationMessage(request, security, null);
+    }
+
+    /**
+     * Remove a message from the conversation
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DeleteConversationMessageResponse deleteConversationMessage(org.openapis.openapi.models.operations.DeleteConversationMessageRequest request, org.openapis.openapi.models.operations.DeleteConversationMessageSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_CONVERSATION_MESSAGE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteConversationMessagePathParams.class, baseUrl, "/v1/Conversations/{ConversationSid}/Messages/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteConversationMessageRequest.class, baseUrl, "/v1/Conversations/{ConversationSid}/Messages/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1672,7 +1906,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1693,22 +1927,35 @@ public class SDK {
     /**
      * Remove a participant from the conversation
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteConversationParticipantResponse deleteConversationParticipant(org.openapis.openapi.models.operations.DeleteConversationParticipantRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteConversationParticipantResponse deleteConversationParticipant(org.openapis.openapi.models.operations.DeleteConversationParticipantRequest request, org.openapis.openapi.models.operations.DeleteConversationParticipantSecurity security) throws Exception {
+        return this.deleteConversationParticipant(request, security, null);
+    }
+
+    /**
+     * Remove a participant from the conversation
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DeleteConversationParticipantResponse deleteConversationParticipant(org.openapis.openapi.models.operations.DeleteConversationParticipantRequest request, org.openapis.openapi.models.operations.DeleteConversationParticipantSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_CONVERSATION_PARTICIPANT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteConversationParticipantPathParams.class, baseUrl, "/v1/Conversations/{ConversationSid}/Participants/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteConversationParticipantRequest.class, baseUrl, "/v1/Conversations/{ConversationSid}/Participants/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1717,7 +1964,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1738,23 +1985,36 @@ public class SDK {
     /**
      * Remove an existing webhook scoped to the conversation
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteConversationScopedWebhookResponse deleteConversationScopedWebhook(org.openapis.openapi.models.operations.DeleteConversationScopedWebhookRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteConversationScopedWebhookResponse deleteConversationScopedWebhook(org.openapis.openapi.models.operations.DeleteConversationScopedWebhookRequest request, org.openapis.openapi.models.operations.DeleteConversationScopedWebhookSecurity security) throws Exception {
+        return this.deleteConversationScopedWebhook(request, security, null);
+    }
+
+    /**
+     * Remove an existing webhook scoped to the conversation
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DeleteConversationScopedWebhookResponse deleteConversationScopedWebhook(org.openapis.openapi.models.operations.DeleteConversationScopedWebhookRequest request, org.openapis.openapi.models.operations.DeleteConversationScopedWebhookSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_CONVERSATION_SCOPED_WEBHOOK_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteConversationScopedWebhookPathParams.class, baseUrl, "/v1/Conversations/{ConversationSid}/Webhooks/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteConversationScopedWebhookRequest.class, baseUrl, "/v1/Conversations/{ConversationSid}/Webhooks/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1775,23 +2035,36 @@ public class SDK {
     /**
      * Remove a push notification credential from your account
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteCredentialResponse deleteCredential(org.openapis.openapi.models.operations.DeleteCredentialRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteCredentialResponse deleteCredential(org.openapis.openapi.models.operations.DeleteCredentialRequest request, org.openapis.openapi.models.operations.DeleteCredentialSecurity security) throws Exception {
+        return this.deleteCredential(request, security, null);
+    }
+
+    /**
+     * Remove a push notification credential from your account
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DeleteCredentialResponse deleteCredential(org.openapis.openapi.models.operations.DeleteCredentialRequest request, org.openapis.openapi.models.operations.DeleteCredentialSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_CREDENTIAL_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCredentialPathParams.class, baseUrl, "/v1/Credentials/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCredentialRequest.class, baseUrl, "/v1/Credentials/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1812,23 +2085,36 @@ public class SDK {
     /**
      * Remove a user role from your account's default service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteRoleResponse deleteRole(org.openapis.openapi.models.operations.DeleteRoleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteRoleResponse deleteRole(org.openapis.openapi.models.operations.DeleteRoleRequest request, org.openapis.openapi.models.operations.DeleteRoleSecurity security) throws Exception {
+        return this.deleteRole(request, security, null);
+    }
+
+    /**
+     * Remove a user role from your account's default service
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DeleteRoleResponse deleteRole(org.openapis.openapi.models.operations.DeleteRoleRequest request, org.openapis.openapi.models.operations.DeleteRoleSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_ROLE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRolePathParams.class, baseUrl, "/v1/Roles/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRoleRequest.class, baseUrl, "/v1/Roles/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1849,23 +2135,36 @@ public class SDK {
     /**
      * Remove a conversation service with all its nested resources from your account
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteServiceResponse deleteService(org.openapis.openapi.models.operations.DeleteServiceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteServiceResponse deleteService(org.openapis.openapi.models.operations.DeleteServiceRequest request, org.openapis.openapi.models.operations.DeleteServiceSecurity security) throws Exception {
+        return this.deleteService(request, security, null);
+    }
+
+    /**
+     * Remove a conversation service with all its nested resources from your account
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DeleteServiceResponse deleteService(org.openapis.openapi.models.operations.DeleteServiceRequest request, org.openapis.openapi.models.operations.DeleteServiceSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_SERVICE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteServicePathParams.class, baseUrl, "/v1/Services/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteServiceRequest.class, baseUrl, "/v1/Services/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1886,23 +2185,36 @@ public class SDK {
     /**
      * Remove a push notification binding from the conversation service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteServiceBindingResponse deleteServiceBinding(org.openapis.openapi.models.operations.DeleteServiceBindingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteServiceBindingResponse deleteServiceBinding(org.openapis.openapi.models.operations.DeleteServiceBindingRequest request, org.openapis.openapi.models.operations.DeleteServiceBindingSecurity security) throws Exception {
+        return this.deleteServiceBinding(request, security, null);
+    }
+
+    /**
+     * Remove a push notification binding from the conversation service
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DeleteServiceBindingResponse deleteServiceBinding(org.openapis.openapi.models.operations.DeleteServiceBindingRequest request, org.openapis.openapi.models.operations.DeleteServiceBindingSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_SERVICE_BINDING_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteServiceBindingPathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Bindings/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteServiceBindingRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Bindings/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1923,22 +2235,35 @@ public class SDK {
     /**
      * Remove a conversation from your service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteServiceConversationResponse deleteServiceConversation(org.openapis.openapi.models.operations.DeleteServiceConversationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteServiceConversationResponse deleteServiceConversation(org.openapis.openapi.models.operations.DeleteServiceConversationRequest request, org.openapis.openapi.models.operations.DeleteServiceConversationSecurity security) throws Exception {
+        return this.deleteServiceConversation(request, security, null);
+    }
+
+    /**
+     * Remove a conversation from your service
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DeleteServiceConversationResponse deleteServiceConversation(org.openapis.openapi.models.operations.DeleteServiceConversationRequest request, org.openapis.openapi.models.operations.DeleteServiceConversationSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_SERVICE_CONVERSATION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteServiceConversationPathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteServiceConversationRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1947,7 +2272,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1968,22 +2293,35 @@ public class SDK {
     /**
      * Remove a message from the conversation
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteServiceConversationMessageResponse deleteServiceConversationMessage(org.openapis.openapi.models.operations.DeleteServiceConversationMessageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteServiceConversationMessageResponse deleteServiceConversationMessage(org.openapis.openapi.models.operations.DeleteServiceConversationMessageRequest request, org.openapis.openapi.models.operations.DeleteServiceConversationMessageSecurity security) throws Exception {
+        return this.deleteServiceConversationMessage(request, security, null);
+    }
+
+    /**
+     * Remove a message from the conversation
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DeleteServiceConversationMessageResponse deleteServiceConversationMessage(org.openapis.openapi.models.operations.DeleteServiceConversationMessageRequest request, org.openapis.openapi.models.operations.DeleteServiceConversationMessageSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_SERVICE_CONVERSATION_MESSAGE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteServiceConversationMessagePathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteServiceConversationMessageRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1992,7 +2330,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2013,22 +2351,35 @@ public class SDK {
     /**
      * Remove a participant from the conversation
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteServiceConversationParticipantResponse deleteServiceConversationParticipant(org.openapis.openapi.models.operations.DeleteServiceConversationParticipantRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteServiceConversationParticipantResponse deleteServiceConversationParticipant(org.openapis.openapi.models.operations.DeleteServiceConversationParticipantRequest request, org.openapis.openapi.models.operations.DeleteServiceConversationParticipantSecurity security) throws Exception {
+        return this.deleteServiceConversationParticipant(request, security, null);
+    }
+
+    /**
+     * Remove a participant from the conversation
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DeleteServiceConversationParticipantResponse deleteServiceConversationParticipant(org.openapis.openapi.models.operations.DeleteServiceConversationParticipantRequest request, org.openapis.openapi.models.operations.DeleteServiceConversationParticipantSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_SERVICE_CONVERSATION_PARTICIPANT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteServiceConversationParticipantPathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Participants/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteServiceConversationParticipantRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Participants/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2037,7 +2388,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2058,23 +2409,36 @@ public class SDK {
     /**
      * Remove an existing webhook scoped to the conversation
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteServiceConversationScopedWebhookResponse deleteServiceConversationScopedWebhook(org.openapis.openapi.models.operations.DeleteServiceConversationScopedWebhookRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteServiceConversationScopedWebhookResponse deleteServiceConversationScopedWebhook(org.openapis.openapi.models.operations.DeleteServiceConversationScopedWebhookRequest request, org.openapis.openapi.models.operations.DeleteServiceConversationScopedWebhookSecurity security) throws Exception {
+        return this.deleteServiceConversationScopedWebhook(request, security, null);
+    }
+
+    /**
+     * Remove an existing webhook scoped to the conversation
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DeleteServiceConversationScopedWebhookResponse deleteServiceConversationScopedWebhook(org.openapis.openapi.models.operations.DeleteServiceConversationScopedWebhookRequest request, org.openapis.openapi.models.operations.DeleteServiceConversationScopedWebhookSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_SERVICE_CONVERSATION_SCOPED_WEBHOOK_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteServiceConversationScopedWebhookPathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Webhooks/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteServiceConversationScopedWebhookRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Webhooks/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2095,23 +2459,36 @@ public class SDK {
     /**
      * Remove a user role from your service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteServiceRoleResponse deleteServiceRole(org.openapis.openapi.models.operations.DeleteServiceRoleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteServiceRoleResponse deleteServiceRole(org.openapis.openapi.models.operations.DeleteServiceRoleRequest request, org.openapis.openapi.models.operations.DeleteServiceRoleSecurity security) throws Exception {
+        return this.deleteServiceRole(request, security, null);
+    }
+
+    /**
+     * Remove a user role from your service
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DeleteServiceRoleResponse deleteServiceRole(org.openapis.openapi.models.operations.DeleteServiceRoleRequest request, org.openapis.openapi.models.operations.DeleteServiceRoleSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_SERVICE_ROLE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteServiceRolePathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Roles/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteServiceRoleRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Roles/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2132,22 +2509,35 @@ public class SDK {
     /**
      * Remove a conversation user from your service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteServiceUserResponse deleteServiceUser(org.openapis.openapi.models.operations.DeleteServiceUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteServiceUserResponse deleteServiceUser(org.openapis.openapi.models.operations.DeleteServiceUserRequest request, org.openapis.openapi.models.operations.DeleteServiceUserSecurity security) throws Exception {
+        return this.deleteServiceUser(request, security, null);
+    }
+
+    /**
+     * Remove a conversation user from your service
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DeleteServiceUserResponse deleteServiceUser(org.openapis.openapi.models.operations.DeleteServiceUserRequest request, org.openapis.openapi.models.operations.DeleteServiceUserSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_SERVICE_USER_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteServiceUserPathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Users/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteServiceUserRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Users/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2156,7 +2546,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2177,23 +2567,36 @@ public class SDK {
     /**
      * Delete a specific User Conversation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteServiceUserConversationResponse deleteServiceUserConversation(org.openapis.openapi.models.operations.DeleteServiceUserConversationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteServiceUserConversationResponse deleteServiceUserConversation(org.openapis.openapi.models.operations.DeleteServiceUserConversationRequest request, org.openapis.openapi.models.operations.DeleteServiceUserConversationSecurity security) throws Exception {
+        return this.deleteServiceUserConversation(request, security, null);
+    }
+
+    /**
+     * Delete a specific User Conversation.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DeleteServiceUserConversationResponse deleteServiceUserConversation(org.openapis.openapi.models.operations.DeleteServiceUserConversationRequest request, org.openapis.openapi.models.operations.DeleteServiceUserConversationSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_SERVICE_USER_CONVERSATION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteServiceUserConversationPathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Users/{UserSid}/Conversations/{ConversationSid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteServiceUserConversationRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Users/{UserSid}/Conversations/{ConversationSid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2214,22 +2617,35 @@ public class SDK {
     /**
      * Remove a conversation user from your account's default service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteUserResponse deleteUser(org.openapis.openapi.models.operations.DeleteUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteUserResponse deleteUser(org.openapis.openapi.models.operations.DeleteUserRequest request, org.openapis.openapi.models.operations.DeleteUserSecurity security) throws Exception {
+        return this.deleteUser(request, security, null);
+    }
+
+    /**
+     * Remove a conversation user from your account's default service
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DeleteUserResponse deleteUser(org.openapis.openapi.models.operations.DeleteUserRequest request, org.openapis.openapi.models.operations.DeleteUserSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_USER_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserPathParams.class, baseUrl, "/v1/Users/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserRequest.class, baseUrl, "/v1/Users/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2238,7 +2654,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2259,23 +2675,36 @@ public class SDK {
     /**
      * Delete a specific User Conversation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteUserConversationResponse deleteUserConversation(org.openapis.openapi.models.operations.DeleteUserConversationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteUserConversationResponse deleteUserConversation(org.openapis.openapi.models.operations.DeleteUserConversationRequest request, org.openapis.openapi.models.operations.DeleteUserConversationSecurity security) throws Exception {
+        return this.deleteUserConversation(request, security, null);
+    }
+
+    /**
+     * Delete a specific User Conversation.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DeleteUserConversationResponse deleteUserConversation(org.openapis.openapi.models.operations.DeleteUserConversationRequest request, org.openapis.openapi.models.operations.DeleteUserConversationSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_USER_CONVERSATION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserConversationPathParams.class, baseUrl, "/v1/Users/{UserSid}/Conversations/{ConversationSid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserConversationRequest.class, baseUrl, "/v1/Users/{UserSid}/Conversations/{ConversationSid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2295,14 +2724,23 @@ public class SDK {
 
     /**
      * Fetch the global configuration of conversations on your account
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchConfigurationResponse fetchConfiguration(org.openapis.openapi.models.operations.FetchConfigurationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchConfigurationResponse fetchConfiguration() throws Exception {
+        return this.fetchConfiguration(null);
+    }
+
+    /**
+     * Fetch the global configuration of conversations on your account
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchConfigurationResponse fetchConfiguration(String serverURL) throws Exception {
         String baseUrl = FETCH_CONFIGURATION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Configuration");
@@ -2312,8 +2750,7 @@ public class SDK {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -2339,23 +2776,36 @@ public class SDK {
     /**
      * Fetch an address configuration 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchConfigurationAddressResponse fetchConfigurationAddress(org.openapis.openapi.models.operations.FetchConfigurationAddressRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchConfigurationAddressResponse fetchConfigurationAddress(org.openapis.openapi.models.operations.FetchConfigurationAddressRequest request, org.openapis.openapi.models.operations.FetchConfigurationAddressSecurity security) throws Exception {
+        return this.fetchConfigurationAddress(request, security, null);
+    }
+
+    /**
+     * Fetch an address configuration 
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchConfigurationAddressResponse fetchConfigurationAddress(org.openapis.openapi.models.operations.FetchConfigurationAddressRequest request, org.openapis.openapi.models.operations.FetchConfigurationAddressSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_CONFIGURATION_ADDRESS_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchConfigurationAddressPathParams.class, baseUrl, "/v1/Configuration/Addresses/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchConfigurationAddressRequest.class, baseUrl, "/v1/Configuration/Addresses/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2379,10 +2829,14 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.FetchConfigurationWebhookResponse fetchConfigurationWebhook(org.openapis.openapi.models.operations.FetchConfigurationWebhookRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchConfigurationWebhookResponse fetchConfigurationWebhook() throws Exception {
+        return this.fetchConfigurationWebhook(null);
+    }
+
+    public org.openapis.openapi.models.operations.FetchConfigurationWebhookResponse fetchConfigurationWebhook(String serverURL) throws Exception {
         String baseUrl = FETCH_CONFIGURATION_WEBHOOK_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Configuration/Webhooks");
@@ -2392,8 +2846,7 @@ public class SDK {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -2419,23 +2872,36 @@ public class SDK {
     /**
      * Fetch a conversation from your account's default service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchConversationResponse fetchConversation(org.openapis.openapi.models.operations.FetchConversationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchConversationResponse fetchConversation(org.openapis.openapi.models.operations.FetchConversationRequest request, org.openapis.openapi.models.operations.FetchConversationSecurity security) throws Exception {
+        return this.fetchConversation(request, security, null);
+    }
+
+    /**
+     * Fetch a conversation from your account's default service
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchConversationResponse fetchConversation(org.openapis.openapi.models.operations.FetchConversationRequest request, org.openapis.openapi.models.operations.FetchConversationSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_CONVERSATION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchConversationPathParams.class, baseUrl, "/v1/Conversations/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchConversationRequest.class, baseUrl, "/v1/Conversations/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2462,23 +2928,36 @@ public class SDK {
     /**
      * Fetch a message from the conversation
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchConversationMessageResponse fetchConversationMessage(org.openapis.openapi.models.operations.FetchConversationMessageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchConversationMessageResponse fetchConversationMessage(org.openapis.openapi.models.operations.FetchConversationMessageRequest request, org.openapis.openapi.models.operations.FetchConversationMessageSecurity security) throws Exception {
+        return this.fetchConversationMessage(request, security, null);
+    }
+
+    /**
+     * Fetch a message from the conversation
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchConversationMessageResponse fetchConversationMessage(org.openapis.openapi.models.operations.FetchConversationMessageRequest request, org.openapis.openapi.models.operations.FetchConversationMessageSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_CONVERSATION_MESSAGE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchConversationMessagePathParams.class, baseUrl, "/v1/Conversations/{ConversationSid}/Messages/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchConversationMessageRequest.class, baseUrl, "/v1/Conversations/{ConversationSid}/Messages/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2505,23 +2984,36 @@ public class SDK {
     /**
      * Fetch the delivery and read receipts of the conversation message
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchConversationMessageReceiptResponse fetchConversationMessageReceipt(org.openapis.openapi.models.operations.FetchConversationMessageReceiptRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchConversationMessageReceiptResponse fetchConversationMessageReceipt(org.openapis.openapi.models.operations.FetchConversationMessageReceiptRequest request, org.openapis.openapi.models.operations.FetchConversationMessageReceiptSecurity security) throws Exception {
+        return this.fetchConversationMessageReceipt(request, security, null);
+    }
+
+    /**
+     * Fetch the delivery and read receipts of the conversation message
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchConversationMessageReceiptResponse fetchConversationMessageReceipt(org.openapis.openapi.models.operations.FetchConversationMessageReceiptRequest request, org.openapis.openapi.models.operations.FetchConversationMessageReceiptSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_CONVERSATION_MESSAGE_RECEIPT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchConversationMessageReceiptPathParams.class, baseUrl, "/v1/Conversations/{ConversationSid}/Messages/{MessageSid}/Receipts/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchConversationMessageReceiptRequest.class, baseUrl, "/v1/Conversations/{ConversationSid}/Messages/{MessageSid}/Receipts/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2548,23 +3040,36 @@ public class SDK {
     /**
      * Fetch a participant of the conversation
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchConversationParticipantResponse fetchConversationParticipant(org.openapis.openapi.models.operations.FetchConversationParticipantRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchConversationParticipantResponse fetchConversationParticipant(org.openapis.openapi.models.operations.FetchConversationParticipantRequest request, org.openapis.openapi.models.operations.FetchConversationParticipantSecurity security) throws Exception {
+        return this.fetchConversationParticipant(request, security, null);
+    }
+
+    /**
+     * Fetch a participant of the conversation
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchConversationParticipantResponse fetchConversationParticipant(org.openapis.openapi.models.operations.FetchConversationParticipantRequest request, org.openapis.openapi.models.operations.FetchConversationParticipantSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_CONVERSATION_PARTICIPANT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchConversationParticipantPathParams.class, baseUrl, "/v1/Conversations/{ConversationSid}/Participants/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchConversationParticipantRequest.class, baseUrl, "/v1/Conversations/{ConversationSid}/Participants/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2591,23 +3096,36 @@ public class SDK {
     /**
      * Fetch the configuration of a conversation-scoped webhook
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchConversationScopedWebhookResponse fetchConversationScopedWebhook(org.openapis.openapi.models.operations.FetchConversationScopedWebhookRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchConversationScopedWebhookResponse fetchConversationScopedWebhook(org.openapis.openapi.models.operations.FetchConversationScopedWebhookRequest request, org.openapis.openapi.models.operations.FetchConversationScopedWebhookSecurity security) throws Exception {
+        return this.fetchConversationScopedWebhook(request, security, null);
+    }
+
+    /**
+     * Fetch the configuration of a conversation-scoped webhook
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchConversationScopedWebhookResponse fetchConversationScopedWebhook(org.openapis.openapi.models.operations.FetchConversationScopedWebhookRequest request, org.openapis.openapi.models.operations.FetchConversationScopedWebhookSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_CONVERSATION_SCOPED_WEBHOOK_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchConversationScopedWebhookPathParams.class, baseUrl, "/v1/Conversations/{ConversationSid}/Webhooks/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchConversationScopedWebhookRequest.class, baseUrl, "/v1/Conversations/{ConversationSid}/Webhooks/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2634,23 +3152,36 @@ public class SDK {
     /**
      * Fetch a push notification credential from your account
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchCredentialResponse fetchCredential(org.openapis.openapi.models.operations.FetchCredentialRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchCredentialResponse fetchCredential(org.openapis.openapi.models.operations.FetchCredentialRequest request, org.openapis.openapi.models.operations.FetchCredentialSecurity security) throws Exception {
+        return this.fetchCredential(request, security, null);
+    }
+
+    /**
+     * Fetch a push notification credential from your account
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchCredentialResponse fetchCredential(org.openapis.openapi.models.operations.FetchCredentialRequest request, org.openapis.openapi.models.operations.FetchCredentialSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_CREDENTIAL_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchCredentialPathParams.class, baseUrl, "/v1/Credentials/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchCredentialRequest.class, baseUrl, "/v1/Credentials/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2677,23 +3208,36 @@ public class SDK {
     /**
      * Fetch a user role from your account's default service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchRoleResponse fetchRole(org.openapis.openapi.models.operations.FetchRoleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchRoleResponse fetchRole(org.openapis.openapi.models.operations.FetchRoleRequest request, org.openapis.openapi.models.operations.FetchRoleSecurity security) throws Exception {
+        return this.fetchRole(request, security, null);
+    }
+
+    /**
+     * Fetch a user role from your account's default service
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchRoleResponse fetchRole(org.openapis.openapi.models.operations.FetchRoleRequest request, org.openapis.openapi.models.operations.FetchRoleSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_ROLE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchRolePathParams.class, baseUrl, "/v1/Roles/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchRoleRequest.class, baseUrl, "/v1/Roles/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2720,23 +3264,36 @@ public class SDK {
     /**
      * Fetch a conversation service from your account
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchServiceResponse fetchService(org.openapis.openapi.models.operations.FetchServiceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchServiceResponse fetchService(org.openapis.openapi.models.operations.FetchServiceRequest request, org.openapis.openapi.models.operations.FetchServiceSecurity security) throws Exception {
+        return this.fetchService(request, security, null);
+    }
+
+    /**
+     * Fetch a conversation service from your account
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchServiceResponse fetchService(org.openapis.openapi.models.operations.FetchServiceRequest request, org.openapis.openapi.models.operations.FetchServiceSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_SERVICE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchServicePathParams.class, baseUrl, "/v1/Services/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchServiceRequest.class, baseUrl, "/v1/Services/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2763,23 +3320,36 @@ public class SDK {
     /**
      * Fetch a push notification binding from the conversation service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchServiceBindingResponse fetchServiceBinding(org.openapis.openapi.models.operations.FetchServiceBindingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchServiceBindingResponse fetchServiceBinding(org.openapis.openapi.models.operations.FetchServiceBindingRequest request, org.openapis.openapi.models.operations.FetchServiceBindingSecurity security) throws Exception {
+        return this.fetchServiceBinding(request, security, null);
+    }
+
+    /**
+     * Fetch a push notification binding from the conversation service
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchServiceBindingResponse fetchServiceBinding(org.openapis.openapi.models.operations.FetchServiceBindingRequest request, org.openapis.openapi.models.operations.FetchServiceBindingSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_SERVICE_BINDING_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchServiceBindingPathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Bindings/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchServiceBindingRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Bindings/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2806,23 +3376,36 @@ public class SDK {
     /**
      * Fetch the configuration of a conversation service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchServiceConfigurationResponse fetchServiceConfiguration(org.openapis.openapi.models.operations.FetchServiceConfigurationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchServiceConfigurationResponse fetchServiceConfiguration(org.openapis.openapi.models.operations.FetchServiceConfigurationRequest request, org.openapis.openapi.models.operations.FetchServiceConfigurationSecurity security) throws Exception {
+        return this.fetchServiceConfiguration(request, security, null);
+    }
+
+    /**
+     * Fetch the configuration of a conversation service
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchServiceConfigurationResponse fetchServiceConfiguration(org.openapis.openapi.models.operations.FetchServiceConfigurationRequest request, org.openapis.openapi.models.operations.FetchServiceConfigurationSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_SERVICE_CONFIGURATION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchServiceConfigurationPathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Configuration", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchServiceConfigurationRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Configuration", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2849,23 +3432,36 @@ public class SDK {
     /**
      * Fetch a conversation from your service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchServiceConversationResponse fetchServiceConversation(org.openapis.openapi.models.operations.FetchServiceConversationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchServiceConversationResponse fetchServiceConversation(org.openapis.openapi.models.operations.FetchServiceConversationRequest request, org.openapis.openapi.models.operations.FetchServiceConversationSecurity security) throws Exception {
+        return this.fetchServiceConversation(request, security, null);
+    }
+
+    /**
+     * Fetch a conversation from your service
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchServiceConversationResponse fetchServiceConversation(org.openapis.openapi.models.operations.FetchServiceConversationRequest request, org.openapis.openapi.models.operations.FetchServiceConversationSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_SERVICE_CONVERSATION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchServiceConversationPathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchServiceConversationRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2892,23 +3488,36 @@ public class SDK {
     /**
      * Fetch a message from the conversation
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchServiceConversationMessageResponse fetchServiceConversationMessage(org.openapis.openapi.models.operations.FetchServiceConversationMessageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchServiceConversationMessageResponse fetchServiceConversationMessage(org.openapis.openapi.models.operations.FetchServiceConversationMessageRequest request, org.openapis.openapi.models.operations.FetchServiceConversationMessageSecurity security) throws Exception {
+        return this.fetchServiceConversationMessage(request, security, null);
+    }
+
+    /**
+     * Fetch a message from the conversation
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchServiceConversationMessageResponse fetchServiceConversationMessage(org.openapis.openapi.models.operations.FetchServiceConversationMessageRequest request, org.openapis.openapi.models.operations.FetchServiceConversationMessageSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_SERVICE_CONVERSATION_MESSAGE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchServiceConversationMessagePathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchServiceConversationMessageRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2935,23 +3544,36 @@ public class SDK {
     /**
      * Fetch the delivery and read receipts of the conversation message
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchServiceConversationMessageReceiptResponse fetchServiceConversationMessageReceipt(org.openapis.openapi.models.operations.FetchServiceConversationMessageReceiptRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchServiceConversationMessageReceiptResponse fetchServiceConversationMessageReceipt(org.openapis.openapi.models.operations.FetchServiceConversationMessageReceiptRequest request, org.openapis.openapi.models.operations.FetchServiceConversationMessageReceiptSecurity security) throws Exception {
+        return this.fetchServiceConversationMessageReceipt(request, security, null);
+    }
+
+    /**
+     * Fetch the delivery and read receipts of the conversation message
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchServiceConversationMessageReceiptResponse fetchServiceConversationMessageReceipt(org.openapis.openapi.models.operations.FetchServiceConversationMessageReceiptRequest request, org.openapis.openapi.models.operations.FetchServiceConversationMessageReceiptSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_SERVICE_CONVERSATION_MESSAGE_RECEIPT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchServiceConversationMessageReceiptPathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages/{MessageSid}/Receipts/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchServiceConversationMessageReceiptRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages/{MessageSid}/Receipts/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2978,23 +3600,36 @@ public class SDK {
     /**
      * Fetch a participant of the conversation
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchServiceConversationParticipantResponse fetchServiceConversationParticipant(org.openapis.openapi.models.operations.FetchServiceConversationParticipantRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchServiceConversationParticipantResponse fetchServiceConversationParticipant(org.openapis.openapi.models.operations.FetchServiceConversationParticipantRequest request, org.openapis.openapi.models.operations.FetchServiceConversationParticipantSecurity security) throws Exception {
+        return this.fetchServiceConversationParticipant(request, security, null);
+    }
+
+    /**
+     * Fetch a participant of the conversation
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchServiceConversationParticipantResponse fetchServiceConversationParticipant(org.openapis.openapi.models.operations.FetchServiceConversationParticipantRequest request, org.openapis.openapi.models.operations.FetchServiceConversationParticipantSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_SERVICE_CONVERSATION_PARTICIPANT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchServiceConversationParticipantPathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Participants/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchServiceConversationParticipantRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Participants/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3021,23 +3656,36 @@ public class SDK {
     /**
      * Fetch the configuration of a conversation-scoped webhook
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchServiceConversationScopedWebhookResponse fetchServiceConversationScopedWebhook(org.openapis.openapi.models.operations.FetchServiceConversationScopedWebhookRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchServiceConversationScopedWebhookResponse fetchServiceConversationScopedWebhook(org.openapis.openapi.models.operations.FetchServiceConversationScopedWebhookRequest request, org.openapis.openapi.models.operations.FetchServiceConversationScopedWebhookSecurity security) throws Exception {
+        return this.fetchServiceConversationScopedWebhook(request, security, null);
+    }
+
+    /**
+     * Fetch the configuration of a conversation-scoped webhook
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchServiceConversationScopedWebhookResponse fetchServiceConversationScopedWebhook(org.openapis.openapi.models.operations.FetchServiceConversationScopedWebhookRequest request, org.openapis.openapi.models.operations.FetchServiceConversationScopedWebhookSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_SERVICE_CONVERSATION_SCOPED_WEBHOOK_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchServiceConversationScopedWebhookPathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Webhooks/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchServiceConversationScopedWebhookRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Webhooks/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3064,23 +3712,36 @@ public class SDK {
     /**
      * Fetch push notification service settings
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchServiceNotificationResponse fetchServiceNotification(org.openapis.openapi.models.operations.FetchServiceNotificationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchServiceNotificationResponse fetchServiceNotification(org.openapis.openapi.models.operations.FetchServiceNotificationRequest request, org.openapis.openapi.models.operations.FetchServiceNotificationSecurity security) throws Exception {
+        return this.fetchServiceNotification(request, security, null);
+    }
+
+    /**
+     * Fetch push notification service settings
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchServiceNotificationResponse fetchServiceNotification(org.openapis.openapi.models.operations.FetchServiceNotificationRequest request, org.openapis.openapi.models.operations.FetchServiceNotificationSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_SERVICE_NOTIFICATION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchServiceNotificationPathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Configuration/Notifications", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchServiceNotificationRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Configuration/Notifications", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3107,23 +3768,36 @@ public class SDK {
     /**
      * Fetch a user role from your service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchServiceRoleResponse fetchServiceRole(org.openapis.openapi.models.operations.FetchServiceRoleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchServiceRoleResponse fetchServiceRole(org.openapis.openapi.models.operations.FetchServiceRoleRequest request, org.openapis.openapi.models.operations.FetchServiceRoleSecurity security) throws Exception {
+        return this.fetchServiceRole(request, security, null);
+    }
+
+    /**
+     * Fetch a user role from your service
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchServiceRoleResponse fetchServiceRole(org.openapis.openapi.models.operations.FetchServiceRoleRequest request, org.openapis.openapi.models.operations.FetchServiceRoleSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_SERVICE_ROLE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchServiceRolePathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Roles/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchServiceRoleRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Roles/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3150,23 +3824,36 @@ public class SDK {
     /**
      * Fetch a conversation user from your service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchServiceUserResponse fetchServiceUser(org.openapis.openapi.models.operations.FetchServiceUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchServiceUserResponse fetchServiceUser(org.openapis.openapi.models.operations.FetchServiceUserRequest request, org.openapis.openapi.models.operations.FetchServiceUserSecurity security) throws Exception {
+        return this.fetchServiceUser(request, security, null);
+    }
+
+    /**
+     * Fetch a conversation user from your service
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchServiceUserResponse fetchServiceUser(org.openapis.openapi.models.operations.FetchServiceUserRequest request, org.openapis.openapi.models.operations.FetchServiceUserSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_SERVICE_USER_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchServiceUserPathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Users/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchServiceUserRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Users/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3193,23 +3880,36 @@ public class SDK {
     /**
      * Fetch a specific User Conversation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchServiceUserConversationResponse fetchServiceUserConversation(org.openapis.openapi.models.operations.FetchServiceUserConversationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchServiceUserConversationResponse fetchServiceUserConversation(org.openapis.openapi.models.operations.FetchServiceUserConversationRequest request, org.openapis.openapi.models.operations.FetchServiceUserConversationSecurity security) throws Exception {
+        return this.fetchServiceUserConversation(request, security, null);
+    }
+
+    /**
+     * Fetch a specific User Conversation.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchServiceUserConversationResponse fetchServiceUserConversation(org.openapis.openapi.models.operations.FetchServiceUserConversationRequest request, org.openapis.openapi.models.operations.FetchServiceUserConversationSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_SERVICE_USER_CONVERSATION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchServiceUserConversationPathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Users/{UserSid}/Conversations/{ConversationSid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchServiceUserConversationRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Users/{UserSid}/Conversations/{ConversationSid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3236,23 +3936,36 @@ public class SDK {
     /**
      * Fetch a specific service webhook configuration.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchServiceWebhookConfigurationResponse fetchServiceWebhookConfiguration(org.openapis.openapi.models.operations.FetchServiceWebhookConfigurationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchServiceWebhookConfigurationResponse fetchServiceWebhookConfiguration(org.openapis.openapi.models.operations.FetchServiceWebhookConfigurationRequest request, org.openapis.openapi.models.operations.FetchServiceWebhookConfigurationSecurity security) throws Exception {
+        return this.fetchServiceWebhookConfiguration(request, security, null);
+    }
+
+    /**
+     * Fetch a specific service webhook configuration.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchServiceWebhookConfigurationResponse fetchServiceWebhookConfiguration(org.openapis.openapi.models.operations.FetchServiceWebhookConfigurationRequest request, org.openapis.openapi.models.operations.FetchServiceWebhookConfigurationSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_SERVICE_WEBHOOK_CONFIGURATION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchServiceWebhookConfigurationPathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Configuration/Webhooks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchServiceWebhookConfigurationRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Configuration/Webhooks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3279,23 +3992,36 @@ public class SDK {
     /**
      * Fetch a conversation user from your account's default service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchUserResponse fetchUser(org.openapis.openapi.models.operations.FetchUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchUserResponse fetchUser(org.openapis.openapi.models.operations.FetchUserRequest request, org.openapis.openapi.models.operations.FetchUserSecurity security) throws Exception {
+        return this.fetchUser(request, security, null);
+    }
+
+    /**
+     * Fetch a conversation user from your account's default service
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchUserResponse fetchUser(org.openapis.openapi.models.operations.FetchUserRequest request, org.openapis.openapi.models.operations.FetchUserSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_USER_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchUserPathParams.class, baseUrl, "/v1/Users/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchUserRequest.class, baseUrl, "/v1/Users/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3322,23 +4048,36 @@ public class SDK {
     /**
      * Fetch a specific User Conversation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchUserConversationResponse fetchUserConversation(org.openapis.openapi.models.operations.FetchUserConversationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchUserConversationResponse fetchUserConversation(org.openapis.openapi.models.operations.FetchUserConversationRequest request, org.openapis.openapi.models.operations.FetchUserConversationSecurity security) throws Exception {
+        return this.fetchUserConversation(request, security, null);
+    }
+
+    /**
+     * Fetch a specific User Conversation.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchUserConversationResponse fetchUserConversation(org.openapis.openapi.models.operations.FetchUserConversationRequest request, org.openapis.openapi.models.operations.FetchUserConversationSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_USER_CONVERSATION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchUserConversationPathParams.class, baseUrl, "/v1/Users/{UserSid}/Conversations/{ConversationSid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchUserConversationRequest.class, baseUrl, "/v1/Users/{UserSid}/Conversations/{ConversationSid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3365,13 +4104,26 @@ public class SDK {
     /**
      * Retrieve a list of address configurations for an account
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListConfigurationAddressResponse listConfigurationAddress(org.openapis.openapi.models.operations.ListConfigurationAddressRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListConfigurationAddressResponse listConfigurationAddress(org.openapis.openapi.models.operations.ListConfigurationAddressRequest request, org.openapis.openapi.models.operations.ListConfigurationAddressSecurity security) throws Exception {
+        return this.listConfigurationAddress(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of address configurations for an account
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListConfigurationAddressResponse listConfigurationAddress(org.openapis.openapi.models.operations.ListConfigurationAddressRequest request, org.openapis.openapi.models.operations.ListConfigurationAddressSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_CONFIGURATION_ADDRESS_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Configuration/Addresses");
@@ -3380,14 +4132,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListConfigurationAddressQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListConfigurationAddressRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3414,13 +4166,26 @@ public class SDK {
     /**
      * Retrieve a list of conversations in your account's default service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListConversationResponse listConversation(org.openapis.openapi.models.operations.ListConversationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListConversationResponse listConversation(org.openapis.openapi.models.operations.ListConversationRequest request, org.openapis.openapi.models.operations.ListConversationSecurity security) throws Exception {
+        return this.listConversation(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of conversations in your account's default service
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListConversationResponse listConversation(org.openapis.openapi.models.operations.ListConversationRequest request, org.openapis.openapi.models.operations.ListConversationSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_CONVERSATION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Conversations");
@@ -3429,14 +4194,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListConversationQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListConversationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3463,29 +4228,42 @@ public class SDK {
     /**
      * Retrieve a list of all messages in the conversation
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListConversationMessageResponse listConversationMessage(org.openapis.openapi.models.operations.ListConversationMessageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListConversationMessageResponse listConversationMessage(org.openapis.openapi.models.operations.ListConversationMessageRequest request, org.openapis.openapi.models.operations.ListConversationMessageSecurity security) throws Exception {
+        return this.listConversationMessage(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of all messages in the conversation
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListConversationMessageResponse listConversationMessage(org.openapis.openapi.models.operations.ListConversationMessageRequest request, org.openapis.openapi.models.operations.ListConversationMessageSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_CONVERSATION_MESSAGE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListConversationMessagePathParams.class, baseUrl, "/v1/Conversations/{ConversationSid}/Messages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListConversationMessageRequest.class, baseUrl, "/v1/Conversations/{ConversationSid}/Messages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListConversationMessageQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListConversationMessageRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3512,29 +4290,42 @@ public class SDK {
     /**
      * Retrieve a list of all delivery and read receipts of the conversation message
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListConversationMessageReceiptResponse listConversationMessageReceipt(org.openapis.openapi.models.operations.ListConversationMessageReceiptRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListConversationMessageReceiptResponse listConversationMessageReceipt(org.openapis.openapi.models.operations.ListConversationMessageReceiptRequest request, org.openapis.openapi.models.operations.ListConversationMessageReceiptSecurity security) throws Exception {
+        return this.listConversationMessageReceipt(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of all delivery and read receipts of the conversation message
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListConversationMessageReceiptResponse listConversationMessageReceipt(org.openapis.openapi.models.operations.ListConversationMessageReceiptRequest request, org.openapis.openapi.models.operations.ListConversationMessageReceiptSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_CONVERSATION_MESSAGE_RECEIPT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListConversationMessageReceiptPathParams.class, baseUrl, "/v1/Conversations/{ConversationSid}/Messages/{MessageSid}/Receipts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListConversationMessageReceiptRequest.class, baseUrl, "/v1/Conversations/{ConversationSid}/Messages/{MessageSid}/Receipts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListConversationMessageReceiptQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListConversationMessageReceiptRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3561,29 +4352,42 @@ public class SDK {
     /**
      * Retrieve a list of all participants of the conversation
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListConversationParticipantResponse listConversationParticipant(org.openapis.openapi.models.operations.ListConversationParticipantRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListConversationParticipantResponse listConversationParticipant(org.openapis.openapi.models.operations.ListConversationParticipantRequest request, org.openapis.openapi.models.operations.ListConversationParticipantSecurity security) throws Exception {
+        return this.listConversationParticipant(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of all participants of the conversation
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListConversationParticipantResponse listConversationParticipant(org.openapis.openapi.models.operations.ListConversationParticipantRequest request, org.openapis.openapi.models.operations.ListConversationParticipantSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_CONVERSATION_PARTICIPANT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListConversationParticipantPathParams.class, baseUrl, "/v1/Conversations/{ConversationSid}/Participants", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListConversationParticipantRequest.class, baseUrl, "/v1/Conversations/{ConversationSid}/Participants", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListConversationParticipantQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListConversationParticipantRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3610,29 +4414,42 @@ public class SDK {
     /**
      * Retrieve a list of all webhooks scoped to the conversation
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListConversationScopedWebhookResponse listConversationScopedWebhook(org.openapis.openapi.models.operations.ListConversationScopedWebhookRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListConversationScopedWebhookResponse listConversationScopedWebhook(org.openapis.openapi.models.operations.ListConversationScopedWebhookRequest request, org.openapis.openapi.models.operations.ListConversationScopedWebhookSecurity security) throws Exception {
+        return this.listConversationScopedWebhook(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of all webhooks scoped to the conversation
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListConversationScopedWebhookResponse listConversationScopedWebhook(org.openapis.openapi.models.operations.ListConversationScopedWebhookRequest request, org.openapis.openapi.models.operations.ListConversationScopedWebhookSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_CONVERSATION_SCOPED_WEBHOOK_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListConversationScopedWebhookPathParams.class, baseUrl, "/v1/Conversations/{ConversationSid}/Webhooks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListConversationScopedWebhookRequest.class, baseUrl, "/v1/Conversations/{ConversationSid}/Webhooks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListConversationScopedWebhookQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListConversationScopedWebhookRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3659,13 +4476,26 @@ public class SDK {
     /**
      * Retrieve a list of all push notification credentials on your account
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListCredentialResponse listCredential(org.openapis.openapi.models.operations.ListCredentialRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListCredentialResponse listCredential(org.openapis.openapi.models.operations.ListCredentialRequest request, org.openapis.openapi.models.operations.ListCredentialSecurity security) throws Exception {
+        return this.listCredential(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of all push notification credentials on your account
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListCredentialResponse listCredential(org.openapis.openapi.models.operations.ListCredentialRequest request, org.openapis.openapi.models.operations.ListCredentialSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_CREDENTIAL_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Credentials");
@@ -3674,14 +4504,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCredentialQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCredentialRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3708,13 +4538,26 @@ public class SDK {
     /**
      * Retrieve a list of all Conversations that this Participant belongs to by identity or by address. Only one parameter should be specified.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListParticipantConversationResponse listParticipantConversation(org.openapis.openapi.models.operations.ListParticipantConversationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListParticipantConversationResponse listParticipantConversation(org.openapis.openapi.models.operations.ListParticipantConversationRequest request, org.openapis.openapi.models.operations.ListParticipantConversationSecurity security) throws Exception {
+        return this.listParticipantConversation(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of all Conversations that this Participant belongs to by identity or by address. Only one parameter should be specified.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListParticipantConversationResponse listParticipantConversation(org.openapis.openapi.models.operations.ListParticipantConversationRequest request, org.openapis.openapi.models.operations.ListParticipantConversationSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_PARTICIPANT_CONVERSATION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/ParticipantConversations");
@@ -3723,14 +4566,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListParticipantConversationQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListParticipantConversationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3757,13 +4600,26 @@ public class SDK {
     /**
      * Retrieve a list of all user roles in your account's default service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListRoleResponse listRole(org.openapis.openapi.models.operations.ListRoleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListRoleResponse listRole(org.openapis.openapi.models.operations.ListRoleRequest request, org.openapis.openapi.models.operations.ListRoleSecurity security) throws Exception {
+        return this.listRole(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of all user roles in your account's default service
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListRoleResponse listRole(org.openapis.openapi.models.operations.ListRoleRequest request, org.openapis.openapi.models.operations.ListRoleSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_ROLE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Roles");
@@ -3772,14 +4628,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListRoleQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListRoleRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3806,13 +4662,26 @@ public class SDK {
     /**
      * Retrieve a list of all conversation services on your account
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListServiceResponse listService(org.openapis.openapi.models.operations.ListServiceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListServiceResponse listService(org.openapis.openapi.models.operations.ListServiceRequest request, org.openapis.openapi.models.operations.ListServiceSecurity security) throws Exception {
+        return this.listService(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of all conversation services on your account
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListServiceResponse listService(org.openapis.openapi.models.operations.ListServiceRequest request, org.openapis.openapi.models.operations.ListServiceSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_SERVICE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Services");
@@ -3821,14 +4690,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3855,29 +4724,42 @@ public class SDK {
     /**
      * Retrieve a list of all push notification bindings in the conversation service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListServiceBindingResponse listServiceBinding(org.openapis.openapi.models.operations.ListServiceBindingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListServiceBindingResponse listServiceBinding(org.openapis.openapi.models.operations.ListServiceBindingRequest request, org.openapis.openapi.models.operations.ListServiceBindingSecurity security) throws Exception {
+        return this.listServiceBinding(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of all push notification bindings in the conversation service
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListServiceBindingResponse listServiceBinding(org.openapis.openapi.models.operations.ListServiceBindingRequest request, org.openapis.openapi.models.operations.ListServiceBindingSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_SERVICE_BINDING_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListServiceBindingPathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Bindings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListServiceBindingRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Bindings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceBindingQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceBindingRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3904,29 +4786,42 @@ public class SDK {
     /**
      * Retrieve a list of conversations in your service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListServiceConversationResponse listServiceConversation(org.openapis.openapi.models.operations.ListServiceConversationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListServiceConversationResponse listServiceConversation(org.openapis.openapi.models.operations.ListServiceConversationRequest request, org.openapis.openapi.models.operations.ListServiceConversationSecurity security) throws Exception {
+        return this.listServiceConversation(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of conversations in your service
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListServiceConversationResponse listServiceConversation(org.openapis.openapi.models.operations.ListServiceConversationRequest request, org.openapis.openapi.models.operations.ListServiceConversationSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_SERVICE_CONVERSATION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListServiceConversationPathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListServiceConversationRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceConversationQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceConversationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3953,29 +4848,42 @@ public class SDK {
     /**
      * Retrieve a list of all messages in the conversation
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListServiceConversationMessageResponse listServiceConversationMessage(org.openapis.openapi.models.operations.ListServiceConversationMessageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListServiceConversationMessageResponse listServiceConversationMessage(org.openapis.openapi.models.operations.ListServiceConversationMessageRequest request, org.openapis.openapi.models.operations.ListServiceConversationMessageSecurity security) throws Exception {
+        return this.listServiceConversationMessage(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of all messages in the conversation
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListServiceConversationMessageResponse listServiceConversationMessage(org.openapis.openapi.models.operations.ListServiceConversationMessageRequest request, org.openapis.openapi.models.operations.ListServiceConversationMessageSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_SERVICE_CONVERSATION_MESSAGE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListServiceConversationMessagePathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListServiceConversationMessageRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceConversationMessageQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceConversationMessageRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4002,29 +4910,42 @@ public class SDK {
     /**
      * Retrieve a list of all delivery and read receipts of the conversation message
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListServiceConversationMessageReceiptResponse listServiceConversationMessageReceipt(org.openapis.openapi.models.operations.ListServiceConversationMessageReceiptRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListServiceConversationMessageReceiptResponse listServiceConversationMessageReceipt(org.openapis.openapi.models.operations.ListServiceConversationMessageReceiptRequest request, org.openapis.openapi.models.operations.ListServiceConversationMessageReceiptSecurity security) throws Exception {
+        return this.listServiceConversationMessageReceipt(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of all delivery and read receipts of the conversation message
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListServiceConversationMessageReceiptResponse listServiceConversationMessageReceipt(org.openapis.openapi.models.operations.ListServiceConversationMessageReceiptRequest request, org.openapis.openapi.models.operations.ListServiceConversationMessageReceiptSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_SERVICE_CONVERSATION_MESSAGE_RECEIPT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListServiceConversationMessageReceiptPathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages/{MessageSid}/Receipts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListServiceConversationMessageReceiptRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages/{MessageSid}/Receipts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceConversationMessageReceiptQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceConversationMessageReceiptRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4051,29 +4972,42 @@ public class SDK {
     /**
      * Retrieve a list of all participants of the conversation
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListServiceConversationParticipantResponse listServiceConversationParticipant(org.openapis.openapi.models.operations.ListServiceConversationParticipantRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListServiceConversationParticipantResponse listServiceConversationParticipant(org.openapis.openapi.models.operations.ListServiceConversationParticipantRequest request, org.openapis.openapi.models.operations.ListServiceConversationParticipantSecurity security) throws Exception {
+        return this.listServiceConversationParticipant(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of all participants of the conversation
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListServiceConversationParticipantResponse listServiceConversationParticipant(org.openapis.openapi.models.operations.ListServiceConversationParticipantRequest request, org.openapis.openapi.models.operations.ListServiceConversationParticipantSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_SERVICE_CONVERSATION_PARTICIPANT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListServiceConversationParticipantPathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Participants", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListServiceConversationParticipantRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Participants", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceConversationParticipantQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceConversationParticipantRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4100,29 +5034,42 @@ public class SDK {
     /**
      * Retrieve a list of all webhooks scoped to the conversation
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListServiceConversationScopedWebhookResponse listServiceConversationScopedWebhook(org.openapis.openapi.models.operations.ListServiceConversationScopedWebhookRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListServiceConversationScopedWebhookResponse listServiceConversationScopedWebhook(org.openapis.openapi.models.operations.ListServiceConversationScopedWebhookRequest request, org.openapis.openapi.models.operations.ListServiceConversationScopedWebhookSecurity security) throws Exception {
+        return this.listServiceConversationScopedWebhook(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of all webhooks scoped to the conversation
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListServiceConversationScopedWebhookResponse listServiceConversationScopedWebhook(org.openapis.openapi.models.operations.ListServiceConversationScopedWebhookRequest request, org.openapis.openapi.models.operations.ListServiceConversationScopedWebhookSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_SERVICE_CONVERSATION_SCOPED_WEBHOOK_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListServiceConversationScopedWebhookPathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Webhooks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListServiceConversationScopedWebhookRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Webhooks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceConversationScopedWebhookQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceConversationScopedWebhookRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4149,29 +5096,42 @@ public class SDK {
     /**
      * Retrieve a list of all Conversations that this Participant belongs to by identity or by address. Only one parameter should be specified.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListServiceParticipantConversationResponse listServiceParticipantConversation(org.openapis.openapi.models.operations.ListServiceParticipantConversationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListServiceParticipantConversationResponse listServiceParticipantConversation(org.openapis.openapi.models.operations.ListServiceParticipantConversationRequest request, org.openapis.openapi.models.operations.ListServiceParticipantConversationSecurity security) throws Exception {
+        return this.listServiceParticipantConversation(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of all Conversations that this Participant belongs to by identity or by address. Only one parameter should be specified.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListServiceParticipantConversationResponse listServiceParticipantConversation(org.openapis.openapi.models.operations.ListServiceParticipantConversationRequest request, org.openapis.openapi.models.operations.ListServiceParticipantConversationSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_SERVICE_PARTICIPANT_CONVERSATION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListServiceParticipantConversationPathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/ParticipantConversations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListServiceParticipantConversationRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/ParticipantConversations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceParticipantConversationQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceParticipantConversationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4198,29 +5158,42 @@ public class SDK {
     /**
      * Retrieve a list of all user roles in your service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListServiceRoleResponse listServiceRole(org.openapis.openapi.models.operations.ListServiceRoleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListServiceRoleResponse listServiceRole(org.openapis.openapi.models.operations.ListServiceRoleRequest request, org.openapis.openapi.models.operations.ListServiceRoleSecurity security) throws Exception {
+        return this.listServiceRole(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of all user roles in your service
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListServiceRoleResponse listServiceRole(org.openapis.openapi.models.operations.ListServiceRoleRequest request, org.openapis.openapi.models.operations.ListServiceRoleSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_SERVICE_ROLE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListServiceRolePathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Roles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListServiceRoleRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Roles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceRoleQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceRoleRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4247,29 +5220,42 @@ public class SDK {
     /**
      * Retrieve a list of all conversation users in your service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListServiceUserResponse listServiceUser(org.openapis.openapi.models.operations.ListServiceUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListServiceUserResponse listServiceUser(org.openapis.openapi.models.operations.ListServiceUserRequest request, org.openapis.openapi.models.operations.ListServiceUserSecurity security) throws Exception {
+        return this.listServiceUser(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of all conversation users in your service
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListServiceUserResponse listServiceUser(org.openapis.openapi.models.operations.ListServiceUserRequest request, org.openapis.openapi.models.operations.ListServiceUserSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_SERVICE_USER_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListServiceUserPathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Users", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListServiceUserRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Users", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4296,29 +5282,42 @@ public class SDK {
     /**
      * Retrieve a list of all User Conversations for the User.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListServiceUserConversationResponse listServiceUserConversation(org.openapis.openapi.models.operations.ListServiceUserConversationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListServiceUserConversationResponse listServiceUserConversation(org.openapis.openapi.models.operations.ListServiceUserConversationRequest request, org.openapis.openapi.models.operations.ListServiceUserConversationSecurity security) throws Exception {
+        return this.listServiceUserConversation(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of all User Conversations for the User.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListServiceUserConversationResponse listServiceUserConversation(org.openapis.openapi.models.operations.ListServiceUserConversationRequest request, org.openapis.openapi.models.operations.ListServiceUserConversationSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_SERVICE_USER_CONVERSATION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListServiceUserConversationPathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Users/{UserSid}/Conversations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListServiceUserConversationRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Users/{UserSid}/Conversations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceUserConversationQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceUserConversationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4345,13 +5344,26 @@ public class SDK {
     /**
      * Retrieve a list of all conversation users in your account's default service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListUserResponse listUser(org.openapis.openapi.models.operations.ListUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListUserResponse listUser(org.openapis.openapi.models.operations.ListUserRequest request, org.openapis.openapi.models.operations.ListUserSecurity security) throws Exception {
+        return this.listUser(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of all conversation users in your account's default service
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListUserResponse listUser(org.openapis.openapi.models.operations.ListUserRequest request, org.openapis.openapi.models.operations.ListUserSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_USER_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Users");
@@ -4360,14 +5372,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4394,29 +5406,42 @@ public class SDK {
     /**
      * Retrieve a list of all User Conversations for the User.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListUserConversationResponse listUserConversation(org.openapis.openapi.models.operations.ListUserConversationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListUserConversationResponse listUserConversation(org.openapis.openapi.models.operations.ListUserConversationRequest request, org.openapis.openapi.models.operations.ListUserConversationSecurity security) throws Exception {
+        return this.listUserConversation(request, security, null);
+    }
+
+    /**
+     * Retrieve a list of all User Conversations for the User.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListUserConversationResponse listUserConversation(org.openapis.openapi.models.operations.ListUserConversationRequest request, org.openapis.openapi.models.operations.ListUserConversationSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_USER_CONVERSATION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListUserConversationPathParams.class, baseUrl, "/v1/Users/{UserSid}/Conversations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListUserConversationRequest.class, baseUrl, "/v1/Users/{UserSid}/Conversations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListUserConversationQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListUserConversationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4443,13 +5468,26 @@ public class SDK {
     /**
      * Update the global configuration of conversations on your account
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateConfigurationResponse updateConfiguration(org.openapis.openapi.models.operations.UpdateConfigurationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateConfigurationResponse updateConfiguration(org.openapis.openapi.models.operations.UpdateConfigurationUpdateConfigurationRequest request, org.openapis.openapi.models.operations.UpdateConfigurationSecurity security) throws Exception {
+        return this.updateConfiguration(request, security, null);
+    }
+
+    /**
+     * Update the global configuration of conversations on your account
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateConfigurationResponse updateConfiguration(org.openapis.openapi.models.operations.UpdateConfigurationUpdateConfigurationRequest request, org.openapis.openapi.models.operations.UpdateConfigurationSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_CONFIGURATION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Configuration");
@@ -4461,7 +5499,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4488,25 +5526,38 @@ public class SDK {
     /**
      * Update an existing address configuration
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateConfigurationAddressResponse updateConfigurationAddress(org.openapis.openapi.models.operations.UpdateConfigurationAddressRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateConfigurationAddressResponse updateConfigurationAddress(org.openapis.openapi.models.operations.UpdateConfigurationAddressRequest request, org.openapis.openapi.models.operations.UpdateConfigurationAddressSecurity security) throws Exception {
+        return this.updateConfigurationAddress(request, security, null);
+    }
+
+    /**
+     * Update an existing address configuration
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateConfigurationAddressResponse updateConfigurationAddress(org.openapis.openapi.models.operations.UpdateConfigurationAddressRequest request, org.openapis.openapi.models.operations.UpdateConfigurationAddressSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_CONFIGURATION_ADDRESS_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateConfigurationAddressPathParams.class, baseUrl, "/v1/Configuration/Addresses/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateConfigurationAddressRequest.class, baseUrl, "/v1/Configuration/Addresses/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4530,10 +5581,14 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.UpdateConfigurationWebhookResponse updateConfigurationWebhook(org.openapis.openapi.models.operations.UpdateConfigurationWebhookRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateConfigurationWebhookResponse updateConfigurationWebhook(org.openapis.openapi.models.operations.UpdateConfigurationWebhookUpdateConfigurationWebhookRequest request, org.openapis.openapi.models.operations.UpdateConfigurationWebhookSecurity security) throws Exception {
+        return this.updateConfigurationWebhook(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.UpdateConfigurationWebhookResponse updateConfigurationWebhook(org.openapis.openapi.models.operations.UpdateConfigurationWebhookUpdateConfigurationWebhookRequest request, org.openapis.openapi.models.operations.UpdateConfigurationWebhookSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_CONFIGURATION_WEBHOOK_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Configuration/Webhooks");
@@ -4545,7 +5600,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4572,24 +5627,37 @@ public class SDK {
     /**
      * Update an existing conversation in your account's default service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateConversationResponse updateConversation(org.openapis.openapi.models.operations.UpdateConversationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateConversationResponse updateConversation(org.openapis.openapi.models.operations.UpdateConversationRequest request, org.openapis.openapi.models.operations.UpdateConversationSecurity security) throws Exception {
+        return this.updateConversation(request, security, null);
+    }
+
+    /**
+     * Update an existing conversation in your account's default service
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateConversationResponse updateConversation(org.openapis.openapi.models.operations.UpdateConversationRequest request, org.openapis.openapi.models.operations.UpdateConversationSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_CONVERSATION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateConversationPathParams.class, baseUrl, "/v1/Conversations/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateConversationRequest.class, baseUrl, "/v1/Conversations/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -4598,7 +5666,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4625,24 +5693,37 @@ public class SDK {
     /**
      * Update an existing message in the conversation
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateConversationMessageResponse updateConversationMessage(org.openapis.openapi.models.operations.UpdateConversationMessageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateConversationMessageResponse updateConversationMessage(org.openapis.openapi.models.operations.UpdateConversationMessageRequest request, org.openapis.openapi.models.operations.UpdateConversationMessageSecurity security) throws Exception {
+        return this.updateConversationMessage(request, security, null);
+    }
+
+    /**
+     * Update an existing message in the conversation
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateConversationMessageResponse updateConversationMessage(org.openapis.openapi.models.operations.UpdateConversationMessageRequest request, org.openapis.openapi.models.operations.UpdateConversationMessageSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_CONVERSATION_MESSAGE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateConversationMessagePathParams.class, baseUrl, "/v1/Conversations/{ConversationSid}/Messages/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateConversationMessageRequest.class, baseUrl, "/v1/Conversations/{ConversationSid}/Messages/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -4651,7 +5732,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4678,24 +5759,37 @@ public class SDK {
     /**
      * Update an existing participant in the conversation
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateConversationParticipantResponse updateConversationParticipant(org.openapis.openapi.models.operations.UpdateConversationParticipantRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateConversationParticipantResponse updateConversationParticipant(org.openapis.openapi.models.operations.UpdateConversationParticipantRequest request, org.openapis.openapi.models.operations.UpdateConversationParticipantSecurity security) throws Exception {
+        return this.updateConversationParticipant(request, security, null);
+    }
+
+    /**
+     * Update an existing participant in the conversation
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateConversationParticipantResponse updateConversationParticipant(org.openapis.openapi.models.operations.UpdateConversationParticipantRequest request, org.openapis.openapi.models.operations.UpdateConversationParticipantSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_CONVERSATION_PARTICIPANT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateConversationParticipantPathParams.class, baseUrl, "/v1/Conversations/{ConversationSid}/Participants/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateConversationParticipantRequest.class, baseUrl, "/v1/Conversations/{ConversationSid}/Participants/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -4704,7 +5798,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4731,25 +5825,38 @@ public class SDK {
     /**
      * Update an existing conversation-scoped webhook
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateConversationScopedWebhookResponse updateConversationScopedWebhook(org.openapis.openapi.models.operations.UpdateConversationScopedWebhookRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateConversationScopedWebhookResponse updateConversationScopedWebhook(org.openapis.openapi.models.operations.UpdateConversationScopedWebhookRequest request, org.openapis.openapi.models.operations.UpdateConversationScopedWebhookSecurity security) throws Exception {
+        return this.updateConversationScopedWebhook(request, security, null);
+    }
+
+    /**
+     * Update an existing conversation-scoped webhook
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateConversationScopedWebhookResponse updateConversationScopedWebhook(org.openapis.openapi.models.operations.UpdateConversationScopedWebhookRequest request, org.openapis.openapi.models.operations.UpdateConversationScopedWebhookSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_CONVERSATION_SCOPED_WEBHOOK_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateConversationScopedWebhookPathParams.class, baseUrl, "/v1/Conversations/{ConversationSid}/Webhooks/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateConversationScopedWebhookRequest.class, baseUrl, "/v1/Conversations/{ConversationSid}/Webhooks/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4776,25 +5883,38 @@ public class SDK {
     /**
      * Update an existing push notification credential on your account
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateCredentialResponse updateCredential(org.openapis.openapi.models.operations.UpdateCredentialRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateCredentialResponse updateCredential(org.openapis.openapi.models.operations.UpdateCredentialRequest request, org.openapis.openapi.models.operations.UpdateCredentialSecurity security) throws Exception {
+        return this.updateCredential(request, security, null);
+    }
+
+    /**
+     * Update an existing push notification credential on your account
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateCredentialResponse updateCredential(org.openapis.openapi.models.operations.UpdateCredentialRequest request, org.openapis.openapi.models.operations.UpdateCredentialSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_CREDENTIAL_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCredentialPathParams.class, baseUrl, "/v1/Credentials/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCredentialRequest.class, baseUrl, "/v1/Credentials/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4821,25 +5941,38 @@ public class SDK {
     /**
      * Update an existing user role in your account's default service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateRoleResponse updateRole(org.openapis.openapi.models.operations.UpdateRoleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateRoleResponse updateRole(org.openapis.openapi.models.operations.UpdateRoleRequest request, org.openapis.openapi.models.operations.UpdateRoleSecurity security) throws Exception {
+        return this.updateRole(request, security, null);
+    }
+
+    /**
+     * Update an existing user role in your account's default service
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateRoleResponse updateRole(org.openapis.openapi.models.operations.UpdateRoleRequest request, org.openapis.openapi.models.operations.UpdateRoleSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_ROLE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateRolePathParams.class, baseUrl, "/v1/Roles/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateRoleRequest.class, baseUrl, "/v1/Roles/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4866,25 +5999,38 @@ public class SDK {
     /**
      * Update configuration settings of a conversation service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateServiceConfigurationResponse updateServiceConfiguration(org.openapis.openapi.models.operations.UpdateServiceConfigurationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateServiceConfigurationResponse updateServiceConfiguration(org.openapis.openapi.models.operations.UpdateServiceConfigurationRequest request, org.openapis.openapi.models.operations.UpdateServiceConfigurationSecurity security) throws Exception {
+        return this.updateServiceConfiguration(request, security, null);
+    }
+
+    /**
+     * Update configuration settings of a conversation service
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateServiceConfigurationResponse updateServiceConfiguration(org.openapis.openapi.models.operations.UpdateServiceConfigurationRequest request, org.openapis.openapi.models.operations.UpdateServiceConfigurationSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_SERVICE_CONFIGURATION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateServiceConfigurationPathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Configuration", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateServiceConfigurationRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Configuration", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4911,24 +6057,37 @@ public class SDK {
     /**
      * Update an existing conversation in your service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateServiceConversationResponse updateServiceConversation(org.openapis.openapi.models.operations.UpdateServiceConversationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateServiceConversationResponse updateServiceConversation(org.openapis.openapi.models.operations.UpdateServiceConversationRequest request, org.openapis.openapi.models.operations.UpdateServiceConversationSecurity security) throws Exception {
+        return this.updateServiceConversation(request, security, null);
+    }
+
+    /**
+     * Update an existing conversation in your service
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateServiceConversationResponse updateServiceConversation(org.openapis.openapi.models.operations.UpdateServiceConversationRequest request, org.openapis.openapi.models.operations.UpdateServiceConversationSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_SERVICE_CONVERSATION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateServiceConversationPathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateServiceConversationRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -4937,7 +6096,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4964,24 +6123,37 @@ public class SDK {
     /**
      * Update an existing message in the conversation
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateServiceConversationMessageResponse updateServiceConversationMessage(org.openapis.openapi.models.operations.UpdateServiceConversationMessageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateServiceConversationMessageResponse updateServiceConversationMessage(org.openapis.openapi.models.operations.UpdateServiceConversationMessageRequest request, org.openapis.openapi.models.operations.UpdateServiceConversationMessageSecurity security) throws Exception {
+        return this.updateServiceConversationMessage(request, security, null);
+    }
+
+    /**
+     * Update an existing message in the conversation
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateServiceConversationMessageResponse updateServiceConversationMessage(org.openapis.openapi.models.operations.UpdateServiceConversationMessageRequest request, org.openapis.openapi.models.operations.UpdateServiceConversationMessageSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_SERVICE_CONVERSATION_MESSAGE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateServiceConversationMessagePathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateServiceConversationMessageRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Messages/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -4990,7 +6162,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -5017,24 +6189,37 @@ public class SDK {
     /**
      * Update an existing participant in the conversation
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateServiceConversationParticipantResponse updateServiceConversationParticipant(org.openapis.openapi.models.operations.UpdateServiceConversationParticipantRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateServiceConversationParticipantResponse updateServiceConversationParticipant(org.openapis.openapi.models.operations.UpdateServiceConversationParticipantRequest request, org.openapis.openapi.models.operations.UpdateServiceConversationParticipantSecurity security) throws Exception {
+        return this.updateServiceConversationParticipant(request, security, null);
+    }
+
+    /**
+     * Update an existing participant in the conversation
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateServiceConversationParticipantResponse updateServiceConversationParticipant(org.openapis.openapi.models.operations.UpdateServiceConversationParticipantRequest request, org.openapis.openapi.models.operations.UpdateServiceConversationParticipantSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_SERVICE_CONVERSATION_PARTICIPANT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateServiceConversationParticipantPathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Participants/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateServiceConversationParticipantRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Participants/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -5043,7 +6228,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -5070,25 +6255,38 @@ public class SDK {
     /**
      * Update an existing conversation-scoped webhook
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateServiceConversationScopedWebhookResponse updateServiceConversationScopedWebhook(org.openapis.openapi.models.operations.UpdateServiceConversationScopedWebhookRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateServiceConversationScopedWebhookResponse updateServiceConversationScopedWebhook(org.openapis.openapi.models.operations.UpdateServiceConversationScopedWebhookRequest request, org.openapis.openapi.models.operations.UpdateServiceConversationScopedWebhookSecurity security) throws Exception {
+        return this.updateServiceConversationScopedWebhook(request, security, null);
+    }
+
+    /**
+     * Update an existing conversation-scoped webhook
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateServiceConversationScopedWebhookResponse updateServiceConversationScopedWebhook(org.openapis.openapi.models.operations.UpdateServiceConversationScopedWebhookRequest request, org.openapis.openapi.models.operations.UpdateServiceConversationScopedWebhookSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_SERVICE_CONVERSATION_SCOPED_WEBHOOK_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateServiceConversationScopedWebhookPathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Webhooks/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateServiceConversationScopedWebhookRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Conversations/{ConversationSid}/Webhooks/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -5115,25 +6313,38 @@ public class SDK {
     /**
      * Update push notification service settings
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateServiceNotificationResponse updateServiceNotification(org.openapis.openapi.models.operations.UpdateServiceNotificationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateServiceNotificationResponse updateServiceNotification(org.openapis.openapi.models.operations.UpdateServiceNotificationRequest request, org.openapis.openapi.models.operations.UpdateServiceNotificationSecurity security) throws Exception {
+        return this.updateServiceNotification(request, security, null);
+    }
+
+    /**
+     * Update push notification service settings
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateServiceNotificationResponse updateServiceNotification(org.openapis.openapi.models.operations.UpdateServiceNotificationRequest request, org.openapis.openapi.models.operations.UpdateServiceNotificationSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_SERVICE_NOTIFICATION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateServiceNotificationPathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Configuration/Notifications", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateServiceNotificationRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Configuration/Notifications", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -5160,25 +6371,38 @@ public class SDK {
     /**
      * Update an existing user role in your service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateServiceRoleResponse updateServiceRole(org.openapis.openapi.models.operations.UpdateServiceRoleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateServiceRoleResponse updateServiceRole(org.openapis.openapi.models.operations.UpdateServiceRoleRequest request, org.openapis.openapi.models.operations.UpdateServiceRoleSecurity security) throws Exception {
+        return this.updateServiceRole(request, security, null);
+    }
+
+    /**
+     * Update an existing user role in your service
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateServiceRoleResponse updateServiceRole(org.openapis.openapi.models.operations.UpdateServiceRoleRequest request, org.openapis.openapi.models.operations.UpdateServiceRoleSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_SERVICE_ROLE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateServiceRolePathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Roles/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateServiceRoleRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Roles/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -5205,24 +6429,37 @@ public class SDK {
     /**
      * Update an existing conversation user in your service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateServiceUserResponse updateServiceUser(org.openapis.openapi.models.operations.UpdateServiceUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateServiceUserResponse updateServiceUser(org.openapis.openapi.models.operations.UpdateServiceUserRequest request, org.openapis.openapi.models.operations.UpdateServiceUserSecurity security) throws Exception {
+        return this.updateServiceUser(request, security, null);
+    }
+
+    /**
+     * Update an existing conversation user in your service
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateServiceUserResponse updateServiceUser(org.openapis.openapi.models.operations.UpdateServiceUserRequest request, org.openapis.openapi.models.operations.UpdateServiceUserSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_SERVICE_USER_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateServiceUserPathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Users/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateServiceUserRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Users/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -5231,7 +6468,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -5258,25 +6495,38 @@ public class SDK {
     /**
      * Update a specific User Conversation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateServiceUserConversationResponse updateServiceUserConversation(org.openapis.openapi.models.operations.UpdateServiceUserConversationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateServiceUserConversationResponse updateServiceUserConversation(org.openapis.openapi.models.operations.UpdateServiceUserConversationRequest request, org.openapis.openapi.models.operations.UpdateServiceUserConversationSecurity security) throws Exception {
+        return this.updateServiceUserConversation(request, security, null);
+    }
+
+    /**
+     * Update a specific User Conversation.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateServiceUserConversationResponse updateServiceUserConversation(org.openapis.openapi.models.operations.UpdateServiceUserConversationRequest request, org.openapis.openapi.models.operations.UpdateServiceUserConversationSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_SERVICE_USER_CONVERSATION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateServiceUserConversationPathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Users/{UserSid}/Conversations/{ConversationSid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateServiceUserConversationRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Users/{UserSid}/Conversations/{ConversationSid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -5303,25 +6553,38 @@ public class SDK {
     /**
      * Update a specific Webhook.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateServiceWebhookConfigurationResponse updateServiceWebhookConfiguration(org.openapis.openapi.models.operations.UpdateServiceWebhookConfigurationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateServiceWebhookConfigurationResponse updateServiceWebhookConfiguration(org.openapis.openapi.models.operations.UpdateServiceWebhookConfigurationRequest request, org.openapis.openapi.models.operations.UpdateServiceWebhookConfigurationSecurity security) throws Exception {
+        return this.updateServiceWebhookConfiguration(request, security, null);
+    }
+
+    /**
+     * Update a specific Webhook.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateServiceWebhookConfigurationResponse updateServiceWebhookConfiguration(org.openapis.openapi.models.operations.UpdateServiceWebhookConfigurationRequest request, org.openapis.openapi.models.operations.UpdateServiceWebhookConfigurationSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_SERVICE_WEBHOOK_CONFIGURATION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateServiceWebhookConfigurationPathParams.class, baseUrl, "/v1/Services/{ChatServiceSid}/Configuration/Webhooks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateServiceWebhookConfigurationRequest.class, baseUrl, "/v1/Services/{ChatServiceSid}/Configuration/Webhooks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -5348,24 +6611,37 @@ public class SDK {
     /**
      * Update an existing conversation user in your account's default service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateUserResponse updateUser(org.openapis.openapi.models.operations.UpdateUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateUserResponse updateUser(org.openapis.openapi.models.operations.UpdateUserRequest request, org.openapis.openapi.models.operations.UpdateUserSecurity security) throws Exception {
+        return this.updateUser(request, security, null);
+    }
+
+    /**
+     * Update an existing conversation user in your account's default service
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateUserResponse updateUser(org.openapis.openapi.models.operations.UpdateUserRequest request, org.openapis.openapi.models.operations.UpdateUserSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_USER_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateUserPathParams.class, baseUrl, "/v1/Users/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateUserRequest.class, baseUrl, "/v1/Users/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -5374,7 +6650,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -5401,25 +6677,38 @@ public class SDK {
     /**
      * Update a specific User Conversation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateUserConversationResponse updateUserConversation(org.openapis.openapi.models.operations.UpdateUserConversationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateUserConversationResponse updateUserConversation(org.openapis.openapi.models.operations.UpdateUserConversationRequest request, org.openapis.openapi.models.operations.UpdateUserConversationSecurity security) throws Exception {
+        return this.updateUserConversation(request, security, null);
+    }
+
+    /**
+     * Update a specific User Conversation.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateUserConversationResponse updateUserConversation(org.openapis.openapi.models.operations.UpdateUserConversationRequest request, org.openapis.openapi.models.operations.UpdateUserConversationSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_USER_CONVERSATION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateUserConversationPathParams.class, baseUrl, "/v1/Users/{UserSid}/Conversations/{ConversationSid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateUserConversationRequest.class, baseUrl, "/v1/Users/{UserSid}/Conversations/{ConversationSid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

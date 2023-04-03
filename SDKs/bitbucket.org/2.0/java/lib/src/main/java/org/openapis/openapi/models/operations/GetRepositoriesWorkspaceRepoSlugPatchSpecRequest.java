@@ -4,20 +4,42 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugPatchSpecRequest {
-    
-    public GetRepositoriesWorkspaceRepoSlugPatchSpecPathParams pathParams;
-    public GetRepositoriesWorkspaceRepoSlugPatchSpecRequest withPathParams(GetRepositoriesWorkspaceRepoSlugPatchSpecPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public GetRepositoriesWorkspaceRepoSlugPatchSpecRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
         return this;
     }
     
+    /**
+     * A commit SHA (e.g. `3a8b42`) or a commit range using double dot
+     * notation (e.g. `3a8b42..9ff173`).
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spec")
+    public String spec;
+    public GetRepositoriesWorkspaceRepoSlugPatchSpecRequest withSpec(String spec) {
+        this.spec = spec;
+        return this;
+    }
     
-    public GetRepositoriesWorkspaceRepoSlugPatchSpecSecurity security;
-    public GetRepositoriesWorkspaceRepoSlugPatchSpecRequest withSecurity(GetRepositoriesWorkspaceRepoSlugPatchSpecSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetRepositoriesWorkspaceRepoSlugPatchSpecRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

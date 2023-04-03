@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimPowerFeedsReadRequest {
-    
-    public DcimPowerFeedsReadPathParams pathParams;
-    public DcimPowerFeedsReadRequest withPathParams(DcimPowerFeedsReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this power feed.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimPowerFeedsReadRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

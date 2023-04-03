@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgsGetRequest {
-    
-    public OrgsGetPathParams pathParams;
-    public OrgsGetRequest withPathParams(OrgsGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public OrgsGetRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

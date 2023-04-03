@@ -39,7 +39,7 @@ public class Webhooks {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateWebhookResponse createWebhook(org.openapis.openapi.models.operations.CreateWebhookRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateWebhookResponse createWebhook(org.openapis.openapi.models.shared.WebhookCreate request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/self/webhooks");
         
@@ -94,7 +94,7 @@ public class Webhooks {
      */
     public org.openapis.openapi.models.operations.DestroyWebhookResponse destroyWebhook(org.openapis.openapi.models.operations.DestroyWebhookRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DestroyWebhookPathParams.class, baseUrl, "/self/webhooks/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DestroyWebhookRequest.class, baseUrl, "/self/webhooks/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -181,7 +181,7 @@ public class Webhooks {
      */
     public org.openapis.openapi.models.operations.RenewWebhookResponse renewWebhook(org.openapis.openapi.models.operations.RenewWebhookRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RenewWebhookPathParams.class, baseUrl, "/self/webhooks/{id}/renew", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RenewWebhookRequest.class, baseUrl, "/self/webhooks/{id}/renew", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -229,7 +229,7 @@ public class Webhooks {
      */
     public org.openapis.openapi.models.operations.ViewWebhookResponse viewWebhook(org.openapis.openapi.models.operations.ViewWebhookRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ViewWebhookPathParams.class, baseUrl, "/self/webhooks/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ViewWebhookRequest.class, baseUrl, "/self/webhooks/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

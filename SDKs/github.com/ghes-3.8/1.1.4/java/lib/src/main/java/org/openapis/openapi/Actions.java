@@ -50,12 +50,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsAddCustomLabelsToSelfHostedRunnerForOrgResponse actionsAddCustomLabelsToSelfHostedRunnerForOrg(org.openapis.openapi.models.operations.ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsAddCustomLabelsToSelfHostedRunnerForOrgPathParams.class, baseUrl, "/orgs/{org}/actions/runners/{runner_id}/labels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequest.class, baseUrl, "/orgs/{org}/actions/runners/{runner_id}/labels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -114,12 +114,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsAddCustomLabelsToSelfHostedRunnerForRepoResponse actionsAddCustomLabelsToSelfHostedRunnerForRepo(org.openapis.openapi.models.operations.ActionsAddCustomLabelsToSelfHostedRunnerForRepoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsAddCustomLabelsToSelfHostedRunnerForRepoPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/runners/{runner_id}/labels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsAddCustomLabelsToSelfHostedRunnerForRepoRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/runners/{runner_id}/labels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -178,7 +178,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgResponse actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(org.openapis.openapi.models.operations.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgPathParams.class, baseUrl, "/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest.class, baseUrl, "/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -212,7 +212,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsAddSelectedRepoToOrgSecretResponse actionsAddSelectedRepoToOrgSecret(org.openapis.openapi.models.operations.ActionsAddSelectedRepoToOrgSecretRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsAddSelectedRepoToOrgSecretPathParams.class, baseUrl, "/orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsAddSelectedRepoToOrgSecretRequest.class, baseUrl, "/orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -246,7 +246,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsAddSelectedRepoToOrgVariableResponse actionsAddSelectedRepoToOrgVariable(org.openapis.openapi.models.operations.ActionsAddSelectedRepoToOrgVariableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsAddSelectedRepoToOrgVariablePathParams.class, baseUrl, "/orgs/{org}/actions/variables/{name}/repositories/{repository_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsAddSelectedRepoToOrgVariableRequest.class, baseUrl, "/orgs/{org}/actions/variables/{name}/repositories/{repository_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -284,7 +284,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsAddSelectedRepoToRequiredWorkflowResponse actionsAddSelectedRepoToRequiredWorkflow(org.openapis.openapi.models.operations.ActionsAddSelectedRepoToRequiredWorkflowRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsAddSelectedRepoToRequiredWorkflowPathParams.class, baseUrl, "/orgs/{org}/actions/required_workflows/{required_workflow_id}/repositories/{repository_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsAddSelectedRepoToRequiredWorkflowRequest.class, baseUrl, "/orgs/{org}/actions/required_workflows/{required_workflow_id}/repositories/{repository_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -321,7 +321,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsAddSelfHostedRunnerToGroupForOrgResponse actionsAddSelfHostedRunnerToGroupForOrg(org.openapis.openapi.models.operations.ActionsAddSelfHostedRunnerToGroupForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsAddSelfHostedRunnerToGroupForOrgPathParams.class, baseUrl, "/orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsAddSelfHostedRunnerToGroupForOrgRequest.class, baseUrl, "/orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -355,7 +355,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsCancelWorkflowRunResponse actionsCancelWorkflowRun(org.openapis.openapi.models.operations.ActionsCancelWorkflowRunRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsCancelWorkflowRunPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/runs/{run_id}/cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsCancelWorkflowRunRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/runs/{run_id}/cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -405,12 +405,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsCreateEnvironmentVariableResponse actionsCreateEnvironmentVariable(org.openapis.openapi.models.operations.ActionsCreateEnvironmentVariableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsCreateEnvironmentVariablePathParams.class, baseUrl, "/repositories/{repository_id}/environments/{environment_name}/variables", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsCreateEnvironmentVariableRequest.class, baseUrl, "/repositories/{repository_id}/environments/{environment_name}/variables", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -525,12 +525,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsCreateOrUpdateEnvironmentSecretResponse actionsCreateOrUpdateEnvironmentSecret(org.openapis.openapi.models.operations.ActionsCreateOrUpdateEnvironmentSecretRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsCreateOrUpdateEnvironmentSecretPathParams.class, baseUrl, "/repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsCreateOrUpdateEnvironmentSecretRequest.class, baseUrl, "/repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -647,12 +647,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsCreateOrUpdateOrgSecretResponse actionsCreateOrUpdateOrgSecret(org.openapis.openapi.models.operations.ActionsCreateOrUpdateOrgSecretRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsCreateOrUpdateOrgSecretPathParams.class, baseUrl, "/orgs/{org}/actions/secrets/{secret_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsCreateOrUpdateOrgSecretRequest.class, baseUrl, "/orgs/{org}/actions/secrets/{secret_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -769,12 +769,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsCreateOrUpdateRepoSecretResponse actionsCreateOrUpdateRepoSecret(org.openapis.openapi.models.operations.ActionsCreateOrUpdateRepoSecretRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsCreateOrUpdateRepoSecretPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/secrets/{secret_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsCreateOrUpdateRepoSecretRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/secrets/{secret_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -818,12 +818,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsCreateOrgVariableResponse actionsCreateOrgVariable(org.openapis.openapi.models.operations.ActionsCreateOrgVariableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsCreateOrgVariablePathParams.class, baseUrl, "/orgs/{org}/actions/variables", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsCreateOrgVariableRequest.class, baseUrl, "/orgs/{org}/actions/variables", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -873,7 +873,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsCreateRegistrationTokenForOrgResponse actionsCreateRegistrationTokenForOrg(org.openapis.openapi.models.operations.ActionsCreateRegistrationTokenForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsCreateRegistrationTokenForOrgPathParams.class, baseUrl, "/orgs/{org}/actions/runners/registration-token", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsCreateRegistrationTokenForOrgRequest.class, baseUrl, "/orgs/{org}/actions/runners/registration-token", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -922,7 +922,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsCreateRegistrationTokenForRepoResponse actionsCreateRegistrationTokenForRepo(org.openapis.openapi.models.operations.ActionsCreateRegistrationTokenForRepoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsCreateRegistrationTokenForRepoPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/runners/registration-token", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsCreateRegistrationTokenForRepoRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/runners/registration-token", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -973,7 +973,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsCreateRemoveTokenForOrgResponse actionsCreateRemoveTokenForOrg(org.openapis.openapi.models.operations.ActionsCreateRemoveTokenForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsCreateRemoveTokenForOrgPathParams.class, baseUrl, "/orgs/{org}/actions/runners/remove-token", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsCreateRemoveTokenForOrgRequest.class, baseUrl, "/orgs/{org}/actions/runners/remove-token", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -1022,7 +1022,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsCreateRemoveTokenForRepoResponse actionsCreateRemoveTokenForRepo(org.openapis.openapi.models.operations.ActionsCreateRemoveTokenForRepoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsCreateRemoveTokenForRepoPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/runners/remove-token", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsCreateRemoveTokenForRepoRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/runners/remove-token", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -1064,12 +1064,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsCreateRepoVariableResponse actionsCreateRepoVariable(org.openapis.openapi.models.operations.ActionsCreateRepoVariableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsCreateRepoVariablePathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/variables", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsCreateRepoVariableRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/variables", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1113,12 +1113,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsCreateRequiredWorkflowResponse actionsCreateRequiredWorkflow(org.openapis.openapi.models.operations.ActionsCreateRequiredWorkflowRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsCreateRequiredWorkflowPathParams.class, baseUrl, "/orgs/{org}/actions/required_workflows", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsCreateRequiredWorkflowRequest.class, baseUrl, "/orgs/{org}/actions/required_workflows", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1168,12 +1168,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsCreateSelfHostedRunnerGroupForOrgResponse actionsCreateSelfHostedRunnerGroupForOrg(org.openapis.openapi.models.operations.ActionsCreateSelfHostedRunnerGroupForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsCreateSelfHostedRunnerGroupForOrgPathParams.class, baseUrl, "/orgs/{org}/actions/runner-groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsCreateSelfHostedRunnerGroupForOrgRequest.class, baseUrl, "/orgs/{org}/actions/runner-groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1217,12 +1217,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsCreateWorkflowDispatchResponse actionsCreateWorkflowDispatch(org.openapis.openapi.models.operations.ActionsCreateWorkflowDispatchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsCreateWorkflowDispatchPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsCreateWorkflowDispatchRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1260,7 +1260,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsDeleteActionsCacheByIdResponse actionsDeleteActionsCacheById(org.openapis.openapi.models.operations.ActionsDeleteActionsCacheByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDeleteActionsCacheByIdPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/caches/{cache_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDeleteActionsCacheByIdRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/caches/{cache_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1298,13 +1298,13 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsDeleteActionsCacheByKeyResponse actionsDeleteActionsCacheByKey(org.openapis.openapi.models.operations.ActionsDeleteActionsCacheByKeyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDeleteActionsCacheByKeyPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/caches", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDeleteActionsCacheByKeyRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/caches", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsDeleteActionsCacheByKeyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsDeleteActionsCacheByKeyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1344,7 +1344,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsDeleteArtifactResponse actionsDeleteArtifact(org.openapis.openapi.models.operations.ActionsDeleteArtifactRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDeleteArtifactPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/artifacts/{artifact_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDeleteArtifactRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/artifacts/{artifact_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1378,7 +1378,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsDeleteEnvironmentSecretResponse actionsDeleteEnvironmentSecret(org.openapis.openapi.models.operations.ActionsDeleteEnvironmentSecretRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDeleteEnvironmentSecretPathParams.class, baseUrl, "/repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDeleteEnvironmentSecretRequest.class, baseUrl, "/repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1414,7 +1414,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsDeleteEnvironmentVariableResponse actionsDeleteEnvironmentVariable(org.openapis.openapi.models.operations.ActionsDeleteEnvironmentVariableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDeleteEnvironmentVariablePathParams.class, baseUrl, "/repositories/{repository_id}/environments/{environment_name}/variables/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDeleteEnvironmentVariableRequest.class, baseUrl, "/repositories/{repository_id}/environments/{environment_name}/variables/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1448,7 +1448,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsDeleteOrgSecretResponse actionsDeleteOrgSecret(org.openapis.openapi.models.operations.ActionsDeleteOrgSecretRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDeleteOrgSecretPathParams.class, baseUrl, "/orgs/{org}/actions/secrets/{secret_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDeleteOrgSecretRequest.class, baseUrl, "/orgs/{org}/actions/secrets/{secret_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1484,7 +1484,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsDeleteOrgVariableResponse actionsDeleteOrgVariable(org.openapis.openapi.models.operations.ActionsDeleteOrgVariableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDeleteOrgVariablePathParams.class, baseUrl, "/orgs/{org}/actions/variables/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDeleteOrgVariableRequest.class, baseUrl, "/orgs/{org}/actions/variables/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1518,7 +1518,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsDeleteRepoSecretResponse actionsDeleteRepoSecret(org.openapis.openapi.models.operations.ActionsDeleteRepoSecretRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDeleteRepoSecretPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/secrets/{secret_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDeleteRepoSecretRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/secrets/{secret_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1554,7 +1554,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsDeleteRepoVariableResponse actionsDeleteRepoVariable(org.openapis.openapi.models.operations.ActionsDeleteRepoVariableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDeleteRepoVariablePathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/variables/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDeleteRepoVariableRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/variables/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1592,7 +1592,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsDeleteRequiredWorkflowResponse actionsDeleteRequiredWorkflow(org.openapis.openapi.models.operations.ActionsDeleteRequiredWorkflowRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDeleteRequiredWorkflowPathParams.class, baseUrl, "/orgs/{org}/actions/required_workflows/{required_workflow_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDeleteRequiredWorkflowRequest.class, baseUrl, "/orgs/{org}/actions/required_workflows/{required_workflow_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1628,7 +1628,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsDeleteSelfHostedRunnerFromOrgResponse actionsDeleteSelfHostedRunnerFromOrg(org.openapis.openapi.models.operations.ActionsDeleteSelfHostedRunnerFromOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDeleteSelfHostedRunnerFromOrgPathParams.class, baseUrl, "/orgs/{org}/actions/runners/{runner_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDeleteSelfHostedRunnerFromOrgRequest.class, baseUrl, "/orgs/{org}/actions/runners/{runner_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1665,7 +1665,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsDeleteSelfHostedRunnerFromRepoResponse actionsDeleteSelfHostedRunnerFromRepo(org.openapis.openapi.models.operations.ActionsDeleteSelfHostedRunnerFromRepoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDeleteSelfHostedRunnerFromRepoPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/runners/{runner_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDeleteSelfHostedRunnerFromRepoRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/runners/{runner_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1701,7 +1701,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsDeleteSelfHostedRunnerGroupFromOrgResponse actionsDeleteSelfHostedRunnerGroupFromOrg(org.openapis.openapi.models.operations.ActionsDeleteSelfHostedRunnerGroupFromOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDeleteSelfHostedRunnerGroupFromOrgPathParams.class, baseUrl, "/orgs/{org}/actions/runner-groups/{runner_group_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDeleteSelfHostedRunnerGroupFromOrgRequest.class, baseUrl, "/orgs/{org}/actions/runner-groups/{runner_group_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1737,7 +1737,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsDeleteWorkflowRunResponse actionsDeleteWorkflowRun(org.openapis.openapi.models.operations.ActionsDeleteWorkflowRunRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDeleteWorkflowRunPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/runs/{run_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDeleteWorkflowRunRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/runs/{run_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1771,7 +1771,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsDeleteWorkflowRunLogsResponse actionsDeleteWorkflowRunLogs(org.openapis.openapi.models.operations.ActionsDeleteWorkflowRunLogsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDeleteWorkflowRunLogsPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/runs/{run_id}/logs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDeleteWorkflowRunLogsRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/runs/{run_id}/logs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1815,7 +1815,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsDisableSelectedRepositoryGithubActionsOrganizationResponse actionsDisableSelectedRepositoryGithubActionsOrganization(org.openapis.openapi.models.operations.ActionsDisableSelectedRepositoryGithubActionsOrganizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDisableSelectedRepositoryGithubActionsOrganizationPathParams.class, baseUrl, "/orgs/{org}/actions/permissions/repositories/{repository_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDisableSelectedRepositoryGithubActionsOrganizationRequest.class, baseUrl, "/orgs/{org}/actions/permissions/repositories/{repository_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1851,7 +1851,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsDisableWorkflowResponse actionsDisableWorkflow(org.openapis.openapi.models.operations.ActionsDisableWorkflowRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDisableWorkflowPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/workflows/{workflow_id}/disable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDisableWorkflowRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/workflows/{workflow_id}/disable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -1888,7 +1888,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsDownloadArtifactResponse actionsDownloadArtifact(org.openapis.openapi.models.operations.ActionsDownloadArtifactRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDownloadArtifactPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/artifacts/{artifact_id}/{archive_format}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDownloadArtifactRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/artifacts/{artifact_id}/{archive_format}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1935,7 +1935,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsDownloadJobLogsForWorkflowRunResponse actionsDownloadJobLogsForWorkflowRun(org.openapis.openapi.models.operations.ActionsDownloadJobLogsForWorkflowRunRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDownloadJobLogsForWorkflowRunPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/jobs/{job_id}/logs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDownloadJobLogsForWorkflowRunRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/jobs/{job_id}/logs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1974,7 +1974,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsDownloadWorkflowRunAttemptLogsResponse actionsDownloadWorkflowRunAttemptLogs(org.openapis.openapi.models.operations.ActionsDownloadWorkflowRunAttemptLogsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDownloadWorkflowRunAttemptLogsPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/runs/{run_id}/attempts/{attempt_number}/logs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDownloadWorkflowRunAttemptLogsRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/runs/{run_id}/attempts/{attempt_number}/logs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2013,7 +2013,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsDownloadWorkflowRunLogsResponse actionsDownloadWorkflowRunLogs(org.openapis.openapi.models.operations.ActionsDownloadWorkflowRunLogsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDownloadWorkflowRunLogsPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/runs/{run_id}/logs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsDownloadWorkflowRunLogsRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/runs/{run_id}/logs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2051,7 +2051,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsEnableSelectedRepositoryGithubActionsOrganizationResponse actionsEnableSelectedRepositoryGithubActionsOrganization(org.openapis.openapi.models.operations.ActionsEnableSelectedRepositoryGithubActionsOrganizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsEnableSelectedRepositoryGithubActionsOrganizationPathParams.class, baseUrl, "/orgs/{org}/actions/permissions/repositories/{repository_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsEnableSelectedRepositoryGithubActionsOrganizationRequest.class, baseUrl, "/orgs/{org}/actions/permissions/repositories/{repository_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -2087,7 +2087,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsEnableWorkflowResponse actionsEnableWorkflow(org.openapis.openapi.models.operations.ActionsEnableWorkflowRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsEnableWorkflowPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/workflows/{workflow_id}/enable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsEnableWorkflowRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/workflows/{workflow_id}/enable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -2123,13 +2123,13 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsGetActionsCacheListResponse actionsGetActionsCacheList(org.openapis.openapi.models.operations.ActionsGetActionsCacheListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetActionsCacheListPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/caches", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetActionsCacheListRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/caches", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsGetActionsCacheListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsGetActionsCacheListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2173,7 +2173,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsGetActionsCacheUsageResponse actionsGetActionsCacheUsage(org.openapis.openapi.models.operations.ActionsGetActionsCacheUsageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetActionsCacheUsagePathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/cache/usage", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetActionsCacheUsageRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/cache/usage", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2215,13 +2215,13 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsGetActionsCacheUsageByRepoForOrgResponse actionsGetActionsCacheUsageByRepoForOrg(org.openapis.openapi.models.operations.ActionsGetActionsCacheUsageByRepoForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetActionsCacheUsageByRepoForOrgPathParams.class, baseUrl, "/orgs/{org}/actions/cache/usage-by-repository", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetActionsCacheUsageByRepoForOrgRequest.class, baseUrl, "/orgs/{org}/actions/cache/usage-by-repository", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsGetActionsCacheUsageByRepoForOrgQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsGetActionsCacheUsageByRepoForOrgRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2265,7 +2265,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsGetActionsCacheUsageForEnterpriseResponse actionsGetActionsCacheUsageForEnterprise(org.openapis.openapi.models.operations.ActionsGetActionsCacheUsageForEnterpriseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetActionsCacheUsageForEnterprisePathParams.class, baseUrl, "/enterprises/{enterprise}/actions/cache/usage", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetActionsCacheUsageForEnterpriseRequest.class, baseUrl, "/enterprises/{enterprise}/actions/cache/usage", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2309,7 +2309,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsGetActionsCacheUsageForOrgResponse actionsGetActionsCacheUsageForOrg(org.openapis.openapi.models.operations.ActionsGetActionsCacheUsageForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetActionsCacheUsageForOrgPathParams.class, baseUrl, "/orgs/{org}/actions/cache/usage", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetActionsCacheUsageForOrgRequest.class, baseUrl, "/orgs/{org}/actions/cache/usage", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2353,7 +2353,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsGetActionsCacheUsagePolicyResponse actionsGetActionsCacheUsagePolicy(org.openapis.openapi.models.operations.ActionsGetActionsCacheUsagePolicyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetActionsCacheUsagePolicyPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/cache/usage-policy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetActionsCacheUsagePolicyRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/cache/usage-policy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2395,7 +2395,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsGetActionsCacheUsagePolicyForEnterpriseResponse actionsGetActionsCacheUsagePolicyForEnterprise(org.openapis.openapi.models.operations.ActionsGetActionsCacheUsagePolicyForEnterpriseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetActionsCacheUsagePolicyForEnterprisePathParams.class, baseUrl, "/enterprises/{enterprise}/actions/cache/usage-policy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetActionsCacheUsagePolicyForEnterpriseRequest.class, baseUrl, "/enterprises/{enterprise}/actions/cache/usage-policy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2439,7 +2439,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsGetAllowedActionsOrganizationResponse actionsGetAllowedActionsOrganization(org.openapis.openapi.models.operations.ActionsGetAllowedActionsOrganizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetAllowedActionsOrganizationPathParams.class, baseUrl, "/orgs/{org}/actions/permissions/selected-actions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetAllowedActionsOrganizationRequest.class, baseUrl, "/orgs/{org}/actions/permissions/selected-actions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2481,7 +2481,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsGetAllowedActionsRepositoryResponse actionsGetAllowedActionsRepository(org.openapis.openapi.models.operations.ActionsGetAllowedActionsRepositoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetAllowedActionsRepositoryPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/permissions/selected-actions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetAllowedActionsRepositoryRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/permissions/selected-actions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2521,7 +2521,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsGetArtifactResponse actionsGetArtifact(org.openapis.openapi.models.operations.ActionsGetArtifactRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetArtifactPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/artifacts/{artifact_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetArtifactRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/artifacts/{artifact_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2563,7 +2563,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsGetCustomOidcSubClaimForRepoResponse actionsGetCustomOidcSubClaimForRepo(org.openapis.openapi.models.operations.ActionsGetCustomOidcSubClaimForRepoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetCustomOidcSubClaimForRepoPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/oidc/customization/sub", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetCustomOidcSubClaimForRepoRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/oidc/customization/sub", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2625,7 +2625,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsGetEnvironmentPublicKeyResponse actionsGetEnvironmentPublicKey(org.openapis.openapi.models.operations.ActionsGetEnvironmentPublicKeyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetEnvironmentPublicKeyPathParams.class, baseUrl, "/repositories/{repository_id}/environments/{environment_name}/secrets/public-key", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetEnvironmentPublicKeyRequest.class, baseUrl, "/repositories/{repository_id}/environments/{environment_name}/secrets/public-key", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2665,7 +2665,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsGetEnvironmentSecretResponse actionsGetEnvironmentSecret(org.openapis.openapi.models.operations.ActionsGetEnvironmentSecretRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetEnvironmentSecretPathParams.class, baseUrl, "/repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetEnvironmentSecretRequest.class, baseUrl, "/repositories/{repository_id}/environments/{environment_name}/secrets/{secret_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2705,7 +2705,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsGetEnvironmentVariableResponse actionsGetEnvironmentVariable(org.openapis.openapi.models.operations.ActionsGetEnvironmentVariableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetEnvironmentVariablePathParams.class, baseUrl, "/repositories/{repository_id}/environments/{environment_name}/variables/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetEnvironmentVariableRequest.class, baseUrl, "/repositories/{repository_id}/environments/{environment_name}/variables/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2750,7 +2750,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsGetGithubActionsDefaultWorkflowPermissionsEnterpriseResponse actionsGetGithubActionsDefaultWorkflowPermissionsEnterprise(org.openapis.openapi.models.operations.ActionsGetGithubActionsDefaultWorkflowPermissionsEnterpriseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetGithubActionsDefaultWorkflowPermissionsEnterprisePathParams.class, baseUrl, "/enterprises/{enterprise}/actions/permissions/workflow", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetGithubActionsDefaultWorkflowPermissionsEnterpriseRequest.class, baseUrl, "/enterprises/{enterprise}/actions/permissions/workflow", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2794,7 +2794,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsGetGithubActionsDefaultWorkflowPermissionsOrganizationResponse actionsGetGithubActionsDefaultWorkflowPermissionsOrganization(org.openapis.openapi.models.operations.ActionsGetGithubActionsDefaultWorkflowPermissionsOrganizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetGithubActionsDefaultWorkflowPermissionsOrganizationPathParams.class, baseUrl, "/orgs/{org}/actions/permissions/workflow", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetGithubActionsDefaultWorkflowPermissionsOrganizationRequest.class, baseUrl, "/orgs/{org}/actions/permissions/workflow", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2838,7 +2838,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsGetGithubActionsDefaultWorkflowPermissionsRepositoryResponse actionsGetGithubActionsDefaultWorkflowPermissionsRepository(org.openapis.openapi.models.operations.ActionsGetGithubActionsDefaultWorkflowPermissionsRepositoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetGithubActionsDefaultWorkflowPermissionsRepositoryPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/permissions/workflow", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetGithubActionsDefaultWorkflowPermissionsRepositoryRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/permissions/workflow", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2880,7 +2880,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsGetGithubActionsPermissionsOrganizationResponse actionsGetGithubActionsPermissionsOrganization(org.openapis.openapi.models.operations.ActionsGetGithubActionsPermissionsOrganizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetGithubActionsPermissionsOrganizationPathParams.class, baseUrl, "/orgs/{org}/actions/permissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetGithubActionsPermissionsOrganizationRequest.class, baseUrl, "/orgs/{org}/actions/permissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2922,7 +2922,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsGetGithubActionsPermissionsRepositoryResponse actionsGetGithubActionsPermissionsRepository(org.openapis.openapi.models.operations.ActionsGetGithubActionsPermissionsRepositoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetGithubActionsPermissionsRepositoryPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/permissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetGithubActionsPermissionsRepositoryRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/permissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2962,7 +2962,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsGetJobForWorkflowRunResponse actionsGetJobForWorkflowRun(org.openapis.openapi.models.operations.ActionsGetJobForWorkflowRunRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetJobForWorkflowRunPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/jobs/{job_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetJobForWorkflowRunRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/jobs/{job_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3002,7 +3002,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsGetOrgPublicKeyResponse actionsGetOrgPublicKey(org.openapis.openapi.models.operations.ActionsGetOrgPublicKeyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetOrgPublicKeyPathParams.class, baseUrl, "/orgs/{org}/actions/secrets/public-key", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetOrgPublicKeyRequest.class, baseUrl, "/orgs/{org}/actions/secrets/public-key", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3042,7 +3042,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsGetOrgSecretResponse actionsGetOrgSecret(org.openapis.openapi.models.operations.ActionsGetOrgSecretRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetOrgSecretPathParams.class, baseUrl, "/orgs/{org}/actions/secrets/{secret_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetOrgSecretRequest.class, baseUrl, "/orgs/{org}/actions/secrets/{secret_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3082,7 +3082,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsGetOrgVariableResponse actionsGetOrgVariable(org.openapis.openapi.models.operations.ActionsGetOrgVariableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetOrgVariablePathParams.class, baseUrl, "/orgs/{org}/actions/variables/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetOrgVariableRequest.class, baseUrl, "/orgs/{org}/actions/variables/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3124,7 +3124,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsGetPendingDeploymentsForRunResponse actionsGetPendingDeploymentsForRun(org.openapis.openapi.models.operations.ActionsGetPendingDeploymentsForRunRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetPendingDeploymentsForRunPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/runs/{run_id}/pending_deployments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetPendingDeploymentsForRunRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/runs/{run_id}/pending_deployments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3164,7 +3164,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsGetRepoPublicKeyResponse actionsGetRepoPublicKey(org.openapis.openapi.models.operations.ActionsGetRepoPublicKeyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetRepoPublicKeyPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/secrets/public-key", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetRepoPublicKeyRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/secrets/public-key", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3204,7 +3204,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsGetRepoRequiredWorkflowResponse actionsGetRepoRequiredWorkflow(org.openapis.openapi.models.operations.ActionsGetRepoRequiredWorkflowRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetRepoRequiredWorkflowPathParams.class, baseUrl, "/repos/{org}/{repo}/actions/required_workflows/{required_workflow_id_for_repo}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetRepoRequiredWorkflowRequest.class, baseUrl, "/repos/{org}/{repo}/actions/required_workflows/{required_workflow_id_for_repo}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3252,7 +3252,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsGetRepoSecretResponse actionsGetRepoSecret(org.openapis.openapi.models.operations.ActionsGetRepoSecretRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetRepoSecretPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/secrets/{secret_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetRepoSecretRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/secrets/{secret_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3292,7 +3292,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsGetRepoVariableResponse actionsGetRepoVariable(org.openapis.openapi.models.operations.ActionsGetRepoVariableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetRepoVariablePathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/variables/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetRepoVariableRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/variables/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3336,7 +3336,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsGetRequiredWorkflowResponse actionsGetRequiredWorkflow(org.openapis.openapi.models.operations.ActionsGetRequiredWorkflowRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetRequiredWorkflowPathParams.class, baseUrl, "/orgs/{org}/actions/required_workflows/{required_workflow_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetRequiredWorkflowRequest.class, baseUrl, "/orgs/{org}/actions/required_workflows/{required_workflow_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3376,7 +3376,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsGetReviewsForRunResponse actionsGetReviewsForRun(org.openapis.openapi.models.operations.ActionsGetReviewsForRunRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetReviewsForRunPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/runs/{run_id}/approvals", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetReviewsForRunRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/runs/{run_id}/approvals", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3418,7 +3418,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsGetSelfHostedRunnerForOrgResponse actionsGetSelfHostedRunnerForOrg(org.openapis.openapi.models.operations.ActionsGetSelfHostedRunnerForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetSelfHostedRunnerForOrgPathParams.class, baseUrl, "/orgs/{org}/actions/runners/{runner_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetSelfHostedRunnerForOrgRequest.class, baseUrl, "/orgs/{org}/actions/runners/{runner_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3461,7 +3461,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsGetSelfHostedRunnerForRepoResponse actionsGetSelfHostedRunnerForRepo(org.openapis.openapi.models.operations.ActionsGetSelfHostedRunnerForRepoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetSelfHostedRunnerForRepoPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/runners/{runner_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetSelfHostedRunnerForRepoRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/runners/{runner_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3503,7 +3503,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsGetSelfHostedRunnerGroupForOrgResponse actionsGetSelfHostedRunnerGroupForOrg(org.openapis.openapi.models.operations.ActionsGetSelfHostedRunnerGroupForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetSelfHostedRunnerGroupForOrgPathParams.class, baseUrl, "/orgs/{org}/actions/runner-groups/{runner_group_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetSelfHostedRunnerGroupForOrgRequest.class, baseUrl, "/orgs/{org}/actions/runner-groups/{runner_group_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3543,7 +3543,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsGetWorkflowResponse actionsGetWorkflow(org.openapis.openapi.models.operations.ActionsGetWorkflowRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetWorkflowPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/workflows/{workflow_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetWorkflowRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/workflows/{workflow_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3589,7 +3589,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsGetWorkflowAccessToRepositoryResponse actionsGetWorkflowAccessToRepository(org.openapis.openapi.models.operations.ActionsGetWorkflowAccessToRepositoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetWorkflowAccessToRepositoryPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/permissions/access", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetWorkflowAccessToRepositoryRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/permissions/access", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3629,13 +3629,13 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsGetWorkflowRunResponse actionsGetWorkflowRun(org.openapis.openapi.models.operations.ActionsGetWorkflowRunRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetWorkflowRunPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/runs/{run_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetWorkflowRunRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/runs/{run_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsGetWorkflowRunQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsGetWorkflowRunRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3678,13 +3678,13 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsGetWorkflowRunAttemptResponse actionsGetWorkflowRunAttempt(org.openapis.openapi.models.operations.ActionsGetWorkflowRunAttemptRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetWorkflowRunAttemptPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/runs/{run_id}/attempts/{attempt_number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetWorkflowRunAttemptRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/runs/{run_id}/attempts/{attempt_number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsGetWorkflowRunAttemptQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsGetWorkflowRunAttemptRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3724,13 +3724,13 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsListArtifactsForRepoResponse actionsListArtifactsForRepo(org.openapis.openapi.models.operations.ActionsListArtifactsForRepoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListArtifactsForRepoPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/artifacts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListArtifactsForRepoRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/artifacts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListArtifactsForRepoQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListArtifactsForRepoRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3772,13 +3772,13 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsListEnvironmentSecretsResponse actionsListEnvironmentSecrets(org.openapis.openapi.models.operations.ActionsListEnvironmentSecretsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListEnvironmentSecretsPathParams.class, baseUrl, "/repositories/{repository_id}/environments/{environment_name}/secrets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListEnvironmentSecretsRequest.class, baseUrl, "/repositories/{repository_id}/environments/{environment_name}/secrets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListEnvironmentSecretsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListEnvironmentSecretsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3820,13 +3820,13 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsListEnvironmentVariablesResponse actionsListEnvironmentVariables(org.openapis.openapi.models.operations.ActionsListEnvironmentVariablesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListEnvironmentVariablesPathParams.class, baseUrl, "/repositories/{repository_id}/environments/{environment_name}/variables", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListEnvironmentVariablesRequest.class, baseUrl, "/repositories/{repository_id}/environments/{environment_name}/variables", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListEnvironmentVariablesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListEnvironmentVariablesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3868,13 +3868,13 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsListJobsForWorkflowRunResponse actionsListJobsForWorkflowRun(org.openapis.openapi.models.operations.ActionsListJobsForWorkflowRunRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListJobsForWorkflowRunPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/runs/{run_id}/jobs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListJobsForWorkflowRunRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/runs/{run_id}/jobs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListJobsForWorkflowRunQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListJobsForWorkflowRunRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3916,13 +3916,13 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsListJobsForWorkflowRunAttemptResponse actionsListJobsForWorkflowRunAttempt(org.openapis.openapi.models.operations.ActionsListJobsForWorkflowRunAttemptRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListJobsForWorkflowRunAttemptPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/runs/{run_id}/attempts/{attempt_number}/jobs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListJobsForWorkflowRunAttemptRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/runs/{run_id}/attempts/{attempt_number}/jobs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListJobsForWorkflowRunAttemptQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListJobsForWorkflowRunAttemptRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -3974,7 +3974,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsListLabelsForSelfHostedRunnerForOrgResponse actionsListLabelsForSelfHostedRunnerForOrg(org.openapis.openapi.models.operations.ActionsListLabelsForSelfHostedRunnerForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListLabelsForSelfHostedRunnerForOrgPathParams.class, baseUrl, "/orgs/{org}/actions/runners/{runner_id}/labels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListLabelsForSelfHostedRunnerForOrgRequest.class, baseUrl, "/orgs/{org}/actions/runners/{runner_id}/labels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -4025,7 +4025,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsListLabelsForSelfHostedRunnerForRepoResponse actionsListLabelsForSelfHostedRunnerForRepo(org.openapis.openapi.models.operations.ActionsListLabelsForSelfHostedRunnerForRepoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListLabelsForSelfHostedRunnerForRepoPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/runners/{runner_id}/labels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListLabelsForSelfHostedRunnerForRepoRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/runners/{runner_id}/labels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -4073,13 +4073,13 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsListOrgSecretsResponse actionsListOrgSecrets(org.openapis.openapi.models.operations.ActionsListOrgSecretsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListOrgSecretsPathParams.class, baseUrl, "/orgs/{org}/actions/secrets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListOrgSecretsRequest.class, baseUrl, "/orgs/{org}/actions/secrets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListOrgSecretsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListOrgSecretsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4121,13 +4121,13 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsListOrgVariablesResponse actionsListOrgVariables(org.openapis.openapi.models.operations.ActionsListOrgVariablesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListOrgVariablesPathParams.class, baseUrl, "/orgs/{org}/actions/variables", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListOrgVariablesRequest.class, baseUrl, "/orgs/{org}/actions/variables", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListOrgVariablesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListOrgVariablesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4171,13 +4171,13 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsListRepoAccessToSelfHostedRunnerGroupInOrgResponse actionsListRepoAccessToSelfHostedRunnerGroupInOrg(org.openapis.openapi.models.operations.ActionsListRepoAccessToSelfHostedRunnerGroupInOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListRepoAccessToSelfHostedRunnerGroupInOrgPathParams.class, baseUrl, "/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListRepoAccessToSelfHostedRunnerGroupInOrgRequest.class, baseUrl, "/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListRepoAccessToSelfHostedRunnerGroupInOrgQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListRepoAccessToSelfHostedRunnerGroupInOrgRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4217,13 +4217,13 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsListRepoRequiredWorkflowsResponse actionsListRepoRequiredWorkflows(org.openapis.openapi.models.operations.ActionsListRepoRequiredWorkflowsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListRepoRequiredWorkflowsPathParams.class, baseUrl, "/repos/{org}/{repo}/actions/required_workflows", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListRepoRequiredWorkflowsRequest.class, baseUrl, "/repos/{org}/{repo}/actions/required_workflows", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListRepoRequiredWorkflowsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListRepoRequiredWorkflowsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4271,13 +4271,13 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsListRepoSecretsResponse actionsListRepoSecrets(org.openapis.openapi.models.operations.ActionsListRepoSecretsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListRepoSecretsPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/secrets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListRepoSecretsRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/secrets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListRepoSecretsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListRepoSecretsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4319,13 +4319,13 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsListRepoVariablesResponse actionsListRepoVariables(org.openapis.openapi.models.operations.ActionsListRepoVariablesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListRepoVariablesPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/variables", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListRepoVariablesRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/variables", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListRepoVariablesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListRepoVariablesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4367,13 +4367,13 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsListRepoWorkflowsResponse actionsListRepoWorkflows(org.openapis.openapi.models.operations.ActionsListRepoWorkflowsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListRepoWorkflowsPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/workflows", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListRepoWorkflowsRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/workflows", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListRepoWorkflowsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListRepoWorkflowsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4417,13 +4417,13 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsListRequiredWorkflowRunsResponse actionsListRequiredWorkflowRuns(org.openapis.openapi.models.operations.ActionsListRequiredWorkflowRunsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListRequiredWorkflowRunsPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/required_workflows/{required_workflow_id_for_repo}/runs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListRequiredWorkflowRunsRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/required_workflows/{required_workflow_id_for_repo}/runs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListRequiredWorkflowRunsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListRequiredWorkflowRunsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4469,13 +4469,13 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsListRequiredWorkflowsResponse actionsListRequiredWorkflows(org.openapis.openapi.models.operations.ActionsListRequiredWorkflowsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListRequiredWorkflowsPathParams.class, baseUrl, "/orgs/{org}/actions/required_workflows", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListRequiredWorkflowsRequest.class, baseUrl, "/orgs/{org}/actions/required_workflows", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListRequiredWorkflowsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListRequiredWorkflowsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4517,7 +4517,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsListRunnerApplicationsForOrgResponse actionsListRunnerApplicationsForOrg(org.openapis.openapi.models.operations.ActionsListRunnerApplicationsForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListRunnerApplicationsForOrgPathParams.class, baseUrl, "/orgs/{org}/actions/runners/downloads", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListRunnerApplicationsForOrgRequest.class, baseUrl, "/orgs/{org}/actions/runners/downloads", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -4559,7 +4559,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsListRunnerApplicationsForRepoResponse actionsListRunnerApplicationsForRepo(org.openapis.openapi.models.operations.ActionsListRunnerApplicationsForRepoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListRunnerApplicationsForRepoPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/runners/downloads", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListRunnerApplicationsForRepoRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/runners/downloads", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -4599,13 +4599,13 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsListSelectedReposForOrgSecretResponse actionsListSelectedReposForOrgSecret(org.openapis.openapi.models.operations.ActionsListSelectedReposForOrgSecretRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListSelectedReposForOrgSecretPathParams.class, baseUrl, "/orgs/{org}/actions/secrets/{secret_name}/repositories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListSelectedReposForOrgSecretRequest.class, baseUrl, "/orgs/{org}/actions/secrets/{secret_name}/repositories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListSelectedReposForOrgSecretQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListSelectedReposForOrgSecretRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4645,13 +4645,13 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsListSelectedReposForOrgVariableResponse actionsListSelectedReposForOrgVariable(org.openapis.openapi.models.operations.ActionsListSelectedReposForOrgVariableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListSelectedReposForOrgVariablePathParams.class, baseUrl, "/orgs/{org}/actions/variables/{name}/repositories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListSelectedReposForOrgVariableRequest.class, baseUrl, "/orgs/{org}/actions/variables/{name}/repositories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListSelectedReposForOrgVariableQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListSelectedReposForOrgVariableRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4695,13 +4695,13 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationResponse actionsListSelectedRepositoriesEnabledGithubActionsOrganization(org.openapis.openapi.models.operations.ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationPathParams.class, baseUrl, "/orgs/{org}/actions/permissions/repositories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationRequest.class, baseUrl, "/orgs/{org}/actions/permissions/repositories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListSelectedRepositoriesEnabledGithubActionsOrganizationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4745,7 +4745,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsListSelectedRepositoriesRequiredWorkflowResponse actionsListSelectedRepositoriesRequiredWorkflow(org.openapis.openapi.models.operations.ActionsListSelectedRepositoriesRequiredWorkflowRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListSelectedRepositoriesRequiredWorkflowPathParams.class, baseUrl, "/orgs/{org}/actions/required_workflows/{required_workflow_id}/repositories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListSelectedRepositoriesRequiredWorkflowRequest.class, baseUrl, "/orgs/{org}/actions/required_workflows/{required_workflow_id}/repositories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -4789,13 +4789,13 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsListSelfHostedRunnerGroupsForOrgResponse actionsListSelfHostedRunnerGroupsForOrg(org.openapis.openapi.models.operations.ActionsListSelfHostedRunnerGroupsForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListSelfHostedRunnerGroupsForOrgPathParams.class, baseUrl, "/orgs/{org}/actions/runner-groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListSelfHostedRunnerGroupsForOrgRequest.class, baseUrl, "/orgs/{org}/actions/runner-groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListSelfHostedRunnerGroupsForOrgQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListSelfHostedRunnerGroupsForOrgRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4837,13 +4837,13 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsListSelfHostedRunnersForOrgResponse actionsListSelfHostedRunnersForOrg(org.openapis.openapi.models.operations.ActionsListSelfHostedRunnersForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListSelfHostedRunnersForOrgPathParams.class, baseUrl, "/orgs/{org}/actions/runners", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListSelfHostedRunnersForOrgRequest.class, baseUrl, "/orgs/{org}/actions/runners", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListSelfHostedRunnersForOrgQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListSelfHostedRunnersForOrgRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4885,13 +4885,13 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsListSelfHostedRunnersForRepoResponse actionsListSelfHostedRunnersForRepo(org.openapis.openapi.models.operations.ActionsListSelfHostedRunnersForRepoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListSelfHostedRunnersForRepoPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/runners", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListSelfHostedRunnersForRepoRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/runners", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListSelfHostedRunnersForRepoQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListSelfHostedRunnersForRepoRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4935,13 +4935,13 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsListSelfHostedRunnersInGroupForOrgResponse actionsListSelfHostedRunnersInGroupForOrg(org.openapis.openapi.models.operations.ActionsListSelfHostedRunnersInGroupForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListSelfHostedRunnersInGroupForOrgPathParams.class, baseUrl, "/orgs/{org}/actions/runner-groups/{runner_group_id}/runners", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListSelfHostedRunnersInGroupForOrgRequest.class, baseUrl, "/orgs/{org}/actions/runner-groups/{runner_group_id}/runners", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListSelfHostedRunnersInGroupForOrgQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListSelfHostedRunnersInGroupForOrgRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -4983,13 +4983,13 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsListWorkflowRunArtifactsResponse actionsListWorkflowRunArtifacts(org.openapis.openapi.models.operations.ActionsListWorkflowRunArtifactsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListWorkflowRunArtifactsPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/runs/{run_id}/artifacts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListWorkflowRunArtifactsRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/runs/{run_id}/artifacts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListWorkflowRunArtifactsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListWorkflowRunArtifactsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -5033,13 +5033,13 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsListWorkflowRunsResponse actionsListWorkflowRuns(org.openapis.openapi.models.operations.ActionsListWorkflowRunsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListWorkflowRunsPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/workflows/{workflow_id}/runs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListWorkflowRunsRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/workflows/{workflow_id}/runs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListWorkflowRunsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListWorkflowRunsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -5083,13 +5083,13 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsListWorkflowRunsForRepoResponse actionsListWorkflowRunsForRepo(org.openapis.openapi.models.operations.ActionsListWorkflowRunsForRepoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListWorkflowRunsForRepoPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/runs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsListWorkflowRunsForRepoRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/runs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListWorkflowRunsForRepoQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ActionsListWorkflowRunsForRepoRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -5131,12 +5131,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsReRunJobForWorkflowRunResponse actionsReRunJobForWorkflowRun(org.openapis.openapi.models.operations.ActionsReRunJobForWorkflowRunRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsReRunJobForWorkflowRunPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/jobs/{job_id}/rerun", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsReRunJobForWorkflowRunRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/jobs/{job_id}/rerun", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -5181,12 +5181,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsReRunWorkflowResponse actionsReRunWorkflow(org.openapis.openapi.models.operations.ActionsReRunWorkflowRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsReRunWorkflowPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/runs/{run_id}/rerun", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsReRunWorkflowRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/runs/{run_id}/rerun", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -5223,12 +5223,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsReRunWorkflowFailedJobsResponse actionsReRunWorkflowFailedJobs(org.openapis.openapi.models.operations.ActionsReRunWorkflowFailedJobsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsReRunWorkflowFailedJobsPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/runs/{run_id}/rerun-failed-jobs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsReRunWorkflowFailedJobsRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/runs/{run_id}/rerun-failed-jobs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -5268,7 +5268,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrgResponse actionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrg(org.openapis.openapi.models.operations.ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrgPathParams.class, baseUrl, "/orgs/{org}/actions/runners/{runner_id}/labels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrgRequest.class, baseUrl, "/orgs/{org}/actions/runners/{runner_id}/labels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -5320,7 +5320,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepoResponse actionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepo(org.openapis.openapi.models.operations.ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepoPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/runners/{runner_id}/labels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepoRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/runners/{runner_id}/labels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -5374,7 +5374,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsRemoveCustomLabelFromSelfHostedRunnerForOrgResponse actionsRemoveCustomLabelFromSelfHostedRunnerForOrg(org.openapis.openapi.models.operations.ActionsRemoveCustomLabelFromSelfHostedRunnerForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsRemoveCustomLabelFromSelfHostedRunnerForOrgPathParams.class, baseUrl, "/orgs/{org}/actions/runners/{runner_id}/labels/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsRemoveCustomLabelFromSelfHostedRunnerForOrgRequest.class, baseUrl, "/orgs/{org}/actions/runners/{runner_id}/labels/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -5437,7 +5437,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsRemoveCustomLabelFromSelfHostedRunnerForRepoResponse actionsRemoveCustomLabelFromSelfHostedRunnerForRepo(org.openapis.openapi.models.operations.ActionsRemoveCustomLabelFromSelfHostedRunnerForRepoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsRemoveCustomLabelFromSelfHostedRunnerForRepoPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/runners/{runner_id}/labels/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsRemoveCustomLabelFromSelfHostedRunnerForRepoRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/runners/{runner_id}/labels/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -5495,7 +5495,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgResponse actionsRemoveRepoAccessToSelfHostedRunnerGroupInOrg(org.openapis.openapi.models.operations.ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgPathParams.class, baseUrl, "/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgRequest.class, baseUrl, "/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -5529,7 +5529,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsRemoveSelectedRepoFromOrgSecretResponse actionsRemoveSelectedRepoFromOrgSecret(org.openapis.openapi.models.operations.ActionsRemoveSelectedRepoFromOrgSecretRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsRemoveSelectedRepoFromOrgSecretPathParams.class, baseUrl, "/orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsRemoveSelectedRepoFromOrgSecretRequest.class, baseUrl, "/orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -5563,7 +5563,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsRemoveSelectedRepoFromOrgVariableResponse actionsRemoveSelectedRepoFromOrgVariable(org.openapis.openapi.models.operations.ActionsRemoveSelectedRepoFromOrgVariableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsRemoveSelectedRepoFromOrgVariablePathParams.class, baseUrl, "/orgs/{org}/actions/variables/{name}/repositories/{repository_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsRemoveSelectedRepoFromOrgVariableRequest.class, baseUrl, "/orgs/{org}/actions/variables/{name}/repositories/{repository_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -5601,7 +5601,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsRemoveSelectedRepoFromRequiredWorkflowResponse actionsRemoveSelectedRepoFromRequiredWorkflow(org.openapis.openapi.models.operations.ActionsRemoveSelectedRepoFromRequiredWorkflowRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsRemoveSelectedRepoFromRequiredWorkflowPathParams.class, baseUrl, "/orgs/{org}/actions/required_workflows/{required_workflow_id}/repositories/{repository_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsRemoveSelectedRepoFromRequiredWorkflowRequest.class, baseUrl, "/orgs/{org}/actions/required_workflows/{required_workflow_id}/repositories/{repository_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -5637,7 +5637,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsRemoveSelfHostedRunnerFromGroupForOrgResponse actionsRemoveSelfHostedRunnerFromGroupForOrg(org.openapis.openapi.models.operations.ActionsRemoveSelfHostedRunnerFromGroupForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsRemoveSelfHostedRunnerFromGroupForOrgPathParams.class, baseUrl, "/orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsRemoveSelfHostedRunnerFromGroupForOrgRequest.class, baseUrl, "/orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -5673,12 +5673,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsReviewPendingDeploymentsForRunResponse actionsReviewPendingDeploymentsForRun(org.openapis.openapi.models.operations.ActionsReviewPendingDeploymentsForRunRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsReviewPendingDeploymentsForRunPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/runs/{run_id}/pending_deployments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsReviewPendingDeploymentsForRunRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/runs/{run_id}/pending_deployments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -5720,12 +5720,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsSetActionsCacheUsagePolicyResponse actionsSetActionsCacheUsagePolicy(org.openapis.openapi.models.operations.ActionsSetActionsCacheUsagePolicyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsSetActionsCacheUsagePolicyPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/cache/usage-policy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsSetActionsCacheUsagePolicyRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/cache/usage-policy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "actionsCacheUsagePolicyForRepository", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -5761,12 +5761,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsSetActionsCacheUsagePolicyForEnterpriseResponse actionsSetActionsCacheUsagePolicyForEnterprise(org.openapis.openapi.models.operations.ActionsSetActionsCacheUsagePolicyForEnterpriseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsSetActionsCacheUsagePolicyForEnterprisePathParams.class, baseUrl, "/enterprises/{enterprise}/actions/cache/usage-policy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsSetActionsCacheUsagePolicyForEnterpriseRequest.class, baseUrl, "/enterprises/{enterprise}/actions/cache/usage-policy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "actionsCacheUsagePolicyEnterprise", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -5806,12 +5806,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsSetAllowedActionsOrganizationResponse actionsSetAllowedActionsOrganization(org.openapis.openapi.models.operations.ActionsSetAllowedActionsOrganizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsSetAllowedActionsOrganizationPathParams.class, baseUrl, "/orgs/{org}/actions/permissions/selected-actions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsSetAllowedActionsOrganizationRequest.class, baseUrl, "/orgs/{org}/actions/permissions/selected-actions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "selectedActions", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -5848,12 +5848,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsSetAllowedActionsRepositoryResponse actionsSetAllowedActionsRepository(org.openapis.openapi.models.operations.ActionsSetAllowedActionsRepositoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsSetAllowedActionsRepositoryPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/permissions/selected-actions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsSetAllowedActionsRepositoryRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/permissions/selected-actions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "selectedActions", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -5887,12 +5887,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsSetCustomLabelsForSelfHostedRunnerForOrgResponse actionsSetCustomLabelsForSelfHostedRunnerForOrg(org.openapis.openapi.models.operations.ActionsSetCustomLabelsForSelfHostedRunnerForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsSetCustomLabelsForSelfHostedRunnerForOrgPathParams.class, baseUrl, "/orgs/{org}/actions/runners/{runner_id}/labels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsSetCustomLabelsForSelfHostedRunnerForOrgRequest.class, baseUrl, "/orgs/{org}/actions/runners/{runner_id}/labels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -5952,12 +5952,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsSetCustomLabelsForSelfHostedRunnerForRepoResponse actionsSetCustomLabelsForSelfHostedRunnerForRepo(org.openapis.openapi.models.operations.ActionsSetCustomLabelsForSelfHostedRunnerForRepoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsSetCustomLabelsForSelfHostedRunnerForRepoPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/runners/{runner_id}/labels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsSetCustomLabelsForSelfHostedRunnerForRepoRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/runners/{runner_id}/labels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -6015,12 +6015,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsSetCustomOidcSubClaimForRepoResponse actionsSetCustomOidcSubClaimForRepo(org.openapis.openapi.models.operations.ActionsSetCustomOidcSubClaimForRepoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsSetCustomOidcSubClaimForRepoPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/oidc/customization/sub", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsSetCustomOidcSubClaimForRepoRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/oidc/customization/sub", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -6095,12 +6095,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsSetGithubActionsDefaultWorkflowPermissionsEnterpriseResponse actionsSetGithubActionsDefaultWorkflowPermissionsEnterprise(org.openapis.openapi.models.operations.ActionsSetGithubActionsDefaultWorkflowPermissionsEnterpriseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsSetGithubActionsDefaultWorkflowPermissionsEnterprisePathParams.class, baseUrl, "/enterprises/{enterprise}/actions/permissions/workflow", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsSetGithubActionsDefaultWorkflowPermissionsEnterpriseRequest.class, baseUrl, "/enterprises/{enterprise}/actions/permissions/workflow", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "actionsSetDefaultWorkflowPermissions", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -6138,12 +6138,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsSetGithubActionsDefaultWorkflowPermissionsOrganizationResponse actionsSetGithubActionsDefaultWorkflowPermissionsOrganization(org.openapis.openapi.models.operations.ActionsSetGithubActionsDefaultWorkflowPermissionsOrganizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsSetGithubActionsDefaultWorkflowPermissionsOrganizationPathParams.class, baseUrl, "/orgs/{org}/actions/permissions/workflow", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsSetGithubActionsDefaultWorkflowPermissionsOrganizationRequest.class, baseUrl, "/orgs/{org}/actions/permissions/workflow", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "actionsSetDefaultWorkflowPermissions", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -6178,12 +6178,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsSetGithubActionsDefaultWorkflowPermissionsRepositoryResponse actionsSetGithubActionsDefaultWorkflowPermissionsRepository(org.openapis.openapi.models.operations.ActionsSetGithubActionsDefaultWorkflowPermissionsRepositoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsSetGithubActionsDefaultWorkflowPermissionsRepositoryPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/permissions/workflow", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsSetGithubActionsDefaultWorkflowPermissionsRepositoryRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/permissions/workflow", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "actionsSetDefaultWorkflowPermissions", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -6221,12 +6221,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsSetGithubActionsPermissionsOrganizationResponse actionsSetGithubActionsPermissionsOrganization(org.openapis.openapi.models.operations.ActionsSetGithubActionsPermissionsOrganizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsSetGithubActionsPermissionsOrganizationPathParams.class, baseUrl, "/orgs/{org}/actions/permissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsSetGithubActionsPermissionsOrganizationRequest.class, baseUrl, "/orgs/{org}/actions/permissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -6264,12 +6264,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsSetGithubActionsPermissionsRepositoryResponse actionsSetGithubActionsPermissionsRepository(org.openapis.openapi.models.operations.ActionsSetGithubActionsPermissionsRepositoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsSetGithubActionsPermissionsRepositoryPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/permissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsSetGithubActionsPermissionsRepositoryRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/permissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -6305,12 +6305,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsSetRepoAccessToSelfHostedRunnerGroupInOrgResponse actionsSetRepoAccessToSelfHostedRunnerGroupInOrg(org.openapis.openapi.models.operations.ActionsSetRepoAccessToSelfHostedRunnerGroupInOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsSetRepoAccessToSelfHostedRunnerGroupInOrgPathParams.class, baseUrl, "/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsSetRepoAccessToSelfHostedRunnerGroupInOrgRequest.class, baseUrl, "/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -6344,12 +6344,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsSetSelectedReposForOrgSecretResponse actionsSetSelectedReposForOrgSecret(org.openapis.openapi.models.operations.ActionsSetSelectedReposForOrgSecretRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsSetSelectedReposForOrgSecretPathParams.class, baseUrl, "/orgs/{org}/actions/secrets/{secret_name}/repositories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsSetSelectedReposForOrgSecretRequest.class, baseUrl, "/orgs/{org}/actions/secrets/{secret_name}/repositories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -6383,12 +6383,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsSetSelectedReposForOrgVariableResponse actionsSetSelectedReposForOrgVariable(org.openapis.openapi.models.operations.ActionsSetSelectedReposForOrgVariableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsSetSelectedReposForOrgVariablePathParams.class, baseUrl, "/orgs/{org}/actions/variables/{name}/repositories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsSetSelectedReposForOrgVariableRequest.class, baseUrl, "/orgs/{org}/actions/variables/{name}/repositories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -6426,12 +6426,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsSetSelectedReposToRequiredWorkflowResponse actionsSetSelectedReposToRequiredWorkflow(org.openapis.openapi.models.operations.ActionsSetSelectedReposToRequiredWorkflowRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsSetSelectedReposToRequiredWorkflowPathParams.class, baseUrl, "/orgs/{org}/actions/required_workflows/{required_workflow_id}/repositories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsSetSelectedReposToRequiredWorkflowRequest.class, baseUrl, "/orgs/{org}/actions/required_workflows/{required_workflow_id}/repositories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -6467,12 +6467,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationResponse actionsSetSelectedRepositoriesEnabledGithubActionsOrganization(org.openapis.openapi.models.operations.ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationPathParams.class, baseUrl, "/orgs/{org}/actions/permissions/repositories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsSetSelectedRepositoriesEnabledGithubActionsOrganizationRequest.class, baseUrl, "/orgs/{org}/actions/permissions/repositories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -6508,12 +6508,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsSetSelfHostedRunnersInGroupForOrgResponse actionsSetSelfHostedRunnersInGroupForOrg(org.openapis.openapi.models.operations.ActionsSetSelfHostedRunnersInGroupForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsSetSelfHostedRunnersInGroupForOrgPathParams.class, baseUrl, "/orgs/{org}/actions/runner-groups/{runner_group_id}/runners", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsSetSelfHostedRunnersInGroupForOrgRequest.class, baseUrl, "/orgs/{org}/actions/runner-groups/{runner_group_id}/runners", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -6553,12 +6553,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsSetWorkflowAccessToRepositoryResponse actionsSetWorkflowAccessToRepository(org.openapis.openapi.models.operations.ActionsSetWorkflowAccessToRepositoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsSetWorkflowAccessToRepositoryPathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/permissions/access", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsSetWorkflowAccessToRepositoryRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/permissions/access", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "actionsWorkflowAccessToRepository", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -6594,12 +6594,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsUpdateEnvironmentVariableResponse actionsUpdateEnvironmentVariable(org.openapis.openapi.models.operations.ActionsUpdateEnvironmentVariableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsUpdateEnvironmentVariablePathParams.class, baseUrl, "/repositories/{repository_id}/environments/{environment_name}/variables/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsUpdateEnvironmentVariableRequest.class, baseUrl, "/repositories/{repository_id}/environments/{environment_name}/variables/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -6635,12 +6635,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsUpdateOrgVariableResponse actionsUpdateOrgVariable(org.openapis.openapi.models.operations.ActionsUpdateOrgVariableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsUpdateOrgVariablePathParams.class, baseUrl, "/orgs/{org}/actions/variables/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsUpdateOrgVariableRequest.class, baseUrl, "/orgs/{org}/actions/variables/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -6676,12 +6676,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsUpdateRepoVariableResponse actionsUpdateRepoVariable(org.openapis.openapi.models.operations.ActionsUpdateRepoVariableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsUpdateRepoVariablePathParams.class, baseUrl, "/repos/{owner}/{repo}/actions/variables/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsUpdateRepoVariableRequest.class, baseUrl, "/repos/{owner}/{repo}/actions/variables/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -6719,12 +6719,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsUpdateRequiredWorkflowResponse actionsUpdateRequiredWorkflow(org.openapis.openapi.models.operations.ActionsUpdateRequiredWorkflowRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsUpdateRequiredWorkflowPathParams.class, baseUrl, "/orgs/{org}/actions/required_workflows/{required_workflow_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsUpdateRequiredWorkflowRequest.class, baseUrl, "/orgs/{org}/actions/required_workflows/{required_workflow_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -6774,12 +6774,12 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsUpdateSelfHostedRunnerGroupForOrgResponse actionsUpdateSelfHostedRunnerGroupForOrg(org.openapis.openapi.models.operations.ActionsUpdateSelfHostedRunnerGroupForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsUpdateSelfHostedRunnerGroupForOrgPathParams.class, baseUrl, "/orgs/{org}/actions/runner-groups/{runner_group_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsUpdateSelfHostedRunnerGroupForOrgRequest.class, baseUrl, "/orgs/{org}/actions/runner-groups/{runner_group_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

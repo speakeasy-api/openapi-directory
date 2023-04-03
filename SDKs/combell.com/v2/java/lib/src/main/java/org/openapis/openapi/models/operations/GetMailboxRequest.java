@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMailboxRequest {
-    
-    public GetMailboxPathParams pathParams;
-    public GetMailboxRequest withPathParams(GetMailboxPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mailboxName")
+    public String mailboxNamePathParameter;
+    public GetMailboxRequest withMailboxNamePathParameter(String mailboxNamePathParameter) {
+        this.mailboxNamePathParameter = mailboxNamePathParameter;
         return this;
     }
     
-    
-    public GetMailboxQueryParams queryParams;
-    public GetMailboxRequest withQueryParams(GetMailboxQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Mailbox name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mailbox_name")
+    public String mailboxNameQueryParameter;
+    public GetMailboxRequest withMailboxNameQueryParameter(String mailboxNameQueryParameter) {
+        this.mailboxNameQueryParameter = mailboxNameQueryParameter;
         return this;
     }
     

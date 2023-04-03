@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteUserDefinedMessageSubscriptionRequest {
-    
-    public DeleteUserDefinedMessageSubscriptionPathParams pathParams;
-    public DeleteUserDefinedMessageSubscriptionRequest withPathParams(DeleteUserDefinedMessageSubscriptionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that subscribed to the User Defined Messages.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public DeleteUserDefinedMessageSubscriptionRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public DeleteUserDefinedMessageSubscriptionSecurity security;
-    public DeleteUserDefinedMessageSubscriptionRequest withSecurity(DeleteUserDefinedMessageSubscriptionSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the [Call](https://www.twilio.com/docs/voice/api/call-resource) the User Defined Message Subscription is associated with. This refers to the Call SID that is producing the User Defined Messages.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CallSid")
+    public String callSid;
+    public DeleteUserDefinedMessageSubscriptionRequest withCallSid(String callSid) {
+        this.callSid = callSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public DeleteUserDefinedMessageSubscriptionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID that uniquely identifies this User Defined Message Subscription.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteUserDefinedMessageSubscriptionRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

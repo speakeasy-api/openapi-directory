@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.PostCheckCodeRequestBody;
-import org.openapis.openapi.models.operations.PostCheckCodeRequest;
 import org.openapis.openapi.models.operations.PostCheckCodeResponse;
 
 public class Application {
@@ -26,18 +25,14 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    bearerAuth = new SchemeBearerAuth() {{
-                        authorization = "Bearer YOUR_BEARER_TOKEN_HERE";
-                    }};
+                    bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
-            PostCheckCodeRequest req = new PostCheckCodeRequest() {{
-                request = new PostCheckCodeRequestBody() {{
-                    code = "corrupti";
-                    email = "Micheal_Sporer@yahoo.com";
-                }};
-            }};            
+            PostCheckCodeRequestBody req = new PostCheckCodeRequestBody() {{
+                code = "corrupti";
+                email = "Micheal_Sporer@yahoo.com";
+            }}            
 
             PostCheckCodeResponse res = sdk.postCheckCode(req);
 
@@ -51,7 +46,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

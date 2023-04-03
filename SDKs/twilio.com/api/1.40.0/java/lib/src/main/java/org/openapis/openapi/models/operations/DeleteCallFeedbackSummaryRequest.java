@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCallFeedbackSummaryRequest {
-    
-    public DeleteCallFeedbackSummaryPathParams pathParams;
-    public DeleteCallFeedbackSummaryRequest withPathParams(DeleteCallFeedbackSummaryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public DeleteCallFeedbackSummaryRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public DeleteCallFeedbackSummarySecurity security;
-    public DeleteCallFeedbackSummaryRequest withSecurity(DeleteCallFeedbackSummarySecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteCallFeedbackSummaryRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * A 34 character string that uniquely identifies this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteCallFeedbackSummaryRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

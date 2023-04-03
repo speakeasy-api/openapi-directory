@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteTaskChannelRequest {
-    
-    public DeleteTaskChannelPathParams pathParams;
-    public DeleteTaskChannelRequest withPathParams(DeleteTaskChannelPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Task Channel resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteTaskChannelRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public DeleteTaskChannelSecurity security;
-    public DeleteTaskChannelRequest withSecurity(DeleteTaskChannelSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteTaskChannelRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Workspace with the Task Channel to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkspaceSid")
+    public String workspaceSid;
+    public DeleteTaskChannelRequest withWorkspaceSid(String workspaceSid) {
+        this.workspaceSid = workspaceSid;
         return this;
     }
     

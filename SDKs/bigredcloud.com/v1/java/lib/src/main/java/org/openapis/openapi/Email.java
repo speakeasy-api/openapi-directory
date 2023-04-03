@@ -37,7 +37,7 @@ public class Email {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EmailSendEmailStatementResponse emailSendEmailStatement(org.openapis.openapi.models.operations.EmailSendEmailStatementRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EmailSendEmailStatementResponse emailSendEmailStatement(org.openapis.openapi.models.shared.EmailStatementDto request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/email/sendEmailStatement");
         
@@ -80,7 +80,7 @@ public class Email {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EmailSendQuoteResponse emailSendQuote(org.openapis.openapi.models.operations.EmailSendQuoteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EmailSendQuoteResponse emailSendQuote(org.openapis.openapi.models.shared.EmailQuoteDto request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/email/sendQuote");
         
@@ -123,7 +123,7 @@ public class Email {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EmailSendSalesInvoiceResponse emailSendSalesInvoice(org.openapis.openapi.models.operations.EmailSendSalesInvoiceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EmailSendSalesInvoiceResponse emailSendSalesInvoice(org.openapis.openapi.models.shared.SalesInvoiceEmailInfoDto request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/email/sendSalesInvoice");
         

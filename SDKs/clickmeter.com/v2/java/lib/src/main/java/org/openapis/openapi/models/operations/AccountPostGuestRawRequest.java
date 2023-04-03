@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountPostGuestRawRequest {
-    
-    public AccountPostGuestRawPathParams pathParams;
-    public AccountPostGuestRawRequest withPathParams(AccountPostGuestRawPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Guest object with field updated
      */
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public AccountPostGuestRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public AccountPostGuestRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Id of the guest
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=guestId")
+    public Long guestId;
+    public AccountPostGuestRawRequest withGuestId(Long guestId) {
+        this.guestId = guestId;
         return this;
     }
     

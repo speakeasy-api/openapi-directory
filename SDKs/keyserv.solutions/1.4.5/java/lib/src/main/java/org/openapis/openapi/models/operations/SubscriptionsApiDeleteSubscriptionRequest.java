@@ -4,27 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SubscriptionsApiDeleteSubscriptionRequest {
-    
-    public SubscriptionsApiDeleteSubscriptionPathParams pathParams;
-    public SubscriptionsApiDeleteSubscriptionRequest withPathParams(SubscriptionsApiDeleteSubscriptionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Api-Key")
+    public String xApiKey;
+    public SubscriptionsApiDeleteSubscriptionRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     
-    
-    public SubscriptionsApiDeleteSubscriptionQueryParams queryParams;
-    public SubscriptionsApiDeleteSubscriptionRequest withQueryParams(SubscriptionsApiDeleteSubscriptionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keep")
+    public Boolean keep;
+    public SubscriptionsApiDeleteSubscriptionRequest withKeep(Boolean keep) {
+        this.keep = keep;
         return this;
     }
     
-    
-    public SubscriptionsApiDeleteSubscriptionHeaders headers;
-    public SubscriptionsApiDeleteSubscriptionRequest withHeaders(SubscriptionsApiDeleteSubscriptionHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public SubscriptionsApiDeleteSubscriptionRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

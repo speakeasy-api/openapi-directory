@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDeviceCodeRequest {
-    
-    public GetDeviceCodePathParams pathParams;
-    public GetDeviceCodeRequest withPathParams(GetDeviceCodePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetDeviceCodeSecurity security;
-    public GetDeviceCodeRequest withSecurity(GetDeviceCodeSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier for the device code.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetDeviceCodeRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

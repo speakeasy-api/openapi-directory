@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetActionOrganizationShowRequest {
+    /**
+     * The id or name of the organization
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public GetActionOrganizationShowRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetActionOrganizationShowQueryParams queryParams;
-    public GetActionOrganizationShowRequest withQueryParams(GetActionOrganizationShowQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * include a list of the organization's datasets
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_datasets")
+    public Boolean includeDatasets;
+    public GetActionOrganizationShowRequest withIncludeDatasets(Boolean includeDatasets) {
+        this.includeDatasets = includeDatasets;
         return this;
     }
     

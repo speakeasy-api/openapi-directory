@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PackagesRestorePackageForUserRequest {
-    
-    public PackagesRestorePackageForUserPathParams pathParams;
-    public PackagesRestorePackageForUserRequest withPathParams(PackagesRestorePackageForUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the package.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=package_name")
+    public String packageName;
+    public PackagesRestorePackageForUserRequest withPackageName(String packageName) {
+        this.packageName = packageName;
         return this;
     }
     
+    /**
+     * The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=package_type")
+    public org.openapis.openapi.models.shared.PackageTypeEnum packageType;
+    public PackagesRestorePackageForUserRequest withPackageType(org.openapis.openapi.models.shared.PackageTypeEnum packageType) {
+        this.packageType = packageType;
+        return this;
+    }
     
-    public PackagesRestorePackageForUserQueryParams queryParams;
-    public PackagesRestorePackageForUserRequest withQueryParams(PackagesRestorePackageForUserQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * package token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public PackagesRestorePackageForUserRequest withToken(String token) {
+        this.token = token;
+        return this;
+    }
+    
+    /**
+     * The handle for the GitHub user account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public PackagesRestorePackageForUserRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

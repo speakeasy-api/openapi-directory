@@ -7,24 +7,22 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostWorkspacesWorkspaceProjectsRequest {
-    
-    public PostWorkspacesWorkspaceProjectsPathParams pathParams;
-    public PostWorkspacesWorkspaceProjectsRequest withPathParams(PostWorkspacesWorkspaceProjectsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public PostWorkspacesWorkspaceProjectsRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public PostWorkspacesWorkspaceProjectsRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public PostWorkspacesWorkspaceProjectsSecurity security;
-    public PostWorkspacesWorkspaceProjectsRequest withSecurity(PostWorkspacesWorkspaceProjectsSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public PostWorkspacesWorkspaceProjectsRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

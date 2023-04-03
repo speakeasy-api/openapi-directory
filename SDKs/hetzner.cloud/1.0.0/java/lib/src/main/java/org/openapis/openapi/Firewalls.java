@@ -54,7 +54,7 @@ public class Firewalls {
      */
     public org.openapis.openapi.models.operations.DeleteFirewallsIdResponse deleteFirewallsId(org.openapis.openapi.models.operations.DeleteFirewallsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteFirewallsIdPathParams.class, baseUrl, "/firewalls/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteFirewallsIdRequest.class, baseUrl, "/firewalls/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -93,7 +93,7 @@ public class Firewalls {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFirewallsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFirewallsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -132,7 +132,7 @@ public class Firewalls {
      */
     public org.openapis.openapi.models.operations.GetFirewallsIdResponse getFirewallsId(org.openapis.openapi.models.operations.GetFirewallsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFirewallsIdPathParams.class, baseUrl, "/firewalls/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFirewallsIdRequest.class, baseUrl, "/firewalls/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -178,7 +178,7 @@ public class Firewalls {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostFirewallsResponse postFirewalls(org.openapis.openapi.models.operations.PostFirewallsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostFirewallsResponse postFirewalls(org.openapis.openapi.models.operations.PostFirewallsCreateFirewallRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/firewalls");
         
@@ -226,12 +226,12 @@ public class Firewalls {
      */
     public org.openapis.openapi.models.operations.PutFirewallsIdResponse putFirewallsId(org.openapis.openapi.models.operations.PutFirewallsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutFirewallsIdPathParams.class, baseUrl, "/firewalls/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutFirewallsIdRequest.class, baseUrl, "/firewalls/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

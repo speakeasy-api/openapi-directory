@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBundlesIdRequest {
-    
-    public GetBundlesIdPathParams pathParams;
-    public GetBundlesIdRequest withPathParams(GetBundlesIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Bundle ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public GetBundlesIdRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

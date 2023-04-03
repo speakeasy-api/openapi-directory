@@ -4,27 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SystemPackagesRequest {
-    
-    public SystemPackagesPathParams pathParams;
-    public SystemPackagesRequest withPathParams(SystemPackagesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[description]")
+    public String filterDescription;
+    public SystemPackagesRequest withFilterDescription(String filterDescription) {
+        this.filterDescription = filterDescription;
         return this;
     }
     
-    
-    public SystemPackagesQueryParams queryParams;
-    public SystemPackagesRequest withQueryParams(SystemPackagesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[evra]")
+    public String filterEvra;
+    public SystemPackagesRequest withFilterEvra(String filterEvra) {
+        this.filterEvra = filterEvra;
         return this;
     }
     
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[name]")
+    public String filterName;
+    public SystemPackagesRequest withFilterName(String filterName) {
+        this.filterName = filterName;
+        return this;
+    }
     
-    public SystemPackagesSecurity security;
-    public SystemPackagesRequest withSecurity(SystemPackagesSecurity security) {
-        this.security = security;
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[summary]")
+    public String filterSummary;
+    public SystemPackagesRequest withFilterSummary(String filterSummary) {
+        this.filterSummary = filterSummary;
+        return this;
+    }
+    
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[updatable]")
+    public Boolean filterUpdatable;
+    public SystemPackagesRequest withFilterUpdatable(Boolean filterUpdatable) {
+        this.filterUpdatable = filterUpdatable;
+        return this;
+    }
+    
+    /**
+     * Inventory ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=inventory_id")
+    public String inventoryId;
+    public SystemPackagesRequest withInventoryId(String inventoryId) {
+        this.inventoryId = inventoryId;
+        return this;
+    }
+    
+    /**
+     * Limit for paging, set -1 to return all
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public SystemPackagesRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Offset for paging
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public SystemPackagesRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Find matching text
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public SystemPackagesRequest withSearch(String search) {
+        this.search = search;
         return this;
     }
     

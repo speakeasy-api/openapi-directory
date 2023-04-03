@@ -34,7 +34,7 @@ public class Content {
      */
     public org.openapis.openapi.models.operations.GetContentAspectIdResponse getContentAspectId(org.openapis.openapi.models.operations.GetContentAspectIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContentAspectIdPathParams.class, baseUrl, "/content/{aspectId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContentAspectIdRequest.class, baseUrl, "/content/{aspectId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -66,7 +66,7 @@ public class Content {
      */
     public org.openapis.openapi.models.operations.GetContentAspectIdCivixDocumentIdResponse getContentAspectIdCivixDocumentId(org.openapis.openapi.models.operations.GetContentAspectIdCivixDocumentIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContentAspectIdCivixDocumentIdPathParams.class, baseUrl, "/content/{aspectId}/{civixDocumentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContentAspectIdCivixDocumentIdRequest.class, baseUrl, "/content/{aspectId}/{civixDocumentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

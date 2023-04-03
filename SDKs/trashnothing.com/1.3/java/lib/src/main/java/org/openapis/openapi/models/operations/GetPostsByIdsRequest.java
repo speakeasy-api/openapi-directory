@@ -4,20 +4,17 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPostsByIdsRequest {
-    
-    public GetPostsByIdsQueryParams queryParams;
-    public GetPostsByIdsRequest withQueryParams(GetPostsByIdsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetPostsByIdsSecurity security;
-    public GetPostsByIdsRequest withSecurity(GetPostsByIdsSecurity security) {
-        this.security = security;
+    /**
+     * A comma separated list of the post IDs. If more than 10 post IDs are passed, only the first 10 posts will be returned.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=post_ids")
+    public String postIds;
+    public GetPostsByIdsRequest withPostIds(String postIds) {
+        this.postIds = postIds;
         return this;
     }
     

@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchAccountRequest {
-    
-    public SearchAccountPathParams pathParams;
-    public SearchAccountRequest withPathParams(SearchAccountPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Which page of the search results to retrieve
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public SearchAccountRequest withPage(Integer page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * How many search results to retrieve per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagelen")
+    public Integer pagelen;
+    public SearchAccountRequest withPagelen(Integer pagelen) {
+        this.pagelen = pagelen;
+        return this;
+    }
     
-    public SearchAccountQueryParams queryParams;
-    public SearchAccountRequest withQueryParams(SearchAccountQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The search query
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_query")
+    public String searchQuery;
+    public SearchAccountRequest withSearchQuery(String searchQuery) {
+        this.searchQuery = searchQuery;
+        return this;
+    }
+    
+    /**
+     * Either the UUID of the account surrounded by curly-braces, for example `{account UUID}`, OR an Atlassian Account ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=selected_user")
+    public String selectedUser;
+    public SearchAccountRequest withSelectedUser(String selectedUser) {
+        this.selectedUser = selectedUser;
         return this;
     }
     

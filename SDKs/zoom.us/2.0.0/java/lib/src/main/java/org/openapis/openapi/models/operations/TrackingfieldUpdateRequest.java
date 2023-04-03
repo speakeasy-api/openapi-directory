@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TrackingfieldUpdateRequest {
-    
-    public TrackingfieldUpdatePathParams pathParams;
-    public TrackingfieldUpdateRequest withPathParams(TrackingfieldUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public TrackingfieldUpdateTrackingField request;
-    public TrackingfieldUpdateRequest withRequest(TrackingfieldUpdateTrackingField request) {
-        this.request = request;
+    public TrackingfieldUpdateTrackingField requestBody;
+    public TrackingfieldUpdateRequest withRequestBody(TrackingfieldUpdateTrackingField requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public TrackingfieldUpdateSecurity security;
-    public TrackingfieldUpdateRequest withSecurity(TrackingfieldUpdateSecurity security) {
-        this.security = security;
+    /**
+     * The Tracking Field ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fieldId")
+    public String fieldId;
+    public TrackingfieldUpdateRequest withFieldId(String fieldId) {
+        this.fieldId = fieldId;
         return this;
     }
     

@@ -4,20 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNamespacesRepositoriesImagesSummaryRequest {
-    
-    public GetNamespacesRepositoriesImagesSummaryPathParams pathParams;
-    public GetNamespacesRepositoriesImagesSummaryRequest withPathParams(GetNamespacesRepositoriesImagesSummaryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Sets the time from which an image must have been pushed or pulled to
+     * be counted as active.
+     * 
+     * Defaults to 1 month before the current time.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=active_from")
+    public String activeFrom;
+    public GetNamespacesRepositoriesImagesSummaryRequest withActiveFrom(String activeFrom) {
+        this.activeFrom = activeFrom;
         return this;
     }
     
+    /**
+     * Namespace of the repository.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=namespace")
+    public String namespace;
+    public GetNamespacesRepositoriesImagesSummaryRequest withNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
     
-    public GetNamespacesRepositoriesImagesSummaryQueryParams queryParams;
-    public GetNamespacesRepositoriesImagesSummaryRequest withQueryParams(GetNamespacesRepositoriesImagesSummaryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Name of the repository.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repository")
+    public String repository;
+    public GetNamespacesRepositoriesImagesSummaryRequest withRepository(String repository) {
+        this.repository = repository;
         return this;
     }
     

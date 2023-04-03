@@ -37,7 +37,7 @@ public class Uploads {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UploadsCreateResponse uploadsCreate(org.openapis.openapi.models.operations.UploadsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UploadsCreateResponse uploadsCreate(org.openapis.openapi.models.operations.UploadsCreateRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/uploads/");
         

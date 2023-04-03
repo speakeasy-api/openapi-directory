@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProductsIdFieldsCountJsonRequest {
-    
-    public GetProductsIdFieldsCountJsonPathParams pathParams;
-    public GetProductsIdFieldsCountJsonRequest withPathParams(GetProductsIdFieldsCountJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public GetProductsIdFieldsCountJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
         return this;
     }
     
+    /**
+     * ID of the Product
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public GetProductsIdFieldsCountJsonRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetProductsIdFieldsCountJsonQueryParams queryParams;
-    public GetProductsIdFieldsCountJsonRequest withQueryParams(GetProductsIdFieldsCountJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public GetProductsIdFieldsCountJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

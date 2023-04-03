@@ -44,10 +44,11 @@ public class Reports {
      *  
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReportCloudRecordingResponse reportCloudRecording(org.openapis.openapi.models.operations.ReportCloudRecordingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReportCloudRecordingResponse reportCloudRecording(org.openapis.openapi.models.operations.ReportCloudRecordingRequest request, org.openapis.openapi.models.operations.ReportCloudRecordingSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/report/cloud_recording");
         
@@ -55,14 +56,14 @@ public class Reports {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReportCloudRecordingQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReportCloudRecordingRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -102,10 +103,11 @@ public class Reports {
      *  
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReportDailyResponse reportDaily(org.openapis.openapi.models.operations.ReportDailyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReportDailyResponse reportDaily(org.openapis.openapi.models.operations.ReportDailyRequest request, org.openapis.openapi.models.operations.ReportDailySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/report/daily");
         
@@ -113,14 +115,14 @@ public class Reports {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReportDailyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReportDailyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -161,19 +163,20 @@ public class Reports {
      * * Pro or a higher plan.&lt;br&gt;
      *  
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReportMeetingDetailsResponse reportMeetingDetails(org.openapis.openapi.models.operations.ReportMeetingDetailsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReportMeetingDetailsResponse reportMeetingDetails(org.openapis.openapi.models.operations.ReportMeetingDetailsRequest request, org.openapis.openapi.models.operations.ReportMeetingDetailsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReportMeetingDetailsPathParams.class, baseUrl, "/report/meetings/{meetingId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReportMeetingDetailsRequest.class, baseUrl, "/report/meetings/{meetingId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -214,25 +217,26 @@ public class Reports {
      * * Pro or a higher plan.&lt;br&gt;
      *  
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReportMeetingParticipantsResponse reportMeetingParticipants(org.openapis.openapi.models.operations.ReportMeetingParticipantsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReportMeetingParticipantsResponse reportMeetingParticipants(org.openapis.openapi.models.operations.ReportMeetingParticipantsRequest request, org.openapis.openapi.models.operations.ReportMeetingParticipantsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReportMeetingParticipantsPathParams.class, baseUrl, "/report/meetings/{meetingId}/participants", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReportMeetingParticipantsRequest.class, baseUrl, "/report/meetings/{meetingId}/participants", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReportMeetingParticipantsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReportMeetingParticipantsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -273,19 +277,20 @@ public class Reports {
      * * Pro or a higher plan.&lt;br&gt;
      *  
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReportMeetingPollsResponse reportMeetingPolls(org.openapis.openapi.models.operations.ReportMeetingPollsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReportMeetingPollsResponse reportMeetingPolls(org.openapis.openapi.models.operations.ReportMeetingPollsRequest request, org.openapis.openapi.models.operations.ReportMeetingPollsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReportMeetingPollsPathParams.class, baseUrl, "/report/meetings/{meetingId}/polls", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReportMeetingPollsRequest.class, baseUrl, "/report/meetings/{meetingId}/polls", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -332,13 +337,13 @@ public class Reports {
      */
     public org.openapis.openapi.models.operations.ReportMeetingsResponse reportMeetings(org.openapis.openapi.models.operations.ReportMeetingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReportMeetingsPathParams.class, baseUrl, "/report/users/{userId}/meetings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReportMeetingsRequest.class, baseUrl, "/report/users/{userId}/meetings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReportMeetingsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReportMeetingsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -386,10 +391,11 @@ public class Reports {
      * **Prerequisites:**&lt;br&gt;
      * * Pro or higher plan.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReportOperationLogsResponse reportOperationLogs(org.openapis.openapi.models.operations.ReportOperationLogsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReportOperationLogsResponse reportOperationLogs(org.openapis.openapi.models.operations.ReportOperationLogsRequest request, org.openapis.openapi.models.operations.ReportOperationLogsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/report/operationlogs");
         
@@ -397,14 +403,14 @@ public class Reports {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReportOperationLogsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReportOperationLogsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -444,10 +450,11 @@ public class Reports {
      *  
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReportSignInSignOutActivitiesResponse reportSignInSignOutActivities(org.openapis.openapi.models.operations.ReportSignInSignOutActivitiesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReportSignInSignOutActivitiesResponse reportSignInSignOutActivities(org.openapis.openapi.models.operations.ReportSignInSignOutActivitiesRequest request, org.openapis.openapi.models.operations.ReportSignInSignOutActivitiesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/report/activities");
         
@@ -455,14 +462,14 @@ public class Reports {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReportSignInSignOutActivitiesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReportSignInSignOutActivitiesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -500,10 +507,11 @@ public class Reports {
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`&lt;br&gt;**Prerequisites:**&lt;br&gt;
      * * Pro or higher plan.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReportTelephoneResponse reportTelephone(org.openapis.openapi.models.operations.ReportTelephoneRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReportTelephoneResponse reportTelephone(org.openapis.openapi.models.operations.ReportTelephoneRequest request, org.openapis.openapi.models.operations.ReportTelephoneSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/report/telephone");
         
@@ -511,14 +519,14 @@ public class Reports {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReportTelephoneQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReportTelephoneRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -557,10 +565,11 @@ public class Reports {
      * **Prerequisites:**&lt;br&gt;
      * * Pro or higher plan.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReportUsersResponse reportUsers(org.openapis.openapi.models.operations.ReportUsersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReportUsersResponse reportUsers(org.openapis.openapi.models.operations.ReportUsersRequest request, org.openapis.openapi.models.operations.ReportUsersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/report/users");
         
@@ -568,14 +577,14 @@ public class Reports {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReportUsersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReportUsersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -613,19 +622,20 @@ public class Reports {
      * **Prerequisites:**&lt;br&gt;
      * * Pro or higher plan with Webinar add-on.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReportWebinarDetailsResponse reportWebinarDetails(org.openapis.openapi.models.operations.ReportWebinarDetailsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReportWebinarDetailsResponse reportWebinarDetails(org.openapis.openapi.models.operations.ReportWebinarDetailsRequest request, org.openapis.openapi.models.operations.ReportWebinarDetailsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReportWebinarDetailsPathParams.class, baseUrl, "/report/webinars/{webinarId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReportWebinarDetailsRequest.class, baseUrl, "/report/webinars/{webinarId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -665,25 +675,26 @@ public class Reports {
      * **Prerequisites:**&lt;br&gt;
      * * Pro or a higher plan with Webinar add-on enabled.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReportWebinarParticipantsResponse reportWebinarParticipants(org.openapis.openapi.models.operations.ReportWebinarParticipantsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReportWebinarParticipantsResponse reportWebinarParticipants(org.openapis.openapi.models.operations.ReportWebinarParticipantsRequest request, org.openapis.openapi.models.operations.ReportWebinarParticipantsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReportWebinarParticipantsPathParams.class, baseUrl, "/report/webinars/{webinarId}/participants", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReportWebinarParticipantsRequest.class, baseUrl, "/report/webinars/{webinarId}/participants", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReportWebinarParticipantsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReportWebinarParticipantsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -723,19 +734,20 @@ public class Reports {
      * **Prerequisites:**&lt;br&gt;
      * * Pro or a higher plan with Webinar add-on enabled.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReportWebinarPollsResponse reportWebinarPolls(org.openapis.openapi.models.operations.ReportWebinarPollsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReportWebinarPollsResponse reportWebinarPolls(org.openapis.openapi.models.operations.ReportWebinarPollsRequest request, org.openapis.openapi.models.operations.ReportWebinarPollsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReportWebinarPollsPathParams.class, baseUrl, "/report/webinars/{webinarId}/polls", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReportWebinarPollsRequest.class, baseUrl, "/report/webinars/{webinarId}/polls", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -777,19 +789,20 @@ public class Reports {
      * **Prerequisites:**&lt;br&gt;
      * * Pro or a higher plan with Webinar add-on enabled.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReportWebinarQAResponse reportWebinarQA(org.openapis.openapi.models.operations.ReportWebinarQARequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReportWebinarQAResponse reportWebinarQA(org.openapis.openapi.models.operations.ReportWebinarQARequest request, org.openapis.openapi.models.operations.ReportWebinarQASecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReportWebinarQAPathParams.class, baseUrl, "/report/webinars/{webinarId}/qa", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReportWebinarQARequest.class, baseUrl, "/report/webinars/{webinarId}/qa", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

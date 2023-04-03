@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteDriverRequest {
-    
-    public DeleteDriverPathParams pathParams;
-    public DeleteDriverRequest withPathParams(DeleteDriverPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The driver id that needs to be deleted
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteDriverRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

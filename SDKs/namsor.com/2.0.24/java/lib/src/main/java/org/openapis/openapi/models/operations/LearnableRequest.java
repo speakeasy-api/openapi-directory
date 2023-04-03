@@ -4,13 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LearnableRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=learnable")
+    public Boolean learnable;
+    public LearnableRequest withLearnable(Boolean learnable) {
+        this.learnable = learnable;
+        return this;
+    }
     
-    public LearnablePathParams pathParams;
-    public LearnableRequest withPathParams(LearnablePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The API Key to set as learnable/non learnable.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=source")
+    public String source;
+    public LearnableRequest withSource(String source) {
+        this.source = source;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=token")
+    public String token;
+    public LearnableRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

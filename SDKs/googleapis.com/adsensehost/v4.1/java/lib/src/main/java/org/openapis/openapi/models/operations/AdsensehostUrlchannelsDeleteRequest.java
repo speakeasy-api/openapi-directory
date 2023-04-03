@@ -4,27 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdsensehostUrlchannelsDeleteRequest {
-    
-    public AdsensehostUrlchannelsDeletePathParams pathParams;
-    public AdsensehostUrlchannelsDeleteRequest withPathParams(AdsensehostUrlchannelsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Ad client from which to delete the URL channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=adClientId")
+    public String adClientId;
+    public AdsensehostUrlchannelsDeleteRequest withAdClientId(String adClientId) {
+        this.adClientId = adClientId;
         return this;
     }
     
-    
-    public AdsensehostUrlchannelsDeleteQueryParams queryParams;
-    public AdsensehostUrlchannelsDeleteRequest withQueryParams(AdsensehostUrlchannelsDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AdsensehostUrlchannelsDeleteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
         return this;
     }
     
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AdsensehostUrlchannelsDeleteRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
     
-    public AdsensehostUrlchannelsDeleteSecurity security;
-    public AdsensehostUrlchannelsDeleteRequest withSecurity(AdsensehostUrlchannelsDeleteSecurity security) {
-        this.security = security;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AdsensehostUrlchannelsDeleteRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AdsensehostUrlchannelsDeleteRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AdsensehostUrlchannelsDeleteRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AdsensehostUrlchannelsDeleteRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * URL channel to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=urlChannelId")
+    public String urlChannelId;
+    public AdsensehostUrlchannelsDeleteRequest withUrlChannelId(String urlChannelId) {
+        this.urlChannelId = urlChannelId;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public AdsensehostUrlchannelsDeleteRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

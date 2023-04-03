@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CertificateReissueRequest {
-    
-    public CertificateReissuePathParams pathParams;
-    public CertificateReissueRequest withPathParams(CertificateReissuePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The reissue request info
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CertificateReissue request;
-    public CertificateReissueRequest withRequest(org.openapis.openapi.models.shared.CertificateReissue request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CertificateReissue certificateReissue;
+    public CertificateReissueRequest withCertificateReissue(org.openapis.openapi.models.shared.CertificateReissue certificateReissue) {
+        this.certificateReissue = certificateReissue;
+        return this;
+    }
+    
+    /**
+     * Certificate id to reissue
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=certificateId")
+    public String certificateId;
+    public CertificateReissueRequest withCertificateId(String certificateId) {
+        this.certificateId = certificateId;
         return this;
     }
     

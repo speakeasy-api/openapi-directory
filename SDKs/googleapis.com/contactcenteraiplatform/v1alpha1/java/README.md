@@ -18,20 +18,16 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsContactCentersCreateSecurity;
-import org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsContactCentersCreatePathParams;
-import org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsContactCentersCreateQueryParams;
 import org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsContactCentersCreateRequest;
 import org.openapis.openapi.models.operations.ContactcenteraiplatformProjectsLocationsContactCentersCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.ContactCenterInput;
 import org.openapis.openapi.models.shared.URIs;
 import org.openapis.openapi.models.shared.SAMLParams;
 import org.openapis.openapi.models.shared.InstanceConfigInstanceSizeEnum;
 import org.openapis.openapi.models.shared.InstanceConfig;
 import org.openapis.openapi.models.shared.AdminUser;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -40,65 +36,57 @@ public class Application {
                 .build();
 
             ContactcenteraiplatformProjectsLocationsContactCentersCreateRequest req = new ContactcenteraiplatformProjectsLocationsContactCentersCreateRequest() {{
-                security = new ContactcenteraiplatformProjectsLocationsContactCentersCreateSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new ContactcenteraiplatformProjectsLocationsContactCentersCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new ContactcenteraiplatformProjectsLocationsContactCentersCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    contactCenterId = "nulla";
-                    fields = "corrupti";
-                    key = "illum";
-                    oauthToken = "vel";
-                    prettyPrint = false;
-                    quotaUser = "error";
-                    requestId = "deserunt";
-                    uploadType = "suscipit";
-                    uploadProtocol = "iure";
-                }};
-                request = new ContactCenterInput() {{
+                dollarXgafv = "2";
+                contactCenterInput = new ContactCenterInput() {{
                     adminUser = new AdminUser() {{
-                        familyName = "magnam";
-                        givenName = "debitis";
+                        familyName = "provident";
+                        givenName = "distinctio";
                     }};
                     ccaipManagedUsers = false;
-                    customerDomainPrefix = "ipsa";
-                    displayName = "delectus";
+                    customerDomainPrefix = "quibusdam";
+                    displayName = "unde";
                     instanceConfig = new InstanceConfig() {{
-                        instanceSize = "STANDARD_SMALL";
+                        instanceSize = "STANDARD_3XLARGE";
                     }};
                     labels = new java.util.HashMap<String, String>() {{
-                        put("molestiae", "minus");
-                        put("placeat", "voluptatum");
+                        put("illum", "vel");
+                        put("error", "deserunt");
+                        put("suscipit", "iure");
                     }};
-                    name = "iusto";
+                    name = "magnam";
                     samlParams = new SAMLParams() {{
-                        certificate = "excepturi";
-                        entityId = "nisi";
-                        ssoUri = "recusandae";
-                        userEmail = "temporibus";
+                        certificate = "debitis";
+                        entityId = "ipsa";
+                        ssoUri = "delectus";
+                        userEmail = "tempora";
                     }};
                     uris = new URIs() {{
-                        chatBotUri = "ab";
-                        mediaUri = "quis";
-                        rootUri = "veritatis";
-                        virtualAgentStreamingServiceUri = "deserunt";
+                        chatBotUri = "suscipit";
+                        mediaUri = "molestiae";
+                        rootUri = "minus";
+                        virtualAgentStreamingServiceUri = "placeat";
                     }};
-                    userEmail = "perferendis";
+                    userEmail = "voluptatum";
                 }};
-            }};            
+                accessToken = "iusto";
+                alt = "media";
+                callback = "nisi";
+                contactCenterId = "recusandae";
+                fields = "temporibus";
+                key = "ab";
+                oauthToken = "quis";
+                parent = "veritatis";
+                prettyPrint = false;
+                quotaUser = "deserunt";
+                requestId = "perferendis";
+                uploadType = "ipsam";
+                uploadProtocol = "repellendus";
+            }}            
 
-            ContactcenteraiplatformProjectsLocationsContactCentersCreateResponse res = sdk.projects.contactcenteraiplatformProjectsLocationsContactCentersCreate(req);
+            ContactcenteraiplatformProjectsLocationsContactCentersCreateResponse res = sdk.projects.contactcenteraiplatformProjectsLocationsContactCentersCreate(req, new ContactcenteraiplatformProjectsLocationsContactCentersCreateSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.operation.isPresent()) {
                 // handle response
@@ -110,7 +98,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### projects

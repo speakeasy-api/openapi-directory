@@ -39,10 +39,11 @@ public class Applications {
      * Application is a group of tiers. A tier is a group of virtual machines based on membership criteria. Tiers are bound to single
      * application. An application name is unique and should not conflict with another application name.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddApplicationResponse addApplication(org.openapis.openapi.models.operations.AddApplicationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddApplicationResponse addApplication(org.openapis.openapi.models.shared.ApplicationRequest request, org.openapis.openapi.models.operations.AddApplicationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/groups/applications");
         
@@ -56,7 +57,7 @@ public class Applications {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -95,24 +96,25 @@ public class Applications {
      * Create a tier of an application by with specified membership criteria. The membership criteria id defined in terms of
      * virtual machines or ip addresses/subnet. Please refer to API Guide on how to construct membership criteria.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddTierResponse addTier(org.openapis.openapi.models.operations.AddTierRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddTierResponse addTier(org.openapis.openapi.models.operations.AddTierRequest request, org.openapis.openapi.models.operations.AddTierSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddTierPathParams.class, baseUrl, "/groups/applications/{id}/tiers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddTierRequest.class, baseUrl, "/groups/applications/{id}/tiers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "tierRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -150,19 +152,20 @@ public class Applications {
      * Delete an application
      * Deleting an application deletes all the tiers of the application along with the application
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteApplicationResponse deleteApplication(org.openapis.openapi.models.operations.DeleteApplicationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteApplicationResponse deleteApplication(org.openapis.openapi.models.operations.DeleteApplicationRequest request, org.openapis.openapi.models.operations.DeleteApplicationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteApplicationPathParams.class, baseUrl, "/groups/applications/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteApplicationRequest.class, baseUrl, "/groups/applications/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -184,19 +187,20 @@ public class Applications {
      * Delete tier
      * Delete tier of an application
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteTierResponse deleteTier(org.openapis.openapi.models.operations.DeleteTierRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteTierResponse deleteTier(org.openapis.openapi.models.operations.DeleteTierRequest request, org.openapis.openapi.models.operations.DeleteTierSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteTierPathParams.class, baseUrl, "/groups/applications/{id}/tiers/{tier-id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteTierRequest.class, baseUrl, "/groups/applications/{id}/tiers/{tier-id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -218,19 +222,20 @@ public class Applications {
      * Show application details
      * Show application details
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApplicationResponse getApplication(org.openapis.openapi.models.operations.GetApplicationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApplicationResponse getApplication(org.openapis.openapi.models.operations.GetApplicationRequest request, org.openapis.openapi.models.operations.GetApplicationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApplicationPathParams.class, baseUrl, "/groups/applications/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApplicationRequest.class, baseUrl, "/groups/applications/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -260,19 +265,20 @@ public class Applications {
      * Show tier details
      * Show tier details
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApplicationTierResponse getApplicationTier(org.openapis.openapi.models.operations.GetApplicationTierRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApplicationTierResponse getApplicationTier(org.openapis.openapi.models.operations.GetApplicationTierRequest request, org.openapis.openapi.models.operations.GetApplicationTierSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApplicationTierPathParams.class, baseUrl, "/groups/applications/{id}/tiers/{tier-id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApplicationTierRequest.class, baseUrl, "/groups/applications/{id}/tiers/{tier-id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -302,18 +308,19 @@ public class Applications {
      * Show tier details
      * Show tier details
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTierResponse getTier(org.openapis.openapi.models.operations.GetTierRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTierResponse getTier(org.openapis.openapi.models.operations.GetTierRequest request, org.openapis.openapi.models.operations.GetTierSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTierPathParams.class, baseUrl, "/groups/tiers/{tier-id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTierRequest.class, baseUrl, "/groups/tiers/{tier-id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -322,7 +329,7 @@ public class Applications {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -352,19 +359,20 @@ public class Applications {
      * List tiers of an application
      * List tiers of an application
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListApplicationTiersResponse listApplicationTiers(org.openapis.openapi.models.operations.ListApplicationTiersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListApplicationTiersResponse listApplicationTiers(org.openapis.openapi.models.operations.ListApplicationTiersRequest request, org.openapis.openapi.models.operations.ListApplicationTiersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListApplicationTiersPathParams.class, baseUrl, "/groups/applications/{id}/tiers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListApplicationTiersRequest.class, baseUrl, "/groups/applications/{id}/tiers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -394,10 +402,11 @@ public class Applications {
      * List applications
      * List applications
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListApplicationsResponse listApplications(org.openapis.openapi.models.operations.ListApplicationsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListApplicationsResponse listApplications(org.openapis.openapi.models.operations.ListApplicationsRequest request, org.openapis.openapi.models.operations.ListApplicationsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/groups/applications");
         
@@ -405,14 +414,14 @@ public class Applications {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListApplicationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListApplicationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

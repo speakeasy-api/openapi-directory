@@ -4,20 +4,57 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContentSearchContentByTagAndTypeRequest {
-    
-    public ContentSearchContentByTagAndTypePathParams pathParams;
-    public ContentSearchContentByTagAndTypeRequest withPathParams(ContentSearchContentByTagAndTypePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Page number for the search results starting with page 1.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currentpage")
+    public Integer currentpage;
+    public ContentSearchContentByTagAndTypeRequest withCurrentpage(Integer currentpage) {
+        this.currentpage = currentpage;
         return this;
     }
     
+    /**
+     * Not used.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=head")
+    public Boolean head;
+    public ContentSearchContentByTagAndTypeRequest withHead(Boolean head) {
+        this.head = head;
+        return this;
+    }
     
-    public ContentSearchContentByTagAndTypeQueryParams queryParams;
-    public ContentSearchContentByTagAndTypeRequest withQueryParams(ContentSearchContentByTagAndTypeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Not used.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=itemsperpage")
+    public Integer itemsperpage;
+    public ContentSearchContentByTagAndTypeRequest withItemsperpage(Integer itemsperpage) {
+        this.itemsperpage = itemsperpage;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=locale")
+    public String locale;
+    public ContentSearchContentByTagAndTypeRequest withLocale(String locale) {
+        this.locale = locale;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tag")
+    public String tag;
+    public ContentSearchContentByTagAndTypeRequest withTag(String tag) {
+        this.tag = tag;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
+    public String type;
+    public ContentSearchContentByTagAndTypeRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

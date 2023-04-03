@@ -43,7 +43,7 @@ public class AssetsReturnsSimulation {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAssetsReturnsSimulationBootstrapResponse postAssetsReturnsSimulationBootstrap(org.openapis.openapi.models.operations.PostAssetsReturnsSimulationBootstrapRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAssetsReturnsSimulationBootstrapResponse postAssetsReturnsSimulationBootstrap(org.openapis.openapi.models.operations.PostAssetsReturnsSimulationBootstrapRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/assets/returns/simulation/bootstrap");
         

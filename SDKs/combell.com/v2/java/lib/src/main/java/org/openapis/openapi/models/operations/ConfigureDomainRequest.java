@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConfigureDomainRequest {
-    
-    public ConfigureDomainPathParams pathParams;
-    public ConfigureDomainRequest withPathParams(ConfigureDomainPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ConfigureDomainQueryParams queryParams;
-    public ConfigureDomainRequest withQueryParams(ConfigureDomainQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Contains the domain renew information
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.EditDomainWillRenewRequest request;
-    public ConfigureDomainRequest withRequest(org.openapis.openapi.models.shared.EditDomainWillRenewRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.EditDomainWillRenewRequest editDomainWillRenewRequest;
+    public ConfigureDomainRequest withEditDomainWillRenewRequest(org.openapis.openapi.models.shared.EditDomainWillRenewRequest editDomainWillRenewRequest) {
+        this.editDomainWillRenewRequest = editDomainWillRenewRequest;
+        return this;
+    }
+    
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
+    public String domainNamePathParameter;
+    public ConfigureDomainRequest withDomainNamePathParameter(String domainNamePathParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
+        return this;
+    }
+    
+    /**
+     * The domain name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
+    public String domainNameQueryParameter;
+    public ConfigureDomainRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
+        this.domainNameQueryParameter = domainNameQueryParameter;
         return this;
     }
     

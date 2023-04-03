@@ -38,7 +38,7 @@ public class ApnsCert {
      */
     public org.openapis.openapi.models.operations.GetOrganizationSmApnsCertResponse getOrganizationSmApnsCert(org.openapis.openapi.models.operations.GetOrganizationSmApnsCertRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSmApnsCertPathParams.class, baseUrl, "/organizations/{organizationId}/sm/apnsCert", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSmApnsCertRequest.class, baseUrl, "/organizations/{organizationId}/sm/apnsCert", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

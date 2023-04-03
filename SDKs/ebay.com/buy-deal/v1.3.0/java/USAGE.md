@@ -5,11 +5,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GetDealItemsSecurity;
-import org.openapis.openapi.models.operations.GetDealItemsQueryParams;
-import org.openapis.openapi.models.operations.GetDealItemsHeaders;
 import org.openapis.openapi.models.operations.GetDealItemsRequest;
 import org.openapis.openapi.models.operations.GetDealItemsResponse;
-import org.openapis.openapi.models.shared.SchemeAPIAuth;
 
 public class Application {
     public static void main(String[] args) {
@@ -18,24 +15,17 @@ public class Application {
                 .build();
 
             GetDealItemsRequest req = new GetDealItemsRequest() {{
-                security = new GetDealItemsSecurity() {{
-                    apiAuth = new SchemeAPIAuth() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                queryParams = new GetDealItemsQueryParams() {{
-                    categoryIds = "corrupti";
-                    commissionable = "provident";
-                    deliveryCountry = "distinctio";
-                    limit = "quibusdam";
-                    offset = "unde";
-                }};
-                headers = new GetDealItemsHeaders() {{
-                    xEbayCMarketplaceId = "nulla";
-                }};
-            }};            
+                xEbayCMarketplaceId = "corrupti";
+                categoryIds = "provident";
+                commissionable = "distinctio";
+                deliveryCountry = "quibusdam";
+                limit = "unde";
+                offset = "nulla";
+            }}            
 
-            GetDealItemsResponse res = sdk.dealItem.getDealItems(req);
+            GetDealItemsResponse res = sdk.dealItem.getDealItems(req, new GetDealItemsSecurity() {{
+                apiAuth = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.dealItemSearchResponse.isPresent()) {
                 // handle response

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllCompanyCodesAndDescriptionsByResourceRequest {
-    
-    public GetAllCompanyCodesAndDescriptionsByResourcePathParams pathParams;
-    public GetAllCompanyCodesAndDescriptionsByResourceRequest withPathParams(GetAllCompanyCodesAndDescriptionsByResourcePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Type of Company Code. Common values costcenter1, costcenter2, costcenter3, deductions, earnings, taxes, paygrade, positions.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=codeResource")
+    public String codeResource;
+    public GetAllCompanyCodesAndDescriptionsByResourceRequest withCodeResource(String codeResource) {
+        this.codeResource = codeResource;
         return this;
     }
     
-    
-    public GetAllCompanyCodesAndDescriptionsByResourceSecurity security;
-    public GetAllCompanyCodesAndDescriptionsByResourceRequest withSecurity(GetAllCompanyCodesAndDescriptionsByResourceSecurity security) {
-        this.security = security;
+    /**
+     * Company Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public GetAllCompanyCodesAndDescriptionsByResourceRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
         return this;
     }
     

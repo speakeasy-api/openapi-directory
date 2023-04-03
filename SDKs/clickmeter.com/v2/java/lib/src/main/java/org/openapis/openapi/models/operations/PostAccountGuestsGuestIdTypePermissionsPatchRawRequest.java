@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostAccountGuestsGuestIdTypePermissionsPatchRawRequest {
-    
-    public PostAccountGuestsGuestIdTypePermissionsPatchRawPathParams pathParams;
-    public PostAccountGuestsGuestIdTypePermissionsPatchRawRequest withPathParams(PostAccountGuestsGuestIdTypePermissionsPatchRawPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The patch permission request
      */
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public PostAccountGuestsGuestIdTypePermissionsPatchRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public PostAccountGuestsGuestIdTypePermissionsPatchRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Id of the guest
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=guestId")
+    public Long guestId;
+    public PostAccountGuestsGuestIdTypePermissionsPatchRawRequest withGuestId(Long guestId) {
+        this.guestId = guestId;
+        return this;
+    }
+    
+    /**
+     * Can be "datapoint" or "group"
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
+    public PostAccountGuestsGuestIdTypePermissionsPatchRawTypeEnum type;
+    public PostAccountGuestsGuestIdTypePermissionsPatchRawRequest withType(PostAccountGuestsGuestIdTypePermissionsPatchRawTypeEnum type) {
+        this.type = type;
         return this;
     }
     

@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UploadAPISpecificationRequest {
-    
-    public UploadAPISpecificationHeaders headers;
-    public UploadAPISpecificationRequest withHeaders(UploadAPISpecificationHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public UploadAPISpecificationRequestBody request;
-    public UploadAPISpecificationRequest withRequest(UploadAPISpecificationRequestBody request) {
-        this.request = request;
+    public UploadAPISpecificationRequestBody requestBody;
+    public UploadAPISpecificationRequest withRequestBody(UploadAPISpecificationRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UploadAPISpecificationSecurity security;
-    public UploadAPISpecificationRequest withSecurity(UploadAPISpecificationSecurity security) {
-        this.security = security;
+    /**
+     * Version number of your docs project, for example, v3.0. To see all valid versions for your docs project call https://docs.readme.com/developers/reference/version#getversions.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-readme-version")
+    public String xReadmeVersion;
+    public UploadAPISpecificationRequest withXReadmeVersion(String xReadmeVersion) {
+        this.xReadmeVersion = xReadmeVersion;
         return this;
     }
     

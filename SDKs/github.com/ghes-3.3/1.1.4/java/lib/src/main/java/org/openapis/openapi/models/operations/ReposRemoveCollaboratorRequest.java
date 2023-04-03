@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposRemoveCollaboratorRequest {
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposRemoveCollaboratorRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public ReposRemoveCollaboratorPathParams pathParams;
-    public ReposRemoveCollaboratorRequest withPathParams(ReposRemoveCollaboratorPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposRemoveCollaboratorRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * The handle for the GitHub user account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public ReposRemoveCollaboratorRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

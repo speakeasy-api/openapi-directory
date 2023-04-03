@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetIPSetRequest {
-    
-    public GetIPSetPathParams pathParams;
-    public GetIPSetRequest withPathParams(GetIPSetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetIPSetRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetIPSetQueryParams queryParams;
-    public GetIPSetRequest withQueryParams(GetIPSetQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetIPSetSecurity security;
-    public GetIPSetRequest withSecurity(GetIPSetSecurity security) {
-        this.security = security;
+    /**
+     * time in epoch seconds
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=time")
+    public Long time;
+    public GetIPSetRequest withTime(Long time) {
+        this.time = time;
         return this;
     }
     

@@ -38,12 +38,12 @@ public class Put {
      */
     public org.openapis.openapi.models.operations.KeyBindResponse keyBind(org.openapis.openapi.models.operations.KeyBindRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.KeyBindPathParams.class, baseUrl, "/key/{PK}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.KeyBindRequest.class, baseUrl, "/key/{PK}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -96,7 +96,7 @@ public class Put {
      */
     public org.openapis.openapi.models.operations.SignUpdateResponse signUpdate(org.openapis.openapi.models.operations.SignUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SignUpdatePathParams.class, baseUrl, "/scope/{job}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SignUpdateRequest.class, baseUrl, "/scope/{job}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

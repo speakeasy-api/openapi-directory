@@ -43,13 +43,13 @@ public class Repositories {
      */
     public org.openapis.openapi.models.operations.GetV2NamespacesNamespaceRepositoriesRepositoryTagsResponse getV2NamespacesNamespaceRepositoriesRepositoryTags(org.openapis.openapi.models.operations.GetV2NamespacesNamespaceRepositoriesRepositoryTagsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2NamespacesNamespaceRepositoriesRepositoryTagsPathParams.class, baseUrl, "/v2/namespaces/{namespace}/repositories/{repository}/tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2NamespacesNamespaceRepositoriesRepositoryTagsRequest.class, baseUrl, "/v2/namespaces/{namespace}/repositories/{repository}/tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV2NamespacesNamespaceRepositoriesRepositoryTagsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV2NamespacesNamespaceRepositoriesRepositoryTagsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -95,7 +95,7 @@ public class Repositories {
      */
     public org.openapis.openapi.models.operations.GetV2NamespacesNamespaceRepositoriesRepositoryTagsTagResponse getV2NamespacesNamespaceRepositoriesRepositoryTagsTag(org.openapis.openapi.models.operations.GetV2NamespacesNamespaceRepositoriesRepositoryTagsTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2NamespacesNamespaceRepositoriesRepositoryTagsTagPathParams.class, baseUrl, "/v2/namespaces/{namespace}/repositories/{repository}/tags/{tag}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2NamespacesNamespaceRepositoriesRepositoryTagsTagRequest.class, baseUrl, "/v2/namespaces/{namespace}/repositories/{repository}/tags/{tag}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -141,7 +141,7 @@ public class Repositories {
      */
     public org.openapis.openapi.models.operations.HeadV2NamespacesNamespaceRepositoriesRepositoryTagsResponse headV2NamespacesNamespaceRepositoriesRepositoryTags(org.openapis.openapi.models.operations.HeadV2NamespacesNamespaceRepositoriesRepositoryTagsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.HeadV2NamespacesNamespaceRepositoriesRepositoryTagsPathParams.class, baseUrl, "/v2/namespaces/{namespace}/repositories/{repository}/tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.HeadV2NamespacesNamespaceRepositoriesRepositoryTagsRequest.class, baseUrl, "/v2/namespaces/{namespace}/repositories/{repository}/tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("HEAD");
@@ -181,7 +181,7 @@ public class Repositories {
      */
     public org.openapis.openapi.models.operations.HeadV2NamespacesNamespaceRepositoriesRepositoryTagsTagResponse headV2NamespacesNamespaceRepositoriesRepositoryTagsTag(org.openapis.openapi.models.operations.HeadV2NamespacesNamespaceRepositoriesRepositoryTagsTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.HeadV2NamespacesNamespaceRepositoriesRepositoryTagsTagPathParams.class, baseUrl, "/v2/namespaces/{namespace}/repositories/{repository}/tags/{tag}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.HeadV2NamespacesNamespaceRepositoriesRepositoryTagsTagRequest.class, baseUrl, "/v2/namespaces/{namespace}/repositories/{repository}/tags/{tag}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("HEAD");

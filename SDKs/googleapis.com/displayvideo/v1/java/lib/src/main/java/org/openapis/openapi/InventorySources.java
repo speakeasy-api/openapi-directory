@@ -34,27 +34,28 @@ public class InventorySources {
     /**
      * Creates a new inventory source. Returns the newly created inventory source if successful.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoInventorySourcesCreateResponse displayvideoInventorySourcesCreate(org.openapis.openapi.models.operations.DisplayvideoInventorySourcesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoInventorySourcesCreateResponse displayvideoInventorySourcesCreate(org.openapis.openapi.models.operations.DisplayvideoInventorySourcesCreateRequest request, org.openapis.openapi.models.operations.DisplayvideoInventorySourcesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/inventorySources");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "inventorySourceInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoInventorySourcesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoInventorySourcesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,27 +82,28 @@ public class InventorySources {
     /**
      * Edits read/write accessors of an inventory source. Returns the updated read_write_accessors for the inventory source.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoInventorySourcesEditInventorySourceReadWriteAccessorsResponse displayvideoInventorySourcesEditInventorySourceReadWriteAccessors(org.openapis.openapi.models.operations.DisplayvideoInventorySourcesEditInventorySourceReadWriteAccessorsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoInventorySourcesEditInventorySourceReadWriteAccessorsResponse displayvideoInventorySourcesEditInventorySourceReadWriteAccessors(org.openapis.openapi.models.operations.DisplayvideoInventorySourcesEditInventorySourceReadWriteAccessorsRequest request, org.openapis.openapi.models.operations.DisplayvideoInventorySourcesEditInventorySourceReadWriteAccessorsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoInventorySourcesEditInventorySourceReadWriteAccessorsPathParams.class, baseUrl, "/v1/inventorySources/{inventorySourceId}:editInventorySourceReadWriteAccessors", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoInventorySourcesEditInventorySourceReadWriteAccessorsRequest.class, baseUrl, "/v1/inventorySources/{inventorySourceId}:editInventorySourceReadWriteAccessors", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "editInventorySourceReadWriteAccessorsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoInventorySourcesEditInventorySourceReadWriteAccessorsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoInventorySourcesEditInventorySourceReadWriteAccessorsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -128,25 +130,26 @@ public class InventorySources {
     /**
      * Gets an inventory source.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoInventorySourcesGetResponse displayvideoInventorySourcesGet(org.openapis.openapi.models.operations.DisplayvideoInventorySourcesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoInventorySourcesGetResponse displayvideoInventorySourcesGet(org.openapis.openapi.models.operations.DisplayvideoInventorySourcesGetRequest request, org.openapis.openapi.models.operations.DisplayvideoInventorySourcesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoInventorySourcesGetPathParams.class, baseUrl, "/v1/inventorySources/{inventorySourceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoInventorySourcesGetRequest.class, baseUrl, "/v1/inventorySources/{inventorySourceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoInventorySourcesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoInventorySourcesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -173,10 +176,11 @@ public class InventorySources {
     /**
      * Lists inventory sources that are accessible to the current user. The order is defined by the order_by parameter. If a filter by entity_status is not specified, inventory sources with entity status `ENTITY_STATUS_ARCHIVED` will not be included in the results.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoInventorySourcesListResponse displayvideoInventorySourcesList(org.openapis.openapi.models.operations.DisplayvideoInventorySourcesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoInventorySourcesListResponse displayvideoInventorySourcesList(org.openapis.openapi.models.operations.DisplayvideoInventorySourcesListRequest request, org.openapis.openapi.models.operations.DisplayvideoInventorySourcesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/inventorySources");
         
@@ -184,14 +188,14 @@ public class InventorySources {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoInventorySourcesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoInventorySourcesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -218,27 +222,28 @@ public class InventorySources {
     /**
      * Updates an existing inventory source. Returns the updated inventory source if successful.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoInventorySourcesPatchResponse displayvideoInventorySourcesPatch(org.openapis.openapi.models.operations.DisplayvideoInventorySourcesPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoInventorySourcesPatchResponse displayvideoInventorySourcesPatch(org.openapis.openapi.models.operations.DisplayvideoInventorySourcesPatchRequest request, org.openapis.openapi.models.operations.DisplayvideoInventorySourcesPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoInventorySourcesPatchPathParams.class, baseUrl, "/v1/inventorySources/{inventorySourceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoInventorySourcesPatchRequest.class, baseUrl, "/v1/inventorySources/{inventorySourceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "inventorySourceInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoInventorySourcesPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoInventorySourcesPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

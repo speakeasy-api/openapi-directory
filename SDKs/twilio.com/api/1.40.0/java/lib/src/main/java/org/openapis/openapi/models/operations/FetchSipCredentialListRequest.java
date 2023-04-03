@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchSipCredentialListRequest {
-    
-    public FetchSipCredentialListPathParams pathParams;
-    public FetchSipCredentialListRequest withPathParams(FetchSipCredentialListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique id of the Account that is responsible for this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public FetchSipCredentialListRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public FetchSipCredentialListSecurity security;
-    public FetchSipCredentialListRequest withSecurity(FetchSipCredentialListSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchSipCredentialListRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The credential list Sid that uniquely identifies this resource
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchSipCredentialListRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

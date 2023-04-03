@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExportSubnetUtilizationStatsCSVRequest {
-    
-    public ExportSubnetUtilizationStatsCSVQueryParams queryParams;
-    public ExportSubnetUtilizationStatsCSVRequest withQueryParams(ExportSubnetUtilizationStatsCSVQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ExportSubnetUtilizationStatsCSVSecurity security;
-    public ExportSubnetUtilizationStatsCSVRequest withSecurity(ExportSubnetUtilizationStatsCSVSecurity security) {
-        this.security = security;
+    /**
+     * an optional subnet mask size (ex:24)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mask")
+    public String mask;
+    public ExportSubnetUtilizationStatsCSVRequest withMask(String mask) {
+        this.mask = mask;
         return this;
     }
     

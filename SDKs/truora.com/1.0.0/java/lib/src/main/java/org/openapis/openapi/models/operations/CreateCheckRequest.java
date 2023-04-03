@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateCheckRequest {
-    
-    public CreateCheckHeaders headers;
-    public CreateCheckRequest withHeaders(CreateCheckHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * Request body create a background check
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.CreateCheckInput request;
-    public CreateCheckRequest withRequest(org.openapis.openapi.models.shared.CreateCheckInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CreateCheckInput createCheckInput;
+    public CreateCheckRequest withCreateCheckInput(org.openapis.openapi.models.shared.CreateCheckInput createCheckInput) {
+        this.createCheckInput = createCheckInput;
         return this;
     }
     
-    
-    public CreateCheckSecurity security;
-    public CreateCheckRequest withSecurity(CreateCheckSecurity security) {
-        this.security = security;
+    /**
+     * Describes the background check priority. The amount of high priority checks is limited by country. Medium priority is used by default
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Truora-Priority")
+    public CreateCheckTruoraPriorityEnum truoraPriority;
+    public CreateCheckRequest withTruoraPriority(CreateCheckTruoraPriorityEnum truoraPriority) {
+        this.truoraPriority = truoraPriority;
         return this;
     }
     

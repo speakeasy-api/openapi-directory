@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBalancePlatformsIdRequest {
-    
-    public GetBalancePlatformsIdPathParams pathParams;
-    public GetBalancePlatformsIdRequest withPathParams(GetBalancePlatformsIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetBalancePlatformsIdSecurity security;
-    public GetBalancePlatformsIdRequest withSecurity(GetBalancePlatformsIdSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the balance platform.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetBalancePlatformsIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

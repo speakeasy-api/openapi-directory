@@ -44,7 +44,7 @@ public class AssetsVolatility {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAssetsVolatilityResponse postAssetsVolatility(org.openapis.openapi.models.operations.PostAssetsVolatilityRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAssetsVolatilityResponse postAssetsVolatility(Object request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/assets/volatility");
         

@@ -39,10 +39,11 @@ public class Licensee {
      * Create Licensee
      * Creates a new Licensee
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateLicenseeResponse createLicensee(org.openapis.openapi.models.operations.CreateLicenseeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateLicenseeResponse createLicensee(org.openapis.openapi.models.operations.CreateLicenseeRequestBody request, org.openapis.openapi.models.operations.CreateLicenseeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/licensee");
         
@@ -53,7 +54,7 @@ public class Licensee {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -88,25 +89,26 @@ public class Licensee {
      * Delete Licensee
      * Delete a Licensee by 'number'
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteLicenseeResponse deleteLicensee(org.openapis.openapi.models.operations.DeleteLicenseeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteLicenseeResponse deleteLicensee(org.openapis.openapi.models.operations.DeleteLicenseeRequest request, org.openapis.openapi.models.operations.DeleteLicenseeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteLicenseePathParams.class, baseUrl, "/licensee/{licenseeNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteLicenseeRequest.class, baseUrl, "/licensee/{licenseeNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteLicenseeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteLicenseeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -141,19 +143,20 @@ public class Licensee {
      * Get Licensee
      * Return a Licensee by 'licenseeNumber'
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetLicenseeResponse getLicensee(org.openapis.openapi.models.operations.GetLicenseeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetLicenseeResponse getLicensee(org.openapis.openapi.models.operations.GetLicenseeRequest request, org.openapis.openapi.models.operations.GetLicenseeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLicenseePathParams.class, baseUrl, "/licensee/{licenseeNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLicenseeRequest.class, baseUrl, "/licensee/{licenseeNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -187,11 +190,10 @@ public class Licensee {
     /**
      * List Licensees
      * Return a list of all Licensees for the current Vendor
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListLicenseesResponse listLicensees(org.openapis.openapi.models.operations.ListLicenseesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListLicenseesResponse listLicensees() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/licensee");
         
@@ -200,8 +202,7 @@ public class Licensee {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -235,24 +236,25 @@ public class Licensee {
      * Transfer Licenses
      * Licenses transfer between Licensees
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TransferLicensesResponse transferLicenses(org.openapis.openapi.models.operations.TransferLicensesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransferLicensesResponse transferLicenses(org.openapis.openapi.models.operations.TransferLicensesRequest request, org.openapis.openapi.models.operations.TransferLicensesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TransferLicensesPathParams.class, baseUrl, "/licensee/{licenseeNumber}/transfer", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TransferLicensesRequest.class, baseUrl, "/licensee/{licenseeNumber}/transfer", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -287,21 +289,22 @@ public class Licensee {
      * Update Licensee
      * Sets the provided properties to a Licensee. Return an updated Licensee
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateLicenseeResponse updateLicensee(org.openapis.openapi.models.operations.UpdateLicenseeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateLicenseeResponse updateLicensee(org.openapis.openapi.models.operations.UpdateLicenseeRequest request, org.openapis.openapi.models.operations.UpdateLicenseeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateLicenseePathParams.class, baseUrl, "/licensee/{licenseeNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateLicenseeRequest.class, baseUrl, "/licensee/{licenseeNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -336,21 +339,22 @@ public class Licensee {
      * Validate Licensee
      * Validates active Licenses of the Licensee
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ValidateLicenseeResponse validateLicensee(org.openapis.openapi.models.operations.ValidateLicenseeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ValidateLicenseeResponse validateLicensee(org.openapis.openapi.models.operations.ValidateLicenseeRequest request, org.openapis.openapi.models.operations.ValidateLicenseeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ValidateLicenseePathParams.class, baseUrl, "/licensee/{licenseeNumber}/validate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ValidateLicenseeRequest.class, baseUrl, "/licensee/{licenseeNumber}/validate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

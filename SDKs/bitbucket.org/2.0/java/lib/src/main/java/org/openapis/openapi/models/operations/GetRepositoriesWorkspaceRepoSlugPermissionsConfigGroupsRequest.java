@@ -4,20 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsRequest {
-    
-    public GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsPathParams pathParams;
-    public GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsRequest withPathParams(GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
         return this;
     }
     
-    
-    public GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsSecurity security;
-    public GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsRequest withSecurity(GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

@@ -4,20 +4,50 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VerifySearchRequest {
-    
-    public VerifySearchPathParams pathParams;
-    public VerifySearchRequest withPathParams(VerifySearchPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public VerifySearchRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_secret")
+    public String apiSecret;
+    public VerifySearchRequest withApiSecret(String apiSecret) {
+        this.apiSecret = apiSecret;
+        return this;
+    }
     
-    public VerifySearchQueryParams queryParams;
-    public VerifySearchRequest withQueryParams(VerifySearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The response format.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public org.openapis.openapi.models.shared.FormatEnum format;
+    public VerifySearchRequest withFormat(org.openapis.openapi.models.shared.FormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * The `request_id` you received in the Verify Request Response. Required if `request_ids` not provided.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=request_id")
+    public String requestId;
+    public VerifySearchRequest withRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    
+    /**
+     * More than one `request_id`. Each `request_id` is a new parameter in the Verify Search request. Required if `request_id` not provided.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=request_ids")
+    public String[] requestIds;
+    public VerifySearchRequest withRequestIds(String[] requestIds) {
+        this.requestIds = requestIds;
         return this;
     }
     

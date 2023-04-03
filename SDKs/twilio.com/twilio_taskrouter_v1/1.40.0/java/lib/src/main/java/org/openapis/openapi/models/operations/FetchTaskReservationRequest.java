@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchTaskReservationRequest {
-    
-    public FetchTaskReservationPathParams pathParams;
-    public FetchTaskReservationRequest withPathParams(FetchTaskReservationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the TaskReservation resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchTaskReservationRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public FetchTaskReservationSecurity security;
-    public FetchTaskReservationRequest withSecurity(FetchTaskReservationSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the reserved Task resource with the TaskReservation resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TaskSid")
+    public String taskSid;
+    public FetchTaskReservationRequest withTaskSid(String taskSid) {
+        this.taskSid = taskSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public FetchTaskReservationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Workspace with the TaskReservation resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkspaceSid")
+    public String workspaceSid;
+    public FetchTaskReservationRequest withWorkspaceSid(String workspaceSid) {
+        this.workspaceSid = workspaceSid;
         return this;
     }
     

@@ -4,27 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchUnderstandFieldTypeRequest {
-    
-    public FetchUnderstandFieldTypePathParams pathParams;
-    public FetchUnderstandFieldTypeRequest withPathParams(FetchUnderstandFieldTypePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public FetchUnderstandFieldTypeRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
-    
-    public FetchUnderstandFieldTypeSecurity security;
-    public FetchUnderstandFieldTypeRequest withSecurity(FetchUnderstandFieldTypeSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchUnderstandFieldTypeRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchUnderstandFieldTypeRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

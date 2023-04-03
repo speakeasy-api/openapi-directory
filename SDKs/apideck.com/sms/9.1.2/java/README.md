@@ -18,13 +18,10 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.MessagesAddSecurity;
-import org.openapis.openapi.models.operations.MessagesAddQueryParams;
-import org.openapis.openapi.models.operations.MessagesAddHeaders;
 import org.openapis.openapi.models.operations.MessagesAddRequest;
 import org.openapis.openapi.models.operations.MessagesAddResponse;
 import org.openapis.openapi.models.shared.MessageMessageTypeEnum;
 import org.openapis.openapi.models.shared.MessageInput;
-import org.openapis.openapi.models.shared.SchemeAPIKey;
 
 public class Application {
     public static void main(String[] args) {
@@ -33,20 +30,7 @@ public class Application {
                 .build();
 
             MessagesAddRequest req = new MessagesAddRequest() {{
-                security = new MessagesAddSecurity() {{
-                    apiKey = new SchemeAPIKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }};
-                queryParams = new MessagesAddQueryParams() {{
-                    raw = false;
-                }};
-                headers = new MessagesAddHeaders() {{
-                    xApideckAppId = "corrupti";
-                    xApideckConsumerId = "provident";
-                    xApideckServiceId = "distinctio";
-                }};
-                request = new MessageInput() {{
+                messageInput = new MessageInput() {{
                     body = "Hi! How are you doing?";
                     from = "+15017122661";
                     messagingServiceId = "123456";
@@ -57,9 +41,15 @@ public class Application {
                     type = "sms";
                     webhookUrl = "https://unify.apideck.com/webhook/webhooks/eyz329dkffdl4949/x/sms";
                 }};
-            }};            
+                raw = false;
+                xApideckAppId = "corrupti";
+                xApideckConsumerId = "provident";
+                xApideckServiceId = "distinctio";
+            }}            
 
-            MessagesAddResponse res = sdk.messages.messagesAdd(req);
+            MessagesAddResponse res = sdk.messages.messagesAdd(req, new MessagesAddSecurity() {{
+                apiKey = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.createMessageResponse.isPresent()) {
                 // handle response
@@ -71,7 +61,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### messages

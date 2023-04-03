@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDetachNetworkInterfaceRequest {
-    
-    public GETDetachNetworkInterfaceQueryParams queryParams;
-    public GETDetachNetworkInterfaceRequest withQueryParams(GETDetachNetworkInterfaceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDetachNetworkInterfaceActionEnum action;
+    public GETDetachNetworkInterfaceRequest withAction(GETDetachNetworkInterfaceActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The ID of the attachment.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AttachmentId")
+    public String attachmentId;
+    public GETDetachNetworkInterfaceRequest withAttachmentId(String attachmentId) {
+        this.attachmentId = attachmentId;
+        return this;
+    }
     
-    public GETDetachNetworkInterfaceHeaders headers;
-    public GETDetachNetworkInterfaceRequest withHeaders(GETDetachNetworkInterfaceHeaders headers) {
-        this.headers = headers;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETDetachNetworkInterfaceRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Specifies whether to force a detachment.&lt;/p&gt; &lt;note&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Use the &lt;code&gt;Force&lt;/code&gt; parameter only as a last resort to detach a network interface from a failed instance. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;If you use the &lt;code&gt;Force&lt;/code&gt; parameter to detach a network interface, you might not be able to attach a different network interface to the same index on the instance without first stopping and starting the instance.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;If you force the detachment of a network interface, the &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html"&gt;instance metadata&lt;/a&gt; might not get updated. This means that the attributes associated with the detached network interface might still be visible. The instance metadata will get updated when you stop and start the instance.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/note&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Force")
+    public Boolean force;
+    public GETDetachNetworkInterfaceRequest withForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDetachNetworkInterfaceVersionEnum version;
+    public GETDetachNetworkInterfaceRequest withVersion(GETDetachNetworkInterfaceVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDetachNetworkInterfaceRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDetachNetworkInterfaceRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDetachNetworkInterfaceRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDetachNetworkInterfaceRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDetachNetworkInterfaceRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDetachNetworkInterfaceRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDetachNetworkInterfaceRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

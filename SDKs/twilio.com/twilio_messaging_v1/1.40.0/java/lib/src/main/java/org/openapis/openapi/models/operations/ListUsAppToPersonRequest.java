@@ -4,34 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListUsAppToPersonRequest {
-    
-    public ListUsAppToPersonPathParams pathParams;
-    public ListUsAppToPersonRequest withPathParams(ListUsAppToPersonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Messaging Service](https://www.twilio.com/docs/messaging/services/api) to fetch the resource from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=MessagingServiceSid")
+    public String messagingServiceSid;
+    public ListUsAppToPersonRequest withMessagingServiceSid(String messagingServiceSid) {
+        this.messagingServiceSid = messagingServiceSid;
         return this;
     }
     
-    
-    public ListUsAppToPersonQueryParams queryParams;
-    public ListUsAppToPersonRequest withQueryParams(ListUsAppToPersonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListUsAppToPersonRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListUsAppToPersonSecurity security;
-    public ListUsAppToPersonRequest withSecurity(ListUsAppToPersonSecurity security) {
-        this.security = security;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListUsAppToPersonRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
-    
-    public String serverURL;
-    public ListUsAppToPersonRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListUsAppToPersonRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

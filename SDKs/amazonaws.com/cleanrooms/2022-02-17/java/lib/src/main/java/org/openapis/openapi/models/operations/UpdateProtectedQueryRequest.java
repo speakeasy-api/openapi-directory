@@ -7,24 +7,79 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateProtectedQueryRequest {
-    
-    public UpdateProtectedQueryPathParams pathParams;
-    public UpdateProtectedQueryRequest withPathParams(UpdateProtectedQueryPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateProtectedQueryHeaders headers;
-    public UpdateProtectedQueryRequest withHeaders(UpdateProtectedQueryHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateProtectedQueryRequestBody request;
-    public UpdateProtectedQueryRequest withRequest(UpdateProtectedQueryRequestBody request) {
-        this.request = request;
+    public UpdateProtectedQueryRequestBody requestBody;
+    public UpdateProtectedQueryRequest withRequestBody(UpdateProtectedQueryRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public UpdateProtectedQueryRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public UpdateProtectedQueryRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public UpdateProtectedQueryRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public UpdateProtectedQueryRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public UpdateProtectedQueryRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public UpdateProtectedQueryRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public UpdateProtectedQueryRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The identifier for a member of a protected query instance.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipIdentifier")
+    public String membershipIdentifier;
+    public UpdateProtectedQueryRequest withMembershipIdentifier(String membershipIdentifier) {
+        this.membershipIdentifier = membershipIdentifier;
+        return this;
+    }
+    
+    /**
+     * The identifier for a protected query instance.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=protectedQueryIdentifier")
+    public String protectedQueryIdentifier;
+    public UpdateProtectedQueryRequest withProtectedQueryIdentifier(String protectedQueryIdentifier) {
+        this.protectedQueryIdentifier = protectedQueryIdentifier;
         return this;
     }
     

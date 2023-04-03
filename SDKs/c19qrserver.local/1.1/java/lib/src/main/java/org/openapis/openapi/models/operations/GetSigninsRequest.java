@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSigninsRequest {
+    /**
+     * Return signins with IDs less than this value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=less_than")
+    public Long lessThan;
+    public GetSigninsRequest withLessThan(Long lessThan) {
+        this.lessThan = lessThan;
+        return this;
+    }
     
-    public GetSigninsQueryParams queryParams;
-    public GetSigninsRequest withQueryParams(GetSigninsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Return this many objects
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=return_count")
+    public Long returnCount;
+    public GetSigninsRequest withReturnCount(Long returnCount) {
+        this.returnCount = returnCount;
         return this;
     }
     

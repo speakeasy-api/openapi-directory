@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KkidChorelistDeleteRequest {
-    
-    public KkidChorelistDeleteQueryParams queryParams;
-    public KkidChorelistDeleteRequest withQueryParams(KkidChorelistDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public KkidChorelistDeleteSecurity security;
-    public KkidChorelistDeleteRequest withSecurity(KkidChorelistDeleteSecurity security) {
-        this.security = security;
+    /**
+     * id of the chore you wish to delete
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=idChoreList")
+    public Long idChoreList;
+    public KkidChorelistDeleteRequest withIdChoreList(Long idChoreList) {
+        this.idChoreList = idChoreList;
         return this;
     }
     

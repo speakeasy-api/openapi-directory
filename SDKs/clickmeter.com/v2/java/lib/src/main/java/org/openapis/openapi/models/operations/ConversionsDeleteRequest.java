@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConversionsDeleteRequest {
-    
-    public ConversionsDeletePathParams pathParams;
-    public ConversionsDeleteRequest withPathParams(ConversionsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of the conversion
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversionId")
+    public Long conversionId;
+    public ConversionsDeleteRequest withConversionId(Long conversionId) {
+        this.conversionId = conversionId;
         return this;
     }
     

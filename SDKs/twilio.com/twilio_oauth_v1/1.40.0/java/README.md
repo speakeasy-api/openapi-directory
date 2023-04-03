@@ -19,9 +19,7 @@ import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.CreateDeviceCodeSecurity;
 import org.openapis.openapi.models.operations.CreateDeviceCodeCreateDeviceCodeRequest;
-import org.openapis.openapi.models.operations.CreateDeviceCodeRequest;
 import org.openapis.openapi.models.operations.CreateDeviceCodeResponse;
-import org.openapis.openapi.models.shared.SchemeAccountSidAuthToken;
 
 public class Application {
     public static void main(String[] args) {
@@ -29,30 +27,25 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CreateDeviceCodeRequest req = new CreateDeviceCodeRequest() {{
-                security = new CreateDeviceCodeSecurity() {{
-                    accountSidAuthToken = new SchemeAccountSidAuthToken() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
+            CreateDeviceCodeCreateDeviceCodeRequest req = new CreateDeviceCodeCreateDeviceCodeRequest() {{
+                audiences = new String[]{{
+                    add("provident"),
+                    add("distinctio"),
+                    add("quibusdam"),
                 }};
-                request = new CreateDeviceCodeCreateDeviceCodeRequest() {{
-                    audiences = new String[]{{
-                        add("provident"),
-                        add("distinctio"),
-                        add("quibusdam"),
-                    }};
-                    clientSid = "unde";
-                    scopes = new String[]{{
-                        add("corrupti"),
-                        add("illum"),
-                        add("vel"),
-                        add("error"),
-                    }};
+                clientSid = "unde";
+                scopes = new String[]{{
+                    add("corrupti"),
+                    add("illum"),
+                    add("vel"),
+                    add("error"),
                 }};
-            }};            
+            }}            
 
-            CreateDeviceCodeResponse res = sdk.createDeviceCode(req);
+            CreateDeviceCodeResponse res = sdk.createDeviceCode(req, new CreateDeviceCodeSecurity() {{
+                password = "YOUR_PASSWORD_HERE";
+                username = "YOUR_USERNAME_HERE";
+            }});
 
             if (res.oauthV1DeviceCode.isPresent()) {
                 // handle response
@@ -64,7 +57,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

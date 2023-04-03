@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrievePrefixPricingRequest {
-    
-    public RetrievePrefixPricingPathParams pathParams;
-    public RetrievePrefixPricingRequest withPathParams(RetrievePrefixPricingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Your Nexmo API key.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public RetrievePrefixPricingRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    /**
+     * Your Nexmo API secret.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_secret")
+    public String apiSecret;
+    public RetrievePrefixPricingRequest withApiSecret(String apiSecret) {
+        this.apiSecret = apiSecret;
+        return this;
+    }
     
-    public RetrievePrefixPricingQueryParams queryParams;
-    public RetrievePrefixPricingRequest withQueryParams(RetrievePrefixPricingQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The numerical dialing prefix to look up pricing for. Examples include 44, 1 and so on.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prefix")
+    public String prefix;
+    public RetrievePrefixPricingRequest withPrefix(String prefix) {
+        this.prefix = prefix;
+        return this;
+    }
+    
+    /**
+     * The type of service you wish to retrieve data about: either `sms`, `sms-transit` or `voice`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
+    public String type;
+    public RetrievePrefixPricingRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

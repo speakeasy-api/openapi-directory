@@ -4,27 +4,53 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MeetingDeleteRequest {
-    
-    public MeetingDeletePathParams pathParams;
-    public MeetingDeleteRequest withPathParams(MeetingDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * `true`: Notify registrants about the meeting cancellation via email. 
+     * 
+     * `false`: Do not send any email notification to meeting registrants. 
+     * 
+     * The default value of this field is `false`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cancel_meeting_reminder")
+    public String cancelMeetingReminder;
+    public MeetingDeleteRequest withCancelMeetingReminder(String cancelMeetingReminder) {
+        this.cancelMeetingReminder = cancelMeetingReminder;
         return this;
     }
     
-    
-    public MeetingDeleteQueryParams queryParams;
-    public MeetingDeleteRequest withQueryParams(MeetingDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The meeting ID in **long** format. The data type of this field is "long"(represented as int64 in JSON).
+     * 
+     * While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=meetingId")
+    public Long meetingId;
+    public MeetingDeleteRequest withMeetingId(Long meetingId) {
+        this.meetingId = meetingId;
         return this;
     }
     
+    /**
+     * The meeting occurrence ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=occurrence_id")
+    public String occurrenceId;
+    public MeetingDeleteRequest withOccurrenceId(String occurrenceId) {
+        this.occurrenceId = occurrenceId;
+        return this;
+    }
     
-    public MeetingDeleteSecurity security;
-    public MeetingDeleteRequest withSecurity(MeetingDeleteSecurity security) {
-        this.security = security;
+    /**
+     * `true`: Notify host and alternative host about the meeting cancellation via email.
+     * `false`: Do not send any email notification.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=schedule_for_reminder")
+    public Boolean scheduleForReminder;
+    public MeetingDeleteRequest withScheduleForReminder(Boolean scheduleForReminder) {
+        this.scheduleForReminder = scheduleForReminder;
         return this;
     }
     

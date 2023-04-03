@@ -18,11 +18,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.ConnectionSettingsAllSecurity;
-import org.openapis.openapi.models.operations.ConnectionSettingsAllPathParams;
-import org.openapis.openapi.models.operations.ConnectionSettingsAllHeaders;
 import org.openapis.openapi.models.operations.ConnectionSettingsAllRequest;
 import org.openapis.openapi.models.operations.ConnectionSettingsAllResponse;
-import org.openapis.openapi.models.shared.SchemeAPIKey;
 
 public class Application {
     public static void main(String[] args) {
@@ -31,23 +28,16 @@ public class Application {
                 .build();
 
             ConnectionSettingsAllRequest req = new ConnectionSettingsAllRequest() {{
-                security = new ConnectionSettingsAllSecurity() {{
-                    apiKey = new SchemeAPIKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }};
-                pathParams = new ConnectionSettingsAllPathParams() {{
-                    resource = "corrupti";
-                    serviceId = "provident";
-                    unifiedApi = "distinctio";
-                }};
-                headers = new ConnectionSettingsAllHeaders() {{
-                    xApideckAppId = "quibusdam";
-                    xApideckConsumerId = "unde";
-                }};
-            }};            
+                resource = "corrupti";
+                serviceId = "provident";
+                unifiedApi = "distinctio";
+                xApideckAppId = "quibusdam";
+                xApideckConsumerId = "unde";
+            }}            
 
-            ConnectionSettingsAllResponse res = sdk.connections.connectionSettingsAll(req);
+            ConnectionSettingsAllResponse res = sdk.connections.connectionSettingsAll(req, new ConnectionSettingsAllSecurity() {{
+                apiKey = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.getConnectionResponse.isPresent()) {
                 // handle response
@@ -59,7 +49,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### connections

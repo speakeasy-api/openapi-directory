@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAPhoneNumberSLGRequest {
+    /**
+     * Unique identifier of the phone number which is to be unassigned. This can be retrieved from Get a Shared Line Group API.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=phoneNumberId")
+    public String phoneNumberId;
+    public DeleteAPhoneNumberSLGRequest withPhoneNumberId(String phoneNumberId) {
+        this.phoneNumberId = phoneNumberId;
+        return this;
+    }
     
-    public DeleteAPhoneNumberSLGPathParams pathParams;
-    public DeleteAPhoneNumberSLGRequest withPathParams(DeleteAPhoneNumberSLGPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the shared line group from which you would like to unassign a phone number.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sharedLineGroupId")
+    public String sharedLineGroupId;
+    public DeleteAPhoneNumberSLGRequest withSharedLineGroupId(String sharedLineGroupId) {
+        this.sharedLineGroupId = sharedLineGroupId;
         return this;
     }
     

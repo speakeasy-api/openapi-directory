@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodePushDeploymentsListRequest {
-    
-    public CodePushDeploymentsListPathParams pathParams;
-    public CodePushDeploymentsListRequest withPathParams(CodePushDeploymentsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public CodePushDeploymentsListRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public CodePushDeploymentsListSecurity security;
-    public CodePushDeploymentsListRequest withSecurity(CodePushDeploymentsListSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public CodePushDeploymentsListRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

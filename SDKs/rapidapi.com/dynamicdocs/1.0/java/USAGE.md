@@ -4,10 +4,7 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CompilePathParams;
 import org.openapis.openapi.models.operations.CompileLatexCompilerEnum;
-import org.openapis.openapi.models.operations.CompileQueryParams;
-import org.openapis.openapi.models.operations.CompileHeaders;
 import org.openapis.openapi.models.operations.CompileRequest;
 import org.openapis.openapi.models.operations.CompileResponse;
 
@@ -16,32 +13,24 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    advSecurityToken = new SchemeAdvSecurityToken() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    advSecurityToken = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CompileRequest req = new CompileRequest() {{
-                pathParams = new CompilePathParams() {{
-                    templateToken = "7a582350acb835ed";
-                }};
-                queryParams = new CompileQueryParams() {{
-                    docFileName = "brilliantDocument";
-                    docUrlExpiresIn = 3600;
-                    latexCompiler = "lualatex";
-                    latexRuns = 592845;
-                    mainFileName = "inputFile.tex";
-                }};
-                headers = new CompileHeaders() {{
-                    contentType = "application/json";
-                }};
-                request = new java.util.HashMap<String, Object>() {{
+                contentType = "application/json";
+                requestBody = new java.util.HashMap<String, Object>() {{
+                    put("provident", "distinctio");
                     put("quibusdam", "unde");
                     put("nulla", "corrupti");
-                    put("illum", "vel");
                 }};
-            }};            
+                docFileName = "brilliantDocument";
+                docUrlExpiresIn = 3600;
+                latexCompiler = "lualatex";
+                latexRuns = 423655;
+                mainFileName = "inputFile.tex";
+                templateToken = "7a582350acb835ed";
+            }}            
 
             CompileResponse res = sdk.pdfGeneration.compile(req);
 

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PlayerDetailsByAvailableRequest {
-    
-    public PlayerDetailsByAvailablePathParams pathParams;
-    public PlayerDetailsByAvailableRequest withPathParams(PlayerDetailsByAvailablePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public PlayerDetailsByAvailableFormatEnum format;
+    public PlayerDetailsByAvailableRequest withFormat(PlayerDetailsByAvailableFormatEnum format) {
+        this.format = format;
         return this;
     }
     

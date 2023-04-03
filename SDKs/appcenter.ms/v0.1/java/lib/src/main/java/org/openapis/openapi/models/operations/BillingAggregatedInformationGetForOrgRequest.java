@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BillingAggregatedInformationGetForOrgRequest {
-    
-    public BillingAggregatedInformationGetForOrgPathParams pathParams;
-    public BillingAggregatedInformationGetForOrgRequest withPathParams(BillingAggregatedInformationGetForOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the Organization
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orgName")
+    public String orgName;
+    public BillingAggregatedInformationGetForOrgRequest withOrgName(String orgName) {
+        this.orgName = orgName;
         return this;
     }
     
-    
-    public BillingAggregatedInformationGetForOrgQueryParams queryParams;
-    public BillingAggregatedInformationGetForOrgRequest withQueryParams(BillingAggregatedInformationGetForOrgQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Type of period that should be included in the Billing Information
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=period")
+    public BillingAggregatedInformationGetForOrgPeriodEnum period;
+    public BillingAggregatedInformationGetForOrgRequest withPeriod(BillingAggregatedInformationGetForOrgPeriodEnum period) {
+        this.period = period;
         return this;
     }
     
+    /**
+     * Type of service that should be included in the Billing Information
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=service")
+    public BillingAggregatedInformationGetForOrgServiceEnum service;
+    public BillingAggregatedInformationGetForOrgRequest withService(BillingAggregatedInformationGetForOrgServiceEnum service) {
+        this.service = service;
+        return this;
+    }
     
-    public BillingAggregatedInformationGetForOrgSecurity security;
-    public BillingAggregatedInformationGetForOrgRequest withSecurity(BillingAggregatedInformationGetForOrgSecurity security) {
-        this.security = security;
+    /**
+     * Controls whether the API should show the original plan when Azure Subscription is not enabled
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showOriginalPlans")
+    public Boolean showOriginalPlans;
+    public BillingAggregatedInformationGetForOrgRequest withShowOriginalPlans(Boolean showOriginalPlans) {
+        this.showOriginalPlans = showOriginalPlans;
         return this;
     }
     

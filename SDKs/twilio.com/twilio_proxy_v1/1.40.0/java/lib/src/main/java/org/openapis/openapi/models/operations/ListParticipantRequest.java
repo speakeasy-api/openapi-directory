@@ -4,34 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListParticipantRequest {
-    
-    public ListParticipantPathParams pathParams;
-    public ListParticipantRequest withPathParams(ListParticipantPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListParticipantRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListParticipantQueryParams queryParams;
-    public ListParticipantRequest withQueryParams(ListParticipantQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListParticipantRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
-    
-    public ListParticipantSecurity security;
-    public ListParticipantRequest withSecurity(ListParticipantSecurity security) {
-        this.security = security;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListParticipantRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     
+    /**
+     * The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) of the resources to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public ListParticipantRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
+        return this;
+    }
     
-    public String serverURL;
-    public ListParticipantRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the parent [Session](https://www.twilio.com/docs/proxy/api/session) of the resources to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=SessionSid")
+    public String sessionSid;
+    public ListParticipantRequest withSessionSid(String sessionSid) {
+        this.sessionSid = sessionSid;
         return this;
     }
     

@@ -36,27 +36,28 @@ public class Calls {
      * Add batches to a call broadcast
      * The 'add batch' API allows user to add additional batches to an already created voice broadcast campaign. The added batch will go through the CallFire validation process, unlike in the recipients version of this API. That is why you can use the scrubDuplicates flag to remove duplicates from your batch. Batches may be added as a contact list id, a list of contact ids, or a list of numbers
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddCallBroadcastBatchResponse addCallBroadcastBatch(org.openapis.openapi.models.operations.AddCallBroadcastBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddCallBroadcastBatchResponse addCallBroadcastBatch(org.openapis.openapi.models.operations.AddCallBroadcastBatchRequest request, org.openapis.openapi.models.operations.AddCallBroadcastBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddCallBroadcastBatchPathParams.class, baseUrl, "/calls/broadcasts/{id}/batches", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddCallBroadcastBatchRequest.class, baseUrl, "/calls/broadcasts/{id}/batches", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "batchRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AddCallBroadcastBatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AddCallBroadcastBatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -92,27 +93,28 @@ public class Calls {
      * Add recipients to a call broadcast
      * Use this API to add the recipients to an existing voice broadcast. Post a list of Recipient objects to be added to the voice broadcast campaign. These contacts will not go through validation process, and will be acted upon as they are added. Recipients may be added as a list of contact ids, or list of numbers
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddCallBroadcastRecipientsResponse addCallBroadcastRecipients(org.openapis.openapi.models.operations.AddCallBroadcastRecipientsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddCallBroadcastRecipientsResponse addCallBroadcastRecipients(org.openapis.openapi.models.operations.AddCallBroadcastRecipientsRequest request, org.openapis.openapi.models.operations.AddCallBroadcastRecipientsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddCallBroadcastRecipientsPathParams.class, baseUrl, "/calls/broadcasts/{id}/recipients", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddCallBroadcastRecipientsRequest.class, baseUrl, "/calls/broadcasts/{id}/recipients", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AddCallBroadcastRecipientsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AddCallBroadcastRecipientsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -148,19 +150,20 @@ public class Calls {
      * Archive voice broadcast
      * Archives a voice broadcast (voice broadcast will be hidden in search results)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ArchiveVoiceBroadcastResponse archiveVoiceBroadcast(org.openapis.openapi.models.operations.ArchiveVoiceBroadcastRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ArchiveVoiceBroadcastResponse archiveVoiceBroadcast(org.openapis.openapi.models.operations.ArchiveVoiceBroadcastRequest request, org.openapis.openapi.models.operations.ArchiveVoiceBroadcastSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArchiveVoiceBroadcastPathParams.class, baseUrl, "/calls/broadcasts/{id}/archive", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ArchiveVoiceBroadcastRequest.class, baseUrl, "/calls/broadcasts/{id}/archive", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -188,27 +191,28 @@ public class Calls {
      * Create a call broadcast
      * Creates a call broadcast campaign using the Call Broadcast API. Send a CallBroadcast in the message body to add details in a voice broadcast campaign. The campaign can be created without contacts and bare minimum configuration, but contacts will have to be added further on to use the campaign
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateCallBroadcastResponse createCallBroadcast(org.openapis.openapi.models.operations.CreateCallBroadcastRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateCallBroadcastResponse createCallBroadcast(org.openapis.openapi.models.operations.CreateCallBroadcastRequest request, org.openapis.openapi.models.operations.CreateCallBroadcastSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/calls/broadcasts");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "callBroadcastInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CreateCallBroadcastQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CreateCallBroadcastRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -244,10 +248,11 @@ public class Calls {
      * Find call broadcasts
      * Searches for all voice broadcasts created by user. Can query on label, name, and the current running status of the campaign. Returns a paged list of voice broadcasts
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindCallBroadcastsResponse findCallBroadcasts(org.openapis.openapi.models.operations.FindCallBroadcastsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FindCallBroadcastsResponse findCallBroadcasts(org.openapis.openapi.models.operations.FindCallBroadcastsRequest request, org.openapis.openapi.models.operations.FindCallBroadcastsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/calls/broadcasts");
         
@@ -255,14 +260,14 @@ public class Calls {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindCallBroadcastsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindCallBroadcastsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -298,10 +303,11 @@ public class Calls {
      * Find calls
      * To search for all calls sent or received by the user. Use "id=0" for the campaignId parameter to query for all calls sent through the POST /calls API. See [call states and results](https://developers.callfire.com/results-responses-errors.html)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindCallsResponse findCalls(org.openapis.openapi.models.operations.FindCallsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FindCallsResponse findCalls(org.openapis.openapi.models.operations.FindCallsRequest request, org.openapis.openapi.models.operations.FindCallsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/calls");
         
@@ -309,14 +315,14 @@ public class Calls {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindCallsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindCallsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -352,25 +358,26 @@ public class Calls {
      * Find a specific call
      * Returns a single Call instance for a given call id.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCallResponse getCall(org.openapis.openapi.models.operations.GetCallRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCallResponse getCall(org.openapis.openapi.models.operations.GetCallRequest request, org.openapis.openapi.models.operations.GetCallSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCallPathParams.class, baseUrl, "/calls/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCallRequest.class, baseUrl, "/calls/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCallQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCallRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -406,25 +413,26 @@ public class Calls {
      * Find a specific call broadcast
      * Returns a single CallBroadcast instance for a given call broadcast campaign id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCallBroadcastResponse getCallBroadcast(org.openapis.openapi.models.operations.GetCallBroadcastRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCallBroadcastResponse getCallBroadcast(org.openapis.openapi.models.operations.GetCallBroadcastRequest request, org.openapis.openapi.models.operations.GetCallBroadcastSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCallBroadcastPathParams.class, baseUrl, "/calls/broadcasts/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCallBroadcastRequest.class, baseUrl, "/calls/broadcasts/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCallBroadcastQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCallBroadcastRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -460,25 +468,26 @@ public class Calls {
      * Find batches in a call broadcast
      * This endpoint will enable the user to page through all of the batches for a particular voice broadcast campaign
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCallBroadcastBatchesResponse getCallBroadcastBatches(org.openapis.openapi.models.operations.GetCallBroadcastBatchesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCallBroadcastBatchesResponse getCallBroadcastBatches(org.openapis.openapi.models.operations.GetCallBroadcastBatchesRequest request, org.openapis.openapi.models.operations.GetCallBroadcastBatchesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCallBroadcastBatchesPathParams.class, baseUrl, "/calls/broadcasts/{id}/batches", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCallBroadcastBatchesRequest.class, baseUrl, "/calls/broadcasts/{id}/batches", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCallBroadcastBatchesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCallBroadcastBatchesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -514,25 +523,26 @@ public class Calls {
      * Find calls in a call broadcast
      * This endpoint will enable the user to page through all calls for a particular call broadcast campaign
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCallBroadcastCallsResponse getCallBroadcastCalls(org.openapis.openapi.models.operations.GetCallBroadcastCallsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCallBroadcastCallsResponse getCallBroadcastCalls(org.openapis.openapi.models.operations.GetCallBroadcastCallsRequest request, org.openapis.openapi.models.operations.GetCallBroadcastCallsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCallBroadcastCallsPathParams.class, baseUrl, "/calls/broadcasts/{id}/calls", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCallBroadcastCallsRequest.class, baseUrl, "/calls/broadcasts/{id}/calls", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCallBroadcastCallsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCallBroadcastCallsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -568,25 +578,26 @@ public class Calls {
      * Get statistics on call broadcast
      * Returns broadcast statistics like total number of sent/received actions, total cost, number of remaining outbound actions, error count, etc
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCallBroadcastStatsResponse getCallBroadcastStats(org.openapis.openapi.models.operations.GetCallBroadcastStatsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCallBroadcastStatsResponse getCallBroadcastStats(org.openapis.openapi.models.operations.GetCallBroadcastStatsRequest request, org.openapis.openapi.models.operations.GetCallBroadcastStatsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCallBroadcastStatsPathParams.class, baseUrl, "/calls/broadcasts/{id}/stats", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCallBroadcastStatsRequest.class, baseUrl, "/calls/broadcasts/{id}/stats", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCallBroadcastStatsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCallBroadcastStatsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -622,25 +633,26 @@ public class Calls {
      * Get call recording by id
      * Returns metadata of recording of a particular call. Metadata contains a link to a MP3 recording
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCallRecordingResponse getCallRecording(org.openapis.openapi.models.operations.GetCallRecordingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCallRecordingResponse getCallRecording(org.openapis.openapi.models.operations.GetCallRecordingRequest request, org.openapis.openapi.models.operations.GetCallRecordingSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCallRecordingPathParams.class, baseUrl, "/calls/recordings/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCallRecordingRequest.class, baseUrl, "/calls/recordings/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCallRecordingQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCallRecordingRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -676,25 +688,26 @@ public class Calls {
      * Get call recording by name
      * Returns recording metadata of particular call. Metadata contains link to a MP3 recording
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCallRecordingByNameResponse getCallRecordingByName(org.openapis.openapi.models.operations.GetCallRecordingByNameRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCallRecordingByNameResponse getCallRecordingByName(org.openapis.openapi.models.operations.GetCallRecordingByNameRequest request, org.openapis.openapi.models.operations.GetCallRecordingByNameSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCallRecordingByNamePathParams.class, baseUrl, "/calls/{id}/recordings/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCallRecordingByNameRequest.class, baseUrl, "/calls/{id}/recordings/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCallRecordingByNameQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCallRecordingByNameRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -730,19 +743,20 @@ public class Calls {
      * Get call recording in mp3 format
      * Returns an MP3 recording of particular call, response contains binary data, content type is 'audio/mpeg'
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCallRecordingMp3Response getCallRecordingMp3(org.openapis.openapi.models.operations.GetCallRecordingMp3Request request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCallRecordingMp3Response getCallRecordingMp3(org.openapis.openapi.models.operations.GetCallRecordingMp3Request request, org.openapis.openapi.models.operations.GetCallRecordingMp3Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCallRecordingMp3PathParams.class, baseUrl, "/calls/recordings/{id}.mp3", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCallRecordingMp3Request.class, baseUrl, "/calls/recordings/{id}.mp3", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -778,19 +792,20 @@ public class Calls {
      * Get call mp3 recording by name
      * Returns a MP3 recording of a particular call, response contains binary data, content type is 'audio/mpeg'
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCallRecordingMp3ByNameResponse getCallRecordingMp3ByName(org.openapis.openapi.models.operations.GetCallRecordingMp3ByNameRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCallRecordingMp3ByNameResponse getCallRecordingMp3ByName(org.openapis.openapi.models.operations.GetCallRecordingMp3ByNameRequest request, org.openapis.openapi.models.operations.GetCallRecordingMp3ByNameSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCallRecordingMp3ByNamePathParams.class, baseUrl, "/calls/{id}/recordings/{name}.mp3", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCallRecordingMp3ByNameRequest.class, baseUrl, "/calls/{id}/recordings/{name}.mp3", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -817,25 +832,26 @@ public class Calls {
      * Get call recordings for a call
      * Returns a list of recordings metadata of particular call. Metadata contains link to a MP3 recording
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCallRecordingsResponse getCallRecordings(org.openapis.openapi.models.operations.GetCallRecordingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCallRecordingsResponse getCallRecordings(org.openapis.openapi.models.operations.GetCallRecordingsRequest request, org.openapis.openapi.models.operations.GetCallRecordingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCallRecordingsPathParams.class, baseUrl, "/calls/{id}/recordings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCallRecordingsRequest.class, baseUrl, "/calls/{id}/recordings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCallRecordingsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCallRecordingsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -871,27 +887,28 @@ public class Calls {
      * Send calls
      * Use the /calls API to send individual calls quickly. A verified Caller ID and sufficient credits are required to make a call. CallRecipient represents a single recipient identified by phone number or contact id in CallFire system. You can attach user-defined attributes to a Call action via CallRecipient.attributes property, attributes are available in Call action response
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SendCallsResponse sendCalls(org.openapis.openapi.models.operations.SendCallsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SendCallsResponse sendCalls(org.openapis.openapi.models.operations.SendCallsRequest request, org.openapis.openapi.models.operations.SendCallsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/calls");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SendCallsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SendCallsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -927,19 +944,20 @@ public class Calls {
      * Start voice broadcast
      * Start a voice broadcast
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StartVoiceBroadcastResponse startVoiceBroadcast(org.openapis.openapi.models.operations.StartVoiceBroadcastRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StartVoiceBroadcastResponse startVoiceBroadcast(org.openapis.openapi.models.operations.StartVoiceBroadcastRequest request, org.openapis.openapi.models.operations.StartVoiceBroadcastSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StartVoiceBroadcastPathParams.class, baseUrl, "/calls/broadcasts/{id}/start", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StartVoiceBroadcastRequest.class, baseUrl, "/calls/broadcasts/{id}/start", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -967,19 +985,20 @@ public class Calls {
      * Stop voice broadcast
      * Stop a voice broadcast
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StopVoiceBroadcastResponse stopVoiceBroadcast(org.openapis.openapi.models.operations.StopVoiceBroadcastRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StopVoiceBroadcastResponse stopVoiceBroadcast(org.openapis.openapi.models.operations.StopVoiceBroadcastRequest request, org.openapis.openapi.models.operations.StopVoiceBroadcastSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopVoiceBroadcastPathParams.class, baseUrl, "/calls/broadcasts/{id}/stop", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopVoiceBroadcastRequest.class, baseUrl, "/calls/broadcasts/{id}/stop", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1007,27 +1026,28 @@ public class Calls {
      * Disable/enable undialed recipients in broadcast
      * This operation lets the user to disable/enable undialed recipients in created broadcast
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ToggleCallBroadcastRecipientsStatusResponse toggleCallBroadcastRecipientsStatus(org.openapis.openapi.models.operations.ToggleCallBroadcastRecipientsStatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ToggleCallBroadcastRecipientsStatusResponse toggleCallBroadcastRecipientsStatus(org.openapis.openapi.models.operations.ToggleCallBroadcastRecipientsStatusRequest request, org.openapis.openapi.models.operations.ToggleCallBroadcastRecipientsStatusSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToggleCallBroadcastRecipientsStatusPathParams.class, baseUrl, "/calls/broadcasts/{id}/toggleRecipientsStatus", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToggleCallBroadcastRecipientsStatusRequest.class, baseUrl, "/calls/broadcasts/{id}/toggleRecipientsStatus", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToggleCallBroadcastRecipientsStatusQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToggleCallBroadcastRecipientsStatusRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1055,27 +1075,28 @@ public class Calls {
      * Update a call broadcast
      * This operation lets the user modify the configuration of a voice broadcast campaign after call broadcast campaign is created. See CallBroadcast for more information on what can/can't be updated on this API
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateCallBroadcastResponse updateCallBroadcast(org.openapis.openapi.models.operations.UpdateCallBroadcastRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateCallBroadcastResponse updateCallBroadcast(org.openapis.openapi.models.operations.UpdateCallBroadcastRequest request, org.openapis.openapi.models.operations.UpdateCallBroadcastSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCallBroadcastPathParams.class, baseUrl, "/calls/broadcasts/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCallBroadcastRequest.class, baseUrl, "/calls/broadcasts/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "callBroadcastInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UpdateCallBroadcastQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UpdateCallBroadcastRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

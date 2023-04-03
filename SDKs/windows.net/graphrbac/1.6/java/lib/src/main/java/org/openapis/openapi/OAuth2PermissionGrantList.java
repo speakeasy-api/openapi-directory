@@ -38,13 +38,13 @@ public class OAuth2PermissionGrantList {
      */
     public org.openapis.openapi.models.operations.OAuth2PermissionGrantListResponse oAuth2PermissionGrantList(org.openapis.openapi.models.operations.OAuth2PermissionGrantListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OAuth2PermissionGrantListPathParams.class, baseUrl, "/{tenantID}/oauth2PermissionGrants", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OAuth2PermissionGrantListRequest.class, baseUrl, "/{tenantID}/oauth2PermissionGrants", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OAuth2PermissionGrantListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OAuth2PermissionGrantListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

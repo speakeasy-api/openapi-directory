@@ -4,13 +4,61 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LeagueLeadersByWeekRequest {
+    /**
+     * Response member you would like results sorted by.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=column")
+    public LeagueLeadersByWeekColumnEnum column;
+    public LeagueLeadersByWeekRequest withColumn(LeagueLeadersByWeekColumnEnum column) {
+        this.column = column;
+        return this;
+    }
     
-    public LeagueLeadersByWeekPathParams pathParams;
-    public LeagueLeadersByWeekRequest withPathParams(LeagueLeadersByWeekPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     *           Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     *         
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public LeagueLeadersByWeekFormatEnum format;
+    public LeagueLeadersByWeekRequest withFormat(LeagueLeadersByWeekFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * Player\u00e2\u20ac\u2122s position that you would like to filter by.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=position")
+    public LeagueLeadersByWeekPositionEnum position;
+    public LeagueLeadersByWeekRequest withPosition(LeagueLeadersByWeekPositionEnum position) {
+        this.position = position;
+        return this;
+    }
+    
+    /**
+     *           Year of the season and the season type. If no season type is provided, then the default is regular season.
+     *           &lt;br&gt;Examples: &lt;code&gt;2015REG&lt;/code&gt;, &lt;code&gt;2015PRE&lt;/code&gt;, &lt;code&gt;2015POST&lt;/code&gt;.
+     *         
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=season")
+    public String season;
+    public LeagueLeadersByWeekRequest withSeason(String season) {
+        this.season = season;
+        return this;
+    }
+    
+    /**
+     *           Week of the season. Valid values are as follows: Preseason 0 to 4, Regular Season 1 to 17, Postseason 1 to 4.
+     *           Example: &lt;code&gt;1&lt;/code&gt;
+     *         
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=week")
+    public String week;
+    public LeagueLeadersByWeekRequest withWeek(String week) {
+        this.week = week;
         return this;
     }
     

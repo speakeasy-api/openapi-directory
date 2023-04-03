@@ -56,7 +56,7 @@ public class Targets {
      */
     public org.openapis.openapi.models.operations.DeleteTargetsIdResponse deleteTargetsId(org.openapis.openapi.models.operations.DeleteTargetsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteTargetsIdPathParams.class, baseUrl, "/targets/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteTargetsIdRequest.class, baseUrl, "/targets/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -119,7 +119,7 @@ public class Targets {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTargetsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTargetsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -182,7 +182,7 @@ public class Targets {
      */
     public org.openapis.openapi.models.operations.GetTargetsIdResponse getTargetsId(org.openapis.openapi.models.operations.GetTargetsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsIdPathParams.class, baseUrl, "/targets/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsIdRequest.class, baseUrl, "/targets/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -245,12 +245,12 @@ public class Targets {
      */
     public org.openapis.openapi.models.operations.PatchTargetsIdResponse patchTargetsId(org.openapis.openapi.models.operations.PatchTargetsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchTargetsIdPathParams.class, baseUrl, "/targets/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchTargetsIdRequest.class, baseUrl, "/targets/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "targetInput", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -316,7 +316,7 @@ public class Targets {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostTargetsResponse postTargets(org.openapis.openapi.models.operations.PostTargetsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostTargetsResponse postTargets(org.openapis.openapi.models.shared.TargetInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/targets/");
         
@@ -391,12 +391,12 @@ public class Targets {
      */
     public org.openapis.openapi.models.operations.PutTargetsIdResponse putTargetsId(org.openapis.openapi.models.operations.PutTargetsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutTargetsIdPathParams.class, baseUrl, "/targets/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutTargetsIdRequest.class, baseUrl, "/targets/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "targetInput", "json");
         req.setBody(serializedRequestBody);
         
         

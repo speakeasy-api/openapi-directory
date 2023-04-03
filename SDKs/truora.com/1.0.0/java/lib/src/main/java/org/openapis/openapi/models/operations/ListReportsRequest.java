@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListReportsRequest {
+    /**
+     * Start value for pagination.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_key")
+    public String startKey;
+    public ListReportsRequest withStartKey(String startKey) {
+        this.startKey = startKey;
+        return this;
+    }
     
-    public ListReportsQueryParams queryParams;
-    public ListReportsRequest withQueryParams(ListReportsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * filter reports created by the specified username
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
+    public String username;
+    public ListReportsRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

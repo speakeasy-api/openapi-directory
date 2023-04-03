@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSfxDetailsRequest {
-    
-    public GetSfxDetailsPathParams pathParams;
-    public GetSfxDetailsRequest withPathParams(GetSfxDetailsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Audio track ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetSfxDetailsRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetSfxDetailsQueryParams queryParams;
-    public GetSfxDetailsRequest withQueryParams(GetSfxDetailsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Language for the keywords and categories in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public org.openapis.openapi.models.shared.LanguageEnum language;
+    public GetSfxDetailsRequest withLanguage(org.openapis.openapi.models.shared.LanguageEnum language) {
+        this.language = language;
         return this;
     }
     
+    /**
+     * Which library to fetch from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=library")
+    public GetSfxDetailsLibraryEnum library;
+    public GetSfxDetailsRequest withLibrary(GetSfxDetailsLibraryEnum library) {
+        this.library = library;
+        return this;
+    }
     
-    public GetSfxDetailsSecurity security;
-    public GetSfxDetailsRequest withSecurity(GetSfxDetailsSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the search that is related to this request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_id")
+    public String searchId;
+    public GetSfxDetailsRequest withSearchId(String searchId) {
+        this.searchId = searchId;
+        return this;
+    }
+    
+    /**
+     * Amount of detail to render in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
+    public GetSfxDetailsViewEnum view;
+    public GetSfxDetailsRequest withView(GetSfxDetailsViewEnum view) {
+        this.view = view;
         return this;
     }
     

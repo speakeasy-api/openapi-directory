@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPostRollsRequest {
-    
-    public GetPostRollsPathParams pathParams;
-    public GetPostRollsRequest withPathParams(GetPostRollsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Whether to return all, or available programmes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=availability")
+    public org.openapis.openapi.models.shared.AvailabilityEnum availability;
+    public GetPostRollsRequest withAvailability(org.openapis.openapi.models.shared.AvailabilityEnum availability) {
+        this.availability = availability;
         return this;
     }
     
+    /**
+     * The programme identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pid")
+    public String pid;
+    public GetPostRollsRequest withPid(String pid) {
+        this.pid = pid;
+        return this;
+    }
     
-    public GetPostRollsQueryParams queryParams;
-    public GetPostRollsRequest withQueryParams(GetPostRollsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The rights group to limit results to.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rights")
+    public org.openapis.openapi.models.shared.RightsEnum rights;
+    public GetPostRollsRequest withRights(org.openapis.openapi.models.shared.RightsEnum rights) {
+        this.rights = rights;
         return this;
     }
     

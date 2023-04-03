@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetReportMetadataForReportTypeRequest {
-    
-    public GetReportMetadataForReportTypePathParams pathParams;
-    public GetReportMetadataForReportTypeRequest withPathParams(GetReportMetadataForReportTypePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetReportMetadataForReportTypeSecurity security;
-    public GetReportMetadataForReportTypeRequest withSecurity(GetReportMetadataForReportTypeSecurity security) {
-        this.security = security;
+    /**
+     * The name of the report type whose metadata you want to retrieve.&lt;br /&gt;&lt;br /&gt;&lt;span class="tablenote"&gt;&lt;b&gt;Tip:&lt;/b&gt; For details about available report types and their descriptions, refer to the &lt;a href="/api-docs/sell/marketing/types/plr:ReportTypeEnum"&gt;ReportTypeEnum&lt;/a&gt;.&lt;/span&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=report_type")
+    public String reportType;
+    public GetReportMetadataForReportTypeRequest withReportType(String reportType) {
+        this.reportType = reportType;
         return this;
     }
     

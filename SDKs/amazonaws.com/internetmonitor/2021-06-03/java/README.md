@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateMonitorHeaders;
 import org.openapis.openapi.models.operations.CreateMonitorRequestBody;
 import org.openapis.openapi.models.operations.CreateMonitorRequest;
 import org.openapis.openapi.models.operations.CreateMonitorResponse;
@@ -27,39 +26,34 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateMonitorRequest req = new CreateMonitorRequest() {{
-                headers = new CreateMonitorHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new CreateMonitorRequestBody() {{
-                    clientToken = "illum";
-                    maxCityNetworksToMonitor = 423655;
-                    monitorName = "error";
+                requestBody = new CreateMonitorRequestBody() {{
+                    clientToken = "corrupti";
+                    maxCityNetworksToMonitor = 592845;
+                    monitorName = "distinctio";
                     resources = new String[]{{
-                        add("suscipit"),
-                        add("iure"),
-                        add("magnam"),
+                        add("unde"),
+                        add("nulla"),
+                        add("corrupti"),
+                        add("illum"),
                     }};
                     tags = new java.util.HashMap<String, String>() {{
-                        put("ipsa", "delectus");
-                        put("tempora", "suscipit");
-                        put("molestiae", "minus");
-                        put("placeat", "voluptatum");
+                        put("error", "deserunt");
+                        put("suscipit", "iure");
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "magnam";
+                xAmzContentSha256 = "debitis";
+                xAmzCredential = "ipsa";
+                xAmzDate = "delectus";
+                xAmzSecurityToken = "tempora";
+                xAmzSignature = "suscipit";
+                xAmzSignedHeaders = "molestiae";
+            }}            
 
             CreateMonitorResponse res = sdk.createMonitor(req);
 
@@ -73,7 +67,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

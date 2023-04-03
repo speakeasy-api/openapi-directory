@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV2SpotinsertionsRequest {
-    
-    public GetApiV2SpotinsertionsQueryParams queryParams;
-    public GetApiV2SpotinsertionsRequest withQueryParams(GetApiV2SpotinsertionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The sort order of the list of spot insertions, based on ID. If unspecified, the spot insertions are returned in random order. If using paging to iterate through the results, sort order should be specified.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderById")
+    public GetApiV2SpotinsertionsOrderByIDEnum orderById;
+    public GetApiV2SpotinsertionsRequest withOrderById(GetApiV2SpotinsertionsOrderByIDEnum orderById) {
+        this.orderById = orderById;
         return this;
     }
     
+    /**
+     * The number of items to return. Must be between 0 and 500, inclusive.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public GetApiV2SpotinsertionsRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public GetApiV2SpotinsertionsSecurity security;
-    public GetApiV2SpotinsertionsRequest withSecurity(GetApiV2SpotinsertionsSecurity security) {
-        this.security = security;
+    /**
+     * The start page of the results to return. The first item is indexed at 0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageStart")
+    public Integer pageStart;
+    public GetApiV2SpotinsertionsRequest withPageStart(Integer pageStart) {
+        this.pageStart = pageStart;
         return this;
     }
     

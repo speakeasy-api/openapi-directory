@@ -81,7 +81,7 @@ public class CodesOfConduct {
      */
     public org.openapis.openapi.models.operations.CodesOfConductGetConductCodeResponse codesOfConductGetConductCode(org.openapis.openapi.models.operations.CodesOfConductGetConductCodeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodesOfConductGetConductCodePathParams.class, baseUrl, "/codes_of_conduct/{key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CodesOfConductGetConductCodeRequest.class, baseUrl, "/codes_of_conduct/{key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

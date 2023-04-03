@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteDocRequest {
-    
-    public DeleteDocPathParams pathParams;
-    public DeleteDocRequest withPathParams(DeleteDocPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Slug of doc. must be lowercase, and replace spaces with hyphens. For example, for the page titled "New Features", enter the slug "new-features"
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=slug")
+    public String slug;
+    public DeleteDocRequest withSlug(String slug) {
+        this.slug = slug;
         return this;
     }
     
-    
-    public DeleteDocHeaders headers;
-    public DeleteDocRequest withHeaders(DeleteDocHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public DeleteDocSecurity security;
-    public DeleteDocRequest withSecurity(DeleteDocSecurity security) {
-        this.security = security;
+    /**
+     * Version number of your docs project, for example, v3.0. To see all valid versions for your docs project call https://docs.readme.com/developers/reference/version#getversions.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-readme-version")
+    public String xReadmeVersion;
+    public DeleteDocRequest withXReadmeVersion(String xReadmeVersion) {
+        this.xReadmeVersion = xReadmeVersion;
         return this;
     }
     

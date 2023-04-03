@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupV2GetUserClanInviteSettingRequest {
-    
-    public GroupV2GetUserClanInviteSettingPathParams pathParams;
-    public GroupV2GetUserClanInviteSettingRequest withPathParams(GroupV2GetUserClanInviteSettingPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GroupV2GetUserClanInviteSettingSecurity security;
-    public GroupV2GetUserClanInviteSettingRequest withSecurity(GroupV2GetUserClanInviteSettingSecurity security) {
-        this.security = security;
+    /**
+     * The Destiny membership type of the account we wish to access settings.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mType")
+    public Integer mType;
+    public GroupV2GetUserClanInviteSettingRequest withMType(Integer mType) {
+        this.mType = mType;
         return this;
     }
     

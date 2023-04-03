@@ -34,27 +34,28 @@ public class Enterprises {
     /**
      * Executes a command to device managed by the enterprise.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandResponse smartdevicemanagementEnterprisesDevicesExecuteCommand(org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandResponse smartdevicemanagementEnterprisesDevicesExecuteCommand(org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandRequest request, org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandPathParams.class, baseUrl, "/v1/{name}:executeCommand", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandRequest.class, baseUrl, "/v1/{name}:executeCommand", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,25 +82,26 @@ public class Enterprises {
     /**
      * Lists devices managed by the enterprise.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesDevicesListResponse smartdevicemanagementEnterprisesDevicesList(org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesDevicesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesDevicesListResponse smartdevicemanagementEnterprisesDevicesList(org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesDevicesListRequest request, org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesDevicesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesDevicesListPathParams.class, baseUrl, "/v1/{parent}/devices", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesDevicesListRequest.class, baseUrl, "/v1/{parent}/devices", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesDevicesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesDevicesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,25 +128,26 @@ public class Enterprises {
     /**
      * Lists structures managed by the enterprise.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesStructuresListResponse smartdevicemanagementEnterprisesStructuresList(org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesStructuresListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesStructuresListResponse smartdevicemanagementEnterprisesStructuresList(org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesStructuresListRequest request, org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesStructuresListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesStructuresListPathParams.class, baseUrl, "/v1/{parent}/structures", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesStructuresListRequest.class, baseUrl, "/v1/{parent}/structures", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesStructuresListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesStructuresListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,25 +174,26 @@ public class Enterprises {
     /**
      * Gets a room managed by the enterprise.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesStructuresRoomsGetResponse smartdevicemanagementEnterprisesStructuresRoomsGet(org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesStructuresRoomsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesStructuresRoomsGetResponse smartdevicemanagementEnterprisesStructuresRoomsGet(org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesStructuresRoomsGetRequest request, org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesStructuresRoomsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesStructuresRoomsGetPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesStructuresRoomsGetRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesStructuresRoomsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesStructuresRoomsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -216,25 +220,26 @@ public class Enterprises {
     /**
      * Lists rooms managed by the enterprise.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesStructuresRoomsListResponse smartdevicemanagementEnterprisesStructuresRoomsList(org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesStructuresRoomsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesStructuresRoomsListResponse smartdevicemanagementEnterprisesStructuresRoomsList(org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesStructuresRoomsListRequest request, org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesStructuresRoomsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesStructuresRoomsListPathParams.class, baseUrl, "/v1/{parent}/rooms", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesStructuresRoomsListRequest.class, baseUrl, "/v1/{parent}/rooms", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesStructuresRoomsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesStructuresRoomsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

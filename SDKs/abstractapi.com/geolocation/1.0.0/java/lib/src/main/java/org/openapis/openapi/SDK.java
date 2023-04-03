@@ -130,9 +130,20 @@ public class SDK {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.GetV1Response getV1(org.openapis.openapi.models.operations.GetV1Request request) throws Exception {
+        return this.getV1(request, null);
+    }
+
+    /**
+     * Retrieve the location of an IP address
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.GetV1Response getV1(org.openapis.openapi.models.operations.GetV1Request request, String serverURL) throws Exception {
         String baseUrl = GET_V1_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/");
@@ -141,7 +152,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV1QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV1Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

@@ -4,13 +4,146 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETShippingLabelRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=APIVersion")
+    public String apiVersion;
+    public GETGETShippingLabelRequest withAPIVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
     
-    public GETGETShippingLabelQueryParams queryParams;
-    public GETGETShippingLabelRequest withQueryParams(GETGETShippingLabelQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AWSAccessKeyId")
+    public String awsAccessKeyId;
+    public GETGETShippingLabelRequest withAWSAccessKeyId(String awsAccessKeyId) {
+        this.awsAccessKeyId = awsAccessKeyId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETGETShippingLabelActionEnum action;
+    public GETGETShippingLabelRequest withAction(GETGETShippingLabelActionEnum action) {
+        this.action = action;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Operation")
+    public GETGETShippingLabelOperationEnum operation;
+    public GETGETShippingLabelRequest withOperation(GETGETShippingLabelOperationEnum operation) {
+        this.operation = operation;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Signature")
+    public String signature;
+    public GETGETShippingLabelRequest withSignature(String signature) {
+        this.signature = signature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureMethod")
+    public String signatureMethod;
+    public GETGETShippingLabelRequest withSignatureMethod(String signatureMethod) {
+        this.signatureMethod = signatureMethod;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureVersion")
+    public String signatureVersion;
+    public GETGETShippingLabelRequest withSignatureVersion(String signatureVersion) {
+        this.signatureVersion = signatureVersion;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Timestamp")
+    public String timestamp;
+    public GETGETShippingLabelRequest withTimestamp(String timestamp) {
+        this.timestamp = timestamp;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETGETShippingLabelVersionEnum version;
+    public GETGETShippingLabelRequest withVersion(GETGETShippingLabelVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=city")
+    public String city;
+    public GETGETShippingLabelRequest withCity(String city) {
+        this.city = city;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=company")
+    public String company;
+    public GETGETShippingLabelRequest withCompany(String company) {
+        this.company = company;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public String country;
+    public GETGETShippingLabelRequest withCountry(String country) {
+        this.country = country;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jobIds")
+    public String[] jobIds;
+    public GETGETShippingLabelRequest withJobIds(String[] jobIds) {
+        this.jobIds = jobIds;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public GETGETShippingLabelRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=phoneNumber")
+    public String phoneNumber;
+    public GETGETShippingLabelRequest withPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=postalCode")
+    public String postalCode;
+    public GETGETShippingLabelRequest withPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stateOrProvince")
+    public String stateOrProvince;
+    public GETGETShippingLabelRequest withStateOrProvince(String stateOrProvince) {
+        this.stateOrProvince = stateOrProvince;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=street1")
+    public String street1;
+    public GETGETShippingLabelRequest withStreet1(String street1) {
+        this.street1 = street1;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=street2")
+    public String street2;
+    public GETGETShippingLabelRequest withStreet2(String street2) {
+        this.street2 = street2;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=street3")
+    public String street3;
+    public GETGETShippingLabelRequest withStreet3(String street3) {
+        this.street3 = street3;
         return this;
     }
     

@@ -4,27 +4,105 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteJobExecutionRequest {
-    
-    public DeleteJobExecutionPathParams pathParams;
-    public DeleteJobExecutionRequest withPathParams(DeleteJobExecutionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DeleteJobExecutionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public DeleteJobExecutionQueryParams queryParams;
-    public DeleteJobExecutionRequest withQueryParams(DeleteJobExecutionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DeleteJobExecutionRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DeleteJobExecutionRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public DeleteJobExecutionHeaders headers;
-    public DeleteJobExecutionRequest withHeaders(DeleteJobExecutionHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DeleteJobExecutionRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DeleteJobExecutionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DeleteJobExecutionRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DeleteJobExecutionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The ID of the job execution to be deleted. The &lt;code&gt;executionNumber&lt;/code&gt; refers to the execution of a particular job on a particular device.&lt;/p&gt; &lt;p&gt;Note that once a job execution is deleted, the &lt;code&gt;executionNumber&lt;/code&gt; may be reused by IoT, so be sure you get and use the correct value here.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=executionNumber")
+    public Long executionNumber;
+    public DeleteJobExecutionRequest withExecutionNumber(Long executionNumber) {
+        this.executionNumber = executionNumber;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;(Optional) When true, you can delete a job execution which is "IN_PROGRESS". Otherwise, you can only delete a job execution which is in a terminal state ("SUCCEEDED", "FAILED", "REJECTED", "REMOVED" or "CANCELED") or an exception will occur. The default is false.&lt;/p&gt; &lt;note&gt; &lt;p&gt;Deleting a job execution which is "IN_PROGRESS", will cause the device to be unable to access job information or update the job execution status. Use caution and ensure that the device is able to recover to a valid state.&lt;/p&gt; &lt;/note&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=force")
+    public Boolean force;
+    public DeleteJobExecutionRequest withForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
+    
+    /**
+     * The ID of the job whose execution on a particular device will be deleted.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
+    public String jobId;
+    public DeleteJobExecutionRequest withJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The namespace used to indicate that a job is a customer-managed job.&lt;/p&gt; &lt;p&gt;When you specify a value for this parameter, Amazon Web Services IoT Core sends jobs notifications to MQTT topics that contain the value in the following format.&lt;/p&gt; &lt;p&gt; &lt;code&gt;$aws/things/&lt;i&gt;THING_NAME&lt;/i&gt;/jobs/&lt;i&gt;JOB_ID&lt;/i&gt;/notify-namespace-&lt;i&gt;NAMESPACE_ID&lt;/i&gt;/&lt;/code&gt; &lt;/p&gt; &lt;note&gt; &lt;p&gt;The &lt;code&gt;namespaceId&lt;/code&gt; feature is in public preview.&lt;/p&gt; &lt;/note&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=namespaceId")
+    public String namespaceId;
+    public DeleteJobExecutionRequest withNamespaceId(String namespaceId) {
+        this.namespaceId = namespaceId;
+        return this;
+    }
+    
+    /**
+     * The name of the thing whose job execution will be deleted.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=thingName")
+    public String thingName;
+    public DeleteJobExecutionRequest withThingName(String thingName) {
+        this.thingName = thingName;
         return this;
     }
     

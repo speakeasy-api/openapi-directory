@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRetreatsRetreatRequest {
-    
-    public GetRetreatsRetreatPathParams pathParams;
-    public GetRetreatsRetreatRequest withPathParams(GetRetreatsRetreatPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=retreat")
+    public String retreat;
+    public GetRetreatsRetreatRequest withRetreat(String retreat) {
+        this.retreat = retreat;
         return this;
     }
     

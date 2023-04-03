@@ -37,14 +37,24 @@ public class Metrics {
     /**
      * Query server for exposed Prometheus metrics
      * See Prometheus documentation for a complete data model.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPrometheusMetricsResponse getPrometheusMetrics(org.openapis.openapi.models.operations.GetPrometheusMetricsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPrometheusMetricsResponse getPrometheusMetrics() throws Exception {
+        return this.getPrometheusMetrics(null);
+    }
+
+    /**
+     * Query server for exposed Prometheus metrics
+     * See Prometheus documentation for a complete data model.
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.GetPrometheusMetricsResponse getPrometheusMetrics(String serverURL) throws Exception {
         String baseUrl = GET_PROMETHEUS_METRICS_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/metrics");

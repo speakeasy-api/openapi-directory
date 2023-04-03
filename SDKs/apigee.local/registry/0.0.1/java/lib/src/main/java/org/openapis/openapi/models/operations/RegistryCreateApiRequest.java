@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryCreateApiRequest {
-    
-    public RegistryCreateApiPathParams pathParams;
-    public RegistryCreateApiRequest withPathParams(RegistryCreateApiPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RegistryCreateApiQueryParams queryParams;
-    public RegistryCreateApiRequest withQueryParams(RegistryCreateApiQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ApiInput request;
-    public RegistryCreateApiRequest withRequest(org.openapis.openapi.models.shared.ApiInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ApiInput apiInput;
+    public RegistryCreateApiRequest withApiInput(org.openapis.openapi.models.shared.ApiInput apiInput) {
+        this.apiInput = apiInput;
+        return this;
+    }
+    
+    /**
+     * Required. The ID to use for the api, which will become the final component of the api's resource name. This value should be 4-63 characters, and valid characters are /[a-z][0-9]-/. Following AIP-162, IDs must not have the form of a UUID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=apiId")
+    public String apiId;
+    public RegistryCreateApiRequest withApiId(String apiId) {
+        this.apiId = apiId;
+        return this;
+    }
+    
+    /**
+     * The location id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
+    public String location;
+    public RegistryCreateApiRequest withLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public RegistryCreateApiRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

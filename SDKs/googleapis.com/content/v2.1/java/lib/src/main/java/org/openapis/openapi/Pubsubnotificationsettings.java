@@ -34,25 +34,26 @@ public class Pubsubnotificationsettings {
     /**
      * Retrieves a Merchant Center account's pubsub notification settings.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentPubsubnotificationsettingsGetResponse contentPubsubnotificationsettingsGet(org.openapis.openapi.models.operations.ContentPubsubnotificationsettingsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentPubsubnotificationsettingsGetResponse contentPubsubnotificationsettingsGet(org.openapis.openapi.models.operations.ContentPubsubnotificationsettingsGetRequest request, org.openapis.openapi.models.operations.ContentPubsubnotificationsettingsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentPubsubnotificationsettingsGetPathParams.class, baseUrl, "/{merchantId}/pubsubnotificationsettings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentPubsubnotificationsettingsGetRequest.class, baseUrl, "/{merchantId}/pubsubnotificationsettings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentPubsubnotificationsettingsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentPubsubnotificationsettingsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,27 +80,28 @@ public class Pubsubnotificationsettings {
     /**
      * Register a Merchant Center account for pubsub notifications. Note that cloud topic name shouldn't be provided as part of the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentPubsubnotificationsettingsUpdateResponse contentPubsubnotificationsettingsUpdate(org.openapis.openapi.models.operations.ContentPubsubnotificationsettingsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentPubsubnotificationsettingsUpdateResponse contentPubsubnotificationsettingsUpdate(org.openapis.openapi.models.operations.ContentPubsubnotificationsettingsUpdateRequest request, org.openapis.openapi.models.operations.ContentPubsubnotificationsettingsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentPubsubnotificationsettingsUpdatePathParams.class, baseUrl, "/{merchantId}/pubsubnotificationsettings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentPubsubnotificationsettingsUpdateRequest.class, baseUrl, "/{merchantId}/pubsubnotificationsettings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "pubsubNotificationSettings", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentPubsubnotificationsettingsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentPubsubnotificationsettingsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

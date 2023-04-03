@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsGetActionsCacheUsageForOrgRequest {
-    
-    public ActionsGetActionsCacheUsageForOrgPathParams pathParams;
-    public ActionsGetActionsCacheUsageForOrgRequest withPathParams(ActionsGetActionsCacheUsageForOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ActionsGetActionsCacheUsageForOrgRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

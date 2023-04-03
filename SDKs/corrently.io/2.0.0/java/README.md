@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GsiDispatchQueryParams;
 import org.openapis.openapi.models.operations.GsiDispatchRequest;
 import org.openapis.openapi.models.operations.GsiDispatchResponse;
 
@@ -28,11 +27,9 @@ public class Application {
                 .build();
 
             GsiDispatchRequest req = new GsiDispatchRequest() {{
-                queryParams = new GsiDispatchQueryParams() {{
-                    key = "corrupti";
-                    zip = "provident";
-                }};
-            }};            
+                key = "corrupti";
+                zip = "provident";
+            }}            
 
             GsiDispatchResponse res = sdk.dispatchGreenEnergyDistributionAPI.gsiDispatch(req);
 
@@ -46,7 +43,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### dispatchGreenEnergyDistributionAPI

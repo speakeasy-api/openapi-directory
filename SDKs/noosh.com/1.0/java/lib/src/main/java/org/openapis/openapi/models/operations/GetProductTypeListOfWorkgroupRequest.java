@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProductTypeListOfWorkgroupRequest {
-    
-    public GetProductTypeListOfWorkgroupPathParams pathParams;
-    public GetProductTypeListOfWorkgroupRequest withPathParams(GetProductTypeListOfWorkgroupPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
+    public String workgroupId;
+    public GetProductTypeListOfWorkgroupRequest withWorkgroupId(String workgroupId) {
+        this.workgroupId = workgroupId;
         return this;
     }
     

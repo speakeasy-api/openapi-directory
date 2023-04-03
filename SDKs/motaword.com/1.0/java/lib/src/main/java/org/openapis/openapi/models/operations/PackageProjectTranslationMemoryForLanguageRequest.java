@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PackageProjectTranslationMemoryForLanguageRequest {
-    
-    public PackageProjectTranslationMemoryForLanguagePathParams pathParams;
-    public PackageProjectTranslationMemoryForLanguageRequest withPathParams(PackageProjectTranslationMemoryForLanguagePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * If you want to package and download the translation memory synchronously, mark this parameter as '0'. It will package the translation memory and then return the packaged file in the response, identical to async/download call after an asynchronous /package call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=async")
+    public Long async;
+    public PackageProjectTranslationMemoryForLanguageRequest withAsync(Long async) {
+        this.async = async;
         return this;
     }
     
+    /**
+     * Translation Memory file format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public String format;
+    public PackageProjectTranslationMemoryForLanguageRequest withFormat(String format) {
+        this.format = format;
+        return this;
+    }
     
-    public PackageProjectTranslationMemoryForLanguageQueryParams queryParams;
-    public PackageProjectTranslationMemoryForLanguageRequest withQueryParams(PackageProjectTranslationMemoryForLanguageQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Language Code
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=languageCode")
+    public String languageCode;
+    public PackageProjectTranslationMemoryForLanguageRequest withLanguageCode(String languageCode) {
+        this.languageCode = languageCode;
+        return this;
+    }
+    
+    /**
+     * Project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public Long projectId;
+    public PackageProjectTranslationMemoryForLanguageRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     

@@ -39,13 +39,13 @@ public class ReportLineInstruction {
      */
     public org.openapis.openapi.models.operations.DeleteReportingInstructionResponse deleteReportingInstruction(org.openapis.openapi.models.operations.DeleteReportingInstructionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteReportingInstructionPathParams.class, baseUrl, "/Employer/{EmployerId}/ReportingInstruction/{ReportingInstructionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteReportingInstructionRequest.class, baseUrl, "/Employer/{EmployerId}/ReportingInstruction/{ReportingInstructionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -88,13 +88,13 @@ public class ReportLineInstruction {
      */
     public org.openapis.openapi.models.operations.GetReportingInstructionFromEmployerResponse getReportingInstructionFromEmployer(org.openapis.openapi.models.operations.GetReportingInstructionFromEmployerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetReportingInstructionFromEmployerPathParams.class, baseUrl, "/Employer/{EmployerId}/ReportingInstruction/{ReportingInstructionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetReportingInstructionFromEmployerRequest.class, baseUrl, "/Employer/{EmployerId}/ReportingInstruction/{ReportingInstructionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -143,13 +143,13 @@ public class ReportLineInstruction {
      */
     public org.openapis.openapi.models.operations.GetReportingInstructionsFromEmployerResponse getReportingInstructionsFromEmployer(org.openapis.openapi.models.operations.GetReportingInstructionsFromEmployerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetReportingInstructionsFromEmployerPathParams.class, baseUrl, "/Employer/{EmployerId}/ReportingInstructions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetReportingInstructionsFromEmployerRequest.class, baseUrl, "/Employer/{EmployerId}/ReportingInstructions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -198,18 +198,18 @@ public class ReportLineInstruction {
      */
     public org.openapis.openapi.models.operations.PostReportingInstructionResponse postReportingInstruction(org.openapis.openapi.models.operations.PostReportingInstructionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostReportingInstructionPathParams.class, baseUrl, "/Employer/{EmployerId}/ReportingInstructions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostReportingInstructionRequest.class, baseUrl, "/Employer/{EmployerId}/ReportingInstructions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "reportingInstruction", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -258,18 +258,18 @@ public class ReportLineInstruction {
      */
     public org.openapis.openapi.models.operations.PutReportingInstructionResponse putReportingInstruction(org.openapis.openapi.models.operations.PutReportingInstructionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutReportingInstructionPathParams.class, baseUrl, "/Employer/{EmployerId}/ReportingInstruction/{ReportingInstructionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutReportingInstructionRequest.class, baseUrl, "/Employer/{EmployerId}/ReportingInstruction/{ReportingInstructionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "reportingInstruction", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

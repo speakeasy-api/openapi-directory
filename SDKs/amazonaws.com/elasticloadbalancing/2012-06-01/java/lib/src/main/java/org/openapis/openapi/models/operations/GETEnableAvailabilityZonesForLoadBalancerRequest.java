@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETEnableAvailabilityZonesForLoadBalancerRequest {
-    
-    public GETEnableAvailabilityZonesForLoadBalancerQueryParams queryParams;
-    public GETEnableAvailabilityZonesForLoadBalancerRequest withQueryParams(GETEnableAvailabilityZonesForLoadBalancerQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETEnableAvailabilityZonesForLoadBalancerActionEnum action;
+    public GETEnableAvailabilityZonesForLoadBalancerRequest withAction(GETEnableAvailabilityZonesForLoadBalancerActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The Availability Zones. These must be in the same region as the load balancer.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AvailabilityZones")
+    public String[] availabilityZones;
+    public GETEnableAvailabilityZonesForLoadBalancerRequest withAvailabilityZones(String[] availabilityZones) {
+        this.availabilityZones = availabilityZones;
+        return this;
+    }
     
-    public GETEnableAvailabilityZonesForLoadBalancerHeaders headers;
-    public GETEnableAvailabilityZonesForLoadBalancerRequest withHeaders(GETEnableAvailabilityZonesForLoadBalancerHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name of the load balancer.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LoadBalancerName")
+    public String loadBalancerName;
+    public GETEnableAvailabilityZonesForLoadBalancerRequest withLoadBalancerName(String loadBalancerName) {
+        this.loadBalancerName = loadBalancerName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETEnableAvailabilityZonesForLoadBalancerVersionEnum version;
+    public GETEnableAvailabilityZonesForLoadBalancerRequest withVersion(GETEnableAvailabilityZonesForLoadBalancerVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETEnableAvailabilityZonesForLoadBalancerRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETEnableAvailabilityZonesForLoadBalancerRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETEnableAvailabilityZonesForLoadBalancerRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETEnableAvailabilityZonesForLoadBalancerRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETEnableAvailabilityZonesForLoadBalancerRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETEnableAvailabilityZonesForLoadBalancerRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETEnableAvailabilityZonesForLoadBalancerRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

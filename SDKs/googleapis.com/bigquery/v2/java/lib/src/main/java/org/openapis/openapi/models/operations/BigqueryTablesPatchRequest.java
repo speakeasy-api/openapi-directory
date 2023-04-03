@@ -7,31 +7,120 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BigqueryTablesPatchRequest {
-    
-    public BigqueryTablesPatchPathParams pathParams;
-    public BigqueryTablesPatchRequest withPathParams(BigqueryTablesPatchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public BigqueryTablesPatchQueryParams queryParams;
-    public BigqueryTablesPatchRequest withQueryParams(BigqueryTablesPatchQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Table request;
-    public BigqueryTablesPatchRequest withRequest(org.openapis.openapi.models.shared.Table request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Table table;
+    public BigqueryTablesPatchRequest withTable(org.openapis.openapi.models.shared.Table table) {
+        this.table = table;
         return this;
     }
     
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public BigqueryTablesPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public BigqueryTablesPatchSecurity security;
-    public BigqueryTablesPatchRequest withSecurity(BigqueryTablesPatchSecurity security) {
-        this.security = security;
+    /**
+     * When true will autodetect schema, else will keep original schema
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=autodetect_schema")
+    public Boolean autodetectSchema;
+    public BigqueryTablesPatchRequest withAutodetectSchema(Boolean autodetectSchema) {
+        this.autodetectSchema = autodetectSchema;
+        return this;
+    }
+    
+    /**
+     * Dataset ID of the table to update
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=datasetId")
+    public String datasetId;
+    public BigqueryTablesPatchRequest withDatasetId(String datasetId) {
+        this.datasetId = datasetId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public BigqueryTablesPatchRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public BigqueryTablesPatchRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public BigqueryTablesPatchRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public BigqueryTablesPatchRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Project ID of the table to update
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public BigqueryTablesPatchRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public BigqueryTablesPatchRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Table ID of the table to update
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tableId")
+    public String tableId;
+    public BigqueryTablesPatchRequest withTableId(String tableId) {
+        this.tableId = tableId;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public BigqueryTablesPatchRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

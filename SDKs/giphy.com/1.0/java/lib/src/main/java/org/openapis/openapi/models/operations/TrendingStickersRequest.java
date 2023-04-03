@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TrendingStickersRequest {
+    /**
+     * The maximum number of records to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public TrendingStickersRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public TrendingStickersQueryParams queryParams;
-    public TrendingStickersRequest withQueryParams(TrendingStickersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * An optional results offset.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public TrendingStickersRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Filters results by specified rating.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rating")
+    public String rating;
+    public TrendingStickersRequest withRating(String rating) {
+        this.rating = rating;
         return this;
     }
     

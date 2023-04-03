@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SubmitProjectReportsRequest {
-    
-    public SubmitProjectReportsPathParams pathParams;
-    public SubmitProjectReportsRequest withPathParams(SubmitProjectReportsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ReportContent reportContent;
+    public SubmitProjectReportsRequest withReportContent(org.openapis.openapi.models.shared.ReportContent reportContent) {
+        this.reportContent = reportContent;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ReportContent request;
-    public SubmitProjectReportsRequest withRequest(org.openapis.openapi.models.shared.ReportContent request) {
-        this.request = request;
+    /**
+     * Project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public SubmitProjectReportsRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

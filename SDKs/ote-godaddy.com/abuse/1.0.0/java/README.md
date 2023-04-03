@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.CreateTicketRequest;
 import org.openapis.openapi.models.operations.CreateTicketResponse;
 import org.openapis.openapi.models.shared.AbuseTicketCreateTypeEnum;
 import org.openapis.openapi.models.shared.AbuseTicketCreate;
@@ -28,17 +27,15 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CreateTicketRequest req = new CreateTicketRequest() {{
-                request = new AbuseTicketCreate() {{
-                    info = "corrupti";
-                    infoUrl = "provident";
-                    intentional = false;
-                    proxy = "distinctio";
-                    source = "quibusdam";
-                    target = "unde";
-                    type = "PHISHING";
-                }};
-            }};            
+            org.openapis.openapi.models.shared.AbuseTicketCreate req = new AbuseTicketCreate() {{
+                info = "corrupti";
+                infoUrl = "provident";
+                intentional = false;
+                proxy = "distinctio";
+                source = "quibusdam";
+                target = "unde";
+                type = "PHISHING";
+            }}            
 
             CreateTicketResponse res = sdk.v1.createTicket(req);
 
@@ -52,7 +49,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### v1

@@ -45,7 +45,7 @@ public class SSLCertificateRequests {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddSslCertificateRequestResponse addSslCertificateRequest(org.openapis.openapi.models.operations.AddSslCertificateRequestRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddSslCertificateRequestResponse addSslCertificateRequest(org.openapis.openapi.models.shared.CreateSslCertificateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/sslcertificaterequests");
         
@@ -83,7 +83,7 @@ public class SSLCertificateRequests {
      */
     public org.openapis.openapi.models.operations.GetSslCertificateRequestResponse getSslCertificateRequest(org.openapis.openapi.models.operations.GetSslCertificateRequestRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSslCertificateRequestPathParams.class, baseUrl, "/sslcertificaterequests/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSslCertificateRequestRequest.class, baseUrl, "/sslcertificaterequests/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -133,7 +133,7 @@ public class SSLCertificateRequests {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSslCertificateRequestsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSslCertificateRequestsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -173,7 +173,7 @@ public class SSLCertificateRequests {
      */
     public org.openapis.openapi.models.operations.VerifySslCertificateRequestDomainValidationsResponse verifySslCertificateRequestDomainValidations(org.openapis.openapi.models.operations.VerifySslCertificateRequestDomainValidationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VerifySslCertificateRequestDomainValidationsPathParams.class, baseUrl, "/sslcertificaterequests/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VerifySslCertificateRequestDomainValidationsRequest.class, baseUrl, "/sslcertificaterequests/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

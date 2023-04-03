@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PricingRequest {
+    /**
+     * The countries ISO code to get pricings for. Allowed values are de, fr, at. Omit to show pricings for all channels.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public String country;
+    public PricingRequest withCountry(String country) {
+        this.country = country;
+        return this;
+    }
     
-    public PricingQueryParams queryParams;
-    public PricingRequest withQueryParams(PricingQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Determines the response format. Allowed values are json and csv. The default value is json.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public String format;
+    public PricingRequest withFormat(String format) {
+        this.format = format;
         return this;
     }
     

@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostUsersUseridLinkRequest {
-    
-    public PostUsersUseridLinkPathParams pathParams;
-    public PostUsersUseridLinkRequest withPathParams(PostUsersUseridLinkPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostUsersUseridLinkRequestBody request;
-    public PostUsersUseridLinkRequest withRequest(PostUsersUseridLinkRequestBody request) {
-        this.request = request;
+    public PostUsersUseridLinkRequestBody requestBody;
+    public PostUsersUseridLinkRequest withRequestBody(PostUsersUseridLinkRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public PostUsersUseridLinkSecurity security;
-    public PostUsersUseridLinkRequest withSecurity(PostUsersUseridLinkSecurity security) {
-        this.security = security;
+    /**
+     * ID of the User
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public PostUsersUseridLinkRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

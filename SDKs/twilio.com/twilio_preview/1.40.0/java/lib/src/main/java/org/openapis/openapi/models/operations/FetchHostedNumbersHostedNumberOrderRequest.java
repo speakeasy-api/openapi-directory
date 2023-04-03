@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchHostedNumbersHostedNumberOrderRequest {
-    
-    public FetchHostedNumbersHostedNumberOrderPathParams pathParams;
-    public FetchHostedNumbersHostedNumberOrderRequest withPathParams(FetchHostedNumbersHostedNumberOrderPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchHostedNumbersHostedNumberOrderSecurity security;
-    public FetchHostedNumbersHostedNumberOrderRequest withSecurity(FetchHostedNumbersHostedNumberOrderSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchHostedNumbersHostedNumberOrderRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * A 34 character string that uniquely identifies this HostedNumberOrder.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchHostedNumbersHostedNumberOrderRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

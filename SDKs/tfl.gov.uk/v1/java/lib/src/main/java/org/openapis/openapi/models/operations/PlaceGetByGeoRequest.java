@@ -4,13 +4,108 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PlaceGetByGeoRequest {
+    /**
+     * An optional parameter to limit the results to active records only (Currently only the 'VariableMessageSign' place type is supported)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=activeOnly")
+    public Boolean activeOnly;
+    public PlaceGetByGeoRequest withActiveOnly(Boolean activeOnly) {
+        this.activeOnly = activeOnly;
+        return this;
+    }
     
-    public PlaceGetByGeoQueryParams queryParams;
-    public PlaceGetByGeoRequest withQueryParams(PlaceGetByGeoQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * An optional list of comma separated property categories to return in the Place's property bag. If null or empty, all categories of property are returned. Pass the keyword "none" to return no properties (a valid list of categories can be obtained from the /Place/Meta/categories endpoint)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=categories")
+    public String[] categories;
+    public PlaceGetByGeoRequest withCategories(String[] categories) {
+        this.categories = categories;
+        return this;
+    }
+    
+    /**
+     * Defaults to false. If true child places e.g. individual charging stations at a charge point while be included, otherwise just the URLs of any child places will be returned
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeChildren")
+    public Boolean includeChildren;
+    public PlaceGetByGeoRequest withIncludeChildren(Boolean includeChildren) {
+        this.includeChildren = includeChildren;
+        return this;
+    }
+    
+    /**
+     * If specified, limits the number of returned places equal to the given value
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=numberOfPlacesToReturn")
+    public Integer numberOfPlacesToReturn;
+    public PlaceGetByGeoRequest withNumberOfPlacesToReturn(Integer numberOfPlacesToReturn) {
+        this.numberOfPlacesToReturn = numberOfPlacesToReturn;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=placeGeo.lat")
+    public Double placeGeoLat;
+    public PlaceGetByGeoRequest withPlaceGeoLat(Double placeGeoLat) {
+        this.placeGeoLat = placeGeoLat;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=placeGeo.lon")
+    public Double placeGeoLon;
+    public PlaceGetByGeoRequest withPlaceGeoLon(Double placeGeoLon) {
+        this.placeGeoLon = placeGeoLon;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=placeGeo.neLat")
+    public Double placeGeoNeLat;
+    public PlaceGetByGeoRequest withPlaceGeoNeLat(Double placeGeoNeLat) {
+        this.placeGeoNeLat = placeGeoNeLat;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=placeGeo.neLon")
+    public Double placeGeoNeLon;
+    public PlaceGetByGeoRequest withPlaceGeoNeLon(Double placeGeoNeLon) {
+        this.placeGeoNeLon = placeGeoNeLon;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=placeGeo.swLat")
+    public Double placeGeoSwLat;
+    public PlaceGetByGeoRequest withPlaceGeoSwLat(Double placeGeoSwLat) {
+        this.placeGeoSwLat = placeGeoSwLat;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=placeGeo.swLon")
+    public Double placeGeoSwLon;
+    public PlaceGetByGeoRequest withPlaceGeoSwLon(Double placeGeoSwLon) {
+        this.placeGeoSwLon = placeGeoSwLon;
+        return this;
+    }
+    
+    /**
+     * The radius of the bounding circle in metres when only lat/lon are specified.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=radius")
+    public Double radius;
+    public PlaceGetByGeoRequest withRadius(Double radius) {
+        this.radius = radius;
+        return this;
+    }
+    
+    /**
+     * Place types to filter on, or null to return all types
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String[] type;
+    public PlaceGetByGeoRequest withType(String[] type) {
+        this.type = type;
         return this;
     }
     

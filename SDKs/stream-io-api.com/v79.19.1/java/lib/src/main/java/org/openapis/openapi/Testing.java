@@ -39,7 +39,7 @@ public class Testing {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CheckPushResponse checkPush(org.openapis.openapi.models.operations.CheckPushRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CheckPushResponse checkPush(org.openapis.openapi.models.shared.CheckPushRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/check_push");
         
@@ -102,7 +102,7 @@ public class Testing {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CheckSQSResponse checkSQS(org.openapis.openapi.models.operations.CheckSQSRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CheckSQSResponse checkSQS(org.openapis.openapi.models.shared.CheckSQSRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/check_sqs");
         

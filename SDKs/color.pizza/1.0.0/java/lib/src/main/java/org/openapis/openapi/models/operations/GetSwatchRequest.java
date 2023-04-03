@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSwatchRequest {
+    /**
+     * The hex value of the color to retrieve without '#'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=color")
+    public String color;
+    public GetSwatchRequest withColor(String color) {
+        this.color = color;
+        return this;
+    }
     
-    public GetSwatchQueryParams queryParams;
-    public GetSwatchRequest withQueryParams(GetSwatchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The name of the color
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=name")
+    public String name;
+    public GetSwatchRequest withName(String name) {
+        this.name = name;
         return this;
     }
     

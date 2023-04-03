@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateUserConversationRequest {
-    
-    public UpdateUserConversationPathParams pathParams;
-    public UpdateUserConversationRequest withPathParams(UpdateUserConversationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique SID identifier of the Conversation. This value can be either the `sid` or the `unique_name` of the [Conversation resource](https://www.twilio.com/docs/conversations/api/conversation-resource).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConversationSid")
+    public String conversationSid;
+    public UpdateUserConversationRequest withConversationSid(String conversationSid) {
+        this.conversationSid = conversationSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateUserConversationUpdateUserConversationRequest request;
-    public UpdateUserConversationRequest withRequest(UpdateUserConversationUpdateUserConversationRequest request) {
-        this.request = request;
+    public UpdateUserConversationUpdateUserConversationRequest requestBody;
+    public UpdateUserConversationRequest withRequestBody(UpdateUserConversationUpdateUserConversationRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateUserConversationSecurity security;
-    public UpdateUserConversationRequest withSecurity(UpdateUserConversationSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateUserConversationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique SID identifier of the [User resource](https://www.twilio.com/docs/conversations/api/user-resource). This value can be either the `sid` or the `identity` of the User resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=UserSid")
+    public String userSid;
+    public UpdateUserConversationRequest withUserSid(String userSid) {
+        this.userSid = userSid;
         return this;
     }
     

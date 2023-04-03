@@ -7,24 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostWorkspaceSlugMembersMemberSlugNotesRequest {
-    
-    public PostWorkspaceSlugMembersMemberSlugNotesPathParams pathParams;
-    public PostWorkspaceSlugMembersMemberSlugNotesRequest withPathParams(PostWorkspaceSlugMembersMemberSlugNotesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=member_slug")
+    public String memberSlug;
+    public PostWorkspaceSlugMembersMemberSlugNotesRequest withMemberSlug(String memberSlug) {
+        this.memberSlug = memberSlug;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Note request;
-    public PostWorkspaceSlugMembersMemberSlugNotesRequest withRequest(org.openapis.openapi.models.shared.Note request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Note note;
+    public PostWorkspaceSlugMembersMemberSlugNotesRequest withNote(org.openapis.openapi.models.shared.Note note) {
+        this.note = note;
         return this;
     }
     
-    
-    public PostWorkspaceSlugMembersMemberSlugNotesSecurity security;
-    public PostWorkspaceSlugMembersMemberSlugNotesRequest withSecurity(PostWorkspaceSlugMembersMemberSlugNotesSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_slug")
+    public String workspaceSlug;
+    public PostWorkspaceSlugMembersMemberSlugNotesRequest withWorkspaceSlug(String workspaceSlug) {
+        this.workspaceSlug = workspaceSlug;
         return this;
     }
     

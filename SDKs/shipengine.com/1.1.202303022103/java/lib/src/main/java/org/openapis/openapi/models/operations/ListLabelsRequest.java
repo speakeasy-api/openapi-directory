@@ -4,13 +4,148 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListLabelsRequest {
+    /**
+     * Only return labels that were created in a specific [batch](https://www.shipengine.com/docs/labels/bulk/)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=batch_id")
+    public String batchId;
+    public ListLabelsRequest withBatchId(String batchId) {
+        this.batchId = batchId;
+        return this;
+    }
     
-    public ListLabelsQueryParams queryParams;
-    public ListLabelsRequest withQueryParams(ListLabelsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Only return labels for a specific [carrier account](https://www.shipengine.com/docs/carriers/setup/)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=carrier_id")
+    public String carrierId;
+    public ListLabelsRequest withCarrierId(String carrierId) {
+        this.carrierId = carrierId;
+        return this;
+    }
+    
+    /**
+     * Only return labels that were created on or before a specific date/time
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created_at_end")
+    public OffsetDateTime createdAtEnd;
+    public ListLabelsRequest withCreatedAtEnd(OffsetDateTime createdAtEnd) {
+        this.createdAtEnd = createdAtEnd;
+        return this;
+    }
+    
+    /**
+     * Only return labels that were created on or after a specific date/time
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created_at_start")
+    public OffsetDateTime createdAtStart;
+    public ListLabelsRequest withCreatedAtStart(OffsetDateTime createdAtStart) {
+        this.createdAtStart = createdAtStart;
+        return this;
+    }
+    
+    /**
+     * Only return labels that are currently in the specified status
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=label_status")
+    public org.openapis.openapi.models.shared.LabelStatusEnum labelStatus;
+    public ListLabelsRequest withLabelStatus(org.openapis.openapi.models.shared.LabelStatusEnum labelStatus) {
+        this.labelStatus = labelStatus;
+        return this;
+    }
+    
+    /**
+     * Return a specific page of results. Defaults to the first page. If set to a number that's greater than the number of pages of results, an empty page is returned.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public ListLabelsRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results to return per response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Integer pageSize;
+    public ListLabelsRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * Rate ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rate_id")
+    public String rateId;
+    public ListLabelsRequest withRateId(String rateId) {
+        this.rateId = rateId;
+        return this;
+    }
+    
+    /**
+     * Only return labels for a specific [carrier service](https://www.shipengine.com/docs/shipping/use-a-carrier-service/)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=service_code")
+    public String serviceCode;
+    public ListLabelsRequest withServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+        return this;
+    }
+    
+    /**
+     * Shipment ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=shipment_id")
+    public String shipmentId;
+    public ListLabelsRequest withShipmentId(String shipmentId) {
+        this.shipmentId = shipmentId;
+        return this;
+    }
+    
+    /**
+     * Controls which field the query is sorted by.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
+    public ListLabelsSortByEnum sortBy;
+    public ListLabelsRequest withSortBy(ListLabelsSortByEnum sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    
+    /**
+     * Controls the sort order of the query.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_dir")
+    public ListLabelsSortDirSortDirEnum sortDir;
+    public ListLabelsRequest withSortDir(ListLabelsSortDirSortDirEnum sortDir) {
+        this.sortDir = sortDir;
+        return this;
+    }
+    
+    /**
+     * Only return labels with a specific tracking number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tracking_number")
+    public String trackingNumber;
+    public ListLabelsRequest withTrackingNumber(String trackingNumber) {
+        this.trackingNumber = trackingNumber;
+        return this;
+    }
+    
+    /**
+     * Only return labels that originate from a specific [warehouse](https://www.shipengine.com/docs/shipping/ship-from-a-warehouse/)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=warehouse_id")
+    public String warehouseId;
+    public ListLabelsRequest withWarehouseId(String warehouseId) {
+        this.warehouseId = warehouseId;
         return this;
     }
     

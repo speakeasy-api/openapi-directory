@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FireteamGetActivePrivateClanFireteamCountRequest {
-    
-    public FireteamGetActivePrivateClanFireteamCountPathParams pathParams;
-    public FireteamGetActivePrivateClanFireteamCountRequest withPathParams(FireteamGetActivePrivateClanFireteamCountPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FireteamGetActivePrivateClanFireteamCountSecurity security;
-    public FireteamGetActivePrivateClanFireteamCountRequest withSecurity(FireteamGetActivePrivateClanFireteamCountSecurity security) {
-        this.security = security;
+    /**
+     * The group id of the clan.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public Long groupId;
+    public FireteamGetActivePrivateClanFireteamCountRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
         return this;
     }
     

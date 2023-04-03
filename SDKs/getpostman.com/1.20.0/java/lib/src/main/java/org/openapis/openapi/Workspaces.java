@@ -83,7 +83,7 @@ public class Workspaces {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateWorkspaceResponse createWorkspace(org.openapis.openapi.models.operations.CreateWorkspaceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateWorkspaceResponse createWorkspace(org.openapis.openapi.models.operations.CreateWorkspaceRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/workspaces");
         
@@ -138,7 +138,7 @@ public class Workspaces {
      */
     public org.openapis.openapi.models.operations.DeleteWorkspaceResponse deleteWorkspace(org.openapis.openapi.models.operations.DeleteWorkspaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteWorkspacePathParams.class, baseUrl, "/workspaces/{workspace_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteWorkspaceRequest.class, baseUrl, "/workspaces/{workspace_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -179,7 +179,7 @@ public class Workspaces {
      */
     public org.openapis.openapi.models.operations.SingleWorkspaceResponse singleWorkspace(org.openapis.openapi.models.operations.SingleWorkspaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SingleWorkspacePathParams.class, baseUrl, "/workspaces/{workspace_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SingleWorkspaceRequest.class, baseUrl, "/workspaces/{workspace_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -234,12 +234,12 @@ public class Workspaces {
      */
     public org.openapis.openapi.models.operations.UpdateWorkspaceResponse updateWorkspace(org.openapis.openapi.models.operations.UpdateWorkspaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateWorkspacePathParams.class, baseUrl, "/workspaces/{workspace_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateWorkspaceRequest.class, baseUrl, "/workspaces/{workspace_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

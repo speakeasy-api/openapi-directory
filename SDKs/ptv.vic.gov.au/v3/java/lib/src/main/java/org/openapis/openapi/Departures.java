@@ -38,13 +38,13 @@ public class Departures {
      */
     public org.openapis.openapi.models.operations.DeparturesGetForStopResponse departuresGetForStop(org.openapis.openapi.models.operations.DeparturesGetForStopRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeparturesGetForStopPathParams.class, baseUrl, "/v3/departures/route_type/{route_type}/stop/{stop_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeparturesGetForStopRequest.class, baseUrl, "/v3/departures/route_type/{route_type}/stop/{stop_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeparturesGetForStopQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeparturesGetForStopRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -112,13 +112,13 @@ public class Departures {
      */
     public org.openapis.openapi.models.operations.DeparturesGetForStopAndRouteResponse departuresGetForStopAndRoute(org.openapis.openapi.models.operations.DeparturesGetForStopAndRouteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeparturesGetForStopAndRoutePathParams.class, baseUrl, "/v3/departures/route_type/{route_type}/stop/{stop_id}/route/{route_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeparturesGetForStopAndRouteRequest.class, baseUrl, "/v3/departures/route_type/{route_type}/stop/{stop_id}/route/{route_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeparturesGetForStopAndRouteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeparturesGetForStopAndRouteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

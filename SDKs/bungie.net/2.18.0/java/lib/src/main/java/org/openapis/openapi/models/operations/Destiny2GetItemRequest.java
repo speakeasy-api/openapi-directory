@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2GetItemRequest {
-    
-    public Destiny2GetItemPathParams pathParams;
-    public Destiny2GetItemRequest withPathParams(Destiny2GetItemPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=components")
+    public Integer[] components;
+    public Destiny2GetItemRequest withComponents(Integer[] components) {
+        this.components = components;
         return this;
     }
     
+    /**
+     * The membership ID of the destiny profile.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destinyMembershipId")
+    public Long destinyMembershipId;
+    public Destiny2GetItemRequest withDestinyMembershipId(Long destinyMembershipId) {
+        this.destinyMembershipId = destinyMembershipId;
+        return this;
+    }
     
-    public Destiny2GetItemQueryParams queryParams;
-    public Destiny2GetItemRequest withQueryParams(Destiny2GetItemQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The Instance ID of the destiny item.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=itemInstanceId")
+    public Long itemInstanceId;
+    public Destiny2GetItemRequest withItemInstanceId(Long itemInstanceId) {
+        this.itemInstanceId = itemInstanceId;
+        return this;
+    }
+    
+    /**
+     * A valid non-BungieNet membership type.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
+    public Integer membershipType;
+    public Destiny2GetItemRequest withMembershipType(Integer membershipType) {
+        this.membershipType = membershipType;
         return this;
     }
     

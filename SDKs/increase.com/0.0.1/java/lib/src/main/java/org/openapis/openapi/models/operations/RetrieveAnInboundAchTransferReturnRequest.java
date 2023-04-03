@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveAnInboundAchTransferReturnRequest {
-    
-    public RetrieveAnInboundAchTransferReturnPathParams pathParams;
-    public RetrieveAnInboundAchTransferReturnRequest withPathParams(RetrieveAnInboundAchTransferReturnPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=inbound_ach_transfer_return_id")
+    public String inboundAchTransferReturnId;
+    public RetrieveAnInboundAchTransferReturnRequest withInboundAchTransferReturnId(String inboundAchTransferReturnId) {
+        this.inboundAchTransferReturnId = inboundAchTransferReturnId;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesGetLatestByPublicDistributionGroupRequest {
-    
-    public ReleasesGetLatestByPublicDistributionGroupPathParams pathParams;
-    public ReleasesGetLatestByPublicDistributionGroupRequest withPathParams(ReleasesGetLatestByPublicDistributionGroupPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The secret of the target application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_secret")
+    public String appSecret;
+    public ReleasesGetLatestByPublicDistributionGroupRequest withAppSecret(String appSecret) {
+        this.appSecret = appSecret;
         return this;
     }
     
+    /**
+     * the id for destination
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=distribution_group_id")
+    public String distributionGroupId;
+    public ReleasesGetLatestByPublicDistributionGroupRequest withDistributionGroupId(String distributionGroupId) {
+        this.distributionGroupId = distributionGroupId;
+        return this;
+    }
     
-    public ReleasesGetLatestByPublicDistributionGroupQueryParams queryParams;
-    public ReleasesGetLatestByPublicDistributionGroupRequest withQueryParams(ReleasesGetLatestByPublicDistributionGroupQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The check if the request is from Install page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_install_page")
+    public Boolean isInstallPage;
+    public ReleasesGetLatestByPublicDistributionGroupRequest withIsInstallPage(Boolean isInstallPage) {
+        this.isInstallPage = isInstallPage;
         return this;
     }
     

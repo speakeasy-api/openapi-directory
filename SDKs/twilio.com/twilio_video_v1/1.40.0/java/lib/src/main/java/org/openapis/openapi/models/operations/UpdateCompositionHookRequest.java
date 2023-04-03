@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCompositionHookRequest {
-    
-    public UpdateCompositionHookPathParams pathParams;
-    public UpdateCompositionHookRequest withPathParams(UpdateCompositionHookPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateCompositionHookUpdateCompositionHookRequest request;
-    public UpdateCompositionHookRequest withRequest(UpdateCompositionHookUpdateCompositionHookRequest request) {
-        this.request = request;
+    public UpdateCompositionHookUpdateCompositionHookRequest requestBody;
+    public UpdateCompositionHookRequest withRequestBody(UpdateCompositionHookUpdateCompositionHookRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateCompositionHookSecurity security;
-    public UpdateCompositionHookRequest withSecurity(UpdateCompositionHookSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateCompositionHookRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the CompositionHook resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateCompositionHookRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

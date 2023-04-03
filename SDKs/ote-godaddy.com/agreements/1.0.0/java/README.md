@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetQueryParams;
-import org.openapis.openapi.models.operations.GetHeaders;
 import org.openapis.openapi.models.operations.GetRequest;
 import org.openapis.openapi.models.operations.GetResponse;
 
@@ -29,18 +27,14 @@ public class Application {
                 .build();
 
             GetRequest req = new GetRequest() {{
-                queryParams = new GetQueryParams() {{
-                    keys = new String[]{{
-                        add("provident"),
-                        add("distinctio"),
-                        add("quibusdam"),
-                    }};
+                xMarketId = "corrupti";
+                xPrivateLabelId = 592845;
+                keys = new String[]{{
+                    add("quibusdam"),
+                    add("unde"),
+                    add("nulla"),
                 }};
-                headers = new GetHeaders() {{
-                    xMarketId = "unde";
-                    xPrivateLabelId = 857946;
-                }};
-            }};            
+            }}            
 
             GetResponse res = sdk.v1.get(req);
 
@@ -54,7 +48,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### v1

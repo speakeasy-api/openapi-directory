@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAnnotationsByRgdIdUsingGETRequest {
-    
-    public GETAnnotationsByRgdIdUsingGETPathParams pathParams;
-    public GETAnnotationsByRgdIdUsingGETRequest withPathParams(GETAnnotationsByRgdIdUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * RGD ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rgdId")
+    public Integer rgdId;
+    public GETAnnotationsByRgdIdUsingGETRequest withRgdId(Integer rgdId) {
+        this.rgdId = rgdId;
         return this;
     }
     

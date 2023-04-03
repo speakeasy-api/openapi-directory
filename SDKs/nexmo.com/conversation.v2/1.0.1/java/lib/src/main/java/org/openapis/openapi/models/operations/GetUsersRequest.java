@@ -4,13 +4,39 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersRequest {
+    /**
+     * The cursor to start returning results from.
+     * 
+     * You are not expected to provide this manually, but to follow the url provided in `_links.next.href` in the response which contains a `cursor` value
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public GetUsersRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
     
-    public GetUsersQueryParams queryParams;
-    public GetUsersRequest withQueryParams(GetUsersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Show the most (`desc`) / least (`asc`) recently created entries first
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public org.openapis.openapi.models.shared.OrderEnum order;
+    public GetUsersRequest withOrder(org.openapis.openapi.models.shared.OrderEnum order) {
+        this.order = order;
+        return this;
+    }
+    
+    /**
+     * The number of results returned per page.   The default value is `10`. The maximum value is `100`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public GetUsersRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

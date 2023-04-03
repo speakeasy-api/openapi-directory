@@ -41,13 +41,13 @@ public class SalesEntries {
      */
     public org.openapis.openapi.models.operations.SalesEntriesDeleteResponse salesEntriesDelete(org.openapis.openapi.models.operations.SalesEntriesDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SalesEntriesDeletePathParams.class, baseUrl, "/v1/salesEntries/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SalesEntriesDeleteRequest.class, baseUrl, "/v1/salesEntries/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SalesEntriesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SalesEntriesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -120,7 +120,7 @@ public class SalesEntries {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SalesEntriesPostResponse salesEntriesPost(org.openapis.openapi.models.operations.SalesEntriesPostRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SalesEntriesPostResponse salesEntriesPost(org.openapis.openapi.models.shared.SalesEntryDto request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/salesEntries");
         
@@ -163,7 +163,7 @@ public class SalesEntries {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SalesEntriesProcessBatchResponse salesEntriesProcessBatch(org.openapis.openapi.models.operations.SalesEntriesProcessBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SalesEntriesProcessBatchResponse salesEntriesProcessBatch(org.openapis.openapi.models.shared.BatchItemSalesEntryDto[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/salesEntries/batch");
         
@@ -208,12 +208,12 @@ public class SalesEntries {
      */
     public org.openapis.openapi.models.operations.SalesEntriesPutResponse salesEntriesPut(org.openapis.openapi.models.operations.SalesEntriesPutRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SalesEntriesPutPathParams.class, baseUrl, "/v1/salesEntries/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SalesEntriesPutRequest.class, baseUrl, "/v1/salesEntries/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "salesEntryDto", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -251,7 +251,7 @@ public class SalesEntries {
      */
     public org.openapis.openapi.models.operations.GetV1SalesEntriesIdResponse getV1SalesEntriesId(org.openapis.openapi.models.operations.GetV1SalesEntriesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV1SalesEntriesIdPathParams.class, baseUrl, "/v1/salesEntries/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV1SalesEntriesIdRequest.class, baseUrl, "/v1/salesEntries/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

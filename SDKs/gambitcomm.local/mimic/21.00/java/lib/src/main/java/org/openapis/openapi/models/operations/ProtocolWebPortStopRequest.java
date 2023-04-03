@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolWebPortStopRequest {
+    /**
+     * Agent to stop WEB port
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolWebPortStopRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolWebPortStopPathParams pathParams;
-    public ProtocolWebPortStopRequest withPathParams(ProtocolWebPortStopPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * TCP port
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=port")
+    public Integer port;
+    public ProtocolWebPortStopRequest withPort(Integer port) {
+        this.port = port;
         return this;
     }
     

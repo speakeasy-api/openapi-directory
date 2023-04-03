@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteApiV1WebhookSubscriptionsIdRequest {
-    
-    public DeleteApiV1WebhookSubscriptionsIdPathParams pathParams;
-    public DeleteApiV1WebhookSubscriptionsIdRequest withPathParams(DeleteApiV1WebhookSubscriptionsIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteApiV1WebhookSubscriptionsIdSecurity security;
-    public DeleteApiV1WebhookSubscriptionsIdRequest withSecurity(DeleteApiV1WebhookSubscriptionsIdSecurity security) {
-        this.security = security;
+    /**
+     * The id of the webhook subscription to be retrieved
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteApiV1WebhookSubscriptionsIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

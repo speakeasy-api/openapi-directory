@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateChatTokenHeaders;
 import org.openapis.openapi.models.operations.CreateChatTokenRequestBody;
 import org.openapis.openapi.models.operations.CreateChatTokenRequest;
 import org.openapis.openapi.models.operations.CreateChatTokenResponse;
@@ -15,40 +14,35 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateChatTokenRequest req = new CreateChatTokenRequest() {{
-                headers = new CreateChatTokenHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new CreateChatTokenRequestBody() {{
+                requestBody = new CreateChatTokenRequestBody() {{
                     attributes = new java.util.HashMap<String, String>() {{
-                        put("vel", "error");
-                        put("deserunt", "suscipit");
-                        put("iure", "magnam");
-                        put("debitis", "ipsa");
+                        put("provident", "distinctio");
+                        put("quibusdam", "unde");
+                        put("nulla", "corrupti");
                     }};
                     capabilities = new org.openapis.openapi.models.shared.ChatTokenCapabilityEnum[]{{
-                        add("SEND_MESSAGE"),
                         add("DISCONNECT_USER"),
                         add("DISCONNECT_USER"),
-                        add("DELETE_MESSAGE"),
+                        add("DISCONNECT_USER"),
+                        add("DISCONNECT_USER"),
                     }};
-                    roomIdentifier = "placeat";
-                    sessionDurationInMinutes = 528895;
-                    userId = "iusto";
+                    roomIdentifier = "iure";
+                    sessionDurationInMinutes = 297534;
+                    userId = "debitis";
                 }};
-            }};            
+                xAmzAlgorithm = "ipsa";
+                xAmzContentSha256 = "delectus";
+                xAmzCredential = "tempora";
+                xAmzDate = "suscipit";
+                xAmzSecurityToken = "molestiae";
+                xAmzSignature = "minus";
+                xAmzSignedHeaders = "placeat";
+            }}            
 
             CreateChatTokenResponse res = sdk.createChatToken(req);
 

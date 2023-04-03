@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRealmClientsInitialAccessRequest {
-    
-    public GetRealmClientsInitialAccessPathParams pathParams;
-    public GetRealmClientsInitialAccessRequest withPathParams(GetRealmClientsInitialAccessPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public GetRealmClientsInitialAccessRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

@@ -31,7 +31,6 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetMerchandisedProductsSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetMerchandisedProductsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetMerchandisedProductsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetMerchandisedProductsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/BestSellingProductResponse.java
@@ -43,5 +42,4 @@ lib/src/main/java/org/openapis/openapi/models/shared/RatingAspectDistribution.ja
 lib/src/main/java/org/openapis/openapi/models/shared/MarketPriceDetail.java
 lib/src/main/java/org/openapis/openapi/models/shared/Amount.java
 lib/src/main/java/org/openapis/openapi/models/shared/Image.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeClientCredentials.java
 USAGE.md

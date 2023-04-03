@@ -4,13 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSearchV1ScrapeRequest {
+    /**
+     * Specifies a JavaScript function func, for a JSON-P response. When provided, results are wrapped as `callback(data)`, and the returned MIME type is application/javascript. This causes the caller to automatically run the func with the JSON results as its argument.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public GetSearchV1ScrapeRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
     
-    public GetSearchV1ScrapeQueryParams queryParams;
-    public GetSearchV1ScrapeRequest withQueryParams(GetSearchV1ScrapeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Cursor for scrolling (used for subsequent calls)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public GetSearchV1ScrapeRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
+    
+    /**
+     * Metadata field
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=field")
+    public String field;
+    public GetSearchV1ScrapeRequest withField(String field) {
+        this.field = field;
+        return this;
+    }
+    
+    /**
+     * Lucene-type search query
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public GetSearchV1ScrapeRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    /**
+     * Number of query results to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
+    public Long size;
+    public GetSearchV1ScrapeRequest withSize(Long size) {
+        this.size = size;
+        return this;
+    }
+    
+    /**
+     * sort collations
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetSearchV1ScrapeRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Request total only; do not return hits
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=total_only")
+    public Boolean totalOnly;
+    public GetSearchV1ScrapeRequest withTotalOnly(Boolean totalOnly) {
+        this.totalOnly = totalOnly;
         return this;
     }
     

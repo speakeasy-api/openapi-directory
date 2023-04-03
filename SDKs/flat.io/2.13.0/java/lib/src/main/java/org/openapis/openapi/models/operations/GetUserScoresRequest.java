@@ -4,27 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUserScoresRequest {
-    
-    public GetUserScoresPathParams pathParams;
-    public GetUserScoresRequest withPathParams(GetUserScoresPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filter the score forked from the score id `parent`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parent")
+    public String parent;
+    public GetUserScoresRequest withParent(String parent) {
+        this.parent = parent;
         return this;
     }
     
-    
-    public GetUserScoresQueryParams queryParams;
-    public GetUserScoresRequest withQueryParams(GetUserScoresQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetUserScoresSecurity security;
-    public GetUserScoresRequest withSecurity(GetUserScoresSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of a Flat user. If you authenticated, you can use `me` to refer to the current user.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user")
+    public String user;
+    public GetUserScoresRequest withUser(String user) {
+        this.user = user;
         return this;
     }
     

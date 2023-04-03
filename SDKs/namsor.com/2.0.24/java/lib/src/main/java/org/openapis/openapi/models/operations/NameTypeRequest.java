@@ -4,20 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NameTypeRequest {
-    
-    public NameTypePathParams pathParams;
-    public NameTypeRequest withPathParams(NameTypePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public NameTypeSecurity security;
-    public NameTypeRequest withSecurity(NameTypeSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=properNoun")
+    public String properNoun;
+    public NameTypeRequest withProperNoun(String properNoun) {
+        this.properNoun = properNoun;
         return this;
     }
     

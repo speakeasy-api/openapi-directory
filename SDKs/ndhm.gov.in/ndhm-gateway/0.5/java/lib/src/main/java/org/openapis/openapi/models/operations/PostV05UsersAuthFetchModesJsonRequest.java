@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05UsersAuthFetchModesJsonRequest {
-    
-    public PostV05UsersAuthFetchModesJsonHeaders headers;
-    public PostV05UsersAuthFetchModesJsonRequest withHeaders(PostV05UsersAuthFetchModesJsonHeaders headers) {
-        this.headers = headers;
+    /**
+     * Access token which was issued after successful login with gateway auth server.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostV05UsersAuthFetchModesJsonRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PatientAuthModeQueryRequest request;
-    public PostV05UsersAuthFetchModesJsonRequest withRequest(org.openapis.openapi.models.shared.PatientAuthModeQueryRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PatientAuthModeQueryRequest patientAuthModeQueryRequest;
+    public PostV05UsersAuthFetchModesJsonRequest withPatientAuthModeQueryRequest(org.openapis.openapi.models.shared.PatientAuthModeQueryRequest patientAuthModeQueryRequest) {
+        this.patientAuthModeQueryRequest = patientAuthModeQueryRequest;
+        return this;
+    }
+    
+    /**
+     * Suffix of the consent manager to which the request was intended.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-CM-ID")
+    public String xCmId;
+    public PostV05UsersAuthFetchModesJsonRequest withXCmId(String xCmId) {
+        this.xCmId = xCmId;
         return this;
     }
     

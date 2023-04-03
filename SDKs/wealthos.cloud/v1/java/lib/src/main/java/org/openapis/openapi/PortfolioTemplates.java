@@ -63,23 +63,24 @@ public class PortfolioTemplates {
     /**
      * Create new Portfolio Template
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreatePortfolioTemplateResponse createPortfolioTemplate(org.openapis.openapi.models.operations.CreatePortfolioTemplateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreatePortfolioTemplateResponse createPortfolioTemplate(org.openapis.openapi.models.operations.CreatePortfolioTemplateRequest request, org.openapis.openapi.models.operations.CreatePortfolioTemplateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/tenant/portfolio-templates/v1/");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -88,7 +89,7 @@ public class PortfolioTemplates {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -164,10 +165,11 @@ public class PortfolioTemplates {
      * Get all the Portfolio templates
      * Get all the portfolio templates
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAllPortfolioTemplatesResponse getAllPortfolioTemplates(org.openapis.openapi.models.operations.GetAllPortfolioTemplatesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetAllPortfolioTemplatesResponse getAllPortfolioTemplates(org.openapis.openapi.models.operations.GetAllPortfolioTemplatesRequest request, org.openapis.openapi.models.operations.GetAllPortfolioTemplatesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/tenant/portfolio-templates/v1/");
         
@@ -175,7 +177,7 @@ public class PortfolioTemplates {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -184,7 +186,7 @@ public class PortfolioTemplates {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -251,18 +253,19 @@ public class PortfolioTemplates {
     /**
      * Retrive existing Portfolio template
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPortfolioTemplateResponse getPortfolioTemplate(org.openapis.openapi.models.operations.GetPortfolioTemplateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPortfolioTemplateResponse getPortfolioTemplate(org.openapis.openapi.models.operations.GetPortfolioTemplateRequest request, org.openapis.openapi.models.operations.GetPortfolioTemplateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPortfolioTemplatePathParams.class, baseUrl, "/tenant/portfolio-templates/v1/{portfolio_template_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPortfolioTemplateRequest.class, baseUrl, "/tenant/portfolio-templates/v1/{portfolio_template_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -271,7 +274,7 @@ public class PortfolioTemplates {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -338,23 +341,24 @@ public class PortfolioTemplates {
     /**
      * Update existing Portfolio template
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdatePortfolioTemplateResponse updatePortfolioTemplate(org.openapis.openapi.models.operations.UpdatePortfolioTemplateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdatePortfolioTemplateResponse updatePortfolioTemplate(org.openapis.openapi.models.operations.UpdatePortfolioTemplateRequest request, org.openapis.openapi.models.operations.UpdatePortfolioTemplateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePortfolioTemplatePathParams.class, baseUrl, "/tenant/portfolio-templates/v1/{portfolio_template_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePortfolioTemplateRequest.class, baseUrl, "/tenant/portfolio-templates/v1/{portfolio_template_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -363,7 +367,7 @@ public class PortfolioTemplates {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

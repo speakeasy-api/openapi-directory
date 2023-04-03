@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetClicksRequest {
-    
-    public GetClicksQueryParams queryParams;
-    public GetClicksRequest withQueryParams(GetClicksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * An ID returned by a previous query to continue clicks retrieval (see lastId in response)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=continueFrom")
+    public String continueFrom;
+    public GetClicksRequest withContinueFrom(String continueFrom) {
+        this.continueFrom = continueFrom;
         return this;
     }
     
-    
-    public GetClicksSecurity security;
-    public GetClicksRequest withSecurity(GetClicksSecurity security) {
-        this.security = security;
+    /**
+     * Number of results to return per request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetClicksRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     

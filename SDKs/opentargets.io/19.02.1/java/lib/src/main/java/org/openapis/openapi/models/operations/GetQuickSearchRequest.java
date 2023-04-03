@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetQuickSearchRequest {
+    /**
+     * A full text query.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public GetQuickSearchRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
     
-    public GetQuickSearchQueryParams queryParams;
-    public GetQuickSearchRequest withQueryParams(GetQuickSearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Maximum amount of results to return. Defaults to 5.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
+    public String size;
+    public GetQuickSearchRequest withSize(String size) {
+        this.size = size;
         return this;
     }
     

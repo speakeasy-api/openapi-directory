@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetOauthV1AccessTokensTokenGetPathParams;
 import org.openapis.openapi.models.operations.GetOauthV1AccessTokensTokenGetRequest;
 import org.openapis.openapi.models.operations.GetOauthV1AccessTokensTokenGetResponse;
 
@@ -15,10 +14,8 @@ public class Application {
                 .build();
 
             GetOauthV1AccessTokensTokenGetRequest req = new GetOauthV1AccessTokensTokenGetRequest() {{
-                pathParams = new GetOauthV1AccessTokensTokenGetPathParams() {{
-                    token = "corrupti";
-                }};
-            }};            
+                token = "corrupti";
+            }}            
 
             GetOauthV1AccessTokensTokenGetResponse res = sdk.accessTokens.getOauthV1AccessTokensTokenGet(req);
 

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateCollectionPrivateLinksListRequest {
-    
-    public PrivateCollectionPrivateLinksListPathParams pathParams;
-    public PrivateCollectionPrivateLinksListRequest withPathParams(PrivateCollectionPrivateLinksListPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PrivateCollectionPrivateLinksListSecurity security;
-    public PrivateCollectionPrivateLinksListRequest withSecurity(PrivateCollectionPrivateLinksListSecurity security) {
-        this.security = security;
+    /**
+     * Collection unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection_id")
+    public Long collectionId;
+    public PrivateCollectionPrivateLinksListRequest withCollectionId(Long collectionId) {
+        this.collectionId = collectionId;
         return this;
     }
     

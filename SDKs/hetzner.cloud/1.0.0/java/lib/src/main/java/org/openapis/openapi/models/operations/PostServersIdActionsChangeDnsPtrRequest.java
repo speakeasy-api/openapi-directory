@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostServersIdActionsChangeDnsPtrRequest {
-    
-    public PostServersIdActionsChangeDnsPtrPathParams pathParams;
-    public PostServersIdActionsChangeDnsPtrRequest withPathParams(PostServersIdActionsChangeDnsPtrPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Select the IP address for which to change the DNS entry by passing `ip`. It can be either IPv4 or IPv6. The target hostname is set by passing `dns_ptr`.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostServersIdActionsChangeDnsPtrRequestBody request;
-    public PostServersIdActionsChangeDnsPtrRequest withRequest(PostServersIdActionsChangeDnsPtrRequestBody request) {
-        this.request = request;
+    public PostServersIdActionsChangeDnsPtrRequestBody requestBody;
+    public PostServersIdActionsChangeDnsPtrRequest withRequestBody(PostServersIdActionsChangeDnsPtrRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * ID of the Server
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public PostServersIdActionsChangeDnsPtrRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

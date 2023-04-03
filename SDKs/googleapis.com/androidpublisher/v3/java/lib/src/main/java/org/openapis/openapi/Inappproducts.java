@@ -34,25 +34,26 @@ public class Inappproducts {
     /**
      * Deletes an in-app product (i.e. a managed product or a subscriptions).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherInappproductsDeleteResponse androidpublisherInappproductsDelete(org.openapis.openapi.models.operations.AndroidpublisherInappproductsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherInappproductsDeleteResponse androidpublisherInappproductsDelete(org.openapis.openapi.models.operations.AndroidpublisherInappproductsDeleteRequest request, org.openapis.openapi.models.operations.AndroidpublisherInappproductsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherInappproductsDeletePathParams.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/inappproducts/{sku}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherInappproductsDeleteRequest.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/inappproducts/{sku}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherInappproductsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherInappproductsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -73,25 +74,26 @@ public class Inappproducts {
     /**
      * Gets an in-app product, which can be a managed product or a subscription.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherInappproductsGetResponse androidpublisherInappproductsGet(org.openapis.openapi.models.operations.AndroidpublisherInappproductsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherInappproductsGetResponse androidpublisherInappproductsGet(org.openapis.openapi.models.operations.AndroidpublisherInappproductsGetRequest request, org.openapis.openapi.models.operations.AndroidpublisherInappproductsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherInappproductsGetPathParams.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/inappproducts/{sku}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherInappproductsGetRequest.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/inappproducts/{sku}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherInappproductsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherInappproductsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -118,27 +120,28 @@ public class Inappproducts {
     /**
      * Creates an in-app product (i.e. a managed product or a subscriptions).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherInappproductsInsertResponse androidpublisherInappproductsInsert(org.openapis.openapi.models.operations.AndroidpublisherInappproductsInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherInappproductsInsertResponse androidpublisherInappproductsInsert(org.openapis.openapi.models.operations.AndroidpublisherInappproductsInsertRequest request, org.openapis.openapi.models.operations.AndroidpublisherInappproductsInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherInappproductsInsertPathParams.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/inappproducts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherInappproductsInsertRequest.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/inappproducts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "inAppProduct", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherInappproductsInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherInappproductsInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -165,25 +168,26 @@ public class Inappproducts {
     /**
      * Lists all in-app products - both managed products and subscriptions. If an app has a large number of in-app products, the response may be paginated. In this case the response field `tokenPagination.nextPageToken` will be set and the caller should provide its value as a `token` request parameter to retrieve the next page.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherInappproductsListResponse androidpublisherInappproductsList(org.openapis.openapi.models.operations.AndroidpublisherInappproductsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherInappproductsListResponse androidpublisherInappproductsList(org.openapis.openapi.models.operations.AndroidpublisherInappproductsListRequest request, org.openapis.openapi.models.operations.AndroidpublisherInappproductsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherInappproductsListPathParams.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/inappproducts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherInappproductsListRequest.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/inappproducts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherInappproductsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherInappproductsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -210,27 +214,28 @@ public class Inappproducts {
     /**
      * Patches an in-app product (i.e. a managed product or a subscriptions).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherInappproductsPatchResponse androidpublisherInappproductsPatch(org.openapis.openapi.models.operations.AndroidpublisherInappproductsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherInappproductsPatchResponse androidpublisherInappproductsPatch(org.openapis.openapi.models.operations.AndroidpublisherInappproductsPatchRequest request, org.openapis.openapi.models.operations.AndroidpublisherInappproductsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherInappproductsPatchPathParams.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/inappproducts/{sku}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherInappproductsPatchRequest.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/inappproducts/{sku}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "inAppProduct", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherInappproductsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherInappproductsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -257,27 +262,28 @@ public class Inappproducts {
     /**
      * Updates an in-app product (i.e. a managed product or a subscriptions).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherInappproductsUpdateResponse androidpublisherInappproductsUpdate(org.openapis.openapi.models.operations.AndroidpublisherInappproductsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherInappproductsUpdateResponse androidpublisherInappproductsUpdate(org.openapis.openapi.models.operations.AndroidpublisherInappproductsUpdateRequest request, org.openapis.openapi.models.operations.AndroidpublisherInappproductsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherInappproductsUpdatePathParams.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/inappproducts/{sku}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherInappproductsUpdateRequest.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/inappproducts/{sku}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "inAppProduct", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherInappproductsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherInappproductsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

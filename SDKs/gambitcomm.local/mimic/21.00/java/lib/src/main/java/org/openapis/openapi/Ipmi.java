@@ -39,7 +39,7 @@ public class Ipmi {
      */
     public org.openapis.openapi.models.operations.ProtocolIpmiGetArgsResponse protocolIpmiGetArgs(org.openapis.openapi.models.operations.ProtocolIpmiGetArgsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolIpmiGetArgsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/ipmi/get/args", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolIpmiGetArgsRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/ipmi/get/args", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -81,7 +81,7 @@ public class Ipmi {
      */
     public org.openapis.openapi.models.operations.ProtocolIpmiGetAttrResponse protocolIpmiGetAttr(org.openapis.openapi.models.operations.ProtocolIpmiGetAttrRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolIpmiGetAttrPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/ipmi/get/{attr}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolIpmiGetAttrRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/ipmi/get/{attr}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -122,7 +122,7 @@ public class Ipmi {
      */
     public org.openapis.openapi.models.operations.ProtocolIpmiGetConfigResponse protocolIpmiGetConfig(org.openapis.openapi.models.operations.ProtocolIpmiGetConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolIpmiGetConfigPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/ipmi/get/config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolIpmiGetConfigRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/ipmi/get/config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -164,7 +164,7 @@ public class Ipmi {
      */
     public org.openapis.openapi.models.operations.ProtocolIpmiGetStatisticsResponse protocolIpmiGetStatistics(org.openapis.openapi.models.operations.ProtocolIpmiGetStatisticsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolIpmiGetStatisticsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/ipmi/get/statistics", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolIpmiGetStatisticsRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/ipmi/get/statistics", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -247,7 +247,7 @@ public class Ipmi {
      */
     public org.openapis.openapi.models.operations.ProtocolIpmiGetTraceResponse protocolIpmiGetTrace(org.openapis.openapi.models.operations.ProtocolIpmiGetTraceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolIpmiGetTracePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/ipmi/get/trace", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolIpmiGetTraceRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/ipmi/get/trace", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -289,7 +289,7 @@ public class Ipmi {
      */
     public org.openapis.openapi.models.operations.ProtocolIpmiSetAttrResponse protocolIpmiSetAttr(org.openapis.openapi.models.operations.ProtocolIpmiSetAttrRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolIpmiSetAttrPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/ipmi/set/{attr}/{value}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolIpmiSetAttrRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/ipmi/set/{attr}/{value}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -330,7 +330,7 @@ public class Ipmi {
      */
     public org.openapis.openapi.models.operations.ProtocolIpmiSetConfigResponse protocolIpmiSetConfig(org.openapis.openapi.models.operations.ProtocolIpmiSetConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolIpmiSetConfigPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/ipmi/set/config/{argument}/{value}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolIpmiSetConfigRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/ipmi/set/config/{argument}/{value}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -371,7 +371,7 @@ public class Ipmi {
      */
     public org.openapis.openapi.models.operations.ProtocolIpmiSetTraceResponse protocolIpmiSetTrace(org.openapis.openapi.models.operations.ProtocolIpmiSetTraceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolIpmiSetTracePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/ipmi/set/trace/{enableOrNot}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolIpmiSetTraceRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/ipmi/set/trace/{enableOrNot}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

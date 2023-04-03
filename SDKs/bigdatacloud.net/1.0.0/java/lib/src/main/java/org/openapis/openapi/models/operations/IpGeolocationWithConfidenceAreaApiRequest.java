@@ -4,13 +4,39 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IpGeolocationWithConfidenceAreaApiRequest {
+    /**
+     * IPv4 IP address in a string or numeric format. If omitted, the caller\u2019s IP address is assumed
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ip")
+    public String ip;
+    public IpGeolocationWithConfidenceAreaApiRequest withIp(String ip) {
+        this.ip = ip;
+        return this;
+    }
     
-    public IpGeolocationWithConfidenceAreaApiQueryParams queryParams;
-    public IpGeolocationWithConfidenceAreaApiRequest withQueryParams(IpGeolocationWithConfidenceAreaApiQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Your API key
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public IpGeolocationWithConfidenceAreaApiRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Preferred language for locality names in ISO 639-1 format, such as 'en' for English, 'es' for Spanish etc. Please note: 147 common world languages are supported, full list here, but not all languages are available for every location. If requested language is not available for a requested location it will default to English, if no English is available, the native, local names will be provided
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=localityLanguage")
+    public String localityLanguage;
+    public IpGeolocationWithConfidenceAreaApiRequest withLocalityLanguage(String localityLanguage) {
+        this.localityLanguage = localityLanguage;
         return this;
     }
     

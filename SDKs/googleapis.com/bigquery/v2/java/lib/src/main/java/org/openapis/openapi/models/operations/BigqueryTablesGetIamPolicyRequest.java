@@ -7,31 +7,90 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BigqueryTablesGetIamPolicyRequest {
-    
-    public BigqueryTablesGetIamPolicyPathParams pathParams;
-    public BigqueryTablesGetIamPolicyRequest withPathParams(BigqueryTablesGetIamPolicyPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public BigqueryTablesGetIamPolicyQueryParams queryParams;
-    public BigqueryTablesGetIamPolicyRequest withQueryParams(BigqueryTablesGetIamPolicyQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GetIamPolicyRequest request;
-    public BigqueryTablesGetIamPolicyRequest withRequest(org.openapis.openapi.models.shared.GetIamPolicyRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GetIamPolicyRequest getIamPolicyRequest;
+    public BigqueryTablesGetIamPolicyRequest withGetIamPolicyRequest(org.openapis.openapi.models.shared.GetIamPolicyRequest getIamPolicyRequest) {
+        this.getIamPolicyRequest = getIamPolicyRequest;
         return this;
     }
     
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public BigqueryTablesGetIamPolicyRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public BigqueryTablesGetIamPolicySecurity security;
-    public BigqueryTablesGetIamPolicyRequest withSecurity(BigqueryTablesGetIamPolicySecurity security) {
-        this.security = security;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public BigqueryTablesGetIamPolicyRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public BigqueryTablesGetIamPolicyRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public BigqueryTablesGetIamPolicyRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public BigqueryTablesGetIamPolicyRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public BigqueryTablesGetIamPolicyRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * REQUIRED: The resource for which the policy is being requested. See [Resource names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this field.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=resource")
+    public String resource;
+    public BigqueryTablesGetIamPolicyRequest withResource(String resource) {
+        this.resource = resource;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public BigqueryTablesGetIamPolicyRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

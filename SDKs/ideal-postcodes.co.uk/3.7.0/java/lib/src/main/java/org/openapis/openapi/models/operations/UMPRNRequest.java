@@ -4,20 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UMPRNRequest {
-    
-    public UMPRNPathParams pathParams;
-    public UMPRNRequest withPathParams(UMPRNPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=api_key")
+    public String apiKey;
+    public UMPRNRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=filter")
+    public String filter;
+    public UMPRNRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
     
-    public UMPRNQueryParams queryParams;
-    public UMPRNRequest withQueryParams(UMPRNQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * UMPRN to be retrieved
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=umprn")
+    public String umprn;
+    public UMPRNRequest withUmprn(String umprn) {
+        this.umprn = umprn;
         return this;
     }
     

@@ -41,7 +41,7 @@ public class SegmentQueryFilters {
      */
     public org.openapis.openapi.models.operations.GETSegmentQueryFiltersConfigUsingGETResponse getSegmentQueryFiltersConfigUsingGET(org.openapis.openapi.models.operations.GETSegmentQueryFiltersConfigUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETSegmentQueryFiltersConfigUsingGETPathParams.class, baseUrl, "/restv2/game/{apiKey}/admin/segmentQueryFilters/config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETSegmentQueryFiltersConfigUsingGETRequest.class, baseUrl, "/restv2/game/{apiKey}/admin/segmentQueryFilters/config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -89,7 +89,7 @@ public class SegmentQueryFilters {
      */
     public org.openapis.openapi.models.operations.GETSegmentQueryFiltersUsingGETResponse getSegmentQueryFiltersUsingGET(org.openapis.openapi.models.operations.GETSegmentQueryFiltersUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETSegmentQueryFiltersUsingGETPathParams.class, baseUrl, "/restv2/game/{apiKey}/admin/segmentQueryFilters", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETSegmentQueryFiltersUsingGETRequest.class, baseUrl, "/restv2/game/{apiKey}/admin/segmentQueryFilters", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -137,7 +137,7 @@ public class SegmentQueryFilters {
      */
     public org.openapis.openapi.models.operations.GETSegmentQueryStandardFiltersUsingGETResponse getSegmentQueryStandardFiltersUsingGET(org.openapis.openapi.models.operations.GETSegmentQueryStandardFiltersUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETSegmentQueryStandardFiltersUsingGETPathParams.class, baseUrl, "/restv2/game/{apiKey}/admin/segmentQueryFilters/standardFilters", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETSegmentQueryStandardFiltersUsingGETRequest.class, baseUrl, "/restv2/game/{apiKey}/admin/segmentQueryFilters/standardFilters", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -185,12 +185,12 @@ public class SegmentQueryFilters {
      */
     public org.openapis.openapi.models.operations.UpdateSegmentQueryFiltersConfigUsingPUTResponse updateSegmentQueryFiltersConfigUsingPUT(org.openapis.openapi.models.operations.UpdateSegmentQueryFiltersConfigUsingPUTRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSegmentQueryFiltersConfigUsingPUTPathParams.class, baseUrl, "/restv2/game/{apiKey}/admin/segmentQueryFilters/config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSegmentQueryFiltersConfigUsingPUTRequest.class, baseUrl, "/restv2/game/{apiKey}/admin/segmentQueryFilters/config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "segmentQueryFilterConfigModel", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

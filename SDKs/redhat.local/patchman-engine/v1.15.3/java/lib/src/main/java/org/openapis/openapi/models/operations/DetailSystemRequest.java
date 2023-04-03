@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DetailSystemRequest {
-    
-    public DetailSystemPathParams pathParams;
-    public DetailSystemRequest withPathParams(DetailSystemPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DetailSystemSecurity security;
-    public DetailSystemRequest withSecurity(DetailSystemSecurity security) {
-        this.security = security;
+    /**
+     * Inventory ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=inventory_id")
+    public String inventoryId;
+    public DetailSystemRequest withInventoryId(String inventoryId) {
+        this.inventoryId = inventoryId;
         return this;
     }
     

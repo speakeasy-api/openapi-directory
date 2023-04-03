@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetInputFileRequest {
-    
-    public GetInputFilePathParams pathParams;
-    public GetInputFileRequest withPathParams(GetInputFilePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetInputFileSecurity security;
-    public GetInputFileRequest withSecurity(GetInputFileSecurity security) {
-        this.security = security;
+    /**
+     * The task ID associated with the file to be downloaded.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=task_id")
+    public String taskId;
+    public GetInputFileRequest withTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
     

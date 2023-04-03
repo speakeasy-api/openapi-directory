@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DELETESnippetUsingDELETERequest {
+    /**
+     * apiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public DELETESnippetUsingDELETERequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public DELETESnippetUsingDELETEPathParams pathParams;
-    public DELETESnippetUsingDELETERequest withPathParams(DELETESnippetUsingDELETEPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * shortCode
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortCode")
+    public String shortCode;
+    public DELETESnippetUsingDELETERequest withShortCode(String shortCode) {
+        this.shortCode = shortCode;
         return this;
     }
     

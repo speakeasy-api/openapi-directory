@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2GetCharacterRequest {
-    
-    public Destiny2GetCharacterPathParams pathParams;
-    public Destiny2GetCharacterRequest withPathParams(Destiny2GetCharacterPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the character.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=characterId")
+    public Long characterId;
+    public Destiny2GetCharacterRequest withCharacterId(Long characterId) {
+        this.characterId = characterId;
         return this;
     }
     
+    /**
+     * A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=components")
+    public Integer[] components;
+    public Destiny2GetCharacterRequest withComponents(Integer[] components) {
+        this.components = components;
+        return this;
+    }
     
-    public Destiny2GetCharacterQueryParams queryParams;
-    public Destiny2GetCharacterRequest withQueryParams(Destiny2GetCharacterQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Destiny membership ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destinyMembershipId")
+    public Long destinyMembershipId;
+    public Destiny2GetCharacterRequest withDestinyMembershipId(Long destinyMembershipId) {
+        this.destinyMembershipId = destinyMembershipId;
+        return this;
+    }
+    
+    /**
+     * A valid non-BungieNet membership type.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
+    public Integer membershipType;
+    public Destiny2GetCharacterRequest withMembershipType(Integer membershipType) {
+        this.membershipType = membershipType;
         return this;
     }
     

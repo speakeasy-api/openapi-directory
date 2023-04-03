@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.ChangePasswordPathParams;
 import org.openapis.openapi.models.operations.ChangePasswordRequest;
 import org.openapis.openapi.models.operations.ChangePasswordResponse;
 import org.openapis.openapi.models.shared.Secret;
@@ -16,13 +15,11 @@ public class Application {
                 .build();
 
             ChangePasswordRequest req = new ChangePasswordRequest() {{
-                pathParams = new ChangePasswordPathParams() {{
-                    shopperId = "corrupti";
-                }};
-                request = new Secret() {{
+                secret = new Secret() {{
                     secret = "P@55w0rd+";
                 }};
-            }};            
+                shopperId = "corrupti";
+            }}            
 
             ChangePasswordResponse res = sdk.v1.changePassword(req);
 

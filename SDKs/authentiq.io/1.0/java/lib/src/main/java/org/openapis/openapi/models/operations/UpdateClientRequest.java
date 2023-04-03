@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateClientRequest {
-    
-    public UpdateClientPathParams pathParams;
-    public UpdateClientRequest withPathParams(UpdateClientPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Client Object
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Client request;
-    public UpdateClientRequest withRequest(org.openapis.openapi.models.shared.Client request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Client client;
+    public UpdateClientRequest withClient(org.openapis.openapi.models.shared.Client client) {
+        this.client = client;
         return this;
     }
     
-    
-    public UpdateClientSecurity security;
-    public UpdateClientRequest withSecurity(UpdateClientSecurity security) {
-        this.security = security;
+    /**
+     * Client identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=client_id")
+    public String clientId;
+    public UpdateClientRequest withClientId(String clientId) {
+        this.clientId = clientId;
         return this;
     }
     

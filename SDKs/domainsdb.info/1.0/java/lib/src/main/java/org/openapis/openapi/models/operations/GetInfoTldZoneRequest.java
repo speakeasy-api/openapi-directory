@@ -4,20 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetInfoTldZoneRequest {
-    
-    public GetInfoTldZonePathParams pathParams;
-    public GetInfoTldZoneRequest withPathParams(GetInfoTldZonePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Results per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetInfoTldZoneRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * Search page to request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public String page;
+    public GetInfoTldZoneRequest withPage(String page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetInfoTldZoneQueryParams queryParams;
-    public GetInfoTldZoneRequest withQueryParams(GetInfoTldZoneQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=zone")
+    public String zone;
+    public GetInfoTldZoneRequest withZone(String zone) {
+        this.zone = zone;
         return this;
     }
     

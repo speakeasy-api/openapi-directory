@@ -7,31 +7,180 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeServiceAttachmentsPatchRequest {
-    
-    public ComputeServiceAttachmentsPatchPathParams pathParams;
-    public ComputeServiceAttachmentsPatchRequest withPathParams(ComputeServiceAttachmentsPatchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ComputeServiceAttachmentsPatchQueryParams queryParams;
-    public ComputeServiceAttachmentsPatchRequest withQueryParams(ComputeServiceAttachmentsPatchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public ComputeServiceAttachmentsPatchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ServiceAttachment request;
-    public ComputeServiceAttachmentsPatchRequest withRequest(org.openapis.openapi.models.shared.ServiceAttachment request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ServiceAttachment serviceAttachment1;
+    public ComputeServiceAttachmentsPatchRequest withServiceAttachment1(org.openapis.openapi.models.shared.ServiceAttachment serviceAttachment1) {
+        this.serviceAttachment1 = serviceAttachment1;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public ComputeServiceAttachmentsPatchRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public ComputeServiceAttachmentsPatchSecurity security;
-    public ComputeServiceAttachmentsPatchRequest withSecurity(ComputeServiceAttachmentsPatchSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public ComputeServiceAttachmentsPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public ComputeServiceAttachmentsPatchRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public ComputeServiceAttachmentsPatchRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public ComputeServiceAttachmentsPatchRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public ComputeServiceAttachmentsPatchRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public ComputeServiceAttachmentsPatchRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Project ID for this request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public ComputeServiceAttachmentsPatchRequest withProject(String project) {
+        this.project = project;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public ComputeServiceAttachmentsPatchRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * This flag determines how to change the status of consumer connections, when the connection policy for the corresponding project or network is modified. If the flag is false, the default case, then existing ACCEPTED and REJECTED consumer connections stay in that state. For example, even if the project is removed from the accept list, existing ACCEPTED connections will stay the same. If the flag is true, then the connection can change from ACCEPTED or REJECTED to pending when the connection policy is modified. For example, if a project is removed from the reject list, its existing REJECTED connections will move to the PENDING state. If the project is also added to the accept list, then those connections will move to the ACCEPTED state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reconcileConnections")
+    public Boolean reconcileConnections;
+    public ComputeServiceAttachmentsPatchRequest withReconcileConnections(Boolean reconcileConnections) {
+        this.reconcileConnections = reconcileConnections;
+        return this;
+    }
+    
+    /**
+     * The region scoping this request and should conform to RFC1035.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=region")
+    public String region;
+    public ComputeServiceAttachmentsPatchRequest withRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    
+    /**
+     * An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
+    public String requestId;
+    public ComputeServiceAttachmentsPatchRequest withRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    
+    /**
+     * The resource id of the ServiceAttachment to patch. It should conform to RFC1035 resource name or be a string form on an unsigned long number.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serviceAttachment")
+    public String serviceAttachmentPathParameter;
+    public ComputeServiceAttachmentsPatchRequest withServiceAttachmentPathParameter(String serviceAttachmentPathParameter) {
+        this.serviceAttachmentPathParameter = serviceAttachmentPathParameter;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public ComputeServiceAttachmentsPatchRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public ComputeServiceAttachmentsPatchRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
+        return this;
+    }
+    
+    /**
+     * Legacy name for parameter that has been superseded by `quotaUser`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public ComputeServiceAttachmentsPatchRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

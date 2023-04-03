@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateCredentialListRequest {
-    
-    public CreateCredentialListPathParams pathParams;
-    public CreateCredentialListRequest withPathParams(CreateCredentialListPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateCredentialListCreateCredentialListRequest request;
-    public CreateCredentialListRequest withRequest(CreateCredentialListCreateCredentialListRequest request) {
-        this.request = request;
+    public CreateCredentialListCreateCredentialListRequest requestBody;
+    public CreateCredentialListRequest withRequestBody(CreateCredentialListCreateCredentialListRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateCredentialListSecurity security;
-    public CreateCredentialListRequest withSecurity(CreateCredentialListSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateCredentialListRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Trunk to associate the credential list with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TrunkSid")
+    public String trunkSid;
+    public CreateCredentialListRequest withTrunkSid(String trunkSid) {
+        this.trunkSid = trunkSid;
         return this;
     }
     

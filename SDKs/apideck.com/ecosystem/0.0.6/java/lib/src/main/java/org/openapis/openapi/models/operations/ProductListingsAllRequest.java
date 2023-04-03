@@ -4,20 +4,43 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProductListingsAllRequest {
-    
-    public ProductListingsAllPathParams pathParams;
-    public ProductListingsAllRequest withPathParams(ProductListingsAllPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public ProductListingsAllRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ecosystem_id")
+    public String ecosystemId;
+    public ProductListingsAllRequest withEcosystemId(String ecosystemId) {
+        this.ecosystemId = ecosystemId;
+        return this;
+    }
     
-    public ProductListingsAllQueryParams queryParams;
-    public ProductListingsAllRequest withQueryParams(ProductListingsAllQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * ID of the record you are acting upon.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public ProductListingsAllRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Number of records to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ProductListingsAllRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     

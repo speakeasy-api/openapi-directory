@@ -4,13 +4,106 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConsumerV1LocationsRequest {
+    /**
+     * Frienldy Id of location
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=friendlyId")
+    public String friendlyId;
+    public GetConsumerV1LocationsRequest withFriendlyId(String friendlyId) {
+        this.friendlyId = friendlyId;
+        return this;
+    }
     
-    public GetConsumerV1LocationsQueryParams queryParams;
-    public GetConsumerV1LocationsRequest withQueryParams(GetConsumerV1LocationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Don't include the Primary Location
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ignorePrimary")
+    public Boolean ignorePrimary;
+    public GetConsumerV1LocationsRequest withIgnorePrimary(Boolean ignorePrimary) {
+        this.ignorePrimary = ignorePrimary;
+        return this;
+    }
+    
+    /**
+     * Page limit, default 20, max 100
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetConsumerV1LocationsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Location name (full or partial)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public GetConsumerV1LocationsRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Search by distance nearest Geocoords, City, Postal/Zip Code
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nearestTo")
+    public String nearestTo;
+    public GetConsumerV1LocationsRequest withNearestTo(String nearestTo) {
+        this.nearestTo = nearestTo;
+        return this;
+    }
+    
+    /**
+     * Starting row of page, default 0
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public GetConsumerV1LocationsRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Maximum distance to display
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=proximity")
+    public Integer proximity;
+    public GetConsumerV1LocationsRequest withProximity(Integer proximity) {
+        this.proximity = proximity;
+        return this;
+    }
+    
+    /**
+     * Locations within a specific region
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=regionId")
+    public String regionId;
+    public GetConsumerV1LocationsRequest withRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    
+    /**
+     * Locations that offer this service
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceId")
+    public String serviceId;
+    public GetConsumerV1LocationsRequest withServiceId(String serviceId) {
+        this.serviceId = serviceId;
+        return this;
+    }
+    
+    /**
+     * Distance either imperial(miles), metric(kilometers)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=units")
+    public String units;
+    public GetConsumerV1LocationsRequest withUnits(String units) {
+        this.units = units;
         return this;
     }
     

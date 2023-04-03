@@ -35,25 +35,26 @@ public class Users {
     /**
      * Retrieves the profile information used for logging in to a virtual machine on Google Compute Engine.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileResponse osloginUsersGetLoginProfile(org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileResponse osloginUsersGetLoginProfile(org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileRequest request, org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsloginUsersGetLoginProfilePathParams.class, baseUrl, "/v1beta/{name}/loginProfile", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileRequest.class, baseUrl, "/v1beta/{name}/loginProfile", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -80,27 +81,28 @@ public class Users {
     /**
      * Adds an SSH public key and returns the profile information. Default POSIX account information is set when no username and UID exist as part of the login profile.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OsloginUsersImportSshPublicKeyResponse osloginUsersImportSshPublicKey(org.openapis.openapi.models.operations.OsloginUsersImportSshPublicKeyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OsloginUsersImportSshPublicKeyResponse osloginUsersImportSshPublicKey(org.openapis.openapi.models.operations.OsloginUsersImportSshPublicKeyRequest request, org.openapis.openapi.models.operations.OsloginUsersImportSshPublicKeySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsloginUsersImportSshPublicKeyPathParams.class, baseUrl, "/v1beta/{parent}:importSshPublicKey", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsloginUsersImportSshPublicKeyRequest.class, baseUrl, "/v1beta/{parent}:importSshPublicKey", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "sshPublicKeyInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsloginUsersImportSshPublicKeyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsloginUsersImportSshPublicKeyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,27 +129,28 @@ public class Users {
     /**
      * Create an SSH public key
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysCreateResponse osloginUsersSshPublicKeysCreate(org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysCreateResponse osloginUsersSshPublicKeysCreate(org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysCreateRequest request, org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysCreatePathParams.class, baseUrl, "/v1beta/{parent}/sshPublicKeys", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysCreateRequest.class, baseUrl, "/v1beta/{parent}/sshPublicKeys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "sshPublicKeyInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,25 +177,26 @@ public class Users {
     /**
      * Deletes an SSH public key.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysDeleteResponse osloginUsersSshPublicKeysDelete(org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysDeleteResponse osloginUsersSshPublicKeysDelete(org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysDeleteRequest request, org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysDeletePathParams.class, baseUrl, "/v1beta/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysDeleteRequest.class, baseUrl, "/v1beta/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -219,25 +223,26 @@ public class Users {
     /**
      * Retrieves an SSH public key.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysGetResponse osloginUsersSshPublicKeysGet(org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysGetResponse osloginUsersSshPublicKeysGet(org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysGetRequest request, org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysGetPathParams.class, baseUrl, "/v1beta/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysGetRequest.class, baseUrl, "/v1beta/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -264,27 +269,28 @@ public class Users {
     /**
      * Updates an SSH public key and returns the profile information. This method supports patch semantics.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysPatchResponse osloginUsersSshPublicKeysPatch(org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysPatchResponse osloginUsersSshPublicKeysPatch(org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysPatchRequest request, org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysPatchPathParams.class, baseUrl, "/v1beta/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysPatchRequest.class, baseUrl, "/v1beta/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "sshPublicKeyInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsloginUsersSshPublicKeysPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

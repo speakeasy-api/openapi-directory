@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LicensesReadRequest {
-    
-    public LicensesReadPathParams pathParams;
-    public LicensesReadRequest withPathParams(LicensesReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the license.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=license_id")
+    public String licenseId;
+    public LicensesReadRequest withLicenseId(String licenseId) {
+        this.licenseId = licenseId;
         return this;
     }
     

@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetHostRequest {
-    
-    public GetHostPathParams pathParams;
-    public GetHostRequest withPathParams(GetHostPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetHostRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetHostQueryParams queryParams;
-    public GetHostRequest withQueryParams(GetHostQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetHostSecurity security;
-    public GetHostRequest withSecurity(GetHostSecurity security) {
-        this.security = security;
+    /**
+     * time in epoch seconds
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=time")
+    public Long time;
+    public GetHostRequest withTime(Long time) {
+        this.time = time;
         return this;
     }
     

@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchSipAuthCallsCredentialListMappingRequest {
-    
-    public FetchSipAuthCallsCredentialListMappingPathParams pathParams;
-    public FetchSipAuthCallsCredentialListMappingRequest withPathParams(FetchSipAuthCallsCredentialListMappingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the CredentialListMapping resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public FetchSipAuthCallsCredentialListMappingRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public FetchSipAuthCallsCredentialListMappingSecurity security;
-    public FetchSipAuthCallsCredentialListMappingRequest withSecurity(FetchSipAuthCallsCredentialListMappingSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the SIP domain that contains the resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DomainSid")
+    public String domainSid;
+    public FetchSipAuthCallsCredentialListMappingRequest withDomainSid(String domainSid) {
+        this.domainSid = domainSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public FetchSipAuthCallsCredentialListMappingRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the CredentialListMapping resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchSipAuthCallsCredentialListMappingRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

@@ -49,7 +49,7 @@ public class Media {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetResourcesMediaJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetResourcesMediaJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -96,7 +96,7 @@ public class Media {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetResourcesMediaFeaturedJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetResourcesMediaFeaturedJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -137,13 +137,13 @@ public class Media {
      */
     public org.openapis.openapi.models.operations.GetResourcesMediaMostPopularMediaFormatResponse getResourcesMediaMostPopularMediaFormat(org.openapis.openapi.models.operations.GetResourcesMediaMostPopularMediaFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesMediaMostPopularMediaFormatPathParams.class, baseUrl, "/resources/media/mostPopularMedia.{format}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesMediaMostPopularMediaFormatRequest.class, baseUrl, "/resources/media/mostPopularMedia.{format}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetResourcesMediaMostPopularMediaFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetResourcesMediaMostPopularMediaFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -190,7 +190,7 @@ public class Media {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetResourcesMediaSearchResultsJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetResourcesMediaSearchResultsJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -231,7 +231,7 @@ public class Media {
      */
     public org.openapis.openapi.models.operations.GetResourcesMediaIdJsonResponse getResourcesMediaIdJson(org.openapis.openapi.models.operations.GetResourcesMediaIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesMediaIdJsonPathParams.class, baseUrl, "/resources/media/{id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesMediaIdJsonRequest.class, baseUrl, "/resources/media/{id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -272,13 +272,13 @@ public class Media {
      */
     public org.openapis.openapi.models.operations.GetResourcesMediaIdContentResponse getResourcesMediaIdContent(org.openapis.openapi.models.operations.GetResourcesMediaIdContentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesMediaIdContentPathParams.class, baseUrl, "/resources/media/{id}/content", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesMediaIdContentRequest.class, baseUrl, "/resources/media/{id}/content", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetResourcesMediaIdContentQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetResourcesMediaIdContentRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -318,13 +318,13 @@ public class Media {
      */
     public org.openapis.openapi.models.operations.GetResourcesMediaIdEmbedJsonResponse getResourcesMediaIdEmbedJson(org.openapis.openapi.models.operations.GetResourcesMediaIdEmbedJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesMediaIdEmbedJsonPathParams.class, baseUrl, "/resources/media/{id}/embed.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesMediaIdEmbedJsonRequest.class, baseUrl, "/resources/media/{id}/embed.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetResourcesMediaIdEmbedJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetResourcesMediaIdEmbedJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -364,7 +364,7 @@ public class Media {
      */
     public org.openapis.openapi.models.operations.GetResourcesMediaIdPreviewJpgResponse getResourcesMediaIdPreviewJpg(org.openapis.openapi.models.operations.GetResourcesMediaIdPreviewJpgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesMediaIdPreviewJpgPathParams.class, baseUrl, "/resources/media/{id}/preview.jpg", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesMediaIdPreviewJpgRequest.class, baseUrl, "/resources/media/{id}/preview.jpg", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -405,13 +405,13 @@ public class Media {
      */
     public org.openapis.openapi.models.operations.GetResourcesMediaIdRelatedMediaFormatResponse getResourcesMediaIdRelatedMediaFormat(org.openapis.openapi.models.operations.GetResourcesMediaIdRelatedMediaFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesMediaIdRelatedMediaFormatPathParams.class, baseUrl, "/resources/media/{id}/relatedMedia.{format}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesMediaIdRelatedMediaFormatRequest.class, baseUrl, "/resources/media/{id}/relatedMedia.{format}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetResourcesMediaIdRelatedMediaFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetResourcesMediaIdRelatedMediaFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -452,13 +452,13 @@ public class Media {
      */
     public org.openapis.openapi.models.operations.GetResourcesMediaIdSyndicateFormatResponse getResourcesMediaIdSyndicateFormat(org.openapis.openapi.models.operations.GetResourcesMediaIdSyndicateFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesMediaIdSyndicateFormatPathParams.class, baseUrl, "/resources/media/{id}/syndicate.{format}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesMediaIdSyndicateFormatRequest.class, baseUrl, "/resources/media/{id}/syndicate.{format}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetResourcesMediaIdSyndicateFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetResourcesMediaIdSyndicateFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -499,7 +499,7 @@ public class Media {
      */
     public org.openapis.openapi.models.operations.GetResourcesMediaIdThumbnailJpgResponse getResourcesMediaIdThumbnailJpg(org.openapis.openapi.models.operations.GetResourcesMediaIdThumbnailJpgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesMediaIdThumbnailJpgPathParams.class, baseUrl, "/resources/media/{id}/thumbnail.jpg", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesMediaIdThumbnailJpgRequest.class, baseUrl, "/resources/media/{id}/thumbnail.jpg", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -540,7 +540,7 @@ public class Media {
      */
     public org.openapis.openapi.models.operations.GetResourcesMediaIdYoutubeMetaDataJsonResponse getResourcesMediaIdYoutubeMetaDataJson(org.openapis.openapi.models.operations.GetResourcesMediaIdYoutubeMetaDataJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesMediaIdYoutubeMetaDataJsonPathParams.class, baseUrl, "/resources/media/{id}/youtubeMetaData.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesMediaIdYoutubeMetaDataJsonRequest.class, baseUrl, "/resources/media/{id}/youtubeMetaData.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

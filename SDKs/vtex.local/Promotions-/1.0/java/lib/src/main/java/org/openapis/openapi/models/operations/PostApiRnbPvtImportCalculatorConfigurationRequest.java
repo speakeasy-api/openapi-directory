@@ -7,17 +7,100 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostApiRnbPvtImportCalculatorConfigurationRequest {
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public PostApiRnbPvtImportCalculatorConfigurationRequest withAccept(String accept) {
+        this.accept = accept;
+        return this;
+    }
     
-    public PostApiRnbPvtImportCalculatorConfigurationHeaders headers;
-    public PostApiRnbPvtImportCalculatorConfigurationRequest withHeaders(PostApiRnbPvtImportCalculatorConfigurationHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public PostApiRnbPvtImportCalculatorConfigurationRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=text/csv")
-    public byte[] request;
-    public PostApiRnbPvtImportCalculatorConfigurationRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public PostApiRnbPvtImportCalculatorConfigurationRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Condition that will accumulate the Promotion with manual prices or not.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-VTEX-accumulate-with-manual-prices")
+    public Boolean xVTEXAccumulateWithManualPrices;
+    public PostApiRnbPvtImportCalculatorConfigurationRequest withXVTEXAccumulateWithManualPrices(Boolean xVTEXAccumulateWithManualPrices) {
+        this.xVTEXAccumulateWithManualPrices = xVTEXAccumulateWithManualPrices;
+        return this;
+    }
+    
+    /**
+     * Promotion Name.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-VTEX-calculator-name")
+    public String xVTEXCalculatorName;
+    public PostApiRnbPvtImportCalculatorConfigurationRequest withXVTEXCalculatorName(String xVTEXCalculatorName) {
+        this.xVTEXCalculatorName = xVTEXCalculatorName;
+        return this;
+    }
+    
+    /**
+     * Cluster that will be included in the Promotion. To add multiple clusters, create a header for each one of them.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-VTEX-cluster-expression")
+    public String xVTEXClusterExpression;
+    public PostApiRnbPvtImportCalculatorConfigurationRequest withXVTEXClusterExpression(String xVTEXClusterExpression) {
+        this.xVTEXClusterExpression = xVTEXClusterExpression;
+        return this;
+    }
+    
+    /**
+     * This header allows implementing the Promotion in multiples client clusters. You can set the value as `all` - the Promotion will be valid to all the clusters - or `any` - the Promotion will be valid to any of the clusters.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-VTEX-cluster-operator")
+    public String xVTEXClusterOperator;
+    public PostApiRnbPvtImportCalculatorConfigurationRequest withXVTEXClusterOperator(String xVTEXClusterOperator) {
+        this.xVTEXClusterOperator = xVTEXClusterOperator;
+        return this;
+    }
+    
+    /**
+     * Defines if the Promotion is cumulative with other promotions.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-VTEX-cumulative")
+    public Boolean xVTEXCumulative;
+    public PostApiRnbPvtImportCalculatorConfigurationRequest withXVTEXCumulative(Boolean xVTEXCumulative) {
+        this.xVTEXCumulative = xVTEXCumulative;
+        return this;
+    }
+    
+    /**
+     * Promotion end date.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-VTEX-end-date")
+    public String xVTEXEndDate;
+    public PostApiRnbPvtImportCalculatorConfigurationRequest withXVTEXEndDate(String xVTEXEndDate) {
+        this.xVTEXEndDate = xVTEXEndDate;
+        return this;
+    }
+    
+    /**
+     * Promotion start date.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-VTEX-start-date")
+    public String xVTEXStartDate;
+    public PostApiRnbPvtImportCalculatorConfigurationRequest withXVTEXStartDate(String xVTEXStartDate) {
+        this.xVTEXStartDate = xVTEXStartDate;
         return this;
     }
     

@@ -7,79 +7,79 @@ package org.openapis.openapi.models.shared;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Security {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public SchemeXAuthAccessToken xAuthAccessToken;
-    public Security withXAuthAccessToken(SchemeXAuthAccessToken xAuthAccessToken) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-AUTH-ACCESS-TOKEN")
+    public String xAuthAccessToken;
+    public Security withXAuthAccessToken(String xAuthAccessToken) {
         this.xAuthAccessToken = xAuthAccessToken;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public SchemeXAuthAccessToken xAuthAccessToken1;
-    public Security withXAuthAccessToken1(SchemeXAuthAccessToken xAuthAccessToken1) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-AUTH-ACCESS-TOKEN")
+    public String xAuthAccessToken1;
+    public Security withXAuthAccessToken1(String xAuthAccessToken1) {
         this.xAuthAccessToken1 = xAuthAccessToken1;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public SchemeXAuthAccessToken xAuthAccessToken10;
-    public Security withXAuthAccessToken10(SchemeXAuthAccessToken xAuthAccessToken10) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-AUTH-ACCESS-TOKEN")
+    public String xAuthAccessToken10;
+    public Security withXAuthAccessToken10(String xAuthAccessToken10) {
         this.xAuthAccessToken10 = xAuthAccessToken10;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public SchemeXAuthAccessToken xAuthAccessToken2;
-    public Security withXAuthAccessToken2(SchemeXAuthAccessToken xAuthAccessToken2) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-AUTH-ACCESS-TOKEN")
+    public String xAuthAccessToken2;
+    public Security withXAuthAccessToken2(String xAuthAccessToken2) {
         this.xAuthAccessToken2 = xAuthAccessToken2;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public SchemeXAuthAccessToken xAuthAccessToken3;
-    public Security withXAuthAccessToken3(SchemeXAuthAccessToken xAuthAccessToken3) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-AUTH-ACCESS-TOKEN")
+    public String xAuthAccessToken3;
+    public Security withXAuthAccessToken3(String xAuthAccessToken3) {
         this.xAuthAccessToken3 = xAuthAccessToken3;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public SchemeXAuthAccessToken xAuthAccessToken4;
-    public Security withXAuthAccessToken4(SchemeXAuthAccessToken xAuthAccessToken4) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-AUTH-ACCESS-TOKEN")
+    public String xAuthAccessToken4;
+    public Security withXAuthAccessToken4(String xAuthAccessToken4) {
         this.xAuthAccessToken4 = xAuthAccessToken4;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public SchemeXAuthAccessToken xAuthAccessToken5;
-    public Security withXAuthAccessToken5(SchemeXAuthAccessToken xAuthAccessToken5) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-AUTH-ACCESS-TOKEN")
+    public String xAuthAccessToken5;
+    public Security withXAuthAccessToken5(String xAuthAccessToken5) {
         this.xAuthAccessToken5 = xAuthAccessToken5;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public SchemeXAuthAccessToken xAuthAccessToken6;
-    public Security withXAuthAccessToken6(SchemeXAuthAccessToken xAuthAccessToken6) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-AUTH-ACCESS-TOKEN")
+    public String xAuthAccessToken6;
+    public Security withXAuthAccessToken6(String xAuthAccessToken6) {
         this.xAuthAccessToken6 = xAuthAccessToken6;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public SchemeXAuthAccessToken xAuthAccessToken7;
-    public Security withXAuthAccessToken7(SchemeXAuthAccessToken xAuthAccessToken7) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-AUTH-ACCESS-TOKEN")
+    public String xAuthAccessToken7;
+    public Security withXAuthAccessToken7(String xAuthAccessToken7) {
         this.xAuthAccessToken7 = xAuthAccessToken7;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public SchemeXAuthAccessToken xAuthAccessToken8;
-    public Security withXAuthAccessToken8(SchemeXAuthAccessToken xAuthAccessToken8) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-AUTH-ACCESS-TOKEN")
+    public String xAuthAccessToken8;
+    public Security withXAuthAccessToken8(String xAuthAccessToken8) {
         this.xAuthAccessToken8 = xAuthAccessToken8;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public SchemeXAuthAccessToken xAuthAccessToken9;
-    public Security withXAuthAccessToken9(SchemeXAuthAccessToken xAuthAccessToken9) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-AUTH-ACCESS-TOKEN")
+    public String xAuthAccessToken9;
+    public Security withXAuthAccessToken9(String xAuthAccessToken9) {
         this.xAuthAccessToken9 = xAuthAccessToken9;
         return this;
     }

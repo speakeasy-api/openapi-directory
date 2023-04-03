@@ -44,7 +44,7 @@ public class PortfolioOptimizationMeanVariance {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumReturnResponse postPortfolioOptimizationMaximumReturn(org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumReturnRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumReturnResponse postPortfolioOptimizationMaximumReturn(org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumReturnRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/portfolio/optimization/maximum-return");
         
@@ -100,7 +100,7 @@ public class PortfolioOptimizationMeanVariance {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumReturnDiversifiedResponse postPortfolioOptimizationMaximumReturnDiversified(org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumReturnDiversifiedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumReturnDiversifiedResponse postPortfolioOptimizationMaximumReturnDiversified(org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumReturnDiversifiedRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/portfolio/optimization/maximum-return/diversified");
         
@@ -154,7 +154,7 @@ public class PortfolioOptimizationMeanVariance {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedResponse postPortfolioOptimizationMaximumReturnSubsetResamplingBased(org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedResponse postPortfolioOptimizationMaximumReturnSubsetResamplingBased(org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/portfolio/optimization/maximum-return/subset-resampling-based");
         
@@ -206,7 +206,7 @@ public class PortfolioOptimizationMeanVariance {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumSharpeRatioResponse postPortfolioOptimizationMaximumSharpeRatio(org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumSharpeRatioRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumSharpeRatioResponse postPortfolioOptimizationMaximumSharpeRatio(org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumSharpeRatioRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/portfolio/optimization/maximum-sharpe-ratio");
         
@@ -262,7 +262,7 @@ public class PortfolioOptimizationMeanVariance {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumSharpeRatioDiversifiedResponse postPortfolioOptimizationMaximumSharpeRatioDiversified(org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumSharpeRatioDiversifiedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumSharpeRatioDiversifiedResponse postPortfolioOptimizationMaximumSharpeRatioDiversified(org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumSharpeRatioDiversifiedRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/portfolio/optimization/maximum-sharpe-ratio/diversified");
         
@@ -316,7 +316,7 @@ public class PortfolioOptimizationMeanVariance {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedResponse postPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBased(org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedResponse postPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBased(org.openapis.openapi.models.operations.PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/portfolio/optimization/maximum-sharpe-ratio/subset-resampling-based");
         
@@ -370,7 +370,7 @@ public class PortfolioOptimizationMeanVariance {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPortfolioOptimizationMeanVarianceEfficientResponse postPortfolioOptimizationMeanVarianceEfficient(org.openapis.openapi.models.operations.PostPortfolioOptimizationMeanVarianceEfficientRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPortfolioOptimizationMeanVarianceEfficientResponse postPortfolioOptimizationMeanVarianceEfficient(org.openapis.openapi.models.operations.PostPortfolioOptimizationMeanVarianceEfficientRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/portfolio/optimization/mean-variance-efficient");
         
@@ -428,7 +428,7 @@ public class PortfolioOptimizationMeanVariance {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPortfolioOptimizationMeanVarianceEfficientDiversifiedResponse postPortfolioOptimizationMeanVarianceEfficientDiversified(org.openapis.openapi.models.operations.PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPortfolioOptimizationMeanVarianceEfficientDiversifiedResponse postPortfolioOptimizationMeanVarianceEfficientDiversified(org.openapis.openapi.models.operations.PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/portfolio/optimization/mean-variance-efficient/diversified");
         
@@ -482,7 +482,7 @@ public class PortfolioOptimizationMeanVariance {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedResponse postPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased(org.openapis.openapi.models.operations.PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedResponse postPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased(org.openapis.openapi.models.operations.PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/portfolio/optimization/mean-variance-efficient/subset-resampling-based");
         
@@ -534,7 +534,7 @@ public class PortfolioOptimizationMeanVariance {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumVarianceResponse postPortfolioOptimizationMinimumVariance(org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumVarianceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumVarianceResponse postPortfolioOptimizationMinimumVariance(org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumVarianceRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/portfolio/optimization/minimum-variance");
         
@@ -590,7 +590,7 @@ public class PortfolioOptimizationMeanVariance {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumVarianceDiversifiedResponse postPortfolioOptimizationMinimumVarianceDiversified(org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumVarianceDiversifiedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumVarianceDiversifiedResponse postPortfolioOptimizationMinimumVarianceDiversified(org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumVarianceDiversifiedRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/portfolio/optimization/minimum-variance/diversified");
         
@@ -644,7 +644,7 @@ public class PortfolioOptimizationMeanVariance {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedResponse postPortfolioOptimizationMinimumVarianceSubsetResamplingBased(org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedResponse postPortfolioOptimizationMinimumVarianceSubsetResamplingBased(org.openapis.openapi.models.operations.PostPortfolioOptimizationMinimumVarianceSubsetResamplingBasedRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/portfolio/optimization/minimum-variance/subset-resampling-based");
         

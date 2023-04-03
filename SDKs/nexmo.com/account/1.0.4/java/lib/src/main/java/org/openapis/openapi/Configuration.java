@@ -60,9 +60,25 @@ public class Configuration {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.ChangeAccountSettingsResponse changeAccountSettings(org.openapis.openapi.models.operations.ChangeAccountSettingsRequest request) throws Exception {
+        return this.changeAccountSettings(request, null);
+    }
+
+    /**
+     * Change Account Settings
+     * Update the default webhook URLs associated with your account:
+     *   * Callback URL for incoming SMS messages
+     *   * Callback URL for delivery receipts
+     * 
+     * Note that the URLs you provide must be valid and active. Vonage will check that they return a 200 OK response before the setting is saved.
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ChangeAccountSettingsResponse changeAccountSettings(org.openapis.openapi.models.operations.ChangeAccountSettingsRequest request, String serverURL) throws Exception {
         String baseUrl = CHANGE_ACCOUNT_SETTINGS_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/settings");
@@ -70,10 +86,10 @@ public class Configuration {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "accountSettingsRequest", "form");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChangeAccountSettingsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChangeAccountSettingsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -118,9 +134,21 @@ public class Configuration {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.RegisterSenderResponse registerSender(org.openapis.openapi.models.operations.RegisterSenderRequest request) throws Exception {
+        return this.registerSender(request, null);
+    }
+
+    /**
+     * Register an email sender
+     * Register an email sender with an API Key for using email with Verify V2.
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.RegisterSenderResponse registerSender(org.openapis.openapi.models.operations.RegisterSenderRequest request, String serverURL) throws Exception {
         String baseUrl = REGISTER_SENDER_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/register-sender");
@@ -128,13 +156,13 @@ public class Configuration {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "registerEmailRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegisterSenderQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RegisterSenderRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

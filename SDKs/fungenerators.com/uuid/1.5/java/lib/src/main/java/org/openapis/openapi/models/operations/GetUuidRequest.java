@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUuidRequest {
-    
-    public GetUuidQueryParams queryParams;
-    public GetUuidRequest withQueryParams(GetUuidQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetUuidSecurity security;
-    public GetUuidRequest withSecurity(GetUuidSecurity security) {
-        this.security = security;
+    /**
+     * Number of UUID's to generate (defaults to 1)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
+    public Long count;
+    public GetUuidRequest withCount(Long count) {
+        this.count = count;
         return this;
     }
     

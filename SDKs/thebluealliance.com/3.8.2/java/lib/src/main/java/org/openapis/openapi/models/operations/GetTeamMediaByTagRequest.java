@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTeamMediaByTagRequest {
-    
-    public GetTeamMediaByTagPathParams pathParams;
-    public GetTeamMediaByTagRequest withPathParams(GetTeamMediaByTagPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Value of the `ETag` header in the most recently cached response by the client.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
+    public String ifNoneMatch;
+    public GetTeamMediaByTagRequest withIfNoneMatch(String ifNoneMatch) {
+        this.ifNoneMatch = ifNoneMatch;
         return this;
     }
     
-    
-    public GetTeamMediaByTagHeaders headers;
-    public GetTeamMediaByTagRequest withHeaders(GetTeamMediaByTagHeaders headers) {
-        this.headers = headers;
+    /**
+     * Media Tag which describes the Media.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=media_tag")
+    public String mediaTag;
+    public GetTeamMediaByTagRequest withMediaTag(String mediaTag) {
+        this.mediaTag = mediaTag;
         return this;
     }
     
-    
-    public GetTeamMediaByTagSecurity security;
-    public GetTeamMediaByTagRequest withSecurity(GetTeamMediaByTagSecurity security) {
-        this.security = security;
+    /**
+     * TBA Team Key, eg `frc254`
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_key")
+    public String teamKey;
+    public GetTeamMediaByTagRequest withTeamKey(String teamKey) {
+        this.teamKey = teamKey;
         return this;
     }
     

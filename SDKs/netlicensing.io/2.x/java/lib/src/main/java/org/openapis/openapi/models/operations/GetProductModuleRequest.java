@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProductModuleRequest {
-    
-    public GetProductModulePathParams pathParams;
-    public GetProductModuleRequest withPathParams(GetProductModulePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetProductModuleSecurity security;
-    public GetProductModuleRequest withSecurity(GetProductModuleSecurity security) {
-        this.security = security;
+    /**
+     * Unique number (across all Products of a Vendor) that identifies the Product Module. Vendor can assign this number when creating a Product Module or let NetLicensing generate one. Read-only after creation of the first Licensee for the Product.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productModuleNumber")
+    public String productModuleNumber;
+    public GetProductModuleRequest withProductModuleNumber(String productModuleNumber) {
+        this.productModuleNumber = productModuleNumber;
         return this;
     }
     

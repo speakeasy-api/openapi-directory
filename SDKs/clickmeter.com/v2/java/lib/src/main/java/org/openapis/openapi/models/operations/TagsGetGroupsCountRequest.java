@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TagsGetGroupsCountRequest {
-    
-    public TagsGetGroupsCountPathParams pathParams;
-    public TagsGetGroupsCountRequest withPathParams(TagsGetGroupsCountPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Exclude groups created before this date (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAfter")
+    public String createdAfter;
+    public TagsGetGroupsCountRequest withCreatedAfter(String createdAfter) {
+        this.createdAfter = createdAfter;
         return this;
     }
     
+    /**
+     * Exclude groups created after this date (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdBefore")
+    public String createdBefore;
+    public TagsGetGroupsCountRequest withCreatedBefore(String createdBefore) {
+        this.createdBefore = createdBefore;
+        return this;
+    }
     
-    public TagsGetGroupsCountQueryParams queryParams;
-    public TagsGetGroupsCountRequest withQueryParams(TagsGetGroupsCountQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Status of the datapoint
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public TagsGetGroupsCountStatusEnum status;
+    public TagsGetGroupsCountRequest withStatus(TagsGetGroupsCountStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * Id of the tag.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tagId")
+    public Long tagId;
+    public TagsGetGroupsCountRequest withTagId(Long tagId) {
+        this.tagId = tagId;
+        return this;
+    }
+    
+    /**
+     * Filter fields by this pattern
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=textSearch")
+    public String textSearch;
+    public TagsGetGroupsCountRequest withTextSearch(String textSearch) {
+        this.textSearch = textSearch;
         return this;
     }
     

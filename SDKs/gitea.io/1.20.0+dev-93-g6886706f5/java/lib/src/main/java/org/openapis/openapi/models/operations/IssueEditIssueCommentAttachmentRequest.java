@@ -7,17 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssueEditIssueCommentAttachmentRequest {
-    
-    public IssueEditIssueCommentAttachmentPathParams pathParams;
-    public IssueEditIssueCommentAttachmentRequest withPathParams(IssueEditIssueCommentAttachmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.EditAttachmentOptions editAttachmentOptions;
+    public IssueEditIssueCommentAttachmentRequest withEditAttachmentOptions(org.openapis.openapi.models.shared.EditAttachmentOptions editAttachmentOptions) {
+        this.editAttachmentOptions = editAttachmentOptions;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.EditAttachmentOptions request;
-    public IssueEditIssueCommentAttachmentRequest withRequest(org.openapis.openapi.models.shared.EditAttachmentOptions request) {
-        this.request = request;
+    /**
+     * id of the attachment to edit
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=attachment_id")
+    public Long attachmentId;
+    public IssueEditIssueCommentAttachmentRequest withAttachmentId(Long attachmentId) {
+        this.attachmentId = attachmentId;
+        return this;
+    }
+    
+    /**
+     * id of the comment
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public IssueEditIssueCommentAttachmentRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssueEditIssueCommentAttachmentRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssueEditIssueCommentAttachmentRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

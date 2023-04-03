@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProtectionRequest {
-    
-    public GetProtectionQueryParams queryParams;
-    public GetProtectionRequest withQueryParams(GetProtectionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Altitude in meters, from 0 to 10000m, 0m by default. If provided the altitude correction factor will be applied to clear sky sea level UV Index value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public Double alt;
+    public GetProtectionRequest withAlt(Double alt) {
+        this.alt = alt;
         return this;
     }
     
+    /**
+     * UV Index from value for protection datetime lookup. From 0 to 40.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
+    public Double from;
+    public GetProtectionRequest withFrom(Double from) {
+        this.from = from;
+        return this;
+    }
     
-    public GetProtectionHeaders headers;
-    public GetProtectionRequest withHeaders(GetProtectionHeaders headers) {
-        this.headers = headers;
+    /**
+     * latitude, from -90.00 to 90.00
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lat")
+    public Double lat;
+    public GetProtectionRequest withLat(Double lat) {
+        this.lat = lat;
+        return this;
+    }
+    
+    /**
+     * longitude, from -180.00 to 180.00
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lng")
+    public Double lng;
+    public GetProtectionRequest withLng(Double lng) {
+        this.lng = lng;
+        return this;
+    }
+    
+    /**
+     * Ozone in du (Dobson Units), from 100 to 550du, the latest forecast from OMI dataset is used by default.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ozone")
+    public Double ozone;
+    public GetProtectionRequest withOzone(Double ozone) {
+        this.ozone = ozone;
+        return this;
+    }
+    
+    /**
+     * UV Index to value for protection datetime lookup. From 0 to 40.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
+    public Double to;
+    public GetProtectionRequest withTo(Double to) {
+        this.to = to;
+        return this;
+    }
+    
+    /**
+     * This header is used to send data that contains your OpenUV API key
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-access-token")
+    public String xAccessToken;
+    public GetProtectionRequest withXAccessToken(String xAccessToken) {
+        this.xAccessToken = xAccessToken;
         return this;
     }
     

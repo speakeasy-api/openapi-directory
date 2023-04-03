@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAgentStateRequest {
-    
-    public GetAgentStatePathParams pathParams;
-    public GetAgentStateRequest withPathParams(GetAgentStatePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to return the state
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public GetAgentStateRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

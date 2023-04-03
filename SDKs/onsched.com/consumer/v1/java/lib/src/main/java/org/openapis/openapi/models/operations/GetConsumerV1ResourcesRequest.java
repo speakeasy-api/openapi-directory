@@ -4,13 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConsumerV1ResourcesRequest {
+    /**
+     * Filter by email address
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public GetConsumerV1ResourcesRequest withEmail(String email) {
+        this.email = email;
+        return this;
+    }
     
-    public GetConsumerV1ResourcesQueryParams queryParams;
-    public GetConsumerV1ResourcesRequest withQueryParams(GetConsumerV1ResourcesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page limit default 20, max 100
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetConsumerV1ResourcesRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * id of business location, defaults to primary business location
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locationId")
+    public String locationId;
+    public GetConsumerV1ResourcesRequest withLocationId(String locationId) {
+        this.locationId = locationId;
+        return this;
+    }
+    
+    /**
+     * Search by name, supports Partial name search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public GetConsumerV1ResourcesRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Starting row of page, default 0
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public GetConsumerV1ResourcesRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Filter by groupId
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resourceGroupId")
+    public Integer resourceGroupId;
+    public GetConsumerV1ResourcesRequest withResourceGroupId(Integer resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    
+    /**
+     * Specify sort order of response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortOrder")
+    public String sortOrder;
+    public GetConsumerV1ResourcesRequest withSortOrder(String sortOrder) {
+        this.sortOrder = sortOrder;
         return this;
     }
     

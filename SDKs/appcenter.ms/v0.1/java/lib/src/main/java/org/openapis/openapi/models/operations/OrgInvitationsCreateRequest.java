@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgInvitationsCreateRequest {
-    
-    public OrgInvitationsCreatePathParams pathParams;
-    public OrgInvitationsCreateRequest withPathParams(OrgInvitationsCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The email of the user to invite
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public OrgInvitationsCreateRequestBody request;
-    public OrgInvitationsCreateRequest withRequest(OrgInvitationsCreateRequestBody request) {
-        this.request = request;
+    public OrgInvitationsCreateRequestBody requestBody;
+    public OrgInvitationsCreateRequest withRequestBody(OrgInvitationsCreateRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public OrgInvitationsCreateSecurity security;
-    public OrgInvitationsCreateRequest withSecurity(OrgInvitationsCreateSecurity security) {
-        this.security = security;
+    /**
+     * The organization's name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_name")
+    public String orgName;
+    public OrgInvitationsCreateRequest withOrgName(String orgName) {
+        this.orgName = orgName;
         return this;
     }
     

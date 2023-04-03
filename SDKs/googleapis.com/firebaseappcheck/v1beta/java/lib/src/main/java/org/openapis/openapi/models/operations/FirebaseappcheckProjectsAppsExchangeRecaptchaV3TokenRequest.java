@@ -7,31 +7,130 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenRequest {
-    
-    public FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenPathParams pathParams;
-    public FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenRequest withPathParams(FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenQueryParams queryParams;
-    public FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenRequest withQueryParams(FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GoogleFirebaseAppcheckV1betaExchangeRecaptchaV3TokenRequest request;
-    public FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenRequest withRequest(org.openapis.openapi.models.shared.GoogleFirebaseAppcheckV1betaExchangeRecaptchaV3TokenRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GoogleFirebaseAppcheckV1betaExchangeRecaptchaV3TokenRequest googleFirebaseAppcheckV1betaExchangeRecaptchaV3TokenRequest;
+    public FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenRequest withGoogleFirebaseAppcheckV1betaExchangeRecaptchaV3TokenRequest(org.openapis.openapi.models.shared.GoogleFirebaseAppcheckV1betaExchangeRecaptchaV3TokenRequest googleFirebaseAppcheckV1betaExchangeRecaptchaV3TokenRequest) {
+        this.googleFirebaseAppcheckV1betaExchangeRecaptchaV3TokenRequest = googleFirebaseAppcheckV1betaExchangeRecaptchaV3TokenRequest;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenSecurity security;
-    public FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenRequest withSecurity(FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * Required. The relative resource name of the web app, in the format: ``` projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can be replaced with the project ID of the Firebase project. Learn more about using project identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app")
+    public String app;
+    public FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenRequest withApp(String app) {
+        this.app = app;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

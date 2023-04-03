@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBreakTypeRequest {
-    
-    public GetBreakTypePathParams pathParams;
-    public GetBreakTypeRequest withPathParams(GetBreakTypePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetBreakTypeSecurity security;
-    public GetBreakTypeRequest withSecurity(GetBreakTypeSecurity security) {
-        this.security = security;
+    /**
+     * The UUID for the `BreakType` being retrieved.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetBreakTypeRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

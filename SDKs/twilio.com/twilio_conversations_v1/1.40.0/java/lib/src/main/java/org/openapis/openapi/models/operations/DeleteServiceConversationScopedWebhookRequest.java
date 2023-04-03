@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteServiceConversationScopedWebhookRequest {
-    
-    public DeleteServiceConversationScopedWebhookPathParams pathParams;
-    public DeleteServiceConversationScopedWebhookRequest withPathParams(DeleteServiceConversationScopedWebhookPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Participant resource is associated with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChatServiceSid")
+    public String chatServiceSid;
+    public DeleteServiceConversationScopedWebhookRequest withChatServiceSid(String chatServiceSid) {
+        this.chatServiceSid = chatServiceSid;
         return this;
     }
     
-    
-    public DeleteServiceConversationScopedWebhookSecurity security;
-    public DeleteServiceConversationScopedWebhookRequest withSecurity(DeleteServiceConversationScopedWebhookSecurity security) {
-        this.security = security;
+    /**
+     * The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this webhook.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConversationSid")
+    public String conversationSid;
+    public DeleteServiceConversationScopedWebhookRequest withConversationSid(String conversationSid) {
+        this.conversationSid = conversationSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public DeleteServiceConversationScopedWebhookRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * A 34 character string that uniquely identifies this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteServiceConversationScopedWebhookRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

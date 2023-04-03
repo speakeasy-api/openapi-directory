@@ -40,12 +40,12 @@ public class DiaryController {
      */
     public org.openapis.openapi.models.operations.DiaryControllerAddFeedbackFormResponse diaryControllerAddFeedbackForm(org.openapis.openapi.models.operations.DiaryControllerAddFeedbackFormRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DiaryControllerAddFeedbackFormPathParams.class, baseUrl, "/v3/diary/{shortName}/appointment/feedback", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DiaryControllerAddFeedbackFormRequest.class, baseUrl, "/v3/diary/{shortName}/appointment/feedback", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "feedbackSubmissionModel", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -97,12 +97,12 @@ public class DiaryController {
      */
     public org.openapis.openapi.models.operations.DiaryControllerAddFeedbackJsonResponse diaryControllerAddFeedbackJson(org.openapis.openapi.models.operations.DiaryControllerAddFeedbackJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DiaryControllerAddFeedbackJsonPathParams.class, baseUrl, "/v3/diary/{shortName}/appointment/feedback", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DiaryControllerAddFeedbackJsonRequest.class, baseUrl, "/v3/diary/{shortName}/appointment/feedback", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "feedbackSubmissionModel", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -154,12 +154,12 @@ public class DiaryController {
      */
     public org.openapis.openapi.models.operations.DiaryControllerAddFeedbackRawResponse diaryControllerAddFeedbackRaw(org.openapis.openapi.models.operations.DiaryControllerAddFeedbackRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DiaryControllerAddFeedbackRawPathParams.class, baseUrl, "/v3/diary/{shortName}/appointment/feedback", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DiaryControllerAddFeedbackRawRequest.class, baseUrl, "/v3/diary/{shortName}/appointment/feedback", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -211,7 +211,7 @@ public class DiaryController {
      */
     public org.openapis.openapi.models.operations.DiaryControllerCancelAppointmentResponse diaryControllerCancelAppointment(org.openapis.openapi.models.operations.DiaryControllerCancelAppointmentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DiaryControllerCancelAppointmentPathParams.class, baseUrl, "/v3/diary/{shortName}/appointment/{appointmentID}/cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DiaryControllerCancelAppointmentRequest.class, baseUrl, "/v3/diary/{shortName}/appointment/{appointmentID}/cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
@@ -263,13 +263,13 @@ public class DiaryController {
      */
     public org.openapis.openapi.models.operations.DiaryControllerDeleteAppointmentResponse diaryControllerDeleteAppointment(org.openapis.openapi.models.operations.DiaryControllerDeleteAppointmentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DiaryControllerDeleteAppointmentPathParams.class, baseUrl, "/v3/diary/{shortName}/appointment", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DiaryControllerDeleteAppointmentRequest.class, baseUrl, "/v3/diary/{shortName}/appointment", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DiaryControllerDeleteAppointmentQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DiaryControllerDeleteAppointmentRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -321,13 +321,13 @@ public class DiaryController {
      */
     public org.openapis.openapi.models.operations.DiaryControllerGetAllocationsResponse diaryControllerGetAllocations(org.openapis.openapi.models.operations.DiaryControllerGetAllocationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DiaryControllerGetAllocationsPathParams.class, baseUrl, "/v3/diary/{shortName}/allocations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DiaryControllerGetAllocationsRequest.class, baseUrl, "/v3/diary/{shortName}/allocations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DiaryControllerGetAllocationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DiaryControllerGetAllocationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -381,13 +381,13 @@ public class DiaryController {
      */
     public org.openapis.openapi.models.operations.DiaryControllerGetAppointmentResponse diaryControllerGetAppointment(org.openapis.openapi.models.operations.DiaryControllerGetAppointmentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DiaryControllerGetAppointmentPathParams.class, baseUrl, "/v3/diary/{shortName}/appointment", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DiaryControllerGetAppointmentRequest.class, baseUrl, "/v3/diary/{shortName}/appointment", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DiaryControllerGetAppointmentQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DiaryControllerGetAppointmentRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -431,13 +431,13 @@ public class DiaryController {
      */
     public org.openapis.openapi.models.operations.DiaryControllerGetAppointmentTypesResponse diaryControllerGetAppointmentTypes(org.openapis.openapi.models.operations.DiaryControllerGetAppointmentTypesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DiaryControllerGetAppointmentTypesPathParams.class, baseUrl, "/v3/diary/{shortName}/appointmenttypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DiaryControllerGetAppointmentTypesRequest.class, baseUrl, "/v3/diary/{shortName}/appointmenttypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DiaryControllerGetAppointmentTypesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DiaryControllerGetAppointmentTypesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -491,13 +491,13 @@ public class DiaryController {
      */
     public org.openapis.openapi.models.operations.DiaryControllerGetAppointmentsBetweenDatesResponse diaryControllerGetAppointmentsBetweenDates(org.openapis.openapi.models.operations.DiaryControllerGetAppointmentsBetweenDatesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DiaryControllerGetAppointmentsBetweenDatesPathParams.class, baseUrl, "/v3/diary/{shortName}/appointmentsbetweendates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DiaryControllerGetAppointmentsBetweenDatesRequest.class, baseUrl, "/v3/diary/{shortName}/appointmentsbetweendates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DiaryControllerGetAppointmentsBetweenDatesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DiaryControllerGetAppointmentsBetweenDatesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -551,13 +551,13 @@ public class DiaryController {
      */
     public org.openapis.openapi.models.operations.DiaryControllerGetRecurringAppointmentsResponse diaryControllerGetRecurringAppointments(org.openapis.openapi.models.operations.DiaryControllerGetRecurringAppointmentsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DiaryControllerGetRecurringAppointmentsPathParams.class, baseUrl, "/v3/diary/{shortName}/recurringappointment", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DiaryControllerGetRecurringAppointmentsRequest.class, baseUrl, "/v3/diary/{shortName}/recurringappointment", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DiaryControllerGetRecurringAppointmentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DiaryControllerGetRecurringAppointmentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -611,18 +611,18 @@ public class DiaryController {
      */
     public org.openapis.openapi.models.operations.DiaryControllerPostAppointmentFormResponse diaryControllerPostAppointmentForm(org.openapis.openapi.models.operations.DiaryControllerPostAppointmentFormRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DiaryControllerPostAppointmentFormPathParams.class, baseUrl, "/v3/diary/{shortName}/appointment", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DiaryControllerPostAppointmentFormRequest.class, baseUrl, "/v3/diary/{shortName}/appointment", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "diaryAppointmentDetails", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DiaryControllerPostAppointmentFormQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DiaryControllerPostAppointmentFormRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -674,18 +674,18 @@ public class DiaryController {
      */
     public org.openapis.openapi.models.operations.DiaryControllerPostAppointmentJsonResponse diaryControllerPostAppointmentJson(org.openapis.openapi.models.operations.DiaryControllerPostAppointmentJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DiaryControllerPostAppointmentJsonPathParams.class, baseUrl, "/v3/diary/{shortName}/appointment", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DiaryControllerPostAppointmentJsonRequest.class, baseUrl, "/v3/diary/{shortName}/appointment", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "diaryAppointmentDetails", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DiaryControllerPostAppointmentJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DiaryControllerPostAppointmentJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -737,18 +737,18 @@ public class DiaryController {
      */
     public org.openapis.openapi.models.operations.DiaryControllerPostAppointmentRawResponse diaryControllerPostAppointmentRaw(org.openapis.openapi.models.operations.DiaryControllerPostAppointmentRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DiaryControllerPostAppointmentRawPathParams.class, baseUrl, "/v3/diary/{shortName}/appointment", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DiaryControllerPostAppointmentRawRequest.class, baseUrl, "/v3/diary/{shortName}/appointment", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DiaryControllerPostAppointmentRawQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DiaryControllerPostAppointmentRawRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -800,18 +800,18 @@ public class DiaryController {
      */
     public org.openapis.openapi.models.operations.DiaryControllerPutAppointmentFormResponse diaryControllerPutAppointmentForm(org.openapis.openapi.models.operations.DiaryControllerPutAppointmentFormRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DiaryControllerPutAppointmentFormPathParams.class, baseUrl, "/v3/diary/{shortName}/appointment", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DiaryControllerPutAppointmentFormRequest.class, baseUrl, "/v3/diary/{shortName}/appointment", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "diaryAppointmentDetails", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DiaryControllerPutAppointmentFormQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DiaryControllerPutAppointmentFormRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -863,18 +863,18 @@ public class DiaryController {
      */
     public org.openapis.openapi.models.operations.DiaryControllerPutAppointmentJsonResponse diaryControllerPutAppointmentJson(org.openapis.openapi.models.operations.DiaryControllerPutAppointmentJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DiaryControllerPutAppointmentJsonPathParams.class, baseUrl, "/v3/diary/{shortName}/appointment", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DiaryControllerPutAppointmentJsonRequest.class, baseUrl, "/v3/diary/{shortName}/appointment", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "diaryAppointmentDetails", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DiaryControllerPutAppointmentJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DiaryControllerPutAppointmentJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -926,18 +926,18 @@ public class DiaryController {
      */
     public org.openapis.openapi.models.operations.DiaryControllerPutAppointmentRawResponse diaryControllerPutAppointmentRaw(org.openapis.openapi.models.operations.DiaryControllerPutAppointmentRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DiaryControllerPutAppointmentRawPathParams.class, baseUrl, "/v3/diary/{shortName}/appointment", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DiaryControllerPutAppointmentRawRequest.class, baseUrl, "/v3/diary/{shortName}/appointment", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DiaryControllerPutAppointmentRawQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DiaryControllerPutAppointmentRawRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -989,13 +989,13 @@ public class DiaryController {
      */
     public org.openapis.openapi.models.operations.DiaryControllerSearchGuestResponse diaryControllerSearchGuest(org.openapis.openapi.models.operations.DiaryControllerSearchGuestRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DiaryControllerSearchGuestPathParams.class, baseUrl, "/v3/diary/{shortname}/{branchID}/guest/search", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DiaryControllerSearchGuestRequest.class, baseUrl, "/v3/diary/{shortname}/{branchID}/guest/search", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DiaryControllerSearchGuestQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DiaryControllerSearchGuestRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

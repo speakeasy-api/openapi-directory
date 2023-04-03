@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AccountsBalancesRetrievePathParams;
 import org.openapis.openapi.models.operations.AccountsBalancesRetrieveRequest;
 import org.openapis.openapi.models.operations.AccountsBalancesRetrieveResponse;
 
@@ -26,17 +25,13 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    jwtAuth = new SchemeJwtAuth() {{
-                        authorization = "Bearer YOUR_BEARER_TOKEN_HERE";
-                    }};
+                    jwtAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
             AccountsBalancesRetrieveRequest req = new AccountsBalancesRetrieveRequest() {{
-                pathParams = new AccountsBalancesRetrievePathParams() {{
-                    id = "89bd9d8d-69a6-474e-8f46-7cc8796ed151";
-                }};
-            }};            
+                id = "89bd9d8d-69a6-474e-8f46-7cc8796ed151";
+            }}            
 
             AccountsBalancesRetrieveResponse res = sdk.accounts.accountsBalancesRetrieve(req);
 
@@ -50,7 +45,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### accounts

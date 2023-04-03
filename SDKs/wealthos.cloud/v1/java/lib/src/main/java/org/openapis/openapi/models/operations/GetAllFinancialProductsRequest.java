@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllFinancialProductsRequest {
-    
-    public GetAllFinancialProductsQueryParams queryParams;
-    public GetAllFinancialProductsRequest withQueryParams(GetAllFinancialProductsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * multiple product types as a comma seperated string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=product_types")
+    public String productTypes;
+    public GetAllFinancialProductsRequest withProductTypes(String productTypes) {
+        this.productTypes = productTypes;
         return this;
     }
     
-    
-    public GetAllFinancialProductsHeaders headers;
-    public GetAllFinancialProductsRequest withHeaders(GetAllFinancialProductsHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetAllFinancialProductsSecurity security;
-    public GetAllFinancialProductsRequest withSecurity(GetAllFinancialProductsSecurity security) {
-        this.security = security;
+    /**
+     * ApiSecretKey
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public GetAllFinancialProductsRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

@@ -4,20 +4,106 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNearbyFacilitiesRequest {
-    
-    public GetNearbyFacilitiesQueryParams queryParams;
-    public GetNearbyFacilitiesRequest withQueryParams(GetNearbyFacilitiesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * City of the location from which drive time will be calculated.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=city")
+    public String city;
+    public GetNearbyFacilitiesRequest withCity(String city) {
+        this.city = city;
         return this;
     }
     
+    /**
+     * Filter to only include facilities that are within the specified number of drive time minutes from the requested location.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=drive_time")
+    public GetNearbyFacilitiesDriveTimeEnum driveTime;
+    public GetNearbyFacilitiesRequest withDriveTime(GetNearbyFacilitiesDriveTimeEnum driveTime) {
+        this.driveTime = driveTime;
+        return this;
+    }
     
-    public GetNearbyFacilitiesSecurity security;
-    public GetNearbyFacilitiesRequest withSecurity(GetNearbyFacilitiesSecurity security) {
-        this.security = security;
+    /**
+     * Latitude of the location from which drive time will be calculated.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lat")
+    public Float lat;
+    public GetNearbyFacilitiesRequest withLat(Float lat) {
+        this.lat = lat;
+        return this;
+    }
+    
+    /**
+     * Longitude of the location from which drive time will be calculated.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lng")
+    public Float lng;
+    public GetNearbyFacilitiesRequest withLng(Float lng) {
+        this.lng = lng;
+        return this;
+    }
+    
+    /**
+     * Page of results to return per paginated response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetNearbyFacilitiesRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Number of results to return per paginated response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetNearbyFacilitiesRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Optional facility service search filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=services[]")
+    public String[] services;
+    public GetNearbyFacilitiesRequest withServices(String[] services) {
+        this.services = services;
+        return this;
+    }
+    
+    /**
+     * Two character state code of the location from which drive time will be calculated.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public String state;
+    public GetNearbyFacilitiesRequest withState(String state) {
+        this.state = state;
+        return this;
+    }
+    
+    /**
+     * Street address of the location from which drive time will be calculated.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=street_address")
+    public String streetAddress;
+    public GetNearbyFacilitiesRequest withStreetAddress(String streetAddress) {
+        this.streetAddress = streetAddress;
+        return this;
+    }
+    
+    /**
+     * Zip code of the location from which drive time will be calculated.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=zip")
+    public String zip;
+    public GetNearbyFacilitiesRequest withZip(String zip) {
+        this.zip = zip;
         return this;
     }
     

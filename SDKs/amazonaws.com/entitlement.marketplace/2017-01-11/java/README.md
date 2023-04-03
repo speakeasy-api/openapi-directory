@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GetEntitlementsXAmzTargetEnum;
-import org.openapis.openapi.models.operations.GetEntitlementsHeaders;
 import org.openapis.openapi.models.operations.GetEntitlementsRequest;
 import org.openapis.openapi.models.operations.GetEntitlementsResponse;
 import org.openapis.openapi.models.shared.GetEntitlementsRequest;
@@ -28,54 +27,42 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GetEntitlementsRequest req = new GetEntitlementsRequest() {{
-                headers = new GetEntitlementsHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "AWSMPEntitlementService.GetEntitlements";
-                }};
-                request = new GetEntitlementsRequest() {{
+                getEntitlementsRequest = new GetEntitlementsRequest() {{
                     filter = new java.util.HashMap<String, String[]>() {{
-                        put("vel", new String[]{{
+                        put("provident", new String[]{{
+                            add("quibusdam"),
+                            add("unde"),
+                            add("nulla"),
+                        }});
+                        put("corrupti", new String[]{{
+                            add("vel"),
+                            add("error"),
                             add("deserunt"),
                             add("suscipit"),
-                            add("iure"),
                         }});
-                        put("magnam", new String[]{{
+                        put("iure", new String[]{{
+                            add("debitis"),
                             add("ipsa"),
-                            add("delectus"),
-                            add("tempora"),
-                            add("suscipit"),
-                        }});
-                        put("molestiae", new String[]{{
-                            add("placeat"),
-                            add("voluptatum"),
-                            add("iusto"),
-                            add("excepturi"),
-                        }});
-                        put("nisi", new String[]{{
-                            add("temporibus"),
-                            add("ab"),
-                            add("quis"),
-                            add("veritatis"),
                         }});
                     }};
-                    maxResults = 648172;
-                    nextToken = "perferendis";
-                    productCode = "ipsam";
+                    maxResults = 963663;
+                    nextToken = "tempora";
+                    productCode = "suscipit";
                 }};
-            }};            
+                xAmzAlgorithm = "molestiae";
+                xAmzContentSha256 = "minus";
+                xAmzCredential = "placeat";
+                xAmzDate = "voluptatum";
+                xAmzSecurityToken = "iusto";
+                xAmzSignature = "excepturi";
+                xAmzSignedHeaders = "nisi";
+                xAmzTarget = "AWSMPEntitlementService.GetEntitlements";
+            }}            
 
             GetEntitlementsResponse res = sdk.getEntitlements(req);
 
@@ -89,7 +76,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

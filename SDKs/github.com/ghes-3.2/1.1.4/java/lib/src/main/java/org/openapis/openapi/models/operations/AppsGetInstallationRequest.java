@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsGetInstallationRequest {
-    
-    public AppsGetInstallationPathParams pathParams;
-    public AppsGetInstallationRequest withPathParams(AppsGetInstallationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the installation.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=installation_id")
+    public Long installationId;
+    public AppsGetInstallationRequest withInstallationId(Long installationId) {
+        this.installationId = installationId;
         return this;
     }
     

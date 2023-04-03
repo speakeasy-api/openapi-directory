@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePatientRequest {
-    
-    public UpdatePatientPathParams pathParams;
-    public UpdatePatientRequest withPathParams(UpdatePatientPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/vnd.api+json")
+    public org.openapis.openapi.models.shared.UpdatePatientRequestInput updatePatientRequestInput;
+    public UpdatePatientRequest withUpdatePatientRequestInput(org.openapis.openapi.models.shared.UpdatePatientRequestInput updatePatientRequestInput) {
+        this.updatePatientRequestInput = updatePatientRequestInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/vnd.api+json")
-    public org.openapis.openapi.models.shared.UpdatePatientRequestInput request;
-    public UpdatePatientRequest withRequest(org.openapis.openapi.models.shared.UpdatePatientRequestInput request) {
-        this.request = request;
+    /**
+     * Patient identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UpdatePatientRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

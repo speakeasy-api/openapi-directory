@@ -39,13 +39,13 @@ public class CustomFieldSelectOptions {
      */
     public org.openapis.openapi.models.operations.GetCustomFieldsIdSelectOptionsJsonResponse getCustomFieldsIdSelectOptionsJson(org.openapis.openapi.models.operations.GetCustomFieldsIdSelectOptionsJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomFieldsIdSelectOptionsJsonPathParams.class, baseUrl, "/custom_fields/{id}/select_options.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomFieldsIdSelectOptionsJsonRequest.class, baseUrl, "/custom_fields/{id}/select_options.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCustomFieldsIdSelectOptionsJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCustomFieldsIdSelectOptionsJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -83,13 +83,13 @@ public class CustomFieldSelectOptions {
      */
     public org.openapis.openapi.models.operations.GetCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonResponse getCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJson(org.openapis.openapi.models.operations.GetCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonPathParams.class, baseUrl, "/custom_fields/{id}/select_options/{custom_field_select_option_id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest.class, baseUrl, "/custom_fields/{id}/select_options/{custom_field_select_option_id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -135,18 +135,18 @@ public class CustomFieldSelectOptions {
      */
     public org.openapis.openapi.models.operations.PostCustomFieldsIdSelectOptionsJsonResponse postCustomFieldsIdSelectOptionsJson(org.openapis.openapi.models.operations.PostCustomFieldsIdSelectOptionsJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostCustomFieldsIdSelectOptionsJsonPathParams.class, baseUrl, "/custom_fields/{id}/select_options.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostCustomFieldsIdSelectOptionsJsonRequest.class, baseUrl, "/custom_fields/{id}/select_options.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "customFieldSelectOptionEdit", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostCustomFieldsIdSelectOptionsJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostCustomFieldsIdSelectOptionsJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -184,18 +184,18 @@ public class CustomFieldSelectOptions {
      */
     public org.openapis.openapi.models.operations.PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonResponse putCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJson(org.openapis.openapi.models.operations.PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonPathParams.class, baseUrl, "/custom_fields/{id}/select_options/{custom_field_select_option_id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest.class, baseUrl, "/custom_fields/{id}/select_options/{custom_field_select_option_id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "customFieldSelectOptionEdit", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

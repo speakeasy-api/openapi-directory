@@ -39,7 +39,7 @@ public class BluetoothSettings {
      */
     public org.openapis.openapi.models.operations.GetNetworkBluetoothSettingsResponse getNetworkBluetoothSettings(org.openapis.openapi.models.operations.GetNetworkBluetoothSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkBluetoothSettingsPathParams.class, baseUrl, "/networks/{networkId}/bluetoothSettings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkBluetoothSettingsRequest.class, baseUrl, "/networks/{networkId}/bluetoothSettings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -79,12 +79,12 @@ public class BluetoothSettings {
      */
     public org.openapis.openapi.models.operations.UpdateDeviceWirelessBluetoothSettingsResponse updateDeviceWirelessBluetoothSettings(org.openapis.openapi.models.operations.UpdateDeviceWirelessBluetoothSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceWirelessBluetoothSettingsPathParams.class, baseUrl, "/devices/{serial}/wireless/bluetooth/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceWirelessBluetoothSettingsRequest.class, baseUrl, "/devices/{serial}/wireless/bluetooth/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -121,12 +121,12 @@ public class BluetoothSettings {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkBluetoothSettingsResponse updateNetworkBluetoothSettings(org.openapis.openapi.models.operations.UpdateNetworkBluetoothSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkBluetoothSettingsPathParams.class, baseUrl, "/networks/{networkId}/bluetoothSettings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkBluetoothSettingsRequest.class, baseUrl, "/networks/{networkId}/bluetoothSettings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

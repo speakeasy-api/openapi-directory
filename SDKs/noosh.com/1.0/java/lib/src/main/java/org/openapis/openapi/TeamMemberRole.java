@@ -38,7 +38,7 @@ public class TeamMemberRole {
      */
     public org.openapis.openapi.models.operations.GetMemberRolesResponse getMemberRoles(org.openapis.openapi.models.operations.GetMemberRolesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMemberRolesPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/memberroles/{user_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMemberRolesRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/memberroles/{user_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

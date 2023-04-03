@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCrmV3ExtensionsCardsAppIdCardIdGetByIdRequest {
-    
-    public GetCrmV3ExtensionsCardsAppIdCardIdGetByIdPathParams pathParams;
-    public GetCrmV3ExtensionsCardsAppIdCardIdGetByIdRequest withPathParams(GetCrmV3ExtensionsCardsAppIdCardIdGetByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the target app.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
+    public Integer appId;
+    public GetCrmV3ExtensionsCardsAppIdCardIdGetByIdRequest withAppId(Integer appId) {
+        this.appId = appId;
         return this;
     }
     
-    
-    public GetCrmV3ExtensionsCardsAppIdCardIdGetByIdSecurity security;
-    public GetCrmV3ExtensionsCardsAppIdCardIdGetByIdRequest withSecurity(GetCrmV3ExtensionsCardsAppIdCardIdGetByIdSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the target card.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cardId")
+    public String cardId;
+    public GetCrmV3ExtensionsCardsAppIdCardIdGetByIdRequest withCardId(String cardId) {
+        this.cardId = cardId;
         return this;
     }
     

@@ -4,13 +4,97 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteTasksRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=afterEnqueuedAt")
+    public String afterEnqueuedAt;
+    public DeleteTasksRequest withAfterEnqueuedAt(String afterEnqueuedAt) {
+        this.afterEnqueuedAt = afterEnqueuedAt;
+        return this;
+    }
     
-    public DeleteTasksQueryParams queryParams;
-    public DeleteTasksRequest withQueryParams(DeleteTasksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=afterFinishedAt")
+    public String afterFinishedAt;
+    public DeleteTasksRequest withAfterFinishedAt(String afterFinishedAt) {
+        this.afterFinishedAt = afterFinishedAt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=afterStartedAt")
+    public String afterStartedAt;
+    public DeleteTasksRequest withAfterStartedAt(String afterStartedAt) {
+        this.afterStartedAt = afterStartedAt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=beforeEnqueuedAt")
+    public String beforeEnqueuedAt;
+    public DeleteTasksRequest withBeforeEnqueuedAt(String beforeEnqueuedAt) {
+        this.beforeEnqueuedAt = beforeEnqueuedAt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=beforeFinishedAt")
+    public String beforeFinishedAt;
+    public DeleteTasksRequest withBeforeFinishedAt(String beforeFinishedAt) {
+        this.beforeFinishedAt = beforeFinishedAt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=beforeStartedAt")
+    public String beforeStartedAt;
+    public DeleteTasksRequest withBeforeStartedAt(String beforeStartedAt) {
+        this.beforeStartedAt = beforeStartedAt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=canceledBy")
+    public String canceledBy;
+    public DeleteTasksRequest withCanceledBy(String canceledBy) {
+        this.canceledBy = canceledBy;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
+    public String from;
+    public DeleteTasksRequest withFrom(String from) {
+        this.from = from;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=indexUids")
+    public String indexUids;
+    public DeleteTasksRequest withIndexUids(String indexUids) {
+        this.indexUids = indexUids;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public String limit;
+    public DeleteTasksRequest withLimit(String limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=statuses")
+    public String statuses;
+    public DeleteTasksRequest withStatuses(String statuses) {
+        this.statuses = statuses;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=types")
+    public String types;
+    public DeleteTasksRequest withTypes(String types) {
+        this.types = types;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uids")
+    public String uids;
+    public DeleteTasksRequest withUids(String uids) {
+        this.uids = uids;
         return this;
     }
     

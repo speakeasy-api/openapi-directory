@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CleanScanPageRequest {
-    
-    public CleanScanPagePathParams pathParams;
-    public CleanScanPageRequest withPathParams(CleanScanPagePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Numeric ID of the scan to clean
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scanId")
+    public Long scanId;
+    public CleanScanPageRequest withScanId(Long scanId) {
+        this.scanId = scanId;
         return this;
     }
     

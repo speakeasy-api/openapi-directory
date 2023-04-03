@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePaymentMethodStrongSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeAccountAuth accountAuth;
-    public UpdatePaymentMethodStrongSecurity withAccountAuth(org.openapis.openapi.models.shared.SchemeAccountAuth accountAuth) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String accountAuth;
+    public UpdatePaymentMethodStrongSecurity withAccountAuth(String accountAuth) {
         this.accountAuth = accountAuth;
         return this;
     }

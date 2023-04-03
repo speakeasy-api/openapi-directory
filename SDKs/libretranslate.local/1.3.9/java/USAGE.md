@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.PostSuggestRequest;
 import org.openapis.openapi.models.operations.PostSuggestResponse;
 
 public class Application {
@@ -13,9 +12,7 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            PostSuggestRequest req = new PostSuggestRequest() {{
-                request = "es";
-            }};            
+            org.openapis.openapi.models.. req = "es"            
 
             PostSuggestResponse res = sdk.feedback.postSuggest(req);
 

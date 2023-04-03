@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProjectsListForUserRequest {
-    
-    public ProjectsListForUserPathParams pathParams;
-    public ProjectsListForUserRequest withPathParams(ProjectsListForUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ProjectsListForUserRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ProjectsListForUserRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
     
-    public ProjectsListForUserQueryParams queryParams;
-    public ProjectsListForUserRequest withQueryParams(ProjectsListForUserQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Indicates the state of the projects to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public ProjectsListForUserStateEnum state;
+    public ProjectsListForUserRequest withState(ProjectsListForUserStateEnum state) {
+        this.state = state;
+        return this;
+    }
+    
+    /**
+     * The handle for the GitHub user account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public ProjectsListForUserRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

@@ -4,13 +4,55 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RootV1ScoringsConsolidatedDailyRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AppId")
+    public String appId;
+    public RootV1ScoringsConsolidatedDailyRequest withAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
     
-    public RootV1ScoringsConsolidatedDailyQueryParams queryParams;
-    public RootV1ScoringsConsolidatedDailyRequest withQueryParams(RootV1ScoringsConsolidatedDailyQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CompanyId")
+    public String companyId;
+    public RootV1ScoringsConsolidatedDailyRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DeviceToken")
+    public String deviceToken;
+    public RootV1ScoringsConsolidatedDailyRequest withDeviceToken(String deviceToken) {
+        this.deviceToken = deviceToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndDate")
+    public String endDate;
+    public RootV1ScoringsConsolidatedDailyRequest withEndDate(String endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceId")
+    public String instanceId;
+    public RootV1ScoringsConsolidatedDailyRequest withInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StartDate")
+    public String startDate;
+    public RootV1ScoringsConsolidatedDailyRequest withStartDate(String startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Tag")
+    public String tag;
+    public RootV1ScoringsConsolidatedDailyRequest withTag(String tag) {
+        this.tag = tag;
         return this;
     }
     

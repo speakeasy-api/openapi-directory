@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteOrganizationConfigTemplateRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=configTemplateId")
+    public String configTemplateId;
+    public DeleteOrganizationConfigTemplateRequest withConfigTemplateId(String configTemplateId) {
+        this.configTemplateId = configTemplateId;
+        return this;
+    }
     
-    public DeleteOrganizationConfigTemplatePathParams pathParams;
-    public DeleteOrganizationConfigTemplateRequest withPathParams(DeleteOrganizationConfigTemplatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public DeleteOrganizationConfigTemplateRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

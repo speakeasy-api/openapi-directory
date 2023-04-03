@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ApplicationsAddOwnerRequest {
-    
-    public ApplicationsAddOwnerPathParams pathParams;
-    public ApplicationsAddOwnerRequest withPathParams(ApplicationsAddOwnerPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ApplicationsAddOwnerQueryParams queryParams;
-    public ApplicationsAddOwnerRequest withQueryParams(ApplicationsAddOwnerQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * The URL of the owner object, such as https://graph.windows.net/0b1f9851-1bf0-433f-aec3-cb9272f093dc/directoryObjects/f260bbc4-c254-447b-94cf-293b5ec434dd.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, java.util.Map<String, Object>> request;
-    public ApplicationsAddOwnerRequest withRequest(java.util.Map<String, java.util.Map<String, Object>> request) {
-        this.request = request;
+    public java.util.Map<String, java.util.Map<String, Object>> requestBody;
+    public ApplicationsAddOwnerRequest withRequestBody(java.util.Map<String, java.util.Map<String, Object>> requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Client API version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public ApplicationsAddOwnerRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
+    
+    /**
+     * The object ID of the application to which to add the owner.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=applicationObjectId")
+    public String applicationObjectId;
+    public ApplicationsAddOwnerRequest withApplicationObjectId(String applicationObjectId) {
+        this.applicationObjectId = applicationObjectId;
+        return this;
+    }
+    
+    /**
+     * The tenant ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tenantID")
+    public String tenantID;
+    public ApplicationsAddOwnerRequest withTenantID(String tenantID) {
+        this.tenantID = tenantID;
         return this;
     }
     

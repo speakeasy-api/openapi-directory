@@ -47,7 +47,7 @@ public class Migrations {
      */
     public org.openapis.openapi.models.operations.MigrationsDeleteArchiveForOrgResponse migrationsDeleteArchiveForOrg(org.openapis.openapi.models.operations.MigrationsDeleteArchiveForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MigrationsDeleteArchiveForOrgPathParams.class, baseUrl, "/orgs/{org}/migrations/{migration_id}/archive", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MigrationsDeleteArchiveForOrgRequest.class, baseUrl, "/orgs/{org}/migrations/{migration_id}/archive", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -89,7 +89,7 @@ public class Migrations {
      */
     public org.openapis.openapi.models.operations.MigrationsDownloadArchiveForOrgResponse migrationsDownloadArchiveForOrg(org.openapis.openapi.models.operations.MigrationsDownloadArchiveForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MigrationsDownloadArchiveForOrgPathParams.class, baseUrl, "/orgs/{org}/migrations/{migration_id}/archive", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MigrationsDownloadArchiveForOrgRequest.class, baseUrl, "/orgs/{org}/migrations/{migration_id}/archive", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -151,7 +151,7 @@ public class Migrations {
      */
     public org.openapis.openapi.models.operations.MigrationsGetArchiveForAuthenticatedUserResponse migrationsGetArchiveForAuthenticatedUser(org.openapis.openapi.models.operations.MigrationsGetArchiveForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MigrationsGetArchiveForAuthenticatedUserPathParams.class, baseUrl, "/user/migrations/{migration_id}/archive", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MigrationsGetArchiveForAuthenticatedUserRequest.class, baseUrl, "/user/migrations/{migration_id}/archive", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -200,13 +200,13 @@ public class Migrations {
      */
     public org.openapis.openapi.models.operations.MigrationsGetStatusForOrgResponse migrationsGetStatusForOrg(org.openapis.openapi.models.operations.MigrationsGetStatusForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MigrationsGetStatusForOrgPathParams.class, baseUrl, "/orgs/{org}/migrations/{migration_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MigrationsGetStatusForOrgRequest.class, baseUrl, "/orgs/{org}/migrations/{migration_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MigrationsGetStatusForOrgQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MigrationsGetStatusForOrgRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -260,7 +260,7 @@ public class Migrations {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MigrationsListForAuthenticatedUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MigrationsListForAuthenticatedUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -314,13 +314,13 @@ public class Migrations {
      */
     public org.openapis.openapi.models.operations.MigrationsListForOrgResponse migrationsListForOrg(org.openapis.openapi.models.operations.MigrationsListForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MigrationsListForOrgPathParams.class, baseUrl, "/orgs/{org}/migrations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MigrationsListForOrgRequest.class, baseUrl, "/orgs/{org}/migrations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MigrationsListForOrgQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MigrationsListForOrgRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -362,13 +362,13 @@ public class Migrations {
      */
     public org.openapis.openapi.models.operations.MigrationsListReposForAuthenticatedUserResponse migrationsListReposForAuthenticatedUser(org.openapis.openapi.models.operations.MigrationsListReposForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MigrationsListReposForAuthenticatedUserPathParams.class, baseUrl, "/user/migrations/{migration_id}/repositories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MigrationsListReposForAuthenticatedUserRequest.class, baseUrl, "/user/migrations/{migration_id}/repositories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MigrationsListReposForAuthenticatedUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MigrationsListReposForAuthenticatedUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -418,13 +418,13 @@ public class Migrations {
      */
     public org.openapis.openapi.models.operations.MigrationsListReposForOrgResponse migrationsListReposForOrg(org.openapis.openapi.models.operations.MigrationsListReposForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MigrationsListReposForOrgPathParams.class, baseUrl, "/orgs/{org}/migrations/{migration_id}/repositories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MigrationsListReposForOrgRequest.class, baseUrl, "/orgs/{org}/migrations/{migration_id}/repositories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MigrationsListReposForOrgQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MigrationsListReposForOrgRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -472,7 +472,7 @@ public class Migrations {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MigrationsStartForAuthenticatedUserResponse migrationsStartForAuthenticatedUser(org.openapis.openapi.models.operations.MigrationsStartForAuthenticatedUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MigrationsStartForAuthenticatedUserResponse migrationsStartForAuthenticatedUser(org.openapis.openapi.models.operations.MigrationsStartForAuthenticatedUserRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/user/migrations");
         
@@ -537,12 +537,12 @@ public class Migrations {
      */
     public org.openapis.openapi.models.operations.MigrationsStartForOrgResponse migrationsStartForOrg(org.openapis.openapi.models.operations.MigrationsStartForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MigrationsStartForOrgPathParams.class, baseUrl, "/orgs/{org}/migrations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MigrationsStartForOrgRequest.class, baseUrl, "/orgs/{org}/migrations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -598,7 +598,7 @@ public class Migrations {
      */
     public org.openapis.openapi.models.operations.MigrationsUnlockRepoForOrgResponse migrationsUnlockRepoForOrg(org.openapis.openapi.models.operations.MigrationsUnlockRepoForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MigrationsUnlockRepoForOrgPathParams.class, baseUrl, "/orgs/{org}/migrations/{migration_id}/repos/{repo_name}/lock", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MigrationsUnlockRepoForOrgRequest.class, baseUrl, "/orgs/{org}/migrations/{migration_id}/repos/{repo_name}/lock", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");

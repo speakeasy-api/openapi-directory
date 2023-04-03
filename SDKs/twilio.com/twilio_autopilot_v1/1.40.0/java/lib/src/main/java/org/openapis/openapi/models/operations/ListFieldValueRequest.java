@@ -4,34 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListFieldValueRequest {
-    
-    public ListFieldValuePathParams pathParams;
-    public ListFieldValueRequest withPathParams(ListFieldValuePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the FieldType associated with the resources to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public ListFieldValueRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
-    
-    public ListFieldValueQueryParams queryParams;
-    public ListFieldValueRequest withQueryParams(ListFieldValueQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The SID of the Field Type associated with the Field Value to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FieldTypeSid")
+    public String fieldTypeSid;
+    public ListFieldValueRequest withFieldTypeSid(String fieldTypeSid) {
+        this.fieldTypeSid = fieldTypeSid;
         return this;
     }
     
-    
-    public ListFieldValueSecurity security;
-    public ListFieldValueRequest withSecurity(ListFieldValueSecurity security) {
-        this.security = security;
+    /**
+     * The [ISO language-country](https://docs.oracle.com/cd/E13214_01/wli/docs92/xref/xqisocodes.html) tag that specifies the language of the value. Currently supported tags: `en-US`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Language")
+    public String language;
+    public ListFieldValueRequest withLanguage(String language) {
+        this.language = language;
         return this;
     }
     
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListFieldValueRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public String serverURL;
-    public ListFieldValueRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListFieldValueRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListFieldValueRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

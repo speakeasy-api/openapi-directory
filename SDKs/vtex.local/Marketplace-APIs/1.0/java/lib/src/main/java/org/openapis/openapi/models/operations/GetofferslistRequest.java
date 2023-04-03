@@ -4,20 +4,122 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetofferslistRequest {
-    
-    public GetofferslistQueryParams queryParams;
-    public GetofferslistRequest withQueryParams(GetofferslistQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetofferslistRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetofferslistRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetofferslistHeaders headers;
-    public GetofferslistRequest withHeaders(GetofferslistHeaders headers) {
-        this.headers = headers;
+    /**
+     * Name of the VTEX account. Used as part of the URL
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
+    public String accountName;
+    public GetofferslistRequest withAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    
+    /**
+     * Environment to use. Used as part of the URL.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=environment")
+    public String environment;
+    public GetofferslistRequest withEnvironment(String environment) {
+        this.environment = environment;
+        return this;
+    }
+    
+    /**
+     * This filter query can be used to filter offers by the criteria described below. It should be filled in by following the format:\u00a0`fq={{criteriaName}}:{{criteriaValue}}`. 
+     * 
+     * - **productId:**\u00a0integer of the product ID 
+     * 
+     * - **productName:** string of the product's name 
+     * 
+     * - **skuId:** integer of the SKU ID 
+     * 
+     * - **eanId:** string of the EAN ID 
+     * 
+     * - **refId:** string of the Ref ID 
+     * 
+     * - **categoryId:** integer of the category ID 
+     * 
+     * - **brandId:** integer of the brand ID 
+     * 
+     * - **sellerId:** string of the seller ID 
+     * 
+     * - **sc:** integer of the sales channel's ID (trade policy in VTEX) 
+     * 
+     * Ex: skuId:172 
+     * 
+     * Ex: categoryId:13 
+     * 
+     * Ex. productName:Product example-123
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fq")
+    public String fq;
+    public GetofferslistRequest withFq(String fq) {
+        this.fq = fq;
+        return this;
+    }
+    
+    /**
+     * Number of rows included in the response. Each row corresponds to a single offer. The default amount of rows in the response is 1, and the maximum amount is 50. To have more than one offer listed in the response, please add the\u00a0`rows`\u00a0parameter with a number greater than 1.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rows")
+    public Long rows;
+    public GetofferslistRequest withRows(Long rows) {
+        this.rows = rows;
+        return this;
+    }
+    
+    /**
+     * Criteria used to sort the list of offers. For sorting values in ascending order, use\u00a0`asc`, while for descending order, use\u00a0`desc`. To fill in the field, insert the sorting criteria, followed by 'asc', or 'desc', separated by a comma. You can sort by the following criteria: 
+     * 
+     * - **price:**\u00a0sorts offers by price.\u00a0*Ascending*\u00a0goes from lowest to highest price, while\u00a0*Descending*\u00a0goes from highest to lowest price. 
+     * 
+     * - **name:**\u00a0sorts offers by\u00a0*productName*, in alphabetical order.\u00a0*Ascending*\u00a0goes from *A* to *Z*, while\u00a0*Descending* goes from *Z* to *A*. 
+     * 
+     * - **availability:**\u00a0availability in the sales channel (sc). The default value is 1. 
+     * 
+     * Ex. sort=availability,desc 
+     * 
+     * Ex. sort=name,asc 
+     * 
+     * Ex. price,desc
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetofferslistRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Number corresponding to the row from which the offer list will begin, used for pagination. Filters the list of offers by retrieving the offers starting from the row defined. The default value is 0, if the param is not included in the call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public Long start;
+    public GetofferslistRequest withStart(Long start) {
+        this.start = start;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBelegeBelegUuidRequest {
-    
-    public GetBelegeBelegUuidPathParams pathParams;
-    public GetBelegeBelegUuidRequest withPathParams(GetBelegeBelegUuidPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The `_uuid` of the `Beleg` to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=belegUuid")
+    public String belegUuid;
+    public GetBelegeBelegUuidRequest withBelegUuid(String belegUuid) {
+        this.belegUuid = belegUuid;
         return this;
     }
     

@@ -7,34 +7,53 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesUpdateReleaseUploadStatusRequest {
-    
-    public ReleasesUpdateReleaseUploadStatusPathParams pathParams;
-    public ReleasesUpdateReleaseUploadStatusRequest withPathParams(ReleasesUpdateReleaseUploadStatusPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ReleasesUpdateReleaseUploadStatusQueryParams queryParams;
-    public ReleasesUpdateReleaseUploadStatusRequest withQueryParams(ReleasesUpdateReleaseUploadStatusQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * The release upload status information.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public ReleasesUpdateReleaseUploadStatusRequestBody request;
-    public ReleasesUpdateReleaseUploadStatusRequest withRequest(ReleasesUpdateReleaseUploadStatusRequestBody request) {
-        this.request = request;
+    public ReleasesUpdateReleaseUploadStatusRequestBody requestBody;
+    public ReleasesUpdateReleaseUploadStatusRequest withRequestBody(ReleasesUpdateReleaseUploadStatusRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public ReleasesUpdateReleaseUploadStatusRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public ReleasesUpdateReleaseUploadStatusSecurity security;
-    public ReleasesUpdateReleaseUploadStatusRequest withSecurity(ReleasesUpdateReleaseUploadStatusSecurity security) {
-        this.security = security;
+    /**
+     * A flag that indicates to extract release or not, true by default
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=extract")
+    public Boolean extract;
+    public ReleasesUpdateReleaseUploadStatusRequest withExtract(Boolean extract) {
+        this.extract = extract;
+        return this;
+    }
+    
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public ReleasesUpdateReleaseUploadStatusRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
+    
+    /**
+     * The ID of the release upload
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=upload_id")
+    public String uploadId;
+    public ReleasesUpdateReleaseUploadStatusRequest withUploadId(String uploadId) {
+        this.uploadId = uploadId;
         return this;
     }
     

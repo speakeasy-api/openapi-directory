@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GETAffectedGenomicModelsUsingGETPathParams;
 import org.openapis.openapi.models.operations.GETAffectedGenomicModelsUsingGETRequest;
 import org.openapis.openapi.models.operations.GETAffectedGenomicModelsUsingGETResponse;
 
@@ -28,10 +27,8 @@ public class Application {
                 .build();
 
             GETAffectedGenomicModelsUsingGETRequest req = new GETAffectedGenomicModelsUsingGETRequest() {{
-                pathParams = new GETAffectedGenomicModelsUsingGETPathParams() {{
-                    taxonId = "corrupti";
-                }};
-            }};            
+                taxonId = "corrupti";
+            }}            
 
             GETAffectedGenomicModelsUsingGETResponse res = sdk.agr.getAffectedGenomicModelsUsingGET(req);
 
@@ -45,7 +42,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### agr

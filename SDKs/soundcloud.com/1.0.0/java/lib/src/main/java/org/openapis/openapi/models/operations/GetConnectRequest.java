@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConnectRequest {
-    
-    public GetConnectQueryParams queryParams;
-    public GetConnectRequest withQueryParams(GetConnectQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The client id belonging to your application
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=client_id")
+    public String clientId;
+    public GetConnectRequest withClientId(String clientId) {
+        this.clientId = clientId;
         return this;
     }
     
+    /**
+     * The redirect uri you have configured for your application
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=redirect_uri")
+    public String redirectUri;
+    public GetConnectRequest withRedirectUri(String redirectUri) {
+        this.redirectUri = redirectUri;
+        return this;
+    }
     
-    public GetConnectSecurity security;
-    public GetConnectRequest withSecurity(GetConnectSecurity security) {
-        this.security = security;
+    /**
+     * It's recommended to use "code" here
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=response_type")
+    public org.openapis.openapi.models.shared.ResponseTypeEnum responseType;
+    public GetConnectRequest withResponseType(org.openapis.openapi.models.shared.ResponseTypeEnum responseType) {
+        this.responseType = responseType;
+        return this;
+    }
+    
+    /**
+     * Scope
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scope")
+    public String scope;
+    public GetConnectRequest withScope(String scope) {
+        this.scope = scope;
+        return this;
+    }
+    
+    /**
+     * Any value included here will be appended to the redirect URI. Use this for CSRF protection.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public String state;
+    public GetConnectRequest withState(String state) {
+        this.state = state;
         return this;
     }
     

@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CollectionsMetadataDetailRequest {
-    
-    public CollectionsMetadataDetailPathParams pathParams;
-    public CollectionsMetadataDetailRequest withPathParams(CollectionsMetadataDetailPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public java.util.Map<String, Object> requestBody;
+    public CollectionsMetadataDetailRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public CollectionsMetadataDetailRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    /**
+     * A short id for that piece of metadata
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cgm_id")
+    public String cgmId;
+    public CollectionsMetadataDetailRequest withCgmId(String cgmId) {
+        this.cgmId = cgmId;
+        return this;
+    }
+    
+    /**
+     * A short id for that collection
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection_id")
+    public String collectionId;
+    public CollectionsMetadataDetailRequest withCollectionId(String collectionId) {
+        this.collectionId = collectionId;
         return this;
     }
     

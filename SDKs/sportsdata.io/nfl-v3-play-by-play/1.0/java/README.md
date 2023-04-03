@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.PlayByPlayFormatEnum;
-import org.openapis.openapi.models.operations.PlayByPlayPathParams;
 import org.openapis.openapi.models.operations.PlayByPlayRequest;
 import org.openapis.openapi.models.operations.PlayByPlayResponse;
 
@@ -27,20 +26,16 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    apiKeyHeader = new SchemeAPIKeyHeader() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    apiKeyHeader = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             PlayByPlayRequest req = new PlayByPlayRequest() {{
-                pathParams = new PlayByPlayPathParams() {{
-                    format = "JSON";
-                    hometeam = "provident";
-                    season = "distinctio";
-                    week = "quibusdam";
-                }};
-            }};            
+                format = "JSON";
+                hometeam = "provident";
+                season = "distinctio";
+                week = "quibusdam";
+            }}            
 
             PlayByPlayResponse res = sdk.playByPlay(req);
 
@@ -54,7 +49,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

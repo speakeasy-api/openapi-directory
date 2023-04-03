@@ -140,7 +140,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DfsSlatesByDateResponse dfsSlatesByDate(org.openapis.openapi.models.operations.DfsSlatesByDateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfsSlatesByDatePathParams.class, baseUrl, "/{format}/DfsSlatesByDate/{date}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfsSlatesByDateRequest.class, baseUrl, "/{format}/DfsSlatesByDate/{date}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -180,7 +180,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.InjuredPlayersResponse injuredPlayers(org.openapis.openapi.models.operations.InjuredPlayersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InjuredPlayersPathParams.class, baseUrl, "/{format}/InjuredPlayers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InjuredPlayersRequest.class, baseUrl, "/{format}/InjuredPlayers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -219,7 +219,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByDateWInjuriesDfsSalariesResponse projectedPlayerGameStatsByDateWInjuriesDfsSalaries(org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByDateWInjuriesDfsSalariesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByDateWInjuriesDfsSalariesPathParams.class, baseUrl, "/{format}/PlayerGameProjectionStatsByDate/{date}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByDateWInjuriesDfsSalariesRequest.class, baseUrl, "/{format}/PlayerGameProjectionStatsByDate/{date}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -258,7 +258,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByPlayerWInjuriesDfsSalariesResponse projectedPlayerGameStatsByPlayerWInjuriesDfsSalaries(org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByPlayerWInjuriesDfsSalariesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByPlayerWInjuriesDfsSalariesPathParams.class, baseUrl, "/{format}/PlayerGameProjectionStatsByPlayer/{date}/{playerid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByPlayerWInjuriesDfsSalariesRequest.class, baseUrl, "/{format}/PlayerGameProjectionStatsByPlayer/{date}/{playerid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -298,7 +298,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.StartingGoaltendersByDateResponse startingGoaltendersByDate(org.openapis.openapi.models.operations.StartingGoaltendersByDateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StartingGoaltendersByDatePathParams.class, baseUrl, "/{format}/StartingGoaltendersByDate/{date}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StartingGoaltendersByDateRequest.class, baseUrl, "/{format}/StartingGoaltendersByDate/{date}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

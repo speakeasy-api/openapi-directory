@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyDBProxyEndpointRequest {
-    
-    public GETModifyDBProxyEndpointQueryParams queryParams;
-    public GETModifyDBProxyEndpointRequest withQueryParams(GETModifyDBProxyEndpointQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyDBProxyEndpointActionEnum action;
+    public GETModifyDBProxyEndpointRequest withAction(GETModifyDBProxyEndpointActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the DB proxy sociated with the DB proxy endpoint that you want to modify.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBProxyEndpointName")
+    public String dbProxyEndpointName;
+    public GETModifyDBProxyEndpointRequest withDBProxyEndpointName(String dbProxyEndpointName) {
+        this.dbProxyEndpointName = dbProxyEndpointName;
+        return this;
+    }
     
-    public GETModifyDBProxyEndpointHeaders headers;
-    public GETModifyDBProxyEndpointRequest withHeaders(GETModifyDBProxyEndpointHeaders headers) {
-        this.headers = headers;
+    /**
+     * The new identifier for the &lt;code&gt;DBProxyEndpoint&lt;/code&gt;. An identifier must begin with a letter and must contain only ASCII letters, digits, and hyphens; it can't end with a hyphen or contain two consecutive hyphens.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NewDBProxyEndpointName")
+    public String newDBProxyEndpointName;
+    public GETModifyDBProxyEndpointRequest withNewDBProxyEndpointName(String newDBProxyEndpointName) {
+        this.newDBProxyEndpointName = newDBProxyEndpointName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyDBProxyEndpointVersionEnum version;
+    public GETModifyDBProxyEndpointRequest withVersion(GETModifyDBProxyEndpointVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    /**
+     * The VPC security group IDs for the DB proxy endpoint. When the DB proxy endpoint uses a different VPC than the original proxy, you also specify a different set of security group IDs than for the original proxy.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcSecurityGroupIds")
+    public String[] vpcSecurityGroupIds;
+    public GETModifyDBProxyEndpointRequest withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
+        this.vpcSecurityGroupIds = vpcSecurityGroupIds;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyDBProxyEndpointRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyDBProxyEndpointRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyDBProxyEndpointRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyDBProxyEndpointRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyDBProxyEndpointRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyDBProxyEndpointRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyDBProxyEndpointRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

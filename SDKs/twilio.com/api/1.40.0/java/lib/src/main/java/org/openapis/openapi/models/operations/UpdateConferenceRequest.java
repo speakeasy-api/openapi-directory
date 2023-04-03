@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateConferenceRequest {
-    
-    public UpdateConferencePathParams pathParams;
-    public UpdateConferenceRequest withPathParams(UpdateConferencePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Conference resource(s) to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public UpdateConferenceRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateConferenceUpdateConferenceRequest request;
-    public UpdateConferenceRequest withRequest(UpdateConferenceUpdateConferenceRequest request) {
-        this.request = request;
+    public UpdateConferenceUpdateConferenceRequest requestBody;
+    public UpdateConferenceRequest withRequestBody(UpdateConferenceUpdateConferenceRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateConferenceSecurity security;
-    public UpdateConferenceRequest withSecurity(UpdateConferenceSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateConferenceRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the Conference resource to update
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateConferenceRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

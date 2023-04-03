@@ -4,20 +4,50 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssuesListLabelsOnIssueRequest {
-    
-    public IssuesListLabelsOnIssuePathParams pathParams;
-    public IssuesListLabelsOnIssueRequest withPathParams(IssuesListLabelsOnIssuePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * issue_number parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=issue_number")
+    public Long issueNumber;
+    public IssuesListLabelsOnIssueRequest withIssueNumber(Long issueNumber) {
+        this.issueNumber = issueNumber;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssuesListLabelsOnIssueRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public IssuesListLabelsOnIssueQueryParams queryParams;
-    public IssuesListLabelsOnIssueRequest withQueryParams(IssuesListLabelsOnIssueQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public IssuesListLabelsOnIssueRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public IssuesListLabelsOnIssueRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssuesListLabelsOnIssueRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

@@ -4,34 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListIncomingPhoneNumberAssignedAddOnExtensionRequest {
-    
-    public ListIncomingPhoneNumberAssignedAddOnExtensionPathParams pathParams;
-    public ListIncomingPhoneNumberAssignedAddOnExtensionRequest withPathParams(ListIncomingPhoneNumberAssignedAddOnExtensionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the resources to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public ListIncomingPhoneNumberAssignedAddOnExtensionRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public ListIncomingPhoneNumberAssignedAddOnExtensionQueryParams queryParams;
-    public ListIncomingPhoneNumberAssignedAddOnExtensionRequest withQueryParams(ListIncomingPhoneNumberAssignedAddOnExtensionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The SID that uniquely identifies the assigned Add-on installation.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssignedAddOnSid")
+    public String assignedAddOnSid;
+    public ListIncomingPhoneNumberAssignedAddOnExtensionRequest withAssignedAddOnSid(String assignedAddOnSid) {
+        this.assignedAddOnSid = assignedAddOnSid;
         return this;
     }
     
-    
-    public ListIncomingPhoneNumberAssignedAddOnExtensionSecurity security;
-    public ListIncomingPhoneNumberAssignedAddOnExtensionRequest withSecurity(ListIncomingPhoneNumberAssignedAddOnExtensionSecurity security) {
-        this.security = security;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListIncomingPhoneNumberAssignedAddOnExtensionRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListIncomingPhoneNumberAssignedAddOnExtensionRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public String serverURL;
-    public ListIncomingPhoneNumberAssignedAddOnExtensionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListIncomingPhoneNumberAssignedAddOnExtensionRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * The SID of the Phone Number to which the Add-on is assigned.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ResourceSid")
+    public String resourceSid;
+    public ListIncomingPhoneNumberAssignedAddOnExtensionRequest withResourceSid(String resourceSid) {
+        this.resourceSid = resourceSid;
         return this;
     }
     

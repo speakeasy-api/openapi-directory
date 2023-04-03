@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CrashesGetRawCrashLocationRequest {
-    
-    public CrashesGetRawCrashLocationPathParams pathParams;
-    public CrashesGetRawCrashLocationRequest withPathParams(CrashesGetRawCrashLocationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public CrashesGetRawCrashLocationRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * id of a specific group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=crash_group_id")
+    public String crashGroupId;
+    public CrashesGetRawCrashLocationRequest withCrashGroupId(String crashGroupId) {
+        this.crashGroupId = crashGroupId;
+        return this;
+    }
     
-    public CrashesGetRawCrashLocationSecurity security;
-    public CrashesGetRawCrashLocationRequest withSecurity(CrashesGetRawCrashLocationSecurity security) {
-        this.security = security;
+    /**
+     * id of a specific crash
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=crash_id")
+    public String crashId;
+    public CrashesGetRawCrashLocationRequest withCrashId(String crashId) {
+        this.crashId = crashId;
+        return this;
+    }
+    
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public CrashesGetRawCrashLocationRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

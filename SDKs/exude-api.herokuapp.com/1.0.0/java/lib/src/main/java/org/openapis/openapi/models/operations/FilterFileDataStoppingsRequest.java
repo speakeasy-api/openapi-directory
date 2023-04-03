@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FilterFileDataStoppingsRequest {
-    
-    public FilterFileDataStoppingsPathParams pathParams;
-    public FilterFileDataStoppingsRequest withPathParams(FilterFileDataStoppingsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Filter the stopping words from the provided input file
      */
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public FilterFileDataStoppingsRequestBody request;
-    public FilterFileDataStoppingsRequest withRequest(FilterFileDataStoppingsRequestBody request) {
-        this.request = request;
+    public FilterFileDataStoppingsRequestBody requestBody;
+    public FilterFileDataStoppingsRequest withRequestBody(FilterFileDataStoppingsRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * provide the type of filtering required stopping/swear
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
+    public String type;
+    public FilterFileDataStoppingsRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

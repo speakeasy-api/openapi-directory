@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVideosWithTagRequest {
-    
-    public GetVideosWithTagPathParams pathParams;
-    public GetVideosWithTagRequest withPathParams(GetVideosWithTagPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The sort direction of the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public GetVideosWithTagDirectionEnum direction;
+    public GetVideosWithTagRequest withDirection(GetVideosWithTagDirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetVideosWithTagRequest withPage(Double page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetVideosWithTagQueryParams queryParams;
-    public GetVideosWithTagRequest withQueryParams(GetVideosWithTagQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetVideosWithTagRequest withPerPage(Double perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The way to sort the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetVideosWithTagSortEnum sort;
+    public GetVideosWithTagRequest withSort(GetVideosWithTagSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * The tag word.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=word")
+    public String word;
+    public GetVideosWithTagRequest withWord(String word) {
+        this.word = word;
         return this;
     }
     

@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutRealmUsersIdDisableCredentialTypesRequest {
-    
-    public PutRealmUsersIdDisableCredentialTypesPathParams pathParams;
-    public PutRealmUsersIdDisableCredentialTypesRequest withPathParams(PutRealmUsersIdDisableCredentialTypesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public String[] requestBody;
+    public PutRealmUsersIdDisableCredentialTypesRequest withRequestBody(String[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public String[] request;
-    public PutRealmUsersIdDisableCredentialTypesRequest withRequest(String[] request) {
-        this.request = request;
+    /**
+     * User id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutRealmUsersIdDisableCredentialTypesRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PutRealmUsersIdDisableCredentialTypesRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

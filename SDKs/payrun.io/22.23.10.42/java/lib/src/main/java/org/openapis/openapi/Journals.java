@@ -38,13 +38,13 @@ public class Journals {
      */
     public org.openapis.openapi.models.operations.DeleteJournalInstructionResponse deleteJournalInstruction(org.openapis.openapi.models.operations.DeleteJournalInstructionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteJournalInstructionPathParams.class, baseUrl, "/Employer/{EmployerId}/JournalInstruction/{JournalInstructionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteJournalInstructionRequest.class, baseUrl, "/Employer/{EmployerId}/JournalInstruction/{JournalInstructionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -87,13 +87,13 @@ public class Journals {
      */
     public org.openapis.openapi.models.operations.DeleteJournalInstructionTemplateResponse deleteJournalInstructionTemplate(org.openapis.openapi.models.operations.DeleteJournalInstructionTemplateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteJournalInstructionTemplatePathParams.class, baseUrl, "/JournalInstruction/{JournalInstructionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteJournalInstructionTemplateRequest.class, baseUrl, "/JournalInstruction/{JournalInstructionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -136,13 +136,13 @@ public class Journals {
      */
     public org.openapis.openapi.models.operations.GetJournalInstructionFromEmployerResponse getJournalInstructionFromEmployer(org.openapis.openapi.models.operations.GetJournalInstructionFromEmployerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetJournalInstructionFromEmployerPathParams.class, baseUrl, "/Employer/{EmployerId}/JournalInstruction/{JournalInstructionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetJournalInstructionFromEmployerRequest.class, baseUrl, "/Employer/{EmployerId}/JournalInstruction/{JournalInstructionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -191,13 +191,13 @@ public class Journals {
      */
     public org.openapis.openapi.models.operations.GetJournalInstructionTemplateResponse getJournalInstructionTemplate(org.openapis.openapi.models.operations.GetJournalInstructionTemplateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetJournalInstructionTemplatePathParams.class, baseUrl, "/JournalInstruction/{JournalInstructionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetJournalInstructionTemplateRequest.class, baseUrl, "/JournalInstruction/{JournalInstructionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -252,7 +252,7 @@ public class Journals {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -301,13 +301,13 @@ public class Journals {
      */
     public org.openapis.openapi.models.operations.GetJournalInstructionsFromEmployerResponse getJournalInstructionsFromEmployer(org.openapis.openapi.models.operations.GetJournalInstructionsFromEmployerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetJournalInstructionsFromEmployerPathParams.class, baseUrl, "/Employer/{EmployerId}/JournalInstructions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetJournalInstructionsFromEmployerRequest.class, baseUrl, "/Employer/{EmployerId}/JournalInstructions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -356,13 +356,13 @@ public class Journals {
      */
     public org.openapis.openapi.models.operations.GetJournalLineFromEmployerResponse getJournalLineFromEmployer(org.openapis.openapi.models.operations.GetJournalLineFromEmployerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetJournalLineFromEmployerPathParams.class, baseUrl, "/Employer/{EmployerId}/JournalLine/{JournalLineId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetJournalLineFromEmployerRequest.class, baseUrl, "/Employer/{EmployerId}/JournalLine/{JournalLineId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -411,13 +411,13 @@ public class Journals {
      */
     public org.openapis.openapi.models.operations.GetJournalLinesFromEmployeeResponse getJournalLinesFromEmployee(org.openapis.openapi.models.operations.GetJournalLinesFromEmployeeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetJournalLinesFromEmployeePathParams.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/JournalLines", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetJournalLinesFromEmployeeRequest.class, baseUrl, "/Employer/{EmployerId}/Employee/{EmployeeId}/JournalLines", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -466,13 +466,13 @@ public class Journals {
      */
     public org.openapis.openapi.models.operations.GetJournalLinesFromEmployerResponse getJournalLinesFromEmployer(org.openapis.openapi.models.operations.GetJournalLinesFromEmployerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetJournalLinesFromEmployerPathParams.class, baseUrl, "/Employer/{EmployerId}/JournalLines", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetJournalLinesFromEmployerRequest.class, baseUrl, "/Employer/{EmployerId}/JournalLines", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -521,13 +521,13 @@ public class Journals {
      */
     public org.openapis.openapi.models.operations.GetJournalLinesFromPayRunResponse getJournalLinesFromPayRun(org.openapis.openapi.models.operations.GetJournalLinesFromPayRunRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetJournalLinesFromPayRunPathParams.class, baseUrl, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRun/{PayRunId}/JournalLines", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetJournalLinesFromPayRunRequest.class, baseUrl, "/Employer/{EmployerId}/PaySchedule/{PayScheduleId}/PayRun/{PayRunId}/JournalLines", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -576,13 +576,13 @@ public class Journals {
      */
     public org.openapis.openapi.models.operations.GetJournalLinesFromSubContractorResponse getJournalLinesFromSubContractor(org.openapis.openapi.models.operations.GetJournalLinesFromSubContractorRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetJournalLinesFromSubContractorPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/JournalLines", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetJournalLinesFromSubContractorRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/JournalLines", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -631,13 +631,13 @@ public class Journals {
      */
     public org.openapis.openapi.models.operations.PostJournalInstructionResponse postJournalInstruction(org.openapis.openapi.models.operations.PostJournalInstructionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostJournalInstructionPathParams.class, baseUrl, "/Employer/{EmployerId}/JournalInstructions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostJournalInstructionRequest.class, baseUrl, "/Employer/{EmployerId}/JournalInstructions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -692,7 +692,7 @@ public class Journals {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -741,13 +741,13 @@ public class Journals {
      */
     public org.openapis.openapi.models.operations.PutJournalInstructionResponse putJournalInstruction(org.openapis.openapi.models.operations.PutJournalInstructionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutJournalInstructionPathParams.class, baseUrl, "/Employer/{EmployerId}/JournalInstruction/{JournalInstructionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutJournalInstructionRequest.class, baseUrl, "/Employer/{EmployerId}/JournalInstruction/{JournalInstructionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -796,13 +796,13 @@ public class Journals {
      */
     public org.openapis.openapi.models.operations.PutJournalInstructionTemplateResponse putJournalInstructionTemplate(org.openapis.openapi.models.operations.PutJournalInstructionTemplateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutJournalInstructionTemplatePathParams.class, baseUrl, "/JournalInstruction/{JournalInstructionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutJournalInstructionTemplateRequest.class, baseUrl, "/JournalInstruction/{JournalInstructionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

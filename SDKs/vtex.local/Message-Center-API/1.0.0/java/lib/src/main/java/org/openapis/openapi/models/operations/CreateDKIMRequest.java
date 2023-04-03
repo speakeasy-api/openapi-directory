@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateDKIMRequest {
-    
-    public CreateDKIMPathParams pathParams;
-    public CreateDKIMRequest withPathParams(CreateDKIMPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * E-mail address for sender that was setup in VTEX mail servers
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EmailProvider")
+    public String emailProvider;
+    public CreateDKIMRequest withEmailProvider(String emailProvider) {
+        this.emailProvider = emailProvider;
         return this;
     }
     

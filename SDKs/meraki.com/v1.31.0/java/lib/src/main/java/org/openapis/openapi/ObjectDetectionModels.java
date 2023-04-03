@@ -39,7 +39,7 @@ public class ObjectDetectionModels {
      */
     public org.openapis.openapi.models.operations.GetDeviceCameraSenseObjectDetectionModelsResponse getDeviceCameraSenseObjectDetectionModels(org.openapis.openapi.models.operations.GetDeviceCameraSenseObjectDetectionModelsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraSenseObjectDetectionModelsPathParams.class, baseUrl, "/devices/{serial}/camera/sense/objectDetectionModels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraSenseObjectDetectionModelsRequest.class, baseUrl, "/devices/{serial}/camera/sense/objectDetectionModels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

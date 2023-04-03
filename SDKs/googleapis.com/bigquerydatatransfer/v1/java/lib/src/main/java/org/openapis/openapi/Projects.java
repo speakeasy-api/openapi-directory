@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Returns true if valid credentials exist for the given data source and requesting user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsResponse bigquerydatatransferProjectsLocationsDataSourcesCheckValidCreds(org.openapis.openapi.models.operations.BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsResponse bigquerydatatransferProjectsLocationsDataSourcesCheckValidCreds(org.openapis.openapi.models.operations.BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsRequest request, org.openapis.openapi.models.operations.BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsPathParams.class, baseUrl, "/v1/{name}:checkValidCreds", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsRequest.class, baseUrl, "/v1/{name}:checkValidCreds", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,25 +83,26 @@ public class Projects {
     /**
      * Lists supported data sources and returns their settings.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigquerydatatransferProjectsLocationsDataSourcesListResponse bigquerydatatransferProjectsLocationsDataSourcesList(org.openapis.openapi.models.operations.BigquerydatatransferProjectsLocationsDataSourcesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigquerydatatransferProjectsLocationsDataSourcesListResponse bigquerydatatransferProjectsLocationsDataSourcesList(org.openapis.openapi.models.operations.BigquerydatatransferProjectsLocationsDataSourcesListRequest request, org.openapis.openapi.models.operations.BigquerydatatransferProjectsLocationsDataSourcesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigquerydatatransferProjectsLocationsDataSourcesListPathParams.class, baseUrl, "/v1/{parent}/dataSources", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigquerydatatransferProjectsLocationsDataSourcesListRequest.class, baseUrl, "/v1/{parent}/dataSources", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigquerydatatransferProjectsLocationsDataSourcesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigquerydatatransferProjectsLocationsDataSourcesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,27 +129,28 @@ public class Projects {
     /**
      * Enroll data sources in a user project. This allows users to create transfer configurations for these data sources. They will also appear in the ListDataSources RPC and as such, will appear in the [BigQuery UI](https://console.cloud.google.com/bigquery), and the documents can be found in the public guide for [BigQuery Web UI](https://cloud.google.com/bigquery/bigquery-web-ui) and [Data Transfer Service](https://cloud.google.com/bigquery/docs/working-with-transfers).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigquerydatatransferProjectsLocationsEnrollDataSourcesResponse bigquerydatatransferProjectsLocationsEnrollDataSources(org.openapis.openapi.models.operations.BigquerydatatransferProjectsLocationsEnrollDataSourcesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigquerydatatransferProjectsLocationsEnrollDataSourcesResponse bigquerydatatransferProjectsLocationsEnrollDataSources(org.openapis.openapi.models.operations.BigquerydatatransferProjectsLocationsEnrollDataSourcesRequest request, org.openapis.openapi.models.operations.BigquerydatatransferProjectsLocationsEnrollDataSourcesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigquerydatatransferProjectsLocationsEnrollDataSourcesPathParams.class, baseUrl, "/v1/{name}:enrollDataSources", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigquerydatatransferProjectsLocationsEnrollDataSourcesRequest.class, baseUrl, "/v1/{name}:enrollDataSources", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "enrollDataSourcesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigquerydatatransferProjectsLocationsEnrollDataSourcesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigquerydatatransferProjectsLocationsEnrollDataSourcesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,25 +177,26 @@ public class Projects {
     /**
      * Lists information about the supported locations for this service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigquerydatatransferProjectsLocationsListResponse bigquerydatatransferProjectsLocationsList(org.openapis.openapi.models.operations.BigquerydatatransferProjectsLocationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigquerydatatransferProjectsLocationsListResponse bigquerydatatransferProjectsLocationsList(org.openapis.openapi.models.operations.BigquerydatatransferProjectsLocationsListRequest request, org.openapis.openapi.models.operations.BigquerydatatransferProjectsLocationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigquerydatatransferProjectsLocationsListPathParams.class, baseUrl, "/v1/{name}/locations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigquerydatatransferProjectsLocationsListRequest.class, baseUrl, "/v1/{name}/locations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigquerydatatransferProjectsLocationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigquerydatatransferProjectsLocationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -219,27 +223,28 @@ public class Projects {
     /**
      * Creates a new data transfer configuration.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsCreateResponse bigquerydatatransferProjectsTransferConfigsCreate(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsCreateResponse bigquerydatatransferProjectsTransferConfigsCreate(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsCreateRequest request, org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsCreatePathParams.class, baseUrl, "/v1/{parent}/transferConfigs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsCreateRequest.class, baseUrl, "/v1/{parent}/transferConfigs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "transferConfigInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -266,25 +271,26 @@ public class Projects {
     /**
      * Returns information about all transfer configs owned by a project in the specified location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsListResponse bigquerydatatransferProjectsTransferConfigsList(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsListResponse bigquerydatatransferProjectsTransferConfigsList(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsListRequest request, org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsListPathParams.class, baseUrl, "/v1/{parent}/transferConfigs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsListRequest.class, baseUrl, "/v1/{parent}/transferConfigs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -311,27 +317,28 @@ public class Projects {
     /**
      * Updates a data transfer configuration. All fields must be set, even if they are not updated.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsPatchResponse bigquerydatatransferProjectsTransferConfigsPatch(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsPatchResponse bigquerydatatransferProjectsTransferConfigsPatch(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsPatchRequest request, org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsPatchPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsPatchRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "transferConfigInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -358,25 +365,26 @@ public class Projects {
     /**
      * Deletes the specified transfer run.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsRunsDeleteResponse bigquerydatatransferProjectsTransferConfigsRunsDelete(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsRunsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsRunsDeleteResponse bigquerydatatransferProjectsTransferConfigsRunsDelete(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsRunsDeleteRequest request, org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsRunsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsRunsDeletePathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsRunsDeleteRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsRunsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsRunsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -403,25 +411,26 @@ public class Projects {
     /**
      * Returns information about the particular transfer run.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsRunsGetResponse bigquerydatatransferProjectsTransferConfigsRunsGet(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsRunsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsRunsGetResponse bigquerydatatransferProjectsTransferConfigsRunsGet(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsRunsGetRequest request, org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsRunsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsRunsGetPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsRunsGetRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsRunsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsRunsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -448,25 +457,26 @@ public class Projects {
     /**
      * Returns information about running and completed transfer runs.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsRunsListResponse bigquerydatatransferProjectsTransferConfigsRunsList(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsRunsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsRunsListResponse bigquerydatatransferProjectsTransferConfigsRunsList(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsRunsListRequest request, org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsRunsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsRunsListPathParams.class, baseUrl, "/v1/{parent}/runs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsRunsListRequest.class, baseUrl, "/v1/{parent}/runs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsRunsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsRunsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -493,25 +503,26 @@ public class Projects {
     /**
      * Returns log messages for the transfer run.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListResponse bigquerydatatransferProjectsTransferConfigsRunsTransferLogsList(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListResponse bigquerydatatransferProjectsTransferConfigsRunsTransferLogsList(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListRequest request, org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListPathParams.class, baseUrl, "/v1/{parent}/transferLogs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListRequest.class, baseUrl, "/v1/{parent}/transferLogs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -538,27 +549,28 @@ public class Projects {
     /**
      * Creates transfer runs for a time range [start_time, end_time]. For each date - or whatever granularity the data source supports - in the range, one transfer run is created. Note that runs are created per UTC time in the time range. DEPRECATED: use StartManualTransferRuns instead.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsScheduleRunsResponse bigquerydatatransferProjectsTransferConfigsScheduleRuns(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsScheduleRunsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsScheduleRunsResponse bigquerydatatransferProjectsTransferConfigsScheduleRuns(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsScheduleRunsRequest request, org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsScheduleRunsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsScheduleRunsPathParams.class, baseUrl, "/v1/{parent}:scheduleRuns", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsScheduleRunsRequest.class, baseUrl, "/v1/{parent}:scheduleRuns", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "scheduleTransferRunsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsScheduleRunsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsScheduleRunsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -585,27 +597,28 @@ public class Projects {
     /**
      * Start manual transfer runs to be executed now with schedule_time equal to current time. The transfer runs can be created for a time range where the run_time is between start_time (inclusive) and end_time (exclusive), or for a specific run_time.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsStartManualRunsResponse bigquerydatatransferProjectsTransferConfigsStartManualRuns(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsStartManualRunsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsStartManualRunsResponse bigquerydatatransferProjectsTransferConfigsStartManualRuns(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsStartManualRunsRequest request, org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsStartManualRunsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsStartManualRunsPathParams.class, baseUrl, "/v1/{parent}:startManualRuns", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsStartManualRunsRequest.class, baseUrl, "/v1/{parent}:startManualRuns", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "startManualTransferRunsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsStartManualRunsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigquerydatatransferProjectsTransferConfigsStartManualRunsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

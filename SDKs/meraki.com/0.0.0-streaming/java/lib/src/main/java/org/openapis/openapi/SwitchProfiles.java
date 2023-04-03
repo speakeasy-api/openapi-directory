@@ -39,7 +39,7 @@ public class SwitchProfiles {
      */
     public org.openapis.openapi.models.operations.GetOrganizationConfigTemplateSwitchProfilesResponse getOrganizationConfigTemplateSwitchProfiles(org.openapis.openapi.models.operations.GetOrganizationConfigTemplateSwitchProfilesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationConfigTemplateSwitchProfilesPathParams.class, baseUrl, "/organizations/{organizationId}/configTemplates/{configTemplateId}/switchProfiles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationConfigTemplateSwitchProfilesRequest.class, baseUrl, "/organizations/{organizationId}/configTemplates/{configTemplateId}/switchProfiles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

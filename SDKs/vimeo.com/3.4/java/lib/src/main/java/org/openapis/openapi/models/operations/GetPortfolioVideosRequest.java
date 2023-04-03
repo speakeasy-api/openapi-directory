@@ -4,20 +4,90 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPortfolioVideosRequest {
-    
-    public GetPortfolioVideosPathParams pathParams;
-    public GetPortfolioVideosRequest withPathParams(GetPortfolioVideosPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The page that contains the video URI.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=containing_uri")
+    public String containingUri;
+    public GetPortfolioVideosRequest withContainingUri(String containingUri) {
+        this.containingUri = containingUri;
         return this;
     }
     
+    /**
+     * The attribute by which to filter the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public GetPortfolioVideosFilterEnum filter;
+    public GetPortfolioVideosRequest withFilter(GetPortfolioVideosFilterEnum filter) {
+        this.filter = filter;
+        return this;
+    }
     
-    public GetPortfolioVideosQueryParams queryParams;
-    public GetPortfolioVideosRequest withQueryParams(GetPortfolioVideosQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_embeddable")
+    public Boolean filterEmbeddable;
+    public GetPortfolioVideosRequest withFilterEmbeddable(Boolean filterEmbeddable) {
+        this.filterEmbeddable = filterEmbeddable;
+        return this;
+    }
+    
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetPortfolioVideosRequest withPage(Double page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetPortfolioVideosRequest withPerPage(Double perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The ID of the portfolio.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=portfolio_id")
+    public Double portfolioId;
+    public GetPortfolioVideosRequest withPortfolioId(Double portfolioId) {
+        this.portfolioId = portfolioId;
+        return this;
+    }
+    
+    /**
+     * The way to sort the results.
+     * 
+     * Option descriptions:
+     *  * `default` - This will sort to the default sort set on the portfolio.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetPortfolioVideosSortEnum sort;
+    public GetPortfolioVideosRequest withSort(GetPortfolioVideosSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public GetPortfolioVideosRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

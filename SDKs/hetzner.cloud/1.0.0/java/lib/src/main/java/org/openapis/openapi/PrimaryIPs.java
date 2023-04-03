@@ -57,7 +57,7 @@ public class PrimaryIPs {
      */
     public org.openapis.openapi.models.operations.DeletePrimaryIpsIdResponse deletePrimaryIpsId(org.openapis.openapi.models.operations.DeletePrimaryIpsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePrimaryIpsIdPathParams.class, baseUrl, "/primary_ips/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePrimaryIpsIdRequest.class, baseUrl, "/primary_ips/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -96,7 +96,7 @@ public class PrimaryIPs {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPrimaryIpsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPrimaryIpsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -135,7 +135,7 @@ public class PrimaryIPs {
      */
     public org.openapis.openapi.models.operations.GetPrimaryIpsIdResponse getPrimaryIpsId(org.openapis.openapi.models.operations.GetPrimaryIpsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPrimaryIpsIdPathParams.class, baseUrl, "/primary_ips/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPrimaryIpsIdRequest.class, baseUrl, "/primary_ips/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -185,7 +185,7 @@ public class PrimaryIPs {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPrimaryIpsResponse postPrimaryIps(org.openapis.openapi.models.operations.PostPrimaryIpsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPrimaryIpsResponse postPrimaryIps(org.openapis.openapi.models.operations.PostPrimaryIpsCreatePrimaryIPRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/primary_ips");
         
@@ -233,12 +233,12 @@ public class PrimaryIPs {
      */
     public org.openapis.openapi.models.operations.PutPrimaryIpsIdResponse putPrimaryIpsId(org.openapis.openapi.models.operations.PutPrimaryIpsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutPrimaryIpsIdPathParams.class, baseUrl, "/primary_ips/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutPrimaryIpsIdRequest.class, baseUrl, "/primary_ips/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

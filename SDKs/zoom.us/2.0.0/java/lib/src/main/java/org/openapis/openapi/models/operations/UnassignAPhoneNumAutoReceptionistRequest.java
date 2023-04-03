@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UnassignAPhoneNumAutoReceptionistRequest {
-    
-    public UnassignAPhoneNumAutoReceptionistPathParams pathParams;
-    public UnassignAPhoneNumAutoReceptionistRequest withPathParams(UnassignAPhoneNumAutoReceptionistPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the auto receptionist. This can be retrieved from the List Phone Sites API.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=autoReceptionistId")
+    public String autoReceptionistId;
+    public UnassignAPhoneNumAutoReceptionistRequest withAutoReceptionistId(String autoReceptionistId) {
+        this.autoReceptionistId = autoReceptionistId;
         return this;
     }
     
-    
-    public UnassignAPhoneNumAutoReceptionistSecurity security;
-    public UnassignAPhoneNumAutoReceptionistRequest withSecurity(UnassignAPhoneNumAutoReceptionistSecurity security) {
-        this.security = security;
+    /**
+     * Unique Identifier of the phone number or provide the actual phone number in e164 format (example: +19995550123).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=phoneNumberId")
+    public String phoneNumberId;
+    public UnassignAPhoneNumAutoReceptionistRequest withPhoneNumberId(String phoneNumberId) {
+        this.phoneNumberId = phoneNumberId;
         return this;
     }
     

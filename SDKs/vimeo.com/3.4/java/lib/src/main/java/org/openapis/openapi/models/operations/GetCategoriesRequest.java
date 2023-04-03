@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCategoriesRequest {
+    /**
+     * The sort direction of the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public GetCategoriesDirectionEnum direction;
+    public GetCategoriesRequest withDirection(GetCategoriesDirectionEnum direction) {
+        this.direction = direction;
+        return this;
+    }
     
-    public GetCategoriesQueryParams queryParams;
-    public GetCategoriesRequest withQueryParams(GetCategoriesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetCategoriesRequest withPage(Double page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetCategoriesRequest withPerPage(Double perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The way to sort the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetCategoriesSortEnum sort;
+    public GetCategoriesRequest withSort(GetCategoriesSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

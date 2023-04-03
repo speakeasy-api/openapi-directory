@@ -4,13 +4,157 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConsumerV1AppointmentsRequest {
+    /**
+     * Filter by the email of who booked
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bookedBy")
+    public String bookedBy;
+    public GetConsumerV1AppointmentsRequest withBookedBy(String bookedBy) {
+        this.bookedBy = bookedBy;
+        return this;
+    }
     
-    public GetConsumerV1AppointmentsQueryParams queryParams;
-    public GetConsumerV1AppointmentsRequest withQueryParams(GetConsumerV1AppointmentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter by calendar
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=calendarId")
+    public String calendarId;
+    public GetConsumerV1AppointmentsRequest withCalendarId(String calendarId) {
+        this.calendarId = calendarId;
+        return this;
+    }
+    
+    /**
+     * Filter by customer
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customerId")
+    public String customerId;
+    public GetConsumerV1AppointmentsRequest withCustomerId(String customerId) {
+        this.customerId = customerId;
+        return this;
+    }
+    
+    /**
+     * Filter by email address
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public GetConsumerV1AppointmentsRequest withEmail(String email) {
+        this.email = email;
+        return this;
+    }
+    
+    /**
+     * Format YYYY-MM-DD. Filter on/before endDate
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
+    public OffsetDateTime endDate;
+    public GetConsumerV1AppointmentsRequest withEndDate(OffsetDateTime endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    
+    /**
+     * Filter by lastname or part of it
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lastname")
+    public String lastname;
+    public GetConsumerV1AppointmentsRequest withLastname(String lastname) {
+        this.lastname = lastname;
+        return this;
+    }
+    
+    /**
+     * Page limit, default 20, max 100
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetConsumerV1AppointmentsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * id of business location
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locationId")
+    public String locationId;
+    public GetConsumerV1AppointmentsRequest withLocationId(String locationId) {
+        this.locationId = locationId;
+        return this;
+    }
+    
+    /**
+     * Starting row of page, default 0
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public GetConsumerV1AppointmentsRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Filter by phone number or part of it
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=phone")
+    public String phone;
+    public GetConsumerV1AppointmentsRequest withPhone(String phone) {
+        this.phone = phone;
+        return this;
+    }
+    
+    /**
+     * Filter by resource
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resourceId")
+    public String resourceId;
+    public GetConsumerV1AppointmentsRequest withResourceId(String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    
+    /**
+     * Filter by service allocation
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceAllocationId")
+    public String serviceAllocationId;
+    public GetConsumerV1AppointmentsRequest withServiceAllocationId(String serviceAllocationId) {
+        this.serviceAllocationId = serviceAllocationId;
+        return this;
+    }
+    
+    /**
+     * Filter by service
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceId")
+    public String serviceId;
+    public GetConsumerV1AppointmentsRequest withServiceId(String serviceId) {
+        this.serviceId = serviceId;
+        return this;
+    }
+    
+    /**
+     * Format YYYY-MM-DD. Filter by on/after startDate
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
+    public OffsetDateTime startDate;
+    public GetConsumerV1AppointmentsRequest withStartDate(OffsetDateTime startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    
+    /**
+     * Filter by status: IN, BK, CN, RE, RS
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public String status;
+    public GetConsumerV1AppointmentsRequest withStatus(String status) {
+        this.status = status;
         return this;
     }
     

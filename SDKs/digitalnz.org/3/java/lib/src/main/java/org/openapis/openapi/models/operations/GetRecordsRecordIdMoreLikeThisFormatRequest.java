@@ -4,27 +4,87 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRecordsRecordIdMoreLikeThisFormatRequest {
-    
-    public GetRecordsRecordIdMoreLikeThisFormatPathParams pathParams;
-    public GetRecordsRecordIdMoreLikeThisFormatRequest withPathParams(GetRecordsRecordIdMoreLikeThisFormatPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The DigitalNZ API no longer requires a key to access public content. However, if you plan on using the API regularly, expect to be a high volume consumer or are planning on creating an application, we encourage you to use an API key so that we can:
+     * - provide targeted help and support
+     * - increase your query throughput (by negotiation)
+     * - notify you directly of changes to the API
+     * - gather usage metrics to help improve the service  
+     * 
+     * API requests that do not pass a valid API key/token are treated as unauthenticated. A maximum rate limit applies across all unauthenticated requests. This rate limit is in place to protect the service from overuse, resulting in unsustainable costs, or potential attack.
+     * 
+     * **Getting an API key**  
+     * [Create a DigitalNZ account](https://digitalnz.org/sign_up), log in and select "[my API key](https://digitalnz.org/api_keys/edit)" from your username drop-down menu (on the right hand side)'. The key is a long string of jumbled letters and numbers (hash) that is unique to you. You are required to keep the key secret. (Refer to the [Developer API Terms of Use](https://digitalnz.org/about/terms-of-use/developer-api-terms-of-use) for more information).
+     * 
+     * **Using an API key**  
+     * When you make a call to the API you'll need to pass the key in a custom HTTP header: \u2018Authentication-Token\u2019.
+     * For example, a query using the \u2018curl\u2019 command might look like the following (where \u2018{YOUR_API_KEY}\u2019 is replaced with a valid API key):
+     * 
+     * `curl -H "Authentication-Token:{YOUR_API_KEY}" http://api.digitalnz.org/v3/records.json?text=kiwi`
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authentication-Token")
+    public String authenticationToken;
+    public GetRecordsRecordIdMoreLikeThisFormatRequest withAuthenticationToken(String authenticationToken) {
+        this.authenticationToken = authenticationToken;
         return this;
     }
     
-    
-    public GetRecordsRecordIdMoreLikeThisFormatQueryParams queryParams;
-    public GetRecordsRecordIdMoreLikeThisFormatRequest withQueryParams(GetRecordsRecordIdMoreLikeThisFormatQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Comma-separated whitelist of fields to be returned. The syntax *"&amp;fields=verbose"* can be used to return the bulk of the fields, or you can customise which fields you are interested in, eg. *"&amp;fields=id,title,subject,collection,landing_url,locations"*.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=fields")
+    public String fields;
+    public GetRecordsRecordIdMoreLikeThisFormatRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     
+    /**
+     * More Like This (MLT) queries can be filtered in the same ways as regular searches, using the same syntax outined in the GET /records call above. This enables things like scoping the related records to only return Images eg *&amp;and[category]=Images*, or to only show related records from a specific content partner eg *&amp;and[content_partner]=Puke+Ariki*.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=filtering")
+    public String filtering;
+    public GetRecordsRecordIdMoreLikeThisFormatRequest withFiltering(String filtering) {
+        this.filtering = filtering;
+        return this;
+    }
     
-    public GetRecordsRecordIdMoreLikeThisFormatHeaders headers;
-    public GetRecordsRecordIdMoreLikeThisFormatRequest withHeaders(GetRecordsRecordIdMoreLikeThisFormatHeaders headers) {
-        this.headers = headers;
+    /**
+     * Note - There is a small difference with some field names in the response between JSON and XML.  
+     * When a field name has more than one word, JSON format will separate the words with an underscore, eg. "content_partner", whereas XML uses a hyphenated naming convention, eg. "content-partner".
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public org.openapis.openapi.models.shared.FormatEnum format;
+    public GetRecordsRecordIdMoreLikeThisFormatRequest withFormat(org.openapis.openapi.models.shared.FormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * Comma-separated list of fields used to evaluate relatedness. Available fields to compare are *title* and *subject*, eg *&amp;mlt_fields=title,subject* or *&amp;mlt_fields=title*.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=mlt_fields")
+    public String mltFields;
+    public GetRecordsRecordIdMoreLikeThisFormatRequest withMltFields(String mltFields) {
+        this.mltFields = mltFields;
+        return this;
+    }
+    
+    /**
+     * Every record has a unique, persistent *record_id*.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=record_id")
+    public Long recordId;
+    public GetRecordsRecordIdMoreLikeThisFormatRequest withRecordId(Long recordId) {
+        this.recordId = recordId;
         return this;
     }
     

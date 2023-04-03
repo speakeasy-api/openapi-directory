@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRevokeCacheSecurityGroupIngressRequest {
-    
-    public GETRevokeCacheSecurityGroupIngressQueryParams queryParams;
-    public GETRevokeCacheSecurityGroupIngressRequest withQueryParams(GETRevokeCacheSecurityGroupIngressQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETRevokeCacheSecurityGroupIngressActionEnum action;
+    public GETRevokeCacheSecurityGroupIngressRequest withAction(GETRevokeCacheSecurityGroupIngressActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the cache security group to revoke ingress from.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CacheSecurityGroupName")
+    public String cacheSecurityGroupName;
+    public GETRevokeCacheSecurityGroupIngressRequest withCacheSecurityGroupName(String cacheSecurityGroupName) {
+        this.cacheSecurityGroupName = cacheSecurityGroupName;
+        return this;
+    }
     
-    public GETRevokeCacheSecurityGroupIngressHeaders headers;
-    public GETRevokeCacheSecurityGroupIngressRequest withHeaders(GETRevokeCacheSecurityGroupIngressHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name of the Amazon EC2 security group to revoke access from.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EC2SecurityGroupName")
+    public String ec2SecurityGroupName;
+    public GETRevokeCacheSecurityGroupIngressRequest withEc2SecurityGroupName(String ec2SecurityGroupName) {
+        this.ec2SecurityGroupName = ec2SecurityGroupName;
+        return this;
+    }
+    
+    /**
+     * The Amazon account number of the Amazon EC2 security group owner. Note that this is not the same thing as an Amazon access key ID - you must provide a valid Amazon account number for this parameter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EC2SecurityGroupOwnerId")
+    public String ec2SecurityGroupOwnerId;
+    public GETRevokeCacheSecurityGroupIngressRequest withEc2SecurityGroupOwnerId(String ec2SecurityGroupOwnerId) {
+        this.ec2SecurityGroupOwnerId = ec2SecurityGroupOwnerId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETRevokeCacheSecurityGroupIngressVersionEnum version;
+    public GETRevokeCacheSecurityGroupIngressRequest withVersion(GETRevokeCacheSecurityGroupIngressVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETRevokeCacheSecurityGroupIngressRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETRevokeCacheSecurityGroupIngressRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETRevokeCacheSecurityGroupIngressRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETRevokeCacheSecurityGroupIngressRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETRevokeCacheSecurityGroupIngressRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETRevokeCacheSecurityGroupIngressRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETRevokeCacheSecurityGroupIngressRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

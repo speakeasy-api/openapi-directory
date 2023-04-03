@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupV2EditGroupMembershipRequest {
-    
-    public GroupV2EditGroupMembershipPathParams pathParams;
-    public GroupV2EditGroupMembershipRequest withPathParams(GroupV2EditGroupMembershipPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the group to which the member belongs.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public Long groupId;
+    public GroupV2EditGroupMembershipRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
         return this;
     }
     
+    /**
+     * New membertype for the specified member.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=memberType")
+    public Integer memberType;
+    public GroupV2EditGroupMembershipRequest withMemberType(Integer memberType) {
+        this.memberType = memberType;
+        return this;
+    }
     
-    public GroupV2EditGroupMembershipSecurity security;
-    public GroupV2EditGroupMembershipRequest withSecurity(GroupV2EditGroupMembershipSecurity security) {
-        this.security = security;
+    /**
+     * Membership ID to modify.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipId")
+    public Long membershipId;
+    public GroupV2EditGroupMembershipRequest withMembershipId(Long membershipId) {
+        this.membershipId = membershipId;
+        return this;
+    }
+    
+    /**
+     * Membership type of the provide membership ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
+    public Integer membershipType;
+    public GroupV2EditGroupMembershipRequest withMembershipType(Integer membershipType) {
+        this.membershipType = membershipType;
         return this;
     }
     

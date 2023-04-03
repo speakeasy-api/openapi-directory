@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostLocksPathRequest {
-    
-    public PostLocksPathPathParams pathParams;
-    public PostLocksPathRequest withPathParams(PostLocksPathPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public PostLocksPathRequestBody requestBody;
+    public PostLocksPathRequest withRequestBody(PostLocksPathRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PostLocksPathRequestBody request;
-    public PostLocksPathRequest withRequest(PostLocksPathRequestBody request) {
-        this.request = request;
+    /**
+     * Path
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
+    public String path;
+    public PostLocksPathRequest withPath(String path) {
+        this.path = path;
         return this;
     }
     

@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRecurrencebyemailRequest {
-    
-    public GetRecurrencebyemailQueryParams queryParams;
-    public GetRecurrencebyemailRequest withQueryParams(GetRecurrencebyemailQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetRecurrencebyemailRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetRecurrencebyemailRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetRecurrencebyemailHeaders headers;
-    public GetRecurrencebyemailRequest withHeaders(GetRecurrencebyemailHeaders headers) {
-        this.headers = headers;
+    /**
+     * If you wish to list tasks by Subscriptions with failures on the last execution cycle, insert the desired cycleStatus.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cycleStatus")
+    public String cycleStatus;
+    public GetRecurrencebyemailRequest withCycleStatus(String cycleStatus) {
+        this.cycleStatus = cycleStatus;
+        return this;
+    }
+    
+    /**
+     * If you wish to list tasks by email, insert the desired user's email.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public GetRecurrencebyemailRequest withEmail(String email) {
+        this.email = email;
         return this;
     }
     

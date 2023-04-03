@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV4PayeesPayeeIdRemoteIdUpdateRequest {
-    
-    public PostV4PayeesPayeeIdRemoteIdUpdatePathParams pathParams;
-    public PostV4PayeesPayeeIdRemoteIdUpdateRequest withPathParams(PostV4PayeesPayeeIdRemoteIdUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Request to update payee remote id v4
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateRemoteIdRequestV4 request;
-    public PostV4PayeesPayeeIdRemoteIdUpdateRequest withRequest(org.openapis.openapi.models.shared.UpdateRemoteIdRequestV4 request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateRemoteIdRequestV4 updateRemoteIdRequestV4;
+    public PostV4PayeesPayeeIdRemoteIdUpdateRequest withUpdateRemoteIdRequestV4(org.openapis.openapi.models.shared.UpdateRemoteIdRequestV4 updateRemoteIdRequestV4) {
+        this.updateRemoteIdRequestV4 = updateRemoteIdRequestV4;
+        return this;
+    }
+    
+    /**
+     * The UUID of the payee.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payeeId")
+    public String payeeId;
+    public PostV4PayeesPayeeIdRemoteIdUpdateRequest withPayeeId(String payeeId) {
+        this.payeeId = payeeId;
         return this;
     }
     

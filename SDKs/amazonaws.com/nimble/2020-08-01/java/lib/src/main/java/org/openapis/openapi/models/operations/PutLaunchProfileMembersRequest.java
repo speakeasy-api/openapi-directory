@@ -7,24 +7,89 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutLaunchProfileMembersRequest {
-    
-    public PutLaunchProfileMembersPathParams pathParams;
-    public PutLaunchProfileMembersRequest withPathParams(PutLaunchProfileMembersPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutLaunchProfileMembersHeaders headers;
-    public PutLaunchProfileMembersRequest withHeaders(PutLaunchProfileMembersHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PutLaunchProfileMembersRequestBody request;
-    public PutLaunchProfileMembersRequest withRequest(PutLaunchProfileMembersRequestBody request) {
-        this.request = request;
+    public PutLaunchProfileMembersRequestBody requestBody;
+    public PutLaunchProfileMembersRequest withRequestBody(PutLaunchProfileMembersRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public PutLaunchProfileMembersRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    /**
+     * Unique, case-sensitive identifier that you provide to ensure the idempotency of the request. If you don\u2019t specify a client token, the Amazon Web Services SDK automatically generates a client token and uses it for the request to ensure idempotency.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Client-Token")
+    public String xAmzClientToken;
+    public PutLaunchProfileMembersRequest withXAmzClientToken(String xAmzClientToken) {
+        this.xAmzClientToken = xAmzClientToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public PutLaunchProfileMembersRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public PutLaunchProfileMembersRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public PutLaunchProfileMembersRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public PutLaunchProfileMembersRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public PutLaunchProfileMembersRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public PutLaunchProfileMembersRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The ID of the launch profile used to control access from the streaming session.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=launchProfileId")
+    public String launchProfileId;
+    public PutLaunchProfileMembersRequest withLaunchProfileId(String launchProfileId) {
+        this.launchProfileId = launchProfileId;
+        return this;
+    }
+    
+    /**
+     * The studio ID. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=studioId")
+    public String studioId;
+    public PutLaunchProfileMembersRequest withStudioId(String studioId) {
+        this.studioId = studioId;
         return this;
     }
     

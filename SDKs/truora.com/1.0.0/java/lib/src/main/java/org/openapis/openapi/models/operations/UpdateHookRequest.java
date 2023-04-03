@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateHookRequest {
-    
-    public UpdateHookPathParams pathParams;
-    public UpdateHookRequest withPathParams(UpdateHookPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Request body updates given hook.
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.CreateHookInput request;
-    public UpdateHookRequest withRequest(org.openapis.openapi.models.shared.CreateHookInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CreateHookInput createHookInput;
+    public UpdateHookRequest withCreateHookInput(org.openapis.openapi.models.shared.CreateHookInput createHookInput) {
+        this.createHookInput = createHookInput;
         return this;
     }
     
-    
-    public UpdateHookSecurity security;
-    public UpdateHookRequest withSecurity(UpdateHookSecurity security) {
-        this.security = security;
+    /**
+     * Hook ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hook_id")
+    public String hookId;
+    public UpdateHookRequest withHookId(String hookId) {
+        this.hookId = hookId;
         return this;
     }
     

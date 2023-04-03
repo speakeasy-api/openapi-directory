@@ -4,20 +4,42 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameRequest {
-    
-    public DeleteRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernamePathParams pathParams;
-    public DeleteRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameRequest withPathParams(DeleteRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernamePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public DeleteRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
         return this;
     }
     
+    /**
+     * This can either be the username or the UUID of the default reviewer,
+     * surrounded by curly-braces, for example: `{account UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=target_username")
+    public String targetUsername;
+    public DeleteRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameRequest withTargetUsername(String targetUsername) {
+        this.targetUsername = targetUsername;
+        return this;
+    }
     
-    public DeleteRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameSecurity security;
-    public DeleteRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameRequest withSecurity(DeleteRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public DeleteRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SocialGetPlatformFriendListRequest {
+    /**
+     * The platform friend type.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=friendPlatform")
+    public Integer friendPlatform;
+    public SocialGetPlatformFriendListRequest withFriendPlatform(Integer friendPlatform) {
+        this.friendPlatform = friendPlatform;
+        return this;
+    }
     
-    public SocialGetPlatformFriendListPathParams pathParams;
-    public SocialGetPlatformFriendListRequest withPathParams(SocialGetPlatformFriendListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The zero based page to return. Page size is 100.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=page")
+    public String page;
+    public SocialGetPlatformFriendListRequest withPage(String page) {
+        this.page = page;
         return this;
     }
     

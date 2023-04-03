@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteDataExporterConfigRequest {
-    
-    public DeleteDataExporterConfigPathParams pathParams;
-    public DeleteDataExporterConfigRequest withPathParams(DeleteDataExporterConfigPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteDataExporterConfigSecurity security;
-    public DeleteDataExporterConfigRequest withSecurity(DeleteDataExporterConfigSecurity security) {
-        this.security = security;
+    /**
+     * The data exporter config id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dataExporterConfigId")
+    public String dataExporterConfigId;
+    public DeleteDataExporterConfigRequest withDataExporterConfigId(String dataExporterConfigId) {
+        this.dataExporterConfigId = dataExporterConfigId;
         return this;
     }
     

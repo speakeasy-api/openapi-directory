@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OptionsErc20AddressRequest {
-    
-    public OptionsErc20AddressPathParams pathParams;
-    public OptionsErc20AddressRequest withPathParams(OptionsErc20AddressPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=address")
+    public String address;
+    public OptionsErc20AddressRequest withAddress(String address) {
+        this.address = address;
         return this;
     }
     

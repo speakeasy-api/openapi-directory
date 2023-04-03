@@ -39,7 +39,7 @@ public class CategoryRules {
      */
     public org.openapis.openapi.models.operations.GetUsersIdCategoryRulesResponse getUsersIdCategoryRules(org.openapis.openapi.models.operations.GetUsersIdCategoryRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdCategoryRulesPathParams.class, baseUrl, "/users/{id}/category_rules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdCategoryRulesRequest.class, baseUrl, "/users/{id}/category_rules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -87,12 +87,12 @@ public class CategoryRules {
      */
     public org.openapis.openapi.models.operations.PostCategoriesIdCategoryRulesResponse postCategoriesIdCategoryRules(org.openapis.openapi.models.operations.PostCategoriesIdCategoryRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostCategoriesIdCategoryRulesPathParams.class, baseUrl, "/categories/{id}/category_rules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostCategoriesIdCategoryRulesRequest.class, baseUrl, "/categories/{id}/category_rules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

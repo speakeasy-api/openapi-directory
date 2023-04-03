@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AssignPhoneNumbersAutoReceptionistRequest {
-    
-    public AssignPhoneNumbersAutoReceptionistPathParams pathParams;
-    public AssignPhoneNumbersAutoReceptionistRequest withPathParams(AssignPhoneNumbersAutoReceptionistPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public AssignPhoneNumbersAutoReceptionistApplicationJSON request;
-    public AssignPhoneNumbersAutoReceptionistRequest withRequest(AssignPhoneNumbersAutoReceptionistApplicationJSON request) {
-        this.request = request;
+    public AssignPhoneNumbersAutoReceptionistApplicationJSON requestBody;
+    public AssignPhoneNumbersAutoReceptionistRequest withRequestBody(AssignPhoneNumbersAutoReceptionistApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public AssignPhoneNumbersAutoReceptionistSecurity security;
-    public AssignPhoneNumbersAutoReceptionistRequest withSecurity(AssignPhoneNumbersAutoReceptionistSecurity security) {
-        this.security = security;
+    /**
+     * Unique Identifier of the Auto Receptionist. It can be retrieved from the [List Sites API](https://marketplace.zoom.us/docs/api-reference/zoom-api/phone-site/listphonesites).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=autoReceptionistId")
+    public String autoReceptionistId;
+    public AssignPhoneNumbersAutoReceptionistRequest withAutoReceptionistId(String autoReceptionistId) {
+        this.autoReceptionistId = autoReceptionistId;
         return this;
     }
     

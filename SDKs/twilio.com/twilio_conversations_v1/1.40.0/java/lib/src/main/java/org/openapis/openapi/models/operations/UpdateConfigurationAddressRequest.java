@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateConfigurationAddressRequest {
-    
-    public UpdateConfigurationAddressPathParams pathParams;
-    public UpdateConfigurationAddressRequest withPathParams(UpdateConfigurationAddressPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateConfigurationAddressUpdateConfigurationAddressRequest request;
-    public UpdateConfigurationAddressRequest withRequest(UpdateConfigurationAddressUpdateConfigurationAddressRequest request) {
-        this.request = request;
+    public UpdateConfigurationAddressUpdateConfigurationAddressRequest requestBody;
+    public UpdateConfigurationAddressRequest withRequestBody(UpdateConfigurationAddressUpdateConfigurationAddressRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateConfigurationAddressSecurity security;
-    public UpdateConfigurationAddressRequest withSecurity(UpdateConfigurationAddressSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateConfigurationAddressRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Address Configuration resource. This value can be either the `sid` or the `address` of the configuration
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateConfigurationAddressRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

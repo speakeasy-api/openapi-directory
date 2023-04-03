@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AddProfileKeyPathParams;
-import org.openapis.openapi.models.operations.AddProfileKeyHeaders;
 import org.openapis.openapi.models.operations.AddProfileKeyRequestBody;
 import org.openapis.openapi.models.operations.AddProfileKeyRequest;
 import org.openapis.openapi.models.operations.AddProfileKeyResponse;
@@ -28,35 +26,30 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AddProfileKeyRequest req = new AddProfileKeyRequest() {{
-                pathParams = new AddProfileKeyPathParams() {{
-                    domainName = "corrupti";
-                }};
-                headers = new AddProfileKeyHeaders() {{
-                    xAmzAlgorithm = "provident";
-                    xAmzContentSha256 = "distinctio";
-                    xAmzCredential = "quibusdam";
-                    xAmzDate = "unde";
-                    xAmzSecurityToken = "nulla";
-                    xAmzSignature = "corrupti";
-                    xAmzSignedHeaders = "illum";
-                }};
-                request = new AddProfileKeyRequestBody() {{
-                    keyName = "vel";
-                    profileId = "error";
+                domainName = "corrupti";
+                requestBody = new AddProfileKeyRequestBody() {{
+                    keyName = "provident";
+                    profileId = "distinctio";
                     values = new String[]{{
-                        add("suscipit"),
-                        add("iure"),
-                        add("magnam"),
+                        add("unde"),
+                        add("nulla"),
+                        add("corrupti"),
+                        add("illum"),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "vel";
+                xAmzContentSha256 = "error";
+                xAmzCredential = "deserunt";
+                xAmzDate = "suscipit";
+                xAmzSecurityToken = "iure";
+                xAmzSignature = "magnam";
+                xAmzSignedHeaders = "debitis";
+            }}            
 
             AddProfileKeyResponse res = sdk.addProfileKey(req);
 
@@ -70,7 +63,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

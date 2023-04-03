@@ -41,13 +41,13 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.DeleteConnectionsIdConnectionSourcesIdSourceResponse deleteConnectionsIdConnectionSourcesIdSource(org.openapis.openapi.models.operations.DeleteConnectionsIdConnectionSourcesIdSourceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteConnectionsIdConnectionSourcesIdSourcePathParams.class, baseUrl, "/connections/{id_connection}/sources/{id_source}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteConnectionsIdConnectionSourcesIdSourceRequest.class, baseUrl, "/connections/{id_connection}/sources/{id_source}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteConnectionsIdConnectionSourcesIdSourceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteConnectionsIdConnectionSourcesIdSourceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -85,13 +85,13 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.DeleteConnectorsIdConnectorLogosIdLogoResponse deleteConnectorsIdConnectorLogosIdLogo(org.openapis.openapi.models.operations.DeleteConnectorsIdConnectorLogosIdLogoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteConnectorsIdConnectorLogosIdLogoPathParams.class, baseUrl, "/connectors/{id_connector}/logos/{id_logo}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteConnectorsIdConnectorLogosIdLogoRequest.class, baseUrl, "/connectors/{id_connector}/logos/{id_logo}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteConnectorsIdConnectorLogosIdLogoQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteConnectorsIdConnectorLogosIdLogoRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -129,13 +129,13 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.DeleteUsersIdUserConnectionsResponse deleteUsersIdUserConnections(org.openapis.openapi.models.operations.DeleteUsersIdUserConnectionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUsersIdUserConnectionsPathParams.class, baseUrl, "/users/{id_user}/connections", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUsersIdUserConnectionsRequest.class, baseUrl, "/users/{id_user}/connections", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteUsersIdUserConnectionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteUsersIdUserConnectionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -174,13 +174,13 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.DeleteUsersIdUserConnectionsIdConnectionResponse deleteUsersIdUserConnectionsIdConnection(org.openapis.openapi.models.operations.DeleteUsersIdUserConnectionsIdConnectionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUsersIdUserConnectionsIdConnectionPathParams.class, baseUrl, "/users/{id_user}/connections/{id_connection}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUsersIdUserConnectionsIdConnectionRequest.class, baseUrl, "/users/{id_user}/connections/{id_connection}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteUsersIdUserConnectionsIdConnectionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteUsersIdUserConnectionsIdConnectionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -219,13 +219,13 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.DeleteUsersIdUserConnectionsIdConnectionSourcesIdSourceResponse deleteUsersIdUserConnectionsIdConnectionSourcesIdSource(org.openapis.openapi.models.operations.DeleteUsersIdUserConnectionsIdConnectionSourcesIdSourceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUsersIdUserConnectionsIdConnectionSourcesIdSourcePathParams.class, baseUrl, "/users/{id_user}/connections/{id_connection}/sources/{id_source}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUsersIdUserConnectionsIdConnectionSourcesIdSourceRequest.class, baseUrl, "/users/{id_user}/connections/{id_connection}/sources/{id_source}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteUsersIdUserConnectionsIdConnectionSourcesIdSourceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteUsersIdUserConnectionsIdConnectionSourcesIdSourceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -269,7 +269,7 @@ public class Providers {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBanksQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBanksRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -307,13 +307,13 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.GetBanksIdBankResponse getBanksIdBank(org.openapis.openapi.models.operations.GetBanksIdBankRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBanksIdBankPathParams.class, baseUrl, "/banks/{id_bank}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBanksIdBankRequest.class, baseUrl, "/banks/{id_bank}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBanksIdBankQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBanksIdBankRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -352,13 +352,13 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.GetBanksIdConnectorLogosResponse getBanksIdConnectorLogos(org.openapis.openapi.models.operations.GetBanksIdConnectorLogosRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBanksIdConnectorLogosPathParams.class, baseUrl, "/banks/{id_connector}/logos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBanksIdConnectorLogosRequest.class, baseUrl, "/banks/{id_connector}/logos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBanksIdConnectorLogosQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBanksIdConnectorLogosRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -397,13 +397,13 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.GetBanksIdConnectorLogosMainResponse getBanksIdConnectorLogosMain(org.openapis.openapi.models.operations.GetBanksIdConnectorLogosMainRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBanksIdConnectorLogosMainPathParams.class, baseUrl, "/banks/{id_connector}/logos/main", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBanksIdConnectorLogosMainRequest.class, baseUrl, "/banks/{id_connector}/logos/main", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBanksIdConnectorLogosMainQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBanksIdConnectorLogosMainRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -442,13 +442,13 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.GetBanksIdConnectorLogosThumbnailResponse getBanksIdConnectorLogosThumbnail(org.openapis.openapi.models.operations.GetBanksIdConnectorLogosThumbnailRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBanksIdConnectorLogosThumbnailPathParams.class, baseUrl, "/banks/{id_connector}/logos/thumbnail", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBanksIdConnectorLogosThumbnailRequest.class, baseUrl, "/banks/{id_connector}/logos/thumbnail", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBanksIdConnectorLogosThumbnailQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBanksIdConnectorLogosThumbnailRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -486,13 +486,13 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.GetBanksIdConnectorSourcesResponse getBanksIdConnectorSources(org.openapis.openapi.models.operations.GetBanksIdConnectorSourcesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBanksIdConnectorSourcesPathParams.class, baseUrl, "/banks/{id_connector}/sources", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBanksIdConnectorSourcesRequest.class, baseUrl, "/banks/{id_connector}/sources", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBanksIdConnectorSourcesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBanksIdConnectorSourcesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -530,13 +530,13 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.GetBanksIdConnectorSourcesIdSourceResponse getBanksIdConnectorSourcesIdSource(org.openapis.openapi.models.operations.GetBanksIdConnectorSourcesIdSourceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBanksIdConnectorSourcesIdSourcePathParams.class, baseUrl, "/banks/{id_connector}/sources/{id_source}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBanksIdConnectorSourcesIdSourceRequest.class, baseUrl, "/banks/{id_connector}/sources/{id_source}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBanksIdConnectorSourcesIdSourceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBanksIdConnectorSourcesIdSourceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -580,7 +580,7 @@ public class Providers {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConnectionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConnectionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -619,13 +619,13 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.GetConnectionsIdConnectionLogsResponse getConnectionsIdConnectionLogs(org.openapis.openapi.models.operations.GetConnectionsIdConnectionLogsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConnectionsIdConnectionLogsPathParams.class, baseUrl, "/connections/{id_connection}/logs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConnectionsIdConnectionLogsRequest.class, baseUrl, "/connections/{id_connection}/logs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConnectionsIdConnectionLogsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConnectionsIdConnectionLogsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -663,13 +663,13 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.GetConnectionsIdConnectionSourcesResponse getConnectionsIdConnectionSources(org.openapis.openapi.models.operations.GetConnectionsIdConnectionSourcesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConnectionsIdConnectionSourcesPathParams.class, baseUrl, "/connections/{id_connection}/sources", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConnectionsIdConnectionSourcesRequest.class, baseUrl, "/connections/{id_connection}/sources", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConnectionsIdConnectionSourcesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConnectionsIdConnectionSourcesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -713,7 +713,7 @@ public class Providers {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConnectorsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConnectorsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -751,13 +751,13 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.GetConnectorsIdConnectorResponse getConnectorsIdConnector(org.openapis.openapi.models.operations.GetConnectorsIdConnectorRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConnectorsIdConnectorPathParams.class, baseUrl, "/connectors/{id_connector}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConnectorsIdConnectorRequest.class, baseUrl, "/connectors/{id_connector}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConnectorsIdConnectorQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConnectorsIdConnectorRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -796,13 +796,13 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.GetConnectorsIdConnectorLogosResponse getConnectorsIdConnectorLogos(org.openapis.openapi.models.operations.GetConnectorsIdConnectorLogosRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConnectorsIdConnectorLogosPathParams.class, baseUrl, "/connectors/{id_connector}/logos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConnectorsIdConnectorLogosRequest.class, baseUrl, "/connectors/{id_connector}/logos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConnectorsIdConnectorLogosQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConnectorsIdConnectorLogosRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -841,13 +841,13 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.GetConnectorsIdConnectorLogosMainResponse getConnectorsIdConnectorLogosMain(org.openapis.openapi.models.operations.GetConnectorsIdConnectorLogosMainRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConnectorsIdConnectorLogosMainPathParams.class, baseUrl, "/connectors/{id_connector}/logos/main", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConnectorsIdConnectorLogosMainRequest.class, baseUrl, "/connectors/{id_connector}/logos/main", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConnectorsIdConnectorLogosMainQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConnectorsIdConnectorLogosMainRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -886,13 +886,13 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.GetConnectorsIdConnectorLogosThumbnailResponse getConnectorsIdConnectorLogosThumbnail(org.openapis.openapi.models.operations.GetConnectorsIdConnectorLogosThumbnailRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConnectorsIdConnectorLogosThumbnailPathParams.class, baseUrl, "/connectors/{id_connector}/logos/thumbnail", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConnectorsIdConnectorLogosThumbnailRequest.class, baseUrl, "/connectors/{id_connector}/logos/thumbnail", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConnectorsIdConnectorLogosThumbnailQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConnectorsIdConnectorLogosThumbnailRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -930,13 +930,13 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.GetConnectorsIdConnectorSourcesResponse getConnectorsIdConnectorSources(org.openapis.openapi.models.operations.GetConnectorsIdConnectorSourcesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConnectorsIdConnectorSourcesPathParams.class, baseUrl, "/connectors/{id_connector}/sources", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConnectorsIdConnectorSourcesRequest.class, baseUrl, "/connectors/{id_connector}/sources", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConnectorsIdConnectorSourcesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConnectorsIdConnectorSourcesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -974,13 +974,13 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.GetConnectorsIdConnectorSourcesIdSourceResponse getConnectorsIdConnectorSourcesIdSource(org.openapis.openapi.models.operations.GetConnectorsIdConnectorSourcesIdSourceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConnectorsIdConnectorSourcesIdSourcePathParams.class, baseUrl, "/connectors/{id_connector}/sources/{id_source}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConnectorsIdConnectorSourcesIdSourceRequest.class, baseUrl, "/connectors/{id_connector}/sources/{id_source}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConnectorsIdConnectorSourcesIdSourceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConnectorsIdConnectorSourcesIdSourceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1025,7 +1025,7 @@ public class Providers {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetLogsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetLogsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1069,7 +1069,7 @@ public class Providers {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProvidersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProvidersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1108,13 +1108,13 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.GetProvidersIdConnectorLogosResponse getProvidersIdConnectorLogos(org.openapis.openapi.models.operations.GetProvidersIdConnectorLogosRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProvidersIdConnectorLogosPathParams.class, baseUrl, "/providers/{id_connector}/logos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProvidersIdConnectorLogosRequest.class, baseUrl, "/providers/{id_connector}/logos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProvidersIdConnectorLogosQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProvidersIdConnectorLogosRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1153,13 +1153,13 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.GetProvidersIdConnectorLogosMainResponse getProvidersIdConnectorLogosMain(org.openapis.openapi.models.operations.GetProvidersIdConnectorLogosMainRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProvidersIdConnectorLogosMainPathParams.class, baseUrl, "/providers/{id_connector}/logos/main", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProvidersIdConnectorLogosMainRequest.class, baseUrl, "/providers/{id_connector}/logos/main", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProvidersIdConnectorLogosMainQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProvidersIdConnectorLogosMainRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1198,13 +1198,13 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.GetProvidersIdConnectorLogosThumbnailResponse getProvidersIdConnectorLogosThumbnail(org.openapis.openapi.models.operations.GetProvidersIdConnectorLogosThumbnailRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProvidersIdConnectorLogosThumbnailPathParams.class, baseUrl, "/providers/{id_connector}/logos/thumbnail", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProvidersIdConnectorLogosThumbnailRequest.class, baseUrl, "/providers/{id_connector}/logos/thumbnail", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProvidersIdConnectorLogosThumbnailQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProvidersIdConnectorLogosThumbnailRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1242,13 +1242,13 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.GetProvidersIdConnectorSourcesResponse getProvidersIdConnectorSources(org.openapis.openapi.models.operations.GetProvidersIdConnectorSourcesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProvidersIdConnectorSourcesPathParams.class, baseUrl, "/providers/{id_connector}/sources", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProvidersIdConnectorSourcesRequest.class, baseUrl, "/providers/{id_connector}/sources", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProvidersIdConnectorSourcesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProvidersIdConnectorSourcesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1286,13 +1286,13 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.GetProvidersIdConnectorSourcesIdSourceResponse getProvidersIdConnectorSourcesIdSource(org.openapis.openapi.models.operations.GetProvidersIdConnectorSourcesIdSourceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProvidersIdConnectorSourcesIdSourcePathParams.class, baseUrl, "/providers/{id_connector}/sources/{id_source}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProvidersIdConnectorSourcesIdSourceRequest.class, baseUrl, "/providers/{id_connector}/sources/{id_source}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProvidersIdConnectorSourcesIdSourceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProvidersIdConnectorSourcesIdSourceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1330,13 +1330,13 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.GetProvidersIdProviderResponse getProvidersIdProvider(org.openapis.openapi.models.operations.GetProvidersIdProviderRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProvidersIdProviderPathParams.class, baseUrl, "/providers/{id_provider}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProvidersIdProviderRequest.class, baseUrl, "/providers/{id_provider}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProvidersIdProviderQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProvidersIdProviderRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1374,13 +1374,13 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.GetUsersIdUserConnectionsResponse getUsersIdUserConnections(org.openapis.openapi.models.operations.GetUsersIdUserConnectionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdUserConnectionsPathParams.class, baseUrl, "/users/{id_user}/connections", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdUserConnectionsRequest.class, baseUrl, "/users/{id_user}/connections", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUsersIdUserConnectionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUsersIdUserConnectionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1419,13 +1419,13 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.GetUsersIdUserConnectionsIdConnectionInformationsResponse getUsersIdUserConnectionsIdConnectionInformations(org.openapis.openapi.models.operations.GetUsersIdUserConnectionsIdConnectionInformationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdUserConnectionsIdConnectionInformationsPathParams.class, baseUrl, "/users/{id_user}/connections/{id_connection}/informations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdUserConnectionsIdConnectionInformationsRequest.class, baseUrl, "/users/{id_user}/connections/{id_connection}/informations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUsersIdUserConnectionsIdConnectionInformationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUsersIdUserConnectionsIdConnectionInformationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1464,13 +1464,13 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.GetUsersIdUserConnectionsIdConnectionLogsResponse getUsersIdUserConnectionsIdConnectionLogs(org.openapis.openapi.models.operations.GetUsersIdUserConnectionsIdConnectionLogsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdUserConnectionsIdConnectionLogsPathParams.class, baseUrl, "/users/{id_user}/connections/{id_connection}/logs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdUserConnectionsIdConnectionLogsRequest.class, baseUrl, "/users/{id_user}/connections/{id_connection}/logs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUsersIdUserConnectionsIdConnectionLogsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUsersIdUserConnectionsIdConnectionLogsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1508,13 +1508,13 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.GetUsersIdUserConnectionsIdConnectionSourcesResponse getUsersIdUserConnectionsIdConnectionSources(org.openapis.openapi.models.operations.GetUsersIdUserConnectionsIdConnectionSourcesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdUserConnectionsIdConnectionSourcesPathParams.class, baseUrl, "/users/{id_user}/connections/{id_connection}/sources", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdUserConnectionsIdConnectionSourcesRequest.class, baseUrl, "/users/{id_user}/connections/{id_connection}/sources", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUsersIdUserConnectionsIdConnectionSourcesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUsersIdUserConnectionsIdConnectionSourcesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1553,13 +1553,13 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.GetUsersIdUserLogsResponse getUsersIdUserLogs(org.openapis.openapi.models.operations.GetUsersIdUserLogsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdUserLogsPathParams.class, baseUrl, "/users/{id_user}/logs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdUserLogsRequest.class, baseUrl, "/users/{id_user}/logs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUsersIdUserLogsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUsersIdUserLogsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1598,15 +1598,15 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.PostConnectionsIdConnectionSourcesIdSourceResponse postConnectionsIdConnectionSourcesIdSource(org.openapis.openapi.models.operations.PostConnectionsIdConnectionSourcesIdSourceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostConnectionsIdConnectionSourcesIdSourcePathParams.class, baseUrl, "/connections/{id_connection}/sources/{id_source}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostConnectionsIdConnectionSourcesIdSourceRequest.class, baseUrl, "/connections/{id_connection}/sources/{id_source}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostConnectionsIdConnectionSourcesIdSourceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostConnectionsIdConnectionSourcesIdSourceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1650,13 +1650,13 @@ public class Providers {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostConnectorsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostConnectorsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1695,13 +1695,13 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.PostConnectorsIdConnectorLogosResponse postConnectorsIdConnectorLogos(org.openapis.openapi.models.operations.PostConnectorsIdConnectorLogosRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostConnectorsIdConnectorLogosPathParams.class, baseUrl, "/connectors/{id_connector}/logos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostConnectorsIdConnectorLogosRequest.class, baseUrl, "/connectors/{id_connector}/logos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostConnectorsIdConnectorLogosQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostConnectorsIdConnectorLogosRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1740,15 +1740,15 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.PostUsersIdUserConnectionsResponse postUsersIdUserConnections(org.openapis.openapi.models.operations.PostUsersIdUserConnectionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostUsersIdUserConnectionsPathParams.class, baseUrl, "/users/{id_user}/connections", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostUsersIdUserConnectionsRequest.class, baseUrl, "/users/{id_user}/connections", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostUsersIdUserConnectionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostUsersIdUserConnectionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1787,15 +1787,15 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.PostUsersIdUserConnectionsIdConnectionResponse postUsersIdUserConnectionsIdConnection(org.openapis.openapi.models.operations.PostUsersIdUserConnectionsIdConnectionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostUsersIdUserConnectionsIdConnectionPathParams.class, baseUrl, "/users/{id_user}/connections/{id_connection}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostUsersIdUserConnectionsIdConnectionRequest.class, baseUrl, "/users/{id_user}/connections/{id_connection}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostUsersIdUserConnectionsIdConnectionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostUsersIdUserConnectionsIdConnectionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1834,15 +1834,15 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.PostUsersIdUserConnectionsIdConnectionSourcesIdSourceResponse postUsersIdUserConnectionsIdConnectionSourcesIdSource(org.openapis.openapi.models.operations.PostUsersIdUserConnectionsIdConnectionSourcesIdSourceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostUsersIdUserConnectionsIdConnectionSourcesIdSourcePathParams.class, baseUrl, "/users/{id_user}/connections/{id_connection}/sources/{id_source}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostUsersIdUserConnectionsIdConnectionSourcesIdSourceRequest.class, baseUrl, "/users/{id_user}/connections/{id_connection}/sources/{id_source}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostUsersIdUserConnectionsIdConnectionSourcesIdSourceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostUsersIdUserConnectionsIdConnectionSourcesIdSourceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1881,15 +1881,15 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.PutConnectionsIdConnectionSourcesIdSourceResponse putConnectionsIdConnectionSourcesIdSource(org.openapis.openapi.models.operations.PutConnectionsIdConnectionSourcesIdSourceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutConnectionsIdConnectionSourcesIdSourcePathParams.class, baseUrl, "/connections/{id_connection}/sources/{id_source}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutConnectionsIdConnectionSourcesIdSourceRequest.class, baseUrl, "/connections/{id_connection}/sources/{id_source}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutConnectionsIdConnectionSourcesIdSourceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutConnectionsIdConnectionSourcesIdSourceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1928,13 +1928,13 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.PutConnectorsIdConnectorLogosResponse putConnectorsIdConnectorLogos(org.openapis.openapi.models.operations.PutConnectorsIdConnectorLogosRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutConnectorsIdConnectorLogosPathParams.class, baseUrl, "/connectors/{id_connector}/logos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutConnectorsIdConnectorLogosRequest.class, baseUrl, "/connectors/{id_connector}/logos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutConnectorsIdConnectorLogosQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutConnectorsIdConnectorLogosRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1973,13 +1973,13 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.PutConnectorsIdConnectorLogosIdLogoResponse putConnectorsIdConnectorLogosIdLogo(org.openapis.openapi.models.operations.PutConnectorsIdConnectorLogosIdLogoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutConnectorsIdConnectorLogosIdLogoPathParams.class, baseUrl, "/connectors/{id_connector}/logos/{id_logo}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutConnectorsIdConnectorLogosIdLogoRequest.class, baseUrl, "/connectors/{id_connector}/logos/{id_logo}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutConnectorsIdConnectorLogosIdLogoQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutConnectorsIdConnectorLogosIdLogoRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2017,15 +2017,15 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.PutConnectorsIdConnectorSourcesResponse putConnectorsIdConnectorSources(org.openapis.openapi.models.operations.PutConnectorsIdConnectorSourcesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutConnectorsIdConnectorSourcesPathParams.class, baseUrl, "/connectors/{id_connector}/sources", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutConnectorsIdConnectorSourcesRequest.class, baseUrl, "/connectors/{id_connector}/sources", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutConnectorsIdConnectorSourcesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutConnectorsIdConnectorSourcesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2063,15 +2063,15 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.PutConnectorsIdConnectorSourcesIdSourceResponse putConnectorsIdConnectorSourcesIdSource(org.openapis.openapi.models.operations.PutConnectorsIdConnectorSourcesIdSourceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutConnectorsIdConnectorSourcesIdSourcePathParams.class, baseUrl, "/connectors/{id_connector}/sources/{id_source}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutConnectorsIdConnectorSourcesIdSourceRequest.class, baseUrl, "/connectors/{id_connector}/sources/{id_source}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutConnectorsIdConnectorSourcesIdSourceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutConnectorsIdConnectorSourcesIdSourceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2110,13 +2110,13 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.PutUsersIdUserConnectionsIdConnectionResponse putUsersIdUserConnectionsIdConnection(org.openapis.openapi.models.operations.PutUsersIdUserConnectionsIdConnectionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutUsersIdUserConnectionsIdConnectionPathParams.class, baseUrl, "/users/{id_user}/connections/{id_connection}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutUsersIdUserConnectionsIdConnectionRequest.class, baseUrl, "/users/{id_user}/connections/{id_connection}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutUsersIdUserConnectionsIdConnectionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutUsersIdUserConnectionsIdConnectionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2155,15 +2155,15 @@ public class Providers {
      */
     public org.openapis.openapi.models.operations.PutUsersIdUserConnectionsIdConnectionSourcesIdSourceResponse putUsersIdUserConnectionsIdConnectionSourcesIdSource(org.openapis.openapi.models.operations.PutUsersIdUserConnectionsIdConnectionSourcesIdSourceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutUsersIdUserConnectionsIdConnectionSourcesIdSourcePathParams.class, baseUrl, "/users/{id_user}/connections/{id_connection}/sources/{id_source}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutUsersIdUserConnectionsIdConnectionSourcesIdSourceRequest.class, baseUrl, "/users/{id_user}/connections/{id_connection}/sources/{id_source}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutUsersIdUserConnectionsIdConnectionSourcesIdSourceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutUsersIdUserConnectionsIdConnectionSourcesIdSourceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

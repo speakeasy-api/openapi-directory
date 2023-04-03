@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLoadBalancersIdActionsRequest {
-    
-    public GetLoadBalancersIdActionsPathParams pathParams;
-    public GetLoadBalancersIdActionsRequest withPathParams(GetLoadBalancersIdActionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the Load Balancer
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetLoadBalancersIdActionsRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * Can be used multiple times.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetLoadBalancersIdActionsSortParameterSortEnum sort;
+    public GetLoadBalancersIdActionsRequest withSort(GetLoadBalancersIdActionsSortParameterSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
     
-    public GetLoadBalancersIdActionsQueryParams queryParams;
-    public GetLoadBalancersIdActionsRequest withQueryParams(GetLoadBalancersIdActionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Can be used multiple times, the response will contain only Actions with specified statuses
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public GetLoadBalancersIdActionsStatusParameterStatusEnum status;
+    public GetLoadBalancersIdActionsRequest withStatus(GetLoadBalancersIdActionsStatusParameterStatusEnum status) {
+        this.status = status;
         return this;
     }
     

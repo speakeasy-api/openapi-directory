@@ -467,10 +467,14 @@ public class SDK {
 		
 	}
 
-    public org.openapis.openapi.models.operations.CreateChannelResponse createChannel(org.openapis.openapi.models.operations.CreateChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateChannelResponse createChannel(org.openapis.openapi.models.operations.CreateChannelCreateChannelRequest request, org.openapis.openapi.models.operations.CreateChannelSecurity security) throws Exception {
+        return this.createChannel(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.CreateChannelResponse createChannel(org.openapis.openapi.models.operations.CreateChannelCreateChannelRequest request, org.openapis.openapi.models.operations.CreateChannelSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_CHANNEL_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Channels");
@@ -482,7 +486,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -506,10 +510,14 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.CreateFlexFlowResponse createFlexFlow(org.openapis.openapi.models.operations.CreateFlexFlowRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateFlexFlowResponse createFlexFlow(org.openapis.openapi.models.operations.CreateFlexFlowCreateFlexFlowRequest request, org.openapis.openapi.models.operations.CreateFlexFlowSecurity security) throws Exception {
+        return this.createFlexFlow(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.CreateFlexFlowResponse createFlexFlow(org.openapis.openapi.models.operations.CreateFlexFlowCreateFlexFlowRequest request, org.openapis.openapi.models.operations.CreateFlexFlowSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_FLEX_FLOW_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/FlexFlows");
@@ -521,7 +529,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -548,13 +556,26 @@ public class SDK {
     /**
      * Add assessments against conversation to dynamo db. Used in assessments screen by user. Users can select the questionnaire and pick up answers for each and every question.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateInsightsAssessmentsResponse createInsightsAssessments(org.openapis.openapi.models.operations.CreateInsightsAssessmentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateInsightsAssessmentsResponse createInsightsAssessments(org.openapis.openapi.models.operations.CreateInsightsAssessmentsRequest request, org.openapis.openapi.models.operations.CreateInsightsAssessmentsSecurity security) throws Exception {
+        return this.createInsightsAssessments(request, security, null);
+    }
+
+    /**
+     * Add assessments against conversation to dynamo db. Used in assessments screen by user. Users can select the questionnaire and pick up answers for each and every question.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateInsightsAssessmentsResponse createInsightsAssessments(org.openapis.openapi.models.operations.CreateInsightsAssessmentsRequest request, org.openapis.openapi.models.operations.CreateInsightsAssessmentsSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_INSIGHTS_ASSESSMENTS_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Insights/QM/Assessments");
@@ -562,10 +583,10 @@ public class SDK {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -574,7 +595,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -601,13 +622,26 @@ public class SDK {
     /**
      * To create a comment assessment for a conversation
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateInsightsAssessmentsCommentResponse createInsightsAssessmentsComment(org.openapis.openapi.models.operations.CreateInsightsAssessmentsCommentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateInsightsAssessmentsCommentResponse createInsightsAssessmentsComment(org.openapis.openapi.models.operations.CreateInsightsAssessmentsCommentRequest request, org.openapis.openapi.models.operations.CreateInsightsAssessmentsCommentSecurity security) throws Exception {
+        return this.createInsightsAssessmentsComment(request, security, null);
+    }
+
+    /**
+     * To create a comment assessment for a conversation
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateInsightsAssessmentsCommentResponse createInsightsAssessmentsComment(org.openapis.openapi.models.operations.CreateInsightsAssessmentsCommentRequest request, org.openapis.openapi.models.operations.CreateInsightsAssessmentsCommentSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_INSIGHTS_ASSESSMENTS_COMMENT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Insights/QM/Assessments/Comments");
@@ -615,10 +649,10 @@ public class SDK {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -627,7 +661,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -654,13 +688,26 @@ public class SDK {
     /**
      * To create a Questionnaire
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateInsightsQuestionnairesResponse createInsightsQuestionnaires(org.openapis.openapi.models.operations.CreateInsightsQuestionnairesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateInsightsQuestionnairesResponse createInsightsQuestionnaires(org.openapis.openapi.models.operations.CreateInsightsQuestionnairesRequest request, org.openapis.openapi.models.operations.CreateInsightsQuestionnairesSecurity security) throws Exception {
+        return this.createInsightsQuestionnaires(request, security, null);
+    }
+
+    /**
+     * To create a Questionnaire
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateInsightsQuestionnairesResponse createInsightsQuestionnaires(org.openapis.openapi.models.operations.CreateInsightsQuestionnairesRequest request, org.openapis.openapi.models.operations.CreateInsightsQuestionnairesSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_INSIGHTS_QUESTIONNAIRES_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Insights/QM/Questionnaires");
@@ -668,10 +715,10 @@ public class SDK {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -680,7 +727,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -707,13 +754,26 @@ public class SDK {
     /**
      * To create a category for Questions
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateInsightsQuestionnairesCategoryResponse createInsightsQuestionnairesCategory(org.openapis.openapi.models.operations.CreateInsightsQuestionnairesCategoryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateInsightsQuestionnairesCategoryResponse createInsightsQuestionnairesCategory(org.openapis.openapi.models.operations.CreateInsightsQuestionnairesCategoryRequest request, org.openapis.openapi.models.operations.CreateInsightsQuestionnairesCategorySecurity security) throws Exception {
+        return this.createInsightsQuestionnairesCategory(request, security, null);
+    }
+
+    /**
+     * To create a category for Questions
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateInsightsQuestionnairesCategoryResponse createInsightsQuestionnairesCategory(org.openapis.openapi.models.operations.CreateInsightsQuestionnairesCategoryRequest request, org.openapis.openapi.models.operations.CreateInsightsQuestionnairesCategorySecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_INSIGHTS_QUESTIONNAIRES_CATEGORY_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Insights/QM/Categories");
@@ -721,10 +781,10 @@ public class SDK {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -733,7 +793,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -760,13 +820,26 @@ public class SDK {
     /**
      * To create a question for a Category
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateInsightsQuestionnairesQuestionResponse createInsightsQuestionnairesQuestion(org.openapis.openapi.models.operations.CreateInsightsQuestionnairesQuestionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateInsightsQuestionnairesQuestionResponse createInsightsQuestionnairesQuestion(org.openapis.openapi.models.operations.CreateInsightsQuestionnairesQuestionRequest request, org.openapis.openapi.models.operations.CreateInsightsQuestionnairesQuestionSecurity security) throws Exception {
+        return this.createInsightsQuestionnairesQuestion(request, security, null);
+    }
+
+    /**
+     * To create a question for a Category
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateInsightsQuestionnairesQuestionResponse createInsightsQuestionnairesQuestion(org.openapis.openapi.models.operations.CreateInsightsQuestionnairesQuestionRequest request, org.openapis.openapi.models.operations.CreateInsightsQuestionnairesQuestionSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_INSIGHTS_QUESTIONNAIRES_QUESTION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Insights/QM/Questions");
@@ -774,10 +847,10 @@ public class SDK {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -786,7 +859,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -813,13 +886,26 @@ public class SDK {
     /**
      * To obtain session details for fetching reports and dashboards
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateInsightsSessionResponse createInsightsSession(org.openapis.openapi.models.operations.CreateInsightsSessionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateInsightsSessionResponse createInsightsSession(org.openapis.openapi.models.operations.CreateInsightsSessionRequest request, org.openapis.openapi.models.operations.CreateInsightsSessionSecurity security) throws Exception {
+        return this.createInsightsSession(request, security, null);
+    }
+
+    /**
+     * To obtain session details for fetching reports and dashboards
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateInsightsSessionResponse createInsightsSession(org.openapis.openapi.models.operations.CreateInsightsSessionRequest request, org.openapis.openapi.models.operations.CreateInsightsSessionSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_INSIGHTS_SESSION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Insights/Session");
@@ -828,7 +914,7 @@ public class SDK {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -837,7 +923,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -864,13 +950,26 @@ public class SDK {
     /**
      * Create a new Interaction.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateInteractionResponse createInteraction(org.openapis.openapi.models.operations.CreateInteractionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateInteractionResponse createInteraction(org.openapis.openapi.models.operations.CreateInteractionCreateInteractionRequest request, org.openapis.openapi.models.operations.CreateInteractionSecurity security) throws Exception {
+        return this.createInteraction(request, security, null);
+    }
+
+    /**
+     * Create a new Interaction.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateInteractionResponse createInteraction(org.openapis.openapi.models.operations.CreateInteractionCreateInteractionRequest request, org.openapis.openapi.models.operations.CreateInteractionSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_INTERACTION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Interactions");
@@ -882,7 +981,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -909,25 +1008,38 @@ public class SDK {
     /**
      * Invite an Agent or a TaskQueue to a Channel.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateInteractionChannelInviteResponse createInteractionChannelInvite(org.openapis.openapi.models.operations.CreateInteractionChannelInviteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateInteractionChannelInviteResponse createInteractionChannelInvite(org.openapis.openapi.models.operations.CreateInteractionChannelInviteRequest request, org.openapis.openapi.models.operations.CreateInteractionChannelInviteSecurity security) throws Exception {
+        return this.createInteractionChannelInvite(request, security, null);
+    }
+
+    /**
+     * Invite an Agent or a TaskQueue to a Channel.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateInteractionChannelInviteResponse createInteractionChannelInvite(org.openapis.openapi.models.operations.CreateInteractionChannelInviteRequest request, org.openapis.openapi.models.operations.CreateInteractionChannelInviteSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_INTERACTION_CHANNEL_INVITE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateInteractionChannelInvitePathParams.class, baseUrl, "/v1/Interactions/{InteractionSid}/Channels/{ChannelSid}/Invites", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateInteractionChannelInviteRequest.class, baseUrl, "/v1/Interactions/{InteractionSid}/Channels/{ChannelSid}/Invites", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -954,25 +1066,38 @@ public class SDK {
     /**
      * Add a Participant to a Channel.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateInteractionChannelParticipantResponse createInteractionChannelParticipant(org.openapis.openapi.models.operations.CreateInteractionChannelParticipantRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateInteractionChannelParticipantResponse createInteractionChannelParticipant(org.openapis.openapi.models.operations.CreateInteractionChannelParticipantRequest request, org.openapis.openapi.models.operations.CreateInteractionChannelParticipantSecurity security) throws Exception {
+        return this.createInteractionChannelParticipant(request, security, null);
+    }
+
+    /**
+     * Add a Participant to a Channel.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateInteractionChannelParticipantResponse createInteractionChannelParticipant(org.openapis.openapi.models.operations.CreateInteractionChannelParticipantRequest request, org.openapis.openapi.models.operations.CreateInteractionChannelParticipantSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_INTERACTION_CHANNEL_PARTICIPANT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateInteractionChannelParticipantPathParams.class, baseUrl, "/v1/Interactions/{InteractionSid}/Channels/{ChannelSid}/Participants", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateInteractionChannelParticipantRequest.class, baseUrl, "/v1/Interactions/{InteractionSid}/Channels/{ChannelSid}/Participants", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -996,10 +1121,14 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.CreateWebChannelResponse createWebChannel(org.openapis.openapi.models.operations.CreateWebChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateWebChannelResponse createWebChannel(org.openapis.openapi.models.operations.CreateWebChannelCreateWebChannelRequest request, org.openapis.openapi.models.operations.CreateWebChannelSecurity security) throws Exception {
+        return this.createWebChannel(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.CreateWebChannelResponse createWebChannel(org.openapis.openapi.models.operations.CreateWebChannelCreateWebChannelRequest request, org.openapis.openapi.models.operations.CreateWebChannelSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_WEB_CHANNEL_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/WebChannels");
@@ -1011,7 +1140,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1035,20 +1164,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DeleteChannelResponse deleteChannel(org.openapis.openapi.models.operations.DeleteChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteChannelResponse deleteChannel(org.openapis.openapi.models.operations.DeleteChannelRequest request, org.openapis.openapi.models.operations.DeleteChannelSecurity security) throws Exception {
+        return this.deleteChannel(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.DeleteChannelResponse deleteChannel(org.openapis.openapi.models.operations.DeleteChannelRequest request, org.openapis.openapi.models.operations.DeleteChannelSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_CHANNEL_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteChannelPathParams.class, baseUrl, "/v1/Channels/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteChannelRequest.class, baseUrl, "/v1/Channels/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1066,20 +1199,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DeleteFlexFlowResponse deleteFlexFlow(org.openapis.openapi.models.operations.DeleteFlexFlowRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteFlexFlowResponse deleteFlexFlow(org.openapis.openapi.models.operations.DeleteFlexFlowRequest request, org.openapis.openapi.models.operations.DeleteFlexFlowSecurity security) throws Exception {
+        return this.deleteFlexFlow(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.DeleteFlexFlowResponse deleteFlexFlow(org.openapis.openapi.models.operations.DeleteFlexFlowRequest request, org.openapis.openapi.models.operations.DeleteFlexFlowSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_FLEX_FLOW_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteFlexFlowPathParams.class, baseUrl, "/v1/FlexFlows/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteFlexFlowRequest.class, baseUrl, "/v1/FlexFlows/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1100,22 +1237,35 @@ public class SDK {
     /**
      * To delete the questionnaire
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteInsightsQuestionnairesResponse deleteInsightsQuestionnaires(org.openapis.openapi.models.operations.DeleteInsightsQuestionnairesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteInsightsQuestionnairesResponse deleteInsightsQuestionnaires(org.openapis.openapi.models.operations.DeleteInsightsQuestionnairesRequest request, org.openapis.openapi.models.operations.DeleteInsightsQuestionnairesSecurity security) throws Exception {
+        return this.deleteInsightsQuestionnaires(request, security, null);
+    }
+
+    /**
+     * To delete the questionnaire
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DeleteInsightsQuestionnairesResponse deleteInsightsQuestionnaires(org.openapis.openapi.models.operations.DeleteInsightsQuestionnairesRequest request, org.openapis.openapi.models.operations.DeleteInsightsQuestionnairesSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_INSIGHTS_QUESTIONNAIRES_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteInsightsQuestionnairesPathParams.class, baseUrl, "/v1/Insights/QM/Questionnaires/{Id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteInsightsQuestionnairesRequest.class, baseUrl, "/v1/Insights/QM/Questionnaires/{Id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1124,7 +1274,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1142,19 +1292,23 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DeleteInsightsQuestionnairesCategoryResponse deleteInsightsQuestionnairesCategory(org.openapis.openapi.models.operations.DeleteInsightsQuestionnairesCategoryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteInsightsQuestionnairesCategoryResponse deleteInsightsQuestionnairesCategory(org.openapis.openapi.models.operations.DeleteInsightsQuestionnairesCategoryRequest request, org.openapis.openapi.models.operations.DeleteInsightsQuestionnairesCategorySecurity security) throws Exception {
+        return this.deleteInsightsQuestionnairesCategory(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.DeleteInsightsQuestionnairesCategoryResponse deleteInsightsQuestionnairesCategory(org.openapis.openapi.models.operations.DeleteInsightsQuestionnairesCategoryRequest request, org.openapis.openapi.models.operations.DeleteInsightsQuestionnairesCategorySecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_INSIGHTS_QUESTIONNAIRES_CATEGORY_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteInsightsQuestionnairesCategoryPathParams.class, baseUrl, "/v1/Insights/QM/Categories/{CategoryId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteInsightsQuestionnairesCategoryRequest.class, baseUrl, "/v1/Insights/QM/Categories/{CategoryId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1163,7 +1317,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1181,19 +1335,23 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DeleteInsightsQuestionnairesQuestionResponse deleteInsightsQuestionnairesQuestion(org.openapis.openapi.models.operations.DeleteInsightsQuestionnairesQuestionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteInsightsQuestionnairesQuestionResponse deleteInsightsQuestionnairesQuestion(org.openapis.openapi.models.operations.DeleteInsightsQuestionnairesQuestionRequest request, org.openapis.openapi.models.operations.DeleteInsightsQuestionnairesQuestionSecurity security) throws Exception {
+        return this.deleteInsightsQuestionnairesQuestion(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.DeleteInsightsQuestionnairesQuestionResponse deleteInsightsQuestionnairesQuestion(org.openapis.openapi.models.operations.DeleteInsightsQuestionnairesQuestionRequest request, org.openapis.openapi.models.operations.DeleteInsightsQuestionnairesQuestionSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_INSIGHTS_QUESTIONNAIRES_QUESTION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteInsightsQuestionnairesQuestionPathParams.class, baseUrl, "/v1/Insights/QM/Questions/{QuestionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteInsightsQuestionnairesQuestionRequest.class, baseUrl, "/v1/Insights/QM/Questions/{QuestionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1202,7 +1360,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1220,20 +1378,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DeleteWebChannelResponse deleteWebChannel(org.openapis.openapi.models.operations.DeleteWebChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteWebChannelResponse deleteWebChannel(org.openapis.openapi.models.operations.DeleteWebChannelRequest request, org.openapis.openapi.models.operations.DeleteWebChannelSecurity security) throws Exception {
+        return this.deleteWebChannel(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.DeleteWebChannelResponse deleteWebChannel(org.openapis.openapi.models.operations.DeleteWebChannelRequest request, org.openapis.openapi.models.operations.DeleteWebChannelSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_WEB_CHANNEL_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteWebChannelPathParams.class, baseUrl, "/v1/WebChannels/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteWebChannelRequest.class, baseUrl, "/v1/WebChannels/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1251,20 +1413,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.FetchChannelResponse fetchChannel(org.openapis.openapi.models.operations.FetchChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchChannelResponse fetchChannel(org.openapis.openapi.models.operations.FetchChannelRequest request, org.openapis.openapi.models.operations.FetchChannelSecurity security) throws Exception {
+        return this.fetchChannel(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.FetchChannelResponse fetchChannel(org.openapis.openapi.models.operations.FetchChannelRequest request, org.openapis.openapi.models.operations.FetchChannelSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_CHANNEL_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchChannelPathParams.class, baseUrl, "/v1/Channels/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchChannelRequest.class, baseUrl, "/v1/Channels/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1288,10 +1454,14 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.FetchConfigurationResponse fetchConfiguration(org.openapis.openapi.models.operations.FetchConfigurationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchConfigurationResponse fetchConfiguration(org.openapis.openapi.models.operations.FetchConfigurationRequest request, org.openapis.openapi.models.operations.FetchConfigurationSecurity security) throws Exception {
+        return this.fetchConfiguration(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.FetchConfigurationResponse fetchConfiguration(org.openapis.openapi.models.operations.FetchConfigurationRequest request, org.openapis.openapi.models.operations.FetchConfigurationSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_CONFIGURATION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Configuration");
@@ -1300,14 +1470,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FetchConfigurationQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FetchConfigurationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1331,20 +1501,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.FetchFlexFlowResponse fetchFlexFlow(org.openapis.openapi.models.operations.FetchFlexFlowRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchFlexFlowResponse fetchFlexFlow(org.openapis.openapi.models.operations.FetchFlexFlowRequest request, org.openapis.openapi.models.operations.FetchFlexFlowSecurity security) throws Exception {
+        return this.fetchFlexFlow(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.FetchFlexFlowResponse fetchFlexFlow(org.openapis.openapi.models.operations.FetchFlexFlowRequest request, org.openapis.openapi.models.operations.FetchFlexFlowSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_FLEX_FLOW_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchFlexFlowPathParams.class, baseUrl, "/v1/FlexFlows/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchFlexFlowRequest.class, baseUrl, "/v1/FlexFlows/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1371,22 +1545,35 @@ public class SDK {
     /**
      * To get the Questionnaire Detail
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchInsightsQuestionnairesResponse fetchInsightsQuestionnaires(org.openapis.openapi.models.operations.FetchInsightsQuestionnairesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchInsightsQuestionnairesResponse fetchInsightsQuestionnaires(org.openapis.openapi.models.operations.FetchInsightsQuestionnairesRequest request, org.openapis.openapi.models.operations.FetchInsightsQuestionnairesSecurity security) throws Exception {
+        return this.fetchInsightsQuestionnaires(request, security, null);
+    }
+
+    /**
+     * To get the Questionnaire Detail
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchInsightsQuestionnairesResponse fetchInsightsQuestionnaires(org.openapis.openapi.models.operations.FetchInsightsQuestionnairesRequest request, org.openapis.openapi.models.operations.FetchInsightsQuestionnairesSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_INSIGHTS_QUESTIONNAIRES_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchInsightsQuestionnairesPathParams.class, baseUrl, "/v1/Insights/QM/Questionnaires/{Id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchInsightsQuestionnairesRequest.class, baseUrl, "/v1/Insights/QM/Questionnaires/{Id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1395,7 +1582,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1422,22 +1609,35 @@ public class SDK {
     /**
      * To get the Segments of an Account
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchInsightsSegmentsResponse fetchInsightsSegments(org.openapis.openapi.models.operations.FetchInsightsSegmentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchInsightsSegmentsResponse fetchInsightsSegments(org.openapis.openapi.models.operations.FetchInsightsSegmentsRequest request, org.openapis.openapi.models.operations.FetchInsightsSegmentsSecurity security) throws Exception {
+        return this.fetchInsightsSegments(request, security, null);
+    }
+
+    /**
+     * To get the Segments of an Account
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchInsightsSegmentsResponse fetchInsightsSegments(org.openapis.openapi.models.operations.FetchInsightsSegmentsRequest request, org.openapis.openapi.models.operations.FetchInsightsSegmentsSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_INSIGHTS_SEGMENTS_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchInsightsSegmentsPathParams.class, baseUrl, "/v1/Insights/Segments/{SegmentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchInsightsSegmentsRequest.class, baseUrl, "/v1/Insights/Segments/{SegmentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1446,7 +1646,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1473,13 +1673,26 @@ public class SDK {
     /**
      * To get the Answer Set Settings for an Account
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchInsightsSettingsAnswersetsResponse fetchInsightsSettingsAnswersets(org.openapis.openapi.models.operations.FetchInsightsSettingsAnswersetsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchInsightsSettingsAnswersetsResponse fetchInsightsSettingsAnswersets(org.openapis.openapi.models.operations.FetchInsightsSettingsAnswersetsRequest request, org.openapis.openapi.models.operations.FetchInsightsSettingsAnswersetsSecurity security) throws Exception {
+        return this.fetchInsightsSettingsAnswersets(request, security, null);
+    }
+
+    /**
+     * To get the Answer Set Settings for an Account
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchInsightsSettingsAnswersetsResponse fetchInsightsSettingsAnswersets(org.openapis.openapi.models.operations.FetchInsightsSettingsAnswersetsRequest request, org.openapis.openapi.models.operations.FetchInsightsSettingsAnswersetsSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_INSIGHTS_SETTINGS_ANSWERSETS_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Insights/QM/Settings/AnswerSets");
@@ -1488,7 +1701,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1497,7 +1710,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1524,13 +1737,26 @@ public class SDK {
     /**
      * To get the Comment Settings for an Account
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchInsightsSettingsCommentResponse fetchInsightsSettingsComment(org.openapis.openapi.models.operations.FetchInsightsSettingsCommentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchInsightsSettingsCommentResponse fetchInsightsSettingsComment(org.openapis.openapi.models.operations.FetchInsightsSettingsCommentRequest request, org.openapis.openapi.models.operations.FetchInsightsSettingsCommentSecurity security) throws Exception {
+        return this.fetchInsightsSettingsComment(request, security, null);
+    }
+
+    /**
+     * To get the Comment Settings for an Account
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchInsightsSettingsCommentResponse fetchInsightsSettingsComment(org.openapis.openapi.models.operations.FetchInsightsSettingsCommentRequest request, org.openapis.openapi.models.operations.FetchInsightsSettingsCommentSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_INSIGHTS_SETTINGS_COMMENT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Insights/QM/Settings/CommentTags");
@@ -1539,7 +1765,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1548,7 +1774,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1575,13 +1801,26 @@ public class SDK {
     /**
      * This is used by Flex UI and Quality Management to fetch the Flex Insights roles for the user
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchInsightsUserRolesResponse fetchInsightsUserRoles(org.openapis.openapi.models.operations.FetchInsightsUserRolesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchInsightsUserRolesResponse fetchInsightsUserRoles(org.openapis.openapi.models.operations.FetchInsightsUserRolesRequest request, org.openapis.openapi.models.operations.FetchInsightsUserRolesSecurity security) throws Exception {
+        return this.fetchInsightsUserRoles(request, security, null);
+    }
+
+    /**
+     * This is used by Flex UI and Quality Management to fetch the Flex Insights roles for the user
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchInsightsUserRolesResponse fetchInsightsUserRoles(org.openapis.openapi.models.operations.FetchInsightsUserRolesRequest request, org.openapis.openapi.models.operations.FetchInsightsUserRolesSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_INSIGHTS_USER_ROLES_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Insights/UserRoles");
@@ -1590,7 +1829,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1599,7 +1838,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1623,20 +1862,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.FetchInteractionResponse fetchInteraction(org.openapis.openapi.models.operations.FetchInteractionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchInteractionResponse fetchInteraction(org.openapis.openapi.models.operations.FetchInteractionRequest request, org.openapis.openapi.models.operations.FetchInteractionSecurity security) throws Exception {
+        return this.fetchInteraction(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.FetchInteractionResponse fetchInteraction(org.openapis.openapi.models.operations.FetchInteractionRequest request, org.openapis.openapi.models.operations.FetchInteractionSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_INTERACTION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchInteractionPathParams.class, baseUrl, "/v1/Interactions/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchInteractionRequest.class, baseUrl, "/v1/Interactions/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1663,23 +1906,36 @@ public class SDK {
     /**
      * Fetch a Channel for an Interaction.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchInteractionChannelResponse fetchInteractionChannel(org.openapis.openapi.models.operations.FetchInteractionChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchInteractionChannelResponse fetchInteractionChannel(org.openapis.openapi.models.operations.FetchInteractionChannelRequest request, org.openapis.openapi.models.operations.FetchInteractionChannelSecurity security) throws Exception {
+        return this.fetchInteractionChannel(request, security, null);
+    }
+
+    /**
+     * Fetch a Channel for an Interaction.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchInteractionChannelResponse fetchInteractionChannel(org.openapis.openapi.models.operations.FetchInteractionChannelRequest request, org.openapis.openapi.models.operations.FetchInteractionChannelSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_INTERACTION_CHANNEL_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchInteractionChannelPathParams.class, baseUrl, "/v1/Interactions/{InteractionSid}/Channels/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchInteractionChannelRequest.class, baseUrl, "/v1/Interactions/{InteractionSid}/Channels/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1703,20 +1959,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.FetchWebChannelResponse fetchWebChannel(org.openapis.openapi.models.operations.FetchWebChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchWebChannelResponse fetchWebChannel(org.openapis.openapi.models.operations.FetchWebChannelRequest request, org.openapis.openapi.models.operations.FetchWebChannelSecurity security) throws Exception {
+        return this.fetchWebChannel(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.FetchWebChannelResponse fetchWebChannel(org.openapis.openapi.models.operations.FetchWebChannelRequest request, org.openapis.openapi.models.operations.FetchWebChannelSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_WEB_CHANNEL_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchWebChannelPathParams.class, baseUrl, "/v1/WebChannels/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchWebChannelRequest.class, baseUrl, "/v1/WebChannels/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1740,10 +2000,14 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.ListChannelResponse listChannel(org.openapis.openapi.models.operations.ListChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListChannelResponse listChannel(org.openapis.openapi.models.operations.ListChannelRequest request, org.openapis.openapi.models.operations.ListChannelSecurity security) throws Exception {
+        return this.listChannel(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.ListChannelResponse listChannel(org.openapis.openapi.models.operations.ListChannelRequest request, org.openapis.openapi.models.operations.ListChannelSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_CHANNEL_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Channels");
@@ -1752,14 +2016,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListChannelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListChannelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1783,10 +2047,14 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.ListFlexFlowResponse listFlexFlow(org.openapis.openapi.models.operations.ListFlexFlowRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListFlexFlowResponse listFlexFlow(org.openapis.openapi.models.operations.ListFlexFlowRequest request, org.openapis.openapi.models.operations.ListFlexFlowSecurity security) throws Exception {
+        return this.listFlexFlow(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.ListFlexFlowResponse listFlexFlow(org.openapis.openapi.models.operations.ListFlexFlowRequest request, org.openapis.openapi.models.operations.ListFlexFlowSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_FLEX_FLOW_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/FlexFlows");
@@ -1795,14 +2063,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListFlexFlowQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListFlexFlowRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1829,13 +2097,26 @@ public class SDK {
     /**
      * Get assessments done for a conversation by logged in user
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListInsightsAssessmentsResponse listInsightsAssessments(org.openapis.openapi.models.operations.ListInsightsAssessmentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListInsightsAssessmentsResponse listInsightsAssessments(org.openapis.openapi.models.operations.ListInsightsAssessmentsRequest request, org.openapis.openapi.models.operations.ListInsightsAssessmentsSecurity security) throws Exception {
+        return this.listInsightsAssessments(request, security, null);
+    }
+
+    /**
+     * Get assessments done for a conversation by logged in user
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListInsightsAssessmentsResponse listInsightsAssessments(org.openapis.openapi.models.operations.ListInsightsAssessmentsRequest request, org.openapis.openapi.models.operations.ListInsightsAssessmentsSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_INSIGHTS_ASSESSMENTS_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Insights/QM/Assessments");
@@ -1844,13 +2125,13 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListInsightsAssessmentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListInsightsAssessmentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1859,7 +2140,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1886,13 +2167,26 @@ public class SDK {
     /**
      * To create a comment assessment for a conversation
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListInsightsAssessmentsCommentResponse listInsightsAssessmentsComment(org.openapis.openapi.models.operations.ListInsightsAssessmentsCommentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListInsightsAssessmentsCommentResponse listInsightsAssessmentsComment(org.openapis.openapi.models.operations.ListInsightsAssessmentsCommentRequest request, org.openapis.openapi.models.operations.ListInsightsAssessmentsCommentSecurity security) throws Exception {
+        return this.listInsightsAssessmentsComment(request, security, null);
+    }
+
+    /**
+     * To create a comment assessment for a conversation
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListInsightsAssessmentsCommentResponse listInsightsAssessmentsComment(org.openapis.openapi.models.operations.ListInsightsAssessmentsCommentRequest request, org.openapis.openapi.models.operations.ListInsightsAssessmentsCommentSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_INSIGHTS_ASSESSMENTS_COMMENT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Insights/QM/Assessments/Comments");
@@ -1901,13 +2195,13 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListInsightsAssessmentsCommentQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListInsightsAssessmentsCommentRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1916,7 +2210,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1943,13 +2237,26 @@ public class SDK {
     /**
      * To get conversation with segment id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListInsightsConversationsResponse listInsightsConversations(org.openapis.openapi.models.operations.ListInsightsConversationsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListInsightsConversationsResponse listInsightsConversations(org.openapis.openapi.models.operations.ListInsightsConversationsRequest request, org.openapis.openapi.models.operations.ListInsightsConversationsSecurity security) throws Exception {
+        return this.listInsightsConversations(request, security, null);
+    }
+
+    /**
+     * To get conversation with segment id
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListInsightsConversationsResponse listInsightsConversations(org.openapis.openapi.models.operations.ListInsightsConversationsRequest request, org.openapis.openapi.models.operations.ListInsightsConversationsSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_INSIGHTS_CONVERSATIONS_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Insights/Conversations");
@@ -1958,13 +2265,13 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListInsightsConversationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListInsightsConversationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1973,7 +2280,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2000,13 +2307,26 @@ public class SDK {
     /**
      * To get all questionnaires with questions
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListInsightsQuestionnairesResponse listInsightsQuestionnaires(org.openapis.openapi.models.operations.ListInsightsQuestionnairesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListInsightsQuestionnairesResponse listInsightsQuestionnaires(org.openapis.openapi.models.operations.ListInsightsQuestionnairesRequest request, org.openapis.openapi.models.operations.ListInsightsQuestionnairesSecurity security) throws Exception {
+        return this.listInsightsQuestionnaires(request, security, null);
+    }
+
+    /**
+     * To get all questionnaires with questions
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListInsightsQuestionnairesResponse listInsightsQuestionnaires(org.openapis.openapi.models.operations.ListInsightsQuestionnairesRequest request, org.openapis.openapi.models.operations.ListInsightsQuestionnairesSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_INSIGHTS_QUESTIONNAIRES_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Insights/QM/Questionnaires");
@@ -2015,13 +2335,13 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListInsightsQuestionnairesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListInsightsQuestionnairesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2030,7 +2350,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2057,13 +2377,26 @@ public class SDK {
     /**
      * To get all the categories
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListInsightsQuestionnairesCategoryResponse listInsightsQuestionnairesCategory(org.openapis.openapi.models.operations.ListInsightsQuestionnairesCategoryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListInsightsQuestionnairesCategoryResponse listInsightsQuestionnairesCategory(org.openapis.openapi.models.operations.ListInsightsQuestionnairesCategoryRequest request, org.openapis.openapi.models.operations.ListInsightsQuestionnairesCategorySecurity security) throws Exception {
+        return this.listInsightsQuestionnairesCategory(request, security, null);
+    }
+
+    /**
+     * To get all the categories
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListInsightsQuestionnairesCategoryResponse listInsightsQuestionnairesCategory(org.openapis.openapi.models.operations.ListInsightsQuestionnairesCategoryRequest request, org.openapis.openapi.models.operations.ListInsightsQuestionnairesCategorySecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_INSIGHTS_QUESTIONNAIRES_CATEGORY_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Insights/QM/Categories");
@@ -2072,13 +2405,13 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListInsightsQuestionnairesCategoryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListInsightsQuestionnairesCategoryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2087,7 +2420,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2114,13 +2447,26 @@ public class SDK {
     /**
      * To get all the question for the given categories
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListInsightsQuestionnairesQuestionResponse listInsightsQuestionnairesQuestion(org.openapis.openapi.models.operations.ListInsightsQuestionnairesQuestionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListInsightsQuestionnairesQuestionResponse listInsightsQuestionnairesQuestion(org.openapis.openapi.models.operations.ListInsightsQuestionnairesQuestionRequest request, org.openapis.openapi.models.operations.ListInsightsQuestionnairesQuestionSecurity security) throws Exception {
+        return this.listInsightsQuestionnairesQuestion(request, security, null);
+    }
+
+    /**
+     * To get all the question for the given categories
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListInsightsQuestionnairesQuestionResponse listInsightsQuestionnairesQuestion(org.openapis.openapi.models.operations.ListInsightsQuestionnairesQuestionRequest request, org.openapis.openapi.models.operations.ListInsightsQuestionnairesQuestionSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_INSIGHTS_QUESTIONNAIRES_QUESTION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Insights/QM/Questions");
@@ -2129,13 +2475,13 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListInsightsQuestionnairesQuestionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListInsightsQuestionnairesQuestionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2144,7 +2490,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2171,13 +2517,26 @@ public class SDK {
     /**
      * To get segments for given reservation Ids
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListInsightsSegmentsResponse listInsightsSegments(org.openapis.openapi.models.operations.ListInsightsSegmentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListInsightsSegmentsResponse listInsightsSegments(org.openapis.openapi.models.operations.ListInsightsSegmentsRequest request, org.openapis.openapi.models.operations.ListInsightsSegmentsSecurity security) throws Exception {
+        return this.listInsightsSegments(request, security, null);
+    }
+
+    /**
+     * To get segments for given reservation Ids
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListInsightsSegmentsResponse listInsightsSegments(org.openapis.openapi.models.operations.ListInsightsSegmentsRequest request, org.openapis.openapi.models.operations.ListInsightsSegmentsSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_INSIGHTS_SEGMENTS_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Insights/Segments");
@@ -2186,13 +2545,13 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListInsightsSegmentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListInsightsSegmentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2201,7 +2560,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2228,29 +2587,42 @@ public class SDK {
     /**
      * List all Channels for an Interaction.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListInteractionChannelResponse listInteractionChannel(org.openapis.openapi.models.operations.ListInteractionChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListInteractionChannelResponse listInteractionChannel(org.openapis.openapi.models.operations.ListInteractionChannelRequest request, org.openapis.openapi.models.operations.ListInteractionChannelSecurity security) throws Exception {
+        return this.listInteractionChannel(request, security, null);
+    }
+
+    /**
+     * List all Channels for an Interaction.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListInteractionChannelResponse listInteractionChannel(org.openapis.openapi.models.operations.ListInteractionChannelRequest request, org.openapis.openapi.models.operations.ListInteractionChannelSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_INTERACTION_CHANNEL_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListInteractionChannelPathParams.class, baseUrl, "/v1/Interactions/{InteractionSid}/Channels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListInteractionChannelRequest.class, baseUrl, "/v1/Interactions/{InteractionSid}/Channels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListInteractionChannelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListInteractionChannelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2277,29 +2649,42 @@ public class SDK {
     /**
      * List all Invites for a Channel.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListInteractionChannelInviteResponse listInteractionChannelInvite(org.openapis.openapi.models.operations.ListInteractionChannelInviteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListInteractionChannelInviteResponse listInteractionChannelInvite(org.openapis.openapi.models.operations.ListInteractionChannelInviteRequest request, org.openapis.openapi.models.operations.ListInteractionChannelInviteSecurity security) throws Exception {
+        return this.listInteractionChannelInvite(request, security, null);
+    }
+
+    /**
+     * List all Invites for a Channel.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListInteractionChannelInviteResponse listInteractionChannelInvite(org.openapis.openapi.models.operations.ListInteractionChannelInviteRequest request, org.openapis.openapi.models.operations.ListInteractionChannelInviteSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_INTERACTION_CHANNEL_INVITE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListInteractionChannelInvitePathParams.class, baseUrl, "/v1/Interactions/{InteractionSid}/Channels/{ChannelSid}/Invites", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListInteractionChannelInviteRequest.class, baseUrl, "/v1/Interactions/{InteractionSid}/Channels/{ChannelSid}/Invites", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListInteractionChannelInviteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListInteractionChannelInviteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2326,29 +2711,42 @@ public class SDK {
     /**
      * List all Participants for a Channel.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListInteractionChannelParticipantResponse listInteractionChannelParticipant(org.openapis.openapi.models.operations.ListInteractionChannelParticipantRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListInteractionChannelParticipantResponse listInteractionChannelParticipant(org.openapis.openapi.models.operations.ListInteractionChannelParticipantRequest request, org.openapis.openapi.models.operations.ListInteractionChannelParticipantSecurity security) throws Exception {
+        return this.listInteractionChannelParticipant(request, security, null);
+    }
+
+    /**
+     * List all Participants for a Channel.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListInteractionChannelParticipantResponse listInteractionChannelParticipant(org.openapis.openapi.models.operations.ListInteractionChannelParticipantRequest request, org.openapis.openapi.models.operations.ListInteractionChannelParticipantSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_INTERACTION_CHANNEL_PARTICIPANT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListInteractionChannelParticipantPathParams.class, baseUrl, "/v1/Interactions/{InteractionSid}/Channels/{ChannelSid}/Participants", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListInteractionChannelParticipantRequest.class, baseUrl, "/v1/Interactions/{InteractionSid}/Channels/{ChannelSid}/Participants", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListInteractionChannelParticipantQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListInteractionChannelParticipantRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2372,10 +2770,14 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.ListWebChannelResponse listWebChannel(org.openapis.openapi.models.operations.ListWebChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListWebChannelResponse listWebChannel(org.openapis.openapi.models.operations.ListWebChannelRequest request, org.openapis.openapi.models.operations.ListWebChannelSecurity security) throws Exception {
+        return this.listWebChannel(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.ListWebChannelResponse listWebChannel(org.openapis.openapi.models.operations.ListWebChannelRequest request, org.openapis.openapi.models.operations.ListWebChannelSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_WEB_CHANNEL_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/WebChannels");
@@ -2384,14 +2786,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListWebChannelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListWebChannelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2415,22 +2817,26 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.UpdateFlexFlowResponse updateFlexFlow(org.openapis.openapi.models.operations.UpdateFlexFlowRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateFlexFlowResponse updateFlexFlow(org.openapis.openapi.models.operations.UpdateFlexFlowRequest request, org.openapis.openapi.models.operations.UpdateFlexFlowSecurity security) throws Exception {
+        return this.updateFlexFlow(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.UpdateFlexFlowResponse updateFlexFlow(org.openapis.openapi.models.operations.UpdateFlexFlowRequest request, org.openapis.openapi.models.operations.UpdateFlexFlowSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_FLEX_FLOW_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateFlexFlowPathParams.class, baseUrl, "/v1/FlexFlows/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateFlexFlowRequest.class, baseUrl, "/v1/FlexFlows/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2457,24 +2863,37 @@ public class SDK {
     /**
      * Update a specific Assessment assessed earlier
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateInsightsAssessmentsResponse updateInsightsAssessments(org.openapis.openapi.models.operations.UpdateInsightsAssessmentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateInsightsAssessmentsResponse updateInsightsAssessments(org.openapis.openapi.models.operations.UpdateInsightsAssessmentsRequest request, org.openapis.openapi.models.operations.UpdateInsightsAssessmentsSecurity security) throws Exception {
+        return this.updateInsightsAssessments(request, security, null);
+    }
+
+    /**
+     * Update a specific Assessment assessed earlier
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateInsightsAssessmentsResponse updateInsightsAssessments(org.openapis.openapi.models.operations.UpdateInsightsAssessmentsRequest request, org.openapis.openapi.models.operations.UpdateInsightsAssessmentsSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_INSIGHTS_ASSESSMENTS_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateInsightsAssessmentsPathParams.class, baseUrl, "/v1/Insights/QM/Assessments/{AssessmentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateInsightsAssessmentsRequest.class, baseUrl, "/v1/Insights/QM/Assessments/{AssessmentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2483,7 +2902,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2510,24 +2929,37 @@ public class SDK {
     /**
      * To update the questionnaire
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateInsightsQuestionnairesResponse updateInsightsQuestionnaires(org.openapis.openapi.models.operations.UpdateInsightsQuestionnairesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateInsightsQuestionnairesResponse updateInsightsQuestionnaires(org.openapis.openapi.models.operations.UpdateInsightsQuestionnairesRequest request, org.openapis.openapi.models.operations.UpdateInsightsQuestionnairesSecurity security) throws Exception {
+        return this.updateInsightsQuestionnaires(request, security, null);
+    }
+
+    /**
+     * To update the questionnaire
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateInsightsQuestionnairesResponse updateInsightsQuestionnaires(org.openapis.openapi.models.operations.UpdateInsightsQuestionnairesRequest request, org.openapis.openapi.models.operations.UpdateInsightsQuestionnairesSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_INSIGHTS_QUESTIONNAIRES_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateInsightsQuestionnairesPathParams.class, baseUrl, "/v1/Insights/QM/Questionnaires/{Id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateInsightsQuestionnairesRequest.class, baseUrl, "/v1/Insights/QM/Questionnaires/{Id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2536,7 +2968,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2563,24 +2995,37 @@ public class SDK {
     /**
      * To update the category for Questions
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateInsightsQuestionnairesCategoryResponse updateInsightsQuestionnairesCategory(org.openapis.openapi.models.operations.UpdateInsightsQuestionnairesCategoryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateInsightsQuestionnairesCategoryResponse updateInsightsQuestionnairesCategory(org.openapis.openapi.models.operations.UpdateInsightsQuestionnairesCategoryRequest request, org.openapis.openapi.models.operations.UpdateInsightsQuestionnairesCategorySecurity security) throws Exception {
+        return this.updateInsightsQuestionnairesCategory(request, security, null);
+    }
+
+    /**
+     * To update the category for Questions
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateInsightsQuestionnairesCategoryResponse updateInsightsQuestionnairesCategory(org.openapis.openapi.models.operations.UpdateInsightsQuestionnairesCategoryRequest request, org.openapis.openapi.models.operations.UpdateInsightsQuestionnairesCategorySecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_INSIGHTS_QUESTIONNAIRES_CATEGORY_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateInsightsQuestionnairesCategoryPathParams.class, baseUrl, "/v1/Insights/QM/Categories/{CategoryId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateInsightsQuestionnairesCategoryRequest.class, baseUrl, "/v1/Insights/QM/Categories/{CategoryId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2589,7 +3034,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2616,24 +3061,37 @@ public class SDK {
     /**
      * To update the question
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateInsightsQuestionnairesQuestionResponse updateInsightsQuestionnairesQuestion(org.openapis.openapi.models.operations.UpdateInsightsQuestionnairesQuestionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateInsightsQuestionnairesQuestionResponse updateInsightsQuestionnairesQuestion(org.openapis.openapi.models.operations.UpdateInsightsQuestionnairesQuestionRequest request, org.openapis.openapi.models.operations.UpdateInsightsQuestionnairesQuestionSecurity security) throws Exception {
+        return this.updateInsightsQuestionnairesQuestion(request, security, null);
+    }
+
+    /**
+     * To update the question
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateInsightsQuestionnairesQuestionResponse updateInsightsQuestionnairesQuestion(org.openapis.openapi.models.operations.UpdateInsightsQuestionnairesQuestionRequest request, org.openapis.openapi.models.operations.UpdateInsightsQuestionnairesQuestionSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_INSIGHTS_QUESTIONNAIRES_QUESTION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateInsightsQuestionnairesQuestionPathParams.class, baseUrl, "/v1/Insights/QM/Questions/{QuestionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateInsightsQuestionnairesQuestionRequest.class, baseUrl, "/v1/Insights/QM/Questions/{QuestionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2642,7 +3100,7 @@ public class SDK {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2669,25 +3127,38 @@ public class SDK {
     /**
      * Update an existing Interaction Channel.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateInteractionChannelResponse updateInteractionChannel(org.openapis.openapi.models.operations.UpdateInteractionChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateInteractionChannelResponse updateInteractionChannel(org.openapis.openapi.models.operations.UpdateInteractionChannelRequest request, org.openapis.openapi.models.operations.UpdateInteractionChannelSecurity security) throws Exception {
+        return this.updateInteractionChannel(request, security, null);
+    }
+
+    /**
+     * Update an existing Interaction Channel.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateInteractionChannelResponse updateInteractionChannel(org.openapis.openapi.models.operations.UpdateInteractionChannelRequest request, org.openapis.openapi.models.operations.UpdateInteractionChannelSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_INTERACTION_CHANNEL_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateInteractionChannelPathParams.class, baseUrl, "/v1/Interactions/{InteractionSid}/Channels/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateInteractionChannelRequest.class, baseUrl, "/v1/Interactions/{InteractionSid}/Channels/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2714,25 +3185,38 @@ public class SDK {
     /**
      * Update an existing Channel Participant.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateInteractionChannelParticipantResponse updateInteractionChannelParticipant(org.openapis.openapi.models.operations.UpdateInteractionChannelParticipantRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateInteractionChannelParticipantResponse updateInteractionChannelParticipant(org.openapis.openapi.models.operations.UpdateInteractionChannelParticipantRequest request, org.openapis.openapi.models.operations.UpdateInteractionChannelParticipantSecurity security) throws Exception {
+        return this.updateInteractionChannelParticipant(request, security, null);
+    }
+
+    /**
+     * Update an existing Channel Participant.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateInteractionChannelParticipantResponse updateInteractionChannelParticipant(org.openapis.openapi.models.operations.UpdateInteractionChannelParticipantRequest request, org.openapis.openapi.models.operations.UpdateInteractionChannelParticipantSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_INTERACTION_CHANNEL_PARTICIPANT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateInteractionChannelParticipantPathParams.class, baseUrl, "/v1/Interactions/{InteractionSid}/Channels/{ChannelSid}/Participants/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateInteractionChannelParticipantRequest.class, baseUrl, "/v1/Interactions/{InteractionSid}/Channels/{ChannelSid}/Participants/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2756,22 +3240,26 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.UpdateWebChannelResponse updateWebChannel(org.openapis.openapi.models.operations.UpdateWebChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateWebChannelResponse updateWebChannel(org.openapis.openapi.models.operations.UpdateWebChannelRequest request, org.openapis.openapi.models.operations.UpdateWebChannelSecurity security) throws Exception {
+        return this.updateWebChannel(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.UpdateWebChannelResponse updateWebChannel(org.openapis.openapi.models.operations.UpdateWebChannelRequest request, org.openapis.openapi.models.operations.UpdateWebChannelSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_WEB_CHANNEL_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateWebChannelPathParams.class, baseUrl, "/v1/WebChannels/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateWebChannelRequest.class, baseUrl, "/v1/WebChannels/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

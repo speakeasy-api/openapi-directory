@@ -7,31 +7,149 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PublishRequest {
-    
-    public PublishPathParams pathParams;
-    public PublishRequest withPathParams(PublishPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PublishQueryParams queryParams;
-    public PublishRequest withQueryParams(PublishQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public PublishHeaders headers;
-    public PublishRequest withHeaders(PublishHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PublishRequestBody request;
-    public PublishRequest withRequest(PublishRequestBody request) {
-        this.request = request;
+    public PublishRequestBody requestBody;
+    public PublishRequest withRequestBody(PublishRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public PublishRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public PublishRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public PublishRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public PublishRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public PublishRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public PublishRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public PublishRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * A UTF-8 encoded string that describes the content of the publishing message.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contentType")
+    public String contentType;
+    public PublishRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
+    
+    /**
+     * A user-defined integer value that represents the message expiry interval in seconds. If absent, the message doesn't expire. For more information about the limits of &lt;code&gt;messageExpiry&lt;/code&gt;, see &lt;a href="https://docs.aws.amazon.com/general/latest/gr/iot-core.html#message-broker-limits"&gt;Amazon Web Services IoT Core message broker and protocol limits and quotas &lt;/a&gt; from the Amazon Web Services Reference Guide.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=messageExpiry")
+    public Long messageExpiry;
+    public PublishRequest withMessageExpiry(Long messageExpiry) {
+        this.messageExpiry = messageExpiry;
+        return this;
+    }
+    
+    /**
+     * The Quality of Service (QoS) level. The default QoS level is 0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=qos")
+    public Long qos;
+    public PublishRequest withQos(Long qos) {
+        this.qos = qos;
+        return this;
+    }
+    
+    /**
+     * A UTF-8 encoded string that's used as the topic name for a response message. The response topic is used to describe the topic which the receiver should publish to as part of the request-response flow. The topic must not contain wildcard characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=responseTopic")
+    public String responseTopic;
+    public PublishRequest withResponseTopic(String responseTopic) {
+        this.responseTopic = responseTopic;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;A Boolean value that determines whether to set the RETAIN flag when the message is published.&lt;/p&gt; &lt;p&gt;Setting the RETAIN flag causes the message to be retained and sent to new subscribers to the topic.&lt;/p&gt; &lt;p&gt;Valid values: &lt;code&gt;true&lt;/code&gt; | &lt;code&gt;false&lt;/code&gt; &lt;/p&gt; &lt;p&gt;Default value: &lt;code&gt;false&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=retain")
+    public Boolean retain;
+    public PublishRequest withRetain(Boolean retain) {
+        this.retain = retain;
+        return this;
+    }
+    
+    /**
+     * The name of the MQTT topic.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=topic")
+    public String topic;
+    public PublishRequest withTopic(String topic) {
+        this.topic = topic;
+        return this;
+    }
+    
+    /**
+     * The base64-encoded binary data used by the sender of the request message to identify which request the response message is for when it's received. &lt;code&gt;correlationData&lt;/code&gt; is an HTTP header value in the API.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-amz-mqtt5-correlation-data")
+    public String xAmzMqtt5CorrelationData;
+    public PublishRequest withXAmzMqtt5CorrelationData(String xAmzMqtt5CorrelationData) {
+        this.xAmzMqtt5CorrelationData = xAmzMqtt5CorrelationData;
+        return this;
+    }
+    
+    /**
+     * An &lt;code&gt;Enum&lt;/code&gt; string value that indicates whether the payload is formatted as UTF-8. &lt;code&gt;payloadFormatIndicator&lt;/code&gt; is an HTTP header value in the API.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-amz-mqtt5-payload-format-indicator")
+    public PublishXAmzMqtt5PayloadFormatIndicatorEnum xAmzMqtt5PayloadFormatIndicator;
+    public PublishRequest withXAmzMqtt5PayloadFormatIndicator(PublishXAmzMqtt5PayloadFormatIndicatorEnum xAmzMqtt5PayloadFormatIndicator) {
+        this.xAmzMqtt5PayloadFormatIndicator = xAmzMqtt5PayloadFormatIndicator;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;A JSON string that contains an array of JSON objects. If you don\u2019t use Amazon Web Services SDK or CLI, you must encode the JSON string to base64 format before adding it to the HTTP header. &lt;code&gt;userProperties&lt;/code&gt; is an HTTP header value in the API.&lt;/p&gt; &lt;p&gt;The following example &lt;code&gt;userProperties&lt;/code&gt; parameter is a JSON string which represents two User Properties. Note that it needs to be base64-encoded:&lt;/p&gt; &lt;p&gt; &lt;code&gt;[{"deviceName": "alpha"}, {"deviceCnt": "45"}]&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-amz-mqtt5-user-properties")
+    public String xAmzMqtt5UserProperties;
+    public PublishRequest withXAmzMqtt5UserProperties(String xAmzMqtt5UserProperties) {
+        this.xAmzMqtt5UserProperties = xAmzMqtt5UserProperties;
         return this;
     }
     

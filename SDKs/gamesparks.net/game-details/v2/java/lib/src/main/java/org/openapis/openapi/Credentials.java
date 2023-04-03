@@ -40,7 +40,7 @@ public class Credentials {
      */
     public org.openapis.openapi.models.operations.UpdateCredentialSecretUsingPOSTResponse updateCredentialSecretUsingPOST(org.openapis.openapi.models.operations.UpdateCredentialSecretUsingPOSTRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCredentialSecretUsingPOSTPathParams.class, baseUrl, "/restv2/game/{apiKey}/config/~credentials/{credentialName}/resetSecret", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCredentialSecretUsingPOSTRequest.class, baseUrl, "/restv2/game/{apiKey}/config/~credentials/{credentialName}/resetSecret", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProvisioningProfileRequest {
-    
-    public ProvisioningProfilePathParams pathParams;
-    public ProvisioningProfileRequest withPathParams(ProvisioningProfilePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public ProvisioningProfileRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public ProvisioningProfileRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
     
-    public ProvisioningProfileSecurity security;
-    public ProvisioningProfileRequest withSecurity(ProvisioningProfileSecurity security) {
-        this.security = security;
+    /**
+     * The release_id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_id")
+    public Long releaseId;
+    public ProvisioningProfileRequest withReleaseId(Long releaseId) {
+        this.releaseId = releaseId;
         return this;
     }
     

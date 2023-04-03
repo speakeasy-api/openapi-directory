@@ -34,23 +34,24 @@ public class RegistrationWithAadhaar {
      * Create Health ID using pre-verified Aadhaar &amp; Mobile.
      * Create Health ID using pre-verified Aadhaar &amp; Mobile.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateAadhaarAccountUsingPOSTResponse createAadhaarAccountUsingPOST(org.openapis.openapi.models.operations.CreateAadhaarAccountUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateAadhaarAccountUsingPOSTResponse createAadhaarAccountUsingPOST(org.openapis.openapi.models.operations.CreateAadhaarAccountUsingPOSTRequest request, org.openapis.openapi.models.operations.CreateAadhaarAccountUsingPOSTSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/registration/aadhaar/createHealthIdWithPreVerified");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createAccountWithPreVerifiedAadhaar", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -59,7 +60,7 @@ public class RegistrationWithAadhaar {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -88,23 +89,24 @@ public class RegistrationWithAadhaar {
      * Generate Aadhaar OTP on registrered mobile number
      * Generate Aadhaar OTP on registrered mobile number
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GenerateAadharOTPUsingPOSTResponse generateAadharOTPUsingPOST(org.openapis.openapi.models.operations.GenerateAadharOTPUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GenerateAadharOTPUsingPOSTResponse generateAadharOTPUsingPOST(org.openapis.openapi.models.operations.GenerateAadharOTPUsingPOSTRequest request, org.openapis.openapi.models.operations.GenerateAadharOTPUsingPOSTSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/registration/aadhaar/generateOtp");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "aadharOtpGenerateRequestPayLoad", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -113,7 +115,7 @@ public class RegistrationWithAadhaar {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -142,23 +144,24 @@ public class RegistrationWithAadhaar {
      * Generate Mobile OTP for verification.
      * Generate Mobile OTP to verify mobile number.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GenerateMobileOTPForTxnUsingPOSTResponse generateMobileOTPForTxnUsingPOST(org.openapis.openapi.models.operations.GenerateMobileOTPForTxnUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GenerateMobileOTPForTxnUsingPOSTResponse generateMobileOTPForTxnUsingPOST(org.openapis.openapi.models.operations.GenerateMobileOTPForTxnUsingPOSTRequest request, org.openapis.openapi.models.operations.GenerateMobileOTPForTxnUsingPOSTSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/registration/aadhaar/generateMobileOTP");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "generateMobileOTPForTxnRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -167,7 +170,7 @@ public class RegistrationWithAadhaar {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -196,23 +199,24 @@ public class RegistrationWithAadhaar {
      * Search health id number using aadhar.
      * Search health id number using aadhar.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetHealthIdNumbersByAadharUsingPOSTResponse getHealthIdNumbersByAadharUsingPOST(org.openapis.openapi.models.operations.GetHealthIdNumbersByAadharUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetHealthIdNumbersByAadharUsingPOSTResponse getHealthIdNumbersByAadharUsingPOST(org.openapis.openapi.models.operations.GetHealthIdNumbersByAadharUsingPOSTRequest request, org.openapis.openapi.models.operations.GetHealthIdNumbersByAadharUsingPOSTSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/registration/aadhaar/search/aadhar");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "aadharNumberRequestPayload", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -221,7 +225,7 @@ public class RegistrationWithAadhaar {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -250,23 +254,24 @@ public class RegistrationWithAadhaar {
      * Resend Aadhaar OTP on registrered mobile number to create Health ID.
      * Resend Aadhar OTP on registrered mobile number
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ResendAadharOTPUsingPOSTResponse resendAadharOTPUsingPOST(org.openapis.openapi.models.operations.ResendAadharOTPUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ResendAadharOTPUsingPOSTResponse resendAadharOTPUsingPOST(org.openapis.openapi.models.operations.ResendAadharOTPUsingPOSTRequest request, org.openapis.openapi.models.operations.ResendAadharOTPUsingPOSTSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/registration/aadhaar/resendAadhaarOtp");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "resendOTPRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -275,7 +280,7 @@ public class RegistrationWithAadhaar {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -304,23 +309,24 @@ public class RegistrationWithAadhaar {
      * Verify Aadhaar using biometrics.
      * Verify Aadhaar using biometrics
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.VerifyAadharBioUsingPOSTResponse verifyAadharBioUsingPOST(org.openapis.openapi.models.operations.VerifyAadharBioUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.VerifyAadharBioUsingPOSTResponse verifyAadharBioUsingPOST(org.openapis.openapi.models.operations.VerifyAadharBioUsingPOSTRequest request, org.openapis.openapi.models.operations.VerifyAadharBioUsingPOSTSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/registration/aadhaar/verifyBio");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "verifyAadhaarWithBio", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -329,7 +335,7 @@ public class RegistrationWithAadhaar {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -358,23 +364,24 @@ public class RegistrationWithAadhaar {
      * Verify Aadhaar OTP and continue for mobile verification.
      * Verify Aadhaar OTP received on registrered mobile number
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.VerifyAadharOTPOnlyUsingPOSTResponse verifyAadharOTPOnlyUsingPOST(org.openapis.openapi.models.operations.VerifyAadharOTPOnlyUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.VerifyAadharOTPOnlyUsingPOSTResponse verifyAadharOTPOnlyUsingPOST(org.openapis.openapi.models.operations.VerifyAadharOTPOnlyUsingPOSTRequest request, org.openapis.openapi.models.operations.VerifyAadharOTPOnlyUsingPOSTSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/registration/aadhaar/verifyOTP");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "verifyAadhaarOtp", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -383,7 +390,7 @@ public class RegistrationWithAadhaar {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -412,23 +419,24 @@ public class RegistrationWithAadhaar {
      * Verify Aadhaar OTP on registrered mobile number to create Health ID.
      * Verify Aadhar OTP received on registrered mobile number
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.VerifyAadharOtpUsingPOSTResponse verifyAadharOTPUsingPOST(org.openapis.openapi.models.operations.VerifyAadharOTPUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.VerifyAadharOtpUsingPOSTResponse verifyAadharOTPUsingPOST(org.openapis.openapi.models.operations.VerifyAadharOTPUsingPOSTRequest request, org.openapis.openapi.models.operations.VerifyAadharOTPUsingPOSTSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/registration/aadhaar/createHealthIdWithAadhaarOtp");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createAccountWithAadhaarOtp", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -437,7 +445,7 @@ public class RegistrationWithAadhaar {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -466,23 +474,24 @@ public class RegistrationWithAadhaar {
      * Verify Mobile OTP in an existing transaction.
      * Verify Mobile OTP in an existing transaction.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.VerifyMobileOTPForTxnUsingPOSTResponse verifyMobileOTPForTxnUsingPOST(org.openapis.openapi.models.operations.VerifyMobileOTPForTxnUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.VerifyMobileOTPForTxnUsingPOSTResponse verifyMobileOTPForTxnUsingPOST(org.openapis.openapi.models.operations.VerifyMobileOTPForTxnUsingPOSTRequest request, org.openapis.openapi.models.operations.VerifyMobileOTPForTxnUsingPOSTSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/registration/aadhaar/verifyMobileOTP");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "verifyMobileRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -491,7 +500,7 @@ public class RegistrationWithAadhaar {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

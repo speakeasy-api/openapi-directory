@@ -4,20 +4,55 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DiaryControllerSearchGuestRequest {
-    
-    public DiaryControllerSearchGuestPathParams pathParams;
-    public DiaryControllerSearchGuestRequest withPathParams(DiaryControllerSearchGuestPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branchID")
+    public String branchID;
+    public DiaryControllerSearchGuestRequest withBranchID(String branchID) {
+        this.branchID = branchID;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
+    public Integer count;
+    public DiaryControllerSearchGuestRequest withCount(Integer count) {
+        this.count = count;
+        return this;
+    }
     
-    public DiaryControllerSearchGuestQueryParams queryParams;
-    public DiaryControllerSearchGuestRequest withQueryParams(DiaryControllerSearchGuestQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=emailaddress")
+    public String emailaddress;
+    public DiaryControllerSearchGuestRequest withEmailaddress(String emailaddress) {
+        this.emailaddress = emailaddress;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=forename")
+    public String forename;
+    public DiaryControllerSearchGuestRequest withForename(String forename) {
+        this.forename = forename;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public DiaryControllerSearchGuestRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortname")
+    public String shortname;
+    public DiaryControllerSearchGuestRequest withShortname(String shortname) {
+        this.shortname = shortname;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=surname")
+    public String surname;
+    public DiaryControllerSearchGuestRequest withSurname(String surname) {
+        this.surname = surname;
         return this;
     }
     

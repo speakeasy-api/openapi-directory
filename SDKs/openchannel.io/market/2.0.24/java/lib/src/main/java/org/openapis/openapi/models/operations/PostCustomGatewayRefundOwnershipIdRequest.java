@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCustomGatewayRefundOwnershipIdRequest {
-    
-    public PostCustomGatewayRefundOwnershipIdPathParams pathParams;
-    public PostCustomGatewayRefundOwnershipIdRequest withPathParams(PostCustomGatewayRefundOwnershipIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The total amount refunded in cents
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=amount")
+    public Long amount;
+    public PostCustomGatewayRefundOwnershipIdRequest withAmount(Long amount) {
+        this.amount = amount;
         return this;
     }
     
+    /**
+     * A custom JSON object to attach to this transaction
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customData")
+    public String customData;
+    public PostCustomGatewayRefundOwnershipIdRequest withCustomData(String customData) {
+        this.customData = customData;
+        return this;
+    }
     
-    public PostCustomGatewayRefundOwnershipIdQueryParams queryParams;
-    public PostCustomGatewayRefundOwnershipIdRequest withQueryParams(PostCustomGatewayRefundOwnershipIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The date (in milliseconds) of when this refund was made
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
+    public Long date;
+    public PostCustomGatewayRefundOwnershipIdRequest withDate(Long date) {
+        this.date = date;
+        return this;
+    }
+    
+    /**
+     * The amount (in cents) recovered from the owner of the app
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=developerAmount")
+    public Long developerAmount;
+    public PostCustomGatewayRefundOwnershipIdRequest withDeveloperAmount(Long developerAmount) {
+        this.developerAmount = developerAmount;
+        return this;
+    }
+    
+    /**
+     * The fee (in cents) recovered from a payment processor or third party to process this payment. The default value is 0
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=feeAmount")
+    public Long feeAmount;
+    public PostCustomGatewayRefundOwnershipIdRequest withFeeAmount(Long feeAmount) {
+        this.feeAmount = feeAmount;
+        return this;
+    }
+    
+    /**
+     * The amount (in cents) recovered from the marketplace owner as a commission refund for the purchase of this app
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=marketplaceAmount")
+    public Long marketplaceAmount;
+    public PostCustomGatewayRefundOwnershipIdRequest withMarketplaceAmount(Long marketplaceAmount) {
+        this.marketplaceAmount = marketplaceAmount;
+        return this;
+    }
+    
+    /**
+     * The id of the ownership record involved in this transaction
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ownershipId")
+    public String ownershipId;
+    public PostCustomGatewayRefundOwnershipIdRequest withOwnershipId(String ownershipId) {
+        this.ownershipId = ownershipId;
         return this;
     }
     

@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteNetworkSwitchRoutingMulticastRendezvousPointRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public DeleteNetworkSwitchRoutingMulticastRendezvousPointRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
     
-    public DeleteNetworkSwitchRoutingMulticastRendezvousPointPathParams pathParams;
-    public DeleteNetworkSwitchRoutingMulticastRendezvousPointRequest withPathParams(DeleteNetworkSwitchRoutingMulticastRendezvousPointPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rendezvousPointId")
+    public String rendezvousPointId;
+    public DeleteNetworkSwitchRoutingMulticastRendezvousPointRequest withRendezvousPointId(String rendezvousPointId) {
+        this.rendezvousPointId = rendezvousPointId;
         return this;
     }
     

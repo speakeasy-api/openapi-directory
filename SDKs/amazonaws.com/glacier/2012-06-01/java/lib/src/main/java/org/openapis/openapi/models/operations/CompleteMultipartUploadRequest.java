@@ -4,20 +4,105 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CompleteMultipartUploadRequest {
-    
-    public CompleteMultipartUploadPathParams pathParams;
-    public CompleteMultipartUploadRequest withPathParams(CompleteMultipartUploadPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public CompleteMultipartUploadRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public CompleteMultipartUploadRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public CompleteMultipartUploadHeaders headers;
-    public CompleteMultipartUploadRequest withHeaders(CompleteMultipartUploadHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public CompleteMultipartUploadRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public CompleteMultipartUploadRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public CompleteMultipartUploadRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public CompleteMultipartUploadRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public CompleteMultipartUploadRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The &lt;code&gt;AccountId&lt;/code&gt; value is the AWS account ID of the account that owns the vault. You can either specify an AWS account ID or optionally a single '&lt;code&gt;-&lt;/code&gt;' (hyphen), in which case Amazon S3 Glacier uses the AWS account ID associated with the credentials used to sign the request. If you use an account ID, do not include any hyphens ('-') in the ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public CompleteMultipartUploadRequest withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    
+    /**
+     * The upload ID of the multipart upload.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=uploadId")
+    public String uploadId;
+    public CompleteMultipartUploadRequest withUploadId(String uploadId) {
+        this.uploadId = uploadId;
+        return this;
+    }
+    
+    /**
+     * The name of the vault.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=vaultName")
+    public String vaultName;
+    public CompleteMultipartUploadRequest withVaultName(String vaultName) {
+        this.vaultName = vaultName;
+        return this;
+    }
+    
+    /**
+     * The total size, in bytes, of the entire archive. This value should be the sum of all the sizes of the individual parts that you uploaded.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-amz-archive-size")
+    public String xAmzArchiveSize;
+    public CompleteMultipartUploadRequest withXAmzArchiveSize(String xAmzArchiveSize) {
+        this.xAmzArchiveSize = xAmzArchiveSize;
+        return this;
+    }
+    
+    /**
+     * The SHA256 tree hash of the entire archive. It is the tree hash of SHA256 tree hash of the individual parts. If the value you specify in the request does not match the SHA256 tree hash of the final assembled archive as computed by Amazon S3 Glacier (Glacier), Glacier returns an error and the request fails.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-amz-sha256-tree-hash")
+    public String xAmzSha256TreeHash;
+    public CompleteMultipartUploadRequest withXAmzSha256TreeHash(String xAmzSha256TreeHash) {
+        this.xAmzSha256TreeHash = xAmzSha256TreeHash;
         return this;
     }
     

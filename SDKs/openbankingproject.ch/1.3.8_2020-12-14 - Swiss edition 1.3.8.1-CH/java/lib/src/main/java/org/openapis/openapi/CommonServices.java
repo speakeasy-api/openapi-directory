@@ -50,18 +50,19 @@ public class CommonServices {
      * Nevertheless, single transactions might be cancelled on an individual basis on the XS2A interface.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteSigningBasketResponse deleteSigningBasket(org.openapis.openapi.models.operations.DeleteSigningBasketRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteSigningBasketResponse deleteSigningBasket(org.openapis.openapi.models.operations.DeleteSigningBasketRequest request, org.openapis.openapi.models.operations.DeleteSigningBasketSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSigningBasketPathParams.class, baseUrl, "/v1/signing-baskets/{basketId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSigningBasketRequest.class, baseUrl, "/v1/signing-baskets/{basketId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -70,7 +71,7 @@ public class CommonServices {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -191,18 +192,19 @@ public class CommonServices {
      * This method returns the SCA status of a consent initiation's authorisation sub-resource.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetConsentScaStatusResponse getConsentScaStatus(org.openapis.openapi.models.operations.GetConsentScaStatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetConsentScaStatusResponse getConsentScaStatus(org.openapis.openapi.models.operations.GetConsentScaStatusRequest request, org.openapis.openapi.models.operations.GetConsentScaStatusSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConsentScaStatusPathParams.class, baseUrl, "/v1/consents/{consentId}/authorisations/{authorisationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConsentScaStatusRequest.class, baseUrl, "/v1/consents/{consentId}/authorisations/{authorisationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -211,7 +213,7 @@ public class CommonServices {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -374,18 +376,19 @@ public class CommonServices {
      * This method returns the SCA status of a payment initiation's authorisation sub-resource.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPaymentCancellationScaStatusResponse getPaymentCancellationScaStatus(org.openapis.openapi.models.operations.GetPaymentCancellationScaStatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPaymentCancellationScaStatusResponse getPaymentCancellationScaStatus(org.openapis.openapi.models.operations.GetPaymentCancellationScaStatusRequest request, org.openapis.openapi.models.operations.GetPaymentCancellationScaStatusSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentCancellationScaStatusPathParams.class, baseUrl, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations/{authorisationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentCancellationScaStatusRequest.class, baseUrl, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations/{authorisationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -394,7 +397,7 @@ public class CommonServices {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -527,18 +530,19 @@ public class CommonServices {
      * This function returns an array of hyperlinks to all generated authorisation sub-resources.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPaymentInitiationAuthorisationResponse getPaymentInitiationAuthorisation(org.openapis.openapi.models.operations.GetPaymentInitiationAuthorisationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPaymentInitiationAuthorisationResponse getPaymentInitiationAuthorisation(org.openapis.openapi.models.operations.GetPaymentInitiationAuthorisationRequest request, org.openapis.openapi.models.operations.GetPaymentInitiationAuthorisationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentInitiationAuthorisationPathParams.class, baseUrl, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentInitiationAuthorisationRequest.class, baseUrl, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -547,7 +551,7 @@ public class CommonServices {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -678,18 +682,19 @@ public class CommonServices {
      * This method returns the SCA status of a payment initiation's authorisation sub-resource.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPaymentInitiationScaStatusResponse getPaymentInitiationScaStatus(org.openapis.openapi.models.operations.GetPaymentInitiationScaStatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPaymentInitiationScaStatusResponse getPaymentInitiationScaStatus(org.openapis.openapi.models.operations.GetPaymentInitiationScaStatusRequest request, org.openapis.openapi.models.operations.GetPaymentInitiationScaStatusSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentInitiationScaStatusPathParams.class, baseUrl, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations/{authorisationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentInitiationScaStatusRequest.class, baseUrl, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations/{authorisationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -698,7 +703,7 @@ public class CommonServices {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -831,18 +836,19 @@ public class CommonServices {
      * This function returns an array of hyperlinks to all generated authorisation sub-resources.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSigningBasketAuthorisationResponse getSigningBasketAuthorisation(org.openapis.openapi.models.operations.GetSigningBasketAuthorisationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSigningBasketAuthorisationResponse getSigningBasketAuthorisation(org.openapis.openapi.models.operations.GetSigningBasketAuthorisationRequest request, org.openapis.openapi.models.operations.GetSigningBasketAuthorisationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSigningBasketAuthorisationPathParams.class, baseUrl, "/v1/signing-baskets/{basketId}/authorisations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSigningBasketAuthorisationRequest.class, baseUrl, "/v1/signing-baskets/{basketId}/authorisations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -851,7 +857,7 @@ public class CommonServices {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -982,18 +988,19 @@ public class CommonServices {
      * This method returns the SCA status of a signing basket's authorisation sub-resource.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSigningBasketScaStatusResponse getSigningBasketScaStatus(org.openapis.openapi.models.operations.GetSigningBasketScaStatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSigningBasketScaStatusResponse getSigningBasketScaStatus(org.openapis.openapi.models.operations.GetSigningBasketScaStatusRequest request, org.openapis.openapi.models.operations.GetSigningBasketScaStatusSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSigningBasketScaStatusPathParams.class, baseUrl, "/v1/signing-baskets/{basketId}/authorisations/{authorisationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSigningBasketScaStatusRequest.class, baseUrl, "/v1/signing-baskets/{basketId}/authorisations/{authorisationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1002,7 +1009,7 @@ public class CommonServices {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1133,18 +1140,19 @@ public class CommonServices {
      * Returns the status of a signing basket object.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSigningBasketStatusResponse getSigningBasketStatus(org.openapis.openapi.models.operations.GetSigningBasketStatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSigningBasketStatusResponse getSigningBasketStatus(org.openapis.openapi.models.operations.GetSigningBasketStatusRequest request, org.openapis.openapi.models.operations.GetSigningBasketStatusSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSigningBasketStatusPathParams.class, baseUrl, "/v1/signing-baskets/{basketId}/status", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSigningBasketStatusRequest.class, baseUrl, "/v1/signing-baskets/{basketId}/status", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1153,7 +1161,7 @@ public class CommonServices {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1315,20 +1323,21 @@ public class CommonServices {
      *   * The signing basket needs to be authorised yet.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StartConsentAuthorisationResponse startConsentAuthorisation(org.openapis.openapi.models.operations.StartConsentAuthorisationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StartConsentAuthorisationResponse startConsentAuthorisation(org.openapis.openapi.models.operations.StartConsentAuthorisationRequest request, org.openapis.openapi.models.operations.StartConsentAuthorisationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StartConsentAuthorisationPathParams.class, baseUrl, "/v1/consents/{consentId}/authorisations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StartConsentAuthorisationRequest.class, baseUrl, "/v1/consents/{consentId}/authorisations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1337,7 +1346,7 @@ public class CommonServices {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1532,20 +1541,21 @@ public class CommonServices {
      *   * The signing basket needs to be authorised yet.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StartPaymentAuthorisationResponse startPaymentAuthorisation(org.openapis.openapi.models.operations.StartPaymentAuthorisationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StartPaymentAuthorisationResponse startPaymentAuthorisation(org.openapis.openapi.models.operations.StartPaymentAuthorisationRequest request, org.openapis.openapi.models.operations.StartPaymentAuthorisationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StartPaymentAuthorisationPathParams.class, baseUrl, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StartPaymentAuthorisationRequest.class, baseUrl, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1554,7 +1564,7 @@ public class CommonServices {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1716,20 +1726,21 @@ public class CommonServices {
      *   * The signing basket needs to be authorised yet.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StartPaymentInitiationCancellationAuthorisationResponse startPaymentInitiationCancellationAuthorisation(org.openapis.openapi.models.operations.StartPaymentInitiationCancellationAuthorisationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StartPaymentInitiationCancellationAuthorisationResponse startPaymentInitiationCancellationAuthorisation(org.openapis.openapi.models.operations.StartPaymentInitiationCancellationAuthorisationRequest request, org.openapis.openapi.models.operations.StartPaymentInitiationCancellationAuthorisationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StartPaymentInitiationCancellationAuthorisationPathParams.class, baseUrl, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StartPaymentInitiationCancellationAuthorisationRequest.class, baseUrl, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1738,7 +1749,7 @@ public class CommonServices {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1901,20 +1912,21 @@ public class CommonServices {
      *   * The signing basket needs to be authorised yet.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StartSigningBasketAuthorisationResponse startSigningBasketAuthorisation(org.openapis.openapi.models.operations.StartSigningBasketAuthorisationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StartSigningBasketAuthorisationResponse startSigningBasketAuthorisation(org.openapis.openapi.models.operations.StartSigningBasketAuthorisationRequest request, org.openapis.openapi.models.operations.StartSigningBasketAuthorisationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StartSigningBasketAuthorisationPathParams.class, baseUrl, "/v1/signing-baskets/{basketId}/authorisations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StartSigningBasketAuthorisationRequest.class, baseUrl, "/v1/signing-baskets/{basketId}/authorisations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1923,7 +1935,7 @@ public class CommonServices {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2091,20 +2103,21 @@ public class CommonServices {
      *     Maybe in a later version the access path will change.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateConsentsPsuDataResponse updateConsentsPsuData(org.openapis.openapi.models.operations.UpdateConsentsPsuDataRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateConsentsPsuDataResponse updateConsentsPsuData(org.openapis.openapi.models.operations.UpdateConsentsPsuDataRequest request, org.openapis.openapi.models.operations.UpdateConsentsPsuDataSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateConsentsPsuDataPathParams.class, baseUrl, "/v1/consents/{consentId}/authorisations/{authorisationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateConsentsPsuDataRequest.class, baseUrl, "/v1/consents/{consentId}/authorisations/{authorisationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2113,7 +2126,7 @@ public class CommonServices {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2313,20 +2326,21 @@ public class CommonServices {
      *     Maybe in a later version the access path will change.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdatePaymentCancellationPsuDataResponse updatePaymentCancellationPsuData(org.openapis.openapi.models.operations.UpdatePaymentCancellationPsuDataRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdatePaymentCancellationPsuDataResponse updatePaymentCancellationPsuData(org.openapis.openapi.models.operations.UpdatePaymentCancellationPsuDataRequest request, org.openapis.openapi.models.operations.UpdatePaymentCancellationPsuDataSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePaymentCancellationPsuDataPathParams.class, baseUrl, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations/{authorisationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePaymentCancellationPsuDataRequest.class, baseUrl, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations/{authorisationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2335,7 +2349,7 @@ public class CommonServices {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2503,20 +2517,21 @@ public class CommonServices {
      *     Maybe in a later version the access path will change.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdatePaymentPsuDataResponse updatePaymentPsuData(org.openapis.openapi.models.operations.UpdatePaymentPsuDataRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdatePaymentPsuDataResponse updatePaymentPsuData(org.openapis.openapi.models.operations.UpdatePaymentPsuDataRequest request, org.openapis.openapi.models.operations.UpdatePaymentPsuDataSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePaymentPsuDataPathParams.class, baseUrl, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations/{authorisationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePaymentPsuDataRequest.class, baseUrl, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations/{authorisationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2525,7 +2540,7 @@ public class CommonServices {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2693,20 +2708,21 @@ public class CommonServices {
      *     Maybe in a later version the access path will change.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateSigningBasketPsuDataResponse updateSigningBasketPsuData(org.openapis.openapi.models.operations.UpdateSigningBasketPsuDataRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateSigningBasketPsuDataResponse updateSigningBasketPsuData(org.openapis.openapi.models.operations.UpdateSigningBasketPsuDataRequest request, org.openapis.openapi.models.operations.UpdateSigningBasketPsuDataSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSigningBasketPsuDataPathParams.class, baseUrl, "/v1/signing-baskets/{basketId}/authorisations/{authorisationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSigningBasketPsuDataRequest.class, baseUrl, "/v1/signing-baskets/{basketId}/authorisations/{authorisationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2715,7 +2731,7 @@ public class CommonServices {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

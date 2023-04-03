@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DevicesRegisterUserForDeviceRequest {
-    
-    public DevicesRegisterUserForDevicePathParams pathParams;
-    public DevicesRegisterUserForDeviceRequest withPathParams(DevicesRegisterUserForDevicePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The device info.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public DevicesRegisterUserForDeviceRequestBody request;
-    public DevicesRegisterUserForDeviceRequest withRequest(DevicesRegisterUserForDeviceRequestBody request) {
-        this.request = request;
+    public DevicesRegisterUserForDeviceRequestBody requestBody;
+    public DevicesRegisterUserForDeviceRequest withRequestBody(DevicesRegisterUserForDeviceRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public DevicesRegisterUserForDeviceSecurity security;
-    public DevicesRegisterUserForDeviceRequest withSecurity(DevicesRegisterUserForDeviceSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the user
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public String userId;
+    public DevicesRegisterUserForDeviceRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

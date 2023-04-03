@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateOrganizationBrandingPolicyRequest {
-    
-    public UpdateOrganizationBrandingPolicyPathParams pathParams;
-    public UpdateOrganizationBrandingPolicyRequest withPathParams(UpdateOrganizationBrandingPolicyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateOrganizationBrandingPolicyRequestBody requestBody;
+    public UpdateOrganizationBrandingPolicyRequest withRequestBody(UpdateOrganizationBrandingPolicyRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateOrganizationBrandingPolicyRequestBody request;
-    public UpdateOrganizationBrandingPolicyRequest withRequest(UpdateOrganizationBrandingPolicyRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=brandingPolicyId")
+    public String brandingPolicyId;
+    public UpdateOrganizationBrandingPolicyRequest withBrandingPolicyId(String brandingPolicyId) {
+        this.brandingPolicyId = brandingPolicyId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public UpdateOrganizationBrandingPolicyRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

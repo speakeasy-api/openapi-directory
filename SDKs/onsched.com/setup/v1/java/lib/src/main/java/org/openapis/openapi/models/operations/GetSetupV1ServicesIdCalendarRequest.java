@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSetupV1ServicesIdCalendarRequest {
-    
-    public GetSetupV1ServicesIdCalendarPathParams pathParams;
-    public GetSetupV1ServicesIdCalendarRequest withPathParams(GetSetupV1ServicesIdCalendarPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * id of service object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSetupV1ServicesIdCalendarRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetSetupV1ServicesIdCalendarQueryParams queryParams;
-    public GetSetupV1ServicesIdCalendarRequest withQueryParams(GetSetupV1ServicesIdCalendarQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * id of business location, defaults to primary business location
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locationId")
+    public String locationId;
+    public GetSetupV1ServicesIdCalendarRequest withLocationId(String locationId) {
+        this.locationId = locationId;
         return this;
     }
     

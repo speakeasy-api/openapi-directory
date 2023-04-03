@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAssignPrivateNatGatewayAddressRequest {
-    
-    public GETAssignPrivateNatGatewayAddressQueryParams queryParams;
-    public GETAssignPrivateNatGatewayAddressRequest withQueryParams(GETAssignPrivateNatGatewayAddressQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETAssignPrivateNatGatewayAddressActionEnum action;
+    public GETAssignPrivateNatGatewayAddressRequest withAction(GETAssignPrivateNatGatewayAddressActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETAssignPrivateNatGatewayAddressRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
     
-    public GETAssignPrivateNatGatewayAddressHeaders headers;
-    public GETAssignPrivateNatGatewayAddressRequest withHeaders(GETAssignPrivateNatGatewayAddressHeaders headers) {
-        this.headers = headers;
+    /**
+     * The NAT gateway ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NatGatewayId")
+    public String natGatewayId;
+    public GETAssignPrivateNatGatewayAddressRequest withNatGatewayId(String natGatewayId) {
+        this.natGatewayId = natGatewayId;
+        return this;
+    }
+    
+    /**
+     * The private IPv4 addresses you want to assign to the private NAT gateway.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PrivateIpAddress")
+    public String[] privateIpAddress;
+    public GETAssignPrivateNatGatewayAddressRequest withPrivateIpAddress(String[] privateIpAddress) {
+        this.privateIpAddress = privateIpAddress;
+        return this;
+    }
+    
+    /**
+     * The number of private IP addresses to assign to the NAT gateway. You can't specify this parameter when also specifying private IP addresses.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PrivateIpAddressCount")
+    public Long privateIpAddressCount;
+    public GETAssignPrivateNatGatewayAddressRequest withPrivateIpAddressCount(Long privateIpAddressCount) {
+        this.privateIpAddressCount = privateIpAddressCount;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETAssignPrivateNatGatewayAddressVersionEnum version;
+    public GETAssignPrivateNatGatewayAddressRequest withVersion(GETAssignPrivateNatGatewayAddressVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETAssignPrivateNatGatewayAddressRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETAssignPrivateNatGatewayAddressRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETAssignPrivateNatGatewayAddressRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETAssignPrivateNatGatewayAddressRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETAssignPrivateNatGatewayAddressRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETAssignPrivateNatGatewayAddressRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETAssignPrivateNatGatewayAddressRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

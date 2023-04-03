@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkSwitchSettingsRequest {
-    
-    public UpdateNetworkSwitchSettingsPathParams pathParams;
-    public UpdateNetworkSwitchSettingsRequest withPathParams(UpdateNetworkSwitchSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkSwitchSettingsRequestBody requestBody;
+    public UpdateNetworkSwitchSettingsRequest withRequestBody(UpdateNetworkSwitchSettingsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkSwitchSettingsRequestBody request;
-    public UpdateNetworkSwitchSettingsRequest withRequest(UpdateNetworkSwitchSettingsRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkSwitchSettingsRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

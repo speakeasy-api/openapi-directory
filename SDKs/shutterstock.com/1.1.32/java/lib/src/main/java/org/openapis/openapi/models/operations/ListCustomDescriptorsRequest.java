@@ -4,20 +4,136 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListCustomDescriptorsRequest {
-    
-    public ListCustomDescriptorsQueryParams queryParams;
-    public ListCustomDescriptorsRequest withQueryParams(ListCustomDescriptorsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Show descriptors that contain the specified band (case-sentsitive)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=band_id")
+    public String bandId;
+    public ListCustomDescriptorsRequest withBandId(String bandId) {
+        this.bandId = bandId;
         return this;
     }
     
+    /**
+     * Show descriptors with the specified band name (case-sensitive)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=band_name")
+    public String bandName;
+    public ListCustomDescriptorsRequest withBandName(String bandName) {
+        this.bandName = bandName;
+        return this;
+    }
     
-    public ListCustomDescriptorsSecurity security;
-    public ListCustomDescriptorsRequest withSecurity(ListCustomDescriptorsSecurity security) {
-        this.security = security;
+    /**
+     * Show descriptors with the specified IDs (case-sensitive)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String[] id;
+    public ListCustomDescriptorsRequest withId(String[] id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Show descriptors with the specified instrument ID (case-sensitive)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=instrument_id")
+    public String instrumentId;
+    public ListCustomDescriptorsRequest withInstrumentId(String instrumentId) {
+        this.instrumentId = instrumentId;
+        return this;
+    }
+    
+    /**
+     * Show descriptors with the specified instrument name (case-sensitive)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=instrument_name")
+    public String instrumentName;
+    public ListCustomDescriptorsRequest withInstrumentName(String instrumentName) {
+        this.instrumentName = instrumentName;
+        return this;
+    }
+    
+    /**
+     * Show descriptors with the specified name (case-sensitive)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public ListCustomDescriptorsRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Page number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ListCustomDescriptorsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Number of results per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ListCustomDescriptorsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Show descriptors with an average render speed that is greater than or equal to the specified value
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=render_speed_over")
+    public Double renderSpeedOver;
+    public ListCustomDescriptorsRequest withRenderSpeedOver(Double renderSpeedOver) {
+        this.renderSpeedOver = renderSpeedOver;
+        return this;
+    }
+    
+    /**
+     * Show descriptors with the specified tag, such as Cinematic or Roomy (case-sensitive)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
+    public String tag;
+    public ListCustomDescriptorsRequest withTag(String tag) {
+        this.tag = tag;
+        return this;
+    }
+    
+    /**
+     * Show descriptors whose tempo range includes the specified tempo in beats per minute
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tempo")
+    public Double tempo;
+    public ListCustomDescriptorsRequest withTempo(Double tempo) {
+        this.tempo = tempo;
+        return this;
+    }
+    
+    /**
+     * Show descriptors that have a tempo range that includes the specified tempo in beats per minute
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tempo_from")
+    public Double tempoFrom;
+    public ListCustomDescriptorsRequest withTempoFrom(Double tempoFrom) {
+        this.tempoFrom = tempoFrom;
+        return this;
+    }
+    
+    /**
+     * Show descriptors with a tempo that is less than or equal to the specified number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tempo_to")
+    public Double tempoTo;
+    public ListCustomDescriptorsRequest withTempoTo(Double tempoTo) {
+        this.tempoTo = tempoTo;
         return this;
     }
     

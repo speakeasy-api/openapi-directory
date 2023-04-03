@@ -7,24 +7,86 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListDataQualityRuleRecommendationRunsRequest {
-    
-    public ListDataQualityRuleRecommendationRunsQueryParams queryParams;
-    public ListDataQualityRuleRecommendationRunsRequest withQueryParams(ListDataQualityRuleRecommendationRunsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ListDataQualityRuleRecommendationRunsHeaders headers;
-    public ListDataQualityRuleRecommendationRunsRequest withHeaders(ListDataQualityRuleRecommendationRunsHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ListDataQualityRuleRecommendationRunsRequest request;
-    public ListDataQualityRuleRecommendationRunsRequest withRequest(org.openapis.openapi.models.shared.ListDataQualityRuleRecommendationRunsRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ListDataQualityRuleRecommendationRunsRequest listDataQualityRuleRecommendationRunsRequest;
+    public ListDataQualityRuleRecommendationRunsRequest withListDataQualityRuleRecommendationRunsRequest(org.openapis.openapi.models.shared.ListDataQualityRuleRecommendationRunsRequest listDataQualityRuleRecommendationRunsRequest) {
+        this.listDataQualityRuleRecommendationRunsRequest = listDataQualityRuleRecommendationRunsRequest;
+        return this;
+    }
+    
+    /**
+     * Pagination limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public String maxResults;
+    public ListDataQualityRuleRecommendationRunsRequest withMaxResults(String maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * Pagination token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public ListDataQualityRuleRecommendationRunsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListDataQualityRuleRecommendationRunsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListDataQualityRuleRecommendationRunsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListDataQualityRuleRecommendationRunsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListDataQualityRuleRecommendationRunsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListDataQualityRuleRecommendationRunsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListDataQualityRuleRecommendationRunsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListDataQualityRuleRecommendationRunsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public ListDataQualityRuleRecommendationRunsXAmzTargetEnum xAmzTarget;
+    public ListDataQualityRuleRecommendationRunsRequest withXAmzTarget(ListDataQualityRuleRecommendationRunsXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
         return this;
     }
     

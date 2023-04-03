@@ -37,19 +37,20 @@ public class Continuous {
     /**
      * Lists history associated with a Check. It can be paginated
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetContinuousCheckResponse getContinuousCheck(org.openapis.openapi.models.operations.GetContinuousCheckRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetContinuousCheckResponse getContinuousCheck(org.openapis.openapi.models.operations.GetContinuousCheckRequest request, org.openapis.openapi.models.operations.GetContinuousCheckSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContinuousCheckPathParams.class, baseUrl, "/v1/continuous-checks/{continuous_check_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContinuousCheckRequest.class, baseUrl, "/v1/continuous-checks/{continuous_check_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -114,24 +115,25 @@ public class Continuous {
     /**
      * Updates a continuous check
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateContinuousCheckResponse updateContinuousCheck(org.openapis.openapi.models.operations.UpdateContinuousCheckRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateContinuousCheckResponse updateContinuousCheck(org.openapis.openapi.models.operations.UpdateContinuousCheckRequest request, org.openapis.openapi.models.operations.UpdateContinuousCheckSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateContinuousCheckPathParams.class, baseUrl, "/v1/continuous-checks/{continuous_check_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateContinuousCheckRequest.class, baseUrl, "/v1/continuous-checks/{continuous_check_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateContinuousCheckInput", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -158,10 +160,11 @@ public class Continuous {
     /**
      * Creates a continuous check that will run background checks recurrently according to the frequency provided.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateContinuousCheckResponse createContinuousCheck(org.openapis.openapi.models.operations.CreateContinuousCheckRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateContinuousCheckResponse createContinuousCheck(org.openapis.openapi.models.shared.CreateContinuousCheckInput request, org.openapis.openapi.models.operations.CreateContinuousCheckSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/continuous-checks");
         
@@ -175,7 +178,7 @@ public class Continuous {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -210,19 +213,20 @@ public class Continuous {
     /**
      * Lists background check logs. It can be paginated - 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetV1ContinuousChecksContinuousCheckIdHistoryResponse getV1ContinuousChecksContinuousCheckIdHistory(org.openapis.openapi.models.operations.GetV1ContinuousChecksContinuousCheckIdHistoryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetV1ContinuousChecksContinuousCheckIdHistoryResponse getV1ContinuousChecksContinuousCheckIdHistory(org.openapis.openapi.models.operations.GetV1ContinuousChecksContinuousCheckIdHistoryRequest request, org.openapis.openapi.models.operations.GetV1ContinuousChecksContinuousCheckIdHistorySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV1ContinuousChecksContinuousCheckIdHistoryPathParams.class, baseUrl, "/v1/continuous-checks/{continuous_check_id}/history", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV1ContinuousChecksContinuousCheckIdHistoryRequest.class, baseUrl, "/v1/continuous-checks/{continuous_check_id}/history", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

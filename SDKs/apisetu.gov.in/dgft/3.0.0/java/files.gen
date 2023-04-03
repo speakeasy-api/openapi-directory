@@ -31,7 +31,6 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/ImporterExporterCodeVerificationAPISecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/ImporterExporterCodeVerificationAPIPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ImporterExporterCodeVerificationAPIRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ImporterExporterCodeVerificationAPI504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ImporterExporterCodeVerificationAPI504ApplicationJSONErrorDescriptionEnum.java
@@ -58,6 +57,4 @@ lib/src/main/java/org/openapis/openapi/models/operations/ImporterExporterCodeVer
 lib/src/main/java/org/openapis/openapi/models/operations/ImporterExporterCodeVerificationAPI200ApplicationJSONDirectors.java
 lib/src/main/java/org/openapis/openapi/models/operations/ImporterExporterCodeVerificationAPI200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/ImporterExporterCodeVerificationAPIResponse.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKey.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeClientID.java
 USAGE.md

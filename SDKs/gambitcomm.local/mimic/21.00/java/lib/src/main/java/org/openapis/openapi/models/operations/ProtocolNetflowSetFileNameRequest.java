@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolNetflowSetFileNameRequest {
+    /**
+     * Agent to set the NETFLOW
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolNetflowSetFileNameRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolNetflowSetFileNamePathParams pathParams;
-    public ProtocolNetflowSetFileNameRequest withPathParams(ProtocolNetflowSetFileNamePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * file name to load config
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileName")
+    public String fileName;
+    public ProtocolNetflowSetFileNameRequest withFileName(String fileName) {
+        this.fileName = fileName;
         return this;
     }
     

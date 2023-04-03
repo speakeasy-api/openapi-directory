@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetProfileQueryParams;
 import org.openapis.openapi.models.operations.GetProfileRequest;
 import org.openapis.openapi.models.operations.GetProfileResponse;
 
@@ -28,11 +27,9 @@ public class Application {
                 .build();
 
             GetProfileRequest req = new GetProfileRequest() {{
-                queryParams = new GetProfileQueryParams() {{
-                    id = "{{your-member-id}}";
-                    service = "{{service-identifier}}";
-                }};
-            }};            
+                id = "{{your-member-id}}";
+                service = "{{service-identifier}}";
+            }}            
 
             GetProfileResponse res = sdk.getProfile(req);
 
@@ -46,7 +43,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

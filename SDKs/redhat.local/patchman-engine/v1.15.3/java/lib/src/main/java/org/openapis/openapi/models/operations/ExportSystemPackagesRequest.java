@@ -4,27 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExportSystemPackagesRequest {
-    
-    public ExportSystemPackagesPathParams pathParams;
-    public ExportSystemPackagesRequest withPathParams(ExportSystemPackagesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[description]")
+    public String filterDescription;
+    public ExportSystemPackagesRequest withFilterDescription(String filterDescription) {
+        this.filterDescription = filterDescription;
         return this;
     }
     
-    
-    public ExportSystemPackagesQueryParams queryParams;
-    public ExportSystemPackagesRequest withQueryParams(ExportSystemPackagesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[evra]")
+    public String filterEvra;
+    public ExportSystemPackagesRequest withFilterEvra(String filterEvra) {
+        this.filterEvra = filterEvra;
         return this;
     }
     
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[name]")
+    public String filterName;
+    public ExportSystemPackagesRequest withFilterName(String filterName) {
+        this.filterName = filterName;
+        return this;
+    }
     
-    public ExportSystemPackagesSecurity security;
-    public ExportSystemPackagesRequest withSecurity(ExportSystemPackagesSecurity security) {
-        this.security = security;
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[summary]")
+    public String filterSummary;
+    public ExportSystemPackagesRequest withFilterSummary(String filterSummary) {
+        this.filterSummary = filterSummary;
+        return this;
+    }
+    
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[updatable]")
+    public Boolean filterUpdatable;
+    public ExportSystemPackagesRequest withFilterUpdatable(Boolean filterUpdatable) {
+        this.filterUpdatable = filterUpdatable;
+        return this;
+    }
+    
+    /**
+     * Inventory ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=inventory_id")
+    public String inventoryId;
+    public ExportSystemPackagesRequest withInventoryId(String inventoryId) {
+        this.inventoryId = inventoryId;
+        return this;
+    }
+    
+    /**
+     * Find matching text
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public ExportSystemPackagesRequest withSearch(String search) {
+        this.search = search;
         return this;
     }
     

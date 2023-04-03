@@ -7,24 +7,60 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryCreateApiSpecRequest {
-    
-    public RegistryCreateApiSpecPathParams pathParams;
-    public RegistryCreateApiSpecRequest withPathParams(RegistryCreateApiSpecPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RegistryCreateApiSpecQueryParams queryParams;
-    public RegistryCreateApiSpecRequest withQueryParams(RegistryCreateApiSpecQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ApiSpecInput request;
-    public RegistryCreateApiSpecRequest withRequest(org.openapis.openapi.models.shared.ApiSpecInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ApiSpecInput apiSpecInput;
+    public RegistryCreateApiSpecRequest withApiSpecInput(org.openapis.openapi.models.shared.ApiSpecInput apiSpecInput) {
+        this.apiSpecInput = apiSpecInput;
+        return this;
+    }
+    
+    /**
+     * The api id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api")
+    public String api;
+    public RegistryCreateApiSpecRequest withApi(String api) {
+        this.api = api;
+        return this;
+    }
+    
+    /**
+     * Required. The ID to use for the spec, which will become the final component of the spec's resource name. This value should be 4-63 characters, and valid characters are /[a-z][0-9]-/. Following AIP-162, IDs must not have the form of a UUID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=apiSpecId")
+    public String apiSpecId;
+    public RegistryCreateApiSpecRequest withApiSpecId(String apiSpecId) {
+        this.apiSpecId = apiSpecId;
+        return this;
+    }
+    
+    /**
+     * The location id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
+    public String location;
+    public RegistryCreateApiSpecRequest withLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public RegistryCreateApiSpecRequest withProject(String project) {
+        this.project = project;
+        return this;
+    }
+    
+    /**
+     * The version id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public String version;
+    public RegistryCreateApiSpecRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

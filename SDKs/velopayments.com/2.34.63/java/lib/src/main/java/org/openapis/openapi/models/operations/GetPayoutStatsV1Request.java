@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPayoutStatsV1Request {
-    
-    public GetPayoutStatsV1QueryParams queryParams;
-    public GetPayoutStatsV1Request withQueryParams(GetPayoutStatsV1QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The account owner Payor ID. Required for external users.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=payorId")
+    public String payorId;
+    public GetPayoutStatsV1Request withPayorId(String payorId) {
+        this.payorId = payorId;
         return this;
     }
     

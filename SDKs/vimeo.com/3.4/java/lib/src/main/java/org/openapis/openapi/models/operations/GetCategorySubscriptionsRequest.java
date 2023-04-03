@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCategorySubscriptionsRequest {
-    
-    public GetCategorySubscriptionsPathParams pathParams;
-    public GetCategorySubscriptionsRequest withPathParams(GetCategorySubscriptionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The sort direction of the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public GetCategorySubscriptionsDirectionEnum direction;
+    public GetCategorySubscriptionsRequest withDirection(GetCategorySubscriptionsDirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
-    
-    public GetCategorySubscriptionsQueryParams queryParams;
-    public GetCategorySubscriptionsRequest withQueryParams(GetCategorySubscriptionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetCategorySubscriptionsRequest withPage(Double page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetCategorySubscriptionsRequest withPerPage(Double perPage) {
+        this.perPage = perPage;
+        return this;
+    }
     
-    public GetCategorySubscriptionsSecurity security;
-    public GetCategorySubscriptionsRequest withSecurity(GetCategorySubscriptionsSecurity security) {
-        this.security = security;
+    /**
+     * The way to sort the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetCategorySubscriptionsSortEnum sort;
+    public GetCategorySubscriptionsRequest withSort(GetCategorySubscriptionsSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public GetCategorySubscriptionsRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

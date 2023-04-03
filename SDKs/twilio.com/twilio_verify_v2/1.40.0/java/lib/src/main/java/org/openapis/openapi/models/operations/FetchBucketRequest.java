@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchBucketRequest {
-    
-    public FetchBucketPathParams pathParams;
-    public FetchBucketRequest withPathParams(FetchBucketPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The Twilio-provided string that uniquely identifies the Rate Limit resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=RateLimitSid")
+    public String rateLimitSid;
+    public FetchBucketRequest withRateLimitSid(String rateLimitSid) {
+        this.rateLimitSid = rateLimitSid;
         return this;
     }
     
-    
-    public FetchBucketSecurity security;
-    public FetchBucketRequest withSecurity(FetchBucketSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the [Service](https://www.twilio.com/docs/verify/api/service) the resource is associated with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public FetchBucketRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public FetchBucketRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * A 34 character string that uniquely identifies this Bucket.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchBucketRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

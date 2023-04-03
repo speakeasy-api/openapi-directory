@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGroupMembersRequest {
-    
-    public GetGroupMembersPathParams pathParams;
-    public GetGroupMembersRequest withPathParams(GetGroupMembersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The sort direction of the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public GetGroupMembersDirectionEnum direction;
+    public GetGroupMembersRequest withDirection(GetGroupMembersDirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
+    /**
+     * The attribute by which to filter the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public GetGroupMembersFilterEnum filter;
+    public GetGroupMembersRequest withFilter(GetGroupMembersFilterEnum filter) {
+        this.filter = filter;
+        return this;
+    }
     
-    public GetGroupMembersQueryParams queryParams;
-    public GetGroupMembersRequest withQueryParams(GetGroupMembersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The ID of the group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public Double groupId;
+    public GetGroupMembersRequest withGroupId(Double groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetGroupMembersRequest withPage(Double page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetGroupMembersRequest withPerPage(Double perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The search query to use to filter the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public GetGroupMembersRequest withQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    
+    /**
+     * The way to sort the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetGroupMembersSortEnum sort;
+    public GetGroupMembersRequest withSort(GetGroupMembersSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DELETETestHarnessScenarioUsingDELETERequest {
+    /**
+     * apiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public DELETETestHarnessScenarioUsingDELETERequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public DELETETestHarnessScenarioUsingDELETEPathParams pathParams;
-    public DELETETestHarnessScenarioUsingDELETERequest withPathParams(DELETETestHarnessScenarioUsingDELETEPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * scenarioName
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scenarioName")
+    public String scenarioName;
+    public DELETETestHarnessScenarioUsingDELETERequest withScenarioName(String scenarioName) {
+        this.scenarioName = scenarioName;
         return this;
     }
     

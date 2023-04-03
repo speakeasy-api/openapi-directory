@@ -52,7 +52,7 @@ public class Downloads {
      */
     public org.openapis.openapi.models.operations.DownloadAvatarResponse downloadAvatar(org.openapis.openapi.models.operations.DownloadAvatarRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadAvatarPathParams.class, baseUrl, "/v4/downloads/avatar/{user_id}/{uuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadAvatarRequest.class, baseUrl, "/v4/downloads/avatar/{user_id}/{uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -109,19 +109,19 @@ public class Downloads {
      */
     public org.openapis.openapi.models.operations.DownloadFileViaTokenResponse downloadFileViaToken(org.openapis.openapi.models.operations.DownloadFileViaTokenRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadFileViaTokenPathParams.class, baseUrl, "/v4/downloads/{token}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadFileViaTokenRequest.class, baseUrl, "/v4/downloads/{token}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DownloadFileViaTokenQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DownloadFileViaTokenRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -175,19 +175,19 @@ public class Downloads {
      */
     public org.openapis.openapi.models.operations.DownloadFileViaToken1Response downloadFileViaToken1(org.openapis.openapi.models.operations.DownloadFileViaToken1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadFileViaToken1PathParams.class, baseUrl, "/v4/downloads/{token}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadFileViaToken1Request.class, baseUrl, "/v4/downloads/{token}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("HEAD");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DownloadFileViaToken1QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DownloadFileViaToken1Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -240,7 +240,7 @@ public class Downloads {
      */
     public org.openapis.openapi.models.operations.DownloadZipArchiveViaTokenResponse downloadZipArchiveViaToken(org.openapis.openapi.models.operations.DownloadZipArchiveViaTokenRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadZipArchiveViaTokenPathParams.class, baseUrl, "/v4/downloads/zip/{token}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadZipArchiveViaTokenRequest.class, baseUrl, "/v4/downloads/zip/{token}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

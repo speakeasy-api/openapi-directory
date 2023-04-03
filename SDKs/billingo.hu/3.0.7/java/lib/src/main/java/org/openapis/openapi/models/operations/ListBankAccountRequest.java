@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListBankAccountRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ListBankAccountRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public ListBankAccountQueryParams queryParams;
-    public ListBankAccountRequest withQueryParams(ListBankAccountQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ListBankAccountRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
         return this;
     }
     

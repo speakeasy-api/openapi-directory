@@ -4,27 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListJobsByStatusRequest {
-    
-    public ListJobsByStatusPathParams pathParams;
-    public ListJobsByStatusRequest withPathParams(ListJobsByStatusPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     *  To list jobs in chronological order by the date and time that they were submitted, enter &lt;code&gt;true&lt;/code&gt;. To list jobs in reverse chronological order, enter &lt;code&gt;false&lt;/code&gt;. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Ascending")
+    public String ascending;
+    public ListJobsByStatusRequest withAscending(String ascending) {
+        this.ascending = ascending;
         return this;
     }
     
-    
-    public ListJobsByStatusQueryParams queryParams;
-    public ListJobsByStatusRequest withQueryParams(ListJobsByStatusQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     *  When Elastic Transcoder returns more than one page of results, use &lt;code&gt;pageToken&lt;/code&gt; in subsequent &lt;code&gt;GET&lt;/code&gt; requests to get each successive page of results. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListJobsByStatusRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     
+    /**
+     * To get information about all of the jobs associated with the current AWS account that have a given status, specify the following status: &lt;code&gt;Submitted&lt;/code&gt;, &lt;code&gt;Progressing&lt;/code&gt;, &lt;code&gt;Complete&lt;/code&gt;, &lt;code&gt;Canceled&lt;/code&gt;, or &lt;code&gt;Error&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Status")
+    public String status;
+    public ListJobsByStatusRequest withStatus(String status) {
+        this.status = status;
+        return this;
+    }
     
-    public ListJobsByStatusHeaders headers;
-    public ListJobsByStatusRequest withHeaders(ListJobsByStatusHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListJobsByStatusRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListJobsByStatusRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListJobsByStatusRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListJobsByStatusRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListJobsByStatusRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListJobsByStatusRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListJobsByStatusRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

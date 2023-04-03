@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsDeleteForIssueRequest {
+    /**
+     * The number that identifies the issue.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=issue_number")
+    public Long issueNumber;
+    public ReactionsDeleteForIssueRequest withIssueNumber(Long issueNumber) {
+        this.issueNumber = issueNumber;
+        return this;
+    }
     
-    public ReactionsDeleteForIssuePathParams pathParams;
-    public ReactionsDeleteForIssueRequest withPathParams(ReactionsDeleteForIssuePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReactionsDeleteForIssueRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the reaction.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reaction_id")
+    public Long reactionId;
+    public ReactionsDeleteForIssueRequest withReactionId(Long reactionId) {
+        this.reactionId = reactionId;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReactionsDeleteForIssueRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

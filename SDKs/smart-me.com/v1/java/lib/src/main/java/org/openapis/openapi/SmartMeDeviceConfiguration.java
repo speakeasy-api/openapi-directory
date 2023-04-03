@@ -38,7 +38,7 @@ public class SmartMeDeviceConfiguration {
      */
     public org.openapis.openapi.models.operations.SmartMeDeviceConfigurationGetResponse smartMeDeviceConfigurationGet(org.openapis.openapi.models.operations.SmartMeDeviceConfigurationGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SmartMeDeviceConfigurationGetPathParams.class, baseUrl, "/api/SmartMeDeviceConfiguration/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SmartMeDeviceConfigurationGetRequest.class, baseUrl, "/api/SmartMeDeviceConfiguration/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -90,7 +90,7 @@ public class SmartMeDeviceConfiguration {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SmartMeDeviceConfigurationPostFormResponse smartMeDeviceConfigurationPostForm(org.openapis.openapi.models.operations.SmartMeDeviceConfigurationPostFormRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SmartMeDeviceConfigurationPostFormResponse smartMeDeviceConfigurationPostForm(org.openapis.openapi.models.shared.SmartMeDeviceConfigurationContainer request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/SmartMeDeviceConfiguration");
         
@@ -127,7 +127,7 @@ public class SmartMeDeviceConfiguration {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SmartMeDeviceConfigurationPostJsonResponse smartMeDeviceConfigurationPostJson(org.openapis.openapi.models.operations.SmartMeDeviceConfigurationPostJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SmartMeDeviceConfigurationPostJsonResponse smartMeDeviceConfigurationPostJson(org.openapis.openapi.models.shared.SmartMeDeviceConfigurationContainer request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/SmartMeDeviceConfiguration");
         
@@ -164,7 +164,7 @@ public class SmartMeDeviceConfiguration {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SmartMeDeviceConfigurationPostRawResponse smartMeDeviceConfigurationPostRaw(org.openapis.openapi.models.operations.SmartMeDeviceConfigurationPostRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SmartMeDeviceConfigurationPostRawResponse smartMeDeviceConfigurationPostRaw(byte[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/SmartMeDeviceConfiguration");
         

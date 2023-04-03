@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TopicSentimentRequest {
-    
-    public TopicSentimentQueryParams queryParams;
-    public TopicSentimentRequest withQueryParams(TopicSentimentQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.Post[] requestBody;
+    public TopicSentimentRequest withRequestBody(org.openapis.openapi.models.shared.Post[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Post[] request;
-    public TopicSentimentRequest withRequest(org.openapis.openapi.models.shared.Post[] request) {
-        this.request = request;
+    /**
+     * Provide analysis domain for better extraction (optional)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain")
+    public TopicSentimentDomainEnum domain;
+    public TopicSentimentRequest withDomain(TopicSentimentDomainEnum domain) {
+        this.domain = domain;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSDKKeysRequest {
+    /**
+     * The identifier of the Config.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=configId")
+    public String configId;
+    public GetSDKKeysRequest withConfigId(String configId) {
+        this.configId = configId;
+        return this;
+    }
     
-    public GetSDKKeysPathParams pathParams;
-    public GetSDKKeysRequest withPathParams(GetSDKKeysPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The identifier of the Environment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environmentId")
+    public String environmentId;
+    public GetSDKKeysRequest withEnvironmentId(String environmentId) {
+        this.environmentId = environmentId;
         return this;
     }
     

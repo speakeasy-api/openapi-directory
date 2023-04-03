@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGenerateServiceLastAccessedDetailsRequest {
-    
-    public GETGenerateServiceLastAccessedDetailsQueryParams queryParams;
-    public GETGenerateServiceLastAccessedDetailsRequest withQueryParams(GETGenerateServiceLastAccessedDetailsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETGenerateServiceLastAccessedDetailsActionEnum action;
+    public GETGenerateServiceLastAccessedDetailsRequest withAction(GETGenerateServiceLastAccessedDetailsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The ARN of the IAM resource (user, group, role, or managed policy) used to generate information about when the resource was last used in an attempt to access an Amazon Web Services service.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Arn")
+    public String arn;
+    public GETGenerateServiceLastAccessedDetailsRequest withArn(String arn) {
+        this.arn = arn;
+        return this;
+    }
     
-    public GETGenerateServiceLastAccessedDetailsHeaders headers;
-    public GETGenerateServiceLastAccessedDetailsRequest withHeaders(GETGenerateServiceLastAccessedDetailsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The level of detail that you want to generate. You can specify whether you want to generate information about the last attempt to access services or actions. If you specify service-level granularity, this operation generates only service data. If you specify action-level granularity, it generates service and action data. If you don't include this optional parameter, the operation generates service data.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Granularity")
+    public GETGenerateServiceLastAccessedDetailsGranularityEnum granularity;
+    public GETGenerateServiceLastAccessedDetailsRequest withGranularity(GETGenerateServiceLastAccessedDetailsGranularityEnum granularity) {
+        this.granularity = granularity;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETGenerateServiceLastAccessedDetailsVersionEnum version;
+    public GETGenerateServiceLastAccessedDetailsRequest withVersion(GETGenerateServiceLastAccessedDetailsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETGenerateServiceLastAccessedDetailsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETGenerateServiceLastAccessedDetailsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETGenerateServiceLastAccessedDetailsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETGenerateServiceLastAccessedDetailsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETGenerateServiceLastAccessedDetailsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETGenerateServiceLastAccessedDetailsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETGenerateServiceLastAccessedDetailsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DistributionGroupsBulkDeleteAppsRequest {
-    
-    public DistributionGroupsBulkDeleteAppsPathParams pathParams;
-    public DistributionGroupsBulkDeleteAppsRequest withPathParams(DistributionGroupsBulkDeleteAppsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The name of the apps to be deleted from the distribution group. The apps have to be owned by the organization.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public DistributionGroupsBulkDeleteAppsRequestBody request;
-    public DistributionGroupsBulkDeleteAppsRequest withRequest(DistributionGroupsBulkDeleteAppsRequestBody request) {
-        this.request = request;
+    public DistributionGroupsBulkDeleteAppsRequestBody requestBody;
+    public DistributionGroupsBulkDeleteAppsRequest withRequestBody(DistributionGroupsBulkDeleteAppsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the distribution group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=distribution_group_name")
+    public String distributionGroupName;
+    public DistributionGroupsBulkDeleteAppsRequest withDistributionGroupName(String distributionGroupName) {
+        this.distributionGroupName = distributionGroupName;
+        return this;
+    }
     
-    public DistributionGroupsBulkDeleteAppsSecurity security;
-    public DistributionGroupsBulkDeleteAppsRequest withSecurity(DistributionGroupsBulkDeleteAppsSecurity security) {
-        this.security = security;
+    /**
+     * The organization's name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_name")
+    public String orgName;
+    public DistributionGroupsBulkDeleteAppsRequest withOrgName(String orgName) {
+        this.orgName = orgName;
         return this;
     }
     

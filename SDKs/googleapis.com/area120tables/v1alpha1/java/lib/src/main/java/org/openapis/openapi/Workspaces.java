@@ -33,25 +33,26 @@ public class Workspaces {
     /**
      * Gets a workspace. Returns NOT_FOUND if the workspace does not exist.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Area120tablesWorkspacesGetResponse area120tablesWorkspacesGet(org.openapis.openapi.models.operations.Area120tablesWorkspacesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Area120tablesWorkspacesGetResponse area120tablesWorkspacesGet(org.openapis.openapi.models.operations.Area120tablesWorkspacesGetRequest request, org.openapis.openapi.models.operations.Area120tablesWorkspacesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Area120tablesWorkspacesGetPathParams.class, baseUrl, "/v1alpha1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Area120tablesWorkspacesGetRequest.class, baseUrl, "/v1alpha1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Area120tablesWorkspacesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Area120tablesWorkspacesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,10 +79,11 @@ public class Workspaces {
     /**
      * Lists workspaces for the user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Area120tablesWorkspacesListResponse area120tablesWorkspacesList(org.openapis.openapi.models.operations.Area120tablesWorkspacesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Area120tablesWorkspacesListResponse area120tablesWorkspacesList(org.openapis.openapi.models.operations.Area120tablesWorkspacesListRequest request, org.openapis.openapi.models.operations.Area120tablesWorkspacesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1alpha1/workspaces");
         
@@ -89,14 +91,14 @@ public class Workspaces {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Area120tablesWorkspacesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Area120tablesWorkspacesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -48,24 +48,25 @@ public class Roles {
      * **Prerequisites:**&lt;br&gt;
      * * A Pro or a higher plan.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddRoleMembersResponse addRoleMembers(org.openapis.openapi.models.operations.AddRoleMembersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddRoleMembersResponse addRoleMembers(org.openapis.openapi.models.operations.AddRoleMembersRequest request, org.openapis.openapi.models.operations.AddRoleMembersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddRoleMembersPathParams.class, baseUrl, "/roles/{roleId}/members", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddRoleMembersRequest.class, baseUrl, "/roles/{roleId}/members", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -110,10 +111,11 @@ public class Roles {
      *  
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateRoleResponse createRole(org.openapis.openapi.models.operations.CreateRoleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateRoleResponse createRole(org.openapis.openapi.models.operations.CreateRoleApplicationJSON request, org.openapis.openapi.models.operations.CreateRoleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/roles");
         
@@ -124,7 +126,7 @@ public class Roles {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -181,19 +183,20 @@ public class Roles {
      *  
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteRoleResponse deleteRole(org.openapis.openapi.models.operations.DeleteRoleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteRoleResponse deleteRole(org.openapis.openapi.models.operations.DeleteRoleRequest request, org.openapis.openapi.models.operations.DeleteRoleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRolePathParams.class, baseUrl, "/roles/{roleId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRoleRequest.class, baseUrl, "/roles/{roleId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -237,19 +240,20 @@ public class Roles {
      *  
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRoleInformationResponse getRoleInformation(org.openapis.openapi.models.operations.GetRoleInformationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRoleInformationResponse getRoleInformation(org.openapis.openapi.models.operations.GetRoleInformationRequest request, org.openapis.openapi.models.operations.GetRoleInformationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRoleInformationPathParams.class, baseUrl, "/roles/{roleId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRoleInformationRequest.class, baseUrl, "/roles/{roleId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -290,19 +294,20 @@ public class Roles {
      * **Prerequisites:**&lt;br&gt;
      * * A Pro or a higher plan.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RoleMemberDeleteResponse roleMemberDelete(org.openapis.openapi.models.operations.RoleMemberDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RoleMemberDeleteResponse roleMemberDelete(org.openapis.openapi.models.operations.RoleMemberDeleteRequest request, org.openapis.openapi.models.operations.RoleMemberDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RoleMemberDeletePathParams.class, baseUrl, "/roles/{roleId}/members/{memberId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RoleMemberDeleteRequest.class, baseUrl, "/roles/{roleId}/members/{memberId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -329,25 +334,26 @@ public class Roles {
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`&lt;br&gt;**Prerequisites:**&lt;br&gt;
      * * A Pro or a higher plan.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RoleMembersResponse roleMembers(org.openapis.openapi.models.operations.RoleMembersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RoleMembersResponse roleMembers(org.openapis.openapi.models.operations.RoleMembersRequest request, org.openapis.openapi.models.operations.RoleMembersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RoleMembersPathParams.class, baseUrl, "/roles/{roleId}/members", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RoleMembersRequest.class, baseUrl, "/roles/{roleId}/members", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RoleMembersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RoleMembersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -389,11 +395,10 @@ public class Roles {
      * *  Pro or higher plan. 
      * *  For setting the initial role, you must be the Account Owner. 
      * *  For subsequent role management, you must be the Account Owner or user with role management permissions.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RolesResponse roles(org.openapis.openapi.models.operations.RolesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RolesResponse roles() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/roles");
         
@@ -402,7 +407,7 @@ public class Roles {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = this._securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -444,21 +449,22 @@ public class Roles {
      *  
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateRoleResponse updateRole(org.openapis.openapi.models.operations.UpdateRoleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateRoleResponse updateRole(org.openapis.openapi.models.operations.UpdateRoleRequest request, org.openapis.openapi.models.operations.UpdateRoleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateRolePathParams.class, baseUrl, "/roles/{roleId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateRoleRequest.class, baseUrl, "/roles/{roleId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

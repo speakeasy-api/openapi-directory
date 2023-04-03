@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LeaveChannelRequest {
-    
-    public LeaveChannelPathParams pathParams;
-    public LeaveChannelRequest withPathParams(LeaveChannelPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public LeaveChannelSecurity security;
-    public LeaveChannelRequest withSecurity(LeaveChannelSecurity security) {
-        this.security = security;
+    /**
+     * Channel ID: Unique Identifier of a channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelId")
+    public String channelId;
+    public LeaveChannelRequest withChannelId(String channelId) {
+        this.channelId = channelId;
         return this;
     }
     

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FollowUserAlt1Request {
-    
-    public FollowUserAlt1PathParams pathParams;
-    public FollowUserAlt1Request withPathParams(FollowUserAlt1PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FollowUserAlt1Security security;
-    public FollowUserAlt1Request withSecurity(FollowUserAlt1Security security) {
-        this.security = security;
+    /**
+     * The ID of the following user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=follow_user_id")
+    public Double followUserId;
+    public FollowUserAlt1Request withFollowUserId(Double followUserId) {
+        this.followUserId = followUserId;
         return this;
     }
     

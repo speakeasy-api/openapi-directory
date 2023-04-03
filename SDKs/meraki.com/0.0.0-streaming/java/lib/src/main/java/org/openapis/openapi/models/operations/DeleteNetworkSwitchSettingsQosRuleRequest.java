@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteNetworkSwitchSettingsQosRuleRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public DeleteNetworkSwitchSettingsQosRuleRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
     
-    public DeleteNetworkSwitchSettingsQosRulePathParams pathParams;
-    public DeleteNetworkSwitchSettingsQosRuleRequest withPathParams(DeleteNetworkSwitchSettingsQosRulePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=qosRuleId")
+    public String qosRuleId;
+    public DeleteNetworkSwitchSettingsQosRuleRequest withQosRuleId(String qosRuleId) {
+        this.qosRuleId = qosRuleId;
         return this;
     }
     

@@ -33,7 +33,6 @@ settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/DriveactivityActivityQuerySecurityOption1.java
 lib/src/main/java/org/openapis/openapi/models/operations/DriveactivityActivityQuerySecurityOption2.java
 lib/src/main/java/org/openapis/openapi/models/operations/DriveactivityActivityQuerySecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/DriveactivityActivityQueryQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/DriveactivityActivityQueryRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DriveactivityActivityQueryResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/QueryDriveActivityResponse.java
@@ -102,10 +101,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/SystemEventTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/SystemEvent.java
 lib/src/main/java/org/openapis/openapi/models/shared/Impersonation.java
 lib/src/main/java/org/openapis/openapi/models/shared/Action.java
+lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/QueryDriveActivityRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsolidationStrategy.java
-lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2c.java
 USAGE.md

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UnfollowUserRequest {
-    
-    public UnfollowUserPathParams pathParams;
-    public UnfollowUserRequest withPathParams(UnfollowUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the following user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=follow_user_id")
+    public Double followUserId;
+    public UnfollowUserRequest withFollowUserId(Double followUserId) {
+        this.followUserId = followUserId;
         return this;
     }
     
-    
-    public UnfollowUserSecurity security;
-    public UnfollowUserRequest withSecurity(UnfollowUserSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public UnfollowUserRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

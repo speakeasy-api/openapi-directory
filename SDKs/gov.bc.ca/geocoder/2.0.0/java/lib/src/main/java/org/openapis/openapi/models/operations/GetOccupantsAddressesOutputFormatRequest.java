@@ -4,20 +4,338 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOccupantsAddressesOutputFormatRequest {
-    
-    public GetOccupantsAddressesOutputFormatPathParams pathParams;
-    public GetOccupantsAddressesOutputFormatRequest withPathParams(GetOccupantsAddressesOutputFormatPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Occupant name OR Occupant name ** address
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=addressString")
+    public String addressString;
+    public GetOccupantsAddressesOutputFormatRequest withAddressString(String addressString) {
+        this.addressString = addressString;
         return this;
     }
     
+    /**
+     * If true, addressString is expected to contain a partial address that requires completion. Not supported for shp, csv, gml formats.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=autoComplete")
+    public Boolean autoComplete;
+    public GetOccupantsAddressesOutputFormatRequest withAutoComplete(Boolean autoComplete) {
+        this.autoComplete = autoComplete;
+        return this;
+    }
     
-    public GetOccupantsAddressesOutputFormatQueryParams queryParams;
-    public GetOccupantsAddressesOutputFormatRequest withQueryParams(GetOccupantsAddressesOutputFormatQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Example: -126.07929,49.7628,-126.0163,49.7907.  A bounding box (xmin,ymin,xmax,ymax) that limits the search area. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#bbox target="_blank"&gt;bbox&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bbox")
+    public String bbox;
+    public GetOccupantsAddressesOutputFormatRequest withBbox(String bbox) {
+        this.bbox = bbox;
+        return this;
+    }
+    
+    /**
+     * If true, include only basic match and address details in results. Not supported for shp, csv, and gml formats.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=brief")
+    public Boolean brief;
+    public GetOccupantsAddressesOutputFormatRequest withBrief(Boolean brief) {
+        this.brief = brief;
+        return this;
+    }
+    
+    /**
+     * Example: -124.0165926,49.2296251 .  The coordinates of a centre point (x,y) used to define a bounding circle that will limit the search area. This parameter must be specified together with 'maxDistance'. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#centre target='_blank'&gt;centre&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=centre")
+    public String centre;
+    public GetOccupantsAddressesOutputFormatRequest withCentre(String centre) {
+        this.centre = centre;
+        return this;
+    }
+    
+    /**
+     * The official number assigned to a site by an address authority. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#civicNumber target="_blank"&gt;civicNumber&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=civicNumber")
+    public String civicNumber;
+    public GetOccupantsAddressesOutputFormatRequest withCivicNumber(String civicNumber) {
+        this.civicNumber = civicNumber;
+        return this;
+    }
+    
+    /**
+     * A letter or fraction that follows the civic number (e.g., the A in 1039A Bledsoe St). See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#civicNumberSuffix target="_blank"&gt;civicNumberSuffix&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=civicNumberSuffix")
+    public String civicNumberSuffix;
+    public GetOccupantsAddressesOutputFormatRequest withCivicNumberSuffix(String civicNumberSuffix) {
+        this.civicNumberSuffix = civicNumberSuffix;
+        return this;
+    }
+    
+    /**
+     * If true, include unmatched address details such as site name in results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=echo")
+    public Boolean echo;
+    public GetOccupantsAddressesOutputFormatRequest withEcho(Boolean echo) {
+        this.echo = echo;
+        return this;
+    }
+    
+    /**
+     * If true, uses supplied parcelPoint to derive an appropriate accessPoint.           See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#extrapolate target="_blank"&gt;extrapolate&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=extrapolate")
+    public Boolean extrapolate;
+    public GetOccupantsAddressesOutputFormatRequest withExtrapolate(Boolean extrapolate) {
+        this.extrapolate = extrapolate;
+        return this;
+    }
+    
+    /**
+     * accessPoint interpolation method. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#interpolation target="_blank"&gt;interpolation&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interpolation")
+    public GetOccupantsAddressesOutputFormatInterpolationEnum interpolation;
+    public GetOccupantsAddressesOutputFormatRequest withInterpolation(GetOccupantsAddressesOutputFormatInterpolationEnum interpolation) {
+        this.interpolation = interpolation;
+        return this;
+    }
+    
+    /**
+     * A comma separated list of locality names that matched addresses must belong to. For example, setting localities to Nanaimo only returns addresses in Nanaimo
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=localities")
+    public String localities;
+    public GetOccupantsAddressesOutputFormatRequest withLocalities(String localities) {
+        this.localities = localities;
+        return this;
+    }
+    
+    /**
+     * The name of the locality assigned to a given site by an address authority. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#streetDirection target="_blank"&gt;streetDirection&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=localityName")
+    public String localityName;
+    public GetOccupantsAddressesOutputFormatRequest withLocalityName(String localityName) {
+        this.localityName = localityName;
+        return this;
+    }
+    
+    /**
+     * Describes the nature of the address location. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#locationDescriptor target="_blank"&gt;locationDescriptor&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locationDescriptor")
+    public GetOccupantsAddressesOutputFormatLocationDescriptorEnum locationDescriptor;
+    public GetOccupantsAddressesOutputFormatRequest withLocationDescriptor(GetOccupantsAddressesOutputFormatLocationDescriptorEnum locationDescriptor) {
+        this.locationDescriptor = locationDescriptor;
+        return this;
+    }
+    
+    /**
+     * Example: street,locality.  A comma separated list of individual match precision levels to include in results. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#matchPrecision target="_blank"&gt;matchPrecision&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=matchPrecision")
+    public String matchPrecision;
+    public GetOccupantsAddressesOutputFormatRequest withMatchPrecision(String matchPrecision) {
+        this.matchPrecision = matchPrecision;
+        return this;
+    }
+    
+    /**
+     * Example: street,locality.  A comma separated list of individual match precision levels to exclude from results. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#matchPrecisionNot target="_blank"&gt;matchPrecisionNot&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=matchPrecisionNot")
+    public String matchPrecisionNot;
+    public GetOccupantsAddressesOutputFormatRequest withMatchPrecisionNot(String matchPrecisionNot) {
+        this.matchPrecisionNot = matchPrecisionNot;
+        return this;
+    }
+    
+    /**
+     * The maximum distance (in metres) to search from the given point.  If not specified, the search distance is unlimited.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxDistance")
+    public Double maxDistance;
+    public GetOccupantsAddressesOutputFormatRequest withMaxDistance(Double maxDistance) {
+        this.maxDistance = maxDistance;
+        return this;
+    }
+    
+    /**
+     * The maximum number of search results to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public GetOccupantsAddressesOutputFormatRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * The minimum score required for a match to be returned. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#minScore target="_blank"&gt;minScore&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minScore")
+    public Long minScore;
+    public GetOccupantsAddressesOutputFormatRequest withMinScore(Long minScore) {
+        this.minScore = minScore;
+        return this;
+    }
+    
+    /**
+     * A comma-separated list of localities to exclude from the search.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=notLocalities")
+    public String notLocalities;
+    public GetOccupantsAddressesOutputFormatRequest withNotLocalities(String notLocalities) {
+        this.notLocalities = notLocalities;
+        return this;
+    }
+    
+    /**
+     * Results format. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank"&gt;outputFormat&lt;/a&gt;. 
+     * 
+     * Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=outputFormat")
+    public GetOccupantsAddressesOutputFormatOutputFormatEnum outputFormat;
+    public GetOccupantsAddressesOutputFormatRequest withOutputFormat(GetOccupantsAddressesOutputFormatOutputFormatEnum outputFormat) {
+        this.outputFormat = outputFormat;
+        return this;
+    }
+    
+    /**
+     * The EPSG code of the spatial reference system (SRS) to use for output geometries. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank"&gt;outputSRS&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputSRS")
+    public GetOccupantsAddressesOutputFormatOutputSrsEnum outputSRS;
+    public GetOccupantsAddressesOutputFormatRequest withOutputSRS(GetOccupantsAddressesOutputFormatOutputSrsEnum outputSRS) {
+        this.outputSRS = outputSRS;
+        return this;
+    }
+    
+    /**
+     * The coordinates of a point (x,y) known to be inside the parcel containing a given address. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#parcelPoint target="_blank"&gt;parcelPoint&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parcelPoint")
+    public String parcelPoint;
+    public GetOccupantsAddressesOutputFormatRequest withParcelPoint(String parcelPoint) {
+        this.parcelPoint = parcelPoint;
+        return this;
+    }
+    
+    /**
+     * The ISO 3166-2 Sub-Country Code. The code for British Columbia is BC.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=provinceCode")
+    public String provinceCode;
+    public GetOccupantsAddressesOutputFormatRequest withProvinceCode(String provinceCode) {
+        this.provinceCode = provinceCode;
+        return this;
+    }
+    
+    /**
+     * The distance to move the accessPoint away from the curb and towards the inside of the parcel (in metres). Ignored if locationDescriptor not set to accessPoint.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=setBack")
+    public Long setBack;
+    public GetOccupantsAddressesOutputFormatRequest withSetBack(Long setBack) {
+        this.setBack = setBack;
+        return this;
+    }
+    
+    /**
+     * A string containing the name of the building, facility, or institution (e.g., Duck Building, Casa Del Mar, Crystal Garden, Bluebird House).See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#siteName target="_blank"&gt;siteName&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=siteName")
+    public String siteName;
+    public GetOccupantsAddressesOutputFormatRequest withSiteName(String siteName) {
+        this.siteName = siteName;
+        return this;
+    }
+    
+    /**
+     * The abbreviated compass direction as defined by Canada Post and B.C. civic addressing authorities. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#streetDirection target="_blank"&gt;streetDirection&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=streetDirection")
+    public GetOccupantsAddressesOutputFormatStreetDirectionEnum streetDirection;
+    public GetOccupantsAddressesOutputFormatRequest withStreetDirection(GetOccupantsAddressesOutputFormatStreetDirectionEnum streetDirection) {
+        this.streetDirection = streetDirection;
+        return this;
+    }
+    
+    /**
+     * The official name of the street as assigned by an address authority (e.g., the Douglas in 1175 Douglas Street). See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#streetName target="_blank"&gt;streetName&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=streetName")
+    public String streetName;
+    public GetOccupantsAddressesOutputFormatRequest withStreetName(String streetName) {
+        this.streetName = streetName;
+        return this;
+    }
+    
+    /**
+     * The qualifier of a street name (e.g., the Bridge in Johnson St Bridge)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=streetQualifier")
+    public String streetQualifier;
+    public GetOccupantsAddressesOutputFormatRequest withStreetQualifier(String streetQualifier) {
+        this.streetQualifier = streetQualifier;
+        return this;
+    }
+    
+    /**
+     * The type of street as assigned by a municipality (e.g., the ST in 1175 DOUGLAS St). See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#streetType target="_blank"&gt;streetType&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=streetType")
+    public String streetType;
+    public GetOccupantsAddressesOutputFormatRequest withStreetType(String streetType) {
+        this.streetType = streetType;
+        return this;
+    }
+    
+    /**
+     * Example: schools;courts;employment&lt;br&gt;A list of tags separated by semicolons.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
+    public String tags;
+    public GetOccupantsAddressesOutputFormatRequest withTags(String tags) {
+        this.tags = tags;
+        return this;
+    }
+    
+    /**
+     * The type of unit within a house or building. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#unitDesignator target="_blank"&gt;unitDesignator&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unitDesignator")
+    public GetOccupantsAddressesOutputFormatUnitDesignatorEnum unitDesignator;
+    public GetOccupantsAddressesOutputFormatRequest withUnitDesignator(GetOccupantsAddressesOutputFormatUnitDesignatorEnum unitDesignator) {
+        this.unitDesignator = unitDesignator;
+        return this;
+    }
+    
+    /**
+     * The number of the unit, suite, or apartment within a house or building.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unitNumber")
+    public String unitNumber;
+    public GetOccupantsAddressesOutputFormatRequest withUnitNumber(String unitNumber) {
+        this.unitNumber = unitNumber;
+        return this;
+    }
+    
+    /**
+     * A letter that follows the unit number as in Unit 1A or Suite 302B.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unitNumberSuffix")
+    public String unitNumberSuffix;
+    public GetOccupantsAddressesOutputFormatRequest withUnitNumberSuffix(String unitNumberSuffix) {
+        this.unitNumberSuffix = unitNumberSuffix;
         return this;
     }
     

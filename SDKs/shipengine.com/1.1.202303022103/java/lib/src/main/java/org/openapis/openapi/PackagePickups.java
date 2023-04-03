@@ -44,7 +44,7 @@ public class PackagePickups {
      */
     public org.openapis.openapi.models.operations.DeleteScheduledPickupResponse deleteScheduledPickup(org.openapis.openapi.models.operations.DeleteScheduledPickupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteScheduledPickupPathParams.class, baseUrl, "/v1/pickups/{pickup_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteScheduledPickupRequest.class, baseUrl, "/v1/pickups/{pickup_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -92,7 +92,7 @@ public class PackagePickups {
      */
     public org.openapis.openapi.models.operations.GetPickupByIdResponse getPickupById(org.openapis.openapi.models.operations.GetPickupByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPickupByIdPathParams.class, baseUrl, "/v1/pickups/{pickup_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPickupByIdRequest.class, baseUrl, "/v1/pickups/{pickup_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -146,7 +146,7 @@ public class PackagePickups {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListScheduledPickupsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListScheduledPickupsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -192,7 +192,7 @@ public class PackagePickups {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SchedulePickupResponse schedulePickup(org.openapis.openapi.models.operations.SchedulePickupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SchedulePickupResponse schedulePickup(org.openapis.openapi.models.shared.SchedulePickupRequestBodyInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/pickups");
         

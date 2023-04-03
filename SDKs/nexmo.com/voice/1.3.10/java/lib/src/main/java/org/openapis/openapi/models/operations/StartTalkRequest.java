@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StartTalkRequest {
-    
-    public StartTalkPathParams pathParams;
-    public StartTalkRequest withPathParams(StartTalkPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Action to perform
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.StartTalkRequest request;
-    public StartTalkRequest withRequest(org.openapis.openapi.models.shared.StartTalkRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.StartTalkRequest startTalkRequest;
+    public StartTalkRequest withStartTalkRequest(org.openapis.openapi.models.shared.StartTalkRequest startTalkRequest) {
+        this.startTalkRequest = startTalkRequest;
         return this;
     }
     
-    
-    public StartTalkSecurity security;
-    public StartTalkRequest withSecurity(StartTalkSecurity security) {
-        this.security = security;
+    /**
+     * UUID of the Call Leg
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=uuid")
+    public String uuid;
+    public StartTalkRequest withUuid(String uuid) {
+        this.uuid = uuid;
         return this;
     }
     

@@ -4,27 +4,67 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PhoneUserVoiceMailsRequest {
-    
-    public PhoneUserVoiceMailsPathParams pathParams;
-    public PhoneUserVoiceMailsRequest withPathParams(PhoneUserVoiceMailsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Start date for the query in 'yyyy-mm-dd' format. The date range defined by the "from" and "to" parameters should only be one month as the response includes only one month worth of voicemail data. The month defined should fall within the last six months.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
+    public LocalDate from;
+    public PhoneUserVoiceMailsRequest withFrom(LocalDate from) {
+        this.from = from;
         return this;
     }
     
-    
-    public PhoneUserVoiceMailsQueryParams queryParams;
-    public PhoneUserVoiceMailsRequest withQueryParams(PhoneUserVoiceMailsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next_page_token")
+    public String nextPageToken;
+    public PhoneUserVoiceMailsRequest withNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
         return this;
     }
     
+    /**
+     * The number of records returned within a single API call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public PhoneUserVoiceMailsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public PhoneUserVoiceMailsSecurity security;
-    public PhoneUserVoiceMailsRequest withSecurity(PhoneUserVoiceMailsSecurity security) {
-        this.security = security;
+    /**
+     * Status of the voice mail
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public PhoneUserVoiceMailsStatusEnum status;
+    public PhoneUserVoiceMailsRequest withStatus(PhoneUserVoiceMailsStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * End date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
+    public LocalDate to;
+    public PhoneUserVoiceMailsRequest withTo(LocalDate to) {
+        this.to = to;
+        return this;
+    }
+    
+    /**
+     * The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public PhoneUserVoiceMailsRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

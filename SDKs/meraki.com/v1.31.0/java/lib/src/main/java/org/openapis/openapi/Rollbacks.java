@@ -40,12 +40,12 @@ public class Rollbacks {
      */
     public org.openapis.openapi.models.operations.CreateNetworkFirmwareUpgradesRollbackResponse createNetworkFirmwareUpgradesRollback(org.openapis.openapi.models.operations.CreateNetworkFirmwareUpgradesRollbackRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkFirmwareUpgradesRollbackPathParams.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/rollbacks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkFirmwareUpgradesRollbackRequest.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/rollbacks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

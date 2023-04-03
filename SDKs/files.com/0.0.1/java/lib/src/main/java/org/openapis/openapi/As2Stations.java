@@ -43,7 +43,7 @@ public class As2Stations {
      */
     public org.openapis.openapi.models.operations.DeleteAs2StationsIdResponse deleteAs2StationsId(org.openapis.openapi.models.operations.DeleteAs2StationsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAs2StationsIdPathParams.class, baseUrl, "/as2_stations/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAs2StationsIdRequest.class, baseUrl, "/as2_stations/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -82,7 +82,7 @@ public class As2Stations {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAs2StationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAs2StationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -123,7 +123,7 @@ public class As2Stations {
      */
     public org.openapis.openapi.models.operations.GetAs2StationsIdResponse getAs2StationsId(org.openapis.openapi.models.operations.GetAs2StationsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAs2StationsIdPathParams.class, baseUrl, "/as2_stations/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAs2StationsIdRequest.class, baseUrl, "/as2_stations/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -164,12 +164,12 @@ public class As2Stations {
      */
     public org.openapis.openapi.models.operations.PatchAs2StationsIdResponse patchAs2StationsId(org.openapis.openapi.models.operations.PatchAs2StationsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchAs2StationsIdPathParams.class, baseUrl, "/as2_stations/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchAs2StationsIdRequest.class, baseUrl, "/as2_stations/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         req.setBody(serializedRequestBody);
         
         
@@ -205,7 +205,7 @@ public class As2Stations {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAs2StationsResponse postAs2Stations(org.openapis.openapi.models.operations.PostAs2StationsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAs2StationsResponse postAs2Stations(org.openapis.openapi.models.operations.PostAs2StationsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/as2_stations");
         

@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPaymentRequest {
-    
-    public GetPaymentPathParams pathParams;
-    public GetPaymentRequest withPathParams(GetPaymentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Transaction Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transaction_id")
+    public String transactionId;
+    public GetPaymentRequest withTransactionId(String transactionId) {
+        this.transactionId = transactionId;
         return this;
     }
     
-    
-    public GetPaymentHeaders headers;
-    public GetPaymentRequest withHeaders(GetPaymentHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetPaymentSecurity security;
-    public GetPaymentRequest withSecurity(GetPaymentSecurity security) {
-        this.security = security;
+    /**
+     * ApiSecretKey
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public GetPaymentRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

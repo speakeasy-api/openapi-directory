@@ -4,20 +4,176 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsDataGetRequest {
-    
-    public AnalyticsDataGetQueryParams queryParams;
-    public AnalyticsDataGetRequest withQueryParams(AnalyticsDataGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AnalyticsDataGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
         return this;
     }
     
+    /**
+     * A comma-separated list of Analytics dimensions. E.g., 'ga:browser,ga:city'.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dimensions")
+    public String dimensions;
+    public AnalyticsDataGetRequest withDimensions(String dimensions) {
+        this.dimensions = dimensions;
+        return this;
+    }
     
-    public AnalyticsDataGetSecurity security;
-    public AnalyticsDataGetRequest withSecurity(AnalyticsDataGetSecurity security) {
-        this.security = security;
+    /**
+     * End date for fetching report data. All requests should specify an end date formatted as YYYY-MM-DD.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end-date")
+    public String endDate;
+    public AnalyticsDataGetRequest withEndDate(String endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AnalyticsDataGetRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * A comma-separated list of dimension or metric filters to be applied to the report data.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filters")
+    public String filters;
+    public AnalyticsDataGetRequest withFilters(String filters) {
+        this.filters = filters;
+        return this;
+    }
+    
+    /**
+     * Unique table ID for retrieving report data. Table ID is of the form ga:XXXX, where XXXX is the Analytics view (profile) ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids")
+    public String ids;
+    public AnalyticsDataGetRequest withIds(String ids) {
+        this.ids = ids;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AnalyticsDataGetRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * The maximum number of entries to include in this feed.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max-results")
+    public Long maxResults;
+    public AnalyticsDataGetRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * A comma-separated list of Analytics metrics. E.g., 'ga:sessions,ga:pageviews'. At least one metric must be specified to retrieve a valid Analytics report.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=metrics")
+    public String metrics;
+    public AnalyticsDataGetRequest withMetrics(String metrics) {
+        this.metrics = metrics;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AnalyticsDataGetRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AnalyticsDataGetRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AnalyticsDataGetRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * An Analytics advanced segment to be applied to the report data.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=segment")
+    public String segment;
+    public AnalyticsDataGetRequest withSegment(String segment) {
+        this.segment = segment;
+        return this;
+    }
+    
+    /**
+     * A comma-separated list of dimensions or metrics that determine the sort order for the report data.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public AnalyticsDataGetRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Start date for fetching report data. All requests should specify a start date formatted as YYYY-MM-DD.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start-date")
+    public String startDate;
+    public AnalyticsDataGetRequest withStartDate(String startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    
+    /**
+     * An index of the first entity to retrieve. Use this parameter as a pagination mechanism along with the max-results parameter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start-index")
+    public Long startIndex;
+    public AnalyticsDataGetRequest withStartIndex(Long startIndex) {
+        this.startIndex = startIndex;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public AnalyticsDataGetRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

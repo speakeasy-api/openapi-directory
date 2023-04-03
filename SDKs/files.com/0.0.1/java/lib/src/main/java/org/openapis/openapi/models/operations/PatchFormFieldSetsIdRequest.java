@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchFormFieldSetsIdRequest {
-    
-    public PatchFormFieldSetsIdPathParams pathParams;
-    public PatchFormFieldSetsIdRequest withPathParams(PatchFormFieldSetsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Form Field Set ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PatchFormFieldSetsIdRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PatchFormFieldSets request;
-    public PatchFormFieldSetsIdRequest withRequest(org.openapis.openapi.models.shared.PatchFormFieldSets request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PatchFormFieldSets patchFormFieldSets;
+    public PatchFormFieldSetsIdRequest withPatchFormFieldSets(org.openapis.openapi.models.shared.PatchFormFieldSets patchFormFieldSets) {
+        this.patchFormFieldSets = patchFormFieldSets;
         return this;
     }
     

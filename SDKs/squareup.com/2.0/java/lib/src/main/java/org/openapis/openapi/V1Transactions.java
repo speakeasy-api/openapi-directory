@@ -46,24 +46,25 @@ public class V1Transactions {
      * purposes, you can create fake cash payments in Square Point of Sale and
      * refund them.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateRefundResponse createRefund(org.openapis.openapi.models.operations.CreateRefundRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateRefundResponse createRefund(org.openapis.openapi.models.operations.CreateRefundRequest request, org.openapis.openapi.models.operations.CreateRefundSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateRefundPathParams.class, baseUrl, "/v1/{location_id}/refunds", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateRefundRequest.class, baseUrl, "/v1/{location_id}/refunds", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "v1CreateRefundRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -91,25 +92,26 @@ public class V1Transactions {
      * ListOrders
      * Provides summary information for a merchant's online store orders.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListOrdersResponse listOrders(org.openapis.openapi.models.operations.ListOrdersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListOrdersResponse listOrders(org.openapis.openapi.models.operations.ListOrdersRequest request, org.openapis.openapi.models.operations.ListOrdersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListOrdersPathParams.class, baseUrl, "/v1/{location_id}/orders", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListOrdersRequest.class, baseUrl, "/v1/{location_id}/orders", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListOrdersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListOrdersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -147,25 +149,26 @@ public class V1Transactions {
      * list an offline payment chronologically between online payments that
      * were seen in a previous request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListPaymentsResponse listPayments(org.openapis.openapi.models.operations.ListPaymentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListPaymentsResponse listPayments(org.openapis.openapi.models.operations.ListPaymentsRequest request, org.openapis.openapi.models.operations.ListPaymentsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListPaymentsPathParams.class, baseUrl, "/v1/{location_id}/payments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListPaymentsRequest.class, baseUrl, "/v1/{location_id}/payments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListPaymentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListPaymentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -193,25 +196,26 @@ public class V1Transactions {
      * ListRefunds
      * Provides the details for all refunds initiated by a merchant or any of the merchant's mobile staff during a date range. Date ranges cannot exceed one year in length.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListRefundsResponse listRefunds(org.openapis.openapi.models.operations.ListRefundsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListRefundsResponse listRefunds(org.openapis.openapi.models.operations.ListRefundsRequest request, org.openapis.openapi.models.operations.ListRefundsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListRefundsPathParams.class, baseUrl, "/v1/{location_id}/refunds", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListRefundsRequest.class, baseUrl, "/v1/{location_id}/refunds", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListRefundsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListRefundsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -244,25 +248,26 @@ public class V1Transactions {
      * *Note**: the ListSettlements endpoint does not provide entry
      * information.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListSettlementsResponse listSettlements(org.openapis.openapi.models.operations.ListSettlementsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListSettlementsResponse listSettlements(org.openapis.openapi.models.operations.ListSettlementsRequest request, org.openapis.openapi.models.operations.ListSettlementsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListSettlementsPathParams.class, baseUrl, "/v1/{location_id}/settlements", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListSettlementsRequest.class, baseUrl, "/v1/{location_id}/settlements", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListSettlementsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListSettlementsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -290,19 +295,20 @@ public class V1Transactions {
      * RetrieveOrder
      * Provides comprehensive information for a single online store order, including the order's history.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrieveOrderResponse retrieveOrder(org.openapis.openapi.models.operations.RetrieveOrderRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveOrderResponse retrieveOrder(org.openapis.openapi.models.operations.RetrieveOrderRequest request, org.openapis.openapi.models.operations.RetrieveOrderSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveOrderPathParams.class, baseUrl, "/v1/{location_id}/orders/{order_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveOrderRequest.class, baseUrl, "/v1/{location_id}/orders/{order_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -330,19 +336,20 @@ public class V1Transactions {
      * RetrievePayment
      * Provides comprehensive information for a single payment.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrievePaymentResponse retrievePayment(org.openapis.openapi.models.operations.RetrievePaymentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrievePaymentResponse retrievePayment(org.openapis.openapi.models.operations.RetrievePaymentRequest request, org.openapis.openapi.models.operations.RetrievePaymentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrievePaymentPathParams.class, baseUrl, "/v1/{location_id}/payments/{payment_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrievePaymentRequest.class, baseUrl, "/v1/{location_id}/payments/{payment_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -386,19 +393,20 @@ public class V1Transactions {
      * a bank account within 3 business days, but in exceptional cases it may
      * take longer.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrieveSettlementResponse retrieveSettlement(org.openapis.openapi.models.operations.RetrieveSettlementRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveSettlementResponse retrieveSettlement(org.openapis.openapi.models.operations.RetrieveSettlementRequest request, org.openapis.openapi.models.operations.RetrieveSettlementSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveSettlementPathParams.class, baseUrl, "/v1/{location_id}/settlements/{settlement_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveSettlementRequest.class, baseUrl, "/v1/{location_id}/settlements/{settlement_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -426,24 +434,25 @@ public class V1Transactions {
      * UpdateOrder
      * Updates the details of an online store order. Every update you perform on an order corresponds to one of three actions:
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateOrderResponse updateOrder(org.openapis.openapi.models.operations.UpdateOrderRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateOrderResponse updateOrder(org.openapis.openapi.models.operations.UpdateOrderRequest request, org.openapis.openapi.models.operations.UpdateOrderSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrderPathParams.class, baseUrl, "/v1/{location_id}/orders/{order_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrderRequest.class, baseUrl, "/v1/{location_id}/orders/{order_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "v1UpdateOrderRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -52,7 +52,7 @@ public class Payees {
      */
     public org.openapis.openapi.models.operations.DeletePayeeByIdV3Response deletePayeeByIdV3(org.openapis.openapi.models.operations.DeletePayeeByIdV3Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePayeeByIdV3PathParams.class, baseUrl, "/v3/payees/{payeeId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePayeeByIdV3Request.class, baseUrl, "/v3/payees/{payeeId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -91,7 +91,7 @@ public class Payees {
      */
     public org.openapis.openapi.models.operations.DeletePayeeByIdV4Response deletePayeeByIdV4(org.openapis.openapi.models.operations.DeletePayeeByIdV4Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePayeeByIdV4PathParams.class, baseUrl, "/v4/payees/{payeeId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePayeeByIdV4Request.class, baseUrl, "/v4/payees/{payeeId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -127,13 +127,13 @@ public class Payees {
      */
     public org.openapis.openapi.models.operations.GetPayeeByIdV3Response getPayeeByIdV3(org.openapis.openapi.models.operations.GetPayeeByIdV3Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayeeByIdV3PathParams.class, baseUrl, "/v3/payees/{payeeId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayeeByIdV3Request.class, baseUrl, "/v3/payees/{payeeId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPayeeByIdV3QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPayeeByIdV3Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -175,13 +175,13 @@ public class Payees {
      */
     public org.openapis.openapi.models.operations.GetPayeeByIdV4Response getPayeeByIdV4(org.openapis.openapi.models.operations.GetPayeeByIdV4Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayeeByIdV4PathParams.class, baseUrl, "/v4/payees/{payeeId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayeeByIdV4Request.class, baseUrl, "/v4/payees/{payeeId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPayeeByIdV4QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPayeeByIdV4Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -231,7 +231,7 @@ public class Payees {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListPayeeChangesV3QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListPayeeChangesV3Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -287,7 +287,7 @@ public class Payees {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListPayeeChangesV4QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListPayeeChangesV4Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -337,7 +337,7 @@ public class Payees {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListPayeesV3QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListPayeesV3Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -415,7 +415,7 @@ public class Payees {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListPayeesV4QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListPayeesV4Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -489,12 +489,12 @@ public class Payees {
      */
     public org.openapis.openapi.models.operations.PayeeDetailsUpdateV3Response payeeDetailsUpdateV3(org.openapis.openapi.models.operations.PayeeDetailsUpdateV3Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PayeeDetailsUpdateV3PathParams.class, baseUrl, "/v3/payees/{payeeId}/payeeDetailsUpdate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PayeeDetailsUpdateV3Request.class, baseUrl, "/v3/payees/{payeeId}/payeeDetailsUpdate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updatePayeeDetailsRequestV3Input", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -562,12 +562,12 @@ public class Payees {
      */
     public org.openapis.openapi.models.operations.PayeeDetailsUpdateV4Response payeeDetailsUpdateV4(org.openapis.openapi.models.operations.PayeeDetailsUpdateV4Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PayeeDetailsUpdateV4PathParams.class, baseUrl, "/v4/payees/{payeeId}/payeeDetailsUpdate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PayeeDetailsUpdateV4Request.class, baseUrl, "/v4/payees/{payeeId}/payeeDetailsUpdate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updatePayeeDetailsRequestV4Input", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -635,12 +635,12 @@ public class Payees {
      */
     public org.openapis.openapi.models.operations.PostV3PayeesPayeeIdRemoteIdUpdateResponse postV3PayeesPayeeIdRemoteIdUpdate(org.openapis.openapi.models.operations.PostV3PayeesPayeeIdRemoteIdUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostV3PayeesPayeeIdRemoteIdUpdatePathParams.class, baseUrl, "/v3/payees/{payeeId}/remoteIdUpdate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostV3PayeesPayeeIdRemoteIdUpdateRequest.class, baseUrl, "/v3/payees/{payeeId}/remoteIdUpdate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateRemoteIdRequestV3", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -715,12 +715,12 @@ public class Payees {
      */
     public org.openapis.openapi.models.operations.PostV4PayeesPayeeIdRemoteIdUpdateResponse postV4PayeesPayeeIdRemoteIdUpdate(org.openapis.openapi.models.operations.PostV4PayeesPayeeIdRemoteIdUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostV4PayeesPayeeIdRemoteIdUpdatePathParams.class, baseUrl, "/v4/payees/{payeeId}/remoteIdUpdate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostV4PayeesPayeeIdRemoteIdUpdateRequest.class, baseUrl, "/v4/payees/{payeeId}/remoteIdUpdate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateRemoteIdRequestV4", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

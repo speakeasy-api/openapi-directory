@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AssignCMRequest {
-    
-    public AssignCMPathParams pathParams;
-    public AssignCMRequest withPathParams(AssignCMPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.Cm cm;
+    public AssignCMRequest withCm(org.openapis.openapi.models.shared.Cm cm) {
+        this.cm = cm;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Cm request;
-    public AssignCMRequest withRequest(org.openapis.openapi.models.shared.Cm request) {
-        this.request = request;
+    /**
+     * Project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public AssignCMRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

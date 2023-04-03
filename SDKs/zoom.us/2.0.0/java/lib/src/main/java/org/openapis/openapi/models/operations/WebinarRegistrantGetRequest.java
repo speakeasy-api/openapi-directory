@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WebinarRegistrantGetRequest {
-    
-    public WebinarRegistrantGetPathParams pathParams;
-    public WebinarRegistrantGetRequest withPathParams(WebinarRegistrantGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The meeting occurrence ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=occurrence_id")
+    public String occurrenceId;
+    public WebinarRegistrantGetRequest withOccurrenceId(String occurrenceId) {
+        this.occurrenceId = occurrenceId;
         return this;
     }
     
-    
-    public WebinarRegistrantGetQueryParams queryParams;
-    public WebinarRegistrantGetRequest withQueryParams(WebinarRegistrantGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The registrant ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=registrantId")
+    public String registrantId;
+    public WebinarRegistrantGetRequest withRegistrantId(String registrantId) {
+        this.registrantId = registrantId;
         return this;
     }
     
-    
-    public WebinarRegistrantGetSecurity security;
-    public WebinarRegistrantGetRequest withSecurity(WebinarRegistrantGetSecurity security) {
-        this.security = security;
+    /**
+     * The webinar ID in "**long**" format(represented as int64 data type in JSON). 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webinarId")
+    public Long webinarId;
+    public WebinarRegistrantGetRequest withWebinarId(Long webinarId) {
+        this.webinarId = webinarId;
         return this;
     }
     

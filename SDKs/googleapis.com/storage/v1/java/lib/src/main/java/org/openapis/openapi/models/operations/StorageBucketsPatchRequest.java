@@ -7,31 +7,160 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StorageBucketsPatchRequest {
-    
-    public StorageBucketsPatchPathParams pathParams;
-    public StorageBucketsPatchRequest withPathParams(StorageBucketsPatchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public StorageBucketsPatchQueryParams queryParams;
-    public StorageBucketsPatchRequest withQueryParams(StorageBucketsPatchQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Bucket request;
-    public StorageBucketsPatchRequest withRequest(org.openapis.openapi.models.shared.Bucket request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Bucket bucket1;
+    public StorageBucketsPatchRequest withBucket1(org.openapis.openapi.models.shared.Bucket bucket1) {
+        this.bucket1 = bucket1;
         return this;
     }
     
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public StorageBucketsPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public StorageBucketsPatchSecurity security;
-    public StorageBucketsPatchRequest withSecurity(StorageBucketsPatchSecurity security) {
-        this.security = security;
+    /**
+     * Name of a bucket.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bucket")
+    public String bucketPathParameter;
+    public StorageBucketsPatchRequest withBucketPathParameter(String bucketPathParameter) {
+        this.bucketPathParameter = bucketPathParameter;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public StorageBucketsPatchRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Makes the return of the bucket metadata conditional on whether the bucket's current metageneration matches the given value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifMetagenerationMatch")
+    public String ifMetagenerationMatch;
+    public StorageBucketsPatchRequest withIfMetagenerationMatch(String ifMetagenerationMatch) {
+        this.ifMetagenerationMatch = ifMetagenerationMatch;
+        return this;
+    }
+    
+    /**
+     * Makes the return of the bucket metadata conditional on whether the bucket's current metageneration does not match the given value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifMetagenerationNotMatch")
+    public String ifMetagenerationNotMatch;
+    public StorageBucketsPatchRequest withIfMetagenerationNotMatch(String ifMetagenerationNotMatch) {
+        this.ifMetagenerationNotMatch = ifMetagenerationNotMatch;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public StorageBucketsPatchRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public StorageBucketsPatchRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Apply a predefined set of access controls to this bucket.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=predefinedAcl")
+    public StorageBucketsPatchPredefinedACLEnum predefinedAcl;
+    public StorageBucketsPatchRequest withPredefinedAcl(StorageBucketsPatchPredefinedACLEnum predefinedAcl) {
+        this.predefinedAcl = predefinedAcl;
+        return this;
+    }
+    
+    /**
+     * Apply a predefined set of default object access controls to this bucket.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=predefinedDefaultObjectAcl")
+    public StorageBucketsPatchPredefinedDefaultObjectACLEnum predefinedDefaultObjectAcl;
+    public StorageBucketsPatchRequest withPredefinedDefaultObjectAcl(StorageBucketsPatchPredefinedDefaultObjectACLEnum predefinedDefaultObjectAcl) {
+        this.predefinedDefaultObjectAcl = predefinedDefaultObjectAcl;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public StorageBucketsPatchRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Set of properties to return. Defaults to full.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=projection")
+    public StorageBucketsPatchProjectionEnum projection;
+    public StorageBucketsPatchRequest withProjection(StorageBucketsPatchProjectionEnum projection) {
+        this.projection = projection;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public StorageBucketsPatchRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "media", "multipart", "resumable").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public StorageBucketsPatchRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public StorageBucketsPatchRequest withUserIp(String userIp) {
+        this.userIp = userIp;
+        return this;
+    }
+    
+    /**
+     * The project to be billed for this request. Required for Requester Pays buckets.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userProject")
+    public String userProject;
+    public StorageBucketsPatchRequest withUserProject(String userProject) {
+        this.userProject = userProject;
         return this;
     }
     

@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreatePhoneNumberRequest {
-    
-    public CreatePhoneNumberPathParams pathParams;
-    public CreatePhoneNumberRequest withPathParams(CreatePhoneNumberPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreatePhoneNumberCreatePhoneNumberRequest request;
-    public CreatePhoneNumberRequest withRequest(CreatePhoneNumberCreatePhoneNumberRequest request) {
-        this.request = request;
+    public CreatePhoneNumberCreatePhoneNumberRequest requestBody;
+    public CreatePhoneNumberRequest withRequestBody(CreatePhoneNumberCreatePhoneNumberRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreatePhoneNumberSecurity security;
-    public CreatePhoneNumberRequest withSecurity(CreatePhoneNumberSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreatePhoneNumberRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to create the resource under.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public CreatePhoneNumberRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

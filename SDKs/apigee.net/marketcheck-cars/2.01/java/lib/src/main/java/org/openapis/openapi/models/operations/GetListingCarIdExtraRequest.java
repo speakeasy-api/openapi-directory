@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetListingCarIdExtraRequest {
-    
-    public GetListingCarIdExtraPathParams pathParams;
-    public GetListingCarIdExtraRequest withPathParams(GetListingCarIdExtraPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The API Authentication Key. Mandatory with all API calls.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetListingCarIdExtraRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
-    
-    public GetListingCarIdExtraQueryParams queryParams;
-    public GetListingCarIdExtraRequest withQueryParams(GetListingCarIdExtraQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Listing id to get all the listing attributes
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetListingCarIdExtraRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

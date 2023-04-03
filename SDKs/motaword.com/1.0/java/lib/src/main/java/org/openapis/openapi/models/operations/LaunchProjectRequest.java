@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LaunchProjectRequest {
-    
-    public LaunchProjectPathParams pathParams;
-    public LaunchProjectRequest withPathParams(LaunchProjectPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ProjectPayment projectPayment;
+    public LaunchProjectRequest withProjectPayment(org.openapis.openapi.models.shared.ProjectPayment projectPayment) {
+        this.projectPayment = projectPayment;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ProjectPayment request;
-    public LaunchProjectRequest withRequest(org.openapis.openapi.models.shared.ProjectPayment request) {
-        this.request = request;
+    /**
+     * Project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public LaunchProjectRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

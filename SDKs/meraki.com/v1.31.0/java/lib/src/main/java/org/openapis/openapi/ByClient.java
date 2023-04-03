@@ -41,13 +41,13 @@ public class ByClient {
      */
     public org.openapis.openapi.models.operations.GetNetworkPoliciesByClientResponse getNetworkPoliciesByClient(org.openapis.openapi.models.operations.GetNetworkPoliciesByClientRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkPoliciesByClientPathParams.class, baseUrl, "/networks/{networkId}/policies/byClient", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkPoliciesByClientRequest.class, baseUrl, "/networks/{networkId}/policies/byClient", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkPoliciesByClientQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkPoliciesByClientRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

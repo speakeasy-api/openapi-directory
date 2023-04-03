@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestRoomRescueKeyPairRequest {
-    
-    public RequestRoomRescueKeyPairPathParams pathParams;
-    public RequestRoomRescueKeyPairRequest withPathParams(RequestRoomRescueKeyPairPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestRoomRescueKeyPairRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public RequestRoomRescueKeyPairQueryParams queryParams;
-    public RequestRoomRescueKeyPairRequest withQueryParams(RequestRoomRescueKeyPairQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public RequestRoomRescueKeyPairXSdsDateFormatEnum xSdsDateFormat;
+    public RequestRoomRescueKeyPairRequest withXSdsDateFormat(RequestRoomRescueKeyPairXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
         return this;
     }
     
+    /**
+     * Room ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=room_id")
+    public Long roomId;
+    public RequestRoomRescueKeyPairRequest withRoomId(Long roomId) {
+        this.roomId = roomId;
+        return this;
+    }
     
-    public RequestRoomRescueKeyPairHeaders headers;
-    public RequestRoomRescueKeyPairRequest withHeaders(RequestRoomRescueKeyPairHeaders headers) {
-        this.headers = headers;
+    /**
+     * Version (NEW)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
+    public String version;
+    public RequestRoomRescueKeyPairRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

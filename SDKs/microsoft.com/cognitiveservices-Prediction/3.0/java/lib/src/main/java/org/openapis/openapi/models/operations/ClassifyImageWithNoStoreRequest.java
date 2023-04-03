@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ClassifyImageWithNoStoreRequest {
-    
-    public ClassifyImageWithNoStorePathParams pathParams;
-    public ClassifyImageWithNoStoreRequest withPathParams(ClassifyImageWithNoStorePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ClassifyImageWithNoStoreQueryParams queryParams;
-    public ClassifyImageWithNoStoreRequest withQueryParams(ClassifyImageWithNoStoreQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public ClassifyImageWithNoStoreRequestBody request;
-    public ClassifyImageWithNoStoreRequest withRequest(ClassifyImageWithNoStoreRequestBody request) {
-        this.request = request;
+    public ClassifyImageWithNoStoreRequestBody requestBody;
+    public ClassifyImageWithNoStoreRequest withRequestBody(ClassifyImageWithNoStoreRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Optional. Specifies the name of application using the endpoint.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=application")
+    public String application;
+    public ClassifyImageWithNoStoreRequest withApplication(String application) {
+        this.application = application;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public ClassifyImageWithNoStoreRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    /**
+     * Specifies the name of the model to evaluate against.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=publishedName")
+    public String publishedName;
+    public ClassifyImageWithNoStoreRequest withPublishedName(String publishedName) {
+        this.publishedName = publishedName;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWebhooksIdRequest {
-    
-    public GetWebhooksIdPathParams pathParams;
-    public GetWebhooksIdRequest withPathParams(GetWebhooksIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The `id` of the webhook
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetWebhooksIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -7,45 +7,70 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UploadSessionsFinishRequest {
-    
-    public UploadSessionsFinishPathParams pathParams;
-    public UploadSessionsFinishRequest withPathParams(UploadSessionsFinishPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UploadSessionsFinishQueryParams queryParams;
-    public UploadSessionsFinishRequest withQueryParams(UploadSessionsFinishQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public UploadSessionsFinishHeaders headers;
-    public UploadSessionsFinishRequest withHeaders(UploadSessionsFinishHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public UploadSessionsFinishRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public UploadSessionsFinishRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UploadSessionsFinishSecurity security;
-    public UploadSessionsFinishRequest withSecurity(UploadSessionsFinishSecurity security) {
-        this.security = security;
+    /**
+     * The RFC3230 message digest of the uploaded part. Only required for the Box connector. More information on the Box API docs [here](https://developer.box.com/reference/put-files-upload-sessions-id/#param-digest)
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=digest")
+    public String digest;
+    public UploadSessionsFinishRequest withDigest(String digest) {
+        this.digest = digest;
         return this;
     }
     
+    /**
+     * ID of the record you are acting upon.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UploadSessionsFinishRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public String serverURL;
-    public UploadSessionsFinishRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
+    public Boolean raw;
+    public UploadSessionsFinishRequest withRaw(Boolean raw) {
+        this.raw = raw;
+        return this;
+    }
+    
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public UploadSessionsFinishRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
+        return this;
+    }
+    
+    /**
+     * ID of the consumer which you want to get or push data from
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-consumer-id")
+    public String xApideckConsumerId;
+    public UploadSessionsFinishRequest withXApideckConsumerId(String xApideckConsumerId) {
+        this.xApideckConsumerId = xApideckConsumerId;
+        return this;
+    }
+    
+    /**
+     * Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-service-id")
+    public String xApideckServiceId;
+    public UploadSessionsFinishRequest withXApideckServiceId(String xApideckServiceId) {
+        this.xApideckServiceId = xApideckServiceId;
         return this;
     }
     

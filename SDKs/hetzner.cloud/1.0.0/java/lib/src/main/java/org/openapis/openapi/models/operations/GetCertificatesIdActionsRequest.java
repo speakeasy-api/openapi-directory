@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCertificatesIdActionsRequest {
-    
-    public GetCertificatesIdActionsPathParams pathParams;
-    public GetCertificatesIdActionsRequest withPathParams(GetCertificatesIdActionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the Resource
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetCertificatesIdActionsRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * Can be used multiple times.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetCertificatesIdActionsSortParameterSortEnum sort;
+    public GetCertificatesIdActionsRequest withSort(GetCertificatesIdActionsSortParameterSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
     
-    public GetCertificatesIdActionsQueryParams queryParams;
-    public GetCertificatesIdActionsRequest withQueryParams(GetCertificatesIdActionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Can be used multiple times, the response will contain only Actions with specified statuses
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public GetCertificatesIdActionsStatusParameterStatusEnum status;
+    public GetCertificatesIdActionsRequest withStatus(GetCertificatesIdActionsStatusParameterStatusEnum status) {
+        this.status = status;
         return this;
     }
     

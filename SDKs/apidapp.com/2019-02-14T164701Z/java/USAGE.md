@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.DeleteKeyKeyPathParams;
 import org.openapis.openapi.models.operations.DeleteKeyKeyRequest;
 import org.openapis.openapi.models.operations.DeleteKeyKeyResponse;
 
@@ -15,10 +14,8 @@ public class Application {
                 .build();
 
             DeleteKeyKeyRequest req = new DeleteKeyKeyRequest() {{
-                pathParams = new DeleteKeyKeyPathParams() {{
-                    key = "corrupti";
-                }};
-            }};            
+                key = "corrupti";
+            }}            
 
             DeleteKeyKeyResponse res = sdk.deleteKeyKey(req);
 

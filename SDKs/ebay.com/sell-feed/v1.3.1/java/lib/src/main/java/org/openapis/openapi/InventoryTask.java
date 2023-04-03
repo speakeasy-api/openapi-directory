@@ -34,10 +34,11 @@ public class InventoryTask {
     /**
      * This method creates an inventory-related download task for a specified feed type with optional filter criteria. When using this method, specify the &lt;strong&gt;feedType&lt;/strong&gt;. &lt;br/&gt;&lt;br/&gt;This method returns the location response header containing the &lt;strong&gt;getInventoryTask&lt;/strong&gt; call URI to retrieve the inventory task you just created. The URL includes the eBay-assigned task ID, which you can use to reference the inventory task.&lt;br/&gt;&lt;br/&gt;To retrieve the status of the task, use the &lt;strong&gt;getInventoryTask&lt;/strong&gt; method to retrieve a single task ID or the &lt;strong&gt;getInventoryTasks&lt;/strong&gt; method to retrieve multiple task IDs.&lt;p&gt; &lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; The scope depends on the feed type. An error message results when an unsupported scope or feed type is specified.&lt;/span&gt;&lt;/p&gt;Presently, this method supports Active Inventory Report. The &lt;strong&gt;ActiveInventoryReport&lt;/strong&gt; returns a report that contains price and quantity information for all of the active listings for a specific seller. A seller can use this information to maintain their inventory on eBay.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateInventoryTaskResponse createInventoryTask(org.openapis.openapi.models.operations.CreateInventoryTaskRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateInventoryTaskResponse createInventoryTask(org.openapis.openapi.models.shared.CreateInventoryTaskRequest request, org.openapis.openapi.models.operations.CreateInventoryTaskSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/inventory_task");
         
@@ -51,7 +52,7 @@ public class InventoryTask {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -72,19 +73,20 @@ public class InventoryTask {
     /**
      * This method retrieves the task details and status of the specified inventory-related task. The input is &lt;strong&gt;task_id&lt;/strong&gt;.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetInventoryTaskResponse getInventoryTask(org.openapis.openapi.models.operations.GetInventoryTaskRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetInventoryTaskResponse getInventoryTask(org.openapis.openapi.models.operations.GetInventoryTaskRequest request, org.openapis.openapi.models.operations.GetInventoryTaskSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInventoryTaskPathParams.class, baseUrl, "/inventory_task/{task_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInventoryTaskRequest.class, baseUrl, "/inventory_task/{task_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -113,10 +115,11 @@ public class InventoryTask {
     /**
      * This method searches for multiple tasks of a specific feed type, and includes date filters and pagination.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetInventoryTasksResponse getInventoryTasks(org.openapis.openapi.models.operations.GetInventoryTasksRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetInventoryTasksResponse getInventoryTasks(org.openapis.openapi.models.operations.GetInventoryTasksRequest request, org.openapis.openapi.models.operations.GetInventoryTasksSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/inventory_task");
         
@@ -124,14 +127,14 @@ public class InventoryTask {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetInventoryTasksQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetInventoryTasksRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,27 +4,106 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FileListFromTaskRequest {
-    
-    public FileListFromTaskPathParams pathParams;
-    public FileListFromTaskRequest withPathParams(FileListFromTaskPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Sets an OData $filter clause.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$filter")
+    public String dollarFilter;
+    public FileListFromTaskRequest withDollarFilter(String dollarFilter) {
+        this.dollarFilter = dollarFilter;
         return this;
     }
     
-    
-    public FileListFromTaskQueryParams queryParams;
-    public FileListFromTaskRequest withQueryParams(FileListFromTaskQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Client API Version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public FileListFromTaskRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
+    /**
+     * Caller generated request identity, in the form of a GUID with no decoration such as curly braces e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
+    public String clientRequestId;
+    public FileListFromTaskRequest withClientRequestId(String clientRequestId) {
+        this.clientRequestId = clientRequestId;
+        return this;
+    }
     
-    public FileListFromTaskHeaders headers;
-    public FileListFromTaskRequest withHeaders(FileListFromTaskHeaders headers) {
-        this.headers = headers;
+    /**
+     * The id of the job that contains the task.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
+    public String jobId;
+    public FileListFromTaskRequest withJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    
+    /**
+     * Sets the maximum number of items to return in the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxresults")
+    public Integer maxresults;
+    public FileListFromTaskRequest withMaxresults(Integer maxresults) {
+        this.maxresults = maxresults;
+        return this;
+    }
+    
+    /**
+     * The time the request was issued. If not specified, this header will be automatically populated with the current system clock time.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
+    public String ocpDate;
+    public FileListFromTaskRequest withOcpDate(String ocpDate) {
+        this.ocpDate = ocpDate;
+        return this;
+    }
+    
+    /**
+     * Sets whether to list children of a directory.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=recursive")
+    public Boolean recursive;
+    public FileListFromTaskRequest withRecursive(Boolean recursive) {
+        this.recursive = recursive;
+        return this;
+    }
+    
+    /**
+     * Specifies if the server should return the client-request-id identifier in the response.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
+    public Boolean returnClientRequestId;
+    public FileListFromTaskRequest withReturnClientRequestId(Boolean returnClientRequestId) {
+        this.returnClientRequestId = returnClientRequestId;
+        return this;
+    }
+    
+    /**
+     * The id of the task whose files you want to list.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taskId")
+    public String taskId;
+    public FileListFromTaskRequest withTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    
+    /**
+     * Sets the maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
+    public Integer timeout;
+    public FileListFromTaskRequest withTimeout(Integer timeout) {
+        this.timeout = timeout;
         return this;
     }
     

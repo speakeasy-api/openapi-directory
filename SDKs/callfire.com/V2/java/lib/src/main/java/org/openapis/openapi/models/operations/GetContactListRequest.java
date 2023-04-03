@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContactListRequest {
-    
-    public GetContactListPathParams pathParams;
-    public GetContactListRequest withPathParams(GetContactListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public GetContactListRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     
-    
-    public GetContactListQueryParams queryParams;
-    public GetContactListRequest withQueryParams(GetContactListQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetContactListSecurity security;
-    public GetContactListRequest withSecurity(GetContactListSecurity security) {
-        this.security = security;
+    /**
+     * An id of a contact list to return
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetContactListRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

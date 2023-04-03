@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UploadUserProfilePictureJsonRequest {
-    
-    public UploadUserProfilePictureJsonPathParams pathParams;
-    public UploadUserProfilePictureJsonRequest withPathParams(UploadUserProfilePictureJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ProfilePictureUpload request;
-    public UploadUserProfilePictureJsonRequest withRequest(org.openapis.openapi.models.shared.ProfilePictureUpload request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ProfilePictureUpload profilePictureUpload;
+    public UploadUserProfilePictureJsonRequest withProfilePictureUpload(org.openapis.openapi.models.shared.ProfilePictureUpload profilePictureUpload) {
+        this.profilePictureUpload = profilePictureUpload;
         return this;
     }
     
-    
-    public UploadUserProfilePictureJsonSecurity security;
-    public UploadUserProfilePictureJsonRequest withSecurity(UploadUserProfilePictureJsonSecurity security) {
-        this.security = security;
+    /**
+     * User ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public Long userId;
+    public UploadUserProfilePictureJsonRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

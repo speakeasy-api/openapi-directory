@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutscoresRequest {
-    
-    public PutscoresPathParams pathParams;
-    public PutscoresRequest withPathParams(PutscoresPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutscoresHeaders headers;
-    public PutscoresRequest withHeaders(PutscoresHeaders headers) {
-        this.headers = headers;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public PutscoresRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PutscoresRequest[] request;
-    public PutscoresRequest withRequest(org.openapis.openapi.models.shared.PutscoresRequest[] request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PutscoresRequest[] requestBody;
+    public PutscoresRequest withRequestBody(org.openapis.openapi.models.shared.PutscoresRequest[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Two letter word that identifies the data structure
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=acronym")
+    public String acronym;
+    public PutscoresRequest withAcronym(String acronym) {
+        this.acronym = acronym;
+        return this;
+    }
+    
+    /**
+     * Id of the document
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutscoresRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

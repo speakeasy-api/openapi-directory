@@ -4,13 +4,94 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETVersionIncidentsFormatRequest {
+    /**
+     * &lt;p&gt;Only incidents of specific type&lt;/p&gt;
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=incident_type")
+    public GETVersionIncidentsFormatIncidentTypeEnum incidentType;
+    public GETVersionIncidentsFormatRequest withIncidentType(GETVersionIncidentsFormatIncidentTypeEnum incidentType) {
+        this.incidentType = incidentType;
+        return this;
+    }
     
-    public GETVersionIncidentsFormatQueryParams queryParams;
-    public GETVersionIncidentsFormatRequest withQueryParams(GETVersionIncidentsFormatQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * &lt;p&gt;Start of period&lt;/p&gt;
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=occurred_after")
+    public Integer occurredAfter;
+    public GETVersionIncidentsFormatRequest withOccurredAfter(Integer occurredAfter) {
+        this.occurredAfter = occurredAfter;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;End of period&lt;/p&gt;
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=occurred_before")
+    public Integer occurredBefore;
+    public GETVersionIncidentsFormatRequest withOccurredBefore(Integer occurredBefore) {
+        this.occurredBefore = occurredBefore;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Page of results to fetch.&lt;/p&gt;
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GETVersionIncidentsFormatRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Number of results to return per page.&lt;/p&gt;
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GETVersionIncidentsFormatRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Center of location for proximity search&lt;/p&gt;
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=proximity")
+    public String proximity;
+    public GETVersionIncidentsFormatRequest withProximity(String proximity) {
+        this.proximity = proximity;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Size of the proximity search&lt;/p&gt;
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=proximity_square")
+    public Integer proximitySquare;
+    public GETVersionIncidentsFormatRequest withProximitySquare(Integer proximitySquare) {
+        this.proximitySquare = proximitySquare;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Full text search of incidents&lt;/p&gt;
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public GETVersionIncidentsFormatRequest withQuery(String query) {
+        this.query = query;
         return this;
     }
     

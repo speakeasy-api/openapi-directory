@@ -33,25 +33,26 @@ public class NodeTypes {
     /**
      * Retrieves an aggregated list of node types.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeNodeTypesAggregatedListResponse computeNodeTypesAggregatedList(org.openapis.openapi.models.operations.ComputeNodeTypesAggregatedListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeNodeTypesAggregatedListResponse computeNodeTypesAggregatedList(org.openapis.openapi.models.operations.ComputeNodeTypesAggregatedListRequest request, org.openapis.openapi.models.operations.ComputeNodeTypesAggregatedListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNodeTypesAggregatedListPathParams.class, baseUrl, "/projects/{project}/aggregated/nodeTypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNodeTypesAggregatedListRequest.class, baseUrl, "/projects/{project}/aggregated/nodeTypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNodeTypesAggregatedListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNodeTypesAggregatedListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,25 +79,26 @@ public class NodeTypes {
     /**
      * Returns the specified node type.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeNodeTypesGetResponse computeNodeTypesGet(org.openapis.openapi.models.operations.ComputeNodeTypesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeNodeTypesGetResponse computeNodeTypesGet(org.openapis.openapi.models.operations.ComputeNodeTypesGetRequest request, org.openapis.openapi.models.operations.ComputeNodeTypesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNodeTypesGetPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/nodeTypes/{nodeType}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNodeTypesGetRequest.class, baseUrl, "/projects/{project}/zones/{zone}/nodeTypes/{nodeType}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNodeTypesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNodeTypesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -123,25 +125,26 @@ public class NodeTypes {
     /**
      * Retrieves a list of node types available to the specified project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeNodeTypesListResponse computeNodeTypesList(org.openapis.openapi.models.operations.ComputeNodeTypesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeNodeTypesListResponse computeNodeTypesList(org.openapis.openapi.models.operations.ComputeNodeTypesListRequest request, org.openapis.openapi.models.operations.ComputeNodeTypesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNodeTypesListPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/nodeTypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNodeTypesListRequest.class, baseUrl, "/projects/{project}/zones/{zone}/nodeTypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNodeTypesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNodeTypesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

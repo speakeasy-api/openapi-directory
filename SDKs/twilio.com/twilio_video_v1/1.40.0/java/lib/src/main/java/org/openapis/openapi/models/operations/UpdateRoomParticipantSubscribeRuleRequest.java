@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateRoomParticipantSubscribeRuleRequest {
-    
-    public UpdateRoomParticipantSubscribeRulePathParams pathParams;
-    public UpdateRoomParticipantSubscribeRuleRequest withPathParams(UpdateRoomParticipantSubscribeRulePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Participant resource to update the Subscribe Rules.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ParticipantSid")
+    public String participantSid;
+    public UpdateRoomParticipantSubscribeRuleRequest withParticipantSid(String participantSid) {
+        this.participantSid = participantSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateRoomParticipantSubscribeRuleUpdateRoomParticipantSubscribeRuleRequest request;
-    public UpdateRoomParticipantSubscribeRuleRequest withRequest(UpdateRoomParticipantSubscribeRuleUpdateRoomParticipantSubscribeRuleRequest request) {
-        this.request = request;
+    public UpdateRoomParticipantSubscribeRuleUpdateRoomParticipantSubscribeRuleRequest requestBody;
+    public UpdateRoomParticipantSubscribeRuleRequest withRequestBody(UpdateRoomParticipantSubscribeRuleUpdateRoomParticipantSubscribeRuleRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateRoomParticipantSubscribeRuleSecurity security;
-    public UpdateRoomParticipantSubscribeRuleRequest withSecurity(UpdateRoomParticipantSubscribeRuleSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateRoomParticipantSubscribeRuleRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Room resource where the subscribe rules to update apply.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=RoomSid")
+    public String roomSid;
+    public UpdateRoomParticipantSubscribeRuleRequest withRoomSid(String roomSid) {
+        this.roomSid = roomSid;
         return this;
     }
     

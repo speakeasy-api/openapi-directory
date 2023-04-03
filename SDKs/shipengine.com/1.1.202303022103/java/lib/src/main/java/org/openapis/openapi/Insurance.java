@@ -44,7 +44,7 @@ public class Insurance {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddFundsToInsuranceResponse addFundsToInsurance(org.openapis.openapi.models.operations.AddFundsToInsuranceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddFundsToInsuranceResponse addFundsToInsurance(org.openapis.openapi.models.shared.AddFundsToInsuranceRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/insurance/shipsurance/add_funds");
         
@@ -97,7 +97,7 @@ public class Insurance {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConnectInsurerResponse connectInsurer(org.openapis.openapi.models.operations.ConnectInsurerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ConnectInsurerResponse connectInsurer(org.openapis.openapi.models.shared.ConnectInsurerRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/connections/insurance/shipsurance");
         

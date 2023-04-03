@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.ClientApiAllHeaders;
 import org.openapis.openapi.models.operations.ClientApiAllRequest;
 import org.openapis.openapi.models.operations.ClientApiAllResponse;
 
@@ -15,11 +14,9 @@ public class Application {
                 .build();
 
             ClientApiAllRequest req = new ClientApiAllRequest() {{
-                headers = new ClientApiAllHeaders() {{
-                    xAuthKey = "corrupti";
-                    xAuthSecret = "provident";
-                }};
-            }};            
+                xAuthKey = "corrupti";
+                xAuthSecret = "provident";
+            }}            
 
             ClientApiAllResponse res = sdk.client.clientApiAll(req);
 

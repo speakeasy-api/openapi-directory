@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateOrganizationLoginSecurityRequest {
-    
-    public UpdateOrganizationLoginSecurityPathParams pathParams;
-    public UpdateOrganizationLoginSecurityRequest withPathParams(UpdateOrganizationLoginSecurityPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateOrganizationLoginSecurityRequestBody requestBody;
+    public UpdateOrganizationLoginSecurityRequest withRequestBody(UpdateOrganizationLoginSecurityRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateOrganizationLoginSecurityRequestBody request;
-    public UpdateOrganizationLoginSecurityRequest withRequest(UpdateOrganizationLoginSecurityRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public UpdateOrganizationLoginSecurityRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

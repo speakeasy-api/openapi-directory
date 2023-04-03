@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PackageUserTranslationMemoryForLanguageStatusRequest {
-    
-    public PackageUserTranslationMemoryForLanguageStatusPathParams pathParams;
-    public PackageUserTranslationMemoryForLanguageStatusRequest withPathParams(PackageUserTranslationMemoryForLanguageStatusPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Async operation key
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=async_request_key")
+    public String asyncRequestKey;
+    public PackageUserTranslationMemoryForLanguageStatusRequest withAsyncRequestKey(String asyncRequestKey) {
+        this.asyncRequestKey = asyncRequestKey;
         return this;
     }
     
-    
-    public PackageUserTranslationMemoryForLanguageStatusQueryParams queryParams;
-    public PackageUserTranslationMemoryForLanguageStatusRequest withQueryParams(PackageUserTranslationMemoryForLanguageStatusQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Language Code
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=languageCode")
+    public String languageCode;
+    public PackageUserTranslationMemoryForLanguageStatusRequest withLanguageCode(String languageCode) {
+        this.languageCode = languageCode;
         return this;
     }
     

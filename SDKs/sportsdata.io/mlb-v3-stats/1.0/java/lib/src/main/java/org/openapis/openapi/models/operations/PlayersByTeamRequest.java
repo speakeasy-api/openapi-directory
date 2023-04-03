@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PlayersByTeamRequest {
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public PlayersByTeamFormatEnum format;
+    public PlayersByTeamRequest withFormat(PlayersByTeamFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public PlayersByTeamPathParams pathParams;
-    public PlayersByTeamRequest withPathParams(PlayersByTeamPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The abbreviation of the requested team.
+     * &lt;br&gt;Examples: &lt;code&gt;SF&lt;/code&gt;, &lt;code&gt;NYY&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team")
+    public String team;
+    public PlayersByTeamRequest withTeam(String team) {
+        this.team = team;
         return this;
     }
     

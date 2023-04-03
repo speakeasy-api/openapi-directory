@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchFunctionRequest {
-    
-    public FetchFunctionPathParams pathParams;
-    public FetchFunctionRequest withPathParams(FetchFunctionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Service to fetch the Function resource from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public FetchFunctionRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public FetchFunctionSecurity security;
-    public FetchFunctionRequest withSecurity(FetchFunctionSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchFunctionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Function resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchFunctionRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

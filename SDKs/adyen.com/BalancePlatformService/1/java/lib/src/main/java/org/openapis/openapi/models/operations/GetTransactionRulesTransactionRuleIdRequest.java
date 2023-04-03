@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTransactionRulesTransactionRuleIdRequest {
-    
-    public GetTransactionRulesTransactionRuleIdPathParams pathParams;
-    public GetTransactionRulesTransactionRuleIdRequest withPathParams(GetTransactionRulesTransactionRuleIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetTransactionRulesTransactionRuleIdSecurity security;
-    public GetTransactionRulesTransactionRuleIdRequest withSecurity(GetTransactionRulesTransactionRuleIdSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the transaction rule.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transactionRuleId")
+    public String transactionRuleId;
+    public GetTransactionRulesTransactionRuleIdRequest withTransactionRuleId(String transactionRuleId) {
+        this.transactionRuleId = transactionRuleId;
         return this;
     }
     

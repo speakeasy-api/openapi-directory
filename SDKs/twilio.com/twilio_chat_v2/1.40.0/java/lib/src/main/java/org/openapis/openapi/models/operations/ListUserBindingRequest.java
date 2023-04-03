@@ -4,34 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListUserBindingRequest {
-    
-    public ListUserBindingPathParams pathParams;
-    public ListUserBindingRequest withPathParams(ListUserBindingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The push technology used by the User Binding resources to read. Can be: `apn`, `gcm`, or `fcm`.  See [push notification configuration](https://www.twilio.com/docs/chat/push-notification-configuration) for more info.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=BindingType")
+    public org.openapis.openapi.models.shared.UserBindingEnumBindingTypeEnum[] bindingType;
+    public ListUserBindingRequest withBindingType(org.openapis.openapi.models.shared.UserBindingEnumBindingTypeEnum[] bindingType) {
+        this.bindingType = bindingType;
         return this;
     }
     
-    
-    public ListUserBindingQueryParams queryParams;
-    public ListUserBindingRequest withQueryParams(ListUserBindingQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListUserBindingRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListUserBindingSecurity security;
-    public ListUserBindingRequest withSecurity(ListUserBindingSecurity security) {
-        this.security = security;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListUserBindingRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListUserBindingRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
     
-    public String serverURL;
-    public ListUserBindingRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to read the User Binding resources from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public ListUserBindingRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
+        return this;
+    }
+    
+    /**
+     * The SID of the [User](https://www.twilio.com/docs/chat/rest/user-resource) with the User Binding resources to read.  See [push notification configuration](https://www.twilio.com/docs/chat/push-notification-configuration) for more info.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=UserSid")
+    public String userSid;
+    public ListUserBindingRequest withUserSid(String userSid) {
+        this.userSid = userSid;
         return this;
     }
     

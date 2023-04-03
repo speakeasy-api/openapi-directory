@@ -7,31 +7,140 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DoubleclickbidmanagerQueriesRunRequest {
-    
-    public DoubleclickbidmanagerQueriesRunPathParams pathParams;
-    public DoubleclickbidmanagerQueriesRunRequest withPathParams(DoubleclickbidmanagerQueriesRunPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DoubleclickbidmanagerQueriesRunQueryParams queryParams;
-    public DoubleclickbidmanagerQueriesRunRequest withQueryParams(DoubleclickbidmanagerQueriesRunQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public DoubleclickbidmanagerQueriesRunRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RunQueryRequest request;
-    public DoubleclickbidmanagerQueriesRunRequest withRequest(org.openapis.openapi.models.shared.RunQueryRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.RunQueryRequest runQueryRequest;
+    public DoubleclickbidmanagerQueriesRunRequest withRunQueryRequest(org.openapis.openapi.models.shared.RunQueryRequest runQueryRequest) {
+        this.runQueryRequest = runQueryRequest;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public DoubleclickbidmanagerQueriesRunRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public DoubleclickbidmanagerQueriesRunSecurity security;
-    public DoubleclickbidmanagerQueriesRunRequest withSecurity(DoubleclickbidmanagerQueriesRunSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DoubleclickbidmanagerQueriesRunRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public DoubleclickbidmanagerQueriesRunRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DoubleclickbidmanagerQueriesRunRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DoubleclickbidmanagerQueriesRunRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DoubleclickbidmanagerQueriesRunRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DoubleclickbidmanagerQueriesRunRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Required. ID of query to run.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=queryId")
+    public String queryId;
+    public DoubleclickbidmanagerQueriesRunRequest withQueryId(String queryId) {
+        this.queryId = queryId;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DoubleclickbidmanagerQueriesRunRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Whether the query should be run synchronously. When true, this method will not return until the query has finished running. When false or not specified, this method will return immediately.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=synchronous")
+    public Boolean synchronous;
+    public DoubleclickbidmanagerQueriesRunRequest withSynchronous(Boolean synchronous) {
+        this.synchronous = synchronous;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public DoubleclickbidmanagerQueriesRunRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public DoubleclickbidmanagerQueriesRunRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

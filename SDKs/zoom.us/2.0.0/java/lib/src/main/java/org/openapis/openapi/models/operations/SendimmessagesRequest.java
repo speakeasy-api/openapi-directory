@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SendimmessagesRequest {
-    
-    public SendimmessagesQueryParams queryParams;
-    public SendimmessagesRequest withQueryParams(SendimmessagesQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public SendimmessagesApplicationJSON request;
-    public SendimmessagesRequest withRequest(SendimmessagesApplicationJSON request) {
-        this.request = request;
+    public SendimmessagesApplicationJSON requestBody;
+    public SendimmessagesRequest withRequestBody(SendimmessagesApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public SendimmessagesSecurity security;
-    public SendimmessagesRequest withSecurity(SendimmessagesSecurity security) {
-        this.security = security;
+    /**
+     * The email address (registered with Zoom) or the userId of the chat user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=chat_user")
+    public String chatUser;
+    public SendimmessagesRequest withChatUser(String chatUser) {
+        this.chatUser = chatUser;
         return this;
     }
     

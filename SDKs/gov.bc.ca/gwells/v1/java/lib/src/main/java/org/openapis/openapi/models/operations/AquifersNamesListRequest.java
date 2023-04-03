@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AquifersNamesListRequest {
-    
-    public AquifersNamesListQueryParams queryParams;
-    public AquifersNamesListRequest withQueryParams(AquifersNamesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A search term.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public AquifersNamesListRequest withSearch(String search) {
+        this.search = search;
         return this;
     }
     

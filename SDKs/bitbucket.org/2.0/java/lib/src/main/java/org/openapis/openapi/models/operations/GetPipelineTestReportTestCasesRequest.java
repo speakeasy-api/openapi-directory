@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPipelineTestReportTestCasesRequest {
+    /**
+     * The UUID of the pipeline.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pipeline_uuid")
+    public String pipelineUuid;
+    public GetPipelineTestReportTestCasesRequest withPipelineUuid(String pipelineUuid) {
+        this.pipelineUuid = pipelineUuid;
+        return this;
+    }
     
-    public GetPipelineTestReportTestCasesPathParams pathParams;
-    public GetPipelineTestReportTestCasesRequest withPathParams(GetPipelineTestReportTestCasesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The repository.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public GetPipelineTestReportTestCasesRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
+    
+    /**
+     * The UUID of the step.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=step_uuid")
+    public String stepUuid;
+    public GetPipelineTestReportTestCasesRequest withStepUuid(String stepUuid) {
+        this.stepUuid = stepUuid;
+        return this;
+    }
+    
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetPipelineTestReportTestCasesRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

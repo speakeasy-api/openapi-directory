@@ -7,34 +7,51 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PredictImageUrlJsonRequest {
-    
-    public PredictImageUrlJsonPathParams pathParams;
-    public PredictImageUrlJsonRequest withPathParams(PredictImageUrlJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PredictImageUrlJsonQueryParams queryParams;
-    public PredictImageUrlJsonRequest withQueryParams(PredictImageUrlJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public PredictImageUrlJsonHeaders headers;
-    public PredictImageUrlJsonRequest withHeaders(PredictImageUrlJsonHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * An {Iris.Web.Api.Models.ImageUrl} that contains the url of the image to be evaluated
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ImageUrl request;
-    public PredictImageUrlJsonRequest withRequest(org.openapis.openapi.models.shared.ImageUrl request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ImageUrl imageUrl;
+    public PredictImageUrlJsonRequest withImageUrl(org.openapis.openapi.models.shared.ImageUrl imageUrl) {
+        this.imageUrl = imageUrl;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Prediction-Key")
+    public String predictionKey;
+    public PredictImageUrlJsonRequest withPredictionKey(String predictionKey) {
+        this.predictionKey = predictionKey;
+        return this;
+    }
+    
+    /**
+     * Optional. Specifies the name of application using the endpoint
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=application")
+    public String application;
+    public PredictImageUrlJsonRequest withApplication(String application) {
+        this.application = application;
+        return this;
+    }
+    
+    /**
+     * Optional. Specifies the id of a particular iteration to evaluate against.
+     *             The default iteration for the project will be used when not specified
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=iterationId")
+    public String iterationId;
+    public PredictImageUrlJsonRequest withIterationId(String iterationId) {
+        this.iterationId = iterationId;
+        return this;
+    }
+    
+    /**
+     * The project id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public PredictImageUrlJsonRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

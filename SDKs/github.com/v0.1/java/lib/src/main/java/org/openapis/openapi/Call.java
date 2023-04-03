@@ -37,10 +37,11 @@ public class Call {
      * /v0.1/BulkCall/
      * Initiates multiple concurrent outbound calls
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV01BulkCallResponse postV01BulkCall(org.openapis.openapi.models.operations.PostV01BulkCallRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV01BulkCallResponse postV01BulkCall(org.openapis.openapi.models.shared.BulkCallParameters request, org.openapis.openapi.models.operations.PostV01BulkCallSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/BulkCall/");
         
@@ -51,7 +52,7 @@ public class Call {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,10 +80,11 @@ public class Call {
      * /v0.1/Call/
      * Initiates an outbound call
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV01CallResponse postV01Call(org.openapis.openapi.models.operations.PostV01CallRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV01CallResponse postV01Call(org.openapis.openapi.models.shared.CallParameters request, org.openapis.openapi.models.operations.PostV01CallSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/Call/");
         
@@ -93,7 +95,7 @@ public class Call {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -121,10 +123,11 @@ public class Call {
      * /v0.1/CancelScheduledHangup/
      * Cancels a scheduled hangup for a call
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV01CancelScheduledHangupResponse postV01CancelScheduledHangup(org.openapis.openapi.models.operations.PostV01CancelScheduledHangupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV01CancelScheduledHangupResponse postV01CancelScheduledHangup(org.openapis.openapi.models.shared.CancelScheduledHangupParameters request, org.openapis.openapi.models.operations.PostV01CancelScheduledHangupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/CancelScheduledHangup/");
         
@@ -135,7 +138,7 @@ public class Call {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -163,10 +166,11 @@ public class Call {
      * /v0.1/CancelScheduledPlay/
      * Cancels a scheduled playback request
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV01CancelScheduledPlayResponse postV01CancelScheduledPlay(org.openapis.openapi.models.operations.PostV01CancelScheduledPlayRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV01CancelScheduledPlayResponse postV01CancelScheduledPlay(org.openapis.openapi.models.shared.CancelScheduledPlayParameters request, org.openapis.openapi.models.operations.PostV01CancelScheduledPlaySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/CancelScheduledPlay/");
         
@@ -177,7 +181,7 @@ public class Call {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -205,10 +209,11 @@ public class Call {
      * /v0.1/GroupCall/
      * Initiate multiple racing outbound calls
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV01GroupCallResponse postV01GroupCall(org.openapis.openapi.models.operations.PostV01GroupCallRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV01GroupCallResponse postV01GroupCall(org.openapis.openapi.models.shared.GroupCallParameters request, org.openapis.openapi.models.operations.PostV01GroupCallSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/GroupCall/");
         
@@ -219,7 +224,7 @@ public class Call {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -246,11 +251,10 @@ public class Call {
     /**
      * /v0.1/HangupAllCalls/
      * Hangs up all established calls
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV01HangupAllCallsResponse postV01HangupAllCalls(org.openapis.openapi.models.operations.PostV01HangupAllCallsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV01HangupAllCallsResponse postV01HangupAllCalls() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/HangupAllCalls/");
         
@@ -259,8 +263,7 @@ public class Call {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -287,10 +290,11 @@ public class Call {
      * /v0.1/HangupCall/
      * Hangs up a specific call
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV01HangupCallResponse postV01HangupCall(org.openapis.openapi.models.operations.PostV01HangupCallRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV01HangupCallResponse postV01HangupCall(org.openapis.openapi.models.shared.HangupCallParameters request, org.openapis.openapi.models.operations.PostV01HangupCallSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/HangupCall/");
         
@@ -301,7 +305,7 @@ public class Call {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -329,10 +333,11 @@ public class Call {
      * /v0.1/Play/
      * Plays media into a live call
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV01PlayResponse postV01Play(org.openapis.openapi.models.operations.PostV01PlayRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV01PlayResponse postV01Play(org.openapis.openapi.models.shared.PlayParameters request, org.openapis.openapi.models.operations.PostV01PlaySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/Play/");
         
@@ -343,7 +348,7 @@ public class Call {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -371,10 +376,11 @@ public class Call {
      * /v0.1/PlayStop/
      * Interrupts media playback on a given call
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV01PlayStopResponse postV01PlayStop(org.openapis.openapi.models.operations.PostV01PlayStopRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV01PlayStopResponse postV01PlayStop(org.openapis.openapi.models.shared.PlayStopParameters request, org.openapis.openapi.models.operations.PostV01PlayStopSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/PlayStop/");
         
@@ -385,7 +391,7 @@ public class Call {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -413,10 +419,11 @@ public class Call {
      * /v0.1/RecordStart/
      * Initiates recording of a given call
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV01RecordStartResponse postV01RecordStart(org.openapis.openapi.models.operations.PostV01RecordStartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV01RecordStartResponse postV01RecordStart(org.openapis.openapi.models.shared.RecordStartParameters request, org.openapis.openapi.models.operations.PostV01RecordStartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/RecordStart/");
         
@@ -427,7 +434,7 @@ public class Call {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -455,10 +462,11 @@ public class Call {
      * /v0.1/RecordStop/
      * Stops the recording of a given call
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV01RecordStopResponse postV01RecordStop(org.openapis.openapi.models.operations.PostV01RecordStopRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV01RecordStopResponse postV01RecordStop(org.openapis.openapi.models.shared.RecordStopParameters request, org.openapis.openapi.models.operations.PostV01RecordStopSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/RecordStop/");
         
@@ -469,7 +477,7 @@ public class Call {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -497,10 +505,11 @@ public class Call {
      * /v0.1/ScheduleHangup/
      * Schedules a hangup for a specific call
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV01ScheduleHangupResponse postV01ScheduleHangup(org.openapis.openapi.models.operations.PostV01ScheduleHangupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV01ScheduleHangupResponse postV01ScheduleHangup(org.openapis.openapi.models.shared.ScheduleHangupParameters request, org.openapis.openapi.models.operations.PostV01ScheduleHangupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/ScheduleHangup/");
         
@@ -511,7 +520,7 @@ public class Call {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -539,10 +548,11 @@ public class Call {
      * /v0.1/SchedulePlay/
      * Schedules media playback for a specific call
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV01SchedulePlayResponse postV01SchedulePlay(org.openapis.openapi.models.operations.PostV01SchedulePlayRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV01SchedulePlayResponse postV01SchedulePlay(org.openapis.openapi.models.shared.SchedulePlayParameters request, org.openapis.openapi.models.operations.PostV01SchedulePlaySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/SchedulePlay/");
         
@@ -553,7 +563,7 @@ public class Call {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -581,10 +591,11 @@ public class Call {
      * /v0.1/SendDigits/
      * Emits DMTF tones to a call
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV01SendDigitsResponse postV01SendDigits(org.openapis.openapi.models.operations.PostV01SendDigitsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV01SendDigitsResponse postV01SendDigits(org.openapis.openapi.models.shared.SendDigitsParameters request, org.openapis.openapi.models.operations.PostV01SendDigitsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/SendDigits/");
         
@@ -595,7 +606,7 @@ public class Call {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -623,10 +634,11 @@ public class Call {
      * /v0.1/SoundTouch/
      * Applies SoundTouch effects to a live call
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV01SoundTouchResponse postV01SoundTouch(org.openapis.openapi.models.operations.PostV01SoundTouchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV01SoundTouchResponse postV01SoundTouch(org.openapis.openapi.models.shared.SoundTouchParameters request, org.openapis.openapi.models.operations.PostV01SoundTouchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/SoundTouch/");
         
@@ -637,7 +649,7 @@ public class Call {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -665,10 +677,11 @@ public class Call {
      * /v0.1/SoundTouchStop/
      * Removes SoundTouch effects from a given call
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV01SoundTouchStopResponse postV01SoundTouchStop(org.openapis.openapi.models.operations.PostV01SoundTouchStopRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV01SoundTouchStopResponse postV01SoundTouchStop(org.openapis.openapi.models.shared.SoundTouchStopParameters request, org.openapis.openapi.models.operations.PostV01SoundTouchStopSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/SoundTouchStop/");
         
@@ -679,7 +692,7 @@ public class Call {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -707,10 +720,11 @@ public class Call {
      * /v0.1/TransferCall/
      * Replaces the RestXML flow of a live call
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV01TransferCallResponse postV01TransferCall(org.openapis.openapi.models.operations.PostV01TransferCallRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV01TransferCallResponse postV01TransferCall(org.openapis.openapi.models.shared.TransferCallParameters request, org.openapis.openapi.models.operations.PostV01TransferCallSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/TransferCall/");
         
@@ -721,7 +735,7 @@ public class Call {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

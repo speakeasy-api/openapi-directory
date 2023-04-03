@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveLicenseeRequest {
-    
-    public RetrieveLicenseePathParams pathParams;
-    public RetrieveLicenseeRequest withPathParams(RetrieveLicenseePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
+    public String key;
+    public RetrieveLicenseeRequest withKey(String key) {
+        this.key = key;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=licensee")
+    public String licensee;
+    public RetrieveLicenseeRequest withLicensee(String licensee) {
+        this.licensee = licensee;
+        return this;
+    }
     
-    public RetrieveLicenseeQueryParams queryParams;
-    public RetrieveLicenseeRequest withQueryParams(RetrieveLicenseeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=user_token")
+    public String userToken;
+    public RetrieveLicenseeRequest withUserToken(String userToken) {
+        this.userToken = userToken;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetChannelInfoRequest {
-    
-    public GetChannelInfoPathParams pathParams;
-    public GetChannelInfoRequest withPathParams(GetChannelInfoPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The channel identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelId")
+    public String channelId;
+    public GetChannelInfoRequest withChannelId(String channelId) {
+        this.channelId = channelId;
         return this;
     }
     

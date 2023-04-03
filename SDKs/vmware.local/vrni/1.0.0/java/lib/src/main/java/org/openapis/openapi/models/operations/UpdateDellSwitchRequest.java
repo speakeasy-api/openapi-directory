@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDellSwitchRequest {
-    
-    public UpdateDellSwitchPathParams pathParams;
-    public UpdateDellSwitchRequest withPathParams(UpdateDellSwitchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DellSwitchDataSource request;
-    public UpdateDellSwitchRequest withRequest(org.openapis.openapi.models.shared.DellSwitchDataSource request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.DellSwitchDataSource dellSwitchDataSource;
+    public UpdateDellSwitchRequest withDellSwitchDataSource(org.openapis.openapi.models.shared.DellSwitchDataSource dellSwitchDataSource) {
+        this.dellSwitchDataSource = dellSwitchDataSource;
         return this;
     }
     
-    
-    public UpdateDellSwitchSecurity security;
-    public UpdateDellSwitchRequest withSecurity(UpdateDellSwitchSecurity security) {
-        this.security = security;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UpdateDellSwitchRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

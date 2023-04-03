@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEventSubscriptionsRequest {
-    
-    public GetEventSubscriptionsPathParams pathParams;
-    public GetEventSubscriptionsRequest withPathParams(GetEventSubscriptionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of event subscription - can be obtained from web hook response
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=SubscriptionId")
+    public String subscriptionId;
+    public GetEventSubscriptionsRequest withSubscriptionId(String subscriptionId) {
+        this.subscriptionId = subscriptionId;
         return this;
     }
     

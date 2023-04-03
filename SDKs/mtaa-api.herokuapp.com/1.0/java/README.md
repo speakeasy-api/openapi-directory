@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.DistrictsInARegionPathParams;
 import org.openapis.openapi.models.operations.DistrictsInARegionRequest;
 import org.openapis.openapi.models.operations.DistrictsInARegionResponse;
 
@@ -28,11 +27,9 @@ public class Application {
                 .build();
 
             DistrictsInARegionRequest req = new DistrictsInARegionRequest() {{
-                pathParams = new DistrictsInARegionPathParams() {{
-                    country = "Malta";
-                    region = "provident";
-                }};
-            }};            
+                country = "Malta";
+                region = "provident";
+            }}            
 
             DistrictsInARegionResponse res = sdk.districtsInRegion.districtsInARegion(req);
 
@@ -46,7 +43,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### districtsInRegion

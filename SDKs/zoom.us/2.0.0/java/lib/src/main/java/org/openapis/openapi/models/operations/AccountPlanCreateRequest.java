@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountPlanCreateRequest {
-    
-    public AccountPlanCreatePathParams pathParams;
-    public AccountPlanCreateRequest withPathParams(AccountPlanCreatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public AccountPlanCreateApplicationJSON requestBody;
+    public AccountPlanCreateRequest withRequestBody(AccountPlanCreateApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public AccountPlanCreateApplicationJSON request;
-    public AccountPlanCreateRequest withRequest(AccountPlanCreateApplicationJSON request) {
-        this.request = request;
+    /**
+     * The account ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public AccountPlanCreateRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     

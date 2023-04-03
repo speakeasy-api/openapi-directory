@@ -36,7 +36,7 @@ public class SmartCharging {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeletechargingscheduleResponse deletechargingschedule(org.openapis.openapi.models.operations.DeletechargingscheduleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeletechargingscheduleResponse deletechargingschedule(org.openapis.openapi.models.operations.DeletechargingscheduleRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/commands/chargingschedule");
         
@@ -82,7 +82,7 @@ public class SmartCharging {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SetchargingscheduleResponse setchargingschedule(org.openapis.openapi.models.operations.SetchargingscheduleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SetchargingscheduleResponse setchargingschedule(org.openapis.openapi.models.operations.SetchargingscheduleRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/commands/chargingschedule");
         

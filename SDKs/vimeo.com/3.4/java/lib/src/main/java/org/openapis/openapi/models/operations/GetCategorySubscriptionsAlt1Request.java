@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCategorySubscriptionsAlt1Request {
-    
-    public GetCategorySubscriptionsAlt1QueryParams queryParams;
-    public GetCategorySubscriptionsAlt1Request withQueryParams(GetCategorySubscriptionsAlt1QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The sort direction of the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public GetCategorySubscriptionsAlt1DirectionEnum direction;
+    public GetCategorySubscriptionsAlt1Request withDirection(GetCategorySubscriptionsAlt1DirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetCategorySubscriptionsAlt1Request withPage(Double page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetCategorySubscriptionsAlt1Security security;
-    public GetCategorySubscriptionsAlt1Request withSecurity(GetCategorySubscriptionsAlt1Security security) {
-        this.security = security;
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetCategorySubscriptionsAlt1Request withPerPage(Double perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The way to sort the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetCategorySubscriptionsAlt1SortEnum sort;
+    public GetCategorySubscriptionsAlt1Request withSort(GetCategorySubscriptionsAlt1SortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

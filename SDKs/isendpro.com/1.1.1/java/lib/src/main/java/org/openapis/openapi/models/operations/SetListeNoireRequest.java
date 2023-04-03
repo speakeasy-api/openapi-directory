@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetListeNoireRequest {
+    /**
+     * Cl\u00e9 API
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keyid")
+    public String keyid;
+    public SetListeNoireRequest withKeyid(String keyid) {
+        this.keyid = keyid;
+        return this;
+    }
     
-    public SetListeNoireQueryParams queryParams;
-    public SetListeNoireRequest withQueryParams(SetListeNoireQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * num\u00e9ro de mobile \u00e0 ins\u00e9rer en liste noire
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=num")
+    public String num;
+    public SetListeNoireRequest withNum(String num) {
+        this.num = num;
+        return this;
+    }
+    
+    /**
+     * Doit valoir "1"
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=setlisteNoire")
+    public SetListeNoireSetlisteNoireEnum setlisteNoire;
+    public SetListeNoireRequest withSetlisteNoire(SetListeNoireSetlisteNoireEnum setlisteNoire) {
+        this.setlisteNoire = setlisteNoire;
         return this;
     }
     

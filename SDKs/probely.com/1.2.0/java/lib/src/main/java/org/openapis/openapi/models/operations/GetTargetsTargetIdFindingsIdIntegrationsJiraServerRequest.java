@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTargetsTargetIdFindingsIdIntegrationsJiraServerRequest {
+    /**
+     * Object Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetTargetsTargetIdFindingsIdIntegrationsJiraServerRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetTargetsTargetIdFindingsIdIntegrationsJiraServerPathParams pathParams;
-    public GetTargetsTargetIdFindingsIdIntegrationsJiraServerRequest withPathParams(GetTargetsTargetIdFindingsIdIntegrationsJiraServerPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Target id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=target_id")
+    public String targetId;
+    public GetTargetsTargetIdFindingsIdIntegrationsJiraServerRequest withTargetId(String targetId) {
+        this.targetId = targetId;
         return this;
     }
     

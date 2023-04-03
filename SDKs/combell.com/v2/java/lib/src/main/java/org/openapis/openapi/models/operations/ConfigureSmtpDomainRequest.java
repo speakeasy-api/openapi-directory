@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConfigureSmtpDomainRequest {
-    
-    public ConfigureSmtpDomainPathParams pathParams;
-    public ConfigureSmtpDomainRequest withPathParams(ConfigureSmtpDomainPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ConfigureSmtpDomainQueryParams queryParams;
-    public ConfigureSmtpDomainRequest withQueryParams(ConfigureSmtpDomainQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Contains the smtp domain information.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateSmtpDomainRequest request;
-    public ConfigureSmtpDomainRequest withRequest(org.openapis.openapi.models.shared.UpdateSmtpDomainRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateSmtpDomainRequest updateSmtpDomainRequest;
+    public ConfigureSmtpDomainRequest withUpdateSmtpDomainRequest(org.openapis.openapi.models.shared.UpdateSmtpDomainRequest updateSmtpDomainRequest) {
+        this.updateSmtpDomainRequest = updateSmtpDomainRequest;
+        return this;
+    }
+    
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
+    public String domainNamePathParameter;
+    public ConfigureSmtpDomainRequest withDomainNamePathParameter(String domainNamePathParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
+        return this;
+    }
+    
+    /**
+     * Mail zone domain name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
+    public String domainNameQueryParameter;
+    public ConfigureSmtpDomainRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
+        this.domainNameQueryParameter = domainNameQueryParameter;
+        return this;
+    }
+    
+    /**
+     * Smtp domain name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hostname")
+    public String hostname;
+    public ConfigureSmtpDomainRequest withHostname(String hostname) {
+        this.hostname = hostname;
         return this;
     }
     

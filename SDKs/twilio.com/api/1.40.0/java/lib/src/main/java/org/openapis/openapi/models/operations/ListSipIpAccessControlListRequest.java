@@ -4,34 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSipIpAccessControlListRequest {
-    
-    public ListSipIpAccessControlListPathParams pathParams;
-    public ListSipIpAccessControlListRequest withPathParams(ListSipIpAccessControlListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public ListSipIpAccessControlListRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public ListSipIpAccessControlListQueryParams queryParams;
-    public ListSipIpAccessControlListRequest withQueryParams(ListSipIpAccessControlListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListSipIpAccessControlListRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListSipIpAccessControlListSecurity security;
-    public ListSipIpAccessControlListRequest withSecurity(ListSipIpAccessControlListSecurity security) {
-        this.security = security;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListSipIpAccessControlListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
-    
-    public String serverURL;
-    public ListSipIpAccessControlListRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListSipIpAccessControlListRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

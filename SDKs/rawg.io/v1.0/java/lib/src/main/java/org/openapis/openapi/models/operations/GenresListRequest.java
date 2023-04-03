@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GenresListRequest {
+    /**
+     * Which field to use when ordering the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ordering")
+    public String ordering;
+    public GenresListRequest withOrdering(String ordering) {
+        this.ordering = ordering;
+        return this;
+    }
     
-    public GenresListQueryParams queryParams;
-    public GenresListRequest withQueryParams(GenresListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A page number within the paginated result set.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GenresListRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public GenresListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

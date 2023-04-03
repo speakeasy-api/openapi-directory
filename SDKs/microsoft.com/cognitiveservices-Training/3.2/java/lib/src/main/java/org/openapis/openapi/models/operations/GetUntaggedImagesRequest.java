@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUntaggedImagesRequest {
-    
-    public GetUntaggedImagesPathParams pathParams;
-    public GetUntaggedImagesRequest withPathParams(GetUntaggedImagesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The iteration id. Defaults to workspace.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=iterationId")
+    public String iterationId;
+    public GetUntaggedImagesRequest withIterationId(String iterationId) {
+        this.iterationId = iterationId;
         return this;
     }
     
+    /**
+     * The ordering. Defaults to newest.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
+    public GetUntaggedImagesOrderByEnum orderBy;
+    public GetUntaggedImagesRequest withOrderBy(GetUntaggedImagesOrderByEnum orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
     
-    public GetUntaggedImagesQueryParams queryParams;
-    public GetUntaggedImagesRequest withQueryParams(GetUntaggedImagesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public GetUntaggedImagesRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    /**
+     * Number of images to skip before beginning the image batch. Defaults to 0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
+    public Integer skip;
+    public GetUntaggedImagesRequest withSkip(Integer skip) {
+        this.skip = skip;
+        return this;
+    }
+    
+    /**
+     * Maximum number of images to return. Defaults to 50, limited to 256.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=take")
+    public Integer take;
+    public GetUntaggedImagesRequest withTake(Integer take) {
+        this.take = take;
         return this;
     }
     

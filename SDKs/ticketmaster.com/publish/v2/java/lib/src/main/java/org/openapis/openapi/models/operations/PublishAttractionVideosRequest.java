@@ -7,17 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PublishAttractionVideosRequest {
-    
-    public PublishAttractionVideosPathParams pathParams;
-    public PublishAttractionVideosRequest withPathParams(PublishAttractionVideosPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PublishAttractionVideosHeaders headers;
-    public PublishAttractionVideosRequest withHeaders(PublishAttractionVideosHeaders headers) {
-        this.headers = headers;
+    /**
+     * Unique correlation id to be able to trace the request in our system
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=TMPS-Correlation-Id")
+    public String tmpsCorrelationId;
+    public PublishAttractionVideosRequest withTMPSCorrelationId(String tmpsCorrelationId) {
+        this.tmpsCorrelationId = tmpsCorrelationId;
         return this;
     }
     
@@ -25,9 +21,19 @@ public class PublishAttractionVideosRequest {
      * Video data
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Video request;
-    public PublishAttractionVideosRequest withRequest(org.openapis.openapi.models.shared.Video request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Video video;
+    public PublishAttractionVideosRequest withVideo(org.openapis.openapi.models.shared.Video video) {
+        this.video = video;
+        return this;
+    }
+    
+    /**
+     * ID of the attraction the video is linked to
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PublishAttractionVideosRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

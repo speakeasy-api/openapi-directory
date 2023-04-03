@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchOrganizationRequest {
-    
-    public PatchOrganizationPathParams pathParams;
-    public PatchOrganizationRequest withPathParams(PatchOrganizationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Include organization properties to create here
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PatchOrganizationRequestBody request;
-    public PatchOrganizationRequest withRequest(PatchOrganizationRequestBody request) {
-        this.request = request;
+    public PatchOrganizationRequestBody requestBody;
+    public PatchOrganizationRequest withRequestBody(PatchOrganizationRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * ID of organization that needs to be updated
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatchOrganizationRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVmknicRequest {
-    
-    public GetVmknicPathParams pathParams;
-    public GetVmknicRequest withPathParams(GetVmknicPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetVmknicRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetVmknicQueryParams queryParams;
-    public GetVmknicRequest withQueryParams(GetVmknicQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetVmknicSecurity security;
-    public GetVmknicRequest withSecurity(GetVmknicSecurity security) {
-        this.security = security;
+    /**
+     * time in epoch seconds
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=time")
+    public Long time;
+    public GetVmknicRequest withTime(Long time) {
+        this.time = time;
         return this;
     }
     

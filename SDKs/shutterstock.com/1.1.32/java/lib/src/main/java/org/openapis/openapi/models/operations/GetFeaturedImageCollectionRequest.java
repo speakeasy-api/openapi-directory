@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFeaturedImageCollectionRequest {
-    
-    public GetFeaturedImageCollectionPathParams pathParams;
-    public GetFeaturedImageCollectionRequest withPathParams(GetFeaturedImageCollectionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Cover image size
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=asset_hint")
+    public GetFeaturedImageCollectionAssetHintEnum assetHint;
+    public GetFeaturedImageCollectionRequest withAssetHint(GetFeaturedImageCollectionAssetHintEnum assetHint) {
+        this.assetHint = assetHint;
         return this;
     }
     
-    
-    public GetFeaturedImageCollectionQueryParams queryParams;
-    public GetFeaturedImageCollectionRequest withQueryParams(GetFeaturedImageCollectionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Which sharing information to include in the response, such as a URL to the collection
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=embed")
+    public GetFeaturedImageCollectionEmbedEnum embed;
+    public GetFeaturedImageCollectionRequest withEmbed(GetFeaturedImageCollectionEmbedEnum embed) {
+        this.embed = embed;
         return this;
     }
     
-    
-    public GetFeaturedImageCollectionSecurity security;
-    public GetFeaturedImageCollectionRequest withSecurity(GetFeaturedImageCollectionSecurity security) {
-        this.security = security;
+    /**
+     * Collection ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetFeaturedImageCollectionRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

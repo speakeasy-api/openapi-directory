@@ -4,13 +4,37 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListAccountsRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public ListAccountsRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
     
-    public ListAccountsQueryParams queryParams;
-    public ListAccountsRequest withQueryParams(ListAccountsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entity_id")
+    public String entityId;
+    public ListAccountsRequest withEntityId(String entityId) {
+        this.entityId = entityId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListAccountsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Filter Accounts for those with the specified status.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public ListAccountsStatusEnum status;
+    public ListAccountsRequest withStatus(ListAccountsStatusEnum status) {
+        this.status = status;
         return this;
     }
     

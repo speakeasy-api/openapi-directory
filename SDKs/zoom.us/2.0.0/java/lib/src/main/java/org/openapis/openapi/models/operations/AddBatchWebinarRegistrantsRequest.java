@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddBatchWebinarRegistrantsRequest {
-    
-    public AddBatchWebinarRegistrantsPathParams pathParams;
-    public AddBatchWebinarRegistrantsRequest withPathParams(AddBatchWebinarRegistrantsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public AddBatchWebinarRegistrantsApplicationJSON request;
-    public AddBatchWebinarRegistrantsRequest withRequest(AddBatchWebinarRegistrantsApplicationJSON request) {
-        this.request = request;
+    public AddBatchWebinarRegistrantsApplicationJSON requestBody;
+    public AddBatchWebinarRegistrantsRequest withRequestBody(AddBatchWebinarRegistrantsApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public AddBatchWebinarRegistrantsSecurity security;
-    public AddBatchWebinarRegistrantsRequest withSecurity(AddBatchWebinarRegistrantsSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the webinar.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webinarId")
+    public String webinarId;
+    public AddBatchWebinarRegistrantsRequest withWebinarId(String webinarId) {
+        this.webinarId = webinarId;
         return this;
     }
     

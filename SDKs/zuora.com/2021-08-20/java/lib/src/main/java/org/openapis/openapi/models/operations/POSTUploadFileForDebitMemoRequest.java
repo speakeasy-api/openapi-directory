@@ -7,24 +7,45 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTUploadFileForDebitMemoRequest {
-    
-    public POSTUploadFileForDebitMemoPathParams pathParams;
-    public POSTUploadFileForDebitMemoRequest withPathParams(POSTUploadFileForDebitMemoPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public POSTUploadFileForDebitMemoHeaders headers;
-    public POSTUploadFileForDebitMemoRequest withHeaders(POSTUploadFileForDebitMemoHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public POSTUploadFileForDebitMemoRequestBody request;
-    public POSTUploadFileForDebitMemoRequest withRequest(POSTUploadFileForDebitMemoRequestBody request) {
-        this.request = request;
+    public POSTUploadFileForDebitMemoRequestBody requestBody;
+    public POSTUploadFileForDebitMemoRequest withRequestBody(POSTUploadFileForDebitMemoRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Entity-Ids")
+    public String zuoraEntityIds;
+    public POSTUploadFileForDebitMemoRequest withZuoraEntityIds(String zuoraEntityIds) {
+        this.zuoraEntityIds = zuoraEntityIds;
+        return this;
+    }
+    
+    /**
+     * A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+     * 
+     * The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Track-Id")
+    public String zuoraTrackId;
+    public POSTUploadFileForDebitMemoRequest withZuoraTrackId(String zuoraTrackId) {
+        this.zuoraTrackId = zuoraTrackId;
+        return this;
+    }
+    
+    /**
+     * The ID of the debit memo that you want to upload a PDF file for. For example, 402890555a87d7f5015a8919e4fe002e.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=debitMemoId")
+    public String debitMemoId;
+    public POSTUploadFileForDebitMemoRequest withDebitMemoId(String debitMemoId) {
+        this.debitMemoId = debitMemoId;
         return this;
     }
     

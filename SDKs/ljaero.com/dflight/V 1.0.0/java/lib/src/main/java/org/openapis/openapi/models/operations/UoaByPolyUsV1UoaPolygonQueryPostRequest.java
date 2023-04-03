@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UoaByPolyUsV1UoaPolygonQueryPostRequest {
-    
-    public UoaByPolyUsV1UoaPolygonQueryPostHeaders headers;
-    public UoaByPolyUsV1UoaPolygonQueryPostRequest withHeaders(UoaByPolyUsV1UoaPolygonQueryPostHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.UOAsByPolygon uoAsByPolygon;
+    public UoaByPolyUsV1UoaPolygonQueryPostRequest withUOAsByPolygon(org.openapis.openapi.models.shared.UOAsByPolygon uoAsByPolygon) {
+        this.uoAsByPolygon = uoAsByPolygon;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UOAsByPolygon request;
-    public UoaByPolyUsV1UoaPolygonQueryPostRequest withRequest(org.openapis.openapi.models.shared.UOAsByPolygon request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public UoaByPolyUsV1UoaPolygonQueryPostRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PackagesRestorePackageVersionForOrgRequest {
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public PackagesRestorePackageVersionForOrgRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
     
-    public PackagesRestorePackageVersionForOrgPathParams pathParams;
-    public PackagesRestorePackageVersionForOrgRequest withPathParams(PackagesRestorePackageVersionForOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the package.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=package_name")
+    public String packageName;
+    public PackagesRestorePackageVersionForOrgRequest withPackageName(String packageName) {
+        this.packageName = packageName;
+        return this;
+    }
+    
+    /**
+     * The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=package_type")
+    public org.openapis.openapi.models.shared.PackageTypeEnum packageType;
+    public PackagesRestorePackageVersionForOrgRequest withPackageType(org.openapis.openapi.models.shared.PackageTypeEnum packageType) {
+        this.packageType = packageType;
+        return this;
+    }
+    
+    /**
+     * Unique identifier of the package version.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=package_version_id")
+    public Long packageVersionId;
+    public PackagesRestorePackageVersionForOrgRequest withPackageVersionId(Long packageVersionId) {
+        this.packageVersionId = packageVersionId;
         return this;
     }
     

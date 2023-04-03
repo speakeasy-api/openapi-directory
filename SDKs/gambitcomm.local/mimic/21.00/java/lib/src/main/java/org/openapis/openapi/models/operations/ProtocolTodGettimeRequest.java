@@ -4,13 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolTodGettimeRequest {
+    /**
+     * Agent to show TOD return
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolTodGettimeRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolTodGettimePathParams pathParams;
-    public ProtocolTodGettimeRequest withPathParams(ProtocolTodGettimePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * numRetries
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=numRetries")
+    public Integer numRetries;
+    public ProtocolTodGettimeRequest withNumRetries(Integer numRetries) {
+        this.numRetries = numRetries;
+        return this;
+    }
+    
+    /**
+     * portNum
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=portNum")
+    public Integer portNum;
+    public ProtocolTodGettimeRequest withPortNum(Integer portNum) {
+        this.portNum = portNum;
+        return this;
+    }
+    
+    /**
+     * scriptName
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scriptName")
+    public String scriptName;
+    public ProtocolTodGettimeRequest withScriptName(String scriptName) {
+        this.scriptName = scriptName;
+        return this;
+    }
+    
+    /**
+     * serverAddr
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serverAddr")
+    public String serverAddr;
+    public ProtocolTodGettimeRequest withServerAddr(String serverAddr) {
+        this.serverAddr = serverAddr;
+        return this;
+    }
+    
+    /**
+     * timeSec
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=timeSec")
+    public Integer timeSec;
+    public ProtocolTodGettimeRequest withTimeSec(Integer timeSec) {
+        this.timeSec = timeSec;
         return this;
     }
     

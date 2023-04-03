@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSitesRequest {
-    
-    public ListSitesQueryParams queryParams;
-    public ListSitesRequest withQueryParams(ListSitesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public Long maxResults;
+    public ListSitesRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public ListSitesRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
     
-    public ListSitesHeaders headers;
-    public ListSitesRequest withHeaders(ListSitesHeaders headers) {
-        this.headers = headers;
+    /**
+     * Filters the results by city.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OperatingAddressCityFilter")
+    public String[] operatingAddressCityFilter;
+    public ListSitesRequest withOperatingAddressCityFilter(String[] operatingAddressCityFilter) {
+        this.operatingAddressCityFilter = operatingAddressCityFilter;
+        return this;
+    }
+    
+    /**
+     * Filters the results by country code.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OperatingAddressCountryCodeFilter")
+    public String[] operatingAddressCountryCodeFilter;
+    public ListSitesRequest withOperatingAddressCountryCodeFilter(String[] operatingAddressCountryCodeFilter) {
+        this.operatingAddressCountryCodeFilter = operatingAddressCountryCodeFilter;
+        return this;
+    }
+    
+    /**
+     * Filters the results by state or region.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OperatingAddressStateOrRegionFilter")
+    public String[] operatingAddressStateOrRegionFilter;
+    public ListSitesRequest withOperatingAddressStateOrRegionFilter(String[] operatingAddressStateOrRegionFilter) {
+        this.operatingAddressStateOrRegionFilter = operatingAddressStateOrRegionFilter;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListSitesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListSitesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListSitesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListSitesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListSitesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListSitesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListSitesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

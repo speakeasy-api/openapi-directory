@@ -4,13 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPlayerGameStatsRequest {
+    /**
+     * Category filter (e.g defensive)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
+    public String category;
+    public GetPlayerGameStatsRequest withCategory(String category) {
+        this.category = category;
+        return this;
+    }
     
-    public GetPlayerGameStatsQueryParams queryParams;
-    public GetPlayerGameStatsRequest withQueryParams(GetPlayerGameStatsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Conference abbreviation filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=conference")
+    public String conference;
+    public GetPlayerGameStatsRequest withConference(String conference) {
+        this.conference = conference;
+        return this;
+    }
+    
+    /**
+     * Game id filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gameId")
+    public Long gameId;
+    public GetPlayerGameStatsRequest withGameId(Long gameId) {
+        this.gameId = gameId;
+        return this;
+    }
+    
+    /**
+     * Season type filter (regular or postseason)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=seasonType")
+    public String seasonType;
+    public GetPlayerGameStatsRequest withSeasonType(String seasonType) {
+        this.seasonType = seasonType;
+        return this;
+    }
+    
+    /**
+     * Team filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team")
+    public String team;
+    public GetPlayerGameStatsRequest withTeam(String team) {
+        this.team = team;
+        return this;
+    }
+    
+    /**
+     * Week filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=week")
+    public Long week;
+    public GetPlayerGameStatsRequest withWeek(Long week) {
+        this.week = week;
+        return this;
+    }
+    
+    /**
+     * Year/season filter for games
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public Long year;
+    public GetPlayerGameStatsRequest withYear(Long year) {
+        this.year = year;
         return this;
     }
     

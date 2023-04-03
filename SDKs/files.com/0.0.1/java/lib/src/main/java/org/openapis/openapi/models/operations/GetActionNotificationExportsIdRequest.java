@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetActionNotificationExportsIdRequest {
-    
-    public GetActionNotificationExportsIdPathParams pathParams;
-    public GetActionNotificationExportsIdRequest withPathParams(GetActionNotificationExportsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Action Notification Export ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public GetActionNotificationExportsIdRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

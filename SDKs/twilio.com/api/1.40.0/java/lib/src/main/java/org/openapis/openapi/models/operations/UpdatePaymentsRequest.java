@@ -7,31 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePaymentsRequest {
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will update the resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public UpdatePaymentsRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
+        return this;
+    }
     
-    public UpdatePaymentsPathParams pathParams;
-    public UpdatePaymentsRequest withPathParams(UpdatePaymentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the call that will update the resource. This should be the same call sid that was used to create payments resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CallSid")
+    public String callSid;
+    public UpdatePaymentsRequest withCallSid(String callSid) {
+        this.callSid = callSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdatePaymentsUpdatePaymentsRequest request;
-    public UpdatePaymentsRequest withRequest(UpdatePaymentsUpdatePaymentsRequest request) {
-        this.request = request;
+    public UpdatePaymentsUpdatePaymentsRequest requestBody;
+    public UpdatePaymentsRequest withRequestBody(UpdatePaymentsUpdatePaymentsRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdatePaymentsSecurity security;
-    public UpdatePaymentsRequest withSecurity(UpdatePaymentsSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdatePaymentsRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of Payments session that needs to be updated.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdatePaymentsRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

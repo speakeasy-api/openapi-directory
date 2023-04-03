@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePhoneNumberRequest {
-    
-    public UpdatePhoneNumberPathParams pathParams;
-    public UpdatePhoneNumberRequest withPathParams(UpdatePhoneNumberPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdatePhoneNumberUpdatePhoneNumberRequest request;
-    public UpdatePhoneNumberRequest withRequest(UpdatePhoneNumberUpdatePhoneNumberRequest request) {
-        this.request = request;
+    public UpdatePhoneNumberUpdatePhoneNumberRequest requestBody;
+    public UpdatePhoneNumberRequest withRequestBody(UpdatePhoneNumberUpdatePhoneNumberRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdatePhoneNumberSecurity security;
-    public UpdatePhoneNumberRequest withSecurity(UpdatePhoneNumberSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) of the PhoneNumber resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public UpdatePhoneNumberRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public UpdatePhoneNumberRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the PhoneNumber resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdatePhoneNumberRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

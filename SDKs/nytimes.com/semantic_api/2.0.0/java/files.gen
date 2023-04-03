@@ -30,14 +30,11 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetNameConceptTypeSpecificConceptJsonConceptTypeEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetNameConceptTypeSpecificConceptJsonPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNameConceptTypeSpecificConceptJsonFieldsEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetNameConceptTypeSpecificConceptJsonQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNameConceptTypeSpecificConceptJsonRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNameConceptTypeSpecificConceptJSON200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNameConceptTypeSpecificConceptJsonResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSearchJsonFieldsEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetSearchJsonQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSearchJsonRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSearchJSON200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSearchJsonResponse.java
@@ -50,6 +47,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ConceptScopeNotes.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConceptTaxonomy.java
 lib/src/main/java/org/openapis/openapi/models/shared/Concept.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConceptRelation.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeApikey.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

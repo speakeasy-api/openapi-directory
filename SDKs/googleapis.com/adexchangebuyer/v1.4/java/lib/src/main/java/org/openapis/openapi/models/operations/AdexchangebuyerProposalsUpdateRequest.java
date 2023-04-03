@@ -7,31 +7,110 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdexchangebuyerProposalsUpdateRequest {
-    
-    public AdexchangebuyerProposalsUpdatePathParams pathParams;
-    public AdexchangebuyerProposalsUpdateRequest withPathParams(AdexchangebuyerProposalsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AdexchangebuyerProposalsUpdateQueryParams queryParams;
-    public AdexchangebuyerProposalsUpdateRequest withQueryParams(AdexchangebuyerProposalsUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Proposal request;
-    public AdexchangebuyerProposalsUpdateRequest withRequest(org.openapis.openapi.models.shared.Proposal request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Proposal proposal;
+    public AdexchangebuyerProposalsUpdateRequest withProposal(org.openapis.openapi.models.shared.Proposal proposal) {
+        this.proposal = proposal;
         return this;
     }
     
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AdexchangebuyerProposalsUpdateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public AdexchangebuyerProposalsUpdateSecurity security;
-    public AdexchangebuyerProposalsUpdateRequest withSecurity(AdexchangebuyerProposalsUpdateSecurity security) {
-        this.security = security;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AdexchangebuyerProposalsUpdateRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AdexchangebuyerProposalsUpdateRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AdexchangebuyerProposalsUpdateRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AdexchangebuyerProposalsUpdateRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * The proposal id to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=proposalId")
+    public String proposalId;
+    public AdexchangebuyerProposalsUpdateRequest withProposalId(String proposalId) {
+        this.proposalId = proposalId;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AdexchangebuyerProposalsUpdateRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * The last known revision number to update. If the head revision in the marketplace database has since changed, an error will be thrown. The caller should then fetch the latest proposal at head revision and retry the update at that revision.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=revisionNumber")
+    public String revisionNumber;
+    public AdexchangebuyerProposalsUpdateRequest withRevisionNumber(String revisionNumber) {
+        this.revisionNumber = revisionNumber;
+        return this;
+    }
+    
+    /**
+     * The proposed action to take on the proposal. This field is required and it must be set when updating a proposal.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=updateAction")
+    public AdexchangebuyerProposalsUpdateUpdateActionEnum updateAction;
+    public AdexchangebuyerProposalsUpdateRequest withUpdateAction(AdexchangebuyerProposalsUpdateUpdateActionEnum updateAction) {
+        this.updateAction = updateAction;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public AdexchangebuyerProposalsUpdateRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

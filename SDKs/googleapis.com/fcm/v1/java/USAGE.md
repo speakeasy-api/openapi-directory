@@ -7,10 +7,9 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.operations.FcmProjectsMessagesSendSecurityOption1;
 import org.openapis.openapi.models.operations.FcmProjectsMessagesSendSecurityOption2;
 import org.openapis.openapi.models.operations.FcmProjectsMessagesSendSecurity;
-import org.openapis.openapi.models.operations.FcmProjectsMessagesSendPathParams;
-import org.openapis.openapi.models.operations.FcmProjectsMessagesSendQueryParams;
 import org.openapis.openapi.models.operations.FcmProjectsMessagesSendRequest;
 import org.openapis.openapi.models.operations.FcmProjectsMessagesSendResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.SendMessageRequest;
 import org.openapis.openapi.models.shared.Message;
 import org.openapis.openapi.models.shared.WebpushConfig;
@@ -27,10 +26,7 @@ import org.openapis.openapi.models.shared.AndroidNotification;
 import org.openapis.openapi.models.shared.LightSettings;
 import org.openapis.openapi.models.shared.Color;
 import org.openapis.openapi.models.shared.AndroidFcmOptions;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -39,153 +35,142 @@ public class Application {
                 .build();
 
             FcmProjectsMessagesSendRequest req = new FcmProjectsMessagesSendRequest() {{
-                security = new FcmProjectsMessagesSendSecurity() {{
-                    option1 = new FcmProjectsMessagesSendSecurityOption1() {{
-                        oauth2 = new SchemeOauth2() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                        oauth2c = new SchemeOauth2c() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                    }};
-                }};
-                pathParams = new FcmProjectsMessagesSendPathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new FcmProjectsMessagesSendQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new SendMessageRequest() {{
+                dollarXgafv = "2";
+                sendMessageRequest = new SendMessageRequest() {{
                     message = new Message() {{
                         android = new AndroidConfig() {{
-                            collapseKey = "suscipit";
+                            collapseKey = "provident";
                             data = new java.util.HashMap<String, String>() {{
-                                put("magnam", "debitis");
-                                put("ipsa", "delectus");
+                                put("quibusdam", "unde");
+                                put("nulla", "corrupti");
+                                put("illum", "vel");
                             }};
                             directBootOk = false;
                             fcmOptions = new AndroidFcmOptions() {{
-                                analyticsLabel = "tempora";
+                                analyticsLabel = "error";
                             }};
                             notification = new AndroidNotification() {{
-                                body = "suscipit";
+                                body = "deserunt";
                                 bodyLocArgs = new String[]{{
-                                    add("minus"),
-                                    add("placeat"),
+                                    add("iure"),
+                                    add("magnam"),
                                 }};
-                                bodyLocKey = "voluptatum";
+                                bodyLocKey = "debitis";
                                 bypassProxyNotification = false;
-                                channelId = "iusto";
-                                clickAction = "excepturi";
-                                color = "nisi";
+                                channelId = "ipsa";
+                                clickAction = "delectus";
+                                color = "tempora";
                                 defaultLightSettings = false;
                                 defaultSound = false;
                                 defaultVibrateTimings = false;
-                                eventTime = "recusandae";
-                                icon = "temporibus";
-                                image = "ab";
+                                eventTime = "suscipit";
+                                icon = "molestiae";
+                                image = "minus";
                                 lightSettings = new LightSettings() {{
                                     color = new Color() {{
-                                        alpha = 3373.96;
-                                        blue = 871.29;
-                                        green = 6481.72;
-                                        red = 202.18;
+                                        alpha = 8121.69;
+                                        blue = 5288.95;
+                                        green = 4799.77;
+                                        red = 5680.45;
                                     }};
-                                    lightOffDuration = "ipsam";
-                                    lightOnDuration = "repellendus";
+                                    lightOffDuration = "nisi";
+                                    lightOnDuration = "recusandae";
                                 }};
                                 localOnly = false;
-                                notificationCount = 957156;
-                                notificationPriority = "PRIORITY_HIGH";
-                                sound = "odit";
+                                notificationCount = 836079;
+                                notificationPriority = "PRIORITY_UNSPECIFIED";
+                                sound = "quis";
                                 sticky = false;
-                                tag = "at";
-                                ticker = "at";
-                                title = "Dr.";
+                                tag = "veritatis";
+                                ticker = "deserunt";
+                                title = "Mr.";
                                 titleLocArgs = new String[]{{
-                                    add("quod"),
-                                    add("quod"),
+                                    add("repellendus"),
+                                    add("sapiente"),
                                 }};
-                                titleLocKey = "esse";
+                                titleLocKey = "quo";
                                 vibrateTimings = new String[]{{
-                                    add("porro"),
-                                    add("dolorum"),
-                                    add("dicta"),
+                                    add("at"),
                                 }};
-                                visibility = "PUBLIC";
+                                visibility = "SECRET";
                             }};
                             priority = "HIGH";
-                            restrictedPackageName = "occaecati";
-                            ttl = "fugit";
+                            restrictedPackageName = "molestiae";
+                            ttl = "quod";
                         }};
                         apns = new ApnsConfig() {{
                             fcmOptions = new ApnsFcmOptions() {{
-                                analyticsLabel = "deleniti";
-                                image = "hic";
+                                analyticsLabel = "quod";
+                                image = "esse";
                             }};
                             headers = new java.util.HashMap<String, String>() {{
-                                put("totam", "beatae");
-                                put("commodi", "molestiae");
-                                put("modi", "qui");
-                                put("impedit", "cum");
+                                put("porro", "dolorum");
+                                put("dicta", "nam");
+                                put("officia", "occaecati");
                             }};
                             payload = new java.util.HashMap<String, Object>() {{
-                                put("ipsum", "excepturi");
-                                put("aspernatur", "perferendis");
+                                put("deleniti", "hic");
                             }};
                         }};
-                        condition = "ad";
+                        condition = "optio";
                         data = new java.util.HashMap<String, String>() {{
-                            put("sed", "iste");
-                            put("dolor", "natus");
-                            put("laboriosam", "hic");
+                            put("beatae", "commodi");
+                            put("molestiae", "modi");
+                            put("qui", "impedit");
                         }};
                         fcmOptions = new FcmOptions() {{
-                            analyticsLabel = "saepe";
+                            analyticsLabel = "cum";
                         }};
-                        name = "fuga";
+                        name = "esse";
                         notification = new Notification() {{
-                            body = "in";
-                            image = "corporis";
-                            title = "Miss";
+                            body = "ipsum";
+                            image = "excepturi";
+                            title = "Mr.";
                         }};
-                        token = "iure";
-                        topic = "saepe";
+                        token = "perferendis";
+                        topic = "ad";
                         webpush = new WebpushConfig() {{
                             data = new java.util.HashMap<String, String>() {{
+                                put("sed", "iste");
+                                put("dolor", "natus");
+                                put("laboriosam", "hic");
+                            }};
+                            fcmOptions = new WebpushFcmOptions() {{
+                                analyticsLabel = "saepe";
+                                link = "fuga";
+                            }};
+                            headers = new java.util.HashMap<String, String>() {{
+                                put("corporis", "iste");
+                                put("iure", "saepe");
+                            }};
+                            notification = new java.util.HashMap<String, Object>() {{
                                 put("architecto", "ipsa");
                                 put("reiciendis", "est");
                                 put("mollitia", "laborum");
-                            }};
-                            fcmOptions = new WebpushFcmOptions() {{
-                                analyticsLabel = "dolores";
-                                link = "dolorem";
-                            }};
-                            headers = new java.util.HashMap<String, String>() {{
-                                put("explicabo", "nobis");
-                                put("enim", "omnis");
-                            }};
-                            notification = new java.util.HashMap<String, Object>() {{
-                                put("minima", "excepturi");
-                                put("accusantium", "iure");
                             }};
                         }};
                     }};
                     validateOnly = false;
                 }};
-            }};            
+                accessToken = "dolores";
+                alt = "json";
+                callback = "corporis";
+                fields = "explicabo";
+                key = "nobis";
+                oauthToken = "enim";
+                parent = "omnis";
+                prettyPrint = false;
+                quotaUser = "nemo";
+                uploadType = "minima";
+                uploadProtocol = "excepturi";
+            }}            
 
-            FcmProjectsMessagesSendResponse res = sdk.projects.fcmProjectsMessagesSend(req);
+            FcmProjectsMessagesSendResponse res = sdk.projects.fcmProjectsMessagesSend(req, new FcmProjectsMessagesSendSecurity() {{
+                option1 = new FcmProjectsMessagesSendSecurityOption1() {{
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                }};
+            }});
 
             if (res.message.isPresent()) {
                 // handle response

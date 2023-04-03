@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoAddCollaboratorJsonRequest {
-    
-    public RepoAddCollaboratorJsonPathParams pathParams;
-    public RepoAddCollaboratorJsonRequest withPathParams(RepoAddCollaboratorJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.AddCollaboratorOption addCollaboratorOption;
+    public RepoAddCollaboratorJsonRequest withAddCollaboratorOption(org.openapis.openapi.models.shared.AddCollaboratorOption addCollaboratorOption) {
+        this.addCollaboratorOption = addCollaboratorOption;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AddCollaboratorOption request;
-    public RepoAddCollaboratorJsonRequest withRequest(org.openapis.openapi.models.shared.AddCollaboratorOption request) {
-        this.request = request;
+    /**
+     * username of the collaborator to add
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collaborator")
+    public String collaborator;
+    public RepoAddCollaboratorJsonRequest withCollaborator(String collaborator) {
+        this.collaborator = collaborator;
+        return this;
+    }
+    
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoAddCollaboratorJsonRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoAddCollaboratorJsonRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

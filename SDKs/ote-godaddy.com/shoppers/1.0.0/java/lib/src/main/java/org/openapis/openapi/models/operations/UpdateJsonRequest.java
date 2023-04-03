@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateJsonRequest {
-    
-    public UpdateJsonPathParams pathParams;
-    public UpdateJsonRequest withPathParams(UpdateJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The Shopper details to update
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ShopperUpdate request;
-    public UpdateJsonRequest withRequest(org.openapis.openapi.models.shared.ShopperUpdate request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ShopperUpdate shopperUpdate;
+    public UpdateJsonRequest withShopperUpdate(org.openapis.openapi.models.shared.ShopperUpdate shopperUpdate) {
+        this.shopperUpdate = shopperUpdate;
+        return this;
+    }
+    
+    /**
+     * The ID of the Shopper to update
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shopperId")
+    public String shopperId;
+    public UpdateJsonRequest withShopperId(String shopperId) {
+        this.shopperId = shopperId;
         return this;
     }
     

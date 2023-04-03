@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RenameVideoCollectionRequest {
-    
-    public RenameVideoCollectionPathParams pathParams;
-    public RenameVideoCollectionRequest withPathParams(RenameVideoCollectionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The new name for the collection
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CollectionUpdateRequest request;
-    public RenameVideoCollectionRequest withRequest(org.openapis.openapi.models.shared.CollectionUpdateRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CollectionUpdateRequest collectionUpdateRequest;
+    public RenameVideoCollectionRequest withCollectionUpdateRequest(org.openapis.openapi.models.shared.CollectionUpdateRequest collectionUpdateRequest) {
+        this.collectionUpdateRequest = collectionUpdateRequest;
         return this;
     }
     
-    
-    public RenameVideoCollectionSecurity security;
-    public RenameVideoCollectionRequest withSecurity(RenameVideoCollectionSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the collection to rename
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public RenameVideoCollectionRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

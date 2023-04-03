@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConvertRequest {
+    /**
+     * The type of the value to convert from (e.g. USD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from-type")
+    public String fromType;
+    public ConvertRequest withFromType(String fromType) {
+        this.fromType = fromType;
+        return this;
+    }
     
-    public ConvertQueryParams queryParams;
-    public ConvertRequest withQueryParams(ConvertQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The value to convert from (e.g. 10.95)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from-value")
+    public String fromValue;
+    public ConvertRequest withFromValue(String fromValue) {
+        this.fromValue = fromValue;
+        return this;
+    }
+    
+    /**
+     * The type to convert to (e.g. EUR)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to-type")
+    public String toType;
+    public ConvertRequest withToType(String toType) {
+        this.toType = toType;
         return this;
     }
     

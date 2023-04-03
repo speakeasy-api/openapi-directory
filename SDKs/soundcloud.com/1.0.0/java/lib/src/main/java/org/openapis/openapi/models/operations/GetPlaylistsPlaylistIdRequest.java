@@ -4,27 +4,37 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPlaylistsPlaylistIdRequest {
-    
-    public GetPlaylistsPlaylistIdPathParams pathParams;
-    public GetPlaylistsPlaylistIdRequest withPathParams(GetPlaylistsPlaylistIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filters content by level of access the user (logged in or anonymous) has to the track. The result list will include only tracks with the specified access. Include all options if you'd like to see all possible tracks. See `Track#access` schema for more details.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=access")
+    public org.openapis.openapi.models.shared.AccessEnum[] access;
+    public GetPlaylistsPlaylistIdRequest withAccess(org.openapis.openapi.models.shared.AccessEnum[] access) {
+        this.access = access;
         return this;
     }
     
-    
-    public GetPlaylistsPlaylistIdQueryParams queryParams;
-    public GetPlaylistsPlaylistIdRequest withQueryParams(GetPlaylistsPlaylistIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * SoundCloud playlist id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=playlist_id")
+    public Long playlistId;
+    public GetPlaylistsPlaylistIdRequest withPlaylistId(Long playlistId) {
+        this.playlistId = playlistId;
         return this;
     }
     
-    
-    public GetPlaylistsPlaylistIdSecurity security;
-    public GetPlaylistsPlaylistIdRequest withSecurity(GetPlaylistsPlaylistIdSecurity security) {
-        this.security = security;
+    /**
+     * A secret token to fetch private playlists/tracks
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=secret_token")
+    public String secretToken;
+    public GetPlaylistsPlaylistIdRequest withSecretToken(String secretToken) {
+        this.secretToken = secretToken;
         return this;
     }
     

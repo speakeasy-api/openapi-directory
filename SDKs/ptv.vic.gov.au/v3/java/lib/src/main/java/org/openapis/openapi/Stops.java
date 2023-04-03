@@ -38,13 +38,13 @@ public class Stops {
      */
     public org.openapis.openapi.models.operations.StopsStopDetailsResponse stopsStopDetails(org.openapis.openapi.models.operations.StopsStopDetailsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopsStopDetailsPathParams.class, baseUrl, "/v3/stops/{stop_id}/route_type/{route_type}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopsStopDetailsRequest.class, baseUrl, "/v3/stops/{stop_id}/route_type/{route_type}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StopsStopDetailsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StopsStopDetailsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -112,13 +112,13 @@ public class Stops {
      */
     public org.openapis.openapi.models.operations.StopsStopsByGeolocationResponse stopsStopsByGeolocation(org.openapis.openapi.models.operations.StopsStopsByGeolocationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopsStopsByGeolocationPathParams.class, baseUrl, "/v3/stops/location/{latitude},{longitude}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopsStopsByGeolocationRequest.class, baseUrl, "/v3/stops/location/{latitude},{longitude}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StopsStopsByGeolocationQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StopsStopsByGeolocationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -186,13 +186,13 @@ public class Stops {
      */
     public org.openapis.openapi.models.operations.StopsStopsForRouteResponse stopsStopsForRoute(org.openapis.openapi.models.operations.StopsStopsForRouteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopsStopsForRoutePathParams.class, baseUrl, "/v3/stops/route/{route_id}/route_type/{route_type}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopsStopsForRouteRequest.class, baseUrl, "/v3/stops/route/{route_id}/route_type/{route_type}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StopsStopsForRouteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StopsStopsForRouteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

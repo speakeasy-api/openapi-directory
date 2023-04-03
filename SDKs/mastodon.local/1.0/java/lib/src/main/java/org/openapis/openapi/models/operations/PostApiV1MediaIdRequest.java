@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostApiV1MediaIdRequest {
-    
-    public PostApiV1MediaIdPathParams pathParams;
-    public PostApiV1MediaIdRequest withPathParams(PostApiV1MediaIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/form-data")
-    public byte[] request;
-    public PostApiV1MediaIdRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public PostApiV1MediaIdRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public PostApiV1MediaIdSecurity security;
-    public PostApiV1MediaIdRequest withSecurity(PostApiV1MediaIdSecurity security) {
-        this.security = security;
+    /**
+     * The id of the Attachment entity to be updated.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostApiV1MediaIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

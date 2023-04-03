@@ -37,10 +37,11 @@ public class Generate {
      * Generate a token
      * Generates a new visitor identification token. This token will be unique every time this endpoint is called, even if called with the same email address. This token is temporary and will expire after 12 hours
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostVisitorIdentificationV3TokensCreateGenerateTokenResponse postVisitorIdentificationV3TokensCreateGenerateToken(org.openapis.openapi.models.operations.PostVisitorIdentificationV3TokensCreateGenerateTokenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostVisitorIdentificationV3TokensCreateGenerateTokenResponse postVisitorIdentificationV3TokensCreateGenerateToken(org.openapis.openapi.models.shared.IdentificationTokenGenerationRequest request, org.openapis.openapi.models.operations.PostVisitorIdentificationV3TokensCreateGenerateTokenSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/conversations/v3/visitor-identification/tokens/create");
         
@@ -54,7 +55,7 @@ public class Generate {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

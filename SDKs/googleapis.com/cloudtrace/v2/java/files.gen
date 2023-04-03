@@ -33,17 +33,14 @@ settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/CloudtraceProjectsTracesBatchWriteSecurityOption1.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudtraceProjectsTracesBatchWriteSecurityOption2.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudtraceProjectsTracesBatchWriteSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/CloudtraceProjectsTracesBatchWritePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/CloudtraceProjectsTracesBatchWriteQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudtraceProjectsTracesBatchWriteRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudtraceProjectsTracesBatchWriteResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudtraceProjectsTracesSpansCreateSpanSecurityOption1.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudtraceProjectsTracesSpansCreateSpanSecurityOption2.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudtraceProjectsTracesSpansCreateSpanSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/CloudtraceProjectsTracesSpansCreateSpanPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/CloudtraceProjectsTracesSpansCreateSpanQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudtraceProjectsTracesSpansCreateSpanRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudtraceProjectsTracesSpansCreateSpanResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/BatchWriteSpansRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/SpanSpanKindEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Span.java
@@ -63,8 +60,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/Module.java
 lib/src/main/java/org/openapis/openapi/models/shared/Links.java
 lib/src/main/java/org/openapis/openapi/models/shared/LinkTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Link.java
-lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2c.java
 USAGE.md

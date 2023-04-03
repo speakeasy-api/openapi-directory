@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchCompaniesCompanyIdApiCredentialsApiCredentialIdRequest {
-    
-    public PatchCompaniesCompanyIdApiCredentialsApiCredentialIdPathParams pathParams;
-    public PatchCompaniesCompanyIdApiCredentialsApiCredentialIdRequest withPathParams(PatchCompaniesCompanyIdApiCredentialsApiCredentialIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateCompanyApiCredentialRequest request;
-    public PatchCompaniesCompanyIdApiCredentialsApiCredentialIdRequest withRequest(org.openapis.openapi.models.shared.UpdateCompanyApiCredentialRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateCompanyApiCredentialRequest updateCompanyApiCredentialRequest;
+    public PatchCompaniesCompanyIdApiCredentialsApiCredentialIdRequest withUpdateCompanyApiCredentialRequest(org.openapis.openapi.models.shared.UpdateCompanyApiCredentialRequest updateCompanyApiCredentialRequest) {
+        this.updateCompanyApiCredentialRequest = updateCompanyApiCredentialRequest;
         return this;
     }
     
+    /**
+     * Unique identifier of the API credential.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiCredentialId")
+    public String apiCredentialId;
+    public PatchCompaniesCompanyIdApiCredentialsApiCredentialIdRequest withApiCredentialId(String apiCredentialId) {
+        this.apiCredentialId = apiCredentialId;
+        return this;
+    }
     
-    public PatchCompaniesCompanyIdApiCredentialsApiCredentialIdSecurity security;
-    public PatchCompaniesCompanyIdApiCredentialsApiCredentialIdRequest withSecurity(PatchCompaniesCompanyIdApiCredentialsApiCredentialIdSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the company account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public PatchCompaniesCompanyIdApiCredentialsApiCredentialIdRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
         return this;
     }
     

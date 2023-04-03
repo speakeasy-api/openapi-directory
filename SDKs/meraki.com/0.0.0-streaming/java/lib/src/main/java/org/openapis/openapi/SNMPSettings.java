@@ -39,7 +39,7 @@ public class SNMPSettings {
      */
     public org.openapis.openapi.models.operations.GetNetworkSnmpSettingsResponse getNetworkSnmpSettings(org.openapis.openapi.models.operations.GetNetworkSnmpSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSnmpSettingsPathParams.class, baseUrl, "/networks/{networkId}/snmpSettings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSnmpSettingsRequest.class, baseUrl, "/networks/{networkId}/snmpSettings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -79,7 +79,7 @@ public class SNMPSettings {
      */
     public org.openapis.openapi.models.operations.GetOrganizationSnmpResponse getOrganizationSnmp(org.openapis.openapi.models.operations.GetOrganizationSnmpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSnmpPathParams.class, baseUrl, "/organizations/{organizationId}/snmp", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSnmpRequest.class, baseUrl, "/organizations/{organizationId}/snmp", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

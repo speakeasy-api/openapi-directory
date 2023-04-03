@@ -48,7 +48,7 @@ public class Calls {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV2ActivitiesCallsJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV2ActivitiesCallsJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -87,7 +87,7 @@ public class Calls {
      */
     public org.openapis.openapi.models.operations.GetV2ActivitiesCallsIdJsonResponse getV2ActivitiesCallsIdJson(org.openapis.openapi.models.operations.GetV2ActivitiesCallsIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2ActivitiesCallsIdJsonPathParams.class, baseUrl, "/v2/activities/calls/{id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2ActivitiesCallsIdJsonRequest.class, baseUrl, "/v2/activities/calls/{id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -125,7 +125,7 @@ public class Calls {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV2ActivitiesCallsJsonResponse postV2ActivitiesCallsJson(org.openapis.openapi.models.operations.PostV2ActivitiesCallsJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV2ActivitiesCallsJsonResponse postV2ActivitiesCallsJson(org.openapis.openapi.models.operations.PostV2ActivitiesCallsJsonRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/activities/calls.json");
         

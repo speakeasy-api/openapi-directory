@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPirateGenerateInsultRequest {
-    
-    public GetPirateGenerateInsultQueryParams queryParams;
-    public GetPirateGenerateInsultRequest withQueryParams(GetPirateGenerateInsultQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetPirateGenerateInsultSecurity security;
-    public GetPirateGenerateInsultRequest withSecurity(GetPirateGenerateInsultSecurity security) {
-        this.security = security;
+    /**
+     * No of insults to generate
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetPirateGenerateInsultRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     

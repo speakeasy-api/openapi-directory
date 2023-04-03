@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSetupV1ServicesRequest {
+    /**
+     * Filter by deleted status
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deleted")
+    public Boolean deleted;
+    public GetSetupV1ServicesRequest withDeleted(Boolean deleted) {
+        this.deleted = deleted;
+        return this;
+    }
     
-    public GetSetupV1ServicesQueryParams queryParams;
-    public GetSetupV1ServicesRequest withQueryParams(GetSetupV1ServicesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page limit default 20, max 100
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetSetupV1ServicesRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * id of business location, defaults to primary business location
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locationId")
+    public String locationId;
+    public GetSetupV1ServicesRequest withLocationId(String locationId) {
+        this.locationId = locationId;
+        return this;
+    }
+    
+    /**
+     * Starting row of page, default 0
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public GetSetupV1ServicesRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Filter services by groupId
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceGroupId")
+    public Integer serviceGroupId;
+    public GetSetupV1ServicesRequest withServiceGroupId(Integer serviceGroupId) {
+        this.serviceGroupId = serviceGroupId;
         return this;
     }
     

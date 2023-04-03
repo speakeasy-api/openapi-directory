@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSshKeysRequest {
+    /**
+     * Can be used to filter SSH keys by their fingerprint. The response will only contain the SSH key matching the specified fingerprint.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fingerprint")
+    public String fingerprint;
+    public GetSshKeysRequest withFingerprint(String fingerprint) {
+        this.fingerprint = fingerprint;
+        return this;
+    }
     
-    public GetSshKeysQueryParams queryParams;
-    public GetSshKeysRequest withQueryParams(GetSshKeysQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Can be used to filter resources by labels. The response will only contain resources matching the label selector.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=label_selector")
+    public String labelSelector;
+    public GetSshKeysRequest withLabelSelector(String labelSelector) {
+        this.labelSelector = labelSelector;
+        return this;
+    }
+    
+    /**
+     * Can be used to filter resources by their name. The response will only contain the resources matching the specified name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public GetSshKeysRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Can be used multiple times.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetSshKeysSortEnum sort;
+    public GetSshKeysRequest withSort(GetSshKeysSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

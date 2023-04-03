@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AddDraftAppVersionResourceMappingsHeaders;
 import org.openapis.openapi.models.operations.AddDraftAppVersionResourceMappingsRequestBody;
 import org.openapis.openapi.models.operations.AddDraftAppVersionResourceMappingsRequest;
 import org.openapis.openapi.models.operations.AddDraftAppVersionResourceMappingsResponse;
@@ -18,58 +17,69 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AddDraftAppVersionResourceMappingsRequest req = new AddDraftAppVersionResourceMappingsRequest() {{
-                headers = new AddDraftAppVersionResourceMappingsHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new AddDraftAppVersionResourceMappingsRequestBody() {{
-                    appArn = "illum";
+                requestBody = new AddDraftAppVersionResourceMappingsRequestBody() {{
+                    appArn = "corrupti";
                     resourceMappings = new org.openapis.openapi.models.shared.ResourceMapping[]{{
                         add(new ResourceMapping() {{
-                            appRegistryAppName = "error";
-                            eksSourceName = "deserunt";
-                            logicalStackName = "suscipit";
-                            mappingType = "AppRegistryApp";
+                            appRegistryAppName = "distinctio";
+                            eksSourceName = "quibusdam";
+                            logicalStackName = "unde";
+                            mappingType = "EKS";
                             physicalResourceId = new PhysicalResourceId() {{
-                                awsAccountId = "magnam";
-                                awsRegion = "debitis";
-                                identifier = "ipsa";
+                                awsAccountId = "corrupti";
+                                awsRegion = "illum";
+                                identifier = "vel";
                                 type = "Native";
                             }};
-                            resourceGroupName = "tempora";
+                            resourceGroupName = "deserunt";
                             resourceName = "suscipit";
-                            terraformSourceName = "molestiae";
+                            terraformSourceName = "iure";
                         }}),
                         add(new ResourceMapping() {{
-                            appRegistryAppName = "minus";
-                            eksSourceName = "placeat";
-                            logicalStackName = "voluptatum";
-                            mappingType = "AppRegistryApp";
+                            appRegistryAppName = "magnam";
+                            eksSourceName = "debitis";
+                            logicalStackName = "ipsa";
+                            mappingType = "EKS";
                             physicalResourceId = new PhysicalResourceId() {{
-                                awsAccountId = "excepturi";
-                                awsRegion = "nisi";
-                                identifier = "recusandae";
+                                awsAccountId = "tempora";
+                                awsRegion = "suscipit";
+                                identifier = "molestiae";
                                 type = "Native";
                             }};
-                            resourceGroupName = "ab";
-                            resourceName = "quis";
-                            terraformSourceName = "veritatis";
+                            resourceGroupName = "placeat";
+                            resourceName = "voluptatum";
+                            terraformSourceName = "iusto";
+                        }}),
+                        add(new ResourceMapping() {{
+                            appRegistryAppName = "excepturi";
+                            eksSourceName = "nisi";
+                            logicalStackName = "recusandae";
+                            mappingType = "EKS";
+                            physicalResourceId = new PhysicalResourceId() {{
+                                awsAccountId = "ab";
+                                awsRegion = "quis";
+                                identifier = "veritatis";
+                                type = "Native";
+                            }};
+                            resourceGroupName = "perferendis";
+                            resourceName = "ipsam";
+                            terraformSourceName = "repellendus";
                         }}),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "sapiente";
+                xAmzContentSha256 = "quo";
+                xAmzCredential = "odit";
+                xAmzDate = "at";
+                xAmzSecurityToken = "at";
+                xAmzSignature = "maiores";
+                xAmzSignedHeaders = "molestiae";
+            }}            
 
             AddDraftAppVersionResourceMappingsResponse res = sdk.addDraftAppVersionResourceMappings(req);
 

@@ -4,34 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListInsightsConversationsRequest {
-    
-    public ListInsightsConversationsQueryParams queryParams;
-    public ListInsightsConversationsRequest withQueryParams(ListInsightsConversationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListInsightsConversationsRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListInsightsConversationsHeaders headers;
-    public ListInsightsConversationsRequest withHeaders(ListInsightsConversationsHeaders headers) {
-        this.headers = headers;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListInsightsConversationsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
-    
-    public ListInsightsConversationsSecurity security;
-    public ListInsightsConversationsRequest withSecurity(ListInsightsConversationsSecurity security) {
-        this.security = security;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListInsightsConversationsRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     
+    /**
+     * Unique Id of the segment for which conversation details needs to be fetched
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SegmentId")
+    public String segmentId;
+    public ListInsightsConversationsRequest withSegmentId(String segmentId) {
+        this.segmentId = segmentId;
+        return this;
+    }
     
-    public String serverURL;
-    public ListInsightsConversationsRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Token HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Token")
+    public String token;
+    public ListInsightsConversationsRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

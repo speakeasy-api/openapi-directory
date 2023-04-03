@@ -30,10 +30,8 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/VectortileTerraintilesGetPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/VectortileTerraintilesGetClientInfoPlatformEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/VectortileTerraintilesGetTerrainFormatsEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/VectortileTerraintilesGetQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/VectortileTerraintilesGetRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/VectortileTerraintilesGetResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/TerrainTile.java

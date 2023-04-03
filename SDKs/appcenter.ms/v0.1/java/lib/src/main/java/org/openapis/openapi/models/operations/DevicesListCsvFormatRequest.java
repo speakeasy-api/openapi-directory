@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DevicesListCsvFormatRequest {
-    
-    public DevicesListCsvFormatPathParams pathParams;
-    public DevicesListCsvFormatRequest withPathParams(DevicesListCsvFormatPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public DevicesListCsvFormatRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public DevicesListCsvFormatQueryParams queryParams;
-    public DevicesListCsvFormatRequest withQueryParams(DevicesListCsvFormatQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The name of the distribution group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=distribution_group_name")
+    public String distributionGroupName;
+    public DevicesListCsvFormatRequest withDistributionGroupName(String distributionGroupName) {
+        this.distributionGroupName = distributionGroupName;
         return this;
     }
     
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public DevicesListCsvFormatRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
     
-    public DevicesListCsvFormatSecurity security;
-    public DevicesListCsvFormatRequest withSecurity(DevicesListCsvFormatSecurity security) {
-        this.security = security;
+    /**
+     * multiple UDIDs which should be part of the resulting CSV.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=udids")
+    public String[] udids;
+    public DevicesListCsvFormatRequest withUdids(String[] udids) {
+        this.udids = udids;
+        return this;
+    }
+    
+    /**
+     * when true, filters out provisioned devices
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unprovisioned_only")
+    public Boolean unprovisionedOnly;
+    public DevicesListCsvFormatRequest withUnprovisionedOnly(Boolean unprovisionedOnly) {
+        this.unprovisionedOnly = unprovisionedOnly;
         return this;
     }
     

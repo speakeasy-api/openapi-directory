@@ -39,7 +39,7 @@ public class SubUser {
      */
     public org.openapis.openapi.models.operations.SubUserDeleteResponse subUserDelete(org.openapis.openapi.models.operations.SubUserDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubUserDeletePathParams.class, baseUrl, "/api/SubUser/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubUserDeleteRequest.class, baseUrl, "/api/SubUser/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -71,7 +71,7 @@ public class SubUser {
      */
     public org.openapis.openapi.models.operations.SubUserGetResponse subUserGet(org.openapis.openapi.models.operations.SubUserGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubUserGetPathParams.class, baseUrl, "/api/SubUser/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubUserGetRequest.class, baseUrl, "/api/SubUser/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -123,7 +123,7 @@ public class SubUser {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SubUserPostFormResponse subUserPostForm(org.openapis.openapi.models.operations.SubUserPostFormRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SubUserPostFormResponse subUserPostForm(org.openapis.openapi.models.shared.SubUserData request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/SubUser");
         
@@ -160,7 +160,7 @@ public class SubUser {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SubUserPostJsonResponse subUserPostJson(org.openapis.openapi.models.operations.SubUserPostJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SubUserPostJsonResponse subUserPostJson(org.openapis.openapi.models.shared.SubUserData request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/SubUser");
         
@@ -197,7 +197,7 @@ public class SubUser {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SubUserPostRawResponse subUserPostRaw(org.openapis.openapi.models.operations.SubUserPostRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SubUserPostRawResponse subUserPostRaw(byte[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/SubUser");
         

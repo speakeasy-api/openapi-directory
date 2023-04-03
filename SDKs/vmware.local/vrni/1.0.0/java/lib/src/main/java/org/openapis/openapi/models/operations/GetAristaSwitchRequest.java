@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAristaSwitchRequest {
-    
-    public GetAristaSwitchPathParams pathParams;
-    public GetAristaSwitchRequest withPathParams(GetAristaSwitchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetAristaSwitchSecurity security;
-    public GetAristaSwitchRequest withSecurity(GetAristaSwitchSecurity security) {
-        this.security = security;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetAristaSwitchRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

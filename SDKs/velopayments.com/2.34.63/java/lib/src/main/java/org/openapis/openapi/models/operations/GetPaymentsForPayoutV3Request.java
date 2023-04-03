@@ -4,20 +4,105 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPaymentsForPayoutV3Request {
-    
-    public GetPaymentsForPayoutV3PathParams pathParams;
-    public GetPaymentsForPayoutV3Request withPathParams(GetPaymentsForPayoutV3PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Page number. Default is 1.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetPaymentsForPayoutV3Request withPage(Integer page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * The number of results to return in a page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public GetPaymentsForPayoutV3Request withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public GetPaymentsForPayoutV3QueryParams queryParams;
-    public GetPaymentsForPayoutV3Request withQueryParams(GetPaymentsForPayoutV3QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Payment Memo of the Payment
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paymentMemo")
+    public String paymentMemo;
+    public GetPaymentsForPayoutV3Request withPaymentMemo(String paymentMemo) {
+        this.paymentMemo = paymentMemo;
+        return this;
+    }
+    
+    /**
+     * Payor's Id of the Payment
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=payorPaymentId")
+    public String payorPaymentId;
+    public GetPaymentsForPayoutV3Request withPayorPaymentId(String payorPaymentId) {
+        this.payorPaymentId = payorPaymentId;
+        return this;
+    }
+    
+    /**
+     * Id of the payout
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payoutId")
+    public String payoutId;
+    public GetPaymentsForPayoutV3Request withPayoutId(String payoutId) {
+        this.payoutId = payoutId;
+        return this;
+    }
+    
+    /**
+     * The remote id of the payees.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=remoteId")
+    public String remoteId;
+    public GetPaymentsForPayoutV3Request withRemoteId(String remoteId) {
+        this.remoteId = remoteId;
+        return this;
+    }
+    
+    /**
+     * Physical Account Name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sourceAccountName")
+    public String sourceAccountName;
+    public GetPaymentsForPayoutV3Request withSourceAccountName(String sourceAccountName) {
+        this.sourceAccountName = sourceAccountName;
+        return this;
+    }
+    
+    /**
+     * Payment Status
+     * * ACCEPTED: any payment which was accepted at submission time (status may have changed since)
+     * * REJECTED: any payment rejected by initial submission processing
+     * * WITHDRAWN: any payment which has been withdrawn
+     * * WITHDRAWABLE: any payment eligible for withdrawal
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public GetPaymentsForPayoutV3StatusEnum status;
+    public GetPaymentsForPayoutV3Request withStatus(GetPaymentsForPayoutV3StatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * Transmission Type
+     * * ACH
+     * * SAME_DAY_ACH
+     * * WIRE
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=transmissionType")
+    public GetPaymentsForPayoutV3TransmissionTypeEnum transmissionType;
+    public GetPaymentsForPayoutV3Request withTransmissionType(GetPaymentsForPayoutV3TransmissionTypeEnum transmissionType) {
+        this.transmissionType = transmissionType;
         return this;
     }
     

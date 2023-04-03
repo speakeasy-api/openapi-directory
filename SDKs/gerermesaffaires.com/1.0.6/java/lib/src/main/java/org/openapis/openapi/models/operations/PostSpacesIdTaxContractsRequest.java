@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesIdTaxContractsRequest {
-    
-    public PostSpacesIdTaxContractsPathParams pathParams;
-    public PostSpacesIdTaxContractsRequest withPathParams(PostSpacesIdTaxContractsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Tax contract to add
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostSpacesIdTaxContractsRequestBody request;
-    public PostSpacesIdTaxContractsRequest withRequest(PostSpacesIdTaxContractsRequestBody request) {
-        this.request = request;
+    public PostSpacesIdTaxContractsRequestBody requestBody;
+    public PostSpacesIdTaxContractsRequest withRequestBody(PostSpacesIdTaxContractsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public PostSpacesIdTaxContractsSecurity security;
-    public PostSpacesIdTaxContractsRequest withSecurity(PostSpacesIdTaxContractsSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSpacesIdTaxContractsRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

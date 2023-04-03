@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestListOfEventTypesForTenantRequest {
-    
-    public RequestListOfEventTypesForTenantHeaders headers;
-    public RequestListOfEventTypesForTenantRequest withHeaders(RequestListOfEventTypesForTenantHeaders headers) {
-        this.headers = headers;
+    /**
+     * Service Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Service-Token")
+    public String xSdsServiceToken;
+    public RequestListOfEventTypesForTenantRequest withXSdsServiceToken(String xSdsServiceToken) {
+        this.xSdsServiceToken = xSdsServiceToken;
         return this;
     }
     

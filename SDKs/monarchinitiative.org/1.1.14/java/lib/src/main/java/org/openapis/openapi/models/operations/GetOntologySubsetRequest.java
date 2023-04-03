@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOntologySubsetRequest {
-    
-    public GetOntologySubsetPathParams pathParams;
-    public GetOntologySubsetRequest withPathParams(GetOntologySubsetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * name of a slim subset, e.g. goslim_agr, goslim_generic
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetOntologySubsetRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

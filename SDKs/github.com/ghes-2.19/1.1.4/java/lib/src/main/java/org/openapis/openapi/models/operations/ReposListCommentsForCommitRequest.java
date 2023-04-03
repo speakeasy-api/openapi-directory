@@ -4,20 +4,50 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposListCommentsForCommitRequest {
-    
-    public ReposListCommentsForCommitPathParams pathParams;
-    public ReposListCommentsForCommitRequest withPathParams(ReposListCommentsForCommitPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * commit_sha parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commit_sha")
+    public String commitSha;
+    public ReposListCommentsForCommitRequest withCommitSha(String commitSha) {
+        this.commitSha = commitSha;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposListCommentsForCommitRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public ReposListCommentsForCommitQueryParams queryParams;
-    public ReposListCommentsForCommitRequest withQueryParams(ReposListCommentsForCommitQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ReposListCommentsForCommitRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ReposListCommentsForCommitRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposListCommentsForCommitRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

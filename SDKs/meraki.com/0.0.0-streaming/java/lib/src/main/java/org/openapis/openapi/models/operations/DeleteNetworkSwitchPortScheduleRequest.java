@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteNetworkSwitchPortScheduleRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public DeleteNetworkSwitchPortScheduleRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
     
-    public DeleteNetworkSwitchPortSchedulePathParams pathParams;
-    public DeleteNetworkSwitchPortScheduleRequest withPathParams(DeleteNetworkSwitchPortSchedulePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=portScheduleId")
+    public String portScheduleId;
+    public DeleteNetworkSwitchPortScheduleRequest withPortScheduleId(String portScheduleId) {
+        this.portScheduleId = portScheduleId;
         return this;
     }
     

@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TagsPatchGroupRawRequest {
-    
-    public TagsPatchGroupRawPathParams pathParams;
-    public TagsPatchGroupRawRequest withPathParams(TagsPatchGroupRawPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The body patch
      */
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public TagsPatchGroupRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public TagsPatchGroupRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Id of the tag
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tagId")
+    public Long tagId;
+    public TagsPatchGroupRawRequest withTagId(Long tagId) {
+        this.tagId = tagId;
         return this;
     }
     

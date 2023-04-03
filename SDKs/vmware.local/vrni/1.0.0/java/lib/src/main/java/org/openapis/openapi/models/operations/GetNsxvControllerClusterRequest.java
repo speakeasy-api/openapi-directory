@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNsxvControllerClusterRequest {
-    
-    public GetNsxvControllerClusterPathParams pathParams;
-    public GetNsxvControllerClusterRequest withPathParams(GetNsxvControllerClusterPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetNsxvControllerClusterSecurity security;
-    public GetNsxvControllerClusterRequest withSecurity(GetNsxvControllerClusterSecurity security) {
-        this.security = security;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetNsxvControllerClusterRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

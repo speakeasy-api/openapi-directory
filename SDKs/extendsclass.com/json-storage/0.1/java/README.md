@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.DeleteBinIdPathParams;
 import org.openapis.openapi.models.operations.DeleteBinIdRequest;
 import org.openapis.openapi.models.operations.DeleteBinIdResponse;
 
@@ -28,10 +27,8 @@ public class Application {
                 .build();
 
             DeleteBinIdRequest req = new DeleteBinIdRequest() {{
-                pathParams = new DeleteBinIdPathParams() {{
-                    id = "corrupti";
-                }};
-            }};            
+                id = "corrupti";
+            }}            
 
             DeleteBinIdResponse res = sdk.deleteBinId(req);
 
@@ -45,7 +42,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

@@ -4,34 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListInsightsQuestionnairesQuestionRequest {
-    
-    public ListInsightsQuestionnairesQuestionQueryParams queryParams;
-    public ListInsightsQuestionnairesQuestionRequest withQueryParams(ListInsightsQuestionnairesQuestionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The list of category IDs
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CategoryId")
+    public String[] categoryId;
+    public ListInsightsQuestionnairesQuestionRequest withCategoryId(String[] categoryId) {
+        this.categoryId = categoryId;
         return this;
     }
     
-    
-    public ListInsightsQuestionnairesQuestionHeaders headers;
-    public ListInsightsQuestionnairesQuestionRequest withHeaders(ListInsightsQuestionnairesQuestionHeaders headers) {
-        this.headers = headers;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListInsightsQuestionnairesQuestionRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListInsightsQuestionnairesQuestionSecurity security;
-    public ListInsightsQuestionnairesQuestionRequest withSecurity(ListInsightsQuestionnairesQuestionSecurity security) {
-        this.security = security;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListInsightsQuestionnairesQuestionRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListInsightsQuestionnairesQuestionRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
     
-    public String serverURL;
-    public ListInsightsQuestionnairesQuestionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Token HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Token")
+    public String token;
+    public ListInsightsQuestionnairesQuestionRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

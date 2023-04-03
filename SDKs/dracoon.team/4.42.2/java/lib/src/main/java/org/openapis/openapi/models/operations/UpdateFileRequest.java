@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateFileRequest {
-    
-    public UpdateFilePathParams pathParams;
-    public UpdateFileRequest withPathParams(UpdateFilePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateFileHeaders headers;
-    public UpdateFileRequest withHeaders(UpdateFileHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateFileRequest request;
-    public UpdateFileRequest withRequest(org.openapis.openapi.models.shared.UpdateFileRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateFileRequest updateFileRequest;
+    public UpdateFileRequest withUpdateFileRequest(org.openapis.openapi.models.shared.UpdateFileRequest updateFileRequest) {
+        this.updateFileRequest = updateFileRequest;
+        return this;
+    }
+    
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public UpdateFileRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
+        return this;
+    }
+    
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public UpdateFileXSdsDateFormatEnum xSdsDateFormat;
+    public UpdateFileRequest withXSdsDateFormat(UpdateFileXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
+        return this;
+    }
+    
+    /**
+     * File ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=file_id")
+    public Long fileId;
+    public UpdateFileRequest withFileId(Long fileId) {
+        this.fileId = fileId;
         return this;
     }
     

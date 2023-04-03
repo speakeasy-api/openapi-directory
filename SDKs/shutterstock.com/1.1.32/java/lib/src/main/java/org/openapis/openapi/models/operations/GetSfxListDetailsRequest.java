@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSfxListDetailsRequest {
-    
-    public GetSfxListDetailsQueryParams queryParams;
-    public GetSfxListDetailsRequest withQueryParams(GetSfxListDetailsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * One or more sound effect IDs
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String[] id;
+    public GetSfxListDetailsRequest withId(String[] id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * Language for the keywords and categories in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public org.openapis.openapi.models.shared.LanguageEnum language;
+    public GetSfxListDetailsRequest withLanguage(org.openapis.openapi.models.shared.LanguageEnum language) {
+        this.language = language;
+        return this;
+    }
     
-    public GetSfxListDetailsSecurity security;
-    public GetSfxListDetailsRequest withSecurity(GetSfxListDetailsSecurity security) {
-        this.security = security;
+    /**
+     * Which library to fetch from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=library")
+    public GetSfxListDetailsLibraryEnum library;
+    public GetSfxListDetailsRequest withLibrary(GetSfxListDetailsLibraryEnum library) {
+        this.library = library;
+        return this;
+    }
+    
+    /**
+     * The ID of the search that is related to this request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_id")
+    public String searchId;
+    public GetSfxListDetailsRequest withSearchId(String searchId) {
+        this.searchId = searchId;
+        return this;
+    }
+    
+    /**
+     * Amount of detail to render in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
+    public GetSfxListDetailsViewEnum view;
+    public GetSfxListDetailsRequest withView(GetSfxListDetailsViewEnum view) {
+        this.view = view;
         return this;
     }
     

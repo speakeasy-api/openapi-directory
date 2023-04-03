@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BookingAvailabilityDatesRequest {
-    
-    public BookingAvailabilityDatesQueryParams queryParams;
-    public BookingAvailabilityDatesRequest withQueryParams(BookingAvailabilityDatesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public BookingAvailabilityDatesRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
-    
-    public BookingAvailabilityDatesHeaders headers;
-    public BookingAvailabilityDatesRequest withHeaders(BookingAvailabilityDatesHeaders headers) {
-        this.headers = headers;
+    /**
+     * **unique alphanumeric identifier** of the product
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=productCode")
+    public String productCode;
+    public BookingAvailabilityDatesRequest withProductCode(String productCode) {
+        this.productCode = productCode;
         return this;
     }
     

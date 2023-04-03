@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBasicPatientDetailsRequest {
-    
-    public GetBasicPatientDetailsPathParams pathParams;
-    public GetBasicPatientDetailsRequest withPathParams(GetBasicPatientDetailsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * userId
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public Long userId;
+    public GetBasicPatientDetailsRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

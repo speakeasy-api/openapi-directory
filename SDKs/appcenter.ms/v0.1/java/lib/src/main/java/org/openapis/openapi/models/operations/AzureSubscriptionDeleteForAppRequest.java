@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AzureSubscriptionDeleteForAppRequest {
-    
-    public AzureSubscriptionDeleteForAppPathParams pathParams;
-    public AzureSubscriptionDeleteForAppRequest withPathParams(AzureSubscriptionDeleteForAppPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public AzureSubscriptionDeleteForAppRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * The unique ID (UUID) of the azure subscription
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=azure_subscription_id")
+    public String azureSubscriptionId;
+    public AzureSubscriptionDeleteForAppRequest withAzureSubscriptionId(String azureSubscriptionId) {
+        this.azureSubscriptionId = azureSubscriptionId;
+        return this;
+    }
     
-    public AzureSubscriptionDeleteForAppSecurity security;
-    public AzureSubscriptionDeleteForAppRequest withSecurity(AzureSubscriptionDeleteForAppSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public AzureSubscriptionDeleteForAppRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

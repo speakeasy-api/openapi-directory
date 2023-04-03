@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestnetGetBlockRequest {
-    
-    public TestnetGetBlockPathParams pathParams;
-    public TestnetGetBlockRequest withPathParams(TestnetGetBlockPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Block Hash
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=blockhash")
+    public String blockhash;
+    public TestnetGetBlockRequest withBlockhash(String blockhash) {
+        this.blockhash = blockhash;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetChannelCatalogExportationHistoryRequest {
-    
-    public GetChannelCatalogExportationHistoryPathParams pathParams;
-    public GetChannelCatalogExportationHistoryRequest withPathParams(GetChannelCatalogExportationHistoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The channel catalog identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelCatalogId")
+    public String channelCatalogId;
+    public GetChannelCatalogExportationHistoryRequest withChannelCatalogId(String channelCatalogId) {
+        this.channelCatalogId = channelCatalogId;
         return this;
     }
     
+    /**
+     * The page number you want to get
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
+    public Integer pageNumber;
+    public GetChannelCatalogExportationHistoryRequest withPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
     
-    public GetChannelCatalogExportationHistoryQueryParams queryParams;
-    public GetChannelCatalogExportationHistoryRequest withQueryParams(GetChannelCatalogExportationHistoryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The entry count you want to get
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public GetChannelCatalogExportationHistoryRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

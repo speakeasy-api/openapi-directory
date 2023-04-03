@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesSpaceIdLegalEntitiesIdLoansSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeGmaAuth gmaAuth;
-    public PostSpacesSpaceIdLegalEntitiesIdLoansSecurity withGmaAuth(org.openapis.openapi.models.shared.SchemeGmaAuth gmaAuth) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String gmaAuth;
+    public PostSpacesSpaceIdLegalEntitiesIdLoansSecurity withGmaAuth(String gmaAuth) {
         this.gmaAuth = gmaAuth;
         return this;
     }

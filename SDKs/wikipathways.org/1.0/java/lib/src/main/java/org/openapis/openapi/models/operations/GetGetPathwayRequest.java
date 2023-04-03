@@ -4,13 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGetPathwayRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public GetGetPathwayFormatEnum format;
+    public GetGetPathwayRequest withFormat(GetGetPathwayFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public GetGetPathwayQueryParams queryParams;
-    public GetGetPathwayRequest withQueryParams(GetGetPathwayQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The pathway identifier
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pwId")
+    public String pwId;
+    public GetGetPathwayRequest withPwId(String pwId) {
+        this.pwId = pwId;
+        return this;
+    }
+    
+    /**
+     * The revision number of the pathway (use 0 for most recent)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=revision")
+    public Long revision;
+    public GetGetPathwayRequest withRevision(Long revision) {
+        this.revision = revision;
         return this;
     }
     

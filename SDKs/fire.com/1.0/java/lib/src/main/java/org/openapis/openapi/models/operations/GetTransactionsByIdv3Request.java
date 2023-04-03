@@ -4,20 +4,41 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTransactionsByIdv3Request {
-    
-    public GetTransactionsByIdv3PathParams pathParams;
-    public GetTransactionsByIdv3Request withPathParams(GetTransactionsByIdv3PathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dateRangeFrom")
+    public Long dateRangeFrom;
+    public GetTransactionsByIdv3Request withDateRangeFrom(Long dateRangeFrom) {
+        this.dateRangeFrom = dateRangeFrom;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dateRangeTo")
+    public Long dateRangeTo;
+    public GetTransactionsByIdv3Request withDateRangeTo(Long dateRangeTo) {
+        this.dateRangeTo = dateRangeTo;
+        return this;
+    }
     
-    public GetTransactionsByIdv3QueryParams queryParams;
-    public GetTransactionsByIdv3Request withQueryParams(GetTransactionsByIdv3QueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ican")
+    public Long ican;
+    public GetTransactionsByIdv3Request withIcan(Long ican) {
+        this.ican = ican;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetTransactionsByIdv3Request withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startAfter")
+    public String startAfter;
+    public GetTransactionsByIdv3Request withStartAfter(String startAfter) {
+        this.startAfter = startAfter;
         return this;
     }
     

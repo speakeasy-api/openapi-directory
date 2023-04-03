@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListMediaProcessorRequest {
-    
-    public ListMediaProcessorQueryParams queryParams;
-    public ListMediaProcessorRequest withQueryParams(ListMediaProcessorQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The sort order of the list by `date_created`. Can be: `asc` (ascending) or `desc` (descending) with `desc` as the default.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Order")
+    public org.openapis.openapi.models.shared.MediaProcessorEnumOrderEnum order;
+    public ListMediaProcessorRequest withOrder(org.openapis.openapi.models.shared.MediaProcessorEnumOrderEnum order) {
+        this.order = order;
         return this;
     }
     
-    
-    public ListMediaProcessorSecurity security;
-    public ListMediaProcessorRequest withSecurity(ListMediaProcessorSecurity security) {
-        this.security = security;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListMediaProcessorRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListMediaProcessorRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public String serverURL;
-    public ListMediaProcessorRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListMediaProcessorRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Status to filter by, with possible values `started`, `ended` or `failed`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Status")
+    public org.openapis.openapi.models.shared.MediaProcessorEnumStatusEnum status;
+    public ListMediaProcessorRequest withStatus(org.openapis.openapi.models.shared.MediaProcessorEnumStatusEnum status) {
+        this.status = status;
         return this;
     }
     

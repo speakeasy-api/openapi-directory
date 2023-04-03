@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSetupV1LocationsIdAppointmentremindersRequest {
-    
-    public GetSetupV1LocationsIdAppointmentremindersPathParams pathParams;
-    public GetSetupV1LocationsIdAppointmentremindersRequest withPathParams(GetSetupV1LocationsIdAppointmentremindersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * id of business location, defaults to primary business location
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSetupV1LocationsIdAppointmentremindersRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

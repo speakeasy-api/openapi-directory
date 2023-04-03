@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETUpdateDomainEndpointOptionsRequest {
-    
-    public GETUpdateDomainEndpointOptionsQueryParams queryParams;
-    public GETUpdateDomainEndpointOptionsRequest withQueryParams(GETUpdateDomainEndpointOptionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETUpdateDomainEndpointOptionsActionEnum action;
+    public GETUpdateDomainEndpointOptionsRequest withAction(GETUpdateDomainEndpointOptionsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Whether to require that all requests to the domain arrive over HTTPS. We recommend Policy-Min-TLS-1-2-2019-07 for TLSSecurityPolicy. For compatibility with older clients, the default is Policy-Min-TLS-1-0-2019-07. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DomainEndpointOptions")
+    public GETUpdateDomainEndpointOptionsDomainEndpointOptions domainEndpointOptions;
+    public GETUpdateDomainEndpointOptionsRequest withDomainEndpointOptions(GETUpdateDomainEndpointOptionsDomainEndpointOptions domainEndpointOptions) {
+        this.domainEndpointOptions = domainEndpointOptions;
+        return this;
+    }
     
-    public GETUpdateDomainEndpointOptionsHeaders headers;
-    public GETUpdateDomainEndpointOptionsRequest withHeaders(GETUpdateDomainEndpointOptionsHeaders headers) {
-        this.headers = headers;
+    /**
+     * A string that represents the name of a domain.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DomainName")
+    public String domainName;
+    public GETUpdateDomainEndpointOptionsRequest withDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETUpdateDomainEndpointOptionsVersionEnum version;
+    public GETUpdateDomainEndpointOptionsRequest withVersion(GETUpdateDomainEndpointOptionsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETUpdateDomainEndpointOptionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETUpdateDomainEndpointOptionsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETUpdateDomainEndpointOptionsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETUpdateDomainEndpointOptionsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETUpdateDomainEndpointOptionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETUpdateDomainEndpointOptionsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETUpdateDomainEndpointOptionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

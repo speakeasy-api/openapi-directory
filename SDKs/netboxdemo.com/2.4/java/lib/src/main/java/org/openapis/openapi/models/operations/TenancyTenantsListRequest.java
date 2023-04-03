@@ -4,13 +4,71 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TenancyTenantsListRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
+    public String group;
+    public TenancyTenantsListRequest withGroup(String group) {
+        this.group = group;
+        return this;
+    }
     
-    public TenancyTenantsListQueryParams queryParams;
-    public TenancyTenantsListRequest withQueryParams(TenancyTenantsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group_id")
+    public String groupId;
+    public TenancyTenantsListRequest withGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    
+    /**
+     * Multiple values may be separated by commas.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__in")
+    public String idIn;
+    public TenancyTenantsListRequest withIdIn(String idIn) {
+        this.idIn = idIn;
+        return this;
+    }
+    
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public TenancyTenantsListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public TenancyTenantsListRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public TenancyTenantsListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public TenancyTenantsListRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
+    public String tag;
+    public TenancyTenantsListRequest withTag(String tag) {
+        this.tag = tag;
         return this;
     }
     

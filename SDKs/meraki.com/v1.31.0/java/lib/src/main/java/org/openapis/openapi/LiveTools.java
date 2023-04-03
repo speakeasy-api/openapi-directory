@@ -40,12 +40,12 @@ public class LiveTools {
      */
     public org.openapis.openapi.models.operations.BlinkDeviceLedsResponse blinkDeviceLeds(org.openapis.openapi.models.operations.BlinkDeviceLedsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BlinkDeviceLedsPathParams.class, baseUrl, "/devices/{serial}/blinkLeds", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BlinkDeviceLedsRequest.class, baseUrl, "/devices/{serial}/blinkLeds", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -82,12 +82,12 @@ public class LiveTools {
      */
     public org.openapis.openapi.models.operations.CreateDeviceLiveToolsPingResponse createDeviceLiveToolsPing(org.openapis.openapi.models.operations.CreateDeviceLiveToolsPingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateDeviceLiveToolsPingPathParams.class, baseUrl, "/devices/{serial}/liveTools/ping", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateDeviceLiveToolsPingRequest.class, baseUrl, "/devices/{serial}/liveTools/ping", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -127,12 +127,12 @@ public class LiveTools {
      */
     public org.openapis.openapi.models.operations.CreateDeviceLiveToolsPingDeviceResponse createDeviceLiveToolsPingDevice(org.openapis.openapi.models.operations.CreateDeviceLiveToolsPingDeviceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateDeviceLiveToolsPingDevicePathParams.class, baseUrl, "/devices/{serial}/liveTools/pingDevice", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateDeviceLiveToolsPingDeviceRequest.class, baseUrl, "/devices/{serial}/liveTools/pingDevice", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -169,12 +169,12 @@ public class LiveTools {
      */
     public org.openapis.openapi.models.operations.CycleDeviceSwitchPortsResponse cycleDeviceSwitchPorts(org.openapis.openapi.models.operations.CycleDeviceSwitchPortsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CycleDeviceSwitchPortsPathParams.class, baseUrl, "/devices/{serial}/switch/ports/cycle", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CycleDeviceSwitchPortsRequest.class, baseUrl, "/devices/{serial}/switch/ports/cycle", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -214,7 +214,7 @@ public class LiveTools {
      */
     public org.openapis.openapi.models.operations.GetDeviceLiveToolsPingResponse getDeviceLiveToolsPing(org.openapis.openapi.models.operations.GetDeviceLiveToolsPingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceLiveToolsPingPathParams.class, baseUrl, "/devices/{serial}/liveTools/ping/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceLiveToolsPingRequest.class, baseUrl, "/devices/{serial}/liveTools/ping/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -254,7 +254,7 @@ public class LiveTools {
      */
     public org.openapis.openapi.models.operations.GetDeviceLiveToolsPingDeviceResponse getDeviceLiveToolsPingDevice(org.openapis.openapi.models.operations.GetDeviceLiveToolsPingDeviceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceLiveToolsPingDevicePathParams.class, baseUrl, "/devices/{serial}/liveTools/pingDevice/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceLiveToolsPingDeviceRequest.class, baseUrl, "/devices/{serial}/liveTools/pingDevice/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -294,7 +294,7 @@ public class LiveTools {
      */
     public org.openapis.openapi.models.operations.RebootDeviceResponse rebootDevice(org.openapis.openapi.models.operations.RebootDeviceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RebootDevicePathParams.class, baseUrl, "/devices/{serial}/reboot", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RebootDeviceRequest.class, baseUrl, "/devices/{serial}/reboot", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");

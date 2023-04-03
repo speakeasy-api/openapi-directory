@@ -4,13 +4,586 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMDSRequest {
+    /**
+     * The API Authentication Key. Mandatory with all API calls.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetMDSRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public GetMDSQueryParams queryParams;
-    public GetMDSRequest withQueryParams(GetMDSQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Base exterior color to match. Valid filter values are those that our Search facets API returns for unique base exterior colors. You can pass in multiple base interior color values comma separated
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=base_exterior_color")
+    public String baseExteriorColor;
+    public GetMDSRequest withBaseExteriorColor(String baseExteriorColor) {
+        this.baseExteriorColor = baseExteriorColor;
+        return this;
+    }
+    
+    /**
+     * Base interior color to match. Valid filter values are those that our Search facets API returns for unique base interior colors. You can pass in multiple base interior color values comma separated
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=base_interior_color")
+    public String baseInteriorColor;
+    public GetMDSRequest withBaseInteriorColor(String baseInteriorColor) {
+        this.baseInteriorColor = baseInteriorColor;
+        return this;
+    }
+    
+    /**
+     * Body subtype to filter the listings on. Valid filter values are those that our Search facets API returns for unique body subtypes. You can pass in multiple body subtype values comma separated
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=body_subtype")
+    public String bodySubtype;
+    public GetMDSRequest withBodySubtype(String bodySubtype) {
+        this.bodySubtype = bodySubtype;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their body type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=body_type")
+    public String bodyType;
+    public GetMDSRequest withBodyType(String bodyType) {
+        this.bodyType = bodyType;
+        return this;
+    }
+    
+    /**
+     * Car type. Allowed values are - new / used / certified
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=car_type")
+    public org.openapis.openapi.models.shared.CarCarTypeEnum carType;
+    public GetMDSRequest withCarType(org.openapis.openapi.models.shared.CarCarTypeEnum carType) {
+        this.carType = carType;
+        return this;
+    }
+    
+    /**
+     * Indicates whether car has had only one owner or not
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=carfax_1_owner")
+    public org.openapis.openapi.models.shared.Carfax1OwnerEnum carfax1Owner;
+    public GetMDSRequest withCarfax1Owner(org.openapis.openapi.models.shared.Carfax1OwnerEnum carfax1Owner) {
+        this.carfax1Owner = carfax1Owner;
+        return this;
+    }
+    
+    /**
+     * Indicates whether car has clean ownership records
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=carfax_clean_title")
+    public org.openapis.openapi.models.shared.CarfaxCleanTitleEnum carfaxCleanTitle;
+    public GetMDSRequest withCarfaxCleanTitle(org.openapis.openapi.models.shared.CarfaxCleanTitleEnum carfaxCleanTitle) {
+        this.carfaxCleanTitle = carfaxCleanTitle;
+        return this;
+    }
+    
+    /**
+     * To filter listing on City in which they are listed
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=city")
+    public String city;
+    public GetMDSRequest withCity(String city) {
+        this.city = city;
+        return this;
+    }
+    
+    /**
+     * City mileage range to filter listings with the mileage in the range given. Range to be given in the format - min-max e.g. 1000-5000
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=city_mpg_range")
+    public String cityMpgRange;
+    public GetMDSRequest withCityMpgRange(String cityMpgRange) {
+        this.cityMpgRange = cityMpgRange;
+        return this;
+    }
+    
+    /**
+     * To filter listing on Country in which they are listed
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public org.openapis.openapi.models.shared.CountryEnum country;
+    public GetMDSRequest withCountry(org.openapis.openapi.models.shared.CountryEnum country) {
+        this.country = country;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their cylinders
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cylinders")
+    public String cylinders;
+    public GetMDSRequest withCylinders(String cylinders) {
+        this.cylinders = cylinders;
+        return this;
+    }
+    
+    /**
+     * Dealer id to filter the listings.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dealer_id")
+    public String dealerId;
+    public GetMDSRequest withDealerId(String dealerId) {
+        this.dealerId = dealerId;
+        return this;
+    }
+    
+    /**
+     * Filter based on dealer type independant or franchise
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dealer_type")
+    public org.openapis.openapi.models.shared.DealerTypeEnum dealerType;
+    public GetMDSRequest withDealerType(org.openapis.openapi.models.shared.DealerTypeEnum dealerType) {
+        this.dealerType = dealerType;
+        return this;
+    }
+    
+    /**
+     * Name of the dealership group to search for
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dealership_group_name")
+    public String dealershipGroupName;
+    public GetMDSRequest withDealershipGroupName(String dealershipGroupName) {
+        this.dealershipGroupName = dealershipGroupName;
+        return this;
+    }
+    
+    /**
+     * Debug parameter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=debug")
+    public Boolean debug;
+    public GetMDSRequest withDebug(Boolean debug) {
+        this.debug = debug;
+        return this;
+    }
+    
+    /**
+     * Last 180 Days on Market range to filter cars with the DOM within the given range. Range to be given in the format - min-max e.g. 10-50
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dom_180_range")
+    public String dom180Range;
+    public GetMDSRequest withDom180Range(String dom180Range) {
+        this.dom180Range = dom180Range;
+        return this;
+    }
+    
+    /**
+     * Active Days on Market range to filter cars with the DOM within the given range. Range to be given in the format - min-max e.g. 10-50
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dom_active_range")
+    public String domActiveRange;
+    public GetMDSRequest withDomActiveRange(String domActiveRange) {
+        this.domActiveRange = domActiveRange;
+        return this;
+    }
+    
+    /**
+     * Days on Market range to filter cars with the DOM within the given range. Range to be given in the format - min-max e.g. 10-50
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dom_range")
+    public String domRange;
+    public GetMDSRequest withDomRange(String domRange) {
+        this.domRange = domRange;
+        return this;
+    }
+    
+    /**
+     * Doors to filter the cars on. Valid filter values are those that our Search facets API returns for unique doors. You can pass in multiple doors values comma separated
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doors")
+    public String doors;
+    public GetMDSRequest withDoors(String doors) {
+        this.doors = doors;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their drivetrain
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=drivetrain")
+    public String drivetrain;
+    public GetMDSRequest withDrivetrain(String drivetrain) {
+        this.drivetrain = drivetrain;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their engine
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=engine")
+    public String engine;
+    public GetMDSRequest withEngine(String engine) {
+        this.engine = engine;
+        return this;
+    }
+    
+    /**
+     * Engine Aspiration to match. Valid filter values are those that our Search facets API returns for unique Engine Aspirations. You can pass in multiple Engine aspirations values comma separated
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=engine_aspiration")
+    public String engineAspiration;
+    public GetMDSRequest withEngineAspiration(String engineAspiration) {
+        this.engineAspiration = engineAspiration;
+        return this;
+    }
+    
+    /**
+     * Engine Block to match. Valid filter values are those that our Search facets API returns for unique Engine Block. You can pass in multiple Engine Block values comma separated
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=engine_block")
+    public String engineBlock;
+    public GetMDSRequest withEngineBlock(String engineBlock) {
+        this.engineBlock = engineBlock;
+        return this;
+    }
+    
+    /**
+     * Engine Size to match. Valid filter values are those that our Search facets API returns for unique engine size. You can pass in multiple engine size values comma separated
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=engine_size")
+    public String engineSize;
+    public GetMDSRequest withEngineSize(String engineSize) {
+        this.engineSize = engineSize;
+        return this;
+    }
+    
+    /**
+     * Engine size range to filter listings with engine size in the given range. Range to be given in the format - min-max e.g. 1.0-2
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=engine_size_range")
+    public String engineSizeRange;
+    public GetMDSRequest withEngineSizeRange(String engineSizeRange) {
+        this.engineSizeRange = engineSizeRange;
+        return this;
+    }
+    
+    /**
+     * Exact parameter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exact")
+    public Boolean exact;
+    public GetMDSRequest withExact(Boolean exact) {
+        this.exact = exact;
+        return this;
+    }
+    
+    /**
+     * Exterior color to match. Valid filter values are those that our Search facets API returns for unique exterior colors. You can pass in multiple exterior color values comma separated
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exterior_color")
+    public String exteriorColor;
+    public GetMDSRequest withExteriorColor(String exteriorColor) {
+        this.exteriorColor = exteriorColor;
+        return this;
+    }
+    
+    /**
+     * Search listings with exact down payment in finance offers, or inside a range with min and max seperated by a dash like finance_down_payment=30-60
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=finance_down_payment")
+    public String financeDownPayment;
+    public GetMDSRequest withFinanceDownPayment(String financeDownPayment) {
+        this.financeDownPayment = financeDownPayment;
+        return this;
+    }
+    
+    /**
+     * Search listings with exact down payment percentage in finance offers, or inside a range with min and max seperated by a dash like finance_down_payment_per=30-60
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=finance_down_payment_per")
+    public String financeDownPaymentPer;
+    public GetMDSRequest withFinanceDownPaymentPer(String financeDownPaymentPer) {
+        this.financeDownPaymentPer = financeDownPaymentPer;
+        return this;
+    }
+    
+    /**
+     * Search listings with finance offers exactly matching Estimated Monthly Payment(EMI), or inside a range with min and max seperated by a dash like finance_emp=30-60
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=finance_emp")
+    public String financeEmp;
+    public GetMDSRequest withFinanceEmp(String financeEmp) {
+        this.financeEmp = financeEmp;
+        return this;
+    }
+    
+    /**
+     * Search listings with finance offers exactly matching loans Annual Percentage Rate, or inside a range with min and max seperated by a dash like finance_loan_apr=30-60
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=finance_loan_apr")
+    public String financeLoanApr;
+    public GetMDSRequest withFinanceLoanApr(String financeLoanApr) {
+        this.financeLoanApr = financeLoanApr;
+        return this;
+    }
+    
+    /**
+     * Search listings with exact finance loan term, or inside a range with min and max seperated by a dash like finance_loan_term=30-60
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=finance_loan_term")
+    public String financeLoanTerm;
+    public GetMDSRequest withFinanceLoanTerm(String financeLoanTerm) {
+        this.financeLoanTerm = financeLoanTerm;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their fuel type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fuel_type")
+    public String fuelType;
+    public GetMDSRequest withFuelType(String fuelType) {
+        this.fuelType = fuelType;
+        return this;
+    }
+    
+    /**
+     * Highway mileage range to filter listings with the mileage in the range given. Range to be given in the format - min-max e.g. 1000-5000
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=highway_mpg_range")
+    public String highwayMpgRange;
+    public GetMDSRequest withHighwayMpgRange(String highwayMpgRange) {
+        this.highwayMpgRange = highwayMpgRange;
+        return this;
+    }
+    
+    /**
+     * To fetch sold vins
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_sold")
+    public Boolean includeSold;
+    public GetMDSRequest withIncludeSold(Boolean includeSold) {
+        this.includeSold = includeSold;
+        return this;
+    }
+    
+    /**
+     * Interior color to match. Valid filter values are those that our Search facets API returns for unique interior colors. You can pass in multiple interior color values comma separated
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interior_color")
+    public String interiorColor;
+    public GetMDSRequest withInteriorColor(String interiorColor) {
+        this.interiorColor = interiorColor;
+        return this;
+    }
+    
+    /**
+     * Latitude component of location
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=latitude")
+    public Double latitude;
+    public GetMDSRequest withLatitude(Double latitude) {
+        this.latitude = latitude;
+        return this;
+    }
+    
+    /**
+     * Search listings with exact down payment in lease offers, or inside a range with min and max seperated by a dash like lease_down_payment=30-60
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lease_down_payment")
+    public String leaseDownPayment;
+    public GetMDSRequest withLeaseDownPayment(String leaseDownPayment) {
+        this.leaseDownPayment = leaseDownPayment;
+        return this;
+    }
+    
+    /**
+     * Search listings with lease offers exactly matching Estimated Monthly Payment(EMI), or inside a range with min and max seperated by a dash like lease_emp=30-60
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lease_emp")
+    public String leaseEmp;
+    public GetMDSRequest withLeaseEmp(String leaseEmp) {
+        this.leaseEmp = leaseEmp;
+        return this;
+    }
+    
+    /**
+     * Search listings with exact lease term, or inside a range with min and max seperated by a dash like lease_term=30-60
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lease_term")
+    public String leaseTerm;
+    public GetMDSRequest withLeaseTerm(String leaseTerm) {
+        this.leaseTerm = leaseTerm;
+        return this;
+    }
+    
+    /**
+     * Longitude component of location
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=longitude")
+    public Double longitude;
+    public GetMDSRequest withLongitude(Double longitude) {
+        this.longitude = longitude;
+        return this;
+    }
+    
+    /**
+     * To filter listings on their make
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=make")
+    public String make;
+    public GetMDSRequest withMake(String make) {
+        this.make = make;
+        return this;
+    }
+    
+    /**
+     * Miles range to filter listings with miles in the given range. Range to be given in the format - min-max e.g. 1000-5000
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=miles_range")
+    public String milesRange;
+    public GetMDSRequest withMilesRange(String milesRange) {
+        this.milesRange = milesRange;
+        return this;
+    }
+    
+    /**
+     * To filter listings on their model
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=model")
+    public String model;
+    public GetMDSRequest withModel(String model) {
+        this.model = model;
+        return this;
+    }
+    
+    /**
+     * To filter listing on msa code in which they are listed
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=msa_code")
+    public String msaCode;
+    public GetMDSRequest withMsaCode(String msaCode) {
+        this.msaCode = msaCode;
+        return this;
+    }
+    
+    /**
+     * MSRP range to filter listings with the msrp in the range given. Range to be given in the format - min-max e.g. 1000-5000
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=msrp_range")
+    public String msrpRange;
+    public GetMDSRequest withMsrpRange(String msrpRange) {
+        this.msrpRange = msrpRange;
+        return this;
+    }
+    
+    /**
+     * Price range to filter listings with the price in the range given. Range to be given in the format - min-max e.g. 1000-5000
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=price_range")
+    public String priceRange;
+    public GetMDSRequest withPriceRange(String priceRange) {
+        this.priceRange = priceRange;
+        return this;
+    }
+    
+    /**
+     * Radius around the search location (Unit - Miles)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=radius")
+    public Integer radius;
+    public GetMDSRequest withRadius(Integer radius) {
+        this.radius = radius;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their source
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
+    public String source;
+    public GetMDSRequest withSource(String source) {
+        this.source = source;
+        return this;
+    }
+    
+    /**
+     * To filter listing on State in which they are listed
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public String state;
+    public GetMDSRequest withState(String state) {
+        this.state = state;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their transmission
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=transmission")
+    public String transmission;
+    public GetMDSRequest withTransmission(String transmission) {
+        this.transmission = transmission;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their trim
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=trim")
+    public String trim;
+    public GetMDSRequest withTrim(String trim) {
+        this.trim = trim;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their vehicle type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicle_type")
+    public String vehicleType;
+    public GetMDSRequest withVehicleType(String vehicleType) {
+        this.vehicleType = vehicleType;
+        return this;
+    }
+    
+    /**
+     * VIN to decode
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vin")
+    public String vin;
+    public GetMDSRequest withVin(String vin) {
+        this.vin = vin;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their year
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public String year;
+    public GetMDSRequest withYear(String year) {
+        this.year = year;
+        return this;
+    }
+    
+    /**
+     * Comma separated list of Year, Make, Model, Trim combinations. Each combination needs to have the year,make,model, trim values separated by a pipe '|' character in the form year|make|model|trim. e.g. 2010|Audi|A5,2014|Nissan|Sentra|S 6MT,|Honda|City|   You could just provide strings of the form - 'year|make||' or 'year|make|model' or '|make|model|' combinations. Individual year / make / model filters provied with the API calls will take precedence over the Year, Make, Model, Trim combinations. The Make, Model, Trim values must be valid values as per the Marketcheck Vin Decoder. If you are using a separate vin decoder then look at using the 'vins' or 'taxonomy_vins' parameter to the search api instead the year|make|model|trim combinations.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ymmt")
+    public String ymmt;
+    public GetMDSRequest withYmmt(String ymmt) {
+        this.ymmt = ymmt;
+        return this;
+    }
+    
+    /**
+     * To filter listing on ZIP around which they are listed
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=zip")
+    public String zip;
+    public GetMDSRequest withZip(String zip) {
+        this.zip = zip;
         return this;
     }
     

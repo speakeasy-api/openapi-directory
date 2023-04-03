@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStatsSeriesPeriodFieldsRequest {
-    
-    public GetStatsSeriesPeriodFieldsPathParams pathParams;
-    public GetStatsSeriesPeriodFieldsRequest withPathParams(GetStatsSeriesPeriodFieldsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The end date for this series (in millis)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
+    public Long end;
+    public GetStatsSeriesPeriodFieldsRequest withEnd(Long end) {
+        this.end = end;
         return this;
     }
     
+    /**
+     * The field to be graphed. This also be a comma separated list of fields and the result will be a single timeseries containing the sum of all fields.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fields")
+    public String fields;
+    public GetStatsSeriesPeriodFieldsRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
     
-    public GetStatsSeriesPeriodFieldsQueryParams queryParams;
-    public GetStatsSeriesPeriodFieldsRequest withQueryParams(GetStatsSeriesPeriodFieldsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The period for the series (day or month)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=period")
+    public GetStatsSeriesPeriodFieldsPeriodEnum period;
+    public GetStatsSeriesPeriodFieldsRequest withPeriod(GetStatsSeriesPeriodFieldsPeriodEnum period) {
+        this.period = period;
+        return this;
+    }
+    
+    /**
+     * A query document. Example: {'developerId': '112'} matches all the apps that have the developer with id 112
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public GetStatsSeriesPeriodFieldsRequest withQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    
+    /**
+     * The start date for this series (in millis)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public Long start;
+    public GetStatsSeriesPeriodFieldsRequest withStart(Long start) {
+        this.start = start;
         return this;
     }
     

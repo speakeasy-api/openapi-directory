@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetIterationPerformanceRequest {
-    
-    public GetIterationPerformancePathParams pathParams;
-    public GetIterationPerformanceRequest withPathParams(GetIterationPerformancePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the iteration to get.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=iterationId")
+    public String iterationId;
+    public GetIterationPerformanceRequest withIterationId(String iterationId) {
+        this.iterationId = iterationId;
         return this;
     }
     
+    /**
+     * If applicable, the bounding box overlap threshold used to determine true predictions.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=overlapThreshold")
+    public Float overlapThreshold;
+    public GetIterationPerformanceRequest withOverlapThreshold(Float overlapThreshold) {
+        this.overlapThreshold = overlapThreshold;
+        return this;
+    }
     
-    public GetIterationPerformanceQueryParams queryParams;
-    public GetIterationPerformanceRequest withQueryParams(GetIterationPerformanceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The id of the project the iteration belongs to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public GetIterationPerformanceRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    /**
+     * The threshold used to determine true predictions.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=threshold")
+    public Float threshold;
+    public GetIterationPerformanceRequest withThreshold(Float threshold) {
+        this.threshold = threshold;
         return this;
     }
     

@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSupplyLotsRequest {
-    
-    public GetSupplyLotsPathParams pathParams;
-    public GetSupplyLotsRequest withPathParams(GetSupplyLotsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetSupplyLotsRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetSupplyLotsRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetSupplyLotsHeaders headers;
-    public GetSupplyLotsRequest withHeaders(GetSupplyLotsHeaders headers) {
-        this.headers = headers;
+    /**
+     * ID of the SKU.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=skuId")
+    public String skuId;
+    public GetSupplyLotsRequest withSkuId(String skuId) {
+        this.skuId = skuId;
+        return this;
+    }
+    
+    /**
+     * ID of the warehouse where the SKU is located.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=warehouseId")
+    public String warehouseId;
+    public GetSupplyLotsRequest withWarehouseId(String warehouseId) {
+        this.warehouseId = warehouseId;
         return this;
     }
     

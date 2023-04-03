@@ -33,19 +33,20 @@ public class Destiny2 {
     /**
      * Returns the action token if user approves the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Destiny2AwaGetActionTokenResponse destiny2AwaGetActionToken(org.openapis.openapi.models.operations.Destiny2AwaGetActionTokenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Destiny2AwaGetActionTokenResponse destiny2AwaGetActionToken(org.openapis.openapi.models.operations.Destiny2AwaGetActionTokenRequest request, org.openapis.openapi.models.operations.Destiny2AwaGetActionTokenSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2AwaGetActionTokenPathParams.class, baseUrl, "/Destiny2/Awa/GetActionToken/{correlationId}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2AwaGetActionTokenRequest.class, baseUrl, "/Destiny2/Awa/GetActionToken/{correlationId}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -70,11 +71,10 @@ public class Destiny2 {
 
     /**
      * Initialize a request to perform an advanced write action.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Destiny2AwaInitializeRequestResponse destiny2AwaInitializeRequest(org.openapis.openapi.models.operations.Destiny2AwaInitializeRequestRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Destiny2AwaInitializeRequestResponse destiny2AwaInitializeRequest() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/Destiny2/Awa/Initialize/");
         
@@ -83,8 +83,7 @@ public class Destiny2 {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -144,11 +143,10 @@ public class Destiny2 {
 
     /**
      * Clear the identifiers and items of a loadout.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Destiny2ClearLoadoutResponse destiny2ClearLoadout(org.openapis.openapi.models.operations.Destiny2ClearLoadoutRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Destiny2ClearLoadoutResponse destiny2ClearLoadout() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/Destiny2/Actions/Loadouts/ClearLoadout/");
         
@@ -157,8 +155,7 @@ public class Destiny2 {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -182,11 +179,10 @@ public class Destiny2 {
 
     /**
      * Equip an item. You must have a valid Destiny Account, and either be in a social space, in orbit, or offline.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Destiny2EquipItemResponse destiny2EquipItem(org.openapis.openapi.models.operations.Destiny2EquipItemRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Destiny2EquipItemResponse destiny2EquipItem() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/Destiny2/Actions/Items/EquipItem/");
         
@@ -195,8 +191,7 @@ public class Destiny2 {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -220,11 +215,10 @@ public class Destiny2 {
 
     /**
      * Equip a list of items by itemInstanceIds. You must have a valid Destiny Account, and either be in a social space, in orbit, or offline. Any items not found on your character will be ignored.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Destiny2EquipItemsResponse destiny2EquipItems(org.openapis.openapi.models.operations.Destiny2EquipItemsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Destiny2EquipItemsResponse destiny2EquipItems() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/Destiny2/Actions/Items/EquipItems/");
         
@@ -233,8 +227,7 @@ public class Destiny2 {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -258,11 +251,10 @@ public class Destiny2 {
 
     /**
      * Equip a loadout. You must have a valid Destiny Account, and either be in a social space, in orbit, or offline.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Destiny2EquipLoadoutResponse destiny2EquipLoadout(org.openapis.openapi.models.operations.Destiny2EquipLoadoutRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Destiny2EquipLoadoutResponse destiny2EquipLoadout() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/Destiny2/Actions/Loadouts/EquipLoadout/");
         
@@ -271,8 +263,7 @@ public class Destiny2 {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -302,13 +293,13 @@ public class Destiny2 {
      */
     public org.openapis.openapi.models.operations.Destiny2GetActivityHistoryResponse destiny2GetActivityHistory(org.openapis.openapi.models.operations.Destiny2GetActivityHistoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetActivityHistoryPathParams.class, baseUrl, "/Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/Activities/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetActivityHistoryRequest.class, baseUrl, "/Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/Activities/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetActivityHistoryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetActivityHistoryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -345,13 +336,13 @@ public class Destiny2 {
      */
     public org.openapis.openapi.models.operations.Destiny2GetCharacterResponse destiny2GetCharacter(org.openapis.openapi.models.operations.Destiny2GetCharacterRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetCharacterPathParams.class, baseUrl, "/Destiny2/{membershipType}/Profile/{destinyMembershipId}/Character/{characterId}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetCharacterRequest.class, baseUrl, "/Destiny2/{membershipType}/Profile/{destinyMembershipId}/Character/{characterId}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetCharacterQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetCharacterRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -388,13 +379,13 @@ public class Destiny2 {
      */
     public org.openapis.openapi.models.operations.Destiny2GetClanAggregateStatsResponse destiny2GetClanAggregateStats(org.openapis.openapi.models.operations.Destiny2GetClanAggregateStatsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetClanAggregateStatsPathParams.class, baseUrl, "/Destiny2/Stats/AggregateClanStats/{groupId}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetClanAggregateStatsRequest.class, baseUrl, "/Destiny2/Stats/AggregateClanStats/{groupId}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetClanAggregateStatsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetClanAggregateStatsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -467,13 +458,13 @@ public class Destiny2 {
      */
     public org.openapis.openapi.models.operations.Destiny2GetClanLeaderboardsResponse destiny2GetClanLeaderboards(org.openapis.openapi.models.operations.Destiny2GetClanLeaderboardsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetClanLeaderboardsPathParams.class, baseUrl, "/Destiny2/Stats/Leaderboards/Clans/{groupId}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetClanLeaderboardsRequest.class, baseUrl, "/Destiny2/Stats/Leaderboards/Clans/{groupId}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetClanLeaderboardsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetClanLeaderboardsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -510,7 +501,7 @@ public class Destiny2 {
      */
     public org.openapis.openapi.models.operations.Destiny2GetClanWeeklyRewardStateResponse destiny2GetClanWeeklyRewardState(org.openapis.openapi.models.operations.Destiny2GetClanWeeklyRewardStateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetClanWeeklyRewardStatePathParams.class, baseUrl, "/Destiny2/Clan/{groupId}/WeeklyRewardState/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetClanWeeklyRewardStateRequest.class, baseUrl, "/Destiny2/Clan/{groupId}/WeeklyRewardState/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -547,13 +538,13 @@ public class Destiny2 {
      */
     public org.openapis.openapi.models.operations.Destiny2GetCollectibleNodeDetailsResponse destiny2GetCollectibleNodeDetails(org.openapis.openapi.models.operations.Destiny2GetCollectibleNodeDetailsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetCollectibleNodeDetailsPathParams.class, baseUrl, "/Destiny2/{membershipType}/Profile/{destinyMembershipId}/Character/{characterId}/Collectibles/{collectiblePresentationNodeHash}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetCollectibleNodeDetailsRequest.class, baseUrl, "/Destiny2/{membershipType}/Profile/{destinyMembershipId}/Character/{characterId}/Collectibles/{collectiblePresentationNodeHash}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetCollectibleNodeDetailsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetCollectibleNodeDetailsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -590,7 +581,7 @@ public class Destiny2 {
      */
     public org.openapis.openapi.models.operations.Destiny2GetDestinyAggregateActivityStatsResponse destiny2GetDestinyAggregateActivityStats(org.openapis.openapi.models.operations.Destiny2GetDestinyAggregateActivityStatsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetDestinyAggregateActivityStatsPathParams.class, baseUrl, "/Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/AggregateActivityStats/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetDestinyAggregateActivityStatsRequest.class, baseUrl, "/Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/AggregateActivityStats/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -627,7 +618,7 @@ public class Destiny2 {
      */
     public org.openapis.openapi.models.operations.Destiny2GetDestinyEntityDefinitionResponse destiny2GetDestinyEntityDefinition(org.openapis.openapi.models.operations.Destiny2GetDestinyEntityDefinitionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetDestinyEntityDefinitionPathParams.class, baseUrl, "/Destiny2/Manifest/{entityType}/{hashIdentifier}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetDestinyEntityDefinitionRequest.class, baseUrl, "/Destiny2/Manifest/{entityType}/{hashIdentifier}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -700,13 +691,13 @@ public class Destiny2 {
      */
     public org.openapis.openapi.models.operations.Destiny2GetHistoricalStatsResponse destiny2GetHistoricalStats(org.openapis.openapi.models.operations.Destiny2GetHistoricalStatsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetHistoricalStatsPathParams.class, baseUrl, "/Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetHistoricalStatsRequest.class, baseUrl, "/Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetHistoricalStatsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetHistoricalStatsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -779,13 +770,13 @@ public class Destiny2 {
      */
     public org.openapis.openapi.models.operations.Destiny2GetHistoricalStatsForAccountResponse destiny2GetHistoricalStatsForAccount(org.openapis.openapi.models.operations.Destiny2GetHistoricalStatsForAccountRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetHistoricalStatsForAccountPathParams.class, baseUrl, "/Destiny2/{membershipType}/Account/{destinyMembershipId}/Stats/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetHistoricalStatsForAccountRequest.class, baseUrl, "/Destiny2/{membershipType}/Account/{destinyMembershipId}/Stats/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetHistoricalStatsForAccountQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetHistoricalStatsForAccountRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -822,13 +813,13 @@ public class Destiny2 {
      */
     public org.openapis.openapi.models.operations.Destiny2GetItemResponse destiny2GetItem(org.openapis.openapi.models.operations.Destiny2GetItemRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetItemPathParams.class, baseUrl, "/Destiny2/{membershipType}/Profile/{destinyMembershipId}/Item/{itemInstanceId}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetItemRequest.class, baseUrl, "/Destiny2/{membershipType}/Profile/{destinyMembershipId}/Item/{itemInstanceId}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetItemQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetItemRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -865,13 +856,13 @@ public class Destiny2 {
      */
     public org.openapis.openapi.models.operations.Destiny2GetLeaderboardsResponse destiny2GetLeaderboards(org.openapis.openapi.models.operations.Destiny2GetLeaderboardsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetLeaderboardsPathParams.class, baseUrl, "/Destiny2/{membershipType}/Account/{destinyMembershipId}/Stats/Leaderboards/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetLeaderboardsRequest.class, baseUrl, "/Destiny2/{membershipType}/Account/{destinyMembershipId}/Stats/Leaderboards/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetLeaderboardsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetLeaderboardsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -908,13 +899,13 @@ public class Destiny2 {
      */
     public org.openapis.openapi.models.operations.Destiny2GetLeaderboardsForCharacterResponse destiny2GetLeaderboardsForCharacter(org.openapis.openapi.models.operations.Destiny2GetLeaderboardsForCharacterRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetLeaderboardsForCharacterPathParams.class, baseUrl, "/Destiny2/Stats/Leaderboards/{membershipType}/{destinyMembershipId}/{characterId}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetLeaderboardsForCharacterRequest.class, baseUrl, "/Destiny2/Stats/Leaderboards/{membershipType}/{destinyMembershipId}/{characterId}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetLeaderboardsForCharacterQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetLeaderboardsForCharacterRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -951,13 +942,13 @@ public class Destiny2 {
      */
     public org.openapis.openapi.models.operations.Destiny2GetLinkedProfilesResponse destiny2GetLinkedProfiles(org.openapis.openapi.models.operations.Destiny2GetLinkedProfilesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetLinkedProfilesPathParams.class, baseUrl, "/Destiny2/{membershipType}/Profile/{membershipId}/LinkedProfiles/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetLinkedProfilesRequest.class, baseUrl, "/Destiny2/{membershipType}/Profile/{membershipId}/LinkedProfiles/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetLinkedProfilesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetLinkedProfilesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -994,7 +985,7 @@ public class Destiny2 {
      */
     public org.openapis.openapi.models.operations.Destiny2GetPostGameCarnageReportResponse destiny2GetPostGameCarnageReport(org.openapis.openapi.models.operations.Destiny2GetPostGameCarnageReportRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetPostGameCarnageReportPathParams.class, baseUrl, "/Destiny2/Stats/PostGameCarnageReport/{activityId}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetPostGameCarnageReportRequest.class, baseUrl, "/Destiny2/Stats/PostGameCarnageReport/{activityId}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1031,13 +1022,13 @@ public class Destiny2 {
      */
     public org.openapis.openapi.models.operations.Destiny2GetProfileResponse destiny2GetProfile(org.openapis.openapi.models.operations.Destiny2GetProfileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetProfilePathParams.class, baseUrl, "/Destiny2/{membershipType}/Profile/{destinyMembershipId}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetProfileRequest.class, baseUrl, "/Destiny2/{membershipType}/Profile/{destinyMembershipId}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetProfileQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetProfileRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1074,7 +1065,7 @@ public class Destiny2 {
      */
     public org.openapis.openapi.models.operations.Destiny2GetPublicMilestoneContentResponse destiny2GetPublicMilestoneContent(org.openapis.openapi.models.operations.Destiny2GetPublicMilestoneContentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetPublicMilestoneContentPathParams.class, baseUrl, "/Destiny2/Milestones/{milestoneHash}/Content/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetPublicMilestoneContentRequest.class, baseUrl, "/Destiny2/Milestones/{milestoneHash}/Content/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1153,7 +1144,7 @@ public class Destiny2 {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetPublicVendorsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetPublicVendorsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1190,7 +1181,7 @@ public class Destiny2 {
      */
     public org.openapis.openapi.models.operations.Destiny2GetUniqueWeaponHistoryResponse destiny2GetUniqueWeaponHistory(org.openapis.openapi.models.operations.Destiny2GetUniqueWeaponHistoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetUniqueWeaponHistoryPathParams.class, baseUrl, "/Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/UniqueWeapons/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetUniqueWeaponHistoryRequest.class, baseUrl, "/Destiny2/{membershipType}/Account/{destinyMembershipId}/Character/{characterId}/Stats/UniqueWeapons/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1227,13 +1218,13 @@ public class Destiny2 {
      */
     public org.openapis.openapi.models.operations.Destiny2GetVendorResponse destiny2GetVendor(org.openapis.openapi.models.operations.Destiny2GetVendorRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetVendorPathParams.class, baseUrl, "/Destiny2/{membershipType}/Profile/{destinyMembershipId}/Character/{characterId}/Vendors/{vendorHash}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetVendorRequest.class, baseUrl, "/Destiny2/{membershipType}/Profile/{destinyMembershipId}/Character/{characterId}/Vendors/{vendorHash}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetVendorQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetVendorRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1270,13 +1261,13 @@ public class Destiny2 {
      */
     public org.openapis.openapi.models.operations.Destiny2GetVendorsResponse destiny2GetVendors(org.openapis.openapi.models.operations.Destiny2GetVendorsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetVendorsPathParams.class, baseUrl, "/Destiny2/{membershipType}/Profile/{destinyMembershipId}/Character/{characterId}/Vendors/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2GetVendorsRequest.class, baseUrl, "/Destiny2/{membershipType}/Profile/{destinyMembershipId}/Character/{characterId}/Vendors/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetVendorsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2GetVendorsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1307,11 +1298,10 @@ public class Destiny2 {
 
     /**
      * Insert a plug into a socketed item. I know how it sounds, but I assure you it's much more G-rated than you might be guessing. We haven't decided yet whether this will be able to insert plugs that have side effects, but if we do it will require special scope permission for an application attempting to do so. You must have a valid Destiny Account, and either be in a social space, in orbit, or offline. Request must include proof of permission for 'InsertPlugs' from the account owner.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Destiny2InsertSocketPlugResponse destiny2InsertSocketPlug(org.openapis.openapi.models.operations.Destiny2InsertSocketPlugRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Destiny2InsertSocketPlugResponse destiny2InsertSocketPlug() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/Destiny2/Actions/Items/InsertSocketPlug/");
         
@@ -1320,8 +1310,7 @@ public class Destiny2 {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -1345,11 +1334,10 @@ public class Destiny2 {
 
     /**
      * Insert a 'free' plug into an item's socket. This does not require 'Advanced Write Action' authorization and is available to 3rd-party apps, but will only work on 'free and reversible' socket actions (Perks, Armor Mods, Shaders, Ornaments, etc.). You must have a valid Destiny Account, and the character must either be in a social space, in orbit, or offline.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Destiny2InsertSocketPlugFreeResponse destiny2InsertSocketPlugFree(org.openapis.openapi.models.operations.Destiny2InsertSocketPlugFreeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Destiny2InsertSocketPlugFreeResponse destiny2InsertSocketPlugFree() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/Destiny2/Actions/Items/InsertSocketPlugFree/");
         
@@ -1358,8 +1346,7 @@ public class Destiny2 {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -1383,11 +1370,10 @@ public class Destiny2 {
 
     /**
      * Extract an item from the Postmaster, with whatever implications that may entail. You must have a valid Destiny account. You must also pass BOTH a reference AND an instance ID if it's an instanced item.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Destiny2PullFromPostmasterResponse destiny2PullFromPostmaster(org.openapis.openapi.models.operations.Destiny2PullFromPostmasterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Destiny2PullFromPostmasterResponse destiny2PullFromPostmaster() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/Destiny2/Actions/Items/PullFromPostmaster/");
         
@@ -1396,8 +1382,7 @@ public class Destiny2 {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -1422,19 +1407,20 @@ public class Destiny2 {
     /**
      * Report a player that you met in an activity that was engaging in ToS-violating activities. Both you and the offending player must have played in the activityId passed in. Please use this judiciously and only when you have strong suspicions of violation, pretty please.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Destiny2ReportOffensivePostGameCarnageReportPlayerResponse destiny2ReportOffensivePostGameCarnageReportPlayer(org.openapis.openapi.models.operations.Destiny2ReportOffensivePostGameCarnageReportPlayerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Destiny2ReportOffensivePostGameCarnageReportPlayerResponse destiny2ReportOffensivePostGameCarnageReportPlayer(org.openapis.openapi.models.operations.Destiny2ReportOffensivePostGameCarnageReportPlayerRequest request, org.openapis.openapi.models.operations.Destiny2ReportOffensivePostGameCarnageReportPlayerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2ReportOffensivePostGameCarnageReportPlayerPathParams.class, baseUrl, "/Destiny2/Stats/PostGameCarnageReport/{activityId}/Report/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2ReportOffensivePostGameCarnageReportPlayerRequest.class, baseUrl, "/Destiny2/Stats/PostGameCarnageReport/{activityId}/Report/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1465,13 +1451,13 @@ public class Destiny2 {
      */
     public org.openapis.openapi.models.operations.Destiny2SearchDestinyEntitiesResponse destiny2SearchDestinyEntities(org.openapis.openapi.models.operations.Destiny2SearchDestinyEntitiesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2SearchDestinyEntitiesPathParams.class, baseUrl, "/Destiny2/Armory/Search/{type}/{searchTerm}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2SearchDestinyEntitiesRequest.class, baseUrl, "/Destiny2/Armory/Search/{type}/{searchTerm}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2SearchDestinyEntitiesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Destiny2SearchDestinyEntitiesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1508,7 +1494,7 @@ public class Destiny2 {
      */
     public org.openapis.openapi.models.operations.Destiny2SearchDestinyPlayerByBungieNameResponse destiny2SearchDestinyPlayerByBungieName(org.openapis.openapi.models.operations.Destiny2SearchDestinyPlayerByBungieNameRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2SearchDestinyPlayerByBungieNamePathParams.class, baseUrl, "/Destiny2/SearchDestinyPlayerByBungieName/{membershipType}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Destiny2SearchDestinyPlayerByBungieNameRequest.class, baseUrl, "/Destiny2/SearchDestinyPlayerByBungieName/{membershipType}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -1539,11 +1525,10 @@ public class Destiny2 {
 
     /**
      * Set the Lock State for an instanced item. You must have a valid Destiny Account.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Destiny2SetItemLockStateResponse destiny2SetItemLockState(org.openapis.openapi.models.operations.Destiny2SetItemLockStateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Destiny2SetItemLockStateResponse destiny2SetItemLockState() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/Destiny2/Actions/Items/SetLockState/");
         
@@ -1552,8 +1537,7 @@ public class Destiny2 {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -1577,11 +1561,10 @@ public class Destiny2 {
 
     /**
      * Set the Tracking State for an instanced item, if that item is a Quest or Bounty. You must have a valid Destiny Account. Yeah, it's an item.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Destiny2SetQuestTrackedStateResponse destiny2SetQuestTrackedState(org.openapis.openapi.models.operations.Destiny2SetQuestTrackedStateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Destiny2SetQuestTrackedStateResponse destiny2SetQuestTrackedState() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/Destiny2/Actions/Items/SetTrackedState/");
         
@@ -1590,8 +1573,7 @@ public class Destiny2 {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -1615,11 +1597,10 @@ public class Destiny2 {
 
     /**
      * Snapshot a loadout with the currently equipped items.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Destiny2SnapshotLoadoutResponse destiny2SnapshotLoadout(org.openapis.openapi.models.operations.Destiny2SnapshotLoadoutRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Destiny2SnapshotLoadoutResponse destiny2SnapshotLoadout() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/Destiny2/Actions/Loadouts/SnapshotLoadout/");
         
@@ -1628,8 +1609,7 @@ public class Destiny2 {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -1653,11 +1633,10 @@ public class Destiny2 {
 
     /**
      * Transfer an item to/from your vault. You must have a valid Destiny account. You must also pass BOTH a reference AND an instance ID if it's an instanced item. itshappening.gif
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Destiny2TransferItemResponse destiny2TransferItem(org.openapis.openapi.models.operations.Destiny2TransferItemRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Destiny2TransferItemResponse destiny2TransferItem() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/Destiny2/Actions/Items/TransferItem/");
         
@@ -1666,8 +1645,7 @@ public class Destiny2 {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -1691,11 +1669,10 @@ public class Destiny2 {
 
     /**
      * Update the color, icon, and name of a loadout.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Destiny2UpdateLoadoutIdentifiersResponse destiny2UpdateLoadoutIdentifiers(org.openapis.openapi.models.operations.Destiny2UpdateLoadoutIdentifiersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Destiny2UpdateLoadoutIdentifiersResponse destiny2UpdateLoadoutIdentifiers() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/Destiny2/Actions/Loadouts/UpdateLoadoutIdentifiers/");
         
@@ -1704,8 +1681,7 @@ public class Destiny2 {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");

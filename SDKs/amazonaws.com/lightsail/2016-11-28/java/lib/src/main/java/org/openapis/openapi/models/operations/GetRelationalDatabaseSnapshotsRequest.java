@@ -7,17 +7,66 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRelationalDatabaseSnapshotsRequest {
-    
-    public GetRelationalDatabaseSnapshotsHeaders headers;
-    public GetRelationalDatabaseSnapshotsRequest withHeaders(GetRelationalDatabaseSnapshotsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.GetRelationalDatabaseSnapshotsRequest getRelationalDatabaseSnapshotsRequest;
+    public GetRelationalDatabaseSnapshotsRequest withGetRelationalDatabaseSnapshotsRequest(org.openapis.openapi.models.shared.GetRelationalDatabaseSnapshotsRequest getRelationalDatabaseSnapshotsRequest) {
+        this.getRelationalDatabaseSnapshotsRequest = getRelationalDatabaseSnapshotsRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GetRelationalDatabaseSnapshotsRequest request;
-    public GetRelationalDatabaseSnapshotsRequest withRequest(org.openapis.openapi.models.shared.GetRelationalDatabaseSnapshotsRequest request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetRelationalDatabaseSnapshotsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetRelationalDatabaseSnapshotsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetRelationalDatabaseSnapshotsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetRelationalDatabaseSnapshotsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetRelationalDatabaseSnapshotsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetRelationalDatabaseSnapshotsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetRelationalDatabaseSnapshotsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public GetRelationalDatabaseSnapshotsXAmzTargetEnum xAmzTarget;
+    public GetRelationalDatabaseSnapshotsRequest withXAmzTarget(GetRelationalDatabaseSnapshotsXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
         return this;
     }
     

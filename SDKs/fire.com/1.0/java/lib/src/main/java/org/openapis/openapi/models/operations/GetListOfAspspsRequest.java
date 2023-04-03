@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetListOfAspspsRequest {
-    
-    public GetListOfAspspsQueryParams queryParams;
-    public GetListOfAspspsRequest withQueryParams(GetListOfAspspsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The three letter code for the currency - either `EUR` or `GBP`. Use this to filter the list for banks that can be used to pay in a certain currency.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currency")
+    public String currency;
+    public GetListOfAspspsRequest withCurrency(String currency) {
+        this.currency = currency;
         return this;
     }
     

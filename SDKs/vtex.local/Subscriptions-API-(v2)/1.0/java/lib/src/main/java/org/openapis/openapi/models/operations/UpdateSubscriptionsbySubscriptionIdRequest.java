@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSubscriptionsbySubscriptionIdRequest {
-    
-    public UpdateSubscriptionsbySubscriptionIdPathParams pathParams;
-    public UpdateSubscriptionsbySubscriptionIdRequest withPathParams(UpdateSubscriptionsbySubscriptionIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public UpdateSubscriptionsbySubscriptionIdRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public UpdateSubscriptionsbySubscriptionIdHeaders headers;
-    public UpdateSubscriptionsbySubscriptionIdRequest withHeaders(UpdateSubscriptionsbySubscriptionIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public UpdateSubscriptionsbySubscriptionIdRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateSubscriptionsbySubscriptionIdRequest request;
-    public UpdateSubscriptionsbySubscriptionIdRequest withRequest(org.openapis.openapi.models.shared.UpdateSubscriptionsbySubscriptionIdRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateSubscriptionsbySubscriptionIdRequest updateSubscriptionsbySubscriptionIdRequest;
+    public UpdateSubscriptionsbySubscriptionIdRequest withUpdateSubscriptionsbySubscriptionIdRequest(org.openapis.openapi.models.shared.UpdateSubscriptionsbySubscriptionIdRequest updateSubscriptionsbySubscriptionIdRequest) {
+        this.updateSubscriptionsbySubscriptionIdRequest = updateSubscriptionsbySubscriptionIdRequest;
+        return this;
+    }
+    
+    /**
+     * Subscription ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subscriptionId")
+    public String subscriptionId;
+    public UpdateSubscriptionsbySubscriptionIdRequest withSubscriptionId(String subscriptionId) {
+        this.subscriptionId = subscriptionId;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolSnmptcpSetTraceRequest {
+    /**
+     * Agent to set the SNMPTCP tracing
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolSnmptcpSetTraceRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolSnmptcpSetTracePathParams pathParams;
-    public ProtocolSnmptcpSetTraceRequest withPathParams(ProtocolSnmptcpSetTracePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Value to set the SNMPTCP tracing
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enableOrNot")
+    public String enableOrNot;
+    public ProtocolSnmptcpSetTraceRequest withEnableOrNot(String enableOrNot) {
+        this.enableOrNot = enableOrNot;
         return this;
     }
     

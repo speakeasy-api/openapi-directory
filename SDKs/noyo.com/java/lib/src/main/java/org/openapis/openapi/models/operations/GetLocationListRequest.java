@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLocationListRequest {
-    
-    public GetLocationListPathParams pathParams;
-    public GetLocationListRequest withPathParams(GetLocationListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the group in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public String groupId;
+    public GetLocationListRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     
+    /**
+     * The integer offset at which to start the page. Possible values are 0 to total_records - 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetLocationListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
     
-    public GetLocationListQueryParams queryParams;
-    public GetLocationListRequest withQueryParams(GetLocationListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The max size of each page of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public GetLocationListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

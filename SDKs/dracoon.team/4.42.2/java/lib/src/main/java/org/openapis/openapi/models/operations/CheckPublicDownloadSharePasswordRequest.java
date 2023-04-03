@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CheckPublicDownloadSharePasswordRequest {
-    
-    public CheckPublicDownloadSharePasswordPathParams pathParams;
-    public CheckPublicDownloadSharePasswordRequest withPathParams(CheckPublicDownloadSharePasswordPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Access key
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=access_key")
+    public String accessKey;
+    public CheckPublicDownloadSharePasswordRequest withAccessKey(String accessKey) {
+        this.accessKey = accessKey;
         return this;
     }
     
-    
-    public CheckPublicDownloadSharePasswordQueryParams queryParams;
-    public CheckPublicDownloadSharePasswordRequest withQueryParams(CheckPublicDownloadSharePasswordQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Download share password
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=password")
+    public String password;
+    public CheckPublicDownloadSharePasswordRequest withPassword(String password) {
+        this.password = password;
         return this;
     }
     

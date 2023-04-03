@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RejectASandboxCheckDepositRequest {
-    
-    public RejectASandboxCheckDepositPathParams pathParams;
-    public RejectASandboxCheckDepositRequest withPathParams(RejectASandboxCheckDepositPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=check_deposit_id")
+    public String checkDepositId;
+    public RejectASandboxCheckDepositRequest withCheckDepositId(String checkDepositId) {
+        this.checkDepositId = checkDepositId;
         return this;
     }
     

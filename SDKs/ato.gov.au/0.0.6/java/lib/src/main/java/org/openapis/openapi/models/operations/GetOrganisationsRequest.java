@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganisationsRequest {
-    
-    public GetOrganisationsQueryParams queryParams;
-    public GetOrganisationsRequest withQueryParams(GetOrganisationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The API key.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public GetOrganisationsRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    /**
+     * The identifier, for example, `123456789`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=identifier")
+    public String identifier;
+    public GetOrganisationsRequest withIdentifier(String identifier) {
+        this.identifier = identifier;
+        return this;
+    }
     
-    public GetOrganisationsHeaders headers;
-    public GetOrganisationsRequest withHeaders(GetOrganisationsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The registered identifier, for example, `ACN` or `ABN`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=registeredIdentifier")
+    public String registeredIdentifier;
+    public GetOrganisationsRequest withRegisteredIdentifier(String registeredIdentifier) {
+        this.registeredIdentifier = registeredIdentifier;
         return this;
     }
     

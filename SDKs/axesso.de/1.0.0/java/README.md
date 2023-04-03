@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.KeywordSearchQueryParams;
 import org.openapis.openapi.models.operations.KeywordSearchRequest;
 import org.openapis.openapi.models.operations.KeywordSearchResponse;
 
@@ -28,13 +27,11 @@ public class Application {
                 .build();
 
             KeywordSearchRequest req = new KeywordSearchRequest() {{
-                queryParams = new KeywordSearchQueryParams() {{
-                    domainCode = "corrupti";
-                    keyword = "provident";
-                    numberOfProducts = 715190;
-                    sortBy = "quibusdam";
-                }};
-            }};            
+                domainCode = "corrupti";
+                keyword = "provident";
+                numberOfProducts = 715190;
+                sortBy = "quibusdam";
+            }}            
 
             KeywordSearchResponse res = sdk.amz.keywordSearch(req);
 
@@ -48,7 +45,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### amz

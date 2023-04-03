@@ -34,7 +34,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/HpcerSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/HpcerRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/HpcerRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/HpcerRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/HpcerRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Hpcer504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Hpcer504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Hpcer504ApplicationJSON.java
@@ -61,7 +60,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/HscerSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/HscerRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/HscerRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/HscerRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/HscerRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Hscer504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Hscer504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Hscer504ApplicationJSON.java
@@ -88,7 +86,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/HsmgrSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/HsmgrRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/HsmgrRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/HsmgrRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/HsmgrRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Hsmgr504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Hsmgr504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Hsmgr504ApplicationJSON.java
@@ -115,7 +112,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/NchscSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/NchscRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/NchscRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/NchscRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/NchscRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Nchsc504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Nchsc504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Nchsc504ApplicationJSON.java
@@ -142,7 +138,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/NctscSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/NctscRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/NctscRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/NctscRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/NctscRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Nctsc504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Nctsc504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Nctsc504ApplicationJSON.java
@@ -169,7 +164,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/NsescSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/NsescRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/NsescRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/NsescRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/NsescRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Nsesc504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Nsesc504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Nsesc504ApplicationJSON.java
@@ -196,7 +190,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/NstscSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/NstscRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/NstscRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/NstscRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/NstscRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Nstsc504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Nstsc504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Nstsc504ApplicationJSON.java
@@ -223,7 +216,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/NtltrSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/NtltrRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/NtltrRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/NtltrRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/NtltrRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Ntltr504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Ntltr504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Ntltr504ApplicationJSON.java
@@ -250,7 +242,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/NtmksSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/NtmksRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/NtmksRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/NtmksRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/NtmksRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Ntmks504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Ntmks504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Ntmks504ApplicationJSON.java
@@ -277,7 +268,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/SkhscSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/SkhscRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/SkhscRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SkhscRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/SkhscRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Skhsc504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Skhsc504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Skhsc504ApplicationJSON.java
@@ -304,7 +294,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/SktscSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/SktscRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/SktscRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SktscRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/SktscRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Sktsc504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Sktsc504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Sktsc504ApplicationJSON.java
@@ -331,7 +320,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/SpcerSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/SpcerRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/SpcerRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SpcerRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/SpcerRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Spcer504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Spcer504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Spcer504ApplicationJSON.java
@@ -358,7 +346,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/SscerSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/SscerRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/SscerRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SscerRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/SscerRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Sscer504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Sscer504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Sscer504ApplicationJSON.java
@@ -385,7 +372,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/SsmgrSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/SsmgrRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/SsmgrRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SsmgrRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/SsmgrRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Ssmgr504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Ssmgr504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Ssmgr504ApplicationJSON.java
@@ -412,7 +398,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/TetcrSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/TetcrRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/TetcrRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/TetcrRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/TetcrRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Tetcr504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Tetcr504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Tetcr504ApplicationJSON.java
@@ -439,7 +424,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/TetmsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/TetmsRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/TetmsRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/TetmsRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/TetmsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Tetms504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Tetms504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Tetms504ApplicationJSON.java
@@ -473,8 +457,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsen
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsent.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaSignature.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchema.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKey.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeClientID.java
 lib/src/main/java/org/openapis/openapi/models/shared/AcademicCertificateSchemaCertificateDataExamination.java
 lib/src/main/java/org/openapis/openapi/models/shared/AcademicCertificateSchemaCertificateDataPerformanceSubjects.java
 lib/src/main/java/org/openapis/openapi/models/shared/AcademicCertificateSchemaCertificateDataPerformance.java

@@ -7,31 +7,130 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CloudchannelAccountsCustomersEntitlementsChangeOfferRequest {
-    
-    public CloudchannelAccountsCustomersEntitlementsChangeOfferPathParams pathParams;
-    public CloudchannelAccountsCustomersEntitlementsChangeOfferRequest withPathParams(CloudchannelAccountsCustomersEntitlementsChangeOfferPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CloudchannelAccountsCustomersEntitlementsChangeOfferQueryParams queryParams;
-    public CloudchannelAccountsCustomersEntitlementsChangeOfferRequest withQueryParams(CloudchannelAccountsCustomersEntitlementsChangeOfferQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public CloudchannelAccountsCustomersEntitlementsChangeOfferRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GoogleCloudChannelV1ChangeOfferRequestInput request;
-    public CloudchannelAccountsCustomersEntitlementsChangeOfferRequest withRequest(org.openapis.openapi.models.shared.GoogleCloudChannelV1ChangeOfferRequestInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GoogleCloudChannelV1ChangeOfferRequestInput googleCloudChannelV1ChangeOfferRequestInput;
+    public CloudchannelAccountsCustomersEntitlementsChangeOfferRequest withGoogleCloudChannelV1ChangeOfferRequestInput(org.openapis.openapi.models.shared.GoogleCloudChannelV1ChangeOfferRequestInput googleCloudChannelV1ChangeOfferRequestInput) {
+        this.googleCloudChannelV1ChangeOfferRequestInput = googleCloudChannelV1ChangeOfferRequestInput;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public CloudchannelAccountsCustomersEntitlementsChangeOfferRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public CloudchannelAccountsCustomersEntitlementsChangeOfferSecurity security;
-    public CloudchannelAccountsCustomersEntitlementsChangeOfferRequest withSecurity(CloudchannelAccountsCustomersEntitlementsChangeOfferSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public CloudchannelAccountsCustomersEntitlementsChangeOfferRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public CloudchannelAccountsCustomersEntitlementsChangeOfferRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public CloudchannelAccountsCustomersEntitlementsChangeOfferRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public CloudchannelAccountsCustomersEntitlementsChangeOfferRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Required. The resource name of the entitlement to update. Name uses the format: accounts/{account_id}/customers/{customer_id}/entitlements/{entitlement_id}
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public CloudchannelAccountsCustomersEntitlementsChangeOfferRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public CloudchannelAccountsCustomersEntitlementsChangeOfferRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public CloudchannelAccountsCustomersEntitlementsChangeOfferRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public CloudchannelAccountsCustomersEntitlementsChangeOfferRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public CloudchannelAccountsCustomersEntitlementsChangeOfferRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public CloudchannelAccountsCustomersEntitlementsChangeOfferRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

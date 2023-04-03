@@ -39,7 +39,7 @@ public class Scope {
      */
     public org.openapis.openapi.models.operations.SignConfirmResponse signConfirm(org.openapis.openapi.models.operations.SignConfirmRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SignConfirmPathParams.class, baseUrl, "/scope/{job}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SignConfirmRequest.class, baseUrl, "/scope/{job}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -92,7 +92,7 @@ public class Scope {
      */
     public org.openapis.openapi.models.operations.SignDeleteResponse signDelete(org.openapis.openapi.models.operations.SignDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SignDeletePathParams.class, baseUrl, "/scope/{job}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SignDeleteRequest.class, baseUrl, "/scope/{job}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -150,13 +150,13 @@ public class Scope {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SignRequestQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SignRequestRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -209,7 +209,7 @@ public class Scope {
      */
     public org.openapis.openapi.models.operations.SignRetrieveResponse signRetrieve(org.openapis.openapi.models.operations.SignRetrieveRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SignRetrievePathParams.class, baseUrl, "/scope/{job}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SignRetrieveRequest.class, baseUrl, "/scope/{job}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -274,7 +274,7 @@ public class Scope {
      */
     public org.openapis.openapi.models.operations.SignRetrieveHeadResponse signRetrieveHead(org.openapis.openapi.models.operations.SignRetrieveHeadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SignRetrieveHeadPathParams.class, baseUrl, "/scope/{job}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SignRetrieveHeadRequest.class, baseUrl, "/scope/{job}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("HEAD");
@@ -321,7 +321,7 @@ public class Scope {
      */
     public org.openapis.openapi.models.operations.SignUpdateResponse signUpdate(org.openapis.openapi.models.operations.SignUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SignUpdatePathParams.class, baseUrl, "/scope/{job}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SignUpdateRequest.class, baseUrl, "/scope/{job}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

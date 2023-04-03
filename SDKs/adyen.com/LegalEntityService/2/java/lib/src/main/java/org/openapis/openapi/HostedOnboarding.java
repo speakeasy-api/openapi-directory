@@ -34,11 +34,10 @@ public class HostedOnboarding {
     /**
      * Get a list of hosted onboarding page themes
      * Returns a list of hosted onboarding page themes.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetThemesResponse getThemes(org.openapis.openapi.models.operations.GetThemesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetThemesResponse getThemes() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/themes");
         
@@ -47,8 +46,7 @@ public class HostedOnboarding {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -83,19 +81,20 @@ public class HostedOnboarding {
      * Get an onboarding link theme
      * Returns the details of the theme identified in the path.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetThemesIdResponse getThemesId(org.openapis.openapi.models.operations.GetThemesIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetThemesIdResponse getThemesId(org.openapis.openapi.models.operations.GetThemesIdRequest request, org.openapis.openapi.models.operations.GetThemesIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetThemesIdPathParams.class, baseUrl, "/themes/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetThemesIdRequest.class, baseUrl, "/themes/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -131,21 +130,22 @@ public class HostedOnboarding {
      * Get a link to an Adyen-hosted onboarding page
      * Returns a link to an Adyen-hosted onboarding page where you need to redirect your user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostLegalEntitiesIdOnboardingLinksResponse postLegalEntitiesIdOnboardingLinks(org.openapis.openapi.models.operations.PostLegalEntitiesIdOnboardingLinksRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostLegalEntitiesIdOnboardingLinksResponse postLegalEntitiesIdOnboardingLinks(org.openapis.openapi.models.operations.PostLegalEntitiesIdOnboardingLinksRequest request, org.openapis.openapi.models.operations.PostLegalEntitiesIdOnboardingLinksSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostLegalEntitiesIdOnboardingLinksPathParams.class, baseUrl, "/legalEntities/{id}/onboardingLinks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostLegalEntitiesIdOnboardingLinksRequest.class, baseUrl, "/legalEntities/{id}/onboardingLinks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "onboardingLinkInfo", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

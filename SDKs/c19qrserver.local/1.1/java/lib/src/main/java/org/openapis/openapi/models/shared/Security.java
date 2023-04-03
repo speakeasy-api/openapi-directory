@@ -7,9 +7,9 @@ package org.openapis.openapi.models.shared;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Security {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public SchemeTokenHeader tokenHeader;
-    public Security withTokenHeader(SchemeTokenHeader tokenHeader) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=token")
+    public String tokenHeader;
+    public Security withTokenHeader(String tokenHeader) {
         this.tokenHeader = tokenHeader;
         return this;
     }

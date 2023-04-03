@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSipAuthCallsIpAccessControlListMappingRequest {
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public CreateSipAuthCallsIpAccessControlListMappingRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
+        return this;
+    }
     
-    public CreateSipAuthCallsIpAccessControlListMappingPathParams pathParams;
-    public CreateSipAuthCallsIpAccessControlListMappingRequest withPathParams(CreateSipAuthCallsIpAccessControlListMappingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the SIP domain that will contain the new resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DomainSid")
+    public String domainSid;
+    public CreateSipAuthCallsIpAccessControlListMappingRequest withDomainSid(String domainSid) {
+        this.domainSid = domainSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateSipAuthCallsIpAccessControlListMappingCreateSipAuthCallsIpAccessControlListMappingRequest request;
-    public CreateSipAuthCallsIpAccessControlListMappingRequest withRequest(CreateSipAuthCallsIpAccessControlListMappingCreateSipAuthCallsIpAccessControlListMappingRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateSipAuthCallsIpAccessControlListMappingSecurity security;
-    public CreateSipAuthCallsIpAccessControlListMappingRequest withSecurity(CreateSipAuthCallsIpAccessControlListMappingSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateSipAuthCallsIpAccessControlListMappingRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateSipAuthCallsIpAccessControlListMappingCreateSipAuthCallsIpAccessControlListMappingRequest requestBody;
+    public CreateSipAuthCallsIpAccessControlListMappingRequest withRequestBody(CreateSipAuthCallsIpAccessControlListMappingCreateSipAuthCallsIpAccessControlListMappingRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

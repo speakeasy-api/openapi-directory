@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupV2EditClanBannerRequest {
-    
-    public GroupV2EditClanBannerPathParams pathParams;
-    public GroupV2EditClanBannerRequest withPathParams(GroupV2EditClanBannerPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GroupV2EditClanBannerSecurity security;
-    public GroupV2EditClanBannerRequest withSecurity(GroupV2EditClanBannerSecurity security) {
-        this.security = security;
+    /**
+     * Group ID of the group to edit.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public Long groupId;
+    public GroupV2EditClanBannerRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
         return this;
     }
     

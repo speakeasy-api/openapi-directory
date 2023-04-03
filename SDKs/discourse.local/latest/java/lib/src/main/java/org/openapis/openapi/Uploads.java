@@ -49,7 +49,7 @@ public class Uploads {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AbortMultipartResponse abortMultipart(org.openapis.openapi.models.operations.AbortMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AbortMultipartResponse abortMultipart(org.openapis.openapi.models.operations.AbortMultipartRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/uploads/abort-multipart.json");
         
@@ -111,7 +111,7 @@ public class Uploads {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BatchPresignMultipartPartsResponse batchPresignMultipartParts(org.openapis.openapi.models.operations.BatchPresignMultipartPartsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BatchPresignMultipartPartsResponse batchPresignMultipartParts(org.openapis.openapi.models.operations.BatchPresignMultipartPartsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/uploads/batch-presign-multipart-parts.json");
         
@@ -169,7 +169,7 @@ public class Uploads {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CompleteExternalUploadResponse completeExternalUpload(org.openapis.openapi.models.operations.CompleteExternalUploadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CompleteExternalUploadResponse completeExternalUpload(org.openapis.openapi.models.operations.CompleteExternalUploadRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/uploads/complete-external-upload.json");
         
@@ -224,7 +224,7 @@ public class Uploads {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CompleteMultipartResponse completeMultipart(org.openapis.openapi.models.operations.CompleteMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CompleteMultipartResponse completeMultipart(org.openapis.openapi.models.operations.CompleteMultipartRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/uploads/complete-multipart.json");
         
@@ -276,7 +276,7 @@ public class Uploads {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateMultipartUploadResponse createMultipartUpload(org.openapis.openapi.models.operations.CreateMultipartUploadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateMultipartUploadResponse createMultipartUpload(org.openapis.openapi.models.operations.CreateMultipartUploadRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/uploads/create-multipart.json");
         
@@ -316,7 +316,7 @@ public class Uploads {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateUploadResponse createUpload(org.openapis.openapi.models.operations.CreateUploadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateUploadResponse createUpload(org.openapis.openapi.models.operations.CreateUploadRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/uploads.json");
         
@@ -377,7 +377,7 @@ public class Uploads {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GeneratePresignedPutResponse generatePresignedPut(org.openapis.openapi.models.operations.GeneratePresignedPutRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GeneratePresignedPutResponse generatePresignedPut(org.openapis.openapi.models.operations.GeneratePresignedPutRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/uploads/generate-presigned-put.json");
         

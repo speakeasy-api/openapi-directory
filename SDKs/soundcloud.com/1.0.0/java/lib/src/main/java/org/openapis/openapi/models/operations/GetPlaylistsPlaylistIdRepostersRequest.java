@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPlaylistsPlaylistIdRepostersRequest {
-    
-    public GetPlaylistsPlaylistIdRepostersPathParams pathParams;
-    public GetPlaylistsPlaylistIdRepostersRequest withPathParams(GetPlaylistsPlaylistIdRepostersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Number of results to return in the collection.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetPlaylistsPlaylistIdRepostersRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
-    
-    public GetPlaylistsPlaylistIdRepostersQueryParams queryParams;
-    public GetPlaylistsPlaylistIdRepostersRequest withQueryParams(GetPlaylistsPlaylistIdRepostersQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetPlaylistsPlaylistIdRepostersSecurity security;
-    public GetPlaylistsPlaylistIdRepostersRequest withSecurity(GetPlaylistsPlaylistIdRepostersSecurity security) {
-        this.security = security;
+    /**
+     * SoundCloud playlist id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=playlist_id")
+    public Long playlistId;
+    public GetPlaylistsPlaylistIdRepostersRequest withPlaylistId(Long playlistId) {
+        this.playlistId = playlistId;
         return this;
     }
     

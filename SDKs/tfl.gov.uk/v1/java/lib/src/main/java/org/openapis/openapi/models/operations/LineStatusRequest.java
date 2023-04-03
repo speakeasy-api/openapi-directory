@@ -4,20 +4,75 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LineStatusRequest {
-    
-    public LineStatusPathParams pathParams;
-    public LineStatusRequest withPathParams(LineStatusPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EndDate")
+    public String endDatePathParameter;
+    public LineStatusRequest withEndDatePathParameter(String endDatePathParameter) {
+        this.endDatePathParameter = endDatePathParameter;
         return this;
     }
     
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=StartDate")
+    public String startDatePathParameter;
+    public LineStatusRequest withStartDatePathParameter(String startDatePathParameter) {
+        this.startDatePathParameter = startDatePathParameter;
+        return this;
+    }
     
-    public LineStatusQueryParams queryParams;
-    public LineStatusRequest withQueryParams(LineStatusQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dateRange.endDate")
+    public OffsetDateTime dateRangeEndDate;
+    public LineStatusRequest withDateRangeEndDate(OffsetDateTime dateRangeEndDate) {
+        this.dateRangeEndDate = dateRangeEndDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dateRange.startDate")
+    public OffsetDateTime dateRangeStartDate;
+    public LineStatusRequest withDateRangeStartDate(OffsetDateTime dateRangeStartDate) {
+        this.dateRangeStartDate = dateRangeStartDate;
+        return this;
+    }
+    
+    /**
+     * Include details of the disruptions that are causing the line status including the affected stops and routes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=detail")
+    public Boolean detail;
+    public LineStatusRequest withDetail(Boolean detail) {
+        this.detail = detail;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
+    public String endDateQueryParameter;
+    public LineStatusRequest withEndDateQueryParameter(String endDateQueryParameter) {
+        this.endDateQueryParameter = endDateQueryParameter;
+        return this;
+    }
+    
+    /**
+     * A comma-separated list of line ids e.g. victoria,circle,N133. Max. approx. 20 ids.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ids")
+    public String[] ids;
+    public LineStatusRequest withIds(String[] ids) {
+        this.ids = ids;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
+    public String startDateQueryParameter;
+    public LineStatusRequest withStartDateQueryParameter(String startDateQueryParameter) {
+        this.startDateQueryParameter = startDateQueryParameter;
         return this;
     }
     

@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsJsonRequest {
-    
-    public PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsJsonPathParams pathParams;
-    public PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsJsonRequest withPathParams(PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Corporate tax declaration to add (either (DeclarationDate,DocumentId) either (File,Name,Content64Encoded,Title,DeclarationDate) is mandatory)
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public Object request;
-    public PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsJsonRequest withRequest(Object request) {
-        this.request = request;
+    public Object requestBody;
+    public PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsJsonRequest withRequestBody(Object requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Id of the folder result and taxation
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsJsonRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsJsonSecurity security;
-    public PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsJsonRequest withSecurity(PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsJsonSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsJsonRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

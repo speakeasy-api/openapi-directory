@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BikePointSearchRequest {
-    
-    public BikePointSearchQueryParams queryParams;
-    public BikePointSearchRequest withQueryParams(BikePointSearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The search term e.g. "St. James"
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public BikePointSearchRequest withQuery(String query) {
+        this.query = query;
         return this;
     }
     

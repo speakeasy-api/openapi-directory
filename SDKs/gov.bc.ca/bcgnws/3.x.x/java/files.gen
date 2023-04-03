@@ -34,19 +34,15 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/GetFeaturesFeatureIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFeaturesFeatureIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFeaturesFeatureIdResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFeatureCategoriesOutputFormatEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetFeatureCategoriesQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFeatureCategoriesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFeatureCategoriesResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFeatureClassesOutputFormatEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetFeatureClassesQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFeatureClassesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFeatureClassesResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFeatureTypesOutputFormatEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetFeatureTypesQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFeatureTypesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetFeatureTypesResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesChangesEmbedEnum.java
@@ -54,7 +50,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetNamesChangesOutputFo
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesChangesOutputSrsEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesChangesOutputStyleEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesChangesSortByEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetNamesChangesQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesChangesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesChangesResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesDecisionsRecentEmbedEnum.java
@@ -62,7 +57,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetNamesDecisionsRecent
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesDecisionsRecentOutputSrsEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesDecisionsRecentOutputStyleEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesDecisionsRecentSortByEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetNamesDecisionsRecentQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesDecisionsRecentRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesDecisionsRecentResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesDecisionsYearEmbedEnum.java
@@ -70,7 +64,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetNamesDecisionsYearOu
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesDecisionsYearOutputSrsEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesDecisionsYearOutputStyleEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesDecisionsYearSortByEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetNamesDecisionsYearQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesDecisionsYearRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesDecisionsYearResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesInsideEmbedEnum.java
@@ -78,7 +71,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetNamesInsideOutputFor
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesInsideOutputSrsEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesInsideOutputStyleEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesInsideSortByEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetNamesInsideQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesInsideRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesInsideResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesNearEmbedEnum.java
@@ -86,7 +78,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetNamesNearOutputForma
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesNearOutputSrsEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesNearOutputStyleEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesNearSortByEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetNamesNearQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesNearRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesNearResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesNotOfficialSearchEmbedEnum.java
@@ -95,7 +86,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetNamesNotOfficialSear
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesNotOfficialSearchOutputSrsEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesNotOfficialSearchOutputStyleEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesNotOfficialSearchSortByEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetNamesNotOfficialSearchQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesNotOfficialSearchRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesNotOfficialSearchResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesOfficialSearchEmbedEnum.java
@@ -104,7 +94,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetNamesOfficialSearchO
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesOfficialSearchOutputSrsEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesOfficialSearchOutputStyleEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesOfficialSearchSortByEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetNamesOfficialSearchQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesOfficialSearchRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesOfficialSearchResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesSearchEmbedEnum.java
@@ -113,15 +102,12 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetNamesSearchOutputFor
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesSearchOutputSrsEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesSearchOutputStyleEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesSearchSortByEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetNamesSearchQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesSearchRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesSearchResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesNameIdOutputFormatOutputFormatEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetNamesNameIdOutputFormatPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesNameIdOutputFormatRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNamesNameIdOutputFormatResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNameAuthoritiesOutputFormatEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetNameAuthoritiesQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNameAuthoritiesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNameAuthoritiesResponse.java
 USAGE.md

@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteOfferingsOfferingIdChannelsChannelIdLearnersRequest {
-    
-    public DeleteOfferingsOfferingIdChannelsChannelIdLearnersPathParams pathParams;
-    public DeleteOfferingsOfferingIdChannelsChannelIdLearnersRequest withPathParams(DeleteOfferingsOfferingIdChannelsChannelIdLearnersPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public DeleteOfferingsOfferingIdChannelsChannelIdLearnersRequestBody requestBody;
+    public DeleteOfferingsOfferingIdChannelsChannelIdLearnersRequest withRequestBody(DeleteOfferingsOfferingIdChannelsChannelIdLearnersRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public DeleteOfferingsOfferingIdChannelsChannelIdLearnersRequestBody request;
-    public DeleteOfferingsOfferingIdChannelsChannelIdLearnersRequest withRequest(DeleteOfferingsOfferingIdChannelsChannelIdLearnersRequestBody request) {
-        this.request = request;
+    /**
+     * channel's id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelId")
+    public String channelId;
+    public DeleteOfferingsOfferingIdChannelsChannelIdLearnersRequest withChannelId(String channelId) {
+        this.channelId = channelId;
+        return this;
+    }
+    
+    /**
+     * offering's id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offeringId")
+    public String offeringId;
+    public DeleteOfferingsOfferingIdChannelsChannelIdLearnersRequest withOfferingId(String offeringId) {
+        this.offeringId = offeringId;
         return this;
     }
     

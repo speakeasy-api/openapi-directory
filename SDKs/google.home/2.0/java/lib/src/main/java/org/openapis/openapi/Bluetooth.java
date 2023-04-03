@@ -44,7 +44,7 @@ public class Bluetooth {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChangeDiscoverabilityResponse changeDiscoverability(org.openapis.openapi.models.operations.ChangeDiscoverabilityRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChangeDiscoverabilityResponse changeDiscoverability(org.openapis.openapi.models.shared.ChangeDiscoverabilityRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/bluetooth/discovery");
         
@@ -92,7 +92,7 @@ public class Bluetooth {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ForgetpaireddeviceResponse forgetpaireddevice(org.openapis.openapi.models.operations.ForgetpaireddeviceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ForgetpaireddeviceResponse forgetpaireddevice(org.openapis.openapi.models.shared.ForgetpaireddeviceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/bluetooth/bond");
         
@@ -231,7 +231,7 @@ public class Bluetooth {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PairwithSpeakerResponse pairwithSpeaker(org.openapis.openapi.models.operations.PairwithSpeakerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PairwithSpeakerResponse pairwithSpeaker(org.openapis.openapi.models.shared.PairwithSpeakerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/bluetooth/connect");
         
@@ -280,7 +280,7 @@ public class Bluetooth {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ScanfordevicesResponse scanfordevices(org.openapis.openapi.models.operations.ScanfordevicesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ScanfordevicesResponse scanfordevices(org.openapis.openapi.models.shared.ScanfordevicesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/bluetooth/scan");
         

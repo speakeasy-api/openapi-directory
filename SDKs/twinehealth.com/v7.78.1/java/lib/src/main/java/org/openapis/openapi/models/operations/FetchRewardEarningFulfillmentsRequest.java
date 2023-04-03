@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchRewardEarningFulfillmentsRequest {
-    
-    public FetchRewardEarningFulfillmentsQueryParams queryParams;
-    public FetchRewardEarningFulfillmentsRequest withQueryParams(FetchRewardEarningFulfillmentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Patient identifier
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[patient]")
+    public String filterPatient;
+    public FetchRewardEarningFulfillmentsRequest withFilterPatient(String filterPatient) {
+        this.filterPatient = filterPatient;
         return this;
     }
     

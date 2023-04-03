@@ -4,20 +4,125 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListAccessPoliciesRequest {
-    
-    public ListAccessPoliciesQueryParams queryParams;
-    public ListAccessPoliciesRequest withQueryParams(ListAccessPoliciesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListAccessPoliciesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListAccessPoliciesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public ListAccessPoliciesHeaders headers;
-    public ListAccessPoliciesRequest withHeaders(ListAccessPoliciesHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListAccessPoliciesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListAccessPoliciesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListAccessPoliciesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListAccessPoliciesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListAccessPoliciesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The ARN of the IAM user. For more information, see &lt;a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html"&gt;IAM ARNs&lt;/a&gt; in the &lt;i&gt;IAM User Guide&lt;/i&gt;. This parameter is required if you specify &lt;code&gt;IAM&lt;/code&gt; for &lt;code&gt;identityType&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=iamArn")
+    public String iamArn;
+    public ListAccessPoliciesRequest withIamArn(String iamArn) {
+        this.iamArn = iamArn;
+        return this;
+    }
+    
+    /**
+     * The ID of the identity. This parameter is required if you specify &lt;code&gt;USER&lt;/code&gt; or &lt;code&gt;GROUP&lt;/code&gt; for &lt;code&gt;identityType&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=identityId")
+    public String identityId;
+    public ListAccessPoliciesRequest withIdentityId(String identityId) {
+        this.identityId = identityId;
+        return this;
+    }
+    
+    /**
+     * The type of identity (IAM Identity Center user, IAM Identity Center group, or IAM user). This parameter is required if you specify &lt;code&gt;identityId&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=identityType")
+    public ListAccessPoliciesIdentityTypeEnum identityType;
+    public ListAccessPoliciesRequest withIdentityType(ListAccessPoliciesIdentityTypeEnum identityType) {
+        this.identityType = identityType;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The maximum number of results to return for each paginated request.&lt;/p&gt; &lt;p&gt;Default: 50&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public ListAccessPoliciesRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * The token to be used for the next set of paginated results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
+    public String nextToken;
+    public ListAccessPoliciesRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * The ID of the resource. This parameter is required if you specify &lt;code&gt;resourceType&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resourceId")
+    public String resourceId;
+    public ListAccessPoliciesRequest withResourceId(String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    
+    /**
+     * The type of resource (portal or project). This parameter is required if you specify &lt;code&gt;resourceId&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resourceType")
+    public ListAccessPoliciesResourceTypeEnum resourceType;
+    public ListAccessPoliciesRequest withResourceType(ListAccessPoliciesResourceTypeEnum resourceType) {
+        this.resourceType = resourceType;
         return this;
     }
     

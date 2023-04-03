@@ -30,7 +30,6 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetV1EmailDisposableFormatEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetV1EmailDisposableQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetV1EmailDisposableRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetV1EmailDisposableResponse.java
 USAGE.md

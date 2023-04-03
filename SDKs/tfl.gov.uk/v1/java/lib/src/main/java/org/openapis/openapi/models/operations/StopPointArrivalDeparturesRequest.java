@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopPointArrivalDeparturesRequest {
-    
-    public StopPointArrivalDeparturesPathParams pathParams;
-    public StopPointArrivalDeparturesRequest withPathParams(StopPointArrivalDeparturesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A StopPoint id (station naptan code e.g. 940GZZLUASL, you can use /StopPoint/Search/{query} endpoint to find a stop point id from a station name)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public StopPointArrivalDeparturesRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public StopPointArrivalDeparturesQueryParams queryParams;
-    public StopPointArrivalDeparturesRequest withQueryParams(StopPointArrivalDeparturesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A comma-separated list of line ids e.g. elizabeth, london-overground, thameslink
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lineIds")
+    public String[] lineIds;
+    public StopPointArrivalDeparturesRequest withLineIds(String[] lineIds) {
+        this.lineIds = lineIds;
         return this;
     }
     

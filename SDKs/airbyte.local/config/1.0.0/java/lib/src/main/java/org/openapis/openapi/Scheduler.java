@@ -36,7 +36,7 @@ public class Scheduler {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExecuteDestinationCheckConnectionResponse executeDestinationCheckConnection(org.openapis.openapi.models.operations.ExecuteDestinationCheckConnectionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExecuteDestinationCheckConnectionResponse executeDestinationCheckConnection(org.openapis.openapi.models.shared.DestinationCoreConfig request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/scheduler/destinations/check_connection");
         
@@ -87,7 +87,7 @@ public class Scheduler {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExecuteSourceCheckConnectionResponse executeSourceCheckConnection(org.openapis.openapi.models.operations.ExecuteSourceCheckConnectionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExecuteSourceCheckConnectionResponse executeSourceCheckConnection(org.openapis.openapi.models.shared.SourceCoreConfig request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/scheduler/sources/check_connection");
         
@@ -138,7 +138,7 @@ public class Scheduler {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExecuteSourceDiscoverSchemaResponse executeSourceDiscoverSchema(org.openapis.openapi.models.operations.ExecuteSourceDiscoverSchemaRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExecuteSourceDiscoverSchemaResponse executeSourceDiscoverSchema(org.openapis.openapi.models.shared.SourceCoreConfig request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/scheduler/sources/discover_schema");
         

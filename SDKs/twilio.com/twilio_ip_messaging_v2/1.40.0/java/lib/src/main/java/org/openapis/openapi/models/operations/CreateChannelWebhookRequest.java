@@ -7,31 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateChannelWebhookRequest {
-    
-    public CreateChannelWebhookPathParams pathParams;
-    public CreateChannelWebhookRequest withPathParams(CreateChannelWebhookPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChannelSid")
+    public String channelSid;
+    public CreateChannelWebhookRequest withChannelSid(String channelSid) {
+        this.channelSid = channelSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateChannelWebhookCreateChannelWebhookRequest request;
-    public CreateChannelWebhookRequest withRequest(CreateChannelWebhookCreateChannelWebhookRequest request) {
-        this.request = request;
+    public CreateChannelWebhookCreateChannelWebhookRequest requestBody;
+    public CreateChannelWebhookRequest withRequestBody(CreateChannelWebhookCreateChannelWebhookRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateChannelWebhookSecurity security;
-    public CreateChannelWebhookRequest withSecurity(CreateChannelWebhookSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateChannelWebhookRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public CreateChannelWebhookRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

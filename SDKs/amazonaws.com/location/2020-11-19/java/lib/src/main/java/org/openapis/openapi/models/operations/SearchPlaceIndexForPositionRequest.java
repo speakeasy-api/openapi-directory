@@ -7,24 +7,69 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchPlaceIndexForPositionRequest {
-    
-    public SearchPlaceIndexForPositionPathParams pathParams;
-    public SearchPlaceIndexForPositionRequest withPathParams(SearchPlaceIndexForPositionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public SearchPlaceIndexForPositionHeaders headers;
-    public SearchPlaceIndexForPositionRequest withHeaders(SearchPlaceIndexForPositionHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name of the place index resource you want to use for the search.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=IndexName")
+    public String indexName;
+    public SearchPlaceIndexForPositionRequest withIndexName(String indexName) {
+        this.indexName = indexName;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public SearchPlaceIndexForPositionRequestBody request;
-    public SearchPlaceIndexForPositionRequest withRequest(SearchPlaceIndexForPositionRequestBody request) {
-        this.request = request;
+    public SearchPlaceIndexForPositionRequestBody requestBody;
+    public SearchPlaceIndexForPositionRequest withRequestBody(SearchPlaceIndexForPositionRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public SearchPlaceIndexForPositionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public SearchPlaceIndexForPositionRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public SearchPlaceIndexForPositionRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public SearchPlaceIndexForPositionRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public SearchPlaceIndexForPositionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public SearchPlaceIndexForPositionRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public SearchPlaceIndexForPositionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEmployeeWageRequest {
-    
-    public GetEmployeeWagePathParams pathParams;
-    public GetEmployeeWageRequest withPathParams(GetEmployeeWagePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetEmployeeWageSecurity security;
-    public GetEmployeeWageRequest withSecurity(GetEmployeeWageSecurity security) {
-        this.security = security;
+    /**
+     * The UUID for the `EmployeeWage` being retrieved.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetEmployeeWageRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

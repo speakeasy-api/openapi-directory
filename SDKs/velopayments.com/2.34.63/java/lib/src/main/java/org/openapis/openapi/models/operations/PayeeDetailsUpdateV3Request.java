@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PayeeDetailsUpdateV3Request {
-    
-    public PayeeDetailsUpdateV3PathParams pathParams;
-    public PayeeDetailsUpdateV3Request withPathParams(PayeeDetailsUpdateV3PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Request to update payee details
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdatePayeeDetailsRequestV3Input request;
-    public PayeeDetailsUpdateV3Request withRequest(org.openapis.openapi.models.shared.UpdatePayeeDetailsRequestV3Input request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdatePayeeDetailsRequestV3Input updatePayeeDetailsRequestV3Input;
+    public PayeeDetailsUpdateV3Request withUpdatePayeeDetailsRequestV3Input(org.openapis.openapi.models.shared.UpdatePayeeDetailsRequestV3Input updatePayeeDetailsRequestV3Input) {
+        this.updatePayeeDetailsRequestV3Input = updatePayeeDetailsRequestV3Input;
+        return this;
+    }
+    
+    /**
+     * The UUID of the payee.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payeeId")
+    public String payeeId;
+    public PayeeDetailsUpdateV3Request withPayeeId(String payeeId) {
+        this.payeeId = payeeId;
         return this;
     }
     

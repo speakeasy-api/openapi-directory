@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsAddAppRequest {
-    
-    public TeamsAddAppPathParams pathParams;
-    public TeamsAddAppRequest withPathParams(TeamsAddAppPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The name of the app to be added to the team. The app has to be owned by the organization.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public TeamsAddAppRequestBody request;
-    public TeamsAddAppRequest withRequest(TeamsAddAppRequestBody request) {
-        this.request = request;
+    public TeamsAddAppRequestBody requestBody;
+    public TeamsAddAppRequest withRequestBody(TeamsAddAppRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The organization's name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_name")
+    public String orgName;
+    public TeamsAddAppRequest withOrgName(String orgName) {
+        this.orgName = orgName;
+        return this;
+    }
     
-    public TeamsAddAppSecurity security;
-    public TeamsAddAppRequest withSecurity(TeamsAddAppSecurity security) {
-        this.security = security;
+    /**
+     * The team's name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_name")
+    public String teamName;
+    public TeamsAddAppRequest withTeamName(String teamName) {
+        this.teamName = teamName;
         return this;
     }
     

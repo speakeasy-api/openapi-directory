@@ -4,13 +4,67 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EventApiGetListRequest {
+    /**
+     * Specifies the newest date to include in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxDate")
+    public OffsetDateTime maxDate;
+    public EventApiGetListRequest withMaxDate(OffsetDateTime maxDate) {
+        this.maxDate = maxDate;
+        return this;
+    }
     
-    public EventApiGetListQueryParams queryParams;
-    public EventApiGetListRequest withQueryParams(EventApiGetListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Specifies the oldest date to include in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minDate")
+    public OffsetDateTime minDate;
+    public EventApiGetListRequest withMinDate(OffsetDateTime minDate) {
+        this.minDate = minDate;
+        return this;
+    }
+    
+    /**
+     * Filter for specific order id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderId")
+    public Long orderId;
+    public EventApiGetListRequest withOrderId(Long orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    
+    /**
+     * Specifies the page to request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public EventApiGetListRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Specifies the pagesize. Defaults to 50, max value is 250
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public EventApiGetListRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * Filter for specific event types
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=typeId")
+    public Integer[] typeId;
+    public EventApiGetListRequest withTypeId(Integer[] typeId) {
+        this.typeId = typeId;
         return this;
     }
     

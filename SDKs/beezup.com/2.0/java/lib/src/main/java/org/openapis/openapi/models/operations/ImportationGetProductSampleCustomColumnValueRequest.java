@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImportationGetProductSampleCustomColumnValueRequest {
+    /**
+     * The custom column identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=columnId")
+    public String columnId;
+    public ImportationGetProductSampleCustomColumnValueRequest withColumnId(String columnId) {
+        this.columnId = columnId;
+        return this;
+    }
     
-    public ImportationGetProductSampleCustomColumnValuePathParams pathParams;
-    public ImportationGetProductSampleCustomColumnValueRequest withPathParams(ImportationGetProductSampleCustomColumnValuePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The execution identifier of you catalog importation
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=executionId")
+    public String executionId;
+    public ImportationGetProductSampleCustomColumnValueRequest withExecutionId(String executionId) {
+        this.executionId = executionId;
+        return this;
+    }
+    
+    /**
+     * Index of the product sample. Starting from 0 to 99.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productSampleIndex")
+    public Integer productSampleIndex;
+    public ImportationGetProductSampleCustomColumnValueRequest withProductSampleIndex(Integer productSampleIndex) {
+        this.productSampleIndex = productSampleIndex;
+        return this;
+    }
+    
+    /**
+     * Your store identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public ImportationGetProductSampleCustomColumnValueRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

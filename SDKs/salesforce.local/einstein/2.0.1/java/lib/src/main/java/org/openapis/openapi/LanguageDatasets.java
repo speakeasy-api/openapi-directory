@@ -39,19 +39,20 @@ public class LanguageDatasets {
      * Delete a Dataset
      * Deletes the specified dataset and associated labels and examples.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteDatasetResponse deleteDataset(org.openapis.openapi.models.operations.DeleteDatasetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteDatasetResponse deleteDataset(org.openapis.openapi.models.operations.DeleteDatasetRequest request, org.openapis.openapi.models.operations.DeleteDatasetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDatasetPathParams.class, baseUrl, "/v2/language/datasets/{datasetId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDatasetRequest.class, baseUrl, "/v2/language/datasets/{datasetId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,19 +80,20 @@ public class LanguageDatasets {
      * Get Deletion Status
      * Returns the status of a language dataset or model deletion. When you delete a dataset or model, the deletion may not occur immediately. Use this call to find out when the deletion is complete.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetResponse get(org.openapis.openapi.models.operations.GetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetResponse get(org.openapis.openapi.models.operations.GetRequest request, org.openapis.openapi.models.operations.GetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPathParams.class, baseUrl, "/v2/language/deletion/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRequest.class, baseUrl, "/v2/language/deletion/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -119,19 +121,20 @@ public class LanguageDatasets {
      * Get a Dataset
      * Returns a single dataset.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetDatasetResponse getDataset(org.openapis.openapi.models.operations.GetDatasetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetDatasetResponse getDataset(org.openapis.openapi.models.operations.GetDatasetRequest request, org.openapis.openapi.models.operations.GetDatasetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDatasetPathParams.class, baseUrl, "/v2/language/datasets/{datasetId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDatasetRequest.class, baseUrl, "/v2/language/datasets/{datasetId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -159,10 +162,11 @@ public class LanguageDatasets {
      * Get All Datasets
      * Returns a list of datasets and their labels that were created by the current user. The response is sorted by dataset ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListDatasetsResponse listDatasets(org.openapis.openapi.models.operations.ListDatasetsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListDatasetsResponse listDatasets(org.openapis.openapi.models.operations.ListDatasetsRequest request, org.openapis.openapi.models.operations.ListDatasetsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/language/datasets");
         
@@ -170,14 +174,14 @@ public class LanguageDatasets {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListDatasetsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListDatasetsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -205,10 +209,11 @@ public class LanguageDatasets {
      * Create a Dataset From a File Asynchronously
      * Creates a dataset, labels, and examples from the specified .csv, .tsv, or .json file. The call returns immediately and continues to upload data in the background.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UploadDatasetAsyncResponse uploadDatasetAsync(org.openapis.openapi.models.operations.UploadDatasetAsyncRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UploadDatasetAsyncResponse uploadDatasetAsync(org.openapis.openapi.models.operations.UploadDatasetAsyncRequestBody request, org.openapis.openapi.models.operations.UploadDatasetAsyncSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/language/datasets/upload");
         
@@ -219,7 +224,7 @@ public class LanguageDatasets {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -247,10 +252,11 @@ public class LanguageDatasets {
      * Create a Dataset From a File Synchronously
      * Creates a dataset, labels, and examples from the specified .csv, .tsv, or .json file. The call returns after the dataset is created and all of the data is uploaded.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UploadDatasetSyncResponse uploadDatasetSync(org.openapis.openapi.models.operations.UploadDatasetSyncRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UploadDatasetSyncResponse uploadDatasetSync(org.openapis.openapi.models.operations.UploadDatasetSyncRequestBody request, org.openapis.openapi.models.operations.UploadDatasetSyncSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/language/datasets/upload/sync");
         
@@ -261,7 +267,7 @@ public class LanguageDatasets {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

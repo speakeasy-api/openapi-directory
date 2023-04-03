@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserSearchByGlobalNamePrefixRequest {
+    /**
+     * The display name prefix you're looking for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=displayNamePrefix")
+    public String displayNamePrefix;
+    public UserSearchByGlobalNamePrefixRequest withDisplayNamePrefix(String displayNamePrefix) {
+        this.displayNamePrefix = displayNamePrefix;
+        return this;
+    }
     
-    public UserSearchByGlobalNamePrefixPathParams pathParams;
-    public UserSearchByGlobalNamePrefixRequest withPathParams(UserSearchByGlobalNamePrefixPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The zero-based page of results you desire.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=page")
+    public Integer page;
+    public UserSearchByGlobalNamePrefixRequest withPage(Integer page) {
+        this.page = page;
         return this;
     }
     

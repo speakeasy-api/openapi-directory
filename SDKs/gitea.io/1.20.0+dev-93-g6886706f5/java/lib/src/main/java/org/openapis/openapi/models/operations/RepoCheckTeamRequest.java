@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoCheckTeamRequest {
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoCheckTeamRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public RepoCheckTeamPathParams pathParams;
-    public RepoCheckTeamRequest withPathParams(RepoCheckTeamPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoCheckTeamRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * team name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team")
+    public String team;
+    public RepoCheckTeamRequest withTeam(String team) {
+        this.team = team;
         return this;
     }
     

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListCorporaRequest {
-    
-    public ListCorporaHeaders headers;
-    public ListCorporaRequest withHeaders(ListCorporaHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.AdminListCorporaRequest adminListCorporaRequest;
+    public ListCorporaRequest withAdminListCorporaRequest(org.openapis.openapi.models.shared.AdminListCorporaRequest adminListCorporaRequest) {
+        this.adminListCorporaRequest = adminListCorporaRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AdminListCorporaRequest request;
-    public ListCorporaRequest withRequest(org.openapis.openapi.models.shared.AdminListCorporaRequest request) {
-        this.request = request;
+    /**
+     * The Customer ID to use for the request.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=customer-id")
+    public Long customerId;
+    public ListCorporaRequest withCustomerId(Long customerId) {
+        this.customerId = customerId;
         return this;
     }
     

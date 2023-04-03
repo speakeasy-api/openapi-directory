@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.MediaTabularExtractsheetQueryParams;
 import org.openapis.openapi.models.operations.MediaTabularExtractsheetRequest;
 import org.openapis.openapi.models.operations.MediaTabularExtractsheetResponse;
 
@@ -28,12 +27,10 @@ public class Application {
                 .build();
 
             MediaTabularExtractsheetRequest req = new MediaTabularExtractsheetRequest() {{
-                queryParams = new MediaTabularExtractsheetQueryParams() {{
-                    arg1 = "corrupti";
-                    entryid = "provident";
-                    output = "distinctio";
-                }};
-            }};            
+                arg1 = "corrupti";
+                entryid = "provident";
+                output = "distinctio";
+            }}            
 
             MediaTabularExtractsheetResponse res = sdk.serviceMediaTabularExtractsheet.mediaTabularExtractsheet(req);
 
@@ -47,7 +44,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### serviceMediaTabularExtractsheet

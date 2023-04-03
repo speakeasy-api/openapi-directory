@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OidcUpdateOidcCustomSubTemplateForOrgRequest {
-    
-    public OidcUpdateOidcCustomSubTemplateForOrgPathParams pathParams;
-    public OidcUpdateOidcCustomSubTemplateForOrgRequest withPathParams(OidcUpdateOidcCustomSubTemplateForOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.OidcCustomSub oidcCustomSub;
+    public OidcUpdateOidcCustomSubTemplateForOrgRequest withOidcCustomSub(org.openapis.openapi.models.shared.OidcCustomSub oidcCustomSub) {
+        this.oidcCustomSub = oidcCustomSub;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.OidcCustomSub request;
-    public OidcUpdateOidcCustomSubTemplateForOrgRequest withRequest(org.openapis.openapi.models.shared.OidcCustomSub request) {
-        this.request = request;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public OidcUpdateOidcCustomSubTemplateForOrgRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePotRequest {
-    
-    public UpdatePotPathParams pathParams;
-    public UpdatePotRequest withPathParams(UpdatePotPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdatePotHeaders headers;
-    public UpdatePotRequest withHeaders(UpdatePotHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdatePotUpdateRequestBodyForPot request;
-    public UpdatePotRequest withRequest(UpdatePotUpdateRequestBodyForPot request) {
-        this.request = request;
+    public UpdatePotUpdateRequestBodyForPot requestBody;
+    public UpdatePotRequest withRequestBody(UpdatePotUpdateRequestBodyForPot requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Pot Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pot_id")
+    public String potId;
+    public UpdatePotRequest withPotId(String potId) {
+        this.potId = potId;
+        return this;
+    }
     
-    public UpdatePotSecurity security;
-    public UpdatePotRequest withSecurity(UpdatePotSecurity security) {
-        this.security = security;
+    /**
+     * ApiSecretKey
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public UpdatePotRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

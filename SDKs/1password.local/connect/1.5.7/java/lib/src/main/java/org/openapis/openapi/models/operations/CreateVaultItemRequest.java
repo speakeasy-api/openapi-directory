@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateVaultItemRequest {
-    
-    public CreateVaultItemPathParams pathParams;
-    public CreateVaultItemRequest withPathParams(CreateVaultItemPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.FullItemInput request;
-    public CreateVaultItemRequest withRequest(org.openapis.openapi.models.shared.FullItemInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.FullItemInput fullItemInput;
+    public CreateVaultItemRequest withFullItemInput(org.openapis.openapi.models.shared.FullItemInput fullItemInput) {
+        this.fullItemInput = fullItemInput;
         return this;
     }
     
-    
-    public CreateVaultItemSecurity security;
-    public CreateVaultItemRequest withSecurity(CreateVaultItemSecurity security) {
-        this.security = security;
+    /**
+     * The UUID of the Vault to create an Item in
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=vaultUuid")
+    public String vaultUuid;
+    public CreateVaultItemRequest withVaultUuid(String vaultUuid) {
+        this.vaultUuid = vaultUuid;
         return this;
     }
     

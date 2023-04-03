@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAlbumRequest {
+    /**
+     * The ID of the album.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=album_id")
+    public Double albumId;
+    public GetAlbumRequest withAlbumId(Double albumId) {
+        this.albumId = albumId;
+        return this;
+    }
     
-    public GetAlbumPathParams pathParams;
-    public GetAlbumRequest withPathParams(GetAlbumPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public GetAlbumRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteApiV1DomainBlocksRequest {
-    
-    public DeleteApiV1DomainBlocksQueryParams queryParams;
-    public DeleteApiV1DomainBlocksRequest withQueryParams(DeleteApiV1DomainBlocksQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public DeleteApiV1DomainBlocksSecurity security;
-    public DeleteApiV1DomainBlocksRequest withSecurity(DeleteApiV1DomainBlocksSecurity security) {
-        this.security = security;
+    /**
+     * Domain to unblock.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain")
+    public String domain;
+    public DeleteApiV1DomainBlocksRequest withDomain(String domain) {
+        this.domain = domain;
         return this;
     }
     

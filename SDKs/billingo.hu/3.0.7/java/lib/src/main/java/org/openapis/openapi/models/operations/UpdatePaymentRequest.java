@@ -7,20 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePaymentRequest {
-    
-    public UpdatePaymentPathParams pathParams;
-    public UpdatePaymentRequest withPathParams(UpdatePaymentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Payment history object that you would like to update.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PaymentHistory[] request;
-    public UpdatePaymentRequest withRequest(org.openapis.openapi.models.shared.PaymentHistory[] request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PaymentHistory[] requestBody;
+    public UpdatePaymentRequest withRequestBody(org.openapis.openapi.models.shared.PaymentHistory[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public UpdatePaymentRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

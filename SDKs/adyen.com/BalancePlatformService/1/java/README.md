@@ -18,10 +18,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GetAccountHoldersIdSecurity;
-import org.openapis.openapi.models.operations.GetAccountHoldersIdPathParams;
 import org.openapis.openapi.models.operations.GetAccountHoldersIdRequest;
 import org.openapis.openapi.models.operations.GetAccountHoldersIdResponse;
-import org.openapis.openapi.models.shared.SchemeAPIKeyAuth;
 import org.openapis.openapi.models.shared.SchemeBasicAuth;
 
 public class Application {
@@ -31,17 +29,12 @@ public class Application {
                 .build();
 
             GetAccountHoldersIdRequest req = new GetAccountHoldersIdRequest() {{
-                security = new GetAccountHoldersIdSecurity() {{
-                    apiKeyAuth = new SchemeAPIKeyAuth() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }};
-                pathParams = new GetAccountHoldersIdPathParams() {{
-                    id = "corrupti";
-                }};
-            }};            
+                id = "corrupti";
+            }}            
 
-            GetAccountHoldersIdResponse res = sdk.accountHolders.getAccountHoldersId(req);
+            GetAccountHoldersIdResponse res = sdk.accountHolders.getAccountHoldersId(req, new GetAccountHoldersIdSecurity() {{
+                apiKeyAuth = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.accountHolder.isPresent()) {
                 // handle response
@@ -53,7 +46,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### accountHolders

@@ -4,13 +4,18 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SegmentDetailsRequest {
-    
-    public SegmentDetailsQueryParams queryParams;
-    public SegmentDetailsRequest withQueryParams(SegmentDetailsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * (Required) String
+     * 
+     * Segment API identifier
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=segment_id")
+    public String segmentId;
+    public SegmentDetailsRequest withSegmentId(String segmentId) {
+        this.segmentId = segmentId;
         return this;
     }
     

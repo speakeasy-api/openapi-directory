@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.TripsTripDetailsQueryParams;
 import org.openapis.openapi.models.operations.TripsTripDetailsRequest;
 import org.openapis.openapi.models.operations.TripsTripDetailsResponse;
 
@@ -15,10 +14,8 @@ public class Application {
                 .build();
 
             TripsTripDetailsRequest req = new TripsTripDetailsRequest() {{
-                queryParams = new TripsTripDetailsQueryParams() {{
-                    trackToken = "corrupti";
-                }};
-            }};            
+                trackToken = "corrupti";
+            }}            
 
             TripsTripDetailsResponse res = sdk.twoForMobileAppOptional.tripsTripDetails(req);
 

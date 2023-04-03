@@ -45,7 +45,7 @@ public class Customers {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1CustomersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1CustomersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -85,7 +85,7 @@ public class Customers {
      */
     public org.openapis.openapi.models.operations.GetSetupV1CustomersIdResponse getSetupV1CustomersId(org.openapis.openapi.models.operations.GetSetupV1CustomersIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1CustomersIdPathParams.class, baseUrl, "/setup/v1/customers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1CustomersIdRequest.class, baseUrl, "/setup/v1/customers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -125,7 +125,7 @@ public class Customers {
      */
     public org.openapis.openapi.models.operations.GetSetupV1CustomersIdPrivacyResponse getSetupV1CustomersIdPrivacy(org.openapis.openapi.models.operations.GetSetupV1CustomersIdPrivacyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1CustomersIdPrivacyPathParams.class, baseUrl, "/setup/v1/customers/{id}/privacy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1CustomersIdPrivacyRequest.class, baseUrl, "/setup/v1/customers/{id}/privacy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

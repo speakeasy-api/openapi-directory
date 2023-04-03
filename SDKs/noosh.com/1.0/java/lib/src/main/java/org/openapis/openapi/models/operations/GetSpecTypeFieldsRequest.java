@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpecTypeFieldsRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spec_type_id")
+    public String specTypeId;
+    public GetSpecTypeFieldsRequest withSpecTypeId(String specTypeId) {
+        this.specTypeId = specTypeId;
+        return this;
+    }
     
-    public GetSpecTypeFieldsPathParams pathParams;
-    public GetSpecTypeFieldsRequest withPathParams(GetSpecTypeFieldsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
+    public String workgroupId;
+    public GetSpecTypeFieldsRequest withWorkgroupId(String workgroupId) {
+        this.workgroupId = workgroupId;
         return this;
     }
     

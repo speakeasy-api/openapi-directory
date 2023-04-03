@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBusinessUnitsV3BusinessUnitsUserUserIdRequest {
-    
-    public GetBusinessUnitsV3BusinessUnitsUserUserIdPathParams pathParams;
-    public GetBusinessUnitsV3BusinessUnitsUserUserIdRequest withPathParams(GetBusinessUnitsV3BusinessUnitsUserUserIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The names of Business Units to retrieve. If empty or not provided, then all associated Business Units will be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String[] name;
+    public GetBusinessUnitsV3BusinessUnitsUserUserIdRequest withName(String[] name) {
+        this.name = name;
         return this;
     }
     
-    
-    public GetBusinessUnitsV3BusinessUnitsUserUserIdQueryParams queryParams;
-    public GetBusinessUnitsV3BusinessUnitsUserUserIdRequest withQueryParams(GetBusinessUnitsV3BusinessUnitsUserUserIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The names of properties to optionally include in the response body. The only valid value is `logoMetadata`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=properties")
+    public String[] properties;
+    public GetBusinessUnitsV3BusinessUnitsUserUserIdRequest withProperties(String[] properties) {
+        this.properties = properties;
         return this;
     }
     
-    
-    public GetBusinessUnitsV3BusinessUnitsUserUserIdSecurity security;
-    public GetBusinessUnitsV3BusinessUnitsUserUserIdRequest withSecurity(GetBusinessUnitsV3BusinessUnitsUserUserIdSecurity security) {
-        this.security = security;
+    /**
+     * Identifier of user to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public GetBusinessUnitsV3BusinessUnitsUserUserIdRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

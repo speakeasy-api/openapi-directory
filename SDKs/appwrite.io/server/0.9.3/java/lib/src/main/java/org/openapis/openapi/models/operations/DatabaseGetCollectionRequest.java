@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DatabaseGetCollectionRequest {
-    
-    public DatabaseGetCollectionPathParams pathParams;
-    public DatabaseGetCollectionRequest withPathParams(DatabaseGetCollectionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DatabaseGetCollectionSecurity security;
-    public DatabaseGetCollectionRequest withSecurity(DatabaseGetCollectionSecurity security) {
-        this.security = security;
+    /**
+     * Collection unique ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collectionId")
+    public String collectionId;
+    public DatabaseGetCollectionRequest withCollectionId(String collectionId) {
+        this.collectionId = collectionId;
         return this;
     }
     

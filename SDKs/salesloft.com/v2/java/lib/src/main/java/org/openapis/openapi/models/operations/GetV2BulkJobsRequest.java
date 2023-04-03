@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2BulkJobsRequest {
+    /**
+     * Filter by id using comparison operators. Only supports greater than (gt) comparison (i.e. id[gt]=123)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public java.util.Map<String, Object> id;
+    public GetV2BulkJobsRequest withId(java.util.Map<String, Object> id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetV2BulkJobsQueryParams queryParams;
-    public GetV2BulkJobsRequest withQueryParams(GetV2BulkJobsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * How many records to show per page in the range [1, 100]. Defaults to 25
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetV2BulkJobsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The state of the bulk job. Accepts multiple states. Each state must be one of: open, executing, done
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=state")
+    public String[] state;
+    public GetV2BulkJobsRequest withState(String[] state) {
+        this.state = state;
         return this;
     }
     

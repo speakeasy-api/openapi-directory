@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchDraftRegistrationsDraftIdRequest {
-    
-    public PatchDraftRegistrationsDraftIdPathParams pathParams;
-    public PatchDraftRegistrationsDraftIdRequest withPathParams(PatchDraftRegistrationsDraftIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public java.util.Map<String, Object> requestBody;
+    public PatchDraftRegistrationsDraftIdRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public PatchDraftRegistrationsDraftIdRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    /**
+     * The unique identifier of the draft registration.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=draft_id")
+    public String draftId;
+    public PatchDraftRegistrationsDraftIdRequest withDraftId(String draftId) {
+        this.draftId = draftId;
         return this;
     }
     

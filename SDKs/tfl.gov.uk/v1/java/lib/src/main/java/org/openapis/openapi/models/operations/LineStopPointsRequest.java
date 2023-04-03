@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LineStopPointsRequest {
-    
-    public LineStopPointsPathParams pathParams;
-    public LineStopPointsRequest withPathParams(LineStopPointsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A single line id e.g. victoria
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public LineStopPointsRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public LineStopPointsQueryParams queryParams;
-    public LineStopPointsRequest withQueryParams(LineStopPointsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * If the national-rail line is requested, this flag will filter the national rail stations so that only those operated by TfL are returned
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tflOperatedNationalRailStationsOnly")
+    public Boolean tflOperatedNationalRailStationsOnly;
+    public LineStopPointsRequest withTflOperatedNationalRailStationsOnly(Boolean tflOperatedNationalRailStationsOnly) {
+        this.tflOperatedNationalRailStationsOnly = tflOperatedNationalRailStationsOnly;
         return this;
     }
     

@@ -7,24 +7,139 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RecognizeUtteranceRequest {
-    
-    public RecognizeUtterancePathParams pathParams;
-    public RecognizeUtteranceRequest withPathParams(RecognizeUtterancePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RecognizeUtteranceHeaders headers;
-    public RecognizeUtteranceRequest withHeaders(RecognizeUtteranceHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;Indicates the format for audio input or that the content is text. The header must start with one of the following prefixes:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;PCM format, audio data must be in little-endian byte order.&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;audio/l16; rate=16000; channels=1&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;audio/x-l16; sample-rate=16000; channel-count=1&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;audio/lpcm; sample-rate=8000; sample-size-bits=16; channel-count=1; is-big-endian=false&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Opus format&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;audio/x-cbr-opus-with-preamble;preamble-size=0;bit-rate=256000;frame-size-milliseconds=4&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Text format&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;text/plain; charset=utf-8&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public RecognizeUtteranceRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public RecognizeUtteranceRequestBody request;
-    public RecognizeUtteranceRequest withRequest(RecognizeUtteranceRequestBody request) {
-        this.request = request;
+    public RecognizeUtteranceRequestBody requestBody;
+    public RecognizeUtteranceRequest withRequestBody(RecognizeUtteranceRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The message that Amazon Lex V2 returns in the response can be either text or speech based on the &lt;code&gt;responseContentType&lt;/code&gt; value.&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;If the value is &lt;code&gt;text/plain;charset=utf-8&lt;/code&gt;, Amazon Lex V2 returns text in the response.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;If the value begins with &lt;code&gt;audio/&lt;/code&gt;, Amazon Lex V2 returns speech in the response. Amazon Lex V2 uses Amazon Polly to generate the speech using the configuration that you specified in the &lt;code&gt;responseContentType&lt;/code&gt; parameter. For example, if you specify &lt;code&gt;audio/mpeg&lt;/code&gt; as the value, Amazon Lex V2 returns speech in the MPEG format.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;If the value is &lt;code&gt;audio/pcm&lt;/code&gt;, the speech returned is &lt;code&gt;audio/pcm&lt;/code&gt; at 16 KHz in 16-bit, little-endian format.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;The following are the accepted values:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;audio/mpeg&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;audio/ogg&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;audio/pcm (16 KHz)&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;audio/* (defaults to mpeg)&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;text/plain; charset=utf-8&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Response-Content-Type")
+    public String responseContentType;
+    public RecognizeUtteranceRequest withResponseContentType(String responseContentType) {
+        this.responseContentType = responseContentType;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public RecognizeUtteranceRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public RecognizeUtteranceRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public RecognizeUtteranceRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public RecognizeUtteranceRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public RecognizeUtteranceRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public RecognizeUtteranceRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public RecognizeUtteranceRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The alias identifier in use for the bot that should receive the request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=botAliasId")
+    public String botAliasId;
+    public RecognizeUtteranceRequest withBotAliasId(String botAliasId) {
+        this.botAliasId = botAliasId;
+        return this;
+    }
+    
+    /**
+     * The identifier of the bot that should receive the request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=botId")
+    public String botId;
+    public RecognizeUtteranceRequest withBotId(String botId) {
+        this.botId = botId;
+        return this;
+    }
+    
+    /**
+     * The locale where the session is in use.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=localeId")
+    public String localeId;
+    public RecognizeUtteranceRequest withLocaleId(String localeId) {
+        this.localeId = localeId;
+        return this;
+    }
+    
+    /**
+     * The identifier of the session in use.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sessionId")
+    public String sessionId;
+    public RecognizeUtteranceRequest withSessionId(String sessionId) {
+        this.sessionId = sessionId;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Request-specific information passed between the client application and Amazon Lex V2 &lt;/p&gt; &lt;p&gt;The namespace &lt;code&gt;x-amz-lex:&lt;/code&gt; is reserved for special attributes. Don't create any request attributes for prefix &lt;code&gt;x-amz-lex:&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;The &lt;code&gt;requestAttributes&lt;/code&gt; field must be compressed using gzip and then base64 encoded before sending to Amazon Lex V2.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-amz-lex-request-attributes")
+    public String xAmzLexRequestAttributes;
+    public RecognizeUtteranceRequest withXAmzLexRequestAttributes(String xAmzLexRequestAttributes) {
+        this.xAmzLexRequestAttributes = xAmzLexRequestAttributes;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Sets the state of the session with the user. You can use this to set the current intent, attributes, context, and dialog action. Use the dialog action to determine the next step that Amazon Lex V2 should use in the conversation with the user.&lt;/p&gt; &lt;p&gt;The &lt;code&gt;sessionState&lt;/code&gt; field must be compressed using gzip and then base64 encoded before sending to Amazon Lex V2.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-amz-lex-session-state")
+    public String xAmzLexSessionState;
+    public RecognizeUtteranceRequest withXAmzLexSessionState(String xAmzLexSessionState) {
+        this.xAmzLexSessionState = xAmzLexSessionState;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IncrementalRefreshSourceRequest {
-    
-    public IncrementalRefreshSourcePathParams pathParams;
-    public IncrementalRefreshSourceRequest withPathParams(IncrementalRefreshSourcePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the resource
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public IncrementalRefreshSourceRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -4,20 +4,70 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllPostsRequest {
-    
-    public GetAllPostsQueryParams queryParams;
-    public GetAllPostsRequest withQueryParams(GetAllPostsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Only posts older than this UTC date and time will be returned. The UTC date and time used must be within a day or less of date_min. And the date and time must be rounded to the nearest second.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_max")
+    public OffsetDateTime dateMax;
+    public GetAllPostsRequest withDateMax(OffsetDateTime dateMax) {
+        this.dateMax = dateMax;
         return this;
     }
     
+    /**
+     * Only posts newer than or equal to this UTC date and time will be returned. The UTC date and time used must be within a day or less of date_max. And the date and time must be within the last 30 days. And the date and time must be rounded to the nearest second.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_min")
+    public OffsetDateTime dateMin;
+    public GetAllPostsRequest withDateMin(OffsetDateTime dateMin) {
+        this.dateMin = dateMin;
+        return this;
+    }
     
-    public GetAllPostsSecurity security;
-    public GetAllPostsRequest withSecurity(GetAllPostsSecurity security) {
-        this.security = security;
+    /**
+     * Client device pixel ratio used to determine thumbnail size (default 1.0).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_pixel_ratio")
+    public Double devicePixelRatio;
+    public GetAllPostsRequest withDevicePixelRatio(Double devicePixelRatio) {
+        this.devicePixelRatio = devicePixelRatio;
+        return this;
+    }
+    
+    /**
+     * The page of posts to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetAllPostsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of posts to return per page (must be &gt;= 1 and &lt;= 50).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetAllPostsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * A comma separated list of the post types to return.  The available post types are: offer, wanted
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=types")
+    public String types;
+    public GetAllPostsRequest withTypes(String types) {
+        this.types = types;
         return this;
     }
     

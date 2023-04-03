@@ -7,38 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDocumentRequest {
-    
-    public UpdateDocumentPathParams pathParams;
-    public UpdateDocumentRequest withPathParams(UpdateDocumentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateDocumentHeaders headers;
-    public UpdateDocumentRequest withHeaders(UpdateDocumentHeaders headers) {
-        this.headers = headers;
+    /**
+     * The If-Match HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
+    public String ifMatch;
+    public UpdateDocumentRequest withIfMatch(String ifMatch) {
+        this.ifMatch = ifMatch;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateDocumentUpdateDocumentRequest request;
-    public UpdateDocumentRequest withRequest(UpdateDocumentUpdateDocumentRequest request) {
-        this.request = request;
+    public UpdateDocumentUpdateDocumentRequest requestBody;
+    public UpdateDocumentRequest withRequestBody(UpdateDocumentUpdateDocumentRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateDocumentSecurity security;
-    public UpdateDocumentRequest withSecurity(UpdateDocumentSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Document resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public UpdateDocumentRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public UpdateDocumentRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Document resource to update. Can be the Document resource's `sid` or its `unique_name`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateDocumentRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

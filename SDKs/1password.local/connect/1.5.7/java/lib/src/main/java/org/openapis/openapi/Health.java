@@ -45,14 +45,23 @@ public class Health {
 
     /**
      * Ping the server for liveness
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetHeartbeatResponse getHeartbeat(org.openapis.openapi.models.operations.GetHeartbeatRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetHeartbeatResponse getHeartbeat() throws Exception {
+        return this.getHeartbeat(null);
+    }
+
+    /**
+     * Ping the server for liveness
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.GetHeartbeatResponse getHeartbeat(String serverURL) throws Exception {
         String baseUrl = GET_HEARTBEAT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/heartbeat");
@@ -86,14 +95,23 @@ public class Health {
 
     /**
      * Get state of the server and its dependencies.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetServerHealthResponse getServerHealth(org.openapis.openapi.models.operations.GetServerHealthRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetServerHealthResponse getServerHealth() throws Exception {
+        return this.getServerHealth(null);
+    }
+
+    /**
+     * Get state of the server and its dependencies.
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.GetServerHealthResponse getServerHealth(String serverURL) throws Exception {
         String baseUrl = GET_SERVER_HEALTH_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/health");

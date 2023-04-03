@@ -7,24 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConfigureScheduledTaskRequest {
-    
-    public ConfigureScheduledTaskPathParams pathParams;
-    public ConfigureScheduledTaskRequest withPathParams(ConfigureScheduledTaskPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ConfigureScheduledTaskQueryParams queryParams;
-    public ConfigureScheduledTaskRequest withQueryParams(ConfigureScheduledTaskQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ScheduledTask request;
-    public ConfigureScheduledTaskRequest withRequest(org.openapis.openapi.models.shared.ScheduledTask request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ScheduledTask scheduledTask;
+    public ConfigureScheduledTaskRequest withScheduledTask(org.openapis.openapi.models.shared.ScheduledTask scheduledTask) {
+        this.scheduledTask = scheduledTask;
+        return this;
+    }
+    
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
+    public String domainNamePathParameter;
+    public ConfigureScheduledTaskRequest withDomainNamePathParameter(String domainNamePathParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
+        return this;
+    }
+    
+    /**
+     * Linux hosting domain name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
+    public String domainNameQueryParameter;
+    public ConfigureScheduledTaskRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
+        this.domainNameQueryParameter = domainNameQueryParameter;
+        return this;
+    }
+    
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scheduledTaskId")
+    public String scheduledTaskIdPathParameter;
+    public ConfigureScheduledTaskRequest withScheduledTaskIdPathParameter(String scheduledTaskIdPathParameter) {
+        this.scheduledTaskIdPathParameter = scheduledTaskIdPathParameter;
+        return this;
+    }
+    
+    /**
+     * Id of the scheduled task.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scheduled_task_id")
+    public String scheduledTaskIdQueryParameter;
+    public ConfigureScheduledTaskRequest withScheduledTaskIdQueryParameter(String scheduledTaskIdQueryParameter) {
+        this.scheduledTaskIdQueryParameter = scheduledTaskIdQueryParameter;
         return this;
     }
     

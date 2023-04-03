@@ -7,31 +7,130 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DialogflowProjectsLocationsAgentsTestCasesBatchDeleteRequest {
-    
-    public DialogflowProjectsLocationsAgentsTestCasesBatchDeletePathParams pathParams;
-    public DialogflowProjectsLocationsAgentsTestCasesBatchDeleteRequest withPathParams(DialogflowProjectsLocationsAgentsTestCasesBatchDeletePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DialogflowProjectsLocationsAgentsTestCasesBatchDeleteQueryParams queryParams;
-    public DialogflowProjectsLocationsAgentsTestCasesBatchDeleteRequest withQueryParams(DialogflowProjectsLocationsAgentsTestCasesBatchDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public DialogflowProjectsLocationsAgentsTestCasesBatchDeleteRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GoogleCloudDialogflowCxV3beta1BatchDeleteTestCasesRequest request;
-    public DialogflowProjectsLocationsAgentsTestCasesBatchDeleteRequest withRequest(org.openapis.openapi.models.shared.GoogleCloudDialogflowCxV3beta1BatchDeleteTestCasesRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GoogleCloudDialogflowCxV3beta1BatchDeleteTestCasesRequest googleCloudDialogflowCxV3beta1BatchDeleteTestCasesRequest;
+    public DialogflowProjectsLocationsAgentsTestCasesBatchDeleteRequest withGoogleCloudDialogflowCxV3beta1BatchDeleteTestCasesRequest(org.openapis.openapi.models.shared.GoogleCloudDialogflowCxV3beta1BatchDeleteTestCasesRequest googleCloudDialogflowCxV3beta1BatchDeleteTestCasesRequest) {
+        this.googleCloudDialogflowCxV3beta1BatchDeleteTestCasesRequest = googleCloudDialogflowCxV3beta1BatchDeleteTestCasesRequest;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public DialogflowProjectsLocationsAgentsTestCasesBatchDeleteRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public DialogflowProjectsLocationsAgentsTestCasesBatchDeleteSecurity security;
-    public DialogflowProjectsLocationsAgentsTestCasesBatchDeleteRequest withSecurity(DialogflowProjectsLocationsAgentsTestCasesBatchDeleteSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DialogflowProjectsLocationsAgentsTestCasesBatchDeleteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public DialogflowProjectsLocationsAgentsTestCasesBatchDeleteRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DialogflowProjectsLocationsAgentsTestCasesBatchDeleteRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DialogflowProjectsLocationsAgentsTestCasesBatchDeleteRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DialogflowProjectsLocationsAgentsTestCasesBatchDeleteRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Required. The agent to delete test cases from. Format: `projects//locations//agents/`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public DialogflowProjectsLocationsAgentsTestCasesBatchDeleteRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DialogflowProjectsLocationsAgentsTestCasesBatchDeleteRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DialogflowProjectsLocationsAgentsTestCasesBatchDeleteRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public DialogflowProjectsLocationsAgentsTestCasesBatchDeleteRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public DialogflowProjectsLocationsAgentsTestCasesBatchDeleteRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

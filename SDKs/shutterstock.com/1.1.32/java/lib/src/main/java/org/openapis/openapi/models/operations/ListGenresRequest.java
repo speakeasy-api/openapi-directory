@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListGenresRequest {
-    
-    public ListGenresQueryParams queryParams;
-    public ListGenresRequest withQueryParams(ListGenresQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ListGenresSecurity security;
-    public ListGenresRequest withSecurity(ListGenresSecurity security) {
-        this.security = security;
+    /**
+     * Which language the genres will be returned
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public String language;
+    public ListGenresRequest withLanguage(String language) {
+        this.language = language;
         return this;
     }
     

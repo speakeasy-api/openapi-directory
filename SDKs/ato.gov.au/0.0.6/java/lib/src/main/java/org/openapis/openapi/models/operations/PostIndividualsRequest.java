@@ -7,10 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostIndividualsRequest {
-    
-    public PostIndividualsHeaders headers;
-    public PostIndividualsRequest withHeaders(PostIndividualsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The API key.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public PostIndividualsRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
@@ -18,9 +21,9 @@ public class PostIndividualsRequest {
      * Individual resource
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.IndividualInput request;
-    public PostIndividualsRequest withRequest(org.openapis.openapi.models.shared.IndividualInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.IndividualInput individualInput;
+    public PostIndividualsRequest withIndividualInput(org.openapis.openapi.models.shared.IndividualInput individualInput) {
+        this.individualInput = individualInput;
         return this;
     }
     

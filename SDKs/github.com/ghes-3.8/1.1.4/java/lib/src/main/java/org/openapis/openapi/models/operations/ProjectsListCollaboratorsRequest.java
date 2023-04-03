@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProjectsListCollaboratorsRequest {
-    
-    public ProjectsListCollaboratorsPathParams pathParams;
-    public ProjectsListCollaboratorsRequest withPathParams(ProjectsListCollaboratorsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filters the collaborators by their affiliation. `outside` means outside collaborators of a project that are not a member of the project's organization. `direct` means collaborators with permissions to a project, regardless of organization membership status. `all` means all collaborators the authenticated user can see.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=affiliation")
+    public ProjectsListCollaboratorsAffiliationEnum affiliation;
+    public ProjectsListCollaboratorsRequest withAffiliation(ProjectsListCollaboratorsAffiliationEnum affiliation) {
+        this.affiliation = affiliation;
         return this;
     }
     
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ProjectsListCollaboratorsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public ProjectsListCollaboratorsQueryParams queryParams;
-    public ProjectsListCollaboratorsRequest withQueryParams(ProjectsListCollaboratorsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ProjectsListCollaboratorsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the project.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public Long projectId;
+    public ProjectsListCollaboratorsRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     

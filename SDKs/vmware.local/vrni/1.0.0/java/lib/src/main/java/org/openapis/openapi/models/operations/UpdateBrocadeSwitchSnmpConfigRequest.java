@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateBrocadeSwitchSnmpConfigRequest {
-    
-    public UpdateBrocadeSwitchSnmpConfigPathParams pathParams;
-    public UpdateBrocadeSwitchSnmpConfigRequest withPathParams(UpdateBrocadeSwitchSnmpConfigPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SNMPConfig request;
-    public UpdateBrocadeSwitchSnmpConfigRequest withRequest(org.openapis.openapi.models.shared.SNMPConfig request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SNMPConfig snmpConfig;
+    public UpdateBrocadeSwitchSnmpConfigRequest withSNMPConfig(org.openapis.openapi.models.shared.SNMPConfig snmpConfig) {
+        this.snmpConfig = snmpConfig;
         return this;
     }
     
-    
-    public UpdateBrocadeSwitchSnmpConfigSecurity security;
-    public UpdateBrocadeSwitchSnmpConfigRequest withSecurity(UpdateBrocadeSwitchSnmpConfigSecurity security) {
-        this.security = security;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UpdateBrocadeSwitchSnmpConfigRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

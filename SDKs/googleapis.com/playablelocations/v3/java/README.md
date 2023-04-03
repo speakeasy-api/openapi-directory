@@ -17,15 +17,14 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.PlayablelocationsLogImpressionsQueryParams;
 import org.openapis.openapi.models.operations.PlayablelocationsLogImpressionsRequest;
 import org.openapis.openapi.models.operations.PlayablelocationsLogImpressionsResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.GoogleMapsPlayablelocationsV3LogImpressionsRequest;
 import org.openapis.openapi.models.shared.GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnum;
 import org.openapis.openapi.models.shared.GoogleMapsPlayablelocationsV3Impression;
 import org.openapis.openapi.models.shared.GoogleMapsUnityClientInfoPlatformEnum;
 import org.openapis.openapi.models.shared.GoogleMapsUnityClientInfo;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -35,45 +34,48 @@ public class Application {
                 .build();
 
             PlayablelocationsLogImpressionsRequest req = new PlayablelocationsLogImpressionsRequest() {{
-                queryParams = new PlayablelocationsLogImpressionsQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "provident";
-                    alt = "proto";
-                    callback = "quibusdam";
-                    fields = "unde";
-                    key = "nulla";
-                    oauthToken = "corrupti";
-                    prettyPrint = false;
-                    quotaUser = "illum";
-                    uploadType = "vel";
-                    uploadProtocol = "error";
-                }};
-                request = new GoogleMapsPlayablelocationsV3LogImpressionsRequest() {{
+                dollarXgafv = "2";
+                googleMapsPlayablelocationsV3LogImpressionsRequest = new GoogleMapsPlayablelocationsV3LogImpressionsRequest() {{
                     clientInfo = new GoogleMapsUnityClientInfo() {{
-                        apiClient = "deserunt";
-                        applicationId = "suscipit";
-                        applicationVersion = "iure";
-                        deviceModel = "magnam";
-                        languageCode = "debitis";
-                        operatingSystem = "ipsa";
-                        operatingSystemBuild = "delectus";
-                        platform = "MAC_OS";
+                        apiClient = "provident";
+                        applicationId = "distinctio";
+                        applicationVersion = "quibusdam";
+                        deviceModel = "unde";
+                        languageCode = "nulla";
+                        operatingSystem = "corrupti";
+                        operatingSystemBuild = "illum";
+                        platform = "WINDOWS";
                     }};
                     impressions = new org.openapis.openapi.models.shared.GoogleMapsPlayablelocationsV3Impression[]{{
                         add(new GoogleMapsPlayablelocationsV3Impression() {{
-                            gameObjectType = 477665;
-                            impressionType = "INTERACTED";
-                            locationName = "placeat";
+                            gameObjectType = 645894;
+                            impressionType = "PRESENTED";
+                            locationName = "iure";
                         }}),
                         add(new GoogleMapsPlayablelocationsV3Impression() {{
-                            gameObjectType = 528895;
-                            impressionType = "PRESENTED";
-                            locationName = "excepturi";
+                            gameObjectType = 297534;
+                            impressionType = "INTERACTED";
+                            locationName = "ipsa";
+                        }}),
+                        add(new GoogleMapsPlayablelocationsV3Impression() {{
+                            gameObjectType = 963663;
+                            impressionType = "IMPRESSION_TYPE_UNSPECIFIED";
+                            locationName = "suscipit";
                         }}),
                     }};
-                    requestId = "nisi";
+                    requestId = "molestiae";
                 }};
-            }};            
+                accessToken = "minus";
+                alt = "proto";
+                callback = "voluptatum";
+                fields = "iusto";
+                key = "excepturi";
+                oauthToken = "nisi";
+                prettyPrint = false;
+                quotaUser = "recusandae";
+                uploadType = "temporibus";
+                uploadProtocol = "ab";
+            }}            
 
             PlayablelocationsLogImpressionsResponse res = sdk.v3.playablelocationsLogImpressions(req);
 
@@ -87,7 +89,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### v3

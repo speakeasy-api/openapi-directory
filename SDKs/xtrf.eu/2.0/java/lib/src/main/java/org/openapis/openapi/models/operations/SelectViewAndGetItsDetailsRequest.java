@@ -4,20 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SelectViewAndGetItsDetailsRequest {
-    
-    public SelectViewAndGetItsDetailsPathParams pathParams;
-    public SelectViewAndGetItsDetailsRequest withPathParams(SelectViewAndGetItsDetailsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * views' class name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=className")
+    public String className;
+    public SelectViewAndGetItsDetailsRequest withClassName(String className) {
+        this.className = className;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=place name (denotes specific place in system with the table)")
+    public String placeNameDenotesSpecificPlaceInSystemWithTheTable;
+    public SelectViewAndGetItsDetailsRequest withPlaceNameDenotesSpecificPlaceInSystemWithTheTable(String placeNameDenotesSpecificPlaceInSystemWithTheTable) {
+        this.placeNameDenotesSpecificPlaceInSystemWithTheTable = placeNameDenotesSpecificPlaceInSystemWithTheTable;
+        return this;
+    }
     
-    public SelectViewAndGetItsDetailsQueryParams queryParams;
-    public SelectViewAndGetItsDetailsRequest withQueryParams(SelectViewAndGetItsDetailsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=viewId")
+    public Long viewId;
+    public SelectViewAndGetItsDetailsRequest withViewId(Long viewId) {
+        this.viewId = viewId;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteschemabynameRequest {
-    
-    public DeleteschemabynamePathParams pathParams;
-    public DeleteschemabynameRequest withPathParams(DeleteschemabynamePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public DeleteschemabynameRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
+    /**
+     * Name of the data entity. Defined by the api. Examples of native data entities you can use are `CL` for client profiles and `AD` for client addresses.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dataEntityName")
+    public String dataEntityName;
+    public DeleteschemabynameRequest withDataEntityName(String dataEntityName) {
+        this.dataEntityName = dataEntityName;
+        return this;
+    }
     
-    public DeleteschemabynameHeaders headers;
-    public DeleteschemabynameRequest withHeaders(DeleteschemabynameHeaders headers) {
-        this.headers = headers;
+    /**
+     * Name of the schema.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=schemaName")
+    public String schemaName;
+    public DeleteschemabynameRequest withSchemaName(String schemaName) {
+        this.schemaName = schemaName;
         return this;
     }
     

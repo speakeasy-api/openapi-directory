@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddUserSettingRequest {
-    
-    public AddUserSettingPathParams pathParams;
-    public AddUserSettingRequest withPathParams(AddUserSettingPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public AddUserSettingApplicationJSON request;
-    public AddUserSettingRequest withRequest(AddUserSettingApplicationJSON request) {
-        this.request = request;
+    public AddUserSettingApplicationJSON requestBody;
+    public AddUserSettingRequest withRequestBody(AddUserSettingApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Corresponds to the setting item you wish to modify. Allowed values: `voice_mail`
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=settingType")
+    public String settingType;
+    public AddUserSettingRequest withSettingType(String settingType) {
+        this.settingType = settingType;
+        return this;
+    }
     
-    public AddUserSettingSecurity security;
-    public AddUserSettingRequest withSecurity(AddUserSettingSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public AddUserSettingRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

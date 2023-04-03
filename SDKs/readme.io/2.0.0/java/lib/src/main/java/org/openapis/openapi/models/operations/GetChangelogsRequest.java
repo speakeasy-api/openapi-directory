@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetChangelogsRequest {
-    
-    public GetChangelogsQueryParams queryParams;
-    public GetChangelogsRequest withQueryParams(GetChangelogsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Used to specify further pages (starts at 1)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetChangelogsRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public GetChangelogsSecurity security;
-    public GetChangelogsRequest withSecurity(GetChangelogsSecurity security) {
-        this.security = security;
+    /**
+     * Number of items to include in pagination (up to 100, defaults to 10)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=perPage")
+    public Long perPage;
+    public GetChangelogsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
         return this;
     }
     

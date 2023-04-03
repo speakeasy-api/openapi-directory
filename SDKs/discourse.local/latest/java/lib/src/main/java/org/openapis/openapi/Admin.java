@@ -39,7 +39,7 @@ public class Admin {
      */
     public org.openapis.openapi.models.operations.AdminGetUserResponse adminGetUser(org.openapis.openapi.models.operations.AdminGetUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminGetUserPathParams.class, baseUrl, "/admin/users/{id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminGetUserRequest.class, baseUrl, "/admin/users/{id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -77,13 +77,13 @@ public class Admin {
      */
     public org.openapis.openapi.models.operations.AdminListUsersResponse adminListUsers(org.openapis.openapi.models.operations.AdminListUsersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminListUsersPathParams.class, baseUrl, "/admin/users/list/{flag}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdminListUsersRequest.class, baseUrl, "/admin/users/list/{flag}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminListUsersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdminListUsersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -121,7 +121,7 @@ public class Admin {
      */
     public org.openapis.openapi.models.operations.AnonymizeUserResponse anonymizeUser(org.openapis.openapi.models.operations.AnonymizeUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnonymizeUserPathParams.class, baseUrl, "/admin/users/{id}/anonymize.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnonymizeUserRequest.class, baseUrl, "/admin/users/{id}/anonymize.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -159,12 +159,12 @@ public class Admin {
      */
     public org.openapis.openapi.models.operations.DeleteUserResponse deleteUser(org.openapis.openapi.models.operations.DeleteUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserPathParams.class, baseUrl, "/admin/users/{id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserRequest.class, baseUrl, "/admin/users/{id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -199,7 +199,7 @@ public class Admin {
      */
     public org.openapis.openapi.models.operations.LogOutUserResponse logOutUser(org.openapis.openapi.models.operations.LogOutUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LogOutUserPathParams.class, baseUrl, "/admin/users/{id}/log_out.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LogOutUserRequest.class, baseUrl, "/admin/users/{id}/log_out.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -237,7 +237,7 @@ public class Admin {
      */
     public org.openapis.openapi.models.operations.RefreshGravatarResponse refreshGravatar(org.openapis.openapi.models.operations.RefreshGravatarRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RefreshGravatarPathParams.class, baseUrl, "/user_avatar/{username}/refresh_gravatar.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RefreshGravatarRequest.class, baseUrl, "/user_avatar/{username}/refresh_gravatar.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -275,12 +275,12 @@ public class Admin {
      */
     public org.openapis.openapi.models.operations.SilenceUserResponse silenceUser(org.openapis.openapi.models.operations.SilenceUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SilenceUserPathParams.class, baseUrl, "/admin/users/{id}/silence.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SilenceUserRequest.class, baseUrl, "/admin/users/{id}/silence.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -315,12 +315,12 @@ public class Admin {
      */
     public org.openapis.openapi.models.operations.SuspendUserResponse suspendUser(org.openapis.openapi.models.operations.SuspendUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SuspendUserPathParams.class, baseUrl, "/admin/users/{id}/suspend.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SuspendUserRequest.class, baseUrl, "/admin/users/{id}/suspend.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

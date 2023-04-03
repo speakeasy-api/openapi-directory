@@ -4,27 +4,58 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWorkspaceSlugMembersFindRequest {
-    
-    public GetWorkspaceSlugMembersFindPathParams pathParams;
-    public GetWorkspaceSlugMembersFindRequest withPathParams(GetWorkspaceSlugMembersFindPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public GetWorkspaceSlugMembersFindRequest withEmail(String email) {
+        this.email = email;
         return this;
     }
     
-    
-    public GetWorkspaceSlugMembersFindQueryParams queryParams;
-    public GetWorkspaceSlugMembersFindRequest withQueryParams(GetWorkspaceSlugMembersFindQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Deprecated, please use source=github and username=&lt;username&gt; instead
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=github")
+    public String github;
+    public GetWorkspaceSlugMembersFindRequest withGithub(String github) {
+        this.github = github;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
+    public String source;
+    public GetWorkspaceSlugMembersFindRequest withSource(String source) {
+        this.source = source;
+        return this;
+    }
     
-    public GetWorkspaceSlugMembersFindSecurity security;
-    public GetWorkspaceSlugMembersFindRequest withSecurity(GetWorkspaceSlugMembersFindSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source_host")
+    public String sourceHost;
+    public GetWorkspaceSlugMembersFindRequest withSourceHost(String sourceHost) {
+        this.sourceHost = sourceHost;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uid")
+    public String uid;
+    public GetWorkspaceSlugMembersFindRequest withUid(String uid) {
+        this.uid = uid;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
+    public String username;
+    public GetWorkspaceSlugMembersFindRequest withUsername(String username) {
+        this.username = username;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_slug")
+    public String workspaceSlug;
+    public GetWorkspaceSlugMembersFindRequest withWorkspaceSlug(String workspaceSlug) {
+        this.workspaceSlug = workspaceSlug;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEndpointsRequest {
-    
-    public GetEndpointsQueryParams queryParams;
-    public GetEndpointsRequest withQueryParams(GetEndpointsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Return an OpenAPI specification.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=openapi")
+    public Boolean openapi;
+    public GetEndpointsRequest withOpenapi(Boolean openapi) {
+        this.openapi = openapi;
         return this;
     }
     

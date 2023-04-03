@@ -42,7 +42,7 @@ public class Calendars {
      */
     public org.openapis.openapi.models.operations.DeleteCalendarsIdResponse deleteCalendarsId(org.openapis.openapi.models.operations.DeleteCalendarsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCalendarsIdPathParams.class, baseUrl, "/calendars/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCalendarsIdRequest.class, baseUrl, "/calendars/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -82,7 +82,7 @@ public class Calendars {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCalendarsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCalendarsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -119,7 +119,7 @@ public class Calendars {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostCalendarsResponse postCalendars(org.openapis.openapi.models.operations.PostCalendarsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostCalendarsResponse postCalendars(org.openapis.openapi.models.shared.Calendar request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/calendars");
         
@@ -165,12 +165,12 @@ public class Calendars {
      */
     public org.openapis.openapi.models.operations.PutCalendarsIdResponse putCalendarsId(org.openapis.openapi.models.operations.PutCalendarsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutCalendarsIdPathParams.class, baseUrl, "/calendars/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutCalendarsIdRequest.class, baseUrl, "/calendars/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "calendar", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

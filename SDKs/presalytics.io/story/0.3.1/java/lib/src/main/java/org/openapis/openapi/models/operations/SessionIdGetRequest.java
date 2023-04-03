@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SessionIdGetRequest {
-    
-    public SessionIdGetPathParams pathParams;
-    public SessionIdGetRequest withPathParams(SessionIdGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Indicate whether the returned object should include child relationships
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_relationships")
+    public Boolean includeRelationships;
+    public SessionIdGetRequest withIncludeRelationships(Boolean includeRelationships) {
+        this.includeRelationships = includeRelationships;
         return this;
     }
     
-    
-    public SessionIdGetQueryParams queryParams;
-    public SessionIdGetRequest withQueryParams(SessionIdGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The primary key for a view session
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=session_id")
+    public String sessionId;
+    public SessionIdGetRequest withSessionId(String sessionId) {
+        this.sessionId = sessionId;
         return this;
     }
     

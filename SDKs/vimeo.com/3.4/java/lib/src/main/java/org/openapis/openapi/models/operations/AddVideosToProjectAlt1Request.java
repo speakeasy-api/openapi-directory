@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddVideosToProjectAlt1Request {
-    
-    public AddVideosToProjectAlt1PathParams pathParams;
-    public AddVideosToProjectAlt1Request withPathParams(AddVideosToProjectAlt1PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the project.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public Double projectId;
+    public AddVideosToProjectAlt1Request withProjectId(Double projectId) {
+        this.projectId = projectId;
         return this;
     }
     
-    
-    public AddVideosToProjectAlt1QueryParams queryParams;
-    public AddVideosToProjectAlt1Request withQueryParams(AddVideosToProjectAlt1QueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public AddVideosToProjectAlt1Security security;
-    public AddVideosToProjectAlt1Request withSecurity(AddVideosToProjectAlt1Security security) {
-        this.security = security;
+    /**
+     * A comma-separated list of video URIs to add.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uris")
+    public String uris;
+    public AddVideosToProjectAlt1Request withUris(String uris) {
+        this.uris = uris;
         return this;
     }
     

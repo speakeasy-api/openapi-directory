@@ -40,7 +40,7 @@ public class SplashSettings {
      */
     public org.openapis.openapi.models.operations.GetNetworkSsidSplashSettingsResponse getNetworkSsidSplashSettings(org.openapis.openapi.models.operations.GetNetworkSsidSplashSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSsidSplashSettingsPathParams.class, baseUrl, "/networks/{networkId}/ssids/{number}/splashSettings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSsidSplashSettingsRequest.class, baseUrl, "/networks/{networkId}/ssids/{number}/splashSettings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,12 +80,12 @@ public class SplashSettings {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSsidSplashSettingsResponse updateNetworkSsidSplashSettings(org.openapis.openapi.models.operations.UpdateNetworkSsidSplashSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSsidSplashSettingsPathParams.class, baseUrl, "/networks/{networkId}/ssids/{number}/splashSettings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSsidSplashSettingsRequest.class, baseUrl, "/networks/{networkId}/ssids/{number}/splashSettings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

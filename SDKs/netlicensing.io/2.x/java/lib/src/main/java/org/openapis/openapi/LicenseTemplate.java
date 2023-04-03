@@ -39,10 +39,11 @@ public class LicenseTemplate {
      * Create License Template
      * Creates a new License Template
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateLicenseTemplateResponse createLicenseTemplate(org.openapis.openapi.models.operations.CreateLicenseTemplateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateLicenseTemplateResponse createLicenseTemplate(org.openapis.openapi.models.operations.CreateLicenseTemplateRequestBody request, org.openapis.openapi.models.operations.CreateLicenseTemplateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/licensetemplate");
         
@@ -56,7 +57,7 @@ public class LicenseTemplate {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -91,25 +92,26 @@ public class LicenseTemplate {
      * Delete License Template
      * Delete a License Template by 'number'.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteLicenseTemplateResponse deleteLicenseTemplate(org.openapis.openapi.models.operations.DeleteLicenseTemplateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteLicenseTemplateResponse deleteLicenseTemplate(org.openapis.openapi.models.operations.DeleteLicenseTemplateRequest request, org.openapis.openapi.models.operations.DeleteLicenseTemplateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteLicenseTemplatePathParams.class, baseUrl, "/licensetemplate/{licenseTemplateNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteLicenseTemplateRequest.class, baseUrl, "/licensetemplate/{licenseTemplateNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteLicenseTemplateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteLicenseTemplateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -144,19 +146,20 @@ public class LicenseTemplate {
      * Get License Template
      * Return a License Template by 'licenseTemplateNumber'
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetLicenseTemplateResponse getLicenseTemplate(org.openapis.openapi.models.operations.GetLicenseTemplateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetLicenseTemplateResponse getLicenseTemplate(org.openapis.openapi.models.operations.GetLicenseTemplateRequest request, org.openapis.openapi.models.operations.GetLicenseTemplateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLicenseTemplatePathParams.class, baseUrl, "/licensetemplate/{licenseTemplateNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLicenseTemplateRequest.class, baseUrl, "/licensetemplate/{licenseTemplateNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -190,11 +193,10 @@ public class LicenseTemplate {
     /**
      * List License Templates
      * Return a list of all License Templates for the current Vendor
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListLicenseTemplatesResponse listLicenseTemplates(org.openapis.openapi.models.operations.ListLicenseTemplatesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListLicenseTemplatesResponse listLicenseTemplates() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/licensetemplate");
         
@@ -203,8 +205,7 @@ public class LicenseTemplate {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -238,21 +239,22 @@ public class LicenseTemplate {
      * Update License Template
      * Sets the provided properties to a License Template. Return an updated License Template
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateLicenseTemplateResponse updateLicenseTemplate(org.openapis.openapi.models.operations.UpdateLicenseTemplateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateLicenseTemplateResponse updateLicenseTemplate(org.openapis.openapi.models.operations.UpdateLicenseTemplateRequest request, org.openapis.openapi.models.operations.UpdateLicenseTemplateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateLicenseTemplatePathParams.class, baseUrl, "/licensetemplate/{licenseTemplateNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateLicenseTemplateRequest.class, baseUrl, "/licensetemplate/{licenseTemplateNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

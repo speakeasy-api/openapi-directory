@@ -34,25 +34,26 @@ public class Conversion {
     /**
      * Retrieves a list of conversions from a DoubleClick Search engine account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DoubleclicksearchConversionGetResponse doubleclicksearchConversionGet(org.openapis.openapi.models.operations.DoubleclicksearchConversionGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DoubleclicksearchConversionGetResponse doubleclicksearchConversionGet(org.openapis.openapi.models.operations.DoubleclicksearchConversionGetRequest request, org.openapis.openapi.models.operations.DoubleclicksearchConversionGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DoubleclicksearchConversionGetPathParams.class, baseUrl, "/doubleclicksearch/v2/agency/{agencyId}/advertiser/{advertiserId}/engine/{engineAccountId}/conversion", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DoubleclicksearchConversionGetRequest.class, baseUrl, "/doubleclicksearch/v2/agency/{agencyId}/advertiser/{advertiserId}/engine/{engineAccountId}/conversion", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DoubleclicksearchConversionGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DoubleclicksearchConversionGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class Conversion {
     /**
      * Retrieves a list of conversions from a DoubleClick Search engine account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DoubleclicksearchConversionGetByCustomerIdResponse doubleclicksearchConversionGetByCustomerId(org.openapis.openapi.models.operations.DoubleclicksearchConversionGetByCustomerIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DoubleclicksearchConversionGetByCustomerIdResponse doubleclicksearchConversionGetByCustomerId(org.openapis.openapi.models.operations.DoubleclicksearchConversionGetByCustomerIdRequest request, org.openapis.openapi.models.operations.DoubleclicksearchConversionGetByCustomerIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DoubleclicksearchConversionGetByCustomerIdPathParams.class, baseUrl, "/doubleclicksearch/v2/customer/{customerId}/conversion", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DoubleclicksearchConversionGetByCustomerIdRequest.class, baseUrl, "/doubleclicksearch/v2/customer/{customerId}/conversion", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DoubleclicksearchConversionGetByCustomerIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DoubleclicksearchConversionGetByCustomerIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,27 +126,28 @@ public class Conversion {
     /**
      * Inserts a batch of new conversions into DoubleClick Search.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DoubleclicksearchConversionInsertResponse doubleclicksearchConversionInsert(org.openapis.openapi.models.operations.DoubleclicksearchConversionInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DoubleclicksearchConversionInsertResponse doubleclicksearchConversionInsert(org.openapis.openapi.models.operations.DoubleclicksearchConversionInsertRequest request, org.openapis.openapi.models.operations.DoubleclicksearchConversionInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/doubleclicksearch/v2/conversion");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "conversionList", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DoubleclicksearchConversionInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DoubleclicksearchConversionInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,27 +174,28 @@ public class Conversion {
     /**
      * Updates a batch of conversions in DoubleClick Search.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DoubleclicksearchConversionUpdateResponse doubleclicksearchConversionUpdate(org.openapis.openapi.models.operations.DoubleclicksearchConversionUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DoubleclicksearchConversionUpdateResponse doubleclicksearchConversionUpdate(org.openapis.openapi.models.operations.DoubleclicksearchConversionUpdateRequest request, org.openapis.openapi.models.operations.DoubleclicksearchConversionUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/doubleclicksearch/v2/conversion");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "conversionList", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DoubleclicksearchConversionUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DoubleclicksearchConversionUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -218,27 +222,28 @@ public class Conversion {
     /**
      * Updates the availabilities of a batch of floodlight activities in DoubleClick Search.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DoubleclicksearchConversionUpdateAvailabilityResponse doubleclicksearchConversionUpdateAvailability(org.openapis.openapi.models.operations.DoubleclicksearchConversionUpdateAvailabilityRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DoubleclicksearchConversionUpdateAvailabilityResponse doubleclicksearchConversionUpdateAvailability(org.openapis.openapi.models.operations.DoubleclicksearchConversionUpdateAvailabilityRequest request, org.openapis.openapi.models.operations.DoubleclicksearchConversionUpdateAvailabilitySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/doubleclicksearch/v2/conversion/updateAvailability");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateAvailabilityRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DoubleclicksearchConversionUpdateAvailabilityQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DoubleclicksearchConversionUpdateAvailabilityRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

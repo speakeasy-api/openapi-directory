@@ -7,31 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateUnderstandAssistantFallbackActionsRequest {
-    
-    public UpdateUnderstandAssistantFallbackActionsPathParams pathParams;
-    public UpdateUnderstandAssistantFallbackActionsRequest withPathParams(UpdateUnderstandAssistantFallbackActionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public UpdateUnderstandAssistantFallbackActionsRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateUnderstandAssistantFallbackActionsUpdateUnderstandAssistantFallbackActionsRequest request;
-    public UpdateUnderstandAssistantFallbackActionsRequest withRequest(UpdateUnderstandAssistantFallbackActionsUpdateUnderstandAssistantFallbackActionsRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public UpdateUnderstandAssistantFallbackActionsSecurity security;
-    public UpdateUnderstandAssistantFallbackActionsRequest withSecurity(UpdateUnderstandAssistantFallbackActionsSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateUnderstandAssistantFallbackActionsRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public UpdateUnderstandAssistantFallbackActionsUpdateUnderstandAssistantFallbackActionsRequest requestBody;
+    public UpdateUnderstandAssistantFallbackActionsRequest withRequestBody(UpdateUnderstandAssistantFallbackActionsUpdateUnderstandAssistantFallbackActionsRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

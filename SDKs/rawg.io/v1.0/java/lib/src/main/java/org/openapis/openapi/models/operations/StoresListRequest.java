@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoresListRequest {
+    /**
+     * Which field to use when ordering the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ordering")
+    public String ordering;
+    public StoresListRequest withOrdering(String ordering) {
+        this.ordering = ordering;
+        return this;
+    }
     
-    public StoresListQueryParams queryParams;
-    public StoresListRequest withQueryParams(StoresListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A page number within the paginated result set.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public StoresListRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public StoresListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

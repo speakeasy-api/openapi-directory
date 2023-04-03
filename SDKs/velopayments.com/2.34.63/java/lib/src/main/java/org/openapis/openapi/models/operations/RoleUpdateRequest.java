@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RoleUpdateRequest {
-    
-    public RoleUpdatePathParams pathParams;
-    public RoleUpdateRequest withPathParams(RoleUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The Role to change to
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RoleUpdateRequest request;
-    public RoleUpdateRequest withRequest(org.openapis.openapi.models.shared.RoleUpdateRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.RoleUpdateRequest roleUpdateRequest;
+    public RoleUpdateRequest withRoleUpdateRequest(org.openapis.openapi.models.shared.RoleUpdateRequest roleUpdateRequest) {
+        this.roleUpdateRequest = roleUpdateRequest;
+        return this;
+    }
+    
+    /**
+     * The UUID of the User.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public RoleUpdateRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

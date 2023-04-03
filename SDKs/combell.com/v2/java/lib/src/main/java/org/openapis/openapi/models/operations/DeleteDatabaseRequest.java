@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteDatabaseRequest {
-    
-    public DeleteDatabasePathParams pathParams;
-    public DeleteDatabaseRequest withPathParams(DeleteDatabasePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=databaseName")
+    public String databaseNamePathParameter;
+    public DeleteDatabaseRequest withDatabaseNamePathParameter(String databaseNamePathParameter) {
+        this.databaseNamePathParameter = databaseNamePathParameter;
         return this;
     }
     
-    
-    public DeleteDatabaseQueryParams queryParams;
-    public DeleteDatabaseRequest withQueryParams(DeleteDatabaseQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Name of the database.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=database_name")
+    public String databaseNameQueryParameter;
+    public DeleteDatabaseRequest withDatabaseNameQueryParameter(String databaseNameQueryParameter) {
+        this.databaseNameQueryParameter = databaseNameQueryParameter;
         return this;
     }
     

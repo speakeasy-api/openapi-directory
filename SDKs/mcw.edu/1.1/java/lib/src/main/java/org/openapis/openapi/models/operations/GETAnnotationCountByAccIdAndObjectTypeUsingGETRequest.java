@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAnnotationCountByAccIdAndObjectTypeUsingGETRequest {
+    /**
+     * Ontology term accession ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accId")
+    public String accId;
+    public GETAnnotationCountByAccIdAndObjectTypeUsingGETRequest withAccId(String accId) {
+        this.accId = accId;
+        return this;
+    }
     
-    public GETAnnotationCountByAccIdAndObjectTypeUsingGETPathParams pathParams;
-    public GETAnnotationCountByAccIdAndObjectTypeUsingGETRequest withPathParams(GETAnnotationCountByAccIdAndObjectTypeUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * true: return annotations for the term and children, false: return annotations for the term only 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=includeChildren")
+    public Boolean includeChildren;
+    public GETAnnotationCountByAccIdAndObjectTypeUsingGETRequest withIncludeChildren(Boolean includeChildren) {
+        this.includeChildren = includeChildren;
+        return this;
+    }
+    
+    /**
+     * A list of object types can be found using the lookup service
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=objectType")
+    public Integer objectType;
+    public GETAnnotationCountByAccIdAndObjectTypeUsingGETRequest withObjectType(Integer objectType) {
+        this.objectType = objectType;
+        return this;
+    }
+    
+    /**
+     * A list of species type keys can be found using the lookup service
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=speciesTypeKey")
+    public Integer speciesTypeKey;
+    public GETAnnotationCountByAccIdAndObjectTypeUsingGETRequest withSpeciesTypeKey(Integer speciesTypeKey) {
+        this.speciesTypeKey = speciesTypeKey;
         return this;
     }
     

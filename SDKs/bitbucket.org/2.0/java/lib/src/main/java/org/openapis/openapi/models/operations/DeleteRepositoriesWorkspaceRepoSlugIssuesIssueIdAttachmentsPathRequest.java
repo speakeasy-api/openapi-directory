@@ -4,20 +4,50 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathRequest {
-    
-    public DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathPathParams pathParams;
-    public DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathRequest withPathParams(DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The issue id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=issue_id")
+    public String issueId;
+    public DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathRequest withIssueId(String issueId) {
+        this.issueId = issueId;
         return this;
     }
     
+    /**
+     * Path to the file.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
+    public String path;
+    public DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathRequest withPath(String path) {
+        this.path = path;
+        return this;
+    }
     
-    public DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathSecurity security;
-    public DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathRequest withSecurity(DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
+    
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

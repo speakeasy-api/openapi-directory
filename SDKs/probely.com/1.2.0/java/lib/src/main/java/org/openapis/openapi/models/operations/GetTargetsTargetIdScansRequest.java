@@ -4,20 +4,78 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTargetsTargetIdScansRequest {
-    
-    public GetTargetsTargetIdScansPathParams pathParams;
-    public GetTargetsTargetIdScansRequest withPathParams(GetTargetsTargetIdScansPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Number of results to return per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=length")
+    public Long length;
+    public GetTargetsTargetIdScansRequest withLength(Long length) {
+        this.length = length;
         return this;
     }
     
+    /**
+     * Which field to use when ordering the results, prefix with `-` to invert ordering.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ordering")
+    public String ordering;
+    public GetTargetsTargetIdScansRequest withOrdering(String ordering) {
+        this.ordering = ordering;
+        return this;
+    }
     
-    public GetTargetsTargetIdScansQueryParams queryParams;
-    public GetTargetsTargetIdScansRequest withQueryParams(GetTargetsTargetIdScansQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number within the paginated result set
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetTargetsTargetIdScansRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Search term
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public GetTargetsTargetIdScansRequest withSearch(String search) {
+        this.search = search;
+        return this;
+    }
+    
+    /**
+     * Filter by scan start dates
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=started")
+    public LocalDate[] started;
+    public GetTargetsTargetIdScansRequest withStarted(LocalDate[] started) {
+        this.started = started;
+        return this;
+    }
+    
+    /**
+     * Filter by scan statuses
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public org.openapis.openapi.models.shared.ScanStatusEnum status;
+    public GetTargetsTargetIdScansRequest withStatus(org.openapis.openapi.models.shared.ScanStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * Target id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=target_id")
+    public String targetId;
+    public GetTargetsTargetIdScansRequest withTargetId(String targetId) {
+        this.targetId = targetId;
         return this;
     }
     

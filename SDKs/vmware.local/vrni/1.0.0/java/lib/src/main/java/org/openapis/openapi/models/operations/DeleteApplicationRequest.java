@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteApplicationRequest {
-    
-    public DeleteApplicationPathParams pathParams;
-    public DeleteApplicationRequest withPathParams(DeleteApplicationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteApplicationSecurity security;
-    public DeleteApplicationRequest withSecurity(DeleteApplicationSecurity security) {
-        this.security = security;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteApplicationRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

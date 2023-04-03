@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CollectionsLinkedNodesRelationshipsDeleteRequest {
-    
-    public CollectionsLinkedNodesRelationshipsDeletePathParams pathParams;
-    public CollectionsLinkedNodesRelationshipsDeleteRequest withPathParams(CollectionsLinkedNodesRelationshipsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public java.util.Map<String, Object> requestBody;
+    public CollectionsLinkedNodesRelationshipsDeleteRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public CollectionsLinkedNodesRelationshipsDeleteRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    /**
+     * A short id for that collection
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection_id")
+    public String collectionId;
+    public CollectionsLinkedNodesRelationshipsDeleteRequest withCollectionId(String collectionId) {
+        this.collectionId = collectionId;
         return this;
     }
     

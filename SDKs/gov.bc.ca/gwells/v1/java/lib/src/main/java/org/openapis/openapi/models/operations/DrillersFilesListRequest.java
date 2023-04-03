@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DrillersFilesListRequest {
-    
-    public DrillersFilesListPathParams pathParams;
-    public DrillersFilesListRequest withPathParams(DrillersFilesListPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=person_guid")
+    public String personGuid;
+    public DrillersFilesListRequest withPersonGuid(String personGuid) {
+        this.personGuid = personGuid;
         return this;
     }
     

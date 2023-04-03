@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssueGetMilestonesListRequest {
-    
-    public IssueGetMilestonesListPathParams pathParams;
-    public IssueGetMilestonesListRequest withPathParams(IssueGetMilestonesListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * page size of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public IssueGetMilestonesListRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * filter by milestone name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public IssueGetMilestonesListRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
     
-    public IssueGetMilestonesListQueryParams queryParams;
-    public IssueGetMilestonesListRequest withQueryParams(IssueGetMilestonesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssueGetMilestonesListRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * page number of results to return (1-based)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public IssueGetMilestonesListRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssueGetMilestonesListRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * Milestone state, Recognized values are open, closed and all. Defaults to "open"
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public String state;
+    public IssueGetMilestonesListRequest withState(String state) {
+        this.state = state;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2GetProfileRequest {
-    
-    public Destiny2GetProfilePathParams pathParams;
-    public Destiny2GetProfileRequest withPathParams(Destiny2GetProfilePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=components")
+    public Integer[] components;
+    public Destiny2GetProfileRequest withComponents(Integer[] components) {
+        this.components = components;
         return this;
     }
     
+    /**
+     * Destiny membership ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destinyMembershipId")
+    public Long destinyMembershipId;
+    public Destiny2GetProfileRequest withDestinyMembershipId(Long destinyMembershipId) {
+        this.destinyMembershipId = destinyMembershipId;
+        return this;
+    }
     
-    public Destiny2GetProfileQueryParams queryParams;
-    public Destiny2GetProfileRequest withQueryParams(Destiny2GetProfileQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A valid non-BungieNet membership type.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
+    public Integer membershipType;
+    public Destiny2GetProfileRequest withMembershipType(Integer membershipType) {
+        this.membershipType = membershipType;
         return this;
     }
     

@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSimSearchRequest {
+    /**
+     * A phenotype or identifier that is composed of phenotypes (eg disease, gene)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String[] id;
+    public GetSimSearchRequest withId(String[] id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetSimSearchQueryParams queryParams;
-    public GetSimSearchRequest withQueryParams(GetSimSearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * set to true if *all* input ids are phenotypic features, else set to false
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_feature_set")
+    public Boolean isFeatureSet;
+    public GetSimSearchRequest withIsFeatureSet(Boolean isFeatureSet) {
+        this.isFeatureSet = isFeatureSet;
+        return this;
+    }
+    
+    /**
+     * number of rows, max 500
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetSimSearchRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Metric for computing similarity
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=metric")
+    public GetSimSearchMetricEnum metric;
+    public GetSimSearchRequest withMetric(GetSimSearchMetricEnum metric) {
+        this.metric = metric;
+        return this;
+    }
+    
+    /**
+     * ncbi taxon id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=taxon")
+    public String taxon;
+    public GetSimSearchRequest withTaxon(String taxon) {
+        this.taxon = taxon;
         return this;
     }
     

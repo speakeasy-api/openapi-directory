@@ -4,20 +4,116 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListPackagesRequest {
-    
-    public ListPackagesQueryParams queryParams;
-    public ListPackagesRequest withQueryParams(ListPackagesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[name]")
+    public String filterName;
+    public ListPackagesRequest withFilterName(String filterName) {
+        this.filterName = filterName;
         return this;
     }
     
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[summary]")
+    public String filterSummary;
+    public ListPackagesRequest withFilterSummary(String filterSummary) {
+        this.filterSummary = filterSummary;
+        return this;
+    }
     
-    public ListPackagesSecurity security;
-    public ListPackagesRequest withSecurity(ListPackagesSecurity security) {
-        this.security = security;
+    /**
+     * Filter systems by their SAP SIDs
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[system_profile][sap_sids][in]")
+    public String[] filterSystemProfileSapSidsIn;
+    public ListPackagesRequest withFilterSystemProfileSapSidsIn(String[] filterSystemProfileSapSidsIn) {
+        this.filterSystemProfileSapSidsIn = filterSystemProfileSapSidsIn;
+        return this;
+    }
+    
+    /**
+     * Filter only SAP systems
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[system_profile][sap_system]")
+    public String filterSystemProfileSapSystem;
+    public ListPackagesRequest withFilterSystemProfileSapSystem(String filterSystemProfileSapSystem) {
+        this.filterSystemProfileSapSystem = filterSystemProfileSapSystem;
+        return this;
+    }
+    
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[systems_installed]")
+    public String filterSystemsInstalled;
+    public ListPackagesRequest withFilterSystemsInstalled(String filterSystemsInstalled) {
+        this.filterSystemsInstalled = filterSystemsInstalled;
+        return this;
+    }
+    
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[systems_updatable]")
+    public String filterSystemsUpdatable;
+    public ListPackagesRequest withFilterSystemsUpdatable(String filterSystemsUpdatable) {
+        this.filterSystemsUpdatable = filterSystemsUpdatable;
+        return this;
+    }
+    
+    /**
+     * Limit for paging, set -1 to return all
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListPackagesRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Offset for paging
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public ListPackagesRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Find matching text
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public ListPackagesRequest withSearch(String search) {
+        this.search = search;
+        return this;
+    }
+    
+    /**
+     * Sort field
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public ListPackagesSortEnum sort;
+    public ListPackagesRequest withSort(ListPackagesSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Tag filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
+    public String[] tags;
+    public ListPackagesRequest withTags(String[] tags) {
+        this.tags = tags;
         return this;
     }
     

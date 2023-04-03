@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateShortCodeRequest {
-    
-    public CreateShortCodePathParams pathParams;
-    public CreateShortCodeRequest withPathParams(CreateShortCodePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateShortCodeCreateShortCodeRequest request;
-    public CreateShortCodeRequest withRequest(CreateShortCodeCreateShortCodeRequest request) {
-        this.request = request;
+    public CreateShortCodeCreateShortCodeRequest requestBody;
+    public CreateShortCodeRequest withRequestBody(CreateShortCodeCreateShortCodeRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateShortCodeSecurity security;
-    public CreateShortCodeRequest withSecurity(CreateShortCodeSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateShortCodeRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to create the resource under.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public CreateShortCodeRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

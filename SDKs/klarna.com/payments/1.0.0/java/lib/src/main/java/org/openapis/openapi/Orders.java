@@ -40,7 +40,7 @@ public class Orders {
      */
     public org.openapis.openapi.models.operations.CancelAuthorizationResponse cancelAuthorization(org.openapis.openapi.models.operations.CancelAuthorizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelAuthorizationPathParams.class, baseUrl, "/payments/v1/authorizations/{authorizationToken}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelAuthorizationRequest.class, baseUrl, "/payments/v1/authorizations/{authorizationToken}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -74,12 +74,12 @@ public class Orders {
      */
     public org.openapis.openapi.models.operations.CreateOrderResponse createOrder(org.openapis.openapi.models.operations.CreateOrderRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrderPathParams.class, baseUrl, "/payments/v1/authorizations/{authorizationToken}/order", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrderRequest.class, baseUrl, "/payments/v1/authorizations/{authorizationToken}/order", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createOrderRequestInput", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -118,12 +118,12 @@ public class Orders {
      */
     public org.openapis.openapi.models.operations.PurchaseTokenResponse purchaseToken(org.openapis.openapi.models.operations.PurchaseTokenRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PurchaseTokenPathParams.class, baseUrl, "/payments/v1/authorizations/{authorizationToken}/customer-token", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PurchaseTokenRequest.class, baseUrl, "/payments/v1/authorizations/{authorizationToken}/customer-token", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "customerTokenCreationRequest", "json");
         req.setBody(serializedRequestBody);
         
         

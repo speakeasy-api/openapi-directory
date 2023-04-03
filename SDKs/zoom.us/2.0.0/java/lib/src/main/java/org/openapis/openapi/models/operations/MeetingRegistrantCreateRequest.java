@@ -7,31 +7,32 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MeetingRegistrantCreateRequest {
-    
-    public MeetingRegistrantCreatePathParams pathParams;
-    public MeetingRegistrantCreateRequest withPathParams(MeetingRegistrantCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public MeetingRegistrantCreateQueryParams queryParams;
-    public MeetingRegistrantCreateRequest withQueryParams(MeetingRegistrantCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public MeetingRegistrantCreateApplicationJSON request;
-    public MeetingRegistrantCreateRequest withRequest(MeetingRegistrantCreateApplicationJSON request) {
-        this.request = request;
+    public MeetingRegistrantCreateApplicationJSON requestBody;
+    public MeetingRegistrantCreateRequest withRequestBody(MeetingRegistrantCreateApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The meeting ID in **long** format. The data type of this field is "long"(represented as int64 in JSON).
+     * 
+     * While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=meetingId")
+    public Long meetingId;
+    public MeetingRegistrantCreateRequest withMeetingId(Long meetingId) {
+        this.meetingId = meetingId;
+        return this;
+    }
     
-    public MeetingRegistrantCreateSecurity security;
-    public MeetingRegistrantCreateRequest withSecurity(MeetingRegistrantCreateSecurity security) {
-        this.security = security;
+    /**
+     * Occurrence IDs. You can find these with the meeting get API. Multiple values separated by comma.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=occurrence_ids")
+    public String occurrenceIds;
+    public MeetingRegistrantCreateRequest withOccurrenceIds(String occurrenceIds) {
+        this.occurrenceIds = occurrenceIds;
         return this;
     }
     

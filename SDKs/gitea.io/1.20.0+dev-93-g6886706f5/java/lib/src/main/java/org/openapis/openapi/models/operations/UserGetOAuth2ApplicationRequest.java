@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserGetOAuth2ApplicationRequest {
-    
-    public UserGetOAuth2ApplicationPathParams pathParams;
-    public UserGetOAuth2ApplicationRequest withPathParams(UserGetOAuth2ApplicationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Application ID to be found
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public UserGetOAuth2ApplicationRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

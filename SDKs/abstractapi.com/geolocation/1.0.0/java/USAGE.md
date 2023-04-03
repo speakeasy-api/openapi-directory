@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetV1QueryParams;
 import org.openapis.openapi.models.operations.GetV1Request;
 import org.openapis.openapi.models.operations.GetV1Response;
 
@@ -15,12 +14,10 @@ public class Application {
                 .build();
 
             GetV1Request req = new GetV1Request() {{
-                queryParams = new GetV1QueryParams() {{
-                    apiKey = "corrupti";
-                    fields = "country,city,timezone";
-                    ipAddress = "195.154.25.40";
-                }};
-            }};            
+                apiKey = "corrupti";
+                fields = "country,city,timezone";
+                ipAddress = "195.154.25.40";
+            }}            
 
             GetV1Response res = sdk.getV1(req);
 

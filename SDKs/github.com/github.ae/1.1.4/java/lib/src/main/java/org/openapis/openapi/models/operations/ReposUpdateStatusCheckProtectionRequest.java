@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposUpdateStatusCheckProtectionRequest {
-    
-    public ReposUpdateStatusCheckProtectionPathParams pathParams;
-    public ReposUpdateStatusCheckProtectionRequest withPathParams(ReposUpdateStatusCheckProtectionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ReposUpdateStatusCheckProtectionRequestBody requestBody;
+    public ReposUpdateStatusCheckProtectionRequest withRequestBody(ReposUpdateStatusCheckProtectionRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ReposUpdateStatusCheckProtectionRequestBody request;
-    public ReposUpdateStatusCheckProtectionRequest withRequest(ReposUpdateStatusCheckProtectionRequestBody request) {
-        this.request = request;
+    /**
+     * The name of the branch. Cannot contain wildcard characters. To use wildcard characters in branch names, use [the GraphQL API](https://docs.github.com/github-ae@latest/graphql).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branch")
+    public String branch;
+    public ReposUpdateStatusCheckProtectionRequest withBranch(String branch) {
+        this.branch = branch;
+        return this;
+    }
+    
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposUpdateStatusCheckProtectionRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposUpdateStatusCheckProtectionRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

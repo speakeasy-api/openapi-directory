@@ -4,20 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteWorkspacesWorkspaceProjectsProjectKeyRequest {
-    
-    public DeleteWorkspacesWorkspaceProjectsProjectKeyPathParams pathParams;
-    public DeleteWorkspacesWorkspaceProjectsProjectKeyRequest withPathParams(DeleteWorkspacesWorkspaceProjectsProjectKeyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The project in question. This is the actual `key` assigned
+     * to the project.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_key")
+    public String projectKey;
+    public DeleteWorkspacesWorkspaceProjectsProjectKeyRequest withProjectKey(String projectKey) {
+        this.projectKey = projectKey;
         return this;
     }
     
-    
-    public DeleteWorkspacesWorkspaceProjectsProjectKeySecurity security;
-    public DeleteWorkspacesWorkspaceProjectsProjectKeyRequest withSecurity(DeleteWorkspacesWorkspaceProjectsProjectKeySecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public DeleteWorkspacesWorkspaceProjectsProjectKeyRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

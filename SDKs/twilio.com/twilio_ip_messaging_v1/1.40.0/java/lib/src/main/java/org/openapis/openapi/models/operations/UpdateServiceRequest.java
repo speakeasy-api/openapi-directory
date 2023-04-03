@@ -7,31 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateServiceRequest {
-    
-    public UpdateServicePathParams pathParams;
-    public UpdateServiceRequest withPathParams(UpdateServicePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateServiceUpdateServiceRequest request;
-    public UpdateServiceRequest withRequest(UpdateServiceUpdateServiceRequest request) {
-        this.request = request;
+    public UpdateServiceUpdateServiceRequest requestBody;
+    public UpdateServiceRequest withRequestBody(UpdateServiceUpdateServiceRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateServiceSecurity security;
-    public UpdateServiceRequest withSecurity(UpdateServiceSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateServiceRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateServiceRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

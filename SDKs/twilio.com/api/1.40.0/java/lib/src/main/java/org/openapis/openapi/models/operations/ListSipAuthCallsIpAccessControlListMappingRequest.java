@@ -4,34 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSipAuthCallsIpAccessControlListMappingRequest {
-    
-    public ListSipAuthCallsIpAccessControlListMappingPathParams pathParams;
-    public ListSipAuthCallsIpAccessControlListMappingRequest withPathParams(ListSipAuthCallsIpAccessControlListMappingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the IpAccessControlListMapping resources to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public ListSipAuthCallsIpAccessControlListMappingRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public ListSipAuthCallsIpAccessControlListMappingQueryParams queryParams;
-    public ListSipAuthCallsIpAccessControlListMappingRequest withQueryParams(ListSipAuthCallsIpAccessControlListMappingQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The SID of the SIP domain that contains the resources to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DomainSid")
+    public String domainSid;
+    public ListSipAuthCallsIpAccessControlListMappingRequest withDomainSid(String domainSid) {
+        this.domainSid = domainSid;
         return this;
     }
     
-    
-    public ListSipAuthCallsIpAccessControlListMappingSecurity security;
-    public ListSipAuthCallsIpAccessControlListMappingRequest withSecurity(ListSipAuthCallsIpAccessControlListMappingSecurity security) {
-        this.security = security;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListSipAuthCallsIpAccessControlListMappingRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListSipAuthCallsIpAccessControlListMappingRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public String serverURL;
-    public ListSipAuthCallsIpAccessControlListMappingRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListSipAuthCallsIpAccessControlListMappingRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

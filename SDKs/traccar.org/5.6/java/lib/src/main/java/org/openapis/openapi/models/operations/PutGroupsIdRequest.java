@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutGroupsIdRequest {
-    
-    public PutGroupsIdPathParams pathParams;
-    public PutGroupsIdRequest withPathParams(PutGroupsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.Group group;
+    public PutGroupsIdRequest withGroup(org.openapis.openapi.models.shared.Group group) {
+        this.group = group;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Group request;
-    public PutGroupsIdRequest withRequest(org.openapis.openapi.models.shared.Group request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public PutGroupsIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

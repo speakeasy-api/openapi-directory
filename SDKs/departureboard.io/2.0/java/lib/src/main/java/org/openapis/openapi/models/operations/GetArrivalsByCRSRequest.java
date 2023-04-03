@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetArrivalsByCRSRequest {
-    
-    public GetArrivalsByCRSPathParams pathParams;
-    public GetArrivalsByCRSRequest withPathParams(GetArrivalsByCRSPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The CRS (Computer Reservation System) for the Station you wish to get arrival information for, e.g. KGX for London Kings Cross.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CRS")
+    public String crs;
+    public GetArrivalsByCRSRequest withCrs(String crs) {
+        this.crs = crs;
         return this;
     }
     
+    /**
+     * The National Rail OpenLDBWS API Key to use for looking up service information. You must register with National Rail to obtain this key and whitelist it with us. See https://api.departureboard.io/docs/registration for more information.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=apiKey")
+    public String apiKey;
+    public GetArrivalsByCRSRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public GetArrivalsByCRSQueryParams queryParams;
-    public GetArrivalsByCRSRequest withQueryParams(GetArrivalsByCRSQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The CRS (Computer Reservation System) code to filter the results by. For example, performing a lookup for PAD (London Paddington) and setting filterStation to RED (Reading), will only show services arriving to Paddington that stopped at Reading.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filterStation")
+    public String filterStation;
+    public GetArrivalsByCRSRequest withFilterStation(String filterStation) {
+        this.filterStation = filterStation;
+        return this;
+    }
+    
+    /**
+     * The number of arriving train services to return. This is a maximum value, less may be returned if there is not a sufficient amount of services running to this station within the time window specified.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=numServices")
+    public Long numServices;
+    public GetArrivalsByCRSRequest withNumServices(Long numServices) {
+        this.numServices = numServices;
+        return this;
+    }
+    
+    /**
+     * Should the response contain information on the calling points for each service? If set to false, calling points will not be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceDetails")
+    public Boolean serviceDetails;
+    public GetArrivalsByCRSRequest withServiceDetails(Boolean serviceDetails) {
+        this.serviceDetails = serviceDetails;
+        return this;
+    }
+    
+    /**
+     * The time window in minutes to offset the arrival information by. For example, a value of 20 will not show services arriving within the next 20 minutes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeOffset")
+    public Long timeOffset;
+    public GetArrivalsByCRSRequest withTimeOffset(Long timeOffset) {
+        this.timeOffset = timeOffset;
+        return this;
+    }
+    
+    /**
+     * The time window to show train services for in minutes. For example, a value of 60 will show services arriving to the station in the next 60 minutes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeWindow")
+    public Long timeWindow;
+    public GetArrivalsByCRSRequest withTimeWindow(Long timeWindow) {
+        this.timeWindow = timeWindow;
         return this;
     }
     

@@ -7,24 +7,51 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConfigureHttp2Request {
-    
-    public ConfigureHttp2PathParams pathParams;
-    public ConfigureHttp2Request withPathParams(ConfigureHttp2PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ConfigureHttp2QueryParams queryParams;
-    public ConfigureHttp2Request withQueryParams(ConfigureHttp2QueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Http2Configuration request;
-    public ConfigureHttp2Request withRequest(org.openapis.openapi.models.shared.Http2Configuration request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Http2Configuration http2Configuration;
+    public ConfigureHttp2Request withHttp2Configuration(org.openapis.openapi.models.shared.Http2Configuration http2Configuration) {
+        this.http2Configuration = http2Configuration;
+        return this;
+    }
+    
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
+    public String domainNamePathParameter;
+    public ConfigureHttp2Request withDomainNamePathParameter(String domainNamePathParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
+        return this;
+    }
+    
+    /**
+     * Linux hosting domain name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
+    public String domainNameQueryParameter;
+    public ConfigureHttp2Request withDomainNameQueryParameter(String domainNameQueryParameter) {
+        this.domainNameQueryParameter = domainNameQueryParameter;
+        return this;
+    }
+    
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=siteName")
+    public String siteNamePathParameter;
+    public ConfigureHttp2Request withSiteNamePathParameter(String siteNamePathParameter) {
+        this.siteNamePathParameter = siteNamePathParameter;
+        return this;
+    }
+    
+    /**
+     * Site name where HTTP/2 should be configured.&lt;br /&gt;
+     * For HTTP/2 to work correctly, the site must have ssl enabled.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site_name")
+    public String siteNameQueryParameter;
+    public ConfigureHttp2Request withSiteNameQueryParameter(String siteNameQueryParameter) {
+        this.siteNameQueryParameter = siteNameQueryParameter;
         return this;
     }
     

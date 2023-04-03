@@ -40,12 +40,12 @@ public class BypassActivationLockAttempts {
      */
     public org.openapis.openapi.models.operations.CreateNetworkSmBypassActivationLockAttemptResponse createNetworkSmBypassActivationLockAttempt(org.openapis.openapi.models.operations.CreateNetworkSmBypassActivationLockAttemptRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkSmBypassActivationLockAttemptPathParams.class, baseUrl, "/networks/{networkId}/sm/bypassActivationLockAttempts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkSmBypassActivationLockAttemptRequest.class, baseUrl, "/networks/{networkId}/sm/bypassActivationLockAttempts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -85,7 +85,7 @@ public class BypassActivationLockAttempts {
      */
     public org.openapis.openapi.models.operations.GetNetworkSmBypassActivationLockAttemptResponse getNetworkSmBypassActivationLockAttempt(org.openapis.openapi.models.operations.GetNetworkSmBypassActivationLockAttemptRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSmBypassActivationLockAttemptPathParams.class, baseUrl, "/networks/{networkId}/sm/bypassActivationLockAttempts/{attemptId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSmBypassActivationLockAttemptRequest.class, baseUrl, "/networks/{networkId}/sm/bypassActivationLockAttempts/{attemptId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

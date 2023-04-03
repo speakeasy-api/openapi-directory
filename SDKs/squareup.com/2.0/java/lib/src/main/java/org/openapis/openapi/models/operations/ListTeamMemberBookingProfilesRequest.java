@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListTeamMemberBookingProfilesRequest {
-    
-    public ListTeamMemberBookingProfilesQueryParams queryParams;
-    public ListTeamMemberBookingProfilesRequest withQueryParams(ListTeamMemberBookingProfilesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Indicates whether to include only bookable team members in the returned result (`true`) or not (`false`).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bookable_only")
+    public Boolean bookableOnly;
+    public ListTeamMemberBookingProfilesRequest withBookableOnly(Boolean bookableOnly) {
+        this.bookableOnly = bookableOnly;
         return this;
     }
     
+    /**
+     * The cursor for paginating through the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public ListTeamMemberBookingProfilesRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
     
-    public ListTeamMemberBookingProfilesSecurity security;
-    public ListTeamMemberBookingProfilesRequest withSecurity(ListTeamMemberBookingProfilesSecurity security) {
-        this.security = security;
+    /**
+     * The maximum number of results to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListTeamMemberBookingProfilesRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Indicates whether to include only team members enabled at the given location in the returned result.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location_id")
+    public String locationId;
+    public ListTeamMemberBookingProfilesRequest withLocationId(String locationId) {
+        this.locationId = locationId;
         return this;
     }
     

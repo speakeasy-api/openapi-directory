@@ -4,20 +4,70 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReportTelephoneRequest {
-    
-    public ReportTelephoneQueryParams queryParams;
-    public ReportTelephoneRequest withQueryParams(ReportTelephoneQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Start date in 'yyyy-mm-dd' format. The date range defined by the "from" and "to" parameters should only be one month as the report includes only one month worth of data at once.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
+    public LocalDate from;
+    public ReportTelephoneRequest withFrom(LocalDate from) {
+        this.from = from;
         return this;
     }
     
+    /**
+     * The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next_page_token")
+    public String nextPageToken;
+    public ReportTelephoneRequest withNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
+        return this;
+    }
     
-    public ReportTelephoneSecurity security;
-    public ReportTelephoneRequest withSecurity(ReportTelephoneSecurity security) {
-        this.security = security;
+    /**
+     * **Deprecated** - This field has been deprecated and we will stop supporting it completely in a future release. Please use "next_page_token" for pagination instead of this field.
+     * 
+     * The page number of the current page in the returned records.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_number")
+    public Long pageNumber;
+    public ReportTelephoneRequest withPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    
+    /**
+     * The number of records returned within a single API call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public ReportTelephoneRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * End date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
+    public LocalDate to;
+    public ReportTelephoneRequest withTo(LocalDate to) {
+        this.to = to;
+        return this;
+    }
+    
+    /**
+     * Audio types:&lt;br&gt;`1` - Toll-free Call-in &amp; Call-out.&lt;br&gt;`2` - Toll &lt;br&gt;
+     * `3` - SIP Connected Audio
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public ReportTelephoneTypeEnum type;
+    public ReportTelephoneRequest withType(ReportTelephoneTypeEnum type) {
+        this.type = type;
         return this;
     }
     

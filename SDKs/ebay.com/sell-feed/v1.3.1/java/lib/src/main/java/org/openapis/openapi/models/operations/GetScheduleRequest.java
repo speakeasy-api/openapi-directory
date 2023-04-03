@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetScheduleRequest {
-    
-    public GetSchedulePathParams pathParams;
-    public GetScheduleRequest withPathParams(GetSchedulePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetScheduleSecurity security;
-    public GetScheduleRequest withSecurity(GetScheduleSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the schedule for which to retrieve the details. This ID is generated when the schedule was created by the &lt;strong&gt;createSchedule&lt;/strong&gt; method.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=schedule_id")
+    public String scheduleId;
+    public GetScheduleRequest withScheduleId(String scheduleId) {
+        this.scheduleId = scheduleId;
         return this;
     }
     

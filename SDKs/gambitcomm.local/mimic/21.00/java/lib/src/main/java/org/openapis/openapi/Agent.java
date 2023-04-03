@@ -40,7 +40,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.AddIpaliasResponse addIpalias(org.openapis.openapi.models.operations.AddIpaliasRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddIpaliasPathParams.class, baseUrl, "/mimic/agent/{agentNum}/ipalias/add/{IP}/{port}/{mask}/{interface}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddIpaliasRequest.class, baseUrl, "/mimic/agent/{agentNum}/ipalias/add/{IP}/{port}/{mask}/{interface}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -81,7 +81,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.AddTimerScriptResponse addTimerScript(org.openapis.openapi.models.operations.AddTimerScriptRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddTimerScriptPathParams.class, baseUrl, "/mimic/agent/{agentNum}/timer/script/add/{script}/{interval}/{arg}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddTimerScriptRequest.class, baseUrl, "/mimic/agent/{agentNum}/timer/script/add/{script}/{interval}/{arg}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -122,7 +122,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.AgentRemoveResponse agentRemove(org.openapis.openapi.models.operations.AgentRemoveRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AgentRemovePathParams.class, baseUrl, "/mimic/agent/{agentNum}/remove", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AgentRemoveRequest.class, baseUrl, "/mimic/agent/{agentNum}/remove", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -163,7 +163,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.AgentStoreCopyResponse agentStoreCopy(org.openapis.openapi.models.operations.AgentStoreCopyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AgentStoreCopyPathParams.class, baseUrl, "/mimic/agent/{agentNum}/store/copy/{otherAgent}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AgentStoreCopyRequest.class, baseUrl, "/mimic/agent/{agentNum}/store/copy/{otherAgent}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -204,7 +204,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.AgentStoreExistsResponse agentStoreExists(org.openapis.openapi.models.operations.AgentStoreExistsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AgentStoreExistsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/store/exists/{var}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AgentStoreExistsRequest.class, baseUrl, "/mimic/agent/{agentNum}/store/exists/{var}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -245,7 +245,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.AgentStoreGetResponse agentStoreGet(org.openapis.openapi.models.operations.AgentStoreGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AgentStoreGetPathParams.class, baseUrl, "/mimic/agent/{agentNum}/store/get/{var}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AgentStoreGetRequest.class, baseUrl, "/mimic/agent/{agentNum}/store/get/{var}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -286,7 +286,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.AgentStoreListResponse agentStoreList(org.openapis.openapi.models.operations.AgentStoreListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AgentStoreListPathParams.class, baseUrl, "/mimic/agent/{agentNum}/store/list", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AgentStoreListRequest.class, baseUrl, "/mimic/agent/{agentNum}/store/list", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -328,12 +328,12 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.AgentStoreLreplaceResponse agentStoreLreplace(org.openapis.openapi.models.operations.AgentStoreLreplaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AgentStoreLreplacePathParams.class, baseUrl, "/mimic/agent/{agentNum}/store/lreplace/{var}/{index}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AgentStoreLreplaceRequest.class, baseUrl, "/mimic/agent/{agentNum}/store/lreplace/{var}/{index}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "string");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "string");
         req.setBody(serializedRequestBody);
         
         
@@ -371,7 +371,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.AgentStorePersistsResponse agentStorePersists(org.openapis.openapi.models.operations.AgentStorePersistsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AgentStorePersistsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/store/persists/{var}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AgentStorePersistsRequest.class, baseUrl, "/mimic/agent/{agentNum}/store/persists/{var}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -412,12 +412,12 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.AgentStoreSetResponse agentStoreSet(org.openapis.openapi.models.operations.AgentStoreSetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AgentStoreSetPathParams.class, baseUrl, "/mimic/agent/{agentNum}/store/set/{var}/{persist}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AgentStoreSetRequest.class, baseUrl, "/mimic/agent/{agentNum}/store/set/{var}/{persist}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "string");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "string");
         req.setBody(serializedRequestBody);
         
         
@@ -455,7 +455,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.AgentStoreUnsetResponse agentStoreUnset(org.openapis.openapi.models.operations.AgentStoreUnsetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AgentStoreUnsetPathParams.class, baseUrl, "/mimic/agent/{agentNum}/store/unset/{var}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AgentStoreUnsetRequest.class, baseUrl, "/mimic/agent/{agentNum}/store/unset/{var}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -496,7 +496,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.DelIpaliasResponse delIpalias(org.openapis.openapi.models.operations.DelIpaliasRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DelIpaliasPathParams.class, baseUrl, "/mimic/agent/{agentNum}/ipalias/delete/{IP}/{port}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DelIpaliasRequest.class, baseUrl, "/mimic/agent/{agentNum}/ipalias/delete/{IP}/{port}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -537,7 +537,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.DelTimerScriptResponse delTimerScript(org.openapis.openapi.models.operations.DelTimerScriptRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DelTimerScriptPathParams.class, baseUrl, "/mimic/agent/{agentNum}/timer/script/delete/{script}/{interval}/{arg}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DelTimerScriptRequest.class, baseUrl, "/mimic/agent/{agentNum}/timer/script/delete/{script}/{interval}/{arg}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -578,7 +578,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.FromAddResponse fromAdd(org.openapis.openapi.models.operations.FromAddRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FromAddPathParams.class, baseUrl, "/mimic/agent/{agentNum}/from/add/{IP}/{port}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FromAddRequest.class, baseUrl, "/mimic/agent/{agentNum}/from/add/{IP}/{port}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -619,7 +619,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.FromDelResponse fromDel(org.openapis.openapi.models.operations.FromDelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FromDelPathParams.class, baseUrl, "/mimic/agent/{agentNum}/from/delete/{IP}/{port}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FromDelRequest.class, baseUrl, "/mimic/agent/{agentNum}/from/delete/{IP}/{port}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -660,7 +660,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.FromListResponse fromList(org.openapis.openapi.models.operations.FromListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FromListPathParams.class, baseUrl, "/mimic/agent/{agentNum}/from/list", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FromListRequest.class, baseUrl, "/mimic/agent/{agentNum}/from/list", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -702,7 +702,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.GetAgentStateResponse getAgentState(org.openapis.openapi.models.operations.GetAgentStateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAgentStatePathParams.class, baseUrl, "/mimic/agent/{agentNum}/get/state", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAgentStateRequest.class, baseUrl, "/mimic/agent/{agentNum}/get/state", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -744,7 +744,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.GetChangedResponse getChanged(org.openapis.openapi.models.operations.GetChangedRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChangedPathParams.class, baseUrl, "/mimic/agent/{agentNum}/get/changed", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChangedRequest.class, baseUrl, "/mimic/agent/{agentNum}/get/changed", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -786,7 +786,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.GetConfigChangedResponse getConfigChanged(org.openapis.openapi.models.operations.GetConfigChangedRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConfigChangedPathParams.class, baseUrl, "/mimic/agent/{agentNum}/get/config_changed", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConfigChangedRequest.class, baseUrl, "/mimic/agent/{agentNum}/get/config_changed", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -828,7 +828,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.GetDelayResponse getDelay(org.openapis.openapi.models.operations.GetDelayRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDelayPathParams.class, baseUrl, "/mimic/agent/{agentNum}/get/delay", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDelayRequest.class, baseUrl, "/mimic/agent/{agentNum}/get/delay", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -870,7 +870,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.GetDropsResponse getDrops(org.openapis.openapi.models.operations.GetDropsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDropsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/get/drops", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDropsRequest.class, baseUrl, "/mimic/agent/{agentNum}/get/drops", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -912,7 +912,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.GetHostResponse getHost(org.openapis.openapi.models.operations.GetHostRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetHostPathParams.class, baseUrl, "/mimic/agent/{agentNum}/get/host", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetHostRequest.class, baseUrl, "/mimic/agent/{agentNum}/get/host", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -953,7 +953,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.GetInformTimeoutResponse getInformTimeout(org.openapis.openapi.models.operations.GetInformTimeoutRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInformTimeoutPathParams.class, baseUrl, "/mimic/agent/{agentNum}/get/inform_timeout", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInformTimeoutRequest.class, baseUrl, "/mimic/agent/{agentNum}/get/inform_timeout", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -995,7 +995,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.GetInterfaceResponse getInterface(org.openapis.openapi.models.operations.GetInterfaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInterfacePathParams.class, baseUrl, "/mimic/agent/{agentNum}/get/interface", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInterfaceRequest.class, baseUrl, "/mimic/agent/{agentNum}/get/interface", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1036,7 +1036,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.GetMaskResponse getMask(org.openapis.openapi.models.operations.GetMaskRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMaskPathParams.class, baseUrl, "/mimic/agent/{agentNum}/get/mask", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMaskRequest.class, baseUrl, "/mimic/agent/{agentNum}/get/mask", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1077,7 +1077,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.GetMibsResponse getMibs(org.openapis.openapi.models.operations.GetMibsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMibsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/get/mibs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMibsRequest.class, baseUrl, "/mimic/agent/{agentNum}/get/mibs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1119,7 +1119,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.GetNumberStartsResponse getNumberStarts(org.openapis.openapi.models.operations.GetNumberStartsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNumberStartsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/get/num_starts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNumberStartsRequest.class, baseUrl, "/mimic/agent/{agentNum}/get/num_starts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1161,7 +1161,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.GetOiddirResponse getOiddir(org.openapis.openapi.models.operations.GetOiddirRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOiddirPathParams.class, baseUrl, "/mimic/agent/{agentNum}/get/oiddir", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOiddirRequest.class, baseUrl, "/mimic/agent/{agentNum}/get/oiddir", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1202,7 +1202,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.GetOwnerResponse getOwner(org.openapis.openapi.models.operations.GetOwnerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOwnerPathParams.class, baseUrl, "/mimic/agent/{agentNum}/get/owner", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOwnerRequest.class, baseUrl, "/mimic/agent/{agentNum}/get/owner", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1243,7 +1243,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.GetPdusizeResponse getPdusize(org.openapis.openapi.models.operations.GetPdusizeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPdusizePathParams.class, baseUrl, "/mimic/agent/{agentNum}/get/pdusize", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPdusizeRequest.class, baseUrl, "/mimic/agent/{agentNum}/get/pdusize", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1285,7 +1285,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.GetPortResponse getPort(org.openapis.openapi.models.operations.GetPortRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPortPathParams.class, baseUrl, "/mimic/agent/{agentNum}/get/port", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPortRequest.class, baseUrl, "/mimic/agent/{agentNum}/get/port", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1326,7 +1326,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.GetPrivdirResponse getPrivdir(org.openapis.openapi.models.operations.GetPrivdirRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPrivdirPathParams.class, baseUrl, "/mimic/agent/{agentNum}/get/privdir", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPrivdirRequest.class, baseUrl, "/mimic/agent/{agentNum}/get/privdir", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1367,7 +1367,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.GetProtocolsResponse getProtocols(org.openapis.openapi.models.operations.GetProtocolsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProtocolsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/get/protocol", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProtocolsRequest.class, baseUrl, "/mimic/agent/{agentNum}/get/protocol", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1409,7 +1409,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.GetReadCommunityResponse getReadCommunity(org.openapis.openapi.models.operations.GetReadCommunityRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetReadCommunityPathParams.class, baseUrl, "/mimic/agent/{agentNum}/get/read", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetReadCommunityRequest.class, baseUrl, "/mimic/agent/{agentNum}/get/read", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1450,7 +1450,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.GetScenResponse getScen(org.openapis.openapi.models.operations.GetScenRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetScenPathParams.class, baseUrl, "/mimic/agent/{agentNum}/get/scen", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetScenRequest.class, baseUrl, "/mimic/agent/{agentNum}/get/scen", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1492,7 +1492,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.GetSimResponse getSim(org.openapis.openapi.models.operations.GetSimRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSimPathParams.class, baseUrl, "/mimic/agent/{agentNum}/get/sim", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSimRequest.class, baseUrl, "/mimic/agent/{agentNum}/get/sim", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1533,7 +1533,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.GetStarttimeResponse getStarttime(org.openapis.openapi.models.operations.GetStarttimeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStarttimePathParams.class, baseUrl, "/mimic/agent/{agentNum}/get/start", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStarttimeRequest.class, baseUrl, "/mimic/agent/{agentNum}/get/start", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1574,7 +1574,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.GetStateChangedResponse getStateChanged(org.openapis.openapi.models.operations.GetStateChangedRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStateChangedPathParams.class, baseUrl, "/mimic/agent/{agentNum}/get/state_changed", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStateChangedRequest.class, baseUrl, "/mimic/agent/{agentNum}/get/state_changed", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1616,7 +1616,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.GetStatisticsResponse getStatistics(org.openapis.openapi.models.operations.GetStatisticsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStatisticsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/get/statistics", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetStatisticsRequest.class, baseUrl, "/mimic/agent/{agentNum}/get/statistics", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1658,7 +1658,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.GetTraceResponse getTrace(org.openapis.openapi.models.operations.GetTraceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTracePathParams.class, baseUrl, "/mimic/agent/{agentNum}/get/trace", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTraceRequest.class, baseUrl, "/mimic/agent/{agentNum}/get/trace", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1700,7 +1700,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.GetValidateResponse getValidate(org.openapis.openapi.models.operations.GetValidateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetValidatePathParams.class, baseUrl, "/mimic/agent/{agentNum}/get/validate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetValidateRequest.class, baseUrl, "/mimic/agent/{agentNum}/get/validate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1742,7 +1742,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.GetWriteCommunityResponse getWriteCommunity(org.openapis.openapi.models.operations.GetWriteCommunityRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWriteCommunityPathParams.class, baseUrl, "/mimic/agent/{agentNum}/get/write", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWriteCommunityRequest.class, baseUrl, "/mimic/agent/{agentNum}/get/write", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1783,7 +1783,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.HaltResponse halt(org.openapis.openapi.models.operations.HaltRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.HaltPathParams.class, baseUrl, "/mimic/agent/{agentNum}/halt", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.HaltRequest.class, baseUrl, "/mimic/agent/{agentNum}/halt", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -1824,7 +1824,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.ListIpaliasesResponse listIpaliases(org.openapis.openapi.models.operations.ListIpaliasesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListIpaliasesPathParams.class, baseUrl, "/mimic/agent/{agentNum}/ipalias/list", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListIpaliasesRequest.class, baseUrl, "/mimic/agent/{agentNum}/ipalias/list", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1866,7 +1866,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.ListTimerScriptsResponse listTimerScripts(org.openapis.openapi.models.operations.ListTimerScriptsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListTimerScriptsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/timer/script/list", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListTimerScriptsRequest.class, baseUrl, "/mimic/agent/{agentNum}/timer/script/list", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1908,12 +1908,12 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.NewResponse new_(org.openapis.openapi.models.operations.NewRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NewPathParams.class, baseUrl, "/mimic/agent/{agentNum}/add/{IP}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NewRequest.class, baseUrl, "/mimic/agent/{agentNum}/add/{IP}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1954,7 +1954,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.PauseNowResponse pauseNow(org.openapis.openapi.models.operations.PauseNowRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PauseNowPathParams.class, baseUrl, "/mimic/agent/{agentNum}/pause", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PauseNowRequest.class, baseUrl, "/mimic/agent/{agentNum}/pause", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -1995,7 +1995,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.ProtocolGetConfigResponse protocolGetConfig(org.openapis.openapi.models.operations.ProtocolGetConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolGetConfigPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/{prot}/get/config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolGetConfigRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/{prot}/get/config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2037,7 +2037,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.ReloadResponse reload(org.openapis.openapi.models.operations.ReloadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReloadPathParams.class, baseUrl, "/mimic/agent/{agentNum}/reload", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReloadRequest.class, baseUrl, "/mimic/agent/{agentNum}/reload", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -2078,7 +2078,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.ResumeResponse resume(org.openapis.openapi.models.operations.ResumeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ResumePathParams.class, baseUrl, "/mimic/agent/{agentNum}/resume", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ResumeRequest.class, baseUrl, "/mimic/agent/{agentNum}/resume", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -2119,7 +2119,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.SaveResponse save(org.openapis.openapi.models.operations.SaveRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SavePathParams.class, baseUrl, "/mimic/agent/{agentNum}/save", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SaveRequest.class, baseUrl, "/mimic/agent/{agentNum}/save", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -2160,7 +2160,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.SetDelayResponse setDelay(org.openapis.openapi.models.operations.SetDelayRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetDelayPathParams.class, baseUrl, "/mimic/agent/{agentNum}/set/delay/{delay}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetDelayRequest.class, baseUrl, "/mimic/agent/{agentNum}/set/delay/{delay}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -2202,7 +2202,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.SetDropsResponse setDrops(org.openapis.openapi.models.operations.SetDropsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetDropsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/set/drops/{drops}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetDropsRequest.class, baseUrl, "/mimic/agent/{agentNum}/set/drops/{drops}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -2244,7 +2244,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.SetHostResponse setHost(org.openapis.openapi.models.operations.SetHostRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetHostPathParams.class, baseUrl, "/mimic/agent/{agentNum}/set/host/{host}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetHostRequest.class, baseUrl, "/mimic/agent/{agentNum}/set/host/{host}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -2285,7 +2285,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.SetInformTimeoutResponse setInformTimeout(org.openapis.openapi.models.operations.SetInformTimeoutRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetInformTimeoutPathParams.class, baseUrl, "/mimic/agent/{agentNum}/set/inform_timeout/{inform_timeout}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetInformTimeoutRequest.class, baseUrl, "/mimic/agent/{agentNum}/set/inform_timeout/{inform_timeout}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -2327,7 +2327,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.SetInterfaceResponse setInterface(org.openapis.openapi.models.operations.SetInterfaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetInterfacePathParams.class, baseUrl, "/mimic/agent/{agentNum}/set/interface/{interface}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetInterfaceRequest.class, baseUrl, "/mimic/agent/{agentNum}/set/interface/{interface}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -2368,7 +2368,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.SetMaskResponse setMask(org.openapis.openapi.models.operations.SetMaskRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetMaskPathParams.class, baseUrl, "/mimic/agent/{agentNum}/set/mask/{mask}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetMaskRequest.class, baseUrl, "/mimic/agent/{agentNum}/set/mask/{mask}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -2409,12 +2409,12 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.SetMibsResponse setMibs(org.openapis.openapi.models.operations.SetMibsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetMibsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/set/mibs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetMibsRequest.class, baseUrl, "/mimic/agent/{agentNum}/set/mibs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -2455,7 +2455,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.SetOiddirResponse setOiddir(org.openapis.openapi.models.operations.SetOiddirRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetOiddirPathParams.class, baseUrl, "/mimic/agent/{agentNum}/set/oiddir/{oiddir}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetOiddirRequest.class, baseUrl, "/mimic/agent/{agentNum}/set/oiddir/{oiddir}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -2496,7 +2496,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.SetOwnerResponse setOwner(org.openapis.openapi.models.operations.SetOwnerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetOwnerPathParams.class, baseUrl, "/mimic/agent/{agentNum}/set/owner/{owner}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetOwnerRequest.class, baseUrl, "/mimic/agent/{agentNum}/set/owner/{owner}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -2537,7 +2537,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.SetPdusizeResponse setPdusize(org.openapis.openapi.models.operations.SetPdusizeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetPdusizePathParams.class, baseUrl, "/mimic/agent/{agentNum}/set/pdusize/{pdusize}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetPdusizeRequest.class, baseUrl, "/mimic/agent/{agentNum}/set/pdusize/{pdusize}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -2579,7 +2579,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.SetPortResponse setPort(org.openapis.openapi.models.operations.SetPortRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetPortPathParams.class, baseUrl, "/mimic/agent/{agentNum}/set/port/{port}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetPortRequest.class, baseUrl, "/mimic/agent/{agentNum}/set/port/{port}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -2620,7 +2620,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.SetPrivdirResponse setPrivdir(org.openapis.openapi.models.operations.SetPrivdirRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetPrivdirPathParams.class, baseUrl, "/mimic/agent/{agentNum}/set/privdir/{privdir}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetPrivdirRequest.class, baseUrl, "/mimic/agent/{agentNum}/set/privdir/{privdir}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -2661,12 +2661,12 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.SetProtocolsResponse setProtocols(org.openapis.openapi.models.operations.SetProtocolsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetProtocolsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/set/protocol", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetProtocolsRequest.class, baseUrl, "/mimic/agent/{agentNum}/set/protocol", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -2708,7 +2708,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.SetReadCommunityResponse setReadCommunity(org.openapis.openapi.models.operations.SetReadCommunityRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetReadCommunityPathParams.class, baseUrl, "/mimic/agent/{agentNum}/set/read/{read}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetReadCommunityRequest.class, baseUrl, "/mimic/agent/{agentNum}/set/read/{read}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -2749,7 +2749,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.SetStarttimeResponse setStarttime(org.openapis.openapi.models.operations.SetStarttimeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetStarttimePathParams.class, baseUrl, "/mimic/agent/{agentNum}/set/start/{start}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetStarttimeRequest.class, baseUrl, "/mimic/agent/{agentNum}/set/start/{start}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -2790,7 +2790,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.SetTraceResponse setTrace(org.openapis.openapi.models.operations.SetTraceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetTracePathParams.class, baseUrl, "/mimic/agent/{agentNum}/set/trace/{trace}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetTraceRequest.class, baseUrl, "/mimic/agent/{agentNum}/set/trace/{trace}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -2832,7 +2832,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.SetValidateResponse setValidate(org.openapis.openapi.models.operations.SetValidateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetValidatePathParams.class, baseUrl, "/mimic/agent/{agentNum}/set/validate/{validate}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetValidateRequest.class, baseUrl, "/mimic/agent/{agentNum}/set/validate/{validate}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -2874,7 +2874,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.SetWriteCommunityResponse setWriteCommunity(org.openapis.openapi.models.operations.SetWriteCommunityRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetWriteCommunityPathParams.class, baseUrl, "/mimic/agent/{agentNum}/set/write/{write}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetWriteCommunityRequest.class, baseUrl, "/mimic/agent/{agentNum}/set/write/{write}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -2915,7 +2915,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.StartResponse start(org.openapis.openapi.models.operations.StartRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StartPathParams.class, baseUrl, "/mimic/agent/{agentNum}/start", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StartRequest.class, baseUrl, "/mimic/agent/{agentNum}/start", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -2956,7 +2956,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.StartIpaliasResponse startIpalias(org.openapis.openapi.models.operations.StartIpaliasRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StartIpaliasPathParams.class, baseUrl, "/mimic/agent/{agentNum}/ipalias/start/{IP}/{port}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StartIpaliasRequest.class, baseUrl, "/mimic/agent/{agentNum}/ipalias/start/{IP}/{port}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -2997,7 +2997,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.StatusIpaliasResponse statusIpalias(org.openapis.openapi.models.operations.StatusIpaliasRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StatusIpaliasPathParams.class, baseUrl, "/mimic/agent/{agentNum}/ipalias/status/{IP}/{port}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StatusIpaliasRequest.class, baseUrl, "/mimic/agent/{agentNum}/ipalias/status/{IP}/{port}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3038,7 +3038,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.StopResponse stop(org.openapis.openapi.models.operations.StopRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopPathParams.class, baseUrl, "/mimic/agent/{agentNum}/stop", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopRequest.class, baseUrl, "/mimic/agent/{agentNum}/stop", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -3079,7 +3079,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.StopIpaliasResponse stopIpalias(org.openapis.openapi.models.operations.StopIpaliasRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopIpaliasPathParams.class, baseUrl, "/mimic/agent/{agentNum}/ipalias/stop/{IP}/{port}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopIpaliasRequest.class, baseUrl, "/mimic/agent/{agentNum}/ipalias/stop/{IP}/{port}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -3120,7 +3120,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.TrapConfigAddResponse trapConfigAdd(org.openapis.openapi.models.operations.TrapConfigAddRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TrapConfigAddPathParams.class, baseUrl, "/mimic/agent/{agentNum}/trap/config/add/{IP}/{port}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TrapConfigAddRequest.class, baseUrl, "/mimic/agent/{agentNum}/trap/config/add/{IP}/{port}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -3161,7 +3161,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.TrapConfigDelResponse trapConfigDel(org.openapis.openapi.models.operations.TrapConfigDelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TrapConfigDelPathParams.class, baseUrl, "/mimic/agent/{agentNum}/trap/config/delete/{IP}/{port}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TrapConfigDelRequest.class, baseUrl, "/mimic/agent/{agentNum}/trap/config/delete/{IP}/{port}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -3202,7 +3202,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.TrapConfigListResponse trapConfigList(org.openapis.openapi.models.operations.TrapConfigListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TrapConfigListPathParams.class, baseUrl, "/mimic/agent/{agentNum}/trap/config/list", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TrapConfigListRequest.class, baseUrl, "/mimic/agent/{agentNum}/trap/config/list", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -3244,7 +3244,7 @@ public class Agent {
      */
     public org.openapis.openapi.models.operations.TrapListResponse trapList(org.openapis.openapi.models.operations.TrapListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TrapListPathParams.class, baseUrl, "/mimic/agent/{agentNum}/trap/list", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TrapListRequest.class, baseUrl, "/mimic/agent/{agentNum}/trap/list", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

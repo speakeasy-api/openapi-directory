@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUserRequest {
-    
-    public GetUserPathParams pathParams;
-    public GetUserRequest withPathParams(GetUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The media type of the body of the request. Default value for license manager protocol is application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetUserRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
-    
-    public GetUserHeaders headers;
-    public GetUserRequest withHeaders(GetUserHeaders headers) {
-        this.headers = headers;
+    /**
+     * ID from queried user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public GetUserRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

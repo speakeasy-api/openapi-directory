@@ -4,27 +4,276 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MonitoringProjectsTimeSeriesListRequest {
-    
-    public MonitoringProjectsTimeSeriesListPathParams pathParams;
-    public MonitoringProjectsTimeSeriesListRequest withPathParams(MonitoringProjectsTimeSeriesListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public MonitoringProjectsTimeSeriesListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public MonitoringProjectsTimeSeriesListQueryParams queryParams;
-    public MonitoringProjectsTimeSeriesListRequest withQueryParams(MonitoringProjectsTimeSeriesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public MonitoringProjectsTimeSeriesListRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * The alignment_period specifies a time interval, in seconds, that is used to divide the data in all the time series into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.The value must be at least 60 seconds. If a per-series aligner other than ALIGN_NONE is specified, this field is required or an error is returned. If no per-series aligner is specified, or the aligner ALIGN_NONE is specified, then this field is ignored.The maximum value of the alignment_period is 104 weeks (2 years) for charts, and 90,000 seconds (25 hours) for alerting policies.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aggregation.alignmentPeriod")
+    public String aggregationAlignmentPeriod;
+    public MonitoringProjectsTimeSeriesListRequest withAggregationAlignmentPeriod(String aggregationAlignmentPeriod) {
+        this.aggregationAlignmentPeriod = aggregationAlignmentPeriod;
+        return this;
+    }
     
-    public MonitoringProjectsTimeSeriesListSecurity security;
-    public MonitoringProjectsTimeSeriesListRequest withSecurity(MonitoringProjectsTimeSeriesListSecurity security) {
-        this.security = security;
+    /**
+     * The reduction operation to be used to combine time series into a single time series, where the value of each data point in the resulting series is a function of all the already aligned values in the input time series.Not all reducer operations can be applied to all time series. The valid choices depend on the metric_kind and the value_type of the original time series. Reduction can yield a time series with a different metric_kind or value_type than the input time series.Time series data must first be aligned (see per_series_aligner) in order to perform cross-time series reduction. If cross_series_reducer is specified, then per_series_aligner must be specified, and must not be ALIGN_NONE. An alignment_period must also be specified; otherwise, an error is returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aggregation.crossSeriesReducer")
+    public MonitoringProjectsTimeSeriesListAggregationCrossSeriesReducerEnum aggregationCrossSeriesReducer;
+    public MonitoringProjectsTimeSeriesListRequest withAggregationCrossSeriesReducer(MonitoringProjectsTimeSeriesListAggregationCrossSeriesReducerEnum aggregationCrossSeriesReducer) {
+        this.aggregationCrossSeriesReducer = aggregationCrossSeriesReducer;
+        return this;
+    }
+    
+    /**
+     * The set of fields to preserve when cross_series_reducer is specified. The group_by_fields determine how the time series are partitioned into subsets prior to applying the aggregation operation. Each subset contains time series that have the same value for each of the grouping fields. Each individual time series is a member of exactly one subset. The cross_series_reducer is applied to each subset of time series. It is not possible to reduce across different resource types, so this field implicitly contains resource.type. Fields not specified in group_by_fields are aggregated away. If group_by_fields is not specified and all the time series have the same resource type, then the time series are aggregated into a single output time series. If cross_series_reducer is not defined, this field is ignored.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aggregation.groupByFields")
+    public String[] aggregationGroupByFields;
+    public MonitoringProjectsTimeSeriesListRequest withAggregationGroupByFields(String[] aggregationGroupByFields) {
+        this.aggregationGroupByFields = aggregationGroupByFields;
+        return this;
+    }
+    
+    /**
+     * An Aligner describes how to bring the data points in a single time series into temporal alignment. Except for ALIGN_NONE, all alignments cause all the data points in an alignment_period to be mathematically grouped together, resulting in a single data point for each alignment_period with end timestamp at the end of the period.Not all alignment operations may be applied to all time series. The valid choices depend on the metric_kind and value_type of the original time series. Alignment can change the metric_kind or the value_type of the time series.Time series data must be aligned in order to perform cross-time series reduction. If cross_series_reducer is specified, then per_series_aligner must be specified and not equal to ALIGN_NONE and alignment_period must be specified; otherwise, an error is returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aggregation.perSeriesAligner")
+    public MonitoringProjectsTimeSeriesListAggregationPerSeriesAlignerEnum aggregationPerSeriesAligner;
+    public MonitoringProjectsTimeSeriesListRequest withAggregationPerSeriesAligner(MonitoringProjectsTimeSeriesListAggregationPerSeriesAlignerEnum aggregationPerSeriesAligner) {
+        this.aggregationPerSeriesAligner = aggregationPerSeriesAligner;
+        return this;
+    }
+    
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public MonitoringProjectsTimeSeriesListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public MonitoringProjectsTimeSeriesListRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public MonitoringProjectsTimeSeriesListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Required. A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) that specifies which time series should be returned. The filter must specify a single metric type, and can additionally specify metric labels and other information. For example: metric.type = "compute.googleapis.com/instance/cpu/usage_time" AND metric.labels.instance_name = "my-instance-name" 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public MonitoringProjectsTimeSeriesListRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
+    
+    /**
+     * Required. The end of the time interval.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interval.endTime")
+    public String intervalEndTime;
+    public MonitoringProjectsTimeSeriesListRequest withIntervalEndTime(String intervalEndTime) {
+        this.intervalEndTime = intervalEndTime;
+        return this;
+    }
+    
+    /**
+     * Optional. The beginning of the time interval. The default value for the start time is the end time. The start time must not be later than the end time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interval.startTime")
+    public String intervalStartTime;
+    public MonitoringProjectsTimeSeriesListRequest withIntervalStartTime(String intervalStartTime) {
+        this.intervalStartTime = intervalStartTime;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public MonitoringProjectsTimeSeriesListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Required. The project (https://cloud.google.com/monitoring/api/v3#project_name), organization or folder on which to execute the request. The format is: projects/[PROJECT_ID_OR_NUMBER] organizations/[ORGANIZATION_ID] folders/[FOLDER_ID] 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public MonitoringProjectsTimeSeriesListRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public MonitoringProjectsTimeSeriesListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Unsupported: must be left blank. The points in each time series are currently returned in reverse time order (most recent to oldest).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
+    public String orderBy;
+    public MonitoringProjectsTimeSeriesListRequest withOrderBy(String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    
+    /**
+     * A positive number that is the maximum number of results to return. If page_size is empty or more than 100,000 results, the effective page_size is 100,000 results. If view is set to FULL, this is the maximum number of Points returned. If view is set to HEADERS, this is the maximum number of TimeSeries returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public MonitoringProjectsTimeSeriesListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * If this field is not empty then it must contain the nextPageToken value returned by a previous call to this method. Using this field causes the method to return additional results from the previous method call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public MonitoringProjectsTimeSeriesListRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public MonitoringProjectsTimeSeriesListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public MonitoringProjectsTimeSeriesListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * The alignment_period specifies a time interval, in seconds, that is used to divide the data in all the time series into consistent blocks of time. This will be done before the per-series aligner can be applied to the data.The value must be at least 60 seconds. If a per-series aligner other than ALIGN_NONE is specified, this field is required or an error is returned. If no per-series aligner is specified, or the aligner ALIGN_NONE is specified, then this field is ignored.The maximum value of the alignment_period is 104 weeks (2 years) for charts, and 90,000 seconds (25 hours) for alerting policies.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=secondaryAggregation.alignmentPeriod")
+    public String secondaryAggregationAlignmentPeriod;
+    public MonitoringProjectsTimeSeriesListRequest withSecondaryAggregationAlignmentPeriod(String secondaryAggregationAlignmentPeriod) {
+        this.secondaryAggregationAlignmentPeriod = secondaryAggregationAlignmentPeriod;
+        return this;
+    }
+    
+    /**
+     * The reduction operation to be used to combine time series into a single time series, where the value of each data point in the resulting series is a function of all the already aligned values in the input time series.Not all reducer operations can be applied to all time series. The valid choices depend on the metric_kind and the value_type of the original time series. Reduction can yield a time series with a different metric_kind or value_type than the input time series.Time series data must first be aligned (see per_series_aligner) in order to perform cross-time series reduction. If cross_series_reducer is specified, then per_series_aligner must be specified, and must not be ALIGN_NONE. An alignment_period must also be specified; otherwise, an error is returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=secondaryAggregation.crossSeriesReducer")
+    public MonitoringProjectsTimeSeriesListSecondaryAggregationCrossSeriesReducerEnum secondaryAggregationCrossSeriesReducer;
+    public MonitoringProjectsTimeSeriesListRequest withSecondaryAggregationCrossSeriesReducer(MonitoringProjectsTimeSeriesListSecondaryAggregationCrossSeriesReducerEnum secondaryAggregationCrossSeriesReducer) {
+        this.secondaryAggregationCrossSeriesReducer = secondaryAggregationCrossSeriesReducer;
+        return this;
+    }
+    
+    /**
+     * The set of fields to preserve when cross_series_reducer is specified. The group_by_fields determine how the time series are partitioned into subsets prior to applying the aggregation operation. Each subset contains time series that have the same value for each of the grouping fields. Each individual time series is a member of exactly one subset. The cross_series_reducer is applied to each subset of time series. It is not possible to reduce across different resource types, so this field implicitly contains resource.type. Fields not specified in group_by_fields are aggregated away. If group_by_fields is not specified and all the time series have the same resource type, then the time series are aggregated into a single output time series. If cross_series_reducer is not defined, this field is ignored.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=secondaryAggregation.groupByFields")
+    public String[] secondaryAggregationGroupByFields;
+    public MonitoringProjectsTimeSeriesListRequest withSecondaryAggregationGroupByFields(String[] secondaryAggregationGroupByFields) {
+        this.secondaryAggregationGroupByFields = secondaryAggregationGroupByFields;
+        return this;
+    }
+    
+    /**
+     * An Aligner describes how to bring the data points in a single time series into temporal alignment. Except for ALIGN_NONE, all alignments cause all the data points in an alignment_period to be mathematically grouped together, resulting in a single data point for each alignment_period with end timestamp at the end of the period.Not all alignment operations may be applied to all time series. The valid choices depend on the metric_kind and value_type of the original time series. Alignment can change the metric_kind or the value_type of the time series.Time series data must be aligned in order to perform cross-time series reduction. If cross_series_reducer is specified, then per_series_aligner must be specified and not equal to ALIGN_NONE and alignment_period must be specified; otherwise, an error is returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=secondaryAggregation.perSeriesAligner")
+    public MonitoringProjectsTimeSeriesListSecondaryAggregationPerSeriesAlignerEnum secondaryAggregationPerSeriesAligner;
+    public MonitoringProjectsTimeSeriesListRequest withSecondaryAggregationPerSeriesAligner(MonitoringProjectsTimeSeriesListSecondaryAggregationPerSeriesAlignerEnum secondaryAggregationPerSeriesAligner) {
+        this.secondaryAggregationPerSeriesAligner = secondaryAggregationPerSeriesAligner;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public MonitoringProjectsTimeSeriesListRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public MonitoringProjectsTimeSeriesListRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
+        return this;
+    }
+    
+    /**
+     * Required. Specifies which information is returned about the time series.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
+    public MonitoringProjectsTimeSeriesListViewEnum view;
+    public MonitoringProjectsTimeSeriesListRequest withView(MonitoringProjectsTimeSeriesListViewEnum view) {
+        this.view = view;
         return this;
     }
     

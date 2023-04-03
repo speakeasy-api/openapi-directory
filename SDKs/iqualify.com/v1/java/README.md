@@ -24,9 +24,7 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    authorization = new SchemeAuthorization() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    authorization = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
@@ -42,7 +40,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### apiInfo

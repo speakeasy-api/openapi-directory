@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCoveragePlanRequest {
-    
-    public GetCoveragePlanPathParams pathParams;
-    public GetCoveragePlanRequest withPathParams(GetCoveragePlanPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the coverage plan in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=plan_id")
+    public String planId;
+    public GetCoveragePlanRequest withPlanId(String planId) {
+        this.planId = planId;
         return this;
     }
     

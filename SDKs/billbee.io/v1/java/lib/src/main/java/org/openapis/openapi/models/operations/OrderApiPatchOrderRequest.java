@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiPatchOrderRequest {
-    
-    public OrderApiPatchOrderPathParams pathParams;
-    public OrderApiPatchOrderRequest withPathParams(OrderApiPatchOrderPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public java.util.Map<String, Object> requestBody;
+    public OrderApiPatchOrderRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public OrderApiPatchOrderRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public OrderApiPatchOrderRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

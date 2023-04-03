@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetIPLookupRequest {
+    /**
+     * Sets the format of the API response. JSON is the default format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public String format;
+    public GetIPLookupRequest withFormat(String format) {
+        this.format = format;
+        return this;
+    }
     
-    public GetIPLookupQueryParams queryParams;
-    public GetIPLookupRequest withQueryParams(GetIPLookupQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The IP Address you want to lookup.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ip")
+    public String ip;
+    public GetIPLookupRequest withIp(String ip) {
+        this.ip = ip;
+        return this;
+    }
+    
+    /**
+     * Your API Key. Each user has a unique API Key that can be used to access the API functions. If you don't have an account yet, please create new account first.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public GetIPLookupRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Used to inform the API to retrieve the response in your native language.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public String lang;
+    public GetIPLookupRequest withLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    
+    /**
+     * The modules you want to use of the request. It's a CSV (Comma Separated Values)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=params")
+    public String params;
+    public GetIPLookupRequest withParams(String params) {
+        this.params = params;
         return this;
     }
     

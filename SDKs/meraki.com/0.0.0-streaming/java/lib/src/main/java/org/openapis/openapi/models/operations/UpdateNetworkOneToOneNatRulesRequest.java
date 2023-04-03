@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkOneToOneNatRulesRequest {
-    
-    public UpdateNetworkOneToOneNatRulesPathParams pathParams;
-    public UpdateNetworkOneToOneNatRulesRequest withPathParams(UpdateNetworkOneToOneNatRulesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkOneToOneNatRulesRequestBody requestBody;
+    public UpdateNetworkOneToOneNatRulesRequest withRequestBody(UpdateNetworkOneToOneNatRulesRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkOneToOneNatRulesRequestBody request;
-    public UpdateNetworkOneToOneNatRulesRequest withRequest(UpdateNetworkOneToOneNatRulesRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkOneToOneNatRulesRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

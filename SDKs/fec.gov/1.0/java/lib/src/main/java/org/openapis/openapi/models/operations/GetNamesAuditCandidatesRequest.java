@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNamesAuditCandidatesRequest {
+    /**
+     * API key for https://api.data.gov. Get one at https://api.data.gov/signup.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetNamesAuditCandidatesRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public GetNamesAuditCandidatesQueryParams queryParams;
-    public GetNamesAuditCandidatesRequest withQueryParams(GetNamesAuditCandidatesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Name (candidate or committee) to search for
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String[] q;
+    public GetNamesAuditCandidatesRequest withQ(String[] q) {
+        this.q = q;
         return this;
     }
     

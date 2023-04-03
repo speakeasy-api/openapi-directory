@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUrlsExportsRequest {
-    
-    public GetUrlsExportsPathParams pathParams;
-    public GetUrlsExportsRequest withPathParams(GetUrlsExportsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Analysis' identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=analysis_slug")
+    public String analysisSlug;
+    public GetUrlsExportsRequest withAnalysisSlug(String analysisSlug) {
+        this.analysisSlug = analysisSlug;
         return this;
     }
     
+    /**
+     * Page Number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetUrlsExportsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetUrlsExportsQueryParams queryParams;
-    public GetUrlsExportsRequest withQueryParams(GetUrlsExportsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Project's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_slug")
+    public String projectSlug;
+    public GetUrlsExportsRequest withProjectSlug(String projectSlug) {
+        this.projectSlug = projectSlug;
+        return this;
+    }
+    
+    /**
+     * Page Size
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
+    public Long size;
+    public GetUrlsExportsRequest withSize(Long size) {
+        this.size = size;
+        return this;
+    }
+    
+    /**
+     * User's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public GetUrlsExportsRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

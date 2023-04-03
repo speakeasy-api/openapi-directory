@@ -29,13 +29,10 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/GetSearchV1FieldsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSearchV1FieldsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSearchV1FieldsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetSearchV1OrganicQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSearchV1OrganicRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSearchV1OrganicResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetSearchV1ScrapeQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSearchV1ScrapeRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSearchV1ScrapeResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/OrganicResult.java

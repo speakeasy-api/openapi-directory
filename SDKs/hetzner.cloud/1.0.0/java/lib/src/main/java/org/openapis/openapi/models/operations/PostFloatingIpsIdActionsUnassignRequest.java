@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostFloatingIpsIdActionsUnassignRequest {
-    
-    public PostFloatingIpsIdActionsUnassignPathParams pathParams;
-    public PostFloatingIpsIdActionsUnassignRequest withPathParams(PostFloatingIpsIdActionsUnassignPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the Floating IP
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public PostFloatingIpsIdActionsUnassignRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

@@ -34,7 +34,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/DelcsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/DelcsRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/DelcsRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/DelcsRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/DelcsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Delcs504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Delcs504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Delcs504ApplicationJSON.java
@@ -61,7 +60,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/MalcsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/MalcsRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/MalcsRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/MalcsRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/MalcsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Malcs504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Malcs504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Malcs504ApplicationJSON.java
@@ -88,7 +86,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PalcsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/PalcsRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/PalcsRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/PalcsRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/PalcsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Palcs504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Palcs504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Palcs504ApplicationJSON.java
@@ -115,7 +112,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RelcsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/RelcsRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/RelcsRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RelcsRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/RelcsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Relcs504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Relcs504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Relcs504ApplicationJSON.java
@@ -149,6 +145,4 @@ lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsen
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsent.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaSignature.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchema.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKey.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeClientID.java
 USAGE.md

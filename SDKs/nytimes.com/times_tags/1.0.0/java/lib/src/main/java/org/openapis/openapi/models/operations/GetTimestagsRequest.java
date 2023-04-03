@@ -4,13 +4,37 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTimestagsRequest {
+    /**
+     * If you do not specify a value for filter (see the Optional Parameters), your query will be matched to tags in all four Times dictionaries: subject, geographic location, organization and person. To use more than one, separate with commas.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public GetTimestagsFilterEnum filter;
+    public GetTimestagsRequest withFilter(GetTimestagsFilterEnum filter) {
+        this.filter = filter;
+        return this;
+    }
     
-    public GetTimestagsQueryParams queryParams;
-    public GetTimestagsRequest withQueryParams(GetTimestagsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Sets the maximum number of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
+    public Long max;
+    public GetTimestagsRequest withMax(Long max) {
+        this.max = max;
+        return this;
+    }
+    
+    /**
+     * Your search query
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public GetTimestagsRequest withQuery(String query) {
+        this.query = query;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserVanityNameRequest {
-    
-    public UserVanityNameQueryParams queryParams;
-    public UserVanityNameRequest withQueryParams(UserVanityNameQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Personal meeting room name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vanity_name")
+    public String vanityName;
+    public UserVanityNameRequest withVanityName(String vanityName) {
+        this.vanityName = vanityName;
         return this;
     }
     

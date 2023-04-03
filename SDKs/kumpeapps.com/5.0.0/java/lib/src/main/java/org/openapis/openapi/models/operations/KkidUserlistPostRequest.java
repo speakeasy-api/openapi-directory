@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KkidUserlistPostRequest {
-    
-    public KkidUserlistPostQueryParams queryParams;
-    public KkidUserlistPostRequest withQueryParams(KkidUserlistPostQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * email address of user to create
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public KkidUserlistPostRequest withEmail(String email) {
+        this.email = email;
         return this;
     }
     
+    /**
+     * First Name of user to create
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=firstName")
+    public String firstName;
+    public KkidUserlistPostRequest withFirstName(String firstName) {
+        this.firstName = firstName;
+        return this;
+    }
     
-    public KkidUserlistPostSecurity security;
-    public KkidUserlistPostRequest withSecurity(KkidUserlistPostSecurity security) {
-        this.security = security;
+    /**
+     * Last Name of user to create
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lastName")
+    public String lastName;
+    public KkidUserlistPostRequest withLastName(String lastName) {
+        this.lastName = lastName;
+        return this;
+    }
+    
+    /**
+     * password of user to create
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=password")
+    public String password;
+    public KkidUserlistPostRequest withPassword(String password) {
+        this.password = password;
+        return this;
+    }
+    
+    /**
+     * username of user to create
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
+    public String username;
+    public KkidUserlistPostRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

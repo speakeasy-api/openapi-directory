@@ -21,7 +21,6 @@ import org.openapis.openapi.models.operations.AddUserToAccountRequestBodyAccount
 import org.openapis.openapi.models.operations.AddUserToAccountRequestBodyUsersIdentification;
 import org.openapis.openapi.models.operations.AddUserToAccountRequestBodyUsers;
 import org.openapis.openapi.models.operations.AddUserToAccountRequestBody;
-import org.openapis.openapi.models.operations.AddUserToAccountRequest;
 import org.openapis.openapi.models.operations.AddUserToAccountResponse;
 
 public class Application {
@@ -30,34 +29,32 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            AddUserToAccountRequest req = new AddUserToAccountRequest() {{
-                request = new AddUserToAccountRequestBody() {{
-                    account = new AddUserToAccountRequestBodyAccount() {{
-                        accountId = "corrupti";
-                        domain = "provident";
-                    }};
-                    users = new org.openapis.openapi.models.operations.AddUserToAccountRequestBodyUsers[]{{
-                        add(new AddUserToAccountRequestBodyUsers() {{
-                            identification = new AddUserToAccountRequestBodyUsersIdentification() {{
-                                email = "Leda_Stiedemann@hotmail.com";
-                                userId = "vel";
-                            }};
-                        }}),
-                        add(new AddUserToAccountRequestBodyUsers() {{
-                            identification = new AddUserToAccountRequestBodyUsersIdentification() {{
-                                email = "Luna.Hoppe@yahoo.com";
-                                userId = "debitis";
-                            }};
-                        }}),
-                        add(new AddUserToAccountRequestBodyUsers() {{
-                            identification = new AddUserToAccountRequestBodyUsersIdentification() {{
-                                email = "Vincenzo.Goldner@gmail.com";
-                                userId = "minus";
-                            }};
-                        }}),
-                    }};
+            AddUserToAccountRequestBody req = new AddUserToAccountRequestBody() {{
+                account = new AddUserToAccountRequestBodyAccount() {{
+                    accountId = "corrupti";
+                    domain = "provident";
                 }};
-            }};            
+                users = new org.openapis.openapi.models.operations.AddUserToAccountRequestBodyUsers[]{{
+                    add(new AddUserToAccountRequestBodyUsers() {{
+                        identification = new AddUserToAccountRequestBodyUsersIdentification() {{
+                            email = "Leda_Stiedemann@hotmail.com";
+                            userId = "vel";
+                        }};
+                    }}),
+                    add(new AddUserToAccountRequestBodyUsers() {{
+                        identification = new AddUserToAccountRequestBodyUsersIdentification() {{
+                            email = "Luna.Hoppe@yahoo.com";
+                            userId = "debitis";
+                        }};
+                    }}),
+                    add(new AddUserToAccountRequestBodyUsers() {{
+                        identification = new AddUserToAccountRequestBodyUsersIdentification() {{
+                            email = "Vincenzo.Goldner@gmail.com";
+                            userId = "minus";
+                        }};
+                    }}),
+                }};
+            }}            
 
             AddUserToAccountResponse res = sdk.accounts.addUserToAccount(req);
 
@@ -71,7 +68,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### accounts

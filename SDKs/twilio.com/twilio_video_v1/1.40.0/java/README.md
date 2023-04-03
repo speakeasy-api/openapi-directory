@@ -20,10 +20,8 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.operations.CreateCompositionSecurity;
 import org.openapis.openapi.models.operations.CreateCompositionCreateCompositionRequestStatusCallbackMethodEnum;
 import org.openapis.openapi.models.operations.CreateCompositionCreateCompositionRequest;
-import org.openapis.openapi.models.operations.CreateCompositionRequest;
 import org.openapis.openapi.models.operations.CreateCompositionResponse;
 import org.openapis.openapi.models.shared.CompositionEnumFormatEnum;
-import org.openapis.openapi.models.shared.SchemeAccountSidAuthToken;
 
 public class Application {
     public static void main(String[] args) {
@@ -31,35 +29,30 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CreateCompositionRequest req = new CreateCompositionRequest() {{
-                security = new CreateCompositionSecurity() {{
-                    accountSidAuthToken = new SchemeAccountSidAuthToken() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
+            CreateCompositionCreateCompositionRequest req = new CreateCompositionCreateCompositionRequest() {{
+                audioSources = new String[]{{
+                    add("provident"),
+                    add("distinctio"),
+                    add("quibusdam"),
                 }};
-                request = new CreateCompositionCreateCompositionRequest() {{
-                    audioSources = new String[]{{
-                        add("provident"),
-                        add("distinctio"),
-                        add("quibusdam"),
-                    }};
-                    audioSourcesExcluded = new String[]{{
-                        add("nulla"),
-                        add("corrupti"),
-                        add("illum"),
-                    }};
-                    format = "mp4";
-                    resolution = "error";
-                    roomSid = "deserunt";
-                    statusCallback = "http://innocent-effect.org";
-                    statusCallbackMethod = "HEAD";
-                    trim = false;
-                    videoLayout = "delectus";
+                audioSourcesExcluded = new String[]{{
+                    add("nulla"),
+                    add("corrupti"),
+                    add("illum"),
                 }};
-            }};            
+                format = "mp4";
+                resolution = "error";
+                roomSid = "deserunt";
+                statusCallback = "http://innocent-effect.org";
+                statusCallbackMethod = "HEAD";
+                trim = false;
+                videoLayout = "delectus";
+            }}            
 
-            CreateCompositionResponse res = sdk.createComposition(req);
+            CreateCompositionResponse res = sdk.createComposition(req, new CreateCompositionSecurity() {{
+                password = "YOUR_PASSWORD_HERE";
+                username = "YOUR_USERNAME_HERE";
+            }});
 
             if (res.videoV1Composition.isPresent()) {
                 // handle response
@@ -71,7 +64,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

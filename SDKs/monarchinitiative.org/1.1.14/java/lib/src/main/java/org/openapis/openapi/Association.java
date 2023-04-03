@@ -41,13 +41,13 @@ public class Association {
      */
     public org.openapis.openapi.models.operations.GetAssociationBySubjectAndAssocTypeResponse getAssociationBySubjectAndAssocType(org.openapis.openapi.models.operations.GetAssociationBySubjectAndAssocTypeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAssociationBySubjectAndAssocTypePathParams.class, baseUrl, "/association/type/{association_type}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAssociationBySubjectAndAssocTypeRequest.class, baseUrl, "/association/type/{association_type}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAssociationBySubjectAndAssocTypeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAssociationBySubjectAndAssocTypeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -85,13 +85,13 @@ public class Association {
      */
     public org.openapis.openapi.models.operations.GetAssociationBySubjectAndObjectCategorySearchResponse getAssociationBySubjectAndObjectCategorySearch(org.openapis.openapi.models.operations.GetAssociationBySubjectAndObjectCategorySearchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAssociationBySubjectAndObjectCategorySearchPathParams.class, baseUrl, "/association/find/{subject_category}/{object_category}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAssociationBySubjectAndObjectCategorySearchRequest.class, baseUrl, "/association/find/{subject_category}/{object_category}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAssociationBySubjectAndObjectCategorySearchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAssociationBySubjectAndObjectCategorySearchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -129,13 +129,13 @@ public class Association {
      */
     public org.openapis.openapi.models.operations.GetAssociationBySubjectCategorySearchResponse getAssociationBySubjectCategorySearch(org.openapis.openapi.models.operations.GetAssociationBySubjectCategorySearchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAssociationBySubjectCategorySearchPathParams.class, baseUrl, "/association/find/{subject_category}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAssociationBySubjectCategorySearchRequest.class, baseUrl, "/association/find/{subject_category}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAssociationBySubjectCategorySearchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAssociationBySubjectCategorySearchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -175,7 +175,7 @@ public class Association {
      */
     public org.openapis.openapi.models.operations.GetAssociationObjectResponse getAssociationObject(org.openapis.openapi.models.operations.GetAssociationObjectRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAssociationObjectPathParams.class, baseUrl, "/association/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAssociationObjectRequest.class, baseUrl, "/association/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -216,13 +216,13 @@ public class Association {
      */
     public org.openapis.openapi.models.operations.GetAssociationsBetweenResponse getAssociationsBetween(org.openapis.openapi.models.operations.GetAssociationsBetweenRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAssociationsBetweenPathParams.class, baseUrl, "/association/between/{subject}/{object}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAssociationsBetweenRequest.class, baseUrl, "/association/between/{subject}/{object}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAssociationsBetweenQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAssociationsBetweenRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -260,13 +260,13 @@ public class Association {
      */
     public org.openapis.openapi.models.operations.GetAssociationsFromResponse getAssociationsFrom(org.openapis.openapi.models.operations.GetAssociationsFromRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAssociationsFromPathParams.class, baseUrl, "/association/from/{subject}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAssociationsFromRequest.class, baseUrl, "/association/from/{subject}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAssociationsFromQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAssociationsFromRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -304,13 +304,13 @@ public class Association {
      */
     public org.openapis.openapi.models.operations.GetAssociationsToResponse getAssociationsTo(org.openapis.openapi.models.operations.GetAssociationsToRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAssociationsToPathParams.class, baseUrl, "/association/to/{object}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAssociationsToRequest.class, baseUrl, "/association/to/{object}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAssociationsToQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAssociationsToRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

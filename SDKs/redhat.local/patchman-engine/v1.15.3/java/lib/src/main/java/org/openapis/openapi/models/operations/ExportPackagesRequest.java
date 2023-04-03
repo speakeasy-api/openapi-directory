@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExportPackagesRequest {
-    
-    public ExportPackagesQueryParams queryParams;
-    public ExportPackagesRequest withQueryParams(ExportPackagesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[name]")
+    public String filterName;
+    public ExportPackagesRequest withFilterName(String filterName) {
+        this.filterName = filterName;
         return this;
     }
     
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[summary]")
+    public String filterSummary;
+    public ExportPackagesRequest withFilterSummary(String filterSummary) {
+        this.filterSummary = filterSummary;
+        return this;
+    }
     
-    public ExportPackagesSecurity security;
-    public ExportPackagesRequest withSecurity(ExportPackagesSecurity security) {
-        this.security = security;
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[systems_installed]")
+    public String filterSystemsInstalled;
+    public ExportPackagesRequest withFilterSystemsInstalled(String filterSystemsInstalled) {
+        this.filterSystemsInstalled = filterSystemsInstalled;
+        return this;
+    }
+    
+    /**
+     * Filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[systems_updatable]")
+    public String filterSystemsUpdatable;
+    public ExportPackagesRequest withFilterSystemsUpdatable(String filterSystemsUpdatable) {
+        this.filterSystemsUpdatable = filterSystemsUpdatable;
+        return this;
+    }
+    
+    /**
+     * Find matching text
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public ExportPackagesRequest withSearch(String search) {
+        this.search = search;
+        return this;
+    }
+    
+    /**
+     * Sort field
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public ExportPackagesSortEnum sort;
+    public ExportPackagesRequest withSort(ExportPackagesSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

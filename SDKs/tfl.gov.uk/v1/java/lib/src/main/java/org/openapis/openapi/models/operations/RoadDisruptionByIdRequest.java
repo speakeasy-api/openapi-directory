@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RoadDisruptionByIdRequest {
-    
-    public RoadDisruptionByIdPathParams pathParams;
-    public RoadDisruptionByIdRequest withPathParams(RoadDisruptionByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Comma-separated list of disruption identifiers to filter by.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=disruptionIds")
+    public String[] disruptionIds;
+    public RoadDisruptionByIdRequest withDisruptionIds(String[] disruptionIds) {
+        this.disruptionIds = disruptionIds;
         return this;
     }
     
-    
-    public RoadDisruptionByIdQueryParams queryParams;
-    public RoadDisruptionByIdRequest withQueryParams(RoadDisruptionByIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Optional, defaults to false. When true, removes every property/node except for id, point, severity, severityDescription, startDate, endDate, corridor details, location and comments.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stripContent")
+    public Boolean stripContent;
+    public RoadDisruptionByIdRequest withStripContent(Boolean stripContent) {
+        this.stripContent = stripContent;
         return this;
     }
     

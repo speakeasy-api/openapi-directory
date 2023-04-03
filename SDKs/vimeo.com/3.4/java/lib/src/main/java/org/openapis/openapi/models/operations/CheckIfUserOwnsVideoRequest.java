@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CheckIfUserOwnsVideoRequest {
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public CheckIfUserOwnsVideoRequest withUserId(Double userId) {
+        this.userId = userId;
+        return this;
+    }
     
-    public CheckIfUserOwnsVideoPathParams pathParams;
-    public CheckIfUserOwnsVideoRequest withPathParams(CheckIfUserOwnsVideoPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public CheckIfUserOwnsVideoRequest withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

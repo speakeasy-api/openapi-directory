@@ -4,13 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssuesCheckUserCanBeAssignedRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assignee")
+    public String assignee;
+    public IssuesCheckUserCanBeAssignedRequest withAssignee(String assignee) {
+        this.assignee = assignee;
+        return this;
+    }
     
-    public IssuesCheckUserCanBeAssignedPathParams pathParams;
-    public IssuesCheckUserCanBeAssignedRequest withPathParams(IssuesCheckUserCanBeAssignedPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssuesCheckUserCanBeAssignedRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssuesCheckUserCanBeAssignedRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateRadiusConfigRequest {
-    
-    public CreateRadiusConfigHeaders headers;
-    public CreateRadiusConfigRequest withHeaders(CreateRadiusConfigHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.RadiusConfigCreateRequest radiusConfigCreateRequest;
+    public CreateRadiusConfigRequest withRadiusConfigCreateRequest(org.openapis.openapi.models.shared.RadiusConfigCreateRequest radiusConfigCreateRequest) {
+        this.radiusConfigCreateRequest = radiusConfigCreateRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RadiusConfigCreateRequest request;
-    public CreateRadiusConfigRequest withRequest(org.openapis.openapi.models.shared.RadiusConfigCreateRequest request) {
-        this.request = request;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public CreateRadiusConfigRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateANewCartRequest {
-    
-    public CreateANewCartQueryParams queryParams;
-    public CreateANewCartRequest withQueryParams(CreateANewCartQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public CreateANewCartRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public CreateANewCartRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public CreateANewCartHeaders headers;
-    public CreateANewCartRequest withHeaders(CreateANewCartHeaders headers) {
-        this.headers = headers;
+    /**
+     * Use this query parameter to create a new empty shopping cart.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=forceNewCart")
+    public Boolean forceNewCart;
+    public CreateANewCartRequest withForceNewCart(Boolean forceNewCart) {
+        this.forceNewCart = forceNewCart;
         return this;
     }
     

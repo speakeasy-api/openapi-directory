@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminRemovePreReceiveHookEnforcementForOrgRequest {
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public EnterpriseAdminRemovePreReceiveHookEnforcementForOrgRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
     
-    public EnterpriseAdminRemovePreReceiveHookEnforcementForOrgPathParams pathParams;
-    public EnterpriseAdminRemovePreReceiveHookEnforcementForOrgRequest withPathParams(EnterpriseAdminRemovePreReceiveHookEnforcementForOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the pre-receive hook.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pre_receive_hook_id")
+    public Long preReceiveHookId;
+    public EnterpriseAdminRemovePreReceiveHookEnforcementForOrgRequest withPreReceiveHookId(Long preReceiveHookId) {
+        this.preReceiveHookId = preReceiveHookId;
         return this;
     }
     

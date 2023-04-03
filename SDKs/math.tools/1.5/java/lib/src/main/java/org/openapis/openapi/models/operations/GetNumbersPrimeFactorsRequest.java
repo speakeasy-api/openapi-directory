@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNumbersPrimeFactorsRequest {
-    
-    public GetNumbersPrimeFactorsQueryParams queryParams;
-    public GetNumbersPrimeFactorsRequest withQueryParams(GetNumbersPrimeFactorsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetNumbersPrimeFactorsSecurity security;
-    public GetNumbersPrimeFactorsRequest withSecurity(GetNumbersPrimeFactorsSecurity security) {
-        this.security = security;
+    /**
+     * Number to get the factors
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
+    public Long number;
+    public GetNumbersPrimeFactorsRequest withNumber(Long number) {
+        this.number = number;
         return this;
     }
     

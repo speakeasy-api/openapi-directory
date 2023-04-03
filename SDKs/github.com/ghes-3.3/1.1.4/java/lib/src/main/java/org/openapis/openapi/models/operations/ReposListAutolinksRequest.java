@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposListAutolinksRequest {
-    
-    public ReposListAutolinksPathParams pathParams;
-    public ReposListAutolinksRequest withPathParams(ReposListAutolinksPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposListAutolinksRequest withOwner(String owner) {
+        this.owner = owner;
         return this;
     }
     
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ReposListAutolinksRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public ReposListAutolinksQueryParams queryParams;
-    public ReposListAutolinksRequest withQueryParams(ReposListAutolinksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposListAutolinksRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

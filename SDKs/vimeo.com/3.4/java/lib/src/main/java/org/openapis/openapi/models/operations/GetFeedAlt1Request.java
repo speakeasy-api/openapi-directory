@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFeedAlt1Request {
-    
-    public GetFeedAlt1QueryParams queryParams;
-    public GetFeedAlt1Request withQueryParams(GetFeedAlt1QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Necessary for proper pagination. You shouldn't provide this value yourself, and instead use the pagination links in the feed response. Please see our [pagination documentation](https://developer.vimeo.com/api/common-formats#using-the-pagination-parameter) for more information.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public String offset;
+    public GetFeedAlt1Request withOffset(String offset) {
+        this.offset = offset;
         return this;
     }
     
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetFeedAlt1Request withPage(Double page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetFeedAlt1Security security;
-    public GetFeedAlt1Request withSecurity(GetFeedAlt1Security security) {
-        this.security = security;
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetFeedAlt1Request withPerPage(Double perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The feed type.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public GetFeedAlt1TypeEnum type;
+    public GetFeedAlt1Request withType(GetFeedAlt1TypeEnum type) {
+        this.type = type;
         return this;
     }
     

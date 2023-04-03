@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposEnableLfsForRepoRequest {
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposEnableLfsForRepoRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public ReposEnableLfsForRepoPathParams pathParams;
-    public ReposEnableLfsForRepoRequest withPathParams(ReposEnableLfsForRepoPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposEnableLfsForRepoRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

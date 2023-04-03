@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangeStatus2Request {
-    
-    public ChangeStatus2PathParams pathParams;
-    public ChangeStatus2Request withPathParams(ChangeStatus2PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Changed project status.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ProjectStatusDTO request;
-    public ChangeStatus2Request withRequest(org.openapis.openapi.models.shared.ProjectStatusDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ProjectStatusDTO projectStatusDTO;
+    public ChangeStatus2Request withProjectStatusDTO(org.openapis.openapi.models.shared.ProjectStatusDTO projectStatusDTO) {
+        this.projectStatusDTO = projectStatusDTO;
+        return this;
+    }
+    
+    /**
+     * project's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public ChangeStatus2Request withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

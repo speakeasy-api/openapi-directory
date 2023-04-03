@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateCollectionAuthorDeleteRequest {
-    
-    public PrivateCollectionAuthorDeletePathParams pathParams;
-    public PrivateCollectionAuthorDeleteRequest withPathParams(PrivateCollectionAuthorDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Collection Author unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=author_id")
+    public Long authorId;
+    public PrivateCollectionAuthorDeleteRequest withAuthorId(Long authorId) {
+        this.authorId = authorId;
         return this;
     }
     
-    
-    public PrivateCollectionAuthorDeleteSecurity security;
-    public PrivateCollectionAuthorDeleteRequest withSecurity(PrivateCollectionAuthorDeleteSecurity security) {
-        this.security = security;
+    /**
+     * Collection unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection_id")
+    public Long collectionId;
+    public PrivateCollectionAuthorDeleteRequest withCollectionId(Long collectionId) {
+        this.collectionId = collectionId;
         return this;
     }
     

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFeatureRequest {
-    
-    public GetFeaturePathParams pathParams;
-    public GetFeatureRequest withPathParams(GetFeaturePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetFeatureSecurity security;
-    public GetFeatureRequest withSecurity(GetFeatureSecurity security) {
-        this.security = security;
+    /**
+     * The identifier for the selected feature.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=featureId")
+    public String featureId;
+    public GetFeatureRequest withFeatureId(String featureId) {
+        this.featureId = featureId;
         return this;
     }
     

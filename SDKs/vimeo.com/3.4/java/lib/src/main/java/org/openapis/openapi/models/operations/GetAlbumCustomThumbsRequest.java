@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAlbumCustomThumbsRequest {
-    
-    public GetAlbumCustomThumbsPathParams pathParams;
-    public GetAlbumCustomThumbsRequest withPathParams(GetAlbumCustomThumbsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the album.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=album_id")
+    public Double albumId;
+    public GetAlbumCustomThumbsRequest withAlbumId(Double albumId) {
+        this.albumId = albumId;
         return this;
     }
     
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetAlbumCustomThumbsRequest withPage(Double page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetAlbumCustomThumbsQueryParams queryParams;
-    public GetAlbumCustomThumbsRequest withQueryParams(GetAlbumCustomThumbsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetAlbumCustomThumbsRequest withPerPage(Double perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public GetAlbumCustomThumbsRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

@@ -4,13 +4,54 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimPowerConnectionsListRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=connection_status")
+    public String connectionStatus;
+    public DcimPowerConnectionsListRequest withConnectionStatus(String connectionStatus) {
+        this.connectionStatus = connectionStatus;
+        return this;
+    }
     
-    public DcimPowerConnectionsListQueryParams queryParams;
-    public DcimPowerConnectionsListRequest withQueryParams(DcimPowerConnectionsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device")
+    public String device;
+    public DcimPowerConnectionsListRequest withDevice(String device) {
+        this.device = device;
+        return this;
+    }
+    
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public DcimPowerConnectionsListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public DcimPowerConnectionsListRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public DcimPowerConnectionsListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site")
+    public String site;
+    public DcimPowerConnectionsListRequest withSite(String site) {
+        this.site = site;
         return this;
     }
     

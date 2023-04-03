@@ -4,20 +4,37 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutUsersIdUserConnectionsIdConnectionTransactionsclustersIdTransactionsclusterRequest {
-    
-    public PutUsersIdUserConnectionsIdConnectionTransactionsclustersIdTransactionsclusterPathParams pathParams;
-    public PutUsersIdUserConnectionsIdConnectionTransactionsclustersIdTransactionsclusterRequest withPathParams(PutUsersIdUserConnectionsIdConnectionTransactionsclustersIdTransactionsclusterPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public PutUsersIdUserConnectionsIdConnectionTransactionsclustersIdTransactionsclusterRequest withExpand(String expand) {
+        this.expand = expand;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connection")
+    public Long idConnection;
+    public PutUsersIdUserConnectionsIdConnectionTransactionsclustersIdTransactionsclusterRequest withIdConnection(Long idConnection) {
+        this.idConnection = idConnection;
+        return this;
+    }
     
-    public PutUsersIdUserConnectionsIdConnectionTransactionsclustersIdTransactionsclusterQueryParams queryParams;
-    public PutUsersIdUserConnectionsIdConnectionTransactionsclustersIdTransactionsclusterRequest withQueryParams(PutUsersIdUserConnectionsIdConnectionTransactionsclustersIdTransactionsclusterQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_transactionscluster")
+    public Long idTransactionscluster;
+    public PutUsersIdUserConnectionsIdConnectionTransactionsclustersIdTransactionsclusterRequest withIdTransactionscluster(Long idTransactionscluster) {
+        this.idTransactionscluster = idTransactionscluster;
+        return this;
+    }
+    
+    /**
+     * Hint: you can use 'me' or 'all'
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
+    public String idUser;
+    public PutUsersIdUserConnectionsIdConnectionTransactionsclustersIdTransactionsclusterRequest withIdUser(String idUser) {
+        this.idUser = idUser;
         return this;
     }
     

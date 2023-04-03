@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountRequest {
-    
-    public GetAccountPathParams pathParams;
-    public GetAccountRequest withPathParams(GetAccountPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountIdPathParameter;
+    public GetAccountRequest withAccountIdPathParameter(String accountIdPathParameter) {
+        this.accountIdPathParameter = accountIdPathParameter;
         return this;
     }
     
-    
-    public GetAccountQueryParams queryParams;
-    public GetAccountRequest withQueryParams(GetAccountQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The id of the account.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=account_id")
+    public Integer accountIdQueryParameter;
+    public GetAccountRequest withAccountIdQueryParameter(Integer accountIdQueryParameter) {
+        this.accountIdQueryParameter = accountIdQueryParameter;
         return this;
     }
     

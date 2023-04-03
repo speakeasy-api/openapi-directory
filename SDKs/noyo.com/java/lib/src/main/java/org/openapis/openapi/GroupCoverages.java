@@ -41,12 +41,12 @@ public class GroupCoverages {
      */
     public org.openapis.openapi.models.operations.CreateGroupCoverageResponse createGroupCoverage(org.openapis.openapi.models.operations.CreateGroupCoverageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateGroupCoveragePathParams.class, baseUrl, "/api/v1/applications/{application_id}/group_coverages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateGroupCoverageRequest.class, baseUrl, "/api/v1/applications/{application_id}/group_coverages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "groupCoverageCreateRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -85,12 +85,12 @@ public class GroupCoverages {
      */
     public org.openapis.openapi.models.operations.EditGroupCoverageResponse editGroupCoverage(org.openapis.openapi.models.operations.EditGroupCoverageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditGroupCoveragePathParams.class, baseUrl, "/api/v1/group_coverages/{group_coverage_id}/{version}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditGroupCoverageRequest.class, baseUrl, "/api/v1/group_coverages/{group_coverage_id}/{version}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "groupCoverageEditRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -129,13 +129,13 @@ public class GroupCoverages {
      */
     public org.openapis.openapi.models.operations.GetApplicationGroupCoveragesResponse getApplicationGroupCoverages(org.openapis.openapi.models.operations.GetApplicationGroupCoveragesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApplicationGroupCoveragesPathParams.class, baseUrl, "/api/v1/applications/{application_id}/group_coverages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApplicationGroupCoveragesRequest.class, baseUrl, "/api/v1/applications/{application_id}/group_coverages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApplicationGroupCoveragesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApplicationGroupCoveragesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -174,7 +174,7 @@ public class GroupCoverages {
      */
     public org.openapis.openapi.models.operations.GetGroupCoverageResponse getGroupCoverage(org.openapis.openapi.models.operations.GetGroupCoverageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGroupCoveragePathParams.class, baseUrl, "/api/v1/group_coverages/{group_coverage_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGroupCoverageRequest.class, baseUrl, "/api/v1/group_coverages/{group_coverage_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETTerminateInstanceInAutoScalingGroupRequest {
-    
-    public GETTerminateInstanceInAutoScalingGroupQueryParams queryParams;
-    public GETTerminateInstanceInAutoScalingGroupRequest withQueryParams(GETTerminateInstanceInAutoScalingGroupQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETTerminateInstanceInAutoScalingGroupActionEnum action;
+    public GETTerminateInstanceInAutoScalingGroupRequest withAction(GETTerminateInstanceInAutoScalingGroupActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The ID of the instance.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceId")
+    public String instanceId;
+    public GETTerminateInstanceInAutoScalingGroupRequest withInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
     
-    public GETTerminateInstanceInAutoScalingGroupHeaders headers;
-    public GETTerminateInstanceInAutoScalingGroupRequest withHeaders(GETTerminateInstanceInAutoScalingGroupHeaders headers) {
-        this.headers = headers;
+    /**
+     * Indicates whether terminating the instance also decrements the size of the Auto Scaling group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ShouldDecrementDesiredCapacity")
+    public Boolean shouldDecrementDesiredCapacity;
+    public GETTerminateInstanceInAutoScalingGroupRequest withShouldDecrementDesiredCapacity(Boolean shouldDecrementDesiredCapacity) {
+        this.shouldDecrementDesiredCapacity = shouldDecrementDesiredCapacity;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETTerminateInstanceInAutoScalingGroupVersionEnum version;
+    public GETTerminateInstanceInAutoScalingGroupRequest withVersion(GETTerminateInstanceInAutoScalingGroupVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETTerminateInstanceInAutoScalingGroupRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETTerminateInstanceInAutoScalingGroupRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETTerminateInstanceInAutoScalingGroupRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETTerminateInstanceInAutoScalingGroupRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETTerminateInstanceInAutoScalingGroupRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETTerminateInstanceInAutoScalingGroupRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETTerminateInstanceInAutoScalingGroupRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

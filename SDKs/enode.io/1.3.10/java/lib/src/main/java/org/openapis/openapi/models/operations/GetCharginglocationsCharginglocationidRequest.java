@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCharginglocationsCharginglocationidRequest {
-    
-    public GetCharginglocationsCharginglocationidPathParams pathParams;
-    public GetCharginglocationsCharginglocationidRequest withPathParams(GetCharginglocationsCharginglocationidPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetCharginglocationsCharginglocationidSecurity security;
-    public GetCharginglocationsCharginglocationidRequest withSecurity(GetCharginglocationsCharginglocationidSecurity security) {
-        this.security = security;
+    /**
+     * ID of the Charging Location
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=chargingLocationId")
+    public String chargingLocationId;
+    public GetCharginglocationsCharginglocationidRequest withChargingLocationId(String chargingLocationId) {
+        this.chargingLocationId = chargingLocationId;
         return this;
     }
     

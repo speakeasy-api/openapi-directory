@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpacesSpaceIdFoldersIdPayrollsRequest {
-    
-    public GetSpacesSpaceIdFoldersIdPayrollsPathParams pathParams;
-    public GetSpacesSpaceIdFoldersIdPayrollsRequest withPathParams(GetSpacesSpaceIdFoldersIdPayrollsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * begin date of the payrolls
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Begin")
+    public String begin;
+    public GetSpacesSpaceIdFoldersIdPayrollsRequest withBegin(String begin) {
+        this.begin = begin;
         return this;
     }
     
+    /**
+     * range date of the documents
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Date")
+    public String date;
+    public GetSpacesSpaceIdFoldersIdPayrollsRequest withDate(String date) {
+        this.date = date;
+        return this;
+    }
     
-    public GetSpacesSpaceIdFoldersIdPayrollsQueryParams queryParams;
-    public GetSpacesSpaceIdFoldersIdPayrollsRequest withQueryParams(GetSpacesSpaceIdFoldersIdPayrollsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * end date of the payrolls
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=End")
+    public String end;
+    public GetSpacesSpaceIdFoldersIdPayrollsRequest withEnd(String end) {
+        this.end = end;
+        return this;
+    }
+    
+    /**
+     * index range of the results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Range")
+    public String range;
+    public GetSpacesSpaceIdFoldersIdPayrollsRequest withRange(String range) {
+        this.range = range;
+        return this;
+    }
+    
+    /**
+     * Id of the folder social
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSpacesSpaceIdFoldersIdPayrollsRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public GetSpacesSpaceIdFoldersIdPayrollsRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

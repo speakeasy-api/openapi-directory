@@ -39,13 +39,13 @@ public class Collection {
      */
     public org.openapis.openapi.models.operations.CollectionListingsAllResponse collectionListingsAll(org.openapis.openapi.models.operations.CollectionListingsAllRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionListingsAllPathParams.class, baseUrl, "/ecosystems/{ecosystem_id}/collections/{id}/listings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionListingsAllRequest.class, baseUrl, "/ecosystems/{ecosystem_id}/collections/{id}/listings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CollectionListingsAllQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CollectionListingsAllRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -84,13 +84,13 @@ public class Collection {
      */
     public org.openapis.openapi.models.operations.CollectionsAllResponse collectionsAll(org.openapis.openapi.models.operations.CollectionsAllRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsAllPathParams.class, baseUrl, "/ecosystems/{ecosystem_id}/collections", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsAllRequest.class, baseUrl, "/ecosystems/{ecosystem_id}/collections", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CollectionsAllQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CollectionsAllRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -129,7 +129,7 @@ public class Collection {
      */
     public org.openapis.openapi.models.operations.CollectionsOneResponse collectionsOne(org.openapis.openapi.models.operations.CollectionsOneRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsOnePathParams.class, baseUrl, "/ecosystems/{ecosystem_id}/collections/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsOneRequest.class, baseUrl, "/ecosystems/{ecosystem_id}/collections/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

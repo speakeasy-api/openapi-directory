@@ -35,10 +35,11 @@ public class Accounts {
     /**
      * Sets a private note on a user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV1AccountsRelationshipsResponse getApiV1AccountsRelationships(org.openapis.openapi.models.operations.GetApiV1AccountsRelationshipsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApiV1AccountsRelationshipsResponse getApiV1AccountsRelationships(org.openapis.openapi.models.operations.GetApiV1AccountsRelationshipsRequest request, org.openapis.openapi.models.operations.GetApiV1AccountsRelationshipsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/accounts/relationships");
         
@@ -46,14 +47,14 @@ public class Accounts {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApiV1AccountsRelationshipsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApiV1AccountsRelationshipsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -88,10 +89,11 @@ public class Accounts {
     /**
      * Search for matching accounts by username or display name.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV1AccountsSearchResponse getApiV1AccountsSearch(org.openapis.openapi.models.operations.GetApiV1AccountsSearchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApiV1AccountsSearchResponse getApiV1AccountsSearch(org.openapis.openapi.models.operations.GetApiV1AccountsSearchRequest request, org.openapis.openapi.models.operations.GetApiV1AccountsSearchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/accounts/search");
         
@@ -99,14 +101,14 @@ public class Accounts {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApiV1AccountsSearchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApiV1AccountsSearchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -140,11 +142,10 @@ public class Accounts {
 
     /**
      * Test to make sure that the user token works.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV1AccountsVerifyCredentialsResponse getApiV1AccountsVerifyCredentials(org.openapis.openapi.models.operations.GetApiV1AccountsVerifyCredentialsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApiV1AccountsVerifyCredentialsResponse getApiV1AccountsVerifyCredentials() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/accounts/verify_credentials");
         
@@ -153,8 +154,7 @@ public class Accounts {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -185,16 +185,16 @@ public class Accounts {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.GetApiV1AccountsIdResponse getApiV1AccountsId(org.openapis.openapi.models.operations.GetApiV1AccountsIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApiV1AccountsIdResponse getApiV1AccountsId(org.openapis.openapi.models.operations.GetApiV1AccountsIdRequest request, org.openapis.openapi.models.operations.GetApiV1AccountsIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV1AccountsIdPathParams.class, baseUrl, "/api/v1/accounts/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV1AccountsIdRequest.class, baseUrl, "/api/v1/accounts/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -231,19 +231,20 @@ public class Accounts {
     /**
      * Tags featured by this account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV1AccountsIdFeaturedTagsResponse getApiV1AccountsIdFeaturedTags(org.openapis.openapi.models.operations.GetApiV1AccountsIdFeaturedTagsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApiV1AccountsIdFeaturedTagsResponse getApiV1AccountsIdFeaturedTags(org.openapis.openapi.models.operations.GetApiV1AccountsIdFeaturedTagsRequest request, org.openapis.openapi.models.operations.GetApiV1AccountsIdFeaturedTagsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV1AccountsIdFeaturedTagsPathParams.class, baseUrl, "/api/v1/accounts/{id}/featured_tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV1AccountsIdFeaturedTagsRequest.class, baseUrl, "/api/v1/accounts/{id}/featured_tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -278,25 +279,26 @@ public class Accounts {
     /**
      * Accounts which follow the given account, if network is not hidden by the account owner.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV1AccountsIdFollowersResponse getApiV1AccountsIdFollowers(org.openapis.openapi.models.operations.GetApiV1AccountsIdFollowersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApiV1AccountsIdFollowersResponse getApiV1AccountsIdFollowers(org.openapis.openapi.models.operations.GetApiV1AccountsIdFollowersRequest request, org.openapis.openapi.models.operations.GetApiV1AccountsIdFollowersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV1AccountsIdFollowersPathParams.class, baseUrl, "/api/v1/accounts/{id}/followers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV1AccountsIdFollowersRequest.class, baseUrl, "/api/v1/accounts/{id}/followers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApiV1AccountsIdFollowersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApiV1AccountsIdFollowersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -333,25 +335,26 @@ public class Accounts {
     /**
      * Accounts which the given account is following, if network is not hidden by the account owner.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV1AccountsIdFollowingResponse getApiV1AccountsIdFollowing(org.openapis.openapi.models.operations.GetApiV1AccountsIdFollowingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApiV1AccountsIdFollowingResponse getApiV1AccountsIdFollowing(org.openapis.openapi.models.operations.GetApiV1AccountsIdFollowingRequest request, org.openapis.openapi.models.operations.GetApiV1AccountsIdFollowingSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV1AccountsIdFollowingPathParams.class, baseUrl, "/api/v1/accounts/{id}/following", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV1AccountsIdFollowingRequest.class, baseUrl, "/api/v1/accounts/{id}/following", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApiV1AccountsIdFollowingQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApiV1AccountsIdFollowingRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -388,19 +391,20 @@ public class Accounts {
     /**
      * Array of IdentityProof
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV1AccountsIdIdentityProofsResponse getApiV1AccountsIdIdentityProofs(org.openapis.openapi.models.operations.GetApiV1AccountsIdIdentityProofsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApiV1AccountsIdIdentityProofsResponse getApiV1AccountsIdIdentityProofs(org.openapis.openapi.models.operations.GetApiV1AccountsIdIdentityProofsRequest request, org.openapis.openapi.models.operations.GetApiV1AccountsIdIdentityProofsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV1AccountsIdIdentityProofsPathParams.class, baseUrl, "/api/v1/accounts/{id}/identity_proofs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV1AccountsIdIdentityProofsRequest.class, baseUrl, "/api/v1/accounts/{id}/identity_proofs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -437,19 +441,20 @@ public class Accounts {
     /**
      * User lists that you have added this account to.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV1AccountsIdListsResponse getApiV1AccountsIdLists(org.openapis.openapi.models.operations.GetApiV1AccountsIdListsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApiV1AccountsIdListsResponse getApiV1AccountsIdLists(org.openapis.openapi.models.operations.GetApiV1AccountsIdListsRequest request, org.openapis.openapi.models.operations.GetApiV1AccountsIdListsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV1AccountsIdListsPathParams.class, baseUrl, "/api/v1/accounts/{id}/lists", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV1AccountsIdListsRequest.class, baseUrl, "/api/v1/accounts/{id}/lists", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -486,19 +491,20 @@ public class Accounts {
     /**
      * Statuses posted to the given account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV1AccountsIdStatusesResponse getApiV1AccountsIdStatuses(org.openapis.openapi.models.operations.GetApiV1AccountsIdStatusesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApiV1AccountsIdStatusesResponse getApiV1AccountsIdStatuses(org.openapis.openapi.models.operations.GetApiV1AccountsIdStatusesRequest request, org.openapis.openapi.models.operations.GetApiV1AccountsIdStatusesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV1AccountsIdStatusesPathParams.class, baseUrl, "/api/v1/accounts/{id}/statuses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV1AccountsIdStatusesRequest.class, baseUrl, "/api/v1/accounts/{id}/statuses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -535,10 +541,11 @@ public class Accounts {
     /**
      * Update the user's display and preferences.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchApiV1AccountsUpdateCredentialsResponse patchApiV1AccountsUpdateCredentials(org.openapis.openapi.models.operations.PatchApiV1AccountsUpdateCredentialsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchApiV1AccountsUpdateCredentialsResponse patchApiV1AccountsUpdateCredentials(byte[] request, org.openapis.openapi.models.operations.PatchApiV1AccountsUpdateCredentialsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/accounts/update_credentials");
         
@@ -549,7 +556,7 @@ public class Accounts {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -584,10 +591,11 @@ public class Accounts {
     /**
      * Creates a user and account records. Returns an account access token for the app that initiated the request. The app should save this token for later, and should wait for the user to confirm their account by clicking a link in their email inbox.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostApiV1AccountsResponse postApiV1Accounts(org.openapis.openapi.models.operations.PostApiV1AccountsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostApiV1AccountsResponse postApiV1Accounts(byte[] request, org.openapis.openapi.models.operations.PostApiV1AccountsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/accounts");
         
@@ -598,7 +606,7 @@ public class Accounts {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -619,19 +627,20 @@ public class Accounts {
     /**
      * Block the given account. Clients should filter statuses from this account if received (e.g. due to a boost in the Home timeline).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostApiV1AccountsIdBlockResponse postApiV1AccountsIdBlock(org.openapis.openapi.models.operations.PostApiV1AccountsIdBlockRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostApiV1AccountsIdBlockResponse postApiV1AccountsIdBlock(org.openapis.openapi.models.operations.PostApiV1AccountsIdBlockRequest request, org.openapis.openapi.models.operations.PostApiV1AccountsIdBlockSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostApiV1AccountsIdBlockPathParams.class, baseUrl, "/api/v1/accounts/{id}/block", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostApiV1AccountsIdBlockRequest.class, baseUrl, "/api/v1/accounts/{id}/block", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -666,21 +675,22 @@ public class Accounts {
     /**
      * Follow the given account. Can also be used to update whether to show reblogs or enable notifications.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostApiV1AccountsIdFollowResponse postApiV1AccountsIdFollow(org.openapis.openapi.models.operations.PostApiV1AccountsIdFollowRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostApiV1AccountsIdFollowResponse postApiV1AccountsIdFollow(org.openapis.openapi.models.operations.PostApiV1AccountsIdFollowRequest request, org.openapis.openapi.models.operations.PostApiV1AccountsIdFollowSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostApiV1AccountsIdFollowPathParams.class, baseUrl, "/api/v1/accounts/{id}/follow", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostApiV1AccountsIdFollowRequest.class, baseUrl, "/api/v1/accounts/{id}/follow", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -715,21 +725,22 @@ public class Accounts {
     /**
      * Mute the given account. Clients should filter statuses and notifications from this account, if received (e.g. due to a boost in the Home timeline).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostApiV1AccountsIdMuteResponse postApiV1AccountsIdMute(org.openapis.openapi.models.operations.PostApiV1AccountsIdMuteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostApiV1AccountsIdMuteResponse postApiV1AccountsIdMute(org.openapis.openapi.models.operations.PostApiV1AccountsIdMuteRequest request, org.openapis.openapi.models.operations.PostApiV1AccountsIdMuteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostApiV1AccountsIdMutePathParams.class, baseUrl, "/api/v1/accounts/{id}/mute", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostApiV1AccountsIdMuteRequest.class, baseUrl, "/api/v1/accounts/{id}/mute", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -764,21 +775,22 @@ public class Accounts {
     /**
      * Sets a private note on a user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostApiV1AccountsIdNoteResponse postApiV1AccountsIdNote(org.openapis.openapi.models.operations.PostApiV1AccountsIdNoteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostApiV1AccountsIdNoteResponse postApiV1AccountsIdNote(org.openapis.openapi.models.operations.PostApiV1AccountsIdNoteRequest request, org.openapis.openapi.models.operations.PostApiV1AccountsIdNoteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostApiV1AccountsIdNotePathParams.class, baseUrl, "/api/v1/accounts/{id}/note", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostApiV1AccountsIdNoteRequest.class, baseUrl, "/api/v1/accounts/{id}/note", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -815,19 +827,20 @@ public class Accounts {
     /**
      * Add the given account to the user's featured profiles. (Featured profiles are currently shown on the user's own public profile.)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostApiV1AccountsIdPinResponse postApiV1AccountsIdPin(org.openapis.openapi.models.operations.PostApiV1AccountsIdPinRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostApiV1AccountsIdPinResponse postApiV1AccountsIdPin(org.openapis.openapi.models.operations.PostApiV1AccountsIdPinRequest request, org.openapis.openapi.models.operations.PostApiV1AccountsIdPinSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostApiV1AccountsIdPinPathParams.class, baseUrl, "/api/v1/accounts/{id}/pin", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostApiV1AccountsIdPinRequest.class, baseUrl, "/api/v1/accounts/{id}/pin", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -862,19 +875,20 @@ public class Accounts {
     /**
      * Block the given account. Clients should filter statuses from this account if received (e.g. due to a boost in the Home timeline).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostApiV1AccountsIdUnblockResponse postApiV1AccountsIdUnblock(org.openapis.openapi.models.operations.PostApiV1AccountsIdUnblockRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostApiV1AccountsIdUnblockResponse postApiV1AccountsIdUnblock(org.openapis.openapi.models.operations.PostApiV1AccountsIdUnblockRequest request, org.openapis.openapi.models.operations.PostApiV1AccountsIdUnblockSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostApiV1AccountsIdUnblockPathParams.class, baseUrl, "/api/v1/accounts/{id}/unblock", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostApiV1AccountsIdUnblockRequest.class, baseUrl, "/api/v1/accounts/{id}/unblock", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -909,19 +923,20 @@ public class Accounts {
     /**
      * Unfollow the given account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostApiV1AccountsIdUnfollowResponse postApiV1AccountsIdUnfollow(org.openapis.openapi.models.operations.PostApiV1AccountsIdUnfollowRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostApiV1AccountsIdUnfollowResponse postApiV1AccountsIdUnfollow(org.openapis.openapi.models.operations.PostApiV1AccountsIdUnfollowRequest request, org.openapis.openapi.models.operations.PostApiV1AccountsIdUnfollowSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostApiV1AccountsIdUnfollowPathParams.class, baseUrl, "/api/v1/accounts/{id}/unfollow", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostApiV1AccountsIdUnfollowRequest.class, baseUrl, "/api/v1/accounts/{id}/unfollow", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -956,19 +971,20 @@ public class Accounts {
     /**
      * Unmute the given account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostApiV1AccountsIdUnmuteResponse postApiV1AccountsIdUnmute(org.openapis.openapi.models.operations.PostApiV1AccountsIdUnmuteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostApiV1AccountsIdUnmuteResponse postApiV1AccountsIdUnmute(org.openapis.openapi.models.operations.PostApiV1AccountsIdUnmuteRequest request, org.openapis.openapi.models.operations.PostApiV1AccountsIdUnmuteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostApiV1AccountsIdUnmutePathParams.class, baseUrl, "/api/v1/accounts/{id}/unmute", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostApiV1AccountsIdUnmuteRequest.class, baseUrl, "/api/v1/accounts/{id}/unmute", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1003,19 +1019,20 @@ public class Accounts {
     /**
      * Remove the given account from the user's featured profiles.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostApiV1AccountsIdUnpinResponse postApiV1AccountsIdUnpin(org.openapis.openapi.models.operations.PostApiV1AccountsIdUnpinRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostApiV1AccountsIdUnpinResponse postApiV1AccountsIdUnpin(org.openapis.openapi.models.operations.PostApiV1AccountsIdUnpinRequest request, org.openapis.openapi.models.operations.PostApiV1AccountsIdUnpinSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostApiV1AccountsIdUnpinPathParams.class, baseUrl, "/api/v1/accounts/{id}/unpin", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostApiV1AccountsIdUnpinRequest.class, baseUrl, "/api/v1/accounts/{id}/unpin", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

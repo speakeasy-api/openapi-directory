@@ -4,20 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSearchHpoEntitiesRequest {
-    
-    public GetSearchHpoEntitiesPathParams pathParams;
-    public GetSearchHpoEntitiesRequest withPathParams(GetSearchHpoEntitiesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * anatomical system id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=anatomical_system")
+    public String anatomicalSystem;
+    public GetSearchHpoEntitiesRequest withAnatomicalSystem(String anatomicalSystem) {
+        this.anatomicalSystem = anatomicalSystem;
         return this;
     }
     
+    /**
+     * anatomical system label
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=anatomical_system_label")
+    public String anatomicalSystemLabel;
+    public GetSearchHpoEntitiesRequest withAnatomicalSystemLabel(String anatomicalSystemLabel) {
+        this.anatomicalSystemLabel = anatomicalSystemLabel;
+        return this;
+    }
     
-    public GetSearchHpoEntitiesQueryParams queryParams;
-    public GetSearchHpoEntitiesRequest withQueryParams(GetSearchHpoEntitiesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * highlight class
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=highlight_class")
+    public String highlightClass;
+    public GetSearchHpoEntitiesRequest withHighlightClass(String highlightClass) {
+        this.highlightClass = highlightClass;
+        return this;
+    }
+    
+    /**
+     * phenotype group id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=phenotype_group")
+    public String phenotypeGroup;
+    public GetSearchHpoEntitiesRequest withPhenotypeGroup(String phenotypeGroup) {
+        this.phenotypeGroup = phenotypeGroup;
+        return this;
+    }
+    
+    /**
+     * phenotype group label
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=phenotype_group_label")
+    public String phenotypeGroupLabel;
+    public GetSearchHpoEntitiesRequest withPhenotypeGroupLabel(String phenotypeGroupLabel) {
+        this.phenotypeGroupLabel = phenotypeGroupLabel;
+        return this;
+    }
+    
+    /**
+     * number of rows
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rows")
+    public Long rows;
+    public GetSearchHpoEntitiesRequest withRows(Long rows) {
+        this.rows = rows;
+        return this;
+    }
+    
+    /**
+     * row number to start from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public String start;
+    public GetSearchHpoEntitiesRequest withStart(String start) {
+        this.start = start;
+        return this;
+    }
+    
+    /**
+     * search string, e.g. muscle atrophy, frequent infections
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=term")
+    public String term;
+    public GetSearchHpoEntitiesRequest withTerm(String term) {
+        this.term = term;
         return this;
     }
     

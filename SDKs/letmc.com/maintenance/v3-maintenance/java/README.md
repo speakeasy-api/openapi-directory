@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.MaintenanceControllerCreateMaintenanceJobFormPathParams;
 import org.openapis.openapi.models.operations.MaintenanceControllerCreateMaintenanceJobFormRequest;
 import org.openapis.openapi.models.operations.MaintenanceControllerCreateMaintenanceJobFormResponse;
 import org.openapis.openapi.models.shared.MaintenanceIssueModelIssuePriorityEnum;
@@ -31,12 +30,12 @@ public class Application {
                 .build();
 
             MaintenanceControllerCreateMaintenanceJobFormRequest req = new MaintenanceControllerCreateMaintenanceJobFormRequest() {{
-                pathParams = new MaintenanceControllerCreateMaintenanceJobFormPathParams() {{
-                    branchID = "corrupti";
-                    shortName = "provident";
-                }};
-                request = new MaintenanceIssueModel() {{
+                maintenanceIssueModel = new MaintenanceIssueModel() {{
                     documents = new org.openapis.openapi.models.shared.MaintenanceDocumentModel[]{{
+                        add(new MaintenanceDocumentModel() {{
+                            mimeType = "provident";
+                            url = "distinctio";
+                        }}),
                         add(new MaintenanceDocumentModel() {{
                             mimeType = "quibusdam";
                             url = "unde";
@@ -45,32 +44,30 @@ public class Application {
                             mimeType = "nulla";
                             url = "corrupti";
                         }}),
-                        add(new MaintenanceDocumentModel() {{
-                            mimeType = "illum";
-                            url = "vel";
-                        }}),
                     }};
-                    externalID = "error";
-                    issueFault = "deserunt";
-                    issueNotes = "suscipit";
+                    externalID = "illum";
+                    issueFault = "vel";
+                    issueNotes = "error";
                     issuePriority = "Medium";
-                    issueTitle = "magnam";
-                    propertyAddress1 = "debitis";
-                    propertyAddress2 = "ipsa";
-                    propertyAddress3 = "delectus";
-                    propertyAddress4 = "tempora";
-                    propertyCountry = "suscipit";
-                    propertyPostcode = "molestiae";
-                    reportedAt = "2020-07-25T16:12:20.938Z";
-                    tenantEMailAddress = "voluptatum";
-                    tenantForename = "iusto";
-                    tenantPhonePrimary = "excepturi";
-                    tenantPhoneSecondary = "nisi";
+                    issueTitle = "suscipit";
+                    propertyAddress1 = "iure";
+                    propertyAddress2 = "magnam";
+                    propertyAddress3 = "debitis";
+                    propertyAddress4 = "ipsa";
+                    propertyCountry = "delectus";
+                    propertyPostcode = "tempora";
+                    reportedAt = "2022-07-10T15:39:12.517Z";
+                    tenantEMailAddress = "minus";
+                    tenantForename = "placeat";
+                    tenantPhonePrimary = "voluptatum";
+                    tenantPhoneSecondary = "iusto";
                     tenantPresenceRequested = false;
-                    tenantSurname = "recusandae";
-                    tenantTitle = "temporibus";
+                    tenantSurname = "excepturi";
+                    tenantTitle = "nisi";
                 }};
-            }};            
+                branchID = "recusandae";
+                shortName = "temporibus";
+            }}            
 
             MaintenanceControllerCreateMaintenanceJobFormResponse res = sdk.maintenanceController.maintenanceControllerCreateMaintenanceJobForm(req);
 
@@ -84,7 +81,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### maintenanceController

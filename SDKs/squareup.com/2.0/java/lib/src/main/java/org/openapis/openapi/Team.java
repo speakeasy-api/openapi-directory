@@ -39,10 +39,11 @@ public class Team {
      * 
      * Learn about [Troubleshooting the Team API](https://developer.squareup.com/docs/team/troubleshooting#bulk-create-team-members).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BulkCreateTeamMembersResponse bulkCreateTeamMembers(org.openapis.openapi.models.operations.BulkCreateTeamMembersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BulkCreateTeamMembersResponse bulkCreateTeamMembers(org.openapis.openapi.models.shared.BulkCreateTeamMembersRequest request, org.openapis.openapi.models.operations.BulkCreateTeamMembersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/team-members/bulk-create");
         
@@ -56,7 +57,7 @@ public class Team {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -88,10 +89,11 @@ public class Team {
      * contains explicit error information for the failed update.
      * Learn about [Troubleshooting the Team API](https://developer.squareup.com/docs/team/troubleshooting#bulk-update-team-members).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BulkUpdateTeamMembersResponse bulkUpdateTeamMembers(org.openapis.openapi.models.operations.BulkUpdateTeamMembersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BulkUpdateTeamMembersResponse bulkUpdateTeamMembers(org.openapis.openapi.models.shared.BulkUpdateTeamMembersRequest request, org.openapis.openapi.models.operations.BulkUpdateTeamMembersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/team-members/bulk-update");
         
@@ -105,7 +107,7 @@ public class Team {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -138,10 +140,11 @@ public class Team {
      * 
      * Learn about [Troubleshooting the Team API](https://developer.squareup.com/docs/team/troubleshooting#createteammember).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateTeamMemberResponse createTeamMember(org.openapis.openapi.models.operations.CreateTeamMemberRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateTeamMemberResponse createTeamMember(org.openapis.openapi.models.shared.CreateTeamMemberRequest request, org.openapis.openapi.models.operations.CreateTeamMemberSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/team-members");
         
@@ -155,7 +158,7 @@ public class Team {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -184,19 +187,20 @@ public class Team {
      * Retrieves a `TeamMember` object for the given `TeamMember.id`.
      * Learn about [Troubleshooting the Team API](https://developer.squareup.com/docs/team/troubleshooting#retrieve-a-team-member).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrieveTeamMemberResponse retrieveTeamMember(org.openapis.openapi.models.operations.RetrieveTeamMemberRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveTeamMemberResponse retrieveTeamMember(org.openapis.openapi.models.operations.RetrieveTeamMemberRequest request, org.openapis.openapi.models.operations.RetrieveTeamMemberSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveTeamMemberPathParams.class, baseUrl, "/v2/team-members/{team_member_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveTeamMemberRequest.class, baseUrl, "/v2/team-members/{team_member_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -226,19 +230,20 @@ public class Team {
      * by `TeamMember.id`.
      * Learn about [Troubleshooting the Team API](https://developer.squareup.com/docs/team/troubleshooting#retrievewagesetting).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrieveWageSettingResponse retrieveWageSetting(org.openapis.openapi.models.operations.RetrieveWageSettingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveWageSettingResponse retrieveWageSetting(org.openapis.openapi.models.operations.RetrieveWageSettingRequest request, org.openapis.openapi.models.operations.RetrieveWageSettingSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveWageSettingPathParams.class, baseUrl, "/v2/team-members/{team_member_id}/wage-setting", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveWageSettingRequest.class, baseUrl, "/v2/team-members/{team_member_id}/wage-setting", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -269,10 +274,11 @@ public class Team {
      * - location IDs
      * - `status`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SearchTeamMembersResponse searchTeamMembers(org.openapis.openapi.models.operations.SearchTeamMembersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SearchTeamMembersResponse searchTeamMembers(org.openapis.openapi.models.shared.SearchTeamMembersRequest request, org.openapis.openapi.models.operations.SearchTeamMembersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/team-members/search");
         
@@ -286,7 +292,7 @@ public class Team {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -315,24 +321,25 @@ public class Team {
      * Updates a single `TeamMember` object. The `TeamMember` object is returned on successful updates.
      * Learn about [Troubleshooting the Team API](https://developer.squareup.com/docs/team/troubleshooting#update-a-team-member).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateTeamMemberResponse updateTeamMember(org.openapis.openapi.models.operations.UpdateTeamMemberRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateTeamMemberResponse updateTeamMember(org.openapis.openapi.models.operations.UpdateTeamMemberRequest request, org.openapis.openapi.models.operations.UpdateTeamMemberSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateTeamMemberPathParams.class, baseUrl, "/v2/team-members/{team_member_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateTeamMemberRequest.class, baseUrl, "/v2/team-members/{team_member_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateTeamMemberRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -364,24 +371,25 @@ public class Team {
      * The `WageSetting` is returned on a successful update.
      * Learn about [Troubleshooting the Team API](https://developer.squareup.com/docs/team/troubleshooting#create-or-update-a-wage-setting).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateWageSettingResponse updateWageSetting(org.openapis.openapi.models.operations.UpdateWageSettingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateWageSettingResponse updateWageSetting(org.openapis.openapi.models.operations.UpdateWageSettingRequest request, org.openapis.openapi.models.operations.UpdateWageSettingSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateWageSettingPathParams.class, baseUrl, "/v2/team-members/{team_member_id}/wage-setting", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateWageSettingRequest.class, baseUrl, "/v2/team-members/{team_member_id}/wage-setting", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateWageSettingRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

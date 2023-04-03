@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateAuthorIfNotExistsForUsingPOSTRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authorMapper")
+    public String authorMapper;
+    public CreateAuthorIfNotExistsForUsingPOSTRequest withAuthorMapper(String authorMapper) {
+        this.authorMapper = authorMapper;
+        return this;
+    }
     
-    public CreateAuthorIfNotExistsForUsingPOSTQueryParams queryParams;
-    public CreateAuthorIfNotExistsForUsingPOSTRequest withQueryParams(CreateAuthorIfNotExistsForUsingPOSTQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public CreateAuthorIfNotExistsForUsingPOSTRequest withName(String name) {
+        this.name = name;
         return this;
     }
     

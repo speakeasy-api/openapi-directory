@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1AnnouncementsRequest {
-    
-    public GetApiV1AnnouncementsQueryParams queryParams;
-    public GetApiV1AnnouncementsRequest withQueryParams(GetApiV1AnnouncementsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetApiV1AnnouncementsSecurity security;
-    public GetApiV1AnnouncementsRequest withSecurity(GetApiV1AnnouncementsSecurity security) {
-        this.security = security;
+    /**
+     * If true, response will include announcements dismissed by the user. Defaults to false.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=with_dismissed")
+    public Boolean withDismissed;
+    public GetApiV1AnnouncementsRequest withWithDismissed(Boolean withDismissed) {
+        this.withDismissed = withDismissed;
         return this;
     }
     

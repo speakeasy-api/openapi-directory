@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.PagespeedonlinePagespeedapiRunpagespeedStrategyEnum;
-import org.openapis.openapi.models.operations.PagespeedonlinePagespeedapiRunpagespeedQueryParams;
 import org.openapis.openapi.models.operations.PagespeedonlinePagespeedapiRunpagespeedRequest;
 import org.openapis.openapi.models.operations.PagespeedonlinePagespeedapiRunpagespeedResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -30,27 +29,25 @@ public class Application {
                 .build();
 
             PagespeedonlinePagespeedapiRunpagespeedRequest req = new PagespeedonlinePagespeedapiRunpagespeedRequest() {{
-                queryParams = new PagespeedonlinePagespeedapiRunpagespeedQueryParams() {{
-                    alt = "json";
-                    fields = "corrupti";
-                    filterThirdPartyResources = false;
-                    key = "provident";
-                    locale = "distinctio";
-                    oauthToken = "quibusdam";
-                    prettyPrint = false;
-                    quotaUser = "unde";
-                    rule = new String[]{{
-                        add("corrupti"),
-                        add("illum"),
-                        add("vel"),
-                        add("error"),
-                    }};
-                    screenshot = false;
-                    strategy = "mobile";
-                    url = "suscipit";
-                    userIp = "iure";
+                alt = "json";
+                fields = "corrupti";
+                filterThirdPartyResources = false;
+                key = "provident";
+                locale = "distinctio";
+                oauthToken = "quibusdam";
+                prettyPrint = false;
+                quotaUser = "unde";
+                rule = new String[]{{
+                    add("corrupti"),
+                    add("illum"),
+                    add("vel"),
+                    add("error"),
                 }};
-            }};            
+                screenshot = false;
+                strategy = "mobile";
+                url = "suscipit";
+                userIp = "iure";
+            }}            
 
             PagespeedonlinePagespeedapiRunpagespeedResponse res = sdk.pagespeedapi.pagespeedonlinePagespeedapiRunpagespeed(req);
 
@@ -64,7 +61,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### pagespeedapi

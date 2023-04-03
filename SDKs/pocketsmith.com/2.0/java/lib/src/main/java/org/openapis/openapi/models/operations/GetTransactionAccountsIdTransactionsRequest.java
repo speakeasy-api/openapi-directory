@@ -4,20 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTransactionAccountsIdTransactionsRequest {
-    
-    public GetTransactionAccountsIdTransactionsPathParams pathParams;
-    public GetTransactionAccountsIdTransactionsRequest withPathParams(GetTransactionAccountsIdTransactionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Limit to transactions on or before this date. Required if start_date is provided. If not provided, defaults to today's date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
+    public String endDate;
+    public GetTransactionAccountsIdTransactionsRequest withEndDate(String endDate) {
+        this.endDate = endDate;
         return this;
     }
     
+    /**
+     * The unique identifier of the transaction account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetTransactionAccountsIdTransactionsRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetTransactionAccountsIdTransactionsQueryParams queryParams;
-    public GetTransactionAccountsIdTransactionsRequest withQueryParams(GetTransactionAccountsIdTransactionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Limit to transactions that need to be reviewed.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=needs_review")
+    public Long needsReview;
+    public GetTransactionAccountsIdTransactionsRequest withNeedsReview(Long needsReview) {
+        this.needsReview = needsReview;
+        return this;
+    }
+    
+    /**
+     * Choose a particular page of the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetTransactionAccountsIdTransactionsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Limit to transactions matching a keyword search string. The provided string is matched against the transaction amount, account name, payee, category title, note, labels, and the date in ISO 8601 format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public GetTransactionAccountsIdTransactionsRequest withSearch(String search) {
+        this.search = search;
+        return this;
+    }
+    
+    /**
+     * Limit to transactions on or after this date. Required if end_date is provided. If not provided, defaults to the furtherest date allowed by the user's subscription.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
+    public String startDate;
+    public GetTransactionAccountsIdTransactionsRequest withStartDate(String startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    
+    /**
+     * Limit to transactions of this type.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public GetTransactionAccountsIdTransactionsTypeEnum type;
+    public GetTransactionAccountsIdTransactionsRequest withType(GetTransactionAccountsIdTransactionsTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+    
+    /**
+     * Limit to uncategorised transactions.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uncategorised")
+    public Long uncategorised;
+    public GetTransactionAccountsIdTransactionsRequest withUncategorised(Long uncategorised) {
+        this.uncategorised = uncategorised;
+        return this;
+    }
+    
+    /**
+     * Limit to transactions updated since an ISO 8601 timestamp.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_since")
+    public String updatedSince;
+    public GetTransactionAccountsIdTransactionsRequest withUpdatedSince(String updatedSince) {
+        this.updatedSince = updatedSince;
         return this;
     }
     

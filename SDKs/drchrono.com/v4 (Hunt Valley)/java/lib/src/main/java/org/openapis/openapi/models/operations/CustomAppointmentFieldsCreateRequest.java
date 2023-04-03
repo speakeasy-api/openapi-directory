@@ -4,20 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CustomAppointmentFieldsCreateRequest {
-    
-    public CustomAppointmentFieldsCreateQueryParams queryParams;
-    public CustomAppointmentFieldsCreateRequest withQueryParams(CustomAppointmentFieldsCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public CustomAppointmentFieldsCreateSecurity security;
-    public CustomAppointmentFieldsCreateRequest withSecurity(CustomAppointmentFieldsCreateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public CustomAppointmentFieldsCreateRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     

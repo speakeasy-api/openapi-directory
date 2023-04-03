@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoGetAllCommitsRequest {
-    
-    public RepoGetAllCommitsPathParams pathParams;
-    public RepoGetAllCommitsRequest withPathParams(RepoGetAllCommitsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * page size of results (ignored if used with 'path')
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public RepoGetAllCommitsRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoGetAllCommitsRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public RepoGetAllCommitsQueryParams queryParams;
-    public RepoGetAllCommitsRequest withQueryParams(RepoGetAllCommitsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * page number of results to return (1-based)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public RepoGetAllCommitsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * filepath of a file/dir
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=path")
+    public String path;
+    public RepoGetAllCommitsRequest withPath(String path) {
+        this.path = path;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoGetAllCommitsRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * SHA or branch to start listing commits from (usually 'master')
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sha")
+    public String sha;
+    public RepoGetAllCommitsRequest withSha(String sha) {
+        this.sha = sha;
+        return this;
+    }
+    
+    /**
+     * include diff stats for every commit (disable for speedup, default 'true')
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stat")
+    public Boolean stat;
+    public RepoGetAllCommitsRequest withStat(Boolean stat) {
+        this.stat = stat;
         return this;
     }
     

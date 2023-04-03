@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchPatientPlanSummaryRequest {
-    
-    public FetchPatientPlanSummaryPathParams pathParams;
-    public FetchPatientPlanSummaryRequest withPathParams(FetchPatientPlanSummaryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Plan summary identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public FetchPatientPlanSummaryRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public FetchPatientPlanSummaryQueryParams queryParams;
-    public FetchPatientPlanSummaryRequest withQueryParams(FetchPatientPlanSummaryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * List of related resources to include in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include")
+    public FetchPatientPlanSummaryIncludeEnum include;
+    public FetchPatientPlanSummaryRequest withInclude(FetchPatientPlanSummaryIncludeEnum include) {
+        this.include = include;
         return this;
     }
     

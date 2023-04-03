@@ -41,7 +41,7 @@ public class Cards {
      */
     public org.openapis.openapi.models.operations.BlockCardResponse blockCard(org.openapis.openapi.models.operations.BlockCardRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BlockCardPathParams.class, baseUrl, "/v1/cards/{cardId}/block", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BlockCardRequest.class, baseUrl, "/v1/cards/{cardId}/block", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -73,7 +73,7 @@ public class Cards {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateNewCardResponse createNewCard(org.openapis.openapi.models.operations.CreateNewCardRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateNewCardResponse createNewCard(org.openapis.openapi.models.operations.CreateNewCardNewCard request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/cards");
         
@@ -120,13 +120,13 @@ public class Cards {
      */
     public org.openapis.openapi.models.operations.GetListofCardTransactionsResponse getListofCardTransactions(org.openapis.openapi.models.operations.GetListofCardTransactionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetListofCardTransactionsPathParams.class, baseUrl, "/v1/cards/{cardId}/transactions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetListofCardTransactionsRequest.class, baseUrl, "/v1/cards/{cardId}/transactions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetListofCardTransactionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetListofCardTransactionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -209,7 +209,7 @@ public class Cards {
      */
     public org.openapis.openapi.models.operations.UnblockCardResponse unblockCard(org.openapis.openapi.models.operations.UnblockCardRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnblockCardPathParams.class, baseUrl, "/v1/cards/{cardId}/unblock", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnblockCardRequest.class, baseUrl, "/v1/cards/{cardId}/unblock", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");

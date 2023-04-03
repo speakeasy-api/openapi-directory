@@ -4,20 +4,125 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListRecommendationTemplatesRequest {
-    
-    public ListRecommendationTemplatesQueryParams queryParams;
-    public ListRecommendationTemplatesRequest withQueryParams(ListRecommendationTemplatesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListRecommendationTemplatesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListRecommendationTemplatesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public ListRecommendationTemplatesHeaders headers;
-    public ListRecommendationTemplatesRequest withHeaders(ListRecommendationTemplatesHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListRecommendationTemplatesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListRecommendationTemplatesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListRecommendationTemplatesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListRecommendationTemplatesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListRecommendationTemplatesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The Amazon Resource Name (ARN) of the assessment. The format for this ARN is: arn:&lt;code&gt;partition&lt;/code&gt;:resiliencehub:&lt;code&gt;region&lt;/code&gt;:&lt;code&gt;account&lt;/code&gt;:app-assessment/&lt;code&gt;app-id&lt;/code&gt;. For more information about ARNs, see &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt; Amazon Resource Names (ARNs)&lt;/a&gt; in the &lt;i&gt;AWS General Reference&lt;/i&gt; guide.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assessmentArn")
+    public String assessmentArn;
+    public ListRecommendationTemplatesRequest withAssessmentArn(String assessmentArn) {
+        this.assessmentArn = assessmentArn;
+        return this;
+    }
+    
+    /**
+     * The maximum number of results to include in the response. If more results exist than the specified &lt;code&gt;MaxResults&lt;/code&gt; value, a token is included in the response so that the remaining results can be retrieved.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public ListRecommendationTemplatesRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * The name for one of the listed recommendation templates.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public ListRecommendationTemplatesRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Null, or the token from a previous call to get the next set of results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
+    public String nextToken;
+    public ListRecommendationTemplatesRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * The Amazon Resource Name (ARN) for a recommendation template.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=recommendationTemplateArn")
+    public String recommendationTemplateArn;
+    public ListRecommendationTemplatesRequest withRecommendationTemplateArn(String recommendationTemplateArn) {
+        this.recommendationTemplateArn = recommendationTemplateArn;
+        return this;
+    }
+    
+    /**
+     * The default is to sort by ascending &lt;b&gt;startTime&lt;/b&gt;. To sort by descending &lt;b&gt;startTime&lt;/b&gt;, set reverseOrder to &lt;code&gt;true&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reverseOrder")
+    public Boolean reverseOrder;
+    public ListRecommendationTemplatesRequest withReverseOrder(Boolean reverseOrder) {
+        this.reverseOrder = reverseOrder;
+        return this;
+    }
+    
+    /**
+     * The status of the action.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public org.openapis.openapi.models.shared.RecommendationTemplateStatusEnum[] status;
+    public ListRecommendationTemplatesRequest withStatus(org.openapis.openapi.models.shared.RecommendationTemplateStatusEnum[] status) {
+        this.status = status;
         return this;
     }
     

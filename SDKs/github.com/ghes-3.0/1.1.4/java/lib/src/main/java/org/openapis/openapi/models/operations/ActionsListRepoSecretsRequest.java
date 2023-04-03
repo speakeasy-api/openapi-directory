@@ -4,20 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsListRepoSecretsRequest {
-    
-    public ActionsListRepoSecretsPathParams pathParams;
-    public ActionsListRepoSecretsRequest withPathParams(ActionsListRepoSecretsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ActionsListRepoSecretsRequest withOwner(String owner) {
+        this.owner = owner;
         return this;
     }
     
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ActionsListRepoSecretsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public ActionsListRepoSecretsQueryParams queryParams;
-    public ActionsListRepoSecretsRequest withQueryParams(ActionsListRepoSecretsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ActionsListRepoSecretsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ActionsListRepoSecretsRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

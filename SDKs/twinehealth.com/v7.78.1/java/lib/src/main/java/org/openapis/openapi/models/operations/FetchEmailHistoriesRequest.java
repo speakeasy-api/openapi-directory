@@ -4,13 +4,49 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchEmailHistoriesRequest {
+    /**
+     * Type of email
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[emailType]")
+    public String filterEmailType;
+    public FetchEmailHistoriesRequest withFilterEmailType(String filterEmailType) {
+        this.filterEmailType = filterEmailType;
+        return this;
+    }
     
-    public FetchEmailHistoriesQueryParams queryParams;
-    public FetchEmailHistoriesRequest withQueryParams(FetchEmailHistoriesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Fitbit Plus user id of email recipient. Required if filter[sender] is not defined.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[receiver]")
+    public String filterReceiver;
+    public FetchEmailHistoriesRequest withFilterReceiver(String filterReceiver) {
+        this.filterReceiver = filterReceiver;
+        return this;
+    }
+    
+    /**
+     * Fitbit Plus user id of email sender. Required if filter[receiver] is not defined.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[sender]")
+    public String filterSender;
+    public FetchEmailHistoriesRequest withFilterSender(String filterSender) {
+        this.filterSender = filterSender;
+        return this;
+    }
+    
+    /**
+     * valid sorts:
+     *   * send_time - ascending by send_time
+     *   * -send_time - descending by send_time
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public FetchEmailHistoriesSortEnum sort;
+    public FetchEmailHistoriesRequest withSort(FetchEmailHistoriesSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

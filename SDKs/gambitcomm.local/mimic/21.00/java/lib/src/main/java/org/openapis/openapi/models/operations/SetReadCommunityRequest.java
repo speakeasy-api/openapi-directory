@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetReadCommunityRequest {
+    /**
+     * Agent to return the SNMP read community string
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public SetReadCommunityRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public SetReadCommunityPathParams pathParams;
-    public SetReadCommunityRequest withPathParams(SetReadCommunityPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * SNMP read community string
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=read")
+    public String read;
+    public SetReadCommunityRequest withRead(String read) {
+        this.read = read;
         return this;
     }
     

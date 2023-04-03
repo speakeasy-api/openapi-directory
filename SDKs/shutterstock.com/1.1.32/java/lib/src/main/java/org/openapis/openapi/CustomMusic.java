@@ -35,10 +35,11 @@ public class CustomMusic {
      * Create rendered audio
      * This endpoint creates rendered audio from timeline data. It returns a render ID that you can use to download the finished audio when it is ready. The render ID is valid for up to 48 hours.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateAudioRendersResponse createAudioRenders(org.openapis.openapi.models.operations.CreateAudioRendersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateAudioRendersResponse createAudioRenders(org.openapis.openapi.models.shared.CreateAudioRendersRequest request, org.openapis.openapi.models.operations.CreateAudioRendersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/ai/audio/renders");
         
@@ -52,7 +53,7 @@ public class CustomMusic {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,10 +83,11 @@ public class CustomMusic {
      * Get details about audio renders
      * This endpoint shows the status of one or more audio renders, including download links for completed audio.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchRendersResponse fetchRenders(org.openapis.openapi.models.operations.FetchRendersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchRendersResponse fetchRenders(org.openapis.openapi.models.operations.FetchRendersRequest request, org.openapis.openapi.models.operations.FetchRendersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/ai/audio/renders");
         
@@ -93,14 +95,14 @@ public class CustomMusic {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FetchRendersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FetchRendersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -130,10 +132,11 @@ public class CustomMusic {
      * List computer audio descriptors
      * This endpoint lists the descriptors that you can use in the audio regions in an audio render.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListCustomDescriptorsResponse listCustomDescriptors(org.openapis.openapi.models.operations.ListCustomDescriptorsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListCustomDescriptorsResponse listCustomDescriptors(org.openapis.openapi.models.operations.ListCustomDescriptorsRequest request, org.openapis.openapi.models.operations.ListCustomDescriptorsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/ai/audio/descriptors");
         
@@ -141,14 +144,14 @@ public class CustomMusic {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCustomDescriptorsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCustomDescriptorsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -178,10 +181,11 @@ public class CustomMusic {
      * List computer audio instruments
      * This endpoint lists the instruments that you can include in computer audio. If you specify more than one search parameter, the API uses an AND condition.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListCustomInstrumentsResponse listCustomInstruments(org.openapis.openapi.models.operations.ListCustomInstrumentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListCustomInstrumentsResponse listCustomInstruments(org.openapis.openapi.models.operations.ListCustomInstrumentsRequest request, org.openapis.openapi.models.operations.ListCustomInstrumentsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/ai/audio/instruments");
         
@@ -189,14 +193,14 @@ public class CustomMusic {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCustomInstrumentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCustomInstrumentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

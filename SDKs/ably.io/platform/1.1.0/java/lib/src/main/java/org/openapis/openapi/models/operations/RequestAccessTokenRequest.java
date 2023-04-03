@@ -7,31 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestAccessTokenRequest {
-    
-    public RequestAccessTokenPathParams pathParams;
-    public RequestAccessTokenRequest withPathParams(RequestAccessTokenPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RequestAccessTokenQueryParams queryParams;
-    public RequestAccessTokenRequest withQueryParams(RequestAccessTokenQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public RequestAccessTokenHeaders headers;
-    public RequestAccessTokenRequest withHeaders(RequestAccessTokenHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public Object request;
-    public RequestAccessTokenRequest withRequest(Object request) {
-        this.request = request;
+    public Object requestBody;
+    public RequestAccessTokenRequest withRequestBody(Object requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The version of the API you wish to use.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Ably-Version")
+    public String xAblyVersion;
+    public RequestAccessTokenRequest withXAblyVersion(String xAblyVersion) {
+        this.xAblyVersion = xAblyVersion;
+        return this;
+    }
+    
+    /**
+     * The response format you would like
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public org.openapis.openapi.models.shared.ResponseFormatEnum format;
+    public RequestAccessTokenRequest withFormat(org.openapis.openapi.models.shared.ResponseFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * The [key name](https://www.ably.io/documentation/rest-api/token-request-spec#api-key-format) comprises of the app ID and key ID of an API key.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=keyName")
+    public String keyName;
+    public RequestAccessTokenRequest withKeyName(String keyName) {
+        this.keyName = keyName;
         return this;
     }
     

@@ -4,13 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AggregatedGetConversionsSummaryRequest {
+    /**
+     * If using a "custom" timeFrame you can specify the starting day (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDay")
+    public String fromDay;
+    public AggregatedGetConversionsSummaryRequest withFromDay(String fromDay) {
+        this.fromDay = fromDay;
+        return this;
+    }
     
-    public AggregatedGetConversionsSummaryQueryParams queryParams;
-    public AggregatedGetConversionsSummaryRequest withQueryParams(AggregatedGetConversionsSummaryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Limit results to this number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public AggregatedGetConversionsSummaryRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Offset where to start from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public AggregatedGetConversionsSummaryRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Field to sort by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortBy")
+    public String sortBy;
+    public AggregatedGetConversionsSummaryRequest withSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    
+    /**
+     * Direction of sort "asc" or "desc"
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortDirection")
+    public AggregatedGetConversionsSummarySortDirectionEnum sortDirection;
+    public AggregatedGetConversionsSummaryRequest withSortDirection(AggregatedGetConversionsSummarySortDirectionEnum sortDirection) {
+        this.sortDirection = sortDirection;
+        return this;
+    }
+    
+    /**
+     * Status of conversion ("deleted"/"active")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public AggregatedGetConversionsSummaryStatusEnum status;
+    public AggregatedGetConversionsSummaryRequest withStatus(AggregatedGetConversionsSummaryStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * Filter fields by this pattern
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=textSearch")
+    public String textSearch;
+    public AggregatedGetConversionsSummaryRequest withTextSearch(String textSearch) {
+        this.textSearch = textSearch;
+        return this;
+    }
+    
+    /**
+     * Timeframe of the request. See list at $timeframeList
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeFrame")
+    public AggregatedGetConversionsSummaryTimeFrameEnum timeFrame;
+    public AggregatedGetConversionsSummaryRequest withTimeFrame(AggregatedGetConversionsSummaryTimeFrameEnum timeFrame) {
+        this.timeFrame = timeFrame;
+        return this;
+    }
+    
+    /**
+     * If using a "custom" timeFrame you can specify the ending day (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDay")
+    public String toDay;
+    public AggregatedGetConversionsSummaryRequest withToDay(String toDay) {
+        this.toDay = toDay;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IpamRolesReadRequest {
-    
-    public IpamRolesReadPathParams pathParams;
-    public IpamRolesReadRequest withPathParams(IpamRolesReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this role.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public IpamRolesReadRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

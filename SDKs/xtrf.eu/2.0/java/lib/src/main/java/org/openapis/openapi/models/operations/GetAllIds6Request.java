@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllIds6Request {
-    
-    public GetAllIds6QueryParams queryParams;
-    public GetAllIds6Request withQueryParams(GetAllIds6QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * only projects modified since this timestamp
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedSince")
+    public Long updatedSince;
+    public GetAllIds6Request withUpdatedSince(Long updatedSince) {
+        this.updatedSince = updatedSince;
         return this;
     }
     

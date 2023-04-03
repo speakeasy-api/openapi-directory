@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CompetitionFixturesLeagueDetailsRequest {
+    /**
+     * A LoL competition/league unique CompetitionId. Possible values include: &lt;code&gt;100000019&lt;/code&gt;, etc.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=competitionid")
+    public String competitionid;
+    public CompetitionFixturesLeagueDetailsRequest withCompetitionid(String competitionid) {
+        this.competitionid = competitionid;
+        return this;
+    }
     
-    public CompetitionFixturesLeagueDetailsPathParams pathParams;
-    public CompetitionFixturesLeagueDetailsRequest withPathParams(CompetitionFixturesLeagueDetailsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public CompetitionFixturesLeagueDetailsFormatEnum format;
+    public CompetitionFixturesLeagueDetailsRequest withFormat(CompetitionFixturesLeagueDetailsFormatEnum format) {
+        this.format = format;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppPkgGETRequest {
-    
-    public AppPkgGETPathParams pathParams;
-    public AppPkgGETRequest withPathParams(AppPkgGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Identifier of an on-boarded individual application package
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appPkgId")
+    public String appPkgId;
+    public AppPkgGETRequest withAppPkgId(String appPkgId) {
+        this.appPkgId = appPkgId;
         return this;
     }
     

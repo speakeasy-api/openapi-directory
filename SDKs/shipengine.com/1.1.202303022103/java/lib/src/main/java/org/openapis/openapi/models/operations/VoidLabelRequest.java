@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VoidLabelRequest {
-    
-    public VoidLabelPathParams pathParams;
-    public VoidLabelRequest withPathParams(VoidLabelPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Label ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=label_id")
+    public String labelId;
+    public VoidLabelRequest withLabelId(String labelId) {
+        this.labelId = labelId;
         return this;
     }
     

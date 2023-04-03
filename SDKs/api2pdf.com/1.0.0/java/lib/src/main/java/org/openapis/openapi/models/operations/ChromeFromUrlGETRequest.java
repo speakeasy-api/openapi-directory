@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChromeFromUrlGETRequest {
-    
-    public ChromeFromUrlGETQueryParams queryParams;
-    public ChromeFromUrlGETRequest withQueryParams(ChromeFromUrlGETQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Specify output=json to receive a JSON output. Defaults to PDF file.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=output")
+    public String output;
+    public ChromeFromUrlGETRequest withOutput(String output) {
+        this.output = output;
         return this;
     }
     
-    
-    public ChromeFromUrlGETSecurity security;
-    public ChromeFromUrlGETRequest withSecurity(ChromeFromUrlGETSecurity security) {
-        this.security = security;
+    /**
+     * Url of the page to convert to PDF. Must start with http:// or https://.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=url")
+    public String url;
+    public ChromeFromUrlGETRequest withUrl(String url) {
+        this.url = url;
         return this;
     }
     

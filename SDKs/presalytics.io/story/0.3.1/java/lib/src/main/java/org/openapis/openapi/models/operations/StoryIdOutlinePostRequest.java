@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoryIdOutlinePostRequest {
-    
-    public StoryIdOutlinePostPathParams pathParams;
-    public StoryIdOutlinePostRequest withPathParams(StoryIdOutlinePostPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * A story outline object
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public String request;
-    public StoryIdOutlinePostRequest withRequest(String request) {
-        this.request = request;
+    public String requestBody;
+    public StoryIdOutlinePostRequest withRequestBody(String requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * the id from the story object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public StoryIdOutlinePostRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

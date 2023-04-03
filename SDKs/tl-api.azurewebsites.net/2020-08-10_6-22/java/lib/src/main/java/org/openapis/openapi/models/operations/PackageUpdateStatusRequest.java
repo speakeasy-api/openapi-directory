@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PackageUpdateStatusRequest {
+    /**
+     * package Id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=packageId")
+    public Integer packageId;
+    public PackageUpdateStatusRequest withPackageId(Integer packageId) {
+        this.packageId = packageId;
+        return this;
+    }
     
-    public PackageUpdateStatusQueryParams queryParams;
-    public PackageUpdateStatusRequest withQueryParams(PackageUpdateStatusQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * status : 1 activate, 2 : deactivate
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public Integer status;
+    public PackageUpdateStatusRequest withStatus(Integer status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * Status updated User
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userName")
+    public String userName;
+    public PackageUpdateStatusRequest withUserName(String userName) {
+        this.userName = userName;
         return this;
     }
     

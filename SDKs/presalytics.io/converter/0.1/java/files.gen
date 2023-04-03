@@ -31,7 +31,6 @@ lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/SvgconvertFileToConvertFile.java
 lib/src/main/java/org/openapis/openapi/models/operations/SvgconvertFileToConvert.java
-lib/src/main/java/org/openapis/openapi/models/operations/SvgconvertRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SvgconvertFileUrl.java
 lib/src/main/java/org/openapis/openapi/models/operations/SvgconvertResponse.java
 USAGE.md

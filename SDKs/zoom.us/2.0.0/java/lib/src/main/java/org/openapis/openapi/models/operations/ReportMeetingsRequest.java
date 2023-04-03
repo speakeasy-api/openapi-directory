@@ -4,20 +4,67 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReportMeetingsRequest {
-    
-    public ReportMeetingsPathParams pathParams;
-    public ReportMeetingsRequest withPathParams(ReportMeetingsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Start date in 'yyyy-mm-dd' format. The date range defined by the "from" and "to" parameters should only be one month as the report includes only one month worth of data at once.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
+    public LocalDate from;
+    public ReportMeetingsRequest withFrom(LocalDate from) {
+        this.from = from;
         return this;
     }
     
+    /**
+     * The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next_page_token")
+    public String nextPageToken;
+    public ReportMeetingsRequest withNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
+        return this;
+    }
     
-    public ReportMeetingsQueryParams queryParams;
-    public ReportMeetingsRequest withQueryParams(ReportMeetingsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of records returned within a single API call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public ReportMeetingsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * End date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
+    public LocalDate to;
+    public ReportMeetingsRequest withTo(LocalDate to) {
+        this.to = to;
+        return this;
+    }
+    
+    /**
+     * The meeting types: &lt;br&gt;`past` - Past meetings.&lt;br&gt;`pastOne` - Past one user meetings. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public ReportMeetingsTypeEnum type;
+    public ReportMeetingsRequest withType(ReportMeetingsTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+    
+    /**
+     * The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public ReportMeetingsRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

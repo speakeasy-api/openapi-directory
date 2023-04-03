@@ -4,20 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenameRequest {
-    
-    public DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenamePathParams pathParams;
-    public DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenameRequest withPathParams(DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenamePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Name of the file.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=filename")
+    public String filename;
+    public DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenameRequest withFilename(String filename) {
+        this.filename = filename;
         return this;
     }
     
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenameRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
     
-    public DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenameSecurity security;
-    public DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenameRequest withSecurity(DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenameSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenameRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

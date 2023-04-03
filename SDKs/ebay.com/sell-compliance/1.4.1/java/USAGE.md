@@ -5,11 +5,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GetListingViolationsSecurity;
-import org.openapis.openapi.models.operations.GetListingViolationsQueryParams;
-import org.openapis.openapi.models.operations.GetListingViolationsHeaders;
 import org.openapis.openapi.models.operations.GetListingViolationsRequest;
 import org.openapis.openapi.models.operations.GetListingViolationsResponse;
-import org.openapis.openapi.models.shared.SchemeAPIAuth;
 
 public class Application {
     public static void main(String[] args) {
@@ -18,24 +15,17 @@ public class Application {
                 .build();
 
             GetListingViolationsRequest req = new GetListingViolationsRequest() {{
-                security = new GetListingViolationsSecurity() {{
-                    apiAuth = new SchemeAPIAuth() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                queryParams = new GetListingViolationsQueryParams() {{
-                    complianceType = "corrupti";
-                    filter = "provident";
-                    limit = "distinctio";
-                    listingId = "quibusdam";
-                    offset = "unde";
-                }};
-                headers = new GetListingViolationsHeaders() {{
-                    xEbayCMarketplaceId = "nulla";
-                }};
-            }};            
+                xEbayCMarketplaceId = "corrupti";
+                complianceType = "provident";
+                filter = "distinctio";
+                limit = "quibusdam";
+                listingId = "unde";
+                offset = "nulla";
+            }}            
 
-            GetListingViolationsResponse res = sdk.listingViolation.getListingViolations(req);
+            GetListingViolationsResponse res = sdk.listingViolation.getListingViolations(req, new GetListingViolationsSecurity() {{
+                apiAuth = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.pagedComplianceViolationCollection.isPresent()) {
                 // handle response

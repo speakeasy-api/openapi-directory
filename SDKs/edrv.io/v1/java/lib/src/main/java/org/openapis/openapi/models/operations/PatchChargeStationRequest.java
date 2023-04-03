@@ -7,10 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchChargeStationRequest {
-    
-    public PatchChargeStationPathParams pathParams;
-    public PatchChargeStationRequest withPathParams(PatchChargeStationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of charge station that needs to be updated
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatchChargeStationRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
@@ -18,9 +21,9 @@ public class PatchChargeStationRequest {
      * Include charge station properties to update here
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Schema1 request;
-    public PatchChargeStationRequest withRequest(org.openapis.openapi.models.shared.Schema1 request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Schema1 schema1;
+    public PatchChargeStationRequest withSchema1(org.openapis.openapi.models.shared.Schema1 schema1) {
+        this.schema1 = schema1;
         return this;
     }
     

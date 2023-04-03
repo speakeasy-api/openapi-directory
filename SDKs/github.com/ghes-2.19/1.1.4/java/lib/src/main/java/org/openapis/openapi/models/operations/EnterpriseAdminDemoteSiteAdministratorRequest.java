@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminDemoteSiteAdministratorRequest {
-    
-    public EnterpriseAdminDemoteSiteAdministratorPathParams pathParams;
-    public EnterpriseAdminDemoteSiteAdministratorRequest withPathParams(EnterpriseAdminDemoteSiteAdministratorPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public EnterpriseAdminDemoteSiteAdministratorRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

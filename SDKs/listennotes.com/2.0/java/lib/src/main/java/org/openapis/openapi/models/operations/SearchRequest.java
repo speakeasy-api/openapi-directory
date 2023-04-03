@@ -4,20 +4,240 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchRequest {
-    
-    public SearchQueryParams queryParams;
-    public SearchRequest withQueryParams(SearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Get API Key on listennotes.com/api
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-ListenAPI-Key")
+    public String xListenAPIKey;
+    public SearchRequest withXListenAPIKey(String xListenAPIKey) {
+        this.xListenAPIKey = xListenAPIKey;
         return this;
     }
     
+    /**
+     * Maximum number of episodes. Applicable only when type parameter is **podcast**.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=episode_count_max")
+    public Long episodeCountMax;
+    public SearchRequest withEpisodeCountMax(Long episodeCountMax) {
+        this.episodeCountMax = episodeCountMax;
+        return this;
+    }
     
-    public SearchHeaders headers;
-    public SearchRequest withHeaders(SearchHeaders headers) {
-        this.headers = headers;
+    /**
+     * Minimum number of episodes. Applicable only when type parameter is **podcast**.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=episode_count_min")
+    public Long episodeCountMin;
+    public SearchRequest withEpisodeCountMin(Long episodeCountMin) {
+        this.episodeCountMin = episodeCountMin;
+        return this;
+    }
+    
+    /**
+     * A comma-delimited string of a list of genre ids. If not specified, then all genres are included. You can find the id and the name of all genres from `GET /genres`. It works only when **type** is *episode* or *podcast*.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=genre_ids")
+    public String genreIds;
+    public SearchRequest withGenreIds(String genreIds) {
+        this.genreIds = genreIds;
+        return this;
+    }
+    
+    /**
+     * Limit search results to a specific language. If not specified, it'll be any language. You can get a list of supported languages from `GET /languages`. It works only when **type** is *episode* or *podcast*.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public String language;
+    public SearchRequest withLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    
+    /**
+     * Maximum audio length in minutes. Applicable only when **type** parameter is **episode** or **podcast**.
+     * If **type** parameter is **episode**, it's for audio length of an episode.
+     * If **type** parameter is **podcast**, it's for average audio length of all episodes in a podcast.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=len_max")
+    public Long lenMax;
+    public SearchRequest withLenMax(Long lenMax) {
+        this.lenMax = lenMax;
+        return this;
+    }
+    
+    /**
+     * Minimum audio length in minutes. Applicable only when **type** parameter is **episode** or **podcast**.
+     * If **type** parameter is **episode**, it's for audio length of an episode.
+     * If **type** parameter is **podcast**, it's for average audio length of all episodes in a podcast.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=len_min")
+    public Long lenMin;
+    public SearchRequest withLenMin(Long lenMin) {
+        this.lenMin = lenMin;
+        return this;
+    }
+    
+    /**
+     * A comma-delimited string of podcast ids (up to 5 podcasts) - you can get a podcast id from the **podcast_id** field in response. This parameter is to exclude search results of a few specific podcasts. It works only when **type** is *episode*.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ncid")
+    public String ncid;
+    public SearchRequest withNcid(String ncid) {
+        this.ncid = ncid;
+        return this;
+    }
+    
+    /**
+     * A comma-delimited string of podcast ids (up to 5 podcasts) - you can get a podcast id from the **podcast_id** field in response. This parameter is to limit search results from only a few specific podcasts. It works only when **type** is *episode*.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ocid")
+    public String ocid;
+    public SearchRequest withOcid(String ocid) {
+        this.ocid = ocid;
+        return this;
+    }
+    
+    /**
+     * Offset for search results, for pagination. You'll use **next_offset** from response for this parameter.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public SearchRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * A comma-delimited string to search only in specific fields. Allowed values are title, description, author, and audio. If not specified, then search every fields.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=only_in")
+    public String onlyIn;
+    public SearchRequest withOnlyIn(String onlyIn) {
+        this.onlyIn = onlyIn;
+        return this;
+    }
+    
+    /**
+     * Only show episodes/podcasts/curated lists published after this timestamp (in milliseconds). If **published_before** &amp; **published_after** are used at the same time, **published_before** should be bigger than **published_after**.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=published_after")
+    public Long publishedAfter;
+    public SearchRequest withPublishedAfter(Long publishedAfter) {
+        this.publishedAfter = publishedAfter;
+        return this;
+    }
+    
+    /**
+     * Only show episodes/podcasts/curated lists published before this timestamp (in milliseconds). If **published_before** &amp; **published_after** are used at the same time, **published_before** should be bigger than **published_after**.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=published_before")
+    public Long publishedBefore;
+    public SearchRequest withPublishedBefore(Long publishedBefore) {
+        this.publishedBefore = publishedBefore;
+        return this;
+    }
+    
+    /**
+     * Search term, e.g., person, place, topic... You can use double quotes to do verbatim match, e.g., "game of thrones". Otherwise, it's fuzzy search.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public SearchRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    /**
+     * Limit search results to a specific region (e.g., us, gb, in...). If not specified, it'll be any region. You can get the supported country codes from `GET /regions`. It works only when **type** is *episode* or *podcast*.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=region")
+    public String region;
+    public SearchRequest withRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    
+    /**
+     * Whether or not to exclude podcasts/episodes with explicit language. 1 is yes and 0 is no. It works only when **type** is *episode* or *podcast*.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=safe_mode")
+    public SearchSafeModeEnum safeMode;
+    public SearchRequest withSafeMode(SearchSafeModeEnum safeMode) {
+        this.safeMode = safeMode;
+        return this;
+    }
+    
+    /**
+     * Sort by date or not? If 0, then sort by relevance. If 1, then sort by date.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by_date")
+    public SearchSortByDateEnum sortByDate;
+    public SearchRequest withSortByDate(SearchSortByDateEnum sortByDate) {
+        this.sortByDate = sortByDate;
+        return this;
+    }
+    
+    /**
+     * What type of contents do you want to search for? 
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public SearchTypeEnum type;
+    public SearchRequest withType(SearchTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+    
+    /**
+     * Whether or not to keep only one episode per podcast in search results. 1 is yes and 0 is no. It works only when **type** is *episode*.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unique_podcasts")
+    public SearchUniquePodcastsEnum uniquePodcasts;
+    public SearchRequest withUniquePodcasts(SearchUniquePodcastsEnum uniquePodcasts) {
+        this.uniquePodcasts = uniquePodcasts;
+        return this;
+    }
+    
+    /**
+     * Maximum update frequency in hours (how frequently does a podcast release a new episode). For example, if you want to find "weekly" podcasts, then you can set **update_freq_min**=144 hours (or 6 days) and **update_freq_max**=192 hours (or 8 days). Applicable only when type parameter is **podcast**.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=update_freq_max")
+    public Long updateFreqMax;
+    public SearchRequest withUpdateFreqMax(Long updateFreqMax) {
+        this.updateFreqMax = updateFreqMax;
+        return this;
+    }
+    
+    /**
+     * Minimum update frequency in hours (how frequently does a podcast release a new episode). For example, if you want to find "weekly" podcasts, then you can set **update_freq_min**=144 hours (or 6 days) and **update_freq_max**=192 hours (or 8 days). Applicable only when type parameter is **podcast**.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=update_freq_min")
+    public Long updateFreqMin;
+    public SearchRequest withUpdateFreqMin(Long updateFreqMin) {
+        this.updateFreqMin = updateFreqMin;
         return this;
     }
     

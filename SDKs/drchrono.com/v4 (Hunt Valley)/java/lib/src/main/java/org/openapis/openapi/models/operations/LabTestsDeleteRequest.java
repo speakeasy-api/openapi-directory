@@ -4,27 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LabTestsDeleteRequest {
-    
-    public LabTestsDeletePathParams pathParams;
-    public LabTestsDeleteRequest withPathParams(LabTestsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public LabTestsDeleteRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     
-    
-    public LabTestsDeleteQueryParams queryParams;
-    public LabTestsDeleteRequest withQueryParams(LabTestsDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public LabTestsDeleteRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public LabTestsDeleteSecurity security;
-    public LabTestsDeleteRequest withSecurity(LabTestsDeleteSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public Long order;
+    public LabTestsDeleteRequest withOrder(Long order) {
+        this.order = order;
         return this;
     }
     

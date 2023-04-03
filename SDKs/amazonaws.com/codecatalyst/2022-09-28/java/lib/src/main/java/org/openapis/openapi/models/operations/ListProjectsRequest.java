@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListProjectsRequest {
-    
-    public ListProjectsPathParams pathParams;
-    public ListProjectsRequest withPathParams(ListProjectsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ListProjectsQueryParams queryParams;
-    public ListProjectsRequest withQueryParams(ListProjectsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public ListProjectsRequestBody request;
-    public ListProjectsRequest withRequest(ListProjectsRequestBody request) {
-        this.request = request;
+    public ListProjectsRequestBody requestBody;
+    public ListProjectsRequest withRequestBody(ListProjectsRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Pagination limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public String maxResults;
+    public ListProjectsRequest withMaxResults(String maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * Pagination token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
+    public String nextToken;
+    public ListProjectsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * The name of the space.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceName")
+    public String spaceName;
+    public ListProjectsRequest withSpaceName(String spaceName) {
+        this.spaceName = spaceName;
         return this;
     }
     

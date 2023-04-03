@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganisationsPartyIdLicensesProductIdRequest {
-    
-    public GetOrganisationsPartyIdLicensesProductIdPathParams pathParams;
-    public GetOrganisationsPartyIdLicensesProductIdRequest withPathParams(GetOrganisationsPartyIdLicensesProductIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The API key.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public GetOrganisationsPartyIdLicensesProductIdRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    /**
+     * The party identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=partyId")
+    public String partyId;
+    public GetOrganisationsPartyIdLicensesProductIdRequest withPartyId(String partyId) {
+        this.partyId = partyId;
+        return this;
+    }
     
-    public GetOrganisationsPartyIdLicensesProductIdHeaders headers;
-    public GetOrganisationsPartyIdLicensesProductIdRequest withHeaders(GetOrganisationsPartyIdLicensesProductIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * The product identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
+    public String productId;
+    public GetOrganisationsPartyIdLicensesProductIdRequest withProductId(String productId) {
+        this.productId = productId;
         return this;
     }
     

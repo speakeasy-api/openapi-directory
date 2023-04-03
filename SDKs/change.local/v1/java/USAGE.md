@@ -6,10 +6,8 @@ import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GetApiV1DonationsCarbonCalculateSecurity;
 import org.openapis.openapi.models.operations.GetApiV1DonationsCarbonCalculateTransportationMethodEnum;
-import org.openapis.openapi.models.operations.GetApiV1DonationsCarbonCalculateQueryParams;
 import org.openapis.openapi.models.operations.GetApiV1DonationsCarbonCalculateRequest;
 import org.openapis.openapi.models.operations.GetApiV1DonationsCarbonCalculateResponse;
-import org.openapis.openapi.models.shared.SchemeBasicAuth;
 
 public class Application {
     public static void main(String[] args) {
@@ -18,22 +16,17 @@ public class Application {
                 .build();
 
             GetApiV1DonationsCarbonCalculateRequest req = new GetApiV1DonationsCarbonCalculateRequest() {{
-                security = new GetApiV1DonationsCarbonCalculateSecurity() {{
-                    basicAuth = new SchemeBasicAuth() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
-                }};
-                queryParams = new GetApiV1DonationsCarbonCalculateQueryParams() {{
-                    destinationAddress = 5488.14;
-                    distanceMi = 5928.45;
-                    originAddress = 7151.9;
-                    transportationMethod = "sea";
-                    weightLb = 6027.63;
-                }};
-            }};            
+                destinationAddress = 5488.14;
+                distanceMi = 5928.45;
+                originAddress = 7151.9;
+                transportationMethod = "sea";
+                weightLb = 6027.63;
+            }}            
 
-            GetApiV1DonationsCarbonCalculateResponse res = sdk.getApiV1DonationsCarbonCalculate(req);
+            GetApiV1DonationsCarbonCalculateResponse res = sdk.getApiV1DonationsCarbonCalculate(req, new GetApiV1DonationsCarbonCalculateSecurity() {{
+                password = "YOUR_PASSWORD_HERE";
+                username = "YOUR_USERNAME_HERE";
+            }});
 
             if (res.statusCode == 200) {
                 // handle response

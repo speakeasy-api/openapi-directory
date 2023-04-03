@@ -4,34 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListDialingPermissionsHrsPrefixesRequest {
-    
-    public ListDialingPermissionsHrsPrefixesPathParams pathParams;
-    public ListDialingPermissionsHrsPrefixesRequest withPathParams(ListDialingPermissionsHrsPrefixesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The [ISO 3166-1 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) to identify the country permissions from which high-risk special service number prefixes are fetched
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=IsoCode")
+    public String isoCode;
+    public ListDialingPermissionsHrsPrefixesRequest withIsoCode(String isoCode) {
+        this.isoCode = isoCode;
         return this;
     }
     
-    
-    public ListDialingPermissionsHrsPrefixesQueryParams queryParams;
-    public ListDialingPermissionsHrsPrefixesRequest withQueryParams(ListDialingPermissionsHrsPrefixesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListDialingPermissionsHrsPrefixesRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListDialingPermissionsHrsPrefixesSecurity security;
-    public ListDialingPermissionsHrsPrefixesRequest withSecurity(ListDialingPermissionsHrsPrefixesSecurity security) {
-        this.security = security;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListDialingPermissionsHrsPrefixesRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
-    
-    public String serverURL;
-    public ListDialingPermissionsHrsPrefixesRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListDialingPermissionsHrsPrefixesRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEnvironmentRequest {
-    
-    public GetEnvironmentPathParams pathParams;
-    public GetEnvironmentRequest withPathParams(GetEnvironmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The identifier of the Environment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environmentId")
+    public String environmentId;
+    public GetEnvironmentRequest withEnvironmentId(String environmentId) {
+        this.environmentId = environmentId;
         return this;
     }
     

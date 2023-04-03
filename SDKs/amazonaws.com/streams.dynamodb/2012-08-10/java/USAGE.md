@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.DescribeStreamXAmzTargetEnum;
-import org.openapis.openapi.models.operations.DescribeStreamHeaders;
 import org.openapis.openapi.models.operations.DescribeStreamRequest;
 import org.openapis.openapi.models.operations.DescribeStreamResponse;
 import org.openapis.openapi.models.shared.DescribeStreamInput;
@@ -15,29 +14,25 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             DescribeStreamRequest req = new DescribeStreamRequest() {{
-                headers = new DescribeStreamHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "DynamoDBStreams_20120810.DescribeStream";
+                describeStreamInput = new DescribeStreamInput() {{
+                    exclusiveStartShardId = "corrupti";
+                    limit = 592845;
+                    streamArn = "distinctio";
                 }};
-                request = new DescribeStreamInput() {{
-                    exclusiveStartShardId = "illum";
-                    limit = 423655;
-                    streamArn = "error";
-                }};
-            }};            
+                xAmzAlgorithm = "quibusdam";
+                xAmzContentSha256 = "unde";
+                xAmzCredential = "nulla";
+                xAmzDate = "corrupti";
+                xAmzSecurityToken = "illum";
+                xAmzSignature = "vel";
+                xAmzSignedHeaders = "error";
+                xAmzTarget = "DynamoDBStreams_20120810.DescribeStream";
+            }}            
 
             DescribeStreamResponse res = sdk.describeStream(req);
 

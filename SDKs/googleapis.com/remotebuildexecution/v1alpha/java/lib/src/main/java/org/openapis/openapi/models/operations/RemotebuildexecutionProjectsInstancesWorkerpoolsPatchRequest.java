@@ -7,31 +7,160 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest {
-    
-    public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchPathParams pathParams;
-    public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest withPathParams(RemotebuildexecutionProjectsInstancesWorkerpoolsPatchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchQueryParams queryParams;
-    public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest withQueryParams(RemotebuildexecutionProjectsInstancesWorkerpoolsPatchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaUpdateWorkerPoolRequest request;
-    public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest withRequest(org.openapis.openapi.models.shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaUpdateWorkerPoolRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaUpdateWorkerPoolRequest googleDevtoolsRemotebuildexecutionAdminV1alphaUpdateWorkerPoolRequest;
+    public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest withGoogleDevtoolsRemotebuildexecutionAdminV1alphaUpdateWorkerPoolRequest(org.openapis.openapi.models.shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaUpdateWorkerPoolRequest googleDevtoolsRemotebuildexecutionAdminV1alphaUpdateWorkerPoolRequest) {
+        this.googleDevtoolsRemotebuildexecutionAdminV1alphaUpdateWorkerPoolRequest = googleDevtoolsRemotebuildexecutionAdminV1alphaUpdateWorkerPoolRequest;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchSecurity security;
-    public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest withSecurity(RemotebuildexecutionProjectsInstancesWorkerpoolsPatchSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Deprecated, use instance.logging_enabled instead. Whether to enable Stackdriver logging for this instance.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=loggingEnabled")
+    public Boolean loggingEnabled;
+    public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest withLoggingEnabled(Boolean loggingEnabled) {
+        this.loggingEnabled = loggingEnabled;
+        return this;
+    }
+    
+    /**
+     * WorkerPool resource name formatted as: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]/workerpools/[POOL_ID]`. name should not be populated when creating a worker pool since it is provided in the `poolId` field.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Deprecated, use instance.Name instead. Name of the instance to update. Format: `projects/[PROJECT_ID]/instances/[INSTANCE_ID]`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name1")
+    public String name1;
+    public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest withName1(String name1) {
+        this.name1 = name1;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * The update mask applies to instance. For the `FieldMask` definition, see https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask If an empty update_mask is provided, only the non-default valued field in the worker pool field will be updated. Note that in order to update a field to the default value (zero, false, empty string) an explicit update_mask must be provided.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updateMask")
+    public String updateMask;
+    public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest withUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

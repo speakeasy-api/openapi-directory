@@ -4,20 +4,52 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListDeviceCodesRequest {
-    
-    public ListDeviceCodesQueryParams queryParams;
-    public ListDeviceCodesRequest withQueryParams(ListDeviceCodesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A pagination cursor returned by a previous call to this endpoint.
+     * Provide this to retrieve the next set of results for your original query.
+     * 
+     * See [Paginating results](https://developer.squareup.com/docs/working-with-apis/pagination) for more information.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public ListDeviceCodesRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
+    /**
+     * If specified, only returns DeviceCodes of the specified location.
+     * Returns DeviceCodes of all locations if empty.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location_id")
+    public String locationId;
+    public ListDeviceCodesRequest withLocationId(String locationId) {
+        this.locationId = locationId;
+        return this;
+    }
     
-    public ListDeviceCodesSecurity security;
-    public ListDeviceCodesRequest withSecurity(ListDeviceCodesSecurity security) {
-        this.security = security;
+    /**
+     * If specified, only returns DeviceCodes targeting the specified product type.
+     * Returns DeviceCodes of all product types if empty.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=product_type")
+    public String productType;
+    public ListDeviceCodesRequest withProductType(String productType) {
+        this.productType = productType;
+        return this;
+    }
+    
+    /**
+     * If specified, returns DeviceCodes with the specified statuses.
+     * Returns DeviceCodes of status `PAIRED` and `UNPAIRED` if empty.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public String status;
+    public ListDeviceCodesRequest withStatus(String status) {
+        this.status = status;
         return this;
     }
     

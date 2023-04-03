@@ -7,24 +7,39 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostProjectUsernameProjectSshKeyRequest {
-    
-    public PostProjectUsernameProjectSshKeyPathParams pathParams;
-    public PostProjectUsernameProjectSshKeyRequest withPathParams(PostProjectUsernameProjectSshKeyPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostProjectUsernameProjectSshKeyHeaders headers;
-    public PostProjectUsernameProjectSshKeyRequest withHeaders(PostProjectUsernameProjectSshKeyHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public PostProjectUsernameProjectSshKeyContentTypeEnum contentType;
+    public PostProjectUsernameProjectSshKeyRequest withContentType(PostProjectUsernameProjectSshKeyContentTypeEnum contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostProjectUsernameProjectSshKeyRequestBody request;
-    public PostProjectUsernameProjectSshKeyRequest withRequest(PostProjectUsernameProjectSshKeyRequestBody request) {
-        this.request = request;
+    public PostProjectUsernameProjectSshKeyRequestBody requestBody;
+    public PostProjectUsernameProjectSshKeyRequest withRequestBody(PostProjectUsernameProjectSshKeyRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * XXXXXXXXX
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public PostProjectUsernameProjectSshKeyRequest withProject(String project) {
+        this.project = project;
+        return this;
+    }
+    
+    /**
+     * XXXXXXXXX
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public PostProjectUsernameProjectSshKeyRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

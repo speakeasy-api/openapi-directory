@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPaymentStatusRequest {
-    
-    public GetPaymentStatusPathParams pathParams;
-    public GetPaymentStatusRequest withPathParams(GetPaymentStatusPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payment_id")
+    public String paymentId;
+    public GetPaymentStatusRequest withPaymentId(String paymentId) {
+        this.paymentId = paymentId;
         return this;
     }
     
-    
-    public GetPaymentStatusHeaders headers;
-    public GetPaymentStatusRequest withHeaders(GetPaymentStatusHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public GetPaymentStatusRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsCreateInstallationAccessTokenRequest {
-    
-    public AppsCreateInstallationAccessTokenPathParams pathParams;
-    public AppsCreateInstallationAccessTokenRequest withPathParams(AppsCreateInstallationAccessTokenPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public AppsCreateInstallationAccessTokenRequestBody requestBody;
+    public AppsCreateInstallationAccessTokenRequest withRequestBody(AppsCreateInstallationAccessTokenRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public AppsCreateInstallationAccessTokenRequestBody request;
-    public AppsCreateInstallationAccessTokenRequest withRequest(AppsCreateInstallationAccessTokenRequestBody request) {
-        this.request = request;
+    /**
+     * The unique identifier of the installation.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=installation_id")
+    public Long installationId;
+    public AppsCreateInstallationAccessTokenRequest withInstallationId(Long installationId) {
+        this.installationId = installationId;
         return this;
     }
     

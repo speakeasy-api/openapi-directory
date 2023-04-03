@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CompanyCreditsSearchReadRequest {
-    
-    public CompanyCreditsSearchReadPathParams pathParams;
-    public CompanyCreditsSearchReadRequest withPathParams(CompanyCreditsSearchReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=movie_title")
+    public String movieTitle;
+    public CompanyCreditsSearchReadRequest withMovieTitle(String movieTitle) {
+        this.movieTitle = movieTitle;
         return this;
     }
     

@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeDomainEndpointOptionsRequest {
-    
-    public GETDescribeDomainEndpointOptionsQueryParams queryParams;
-    public GETDescribeDomainEndpointOptionsRequest withQueryParams(GETDescribeDomainEndpointOptionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeDomainEndpointOptionsActionEnum action;
+    public GETDescribeDomainEndpointOptionsRequest withAction(GETDescribeDomainEndpointOptionsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Whether to retrieve the latest configuration (which might be in a Processing state) or the current, active configuration. Defaults to &lt;code&gt;false&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Deployed")
+    public Boolean deployed;
+    public GETDescribeDomainEndpointOptionsRequest withDeployed(Boolean deployed) {
+        this.deployed = deployed;
+        return this;
+    }
     
-    public GETDescribeDomainEndpointOptionsHeaders headers;
-    public GETDescribeDomainEndpointOptionsRequest withHeaders(GETDescribeDomainEndpointOptionsHeaders headers) {
-        this.headers = headers;
+    /**
+     * A string that represents the name of a domain.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DomainName")
+    public String domainName;
+    public GETDescribeDomainEndpointOptionsRequest withDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeDomainEndpointOptionsVersionEnum version;
+    public GETDescribeDomainEndpointOptionsRequest withVersion(GETDescribeDomainEndpointOptionsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeDomainEndpointOptionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeDomainEndpointOptionsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeDomainEndpointOptionsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeDomainEndpointOptionsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeDomainEndpointOptionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeDomainEndpointOptionsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeDomainEndpointOptionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -4,20 +4,77 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DiaryControllerGetAppointmentsBetweenDatesRequest {
-    
-    public DiaryControllerGetAppointmentsBetweenDatesPathParams pathParams;
-    public DiaryControllerGetAppointmentsBetweenDatesRequest withPathParams(DiaryControllerGetAppointmentsBetweenDatesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The appointment IDs to search for
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointmentTypesToSearch")
+    public String[] appointmentTypesToSearch;
+    public DiaryControllerGetAppointmentsBetweenDatesRequest withAppointmentTypesToSearch(String[] appointmentTypesToSearch) {
+        this.appointmentTypesToSearch = appointmentTypesToSearch;
         return this;
     }
     
+    /**
+     * The unique ID of the Branch
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=branchID")
+    public String branchID;
+    public DiaryControllerGetAppointmentsBetweenDatesRequest withBranchID(String branchID) {
+        this.branchID = branchID;
+        return this;
+    }
     
-    public DiaryControllerGetAppointmentsBetweenDatesQueryParams queryParams;
-    public DiaryControllerGetAppointmentsBetweenDatesRequest withQueryParams(DiaryControllerGetAppointmentsBetweenDatesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The maximum number of items to return (up to 1000 per request)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
+    public Integer count;
+    public DiaryControllerGetAppointmentsBetweenDatesRequest withCount(Integer count) {
+        this.count = count;
+        return this;
+    }
+    
+    /**
+     * The search to date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
+    public OffsetDateTime endDate;
+    public DiaryControllerGetAppointmentsBetweenDatesRequest withEndDate(OffsetDateTime endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    
+    /**
+     * The index of the first item to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public DiaryControllerGetAppointmentsBetweenDatesRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * The unique client short-name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
+    public String shortName;
+    public DiaryControllerGetAppointmentsBetweenDatesRequest withShortName(String shortName) {
+        this.shortName = shortName;
+        return this;
+    }
+    
+    /**
+     * The search from date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
+    public OffsetDateTime startDate;
+    public DiaryControllerGetAppointmentsBetweenDatesRequest withStartDate(OffsetDateTime startDate) {
+        this.startDate = startDate;
         return this;
     }
     

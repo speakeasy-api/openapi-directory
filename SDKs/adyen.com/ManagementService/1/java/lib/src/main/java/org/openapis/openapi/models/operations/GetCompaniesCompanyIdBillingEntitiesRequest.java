@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCompaniesCompanyIdBillingEntitiesRequest {
-    
-    public GetCompaniesCompanyIdBillingEntitiesPathParams pathParams;
-    public GetCompaniesCompanyIdBillingEntitiesRequest withPathParams(GetCompaniesCompanyIdBillingEntitiesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the company account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public GetCompaniesCompanyIdBillingEntitiesRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
         return this;
     }
     
-    
-    public GetCompaniesCompanyIdBillingEntitiesQueryParams queryParams;
-    public GetCompaniesCompanyIdBillingEntitiesRequest withQueryParams(GetCompaniesCompanyIdBillingEntitiesQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetCompaniesCompanyIdBillingEntitiesSecurity security;
-    public GetCompaniesCompanyIdBillingEntitiesRequest withSecurity(GetCompaniesCompanyIdBillingEntitiesSecurity security) {
-        this.security = security;
+    /**
+     * The name of the billing entity.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public GetCompaniesCompanyIdBillingEntitiesRequest withName(String name) {
+        this.name = name;
         return this;
     }
     

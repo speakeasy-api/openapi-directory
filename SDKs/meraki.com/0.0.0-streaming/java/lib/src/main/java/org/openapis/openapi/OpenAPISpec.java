@@ -39,7 +39,7 @@ public class OpenAPISpec {
      */
     public org.openapis.openapi.models.operations.GetOrganizationOpenapiSpecResponse getOrganizationOpenapiSpec(org.openapis.openapi.models.operations.GetOrganizationOpenapiSpecRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationOpenapiSpecPathParams.class, baseUrl, "/organizations/{organizationId}/openapiSpec", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationOpenapiSpecRequest.class, baseUrl, "/organizations/{organizationId}/openapiSpec", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMessageCommentReactionsRequest {
+    /**
+     * Used for pagination.  When a list request has more records available, cursors are provided in the response headers `X-Files-Cursor-Next` and `X-Files-Cursor-Prev`.  Send one of those cursor value here to resume an existing list from the next available record.  Note: many of our SDKs have iterator methods that will automatically handle cursor-based pagination.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public GetMessageCommentReactionsRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
     
-    public GetMessageCommentReactionsQueryParams queryParams;
-    public GetMessageCommentReactionsRequest withQueryParams(GetMessageCommentReactionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Message comment to return reactions for.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=message_comment_id")
+    public Integer messageCommentId;
+    public GetMessageCommentReactionsRequest withMessageCommentId(Integer messageCommentId) {
+        this.messageCommentId = messageCommentId;
+        return this;
+    }
+    
+    /**
+     * Number of records to show per page.  (Max: 10,000, 1,000 or less is recommended).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetMessageCommentReactionsRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * User ID.  Provide a value of `0` to operate the current session's user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
+    public Integer userId;
+    public GetMessageCommentReactionsRequest withUserId(Integer userId) {
+        this.userId = userId;
         return this;
     }
     

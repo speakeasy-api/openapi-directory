@@ -40,12 +40,12 @@ public class MqttBrokers {
      */
     public org.openapis.openapi.models.operations.CreateNetworkMqttBrokerResponse createNetworkMqttBroker(org.openapis.openapi.models.operations.CreateNetworkMqttBrokerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkMqttBrokerPathParams.class, baseUrl, "/networks/{networkId}/mqttBrokers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkMqttBrokerRequest.class, baseUrl, "/networks/{networkId}/mqttBrokers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -85,7 +85,7 @@ public class MqttBrokers {
      */
     public org.openapis.openapi.models.operations.DeleteNetworkMqttBrokerResponse deleteNetworkMqttBroker(org.openapis.openapi.models.operations.DeleteNetworkMqttBrokerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkMqttBrokerPathParams.class, baseUrl, "/networks/{networkId}/mqttBrokers/{mqttBrokerId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkMqttBrokerRequest.class, baseUrl, "/networks/{networkId}/mqttBrokers/{mqttBrokerId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -119,7 +119,7 @@ public class MqttBrokers {
      */
     public org.openapis.openapi.models.operations.GetNetworkMqttBrokerResponse getNetworkMqttBroker(org.openapis.openapi.models.operations.GetNetworkMqttBrokerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkMqttBrokerPathParams.class, baseUrl, "/networks/{networkId}/mqttBrokers/{mqttBrokerId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkMqttBrokerRequest.class, baseUrl, "/networks/{networkId}/mqttBrokers/{mqttBrokerId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -159,7 +159,7 @@ public class MqttBrokers {
      */
     public org.openapis.openapi.models.operations.GetNetworkMqttBrokersResponse getNetworkMqttBrokers(org.openapis.openapi.models.operations.GetNetworkMqttBrokersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkMqttBrokersPathParams.class, baseUrl, "/networks/{networkId}/mqttBrokers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkMqttBrokersRequest.class, baseUrl, "/networks/{networkId}/mqttBrokers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -199,12 +199,12 @@ public class MqttBrokers {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkMqttBrokerResponse updateNetworkMqttBroker(org.openapis.openapi.models.operations.UpdateNetworkMqttBrokerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkMqttBrokerPathParams.class, baseUrl, "/networks/{networkId}/mqttBrokers/{mqttBrokerId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkMqttBrokerRequest.class, baseUrl, "/networks/{networkId}/mqttBrokers/{mqttBrokerId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

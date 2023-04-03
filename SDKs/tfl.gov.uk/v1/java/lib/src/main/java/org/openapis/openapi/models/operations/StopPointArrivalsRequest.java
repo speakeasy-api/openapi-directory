@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopPointArrivalsRequest {
-    
-    public StopPointArrivalsPathParams pathParams;
-    public StopPointArrivalsRequest withPathParams(StopPointArrivalsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A StopPoint id (station naptan code e.g. 940GZZLUASL, you can use /StopPoint/Search/{query} endpoint to find a stop point id from a station name)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public StopPointArrivalsRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

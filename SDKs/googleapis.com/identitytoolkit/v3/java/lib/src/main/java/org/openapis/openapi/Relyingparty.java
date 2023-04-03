@@ -35,27 +35,28 @@ public class Relyingparty {
     /**
      * Creates the URI used by the IdP to authenticate the user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyCreateAuthUriResponse identitytoolkitRelyingpartyCreateAuthUri(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyCreateAuthUriRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyCreateAuthUriResponse identitytoolkitRelyingpartyCreateAuthUri(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyCreateAuthUriRequest request, org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyCreateAuthUriSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/createAuthUri");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "identitytoolkitRelyingpartyCreateAuthUriRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyCreateAuthUriQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyCreateAuthUriRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,27 +83,28 @@ public class Relyingparty {
     /**
      * Delete user account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyDeleteAccountResponse identitytoolkitRelyingpartyDeleteAccount(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyDeleteAccountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyDeleteAccountResponse identitytoolkitRelyingpartyDeleteAccount(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyDeleteAccountRequest request, org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyDeleteAccountSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/deleteAccount");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "identitytoolkitRelyingpartyDeleteAccountRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyDeleteAccountQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyDeleteAccountRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -129,27 +131,28 @@ public class Relyingparty {
     /**
      * Batch download user accounts.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyDownloadAccountResponse identitytoolkitRelyingpartyDownloadAccount(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyDownloadAccountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyDownloadAccountResponse identitytoolkitRelyingpartyDownloadAccount(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyDownloadAccountRequest request, org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyDownloadAccountSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/downloadAccount");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "identitytoolkitRelyingpartyDownloadAccountRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyDownloadAccountQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyDownloadAccountRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -176,27 +179,28 @@ public class Relyingparty {
     /**
      * Reset password for a user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyEmailLinkSigninResponse identitytoolkitRelyingpartyEmailLinkSignin(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyEmailLinkSigninRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyEmailLinkSigninResponse identitytoolkitRelyingpartyEmailLinkSignin(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyEmailLinkSigninRequest request, org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyEmailLinkSigninSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/emailLinkSignin");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "identitytoolkitRelyingpartyEmailLinkSigninRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyEmailLinkSigninQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyEmailLinkSigninRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -223,27 +227,28 @@ public class Relyingparty {
     /**
      * Returns the account info.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetAccountInfoResponse identitytoolkitRelyingpartyGetAccountInfo(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetAccountInfoRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetAccountInfoResponse identitytoolkitRelyingpartyGetAccountInfo(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetAccountInfoRequest request, org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetAccountInfoSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/getAccountInfo");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "identitytoolkitRelyingpartyGetAccountInfoRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetAccountInfoQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetAccountInfoRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -270,27 +275,28 @@ public class Relyingparty {
     /**
      * Get a code for user action confirmation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetOobConfirmationCodeResponse identitytoolkitRelyingpartyGetOobConfirmationCode(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetOobConfirmationCodeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetOobConfirmationCodeResponse identitytoolkitRelyingpartyGetOobConfirmationCode(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetOobConfirmationCodeRequest request, org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetOobConfirmationCodeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/getOobConfirmationCode");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "relyingparty", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetOobConfirmationCodeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetOobConfirmationCodeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -317,10 +323,11 @@ public class Relyingparty {
     /**
      * Get project configuration.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetProjectConfigResponse identitytoolkitRelyingpartyGetProjectConfig(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetProjectConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetProjectConfigResponse identitytoolkitRelyingpartyGetProjectConfig(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetProjectConfigRequest request, org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetProjectConfigSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/getProjectConfig");
         
@@ -328,14 +335,14 @@ public class Relyingparty {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetProjectConfigQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetProjectConfigRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -362,10 +369,11 @@ public class Relyingparty {
     /**
      * Get token signing public key.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetPublicKeysResponse identitytoolkitRelyingpartyGetPublicKeys(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetPublicKeysRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetPublicKeysResponse identitytoolkitRelyingpartyGetPublicKeys(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetPublicKeysRequest request, org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetPublicKeysSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/publicKeys");
         
@@ -373,14 +381,14 @@ public class Relyingparty {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetPublicKeysQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetPublicKeysRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -407,10 +415,11 @@ public class Relyingparty {
     /**
      * Get recaptcha secure param.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetRecaptchaParamResponse identitytoolkitRelyingpartyGetRecaptchaParam(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetRecaptchaParamRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetRecaptchaParamResponse identitytoolkitRelyingpartyGetRecaptchaParam(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetRecaptchaParamRequest request, org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetRecaptchaParamSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/getRecaptchaParam");
         
@@ -418,14 +427,14 @@ public class Relyingparty {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetRecaptchaParamQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyGetRecaptchaParamRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -452,27 +461,28 @@ public class Relyingparty {
     /**
      * Reset password for a user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyResetPasswordResponse identitytoolkitRelyingpartyResetPassword(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyResetPasswordRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyResetPasswordResponse identitytoolkitRelyingpartyResetPassword(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyResetPasswordRequest request, org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyResetPasswordSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/resetPassword");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "identitytoolkitRelyingpartyResetPasswordRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyResetPasswordQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyResetPasswordRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -499,27 +509,28 @@ public class Relyingparty {
     /**
      * Send SMS verification code.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySendVerificationCodeResponse identitytoolkitRelyingpartySendVerificationCode(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySendVerificationCodeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySendVerificationCodeResponse identitytoolkitRelyingpartySendVerificationCode(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySendVerificationCodeRequest request, org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySendVerificationCodeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/sendVerificationCode");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "identitytoolkitRelyingpartySendVerificationCodeRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySendVerificationCodeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySendVerificationCodeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -546,27 +557,28 @@ public class Relyingparty {
     /**
      * Set account info for a user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySetAccountInfoResponse identitytoolkitRelyingpartySetAccountInfo(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySetAccountInfoRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySetAccountInfoResponse identitytoolkitRelyingpartySetAccountInfo(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySetAccountInfoRequest request, org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySetAccountInfoSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/setAccountInfo");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "identitytoolkitRelyingpartySetAccountInfoRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySetAccountInfoQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySetAccountInfoRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -593,27 +605,28 @@ public class Relyingparty {
     /**
      * Set project configuration.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySetProjectConfigResponse identitytoolkitRelyingpartySetProjectConfig(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySetProjectConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySetProjectConfigResponse identitytoolkitRelyingpartySetProjectConfig(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySetProjectConfigRequest request, org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySetProjectConfigSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/setProjectConfig");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "identitytoolkitRelyingpartySetProjectConfigRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySetProjectConfigQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySetProjectConfigRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -640,27 +653,28 @@ public class Relyingparty {
     /**
      * Sign out user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySignOutUserResponse identitytoolkitRelyingpartySignOutUser(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySignOutUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySignOutUserResponse identitytoolkitRelyingpartySignOutUser(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySignOutUserRequest request, org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySignOutUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/signOutUser");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "identitytoolkitRelyingpartySignOutUserRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySignOutUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySignOutUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -687,27 +701,28 @@ public class Relyingparty {
     /**
      * Signup new user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySignupNewUserResponse identitytoolkitRelyingpartySignupNewUser(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySignupNewUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySignupNewUserResponse identitytoolkitRelyingpartySignupNewUser(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySignupNewUserRequest request, org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySignupNewUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/signupNewUser");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "identitytoolkitRelyingpartySignupNewUserRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySignupNewUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartySignupNewUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -734,27 +749,28 @@ public class Relyingparty {
     /**
      * Batch upload existing user accounts.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyUploadAccountResponse identitytoolkitRelyingpartyUploadAccount(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyUploadAccountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyUploadAccountResponse identitytoolkitRelyingpartyUploadAccount(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyUploadAccountRequest request, org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyUploadAccountSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/uploadAccount");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "identitytoolkitRelyingpartyUploadAccountRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyUploadAccountQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyUploadAccountRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -781,27 +797,28 @@ public class Relyingparty {
     /**
      * Verifies the assertion returned by the IdP.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyAssertionResponse identitytoolkitRelyingpartyVerifyAssertion(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyAssertionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyAssertionResponse identitytoolkitRelyingpartyVerifyAssertion(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyAssertionRequest request, org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyAssertionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/verifyAssertion");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "identitytoolkitRelyingpartyVerifyAssertionRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyAssertionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyAssertionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -828,27 +845,28 @@ public class Relyingparty {
     /**
      * Verifies the developer asserted ID token.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyCustomTokenResponse identitytoolkitRelyingpartyVerifyCustomToken(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyCustomTokenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyCustomTokenResponse identitytoolkitRelyingpartyVerifyCustomToken(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyCustomTokenRequest request, org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyCustomTokenSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/verifyCustomToken");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "identitytoolkitRelyingpartyVerifyCustomTokenRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyCustomTokenQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyCustomTokenRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -875,27 +893,28 @@ public class Relyingparty {
     /**
      * Verifies the user entered password.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyPasswordResponse identitytoolkitRelyingpartyVerifyPassword(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyPasswordRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyPasswordResponse identitytoolkitRelyingpartyVerifyPassword(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyPasswordRequest request, org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyPasswordSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/verifyPassword");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "identitytoolkitRelyingpartyVerifyPasswordRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyPasswordQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyPasswordRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -922,27 +941,28 @@ public class Relyingparty {
     /**
      * Verifies ownership of a phone number and creates/updates the user account accordingly.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyPhoneNumberResponse identitytoolkitRelyingpartyVerifyPhoneNumber(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyPhoneNumberRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyPhoneNumberResponse identitytoolkitRelyingpartyVerifyPhoneNumber(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyPhoneNumberRequest request, org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyPhoneNumberSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/verifyPhoneNumber");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "identitytoolkitRelyingpartyVerifyPhoneNumberRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyPhoneNumberQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyVerifyPhoneNumberRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

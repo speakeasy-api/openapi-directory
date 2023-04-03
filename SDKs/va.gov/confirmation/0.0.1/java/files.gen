@@ -31,7 +31,6 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetVeteranStatusSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetVeteranStatusRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetVeteranStatusResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/VeteranStatusConfirmationVeteranStatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/VeteranStatusConfirmation.java
@@ -40,5 +39,4 @@ lib/src/main/java/org/openapis/openapi/models/shared/APIErrorErrors.java
 lib/src/main/java/org/openapis/openapi/models/shared/APIError.java
 lib/src/main/java/org/openapis/openapi/models/shared/VeteranStatusRequestGenderEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/VeteranStatusRequest.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeApikey.java
 USAGE.md

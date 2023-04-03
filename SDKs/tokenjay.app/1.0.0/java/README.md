@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.CalcSigmaRsvExchangePathParams;
 import org.openapis.openapi.models.operations.CalcSigmaRsvExchangeRequest;
 import org.openapis.openapi.models.operations.CalcSigmaRsvExchangeResponse;
 
@@ -28,10 +27,8 @@ public class Application {
                 .build();
 
             CalcSigmaRsvExchangeRequest req = new CalcSigmaRsvExchangeRequest() {{
-                pathParams = new CalcSigmaRsvExchangePathParams() {{
-                    amount = 548814;
-                }};
-            }};            
+                amount = 548814;
+            }}            
 
             CalcSigmaRsvExchangeResponse res = sdk.ageUsd.calcSigmaRsvExchange(req);
 
@@ -45,7 +42,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### ageUsd

@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteTrackCollectionItemsRequest {
-    
-    public DeleteTrackCollectionItemsPathParams pathParams;
-    public DeleteTrackCollectionItemsRequest withPathParams(DeleteTrackCollectionItemsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Collection ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteTrackCollectionItemsRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public DeleteTrackCollectionItemsQueryParams queryParams;
-    public DeleteTrackCollectionItemsRequest withQueryParams(DeleteTrackCollectionItemsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public DeleteTrackCollectionItemsSecurity security;
-    public DeleteTrackCollectionItemsRequest withSecurity(DeleteTrackCollectionItemsSecurity security) {
-        this.security = security;
+    /**
+     * One or more item IDs to remove from the collection
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=item_id")
+    public String[] itemId;
+    public DeleteTrackCollectionItemsRequest withItemId(String[] itemId) {
+        this.itemId = itemId;
         return this;
     }
     

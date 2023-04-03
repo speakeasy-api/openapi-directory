@@ -34,25 +34,26 @@ public class Projects {
     /**
      * Lists information about the supported locations for this service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DomainsProjectsLocationsListResponse domainsProjectsLocationsList(org.openapis.openapi.models.operations.DomainsProjectsLocationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DomainsProjectsLocationsListResponse domainsProjectsLocationsList(org.openapis.openapi.models.operations.DomainsProjectsLocationsListRequest request, org.openapis.openapi.models.operations.DomainsProjectsLocationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsListPathParams.class, baseUrl, "/v1/{name}/locations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsListRequest.class, baseUrl, "/v1/{name}/locations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class Projects {
     /**
      * Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DomainsProjectsLocationsOperationsListResponse domainsProjectsLocationsOperationsList(org.openapis.openapi.models.operations.DomainsProjectsLocationsOperationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DomainsProjectsLocationsOperationsListResponse domainsProjectsLocationsOperationsList(org.openapis.openapi.models.operations.DomainsProjectsLocationsOperationsListRequest request, org.openapis.openapi.models.operations.DomainsProjectsLocationsOperationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsOperationsListPathParams.class, baseUrl, "/v1/{name}/operations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsOperationsListRequest.class, baseUrl, "/v1/{name}/operations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsOperationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsOperationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,27 +126,28 @@ public class Projects {
     /**
      * Updates a `Registration`'s contact settings. Some changes require confirmation by the domain's registrant contact .
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsConfigureContactSettingsResponse domainsProjectsLocationsRegistrationsConfigureContactSettings(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsConfigureContactSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsConfigureContactSettingsResponse domainsProjectsLocationsRegistrationsConfigureContactSettings(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsConfigureContactSettingsRequest request, org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsConfigureContactSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsConfigureContactSettingsPathParams.class, baseUrl, "/v1/{registration}:configureContactSettings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsConfigureContactSettingsRequest.class, baseUrl, "/v1/{registration}:configureContactSettings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "configureContactSettingsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsConfigureContactSettingsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsConfigureContactSettingsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,27 +174,28 @@ public class Projects {
     /**
      * Updates a `Registration`'s DNS settings.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsConfigureDnsSettingsResponse domainsProjectsLocationsRegistrationsConfigureDnsSettings(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsConfigureDnsSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsConfigureDnsSettingsResponse domainsProjectsLocationsRegistrationsConfigureDnsSettings(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsConfigureDnsSettingsRequest request, org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsConfigureDnsSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsConfigureDnsSettingsPathParams.class, baseUrl, "/v1/{registration}:configureDnsSettings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsConfigureDnsSettingsRequest.class, baseUrl, "/v1/{registration}:configureDnsSettings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "configureDnsSettingsRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsConfigureDnsSettingsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsConfigureDnsSettingsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -218,27 +222,28 @@ public class Projects {
     /**
      * Updates a `Registration`'s management settings.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsConfigureManagementSettingsResponse domainsProjectsLocationsRegistrationsConfigureManagementSettings(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsConfigureManagementSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsConfigureManagementSettingsResponse domainsProjectsLocationsRegistrationsConfigureManagementSettings(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsConfigureManagementSettingsRequest request, org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsConfigureManagementSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsConfigureManagementSettingsPathParams.class, baseUrl, "/v1/{registration}:configureManagementSettings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsConfigureManagementSettingsRequest.class, baseUrl, "/v1/{registration}:configureManagementSettings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "configureManagementSettingsRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsConfigureManagementSettingsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsConfigureManagementSettingsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -265,25 +270,26 @@ public class Projects {
     /**
      * Deletes a `Registration` resource. This method works on any `Registration` resource using [Subscription or Commitment billing](/domains/pricing#billing-models), provided that the resource was created at least 1 day in the past. For `Registration` resources using [Monthly billing](/domains/pricing#billing-models), this method works if: * `state` is `EXPORTED` with `expire_time` in the past * `state` is `REGISTRATION_FAILED` * `state` is `TRANSFER_FAILED` When an active registration is successfully deleted, you can continue to use the domain in [Google Domains](https://domains.google/) until it expires. The calling user becomes the domain's sole owner in Google Domains, and permissions for the domain are subsequently managed there. The domain does not renew automatically unless the new owner sets up billing in Google Domains.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsDeleteResponse domainsProjectsLocationsRegistrationsDelete(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsDeleteResponse domainsProjectsLocationsRegistrationsDelete(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsDeleteRequest request, org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsDeletePathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsDeleteRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -310,27 +316,28 @@ public class Projects {
     /**
      * Exports a `Registration` resource, such that it is no longer managed by Cloud Domains. When an active domain is successfully exported, you can continue to use the domain in [Google Domains](https://domains.google/) until it expires. The calling user becomes the domain's sole owner in Google Domains, and permissions for the domain are subsequently managed there. The domain does not renew automatically unless the new owner sets up billing in Google Domains.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsExportResponse domainsProjectsLocationsRegistrationsExport(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsExportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsExportResponse domainsProjectsLocationsRegistrationsExport(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsExportRequest request, org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsExportSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsExportPathParams.class, baseUrl, "/v1/{name}:export", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsExportRequest.class, baseUrl, "/v1/{name}:export", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsExportQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsExportRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -357,25 +364,26 @@ public class Projects {
     /**
      * Gets the details of a `Registration` resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsGetResponse domainsProjectsLocationsRegistrationsGet(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsGetResponse domainsProjectsLocationsRegistrationsGet(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsGetRequest request, org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsGetPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsGetRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -402,25 +410,26 @@ public class Projects {
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsGetIamPolicyResponse domainsProjectsLocationsRegistrationsGetIamPolicy(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsGetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsGetIamPolicyResponse domainsProjectsLocationsRegistrationsGetIamPolicy(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsGetIamPolicyRequest request, org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsGetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsGetIamPolicyPathParams.class, baseUrl, "/v1/{resource}:getIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsGetIamPolicyRequest.class, baseUrl, "/v1/{resource}:getIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsGetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsGetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -447,27 +456,28 @@ public class Projects {
     /**
      * Imports a domain name from [Google Domains](https://domains.google/) for use in Cloud Domains. To transfer a domain from another registrar, use the `TransferDomain` method instead. Since individual users can own domains in Google Domains, the calling user must have ownership permission on the domain.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsImportResponse domainsProjectsLocationsRegistrationsImport(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsImportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsImportResponse domainsProjectsLocationsRegistrationsImport(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsImportRequest request, org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsImportSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsImportPathParams.class, baseUrl, "/v1/{parent}/registrations:import", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsImportRequest.class, baseUrl, "/v1/{parent}/registrations:import", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "importDomainRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsImportQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsImportRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -494,25 +504,26 @@ public class Projects {
     /**
      * Lists the `Registration` resources in a project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsListResponse domainsProjectsLocationsRegistrationsList(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsListResponse domainsProjectsLocationsRegistrationsList(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsListRequest request, org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsListPathParams.class, baseUrl, "/v1/{parent}/registrations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsListRequest.class, baseUrl, "/v1/{parent}/registrations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -539,27 +550,28 @@ public class Projects {
     /**
      * Updates select fields of a `Registration` resource, notably `labels`. To update other fields, use the appropriate custom update method: * To update management settings, see `ConfigureManagementSettings` * To update DNS configuration, see `ConfigureDnsSettings` * To update contact information, see `ConfigureContactSettings`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsPatchResponse domainsProjectsLocationsRegistrationsPatch(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsPatchResponse domainsProjectsLocationsRegistrationsPatch(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsPatchRequest request, org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsPatchPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsPatchRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "registrationInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -586,27 +598,28 @@ public class Projects {
     /**
      * Registers a new domain name and creates a corresponding `Registration` resource. Call `RetrieveRegisterParameters` first to check availability of the domain name and determine parameters like price that are needed to build a call to this method. A successful call creates a `Registration` resource in state `REGISTRATION_PENDING`, which resolves to `ACTIVE` within 1-2 minutes, indicating that the domain was successfully registered. If the resource ends up in state `REGISTRATION_FAILED`, it indicates that the domain was not registered successfully, and you can safely delete the resource and retry registration.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRegisterResponse domainsProjectsLocationsRegistrationsRegister(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRegisterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRegisterResponse domainsProjectsLocationsRegistrationsRegister(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRegisterRequest request, org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRegisterSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRegisterPathParams.class, baseUrl, "/v1/{parent}/registrations:register", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRegisterRequest.class, baseUrl, "/v1/{parent}/registrations:register", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "registerDomainRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRegisterQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRegisterRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -633,27 +646,28 @@ public class Projects {
     /**
      * Resets the authorization code of the `Registration` to a new random string. You can call this method only after 60 days have elapsed since the initial domain registration.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsResetAuthorizationCodeResponse domainsProjectsLocationsRegistrationsResetAuthorizationCode(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsResetAuthorizationCodeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsResetAuthorizationCodeResponse domainsProjectsLocationsRegistrationsResetAuthorizationCode(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsResetAuthorizationCodeRequest request, org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsResetAuthorizationCodeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsResetAuthorizationCodePathParams.class, baseUrl, "/v1/{registration}:resetAuthorizationCode", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsResetAuthorizationCodeRequest.class, baseUrl, "/v1/{registration}:resetAuthorizationCode", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsResetAuthorizationCodeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsResetAuthorizationCodeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -680,25 +694,26 @@ public class Projects {
     /**
      * Gets the authorization code of the `Registration` for the purpose of transferring the domain to another registrar. You can call this method only after 60 days have elapsed since the initial domain registration.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRetrieveAuthorizationCodeResponse domainsProjectsLocationsRegistrationsRetrieveAuthorizationCode(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRetrieveAuthorizationCodeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRetrieveAuthorizationCodeResponse domainsProjectsLocationsRegistrationsRetrieveAuthorizationCode(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRetrieveAuthorizationCodeRequest request, org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRetrieveAuthorizationCodeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRetrieveAuthorizationCodePathParams.class, baseUrl, "/v1/{registration}:retrieveAuthorizationCode", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRetrieveAuthorizationCodeRequest.class, baseUrl, "/v1/{registration}:retrieveAuthorizationCode", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRetrieveAuthorizationCodeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRetrieveAuthorizationCodeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -725,25 +740,26 @@ public class Projects {
     /**
      * Lists domain names from [Google Domains](https://domains.google/) that can be imported to Cloud Domains using the `ImportDomain` method. Since individual users can own domains in Google Domains, the list of domains returned depends on the individual user making the call. Domains already managed by Cloud Domains are not returned.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRetrieveImportableDomainsResponse domainsProjectsLocationsRegistrationsRetrieveImportableDomains(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRetrieveImportableDomainsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRetrieveImportableDomainsResponse domainsProjectsLocationsRegistrationsRetrieveImportableDomains(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRetrieveImportableDomainsRequest request, org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRetrieveImportableDomainsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRetrieveImportableDomainsPathParams.class, baseUrl, "/v1/{location}/registrations:retrieveImportableDomains", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRetrieveImportableDomainsRequest.class, baseUrl, "/v1/{location}/registrations:retrieveImportableDomains", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRetrieveImportableDomainsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRetrieveImportableDomainsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -770,25 +786,26 @@ public class Projects {
     /**
      * Gets parameters needed to register a new domain name, including price and up-to-date availability. Use the returned values to call `RegisterDomain`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRetrieveRegisterParametersResponse domainsProjectsLocationsRegistrationsRetrieveRegisterParameters(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRetrieveRegisterParametersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRetrieveRegisterParametersResponse domainsProjectsLocationsRegistrationsRetrieveRegisterParameters(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRetrieveRegisterParametersRequest request, org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRetrieveRegisterParametersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRetrieveRegisterParametersPathParams.class, baseUrl, "/v1/{location}/registrations:retrieveRegisterParameters", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRetrieveRegisterParametersRequest.class, baseUrl, "/v1/{location}/registrations:retrieveRegisterParameters", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRetrieveRegisterParametersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRetrieveRegisterParametersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -815,25 +832,26 @@ public class Projects {
     /**
      * Gets parameters needed to transfer a domain name from another registrar to Cloud Domains. For domains already managed by [Google Domains](https://domains.google/), use `ImportDomain` instead. Use the returned values to call `TransferDomain`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRetrieveTransferParametersResponse domainsProjectsLocationsRegistrationsRetrieveTransferParameters(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRetrieveTransferParametersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRetrieveTransferParametersResponse domainsProjectsLocationsRegistrationsRetrieveTransferParameters(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRetrieveTransferParametersRequest request, org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRetrieveTransferParametersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRetrieveTransferParametersPathParams.class, baseUrl, "/v1/{location}/registrations:retrieveTransferParameters", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRetrieveTransferParametersRequest.class, baseUrl, "/v1/{location}/registrations:retrieveTransferParameters", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRetrieveTransferParametersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsRetrieveTransferParametersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -860,25 +878,26 @@ public class Projects {
     /**
      * Searches for available domain names similar to the provided query. Availability results from this method are approximate; call `RetrieveRegisterParameters` on a domain before registering to confirm availability.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsSearchDomainsResponse domainsProjectsLocationsRegistrationsSearchDomains(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsSearchDomainsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsSearchDomainsResponse domainsProjectsLocationsRegistrationsSearchDomains(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsSearchDomainsRequest request, org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsSearchDomainsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsSearchDomainsPathParams.class, baseUrl, "/v1/{location}/registrations:searchDomains", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsSearchDomainsRequest.class, baseUrl, "/v1/{location}/registrations:searchDomains", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsSearchDomainsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsSearchDomainsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -905,27 +924,28 @@ public class Projects {
     /**
      * Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsSetIamPolicyResponse domainsProjectsLocationsRegistrationsSetIamPolicy(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsSetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsSetIamPolicyResponse domainsProjectsLocationsRegistrationsSetIamPolicy(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsSetIamPolicyRequest request, org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsSetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsSetIamPolicyPathParams.class, baseUrl, "/v1/{resource}:setIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsSetIamPolicyRequest.class, baseUrl, "/v1/{resource}:setIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setIamPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsSetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsSetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -952,27 +972,28 @@ public class Projects {
     /**
      * Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsTestIamPermissionsResponse domainsProjectsLocationsRegistrationsTestIamPermissions(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsTestIamPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsTestIamPermissionsResponse domainsProjectsLocationsRegistrationsTestIamPermissions(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsTestIamPermissionsRequest request, org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsTestIamPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsTestIamPermissionsPathParams.class, baseUrl, "/v1/{resource}:testIamPermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsTestIamPermissionsRequest.class, baseUrl, "/v1/{resource}:testIamPermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testIamPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsTestIamPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsTestIamPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -999,27 +1020,28 @@ public class Projects {
     /**
      * Transfers a domain name from another registrar to Cloud Domains. For domains already managed by [Google Domains](https://domains.google/), use `ImportDomain` instead. Before calling this method, go to the domain's current registrar to unlock the domain for transfer and retrieve the domain's transfer authorization code. Then call `RetrieveTransferParameters` to confirm that the domain is unlocked and to get values needed to build a call to this method. A successful call creates a `Registration` resource in state `TRANSFER_PENDING`. It can take several days to complete the transfer process. The registrant can often speed up this process by approving the transfer through the current registrar, either by clicking a link in an email from the registrar or by visiting the registrar's website. A few minutes after transfer approval, the resource transitions to state `ACTIVE`, indicating that the transfer was successful. If the transfer is rejected or the request expires without being approved, the resource can end up in state `TRANSFER_FAILED`. If transfer fails, you can safely delete the resource and retry the transfer.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsTransferResponse domainsProjectsLocationsRegistrationsTransfer(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsTransferRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsTransferResponse domainsProjectsLocationsRegistrationsTransfer(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsTransferRequest request, org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsTransferSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsTransferPathParams.class, baseUrl, "/v1/{parent}/registrations:transfer", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsTransferRequest.class, baseUrl, "/v1/{parent}/registrations:transfer", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "transferDomainRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsTransferQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsProjectsLocationsRegistrationsTransferRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

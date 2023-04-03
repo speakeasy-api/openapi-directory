@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CheckIfVodWasPurchasedAlt1Request {
-    
-    public CheckIfVodWasPurchasedAlt1PathParams pathParams;
-    public CheckIfVodWasPurchasedAlt1Request withPathParams(CheckIfVodWasPurchasedAlt1PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CheckIfVodWasPurchasedAlt1Security security;
-    public CheckIfVodWasPurchasedAlt1Request withSecurity(CheckIfVodWasPurchasedAlt1Security security) {
-        this.security = security;
+    /**
+     * The ID of the On Demand.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ondemand_id")
+    public Double ondemandId;
+    public CheckIfVodWasPurchasedAlt1Request withOndemandId(Double ondemandId) {
+        this.ondemandId = ondemandId;
         return this;
     }
     

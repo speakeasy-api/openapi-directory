@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UploadVBRequest {
-    
-    public UploadVBPathParams pathParams;
-    public UploadVBRequest withPathParams(UploadVBPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public UploadVBRequestBody requestBody;
+    public UploadVBRequest withRequestBody(UploadVBRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public UploadVBRequestBody request;
-    public UploadVBRequest withRequest(UploadVBRequestBody request) {
-        this.request = request;
+    /**
+     * Unique identifier of the account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public UploadVBRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     

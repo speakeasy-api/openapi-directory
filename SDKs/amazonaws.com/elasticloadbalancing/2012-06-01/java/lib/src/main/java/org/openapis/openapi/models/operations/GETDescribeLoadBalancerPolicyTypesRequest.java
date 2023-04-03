@@ -4,20 +4,79 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeLoadBalancerPolicyTypesRequest {
-    
-    public GETDescribeLoadBalancerPolicyTypesQueryParams queryParams;
-    public GETDescribeLoadBalancerPolicyTypesRequest withQueryParams(GETDescribeLoadBalancerPolicyTypesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeLoadBalancerPolicyTypesActionEnum action;
+    public GETDescribeLoadBalancerPolicyTypesRequest withAction(GETDescribeLoadBalancerPolicyTypesActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The names of the policy types. If no names are specified, describes all policy types defined by Elastic Load Balancing.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PolicyTypeNames")
+    public String[] policyTypeNames;
+    public GETDescribeLoadBalancerPolicyTypesRequest withPolicyTypeNames(String[] policyTypeNames) {
+        this.policyTypeNames = policyTypeNames;
+        return this;
+    }
     
-    public GETDescribeLoadBalancerPolicyTypesHeaders headers;
-    public GETDescribeLoadBalancerPolicyTypesRequest withHeaders(GETDescribeLoadBalancerPolicyTypesHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeLoadBalancerPolicyTypesVersionEnum version;
+    public GETDescribeLoadBalancerPolicyTypesRequest withVersion(GETDescribeLoadBalancerPolicyTypesVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeLoadBalancerPolicyTypesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeLoadBalancerPolicyTypesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeLoadBalancerPolicyTypesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeLoadBalancerPolicyTypesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeLoadBalancerPolicyTypesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeLoadBalancerPolicyTypesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeLoadBalancerPolicyTypesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

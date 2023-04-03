@@ -32,19 +32,20 @@ public class Firmware {
     /**
      * Get default accounts and password hashes of a firmware
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAccountsResponse getAccounts(org.openapis.openapi.models.operations.GetAccountsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetAccountsResponse getAccounts(org.openapis.openapi.models.operations.GetAccountsRequest request, org.openapis.openapi.models.operations.GetAccountsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAccountsPathParams.class, baseUrl, "/firmware/{firmware_hash}/accounts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAccountsRequest.class, baseUrl, "/firmware/{firmware_hash}/accounts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,19 +80,20 @@ public class Firmware {
     /**
      * Get default OS configuration issues of a device firmware
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetConfigIssuesResponse getConfigIssues(org.openapis.openapi.models.operations.GetConfigIssuesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetConfigIssuesResponse getConfigIssues(org.openapis.openapi.models.operations.GetConfigIssuesRequest request, org.openapis.openapi.models.operations.GetConfigIssuesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConfigIssuesPathParams.class, baseUrl, "/firmware/{firmware_hash}/config-issues", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConfigIssuesRequest.class, baseUrl, "/firmware/{firmware_hash}/config-issues", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,19 +128,20 @@ public class Firmware {
     /**
      * Get expired digital certificates embedded in a device firmware
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetExpiredCertsResponse getExpiredCerts(org.openapis.openapi.models.operations.GetExpiredCertsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetExpiredCertsResponse getExpiredCerts(org.openapis.openapi.models.operations.GetExpiredCertsRequest request, org.openapis.openapi.models.operations.GetExpiredCertsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetExpiredCertsPathParams.class, baseUrl, "/firmware/{firmware_hash}/expired-certs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetExpiredCertsRequest.class, baseUrl, "/firmware/{firmware_hash}/expired-certs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -173,19 +176,20 @@ public class Firmware {
     /**
      * Get private crypto keys embedded in a device firmware
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPrivateKeysResponse getPrivateKeys(org.openapis.openapi.models.operations.GetPrivateKeysRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPrivateKeysResponse getPrivateKeys(org.openapis.openapi.models.operations.GetPrivateKeysRequest request, org.openapis.openapi.models.operations.GetPrivateKeysSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPrivateKeysPathParams.class, baseUrl, "/firmware/{firmware_hash}/private-keys", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPrivateKeysRequest.class, baseUrl, "/firmware/{firmware_hash}/private-keys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -220,19 +224,20 @@ public class Firmware {
     /**
      * Get iot device firmware risk analysis
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRiskResponse getRisk(org.openapis.openapi.models.operations.GetRiskRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRiskResponse getRisk(org.openapis.openapi.models.operations.GetRiskRequest request, org.openapis.openapi.models.operations.GetRiskSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRiskPathParams.class, baseUrl, "/firmware/{firmware_hash}/risk", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRiskRequest.class, baseUrl, "/firmware/{firmware_hash}/risk", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -267,19 +272,20 @@ public class Firmware {
     /**
      * Get certificates with weak fingerprinting algorithms that are mebedded in a device firmware
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetWeakCertsResponse getWeakCerts(org.openapis.openapi.models.operations.GetWeakCertsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetWeakCertsResponse getWeakCerts(org.openapis.openapi.models.operations.GetWeakCertsRequest request, org.openapis.openapi.models.operations.GetWeakCertsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWeakCertsPathParams.class, baseUrl, "/firmware/{firmware_hash}/weak-certs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWeakCertsRequest.class, baseUrl, "/firmware/{firmware_hash}/weak-certs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -314,19 +320,20 @@ public class Firmware {
     /**
      * Get weak crypto keys with short length
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetWeakKeysResponse getWeakKeys(org.openapis.openapi.models.operations.GetWeakKeysRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetWeakKeysResponse getWeakKeys(org.openapis.openapi.models.operations.GetWeakKeysRequest request, org.openapis.openapi.models.operations.GetWeakKeysSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWeakKeysPathParams.class, baseUrl, "/firmware/{firmware_hash}/weak-keys", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWeakKeysRequest.class, baseUrl, "/firmware/{firmware_hash}/weak-keys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

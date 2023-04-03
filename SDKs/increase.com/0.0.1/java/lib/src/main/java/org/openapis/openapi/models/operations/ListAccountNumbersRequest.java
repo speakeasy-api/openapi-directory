@@ -4,13 +4,37 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListAccountNumbersRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=account_id")
+    public String accountId;
+    public ListAccountNumbersRequest withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
     
-    public ListAccountNumbersQueryParams queryParams;
-    public ListAccountNumbersRequest withQueryParams(ListAccountNumbersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public ListAccountNumbersRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListAccountNumbersRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * The status to retrieve Account Numbers for.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public ListAccountNumbersStatusEnum status;
+    public ListAccountNumbersRequest withStatus(ListAccountNumbersStatusEnum status) {
+        this.status = status;
         return this;
     }
     

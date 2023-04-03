@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopPointGetTaxiRanksByIdsRequest {
-    
-    public StopPointGetTaxiRanksByIdsPathParams pathParams;
-    public StopPointGetTaxiRanksByIdsRequest withPathParams(StopPointGetTaxiRanksByIdsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * stopPointId is required to get the taxi ranks.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=stopPointId")
+    public String stopPointId;
+    public StopPointGetTaxiRanksByIdsRequest withStopPointId(String stopPointId) {
+        this.stopPointId = stopPointId;
         return this;
     }
     

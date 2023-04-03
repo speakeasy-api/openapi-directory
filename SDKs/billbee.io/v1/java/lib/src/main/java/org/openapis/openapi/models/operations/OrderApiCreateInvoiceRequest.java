@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiCreateInvoiceRequest {
-    
-    public OrderApiCreateInvoicePathParams pathParams;
-    public OrderApiCreateInvoiceRequest withPathParams(OrderApiCreateInvoicePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The internal billbee id of the order
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public OrderApiCreateInvoiceRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * If true, the PDF is included in the response as base64 encoded string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeInvoicePdf")
+    public Boolean includeInvoicePdf;
+    public OrderApiCreateInvoiceRequest withIncludeInvoicePdf(Boolean includeInvoicePdf) {
+        this.includeInvoicePdf = includeInvoicePdf;
+        return this;
+    }
     
-    public OrderApiCreateInvoiceQueryParams queryParams;
-    public OrderApiCreateInvoiceRequest withQueryParams(OrderApiCreateInvoiceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * You can pass the id of a connected cloud printer/storage to send the invoice to it
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sendToCloudId")
+    public Long sendToCloudId;
+    public OrderApiCreateInvoiceRequest withSendToCloudId(Long sendToCloudId) {
+        this.sendToCloudId = sendToCloudId;
+        return this;
+    }
+    
+    /**
+     * You can pass the id of an invoice template to overwrite the assigned template for invoice creation
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=templateId")
+    public Long templateId;
+    public OrderApiCreateInvoiceRequest withTemplateId(Long templateId) {
+        this.templateId = templateId;
         return this;
     }
     

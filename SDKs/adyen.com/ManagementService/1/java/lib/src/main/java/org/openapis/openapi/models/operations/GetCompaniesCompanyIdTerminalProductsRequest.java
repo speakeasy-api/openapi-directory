@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCompaniesCompanyIdTerminalProductsRequest {
-    
-    public GetCompaniesCompanyIdTerminalProductsPathParams pathParams;
-    public GetCompaniesCompanyIdTerminalProductsRequest withPathParams(GetCompaniesCompanyIdTerminalProductsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the company account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public GetCompaniesCompanyIdTerminalProductsRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
         return this;
     }
     
-    
-    public GetCompaniesCompanyIdTerminalProductsQueryParams queryParams;
-    public GetCompaniesCompanyIdTerminalProductsRequest withQueryParams(GetCompaniesCompanyIdTerminalProductsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The country to return products for, in [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format. For example, **US**
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public String country;
+    public GetCompaniesCompanyIdTerminalProductsRequest withCountry(String country) {
+        this.country = country;
         return this;
     }
     
+    /**
+     * The number of products to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetCompaniesCompanyIdTerminalProductsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetCompaniesCompanyIdTerminalProductsSecurity security;
-    public GetCompaniesCompanyIdTerminalProductsRequest withSecurity(GetCompaniesCompanyIdTerminalProductsSecurity security) {
-        this.security = security;
+    /**
+     * The number of products to skip.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public GetCompaniesCompanyIdTerminalProductsRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * The terminal model to return products for. Use the ID returned in the [GET `/terminalModels`](https://docs.adyen.com/api-explorer/#/ManagementService/latest/get/companies/{companyId}/terminalModels) response. For example, **Verifone.M400**
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=terminalModelId")
+    public String terminalModelId;
+    public GetCompaniesCompanyIdTerminalProductsRequest withTerminalModelId(String terminalModelId) {
+        this.terminalModelId = terminalModelId;
         return this;
     }
     

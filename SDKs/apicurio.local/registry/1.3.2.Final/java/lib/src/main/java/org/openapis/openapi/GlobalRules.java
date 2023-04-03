@@ -51,7 +51,7 @@ public class GlobalRules {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateGlobalRuleResponse createGlobalRule(org.openapis.openapi.models.operations.CreateGlobalRuleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateGlobalRuleResponse createGlobalRule(org.openapis.openapi.models.shared.Rule request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/rules");
         
@@ -153,7 +153,7 @@ public class GlobalRules {
      */
     public org.openapis.openapi.models.operations.DeleteGlobalRuleResponse deleteGlobalRule(org.openapis.openapi.models.operations.DeleteGlobalRuleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteGlobalRulePathParams.class, baseUrl, "/rules/{rule}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteGlobalRuleRequest.class, baseUrl, "/rules/{rule}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -201,7 +201,7 @@ public class GlobalRules {
      */
     public org.openapis.openapi.models.operations.GetGlobalRuleConfigResponse getGlobalRuleConfig(org.openapis.openapi.models.operations.GetGlobalRuleConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGlobalRuleConfigPathParams.class, baseUrl, "/rules/{rule}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGlobalRuleConfigRequest.class, baseUrl, "/rules/{rule}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -306,12 +306,12 @@ public class GlobalRules {
      */
     public org.openapis.openapi.models.operations.UpdateGlobalRuleConfigResponse updateGlobalRuleConfig(org.openapis.openapi.models.operations.UpdateGlobalRuleConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateGlobalRuleConfigPathParams.class, baseUrl, "/rules/{rule}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateGlobalRuleConfigRequest.class, baseUrl, "/rules/{rule}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "rule1", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

@@ -4,34 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConsumerRequestCountsAllRequest {
-    
-    public ConsumerRequestCountsAllPathParams pathParams;
-    public ConsumerRequestCountsAllRequest withPathParams(ConsumerRequestCountsAllPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the consumer to return
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=consumer_id")
+    public String consumerId;
+    public ConsumerRequestCountsAllRequest withConsumerId(String consumerId) {
+        this.consumerId = consumerId;
         return this;
     }
     
-    
-    public ConsumerRequestCountsAllQueryParams queryParams;
-    public ConsumerRequestCountsAllRequest withQueryParams(ConsumerRequestCountsAllQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Scopes results to requests that happened before datetime
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_datetime")
+    public String endDatetime;
+    public ConsumerRequestCountsAllRequest withEndDatetime(String endDatetime) {
+        this.endDatetime = endDatetime;
         return this;
     }
     
-    
-    public ConsumerRequestCountsAllHeaders headers;
-    public ConsumerRequestCountsAllRequest withHeaders(ConsumerRequestCountsAllHeaders headers) {
-        this.headers = headers;
+    /**
+     * Scopes results to requests that happened after datetime
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_datetime")
+    public String startDatetime;
+    public ConsumerRequestCountsAllRequest withStartDatetime(String startDatetime) {
+        this.startDatetime = startDatetime;
         return this;
     }
     
-    
-    public ConsumerRequestCountsAllSecurity security;
-    public ConsumerRequestCountsAllRequest withSecurity(ConsumerRequestCountsAllSecurity security) {
-        this.security = security;
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public ConsumerRequestCountsAllRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
         return this;
     }
     

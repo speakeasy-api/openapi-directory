@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRoleMappingRequest {
-    
-    public DeleteRoleMappingPathParams pathParams;
-    public DeleteRoleMappingRequest withPathParams(DeleteRoleMappingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique id of a principal (typically either a user or service account).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=principalId")
+    public String principalId;
+    public DeleteRoleMappingRequest withPrincipalId(String principalId) {
+        this.principalId = principalId;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAnnotationCountByAccIdUsingGETRequest {
+    /**
+     * Ontology term accession ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accId")
+    public String accId;
+    public GETAnnotationCountByAccIdUsingGETRequest withAccId(String accId) {
+        this.accId = accId;
+        return this;
+    }
     
-    public GETAnnotationCountByAccIdUsingGETPathParams pathParams;
-    public GETAnnotationCountByAccIdUsingGETRequest withPathParams(GETAnnotationCountByAccIdUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * true: return annotations for the term and children, false: return annotations for the term only 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=includeChildren")
+    public Boolean includeChildren;
+    public GETAnnotationCountByAccIdUsingGETRequest withIncludeChildren(Boolean includeChildren) {
+        this.includeChildren = includeChildren;
         return this;
     }
     

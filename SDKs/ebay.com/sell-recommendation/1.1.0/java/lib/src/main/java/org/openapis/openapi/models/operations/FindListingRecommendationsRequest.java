@@ -7,31 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FindListingRecommendationsRequest {
-    
-    public FindListingRecommendationsQueryParams queryParams;
-    public FindListingRecommendationsRequest withQueryParams(FindListingRecommendationsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public FindListingRecommendationsHeaders headers;
-    public FindListingRecommendationsRequest withHeaders(FindListingRecommendationsHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.FindListingRecommendationRequest request;
-    public FindListingRecommendationsRequest withRequest(org.openapis.openapi.models.shared.FindListingRecommendationRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.FindListingRecommendationRequest findListingRecommendationRequest;
+    public FindListingRecommendationsRequest withFindListingRecommendationRequest(org.openapis.openapi.models.shared.FindListingRecommendationRequest findListingRecommendationRequest) {
+        this.findListingRecommendationRequest = findListingRecommendationRequest;
         return this;
     }
     
+    /**
+     * Use this header to specify the eBay marketplace where you list the items for which you want to get recommendations.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
+    public String xEbayCMarketplaceId;
+    public FindListingRecommendationsRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
+        this.xEbayCMarketplaceId = xEbayCMarketplaceId;
+        return this;
+    }
     
-    public FindListingRecommendationsSecurity security;
-    public FindListingRecommendationsRequest withSecurity(FindListingRecommendationsSecurity security) {
-        this.security = security;
+    /**
+     * Provide a list of key-value pairs to specify the criteria you want to use to filter the response. In the list, separate each filter key from its associated value with a colon (&amp;quot;:&amp;quot;). Currently, the only supported filter value is recommendationTypes and it supports only the (&amp;quot;AD&amp;quot;) type. Follow the recommendationTypes specifier with the filter type(s) enclosed in curly braces (&amp;quot;{ }&amp;quot;), and separate multiple types with commas. Example: filter=recommendationTypes:{AD} Default: recommendationTypes:{AD}
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public FindListingRecommendationsRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
+    
+    /**
+     * Use this query parameter to set the maximum number of ads to return on a page from the paginated response. Default: 10 Maximum: 500
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public String limit;
+    public FindListingRecommendationsRequest withLimit(String limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Specifies the number of ads to skip in the result set before returning the first ad in the paginated response. Combine offset with the limit query parameter to control the items returned in the response. For example, if you supply an offset of 0 and a limit of 10, the first page of the response contains the first 10 items from the complete list of items retrieved by the call. If offset is 10 and limit is 20, the first page of the response contains items 11-30 from the complete result set. Default: 0
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public String offset;
+    public FindListingRecommendationsRequest withOffset(String offset) {
+        this.offset = offset;
         return this;
     }
     

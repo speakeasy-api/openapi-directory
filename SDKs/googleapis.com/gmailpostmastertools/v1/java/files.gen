@@ -31,17 +31,12 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GmailpostmastertoolsDomainsListSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GmailpostmastertoolsDomainsListQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GmailpostmastertoolsDomainsListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GmailpostmastertoolsDomainsListResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GmailpostmastertoolsDomainsTrafficStatsGetSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GmailpostmastertoolsDomainsTrafficStatsGetPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GmailpostmastertoolsDomainsTrafficStatsGetQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GmailpostmastertoolsDomainsTrafficStatsGetRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GmailpostmastertoolsDomainsTrafficStatsGetResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GmailpostmastertoolsDomainsTrafficStatsListSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GmailpostmastertoolsDomainsTrafficStatsListPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GmailpostmastertoolsDomainsTrafficStatsListQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GmailpostmastertoolsDomainsTrafficStatsListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GmailpostmastertoolsDomainsTrafficStatsListResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListDomainsResponse.java
@@ -49,8 +44,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/DomainPermissionEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Domain.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2c.java
 lib/src/main/java/org/openapis/openapi/models/shared/TrafficStatsDomainReputationEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/TrafficStats.java
 lib/src/main/java/org/openapis/openapi/models/shared/FeedbackLoop.java

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteEmailListByIdRequest {
-    
-    public DeleteEmailListByIdPathParams pathParams;
-    public DeleteEmailListByIdRequest withPathParams(DeleteEmailListByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Access token required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-access-token")
+    public String evAccessToken;
+    public DeleteEmailListByIdRequest withEvAccessToken(String evAccessToken) {
+        this.evAccessToken = evAccessToken;
         return this;
     }
     
+    /**
+     * API Key required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-api-key")
+    public String evApiKey;
+    public DeleteEmailListByIdRequest withEvApiKey(String evApiKey) {
+        this.evApiKey = evApiKey;
+        return this;
+    }
     
-    public DeleteEmailListByIdHeaders headers;
-    public DeleteEmailListByIdRequest withHeaders(DeleteEmailListByIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * ID of the email list to delete
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DeleteEmailListByIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

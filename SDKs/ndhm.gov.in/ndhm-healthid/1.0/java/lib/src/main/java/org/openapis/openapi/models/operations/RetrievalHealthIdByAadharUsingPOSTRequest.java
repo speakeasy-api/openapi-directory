@@ -7,10 +7,10 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrievalHealthIdByAadharUsingPOSTRequest {
-    
-    public RetrievalHealthIdByAadharUsingPOSTHeaders headers;
-    public RetrievalHealthIdByAadharUsingPOSTRequest withHeaders(RetrievalHealthIdByAadharUsingPOSTHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public RetrievalHealthIdByAadharUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
@@ -18,16 +18,9 @@ public class RetrievalHealthIdByAadharUsingPOSTRequest {
      * authAccountAadhaarOTPRequest
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AuthAccountAadhaarOTPRequest request;
-    public RetrievalHealthIdByAadharUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.AuthAccountAadhaarOTPRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public RetrievalHealthIdByAadharUsingPOSTSecurity security;
-    public RetrievalHealthIdByAadharUsingPOSTRequest withSecurity(RetrievalHealthIdByAadharUsingPOSTSecurity security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.AuthAccountAadhaarOTPRequest authAccountAadhaarOTPRequest;
+    public RetrievalHealthIdByAadharUsingPOSTRequest withAuthAccountAadhaarOTPRequest(org.openapis.openapi.models.shared.AuthAccountAadhaarOTPRequest authAccountAadhaarOTPRequest) {
+        this.authAccountAadhaarOTPRequest = authAccountAadhaarOTPRequest;
         return this;
     }
     

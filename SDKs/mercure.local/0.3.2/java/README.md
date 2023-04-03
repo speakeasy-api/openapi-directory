@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.GetWellKnownMercureQueryParams;
-import org.openapis.openapi.models.operations.GetWellKnownMercureHeaders;
 import org.openapis.openapi.models.operations.GetWellKnownMercureRequest;
 import org.openapis.openapi.models.operations.GetWellKnownMercureResponse;
 
@@ -27,25 +25,19 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    bearer = new SchemeBearer() {{
-                        authorization = "Bearer YOUR_BEARER_TOKEN_HERE";
-                    }};
+                    bearer = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
             GetWellKnownMercureRequest req = new GetWellKnownMercureRequest() {{
-                queryParams = new GetWellKnownMercureQueryParams() {{
-                    lastEventID = "corrupti";
-                    topic = new String[]{{
-                        add("distinctio"),
-                        add("quibusdam"),
-                        add("unde"),
-                    }};
+                lastEventID = "corrupti";
+                lastEventIDQueryParameter = "provident";
+                topic = new String[]{{
+                    add("quibusdam"),
+                    add("unde"),
+                    add("nulla"),
                 }};
-                headers = new GetWellKnownMercureHeaders() {{
-                    lastEventID = "nulla";
-                }};
-            }};            
+            }}            
 
             GetWellKnownMercureResponse res = sdk.getWellKnownMercure(req);
 
@@ -59,7 +51,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

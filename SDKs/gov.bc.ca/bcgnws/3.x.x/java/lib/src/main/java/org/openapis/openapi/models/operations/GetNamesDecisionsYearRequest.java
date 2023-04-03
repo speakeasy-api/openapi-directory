@@ -4,13 +4,116 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNamesDecisionsYearRequest {
+    /**
+     * A flag to indicate whether to embed the corresponding 'feature' into each matching name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=embed")
+    public GetNamesDecisionsYearEmbedEnum embed;
+    public GetNamesDecisionsYearRequest withEmbed(GetNamesDecisionsYearEmbedEnum embed) {
+        this.embed = embed;
+        return this;
+    }
     
-    public GetNamesDecisionsYearQueryParams queryParams;
-    public GetNamesDecisionsYearRequest withQueryParams(GetNamesDecisionsYearQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A filter to limit the search to names associated with features of a certain 'category'  The value of this parameter should be a 'featureCategoryCode' value returned by the /featureCategories resource, or an asterisk (*) to request that all feature categories be included.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=featureCategory")
+    public String featureCategory;
+    public GetNamesDecisionsYearRequest withFeatureCategory(String featureCategory) {
+        this.featureCategory = featureCategory;
+        return this;
+    }
+    
+    /**
+     * A filter to limit the search to names associated with features of a certain 'class'  The value of this parameter should be a 'featureClassCode' value returned by the /featureClasses resource, or an asterisk (*) to request that all feature classes be included.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=featureClass")
+    public String featureClass;
+    public GetNamesDecisionsYearRequest withFeatureClass(String featureClass) {
+        this.featureClass = featureClass;
+        return this;
+    }
+    
+    /**
+     * A filter to limit the search to names associated with features of a certain 'type'  The value of this parameter should be a 'featureTypeCode' value returned by the /featureTypes resource, or an asterisk (*) to request that all feature types be included
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=featureType")
+    public String featureType;
+    public GetNamesDecisionsYearRequest withFeatureType(String featureType) {
+        this.featureType = featureType;
+        return this;
+    }
+    
+    /**
+     * The number of search results to return (1-200)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=itemsPerPage")
+    public Long itemsPerPage;
+    public GetNamesDecisionsYearRequest withItemsPerPage(Long itemsPerPage) {
+        this.itemsPerPage = itemsPerPage;
+        return this;
+    }
+    
+    /**
+     * The format of the output.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputFormat")
+    public GetNamesDecisionsYearOutputFormatEnum outputFormat;
+    public GetNamesDecisionsYearRequest withOutputFormat(GetNamesDecisionsYearOutputFormatEnum outputFormat) {
+        this.outputFormat = outputFormat;
+        return this;
+    }
+    
+    /**
+     * The EPSG code of the spatial reference system (SRS) to use for output geometries.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputSRS")
+    public GetNamesDecisionsYearOutputSrsEnum outputSRS;
+    public GetNamesDecisionsYearRequest withOutputSRS(GetNamesDecisionsYearOutputSrsEnum outputSRS) {
+        this.outputSRS = outputSRS;
+        return this;
+    }
+    
+    /**
+     * A flag indicating whether to include with each matching name a succinct list of attributes (summary), or a comprehensive list of attributes (detail)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputStyle")
+    public GetNamesDecisionsYearOutputStyleEnum outputStyle;
+    public GetNamesDecisionsYearRequest withOutputStyle(GetNamesDecisionsYearOutputStyleEnum outputStyle) {
+        this.outputStyle = outputStyle;
+        return this;
+    }
+    
+    /**
+     * The distance to move the accessPoint away from the curb and towards the inside of the parcel (in metres). Ignored if locationDescriptor not set to accessPoint.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortBy")
+    public GetNamesDecisionsYearSortByEnum sortBy;
+    public GetNamesDecisionsYearRequest withSortBy(GetNamesDecisionsYearSortByEnum sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    
+    /**
+     * The index of the first record to be returned (&gt;= 1)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startIndex")
+    public Long startIndex;
+    public GetNamesDecisionsYearRequest withStartIndex(Long startIndex) {
+        this.startIndex = startIndex;
+        return this;
+    }
+    
+    /**
+     * The year in which to search for names affected by naming decisions'.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public Long year;
+    public GetNamesDecisionsYearRequest withYear(Long year) {
+        this.year = year;
         return this;
     }
     

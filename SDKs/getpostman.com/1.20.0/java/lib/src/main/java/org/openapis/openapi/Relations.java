@@ -88,12 +88,12 @@ public class Relations {
      */
     public org.openapis.openapi.models.operations.CreateRelationsResponse createRelations(org.openapis.openapi.models.operations.CreateRelationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateRelationsPathParams.class, baseUrl, "/apis/{apiId}/versions/{apiVersionId}/relations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateRelationsRequest.class, baseUrl, "/apis/{apiId}/versions/{apiVersionId}/relations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -133,7 +133,7 @@ public class Relations {
      */
     public org.openapis.openapi.models.operations.GetContractTestRelationsResponse getContractTestRelations(org.openapis.openapi.models.operations.GetContractTestRelationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContractTestRelationsPathParams.class, baseUrl, "/apis/{apiId}/versions/{apiVersionId}/contracttest", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContractTestRelationsRequest.class, baseUrl, "/apis/{apiId}/versions/{apiVersionId}/contracttest", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -176,7 +176,7 @@ public class Relations {
      */
     public org.openapis.openapi.models.operations.GetDocumentationRelationsResponse getDocumentationRelations(org.openapis.openapi.models.operations.GetDocumentationRelationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDocumentationRelationsPathParams.class, baseUrl, "/apis/{apiId}/versions/{apiVersionId}/documentation", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDocumentationRelationsRequest.class, baseUrl, "/apis/{apiId}/versions/{apiVersionId}/documentation", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -219,7 +219,7 @@ public class Relations {
      */
     public org.openapis.openapi.models.operations.GetEnvironmentRelationsResponse getEnvironmentRelations(org.openapis.openapi.models.operations.GetEnvironmentRelationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEnvironmentRelationsPathParams.class, baseUrl, "/apis/{apiId}/versions/{apiVersionId}/environment", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEnvironmentRelationsRequest.class, baseUrl, "/apis/{apiId}/versions/{apiVersionId}/environment", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -262,7 +262,7 @@ public class Relations {
      */
     public org.openapis.openapi.models.operations.GetIntegrationTestRelationsResponse getIntegrationTestRelations(org.openapis.openapi.models.operations.GetIntegrationTestRelationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIntegrationTestRelationsPathParams.class, baseUrl, "/apis/{apiId}/versions/{apiVersionId}/integrationtest", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIntegrationTestRelationsRequest.class, baseUrl, "/apis/{apiId}/versions/{apiVersionId}/integrationtest", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -305,7 +305,7 @@ public class Relations {
      */
     public org.openapis.openapi.models.operations.GetLinkedRelationsResponse getLinkedRelations(org.openapis.openapi.models.operations.GetLinkedRelationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLinkedRelationsPathParams.class, baseUrl, "/apis/{apiId}/versions/{apiVersionId}/relations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLinkedRelationsRequest.class, baseUrl, "/apis/{apiId}/versions/{apiVersionId}/relations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -348,7 +348,7 @@ public class Relations {
      */
     public org.openapis.openapi.models.operations.GetMonitorRelationsResponse getMonitorRelations(org.openapis.openapi.models.operations.GetMonitorRelationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMonitorRelationsPathParams.class, baseUrl, "/apis/{apiId}/versions/{apiVersionId}/monitor", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMonitorRelationsRequest.class, baseUrl, "/apis/{apiId}/versions/{apiVersionId}/monitor", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -391,7 +391,7 @@ public class Relations {
      */
     public org.openapis.openapi.models.operations.GetTestSuiteRelationsResponse getTestSuiteRelations(org.openapis.openapi.models.operations.GetTestSuiteRelationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTestSuiteRelationsPathParams.class, baseUrl, "/apis/{apiId}/versions/{apiVersionId}/testsuite", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTestSuiteRelationsRequest.class, baseUrl, "/apis/{apiId}/versions/{apiVersionId}/testsuite", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -433,7 +433,7 @@ public class Relations {
      */
     public org.openapis.openapi.models.operations.SyncRelationsWithSchemaResponse syncRelationsWithSchema(org.openapis.openapi.models.operations.SyncRelationsWithSchemaRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SyncRelationsWithSchemaPathParams.class, baseUrl, "/apis/{apiId}/versions/{apiVersionId}/{entityType}/{entityId}/syncWithSchema", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SyncRelationsWithSchemaRequest.class, baseUrl, "/apis/{apiId}/versions/{apiVersionId}/{entityType}/{entityId}/syncWithSchema", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

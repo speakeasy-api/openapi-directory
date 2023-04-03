@@ -31,11 +31,10 @@ public class ServiceNow {
 
     /**
      * Export an asset inventory as CSV for ServiceNow integration
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SnowExportAssetsCSVResponse snowExportAssetsCSV(org.openapis.openapi.models.operations.SnowExportAssetsCSVRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SnowExportAssetsCSVResponse snowExportAssetsCSV() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/export/org/assets.servicenow.csv");
         
@@ -44,8 +43,7 @@ public class ServiceNow {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -71,11 +69,10 @@ public class ServiceNow {
 
     /**
      * Exports the asset inventory as JSON
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SnowExportAssetsJSONResponse snowExportAssetsJSON(org.openapis.openapi.models.operations.SnowExportAssetsJSONRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SnowExportAssetsJSONResponse snowExportAssetsJSON() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/export/org/assets.servicenow.json");
         
@@ -84,8 +81,7 @@ public class ServiceNow {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -112,11 +108,10 @@ public class ServiceNow {
 
     /**
      * Export a service inventory as CSV for ServiceNow integration
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SnowExportServicesCSVResponse snowExportServicesCSV(org.openapis.openapi.models.operations.SnowExportServicesCSVRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SnowExportServicesCSVResponse snowExportServicesCSV() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/export/org/services.servicenow.csv");
         
@@ -125,8 +120,7 @@ public class ServiceNow {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");

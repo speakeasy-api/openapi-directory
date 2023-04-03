@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PackageProjectTranslationMemoryForLanguageStatusRequest {
-    
-    public PackageProjectTranslationMemoryForLanguageStatusPathParams pathParams;
-    public PackageProjectTranslationMemoryForLanguageStatusRequest withPathParams(PackageProjectTranslationMemoryForLanguageStatusPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Async operation key
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=async_request_key")
+    public String asyncRequestKey;
+    public PackageProjectTranslationMemoryForLanguageStatusRequest withAsyncRequestKey(String asyncRequestKey) {
+        this.asyncRequestKey = asyncRequestKey;
         return this;
     }
     
+    /**
+     * Language Code
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=languageCode")
+    public String languageCode;
+    public PackageProjectTranslationMemoryForLanguageStatusRequest withLanguageCode(String languageCode) {
+        this.languageCode = languageCode;
+        return this;
+    }
     
-    public PackageProjectTranslationMemoryForLanguageStatusQueryParams queryParams;
-    public PackageProjectTranslationMemoryForLanguageStatusRequest withQueryParams(PackageProjectTranslationMemoryForLanguageStatusQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public Long projectId;
+    public PackageProjectTranslationMemoryForLanguageStatusRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     

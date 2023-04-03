@@ -38,7 +38,7 @@ public class SNMPv3 {
      */
     public org.openapis.openapi.models.operations.ProtocolSnmpv3AccessAddResponse protocolSnmpv3AccessAdd(org.openapis.openapi.models.operations.ProtocolSnmpv3AccessAddRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3AccessAddPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/access/add/{groupName}/{prefix}/{securityModel}/{securityLevel}/{contextMatch}/{readView}/{writeView}/{notifyView}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3AccessAddRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/access/add/{groupName}/{prefix}/{securityModel}/{securityLevel}/{contextMatch}/{readView}/{writeView}/{notifyView}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -79,7 +79,7 @@ public class SNMPv3 {
      */
     public org.openapis.openapi.models.operations.ProtocolSnmpv3AccessClearResponse protocolSnmpv3AccessClear(org.openapis.openapi.models.operations.ProtocolSnmpv3AccessClearRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3AccessClearPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/access/clear", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3AccessClearRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/access/clear", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -120,7 +120,7 @@ public class SNMPv3 {
      */
     public org.openapis.openapi.models.operations.ProtocolSnmpv3AccessDelResponse protocolSnmpv3AccessDel(org.openapis.openapi.models.operations.ProtocolSnmpv3AccessDelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3AccessDelPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/access/del/{accessName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3AccessDelRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/access/del/{accessName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -161,7 +161,7 @@ public class SNMPv3 {
      */
     public org.openapis.openapi.models.operations.ProtocolSnmpv3AccessListResponse protocolSnmpv3AccessList(org.openapis.openapi.models.operations.ProtocolSnmpv3AccessListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3AccessListPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/access/list", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3AccessListRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/access/list", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -203,7 +203,7 @@ public class SNMPv3 {
      */
     public org.openapis.openapi.models.operations.ProtocolSnmpv3GetConfigResponse protocolSnmpv3GetConfig(org.openapis.openapi.models.operations.ProtocolSnmpv3GetConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3GetConfigPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/get/config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3GetConfigRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/get/config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -245,7 +245,7 @@ public class SNMPv3 {
      */
     public org.openapis.openapi.models.operations.ProtocolSnmpv3GetContextEngineidResponse protocolSnmpv3GetContextEngineid(org.openapis.openapi.models.operations.ProtocolSnmpv3GetContextEngineidRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3GetContextEngineidPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/get/context_engineid", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3GetContextEngineidRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/get/context_engineid", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -286,7 +286,7 @@ public class SNMPv3 {
      */
     public org.openapis.openapi.models.operations.ProtocolSnmpv3GetEnginebootsResponse protocolSnmpv3GetEngineboots(org.openapis.openapi.models.operations.ProtocolSnmpv3GetEnginebootsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3GetEnginebootsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/get/engineboots", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3GetEnginebootsRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/get/engineboots", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -328,7 +328,7 @@ public class SNMPv3 {
      */
     public org.openapis.openapi.models.operations.ProtocolSnmpv3GetEngineidResponse protocolSnmpv3GetEngineid(org.openapis.openapi.models.operations.ProtocolSnmpv3GetEngineidRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3GetEngineidPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/get/engineid", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3GetEngineidRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/get/engineid", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -369,7 +369,7 @@ public class SNMPv3 {
      */
     public org.openapis.openapi.models.operations.ProtocolSnmpv3GetEnginetimeResponse protocolSnmpv3GetEnginetime(org.openapis.openapi.models.operations.ProtocolSnmpv3GetEnginetimeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3GetEnginetimePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/get/enginetime", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3GetEnginetimeRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/get/enginetime", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -411,7 +411,7 @@ public class SNMPv3 {
      */
     public org.openapis.openapi.models.operations.ProtocolSnmpv3GroupAddResponse protocolSnmpv3GroupAdd(org.openapis.openapi.models.operations.ProtocolSnmpv3GroupAddRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3GroupAddPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/group/add/{groupName}/{securityModel}/{securityName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3GroupAddRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/group/add/{groupName}/{securityModel}/{securityName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -452,7 +452,7 @@ public class SNMPv3 {
      */
     public org.openapis.openapi.models.operations.ProtocolSnmpv3GroupClearResponse protocolSnmpv3GroupClear(org.openapis.openapi.models.operations.ProtocolSnmpv3GroupClearRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3GroupClearPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/group/clear", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3GroupClearRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/group/clear", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -493,7 +493,7 @@ public class SNMPv3 {
      */
     public org.openapis.openapi.models.operations.ProtocolSnmpv3GroupDelResponse protocolSnmpv3GroupDel(org.openapis.openapi.models.operations.ProtocolSnmpv3GroupDelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3GroupDelPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/group/del/{groupName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3GroupDelRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/group/del/{groupName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -534,7 +534,7 @@ public class SNMPv3 {
      */
     public org.openapis.openapi.models.operations.ProtocolSnmpv3GroupListResponse protocolSnmpv3GroupList(org.openapis.openapi.models.operations.ProtocolSnmpv3GroupListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3GroupListPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/group/list", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3GroupListRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/group/list", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -576,7 +576,7 @@ public class SNMPv3 {
      */
     public org.openapis.openapi.models.operations.ProtocolSnmpv3SetConfigResponse protocolSnmpv3SetConfig(org.openapis.openapi.models.operations.ProtocolSnmpv3SetConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3SetConfigPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/set/config/{parameter}/{value}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3SetConfigRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/set/config/{parameter}/{value}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -617,7 +617,7 @@ public class SNMPv3 {
      */
     public org.openapis.openapi.models.operations.ProtocolSnmpv3UserAddResponse protocolSnmpv3UserAdd(org.openapis.openapi.models.operations.ProtocolSnmpv3UserAddRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3UserAddPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/user/add/{userName}/{securityName}/{authProtocol}/{authKey}/{privProtocol}/{privKey}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3UserAddRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/user/add/{userName}/{securityName}/{authProtocol}/{authKey}/{privProtocol}/{privKey}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -658,7 +658,7 @@ public class SNMPv3 {
      */
     public org.openapis.openapi.models.operations.ProtocolSnmpv3UserClearResponse protocolSnmpv3UserClear(org.openapis.openapi.models.operations.ProtocolSnmpv3UserClearRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3UserClearPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/user/clear", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3UserClearRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/user/clear", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -699,7 +699,7 @@ public class SNMPv3 {
      */
     public org.openapis.openapi.models.operations.ProtocolSnmpv3UserDelResponse protocolSnmpv3UserDel(org.openapis.openapi.models.operations.ProtocolSnmpv3UserDelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3UserDelPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/user/del/{userName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3UserDelRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/user/del/{userName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -740,7 +740,7 @@ public class SNMPv3 {
      */
     public org.openapis.openapi.models.operations.ProtocolSnmpv3UserListResponse protocolSnmpv3UserList(org.openapis.openapi.models.operations.ProtocolSnmpv3UserListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3UserListPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/user/list", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3UserListRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/user/list", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -782,7 +782,7 @@ public class SNMPv3 {
      */
     public org.openapis.openapi.models.operations.ProtocolSnmpv3UsmSaveResponse protocolSnmpv3UsmSave(org.openapis.openapi.models.operations.ProtocolSnmpv3UsmSaveRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3UsmSavePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/usm/save", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3UsmSaveRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/usm/save", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -824,7 +824,7 @@ public class SNMPv3 {
      */
     public org.openapis.openapi.models.operations.ProtocolSnmpv3UsmSaveasResponse protocolSnmpv3UsmSaveas(org.openapis.openapi.models.operations.ProtocolSnmpv3UsmSaveasRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3UsmSaveasPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/usm/saveas/{filename}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3UsmSaveasRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/usm/saveas/{filename}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -866,7 +866,7 @@ public class SNMPv3 {
      */
     public org.openapis.openapi.models.operations.ProtocolSnmpv3VacmSaveResponse protocolSnmpv3VacmSave(org.openapis.openapi.models.operations.ProtocolSnmpv3VacmSaveRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3VacmSavePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/vacm/save", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3VacmSaveRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/vacm/save", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -908,7 +908,7 @@ public class SNMPv3 {
      */
     public org.openapis.openapi.models.operations.ProtocolSnmpv3VacmSaveasResponse protocolSnmpv3VacmSaveas(org.openapis.openapi.models.operations.ProtocolSnmpv3VacmSaveasRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3VacmSaveasPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/vacm/saveas/{filename}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3VacmSaveasRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/vacm/saveas/{filename}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -950,7 +950,7 @@ public class SNMPv3 {
      */
     public org.openapis.openapi.models.operations.ProtocolSnmpv3ViewAddResponse protocolSnmpv3ViewAdd(org.openapis.openapi.models.operations.ProtocolSnmpv3ViewAddRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3ViewAddPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/view/add/{viewName}/{viewType}/{subtree}/{mask}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3ViewAddRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/view/add/{viewName}/{viewType}/{subtree}/{mask}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -991,7 +991,7 @@ public class SNMPv3 {
      */
     public org.openapis.openapi.models.operations.ProtocolSnmpv3ViewClearResponse protocolSnmpv3ViewClear(org.openapis.openapi.models.operations.ProtocolSnmpv3ViewClearRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3ViewClearPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/view/clear", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3ViewClearRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/view/clear", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1032,7 +1032,7 @@ public class SNMPv3 {
      */
     public org.openapis.openapi.models.operations.ProtocolSnmpv3ViewDelResponse protocolSnmpv3ViewDel(org.openapis.openapi.models.operations.ProtocolSnmpv3ViewDelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3ViewDelPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/view/del/{viewName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3ViewDelRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/view/del/{viewName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1073,7 +1073,7 @@ public class SNMPv3 {
      */
     public org.openapis.openapi.models.operations.ProtocolSnmpv3ViewListResponse protocolSnmpv3ViewList(org.openapis.openapi.models.operations.ProtocolSnmpv3ViewListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3ViewListPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/view/list", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmpv3ViewListRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmpv3/view/list", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

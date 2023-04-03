@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCreateGlobalReplicationGroupRequest {
-    
-    public GETCreateGlobalReplicationGroupQueryParams queryParams;
-    public GETCreateGlobalReplicationGroupRequest withQueryParams(GETCreateGlobalReplicationGroupQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETCreateGlobalReplicationGroupActionEnum action;
+    public GETCreateGlobalReplicationGroupRequest withAction(GETCreateGlobalReplicationGroupActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Provides details of the Global datastore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GlobalReplicationGroupDescription")
+    public String globalReplicationGroupDescription;
+    public GETCreateGlobalReplicationGroupRequest withGlobalReplicationGroupDescription(String globalReplicationGroupDescription) {
+        this.globalReplicationGroupDescription = globalReplicationGroupDescription;
+        return this;
+    }
     
-    public GETCreateGlobalReplicationGroupHeaders headers;
-    public GETCreateGlobalReplicationGroupRequest withHeaders(GETCreateGlobalReplicationGroupHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The suffix name of a Global datastore. Amazon ElastiCache automatically applies a prefix to the Global datastore ID when it is created. Each Amazon Region has its own prefix. For instance, a Global datastore ID created in the US-West-1 region will begin with "dsdfu" along with the suffix name you provide. The suffix, combined with the auto-generated prefix, guarantees uniqueness of the Global datastore name across multiple regions. &lt;/p&gt; &lt;p&gt;For a full list of Amazon Regions and their respective Global datastore iD prefixes, see &lt;a href="http://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Redis-Global-Datastores-CLI.html"&gt;Using the Amazon CLI with Global datastores &lt;/a&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GlobalReplicationGroupIdSuffix")
+    public String globalReplicationGroupIdSuffix;
+    public GETCreateGlobalReplicationGroupRequest withGlobalReplicationGroupIdSuffix(String globalReplicationGroupIdSuffix) {
+        this.globalReplicationGroupIdSuffix = globalReplicationGroupIdSuffix;
+        return this;
+    }
+    
+    /**
+     * The name of the primary cluster that accepts writes and will replicate updates to the secondary cluster.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PrimaryReplicationGroupId")
+    public String primaryReplicationGroupId;
+    public GETCreateGlobalReplicationGroupRequest withPrimaryReplicationGroupId(String primaryReplicationGroupId) {
+        this.primaryReplicationGroupId = primaryReplicationGroupId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETCreateGlobalReplicationGroupVersionEnum version;
+    public GETCreateGlobalReplicationGroupRequest withVersion(GETCreateGlobalReplicationGroupVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETCreateGlobalReplicationGroupRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETCreateGlobalReplicationGroupRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETCreateGlobalReplicationGroupRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETCreateGlobalReplicationGroupRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETCreateGlobalReplicationGroupRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETCreateGlobalReplicationGroupRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETCreateGlobalReplicationGroupRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

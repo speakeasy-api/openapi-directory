@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetShippingFulfillmentsRequest {
-    
-    public GetShippingFulfillmentsPathParams pathParams;
-    public GetShippingFulfillmentsRequest withPathParams(GetShippingFulfillmentsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetShippingFulfillmentsSecurity security;
-    public GetShippingFulfillmentsRequest withSecurity(GetShippingFulfillmentsSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the order. Order ID values are shown in My eBay/Seller Hub, and are also returned by the &lt;b&gt;getOrders&lt;/b&gt; method in the &lt;b&gt;orders.orderId&lt;/b&gt; field.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderId")
+    public String orderId;
+    public GetShippingFulfillmentsRequest withOrderId(String orderId) {
+        this.orderId = orderId;
         return this;
     }
     

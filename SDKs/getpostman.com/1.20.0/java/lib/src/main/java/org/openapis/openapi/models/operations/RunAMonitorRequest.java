@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RunAMonitorRequest {
-    
-    public RunAMonitorPathParams pathParams;
-    public RunAMonitorRequest withPathParams(RunAMonitorPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=monitor_uid")
+    public String monitorUid;
+    public RunAMonitorRequest withMonitorUid(String monitorUid) {
+        this.monitorUid = monitorUid;
         return this;
     }
     

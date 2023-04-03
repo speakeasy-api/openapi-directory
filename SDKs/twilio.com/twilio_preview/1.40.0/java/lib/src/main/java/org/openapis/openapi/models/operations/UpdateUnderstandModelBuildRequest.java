@@ -7,31 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateUnderstandModelBuildRequest {
-    
-    public UpdateUnderstandModelBuildPathParams pathParams;
-    public UpdateUnderstandModelBuildRequest withPathParams(UpdateUnderstandModelBuildPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public UpdateUnderstandModelBuildRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateUnderstandModelBuildUpdateUnderstandModelBuildRequest request;
-    public UpdateUnderstandModelBuildRequest withRequest(UpdateUnderstandModelBuildUpdateUnderstandModelBuildRequest request) {
-        this.request = request;
+    public UpdateUnderstandModelBuildUpdateUnderstandModelBuildRequest requestBody;
+    public UpdateUnderstandModelBuildRequest withRequestBody(UpdateUnderstandModelBuildUpdateUnderstandModelBuildRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateUnderstandModelBuildSecurity security;
-    public UpdateUnderstandModelBuildRequest withSecurity(UpdateUnderstandModelBuildSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateUnderstandModelBuildRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateUnderstandModelBuildRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

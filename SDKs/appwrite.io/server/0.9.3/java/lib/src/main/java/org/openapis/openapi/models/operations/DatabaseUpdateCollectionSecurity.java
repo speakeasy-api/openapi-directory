@@ -7,16 +7,16 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DatabaseUpdateCollectionSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeKey key;
-    public DatabaseUpdateCollectionSecurity withKey(org.openapis.openapi.models.shared.SchemeKey key) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Appwrite-Key")
+    public String key;
+    public DatabaseUpdateCollectionSecurity withKey(String key) {
         this.key = key;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeProject project;
-    public DatabaseUpdateCollectionSecurity withProject(org.openapis.openapi.models.shared.SchemeProject project) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Appwrite-Project")
+    public String project;
+    public DatabaseUpdateCollectionSecurity withProject(String project) {
         this.project = project;
         return this;
     }

@@ -7,31 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateMessageInteractionRequest {
-    
-    public CreateMessageInteractionPathParams pathParams;
-    public CreateMessageInteractionRequest withPathParams(CreateMessageInteractionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Participant](https://www.twilio.com/docs/proxy/api/participant) resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ParticipantSid")
+    public String participantSid;
+    public CreateMessageInteractionRequest withParticipantSid(String participantSid) {
+        this.participantSid = participantSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateMessageInteractionCreateMessageInteractionRequest request;
-    public CreateMessageInteractionRequest withRequest(CreateMessageInteractionCreateMessageInteractionRequest request) {
-        this.request = request;
+    public CreateMessageInteractionCreateMessageInteractionRequest requestBody;
+    public CreateMessageInteractionRequest withRequestBody(CreateMessageInteractionCreateMessageInteractionRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateMessageInteractionSecurity security;
-    public CreateMessageInteractionRequest withSecurity(CreateMessageInteractionSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public CreateMessageInteractionRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public CreateMessageInteractionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the parent [Session](https://www.twilio.com/docs/proxy/api/session) resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=SessionSid")
+    public String sessionSid;
+    public CreateMessageInteractionRequest withSessionSid(String sessionSid) {
+        this.sessionSid = sessionSid;
         return this;
     }
     

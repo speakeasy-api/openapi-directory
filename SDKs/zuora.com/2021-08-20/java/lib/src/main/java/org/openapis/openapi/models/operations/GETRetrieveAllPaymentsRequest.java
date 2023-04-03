@@ -4,20 +4,252 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRetrieveAllPaymentsRequest {
-    
-    public GETRetrieveAllPaymentsQueryParams queryParams;
-    public GETRetrieveAllPaymentsRequest withQueryParams(GETRetrieveAllPaymentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Entity-Ids")
+    public String zuoraEntityIds;
+    public GETRetrieveAllPaymentsRequest withZuoraEntityIds(String zuoraEntityIds) {
+        this.zuoraEntityIds = zuoraEntityIds;
         return this;
     }
     
+    /**
+     * A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+     * 
+     * The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Track-Id")
+    public String zuoraTrackId;
+    public GETRetrieveAllPaymentsRequest withZuoraTrackId(String zuoraTrackId) {
+        this.zuoraTrackId = zuoraTrackId;
+        return this;
+    }
     
-    public GETRetrieveAllPaymentsHeaders headers;
-    public GETRetrieveAllPaymentsRequest withHeaders(GETRetrieveAllPaymentsHeaders headers) {
-        this.headers = headers;
+    /**
+     * This parameter filters the response based on the `accountId` field.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountId")
+    public String accountId;
+    public GETRetrieveAllPaymentsRequest withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `amount` field.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=amount")
+    public Double amount;
+    public GETRetrieveAllPaymentsRequest withAmount(Double amount) {
+        this.amount = amount;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `appliedAmount` field.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appliedAmount")
+    public Double appliedAmount;
+    public GETRetrieveAllPaymentsRequest withAppliedAmount(Double appliedAmount) {
+        this.appliedAmount = appliedAmount;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `createdById` field.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdById")
+    public String createdById;
+    public GETRetrieveAllPaymentsRequest withCreatedById(String createdById) {
+        this.createdById = createdById;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `createdDate` field.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdDate")
+    public OffsetDateTime createdDate;
+    public GETRetrieveAllPaymentsRequest withCreatedDate(OffsetDateTime createdDate) {
+        this.createdDate = createdDate;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `creditBalanceAmount` field.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=creditBalanceAmount")
+    public Double creditBalanceAmount;
+    public GETRetrieveAllPaymentsRequest withCreditBalanceAmount(Double creditBalanceAmount) {
+        this.creditBalanceAmount = creditBalanceAmount;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `currency` field.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currency")
+    public String currency;
+    public GETRetrieveAllPaymentsRequest withCurrency(String currency) {
+        this.currency = currency;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `effectiveDate` field.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=effectiveDate")
+    public OffsetDateTime effectiveDate;
+    public GETRetrieveAllPaymentsRequest withEffectiveDate(OffsetDateTime effectiveDate) {
+        this.effectiveDate = effectiveDate;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `number` field.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
+    public String number;
+    public GETRetrieveAllPaymentsRequest withNumber(String number) {
+        this.number = number;
+        return this;
+    }
+    
+    /**
+     * Number of rows returned per page.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public GETRetrieveAllPaymentsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `refundAmount` field.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=refundAmount")
+    public Double refundAmount;
+    public GETRetrieveAllPaymentsRequest withRefundAmount(Double refundAmount) {
+        this.refundAmount = refundAmount;
+        return this;
+    }
+    
+    /**
+     * This parameter restricts the order of the data returned in the response. You can use this parameter to supply a dimension you want to sort on.
+     * 
+     * A sortable field uses the following form: 
+     * 
+     * *operator* *field_name*
+     * 
+     * You can use at most two sortable fields in one URL path. Use a comma to separate sortable fields. For example:  *operator* *field_name*, *operator* *field_name*  
+     * 
+     * *operator* is used to mark the order of sequencing. The operator is optional. If you only specify the sortable field without any operator, the response data is sorted in descending order by this field.
+     * 
+     *   - The `-` operator indicates an ascending order.
+     *   - The `+` operator indicates a descending order.
+     * 
+     * By default, the response data is displayed in descending order by payment number.
+     * 
+     * *field_name* indicates the name of a sortable field. The supported sortable fields of this operation are as below:
+     * 
+     *   - number
+     *   - accountId
+     *   - amount
+     *   - appliedAmount
+     *   - unappliedAmount
+     *   - refundAmount
+     *   - creditBalanceAmount
+     *   - effectiveDate
+     *   - createdDate
+     *   - createdById
+     *   - updatedDate
+     *   - updatedById
+     *   
+     * Examples:
+     * 
+     * - /v1/payments?sort=+number
+     * 
+     * - /v1/payments?status=Processed&amp;sort=-number,+amount
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GETRetrieveAllPaymentsRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `status` field.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public GETRetrieveAllPaymentsStatusEnum status;
+    public GETRetrieveAllPaymentsRequest withStatus(GETRetrieveAllPaymentsStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `type` field.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public GETRetrieveAllPaymentsTypeEnum type;
+    public GETRetrieveAllPaymentsRequest withType(GETRetrieveAllPaymentsTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `unappliedAmount` field.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unappliedAmount")
+    public Double unappliedAmount;
+    public GETRetrieveAllPaymentsRequest withUnappliedAmount(Double unappliedAmount) {
+        this.unappliedAmount = unappliedAmount;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `updatedById` field.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedById")
+    public String updatedById;
+    public GETRetrieveAllPaymentsRequest withUpdatedById(String updatedById) {
+        this.updatedById = updatedById;
+        return this;
+    }
+    
+    /**
+     * This parameter filters the response based on the `updatedDate` field.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedDate")
+    public OffsetDateTime updatedDate;
+    public GETRetrieveAllPaymentsRequest withUpdatedDate(OffsetDateTime updatedDate) {
+        this.updatedDate = updatedDate;
         return this;
     }
     

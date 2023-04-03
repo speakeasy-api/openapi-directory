@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ResendTokenRequest {
-    
-    public ResendTokenPathParams pathParams;
-    public ResendTokenRequest withPathParams(ResendTokenPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The type of token to resend
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ResendTokenRequest request;
-    public ResendTokenRequest withRequest(org.openapis.openapi.models.shared.ResendTokenRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ResendTokenRequest resendTokenRequest;
+    public ResendTokenRequest withResendTokenRequest(org.openapis.openapi.models.shared.ResendTokenRequest resendTokenRequest) {
+        this.resendTokenRequest = resendTokenRequest;
+        return this;
+    }
+    
+    /**
+     * The UUID of the User.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public ResendTokenRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

@@ -7,17 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutPensionIntoEmployerRequest {
-    
-    public PutPensionIntoEmployerPathParams pathParams;
-    public PutPensionIntoEmployerRequest withPathParams(PutPensionIntoEmployerPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The version of the api to target. Omit or set as &amp;apos;default&amp;apos; to target the current api version.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Version")
+    public String apiVersion;
+    public PutPensionIntoEmployerRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
+    /**
+     * The OAuth 1 authorization header. &amp;apos;Auto&amp;apos; enables auto complete.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PutPensionIntoEmployerRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
+        return this;
+    }
     
-    public PutPensionIntoEmployerHeaders headers;
-    public PutPensionIntoEmployerRequest withHeaders(PutPensionIntoEmployerHeaders headers) {
-        this.headers = headers;
+    /**
+     * The employers' unique identifier. E.g ER001
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EmployerId")
+    public String employerId;
+    public PutPensionIntoEmployerRequest withEmployerId(String employerId) {
+        this.employerId = employerId;
         return this;
     }
     
@@ -25,9 +41,19 @@ public class PutPensionIntoEmployerRequest {
      * The pension object.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Pension request;
-    public PutPensionIntoEmployerRequest withRequest(org.openapis.openapi.models.shared.Pension request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Pension pension;
+    public PutPensionIntoEmployerRequest withPension(org.openapis.openapi.models.shared.Pension pension) {
+        this.pension = pension;
+        return this;
+    }
+    
+    /**
+     * The pensions' unique identifier. E.g PEN001
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=PensionId")
+    public String pensionId;
+    public PutPensionIntoEmployerRequest withPensionId(String pensionId) {
+        this.pensionId = pensionId;
         return this;
     }
     

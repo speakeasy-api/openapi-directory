@@ -36,19 +36,20 @@ public class Indian {
     /**
      * [USES 10 UNITS PER NAME] Infer the likely Indian name castegroup of a personal full name.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CastegroupIndianFullResponse castegroupIndianFull(org.openapis.openapi.models.operations.CastegroupIndianFullRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CastegroupIndianFullResponse castegroupIndianFull(org.openapis.openapi.models.operations.CastegroupIndianFullRequest request, org.openapis.openapi.models.operations.CastegroupIndianFullSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CastegroupIndianFullPathParams.class, baseUrl, "/api2/json/castegroupIndianFull/{subDivisionIso31662}/{personalNameFull}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CastegroupIndianFullRequest.class, baseUrl, "/api2/json/castegroupIndianFull/{subDivisionIso31662}/{personalNameFull}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -77,10 +78,11 @@ public class Indian {
     /**
      * [USES 10 UNITS PER NAME] Infer the likely Indian name castegroup of up to 100 personal full names. 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CastegroupIndianFullBatchResponse castegroupIndianFullBatch(org.openapis.openapi.models.operations.CastegroupIndianFullBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CastegroupIndianFullBatchResponse castegroupIndianFullBatch(org.openapis.openapi.models.shared.BatchPersonalNameSubdivisionIn request, org.openapis.openapi.models.operations.CastegroupIndianFullBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/castegroupIndianFullBatch");
         
@@ -91,7 +93,7 @@ public class Indian {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -120,19 +122,20 @@ public class Indian {
     /**
      * [USES 10 UNITS PER NAME] Infer the likely religion of a personal Indian full name, provided the Indian state or Union territory (NB/ this can be inferred using the subclassification endpoint).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReligionResponse religion(org.openapis.openapi.models.operations.ReligionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReligionResponse religion(org.openapis.openapi.models.operations.ReligionRequest request, org.openapis.openapi.models.operations.ReligionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReligionPathParams.class, baseUrl, "/api2/json/religionIndianFull/{subDivisionIso31662}/{personalNameFull}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReligionRequest.class, baseUrl, "/api2/json/religionIndianFull/{subDivisionIso31662}/{personalNameFull}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -161,10 +164,11 @@ public class Indian {
     /**
      * [USES 10 UNITS PER NAME] Infer the likely religion of up to 100 personal full Indian names, provided the subclassification at State or Union territory level (NB/ can be inferred using the subclassification endpoint).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReligionIndianFullBatchResponse religionIndianFullBatch(org.openapis.openapi.models.operations.ReligionIndianFullBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReligionIndianFullBatchResponse religionIndianFullBatch(org.openapis.openapi.models.shared.BatchPersonalNameSubdivisionIn request, org.openapis.openapi.models.operations.ReligionIndianFullBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/religionIndianFullBatch");
         
@@ -175,7 +179,7 @@ public class Indian {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -204,19 +208,20 @@ public class Indian {
     /**
      * [USES 10 UNITS PER NAME] Infer the likely Indian state of Union territory according to ISO 3166-2:IN based on the name.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SubclassificationIndianResponse subclassificationIndian(org.openapis.openapi.models.operations.SubclassificationIndianRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SubclassificationIndianResponse subclassificationIndian(org.openapis.openapi.models.operations.SubclassificationIndianRequest request, org.openapis.openapi.models.operations.SubclassificationIndianSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubclassificationIndianPathParams.class, baseUrl, "/api2/json/subclassificationIndian/{firstName}/{lastName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubclassificationIndianRequest.class, baseUrl, "/api2/json/subclassificationIndian/{firstName}/{lastName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -245,10 +250,11 @@ public class Indian {
     /**
      * [USES 10 UNITS PER NAME] Infer the likely Indian state of Union territory according to ISO 3166-2:IN based on a list of up to 100 names.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SubclassificationIndianBatchResponse subclassificationIndianBatch(org.openapis.openapi.models.operations.SubclassificationIndianBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SubclassificationIndianBatchResponse subclassificationIndianBatch(org.openapis.openapi.models.shared.BatchFirstLastNameGeoIn request, org.openapis.openapi.models.operations.SubclassificationIndianBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api2/json/subclassificationIndianBatch");
         
@@ -259,7 +265,7 @@ public class Indian {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

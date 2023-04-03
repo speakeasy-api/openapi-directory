@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFactSearchRequest {
-    
-    public GetFactSearchQueryParams queryParams;
-    public GetFactSearchRequest withQueryParams(GetFactSearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Category to get the fact from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
+    public String category;
+    public GetFactSearchRequest withCategory(String category) {
+        this.category = category;
         return this;
     }
     
+    /**
+     * Text to search for in the facts
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public GetFactSearchRequest withQuery(String query) {
+        this.query = query;
+        return this;
+    }
     
-    public GetFactSearchSecurity security;
-    public GetFactSearchRequest withSecurity(GetFactSearchSecurity security) {
-        this.security = security;
+    /**
+     * Sub Category to get the fact from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subcategory")
+    public String subcategory;
+    public GetFactSearchRequest withSubcategory(String subcategory) {
+        this.subcategory = subcategory;
         return this;
     }
     

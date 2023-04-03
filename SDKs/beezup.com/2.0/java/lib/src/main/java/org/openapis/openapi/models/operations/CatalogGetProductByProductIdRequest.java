@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CatalogGetProductByProductIdRequest {
+    /**
+     * The product identifier you want to get
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
+    public String productId;
+    public CatalogGetProductByProductIdRequest withProductId(String productId) {
+        this.productId = productId;
+        return this;
+    }
     
-    public CatalogGetProductByProductIdPathParams pathParams;
-    public CatalogGetProductByProductIdRequest withPathParams(CatalogGetProductByProductIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Your store identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public CatalogGetProductByProductIdRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

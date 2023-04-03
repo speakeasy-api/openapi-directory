@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppInvitationsDeleteRequest {
-    
-    public AppInvitationsDeletePathParams pathParams;
-    public AppInvitationsDeleteRequest withPathParams(AppInvitationsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public AppInvitationsDeleteRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public AppInvitationsDeleteRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
     
-    public AppInvitationsDeleteSecurity security;
-    public AppInvitationsDeleteRequest withSecurity(AppInvitationsDeleteSecurity security) {
-        this.security = security;
+    /**
+     * The email of the user to invite
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_email")
+    public String userEmail;
+    public AppInvitationsDeleteRequest withUserEmail(String userEmail) {
+        this.userEmail = userEmail;
         return this;
     }
     

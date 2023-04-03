@@ -4,27 +4,67 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsListForTeamDiscussionCommentRequest {
-    
-    public ReactionsListForTeamDiscussionCommentPathParams pathParams;
-    public ReactionsListForTeamDiscussionCommentRequest withPathParams(ReactionsListForTeamDiscussionCommentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * This API is under preview and subject to change.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=accept")
+    public String accept;
+    public ReactionsListForTeamDiscussionCommentRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public ReactionsListForTeamDiscussionCommentQueryParams queryParams;
-    public ReactionsListForTeamDiscussionCommentRequest withQueryParams(ReactionsListForTeamDiscussionCommentQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_number")
+    public Long commentNumber;
+    public ReactionsListForTeamDiscussionCommentRequest withCommentNumber(Long commentNumber) {
+        this.commentNumber = commentNumber;
         return this;
     }
     
+    /**
+     * Returns a single [reaction type](https://docs.github.com/enterprise-server@2.19/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a team discussion comment.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=content")
+    public ReactionsListForTeamDiscussionCommentContentEnum content;
+    public ReactionsListForTeamDiscussionCommentRequest withContent(ReactionsListForTeamDiscussionCommentContentEnum content) {
+        this.content = content;
+        return this;
+    }
     
-    public ReactionsListForTeamDiscussionCommentHeaders headers;
-    public ReactionsListForTeamDiscussionCommentRequest withHeaders(ReactionsListForTeamDiscussionCommentHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=discussion_number")
+    public Long discussionNumber;
+    public ReactionsListForTeamDiscussionCommentRequest withDiscussionNumber(Long discussionNumber) {
+        this.discussionNumber = discussionNumber;
+        return this;
+    }
+    
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ReactionsListForTeamDiscussionCommentRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ReactionsListForTeamDiscussionCommentRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
+    public Long teamId;
+    public ReactionsListForTeamDiscussionCommentRequest withTeamId(Long teamId) {
+        this.teamId = teamId;
         return this;
     }
     

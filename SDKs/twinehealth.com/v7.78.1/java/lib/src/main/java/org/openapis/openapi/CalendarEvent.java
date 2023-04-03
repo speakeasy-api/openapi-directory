@@ -41,7 +41,7 @@ public class CalendarEvent {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateCalendarEventResponse createCalendarEvent(org.openapis.openapi.models.operations.CreateCalendarEventRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateCalendarEventResponse createCalendarEvent(org.openapis.openapi.models.shared.CreateCalendarEventRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/calendar_event");
         
@@ -95,7 +95,7 @@ public class CalendarEvent {
      */
     public org.openapis.openapi.models.operations.DeleteCalendarEventResponse deleteCalendarEvent(org.openapis.openapi.models.operations.DeleteCalendarEventRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCalendarEventPathParams.class, baseUrl, "/calendar_event/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCalendarEventRequest.class, baseUrl, "/calendar_event/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -136,7 +136,7 @@ public class CalendarEvent {
      */
     public org.openapis.openapi.models.operations.FetchCalendarEventResponse fetchCalendarEvent(org.openapis.openapi.models.operations.FetchCalendarEventRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchCalendarEventPathParams.class, baseUrl, "/calendar_event/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchCalendarEventRequest.class, baseUrl, "/calendar_event/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -189,7 +189,7 @@ public class CalendarEvent {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FetchCalendarEventsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FetchCalendarEventsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -236,12 +236,12 @@ public class CalendarEvent {
      */
     public org.openapis.openapi.models.operations.UpdateCalendarEventResponse updateCalendarEvent(org.openapis.openapi.models.operations.UpdateCalendarEventRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCalendarEventPathParams.class, baseUrl, "/calendar_event/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCalendarEventRequest.class, baseUrl, "/calendar_event/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateCalendarEventRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

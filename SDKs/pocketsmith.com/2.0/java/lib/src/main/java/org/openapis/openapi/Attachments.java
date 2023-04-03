@@ -40,7 +40,7 @@ public class Attachments {
      */
     public org.openapis.openapi.models.operations.DeleteAttachmentsIdResponse deleteAttachmentsId(org.openapis.openapi.models.operations.DeleteAttachmentsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAttachmentsIdPathParams.class, baseUrl, "/attachments/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAttachmentsIdRequest.class, baseUrl, "/attachments/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -82,7 +82,7 @@ public class Attachments {
      */
     public org.openapis.openapi.models.operations.DeleteTransactionsTransactionIdAttachmentsAttachmentIdResponse deleteTransactionsTransactionIdAttachmentsAttachmentId(org.openapis.openapi.models.operations.DeleteTransactionsTransactionIdAttachmentsAttachmentIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteTransactionsTransactionIdAttachmentsAttachmentIdPathParams.class, baseUrl, "/transactions/{transaction_id}/attachments/{attachment_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteTransactionsTransactionIdAttachmentsAttachmentIdRequest.class, baseUrl, "/transactions/{transaction_id}/attachments/{attachment_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -124,7 +124,7 @@ public class Attachments {
      */
     public org.openapis.openapi.models.operations.GetAttachmentsIdResponse getAttachmentsId(org.openapis.openapi.models.operations.GetAttachmentsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAttachmentsIdPathParams.class, baseUrl, "/attachments/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAttachmentsIdRequest.class, baseUrl, "/attachments/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -172,7 +172,7 @@ public class Attachments {
      */
     public org.openapis.openapi.models.operations.GetTransactionsIdAttachmentsResponse getTransactionsIdAttachments(org.openapis.openapi.models.operations.GetTransactionsIdAttachmentsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTransactionsIdAttachmentsPathParams.class, baseUrl, "/transactions/{id}/attachments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTransactionsIdAttachmentsRequest.class, baseUrl, "/transactions/{id}/attachments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -220,13 +220,13 @@ public class Attachments {
      */
     public org.openapis.openapi.models.operations.GetUsersIdAttachmentsResponse getUsersIdAttachments(org.openapis.openapi.models.operations.GetUsersIdAttachmentsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdAttachmentsPathParams.class, baseUrl, "/users/{id}/attachments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdAttachmentsRequest.class, baseUrl, "/users/{id}/attachments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUsersIdAttachmentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUsersIdAttachmentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -274,12 +274,12 @@ public class Attachments {
      */
     public org.openapis.openapi.models.operations.PostTransactionsIdAttachmentsResponse postTransactionsIdAttachments(org.openapis.openapi.models.operations.PostTransactionsIdAttachmentsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTransactionsIdAttachmentsPathParams.class, baseUrl, "/transactions/{id}/attachments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTransactionsIdAttachmentsRequest.class, baseUrl, "/transactions/{id}/attachments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -324,12 +324,12 @@ public class Attachments {
      */
     public org.openapis.openapi.models.operations.PostUsersIdAttachmentsResponse postUsersIdAttachments(org.openapis.openapi.models.operations.PostUsersIdAttachmentsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostUsersIdAttachmentsPathParams.class, baseUrl, "/users/{id}/attachments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostUsersIdAttachmentsRequest.class, baseUrl, "/users/{id}/attachments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -374,12 +374,12 @@ public class Attachments {
      */
     public org.openapis.openapi.models.operations.PutAttachmentsIdResponse putAttachmentsId(org.openapis.openapi.models.operations.PutAttachmentsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutAttachmentsIdPathParams.class, baseUrl, "/attachments/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutAttachmentsIdRequest.class, baseUrl, "/attachments/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

@@ -4,13 +4,55 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListUserSSubscriptionGroupSmsRequest {
+    /**
+     * (Required*) String
+     * 
+     * The external_id of the user. Must include at least one and at most 50 `external_ids`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=external_id")
+    public String externalId;
+    public ListUserSSubscriptionGroupSmsRequest withExternalId(String externalId) {
+        this.externalId = externalId;
+        return this;
+    }
     
-    public ListUserSSubscriptionGroupSmsQueryParams queryParams;
-    public ListUserSSubscriptionGroupSmsRequest withQueryParams(ListUserSSubscriptionGroupSmsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * (Optional) Integer
+     * 
+     * The limit on the maximum number of results returned. Default (and max) limit is 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public String limit;
+    public ListUserSSubscriptionGroupSmsRequest withLimit(String limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * (Optional) Integer
+     * 
+     * Number of templates to skip before returning rest of the templates that fit the search criteria.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public String offset;
+    public ListUserSSubscriptionGroupSmsRequest withOffset(String offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * (Required*) String
+     * 
+     * The phone number of the user (must include at least one phone number and at most 50 phone numbers). The recommendation is to provide this in the E.164 format.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=phone")
+    public String phone;
+    public ListUserSSubscriptionGroupSmsRequest withPhone(String phone) {
+        this.phone = phone;
         return this;
     }
     

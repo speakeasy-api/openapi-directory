@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContentAspectIdRequest {
-    
-    public GetContentAspectIdPathParams pathParams;
-    public GetContentAspectIdRequest withPathParams(GetContentAspectIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The identifier of the 'aspect' (content group) to search
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=aspectId")
+    public GetContentAspectIDAspectIDEnum aspectId;
+    public GetContentAspectIdRequest withAspectId(GetContentAspectIDAspectIDEnum aspectId) {
+        this.aspectId = aspectId;
         return this;
     }
     

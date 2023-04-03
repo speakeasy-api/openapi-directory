@@ -4,27 +4,226 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TasksTasksListRequest {
-    
-    public TasksTasksListPathParams pathParams;
-    public TasksTasksListRequest withPathParams(TasksTasksListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public TasksTasksListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public TasksTasksListQueryParams queryParams;
-    public TasksTasksListRequest withQueryParams(TasksTasksListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public TasksTasksListRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public TasksTasksListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public TasksTasksListSecurity security;
-    public TasksTasksListRequest withSecurity(TasksTasksListSecurity security) {
-        this.security = security;
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public TasksTasksListRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Upper bound for a task's completion date (as a RFC 3339 timestamp) to filter by. Optional. The default is not to filter by completion date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=completedMax")
+    public String completedMax;
+    public TasksTasksListRequest withCompletedMax(String completedMax) {
+        this.completedMax = completedMax;
+        return this;
+    }
+    
+    /**
+     * Lower bound for a task's completion date (as a RFC 3339 timestamp) to filter by. Optional. The default is not to filter by completion date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=completedMin")
+    public String completedMin;
+    public TasksTasksListRequest withCompletedMin(String completedMin) {
+        this.completedMin = completedMin;
+        return this;
+    }
+    
+    /**
+     * Upper bound for a task's due date (as a RFC 3339 timestamp) to filter by. Optional. The default is not to filter by due date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dueMax")
+    public String dueMax;
+    public TasksTasksListRequest withDueMax(String dueMax) {
+        this.dueMax = dueMax;
+        return this;
+    }
+    
+    /**
+     * Lower bound for a task's due date (as a RFC 3339 timestamp) to filter by. Optional. The default is not to filter by due date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dueMin")
+    public String dueMin;
+    public TasksTasksListRequest withDueMin(String dueMin) {
+        this.dueMin = dueMin;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public TasksTasksListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public TasksTasksListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Maximum number of task lists returned on one page. Optional. The default is 20 (max allowed: 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public TasksTasksListRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public TasksTasksListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Token specifying the result page to return. Optional.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public TasksTasksListRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public TasksTasksListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public TasksTasksListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Flag indicating whether completed tasks are returned in the result. Optional. The default is True. Note that showHidden must also be True to show tasks completed in first party clients, such as the web UI and Google's mobile apps.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showCompleted")
+    public Boolean showCompleted;
+    public TasksTasksListRequest withShowCompleted(Boolean showCompleted) {
+        this.showCompleted = showCompleted;
+        return this;
+    }
+    
+    /**
+     * Flag indicating whether deleted tasks are returned in the result. Optional. The default is False.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showDeleted")
+    public Boolean showDeleted;
+    public TasksTasksListRequest withShowDeleted(Boolean showDeleted) {
+        this.showDeleted = showDeleted;
+        return this;
+    }
+    
+    /**
+     * Flag indicating whether hidden tasks are returned in the result. Optional. The default is False.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showHidden")
+    public Boolean showHidden;
+    public TasksTasksListRequest withShowHidden(Boolean showHidden) {
+        this.showHidden = showHidden;
+        return this;
+    }
+    
+    /**
+     * Task list identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tasklist")
+    public String tasklist;
+    public TasksTasksListRequest withTasklist(String tasklist) {
+        this.tasklist = tasklist;
+        return this;
+    }
+    
+    /**
+     * Lower bound for a task's last modification time (as a RFC 3339 timestamp) to filter by. Optional. The default is not to filter by last modification time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedMin")
+    public String updatedMin;
+    public TasksTasksListRequest withUpdatedMin(String updatedMin) {
+        this.updatedMin = updatedMin;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public TasksTasksListRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public TasksTasksListRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

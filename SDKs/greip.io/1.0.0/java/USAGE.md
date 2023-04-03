@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetBulkLookupQueryParams;
 import org.openapis.openapi.models.operations.GetBulkLookupRequest;
 import org.openapis.openapi.models.operations.GetBulkLookupResponse;
 
@@ -15,14 +14,12 @@ public class Application {
                 .build();
 
             GetBulkLookupRequest req = new GetBulkLookupRequest() {{
-                queryParams = new GetBulkLookupQueryParams() {{
-                    format = "XML";
-                    ips = "1.1.1.1,2.2.2.2";
-                    key = "2517bc4fc3f790e8f09bc808bb63b899";
-                    lang = "AR";
-                    params = "currency";
-                }};
-            }};            
+                format = "XML";
+                ips = "1.1.1.1,2.2.2.2";
+                key = "2517bc4fc3f790e8f09bc808bb63b899";
+                lang = "AR";
+                params = "currency";
+            }}            
 
             GetBulkLookupResponse res = sdk.getBulkLookup(req);
 

@@ -34,27 +34,28 @@ public class Queries {
     /**
      * Creates a query.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesCreateResponse doubleclickbidmanagerQueriesCreate(org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesCreateResponse doubleclickbidmanagerQueriesCreate(org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesCreateRequest request, org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/queries");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "queryInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,25 +82,26 @@ public class Queries {
     /**
      * Deletes a query as well as the associated reports.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesDeleteResponse doubleclickbidmanagerQueriesDelete(org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesDeleteResponse doubleclickbidmanagerQueriesDelete(org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesDeleteRequest request, org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesDeletePathParams.class, baseUrl, "/queries/{queryId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesDeleteRequest.class, baseUrl, "/queries/{queryId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -120,25 +122,26 @@ public class Queries {
     /**
      * Retrieves a query.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesGetResponse doubleclickbidmanagerQueriesGet(org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesGetResponse doubleclickbidmanagerQueriesGet(org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesGetRequest request, org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesGetPathParams.class, baseUrl, "/queries/{queryId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesGetRequest.class, baseUrl, "/queries/{queryId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -165,10 +168,11 @@ public class Queries {
     /**
      * Lists queries created by the current user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesListResponse doubleclickbidmanagerQueriesList(org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesListResponse doubleclickbidmanagerQueriesList(org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesListRequest request, org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/queries");
         
@@ -176,14 +180,14 @@ public class Queries {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -210,25 +214,26 @@ public class Queries {
     /**
      * Retrieves a report.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesReportsGetResponse doubleclickbidmanagerQueriesReportsGet(org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesReportsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesReportsGetResponse doubleclickbidmanagerQueriesReportsGet(org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesReportsGetRequest request, org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesReportsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesReportsGetPathParams.class, baseUrl, "/queries/{queryId}/reports/{reportId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesReportsGetRequest.class, baseUrl, "/queries/{queryId}/reports/{reportId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesReportsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesReportsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -255,25 +260,26 @@ public class Queries {
     /**
      * Lists reports associated with a query.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesReportsListResponse doubleclickbidmanagerQueriesReportsList(org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesReportsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesReportsListResponse doubleclickbidmanagerQueriesReportsList(org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesReportsListRequest request, org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesReportsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesReportsListPathParams.class, baseUrl, "/queries/{queryId}/reports", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesReportsListRequest.class, baseUrl, "/queries/{queryId}/reports", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesReportsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesReportsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -300,27 +306,28 @@ public class Queries {
     /**
      * Runs a stored query to generate a report.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesRunResponse doubleclickbidmanagerQueriesRun(org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesRunRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesRunResponse doubleclickbidmanagerQueriesRun(org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesRunRequest request, org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesRunSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesRunPathParams.class, baseUrl, "/queries/{queryId}:run", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesRunRequest.class, baseUrl, "/queries/{queryId}:run", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "runQueryRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesRunQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DoubleclickbidmanagerQueriesRunRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

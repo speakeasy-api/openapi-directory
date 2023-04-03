@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseRequest {
-    
-    public EnterpriseAdminListSelfHostedRunnerGroupsForEnterprisePathParams pathParams;
-    public EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseRequest withPathParams(EnterpriseAdminListSelfHostedRunnerGroupsForEnterprisePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
+    public String enterprise;
+    public EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseRequest withEnterprise(String enterprise) {
+        this.enterprise = enterprise;
         return this;
     }
     
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseQueryParams queryParams;
-    public EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseRequest withQueryParams(EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Only return runner groups that are allowed to be used by this organization.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=visible_to_organization")
+    public String visibleToOrganization;
+    public EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseRequest withVisibleToOrganization(String visibleToOrganization) {
+        this.visibleToOrganization = visibleToOrganization;
         return this;
     }
     

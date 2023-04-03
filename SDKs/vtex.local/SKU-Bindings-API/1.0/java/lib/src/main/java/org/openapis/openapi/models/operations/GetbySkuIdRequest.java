@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetbySkuIdRequest {
-    
-    public GetbySkuIdPathParams pathParams;
-    public GetbySkuIdRequest withPathParams(GetbySkuIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetbySkuIdRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetbySkuIdRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetbySkuIdHeaders headers;
-    public GetbySkuIdRequest withHeaders(GetbySkuIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * SKU's unique identifier in the marketplace.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=skuId")
+    public String skuId;
+    public GetbySkuIdRequest withSkuId(String skuId) {
+        this.skuId = skuId;
         return this;
     }
     

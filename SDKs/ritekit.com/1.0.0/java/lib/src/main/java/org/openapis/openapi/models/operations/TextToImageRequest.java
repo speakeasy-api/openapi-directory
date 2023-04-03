@@ -4,13 +4,176 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TextToImageRequest {
+    /**
+     * Animation type: none, rays, glint, circle
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=animation")
+    public String animation;
+    public TextToImageRequest withAnimation(String animation) {
+        this.animation = animation;
+        return this;
+    }
     
-    public TextToImageQueryParams queryParams;
-    public TextToImageRequest withQueryParams(TextToImageQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Name of the author/source
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=author")
+    public String author;
+    public TextToImageRequest withAuthor(String author) {
+        this.author = author;
+        return this;
+    }
+    
+    /**
+     * Font-family used for author name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authorFont")
+    public String authorFont;
+    public TextToImageRequest withAuthorFont(String authorFont) {
+        this.authorFont = authorFont;
+        return this;
+    }
+    
+    /**
+     * Font color of the author
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authorFontColor")
+    public String authorFontColor;
+    public TextToImageRequest withAuthorFontColor(String authorFontColor) {
+        this.authorFontColor = authorFontColor;
+        return this;
+    }
+    
+    /**
+     * Background color for solid background type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=backgroundColor")
+    public String backgroundColor;
+    public TextToImageRequest withBackgroundColor(String backgroundColor) {
+        this.backgroundColor = backgroundColor;
+        return this;
+    }
+    
+    /**
+     * Background type (gradient/solid)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bgType")
+    public String bgType;
+    public TextToImageRequest withBgType(String bgType) {
+        this.bgType = bgType;
+        return this;
+    }
+    
+    /**
+     * URL of the brand logo
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=brandLogo")
+    public String brandLogo;
+    public TextToImageRequest withBrandLogo(String brandLogo) {
+        this.brandLogo = brandLogo;
+        return this;
+    }
+    
+    /**
+     * Enable highlight on quote text
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enableHighlight")
+    public Long enableHighlight;
+    public TextToImageRequest withEnableHighlight(Long enableHighlight) {
+        this.enableHighlight = enableHighlight;
+        return this;
+    }
+    
+    /**
+     * Font size for the quote (author font size is calculated automatically)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fontSize")
+    public Long fontSize;
+    public TextToImageRequest withFontSize(Long fontSize) {
+        this.fontSize = fontSize;
+        return this;
+    }
+    
+    /**
+     * First color for gradient background type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gradientColor1")
+    public String gradientColor1;
+    public TextToImageRequest withGradientColor1(String gradientColor1) {
+        this.gradientColor1 = gradientColor1;
+        return this;
+    }
+    
+    /**
+     * Second color for gradient background type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gradientColor2")
+    public String gradientColor2;
+    public TextToImageRequest withGradientColor2(String gradientColor2) {
+        this.gradientColor2 = gradientColor2;
+        return this;
+    }
+    
+    /**
+     * Type of gradient background (linear/radial)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gradientType")
+    public String gradientType;
+    public TextToImageRequest withGradientType(String gradientType) {
+        this.gradientType = gradientType;
+        return this;
+    }
+    
+    /**
+     * Color used for highlight
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=highlightColor")
+    public String highlightColor;
+    public TextToImageRequest withHighlightColor(String highlightColor) {
+        this.highlightColor = highlightColor;
+        return this;
+    }
+    
+    /**
+     * Text of the quote
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quote")
+    public String quote;
+    public TextToImageRequest withQuote(String quote) {
+        this.quote = quote;
+        return this;
+    }
+    
+    /**
+     * Font-family used for quote text
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quoteFont")
+    public String quoteFont;
+    public TextToImageRequest withQuoteFont(String quoteFont) {
+        this.quoteFont = quoteFont;
+        return this;
+    }
+    
+    /**
+     * Font color of the quote text
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quoteFontColor")
+    public String quoteFontColor;
+    public TextToImageRequest withQuoteFontColor(String quoteFontColor) {
+        this.quoteFontColor = quoteFontColor;
+        return this;
+    }
+    
+    /**
+     * showing/hiding quote mark
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showQuoteMark")
+    public Long showQuoteMark;
+    public TextToImageRequest withShowQuoteMark(Long showQuoteMark) {
+        this.showQuoteMark = showQuoteMark;
         return this;
     }
     

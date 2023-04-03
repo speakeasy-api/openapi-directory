@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateOrganizationVpnFirewallRulesRequest {
-    
-    public UpdateOrganizationVpnFirewallRulesPathParams pathParams;
-    public UpdateOrganizationVpnFirewallRulesRequest withPathParams(UpdateOrganizationVpnFirewallRulesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateOrganizationVpnFirewallRulesRequestBody requestBody;
+    public UpdateOrganizationVpnFirewallRulesRequest withRequestBody(UpdateOrganizationVpnFirewallRulesRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateOrganizationVpnFirewallRulesRequestBody request;
-    public UpdateOrganizationVpnFirewallRulesRequest withRequest(UpdateOrganizationVpnFirewallRulesRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public UpdateOrganizationVpnFirewallRulesRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

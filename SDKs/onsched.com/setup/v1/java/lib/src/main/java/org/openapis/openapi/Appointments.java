@@ -45,7 +45,7 @@ public class Appointments {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1AppointmentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSetupV1AppointmentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -85,7 +85,7 @@ public class Appointments {
      */
     public org.openapis.openapi.models.operations.GetSetupV1AppointmentsIdResponse getSetupV1AppointmentsId(org.openapis.openapi.models.operations.GetSetupV1AppointmentsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1AppointmentsIdPathParams.class, baseUrl, "/setup/v1/appointments/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetupV1AppointmentsIdRequest.class, baseUrl, "/setup/v1/appointments/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -125,7 +125,7 @@ public class Appointments {
      */
     public org.openapis.openapi.models.operations.PutSetupV1AppointmentsIdReassignResourceResourceIdResponse putSetupV1AppointmentsIdReassignResourceResourceId(org.openapis.openapi.models.operations.PutSetupV1AppointmentsIdReassignResourceResourceIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1AppointmentsIdReassignResourceResourceIdPathParams.class, baseUrl, "/setup/v1/appointments/{id}/reassign/resource/{resourceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSetupV1AppointmentsIdReassignResourceResourceIdRequest.class, baseUrl, "/setup/v1/appointments/{id}/reassign/resource/{resourceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

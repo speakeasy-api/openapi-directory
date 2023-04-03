@@ -40,7 +40,7 @@ public class Order {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchQosRulesOrderResponse getNetworkSwitchQosRulesOrder(org.openapis.openapi.models.operations.GetNetworkSwitchQosRulesOrderRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchQosRulesOrderPathParams.class, baseUrl, "/networks/{networkId}/switch/qosRules/order", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchQosRulesOrderRequest.class, baseUrl, "/networks/{networkId}/switch/qosRules/order", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,12 +80,12 @@ public class Order {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSwitchQosRulesOrderResponse updateNetworkSwitchQosRulesOrder(org.openapis.openapi.models.operations.UpdateNetworkSwitchQosRulesOrderRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchQosRulesOrderPathParams.class, baseUrl, "/networks/{networkId}/switch/qosRules/order", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchQosRulesOrderRequest.class, baseUrl, "/networks/{networkId}/switch/qosRules/order", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

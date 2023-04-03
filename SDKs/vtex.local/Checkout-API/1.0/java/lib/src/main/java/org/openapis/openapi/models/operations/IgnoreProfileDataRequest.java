@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IgnoreProfileDataRequest {
-    
-    public IgnoreProfileDataPathParams pathParams;
-    public IgnoreProfileDataRequest withPathParams(IgnoreProfileDataPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public IgnoreProfileDataRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public IgnoreProfileDataHeaders headers;
-    public IgnoreProfileDataRequest withHeaders(IgnoreProfileDataHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public IgnoreProfileDataRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public IgnoreProfileDataRequestBody request;
-    public IgnoreProfileDataRequest withRequest(IgnoreProfileDataRequestBody request) {
-        this.request = request;
+    public IgnoreProfileDataRequestBody requestBody;
+    public IgnoreProfileDataRequest withRequestBody(IgnoreProfileDataRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * ID of the orderForm corresponding to the cart whose items will have the price changed.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderFormId")
+    public String orderFormId;
+    public IgnoreProfileDataRequest withOrderFormId(String orderFormId) {
+        this.orderFormId = orderFormId;
         return this;
     }
     

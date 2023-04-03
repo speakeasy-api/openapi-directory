@@ -40,12 +40,12 @@ public class VLANs {
      */
     public org.openapis.openapi.models.operations.CreateNetworkVlanResponse createNetworkVlan(org.openapis.openapi.models.operations.CreateNetworkVlanRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkVlanPathParams.class, baseUrl, "/networks/{networkId}/vlans", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkVlanRequest.class, baseUrl, "/networks/{networkId}/vlans", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -85,7 +85,7 @@ public class VLANs {
      */
     public org.openapis.openapi.models.operations.DeleteNetworkVlanResponse deleteNetworkVlan(org.openapis.openapi.models.operations.DeleteNetworkVlanRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkVlanPathParams.class, baseUrl, "/networks/{networkId}/vlans/{vlanId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkVlanRequest.class, baseUrl, "/networks/{networkId}/vlans/{vlanId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -119,7 +119,7 @@ public class VLANs {
      */
     public org.openapis.openapi.models.operations.GetNetworkVlanResponse getNetworkVlan(org.openapis.openapi.models.operations.GetNetworkVlanRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkVlanPathParams.class, baseUrl, "/networks/{networkId}/vlans/{vlanId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkVlanRequest.class, baseUrl, "/networks/{networkId}/vlans/{vlanId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -159,7 +159,7 @@ public class VLANs {
      */
     public org.openapis.openapi.models.operations.GetNetworkVlansResponse getNetworkVlans(org.openapis.openapi.models.operations.GetNetworkVlansRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkVlansPathParams.class, baseUrl, "/networks/{networkId}/vlans", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkVlansRequest.class, baseUrl, "/networks/{networkId}/vlans", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -199,7 +199,7 @@ public class VLANs {
      */
     public org.openapis.openapi.models.operations.GetNetworkVlansEnabledStateResponse getNetworkVlansEnabledState(org.openapis.openapi.models.operations.GetNetworkVlansEnabledStateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkVlansEnabledStatePathParams.class, baseUrl, "/networks/{networkId}/vlansEnabledState", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkVlansEnabledStateRequest.class, baseUrl, "/networks/{networkId}/vlansEnabledState", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -239,12 +239,12 @@ public class VLANs {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkVlanResponse updateNetworkVlan(org.openapis.openapi.models.operations.UpdateNetworkVlanRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkVlanPathParams.class, baseUrl, "/networks/{networkId}/vlans/{vlanId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkVlanRequest.class, baseUrl, "/networks/{networkId}/vlans/{vlanId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -281,12 +281,12 @@ public class VLANs {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkVlansEnabledStateResponse updateNetworkVlansEnabledState(org.openapis.openapi.models.operations.UpdateNetworkVlansEnabledStateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkVlansEnabledStatePathParams.class, baseUrl, "/networks/{networkId}/vlansEnabledState", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkVlansEnabledStateRequest.class, baseUrl, "/networks/{networkId}/vlansEnabledState", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

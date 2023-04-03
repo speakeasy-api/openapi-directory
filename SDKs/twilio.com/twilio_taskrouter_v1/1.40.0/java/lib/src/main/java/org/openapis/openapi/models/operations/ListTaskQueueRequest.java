@@ -4,34 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListTaskQueueRequest {
-    
-    public ListTaskQueuePathParams pathParams;
-    public ListTaskQueueRequest withPathParams(ListTaskQueuePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The attributes of the Workers to read. Returns the TaskQueues with Workers that match the attributes specified in this parameter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EvaluateWorkerAttributes")
+    public String evaluateWorkerAttributes;
+    public ListTaskQueueRequest withEvaluateWorkerAttributes(String evaluateWorkerAttributes) {
+        this.evaluateWorkerAttributes = evaluateWorkerAttributes;
         return this;
     }
     
-    
-    public ListTaskQueueQueryParams queryParams;
-    public ListTaskQueueRequest withQueryParams(ListTaskQueueQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The `friendly_name` of the TaskQueue resources to read.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FriendlyName")
+    public String friendlyName;
+    public ListTaskQueueRequest withFriendlyName(String friendlyName) {
+        this.friendlyName = friendlyName;
         return this;
     }
     
-    
-    public ListTaskQueueSecurity security;
-    public ListTaskQueueRequest withSecurity(ListTaskQueueSecurity security) {
-        this.security = security;
+    /**
+     * Sorting parameter for TaskQueues
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Ordering")
+    public String ordering;
+    public ListTaskQueueRequest withOrdering(String ordering) {
+        this.ordering = ordering;
         return this;
     }
     
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListTaskQueueRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public String serverURL;
-    public ListTaskQueueRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListTaskQueueRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListTaskQueueRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * The SID of the Worker with the TaskQueue resources to read.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=WorkerSid")
+    public String workerSid;
+    public ListTaskQueueRequest withWorkerSid(String workerSid) {
+        this.workerSid = workerSid;
+        return this;
+    }
+    
+    /**
+     * The SID of the Workspace with the TaskQueue to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkspaceSid")
+    public String workspaceSid;
+    public ListTaskQueueRequest withWorkspaceSid(String workspaceSid) {
+        this.workspaceSid = workspaceSid;
         return this;
     }
     

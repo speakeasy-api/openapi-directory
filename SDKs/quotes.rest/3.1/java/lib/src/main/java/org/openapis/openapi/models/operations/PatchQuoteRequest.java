@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchQuoteRequest {
-    
-    public PatchQuoteQueryParams queryParams;
-    public PatchQuoteRequest withQueryParams(PatchQuoteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Quote Author
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=author")
+    public String author;
+    public PatchQuoteRequest withAuthor(String author) {
+        this.author = author;
         return this;
     }
     
+    /**
+     * Quote ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public PatchQuoteRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PatchQuoteSecurity security;
-    public PatchQuoteRequest withSecurity(PatchQuoteSecurity security) {
-        this.security = security;
+    /**
+     * Language. If not supplied an auto detection mechanism will be used to detect a language.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public String language;
+    public PatchQuoteRequest withLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    
+    /**
+     * Quote
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quote")
+    public String quote;
+    public PatchQuoteRequest withQuote(String quote) {
+        this.quote = quote;
+        return this;
+    }
+    
+    /**
+     * Comma Separated tags
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
+    public String tags;
+    public PatchQuoteRequest withTags(String tags) {
+        this.tags = tags;
         return this;
     }
     

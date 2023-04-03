@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountTypesRequest {
-    
-    public GetAccountTypesQueryParams queryParams;
-    public GetAccountTypesRequest withQueryParams(GetAccountTypesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public GetAccountTypesRequest withExpand(String expand) {
+        this.expand = expand;
         return this;
     }
     

@@ -51,7 +51,7 @@ public class ServerTypes {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetServerTypesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetServerTypesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -90,7 +90,7 @@ public class ServerTypes {
      */
     public org.openapis.openapi.models.operations.GetServerTypesIdResponse getServerTypesId(org.openapis.openapi.models.operations.GetServerTypesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetServerTypesIdPathParams.class, baseUrl, "/server_types/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetServerTypesIdRequest.class, baseUrl, "/server_types/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -45,12 +45,12 @@ public class Sets {
      */
     public org.openapis.openapi.models.operations.AddItemIdsListResponse addItemIdsList(org.openapis.openapi.models.operations.AddItemIdsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddItemIdsListPathParams.class, baseUrl, "/sets/itemlists/{id}/ids", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddItemIdsListRequest.class, baseUrl, "/sets/itemlists/{id}/ids", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -89,12 +89,12 @@ public class Sets {
      */
     public org.openapis.openapi.models.operations.AddItemIdsSpotListResponse addItemIdsSpotList(org.openapis.openapi.models.operations.AddItemIdsSpotListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddItemIdsSpotListPathParams.class, baseUrl, "/sets/spotlists/{id}/ids", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddItemIdsSpotListRequest.class, baseUrl, "/sets/spotlists/{id}/ids", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -131,7 +131,7 @@ public class Sets {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddItemListResponse addItemList(org.openapis.openapi.models.operations.AddItemListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddItemListResponse addItemList(org.openapis.openapi.models.shared.ItemListInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/sets/itemlists");
         
@@ -175,7 +175,7 @@ public class Sets {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddSpotListResponse addSpotList(org.openapis.openapi.models.operations.AddSpotListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddSpotListResponse addSpotList(org.openapis.openapi.models.shared.ItemListInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/sets/spotlists");
         
@@ -221,7 +221,7 @@ public class Sets {
      */
     public org.openapis.openapi.models.operations.DeleteItemIdFromItemListResponse deleteItemIdFromItemList(org.openapis.openapi.models.operations.DeleteItemIdFromItemListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteItemIdFromItemListPathParams.class, baseUrl, "/sets/itemlists/{id}/ids/{itemId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteItemIdFromItemListRequest.class, baseUrl, "/sets/itemlists/{id}/ids/{itemId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -260,7 +260,7 @@ public class Sets {
      */
     public org.openapis.openapi.models.operations.DeleteItemIdFromSpotListResponse deleteItemIdFromSpotList(org.openapis.openapi.models.operations.DeleteItemIdFromSpotListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteItemIdFromSpotListPathParams.class, baseUrl, "/sets/spotlists/{id}/ids/{itemId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteItemIdFromSpotListRequest.class, baseUrl, "/sets/spotlists/{id}/ids/{itemId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -299,7 +299,7 @@ public class Sets {
      */
     public org.openapis.openapi.models.operations.DeleteItemSetResponse deleteItemSet(org.openapis.openapi.models.operations.DeleteItemSetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteItemSetPathParams.class, baseUrl, "/sets/itemlists/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteItemSetRequest.class, baseUrl, "/sets/itemlists/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -338,7 +338,7 @@ public class Sets {
      */
     public org.openapis.openapi.models.operations.DeleteSpotListResponse deleteSpotList(org.openapis.openapi.models.operations.DeleteSpotListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpotListPathParams.class, baseUrl, "/sets/spotlists/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSpotListRequest.class, baseUrl, "/sets/spotlists/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -377,7 +377,7 @@ public class Sets {
      */
     public org.openapis.openapi.models.operations.GetItemListByIdResponse getItemListById(org.openapis.openapi.models.operations.GetItemListByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetItemListByIdPathParams.class, baseUrl, "/sets/itemlists/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetItemListByIdRequest.class, baseUrl, "/sets/itemlists/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -416,7 +416,7 @@ public class Sets {
      */
     public org.openapis.openapi.models.operations.GetItemListIdsByIdResponse getItemListIdsById(org.openapis.openapi.models.operations.GetItemListIdsByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetItemListIdsByIdPathParams.class, baseUrl, "/sets/itemlists/{id}/ids", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetItemListIdsByIdRequest.class, baseUrl, "/sets/itemlists/{id}/ids", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -461,7 +461,7 @@ public class Sets {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetItemListsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetItemListsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -500,7 +500,7 @@ public class Sets {
      */
     public org.openapis.openapi.models.operations.GetSpotListByIdResponse getSpotListById(org.openapis.openapi.models.operations.GetSpotListByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpotListByIdPathParams.class, baseUrl, "/sets/spotlists/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpotListByIdRequest.class, baseUrl, "/sets/spotlists/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -539,7 +539,7 @@ public class Sets {
      */
     public org.openapis.openapi.models.operations.GetSpotListIdsByIdResponse getSpotListIdsById(org.openapis.openapi.models.operations.GetSpotListIdsByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpotListIdsByIdPathParams.class, baseUrl, "/sets/spotlists/{id}/ids", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpotListIdsByIdRequest.class, baseUrl, "/sets/spotlists/{id}/ids", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -584,7 +584,7 @@ public class Sets {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpotListsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSpotListsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -623,12 +623,12 @@ public class Sets {
      */
     public org.openapis.openapi.models.operations.UpdateItemListResponse updateItemList(org.openapis.openapi.models.operations.UpdateItemListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateItemListPathParams.class, baseUrl, "/sets/itemlists/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateItemListRequest.class, baseUrl, "/sets/itemlists/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "itemListInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -667,12 +667,12 @@ public class Sets {
      */
     public org.openapis.openapi.models.operations.UpdateSpotListResponse updateSpotList(org.openapis.openapi.models.operations.UpdateSpotListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSpotListPathParams.class, baseUrl, "/sets/spotlists/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSpotListRequest.class, baseUrl, "/sets/spotlists/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "spotListInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

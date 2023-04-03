@@ -7,27 +7,53 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest {
-    
-    public PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonPathParams pathParams;
-    public PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest withPathParams(PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonQueryParams queryParams;
-    public PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest withQueryParams(PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * CustomFieldSelectOption parameters.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CustomFieldSelectOptionEdit request;
-    public PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest withRequest(org.openapis.openapi.models.shared.CustomFieldSelectOptionEdit request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CustomFieldSelectOptionEdit customFieldSelectOptionEdit;
+    public PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest withCustomFieldSelectOptionEdit(org.openapis.openapi.models.shared.CustomFieldSelectOptionEdit customFieldSelectOptionEdit) {
+        this.customFieldSelectOptionEdit = customFieldSelectOptionEdit;
+        return this;
+    }
+    
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
+        return this;
+    }
+    
+    /**
+     * Id of the CustomFieldSelectOption
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=custom_field_select_option_id")
+    public Integer customFieldSelectOptionId;
+    public PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest withCustomFieldSelectOptionId(Integer customFieldSelectOptionId) {
+        this.customFieldSelectOptionId = customFieldSelectOptionId;
+        return this;
+    }
+    
+    /**
+     * Id of the CustomField
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

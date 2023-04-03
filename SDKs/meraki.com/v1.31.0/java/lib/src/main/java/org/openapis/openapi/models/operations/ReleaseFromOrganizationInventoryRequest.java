@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleaseFromOrganizationInventoryRequest {
-    
-    public ReleaseFromOrganizationInventoryPathParams pathParams;
-    public ReleaseFromOrganizationInventoryRequest withPathParams(ReleaseFromOrganizationInventoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ReleaseFromOrganizationInventoryRequestBody requestBody;
+    public ReleaseFromOrganizationInventoryRequest withRequestBody(ReleaseFromOrganizationInventoryRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ReleaseFromOrganizationInventoryRequestBody request;
-    public ReleaseFromOrganizationInventoryRequest withRequest(ReleaseFromOrganizationInventoryRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public ReleaseFromOrganizationInventoryRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

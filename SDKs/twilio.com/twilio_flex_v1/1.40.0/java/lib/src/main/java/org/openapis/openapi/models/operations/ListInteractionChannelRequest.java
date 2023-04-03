@@ -4,34 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListInteractionChannelRequest {
-    
-    public ListInteractionChannelPathParams pathParams;
-    public ListInteractionChannelRequest withPathParams(ListInteractionChannelPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique string created by Twilio to identify an Interaction resource, prefixed with KD.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=InteractionSid")
+    public String interactionSid;
+    public ListInteractionChannelRequest withInteractionSid(String interactionSid) {
+        this.interactionSid = interactionSid;
         return this;
     }
     
-    
-    public ListInteractionChannelQueryParams queryParams;
-    public ListInteractionChannelRequest withQueryParams(ListInteractionChannelQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListInteractionChannelRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListInteractionChannelSecurity security;
-    public ListInteractionChannelRequest withSecurity(ListInteractionChannelSecurity security) {
-        this.security = security;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListInteractionChannelRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
-    
-    public String serverURL;
-    public ListInteractionChannelRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListInteractionChannelRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

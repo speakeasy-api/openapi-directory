@@ -5,11 +5,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GetItemFeedSecurity;
-import org.openapis.openapi.models.operations.GetItemFeedQueryParams;
-import org.openapis.openapi.models.operations.GetItemFeedHeaders;
 import org.openapis.openapi.models.operations.GetItemFeedRequest;
 import org.openapis.openapi.models.operations.GetItemFeedResponse;
-import org.openapis.openapi.models.shared.SchemeClientCredentials;
 
 public class Application {
     public static void main(String[] args) {
@@ -18,24 +15,17 @@ public class Application {
                 .build();
 
             GetItemFeedRequest req = new GetItemFeedRequest() {{
-                security = new GetItemFeedSecurity() {{
-                    clientCredentials = new SchemeClientCredentials() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                queryParams = new GetItemFeedQueryParams() {{
-                    categoryId = "corrupti";
-                    date = "provident";
-                    feedScope = "distinctio";
-                }};
-                headers = new GetItemFeedHeaders() {{
-                    accept = "quibusdam";
-                    range = "unde";
-                    xEbayCMarketplaceId = "nulla";
-                }};
-            }};            
+                accept = "corrupti";
+                range = "provident";
+                xEbayCMarketplaceId = "distinctio";
+                categoryId = "quibusdam";
+                date = "unde";
+                feedScope = "nulla";
+            }}            
 
-            GetItemFeedResponse res = sdk.item.getItemFeed(req);
+            GetItemFeedResponse res = sdk.item.getItemFeed(req, new GetItemFeedSecurity() {{
+                clientCredentials = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.itemResponse.isPresent()) {
                 // handle response

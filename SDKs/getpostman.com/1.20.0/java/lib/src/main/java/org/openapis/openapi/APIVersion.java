@@ -77,12 +77,12 @@ public class APIVersion {
      */
     public org.openapis.openapi.models.operations.CreateApiVersionResponse createApiVersion(org.openapis.openapi.models.operations.CreateApiVersionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateApiVersionPathParams.class, baseUrl, "/apis/{apiId}/versions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateApiVersionRequest.class, baseUrl, "/apis/{apiId}/versions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -122,7 +122,7 @@ public class APIVersion {
      */
     public org.openapis.openapi.models.operations.DeleteAnApiVersionResponse deleteAnApiVersion(org.openapis.openapi.models.operations.DeleteAnApiVersionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAnApiVersionPathParams.class, baseUrl, "/apis/{apiId}/versions/{apiVersionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAnApiVersionRequest.class, baseUrl, "/apis/{apiId}/versions/{apiVersionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -165,7 +165,7 @@ public class APIVersion {
      */
     public org.openapis.openapi.models.operations.GetAllApiVersionsResponse getAllApiVersions(org.openapis.openapi.models.operations.GetAllApiVersionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllApiVersionsPathParams.class, baseUrl, "/apis/{apiId}/versions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllApiVersionsRequest.class, baseUrl, "/apis/{apiId}/versions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -208,7 +208,7 @@ public class APIVersion {
      */
     public org.openapis.openapi.models.operations.GetAnApiVersionResponse getAnApiVersion(org.openapis.openapi.models.operations.GetAnApiVersionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAnApiVersionPathParams.class, baseUrl, "/apis/{apiId}/versions/{apiVersionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAnApiVersionRequest.class, baseUrl, "/apis/{apiId}/versions/{apiVersionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -253,12 +253,12 @@ public class APIVersion {
      */
     public org.openapis.openapi.models.operations.UpdateAnApiVersionResponse updateAnApiVersion(org.openapis.openapi.models.operations.UpdateAnApiVersionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateAnApiVersionPathParams.class, baseUrl, "/apis/{apiId}/versions/{apiVersionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateAnApiVersionRequest.class, baseUrl, "/apis/{apiId}/versions/{apiVersionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

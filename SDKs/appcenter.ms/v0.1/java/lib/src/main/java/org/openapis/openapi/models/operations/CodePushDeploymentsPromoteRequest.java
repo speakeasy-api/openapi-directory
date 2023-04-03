@@ -7,27 +7,53 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodePushDeploymentsPromoteRequest {
-    
-    public CodePushDeploymentsPromotePathParams pathParams;
-    public CodePushDeploymentsPromoteRequest withPathParams(CodePushDeploymentsPromotePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Release to be promoted, only needs to provide optional fields, description, label, disabled, mandatory, rollout, targetBinaryVersion
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public CodePushDeploymentsPromoteRequestBody request;
-    public CodePushDeploymentsPromoteRequest withRequest(CodePushDeploymentsPromoteRequestBody request) {
-        this.request = request;
+    public CodePushDeploymentsPromoteRequestBody requestBody;
+    public CodePushDeploymentsPromoteRequest withRequestBody(CodePushDeploymentsPromoteRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public CodePushDeploymentsPromoteRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public CodePushDeploymentsPromoteSecurity security;
-    public CodePushDeploymentsPromoteRequest withSecurity(CodePushDeploymentsPromoteSecurity security) {
-        this.security = security;
+    /**
+     * deployment name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deployment_name")
+    public String deploymentName;
+    public CodePushDeploymentsPromoteRequest withDeploymentName(String deploymentName) {
+        this.deploymentName = deploymentName;
+        return this;
+    }
+    
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public CodePushDeploymentsPromoteRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
+    
+    /**
+     * deployment name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=promote_deployment_name")
+    public String promoteDeploymentName;
+    public CodePushDeploymentsPromoteRequest withPromoteDeploymentName(String promoteDeploymentName) {
+        this.promoteDeploymentName = promoteDeploymentName;
         return this;
     }
     

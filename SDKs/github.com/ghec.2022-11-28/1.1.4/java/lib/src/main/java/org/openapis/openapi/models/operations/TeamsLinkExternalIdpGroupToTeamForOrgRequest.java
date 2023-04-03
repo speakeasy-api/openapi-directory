@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsLinkExternalIdpGroupToTeamForOrgRequest {
-    
-    public TeamsLinkExternalIdpGroupToTeamForOrgPathParams pathParams;
-    public TeamsLinkExternalIdpGroupToTeamForOrgRequest withPathParams(TeamsLinkExternalIdpGroupToTeamForOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public TeamsLinkExternalIdpGroupToTeamForOrgRequestBody requestBody;
+    public TeamsLinkExternalIdpGroupToTeamForOrgRequest withRequestBody(TeamsLinkExternalIdpGroupToTeamForOrgRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public TeamsLinkExternalIdpGroupToTeamForOrgRequestBody request;
-    public TeamsLinkExternalIdpGroupToTeamForOrgRequest withRequest(TeamsLinkExternalIdpGroupToTeamForOrgRequestBody request) {
-        this.request = request;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public TeamsLinkExternalIdpGroupToTeamForOrgRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
+    
+    /**
+     * The slug of the team name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_slug")
+    public String teamSlug;
+    public TeamsLinkExternalIdpGroupToTeamForOrgRequest withTeamSlug(String teamSlug) {
+        this.teamSlug = teamSlug;
         return this;
     }
     

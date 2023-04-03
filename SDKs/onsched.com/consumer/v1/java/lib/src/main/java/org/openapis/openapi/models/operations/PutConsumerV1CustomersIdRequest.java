@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutConsumerV1CustomersIdRequest {
-    
-    public PutConsumerV1CustomersIdPathParams pathParams;
-    public PutConsumerV1CustomersIdRequest withPathParams(PutConsumerV1CustomersIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CustomerUpdateModel customerUpdateModel;
+    public PutConsumerV1CustomersIdRequest withCustomerUpdateModel(org.openapis.openapi.models.shared.CustomerUpdateModel customerUpdateModel) {
+        this.customerUpdateModel = customerUpdateModel;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CustomerUpdateModel request;
-    public PutConsumerV1CustomersIdRequest withRequest(org.openapis.openapi.models.shared.CustomerUpdateModel request) {
-        this.request = request;
+    /**
+     * id of customer object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutConsumerV1CustomersIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

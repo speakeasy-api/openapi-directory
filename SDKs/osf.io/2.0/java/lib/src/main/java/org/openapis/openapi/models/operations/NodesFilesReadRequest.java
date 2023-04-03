@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NodesFilesReadRequest {
+    /**
+     * The unique identifier of the node.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=node_id")
+    public String nodeId;
+    public NodesFilesReadRequest withNodeId(String nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
     
-    public NodesFilesReadPathParams pathParams;
-    public NodesFilesReadRequest withPathParams(NodesFilesReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the file path.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
+    public String path;
+    public NodesFilesReadRequest withPath(String path) {
+        this.path = path;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the storage provider.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=provider")
+    public String provider;
+    public NodesFilesReadRequest withProvider(String provider) {
+        this.provider = provider;
         return this;
     }
     

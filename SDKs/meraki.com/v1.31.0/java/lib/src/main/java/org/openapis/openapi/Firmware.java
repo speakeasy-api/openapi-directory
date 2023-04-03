@@ -41,13 +41,13 @@ public class Firmware {
      */
     public org.openapis.openapi.models.operations.GetOrganizationFirmwareUpgradesResponse getOrganizationFirmwareUpgrades(org.openapis.openapi.models.operations.GetOrganizationFirmwareUpgradesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationFirmwareUpgradesPathParams.class, baseUrl, "/organizations/{organizationId}/firmware/upgrades", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationFirmwareUpgradesRequest.class, baseUrl, "/organizations/{organizationId}/firmware/upgrades", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationFirmwareUpgradesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationFirmwareUpgradesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -87,13 +87,13 @@ public class Firmware {
      */
     public org.openapis.openapi.models.operations.GetOrganizationFirmwareUpgradesByDeviceResponse getOrganizationFirmwareUpgradesByDevice(org.openapis.openapi.models.operations.GetOrganizationFirmwareUpgradesByDeviceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationFirmwareUpgradesByDevicePathParams.class, baseUrl, "/organizations/{organizationId}/firmware/upgrades/byDevice", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationFirmwareUpgradesByDeviceRequest.class, baseUrl, "/organizations/{organizationId}/firmware/upgrades/byDevice", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationFirmwareUpgradesByDeviceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationFirmwareUpgradesByDeviceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

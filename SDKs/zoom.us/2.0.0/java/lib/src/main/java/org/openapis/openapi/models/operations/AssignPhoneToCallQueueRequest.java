@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AssignPhoneToCallQueueRequest {
-    
-    public AssignPhoneToCallQueuePathParams pathParams;
-    public AssignPhoneToCallQueueRequest withPathParams(AssignPhoneToCallQueuePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public AssignPhoneToCallQueueApplicationJSON request;
-    public AssignPhoneToCallQueueRequest withRequest(AssignPhoneToCallQueueApplicationJSON request) {
-        this.request = request;
+    public AssignPhoneToCallQueueApplicationJSON requestBody;
+    public AssignPhoneToCallQueueRequest withRequestBody(AssignPhoneToCallQueueApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public AssignPhoneToCallQueueSecurity security;
-    public AssignPhoneToCallQueueRequest withSecurity(AssignPhoneToCallQueueSecurity security) {
-        this.security = security;
+    /**
+     * Unique Identifier of the Call Queue.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=callQueueId")
+    public String callQueueId;
+    public AssignPhoneToCallQueueRequest withCallQueueId(String callQueueId) {
+        this.callQueueId = callQueueId;
         return this;
     }
     

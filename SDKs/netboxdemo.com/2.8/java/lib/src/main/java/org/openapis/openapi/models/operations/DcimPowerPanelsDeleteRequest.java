@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimPowerPanelsDeleteRequest {
-    
-    public DcimPowerPanelsDeletePathParams pathParams;
-    public DcimPowerPanelsDeleteRequest withPathParams(DcimPowerPanelsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this power panel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimPowerPanelsDeleteRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

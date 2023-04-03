@@ -7,17 +7,34 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposSetStatusCheckContextsRequest {
-    
-    public ReposSetStatusCheckContextsPathParams pathParams;
-    public ReposSetStatusCheckContextsRequest withPathParams(ReposSetStatusCheckContextsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public Object requestBody;
+    public ReposSetStatusCheckContextsRequest withRequestBody(Object requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public Object request;
-    public ReposSetStatusCheckContextsRequest withRequest(Object request) {
-        this.request = request;
+    /**
+     * The name of the branch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branch")
+    public String branch;
+    public ReposSetStatusCheckContextsRequest withBranch(String branch) {
+        this.branch = branch;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposSetStatusCheckContextsRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposSetStatusCheckContextsRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

@@ -31,13 +31,9 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/PostVisitorIdentificationV3TokensCreateGenerateTokenSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostVisitorIdentificationV3TokensCreateGenerateTokenRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostVisitorIdentificationV3TokensCreateGenerateTokenResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/IdentificationTokenResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Error.java
 lib/src/main/java/org/openapis/openapi/models/shared/ErrorDetail.java
 lib/src/main/java/org/openapis/openapi/models/shared/IdentificationTokenGenerationRequest.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeHapikey.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2Legacy.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemePrivateAppsLegacy.java
 USAGE.md

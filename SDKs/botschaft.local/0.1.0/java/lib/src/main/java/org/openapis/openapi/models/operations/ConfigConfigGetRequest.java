@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConfigConfigGetRequest {
-    
-    public ConfigConfigGetHeaders headers;
-    public ConfigConfigGetRequest withHeaders(ConfigConfigGetHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=authorization")
+    public String authorization;
+    public ConfigConfigGetRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     

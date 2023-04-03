@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CheckIfUserLikedVideoAlt1Request {
-    
-    public CheckIfUserLikedVideoAlt1PathParams pathParams;
-    public CheckIfUserLikedVideoAlt1Request withPathParams(CheckIfUserLikedVideoAlt1PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public CheckIfUserLikedVideoAlt1Request withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

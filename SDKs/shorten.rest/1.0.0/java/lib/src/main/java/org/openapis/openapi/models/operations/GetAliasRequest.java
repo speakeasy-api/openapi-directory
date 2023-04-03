@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAliasRequest {
-    
-    public GetAliasQueryParams queryParams;
-    public GetAliasRequest withQueryParams(GetAliasQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * alias value (without `/` at the beginning)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aliasName")
+    public String aliasName;
+    public GetAliasRequest withAliasName(String aliasName) {
+        this.aliasName = aliasName;
         return this;
     }
     
-    
-    public GetAliasSecurity security;
-    public GetAliasRequest withSecurity(GetAliasSecurity security) {
-        this.security = security;
+    /**
+     * domain which alias belongs to (string without `http/https` or `/`)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domainName")
+    public String domainName;
+    public GetAliasRequest withDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
     

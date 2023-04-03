@@ -4,13 +4,537 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetResourcesMediaJsonRequest {
+    /**
+     * Restrict filtering to media items in a specific collection.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=collectionId")
+    public Integer collectionId;
+    public GetResourcesMediaJsonRequest withCollectionId(Integer collectionId) {
+        this.collectionId = collectionId;
+        return this;
+    }
     
-    public GetResourcesMediaJsonQueryParams queryParams;
-    public GetResourcesMediaJsonRequest withQueryParams(GetResourcesMediaJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Find all media items authored before the provided day (RFC 3339, time ignored).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=contentAuthoredBeforeDate")
+    public LocalDate contentAuthoredBeforeDate;
+    public GetResourcesMediaJsonRequest withContentAuthoredBeforeDate(LocalDate contentAuthoredBeforeDate) {
+        this.contentAuthoredBeforeDate = contentAuthoredBeforeDate;
+        return this;
+    }
+    
+    /**
+     * Find all media items authored between the provided start and end days (RFC 3339, comma separated, time ignored).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=contentAuthoredInRange")
+    public String contentAuthoredInRange;
+    public GetResourcesMediaJsonRequest withContentAuthoredInRange(String contentAuthoredInRange) {
+        this.contentAuthoredInRange = contentAuthoredInRange;
+        return this;
+    }
+    
+    /**
+     * Find all media items authored since the provided day (RFC 3339, time ignored).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=contentAuthoredSinceDate")
+    public LocalDate contentAuthoredSinceDate;
+    public GetResourcesMediaJsonRequest withContentAuthoredSinceDate(LocalDate contentAuthoredSinceDate) {
+        this.contentAuthoredSinceDate = contentAuthoredSinceDate;
+        return this;
+    }
+    
+    /**
+     * Find all media items published before the provided day (RFC 3339, time ignored).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=contentPublishedBeforeDate")
+    public LocalDate contentPublishedBeforeDate;
+    public GetResourcesMediaJsonRequest withContentPublishedBeforeDate(LocalDate contentPublishedBeforeDate) {
+        this.contentPublishedBeforeDate = contentPublishedBeforeDate;
+        return this;
+    }
+    
+    /**
+     * Find all media items published between the provided start and end days (RFC 3339, comma separated, time ignored).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=contentPublishedInRange")
+    public String contentPublishedInRange;
+    public GetResourcesMediaJsonRequest withContentPublishedInRange(String contentPublishedInRange) {
+        this.contentPublishedInRange = contentPublishedInRange;
+        return this;
+    }
+    
+    /**
+     * Find all media items updated since the provided day (RFC 3339, time ignored).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=contentPublishedSinceDate")
+    public LocalDate contentPublishedSinceDate;
+    public GetResourcesMediaJsonRequest withContentPublishedSinceDate(LocalDate contentPublishedSinceDate) {
+        this.contentPublishedSinceDate = contentPublishedSinceDate;
+        return this;
+    }
+    
+    /**
+     * Find all media items reviewed before the provided day (RFC 3339, time ignored).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=contentReviewedBeforeDate")
+    public LocalDate contentReviewedBeforeDate;
+    public GetResourcesMediaJsonRequest withContentReviewedBeforeDate(LocalDate contentReviewedBeforeDate) {
+        this.contentReviewedBeforeDate = contentReviewedBeforeDate;
+        return this;
+    }
+    
+    /**
+     * Find all media items reviewed between the provided start and end days (RFC 3339, comma separated, time ignored).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=contentReviewedInRange")
+    public String contentReviewedInRange;
+    public GetResourcesMediaJsonRequest withContentReviewedInRange(String contentReviewedInRange) {
+        this.contentReviewedInRange = contentReviewedInRange;
+        return this;
+    }
+    
+    /**
+     * Find all media items reviewed since the provided day (RFC 3339, time ignored).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=contentReviewedSinceDate")
+    public LocalDate contentReviewedSinceDate;
+    public GetResourcesMediaJsonRequest withContentReviewedSinceDate(LocalDate contentReviewedSinceDate) {
+        this.contentReviewedSinceDate = contentReviewedSinceDate;
+        return this;
+    }
+    
+    /**
+     * Find all media items updated before the provided day (RFC 3339, time ignored).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=contentUpdatedBeforeDate")
+    public LocalDate contentUpdatedBeforeDate;
+    public GetResourcesMediaJsonRequest withContentUpdatedBeforeDate(LocalDate contentUpdatedBeforeDate) {
+        this.contentUpdatedBeforeDate = contentUpdatedBeforeDate;
+        return this;
+    }
+    
+    /**
+     * Find all media items updated between the provided start and end days (RFC 3339, comma separated, time ignored).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=contentUpdatedInRange")
+    public String contentUpdatedInRange;
+    public GetResourcesMediaJsonRequest withContentUpdatedInRange(String contentUpdatedInRange) {
+        this.contentUpdatedInRange = contentUpdatedInRange;
+        return this;
+    }
+    
+    /**
+     * Find all media items updated since the provided day (RFC 3339, time ignored).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=contentUpdatedSinceDate")
+    public LocalDate contentUpdatedSinceDate;
+    public GetResourcesMediaJsonRequest withContentUpdatedSinceDate(LocalDate contentUpdatedSinceDate) {
+        this.contentUpdatedSinceDate = contentUpdatedSinceDate;
+        return this;
+    }
+    
+    /**
+     * Find all media items containing the createdBy value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=createdBy")
+    public String createdBy;
+    public GetResourcesMediaJsonRequest withCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+        return this;
+    }
+    
+    /**
+     * Find all media items which have the provided customThumbnailUrl, case insensitive.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=customThumbnailUrl")
+    public String customThumbnailUrl;
+    public GetResourcesMediaJsonRequest withCustomThumbnailUrl(String customThumbnailUrl) {
+        this.customThumbnailUrl = customThumbnailUrl;
+        return this;
+    }
+    
+    /**
+     * Find all media items which contain the provided partial customThumbnailUrl, case insensitive.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=customThumbnailUrlContains")
+    public String customThumbnailUrlContains;
+    public GetResourcesMediaJsonRequest withCustomThumbnailUrlContains(String customThumbnailUrlContains) {
+        this.customThumbnailUrlContains = customThumbnailUrlContains;
+        return this;
+    }
+    
+    /**
+     * Find all media items authored on the provided day (RFC 3339, time ignored).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=dateContentAuthored")
+    public LocalDate dateContentAuthored;
+    public GetResourcesMediaJsonRequest withDateContentAuthored(LocalDate dateContentAuthored) {
+        this.dateContentAuthored = dateContentAuthored;
+        return this;
+    }
+    
+    /**
+     * Find all media items published on the provided day (RFC 3339, time ignored).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=dateContentPublished")
+    public LocalDate dateContentPublished;
+    public GetResourcesMediaJsonRequest withDateContentPublished(LocalDate dateContentPublished) {
+        this.dateContentPublished = dateContentPublished;
+        return this;
+    }
+    
+    /**
+     * Find all media items reviewed on the provided day (RFC 3339, time ignored).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=dateContentReviewed")
+    public LocalDate dateContentReviewed;
+    public GetResourcesMediaJsonRequest withDateContentReviewed(LocalDate dateContentReviewed) {
+        this.dateContentReviewed = dateContentReviewed;
+        return this;
+    }
+    
+    /**
+     * Find all media items updated on the provided day (RFC 3339, time ignored).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=dateContentUpdated")
+    public LocalDate dateContentUpdated;
+    public GetResourcesMediaJsonRequest withDateContentUpdated(LocalDate dateContentUpdated) {
+        this.dateContentUpdated = dateContentUpdated;
+        return this;
+    }
+    
+    /**
+     * Find all media items syndicated on the provided day (RFC 3339, time ignored).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=dateSyndicationCaptured")
+    public LocalDate dateSyndicationCaptured;
+    public GetResourcesMediaJsonRequest withDateSyndicationCaptured(LocalDate dateSyndicationCaptured) {
+        this.dateSyndicationCaptured = dateSyndicationCaptured;
+        return this;
+    }
+    
+    /**
+     * Find all media items updated through the syndication system on the provided day, (RFC 3339, time ignored).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=dateSyndicationUpdated")
+    public LocalDate dateSyndicationUpdated;
+    public GetResourcesMediaJsonRequest withDateSyndicationUpdated(LocalDate dateSyndicationUpdated) {
+        this.dateSyndicationUpdated = dateSyndicationUpdated;
+        return this;
+    }
+    
+    /**
+     * Find all media items containing the provided partial description, case insensitive.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=descriptionContains")
+    public String descriptionContains;
+    public GetResourcesMediaJsonRequest withDescriptionContains(String descriptionContains) {
+        this.descriptionContains = descriptionContains;
+        return this;
+    }
+    
+    /**
+     * Find all media items which match the provided hash, case insensitive.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=hash")
+    public String hash;
+    public GetResourcesMediaJsonRequest withHash(String hash) {
+        this.hash = hash;
+        return this;
+    }
+    
+    /**
+     * Find all media items which match the provided partial hash, case insensitive.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=hashContains")
+    public String hashContains;
+    public GetResourcesMediaJsonRequest withHashContains(String hashContains) {
+        this.hashContains = hashContains;
+        return this;
+    }
+    
+    /**
+     * Find all media items written in the language specified by Id.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=languageId")
+    public Long languageId;
+    public GetResourcesMediaJsonRequest withLanguageId(Long languageId) {
+        this.languageId = languageId;
+        return this;
+    }
+    
+    /**
+     * Find all media items written in the language specified by 639-2 isoCode , case insensitive.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=languageIsoCode")
+    public String languageIsoCode;
+    public GetResourcesMediaJsonRequest withLanguageIsoCode(String languageIsoCode) {
+        this.languageIsoCode = languageIsoCode;
+        return this;
+    }
+    
+    /**
+     * Find all media items written in the language specified by name, case insensitive.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=languageName")
+    public String languageName;
+    public GetResourcesMediaJsonRequest withLanguageName(String languageName) {
+        this.languageName = languageName;
+        return this;
+    }
+    
+    /**
+     * The maximum number of records to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=max")
+    public Integer max;
+    public GetResourcesMediaJsonRequest withMax(Integer max) {
+        this.max = max;
+        return this;
+    }
+    
+    /**
+     * Find all media items belonging to the specified media type[s].
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=mediaTypes")
+    public String mediaTypes;
+    public GetResourcesMediaJsonRequest withMediaTypes(String mediaTypes) {
+        this.mediaTypes = mediaTypes;
+        return this;
+    }
+    
+    /**
+     * Find all media items containing the provided name, case insensitive.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=name")
+    public String name;
+    public GetResourcesMediaJsonRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Find all media items containing the partial name, case insensitive.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=nameContains")
+    public String nameContains;
+    public GetResourcesMediaJsonRequest withNameContains(String nameContains) {
+        this.nameContains = nameContains;
+        return this;
+    }
+    
+    /**
+     * The offset of the records set to return for pagination.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=offset")
+    public Integer offset;
+    public GetResourcesMediaJsonRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * * The ascending or descending order.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=order")
+    public String order;
+    public GetResourcesMediaJsonRequest withOrder(String order) {
+        this.order = order;
+        return this;
+    }
+    
+    /**
+     * Find only media from within the supplied list of Ids.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=restrictToSet")
+    public String restrictToSet;
+    public GetResourcesMediaJsonRequest withRestrictToSet(String restrictToSet) {
+        this.restrictToSet = restrictToSet;
+        return this;
+    }
+    
+    /**
+     * * Set of fields to sort the records by.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=sort")
+    public String sort;
+    public GetResourcesMediaJsonRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Find all media items that belong to the source specified by acronym, case insensitive.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=sourceAcronym")
+    public String sourceAcronym;
+    public GetResourcesMediaJsonRequest withSourceAcronym(String sourceAcronym) {
+        this.sourceAcronym = sourceAcronym;
+        return this;
+    }
+    
+    /**
+     * Find all media items that belong to the source specified by partial acronym, case insensitive.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=sourceAcronymContains")
+    public String sourceAcronymContains;
+    public GetResourcesMediaJsonRequest withSourceAcronymContains(String sourceAcronymContains) {
+        this.sourceAcronymContains = sourceAcronymContains;
+        return this;
+    }
+    
+    /**
+     * Find all media items that belong to the source specified by Id.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=sourceId")
+    public Long sourceId;
+    public GetResourcesMediaJsonRequest withSourceId(Long sourceId) {
+        this.sourceId = sourceId;
+        return this;
+    }
+    
+    /**
+     * Find all media items that belong to the source specified by name, case insensitive.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=sourceName")
+    public String sourceName;
+    public GetResourcesMediaJsonRequest withSourceName(String sourceName) {
+        this.sourceName = sourceName;
+        return this;
+    }
+    
+    /**
+     * Find all media items that belong to the source specified by partial name, case insensitive.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=sourceNameContains")
+    public String sourceNameContains;
+    public GetResourcesMediaJsonRequest withSourceNameContains(String sourceNameContains) {
+        this.sourceNameContains = sourceNameContains;
+        return this;
+    }
+    
+    /**
+     * Find all media items which have the provided sourceUrl, case insensitive.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=sourceUrl")
+    public String sourceUrl;
+    public GetResourcesMediaJsonRequest withSourceUrl(String sourceUrl) {
+        this.sourceUrl = sourceUrl;
+        return this;
+    }
+    
+    /**
+     * Find all media items which contain the provided partial sourceUrl, case insensitive.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=sourceUrlContains")
+    public String sourceUrlContains;
+    public GetResourcesMediaJsonRequest withSourceUrlContains(String sourceUrlContains) {
+        this.sourceUrlContains = sourceUrlContains;
+        return this;
+    }
+    
+    /**
+     * Find all media items authored before the provided day (RFC 3339, time ignored).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=syndicationCapturedBeforeDate")
+    public LocalDate syndicationCapturedBeforeDate;
+    public GetResourcesMediaJsonRequest withSyndicationCapturedBeforeDate(LocalDate syndicationCapturedBeforeDate) {
+        this.syndicationCapturedBeforeDate = syndicationCapturedBeforeDate;
+        return this;
+    }
+    
+    /**
+     * Find all media items authored between the provided start and end days (RFC 3339, comma separated, time ignored).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=syndicationCapturedInRange")
+    public String syndicationCapturedInRange;
+    public GetResourcesMediaJsonRequest withSyndicationCapturedInRange(String syndicationCapturedInRange) {
+        this.syndicationCapturedInRange = syndicationCapturedInRange;
+        return this;
+    }
+    
+    /**
+     * Find all media items authored since the provided day (RFC 3339, time ignored).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=syndicationCapturedSinceDate")
+    public LocalDate syndicationCapturedSinceDate;
+    public GetResourcesMediaJsonRequest withSyndicationCapturedSinceDate(LocalDate syndicationCapturedSinceDate) {
+        this.syndicationCapturedSinceDate = syndicationCapturedSinceDate;
+        return this;
+    }
+    
+    /**
+     * Find all media items updated before the provided day, (RFC 3339, time ignored).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=syndicationUpdatedBeforeDate")
+    public LocalDate syndicationUpdatedBeforeDate;
+    public GetResourcesMediaJsonRequest withSyndicationUpdatedBeforeDate(LocalDate syndicationUpdatedBeforeDate) {
+        this.syndicationUpdatedBeforeDate = syndicationUpdatedBeforeDate;
+        return this;
+    }
+    
+    /**
+     * Find all media items updated between the provided start and end days, (RFC 3339, comma separated, time ignored).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=syndicationUpdatedInRange")
+    public String syndicationUpdatedInRange;
+    public GetResourcesMediaJsonRequest withSyndicationUpdatedInRange(String syndicationUpdatedInRange) {
+        this.syndicationUpdatedInRange = syndicationUpdatedInRange;
+        return this;
+    }
+    
+    /**
+     * Find all media items updated since the provided day, (RFC 3339, time ignored).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=syndicationUpdatedSinceDate")
+    public LocalDate syndicationUpdatedSinceDate;
+    public GetResourcesMediaJsonRequest withSyndicationUpdatedSinceDate(LocalDate syndicationUpdatedSinceDate) {
+        this.syndicationUpdatedSinceDate = syndicationUpdatedSinceDate;
+        return this;
+    }
+    
+    /**
+     * Find all media items visible before the provided day, (RFC 3339, time ignored).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=syndicationVisibleBeforeDate")
+    public LocalDate syndicationVisibleBeforeDate;
+    public GetResourcesMediaJsonRequest withSyndicationVisibleBeforeDate(LocalDate syndicationVisibleBeforeDate) {
+        this.syndicationVisibleBeforeDate = syndicationVisibleBeforeDate;
+        return this;
+    }
+    
+    /**
+     * Find all media items visible between the provided start and end days, (RFC 3339, comma separated, time ignored).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=syndicationVisibleInRange")
+    public LocalDate syndicationVisibleInRange;
+    public GetResourcesMediaJsonRequest withSyndicationVisibleInRange(LocalDate syndicationVisibleInRange) {
+        this.syndicationVisibleInRange = syndicationVisibleInRange;
+        return this;
+    }
+    
+    /**
+     * Find all media items visible since the provided day, (RFC 3339, time ignored).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=syndicationVisibleSinceDate")
+    public LocalDate syndicationVisibleSinceDate;
+    public GetResourcesMediaJsonRequest withSyndicationVisibleSinceDate(LocalDate syndicationVisibleSinceDate) {
+        this.syndicationVisibleSinceDate = syndicationVisibleSinceDate;
+        return this;
+    }
+    
+    /**
+     * Find only media items tagged with the specified tag Ids.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=tagIds")
+    public String tagIds;
+    public GetResourcesMediaJsonRequest withTagIds(String tagIds) {
+        this.tagIds = tagIds;
         return this;
     }
     

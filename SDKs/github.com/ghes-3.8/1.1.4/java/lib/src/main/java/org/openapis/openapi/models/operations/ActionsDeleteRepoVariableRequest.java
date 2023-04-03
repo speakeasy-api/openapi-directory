@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsDeleteRepoVariableRequest {
+    /**
+     * The name of the variable.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public ActionsDeleteRepoVariableRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
     
-    public ActionsDeleteRepoVariablePathParams pathParams;
-    public ActionsDeleteRepoVariableRequest withPathParams(ActionsDeleteRepoVariablePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ActionsDeleteRepoVariableRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ActionsDeleteRepoVariableRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

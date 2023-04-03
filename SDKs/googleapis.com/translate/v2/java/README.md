@@ -20,14 +20,11 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.operations.LanguageDetectionsDetectSecurityOption1;
 import org.openapis.openapi.models.operations.LanguageDetectionsDetectSecurityOption2;
 import org.openapis.openapi.models.operations.LanguageDetectionsDetectSecurity;
-import org.openapis.openapi.models.operations.LanguageDetectionsDetectQueryParams;
 import org.openapis.openapi.models.operations.LanguageDetectionsDetectRequest;
 import org.openapis.openapi.models.operations.LanguageDetectionsDetectResponse;
-import org.openapis.openapi.models.shared.DetectLanguageRequest;
 import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.DetectLanguageRequest;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -36,40 +33,34 @@ public class Application {
                 .build();
 
             LanguageDetectionsDetectRequest req = new LanguageDetectionsDetectRequest() {{
-                security = new LanguageDetectionsDetectSecurity() {{
-                    option1 = new LanguageDetectionsDetectSecurityOption1() {{
-                        oauth2 = new SchemeOauth2() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                        oauth2c = new SchemeOauth2c() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                    }};
-                }};
-                queryParams = new LanguageDetectionsDetectQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "provident";
-                    alt = "proto";
-                    bearerToken = "quibusdam";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    pp = false;
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new DetectLanguageRequest() {{
+                dollarXgafv = "2";
+                detectLanguageRequest = new DetectLanguageRequest() {{
                     q = new String[]{{
-                        add("iure"),
-                        add("magnam"),
+                        add("distinctio"),
+                        add("quibusdam"),
+                        add("unde"),
                     }};
                 }};
-            }};            
+                accessToken = "nulla";
+                alt = "media";
+                bearerToken = "illum";
+                callback = "vel";
+                fields = "error";
+                key = "deserunt";
+                oauthToken = "suscipit";
+                pp = false;
+                prettyPrint = false;
+                quotaUser = "iure";
+                uploadType = "magnam";
+                uploadProtocol = "debitis";
+            }}            
 
-            LanguageDetectionsDetectResponse res = sdk.detections.languageDetectionsDetect(req);
+            LanguageDetectionsDetectResponse res = sdk.detections.languageDetectionsDetect(req, new LanguageDetectionsDetectSecurity() {{
+                option1 = new LanguageDetectionsDetectSecurityOption1() {{
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                }};
+            }});
 
             if (res.detectionsListResponse.isPresent()) {
                 // handle response
@@ -81,7 +72,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### detections

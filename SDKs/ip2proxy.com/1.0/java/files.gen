@@ -30,7 +30,6 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetFormatEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetResponse.java
 USAGE.md

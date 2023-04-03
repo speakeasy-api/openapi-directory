@@ -34,25 +34,26 @@ public class Storelayoutpages {
     /**
      * Deletes a store page.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesDeleteResponse androidenterpriseStorelayoutpagesDelete(org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesDeleteResponse androidenterpriseStorelayoutpagesDelete(org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesDeleteRequest request, org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesDeletePathParams.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages/{pageId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesDeleteRequest.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages/{pageId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -73,25 +74,26 @@ public class Storelayoutpages {
     /**
      * Retrieves details of a store page.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesGetResponse androidenterpriseStorelayoutpagesGet(org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesGetResponse androidenterpriseStorelayoutpagesGet(org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesGetRequest request, org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesGetPathParams.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages/{pageId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesGetRequest.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages/{pageId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -118,27 +120,28 @@ public class Storelayoutpages {
     /**
      * Inserts a new store page.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesInsertResponse androidenterpriseStorelayoutpagesInsert(org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesInsertResponse androidenterpriseStorelayoutpagesInsert(org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesInsertRequest request, org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesInsertPathParams.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesInsertRequest.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "storePage", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -165,25 +168,26 @@ public class Storelayoutpages {
     /**
      * Retrieves the details of all pages in the store.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesListResponse androidenterpriseStorelayoutpagesList(org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesListResponse androidenterpriseStorelayoutpagesList(org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesListRequest request, org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesListPathParams.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesListRequest.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -210,27 +214,28 @@ public class Storelayoutpages {
     /**
      * Updates the content of a store page.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesUpdateResponse androidenterpriseStorelayoutpagesUpdate(org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesUpdateResponse androidenterpriseStorelayoutpagesUpdate(org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesUpdateRequest request, org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesUpdatePathParams.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages/{pageId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesUpdateRequest.class, baseUrl, "/androidenterprise/v1/enterprises/{enterpriseId}/storeLayout/pages/{pageId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "storePage", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidenterpriseStorelayoutpagesUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

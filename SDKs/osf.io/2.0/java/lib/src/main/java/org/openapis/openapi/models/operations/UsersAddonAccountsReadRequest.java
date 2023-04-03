@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UsersAddonAccountsReadRequest {
+    /**
+     * The unique identifier of the addon account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account_id")
+    public String accountId;
+    public UsersAddonAccountsReadRequest withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
     
-    public UsersAddonAccountsReadPathParams pathParams;
-    public UsersAddonAccountsReadRequest withPathParams(UsersAddonAccountsReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the addon provider.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=provider")
+    public String provider;
+    public UsersAddonAccountsReadRequest withProvider(String provider) {
+        this.provider = provider;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public String userId;
+    public UsersAddonAccountsReadRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

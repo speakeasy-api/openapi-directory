@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpacesIdPersonsAllRequest {
-    
-    public GetSpacesIdPersonsAllPathParams pathParams;
-    public GetSpacesIdPersonsAllRequest withPathParams(GetSpacesIdPersonsAllPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Email of the person
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Email")
+    public String email;
+    public GetSpacesIdPersonsAllRequest withEmail(String email) {
+        this.email = email;
         return this;
     }
     
+    /**
+     * Function of the person
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Function")
+    public String function;
+    public GetSpacesIdPersonsAllRequest withFunction(String function) {
+        this.function = function;
+        return this;
+    }
     
-    public GetSpacesIdPersonsAllQueryParams queryParams;
-    public GetSpacesIdPersonsAllRequest withQueryParams(GetSpacesIdPersonsAllQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Name of the person
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Name")
+    public String name;
+    public GetSpacesIdPersonsAllRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * index range of the results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Range")
+    public String range;
+    public GetSpacesIdPersonsAllRequest withRange(String range) {
+        this.range = range;
+        return this;
+    }
+    
+    /**
+     * Status of the person
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Validated")
+    public GetSpacesIdPersonsAllValidatedEnum validated;
+    public GetSpacesIdPersonsAllRequest withValidated(GetSpacesIdPersonsAllValidatedEnum validated) {
+        this.validated = validated;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSpacesIdPersonsAllRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

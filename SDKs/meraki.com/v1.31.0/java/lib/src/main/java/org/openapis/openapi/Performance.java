@@ -39,7 +39,7 @@ public class Performance {
      */
     public org.openapis.openapi.models.operations.GetDeviceAppliancePerformanceResponse getDeviceAppliancePerformance(org.openapis.openapi.models.operations.GetDeviceAppliancePerformanceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceAppliancePerformancePathParams.class, baseUrl, "/devices/{serial}/appliance/performance", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceAppliancePerformanceRequest.class, baseUrl, "/devices/{serial}/appliance/performance", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -4,13 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssuesRemoveAllLabelsRequest {
+    /**
+     * issue_number parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=issue_number")
+    public Long issueNumber;
+    public IssuesRemoveAllLabelsRequest withIssueNumber(Long issueNumber) {
+        this.issueNumber = issueNumber;
+        return this;
+    }
     
-    public IssuesRemoveAllLabelsPathParams pathParams;
-    public IssuesRemoveAllLabelsRequest withPathParams(IssuesRemoveAllLabelsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssuesRemoveAllLabelsRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssuesRemoveAllLabelsRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

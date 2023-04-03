@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryListApisRequest {
-    
-    public RegistryListApisPathParams pathParams;
-    public RegistryListApisRequest withPathParams(RegistryListApisPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * An expression that can be used to filter the list. Filters use the Common Expression Language and can refer to all message fields.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public RegistryListApisRequest withFilter(String filter) {
+        this.filter = filter;
         return this;
     }
     
+    /**
+     * The location id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
+    public String location;
+    public RegistryListApisRequest withLocation(String location) {
+        this.location = location;
+        return this;
+    }
     
-    public RegistryListApisQueryParams queryParams;
-    public RegistryListApisRequest withQueryParams(RegistryListApisQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The maximum number of APIs to return. The service may return fewer than this value. If unspecified, at most 50 values will be returned. The maximum is 1000; values above 1000 will be coerced to 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public RegistryListApisRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * A page token, received from a previous `ListApis` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListApis` must match the call that provided the page token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public RegistryListApisRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public RegistryListApisRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

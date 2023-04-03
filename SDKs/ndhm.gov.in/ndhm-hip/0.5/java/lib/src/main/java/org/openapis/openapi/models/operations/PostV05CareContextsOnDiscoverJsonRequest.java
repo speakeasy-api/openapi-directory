@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05CareContextsOnDiscoverJsonRequest {
-    
-    public PostV05CareContextsOnDiscoverJsonHeaders headers;
-    public PostV05CareContextsOnDiscoverJsonRequest withHeaders(PostV05CareContextsOnDiscoverJsonHeaders headers) {
-        this.headers = headers;
+    /**
+     * Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostV05CareContextsOnDiscoverJsonRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PatientDiscoveryResult request;
-    public PostV05CareContextsOnDiscoverJsonRequest withRequest(org.openapis.openapi.models.shared.PatientDiscoveryResult request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PatientDiscoveryResult patientDiscoveryResult;
+    public PostV05CareContextsOnDiscoverJsonRequest withPatientDiscoveryResult(org.openapis.openapi.models.shared.PatientDiscoveryResult patientDiscoveryResult) {
+        this.patientDiscoveryResult = patientDiscoveryResult;
+        return this;
+    }
+    
+    /**
+     * Suffix of the consent manager to which the request was intended.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-CM-ID")
+    public String xCmId;
+    public PostV05CareContextsOnDiscoverJsonRequest withXCmId(String xCmId) {
+        this.xCmId = xCmId;
         return this;
     }
     

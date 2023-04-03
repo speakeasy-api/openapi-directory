@@ -34,25 +34,26 @@ public class Projects {
     /**
      * Disable this project as a shared VPC host project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeProjectsDisableXpnHostResponse computeProjectsDisableXpnHost(org.openapis.openapi.models.operations.ComputeProjectsDisableXpnHostRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeProjectsDisableXpnHostResponse computeProjectsDisableXpnHost(org.openapis.openapi.models.operations.ComputeProjectsDisableXpnHostRequest request, org.openapis.openapi.models.operations.ComputeProjectsDisableXpnHostSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeProjectsDisableXpnHostPathParams.class, baseUrl, "/projects/{project}/disableXpnHost", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeProjectsDisableXpnHostRequest.class, baseUrl, "/projects/{project}/disableXpnHost", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeProjectsDisableXpnHostQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeProjectsDisableXpnHostRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,27 +80,28 @@ public class Projects {
     /**
      * Disable a service resource (also known as service project) associated with this host project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeProjectsDisableXpnResourceResponse computeProjectsDisableXpnResource(org.openapis.openapi.models.operations.ComputeProjectsDisableXpnResourceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeProjectsDisableXpnResourceResponse computeProjectsDisableXpnResource(org.openapis.openapi.models.operations.ComputeProjectsDisableXpnResourceRequest request, org.openapis.openapi.models.operations.ComputeProjectsDisableXpnResourceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeProjectsDisableXpnResourcePathParams.class, baseUrl, "/projects/{project}/disableXpnResource", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeProjectsDisableXpnResourceRequest.class, baseUrl, "/projects/{project}/disableXpnResource", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "projectsDisableXpnResourceRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeProjectsDisableXpnResourceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeProjectsDisableXpnResourceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,25 +128,26 @@ public class Projects {
     /**
      * Enable this project as a shared VPC host project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeProjectsEnableXpnHostResponse computeProjectsEnableXpnHost(org.openapis.openapi.models.operations.ComputeProjectsEnableXpnHostRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeProjectsEnableXpnHostResponse computeProjectsEnableXpnHost(org.openapis.openapi.models.operations.ComputeProjectsEnableXpnHostRequest request, org.openapis.openapi.models.operations.ComputeProjectsEnableXpnHostSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeProjectsEnableXpnHostPathParams.class, baseUrl, "/projects/{project}/enableXpnHost", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeProjectsEnableXpnHostRequest.class, baseUrl, "/projects/{project}/enableXpnHost", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeProjectsEnableXpnHostQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeProjectsEnableXpnHostRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,27 +174,28 @@ public class Projects {
     /**
      * Enable service resource (a.k.a service project) for a host project, so that subnets in the host project can be used by instances in the service project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeProjectsEnableXpnResourceResponse computeProjectsEnableXpnResource(org.openapis.openapi.models.operations.ComputeProjectsEnableXpnResourceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeProjectsEnableXpnResourceResponse computeProjectsEnableXpnResource(org.openapis.openapi.models.operations.ComputeProjectsEnableXpnResourceRequest request, org.openapis.openapi.models.operations.ComputeProjectsEnableXpnResourceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeProjectsEnableXpnResourcePathParams.class, baseUrl, "/projects/{project}/enableXpnResource", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeProjectsEnableXpnResourceRequest.class, baseUrl, "/projects/{project}/enableXpnResource", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "projectsEnableXpnResourceRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeProjectsEnableXpnResourceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeProjectsEnableXpnResourceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -218,25 +222,26 @@ public class Projects {
     /**
      * Returns the specified Project resource. To decrease latency for this method, you can optionally omit any unneeded information from the response by using a field mask. This practice is especially recommended for unused quota information (the `quotas` field). To exclude one or more fields, set your request's `fields` query parameter to only include the fields you need. For example, to only include the `id` and `selfLink` fields, add the query parameter `?fields=id,selfLink` to your request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeProjectsGetResponse computeProjectsGet(org.openapis.openapi.models.operations.ComputeProjectsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeProjectsGetResponse computeProjectsGet(org.openapis.openapi.models.operations.ComputeProjectsGetRequest request, org.openapis.openapi.models.operations.ComputeProjectsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeProjectsGetPathParams.class, baseUrl, "/projects/{project}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeProjectsGetRequest.class, baseUrl, "/projects/{project}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeProjectsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeProjectsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -263,25 +268,26 @@ public class Projects {
     /**
      * Gets the shared VPC host project that this project links to. May be empty if no link exists.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeProjectsGetXpnHostResponse computeProjectsGetXpnHost(org.openapis.openapi.models.operations.ComputeProjectsGetXpnHostRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeProjectsGetXpnHostResponse computeProjectsGetXpnHost(org.openapis.openapi.models.operations.ComputeProjectsGetXpnHostRequest request, org.openapis.openapi.models.operations.ComputeProjectsGetXpnHostSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeProjectsGetXpnHostPathParams.class, baseUrl, "/projects/{project}/getXpnHost", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeProjectsGetXpnHostRequest.class, baseUrl, "/projects/{project}/getXpnHost", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeProjectsGetXpnHostQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeProjectsGetXpnHostRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -308,25 +314,26 @@ public class Projects {
     /**
      * Gets service resources (a.k.a service project) associated with this host project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeProjectsGetXpnResourcesResponse computeProjectsGetXpnResources(org.openapis.openapi.models.operations.ComputeProjectsGetXpnResourcesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeProjectsGetXpnResourcesResponse computeProjectsGetXpnResources(org.openapis.openapi.models.operations.ComputeProjectsGetXpnResourcesRequest request, org.openapis.openapi.models.operations.ComputeProjectsGetXpnResourcesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeProjectsGetXpnResourcesPathParams.class, baseUrl, "/projects/{project}/getXpnResources", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeProjectsGetXpnResourcesRequest.class, baseUrl, "/projects/{project}/getXpnResources", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeProjectsGetXpnResourcesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeProjectsGetXpnResourcesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -353,27 +360,28 @@ public class Projects {
     /**
      * Lists all shared VPC host projects visible to the user in an organization.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeProjectsListXpnHostsResponse computeProjectsListXpnHosts(org.openapis.openapi.models.operations.ComputeProjectsListXpnHostsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeProjectsListXpnHostsResponse computeProjectsListXpnHosts(org.openapis.openapi.models.operations.ComputeProjectsListXpnHostsRequest request, org.openapis.openapi.models.operations.ComputeProjectsListXpnHostsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeProjectsListXpnHostsPathParams.class, baseUrl, "/projects/{project}/listXpnHosts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeProjectsListXpnHostsRequest.class, baseUrl, "/projects/{project}/listXpnHosts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "projectsListXpnHostsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeProjectsListXpnHostsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeProjectsListXpnHostsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -400,27 +408,28 @@ public class Projects {
     /**
      * Moves a persistent disk from one zone to another.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeProjectsMoveDiskResponse computeProjectsMoveDisk(org.openapis.openapi.models.operations.ComputeProjectsMoveDiskRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeProjectsMoveDiskResponse computeProjectsMoveDisk(org.openapis.openapi.models.operations.ComputeProjectsMoveDiskRequest request, org.openapis.openapi.models.operations.ComputeProjectsMoveDiskSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeProjectsMoveDiskPathParams.class, baseUrl, "/projects/{project}/moveDisk", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeProjectsMoveDiskRequest.class, baseUrl, "/projects/{project}/moveDisk", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "diskMoveRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeProjectsMoveDiskQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeProjectsMoveDiskRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -447,27 +456,28 @@ public class Projects {
     /**
      * Moves an instance and its attached persistent disks from one zone to another. *Note*: Moving VMs or disks by using this method might cause unexpected behavior. For more information, see the [known issue](/compute/docs/troubleshooting/known-issues#moving_vms_or_disks_using_the_moveinstance_api_or_the_causes_unexpected_behavior).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeProjectsMoveInstanceResponse computeProjectsMoveInstance(org.openapis.openapi.models.operations.ComputeProjectsMoveInstanceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeProjectsMoveInstanceResponse computeProjectsMoveInstance(org.openapis.openapi.models.operations.ComputeProjectsMoveInstanceRequest request, org.openapis.openapi.models.operations.ComputeProjectsMoveInstanceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeProjectsMoveInstancePathParams.class, baseUrl, "/projects/{project}/moveInstance", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeProjectsMoveInstanceRequest.class, baseUrl, "/projects/{project}/moveInstance", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "instanceMoveRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeProjectsMoveInstanceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeProjectsMoveInstanceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -494,27 +504,28 @@ public class Projects {
     /**
      * Sets metadata common to all instances within the specified project using the data included in the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeProjectsSetCommonInstanceMetadataResponse computeProjectsSetCommonInstanceMetadata(org.openapis.openapi.models.operations.ComputeProjectsSetCommonInstanceMetadataRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeProjectsSetCommonInstanceMetadataResponse computeProjectsSetCommonInstanceMetadata(org.openapis.openapi.models.operations.ComputeProjectsSetCommonInstanceMetadataRequest request, org.openapis.openapi.models.operations.ComputeProjectsSetCommonInstanceMetadataSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeProjectsSetCommonInstanceMetadataPathParams.class, baseUrl, "/projects/{project}/setCommonInstanceMetadata", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeProjectsSetCommonInstanceMetadataRequest.class, baseUrl, "/projects/{project}/setCommonInstanceMetadata", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "metadata", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeProjectsSetCommonInstanceMetadataQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeProjectsSetCommonInstanceMetadataRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -541,27 +552,28 @@ public class Projects {
     /**
      * Sets the default network tier of the project. The default network tier is used when an address/forwardingRule/instance is created without specifying the network tier field.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeProjectsSetDefaultNetworkTierResponse computeProjectsSetDefaultNetworkTier(org.openapis.openapi.models.operations.ComputeProjectsSetDefaultNetworkTierRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeProjectsSetDefaultNetworkTierResponse computeProjectsSetDefaultNetworkTier(org.openapis.openapi.models.operations.ComputeProjectsSetDefaultNetworkTierRequest request, org.openapis.openapi.models.operations.ComputeProjectsSetDefaultNetworkTierSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeProjectsSetDefaultNetworkTierPathParams.class, baseUrl, "/projects/{project}/setDefaultNetworkTier", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeProjectsSetDefaultNetworkTierRequest.class, baseUrl, "/projects/{project}/setDefaultNetworkTier", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "projectsSetDefaultNetworkTierRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeProjectsSetDefaultNetworkTierQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeProjectsSetDefaultNetworkTierRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -588,27 +600,28 @@ public class Projects {
     /**
      * Enables the usage export feature and sets the usage export bucket where reports are stored. If you provide an empty request body using this method, the usage export feature will be disabled.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeProjectsSetUsageExportBucketResponse computeProjectsSetUsageExportBucket(org.openapis.openapi.models.operations.ComputeProjectsSetUsageExportBucketRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeProjectsSetUsageExportBucketResponse computeProjectsSetUsageExportBucket(org.openapis.openapi.models.operations.ComputeProjectsSetUsageExportBucketRequest request, org.openapis.openapi.models.operations.ComputeProjectsSetUsageExportBucketSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeProjectsSetUsageExportBucketPathParams.class, baseUrl, "/projects/{project}/setUsageExportBucket", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeProjectsSetUsageExportBucketRequest.class, baseUrl, "/projects/{project}/setUsageExportBucket", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "usageExportLocation", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeProjectsSetUsageExportBucketQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeProjectsSetUsageExportBucketRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

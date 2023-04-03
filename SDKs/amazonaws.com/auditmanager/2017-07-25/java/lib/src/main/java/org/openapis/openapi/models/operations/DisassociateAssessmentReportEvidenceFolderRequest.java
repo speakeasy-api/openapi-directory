@@ -7,24 +7,69 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisassociateAssessmentReportEvidenceFolderRequest {
-    
-    public DisassociateAssessmentReportEvidenceFolderPathParams pathParams;
-    public DisassociateAssessmentReportEvidenceFolderRequest withPathParams(DisassociateAssessmentReportEvidenceFolderPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DisassociateAssessmentReportEvidenceFolderHeaders headers;
-    public DisassociateAssessmentReportEvidenceFolderRequest withHeaders(DisassociateAssessmentReportEvidenceFolderHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public DisassociateAssessmentReportEvidenceFolderRequestBody request;
-    public DisassociateAssessmentReportEvidenceFolderRequest withRequest(DisassociateAssessmentReportEvidenceFolderRequestBody request) {
-        this.request = request;
+    public DisassociateAssessmentReportEvidenceFolderRequestBody requestBody;
+    public DisassociateAssessmentReportEvidenceFolderRequest withRequestBody(DisassociateAssessmentReportEvidenceFolderRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DisassociateAssessmentReportEvidenceFolderRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DisassociateAssessmentReportEvidenceFolderRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DisassociateAssessmentReportEvidenceFolderRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DisassociateAssessmentReportEvidenceFolderRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DisassociateAssessmentReportEvidenceFolderRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DisassociateAssessmentReportEvidenceFolderRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DisassociateAssessmentReportEvidenceFolderRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     *  The unique identifier for the assessment. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assessmentId")
+    public String assessmentId;
+    public DisassociateAssessmentReportEvidenceFolderRequest withAssessmentId(String assessmentId) {
+        this.assessmentId = assessmentId;
         return this;
     }
     

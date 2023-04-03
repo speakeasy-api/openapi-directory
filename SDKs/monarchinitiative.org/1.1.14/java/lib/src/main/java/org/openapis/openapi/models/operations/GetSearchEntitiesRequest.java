@@ -4,20 +4,146 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSearchEntitiesRequest {
-    
-    public GetSearchEntitiesPathParams pathParams;
-    public GetSearchEntitiesRequest withPathParams(GetSearchEntitiesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * boost function e.g. pow(edges,0.334)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=boost_fx")
+    public String[] boostFx;
+    public GetSearchEntitiesRequest withBoostFx(String[] boostFx) {
+        this.boostFx = boostFx;
         return this;
     }
     
+    /**
+     * boost query e.g. category:genotype^-10
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=boost_q")
+    public String[] boostQ;
+    public GetSearchEntitiesRequest withBoostQ(String[] boostQ) {
+        this.boostQ = boostQ;
+        return this;
+    }
     
-    public GetSearchEntitiesQueryParams queryParams;
-    public GetSearchEntitiesRequest withQueryParams(GetSearchEntitiesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * e.g. gene, disease
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
+    public String[] category;
+    public GetSearchEntitiesRequest withCategory(String[] category) {
+        this.category = category;
+        return this;
+    }
+    
+    /**
+     * Exclude grouping classes (classes with subclasses)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_groups")
+    public Boolean excludeGroups;
+    public GetSearchEntitiesRequest withExcludeGroups(Boolean excludeGroups) {
+        this.excludeGroups = excludeGroups;
+        return this;
+    }
+    
+    /**
+     * fq string passed directly to solr, note that multiple filters will be combined with an AND operator. Combining fq_string with other parameters may result in unexpected behavior.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fq")
+    public String[] fq;
+    public GetSearchEntitiesRequest withFq(String[] fq) {
+        this.fq = fq;
+        return this;
+    }
+    
+    /**
+     * highlight class
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=highlight_class")
+    public String highlightClass;
+    public GetSearchEntitiesRequest withHighlightClass(String highlightClass) {
+        this.highlightClass = highlightClass;
+        return this;
+    }
+    
+    /**
+     * Include equivalent ids in prefix filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_eqs")
+    public Boolean includeEqs;
+    public GetSearchEntitiesRequest withIncludeEqs(Boolean includeEqs) {
+        this.includeEqs = includeEqs;
+        return this;
+    }
+    
+    /**
+     * minimum should match parameter, see solr docs for details
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_match")
+    public String minMatch;
+    public GetSearchEntitiesRequest withMinMatch(String minMatch) {
+        this.minMatch = minMatch;
+        return this;
+    }
+    
+    /**
+     * set to true to use the minimal tokenizer, good for variants and genotypes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minimal_tokenizer")
+    public Boolean minimalTokenizer;
+    public GetSearchEntitiesRequest withMinimalTokenizer(Boolean minimalTokenizer) {
+        this.minimalTokenizer = minimalTokenizer;
+        return this;
+    }
+    
+    /**
+     * ontology prefix: HP, -MONDO
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prefix")
+    public String[] prefix;
+    public GetSearchEntitiesRequest withPrefix(String[] prefix) {
+        this.prefix = prefix;
+        return this;
+    }
+    
+    /**
+     * number of rows
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rows")
+    public Long rows;
+    public GetSearchEntitiesRequest withRows(Long rows) {
+        this.rows = rows;
+        return this;
+    }
+    
+    /**
+     * row number to start from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public String start;
+    public GetSearchEntitiesRequest withStart(String start) {
+        this.start = start;
+        return this;
+    }
+    
+    /**
+     * taxon filter, eg NCBITaxon:9606, includes inferred taxa
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=taxon")
+    public String[] taxon;
+    public GetSearchEntitiesRequest withTaxon(String[] taxon) {
+        this.taxon = taxon;
+        return this;
+    }
+    
+    /**
+     * search string, e.g. shh, parkinson, femur
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=term")
+    public String term;
+    public GetSearchEntitiesRequest withTerm(String term) {
+        this.term = term;
         return this;
     }
     

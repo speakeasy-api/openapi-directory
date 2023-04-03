@@ -4,34 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteChannelRequest {
-    
-    public DeleteChannelPathParams pathParams;
-    public DeleteChannelRequest withPathParams(DeleteChannelPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public DeleteChannelRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public DeleteChannelHeaders headers;
-    public DeleteChannelRequest withHeaders(DeleteChannelHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteChannelRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public DeleteChannelSecurity security;
-    public DeleteChannelRequest withSecurity(DeleteChannelSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteChannelRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The X-Twilio-Webhook-Enabled HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Twilio-Webhook-Enabled")
+    public org.openapis.openapi.models.shared.ChannelEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled;
+    public DeleteChannelRequest withXTwilioWebhookEnabled(org.openapis.openapi.models.shared.ChannelEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled) {
+        this.xTwilioWebhookEnabled = xTwilioWebhookEnabled;
         return this;
     }
     

@@ -4,11 +4,9 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GETAnalyticsDataUsingGETPathParams;
 import org.openapis.openapi.models.operations.GETAnalyticsDataUsingGETDataTypeEnum;
 import org.openapis.openapi.models.operations.GETAnalyticsDataUsingGETPrecisionEnum;
 import org.openapis.openapi.models.operations.GETAnalyticsDataUsingGETStageEnum;
-import org.openapis.openapi.models.operations.GETAnalyticsDataUsingGETQueryParams;
 import org.openapis.openapi.models.operations.GETAnalyticsDataUsingGETRequest;
 import org.openapis.openapi.models.operations.GETAnalyticsDataUsingGETResponse;
 
@@ -19,18 +17,14 @@ public class Application {
                 .build();
 
             GETAnalyticsDataUsingGETRequest req = new GETAnalyticsDataUsingGETRequest() {{
-                pathParams = new GETAnalyticsDataUsingGETPathParams() {{
-                    apiKey = "corrupti";
-                }};
-                queryParams = new GETAnalyticsDataUsingGETQueryParams() {{
-                    dataType = "sessionAnalytic";
-                    endDate = "2021-04-24";
-                    keys = "unde";
-                    precision = "MONTHLY";
-                    stage = "PREVIEW";
-                    startDate = "2021-09-24";
-                }};
-            }};            
+                apiKey = "corrupti";
+                dataType = "sessionAnalytic";
+                endDate = "2021-04-24";
+                keys = "unde";
+                precision = "MONTHLY";
+                stage = "PREVIEW";
+                startDate = "2021-09-24";
+            }}            
 
             GETAnalyticsDataUsingGETResponse res = sdk.analytics.getAnalyticsDataUsingGET(req);
 

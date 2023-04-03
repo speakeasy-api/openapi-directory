@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AcceptPaymentDisputeRequest {
-    
-    public AcceptPaymentDisputePathParams pathParams;
-    public AcceptPaymentDisputeRequest withPathParams(AcceptPaymentDisputePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AcceptPaymentDisputeRequest request;
-    public AcceptPaymentDisputeRequest withRequest(org.openapis.openapi.models.shared.AcceptPaymentDisputeRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AcceptPaymentDisputeRequest acceptPaymentDisputeRequest;
+    public AcceptPaymentDisputeRequest withAcceptPaymentDisputeRequest(org.openapis.openapi.models.shared.AcceptPaymentDisputeRequest acceptPaymentDisputeRequest) {
+        this.acceptPaymentDisputeRequest = acceptPaymentDisputeRequest;
         return this;
     }
     
-    
-    public AcceptPaymentDisputeSecurity security;
-    public AcceptPaymentDisputeRequest withSecurity(AcceptPaymentDisputeSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public AcceptPaymentDisputeRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * This is the unique identifier of the payment dispute. This path parameter must be passed into the call URI to identify the payment dispute for which the user plans to accept. This identifier is automatically created by eBay once the payment dispute comes into the eBay system. The unique identifier for payment disputes is returned in the &lt;strong&gt;paymentDisputeId&lt;/strong&gt; field in the &lt;strong&gt;getPaymentDisputeSummaries&lt;/strong&gt; response.&lt;br&gt;&lt;br&gt;This path parameter is required, and the actual identifier value is passed in right after the &lt;strong&gt;payment_dispute&lt;/strong&gt; resource. See the Resource URI above.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payment_dispute_id")
+    public String paymentDisputeId;
+    public AcceptPaymentDisputeRequest withPaymentDisputeId(String paymentDisputeId) {
+        this.paymentDisputeId = paymentDisputeId;
         return this;
     }
     

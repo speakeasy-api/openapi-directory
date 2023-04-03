@@ -4,20 +4,136 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAssociationBySubjectAndObjectCategorySearchRequest {
-    
-    public GetAssociationBySubjectAndObjectCategorySearchPathParams pathParams;
-    public GetAssociationBySubjectAndObjectCategorySearchRequest withPathParams(GetAssociationBySubjectAndObjectCategorySearchPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Object id, e.g. ECO:0000501 (for IEA; Includes inferred by default) or a specific publication or other supporting object, e.g. ZFIN:ZDB-PUB-060503-2
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=evidence")
+    public String evidence;
+    public GetAssociationBySubjectAndObjectCategorySearchRequest withEvidence(String evidence) {
+        this.evidence = evidence;
         return this;
     }
     
+    /**
+     * If true, excludes associations that involve IEAs (ECO:0000501)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_automatic_assertions")
+    public Boolean excludeAutomaticAssertions;
+    public GetAssociationBySubjectAndObjectCategorySearchRequest withExcludeAutomaticAssertions(Boolean excludeAutomaticAssertions) {
+        this.excludeAutomaticAssertions = excludeAutomaticAssertions;
+        return this;
+    }
     
-    public GetAssociationBySubjectAndObjectCategorySearchQueryParams queryParams;
-    public GetAssociationBySubjectAndObjectCategorySearchRequest withQueryParams(GetAssociationBySubjectAndObjectCategorySearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Object CURIE
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=object")
+    public String object;
+    public GetAssociationBySubjectAndObjectCategorySearchRequest withObject(String object) {
+        this.object = object;
+        return this;
+    }
+    
+    /**
+     * Category of entity at link Object (target), e.g. gene, disease, phenotype
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=object_category")
+    public String objectCategory;
+    public GetAssociationBySubjectAndObjectCategorySearchRequest withObjectCategory(String objectCategory) {
+        this.objectCategory = objectCategory;
+        return this;
+    }
+    
+    /**
+     * Object taxon ID, e.g. NCBITaxon:10090 (Includes inferred associations, by default)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=object_taxon")
+    public String objectTaxon;
+    public GetAssociationBySubjectAndObjectCategorySearchRequest withObjectTaxon(String objectTaxon) {
+        this.objectTaxon = objectTaxon;
+        return this;
+    }
+    
+    /**
+     * Filter by relation CURIE, e.g. RO:0002200 (has_phenotype), RO:0002607 (is marker for), RO:HOM0000017 (orthologous to), etc.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=relation")
+    public String relation;
+    public GetAssociationBySubjectAndObjectCategorySearchRequest withRelation(String relation) {
+        this.relation = relation;
+        return this;
+    }
+    
+    /**
+     * number of rows
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rows")
+    public Long rows;
+    public GetAssociationBySubjectAndObjectCategorySearchRequest withRows(Long rows) {
+        this.rows = rows;
+        return this;
+    }
+    
+    /**
+     * beginning row
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public Long start;
+    public GetAssociationBySubjectAndObjectCategorySearchRequest withStart(Long start) {
+        this.start = start;
+        return this;
+    }
+    
+    /**
+     * Subject CURIE
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subject")
+    public String subject;
+    public GetAssociationBySubjectAndObjectCategorySearchRequest withSubject(String subject) {
+        this.subject = subject;
+        return this;
+    }
+    
+    /**
+     * Category of entity at link Subject (source), e.g. gene, disease, phenotype
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subject_category")
+    public String subjectCategory;
+    public GetAssociationBySubjectAndObjectCategorySearchRequest withSubjectCategory(String subjectCategory) {
+        this.subjectCategory = subjectCategory;
+        return this;
+    }
+    
+    /**
+     * Subject taxon ID, e.g. NCBITaxon:9606 (Includes inferred associations, by default)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subject_taxon")
+    public String subjectTaxon;
+    public GetAssociationBySubjectAndObjectCategorySearchRequest withSubjectTaxon(String subjectTaxon) {
+        this.subjectTaxon = subjectTaxon;
+        return this;
+    }
+    
+    /**
+     * If true, excludes evidence objects in response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unselect_evidence")
+    public Boolean unselectEvidence;
+    public GetAssociationBySubjectAndObjectCategorySearchRequest withUnselectEvidence(Boolean unselectEvidence) {
+        this.unselectEvidence = unselectEvidence;
+        return this;
+    }
+    
+    /**
+     * If true, returns results in compact associations format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=use_compact_associations")
+    public Boolean useCompactAssociations;
+    public GetAssociationBySubjectAndObjectCategorySearchRequest withUseCompactAssociations(Boolean useCompactAssociations) {
+        this.useCompactAssociations = useCompactAssociations;
         return this;
     }
     

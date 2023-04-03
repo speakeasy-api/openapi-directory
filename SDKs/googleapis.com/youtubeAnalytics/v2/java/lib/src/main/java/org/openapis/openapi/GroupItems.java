@@ -34,10 +34,11 @@ public class GroupItems {
     /**
      * Removes an item from a group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.YoutubeAnalyticsGroupItemsDeleteResponse youtubeAnalyticsGroupItemsDelete(org.openapis.openapi.models.operations.YoutubeAnalyticsGroupItemsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.YoutubeAnalyticsGroupItemsDeleteResponse youtubeAnalyticsGroupItemsDelete(org.openapis.openapi.models.operations.YoutubeAnalyticsGroupItemsDeleteRequest request, org.openapis.openapi.models.operations.YoutubeAnalyticsGroupItemsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/groupItems");
         
@@ -45,14 +46,14 @@ public class GroupItems {
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubeAnalyticsGroupItemsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubeAnalyticsGroupItemsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,27 +80,28 @@ public class GroupItems {
     /**
      * Creates a group item.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.YoutubeAnalyticsGroupItemsInsertResponse youtubeAnalyticsGroupItemsInsert(org.openapis.openapi.models.operations.YoutubeAnalyticsGroupItemsInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.YoutubeAnalyticsGroupItemsInsertResponse youtubeAnalyticsGroupItemsInsert(org.openapis.openapi.models.operations.YoutubeAnalyticsGroupItemsInsertRequest request, org.openapis.openapi.models.operations.YoutubeAnalyticsGroupItemsInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/groupItems");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "groupItem", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubeAnalyticsGroupItemsInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubeAnalyticsGroupItemsInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,10 +128,11 @@ public class GroupItems {
     /**
      * Returns a collection of group items that match the API request parameters.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.YoutubeAnalyticsGroupItemsListResponse youtubeAnalyticsGroupItemsList(org.openapis.openapi.models.operations.YoutubeAnalyticsGroupItemsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.YoutubeAnalyticsGroupItemsListResponse youtubeAnalyticsGroupItemsList(org.openapis.openapi.models.operations.YoutubeAnalyticsGroupItemsListRequest request, org.openapis.openapi.models.operations.YoutubeAnalyticsGroupItemsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/groupItems");
         
@@ -137,14 +140,14 @@ public class GroupItems {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubeAnalyticsGroupItemsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.YoutubeAnalyticsGroupItemsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

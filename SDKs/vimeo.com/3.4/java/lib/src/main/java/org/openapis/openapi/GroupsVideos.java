@@ -33,19 +33,20 @@ public class GroupsVideos {
     /**
      * Add a video to a group
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddVideoToGroupResponse addVideoToGroup(org.openapis.openapi.models.operations.AddVideoToGroupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddVideoToGroupResponse addVideoToGroup(org.openapis.openapi.models.operations.AddVideoToGroupRequest request, org.openapis.openapi.models.operations.AddVideoToGroupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoToGroupPathParams.class, baseUrl, "/groups/{group_id}/videos/{video_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoToGroupRequest.class, baseUrl, "/groups/{group_id}/videos/{video_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,19 +83,20 @@ public class GroupsVideos {
     /**
      * Remove a video from a group
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteVideoFromGroupResponse deleteVideoFromGroup(org.openapis.openapi.models.operations.DeleteVideoFromGroupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteVideoFromGroupResponse deleteVideoFromGroup(org.openapis.openapi.models.operations.DeleteVideoFromGroupRequest request, org.openapis.openapi.models.operations.DeleteVideoFromGroupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVideoFromGroupPathParams.class, baseUrl, "/groups/{group_id}/videos/{video_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVideoFromGroupRequest.class, baseUrl, "/groups/{group_id}/videos/{video_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -129,7 +131,7 @@ public class GroupsVideos {
      */
     public org.openapis.openapi.models.operations.GetGroupVideoResponse getGroupVideo(org.openapis.openapi.models.operations.GetGroupVideoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGroupVideoPathParams.class, baseUrl, "/groups/{group_id}/videos/{video_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGroupVideoRequest.class, baseUrl, "/groups/{group_id}/videos/{video_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -176,13 +178,13 @@ public class GroupsVideos {
      */
     public org.openapis.openapi.models.operations.GetGroupVideosResponse getGroupVideos(org.openapis.openapi.models.operations.GetGroupVideosRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGroupVideosPathParams.class, baseUrl, "/groups/{group_id}/videos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGroupVideosRequest.class, baseUrl, "/groups/{group_id}/videos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGroupVideosQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGroupVideosRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

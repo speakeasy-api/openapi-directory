@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestCustomerRequest {
-    
-    public RequestCustomerPathParams pathParams;
-    public RequestCustomerRequest withPathParams(RequestCustomerPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public RequestCustomerXSdsDateFormatEnum xSdsDateFormat;
+    public RequestCustomerRequest withXSdsDateFormat(RequestCustomerXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
         return this;
     }
     
-    
-    public RequestCustomerQueryParams queryParams;
-    public RequestCustomerRequest withQueryParams(RequestCustomerQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Service Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Service-Token")
+    public String xSdsServiceToken;
+    public RequestCustomerRequest withXSdsServiceToken(String xSdsServiceToken) {
+        this.xSdsServiceToken = xSdsServiceToken;
         return this;
     }
     
+    /**
+     * Customer ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customer_id")
+    public Long customerId;
+    public RequestCustomerRequest withCustomerId(Long customerId) {
+        this.customerId = customerId;
+        return this;
+    }
     
-    public RequestCustomerHeaders headers;
-    public RequestCustomerRequest withHeaders(RequestCustomerHeaders headers) {
-        this.headers = headers;
+    /**
+     * Include custom customer attributes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_attributes")
+    public Boolean includeAttributes;
+    public RequestCustomerRequest withIncludeAttributes(Boolean includeAttributes) {
+        this.includeAttributes = includeAttributes;
         return this;
     }
     

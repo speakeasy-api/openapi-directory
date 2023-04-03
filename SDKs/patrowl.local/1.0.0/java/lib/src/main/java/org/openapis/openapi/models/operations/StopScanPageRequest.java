@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopScanPageRequest {
-    
-    public StopScanPagePathParams pathParams;
-    public StopScanPageRequest withPathParams(StopScanPagePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Numeric ID of the scan to stop
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scanId")
+    public Long scanId;
+    public StopScanPageRequest withScanId(Long scanId) {
+        this.scanId = scanId;
         return this;
     }
     

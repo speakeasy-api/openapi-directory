@@ -4,20 +4,57 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListCustomersRequest {
-    
-    public ListCustomersQueryParams queryParams;
-    public ListCustomersRequest withQueryParams(ListCustomersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A pagination cursor returned by a previous call to this endpoint.
+     * Provide this cursor to retrieve the next set of results for your original query.
+     * 
+     * For more information, see [Pagination](https://developer.squareup.com/docs/working-with-apis/pagination).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public ListCustomersRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
+    /**
+     * The maximum number of results to return in a single page. This limit is advisory. The response might contain more or fewer results. 
+     * The limit is ignored if it is less than 1 or greater than 100. The default value is 100.
+     * 
+     * For more information, see [Pagination](https://developer.squareup.com/docs/working-with-apis/pagination).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListCustomersRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public ListCustomersSecurity security;
-    public ListCustomersRequest withSecurity(ListCustomersSecurity security) {
-        this.security = security;
+    /**
+     * Indicates how customers should be sorted.
+     * 
+     * The default value is `DEFAULT`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_field")
+    public String sortField;
+    public ListCustomersRequest withSortField(String sortField) {
+        this.sortField = sortField;
+        return this;
+    }
+    
+    /**
+     * Indicates whether customers should be sorted in ascending (`ASC`) or
+     * descending (`DESC`) order.
+     * 
+     * The default value is `ASC`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_order")
+    public String sortOrder;
+    public ListCustomersRequest withSortOrder(String sortOrder) {
+        this.sortOrder = sortOrder;
         return this;
     }
     

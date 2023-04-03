@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateAGroupMemberRequest {
-    
-    public UpdateAGroupMemberPathParams pathParams;
-    public UpdateAGroupMemberRequest withPathParams(UpdateAGroupMemberPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateAGroupMemberApplicationJSON request;
-    public UpdateAGroupMemberRequest withRequest(UpdateAGroupMemberApplicationJSON request) {
-        this.request = request;
+    public UpdateAGroupMemberApplicationJSON requestBody;
+    public UpdateAGroupMemberRequest withRequestBody(UpdateAGroupMemberApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Unique Identifier of the group. Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups) API.&lt;br&gt; To change a member's primary group, provide the groupId of the member's current primary group as the value of this field.&lt;br&gt; To remove a member from one group and move the member to another group, provide the groupId of the group from which the member is to be moved.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public String groupId;
+    public UpdateAGroupMemberRequest withGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
     
-    public UpdateAGroupMemberSecurity security;
-    public UpdateAGroupMemberRequest withSecurity(UpdateAGroupMemberSecurity security) {
-        this.security = security;
+    /**
+     * Unique Identifier of the group member. Can be retrieved by calling the [List Group Members](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groupmembers) API.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=memberId")
+    public String memberId;
+    public UpdateAGroupMemberRequest withMemberId(String memberId) {
+        this.memberId = memberId;
         return this;
     }
     

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutUsersUserEmailSuspendRequest {
-    
-    public PutUsersUserEmailSuspendPathParams pathParams;
-    public PutUsersUserEmailSuspendRequest withPathParams(PutUsersUserEmailSuspendPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.SuspendedRequest suspendedRequest;
+    public PutUsersUserEmailSuspendRequest withSuspendedRequest(org.openapis.openapi.models.shared.SuspendedRequest suspendedRequest) {
+        this.suspendedRequest = suspendedRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SuspendedRequest request;
-    public PutUsersUserEmailSuspendRequest withRequest(org.openapis.openapi.models.shared.SuspendedRequest request) {
-        this.request = request;
+    /**
+     * user's email
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userEmail")
+    public String userEmail;
+    public PutUsersUserEmailSuspendRequest withUserEmail(String userEmail) {
+        this.userEmail = userEmail;
         return this;
     }
     

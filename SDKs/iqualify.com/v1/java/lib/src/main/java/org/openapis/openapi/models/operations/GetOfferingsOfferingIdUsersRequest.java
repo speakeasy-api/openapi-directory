@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOfferingsOfferingIdUsersRequest {
-    
-    public GetOfferingsOfferingIdUsersPathParams pathParams;
-    public GetOfferingsOfferingIdUsersRequest withPathParams(GetOfferingsOfferingIdUsersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * If true, facilitators are included in the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=facilitators")
+    public GetOfferingsOfferingIdUsersFacilitatorsEnum facilitators;
+    public GetOfferingsOfferingIdUsersRequest withFacilitators(GetOfferingsOfferingIdUsersFacilitatorsEnum facilitators) {
+        this.facilitators = facilitators;
         return this;
     }
     
+    /**
+     * If true, learners are included in the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=learners")
+    public GetOfferingsOfferingIdUsersLearnersEnum learners;
+    public GetOfferingsOfferingIdUsersRequest withLearners(GetOfferingsOfferingIdUsersLearnersEnum learners) {
+        this.learners = learners;
+        return this;
+    }
     
-    public GetOfferingsOfferingIdUsersQueryParams queryParams;
-    public GetOfferingsOfferingIdUsersRequest withQueryParams(GetOfferingsOfferingIdUsersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * If true, markers are included in the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=markers")
+    public GetOfferingsOfferingIdUsersMarkersEnum markers;
+    public GetOfferingsOfferingIdUsersRequest withMarkers(GetOfferingsOfferingIdUsersMarkersEnum markers) {
+        this.markers = markers;
+        return this;
+    }
+    
+    /**
+     * offering's id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offeringId")
+    public String offeringId;
+    public GetOfferingsOfferingIdUsersRequest withOfferingId(String offeringId) {
+        this.offeringId = offeringId;
         return this;
     }
     

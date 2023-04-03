@@ -48,7 +48,7 @@ public class SsoStrategies {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSsoStrategiesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSsoStrategiesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -89,7 +89,7 @@ public class SsoStrategies {
      */
     public org.openapis.openapi.models.operations.GetSsoStrategiesIdResponse getSsoStrategiesId(org.openapis.openapi.models.operations.GetSsoStrategiesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSsoStrategiesIdPathParams.class, baseUrl, "/sso_strategies/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSsoStrategiesIdRequest.class, baseUrl, "/sso_strategies/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -130,7 +130,7 @@ public class SsoStrategies {
      */
     public org.openapis.openapi.models.operations.PostSsoStrategiesIdSyncResponse postSsoStrategiesIdSync(org.openapis.openapi.models.operations.PostSsoStrategiesIdSyncRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSsoStrategiesIdSyncPathParams.class, baseUrl, "/sso_strategies/{id}/sync", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSsoStrategiesIdSyncRequest.class, baseUrl, "/sso_strategies/{id}/sync", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");

@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateAlbumRequest {
-    
-    public CreateAlbumPathParams pathParams;
-    public CreateAlbumRequest withPathParams(CreateAlbumPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.album+json")
-    public CreateAlbumRequestBody request;
-    public CreateAlbumRequest withRequest(CreateAlbumRequestBody request) {
-        this.request = request;
+    public CreateAlbumRequestBody requestBody;
+    public CreateAlbumRequest withRequestBody(CreateAlbumRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateAlbumSecurity security;
-    public CreateAlbumRequest withSecurity(CreateAlbumSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public CreateAlbumRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

@@ -4,13 +4,230 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSchedulesScheduleCRequest {
+    /**
+     * API key for https://api.data.gov. Get one at https://api.data.gov/signup.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetSchedulesScheduleCRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public GetSchedulesScheduleCQueryParams queryParams;
-    public GetSchedulesScheduleCRequest withQueryParams(GetSchedulesScheduleCQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Name of candidate running for office
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=candidate_name")
+    public String[] candidateName;
+    public GetSchedulesScheduleCRequest withCandidateName(String[] candidateName) {
+        this.candidateName = candidateName;
+        return this;
+    }
+    
+    /**
+     * A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=committee_id")
+    public String[] committeeId;
+    public GetSchedulesScheduleCRequest withCommitteeId(String[] committeeId) {
+        this.committeeId = committeeId;
+        return this;
+    }
+    
+    /**
+     * An unique identifier for each page where the electronic or paper filing is reported.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=image_number")
+    public String[] imageNumber;
+    public GetSchedulesScheduleCRequest withImageNumber(String[] imageNumber) {
+        this.imageNumber = imageNumber;
+        return this;
+    }
+    
+    /**
+     * Index of last result from previous page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_index")
+    public Integer lastIndex;
+    public GetSchedulesScheduleCRequest withLastIndex(Integer lastIndex) {
+        this.lastIndex = lastIndex;
+        return this;
+    }
+    
+    /**
+     * Filter for form and line number using the following format:
+     * `FORM-LINENUMBER`.  For example an argument such as `F3X-16` would filter
+     * down to all entries from form `F3X` line number `16`.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=line_number")
+    public String lineNumber;
+    public GetSchedulesScheduleCRequest withLineNumber(String lineNumber) {
+        this.lineNumber = lineNumber;
+        return this;
+    }
+    
+    /**
+     * Source of the loan (i.e., bank loan, brokerage account, credit card, home equity line of credit,               other line of credit, or personal funds of the candidate
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=loan_source_name")
+    public String[] loanSourceName;
+    public GetSchedulesScheduleCRequest withLoanSourceName(String[] loanSourceName) {
+        this.loanSourceName = loanSourceName;
+        return this;
+    }
+    
+    /**
+     * Filter for all amounts less than a value.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_amount")
+    public String maxAmount;
+    public GetSchedulesScheduleCRequest withMaxAmount(String maxAmount) {
+        this.maxAmount = maxAmount;
+        return this;
+    }
+    
+    /**
+     * Maxium image number of the page where the schedule item is reported
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_image_number")
+    public String maxImageNumber;
+    public GetSchedulesScheduleCRequest withMaxImageNumber(String maxImageNumber) {
+        this.maxImageNumber = maxImageNumber;
+        return this;
+    }
+    
+    /**
+     * Maximum incurred date
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_incurred_date")
+    public LocalDate maxIncurredDate;
+    public GetSchedulesScheduleCRequest withMaxIncurredDate(LocalDate maxIncurredDate) {
+        this.maxIncurredDate = maxIncurredDate;
+        return this;
+    }
+    
+    /**
+     * Maximum payment to date
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_payment_to_date")
+    public Integer maxPaymentToDate;
+    public GetSchedulesScheduleCRequest withMaxPaymentToDate(Integer maxPaymentToDate) {
+        this.maxPaymentToDate = maxPaymentToDate;
+        return this;
+    }
+    
+    /**
+     * Filter for all amounts greater than a value.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_amount")
+    public String minAmount;
+    public GetSchedulesScheduleCRequest withMinAmount(String minAmount) {
+        this.minAmount = minAmount;
+        return this;
+    }
+    
+    /**
+     * Minium image number of the page where the schedule item is reported
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_image_number")
+    public String minImageNumber;
+    public GetSchedulesScheduleCRequest withMinImageNumber(String minImageNumber) {
+        this.minImageNumber = minImageNumber;
+        return this;
+    }
+    
+    /**
+     * Minimum incurred date
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_incurred_date")
+    public LocalDate minIncurredDate;
+    public GetSchedulesScheduleCRequest withMinIncurredDate(LocalDate minIncurredDate) {
+        this.minIncurredDate = minIncurredDate;
+        return this;
+    }
+    
+    /**
+     * Minimum payment to date
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_payment_to_date")
+    public Integer minPaymentToDate;
+    public GetSchedulesScheduleCRequest withMinPaymentToDate(Integer minPaymentToDate) {
+        this.minPaymentToDate = minPaymentToDate;
+        return this;
+    }
+    
+    /**
+     * For paginating through results, starting at page 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetSchedulesScheduleCRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results returned per page. Defaults to 20.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetSchedulesScheduleCRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Provide a field to sort by. Use `-` for descending order.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetSchedulesScheduleCRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Hide null values on sorted column(s).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
+    public Boolean sortHideNull;
+    public GetSchedulesScheduleCRequest withSortHideNull(Boolean sortHideNull) {
+        this.sortHideNull = sortHideNull;
+        return this;
+    }
+    
+    /**
+     * Toggle that filters out all rows having sort column that is non-null
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
+    public Boolean sortNullOnly;
+    public GetSchedulesScheduleCRequest withSortNullOnly(Boolean sortNullOnly) {
+        this.sortNullOnly = sortNullOnly;
+        return this;
+    }
+    
+    /**
+     * Toggle that sorts null values last
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
+    public Boolean sortNullsLast;
+    public GetSchedulesScheduleCRequest withSortNullsLast(Boolean sortNullsLast) {
+        this.sortNullsLast = sortNullsLast;
         return this;
     }
     

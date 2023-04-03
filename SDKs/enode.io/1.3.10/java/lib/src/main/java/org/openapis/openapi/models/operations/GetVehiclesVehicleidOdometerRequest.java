@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVehiclesVehicleidOdometerRequest {
-    
-    public GetVehiclesVehicleidOdometerPathParams pathParams;
-    public GetVehiclesVehicleidOdometerRequest withPathParams(GetVehiclesVehicleidOdometerPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetVehiclesVehicleidOdometerSecurity security;
-    public GetVehiclesVehicleidOdometerRequest withSecurity(GetVehiclesVehicleidOdometerSecurity security) {
-        this.security = security;
+    /**
+     * ID of the Vehicle
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=vehicleId")
+    public String vehicleId;
+    public GetVehiclesVehicleidOdometerRequest withVehicleId(String vehicleId) {
+        this.vehicleId = vehicleId;
         return this;
     }
     

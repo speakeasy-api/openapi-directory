@@ -7,24 +7,37 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateGiftCardTransactionRequest {
-    
-    public CreateGiftCardTransactionPathParams pathParams;
-    public CreateGiftCardTransactionRequest withPathParams(CreateGiftCardTransactionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Media type(s) that is/are acceptable for the response. Default value for payment provider protocol is application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public CreateGiftCardTransactionRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public CreateGiftCardTransactionHeaders headers;
-    public CreateGiftCardTransactionRequest withHeaders(CreateGiftCardTransactionHeaders headers) {
-        this.headers = headers;
+    /**
+     * The Media type of the body of the request. Default value for payment provider protocol is application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public CreateGiftCardTransactionRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateGiftCardTransactionRequest request;
-    public CreateGiftCardTransactionRequest withRequest(org.openapis.openapi.models.shared.CreateGiftCardTransactionRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CreateGiftCardTransactionRequest createGiftCardTransactionRequest;
+    public CreateGiftCardTransactionRequest withCreateGiftCardTransactionRequest(org.openapis.openapi.models.shared.CreateGiftCardTransactionRequest createGiftCardTransactionRequest) {
+        this.createGiftCardTransactionRequest = createGiftCardTransactionRequest;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=giftCardID")
+    public String giftCardID;
+    public CreateGiftCardTransactionRequest withGiftCardID(String giftCardID) {
+        this.giftCardID = giftCardID;
         return this;
     }
     

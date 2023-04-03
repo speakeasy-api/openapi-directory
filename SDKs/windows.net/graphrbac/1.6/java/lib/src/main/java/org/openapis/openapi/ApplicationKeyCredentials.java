@@ -39,13 +39,13 @@ public class ApplicationKeyCredentials {
      */
     public org.openapis.openapi.models.operations.ApplicationsListKeyCredentialsResponse applicationsListKeyCredentials(org.openapis.openapi.models.operations.ApplicationsListKeyCredentialsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApplicationsListKeyCredentialsPathParams.class, baseUrl, "/{tenantID}/applications/{applicationObjectId}/keyCredentials", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApplicationsListKeyCredentialsRequest.class, baseUrl, "/{tenantID}/applications/{applicationObjectId}/keyCredentials", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApplicationsListKeyCredentialsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApplicationsListKeyCredentialsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -104,18 +104,18 @@ public class ApplicationKeyCredentials {
      */
     public org.openapis.openapi.models.operations.ApplicationsUpdateKeyCredentialsResponse applicationsUpdateKeyCredentials(org.openapis.openapi.models.operations.ApplicationsUpdateKeyCredentialsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApplicationsUpdateKeyCredentialsPathParams.class, baseUrl, "/{tenantID}/applications/{applicationObjectId}/keyCredentials", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApplicationsUpdateKeyCredentialsRequest.class, baseUrl, "/{tenantID}/applications/{applicationObjectId}/keyCredentials", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "keyCredentialsUpdateParameters", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApplicationsUpdateKeyCredentialsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ApplicationsUpdateKeyCredentialsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

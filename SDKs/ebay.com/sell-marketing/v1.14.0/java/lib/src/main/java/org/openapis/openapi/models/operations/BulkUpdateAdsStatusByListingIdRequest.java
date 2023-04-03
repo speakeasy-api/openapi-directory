@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BulkUpdateAdsStatusByListingIdRequest {
-    
-    public BulkUpdateAdsStatusByListingIdPathParams pathParams;
-    public BulkUpdateAdsStatusByListingIdRequest withPathParams(BulkUpdateAdsStatusByListingIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The bulk request to update ads.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.BulkUpdateAdStatusByListingIdRequest request;
-    public BulkUpdateAdsStatusByListingIdRequest withRequest(org.openapis.openapi.models.shared.BulkUpdateAdStatusByListingIdRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.BulkUpdateAdStatusByListingIdRequest bulkUpdateAdStatusByListingIdRequest;
+    public BulkUpdateAdsStatusByListingIdRequest withBulkUpdateAdStatusByListingIdRequest(org.openapis.openapi.models.shared.BulkUpdateAdStatusByListingIdRequest bulkUpdateAdStatusByListingIdRequest) {
+        this.bulkUpdateAdStatusByListingIdRequest = bulkUpdateAdStatusByListingIdRequest;
         return this;
     }
     
-    
-    public BulkUpdateAdsStatusByListingIdSecurity security;
-    public BulkUpdateAdsStatusByListingIdRequest withSecurity(BulkUpdateAdsStatusByListingIdSecurity security) {
-        this.security = security;
+    /**
+     * A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created.&lt;br /&gt;&lt;br /&gt;&lt;span class="tablenote"&gt;&lt;b&gt;Note:&lt;/b&gt; You can retrieve the campaign IDs for a specified seller using the &lt;a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns"&gt;getCampaigns&lt;/a&gt; method.&lt;/span&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=campaign_id")
+    public String campaignId;
+    public BulkUpdateAdsStatusByListingIdRequest withCampaignId(String campaignId) {
+        this.campaignId = campaignId;
         return this;
     }
     

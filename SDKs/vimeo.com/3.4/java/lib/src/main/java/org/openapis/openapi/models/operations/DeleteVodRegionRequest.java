@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteVodRegionRequest {
-    
-    public DeleteVodRegionPathParams pathParams;
-    public DeleteVodRegionRequest withPathParams(DeleteVodRegionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The country code.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=country")
+    public String country;
+    public DeleteVodRegionRequest withCountry(String country) {
+        this.country = country;
         return this;
     }
     
-    
-    public DeleteVodRegionSecurity security;
-    public DeleteVodRegionRequest withSecurity(DeleteVodRegionSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the On Demand.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ondemand_id")
+    public Double ondemandId;
+    public DeleteVodRegionRequest withOndemandId(Double ondemandId) {
+        this.ondemandId = ondemandId;
         return this;
     }
     

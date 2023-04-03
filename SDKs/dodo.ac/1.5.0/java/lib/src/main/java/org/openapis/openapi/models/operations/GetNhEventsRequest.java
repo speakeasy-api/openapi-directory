@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNhEventsRequest {
-    
-    public GetNhEventsQueryParams queryParams;
-    public GetNhEventsRequest withQueryParams(GetNhEventsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The version of the API you are calling, written as `1.0.0`. This is specified as required as good practice, but it is not actually enforced by the API. If you do not specify a version, you will be served the latest version, which may eventually result in breaking changes.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Version")
+    public String acceptVersion;
+    public GetNhEventsRequest withAcceptVersion(String acceptVersion) {
+        this.acceptVersion = acceptVersion;
         return this;
     }
     
+    /**
+     * Your UUID secret key, granted to you by the Nookipedia team. Required for accessing the API.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-API-KEY")
+    public String xApiKey;
+    public GetNhEventsRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
+        return this;
+    }
     
-    public GetNhEventsHeaders headers;
-    public GetNhEventsRequest withHeaders(GetNhEventsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Specify a specific date (in the current or next year) to retrieve events for. Accepts many date formats, such as `YYYY-MM-DD` or `Month Day, Year`, as well as `today` to retrieve the current day's events (UTC time).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
+    public String date;
+    public GetNhEventsRequest withDate(String date) {
+        this.date = date;
+        return this;
+    }
+    
+    /**
+     * Specify the day of the month to retrieve events for.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=day")
+    public Long day;
+    public GetNhEventsRequest withDay(Long day) {
+        this.day = day;
+        return this;
+    }
+    
+    /**
+     * Specify the month to retrieve events for (accepts multiple formats, such as `Oct`, `October`, or `10`). Most likely want to use alongside `year`, otherwise events in both the current and next year are returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=month")
+    public String month;
+    public GetNhEventsRequest withMonth(String month) {
+        this.month = month;
+        return this;
+    }
+    
+    /**
+     * Specify the year to retrieve events for. Must be the current or next year.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public String year;
+    public GetNhEventsRequest withYear(String year) {
+        this.year = year;
         return this;
     }
     

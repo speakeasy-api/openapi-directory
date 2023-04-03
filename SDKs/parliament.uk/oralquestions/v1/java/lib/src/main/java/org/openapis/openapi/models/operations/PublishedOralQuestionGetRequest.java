@@ -4,13 +4,97 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PublishedOralQuestionGetRequest {
+    /**
+     * Which answering body is to respond. A list of answering bodies can be found &lt;a target="_blank" href="http://data.parliament.uk/membersdataplatform/services/mnis/referencedata/AnsweringBodies/"&gt;here&lt;/a&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.answeringBodyIds")
+    public Integer[] parametersAnsweringBodyIds;
+    public PublishedOralQuestionGetRequest withParametersAnsweringBodyIds(Integer[] parametersAnsweringBodyIds) {
+        this.parametersAnsweringBodyIds = parametersAnsweringBodyIds;
+        return this;
+    }
     
-    public PublishedOralQuestionGetQueryParams queryParams;
-    public PublishedOralQuestionGetRequest withQueryParams(PublishedOralQuestionGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Oral Questions where the answering date has been set on or before the date provided. Date format YYYY-MM-DD.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.answeringDateEnd")
+    public OffsetDateTime parametersAnsweringDateEnd;
+    public PublishedOralQuestionGetRequest withParametersAnsweringDateEnd(OffsetDateTime parametersAnsweringDateEnd) {
+        this.parametersAnsweringDateEnd = parametersAnsweringDateEnd;
+        return this;
+    }
+    
+    /**
+     * Oral Questions where the answering date has been set on or after the date provided. Date format YYYY-MM-DD.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.answeringDateStart")
+    public OffsetDateTime parametersAnsweringDateStart;
+    public PublishedOralQuestionGetRequest withParametersAnsweringDateStart(OffsetDateTime parametersAnsweringDateStart) {
+        this.parametersAnsweringDateStart = parametersAnsweringDateStart;
+        return this;
+    }
+    
+    /**
+     * The ID of the member asking the question. Lists of member IDs for each house are available &lt;a href="http://data.parliament.uk/membersdataplatform/services/mnis/members/query/house=Commons" target="_blank"&gt;Commons&lt;/a&gt; and &lt;a href="http://data.parliament.uk/membersdataplatform/services/mnis/members/query/house=Lords" target="_blank"&gt;Lords&lt;/a&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.askingMemberIds")
+    public Integer[] parametersAskingMemberIds;
+    public PublishedOralQuestionGetRequest withParametersAskingMemberIds(Integer[] parametersAskingMemberIds) {
+        this.parametersAskingMemberIds = parametersAskingMemberIds;
+        return this;
+    }
+    
+    /**
+     * Oral Questions where the question is within the question time with the ID provided
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.oralQuestionTimeId")
+    public Integer parametersOralQuestionTimeId;
+    public PublishedOralQuestionGetRequest withParametersOralQuestionTimeId(Integer parametersOralQuestionTimeId) {
+        this.parametersOralQuestionTimeId = parametersOralQuestionTimeId;
+        return this;
+    }
+    
+    /**
+     * Oral Questions where the question type is the selected type, substantive or topical.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.questionType")
+    public PublishedOralQuestionGetParametersQuestionTypeEnum parametersQuestionType;
+    public PublishedOralQuestionGetRequest withParametersQuestionType(PublishedOralQuestionGetParametersQuestionTypeEnum parametersQuestionType) {
+        this.parametersQuestionType = parametersQuestionType;
+        return this;
+    }
+    
+    /**
+     * The number of records to skip from the first, default is 0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.skip")
+    public Integer parametersSkip;
+    public PublishedOralQuestionGetRequest withParametersSkip(Integer parametersSkip) {
+        this.parametersSkip = parametersSkip;
+        return this;
+    }
+    
+    /**
+     * The number of records to return, default is 25, maximum is 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.take")
+    public Integer parametersTake;
+    public PublishedOralQuestionGetRequest withParametersTake(Integer parametersTake) {
+        this.parametersTake = parametersTake;
+        return this;
+    }
+    
+    /**
+     * The UIN for the question - note that UINs reset at the start of each Parliamentary session.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.uINs")
+    public Integer[] parametersUINs;
+    public PublishedOralQuestionGetRequest withParametersUINs(Integer[] parametersUINs) {
+        this.parametersUINs = parametersUINs;
         return this;
     }
     

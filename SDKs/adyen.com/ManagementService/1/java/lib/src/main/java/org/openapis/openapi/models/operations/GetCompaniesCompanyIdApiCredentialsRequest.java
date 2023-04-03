@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCompaniesCompanyIdApiCredentialsRequest {
-    
-    public GetCompaniesCompanyIdApiCredentialsPathParams pathParams;
-    public GetCompaniesCompanyIdApiCredentialsRequest withPathParams(GetCompaniesCompanyIdApiCredentialsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the company account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public GetCompaniesCompanyIdApiCredentialsRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
         return this;
     }
     
-    
-    public GetCompaniesCompanyIdApiCredentialsQueryParams queryParams;
-    public GetCompaniesCompanyIdApiCredentialsRequest withQueryParams(GetCompaniesCompanyIdApiCredentialsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of the page to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
+    public Integer pageNumber;
+    public GetCompaniesCompanyIdApiCredentialsRequest withPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
     
-    
-    public GetCompaniesCompanyIdApiCredentialsSecurity security;
-    public GetCompaniesCompanyIdApiCredentialsRequest withSecurity(GetCompaniesCompanyIdApiCredentialsSecurity security) {
-        this.security = security;
+    /**
+     * The number of items to have on a page, maximum 100. The default is 10 items on a page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public GetCompaniesCompanyIdApiCredentialsRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

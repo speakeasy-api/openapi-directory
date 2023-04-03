@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSavedFilterRequest {
+    /**
+     * Saved Filter's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=identifier")
+    public String identifier;
+    public GetSavedFilterRequest withIdentifier(String identifier) {
+        this.identifier = identifier;
+        return this;
+    }
     
-    public GetSavedFilterPathParams pathParams;
-    public GetSavedFilterRequest withPathParams(GetSavedFilterPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Project's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_slug")
+    public String projectSlug;
+    public GetSavedFilterRequest withProjectSlug(String projectSlug) {
+        this.projectSlug = projectSlug;
+        return this;
+    }
+    
+    /**
+     * User's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public GetSavedFilterRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

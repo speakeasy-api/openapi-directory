@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCommandsSendRequest {
-    
-    public GetCommandsSendQueryParams queryParams;
-    public GetCommandsSendRequest withQueryParams(GetCommandsSendQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Standard users can use this only with _deviceId_s, they have access to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deviceId")
+    public Long deviceId;
+    public GetCommandsSendRequest withDeviceId(Long deviceId) {
+        this.deviceId = deviceId;
         return this;
     }
     

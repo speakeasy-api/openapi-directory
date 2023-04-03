@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProductGroupsRequest {
+    /**
+     * The market that the response should be formatted for
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Market-Id")
+    public String xMarketId;
+    public ProductGroupsRequest withXMarketId(String xMarketId) {
+        this.xMarketId = xMarketId;
+        return this;
+    }
     
-    public ProductGroupsHeaders headers;
-    public ProductGroupsRequest withHeaders(ProductGroupsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Shopper ID to return data for when not using JWT
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Shopper-Id")
+    public String xShopperId;
+    public ProductGroupsRequest withXShopperId(String xShopperId) {
+        this.xShopperId = xShopperId;
         return this;
     }
     

@@ -48,7 +48,7 @@ public class Groups {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateGroupResponse createGroup(org.openapis.openapi.models.operations.CreateGroupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateGroupResponse createGroup(org.openapis.openapi.models.shared.CreateGroupMetaData request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/groups");
         
@@ -108,7 +108,7 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.DeleteGroupByIdResponse deleteGroupById(org.openapis.openapi.models.operations.DeleteGroupByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteGroupByIdPathParams.class, baseUrl, "/groups/{groupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteGroupByIdRequest.class, baseUrl, "/groups/{groupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -154,7 +154,7 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.GetGroupByIdResponse getGroupById(org.openapis.openapi.models.operations.GetGroupByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGroupByIdPathParams.class, baseUrl, "/groups/{groupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGroupByIdRequest.class, baseUrl, "/groups/{groupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -207,7 +207,7 @@ public class Groups {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListGroupsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListGroupsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

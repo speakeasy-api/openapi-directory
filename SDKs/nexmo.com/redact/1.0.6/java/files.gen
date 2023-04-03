@@ -30,7 +30,6 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/RedactMessageSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/RedactMessageRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RedactMessageResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ErrorInvalidJson.java
 lib/src/main/java/org/openapis/openapi/models/shared/ErrorUnsupportedProduct.java
@@ -42,5 +41,4 @@ lib/src/main/java/org/openapis/openapi/models/shared/ErrorInvalidId.java
 lib/src/main/java/org/openapis/openapi/models/shared/RedactTransactionProductEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/RedactTransactionTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/RedactTransaction.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeBasicAuth.java
 USAGE.md

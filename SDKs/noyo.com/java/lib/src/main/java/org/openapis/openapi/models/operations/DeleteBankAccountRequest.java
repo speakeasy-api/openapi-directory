@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteBankAccountRequest {
+    /**
+     * The unique identifier of the group application in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=application_id")
+    public String applicationId;
+    public DeleteBankAccountRequest withApplicationId(String applicationId) {
+        this.applicationId = applicationId;
+        return this;
+    }
     
-    public DeleteBankAccountPathParams pathParams;
-    public DeleteBankAccountRequest withPathParams(DeleteBankAccountPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the bank account in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bank_account_id")
+    public String bankAccountId;
+    public DeleteBankAccountRequest withBankAccountId(String bankAccountId) {
+        this.bankAccountId = bankAccountId;
+        return this;
+    }
+    
+    /**
+     * The current version identifier of the bank account
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public String version;
+    public DeleteBankAccountRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

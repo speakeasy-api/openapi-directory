@@ -35,27 +35,28 @@ public class Projects {
     /**
      * De-identifies potentially sensitive info from a ContentItem. This method has limits on input size and output size. See https://cloud.google.com/dlp/docs/deidentify-sensitive-data to learn more. When no InfoTypes or CustomInfoTypes are specified in this request, the system will automatically choose what detectors to run. By default this may be all types, but may change over time as detectors are updated.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DlpProjectsLocationsContentDeidentifyResponse dlpProjectsLocationsContentDeidentify(org.openapis.openapi.models.operations.DlpProjectsLocationsContentDeidentifyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DlpProjectsLocationsContentDeidentifyResponse dlpProjectsLocationsContentDeidentify(org.openapis.openapi.models.operations.DlpProjectsLocationsContentDeidentifyRequest request, org.openapis.openapi.models.operations.DlpProjectsLocationsContentDeidentifySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsLocationsContentDeidentifyPathParams.class, baseUrl, "/v2/{parent}/content:deidentify", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsLocationsContentDeidentifyRequest.class, baseUrl, "/v2/{parent}/content:deidentify", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googlePrivacyDlpV2DeidentifyContentRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsLocationsContentDeidentifyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsLocationsContentDeidentifyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,27 +83,28 @@ public class Projects {
     /**
      * Finds potentially sensitive info in content. This method has limits on input size, processing time, and output size. When no InfoTypes or CustomInfoTypes are specified in this request, the system will automatically choose what detectors to run. By default this may be all types, but may change over time as detectors are updated. For how to guides, see https://cloud.google.com/dlp/docs/inspecting-images and https://cloud.google.com/dlp/docs/inspecting-text,
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DlpProjectsLocationsContentInspectResponse dlpProjectsLocationsContentInspect(org.openapis.openapi.models.operations.DlpProjectsLocationsContentInspectRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DlpProjectsLocationsContentInspectResponse dlpProjectsLocationsContentInspect(org.openapis.openapi.models.operations.DlpProjectsLocationsContentInspectRequest request, org.openapis.openapi.models.operations.DlpProjectsLocationsContentInspectSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsLocationsContentInspectPathParams.class, baseUrl, "/v2/{parent}/content:inspect", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsLocationsContentInspectRequest.class, baseUrl, "/v2/{parent}/content:inspect", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googlePrivacyDlpV2InspectContentRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsLocationsContentInspectQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsLocationsContentInspectRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -129,27 +131,28 @@ public class Projects {
     /**
      * Re-identifies content that has been de-identified. See https://cloud.google.com/dlp/docs/pseudonymization#re-identification_in_free_text_code_example to learn more.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DlpProjectsLocationsContentReidentifyResponse dlpProjectsLocationsContentReidentify(org.openapis.openapi.models.operations.DlpProjectsLocationsContentReidentifyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DlpProjectsLocationsContentReidentifyResponse dlpProjectsLocationsContentReidentify(org.openapis.openapi.models.operations.DlpProjectsLocationsContentReidentifyRequest request, org.openapis.openapi.models.operations.DlpProjectsLocationsContentReidentifySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsLocationsContentReidentifyPathParams.class, baseUrl, "/v2/{parent}/content:reidentify", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsLocationsContentReidentifyRequest.class, baseUrl, "/v2/{parent}/content:reidentify", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googlePrivacyDlpV2ReidentifyContentRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsLocationsContentReidentifyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsLocationsContentReidentifyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -176,27 +179,28 @@ public class Projects {
     /**
      * Creates a DeidentifyTemplate for reusing frequently used configuration for de-identifying content, images, and storage. See https://cloud.google.com/dlp/docs/creating-templates-deid to learn more.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DlpProjectsLocationsDeidentifyTemplatesCreateResponse dlpProjectsLocationsDeidentifyTemplatesCreate(org.openapis.openapi.models.operations.DlpProjectsLocationsDeidentifyTemplatesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DlpProjectsLocationsDeidentifyTemplatesCreateResponse dlpProjectsLocationsDeidentifyTemplatesCreate(org.openapis.openapi.models.operations.DlpProjectsLocationsDeidentifyTemplatesCreateRequest request, org.openapis.openapi.models.operations.DlpProjectsLocationsDeidentifyTemplatesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsLocationsDeidentifyTemplatesCreatePathParams.class, baseUrl, "/v2/{parent}/deidentifyTemplates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsLocationsDeidentifyTemplatesCreateRequest.class, baseUrl, "/v2/{parent}/deidentifyTemplates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googlePrivacyDlpV2CreateDeidentifyTemplateRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsLocationsDeidentifyTemplatesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsLocationsDeidentifyTemplatesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -223,25 +227,26 @@ public class Projects {
     /**
      * Lists DeidentifyTemplates. See https://cloud.google.com/dlp/docs/creating-templates-deid to learn more.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DlpProjectsLocationsDeidentifyTemplatesListResponse dlpProjectsLocationsDeidentifyTemplatesList(org.openapis.openapi.models.operations.DlpProjectsLocationsDeidentifyTemplatesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DlpProjectsLocationsDeidentifyTemplatesListResponse dlpProjectsLocationsDeidentifyTemplatesList(org.openapis.openapi.models.operations.DlpProjectsLocationsDeidentifyTemplatesListRequest request, org.openapis.openapi.models.operations.DlpProjectsLocationsDeidentifyTemplatesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsLocationsDeidentifyTemplatesListPathParams.class, baseUrl, "/v2/{parent}/deidentifyTemplates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsLocationsDeidentifyTemplatesListRequest.class, baseUrl, "/v2/{parent}/deidentifyTemplates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsLocationsDeidentifyTemplatesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsLocationsDeidentifyTemplatesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -268,27 +273,28 @@ public class Projects {
     /**
      * Starts asynchronous cancellation on a long-running DlpJob. The server makes a best effort to cancel the DlpJob, but success is not guaranteed. See https://cloud.google.com/dlp/docs/inspecting-storage and https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsCancelResponse dlpProjectsLocationsDlpJobsCancel(org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsCancelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsCancelResponse dlpProjectsLocationsDlpJobsCancel(org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsCancelRequest request, org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsCancelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsCancelPathParams.class, baseUrl, "/v2/{name}:cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsCancelRequest.class, baseUrl, "/v2/{name}:cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsCancelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsCancelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -315,27 +321,28 @@ public class Projects {
     /**
      * Creates a new job to inspect storage or calculate risk metrics. See https://cloud.google.com/dlp/docs/inspecting-storage and https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more. When no InfoTypes or CustomInfoTypes are specified in inspect jobs, the system will automatically choose what detectors to run. By default this may be all types, but may change over time as detectors are updated.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsCreateResponse dlpProjectsLocationsDlpJobsCreate(org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsCreateResponse dlpProjectsLocationsDlpJobsCreate(org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsCreateRequest request, org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsCreatePathParams.class, baseUrl, "/v2/{parent}/dlpJobs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsCreateRequest.class, baseUrl, "/v2/{parent}/dlpJobs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googlePrivacyDlpV2CreateDlpJobRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -362,27 +369,28 @@ public class Projects {
     /**
      * Finish a running hybrid DlpJob. Triggers the finalization steps and running of any enabled actions that have not yet run.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsFinishResponse dlpProjectsLocationsDlpJobsFinish(org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsFinishRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsFinishResponse dlpProjectsLocationsDlpJobsFinish(org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsFinishRequest request, org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsFinishSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsFinishPathParams.class, baseUrl, "/v2/{name}:finish", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsFinishRequest.class, baseUrl, "/v2/{name}:finish", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsFinishQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsFinishRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -409,25 +417,26 @@ public class Projects {
     /**
      * Lists DlpJobs that match the specified filter in the request. See https://cloud.google.com/dlp/docs/inspecting-storage and https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsListResponse dlpProjectsLocationsDlpJobsList(org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsListResponse dlpProjectsLocationsDlpJobsList(org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsListRequest request, org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsListPathParams.class, baseUrl, "/v2/{parent}/dlpJobs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsListRequest.class, baseUrl, "/v2/{parent}/dlpJobs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsLocationsDlpJobsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -454,27 +463,28 @@ public class Projects {
     /**
      * Redacts potentially sensitive info from an image. This method has limits on input size, processing time, and output size. See https://cloud.google.com/dlp/docs/redacting-sensitive-data-images to learn more. When no InfoTypes or CustomInfoTypes are specified in this request, the system will automatically choose what detectors to run. By default this may be all types, but may change over time as detectors are updated.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DlpProjectsLocationsImageRedactResponse dlpProjectsLocationsImageRedact(org.openapis.openapi.models.operations.DlpProjectsLocationsImageRedactRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DlpProjectsLocationsImageRedactResponse dlpProjectsLocationsImageRedact(org.openapis.openapi.models.operations.DlpProjectsLocationsImageRedactRequest request, org.openapis.openapi.models.operations.DlpProjectsLocationsImageRedactSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsLocationsImageRedactPathParams.class, baseUrl, "/v2/{parent}/image:redact", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsLocationsImageRedactRequest.class, baseUrl, "/v2/{parent}/image:redact", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googlePrivacyDlpV2RedactImageRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsLocationsImageRedactQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsLocationsImageRedactRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -501,27 +511,28 @@ public class Projects {
     /**
      * Creates an InspectTemplate for reusing frequently used configuration for inspecting content, images, and storage. See https://cloud.google.com/dlp/docs/creating-templates to learn more.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DlpProjectsLocationsInspectTemplatesCreateResponse dlpProjectsLocationsInspectTemplatesCreate(org.openapis.openapi.models.operations.DlpProjectsLocationsInspectTemplatesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DlpProjectsLocationsInspectTemplatesCreateResponse dlpProjectsLocationsInspectTemplatesCreate(org.openapis.openapi.models.operations.DlpProjectsLocationsInspectTemplatesCreateRequest request, org.openapis.openapi.models.operations.DlpProjectsLocationsInspectTemplatesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsLocationsInspectTemplatesCreatePathParams.class, baseUrl, "/v2/{parent}/inspectTemplates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsLocationsInspectTemplatesCreateRequest.class, baseUrl, "/v2/{parent}/inspectTemplates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googlePrivacyDlpV2CreateInspectTemplateRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsLocationsInspectTemplatesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsLocationsInspectTemplatesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -548,25 +559,26 @@ public class Projects {
     /**
      * Lists InspectTemplates. See https://cloud.google.com/dlp/docs/creating-templates to learn more.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DlpProjectsLocationsInspectTemplatesListResponse dlpProjectsLocationsInspectTemplatesList(org.openapis.openapi.models.operations.DlpProjectsLocationsInspectTemplatesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DlpProjectsLocationsInspectTemplatesListResponse dlpProjectsLocationsInspectTemplatesList(org.openapis.openapi.models.operations.DlpProjectsLocationsInspectTemplatesListRequest request, org.openapis.openapi.models.operations.DlpProjectsLocationsInspectTemplatesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsLocationsInspectTemplatesListPathParams.class, baseUrl, "/v2/{parent}/inspectTemplates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsLocationsInspectTemplatesListRequest.class, baseUrl, "/v2/{parent}/inspectTemplates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsLocationsInspectTemplatesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsLocationsInspectTemplatesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -593,27 +605,28 @@ public class Projects {
     /**
      * Activate a job trigger. Causes the immediate execute of a trigger instead of waiting on the trigger event to occur.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersActivateResponse dlpProjectsLocationsJobTriggersActivate(org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersActivateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersActivateResponse dlpProjectsLocationsJobTriggersActivate(org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersActivateRequest request, org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersActivateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersActivatePathParams.class, baseUrl, "/v2/{name}:activate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersActivateRequest.class, baseUrl, "/v2/{name}:activate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersActivateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersActivateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -640,27 +653,28 @@ public class Projects {
     /**
      * Creates a job trigger to run DLP actions such as scanning storage for sensitive information on a set schedule. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersCreateResponse dlpProjectsLocationsJobTriggersCreate(org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersCreateResponse dlpProjectsLocationsJobTriggersCreate(org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersCreateRequest request, org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersCreatePathParams.class, baseUrl, "/v2/{parent}/jobTriggers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersCreateRequest.class, baseUrl, "/v2/{parent}/jobTriggers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googlePrivacyDlpV2CreateJobTriggerRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -687,27 +701,28 @@ public class Projects {
     /**
      * Inspect hybrid content and store findings to a trigger. The inspection will be processed asynchronously. To review the findings monitor the jobs within the trigger.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersHybridInspectResponse dlpProjectsLocationsJobTriggersHybridInspect(org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersHybridInspectRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersHybridInspectResponse dlpProjectsLocationsJobTriggersHybridInspect(org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersHybridInspectRequest request, org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersHybridInspectSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersHybridInspectPathParams.class, baseUrl, "/v2/{name}:hybridInspect", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersHybridInspectRequest.class, baseUrl, "/v2/{name}:hybridInspect", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googlePrivacyDlpV2HybridInspectJobTriggerRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersHybridInspectQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersHybridInspectRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -734,25 +749,26 @@ public class Projects {
     /**
      * Lists job triggers. See https://cloud.google.com/dlp/docs/creating-job-triggers to learn more.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersListResponse dlpProjectsLocationsJobTriggersList(org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersListResponse dlpProjectsLocationsJobTriggersList(org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersListRequest request, org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersListPathParams.class, baseUrl, "/v2/{parent}/jobTriggers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersListRequest.class, baseUrl, "/v2/{parent}/jobTriggers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsLocationsJobTriggersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -779,27 +795,28 @@ public class Projects {
     /**
      * Creates a pre-built stored infoType to be used for inspection. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn more.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesCreateResponse dlpProjectsStoredInfoTypesCreate(org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesCreateResponse dlpProjectsStoredInfoTypesCreate(org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesCreateRequest request, org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesCreatePathParams.class, baseUrl, "/v2/{parent}/storedInfoTypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesCreateRequest.class, baseUrl, "/v2/{parent}/storedInfoTypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googlePrivacyDlpV2CreateStoredInfoTypeRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -826,25 +843,26 @@ public class Projects {
     /**
      * Deletes a stored infoType. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn more.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesDeleteResponse dlpProjectsStoredInfoTypesDelete(org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesDeleteResponse dlpProjectsStoredInfoTypesDelete(org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesDeleteRequest request, org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesDeletePathParams.class, baseUrl, "/v2/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesDeleteRequest.class, baseUrl, "/v2/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -871,25 +889,26 @@ public class Projects {
     /**
      * Gets a stored infoType. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn more.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesGetResponse dlpProjectsStoredInfoTypesGet(org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesGetResponse dlpProjectsStoredInfoTypesGet(org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesGetRequest request, org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesGetPathParams.class, baseUrl, "/v2/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesGetRequest.class, baseUrl, "/v2/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -916,25 +935,26 @@ public class Projects {
     /**
      * Lists stored infoTypes. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn more.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesListResponse dlpProjectsStoredInfoTypesList(org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesListResponse dlpProjectsStoredInfoTypesList(org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesListRequest request, org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesListPathParams.class, baseUrl, "/v2/{parent}/storedInfoTypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesListRequest.class, baseUrl, "/v2/{parent}/storedInfoTypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -961,27 +981,28 @@ public class Projects {
     /**
      * Updates the stored infoType by creating a new version. The existing version will continue to be used until the new version is ready. See https://cloud.google.com/dlp/docs/creating-stored-infotypes to learn more.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesPatchResponse dlpProjectsStoredInfoTypesPatch(org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesPatchResponse dlpProjectsStoredInfoTypesPatch(org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesPatchRequest request, org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesPatchPathParams.class, baseUrl, "/v2/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesPatchRequest.class, baseUrl, "/v2/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googlePrivacyDlpV2UpdateStoredInfoTypeRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DlpProjectsStoredInfoTypesPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

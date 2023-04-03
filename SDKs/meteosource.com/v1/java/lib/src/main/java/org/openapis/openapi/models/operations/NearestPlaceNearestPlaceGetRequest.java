@@ -4,20 +4,55 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NearestPlaceNearestPlaceGetRequest {
-    
-    public NearestPlaceNearestPlaceGetQueryParams queryParams;
-    public NearestPlaceNearestPlaceGetRequest withQueryParams(NearestPlaceNearestPlaceGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Your unique API key. You can either specify it in this parameter, or set it in `X-API-Key` header.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public NearestPlaceNearestPlaceGetRequest withKey(String key) {
+        this.key = key;
         return this;
     }
     
+    /**
+     * The language of text summaries and place names (variable names are never translated). Available languages are:
+     * 
+     *    * ``en``: English
+     *    * ``es``: Spanish
+     *    * ``fr``: French
+     *    * ``de``: German
+     *    * ``pl``: Polish
+     *    * ``pt``: Portuguese
+     *    * ``cs``: Czech
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public NearestPlaceNearestPlaceGetLanguageLanguageEnum language;
+    public NearestPlaceNearestPlaceGetRequest withLanguage(NearestPlaceNearestPlaceGetLanguageLanguageEnum language) {
+        this.language = language;
+        return this;
+    }
     
-    public NearestPlaceNearestPlaceGetSecurity security;
-    public NearestPlaceNearestPlaceGetRequest withSecurity(NearestPlaceNearestPlaceGetSecurity security) {
-        this.security = security;
+    /**
+     * Latitude in format 12N, 12.3N, 12.3, or 13S, 13.2S, -13.4
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lat")
+    public String lat;
+    public NearestPlaceNearestPlaceGetRequest withLat(String lat) {
+        this.lat = lat;
+        return this;
+    }
+    
+    /**
+     * Longitude in format 12E, 12.3E, 12.3, or 13W, 13.2W, -13.4
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lon")
+    public String lon;
+    public NearestPlaceNearestPlaceGetRequest withLon(String lon) {
+        this.lon = lon;
         return this;
     }
     

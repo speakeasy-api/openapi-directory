@@ -4,20 +4,88 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOccupantsNearestOutputFormatRequest {
-    
-    public GetOccupantsNearestOutputFormatPathParams pathParams;
-    public GetOccupantsNearestOutputFormatRequest withPathParams(GetOccupantsNearestOutputFormatPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * If true, include only basic match and address details in results. Not supported for shp, csv, and gml formats.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=brief")
+    public Boolean brief;
+    public GetOccupantsNearestOutputFormatRequest withBrief(Boolean brief) {
+        this.brief = brief;
         return this;
     }
     
+    /**
+     * Describes the nature of the address location. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#locationDescriptor target="_blank"&gt;locationDescriptor&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locationDescriptor")
+    public GetOccupantsNearestOutputFormatLocationDescriptorEnum locationDescriptor;
+    public GetOccupantsNearestOutputFormatRequest withLocationDescriptor(GetOccupantsNearestOutputFormatLocationDescriptorEnum locationDescriptor) {
+        this.locationDescriptor = locationDescriptor;
+        return this;
+    }
     
-    public GetOccupantsNearestOutputFormatQueryParams queryParams;
-    public GetOccupantsNearestOutputFormatRequest withQueryParams(GetOccupantsNearestOutputFormatQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The maximum distance (in metres) to search from the given point.  If not specified, the search distance is unlimited.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxDistance")
+    public Long maxDistance;
+    public GetOccupantsNearestOutputFormatRequest withMaxDistance(Long maxDistance) {
+        this.maxDistance = maxDistance;
+        return this;
+    }
+    
+    /**
+     * Results format. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank"&gt;outputFormat&lt;/a&gt;. 
+     * 
+     * Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=outputFormat")
+    public GetOccupantsNearestOutputFormatOutputFormatEnum outputFormat;
+    public GetOccupantsNearestOutputFormatRequest withOutputFormat(GetOccupantsNearestOutputFormatOutputFormatEnum outputFormat) {
+        this.outputFormat = outputFormat;
+        return this;
+    }
+    
+    /**
+     * The EPSG code of the spatial reference system (SRS) to use for output geometries. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank"&gt;outputSRS&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputSRS")
+    public GetOccupantsNearestOutputFormatOutputSrsEnum outputSRS;
+    public GetOccupantsNearestOutputFormatRequest withOutputSRS(GetOccupantsNearestOutputFormatOutputSrsEnum outputSRS) {
+        this.outputSRS = outputSRS;
+        return this;
+    }
+    
+    /**
+     * The point (x,y) from which the nearest site will be identified. The coordinates must be specified in the same SRS as given by the 'outputSRS' parameter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=point")
+    public String point;
+    public GetOccupantsNearestOutputFormatRequest withPoint(String point) {
+        this.point = point;
+        return this;
+    }
+    
+    /**
+     * The distance to move the accessPoint away from the curb and towards the inside of the parcel (in metres). Ignored if locationDescriptor not set to accessPoint.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=setBack")
+    public Long setBack;
+    public GetOccupantsNearestOutputFormatRequest withSetBack(Long setBack) {
+        this.setBack = setBack;
+        return this;
+    }
+    
+    /**
+     * Example: schools;courts;employment&lt;br&gt;A list of tags separated by semicolons.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
+    public String tags;
+    public GetOccupantsNearestOutputFormatRequest withTags(String tags) {
+        this.tags = tags;
         return this;
     }
     

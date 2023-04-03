@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteUcsManagerRequest {
-    
-    public DeleteUcsManagerPathParams pathParams;
-    public DeleteUcsManagerRequest withPathParams(DeleteUcsManagerPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteUcsManagerSecurity security;
-    public DeleteUcsManagerRequest withSecurity(DeleteUcsManagerSecurity security) {
-        this.security = security;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteUcsManagerRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

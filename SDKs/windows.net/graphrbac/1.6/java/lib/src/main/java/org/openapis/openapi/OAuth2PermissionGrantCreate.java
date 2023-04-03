@@ -39,15 +39,15 @@ public class OAuth2PermissionGrantCreate {
      */
     public org.openapis.openapi.models.operations.OAuth2PermissionGrantCreateResponse oAuth2PermissionGrantCreate(org.openapis.openapi.models.operations.OAuth2PermissionGrantCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OAuth2PermissionGrantCreatePathParams.class, baseUrl, "/{tenantID}/oauth2PermissionGrants", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OAuth2PermissionGrantCreateRequest.class, baseUrl, "/{tenantID}/oauth2PermissionGrants", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "oAuth2PermissionGrant", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OAuth2PermissionGrantCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OAuth2PermissionGrantCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

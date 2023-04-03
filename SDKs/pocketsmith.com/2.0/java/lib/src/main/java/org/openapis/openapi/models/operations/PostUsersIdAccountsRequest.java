@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostUsersIdAccountsRequest {
-    
-    public PostUsersIdAccountsPathParams pathParams;
-    public PostUsersIdAccountsRequest withPathParams(PostUsersIdAccountsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PostUsersIdAccountsRequestBody requestBody;
+    public PostUsersIdAccountsRequest withRequestBody(PostUsersIdAccountsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostUsersIdAccountsRequestBody request;
-    public PostUsersIdAccountsRequest withRequest(PostUsersIdAccountsRequestBody request) {
-        this.request = request;
+    /**
+     * The unique identifier of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public PostUsersIdAccountsRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

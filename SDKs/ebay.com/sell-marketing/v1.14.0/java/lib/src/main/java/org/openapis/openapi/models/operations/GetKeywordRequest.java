@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetKeywordRequest {
-    
-    public GetKeywordPathParams pathParams;
-    public GetKeywordRequest withPathParams(GetKeywordPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created.&lt;br /&gt;&lt;br /&gt;&lt;span class="tablenote"&gt;&lt;b&gt;Note:&lt;/b&gt; You can retrieve the campaign IDs for a specified seller using the &lt;a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns"&gt;getCampaigns&lt;/a&gt; method.&lt;/span&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=campaign_id")
+    public String campaignId;
+    public GetKeywordRequest withCampaignId(String campaignId) {
+        this.campaignId = campaignId;
         return this;
     }
     
-    
-    public GetKeywordSecurity security;
-    public GetKeywordRequest withSecurity(GetKeywordSecurity security) {
-        this.security = security;
+    /**
+     * This path parameter is used to identify the keyword to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=keyword_id")
+    public String keywordId;
+    public GetKeywordRequest withKeywordId(String keywordId) {
+        this.keywordId = keywordId;
         return this;
     }
     

@@ -4,20 +4,45 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FindPlacesFindPlacesGetRequest {
-    
-    public FindPlacesFindPlacesGetQueryParams queryParams;
-    public FindPlacesFindPlacesGetRequest withQueryParams(FindPlacesFindPlacesGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Your unique API key. You can either specify it in this parameter, or set it in `X-API-Key` header.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public FindPlacesFindPlacesGetRequest withKey(String key) {
+        this.key = key;
         return this;
     }
     
+    /**
+     * The language of text summaries and place names (variable names are never translated). Available languages are:
+     * 
+     *    * ``en``: English
+     *    * ``es``: Spanish
+     *    * ``fr``: French
+     *    * ``de``: German
+     *    * ``pl``: Polish
+     *    * ``pt``: Portuguese
+     *    * ``cs``: Czech
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public FindPlacesFindPlacesGetLanguageLanguageEnum language;
+    public FindPlacesFindPlacesGetRequest withLanguage(FindPlacesFindPlacesGetLanguageLanguageEnum language) {
+        this.language = language;
+        return this;
+    }
     
-    public FindPlacesFindPlacesGetSecurity security;
-    public FindPlacesFindPlacesGetRequest withSecurity(FindPlacesFindPlacesGetSecurity security) {
-        this.security = security;
+    /**
+     * Place name or ZIP code
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
+    public String text;
+    public FindPlacesFindPlacesGetRequest withText(String text) {
+        this.text = text;
         return this;
     }
     

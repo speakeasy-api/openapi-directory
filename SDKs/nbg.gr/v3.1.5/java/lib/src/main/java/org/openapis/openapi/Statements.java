@@ -34,24 +34,25 @@ public class Statements {
      * Get Statements
      * Get Statements by Account ID
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAccountsAccountIdStatementsResponse getAccountsAccountIdStatements(org.openapis.openapi.models.operations.GetAccountsAccountIdStatementsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetAccountsAccountIdStatementsResponse getAccountsAccountIdStatements(org.openapis.openapi.models.operations.GetAccountsAccountIdStatementsRequest request, org.openapis.openapi.models.operations.GetAccountsAccountIdStatementsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAccountsAccountIdStatementsPathParams.class, baseUrl, "/accounts/{accountId}/statements", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAccountsAccountIdStatementsRequest.class, baseUrl, "/accounts/{accountId}/statements", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAccountsAccountIdStatementsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAccountsAccountIdStatementsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -60,7 +61,7 @@ public class Statements {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -110,18 +111,19 @@ public class Statements {
      * Get Statements
      * Get Statements by Account ID and Statement ID
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAccountsAccountIdStatementsStatementIdResponse getAccountsAccountIdStatementsStatementId(org.openapis.openapi.models.operations.GetAccountsAccountIdStatementsStatementIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetAccountsAccountIdStatementsStatementIdResponse getAccountsAccountIdStatementsStatementId(org.openapis.openapi.models.operations.GetAccountsAccountIdStatementsStatementIdRequest request, org.openapis.openapi.models.operations.GetAccountsAccountIdStatementsStatementIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAccountsAccountIdStatementsStatementIdPathParams.class, baseUrl, "/accounts/{accountId}/statements/{statementId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAccountsAccountIdStatementsStatementIdRequest.class, baseUrl, "/accounts/{accountId}/statements/{statementId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -130,7 +132,7 @@ public class Statements {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -180,18 +182,19 @@ public class Statements {
      * Get Statements
      * Get Statement PDF File by Account ID and Statement ID
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAccountsAccountIdStatementsStatementIdFileResponse getAccountsAccountIdStatementsStatementIdFile(org.openapis.openapi.models.operations.GetAccountsAccountIdStatementsStatementIdFileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetAccountsAccountIdStatementsStatementIdFileResponse getAccountsAccountIdStatementsStatementIdFile(org.openapis.openapi.models.operations.GetAccountsAccountIdStatementsStatementIdFileRequest request, org.openapis.openapi.models.operations.GetAccountsAccountIdStatementsStatementIdFileSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAccountsAccountIdStatementsStatementIdFilePathParams.class, baseUrl, "/accounts/{accountId}/statements/{statementId}/file", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAccountsAccountIdStatementsStatementIdFileRequest.class, baseUrl, "/accounts/{accountId}/statements/{statementId}/file", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -200,7 +203,7 @@ public class Statements {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

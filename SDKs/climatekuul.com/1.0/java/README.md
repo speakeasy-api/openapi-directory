@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.AirtravelCoordinatesHeaders;
 import org.openapis.openapi.models.operations.AirtravelCoordinatesRequestBody;
 import org.openapis.openapi.models.operations.AirtravelCoordinatesRequest;
 import org.openapis.openapi.models.operations.AirtravelCoordinatesResponse;
@@ -29,10 +28,8 @@ public class Application {
                 .build();
 
             AirtravelCoordinatesRequest req = new AirtravelCoordinatesRequest() {{
-                headers = new AirtravelCoordinatesHeaders() {{
-                    contentType = "application/x-www-form-urlencoded";
-                }};
-                request = new AirtravelCoordinatesRequestBody() {{
+                contentType = "application/x-www-form-urlencoded";
+                requestBody = new AirtravelCoordinatesRequestBody() {{
                     apiKeyL1 = "d95fead6-e8a6-4547-9fb9-7835101a3960";
                     apiKeyL2 = "c60f8db5-7204-4427-960d-27400c38b166";
                     destinationAirportLatitude = 24.9056;
@@ -43,7 +40,7 @@ public class Application {
                     travelClass = "Economy";
                     travelMode = "round trip";
                 }};
-            }};            
+            }}            
 
             AirtravelCoordinatesResponse res = sdk.airtravelCoordinates.airtravelCoordinates(req);
 
@@ -57,7 +54,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### airtravelCoordinates

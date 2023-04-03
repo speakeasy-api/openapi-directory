@@ -6,10 +6,8 @@ import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.CreateBundleSecurity;
 import org.openapis.openapi.models.operations.CreateBundleCreateBundleRequest;
-import org.openapis.openapi.models.operations.CreateBundleRequest;
 import org.openapis.openapi.models.operations.CreateBundleResponse;
 import org.openapis.openapi.models.shared.BundleEnumEndUserTypeEnum;
-import org.openapis.openapi.models.shared.SchemeAccountSidAuthToken;
 
 public class Application {
     public static void main(String[] args) {
@@ -17,25 +15,20 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CreateBundleRequest req = new CreateBundleRequest() {{
-                security = new CreateBundleSecurity() {{
-                    accountSidAuthToken = new SchemeAccountSidAuthToken() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
-                }};
-                request = new CreateBundleCreateBundleRequest() {{
-                    email = "Larue_Rau85@yahoo.com";
-                    endUserType = "business";
-                    friendlyName = "illum";
-                    isoCountry = "vel";
-                    numberType = "error";
-                    regulationSid = "deserunt";
-                    statusCallback = "http://innocent-effect.org";
-                }};
-            }};            
+            CreateBundleCreateBundleRequest req = new CreateBundleCreateBundleRequest() {{
+                email = "Larue_Rau85@yahoo.com";
+                endUserType = "business";
+                friendlyName = "illum";
+                isoCountry = "vel";
+                numberType = "error";
+                regulationSid = "deserunt";
+                statusCallback = "http://innocent-effect.org";
+            }}            
 
-            CreateBundleResponse res = sdk.createBundle(req);
+            CreateBundleResponse res = sdk.createBundle(req, new CreateBundleSecurity() {{
+                password = "YOUR_PASSWORD_HERE";
+                username = "YOUR_USERNAME_HERE";
+            }});
 
             if (res.numbersV2RegulatoryComplianceBundle.isPresent()) {
                 // handle response

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETHackathonsComingFormatRequest {
-    
-    public GETHackathonsComingFormatQueryParams queryParams;
-    public GETHackathonsComingFormatRequest withQueryParams(GETHackathonsComingFormatQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Specify the page of coming hackathons.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GETHackathonsComingFormatRequest withPage(Integer page) {
+        this.page = page;
         return this;
     }
     

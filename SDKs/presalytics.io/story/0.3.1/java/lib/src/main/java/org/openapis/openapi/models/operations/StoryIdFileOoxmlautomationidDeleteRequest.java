@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoryIdFileOoxmlautomationidDeleteRequest {
+    /**
+     * the id from the story object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public StoryIdFileOoxmlautomationidDeleteRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public StoryIdFileOoxmlautomationidDeletePathParams pathParams;
-    public StoryIdFileOoxmlautomationidDeleteRequest withPathParams(StoryIdFileOoxmlautomationidDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * the id of the ooxml_automation object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ooxml_automation_id")
+    public String ooxmlAutomationId;
+    public StoryIdFileOoxmlautomationidDeleteRequest withOoxmlAutomationId(String ooxmlAutomationId) {
+        this.ooxmlAutomationId = ooxmlAutomationId;
         return this;
     }
     

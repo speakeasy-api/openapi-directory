@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkFloorPlanRequest {
-    
-    public UpdateNetworkFloorPlanPathParams pathParams;
-    public UpdateNetworkFloorPlanRequest withPathParams(UpdateNetworkFloorPlanPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkFloorPlanRequestBody requestBody;
+    public UpdateNetworkFloorPlanRequest withRequestBody(UpdateNetworkFloorPlanRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkFloorPlanRequestBody request;
-    public UpdateNetworkFloorPlanRequest withRequest(UpdateNetworkFloorPlanRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=floorPlanId")
+    public String floorPlanId;
+    public UpdateNetworkFloorPlanRequest withFloorPlanId(String floorPlanId) {
+        this.floorPlanId = floorPlanId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkFloorPlanRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

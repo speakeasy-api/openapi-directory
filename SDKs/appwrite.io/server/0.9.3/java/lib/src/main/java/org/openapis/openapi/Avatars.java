@@ -34,25 +34,26 @@ public class Avatars {
      * Get Browser Icon
      * You can use this endpoint to show different browser icons to your users. The code argument receives the browser code as it appears in your user /account/sessions endpoint. Use width, height and quality arguments to change the output settings.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AvatarsGetBrowserResponse avatarsGetBrowser(org.openapis.openapi.models.operations.AvatarsGetBrowserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AvatarsGetBrowserResponse avatarsGetBrowser(org.openapis.openapi.models.operations.AvatarsGetBrowserRequest request, org.openapis.openapi.models.operations.AvatarsGetBrowserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AvatarsGetBrowserPathParams.class, baseUrl, "/avatars/browsers/{code}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AvatarsGetBrowserRequest.class, baseUrl, "/avatars/browsers/{code}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AvatarsGetBrowserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AvatarsGetBrowserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -74,25 +75,26 @@ public class Avatars {
      * Get Credit Card Icon
      * The credit card endpoint will return you the icon of the credit card provider you need. Use width, height and quality arguments to change the output settings.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AvatarsGetCreditCardResponse avatarsGetCreditCard(org.openapis.openapi.models.operations.AvatarsGetCreditCardRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AvatarsGetCreditCardResponse avatarsGetCreditCard(org.openapis.openapi.models.operations.AvatarsGetCreditCardRequest request, org.openapis.openapi.models.operations.AvatarsGetCreditCardSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AvatarsGetCreditCardPathParams.class, baseUrl, "/avatars/credit-cards/{code}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AvatarsGetCreditCardRequest.class, baseUrl, "/avatars/credit-cards/{code}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AvatarsGetCreditCardQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AvatarsGetCreditCardRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -115,10 +117,11 @@ public class Avatars {
      * Use this endpoint to fetch the favorite icon (AKA favicon) of any remote website URL.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AvatarsGetFaviconResponse avatarsGetFavicon(org.openapis.openapi.models.operations.AvatarsGetFaviconRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AvatarsGetFaviconResponse avatarsGetFavicon(org.openapis.openapi.models.operations.AvatarsGetFaviconRequest request, org.openapis.openapi.models.operations.AvatarsGetFaviconSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/avatars/favicon");
         
@@ -126,14 +129,14 @@ public class Avatars {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AvatarsGetFaviconQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AvatarsGetFaviconRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -155,25 +158,26 @@ public class Avatars {
      * Get Country Flag
      * You can use this endpoint to show different country flags icons to your users. The code argument receives the 2 letter country code. Use width, height and quality arguments to change the output settings.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AvatarsGetFlagResponse avatarsGetFlag(org.openapis.openapi.models.operations.AvatarsGetFlagRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AvatarsGetFlagResponse avatarsGetFlag(org.openapis.openapi.models.operations.AvatarsGetFlagRequest request, org.openapis.openapi.models.operations.AvatarsGetFlagSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AvatarsGetFlagPathParams.class, baseUrl, "/avatars/flags/{code}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AvatarsGetFlagRequest.class, baseUrl, "/avatars/flags/{code}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AvatarsGetFlagQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AvatarsGetFlagRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -195,10 +199,11 @@ public class Avatars {
      * Get Image from URL
      * Use this endpoint to fetch a remote image URL and crop it to any image size you want. This endpoint is very useful if you need to crop and display remote images in your app or in case you want to make sure a 3rd party image is properly served using a TLS protocol.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AvatarsGetImageResponse avatarsGetImage(org.openapis.openapi.models.operations.AvatarsGetImageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AvatarsGetImageResponse avatarsGetImage(org.openapis.openapi.models.operations.AvatarsGetImageRequest request, org.openapis.openapi.models.operations.AvatarsGetImageSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/avatars/image");
         
@@ -206,14 +211,14 @@ public class Avatars {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AvatarsGetImageQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AvatarsGetImageRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -237,10 +242,11 @@ public class Avatars {
      * 
      * You can use the color and background params to change the avatar colors. By default, a random theme will be selected. The random theme will persist for the user's initials when reloading the same theme will always return for the same initials.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AvatarsGetInitialsResponse avatarsGetInitials(org.openapis.openapi.models.operations.AvatarsGetInitialsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AvatarsGetInitialsResponse avatarsGetInitials(org.openapis.openapi.models.operations.AvatarsGetInitialsRequest request, org.openapis.openapi.models.operations.AvatarsGetInitialsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/avatars/initials");
         
@@ -248,14 +254,14 @@ public class Avatars {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AvatarsGetInitialsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AvatarsGetInitialsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -277,10 +283,11 @@ public class Avatars {
      * Get QR Code
      * Converts a given plain text to a QR code image. You can use the query parameters to change the size and style of the resulting image.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AvatarsGetQRResponse avatarsGetQR(org.openapis.openapi.models.operations.AvatarsGetQRRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AvatarsGetQRResponse avatarsGetQR(org.openapis.openapi.models.operations.AvatarsGetQRRequest request, org.openapis.openapi.models.operations.AvatarsGetQRSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/avatars/qr");
         
@@ -288,14 +295,14 @@ public class Avatars {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AvatarsGetQRQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AvatarsGetQRRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

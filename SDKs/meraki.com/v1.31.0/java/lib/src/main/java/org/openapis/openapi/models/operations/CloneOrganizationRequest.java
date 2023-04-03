@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CloneOrganizationRequest {
-    
-    public CloneOrganizationPathParams pathParams;
-    public CloneOrganizationRequest withPathParams(CloneOrganizationPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CloneOrganizationRequestBody requestBody;
+    public CloneOrganizationRequest withRequestBody(CloneOrganizationRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public CloneOrganizationRequestBody request;
-    public CloneOrganizationRequest withRequest(CloneOrganizationRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public CloneOrganizationRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

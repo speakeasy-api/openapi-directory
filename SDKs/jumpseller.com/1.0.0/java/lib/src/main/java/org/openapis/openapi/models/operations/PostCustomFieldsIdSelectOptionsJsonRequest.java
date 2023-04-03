@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCustomFieldsIdSelectOptionsJsonRequest {
-    
-    public PostCustomFieldsIdSelectOptionsJsonPathParams pathParams;
-    public PostCustomFieldsIdSelectOptionsJsonRequest withPathParams(PostCustomFieldsIdSelectOptionsJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostCustomFieldsIdSelectOptionsJsonQueryParams queryParams;
-    public PostCustomFieldsIdSelectOptionsJsonRequest withQueryParams(PostCustomFieldsIdSelectOptionsJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Custom Field Select Option parameters.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CustomFieldSelectOptionEdit request;
-    public PostCustomFieldsIdSelectOptionsJsonRequest withRequest(org.openapis.openapi.models.shared.CustomFieldSelectOptionEdit request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CustomFieldSelectOptionEdit customFieldSelectOptionEdit;
+    public PostCustomFieldsIdSelectOptionsJsonRequest withCustomFieldSelectOptionEdit(org.openapis.openapi.models.shared.CustomFieldSelectOptionEdit customFieldSelectOptionEdit) {
+        this.customFieldSelectOptionEdit = customFieldSelectOptionEdit;
+        return this;
+    }
+    
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public PostCustomFieldsIdSelectOptionsJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
+        return this;
+    }
+    
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostCustomFieldsIdSelectOptionsJsonRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public PostCustomFieldsIdSelectOptionsJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

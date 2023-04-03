@@ -40,7 +40,7 @@ public class Accounts {
      */
     public org.openapis.openapi.models.operations.AccountsBalancesRetrieveResponse accountsBalancesRetrieve(org.openapis.openapi.models.operations.AccountsBalancesRetrieveRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountsBalancesRetrievePathParams.class, baseUrl, "/api/v2/accounts/{id}/balances/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountsBalancesRetrieveRequest.class, baseUrl, "/api/v2/accounts/{id}/balances/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -135,7 +135,7 @@ public class Accounts {
      */
     public org.openapis.openapi.models.operations.AccountsDetailsRetrieveResponse accountsDetailsRetrieve(org.openapis.openapi.models.operations.AccountsDetailsRetrieveRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountsDetailsRetrievePathParams.class, baseUrl, "/api/v2/accounts/{id}/details/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountsDetailsRetrieveRequest.class, baseUrl, "/api/v2/accounts/{id}/details/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -230,13 +230,13 @@ public class Accounts {
      */
     public org.openapis.openapi.models.operations.AccountsTransactionsRetrieveResponse accountsTransactionsRetrieve(org.openapis.openapi.models.operations.AccountsTransactionsRetrieveRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountsTransactionsRetrievePathParams.class, baseUrl, "/api/v2/accounts/{id}/transactions/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountsTransactionsRetrieveRequest.class, baseUrl, "/api/v2/accounts/{id}/transactions/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccountsTransactionsRetrieveQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccountsTransactionsRetrieveRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -331,7 +331,7 @@ public class Accounts {
      */
     public org.openapis.openapi.models.operations.RetrieveAccountMetadataResponse retrieveAccountMetadata(org.openapis.openapi.models.operations.RetrieveAccountMetadataRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAccountMetadataPathParams.class, baseUrl, "/api/v2/accounts/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAccountMetadataRequest.class, baseUrl, "/api/v2/accounts/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

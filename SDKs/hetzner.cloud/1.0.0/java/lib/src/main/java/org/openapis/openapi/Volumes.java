@@ -48,7 +48,7 @@ public class Volumes {
      */
     public org.openapis.openapi.models.operations.DeleteVolumesIdResponse deleteVolumesId(org.openapis.openapi.models.operations.DeleteVolumesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVolumesIdPathParams.class, baseUrl, "/volumes/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVolumesIdRequest.class, baseUrl, "/volumes/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -87,7 +87,7 @@ public class Volumes {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVolumesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVolumesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -126,7 +126,7 @@ public class Volumes {
      */
     public org.openapis.openapi.models.operations.GetVolumesIdResponse getVolumesId(org.openapis.openapi.models.operations.GetVolumesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVolumesIdPathParams.class, baseUrl, "/volumes/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVolumesIdRequest.class, baseUrl, "/volumes/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -176,7 +176,7 @@ public class Volumes {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostVolumesResponse postVolumes(org.openapis.openapi.models.operations.PostVolumesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostVolumesResponse postVolumes(org.openapis.openapi.models.operations.PostVolumesCreateVolumeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/volumes");
         
@@ -222,12 +222,12 @@ public class Volumes {
      */
     public org.openapis.openapi.models.operations.PutVolumesIdResponse putVolumesId(org.openapis.openapi.models.operations.PutVolumesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutVolumesIdPathParams.class, baseUrl, "/volumes/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutVolumesIdRequest.class, baseUrl, "/volumes/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

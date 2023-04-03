@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetMibsRequest {
-    
-    public SetMibsPathParams pathParams;
-    public SetMibsRequest withPathParams(SetMibsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.Triplet[] requestBody;
+    public SetMibsRequest withRequestBody(org.openapis.openapi.models.shared.Triplet[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Triplet[] request;
-    public SetMibsRequest withRequest(org.openapis.openapi.models.shared.Triplet[] request) {
-        this.request = request;
+    /**
+     * Agent to return the MIB triplets
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public SetMibsRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

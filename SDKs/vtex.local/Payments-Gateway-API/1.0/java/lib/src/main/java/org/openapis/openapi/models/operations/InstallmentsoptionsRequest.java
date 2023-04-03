@@ -4,20 +4,81 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InstallmentsoptionsRequest {
-    
-    public InstallmentsoptionsQueryParams queryParams;
-    public InstallmentsoptionsRequest withQueryParams(InstallmentsoptionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Media type(s) that is/are acceptable for the response. Default value for payment provider protocol is application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public InstallmentsoptionsRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * The Media type of the body of the request.  Default value for payment provider protocol is application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public InstallmentsoptionsRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public InstallmentsoptionsHeaders headers;
-    public InstallmentsoptionsRequest withHeaders(InstallmentsoptionsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The AppKey configured by the merchant (optional configuration)
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-PROVIDER-API-AppKey")
+    public String xPROVIDERAPIAppKey;
+    public InstallmentsoptionsRequest withXPROVIDERAPIAppKey(String xPROVIDERAPIAppKey) {
+        this.xPROVIDERAPIAppKey = xPROVIDERAPIAppKey;
+        return this;
+    }
+    
+    /**
+     * The AppToken configured by the merchant (optional configuration)
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-PROVIDER-API-AppToken")
+    public String xPROVIDERAPIAppToken;
+    public InstallmentsoptionsRequest withXPROVIDERAPIAppToken(String xPROVIDERAPIAppToken) {
+        this.xPROVIDERAPIAppToken = xPROVIDERAPIAppToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=request.paymentDetails[0].bin")
+    public Integer requestPaymentDetails0Bin;
+    public InstallmentsoptionsRequest withRequestPaymentDetails0Bin(Integer requestPaymentDetails0Bin) {
+        this.requestPaymentDetails0Bin = requestPaymentDetails0Bin;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=request.paymentDetails[0].id")
+    public Integer requestPaymentDetails0Id;
+    public InstallmentsoptionsRequest withRequestPaymentDetails0Id(Integer requestPaymentDetails0Id) {
+        this.requestPaymentDetails0Id = requestPaymentDetails0Id;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=request.paymentDetails[0].value")
+    public Integer requestPaymentDetails0Value;
+    public InstallmentsoptionsRequest withRequestPaymentDetails0Value(Integer requestPaymentDetails0Value) {
+        this.requestPaymentDetails0Value = requestPaymentDetails0Value;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=request.salesChannel")
+    public Integer requestSalesChannel;
+    public InstallmentsoptionsRequest withRequestSalesChannel(Integer requestSalesChannel) {
+        this.requestSalesChannel = requestSalesChannel;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=request.value")
+    public Integer requestValue;
+    public InstallmentsoptionsRequest withRequestValue(Integer requestValue) {
+        this.requestValue = requestValue;
         return this;
     }
     

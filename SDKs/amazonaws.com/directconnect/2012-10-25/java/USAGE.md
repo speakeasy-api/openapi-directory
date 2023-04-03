@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AcceptDirectConnectGatewayAssociationProposalXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AcceptDirectConnectGatewayAssociationProposalHeaders;
 import org.openapis.openapi.models.operations.AcceptDirectConnectGatewayAssociationProposalRequest;
 import org.openapis.openapi.models.operations.AcceptDirectConnectGatewayAssociationProposalResponse;
 import org.openapis.openapi.models.shared.AcceptDirectConnectGatewayAssociationProposalRequest;
@@ -16,40 +15,36 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AcceptDirectConnectGatewayAssociationProposalRequest req = new AcceptDirectConnectGatewayAssociationProposalRequest() {{
-                headers = new AcceptDirectConnectGatewayAssociationProposalHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "OvertureService.AcceptDirectConnectGatewayAssociationProposal";
-                }};
-                request = new AcceptDirectConnectGatewayAssociationProposalRequest() {{
-                    associatedGatewayOwnerAccount = "illum";
-                    directConnectGatewayId = "vel";
+                acceptDirectConnectGatewayAssociationProposalRequest = new AcceptDirectConnectGatewayAssociationProposalRequest() {{
+                    associatedGatewayOwnerAccount = "corrupti";
+                    directConnectGatewayId = "provident";
                     overrideAllowedPrefixesToDirectConnectGateway = new org.openapis.openapi.models.shared.RouteFilterPrefix[]{{
                         add(new RouteFilterPrefix() {{
-                            cidr = "deserunt";
+                            cidr = "quibusdam";
                         }}),
                         add(new RouteFilterPrefix() {{
-                            cidr = "suscipit";
+                            cidr = "unde";
                         }}),
                         add(new RouteFilterPrefix() {{
-                            cidr = "iure";
+                            cidr = "nulla";
                         }}),
                     }};
-                    proposalId = "magnam";
+                    proposalId = "corrupti";
                 }};
-            }};            
+                xAmzAlgorithm = "illum";
+                xAmzContentSha256 = "vel";
+                xAmzCredential = "error";
+                xAmzDate = "deserunt";
+                xAmzSecurityToken = "suscipit";
+                xAmzSignature = "iure";
+                xAmzSignedHeaders = "magnam";
+                xAmzTarget = "OvertureService.AcceptDirectConnectGatewayAssociationProposal";
+            }}            
 
             AcceptDirectConnectGatewayAssociationProposalResponse res = sdk.acceptDirectConnectGatewayAssociationProposal(req);
 

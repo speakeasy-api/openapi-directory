@@ -31,7 +31,6 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/WebfontsWebfontsListSortEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/WebfontsWebfontsListQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/WebfontsWebfontsListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/WebfontsWebfontsListResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/WebfontList.java

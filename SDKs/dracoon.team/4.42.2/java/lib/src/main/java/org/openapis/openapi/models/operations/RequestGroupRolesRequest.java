@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestGroupRolesRequest {
-    
-    public RequestGroupRolesPathParams pathParams;
-    public RequestGroupRolesRequest withPathParams(RequestGroupRolesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestGroupRolesRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public RequestGroupRolesHeaders headers;
-    public RequestGroupRolesRequest withHeaders(RequestGroupRolesHeaders headers) {
-        this.headers = headers;
+    /**
+     * Group ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public Long groupId;
+    public RequestGroupRolesRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
         return this;
     }
     

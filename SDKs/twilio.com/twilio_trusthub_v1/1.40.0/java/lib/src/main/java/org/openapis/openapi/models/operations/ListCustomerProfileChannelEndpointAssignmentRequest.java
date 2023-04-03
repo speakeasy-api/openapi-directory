@@ -4,34 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListCustomerProfileChannelEndpointAssignmentRequest {
-    
-    public ListCustomerProfileChannelEndpointAssignmentPathParams pathParams;
-    public ListCustomerProfileChannelEndpointAssignmentRequest withPathParams(ListCustomerProfileChannelEndpointAssignmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of an channel endpoint
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ChannelEndpointSid")
+    public String channelEndpointSid;
+    public ListCustomerProfileChannelEndpointAssignmentRequest withChannelEndpointSid(String channelEndpointSid) {
+        this.channelEndpointSid = channelEndpointSid;
         return this;
     }
     
-    
-    public ListCustomerProfileChannelEndpointAssignmentQueryParams queryParams;
-    public ListCustomerProfileChannelEndpointAssignmentRequest withQueryParams(ListCustomerProfileChannelEndpointAssignmentQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * comma separated list of channel endpoint sids
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ChannelEndpointSids")
+    public String channelEndpointSids;
+    public ListCustomerProfileChannelEndpointAssignmentRequest withChannelEndpointSids(String channelEndpointSids) {
+        this.channelEndpointSids = channelEndpointSids;
         return this;
     }
     
-    
-    public ListCustomerProfileChannelEndpointAssignmentSecurity security;
-    public ListCustomerProfileChannelEndpointAssignmentRequest withSecurity(ListCustomerProfileChannelEndpointAssignmentSecurity security) {
-        this.security = security;
+    /**
+     * The unique string that we created to identify the CustomerProfile resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CustomerProfileSid")
+    public String customerProfileSid;
+    public ListCustomerProfileChannelEndpointAssignmentRequest withCustomerProfileSid(String customerProfileSid) {
+        this.customerProfileSid = customerProfileSid;
         return this;
     }
     
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListCustomerProfileChannelEndpointAssignmentRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public String serverURL;
-    public ListCustomerProfileChannelEndpointAssignmentRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListCustomerProfileChannelEndpointAssignmentRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListCustomerProfileChannelEndpointAssignmentRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

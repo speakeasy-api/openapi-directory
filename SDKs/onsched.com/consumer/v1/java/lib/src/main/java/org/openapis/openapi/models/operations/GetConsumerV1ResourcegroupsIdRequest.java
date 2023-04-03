@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConsumerV1ResourcegroupsIdRequest {
-    
-    public GetConsumerV1ResourcegroupsIdPathParams pathParams;
-    public GetConsumerV1ResourcegroupsIdRequest withPathParams(GetConsumerV1ResourcegroupsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * id of the resourceGroup object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetConsumerV1ResourcegroupsIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

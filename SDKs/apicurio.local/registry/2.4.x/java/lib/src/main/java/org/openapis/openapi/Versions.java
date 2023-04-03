@@ -59,18 +59,18 @@ public class Versions {
      */
     public org.openapis.openapi.models.operations.CreateArtifactVersionJsonResponse createArtifactVersionJson(org.openapis.openapi.models.operations.CreateArtifactVersionJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateArtifactVersionJsonPathParams.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/versions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateArtifactVersionJsonRequest.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/versions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "contentCreateRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -142,18 +142,18 @@ public class Versions {
      */
     public org.openapis.openapi.models.operations.CreateArtifactVersionRawResponse createArtifactVersionRaw(org.openapis.openapi.models.operations.CreateArtifactVersionRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateArtifactVersionRawPathParams.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/versions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateArtifactVersionRawRequest.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/versions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -220,13 +220,13 @@ public class Versions {
      */
     public org.openapis.openapi.models.operations.GetArtifactVersionResponse getArtifactVersion(org.openapis.openapi.models.operations.GetArtifactVersionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetArtifactVersionPathParams.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/versions/{version}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetArtifactVersionRequest.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/versions/{version}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetArtifactVersionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetArtifactVersionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -282,7 +282,7 @@ public class Versions {
      */
     public org.openapis.openapi.models.operations.GetArtifactVersionReferencesResponse getArtifactVersionReferences(org.openapis.openapi.models.operations.GetArtifactVersionReferencesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetArtifactVersionReferencesPathParams.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/versions/{version}/references", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetArtifactVersionReferencesRequest.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/versions/{version}/references", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -335,13 +335,13 @@ public class Versions {
      */
     public org.openapis.openapi.models.operations.ListArtifactVersionsResponse listArtifactVersions(org.openapis.openapi.models.operations.ListArtifactVersionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListArtifactVersionsPathParams.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/versions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListArtifactVersionsRequest.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/versions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListArtifactVersionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListArtifactVersionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -396,12 +396,12 @@ public class Versions {
      */
     public org.openapis.openapi.models.operations.UpdateArtifactVersionStateResponse updateArtifactVersionState(org.openapis.openapi.models.operations.UpdateArtifactVersionStateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateArtifactVersionStatePathParams.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/versions/{version}/state", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateArtifactVersionStateRequest.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/versions/{version}/state", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateState", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

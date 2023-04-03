@@ -30,7 +30,7 @@ public class Internal {
 		this._genVersion = genVersion;
 	}
 
-    public org.openapis.openapi.models.operations.Aggregate2Response aggregate2(org.openapis.openapi.models.operations.Aggregate2Request request) throws Exception {
+    public org.openapis.openapi.models.operations.Aggregate2Response aggregate2(org.openapis.openapi.models.operations.Aggregate2RequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/aggregate");
         
@@ -67,7 +67,7 @@ public class Internal {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.RouteResponse route(org.openapis.openapi.models.operations.RouteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RouteResponse route(org.openapis.openapi.models.operations.RouteRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/route");
         
@@ -104,7 +104,7 @@ public class Internal {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.SendFeedbackResponse sendFeedback(org.openapis.openapi.models.operations.SendFeedbackRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SendFeedbackResponse sendFeedback(org.openapis.openapi.models.operations.SendFeedbackRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/send-feedback");
         
@@ -141,7 +141,7 @@ public class Internal {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.TransformInputResponse transformInput(org.openapis.openapi.models.operations.TransformInputRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransformInputResponse transformInput(org.openapis.openapi.models.operations.TransformInputRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transform-input");
         
@@ -178,7 +178,7 @@ public class Internal {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.TransformInput3Response transformInput3(org.openapis.openapi.models.operations.TransformInput3Request request) throws Exception {
+    public org.openapis.openapi.models.operations.TransformInput3Response transformInput3(org.openapis.openapi.models.operations.TransformInput3RequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/predict");
         
@@ -215,7 +215,7 @@ public class Internal {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.TransformOutputResponse transformOutput(org.openapis.openapi.models.operations.TransformOutputRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TransformOutputResponse transformOutput(org.openapis.openapi.models.operations.TransformOutputRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transform-output");
         

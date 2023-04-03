@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkSmBypassActivationLockAttemptRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=attemptId")
+    public String attemptId;
+    public GetNetworkSmBypassActivationLockAttemptRequest withAttemptId(String attemptId) {
+        this.attemptId = attemptId;
+        return this;
+    }
     
-    public GetNetworkSmBypassActivationLockAttemptPathParams pathParams;
-    public GetNetworkSmBypassActivationLockAttemptRequest withPathParams(GetNetworkSmBypassActivationLockAttemptPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkSmBypassActivationLockAttemptRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

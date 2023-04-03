@@ -39,7 +39,7 @@ public class ByMetric {
      */
     public org.openapis.openapi.models.operations.GetNetworkSensorAlertsCurrentOverviewByMetricResponse getNetworkSensorAlertsCurrentOverviewByMetric(org.openapis.openapi.models.operations.GetNetworkSensorAlertsCurrentOverviewByMetricRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSensorAlertsCurrentOverviewByMetricPathParams.class, baseUrl, "/networks/{networkId}/sensor/alerts/current/overview/byMetric", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSensorAlertsCurrentOverviewByMetricRequest.class, baseUrl, "/networks/{networkId}/sensor/alerts/current/overview/byMetric", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -79,13 +79,13 @@ public class ByMetric {
      */
     public org.openapis.openapi.models.operations.GetNetworkSensorAlertsOverviewByMetricResponse getNetworkSensorAlertsOverviewByMetric(org.openapis.openapi.models.operations.GetNetworkSensorAlertsOverviewByMetricRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSensorAlertsOverviewByMetricPathParams.class, baseUrl, "/networks/{networkId}/sensor/alerts/overview/byMetric", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSensorAlertsOverviewByMetricRequest.class, baseUrl, "/networks/{networkId}/sensor/alerts/overview/byMetric", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkSensorAlertsOverviewByMetricQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkSensorAlertsOverviewByMetricRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

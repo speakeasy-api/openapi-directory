@@ -20,14 +20,10 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.operations.SqlBackupRunsDeleteSecurityOption1;
 import org.openapis.openapi.models.operations.SqlBackupRunsDeleteSecurityOption2;
 import org.openapis.openapi.models.operations.SqlBackupRunsDeleteSecurity;
-import org.openapis.openapi.models.operations.SqlBackupRunsDeletePathParams;
-import org.openapis.openapi.models.operations.SqlBackupRunsDeleteQueryParams;
 import org.openapis.openapi.models.operations.SqlBackupRunsDeleteRequest;
 import org.openapis.openapi.models.operations.SqlBackupRunsDeleteResponse;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -36,37 +32,28 @@ public class Application {
                 .build();
 
             SqlBackupRunsDeleteRequest req = new SqlBackupRunsDeleteRequest() {{
-                security = new SqlBackupRunsDeleteSecurity() {{
-                    option1 = new SqlBackupRunsDeleteSecurityOption1() {{
-                        oauth2 = new SchemeOauth2() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                        oauth2c = new SchemeOauth2c() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                    }};
-                }};
-                pathParams = new SqlBackupRunsDeletePathParams() {{
-                    id = "corrupti";
-                    instance = "provident";
-                    project = "distinctio";
-                }};
-                queryParams = new SqlBackupRunsDeleteQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "unde";
-                    alt = "proto";
-                    callback = "corrupti";
-                    fields = "illum";
-                    key = "vel";
-                    oauthToken = "error";
-                    prettyPrint = false;
-                    quotaUser = "deserunt";
-                    uploadType = "suscipit";
-                    uploadProtocol = "iure";
-                }};
-            }};            
+                dollarXgafv = "2";
+                accessToken = "provident";
+                alt = "proto";
+                callback = "quibusdam";
+                fields = "unde";
+                id = "nulla";
+                instance = "corrupti";
+                key = "illum";
+                oauthToken = "vel";
+                prettyPrint = false;
+                project = "error";
+                quotaUser = "deserunt";
+                uploadType = "suscipit";
+                uploadProtocol = "iure";
+            }}            
 
-            SqlBackupRunsDeleteResponse res = sdk.backupRuns.sqlBackupRunsDelete(req);
+            SqlBackupRunsDeleteResponse res = sdk.backupRuns.sqlBackupRunsDelete(req, new SqlBackupRunsDeleteSecurity() {{
+                option1 = new SqlBackupRunsDeleteSecurityOption1() {{
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                }};
+            }});
 
             if (res.operation.isPresent()) {
                 // handle response
@@ -78,7 +65,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### backupRuns

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCorporateByIdRequest {
-    
-    public GetCorporateByIdPathParams pathParams;
-    public GetCorporateByIdRequest withPathParams(GetCorporateByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Corporate ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=corporateId")
+    public Long corporateId;
+    public GetCorporateByIdRequest withCorporateId(Long corporateId) {
+        this.corporateId = corporateId;
         return this;
     }
     

@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRevisionsCountUsingPOSTRequest {
-    
-    public GetRevisionsCountUsingPOSTQueryParams queryParams;
-    public GetRevisionsCountUsingPOSTRequest withQueryParams(GetRevisionsCountUsingPOSTQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=padID")
+    public String padID;
+    public GetRevisionsCountUsingPOSTRequest withPadID(String padID) {
+        this.padID = padID;
         return this;
     }
     

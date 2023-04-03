@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CompleteOpenIdLoginRequest {
+    /**
+     * Authorization code
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=code")
+    public String code;
+    public CompleteOpenIdLoginRequest withCode(String code) {
+        this.code = code;
+        return this;
+    }
     
-    public CompleteOpenIdLoginQueryParams queryParams;
-    public CompleteOpenIdLoginRequest withQueryParams(CompleteOpenIdLoginQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Identity token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id_token")
+    public String idToken;
+    public CompleteOpenIdLoginRequest withIdToken(String idToken) {
+        this.idToken = idToken;
+        return this;
+    }
+    
+    /**
+     * Authentication state
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public String state;
+    public CompleteOpenIdLoginRequest withState(String state) {
+        this.state = state;
         return this;
     }
     

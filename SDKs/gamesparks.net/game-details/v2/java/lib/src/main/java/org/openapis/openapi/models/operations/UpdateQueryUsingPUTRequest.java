@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateQueryUsingPUTRequest {
-    
-    public UpdateQueryUsingPUTPathParams pathParams;
-    public UpdateQueryUsingPUTRequest withPathParams(UpdateQueryUsingPUTPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * query
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ManageQuery request;
-    public UpdateQueryUsingPUTRequest withRequest(org.openapis.openapi.models.shared.ManageQuery request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ManageQuery manageQuery;
+    public UpdateQueryUsingPUTRequest withManageQuery(org.openapis.openapi.models.shared.ManageQuery manageQuery) {
+        this.manageQuery = manageQuery;
+        return this;
+    }
+    
+    /**
+     * apiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public UpdateQueryUsingPUTRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
+    
+    /**
+     * shortCode
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortCode")
+    public String shortCode;
+    public UpdateQueryUsingPUTRequest withShortCode(String shortCode) {
+        this.shortCode = shortCode;
         return this;
     }
     

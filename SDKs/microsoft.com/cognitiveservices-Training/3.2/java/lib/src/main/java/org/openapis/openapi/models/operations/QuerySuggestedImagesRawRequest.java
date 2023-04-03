@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class QuerySuggestedImagesRawRequest {
-    
-    public QuerySuggestedImagesRawPathParams pathParams;
-    public QuerySuggestedImagesRawRequest withPathParams(QuerySuggestedImagesRawPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public QuerySuggestedImagesRawQueryParams queryParams;
-    public QuerySuggestedImagesRawRequest withQueryParams(QuerySuggestedImagesRawQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Contains properties we need to query suggested images.
      */
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public QuerySuggestedImagesRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public QuerySuggestedImagesRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * IterationId to use for the suggested tags and regions.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=iterationId")
+    public String iterationId;
+    public QuerySuggestedImagesRawRequest withIterationId(String iterationId) {
+        this.iterationId = iterationId;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public QuerySuggestedImagesRawRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

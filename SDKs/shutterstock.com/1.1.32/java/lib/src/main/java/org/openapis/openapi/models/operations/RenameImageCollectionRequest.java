@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RenameImageCollectionRequest {
-    
-    public RenameImageCollectionPathParams pathParams;
-    public RenameImageCollectionRequest withPathParams(RenameImageCollectionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The new name for the collection
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CollectionUpdateRequest request;
-    public RenameImageCollectionRequest withRequest(org.openapis.openapi.models.shared.CollectionUpdateRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CollectionUpdateRequest collectionUpdateRequest;
+    public RenameImageCollectionRequest withCollectionUpdateRequest(org.openapis.openapi.models.shared.CollectionUpdateRequest collectionUpdateRequest) {
+        this.collectionUpdateRequest = collectionUpdateRequest;
         return this;
     }
     
-    
-    public RenameImageCollectionSecurity security;
-    public RenameImageCollectionRequest withSecurity(RenameImageCollectionSecurity security) {
-        this.security = security;
+    /**
+     * Collection ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public RenameImageCollectionRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

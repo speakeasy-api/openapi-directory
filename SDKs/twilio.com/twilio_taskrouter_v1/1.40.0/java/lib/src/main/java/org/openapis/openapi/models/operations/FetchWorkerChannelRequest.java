@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchWorkerChannelRequest {
-    
-    public FetchWorkerChannelPathParams pathParams;
-    public FetchWorkerChannelRequest withPathParams(FetchWorkerChannelPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the WorkerChannel to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchWorkerChannelRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public FetchWorkerChannelSecurity security;
-    public FetchWorkerChannelRequest withSecurity(FetchWorkerChannelSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the Worker with the WorkerChannel to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkerSid")
+    public String workerSid;
+    public FetchWorkerChannelRequest withWorkerSid(String workerSid) {
+        this.workerSid = workerSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public FetchWorkerChannelRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Workspace with the WorkerChannel to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkspaceSid")
+    public String workspaceSid;
+    public FetchWorkerChannelRequest withWorkspaceSid(String workspaceSid) {
+        this.workspaceSid = workspaceSid;
         return this;
     }
     

@@ -7,17 +7,37 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutRealmUsersIdCredentialsCredentialIdUserLabelRequest {
-    
-    public PutRealmUsersIdCredentialsCredentialIdUserLabelPathParams pathParams;
-    public PutRealmUsersIdCredentialsCredentialIdUserLabelRequest withPathParams(PutRealmUsersIdCredentialsCredentialIdUserLabelPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=text/plain")
+    public String requestBody;
+    public PutRealmUsersIdCredentialsCredentialIdUserLabelRequest withRequestBody(String requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=text/plain")
-    public String request;
-    public PutRealmUsersIdCredentialsCredentialIdUserLabelRequest withRequest(String request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=credentialId")
+    public String credentialId;
+    public PutRealmUsersIdCredentialsCredentialIdUserLabelRequest withCredentialId(String credentialId) {
+        this.credentialId = credentialId;
+        return this;
+    }
+    
+    /**
+     * User id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutRealmUsersIdCredentialsCredentialIdUserLabelRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PutRealmUsersIdCredentialsCredentialIdUserLabelRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

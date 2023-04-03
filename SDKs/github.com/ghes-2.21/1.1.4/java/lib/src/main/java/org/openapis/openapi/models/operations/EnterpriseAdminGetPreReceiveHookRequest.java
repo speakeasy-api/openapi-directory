@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminGetPreReceiveHookRequest {
-    
-    public EnterpriseAdminGetPreReceiveHookPathParams pathParams;
-    public EnterpriseAdminGetPreReceiveHookRequest withPathParams(EnterpriseAdminGetPreReceiveHookPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * pre_receive_hook_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pre_receive_hook_id")
+    public Long preReceiveHookId;
+    public EnterpriseAdminGetPreReceiveHookRequest withPreReceiveHookId(Long preReceiveHookId) {
+        this.preReceiveHookId = preReceiveHookId;
         return this;
     }
     

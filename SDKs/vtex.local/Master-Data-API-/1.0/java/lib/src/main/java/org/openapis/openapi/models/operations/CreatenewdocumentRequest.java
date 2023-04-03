@@ -7,31 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreatenewdocumentRequest {
-    
-    public CreatenewdocumentPathParams pathParams;
-    public CreatenewdocumentRequest withPathParams(CreatenewdocumentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public CreatenewdocumentRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public CreatenewdocumentQueryParams queryParams;
-    public CreatenewdocumentRequest withQueryParams(CreatenewdocumentQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public CreatenewdocumentHeaders headers;
-    public CreatenewdocumentRequest withHeaders(CreatenewdocumentHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public CreatenewdocumentRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, String> request;
-    public CreatenewdocumentRequest withRequest(java.util.Map<String, String> request) {
-        this.request = request;
+    public java.util.Map<String, String> requestBody;
+    public CreatenewdocumentRequest withRequestBody(java.util.Map<String, String> requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Name of the schema the document to be created needs to be compliant with.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_schema")
+    public String schema;
+    public CreatenewdocumentRequest withSchema(String schema) {
+        this.schema = schema;
+        return this;
+    }
+    
+    /**
+     * Name of the data entity. Defined by the api. Examples of native data entities you can use are `CL` for client profiles and `AD` for client addresses.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dataEntityName")
+    public String dataEntityName;
+    public CreatenewdocumentRequest withDataEntityName(String dataEntityName) {
+        this.dataEntityName = dataEntityName;
         return this;
     }
     

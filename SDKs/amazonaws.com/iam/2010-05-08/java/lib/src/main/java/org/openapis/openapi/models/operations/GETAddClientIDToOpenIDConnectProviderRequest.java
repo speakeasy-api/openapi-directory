@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAddClientIDToOpenIDConnectProviderRequest {
-    
-    public GETAddClientIDToOpenIDConnectProviderQueryParams queryParams;
-    public GETAddClientIDToOpenIDConnectProviderRequest withQueryParams(GETAddClientIDToOpenIDConnectProviderQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETAddClientIDToOpenIDConnectProviderActionEnum action;
+    public GETAddClientIDToOpenIDConnectProviderRequest withAction(GETAddClientIDToOpenIDConnectProviderActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The client ID (also known as audience) to add to the IAM OpenID Connect provider resource.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClientID")
+    public String clientID;
+    public GETAddClientIDToOpenIDConnectProviderRequest withClientID(String clientID) {
+        this.clientID = clientID;
+        return this;
+    }
     
-    public GETAddClientIDToOpenIDConnectProviderHeaders headers;
-    public GETAddClientIDToOpenIDConnectProviderRequest withHeaders(GETAddClientIDToOpenIDConnectProviderHeaders headers) {
-        this.headers = headers;
+    /**
+     * The Amazon Resource Name (ARN) of the IAM OpenID Connect (OIDC) provider resource to add the client ID to. You can get a list of OIDC provider ARNs by using the &lt;a&gt;ListOpenIDConnectProviders&lt;/a&gt; operation.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OpenIDConnectProviderArn")
+    public String openIDConnectProviderArn;
+    public GETAddClientIDToOpenIDConnectProviderRequest withOpenIDConnectProviderArn(String openIDConnectProviderArn) {
+        this.openIDConnectProviderArn = openIDConnectProviderArn;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETAddClientIDToOpenIDConnectProviderVersionEnum version;
+    public GETAddClientIDToOpenIDConnectProviderRequest withVersion(GETAddClientIDToOpenIDConnectProviderVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETAddClientIDToOpenIDConnectProviderRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETAddClientIDToOpenIDConnectProviderRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETAddClientIDToOpenIDConnectProviderRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETAddClientIDToOpenIDConnectProviderRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETAddClientIDToOpenIDConnectProviderRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETAddClientIDToOpenIDConnectProviderRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETAddClientIDToOpenIDConnectProviderRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

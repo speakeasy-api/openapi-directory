@@ -4,27 +4,41 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatientLabResultsReadRequest {
-    
-    public PatientLabResultsReadPathParams pathParams;
-    public PatientLabResultsReadRequest withPathParams(PatientLabResultsReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public PatientLabResultsReadRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     
-    
-    public PatientLabResultsReadQueryParams queryParams;
-    public PatientLabResultsReadRequest withQueryParams(PatientLabResultsReadQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatientLabResultsReadRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ordering_doctor")
+    public Long orderingDoctor;
+    public PatientLabResultsReadRequest withOrderingDoctor(Long orderingDoctor) {
+        this.orderingDoctor = orderingDoctor;
+        return this;
+    }
     
-    public PatientLabResultsReadSecurity security;
-    public PatientLabResultsReadRequest withSecurity(PatientLabResultsReadSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
+    public Long patient;
+    public PatientLabResultsReadRequest withPatient(Long patient) {
+        this.patient = patient;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public PatientLabResultsReadRequest withSince(String since) {
+        this.since = since;
         return this;
     }
     

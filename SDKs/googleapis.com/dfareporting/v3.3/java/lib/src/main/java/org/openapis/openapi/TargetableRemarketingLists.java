@@ -33,25 +33,26 @@ public class TargetableRemarketingLists {
     /**
      * Gets one remarketing list by ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingTargetableRemarketingListsGetResponse dfareportingTargetableRemarketingListsGet(org.openapis.openapi.models.operations.DfareportingTargetableRemarketingListsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingTargetableRemarketingListsGetResponse dfareportingTargetableRemarketingListsGet(org.openapis.openapi.models.operations.DfareportingTargetableRemarketingListsGetRequest request, org.openapis.openapi.models.operations.DfareportingTargetableRemarketingListsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingTargetableRemarketingListsGetPathParams.class, baseUrl, "/userprofiles/{profileId}/targetableRemarketingLists/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingTargetableRemarketingListsGetRequest.class, baseUrl, "/userprofiles/{profileId}/targetableRemarketingLists/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingTargetableRemarketingListsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingTargetableRemarketingListsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,25 +79,26 @@ public class TargetableRemarketingLists {
     /**
      * Retrieves a list of targetable remarketing lists, possibly filtered. This method supports paging.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingTargetableRemarketingListsListResponse dfareportingTargetableRemarketingListsList(org.openapis.openapi.models.operations.DfareportingTargetableRemarketingListsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingTargetableRemarketingListsListResponse dfareportingTargetableRemarketingListsList(org.openapis.openapi.models.operations.DfareportingTargetableRemarketingListsListRequest request, org.openapis.openapi.models.operations.DfareportingTargetableRemarketingListsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingTargetableRemarketingListsListPathParams.class, baseUrl, "/userprofiles/{profileId}/targetableRemarketingLists", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingTargetableRemarketingListsListRequest.class, baseUrl, "/userprofiles/{profileId}/targetableRemarketingLists", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingTargetableRemarketingListsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingTargetableRemarketingListsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

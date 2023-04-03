@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetPathParams;
 import org.openapis.openapi.models.operations.GetRequest;
 import org.openapis.openapi.models.operations.GetResponse;
 import org.openapis.openapi.models.shared.BaudrateEnum;
@@ -29,12 +28,10 @@ public class Application {
                 .build();
 
             GetRequest req = new GetRequest() {{
-                pathParams = new GetPathParams() {{
-                    address = "48";
-                    baudrate = "2400";
-                    device = "ttyAMA0";
-                }};
-            }};            
+                address = "48";
+                baudrate = "2400";
+                device = "ttyAMA0";
+            }}            
 
             GetResponse res = sdk.get(req);
 
@@ -48,7 +45,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFeedRequest {
-    
-    public GetFeedPathParams pathParams;
-    public GetFeedRequest withPathParams(GetFeedPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Necessary for proper pagination. You shouldn't provide this value yourself, and instead use the pagination links in the feed response. Please see our [pagination documentation](https://developer.vimeo.com/api/common-formats#using-the-pagination-parameter) for more information.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public String offset;
+    public GetFeedRequest withOffset(String offset) {
+        this.offset = offset;
         return this;
     }
     
-    
-    public GetFeedQueryParams queryParams;
-    public GetFeedRequest withQueryParams(GetFeedQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetFeedRequest withPage(Double page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetFeedRequest withPerPage(Double perPage) {
+        this.perPage = perPage;
+        return this;
+    }
     
-    public GetFeedSecurity security;
-    public GetFeedRequest withSecurity(GetFeedSecurity security) {
-        this.security = security;
+    /**
+     * The feed type.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public GetFeedTypeEnum type;
+    public GetFeedRequest withType(GetFeedTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+    
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public GetFeedRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

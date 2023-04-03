@@ -38,19 +38,20 @@ public class Revisions {
      * Get a revision for a custom action
      * Returns the given version of a custom workflow action.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdDefinitionIdRevisionsRevisionIdGetByIdResponse getAutomationV4ActionsAppIdDefinitionIdRevisionsRevisionIdGetById(org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdDefinitionIdRevisionsRevisionIdGetByIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdDefinitionIdRevisionsRevisionIdGetByIdResponse getAutomationV4ActionsAppIdDefinitionIdRevisionsRevisionIdGetById(org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdDefinitionIdRevisionsRevisionIdGetByIdRequest request, org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdDefinitionIdRevisionsRevisionIdGetByIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdDefinitionIdRevisionsRevisionIdGetByIdPathParams.class, baseUrl, "/automation/v4/actions/{appId}/{definitionId}/revisions/{revisionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdDefinitionIdRevisionsRevisionIdGetByIdRequest.class, baseUrl, "/automation/v4/actions/{appId}/{definitionId}/revisions/{revisionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -85,25 +86,26 @@ public class Revisions {
      * Get all revisions for a custom action
      * Returns a list of revisions for a custom workflow action.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageResponse getAutomationV4ActionsAppIdDefinitionIdRevisionsGetPage(org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageResponse getAutomationV4ActionsAppIdDefinitionIdRevisionsGetPage(org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageRequest request, org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPagePathParams.class, baseUrl, "/automation/v4/actions/{appId}/{definitionId}/revisions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageRequest.class, baseUrl, "/automation/v4/actions/{appId}/{definitionId}/revisions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

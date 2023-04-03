@@ -4,34 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchEvidenceContentRequest {
-    
-    public FetchEvidenceContentPathParams pathParams;
-    public FetchEvidenceContentRequest withPathParams(FetchEvidenceContentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The identifier of the evidential file set. The identifier of an evidential file set for a payment dispute is returned under the &lt;strong&gt;evidence&lt;/strong&gt; array in the &lt;strong&gt;getPaymentDispute&lt;/strong&gt; response.&lt;br&gt;&lt;br&gt;Below is an example of the syntax to use for this query parameter:&lt;br&gt;&lt;br&gt;&lt;code&gt;evidence_id=12345678&lt;/code&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=evidence_id")
+    public String evidenceId;
+    public FetchEvidenceContentRequest withEvidenceId(String evidenceId) {
+        this.evidenceId = evidenceId;
         return this;
     }
     
-    
-    public FetchEvidenceContentQueryParams queryParams;
-    public FetchEvidenceContentRequest withQueryParams(FetchEvidenceContentQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The identifier of an evidential file. This file must belong to the evidential file set identified through the &lt;strong&gt;evidence_id&lt;/strong&gt; query parameter. The identifier of each evidential file is returned under the &lt;strong&gt;evidence.files&lt;/strong&gt; array in the &lt;strong&gt;getPaymentDispute&lt;/strong&gt; response. &lt;br&gt;&lt;br&gt;Below is an example of the syntax to use for this query parameter:&lt;br&gt;&lt;br&gt;&lt;code&gt;file_id=12345678&lt;/code&gt; 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=file_id")
+    public String fileId;
+    public FetchEvidenceContentRequest withFileId(String fileId) {
+        this.fileId = fileId;
         return this;
     }
     
-    
-    public FetchEvidenceContentSecurity security;
-    public FetchEvidenceContentRequest withSecurity(FetchEvidenceContentSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchEvidenceContentRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The identifier of the payment dispute. The identifier of each payment dispute is returned in the &lt;strong&gt;getPaymentDisputeSummaries&lt;/strong&gt; response. This identifier is passed in as a path parameter at the end of the call URI.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payment_dispute_id")
+    public String paymentDisputeId;
+    public FetchEvidenceContentRequest withPaymentDisputeId(String paymentDisputeId) {
+        this.paymentDisputeId = paymentDisputeId;
         return this;
     }
     

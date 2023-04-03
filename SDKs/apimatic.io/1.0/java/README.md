@@ -17,9 +17,8 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.ConvertAPIFormatEnum;
-import org.openapis.openapi.models.operations.ConvertAPIQueryParams;
 import org.openapis.openapi.models.operations.ConvertAPIRequestBody;
+import org.openapis.openapi.models.operations.ConvertAPIFormatEnum;
 import org.openapis.openapi.models.operations.ConvertAPIRequest;
 import org.openapis.openapi.models.operations.ConvertAPIResponse;
 
@@ -30,13 +29,11 @@ public class Application {
                 .build();
 
             ConvertAPIRequest req = new ConvertAPIRequest() {{
-                queryParams = new ConvertAPIQueryParams() {{
-                    format = "apiblueprint";
+                requestBody = new ConvertAPIRequestBody() {{
+                    url = "corrupti";
                 }};
-                request = new ConvertAPIRequestBody() {{
-                    url = "provident";
-                }};
-            }};            
+                format = "wadl2009";
+            }}            
 
             ConvertAPIResponse res = sdk.convertAPI(req);
 
@@ -50,7 +47,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

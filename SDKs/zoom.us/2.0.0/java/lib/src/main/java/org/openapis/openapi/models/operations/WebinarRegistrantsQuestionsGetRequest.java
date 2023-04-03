@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WebinarRegistrantsQuestionsGetRequest {
-    
-    public WebinarRegistrantsQuestionsGetPathParams pathParams;
-    public WebinarRegistrantsQuestionsGetRequest withPathParams(WebinarRegistrantsQuestionsGetPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public WebinarRegistrantsQuestionsGetSecurity security;
-    public WebinarRegistrantsQuestionsGetRequest withSecurity(WebinarRegistrantsQuestionsGetSecurity security) {
-        this.security = security;
+    /**
+     * The webinar ID in "**long**" format(represented as int64 data type in JSON). 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webinarId")
+    public Long webinarId;
+    public WebinarRegistrantsQuestionsGetRequest withWebinarId(Long webinarId) {
+        this.webinarId = webinarId;
         return this;
     }
     

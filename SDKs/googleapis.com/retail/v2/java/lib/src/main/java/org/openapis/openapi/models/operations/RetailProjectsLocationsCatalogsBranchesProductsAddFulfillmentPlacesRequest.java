@@ -7,31 +7,130 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest {
-    
-    public RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesPathParams pathParams;
-    public RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest withPathParams(RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesQueryParams queryParams;
-    public RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest withQueryParams(RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GoogleCloudRetailV2AddFulfillmentPlacesRequest request;
-    public RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest withRequest(org.openapis.openapi.models.shared.GoogleCloudRetailV2AddFulfillmentPlacesRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GoogleCloudRetailV2AddFulfillmentPlacesRequest googleCloudRetailV2AddFulfillmentPlacesRequest;
+    public RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest withGoogleCloudRetailV2AddFulfillmentPlacesRequest(org.openapis.openapi.models.shared.GoogleCloudRetailV2AddFulfillmentPlacesRequest googleCloudRetailV2AddFulfillmentPlacesRequest) {
+        this.googleCloudRetailV2AddFulfillmentPlacesRequest = googleCloudRetailV2AddFulfillmentPlacesRequest;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesSecurity security;
-    public RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest withSecurity(RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Required. Full resource name of Product, such as `projects/* /locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id`. If the caller does not have permission to access the Product, regardless of whether or not it exists, a PERMISSION_DENIED error is returned.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=product")
+    public String product;
+    public RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest withProduct(String product) {
+        this.product = product;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

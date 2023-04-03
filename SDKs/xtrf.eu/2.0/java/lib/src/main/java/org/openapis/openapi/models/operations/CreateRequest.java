@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateRequest {
-    
-    public CreatePathParams pathParams;
-    public CreateRequest withPathParams(CreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Created view for given class.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ViewDTO request;
-    public CreateRequest withRequest(org.openapis.openapi.models.shared.ViewDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ViewDTO viewDTO;
+    public CreateRequest withViewDTO(org.openapis.openapi.models.shared.ViewDTO viewDTO) {
+        this.viewDTO = viewDTO;
+        return this;
+    }
+    
+    /**
+     * view's class name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=className")
+    public String className;
+    public CreateRequest withClassName(String className) {
+        this.className = className;
         return this;
     }
     

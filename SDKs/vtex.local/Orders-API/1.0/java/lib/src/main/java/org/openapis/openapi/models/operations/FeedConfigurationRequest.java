@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FeedConfigurationRequest {
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public FeedConfigurationRequest withAccept(String accept) {
+        this.accept = accept;
+        return this;
+    }
     
-    public FeedConfigurationHeaders headers;
-    public FeedConfigurationRequest withHeaders(FeedConfigurationHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public FeedConfigurationRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.FeedConfigurationRequest request;
-    public FeedConfigurationRequest withRequest(org.openapis.openapi.models.shared.FeedConfigurationRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.FeedConfigurationRequest feedConfigurationRequest;
+    public FeedConfigurationRequest withFeedConfigurationRequest(org.openapis.openapi.models.shared.FeedConfigurationRequest feedConfigurationRequest) {
+        this.feedConfigurationRequest = feedConfigurationRequest;
         return this;
     }
     

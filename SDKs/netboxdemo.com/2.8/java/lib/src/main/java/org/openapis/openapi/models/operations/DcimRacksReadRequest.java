@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimRacksReadRequest {
-    
-    public DcimRacksReadPathParams pathParams;
-    public DcimRacksReadRequest withPathParams(DcimRacksReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this rack.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimRacksReadRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

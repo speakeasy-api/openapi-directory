@@ -32,13 +32,13 @@ public class EncodedFullHashes {
 
     public org.openapis.openapi.models.operations.SafebrowsingEncodedFullHashesGetResponse safebrowsingEncodedFullHashesGet(org.openapis.openapi.models.operations.SafebrowsingEncodedFullHashesGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SafebrowsingEncodedFullHashesGetPathParams.class, baseUrl, "/v4/encodedFullHashes/{encodedRequest}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SafebrowsingEncodedFullHashesGetRequest.class, baseUrl, "/v4/encodedFullHashes/{encodedRequest}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SafebrowsingEncodedFullHashesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SafebrowsingEncodedFullHashesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

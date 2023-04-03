@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DependabotCreateOrUpdateOrgSecretRequest {
-    
-    public DependabotCreateOrUpdateOrgSecretPathParams pathParams;
-    public DependabotCreateOrUpdateOrgSecretRequest withPathParams(DependabotCreateOrUpdateOrgSecretPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public DependabotCreateOrUpdateOrgSecretRequestBody requestBody;
+    public DependabotCreateOrUpdateOrgSecretRequest withRequestBody(DependabotCreateOrUpdateOrgSecretRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public DependabotCreateOrUpdateOrgSecretRequestBody request;
-    public DependabotCreateOrUpdateOrgSecretRequest withRequest(DependabotCreateOrUpdateOrgSecretRequestBody request) {
-        this.request = request;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public DependabotCreateOrUpdateOrgSecretRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
+    
+    /**
+     * The name of the secret.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=secret_name")
+    public String secretName;
+    public DependabotCreateOrUpdateOrgSecretRequest withSecretName(String secretName) {
+        this.secretName = secretName;
         return this;
     }
     

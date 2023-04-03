@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EmotionRequest {
-    
-    public EmotionQueryParams queryParams;
-    public EmotionRequest withQueryParams(EmotionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.Post[] requestBody;
+    public EmotionRequest withRequestBody(org.openapis.openapi.models.shared.Post[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Post[] request;
-    public EmotionRequest withRequest(org.openapis.openapi.models.shared.Post[] request) {
-        this.request = request;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=all")
+    public Boolean all;
+    public EmotionRequest withAll(Boolean all) {
+        this.all = all;
         return this;
     }
     

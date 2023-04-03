@@ -4,27 +4,54 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsCrashFreeDevicePercentagesRequest {
-    
-    public AnalyticsCrashFreeDevicePercentagesPathParams pathParams;
-    public AnalyticsCrashFreeDevicePercentagesRequest withPathParams(AnalyticsCrashFreeDevicePercentagesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public AnalyticsCrashFreeDevicePercentagesRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public AnalyticsCrashFreeDevicePercentagesQueryParams queryParams;
-    public AnalyticsCrashFreeDevicePercentagesRequest withQueryParams(AnalyticsCrashFreeDevicePercentagesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Last date time in data in ISO 8601 date time format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
+    public OffsetDateTime end;
+    public AnalyticsCrashFreeDevicePercentagesRequest withEnd(OffsetDateTime end) {
+        this.end = end;
         return this;
     }
     
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public AnalyticsCrashFreeDevicePercentagesRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
     
-    public AnalyticsCrashFreeDevicePercentagesSecurity security;
-    public AnalyticsCrashFreeDevicePercentagesRequest withSecurity(AnalyticsCrashFreeDevicePercentagesSecurity security) {
-        this.security = security;
+    /**
+     * Start date time in data in ISO 8601 date time format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public OffsetDateTime start;
+    public AnalyticsCrashFreeDevicePercentagesRequest withStart(OffsetDateTime start) {
+        this.start = start;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
+    public String version;
+    public AnalyticsCrashFreeDevicePercentagesRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

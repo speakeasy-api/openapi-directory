@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETSetInstanceHealthRequest {
-    
-    public GETSetInstanceHealthQueryParams queryParams;
-    public GETSetInstanceHealthRequest withQueryParams(GETSetInstanceHealthQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETSetInstanceHealthActionEnum action;
+    public GETSetInstanceHealthRequest withAction(GETSetInstanceHealthActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The health status of the instance. Set to &lt;code&gt;Healthy&lt;/code&gt; to have the instance remain in service. Set to &lt;code&gt;Unhealthy&lt;/code&gt; to have the instance be out of service. Amazon EC2 Auto Scaling terminates and replaces the unhealthy instance.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HealthStatus")
+    public String healthStatus;
+    public GETSetInstanceHealthRequest withHealthStatus(String healthStatus) {
+        this.healthStatus = healthStatus;
+        return this;
+    }
     
-    public GETSetInstanceHealthHeaders headers;
-    public GETSetInstanceHealthRequest withHeaders(GETSetInstanceHealthHeaders headers) {
-        this.headers = headers;
+    /**
+     * The ID of the instance.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceId")
+    public String instanceId;
+    public GETSetInstanceHealthRequest withInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;If the Auto Scaling group of the specified instance has a &lt;code&gt;HealthCheckGracePeriod&lt;/code&gt; specified for the group, by default, this call respects the grace period. Set this to &lt;code&gt;False&lt;/code&gt;, to have the call not respect the grace period associated with the group.&lt;/p&gt; &lt;p&gt;For more information about the health check grace period, see &lt;a href="https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_CreateAutoScalingGroup.html"&gt;CreateAutoScalingGroup&lt;/a&gt; in the &lt;i&gt;Amazon EC2 Auto Scaling API Reference&lt;/i&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ShouldRespectGracePeriod")
+    public Boolean shouldRespectGracePeriod;
+    public GETSetInstanceHealthRequest withShouldRespectGracePeriod(Boolean shouldRespectGracePeriod) {
+        this.shouldRespectGracePeriod = shouldRespectGracePeriod;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETSetInstanceHealthVersionEnum version;
+    public GETSetInstanceHealthRequest withVersion(GETSetInstanceHealthVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETSetInstanceHealthRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETSetInstanceHealthRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETSetInstanceHealthRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETSetInstanceHealthRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETSetInstanceHealthRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETSetInstanceHealthRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETSetInstanceHealthRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

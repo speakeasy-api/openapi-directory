@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCustomFields1Request {
-    
-    public GetCustomFields1PathParams pathParams;
-    public GetCustomFields1Request withPathParams(GetCustomFields1PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * client's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customerId")
+    public Long customerId;
+    public GetCustomFields1Request withCustomerId(Long customerId) {
+        this.customerId = customerId;
         return this;
     }
     

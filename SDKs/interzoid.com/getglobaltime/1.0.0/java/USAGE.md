@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetglobaltimeQueryParams;
 import org.openapis.openapi.models.operations.GetglobaltimeRequest;
 import org.openapis.openapi.models.operations.GetglobaltimeResponse;
 
@@ -15,11 +14,9 @@ public class Application {
                 .build();
 
             GetglobaltimeRequest req = new GetglobaltimeRequest() {{
-                queryParams = new GetglobaltimeQueryParams() {{
-                    license = "corrupti";
-                    locale = "provident";
-                }};
-            }};            
+                license = "corrupti";
+                locale = "provident";
+            }}            
 
             GetglobaltimeResponse res = sdk.currentGlobalTime.getglobaltime(req);
 

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteReportTaskRequest {
-    
-    public DeleteReportTaskPathParams pathParams;
-    public DeleteReportTaskRequest withPathParams(DeleteReportTaskPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteReportTaskSecurity security;
-    public DeleteReportTaskRequest withSecurity(DeleteReportTaskSecurity security) {
-        this.security = security;
+    /**
+     * A unique eBay-assigned ID for the report task that's generated when the report task is created by a call to &lt;a href="/api-docs/sell/marketing/resources/ad_report_task/methods/createReportTask"&gt;createReportTask&lt;/a&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=report_task_id")
+    public String reportTaskId;
+    public DeleteReportTaskRequest withReportTaskId(String reportTaskId) {
+        this.reportTaskId = reportTaskId;
         return this;
     }
     

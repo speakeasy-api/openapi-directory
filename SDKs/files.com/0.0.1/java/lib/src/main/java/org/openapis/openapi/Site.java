@@ -90,7 +90,7 @@ public class Site {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSiteApiKeysQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSiteApiKeysRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -137,7 +137,7 @@ public class Site {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSiteDnsRecordsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSiteDnsRecordsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -184,7 +184,7 @@ public class Site {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSiteIpAddressesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSiteIpAddressesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -263,7 +263,7 @@ public class Site {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchSiteResponse patchSite(org.openapis.openapi.models.operations.PatchSiteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchSiteResponse patchSite(org.openapis.openapi.models.operations.PatchSiteRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/site");
         
@@ -306,7 +306,7 @@ public class Site {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSiteApiKeysResponse postSiteApiKeys(org.openapis.openapi.models.operations.PostSiteApiKeysRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSiteApiKeysResponse postSiteApiKeys(org.openapis.openapi.models.operations.PostSiteApiKeysRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/site/api_keys");
         
@@ -349,7 +349,7 @@ public class Site {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSiteTestWebhookResponse postSiteTestWebhook(org.openapis.openapi.models.operations.PostSiteTestWebhookRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSiteTestWebhookResponse postSiteTestWebhook(org.openapis.openapi.models.operations.PostSiteTestWebhookRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/site/test-webhook");
         

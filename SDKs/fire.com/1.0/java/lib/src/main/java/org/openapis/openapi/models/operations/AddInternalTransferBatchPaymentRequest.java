@@ -7,20 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddInternalTransferBatchPaymentRequest {
-    
-    public AddInternalTransferBatchPaymentPathParams pathParams;
-    public AddInternalTransferBatchPaymentRequest withPathParams(AddInternalTransferBatchPaymentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Details of the source account, destination account, amount and a reference.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public AddInternalTransferBatchPaymentBatchItemInternalTransfer request;
-    public AddInternalTransferBatchPaymentRequest withRequest(AddInternalTransferBatchPaymentBatchItemInternalTransfer request) {
-        this.request = request;
+    public AddInternalTransferBatchPaymentBatchItemInternalTransfer requestBody;
+    public AddInternalTransferBatchPaymentRequest withRequestBody(AddInternalTransferBatchPaymentBatchItemInternalTransfer requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=batchUuid")
+    public String batchUuid;
+    public AddInternalTransferBatchPaymentRequest withBatchUuid(String batchUuid) {
+        this.batchUuid = batchUuid;
         return this;
     }
     

@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateOrganizationAdminRequest {
-    
-    public UpdateOrganizationAdminPathParams pathParams;
-    public UpdateOrganizationAdminRequest withPathParams(UpdateOrganizationAdminPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateOrganizationAdminRequestBody requestBody;
+    public UpdateOrganizationAdminRequest withRequestBody(UpdateOrganizationAdminRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateOrganizationAdminRequestBody request;
-    public UpdateOrganizationAdminRequest withRequest(UpdateOrganizationAdminRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=adminId")
+    public String adminId;
+    public UpdateOrganizationAdminRequest withAdminId(String adminId) {
+        this.adminId = adminId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public UpdateOrganizationAdminRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

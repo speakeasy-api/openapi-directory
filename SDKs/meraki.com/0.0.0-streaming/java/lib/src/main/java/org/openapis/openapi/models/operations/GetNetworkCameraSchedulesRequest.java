@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkCameraSchedulesRequest {
-    
-    public GetNetworkCameraSchedulesPathParams pathParams;
-    public GetNetworkCameraSchedulesRequest withPathParams(GetNetworkCameraSchedulesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkCameraSchedulesRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

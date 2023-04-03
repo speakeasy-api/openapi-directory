@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkSwitchRoutingOspfRequest {
-    
-    public UpdateNetworkSwitchRoutingOspfPathParams pathParams;
-    public UpdateNetworkSwitchRoutingOspfRequest withPathParams(UpdateNetworkSwitchRoutingOspfPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkSwitchRoutingOspfRequestBody requestBody;
+    public UpdateNetworkSwitchRoutingOspfRequest withRequestBody(UpdateNetworkSwitchRoutingOspfRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkSwitchRoutingOspfRequestBody request;
-    public UpdateNetworkSwitchRoutingOspfRequest withRequest(UpdateNetworkSwitchRoutingOspfRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkSwitchRoutingOspfRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

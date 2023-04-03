@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletedApplicationsRestoreRequest {
-    
-    public DeletedApplicationsRestorePathParams pathParams;
-    public DeletedApplicationsRestoreRequest withPathParams(DeletedApplicationsRestorePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Client API version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public DeletedApplicationsRestoreRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
+    /**
+     * Application object ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=objectId")
+    public String objectId;
+    public DeletedApplicationsRestoreRequest withObjectId(String objectId) {
+        this.objectId = objectId;
+        return this;
+    }
     
-    public DeletedApplicationsRestoreQueryParams queryParams;
-    public DeletedApplicationsRestoreRequest withQueryParams(DeletedApplicationsRestoreQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The tenant ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tenantID")
+    public String tenantID;
+    public DeletedApplicationsRestoreRequest withTenantID(String tenantID) {
+        this.tenantID = tenantID;
         return this;
     }
     

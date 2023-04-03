@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveModelRequest {
-    
-    public RetrieveModelPathParams pathParams;
-    public RetrieveModelRequest withPathParams(RetrieveModelPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the model to use for this request
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=model")
+    public String model;
+    public RetrieveModelRequest withModel(String model) {
+        this.model = model;
         return this;
     }
     

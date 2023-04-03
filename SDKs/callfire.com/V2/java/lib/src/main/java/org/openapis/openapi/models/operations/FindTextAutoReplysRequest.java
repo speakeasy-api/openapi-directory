@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FindTextAutoReplysRequest {
-    
-    public FindTextAutoReplysQueryParams queryParams;
-    public FindTextAutoReplysRequest withQueryParams(FindTextAutoReplysQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public FindTextAutoReplysRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     
+    /**
+     * To set the maximum number of records to return in a paged list response. The default is 100
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public FindTextAutoReplysRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public FindTextAutoReplysSecurity security;
-    public FindTextAutoReplysRequest withSecurity(FindTextAutoReplysSecurity security) {
-        this.security = security;
+    /**
+     * Phone number in E.164 format (11-digit) which contains a TextAutoReply. Example: 12132000384. If number is empty then operator returns all autoreplies configured for the user's account
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
+    public String number;
+    public FindTextAutoReplysRequest withNumber(String number) {
+        this.number = number;
+        return this;
+    }
+    
+    /**
+     * Offset to the start of a given page. The default is 0. Check [pagination](https://developers.callfire.com/docs.html#pagination) page for more information about pagination in CallFire API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public FindTextAutoReplysRequest withOffset(Integer offset) {
+        this.offset = offset;
         return this;
     }
     

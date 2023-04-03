@@ -4,27 +4,48 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DownloadFileViaToken1Request {
-    
-    public DownloadFileViaToken1PathParams pathParams;
-    public DownloadFileViaToken1Request withPathParams(DownloadFileViaToken1PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Range 
+     * 
+     * e.g. `bytes=0-999`
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Range")
+    public String range;
+    public DownloadFileViaToken1Request withRange(String range) {
+        this.range = range;
         return this;
     }
     
-    
-    public DownloadFileViaToken1QueryParams queryParams;
-    public DownloadFileViaToken1Request withQueryParams(DownloadFileViaToken1QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Always return `application/octet-stream` instead of specific mimetype
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=generic_mimetype")
+    public Boolean genericMimetype;
+    public DownloadFileViaToken1Request withGenericMimetype(Boolean genericMimetype) {
+        this.genericMimetype = genericMimetype;
         return this;
     }
     
+    /**
+     * Use Content-Disposition: `inline` instead of `attachment`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=inline")
+    public Boolean inline;
+    public DownloadFileViaToken1Request withInline(Boolean inline) {
+        this.inline = inline;
+        return this;
+    }
     
-    public DownloadFileViaToken1Headers headers;
-    public DownloadFileViaToken1Request withHeaders(DownloadFileViaToken1Headers headers) {
-        this.headers = headers;
+    /**
+     * Download token
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=token")
+    public String token;
+    public DownloadFileViaToken1Request withToken(String token) {
+        this.token = token;
         return this;
     }
     

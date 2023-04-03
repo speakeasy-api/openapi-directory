@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimPowerOutletTemplatesDeleteRequest {
-    
-    public DcimPowerOutletTemplatesDeletePathParams pathParams;
-    public DcimPowerOutletTemplatesDeleteRequest withPathParams(DcimPowerOutletTemplatesDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this power outlet template.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimPowerOutletTemplatesDeleteRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

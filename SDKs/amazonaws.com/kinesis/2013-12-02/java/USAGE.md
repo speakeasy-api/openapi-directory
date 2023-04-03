@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AddTagsToStreamXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AddTagsToStreamHeaders;
 import org.openapis.openapi.models.operations.AddTagsToStreamRequest;
 import org.openapis.openapi.models.operations.AddTagsToStreamResponse;
 import org.openapis.openapi.models.shared.AddTagsToStreamInput;
@@ -15,33 +14,29 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AddTagsToStreamRequest req = new AddTagsToStreamRequest() {{
-                headers = new AddTagsToStreamHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "Kinesis_20131202.AddTagsToStream";
-                }};
-                request = new AddTagsToStreamInput() {{
-                    streamARN = "illum";
-                    streamName = "vel";
+                addTagsToStreamInput = new AddTagsToStreamInput() {{
+                    streamARN = "corrupti";
+                    streamName = "provident";
                     tags = new java.util.HashMap<String, String>() {{
-                        put("deserunt", "suscipit");
-                        put("iure", "magnam");
-                        put("debitis", "ipsa");
+                        put("quibusdam", "unde");
+                        put("nulla", "corrupti");
+                        put("illum", "vel");
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "error";
+                xAmzContentSha256 = "deserunt";
+                xAmzCredential = "suscipit";
+                xAmzDate = "iure";
+                xAmzSecurityToken = "magnam";
+                xAmzSignature = "debitis";
+                xAmzSignedHeaders = "ipsa";
+                xAmzTarget = "Kinesis_20131202.AddTagsToStream";
+            }}            
 
             AddTagsToStreamResponse res = sdk.addTagsToStream(req);
 

@@ -4,20 +4,67 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysRequest {
-    
-    public GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysPathParams pathParams;
-    public GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysRequest withPathParams(GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Format YYYY-MM-DD: End Date for availability search
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=endDate")
+    public OffsetDateTime endDate;
+    public GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysRequest withEndDate(OffsetDateTime endDate) {
+        this.endDate = endDate;
         return this;
     }
     
+    /**
+     * Id of business location, defaults to primary business location
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locationId")
+    public String locationId;
+    public GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysRequest withLocationId(String locationId) {
+        this.locationId = locationId;
+        return this;
+    }
     
-    public GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysQueryParams queryParams;
-    public GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysRequest withQueryParams(GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Resource Id to filter on
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resourceId")
+    public String resourceId;
+    public GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysRequest withResourceId(String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    
+    /**
+     * Service Id for day availability search
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serviceId")
+    public String serviceId;
+    public GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysRequest withServiceId(String serviceId) {
+        this.serviceId = serviceId;
+        return this;
+    }
+    
+    /**
+     * Format YYYY-MM-DD: Start Date for availability search
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=startDate")
+    public OffsetDateTime startDate;
+    public GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysRequest withStartDate(OffsetDateTime startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    
+    /**
+     * Timezone offset to view availability for
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tzOffset")
+    public Integer tzOffset;
+    public GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysRequest withTzOffset(Integer tzOffset) {
+        this.tzOffset = tzOffset;
         return this;
     }
     

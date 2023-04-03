@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1AccountsIdRequest {
-    
-    public GetApiV1AccountsIdPathParams pathParams;
-    public GetApiV1AccountsIdRequest withPathParams(GetApiV1AccountsIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetApiV1AccountsIdSecurity security;
-    public GetApiV1AccountsIdRequest withSecurity(GetApiV1AccountsIdSecurity security) {
-        this.security = security;
+    /**
+     * The id of the account in the database
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetApiV1AccountsIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

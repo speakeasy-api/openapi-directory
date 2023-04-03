@@ -122,7 +122,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostMakePdfResponse postMakePdf(org.openapis.openapi.models.operations.PostMakePdfRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostMakePdfResponse postMakePdf(org.openapis.openapi.models.operations.PostMakePdfRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/make-pdf");
         

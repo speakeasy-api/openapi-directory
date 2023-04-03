@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesSpaceIdFoldersIdExpenseReportsMultipartRequest {
-    
-    public PostSpacesSpaceIdFoldersIdExpenseReportsMultipartPathParams pathParams;
-    public PostSpacesSpaceIdFoldersIdExpenseReportsMultipartRequest withPathParams(PostSpacesSpaceIdFoldersIdExpenseReportsMultipartPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * expense proof to add (either DocumentId, ExpenseDate either (File,Name,Content64Encoded,Title,ExpenseDate) is mandatory)
      */
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PostSpacesSpaceIdFoldersIdExpenseReportsMultipartFormData1 request;
-    public PostSpacesSpaceIdFoldersIdExpenseReportsMultipartRequest withRequest(PostSpacesSpaceIdFoldersIdExpenseReportsMultipartFormData1 request) {
-        this.request = request;
+    public PostSpacesSpaceIdFoldersIdExpenseReportsMultipartFormData1 requestBody;
+    public PostSpacesSpaceIdFoldersIdExpenseReportsMultipartRequest withRequestBody(PostSpacesSpaceIdFoldersIdExpenseReportsMultipartFormData1 requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Id of the folder
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSpacesSpaceIdFoldersIdExpenseReportsMultipartRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PostSpacesSpaceIdFoldersIdExpenseReportsMultipartSecurity security;
-    public PostSpacesSpaceIdFoldersIdExpenseReportsMultipartRequest withSecurity(PostSpacesSpaceIdFoldersIdExpenseReportsMultipartSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PostSpacesSpaceIdFoldersIdExpenseReportsMultipartRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

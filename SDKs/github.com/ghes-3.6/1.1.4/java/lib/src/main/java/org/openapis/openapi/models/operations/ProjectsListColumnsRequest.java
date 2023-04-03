@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProjectsListColumnsRequest {
-    
-    public ProjectsListColumnsPathParams pathParams;
-    public ProjectsListColumnsRequest withPathParams(ProjectsListColumnsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ProjectsListColumnsRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ProjectsListColumnsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
     
-    public ProjectsListColumnsQueryParams queryParams;
-    public ProjectsListColumnsRequest withQueryParams(ProjectsListColumnsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The unique identifier of the project.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public Long projectId;
+    public ProjectsListColumnsRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     

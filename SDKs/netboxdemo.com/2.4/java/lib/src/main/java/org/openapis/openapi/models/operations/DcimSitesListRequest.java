@@ -4,13 +4,134 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimSitesListRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=asn")
+    public Double asn;
+    public DcimSitesListRequest withAsn(Double asn) {
+        this.asn = asn;
+        return this;
+    }
     
-    public DcimSitesListQueryParams queryParams;
-    public DcimSitesListRequest withQueryParams(DcimSitesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contact_email")
+    public String contactEmail;
+    public DcimSitesListRequest withContactEmail(String contactEmail) {
+        this.contactEmail = contactEmail;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contact_name")
+    public String contactName;
+    public DcimSitesListRequest withContactName(String contactName) {
+        this.contactName = contactName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contact_phone")
+    public String contactPhone;
+    public DcimSitesListRequest withContactPhone(String contactPhone) {
+        this.contactPhone = contactPhone;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=facility")
+    public String facility;
+    public DcimSitesListRequest withFacility(String facility) {
+        this.facility = facility;
+        return this;
+    }
+    
+    /**
+     * Multiple values may be separated by commas.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__in")
+    public String idIn;
+    public DcimSitesListRequest withIdIn(String idIn) {
+        this.idIn = idIn;
+        return this;
+    }
+    
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public DcimSitesListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public DcimSitesListRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public DcimSitesListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public DcimSitesListRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=region")
+    public String region;
+    public DcimSitesListRequest withRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=region_id")
+    public String regionId;
+    public DcimSitesListRequest withRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug")
+    public String slug;
+    public DcimSitesListRequest withSlug(String slug) {
+        this.slug = slug;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public String status;
+    public DcimSitesListRequest withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
+    public String tag;
+    public DcimSitesListRequest withTag(String tag) {
+        this.tag = tag;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tenant")
+    public String tenant;
+    public DcimSitesListRequest withTenant(String tenant) {
+        this.tenant = tenant;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tenant_id")
+    public String tenantId;
+    public DcimSitesListRequest withTenantId(String tenantId) {
+        this.tenantId = tenantId;
         return this;
     }
     

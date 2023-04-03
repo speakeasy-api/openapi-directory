@@ -4,13 +4,43 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCreatePathwayRequest {
+    /**
+     * The authentication info
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=auth")
+    public String auth;
+    public PostCreatePathwayRequest withAuth(String auth) {
+        this.auth = auth;
+        return this;
+    }
     
-    public PostCreatePathwayQueryParams queryParams;
-    public PostCreatePathwayRequest withQueryParams(PostCreatePathwayQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public PostCreatePathwayFormatEnum format;
+    public PostCreatePathwayRequest withFormat(PostCreatePathwayFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * The GPML code for the new pathway
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gpml")
+    public String gpml;
+    public PostCreatePathwayRequest withGpml(String gpml) {
+        this.gpml = gpml;
+        return this;
+    }
+    
+    /**
+     * The user name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
+    public String username;
+    public PostCreatePathwayRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

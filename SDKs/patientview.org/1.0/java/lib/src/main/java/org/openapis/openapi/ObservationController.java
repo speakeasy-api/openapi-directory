@@ -39,7 +39,7 @@ public class ObservationController {
      */
     public org.openapis.openapi.models.operations.GetObservationsByCodeResponse getObservationsByCode(org.openapis.openapi.models.operations.GetObservationsByCodeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetObservationsByCodePathParams.class, baseUrl, "/user/{userId}/observations/{code}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetObservationsByCodeRequest.class, baseUrl, "/user/{userId}/observations/{code}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -79,13 +79,13 @@ public class ObservationController {
      */
     public org.openapis.openapi.models.operations.GetObservationsByCodesResponse getObservationsByCodes(org.openapis.openapi.models.operations.GetObservationsByCodesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetObservationsByCodesPathParams.class, baseUrl, "/user/{userId}/observations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetObservationsByCodesRequest.class, baseUrl, "/user/{userId}/observations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetObservationsByCodesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetObservationsByCodesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -125,7 +125,7 @@ public class ObservationController {
      */
     public org.openapis.openapi.models.operations.GetPatientEnteredObservationsByCodeResponse getPatientEnteredObservationsByCode(org.openapis.openapi.models.operations.GetPatientEnteredObservationsByCodeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPatientEnteredObservationsByCodePathParams.class, baseUrl, "/user/{userId}/observations/{code}/patiententered", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPatientEnteredObservationsByCodeRequest.class, baseUrl, "/user/{userId}/observations/{code}/patiententered", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

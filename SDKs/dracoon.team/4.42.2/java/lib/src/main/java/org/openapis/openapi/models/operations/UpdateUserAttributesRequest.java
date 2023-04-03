@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateUserAttributesRequest {
-    
-    public UpdateUserAttributesPathParams pathParams;
-    public UpdateUserAttributesRequest withPathParams(UpdateUserAttributesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateUserAttributesHeaders headers;
-    public UpdateUserAttributesRequest withHeaders(UpdateUserAttributesHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UserAttributes request;
-    public UpdateUserAttributesRequest withRequest(org.openapis.openapi.models.shared.UserAttributes request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UserAttributes userAttributes;
+    public UpdateUserAttributesRequest withUserAttributes(org.openapis.openapi.models.shared.UserAttributes userAttributes) {
+        this.userAttributes = userAttributes;
+        return this;
+    }
+    
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public UpdateUserAttributesRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
+        return this;
+    }
+    
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public UpdateUserAttributesXSdsDateFormatEnum xSdsDateFormat;
+    public UpdateUserAttributesRequest withXSdsDateFormat(UpdateUserAttributesXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
+        return this;
+    }
+    
+    /**
+     * User ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Long userId;
+    public UpdateUserAttributesRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

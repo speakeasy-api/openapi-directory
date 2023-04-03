@@ -7,24 +7,52 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UploadFileAsMultipartPublic1Request {
-    
-    public UploadFileAsMultipartPublic1PathParams pathParams;
-    public UploadFileAsMultipartPublic1Request withPathParams(UploadFileAsMultipartPublic1PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UploadFileAsMultipartPublic1Headers headers;
-    public UploadFileAsMultipartPublic1Request withHeaders(UploadFileAsMultipartPublic1Headers headers) {
-        this.headers = headers;
+    /**
+     * Content-Range 
+     * 
+     * e.g. `bytes 0-999/3980`
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Range")
+    public String contentRange;
+    public UploadFileAsMultipartPublic1Request withContentRange(String contentRange) {
+        this.contentRange = contentRange;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public UploadFileAsMultipartPublic1RequestBody request;
-    public UploadFileAsMultipartPublic1Request withRequest(UploadFileAsMultipartPublic1RequestBody request) {
-        this.request = request;
+    public UploadFileAsMultipartPublic1RequestBody requestBody;
+    public UploadFileAsMultipartPublic1Request withRequestBody(UploadFileAsMultipartPublic1RequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public UploadFileAsMultipartPublic1XSdsDateFormatEnum xSdsDateFormat;
+    public UploadFileAsMultipartPublic1Request withXSdsDateFormat(UploadFileAsMultipartPublic1XSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
+        return this;
+    }
+    
+    /**
+     * Access key
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=access_key")
+    public String accessKey;
+    public UploadFileAsMultipartPublic1Request withAccessKey(String accessKey) {
+        this.accessKey = accessKey;
+        return this;
+    }
+    
+    /**
+     * Upload channel ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=upload_id")
+    public String uploadId;
+    public UploadFileAsMultipartPublic1Request withUploadId(String uploadId) {
+        this.uploadId = uploadId;
         return this;
     }
     

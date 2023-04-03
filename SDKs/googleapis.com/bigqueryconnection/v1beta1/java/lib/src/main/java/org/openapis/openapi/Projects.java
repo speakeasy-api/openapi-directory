@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Creates a new connection.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsCreateResponse bigqueryconnectionProjectsLocationsConnectionsCreate(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsCreateResponse bigqueryconnectionProjectsLocationsConnectionsCreate(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsCreateRequest request, org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsCreatePathParams.class, baseUrl, "/v1beta1/{parent}/connections", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsCreateRequest.class, baseUrl, "/v1beta1/{parent}/connections", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "connectionInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,25 +83,26 @@ public class Projects {
     /**
      * Deletes connection and associated credential.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsDeleteResponse bigqueryconnectionProjectsLocationsConnectionsDelete(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsDeleteResponse bigqueryconnectionProjectsLocationsConnectionsDelete(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsDeleteRequest request, org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsDeletePathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsDeleteRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,25 +129,26 @@ public class Projects {
     /**
      * Returns specified connection.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsGetResponse bigqueryconnectionProjectsLocationsConnectionsGet(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsGetResponse bigqueryconnectionProjectsLocationsConnectionsGet(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsGetRequest request, org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsGetPathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsGetRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -172,27 +175,28 @@ public class Projects {
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsGetIamPolicyResponse bigqueryconnectionProjectsLocationsConnectionsGetIamPolicy(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsGetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsGetIamPolicyResponse bigqueryconnectionProjectsLocationsConnectionsGetIamPolicy(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsGetIamPolicyRequest request, org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsGetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsGetIamPolicyPathParams.class, baseUrl, "/v1beta1/{resource}:getIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsGetIamPolicyRequest.class, baseUrl, "/v1beta1/{resource}:getIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "getIamPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsGetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsGetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -219,25 +223,26 @@ public class Projects {
     /**
      * Returns a list of connections in the given project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsListResponse bigqueryconnectionProjectsLocationsConnectionsList(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsListResponse bigqueryconnectionProjectsLocationsConnectionsList(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsListRequest request, org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsListPathParams.class, baseUrl, "/v1beta1/{parent}/connections", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsListRequest.class, baseUrl, "/v1beta1/{parent}/connections", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -264,27 +269,28 @@ public class Projects {
     /**
      * Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsSetIamPolicyResponse bigqueryconnectionProjectsLocationsConnectionsSetIamPolicy(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsSetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsSetIamPolicyResponse bigqueryconnectionProjectsLocationsConnectionsSetIamPolicy(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsSetIamPolicyRequest request, org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsSetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsSetIamPolicyPathParams.class, baseUrl, "/v1beta1/{resource}:setIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsSetIamPolicyRequest.class, baseUrl, "/v1beta1/{resource}:setIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setIamPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsSetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsSetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -311,27 +317,28 @@ public class Projects {
     /**
      * Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsTestIamPermissionsResponse bigqueryconnectionProjectsLocationsConnectionsTestIamPermissions(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsTestIamPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsTestIamPermissionsResponse bigqueryconnectionProjectsLocationsConnectionsTestIamPermissions(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsTestIamPermissionsRequest request, org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsTestIamPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsTestIamPermissionsPathParams.class, baseUrl, "/v1beta1/{resource}:testIamPermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsTestIamPermissionsRequest.class, baseUrl, "/v1beta1/{resource}:testIamPermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testIamPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsTestIamPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsTestIamPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -358,27 +365,28 @@ public class Projects {
     /**
      * Sets the credential for the specified connection.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsUpdateCredentialResponse bigqueryconnectionProjectsLocationsConnectionsUpdateCredential(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsUpdateCredentialRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsUpdateCredentialResponse bigqueryconnectionProjectsLocationsConnectionsUpdateCredential(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsUpdateCredentialRequest request, org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsUpdateCredentialSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsUpdateCredentialPathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsUpdateCredentialRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "connectionCredential", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsUpdateCredentialQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsUpdateCredentialRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

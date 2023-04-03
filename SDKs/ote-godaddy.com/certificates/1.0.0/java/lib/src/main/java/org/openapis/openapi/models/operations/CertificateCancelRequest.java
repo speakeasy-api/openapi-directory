@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CertificateCancelRequest {
-    
-    public CertificateCancelPathParams pathParams;
-    public CertificateCancelRequest withPathParams(CertificateCancelPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Certificate id to cancel
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=certificateId")
+    public String certificateId;
+    public CertificateCancelRequest withCertificateId(String certificateId) {
+        this.certificateId = certificateId;
         return this;
     }
     

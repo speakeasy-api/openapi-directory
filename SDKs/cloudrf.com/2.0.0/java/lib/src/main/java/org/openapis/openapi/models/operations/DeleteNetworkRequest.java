@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteNetworkRequest {
-    
-    public DeleteNetworkQueryParams queryParams;
-    public DeleteNetworkRequest withQueryParams(DeleteNetworkQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public DeleteNetworkSecurity security;
-    public DeleteNetworkRequest withSecurity(DeleteNetworkSecurity security) {
-        this.security = security;
+    /**
+     * Network name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nid")
+    public String nid;
+    public DeleteNetworkRequest withNid(String nid) {
+        this.nid = nid;
         return this;
     }
     

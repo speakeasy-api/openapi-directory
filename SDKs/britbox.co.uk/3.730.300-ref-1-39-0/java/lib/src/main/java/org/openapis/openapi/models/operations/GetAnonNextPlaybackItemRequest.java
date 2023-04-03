@@ -4,20 +4,114 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAnonNextPlaybackItemRequest {
-    
-    public GetAnonNextPlaybackItemPathParams pathParams;
-    public GetAnonNextPlaybackItemRequest withPathParams(GetAnonNextPlaybackItemPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The type of device the content is targeting.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device")
+    public String device;
+    public GetAnonNextPlaybackItemRequest withDevice(String device) {
+        this.device = device;
         return this;
     }
     
+    /**
+     * If no value is specified no dependencies are expanded.
+     * 
+     * If 'parent' is specified then only the direct parent will be expanded.
+     * For example if an `Episode` then the `Season` would be included.
+     * 
+     * If 'ancestors' is specified then the full parent chain is expanded.
+     * For example if an `Episode` then both the `Season` and `Show` would be included.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public GetAnonNextPlaybackItemExpandEnum expand;
+    public GetAnonNextPlaybackItemRequest withExpand(GetAnonNextPlaybackItemExpandEnum expand) {
+        this.expand = expand;
+        return this;
+    }
     
-    public GetAnonNextPlaybackItemQueryParams queryParams;
-    public GetAnonNextPlaybackItemRequest withQueryParams(GetAnonNextPlaybackItemQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The set of opt in feature flags which cause breaking changes to responses.
+     * 
+     * While Rocket APIs look to avoid breaking changes under the active major version, the formats of responses
+     * may need to evolve over this time.
+     * 
+     * These feature flags allow clients to select which response formats they expect and avoid breaking
+     * clients as these formats evolve under the current major version.
+     * 
+     * ### Flags
+     * 
+     * - `all` - Enable all flags. Useful for testing. _Don't use in production_.
+     * - `idp` - Dynamic item detail pages with schedulable rows.
+     * - `ldp` - Dynamic list detail pages with schedulable rows.
+     * - `hb` - Hubble formatted image urls.
+     * - `rpt` - Updated resume point threshold logic.
+     * - `cas` - "Custom Asset Search", inlcude `customAssets` in search results.
+     * - `lrl` - Do not pre-populate related list if more than `max_list_prefetch` down the page.
+     * - `cd` - Custom Destination support.
+     * 
+     * See the `feature-flags.md` for available flag details.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
+    public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+    public GetAnonNextPlaybackItemRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
+        this.ff = ff;
+        return this;
+    }
+    
+    /**
+     * The identifier of the source item to base the next to watch item off.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=itemId")
+    public String itemId;
+    public GetAnonNextPlaybackItemRequest withItemId(String itemId) {
+        this.itemId = itemId;
+        return this;
+    }
+    
+    /**
+     * Language code for the preferred language to be returned in the response.
+     * 
+     * Parameter value is case-insensitive and should be
+     *   - a valid 2 letter language code without region such as en, de
+     *   - or with region such as en_us, en_au
+     * 
+     * If undefined then defaults to 'en', unless the server has been configured
+     * with a custom default.
+     * 
+     * See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public String lang;
+    public GetAnonNextPlaybackItemRequest withLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    
+    /**
+     * The maximum rating (inclusive) of an item returned, e.g. 'auoflc-pg'.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_rating")
+    public String maxRating;
+    public GetAnonNextPlaybackItemRequest withMaxRating(String maxRating) {
+        this.maxRating = maxRating;
+        return this;
+    }
+    
+    /**
+     * The list of segments to filter the response by.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=segments")
+    public String[] segments;
+    public GetAnonNextPlaybackItemRequest withSegments(String[] segments) {
+        this.segments = segments;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistrationsViewOnlyLinksReadRequest {
+    /**
+     * The unique identifier of the view only link.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=link_id")
+    public String linkId;
+    public RegistrationsViewOnlyLinksReadRequest withLinkId(String linkId) {
+        this.linkId = linkId;
+        return this;
+    }
     
-    public RegistrationsViewOnlyLinksReadPathParams pathParams;
-    public RegistrationsViewOnlyLinksReadRequest withPathParams(RegistrationsViewOnlyLinksReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the registration.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=registration_id")
+    public String registrationId;
+    public RegistrationsViewOnlyLinksReadRequest withRegistrationId(String registrationId) {
+        this.registrationId = registrationId;
         return this;
     }
     

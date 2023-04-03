@@ -4,27 +4,196 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest {
-    
-    public GkehubProjectsLocationsMembershipsGenerateConnectManifestPathParams pathParams;
-    public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withPathParams(GkehubProjectsLocationsMembershipsGenerateConnectManifestPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public GkehubProjectsLocationsMembershipsGenerateConnectManifestQueryParams queryParams;
-    public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withQueryParams(GkehubProjectsLocationsMembershipsGenerateConnectManifestQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public GkehubProjectsLocationsMembershipsGenerateConnectManifestSecurity security;
-    public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withSecurity(GkehubProjectsLocationsMembershipsGenerateConnectManifestSecurity security) {
-        this.security = security;
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Do not set.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=connectAgent.name")
+    public String connectAgentName;
+    public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withConnectAgentName(String connectAgentName) {
+        this.connectAgentName = connectAgentName;
+        return this;
+    }
+    
+    /**
+     * Optional. Namespace for GKE Connect agent resources. Defaults to `gke-connect`. The Connect Agent is authorized automatically when run in the default namespace. Otherwise, explicit authorization must be granted with an additional IAM binding.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=connectAgent.namespace")
+    public String connectAgentNamespace;
+    public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withConnectAgentNamespace(String connectAgentNamespace) {
+        this.connectAgentNamespace = connectAgentNamespace;
+        return this;
+    }
+    
+    /**
+     * Optional. URI of a proxy if connectivity from the agent to gkeconnect.googleapis.com requires the use of a proxy. Format must be in the form `http(s)://{proxy_address}`, depending on the HTTP/HTTPS protocol supported by the proxy. This will direct the connect agent's outbound traffic through a HTTP(S) proxy.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=connectAgent.proxy")
+    public String connectAgentProxy;
+    public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withConnectAgentProxy(String connectAgentProxy) {
+        this.connectAgentProxy = connectAgentProxy;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Optional. The image pull secret content for the registry, if not public.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=imagePullSecretContent")
+    public String imagePullSecretContent;
+    public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withImagePullSecretContent(String imagePullSecretContent) {
+        this.imagePullSecretContent = imagePullSecretContent;
+        return this;
+    }
+    
+    /**
+     * Optional. If true, generate the resources for upgrade only. Some resources generated only for installation (e.g. secrets) will be excluded.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isUpgrade")
+    public Boolean isUpgrade;
+    public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withIsUpgrade(Boolean isUpgrade) {
+        this.isUpgrade = isUpgrade;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Required. The Membership resource name the Agent will associate with, in the format `projects/* /locations/* /memberships/*`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Optional. The registry to fetch the connect agent image from. Defaults to gcr.io/gkeconnect.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=registry")
+    public String registry;
+    public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withRegistry(String registry) {
+        this.registry = registry;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
+        return this;
+    }
+    
+    /**
+     * Optional. The Connect agent version to use. Defaults to the most current version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
+    public String version;
+    public GkehubProjectsLocationsMembershipsGenerateConnectManifestRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

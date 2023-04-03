@@ -7,27 +7,63 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutProductsIdOptionsOptionIdValuesValueIdJsonRequest {
-    
-    public PutProductsIdOptionsOptionIdValuesValueIdJsonPathParams pathParams;
-    public PutProductsIdOptionsOptionIdValuesValueIdJsonRequest withPathParams(PutProductsIdOptionsOptionIdValuesValueIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutProductsIdOptionsOptionIdValuesValueIdJsonQueryParams queryParams;
-    public PutProductsIdOptionsOptionIdValuesValueIdJsonRequest withQueryParams(PutProductsIdOptionsOptionIdValuesValueIdJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Product option value parameters to change
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ProductOptionValueEdit request;
-    public PutProductsIdOptionsOptionIdValuesValueIdJsonRequest withRequest(org.openapis.openapi.models.shared.ProductOptionValueEdit request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ProductOptionValueEdit productOptionValueEdit;
+    public PutProductsIdOptionsOptionIdValuesValueIdJsonRequest withProductOptionValueEdit(org.openapis.openapi.models.shared.ProductOptionValueEdit productOptionValueEdit) {
+        this.productOptionValueEdit = productOptionValueEdit;
+        return this;
+    }
+    
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public PutProductsIdOptionsOptionIdValuesValueIdJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
+        return this;
+    }
+    
+    /**
+     * Id of the Product
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PutProductsIdOptionsOptionIdValuesValueIdJsonRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public PutProductsIdOptionsOptionIdValuesValueIdJsonRequest withLogin(String login) {
+        this.login = login;
+        return this;
+    }
+    
+    /**
+     * Id of the Product Option
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=option_id")
+    public Integer optionId;
+    public PutProductsIdOptionsOptionIdValuesValueIdJsonRequest withOptionId(Integer optionId) {
+        this.optionId = optionId;
+        return this;
+    }
+    
+    /**
+     * Id of the Product Option Value
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=value_id")
+    public Integer valueId;
+    public PutProductsIdOptionsOptionIdValuesValueIdJsonRequest withValueId(Integer valueId) {
+        this.valueId = valueId;
         return this;
     }
     

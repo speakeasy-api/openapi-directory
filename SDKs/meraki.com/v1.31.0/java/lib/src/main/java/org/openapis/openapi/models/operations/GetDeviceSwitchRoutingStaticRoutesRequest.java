@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDeviceSwitchRoutingStaticRoutesRequest {
-    
-    public GetDeviceSwitchRoutingStaticRoutesPathParams pathParams;
-    public GetDeviceSwitchRoutingStaticRoutesRequest withPathParams(GetDeviceSwitchRoutingStaticRoutesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public GetDeviceSwitchRoutingStaticRoutesRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

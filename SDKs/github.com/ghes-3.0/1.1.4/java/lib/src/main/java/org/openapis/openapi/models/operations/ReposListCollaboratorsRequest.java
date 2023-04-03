@@ -4,20 +4,53 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposListCollaboratorsRequest {
-    
-    public ReposListCollaboratorsPathParams pathParams;
-    public ReposListCollaboratorsRequest withPathParams(ReposListCollaboratorsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filter collaborators returned by their affiliation. Can be one of:  
+     * \* `outside`: All outside collaborators of an organization-owned repository.  
+     * \* `direct`: All collaborators with permissions to an organization-owned repository, regardless of organization membership status.  
+     * \* `all`: All collaborators the authenticated user can see.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=affiliation")
+    public ReposListCollaboratorsAffiliationEnum affiliation;
+    public ReposListCollaboratorsRequest withAffiliation(ReposListCollaboratorsAffiliationEnum affiliation) {
+        this.affiliation = affiliation;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposListCollaboratorsRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public ReposListCollaboratorsQueryParams queryParams;
-    public ReposListCollaboratorsRequest withQueryParams(ReposListCollaboratorsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ReposListCollaboratorsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ReposListCollaboratorsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposListCollaboratorsRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

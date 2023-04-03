@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AssociateDomainHeaders;
 import org.openapis.openapi.models.operations.AssociateDomainRequestBody;
 import org.openapis.openapi.models.operations.AssociateDomainRequest;
 import org.openapis.openapi.models.operations.AssociateDomainResponse;
@@ -14,29 +13,25 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AssociateDomainRequest req = new AssociateDomainRequest() {{
-                headers = new AssociateDomainHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
+                requestBody = new AssociateDomainRequestBody() {{
+                    acmCertificateArn = "corrupti";
+                    displayName = "provident";
+                    domainName = "distinctio";
+                    fleetArn = "quibusdam";
                 }};
-                request = new AssociateDomainRequestBody() {{
-                    acmCertificateArn = "illum";
-                    displayName = "vel";
-                    domainName = "error";
-                    fleetArn = "deserunt";
-                }};
-            }};            
+                xAmzAlgorithm = "unde";
+                xAmzContentSha256 = "nulla";
+                xAmzCredential = "corrupti";
+                xAmzDate = "illum";
+                xAmzSecurityToken = "vel";
+                xAmzSignature = "error";
+                xAmzSignedHeaders = "deserunt";
+            }}            
 
             AssociateDomainResponse res = sdk.associateDomain(req);
 

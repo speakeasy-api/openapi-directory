@@ -38,13 +38,13 @@ public class Monatsbelege {
      */
     public org.openapis.openapi.models.operations.GetMonatsbelegeResponse getMonatsbelege(org.openapis.openapi.models.operations.GetMonatsbelegeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMonatsbelegePathParams.class, baseUrl, "/registrierkassen/{registrierkasseUuid}/monatsbelege", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMonatsbelegeRequest.class, baseUrl, "/registrierkassen/{registrierkasseUuid}/monatsbelege", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMonatsbelegeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMonatsbelegeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

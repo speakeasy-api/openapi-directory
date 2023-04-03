@@ -4,20 +4,63 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposListForOrgRequest {
-    
-    public ReposListForOrgPathParams pathParams;
-    public ReposListForOrgRequest withPathParams(ReposListForOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Can be one of `asc` or `desc`. Default: when using `full_name`: `asc`, otherwise `desc`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public ReposListForOrgDirectionEnum direction;
+    public ReposListForOrgRequest withDirection(ReposListForOrgDirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ReposListForOrgRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
     
-    public ReposListForOrgQueryParams queryParams;
-    public ReposListForOrgRequest withQueryParams(ReposListForOrgQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ReposListForOrgRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ReposListForOrgRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Can be one of `created`, `updated`, `pushed`, `full_name`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public ReposListForOrgSortEnum sort;
+    public ReposListForOrgRequest withSort(ReposListForOrgSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Specifies the types of repositories you want returned. Can be one of `all`, `public`, `private`, `forks`, `sources`, `member`, `internal`. Note: For GitHub AE, can be one of `all`, `private`, `forks`, `sources`, `member`, `internal`. Default: `all`. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, `type` can also be `internal`. However, the `internal` value is not yet supported when a GitHub App calls this API with an installation access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public ReposListForOrgTypeEnum type;
+    public ReposListForOrgRequest withType(ReposListForOrgTypeEnum type) {
+        this.type = type;
         return this;
     }
     

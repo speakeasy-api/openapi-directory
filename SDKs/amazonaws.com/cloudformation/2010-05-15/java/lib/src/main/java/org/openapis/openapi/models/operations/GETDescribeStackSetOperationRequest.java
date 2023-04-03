@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeStackSetOperationRequest {
-    
-    public GETDescribeStackSetOperationQueryParams queryParams;
-    public GETDescribeStackSetOperationRequest withQueryParams(GETDescribeStackSetOperationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeStackSetOperationActionEnum action;
+    public GETDescribeStackSetOperationRequest withAction(GETDescribeStackSetOperationActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;[Service-managed permissions] Specifies whether you are acting as an account administrator in the organization's management account or as a delegated administrator in a member account.&lt;/p&gt; &lt;p&gt;By default, &lt;code&gt;SELF&lt;/code&gt; is specified. Use &lt;code&gt;SELF&lt;/code&gt; for stack sets with self-managed permissions.&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;If you are signed in to the management account, specify &lt;code&gt;SELF&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;If you are signed in to a delegated administrator account, specify &lt;code&gt;DELEGATED_ADMIN&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;Your Amazon Web Services account must be registered as a delegated administrator in the management account. For more information, see &lt;a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"&gt;Register a delegated administrator&lt;/a&gt; in the &lt;i&gt;CloudFormation User Guide&lt;/i&gt;.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CallAs")
+    public GETDescribeStackSetOperationCallAsEnum callAs;
+    public GETDescribeStackSetOperationRequest withCallAs(GETDescribeStackSetOperationCallAsEnum callAs) {
+        this.callAs = callAs;
+        return this;
+    }
     
-    public GETDescribeStackSetOperationHeaders headers;
-    public GETDescribeStackSetOperationRequest withHeaders(GETDescribeStackSetOperationHeaders headers) {
-        this.headers = headers;
+    /**
+     * The unique ID of the stack set operation.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OperationId")
+    public String operationId;
+    public GETDescribeStackSetOperationRequest withOperationId(String operationId) {
+        this.operationId = operationId;
+        return this;
+    }
+    
+    /**
+     * The name or the unique stack ID of the stack set for the stack operation.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StackSetName")
+    public String stackSetName;
+    public GETDescribeStackSetOperationRequest withStackSetName(String stackSetName) {
+        this.stackSetName = stackSetName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeStackSetOperationVersionEnum version;
+    public GETDescribeStackSetOperationRequest withVersion(GETDescribeStackSetOperationVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeStackSetOperationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeStackSetOperationRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeStackSetOperationRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeStackSetOperationRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeStackSetOperationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeStackSetOperationRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeStackSetOperationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

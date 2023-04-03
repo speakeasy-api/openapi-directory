@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserGetBungieNetUserByIdRequest {
-    
-    public UserGetBungieNetUserByIdPathParams pathParams;
-    public UserGetBungieNetUserByIdRequest withPathParams(UserGetBungieNetUserByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The requested Bungie.net membership id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public UserGetBungieNetUserByIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

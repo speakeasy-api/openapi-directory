@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchRequest {
+    /**
+     * Whether to return all, or available programmes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=availability")
+    public org.openapis.openapi.models.shared.AvailabilityEnum availability;
+    public SearchRequest withAvailability(org.openapis.openapi.models.shared.AvailabilityEnum availability) {
+        this.availability = availability;
+        return this;
+    }
     
-    public SearchQueryParams queryParams;
-    public SearchRequest withQueryParams(SearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The language for any applicable localised strings.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public org.openapis.openapi.models.shared.LangEnum lang;
+    public SearchRequest withLang(org.openapis.openapi.models.shared.LangEnum lang) {
+        this.lang = lang;
+        return this;
+    }
+    
+    /**
+     * The term to search for.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public SearchRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    /**
+     * The rights group to limit results to.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rights")
+    public org.openapis.openapi.models.shared.RightsEnum rights;
+    public SearchRequest withRights(org.openapis.openapi.models.shared.RightsEnum rights) {
+        this.rights = rights;
         return this;
     }
     

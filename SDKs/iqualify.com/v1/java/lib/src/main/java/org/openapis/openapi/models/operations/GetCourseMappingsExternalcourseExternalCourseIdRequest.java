@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCourseMappingsExternalcourseExternalCourseIdRequest {
-    
-    public GetCourseMappingsExternalcourseExternalCourseIdPathParams pathParams;
-    public GetCourseMappingsExternalcourseExternalCourseIdRequest withPathParams(GetCourseMappingsExternalcourseExternalCourseIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * external course's id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=externalCourseId")
+    public String externalCourseId;
+    public GetCourseMappingsExternalcourseExternalCourseIdRequest withExternalCourseId(String externalCourseId) {
+        this.externalCourseId = externalCourseId;
         return this;
     }
     

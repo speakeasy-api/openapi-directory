@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserSearchByGlobalNamePostRequest {
-    
-    public UserSearchByGlobalNamePostPathParams pathParams;
-    public UserSearchByGlobalNamePostRequest withPathParams(UserSearchByGlobalNamePostPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The zero-based page of results you desire.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=page")
+    public Integer page;
+    public UserSearchByGlobalNamePostRequest withPage(Integer page) {
+        this.page = page;
         return this;
     }
     

@@ -7,10 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddLocalTaxRequest {
+    /**
+     * Company Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public AddLocalTaxRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
+        return this;
+    }
     
-    public AddLocalTaxPathParams pathParams;
-    public AddLocalTaxRequest withPathParams(AddLocalTaxPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Employee Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=employeeId")
+    public String employeeId;
+    public AddLocalTaxRequest withEmployeeId(String employeeId) {
+        this.employeeId = employeeId;
         return this;
     }
     
@@ -18,16 +31,9 @@ public class AddLocalTaxRequest {
      * LocalTax Model
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.LocalTax request;
-    public AddLocalTaxRequest withRequest(org.openapis.openapi.models.shared.LocalTax request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public AddLocalTaxSecurity security;
-    public AddLocalTaxRequest withSecurity(AddLocalTaxSecurity security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.LocalTax localTax;
+    public AddLocalTaxRequest withLocalTax(org.openapis.openapi.models.shared.LocalTax localTax) {
+        this.localTax = localTax;
         return this;
     }
     

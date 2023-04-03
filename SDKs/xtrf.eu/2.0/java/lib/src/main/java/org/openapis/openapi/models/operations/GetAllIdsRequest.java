@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllIdsRequest {
-    
-    public GetAllIdsQueryParams queryParams;
-    public GetAllIdsRequest withQueryParams(GetAllIdsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * only client invoices modified since this timestamp
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedSince")
+    public Long updatedSince;
+    public GetAllIdsRequest withUpdatedSince(Long updatedSince) {
+        this.updatedSince = updatedSince;
         return this;
     }
     

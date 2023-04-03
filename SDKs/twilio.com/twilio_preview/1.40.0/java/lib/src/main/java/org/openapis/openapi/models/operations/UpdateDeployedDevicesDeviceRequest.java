@@ -7,31 +7,27 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDeployedDevicesDeviceRequest {
-    
-    public UpdateDeployedDevicesDevicePathParams pathParams;
-    public UpdateDeployedDevicesDeviceRequest withPathParams(UpdateDeployedDevicesDevicePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FleetSid")
+    public String fleetSid;
+    public UpdateDeployedDevicesDeviceRequest withFleetSid(String fleetSid) {
+        this.fleetSid = fleetSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateDeployedDevicesDeviceUpdateDeployedDevicesDeviceRequest request;
-    public UpdateDeployedDevicesDeviceRequest withRequest(UpdateDeployedDevicesDeviceUpdateDeployedDevicesDeviceRequest request) {
-        this.request = request;
+    public UpdateDeployedDevicesDeviceUpdateDeployedDevicesDeviceRequest requestBody;
+    public UpdateDeployedDevicesDeviceRequest withRequestBody(UpdateDeployedDevicesDeviceUpdateDeployedDevicesDeviceRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateDeployedDevicesDeviceSecurity security;
-    public UpdateDeployedDevicesDeviceRequest withSecurity(UpdateDeployedDevicesDeviceSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateDeployedDevicesDeviceRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Provides a 34 character string that uniquely identifies the requested Device resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateDeployedDevicesDeviceRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

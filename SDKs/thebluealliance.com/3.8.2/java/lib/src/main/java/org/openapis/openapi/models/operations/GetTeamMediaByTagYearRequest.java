@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTeamMediaByTagYearRequest {
-    
-    public GetTeamMediaByTagYearPathParams pathParams;
-    public GetTeamMediaByTagYearRequest withPathParams(GetTeamMediaByTagYearPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Value of the `ETag` header in the most recently cached response by the client.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
+    public String ifNoneMatch;
+    public GetTeamMediaByTagYearRequest withIfNoneMatch(String ifNoneMatch) {
+        this.ifNoneMatch = ifNoneMatch;
         return this;
     }
     
-    
-    public GetTeamMediaByTagYearHeaders headers;
-    public GetTeamMediaByTagYearRequest withHeaders(GetTeamMediaByTagYearHeaders headers) {
-        this.headers = headers;
+    /**
+     * Media Tag which describes the Media.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=media_tag")
+    public String mediaTag;
+    public GetTeamMediaByTagYearRequest withMediaTag(String mediaTag) {
+        this.mediaTag = mediaTag;
         return this;
     }
     
+    /**
+     * TBA Team Key, eg `frc254`
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_key")
+    public String teamKey;
+    public GetTeamMediaByTagYearRequest withTeamKey(String teamKey) {
+        this.teamKey = teamKey;
+        return this;
+    }
     
-    public GetTeamMediaByTagYearSecurity security;
-    public GetTeamMediaByTagYearRequest withSecurity(GetTeamMediaByTagYearSecurity security) {
-        this.security = security;
+    /**
+     * Competition Year (or Season). Must be 4 digits.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=year")
+    public Long year;
+    public GetTeamMediaByTagYearRequest withYear(Long year) {
+        this.year = year;
         return this;
     }
     

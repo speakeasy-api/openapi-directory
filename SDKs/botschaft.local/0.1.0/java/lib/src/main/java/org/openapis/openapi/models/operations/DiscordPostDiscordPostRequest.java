@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DiscordPostDiscordPostRequest {
-    
-    public DiscordPostDiscordPostHeaders headers;
-    public DiscordPostDiscordPostRequest withHeaders(DiscordPostDiscordPostHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.DiscordMessageRequest discordMessageRequest;
+    public DiscordPostDiscordPostRequest withDiscordMessageRequest(org.openapis.openapi.models.shared.DiscordMessageRequest discordMessageRequest) {
+        this.discordMessageRequest = discordMessageRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DiscordMessageRequest request;
-    public DiscordPostDiscordPostRequest withRequest(org.openapis.openapi.models.shared.DiscordMessageRequest request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=authorization")
+    public String authorization;
+    public DiscordPostDiscordPostRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     

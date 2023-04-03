@@ -37,10 +37,11 @@ public class Facilities {
      * Bulk download information for all facilities
      * Retrieve all available facilities in a single operation, formatted as either a GeoJSON FeatureCollection or as a CSV. Due to the complexity of the facility resource type, the CSV response contains a subset of available facility data - specifically it omits the available services, patient satisfaction, and patient wait time data.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAllFacilitiesResponse getAllFacilities(org.openapis.openapi.models.operations.GetAllFacilitiesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetAllFacilitiesResponse getAllFacilities(org.openapis.openapi.models.operations.GetAllFacilitiesRequest request, org.openapis.openapi.models.operations.GetAllFacilitiesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/facilities/all");
         
@@ -48,7 +49,7 @@ public class Facilities {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -57,7 +58,7 @@ public class Facilities {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -143,10 +144,11 @@ public class Facilities {
      * 
      *  Invalid combinations will return `400 Bad Request`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetFacilitiesByLocationResponse getFacilitiesByLocation(org.openapis.openapi.models.operations.GetFacilitiesByLocationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetFacilitiesByLocationResponse getFacilitiesByLocation(org.openapis.openapi.models.operations.GetFacilitiesByLocationRequest request, org.openapis.openapi.models.operations.GetFacilitiesByLocationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/facilities");
         
@@ -154,14 +156,14 @@ public class Facilities {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFacilitiesByLocationQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFacilitiesByLocationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -216,19 +218,20 @@ public class Facilities {
     /**
      * Retrieve a specific facility by ID
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetFacilityByIdResponse getFacilityById(org.openapis.openapi.models.operations.GetFacilityByIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetFacilityByIdResponse getFacilityById(org.openapis.openapi.models.operations.GetFacilityByIdRequest request, org.openapis.openapi.models.operations.GetFacilityByIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFacilityByIdPathParams.class, baseUrl, "/facilities/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFacilityByIdRequest.class, baseUrl, "/facilities/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -284,10 +287,11 @@ public class Facilities {
      * Bulk download of all facility IDs
      * Retrieves all available facility IDs only
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetFacilityIdsResponse getFacilityIds(org.openapis.openapi.models.operations.GetFacilityIdsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetFacilityIdsResponse getFacilityIds(org.openapis.openapi.models.operations.GetFacilityIdsRequest request, org.openapis.openapi.models.operations.GetFacilityIdsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/ids");
         
@@ -295,14 +299,14 @@ public class Facilities {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFacilityIdsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFacilityIdsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -352,10 +356,11 @@ public class Facilities {
      * 
      * To retrieve full details for nearby facilities, see the documentation for `/facilities?ids`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetNearbyFacilitiesResponse getNearbyFacilities(org.openapis.openapi.models.operations.GetNearbyFacilitiesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetNearbyFacilitiesResponse getNearbyFacilities(org.openapis.openapi.models.operations.GetNearbyFacilitiesRequest request, org.openapis.openapi.models.operations.GetNearbyFacilitiesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/nearby");
         
@@ -363,14 +368,14 @@ public class Facilities {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNearbyFacilitiesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNearbyFacilitiesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

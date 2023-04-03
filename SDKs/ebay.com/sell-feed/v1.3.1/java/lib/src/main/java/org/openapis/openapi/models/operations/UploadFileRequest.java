@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UploadFileRequest {
-    
-    public UploadFilePathParams pathParams;
-    public UploadFileRequest withPathParams(UploadFilePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public org.openapis.openapi.models.shared.FormDataContentDisposition request;
-    public UploadFileRequest withRequest(org.openapis.openapi.models.shared.FormDataContentDisposition request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.FormDataContentDisposition formDataContentDisposition;
+    public UploadFileRequest withFormDataContentDisposition(org.openapis.openapi.models.shared.FormDataContentDisposition formDataContentDisposition) {
+        this.formDataContentDisposition = formDataContentDisposition;
         return this;
     }
     
-    
-    public UploadFileSecurity security;
-    public UploadFileRequest withSecurity(UploadFileSecurity security) {
-        this.security = security;
+    /**
+     * The task_id associated with the file that will be uploaded. This ID was generated when the specified task was created.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=task_id")
+    public String taskId;
+    public UploadFileRequest withTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
     

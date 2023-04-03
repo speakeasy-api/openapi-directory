@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgsListWebhookDeliveriesRequest {
-    
-    public OrgsListWebhookDeliveriesPathParams pathParams;
-    public OrgsListWebhookDeliveriesRequest withPathParams(OrgsListWebhookDeliveriesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Used for pagination: the starting delivery from which the page of deliveries is fetched. Refer to the `link` header for the next and previous page cursors.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public OrgsListWebhookDeliveriesRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
+    /**
+     * The unique identifier of the hook.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hook_id")
+    public Long hookId;
+    public OrgsListWebhookDeliveriesRequest withHookId(Long hookId) {
+        this.hookId = hookId;
+        return this;
+    }
     
-    public OrgsListWebhookDeliveriesQueryParams queryParams;
-    public OrgsListWebhookDeliveriesRequest withQueryParams(OrgsListWebhookDeliveriesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public OrgsListWebhookDeliveriesRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public OrgsListWebhookDeliveriesRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
         return this;
     }
     

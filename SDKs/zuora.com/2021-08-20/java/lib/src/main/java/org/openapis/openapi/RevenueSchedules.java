@@ -49,13 +49,13 @@ public class RevenueSchedules {
      */
     public org.openapis.openapi.models.operations.DELETERSResponse deleteRs(org.openapis.openapi.models.operations.DELETERSRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DELETERSPathParams.class, baseUrl, "/v1/revenue-schedules/{rs-number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DELETERSRequest.class, baseUrl, "/v1/revenue-schedules/{rs-number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -99,13 +99,13 @@ public class RevenueSchedules {
      */
     public org.openapis.openapi.models.operations.GETRSResponse getRs(org.openapis.openapi.models.operations.GETRSRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRSPathParams.class, baseUrl, "/v1/revenue-schedules/{rs-number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRSRequest.class, baseUrl, "/v1/revenue-schedules/{rs-number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -151,13 +151,13 @@ public class RevenueSchedules {
      */
     public org.openapis.openapi.models.operations.GETRSbyCreditMemoItemResponse getRSbyCreditMemoItem(org.openapis.openapi.models.operations.GETRSbyCreditMemoItemRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRSbyCreditMemoItemPathParams.class, baseUrl, "/v1/revenue-schedules/credit-memo-items/{cmi-id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRSbyCreditMemoItemRequest.class, baseUrl, "/v1/revenue-schedules/credit-memo-items/{cmi-id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -203,13 +203,13 @@ public class RevenueSchedules {
      */
     public org.openapis.openapi.models.operations.GETRSbyDebitMemoItemResponse getRSbyDebitMemoItem(org.openapis.openapi.models.operations.GETRSbyDebitMemoItemRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRSbyDebitMemoItemPathParams.class, baseUrl, "/v1/revenue-schedules/debit-memo-items/{dmi-id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRSbyDebitMemoItemRequest.class, baseUrl, "/v1/revenue-schedules/debit-memo-items/{dmi-id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -253,13 +253,13 @@ public class RevenueSchedules {
      */
     public org.openapis.openapi.models.operations.GETRSbyInvoiceItemResponse getRSbyInvoiceItem(org.openapis.openapi.models.operations.GETRSbyInvoiceItemRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRSbyInvoiceItemPathParams.class, baseUrl, "/v1/revenue-schedules/invoice-items/{invoice-item-id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRSbyInvoiceItemRequest.class, baseUrl, "/v1/revenue-schedules/invoice-items/{invoice-item-id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -303,13 +303,13 @@ public class RevenueSchedules {
      */
     public org.openapis.openapi.models.operations.GETRSbyInvoiceItemAdjustmentResponse getRSbyInvoiceItemAdjustment(org.openapis.openapi.models.operations.GETRSbyInvoiceItemAdjustmentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRSbyInvoiceItemAdjustmentPathParams.class, baseUrl, "/v1/revenue-schedules/invoice-item-adjustments/{invoice-item-adj-key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRSbyInvoiceItemAdjustmentRequest.class, baseUrl, "/v1/revenue-schedules/invoice-item-adjustments/{invoice-item-adj-key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -355,19 +355,19 @@ public class RevenueSchedules {
      */
     public org.openapis.openapi.models.operations.GETRSbyProductChargeAndBillingAccountResponse getRSbyProductChargeAndBillingAccount(org.openapis.openapi.models.operations.GETRSbyProductChargeAndBillingAccountRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRSbyProductChargeAndBillingAccountPathParams.class, baseUrl, "/v1/revenue-schedules/product-charges/{charge-key}/{account-key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRSbyProductChargeAndBillingAccountRequest.class, baseUrl, "/v1/revenue-schedules/product-charges/{charge-key}/{account-key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETRSbyProductChargeAndBillingAccountQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETRSbyProductChargeAndBillingAccountRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -411,19 +411,19 @@ public class RevenueSchedules {
      */
     public org.openapis.openapi.models.operations.GETRSforSubscChargeResponse getRSforSubscCharge(org.openapis.openapi.models.operations.GETRSforSubscChargeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRSforSubscChargePathParams.class, baseUrl, "/v1/revenue-schedules/subscription-charges/{charge-key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETRSforSubscChargeRequest.class, baseUrl, "/v1/revenue-schedules/subscription-charges/{charge-key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETRSforSubscChargeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETRSforSubscChargeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -469,18 +469,18 @@ public class RevenueSchedules {
      */
     public org.openapis.openapi.models.operations.POSTRSforCreditMemoItemDistributeByDateRangeResponse postRSforCreditMemoItemDistributeByDateRange(org.openapis.openapi.models.operations.POSTRSforCreditMemoItemDistributeByDateRangeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.POSTRSforCreditMemoItemDistributeByDateRangePathParams.class, baseUrl, "/v1/revenue-schedules/credit-memo-items/{cmi-id}/distribute-revenue-with-date-range", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.POSTRSforCreditMemoItemDistributeByDateRangeRequest.class, baseUrl, "/v1/revenue-schedules/credit-memo-items/{cmi-id}/distribute-revenue-with-date-range", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "postRevenueScheduleByTransactionRatablyCMType", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -526,18 +526,18 @@ public class RevenueSchedules {
      */
     public org.openapis.openapi.models.operations.POSTRSforCreditMemoItemManualDistributionResponse postRSforCreditMemoItemManualDistribution(org.openapis.openapi.models.operations.POSTRSforCreditMemoItemManualDistributionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.POSTRSforCreditMemoItemManualDistributionPathParams.class, baseUrl, "/v1/revenue-schedules/credit-memo-items/{cmi-id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.POSTRSforCreditMemoItemManualDistributionRequest.class, baseUrl, "/v1/revenue-schedules/credit-memo-items/{cmi-id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "postRevenueScheduleByTransactionType", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -583,18 +583,18 @@ public class RevenueSchedules {
      */
     public org.openapis.openapi.models.operations.POSTRSforDebitMemoItemDistributeByDateRangeResponse postRSforDebitMemoItemDistributeByDateRange(org.openapis.openapi.models.operations.POSTRSforDebitMemoItemDistributeByDateRangeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.POSTRSforDebitMemoItemDistributeByDateRangePathParams.class, baseUrl, "/v1/revenue-schedules/debit-memo-items/{dmi-id}/distribute-revenue-with-date-range", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.POSTRSforDebitMemoItemDistributeByDateRangeRequest.class, baseUrl, "/v1/revenue-schedules/debit-memo-items/{dmi-id}/distribute-revenue-with-date-range", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "postRevenueScheduleByTransactionRatablyDMType", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -640,18 +640,18 @@ public class RevenueSchedules {
      */
     public org.openapis.openapi.models.operations.POSTRSforDebitMemoItemManualDistributionResponse postRSforDebitMemoItemManualDistribution(org.openapis.openapi.models.operations.POSTRSforDebitMemoItemManualDistributionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.POSTRSforDebitMemoItemManualDistributionPathParams.class, baseUrl, "/v1/revenue-schedules/debit-memo-items/{dmi-id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.POSTRSforDebitMemoItemManualDistributionRequest.class, baseUrl, "/v1/revenue-schedules/debit-memo-items/{dmi-id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "postRevenueScheduleByTransactionType", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -695,18 +695,18 @@ public class RevenueSchedules {
      */
     public org.openapis.openapi.models.operations.POSTRSforInvoiceItemAdjustmentDistributeByDateRangeResponse postRSforInvoiceItemAdjustmentDistributeByDateRange(org.openapis.openapi.models.operations.POSTRSforInvoiceItemAdjustmentDistributeByDateRangeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.POSTRSforInvoiceItemAdjustmentDistributeByDateRangePathParams.class, baseUrl, "/v1/revenue-schedules/invoice-item-adjustments/{invoice-item-adj-key}/distribute-revenue-with-date-range", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.POSTRSforInvoiceItemAdjustmentDistributeByDateRangeRequest.class, baseUrl, "/v1/revenue-schedules/invoice-item-adjustments/{invoice-item-adj-key}/distribute-revenue-with-date-range", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "postRevenueScheduleByDateRangeType", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -750,18 +750,18 @@ public class RevenueSchedules {
      */
     public org.openapis.openapi.models.operations.POSTRSforInvoiceItemAdjustmentManualDistributionResponse postRSforInvoiceItemAdjustmentManualDistribution(org.openapis.openapi.models.operations.POSTRSforInvoiceItemAdjustmentManualDistributionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.POSTRSforInvoiceItemAdjustmentManualDistributionPathParams.class, baseUrl, "/v1/revenue-schedules/invoice-item-adjustments/{invoice-item-adj-key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.POSTRSforInvoiceItemAdjustmentManualDistributionRequest.class, baseUrl, "/v1/revenue-schedules/invoice-item-adjustments/{invoice-item-adj-key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "postRevenueScheduleByTransactionType", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -805,18 +805,18 @@ public class RevenueSchedules {
      */
     public org.openapis.openapi.models.operations.POSTRSforInvoiceItemDistributeByDateRangeResponse postRSforInvoiceItemDistributeByDateRange(org.openapis.openapi.models.operations.POSTRSforInvoiceItemDistributeByDateRangeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.POSTRSforInvoiceItemDistributeByDateRangePathParams.class, baseUrl, "/v1/revenue-schedules/invoice-items/{invoice-item-id}/distribute-revenue-with-date-range", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.POSTRSforInvoiceItemDistributeByDateRangeRequest.class, baseUrl, "/v1/revenue-schedules/invoice-items/{invoice-item-id}/distribute-revenue-with-date-range", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "postRevenueScheduleByDateRangeType", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -860,18 +860,18 @@ public class RevenueSchedules {
      */
     public org.openapis.openapi.models.operations.POSTRSforInvoiceItemManualDistributionResponse postRSforInvoiceItemManualDistribution(org.openapis.openapi.models.operations.POSTRSforInvoiceItemManualDistributionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.POSTRSforInvoiceItemManualDistributionPathParams.class, baseUrl, "/v1/revenue-schedules/invoice-items/{invoice-item-id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.POSTRSforInvoiceItemManualDistributionRequest.class, baseUrl, "/v1/revenue-schedules/invoice-items/{invoice-item-id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "postRevenueScheduleByTransactionType", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -917,18 +917,18 @@ public class RevenueSchedules {
      */
     public org.openapis.openapi.models.operations.POSTRSforSubscChargeResponse postRSforSubscCharge(org.openapis.openapi.models.operations.POSTRSforSubscChargeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.POSTRSforSubscChargePathParams.class, baseUrl, "/v1/revenue-schedules/subscription-charges/{charge-key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.POSTRSforSubscChargeRequest.class, baseUrl, "/v1/revenue-schedules/subscription-charges/{charge-key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "postRevenueScheduleByChargeType", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -972,18 +972,18 @@ public class RevenueSchedules {
      */
     public org.openapis.openapi.models.operations.PUTRSBasicInfoResponse putRSBasicInfo(org.openapis.openapi.models.operations.PUTRSBasicInfoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PUTRSBasicInfoPathParams.class, baseUrl, "/v1/revenue-schedules/{rs-number}/basic-information", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PUTRSBasicInfoRequest.class, baseUrl, "/v1/revenue-schedules/{rs-number}/basic-information", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "putrsBasicInfoType", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1027,18 +1027,18 @@ public class RevenueSchedules {
      */
     public org.openapis.openapi.models.operations.PUTRevenueAcrossAPResponse putRevenueAcrossAP(org.openapis.openapi.models.operations.PUTRevenueAcrossAPRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PUTRevenueAcrossAPPathParams.class, baseUrl, "/v1/revenue-schedules/{rs-number}/distribute-revenue-across-accounting-periods", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PUTRevenueAcrossAPRequest.class, baseUrl, "/v1/revenue-schedules/{rs-number}/distribute-revenue-across-accounting-periods", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "putAllocateManuallyType", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1082,18 +1082,18 @@ public class RevenueSchedules {
      */
     public org.openapis.openapi.models.operations.PUTRevenueByRecognitionStartandEndDatesResponse putRevenueByRecognitionStartandEndDates(org.openapis.openapi.models.operations.PUTRevenueByRecognitionStartandEndDatesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PUTRevenueByRecognitionStartandEndDatesPathParams.class, baseUrl, "/v1/revenue-schedules/{rs-number}/distribute-revenue-with-date-range", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PUTRevenueByRecognitionStartandEndDatesRequest.class, baseUrl, "/v1/revenue-schedules/{rs-number}/distribute-revenue-with-date-range", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "putrsTermType", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1137,18 +1137,18 @@ public class RevenueSchedules {
      */
     public org.openapis.openapi.models.operations.PUTRevenueSpecificDateResponse putRevenueSpecificDate(org.openapis.openapi.models.operations.PUTRevenueSpecificDateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PUTRevenueSpecificDatePathParams.class, baseUrl, "/v1/revenue-schedules/{rs-number}/distribute-revenue-on-specific-date", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PUTRevenueSpecificDateRequest.class, baseUrl, "/v1/revenue-schedules/{rs-number}/distribute-revenue-on-specific-date", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "putSpecificDateAllocationType", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

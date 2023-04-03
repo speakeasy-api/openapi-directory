@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupV2GetAdminsAndFounderOfGroupRequest {
-    
-    public GroupV2GetAdminsAndFounderOfGroupPathParams pathParams;
-    public GroupV2GetAdminsAndFounderOfGroupRequest withPathParams(GroupV2GetAdminsAndFounderOfGroupPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Page number (starting with 1). Each page has a fixed size of 50 items per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currentpage")
+    public Integer currentpage;
+    public GroupV2GetAdminsAndFounderOfGroupRequest withCurrentpage(Integer currentpage) {
+        this.currentpage = currentpage;
         return this;
     }
     
-    
-    public GroupV2GetAdminsAndFounderOfGroupQueryParams queryParams;
-    public GroupV2GetAdminsAndFounderOfGroupRequest withQueryParams(GroupV2GetAdminsAndFounderOfGroupQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The ID of the group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public Long groupId;
+    public GroupV2GetAdminsAndFounderOfGroupRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
         return this;
     }
     

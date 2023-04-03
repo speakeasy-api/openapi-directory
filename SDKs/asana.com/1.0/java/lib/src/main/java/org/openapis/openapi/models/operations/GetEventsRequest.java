@@ -4,13 +4,50 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEventsRequest {
+    /**
+     * Defines fields to return.
+     * Some requests return *compact* representations of objects in order to conserve resources and complete the request more efficiently. Other times requests return more information than you may need. This option allows you to list the exact set of fields that the API should be sure to return for the objects. The field names should be provided as paths, described below.
+     * The id of included objects will always be returned, regardless of the field options.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
+    public String[] optFields;
+    public GetEventsRequest withOptFields(String[] optFields) {
+        this.optFields = optFields;
+        return this;
+    }
     
-    public GetEventsQueryParams queryParams;
-    public GetEventsRequest withQueryParams(GetEventsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Provides \u201cpretty\u201d output.
+     * Provides the response in a \u201cpretty\u201d format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
+    public Boolean optPretty;
+    public GetEventsRequest withOptPretty(Boolean optPretty) {
+        this.optPretty = optPretty;
+        return this;
+    }
+    
+    /**
+     * A resource ID to subscribe to. The resource can be a task or project.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resource")
+    public String resource;
+    public GetEventsRequest withResource(String resource) {
+        this.resource = resource;
+        return this;
+    }
+    
+    /**
+     * A sync token received from the last request, or none on first sync. Events will be returned from the point in time that the sync token was generated.
+     * *Note: On your first request, omit the sync token. The response will be the same as for an expired sync token, and will include a new valid sync token.If the sync token is too old (which may happen from time to time) the API will return a `412 Precondition Failed` error, and include a fresh sync token in the response.*
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sync")
+    public String sync;
+    public GetEventsRequest withSync(String sync) {
+        this.sync = sync;
         return this;
     }
     

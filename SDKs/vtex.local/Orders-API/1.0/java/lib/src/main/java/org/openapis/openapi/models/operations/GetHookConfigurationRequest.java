@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetHookConfigurationRequest {
-    
-    public GetHookConfigurationQueryParams queryParams;
-    public GetHookConfigurationRequest withQueryParams(GetHookConfigurationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetHookConfigurationRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetHookConfigurationRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetHookConfigurationHeaders headers;
-    public GetHookConfigurationRequest withHeaders(GetHookConfigurationHeaders headers) {
-        this.headers = headers;
+    /**
+     * Customer email.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientEmail")
+    public String clientEmail;
+    public GetHookConfigurationRequest withClientEmail(String clientEmail) {
+        this.clientEmail = clientEmail;
+        return this;
+    }
+    
+    /**
+     * Page number for result pagination.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public String page;
+    public GetHookConfigurationRequest withPage(String page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Page quantity for result pagination.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public String perPage;
+    public GetHookConfigurationRequest withPerPage(String perPage) {
+        this.perPage = perPage;
         return this;
     }
     

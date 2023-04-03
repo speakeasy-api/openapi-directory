@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FindFormsRequest {
-    
-    public FindFormsQueryParams queryParams;
-    public FindFormsRequest withQueryParams(FindFormsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public FindFormsSecurity security;
-    public FindFormsRequest withSecurity(FindFormsSecurity security) {
-        this.security = security;
+    /**
+     * Returns form data based on entered form name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public FindFormsRequest withQuery(String query) {
+        this.query = query;
         return this;
     }
     

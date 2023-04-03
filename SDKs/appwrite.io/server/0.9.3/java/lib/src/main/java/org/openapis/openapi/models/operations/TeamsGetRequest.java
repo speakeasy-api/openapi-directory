@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsGetRequest {
-    
-    public TeamsGetPathParams pathParams;
-    public TeamsGetRequest withPathParams(TeamsGetPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public TeamsGetSecurity security;
-    public TeamsGetRequest withSecurity(TeamsGetSecurity security) {
-        this.security = security;
+    /**
+     * Team unique ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=teamId")
+    public String teamId;
+    public TeamsGetRequest withTeamId(String teamId) {
+        this.teamId = teamId;
         return this;
     }
     

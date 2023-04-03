@@ -4,13 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchLabelsRequest {
+    /**
+     * Determines whether the first search result returned is the highest number of matches (`desc`) or lowest number of matches (`asc`). This parameter is ignored unless you provide `sort`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public org.openapis.openapi.models.shared.OrderEnum order;
+    public SearchLabelsRequest withOrder(org.openapis.openapi.models.shared.OrderEnum order) {
+        this.order = order;
+        return this;
+    }
     
-    public SearchLabelsQueryParams queryParams;
-    public SearchLabelsRequest withQueryParams(SearchLabelsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public SearchLabelsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public SearchLabelsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The search keywords. This endpoint does not accept qualifiers in the query. To learn more about the format of the query, see [Constructing a search query](https://docs.github.com/enterprise-server@3.5/rest/reference/search#constructing-a-search-query).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public SearchLabelsRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    /**
+     * The id of the repository.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=repository_id")
+    public Long repositoryId;
+    public SearchLabelsRequest withRepositoryId(Long repositoryId) {
+        this.repositoryId = repositoryId;
+        return this;
+    }
+    
+    /**
+     * Sorts the results of your query by when the label was `created` or `updated`. Default: [best match](https://docs.github.com/enterprise-server@3.5/rest/reference/search#ranking-search-results)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public SearchLabelsSortEnum sort;
+    public SearchLabelsRequest withSort(SearchLabelsSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

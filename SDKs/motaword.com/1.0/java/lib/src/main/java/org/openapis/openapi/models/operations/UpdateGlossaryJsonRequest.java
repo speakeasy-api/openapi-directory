@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateGlossaryJsonRequest {
-    
-    public UpdateGlossaryJsonPathParams pathParams;
-    public UpdateGlossaryJsonRequest withPathParams(UpdateGlossaryJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.GlossaryUploadRequest glossaryUploadRequest;
+    public UpdateGlossaryJsonRequest withGlossaryUploadRequest(org.openapis.openapi.models.shared.GlossaryUploadRequest glossaryUploadRequest) {
+        this.glossaryUploadRequest = glossaryUploadRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GlossaryUploadRequest request;
-    public UpdateGlossaryJsonRequest withRequest(org.openapis.openapi.models.shared.GlossaryUploadRequest request) {
-        this.request = request;
+    /**
+     * Glossary ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=glossaryId")
+    public Long glossaryId;
+    public UpdateGlossaryJsonRequest withGlossaryId(Long glossaryId) {
+        this.glossaryId = glossaryId;
+        return this;
+    }
+    
+    /**
+     * Project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public Long projectId;
+    public UpdateGlossaryJsonRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     

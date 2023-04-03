@@ -7,24 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AssignCallingPlanRequest {
-    
-    public AssignCallingPlanPathParams pathParams;
-    public AssignCallingPlanRequest withPathParams(AssignCallingPlanPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public AssignCallingPlanApplicationJSON request;
-    public AssignCallingPlanRequest withRequest(AssignCallingPlanApplicationJSON request) {
-        this.request = request;
+    public AssignCallingPlanApplicationJSON requestBody;
+    public AssignCallingPlanRequest withRequestBody(AssignCallingPlanApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public AssignCallingPlanSecurity security;
-    public AssignCallingPlanRequest withSecurity(AssignCallingPlanSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public AssignCallingPlanRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

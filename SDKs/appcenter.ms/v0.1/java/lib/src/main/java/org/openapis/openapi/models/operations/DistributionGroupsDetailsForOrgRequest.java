@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DistributionGroupsDetailsForOrgRequest {
-    
-    public DistributionGroupsDetailsForOrgPathParams pathParams;
-    public DistributionGroupsDetailsForOrgRequest withPathParams(DistributionGroupsDetailsForOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The max number of apps to include in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=apps_limit")
+    public Double appsLimit;
+    public DistributionGroupsDetailsForOrgRequest withAppsLimit(Double appsLimit) {
+        this.appsLimit = appsLimit;
         return this;
     }
     
-    
-    public DistributionGroupsDetailsForOrgQueryParams queryParams;
-    public DistributionGroupsDetailsForOrgRequest withQueryParams(DistributionGroupsDetailsForOrgQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public DistributionGroupsDetailsForOrgSecurity security;
-    public DistributionGroupsDetailsForOrgRequest withSecurity(DistributionGroupsDetailsForOrgSecurity security) {
-        this.security = security;
+    /**
+     * The organization's name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_name")
+    public String orgName;
+    public DistributionGroupsDetailsForOrgRequest withOrgName(String orgName) {
+        this.orgName = orgName;
         return this;
     }
     

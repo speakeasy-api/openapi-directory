@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetNotificationsRequestRequest {
-    
-    public SetNotificationsRequestPathParams pathParams;
-    public SetNotificationsRequestRequest withPathParams(SetNotificationsRequestPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Body to included minimum balance to set
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SetNotificationsRequest request;
-    public SetNotificationsRequestRequest withRequest(org.openapis.openapi.models.shared.SetNotificationsRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SetNotificationsRequest setNotificationsRequest;
+    public SetNotificationsRequestRequest withSetNotificationsRequest(org.openapis.openapi.models.shared.SetNotificationsRequest setNotificationsRequest) {
+        this.setNotificationsRequest = setNotificationsRequest;
+        return this;
+    }
+    
+    /**
+     * Source account id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sourceAccountId")
+    public String sourceAccountId;
+    public SetNotificationsRequestRequest withSourceAccountId(String sourceAccountId) {
+        this.sourceAccountId = sourceAccountId;
         return this;
     }
     

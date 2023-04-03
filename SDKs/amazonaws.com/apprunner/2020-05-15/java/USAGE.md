@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AssociateCustomDomainXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AssociateCustomDomainHeaders;
 import org.openapis.openapi.models.operations.AssociateCustomDomainRequest;
 import org.openapis.openapi.models.operations.AssociateCustomDomainResponse;
 import org.openapis.openapi.models.shared.AssociateCustomDomainRequest;
@@ -15,29 +14,25 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AssociateCustomDomainRequest req = new AssociateCustomDomainRequest() {{
-                headers = new AssociateCustomDomainHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "AppRunner.AssociateCustomDomain";
-                }};
-                request = new AssociateCustomDomainRequest() {{
-                    domainName = "illum";
+                associateCustomDomainRequest = new AssociateCustomDomainRequest() {{
+                    domainName = "corrupti";
                     enableWWWSubdomain = false;
-                    serviceArn = "vel";
+                    serviceArn = "provident";
                 }};
-            }};            
+                xAmzAlgorithm = "distinctio";
+                xAmzContentSha256 = "quibusdam";
+                xAmzCredential = "unde";
+                xAmzDate = "nulla";
+                xAmzSecurityToken = "corrupti";
+                xAmzSignature = "illum";
+                xAmzSignedHeaders = "vel";
+                xAmzTarget = "AppRunner.AssociateCustomDomain";
+            }}            
 
             AssociateCustomDomainResponse res = sdk.associateCustomDomain(req);
 

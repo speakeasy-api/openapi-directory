@@ -5,15 +5,11 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.FileProjectsLocationsBackupsCreateSecurity;
-import org.openapis.openapi.models.operations.FileProjectsLocationsBackupsCreatePathParams;
-import org.openapis.openapi.models.operations.FileProjectsLocationsBackupsCreateQueryParams;
 import org.openapis.openapi.models.operations.FileProjectsLocationsBackupsCreateRequest;
 import org.openapis.openapi.models.operations.FileProjectsLocationsBackupsCreateResponse;
-import org.openapis.openapi.models.shared.BackupInput;
 import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.BackupInput;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -22,46 +18,37 @@ public class Application {
                 .build();
 
             FileProjectsLocationsBackupsCreateRequest req = new FileProjectsLocationsBackupsCreateRequest() {{
-                security = new FileProjectsLocationsBackupsCreateSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new FileProjectsLocationsBackupsCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new FileProjectsLocationsBackupsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    backupId = "unde";
-                    callback = "nulla";
-                    fields = "corrupti";
-                    key = "illum";
-                    oauthToken = "vel";
-                    prettyPrint = false;
-                    quotaUser = "error";
-                    uploadType = "deserunt";
-                    uploadProtocol = "suscipit";
-                }};
-                request = new BackupInput() {{
-                    description = "iure";
-                    kmsKeyName = "magnam";
+                dollarXgafv = "2";
+                backupInput = new BackupInput() {{
+                    description = "provident";
+                    kmsKeyName = "distinctio";
                     labels = new java.util.HashMap<String, String>() {{
-                        put("ipsa", "delectus");
-                        put("tempora", "suscipit");
-                        put("molestiae", "minus");
-                        put("placeat", "voluptatum");
+                        put("unde", "nulla");
+                        put("corrupti", "illum");
+                        put("vel", "error");
+                        put("deserunt", "suscipit");
                     }};
-                    sourceFileShare = "iusto";
-                    sourceInstance = "excepturi";
+                    sourceFileShare = "iure";
+                    sourceInstance = "magnam";
                 }};
-            }};            
+                accessToken = "debitis";
+                alt = "json";
+                backupId = "delectus";
+                callback = "tempora";
+                fields = "suscipit";
+                key = "molestiae";
+                oauthToken = "minus";
+                parent = "placeat";
+                prettyPrint = false;
+                quotaUser = "voluptatum";
+                uploadType = "iusto";
+                uploadProtocol = "excepturi";
+            }}            
 
-            FileProjectsLocationsBackupsCreateResponse res = sdk.projects.fileProjectsLocationsBackupsCreate(req);
+            FileProjectsLocationsBackupsCreateResponse res = sdk.projects.fileProjectsLocationsBackupsCreate(req, new FileProjectsLocationsBackupsCreateSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.operation.isPresent()) {
                 // handle response

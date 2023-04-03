@@ -40,13 +40,13 @@ public class Reports {
      */
     public org.openapis.openapi.models.operations.ReportsIndexResponse reportsIndex(org.openapis.openapi.models.operations.ReportsIndexRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReportsIndexPathParams.class, baseUrl, "/v{version}/reports/{report_type}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReportsIndexRequest.class, baseUrl, "/v{version}/reports/{report_type}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReportsIndexQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ReportsIndexRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -87,13 +87,13 @@ public class Reports {
      */
     public org.openapis.openapi.models.operations.GetVVersionReportsStartDateToEndDateReportTypeResponse getVVersionReportsStartDateToEndDateReportType(org.openapis.openapi.models.operations.GetVVersionReportsStartDateToEndDateReportTypeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVVersionReportsStartDateToEndDateReportTypePathParams.class, baseUrl, "/v{version}/reports/{start_date}/to/{end_date}/{report_type}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVVersionReportsStartDateToEndDateReportTypeRequest.class, baseUrl, "/v{version}/reports/{start_date}/to/{end_date}/{report_type}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVVersionReportsStartDateToEndDateReportTypeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVVersionReportsStartDateToEndDateReportTypeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

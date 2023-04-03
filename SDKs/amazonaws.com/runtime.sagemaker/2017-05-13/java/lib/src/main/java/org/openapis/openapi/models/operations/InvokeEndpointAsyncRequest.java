@@ -4,20 +4,135 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InvokeEndpointAsyncRequest {
-    
-    public InvokeEndpointAsyncPathParams pathParams;
-    public InvokeEndpointAsyncRequest withPathParams(InvokeEndpointAsyncPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the endpoint that you specified when you created the endpoint using the &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpoint.html"&gt; &lt;code&gt;CreateEndpoint&lt;/code&gt; &lt;/a&gt; API.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EndpointName")
+    public String endpointName;
+    public InvokeEndpointAsyncRequest withEndpointName(String endpointName) {
+        this.endpointName = endpointName;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public InvokeEndpointAsyncRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
     
-    public InvokeEndpointAsyncHeaders headers;
-    public InvokeEndpointAsyncRequest withHeaders(InvokeEndpointAsyncHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public InvokeEndpointAsyncRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public InvokeEndpointAsyncRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public InvokeEndpointAsyncRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public InvokeEndpointAsyncRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public InvokeEndpointAsyncRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public InvokeEndpointAsyncRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The desired MIME type of the inference in the response.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amzn-SageMaker-Accept")
+    public String xAmznSageMakerAccept;
+    public InvokeEndpointAsyncRequest withXAmznSageMakerAccept(String xAmznSageMakerAccept) {
+        this.xAmznSageMakerAccept = xAmznSageMakerAccept;
+        return this;
+    }
+    
+    /**
+     * The MIME type of the input data in the request body.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amzn-SageMaker-Content-Type")
+    public String xAmznSageMakerContentType;
+    public InvokeEndpointAsyncRequest withXAmznSageMakerContentType(String xAmznSageMakerContentType) {
+        this.xAmznSageMakerContentType = xAmznSageMakerContentType;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Provides additional information about a request for an inference submitted to a model hosted at an Amazon SageMaker endpoint. The information is an opaque value that is forwarded verbatim. You could use this value, for example, to provide an ID that you can use to track a request or to provide other metadata that a service endpoint was programmed to process. The value must consist of no more than 1024 visible US-ASCII characters as specified in &lt;a href="https://datatracker.ietf.org/doc/html/rfc7230#section-3.2.6"&gt;Section 3.3.6. Field Value Components&lt;/a&gt; of the Hypertext Transfer Protocol (HTTP/1.1). &lt;/p&gt; &lt;p&gt;The code in your model is responsible for setting or updating any custom attributes in the response. If your code does not set this value in the response, an empty value is returned. For example, if a custom attribute represents the trace ID, your model can prepend the custom attribute with &lt;code&gt;Trace ID&lt;/code&gt;: in your post-processing function. &lt;/p&gt; &lt;p&gt;This feature is currently supported in the Amazon Web Services SDKs but not in the Amazon SageMaker Python SDK. &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amzn-SageMaker-Custom-Attributes")
+    public String xAmznSageMakerCustomAttributes;
+    public InvokeEndpointAsyncRequest withXAmznSageMakerCustomAttributes(String xAmznSageMakerCustomAttributes) {
+        this.xAmznSageMakerCustomAttributes = xAmznSageMakerCustomAttributes;
+        return this;
+    }
+    
+    /**
+     * The identifier for the inference request. Amazon SageMaker will generate an identifier for you if none is specified. 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amzn-SageMaker-Inference-Id")
+    public String xAmznSageMakerInferenceId;
+    public InvokeEndpointAsyncRequest withXAmznSageMakerInferenceId(String xAmznSageMakerInferenceId) {
+        this.xAmznSageMakerInferenceId = xAmznSageMakerInferenceId;
+        return this;
+    }
+    
+    /**
+     * The Amazon S3 URI where the inference request payload is stored.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amzn-SageMaker-InputLocation")
+    public String xAmznSageMakerInputLocation;
+    public InvokeEndpointAsyncRequest withXAmznSageMakerInputLocation(String xAmznSageMakerInputLocation) {
+        this.xAmznSageMakerInputLocation = xAmznSageMakerInputLocation;
+        return this;
+    }
+    
+    /**
+     * Maximum amount of time in seconds a request can be processed before it is marked as expired. The default is 15 minutes, or 900 seconds.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amzn-SageMaker-InvocationTimeoutSeconds")
+    public Long xAmznSageMakerInvocationTimeoutSeconds;
+    public InvokeEndpointAsyncRequest withXAmznSageMakerInvocationTimeoutSeconds(Long xAmznSageMakerInvocationTimeoutSeconds) {
+        this.xAmznSageMakerInvocationTimeoutSeconds = xAmznSageMakerInvocationTimeoutSeconds;
+        return this;
+    }
+    
+    /**
+     * Maximum age in seconds a request can be in the queue before it is marked as expired. The default is 6 hours, or 21,600 seconds.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amzn-SageMaker-RequestTTLSeconds")
+    public Long xAmznSageMakerRequestTTLSeconds;
+    public InvokeEndpointAsyncRequest withXAmznSageMakerRequestTTLSeconds(Long xAmznSageMakerRequestTTLSeconds) {
+        this.xAmznSageMakerRequestTTLSeconds = xAmznSageMakerRequestTTLSeconds;
         return this;
     }
     

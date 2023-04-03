@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgDeleteRequest {
-    
-    public OrgDeletePathParams pathParams;
-    public OrgDeleteRequest withPathParams(OrgDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * organization that is to be deleted
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public OrgDeleteRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

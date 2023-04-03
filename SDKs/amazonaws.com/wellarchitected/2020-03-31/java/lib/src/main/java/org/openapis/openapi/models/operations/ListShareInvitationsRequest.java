@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListShareInvitationsRequest {
-    
-    public ListShareInvitationsQueryParams queryParams;
-    public ListShareInvitationsRequest withQueryParams(ListShareInvitationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * An optional string added to the beginning of each lens name returned in the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LensNamePrefix")
+    public String lensNamePrefix;
+    public ListShareInvitationsRequest withLensNamePrefix(String lensNamePrefix) {
+        this.lensNamePrefix = lensNamePrefix;
         return this;
     }
     
+    /**
+     * The maximum number of results to return for this request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public Long maxResults;
+    public ListShareInvitationsRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
     
-    public ListShareInvitationsHeaders headers;
-    public ListShareInvitationsRequest withHeaders(ListShareInvitationsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public ListShareInvitationsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * The type of share invitations to be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ShareResourceType")
+    public ListShareInvitationsShareResourceTypeEnum shareResourceType;
+    public ListShareInvitationsRequest withShareResourceType(ListShareInvitationsShareResourceTypeEnum shareResourceType) {
+        this.shareResourceType = shareResourceType;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=WorkloadNamePrefix")
+    public String workloadNamePrefix;
+    public ListShareInvitationsRequest withWorkloadNamePrefix(String workloadNamePrefix) {
+        this.workloadNamePrefix = workloadNamePrefix;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListShareInvitationsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListShareInvitationsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListShareInvitationsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListShareInvitationsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListShareInvitationsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListShareInvitationsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListShareInvitationsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

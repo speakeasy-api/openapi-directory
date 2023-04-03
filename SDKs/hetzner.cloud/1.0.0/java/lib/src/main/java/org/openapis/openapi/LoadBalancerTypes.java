@@ -51,7 +51,7 @@ public class LoadBalancerTypes {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetLoadBalancerTypesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetLoadBalancerTypesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -90,7 +90,7 @@ public class LoadBalancerTypes {
      */
     public org.openapis.openapi.models.operations.GetLoadBalancerTypesIdResponse getLoadBalancerTypesId(org.openapis.openapi.models.operations.GetLoadBalancerTypesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLoadBalancerTypesIdPathParams.class, baseUrl, "/load_balancer_types/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLoadBalancerTypesIdRequest.class, baseUrl, "/load_balancer_types/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

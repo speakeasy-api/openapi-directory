@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUserGroupNoticesRequest {
-    
-    public GetUserGroupNoticesQueryParams queryParams;
-    public GetUserGroupNoticesRequest withQueryParams(GetUserGroupNoticesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A comma separated list of group IDs to return notices for.  If unset, notices for all the users groups will be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group_ids")
+    public String groupIds;
+    public GetUserGroupNoticesRequest withGroupIds(String groupIds) {
+        this.groupIds = groupIds;
         return this;
     }
     

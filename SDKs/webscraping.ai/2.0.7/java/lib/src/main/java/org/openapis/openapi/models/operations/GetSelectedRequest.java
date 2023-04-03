@@ -4,13 +4,116 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSelectedRequest {
+    /**
+     * Country of the proxy to use (US by default). Only available on Startup and Custom plans.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public org.openapis.openapi.models.shared.CountryEnum country;
+    public GetSelectedRequest withCountry(org.openapis.openapi.models.shared.CountryEnum country) {
+        this.country = country;
+        return this;
+    }
     
-    public GetSelectedQueryParams queryParams;
-    public GetSelectedRequest withQueryParams(GetSelectedQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Type of device emulation.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device")
+    public org.openapis.openapi.models.shared.DeviceEnum device;
+    public GetSelectedRequest withDevice(org.openapis.openapi.models.shared.DeviceEnum device) {
+        this.device = device;
+        return this;
+    }
+    
+    /**
+     * Return error on 404 HTTP status on the target page (false by default).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=error_on_404")
+    public Boolean errorOn404;
+    public GetSelectedRequest withErrorOn404(Boolean errorOn404) {
+        this.errorOn404 = errorOn404;
+        return this;
+    }
+    
+    /**
+     * Return error on redirect on the target page (false by default).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=error_on_redirect")
+    public Boolean errorOnRedirect;
+    public GetSelectedRequest withErrorOnRedirect(Boolean errorOnRedirect) {
+        this.errorOnRedirect = errorOnRedirect;
+        return this;
+    }
+    
+    /**
+     * HTTP headers to pass to the target page. Can be specified either via a nested query parameter (...&amp;headers[One]=value1&amp;headers=[Another]=value2) or as a JSON encoded object (...&amp;headers={"One": "value1", "Another": "value2"})
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=headers")
+    public java.util.Map<String, String> headers;
+    public GetSelectedRequest withHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    
+    /**
+     * Execute on-page JavaScript using a headless browser (true by default)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=js")
+    public Boolean js;
+    public GetSelectedRequest withJs(Boolean js) {
+        this.js = js;
+        return this;
+    }
+    
+    /**
+     * Maximum JavaScript rendering time in ms. Increase it in case if you see a loading indicator instead of data on the target page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=js_timeout")
+    public Long jsTimeout;
+    public GetSelectedRequest withJsTimeout(Long jsTimeout) {
+        this.jsTimeout = jsTimeout;
+        return this;
+    }
+    
+    /**
+     * Type of proxy, use residential proxies if your site restricts traffic from datacenters (datacenter by default). Note that residential proxy requests are more expensive than datacenter, see the pricing page for details.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=proxy")
+    public org.openapis.openapi.models.shared.ProxyEnum proxy;
+    public GetSelectedRequest withProxy(org.openapis.openapi.models.shared.ProxyEnum proxy) {
+        this.proxy = proxy;
+        return this;
+    }
+    
+    /**
+     * CSS selector (null by default, returns whole page HTML)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=selector")
+    public String selector;
+    public GetSelectedRequest withSelector(String selector) {
+        this.selector = selector;
+        return this;
+    }
+    
+    /**
+     * Maximum processing time in ms. Increase it in case of timeout errors (10000 by default, maximum is 30000)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
+    public Long timeout;
+    public GetSelectedRequest withTimeout(Long timeout) {
+        this.timeout = timeout;
+        return this;
+    }
+    
+    /**
+     * URL of the target page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=url")
+    public String url;
+    public GetSelectedRequest withUrl(String url) {
+        this.url = url;
         return this;
     }
     

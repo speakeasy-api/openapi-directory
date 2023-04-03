@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteNetworkApplianceTrafficShapingCustomPerformanceClassRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customPerformanceClassId")
+    public String customPerformanceClassId;
+    public DeleteNetworkApplianceTrafficShapingCustomPerformanceClassRequest withCustomPerformanceClassId(String customPerformanceClassId) {
+        this.customPerformanceClassId = customPerformanceClassId;
+        return this;
+    }
     
-    public DeleteNetworkApplianceTrafficShapingCustomPerformanceClassPathParams pathParams;
-    public DeleteNetworkApplianceTrafficShapingCustomPerformanceClassRequest withPathParams(DeleteNetworkApplianceTrafficShapingCustomPerformanceClassPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public DeleteNetworkApplianceTrafficShapingCustomPerformanceClassRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VmxNetworkDevicesClaimRequest {
-    
-    public VmxNetworkDevicesClaimPathParams pathParams;
-    public VmxNetworkDevicesClaimRequest withPathParams(VmxNetworkDevicesClaimPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public VmxNetworkDevicesClaimRequestBody requestBody;
+    public VmxNetworkDevicesClaimRequest withRequestBody(VmxNetworkDevicesClaimRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public VmxNetworkDevicesClaimRequestBody request;
-    public VmxNetworkDevicesClaimRequest withRequest(VmxNetworkDevicesClaimRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public VmxNetworkDevicesClaimRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

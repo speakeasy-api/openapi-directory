@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchRequest {
-    
-    public SearchHeaders headers;
-    public SearchRequest withHeaders(SearchHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public SearchRequestBody requestBody;
+    public SearchRequest withRequestBody(SearchRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public SearchRequestBody request;
-    public SearchRequest withRequest(SearchRequestBody request) {
-        this.request = request;
+    /**
+     * e.g. Key
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=galaxy-ap-name")
+    public String galaxyApName;
+    public SearchRequest withGalaxyApName(String galaxyApName) {
+        this.galaxyApName = galaxyApName;
+        return this;
+    }
+    
+    /**
+     * e.g. Secret
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=galaxy-ap-password")
+    public String galaxyApPassword;
+    public SearchRequest withGalaxyApPassword(String galaxyApPassword) {
+        this.galaxyApPassword = galaxyApPassword;
+        return this;
+    }
+    
+    /**
+     * e.g. DevAPIIDVerification
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=galaxy-search-type")
+    public String galaxySearchType;
+    public SearchRequest withGalaxySearchType(String galaxySearchType) {
+        this.galaxySearchType = galaxySearchType;
         return this;
     }
     

@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImportScanDataRequest {
-    
-    public ImportScanDataPathParams pathParams;
-    public ImportScanDataRequest withPathParams(ImportScanDataPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/octet-stream")
-    public byte[] request;
-    public ImportScanDataRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public ImportScanDataRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public ImportScanDataSecurity security;
-    public ImportScanDataRequest withSecurity(ImportScanDataSecurity security) {
-        this.security = security;
+    /**
+     * UUID or name of the site to import scan data into
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=site_id")
+    public String siteId;
+    public ImportScanDataRequest withSiteId(String siteId) {
+        this.siteId = siteId;
         return this;
     }
     

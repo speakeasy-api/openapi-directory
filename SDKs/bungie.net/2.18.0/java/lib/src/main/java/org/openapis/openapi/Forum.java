@@ -38,13 +38,13 @@ public class Forum {
      */
     public org.openapis.openapi.models.operations.ForumGetCoreTopicsPagedResponse forumGetCoreTopicsPaged(org.openapis.openapi.models.operations.ForumGetCoreTopicsPagedRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ForumGetCoreTopicsPagedPathParams.class, baseUrl, "/Forum/GetCoreTopicsPaged/{page}/{sort}/{quickDate}/{categoryFilter}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ForumGetCoreTopicsPagedRequest.class, baseUrl, "/Forum/GetCoreTopicsPaged/{page}/{sort}/{quickDate}/{categoryFilter}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ForumGetCoreTopicsPagedQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ForumGetCoreTopicsPagedRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -87,7 +87,7 @@ public class Forum {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ForumGetForumTagSuggestionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ForumGetForumTagSuggestionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -124,7 +124,7 @@ public class Forum {
      */
     public org.openapis.openapi.models.operations.ForumGetPollResponse forumGetPoll(org.openapis.openapi.models.operations.ForumGetPollRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ForumGetPollPathParams.class, baseUrl, "/Forum/Poll/{topicId}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ForumGetPollRequest.class, baseUrl, "/Forum/Poll/{topicId}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -161,13 +161,13 @@ public class Forum {
      */
     public org.openapis.openapi.models.operations.ForumGetPostAndParentResponse forumGetPostAndParent(org.openapis.openapi.models.operations.ForumGetPostAndParentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ForumGetPostAndParentPathParams.class, baseUrl, "/Forum/GetPostAndParent/{childPostId}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ForumGetPostAndParentRequest.class, baseUrl, "/Forum/GetPostAndParent/{childPostId}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ForumGetPostAndParentQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ForumGetPostAndParentRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -204,13 +204,13 @@ public class Forum {
      */
     public org.openapis.openapi.models.operations.ForumGetPostAndParentAwaitingApprovalResponse forumGetPostAndParentAwaitingApproval(org.openapis.openapi.models.operations.ForumGetPostAndParentAwaitingApprovalRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ForumGetPostAndParentAwaitingApprovalPathParams.class, baseUrl, "/Forum/GetPostAndParentAwaitingApproval/{childPostId}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ForumGetPostAndParentAwaitingApprovalRequest.class, baseUrl, "/Forum/GetPostAndParentAwaitingApproval/{childPostId}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ForumGetPostAndParentAwaitingApprovalQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ForumGetPostAndParentAwaitingApprovalRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -247,13 +247,13 @@ public class Forum {
      */
     public org.openapis.openapi.models.operations.ForumGetPostsThreadedPagedResponse forumGetPostsThreadedPaged(org.openapis.openapi.models.operations.ForumGetPostsThreadedPagedRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ForumGetPostsThreadedPagedPathParams.class, baseUrl, "/Forum/GetPostsThreadedPaged/{parentPostId}/{page}/{pageSize}/{replySize}/{getParentPost}/{rootThreadMode}/{sortMode}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ForumGetPostsThreadedPagedRequest.class, baseUrl, "/Forum/GetPostsThreadedPaged/{parentPostId}/{page}/{pageSize}/{replySize}/{getParentPost}/{rootThreadMode}/{sortMode}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ForumGetPostsThreadedPagedQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ForumGetPostsThreadedPagedRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -290,13 +290,13 @@ public class Forum {
      */
     public org.openapis.openapi.models.operations.ForumGetPostsThreadedPagedFromChildResponse forumGetPostsThreadedPagedFromChild(org.openapis.openapi.models.operations.ForumGetPostsThreadedPagedFromChildRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ForumGetPostsThreadedPagedFromChildPathParams.class, baseUrl, "/Forum/GetPostsThreadedPagedFromChild/{childPostId}/{page}/{pageSize}/{replySize}/{rootThreadMode}/{sortMode}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ForumGetPostsThreadedPagedFromChildRequest.class, baseUrl, "/Forum/GetPostsThreadedPagedFromChild/{childPostId}/{page}/{pageSize}/{replySize}/{rootThreadMode}/{sortMode}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ForumGetPostsThreadedPagedFromChildQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ForumGetPostsThreadedPagedFromChildRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -369,7 +369,7 @@ public class Forum {
      */
     public org.openapis.openapi.models.operations.ForumGetTopicForContentResponse forumGetTopicForContent(org.openapis.openapi.models.operations.ForumGetTopicForContentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ForumGetTopicForContentPathParams.class, baseUrl, "/Forum/GetTopicForContent/{contentId}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ForumGetTopicForContentRequest.class, baseUrl, "/Forum/GetTopicForContent/{contentId}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -406,13 +406,13 @@ public class Forum {
      */
     public org.openapis.openapi.models.operations.ForumGetTopicsPagedResponse forumGetTopicsPaged(org.openapis.openapi.models.operations.ForumGetTopicsPagedRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ForumGetTopicsPagedPathParams.class, baseUrl, "/Forum/GetTopicsPaged/{page}/{pageSize}/{group}/{sort}/{quickDate}/{categoryFilter}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ForumGetTopicsPagedRequest.class, baseUrl, "/Forum/GetTopicsPaged/{page}/{pageSize}/{group}/{sort}/{quickDate}/{categoryFilter}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ForumGetTopicsPagedQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ForumGetTopicsPagedRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

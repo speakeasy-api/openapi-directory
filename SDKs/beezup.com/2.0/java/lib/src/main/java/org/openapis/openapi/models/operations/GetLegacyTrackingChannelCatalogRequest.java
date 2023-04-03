@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLegacyTrackingChannelCatalogRequest {
-    
-    public GetLegacyTrackingChannelCatalogPathParams pathParams;
-    public GetLegacyTrackingChannelCatalogRequest withPathParams(GetLegacyTrackingChannelCatalogPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The channel catalog identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelCatalogId")
+    public String channelCatalogId;
+    public GetLegacyTrackingChannelCatalogRequest withChannelCatalogId(String channelCatalogId) {
+        this.channelCatalogId = channelCatalogId;
         return this;
     }
     

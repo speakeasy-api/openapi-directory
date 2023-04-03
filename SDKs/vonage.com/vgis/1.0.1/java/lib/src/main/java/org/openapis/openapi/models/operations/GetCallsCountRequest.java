@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCallsCountRequest {
+    /**
+     * Filter by call direction. For multiple criteria, seperate values by a comma.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public GetCallsCountDirectionEnum direction;
+    public GetCallsCountRequest withDirection(GetCallsCountDirectionEnum direction) {
+        this.direction = direction;
+        return this;
+    }
     
-    public GetCallsCountQueryParams queryParams;
-    public GetCallsCountRequest withQueryParams(GetCallsCountQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Return calls that occurred after this point in time
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDate")
+    public Long fromDate;
+    public GetCallsCountRequest withFromDate(Long fromDate) {
+        this.fromDate = fromDate;
+        return this;
+    }
+    
+    /**
+     * Filter calls by state. For multiple criteria, seperate values by a comma.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=states")
+    public GetCallsCountStatesEnum states;
+    public GetCallsCountRequest withStates(GetCallsCountStatesEnum states) {
+        this.states = states;
+        return this;
+    }
+    
+    /**
+     * Return calls that occurred before this point in time
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDate")
+    public Long toDate;
+    public GetCallsCountRequest withToDate(Long toDate) {
+        this.toDate = toDate;
         return this;
     }
     

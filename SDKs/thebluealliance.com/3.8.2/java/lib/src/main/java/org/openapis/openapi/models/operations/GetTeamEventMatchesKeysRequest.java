@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTeamEventMatchesKeysRequest {
-    
-    public GetTeamEventMatchesKeysPathParams pathParams;
-    public GetTeamEventMatchesKeysRequest withPathParams(GetTeamEventMatchesKeysPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Value of the `ETag` header in the most recently cached response by the client.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
+    public String ifNoneMatch;
+    public GetTeamEventMatchesKeysRequest withIfNoneMatch(String ifNoneMatch) {
+        this.ifNoneMatch = ifNoneMatch;
         return this;
     }
     
-    
-    public GetTeamEventMatchesKeysHeaders headers;
-    public GetTeamEventMatchesKeysRequest withHeaders(GetTeamEventMatchesKeysHeaders headers) {
-        this.headers = headers;
+    /**
+     * TBA Event Key, eg `2016nytr`
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=event_key")
+    public String eventKey;
+    public GetTeamEventMatchesKeysRequest withEventKey(String eventKey) {
+        this.eventKey = eventKey;
         return this;
     }
     
-    
-    public GetTeamEventMatchesKeysSecurity security;
-    public GetTeamEventMatchesKeysRequest withSecurity(GetTeamEventMatchesKeysSecurity security) {
-        this.security = security;
+    /**
+     * TBA Team Key, eg `frc254`
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_key")
+    public String teamKey;
+    public GetTeamEventMatchesKeysRequest withTeamKey(String teamKey) {
+        this.teamKey = teamKey;
         return this;
     }
     

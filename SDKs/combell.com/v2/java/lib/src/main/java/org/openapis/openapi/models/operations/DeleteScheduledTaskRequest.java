@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteScheduledTaskRequest {
-    
-    public DeleteScheduledTaskPathParams pathParams;
-    public DeleteScheduledTaskRequest withPathParams(DeleteScheduledTaskPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
+    public String domainNamePathParameter;
+    public DeleteScheduledTaskRequest withDomainNamePathParameter(String domainNamePathParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
         return this;
     }
     
+    /**
+     * Linux hosting domain name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
+    public String domainNameQueryParameter;
+    public DeleteScheduledTaskRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
+        this.domainNameQueryParameter = domainNameQueryParameter;
+        return this;
+    }
     
-    public DeleteScheduledTaskQueryParams queryParams;
-    public DeleteScheduledTaskRequest withQueryParams(DeleteScheduledTaskQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scheduledTaskId")
+    public String scheduledTaskIdPathParameter;
+    public DeleteScheduledTaskRequest withScheduledTaskIdPathParameter(String scheduledTaskIdPathParameter) {
+        this.scheduledTaskIdPathParameter = scheduledTaskIdPathParameter;
+        return this;
+    }
+    
+    /**
+     * Id of the scheduled task.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scheduled_task_id")
+    public String scheduledTaskIdQueryParameter;
+    public DeleteScheduledTaskRequest withScheduledTaskIdQueryParameter(String scheduledTaskIdQueryParameter) {
+        this.scheduledTaskIdQueryParameter = scheduledTaskIdQueryParameter;
         return this;
     }
     

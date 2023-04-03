@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateActiveWidgetRequest {
-    
-    public CreateActiveWidgetPathParams pathParams;
-    public CreateActiveWidgetRequest withPathParams(CreateActiveWidgetPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ActiveWidget activeWidget;
+    public CreateActiveWidgetRequest withActiveWidget(org.openapis.openapi.models.shared.ActiveWidget activeWidget) {
+        this.activeWidget = activeWidget;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ActiveWidget request;
-    public CreateActiveWidgetRequest withRequest(org.openapis.openapi.models.shared.ActiveWidget request) {
-        this.request = request;
+    /**
+     * Continuous project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public Long projectId;
+    public CreateActiveWidgetRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     

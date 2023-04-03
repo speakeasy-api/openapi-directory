@@ -42,7 +42,7 @@ public class CatalogsImportationProcess {
      */
     public org.openapis.openapi.models.operations.ImportationCancelResponse importationCancel(org.openapis.openapi.models.operations.ImportationCancelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationCancelPathParams.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationCancelRequest.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -82,7 +82,7 @@ public class CatalogsImportationProcess {
      */
     public org.openapis.openapi.models.operations.ImportationCommitResponse importationCommit(org.openapis.openapi.models.operations.ImportationCommitRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationCommitPathParams.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/commit", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationCommitRequest.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/commit", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -122,7 +122,7 @@ public class CatalogsImportationProcess {
      */
     public org.openapis.openapi.models.operations.ImportationCommitColumnsResponse importationCommitColumns(org.openapis.openapi.models.operations.ImportationCommitColumnsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationCommitColumnsPathParams.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/commitColumns", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationCommitColumnsRequest.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/commitColumns", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -163,7 +163,7 @@ public class CatalogsImportationProcess {
      */
     public org.openapis.openapi.models.operations.ImportationConfigureRemainingCatalogColumnsResponse importationConfigureRemainingCatalogColumns(org.openapis.openapi.models.operations.ImportationConfigureRemainingCatalogColumnsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationConfigureRemainingCatalogColumnsPathParams.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/configureRemainingCatalogColumns", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationConfigureRemainingCatalogColumnsRequest.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/configureRemainingCatalogColumns", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -203,7 +203,7 @@ public class CatalogsImportationProcess {
      */
     public org.openapis.openapi.models.operations.ImportationGetImportationMonitoringResponse importationGetImportationMonitoring(org.openapis.openapi.models.operations.ImportationGetImportationMonitoringRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationGetImportationMonitoringPathParams.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationGetImportationMonitoringRequest.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -249,12 +249,12 @@ public class CatalogsImportationProcess {
      */
     public org.openapis.openapi.models.operations.ImportationGetProductsReportResponse importationGetProductsReport(org.openapis.openapi.models.operations.ImportationGetProductsReportRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationGetProductsReportPathParams.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/products/list", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationGetProductsReportRequest.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/products/list", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "getImportationProductsReportRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -294,7 +294,7 @@ public class CatalogsImportationProcess {
      */
     public org.openapis.openapi.models.operations.ImportationGetReportResponse importationGetReport(org.openapis.openapi.models.operations.ImportationGetReportRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationGetReportPathParams.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/report", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationGetReportRequest.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/report", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -334,7 +334,7 @@ public class CatalogsImportationProcess {
      */
     public org.openapis.openapi.models.operations.ImportationGetReportingsResponse importationGetReportings(org.openapis.openapi.models.operations.ImportationGetReportingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationGetReportingsPathParams.class, baseUrl, "/v2/user/catalogs/{storeId}/importations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationGetReportingsRequest.class, baseUrl, "/v2/user/catalogs/{storeId}/importations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -425,12 +425,12 @@ public class CatalogsImportationProcess {
      */
     public org.openapis.openapi.models.operations.ImportationStartManualUpdateResponse importationStartManualUpdate(org.openapis.openapi.models.operations.ImportationStartManualUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationStartManualUpdatePathParams.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/start", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationStartManualUpdateRequest.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/start", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "startManualImportRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -486,7 +486,7 @@ public class CatalogsImportationProcess {
      */
     public org.openapis.openapi.models.operations.ImportationTechnicalProgressionResponse importationTechnicalProgression(org.openapis.openapi.models.operations.ImportationTechnicalProgressionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationTechnicalProgressionPathParams.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/technicalProgression", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImportationTechnicalProgressionRequest.class, baseUrl, "/v2/user/catalogs/{storeId}/importations/{executionId}/technicalProgression", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

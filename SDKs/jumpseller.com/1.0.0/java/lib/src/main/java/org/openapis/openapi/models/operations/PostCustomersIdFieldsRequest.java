@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCustomersIdFieldsRequest {
-    
-    public PostCustomersIdFieldsPathParams pathParams;
-    public PostCustomersIdFieldsRequest withPathParams(PostCustomersIdFieldsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostCustomersIdFieldsQueryParams queryParams;
-    public PostCustomersIdFieldsRequest withQueryParams(PostCustomersIdFieldsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Customer Additional Field parameters.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CustomerAdditionalFieldEdit request;
-    public PostCustomersIdFieldsRequest withRequest(org.openapis.openapi.models.shared.CustomerAdditionalFieldEdit request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CustomerAdditionalFieldEdit customerAdditionalFieldEdit;
+    public PostCustomersIdFieldsRequest withCustomerAdditionalFieldEdit(org.openapis.openapi.models.shared.CustomerAdditionalFieldEdit customerAdditionalFieldEdit) {
+        this.customerAdditionalFieldEdit = customerAdditionalFieldEdit;
+        return this;
+    }
+    
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public PostCustomersIdFieldsRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
+        return this;
+    }
+    
+    /**
+     * Id of the Customer
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PostCustomersIdFieldsRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public PostCustomersIdFieldsRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

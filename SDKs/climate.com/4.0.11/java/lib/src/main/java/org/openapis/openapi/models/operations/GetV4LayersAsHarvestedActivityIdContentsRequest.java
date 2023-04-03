@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV4LayersAsHarvestedActivityIdContentsRequest {
-    
-    public GetV4LayersAsHarvestedActivityIdContentsPathParams pathParams;
-    public GetV4LayersAsHarvestedActivityIdContentsRequest withPathParams(GetV4LayersAsHarvestedActivityIdContentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Must be either \* /* or application/octet-stream,application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetV4LayersAsHarvestedActivityIdContentsRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public GetV4LayersAsHarvestedActivityIdContentsHeaders headers;
-    public GetV4LayersAsHarvestedActivityIdContentsRequest withHeaders(GetV4LayersAsHarvestedActivityIdContentsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Byte range `bytes=start-end` (https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.35.1). e.g. bytes=0-1048576. Currently only single range value is supported. Both start and end need to be specified, end value should be greater than start and end - start should not be greater than 5MiB.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Range")
+    public String range;
+    public GetV4LayersAsHarvestedActivityIdContentsRequest withRange(String range) {
+        this.range = range;
         return this;
     }
     
-    
-    public GetV4LayersAsHarvestedActivityIdContentsSecurity security;
-    public GetV4LayersAsHarvestedActivityIdContentsRequest withSecurity(GetV4LayersAsHarvestedActivityIdContentsSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the Harvest Activity.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=activityId")
+    public String activityId;
+    public GetV4LayersAsHarvestedActivityIdContentsRequest withActivityId(String activityId) {
+        this.activityId = activityId;
         return this;
     }
     

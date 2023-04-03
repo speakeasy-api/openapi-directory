@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2EditorialIdRequest {
-    
-    public GetV2EditorialIdPathParams pathParams;
-    public GetV2EditorialIdRequest withPathParams(GetV2EditorialIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Returns only if the content is available for distribution in a certain country
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public String country;
+    public GetV2EditorialIdRequest withCountry(String country) {
+        this.country = country;
         return this;
     }
     
-    
-    public GetV2EditorialIdQueryParams queryParams;
-    public GetV2EditorialIdRequest withQueryParams(GetV2EditorialIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Editorial ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetV2EditorialIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetV2EditorialIdSecurity security;
-    public GetV2EditorialIdRequest withSecurity(GetV2EditorialIdSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the search that is related to this request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_id")
+    public String searchId;
+    public GetV2EditorialIdRequest withSearchId(String searchId) {
+        this.searchId = searchId;
         return this;
     }
     

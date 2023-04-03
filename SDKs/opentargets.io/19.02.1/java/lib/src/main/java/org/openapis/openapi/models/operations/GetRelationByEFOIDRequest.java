@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRelationByEFOIDRequest {
-    
-    public GetRelationByEFOIDPathParams pathParams;
-    public GetRelationByEFOIDRequest withPathParams(GetRelationByEFOIDPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * An EFO gene identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=disease")
+    public String disease;
+    public GetRelationByEFOIDRequest withDisease(String disease) {
+        this.disease = disease;
         return this;
     }
     

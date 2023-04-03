@@ -40,18 +40,19 @@ public class Exports {
      * Retrieve the binary contents of a processed export request.
      * Downloads larger than `5MiB` (`5242880 bytes`) in size must be downloaded in chunks no larger than `5MiB` (`5242880 bytes`) and no smaller than `1MiB` (`1048576 bytes`). The last chunk could be less than `1MiB` (`1048576 bytes`).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchExportContentsByIdResponse fetchExportContentsById(org.openapis.openapi.models.operations.FetchExportContentsByIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchExportContentsByIdResponse fetchExportContentsById(org.openapis.openapi.models.operations.FetchExportContentsByIdRequest request, org.openapis.openapi.models.operations.FetchExportContentsByIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchExportContentsByIdPathParams.class, baseUrl, "/v4/exports/{exportId}/contents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchExportContentsByIdRequest.class, baseUrl, "/v4/exports/{exportId}/contents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -60,7 +61,7 @@ public class Exports {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -113,19 +114,20 @@ public class Exports {
      * Retrieve the status of an Export.
      * Check the status of an **Export** by ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchExportStatusByIdResponse fetchExportStatusById(org.openapis.openapi.models.operations.FetchExportStatusByIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchExportStatusByIdResponse fetchExportStatusById(org.openapis.openapi.models.operations.FetchExportStatusByIdRequest request, org.openapis.openapi.models.operations.FetchExportStatusByIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchExportStatusByIdPathParams.class, baseUrl, "/v4/exports/{exportId}/status", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchExportStatusByIdRequest.class, baseUrl, "/v4/exports/{exportId}/status", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -187,10 +189,11 @@ public class Exports {
      * 
      *      Requires `exports:read` and `plantingActivitySummary:read` scope.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostExportResponse postExport(org.openapis.openapi.models.operations.PostExportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostExportResponse postExport(org.openapis.openapi.models.shared.Export request, org.openapis.openapi.models.operations.PostExportSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v4/exports");
         
@@ -201,7 +204,7 @@ public class Exports {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

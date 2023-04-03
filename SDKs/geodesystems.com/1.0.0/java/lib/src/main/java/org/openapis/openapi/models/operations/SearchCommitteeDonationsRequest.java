@@ -4,13 +4,277 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchCommitteeDonationsRequest {
+    /**
+     * Archive change date from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.from")
+    public OffsetDateTime changedateFrom;
+    public SearchCommitteeDonationsRequest withChangedateFrom(OffsetDateTime changedateFrom) {
+        this.changedateFrom = changedateFrom;
+        return this;
+    }
     
-    public SearchCommitteeDonationsQueryParams queryParams;
-    public SearchCommitteeDonationsRequest withQueryParams(SearchCommitteeDonationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Archive change date to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.to")
+    public OffsetDateTime changedateTo;
+    public SearchCommitteeDonationsRequest withChangedateTo(OffsetDateTime changedateTo) {
+        this.changedateTo = changedateTo;
+        return this;
+    }
+    
+    /**
+     * Archive create date from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.from")
+    public OffsetDateTime createdateFrom;
+    public SearchCommitteeDonationsRequest withCreatedateFrom(OffsetDateTime createdateFrom) {
+        this.createdateFrom = createdateFrom;
+        return this;
+    }
+    
+    /**
+     * Archive create date to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.to")
+    public OffsetDateTime createdateTo;
+    public SearchCommitteeDonationsRequest withCreatedateTo(OffsetDateTime createdateTo) {
+        this.createdateTo = createdateTo;
+        return this;
+    }
+    
+    /**
+     * Search description
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
+    public String description;
+    public SearchCommitteeDonationsRequest withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    
+    /**
+     * File suffix
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filesuffix")
+    public String filesuffix;
+    public SearchCommitteeDonationsRequest withFilesuffix(String filesuffix) {
+        this.filesuffix = filesuffix;
+        return this;
+    }
+    
+    /**
+     * From date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
+    public OffsetDateTime fromdate;
+    public SearchCommitteeDonationsRequest withFromdate(OffsetDateTime fromdate) {
+        this.fromdate = fromdate;
+        return this;
+    }
+    
+    /**
+     * Parent entry
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
+    public String group;
+    public SearchCommitteeDonationsRequest withGroup(String group) {
+        this.group = group;
+        return this;
+    }
+    
+    /**
+     * Max number of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
+    public Long max;
+    public SearchCommitteeDonationsRequest withMax(Long max) {
+        this.max = max;
+        return this;
+    }
+    
+    /**
+     * Northern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlatitude")
+    public Float maxlatitude;
+    public SearchCommitteeDonationsRequest withMaxlatitude(Float maxlatitude) {
+        this.maxlatitude = maxlatitude;
+        return this;
+    }
+    
+    /**
+     * Eastern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlongitude")
+    public Float maxlongitude;
+    public SearchCommitteeDonationsRequest withMaxlongitude(Float maxlongitude) {
+        this.maxlongitude = maxlongitude;
+        return this;
+    }
+    
+    /**
+     * Southern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlatitude")
+    public Float minlatitude;
+    public SearchCommitteeDonationsRequest withMinlatitude(Float minlatitude) {
+        this.minlatitude = minlatitude;
+        return this;
+    }
+    
+    /**
+     * Western bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlongitude")
+    public Float minlongitude;
+    public SearchCommitteeDonationsRequest withMinlongitude(Float minlongitude) {
+        this.minlongitude = minlongitude;
+        return this;
+    }
+    
+    /**
+     * Search name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public SearchCommitteeDonationsRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Amount
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_committee_donations.amount")
+    public Double searchDbCommitteeDonationsAmount;
+    public SearchCommitteeDonationsRequest withSearchDbCommitteeDonationsAmount(Double searchDbCommitteeDonationsAmount) {
+        this.searchDbCommitteeDonationsAmount = searchDbCommitteeDonationsAmount;
+        return this;
+    }
+    
+    /**
+     * City
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_committee_donations.city")
+    public String searchDbCommitteeDonationsCity;
+    public SearchCommitteeDonationsRequest withSearchDbCommitteeDonationsCity(String searchDbCommitteeDonationsCity) {
+        this.searchDbCommitteeDonationsCity = searchDbCommitteeDonationsCity;
+        return this;
+    }
+    
+    /**
+     * Committee
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_committee_donations.committee")
+    public String searchDbCommitteeDonationsCommittee;
+    public SearchCommitteeDonationsRequest withSearchDbCommitteeDonationsCommittee(String searchDbCommitteeDonationsCommittee) {
+        this.searchDbCommitteeDonationsCommittee = searchDbCommitteeDonationsCommittee;
+        return this;
+    }
+    
+    /**
+     * Date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_committee_donations.date")
+    public String searchDbCommitteeDonationsDate;
+    public SearchCommitteeDonationsRequest withSearchDbCommitteeDonationsDate(String searchDbCommitteeDonationsDate) {
+        this.searchDbCommitteeDonationsDate = searchDbCommitteeDonationsDate;
+        return this;
+    }
+    
+    /**
+     * Employer
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_committee_donations.employer")
+    public String searchDbCommitteeDonationsEmployer;
+    public SearchCommitteeDonationsRequest withSearchDbCommitteeDonationsEmployer(String searchDbCommitteeDonationsEmployer) {
+        this.searchDbCommitteeDonationsEmployer = searchDbCommitteeDonationsEmployer;
+        return this;
+    }
+    
+    /**
+     * Location
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_committee_donations.location")
+    public String searchDbCommitteeDonationsLocation;
+    public SearchCommitteeDonationsRequest withSearchDbCommitteeDonationsLocation(String searchDbCommitteeDonationsLocation) {
+        this.searchDbCommitteeDonationsLocation = searchDbCommitteeDonationsLocation;
+        return this;
+    }
+    
+    /**
+     * Occupation
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_committee_donations.occupation")
+    public String searchDbCommitteeDonationsOccupation;
+    public SearchCommitteeDonationsRequest withSearchDbCommitteeDonationsOccupation(String searchDbCommitteeDonationsOccupation) {
+        this.searchDbCommitteeDonationsOccupation = searchDbCommitteeDonationsOccupation;
+        return this;
+    }
+    
+    /**
+     * Recipient
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_committee_donations.recipient")
+    public String searchDbCommitteeDonationsRecipient;
+    public SearchCommitteeDonationsRequest withSearchDbCommitteeDonationsRecipient(String searchDbCommitteeDonationsRecipient) {
+        this.searchDbCommitteeDonationsRecipient = searchDbCommitteeDonationsRecipient;
+        return this;
+    }
+    
+    /**
+     * State
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_committee_donations.state")
+    public String searchDbCommitteeDonationsState;
+    public SearchCommitteeDonationsRequest withSearchDbCommitteeDonationsState(String searchDbCommitteeDonationsState) {
+        this.searchDbCommitteeDonationsState = searchDbCommitteeDonationsState;
+        return this;
+    }
+    
+    /**
+     * Zip Code
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_committee_donations.zip_code")
+    public String searchDbCommitteeDonationsZipCode;
+    public SearchCommitteeDonationsRequest withSearchDbCommitteeDonationsZipCode(String searchDbCommitteeDonationsZipCode) {
+        this.searchDbCommitteeDonationsZipCode = searchDbCommitteeDonationsZipCode;
+        return this;
+    }
+    
+    /**
+     * Number to skip
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
+    public Long skip;
+    public SearchCommitteeDonationsRequest withSkip(Long skip) {
+        this.skip = skip;
+        return this;
+    }
+    
+    /**
+     * Search text
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
+    public String text;
+    public SearchCommitteeDonationsRequest withText(String text) {
+        this.text = text;
+        return this;
+    }
+    
+    /**
+     * To date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
+    public OffsetDateTime todate;
+    public SearchCommitteeDonationsRequest withTodate(OffsetDateTime todate) {
+        this.todate = todate;
         return this;
     }
     

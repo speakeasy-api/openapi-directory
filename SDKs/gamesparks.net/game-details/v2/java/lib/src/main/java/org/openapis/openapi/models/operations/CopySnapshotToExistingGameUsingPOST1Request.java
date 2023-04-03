@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CopySnapshotToExistingGameUsingPOST1Request {
-    
-    public CopySnapshotToExistingGameUsingPOST1PathParams pathParams;
-    public CopySnapshotToExistingGameUsingPOST1Request withPathParams(CopySnapshotToExistingGameUsingPOST1PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * apiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public CopySnapshotToExistingGameUsingPOST1Request withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    /**
+     * includeBinaries
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeBinaries")
+    public Boolean includeBinaries;
+    public CopySnapshotToExistingGameUsingPOST1Request withIncludeBinaries(Boolean includeBinaries) {
+        this.includeBinaries = includeBinaries;
+        return this;
+    }
     
-    public CopySnapshotToExistingGameUsingPOST1QueryParams queryParams;
-    public CopySnapshotToExistingGameUsingPOST1Request withQueryParams(CopySnapshotToExistingGameUsingPOST1QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * includeCollaborators
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeCollaborators")
+    public Boolean includeCollaborators;
+    public CopySnapshotToExistingGameUsingPOST1Request withIncludeCollaborators(Boolean includeCollaborators) {
+        this.includeCollaborators = includeCollaborators;
+        return this;
+    }
+    
+    /**
+     * includeGameConfig
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeGameConfig")
+    public Boolean includeGameConfig;
+    public CopySnapshotToExistingGameUsingPOST1Request withIncludeGameConfig(Boolean includeGameConfig) {
+        this.includeGameConfig = includeGameConfig;
+        return this;
+    }
+    
+    /**
+     * includeMetadata
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeMetadata")
+    public Boolean includeMetadata;
+    public CopySnapshotToExistingGameUsingPOST1Request withIncludeMetadata(Boolean includeMetadata) {
+        this.includeMetadata = includeMetadata;
+        return this;
+    }
+    
+    /**
+     * snapshotId
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=snapshotId")
+    public String snapshotId;
+    public CopySnapshotToExistingGameUsingPOST1Request withSnapshotId(String snapshotId) {
+        this.snapshotId = snapshotId;
+        return this;
+    }
+    
+    /**
+     * targetApiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=targetApiKey")
+    public String targetApiKey;
+    public CopySnapshotToExistingGameUsingPOST1Request withTargetApiKey(String targetApiKey) {
+        this.targetApiKey = targetApiKey;
         return this;
     }
     

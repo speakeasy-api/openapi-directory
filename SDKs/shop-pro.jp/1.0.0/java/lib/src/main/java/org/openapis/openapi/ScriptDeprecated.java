@@ -36,10 +36,11 @@ public class ScriptDeprecated {
     /**
      * \u30b9\u30af\u30ea\u30d7\u30c8\u30bf\u30b0\u306e\u4f5c\u6210
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateScriptTagResponse createScriptTag(org.openapis.openapi.models.operations.CreateScriptTagRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateScriptTagResponse createScriptTag(org.openapis.openapi.models.operations.CreateScriptTagRequestBody request, org.openapis.openapi.models.operations.CreateScriptTagSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/script_tags.json");
         
@@ -50,7 +51,7 @@ public class ScriptDeprecated {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -77,19 +78,20 @@ public class ScriptDeprecated {
     /**
      * \u30b9\u30af\u30ea\u30d7\u30c8\u30bf\u30b0\u306e\u524a\u9664
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteV1ScriptTagsScriptTagIdJsonResponse deleteV1ScriptTagsScriptTagIdJson(org.openapis.openapi.models.operations.DeleteV1ScriptTagsScriptTagIdJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteV1ScriptTagsScriptTagIdJsonResponse deleteV1ScriptTagsScriptTagIdJson(org.openapis.openapi.models.operations.DeleteV1ScriptTagsScriptTagIdJsonRequest request, org.openapis.openapi.models.operations.DeleteV1ScriptTagsScriptTagIdJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteV1ScriptTagsScriptTagIdJsonPathParams.class, baseUrl, "/v1/script_tags/{scriptTagId}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteV1ScriptTagsScriptTagIdJsonRequest.class, baseUrl, "/v1/script_tags/{scriptTagId}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -110,19 +112,20 @@ public class ScriptDeprecated {
     /**
      * \u30b9\u30af\u30ea\u30d7\u30c8\u30bf\u30b0\u306e\u53d6\u5f97
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetScriptTagResponse getScriptTag(org.openapis.openapi.models.operations.GetScriptTagRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetScriptTagResponse getScriptTag(org.openapis.openapi.models.operations.GetScriptTagRequest request, org.openapis.openapi.models.operations.GetScriptTagSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetScriptTagPathParams.class, baseUrl, "/v1/script_tags/{scriptTagId}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetScriptTagRequest.class, baseUrl, "/v1/script_tags/{scriptTagId}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -148,11 +151,10 @@ public class ScriptDeprecated {
 
     /**
      * \u30b9\u30af\u30ea\u30d7\u30c8\u30bf\u30b0\u306e\u53d6\u5f97
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetScriptTagsResponse getScriptTags(org.openapis.openapi.models.operations.GetScriptTagsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetScriptTagsResponse getScriptTags() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/script_tags.json");
         
@@ -161,8 +163,7 @@ public class ScriptDeprecated {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -188,21 +189,22 @@ public class ScriptDeprecated {
     /**
      * \u30b9\u30af\u30ea\u30d7\u30c8\u30bf\u30b0\u306e\u66f4\u65b0
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateScriptTagResponse updateScriptTag(org.openapis.openapi.models.operations.UpdateScriptTagRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateScriptTagResponse updateScriptTag(org.openapis.openapi.models.operations.UpdateScriptTagRequest request, org.openapis.openapi.models.operations.UpdateScriptTagSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateScriptTagPathParams.class, baseUrl, "/v1/script_tags/{scriptTagId}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateScriptTagRequest.class, baseUrl, "/v1/script_tags/{scriptTagId}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolTftpGetTraceRequest {
-    
-    public ProtocolTftpGetTracePathParams pathParams;
-    public ProtocolTftpGetTraceRequest withPathParams(ProtocolTftpGetTracePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to show whether TFTP tracing is enabled
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolTftpGetTraceRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

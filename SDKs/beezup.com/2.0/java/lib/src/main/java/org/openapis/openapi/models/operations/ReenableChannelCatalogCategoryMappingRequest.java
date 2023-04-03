@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReenableChannelCatalogCategoryMappingRequest {
-    
-    public ReenableChannelCatalogCategoryMappingPathParams pathParams;
-    public ReenableChannelCatalogCategoryMappingRequest withPathParams(ReenableChannelCatalogCategoryMappingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The channel catalog identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelCatalogId")
+    public String channelCatalogId;
+    public ReenableChannelCatalogCategoryMappingRequest withChannelCatalogId(String channelCatalogId) {
+        this.channelCatalogId = channelCatalogId;
         return this;
     }
     

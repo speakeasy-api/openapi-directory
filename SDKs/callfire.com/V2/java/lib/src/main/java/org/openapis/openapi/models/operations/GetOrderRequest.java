@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrderRequest {
-    
-    public GetOrderPathParams pathParams;
-    public GetOrderRequest withPathParams(GetOrderPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public GetOrderRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     
-    
-    public GetOrderQueryParams queryParams;
-    public GetOrderRequest withQueryParams(GetOrderQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetOrderSecurity security;
-    public GetOrderRequest withSecurity(GetOrderSecurity security) {
-        this.security = security;
+    /**
+     * An id of an order
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetOrderRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

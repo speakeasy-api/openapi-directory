@@ -36,13 +36,13 @@ public class SessionController {
      */
     public org.openapis.openapi.models.operations.SessionControllerChangePasswordResponse sessionControllerChangePassword(org.openapis.openapi.models.operations.SessionControllerChangePasswordRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SessionControllerChangePasswordPathParams.class, baseUrl, "/v2/customer/{shortName}/session/password", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SessionControllerChangePasswordRequest.class, baseUrl, "/v2/customer/{shortName}/session/password", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SessionControllerChangePasswordQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SessionControllerChangePasswordRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -74,13 +74,13 @@ public class SessionController {
      */
     public org.openapis.openapi.models.operations.SessionControllerCreateLandlordLoginResponse sessionControllerCreateLandlordLogin(org.openapis.openapi.models.operations.SessionControllerCreateLandlordLoginRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SessionControllerCreateLandlordLoginPathParams.class, baseUrl, "/v2/customer/{shortName}/session/createlandlordlogin", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SessionControllerCreateLandlordLoginRequest.class, baseUrl, "/v2/customer/{shortName}/session/createlandlordlogin", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SessionControllerCreateLandlordLoginQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SessionControllerCreateLandlordLoginRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -112,13 +112,13 @@ public class SessionController {
      */
     public org.openapis.openapi.models.operations.SessionControllerGetSessionInfoResponse sessionControllerGetSessionInfo(org.openapis.openapi.models.operations.SessionControllerGetSessionInfoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SessionControllerGetSessionInfoPathParams.class, baseUrl, "/v2/customer/{shortName}/session", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SessionControllerGetSessionInfoRequest.class, baseUrl, "/v2/customer/{shortName}/session", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SessionControllerGetSessionInfoQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SessionControllerGetSessionInfoRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -170,13 +170,13 @@ public class SessionController {
      */
     public org.openapis.openapi.models.operations.SessionControllerLoginResponse sessionControllerLogin(org.openapis.openapi.models.operations.SessionControllerLoginRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SessionControllerLoginPathParams.class, baseUrl, "/v2/customer/{shortName}/session", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SessionControllerLoginRequest.class, baseUrl, "/v2/customer/{shortName}/session", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SessionControllerLoginQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SessionControllerLoginRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -228,13 +228,13 @@ public class SessionController {
      */
     public org.openapis.openapi.models.operations.SessionControllerLogoutResponse sessionControllerLogout(org.openapis.openapi.models.operations.SessionControllerLogoutRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SessionControllerLogoutPathParams.class, baseUrl, "/v2/customer/{shortName}/session", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SessionControllerLogoutRequest.class, baseUrl, "/v2/customer/{shortName}/session", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SessionControllerLogoutQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SessionControllerLogoutRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -266,13 +266,13 @@ public class SessionController {
      */
     public org.openapis.openapi.models.operations.SessionControllerResetPasswordResponse sessionControllerResetPassword(org.openapis.openapi.models.operations.SessionControllerResetPasswordRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SessionControllerResetPasswordPathParams.class, baseUrl, "/v2/customer/{shortName}/session/resetpassword", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SessionControllerResetPasswordRequest.class, baseUrl, "/v2/customer/{shortName}/session/resetpassword", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SessionControllerResetPasswordQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SessionControllerResetPasswordRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

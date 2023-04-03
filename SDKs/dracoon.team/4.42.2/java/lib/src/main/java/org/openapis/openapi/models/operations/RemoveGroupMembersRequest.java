@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveGroupMembersRequest {
-    
-    public RemoveGroupMembersPathParams pathParams;
-    public RemoveGroupMembersRequest withPathParams(RemoveGroupMembersPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RemoveGroupMembersHeaders headers;
-    public RemoveGroupMembersRequest withHeaders(RemoveGroupMembersHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ChangeGroupMembersRequest request;
-    public RemoveGroupMembersRequest withRequest(org.openapis.openapi.models.shared.ChangeGroupMembersRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ChangeGroupMembersRequest changeGroupMembersRequest;
+    public RemoveGroupMembersRequest withChangeGroupMembersRequest(org.openapis.openapi.models.shared.ChangeGroupMembersRequest changeGroupMembersRequest) {
+        this.changeGroupMembersRequest = changeGroupMembersRequest;
+        return this;
+    }
+    
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RemoveGroupMembersRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
+        return this;
+    }
+    
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public RemoveGroupMembersXSdsDateFormatEnum xSdsDateFormat;
+    public RemoveGroupMembersRequest withXSdsDateFormat(RemoveGroupMembersXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
+        return this;
+    }
+    
+    /**
+     * Group ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public Long groupId;
+    public RemoveGroupMembersRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
         return this;
     }
     

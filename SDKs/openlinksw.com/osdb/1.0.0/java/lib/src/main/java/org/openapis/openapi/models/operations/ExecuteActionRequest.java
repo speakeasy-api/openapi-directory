@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExecuteActionRequest {
-    
-    public ExecuteActionPathParams pathParams;
-    public ExecuteActionRequest withPathParams(ExecuteActionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Any parameters required by the action are supplied as a JSON object in the request body. The properties of this object depend on the service action being invoked.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ExecBody request;
-    public ExecuteActionRequest withRequest(org.openapis.openapi.models.shared.ExecBody request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ExecBody execBody;
+    public ExecuteActionRequest withExecBody(org.openapis.openapi.models.shared.ExecBody execBody) {
+        this.execBody = execBody;
+        return this;
+    }
+    
+    /**
+     * Action ID of the action to execute.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=actionId")
+    public String actionId;
+    public ExecuteActionRequest withActionId(String actionId) {
+        this.actionId = actionId;
+        return this;
+    }
+    
+    /**
+     * Service ID of the service supporting the action.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serviceId")
+    public String serviceId;
+    public ExecuteActionRequest withServiceId(String serviceId) {
+        this.serviceId = serviceId;
         return this;
     }
     

@@ -34,27 +34,28 @@ public class UrlInspection {
     /**
      * Index inspection.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SearchconsoleUrlInspectionIndexInspectResponse searchconsoleUrlInspectionIndexInspect(org.openapis.openapi.models.operations.SearchconsoleUrlInspectionIndexInspectRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SearchconsoleUrlInspectionIndexInspectResponse searchconsoleUrlInspectionIndexInspect(org.openapis.openapi.models.operations.SearchconsoleUrlInspectionIndexInspectRequest request, org.openapis.openapi.models.operations.SearchconsoleUrlInspectionIndexInspectSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/urlInspection/index:inspect");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "inspectUrlIndexRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SearchconsoleUrlInspectionIndexInspectQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SearchconsoleUrlInspectionIndexInspectRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

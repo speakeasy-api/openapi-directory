@@ -30,7 +30,7 @@ public class Tokens {
 		this._genVersion = genVersion;
 	}
 
-    public org.openapis.openapi.models.operations.PostOauthV1TokenCreateResponse postOauthV1TokenCreate(org.openapis.openapi.models.operations.PostOauthV1TokenCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostOauthV1TokenCreateResponse postOauthV1TokenCreate(org.openapis.openapi.models.operations.PostOauthV1TokenCreateRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/oauth/v1/token");
         

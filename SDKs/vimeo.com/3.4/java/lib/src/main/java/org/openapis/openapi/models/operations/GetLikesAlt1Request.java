@@ -4,13 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLikesAlt1Request {
+    /**
+     * The attribute by which to filter the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public GetLikesAlt1FilterEnum filter;
+    public GetLikesAlt1Request withFilter(GetLikesAlt1FilterEnum filter) {
+        this.filter = filter;
+        return this;
+    }
     
-    public GetLikesAlt1QueryParams queryParams;
-    public GetLikesAlt1Request withQueryParams(GetLikesAlt1QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_embeddable")
+    public Boolean filterEmbeddable;
+    public GetLikesAlt1Request withFilterEmbeddable(Boolean filterEmbeddable) {
+        this.filterEmbeddable = filterEmbeddable;
+        return this;
+    }
+    
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetLikesAlt1Request withPage(Double page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetLikesAlt1Request withPerPage(Double perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The search query to use to filter the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public GetLikesAlt1Request withQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    
+    /**
+     * The way to sort the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetLikesAlt1SortEnum sort;
+    public GetLikesAlt1Request withSort(GetLikesAlt1SortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

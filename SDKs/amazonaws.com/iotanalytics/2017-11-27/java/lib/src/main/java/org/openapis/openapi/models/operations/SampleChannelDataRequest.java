@@ -4,27 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SampleChannelDataRequest {
-    
-    public SampleChannelDataPathParams pathParams;
-    public SampleChannelDataRequest withPathParams(SampleChannelDataPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public SampleChannelDataRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public SampleChannelDataQueryParams queryParams;
-    public SampleChannelDataRequest withQueryParams(SampleChannelDataQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public SampleChannelDataRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public SampleChannelDataRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public SampleChannelDataHeaders headers;
-    public SampleChannelDataRequest withHeaders(SampleChannelDataHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public SampleChannelDataRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public SampleChannelDataRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public SampleChannelDataRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public SampleChannelDataRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The name of the channel whose message samples are retrieved.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelName")
+    public String channelName;
+    public SampleChannelDataRequest withChannelName(String channelName) {
+        this.channelName = channelName;
+        return this;
+    }
+    
+    /**
+     * The end of the time window from which sample messages are retrieved.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endTime")
+    public OffsetDateTime endTime;
+    public SampleChannelDataRequest withEndTime(OffsetDateTime endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    
+    /**
+     * The number of sample messages to be retrieved. The limit is 10. The default is also 10.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxMessages")
+    public Long maxMessages;
+    public SampleChannelDataRequest withMaxMessages(Long maxMessages) {
+        this.maxMessages = maxMessages;
+        return this;
+    }
+    
+    /**
+     * The start of the time window from which sample messages are retrieved.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startTime")
+    public OffsetDateTime startTime;
+    public SampleChannelDataRequest withStartTime(OffsetDateTime startTime) {
+        this.startTime = startTime;
         return this;
     }
     

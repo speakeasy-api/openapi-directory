@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReligionFullRequest {
-    
-    public ReligionFullPathParams pathParams;
-    public ReligionFullRequest withPathParams(ReligionFullPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=countryIso2")
+    public String countryIso2;
+    public ReligionFullRequest withCountryIso2(String countryIso2) {
+        this.countryIso2 = countryIso2;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=personalNameFull")
+    public String personalNameFull;
+    public ReligionFullRequest withPersonalNameFull(String personalNameFull) {
+        this.personalNameFull = personalNameFull;
+        return this;
+    }
     
-    public ReligionFullSecurity security;
-    public ReligionFullRequest withSecurity(ReligionFullSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subDivisionIso31662")
+    public String subDivisionIso31662;
+    public ReligionFullRequest withSubDivisionIso31662(String subDivisionIso31662) {
+        this.subDivisionIso31662 = subDivisionIso31662;
         return this;
     }
     

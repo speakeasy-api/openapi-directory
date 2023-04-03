@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateOrganizationAlertsProfileRequest {
-    
-    public CreateOrganizationAlertsProfilePathParams pathParams;
-    public CreateOrganizationAlertsProfileRequest withPathParams(CreateOrganizationAlertsProfilePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateOrganizationAlertsProfileRequestBody requestBody;
+    public CreateOrganizationAlertsProfileRequest withRequestBody(CreateOrganizationAlertsProfileRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateOrganizationAlertsProfileRequestBody request;
-    public CreateOrganizationAlertsProfileRequest withRequest(CreateOrganizationAlertsProfileRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public CreateOrganizationAlertsProfileRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

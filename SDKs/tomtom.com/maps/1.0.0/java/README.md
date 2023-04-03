@@ -19,8 +19,6 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsFormatFormatEnum;
 import org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsFormatVersionNumberEnum;
-import org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsFormatPathParams;
-import org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsFormatQueryParams;
 import org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsFormatRequest;
 import org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsFormatResponse;
 
@@ -29,21 +27,15 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    apiKey = new SchemeAPIKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    apiKey = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GetMapVersionNumberCopyrightsFormatRequest req = new GetMapVersionNumberCopyrightsFormatRequest() {{
-                pathParams = new GetMapVersionNumberCopyrightsFormatPathParams() {{
-                    format = "jsonp";
-                    versionNumber = "1";
-                }};
-                queryParams = new GetMapVersionNumberCopyrightsFormatQueryParams() {{
-                    callback = "provident";
-                }};
-            }};            
+                callback = "corrupti";
+                format = "jsonp";
+                versionNumber = "1";
+            }}            
 
             GetMapVersionNumberCopyrightsFormatResponse res = sdk.copyrights.getMapVersionNumberCopyrightsFormat(req);
 
@@ -57,7 +49,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### copyrights

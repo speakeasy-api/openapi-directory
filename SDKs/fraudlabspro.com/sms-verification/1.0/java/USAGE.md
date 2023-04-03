@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GetV1VerificationResultFormatEnum;
-import org.openapis.openapi.models.operations.GetV1VerificationResultQueryParams;
 import org.openapis.openapi.models.operations.GetV1VerificationResultRequest;
 import org.openapis.openapi.models.operations.GetV1VerificationResultResponse;
 
@@ -16,13 +15,11 @@ public class Application {
                 .build();
 
             GetV1VerificationResultRequest req = new GetV1VerificationResultRequest() {{
-                queryParams = new GetV1VerificationResultQueryParams() {{
-                    format = "xml";
-                    key = "provident";
-                    otp = "distinctio";
-                    tranId = "quibusdam";
-                }};
-            }};            
+                format = "xml";
+                key = "provident";
+                otp = "distinctio";
+                tranId = "quibusdam";
+            }}            
 
             GetV1VerificationResultResponse res = sdk.getV1VerificationResult(req);
 

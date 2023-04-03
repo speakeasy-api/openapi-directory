@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllCustomFieldsByCategoryRequest {
-    
-    public GetAllCustomFieldsByCategoryPathParams pathParams;
-    public GetAllCustomFieldsByCategoryRequest withPathParams(GetAllCustomFieldsByCategoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Custom Fields Category
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=category")
+    public String category;
+    public GetAllCustomFieldsByCategoryRequest withCategory(String category) {
+        this.category = category;
         return this;
     }
     
-    
-    public GetAllCustomFieldsByCategorySecurity security;
-    public GetAllCustomFieldsByCategoryRequest withSecurity(GetAllCustomFieldsByCategorySecurity security) {
-        this.security = security;
+    /**
+     * Company Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public GetAllCustomFieldsByCategoryRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
         return this;
     }
     

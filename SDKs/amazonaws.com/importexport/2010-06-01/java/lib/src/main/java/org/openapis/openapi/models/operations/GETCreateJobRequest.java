@@ -4,13 +4,100 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCreateJobRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=APIVersion")
+    public String apiVersion;
+    public GETCreateJobRequest withAPIVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
     
-    public GETCreateJobQueryParams queryParams;
-    public GETCreateJobRequest withQueryParams(GETCreateJobQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AWSAccessKeyId")
+    public String awsAccessKeyId;
+    public GETCreateJobRequest withAWSAccessKeyId(String awsAccessKeyId) {
+        this.awsAccessKeyId = awsAccessKeyId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETCreateJobActionEnum action;
+    public GETCreateJobRequest withAction(GETCreateJobActionEnum action) {
+        this.action = action;
+        return this;
+    }
+    
+    /**
+     * Specifies whether the job to initiate is an import or export job.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=JobType")
+    public GETCreateJobJobTypeEnum jobType;
+    public GETCreateJobRequest withJobType(GETCreateJobJobTypeEnum jobType) {
+        this.jobType = jobType;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Manifest")
+    public String manifest;
+    public GETCreateJobRequest withManifest(String manifest) {
+        this.manifest = manifest;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ManifestAddendum")
+    public String manifestAddendum;
+    public GETCreateJobRequest withManifestAddendum(String manifestAddendum) {
+        this.manifestAddendum = manifestAddendum;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Operation")
+    public GETCreateJobOperationEnum operation;
+    public GETCreateJobRequest withOperation(GETCreateJobOperationEnum operation) {
+        this.operation = operation;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Signature")
+    public String signature;
+    public GETCreateJobRequest withSignature(String signature) {
+        this.signature = signature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureMethod")
+    public String signatureMethod;
+    public GETCreateJobRequest withSignatureMethod(String signatureMethod) {
+        this.signatureMethod = signatureMethod;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureVersion")
+    public String signatureVersion;
+    public GETCreateJobRequest withSignatureVersion(String signatureVersion) {
+        this.signatureVersion = signatureVersion;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Timestamp")
+    public String timestamp;
+    public GETCreateJobRequest withTimestamp(String timestamp) {
+        this.timestamp = timestamp;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ValidateOnly")
+    public Boolean validateOnly;
+    public GETCreateJobRequest withValidateOnly(Boolean validateOnly) {
+        this.validateOnly = validateOnly;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETCreateJobVersionEnum version;
+    public GETCreateJobRequest withVersion(GETCreateJobVersionEnum version) {
+        this.version = version;
         return this;
     }
     

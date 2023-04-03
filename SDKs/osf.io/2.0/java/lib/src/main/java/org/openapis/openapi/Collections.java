@@ -43,12 +43,12 @@ public class Collections {
      */
     public org.openapis.openapi.models.operations.CollectionsAddMetadataResponse collectionsAddMetadata(org.openapis.openapi.models.operations.CollectionsAddMetadataRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsAddMetadataPathParams.class, baseUrl, "/collections/{collection_id}/collected_metadata/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsAddMetadataRequest.class, baseUrl, "/collections/{collection_id}/collected_metadata/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -91,7 +91,7 @@ public class Collections {
      */
     public org.openapis.openapi.models.operations.CollectionsCollectedMetadataResponse collectionsCollectedMetadata(org.openapis.openapi.models.operations.CollectionsCollectedMetadataRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsCollectedMetadataPathParams.class, baseUrl, "/collections/{collection_id}/collected_metadata/{cgm_id}/subjects/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsCollectedMetadataRequest.class, baseUrl, "/collections/{collection_id}/collected_metadata/{cgm_id}/subjects/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -132,7 +132,7 @@ public class Collections {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CollectionsCreateResponse collectionsCreate(org.openapis.openapi.models.operations.CollectionsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CollectionsCreateResponse collectionsCreate(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/collections/");
         
@@ -176,7 +176,7 @@ public class Collections {
      */
     public org.openapis.openapi.models.operations.CollectionsDeleteResponse collectionsDelete(org.openapis.openapi.models.operations.CollectionsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsDeletePathParams.class, baseUrl, "/collections/{collection_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsDeleteRequest.class, baseUrl, "/collections/{collection_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -216,7 +216,7 @@ public class Collections {
      */
     public org.openapis.openapi.models.operations.CollectionsDetailResponse collectionsDetail(org.openapis.openapi.models.operations.CollectionsDetailRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsDetailPathParams.class, baseUrl, "/collections/{collection_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsDetailRequest.class, baseUrl, "/collections/{collection_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -262,7 +262,7 @@ public class Collections {
      */
     public org.openapis.openapi.models.operations.CollectionsLinkedNodesListResponse collectionsLinkedNodesList(org.openapis.openapi.models.operations.CollectionsLinkedNodesListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsLinkedNodesListPathParams.class, baseUrl, "/collections/{collection_id}/linked_nodes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsLinkedNodesListRequest.class, baseUrl, "/collections/{collection_id}/linked_nodes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -303,12 +303,12 @@ public class Collections {
      */
     public org.openapis.openapi.models.operations.CollectionsLinkedNodesRelationshipsResponse collectionsLinkedNodesRelationships(org.openapis.openapi.models.operations.CollectionsLinkedNodesRelationshipsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsLinkedNodesRelationshipsPathParams.class, baseUrl, "/collections/{collection_id}/linked_nodes/relationships/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsLinkedNodesRelationshipsRequest.class, baseUrl, "/collections/{collection_id}/linked_nodes/relationships/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -348,7 +348,7 @@ public class Collections {
      */
     public org.openapis.openapi.models.operations.CollectionsLinkedNodesRelationshipsCreateResponse collectionsLinkedNodesRelationshipsCreate(org.openapis.openapi.models.operations.CollectionsLinkedNodesRelationshipsCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsLinkedNodesRelationshipsCreatePathParams.class, baseUrl, "/collections/{collection_id}/linked_nodes/relationships/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsLinkedNodesRelationshipsCreateRequest.class, baseUrl, "/collections/{collection_id}/linked_nodes/relationships/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -386,12 +386,12 @@ public class Collections {
      */
     public org.openapis.openapi.models.operations.CollectionsLinkedNodesRelationshipsDeleteResponse collectionsLinkedNodesRelationshipsDelete(org.openapis.openapi.models.operations.CollectionsLinkedNodesRelationshipsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsLinkedNodesRelationshipsDeletePathParams.class, baseUrl, "/collections/{collection_id}/linked_nodes/relationships/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsLinkedNodesRelationshipsDeleteRequest.class, baseUrl, "/collections/{collection_id}/linked_nodes/relationships/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -432,7 +432,7 @@ public class Collections {
      */
     public org.openapis.openapi.models.operations.CollectionsLinkedPreprintsListResponse collectionsLinkedPreprintsList(org.openapis.openapi.models.operations.CollectionsLinkedPreprintsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsLinkedPreprintsListPathParams.class, baseUrl, "/collections/{collection_id}/linked_preprints/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsLinkedPreprintsListRequest.class, baseUrl, "/collections/{collection_id}/linked_preprints/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -473,7 +473,7 @@ public class Collections {
      */
     public org.openapis.openapi.models.operations.CollectionsLinkedRegistrationsListResponse collectionsLinkedRegistrationsList(org.openapis.openapi.models.operations.CollectionsLinkedRegistrationsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsLinkedRegistrationsListPathParams.class, baseUrl, "/collections/{collection_id}/linked_registrations/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsLinkedRegistrationsListRequest.class, baseUrl, "/collections/{collection_id}/linked_registrations/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -514,12 +514,12 @@ public class Collections {
      */
     public org.openapis.openapi.models.operations.CollectionsLinkedRegistrationsRelationshipsResponse collectionsLinkedRegistrationsRelationships(org.openapis.openapi.models.operations.CollectionsLinkedRegistrationsRelationshipsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsLinkedRegistrationsRelationshipsPathParams.class, baseUrl, "/collections/{collection_id}/linked_registrations/relationships/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsLinkedRegistrationsRelationshipsRequest.class, baseUrl, "/collections/{collection_id}/linked_registrations/relationships/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -559,7 +559,7 @@ public class Collections {
      */
     public org.openapis.openapi.models.operations.CollectionsLinkedRegistrationsRelationshipsCreateResponse collectionsLinkedRegistrationsRelationshipsCreate(org.openapis.openapi.models.operations.CollectionsLinkedRegistrationsRelationshipsCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsLinkedRegistrationsRelationshipsCreatePathParams.class, baseUrl, "/collections/{collection_id}/linked_registrations/relationships/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsLinkedRegistrationsRelationshipsCreateRequest.class, baseUrl, "/collections/{collection_id}/linked_registrations/relationships/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -597,12 +597,12 @@ public class Collections {
      */
     public org.openapis.openapi.models.operations.CollectionsLinkedRegistrationsRelationshipsDeleteResponse collectionsLinkedRegistrationsRelationshipsDelete(org.openapis.openapi.models.operations.CollectionsLinkedRegistrationsRelationshipsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsLinkedRegistrationsRelationshipsDeletePathParams.class, baseUrl, "/collections/{collection_id}/linked_registrations/relationships/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsLinkedRegistrationsRelationshipsDeleteRequest.class, baseUrl, "/collections/{collection_id}/linked_registrations/relationships/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -686,7 +686,7 @@ public class Collections {
      */
     public org.openapis.openapi.models.operations.CollectionsMetadataDeleteResponse collectionsMetadataDelete(org.openapis.openapi.models.operations.CollectionsMetadataDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsMetadataDeletePathParams.class, baseUrl, "/collections/{collection_id}/collected_metadata/{cgm_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsMetadataDeleteRequest.class, baseUrl, "/collections/{collection_id}/collected_metadata/{cgm_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -726,12 +726,12 @@ public class Collections {
      */
     public org.openapis.openapi.models.operations.CollectionsMetadataDetailResponse collectionsMetadataDetail(org.openapis.openapi.models.operations.CollectionsMetadataDetailRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsMetadataDetailPathParams.class, baseUrl, "/collections/{collection_id}/collected_metadata/{cgm_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsMetadataDetailRequest.class, baseUrl, "/collections/{collection_id}/collected_metadata/{cgm_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -773,7 +773,7 @@ public class Collections {
      */
     public org.openapis.openapi.models.operations.CollectionsMetadataRegistrationsDetailResponse collectionsMetadataRegistrationsDetail(org.openapis.openapi.models.operations.CollectionsMetadataRegistrationsDetailRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsMetadataRegistrationsDetailPathParams.class, baseUrl, "/collections/{collection_id}/collected_metadata/{cgm_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsMetadataRegistrationsDetailRequest.class, baseUrl, "/collections/{collection_id}/collected_metadata/{cgm_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -815,7 +815,7 @@ public class Collections {
      */
     public org.openapis.openapi.models.operations.CollectionsMetadataRegistrationsListResponse collectionsMetadataRegistrationsList(org.openapis.openapi.models.operations.CollectionsMetadataRegistrationsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsMetadataRegistrationsListPathParams.class, baseUrl, "/collections/{collection_id}/collected_metadata/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsMetadataRegistrationsListRequest.class, baseUrl, "/collections/{collection_id}/collected_metadata/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -855,7 +855,7 @@ public class Collections {
      */
     public org.openapis.openapi.models.operations.CollectionsMetadataSubjectsRelationshipsResponse collectionsMetadataSubjectsRelationships(org.openapis.openapi.models.operations.CollectionsMetadataSubjectsRelationshipsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsMetadataSubjectsRelationshipsPathParams.class, baseUrl, "/collections/{collection_id}/collected_metadata/{cgm_id}/relationships/subjects/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsMetadataSubjectsRelationshipsRequest.class, baseUrl, "/collections/{collection_id}/collected_metadata/{cgm_id}/relationships/subjects/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -896,12 +896,12 @@ public class Collections {
      */
     public org.openapis.openapi.models.operations.CollectionsMetadataSubjectsRelationshipsUpdateResponse collectionsMetadataSubjectsRelationshipsUpdate(org.openapis.openapi.models.operations.CollectionsMetadataSubjectsRelationshipsUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsMetadataSubjectsRelationshipsUpdatePathParams.class, baseUrl, "/collections/{collection_id}/collected_metadata/{cgm_id}/relationships/subjects/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionsMetadataSubjectsRelationshipsUpdateRequest.class, baseUrl, "/collections/{collection_id}/collected_metadata/{cgm_id}/relationships/subjects/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

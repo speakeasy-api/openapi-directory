@@ -4,20 +4,97 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchEditorialRequest {
-    
-    public SearchEditorialQueryParams queryParams;
-    public SearchEditorialRequest withQueryParams(SearchEditorialQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Show editorial content within a certain editorial category; specify by category name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
+    public String category;
+    public SearchEditorialRequest withCategory(String category) {
+        this.category = category;
         return this;
     }
     
+    /**
+     * Show only editorial content that is available for distribution in a certain country
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public String country;
+    public SearchEditorialRequest withCountry(String country) {
+        this.country = country;
+        return this;
+    }
     
-    public SearchEditorialSecurity security;
-    public SearchEditorialRequest withSecurity(SearchEditorialSecurity security) {
-        this.security = security;
+    /**
+     * The cursor of the page with which to start fetching results; this cursor is returned from previous requests
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public SearchEditorialRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
+    
+    /**
+     * Show only editorial content generated on or before a specific date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_end")
+    public LocalDate dateEnd;
+    public SearchEditorialRequest withDateEnd(LocalDate dateEnd) {
+        this.dateEnd = dateEnd;
+        return this;
+    }
+    
+    /**
+     * Show only editorial content generated on or after a specific date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_start")
+    public LocalDate dateStart;
+    public SearchEditorialRequest withDateStart(LocalDate dateStart) {
+        this.dateStart = dateStart;
+        return this;
+    }
+    
+    /**
+     * Number of results per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public SearchEditorialRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * One or more search terms separated by spaces
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public SearchEditorialRequest withQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    
+    /**
+     * Sort by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public SearchEditorialSortEnum sort;
+    public SearchEditorialRequest withSort(SearchEditorialSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Show only editorial content from certain suppliers
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supplier_code")
+    public String[] supplierCode;
+    public SearchEditorialRequest withSupplierCode(String[] supplierCode) {
+        this.supplierCode = supplierCode;
         return this;
     }
     

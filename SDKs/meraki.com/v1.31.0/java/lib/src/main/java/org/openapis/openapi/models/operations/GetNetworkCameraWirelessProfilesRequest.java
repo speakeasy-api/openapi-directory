@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkCameraWirelessProfilesRequest {
-    
-    public GetNetworkCameraWirelessProfilesPathParams pathParams;
-    public GetNetworkCameraWirelessProfilesRequest withPathParams(GetNetworkCameraWirelessProfilesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkCameraWirelessProfilesRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

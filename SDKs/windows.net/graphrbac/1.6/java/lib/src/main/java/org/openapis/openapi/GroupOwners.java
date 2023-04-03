@@ -39,13 +39,13 @@ public class GroupOwners {
      */
     public org.openapis.openapi.models.operations.GroupsListOwnersResponse groupsListOwners(org.openapis.openapi.models.operations.GroupsListOwnersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupsListOwnersPathParams.class, baseUrl, "/{tenantID}/groups/{objectId}/owners", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupsListOwnersRequest.class, baseUrl, "/{tenantID}/groups/{objectId}/owners", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GroupsListOwnersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GroupsListOwnersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

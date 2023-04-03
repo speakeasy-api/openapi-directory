@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllPortfolioTemplatesRequest {
-    
-    public GetAllPortfolioTemplatesHeaders headers;
-    public GetAllPortfolioTemplatesRequest withHeaders(GetAllPortfolioTemplatesHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetAllPortfolioTemplatesSecurity security;
-    public GetAllPortfolioTemplatesRequest withSecurity(GetAllPortfolioTemplatesSecurity security) {
-        this.security = security;
+    /**
+     * ApiSecretKey
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public GetAllPortfolioTemplatesRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

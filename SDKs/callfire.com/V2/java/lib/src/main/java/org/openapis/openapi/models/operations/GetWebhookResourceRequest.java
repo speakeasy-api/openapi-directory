@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWebhookResourceRequest {
-    
-    public GetWebhookResourcePathParams pathParams;
-    public GetWebhookResourceRequest withPathParams(GetWebhookResourcePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public GetWebhookResourceRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     
-    
-    public GetWebhookResourceQueryParams queryParams;
-    public GetWebhookResourceRequest withQueryParams(GetWebhookResourceQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetWebhookResourceSecurity security;
-    public GetWebhookResourceRequest withSecurity(GetWebhookResourceSecurity security) {
-        this.security = security;
+    /**
+     * A name of a webhook resource. Available resources include 'CccCampaign': ['started', 'stopped', 'finished'], 'CallBroadcast': ['started', 'stopped', 'finished'], 'TextBroadcast': ['started', 'stopped', 'finished'], 'OutboundCall': ['finished'], 'InboundCall': ['finished'], 'OutboundText': ['finished'], 'InboundText': ['finished'], 'ContactList': ['validationFinished', 'validationFailed'], 'MonthlyRenewal': ['failed', 'finished'], 'LowBalance': ['failed', 'finished']
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=resource")
+    public String resource;
+    public GetWebhookResourceRequest withResource(String resource) {
+        this.resource = resource;
         return this;
     }
     

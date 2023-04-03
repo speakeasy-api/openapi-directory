@@ -33,10 +33,11 @@ public class Metadata {
     /**
      * List the metadata for the dimensions available to this AdSense account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdsenseMetadataDimensionsListResponse adsenseMetadataDimensionsList(org.openapis.openapi.models.operations.AdsenseMetadataDimensionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdsenseMetadataDimensionsListResponse adsenseMetadataDimensionsList(org.openapis.openapi.models.operations.AdsenseMetadataDimensionsListRequest request, org.openapis.openapi.models.operations.AdsenseMetadataDimensionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/metadata/dimensions");
         
@@ -44,14 +45,14 @@ public class Metadata {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseMetadataDimensionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseMetadataDimensionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,10 +79,11 @@ public class Metadata {
     /**
      * List the metadata for the metrics available to this AdSense account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdsenseMetadataMetricsListResponse adsenseMetadataMetricsList(org.openapis.openapi.models.operations.AdsenseMetadataMetricsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdsenseMetadataMetricsListResponse adsenseMetadataMetricsList(org.openapis.openapi.models.operations.AdsenseMetadataMetricsListRequest request, org.openapis.openapi.models.operations.AdsenseMetadataMetricsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/metadata/metrics");
         
@@ -89,14 +91,14 @@ public class Metadata {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseMetadataMetricsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseMetadataMetricsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

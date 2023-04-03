@@ -133,7 +133,7 @@ public class MatrixAPI {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CalculateMatrixResponse calculateMatrix(org.openapis.openapi.models.operations.CalculateMatrixRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CalculateMatrixResponse calculateMatrix(Object request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/matrix/calculate");
         
@@ -197,7 +197,7 @@ public class MatrixAPI {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMatrixQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMatrixRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -248,7 +248,7 @@ public class MatrixAPI {
      */
     public org.openapis.openapi.models.operations.GetMatrixSolutionResponse getMatrixSolution(org.openapis.openapi.models.operations.GetMatrixSolutionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMatrixSolutionPathParams.class, baseUrl, "/matrix/solution/{jobId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMatrixSolutionRequest.class, baseUrl, "/matrix/solution/{jobId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -314,7 +314,7 @@ public class MatrixAPI {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostMatrixResponse postMatrix(org.openapis.openapi.models.operations.PostMatrixRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostMatrixResponse postMatrix(Object request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/matrix");
         

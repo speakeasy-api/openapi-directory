@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetABatchOfBusinessTransactionClassificationResultsRequest {
-    
-    public GetABatchOfBusinessTransactionClassificationResultsPathParams pathParams;
-    public GetABatchOfBusinessTransactionClassificationResultsRequest withPathParams(GetABatchOfBusinessTransactionClassificationResultsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * (Required) Batch id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetABatchOfBusinessTransactionClassificationResultsRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

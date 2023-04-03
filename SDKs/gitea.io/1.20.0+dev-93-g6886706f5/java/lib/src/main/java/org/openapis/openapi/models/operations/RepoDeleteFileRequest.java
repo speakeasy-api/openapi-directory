@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoDeleteFileRequest {
-    
-    public RepoDeleteFilePathParams pathParams;
-    public RepoDeleteFileRequest withPathParams(RepoDeleteFilePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.DeleteFileOptions deleteFileOptions;
+    public RepoDeleteFileRequest withDeleteFileOptions(org.openapis.openapi.models.shared.DeleteFileOptions deleteFileOptions) {
+        this.deleteFileOptions = deleteFileOptions;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DeleteFileOptions request;
-    public RepoDeleteFileRequest withRequest(org.openapis.openapi.models.shared.DeleteFileOptions request) {
-        this.request = request;
+    /**
+     * path of the file to delete
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=filepath")
+    public String filepath;
+    public RepoDeleteFileRequest withFilepath(String filepath) {
+        this.filepath = filepath;
+        return this;
+    }
+    
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoDeleteFileRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoDeleteFileRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

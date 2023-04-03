@@ -34,27 +34,28 @@ public class AccessPolicies {
     /**
      * Create an Access Level. The longrunning operation from this RPC will have a successful status once the Access Level has propagated to long-lasting storage. Access Levels containing errors will result in an error response for the first error encountered.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateResponse accesscontextmanagerAccessPoliciesAccessLevelsCreate(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateResponse accesscontextmanagerAccessPoliciesAccessLevelsCreate(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateRequest request, org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreatePathParams.class, baseUrl, "/v1beta/{parent}/accessLevels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateRequest.class, baseUrl, "/v1beta/{parent}/accessLevels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "accessLevel", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,25 +82,26 @@ public class AccessPolicies {
     /**
      * List all Access Levels for an access policy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesAccessLevelsListResponse accesscontextmanagerAccessPoliciesAccessLevelsList(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesAccessLevelsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesAccessLevelsListResponse accesscontextmanagerAccessPoliciesAccessLevelsList(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesAccessLevelsListRequest request, org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesAccessLevelsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesAccessLevelsListPathParams.class, baseUrl, "/v1beta/{parent}/accessLevels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesAccessLevelsListRequest.class, baseUrl, "/v1beta/{parent}/accessLevels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesAccessLevelsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesAccessLevelsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,27 +128,28 @@ public class AccessPolicies {
     /**
      * Create an `AccessPolicy`. Fails if this organization already has a `AccessPolicy`. The longrunning Operation will have a successful status once the `AccessPolicy` has propagated to long-lasting storage. Syntactic and basic semantic errors will be returned in `metadata` as a BadRequest proto.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesCreateResponse accesscontextmanagerAccessPoliciesCreate(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesCreateResponse accesscontextmanagerAccessPoliciesCreate(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesCreateRequest request, org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1beta/accessPolicies");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "accessPolicy", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -173,10 +176,11 @@ public class AccessPolicies {
     /**
      * List all AccessPolicies under a container.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesListResponse accesscontextmanagerAccessPoliciesList(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesListResponse accesscontextmanagerAccessPoliciesList(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesListRequest request, org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1beta/accessPolicies");
         
@@ -184,14 +188,14 @@ public class AccessPolicies {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -218,27 +222,28 @@ public class AccessPolicies {
     /**
      * Create a Service Perimeter. The longrunning operation from this RPC will have a successful status once the Service Perimeter has propagated to long-lasting storage. Service Perimeters containing errors will result in an error response for the first error encountered.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersCreateResponse accesscontextmanagerAccessPoliciesServicePerimetersCreate(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersCreateResponse accesscontextmanagerAccessPoliciesServicePerimetersCreate(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersCreateRequest request, org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersCreatePathParams.class, baseUrl, "/v1beta/{parent}/servicePerimeters", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersCreateRequest.class, baseUrl, "/v1beta/{parent}/servicePerimeters", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "servicePerimeter", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -265,25 +270,26 @@ public class AccessPolicies {
     /**
      * Delete a Service Perimeter by resource name. The longrunning operation from this RPC will have a successful status once the Service Perimeter has been removed from long-lasting storage.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersDeleteResponse accesscontextmanagerAccessPoliciesServicePerimetersDelete(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersDeleteResponse accesscontextmanagerAccessPoliciesServicePerimetersDelete(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersDeleteRequest request, org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersDeletePathParams.class, baseUrl, "/v1beta/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersDeleteRequest.class, baseUrl, "/v1beta/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -310,25 +316,26 @@ public class AccessPolicies {
     /**
      * List all Service Perimeters for an access policy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersListResponse accesscontextmanagerAccessPoliciesServicePerimetersList(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersListResponse accesscontextmanagerAccessPoliciesServicePerimetersList(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersListRequest request, org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersListPathParams.class, baseUrl, "/v1beta/{parent}/servicePerimeters", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersListRequest.class, baseUrl, "/v1beta/{parent}/servicePerimeters", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -355,27 +362,28 @@ public class AccessPolicies {
     /**
      * Update a Service Perimeter. The longrunning operation from this RPC will have a successful status once the changes to the Service Perimeter have propagated to long-lasting storage. Service Perimeter containing errors will result in an error response for the first error encountered.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersPatchResponse accesscontextmanagerAccessPoliciesServicePerimetersPatch(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersPatchResponse accesscontextmanagerAccessPoliciesServicePerimetersPatch(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersPatchRequest request, org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersPatchPathParams.class, baseUrl, "/v1beta/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersPatchRequest.class, baseUrl, "/v1beta/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "servicePerimeter", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesServicePerimetersPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

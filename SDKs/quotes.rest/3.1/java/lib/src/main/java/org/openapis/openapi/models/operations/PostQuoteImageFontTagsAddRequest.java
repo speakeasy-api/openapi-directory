@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostQuoteImageFontTagsAddRequest {
-    
-    public PostQuoteImageFontTagsAddQueryParams queryParams;
-    public PostQuoteImageFontTagsAddRequest withQueryParams(PostQuoteImageFontTagsAddQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Font ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public PostQuoteImageFontTagsAddRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public PostQuoteImageFontTagsAddSecurity security;
-    public PostQuoteImageFontTagsAddRequest withSecurity(PostQuoteImageFontTagsAddSecurity security) {
-        this.security = security;
+    /**
+     * Comma Separated tags
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
+    public String tags;
+    public PostQuoteImageFontTagsAddRequest withTags(String tags) {
+        this.tags = tags;
         return this;
     }
     

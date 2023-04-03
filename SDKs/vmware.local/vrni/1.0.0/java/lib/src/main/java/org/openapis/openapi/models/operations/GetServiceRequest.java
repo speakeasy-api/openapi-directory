@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetServiceRequest {
-    
-    public GetServicePathParams pathParams;
-    public GetServiceRequest withPathParams(GetServicePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetServiceRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetServiceQueryParams queryParams;
-    public GetServiceRequest withQueryParams(GetServiceQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetServiceSecurity security;
-    public GetServiceRequest withSecurity(GetServiceSecurity security) {
-        this.security = security;
+    /**
+     * time in epoch seconds
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=time")
+    public Long time;
+    public GetServiceRequest withTime(Long time) {
+        this.time = time;
         return this;
     }
     

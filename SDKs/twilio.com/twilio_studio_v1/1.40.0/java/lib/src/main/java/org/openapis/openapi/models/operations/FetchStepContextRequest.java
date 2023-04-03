@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchStepContextRequest {
-    
-    public FetchStepContextPathParams pathParams;
-    public FetchStepContextRequest withPathParams(FetchStepContextPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Engagement with the Step to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EngagementSid")
+    public String engagementSid;
+    public FetchStepContextRequest withEngagementSid(String engagementSid) {
+        this.engagementSid = engagementSid;
         return this;
     }
     
-    
-    public FetchStepContextSecurity security;
-    public FetchStepContextRequest withSecurity(FetchStepContextSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the Flow with the Step to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FlowSid")
+    public String flowSid;
+    public FetchStepContextRequest withFlowSid(String flowSid) {
+        this.flowSid = flowSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public FetchStepContextRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Step to fetch
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=StepSid")
+    public String stepSid;
+    public FetchStepContextRequest withStepSid(String stepSid) {
+        this.stepSid = stepSid;
         return this;
     }
     

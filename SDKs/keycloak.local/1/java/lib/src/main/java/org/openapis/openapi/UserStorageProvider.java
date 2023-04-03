@@ -39,7 +39,7 @@ public class UserStorageProvider {
      */
     public org.openapis.openapi.models.operations.GetIdNameResponse getIdName(org.openapis.openapi.models.operations.GetIdNameRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIdNamePathParams.class, baseUrl, "/{id}/name", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIdNameRequest.class, baseUrl, "/{id}/name", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -78,7 +78,7 @@ public class UserStorageProvider {
      */
     public org.openapis.openapi.models.operations.GetRealmUserStorageIdNameResponse getRealmUserStorageIdName(org.openapis.openapi.models.operations.GetRealmUserStorageIdNameRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmUserStorageIdNamePathParams.class, baseUrl, "/{realm}/user-storage/{id}/name", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmUserStorageIdNameRequest.class, baseUrl, "/{realm}/user-storage/{id}/name", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -117,7 +117,7 @@ public class UserStorageProvider {
      */
     public org.openapis.openapi.models.operations.PostRealmUserStorageIdRemoveImportedUsersResponse postRealmUserStorageIdRemoveImportedUsers(org.openapis.openapi.models.operations.PostRealmUserStorageIdRemoveImportedUsersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmUserStorageIdRemoveImportedUsersPathParams.class, baseUrl, "/{realm}/user-storage/{id}/remove-imported-users", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmUserStorageIdRemoveImportedUsersRequest.class, baseUrl, "/{realm}/user-storage/{id}/remove-imported-users", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -150,13 +150,13 @@ public class UserStorageProvider {
      */
     public org.openapis.openapi.models.operations.PostRealmUserStorageIdSyncResponse postRealmUserStorageIdSync(org.openapis.openapi.models.operations.PostRealmUserStorageIdSyncRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmUserStorageIdSyncPathParams.class, baseUrl, "/{realm}/user-storage/{id}/sync", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmUserStorageIdSyncRequest.class, baseUrl, "/{realm}/user-storage/{id}/sync", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostRealmUserStorageIdSyncQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostRealmUserStorageIdSyncRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -195,7 +195,7 @@ public class UserStorageProvider {
      */
     public org.openapis.openapi.models.operations.PostRealmUserStorageIdUnlinkUsersResponse postRealmUserStorageIdUnlinkUsers(org.openapis.openapi.models.operations.PostRealmUserStorageIdUnlinkUsersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmUserStorageIdUnlinkUsersPathParams.class, baseUrl, "/{realm}/user-storage/{id}/unlink-users", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmUserStorageIdUnlinkUsersRequest.class, baseUrl, "/{realm}/user-storage/{id}/unlink-users", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -228,13 +228,13 @@ public class UserStorageProvider {
      */
     public org.openapis.openapi.models.operations.PostRealmUserStorageParentIdMappersIdSyncResponse postRealmUserStorageParentIdMappersIdSync(org.openapis.openapi.models.operations.PostRealmUserStorageParentIdMappersIdSyncRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmUserStorageParentIdMappersIdSyncPathParams.class, baseUrl, "/{realm}/user-storage/{parentId}/mappers/{id}/sync", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmUserStorageParentIdMappersIdSyncRequest.class, baseUrl, "/{realm}/user-storage/{parentId}/mappers/{id}/sync", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostRealmUserStorageParentIdMappersIdSyncQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostRealmUserStorageParentIdMappersIdSyncRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

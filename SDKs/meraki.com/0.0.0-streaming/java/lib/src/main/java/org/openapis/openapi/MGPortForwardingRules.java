@@ -40,7 +40,7 @@ public class MGPortForwardingRules {
      */
     public org.openapis.openapi.models.operations.GetDeviceCellularGatewaySettingsPortForwardingRulesResponse getDeviceCellularGatewaySettingsPortForwardingRules(org.openapis.openapi.models.operations.GetDeviceCellularGatewaySettingsPortForwardingRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCellularGatewaySettingsPortForwardingRulesPathParams.class, baseUrl, "/devices/{serial}/cellularGateway/settings/portForwardingRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCellularGatewaySettingsPortForwardingRulesRequest.class, baseUrl, "/devices/{serial}/cellularGateway/settings/portForwardingRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,12 +80,12 @@ public class MGPortForwardingRules {
      */
     public org.openapis.openapi.models.operations.UpdateDeviceCellularGatewaySettingsPortForwardingRulesResponse updateDeviceCellularGatewaySettingsPortForwardingRules(org.openapis.openapi.models.operations.UpdateDeviceCellularGatewaySettingsPortForwardingRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceCellularGatewaySettingsPortForwardingRulesPathParams.class, baseUrl, "/devices/{serial}/cellularGateway/settings/portForwardingRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceCellularGatewaySettingsPortForwardingRulesRequest.class, baseUrl, "/devices/{serial}/cellularGateway/settings/portForwardingRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

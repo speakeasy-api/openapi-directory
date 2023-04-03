@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutApiDisplayAdsIdRequest {
-    
-    public PutApiDisplayAdsIdPathParams pathParams;
-    public PutApiDisplayAdsIdRequest withPathParams(PutApiDisplayAdsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PutApiDisplayAdsIdRequestBody requestBody;
+    public PutApiDisplayAdsIdRequest withRequestBody(PutApiDisplayAdsIdRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PutApiDisplayAdsIdRequestBody request;
-    public PutApiDisplayAdsIdRequest withRequest(PutApiDisplayAdsIdRequestBody request) {
-        this.request = request;
+    /**
+     * The ID of the user to unpublish.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PutApiDisplayAdsIdRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

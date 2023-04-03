@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoGetBranchRequest {
+    /**
+     * branch to get
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branch")
+    public String branch;
+    public RepoGetBranchRequest withBranch(String branch) {
+        this.branch = branch;
+        return this;
+    }
     
-    public RepoGetBranchPathParams pathParams;
-    public RepoGetBranchRequest withPathParams(RepoGetBranchPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoGetBranchRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoGetBranchRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActivitySetThreadSubscriptionRequest {
-    
-    public ActivitySetThreadSubscriptionPathParams pathParams;
-    public ActivitySetThreadSubscriptionRequest withPathParams(ActivitySetThreadSubscriptionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ActivitySetThreadSubscriptionRequestBody requestBody;
+    public ActivitySetThreadSubscriptionRequest withRequestBody(ActivitySetThreadSubscriptionRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ActivitySetThreadSubscriptionRequestBody request;
-    public ActivitySetThreadSubscriptionRequest withRequest(ActivitySetThreadSubscriptionRequestBody request) {
-        this.request = request;
+    /**
+     * The unique identifier of the pull request thread.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=thread_id")
+    public Long threadId;
+    public ActivitySetThreadSubscriptionRequest withThreadId(Long threadId) {
+        this.threadId = threadId;
         return this;
     }
     

@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoGetWikiPageRevisionsRequest {
-    
-    public RepoGetWikiPageRevisionsPathParams pathParams;
-    public RepoGetWikiPageRevisionsRequest withPathParams(RepoGetWikiPageRevisionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoGetWikiPageRevisionsRequest withOwner(String owner) {
+        this.owner = owner;
         return this;
     }
     
+    /**
+     * page number of results to return (1-based)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public RepoGetWikiPageRevisionsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public RepoGetWikiPageRevisionsQueryParams queryParams;
-    public RepoGetWikiPageRevisionsRequest withQueryParams(RepoGetWikiPageRevisionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * name of the page
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pageName")
+    public String pageName;
+    public RepoGetWikiPageRevisionsRequest withPageName(String pageName) {
+        this.pageName = pageName;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoGetWikiPageRevisionsRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

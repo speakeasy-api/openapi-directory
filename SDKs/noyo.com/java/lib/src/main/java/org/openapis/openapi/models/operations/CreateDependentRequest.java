@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateDependentRequest {
-    
-    public CreateDependentPathParams pathParams;
-    public CreateDependentRequest withPathParams(CreateDependentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.DependentCreateRequest dependentCreateRequest;
+    public CreateDependentRequest withDependentCreateRequest(org.openapis.openapi.models.shared.DependentCreateRequest dependentCreateRequest) {
+        this.dependentCreateRequest = dependentCreateRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DependentCreateRequest request;
-    public CreateDependentRequest withRequest(org.openapis.openapi.models.shared.DependentCreateRequest request) {
-        this.request = request;
+    /**
+     * The unique identifier of the employee in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=employee_id")
+    public String employeeId;
+    public CreateDependentRequest withEmployeeId(String employeeId) {
+        this.employeeId = employeeId;
         return this;
     }
     

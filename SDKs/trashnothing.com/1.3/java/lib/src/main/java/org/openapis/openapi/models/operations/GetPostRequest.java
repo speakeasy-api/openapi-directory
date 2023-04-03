@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPostRequest {
-    
-    public GetPostPathParams pathParams;
-    public GetPostRequest withPathParams(GetPostPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetPostSecurity security;
-    public GetPostRequest withSecurity(GetPostSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the post to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=post_id")
+    public String postId;
+    public GetPostRequest withPostId(String postId) {
+        this.postId = postId;
         return this;
     }
     

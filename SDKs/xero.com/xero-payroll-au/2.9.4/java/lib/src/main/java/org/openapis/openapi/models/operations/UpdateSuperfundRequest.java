@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSuperfundRequest {
-    
-    public UpdateSuperfundPathParams pathParams;
-    public UpdateSuperfundRequest withPathParams(UpdateSuperfundPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateSuperfundHeaders headers;
-    public UpdateSuperfundRequest withHeaders(UpdateSuperfundHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SuperFundInput[] request;
-    public UpdateSuperfundRequest withRequest(org.openapis.openapi.models.shared.SuperFundInput[] request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SuperFundInput[] requestBody;
+    public UpdateSuperfundRequest withRequestBody(org.openapis.openapi.models.shared.SuperFundInput[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Superfund id for single object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=SuperFundID")
+    public String superFundID;
+    public UpdateSuperfundRequest withSuperFundID(String superFundID) {
+        this.superFundID = superFundID;
+        return this;
+    }
     
-    public UpdateSuperfundSecurity security;
-    public UpdateSuperfundRequest withSecurity(UpdateSuperfundSecurity security) {
-        this.security = security;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
+    public String xeroTenantId;
+    public UpdateSuperfundRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     

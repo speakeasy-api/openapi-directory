@@ -4,27 +4,196 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DataflowProjectsLocationsJobsStagesGetExecutionDetailsRequest {
-    
-    public DataflowProjectsLocationsJobsStagesGetExecutionDetailsPathParams pathParams;
-    public DataflowProjectsLocationsJobsStagesGetExecutionDetailsRequest withPathParams(DataflowProjectsLocationsJobsStagesGetExecutionDetailsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public DataflowProjectsLocationsJobsStagesGetExecutionDetailsRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public DataflowProjectsLocationsJobsStagesGetExecutionDetailsQueryParams queryParams;
-    public DataflowProjectsLocationsJobsStagesGetExecutionDetailsRequest withQueryParams(DataflowProjectsLocationsJobsStagesGetExecutionDetailsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public DataflowProjectsLocationsJobsStagesGetExecutionDetailsRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DataflowProjectsLocationsJobsStagesGetExecutionDetailsRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public DataflowProjectsLocationsJobsStagesGetExecutionDetailsSecurity security;
-    public DataflowProjectsLocationsJobsStagesGetExecutionDetailsRequest withSecurity(DataflowProjectsLocationsJobsStagesGetExecutionDetailsSecurity security) {
-        this.security = security;
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public DataflowProjectsLocationsJobsStagesGetExecutionDetailsRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Upper time bound of work items to include, by start time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endTime")
+    public String endTime;
+    public DataflowProjectsLocationsJobsStagesGetExecutionDetailsRequest withEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DataflowProjectsLocationsJobsStagesGetExecutionDetailsRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * The job to get execution details for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
+    public String jobId;
+    public DataflowProjectsLocationsJobsStagesGetExecutionDetailsRequest withJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DataflowProjectsLocationsJobsStagesGetExecutionDetailsRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that contains the job specified by job_id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
+    public String location;
+    public DataflowProjectsLocationsJobsStagesGetExecutionDetailsRequest withLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DataflowProjectsLocationsJobsStagesGetExecutionDetailsRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * If specified, determines the maximum number of work items to return. If unspecified, the service may choose an appropriate default, or may return an arbitrarily large number of results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public DataflowProjectsLocationsJobsStagesGetExecutionDetailsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * If supplied, this should be the value of next_page_token returned by an earlier call. This will cause the next page of results to be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public DataflowProjectsLocationsJobsStagesGetExecutionDetailsRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DataflowProjectsLocationsJobsStagesGetExecutionDetailsRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * A project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public DataflowProjectsLocationsJobsStagesGetExecutionDetailsRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DataflowProjectsLocationsJobsStagesGetExecutionDetailsRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * The stage for which to fetch information.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=stageId")
+    public String stageId;
+    public DataflowProjectsLocationsJobsStagesGetExecutionDetailsRequest withStageId(String stageId) {
+        this.stageId = stageId;
+        return this;
+    }
+    
+    /**
+     * Lower time bound of work items to include, by start time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startTime")
+    public String startTime;
+    public DataflowProjectsLocationsJobsStagesGetExecutionDetailsRequest withStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public DataflowProjectsLocationsJobsStagesGetExecutionDetailsRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public DataflowProjectsLocationsJobsStagesGetExecutionDetailsRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

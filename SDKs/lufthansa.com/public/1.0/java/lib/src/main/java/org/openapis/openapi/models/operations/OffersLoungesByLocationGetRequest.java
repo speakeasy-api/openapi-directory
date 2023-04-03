@@ -4,34 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OffersLoungesByLocationGetRequest {
-    
-    public OffersLoungesByLocationGetPathParams pathParams;
-    public OffersLoungesByLocationGetRequest withPathParams(OffersLoungesByLocationGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public OffersLoungesByLocationGetRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public OffersLoungesByLocationGetQueryParams queryParams;
-    public OffersLoungesByLocationGetRequest withQueryParams(OffersLoungesByLocationGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Cabin class: 'M', 'E', 'C', 'F' (Acceptable values are: "", "M", "E", "C", "F")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cabinClass")
+    public String cabinClass;
+    public OffersLoungesByLocationGetRequest withCabinClass(String cabinClass) {
+        this.cabinClass = cabinClass;
         return this;
     }
     
-    
-    public OffersLoungesByLocationGetHeaders headers;
-    public OffersLoungesByLocationGetRequest withHeaders(OffersLoungesByLocationGetHeaders headers) {
-        this.headers = headers;
+    /**
+     * Language code.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public String lang;
+    public OffersLoungesByLocationGetRequest withLang(String lang) {
+        this.lang = lang;
         return this;
     }
     
+    /**
+     * 3-leter IATA airport or city code (e.g. 'ZRH')
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
+    public String location;
+    public OffersLoungesByLocationGetRequest withLocation(String location) {
+        this.location = location;
+        return this;
+    }
     
-    public OffersLoungesByLocationGetSecurity security;
-    public OffersLoungesByLocationGetRequest withSecurity(OffersLoungesByLocationGetSecurity security) {
-        this.security = security;
+    /**
+     * Frequent flyer level ('FTL', 'SGC', 'SEN', 'HON') (Acceptable values are: "", "FTL", "SGC", "SEN", "HON")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tierCode")
+    public String tierCode;
+    public OffersLoungesByLocationGetRequest withTierCode(String tierCode) {
+        this.tierCode = tierCode;
         return this;
     }
     

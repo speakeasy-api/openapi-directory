@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMerchantsMerchantIdPaymentMethodSettingsRequest {
-    
-    public GetMerchantsMerchantIdPaymentMethodSettingsPathParams pathParams;
-    public GetMerchantsMerchantIdPaymentMethodSettingsRequest withPathParams(GetMerchantsMerchantIdPaymentMethodSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the Business Line for which to return the payment methods.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=businessLineId")
+    public String businessLineId;
+    public GetMerchantsMerchantIdPaymentMethodSettingsRequest withBusinessLineId(String businessLineId) {
+        this.businessLineId = businessLineId;
         return this;
     }
     
-    
-    public GetMerchantsMerchantIdPaymentMethodSettingsQueryParams queryParams;
-    public GetMerchantsMerchantIdPaymentMethodSettingsRequest withQueryParams(GetMerchantsMerchantIdPaymentMethodSettingsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The unique identifier of the merchant account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
+    public String merchantId;
+    public GetMerchantsMerchantIdPaymentMethodSettingsRequest withMerchantId(String merchantId) {
+        this.merchantId = merchantId;
         return this;
     }
     
+    /**
+     * The number of the page to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
+    public Integer pageNumber;
+    public GetMerchantsMerchantIdPaymentMethodSettingsRequest withPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
     
-    public GetMerchantsMerchantIdPaymentMethodSettingsSecurity security;
-    public GetMerchantsMerchantIdPaymentMethodSettingsRequest withSecurity(GetMerchantsMerchantIdPaymentMethodSettingsSecurity security) {
-        this.security = security;
+    /**
+     * The number of items to have on a page, maximum 100. The default is 10 items on a page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public GetMerchantsMerchantIdPaymentMethodSettingsRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the store for which to return the payment methods.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=storeId")
+    public String storeId;
+    public GetMerchantsMerchantIdPaymentMethodSettingsRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

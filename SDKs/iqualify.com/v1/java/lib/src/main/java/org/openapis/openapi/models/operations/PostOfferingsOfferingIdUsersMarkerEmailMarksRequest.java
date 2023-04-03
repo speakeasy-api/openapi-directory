@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostOfferingsOfferingIdUsersMarkerEmailMarksRequest {
-    
-    public PostOfferingsOfferingIdUsersMarkerEmailMarksPathParams pathParams;
-    public PostOfferingsOfferingIdUsersMarkerEmailMarksRequest withPathParams(PostOfferingsOfferingIdUsersMarkerEmailMarksPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * array of learners e-mails
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public String[] request;
-    public PostOfferingsOfferingIdUsersMarkerEmailMarksRequest withRequest(String[] request) {
-        this.request = request;
+    public String[] requestBody;
+    public PostOfferingsOfferingIdUsersMarkerEmailMarksRequest withRequestBody(String[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * marker's email
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=markerEmail")
+    public String markerEmail;
+    public PostOfferingsOfferingIdUsersMarkerEmailMarksRequest withMarkerEmail(String markerEmail) {
+        this.markerEmail = markerEmail;
+        return this;
+    }
+    
+    /**
+     * offering's id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offeringId")
+    public String offeringId;
+    public PostOfferingsOfferingIdUsersMarkerEmailMarksRequest withOfferingId(String offeringId) {
+        this.offeringId = offeringId;
         return this;
     }
     

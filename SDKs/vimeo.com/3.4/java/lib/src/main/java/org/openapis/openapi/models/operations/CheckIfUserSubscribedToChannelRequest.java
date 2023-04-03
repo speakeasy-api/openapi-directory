@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CheckIfUserSubscribedToChannelRequest {
+    /**
+     * The ID of the channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel_id")
+    public Double channelId;
+    public CheckIfUserSubscribedToChannelRequest withChannelId(Double channelId) {
+        this.channelId = channelId;
+        return this;
+    }
     
-    public CheckIfUserSubscribedToChannelPathParams pathParams;
-    public CheckIfUserSubscribedToChannelRequest withPathParams(CheckIfUserSubscribedToChannelPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public CheckIfUserSubscribedToChannelRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

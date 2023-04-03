@@ -4,13 +4,105 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiGetInvoiceListRequest {
+    /**
+     * If true the list of tags passed to the call are used to filter orders to not include these tags
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=excludeTags")
+    public Boolean excludeTags;
+    public OrderApiGetInvoiceListRequest withExcludeTags(Boolean excludeTags) {
+        this.excludeTags = excludeTags;
+        return this;
+    }
     
-    public OrderApiGetInvoiceListQueryParams queryParams;
-    public OrderApiGetInvoiceListRequest withQueryParams(OrderApiGetInvoiceListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includePositions")
+    public Boolean includePositions;
+    public OrderApiGetInvoiceListRequest withIncludePositions(Boolean includePositions) {
+        this.includePositions = includePositions;
+        return this;
+    }
+    
+    /**
+     * Specifies the newest invoice date to include
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxInvoiceDate")
+    public OffsetDateTime maxInvoiceDate;
+    public OrderApiGetInvoiceListRequest withMaxInvoiceDate(OffsetDateTime maxInvoiceDate) {
+        this.maxInvoiceDate = maxInvoiceDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxPayDate")
+    public OffsetDateTime maxPayDate;
+    public OrderApiGetInvoiceListRequest withMaxPayDate(OffsetDateTime maxPayDate) {
+        this.maxPayDate = maxPayDate;
+        return this;
+    }
+    
+    /**
+     * Specifies the oldest invoice date to include
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minInvoiceDate")
+    public OffsetDateTime minInvoiceDate;
+    public OrderApiGetInvoiceListRequest withMinInvoiceDate(OffsetDateTime minInvoiceDate) {
+        this.minInvoiceDate = minInvoiceDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minPayDate")
+    public OffsetDateTime minPayDate;
+    public OrderApiGetInvoiceListRequest withMinPayDate(OffsetDateTime minPayDate) {
+        this.minPayDate = minPayDate;
+        return this;
+    }
+    
+    /**
+     * Specifies a list of state ids to include in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderStateId")
+    public Integer[] orderStateId;
+    public OrderApiGetInvoiceListRequest withOrderStateId(Integer[] orderStateId) {
+        this.orderStateId = orderStateId;
+        return this;
+    }
+    
+    /**
+     * Specifies the page to request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public OrderApiGetInvoiceListRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Specifies the pagesize. Defaults to 50, max value is 250
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public OrderApiGetInvoiceListRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * Specifies a list of shop ids for which invoices should be included
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=shopId")
+    public Long[] shopId;
+    public OrderApiGetInvoiceListRequest withShopId(Long[] shopId) {
+        this.shopId = shopId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
+    public String[] tag;
+    public OrderApiGetInvoiceListRequest withTag(String[] tag) {
+        this.tag = tag;
         return this;
     }
     

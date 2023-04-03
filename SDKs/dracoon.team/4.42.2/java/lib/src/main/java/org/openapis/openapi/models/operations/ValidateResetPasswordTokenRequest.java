@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ValidateResetPasswordTokenRequest {
-    
-    public ValidateResetPasswordTokenPathParams pathParams;
-    public ValidateResetPasswordTokenRequest withPathParams(ValidateResetPasswordTokenPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Password reset token
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=token")
+    public String token;
+    public ValidateResetPasswordTokenRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

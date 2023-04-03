@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DirectionsForRouteRequest {
-    
-    public DirectionsForRoutePathParams pathParams;
-    public DirectionsForRouteRequest withPathParams(DirectionsForRoutePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Your developer id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
+    public String devid;
+    public DirectionsForRouteRequest withDevid(String devid) {
+        this.devid = devid;
         return this;
     }
     
+    /**
+     * Identifier of route; values returned by Routes API - v3/routes
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=route_id")
+    public Integer routeId;
+    public DirectionsForRouteRequest withRouteId(Integer routeId) {
+        this.routeId = routeId;
+        return this;
+    }
     
-    public DirectionsForRouteQueryParams queryParams;
-    public DirectionsForRouteRequest withQueryParams(DirectionsForRouteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Authentication signature for request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
+    public String signature;
+    public DirectionsForRouteRequest withSignature(String signature) {
+        this.signature = signature;
+        return this;
+    }
+    
+    /**
+     * Please ignore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public DirectionsForRouteRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

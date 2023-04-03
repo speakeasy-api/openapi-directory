@@ -48,7 +48,7 @@ public class Tasks {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV2TasksJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV2TasksJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -87,7 +87,7 @@ public class Tasks {
      */
     public org.openapis.openapi.models.operations.GetV2TasksIdJsonResponse getV2TasksIdJson(org.openapis.openapi.models.operations.GetV2TasksIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2TasksIdJsonPathParams.class, baseUrl, "/v2/tasks/{id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2TasksIdJsonRequest.class, baseUrl, "/v2/tasks/{id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -124,7 +124,7 @@ public class Tasks {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV2TasksJsonResponse postV2TasksJson(org.openapis.openapi.models.operations.PostV2TasksJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV2TasksJsonResponse postV2TasksJson(org.openapis.openapi.models.operations.PostV2TasksJsonRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/tasks.json");
         
@@ -170,12 +170,12 @@ public class Tasks {
      */
     public org.openapis.openapi.models.operations.PutV2TasksIdJsonResponse putV2TasksIdJson(org.openapis.openapi.models.operations.PutV2TasksIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutV2TasksIdJsonPathParams.class, baseUrl, "/v2/tasks/{id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutV2TasksIdJsonRequest.class, baseUrl, "/v2/tasks/{id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         

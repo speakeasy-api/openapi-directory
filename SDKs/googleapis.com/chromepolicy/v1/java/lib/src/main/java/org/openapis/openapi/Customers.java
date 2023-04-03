@@ -35,27 +35,28 @@ public class Customers {
     /**
      * Delete multiple policy values that are applied to a specific group. All targets must have the same target format. That is to say that they must point to the same target resource and must have the same keys specified in `additionalTargetKeyNames`, though the values for those keys may be different. On failure the request will return the error details as part of the google.rpc.Status.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsBatchDeleteResponse chromepolicyCustomersPoliciesGroupsBatchDelete(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsBatchDeleteResponse chromepolicyCustomersPoliciesGroupsBatchDelete(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest request, org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsBatchDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsBatchDeletePathParams.class, baseUrl, "/v1/{customer}/policies/groups:batchDelete", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest.class, baseUrl, "/v1/{customer}/policies/groups:batchDelete", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleChromePolicyVersionsV1BatchDeleteGroupPoliciesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsBatchDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,27 +83,28 @@ public class Customers {
     /**
      * Modify multiple policy values that are applied to a specific group. All targets must have the same target format. That is to say that they must point to the same target resource and must have the same keys specified in `additionalTargetKeyNames`, though the values for those keys may be different. On failure the request will return the error details as part of the google.rpc.Status.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsBatchModifyResponse chromepolicyCustomersPoliciesGroupsBatchModify(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsBatchModifyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsBatchModifyResponse chromepolicyCustomersPoliciesGroupsBatchModify(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsBatchModifyRequest request, org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsBatchModifySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsBatchModifyPathParams.class, baseUrl, "/v1/{customer}/policies/groups:batchModify", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsBatchModifyRequest.class, baseUrl, "/v1/{customer}/policies/groups:batchModify", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleChromePolicyVersionsV1BatchModifyGroupPoliciesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsBatchModifyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsBatchModifyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -129,27 +131,28 @@ public class Customers {
     /**
      * Retrieve a group priority ordering for an app. The target app must be supplied in `additionalTargetKeyNames` in the PolicyTargetKey. On failure the request will return the error details as part of the google.rpc.Status.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsListGroupPriorityOrderingResponse chromepolicyCustomersPoliciesGroupsListGroupPriorityOrdering(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsListGroupPriorityOrderingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsListGroupPriorityOrderingResponse chromepolicyCustomersPoliciesGroupsListGroupPriorityOrdering(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsListGroupPriorityOrderingRequest request, org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsListGroupPriorityOrderingSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsListGroupPriorityOrderingPathParams.class, baseUrl, "/v1/{customer}/policies/groups:listGroupPriorityOrdering", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsListGroupPriorityOrderingRequest.class, baseUrl, "/v1/{customer}/policies/groups:listGroupPriorityOrdering", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleChromePolicyVersionsV1ListGroupPriorityOrderingRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsListGroupPriorityOrderingQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsListGroupPriorityOrderingRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -176,27 +179,28 @@ public class Customers {
     /**
      * Update a group priority ordering for an app. The target app must be supplied in `additionalTargetKeyNames` in the PolicyTargetKey. On failure the request will return the error details as part of the google.rpc.Status.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsUpdateGroupPriorityOrderingResponse chromepolicyCustomersPoliciesGroupsUpdateGroupPriorityOrdering(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsUpdateGroupPriorityOrderingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsUpdateGroupPriorityOrderingResponse chromepolicyCustomersPoliciesGroupsUpdateGroupPriorityOrdering(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsUpdateGroupPriorityOrderingRequest request, org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsUpdateGroupPriorityOrderingSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsUpdateGroupPriorityOrderingPathParams.class, baseUrl, "/v1/{customer}/policies/groups:updateGroupPriorityOrdering", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsUpdateGroupPriorityOrderingRequest.class, baseUrl, "/v1/{customer}/policies/groups:updateGroupPriorityOrdering", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleChromePolicyVersionsV1UpdateGroupPriorityOrderingRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsUpdateGroupPriorityOrderingQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsUpdateGroupPriorityOrderingRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -223,27 +227,28 @@ public class Customers {
     /**
      * Creates a certificate at a specified OU for a customer.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksDefineCertificateResponse chromepolicyCustomersPoliciesNetworksDefineCertificate(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksDefineCertificateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksDefineCertificateResponse chromepolicyCustomersPoliciesNetworksDefineCertificate(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksDefineCertificateRequest request, org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksDefineCertificateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksDefineCertificatePathParams.class, baseUrl, "/v1/{customer}/policies/networks:defineCertificate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksDefineCertificateRequest.class, baseUrl, "/v1/{customer}/policies/networks:defineCertificate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleChromePolicyVersionsV1DefineCertificateRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksDefineCertificateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksDefineCertificateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -270,27 +275,28 @@ public class Customers {
     /**
      * Define a new network.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksDefineNetworkResponse chromepolicyCustomersPoliciesNetworksDefineNetwork(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksDefineNetworkRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksDefineNetworkResponse chromepolicyCustomersPoliciesNetworksDefineNetwork(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksDefineNetworkRequest request, org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksDefineNetworkSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksDefineNetworkPathParams.class, baseUrl, "/v1/{customer}/policies/networks:defineNetwork", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksDefineNetworkRequest.class, baseUrl, "/v1/{customer}/policies/networks:defineNetwork", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleChromePolicyVersionsV1DefineNetworkRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksDefineNetworkQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksDefineNetworkRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -317,27 +323,28 @@ public class Customers {
     /**
      * Remove an existing certificate by guid.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksRemoveCertificateResponse chromepolicyCustomersPoliciesNetworksRemoveCertificate(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksRemoveCertificateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksRemoveCertificateResponse chromepolicyCustomersPoliciesNetworksRemoveCertificate(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksRemoveCertificateRequest request, org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksRemoveCertificateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksRemoveCertificatePathParams.class, baseUrl, "/v1/{customer}/policies/networks:removeCertificate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksRemoveCertificateRequest.class, baseUrl, "/v1/{customer}/policies/networks:removeCertificate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleChromePolicyVersionsV1RemoveCertificateRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksRemoveCertificateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksRemoveCertificateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -364,27 +371,28 @@ public class Customers {
     /**
      * Remove an existing network by guid.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksRemoveNetworkResponse chromepolicyCustomersPoliciesNetworksRemoveNetwork(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksRemoveNetworkRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksRemoveNetworkResponse chromepolicyCustomersPoliciesNetworksRemoveNetwork(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksRemoveNetworkRequest request, org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksRemoveNetworkSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksRemoveNetworkPathParams.class, baseUrl, "/v1/{customer}/policies/networks:removeNetwork", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksRemoveNetworkRequest.class, baseUrl, "/v1/{customer}/policies/networks:removeNetwork", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleChromePolicyVersionsV1RemoveNetworkRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksRemoveNetworkQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesNetworksRemoveNetworkRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -411,27 +419,28 @@ public class Customers {
     /**
      * Modify multiple policy values that are applied to a specific org unit so that they now inherit the value from a parent (if applicable). All targets must have the same target format. That is to say that they must point to the same target resource and must have the same keys specified in `additionalTargetKeyNames`, though the values for those keys may be different. On failure the request will return the error details as part of the google.rpc.Status.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesOrgunitsBatchInheritResponse chromepolicyCustomersPoliciesOrgunitsBatchInherit(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesOrgunitsBatchInheritRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesOrgunitsBatchInheritResponse chromepolicyCustomersPoliciesOrgunitsBatchInherit(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesOrgunitsBatchInheritRequest request, org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesOrgunitsBatchInheritSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesOrgunitsBatchInheritPathParams.class, baseUrl, "/v1/{customer}/policies/orgunits:batchInherit", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesOrgunitsBatchInheritRequest.class, baseUrl, "/v1/{customer}/policies/orgunits:batchInherit", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleChromePolicyVersionsV1BatchInheritOrgUnitPoliciesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesOrgunitsBatchInheritQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesOrgunitsBatchInheritRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -458,27 +467,28 @@ public class Customers {
     /**
      * Modify multiple policy values that are applied to a specific org unit. All targets must have the same target format. That is to say that they must point to the same target resource and must have the same keys specified in `additionalTargetKeyNames`, though the values for those keys may be different. On failure the request will return the error details as part of the google.rpc.Status.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesOrgunitsBatchModifyResponse chromepolicyCustomersPoliciesOrgunitsBatchModify(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesOrgunitsBatchModifyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesOrgunitsBatchModifyResponse chromepolicyCustomersPoliciesOrgunitsBatchModify(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesOrgunitsBatchModifyRequest request, org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesOrgunitsBatchModifySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesOrgunitsBatchModifyPathParams.class, baseUrl, "/v1/{customer}/policies/orgunits:batchModify", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesOrgunitsBatchModifyRequest.class, baseUrl, "/v1/{customer}/policies/orgunits:batchModify", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleChromePolicyVersionsV1BatchModifyOrgUnitPoliciesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesOrgunitsBatchModifyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesOrgunitsBatchModifyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -505,27 +515,28 @@ public class Customers {
     /**
      * Gets the resolved policy values for a list of policies that match a search query.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesResolveResponse chromepolicyCustomersPoliciesResolve(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesResolveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesResolveResponse chromepolicyCustomersPoliciesResolve(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesResolveRequest request, org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesResolveSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesResolvePathParams.class, baseUrl, "/v1/{customer}/policies:resolve", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesResolveRequest.class, baseUrl, "/v1/{customer}/policies:resolve", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleChromePolicyVersionsV1ResolveRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesResolveQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesResolveRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -552,25 +563,26 @@ public class Customers {
     /**
      * Get a specific policy schema for a customer by its resource name.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChromepolicyCustomersPolicySchemasGetResponse chromepolicyCustomersPolicySchemasGet(org.openapis.openapi.models.operations.ChromepolicyCustomersPolicySchemasGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChromepolicyCustomersPolicySchemasGetResponse chromepolicyCustomersPolicySchemasGet(org.openapis.openapi.models.operations.ChromepolicyCustomersPolicySchemasGetRequest request, org.openapis.openapi.models.operations.ChromepolicyCustomersPolicySchemasGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromepolicyCustomersPolicySchemasGetPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromepolicyCustomersPolicySchemasGetRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromepolicyCustomersPolicySchemasGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromepolicyCustomersPolicySchemasGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -597,25 +609,26 @@ public class Customers {
     /**
      * Gets a list of policy schemas that match a specified filter value for a given customer.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChromepolicyCustomersPolicySchemasListResponse chromepolicyCustomersPolicySchemasList(org.openapis.openapi.models.operations.ChromepolicyCustomersPolicySchemasListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChromepolicyCustomersPolicySchemasListResponse chromepolicyCustomersPolicySchemasList(org.openapis.openapi.models.operations.ChromepolicyCustomersPolicySchemasListRequest request, org.openapis.openapi.models.operations.ChromepolicyCustomersPolicySchemasListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromepolicyCustomersPolicySchemasListPathParams.class, baseUrl, "/v1/{parent}/policySchemas", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromepolicyCustomersPolicySchemasListRequest.class, baseUrl, "/v1/{parent}/policySchemas", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromepolicyCustomersPolicySchemasListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromepolicyCustomersPolicySchemasListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

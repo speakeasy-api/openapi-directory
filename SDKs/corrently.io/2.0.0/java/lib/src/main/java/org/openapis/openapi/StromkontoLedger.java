@@ -43,7 +43,7 @@ public class StromkontoLedger {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrepareTransactionResponse prepareTransaction(org.openapis.openapi.models.operations.PrepareTransactionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrepareTransactionResponse prepareTransaction(org.openapis.openapi.models.operations.PrepareTransactionRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/stromkonto/prepareTransaction");
         
@@ -90,7 +90,7 @@ public class StromkontoLedger {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StromkontoBalancesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StromkontoBalancesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -136,7 +136,7 @@ public class StromkontoLedger {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StromkontoChoicesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StromkontoChoicesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -174,7 +174,7 @@ public class StromkontoLedger {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StromkontoLoginResponse stromkontoLogin(org.openapis.openapi.models.operations.StromkontoLoginRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StromkontoLoginResponse stromkontoLogin(org.openapis.openapi.models.operations.StromkontoLoginRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/stromkonto/login");
         
@@ -219,7 +219,7 @@ public class StromkontoLedger {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StromkontoRegisterResponse stromkontoRegister(org.openapis.openapi.models.operations.StromkontoRegisterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StromkontoRegisterResponse stromkontoRegister(org.openapis.openapi.models.operations.StromkontoRegisterRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/stromkonto/register");
         

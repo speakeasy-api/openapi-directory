@@ -4,27 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETListsNamesFormatRequest {
-    
-    public GETListsNamesFormatPathParams pathParams;
-    public GETListsNamesFormatRequest withPathParams(GETListsNamesFormatPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-key")
+    public String apiKey;
+    public GETListsNamesFormatRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
-    
-    public GETListsNamesFormatQueryParams queryParams;
-    public GETListsNamesFormatRequest withQueryParams(GETListsNamesFormatQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GETListsNamesFormatSecurity security;
-    public GETListsNamesFormatRequest withSecurity(GETListsNamesFormatSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public GETListsNamesFormatFormatEnum format;
+    public GETListsNamesFormatRequest withFormat(GETListsNamesFormatFormatEnum format) {
+        this.format = format;
         return this;
     }
     

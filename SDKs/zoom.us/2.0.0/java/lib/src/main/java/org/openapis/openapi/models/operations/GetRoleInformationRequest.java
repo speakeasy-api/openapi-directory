@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRoleInformationRequest {
-    
-    public GetRoleInformationPathParams pathParams;
-    public GetRoleInformationRequest withPathParams(GetRoleInformationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetRoleInformationSecurity security;
-    public GetRoleInformationRequest withSecurity(GetRoleInformationSecurity security) {
-        this.security = security;
+    /**
+     * Role Id. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=roleId")
+    public String roleId;
+    public GetRoleInformationRequest withRoleId(String roleId) {
+        this.roleId = roleId;
         return this;
     }
     

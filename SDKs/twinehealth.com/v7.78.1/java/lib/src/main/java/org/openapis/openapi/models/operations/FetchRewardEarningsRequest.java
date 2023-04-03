@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchRewardEarningsRequest {
+    /**
+     * Group identifiers
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[groups]")
+    public String filterGroups;
+    public FetchRewardEarningsRequest withFilterGroups(String filterGroups) {
+        this.filterGroups = filterGroups;
+        return this;
+    }
     
-    public FetchRewardEarningsQueryParams queryParams;
-    public FetchRewardEarningsRequest withQueryParams(FetchRewardEarningsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Patient identifier
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[patient]")
+    public String filterPatient;
+    public FetchRewardEarningsRequest withFilterPatient(String filterPatient) {
+        this.filterPatient = filterPatient;
+        return this;
+    }
+    
+    /**
+     * If true, only returns those reward earnings for which ready_for_fulfillment is true and fulfilled_at is null. If false, only returns those reward earnings for which ready_for_fulfillment is false and fulfilled_at is null.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[ready_for_fulfillment]")
+    public Boolean filterReadyForFulfillment;
+    public FetchRewardEarningsRequest withFilterReadyForFulfillment(Boolean filterReadyForFulfillment) {
+        this.filterReadyForFulfillment = filterReadyForFulfillment;
         return this;
     }
     

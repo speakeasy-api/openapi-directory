@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateConversationScopedWebhookRequest {
-    
-    public CreateConversationScopedWebhookPathParams pathParams;
-    public CreateConversationScopedWebhookRequest withPathParams(CreateConversationScopedWebhookPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this webhook.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConversationSid")
+    public String conversationSid;
+    public CreateConversationScopedWebhookRequest withConversationSid(String conversationSid) {
+        this.conversationSid = conversationSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateConversationScopedWebhookCreateConversationScopedWebhookRequest request;
-    public CreateConversationScopedWebhookRequest withRequest(CreateConversationScopedWebhookCreateConversationScopedWebhookRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateConversationScopedWebhookSecurity security;
-    public CreateConversationScopedWebhookRequest withSecurity(CreateConversationScopedWebhookSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateConversationScopedWebhookRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateConversationScopedWebhookCreateConversationScopedWebhookRequest requestBody;
+    public CreateConversationScopedWebhookRequest withRequestBody(CreateConversationScopedWebhookCreateConversationScopedWebhookRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

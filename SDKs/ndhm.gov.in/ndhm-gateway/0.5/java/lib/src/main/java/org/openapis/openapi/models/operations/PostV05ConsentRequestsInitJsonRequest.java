@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05ConsentRequestsInitJsonRequest {
-    
-    public PostV05ConsentRequestsInitJsonHeaders headers;
-    public PostV05ConsentRequestsInitJsonRequest withHeaders(PostV05ConsentRequestsInitJsonHeaders headers) {
-        this.headers = headers;
+    /**
+     * Access token which was issued after successful login with gateway auth server.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostV05ConsentRequestsInitJsonRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ConsentRequest request;
-    public PostV05ConsentRequestsInitJsonRequest withRequest(org.openapis.openapi.models.shared.ConsentRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ConsentRequest consentRequest;
+    public PostV05ConsentRequestsInitJsonRequest withConsentRequest(org.openapis.openapi.models.shared.ConsentRequest consentRequest) {
+        this.consentRequest = consentRequest;
+        return this;
+    }
+    
+    /**
+     * Suffix of the consent manager to which the request was intended.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-CM-ID")
+    public String xCmId;
+    public PostV05ConsentRequestsInitJsonRequest withXCmId(String xCmId) {
+        this.xCmId = xCmId;
         return this;
     }
     

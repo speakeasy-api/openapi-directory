@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCompanyTimeOffTypesRequest {
+    /**
+     * Pagination attribute to limit how many records will be returned per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetCompanyTimeOffTypesRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetCompanyTimeOffTypesQueryParams queryParams;
-    public GetCompanyTimeOffTypesRequest withQueryParams(GetCompanyTimeOffTypesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Pagination attribute to identify which page you are requesting, by the form of telling an offset from the first record that would be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetCompanyTimeOffTypesRequest withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     

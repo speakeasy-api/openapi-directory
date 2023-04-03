@@ -4,27 +4,38 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DashboardWebinarParticipantQOSRequest {
-    
-    public DashboardWebinarParticipantQOSPathParams pathParams;
-    public DashboardWebinarParticipantQOSRequest withPathParams(DashboardWebinarParticipantQOSPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Participant ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=participantId")
+    public String participantId;
+    public DashboardWebinarParticipantQOSRequest withParticipantId(String participantId) {
+        this.participantId = participantId;
         return this;
     }
     
-    
-    public DashboardWebinarParticipantQOSQueryParams queryParams;
-    public DashboardWebinarParticipantQOSRequest withQueryParams(DashboardWebinarParticipantQOSQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The webinar type.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public DashboardWebinarParticipantQOSTypeEnum type;
+    public DashboardWebinarParticipantQOSRequest withType(DashboardWebinarParticipantQOSTypeEnum type) {
+        this.type = type;
         return this;
     }
     
-    
-    public DashboardWebinarParticipantQOSSecurity security;
-    public DashboardWebinarParticipantQOSRequest withSecurity(DashboardWebinarParticipantQOSSecurity security) {
-        this.security = security;
+    /**
+     * The webinar ID or the webinar UUID.  If a webinar ID is provided in the request instead of a UUID, the response will be for the latest webinar instance.
+     * 
+     * If a UUID starts with "/" or contains "//" (example: "/ajXp112QmuoKj4854875==\"), you must **double encode** the UUID before making an API request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webinarId")
+    public String webinarId;
+    public DashboardWebinarParticipantQOSRequest withWebinarId(String webinarId) {
+        this.webinarId = webinarId;
         return this;
     }
     

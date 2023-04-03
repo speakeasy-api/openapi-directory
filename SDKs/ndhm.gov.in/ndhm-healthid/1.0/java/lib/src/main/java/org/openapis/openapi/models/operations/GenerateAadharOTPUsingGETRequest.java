@@ -4,20 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GenerateAadharOTPUsingGETRequest {
-    
-    public GenerateAadharOTPUsingGETHeaders headers;
-    public GenerateAadharOTPUsingGETRequest withHeaders(GenerateAadharOTPUsingGETHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public GenerateAadharOTPUsingGETRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
-    
-    public GenerateAadharOTPUsingGETSecurity security;
-    public GenerateAadharOTPUsingGETRequest withSecurity(GenerateAadharOTPUsingGETSecurity security) {
-        this.security = security;
+    /**
+     * Auth Token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Token")
+    public String xToken;
+    public GenerateAadharOTPUsingGETRequest withXToken(String xToken) {
+        this.xToken = xToken;
         return this;
     }
     

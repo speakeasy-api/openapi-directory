@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDeviceCellularGatewayPortForwardingRulesRequest {
-    
-    public GetDeviceCellularGatewayPortForwardingRulesPathParams pathParams;
-    public GetDeviceCellularGatewayPortForwardingRulesRequest withPathParams(GetDeviceCellularGatewayPortForwardingRulesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public GetDeviceCellularGatewayPortForwardingRulesRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

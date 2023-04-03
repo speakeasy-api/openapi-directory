@@ -34,27 +34,28 @@ public class Projects {
     /**
      * LRO endpoint to batch process many documents. The output is written to Cloud Storage as JSON in the [Document] format.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsDocumentsBatchProcessResponse documentaiProjectsLocationsDocumentsBatchProcess(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsDocumentsBatchProcessRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsDocumentsBatchProcessResponse documentaiProjectsLocationsDocumentsBatchProcess(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsDocumentsBatchProcessRequest request, org.openapis.openapi.models.operations.DocumentaiProjectsLocationsDocumentsBatchProcessSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsDocumentsBatchProcessPathParams.class, baseUrl, "/v1beta2/{parent}/documents:batchProcess", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsDocumentsBatchProcessRequest.class, baseUrl, "/v1beta2/{parent}/documents:batchProcess", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDocumentaiV1beta2BatchProcessDocumentsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsDocumentsBatchProcessQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsDocumentsBatchProcessRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,27 +82,28 @@ public class Projects {
     /**
      * Processes a single document.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsDocumentsProcessResponse documentaiProjectsLocationsDocumentsProcess(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsDocumentsProcessRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsDocumentsProcessResponse documentaiProjectsLocationsDocumentsProcess(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsDocumentsProcessRequest request, org.openapis.openapi.models.operations.DocumentaiProjectsLocationsDocumentsProcessSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsDocumentsProcessPathParams.class, baseUrl, "/v1beta2/{parent}/documents:process", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsDocumentsProcessRequest.class, baseUrl, "/v1beta2/{parent}/documents:process", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDocumentaiV1beta2ProcessDocumentRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsDocumentsProcessQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsDocumentsProcessRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -128,25 +130,26 @@ public class Projects {
     /**
      * Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DocumentaiProjectsOperationsGetResponse documentaiProjectsOperationsGet(org.openapis.openapi.models.operations.DocumentaiProjectsOperationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DocumentaiProjectsOperationsGetResponse documentaiProjectsOperationsGet(org.openapis.openapi.models.operations.DocumentaiProjectsOperationsGetRequest request, org.openapis.openapi.models.operations.DocumentaiProjectsOperationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsOperationsGetPathParams.class, baseUrl, "/v1beta2/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsOperationsGetRequest.class, baseUrl, "/v1beta2/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsOperationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsOperationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

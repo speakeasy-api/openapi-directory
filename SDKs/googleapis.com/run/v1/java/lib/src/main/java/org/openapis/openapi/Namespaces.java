@@ -34,25 +34,26 @@ public class Namespaces {
     /**
      * List authorized domains.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RunNamespacesAuthorizeddomainsListResponse runNamespacesAuthorizeddomainsList(org.openapis.openapi.models.operations.RunNamespacesAuthorizeddomainsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RunNamespacesAuthorizeddomainsListResponse runNamespacesAuthorizeddomainsList(org.openapis.openapi.models.operations.RunNamespacesAuthorizeddomainsListRequest request, org.openapis.openapi.models.operations.RunNamespacesAuthorizeddomainsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesAuthorizeddomainsListPathParams.class, baseUrl, "/apis/domains.cloudrun.com/v1/{parent}/authorizeddomains", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesAuthorizeddomainsListRequest.class, baseUrl, "/apis/domains.cloudrun.com/v1/{parent}/authorizeddomains", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesAuthorizeddomainsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesAuthorizeddomainsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class Namespaces {
     /**
      * List configurations.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RunNamespacesConfigurationsListResponse runNamespacesConfigurationsList(org.openapis.openapi.models.operations.RunNamespacesConfigurationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RunNamespacesConfigurationsListResponse runNamespacesConfigurationsList(org.openapis.openapi.models.operations.RunNamespacesConfigurationsListRequest request, org.openapis.openapi.models.operations.RunNamespacesConfigurationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesConfigurationsListPathParams.class, baseUrl, "/apis/serving.knative.dev/v1/{parent}/configurations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesConfigurationsListRequest.class, baseUrl, "/apis/serving.knative.dev/v1/{parent}/configurations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesConfigurationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesConfigurationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,27 +126,28 @@ public class Namespaces {
     /**
      * Create a new domain mapping.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RunNamespacesDomainmappingsCreateResponse runNamespacesDomainmappingsCreate(org.openapis.openapi.models.operations.RunNamespacesDomainmappingsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RunNamespacesDomainmappingsCreateResponse runNamespacesDomainmappingsCreate(org.openapis.openapi.models.operations.RunNamespacesDomainmappingsCreateRequest request, org.openapis.openapi.models.operations.RunNamespacesDomainmappingsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesDomainmappingsCreatePathParams.class, baseUrl, "/apis/domains.cloudrun.com/v1/{parent}/domainmappings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesDomainmappingsCreateRequest.class, baseUrl, "/apis/domains.cloudrun.com/v1/{parent}/domainmappings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "domainMapping", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesDomainmappingsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesDomainmappingsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,25 +174,26 @@ public class Namespaces {
     /**
      * Delete a domain mapping.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RunNamespacesDomainmappingsDeleteResponse runNamespacesDomainmappingsDelete(org.openapis.openapi.models.operations.RunNamespacesDomainmappingsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RunNamespacesDomainmappingsDeleteResponse runNamespacesDomainmappingsDelete(org.openapis.openapi.models.operations.RunNamespacesDomainmappingsDeleteRequest request, org.openapis.openapi.models.operations.RunNamespacesDomainmappingsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesDomainmappingsDeletePathParams.class, baseUrl, "/apis/domains.cloudrun.com/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesDomainmappingsDeleteRequest.class, baseUrl, "/apis/domains.cloudrun.com/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesDomainmappingsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesDomainmappingsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -216,25 +220,26 @@ public class Namespaces {
     /**
      * Get information about a domain mapping.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RunNamespacesDomainmappingsGetResponse runNamespacesDomainmappingsGet(org.openapis.openapi.models.operations.RunNamespacesDomainmappingsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RunNamespacesDomainmappingsGetResponse runNamespacesDomainmappingsGet(org.openapis.openapi.models.operations.RunNamespacesDomainmappingsGetRequest request, org.openapis.openapi.models.operations.RunNamespacesDomainmappingsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesDomainmappingsGetPathParams.class, baseUrl, "/apis/domains.cloudrun.com/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesDomainmappingsGetRequest.class, baseUrl, "/apis/domains.cloudrun.com/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesDomainmappingsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesDomainmappingsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -261,25 +266,26 @@ public class Namespaces {
     /**
      * List all domain mappings.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RunNamespacesDomainmappingsListResponse runNamespacesDomainmappingsList(org.openapis.openapi.models.operations.RunNamespacesDomainmappingsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RunNamespacesDomainmappingsListResponse runNamespacesDomainmappingsList(org.openapis.openapi.models.operations.RunNamespacesDomainmappingsListRequest request, org.openapis.openapi.models.operations.RunNamespacesDomainmappingsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesDomainmappingsListPathParams.class, baseUrl, "/apis/domains.cloudrun.com/v1/{parent}/domainmappings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesDomainmappingsListRequest.class, baseUrl, "/apis/domains.cloudrun.com/v1/{parent}/domainmappings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesDomainmappingsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesDomainmappingsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -306,27 +312,28 @@ public class Namespaces {
     /**
      * Cancel an execution.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RunNamespacesExecutionsCancelResponse runNamespacesExecutionsCancel(org.openapis.openapi.models.operations.RunNamespacesExecutionsCancelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RunNamespacesExecutionsCancelResponse runNamespacesExecutionsCancel(org.openapis.openapi.models.operations.RunNamespacesExecutionsCancelRequest request, org.openapis.openapi.models.operations.RunNamespacesExecutionsCancelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesExecutionsCancelPathParams.class, baseUrl, "/apis/run.googleapis.com/v1/{name}:cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesExecutionsCancelRequest.class, baseUrl, "/apis/run.googleapis.com/v1/{name}:cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesExecutionsCancelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesExecutionsCancelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -353,25 +360,26 @@ public class Namespaces {
     /**
      * List executions.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RunNamespacesExecutionsListResponse runNamespacesExecutionsList(org.openapis.openapi.models.operations.RunNamespacesExecutionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RunNamespacesExecutionsListResponse runNamespacesExecutionsList(org.openapis.openapi.models.operations.RunNamespacesExecutionsListRequest request, org.openapis.openapi.models.operations.RunNamespacesExecutionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesExecutionsListPathParams.class, baseUrl, "/apis/run.googleapis.com/v1/{parent}/executions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesExecutionsListRequest.class, baseUrl, "/apis/run.googleapis.com/v1/{parent}/executions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesExecutionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesExecutionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -398,27 +406,28 @@ public class Namespaces {
     /**
      * Create a job.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RunNamespacesJobsCreateResponse runNamespacesJobsCreate(org.openapis.openapi.models.operations.RunNamespacesJobsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RunNamespacesJobsCreateResponse runNamespacesJobsCreate(org.openapis.openapi.models.operations.RunNamespacesJobsCreateRequest request, org.openapis.openapi.models.operations.RunNamespacesJobsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesJobsCreatePathParams.class, baseUrl, "/apis/run.googleapis.com/v1/{parent}/jobs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesJobsCreateRequest.class, baseUrl, "/apis/run.googleapis.com/v1/{parent}/jobs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "job", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesJobsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesJobsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -445,25 +454,26 @@ public class Namespaces {
     /**
      * Delete a job.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RunNamespacesJobsDeleteResponse runNamespacesJobsDelete(org.openapis.openapi.models.operations.RunNamespacesJobsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RunNamespacesJobsDeleteResponse runNamespacesJobsDelete(org.openapis.openapi.models.operations.RunNamespacesJobsDeleteRequest request, org.openapis.openapi.models.operations.RunNamespacesJobsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesJobsDeletePathParams.class, baseUrl, "/apis/run.googleapis.com/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesJobsDeleteRequest.class, baseUrl, "/apis/run.googleapis.com/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesJobsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesJobsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -490,25 +500,26 @@ public class Namespaces {
     /**
      * List jobs.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RunNamespacesJobsListResponse runNamespacesJobsList(org.openapis.openapi.models.operations.RunNamespacesJobsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RunNamespacesJobsListResponse runNamespacesJobsList(org.openapis.openapi.models.operations.RunNamespacesJobsListRequest request, org.openapis.openapi.models.operations.RunNamespacesJobsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesJobsListPathParams.class, baseUrl, "/apis/run.googleapis.com/v1/{parent}/jobs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesJobsListRequest.class, baseUrl, "/apis/run.googleapis.com/v1/{parent}/jobs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesJobsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesJobsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -535,27 +546,28 @@ public class Namespaces {
     /**
      * Replace a job. Only the spec and metadata labels and annotations are modifiable. After the Replace request, Cloud Run will work to make the 'status' match the requested 'spec'. May provide metadata.resourceVersion to enforce update from last read for optimistic concurrency control.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RunNamespacesJobsReplaceJobResponse runNamespacesJobsReplaceJob(org.openapis.openapi.models.operations.RunNamespacesJobsReplaceJobRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RunNamespacesJobsReplaceJobResponse runNamespacesJobsReplaceJob(org.openapis.openapi.models.operations.RunNamespacesJobsReplaceJobRequest request, org.openapis.openapi.models.operations.RunNamespacesJobsReplaceJobSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesJobsReplaceJobPathParams.class, baseUrl, "/apis/run.googleapis.com/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesJobsReplaceJobRequest.class, baseUrl, "/apis/run.googleapis.com/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "job", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesJobsReplaceJobQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesJobsReplaceJobRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -582,27 +594,28 @@ public class Namespaces {
     /**
      * Trigger creation of a new execution of this job.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RunNamespacesJobsRunResponse runNamespacesJobsRun(org.openapis.openapi.models.operations.RunNamespacesJobsRunRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RunNamespacesJobsRunResponse runNamespacesJobsRun(org.openapis.openapi.models.operations.RunNamespacesJobsRunRequest request, org.openapis.openapi.models.operations.RunNamespacesJobsRunSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesJobsRunPathParams.class, baseUrl, "/apis/run.googleapis.com/v1/{name}:run", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesJobsRunRequest.class, baseUrl, "/apis/run.googleapis.com/v1/{name}:run", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesJobsRunQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesJobsRunRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -629,25 +642,26 @@ public class Namespaces {
     /**
      * List revisions.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RunNamespacesRevisionsListResponse runNamespacesRevisionsList(org.openapis.openapi.models.operations.RunNamespacesRevisionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RunNamespacesRevisionsListResponse runNamespacesRevisionsList(org.openapis.openapi.models.operations.RunNamespacesRevisionsListRequest request, org.openapis.openapi.models.operations.RunNamespacesRevisionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesRevisionsListPathParams.class, baseUrl, "/apis/serving.knative.dev/v1/{parent}/revisions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesRevisionsListRequest.class, baseUrl, "/apis/serving.knative.dev/v1/{parent}/revisions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesRevisionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesRevisionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -674,25 +688,26 @@ public class Namespaces {
     /**
      * List routes.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RunNamespacesRoutesListResponse runNamespacesRoutesList(org.openapis.openapi.models.operations.RunNamespacesRoutesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RunNamespacesRoutesListResponse runNamespacesRoutesList(org.openapis.openapi.models.operations.RunNamespacesRoutesListRequest request, org.openapis.openapi.models.operations.RunNamespacesRoutesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesRoutesListPathParams.class, baseUrl, "/apis/serving.knative.dev/v1/{parent}/routes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesRoutesListRequest.class, baseUrl, "/apis/serving.knative.dev/v1/{parent}/routes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesRoutesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesRoutesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -719,27 +734,28 @@ public class Namespaces {
     /**
      * Creates a new Service. Service creation will trigger a new deployment. Use GetService, and check service.status to determine if the Service is ready.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RunNamespacesServicesCreateResponse runNamespacesServicesCreate(org.openapis.openapi.models.operations.RunNamespacesServicesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RunNamespacesServicesCreateResponse runNamespacesServicesCreate(org.openapis.openapi.models.operations.RunNamespacesServicesCreateRequest request, org.openapis.openapi.models.operations.RunNamespacesServicesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesServicesCreatePathParams.class, baseUrl, "/apis/serving.knative.dev/v1/{parent}/services", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesServicesCreateRequest.class, baseUrl, "/apis/serving.knative.dev/v1/{parent}/services", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "serviceInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesServicesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesServicesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -766,25 +782,26 @@ public class Namespaces {
     /**
      * Deletes the provided service. This will cause the Service to stop serving traffic and will delete all associated Revisions.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RunNamespacesServicesDeleteResponse runNamespacesServicesDelete(org.openapis.openapi.models.operations.RunNamespacesServicesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RunNamespacesServicesDeleteResponse runNamespacesServicesDelete(org.openapis.openapi.models.operations.RunNamespacesServicesDeleteRequest request, org.openapis.openapi.models.operations.RunNamespacesServicesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesServicesDeletePathParams.class, baseUrl, "/apis/serving.knative.dev/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesServicesDeleteRequest.class, baseUrl, "/apis/serving.knative.dev/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesServicesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesServicesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -811,25 +828,26 @@ public class Namespaces {
     /**
      * Gets information about a service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RunNamespacesServicesGetResponse runNamespacesServicesGet(org.openapis.openapi.models.operations.RunNamespacesServicesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RunNamespacesServicesGetResponse runNamespacesServicesGet(org.openapis.openapi.models.operations.RunNamespacesServicesGetRequest request, org.openapis.openapi.models.operations.RunNamespacesServicesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesServicesGetPathParams.class, baseUrl, "/apis/serving.knative.dev/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesServicesGetRequest.class, baseUrl, "/apis/serving.knative.dev/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesServicesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesServicesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -856,25 +874,26 @@ public class Namespaces {
     /**
      * Lists services for the given project and region.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RunNamespacesServicesListResponse runNamespacesServicesList(org.openapis.openapi.models.operations.RunNamespacesServicesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RunNamespacesServicesListResponse runNamespacesServicesList(org.openapis.openapi.models.operations.RunNamespacesServicesListRequest request, org.openapis.openapi.models.operations.RunNamespacesServicesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesServicesListPathParams.class, baseUrl, "/apis/serving.knative.dev/v1/{parent}/services", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesServicesListRequest.class, baseUrl, "/apis/serving.knative.dev/v1/{parent}/services", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesServicesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesServicesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -901,27 +920,28 @@ public class Namespaces {
     /**
      * Replaces a service. Only the spec and metadata labels and annotations are modifiable. After the Update request, Cloud Run will work to make the 'status' match the requested 'spec'. May provide metadata.resourceVersion to enforce update from last read for optimistic concurrency control.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RunNamespacesServicesReplaceServiceResponse runNamespacesServicesReplaceService(org.openapis.openapi.models.operations.RunNamespacesServicesReplaceServiceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RunNamespacesServicesReplaceServiceResponse runNamespacesServicesReplaceService(org.openapis.openapi.models.operations.RunNamespacesServicesReplaceServiceRequest request, org.openapis.openapi.models.operations.RunNamespacesServicesReplaceServiceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesServicesReplaceServicePathParams.class, baseUrl, "/apis/serving.knative.dev/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesServicesReplaceServiceRequest.class, baseUrl, "/apis/serving.knative.dev/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "serviceInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesServicesReplaceServiceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesServicesReplaceServiceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -948,25 +968,26 @@ public class Namespaces {
     /**
      * Get information about a task.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RunNamespacesTasksGetResponse runNamespacesTasksGet(org.openapis.openapi.models.operations.RunNamespacesTasksGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RunNamespacesTasksGetResponse runNamespacesTasksGet(org.openapis.openapi.models.operations.RunNamespacesTasksGetRequest request, org.openapis.openapi.models.operations.RunNamespacesTasksGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesTasksGetPathParams.class, baseUrl, "/apis/run.googleapis.com/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesTasksGetRequest.class, baseUrl, "/apis/run.googleapis.com/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesTasksGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesTasksGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -993,25 +1014,26 @@ public class Namespaces {
     /**
      * List tasks.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RunNamespacesTasksListResponse runNamespacesTasksList(org.openapis.openapi.models.operations.RunNamespacesTasksListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RunNamespacesTasksListResponse runNamespacesTasksList(org.openapis.openapi.models.operations.RunNamespacesTasksListRequest request, org.openapis.openapi.models.operations.RunNamespacesTasksListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesTasksListPathParams.class, baseUrl, "/apis/run.googleapis.com/v1/{parent}/tasks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RunNamespacesTasksListRequest.class, baseUrl, "/apis/run.googleapis.com/v1/{parent}/tasks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesTasksListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RunNamespacesTasksListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

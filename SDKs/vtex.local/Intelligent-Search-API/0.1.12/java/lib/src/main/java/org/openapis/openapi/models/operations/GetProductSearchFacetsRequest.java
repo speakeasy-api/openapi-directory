@@ -4,20 +4,107 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProductSearchFacetsRequest {
-    
-    public GetProductSearchFacetsPathParams pathParams;
-    public GetProductSearchFacetsRequest withPathParams(GetProductSearchFacetsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Number of products per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
+    public Double count;
+    public GetProductSearchFacetsRequest withCount(Double count) {
+        this.count = count;
         return this;
     }
     
+    /**
+     * # Format
+     * 
+     * The `facets` parameter follows the format : `/${facetKey1}/${facetValue1}/${facetKey2}/${facetValue2}/.../${facetKeyN}/${facetValueN}`.
+     * 
+     * The order in which the terms appear is not relevant to the search.
+     * 
+     * You can also repeat the same `facetKey` several times for different values. For example: `category-1/shoes/color/blue/color/red/color/yellow`
+     * 
+     * # General filters
+     * 
+     * The `facets` parameter also allows the following general filters.
+     * 
+     * | `facetKey`      | Description                                                                                      | Example                                                                  |
+     * | --------------- | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+     * | `price`         | Filter the search by a price range. The facet value follows the format `${minPrice}:${maxPrice}` | `/color/blue/price/100:500?query=shirt`                                  |
+     * | `category-${n}` | Filter the search by category, where `n` represents the category tree level (1 = department, 2 = category, 3 = subcategory, and so on) | `category-1/clothing/category-2/shirts`                                  |
+     * | `region-id`     | Filter the search by a region id (aka regionalization). The value is the region id               | `/color/blue/region-id/v2.26219C7C3DE42BAAD11CFB92CD0BFE91?query=shirt`. |
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=facets")
+    public String facets;
+    public GetProductSearchFacetsRequest withFacets(String facets) {
+        this.facets = facets;
+        return this;
+    }
     
-    public GetProductSearchFacetsQueryParams queryParams;
-    public GetProductSearchFacetsRequest withQueryParams(GetProductSearchFacetsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Whether the result should hide unavailable items (`true`), or not (`false`)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hideUnavailableItems")
+    public Boolean hideUnavailableItems;
+    public GetProductSearchFacetsRequest withHideUnavailableItems(Boolean hideUnavailableItems) {
+        this.hideUnavailableItems = hideUnavailableItems;
+        return this;
+    }
+    
+    /**
+     * Indicates the target language as a BCP 47 language code. The Intelligent Search must have indexed the account in the target language.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
+    public String locale;
+    public GetProductSearchFacetsRequest withLocale(String locale) {
+        this.locale = locale;
+        return this;
+    }
+    
+    /**
+     * Current search page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetProductSearchFacetsRequest withPage(Double page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Search term. It can contain any character.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public GetProductSearchFacetsRequest withQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    
+    /**
+     * Defines the simulation behavior.
+     * 
+     *  * `default` - Calls the simulation for every single seller.
+     *  * `skip` - Never calls the simulation.
+     *  * `only1P` - Only calls the simulation for first party sellers.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=simulationBehavior")
+    public GetProductSearchFacetsSimulationBehaviorEnum simulationBehavior;
+    public GetProductSearchFacetsRequest withSimulationBehavior(GetProductSearchFacetsSimulationBehaviorEnum simulationBehavior) {
+        this.simulationBehavior = simulationBehavior;
+        return this;
+    }
+    
+    /**
+     * Defines the sort type. If null, the products will be sorted by relevance.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetProductSearchFacetsSortEnum sort;
+    public GetProductSearchFacetsRequest withSort(GetProductSearchFacetsSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAudioRequest {
-    
-    public GetAudioPathParams pathParams;
-    public GetAudioRequest withPathParams(GetAudioPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Maximum number of results to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetAudioRequest withLimit(Integer limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * If true will try to return the correct word root ('cats' -&gt; 'cat'). If false returns exactly what was requested.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=useCanonical")
+    public GetAudioUseCanonicalEnum useCanonical;
+    public GetAudioRequest withUseCanonical(GetAudioUseCanonicalEnum useCanonical) {
+        this.useCanonical = useCanonical;
+        return this;
+    }
     
-    public GetAudioQueryParams queryParams;
-    public GetAudioRequest withQueryParams(GetAudioQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Word to get audio for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=word")
+    public String word;
+    public GetAudioRequest withWord(String word) {
+        this.word = word;
         return this;
     }
     

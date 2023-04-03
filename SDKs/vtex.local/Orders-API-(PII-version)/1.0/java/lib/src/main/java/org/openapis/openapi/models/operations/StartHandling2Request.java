@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StartHandling2Request {
-    
-    public StartHandling2PathParams pathParams;
-    public StartHandling2Request withPathParams(StartHandling2PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public StartHandling2Request withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public StartHandling2Request withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public StartHandling2Headers headers;
-    public StartHandling2Request withHeaders(StartHandling2Headers headers) {
-        this.headers = headers;
+    /**
+     * ID of the order.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderId")
+    public String orderId;
+    public StartHandling2Request withOrderId(String orderId) {
+        this.orderId = orderId;
         return this;
     }
     

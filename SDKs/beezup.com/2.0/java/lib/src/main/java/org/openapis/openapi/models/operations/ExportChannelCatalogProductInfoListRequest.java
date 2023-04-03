@@ -7,17 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExportChannelCatalogProductInfoListRequest {
-    
-    public ExportChannelCatalogProductInfoListPathParams pathParams;
-    public ExportChannelCatalogProductInfoListRequest withPathParams(ExportChannelCatalogProductInfoListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The channel catalog identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelCatalogId")
+    public String channelCatalogId;
+    public ExportChannelCatalogProductInfoListRequest withChannelCatalogId(String channelCatalogId) {
+        this.channelCatalogId = channelCatalogId;
         return this;
     }
     
-    
-    public ExportChannelCatalogProductInfoListQueryParams queryParams;
-    public ExportChannelCatalogProductInfoListRequest withQueryParams(ExportChannelCatalogProductInfoListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The file type of the exportation
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public org.openapis.openapi.models.shared.ExportFormatInQueryGeneralParameterEnum format;
+    public ExportChannelCatalogProductInfoListRequest withFormat(org.openapis.openapi.models.shared.ExportFormatInQueryGeneralParameterEnum format) {
+        this.format = format;
         return this;
     }
     
@@ -25,9 +31,9 @@ public class ExportChannelCatalogProductInfoListRequest {
      * The channel catalog product list filter
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GetChannelCatalogProductInfoListRequest request;
-    public ExportChannelCatalogProductInfoListRequest withRequest(org.openapis.openapi.models.shared.GetChannelCatalogProductInfoListRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GetChannelCatalogProductInfoListRequest getChannelCatalogProductInfoListRequest;
+    public ExportChannelCatalogProductInfoListRequest withGetChannelCatalogProductInfoListRequest(org.openapis.openapi.models.shared.GetChannelCatalogProductInfoListRequest getChannelCatalogProductInfoListRequest) {
+        this.getChannelCatalogProductInfoListRequest = getChannelCatalogProductInfoListRequest;
         return this;
     }
     

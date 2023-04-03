@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SalesCreditNotesDeleteRequest {
-    
-    public SalesCreditNotesDeletePathParams pathParams;
-    public SalesCreditNotesDeleteRequest withPathParams(SalesCreditNotesDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of Sales Credit Note to remove.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public SalesCreditNotesDeleteRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     
-    
-    public SalesCreditNotesDeleteQueryParams queryParams;
-    public SalesCreditNotesDeleteRequest withQueryParams(SalesCreditNotesDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Timestamp of Sales Credit Note to remove. Should be encoded in Base64.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timestamp")
+    public String timestamp;
+    public SalesCreditNotesDeleteRequest withTimestamp(String timestamp) {
+        this.timestamp = timestamp;
         return this;
     }
     

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SubmitEvidenceRequest {
-    
-    public SubmitEvidencePathParams pathParams;
-    public SubmitEvidenceRequest withPathParams(SubmitEvidencePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public SubmitEvidenceSecurity security;
-    public SubmitEvidenceRequest withSecurity(SubmitEvidenceSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the dispute that you want to submit evidence for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dispute_id")
+    public String disputeId;
+    public SubmitEvidenceRequest withDisputeId(String disputeId) {
+        this.disputeId = disputeId;
         return this;
     }
     

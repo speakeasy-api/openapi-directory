@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetThemesIdRequest {
-    
-    public GetThemesIdPathParams pathParams;
-    public GetThemesIdRequest withPathParams(GetThemesIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetThemesIdSecurity security;
-    public GetThemesIdRequest withSecurity(GetThemesIdSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the theme
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetThemesIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -4,20 +4,34 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProductApiAllRequest {
-    
-    public ProductApiAllQueryParams queryParams;
-    public ProductApiAllRequest withQueryParams(ProductApiAllQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=queryOptions.page")
+    public Integer queryOptionsPage;
+    public ProductApiAllRequest withQueryOptionsPage(Integer queryOptionsPage) {
+        this.queryOptionsPage = queryOptionsPage;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=queryOptions.pageSize")
+    public Integer queryOptionsPageSize;
+    public ProductApiAllRequest withQueryOptionsPageSize(Integer queryOptionsPageSize) {
+        this.queryOptionsPageSize = queryOptionsPageSize;
+        return this;
+    }
     
-    public ProductApiAllHeaders headers;
-    public ProductApiAllRequest withHeaders(ProductApiAllHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
+    public String xAuthKey;
+    public ProductApiAllRequest withXAuthKey(String xAuthKey) {
+        this.xAuthKey = xAuthKey;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
+    public String xAuthSecret;
+    public ProductApiAllRequest withXAuthSecret(String xAuthSecret) {
+        this.xAuthSecret = xAuthSecret;
         return this;
     }
     

@@ -7,17 +7,34 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposUpdateReleaseAssetRequest {
-    
-    public ReposUpdateReleaseAssetPathParams pathParams;
-    public ReposUpdateReleaseAssetRequest withPathParams(ReposUpdateReleaseAssetPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ReposUpdateReleaseAssetRequestBody requestBody;
+    public ReposUpdateReleaseAssetRequest withRequestBody(ReposUpdateReleaseAssetRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ReposUpdateReleaseAssetRequestBody request;
-    public ReposUpdateReleaseAssetRequest withRequest(ReposUpdateReleaseAssetRequestBody request) {
-        this.request = request;
+    /**
+     * asset_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=asset_id")
+    public Long assetId;
+    public ReposUpdateReleaseAssetRequest withAssetId(Long assetId) {
+        this.assetId = assetId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposUpdateReleaseAssetRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposUpdateReleaseAssetRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

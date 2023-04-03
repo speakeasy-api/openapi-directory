@@ -50,7 +50,7 @@ public class ExternalEvents {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetExternalEventsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetExternalEventsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -91,7 +91,7 @@ public class ExternalEvents {
      */
     public org.openapis.openapi.models.operations.GetExternalEventsIdResponse getExternalEventsId(org.openapis.openapi.models.operations.GetExternalEventsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetExternalEventsIdPathParams.class, baseUrl, "/external_events/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetExternalEventsIdRequest.class, baseUrl, "/external_events/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -130,7 +130,7 @@ public class ExternalEvents {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostExternalEventsResponse postExternalEvents(org.openapis.openapi.models.operations.PostExternalEventsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostExternalEventsResponse postExternalEvents(org.openapis.openapi.models.operations.PostExternalEventsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/external_events");
         

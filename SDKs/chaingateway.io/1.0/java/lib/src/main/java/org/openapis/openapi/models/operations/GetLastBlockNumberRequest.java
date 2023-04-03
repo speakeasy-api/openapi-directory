@@ -4,13 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLastBlockNumberRequest {
+    /**
+     * API Key
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public GetLastBlockNumberRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
+        return this;
+    }
     
-    public GetLastBlockNumberHeaders headers;
-    public GetLastBlockNumberRequest withHeaders(GetLastBlockNumberHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetLastBlockNumberRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     

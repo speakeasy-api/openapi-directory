@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePayableRequest {
-    
-    public UpdatePayablePathParams pathParams;
-    public UpdatePayableRequest withPathParams(UpdatePayablePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.PayableDTO payableDTO;
+    public UpdatePayableRequest withPayableDTO(org.openapis.openapi.models.shared.PayableDTO payableDTO) {
+        this.payableDTO = payableDTO;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PayableDTO request;
-    public UpdatePayableRequest withRequest(org.openapis.openapi.models.shared.PayableDTO request) {
-        this.request = request;
+    /**
+     * payable's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payableId")
+    public Long payableId;
+    public UpdatePayableRequest withPayableId(Long payableId) {
+        this.payableId = payableId;
+        return this;
+    }
+    
+    /**
+     * project's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public UpdatePayableRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

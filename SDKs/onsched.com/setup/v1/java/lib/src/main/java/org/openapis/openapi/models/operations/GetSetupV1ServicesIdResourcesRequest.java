@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSetupV1ServicesIdResourcesRequest {
-    
-    public GetSetupV1ServicesIdResourcesPathParams pathParams;
-    public GetSetupV1ServicesIdResourcesRequest withPathParams(GetSetupV1ServicesIdResourcesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Google calendar authorization return url
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=googleAuthReturnUrl")
+    public String googleAuthReturnUrl;
+    public GetSetupV1ServicesIdResourcesRequest withGoogleAuthReturnUrl(String googleAuthReturnUrl) {
+        this.googleAuthReturnUrl = googleAuthReturnUrl;
         return this;
     }
     
+    /**
+     * id of service object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSetupV1ServicesIdResourcesRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetSetupV1ServicesIdResourcesQueryParams queryParams;
-    public GetSetupV1ServicesIdResourcesRequest withQueryParams(GetSetupV1ServicesIdResourcesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page limit default 20, max 100
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetSetupV1ServicesIdResourcesRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Starting row of page, default 0
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public GetSetupV1ServicesIdResourcesRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Outlook calendar authorization return url
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outlookAuthReturnUrl")
+    public String outlookAuthReturnUrl;
+    public GetSetupV1ServicesIdResourcesRequest withOutlookAuthReturnUrl(String outlookAuthReturnUrl) {
+        this.outlookAuthReturnUrl = outlookAuthReturnUrl;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BranchControllerGetBranchesRequest {
-    
-    public BranchControllerGetBranchesPathParams pathParams;
-    public BranchControllerGetBranchesRequest withPathParams(BranchControllerGetBranchesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The maximum number of items to return (up to 1000 per request)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
+    public Integer count;
+    public BranchControllerGetBranchesRequest withCount(Integer count) {
+        this.count = count;
         return this;
     }
     
+    /**
+     * The index of the first item to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public BranchControllerGetBranchesRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
     
-    public BranchControllerGetBranchesQueryParams queryParams;
-    public BranchControllerGetBranchesRequest withQueryParams(BranchControllerGetBranchesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The unique client short-name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
+    public String shortName;
+    public BranchControllerGetBranchesRequest withShortName(String shortName) {
+        this.shortName = shortName;
         return this;
     }
     

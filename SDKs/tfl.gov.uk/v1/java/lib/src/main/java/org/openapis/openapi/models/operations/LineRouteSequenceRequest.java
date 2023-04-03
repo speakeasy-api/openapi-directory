@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LineRouteSequenceRequest {
-    
-    public LineRouteSequencePathParams pathParams;
-    public LineRouteSequenceRequest withPathParams(LineRouteSequencePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The direction of travel. Can be inbound or outbound.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=direction")
+    public LineRouteSequenceDirectionEnum direction;
+    public LineRouteSequenceRequest withDirection(LineRouteSequenceDirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
+    /**
+     * That excludes crowding from line disruptions. Can be true or false.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=excludeCrowding")
+    public Boolean excludeCrowding;
+    public LineRouteSequenceRequest withExcludeCrowding(Boolean excludeCrowding) {
+        this.excludeCrowding = excludeCrowding;
+        return this;
+    }
     
-    public LineRouteSequenceQueryParams queryParams;
-    public LineRouteSequenceRequest withQueryParams(LineRouteSequenceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A single line id e.g. victoria
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public LineRouteSequenceRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * A comma seperated list of service types to filter on. Supported values: Regular, Night. Defaulted to 'Regular' if not specified
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceTypes")
+    public LineRouteSequenceServiceTypesEnum[] serviceTypes;
+    public LineRouteSequenceRequest withServiceTypes(LineRouteSequenceServiceTypesEnum[] serviceTypes) {
+        this.serviceTypes = serviceTypes;
         return this;
     }
     

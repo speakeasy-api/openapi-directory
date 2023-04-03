@@ -18,20 +18,16 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.TranslateProjectsLocationsBatchTranslateDocumentSecurity;
-import org.openapis.openapi.models.operations.TranslateProjectsLocationsBatchTranslateDocumentPathParams;
-import org.openapis.openapi.models.operations.TranslateProjectsLocationsBatchTranslateDocumentQueryParams;
 import org.openapis.openapi.models.operations.TranslateProjectsLocationsBatchTranslateDocumentRequest;
 import org.openapis.openapi.models.operations.TranslateProjectsLocationsBatchTranslateDocumentResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.BatchTranslateDocumentRequest;
 import org.openapis.openapi.models.shared.BatchDocumentOutputConfig;
 import org.openapis.openapi.models.shared.GcsDestination;
 import org.openapis.openapi.models.shared.BatchDocumentInputConfig;
 import org.openapis.openapi.models.shared.GcsSource;
 import org.openapis.openapi.models.shared.TranslateTextGlossaryConfig;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -40,83 +36,84 @@ public class Application {
                 .build();
 
             TranslateProjectsLocationsBatchTranslateDocumentRequest req = new TranslateProjectsLocationsBatchTranslateDocumentRequest() {{
-                security = new TranslateProjectsLocationsBatchTranslateDocumentSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new TranslateProjectsLocationsBatchTranslateDocumentPathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new TranslateProjectsLocationsBatchTranslateDocumentQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new BatchTranslateDocumentRequest() {{
-                    customizedAttribution = "suscipit";
+                dollarXgafv = "2";
+                batchTranslateDocumentRequest = new BatchTranslateDocumentRequest() {{
+                    customizedAttribution = "provident";
                     enableShadowRemovalNativePdf = false;
                     formatConversions = new java.util.HashMap<String, String>() {{
-                        put("magnam", "debitis");
-                        put("ipsa", "delectus");
+                        put("quibusdam", "unde");
+                        put("nulla", "corrupti");
+                        put("illum", "vel");
                     }};
                     glossaries = new java.util.HashMap<String, org.openapis.openapi.models.shared.TranslateTextGlossaryConfig>() {{
-                        put("suscipit", new TranslateTextGlossaryConfig() {{
-                            glossary = "molestiae";
+                        put("deserunt", new TranslateTextGlossaryConfig() {{
+                            glossary = "suscipit";
                             ignoreCase = false;
                         }});
-                        put("minus", new TranslateTextGlossaryConfig() {{
-                            glossary = "placeat";
+                        put("iure", new TranslateTextGlossaryConfig() {{
+                            glossary = "magnam";
+                            ignoreCase = false;
+                        }});
+                        put("debitis", new TranslateTextGlossaryConfig() {{
+                            glossary = "ipsa";
                             ignoreCase = false;
                         }});
                     }};
                     inputConfigs = new org.openapis.openapi.models.shared.BatchDocumentInputConfig[]{{
                         add(new BatchDocumentInputConfig() {{
                             gcsSource = new GcsSource() {{
-                                inputUri = "iusto";
+                                inputUri = "tempora";
                             }};
                         }}),
                         add(new BatchDocumentInputConfig() {{
                             gcsSource = new GcsSource() {{
-                                inputUri = "excepturi";
+                                inputUri = "suscipit";
                             }};
                         }}),
                         add(new BatchDocumentInputConfig() {{
                             gcsSource = new GcsSource() {{
-                                inputUri = "nisi";
+                                inputUri = "molestiae";
+                            }};
+                        }}),
+                        add(new BatchDocumentInputConfig() {{
+                            gcsSource = new GcsSource() {{
+                                inputUri = "minus";
                             }};
                         }}),
                     }};
                     models = new java.util.HashMap<String, String>() {{
-                        put("temporibus", "ab");
-                        put("quis", "veritatis");
-                        put("deserunt", "perferendis");
-                        put("ipsam", "repellendus");
+                        put("voluptatum", "iusto");
+                        put("excepturi", "nisi");
+                        put("recusandae", "temporibus");
+                        put("ab", "quis");
                     }};
                     outputConfig = new BatchDocumentOutputConfig() {{
                         gcsDestination = new GcsDestination() {{
-                            outputUriPrefix = "sapiente";
+                            outputUriPrefix = "veritatis";
                         }};
                     }};
-                    sourceLanguageCode = "quo";
+                    sourceLanguageCode = "deserunt";
                     targetLanguageCodes = new String[]{{
-                        add("at"),
+                        add("ipsam"),
                     }};
                 }};
-            }};            
+                accessToken = "repellendus";
+                alt = "proto";
+                callback = "quo";
+                fields = "odit";
+                key = "at";
+                oauthToken = "at";
+                parent = "maiores";
+                prettyPrint = false;
+                quotaUser = "molestiae";
+                uploadType = "quod";
+                uploadProtocol = "quod";
+            }}            
 
-            TranslateProjectsLocationsBatchTranslateDocumentResponse res = sdk.projects.translateProjectsLocationsBatchTranslateDocument(req);
+            TranslateProjectsLocationsBatchTranslateDocumentResponse res = sdk.projects.translateProjectsLocationsBatchTranslateDocument(req, new TranslateProjectsLocationsBatchTranslateDocumentSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.operation.isPresent()) {
                 // handle response
@@ -128,7 +125,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### projects

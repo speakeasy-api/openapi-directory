@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoListReleasesRequest {
-    
-    public RepoListReleasesPathParams pathParams;
-    public RepoListReleasesRequest withPathParams(RepoListReleasesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * filter (exclude / include) drafts, if you dont have repo write access none will show
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=draft")
+    public Boolean draft;
+    public RepoListReleasesRequest withDraft(Boolean draft) {
+        this.draft = draft;
         return this;
     }
     
+    /**
+     * page size of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public RepoListReleasesRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public RepoListReleasesQueryParams queryParams;
-    public RepoListReleasesRequest withQueryParams(RepoListReleasesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoListReleasesRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * page number of results to return (1-based)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public RepoListReleasesRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * page size of results, deprecated - use limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public RepoListReleasesRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * filter (exclude / include) pre-releases
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pre-release")
+    public Boolean preRelease;
+    public RepoListReleasesRequest withPreRelease(Boolean preRelease) {
+        this.preRelease = preRelease;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoListReleasesRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

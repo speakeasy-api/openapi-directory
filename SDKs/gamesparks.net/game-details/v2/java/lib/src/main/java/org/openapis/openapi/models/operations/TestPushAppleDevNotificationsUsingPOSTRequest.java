@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestPushAppleDevNotificationsUsingPOSTRequest {
-    
-    public TestPushAppleDevNotificationsUsingPOSTPathParams pathParams;
-    public TestPushAppleDevNotificationsUsingPOSTRequest withPathParams(TestPushAppleDevNotificationsUsingPOSTPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * messageDetails
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PushNotificationTestModel request;
-    public TestPushAppleDevNotificationsUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.PushNotificationTestModel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PushNotificationTestModel pushNotificationTestModel;
+    public TestPushAppleDevNotificationsUsingPOSTRequest withPushNotificationTestModel(org.openapis.openapi.models.shared.PushNotificationTestModel pushNotificationTestModel) {
+        this.pushNotificationTestModel = pushNotificationTestModel;
+        return this;
+    }
+    
+    /**
+     * apiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public TestPushAppleDevNotificationsUsingPOSTRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     

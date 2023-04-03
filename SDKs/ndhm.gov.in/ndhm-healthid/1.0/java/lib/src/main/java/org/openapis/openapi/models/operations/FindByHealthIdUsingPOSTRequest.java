@@ -7,10 +7,10 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FindByHealthIdUsingPOSTRequest {
-    
-    public FindByHealthIdUsingPOSTHeaders headers;
-    public FindByHealthIdUsingPOSTRequest withHeaders(FindByHealthIdUsingPOSTHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public FindByHealthIdUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
@@ -18,16 +18,9 @@ public class FindByHealthIdUsingPOSTRequest {
      * searchRequest
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.HidBenefitNameSearchRequest request;
-    public FindByHealthIdUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.HidBenefitNameSearchRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public FindByHealthIdUsingPOSTSecurity security;
-    public FindByHealthIdUsingPOSTRequest withSecurity(FindByHealthIdUsingPOSTSecurity security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.HidBenefitNameSearchRequest hidBenefitNameSearchRequest;
+    public FindByHealthIdUsingPOSTRequest withHidBenefitNameSearchRequest(org.openapis.openapi.models.shared.HidBenefitNameSearchRequest hidBenefitNameSearchRequest) {
+        this.hidBenefitNameSearchRequest = hidBenefitNameSearchRequest;
         return this;
     }
     

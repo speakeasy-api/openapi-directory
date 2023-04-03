@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetExamplesRequest {
-    
-    public GetExamplesPathParams pathParams;
-    public GetExamplesRequest withPathParams(GetExamplesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Number of examples to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
+    public String count;
+    public GetExamplesRequest withCount(String count) {
+        this.count = count;
         return this;
     }
     
-    
-    public GetExamplesQueryParams queryParams;
-    public GetExamplesRequest withQueryParams(GetExamplesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Dataset Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=datasetId")
+    public String datasetId;
+    public GetExamplesRequest withDatasetId(String datasetId) {
+        this.datasetId = datasetId;
         return this;
     }
     
+    /**
+     * Index of the example from which you want to start paging.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public String offset;
+    public GetExamplesRequest withOffset(String offset) {
+        this.offset = offset;
+        return this;
+    }
     
-    public GetExamplesSecurity security;
-    public GetExamplesRequest withSecurity(GetExamplesSecurity security) {
-        this.security = security;
+    /**
+     * return examples that were created in the dataset as feedback
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
+    public GetExamplesSourceEnum source;
+    public GetExamplesRequest withSource(GetExamplesSourceEnum source) {
+        this.source = source;
         return this;
     }
     

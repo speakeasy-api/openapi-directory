@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateAccountConfigRequest {
-    
-    public UpdateAccountConfigPathParams pathParams;
-    public UpdateAccountConfigRequest withPathParams(UpdateAccountConfigPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The config key; up to 100 characters.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Key")
+    public String key;
+    public UpdateAccountConfigRequest withKey(String key) {
+        this.key = key;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateAccountConfigUpdateAccountConfigRequest request;
-    public UpdateAccountConfigRequest withRequest(UpdateAccountConfigUpdateAccountConfigRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public UpdateAccountConfigSecurity security;
-    public UpdateAccountConfigRequest withSecurity(UpdateAccountConfigSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateAccountConfigRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public UpdateAccountConfigUpdateAccountConfigRequest requestBody;
+    public UpdateAccountConfigRequest withRequestBody(UpdateAccountConfigUpdateAccountConfigRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

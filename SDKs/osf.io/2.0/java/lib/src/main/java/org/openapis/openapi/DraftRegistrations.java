@@ -44,7 +44,7 @@ public class DraftRegistrations {
      */
     public org.openapis.openapi.models.operations.DeleteDraftRegistrationsDraftIdResponse deleteDraftRegistrationsDraftId(org.openapis.openapi.models.operations.DeleteDraftRegistrationsDraftIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDraftRegistrationsDraftIdPathParams.class, baseUrl, "/draft_registrations/{draft_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDraftRegistrationsDraftIdRequest.class, baseUrl, "/draft_registrations/{draft_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -86,12 +86,12 @@ public class DraftRegistrations {
      */
     public org.openapis.openapi.models.operations.DraftRegistrationContributorsCreateResponse draftRegistrationContributorsCreate(org.openapis.openapi.models.operations.DraftRegistrationContributorsCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DraftRegistrationContributorsCreatePathParams.class, baseUrl, "/draft_registrations/{draft_id}/contributors/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DraftRegistrationContributorsCreateRequest.class, baseUrl, "/draft_registrations/{draft_id}/contributors/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -126,7 +126,7 @@ public class DraftRegistrations {
      */
     public org.openapis.openapi.models.operations.DraftRegistrationContributorsListResponse draftRegistrationContributorsList(org.openapis.openapi.models.operations.DraftRegistrationContributorsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DraftRegistrationContributorsListPathParams.class, baseUrl, "/draft_registrations/{draft_id}/contributors/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DraftRegistrationContributorsListRequest.class, baseUrl, "/draft_registrations/{draft_id}/contributors/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -169,7 +169,7 @@ public class DraftRegistrations {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DraftRegistrationsCreateResponse draftRegistrationsCreate(org.openapis.openapi.models.operations.DraftRegistrationsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DraftRegistrationsCreateResponse draftRegistrationsCreate(org.openapis.openapi.models.operations.DraftRegistrationsCreateDraftRegistrationInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/draft_registrations/");
         
@@ -266,7 +266,7 @@ public class DraftRegistrations {
      */
     public org.openapis.openapi.models.operations.GetDraftRegistrationsDraftIdResponse getDraftRegistrationsDraftId(org.openapis.openapi.models.operations.GetDraftRegistrationsDraftIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDraftRegistrationsDraftIdPathParams.class, baseUrl, "/draft_registrations/{draft_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDraftRegistrationsDraftIdRequest.class, baseUrl, "/draft_registrations/{draft_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -308,7 +308,7 @@ public class DraftRegistrations {
      */
     public org.openapis.openapi.models.operations.GetDraftRegistrationsDraftIdContributorsUserIdResponse getDraftRegistrationsDraftIdContributorsUserId(org.openapis.openapi.models.operations.GetDraftRegistrationsDraftIdContributorsUserIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDraftRegistrationsDraftIdContributorsUserIdPathParams.class, baseUrl, "/draft_registrations/{draft_id}/contributors/{user_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDraftRegistrationsDraftIdContributorsUserIdRequest.class, baseUrl, "/draft_registrations/{draft_id}/contributors/{user_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -341,7 +341,7 @@ public class DraftRegistrations {
      */
     public org.openapis.openapi.models.operations.GetDraftRegistrationsDraftIdInstitutionsResponse getDraftRegistrationsDraftIdInstitutions(org.openapis.openapi.models.operations.GetDraftRegistrationsDraftIdInstitutionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDraftRegistrationsDraftIdInstitutionsPathParams.class, baseUrl, "/draft_registrations/{draft_id}/institutions/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDraftRegistrationsDraftIdInstitutionsRequest.class, baseUrl, "/draft_registrations/{draft_id}/institutions/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -388,7 +388,7 @@ public class DraftRegistrations {
      */
     public org.openapis.openapi.models.operations.NodesDraftRegistrationsReadResponse nodesDraftRegistrationsRead(org.openapis.openapi.models.operations.NodesDraftRegistrationsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesDraftRegistrationsReadPathParams.class, baseUrl, "/nodes/{node_id}/draft_registrations/{draft_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesDraftRegistrationsReadRequest.class, baseUrl, "/nodes/{node_id}/draft_registrations/{draft_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -426,7 +426,7 @@ public class DraftRegistrations {
      */
     public org.openapis.openapi.models.operations.NodesDraftRegistrationsSubjectsResponse nodesDraftRegistrationsSubjects(org.openapis.openapi.models.operations.NodesDraftRegistrationsSubjectsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesDraftRegistrationsSubjectsPathParams.class, baseUrl, "/draft_registrations/{draft_id}/subjects/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NodesDraftRegistrationsSubjectsRequest.class, baseUrl, "/draft_registrations/{draft_id}/subjects/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -469,12 +469,12 @@ public class DraftRegistrations {
      */
     public org.openapis.openapi.models.operations.PatchDraftRegistrationsDraftIdResponse patchDraftRegistrationsDraftId(org.openapis.openapi.models.operations.PatchDraftRegistrationsDraftIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchDraftRegistrationsDraftIdPathParams.class, baseUrl, "/draft_registrations/{draft_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchDraftRegistrationsDraftIdRequest.class, baseUrl, "/draft_registrations/{draft_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

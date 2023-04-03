@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListActionsRequest {
-    
-    public ListActionsPathParams pathParams;
-    public ListActionsRequest withPathParams(ListActionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Service ID of the service for which actions are to be listed
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serviceId")
+    public String serviceId;
+    public ListActionsRequest withServiceId(String serviceId) {
+        this.serviceId = serviceId;
         return this;
     }
     

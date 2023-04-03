@@ -18,12 +18,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GetBusinessUnitsV3BusinessUnitsUserUserIdSecurity;
-import org.openapis.openapi.models.operations.GetBusinessUnitsV3BusinessUnitsUserUserIdPathParams;
-import org.openapis.openapi.models.operations.GetBusinessUnitsV3BusinessUnitsUserUserIdQueryParams;
 import org.openapis.openapi.models.operations.GetBusinessUnitsV3BusinessUnitsUserUserIdRequest;
 import org.openapis.openapi.models.operations.GetBusinessUnitsV3BusinessUnitsUserUserIdResponse;
-import org.openapis.openapi.models.shared.SchemeOauth2Legacy;
-import org.openapis.openapi.models.shared.SchemePrivateAppsLegacy;
 
 public class Application {
     public static void main(String[] args) {
@@ -32,30 +28,22 @@ public class Application {
                 .build();
 
             GetBusinessUnitsV3BusinessUnitsUserUserIdRequest req = new GetBusinessUnitsV3BusinessUnitsUserUserIdRequest() {{
-                security = new GetBusinessUnitsV3BusinessUnitsUserUserIdSecurity() {{
-                    oauth2Legacy = new SchemeOauth2Legacy() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
+                name = new String[]{{
+                    add("provident"),
+                    add("distinctio"),
+                    add("quibusdam"),
                 }};
-                pathParams = new GetBusinessUnitsV3BusinessUnitsUserUserIdPathParams() {{
-                    userId = "corrupti";
+                properties = new String[]{{
+                    add("nulla"),
+                    add("corrupti"),
+                    add("illum"),
                 }};
-                queryParams = new GetBusinessUnitsV3BusinessUnitsUserUserIdQueryParams() {{
-                    name = new String[]{{
-                        add("distinctio"),
-                        add("quibusdam"),
-                        add("unde"),
-                    }};
-                    properties = new String[]{{
-                        add("corrupti"),
-                        add("illum"),
-                        add("vel"),
-                        add("error"),
-                    }};
-                }};
-            }};            
+                userId = "vel";
+            }}            
 
-            GetBusinessUnitsV3BusinessUnitsUserUserIdResponse res = sdk.businessUnit.getBusinessUnitsV3BusinessUnitsUserUserId(req);
+            GetBusinessUnitsV3BusinessUnitsUserUserIdResponse res = sdk.businessUnit.getBusinessUnitsV3BusinessUnitsUserUserId(req, new GetBusinessUnitsV3BusinessUnitsUserUserIdSecurity() {{
+                oauth2Legacy = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.collectionResponsePublicBusinessUnitNoPaging.isPresent()) {
                 // handle response
@@ -67,7 +55,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### businessUnit

@@ -40,12 +40,12 @@ public class FloorPlans {
      */
     public org.openapis.openapi.models.operations.CreateNetworkFloorPlanResponse createNetworkFloorPlan(org.openapis.openapi.models.operations.CreateNetworkFloorPlanRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkFloorPlanPathParams.class, baseUrl, "/networks/{networkId}/floorPlans", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkFloorPlanRequest.class, baseUrl, "/networks/{networkId}/floorPlans", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -85,7 +85,7 @@ public class FloorPlans {
      */
     public org.openapis.openapi.models.operations.DeleteNetworkFloorPlanResponse deleteNetworkFloorPlan(org.openapis.openapi.models.operations.DeleteNetworkFloorPlanRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkFloorPlanPathParams.class, baseUrl, "/networks/{networkId}/floorPlans/{floorPlanId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkFloorPlanRequest.class, baseUrl, "/networks/{networkId}/floorPlans/{floorPlanId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -119,7 +119,7 @@ public class FloorPlans {
      */
     public org.openapis.openapi.models.operations.GetNetworkFloorPlanResponse getNetworkFloorPlan(org.openapis.openapi.models.operations.GetNetworkFloorPlanRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkFloorPlanPathParams.class, baseUrl, "/networks/{networkId}/floorPlans/{floorPlanId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkFloorPlanRequest.class, baseUrl, "/networks/{networkId}/floorPlans/{floorPlanId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -159,7 +159,7 @@ public class FloorPlans {
      */
     public org.openapis.openapi.models.operations.GetNetworkFloorPlansResponse getNetworkFloorPlans(org.openapis.openapi.models.operations.GetNetworkFloorPlansRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkFloorPlansPathParams.class, baseUrl, "/networks/{networkId}/floorPlans", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkFloorPlansRequest.class, baseUrl, "/networks/{networkId}/floorPlans", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -199,12 +199,12 @@ public class FloorPlans {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkFloorPlanResponse updateNetworkFloorPlan(org.openapis.openapi.models.operations.UpdateNetworkFloorPlanRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkFloorPlanPathParams.class, baseUrl, "/networks/{networkId}/floorPlans/{floorPlanId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkFloorPlanRequest.class, baseUrl, "/networks/{networkId}/floorPlans/{floorPlanId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

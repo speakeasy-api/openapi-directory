@@ -4,20 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContinuousProjectDocumentProgressRequest {
-    
-    public GetContinuousProjectDocumentProgressPathParams pathParams;
-    public GetContinuousProjectDocumentProgressRequest withPathParams(GetContinuousProjectDocumentProgressPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Document ID/Name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=documentId")
+    public Long documentId;
+    public GetContinuousProjectDocumentProgressRequest withDocumentId(Long documentId) {
+        this.documentId = documentId;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filterByLanguage")
+    public String filterByLanguage;
+    public GetContinuousProjectDocumentProgressRequest withFilterByLanguage(String filterByLanguage) {
+        this.filterByLanguage = filterByLanguage;
+        return this;
+    }
     
-    public GetContinuousProjectDocumentProgressQueryParams queryParams;
-    public GetContinuousProjectDocumentProgressRequest withQueryParams(GetContinuousProjectDocumentProgressQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Continuous project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public Long projectId;
+    public GetContinuousProjectDocumentProgressRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     

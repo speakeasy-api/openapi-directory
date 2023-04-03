@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateProjectRequest {
-    
-    public CreateProjectPathParams pathParams;
-    public CreateProjectRequest withPathParams(CreateProjectPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateProjectRequestBody request;
-    public CreateProjectRequest withRequest(CreateProjectRequestBody request) {
-        this.request = request;
+    public CreateProjectRequestBody requestBody;
+    public CreateProjectRequest withRequestBody(CreateProjectRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateProjectSecurity security;
-    public CreateProjectRequest withSecurity(CreateProjectSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public CreateProjectRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddGroupToCustomerRequest {
-    
-    public AddGroupToCustomerPathParams pathParams;
-    public AddGroupToCustomerRequest withPathParams(AddGroupToCustomerPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the customer to add to a group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customer_id")
+    public String customerId;
+    public AddGroupToCustomerRequest withCustomerId(String customerId) {
+        this.customerId = customerId;
         return this;
     }
     
-    
-    public AddGroupToCustomerSecurity security;
-    public AddGroupToCustomerRequest withSecurity(AddGroupToCustomerSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the customer group to add the customer to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public String groupId;
+    public AddGroupToCustomerRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     

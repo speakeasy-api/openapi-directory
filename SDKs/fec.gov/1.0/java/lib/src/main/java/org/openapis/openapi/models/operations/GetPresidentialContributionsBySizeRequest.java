@@ -4,13 +4,122 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPresidentialContributionsBySizeRequest {
+    /**
+     * API key for https://api.data.gov. Get one at https://api.data.gov/signup.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetPresidentialContributionsBySizeRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public GetPresidentialContributionsBySizeQueryParams queryParams;
-    public GetPresidentialContributionsBySizeRequest withQueryParams(GetPresidentialContributionsBySizeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A unique identifier assigned to each candidate registered with the FEC.
+     * If a person runs for several offices, that person will have separate candidate IDs for each office.
+     *   -P00000001    All candidates
+     *   -P00000002    Democrasts
+     *   -P00000003    Republicans
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=candidate_id")
+    public String[] candidateId;
+    public GetPresidentialContributionsBySizeRequest withCandidateId(String[] candidateId) {
+        this.candidateId = candidateId;
+        return this;
+    }
+    
+    /**
+     * Year of election
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=election_year")
+    public Integer[] electionYear;
+    public GetPresidentialContributionsBySizeRequest withElectionYear(Integer[] electionYear) {
+        this.electionYear = electionYear;
+        return this;
+    }
+    
+    /**
+     * For paginating through results, starting at page 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetPresidentialContributionsBySizeRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results returned per page. Defaults to 20.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetPresidentialContributionsBySizeRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The total all contributions in the following ranges:
+     * ```
+     *   -0    $200 and under
+     *   -200  $200.01 - $499.99
+     *   -500  $500 - $999.99
+     *   -1000 $1000 - $1999.99
+     *   -2000 $2000 +
+     * ```
+     * Unitemized contributions are included in the `0` category.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
+    public GetPresidentialContributionsBySizeSizeEnum[] size;
+    public GetPresidentialContributionsBySizeRequest withSize(GetPresidentialContributionsBySizeSizeEnum[] size) {
+        this.size = size;
+        return this;
+    }
+    
+    /**
+     * Provide a field to sort by. Use `-` for descending order.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetPresidentialContributionsBySizeRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Hide null values on sorted column(s).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
+    public Boolean sortHideNull;
+    public GetPresidentialContributionsBySizeRequest withSortHideNull(Boolean sortHideNull) {
+        this.sortHideNull = sortHideNull;
+        return this;
+    }
+    
+    /**
+     * Toggle that filters out all rows having sort column that is non-null
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
+    public Boolean sortNullOnly;
+    public GetPresidentialContributionsBySizeRequest withSortNullOnly(Boolean sortNullOnly) {
+        this.sortNullOnly = sortNullOnly;
+        return this;
+    }
+    
+    /**
+     * Toggle that sorts null values last
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
+    public Boolean sortNullsLast;
+    public GetPresidentialContributionsBySizeRequest withSortNullsLast(Boolean sortNullsLast) {
+        this.sortNullsLast = sortNullsLast;
         return this;
     }
     

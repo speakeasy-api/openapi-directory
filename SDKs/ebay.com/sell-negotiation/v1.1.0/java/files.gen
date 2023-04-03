@@ -31,17 +31,13 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/FindEligibleItemsSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/FindEligibleItemsQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/FindEligibleItemsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/FindEligibleItemsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/FindEligibleItemsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/SendOfferToInterestedBuyersSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/SendOfferToInterestedBuyersHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/SendOfferToInterestedBuyersRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/SendOfferToInterestedBuyersResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/PagedEligibleItemCollection.java
 lib/src/main/java/org/openapis/openapi/models/shared/EligibleItem.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIAuth.java
 lib/src/main/java/org/openapis/openapi/models/shared/SendOfferToInterestedBuyersCollectionResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Offer.java
 lib/src/main/java/org/openapis/openapi/models/shared/OfferedItem.java

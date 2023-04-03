@@ -38,13 +38,13 @@ public class Regions {
      */
     public org.openapis.openapi.models.operations.GetCountriesCountryCodeRegionsJsonResponse getCountriesCountryCodeRegionsJson(org.openapis.openapi.models.operations.GetCountriesCountryCodeRegionsJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCountriesCountryCodeRegionsJsonPathParams.class, baseUrl, "/countries/{country_code}/regions.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCountriesCountryCodeRegionsJsonRequest.class, baseUrl, "/countries/{country_code}/regions.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCountriesCountryCodeRegionsJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCountriesCountryCodeRegionsJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -90,13 +90,13 @@ public class Regions {
      */
     public org.openapis.openapi.models.operations.GetCountriesCountryCodeRegionsRegionCodeJsonResponse getCountriesCountryCodeRegionsRegionCodeJson(org.openapis.openapi.models.operations.GetCountriesCountryCodeRegionsRegionCodeJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCountriesCountryCodeRegionsRegionCodeJsonPathParams.class, baseUrl, "/countries/{country_code}/regions/{region_code}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCountriesCountryCodeRegionsRegionCodeJsonRequest.class, baseUrl, "/countries/{country_code}/regions/{region_code}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCountriesCountryCodeRegionsRegionCodeJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCountriesCountryCodeRegionsRegionCodeJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

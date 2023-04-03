@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddExternalFileLinksRequest {
-    
-    public AddExternalFileLinksPathParams pathParams;
-    public AddExternalFileLinksRequest withPathParams(AddExternalFileLinksPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Added file links to the project as added by PM.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ExternalFileDto request;
-    public AddExternalFileLinksRequest withRequest(org.openapis.openapi.models.shared.ExternalFileDto request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ExternalFileDto externalFileDto;
+    public AddExternalFileLinksRequest withExternalFileDto(org.openapis.openapi.models.shared.ExternalFileDto externalFileDto) {
+        this.externalFileDto = externalFileDto;
+        return this;
+    }
+    
+    /**
+     * project's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public AddExternalFileLinksRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

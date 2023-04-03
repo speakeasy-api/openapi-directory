@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletePermissionAppsAppIdRequest {
-    
-    public DeletePermissionAppsAppIdPathParams pathParams;
-    public DeletePermissionAppsAppIdRequest withPathParams(DeletePermissionAppsAppIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the app
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
+    public String appId;
+    public DeletePermissionAppsAppIdRequest withAppId(String appId) {
+        this.appId = appId;
         return this;
     }
     
-    
-    public DeletePermissionAppsAppIdQueryParams queryParams;
-    public DeletePermissionAppsAppIdRequest withQueryParams(DeletePermissionAppsAppIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The id of the user
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userId")
+    public String userId;
+    public DeletePermissionAppsAppIdRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

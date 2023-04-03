@@ -7,20 +7,55 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCompileRequest {
-    
-    public PostCompileQueryParams queryParams;
-    public PostCompileRequest withQueryParams(PostCompileQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * The query (in JSON format)
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public PostCompileRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public PostCompileRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * If set to *full*, response will include query explanations in addition to the result.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=explain")
+    public String explain;
+    public PostCompileRequest withExplain(String explain) {
+        this.explain = explain;
+        return this;
+    }
+    
+    /**
+     * If true, response will return additional performance metrics in addition to the result and the standard metrics.
+     * 
+     * **Caution:** This can add significant overhead to query evaluation. The recommendation is to only use this parameter if you are debugging a performance problem.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=instrument")
+    public Boolean instrument;
+    public PostCompileRequest withInstrument(Boolean instrument) {
+        this.instrument = instrument;
+        return this;
+    }
+    
+    /**
+     * If true, compiler performance metrics will be returned in the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=metrics")
+    public Boolean metrics;
+    public PostCompileRequest withMetrics(Boolean metrics) {
+        this.metrics = metrics;
+        return this;
+    }
+    
+    /**
+     * If true, response will be in a human-readable format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pretty")
+    public Boolean pretty;
+    public PostCompileRequest withPretty(Boolean pretty) {
+        this.pretty = pretty;
         return this;
     }
     

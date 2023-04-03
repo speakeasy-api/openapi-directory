@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationAdaptivePolicyAclRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=aclId")
+    public String aclId;
+    public GetOrganizationAdaptivePolicyAclRequest withAclId(String aclId) {
+        this.aclId = aclId;
+        return this;
+    }
     
-    public GetOrganizationAdaptivePolicyAclPathParams pathParams;
-    public GetOrganizationAdaptivePolicyAclRequest withPathParams(GetOrganizationAdaptivePolicyAclPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public GetOrganizationAdaptivePolicyAclRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

@@ -4,27 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetZRSettingsRequest {
-    
-    public GetZRSettingsPathParams pathParams;
-    public GetZRSettingsRequest withPathParams(GetZRSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the Zoom Room.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=roomId")
+    public String roomId;
+    public GetZRSettingsRequest withRoomId(String roomId) {
+        this.roomId = roomId;
         return this;
     }
     
-    
-    public GetZRSettingsQueryParams queryParams;
-    public GetZRSettingsRequest withQueryParams(GetZRSettingsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetZRSettingsSecurity security;
-    public GetZRSettingsRequest withSecurity(GetZRSettingsSecurity security) {
-        this.security = security;
+    /**
+     * The type of setting that you would like to retrieve.&lt;br&gt; `alert`: Alert Settings applied on the Zoom Rooms Account.&lt;br&gt;
+     * `meeting`: Meeting settings of the Zoom Rooms Account.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=setting_type")
+    public String settingType;
+    public GetZRSettingsRequest withSettingType(String settingType) {
+        this.settingType = settingType;
         return this;
     }
     

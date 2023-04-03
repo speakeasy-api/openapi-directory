@@ -7,17 +7,31 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutQuoteJsonRequest {
-    
-    public PutQuoteJsonPathParams pathParams;
-    public PutQuoteJsonRequest withPathParams(PutQuoteJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.QuotePutPersistVO quotePutPersistVO;
+    public PutQuoteJsonRequest withQuotePutPersistVO(org.openapis.openapi.models.shared.QuotePutPersistVO quotePutPersistVO) {
+        this.quotePutPersistVO = quotePutPersistVO;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.QuotePutPersistVO request;
-    public PutQuoteJsonRequest withRequest(org.openapis.openapi.models.shared.QuotePutPersistVO request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public String projectId;
+    public PutQuoteJsonRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=quote_id")
+    public String quoteId;
+    public PutQuoteJsonRequest withQuoteId(String quoteId) {
+        this.quoteId = quoteId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
+    public String workgroupId;
+    public PutQuoteJsonRequest withWorkgroupId(String workgroupId) {
+        this.workgroupId = workgroupId;
         return this;
     }
     

@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWellKnownMercureSubscriptionsTopicSubscriberRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subscriber")
+    public String subscriber;
+    public GetWellKnownMercureSubscriptionsTopicSubscriberRequest withSubscriber(String subscriber) {
+        this.subscriber = subscriber;
+        return this;
+    }
     
-    public GetWellKnownMercureSubscriptionsTopicSubscriberPathParams pathParams;
-    public GetWellKnownMercureSubscriptionsTopicSubscriberRequest withPathParams(GetWellKnownMercureSubscriptionsTopicSubscriberPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=topic")
+    public String topic;
+    public GetWellKnownMercureSubscriptionsTopicSubscriberRequest withTopic(String topic) {
+        this.topic = topic;
         return this;
     }
     

@@ -42,12 +42,12 @@ public class Event {
      */
     public org.openapis.openapi.models.operations.CreateEventResponse createEvent(org.openapis.openapi.models.operations.CreateEventRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateEventPathParams.class, baseUrl, "/conversations/{conversation_id}/events", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateEventRequest.class, baseUrl, "/conversations/{conversation_id}/events", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -83,7 +83,7 @@ public class Event {
      */
     public org.openapis.openapi.models.operations.DeleteEventResponse deleteEvent(org.openapis.openapi.models.operations.DeleteEventRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteEventPathParams.class, baseUrl, "/conversations/{conversation_id}/events/{event_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteEventRequest.class, baseUrl, "/conversations/{conversation_id}/events/{event_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -122,7 +122,7 @@ public class Event {
      */
     public org.openapis.openapi.models.operations.GetEventResponse getEvent(org.openapis.openapi.models.operations.GetEventRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventPathParams.class, baseUrl, "/conversations/{conversation_id}/events/{event_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventRequest.class, baseUrl, "/conversations/{conversation_id}/events/{event_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -162,7 +162,7 @@ public class Event {
      */
     public org.openapis.openapi.models.operations.GetEventsResponse getEvents(org.openapis.openapi.models.operations.GetEventsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventsPathParams.class, baseUrl, "/conversations/{conversation_id}/events", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventsRequest.class, baseUrl, "/conversations/{conversation_id}/events", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

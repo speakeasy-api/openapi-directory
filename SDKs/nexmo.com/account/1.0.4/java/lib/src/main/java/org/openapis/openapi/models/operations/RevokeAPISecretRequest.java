@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RevokeAPISecretRequest {
-    
-    public RevokeAPISecretPathParams pathParams;
-    public RevokeAPISecretRequest withPathParams(RevokeAPISecretPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The API key to manage secrets for
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api_key")
+    public String apiKey;
+    public RevokeAPISecretRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
-    
-    public RevokeAPISecretSecurity security;
-    public RevokeAPISecretRequest withSecurity(RevokeAPISecretSecurity security) {
-        this.security = security;
+    /**
+     * ID of the API Secret
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=secret_id")
+    public String secretId;
+    public RevokeAPISecretRequest withSecretId(String secretId) {
+        this.secretId = secretId;
         return this;
     }
     

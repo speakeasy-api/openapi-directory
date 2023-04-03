@@ -34,7 +34,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/DpicrSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/DpicrRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/DpicrRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/DpicrRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/DpicrRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Dpicr504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Dpicr504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Dpicr504ApplicationJSON.java
@@ -68,6 +67,4 @@ lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsen
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsent.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaSignature.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchema.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKey.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeClientID.java
 USAGE.md

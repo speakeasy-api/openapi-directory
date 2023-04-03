@@ -7,27 +7,6 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateArtifactJsonRequest {
-    
-    public CreateArtifactJsonPathParams pathParams;
-    public CreateArtifactJsonRequest withPathParams(CreateArtifactJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CreateArtifactJsonQueryParams queryParams;
-    public CreateArtifactJsonRequest withQueryParams(CreateArtifactJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public CreateArtifactJsonHeaders headers;
-    public CreateArtifactJsonRequest withHeaders(CreateArtifactJsonHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * The content of the artifact being created. This is often, but not always, JSON data
      * representing one of the supported artifact types:
@@ -44,9 +23,141 @@ public class CreateArtifactJsonRequest {
      * 
      */
     @SpeakeasyMetadata("request:mediaType=application/vnd.create.extended+json")
-    public org.openapis.openapi.models.shared.ContentCreateRequest request;
-    public CreateArtifactJsonRequest withRequest(org.openapis.openapi.models.shared.ContentCreateRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ContentCreateRequest contentCreateRequest;
+    public CreateArtifactJsonRequest withContentCreateRequest(org.openapis.openapi.models.shared.ContentCreateRequest contentCreateRequest) {
+        this.contentCreateRequest = contentCreateRequest;
+        return this;
+    }
+    
+    /**
+     * A client-provided, globally unique identifier for the new artifact.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-ArtifactId")
+    public String xRegistryArtifactId;
+    public CreateArtifactJsonRequest withXRegistryArtifactId(String xRegistryArtifactId) {
+        this.xRegistryArtifactId = xRegistryArtifactId;
+        return this;
+    }
+    
+    /**
+     * Specifies the type of the artifact being added. Possible values include:
+     * 
+     * * Avro (`AVRO`)
+     * * Protobuf (`PROTOBUF`)
+     * * JSON Schema (`JSON`)
+     * * Kafka Connect (`KCONNECT`)
+     * * OpenAPI (`OPENAPI`)
+     * * AsyncAPI (`ASYNCAPI`)
+     * * GraphQL (`GRAPHQL`)
+     * * Web Services Description Language (`WSDL`)
+     * * XML Schema (`XSD`)
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-ArtifactType")
+    public String xRegistryArtifactType;
+    public CreateArtifactJsonRequest withXRegistryArtifactType(String xRegistryArtifactType) {
+        this.xRegistryArtifactType = xRegistryArtifactType;
+        return this;
+    }
+    
+    /**
+     * Specifies the (optional) hash of the artifact to be verified.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-Content-Hash")
+    public String xRegistryContentHash;
+    public CreateArtifactJsonRequest withXRegistryContentHash(String xRegistryContentHash) {
+        this.xRegistryContentHash = xRegistryContentHash;
+        return this;
+    }
+    
+    /**
+     * Specifies the description of artifact being added. Description must be ASCII-only string. If this is not provided, the server will extract the description from the artifact content.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-Description")
+    public String xRegistryDescription;
+    public CreateArtifactJsonRequest withXRegistryDescription(String xRegistryDescription) {
+        this.xRegistryDescription = xRegistryDescription;
+        return this;
+    }
+    
+    /**
+     * Specifies the description of artifact being added. Value of this must be Base64 encoded string. If this is not provided, the server will extract the description from the artifact content.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-Description-Encoded")
+    public String xRegistryDescriptionEncoded;
+    public CreateArtifactJsonRequest withXRegistryDescriptionEncoded(String xRegistryDescriptionEncoded) {
+        this.xRegistryDescriptionEncoded = xRegistryDescriptionEncoded;
+        return this;
+    }
+    
+    /**
+     * The algorithm to use when checking the content validity. (available: SHA256, MD5; default: SHA256)
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-Hash-Algorithm")
+    public CreateArtifactJsonXRegistryHashAlgorithmEnum xRegistryHashAlgorithm;
+    public CreateArtifactJsonRequest withXRegistryHashAlgorithm(CreateArtifactJsonXRegistryHashAlgorithmEnum xRegistryHashAlgorithm) {
+        this.xRegistryHashAlgorithm = xRegistryHashAlgorithm;
+        return this;
+    }
+    
+    /**
+     * Specifies the name of artifact being added. Name must be ASCII-only string. If this is not provided, the server will extract the name from the artifact content.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-Name")
+    public String xRegistryName;
+    public CreateArtifactJsonRequest withXRegistryName(String xRegistryName) {
+        this.xRegistryName = xRegistryName;
+        return this;
+    }
+    
+    /**
+     * Specifies the name of artifact being added. Value of this must be Base64 encoded string. If this is not provided, the server will extract the name from the artifact content.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-Name-Encoded")
+    public String xRegistryNameEncoded;
+    public CreateArtifactJsonRequest withXRegistryNameEncoded(String xRegistryNameEncoded) {
+        this.xRegistryNameEncoded = xRegistryNameEncoded;
+        return this;
+    }
+    
+    /**
+     * Specifies the version number of this initial version of the artifact content.  This would typically
+     * be a simple integer or a SemVer value.  If not provided, the server will assign a version number
+     * automatically (starting with version `1`).
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-Version")
+    public String xRegistryVersion;
+    public CreateArtifactJsonRequest withXRegistryVersion(String xRegistryVersion) {
+        this.xRegistryVersion = xRegistryVersion;
+        return this;
+    }
+    
+    /**
+     * Used only when the `ifExists` query parameter is set to `RETURN_OR_UPDATE`, this parameter can be set to `true` to indicate that the server should "canonicalize" the content when searching for a matching version.  The canonicalization algorithm is unique to each artifact type, but typically involves removing extra whitespace and formatting the content in a consistent manner.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=canonical")
+    public Boolean canonical;
+    public CreateArtifactJsonRequest withCanonical(Boolean canonical) {
+        this.canonical = canonical;
+        return this;
+    }
+    
+    /**
+     * The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public String groupId;
+    public CreateArtifactJsonRequest withGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    
+    /**
+     * Set this option to instruct the server on what to do if the artifact already exists.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifExists")
+    public org.openapis.openapi.models.shared.IfExistsEnum ifExists;
+    public CreateArtifactJsonRequest withIfExists(org.openapis.openapi.models.shared.IfExistsEnum ifExists) {
+        this.ifExists = ifExists;
         return this;
     }
     

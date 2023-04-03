@@ -7,24 +7,79 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateConnectorDefinitionVersionRequest {
-    
-    public CreateConnectorDefinitionVersionPathParams pathParams;
-    public CreateConnectorDefinitionVersionRequest withPathParams(CreateConnectorDefinitionVersionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CreateConnectorDefinitionVersionHeaders headers;
-    public CreateConnectorDefinitionVersionRequest withHeaders(CreateConnectorDefinitionVersionHeaders headers) {
-        this.headers = headers;
+    /**
+     * The ID of the connector definition.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConnectorDefinitionId")
+    public String connectorDefinitionId;
+    public CreateConnectorDefinitionVersionRequest withConnectorDefinitionId(String connectorDefinitionId) {
+        this.connectorDefinitionId = connectorDefinitionId;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateConnectorDefinitionVersionRequestBody request;
-    public CreateConnectorDefinitionVersionRequest withRequest(CreateConnectorDefinitionVersionRequestBody request) {
-        this.request = request;
+    public CreateConnectorDefinitionVersionRequestBody requestBody;
+    public CreateConnectorDefinitionVersionRequest withRequestBody(CreateConnectorDefinitionVersionRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public CreateConnectorDefinitionVersionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public CreateConnectorDefinitionVersionRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public CreateConnectorDefinitionVersionRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public CreateConnectorDefinitionVersionRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public CreateConnectorDefinitionVersionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public CreateConnectorDefinitionVersionRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public CreateConnectorDefinitionVersionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * A client token used to correlate requests and responses.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amzn-Client-Token")
+    public String xAmznClientToken;
+    public CreateConnectorDefinitionVersionRequest withXAmznClientToken(String xAmznClientToken) {
+        this.xAmznClientToken = xAmznClientToken;
         return this;
     }
     

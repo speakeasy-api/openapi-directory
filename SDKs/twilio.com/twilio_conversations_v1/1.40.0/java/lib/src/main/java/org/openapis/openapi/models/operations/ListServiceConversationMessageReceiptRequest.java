@@ -4,34 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListServiceConversationMessageReceiptRequest {
-    
-    public ListServiceConversationMessageReceiptPathParams pathParams;
-    public ListServiceConversationMessageReceiptRequest withPathParams(ListServiceConversationMessageReceiptPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Message resource is associated with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChatServiceSid")
+    public String chatServiceSid;
+    public ListServiceConversationMessageReceiptRequest withChatServiceSid(String chatServiceSid) {
+        this.chatServiceSid = chatServiceSid;
         return this;
     }
     
-    
-    public ListServiceConversationMessageReceiptQueryParams queryParams;
-    public ListServiceConversationMessageReceiptRequest withQueryParams(ListServiceConversationMessageReceiptQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this message.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConversationSid")
+    public String conversationSid;
+    public ListServiceConversationMessageReceiptRequest withConversationSid(String conversationSid) {
+        this.conversationSid = conversationSid;
         return this;
     }
     
-    
-    public ListServiceConversationMessageReceiptSecurity security;
-    public ListServiceConversationMessageReceiptRequest withSecurity(ListServiceConversationMessageReceiptSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the message within a [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) the delivery receipt belongs to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=MessageSid")
+    public String messageSid;
+    public ListServiceConversationMessageReceiptRequest withMessageSid(String messageSid) {
+        this.messageSid = messageSid;
         return this;
     }
     
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListServiceConversationMessageReceiptRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public String serverURL;
-    public ListServiceConversationMessageReceiptRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListServiceConversationMessageReceiptRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListServiceConversationMessageReceiptRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteindexbynameRequest {
-    
-    public DeleteindexbynamePathParams pathParams;
-    public DeleteindexbynameRequest withPathParams(DeleteindexbynamePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public DeleteindexbynameRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
+    /**
+     * Name of the data entity. Defined by the api. Examples of native data entities you can use are `CL` for client profiles and `AD` for client addresses.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dataEntityName")
+    public String dataEntityName;
+    public DeleteindexbynameRequest withDataEntityName(String dataEntityName) {
+        this.dataEntityName = dataEntityName;
+        return this;
+    }
     
-    public DeleteindexbynameHeaders headers;
-    public DeleteindexbynameRequest withHeaders(DeleteindexbynameHeaders headers) {
-        this.headers = headers;
+    /**
+     * Name of the index.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=index_name")
+    public String indexName;
+    public DeleteindexbynameRequest withIndexName(String indexName) {
+        this.indexName = indexName;
         return this;
     }
     

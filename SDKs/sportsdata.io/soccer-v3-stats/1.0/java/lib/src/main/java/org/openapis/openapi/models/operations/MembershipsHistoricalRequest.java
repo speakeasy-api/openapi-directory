@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MembershipsHistoricalRequest {
-    
-    public MembershipsHistoricalPathParams pathParams;
-    public MembershipsHistoricalRequest withPathParams(MembershipsHistoricalPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public MembershipsHistoricalFormatEnum format;
+    public MembershipsHistoricalRequest withFormat(MembershipsHistoricalFormatEnum format) {
+        this.format = format;
         return this;
     }
     

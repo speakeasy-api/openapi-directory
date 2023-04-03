@@ -31,9 +31,7 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetSearchSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetSearchQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSearchRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSearch200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSearchResponse.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKey.java
 USAGE.md

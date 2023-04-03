@@ -38,7 +38,7 @@ public class WlanLists {
      */
     public org.openapis.openapi.models.operations.GetNetworkSmDeviceWlanListsResponse getNetworkSmDeviceWlanLists(org.openapis.openapi.models.operations.GetNetworkSmDeviceWlanListsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSmDeviceWlanListsPathParams.class, baseUrl, "/networks/{networkId}/sm/devices/{deviceId}/wlanLists", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSmDeviceWlanListsRequest.class, baseUrl, "/networks/{networkId}/sm/devices/{deviceId}/wlanLists", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

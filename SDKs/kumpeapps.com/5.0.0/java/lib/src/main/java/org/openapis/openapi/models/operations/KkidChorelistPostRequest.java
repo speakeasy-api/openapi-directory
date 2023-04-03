@@ -4,20 +4,206 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KkidChorelistPostRequest {
-    
-    public KkidChorelistPostQueryParams queryParams;
-    public KkidChorelistPostRequest withQueryParams(KkidChorelistPostQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Notes if AI Icons should be used (n for no, y for yes, e for yes- error)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aiIcon")
+    public String aiIcon;
+    public KkidChorelistPostRequest withAiIcon(String aiIcon) {
+        this.aiIcon = aiIcon;
         return this;
     }
     
+    /**
+     * block dash option on this chore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=blockDash")
+    public Boolean blockDash;
+    public KkidChorelistPostRequest withBlockDash(Boolean blockDash) {
+        this.blockDash = blockDash;
+        return this;
+    }
     
-    public KkidChorelistPostSecurity security;
-    public KkidChorelistPostRequest withSecurity(KkidChorelistPostSecurity security) {
-        this.security = security;
+    /**
+     * mark as sibling can steal chore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=canSteal")
+    public Boolean canSteal;
+    public KkidChorelistPostRequest withCanSteal(Boolean canSteal) {
+        this.canSteal = canSteal;
+        return this;
+    }
+    
+    /**
+     * optional chore description
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=choreDescription")
+    public String choreDescription;
+    public KkidChorelistPostRequest withChoreDescription(String choreDescription) {
+        this.choreDescription = choreDescription;
+        return this;
+    }
+    
+    /**
+     * name of chore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=choreName")
+    public String choreName;
+    public KkidChorelistPostRequest withChoreName(String choreName) {
+        this.choreName = choreName;
+        return this;
+    }
+    
+    /**
+     * number priority of chore (default is 5)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=choreNumber")
+    public Long choreNumber;
+    public KkidChorelistPostRequest withChoreNumber(Long choreNumber) {
+        this.choreNumber = choreNumber;
+        return this;
+    }
+    
+    /**
+     * day of week (Monday, Tuesday....) for the chore. For weekly chores put Weekly or leave blank
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=day")
+    public KkidChorelistPostDayEnum day;
+    public KkidChorelistPostRequest withDay(KkidChorelistPostDayEnum day) {
+        this.day = day;
+        return this;
+    }
+    
+    /**
+     * ammount of allowance added at end of week for completing this chore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=extraAllowance")
+    public Long extraAllowance;
+    public KkidChorelistPostRequest withExtraAllowance(Long extraAllowance) {
+        this.extraAllowance = extraAllowance;
+        return this;
+    }
+    
+    /**
+     * True if this is a calendar note instead of a chore.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isCalendar")
+    public Boolean isCalendar;
+    public KkidChorelistPostRequest withIsCalendar(Boolean isCalendar) {
+        this.isCalendar = isCalendar;
+        return this;
+    }
+    
+    /**
+     * username of kid to assign the chore to.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=kidUsername")
+    public String kidUsername;
+    public KkidChorelistPostRequest withKidUsername(String kidUsername) {
+        this.kidUsername = kidUsername;
+        return this;
+    }
+    
+    /**
+     * text field of nfc tag required to check off chore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nfcTag")
+    public String nfcTag;
+    public KkidChorelistPostRequest withNfcTag(String nfcTag) {
+        this.nfcTag = nfcTag;
+        return this;
+    }
+    
+    /**
+     * notes added to chore (visable only on reports, kids do not see this note, this is mostly just for the developer)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=notes")
+    public String notes;
+    public KkidChorelistPostRequest withNotes(String notes) {
+        this.notes = notes;
+        return this;
+    }
+    
+    /**
+     * tag for object detection to search for (required if requireObjectDetection is true)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=objectDetectionTag")
+    public String objectDetectionTag;
+    public KkidChorelistPostRequest withObjectDetectionTag(String objectDetectionTag) {
+        this.objectDetectionTag = objectDetectionTag;
+        return this;
+    }
+    
+    /**
+     * mark as one time chore (does not repeat each week)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oneTime")
+    public Boolean oneTime;
+    public KkidChorelistPostRequest withOneTime(Boolean oneTime) {
+        this.oneTime = oneTime;
+        return this;
+    }
+    
+    /**
+     * mark as optional chore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=optional")
+    public Boolean optional;
+    public KkidChorelistPostRequest withOptional(Boolean optional) {
+        this.optional = optional;
+        return this;
+    }
+    
+    /**
+     * mark as reassignable (default is true)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reassignable")
+    public Boolean reassignable;
+    public KkidChorelistPostRequest withReassignable(Boolean reassignable) {
+        this.reassignable = reassignable;
+        return this;
+    }
+    
+    /**
+     * require use of camera to detect object detection tag order to check off chore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requireObjectDetection")
+    public Boolean requireObjectDetection;
+    public KkidChorelistPostRequest withRequireObjectDetection(Boolean requireObjectDetection) {
+        this.requireObjectDetection = requireObjectDetection;
+        return this;
+    }
+    
+    /**
+     * date (yyyy-mm-dd) that you wish the chore to start showing up. (default is today)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
+    public String startDate;
+    public KkidChorelistPostRequest withStartDate(String startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    
+    /**
+     * status of chore (default is todo)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public String status;
+    public KkidChorelistPostRequest withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * true if chore updated via API from an Automation System
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedByAutomation")
+    public Boolean updatedByAutomation;
+    public KkidChorelistPostRequest withUpdatedByAutomation(Boolean updatedByAutomation) {
+        this.updatedByAutomation = updatedByAutomation;
         return this;
     }
     

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateOpenIdIdpConfigRequest {
-    
-    public CreateOpenIdIdpConfigHeaders headers;
-    public CreateOpenIdIdpConfigRequest withHeaders(CreateOpenIdIdpConfigHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateOpenIdIdpConfigRequest createOpenIdIdpConfigRequest;
+    public CreateOpenIdIdpConfigRequest withCreateOpenIdIdpConfigRequest(org.openapis.openapi.models.shared.CreateOpenIdIdpConfigRequest createOpenIdIdpConfigRequest) {
+        this.createOpenIdIdpConfigRequest = createOpenIdIdpConfigRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateOpenIdIdpConfigRequest request;
-    public CreateOpenIdIdpConfigRequest withRequest(org.openapis.openapi.models.shared.CreateOpenIdIdpConfigRequest request) {
-        this.request = request;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public CreateOpenIdIdpConfigRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     

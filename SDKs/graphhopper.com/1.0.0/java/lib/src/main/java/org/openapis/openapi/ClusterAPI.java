@@ -60,7 +60,7 @@ public class ClusterAPI {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AsyncClusteringProblemResponse asyncClusteringProblem(org.openapis.openapi.models.operations.AsyncClusteringProblemRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AsyncClusteringProblemResponse asyncClusteringProblem(org.openapis.openapi.models.shared.ClusterRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/cluster/calculate");
         
@@ -127,7 +127,7 @@ public class ClusterAPI {
      */
     public org.openapis.openapi.models.operations.GetClusterSolutionResponse getClusterSolution(org.openapis.openapi.models.operations.GetClusterSolutionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetClusterSolutionPathParams.class, baseUrl, "/cluster/solution/{jobId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetClusterSolutionRequest.class, baseUrl, "/cluster/solution/{jobId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -190,7 +190,7 @@ public class ClusterAPI {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SolveClusteringProblemResponse solveClusteringProblem(org.openapis.openapi.models.operations.SolveClusteringProblemRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SolveClusteringProblemResponse solveClusteringProblem(org.openapis.openapi.models.shared.ClusterRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/cluster");
         

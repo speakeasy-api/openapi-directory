@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AddTagsToResourceXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AddTagsToResourceHeaders;
 import org.openapis.openapi.models.operations.AddTagsToResourceRequest;
 import org.openapis.openapi.models.operations.AddTagsToResourceResponse;
 import org.openapis.openapi.models.shared.AddTagsToResourceMessage;
@@ -29,39 +28,40 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AddTagsToResourceRequest req = new AddTagsToResourceRequest() {{
-                headers = new AddTagsToResourceHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "AmazonDMSv20160101.AddTagsToResource";
-                }};
-                request = new AddTagsToResourceMessage() {{
-                    resourceArn = "illum";
+                addTagsToResourceMessage = new AddTagsToResourceMessage() {{
+                    resourceArn = "corrupti";
                     tags = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            key = "error";
-                            resourceArn = "deserunt";
-                            value = "suscipit";
+                            key = "distinctio";
+                            resourceArn = "quibusdam";
+                            value = "unde";
                         }}),
                         add(new Tag() {{
-                            key = "iure";
-                            resourceArn = "magnam";
-                            value = "debitis";
+                            key = "nulla";
+                            resourceArn = "corrupti";
+                            value = "illum";
+                        }}),
+                        add(new Tag() {{
+                            key = "vel";
+                            resourceArn = "error";
+                            value = "deserunt";
                         }}),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "suscipit";
+                xAmzContentSha256 = "iure";
+                xAmzCredential = "magnam";
+                xAmzDate = "debitis";
+                xAmzSecurityToken = "ipsa";
+                xAmzSignature = "delectus";
+                xAmzSignedHeaders = "tempora";
+                xAmzTarget = "AmazonDMSv20160101.AddTagsToResource";
+            }}            
 
             AddTagsToResourceResponse res = sdk.addTagsToResource(req);
 
@@ -75,7 +75,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

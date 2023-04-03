@@ -35,10 +35,11 @@ public class QuoteImages {
     /**
      * Delete a quote image. The user needs to be the owner of the quote image to be able to delete it. - 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteQuoteImageResponse deleteQuoteImage(org.openapis.openapi.models.operations.DeleteQuoteImageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteQuoteImageResponse deleteQuoteImage(org.openapis.openapi.models.operations.DeleteQuoteImageRequest request, org.openapis.openapi.models.operations.DeleteQuoteImageSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/quote/image");
         
@@ -46,14 +47,14 @@ public class QuoteImages {
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteQuoteImageQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteQuoteImageRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -74,10 +75,11 @@ public class QuoteImages {
     /**
      * Delete a background image file. The user needs to be the owner of the background image to be able to delete it. - 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteQuoteImageBackgroundResponse deleteQuoteImageBackground(org.openapis.openapi.models.operations.DeleteQuoteImageBackgroundRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteQuoteImageBackgroundResponse deleteQuoteImageBackground(org.openapis.openapi.models.operations.DeleteQuoteImageBackgroundRequest request, org.openapis.openapi.models.operations.DeleteQuoteImageBackgroundSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/quote/image/background");
         
@@ -85,14 +87,14 @@ public class QuoteImages {
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteQuoteImageBackgroundQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteQuoteImageBackgroundRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -113,10 +115,11 @@ public class QuoteImages {
     /**
      * Delete a font file. The user needs to be the owner of the font to be able to delete it. - 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteQuoteImageFontResponse deleteQuoteImageFont(org.openapis.openapi.models.operations.DeleteQuoteImageFontRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteQuoteImageFontResponse deleteQuoteImageFont(org.openapis.openapi.models.operations.DeleteQuoteImageFontRequest request, org.openapis.openapi.models.operations.DeleteQuoteImageFontSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/quote/image/font");
         
@@ -124,14 +127,14 @@ public class QuoteImages {
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteQuoteImageFontQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteQuoteImageFontRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -152,10 +155,11 @@ public class QuoteImages {
     /**
      * Gets a Quote image for a given id. Response can be an image file as a binary or a base64 encoded contents wrapped in json. `TODO` - 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetQuoteImageResponse getQuoteImage(org.openapis.openapi.models.operations.GetQuoteImageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetQuoteImageResponse getQuoteImage(org.openapis.openapi.models.operations.GetQuoteImageRequest request, org.openapis.openapi.models.operations.GetQuoteImageSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/quote/image");
         
@@ -163,14 +167,14 @@ public class QuoteImages {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetQuoteImageQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetQuoteImageRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -191,10 +195,11 @@ public class QuoteImages {
     /**
      * Lists background images in your private collection.  - 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetQuoteImageBackgroundListResponse getQuoteImageBackgroundList(org.openapis.openapi.models.operations.GetQuoteImageBackgroundListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetQuoteImageBackgroundListResponse getQuoteImageBackgroundList(org.openapis.openapi.models.operations.GetQuoteImageBackgroundListRequest request, org.openapis.openapi.models.operations.GetQuoteImageBackgroundListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/quote/image/background/list");
         
@@ -202,14 +207,14 @@ public class QuoteImages {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetQuoteImageBackgroundListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetQuoteImageBackgroundListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -230,10 +235,11 @@ public class QuoteImages {
     /**
      * Searches for a background image with a given tag.  - 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetQuoteImageBackgroundSearchResponse getQuoteImageBackgroundSearch(org.openapis.openapi.models.operations.GetQuoteImageBackgroundSearchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetQuoteImageBackgroundSearchResponse getQuoteImageBackgroundSearch(org.openapis.openapi.models.operations.GetQuoteImageBackgroundSearchRequest request, org.openapis.openapi.models.operations.GetQuoteImageBackgroundSearchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/quote/image/background/search");
         
@@ -241,14 +247,14 @@ public class QuoteImages {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetQuoteImageBackgroundSearchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetQuoteImageBackgroundSearchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -269,10 +275,11 @@ public class QuoteImages {
     /**
      * Lists background images in your private collection.  - 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetQuoteImageFontListResponse getQuoteImageFontList(org.openapis.openapi.models.operations.GetQuoteImageFontListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetQuoteImageFontListResponse getQuoteImageFontList(org.openapis.openapi.models.operations.GetQuoteImageFontListRequest request, org.openapis.openapi.models.operations.GetQuoteImageFontListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/quote/image/font/list");
         
@@ -280,14 +287,14 @@ public class QuoteImages {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetQuoteImageFontListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetQuoteImageFontListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -308,10 +315,11 @@ public class QuoteImages {
     /**
      * Searches for a font with a given tag.  - 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetQuoteImageFontSearchResponse getQuoteImageFontSearch(org.openapis.openapi.models.operations.GetQuoteImageFontSearchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetQuoteImageFontSearchResponse getQuoteImageFontSearch(org.openapis.openapi.models.operations.GetQuoteImageFontSearchRequest request, org.openapis.openapi.models.operations.GetQuoteImageFontSearchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/quote/image/font/search");
         
@@ -319,14 +327,14 @@ public class QuoteImages {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetQuoteImageFontSearchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetQuoteImageFontSearchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -347,10 +355,11 @@ public class QuoteImages {
     /**
      * Gets a Random Quote image. Optional `category` param determines the category of quote used in the image. Optional `author` param gets the quote image of a given author.  - 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetQuoteImageSearchResponse getQuoteImageSearch(org.openapis.openapi.models.operations.GetQuoteImageSearchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetQuoteImageSearchResponse getQuoteImageSearch(org.openapis.openapi.models.operations.GetQuoteImageSearchRequest request, org.openapis.openapi.models.operations.GetQuoteImageSearchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/quote/image/search");
         
@@ -358,14 +367,14 @@ public class QuoteImages {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetQuoteImageSearchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetQuoteImageSearchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -386,10 +395,11 @@ public class QuoteImages {
     /**
      * Add an image for use later as a quote background image.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostQuoteImageBackgroundResponse postQuoteImageBackground(org.openapis.openapi.models.operations.PostQuoteImageBackgroundRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostQuoteImageBackgroundResponse postQuoteImageBackground(org.openapis.openapi.models.operations.PostQuoteImageBackgroundRequestBody request, org.openapis.openapi.models.operations.PostQuoteImageBackgroundSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/quote/image/background");
         
@@ -400,7 +410,7 @@ public class QuoteImages {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -421,10 +431,11 @@ public class QuoteImages {
     /**
      * Add a tag to a given Image.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostQuoteImageBackgroundTagsAddResponse postQuoteImageBackgroundTagsAdd(org.openapis.openapi.models.operations.PostQuoteImageBackgroundTagsAddRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostQuoteImageBackgroundTagsAddResponse postQuoteImageBackgroundTagsAdd(org.openapis.openapi.models.operations.PostQuoteImageBackgroundTagsAddRequest request, org.openapis.openapi.models.operations.PostQuoteImageBackgroundTagsAddSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/quote/image/background/tags/add");
         
@@ -432,14 +443,14 @@ public class QuoteImages {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostQuoteImageBackgroundTagsAddQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostQuoteImageBackgroundTagsAddRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -460,10 +471,11 @@ public class QuoteImages {
     /**
      * Remove a tag from a given Image.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostQuoteImageBackgroundTagsRemoveResponse postQuoteImageBackgroundTagsRemove(org.openapis.openapi.models.operations.PostQuoteImageBackgroundTagsRemoveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostQuoteImageBackgroundTagsRemoveResponse postQuoteImageBackgroundTagsRemove(org.openapis.openapi.models.operations.PostQuoteImageBackgroundTagsRemoveRequest request, org.openapis.openapi.models.operations.PostQuoteImageBackgroundTagsRemoveSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/quote/image/background/tags/remove");
         
@@ -471,14 +483,14 @@ public class QuoteImages {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostQuoteImageBackgroundTagsRemoveQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostQuoteImageBackgroundTagsRemoveRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -499,10 +511,11 @@ public class QuoteImages {
     /**
      * Add a font file for use later in creating a quote image. This is essentially a `PUT` but not many clients handle PUT with binary stream i.e. a file, gracefully.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostQuoteImageFontResponse postQuoteImageFont(org.openapis.openapi.models.operations.PostQuoteImageFontRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostQuoteImageFontResponse postQuoteImageFont(org.openapis.openapi.models.operations.PostQuoteImageFontRequestBody request, org.openapis.openapi.models.operations.PostQuoteImageFontSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/quote/image/font");
         
@@ -513,7 +526,7 @@ public class QuoteImages {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -534,10 +547,11 @@ public class QuoteImages {
     /**
      * Add a tag to a given font.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostQuoteImageFontTagsAddResponse postQuoteImageFontTagsAdd(org.openapis.openapi.models.operations.PostQuoteImageFontTagsAddRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostQuoteImageFontTagsAddResponse postQuoteImageFontTagsAdd(org.openapis.openapi.models.operations.PostQuoteImageFontTagsAddRequest request, org.openapis.openapi.models.operations.PostQuoteImageFontTagsAddSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/quote/image/font/tags/add");
         
@@ -545,14 +559,14 @@ public class QuoteImages {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostQuoteImageFontTagsAddQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostQuoteImageFontTagsAddRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -573,10 +587,11 @@ public class QuoteImages {
     /**
      * Remove a tag from a given Font.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostQuoteImageFontTagsRemoveResponse postQuoteImageFontTagsRemove(org.openapis.openapi.models.operations.PostQuoteImageFontTagsRemoveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostQuoteImageFontTagsRemoveResponse postQuoteImageFontTagsRemove(org.openapis.openapi.models.operations.PostQuoteImageFontTagsRemoveRequest request, org.openapis.openapi.models.operations.PostQuoteImageFontTagsRemoveSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/quote/image/font/tags/remove");
         
@@ -584,14 +599,14 @@ public class QuoteImages {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostQuoteImageFontTagsRemoveQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostQuoteImageFontTagsRemoveRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -612,10 +627,11 @@ public class QuoteImages {
     /**
      * Create a new quote image for a given quote. Choose background colors/images , choose different font styles and generate a beautiful quote image. Did you just had a feeling of being a god or what?! - 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutQuoteImageResponse putQuoteImage(org.openapis.openapi.models.operations.PutQuoteImageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutQuoteImageResponse putQuoteImage(org.openapis.openapi.models.operations.PutQuoteImageRequest request, org.openapis.openapi.models.operations.PutQuoteImageSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/quote/image");
         
@@ -623,14 +639,14 @@ public class QuoteImages {
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutQuoteImageQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PutQuoteImageRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

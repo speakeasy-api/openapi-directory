@@ -37,24 +37,25 @@ public class StreamAudio {
      * Play an audio file into a call
      * Play an audio file into a call
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StartStreamResponse startStream(org.openapis.openapi.models.operations.StartStreamRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StartStreamResponse startStream(org.openapis.openapi.models.operations.StartStreamRequest request, org.openapis.openapi.models.operations.StartStreamSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StartStreamPathParams.class, baseUrl, "/{uuid}/stream", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StartStreamRequest.class, baseUrl, "/{uuid}/stream", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "startStreamRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,19 +83,20 @@ public class StreamAudio {
      * Stop playing an audio file into a call
      * Stop playing an audio file into a call
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StopStreamResponse stopStream(org.openapis.openapi.models.operations.StopStreamRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StopStreamResponse stopStream(org.openapis.openapi.models.operations.StopStreamRequest request, org.openapis.openapi.models.operations.StopStreamSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopStreamPathParams.class, baseUrl, "/{uuid}/stream", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopStreamRequest.class, baseUrl, "/{uuid}/stream", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

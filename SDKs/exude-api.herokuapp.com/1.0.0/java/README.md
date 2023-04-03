@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.FilterFileDataStoppingsPathParams;
 import org.openapis.openapi.models.operations.FilterFileDataStoppingsRequestBodyFile;
 import org.openapis.openapi.models.operations.FilterFileDataStoppingsRequestBody;
 import org.openapis.openapi.models.operations.FilterFileDataStoppingsRequest;
@@ -30,16 +29,14 @@ public class Application {
                 .build();
 
             FilterFileDataStoppingsRequest req = new FilterFileDataStoppingsRequest() {{
-                pathParams = new FilterFileDataStoppingsPathParams() {{
-                    type = "corrupti";
-                }};
-                request = new FilterFileDataStoppingsRequestBody() {{
+                requestBody = new FilterFileDataStoppingsRequestBody() {{
                     file = new FilterFileDataStoppingsRequestBodyFile() {{
-                        content = "provident".getBytes();
-                        file = "distinctio";
+                        content = "corrupti".getBytes();
+                        file = "provident";
                     }};
                 }};
-            }};            
+                type = "distinctio";
+            }}            
 
             FilterFileDataStoppingsResponse res = sdk.exude.filterFileDataStoppings(req);
 
@@ -53,7 +50,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### exude

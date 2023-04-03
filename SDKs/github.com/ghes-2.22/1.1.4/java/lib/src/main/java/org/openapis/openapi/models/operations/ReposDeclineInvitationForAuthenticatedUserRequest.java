@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposDeclineInvitationForAuthenticatedUserRequest {
-    
-    public ReposDeclineInvitationForAuthenticatedUserPathParams pathParams;
-    public ReposDeclineInvitationForAuthenticatedUserRequest withPathParams(ReposDeclineInvitationForAuthenticatedUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * invitation_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=invitation_id")
+    public Long invitationId;
+    public ReposDeclineInvitationForAuthenticatedUserRequest withInvitationId(Long invitationId) {
+        this.invitationId = invitationId;
         return this;
     }
     

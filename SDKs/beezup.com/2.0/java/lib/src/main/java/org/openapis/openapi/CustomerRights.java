@@ -37,7 +37,7 @@ public class CustomerRights {
      */
     public org.openapis.openapi.models.operations.GetRightsResponse getRights(org.openapis.openapi.models.operations.GetRightsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRightsPathParams.class, baseUrl, "/v2/user/customer/stores/{storeId}/rights", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRightsRequest.class, baseUrl, "/v2/user/customer/stores/{storeId}/rights", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

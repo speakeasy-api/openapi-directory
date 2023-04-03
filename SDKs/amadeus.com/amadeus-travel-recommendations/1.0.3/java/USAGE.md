@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetRecommendedLocationQueryParams;
 import org.openapis.openapi.models.operations.GetRecommendedLocationRequest;
 import org.openapis.openapi.models.operations.GetRecommendedLocationResponse;
 
@@ -15,12 +14,10 @@ public class Application {
                 .build();
 
             GetRecommendedLocationRequest req = new GetRecommendedLocationRequest() {{
-                queryParams = new GetRecommendedLocationQueryParams() {{
-                    cityCodes = "corrupti";
-                    destinationCountryCodes = "provident";
-                    travelerCountryCode = "distinctio";
-                }};
-            }};            
+                cityCodes = "corrupti";
+                destinationCountryCodes = "provident";
+                travelerCountryCode = "distinctio";
+            }}            
 
             GetRecommendedLocationResponse res = sdk.recommendedLocations.getRecommendedLocation(req);
 

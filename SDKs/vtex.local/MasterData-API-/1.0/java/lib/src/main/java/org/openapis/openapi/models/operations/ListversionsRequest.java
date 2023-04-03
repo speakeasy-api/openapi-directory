@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListversionsRequest {
-    
-    public ListversionsPathParams pathParams;
-    public ListversionsRequest withPathParams(ListversionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public ListversionsRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public ListversionsRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public ListversionsHeaders headers;
-    public ListversionsRequest withHeaders(ListversionsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Two letter word that identifies the data structure
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=acronym")
+    public String acronym;
+    public ListversionsRequest withAcronym(String acronym) {
+        this.acronym = acronym;
+        return this;
+    }
+    
+    /**
+     * Id of the document
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public ListversionsRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

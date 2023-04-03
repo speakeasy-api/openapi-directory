@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateEmailListByIdRequest {
-    
-    public UpdateEmailListByIdPathParams pathParams;
-    public UpdateEmailListByIdRequest withPathParams(UpdateEmailListByIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateEmailListByIdHeaders headers;
-    public UpdateEmailListByIdRequest withHeaders(UpdateEmailListByIdHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateEmailListByIdUpdateEmailListRequestBody request;
-    public UpdateEmailListByIdRequest withRequest(UpdateEmailListByIdUpdateEmailListRequestBody request) {
-        this.request = request;
+    public UpdateEmailListByIdUpdateEmailListRequestBody requestBody;
+    public UpdateEmailListByIdRequest withRequestBody(UpdateEmailListByIdUpdateEmailListRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Access token required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-access-token")
+    public String evAccessToken;
+    public UpdateEmailListByIdRequest withEvAccessToken(String evAccessToken) {
+        this.evAccessToken = evAccessToken;
+        return this;
+    }
+    
+    /**
+     * API Key required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-api-key")
+    public String evApiKey;
+    public UpdateEmailListByIdRequest withEvApiKey(String evApiKey) {
+        this.evApiKey = evApiKey;
+        return this;
+    }
+    
+    /**
+     * ID of the email list to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public UpdateEmailListByIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

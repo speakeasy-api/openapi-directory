@@ -4,20 +4,34 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PaymentLinkApiAllRequest {
-    
-    public PaymentLinkApiAllQueryParams queryParams;
-    public PaymentLinkApiAllRequest withQueryParams(PaymentLinkApiAllQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=queryOptions.page")
+    public Integer queryOptionsPage;
+    public PaymentLinkApiAllRequest withQueryOptionsPage(Integer queryOptionsPage) {
+        this.queryOptionsPage = queryOptionsPage;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=queryOptions.pageSize")
+    public Integer queryOptionsPageSize;
+    public PaymentLinkApiAllRequest withQueryOptionsPageSize(Integer queryOptionsPageSize) {
+        this.queryOptionsPageSize = queryOptionsPageSize;
+        return this;
+    }
     
-    public PaymentLinkApiAllHeaders headers;
-    public PaymentLinkApiAllRequest withHeaders(PaymentLinkApiAllHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
+    public String xAuthKey;
+    public PaymentLinkApiAllRequest withXAuthKey(String xAuthKey) {
+        this.xAuthKey = xAuthKey;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
+    public String xAuthSecret;
+    public PaymentLinkApiAllRequest withXAuthSecret(String xAuthSecret) {
+        this.xAuthSecret = xAuthSecret;
         return this;
     }
     

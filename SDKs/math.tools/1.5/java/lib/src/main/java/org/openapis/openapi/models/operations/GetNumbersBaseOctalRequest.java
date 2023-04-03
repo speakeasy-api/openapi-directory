@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNumbersBaseOctalRequest {
-    
-    public GetNumbersBaseOctalQueryParams queryParams;
-    public GetNumbersBaseOctalRequest withQueryParams(GetNumbersBaseOctalQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Base of the supplied number (Optional base 10 assumed by default)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
+    public Long from;
+    public GetNumbersBaseOctalRequest withFrom(Long from) {
+        this.from = from;
         return this;
     }
     
-    
-    public GetNumbersBaseOctalSecurity security;
-    public GetNumbersBaseOctalRequest withSecurity(GetNumbersBaseOctalSecurity security) {
-        this.security = security;
+    /**
+     * Number to convert to octal
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
+    public Long number;
+    public GetNumbersBaseOctalRequest withNumber(Long number) {
+        this.number = number;
         return this;
     }
     

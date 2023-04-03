@@ -4,20 +4,139 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRatingsListRequest {
-    
-    public GetRatingsListQueryParams queryParams;
-    public GetRatingsListRequest withQueryParams(GetRatingsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The type of device the content is targeting.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device")
+    public String device;
+    public GetRatingsListRequest withDevice(String device) {
+        this.device = device;
         return this;
     }
     
+    /**
+     * The set of opt in feature flags which cause breaking changes to responses.
+     * 
+     * While Rocket APIs look to avoid breaking changes under the active major version, the formats of responses
+     * may need to evolve over this time.
+     * 
+     * These feature flags allow clients to select which response formats they expect and avoid breaking
+     * clients as these formats evolve under the current major version.
+     * 
+     * ### Flags
+     * 
+     * - `all` - Enable all flags. Useful for testing. _Don't use in production_.
+     * - `idp` - Dynamic item detail pages with schedulable rows.
+     * - `ldp` - Dynamic list detail pages with schedulable rows.
+     * - `hb` - Hubble formatted image urls.
+     * - `rpt` - Updated resume point threshold logic.
+     * - `cas` - "Custom Asset Search", inlcude `customAssets` in search results.
+     * - `lrl` - Do not pre-populate related list if more than `max_list_prefetch` down the page.
+     * - `cd` - Custom Destination support.
+     * 
+     * See the `feature-flags.md` for available flag details.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
+    public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+    public GetRatingsListRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
+        this.ff = ff;
+        return this;
+    }
     
-    public GetRatingsListSecurity security;
-    public GetRatingsListRequest withSecurity(GetRatingsListSecurity security) {
-        this.security = security;
+    /**
+     * The item type to filter by. Defaults to unspecified.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=item_type")
+    public org.openapis.openapi.models.shared.ItemTypeEnum itemType;
+    public GetRatingsListRequest withItemType(org.openapis.openapi.models.shared.ItemTypeEnum itemType) {
+        this.itemType = itemType;
+        return this;
+    }
+    
+    /**
+     * Language code for the preferred language to be returned in the response.
+     * 
+     * Parameter value is case-insensitive and should be
+     *   - a valid 2 letter language code without region such as en, de
+     *   - or with region such as en_us, en_au
+     * 
+     * If undefined then defaults to 'en', unless the server has been configured
+     * with a custom default.
+     * 
+     * See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public String lang;
+    public GetRatingsListRequest withLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    
+    /**
+     * The list sort order, either 'asc' or 'desc'.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public org.openapis.openapi.models.shared.ListOrderEnum order;
+    public GetRatingsListRequest withOrder(org.openapis.openapi.models.shared.ListOrderEnum order) {
+        this.order = order;
+        return this;
+    }
+    
+    /**
+     * What to order by.
+     * 
+     * Ordering by `date-modified` equates to ordering by the last rated date.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_by")
+    public GetRatingsListOrderByEnum orderBy;
+    public GetRatingsListRequest withOrderBy(GetRatingsListOrderByEnum orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    
+    /**
+     * The page of items to load. Starts from page 1.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetRatingsListRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of items to return in a page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Integer pageSize;
+    public GetRatingsListRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The list of segments to filter the response by.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=segments")
+    public String[] segments;
+    public GetRatingsListRequest withSegments(String[] segments) {
+        this.segments = segments;
+        return this;
+    }
+    
+    /**
+     * The active subscription code.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sub")
+    public String sub;
+    public GetRatingsListRequest withSub(String sub) {
+        this.sub = sub;
         return this;
     }
     

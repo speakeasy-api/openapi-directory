@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BankAccountsDeleteRequest {
-    
-    public BankAccountsDeletePathParams pathParams;
-    public BankAccountsDeleteRequest withPathParams(BankAccountsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of Bank Account to remove.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public BankAccountsDeleteRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     
-    
-    public BankAccountsDeleteQueryParams queryParams;
-    public BankAccountsDeleteRequest withQueryParams(BankAccountsDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Timestamp of Bank Account to remove. Should be encoded in Base64.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timestamp")
+    public String timestamp;
+    public BankAccountsDeleteRequest withTimestamp(String timestamp) {
+        this.timestamp = timestamp;
         return this;
     }
     

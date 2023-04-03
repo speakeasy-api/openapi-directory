@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolCoapGetTraceRequest {
-    
-    public ProtocolCoapGetTracePathParams pathParams;
-    public ProtocolCoapGetTraceRequest withPathParams(ProtocolCoapGetTracePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to show whether COAP tracing is enabled
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolCoapGetTraceRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

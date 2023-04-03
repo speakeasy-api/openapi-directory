@@ -4,20 +4,21 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCollectionRequest {
-    
-    public DeleteCollectionPathParams pathParams;
-    public DeleteCollectionRequest withPathParams(DeleteCollectionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteCollectionSecurity security;
-    public DeleteCollectionRequest withSecurity(DeleteCollectionSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the collection.
+     * The following aliases are supported:
+     * - `root`: The root collection of the account
+     * - `sharedWithMe`: Automatically contains new resources that have been shared individually
+     * - `trash`: Automatically contains resources that have been deleted
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection")
+    public String collection;
+    public DeleteCollectionRequest withCollection(String collection) {
+        this.collection = collection;
         return this;
     }
     

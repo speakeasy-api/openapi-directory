@@ -4,34 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSyncListItemRequest {
-    
-    public ListSyncListItemPathParams pathParams;
-    public ListSyncListItemRequest withPathParams(ListSyncListItemPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Whether to include the List Item referenced by the `from` parameter. Can be: `inclusive` to include the List Item referenced by the `from` parameter or `exclusive` to start with the next List Item. The default value is `inclusive`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Bounds")
+    public org.openapis.openapi.models.shared.SyncListItemEnumQueryFromBoundTypeEnum bounds;
+    public ListSyncListItemRequest withBounds(org.openapis.openapi.models.shared.SyncListItemEnumQueryFromBoundTypeEnum bounds) {
+        this.bounds = bounds;
         return this;
     }
     
-    
-    public ListSyncListItemQueryParams queryParams;
-    public ListSyncListItemRequest withQueryParams(ListSyncListItemQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The `index` of the first Sync List Item resource to read. See also `bounds`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=From")
+    public String from;
+    public ListSyncListItemRequest withFrom(String from) {
+        this.from = from;
         return this;
     }
     
-    
-    public ListSyncListItemSecurity security;
-    public ListSyncListItemRequest withSecurity(ListSyncListItemSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the Sync List with the List Items to read. Can be the Sync List resource's `sid` or its `unique_name`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ListSid")
+    public String listSid;
+    public ListSyncListItemRequest withListSid(String listSid) {
+        this.listSid = listSid;
         return this;
     }
     
+    /**
+     * How to order the List Items returned by their `index` value. Can be: `asc` (ascending) or `desc` (descending) and the default is ascending.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Order")
+    public org.openapis.openapi.models.shared.SyncListItemEnumQueryResultOrderEnum order;
+    public ListSyncListItemRequest withOrder(org.openapis.openapi.models.shared.SyncListItemEnumQueryResultOrderEnum order) {
+        this.order = order;
+        return this;
+    }
     
-    public String serverURL;
-    public ListSyncListItemRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListSyncListItemRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListSyncListItemRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListSyncListItemRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the List Item resources to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public ListSyncListItemRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

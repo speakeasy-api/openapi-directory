@@ -63,7 +63,7 @@ public class Auth {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CompleteOpenIdLoginQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CompleteOpenIdLoginRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -131,7 +131,7 @@ public class Auth {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.InitiateOpenIdLoginQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.InitiateOpenIdLoginRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -198,7 +198,7 @@ public class Auth {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LoginResponse login(org.openapis.openapi.models.operations.LoginRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LoginResponse login(org.openapis.openapi.models.shared.LoginRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v4/auth/login");
         
@@ -327,7 +327,7 @@ public class Auth {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecoverUserNameResponse recoverUserName(org.openapis.openapi.models.operations.RecoverUserNameRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecoverUserNameResponse recoverUserName(org.openapis.openapi.models.shared.RecoverUserNameRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v4/auth/recover_username");
         
@@ -384,7 +384,7 @@ public class Auth {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RequestPasswordResetResponse requestPasswordReset(org.openapis.openapi.models.operations.RequestPasswordResetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RequestPasswordResetResponse requestPasswordReset(org.openapis.openapi.models.shared.ResetPasswordRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v4/auth/reset_password");
         
@@ -443,12 +443,12 @@ public class Auth {
      */
     public org.openapis.openapi.models.operations.ResetPasswordResponse resetPassword(org.openapis.openapi.models.operations.ResetPasswordRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ResetPasswordPathParams.class, baseUrl, "/v4/auth/reset_password/{token}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ResetPasswordRequest.class, baseUrl, "/v4/auth/reset_password/{token}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "resetPasswordWithTokenRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -508,7 +508,7 @@ public class Auth {
      */
     public org.openapis.openapi.models.operations.ValidateResetPasswordTokenResponse validateResetPasswordToken(org.openapis.openapi.models.operations.ValidateResetPasswordTokenRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ValidateResetPasswordTokenPathParams.class, baseUrl, "/v4/auth/reset_password/{token}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ValidateResetPasswordTokenRequest.class, baseUrl, "/v4/auth/reset_password/{token}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

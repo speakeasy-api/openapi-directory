@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchOfferingsOfferingIdRequest {
-    
-    public PatchOfferingsOfferingIdPathParams pathParams;
-    public PatchOfferingsOfferingIdRequest withPathParams(PatchOfferingsOfferingIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.Offering offering;
+    public PatchOfferingsOfferingIdRequest withOffering(org.openapis.openapi.models.shared.Offering offering) {
+        this.offering = offering;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Offering request;
-    public PatchOfferingsOfferingIdRequest withRequest(org.openapis.openapi.models.shared.Offering request) {
-        this.request = request;
+    /**
+     * offering's id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offeringId")
+    public String offeringId;
+    public PatchOfferingsOfferingIdRequest withOfferingId(String offeringId) {
+        this.offeringId = offeringId;
         return this;
     }
     

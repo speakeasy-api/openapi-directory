@@ -4,20 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugBranchRestrictionsIdRequest {
-    
-    public GetRepositoriesWorkspaceRepoSlugBranchRestrictionsIdPathParams pathParams;
-    public GetRepositoriesWorkspaceRepoSlugBranchRestrictionsIdRequest withPathParams(GetRepositoriesWorkspaceRepoSlugBranchRestrictionsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The restriction rule's id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetRepositoriesWorkspaceRepoSlugBranchRestrictionsIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public GetRepositoriesWorkspaceRepoSlugBranchRestrictionsIdRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
     
-    public GetRepositoriesWorkspaceRepoSlugBranchRestrictionsIdSecurity security;
-    public GetRepositoriesWorkspaceRepoSlugBranchRestrictionsIdRequest withSecurity(GetRepositoriesWorkspaceRepoSlugBranchRestrictionsIdSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetRepositoriesWorkspaceRepoSlugBranchRestrictionsIdRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

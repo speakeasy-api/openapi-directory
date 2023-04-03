@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.GetMediaHeaders;
 import org.openapis.openapi.models.operations.GetMediaRequestBodyStartSelector;
 import org.openapis.openapi.models.operations.GetMediaRequestBody;
 import org.openapis.openapi.models.operations.GetMediaRequest;
@@ -16,33 +15,29 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GetMediaRequest req = new GetMediaRequest() {{
-                headers = new GetMediaHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new GetMediaRequestBody() {{
+                requestBody = new GetMediaRequestBody() {{
                     startSelector = new GetMediaRequestBodyStartSelector() {{
-                        afterFragmentNumber = "illum";
-                        continuationToken = "vel";
-                        startSelectorType = "NOW";
-                        startTimestamp = "2022-03-26T09:37:56.283Z";
+                        afterFragmentNumber = "corrupti";
+                        continuationToken = "provident";
+                        startSelectorType = "EARLIEST";
+                        startTimestamp = "2021-03-11T23:22:42.658Z";
                     }};
-                    streamARN = "iure";
-                    streamName = "magnam";
+                    streamARN = "nulla";
+                    streamName = "corrupti";
                 }};
-            }};            
+                xAmzAlgorithm = "illum";
+                xAmzContentSha256 = "vel";
+                xAmzCredential = "error";
+                xAmzDate = "deserunt";
+                xAmzSecurityToken = "suscipit";
+                xAmzSignature = "iure";
+                xAmzSignedHeaders = "magnam";
+            }}            
 
             GetMediaResponse res = sdk.getMedia(req);
 

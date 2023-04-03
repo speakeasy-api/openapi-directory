@@ -4,13 +4,117 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimInterfacesListRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device")
+    public String device;
+    public DcimInterfacesListRequest withDevice(String device) {
+        this.device = device;
+        return this;
+    }
     
-    public DcimInterfacesListQueryParams queryParams;
-    public DcimInterfacesListRequest withQueryParams(DcimInterfacesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_id")
+    public Double deviceId;
+    public DcimInterfacesListRequest withDeviceId(Double deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enabled")
+    public String enabled;
+    public DcimInterfacesListRequest withEnabled(String enabled) {
+        this.enabled = enabled;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=form_factor")
+    public String formFactor;
+    public DcimInterfacesListRequest withFormFactor(String formFactor) {
+        this.formFactor = formFactor;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lag_id")
+    public String lagId;
+    public DcimInterfacesListRequest withLagId(String lagId) {
+        this.lagId = lagId;
+        return this;
+    }
+    
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public DcimInterfacesListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mac_address")
+    public String macAddress;
+    public DcimInterfacesListRequest withMacAddress(String macAddress) {
+        this.macAddress = macAddress;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mgmt_only")
+    public String mgmtOnly;
+    public DcimInterfacesListRequest withMgmtOnly(String mgmtOnly) {
+        this.mgmtOnly = mgmtOnly;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mtu")
+    public Double mtu;
+    public DcimInterfacesListRequest withMtu(Double mtu) {
+        this.mtu = mtu;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public DcimInterfacesListRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public DcimInterfacesListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
+    public String tag;
+    public DcimInterfacesListRequest withTag(String tag) {
+        this.tag = tag;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public DcimInterfacesListRequest withType(String type) {
+        this.type = type;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vlan")
+    public String vlan;
+    public DcimInterfacesListRequest withVlan(String vlan) {
+        this.vlan = vlan;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vlan_id")
+    public String vlanId;
+    public DcimInterfacesListRequest withVlanId(String vlanId) {
+        this.vlanId = vlanId;
         return this;
     }
     

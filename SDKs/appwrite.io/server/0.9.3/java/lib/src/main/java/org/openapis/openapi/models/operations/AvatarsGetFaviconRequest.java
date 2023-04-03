@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AvatarsGetFaviconRequest {
-    
-    public AvatarsGetFaviconQueryParams queryParams;
-    public AvatarsGetFaviconRequest withQueryParams(AvatarsGetFaviconQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public AvatarsGetFaviconSecurity security;
-    public AvatarsGetFaviconRequest withSecurity(AvatarsGetFaviconSecurity security) {
-        this.security = security;
+    /**
+     * Website URL which you want to fetch the favicon from.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=url")
+    public String url;
+    public AvatarsGetFaviconRequest withUrl(String url) {
+        this.url = url;
         return this;
     }
     

@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETHostReservationPurchasePreviewRequest {
-    
-    public GETGETHostReservationPurchasePreviewQueryParams queryParams;
-    public GETGETHostReservationPurchasePreviewRequest withQueryParams(GETGETHostReservationPurchasePreviewQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETGETHostReservationPurchasePreviewActionEnum action;
+    public GETGETHostReservationPurchasePreviewRequest withAction(GETGETHostReservationPurchasePreviewActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The IDs of the Dedicated Hosts with which the reservation is associated.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HostIdSet")
+    public String[] hostIdSet;
+    public GETGETHostReservationPurchasePreviewRequest withHostIdSet(String[] hostIdSet) {
+        this.hostIdSet = hostIdSet;
+        return this;
+    }
     
-    public GETGETHostReservationPurchasePreviewHeaders headers;
-    public GETGETHostReservationPurchasePreviewRequest withHeaders(GETGETHostReservationPurchasePreviewHeaders headers) {
-        this.headers = headers;
+    /**
+     * The offering ID of the reservation.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OfferingId")
+    public String offeringId;
+    public GETGETHostReservationPurchasePreviewRequest withOfferingId(String offeringId) {
+        this.offeringId = offeringId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETGETHostReservationPurchasePreviewVersionEnum version;
+    public GETGETHostReservationPurchasePreviewRequest withVersion(GETGETHostReservationPurchasePreviewVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETGETHostReservationPurchasePreviewRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETGETHostReservationPurchasePreviewRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETGETHostReservationPurchasePreviewRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETGETHostReservationPurchasePreviewRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETGETHostReservationPurchasePreviewRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETGETHostReservationPurchasePreviewRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETGETHostReservationPurchasePreviewRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

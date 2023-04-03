@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsReviewPendingDeploymentsForRunRequest {
-    
-    public ActionsReviewPendingDeploymentsForRunPathParams pathParams;
-    public ActionsReviewPendingDeploymentsForRunRequest withPathParams(ActionsReviewPendingDeploymentsForRunPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ActionsReviewPendingDeploymentsForRunRequestBody requestBody;
+    public ActionsReviewPendingDeploymentsForRunRequest withRequestBody(ActionsReviewPendingDeploymentsForRunRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ActionsReviewPendingDeploymentsForRunRequestBody request;
-    public ActionsReviewPendingDeploymentsForRunRequest withRequest(ActionsReviewPendingDeploymentsForRunRequestBody request) {
-        this.request = request;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ActionsReviewPendingDeploymentsForRunRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ActionsReviewPendingDeploymentsForRunRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the workflow run.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=run_id")
+    public Long runId;
+    public ActionsReviewPendingDeploymentsForRunRequest withRunId(Long runId) {
+        this.runId = runId;
         return this;
     }
     

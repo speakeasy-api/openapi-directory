@@ -5,8 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CustomersAddSecurity;
-import org.openapis.openapi.models.operations.CustomersAddQueryParams;
-import org.openapis.openapi.models.operations.CustomersAddHeaders;
 import org.openapis.openapi.models.operations.CustomersAddRequest;
 import org.openapis.openapi.models.operations.CustomersAddResponse;
 import org.openapis.openapi.models.shared.CustomerSupportCustomerStatusEnum;
@@ -20,7 +18,6 @@ import org.openapis.openapi.models.shared.BankAccountAccountTypeEnum;
 import org.openapis.openapi.models.shared.BankAccount;
 import org.openapis.openapi.models.shared.AddressTypeEnum;
 import org.openapis.openapi.models.shared.Address;
-import org.openapis.openapi.models.shared.SchemeAPIKey;
 
 public class Application {
     public static void main(String[] args) {
@@ -29,46 +26,8 @@ public class Application {
                 .build();
 
             CustomersAddRequest req = new CustomersAddRequest() {{
-                security = new CustomersAddSecurity() {{
-                    apiKey = new SchemeAPIKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }};
-                queryParams = new CustomersAddQueryParams() {{
-                    raw = false;
-                }};
-                headers = new CustomersAddHeaders() {{
-                    xApideckAppId = "corrupti";
-                    xApideckConsumerId = "provident";
-                    xApideckServiceId = "distinctio";
-                }};
-                request = new CustomerSupportCustomerInput() {{
+                customerSupportCustomerInput = new CustomerSupportCustomerInput() {{
                     addresses = new org.openapis.openapi.models.shared.Address[]{{
-                        add(new Address() {{
-                            city = "San Francisco";
-                            contactName = "Elon Musk";
-                            country = "US";
-                            county = "Santa Clara";
-                            email = "elon@musk.com";
-                            fax = "122-111-1111";
-                            id = "123";
-                            latitude = "40.759211";
-                            line1 = "Main street";
-                            line2 = "apt #";
-                            line3 = "Suite #";
-                            line4 = "delivery instructions";
-                            longitude = "-73.984638";
-                            name = "HQ US";
-                            phoneNumber = "111-111-1111";
-                            postalCode = "94104";
-                            rowVersion = "1-12345";
-                            salutation = "Mr";
-                            state = "CA";
-                            streetNumber = "25";
-                            string = "25 Spring Street, Blackburn, VIC 3130";
-                            type = "primary";
-                            website = "https://elonmusk.com";
-                        }}),
                         add(new Address() {{
                             city = "San Francisco";
                             contactName = "Elon Musk";
@@ -204,21 +163,19 @@ public class Application {
                             number = "111-111-1111";
                             type = "primary";
                         }}),
-                        add(new PhoneNumber() {{
-                            areaCode = "323";
-                            countryCode = "1";
-                            extension = "105";
-                            id = "12345";
-                            number = "111-111-1111";
-                            type = "primary";
-                        }}),
                     }};
                     status = "active";
                     taxNumber = "US123945459";
                 }};
-            }};            
+                raw = false;
+                xApideckAppId = "quibusdam";
+                xApideckConsumerId = "unde";
+                xApideckServiceId = "nulla";
+            }}            
 
-            CustomersAddResponse res = sdk.customers.customersAdd(req);
+            CustomersAddResponse res = sdk.customers.customersAdd(req, new CustomersAddSecurity() {{
+                apiKey = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.createCustomerSupportCustomerResponse.isPresent()) {
                 // handle response

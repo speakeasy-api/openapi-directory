@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RollbacksNetworkFirmwareUpgradesStagedEventsRequest {
-    
-    public RollbacksNetworkFirmwareUpgradesStagedEventsPathParams pathParams;
-    public RollbacksNetworkFirmwareUpgradesStagedEventsRequest withPathParams(RollbacksNetworkFirmwareUpgradesStagedEventsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public RollbacksNetworkFirmwareUpgradesStagedEventsRequestBody requestBody;
+    public RollbacksNetworkFirmwareUpgradesStagedEventsRequest withRequestBody(RollbacksNetworkFirmwareUpgradesStagedEventsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public RollbacksNetworkFirmwareUpgradesStagedEventsRequestBody request;
-    public RollbacksNetworkFirmwareUpgradesStagedEventsRequest withRequest(RollbacksNetworkFirmwareUpgradesStagedEventsRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public RollbacksNetworkFirmwareUpgradesStagedEventsRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddChannelCategoriesRequest {
-    
-    public AddChannelCategoriesPathParams pathParams;
-    public AddChannelCategoriesRequest withPathParams(AddChannelCategoriesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public AddChannelCategoriesRequestBody requestBody;
+    public AddChannelCategoriesRequest withRequestBody(AddChannelCategoriesRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public AddChannelCategoriesRequestBody request;
-    public AddChannelCategoriesRequest withRequest(AddChannelCategoriesRequestBody request) {
-        this.request = request;
+    /**
+     * The ID of the channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel_id")
+    public Double channelId;
+    public AddChannelCategoriesRequest withChannelId(Double channelId) {
+        this.channelId = channelId;
         return this;
     }
     

@@ -4,27 +4,68 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDomesticPaymentsDomesticPaymentIdPaymentDetailsRequest {
-    
-    public GetDomesticPaymentsDomesticPaymentIdPaymentDetailsPathParams pathParams;
-    public GetDomesticPaymentsDomesticPaymentIdPaymentDetailsRequest withPathParams(GetDomesticPaymentsDomesticPaymentIdPaymentDetailsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * An Authorisation Token as per https://tools.ietf.org/html/rfc6750
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public GetDomesticPaymentsDomesticPaymentIdPaymentDetailsRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
-    
-    public GetDomesticPaymentsDomesticPaymentIdPaymentDetailsHeaders headers;
-    public GetDomesticPaymentsDomesticPaymentIdPaymentDetailsRequest withHeaders(GetDomesticPaymentsDomesticPaymentIdPaymentDetailsHeaders headers) {
-        this.headers = headers;
+    /**
+     * DomesticPaymentId
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DomesticPaymentId")
+    public String domesticPaymentId;
+    public GetDomesticPaymentsDomesticPaymentIdPaymentDetailsRequest withDomesticPaymentId(String domesticPaymentId) {
+        this.domesticPaymentId = domesticPaymentId;
         return this;
     }
     
+    /**
+     * Indicates the user-agent that the PSU is using.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-customer-user-agent")
+    public String xCustomerUserAgent;
+    public GetDomesticPaymentsDomesticPaymentIdPaymentDetailsRequest withXCustomerUserAgent(String xCustomerUserAgent) {
+        this.xCustomerUserAgent = xCustomerUserAgent;
+        return this;
+    }
     
-    public GetDomesticPaymentsDomesticPaymentIdPaymentDetailsSecurity security;
-    public GetDomesticPaymentsDomesticPaymentIdPaymentDetailsRequest withSecurity(GetDomesticPaymentsDomesticPaymentIdPaymentDetailsSecurity security) {
-        this.security = security;
+    /**
+     * The time when the PSU last logged in with the TPP. 
+     * All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: 
+     * Sun, 10 Sep 2017 19:43:31 UTC
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-auth-date")
+    public String xFapiAuthDate;
+    public GetDomesticPaymentsDomesticPaymentIdPaymentDetailsRequest withXFapiAuthDate(String xFapiAuthDate) {
+        this.xFapiAuthDate = xFapiAuthDate;
+        return this;
+    }
+    
+    /**
+     * The PSU's IP address if the PSU is currently logged in with the TPP.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-customer-ip-address")
+    public String xFapiCustomerIpAddress;
+    public GetDomesticPaymentsDomesticPaymentIdPaymentDetailsRequest withXFapiCustomerIpAddress(String xFapiCustomerIpAddress) {
+        this.xFapiCustomerIpAddress = xFapiCustomerIpAddress;
+        return this;
+    }
+    
+    /**
+     * An RFC4122 UID used as a correlation id.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-interaction-id")
+    public String xFapiInteractionId;
+    public GetDomesticPaymentsDomesticPaymentIdPaymentDetailsRequest withXFapiInteractionId(String xFapiInteractionId) {
+        this.xFapiInteractionId = xFapiInteractionId;
         return this;
     }
     

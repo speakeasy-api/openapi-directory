@@ -7,24 +7,47 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetMerchantOrderInfoV3Request {
-    
-    public SetMerchantOrderInfoV3PathParams pathParams;
-    public SetMerchantOrderInfoV3Request withPathParams(SetMerchantOrderInfoV3PathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public Integer accountId;
+    public SetMerchantOrderInfoV3Request withAccountId(Integer accountId) {
+        this.accountId = accountId;
         return this;
     }
     
+    /**
+     * The BeezUP Order identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=beezUPOrderId")
+    public String beezUPOrderId;
+    public SetMerchantOrderInfoV3Request withBeezUPOrderId(String beezUPOrderId) {
+        this.beezUPOrderId = beezUPOrderId;
+        return this;
+    }
     
-    public SetMerchantOrderInfoV3QueryParams queryParams;
-    public SetMerchantOrderInfoV3Request withQueryParams(SetMerchantOrderInfoV3QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The marketplace technical code
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=marketplaceTechnicalCode")
+    public String marketplaceTechnicalCode;
+    public SetMerchantOrderInfoV3Request withMarketplaceTechnicalCode(String marketplaceTechnicalCode) {
+        this.marketplaceTechnicalCode = marketplaceTechnicalCode;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SetMerchantOrderInfoRequest request;
-    public SetMerchantOrderInfoV3Request withRequest(org.openapis.openapi.models.shared.SetMerchantOrderInfoRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SetMerchantOrderInfoRequest setMerchantOrderInfoRequest;
+    public SetMerchantOrderInfoV3Request withSetMerchantOrderInfoRequest(org.openapis.openapi.models.shared.SetMerchantOrderInfoRequest setMerchantOrderInfoRequest) {
+        this.setMerchantOrderInfoRequest = setMerchantOrderInfoRequest;
+        return this;
+    }
+    
+    /**
+     * If true, the operation will be not be sent to marketplace. But the validation will be taken in account.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=testMode")
+    public Boolean testMode;
+    public SetMerchantOrderInfoV3Request withTestMode(Boolean testMode) {
+        this.testMode = testMode;
         return this;
     }
     

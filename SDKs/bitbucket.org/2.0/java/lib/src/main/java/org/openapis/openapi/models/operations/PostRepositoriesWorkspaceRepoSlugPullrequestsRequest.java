@@ -7,13 +7,6 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRepositoriesWorkspaceRepoSlugPullrequestsRequest {
-    
-    public PostRepositoriesWorkspaceRepoSlugPullrequestsPathParams pathParams;
-    public PostRepositoriesWorkspaceRepoSlugPullrequestsRequest withPathParams(PostRepositoriesWorkspaceRepoSlugPullrequestsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The new pull request.
      * 
@@ -22,16 +15,33 @@ public class PostRepositoriesWorkspaceRepoSlugPullrequestsRequest {
      * Since not all elements are required or even mutable, you only need to include the elements you want to initialize, such as the source branch and the title.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public PostRepositoriesWorkspaceRepoSlugPullrequestsRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public PostRepositoriesWorkspaceRepoSlugPullrequestsRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public PostRepositoriesWorkspaceRepoSlugPullrequestsRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
     
-    public PostRepositoriesWorkspaceRepoSlugPullrequestsSecurity security;
-    public PostRepositoriesWorkspaceRepoSlugPullrequestsRequest withSecurity(PostRepositoriesWorkspaceRepoSlugPullrequestsSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public PostRepositoriesWorkspaceRepoSlugPullrequestsRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

@@ -7,24 +7,64 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostUsersIdUserConnectionsIdConnectionRequest {
-    
-    public PostUsersIdUserConnectionsIdConnectionPathParams pathParams;
-    public PostUsersIdUserConnectionsIdConnectionRequest withPathParams(PostUsersIdUserConnectionsIdConnectionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostUsersIdUserConnectionsIdConnectionQueryParams queryParams;
-    public PostUsersIdUserConnectionsIdConnectionRequest withQueryParams(PostUsersIdUserConnectionsIdConnectionQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PostUsersIdUserConnectionsIdConnectionRequestBody request;
-    public PostUsersIdUserConnectionsIdConnectionRequest withRequest(PostUsersIdUserConnectionsIdConnectionRequestBody request) {
-        this.request = request;
+    public PostUsersIdUserConnectionsIdConnectionRequestBody requestBody;
+    public PostUsersIdUserConnectionsIdConnectionRequest withRequestBody(PostUsersIdUserConnectionsIdConnectionRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Do the connection update/synchronization in background
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=background")
+    public Boolean background;
+    public PostUsersIdUserConnectionsIdConnectionRequest withBackground(Boolean background) {
+        this.background = background;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public PostUsersIdUserConnectionsIdConnectionRequest withExpand(String expand) {
+        this.expand = expand;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connection")
+    public Long idConnection;
+    public PostUsersIdUserConnectionsIdConnectionRequest withIdConnection(Long idConnection) {
+        this.idConnection = idConnection;
+        return this;
+    }
+    
+    /**
+     * Hint: you can use 'me' or 'all'
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
+    public String idUser;
+    public PostUsersIdUserConnectionsIdConnectionRequest withIdUser(String idUser) {
+        this.idUser = idUser;
+        return this;
+    }
+    
+    /**
+     * Whether the connection synchronization is asked by the PSU or not (default is true)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=psu_requested")
+    public Boolean psuRequested;
+    public PostUsersIdUserConnectionsIdConnectionRequest withPsuRequested(Boolean psuRequested) {
+        this.psuRequested = psuRequested;
+        return this;
+    }
+    
+    /**
+     * Refresh the PSU's SCA for openapi source
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=refresh_psd2_auth")
+    public Boolean refreshPsd2Auth;
+    public PostUsersIdUserConnectionsIdConnectionRequest withRefreshPsd2Auth(Boolean refreshPsd2Auth) {
+        this.refreshPsd2Auth = refreshPsd2Auth;
         return this;
     }
     

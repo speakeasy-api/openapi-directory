@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteNetworkAclEntryRequest {
-    
-    public GETDeleteNetworkAclEntryQueryParams queryParams;
-    public GETDeleteNetworkAclEntryRequest withQueryParams(GETDeleteNetworkAclEntryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDeleteNetworkAclEntryActionEnum action;
+    public GETDeleteNetworkAclEntryRequest withAction(GETDeleteNetworkAclEntryActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETDeleteNetworkAclEntryRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
     
-    public GETDeleteNetworkAclEntryHeaders headers;
-    public GETDeleteNetworkAclEntryRequest withHeaders(GETDeleteNetworkAclEntryHeaders headers) {
-        this.headers = headers;
+    /**
+     * Indicates whether the rule is an egress rule.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Egress")
+    public Boolean egress;
+    public GETDeleteNetworkAclEntryRequest withEgress(Boolean egress) {
+        this.egress = egress;
+        return this;
+    }
+    
+    /**
+     * The ID of the network ACL.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NetworkAclId")
+    public String networkAclId;
+    public GETDeleteNetworkAclEntryRequest withNetworkAclId(String networkAclId) {
+        this.networkAclId = networkAclId;
+        return this;
+    }
+    
+    /**
+     * The rule number of the entry to delete.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RuleNumber")
+    public Long ruleNumber;
+    public GETDeleteNetworkAclEntryRequest withRuleNumber(Long ruleNumber) {
+        this.ruleNumber = ruleNumber;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDeleteNetworkAclEntryVersionEnum version;
+    public GETDeleteNetworkAclEntryRequest withVersion(GETDeleteNetworkAclEntryVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDeleteNetworkAclEntryRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDeleteNetworkAclEntryRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDeleteNetworkAclEntryRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDeleteNetworkAclEntryRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDeleteNetworkAclEntryRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDeleteNetworkAclEntryRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDeleteNetworkAclEntryRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

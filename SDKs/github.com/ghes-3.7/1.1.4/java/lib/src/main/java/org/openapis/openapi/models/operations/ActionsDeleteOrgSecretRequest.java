@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsDeleteOrgSecretRequest {
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ActionsDeleteOrgSecretRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
     
-    public ActionsDeleteOrgSecretPathParams pathParams;
-    public ActionsDeleteOrgSecretRequest withPathParams(ActionsDeleteOrgSecretPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the secret.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=secret_name")
+    public String secretName;
+    public ActionsDeleteOrgSecretRequest withSecretName(String secretName) {
+        this.secretName = secretName;
         return this;
     }
     

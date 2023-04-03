@@ -4,13 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRealmAttackDetectionBruteForceUsersUserIdRequest {
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public DeleteRealmAttackDetectionBruteForceUsersUserIdRequest withRealm(String realm) {
+        this.realm = realm;
+        return this;
+    }
     
-    public DeleteRealmAttackDetectionBruteForceUsersUserIdPathParams pathParams;
-    public DeleteRealmAttackDetectionBruteForceUsersUserIdRequest withPathParams(DeleteRealmAttackDetectionBruteForceUsersUserIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public DeleteRealmAttackDetectionBruteForceUsersUserIdRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

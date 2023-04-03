@@ -38,13 +38,13 @@ public class ThirdPartyTransaction {
      */
     public org.openapis.openapi.models.operations.DeleteThirdPartyTransactionTagResponse deleteThirdPartyTransactionTag(org.openapis.openapi.models.operations.DeleteThirdPartyTransactionTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteThirdPartyTransactionTagPathParams.class, baseUrl, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteThirdPartyTransactionTagRequest.class, baseUrl, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -87,13 +87,13 @@ public class ThirdPartyTransaction {
      */
     public org.openapis.openapi.models.operations.GetAllThirdPartyTransactionTagsResponse getAllThirdPartyTransactionTags(org.openapis.openapi.models.operations.GetAllThirdPartyTransactionTagsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllThirdPartyTransactionTagsPathParams.class, baseUrl, "/Employer/{EmployerId}/ThirdPartyTransactions/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllThirdPartyTransactionTagsRequest.class, baseUrl, "/Employer/{EmployerId}/ThirdPartyTransactions/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -142,13 +142,13 @@ public class ThirdPartyTransaction {
      */
     public org.openapis.openapi.models.operations.GetAllThirdPartyTransactionsWithTagResponse getAllThirdPartyTransactionsWithTag(org.openapis.openapi.models.operations.GetAllThirdPartyTransactionsWithTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllThirdPartyTransactionsWithTagPathParams.class, baseUrl, "/Employer/{EmployerId}/ThirdPartyTransactions/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllThirdPartyTransactionsWithTagRequest.class, baseUrl, "/Employer/{EmployerId}/ThirdPartyTransactions/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -197,13 +197,13 @@ public class ThirdPartyTransaction {
      */
     public org.openapis.openapi.models.operations.GetTagFromThirdPartyTransactionResponse getTagFromThirdPartyTransaction(org.openapis.openapi.models.operations.GetTagFromThirdPartyTransactionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromThirdPartyTransactionPathParams.class, baseUrl, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromThirdPartyTransactionRequest.class, baseUrl, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -252,13 +252,13 @@ public class ThirdPartyTransaction {
      */
     public org.openapis.openapi.models.operations.GetTagsFromThirdPartyTransactionResponse getTagsFromThirdPartyTransaction(org.openapis.openapi.models.operations.GetTagsFromThirdPartyTransactionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromThirdPartyTransactionPathParams.class, baseUrl, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromThirdPartyTransactionRequest.class, baseUrl, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -307,13 +307,13 @@ public class ThirdPartyTransaction {
      */
     public org.openapis.openapi.models.operations.PutThirdPartyTransactionTagResponse putThirdPartyTransactionTag(org.openapis.openapi.models.operations.PutThirdPartyTransactionTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutThirdPartyTransactionTagPathParams.class, baseUrl, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutThirdPartyTransactionTagRequest.class, baseUrl, "/Employer/{EmployerId}/ThirdPartyTransaction/{ThirdPartyTransactionId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

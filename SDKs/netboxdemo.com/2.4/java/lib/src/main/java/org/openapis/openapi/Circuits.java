@@ -62,7 +62,7 @@ public class Circuits {
 
     public org.openapis.openapi.models.operations.CircuitsChoicesReadResponse circuitsChoicesRead(org.openapis.openapi.models.operations.CircuitsChoicesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CircuitsChoicesReadPathParams.class, baseUrl, "/circuits/_choices/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CircuitsChoicesReadRequest.class, baseUrl, "/circuits/_choices/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -87,7 +87,7 @@ public class Circuits {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.CircuitsCircuitTerminationsCreateResponse circuitsCircuitTerminationsCreate(org.openapis.openapi.models.operations.CircuitsCircuitTerminationsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CircuitsCircuitTerminationsCreateResponse circuitsCircuitTerminationsCreate(org.openapis.openapi.models.shared.WritableCircuitTerminationInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/circuits/circuit-terminations/");
         
@@ -127,7 +127,7 @@ public class Circuits {
 
     public org.openapis.openapi.models.operations.CircuitsCircuitTerminationsDeleteResponse circuitsCircuitTerminationsDelete(org.openapis.openapi.models.operations.CircuitsCircuitTerminationsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CircuitsCircuitTerminationsDeletePathParams.class, baseUrl, "/circuits/circuit-terminations/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CircuitsCircuitTerminationsDeleteRequest.class, baseUrl, "/circuits/circuit-terminations/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -160,7 +160,7 @@ public class Circuits {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CircuitsCircuitTerminationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CircuitsCircuitTerminationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -193,12 +193,12 @@ public class Circuits {
 
     public org.openapis.openapi.models.operations.CircuitsCircuitTerminationsPartialUpdateResponse circuitsCircuitTerminationsPartialUpdate(org.openapis.openapi.models.operations.CircuitsCircuitTerminationsPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CircuitsCircuitTerminationsPartialUpdatePathParams.class, baseUrl, "/circuits/circuit-terminations/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CircuitsCircuitTerminationsPartialUpdateRequest.class, baseUrl, "/circuits/circuit-terminations/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableCircuitTerminationInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -231,7 +231,7 @@ public class Circuits {
 
     public org.openapis.openapi.models.operations.CircuitsCircuitTerminationsReadResponse circuitsCircuitTerminationsRead(org.openapis.openapi.models.operations.CircuitsCircuitTerminationsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CircuitsCircuitTerminationsReadPathParams.class, baseUrl, "/circuits/circuit-terminations/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CircuitsCircuitTerminationsReadRequest.class, baseUrl, "/circuits/circuit-terminations/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -264,12 +264,12 @@ public class Circuits {
 
     public org.openapis.openapi.models.operations.CircuitsCircuitTerminationsUpdateResponse circuitsCircuitTerminationsUpdate(org.openapis.openapi.models.operations.CircuitsCircuitTerminationsUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CircuitsCircuitTerminationsUpdatePathParams.class, baseUrl, "/circuits/circuit-terminations/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CircuitsCircuitTerminationsUpdateRequest.class, baseUrl, "/circuits/circuit-terminations/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableCircuitTerminationInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -300,7 +300,7 @@ public class Circuits {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.CircuitsCircuitTypesCreateResponse circuitsCircuitTypesCreate(org.openapis.openapi.models.operations.CircuitsCircuitTypesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CircuitsCircuitTypesCreateResponse circuitsCircuitTypesCreate(org.openapis.openapi.models.shared.CircuitTypeInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/circuits/circuit-types/");
         
@@ -340,7 +340,7 @@ public class Circuits {
 
     public org.openapis.openapi.models.operations.CircuitsCircuitTypesDeleteResponse circuitsCircuitTypesDelete(org.openapis.openapi.models.operations.CircuitsCircuitTypesDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CircuitsCircuitTypesDeletePathParams.class, baseUrl, "/circuits/circuit-types/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CircuitsCircuitTypesDeleteRequest.class, baseUrl, "/circuits/circuit-types/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -373,7 +373,7 @@ public class Circuits {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CircuitsCircuitTypesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CircuitsCircuitTypesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -406,12 +406,12 @@ public class Circuits {
 
     public org.openapis.openapi.models.operations.CircuitsCircuitTypesPartialUpdateResponse circuitsCircuitTypesPartialUpdate(org.openapis.openapi.models.operations.CircuitsCircuitTypesPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CircuitsCircuitTypesPartialUpdatePathParams.class, baseUrl, "/circuits/circuit-types/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CircuitsCircuitTypesPartialUpdateRequest.class, baseUrl, "/circuits/circuit-types/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "circuitTypeInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -444,7 +444,7 @@ public class Circuits {
 
     public org.openapis.openapi.models.operations.CircuitsCircuitTypesReadResponse circuitsCircuitTypesRead(org.openapis.openapi.models.operations.CircuitsCircuitTypesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CircuitsCircuitTypesReadPathParams.class, baseUrl, "/circuits/circuit-types/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CircuitsCircuitTypesReadRequest.class, baseUrl, "/circuits/circuit-types/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -477,12 +477,12 @@ public class Circuits {
 
     public org.openapis.openapi.models.operations.CircuitsCircuitTypesUpdateResponse circuitsCircuitTypesUpdate(org.openapis.openapi.models.operations.CircuitsCircuitTypesUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CircuitsCircuitTypesUpdatePathParams.class, baseUrl, "/circuits/circuit-types/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CircuitsCircuitTypesUpdateRequest.class, baseUrl, "/circuits/circuit-types/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "circuitTypeInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -513,7 +513,7 @@ public class Circuits {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.CircuitsCircuitsCreateResponse circuitsCircuitsCreate(org.openapis.openapi.models.operations.CircuitsCircuitsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CircuitsCircuitsCreateResponse circuitsCircuitsCreate(org.openapis.openapi.models.shared.WritableCircuitInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/circuits/circuits/");
         
@@ -553,7 +553,7 @@ public class Circuits {
 
     public org.openapis.openapi.models.operations.CircuitsCircuitsDeleteResponse circuitsCircuitsDelete(org.openapis.openapi.models.operations.CircuitsCircuitsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CircuitsCircuitsDeletePathParams.class, baseUrl, "/circuits/circuits/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CircuitsCircuitsDeleteRequest.class, baseUrl, "/circuits/circuits/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -586,7 +586,7 @@ public class Circuits {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CircuitsCircuitsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CircuitsCircuitsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -619,12 +619,12 @@ public class Circuits {
 
     public org.openapis.openapi.models.operations.CircuitsCircuitsPartialUpdateResponse circuitsCircuitsPartialUpdate(org.openapis.openapi.models.operations.CircuitsCircuitsPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CircuitsCircuitsPartialUpdatePathParams.class, baseUrl, "/circuits/circuits/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CircuitsCircuitsPartialUpdateRequest.class, baseUrl, "/circuits/circuits/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableCircuitInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -657,7 +657,7 @@ public class Circuits {
 
     public org.openapis.openapi.models.operations.CircuitsCircuitsReadResponse circuitsCircuitsRead(org.openapis.openapi.models.operations.CircuitsCircuitsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CircuitsCircuitsReadPathParams.class, baseUrl, "/circuits/circuits/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CircuitsCircuitsReadRequest.class, baseUrl, "/circuits/circuits/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -690,12 +690,12 @@ public class Circuits {
 
     public org.openapis.openapi.models.operations.CircuitsCircuitsUpdateResponse circuitsCircuitsUpdate(org.openapis.openapi.models.operations.CircuitsCircuitsUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CircuitsCircuitsUpdatePathParams.class, baseUrl, "/circuits/circuits/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CircuitsCircuitsUpdateRequest.class, baseUrl, "/circuits/circuits/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableCircuitInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -726,7 +726,7 @@ public class Circuits {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.CircuitsProvidersCreateResponse circuitsProvidersCreate(org.openapis.openapi.models.operations.CircuitsProvidersCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CircuitsProvidersCreateResponse circuitsProvidersCreate(org.openapis.openapi.models.shared.ProviderInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/circuits/providers/");
         
@@ -766,7 +766,7 @@ public class Circuits {
 
     public org.openapis.openapi.models.operations.CircuitsProvidersDeleteResponse circuitsProvidersDelete(org.openapis.openapi.models.operations.CircuitsProvidersDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CircuitsProvidersDeletePathParams.class, baseUrl, "/circuits/providers/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CircuitsProvidersDeleteRequest.class, baseUrl, "/circuits/providers/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -799,7 +799,7 @@ public class Circuits {
      */
     public org.openapis.openapi.models.operations.CircuitsProvidersGraphsResponse circuitsProvidersGraphs(org.openapis.openapi.models.operations.CircuitsProvidersGraphsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CircuitsProvidersGraphsPathParams.class, baseUrl, "/circuits/providers/{id}/graphs/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CircuitsProvidersGraphsRequest.class, baseUrl, "/circuits/providers/{id}/graphs/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -838,7 +838,7 @@ public class Circuits {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CircuitsProvidersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CircuitsProvidersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -871,12 +871,12 @@ public class Circuits {
 
     public org.openapis.openapi.models.operations.CircuitsProvidersPartialUpdateResponse circuitsProvidersPartialUpdate(org.openapis.openapi.models.operations.CircuitsProvidersPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CircuitsProvidersPartialUpdatePathParams.class, baseUrl, "/circuits/providers/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CircuitsProvidersPartialUpdateRequest.class, baseUrl, "/circuits/providers/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "providerInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -909,7 +909,7 @@ public class Circuits {
 
     public org.openapis.openapi.models.operations.CircuitsProvidersReadResponse circuitsProvidersRead(org.openapis.openapi.models.operations.CircuitsProvidersReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CircuitsProvidersReadPathParams.class, baseUrl, "/circuits/providers/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CircuitsProvidersReadRequest.class, baseUrl, "/circuits/providers/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -942,12 +942,12 @@ public class Circuits {
 
     public org.openapis.openapi.models.operations.CircuitsProvidersUpdateResponse circuitsProvidersUpdate(org.openapis.openapi.models.operations.CircuitsProvidersUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CircuitsProvidersUpdatePathParams.class, baseUrl, "/circuits/providers/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CircuitsProvidersUpdateRequest.class, baseUrl, "/circuits/providers/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "providerInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

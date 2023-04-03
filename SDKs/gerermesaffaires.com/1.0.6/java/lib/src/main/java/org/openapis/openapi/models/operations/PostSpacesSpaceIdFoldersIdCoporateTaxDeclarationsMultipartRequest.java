@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsMultipartRequest {
-    
-    public PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsMultipartPathParams pathParams;
-    public PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsMultipartRequest withPathParams(PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsMultipartPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Corporate tax declaration to add (either (DeclarationDate,DocumentId) either (File,Name,Content64Encoded,Title,DeclarationDate) is mandatory)
      */
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsMultipartFormData1 request;
-    public PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsMultipartRequest withRequest(PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsMultipartFormData1 request) {
-        this.request = request;
+    public PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsMultipartFormData1 requestBody;
+    public PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsMultipartRequest withRequestBody(PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsMultipartFormData1 requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Id of the folder result and taxation
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsMultipartRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsMultipartSecurity security;
-    public PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsMultipartRequest withSecurity(PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsMultipartSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PostSpacesSpaceIdFoldersIdCoporateTaxDeclarationsMultipartRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

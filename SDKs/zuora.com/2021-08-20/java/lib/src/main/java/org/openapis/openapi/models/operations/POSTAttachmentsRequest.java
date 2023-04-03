@@ -7,24 +7,69 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTAttachmentsRequest {
-    
-    public POSTAttachmentsQueryParams queryParams;
-    public POSTAttachmentsRequest withQueryParams(POSTAttachmentsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public POSTAttachmentsHeaders headers;
-    public POSTAttachmentsRequest withHeaders(POSTAttachmentsHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public POSTAttachmentsRequestBody request;
-    public POSTAttachmentsRequest withRequest(POSTAttachmentsRequestBody request) {
-        this.request = request;
+    public POSTAttachmentsRequestBody requestBody;
+    public POSTAttachmentsRequest withRequestBody(POSTAttachmentsRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Entity-Ids")
+    public String zuoraEntityIds;
+    public POSTAttachmentsRequest withZuoraEntityIds(String zuoraEntityIds) {
+        this.zuoraEntityIds = zuoraEntityIds;
+        return this;
+    }
+    
+    /**
+     * A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+     * 
+     * The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Track-Id")
+    public String zuoraTrackId;
+    public POSTAttachmentsRequest withZuoraTrackId(String zuoraTrackId) {
+        this.zuoraTrackId = zuoraTrackId;
+        return this;
+    }
+    
+    /**
+     * For the Subscription type, specify the Subscription Number. An attachment is tied to the Subscription Number and thus viewable with every subscription version.
+     * 
+     * For Account, Invoice, Credit Memo, and Debit Memo, specify the correponding ID.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=associatedObjectKey")
+    public String associatedObjectKey;
+    public POSTAttachmentsRequest withAssociatedObjectKey(String associatedObjectKey) {
+        this.associatedObjectKey = associatedObjectKey;
+        return this;
+    }
+    
+    /**
+     * The type of the object to add attachements for. 
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=associatedObjectType")
+    public POSTAttachmentsAssociatedObjectTypeEnum associatedObjectType;
+    public POSTAttachmentsRequest withAssociatedObjectType(POSTAttachmentsAssociatedObjectTypeEnum associatedObjectType) {
+        this.associatedObjectType = associatedObjectType;
+        return this;
+    }
+    
+    /**
+     * Description of the attachment document.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
+    public String description;
+    public POSTAttachmentsRequest withDescription(String description) {
+        this.description = description;
         return this;
     }
     

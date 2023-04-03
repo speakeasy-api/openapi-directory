@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOGRequest {
-    
-    public GetOGQueryParams queryParams;
-    public GetOGRequest withQueryParams(GetOGQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:serialization=json,name=url")
+    public String url;
+    public GetOGRequest withUrl(String url) {
+        this.url = url;
         return this;
     }
     

@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetfullnamematchQueryParams;
 import org.openapis.openapi.models.operations.GetfullnamematchRequest;
 import org.openapis.openapi.models.operations.GetfullnamematchResponse;
 
@@ -15,11 +14,9 @@ public class Application {
                 .build();
 
             GetfullnamematchRequest req = new GetfullnamematchRequest() {{
-                queryParams = new GetfullnamematchQueryParams() {{
-                    fullname = "corrupti";
-                    license = "provident";
-                }};
-            }};            
+                fullname = "corrupti";
+                license = "provident";
+            }}            
 
             GetfullnamematchResponse res = sdk.fullNameMatchSimilarityKey.getfullnamematch(req);
 

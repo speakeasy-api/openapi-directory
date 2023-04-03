@@ -7,31 +7,130 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchUpdateRequest {
-    
-    public DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchUpdatePathParams pathParams;
-    public DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchUpdateRequest withPathParams(DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchUpdateQueryParams queryParams;
-    public DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchUpdateRequest withQueryParams(DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchUpdateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GoogleCloudDialogflowV2BatchUpdateEntitiesRequest request;
-    public DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchUpdateRequest withRequest(org.openapis.openapi.models.shared.GoogleCloudDialogflowV2BatchUpdateEntitiesRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GoogleCloudDialogflowV2BatchUpdateEntitiesRequest googleCloudDialogflowV2BatchUpdateEntitiesRequest;
+    public DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchUpdateRequest withGoogleCloudDialogflowV2BatchUpdateEntitiesRequest(org.openapis.openapi.models.shared.GoogleCloudDialogflowV2BatchUpdateEntitiesRequest googleCloudDialogflowV2BatchUpdateEntitiesRequest) {
+        this.googleCloudDialogflowV2BatchUpdateEntitiesRequest = googleCloudDialogflowV2BatchUpdateEntitiesRequest;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchUpdateRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchUpdateSecurity security;
-    public DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchUpdateRequest withSecurity(DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchUpdateSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchUpdateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchUpdateRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchUpdateRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchUpdateRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchUpdateRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Required. The name of the entity type to update or create entities in. Format: `projects//agent/entityTypes/`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchUpdateRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchUpdateRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchUpdateRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchUpdateRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public DialogflowProjectsLocationsAgentEntityTypesEntitiesBatchUpdateRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

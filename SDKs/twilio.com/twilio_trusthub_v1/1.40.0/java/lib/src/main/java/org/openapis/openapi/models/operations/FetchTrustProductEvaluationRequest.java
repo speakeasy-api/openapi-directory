@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchTrustProductEvaluationRequest {
-    
-    public FetchTrustProductEvaluationPathParams pathParams;
-    public FetchTrustProductEvaluationRequest withPathParams(FetchTrustProductEvaluationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique string that identifies the Evaluation resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchTrustProductEvaluationRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public FetchTrustProductEvaluationSecurity security;
-    public FetchTrustProductEvaluationRequest withSecurity(FetchTrustProductEvaluationSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchTrustProductEvaluationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique string that we created to identify the trust_product resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TrustProductSid")
+    public String trustProductSid;
+    public FetchTrustProductEvaluationRequest withTrustProductSid(String trustProductSid) {
+        this.trustProductSid = trustProductSid;
         return this;
     }
     

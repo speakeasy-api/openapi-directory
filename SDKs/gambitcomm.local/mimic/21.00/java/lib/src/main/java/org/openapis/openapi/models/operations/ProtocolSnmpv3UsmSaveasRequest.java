@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolSnmpv3UsmSaveasRequest {
+    /**
+     * Agent to show the SNMPv3 configuration
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolSnmpv3UsmSaveasRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolSnmpv3UsmSaveasPathParams pathParams;
-    public ProtocolSnmpv3UsmSaveasRequest withPathParams(ProtocolSnmpv3UsmSaveasPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filename to save
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=filename")
+    public String filename;
+    public ProtocolSnmpv3UsmSaveasRequest withFilename(String filename) {
+        this.filename = filename;
         return this;
     }
     

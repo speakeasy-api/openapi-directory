@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateGlossaryMultipartRequest {
-    
-    public UpdateGlossaryMultipartPathParams pathParams;
-    public UpdateGlossaryMultipartRequest withPathParams(UpdateGlossaryMultipartPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public org.openapis.openapi.models.shared.GlossaryUploadRequest1 glossaryUploadRequest1;
+    public UpdateGlossaryMultipartRequest withGlossaryUploadRequest1(org.openapis.openapi.models.shared.GlossaryUploadRequest1 glossaryUploadRequest1) {
+        this.glossaryUploadRequest1 = glossaryUploadRequest1;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public org.openapis.openapi.models.shared.GlossaryUploadRequest1 request;
-    public UpdateGlossaryMultipartRequest withRequest(org.openapis.openapi.models.shared.GlossaryUploadRequest1 request) {
-        this.request = request;
+    /**
+     * Glossary ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=glossaryId")
+    public Long glossaryId;
+    public UpdateGlossaryMultipartRequest withGlossaryId(Long glossaryId) {
+        this.glossaryId = glossaryId;
+        return this;
+    }
+    
+    /**
+     * Project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public Long projectId;
+    public UpdateGlossaryMultipartRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     

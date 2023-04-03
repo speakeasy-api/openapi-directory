@@ -34,10 +34,11 @@ public class UrlNotifications {
     /**
      * Gets metadata about a Web Document. This method can _only_ be used to query URLs that were previously seen in successful Indexing API notifications. Includes the latest `UrlNotification` received via this API.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IndexingUrlNotificationsGetMetadataResponse indexingUrlNotificationsGetMetadata(org.openapis.openapi.models.operations.IndexingUrlNotificationsGetMetadataRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IndexingUrlNotificationsGetMetadataResponse indexingUrlNotificationsGetMetadata(org.openapis.openapi.models.operations.IndexingUrlNotificationsGetMetadataRequest request, org.openapis.openapi.models.operations.IndexingUrlNotificationsGetMetadataSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v3/urlNotifications/metadata");
         
@@ -45,14 +46,14 @@ public class UrlNotifications {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IndexingUrlNotificationsGetMetadataQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IndexingUrlNotificationsGetMetadataRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,27 +80,28 @@ public class UrlNotifications {
     /**
      * Notifies that a URL has been updated or deleted.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IndexingUrlNotificationsPublishResponse indexingUrlNotificationsPublish(org.openapis.openapi.models.operations.IndexingUrlNotificationsPublishRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IndexingUrlNotificationsPublishResponse indexingUrlNotificationsPublish(org.openapis.openapi.models.operations.IndexingUrlNotificationsPublishRequest request, org.openapis.openapi.models.operations.IndexingUrlNotificationsPublishSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v3/urlNotifications:publish");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "urlNotification", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IndexingUrlNotificationsPublishQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IndexingUrlNotificationsPublishRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

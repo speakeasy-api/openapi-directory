@@ -4,20 +4,226 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class YoutubeChannelsListRequest {
-    
-    public YoutubeChannelsListQueryParams queryParams;
-    public YoutubeChannelsListRequest withQueryParams(YoutubeChannelsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public YoutubeChannelsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public YoutubeChannelsListRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public YoutubeChannelsListSecurity security;
-    public YoutubeChannelsListRequest withSecurity(YoutubeChannelsListSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public YoutubeChannelsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public YoutubeChannelsListRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Return the channels within the specified guide category ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=categoryId")
+    public String categoryId;
+    public YoutubeChannelsListRequest withCategoryId(String categoryId) {
+        this.categoryId = categoryId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public YoutubeChannelsListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Return the channel associated with a YouTube username.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=forUsername")
+    public String forUsername;
+    public YoutubeChannelsListRequest withForUsername(String forUsername) {
+        this.forUsername = forUsername;
+        return this;
+    }
+    
+    /**
+     * Stands for "host language". Specifies the localization language of the metadata to be filled into snippet.localized. The field is filled with the default metadata if there is no localization in the specified language. The parameter value must be a language code included in the list returned by the i18nLanguages.list method (e.g. en_US, es_MX).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hl")
+    public String hl;
+    public YoutubeChannelsListRequest withHl(String hl) {
+        this.hl = hl;
+        return this;
+    }
+    
+    /**
+     * Return the channels with the specified IDs.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String[] id;
+    public YoutubeChannelsListRequest withId(String[] id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public YoutubeChannelsListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Return the channels managed by the authenticated user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=managedByMe")
+    public Boolean managedByMe;
+    public YoutubeChannelsListRequest withManagedByMe(Boolean managedByMe) {
+        this.managedByMe = managedByMe;
+        return this;
+    }
+    
+    /**
+     * The *maxResults* parameter specifies the maximum number of items that should be returned in the result set.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public YoutubeChannelsListRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * Return the ids of channels owned by the authenticated user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mine")
+    public Boolean mine;
+    public YoutubeChannelsListRequest withMine(Boolean mine) {
+        this.mine = mine;
+        return this;
+    }
+    
+    /**
+     * Return the channels subscribed to the authenticated user
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mySubscribers")
+    public Boolean mySubscribers;
+    public YoutubeChannelsListRequest withMySubscribers(Boolean mySubscribers) {
+        this.mySubscribers = mySubscribers;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public YoutubeChannelsListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * *Note:* This parameter is intended exclusively for YouTube content partners. The *onBehalfOfContentOwner* parameter indicates that the request's authorization credentials identify a YouTube CMS user who is acting on behalf of the content owner specified in the parameter value. This parameter is intended for YouTube content partners that own and manage many different YouTube channels. It allows content owners to authenticate once and get access to all their video and channel data, without having to provide authentication credentials for each individual channel. The CMS account that the user authenticates with must be linked to the specified YouTube content owner.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onBehalfOfContentOwner")
+    public String onBehalfOfContentOwner;
+    public YoutubeChannelsListRequest withOnBehalfOfContentOwner(String onBehalfOfContentOwner) {
+        this.onBehalfOfContentOwner = onBehalfOfContentOwner;
+        return this;
+    }
+    
+    /**
+     * The *pageToken* parameter identifies a specific page in the result set that should be returned. In an API response, the nextPageToken and prevPageToken properties identify other pages that could be retrieved.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public YoutubeChannelsListRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * The *part* parameter specifies a comma-separated list of one or more channel resource properties that the API response will include. If the parameter identifies a property that contains child properties, the child properties will be included in the response. For example, in a channel resource, the contentDetails property contains other properties, such as the uploads properties. As such, if you set *part=contentDetails*, the API response will also contain all of those nested properties.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=part")
+    public String[] part;
+    public YoutubeChannelsListRequest withPart(String[] part) {
+        this.part = part;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public YoutubeChannelsListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public YoutubeChannelsListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public YoutubeChannelsListRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public YoutubeChannelsListRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

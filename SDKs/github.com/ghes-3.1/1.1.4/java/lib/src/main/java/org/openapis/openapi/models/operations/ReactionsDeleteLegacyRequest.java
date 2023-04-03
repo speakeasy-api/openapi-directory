@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsDeleteLegacyRequest {
-    
-    public ReactionsDeleteLegacyPathParams pathParams;
-    public ReactionsDeleteLegacyRequest withPathParams(ReactionsDeleteLegacyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the reaction.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reaction_id")
+    public Long reactionId;
+    public ReactionsDeleteLegacyRequest withReactionId(Long reactionId) {
+        this.reactionId = reactionId;
         return this;
     }
     

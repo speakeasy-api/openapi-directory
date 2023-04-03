@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CfgSaveasRequest {
+    /**
+     * MIMIC agent configuration file to save
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cfgFile")
+    public String cfgFile;
+    public CfgSaveasRequest withCfgFile(String cfgFile) {
+        this.cfgFile = cfgFile;
+        return this;
+    }
     
-    public CfgSaveasPathParams pathParams;
-    public CfgSaveasRequest withPathParams(CfgSaveasPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent number in cfgFile to start the loading
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=firstAgentNum")
+    public Integer firstAgentNum;
+    public CfgSaveasRequest withFirstAgentNum(Integer firstAgentNum) {
+        this.firstAgentNum = firstAgentNum;
+        return this;
+    }
+    
+    /**
+     * Agent number in cfgFile to end the loading
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=lastAgentNum")
+    public Integer lastAgentNum;
+    public CfgSaveasRequest withLastAgentNum(Integer lastAgentNum) {
+        this.lastAgentNum = lastAgentNum;
         return this;
     }
     

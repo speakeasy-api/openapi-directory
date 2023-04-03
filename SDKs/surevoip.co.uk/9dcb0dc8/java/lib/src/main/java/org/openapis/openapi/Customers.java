@@ -42,7 +42,7 @@ public class Customers {
      */
     public org.openapis.openapi.models.operations.GetCustomerResponse getCustomer(org.openapis.openapi.models.operations.GetCustomerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomerPathParams.class, baseUrl, "/customers/{account}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomerRequest.class, baseUrl, "/customers/{account}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

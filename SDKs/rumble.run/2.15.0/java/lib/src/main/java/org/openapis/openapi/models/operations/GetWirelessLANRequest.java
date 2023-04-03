@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWirelessLANRequest {
-    
-    public GetWirelessLANPathParams pathParams;
-    public GetWirelessLANRequest withPathParams(GetWirelessLANPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetWirelessLANSecurity security;
-    public GetWirelessLANRequest withSecurity(GetWirelessLANSecurity security) {
-        this.security = security;
+    /**
+     * UUID of the wireless LAN to retrieve
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=wireless_id")
+    public String wirelessId;
+    public GetWirelessLANRequest withWirelessId(String wirelessId) {
+        this.wirelessId = wirelessId;
         return this;
     }
     

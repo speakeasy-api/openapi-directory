@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NewNoteRequest {
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public NewNoteRequest withAccept(String accept) {
+        this.accept = accept;
+        return this;
+    }
     
-    public NewNoteHeaders headers;
-    public NewNoteRequest withHeaders(NewNoteHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public NewNoteRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public NewNoteRequestBody request;
-    public NewNoteRequest withRequest(NewNoteRequestBody request) {
-        this.request = request;
+    public NewNoteRequestBody requestBody;
+    public NewNoteRequest withRequestBody(NewNoteRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

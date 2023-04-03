@@ -4,13 +4,285 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExtrasTagsListRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=color")
+    public String color;
+    public ExtrasTagsListRequest withColor(String color) {
+        this.color = color;
+        return this;
+    }
     
-    public ExtrasTagsListQueryParams queryParams;
-    public ExtrasTagsListRequest withQueryParams(ExtrasTagsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=color__ic")
+    public String colorIc;
+    public ExtrasTagsListRequest withColorIc(String colorIc) {
+        this.colorIc = colorIc;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=color__ie")
+    public String colorIe;
+    public ExtrasTagsListRequest withColorIe(String colorIe) {
+        this.colorIe = colorIe;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=color__iew")
+    public String colorIew;
+    public ExtrasTagsListRequest withColorIew(String colorIew) {
+        this.colorIew = colorIew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=color__isw")
+    public String colorIsw;
+    public ExtrasTagsListRequest withColorIsw(String colorIsw) {
+        this.colorIsw = colorIsw;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=color__n")
+    public String colorN;
+    public ExtrasTagsListRequest withColorN(String colorN) {
+        this.colorN = colorN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=color__nic")
+    public String colorNic;
+    public ExtrasTagsListRequest withColorNic(String colorNic) {
+        this.colorNic = colorNic;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=color__nie")
+    public String colorNie;
+    public ExtrasTagsListRequest withColorNie(String colorNie) {
+        this.colorNie = colorNie;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=color__niew")
+    public String colorNiew;
+    public ExtrasTagsListRequest withColorNiew(String colorNiew) {
+        this.colorNiew = colorNiew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=color__nisw")
+    public String colorNisw;
+    public ExtrasTagsListRequest withColorNisw(String colorNisw) {
+        this.colorNisw = colorNisw;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public ExtrasTagsListRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__gt")
+    public String idGt;
+    public ExtrasTagsListRequest withIdGt(String idGt) {
+        this.idGt = idGt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__gte")
+    public String idGte;
+    public ExtrasTagsListRequest withIdGte(String idGte) {
+        this.idGte = idGte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__lt")
+    public String idLt;
+    public ExtrasTagsListRequest withIdLt(String idLt) {
+        this.idLt = idLt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__lte")
+    public String idLte;
+    public ExtrasTagsListRequest withIdLte(String idLte) {
+        this.idLte = idLte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__n")
+    public String idN;
+    public ExtrasTagsListRequest withIdN(String idN) {
+        this.idN = idN;
+        return this;
+    }
+    
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ExtrasTagsListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public ExtrasTagsListRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__ic")
+    public String nameIc;
+    public ExtrasTagsListRequest withNameIc(String nameIc) {
+        this.nameIc = nameIc;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__ie")
+    public String nameIe;
+    public ExtrasTagsListRequest withNameIe(String nameIe) {
+        this.nameIe = nameIe;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__iew")
+    public String nameIew;
+    public ExtrasTagsListRequest withNameIew(String nameIew) {
+        this.nameIew = nameIew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__isw")
+    public String nameIsw;
+    public ExtrasTagsListRequest withNameIsw(String nameIsw) {
+        this.nameIsw = nameIsw;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__n")
+    public String nameN;
+    public ExtrasTagsListRequest withNameN(String nameN) {
+        this.nameN = nameN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__nic")
+    public String nameNic;
+    public ExtrasTagsListRequest withNameNic(String nameNic) {
+        this.nameNic = nameNic;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__nie")
+    public String nameNie;
+    public ExtrasTagsListRequest withNameNie(String nameNie) {
+        this.nameNie = nameNie;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__niew")
+    public String nameNiew;
+    public ExtrasTagsListRequest withNameNiew(String nameNiew) {
+        this.nameNiew = nameNiew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__nisw")
+    public String nameNisw;
+    public ExtrasTagsListRequest withNameNisw(String nameNisw) {
+        this.nameNisw = nameNisw;
+        return this;
+    }
+    
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public ExtrasTagsListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public ExtrasTagsListRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug")
+    public String slug;
+    public ExtrasTagsListRequest withSlug(String slug) {
+        this.slug = slug;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug__ic")
+    public String slugIc;
+    public ExtrasTagsListRequest withSlugIc(String slugIc) {
+        this.slugIc = slugIc;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug__ie")
+    public String slugIe;
+    public ExtrasTagsListRequest withSlugIe(String slugIe) {
+        this.slugIe = slugIe;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug__iew")
+    public String slugIew;
+    public ExtrasTagsListRequest withSlugIew(String slugIew) {
+        this.slugIew = slugIew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug__isw")
+    public String slugIsw;
+    public ExtrasTagsListRequest withSlugIsw(String slugIsw) {
+        this.slugIsw = slugIsw;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug__n")
+    public String slugN;
+    public ExtrasTagsListRequest withSlugN(String slugN) {
+        this.slugN = slugN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug__nic")
+    public String slugNic;
+    public ExtrasTagsListRequest withSlugNic(String slugNic) {
+        this.slugNic = slugNic;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug__nie")
+    public String slugNie;
+    public ExtrasTagsListRequest withSlugNie(String slugNie) {
+        this.slugNie = slugNie;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug__niew")
+    public String slugNiew;
+    public ExtrasTagsListRequest withSlugNiew(String slugNiew) {
+        this.slugNiew = slugNiew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug__nisw")
+    public String slugNisw;
+    public ExtrasTagsListRequest withSlugNisw(String slugNisw) {
+        this.slugNisw = slugNisw;
         return this;
     }
     

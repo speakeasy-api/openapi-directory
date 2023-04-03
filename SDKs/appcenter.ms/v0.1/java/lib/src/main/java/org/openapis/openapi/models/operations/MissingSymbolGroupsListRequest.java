@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MissingSymbolGroupsListRequest {
-    
-    public MissingSymbolGroupsListPathParams pathParams;
-    public MissingSymbolGroupsListRequest withPathParams(MissingSymbolGroupsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public MissingSymbolGroupsListRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public MissingSymbolGroupsListQueryParams queryParams;
-    public MissingSymbolGroupsListRequest withQueryParams(MissingSymbolGroupsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public MissingSymbolGroupsListRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     
-    
-    public MissingSymbolGroupsListSecurity security;
-    public MissingSymbolGroupsListRequest withSecurity(MissingSymbolGroupsListSecurity security) {
-        this.security = security;
+    /**
+     * top N elements
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=top")
+    public Long top;
+    public MissingSymbolGroupsListRequest withTop(Long top) {
+        this.top = top;
         return this;
     }
     

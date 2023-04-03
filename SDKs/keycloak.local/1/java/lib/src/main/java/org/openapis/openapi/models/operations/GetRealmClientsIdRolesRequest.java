@@ -4,20 +4,54 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRealmClientsIdRolesRequest {
-    
-    public GetRealmClientsIdRolesPathParams pathParams;
-    public GetRealmClientsIdRolesRequest withPathParams(GetRealmClientsIdRolesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=briefRepresentation")
+    public Boolean briefRepresentation;
+    public GetRealmClientsIdRolesRequest withBriefRepresentation(Boolean briefRepresentation) {
+        this.briefRepresentation = briefRepresentation;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=first")
+    public Integer first;
+    public GetRealmClientsIdRolesRequest withFirst(Integer first) {
+        this.first = first;
+        return this;
+    }
     
-    public GetRealmClientsIdRolesQueryParams queryParams;
-    public GetRealmClientsIdRolesRequest withQueryParams(GetRealmClientsIdRolesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * id of client (not client-id)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetRealmClientsIdRolesRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
+    public Integer max;
+    public GetRealmClientsIdRolesRequest withMax(Integer max) {
+        this.max = max;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public GetRealmClientsIdRolesRequest withRealm(String realm) {
+        this.realm = realm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public GetRealmClientsIdRolesRequest withSearch(String search) {
+        this.search = search;
         return this;
     }
     

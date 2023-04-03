@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSipIpAccessControlListRequest {
-    
-    public CreateSipIpAccessControlListPathParams pathParams;
-    public CreateSipIpAccessControlListRequest withPathParams(CreateSipIpAccessControlListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public CreateSipIpAccessControlListRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateSipIpAccessControlListCreateSipIpAccessControlListRequest request;
-    public CreateSipIpAccessControlListRequest withRequest(CreateSipIpAccessControlListCreateSipIpAccessControlListRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateSipIpAccessControlListSecurity security;
-    public CreateSipIpAccessControlListRequest withSecurity(CreateSipIpAccessControlListSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateSipIpAccessControlListRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateSipIpAccessControlListCreateSipIpAccessControlListRequest requestBody;
+    public CreateSipIpAccessControlListRequest withRequestBody(CreateSipIpAccessControlListCreateSipIpAccessControlListRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

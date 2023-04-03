@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetareacodefromnumberQueryParams;
 import org.openapis.openapi.models.operations.GetareacodefromnumberRequest;
 import org.openapis.openapi.models.operations.GetareacodefromnumberResponse;
 
@@ -28,11 +27,9 @@ public class Application {
                 .build();
 
             GetareacodefromnumberRequest req = new GetareacodefromnumberRequest() {{
-                queryParams = new GetareacodefromnumberQueryParams() {{
-                    license = "corrupti";
-                    number = "provident";
-                }};
-            }};            
+                license = "corrupti";
+                number = "provident";
+            }}            
 
             GetareacodefromnumberResponse res = sdk.areaCodeInformation.getareacodefromnumber(req);
 
@@ -46,7 +43,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### areaCodeInformation

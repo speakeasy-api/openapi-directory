@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePhoneSIPTrunkRequest {
-    
-    public UpdatePhoneSIPTrunkPathParams pathParams;
-    public UpdatePhoneSIPTrunkRequest withPathParams(UpdatePhoneSIPTrunkPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdatePhoneSIPTrunkApplicationJSON request;
-    public UpdatePhoneSIPTrunkRequest withRequest(UpdatePhoneSIPTrunkApplicationJSON request) {
-        this.request = request;
+    public UpdatePhoneSIPTrunkApplicationJSON requestBody;
+    public UpdatePhoneSIPTrunkRequest withRequestBody(UpdatePhoneSIPTrunkApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Unique identifier of the sub account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public UpdatePhoneSIPTrunkRequest withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
     
-    public UpdatePhoneSIPTrunkSecurity security;
-    public UpdatePhoneSIPTrunkRequest withSecurity(UpdatePhoneSIPTrunkSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the SIP trunk.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sipTrunkId")
+    public String sipTrunkId;
+    public UpdatePhoneSIPTrunkRequest withSipTrunkId(String sipTrunkId) {
+        this.sipTrunkId = sipTrunkId;
         return this;
     }
     

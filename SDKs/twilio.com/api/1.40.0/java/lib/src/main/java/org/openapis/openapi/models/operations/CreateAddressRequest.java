@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateAddressRequest {
-    
-    public CreateAddressPathParams pathParams;
-    public CreateAddressRequest withPathParams(CreateAddressPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will be responsible for the new Address resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public CreateAddressRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateAddressCreateAddressRequest request;
-    public CreateAddressRequest withRequest(CreateAddressCreateAddressRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateAddressSecurity security;
-    public CreateAddressRequest withSecurity(CreateAddressSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateAddressRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateAddressCreateAddressRequest requestBody;
+    public CreateAddressRequest withRequestBody(CreateAddressCreateAddressRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

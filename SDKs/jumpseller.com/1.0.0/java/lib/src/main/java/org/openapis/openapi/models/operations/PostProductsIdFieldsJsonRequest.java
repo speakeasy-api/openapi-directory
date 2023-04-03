@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostProductsIdFieldsJsonRequest {
-    
-    public PostProductsIdFieldsJsonPathParams pathParams;
-    public PostProductsIdFieldsJsonRequest withPathParams(PostProductsIdFieldsJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostProductsIdFieldsJsonQueryParams queryParams;
-    public PostProductsIdFieldsJsonRequest withQueryParams(PostProductsIdFieldsJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Product Custom Field parameters.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AddProductCustomField request;
-    public PostProductsIdFieldsJsonRequest withRequest(org.openapis.openapi.models.shared.AddProductCustomField request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AddProductCustomField addProductCustomField;
+    public PostProductsIdFieldsJsonRequest withAddProductCustomField(org.openapis.openapi.models.shared.AddProductCustomField addProductCustomField) {
+        this.addProductCustomField = addProductCustomField;
+        return this;
+    }
+    
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public PostProductsIdFieldsJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
+        return this;
+    }
+    
+    /**
+     * Id of the Product
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PostProductsIdFieldsJsonRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public PostProductsIdFieldsJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

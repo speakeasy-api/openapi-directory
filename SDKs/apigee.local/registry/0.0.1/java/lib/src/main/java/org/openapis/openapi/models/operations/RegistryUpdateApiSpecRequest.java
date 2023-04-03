@@ -7,24 +7,80 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryUpdateApiSpecRequest {
-    
-    public RegistryUpdateApiSpecPathParams pathParams;
-    public RegistryUpdateApiSpecRequest withPathParams(RegistryUpdateApiSpecPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RegistryUpdateApiSpecQueryParams queryParams;
-    public RegistryUpdateApiSpecRequest withQueryParams(RegistryUpdateApiSpecQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ApiSpecInput request;
-    public RegistryUpdateApiSpecRequest withRequest(org.openapis.openapi.models.shared.ApiSpecInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ApiSpecInput apiSpecInput;
+    public RegistryUpdateApiSpecRequest withApiSpecInput(org.openapis.openapi.models.shared.ApiSpecInput apiSpecInput) {
+        this.apiSpecInput = apiSpecInput;
+        return this;
+    }
+    
+    /**
+     * If set to true, and the spec is not found, a new spec will be created. In this situation, `update_mask` is ignored.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=allowMissing")
+    public Boolean allowMissing;
+    public RegistryUpdateApiSpecRequest withAllowMissing(Boolean allowMissing) {
+        this.allowMissing = allowMissing;
+        return this;
+    }
+    
+    /**
+     * The api id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api")
+    public String api;
+    public RegistryUpdateApiSpecRequest withApi(String api) {
+        this.api = api;
+        return this;
+    }
+    
+    /**
+     * The location id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
+    public String location;
+    public RegistryUpdateApiSpecRequest withLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public RegistryUpdateApiSpecRequest withProject(String project) {
+        this.project = project;
+        return this;
+    }
+    
+    /**
+     * The spec id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spec")
+    public String spec;
+    public RegistryUpdateApiSpecRequest withSpec(String spec) {
+        this.spec = spec;
+        return this;
+    }
+    
+    /**
+     * The list of fields to be updated. If omitted, all fields are updated that are set in the request message (fields set to default values are ignored). If a "*" is specified, all fields are updated, including fields that are unspecified/default in the request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updateMask")
+    public String updateMask;
+    public RegistryUpdateApiSpecRequest withUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+    }
+    
+    /**
+     * The version id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public String version;
+    public RegistryUpdateApiSpecRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

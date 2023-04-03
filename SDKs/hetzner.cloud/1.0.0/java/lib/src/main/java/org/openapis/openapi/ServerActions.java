@@ -40,13 +40,13 @@ public class ServerActions {
      */
     public org.openapis.openapi.models.operations.GetServersIdActionsResponse getServersIdActions(org.openapis.openapi.models.operations.GetServersIdActionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetServersIdActionsPathParams.class, baseUrl, "/servers/{id}/actions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetServersIdActionsRequest.class, baseUrl, "/servers/{id}/actions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetServersIdActionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetServersIdActionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -85,7 +85,7 @@ public class ServerActions {
      */
     public org.openapis.openapi.models.operations.GetServersIdActionsActionIdResponse getServersIdActionsActionId(org.openapis.openapi.models.operations.GetServersIdActionsActionIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetServersIdActionsActionIdPathParams.class, baseUrl, "/servers/{id}/actions/{action_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetServersIdActionsActionIdRequest.class, baseUrl, "/servers/{id}/actions/{action_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -133,12 +133,12 @@ public class ServerActions {
      */
     public org.openapis.openapi.models.operations.PostServersIdActionsAddToPlacementGroupResponse postServersIdActionsAddToPlacementGroup(org.openapis.openapi.models.operations.PostServersIdActionsAddToPlacementGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsAddToPlacementGroupPathParams.class, baseUrl, "/servers/{id}/actions/add_to_placement_group", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsAddToPlacementGroupRequest.class, baseUrl, "/servers/{id}/actions/add_to_placement_group", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -177,12 +177,12 @@ public class ServerActions {
      */
     public org.openapis.openapi.models.operations.PostServersIdActionsAttachIsoResponse postServersIdActionsAttachIso(org.openapis.openapi.models.operations.PostServersIdActionsAttachIsoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsAttachIsoPathParams.class, baseUrl, "/servers/{id}/actions/attach_iso", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsAttachIsoRequest.class, baseUrl, "/servers/{id}/actions/attach_iso", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -232,12 +232,12 @@ public class ServerActions {
      */
     public org.openapis.openapi.models.operations.PostServersIdActionsAttachToNetworkResponse postServersIdActionsAttachToNetwork(org.openapis.openapi.models.operations.PostServersIdActionsAttachToNetworkRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsAttachToNetworkPathParams.class, baseUrl, "/servers/{id}/actions/attach_to_network", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsAttachToNetworkRequest.class, baseUrl, "/servers/{id}/actions/attach_to_network", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -273,12 +273,12 @@ public class ServerActions {
      */
     public org.openapis.openapi.models.operations.PostServersIdActionsChangeAliasIpsResponse postServersIdActionsChangeAliasIps(org.openapis.openapi.models.operations.PostServersIdActionsChangeAliasIpsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsChangeAliasIpsPathParams.class, baseUrl, "/servers/{id}/actions/change_alias_ips", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsChangeAliasIpsRequest.class, baseUrl, "/servers/{id}/actions/change_alias_ips", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -317,12 +317,12 @@ public class ServerActions {
      */
     public org.openapis.openapi.models.operations.PostServersIdActionsChangeDnsPtrResponse postServersIdActionsChangeDnsPtr(org.openapis.openapi.models.operations.PostServersIdActionsChangeDnsPtrRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsChangeDnsPtrPathParams.class, baseUrl, "/servers/{id}/actions/change_dns_ptr", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsChangeDnsPtrRequest.class, baseUrl, "/servers/{id}/actions/change_dns_ptr", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -358,12 +358,12 @@ public class ServerActions {
      */
     public org.openapis.openapi.models.operations.PostServersIdActionsChangeProtectionResponse postServersIdActionsChangeProtection(org.openapis.openapi.models.operations.PostServersIdActionsChangeProtectionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsChangeProtectionPathParams.class, baseUrl, "/servers/{id}/actions/change_protection", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsChangeProtectionRequest.class, baseUrl, "/servers/{id}/actions/change_protection", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -415,12 +415,12 @@ public class ServerActions {
      */
     public org.openapis.openapi.models.operations.PostServersIdActionsChangeTypeResponse postServersIdActionsChangeType(org.openapis.openapi.models.operations.PostServersIdActionsChangeTypeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsChangeTypePathParams.class, baseUrl, "/servers/{id}/actions/change_type", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsChangeTypeRequest.class, baseUrl, "/servers/{id}/actions/change_type", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -461,12 +461,12 @@ public class ServerActions {
      */
     public org.openapis.openapi.models.operations.PostServersIdActionsCreateImageResponse postServersIdActionsCreateImage(org.openapis.openapi.models.operations.PostServersIdActionsCreateImageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsCreateImagePathParams.class, baseUrl, "/servers/{id}/actions/create_image", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsCreateImageRequest.class, baseUrl, "/servers/{id}/actions/create_image", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -502,12 +502,12 @@ public class ServerActions {
      */
     public org.openapis.openapi.models.operations.PostServersIdActionsDetachFromNetworkResponse postServersIdActionsDetachFromNetwork(org.openapis.openapi.models.operations.PostServersIdActionsDetachFromNetworkRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsDetachFromNetworkPathParams.class, baseUrl, "/servers/{id}/actions/detach_from_network", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsDetachFromNetworkRequest.class, baseUrl, "/servers/{id}/actions/detach_from_network", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -543,7 +543,7 @@ public class ServerActions {
      */
     public org.openapis.openapi.models.operations.PostServersIdActionsDetachIsoResponse postServersIdActionsDetachIso(org.openapis.openapi.models.operations.PostServersIdActionsDetachIsoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsDetachIsoPathParams.class, baseUrl, "/servers/{id}/actions/detach_iso", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsDetachIsoRequest.class, baseUrl, "/servers/{id}/actions/detach_iso", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -585,7 +585,7 @@ public class ServerActions {
      */
     public org.openapis.openapi.models.operations.PostServersIdActionsDisableBackupResponse postServersIdActionsDisableBackup(org.openapis.openapi.models.operations.PostServersIdActionsDisableBackupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsDisableBackupPathParams.class, baseUrl, "/servers/{id}/actions/disable_backup", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsDisableBackupRequest.class, baseUrl, "/servers/{id}/actions/disable_backup", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -629,7 +629,7 @@ public class ServerActions {
      */
     public org.openapis.openapi.models.operations.PostServersIdActionsDisableRescueResponse postServersIdActionsDisableRescue(org.openapis.openapi.models.operations.PostServersIdActionsDisableRescueRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsDisableRescuePathParams.class, baseUrl, "/servers/{id}/actions/disable_rescue", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsDisableRescueRequest.class, baseUrl, "/servers/{id}/actions/disable_rescue", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -671,7 +671,7 @@ public class ServerActions {
      */
     public org.openapis.openapi.models.operations.PostServersIdActionsEnableBackupResponse postServersIdActionsEnableBackup(org.openapis.openapi.models.operations.PostServersIdActionsEnableBackupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsEnableBackupPathParams.class, baseUrl, "/servers/{id}/actions/enable_backup", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsEnableBackupRequest.class, baseUrl, "/servers/{id}/actions/enable_backup", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -717,12 +717,12 @@ public class ServerActions {
      */
     public org.openapis.openapi.models.operations.PostServersIdActionsEnableRescueResponse postServersIdActionsEnableRescue(org.openapis.openapi.models.operations.PostServersIdActionsEnableRescueRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsEnableRescuePathParams.class, baseUrl, "/servers/{id}/actions/enable_rescue", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsEnableRescueRequest.class, baseUrl, "/servers/{id}/actions/enable_rescue", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -758,7 +758,7 @@ public class ServerActions {
      */
     public org.openapis.openapi.models.operations.PostServersIdActionsPoweroffResponse postServersIdActionsPoweroff(org.openapis.openapi.models.operations.PostServersIdActionsPoweroffRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsPoweroffPathParams.class, baseUrl, "/servers/{id}/actions/poweroff", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsPoweroffRequest.class, baseUrl, "/servers/{id}/actions/poweroff", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -797,7 +797,7 @@ public class ServerActions {
      */
     public org.openapis.openapi.models.operations.PostServersIdActionsPoweronResponse postServersIdActionsPoweron(org.openapis.openapi.models.operations.PostServersIdActionsPoweronRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsPoweronPathParams.class, baseUrl, "/servers/{id}/actions/poweron", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsPoweronRequest.class, baseUrl, "/servers/{id}/actions/poweron", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -836,7 +836,7 @@ public class ServerActions {
      */
     public org.openapis.openapi.models.operations.PostServersIdActionsRebootResponse postServersIdActionsReboot(org.openapis.openapi.models.operations.PostServersIdActionsRebootRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsRebootPathParams.class, baseUrl, "/servers/{id}/actions/reboot", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsRebootRequest.class, baseUrl, "/servers/{id}/actions/reboot", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -880,12 +880,12 @@ public class ServerActions {
      */
     public org.openapis.openapi.models.operations.PostServersIdActionsRebuildResponse postServersIdActionsRebuild(org.openapis.openapi.models.operations.PostServersIdActionsRebuildRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsRebuildPathParams.class, baseUrl, "/servers/{id}/actions/rebuild", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsRebuildRequest.class, baseUrl, "/servers/{id}/actions/rebuild", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -922,7 +922,7 @@ public class ServerActions {
      */
     public org.openapis.openapi.models.operations.PostServersIdActionsRemoveFromPlacementGroupResponse postServersIdActionsRemoveFromPlacementGroup(org.openapis.openapi.models.operations.PostServersIdActionsRemoveFromPlacementGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsRemoveFromPlacementGroupPathParams.class, baseUrl, "/servers/{id}/actions/remove_from_placement_group", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsRemoveFromPlacementGroupRequest.class, baseUrl, "/servers/{id}/actions/remove_from_placement_group", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -961,7 +961,7 @@ public class ServerActions {
      */
     public org.openapis.openapi.models.operations.PostServersIdActionsRequestConsoleResponse postServersIdActionsRequestConsole(org.openapis.openapi.models.operations.PostServersIdActionsRequestConsoleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsRequestConsolePathParams.class, baseUrl, "/servers/{id}/actions/request_console", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsRequestConsoleRequest.class, baseUrl, "/servers/{id}/actions/request_console", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -1000,7 +1000,7 @@ public class ServerActions {
      */
     public org.openapis.openapi.models.operations.PostServersIdActionsResetResponse postServersIdActionsReset(org.openapis.openapi.models.operations.PostServersIdActionsResetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsResetPathParams.class, baseUrl, "/servers/{id}/actions/reset", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsResetRequest.class, baseUrl, "/servers/{id}/actions/reset", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -1044,7 +1044,7 @@ public class ServerActions {
      */
     public org.openapis.openapi.models.operations.PostServersIdActionsResetPasswordResponse postServersIdActionsResetPassword(org.openapis.openapi.models.operations.PostServersIdActionsResetPasswordRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsResetPasswordPathParams.class, baseUrl, "/servers/{id}/actions/reset_password", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsResetPasswordRequest.class, baseUrl, "/servers/{id}/actions/reset_password", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -1083,7 +1083,7 @@ public class ServerActions {
      */
     public org.openapis.openapi.models.operations.PostServersIdActionsShutdownResponse postServersIdActionsShutdown(org.openapis.openapi.models.operations.PostServersIdActionsShutdownRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsShutdownPathParams.class, baseUrl, "/servers/{id}/actions/shutdown", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostServersIdActionsShutdownRequest.class, baseUrl, "/servers/{id}/actions/shutdown", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");

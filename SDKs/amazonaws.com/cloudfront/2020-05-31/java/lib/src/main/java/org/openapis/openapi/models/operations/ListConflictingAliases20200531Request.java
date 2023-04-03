@@ -4,20 +4,95 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListConflictingAliases20200531Request {
-    
-    public ListConflictingAliases20200531QueryParams queryParams;
-    public ListConflictingAliases20200531Request withQueryParams(ListConflictingAliases20200531QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The alias (also called a CNAME) to search for conflicting aliases.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Alias")
+    public String alias;
+    public ListConflictingAliases20200531Request withAlias(String alias) {
+        this.alias = alias;
         return this;
     }
     
+    /**
+     * The ID of a distribution in your account that has an attached SSL/TLS certificate that includes the provided alias.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DistributionId")
+    public String distributionId;
+    public ListConflictingAliases20200531Request withDistributionId(String distributionId) {
+        this.distributionId = distributionId;
+        return this;
+    }
     
-    public ListConflictingAliases20200531Headers headers;
-    public ListConflictingAliases20200531Request withHeaders(ListConflictingAliases20200531Headers headers) {
-        this.headers = headers;
+    /**
+     * Use this field when paginating results to indicate where to begin in the list of conflicting aliases. The response includes conflicting aliases in the list that occur after the marker. To get the next page of the list, set this field's value to the value of &lt;code&gt;NextMarker&lt;/code&gt; from the current page's response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
+    public String marker;
+    public ListConflictingAliases20200531Request withMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
+    
+    /**
+     * The maximum number of conflicting aliases that you want in the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxItems")
+    public Long maxItems;
+    public ListConflictingAliases20200531Request withMaxItems(Long maxItems) {
+        this.maxItems = maxItems;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListConflictingAliases20200531Request withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListConflictingAliases20200531Request withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListConflictingAliases20200531Request withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListConflictingAliases20200531Request withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListConflictingAliases20200531Request withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListConflictingAliases20200531Request withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListConflictingAliases20200531Request withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

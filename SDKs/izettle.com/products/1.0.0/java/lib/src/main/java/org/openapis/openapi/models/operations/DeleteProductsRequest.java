@@ -4,27 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteProductsRequest {
-    
-    public DeleteProductsPathParams pathParams;
-    public DeleteProductsRequest withPathParams(DeleteProductsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationUuid")
+    public String organizationUuid;
+    public DeleteProductsRequest withOrganizationUuid(String organizationUuid) {
+        this.organizationUuid = organizationUuid;
         return this;
     }
     
-    
-    public DeleteProductsQueryParams queryParams;
-    public DeleteProductsRequest withQueryParams(DeleteProductsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public DeleteProductsSecurity security;
-    public DeleteProductsRequest withSecurity(DeleteProductsSecurity security) {
-        this.security = security;
+    /**
+     * List of product UUIDs to be deleted
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uuid")
+    public String[] uuid;
+    public DeleteProductsRequest withUuid(String[] uuid) {
+        this.uuid = uuid;
         return this;
     }
     

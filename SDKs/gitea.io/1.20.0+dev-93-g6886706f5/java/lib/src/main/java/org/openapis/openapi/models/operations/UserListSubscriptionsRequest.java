@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserListSubscriptionsRequest {
-    
-    public UserListSubscriptionsPathParams pathParams;
-    public UserListSubscriptionsRequest withPathParams(UserListSubscriptionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * page size of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public UserListSubscriptionsRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * page number of results to return (1-based)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public UserListSubscriptionsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public UserListSubscriptionsQueryParams queryParams;
-    public UserListSubscriptionsRequest withQueryParams(UserListSubscriptionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * username of the user
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public UserListSubscriptionsRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

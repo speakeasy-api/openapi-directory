@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GitGetRefRequest {
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public GitGetRefRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public GitGetRefPathParams pathParams;
-    public GitGetRefRequest withPathParams(GitGetRefPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ref parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ref")
+    public String ref;
+    public GitGetRefRequest withRef(String ref) {
+        this.ref = ref;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public GitGetRefRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

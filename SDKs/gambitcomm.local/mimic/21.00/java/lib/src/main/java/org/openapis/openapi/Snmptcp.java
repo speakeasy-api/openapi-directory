@@ -39,7 +39,7 @@ public class Snmptcp {
      */
     public org.openapis.openapi.models.operations.ProtocolSnmptcpGetArgsResponse protocolSnmptcpGetArgs(org.openapis.openapi.models.operations.ProtocolSnmptcpGetArgsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmptcpGetArgsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/get/args", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmptcpGetArgsRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/get/args", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -81,7 +81,7 @@ public class Snmptcp {
      */
     public org.openapis.openapi.models.operations.ProtocolSnmptcpGetConfigResponse protocolSnmptcpGetConfig(org.openapis.openapi.models.operations.ProtocolSnmptcpGetConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmptcpGetConfigPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/get/config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmptcpGetConfigRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/get/config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -123,7 +123,7 @@ public class Snmptcp {
      */
     public org.openapis.openapi.models.operations.ProtocolSnmptcpGetStatisticsResponse protocolSnmptcpGetStatistics(org.openapis.openapi.models.operations.ProtocolSnmptcpGetStatisticsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmptcpGetStatisticsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/get/statistics", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmptcpGetStatisticsRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/get/statistics", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -206,7 +206,7 @@ public class Snmptcp {
      */
     public org.openapis.openapi.models.operations.ProtocolSnmptcpGetTraceResponse protocolSnmptcpGetTrace(org.openapis.openapi.models.operations.ProtocolSnmptcpGetTraceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmptcpGetTracePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/get/trace", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmptcpGetTraceRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/get/trace", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -248,7 +248,7 @@ public class Snmptcp {
      */
     public org.openapis.openapi.models.operations.ProtocolSnmptcpIpaliasDisableResponse protocolSnmptcpIpaliasDisable(org.openapis.openapi.models.operations.ProtocolSnmptcpIpaliasDisableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmptcpIpaliasDisablePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/ipalias/disable/{ipaddress}/{port}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmptcpIpaliasDisableRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/ipalias/disable/{ipaddress}/{port}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -289,7 +289,7 @@ public class Snmptcp {
      */
     public org.openapis.openapi.models.operations.ProtocolSnmptcpIpaliasEnableResponse protocolSnmptcpIpaliasEnable(org.openapis.openapi.models.operations.ProtocolSnmptcpIpaliasEnableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmptcpIpaliasEnablePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/ipalias/enable/{ipaddress}/{port}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmptcpIpaliasEnableRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/ipalias/enable/{ipaddress}/{port}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -330,7 +330,7 @@ public class Snmptcp {
      */
     public org.openapis.openapi.models.operations.ProtocolSnmptcpIpaliasIsenabledResponse protocolSnmptcpIpaliasIsenabled(org.openapis.openapi.models.operations.ProtocolSnmptcpIpaliasIsenabledRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmptcpIpaliasIsenabledPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/ipalias/isenabled/{ipaddress}/{port}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmptcpIpaliasIsenabledRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/ipalias/isenabled/{ipaddress}/{port}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -371,7 +371,7 @@ public class Snmptcp {
      */
     public org.openapis.openapi.models.operations.ProtocolSnmptcpIpaliasListResponse protocolSnmptcpIpaliasList(org.openapis.openapi.models.operations.ProtocolSnmptcpIpaliasListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmptcpIpaliasListPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/ipalias/list", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmptcpIpaliasListRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/ipalias/list", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -413,7 +413,7 @@ public class Snmptcp {
      */
     public org.openapis.openapi.models.operations.ProtocolSnmptcpSetConfigResponse protocolSnmptcpSetConfig(org.openapis.openapi.models.operations.ProtocolSnmptcpSetConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmptcpSetConfigPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/set/config/{argument}/{value}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmptcpSetConfigRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/set/config/{argument}/{value}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -454,7 +454,7 @@ public class Snmptcp {
      */
     public org.openapis.openapi.models.operations.ProtocolSnmptcpSetTraceResponse protocolSnmptcpSetTrace(org.openapis.openapi.models.operations.ProtocolSnmptcpSetTraceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmptcpSetTracePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/set/trace/{enableOrNot}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolSnmptcpSetTraceRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/snmptcp/set/trace/{enableOrNot}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

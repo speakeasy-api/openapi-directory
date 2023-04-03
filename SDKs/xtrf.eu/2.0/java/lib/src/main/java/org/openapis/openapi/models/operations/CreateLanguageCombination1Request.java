@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateLanguageCombination1Request {
-    
-    public CreateLanguageCombination1PathParams pathParams;
-    public CreateLanguageCombination1Request withPathParams(CreateLanguageCombination1PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Created a new language combination for a given quote without creating a task.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CommonLanguageCombinationDTO request;
-    public CreateLanguageCombination1Request withRequest(org.openapis.openapi.models.shared.CommonLanguageCombinationDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CommonLanguageCombinationDTO commonLanguageCombinationDTO;
+    public CreateLanguageCombination1Request withCommonLanguageCombinationDTO(org.openapis.openapi.models.shared.CommonLanguageCombinationDTO commonLanguageCombinationDTO) {
+        this.commonLanguageCombinationDTO = commonLanguageCombinationDTO;
+        return this;
+    }
+    
+    /**
+     * quote's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=quoteId")
+    public String quoteId;
+    public CreateLanguageCombination1Request withQuoteId(String quoteId) {
+        this.quoteId = quoteId;
         return this;
     }
     

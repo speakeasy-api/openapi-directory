@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminUpdatePreReceiveHookRequest {
-    
-    public EnterpriseAdminUpdatePreReceiveHookPathParams pathParams;
-    public EnterpriseAdminUpdatePreReceiveHookRequest withPathParams(EnterpriseAdminUpdatePreReceiveHookPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public EnterpriseAdminUpdatePreReceiveHookRequestBody requestBody;
+    public EnterpriseAdminUpdatePreReceiveHookRequest withRequestBody(EnterpriseAdminUpdatePreReceiveHookRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public EnterpriseAdminUpdatePreReceiveHookRequestBody request;
-    public EnterpriseAdminUpdatePreReceiveHookRequest withRequest(EnterpriseAdminUpdatePreReceiveHookRequestBody request) {
-        this.request = request;
+    /**
+     * The unique identifier of the pre-receive hook.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pre_receive_hook_id")
+    public Long preReceiveHookId;
+    public EnterpriseAdminUpdatePreReceiveHookRequest withPreReceiveHookId(Long preReceiveHookId) {
+        this.preReceiveHookId = preReceiveHookId;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersUserEmailRequest {
-    
-    public GetUsersUserEmailPathParams pathParams;
-    public GetUsersUserEmailRequest withPathParams(GetUsersUserEmailPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * user's email
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userEmail")
+    public String userEmail;
+    public GetUsersUserEmailRequest withUserEmail(String userEmail) {
+        this.userEmail = userEmail;
         return this;
     }
     

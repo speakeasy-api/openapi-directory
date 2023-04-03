@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DelTimerScriptRequest {
+    /**
+     * Agent to return the timer script list
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public DelTimerScriptRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public DelTimerScriptPathParams pathParams;
-    public DelTimerScriptRequest withPathParams(DelTimerScriptPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Arguments to the script
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=arg")
+    public String arg;
+    public DelTimerScriptRequest withArg(String arg) {
+        this.arg = arg;
+        return this;
+    }
+    
+    /**
+     * Interval in msec
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=interval")
+    public Integer interval;
+    public DelTimerScriptRequest withInterval(Integer interval) {
+        this.interval = interval;
+        return this;
+    }
+    
+    /**
+     * Script name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=script")
+    public String script;
+    public DelTimerScriptRequest withScript(String script) {
+        this.script = script;
         return this;
     }
     

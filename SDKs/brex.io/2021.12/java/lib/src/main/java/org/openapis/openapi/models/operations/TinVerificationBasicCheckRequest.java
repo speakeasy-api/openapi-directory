@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TinVerificationBasicCheckRequest {
-    
-    public TinVerificationBasicCheckQueryParams queryParams;
-    public TinVerificationBasicCheckRequest withQueryParams(TinVerificationBasicCheckQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Company Name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public TinVerificationBasicCheckRequest withName(String name) {
+        this.name = name;
         return this;
     }
     
-    
-    public TinVerificationBasicCheckSecurity security;
-    public TinVerificationBasicCheckRequest withSecurity(TinVerificationBasicCheckSecurity security) {
-        this.security = security;
+    /**
+     * Nine letter TIN number with or without hyphens
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tin")
+    public String tin;
+    public TinVerificationBasicCheckRequest withTin(String tin) {
+        this.tin = tin;
         return this;
     }
     

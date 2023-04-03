@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SendWelcomeEmailRequest {
-    
-    public SendWelcomeEmailPathParams pathParams;
-    public SendWelcomeEmailRequest withPathParams(SendWelcomeEmailPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Access token required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-access-token")
+    public String evAccessToken;
+    public SendWelcomeEmailRequest withEvAccessToken(String evAccessToken) {
+        this.evAccessToken = evAccessToken;
         return this;
     }
     
+    /**
+     * API Key required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-api-key")
+    public String evApiKey;
+    public SendWelcomeEmailRequest withEvApiKey(String evApiKey) {
+        this.evApiKey = evApiKey;
+        return this;
+    }
     
-    public SendWelcomeEmailHeaders headers;
-    public SendWelcomeEmailRequest withHeaders(SendWelcomeEmailHeaders headers) {
-        this.headers = headers;
+    /**
+     * A username to send the welcome email to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public SendWelcomeEmailRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

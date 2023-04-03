@@ -4,13 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsDeleteSelfHostedRunnerGroupFromOrgRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ActionsDeleteSelfHostedRunnerGroupFromOrgRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
     
-    public ActionsDeleteSelfHostedRunnerGroupFromOrgPathParams pathParams;
-    public ActionsDeleteSelfHostedRunnerGroupFromOrgRequest withPathParams(ActionsDeleteSelfHostedRunnerGroupFromOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the self-hosted runner group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=runner_group_id")
+    public Long runnerGroupId;
+    public ActionsDeleteSelfHostedRunnerGroupFromOrgRequest withRunnerGroupId(Long runnerGroupId) {
+        this.runnerGroupId = runnerGroupId;
         return this;
     }
     

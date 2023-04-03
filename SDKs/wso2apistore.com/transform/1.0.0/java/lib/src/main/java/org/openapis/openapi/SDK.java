@@ -115,7 +115,7 @@ public class SDK {
 		
 	}
 
-    public org.openapis.openapi.models.operations.PostJsontoxmlResponse postJsontoxml(org.openapis.openapi.models.operations.PostJsontoxmlRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostJsontoxmlResponse postJsontoxml(String request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/jsontoxml");
         
@@ -146,7 +146,7 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PostXmltojsonResponse postXmltojson(org.openapis.openapi.models.operations.PostXmltojsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostXmltojsonResponse postXmltojson(String request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/xmltojson");
         

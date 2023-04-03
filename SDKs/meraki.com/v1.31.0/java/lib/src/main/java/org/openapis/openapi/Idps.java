@@ -39,12 +39,12 @@ public class Idps {
      */
     public org.openapis.openapi.models.operations.CreateOrganizationSamlIdpResponse createOrganizationSamlIdp(org.openapis.openapi.models.operations.CreateOrganizationSamlIdpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationSamlIdpPathParams.class, baseUrl, "/organizations/{organizationId}/saml/idps", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationSamlIdpRequest.class, baseUrl, "/organizations/{organizationId}/saml/idps", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -84,7 +84,7 @@ public class Idps {
      */
     public org.openapis.openapi.models.operations.DeleteOrganizationSamlIdpResponse deleteOrganizationSamlIdp(org.openapis.openapi.models.operations.DeleteOrganizationSamlIdpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationSamlIdpPathParams.class, baseUrl, "/organizations/{organizationId}/saml/idps/{idpId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationSamlIdpRequest.class, baseUrl, "/organizations/{organizationId}/saml/idps/{idpId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -118,7 +118,7 @@ public class Idps {
      */
     public org.openapis.openapi.models.operations.GetOrganizationSamlIdpResponse getOrganizationSamlIdp(org.openapis.openapi.models.operations.GetOrganizationSamlIdpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSamlIdpPathParams.class, baseUrl, "/organizations/{organizationId}/saml/idps/{idpId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSamlIdpRequest.class, baseUrl, "/organizations/{organizationId}/saml/idps/{idpId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -158,7 +158,7 @@ public class Idps {
      */
     public org.openapis.openapi.models.operations.GetOrganizationSamlIdpsResponse getOrganizationSamlIdps(org.openapis.openapi.models.operations.GetOrganizationSamlIdpsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSamlIdpsPathParams.class, baseUrl, "/organizations/{organizationId}/saml/idps", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSamlIdpsRequest.class, baseUrl, "/organizations/{organizationId}/saml/idps", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -198,12 +198,12 @@ public class Idps {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationSamlIdpResponse updateOrganizationSamlIdp(org.openapis.openapi.models.operations.UpdateOrganizationSamlIdpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationSamlIdpPathParams.class, baseUrl, "/organizations/{organizationId}/saml/idps/{idpId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationSamlIdpRequest.class, baseUrl, "/organizations/{organizationId}/saml/idps/{idpId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

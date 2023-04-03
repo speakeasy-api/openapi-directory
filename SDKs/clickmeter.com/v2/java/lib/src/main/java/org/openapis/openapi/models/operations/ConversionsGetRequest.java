@@ -4,13 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConversionsGetRequest {
+    /**
+     * Exclude conversions created before this date (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAfter")
+    public String createdAfter;
+    public ConversionsGetRequest withCreatedAfter(String createdAfter) {
+        this.createdAfter = createdAfter;
+        return this;
+    }
     
-    public ConversionsGetQueryParams queryParams;
-    public ConversionsGetRequest withQueryParams(ConversionsGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Exclude conversions created after this date (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdBefore")
+    public String createdBefore;
+    public ConversionsGetRequest withCreatedBefore(String createdBefore) {
+        this.createdBefore = createdBefore;
+        return this;
+    }
+    
+    /**
+     * Limit results to this number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public ConversionsGetRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Offset where to start from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public ConversionsGetRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Status of conversion ("deleted"/"active")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public ConversionsGetStatusEnum status;
+    public ConversionsGetRequest withStatus(ConversionsGetStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * Filter fields by this pattern
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=textSearch")
+    public String textSearch;
+    public ConversionsGetRequest withTextSearch(String textSearch) {
+        this.textSearch = textSearch;
         return this;
     }
     

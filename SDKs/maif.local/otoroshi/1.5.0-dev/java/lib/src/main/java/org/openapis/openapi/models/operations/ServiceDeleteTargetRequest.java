@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ServiceDeleteTargetRequest {
-    
-    public ServiceDeleteTargetPathParams pathParams;
-    public ServiceDeleteTargetRequest withPathParams(ServiceDeleteTargetPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ServiceDeleteTargetSecurity security;
-    public ServiceDeleteTargetRequest withSecurity(ServiceDeleteTargetSecurity security) {
-        this.security = security;
+    /**
+     * The service id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serviceId")
+    public String serviceId;
+    public ServiceDeleteTargetRequest withServiceId(String serviceId) {
+        this.serviceId = serviceId;
         return this;
     }
     

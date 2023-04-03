@@ -7,31 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSipCredentialRequest {
+    /**
+     * The unique id of the Account that is responsible for this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public UpdateSipCredentialRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
+        return this;
+    }
     
-    public UpdateSipCredentialPathParams pathParams;
-    public UpdateSipCredentialRequest withPathParams(UpdateSipCredentialPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique id that identifies the credential list that includes this credential.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CredentialListSid")
+    public String credentialListSid;
+    public UpdateSipCredentialRequest withCredentialListSid(String credentialListSid) {
+        this.credentialListSid = credentialListSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateSipCredentialUpdateSipCredentialRequest request;
-    public UpdateSipCredentialRequest withRequest(UpdateSipCredentialUpdateSipCredentialRequest request) {
-        this.request = request;
+    public UpdateSipCredentialUpdateSipCredentialRequest requestBody;
+    public UpdateSipCredentialRequest withRequestBody(UpdateSipCredentialUpdateSipCredentialRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateSipCredentialSecurity security;
-    public UpdateSipCredentialRequest withSecurity(UpdateSipCredentialSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateSipCredentialRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique id that identifies the resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateSipCredentialRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

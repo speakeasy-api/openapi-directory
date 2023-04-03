@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PeopleSearchReadRequest {
-    
-    public PeopleSearchReadPathParams pathParams;
-    public PeopleSearchReadRequest withPathParams(PeopleSearchReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user")
+    public String user;
+    public PeopleSearchReadRequest withUser(String user) {
+        this.user = user;
         return this;
     }
     

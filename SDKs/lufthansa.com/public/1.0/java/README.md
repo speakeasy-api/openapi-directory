@@ -19,11 +19,8 @@ import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetSecurity;
 import org.openapis.openapi.models.operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetProductCodeEnum;
-import org.openapis.openapi.models.operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetPathParams;
-import org.openapis.openapi.models.operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetHeaders;
 import org.openapis.openapi.models.operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest;
 import org.openapis.openapi.models.operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetResponse;
-import org.openapis.openapi.models.shared.SchemeAuth;
 
 public class Application {
     public static void main(String[] args) {
@@ -32,23 +29,16 @@ public class Application {
                 .build();
 
             CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest req = new CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest() {{
-                security = new CargoGetRouteFromDateProductCodeByOriginAndDestinationGetSecurity() {{
-                    auth = new SchemeAuth() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new CargoGetRouteFromDateProductCodeByOriginAndDestinationGetPathParams() {{
-                    destination = "corrupti";
-                    fromDate = "provident";
-                    origin = "distinctio";
-                    productCode = "ZXB";
-                }};
-                headers = new CargoGetRouteFromDateProductCodeByOriginAndDestinationGetHeaders() {{
-                    accept = "unde";
-                }};
-            }};            
+                accept = "corrupti";
+                destination = "provident";
+                fromDate = "distinctio";
+                origin = "quibusdam";
+                productCode = "YNB";
+            }}            
 
-            CargoGetRouteFromDateProductCodeByOriginAndDestinationGetResponse res = sdk.cargo.cargoGetRouteFromDateProductCodeByOriginAndDestinationGet(req);
+            CargoGetRouteFromDateProductCodeByOriginAndDestinationGetResponse res = sdk.cargo.cargoGetRouteFromDateProductCodeByOriginAndDestinationGet(req, new CargoGetRouteFromDateProductCodeByOriginAndDestinationGetSecurity() {{
+                auth = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.cargoGetRouteFromDateProductCodeByOriginAndDestinationGet200ApplicationJSONObject.isPresent()) {
                 // handle response
@@ -60,7 +50,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### cargo

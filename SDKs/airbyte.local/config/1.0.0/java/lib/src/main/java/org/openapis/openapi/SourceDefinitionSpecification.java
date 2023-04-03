@@ -39,7 +39,7 @@ public class SourceDefinitionSpecification {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSourceDefinitionSpecificationResponse getSourceDefinitionSpecification(org.openapis.openapi.models.operations.GetSourceDefinitionSpecificationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSourceDefinitionSpecificationResponse getSourceDefinitionSpecification(org.openapis.openapi.models.shared.SourceDefinitionIdWithWorkspaceId request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/source_definition_specifications/get");
         

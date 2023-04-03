@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoGetArchiveRequest {
+    /**
+     * the git reference for download with attached archive format (e.g. master.zip)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=archive")
+    public String archive;
+    public RepoGetArchiveRequest withArchive(String archive) {
+        this.archive = archive;
+        return this;
+    }
     
-    public RepoGetArchivePathParams pathParams;
-    public RepoGetArchiveRequest withPathParams(RepoGetArchivePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoGetArchiveRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoGetArchiveRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

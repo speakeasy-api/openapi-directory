@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteVideoCollectionRequest {
-    
-    public DeleteVideoCollectionPathParams pathParams;
-    public DeleteVideoCollectionRequest withPathParams(DeleteVideoCollectionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteVideoCollectionSecurity security;
-    public DeleteVideoCollectionRequest withSecurity(DeleteVideoCollectionSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the collection to delete
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteVideoCollectionRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

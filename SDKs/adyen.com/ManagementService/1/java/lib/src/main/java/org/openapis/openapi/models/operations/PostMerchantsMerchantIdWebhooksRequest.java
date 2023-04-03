@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostMerchantsMerchantIdWebhooksRequest {
-    
-    public PostMerchantsMerchantIdWebhooksPathParams pathParams;
-    public PostMerchantsMerchantIdWebhooksRequest withPathParams(PostMerchantsMerchantIdWebhooksPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateMerchantWebhookRequest request;
-    public PostMerchantsMerchantIdWebhooksRequest withRequest(org.openapis.openapi.models.shared.CreateMerchantWebhookRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CreateMerchantWebhookRequest createMerchantWebhookRequest;
+    public PostMerchantsMerchantIdWebhooksRequest withCreateMerchantWebhookRequest(org.openapis.openapi.models.shared.CreateMerchantWebhookRequest createMerchantWebhookRequest) {
+        this.createMerchantWebhookRequest = createMerchantWebhookRequest;
         return this;
     }
     
-    
-    public PostMerchantsMerchantIdWebhooksSecurity security;
-    public PostMerchantsMerchantIdWebhooksRequest withSecurity(PostMerchantsMerchantIdWebhooksSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the merchant account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
+    public String merchantId;
+    public PostMerchantsMerchantIdWebhooksRequest withMerchantId(String merchantId) {
+        this.merchantId = merchantId;
         return this;
     }
     

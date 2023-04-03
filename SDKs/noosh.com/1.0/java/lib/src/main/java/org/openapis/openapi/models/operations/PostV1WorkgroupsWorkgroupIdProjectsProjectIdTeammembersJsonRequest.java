@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersJsonRequest {
-    
-    public PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersJsonPathParams pathParams;
-    public PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersJsonRequest withPathParams(PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ContactUserVO contactUserVO;
+    public PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersJsonRequest withContactUserVO(org.openapis.openapi.models.shared.ContactUserVO contactUserVO) {
+        this.contactUserVO = contactUserVO;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ContactUserVO request;
-    public PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersJsonRequest withRequest(org.openapis.openapi.models.shared.ContactUserVO request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public String projectId;
+    public PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersJsonRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
+    public String workgroupId;
+    public PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersJsonRequest withWorkgroupId(String workgroupId) {
+        this.workgroupId = workgroupId;
         return this;
     }
     

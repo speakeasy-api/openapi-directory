@@ -7,38 +7,27 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateChannelRequest {
-    
-    public CreateChannelPathParams pathParams;
-    public CreateChannelRequest withPathParams(CreateChannelPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CreateChannelHeaders headers;
-    public CreateChannelRequest withHeaders(CreateChannelHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateChannelCreateChannelRequest request;
-    public CreateChannelRequest withRequest(CreateChannelCreateChannelRequest request) {
-        this.request = request;
+    public CreateChannelCreateChannelRequest requestBody;
+    public CreateChannelRequest withRequestBody(CreateChannelCreateChannelRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateChannelSecurity security;
-    public CreateChannelRequest withSecurity(CreateChannelSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public CreateChannelRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public CreateChannelRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The X-Twilio-Webhook-Enabled HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Twilio-Webhook-Enabled")
+    public org.openapis.openapi.models.shared.ChannelEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled;
+    public CreateChannelRequest withXTwilioWebhookEnabled(org.openapis.openapi.models.shared.ChannelEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled) {
+        this.xTwilioWebhookEnabled = xTwilioWebhookEnabled;
         return this;
     }
     

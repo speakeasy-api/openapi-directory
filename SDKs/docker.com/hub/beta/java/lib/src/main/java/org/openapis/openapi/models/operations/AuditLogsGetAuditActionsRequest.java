@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AuditLogsGetAuditActionsRequest {
-    
-    public AuditLogsGetAuditActionsPathParams pathParams;
-    public AuditLogsGetAuditActionsRequest withPathParams(AuditLogsGetAuditActionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Namespace to query audit log actions for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account")
+    public String account;
+    public AuditLogsGetAuditActionsRequest withAccount(String account) {
+        this.account = account;
         return this;
     }
     

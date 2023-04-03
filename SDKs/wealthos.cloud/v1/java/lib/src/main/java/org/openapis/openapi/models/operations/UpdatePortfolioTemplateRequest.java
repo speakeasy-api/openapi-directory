@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePortfolioTemplateRequest {
-    
-    public UpdatePortfolioTemplatePathParams pathParams;
-    public UpdatePortfolioTemplateRequest withPathParams(UpdatePortfolioTemplatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdatePortfolioTemplateHeaders headers;
-    public UpdatePortfolioTemplateRequest withHeaders(UpdatePortfolioTemplateHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdatePortfolioTemplateRequestBody request;
-    public UpdatePortfolioTemplateRequest withRequest(UpdatePortfolioTemplateRequestBody request) {
-        this.request = request;
+    public UpdatePortfolioTemplateRequestBody requestBody;
+    public UpdatePortfolioTemplateRequest withRequestBody(UpdatePortfolioTemplateRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Portfolio ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=portfolio_template_id")
+    public String portfolioTemplateId;
+    public UpdatePortfolioTemplateRequest withPortfolioTemplateId(String portfolioTemplateId) {
+        this.portfolioTemplateId = portfolioTemplateId;
+        return this;
+    }
     
-    public UpdatePortfolioTemplateSecurity security;
-    public UpdatePortfolioTemplateRequest withSecurity(UpdatePortfolioTemplateSecurity security) {
-        this.security = security;
+    /**
+     * ApiSecretKey
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public UpdatePortfolioTemplateRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

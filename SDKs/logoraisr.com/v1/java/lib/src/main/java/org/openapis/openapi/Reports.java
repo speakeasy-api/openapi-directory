@@ -38,7 +38,7 @@ public class Reports {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReportsCreateResponse reportsCreate(org.openapis.openapi.models.operations.ReportsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReportsCreateResponse reportsCreate(org.openapis.openapi.models.shared.ReportRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/reports/");
         
@@ -128,7 +128,7 @@ public class Reports {
      */
     public org.openapis.openapi.models.operations.ReportsReadResponse reportsRead(org.openapis.openapi.models.operations.ReportsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReportsReadPathParams.class, baseUrl, "/reports/{report_number}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReportsReadRequest.class, baseUrl, "/reports/{report_number}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

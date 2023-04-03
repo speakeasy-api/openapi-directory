@@ -33,19 +33,20 @@ public class OnDemandGenres {
     /**
      * Add a genre to an On Demand page
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddVodGenreResponse addVodGenre(org.openapis.openapi.models.operations.AddVodGenreRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddVodGenreResponse addVodGenre(org.openapis.openapi.models.operations.AddVodGenreRequest request, org.openapis.openapi.models.operations.AddVodGenreSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVodGenrePathParams.class, baseUrl, "/ondemand/pages/{ondemand_id}/genres/{genre_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVodGenreRequest.class, baseUrl, "/ondemand/pages/{ondemand_id}/genres/{genre_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -80,19 +81,20 @@ public class OnDemandGenres {
     /**
      * Remove a genre from an On Demand page
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteVodGenreResponse deleteVodGenre(org.openapis.openapi.models.operations.DeleteVodGenreRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteVodGenreResponse deleteVodGenre(org.openapis.openapi.models.operations.DeleteVodGenreRequest request, org.openapis.openapi.models.operations.DeleteVodGenreSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVodGenrePathParams.class, baseUrl, "/ondemand/pages/{ondemand_id}/genres/{genre_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVodGenreRequest.class, baseUrl, "/ondemand/pages/{ondemand_id}/genres/{genre_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,7 +129,7 @@ public class OnDemandGenres {
      */
     public org.openapis.openapi.models.operations.GetGenreVodResponse getGenreVod(org.openapis.openapi.models.operations.GetGenreVodRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGenreVodPathParams.class, baseUrl, "/ondemand/genres/{genre_id}/pages/{ondemand_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGenreVodRequest.class, baseUrl, "/ondemand/genres/{genre_id}/pages/{ondemand_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -174,13 +176,13 @@ public class OnDemandGenres {
      */
     public org.openapis.openapi.models.operations.GetGenreVodsResponse getGenreVods(org.openapis.openapi.models.operations.GetGenreVodsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGenreVodsPathParams.class, baseUrl, "/ondemand/genres/{genre_id}/pages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGenreVodsRequest.class, baseUrl, "/ondemand/genres/{genre_id}/pages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGenreVodsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGenreVodsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -219,7 +221,7 @@ public class OnDemandGenres {
      */
     public org.openapis.openapi.models.operations.GetVodGenreResponse getVodGenre(org.openapis.openapi.models.operations.GetVodGenreRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVodGenrePathParams.class, baseUrl, "/ondemand/genres/{genre_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVodGenreRequest.class, baseUrl, "/ondemand/genres/{genre_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -266,7 +268,7 @@ public class OnDemandGenres {
      */
     public org.openapis.openapi.models.operations.GetVodGenreByOndemandIdResponse getVodGenreByOndemandId(org.openapis.openapi.models.operations.GetVodGenreByOndemandIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVodGenreByOndemandIdPathParams.class, baseUrl, "/ondemand/pages/{ondemand_id}/genres/{genre_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVodGenreByOndemandIdRequest.class, baseUrl, "/ondemand/pages/{ondemand_id}/genres/{genre_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -351,7 +353,7 @@ public class OnDemandGenres {
      */
     public org.openapis.openapi.models.operations.GetVodGenresByOndemandIdResponse getVodGenresByOndemandId(org.openapis.openapi.models.operations.GetVodGenresByOndemandIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVodGenresByOndemandIdPathParams.class, baseUrl, "/ondemand/pages/{ondemand_id}/genres", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVodGenresByOndemandIdRequest.class, baseUrl, "/ondemand/pages/{ondemand_id}/genres", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

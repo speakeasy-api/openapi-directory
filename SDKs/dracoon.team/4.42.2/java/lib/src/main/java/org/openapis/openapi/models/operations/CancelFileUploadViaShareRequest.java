@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelFileUploadViaShareRequest {
+    /**
+     * Access key
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=access_key")
+    public String accessKey;
+    public CancelFileUploadViaShareRequest withAccessKey(String accessKey) {
+        this.accessKey = accessKey;
+        return this;
+    }
     
-    public CancelFileUploadViaSharePathParams pathParams;
-    public CancelFileUploadViaShareRequest withPathParams(CancelFileUploadViaSharePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Upload channel ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=upload_id")
+    public String uploadId;
+    public CancelFileUploadViaShareRequest withUploadId(String uploadId) {
+        this.uploadId = uploadId;
         return this;
     }
     

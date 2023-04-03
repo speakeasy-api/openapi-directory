@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetInstitutionsIdAccountsRequest {
-    
-    public GetInstitutionsIdAccountsPathParams pathParams;
-    public GetInstitutionsIdAccountsRequest withPathParams(GetInstitutionsIdAccountsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the institution.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetInstitutionsIdAccountsRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

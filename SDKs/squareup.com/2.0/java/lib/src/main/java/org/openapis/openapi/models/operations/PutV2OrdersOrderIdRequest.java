@@ -7,29 +7,25 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutV2OrdersOrderIdRequest {
-    
-    public PutV2OrdersOrderIdPathParams pathParams;
-    public PutV2OrdersOrderIdRequest withPathParams(PutV2OrdersOrderIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * An object containing the fields to POST for the request.
      * 
      * See the corresponding object definition for field details.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateOrderRequest request;
-    public PutV2OrdersOrderIdRequest withRequest(org.openapis.openapi.models.shared.UpdateOrderRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateOrderRequest updateOrderRequest;
+    public PutV2OrdersOrderIdRequest withUpdateOrderRequest(org.openapis.openapi.models.shared.UpdateOrderRequest updateOrderRequest) {
+        this.updateOrderRequest = updateOrderRequest;
         return this;
     }
     
-    
-    public PutV2OrdersOrderIdSecurity security;
-    public PutV2OrdersOrderIdRequest withSecurity(PutV2OrdersOrderIdSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the order to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=order_id")
+    public String orderId;
+    public PutV2OrdersOrderIdRequest withOrderId(String orderId) {
+        this.orderId = orderId;
         return this;
     }
     

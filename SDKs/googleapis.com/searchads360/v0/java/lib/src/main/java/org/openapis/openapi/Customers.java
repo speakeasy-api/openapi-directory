@@ -34,25 +34,26 @@ public class Customers {
     /**
      * Returns all the custom columns associated with the customer in full detail.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Searchads360CustomersCustomColumnsListResponse searchads360CustomersCustomColumnsList(org.openapis.openapi.models.operations.Searchads360CustomersCustomColumnsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Searchads360CustomersCustomColumnsListResponse searchads360CustomersCustomColumnsList(org.openapis.openapi.models.operations.Searchads360CustomersCustomColumnsListRequest request, org.openapis.openapi.models.operations.Searchads360CustomersCustomColumnsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Searchads360CustomersCustomColumnsListPathParams.class, baseUrl, "/v0/customers/{customerId}/customColumns", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Searchads360CustomersCustomColumnsListRequest.class, baseUrl, "/v0/customers/{customerId}/customColumns", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Searchads360CustomersCustomColumnsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Searchads360CustomersCustomColumnsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,27 +80,28 @@ public class Customers {
     /**
      * Returns all rows that match the search query. List of thrown errors: [AuthenticationError]() [AuthorizationError]() [HeaderError]() [InternalError]() [QueryError]() [QuotaError]() [RequestError]()
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Searchads360CustomersSearchAds360SearchResponse searchads360CustomersSearchAds360Search(org.openapis.openapi.models.operations.Searchads360CustomersSearchAds360SearchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Searchads360CustomersSearchAds360SearchResponse searchads360CustomersSearchAds360Search(org.openapis.openapi.models.operations.Searchads360CustomersSearchAds360SearchRequest request, org.openapis.openapi.models.operations.Searchads360CustomersSearchAds360SearchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Searchads360CustomersSearchAds360SearchPathParams.class, baseUrl, "/v0/customers/{customerId}/searchAds360:search", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Searchads360CustomersSearchAds360SearchRequest.class, baseUrl, "/v0/customers/{customerId}/searchAds360:search", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAdsSearchads360V0ServicesSearchSearchAds360Request", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Searchads360CustomersSearchAds360SearchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Searchads360CustomersSearchAds360SearchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,27 +128,28 @@ public class Customers {
     /**
      * Returns all rows that match the search stream query. List of thrown errors: [AuthenticationError]() [AuthorizationError]() [HeaderError]() [InternalError]() [QueryError]() [QuotaError]() [RequestError]()
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Searchads360CustomersSearchAds360SearchStreamResponse searchads360CustomersSearchAds360SearchStream(org.openapis.openapi.models.operations.Searchads360CustomersSearchAds360SearchStreamRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Searchads360CustomersSearchAds360SearchStreamResponse searchads360CustomersSearchAds360SearchStream(org.openapis.openapi.models.operations.Searchads360CustomersSearchAds360SearchStreamRequest request, org.openapis.openapi.models.operations.Searchads360CustomersSearchAds360SearchStreamSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Searchads360CustomersSearchAds360SearchStreamPathParams.class, baseUrl, "/v0/customers/{customerId}/searchAds360:searchStream", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Searchads360CustomersSearchAds360SearchStreamRequest.class, baseUrl, "/v0/customers/{customerId}/searchAds360:searchStream", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleAdsSearchads360V0ServicesSearchSearchAds360StreamRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Searchads360CustomersSearchAds360SearchStreamQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Searchads360CustomersSearchAds360SearchStreamRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,27 +4,95 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListAssetModelPropertiesRequest {
-    
-    public ListAssetModelPropertiesPathParams pathParams;
-    public ListAssetModelPropertiesRequest withPathParams(ListAssetModelPropertiesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListAssetModelPropertiesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public ListAssetModelPropertiesQueryParams queryParams;
-    public ListAssetModelPropertiesRequest withQueryParams(ListAssetModelPropertiesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListAssetModelPropertiesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListAssetModelPropertiesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public ListAssetModelPropertiesHeaders headers;
-    public ListAssetModelPropertiesRequest withHeaders(ListAssetModelPropertiesHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListAssetModelPropertiesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListAssetModelPropertiesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListAssetModelPropertiesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListAssetModelPropertiesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The ID of the asset model.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assetModelId")
+    public String assetModelId;
+    public ListAssetModelPropertiesRequest withAssetModelId(String assetModelId) {
+        this.assetModelId = assetModelId;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt; Filters the requested list of asset model properties. You can choose one of the following options:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;ALL&lt;/code&gt; \u2013 The list includes all asset model properties for a given asset model ID. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;BASE&lt;/code&gt; \u2013 The list includes only base asset model properties for a given asset model ID. &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Default: &lt;code&gt;BASE&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public ListAssetModelPropertiesFilterEnum filter;
+    public ListAssetModelPropertiesRequest withFilter(ListAssetModelPropertiesFilterEnum filter) {
+        this.filter = filter;
+        return this;
+    }
+    
+    /**
+     * The maximum number of results to return for each paginated request. If not specified, the default value is 50.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public ListAssetModelPropertiesRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * The token to be used for the next set of paginated results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
+    public String nextToken;
+    public ListAssetModelPropertiesRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
     

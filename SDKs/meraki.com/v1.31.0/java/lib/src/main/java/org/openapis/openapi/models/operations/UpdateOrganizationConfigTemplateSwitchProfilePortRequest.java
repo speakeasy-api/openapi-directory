@@ -7,17 +7,38 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateOrganizationConfigTemplateSwitchProfilePortRequest {
-    
-    public UpdateOrganizationConfigTemplateSwitchProfilePortPathParams pathParams;
-    public UpdateOrganizationConfigTemplateSwitchProfilePortRequest withPathParams(UpdateOrganizationConfigTemplateSwitchProfilePortPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateOrganizationConfigTemplateSwitchProfilePortRequestBody requestBody;
+    public UpdateOrganizationConfigTemplateSwitchProfilePortRequest withRequestBody(UpdateOrganizationConfigTemplateSwitchProfilePortRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateOrganizationConfigTemplateSwitchProfilePortRequestBody request;
-    public UpdateOrganizationConfigTemplateSwitchProfilePortRequest withRequest(UpdateOrganizationConfigTemplateSwitchProfilePortRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=configTemplateId")
+    public String configTemplateId;
+    public UpdateOrganizationConfigTemplateSwitchProfilePortRequest withConfigTemplateId(String configTemplateId) {
+        this.configTemplateId = configTemplateId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public UpdateOrganizationConfigTemplateSwitchProfilePortRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=portId")
+    public String portId;
+    public UpdateOrganizationConfigTemplateSwitchProfilePortRequest withPortId(String portId) {
+        this.portId = portId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
+    public String profileId;
+    public UpdateOrganizationConfigTemplateSwitchProfilePortRequest withProfileId(String profileId) {
+        this.profileId = profileId;
         return this;
     }
     

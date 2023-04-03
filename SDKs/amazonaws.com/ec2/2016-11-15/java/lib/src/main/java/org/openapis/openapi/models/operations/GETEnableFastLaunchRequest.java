@@ -4,20 +4,129 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETEnableFastLaunchRequest {
-    
-    public GETEnableFastLaunchQueryParams queryParams;
-    public GETEnableFastLaunchRequest withQueryParams(GETEnableFastLaunchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETEnableFastLaunchActionEnum action;
+    public GETEnableFastLaunchRequest withAction(GETEnableFastLaunchActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETEnableFastLaunchRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
     
-    public GETEnableFastLaunchHeaders headers;
-    public GETEnableFastLaunchRequest withHeaders(GETEnableFastLaunchHeaders headers) {
-        this.headers = headers;
+    /**
+     * The ID of the image for which you\u2019re enabling faster launching.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ImageId")
+    public String imageId;
+    public GETEnableFastLaunchRequest withImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    
+    /**
+     * The launch template to use when launching Windows instances from pre-provisioned snapshots. Launch template parameters can include either the name or ID of the launch template, but not both.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LaunchTemplate")
+    public GETEnableFastLaunchLaunchTemplate launchTemplate;
+    public GETEnableFastLaunchRequest withLaunchTemplate(GETEnableFastLaunchLaunchTemplate launchTemplate) {
+        this.launchTemplate = launchTemplate;
+        return this;
+    }
+    
+    /**
+     * The maximum number of instances that Amazon EC2 can launch at the same time to create pre-provisioned snapshots for Windows faster launching. Value must be &lt;code&gt;6&lt;/code&gt; or greater.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxParallelLaunches")
+    public Long maxParallelLaunches;
+    public GETEnableFastLaunchRequest withMaxParallelLaunches(Long maxParallelLaunches) {
+        this.maxParallelLaunches = maxParallelLaunches;
+        return this;
+    }
+    
+    /**
+     * The type of resource to use for pre-provisioning the Windows AMI for faster launching. Supported values include: &lt;code&gt;snapshot&lt;/code&gt;, which is the default value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ResourceType")
+    public String resourceType;
+    public GETEnableFastLaunchRequest withResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    
+    /**
+     * Configuration settings for creating and managing the snapshots that are used for pre-provisioning the Windows AMI for faster launching. The associated &lt;code&gt;ResourceType&lt;/code&gt; must be &lt;code&gt;snapshot&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SnapshotConfiguration")
+    public GETEnableFastLaunchSnapshotConfiguration snapshotConfiguration;
+    public GETEnableFastLaunchRequest withSnapshotConfiguration(GETEnableFastLaunchSnapshotConfiguration snapshotConfiguration) {
+        this.snapshotConfiguration = snapshotConfiguration;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETEnableFastLaunchVersionEnum version;
+    public GETEnableFastLaunchRequest withVersion(GETEnableFastLaunchVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETEnableFastLaunchRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETEnableFastLaunchRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETEnableFastLaunchRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETEnableFastLaunchRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETEnableFastLaunchRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETEnableFastLaunchRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETEnableFastLaunchRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

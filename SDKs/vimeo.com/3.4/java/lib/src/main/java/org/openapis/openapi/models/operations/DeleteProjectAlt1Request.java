@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteProjectAlt1Request {
-    
-    public DeleteProjectAlt1PathParams pathParams;
-    public DeleteProjectAlt1Request withPathParams(DeleteProjectAlt1PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the project.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public Double projectId;
+    public DeleteProjectAlt1Request withProjectId(Double projectId) {
+        this.projectId = projectId;
         return this;
     }
     
-    
-    public DeleteProjectAlt1QueryParams queryParams;
-    public DeleteProjectAlt1Request withQueryParams(DeleteProjectAlt1QueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public DeleteProjectAlt1Security security;
-    public DeleteProjectAlt1Request withSecurity(DeleteProjectAlt1Security security) {
-        this.security = security;
+    /**
+     * Whether to delete all the videos in the project along with the project itself.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=should_delete_clips")
+    public Boolean shouldDeleteClips;
+    public DeleteProjectAlt1Request withShouldDeleteClips(Boolean shouldDeleteClips) {
+        this.shouldDeleteClips = shouldDeleteClips;
         return this;
     }
     

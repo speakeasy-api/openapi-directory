@@ -4,20 +4,140 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeEventsRequest {
-    
-    public GETDescribeEventsQueryParams queryParams;
-    public GETDescribeEventsRequest withQueryParams(GETDescribeEventsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeEventsActionEnum action;
+    public GETDescribeEventsRequest withAction(GETDescribeEventsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The number of minutes prior to the time of the request for which to retrieve events. For example, if the request is sent at 18:00 and you specify a duration of 60, then only events which have occurred after 17:00 will be returned.&lt;/p&gt; &lt;p&gt;Default: &lt;code&gt;60&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Duration")
+    public Long duration;
+    public GETDescribeEventsRequest withDuration(Long duration) {
+        this.duration = duration;
+        return this;
+    }
     
-    public GETDescribeEventsHeaders headers;
-    public GETDescribeEventsRequest withHeaders(GETDescribeEventsHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The end of the time interval for which to retrieve events, specified in ISO 8601 format. For more information about ISO 8601, go to the &lt;a href="http://en.wikipedia.org/wiki/ISO_8601"&gt;ISO8601 Wikipedia page.&lt;/a&gt; &lt;/p&gt; &lt;p&gt;Example: &lt;code&gt;2009-07-08T18:00Z&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndTime")
+    public OffsetDateTime endTime;
+    public GETDescribeEventsRequest withEndTime(OffsetDateTime endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    
+    /**
+     * An optional parameter that specifies the starting point to return a set of response records. When the results of a &lt;a&gt;DescribeEvents&lt;/a&gt; request exceed the value specified in &lt;code&gt;MaxRecords&lt;/code&gt;, Amazon Web Services returns a value in the &lt;code&gt;Marker&lt;/code&gt; field of the response. You can retrieve the next set of response records by providing the returned marker value in the &lt;code&gt;Marker&lt;/code&gt; parameter and retrying the request. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
+    public String marker;
+    public GETDescribeEventsRequest withMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The maximum number of response records to return in each call. If the number of remaining response records exceeds the specified &lt;code&gt;MaxRecords&lt;/code&gt; value, a value is returned in a &lt;code&gt;marker&lt;/code&gt; field of the response. You can retrieve the next set of records by retrying the command with the returned marker value. &lt;/p&gt; &lt;p&gt;Default: &lt;code&gt;100&lt;/code&gt; &lt;/p&gt; &lt;p&gt;Constraints: minimum 20, maximum 100.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
+    public Long maxRecords;
+    public GETDescribeEventsRequest withMaxRecords(Long maxRecords) {
+        this.maxRecords = maxRecords;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The identifier of the event source for which events will be returned. If this parameter is not specified, then all sources are included in the response.&lt;/p&gt; &lt;p&gt;Constraints:&lt;/p&gt; &lt;p&gt;If &lt;i&gt;SourceIdentifier&lt;/i&gt; is supplied, &lt;i&gt;SourceType&lt;/i&gt; must also be provided.&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Specify a cluster identifier when &lt;i&gt;SourceType&lt;/i&gt; is &lt;code&gt;cluster&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Specify a cluster security group name when &lt;i&gt;SourceType&lt;/i&gt; is &lt;code&gt;cluster-security-group&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Specify a cluster parameter group name when &lt;i&gt;SourceType&lt;/i&gt; is &lt;code&gt;cluster-parameter-group&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Specify a cluster snapshot identifier when &lt;i&gt;SourceType&lt;/i&gt; is &lt;code&gt;cluster-snapshot&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SourceIdentifier")
+    public String sourceIdentifier;
+    public GETDescribeEventsRequest withSourceIdentifier(String sourceIdentifier) {
+        this.sourceIdentifier = sourceIdentifier;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The event source to retrieve events for. If no value is specified, all events are returned.&lt;/p&gt; &lt;p&gt;Constraints:&lt;/p&gt; &lt;p&gt;If &lt;i&gt;SourceType&lt;/i&gt; is supplied, &lt;i&gt;SourceIdentifier&lt;/i&gt; must also be provided.&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Specify &lt;code&gt;cluster&lt;/code&gt; when &lt;i&gt;SourceIdentifier&lt;/i&gt; is a cluster identifier.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Specify &lt;code&gt;cluster-security-group&lt;/code&gt; when &lt;i&gt;SourceIdentifier&lt;/i&gt; is a cluster security group name.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Specify &lt;code&gt;cluster-parameter-group&lt;/code&gt; when &lt;i&gt;SourceIdentifier&lt;/i&gt; is a cluster parameter group name.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Specify &lt;code&gt;cluster-snapshot&lt;/code&gt; when &lt;i&gt;SourceIdentifier&lt;/i&gt; is a cluster snapshot identifier.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SourceType")
+    public GETDescribeEventsSourceTypeEnum sourceType;
+    public GETDescribeEventsRequest withSourceType(GETDescribeEventsSourceTypeEnum sourceType) {
+        this.sourceType = sourceType;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The beginning of the time interval to retrieve events for, specified in ISO 8601 format. For more information about ISO 8601, go to the &lt;a href="http://en.wikipedia.org/wiki/ISO_8601"&gt;ISO8601 Wikipedia page.&lt;/a&gt; &lt;/p&gt; &lt;p&gt;Example: &lt;code&gt;2009-07-08T18:00Z&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StartTime")
+    public OffsetDateTime startTime;
+    public GETDescribeEventsRequest withStartTime(OffsetDateTime startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeEventsVersionEnum version;
+    public GETDescribeEventsRequest withVersion(GETDescribeEventsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeEventsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeEventsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeEventsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeEventsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeEventsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeEventsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeEventsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -4,20 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DelVBRequest {
-    
-    public DelVBPathParams pathParams;
-    public DelVBRequest withPathParams(DelVBPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public DelVBRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
-    
-    public DelVBQueryParams queryParams;
-    public DelVBRequest withQueryParams(DelVBQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Provide the id of the file that is to be deleted. To delete multiple files, provide comma separated values for this field.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=file_ids")
+    public String fileIds;
+    public DelVBRequest withFileIds(String fileIds) {
+        this.fileIds = fileIds;
         return this;
     }
     

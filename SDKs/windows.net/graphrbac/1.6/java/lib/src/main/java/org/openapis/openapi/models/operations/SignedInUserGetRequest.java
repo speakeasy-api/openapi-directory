@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SignedInUserGetRequest {
-    
-    public SignedInUserGetPathParams pathParams;
-    public SignedInUserGetRequest withPathParams(SignedInUserGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Client API version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public SignedInUserGetRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
-    
-    public SignedInUserGetQueryParams queryParams;
-    public SignedInUserGetRequest withQueryParams(SignedInUserGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The tenant ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tenantID")
+    public String tenantID;
+    public SignedInUserGetRequest withTenantID(String tenantID) {
+        this.tenantID = tenantID;
         return this;
     }
     

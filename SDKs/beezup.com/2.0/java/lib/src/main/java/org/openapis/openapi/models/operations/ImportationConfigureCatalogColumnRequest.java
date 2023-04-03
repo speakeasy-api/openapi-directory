@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImportationConfigureCatalogColumnRequest {
-    
-    public ImportationConfigureCatalogColumnPathParams pathParams;
-    public ImportationConfigureCatalogColumnRequest withPathParams(ImportationConfigureCatalogColumnPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The custom column identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=columnId")
+    public String columnId;
+    public ImportationConfigureCatalogColumnRequest withColumnId(String columnId) {
+        this.columnId = columnId;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ConfigureCatalogColumnCatalogRequest request;
-    public ImportationConfigureCatalogColumnRequest withRequest(org.openapis.openapi.models.shared.ConfigureCatalogColumnCatalogRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ConfigureCatalogColumnCatalogRequest configureCatalogColumnCatalogRequest;
+    public ImportationConfigureCatalogColumnRequest withConfigureCatalogColumnCatalogRequest(org.openapis.openapi.models.shared.ConfigureCatalogColumnCatalogRequest configureCatalogColumnCatalogRequest) {
+        this.configureCatalogColumnCatalogRequest = configureCatalogColumnCatalogRequest;
+        return this;
+    }
+    
+    /**
+     * The execution identifier of you catalog importation
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=executionId")
+    public String executionId;
+    public ImportationConfigureCatalogColumnRequest withExecutionId(String executionId) {
+        this.executionId = executionId;
+        return this;
+    }
+    
+    /**
+     * Your store identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public ImportationConfigureCatalogColumnRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

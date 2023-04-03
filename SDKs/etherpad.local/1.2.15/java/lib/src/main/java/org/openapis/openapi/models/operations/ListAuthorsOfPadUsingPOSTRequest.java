@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListAuthorsOfPadUsingPOSTRequest {
-    
-    public ListAuthorsOfPadUsingPOSTQueryParams queryParams;
-    public ListAuthorsOfPadUsingPOSTRequest withQueryParams(ListAuthorsOfPadUsingPOSTQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=padID")
+    public String padID;
+    public ListAuthorsOfPadUsingPOSTRequest withPadID(String padID) {
+        this.padID = padID;
         return this;
     }
     

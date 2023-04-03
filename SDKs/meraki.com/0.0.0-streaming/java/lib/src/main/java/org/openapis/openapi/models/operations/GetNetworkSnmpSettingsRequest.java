@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkSnmpSettingsRequest {
-    
-    public GetNetworkSnmpSettingsPathParams pathParams;
-    public GetNetworkSnmpSettingsRequest withPathParams(GetNetworkSnmpSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkSnmpSettingsRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

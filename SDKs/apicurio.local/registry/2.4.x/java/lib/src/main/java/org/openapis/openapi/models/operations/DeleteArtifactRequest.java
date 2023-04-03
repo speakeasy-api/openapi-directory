@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteArtifactRequest {
+    /**
+     * The artifact ID.  Can be a string (client-provided) or UUID (server-generated), representing the unique artifact identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifactId")
+    public String artifactId;
+    public DeleteArtifactRequest withArtifactId(String artifactId) {
+        this.artifactId = artifactId;
+        return this;
+    }
     
-    public DeleteArtifactPathParams pathParams;
-    public DeleteArtifactRequest withPathParams(DeleteArtifactPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public String groupId;
+    public DeleteArtifactRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     

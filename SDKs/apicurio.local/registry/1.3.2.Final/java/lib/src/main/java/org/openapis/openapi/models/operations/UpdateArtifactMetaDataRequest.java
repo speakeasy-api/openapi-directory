@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateArtifactMetaDataRequest {
-    
-    public UpdateArtifactMetaDataPathParams pathParams;
-    public UpdateArtifactMetaDataRequest withPathParams(UpdateArtifactMetaDataPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated artifact metadata.
      */
     @SpeakeasyMetadata("request:mediaType=*/*")
-    public byte[] request;
-    public UpdateArtifactMetaDataRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public UpdateArtifactMetaDataRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The artifact ID.  Can be a string (client-provided) or integer (server-generated) representing the unique artifact identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifactId")
+    public String artifactId;
+    public UpdateArtifactMetaDataRequest withArtifactId(String artifactId) {
+        this.artifactId = artifactId;
         return this;
     }
     

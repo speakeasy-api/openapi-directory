@@ -4,27 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDistributionWithStagingConfig20200531Request {
-    
-    public UpdateDistributionWithStagingConfig20200531PathParams pathParams;
-    public UpdateDistributionWithStagingConfig20200531Request withPathParams(UpdateDistributionWithStagingConfig20200531PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The identifier of the primary distribution to which you are copying a staging distribution's configuration.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Id")
+    public String id;
+    public UpdateDistributionWithStagingConfig20200531Request withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public UpdateDistributionWithStagingConfig20200531QueryParams queryParams;
-    public UpdateDistributionWithStagingConfig20200531Request withQueryParams(UpdateDistributionWithStagingConfig20200531QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * &lt;p&gt;The current versions (&lt;code&gt;ETag&lt;/code&gt; values) of both primary and staging distributions. Provide these in the following format:&lt;/p&gt; &lt;p&gt; &lt;code&gt;&amp;lt;primary ETag&amp;gt;, &amp;lt;staging ETag&amp;gt;&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
+    public String ifMatch;
+    public UpdateDistributionWithStagingConfig20200531Request withIfMatch(String ifMatch) {
+        this.ifMatch = ifMatch;
         return this;
     }
     
+    /**
+     * The identifier of the staging distribution whose configuration you are copying to the primary distribution.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StagingDistributionId")
+    public String stagingDistributionId;
+    public UpdateDistributionWithStagingConfig20200531Request withStagingDistributionId(String stagingDistributionId) {
+        this.stagingDistributionId = stagingDistributionId;
+        return this;
+    }
     
-    public UpdateDistributionWithStagingConfig20200531Headers headers;
-    public UpdateDistributionWithStagingConfig20200531Request withHeaders(UpdateDistributionWithStagingConfig20200531Headers headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public UpdateDistributionWithStagingConfig20200531Request withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public UpdateDistributionWithStagingConfig20200531Request withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public UpdateDistributionWithStagingConfig20200531Request withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public UpdateDistributionWithStagingConfig20200531Request withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public UpdateDistributionWithStagingConfig20200531Request withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public UpdateDistributionWithStagingConfig20200531Request withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public UpdateDistributionWithStagingConfig20200531Request withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

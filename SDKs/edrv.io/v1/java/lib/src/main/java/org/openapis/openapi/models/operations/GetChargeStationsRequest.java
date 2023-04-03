@@ -4,13 +4,177 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetChargeStationsRequest {
+    /**
+     * Chargestations that have been activated/deactivated by the admin
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=active")
+    public Boolean active;
+    public GetChargeStationsRequest withActive(Boolean active) {
+        this.active = active;
+        return this;
+    }
     
-    public GetChargeStationsQueryParams queryParams;
-    public GetChargeStationsRequest withQueryParams(GetChargeStationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Date as ISO String
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAt[$gte]")
+    public OffsetDateTime createdAtDollarGte;
+    public GetChargeStationsRequest withCreatedAtDollarGte(OffsetDateTime createdAtDollarGte) {
+        this.createdAtDollarGte = createdAtDollarGte;
+        return this;
+    }
+    
+    /**
+     * Date as ISO String
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAt[$lte]")
+    public OffsetDateTime createdAtDollarLte;
+    public GetChargeStationsRequest withCreatedAtDollarLte(OffsetDateTime createdAtDollarLte) {
+        this.createdAtDollarLte = createdAtDollarLte;
+        return this;
+    }
+    
+    /**
+     * Populate evses
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_evses")
+    public Boolean includeEvses;
+    public GetChargeStationsRequest withIncludeEvses(Boolean includeEvses) {
+        this.includeEvses = includeEvses;
+        return this;
+    }
+    
+    /**
+     * Populate location
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_location")
+    public Boolean includeLocation;
+    public GetChargeStationsRequest withIncludeLocation(Boolean includeLocation) {
+        this.includeLocation = includeLocation;
+        return this;
+    }
+    
+    /**
+     * Populate organization
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_organization")
+    public Boolean includeOrganization;
+    public GetChargeStationsRequest withIncludeOrganization(Boolean includeOrganization) {
+        this.includeOrganization = includeOrganization;
+        return this;
+    }
+    
+    /**
+     * Filter by Location Id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location")
+    public String location;
+    public GetChargeStationsRequest withLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    
+    /**
+     * Filter by Online Status
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=online")
+    public Boolean online;
+    public GetChargeStationsRequest withOnline(Boolean online) {
+        this.online = online;
+        return this;
+    }
+    
+    /**
+     * Filter by Org. Id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=organization")
+    public String organization;
+    public GetChargeStationsRequest withOrganization(String organization) {
+        this.organization = organization;
+        return this;
+    }
+    
+    /**
+     * Enable pagination
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paginate_enabled")
+    public Boolean paginateEnabled;
+    public GetChargeStationsRequest withPaginateEnabled(Boolean paginateEnabled) {
+        this.paginateEnabled = paginateEnabled;
+        return this;
+    }
+    
+    /**
+     * Number of results per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paginate_limit")
+    public Long paginateLimit;
+    public GetChargeStationsRequest withPaginateLimit(Long paginateLimit) {
+        this.paginateLimit = paginateLimit;
+        return this;
+    }
+    
+    /**
+     * The queried page index
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paginate_page")
+    public String paginatePage;
+    public GetChargeStationsRequest withPaginatePage(String paginatePage) {
+        this.paginatePage = paginatePage;
+        return this;
+    }
+    
+    /**
+     * Chargestations that are public
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=public")
+    public Boolean public_;
+    public GetChargeStationsRequest withPublic(Boolean public_) {
+        this.public_ = public_;
+        return this;
+    }
+    
+    /**
+     * Sort data by this key
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
+    public String sortBy;
+    public GetChargeStationsRequest withSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    
+    /**
+     * asc to sort ascending (default is desc - descending)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_order")
+    public org.openapis.openapi.models.shared.SortOrder1Enum sortOrder;
+    public GetChargeStationsRequest withSortOrder(org.openapis.openapi.models.shared.SortOrder1Enum sortOrder) {
+        this.sortOrder = sortOrder;
+        return this;
+    }
+    
+    /**
+     * Date as ISO String
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedAt[$gte]")
+    public OffsetDateTime updatedAtDollarGte;
+    public GetChargeStationsRequest withUpdatedAtDollarGte(OffsetDateTime updatedAtDollarGte) {
+        this.updatedAtDollarGte = updatedAtDollarGte;
+        return this;
+    }
+    
+    /**
+     * Date as ISO String
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedAt[$lte]")
+    public OffsetDateTime updatedAtDollarLte;
+    public GetChargeStationsRequest withUpdatedAtDollarLte(OffsetDateTime updatedAtDollarLte) {
+        this.updatedAtDollarLte = updatedAtDollarLte;
         return this;
     }
     

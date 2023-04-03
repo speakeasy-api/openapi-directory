@@ -4,34 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchUsAppToPersonUsecaseRequest {
-    
-    public FetchUsAppToPersonUsecasePathParams pathParams;
-    public FetchUsAppToPersonUsecaseRequest withPathParams(FetchUsAppToPersonUsecasePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique string to identify the A2P brand.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=BrandRegistrationSid")
+    public String brandRegistrationSid;
+    public FetchUsAppToPersonUsecaseRequest withBrandRegistrationSid(String brandRegistrationSid) {
+        this.brandRegistrationSid = brandRegistrationSid;
         return this;
     }
     
-    
-    public FetchUsAppToPersonUsecaseQueryParams queryParams;
-    public FetchUsAppToPersonUsecaseRequest withQueryParams(FetchUsAppToPersonUsecaseQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public FetchUsAppToPersonUsecaseSecurity security;
-    public FetchUsAppToPersonUsecaseRequest withSecurity(FetchUsAppToPersonUsecaseSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchUsAppToPersonUsecaseRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the [Messaging Service](https://www.twilio.com/docs/messaging/services/api) to fetch the resource from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=MessagingServiceSid")
+    public String messagingServiceSid;
+    public FetchUsAppToPersonUsecaseRequest withMessagingServiceSid(String messagingServiceSid) {
+        this.messagingServiceSid = messagingServiceSid;
         return this;
     }
     

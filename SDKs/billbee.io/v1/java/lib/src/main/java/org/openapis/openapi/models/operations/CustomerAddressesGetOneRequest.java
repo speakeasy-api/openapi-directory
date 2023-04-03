@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CustomerAddressesGetOneRequest {
-    
-    public CustomerAddressesGetOnePathParams pathParams;
-    public CustomerAddressesGetOneRequest withPathParams(CustomerAddressesGetOnePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the address to query
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public CustomerAddressesGetOneRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

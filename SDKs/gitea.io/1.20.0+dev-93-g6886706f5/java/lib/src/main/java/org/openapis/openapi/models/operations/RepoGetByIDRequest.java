@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoGetByIDRequest {
-    
-    public RepoGetByIDPathParams pathParams;
-    public RepoGetByIDRequest withPathParams(RepoGetByIDPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * id of the repo to get
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public RepoGetByIDRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

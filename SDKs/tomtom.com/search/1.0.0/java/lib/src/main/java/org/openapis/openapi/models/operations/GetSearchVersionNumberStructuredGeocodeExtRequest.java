@@ -4,20 +4,172 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSearchVersionNumberStructuredGeocodeExtRequest {
-    
-    public GetSearchVersionNumberStructuredGeocodeExtPathParams pathParams;
-    public GetSearchVersionNumberStructuredGeocodeExtRequest withPathParams(GetSearchVersionNumberStructuredGeocodeExtPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * 2 or 3 letter country code (e.g.: FR, ES).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=countryCode")
+    public String countryCode;
+    public GetSearchVersionNumberStructuredGeocodeExtRequest withCountryCode(String countryCode) {
+        this.countryCode = countryCode;
         return this;
     }
     
+    /**
+     * The county for the structured address.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=countrySecondarySubdivision")
+    public String countrySecondarySubdivision;
+    public GetSearchVersionNumberStructuredGeocodeExtRequest withCountrySecondarySubdivision(String countrySecondarySubdivision) {
+        this.countrySecondarySubdivision = countrySecondarySubdivision;
+        return this;
+    }
     
-    public GetSearchVersionNumberStructuredGeocodeExtQueryParams queryParams;
-    public GetSearchVersionNumberStructuredGeocodeExtRequest withQueryParams(GetSearchVersionNumberStructuredGeocodeExtQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The state or province for the structured address.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=countrySubdivision")
+    public String countrySubdivision;
+    public GetSearchVersionNumberStructuredGeocodeExtRequest withCountrySubdivision(String countrySubdivision) {
+        this.countrySubdivision = countrySubdivision;
+        return this;
+    }
+    
+    /**
+     * The named area for the structured address.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=countryTertiarySubdivision")
+    public String countryTertiarySubdivision;
+    public GetSearchVersionNumberStructuredGeocodeExtRequest withCountryTertiarySubdivision(String countryTertiarySubdivision) {
+        this.countryTertiarySubdivision = countryTertiarySubdivision;
+        return this;
+    }
+    
+    /**
+     * The cross street name for the structured address.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=crossStreet")
+    public String crossStreet;
+    public GetSearchVersionNumberStructuredGeocodeExtRequest withCrossStreet(String crossStreet) {
+        this.crossStreet = crossStreet;
+        return this;
+    }
+    
+    /**
+     * Expected response format.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ext")
+    public org.openapis.openapi.models.shared.ExtEnum ext;
+    public GetSearchVersionNumberStructuredGeocodeExtRequest withExt(org.openapis.openapi.models.shared.ExtEnum ext) {
+        this.ext = ext;
+        return this;
+    }
+    
+    /**
+     * Indexes for which extended postal codes should be included in the results. Available indexes are:
+     *   - &lt;b&gt;Addr&lt;/b&gt; = Address ranges
+     *   - &lt;b&gt;Geo&lt;/b&gt; = Geographies
+     *   - &lt;b&gt;PAD&lt;/b&gt; = Point Addresses
+     *   - &lt;b&gt;POI&lt;/b&gt; = Points of Interest
+     *   - &lt;b&gt;Str&lt;/b&gt; = Streets
+     *   - &lt;b&gt;XStr&lt;/b&gt; = Cross Streets (intersections)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=extendedPostalCodesFor")
+    public String extendedPostalCodesFor;
+    public GetSearchVersionNumberStructuredGeocodeExtRequest withExtendedPostalCodesFor(String extendedPostalCodesFor) {
+        this.extendedPostalCodesFor = extendedPostalCodesFor;
+        return this;
+    }
+    
+    /**
+     * Language in which search results should be returned. Should be one of &lt;a href="/search-api/search-api-documentation/supported-languages"&gt;supported IETF language tags&lt;/a&gt;, case insensitive.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public String language;
+    public GetSearchVersionNumberStructuredGeocodeExtRequest withLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    
+    /**
+     * Maximum number of search results that will be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetSearchVersionNumberStructuredGeocodeExtRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * The municipality (city/town) for the structured address.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=municipality")
+    public String municipality;
+    public GetSearchVersionNumberStructuredGeocodeExtRequest withMunicipality(String municipality) {
+        this.municipality = municipality;
+        return this;
+    }
+    
+    /**
+     * The municipality subdivision (sub/super city) for the structured address.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=municipalitySubdivision")
+    public String municipalitySubdivision;
+    public GetSearchVersionNumberStructuredGeocodeExtRequest withMunicipalitySubdivision(String municipalitySubdivision) {
+        this.municipalitySubdivision = municipalitySubdivision;
+        return this;
+    }
+    
+    /**
+     * Starting offset of the returned results within the full result set.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ofs")
+    public Long ofs;
+    public GetSearchVersionNumberStructuredGeocodeExtRequest withOfs(Long ofs) {
+        this.ofs = ofs;
+        return this;
+    }
+    
+    /**
+     * The zip code or postal code for the structured address.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=postalCode")
+    public String postalCode;
+    public GetSearchVersionNumberStructuredGeocodeExtRequest withPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+        return this;
+    }
+    
+    /**
+     * The street name for the structured address.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=streetName")
+    public String streetName;
+    public GetSearchVersionNumberStructuredGeocodeExtRequest withStreetName(String streetName) {
+        this.streetName = streetName;
+        return this;
+    }
+    
+    /**
+     * The street number for the structured address.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=streetNumber")
+    public String streetNumber;
+    public GetSearchVersionNumberStructuredGeocodeExtRequest withStreetNumber(String streetNumber) {
+        this.streetNumber = streetNumber;
+        return this;
+    }
+    
+    /**
+     * Service version number. The current value is 2.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
+    public org.openapis.openapi.models.shared.VersionNumberEnum versionNumber;
+    public GetSearchVersionNumberStructuredGeocodeExtRequest withVersionNumber(org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
+        this.versionNumber = versionNumber;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgsListCustomRolesRequest {
-    
-    public OrgsListCustomRolesPathParams pathParams;
-    public OrgsListCustomRolesRequest withPathParams(OrgsListCustomRolesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the organization.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organization_id")
+    public String organizationId;
+    public OrgsListCustomRolesRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

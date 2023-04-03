@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesSpaceIdPersonsIdInvitationInvitationIdSendRequest {
-    
-    public PostSpacesSpaceIdPersonsIdInvitationInvitationIdSendPathParams pathParams;
-    public PostSpacesSpaceIdPersonsIdInvitationInvitationIdSendRequest withPathParams(PostSpacesSpaceIdPersonsIdInvitationInvitationIdSendPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * content of invitation message to send
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostSpacesSpaceIdPersonsIdInvitationInvitationIdSendRequestBody request;
-    public PostSpacesSpaceIdPersonsIdInvitationInvitationIdSendRequest withRequest(PostSpacesSpaceIdPersonsIdInvitationInvitationIdSendRequestBody request) {
-        this.request = request;
+    public PostSpacesSpaceIdPersonsIdInvitationInvitationIdSendRequestBody requestBody;
+    public PostSpacesSpaceIdPersonsIdInvitationInvitationIdSendRequest withRequestBody(PostSpacesSpaceIdPersonsIdInvitationInvitationIdSendRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Id of the person
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSpacesSpaceIdPersonsIdInvitationInvitationIdSendRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PostSpacesSpaceIdPersonsIdInvitationInvitationIdSendSecurity security;
-    public PostSpacesSpaceIdPersonsIdInvitationInvitationIdSendRequest withSecurity(PostSpacesSpaceIdPersonsIdInvitationInvitationIdSendSecurity security) {
-        this.security = security;
+    /**
+     * Id of the invitation
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=invitationId")
+    public String invitationId;
+    public PostSpacesSpaceIdPersonsIdInvitationInvitationIdSendRequest withInvitationId(String invitationId) {
+        this.invitationId = invitationId;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PostSpacesSpaceIdPersonsIdInvitationInvitationIdSendRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

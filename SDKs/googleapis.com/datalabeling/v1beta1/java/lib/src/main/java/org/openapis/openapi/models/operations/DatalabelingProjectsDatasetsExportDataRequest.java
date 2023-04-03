@@ -7,31 +7,130 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DatalabelingProjectsDatasetsExportDataRequest {
-    
-    public DatalabelingProjectsDatasetsExportDataPathParams pathParams;
-    public DatalabelingProjectsDatasetsExportDataRequest withPathParams(DatalabelingProjectsDatasetsExportDataPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DatalabelingProjectsDatasetsExportDataQueryParams queryParams;
-    public DatalabelingProjectsDatasetsExportDataRequest withQueryParams(DatalabelingProjectsDatasetsExportDataQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public DatalabelingProjectsDatasetsExportDataRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GoogleCloudDatalabelingV1beta1ExportDataRequest request;
-    public DatalabelingProjectsDatasetsExportDataRequest withRequest(org.openapis.openapi.models.shared.GoogleCloudDatalabelingV1beta1ExportDataRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GoogleCloudDatalabelingV1beta1ExportDataRequest googleCloudDatalabelingV1beta1ExportDataRequest;
+    public DatalabelingProjectsDatasetsExportDataRequest withGoogleCloudDatalabelingV1beta1ExportDataRequest(org.openapis.openapi.models.shared.GoogleCloudDatalabelingV1beta1ExportDataRequest googleCloudDatalabelingV1beta1ExportDataRequest) {
+        this.googleCloudDatalabelingV1beta1ExportDataRequest = googleCloudDatalabelingV1beta1ExportDataRequest;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public DatalabelingProjectsDatasetsExportDataRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public DatalabelingProjectsDatasetsExportDataSecurity security;
-    public DatalabelingProjectsDatasetsExportDataRequest withSecurity(DatalabelingProjectsDatasetsExportDataSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DatalabelingProjectsDatasetsExportDataRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public DatalabelingProjectsDatasetsExportDataRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DatalabelingProjectsDatasetsExportDataRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DatalabelingProjectsDatasetsExportDataRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Required. Dataset resource name, format: projects/{project_id}/datasets/{dataset_id}
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public DatalabelingProjectsDatasetsExportDataRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DatalabelingProjectsDatasetsExportDataRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DatalabelingProjectsDatasetsExportDataRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DatalabelingProjectsDatasetsExportDataRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public DatalabelingProjectsDatasetsExportDataRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public DatalabelingProjectsDatasetsExportDataRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

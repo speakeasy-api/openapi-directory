@@ -7,10 +7,17 @@ package org.openapis.openapi.models.shared;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Security {
-    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic")
-    public SchemeBasic basic;
-    public Security withBasic(SchemeBasic basic) {
-        this.basic = basic;
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic,name=password")
+    public String password;
+    public Security withPassword(String password) {
+        this.password = password;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=basic,name=username")
+    public String username;
+    public Security withUsername(String username) {
+        this.username = username;
         return this;
     }
     

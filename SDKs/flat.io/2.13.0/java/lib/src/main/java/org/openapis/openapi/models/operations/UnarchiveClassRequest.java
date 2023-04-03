@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UnarchiveClassRequest {
-    
-    public UnarchiveClassPathParams pathParams;
-    public UnarchiveClassRequest withPathParams(UnarchiveClassPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UnarchiveClassSecurity security;
-    public UnarchiveClassRequest withSecurity(UnarchiveClassSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the class
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=class")
+    public String class_;
+    public UnarchiveClassRequest withClass(String class_) {
+        this.class_ = class_;
         return this;
     }
     

@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDisassociateGlobalReplicationGroupRequest {
-    
-    public GETDisassociateGlobalReplicationGroupQueryParams queryParams;
-    public GETDisassociateGlobalReplicationGroupRequest withQueryParams(GETDisassociateGlobalReplicationGroupQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDisassociateGlobalReplicationGroupActionEnum action;
+    public GETDisassociateGlobalReplicationGroupRequest withAction(GETDisassociateGlobalReplicationGroupActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the Global datastore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GlobalReplicationGroupId")
+    public String globalReplicationGroupId;
+    public GETDisassociateGlobalReplicationGroupRequest withGlobalReplicationGroupId(String globalReplicationGroupId) {
+        this.globalReplicationGroupId = globalReplicationGroupId;
+        return this;
+    }
     
-    public GETDisassociateGlobalReplicationGroupHeaders headers;
-    public GETDisassociateGlobalReplicationGroupRequest withHeaders(GETDisassociateGlobalReplicationGroupHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name of the secondary cluster you wish to remove from the Global datastore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ReplicationGroupId")
+    public String replicationGroupId;
+    public GETDisassociateGlobalReplicationGroupRequest withReplicationGroupId(String replicationGroupId) {
+        this.replicationGroupId = replicationGroupId;
+        return this;
+    }
+    
+    /**
+     * The Amazon region of secondary cluster you wish to remove from the Global datastore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ReplicationGroupRegion")
+    public String replicationGroupRegion;
+    public GETDisassociateGlobalReplicationGroupRequest withReplicationGroupRegion(String replicationGroupRegion) {
+        this.replicationGroupRegion = replicationGroupRegion;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDisassociateGlobalReplicationGroupVersionEnum version;
+    public GETDisassociateGlobalReplicationGroupRequest withVersion(GETDisassociateGlobalReplicationGroupVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDisassociateGlobalReplicationGroupRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDisassociateGlobalReplicationGroupRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDisassociateGlobalReplicationGroupRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDisassociateGlobalReplicationGroupRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDisassociateGlobalReplicationGroupRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDisassociateGlobalReplicationGroupRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDisassociateGlobalReplicationGroupRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

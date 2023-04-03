@@ -4,20 +4,133 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTldDomainItemRequest {
-    
-    public GetTldDomainItemPathParams pathParams;
-    public GetTldDomainItemRequest withPathParams(GetTldDomainItemPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A record includes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=A")
+    public String a;
+    public GetTldDomainItemRequest withA(String a) {
+        this.a = a;
         return this;
     }
     
+    /**
+     * CNAME record includes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CNAME")
+    public String cname;
+    public GetTldDomainItemRequest withCname(String cname) {
+        this.cname = cname;
+        return this;
+    }
     
-    public GetTldDomainItemQueryParams queryParams;
-    public GetTldDomainItemRequest withQueryParams(GetTldDomainItemQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * MX record includes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MX")
+    public String mx;
+    public GetTldDomainItemRequest withMx(String mx) {
+        this.mx = mx;
+        return this;
+    }
+    
+    /**
+     * NS record includes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NS")
+    public String ns;
+    public GetTldDomainItemRequest withNs(String ns) {
+        this.ns = ns;
+        return this;
+    }
+    
+    /**
+     * TXT record includes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TXT")
+    public String txt;
+    public GetTldDomainItemRequest withTxt(String txt) {
+        this.txt = txt;
+        return this;
+    }
+    
+    /**
+     * API key
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetTldDomainItemRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
+    
+    /**
+     * Hosting Country
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public String country;
+    public GetTldDomainItemRequest withCountry(String country) {
+        this.country = country;
+        return this;
+    }
+    
+    /**
+     * Request date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
+    public String date;
+    public GetTldDomainItemRequest withDate(String date) {
+        this.date = date;
+        return this;
+    }
+    
+    /**
+     * Domain includes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain")
+    public String domain;
+    public GetTldDomainItemRequest withDomain(String domain) {
+        this.domain = domain;
+        return this;
+    }
+    
+    /**
+     * Dead or Not, default not
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isDead")
+    public Boolean isDead;
+    public GetTldDomainItemRequest withIsDead(Boolean isDead) {
+        this.isDead = isDead;
+        return this;
+    }
+    
+    /**
+     * Results per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetTldDomainItemRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Search page to request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public String page;
+    public GetTldDomainItemRequest withPage(String page) {
+        this.page = page;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=zone_id")
+    public String zoneId;
+    public GetTldDomainItemRequest withZoneId(String zoneId) {
+        this.zoneId = zoneId;
         return this;
     }
     

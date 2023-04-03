@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsUpdateOrgVariableRequest {
-    
-    public ActionsUpdateOrgVariablePathParams pathParams;
-    public ActionsUpdateOrgVariableRequest withPathParams(ActionsUpdateOrgVariablePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ActionsUpdateOrgVariableRequestBody requestBody;
+    public ActionsUpdateOrgVariableRequest withRequestBody(ActionsUpdateOrgVariableRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ActionsUpdateOrgVariableRequestBody request;
-    public ActionsUpdateOrgVariableRequest withRequest(ActionsUpdateOrgVariableRequestBody request) {
-        this.request = request;
+    /**
+     * The name of the variable.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public ActionsUpdateOrgVariableRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ActionsUpdateOrgVariableRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

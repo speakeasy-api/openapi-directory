@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgRemoveTeamRepositoryRequest {
+    /**
+     * id of the team
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public OrgRemoveTeamRepositoryRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
     
-    public OrgRemoveTeamRepositoryPathParams pathParams;
-    public OrgRemoveTeamRepositoryRequest withPathParams(OrgRemoveTeamRepositoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * organization that owns the repo to remove
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public OrgRemoveTeamRepositoryRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
+    
+    /**
+     * name of the repo to remove
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public OrgRemoveTeamRepositoryRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

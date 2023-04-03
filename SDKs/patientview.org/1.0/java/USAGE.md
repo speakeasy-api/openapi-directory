@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetBasicUserInformationPathParams;
 import org.openapis.openapi.models.operations.GetBasicUserInformationRequest;
 import org.openapis.openapi.models.operations.GetBasicUserInformationResponse;
 
@@ -15,10 +14,8 @@ public class Application {
                 .build();
 
             GetBasicUserInformationRequest req = new GetBasicUserInformationRequest() {{
-                pathParams = new GetBasicUserInformationPathParams() {{
-                    token = "corrupti";
-                }};
-            }};            
+                token = "corrupti";
+            }}            
 
             GetBasicUserInformationResponse res = sdk.authController.getBasicUserInformation(req);
 

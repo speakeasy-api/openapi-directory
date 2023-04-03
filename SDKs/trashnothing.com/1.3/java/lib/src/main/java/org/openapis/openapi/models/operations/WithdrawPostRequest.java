@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WithdrawPostRequest {
-    
-    public WithdrawPostPathParams pathParams;
-    public WithdrawPostRequest withPathParams(WithdrawPostPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the post to withdraw.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=post_id")
+    public String postId;
+    public WithdrawPostRequest withPostId(String postId) {
+        this.postId = postId;
         return this;
     }
     

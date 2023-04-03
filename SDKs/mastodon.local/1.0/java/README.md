@@ -18,10 +18,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.DeleteApiV1AnnouncementsIdReactionsNameSecurity;
-import org.openapis.openapi.models.operations.DeleteApiV1AnnouncementsIdReactionsNamePathParams;
 import org.openapis.openapi.models.operations.DeleteApiV1AnnouncementsIdReactionsNameRequest;
 import org.openapis.openapi.models.operations.DeleteApiV1AnnouncementsIdReactionsNameResponse;
-import org.openapis.openapi.models.shared.SchemeBearerAuth;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,18 +28,13 @@ public class Application {
                 .build();
 
             DeleteApiV1AnnouncementsIdReactionsNameRequest req = new DeleteApiV1AnnouncementsIdReactionsNameRequest() {{
-                security = new DeleteApiV1AnnouncementsIdReactionsNameSecurity() {{
-                    bearerAuth = new SchemeBearerAuth() {{
-                        authorization = "Bearer YOUR_BEARER_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new DeleteApiV1AnnouncementsIdReactionsNamePathParams() {{
-                    id = "corrupti";
-                    name = "provident";
-                }};
-            }};            
+                id = "corrupti";
+                name = "provident";
+            }}            
 
-            DeleteApiV1AnnouncementsIdReactionsNameResponse res = sdk.deleteApiV1AnnouncementsIdReactionsName(req);
+            DeleteApiV1AnnouncementsIdReactionsNameResponse res = sdk.deleteApiV1AnnouncementsIdReactionsName(req, new DeleteApiV1AnnouncementsIdReactionsNameSecurity() {{
+                bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
+            }});
 
             if (res.deleteApiV1AnnouncementsIdReactionsName200ApplicationJSONObject.isPresent()) {
                 // handle response
@@ -53,7 +46,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

@@ -39,13 +39,13 @@ public class SubContractor {
      */
     public org.openapis.openapi.models.operations.DeleteSubContractorResponse deleteSubContractor(org.openapis.openapi.models.operations.DeleteSubContractorRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSubContractorPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSubContractorRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -88,13 +88,13 @@ public class SubContractor {
      */
     public org.openapis.openapi.models.operations.DeleteSubContractorRevisionResponse deleteSubContractorRevision(org.openapis.openapi.models.operations.DeleteSubContractorRevisionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSubContractorRevisionPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/{EffectiveDate}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSubContractorRevisionRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/{EffectiveDate}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -137,13 +137,13 @@ public class SubContractor {
      */
     public org.openapis.openapi.models.operations.DeleteSubContractorRevisionByNumberResponse deleteSubContractorRevisionByNumber(org.openapis.openapi.models.operations.DeleteSubContractorRevisionByNumberRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSubContractorRevisionByNumberPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Revision/{RevisionNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSubContractorRevisionByNumberRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Revision/{RevisionNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -186,13 +186,13 @@ public class SubContractor {
      */
     public org.openapis.openapi.models.operations.GetSubContractorByEffectiveDateResponse getSubContractorByEffectiveDate(org.openapis.openapi.models.operations.GetSubContractorByEffectiveDateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubContractorByEffectiveDatePathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/{EffectiveDate}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubContractorByEffectiveDateRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/{EffectiveDate}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -241,13 +241,13 @@ public class SubContractor {
      */
     public org.openapis.openapi.models.operations.GetSubContractorFromEmployerResponse getSubContractorFromEmployer(org.openapis.openapi.models.operations.GetSubContractorFromEmployerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubContractorFromEmployerPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubContractorFromEmployerRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -296,13 +296,13 @@ public class SubContractor {
      */
     public org.openapis.openapi.models.operations.GetSubContractorRevisionByNumberResponse getSubContractorRevisionByNumber(org.openapis.openapi.models.operations.GetSubContractorRevisionByNumberRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubContractorRevisionByNumberPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Revision/{RevisionNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubContractorRevisionByNumberRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Revision/{RevisionNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -351,13 +351,13 @@ public class SubContractor {
      */
     public org.openapis.openapi.models.operations.GetSubContractorRevisionsResponse getSubContractorRevisions(org.openapis.openapi.models.operations.GetSubContractorRevisionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubContractorRevisionsPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Revisions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubContractorRevisionsRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Revisions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -406,13 +406,13 @@ public class SubContractor {
      */
     public org.openapis.openapi.models.operations.GetSubContractorsByEffectiveDateResponse getSubContractorsByEffectiveDate(org.openapis.openapi.models.operations.GetSubContractorsByEffectiveDateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubContractorsByEffectiveDatePathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractors/{EffectiveDate}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubContractorsByEffectiveDateRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractors/{EffectiveDate}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -461,13 +461,13 @@ public class SubContractor {
      */
     public org.openapis.openapi.models.operations.GetSubContractorsFromEmployerResponse getSubContractorsFromEmployer(org.openapis.openapi.models.operations.GetSubContractorsFromEmployerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubContractorsFromEmployerPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractors", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubContractorsFromEmployerRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractors", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -516,18 +516,18 @@ public class SubContractor {
      */
     public org.openapis.openapi.models.operations.PatchSubContractorResponse patchSubContractor(org.openapis.openapi.models.operations.PatchSubContractorRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSubContractorPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchSubContractorRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "subContractor", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -576,18 +576,18 @@ public class SubContractor {
      */
     public org.openapis.openapi.models.operations.PostSubContractorIntoEmployerResponse postSubContractorIntoEmployer(org.openapis.openapi.models.operations.PostSubContractorIntoEmployerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSubContractorIntoEmployerPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractors", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSubContractorIntoEmployerRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractors", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "subContractor", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -636,18 +636,18 @@ public class SubContractor {
      */
     public org.openapis.openapi.models.operations.PutSubContractorIntoEmployerResponse putSubContractorIntoEmployer(org.openapis.openapi.models.operations.PutSubContractorIntoEmployerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSubContractorIntoEmployerPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSubContractorIntoEmployerRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "subContractor", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

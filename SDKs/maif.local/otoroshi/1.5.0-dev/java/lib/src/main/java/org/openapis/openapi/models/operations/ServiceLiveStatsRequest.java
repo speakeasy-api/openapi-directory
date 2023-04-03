@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ServiceLiveStatsRequest {
-    
-    public ServiceLiveStatsPathParams pathParams;
-    public ServiceLiveStatsRequest withPathParams(ServiceLiveStatsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ServiceLiveStatsSecurity security;
-    public ServiceLiveStatsRequest withSecurity(ServiceLiveStatsSecurity security) {
-        this.security = security;
+    /**
+     * The service id or global for otoroshi stats
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public ServiceLiveStatsRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -48,7 +48,7 @@ public class Printouts {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAlmawsV1TaskListsPrintoutsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAlmawsV1TaskListsPrintoutsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -97,7 +97,7 @@ public class Printouts {
      */
     public org.openapis.openapi.models.operations.GetAlmawsV1TaskListsPrintoutsPrintoutIdResponse getAlmawsV1TaskListsPrintoutsPrintoutId(org.openapis.openapi.models.operations.GetAlmawsV1TaskListsPrintoutsPrintoutIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAlmawsV1TaskListsPrintoutsPrintoutIdPathParams.class, baseUrl, "/almaws/v1/task-lists/printouts/{printout_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAlmawsV1TaskListsPrintoutsPrintoutIdRequest.class, baseUrl, "/almaws/v1/task-lists/printouts/{printout_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -152,7 +152,7 @@ public class Printouts {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostAlmawsV1TaskListsPrintoutsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostAlmawsV1TaskListsPrintoutsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -201,13 +201,13 @@ public class Printouts {
      */
     public org.openapis.openapi.models.operations.PostAlmawsV1TaskListsPrintoutsPrintoutIdResponse postAlmawsV1TaskListsPrintoutsPrintoutId(org.openapis.openapi.models.operations.PostAlmawsV1TaskListsPrintoutsPrintoutIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostAlmawsV1TaskListsPrintoutsPrintoutIdPathParams.class, baseUrl, "/almaws/v1/task-lists/printouts/{printout_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostAlmawsV1TaskListsPrintoutsPrintoutIdRequest.class, baseUrl, "/almaws/v1/task-lists/printouts/{printout_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostAlmawsV1TaskListsPrintoutsPrintoutIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostAlmawsV1TaskListsPrintoutsPrintoutIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

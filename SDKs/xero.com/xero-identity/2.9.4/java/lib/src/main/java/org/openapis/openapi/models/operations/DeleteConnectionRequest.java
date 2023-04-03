@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteConnectionRequest {
-    
-    public DeleteConnectionPathParams pathParams;
-    public DeleteConnectionRequest withPathParams(DeleteConnectionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteConnectionSecurity security;
-    public DeleteConnectionRequest withSecurity(DeleteConnectionSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier for retrieving single object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteConnectionRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

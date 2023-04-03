@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetQueryRequest {
+    /**
+     * If set to *full*, response will include query explanations in addition to the result.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=explain")
+    public String explain;
+    public GetQueryRequest withExplain(String explain) {
+        this.explain = explain;
+        return this;
+    }
     
-    public GetQueryQueryParams queryParams;
-    public GetQueryRequest withQueryParams(GetQueryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * If true, compiler performance metrics will be returned in the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=metrics")
+    public Boolean metrics;
+    public GetQueryRequest withMetrics(Boolean metrics) {
+        this.metrics = metrics;
+        return this;
+    }
+    
+    /**
+     * If true, response will be in a human-readable format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pretty")
+    public Boolean pretty;
+    public GetQueryRequest withPretty(Boolean pretty) {
+        this.pretty = pretty;
+        return this;
+    }
+    
+    /**
+     * The [URL-encoded](https://www.w3schools.com/tags/ref_urlencode.ASP) ad-hoc query to execute.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public GetQueryRequest withQ(String q) {
+        this.q = q;
         return this;
     }
     

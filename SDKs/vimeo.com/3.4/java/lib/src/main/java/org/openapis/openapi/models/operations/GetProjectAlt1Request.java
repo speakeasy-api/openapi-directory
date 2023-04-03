@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProjectAlt1Request {
-    
-    public GetProjectAlt1PathParams pathParams;
-    public GetProjectAlt1Request withPathParams(GetProjectAlt1PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetProjectAlt1Security security;
-    public GetProjectAlt1Request withSecurity(GetProjectAlt1Security security) {
-        this.security = security;
+    /**
+     * The ID of the project.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public Double projectId;
+    public GetProjectAlt1Request withProjectId(Double projectId) {
+        this.projectId = projectId;
         return this;
     }
     

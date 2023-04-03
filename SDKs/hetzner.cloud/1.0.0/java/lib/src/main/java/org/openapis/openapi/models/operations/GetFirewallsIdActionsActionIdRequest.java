@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFirewallsIdActionsActionIdRequest {
+    /**
+     * ID of the Action
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=action_id")
+    public Long actionId;
+    public GetFirewallsIdActionsActionIdRequest withActionId(Long actionId) {
+        this.actionId = actionId;
+        return this;
+    }
     
-    public GetFirewallsIdActionsActionIdPathParams pathParams;
-    public GetFirewallsIdActionsActionIdRequest withPathParams(GetFirewallsIdActionsActionIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the Firewall
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetFirewallsIdActionsActionIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

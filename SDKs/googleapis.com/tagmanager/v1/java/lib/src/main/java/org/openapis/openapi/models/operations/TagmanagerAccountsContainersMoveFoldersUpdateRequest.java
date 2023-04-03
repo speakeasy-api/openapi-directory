@@ -7,31 +7,180 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TagmanagerAccountsContainersMoveFoldersUpdateRequest {
-    
-    public TagmanagerAccountsContainersMoveFoldersUpdatePathParams pathParams;
-    public TagmanagerAccountsContainersMoveFoldersUpdateRequest withPathParams(TagmanagerAccountsContainersMoveFoldersUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public TagmanagerAccountsContainersMoveFoldersUpdateQueryParams queryParams;
-    public TagmanagerAccountsContainersMoveFoldersUpdateRequest withQueryParams(TagmanagerAccountsContainersMoveFoldersUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public TagmanagerAccountsContainersMoveFoldersUpdateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Folder request;
-    public TagmanagerAccountsContainersMoveFoldersUpdateRequest withRequest(org.openapis.openapi.models.shared.Folder request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Folder folder;
+    public TagmanagerAccountsContainersMoveFoldersUpdateRequest withFolder(org.openapis.openapi.models.shared.Folder folder) {
+        this.folder = folder;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public TagmanagerAccountsContainersMoveFoldersUpdateRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public TagmanagerAccountsContainersMoveFoldersUpdateSecurity security;
-    public TagmanagerAccountsContainersMoveFoldersUpdateRequest withSecurity(TagmanagerAccountsContainersMoveFoldersUpdateSecurity security) {
-        this.security = security;
+    /**
+     * The GTM Account ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public TagmanagerAccountsContainersMoveFoldersUpdateRequest withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public TagmanagerAccountsContainersMoveFoldersUpdateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public TagmanagerAccountsContainersMoveFoldersUpdateRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * The GTM Container ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=containerId")
+    public String containerId;
+    public TagmanagerAccountsContainersMoveFoldersUpdateRequest withContainerId(String containerId) {
+        this.containerId = containerId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public TagmanagerAccountsContainersMoveFoldersUpdateRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * The GTM Folder ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=folderId")
+    public String folderId;
+    public TagmanagerAccountsContainersMoveFoldersUpdateRequest withFolderId(String folderId) {
+        this.folderId = folderId;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public TagmanagerAccountsContainersMoveFoldersUpdateRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public TagmanagerAccountsContainersMoveFoldersUpdateRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public TagmanagerAccountsContainersMoveFoldersUpdateRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public TagmanagerAccountsContainersMoveFoldersUpdateRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * The tags to be moved to the folder.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tagId")
+    public String[] tagId;
+    public TagmanagerAccountsContainersMoveFoldersUpdateRequest withTagId(String[] tagId) {
+        this.tagId = tagId;
+        return this;
+    }
+    
+    /**
+     * The triggers to be moved to the folder.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=triggerId")
+    public String[] triggerId;
+    public TagmanagerAccountsContainersMoveFoldersUpdateRequest withTriggerId(String[] triggerId) {
+        this.triggerId = triggerId;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public TagmanagerAccountsContainersMoveFoldersUpdateRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public TagmanagerAccountsContainersMoveFoldersUpdateRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
+        return this;
+    }
+    
+    /**
+     * The variables to be moved to the folder.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=variableId")
+    public String[] variableId;
+    public TagmanagerAccountsContainersMoveFoldersUpdateRequest withVariableId(String[] variableId) {
+        this.variableId = variableId;
         return this;
     }
     

@@ -4,27 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchDeployedDevicesKeyRequest {
-    
-    public FetchDeployedDevicesKeyPathParams pathParams;
-    public FetchDeployedDevicesKeyRequest withPathParams(FetchDeployedDevicesKeyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FleetSid")
+    public String fleetSid;
+    public FetchDeployedDevicesKeyRequest withFleetSid(String fleetSid) {
+        this.fleetSid = fleetSid;
         return this;
     }
     
-    
-    public FetchDeployedDevicesKeySecurity security;
-    public FetchDeployedDevicesKeyRequest withSecurity(FetchDeployedDevicesKeySecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchDeployedDevicesKeyRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Provides a 34 character string that uniquely identifies the requested Key credential resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchDeployedDevicesKeyRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

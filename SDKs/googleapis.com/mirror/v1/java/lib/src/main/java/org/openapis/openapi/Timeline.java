@@ -31,25 +31,26 @@ public class Timeline {
     /**
      * Deletes an attachment from a timeline item.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MirrorTimelineAttachmentsDeleteResponse mirrorTimelineAttachmentsDelete(org.openapis.openapi.models.operations.MirrorTimelineAttachmentsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MirrorTimelineAttachmentsDeleteResponse mirrorTimelineAttachmentsDelete(org.openapis.openapi.models.operations.MirrorTimelineAttachmentsDeleteRequest request, org.openapis.openapi.models.operations.MirrorTimelineAttachmentsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MirrorTimelineAttachmentsDeletePathParams.class, baseUrl, "/timeline/{itemId}/attachments/{attachmentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MirrorTimelineAttachmentsDeleteRequest.class, baseUrl, "/timeline/{itemId}/attachments/{attachmentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MirrorTimelineAttachmentsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MirrorTimelineAttachmentsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -70,25 +71,26 @@ public class Timeline {
     /**
      * Retrieves an attachment on a timeline item by item ID and attachment ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MirrorTimelineAttachmentsGetResponse mirrorTimelineAttachmentsGet(org.openapis.openapi.models.operations.MirrorTimelineAttachmentsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MirrorTimelineAttachmentsGetResponse mirrorTimelineAttachmentsGet(org.openapis.openapi.models.operations.MirrorTimelineAttachmentsGetRequest request, org.openapis.openapi.models.operations.MirrorTimelineAttachmentsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MirrorTimelineAttachmentsGetPathParams.class, baseUrl, "/timeline/{itemId}/attachments/{attachmentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MirrorTimelineAttachmentsGetRequest.class, baseUrl, "/timeline/{itemId}/attachments/{attachmentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MirrorTimelineAttachmentsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MirrorTimelineAttachmentsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -114,25 +116,26 @@ public class Timeline {
     /**
      * Adds a new attachment to a timeline item.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MirrorTimelineAttachmentsInsertResponse mirrorTimelineAttachmentsInsert(org.openapis.openapi.models.operations.MirrorTimelineAttachmentsInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MirrorTimelineAttachmentsInsertResponse mirrorTimelineAttachmentsInsert(org.openapis.openapi.models.operations.MirrorTimelineAttachmentsInsertRequest request, org.openapis.openapi.models.operations.MirrorTimelineAttachmentsInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MirrorTimelineAttachmentsInsertPathParams.class, baseUrl, "/timeline/{itemId}/attachments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MirrorTimelineAttachmentsInsertRequest.class, baseUrl, "/timeline/{itemId}/attachments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MirrorTimelineAttachmentsInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MirrorTimelineAttachmentsInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -158,25 +161,26 @@ public class Timeline {
     /**
      * Returns a list of attachments for a timeline item.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MirrorTimelineAttachmentsListResponse mirrorTimelineAttachmentsList(org.openapis.openapi.models.operations.MirrorTimelineAttachmentsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MirrorTimelineAttachmentsListResponse mirrorTimelineAttachmentsList(org.openapis.openapi.models.operations.MirrorTimelineAttachmentsListRequest request, org.openapis.openapi.models.operations.MirrorTimelineAttachmentsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MirrorTimelineAttachmentsListPathParams.class, baseUrl, "/timeline/{itemId}/attachments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MirrorTimelineAttachmentsListRequest.class, baseUrl, "/timeline/{itemId}/attachments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MirrorTimelineAttachmentsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MirrorTimelineAttachmentsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -202,25 +206,26 @@ public class Timeline {
     /**
      * Deletes a timeline item.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MirrorTimelineDeleteResponse mirrorTimelineDelete(org.openapis.openapi.models.operations.MirrorTimelineDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MirrorTimelineDeleteResponse mirrorTimelineDelete(org.openapis.openapi.models.operations.MirrorTimelineDeleteRequest request, org.openapis.openapi.models.operations.MirrorTimelineDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MirrorTimelineDeletePathParams.class, baseUrl, "/timeline/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MirrorTimelineDeleteRequest.class, baseUrl, "/timeline/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MirrorTimelineDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MirrorTimelineDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -241,25 +246,26 @@ public class Timeline {
     /**
      * Gets a single timeline item by ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MirrorTimelineGetResponse mirrorTimelineGet(org.openapis.openapi.models.operations.MirrorTimelineGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MirrorTimelineGetResponse mirrorTimelineGet(org.openapis.openapi.models.operations.MirrorTimelineGetRequest request, org.openapis.openapi.models.operations.MirrorTimelineGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MirrorTimelineGetPathParams.class, baseUrl, "/timeline/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MirrorTimelineGetRequest.class, baseUrl, "/timeline/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MirrorTimelineGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MirrorTimelineGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -285,27 +291,28 @@ public class Timeline {
     /**
      * Inserts a new item into the timeline.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MirrorTimelineInsertResponse mirrorTimelineInsert(org.openapis.openapi.models.operations.MirrorTimelineInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MirrorTimelineInsertResponse mirrorTimelineInsert(org.openapis.openapi.models.operations.MirrorTimelineInsertRequest request, org.openapis.openapi.models.operations.MirrorTimelineInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/timeline");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MirrorTimelineInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MirrorTimelineInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -331,10 +338,11 @@ public class Timeline {
     /**
      * Retrieves a list of timeline items for the authenticated user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MirrorTimelineListResponse mirrorTimelineList(org.openapis.openapi.models.operations.MirrorTimelineListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MirrorTimelineListResponse mirrorTimelineList(org.openapis.openapi.models.operations.MirrorTimelineListRequest request, org.openapis.openapi.models.operations.MirrorTimelineListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/timeline");
         
@@ -342,14 +350,14 @@ public class Timeline {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MirrorTimelineListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MirrorTimelineListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -375,27 +383,28 @@ public class Timeline {
     /**
      * Updates a timeline item in place. This method supports patch semantics.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MirrorTimelinePatchResponse mirrorTimelinePatch(org.openapis.openapi.models.operations.MirrorTimelinePatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MirrorTimelinePatchResponse mirrorTimelinePatch(org.openapis.openapi.models.operations.MirrorTimelinePatchRequest request, org.openapis.openapi.models.operations.MirrorTimelinePatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MirrorTimelinePatchPathParams.class, baseUrl, "/timeline/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MirrorTimelinePatchRequest.class, baseUrl, "/timeline/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "timelineItem", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MirrorTimelinePatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MirrorTimelinePatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -421,27 +430,28 @@ public class Timeline {
     /**
      * Updates a timeline item in place.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MirrorTimelineUpdateResponse mirrorTimelineUpdate(org.openapis.openapi.models.operations.MirrorTimelineUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MirrorTimelineUpdateResponse mirrorTimelineUpdate(org.openapis.openapi.models.operations.MirrorTimelineUpdateRequest request, org.openapis.openapi.models.operations.MirrorTimelineUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MirrorTimelineUpdatePathParams.class, baseUrl, "/timeline/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MirrorTimelineUpdateRequest.class, baseUrl, "/timeline/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MirrorTimelineUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MirrorTimelineUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

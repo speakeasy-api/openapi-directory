@@ -34,16 +34,16 @@ public class Subscriptions {
 		this._genVersion = genVersion;
 	}
 
-    public org.openapis.openapi.models.operations.DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveResponse deleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchive(org.openapis.openapi.models.operations.DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveResponse deleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchive(org.openapis.openapi.models.operations.DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveRequest request, org.openapis.openapi.models.operations.DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchivePathParams.class, baseUrl, "/webhooks/v3/{appId}/subscriptions/{subscriptionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveRequest.class, baseUrl, "/webhooks/v3/{appId}/subscriptions/{subscriptionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -68,16 +68,16 @@ public class Subscriptions {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.GetWebhooksV3AppIdSubscriptionsSubscriptionIdGetByIdResponse getWebhooksV3AppIdSubscriptionsSubscriptionIdGetById(org.openapis.openapi.models.operations.GetWebhooksV3AppIdSubscriptionsSubscriptionIdGetByIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetWebhooksV3AppIdSubscriptionsSubscriptionIdGetByIdResponse getWebhooksV3AppIdSubscriptionsSubscriptionIdGetById(org.openapis.openapi.models.operations.GetWebhooksV3AppIdSubscriptionsSubscriptionIdGetByIdRequest request, org.openapis.openapi.models.operations.GetWebhooksV3AppIdSubscriptionsSubscriptionIdGetByIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWebhooksV3AppIdSubscriptionsSubscriptionIdGetByIdPathParams.class, baseUrl, "/webhooks/v3/{appId}/subscriptions/{subscriptionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWebhooksV3AppIdSubscriptionsSubscriptionIdGetByIdRequest.class, baseUrl, "/webhooks/v3/{appId}/subscriptions/{subscriptionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -108,16 +108,16 @@ public class Subscriptions {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.GetWebhooksV3AppIdSubscriptionsGetAllResponse getWebhooksV3AppIdSubscriptionsGetAll(org.openapis.openapi.models.operations.GetWebhooksV3AppIdSubscriptionsGetAllRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetWebhooksV3AppIdSubscriptionsGetAllResponse getWebhooksV3AppIdSubscriptionsGetAll(org.openapis.openapi.models.operations.GetWebhooksV3AppIdSubscriptionsGetAllRequest request, org.openapis.openapi.models.operations.GetWebhooksV3AppIdSubscriptionsGetAllSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWebhooksV3AppIdSubscriptionsGetAllPathParams.class, baseUrl, "/webhooks/v3/{appId}/subscriptions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWebhooksV3AppIdSubscriptionsGetAllRequest.class, baseUrl, "/webhooks/v3/{appId}/subscriptions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -148,21 +148,21 @@ public class Subscriptions {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PatchWebhooksV3AppIdSubscriptionsSubscriptionIdUpdateResponse patchWebhooksV3AppIdSubscriptionsSubscriptionIdUpdate(org.openapis.openapi.models.operations.PatchWebhooksV3AppIdSubscriptionsSubscriptionIdUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchWebhooksV3AppIdSubscriptionsSubscriptionIdUpdateResponse patchWebhooksV3AppIdSubscriptionsSubscriptionIdUpdate(org.openapis.openapi.models.operations.PatchWebhooksV3AppIdSubscriptionsSubscriptionIdUpdateRequest request, org.openapis.openapi.models.operations.PatchWebhooksV3AppIdSubscriptionsSubscriptionIdUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchWebhooksV3AppIdSubscriptionsSubscriptionIdUpdatePathParams.class, baseUrl, "/webhooks/v3/{appId}/subscriptions/{subscriptionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchWebhooksV3AppIdSubscriptionsSubscriptionIdUpdateRequest.class, baseUrl, "/webhooks/v3/{appId}/subscriptions/{subscriptionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "subscriptionPatchRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -193,21 +193,21 @@ public class Subscriptions {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchResponse postWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatch(org.openapis.openapi.models.operations.PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchResponse postWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatch(org.openapis.openapi.models.operations.PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchRequest request, org.openapis.openapi.models.operations.PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchPathParams.class, baseUrl, "/webhooks/v3/{appId}/subscriptions/batch/update", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostWebhooksV3AppIdSubscriptionsBatchUpdateUpdateBatchRequest.class, baseUrl, "/webhooks/v3/{appId}/subscriptions/batch/update", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "batchInputSubscriptionBatchUpdateRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -246,21 +246,21 @@ public class Subscriptions {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PostWebhooksV3AppIdSubscriptionsCreateResponse postWebhooksV3AppIdSubscriptionsCreate(org.openapis.openapi.models.operations.PostWebhooksV3AppIdSubscriptionsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostWebhooksV3AppIdSubscriptionsCreateResponse postWebhooksV3AppIdSubscriptionsCreate(org.openapis.openapi.models.operations.PostWebhooksV3AppIdSubscriptionsCreateRequest request, org.openapis.openapi.models.operations.PostWebhooksV3AppIdSubscriptionsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostWebhooksV3AppIdSubscriptionsCreatePathParams.class, baseUrl, "/webhooks/v3/{appId}/subscriptions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostWebhooksV3AppIdSubscriptionsCreateRequest.class, baseUrl, "/webhooks/v3/{appId}/subscriptions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "subscriptionCreateRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

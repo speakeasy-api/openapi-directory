@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSubCategoriesRequest {
-    
-    public GetSubCategoriesPathParams pathParams;
-    public GetSubCategoriesRequest withPathParams(GetSubCategoriesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The category identifier to return results from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=category")
+    public String category;
+    public GetSubCategoriesRequest withCategory(String category) {
+        this.category = category;
         return this;
     }
     
-    
-    public GetSubCategoriesQueryParams queryParams;
-    public GetSubCategoriesRequest withQueryParams(GetSubCategoriesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The language for any applicable localised strings.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public org.openapis.openapi.models.shared.LangEnum lang;
+    public GetSubCategoriesRequest withLang(org.openapis.openapi.models.shared.LangEnum lang) {
+        this.lang = lang;
         return this;
     }
     

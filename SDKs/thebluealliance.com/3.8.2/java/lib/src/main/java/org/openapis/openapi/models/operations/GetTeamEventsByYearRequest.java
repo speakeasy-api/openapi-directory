@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTeamEventsByYearRequest {
-    
-    public GetTeamEventsByYearPathParams pathParams;
-    public GetTeamEventsByYearRequest withPathParams(GetTeamEventsByYearPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Value of the `ETag` header in the most recently cached response by the client.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
+    public String ifNoneMatch;
+    public GetTeamEventsByYearRequest withIfNoneMatch(String ifNoneMatch) {
+        this.ifNoneMatch = ifNoneMatch;
         return this;
     }
     
-    
-    public GetTeamEventsByYearHeaders headers;
-    public GetTeamEventsByYearRequest withHeaders(GetTeamEventsByYearHeaders headers) {
-        this.headers = headers;
+    /**
+     * TBA Team Key, eg `frc254`
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_key")
+    public String teamKey;
+    public GetTeamEventsByYearRequest withTeamKey(String teamKey) {
+        this.teamKey = teamKey;
         return this;
     }
     
-    
-    public GetTeamEventsByYearSecurity security;
-    public GetTeamEventsByYearRequest withSecurity(GetTeamEventsByYearSecurity security) {
-        this.security = security;
+    /**
+     * Competition Year (or Season). Must be 4 digits.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=year")
+    public Long year;
+    public GetTeamEventsByYearRequest withYear(Long year) {
+        this.year = year;
         return this;
     }
     

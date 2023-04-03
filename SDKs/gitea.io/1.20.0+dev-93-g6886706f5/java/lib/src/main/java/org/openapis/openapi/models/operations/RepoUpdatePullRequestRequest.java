@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoUpdatePullRequestRequest {
-    
-    public RepoUpdatePullRequestPathParams pathParams;
-    public RepoUpdatePullRequestRequest withPathParams(RepoUpdatePullRequestPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * index of the pull request to get
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=index")
+    public Long index;
+    public RepoUpdatePullRequestRequest withIndex(Long index) {
+        this.index = index;
         return this;
     }
     
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoUpdatePullRequestRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public RepoUpdatePullRequestQueryParams queryParams;
-    public RepoUpdatePullRequestRequest withQueryParams(RepoUpdatePullRequestQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoUpdatePullRequestRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * how to update pull request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=style")
+    public RepoUpdatePullRequestStyleEnum style;
+    public RepoUpdatePullRequestRequest withStyle(RepoUpdatePullRequestStyleEnum style) {
+        this.style = style;
         return this;
     }
     

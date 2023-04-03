@@ -7,24 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GenerateOrderInvoiceRequest {
-    
-    public GenerateOrderInvoicePathParams pathParams;
-    public GenerateOrderInvoiceRequest withPathParams(GenerateOrderInvoicePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The Account Identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public GenerateOrderInvoiceRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
-    
-    public GenerateOrderInvoiceQueryParams queryParams;
-    public GenerateOrderInvoiceRequest withQueryParams(GenerateOrderInvoiceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The BeezUP Order UUID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=beezUPOrderUUID")
+    public String beezUPOrderUUID;
+    public GenerateOrderInvoiceRequest withBeezUPOrderUUID(String beezUPOrderUUID) {
+        this.beezUPOrderUUID = beezUPOrderUUID;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GenerateOrderInvoiceRequest request;
-    public GenerateOrderInvoiceRequest withRequest(org.openapis.openapi.models.shared.GenerateOrderInvoiceRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GenerateOrderInvoiceRequest generateOrderInvoiceRequest;
+    public GenerateOrderInvoiceRequest withGenerateOrderInvoiceRequest(org.openapis.openapi.models.shared.GenerateOrderInvoiceRequest generateOrderInvoiceRequest) {
+        this.generateOrderInvoiceRequest = generateOrderInvoiceRequest;
+        return this;
+    }
+    
+    /**
+     * The Marketplace Technical Code
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=marketplaceTechnicalCode")
+    public String marketplaceTechnicalCode;
+    public GenerateOrderInvoiceRequest withMarketplaceTechnicalCode(String marketplaceTechnicalCode) {
+        this.marketplaceTechnicalCode = marketplaceTechnicalCode;
+        return this;
+    }
+    
+    /**
+     * Sometimes the user in the e-commerce application is not the same as user associated with the current subscription key. We recommend providing your application's user login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userName")
+    public String userName;
+    public GenerateOrderInvoiceRequest withUserName(String userName) {
+        this.userName = userName;
         return this;
     }
     

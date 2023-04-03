@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMerchantsMerchantIdUsersRequest {
-    
-    public GetMerchantsMerchantIdUsersPathParams pathParams;
-    public GetMerchantsMerchantIdUsersRequest withPathParams(GetMerchantsMerchantIdUsersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the merchant.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
+    public String merchantId;
+    public GetMerchantsMerchantIdUsersRequest withMerchantId(String merchantId) {
+        this.merchantId = merchantId;
         return this;
     }
     
-    
-    public GetMerchantsMerchantIdUsersQueryParams queryParams;
-    public GetMerchantsMerchantIdUsersRequest withQueryParams(GetMerchantsMerchantIdUsersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of the page to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
+    public Integer pageNumber;
+    public GetMerchantsMerchantIdUsersRequest withPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
     
+    /**
+     * The number of items to have on a page. Maximum value is **100**. The default is **10** items on a page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public GetMerchantsMerchantIdUsersRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public GetMerchantsMerchantIdUsersSecurity security;
-    public GetMerchantsMerchantIdUsersRequest withSecurity(GetMerchantsMerchantIdUsersSecurity security) {
-        this.security = security;
+    /**
+     * The partial or complete username to select all users that match.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
+    public String username;
+    public GetMerchantsMerchantIdUsersRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

@@ -4,20 +4,77 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUpdatedImagesRequest {
-    
-    public GetUpdatedImagesQueryParams queryParams;
-    public GetUpdatedImagesRequest withQueryParams(GetUpdatedImagesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Show images updated before the specified date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
+    public LocalDate endDate;
+    public GetUpdatedImagesRequest withEndDate(LocalDate endDate) {
+        this.endDate = endDate;
         return this;
     }
     
+    /**
+     * Show images updated in the specified time period, where the time period is an interval (like SQL INTERVAL) such as 1 DAY, 6 HOUR, or 30 MINUTE; the default is 1 HOUR, which shows images that were updated in the hour preceding the request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interval")
+    public String interval;
+    public GetUpdatedImagesRequest withInterval(String interval) {
+        this.interval = interval;
+        return this;
+    }
     
-    public GetUpdatedImagesSecurity security;
-    public GetUpdatedImagesRequest withSecurity(GetUpdatedImagesSecurity security) {
-        this.security = security;
+    /**
+     * Page number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetUpdatedImagesRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Number of results per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetUpdatedImagesRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Sort order
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetUpdatedImagesSortEnum sort;
+    public GetUpdatedImagesRequest withSort(GetUpdatedImagesSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Show images updated on or after the specified date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
+    public LocalDate startDate;
+    public GetUpdatedImagesRequest withStartDate(LocalDate startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    
+    /**
+     * Show images that were added, deleted, or edited; by default, the endpoint returns images that were updated in any of these ways
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public GetUpdatedImagesTypeEnum[] type;
+    public GetUpdatedImagesRequest withType(GetUpdatedImagesTypeEnum[] type) {
+        this.type = type;
         return this;
     }
     

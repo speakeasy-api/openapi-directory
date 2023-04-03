@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SyncRelationsWithSchemaRequest {
+    /**
+     * Id of the API
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiId")
+    public String apiId;
+    public SyncRelationsWithSchemaRequest withApiId(String apiId) {
+        this.apiId = apiId;
+        return this;
+    }
     
-    public SyncRelationsWithSchemaPathParams pathParams;
-    public SyncRelationsWithSchemaRequest withPathParams(SyncRelationsWithSchemaPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of the API version
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiVersionId")
+    public String apiVersionId;
+    public SyncRelationsWithSchemaRequest withApiVersionId(String apiVersionId) {
+        this.apiVersionId = apiVersionId;
+        return this;
+    }
+    
+    /**
+     * Relation id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=entityId")
+    public String entityId;
+    public SyncRelationsWithSchemaRequest withEntityId(String entityId) {
+        this.entityId = entityId;
+        return this;
+    }
+    
+    /**
+     * Relation type (e.g documentation, contracttest, integrationtest, testsuite, mock, monitor)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=entityType")
+    public String entityType;
+    public SyncRelationsWithSchemaRequest withEntityType(String entityType) {
+        this.entityType = entityType;
         return this;
     }
     

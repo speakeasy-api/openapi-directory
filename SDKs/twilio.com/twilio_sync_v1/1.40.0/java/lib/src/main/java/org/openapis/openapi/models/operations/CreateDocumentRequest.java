@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateDocumentRequest {
-    
-    public CreateDocumentPathParams pathParams;
-    public CreateDocumentRequest withPathParams(CreateDocumentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateDocumentCreateDocumentRequest request;
-    public CreateDocumentRequest withRequest(CreateDocumentCreateDocumentRequest request) {
-        this.request = request;
+    public CreateDocumentCreateDocumentRequest requestBody;
+    public CreateDocumentRequest withRequestBody(CreateDocumentCreateDocumentRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateDocumentSecurity security;
-    public CreateDocumentRequest withSecurity(CreateDocumentSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateDocumentRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) to create the new Document resource in.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public CreateDocumentRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

@@ -7,20 +7,63 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePullRequestHostedPropertyValueRequest {
-    
-    public UpdatePullRequestHostedPropertyValuePathParams pathParams;
-    public UpdatePullRequestHostedPropertyValueRequest withPathParams(UpdatePullRequestHostedPropertyValuePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The application property to create or update.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public UpdatePullRequestHostedPropertyValueRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public UpdatePullRequestHostedPropertyValueRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The key of the Connect app.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_key")
+    public String appKey;
+    public UpdatePullRequestHostedPropertyValueRequest withAppKey(String appKey) {
+        this.appKey = appKey;
+        return this;
+    }
+    
+    /**
+     * The name of the property.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=property_name")
+    public String propertyName;
+    public UpdatePullRequestHostedPropertyValueRequest withPropertyName(String propertyName) {
+        this.propertyName = propertyName;
+        return this;
+    }
+    
+    /**
+     * The pull request ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pullrequest_id")
+    public String pullrequestId;
+    public UpdatePullRequestHostedPropertyValueRequest withPullrequestId(String pullrequestId) {
+        this.pullrequestId = pullrequestId;
+        return this;
+    }
+    
+    /**
+     * The repository.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public UpdatePullRequestHostedPropertyValueRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
+    
+    /**
+     * The repository container; either the workspace slug or the UUID in curly braces.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public UpdatePullRequestHostedPropertyValueRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

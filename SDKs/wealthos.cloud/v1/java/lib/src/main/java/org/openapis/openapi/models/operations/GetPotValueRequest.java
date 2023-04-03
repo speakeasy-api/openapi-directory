@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPotValueRequest {
-    
-    public GetPotValuePathParams pathParams;
-    public GetPotValueRequest withPathParams(GetPotValuePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Pot Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pot_id")
+    public String potId;
+    public GetPotValueRequest withPotId(String potId) {
+        this.potId = potId;
         return this;
     }
     
-    
-    public GetPotValueHeaders headers;
-    public GetPotValueRequest withHeaders(GetPotValueHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetPotValueSecurity security;
-    public GetPotValueRequest withSecurity(GetPotValueSecurity security) {
-        this.security = security;
+    /**
+     * ApiSecretKey
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public GetPotValueRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

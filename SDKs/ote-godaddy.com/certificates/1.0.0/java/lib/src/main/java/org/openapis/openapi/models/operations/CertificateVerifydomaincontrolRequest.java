@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CertificateVerifydomaincontrolRequest {
-    
-    public CertificateVerifydomaincontrolPathParams pathParams;
-    public CertificateVerifydomaincontrolRequest withPathParams(CertificateVerifydomaincontrolPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Certificate id to lookup
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=certificateId")
+    public String certificateId;
+    public CertificateVerifydomaincontrolRequest withCertificateId(String certificateId) {
+        this.certificateId = certificateId;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetInterfaceRequest {
-    
-    public GetInterfacePathParams pathParams;
-    public GetInterfaceRequest withPathParams(GetInterfacePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to return the primary interface
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Long agentNum;
+    public GetInterfaceRequest withAgentNum(Long agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

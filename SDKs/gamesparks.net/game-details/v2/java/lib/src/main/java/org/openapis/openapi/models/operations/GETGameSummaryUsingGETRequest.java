@@ -4,20 +4,47 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGameSummaryUsingGETRequest {
-    
-    public GETGameSummaryUsingGETPathParams pathParams;
-    public GETGameSummaryUsingGETRequest withPathParams(GETGameSummaryUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * apiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public GETGameSummaryUsingGETRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    /**
+     * yyyy-MM-dd
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
+    public LocalDate endDate;
+    public GETGameSummaryUsingGETRequest withEndDate(LocalDate endDate) {
+        this.endDate = endDate;
+        return this;
+    }
     
-    public GETGameSummaryUsingGETQueryParams queryParams;
-    public GETGameSummaryUsingGETRequest withQueryParams(GETGameSummaryUsingGETQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * stage
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stage")
+    public GETGameSummaryUsingGETStageEnum stage;
+    public GETGameSummaryUsingGETRequest withStage(GETGameSummaryUsingGETStageEnum stage) {
+        this.stage = stage;
+        return this;
+    }
+    
+    /**
+     * yyyy-MM-dd
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
+    public LocalDate startDate;
+    public GETGameSummaryUsingGETRequest withStartDate(LocalDate startDate) {
+        this.startDate = startDate;
         return this;
     }
     

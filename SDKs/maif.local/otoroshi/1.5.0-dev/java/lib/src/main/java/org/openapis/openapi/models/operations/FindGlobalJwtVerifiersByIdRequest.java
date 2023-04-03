@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FindGlobalJwtVerifiersByIdRequest {
-    
-    public FindGlobalJwtVerifiersByIdPathParams pathParams;
-    public FindGlobalJwtVerifiersByIdRequest withPathParams(FindGlobalJwtVerifiersByIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FindGlobalJwtVerifiersByIdSecurity security;
-    public FindGlobalJwtVerifiersByIdRequest withSecurity(FindGlobalJwtVerifiersByIdSecurity security) {
-        this.security = security;
+    /**
+     * The jwt verifier id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=verifierId")
+    public String verifierId;
+    public FindGlobalJwtVerifiersByIdRequest withVerifierId(String verifierId) {
+        this.verifierId = verifierId;
         return this;
     }
     

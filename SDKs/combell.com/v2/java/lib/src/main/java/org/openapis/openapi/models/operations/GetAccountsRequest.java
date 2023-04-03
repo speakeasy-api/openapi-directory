@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountsRequest {
+    /**
+     * Filters the list, returning only accounts containing the specified asset type.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=asset_type")
+    public org.openapis.openapi.models.shared.AssetTypeEnum assetType;
+    public GetAccountsRequest withAssetType(org.openapis.openapi.models.shared.AssetTypeEnum assetType) {
+        this.assetType = assetType;
+        return this;
+    }
     
-    public GetAccountsQueryParams queryParams;
-    public GetAccountsRequest withQueryParams(GetAccountsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Return only accounts, matching the specified identifier.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=identifier")
+    public String identifier;
+    public GetAccountsRequest withIdentifier(String identifier) {
+        this.identifier = identifier;
+        return this;
+    }
+    
+    /**
+     * The number of items to skip in the resultset.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
+    public Integer skip;
+    public GetAccountsRequest withSkip(Integer skip) {
+        this.skip = skip;
+        return this;
+    }
+    
+    /**
+     * The number of items to return in the resultset. The returned count can be equal or less than this number.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=take")
+    public Integer take;
+    public GetAccountsRequest withTake(Integer take) {
+        this.take = take;
         return this;
     }
     

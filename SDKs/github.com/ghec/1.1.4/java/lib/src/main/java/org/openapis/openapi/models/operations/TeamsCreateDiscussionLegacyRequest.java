@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsCreateDiscussionLegacyRequest {
-    
-    public TeamsCreateDiscussionLegacyPathParams pathParams;
-    public TeamsCreateDiscussionLegacyRequest withPathParams(TeamsCreateDiscussionLegacyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public TeamsCreateDiscussionLegacyRequestBody requestBody;
+    public TeamsCreateDiscussionLegacyRequest withRequestBody(TeamsCreateDiscussionLegacyRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public TeamsCreateDiscussionLegacyRequestBody request;
-    public TeamsCreateDiscussionLegacyRequest withRequest(TeamsCreateDiscussionLegacyRequestBody request) {
-        this.request = request;
+    /**
+     * The unique identifier of the team.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
+    public Long teamId;
+    public TeamsCreateDiscussionLegacyRequest withTeamId(Long teamId) {
+        this.teamId = teamId;
         return this;
     }
     

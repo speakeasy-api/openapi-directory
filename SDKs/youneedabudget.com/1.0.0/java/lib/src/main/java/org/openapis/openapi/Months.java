@@ -42,7 +42,7 @@ public class Months {
      */
     public org.openapis.openapi.models.operations.GetBudgetMonthResponse getBudgetMonth(org.openapis.openapi.models.operations.GetBudgetMonthRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBudgetMonthPathParams.class, baseUrl, "/budgets/{budget_id}/months/{month}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBudgetMonthRequest.class, baseUrl, "/budgets/{budget_id}/months/{month}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -90,13 +90,13 @@ public class Months {
      */
     public org.openapis.openapi.models.operations.GetBudgetMonthsResponse getBudgetMonths(org.openapis.openapi.models.operations.GetBudgetMonthsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBudgetMonthsPathParams.class, baseUrl, "/budgets/{budget_id}/months", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBudgetMonthsRequest.class, baseUrl, "/budgets/{budget_id}/months", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBudgetMonthsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBudgetMonthsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

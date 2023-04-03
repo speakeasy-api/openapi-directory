@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountInstitutionCurationRequest {
-    
-    public AccountInstitutionCurationPathParams pathParams;
-    public AccountInstitutionCurationRequest withPathParams(AccountInstitutionCurationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AccountInstitutionCurationSecurity security;
-    public AccountInstitutionCurationRequest withSecurity(AccountInstitutionCurationSecurity security) {
-        this.security = security;
+    /**
+     * ID of the curation
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=curation_id")
+    public Long curationId;
+    public AccountInstitutionCurationRequest withCurationId(Long curationId) {
+        this.curationId = curationId;
         return this;
     }
     

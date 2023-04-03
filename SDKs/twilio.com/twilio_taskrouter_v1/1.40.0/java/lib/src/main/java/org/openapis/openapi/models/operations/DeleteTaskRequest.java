@@ -4,34 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteTaskRequest {
-    
-    public DeleteTaskPathParams pathParams;
-    public DeleteTaskRequest withPathParams(DeleteTaskPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * If provided, deletes this Task if (and only if) the [ETag](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/ETag) header of the Task matches the provided value. This matches the semantics of (and is implemented with) the HTTP [If-Match header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Match).
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
+    public String ifMatch;
+    public DeleteTaskRequest withIfMatch(String ifMatch) {
+        this.ifMatch = ifMatch;
         return this;
     }
     
-    
-    public DeleteTaskHeaders headers;
-    public DeleteTaskRequest withHeaders(DeleteTaskHeaders headers) {
-        this.headers = headers;
+    /**
+     * The SID of the Task resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteTaskRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public DeleteTaskSecurity security;
-    public DeleteTaskRequest withSecurity(DeleteTaskSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteTaskRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Workspace with the Task to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkspaceSid")
+    public String workspaceSid;
+    public DeleteTaskRequest withWorkspaceSid(String workspaceSid) {
+        this.workspaceSid = workspaceSid;
         return this;
     }
     

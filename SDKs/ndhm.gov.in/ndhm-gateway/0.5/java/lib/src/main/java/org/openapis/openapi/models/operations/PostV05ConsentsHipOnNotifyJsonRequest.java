@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05ConsentsHipOnNotifyJsonRequest {
-    
-    public PostV05ConsentsHipOnNotifyJsonHeaders headers;
-    public PostV05ConsentsHipOnNotifyJsonRequest withHeaders(PostV05ConsentsHipOnNotifyJsonHeaders headers) {
-        this.headers = headers;
+    /**
+     * Access token which was issued after successful login with gateway auth server.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostV05ConsentsHipOnNotifyJsonRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.HIPConsentNotificationResponse request;
-    public PostV05ConsentsHipOnNotifyJsonRequest withRequest(org.openapis.openapi.models.shared.HIPConsentNotificationResponse request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.HIPConsentNotificationResponse hipConsentNotificationResponse;
+    public PostV05ConsentsHipOnNotifyJsonRequest withHIPConsentNotificationResponse(org.openapis.openapi.models.shared.HIPConsentNotificationResponse hipConsentNotificationResponse) {
+        this.hipConsentNotificationResponse = hipConsentNotificationResponse;
+        return this;
+    }
+    
+    /**
+     * Suffix of the consent manager to which the request was intended.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-CM-ID")
+    public String xCmId;
+    public PostV05ConsentsHipOnNotifyJsonRequest withXCmId(String xCmId) {
+        this.xCmId = xCmId;
         return this;
     }
     

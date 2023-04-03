@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateArticleCategoriesAddRequest {
-    
-    public PrivateArticleCategoriesAddPathParams pathParams;
-    public PrivateArticleCategoriesAddRequest withPathParams(PrivateArticleCategoriesAddPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CategoriesCreator request;
-    public PrivateArticleCategoriesAddRequest withRequest(org.openapis.openapi.models.shared.CategoriesCreator request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CategoriesCreator categoriesCreator;
+    public PrivateArticleCategoriesAddRequest withCategoriesCreator(org.openapis.openapi.models.shared.CategoriesCreator categoriesCreator) {
+        this.categoriesCreator = categoriesCreator;
         return this;
     }
     
-    
-    public PrivateArticleCategoriesAddSecurity security;
-    public PrivateArticleCategoriesAddRequest withSecurity(PrivateArticleCategoriesAddSecurity security) {
-        this.security = security;
+    /**
+     * Article unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=article_id")
+    public Long articleId;
+    public PrivateArticleCategoriesAddRequest withArticleId(Long articleId) {
+        this.articleId = articleId;
         return this;
     }
     

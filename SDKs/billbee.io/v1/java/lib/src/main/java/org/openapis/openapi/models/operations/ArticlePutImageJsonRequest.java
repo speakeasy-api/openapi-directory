@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ArticlePutImageJsonRequest {
-    
-    public ArticlePutImageJsonPathParams pathParams;
-    public ArticlePutImageJsonRequest withPathParams(ArticlePutImageJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The ArticleApiImageModel
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel request;
-    public ArticlePutImageJsonRequest withRequest(org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel billbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel;
+    public ArticlePutImageJsonRequest withBillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel(org.openapis.openapi.models.shared.BillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel billbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel) {
+        this.billbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel = billbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel;
+        return this;
+    }
+    
+    /**
+     * The image id. If you pass 0, the image will be added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=imageId")
+    public Long imageId;
+    public ArticlePutImageJsonRequest withImageId(Long imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    
+    /**
+     * The product id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
+    public Long productId;
+    public ArticlePutImageJsonRequest withProductId(Long productId) {
+        this.productId = productId;
         return this;
     }
     

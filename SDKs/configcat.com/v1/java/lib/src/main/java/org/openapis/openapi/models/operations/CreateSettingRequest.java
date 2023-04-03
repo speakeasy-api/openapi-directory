@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSettingRequest {
-    
-    public CreateSettingPathParams pathParams;
-    public CreateSettingRequest withPathParams(CreateSettingPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateSettingInitialValues createSettingInitialValues;
+    public CreateSettingRequest withCreateSettingInitialValues(org.openapis.openapi.models.shared.CreateSettingInitialValues createSettingInitialValues) {
+        this.createSettingInitialValues = createSettingInitialValues;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateSettingInitialValues request;
-    public CreateSettingRequest withRequest(org.openapis.openapi.models.shared.CreateSettingInitialValues request) {
-        this.request = request;
+    /**
+     * The identifier of the Config.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=configId")
+    public String configId;
+    public CreateSettingRequest withConfigId(String configId) {
+        this.configId = configId;
         return this;
     }
     

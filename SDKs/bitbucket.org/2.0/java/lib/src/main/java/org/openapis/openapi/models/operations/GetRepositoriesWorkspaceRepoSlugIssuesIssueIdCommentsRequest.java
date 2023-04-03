@@ -4,27 +4,51 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsRequest {
-    
-    public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsPathParams pathParams;
-    public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsRequest withPathParams(GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The issue id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=issue_id")
+    public String issueId;
+    public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsRequest withIssueId(String issueId) {
+        this.issueId = issueId;
         return this;
     }
     
-    
-    public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsQueryParams queryParams;
-    public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsRequest withQueryParams(GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Query string to narrow down the response as per
+     * [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsRequest withQ(String q) {
+        this.q = q;
         return this;
     }
     
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
     
-    public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsSecurity security;
-    public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsRequest withSecurity(GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

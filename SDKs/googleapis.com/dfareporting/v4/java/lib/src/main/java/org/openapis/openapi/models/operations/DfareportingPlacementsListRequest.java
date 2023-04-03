@@ -4,27 +4,346 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DfareportingPlacementsListRequest {
-    
-    public DfareportingPlacementsListPathParams pathParams;
-    public DfareportingPlacementsListRequest withPathParams(DfareportingPlacementsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public DfareportingPlacementsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public DfareportingPlacementsListQueryParams queryParams;
-    public DfareportingPlacementsListRequest withQueryParams(DfareportingPlacementsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public DfareportingPlacementsListRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Select only placements with these active statuses.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=activeStatus")
+    public DfareportingPlacementsListActiveStatusEnum[] activeStatus;
+    public DfareportingPlacementsListRequest withActiveStatus(DfareportingPlacementsListActiveStatusEnum[] activeStatus) {
+        this.activeStatus = activeStatus;
+        return this;
+    }
     
-    public DfareportingPlacementsListSecurity security;
-    public DfareportingPlacementsListRequest withSecurity(DfareportingPlacementsListSecurity security) {
-        this.security = security;
+    /**
+     * Select only placements that belong to these advertisers.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=advertiserIds")
+    public String[] advertiserIds;
+    public DfareportingPlacementsListRequest withAdvertiserIds(String[] advertiserIds) {
+        this.advertiserIds = advertiserIds;
+        return this;
+    }
+    
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DfareportingPlacementsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public DfareportingPlacementsListRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Select only placements that belong to these campaigns.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=campaignIds")
+    public String[] campaignIds;
+    public DfareportingPlacementsListRequest withCampaignIds(String[] campaignIds) {
+        this.campaignIds = campaignIds;
+        return this;
+    }
+    
+    /**
+     * Select only placements that are associated with these compatibilities. DISPLAY and DISPLAY_INTERSTITIAL refer to rendering either on desktop or on mobile devices for regular or interstitial ads respectively. APP and APP_INTERSTITIAL are for rendering in mobile apps. IN_STREAM_VIDEO refers to rendering in in-stream video ads developed with the VAST standard.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=compatibilities")
+    public DfareportingPlacementsListCompatibilitiesEnum[] compatibilities;
+    public DfareportingPlacementsListRequest withCompatibilities(DfareportingPlacementsListCompatibilitiesEnum[] compatibilities) {
+        this.compatibilities = compatibilities;
+        return this;
+    }
+    
+    /**
+     * Select only placements that are associated with these content categories.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contentCategoryIds")
+    public String[] contentCategoryIds;
+    public DfareportingPlacementsListRequest withContentCategoryIds(String[] contentCategoryIds) {
+        this.contentCategoryIds = contentCategoryIds;
+        return this;
+    }
+    
+    /**
+     * Select only placements that are associated with these directory sites.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=directorySiteIds")
+    public String[] directorySiteIds;
+    public DfareportingPlacementsListRequest withDirectorySiteIds(String[] directorySiteIds) {
+        this.directorySiteIds = directorySiteIds;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DfareportingPlacementsListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Select only placements that belong to these placement groups.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupIds")
+    public String[] groupIds;
+    public DfareportingPlacementsListRequest withGroupIds(String[] groupIds) {
+        this.groupIds = groupIds;
+        return this;
+    }
+    
+    /**
+     * Select only placements with these IDs.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids")
+    public String[] ids;
+    public DfareportingPlacementsListRequest withIds(String[] ids) {
+        this.ids = ids;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DfareportingPlacementsListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Select only placements or placement groups whose end date is on or before the specified maxEndDate. The date should be formatted as "yyyy-MM-dd".
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxEndDate")
+    public String maxEndDate;
+    public DfareportingPlacementsListRequest withMaxEndDate(String maxEndDate) {
+        this.maxEndDate = maxEndDate;
+        return this;
+    }
+    
+    /**
+     * Maximum number of results to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public DfareportingPlacementsListRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * Select only placements or placement groups whose start date is on or before the specified maxStartDate. The date should be formatted as "yyyy-MM-dd".
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxStartDate")
+    public String maxStartDate;
+    public DfareportingPlacementsListRequest withMaxStartDate(String maxStartDate) {
+        this.maxStartDate = maxStartDate;
+        return this;
+    }
+    
+    /**
+     * Select only placements or placement groups whose end date is on or after the specified minEndDate. The date should be formatted as "yyyy-MM-dd".
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minEndDate")
+    public String minEndDate;
+    public DfareportingPlacementsListRequest withMinEndDate(String minEndDate) {
+        this.minEndDate = minEndDate;
+        return this;
+    }
+    
+    /**
+     * Select only placements or placement groups whose start date is on or after the specified minStartDate. The date should be formatted as "yyyy-MM-dd".
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minStartDate")
+    public String minStartDate;
+    public DfareportingPlacementsListRequest withMinStartDate(String minStartDate) {
+        this.minStartDate = minStartDate;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DfareportingPlacementsListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Value of the nextPageToken from the previous result page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public DfareportingPlacementsListRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Select only placements with this payment source.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paymentSource")
+    public DfareportingPlacementsListPaymentSourceEnum paymentSource;
+    public DfareportingPlacementsListRequest withPaymentSource(DfareportingPlacementsListPaymentSourceEnum paymentSource) {
+        this.paymentSource = paymentSource;
+        return this;
+    }
+    
+    /**
+     * Select only placements that are associated with these placement strategies.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=placementStrategyIds")
+    public String[] placementStrategyIds;
+    public DfareportingPlacementsListRequest withPlacementStrategyIds(String[] placementStrategyIds) {
+        this.placementStrategyIds = placementStrategyIds;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DfareportingPlacementsListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Select only placements with these pricing types.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pricingTypes")
+    public DfareportingPlacementsListPricingTypesEnum[] pricingTypes;
+    public DfareportingPlacementsListRequest withPricingTypes(DfareportingPlacementsListPricingTypesEnum[] pricingTypes) {
+        this.pricingTypes = pricingTypes;
+        return this;
+    }
+    
+    /**
+     * User profile ID associated with this request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
+    public String profileId;
+    public DfareportingPlacementsListRequest withProfileId(String profileId) {
+        this.profileId = profileId;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DfareportingPlacementsListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Allows searching for placements by name or ID. Wildcards (*) are allowed. For example, "placement*2015" will return placements with names like "placement June 2015", "placement May 2015", or simply "placements 2015". Most of the searches also add wildcards implicitly at the start and the end of the search string. For example, a search string of "placement" will match placements with name "my placement", "placement 2015", or simply "placement" .
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=searchString")
+    public String searchString;
+    public DfareportingPlacementsListRequest withSearchString(String searchString) {
+        this.searchString = searchString;
+        return this;
+    }
+    
+    /**
+     * Select only placements that are associated with these sites.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=siteIds")
+    public String[] siteIds;
+    public DfareportingPlacementsListRequest withSiteIds(String[] siteIds) {
+        this.siteIds = siteIds;
+        return this;
+    }
+    
+    /**
+     * Select only placements that are associated with these sizes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sizeIds")
+    public String[] sizeIds;
+    public DfareportingPlacementsListRequest withSizeIds(String[] sizeIds) {
+        this.sizeIds = sizeIds;
+        return this;
+    }
+    
+    /**
+     * Field by which to sort the list.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortField")
+    public DfareportingPlacementsListSortFieldEnum sortField;
+    public DfareportingPlacementsListRequest withSortField(DfareportingPlacementsListSortFieldEnum sortField) {
+        this.sortField = sortField;
+        return this;
+    }
+    
+    /**
+     * Order of sorted results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortOrder")
+    public DfareportingPlacementsListSortOrderEnum sortOrder;
+    public DfareportingPlacementsListRequest withSortOrder(DfareportingPlacementsListSortOrderEnum sortOrder) {
+        this.sortOrder = sortOrder;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public DfareportingPlacementsListRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public DfareportingPlacementsListRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

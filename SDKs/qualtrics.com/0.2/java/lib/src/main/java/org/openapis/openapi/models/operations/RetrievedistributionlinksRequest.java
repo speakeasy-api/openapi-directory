@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrievedistributionlinksRequest {
-    
-    public RetrievedistributionlinksPathParams pathParams;
-    public RetrievedistributionlinksRequest withPathParams(RetrievedistributionlinksPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the distribution list
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DistributionId")
+    public String distributionId;
+    public RetrievedistributionlinksRequest withDistributionId(String distributionId) {
+        this.distributionId = distributionId;
         return this;
     }
     
-    
-    public RetrievedistributionlinksQueryParams queryParams;
-    public RetrievedistributionlinksRequest withQueryParams(RetrievedistributionlinksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * ID of the survey (eg: SV_123)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=surveyId")
+    public String surveyId;
+    public RetrievedistributionlinksRequest withSurveyId(String surveyId) {
+        this.surveyId = surveyId;
         return this;
     }
     

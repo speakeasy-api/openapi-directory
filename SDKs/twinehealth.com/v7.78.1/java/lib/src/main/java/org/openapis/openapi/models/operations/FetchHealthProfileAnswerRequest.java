@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchHealthProfileAnswerRequest {
-    
-    public FetchHealthProfileAnswerPathParams pathParams;
-    public FetchHealthProfileAnswerRequest withPathParams(FetchHealthProfileAnswerPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Health profile answer identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public FetchHealthProfileAnswerRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public FetchHealthProfileAnswerQueryParams queryParams;
-    public FetchHealthProfileAnswerRequest withQueryParams(FetchHealthProfileAnswerQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * List of related resources to include in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include")
+    public FetchHealthProfileAnswerIncludeEnum include;
+    public FetchHealthProfileAnswerRequest withInclude(FetchHealthProfileAnswerIncludeEnum include) {
+        this.include = include;
         return this;
     }
     

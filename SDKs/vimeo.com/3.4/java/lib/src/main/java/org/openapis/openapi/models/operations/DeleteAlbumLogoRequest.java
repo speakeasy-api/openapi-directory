@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAlbumLogoRequest {
-    
-    public DeleteAlbumLogoPathParams pathParams;
-    public DeleteAlbumLogoRequest withPathParams(DeleteAlbumLogoPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the album.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=album_id")
+    public Double albumId;
+    public DeleteAlbumLogoRequest withAlbumId(Double albumId) {
+        this.albumId = albumId;
         return this;
     }
     
+    /**
+     * The ID of the custom logo.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=logo_id")
+    public Double logoId;
+    public DeleteAlbumLogoRequest withLogoId(Double logoId) {
+        this.logoId = logoId;
+        return this;
+    }
     
-    public DeleteAlbumLogoSecurity security;
-    public DeleteAlbumLogoRequest withSecurity(DeleteAlbumLogoSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public DeleteAlbumLogoRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

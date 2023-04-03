@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EditContactRequest {
-    
-    public EditContactPathParams pathParams;
-    public EditContactRequest withPathParams(EditContactPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ContactEditRequest contactEditRequest;
+    public EditContactRequest withContactEditRequest(org.openapis.openapi.models.shared.ContactEditRequest contactEditRequest) {
+        this.contactEditRequest = contactEditRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ContactEditRequest request;
-    public EditContactRequest withRequest(org.openapis.openapi.models.shared.ContactEditRequest request) {
-        this.request = request;
+    /**
+     * The unique identifier of the contact in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=contact_id")
+    public String contactId;
+    public EditContactRequest withContactId(String contactId) {
+        this.contactId = contactId;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the group in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public String groupId;
+    public EditContactRequest withGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    
+    /**
+     * The current version identifier of the contact
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public String version;
+    public EditContactRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

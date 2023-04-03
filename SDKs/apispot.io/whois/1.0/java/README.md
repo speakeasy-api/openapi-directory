@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CheckDomainPathParams;
 import org.openapis.openapi.models.operations.CheckDomainRequest;
 import org.openapis.openapi.models.operations.CheckDomainResponse;
 
@@ -26,17 +25,13 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    apiKeyAuth = new SchemeAPIKeyAuth() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    apiKeyAuth = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CheckDomainRequest req = new CheckDomainRequest() {{
-                pathParams = new CheckDomainPathParams() {{
-                    domain = "corrupti";
-                }};
-            }};            
+                domain = "corrupti";
+            }}            
 
             CheckDomainResponse res = sdk.checkDomain(req);
 
@@ -50,7 +45,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

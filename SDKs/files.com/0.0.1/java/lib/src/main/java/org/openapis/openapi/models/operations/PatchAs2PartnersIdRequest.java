@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchAs2PartnersIdRequest {
-    
-    public PatchAs2PartnersIdPathParams pathParams;
-    public PatchAs2PartnersIdRequest withPathParams(PatchAs2PartnersIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public PatchAs2PartnersIdRequestBody requestBody;
+    public PatchAs2PartnersIdRequest withRequestBody(PatchAs2PartnersIdRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PatchAs2PartnersIdRequestBody request;
-    public PatchAs2PartnersIdRequest withRequest(PatchAs2PartnersIdRequestBody request) {
-        this.request = request;
+    /**
+     * As2 Partner ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PatchAs2PartnersIdRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

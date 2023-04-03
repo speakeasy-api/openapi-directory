@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateVideoThumbnailAlt1Request {
-    
-    public CreateVideoThumbnailAlt1PathParams pathParams;
-    public CreateVideoThumbnailAlt1Request withPathParams(CreateVideoThumbnailAlt1PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.picture+json")
-    public CreateVideoThumbnailAlt1RequestBody request;
-    public CreateVideoThumbnailAlt1Request withRequest(CreateVideoThumbnailAlt1RequestBody request) {
-        this.request = request;
+    public CreateVideoThumbnailAlt1RequestBody requestBody;
+    public CreateVideoThumbnailAlt1Request withRequestBody(CreateVideoThumbnailAlt1RequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The ID of the channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel_id")
+    public Double channelId;
+    public CreateVideoThumbnailAlt1Request withChannelId(Double channelId) {
+        this.channelId = channelId;
+        return this;
+    }
     
-    public CreateVideoThumbnailAlt1Security security;
-    public CreateVideoThumbnailAlt1Request withSecurity(CreateVideoThumbnailAlt1Security security) {
-        this.security = security;
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public CreateVideoThumbnailAlt1Request withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

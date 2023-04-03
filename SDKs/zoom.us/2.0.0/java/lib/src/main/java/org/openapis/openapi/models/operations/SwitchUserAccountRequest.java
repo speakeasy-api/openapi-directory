@@ -7,24 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SwitchUserAccountRequest {
-    
-    public SwitchUserAccountPathParams pathParams;
-    public SwitchUserAccountRequest withPathParams(SwitchUserAccountPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public SwitchUserAccountApplicationJSON request;
-    public SwitchUserAccountRequest withRequest(SwitchUserAccountApplicationJSON request) {
-        this.request = request;
+    public SwitchUserAccountApplicationJSON requestBody;
+    public SwitchUserAccountRequest withRequestBody(SwitchUserAccountApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public SwitchUserAccountRequest withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
     
-    public SwitchUserAccountSecurity security;
-    public SwitchUserAccountRequest withSecurity(SwitchUserAccountSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public SwitchUserAccountRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegisterForRealtimeApiDeleteRequest {
-    
-    public RegisterForRealtimeApiDeletePathParams pathParams;
-    public RegisterForRealtimeApiDeleteRequest withPathParams(RegisterForRealtimeApiDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the realtime API registration
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public RegisterForRealtimeApiDeleteRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

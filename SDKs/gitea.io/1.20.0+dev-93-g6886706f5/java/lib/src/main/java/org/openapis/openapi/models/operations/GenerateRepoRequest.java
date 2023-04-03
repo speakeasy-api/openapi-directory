@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GenerateRepoRequest {
-    
-    public GenerateRepoPathParams pathParams;
-    public GenerateRepoRequest withPathParams(GenerateRepoPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.GenerateRepoOption generateRepoOption;
+    public GenerateRepoRequest withGenerateRepoOption(org.openapis.openapi.models.shared.GenerateRepoOption generateRepoOption) {
+        this.generateRepoOption = generateRepoOption;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GenerateRepoOption request;
-    public GenerateRepoRequest withRequest(org.openapis.openapi.models.shared.GenerateRepoOption request) {
-        this.request = request;
+    /**
+     * name of the template repository owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=template_owner")
+    public String templateOwner;
+    public GenerateRepoRequest withTemplateOwner(String templateOwner) {
+        this.templateOwner = templateOwner;
+        return this;
+    }
+    
+    /**
+     * name of the template repository
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=template_repo")
+    public String templateRepo;
+    public GenerateRepoRequest withTemplateRepo(String templateRepo) {
+        this.templateRepo = templateRepo;
         return this;
     }
     

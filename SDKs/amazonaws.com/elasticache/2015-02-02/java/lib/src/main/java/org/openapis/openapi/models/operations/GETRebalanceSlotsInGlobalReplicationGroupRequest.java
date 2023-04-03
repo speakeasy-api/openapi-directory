@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRebalanceSlotsInGlobalReplicationGroupRequest {
-    
-    public GETRebalanceSlotsInGlobalReplicationGroupQueryParams queryParams;
-    public GETRebalanceSlotsInGlobalReplicationGroupRequest withQueryParams(GETRebalanceSlotsInGlobalReplicationGroupQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETRebalanceSlotsInGlobalReplicationGroupActionEnum action;
+    public GETRebalanceSlotsInGlobalReplicationGroupRequest withAction(GETRebalanceSlotsInGlobalReplicationGroupActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * If &lt;code&gt;True&lt;/code&gt;, redistribution is applied immediately.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ApplyImmediately")
+    public Boolean applyImmediately;
+    public GETRebalanceSlotsInGlobalReplicationGroupRequest withApplyImmediately(Boolean applyImmediately) {
+        this.applyImmediately = applyImmediately;
+        return this;
+    }
     
-    public GETRebalanceSlotsInGlobalReplicationGroupHeaders headers;
-    public GETRebalanceSlotsInGlobalReplicationGroupRequest withHeaders(GETRebalanceSlotsInGlobalReplicationGroupHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name of the Global datastore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GlobalReplicationGroupId")
+    public String globalReplicationGroupId;
+    public GETRebalanceSlotsInGlobalReplicationGroupRequest withGlobalReplicationGroupId(String globalReplicationGroupId) {
+        this.globalReplicationGroupId = globalReplicationGroupId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETRebalanceSlotsInGlobalReplicationGroupVersionEnum version;
+    public GETRebalanceSlotsInGlobalReplicationGroupRequest withVersion(GETRebalanceSlotsInGlobalReplicationGroupVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETRebalanceSlotsInGlobalReplicationGroupRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETRebalanceSlotsInGlobalReplicationGroupRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETRebalanceSlotsInGlobalReplicationGroupRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETRebalanceSlotsInGlobalReplicationGroupRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETRebalanceSlotsInGlobalReplicationGroupRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETRebalanceSlotsInGlobalReplicationGroupRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETRebalanceSlotsInGlobalReplicationGroupRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

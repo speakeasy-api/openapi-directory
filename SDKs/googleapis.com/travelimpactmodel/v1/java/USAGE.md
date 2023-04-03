@@ -4,13 +4,12 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.TravelimpactmodelFlightsComputeFlightEmissionsQueryParams;
 import org.openapis.openapi.models.operations.TravelimpactmodelFlightsComputeFlightEmissionsRequest;
 import org.openapis.openapi.models.operations.TravelimpactmodelFlightsComputeFlightEmissionsResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.ComputeFlightEmissionsRequest;
 import org.openapis.openapi.models.shared.Flight;
 import org.openapis.openapi.models.shared.Date;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -20,57 +19,55 @@ public class Application {
                 .build();
 
             TravelimpactmodelFlightsComputeFlightEmissionsRequest req = new TravelimpactmodelFlightsComputeFlightEmissionsRequest() {{
-                queryParams = new TravelimpactmodelFlightsComputeFlightEmissionsQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "provident";
-                    alt = "proto";
-                    callback = "quibusdam";
-                    fields = "unde";
-                    key = "nulla";
-                    oauthToken = "corrupti";
-                    prettyPrint = false;
-                    quotaUser = "illum";
-                    uploadType = "vel";
-                    uploadProtocol = "error";
-                }};
-                request = new ComputeFlightEmissionsRequest() {{
+                dollarXgafv = "2";
+                computeFlightEmissionsRequest = new ComputeFlightEmissionsRequest() {{
                     flights = new org.openapis.openapi.models.shared.Flight[]{{
                         add(new Flight() {{
                             departureDate = new Date() {{
-                                day = 384382;
-                                month = 437587;
-                                year = 297534;
+                                day = 715190;
+                                month = 844266;
+                                year = 602763;
                             }};
-                            destination = "debitis";
-                            flightNumber = 56713;
-                            operatingCarrierCode = "delectus";
-                            origin = "tempora";
+                            destination = "nulla";
+                            flightNumber = 544883;
+                            operatingCarrierCode = "illum";
+                            origin = "vel";
                         }}),
                         add(new Flight() {{
                             departureDate = new Date() {{
-                                day = 383441;
-                                month = 477665;
-                                year = 791725;
+                                day = 623564;
+                                month = 645894;
+                                year = 384382;
                             }};
-                            destination = "placeat";
-                            flightNumber = 528895;
-                            operatingCarrierCode = "iusto";
-                            origin = "excepturi";
+                            destination = "iure";
+                            flightNumber = 297534;
+                            operatingCarrierCode = "debitis";
+                            origin = "ipsa";
                         }}),
                         add(new Flight() {{
                             departureDate = new Date() {{
-                                day = 392785;
-                                month = 925597;
-                                year = 836079;
+                                day = 963663;
+                                month = 272656;
+                                year = 383441;
                             }};
-                            destination = "ab";
-                            flightNumber = 337396;
-                            operatingCarrierCode = "veritatis";
-                            origin = "deserunt";
+                            destination = "molestiae";
+                            flightNumber = 791725;
+                            operatingCarrierCode = "placeat";
+                            origin = "voluptatum";
                         }}),
                     }};
                 }};
-            }};            
+                accessToken = "iusto";
+                alt = "media";
+                callback = "nisi";
+                fields = "recusandae";
+                key = "temporibus";
+                oauthToken = "ab";
+                prettyPrint = false;
+                quotaUser = "quis";
+                uploadType = "veritatis";
+                uploadProtocol = "deserunt";
+            }}            
 
             TravelimpactmodelFlightsComputeFlightEmissionsResponse res = sdk.flights.travelimpactmodelFlightsComputeFlightEmissions(req);
 

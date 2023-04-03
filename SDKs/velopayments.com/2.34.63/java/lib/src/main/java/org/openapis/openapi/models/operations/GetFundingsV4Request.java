@@ -4,13 +4,58 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFundingsV4Request {
+    /**
+     * Page number. Default is 1.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetFundingsV4Request withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetFundingsV4QueryParams queryParams;
-    public GetFundingsV4Request withQueryParams(GetFundingsV4QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of results to return in a page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public GetFundingsV4Request withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The account owner Payor ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=payorId")
+    public String payorId;
+    public GetFundingsV4Request withPayorId(String payorId) {
+        this.payorId = payorId;
+        return this;
+    }
+    
+    /**
+     * List of sort fields. Example: ```?sort=destinationCurrency:asc,destinationAmount:asc```
+     * Default is no sort. The supported sort fields are: dateTime and amount.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetFundingsV4Request withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * The source account name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sourceAccountName")
+    public String sourceAccountName;
+    public GetFundingsV4Request withSourceAccountName(String sourceAccountName) {
+        this.sourceAccountName = sourceAccountName;
         return this;
     }
     

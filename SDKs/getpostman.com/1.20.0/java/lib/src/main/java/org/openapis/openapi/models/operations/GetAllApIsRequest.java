@@ -4,13 +4,116 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllApIsRequest {
+    /**
+     * Only return APIs that have been created by the user ID represented by the given value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdBy")
+    public String createdBy;
+    public GetAllApIsRequest withCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
+        return this;
+    }
     
-    public GetAllApIsQueryParams queryParams;
-    public GetAllApIsRequest withQueryParams(GetAllApIsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Only return APIs whose description includes the given value. Matching is case insensitive.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
+    public String description;
+    public GetAllApIsRequest withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    
+    /**
+     * The sorting direction, which can be ascending or descending. The value can be asc to specify an ascending direction or desc to specify a descending direction. If none is specified, the default sorting direction is descending for timestamp and numeric fields and ascending otherwise. An ID is not considered a numeric field.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public String direction;
+    public GetAllApIsRequest withDirection(String direction) {
+        this.direction = direction;
+        return this;
+    }
+    
+    /**
+     * Only return APIs with the corresponding privacy state. Public APIs have the isPublic value true; private APIs have the isPublic value false.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isPublic")
+    public String isPublic;
+    public GetAllApIsRequest withIsPublic(String isPublic) {
+        this.isPublic = isPublic;
+        return this;
+    }
+    
+    /**
+     * Only return APIs whose name includes the given value. Matching is case insensitive.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public GetAllApIsRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Only return APIs that have been updated after this time. Time is represented using the ISO 8601 date and time format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public GetAllApIsRequest withSince(String since) {
+        this.since = since;
+        return this;
+    }
+    
+    /**
+     * The value of sort can be one of the names of the fields included in the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetAllApIsRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Only return APIs whose summary includes the given value. Matching is case insensitive.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=summary")
+    public String summary;
+    public GetAllApIsRequest withSummary(String summary) {
+        this.summary = summary;
+        return this;
+    }
+    
+    /**
+     * Only return APIs that have been updated before this time. Time is represented using the ISO 8601 date and time format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=until")
+    public String until;
+    public GetAllApIsRequest withUntil(String until) {
+        this.until = until;
+        return this;
+    }
+    
+    /**
+     * Only return APIs that have been updated by the user ID represented by the given value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedBy")
+    public String updatedBy;
+    public GetAllApIsRequest withUpdatedBy(String updatedBy) {
+        this.updatedBy = updatedBy;
+        return this;
+    }
+    
+    /**
+     * Only return APIs that are inside the given workspace.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=workspace")
+    public String workspace;
+    public GetAllApIsRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

@@ -4,20 +4,98 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSitesWithinOutputFormatRequest {
-    
-    public GetSitesWithinOutputFormatPathParams pathParams;
-    public GetSitesWithinOutputFormatRequest withPathParams(GetSitesWithinOutputFormatPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A bounding box (xmin,ymin,xmax,ymax) used to limit the search area. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#bbox target="_blank"&gt;bbox&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bbox")
+    public String bbox;
+    public GetSitesWithinOutputFormatRequest withBbox(String bbox) {
+        this.bbox = bbox;
         return this;
     }
     
+    /**
+     * If true, include only basic match and address details in results. Not supported for shp, csv, and gml formats.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=brief")
+    public Boolean brief;
+    public GetSitesWithinOutputFormatRequest withBrief(Boolean brief) {
+        this.brief = brief;
+        return this;
+    }
     
-    public GetSitesWithinOutputFormatQueryParams queryParams;
-    public GetSitesWithinOutputFormatRequest withQueryParams(GetSitesWithinOutputFormatQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * If true, excludes sites that are units of a parent site
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=excludeUnits")
+    public Boolean excludeUnits;
+    public GetSitesWithinOutputFormatRequest withExcludeUnits(Boolean excludeUnits) {
+        this.excludeUnits = excludeUnits;
+        return this;
+    }
+    
+    /**
+     * Describes the nature of the address location. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#locationDescriptor target="_blank"&gt;locationDescriptor&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locationDescriptor")
+    public GetSitesWithinOutputFormatLocationDescriptorEnum locationDescriptor;
+    public GetSitesWithinOutputFormatRequest withLocationDescriptor(GetSitesWithinOutputFormatLocationDescriptorEnum locationDescriptor) {
+        this.locationDescriptor = locationDescriptor;
+        return this;
+    }
+    
+    /**
+     * The maximum number of search results to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public GetSitesWithinOutputFormatRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * If true, excludes sites without a civic address
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onlyCivic")
+    public Boolean onlyCivic;
+    public GetSitesWithinOutputFormatRequest withOnlyCivic(Boolean onlyCivic) {
+        this.onlyCivic = onlyCivic;
+        return this;
+    }
+    
+    /**
+     * Results format. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank"&gt;outputFormat&lt;/a&gt;. 
+     * 
+     * Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=outputFormat")
+    public GetSitesWithinOutputFormatOutputFormatEnum outputFormat;
+    public GetSitesWithinOutputFormatRequest withOutputFormat(GetSitesWithinOutputFormatOutputFormatEnum outputFormat) {
+        this.outputFormat = outputFormat;
+        return this;
+    }
+    
+    /**
+     * The EPSG code of the spatial reference system (SRS) to use for output geometries. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank"&gt;outputSRS&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputSRS")
+    public GetSitesWithinOutputFormatOutputSrsEnum outputSRS;
+    public GetSitesWithinOutputFormatRequest withOutputSRS(GetSitesWithinOutputFormatOutputSrsEnum outputSRS) {
+        this.outputSRS = outputSRS;
+        return this;
+    }
+    
+    /**
+     * The distance to move the accessPoint away from the curb and towards the inside of the parcel (in metres). Ignored if locationDescriptor not set to accessPoint.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=setBack")
+    public Long setBack;
+    public GetSitesWithinOutputFormatRequest withSetBack(Long setBack) {
+        this.setBack = setBack;
         return this;
     }
     

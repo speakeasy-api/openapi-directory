@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExtrasConfigContextsReadRequest {
-    
-    public ExtrasConfigContextsReadPathParams pathParams;
-    public ExtrasConfigContextsReadRequest withPathParams(ExtrasConfigContextsReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this config context.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public ExtrasConfigContextsReadRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

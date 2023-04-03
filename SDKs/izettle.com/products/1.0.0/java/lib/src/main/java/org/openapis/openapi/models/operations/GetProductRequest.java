@@ -4,27 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProductRequest {
-    
-    public GetProductPathParams pathParams;
-    public GetProductRequest withPathParams(GetProductPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
+    public String ifNoneMatch;
+    public GetProductRequest withIfNoneMatch(String ifNoneMatch) {
+        this.ifNoneMatch = ifNoneMatch;
         return this;
     }
     
-    
-    public GetProductHeaders headers;
-    public GetProductRequest withHeaders(GetProductHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationUuid")
+    public String organizationUuid;
+    public GetProductRequest withOrganizationUuid(String organizationUuid) {
+        this.organizationUuid = organizationUuid;
         return this;
     }
     
-    
-    public GetProductSecurity security;
-    public GetProductRequest withSecurity(GetProductSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productUuid")
+    public String productUuid;
+    public GetProductRequest withProductUuid(String productUuid) {
+        this.productUuid = productUuid;
         return this;
     }
     

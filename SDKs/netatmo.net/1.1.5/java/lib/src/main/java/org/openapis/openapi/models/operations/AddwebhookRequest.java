@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddwebhookRequest {
-    
-    public AddwebhookQueryParams queryParams;
-    public AddwebhookRequest withQueryParams(AddwebhookQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Webhooks are only available for Welcome, enter app_camera.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=app_type")
+    public String appType;
+    public AddwebhookRequest withAppType(String appType) {
+        this.appType = appType;
         return this;
     }
     
-    
-    public AddwebhookSecurity security;
-    public AddwebhookRequest withSecurity(AddwebhookSecurity security) {
-        this.security = security;
+    /**
+     * Your webhook callback url
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=url")
+    public String url;
+    public AddwebhookRequest withUrl(String url) {
+        this.url = url;
         return this;
     }
     

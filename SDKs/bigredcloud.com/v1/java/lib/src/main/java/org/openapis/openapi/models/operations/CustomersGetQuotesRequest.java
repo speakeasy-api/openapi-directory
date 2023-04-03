@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CustomersGetQuotesRequest {
-    
-    public CustomersGetQuotesPathParams pathParams;
-    public CustomersGetQuotesRequest withPathParams(CustomersGetQuotesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of Customer to return quotes.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=itemId")
+    public Long itemId;
+    public CustomersGetQuotesRequest withItemId(Long itemId) {
+        this.itemId = itemId;
         return this;
     }
     

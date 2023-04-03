@@ -4,27 +4,106 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LowestFaresRequest {
-    
-    public LowestFaresQueryParams queryParams;
-    public LowestFaresRequest withQueryParams(LowestFaresQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public LowestFaresRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public LowestFaresHeaders headers;
-    public LowestFaresRequest withHeaders(LowestFaresHeaders headers) {
-        this.headers = headers;
+    /**
+     * Cabin class: 'economy', 'premium_economy', 'business', 'first' (Acceptable values are: "", "economy", "premium_economy", "business", "first")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cabin-class")
+    public String cabinClass;
+    public LowestFaresRequest withCabinClass(String cabinClass) {
+        this.cabinClass = cabinClass;
         return this;
     }
     
+    /**
+     * Search fares from these carriers' catalogues e.g. '4U;OS;LH'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=catalogues")
+    public String catalogues;
+    public LowestFaresRequest withCatalogues(String catalogues) {
+        this.catalogues = catalogues;
+        return this;
+    }
     
-    public LowestFaresSecurity security;
-    public LowestFaresRequest withSecurity(LowestFaresSecurity security) {
-        this.security = security;
+    /**
+     * Country code of requestor. 2-letter ISO 3166-1 country code (e.g. 'de')
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public String country;
+    public LowestFaresRequest withCountry(String country) {
+        this.country = country;
+        return this;
+    }
+    
+    /**
+     * Journey destination. 3-letter IATA airport code e.g. 'MAD'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destination")
+    public String destination;
+    public LowestFaresRequest withDestination(String destination) {
+        this.destination = destination;
+        return this;
+    }
+    
+    /**
+     * Fare family: basic, smart, best, smartflex, bestflex - Germanwings only (Acceptable values are: "", "basic", "smart", "best", "smartflex", "bestflex")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fare-family")
+    public String fareFamily;
+    public LowestFaresRequest withFareFamily(String fareFamily) {
+        this.fareFamily = fareFamily;
+        return this;
+    }
+    
+    /**
+     * Journey origin. 3-letter IATA aiport code e.g. 'FRA'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=origin")
+    public String origin;
+    public LowestFaresRequest withOrigin(String origin) {
+        this.origin = origin;
+        return this;
+    }
+    
+    /**
+     * Journey return-date - mandatory for OS and LH searches YYYY-MM-DD
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=return-date")
+    public String returnDate;
+    public LowestFaresRequest withReturnDate(String returnDate) {
+        this.returnDate = returnDate;
+        return this;
+    }
+    
+    /**
+     * Journey travel-date YYYY-MM-DD
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=travel-date")
+    public String travelDate;
+    public LowestFaresRequest withTravelDate(String travelDate) {
+        this.travelDate = travelDate;
+        return this;
+    }
+    
+    /**
+     * Type and number of travelers e.g. '(adult=2;child=2;infant=1)'. For LH only (adult=1) possible
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=travelers")
+    public String travelers;
+    public LowestFaresRequest withTravelers(String travelers) {
+        this.travelers = travelers;
         return this;
     }
     

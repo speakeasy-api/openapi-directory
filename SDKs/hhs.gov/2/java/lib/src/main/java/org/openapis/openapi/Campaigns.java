@@ -48,7 +48,7 @@ public class Campaigns {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetResourcesCampaignsJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetResourcesCampaignsJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -89,7 +89,7 @@ public class Campaigns {
      */
     public org.openapis.openapi.models.operations.GetResourcesCampaignsIdJsonResponse getResourcesCampaignsIdJson(org.openapis.openapi.models.operations.GetResourcesCampaignsIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesCampaignsIdJsonPathParams.class, baseUrl, "/resources/campaigns/{id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesCampaignsIdJsonRequest.class, baseUrl, "/resources/campaigns/{id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -130,13 +130,13 @@ public class Campaigns {
      */
     public org.openapis.openapi.models.operations.GetResourcesCampaignsIdMediaJsonResponse getResourcesCampaignsIdMediaJson(org.openapis.openapi.models.operations.GetResourcesCampaignsIdMediaJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesCampaignsIdMediaJsonPathParams.class, baseUrl, "/resources/campaigns/{id}/media.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesCampaignsIdMediaJsonRequest.class, baseUrl, "/resources/campaigns/{id}/media.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetResourcesCampaignsIdMediaJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetResourcesCampaignsIdMediaJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -177,13 +177,13 @@ public class Campaigns {
      */
     public org.openapis.openapi.models.operations.GetResourcesCampaignsIdSyndicateFormatResponse getResourcesCampaignsIdSyndicateFormat(org.openapis.openapi.models.operations.GetResourcesCampaignsIdSyndicateFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesCampaignsIdSyndicateFormatPathParams.class, baseUrl, "/resources/campaigns/{id}/syndicate.{format}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesCampaignsIdSyndicateFormatRequest.class, baseUrl, "/resources/campaigns/{id}/syndicate.{format}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetResourcesCampaignsIdSyndicateFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetResourcesCampaignsIdSyndicateFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

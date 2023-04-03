@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUserProjectsRequest {
-    
-    public GetUserProjectsPathParams pathParams;
-    public GetUserProjectsRequest withPathParams(GetUserProjectsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Page Number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetUserProjectsRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * Page Size
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
+    public Long size;
+    public GetUserProjectsRequest withSize(Long size) {
+        this.size = size;
+        return this;
+    }
     
-    public GetUserProjectsQueryParams queryParams;
-    public GetUserProjectsRequest withQueryParams(GetUserProjectsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * User's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public GetUserProjectsRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

@@ -31,7 +31,7 @@ public class AccessTokens {
 
     public org.openapis.openapi.models.operations.GetOauthV1AccessTokensTokenGetResponse getOauthV1AccessTokensTokenGet(org.openapis.openapi.models.operations.GetOauthV1AccessTokensTokenGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOauthV1AccessTokensTokenGetPathParams.class, baseUrl, "/oauth/v1/access-tokens/{token}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOauthV1AccessTokensTokenGetRequest.class, baseUrl, "/oauth/v1/access-tokens/{token}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

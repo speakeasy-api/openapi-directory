@@ -42,13 +42,13 @@ public class UsageHistories {
      */
     public org.openapis.openapi.models.operations.GetNetworkClientsUsageHistoriesResponse getNetworkClientsUsageHistories(org.openapis.openapi.models.operations.GetNetworkClientsUsageHistoriesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkClientsUsageHistoriesPathParams.class, baseUrl, "/networks/{networkId}/clients/usageHistories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkClientsUsageHistoriesRequest.class, baseUrl, "/networks/{networkId}/clients/usageHistories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkClientsUsageHistoriesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkClientsUsageHistoriesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

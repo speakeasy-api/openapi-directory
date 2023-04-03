@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CrashGroupsUpdateRequest {
-    
-    public CrashGroupsUpdatePathParams pathParams;
-    public CrashGroupsUpdateRequest withPathParams(CrashGroupsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Group change object. All fields are optional and only provided fields will get updated.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public CrashGroupsUpdateRequestBody request;
-    public CrashGroupsUpdateRequest withRequest(CrashGroupsUpdateRequestBody request) {
-        this.request = request;
+    public CrashGroupsUpdateRequestBody requestBody;
+    public CrashGroupsUpdateRequest withRequestBody(CrashGroupsUpdateRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public CrashGroupsUpdateRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public CrashGroupsUpdateSecurity security;
-    public CrashGroupsUpdateRequest withSecurity(CrashGroupsUpdateSecurity security) {
-        this.security = security;
+    /**
+     * id of a specific group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=crash_group_id")
+    public String crashGroupId;
+    public CrashGroupsUpdateRequest withCrashGroupId(String crashGroupId) {
+        this.crashGroupId = crashGroupId;
+        return this;
+    }
+    
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public CrashGroupsUpdateRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

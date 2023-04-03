@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteMediaRecordingRequest {
-    
-    public DeleteMediaRecordingPathParams pathParams;
-    public DeleteMediaRecordingRequest withPathParams(DeleteMediaRecordingPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteMediaRecordingSecurity security;
-    public DeleteMediaRecordingRequest withSecurity(DeleteMediaRecordingSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteMediaRecordingRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the MediaRecording resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteMediaRecordingRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

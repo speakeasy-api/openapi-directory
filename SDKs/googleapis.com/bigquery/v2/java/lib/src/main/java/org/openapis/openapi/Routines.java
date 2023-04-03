@@ -34,25 +34,26 @@ public class Routines {
     /**
      * Deletes the routine specified by routineId from the dataset.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigqueryRoutinesDeleteResponse bigqueryRoutinesDelete(org.openapis.openapi.models.operations.BigqueryRoutinesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigqueryRoutinesDeleteResponse bigqueryRoutinesDelete(org.openapis.openapi.models.operations.BigqueryRoutinesDeleteRequest request, org.openapis.openapi.models.operations.BigqueryRoutinesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryRoutinesDeletePathParams.class, baseUrl, "/projects/{projectId}/datasets/{datasetId}/routines/{routineId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryRoutinesDeleteRequest.class, baseUrl, "/projects/{projectId}/datasets/{datasetId}/routines/{routineId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryRoutinesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryRoutinesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -73,25 +74,26 @@ public class Routines {
     /**
      * Gets the specified routine resource by routine ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigqueryRoutinesGetResponse bigqueryRoutinesGet(org.openapis.openapi.models.operations.BigqueryRoutinesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigqueryRoutinesGetResponse bigqueryRoutinesGet(org.openapis.openapi.models.operations.BigqueryRoutinesGetRequest request, org.openapis.openapi.models.operations.BigqueryRoutinesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryRoutinesGetPathParams.class, baseUrl, "/projects/{projectId}/datasets/{datasetId}/routines/{routineId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryRoutinesGetRequest.class, baseUrl, "/projects/{projectId}/datasets/{datasetId}/routines/{routineId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryRoutinesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryRoutinesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -118,27 +120,28 @@ public class Routines {
     /**
      * Creates a new routine in the dataset.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigqueryRoutinesInsertResponse bigqueryRoutinesInsert(org.openapis.openapi.models.operations.BigqueryRoutinesInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigqueryRoutinesInsertResponse bigqueryRoutinesInsert(org.openapis.openapi.models.operations.BigqueryRoutinesInsertRequest request, org.openapis.openapi.models.operations.BigqueryRoutinesInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryRoutinesInsertPathParams.class, baseUrl, "/projects/{projectId}/datasets/{datasetId}/routines", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryRoutinesInsertRequest.class, baseUrl, "/projects/{projectId}/datasets/{datasetId}/routines", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "routineInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryRoutinesInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryRoutinesInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -165,25 +168,26 @@ public class Routines {
     /**
      * Lists all routines in the specified dataset. Requires the READER dataset role.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigqueryRoutinesListResponse bigqueryRoutinesList(org.openapis.openapi.models.operations.BigqueryRoutinesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigqueryRoutinesListResponse bigqueryRoutinesList(org.openapis.openapi.models.operations.BigqueryRoutinesListRequest request, org.openapis.openapi.models.operations.BigqueryRoutinesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryRoutinesListPathParams.class, baseUrl, "/projects/{projectId}/datasets/{datasetId}/routines", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryRoutinesListRequest.class, baseUrl, "/projects/{projectId}/datasets/{datasetId}/routines", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryRoutinesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryRoutinesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -210,27 +214,28 @@ public class Routines {
     /**
      * Updates information in an existing routine. The update method replaces the entire Routine resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BigqueryRoutinesUpdateResponse bigqueryRoutinesUpdate(org.openapis.openapi.models.operations.BigqueryRoutinesUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BigqueryRoutinesUpdateResponse bigqueryRoutinesUpdate(org.openapis.openapi.models.operations.BigqueryRoutinesUpdateRequest request, org.openapis.openapi.models.operations.BigqueryRoutinesUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryRoutinesUpdatePathParams.class, baseUrl, "/projects/{projectId}/datasets/{datasetId}/routines/{routineId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BigqueryRoutinesUpdateRequest.class, baseUrl, "/projects/{projectId}/datasets/{datasetId}/routines/{routineId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "routineInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryRoutinesUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BigqueryRoutinesUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

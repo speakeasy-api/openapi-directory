@@ -4,13 +4,17 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTagsRequest {
-    
-    public GetTagsQueryParams queryParams;
-    public GetTagsRequest withQueryParams(GetTagsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of records to return in each page.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[size]")
+    public Long pageSize;
+    public GetTagsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

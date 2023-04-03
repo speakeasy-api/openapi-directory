@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AddNotificationChannelHeaders;
 import org.openapis.openapi.models.operations.AddNotificationChannelRequestBodyConfig;
 import org.openapis.openapi.models.operations.AddNotificationChannelRequestBody;
 import org.openapis.openapi.models.operations.AddNotificationChannelRequest;
@@ -32,42 +31,38 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AddNotificationChannelRequest req = new AddNotificationChannelRequest() {{
-                headers = new AddNotificationChannelHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new AddNotificationChannelRequestBody() {{
+                requestBody = new AddNotificationChannelRequestBody() {{
                     config = new AddNotificationChannelRequestBodyConfig() {{
                         filters = new NotificationFilterConfig() {{
                             messageTypes = new org.openapis.openapi.models.shared.NotificationMessageTypeEnum[]{{
                                 add("NEW_ASSOCIATION"),
                                 add("SEVERITY_UPGRADED"),
-                                add("SEVERITY_UPGRADED"),
-                                add("CLOSED_INSIGHT"),
+                                add("NEW_RECOMMENDATION"),
                             }};
                             severities = new org.openapis.openapi.models.shared.InsightSeverityEnum[]{{
-                                add("LOW"),
+                                add("HIGH"),
+                                add("MEDIUM"),
                                 add("HIGH"),
                             }};
                         }};
                         sns = new SnsChannelConfig() {{
-                            topicArn = "ipsa";
+                            topicArn = "vel";
                         }};
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "error";
+                xAmzContentSha256 = "deserunt";
+                xAmzCredential = "suscipit";
+                xAmzDate = "iure";
+                xAmzSecurityToken = "magnam";
+                xAmzSignature = "debitis";
+                xAmzSignedHeaders = "ipsa";
+            }}            
 
             AddNotificationChannelResponse res = sdk.addNotificationChannel(req);
 
@@ -81,7 +76,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

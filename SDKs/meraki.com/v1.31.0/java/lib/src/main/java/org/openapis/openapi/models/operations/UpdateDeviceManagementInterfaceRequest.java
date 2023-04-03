@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDeviceManagementInterfaceRequest {
-    
-    public UpdateDeviceManagementInterfacePathParams pathParams;
-    public UpdateDeviceManagementInterfaceRequest withPathParams(UpdateDeviceManagementInterfacePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateDeviceManagementInterfaceRequestBody requestBody;
+    public UpdateDeviceManagementInterfaceRequest withRequestBody(UpdateDeviceManagementInterfaceRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateDeviceManagementInterfaceRequestBody request;
-    public UpdateDeviceManagementInterfaceRequest withRequest(UpdateDeviceManagementInterfaceRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public UpdateDeviceManagementInterfaceRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

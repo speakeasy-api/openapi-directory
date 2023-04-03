@@ -4,34 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetRequest {
-    
-    public OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetPathParams pathParams;
-    public OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetRequest withPathParams(OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetQueryParams queryParams;
-    public OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetRequest withQueryParams(OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * 3-letter IATA aiport code (e.g. 'ZRH')
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=airportCode")
+    public String airportCode;
+    public OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetRequest withAirportCode(String airportCode) {
+        this.airportCode = airportCode;
         return this;
     }
     
-    
-    public OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetHeaders headers;
-    public OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetRequest withHeaders(OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetHeaders headers) {
-        this.headers = headers;
+    /**
+     * Start of time range in local time of arrival airport (YYYY-MM-DDTHH:mm)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fromDateTime")
+    public String fromDateTime;
+    public OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetRequest withFromDateTime(String fromDateTime) {
+        this.fromDateTime = fromDateTime;
         return this;
     }
     
+    /**
+     * Number of records returned per request. Defaults to 20, maximum is 100 (if a value bigger than 100 is given, 100 will be taken)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public String limit;
+    public OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetRequest withLimit(String limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetSecurity security;
-    public OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetRequest withSecurity(OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetSecurity security) {
-        this.security = security;
+    /**
+     * Number of records skipped. Defaults to 0
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public String offset;
+    public OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetRequest withOffset(String offset) {
+        this.offset = offset;
         return this;
     }
     

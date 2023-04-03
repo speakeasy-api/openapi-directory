@@ -33,25 +33,26 @@ public class Applications {
     /**
      * Retrieves information about an application for the given application ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatatransferApplicationsGetResponse datatransferApplicationsGet(org.openapis.openapi.models.operations.DatatransferApplicationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatatransferApplicationsGetResponse datatransferApplicationsGet(org.openapis.openapi.models.operations.DatatransferApplicationsGetRequest request, org.openapis.openapi.models.operations.DatatransferApplicationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatatransferApplicationsGetPathParams.class, baseUrl, "/admin/datatransfer/v1/applications/{applicationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatatransferApplicationsGetRequest.class, baseUrl, "/admin/datatransfer/v1/applications/{applicationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatatransferApplicationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatatransferApplicationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,10 +79,11 @@ public class Applications {
     /**
      * Lists the applications available for data transfer for a customer.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatatransferApplicationsListResponse datatransferApplicationsList(org.openapis.openapi.models.operations.DatatransferApplicationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatatransferApplicationsListResponse datatransferApplicationsList(org.openapis.openapi.models.operations.DatatransferApplicationsListRequest request, org.openapis.openapi.models.operations.DatatransferApplicationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/admin/datatransfer/v1/applications");
         
@@ -89,14 +91,14 @@ public class Applications {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatatransferApplicationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatatransferApplicationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

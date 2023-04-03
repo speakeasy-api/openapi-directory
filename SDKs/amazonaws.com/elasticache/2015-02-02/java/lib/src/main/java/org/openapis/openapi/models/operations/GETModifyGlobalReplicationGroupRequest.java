@@ -4,20 +4,139 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyGlobalReplicationGroupRequest {
-    
-    public GETModifyGlobalReplicationGroupQueryParams queryParams;
-    public GETModifyGlobalReplicationGroupRequest withQueryParams(GETModifyGlobalReplicationGroupQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyGlobalReplicationGroupActionEnum action;
+    public GETModifyGlobalReplicationGroupRequest withAction(GETModifyGlobalReplicationGroupActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * This parameter causes the modifications in this request and any pending modifications to be applied, asynchronously and as soon as possible. Modifications to Global Replication Groups cannot be requested to be applied in PreferredMaintenceWindow. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ApplyImmediately")
+    public Boolean applyImmediately;
+    public GETModifyGlobalReplicationGroupRequest withApplyImmediately(Boolean applyImmediately) {
+        this.applyImmediately = applyImmediately;
+        return this;
+    }
     
-    public GETModifyGlobalReplicationGroupHeaders headers;
-    public GETModifyGlobalReplicationGroupRequest withHeaders(GETModifyGlobalReplicationGroupHeaders headers) {
-        this.headers = headers;
+    /**
+     * Determines whether a read replica is automatically promoted to read/write primary if the existing primary encounters a failure. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutomaticFailoverEnabled")
+    public Boolean automaticFailoverEnabled;
+    public GETModifyGlobalReplicationGroupRequest withAutomaticFailoverEnabled(Boolean automaticFailoverEnabled) {
+        this.automaticFailoverEnabled = automaticFailoverEnabled;
+        return this;
+    }
+    
+    /**
+     * A valid cache node type that you want to scale this Global datastore to.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CacheNodeType")
+    public String cacheNodeType;
+    public GETModifyGlobalReplicationGroupRequest withCacheNodeType(String cacheNodeType) {
+        this.cacheNodeType = cacheNodeType;
+        return this;
+    }
+    
+    /**
+     * The name of the cache parameter group to use with the Global datastore. It must be compatible with the major engine version used by the Global datastore.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CacheParameterGroupName")
+    public String cacheParameterGroupName;
+    public GETModifyGlobalReplicationGroupRequest withCacheParameterGroupName(String cacheParameterGroupName) {
+        this.cacheParameterGroupName = cacheParameterGroupName;
+        return this;
+    }
+    
+    /**
+     * The upgraded version of the cache engine to be run on the clusters in the Global datastore. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EngineVersion")
+    public String engineVersion;
+    public GETModifyGlobalReplicationGroupRequest withEngineVersion(String engineVersion) {
+        this.engineVersion = engineVersion;
+        return this;
+    }
+    
+    /**
+     * A description of the Global datastore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GlobalReplicationGroupDescription")
+    public String globalReplicationGroupDescription;
+    public GETModifyGlobalReplicationGroupRequest withGlobalReplicationGroupDescription(String globalReplicationGroupDescription) {
+        this.globalReplicationGroupDescription = globalReplicationGroupDescription;
+        return this;
+    }
+    
+    /**
+     * The name of the Global datastore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GlobalReplicationGroupId")
+    public String globalReplicationGroupId;
+    public GETModifyGlobalReplicationGroupRequest withGlobalReplicationGroupId(String globalReplicationGroupId) {
+        this.globalReplicationGroupId = globalReplicationGroupId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyGlobalReplicationGroupVersionEnum version;
+    public GETModifyGlobalReplicationGroupRequest withVersion(GETModifyGlobalReplicationGroupVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyGlobalReplicationGroupRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyGlobalReplicationGroupRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyGlobalReplicationGroupRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyGlobalReplicationGroupRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyGlobalReplicationGroupRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyGlobalReplicationGroupRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyGlobalReplicationGroupRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

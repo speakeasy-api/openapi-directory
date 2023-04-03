@@ -55,21 +55,22 @@ public class Webinars {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddBatchWebinarRegistrantsResponse addBatchWebinarRegistrants(org.openapis.openapi.models.operations.AddBatchWebinarRegistrantsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddBatchWebinarRegistrantsResponse addBatchWebinarRegistrants(org.openapis.openapi.models.operations.AddBatchWebinarRegistrantsRequest request, org.openapis.openapi.models.operations.AddBatchWebinarRegistrantsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddBatchWebinarRegistrantsPathParams.class, baseUrl, "/webinars/{webinarId}/batch_registrants", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddBatchWebinarRegistrantsRequest.class, baseUrl, "/webinars/{webinarId}/batch_registrants", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -112,13 +113,13 @@ public class Webinars {
      */
     public org.openapis.openapi.models.operations.DeleteWebinarRegistrantResponse deleteWebinarRegistrant(org.openapis.openapi.models.operations.DeleteWebinarRegistrantRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteWebinarRegistrantPathParams.class, baseUrl, "/webinars/{webinarId}/registrants/{registrantId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteWebinarRegistrantRequest.class, baseUrl, "/webinars/{webinarId}/registrants/{registrantId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteWebinarRegistrantQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteWebinarRegistrantRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -154,19 +155,20 @@ public class Webinars {
      * * Registration must be required for the Webinar.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTrackingSourcesResponse getTrackingSources(org.openapis.openapi.models.operations.GetTrackingSourcesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTrackingSourcesResponse getTrackingSources(org.openapis.openapi.models.operations.GetTrackingSourcesRequest request, org.openapis.openapi.models.operations.GetTrackingSourcesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTrackingSourcesPathParams.class, baseUrl, "/webinars/{webinarId}/tracking_sources", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTrackingSourcesRequest.class, baseUrl, "/webinars/{webinarId}/tracking_sources", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -206,19 +208,20 @@ public class Webinars {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListPastWebinarPollResultsResponse listPastWebinarPollResults(org.openapis.openapi.models.operations.ListPastWebinarPollResultsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListPastWebinarPollResultsResponse listPastWebinarPollResults(org.openapis.openapi.models.operations.ListPastWebinarPollResultsRequest request, org.openapis.openapi.models.operations.ListPastWebinarPollResultsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListPastWebinarPollResultsPathParams.class, baseUrl, "/past_webinars/{webinarId}/polls", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListPastWebinarPollResultsRequest.class, baseUrl, "/past_webinars/{webinarId}/polls", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -262,19 +265,20 @@ public class Webinars {
      * 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListPastWebinarQAResponse listPastWebinarQA(org.openapis.openapi.models.operations.ListPastWebinarQARequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListPastWebinarQAResponse listPastWebinarQA(org.openapis.openapi.models.operations.ListPastWebinarQARequest request, org.openapis.openapi.models.operations.ListPastWebinarQASecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListPastWebinarQAPathParams.class, baseUrl, "/past_webinars/{webinarId}/qa", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListPastWebinarQARequest.class, baseUrl, "/past_webinars/{webinarId}/qa", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -324,13 +328,13 @@ public class Webinars {
      */
     public org.openapis.openapi.models.operations.ListWebinarParticipantsResponse listWebinarParticipants(org.openapis.openapi.models.operations.ListWebinarParticipantsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListWebinarParticipantsPathParams.class, baseUrl, "/past_webinars/{webinarId}/participants", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListWebinarParticipantsRequest.class, baseUrl, "/past_webinars/{webinarId}/participants", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListWebinarParticipantsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListWebinarParticipantsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -380,7 +384,7 @@ public class Webinars {
      */
     public org.openapis.openapi.models.operations.ListWebinarTemplatesResponse listWebinarTemplates(org.openapis.openapi.models.operations.ListWebinarTemplatesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListWebinarTemplatesPathParams.class, baseUrl, "/users/{userId}/webinar_templates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListWebinarTemplatesRequest.class, baseUrl, "/users/{userId}/webinar_templates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -427,19 +431,20 @@ public class Webinars {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PastWebinarsResponse pastWebinars(org.openapis.openapi.models.operations.PastWebinarsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PastWebinarsResponse pastWebinars(org.openapis.openapi.models.operations.PastWebinarsRequest request, org.openapis.openapi.models.operations.PastWebinarsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PastWebinarsPathParams.class, baseUrl, "/past_webinars/{webinarId}/instances", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PastWebinarsRequest.class, baseUrl, "/past_webinars/{webinarId}/instances", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -477,25 +482,26 @@ public class Webinars {
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`&lt;br&gt;**Prerequisites:**
      * * Pro or higher plan with a Webinar Add-on.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebinarResponse webinar(org.openapis.openapi.models.operations.WebinarRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebinarResponse webinar(org.openapis.openapi.models.operations.WebinarRequest request, org.openapis.openapi.models.operations.WebinarSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarPathParams.class, baseUrl, "/webinars/{webinarId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarRequest.class, baseUrl, "/webinars/{webinarId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebinarQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebinarRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -532,25 +538,26 @@ public class Webinars {
      * **Scopes:** `webinar:read:admin` `webinar:read`&lt;br&gt;
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebinarAbsenteesResponse webinarAbsentees(org.openapis.openapi.models.operations.WebinarAbsenteesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebinarAbsenteesResponse webinarAbsentees(org.openapis.openapi.models.operations.WebinarAbsenteesRequest request, org.openapis.openapi.models.operations.WebinarAbsenteesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarAbsenteesPathParams.class, baseUrl, "/past_webinars/{WebinarUUID}/absentees", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarAbsenteesRequest.class, baseUrl, "/past_webinars/{WebinarUUID}/absentees", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebinarAbsenteesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebinarAbsenteesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -590,24 +597,25 @@ public class Webinars {
      * **Prerequisites:**
      * * Pro or higher plan with a Webinar Add-on.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebinarCreateResponse webinarCreate(org.openapis.openapi.models.operations.WebinarCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebinarCreateResponse webinarCreate(org.openapis.openapi.models.operations.WebinarCreateRequest request, org.openapis.openapi.models.operations.WebinarCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarCreatePathParams.class, baseUrl, "/users/{userId}/webinars", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarCreateRequest.class, baseUrl, "/users/{userId}/webinars", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -649,25 +657,26 @@ public class Webinars {
      * **Prerequisites:**&lt;br&gt;
      * * Pro or higher plan with a Webinar Add-on.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebinarDeleteResponse webinarDelete(org.openapis.openapi.models.operations.WebinarDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebinarDeleteResponse webinarDelete(org.openapis.openapi.models.operations.WebinarDeleteRequest request, org.openapis.openapi.models.operations.WebinarDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarDeletePathParams.class, baseUrl, "/webinars/{webinarId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarDeleteRequest.class, baseUrl, "/webinars/{webinarId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebinarDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebinarDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -695,24 +704,25 @@ public class Webinars {
      * **Prerequisites:**
      * * Pro or a higher plan with [Webinar Add-on](https://zoom.us/webinar).&lt;br&gt; 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebinarPanelistCreateResponse webinarPanelistCreate(org.openapis.openapi.models.operations.WebinarPanelistCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebinarPanelistCreateResponse webinarPanelistCreate(org.openapis.openapi.models.operations.WebinarPanelistCreateRequest request, org.openapis.openapi.models.operations.WebinarPanelistCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarPanelistCreatePathParams.class, baseUrl, "/webinars/{webinarId}/panelists", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarPanelistCreateRequest.class, baseUrl, "/webinars/{webinarId}/panelists", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -754,19 +764,20 @@ public class Webinars {
      * **Prerequisites:**&lt;br&gt;
      * * Pro or a higher plan with [Webinar Add-on](https://zoom.us/webinar).&lt;br&gt; 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebinarPanelistDeleteResponse webinarPanelistDelete(org.openapis.openapi.models.operations.WebinarPanelistDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebinarPanelistDeleteResponse webinarPanelistDelete(org.openapis.openapi.models.operations.WebinarPanelistDeleteRequest request, org.openapis.openapi.models.operations.WebinarPanelistDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarPanelistDeletePathParams.class, baseUrl, "/webinars/{webinarId}/panelists/{panelistId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarPanelistDeleteRequest.class, baseUrl, "/webinars/{webinarId}/panelists/{panelistId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -795,19 +806,20 @@ public class Webinars {
      * **Prerequisites:**&lt;br&gt;
      * * Pro or a higher plan with [Webinar Add-on](https://zoom.us/webinar).&lt;br&gt; 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebinarPanelistsResponse webinarPanelists(org.openapis.openapi.models.operations.WebinarPanelistsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebinarPanelistsResponse webinarPanelists(org.openapis.openapi.models.operations.WebinarPanelistsRequest request, org.openapis.openapi.models.operations.WebinarPanelistsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarPanelistsPathParams.class, baseUrl, "/webinars/{webinarId}/panelists", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarPanelistsRequest.class, baseUrl, "/webinars/{webinarId}/panelists", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -847,19 +859,20 @@ public class Webinars {
      * **Prerequisites:**&lt;br&gt;
      * * Pro or a higher plan with [Webinar Add-on](https://zoom.us/webinar).&lt;br&gt; 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebinarPanelistsDeleteResponse webinarPanelistsDelete(org.openapis.openapi.models.operations.WebinarPanelistsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebinarPanelistsDeleteResponse webinarPanelistsDelete(org.openapis.openapi.models.operations.WebinarPanelistsDeleteRequest request, org.openapis.openapi.models.operations.WebinarPanelistsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarPanelistsDeletePathParams.class, baseUrl, "/webinars/{webinarId}/panelists", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarPanelistsDeleteRequest.class, baseUrl, "/webinars/{webinarId}/panelists", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -886,24 +899,25 @@ public class Webinars {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebinarPollCreateResponse webinarPollCreate(org.openapis.openapi.models.operations.WebinarPollCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebinarPollCreateResponse webinarPollCreate(org.openapis.openapi.models.operations.WebinarPollCreateRequest request, org.openapis.openapi.models.operations.WebinarPollCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarPollCreatePathParams.class, baseUrl, "/webinars/{webinarId}/polls", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarPollCreateRequest.class, baseUrl, "/webinars/{webinarId}/polls", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -945,19 +959,20 @@ public class Webinars {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebinarPollDeleteResponse webinarPollDelete(org.openapis.openapi.models.operations.WebinarPollDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebinarPollDeleteResponse webinarPollDelete(org.openapis.openapi.models.operations.WebinarPollDeleteRequest request, org.openapis.openapi.models.operations.WebinarPollDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarPollDeletePathParams.class, baseUrl, "/webinars/{webinarId}/polls/{pollId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarPollDeleteRequest.class, baseUrl, "/webinars/{webinarId}/polls/{pollId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -984,19 +999,20 @@ public class Webinars {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebinarPollGetResponse webinarPollGet(org.openapis.openapi.models.operations.WebinarPollGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebinarPollGetResponse webinarPollGet(org.openapis.openapi.models.operations.WebinarPollGetRequest request, org.openapis.openapi.models.operations.WebinarPollGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarPollGetPathParams.class, baseUrl, "/webinars/{webinarId}/polls/{pollId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarPollGetRequest.class, baseUrl, "/webinars/{webinarId}/polls/{pollId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1036,24 +1052,25 @@ public class Webinars {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebinarPollUpdateResponse webinarPollUpdate(org.openapis.openapi.models.operations.WebinarPollUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebinarPollUpdateResponse webinarPollUpdate(org.openapis.openapi.models.operations.WebinarPollUpdateRequest request, org.openapis.openapi.models.operations.WebinarPollUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarPollUpdatePathParams.class, baseUrl, "/webinars/{webinarId}/polls/{pollId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarPollUpdateRequest.class, baseUrl, "/webinars/{webinarId}/polls/{pollId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1080,19 +1097,20 @@ public class Webinars {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebinarPollsResponse webinarPolls(org.openapis.openapi.models.operations.WebinarPollsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebinarPollsResponse webinarPolls(org.openapis.openapi.models.operations.WebinarPollsRequest request, org.openapis.openapi.models.operations.WebinarPollsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarPollsPathParams.class, baseUrl, "/webinars/{webinarId}/polls", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarPollsRequest.class, baseUrl, "/webinars/{webinarId}/polls", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1132,30 +1150,31 @@ public class Webinars {
      * **Prerequisites:**
      * * Pro or higher plan with a Webinar Add-on.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebinarRegistrantCreateResponse webinarRegistrantCreate(org.openapis.openapi.models.operations.WebinarRegistrantCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebinarRegistrantCreateResponse webinarRegistrantCreate(org.openapis.openapi.models.operations.WebinarRegistrantCreateRequest request, org.openapis.openapi.models.operations.WebinarRegistrantCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarRegistrantCreatePathParams.class, baseUrl, "/webinars/{webinarId}/registrants", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarRegistrantCreateRequest.class, baseUrl, "/webinars/{webinarId}/registrants", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebinarRegistrantCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebinarRegistrantCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1195,25 +1214,26 @@ public class Webinars {
      * **Prerequisites:**&lt;br&gt;
      * * The account must have a Webinar plan.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebinarRegistrantGetResponse webinarRegistrantGet(org.openapis.openapi.models.operations.WebinarRegistrantGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebinarRegistrantGetResponse webinarRegistrantGet(org.openapis.openapi.models.operations.WebinarRegistrantGetRequest request, org.openapis.openapi.models.operations.WebinarRegistrantGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarRegistrantGetPathParams.class, baseUrl, "/webinars/{webinarId}/registrants/{registrantId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarRegistrantGetRequest.class, baseUrl, "/webinars/{webinarId}/registrants/{registrantId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebinarRegistrantGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebinarRegistrantGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1256,24 +1276,25 @@ public class Webinars {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebinarRegistrantQuestionUpdateResponse webinarRegistrantQuestionUpdate(org.openapis.openapi.models.operations.WebinarRegistrantQuestionUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebinarRegistrantQuestionUpdateResponse webinarRegistrantQuestionUpdate(org.openapis.openapi.models.operations.WebinarRegistrantQuestionUpdateRequest request, org.openapis.openapi.models.operations.WebinarRegistrantQuestionUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarRegistrantQuestionUpdatePathParams.class, baseUrl, "/webinars/{webinarId}/registrants/questions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarRegistrantQuestionUpdateRequest.class, baseUrl, "/webinars/{webinarId}/registrants/questions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1300,30 +1321,31 @@ public class Webinars {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebinarRegistrantStatusResponse webinarRegistrantStatus(org.openapis.openapi.models.operations.WebinarRegistrantStatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebinarRegistrantStatusResponse webinarRegistrantStatus(org.openapis.openapi.models.operations.WebinarRegistrantStatusRequest request, org.openapis.openapi.models.operations.WebinarRegistrantStatusSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarRegistrantStatusPathParams.class, baseUrl, "/webinars/{webinarId}/registrants/status", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarRegistrantStatusRequest.class, baseUrl, "/webinars/{webinarId}/registrants/status", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebinarRegistrantStatusQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebinarRegistrantStatusRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1352,25 +1374,26 @@ public class Webinars {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebinarRegistrantsResponse webinarRegistrants(org.openapis.openapi.models.operations.WebinarRegistrantsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebinarRegistrantsResponse webinarRegistrants(org.openapis.openapi.models.operations.WebinarRegistrantsRequest request, org.openapis.openapi.models.operations.WebinarRegistrantsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarRegistrantsPathParams.class, baseUrl, "/webinars/{webinarId}/registrants", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarRegistrantsRequest.class, baseUrl, "/webinars/{webinarId}/registrants", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebinarRegistrantsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebinarRegistrantsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1412,19 +1435,20 @@ public class Webinars {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebinarRegistrantsQuestionsGetResponse webinarRegistrantsQuestionsGet(org.openapis.openapi.models.operations.WebinarRegistrantsQuestionsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebinarRegistrantsQuestionsGetResponse webinarRegistrantsQuestionsGet(org.openapis.openapi.models.operations.WebinarRegistrantsQuestionsGetRequest request, org.openapis.openapi.models.operations.WebinarRegistrantsQuestionsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarRegistrantsQuestionsGetPathParams.class, baseUrl, "/webinars/{webinarId}/registrants/questions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarRegistrantsQuestionsGetRequest.class, baseUrl, "/webinars/{webinarId}/registrants/questions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1464,24 +1488,25 @@ public class Webinars {
      * **Prerequisites:**&lt;br&gt;
      * * The account must hold a valid [Webinar plan](https://zoom.us/webinar).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebinarStatusResponse webinarStatus(org.openapis.openapi.models.operations.WebinarStatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebinarStatusResponse webinarStatus(org.openapis.openapi.models.operations.WebinarStatusRequest request, org.openapis.openapi.models.operations.WebinarStatusSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarStatusPathParams.class, baseUrl, "/webinars/{webinarId}/status", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarStatusRequest.class, baseUrl, "/webinars/{webinarId}/status", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1509,30 +1534,31 @@ public class Webinars {
      * **Prerequisites:**&lt;br&gt;
      * * Pro or higher plan with a Webinar Add-on.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebinarUpdateJsonResponse webinarUpdateJson(org.openapis.openapi.models.operations.WebinarUpdateJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebinarUpdateJsonResponse webinarUpdateJson(org.openapis.openapi.models.operations.WebinarUpdateJsonRequest request, org.openapis.openapi.models.operations.WebinarUpdateJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarUpdateJsonPathParams.class, baseUrl, "/webinars/{webinarId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarUpdateJsonRequest.class, baseUrl, "/webinars/{webinarId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebinarUpdateJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebinarUpdateJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1560,30 +1586,31 @@ public class Webinars {
      * **Prerequisites:**&lt;br&gt;
      * * Pro or higher plan with a Webinar Add-on.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebinarUpdateMultipartResponse webinarUpdateMultipart(org.openapis.openapi.models.operations.WebinarUpdateMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebinarUpdateMultipartResponse webinarUpdateMultipart(org.openapis.openapi.models.operations.WebinarUpdateMultipartRequest request, org.openapis.openapi.models.operations.WebinarUpdateMultipartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarUpdateMultipartPathParams.class, baseUrl, "/webinars/{webinarId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarUpdateMultipartRequest.class, baseUrl, "/webinars/{webinarId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebinarUpdateMultipartQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebinarUpdateMultipartRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1610,25 +1637,26 @@ public class Webinars {
      * **Prerequisites:**
      * * Pro or higher plan with a Webinar Add-on.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebinarsResponse webinars(org.openapis.openapi.models.operations.WebinarsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebinarsResponse webinars(org.openapis.openapi.models.operations.WebinarsRequest request, org.openapis.openapi.models.operations.WebinarsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarsPathParams.class, baseUrl, "/users/{userId}/webinars", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WebinarsRequest.class, baseUrl, "/users/{userId}/webinars", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebinarsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebinarsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

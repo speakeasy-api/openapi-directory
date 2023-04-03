@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AspByDistanceUsV1AirspaceDistanceQueryPostRequest {
-    
-    public AspByDistanceUsV1AirspaceDistanceQueryPostHeaders headers;
-    public AspByDistanceUsV1AirspaceDistanceQueryPostRequest withHeaders(AspByDistanceUsV1AirspaceDistanceQueryPostHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.AirspaceByDistance airspaceByDistance;
+    public AspByDistanceUsV1AirspaceDistanceQueryPostRequest withAirspaceByDistance(org.openapis.openapi.models.shared.AirspaceByDistance airspaceByDistance) {
+        this.airspaceByDistance = airspaceByDistance;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AirspaceByDistance request;
-    public AspByDistanceUsV1AirspaceDistanceQueryPostRequest withRequest(org.openapis.openapi.models.shared.AirspaceByDistance request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public AspByDistanceUsV1AirspaceDistanceQueryPostRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

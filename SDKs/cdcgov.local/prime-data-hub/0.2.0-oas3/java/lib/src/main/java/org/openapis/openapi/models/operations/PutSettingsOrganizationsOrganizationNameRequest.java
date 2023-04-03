@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSettingsOrganizationsOrganizationNameRequest {
-    
-    public PutSettingsOrganizationsOrganizationNamePathParams pathParams;
-    public PutSettingsOrganizationsOrganizationNameRequest withPathParams(PutSettingsOrganizationsOrganizationNamePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.OrganizationInput request;
-    public PutSettingsOrganizationsOrganizationNameRequest withRequest(org.openapis.openapi.models.shared.OrganizationInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.OrganizationInput organizationInput;
+    public PutSettingsOrganizationsOrganizationNameRequest withOrganizationInput(org.openapis.openapi.models.shared.OrganizationInput organizationInput) {
+        this.organizationInput = organizationInput;
         return this;
     }
     
-    
-    public PutSettingsOrganizationsOrganizationNameSecurity security;
-    public PutSettingsOrganizationsOrganizationNameRequest withSecurity(PutSettingsOrganizationsOrganizationNameSecurity security) {
-        this.security = security;
+    /**
+     * The name of the organization
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationName")
+    public String organizationName;
+    public PutSettingsOrganizationsOrganizationNameRequest withOrganizationName(String organizationName) {
+        this.organizationName = organizationName;
         return this;
     }
     

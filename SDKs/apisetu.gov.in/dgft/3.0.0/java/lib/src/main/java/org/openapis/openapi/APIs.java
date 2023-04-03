@@ -34,19 +34,20 @@ public class APIs {
      * Importer-Exporter Code (IEC) Verification API.
      * Description of Importer-Exporter Code (IEC) Verification API.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ImporterExporterCodeVerificationAPIResponse importerExporterCodeVerificationAPI(org.openapis.openapi.models.operations.ImporterExporterCodeVerificationAPIRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ImporterExporterCodeVerificationAPIResponse importerExporterCodeVerificationAPI(org.openapis.openapi.models.operations.ImporterExporterCodeVerificationAPIRequest request, org.openapis.openapi.models.operations.ImporterExporterCodeVerificationAPISecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImporterExporterCodeVerificationAPIPathParams.class, baseUrl, "/v1/iec/{iec}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImporterExporterCodeVerificationAPIRequest.class, baseUrl, "/v1/iec/{iec}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

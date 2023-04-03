@@ -41,7 +41,7 @@ public class FileMigrations {
      */
     public org.openapis.openapi.models.operations.GetFileMigrationsIdResponse getFileMigrationsId(org.openapis.openapi.models.operations.GetFileMigrationsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFileMigrationsIdPathParams.class, baseUrl, "/file_migrations/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFileMigrationsIdRequest.class, baseUrl, "/file_migrations/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

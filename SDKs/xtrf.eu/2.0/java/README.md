@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.BrowseCSVQueryParams;
 import org.openapis.openapi.models.operations.BrowseCSVRequest;
 import org.openapis.openapi.models.operations.BrowseCSVResponse;
 
@@ -26,20 +25,16 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    xAuthAccessToken = new SchemeXAuthAccessToken() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    xAuthAccessToken = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             BrowseCSVRequest req = new BrowseCSVRequest() {{
-                queryParams = new BrowseCSVQueryParams() {{
-                    additionalOrder = "corrupti";
-                    secondarySeparator = "provident";
-                    separator = "distinctio";
-                    viewId = 844266;
-                }};
-            }};            
+                additionalOrder = "corrupti";
+                secondarySeparator = "provident";
+                separator = "distinctio";
+                viewId = 844266;
+            }}            
 
             BrowseCSVResponse res = sdk.browser.browseCSV(req);
 
@@ -53,7 +48,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### browser

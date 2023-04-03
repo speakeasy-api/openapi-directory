@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SubscribeUploadShareRequest {
-    
-    public SubscribeUploadSharePathParams pathParams;
-    public SubscribeUploadShareRequest withPathParams(SubscribeUploadSharePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public SubscribeUploadShareRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public SubscribeUploadShareHeaders headers;
-    public SubscribeUploadShareRequest withHeaders(SubscribeUploadShareHeaders headers) {
-        this.headers = headers;
+    /**
+     * Share ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=share_id")
+    public Long shareId;
+    public SubscribeUploadShareRequest withShareId(Long shareId) {
+        this.shareId = shareId;
         return this;
     }
     

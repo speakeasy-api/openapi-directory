@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchTerminalsTerminalIdTerminalSettingsRequest {
-    
-    public PatchTerminalsTerminalIdTerminalSettingsPathParams pathParams;
-    public PatchTerminalsTerminalIdTerminalSettingsRequest withPathParams(PatchTerminalsTerminalIdTerminalSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TerminalSettings request;
-    public PatchTerminalsTerminalIdTerminalSettingsRequest withRequest(org.openapis.openapi.models.shared.TerminalSettings request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TerminalSettings terminalSettings;
+    public PatchTerminalsTerminalIdTerminalSettingsRequest withTerminalSettings(org.openapis.openapi.models.shared.TerminalSettings terminalSettings) {
+        this.terminalSettings = terminalSettings;
         return this;
     }
     
-    
-    public PatchTerminalsTerminalIdTerminalSettingsSecurity security;
-    public PatchTerminalsTerminalIdTerminalSettingsRequest withSecurity(PatchTerminalsTerminalIdTerminalSettingsSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the payment terminal.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=terminalId")
+    public String terminalId;
+    public PatchTerminalsTerminalIdTerminalSettingsRequest withTerminalId(String terminalId) {
+        this.terminalId = terminalId;
         return this;
     }
     

@@ -7,24 +7,31 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateLicenseeRequest {
-    
-    public UpdateLicenseePathParams pathParams;
-    public UpdateLicenseeRequest withPathParams(UpdateLicenseePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateLicenseeQueryParams queryParams;
-    public UpdateLicenseeRequest withQueryParams(UpdateLicenseeQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.LicenseeEditable request;
-    public UpdateLicenseeRequest withRequest(org.openapis.openapi.models.shared.LicenseeEditable request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.LicenseeEditable licenseeEditable;
+    public UpdateLicenseeRequest withLicenseeEditable(org.openapis.openapi.models.shared.LicenseeEditable licenseeEditable) {
+        this.licenseeEditable = licenseeEditable;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
+    public String key;
+    public UpdateLicenseeRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=licensee")
+    public String licensee;
+    public UpdateLicenseeRequest withLicensee(String licensee) {
+        this.licensee = licensee;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=user_token")
+    public String userToken;
+    public UpdateLicenseeRequest withUserToken(String userToken) {
+        this.userToken = userToken;
         return this;
     }
     

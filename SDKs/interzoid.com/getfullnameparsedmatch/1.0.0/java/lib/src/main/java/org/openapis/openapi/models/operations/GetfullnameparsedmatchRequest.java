@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetfullnameparsedmatchRequest {
+    /**
+     * First name from which to generate similarity key
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=firstname")
+    public String firstname;
+    public GetfullnameparsedmatchRequest withFirstname(String firstname) {
+        this.firstname = firstname;
+        return this;
+    }
     
-    public GetfullnameparsedmatchQueryParams queryParams;
-    public GetfullnameparsedmatchRequest withQueryParams(GetfullnameparsedmatchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Last name from which to generate similarity key
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lastname")
+    public String lastname;
+    public GetfullnameparsedmatchRequest withLastname(String lastname) {
+        this.lastname = lastname;
+        return this;
+    }
+    
+    /**
+     * Your Interzoid license API key. Register at www.interzoid.com/register
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
+    public String license;
+    public GetfullnameparsedmatchRequest withLicense(String license) {
+        this.license = license;
         return this;
     }
     

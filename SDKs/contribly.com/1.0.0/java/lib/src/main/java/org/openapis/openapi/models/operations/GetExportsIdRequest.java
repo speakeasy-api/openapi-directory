@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetExportsIdRequest {
-    
-    public GetExportsIdPathParams pathParams;
-    public GetExportsIdRequest withPathParams(GetExportsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of the export job to return
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetExportsIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

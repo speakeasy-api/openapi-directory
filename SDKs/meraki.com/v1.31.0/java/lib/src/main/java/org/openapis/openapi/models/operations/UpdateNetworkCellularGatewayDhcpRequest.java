@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkCellularGatewayDhcpRequest {
-    
-    public UpdateNetworkCellularGatewayDhcpPathParams pathParams;
-    public UpdateNetworkCellularGatewayDhcpRequest withPathParams(UpdateNetworkCellularGatewayDhcpPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkCellularGatewayDhcpRequestBody requestBody;
+    public UpdateNetworkCellularGatewayDhcpRequest withRequestBody(UpdateNetworkCellularGatewayDhcpRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkCellularGatewayDhcpRequestBody request;
-    public UpdateNetworkCellularGatewayDhcpRequest withRequest(UpdateNetworkCellularGatewayDhcpRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkCellularGatewayDhcpRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

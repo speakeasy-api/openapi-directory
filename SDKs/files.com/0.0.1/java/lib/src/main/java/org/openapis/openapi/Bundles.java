@@ -44,7 +44,7 @@ public class Bundles {
      */
     public org.openapis.openapi.models.operations.DeleteBundlesIdResponse deleteBundlesId(org.openapis.openapi.models.operations.DeleteBundlesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteBundlesIdPathParams.class, baseUrl, "/bundles/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteBundlesIdRequest.class, baseUrl, "/bundles/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -83,7 +83,7 @@ public class Bundles {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBundlesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBundlesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -124,7 +124,7 @@ public class Bundles {
      */
     public org.openapis.openapi.models.operations.GetBundlesIdResponse getBundlesId(org.openapis.openapi.models.operations.GetBundlesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBundlesIdPathParams.class, baseUrl, "/bundles/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBundlesIdRequest.class, baseUrl, "/bundles/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -165,12 +165,12 @@ public class Bundles {
      */
     public org.openapis.openapi.models.operations.PatchBundlesIdResponse patchBundlesId(org.openapis.openapi.models.operations.PatchBundlesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchBundlesIdPathParams.class, baseUrl, "/bundles/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchBundlesIdRequest.class, baseUrl, "/bundles/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         req.setBody(serializedRequestBody);
         
         
@@ -206,7 +206,7 @@ public class Bundles {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostBundlesResponse postBundles(org.openapis.openapi.models.operations.PostBundlesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostBundlesResponse postBundles(org.openapis.openapi.models.operations.PostBundlesRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/bundles");
         
@@ -251,12 +251,12 @@ public class Bundles {
      */
     public org.openapis.openapi.models.operations.PostBundlesIdShareResponse postBundlesIdShare(org.openapis.openapi.models.operations.PostBundlesIdShareRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostBundlesIdSharePathParams.class, baseUrl, "/bundles/{id}/share", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostBundlesIdShareRequest.class, baseUrl, "/bundles/{id}/share", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         req.setBody(serializedRequestBody);
         
         

@@ -4,27 +4,256 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DfareportingFloodlightActivitiesListRequest {
-    
-    public DfareportingFloodlightActivitiesListPathParams pathParams;
-    public DfareportingFloodlightActivitiesListRequest withPathParams(DfareportingFloodlightActivitiesListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public DfareportingFloodlightActivitiesListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public DfareportingFloodlightActivitiesListQueryParams queryParams;
-    public DfareportingFloodlightActivitiesListRequest withQueryParams(DfareportingFloodlightActivitiesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public DfareportingFloodlightActivitiesListRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Select only floodlight activities for the specified advertiser ID. Must specify either ids, advertiserId, or floodlightConfigurationId for a non-empty result.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=advertiserId")
+    public String advertiserId;
+    public DfareportingFloodlightActivitiesListRequest withAdvertiserId(String advertiserId) {
+        this.advertiserId = advertiserId;
+        return this;
+    }
     
-    public DfareportingFloodlightActivitiesListSecurity security;
-    public DfareportingFloodlightActivitiesListRequest withSecurity(DfareportingFloodlightActivitiesListSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DfareportingFloodlightActivitiesListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public DfareportingFloodlightActivitiesListRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DfareportingFloodlightActivitiesListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Select only floodlight activities with the specified floodlight activity group IDs.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=floodlightActivityGroupIds")
+    public String[] floodlightActivityGroupIds;
+    public DfareportingFloodlightActivitiesListRequest withFloodlightActivityGroupIds(String[] floodlightActivityGroupIds) {
+        this.floodlightActivityGroupIds = floodlightActivityGroupIds;
+        return this;
+    }
+    
+    /**
+     * Select only floodlight activities with the specified floodlight activity group name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=floodlightActivityGroupName")
+    public String floodlightActivityGroupName;
+    public DfareportingFloodlightActivitiesListRequest withFloodlightActivityGroupName(String floodlightActivityGroupName) {
+        this.floodlightActivityGroupName = floodlightActivityGroupName;
+        return this;
+    }
+    
+    /**
+     * Select only floodlight activities with the specified floodlight activity group tag string.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=floodlightActivityGroupTagString")
+    public String floodlightActivityGroupTagString;
+    public DfareportingFloodlightActivitiesListRequest withFloodlightActivityGroupTagString(String floodlightActivityGroupTagString) {
+        this.floodlightActivityGroupTagString = floodlightActivityGroupTagString;
+        return this;
+    }
+    
+    /**
+     * Select only floodlight activities with the specified floodlight activity group type.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=floodlightActivityGroupType")
+    public DfareportingFloodlightActivitiesListFloodlightActivityGroupTypeEnum floodlightActivityGroupType;
+    public DfareportingFloodlightActivitiesListRequest withFloodlightActivityGroupType(DfareportingFloodlightActivitiesListFloodlightActivityGroupTypeEnum floodlightActivityGroupType) {
+        this.floodlightActivityGroupType = floodlightActivityGroupType;
+        return this;
+    }
+    
+    /**
+     * Select only floodlight activities for the specified floodlight configuration ID. Must specify either ids, advertiserId, or floodlightConfigurationId for a non-empty result.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=floodlightConfigurationId")
+    public String floodlightConfigurationId;
+    public DfareportingFloodlightActivitiesListRequest withFloodlightConfigurationId(String floodlightConfigurationId) {
+        this.floodlightConfigurationId = floodlightConfigurationId;
+        return this;
+    }
+    
+    /**
+     * Select only floodlight activities with the specified IDs. Must specify either ids, advertiserId, or floodlightConfigurationId for a non-empty result.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids")
+    public String[] ids;
+    public DfareportingFloodlightActivitiesListRequest withIds(String[] ids) {
+        this.ids = ids;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DfareportingFloodlightActivitiesListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Maximum number of results to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public DfareportingFloodlightActivitiesListRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DfareportingFloodlightActivitiesListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Value of the nextPageToken from the previous result page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public DfareportingFloodlightActivitiesListRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DfareportingFloodlightActivitiesListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * User profile ID associated with this request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
+    public String profileId;
+    public DfareportingFloodlightActivitiesListRequest withProfileId(String profileId) {
+        this.profileId = profileId;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DfareportingFloodlightActivitiesListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Allows searching for objects by name or ID. Wildcards (*) are allowed. For example, "floodlightactivity*2015" will return objects with names like "floodlightactivity June 2015", "floodlightactivity April 2015", or simply "floodlightactivity 2015". Most of the searches also add wildcards implicitly at the start and the end of the search string. For example, a search string of "floodlightactivity" will match objects with name "my floodlightactivity activity", "floodlightactivity 2015", or simply "floodlightactivity".
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=searchString")
+    public String searchString;
+    public DfareportingFloodlightActivitiesListRequest withSearchString(String searchString) {
+        this.searchString = searchString;
+        return this;
+    }
+    
+    /**
+     * Field by which to sort the list.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortField")
+    public DfareportingFloodlightActivitiesListSortFieldEnum sortField;
+    public DfareportingFloodlightActivitiesListRequest withSortField(DfareportingFloodlightActivitiesListSortFieldEnum sortField) {
+        this.sortField = sortField;
+        return this;
+    }
+    
+    /**
+     * Order of sorted results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortOrder")
+    public DfareportingFloodlightActivitiesListSortOrderEnum sortOrder;
+    public DfareportingFloodlightActivitiesListRequest withSortOrder(DfareportingFloodlightActivitiesListSortOrderEnum sortOrder) {
+        this.sortOrder = sortOrder;
+        return this;
+    }
+    
+    /**
+     * Select only floodlight activities with the specified tag string.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tagString")
+    public String tagString;
+    public DfareportingFloodlightActivitiesListRequest withTagString(String tagString) {
+        this.tagString = tagString;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public DfareportingFloodlightActivitiesListRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public DfareportingFloodlightActivitiesListRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

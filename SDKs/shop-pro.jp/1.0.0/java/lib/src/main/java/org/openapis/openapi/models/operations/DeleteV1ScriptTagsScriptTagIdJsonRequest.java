@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteV1ScriptTagsScriptTagIdJsonRequest {
-    
-    public DeleteV1ScriptTagsScriptTagIdJsonPathParams pathParams;
-    public DeleteV1ScriptTagsScriptTagIdJsonRequest withPathParams(DeleteV1ScriptTagsScriptTagIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteV1ScriptTagsScriptTagIdJsonSecurity security;
-    public DeleteV1ScriptTagsScriptTagIdJsonRequest withSecurity(DeleteV1ScriptTagsScriptTagIdJsonSecurity security) {
-        this.security = security;
+    /**
+     * \u30b9\u30af\u30ea\u30d7\u30c8\u30bf\u30b0ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scriptTagId")
+    public Long scriptTagId;
+    public DeleteV1ScriptTagsScriptTagIdJsonRequest withScriptTagId(Long scriptTagId) {
+        this.scriptTagId = scriptTagId;
         return this;
     }
     

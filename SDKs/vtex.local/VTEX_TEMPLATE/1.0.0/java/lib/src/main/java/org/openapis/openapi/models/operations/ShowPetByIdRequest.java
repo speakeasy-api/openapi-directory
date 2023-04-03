@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ShowPetByIdRequest {
-    
-    public ShowPetByIdPathParams pathParams;
-    public ShowPetByIdRequest withPathParams(ShowPetByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the pet to retrieve
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=petId")
+    public String petId;
+    public ShowPetByIdRequest withPetId(String petId) {
+        this.petId = petId;
         return this;
     }
     

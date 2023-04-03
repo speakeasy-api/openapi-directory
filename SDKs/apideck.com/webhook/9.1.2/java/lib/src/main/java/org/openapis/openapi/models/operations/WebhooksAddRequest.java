@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WebhooksAddRequest {
-    
-    public WebhooksAddHeaders headers;
-    public WebhooksAddRequest withHeaders(WebhooksAddHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateWebhookRequest request;
-    public WebhooksAddRequest withRequest(org.openapis.openapi.models.shared.CreateWebhookRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CreateWebhookRequest createWebhookRequest;
+    public WebhooksAddRequest withCreateWebhookRequest(org.openapis.openapi.models.shared.CreateWebhookRequest createWebhookRequest) {
+        this.createWebhookRequest = createWebhookRequest;
         return this;
     }
     
-    
-    public WebhooksAddSecurity security;
-    public WebhooksAddRequest withSecurity(WebhooksAddSecurity security) {
-        this.security = security;
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public WebhooksAddRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
         return this;
     }
     

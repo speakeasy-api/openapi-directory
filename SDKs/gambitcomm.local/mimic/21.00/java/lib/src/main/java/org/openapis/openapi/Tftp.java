@@ -39,7 +39,7 @@ public class Tftp {
      */
     public org.openapis.openapi.models.operations.ProtocolTftpGetArgsResponse protocolTftpGetArgs(org.openapis.openapi.models.operations.ProtocolTftpGetArgsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTftpGetArgsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tftp/get/args", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTftpGetArgsRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tftp/get/args", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -81,7 +81,7 @@ public class Tftp {
      */
     public org.openapis.openapi.models.operations.ProtocolTftpGetConfigResponse protocolTftpGetConfig(org.openapis.openapi.models.operations.ProtocolTftpGetConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTftpGetConfigPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tftp/get/config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTftpGetConfigRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tftp/get/config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -123,7 +123,7 @@ public class Tftp {
      */
     public org.openapis.openapi.models.operations.ProtocolTftpGetStatisticsResponse protocolTftpGetStatistics(org.openapis.openapi.models.operations.ProtocolTftpGetStatisticsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTftpGetStatisticsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tftp/get/statistics", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTftpGetStatisticsRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tftp/get/statistics", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -206,7 +206,7 @@ public class Tftp {
      */
     public org.openapis.openapi.models.operations.ProtocolTftpGetTraceResponse protocolTftpGetTrace(org.openapis.openapi.models.operations.ProtocolTftpGetTraceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTftpGetTracePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tftp/get/trace", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTftpGetTraceRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tftp/get/trace", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -248,7 +248,7 @@ public class Tftp {
      */
     public org.openapis.openapi.models.operations.ProtocolTftpSessionGetParameterResponse protocolTftpSessionGetParameter(org.openapis.openapi.models.operations.ProtocolTftpSessionGetParameterRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTftpSessionGetParameterPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tftp/{sessionID}/get/{parameter}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTftpSessionGetParameterRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tftp/{sessionID}/get/{parameter}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -289,7 +289,7 @@ public class Tftp {
      */
     public org.openapis.openapi.models.operations.ProtocolTftpSessionReadResponse protocolTftpSessionRead(org.openapis.openapi.models.operations.ProtocolTftpSessionReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTftpSessionReadPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tftp/session/read/server/{srcfile}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTftpSessionReadRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tftp/session/read/server/{srcfile}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -331,7 +331,7 @@ public class Tftp {
      */
     public org.openapis.openapi.models.operations.ProtocolTftpSessionSetParameterResponse protocolTftpSessionSetParameter(org.openapis.openapi.models.operations.ProtocolTftpSessionSetParameterRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTftpSessionSetParameterPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tftp/{sessionID}/set/{parameter}/{value}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTftpSessionSetParameterRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tftp/{sessionID}/set/{parameter}/{value}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -372,7 +372,7 @@ public class Tftp {
      */
     public org.openapis.openapi.models.operations.ProtocolTftpSessionStartResponse protocolTftpSessionStart(org.openapis.openapi.models.operations.ProtocolTftpSessionStartRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTftpSessionStartPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tftp/{sessionID}/start", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTftpSessionStartRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tftp/{sessionID}/start", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -413,7 +413,7 @@ public class Tftp {
      */
     public org.openapis.openapi.models.operations.ProtocolTftpSessionStatusResponse protocolTftpSessionStatus(org.openapis.openapi.models.operations.ProtocolTftpSessionStatusRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTftpSessionStatusPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tftp/{sessionID}/status", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTftpSessionStatusRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tftp/{sessionID}/status", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -454,7 +454,7 @@ public class Tftp {
      */
     public org.openapis.openapi.models.operations.ProtocolTftpSessionStopResponse protocolTftpSessionStop(org.openapis.openapi.models.operations.ProtocolTftpSessionStopRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTftpSessionStopPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tftp/{sessionID}/stop", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTftpSessionStopRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tftp/{sessionID}/stop", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -495,7 +495,7 @@ public class Tftp {
      */
     public org.openapis.openapi.models.operations.ProtocolTftpSessionWriteResponse protocolTftpSessionWrite(org.openapis.openapi.models.operations.ProtocolTftpSessionWriteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTftpSessionWritePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tftp/session/write/server/{srcfile}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTftpSessionWriteRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tftp/session/write/server/{srcfile}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -537,7 +537,7 @@ public class Tftp {
      */
     public org.openapis.openapi.models.operations.ProtocolTftpSetConfigResponse protocolTftpSetConfig(org.openapis.openapi.models.operations.ProtocolTftpSetConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTftpSetConfigPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tftp/set/config/{argument}/{value}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTftpSetConfigRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tftp/set/config/{argument}/{value}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -578,7 +578,7 @@ public class Tftp {
      */
     public org.openapis.openapi.models.operations.ProtocolTftpSetTraceResponse protocolTftpSetTrace(org.openapis.openapi.models.operations.ProtocolTftpSetTraceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTftpSetTracePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tftp/set/trace/{enableOrNot}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTftpSetTraceRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/tftp/set/trace/{enableOrNot}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

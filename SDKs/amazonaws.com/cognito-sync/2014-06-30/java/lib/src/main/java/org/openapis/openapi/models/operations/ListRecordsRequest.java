@@ -4,27 +4,125 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListRecordsRequest {
-    
-    public ListRecordsPathParams pathParams;
-    public ListRecordsRequest withPathParams(ListRecordsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A string of up to 128 characters. Allowed characters are a-z, A-Z, 0-9, '_' (underscore), '-' (dash), and '.' (dot).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DatasetName")
+    public String datasetName;
+    public ListRecordsRequest withDatasetName(String datasetName) {
+        this.datasetName = datasetName;
         return this;
     }
     
-    
-    public ListRecordsQueryParams queryParams;
-    public ListRecordsRequest withQueryParams(ListRecordsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A name-spaced GUID (for example, us-east-1:23EC4050-6AEA-7089-A2DD-08002EXAMPLE) created by Amazon Cognito. GUID generation is unique within a region.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=IdentityId")
+    public String identityId;
+    public ListRecordsRequest withIdentityId(String identityId) {
+        this.identityId = identityId;
         return this;
     }
     
+    /**
+     * A name-spaced GUID (for example, us-east-1:23EC4050-6AEA-7089-A2DD-08002EXAMPLE) created by Amazon Cognito. GUID generation is unique within a region.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=IdentityPoolId")
+    public String identityPoolId;
+    public ListRecordsRequest withIdentityPoolId(String identityPoolId) {
+        this.identityPoolId = identityPoolId;
+        return this;
+    }
     
-    public ListRecordsHeaders headers;
-    public ListRecordsRequest withHeaders(ListRecordsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListRecordsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListRecordsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListRecordsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListRecordsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListRecordsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListRecordsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListRecordsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The last server sync count for this record.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lastSyncCount")
+    public Long lastSyncCount;
+    public ListRecordsRequest withLastSyncCount(Long lastSyncCount) {
+        this.lastSyncCount = lastSyncCount;
+        return this;
+    }
+    
+    /**
+     * The maximum number of results to be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public ListRecordsRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * A pagination token for obtaining the next page of results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
+    public String nextToken;
+    public ListRecordsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * A token containing a session ID, identity ID, and expiration.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=syncSessionToken")
+    public String syncSessionToken;
+    public ListRecordsRequest withSyncSessionToken(String syncSessionToken) {
+        this.syncSessionToken = syncSessionToken;
         return this;
     }
     

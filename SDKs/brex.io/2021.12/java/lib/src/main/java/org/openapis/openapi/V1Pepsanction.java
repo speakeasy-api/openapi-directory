@@ -37,11 +37,10 @@ public class V1Pepsanction {
     /**
      * Retrieves a list of monitor entries
      * Retrieve a list of all active Pep Sanction Report monitors for this account
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PepMonitorListResponse pepMonitorList(org.openapis.openapi.models.operations.PepMonitorListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PepMonitorListResponse pepMonitorList() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/pepsanction/monitor/list");
         
@@ -50,8 +49,7 @@ public class V1Pepsanction {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -86,19 +84,20 @@ public class V1Pepsanction {
      * Deactive a pep sanction monitor
      * Unregister a previously created Pep Sanction Report Monitor
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PepMonitorUnregisterResponse pepMonitorUnregister(org.openapis.openapi.models.operations.PepMonitorUnregisterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PepMonitorUnregisterResponse pepMonitorUnregister(org.openapis.openapi.models.operations.PepMonitorUnregisterRequest request, org.openapis.openapi.models.operations.PepMonitorUnregisterSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PepMonitorUnregisterPathParams.class, baseUrl, "/api/v1/pepsanction/monitor/unregister/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PepMonitorUnregisterRequest.class, baseUrl, "/api/v1/pepsanction/monitor/unregister/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -134,21 +133,22 @@ public class V1Pepsanction {
      * Update details of active Pep Sanction monitor
      * Update the webhook URL of an active Pep Sanction Report Monitor
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PepMonitorUpdateResponse pepMonitorUpdate(org.openapis.openapi.models.operations.PepMonitorUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PepMonitorUpdateResponse pepMonitorUpdate(org.openapis.openapi.models.operations.PepMonitorUpdateRequest request, org.openapis.openapi.models.operations.PepMonitorUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PepMonitorUpdatePathParams.class, baseUrl, "/api/v1/pepsanction/monitor/update/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PepMonitorUpdateRequest.class, baseUrl, "/api/v1/pepsanction/monitor/update/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -184,21 +184,22 @@ public class V1Pepsanction {
      * Orders a new Pep Sanction Check Report
      * Order a new Pep Sanction Check by providing either a business or person name with some additional optional parameters.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PepOrderResponse pepOrder(org.openapis.openapi.models.operations.PepOrderRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PepOrderResponse pepOrder(org.openapis.openapi.models.operations.PepOrderRequest request, org.openapis.openapi.models.operations.PepOrderSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PepOrderPathParams.class, baseUrl, "/api/v1/pepsanction/order/{type}/{search}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PepOrderRequest.class, baseUrl, "/api/v1/pepsanction/order/{type}/{search}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -234,18 +235,19 @@ public class V1Pepsanction {
      * Returns a json or pdf report
      * Retrieve a completed Pep Sanction check structured or in pdf depending on given accept header
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PepRetrieveResponse pepRetrieve(org.openapis.openapi.models.operations.PepRetrieveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PepRetrieveResponse pepRetrieve(org.openapis.openapi.models.operations.PepRetrieveRequest request, org.openapis.openapi.models.operations.PepRetrieveSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PepRetrievePathParams.class, baseUrl, "/api/v1/pepsanction/retrieve/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PepRetrieveRequest.class, baseUrl, "/api/v1/pepsanction/retrieve/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -254,7 +256,7 @@ public class V1Pepsanction {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

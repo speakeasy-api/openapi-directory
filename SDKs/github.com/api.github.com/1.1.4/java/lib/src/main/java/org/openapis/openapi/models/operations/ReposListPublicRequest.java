@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposListPublicRequest {
-    
-    public ReposListPublicQueryParams queryParams;
-    public ReposListPublicRequest withQueryParams(ReposListPublicQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A repository ID. Only return repositories with an ID greater than this ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public Long since;
+    public ReposListPublicRequest withSince(Long since) {
+        this.since = since;
         return this;
     }
     

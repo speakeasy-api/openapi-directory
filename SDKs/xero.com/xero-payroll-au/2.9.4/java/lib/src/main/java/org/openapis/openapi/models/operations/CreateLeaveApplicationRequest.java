@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateLeaveApplicationRequest {
-    
-    public CreateLeaveApplicationHeaders headers;
-    public CreateLeaveApplicationRequest withHeaders(CreateLeaveApplicationHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.LeaveApplicationInput[] request;
-    public CreateLeaveApplicationRequest withRequest(org.openapis.openapi.models.shared.LeaveApplicationInput[] request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.LeaveApplicationInput[] requestBody;
+    public CreateLeaveApplicationRequest withRequestBody(org.openapis.openapi.models.shared.LeaveApplicationInput[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateLeaveApplicationSecurity security;
-    public CreateLeaveApplicationRequest withSecurity(CreateLeaveApplicationSecurity security) {
-        this.security = security;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
+    public String xeroTenantId;
+    public CreateLeaveApplicationRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     

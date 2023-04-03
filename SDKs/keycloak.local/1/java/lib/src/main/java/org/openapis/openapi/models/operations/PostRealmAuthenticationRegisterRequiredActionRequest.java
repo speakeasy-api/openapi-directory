@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRealmAuthenticationRegisterRequiredActionRequest {
-    
-    public PostRealmAuthenticationRegisterRequiredActionPathParams pathParams;
-    public PostRealmAuthenticationRegisterRequiredActionRequest withPathParams(PostRealmAuthenticationRegisterRequiredActionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * JSON containing 'providerId', and 'name' attributes.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public PostRealmAuthenticationRegisterRequiredActionRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public PostRealmAuthenticationRegisterRequiredActionRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PostRealmAuthenticationRegisterRequiredActionRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

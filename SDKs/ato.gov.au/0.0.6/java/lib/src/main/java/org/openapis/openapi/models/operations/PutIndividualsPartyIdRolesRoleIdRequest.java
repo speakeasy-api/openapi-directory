@@ -7,17 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutIndividualsPartyIdRolesRoleIdRequest {
-    
-    public PutIndividualsPartyIdRolesRoleIdPathParams pathParams;
-    public PutIndividualsPartyIdRolesRoleIdRequest withPathParams(PutIndividualsPartyIdRolesRoleIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutIndividualsPartyIdRolesRoleIdHeaders headers;
-    public PutIndividualsPartyIdRolesRoleIdRequest withHeaders(PutIndividualsPartyIdRolesRoleIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * The API key.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public PutIndividualsPartyIdRolesRoleIdRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
@@ -25,9 +21,29 @@ public class PutIndividualsPartyIdRolesRoleIdRequest {
      * Role resource
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PartyRoleInput request;
-    public PutIndividualsPartyIdRolesRoleIdRequest withRequest(org.openapis.openapi.models.shared.PartyRoleInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PartyRoleInput partyRoleInput;
+    public PutIndividualsPartyIdRolesRoleIdRequest withPartyRoleInput(org.openapis.openapi.models.shared.PartyRoleInput partyRoleInput) {
+        this.partyRoleInput = partyRoleInput;
+        return this;
+    }
+    
+    /**
+     * The party identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=partyId")
+    public String partyId;
+    public PutIndividualsPartyIdRolesRoleIdRequest withPartyId(String partyId) {
+        this.partyId = partyId;
+        return this;
+    }
+    
+    /**
+     * The role identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=roleId")
+    public String roleId;
+    public PutIndividualsPartyIdRolesRoleIdRequest withRoleId(String roleId) {
+        this.roleId = roleId;
         return this;
     }
     

@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateCustomerProfileEntityAssignmentRequest {
-    
-    public CreateCustomerProfileEntityAssignmentPathParams pathParams;
-    public CreateCustomerProfileEntityAssignmentRequest withPathParams(CreateCustomerProfileEntityAssignmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique string that we created to identify the CustomerProfile resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CustomerProfileSid")
+    public String customerProfileSid;
+    public CreateCustomerProfileEntityAssignmentRequest withCustomerProfileSid(String customerProfileSid) {
+        this.customerProfileSid = customerProfileSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateCustomerProfileEntityAssignmentCreateCustomerProfileEntityAssignmentRequest request;
-    public CreateCustomerProfileEntityAssignmentRequest withRequest(CreateCustomerProfileEntityAssignmentCreateCustomerProfileEntityAssignmentRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateCustomerProfileEntityAssignmentSecurity security;
-    public CreateCustomerProfileEntityAssignmentRequest withSecurity(CreateCustomerProfileEntityAssignmentSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateCustomerProfileEntityAssignmentRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateCustomerProfileEntityAssignmentCreateCustomerProfileEntityAssignmentRequest requestBody;
+    public CreateCustomerProfileEntityAssignmentRequest withRequestBody(CreateCustomerProfileEntityAssignmentCreateCustomerProfileEntityAssignmentRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

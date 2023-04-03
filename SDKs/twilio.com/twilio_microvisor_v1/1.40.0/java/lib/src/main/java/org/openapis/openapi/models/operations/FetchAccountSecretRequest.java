@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchAccountSecretRequest {
-    
-    public FetchAccountSecretPathParams pathParams;
-    public FetchAccountSecretRequest withPathParams(FetchAccountSecretPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchAccountSecretSecurity security;
-    public FetchAccountSecretRequest withSecurity(FetchAccountSecretSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchAccountSecretRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The secret key; up to 100 characters.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Key")
+    public String key;
+    public FetchAccountSecretRequest withKey(String key) {
+        this.key = key;
         return this;
     }
     

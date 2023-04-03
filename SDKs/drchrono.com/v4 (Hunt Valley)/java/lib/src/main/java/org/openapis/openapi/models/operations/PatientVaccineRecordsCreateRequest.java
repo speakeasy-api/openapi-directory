@@ -4,20 +4,34 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatientVaccineRecordsCreateRequest {
-    
-    public PatientVaccineRecordsCreateQueryParams queryParams;
-    public PatientVaccineRecordsCreateRequest withQueryParams(PatientVaccineRecordsCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cvx_code")
+    public String cvxCode;
+    public PatientVaccineRecordsCreateRequest withCvxCode(String cvxCode) {
+        this.cvxCode = cvxCode;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public PatientVaccineRecordsCreateRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
+        return this;
+    }
     
-    public PatientVaccineRecordsCreateSecurity security;
-    public PatientVaccineRecordsCreateRequest withSecurity(PatientVaccineRecordsCreateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
+    public Long patient;
+    public PatientVaccineRecordsCreateRequest withPatient(Long patient) {
+        this.patient = patient;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public PatientVaccineRecordsCreateRequest withSince(String since) {
+        this.since = since;
         return this;
     }
     

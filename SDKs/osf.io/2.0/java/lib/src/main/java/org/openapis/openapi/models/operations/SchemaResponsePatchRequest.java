@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SchemaResponsePatchRequest {
-    
-    public SchemaResponsePatchPathParams pathParams;
-    public SchemaResponsePatchRequest withPathParams(SchemaResponsePatchPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public SchemaResponsePatchSchemaResponsesInput requestBody;
+    public SchemaResponsePatchRequest withRequestBody(SchemaResponsePatchSchemaResponsesInput requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public SchemaResponsePatchSchemaResponsesInput request;
-    public SchemaResponsePatchRequest withRequest(SchemaResponsePatchSchemaResponsesInput request) {
-        this.request = request;
+    /**
+     * The unique identifier of the Registration Schema example `6176c9d45e01f100091d4f94`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=schema_response_id")
+    public String schemaResponseId;
+    public SchemaResponsePatchRequest withSchemaResponseId(String schemaResponseId) {
+        this.schemaResponseId = schemaResponseId;
         return this;
     }
     

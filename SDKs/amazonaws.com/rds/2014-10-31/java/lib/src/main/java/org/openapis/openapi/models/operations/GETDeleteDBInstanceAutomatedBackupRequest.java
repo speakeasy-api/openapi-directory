@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteDBInstanceAutomatedBackupRequest {
-    
-    public GETDeleteDBInstanceAutomatedBackupQueryParams queryParams;
-    public GETDeleteDBInstanceAutomatedBackupRequest withQueryParams(GETDeleteDBInstanceAutomatedBackupQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDeleteDBInstanceAutomatedBackupActionEnum action;
+    public GETDeleteDBInstanceAutomatedBackupRequest withAction(GETDeleteDBInstanceAutomatedBackupActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The Amazon Resource Name (ARN) of the automated backups to delete, for example, &lt;code&gt;arn:aws:rds:us-east-1:123456789012:auto-backup:ab-L2IJCEXJP7XQ7HOJ4SIEXAMPLE&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;This setting doesn't apply to RDS Custom.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBInstanceAutomatedBackupsArn")
+    public String dbInstanceAutomatedBackupsArn;
+    public GETDeleteDBInstanceAutomatedBackupRequest withDBInstanceAutomatedBackupsArn(String dbInstanceAutomatedBackupsArn) {
+        this.dbInstanceAutomatedBackupsArn = dbInstanceAutomatedBackupsArn;
+        return this;
+    }
     
-    public GETDeleteDBInstanceAutomatedBackupHeaders headers;
-    public GETDeleteDBInstanceAutomatedBackupRequest withHeaders(GETDeleteDBInstanceAutomatedBackupHeaders headers) {
-        this.headers = headers;
+    /**
+     * The identifier for the source DB instance, which can't be changed and which is unique to an Amazon Web Services Region.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DbiResourceId")
+    public String dbiResourceId;
+    public GETDeleteDBInstanceAutomatedBackupRequest withDbiResourceId(String dbiResourceId) {
+        this.dbiResourceId = dbiResourceId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDeleteDBInstanceAutomatedBackupVersionEnum version;
+    public GETDeleteDBInstanceAutomatedBackupRequest withVersion(GETDeleteDBInstanceAutomatedBackupVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDeleteDBInstanceAutomatedBackupRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDeleteDBInstanceAutomatedBackupRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDeleteDBInstanceAutomatedBackupRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDeleteDBInstanceAutomatedBackupRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDeleteDBInstanceAutomatedBackupRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDeleteDBInstanceAutomatedBackupRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDeleteDBInstanceAutomatedBackupRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

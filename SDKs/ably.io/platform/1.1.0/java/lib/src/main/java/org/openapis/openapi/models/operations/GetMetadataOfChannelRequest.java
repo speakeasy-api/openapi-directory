@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMetadataOfChannelRequest {
-    
-    public GetMetadataOfChannelPathParams pathParams;
-    public GetMetadataOfChannelRequest withPathParams(GetMetadataOfChannelPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The version of the API you wish to use.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Ably-Version")
+    public String xAblyVersion;
+    public GetMetadataOfChannelRequest withXAblyVersion(String xAblyVersion) {
+        this.xAblyVersion = xAblyVersion;
         return this;
     }
     
-    
-    public GetMetadataOfChannelQueryParams queryParams;
-    public GetMetadataOfChannelRequest withQueryParams(GetMetadataOfChannelQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The [Channel's ID](https://www.ably.io/documentation/rest/channels).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel_id")
+    public String channelId;
+    public GetMetadataOfChannelRequest withChannelId(String channelId) {
+        this.channelId = channelId;
         return this;
     }
     
-    
-    public GetMetadataOfChannelHeaders headers;
-    public GetMetadataOfChannelRequest withHeaders(GetMetadataOfChannelHeaders headers) {
-        this.headers = headers;
+    /**
+     * The response format you would like
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public org.openapis.openapi.models.shared.ResponseFormatEnum format;
+    public GetMetadataOfChannelRequest withFormat(org.openapis.openapi.models.shared.ResponseFormatEnum format) {
+        this.format = format;
         return this;
     }
     

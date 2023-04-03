@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1DonationsCryptoCalculateRequest {
-    
-    public GetApiV1DonationsCryptoCalculateQueryParams queryParams;
-    public GetApiV1DonationsCryptoCalculateRequest withQueryParams(GetApiV1DonationsCryptoCalculateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of transactions to offset.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
+    public Double count;
+    public GetApiV1DonationsCryptoCalculateRequest withCount(Double count) {
+        this.count = count;
         return this;
     }
     
-    
-    public GetApiV1DonationsCryptoCalculateSecurity security;
-    public GetApiV1DonationsCryptoCalculateRequest withSecurity(GetApiV1DonationsCryptoCalculateSecurity security) {
-        this.security = security;
+    /**
+     * The currency of the transaction.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currency")
+    public GetApiV1DonationsCryptoCalculateCurrencyEnum currency;
+    public GetApiV1DonationsCryptoCalculateRequest withCurrency(GetApiV1DonationsCryptoCalculateCurrencyEnum currency) {
+        this.currency = currency;
         return this;
     }
     

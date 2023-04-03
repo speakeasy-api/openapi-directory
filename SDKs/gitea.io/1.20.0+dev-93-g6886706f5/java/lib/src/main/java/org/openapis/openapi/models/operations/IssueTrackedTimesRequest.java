@@ -4,20 +4,87 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssueTrackedTimesRequest {
-    
-    public IssueTrackedTimesPathParams pathParams;
-    public IssueTrackedTimesRequest withPathParams(IssueTrackedTimesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Only show times updated before the given time. This is a timestamp in RFC 3339 format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=before")
+    public OffsetDateTime before;
+    public IssueTrackedTimesRequest withBefore(OffsetDateTime before) {
+        this.before = before;
         return this;
     }
     
+    /**
+     * index of the issue
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=index")
+    public Long index;
+    public IssueTrackedTimesRequest withIndex(Long index) {
+        this.index = index;
+        return this;
+    }
     
-    public IssueTrackedTimesQueryParams queryParams;
-    public IssueTrackedTimesRequest withQueryParams(IssueTrackedTimesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * page size of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public IssueTrackedTimesRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssueTrackedTimesRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * page number of results to return (1-based)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public IssueTrackedTimesRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssueTrackedTimesRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * Only show times updated after the given time. This is a timestamp in RFC 3339 format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public OffsetDateTime since;
+    public IssueTrackedTimesRequest withSince(OffsetDateTime since) {
+        this.since = since;
+        return this;
+    }
+    
+    /**
+     * optional filter by user (available for issue managers)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user")
+    public String user;
+    public IssueTrackedTimesRequest withUser(String user) {
+        this.user = user;
         return this;
     }
     

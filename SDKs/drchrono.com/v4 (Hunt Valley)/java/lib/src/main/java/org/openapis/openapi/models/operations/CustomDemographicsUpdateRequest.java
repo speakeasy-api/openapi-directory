@@ -4,27 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CustomDemographicsUpdateRequest {
-    
-    public CustomDemographicsUpdatePathParams pathParams;
-    public CustomDemographicsUpdateRequest withPathParams(CustomDemographicsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public CustomDemographicsUpdateRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     
-    
-    public CustomDemographicsUpdateQueryParams queryParams;
-    public CustomDemographicsUpdateRequest withQueryParams(CustomDemographicsUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public CustomDemographicsUpdateSecurity security;
-    public CustomDemographicsUpdateRequest withSecurity(CustomDemographicsUpdateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public CustomDemographicsUpdateRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

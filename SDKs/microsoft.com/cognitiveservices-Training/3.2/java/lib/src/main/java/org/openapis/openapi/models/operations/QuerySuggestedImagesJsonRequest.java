@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class QuerySuggestedImagesJsonRequest {
-    
-    public QuerySuggestedImagesJsonPathParams pathParams;
-    public QuerySuggestedImagesJsonRequest withPathParams(QuerySuggestedImagesJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public QuerySuggestedImagesJsonQueryParams queryParams;
-    public QuerySuggestedImagesJsonRequest withQueryParams(QuerySuggestedImagesJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Contains properties we need to query suggested images.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SuggestedTagAndRegionQueryToken request;
-    public QuerySuggestedImagesJsonRequest withRequest(org.openapis.openapi.models.shared.SuggestedTagAndRegionQueryToken request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SuggestedTagAndRegionQueryToken suggestedTagAndRegionQueryToken;
+    public QuerySuggestedImagesJsonRequest withSuggestedTagAndRegionQueryToken(org.openapis.openapi.models.shared.SuggestedTagAndRegionQueryToken suggestedTagAndRegionQueryToken) {
+        this.suggestedTagAndRegionQueryToken = suggestedTagAndRegionQueryToken;
+        return this;
+    }
+    
+    /**
+     * IterationId to use for the suggested tags and regions.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=iterationId")
+    public String iterationId;
+    public QuerySuggestedImagesJsonRequest withIterationId(String iterationId) {
+        this.iterationId = iterationId;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public QuerySuggestedImagesJsonRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

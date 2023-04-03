@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelAnAccountTransferRequest {
-    
-    public CancelAnAccountTransferPathParams pathParams;
-    public CancelAnAccountTransferRequest withPathParams(CancelAnAccountTransferPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account_transfer_id")
+    public String accountTransferId;
+    public CancelAnAccountTransferRequest withAccountTransferId(String accountTransferId) {
+        this.accountTransferId = accountTransferId;
         return this;
     }
     

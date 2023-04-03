@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TokensGetPartnerOfferSkuHistoryRequest {
-    
-    public TokensGetPartnerOfferSkuHistoryPathParams pathParams;
-    public TokensGetPartnerOfferSkuHistoryRequest withPathParams(TokensGetPartnerOfferSkuHistoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The partner application identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=partnerApplicationId")
+    public Integer partnerApplicationId;
+    public TokensGetPartnerOfferSkuHistoryRequest withPartnerApplicationId(Integer partnerApplicationId) {
+        this.partnerApplicationId = partnerApplicationId;
         return this;
     }
     
-    
-    public TokensGetPartnerOfferSkuHistorySecurity security;
-    public TokensGetPartnerOfferSkuHistoryRequest withSecurity(TokensGetPartnerOfferSkuHistorySecurity security) {
-        this.security = security;
+    /**
+     * The bungie.net user to apply missing offers to. If not self, elevated permissions are required.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=targetBnetMembershipId")
+    public Long targetBnetMembershipId;
+    public TokensGetPartnerOfferSkuHistoryRequest withTargetBnetMembershipId(Long targetBnetMembershipId) {
+        this.targetBnetMembershipId = targetBnetMembershipId;
         return this;
     }
     

@@ -4,20 +4,55 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetListOfPaymentsRequest {
-    
-    public GetListOfPaymentsQueryParams queryParams;
-    public GetListOfPaymentsRequest withQueryParams(GetListOfPaymentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dateFrom")
+    public String dateFrom;
+    public GetListOfPaymentsRequest withDateFrom(String dateFrom) {
+        this.dateFrom = dateFrom;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dateTo")
+    public String dateTo;
+    public GetListOfPaymentsRequest withDateTo(String dateTo) {
+        this.dateTo = dateTo;
+        return this;
+    }
     
-    public GetListOfPaymentsHeaders headers;
-    public GetListOfPaymentsRequest withHeaders(GetListOfPaymentsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public String limit;
+    public GetListOfPaymentsRequest withLimit(String limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
+    public String orderBy;
+    public GetListOfPaymentsRequest withOrderBy(String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public String page;
+    public GetListOfPaymentsRequest withPage(String page) {
+        this.page = page;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortBy")
+    public String sortBy;
+    public GetListOfPaymentsRequest withSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public GetListOfPaymentsRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

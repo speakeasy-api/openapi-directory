@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Initialize Identity Platform for a Cloud project. Identity Platform is an end-to-end authentication system for third-party users to access your apps and services. These could include mobile/web apps, games, APIs and beyond. This is the publicly available variant of EnableIdentityPlatform that is only available to billing-enabled projects.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitProjectsIdentityPlatformInitializeAuthResponse identitytoolkitProjectsIdentityPlatformInitializeAuth(org.openapis.openapi.models.operations.IdentitytoolkitProjectsIdentityPlatformInitializeAuthRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitProjectsIdentityPlatformInitializeAuthResponse identitytoolkitProjectsIdentityPlatformInitializeAuth(org.openapis.openapi.models.operations.IdentitytoolkitProjectsIdentityPlatformInitializeAuthRequest request, org.openapis.openapi.models.operations.IdentitytoolkitProjectsIdentityPlatformInitializeAuthSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdentitytoolkitProjectsIdentityPlatformInitializeAuthPathParams.class, baseUrl, "/v2/{project}/identityPlatform:initializeAuth", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdentitytoolkitProjectsIdentityPlatformInitializeAuthRequest.class, baseUrl, "/v2/{project}/identityPlatform:initializeAuth", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitProjectsIdentityPlatformInitializeAuthQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitProjectsIdentityPlatformInitializeAuthRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,27 +83,28 @@ public class Projects {
     /**
      * Create a tenant. Requires write permission on the Agent project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsCreateResponse identitytoolkitProjectsTenantsCreate(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsCreateResponse identitytoolkitProjectsTenantsCreate(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsCreateRequest request, org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsCreatePathParams.class, baseUrl, "/v2/{parent}/tenants", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsCreateRequest.class, baseUrl, "/v2/{parent}/tenants", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudIdentitytoolkitAdminV2TenantInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -129,27 +131,28 @@ public class Projects {
     /**
      * Create a default supported Idp configuration for an Identity Toolkit project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateResponse identitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreate(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateResponse identitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreate(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateRequest request, org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreatePathParams.class, baseUrl, "/v2/{parent}/defaultSupportedIdpConfigs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateRequest.class, baseUrl, "/v2/{parent}/defaultSupportedIdpConfigs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudIdentitytoolkitAdminV2DefaultSupportedIdpConfig", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -176,25 +179,26 @@ public class Projects {
     /**
      * List all default supported Idp configurations for an Identity Toolkit project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsListResponse identitytoolkitProjectsTenantsDefaultSupportedIdpConfigsList(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsListResponse identitytoolkitProjectsTenantsDefaultSupportedIdpConfigsList(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsListRequest request, org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsListPathParams.class, baseUrl, "/v2/{parent}/defaultSupportedIdpConfigs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsListRequest.class, baseUrl, "/v2/{parent}/defaultSupportedIdpConfigs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsDefaultSupportedIdpConfigsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -221,27 +225,28 @@ public class Projects {
     /**
      * Gets the access control policy for a resource. An error is returned if the resource does not exist. An empty policy is returned if the resource exists but does not have a policy set on it. Caller must have the right Google IAM permission on the resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsGetIamPolicyResponse identitytoolkitProjectsTenantsGetIamPolicy(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsGetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsGetIamPolicyResponse identitytoolkitProjectsTenantsGetIamPolicy(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsGetIamPolicyRequest request, org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsGetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsGetIamPolicyPathParams.class, baseUrl, "/v2/{resource}:getIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsGetIamPolicyRequest.class, baseUrl, "/v2/{resource}:getIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleIamV1GetIamPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsGetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsGetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -268,27 +273,28 @@ public class Projects {
     /**
      * Create an inbound SAML configuration for an Identity Toolkit project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsInboundSamlConfigsCreateResponse identitytoolkitProjectsTenantsInboundSamlConfigsCreate(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsInboundSamlConfigsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsInboundSamlConfigsCreateResponse identitytoolkitProjectsTenantsInboundSamlConfigsCreate(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsInboundSamlConfigsCreateRequest request, org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsInboundSamlConfigsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsInboundSamlConfigsCreatePathParams.class, baseUrl, "/v2/{parent}/inboundSamlConfigs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsInboundSamlConfigsCreateRequest.class, baseUrl, "/v2/{parent}/inboundSamlConfigs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudIdentitytoolkitAdminV2InboundSamlConfigInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsInboundSamlConfigsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsInboundSamlConfigsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -315,25 +321,26 @@ public class Projects {
     /**
      * List all inbound SAML configurations for an Identity Toolkit project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsInboundSamlConfigsListResponse identitytoolkitProjectsTenantsInboundSamlConfigsList(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsInboundSamlConfigsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsInboundSamlConfigsListResponse identitytoolkitProjectsTenantsInboundSamlConfigsList(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsInboundSamlConfigsListRequest request, org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsInboundSamlConfigsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsInboundSamlConfigsListPathParams.class, baseUrl, "/v2/{parent}/inboundSamlConfigs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsInboundSamlConfigsListRequest.class, baseUrl, "/v2/{parent}/inboundSamlConfigs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsInboundSamlConfigsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsInboundSamlConfigsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -360,25 +367,26 @@ public class Projects {
     /**
      * List tenants under the given agent project. Requires read permission on the Agent project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsListResponse identitytoolkitProjectsTenantsList(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsListResponse identitytoolkitProjectsTenantsList(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsListRequest request, org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsListPathParams.class, baseUrl, "/v2/{parent}/tenants", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsListRequest.class, baseUrl, "/v2/{parent}/tenants", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -405,27 +413,28 @@ public class Projects {
     /**
      * Create an Oidc Idp configuration for an Identity Toolkit project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsCreateResponse identitytoolkitProjectsTenantsOauthIdpConfigsCreate(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsCreateResponse identitytoolkitProjectsTenantsOauthIdpConfigsCreate(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsCreateRequest request, org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsCreatePathParams.class, baseUrl, "/v2/{parent}/oauthIdpConfigs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsCreateRequest.class, baseUrl, "/v2/{parent}/oauthIdpConfigs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudIdentitytoolkitAdminV2OAuthIdpConfig", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -452,25 +461,26 @@ public class Projects {
     /**
      * Delete an Oidc Idp configuration for an Identity Toolkit project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsDeleteResponse identitytoolkitProjectsTenantsOauthIdpConfigsDelete(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsDeleteResponse identitytoolkitProjectsTenantsOauthIdpConfigsDelete(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsDeleteRequest request, org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsDeletePathParams.class, baseUrl, "/v2/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsDeleteRequest.class, baseUrl, "/v2/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -497,25 +507,26 @@ public class Projects {
     /**
      * Retrieve an Oidc Idp configuration for an Identity Toolkit project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsGetResponse identitytoolkitProjectsTenantsOauthIdpConfigsGet(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsGetResponse identitytoolkitProjectsTenantsOauthIdpConfigsGet(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsGetRequest request, org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsGetPathParams.class, baseUrl, "/v2/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsGetRequest.class, baseUrl, "/v2/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -542,25 +553,26 @@ public class Projects {
     /**
      * List all Oidc Idp configurations for an Identity Toolkit project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsListResponse identitytoolkitProjectsTenantsOauthIdpConfigsList(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsListResponse identitytoolkitProjectsTenantsOauthIdpConfigsList(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsListRequest request, org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsListPathParams.class, baseUrl, "/v2/{parent}/oauthIdpConfigs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsListRequest.class, baseUrl, "/v2/{parent}/oauthIdpConfigs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -587,27 +599,28 @@ public class Projects {
     /**
      * Update an Oidc Idp configuration for an Identity Toolkit project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchResponse identitytoolkitProjectsTenantsOauthIdpConfigsPatch(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchResponse identitytoolkitProjectsTenantsOauthIdpConfigsPatch(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchRequest request, org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchPathParams.class, baseUrl, "/v2/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchRequest.class, baseUrl, "/v2/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudIdentitytoolkitAdminV2OAuthIdpConfig", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsOauthIdpConfigsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -634,27 +647,28 @@ public class Projects {
     /**
      * Sets the access control policy for a resource. If the policy exists, it is replaced. Caller must have the right Google IAM permission on the resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsSetIamPolicyResponse identitytoolkitProjectsTenantsSetIamPolicy(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsSetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsSetIamPolicyResponse identitytoolkitProjectsTenantsSetIamPolicy(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsSetIamPolicyRequest request, org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsSetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsSetIamPolicyPathParams.class, baseUrl, "/v2/{resource}:setIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsSetIamPolicyRequest.class, baseUrl, "/v2/{resource}:setIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleIamV1SetIamPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsSetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsSetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -681,27 +695,28 @@ public class Projects {
     /**
      * Returns the caller's permissions on a resource. An error is returned if the resource does not exist. A caller is not required to have Google IAM permission to make this request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsTestIamPermissionsResponse identitytoolkitProjectsTenantsTestIamPermissions(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsTestIamPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsTestIamPermissionsResponse identitytoolkitProjectsTenantsTestIamPermissions(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsTestIamPermissionsRequest request, org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsTestIamPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsTestIamPermissionsPathParams.class, baseUrl, "/v2/{resource}:testIamPermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsTestIamPermissionsRequest.class, baseUrl, "/v2/{resource}:testIamPermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleIamV1TestIamPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsTestIamPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IdentitytoolkitProjectsTenantsTestIamPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

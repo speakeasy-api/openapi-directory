@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutRealmUsersIdSendVerifyEmailRequest {
-    
-    public PutRealmUsersIdSendVerifyEmailPathParams pathParams;
-    public PutRealmUsersIdSendVerifyEmailRequest withPathParams(PutRealmUsersIdSendVerifyEmailPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Client id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=client_id")
+    public String clientId;
+    public PutRealmUsersIdSendVerifyEmailRequest withClientId(String clientId) {
+        this.clientId = clientId;
         return this;
     }
     
+    /**
+     * User id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutRealmUsersIdSendVerifyEmailRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PutRealmUsersIdSendVerifyEmailQueryParams queryParams;
-    public PutRealmUsersIdSendVerifyEmailRequest withQueryParams(PutRealmUsersIdSendVerifyEmailQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PutRealmUsersIdSendVerifyEmailRequest withRealm(String realm) {
+        this.realm = realm;
+        return this;
+    }
+    
+    /**
+     * Redirect uri
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=redirect_uri")
+    public String redirectUri;
+    public PutRealmUsersIdSendVerifyEmailRequest withRedirectUri(String redirectUri) {
+        this.redirectUri = redirectUri;
         return this;
     }
     

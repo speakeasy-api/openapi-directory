@@ -11,9 +11,7 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    bearer = new SchemeBearer() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    bearer = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 

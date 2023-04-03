@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdRequest {
-    
-    public GetCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdPathParams pathParams;
-    public GetCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdRequest withPathParams(GetCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the API credential.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiCredentialId")
+    public String apiCredentialId;
+    public GetCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdRequest withApiCredentialId(String apiCredentialId) {
+        this.apiCredentialId = apiCredentialId;
         return this;
     }
     
+    /**
+     * The unique identifier of the company account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public GetCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
+        return this;
+    }
     
-    public GetCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdSecurity security;
-    public GetCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdRequest withSecurity(GetCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the allowed origin.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=originId")
+    public String originId;
+    public GetCompaniesCompanyIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdRequest withOriginId(String originId) {
+        this.originId = originId;
         return this;
     }
     

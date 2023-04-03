@@ -38,25 +38,26 @@ public class APICredentialsCompanyLevel {
      * To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014API credentials read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCompaniesCompanyIdApiCredentialsResponse getCompaniesCompanyIdApiCredentials(org.openapis.openapi.models.operations.GetCompaniesCompanyIdApiCredentialsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCompaniesCompanyIdApiCredentialsResponse getCompaniesCompanyIdApiCredentials(org.openapis.openapi.models.operations.GetCompaniesCompanyIdApiCredentialsRequest request, org.openapis.openapi.models.operations.GetCompaniesCompanyIdApiCredentialsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCompaniesCompanyIdApiCredentialsPathParams.class, baseUrl, "/companies/{companyId}/apiCredentials", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCompaniesCompanyIdApiCredentialsRequest.class, baseUrl, "/companies/{companyId}/apiCredentials", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCompaniesCompanyIdApiCredentialsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCompaniesCompanyIdApiCredentialsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -95,19 +96,20 @@ public class APICredentialsCompanyLevel {
      * To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014API credentials read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCompaniesCompanyIdApiCredentialsApiCredentialIdResponse getCompaniesCompanyIdApiCredentialsApiCredentialId(org.openapis.openapi.models.operations.GetCompaniesCompanyIdApiCredentialsApiCredentialIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCompaniesCompanyIdApiCredentialsApiCredentialIdResponse getCompaniesCompanyIdApiCredentialsApiCredentialId(org.openapis.openapi.models.operations.GetCompaniesCompanyIdApiCredentialsApiCredentialIdRequest request, org.openapis.openapi.models.operations.GetCompaniesCompanyIdApiCredentialsApiCredentialIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCompaniesCompanyIdApiCredentialsApiCredentialIdPathParams.class, baseUrl, "/companies/{companyId}/apiCredentials/{apiCredentialId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCompaniesCompanyIdApiCredentialsApiCredentialIdRequest.class, baseUrl, "/companies/{companyId}/apiCredentials/{apiCredentialId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -146,21 +148,22 @@ public class APICredentialsCompanyLevel {
      * To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014API credentials read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchCompaniesCompanyIdApiCredentialsApiCredentialIdResponse patchCompaniesCompanyIdApiCredentialsApiCredentialId(org.openapis.openapi.models.operations.PatchCompaniesCompanyIdApiCredentialsApiCredentialIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchCompaniesCompanyIdApiCredentialsApiCredentialIdResponse patchCompaniesCompanyIdApiCredentialsApiCredentialId(org.openapis.openapi.models.operations.PatchCompaniesCompanyIdApiCredentialsApiCredentialIdRequest request, org.openapis.openapi.models.operations.PatchCompaniesCompanyIdApiCredentialsApiCredentialIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchCompaniesCompanyIdApiCredentialsApiCredentialIdPathParams.class, baseUrl, "/companies/{companyId}/apiCredentials/{apiCredentialId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchCompaniesCompanyIdApiCredentialsApiCredentialIdRequest.class, baseUrl, "/companies/{companyId}/apiCredentials/{apiCredentialId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateCompanyApiCredentialRequest", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -208,21 +211,22 @@ public class APICredentialsCompanyLevel {
      * To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014API credentials read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostCompaniesCompanyIdApiCredentialsResponse postCompaniesCompanyIdApiCredentials(org.openapis.openapi.models.operations.PostCompaniesCompanyIdApiCredentialsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostCompaniesCompanyIdApiCredentialsResponse postCompaniesCompanyIdApiCredentials(org.openapis.openapi.models.operations.PostCompaniesCompanyIdApiCredentialsRequest request, org.openapis.openapi.models.operations.PostCompaniesCompanyIdApiCredentialsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostCompaniesCompanyIdApiCredentialsPathParams.class, baseUrl, "/companies/{companyId}/apiCredentials", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostCompaniesCompanyIdApiCredentialsRequest.class, baseUrl, "/companies/{companyId}/apiCredentials", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createCompanyApiCredentialRequest", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

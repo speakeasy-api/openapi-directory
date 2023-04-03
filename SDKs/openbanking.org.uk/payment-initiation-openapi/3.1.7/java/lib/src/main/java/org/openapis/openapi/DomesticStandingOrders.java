@@ -35,23 +35,24 @@ public class DomesticStandingOrders {
     /**
      * Create Domestic Standing Order Consents
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateDomesticStandingOrderConsentsJsonResponse createDomesticStandingOrderConsentsJson(org.openapis.openapi.models.operations.CreateDomesticStandingOrderConsentsJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateDomesticStandingOrderConsentsJsonResponse createDomesticStandingOrderConsentsJson(org.openapis.openapi.models.operations.CreateDomesticStandingOrderConsentsJsonRequest request, org.openapis.openapi.models.operations.CreateDomesticStandingOrderConsentsJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/domestic-standing-order-consents");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "obWriteDomesticStandingOrderConsent5", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -60,7 +61,7 @@ public class DomesticStandingOrders {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -123,23 +124,24 @@ public class DomesticStandingOrders {
     /**
      * Create Domestic Standing Order Consents
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateDomesticStandingOrderConsentsRawResponse createDomesticStandingOrderConsentsRaw(org.openapis.openapi.models.operations.CreateDomesticStandingOrderConsentsRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateDomesticStandingOrderConsentsRawResponse createDomesticStandingOrderConsentsRaw(org.openapis.openapi.models.operations.CreateDomesticStandingOrderConsentsRawRequest request, org.openapis.openapi.models.operations.CreateDomesticStandingOrderConsentsRawSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/domestic-standing-order-consents");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -148,7 +150,7 @@ public class DomesticStandingOrders {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -211,23 +213,24 @@ public class DomesticStandingOrders {
     /**
      * Create Domestic Standing Orders
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateDomesticStandingOrdersJsonResponse createDomesticStandingOrdersJson(org.openapis.openapi.models.operations.CreateDomesticStandingOrdersJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateDomesticStandingOrdersJsonResponse createDomesticStandingOrdersJson(org.openapis.openapi.models.operations.CreateDomesticStandingOrdersJsonRequest request, org.openapis.openapi.models.operations.CreateDomesticStandingOrdersJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/domestic-standing-orders");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "obWriteDomesticStandingOrder3", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -236,7 +239,7 @@ public class DomesticStandingOrders {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -299,23 +302,24 @@ public class DomesticStandingOrders {
     /**
      * Create Domestic Standing Orders
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateDomesticStandingOrdersRawResponse createDomesticStandingOrdersRaw(org.openapis.openapi.models.operations.CreateDomesticStandingOrdersRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateDomesticStandingOrdersRawResponse createDomesticStandingOrdersRaw(org.openapis.openapi.models.operations.CreateDomesticStandingOrdersRawRequest request, org.openapis.openapi.models.operations.CreateDomesticStandingOrdersRawSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/domestic-standing-orders");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -324,7 +328,7 @@ public class DomesticStandingOrders {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -387,18 +391,19 @@ public class DomesticStandingOrders {
     /**
      * Get Domestic Standing Order Consents
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetDomesticStandingOrderConsentsConsentIdResponse getDomesticStandingOrderConsentsConsentId(org.openapis.openapi.models.operations.GetDomesticStandingOrderConsentsConsentIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetDomesticStandingOrderConsentsConsentIdResponse getDomesticStandingOrderConsentsConsentId(org.openapis.openapi.models.operations.GetDomesticStandingOrderConsentsConsentIdRequest request, org.openapis.openapi.models.operations.GetDomesticStandingOrderConsentsConsentIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDomesticStandingOrderConsentsConsentIdPathParams.class, baseUrl, "/domestic-standing-order-consents/{ConsentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDomesticStandingOrderConsentsConsentIdRequest.class, baseUrl, "/domestic-standing-order-consents/{ConsentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -407,7 +412,7 @@ public class DomesticStandingOrders {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -470,18 +475,19 @@ public class DomesticStandingOrders {
     /**
      * Get Domestic Standing Orders
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetDomesticStandingOrdersDomesticStandingOrderIdResponse getDomesticStandingOrdersDomesticStandingOrderId(org.openapis.openapi.models.operations.GetDomesticStandingOrdersDomesticStandingOrderIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetDomesticStandingOrdersDomesticStandingOrderIdResponse getDomesticStandingOrdersDomesticStandingOrderId(org.openapis.openapi.models.operations.GetDomesticStandingOrdersDomesticStandingOrderIdRequest request, org.openapis.openapi.models.operations.GetDomesticStandingOrdersDomesticStandingOrderIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDomesticStandingOrdersDomesticStandingOrderIdPathParams.class, baseUrl, "/domestic-standing-orders/{DomesticStandingOrderId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDomesticStandingOrdersDomesticStandingOrderIdRequest.class, baseUrl, "/domestic-standing-orders/{DomesticStandingOrderId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -490,7 +496,7 @@ public class DomesticStandingOrders {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

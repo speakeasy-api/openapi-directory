@@ -40,15 +40,15 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsAssociateResponse mybusinessbusinessinformationLocationsAssociate(org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsAssociateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsAssociatePathParams.class, baseUrl, "/v1/{name}:associate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsAssociateRequest.class, baseUrl, "/v1/{name}:associate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "associateLocationRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsAssociateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsAssociateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -86,13 +86,13 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsAttributesGetGoogleUpdatedResponse mybusinessbusinessinformationLocationsAttributesGetGoogleUpdated(org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsAttributesGetGoogleUpdatedRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsAttributesGetGoogleUpdatedPathParams.class, baseUrl, "/v1/{name}:getGoogleUpdated", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsAttributesGetGoogleUpdatedRequest.class, baseUrl, "/v1/{name}:getGoogleUpdated", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsAttributesGetGoogleUpdatedQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsAttributesGetGoogleUpdatedRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -130,15 +130,15 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsClearLocationAssociationResponse mybusinessbusinessinformationLocationsClearLocationAssociation(org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsClearLocationAssociationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsClearLocationAssociationPathParams.class, baseUrl, "/v1/{name}:clearLocationAssociation", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsClearLocationAssociationRequest.class, baseUrl, "/v1/{name}:clearLocationAssociation", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsClearLocationAssociationQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsClearLocationAssociationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -176,13 +176,13 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsDeleteResponse mybusinessbusinessinformationLocationsDelete(org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsDeletePathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsDeleteRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -220,13 +220,13 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsGetAttributesResponse mybusinessbusinessinformationLocationsGetAttributes(org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsGetAttributesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsGetAttributesPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsGetAttributesRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsGetAttributesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsGetAttributesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -264,15 +264,15 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsUpdateAttributesResponse mybusinessbusinessinformationLocationsUpdateAttributes(org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsUpdateAttributesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsUpdateAttributesPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsUpdateAttributesRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "attributesInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsUpdateAttributesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MybusinessbusinessinformationLocationsUpdateAttributesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

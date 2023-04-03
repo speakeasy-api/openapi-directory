@@ -40,19 +40,20 @@ public class Transactions {
      * See [Delayed capture transactions](https://developer.squareup.com/docs/payments/transactions/overview#delayed-capture)
      * for more information.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CaptureTransactionResponse captureTransaction(org.openapis.openapi.models.operations.CaptureTransactionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CaptureTransactionResponse captureTransaction(org.openapis.openapi.models.operations.CaptureTransactionRequest request, org.openapis.openapi.models.operations.CaptureTransactionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CaptureTransactionPathParams.class, baseUrl, "/v2/locations/{location_id}/transactions/{transaction_id}/capture", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CaptureTransactionRequest.class, baseUrl, "/v2/locations/{location_id}/transactions/{transaction_id}/capture", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -99,24 +100,25 @@ public class Transactions {
      * [RetrieveTransaction](https://developer.squareup.com/reference/square_2021-08-18/transactions-api/retrieve-transaction). See the `processing_fee_money`
      * field of each [Tender included](https://developer.squareup.com/reference/square_2021-08-18/objects/Tender) in the transaction.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChargeResponse charge(org.openapis.openapi.models.operations.ChargeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChargeResponse charge(org.openapis.openapi.models.operations.ChargeRequest request, org.openapis.openapi.models.operations.ChargeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChargePathParams.class, baseUrl, "/v2/locations/{location_id}/transactions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChargeRequest.class, baseUrl, "/v2/locations/{location_id}/transactions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "chargeRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -149,25 +151,26 @@ public class Transactions {
      * 
      * Max results per [page](https://developer.squareup.com/docs/working-with-apis/pagination): 50
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListTransactionsResponse listTransactions(org.openapis.openapi.models.operations.ListTransactionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListTransactionsResponse listTransactions(org.openapis.openapi.models.operations.ListTransactionsRequest request, org.openapis.openapi.models.operations.ListTransactionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListTransactionsPathParams.class, baseUrl, "/v2/locations/{location_id}/transactions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListTransactionsRequest.class, baseUrl, "/v2/locations/{location_id}/transactions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListTransactionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListTransactionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -195,19 +198,20 @@ public class Transactions {
      * RetrieveTransaction
      * Retrieves details for a single transaction.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrieveTransactionResponse retrieveTransaction(org.openapis.openapi.models.operations.RetrieveTransactionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveTransactionResponse retrieveTransaction(org.openapis.openapi.models.operations.RetrieveTransactionRequest request, org.openapis.openapi.models.operations.RetrieveTransactionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveTransactionPathParams.class, baseUrl, "/v2/locations/{location_id}/transactions/{transaction_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveTransactionRequest.class, baseUrl, "/v2/locations/{location_id}/transactions/{transaction_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -240,19 +244,20 @@ public class Transactions {
      * See [Delayed capture transactions](https://developer.squareup.com/docs/payments/transactions/overview#delayed-capture)
      * for more information.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.VoidTransactionResponse voidTransaction(org.openapis.openapi.models.operations.VoidTransactionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.VoidTransactionResponse voidTransaction(org.openapis.openapi.models.operations.VoidTransactionRequest request, org.openapis.openapi.models.operations.VoidTransactionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VoidTransactionPathParams.class, baseUrl, "/v2/locations/{location_id}/transactions/{transaction_id}/void", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VoidTransactionRequest.class, baseUrl, "/v2/locations/{location_id}/transactions/{transaction_id}/void", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -289,25 +294,26 @@ public class Transactions {
      * 
      * Max results per [page](https://developer.squareup.com/docs/working-with-apis/pagination): 50
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetV2LocationsLocationIdRefundsResponse getV2LocationsLocationIdRefunds(org.openapis.openapi.models.operations.GetV2LocationsLocationIdRefundsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetV2LocationsLocationIdRefundsResponse getV2LocationsLocationIdRefunds(org.openapis.openapi.models.operations.GetV2LocationsLocationIdRefundsRequest request, org.openapis.openapi.models.operations.GetV2LocationsLocationIdRefundsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2LocationsLocationIdRefundsPathParams.class, baseUrl, "/v2/locations/{location_id}/refunds", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2LocationsLocationIdRefundsRequest.class, baseUrl, "/v2/locations/{location_id}/refunds", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV2LocationsLocationIdRefundsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV2LocationsLocationIdRefundsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -343,24 +349,25 @@ public class Transactions {
      * refunded using the Connect API**. Interac transactions must refunded
      * in-person (e.g., dipping the card using POS app).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV2LocationsLocationIdTransactionsTransactionIdRefundResponse postV2LocationsLocationIdTransactionsTransactionIdRefund(org.openapis.openapi.models.operations.PostV2LocationsLocationIdTransactionsTransactionIdRefundRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV2LocationsLocationIdTransactionsTransactionIdRefundResponse postV2LocationsLocationIdTransactionsTransactionIdRefund(org.openapis.openapi.models.operations.PostV2LocationsLocationIdTransactionsTransactionIdRefundRequest request, org.openapis.openapi.models.operations.PostV2LocationsLocationIdTransactionsTransactionIdRefundSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostV2LocationsLocationIdTransactionsTransactionIdRefundPathParams.class, baseUrl, "/v2/locations/{location_id}/transactions/{transaction_id}/refund", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostV2LocationsLocationIdTransactionsTransactionIdRefundRequest.class, baseUrl, "/v2/locations/{location_id}/transactions/{transaction_id}/refund", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createRefundRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

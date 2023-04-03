@@ -43,7 +43,7 @@ public class MessageReactions {
      */
     public org.openapis.openapi.models.operations.DeleteMessageReactionsIdResponse deleteMessageReactionsId(org.openapis.openapi.models.operations.DeleteMessageReactionsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteMessageReactionsIdPathParams.class, baseUrl, "/message_reactions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteMessageReactionsIdRequest.class, baseUrl, "/message_reactions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -82,7 +82,7 @@ public class MessageReactions {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMessageReactionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMessageReactionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -123,7 +123,7 @@ public class MessageReactions {
      */
     public org.openapis.openapi.models.operations.GetMessageReactionsIdResponse getMessageReactionsId(org.openapis.openapi.models.operations.GetMessageReactionsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMessageReactionsIdPathParams.class, baseUrl, "/message_reactions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMessageReactionsIdRequest.class, baseUrl, "/message_reactions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -162,7 +162,7 @@ public class MessageReactions {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostMessageReactionsResponse postMessageReactions(org.openapis.openapi.models.operations.PostMessageReactionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostMessageReactionsResponse postMessageReactions(org.openapis.openapi.models.operations.PostMessageReactionsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/message_reactions");
         

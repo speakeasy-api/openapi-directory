@@ -4,13 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpinsRequest {
+    /**
+     * Amount of items to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
+    public Long count;
+    public GetSpinsRequest withCount(Long count) {
+        this.count = count;
+        return this;
+    }
     
-    public GetSpinsQueryParams queryParams;
-    public GetSpinsRequest withQueryParams(GetSpinsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The ending datetime.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
+    public OffsetDateTime end;
+    public GetSpinsRequest withEnd(OffsetDateTime end) {
+        this.end = end;
+        return this;
+    }
+    
+    /**
+     * Allows to select extra fields
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String[] expand;
+    public GetSpinsRequest withExpand(String[] expand) {
+        this.expand = expand;
+        return this;
+    }
+    
+    /**
+     * Allows to select only needed fields
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String[] fields;
+    public GetSpinsRequest withFields(String[] fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Offset, used together with count
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetSpinsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Filter by playlist
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=playlist_id")
+    public Long playlistId;
+    public GetSpinsRequest withPlaylistId(Long playlistId) {
+        this.playlistId = playlistId;
+        return this;
+    }
+    
+    /**
+     * Filter by show
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=show_id")
+    public Long showId;
+    public GetSpinsRequest withShowId(Long showId) {
+        this.showId = showId;
+        return this;
+    }
+    
+    /**
+     * The datetime starting from items must be returned.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public OffsetDateTime start;
+    public GetSpinsRequest withStart(OffsetDateTime start) {
+        this.start = start;
         return this;
     }
     

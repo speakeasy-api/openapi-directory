@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.DeleteCompanyAttendancesIdPathParams;
 import org.openapis.openapi.models.operations.DeleteCompanyAttendancesIdRequest;
 import org.openapis.openapi.models.operations.DeleteCompanyAttendancesIdResponse;
 
@@ -28,10 +27,8 @@ public class Application {
                 .build();
 
             DeleteCompanyAttendancesIdRequest req = new DeleteCompanyAttendancesIdRequest() {{
-                pathParams = new DeleteCompanyAttendancesIdPathParams() {{
-                    id = 548814;
-                }};
-            }};            
+                id = 548814;
+            }}            
 
             DeleteCompanyAttendancesIdResponse res = sdk.deleteCompanyAttendancesId(req);
 
@@ -45,7 +42,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsRequest {
-    
-    public PostMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsPathParams pathParams;
-    public PostMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsRequest withPathParams(PostMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AllowedOrigin request;
-    public PostMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsRequest withRequest(org.openapis.openapi.models.shared.AllowedOrigin request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AllowedOrigin allowedOrigin;
+    public PostMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsRequest withAllowedOrigin(org.openapis.openapi.models.shared.AllowedOrigin allowedOrigin) {
+        this.allowedOrigin = allowedOrigin;
         return this;
     }
     
+    /**
+     * Unique identifier of the API credential.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiCredentialId")
+    public String apiCredentialId;
+    public PostMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsRequest withApiCredentialId(String apiCredentialId) {
+        this.apiCredentialId = apiCredentialId;
+        return this;
+    }
     
-    public PostMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsSecurity security;
-    public PostMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsRequest withSecurity(PostMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the merchant account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
+    public String merchantId;
+    public PostMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsRequest withMerchantId(String merchantId) {
+        this.merchantId = merchantId;
         return this;
     }
     

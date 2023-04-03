@@ -4,27 +4,106 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DrivePropertiesGetRequest {
-    
-    public DrivePropertiesGetPathParams pathParams;
-    public DrivePropertiesGetRequest withPathParams(DrivePropertiesGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DrivePropertiesGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
         return this;
     }
     
-    
-    public DrivePropertiesGetQueryParams queryParams;
-    public DrivePropertiesGetRequest withQueryParams(DrivePropertiesGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DrivePropertiesGetRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     
+    /**
+     * The ID of the file.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileId")
+    public String fileId;
+    public DrivePropertiesGetRequest withFileId(String fileId) {
+        this.fileId = fileId;
+        return this;
+    }
     
-    public DrivePropertiesGetSecurity security;
-    public DrivePropertiesGetRequest withSecurity(DrivePropertiesGetSecurity security) {
-        this.security = security;
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DrivePropertiesGetRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DrivePropertiesGetRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DrivePropertiesGetRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * The key of the property.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=propertyKey")
+    public String propertyKey;
+    public DrivePropertiesGetRequest withPropertyKey(String propertyKey) {
+        this.propertyKey = propertyKey;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DrivePropertiesGetRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public DrivePropertiesGetRequest withUserIp(String userIp) {
+        this.userIp = userIp;
+        return this;
+    }
+    
+    /**
+     * The visibility of the property.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=visibility")
+    public String visibility;
+    public DrivePropertiesGetRequest withVisibility(String visibility) {
+        this.visibility = visibility;
         return this;
     }
     

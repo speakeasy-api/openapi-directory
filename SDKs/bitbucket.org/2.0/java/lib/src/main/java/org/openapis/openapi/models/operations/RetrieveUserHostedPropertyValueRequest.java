@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveUserHostedPropertyValueRequest {
+    /**
+     * The key of the Connect app.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_key")
+    public String appKey;
+    public RetrieveUserHostedPropertyValueRequest withAppKey(String appKey) {
+        this.appKey = appKey;
+        return this;
+    }
     
-    public RetrieveUserHostedPropertyValuePathParams pathParams;
-    public RetrieveUserHostedPropertyValueRequest withPathParams(RetrieveUserHostedPropertyValuePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the property.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=property_name")
+    public String propertyName;
+    public RetrieveUserHostedPropertyValueRequest withPropertyName(String propertyName) {
+        this.propertyName = propertyName;
+        return this;
+    }
+    
+    /**
+     * Either the UUID of the account surrounded by curly-braces, for example `{account UUID}`, OR an Atlassian Account ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=selected_user")
+    public String selectedUser;
+    public RetrieveUserHostedPropertyValueRequest withSelectedUser(String selectedUser) {
+        this.selectedUser = selectedUser;
         return this;
     }
     

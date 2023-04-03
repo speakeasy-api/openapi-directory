@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteArtifactVersionMetaDataRequest {
+    /**
+     * The artifact ID.  Can be a string (client-provided) or integer (server-generated) representing the unique artifact identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifactId")
+    public String artifactId;
+    public DeleteArtifactVersionMetaDataRequest withArtifactId(String artifactId) {
+        this.artifactId = artifactId;
+        return this;
+    }
     
-    public DeleteArtifactVersionMetaDataPathParams pathParams;
-    public DeleteArtifactVersionMetaDataRequest withPathParams(DeleteArtifactVersionMetaDataPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of a specific version of the artifact content.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public Long version;
+    public DeleteArtifactVersionMetaDataRequest withVersion(Long version) {
+        this.version = version;
         return this;
     }
     

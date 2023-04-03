@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateOutgoingCallerIdRequest {
-    
-    public UpdateOutgoingCallerIdPathParams pathParams;
-    public UpdateOutgoingCallerIdRequest withPathParams(UpdateOutgoingCallerIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the OutgoingCallerId resources to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public UpdateOutgoingCallerIdRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateOutgoingCallerIdUpdateOutgoingCallerIdRequest request;
-    public UpdateOutgoingCallerIdRequest withRequest(UpdateOutgoingCallerIdUpdateOutgoingCallerIdRequest request) {
-        this.request = request;
+    public UpdateOutgoingCallerIdUpdateOutgoingCallerIdRequest requestBody;
+    public UpdateOutgoingCallerIdRequest withRequestBody(UpdateOutgoingCallerIdUpdateOutgoingCallerIdRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateOutgoingCallerIdSecurity security;
-    public UpdateOutgoingCallerIdRequest withSecurity(UpdateOutgoingCallerIdSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateOutgoingCallerIdRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the OutgoingCallerId resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateOutgoingCallerIdRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

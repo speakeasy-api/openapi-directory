@@ -40,7 +40,7 @@ public class ProfileImages {
      */
     public org.openapis.openapi.models.operations.GetProfileImageResponse getProfileImage(org.openapis.openapi.models.operations.GetProfileImageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProfileImagePathParams.class, baseUrl, "/api/profile_images/{username}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProfileImageRequest.class, baseUrl, "/api/profile_images/{username}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

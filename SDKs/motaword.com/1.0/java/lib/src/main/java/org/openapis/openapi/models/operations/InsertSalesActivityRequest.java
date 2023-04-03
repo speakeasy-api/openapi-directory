@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InsertSalesActivityRequest {
-    
-    public InsertSalesActivityPathParams pathParams;
-    public InsertSalesActivityRequest withPathParams(InsertSalesActivityPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.NewSalesActivity newSalesActivity;
+    public InsertSalesActivityRequest withNewSalesActivity(org.openapis.openapi.models.shared.NewSalesActivity newSalesActivity) {
+        this.newSalesActivity = newSalesActivity;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.NewSalesActivity request;
-    public InsertSalesActivityRequest withRequest(org.openapis.openapi.models.shared.NewSalesActivity request) {
-        this.request = request;
+    /**
+     * Project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public InsertSalesActivityRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

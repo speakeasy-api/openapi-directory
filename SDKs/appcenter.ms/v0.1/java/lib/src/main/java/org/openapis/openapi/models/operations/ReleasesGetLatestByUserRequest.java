@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesGetLatestByUserRequest {
-    
-    public ReleasesGetLatestByUserPathParams pathParams;
-    public ReleasesGetLatestByUserRequest withPathParams(ReleasesGetLatestByUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public ReleasesGetLatestByUserRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public ReleasesGetLatestByUserQueryParams queryParams;
-    public ReleasesGetLatestByUserRequest withQueryParams(ReleasesGetLatestByUserQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The check if the request is from Install page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_install_page")
+    public Boolean isInstallPage;
+    public ReleasesGetLatestByUserRequest withIsInstallPage(Boolean isInstallPage) {
+        this.isInstallPage = isInstallPage;
         return this;
     }
     
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public ReleasesGetLatestByUserRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
     
-    public ReleasesGetLatestByUserSecurity security;
-    public ReleasesGetLatestByUserRequest withSecurity(ReleasesGetLatestByUserSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the release, or `latest` to get the latest release from all the distribution groups assigned to the current user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_id")
+    public String releaseId;
+    public ReleasesGetLatestByUserRequest withReleaseId(String releaseId) {
+        this.releaseId = releaseId;
+        return this;
+    }
+    
+    /**
+     * when supplied, this call will also check if the given UDID is provisioned. Will be ignored for non-iOS platforms. The value will be returned in the property is_udid_provisioned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=udid")
+    public String udid;
+    public ReleasesGetLatestByUserRequest withUdid(String udid) {
+        this.udid = udid;
         return this;
     }
     

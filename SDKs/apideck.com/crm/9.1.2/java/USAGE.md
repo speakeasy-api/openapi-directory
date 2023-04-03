@@ -5,8 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.ActivitiesAddSecurity;
-import org.openapis.openapi.models.operations.ActivitiesAddQueryParams;
-import org.openapis.openapi.models.operations.ActivitiesAddHeaders;
 import org.openapis.openapi.models.operations.ActivitiesAddRequest;
 import org.openapis.openapi.models.operations.ActivitiesAddResponse;
 import org.openapis.openapi.models.shared.ActivityShowAsEnum;
@@ -17,7 +15,6 @@ import org.openapis.openapi.models.shared.Address;
 import org.openapis.openapi.models.shared.CustomField;
 import org.openapis.openapi.models.shared.ActivityAttendeeStatusEnum;
 import org.openapis.openapi.models.shared.ActivityAttendeeInput;
-import org.openapis.openapi.models.shared.SchemeAPIKey;
 
 public class Application {
     public static void main(String[] args) {
@@ -26,20 +23,7 @@ public class Application {
                 .build();
 
             ActivitiesAddRequest req = new ActivitiesAddRequest() {{
-                security = new ActivitiesAddSecurity() {{
-                    apiKey = new SchemeAPIKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }};
-                queryParams = new ActivitiesAddQueryParams() {{
-                    raw = false;
-                }};
-                headers = new ActivitiesAddHeaders() {{
-                    xApideckAppId = "corrupti";
-                    xApideckConsumerId = "provident";
-                    xApideckServiceId = "distinctio";
-                }};
-                request = new ActivityInput() {{
+                activityInput = new ActivityInput() {{
                     accountId = "12345";
                     activityDate = "2021-05-01";
                     activityDatetime = "2021-05-01T12:00:00.000Z";
@@ -47,17 +31,6 @@ public class Application {
                     archived = false;
                     assetId = "12345";
                     attendees = new org.openapis.openapi.models.shared.ActivityAttendeeInput[]{{
-                        add(new ActivityAttendeeInput() {{
-                            emailAddress = "elon@musk.com";
-                            firstName = "Elon";
-                            isOrganizer = true;
-                            lastName = "Musk";
-                            middleName = "D.";
-                            name = "Elon Musk";
-                            prefix = "Mr.";
-                            status = "accepted";
-                            suffix = "PhD";
-                        }}),
                         add(new ActivityAttendeeInput() {{
                             emailAddress = "elon@musk.com";
                             firstName = "Elon";
@@ -103,17 +76,17 @@ public class Application {
                             description = "Employee Level";
                             id = "2389328923893298";
                             name = "employee_level";
-                            value = new String[]{{
-                                add("illum"),
-                                add("vel"),
-                                add("error"),
-                            }};
+                            value = true;
                         }}),
                         add(new CustomField() {{
                             description = "Employee Level";
                             id = "2389328923893298";
                             name = "employee_level";
-                            value = true;
+                            value = new String[]{{
+                                add("nulla"),
+                                add("corrupti"),
+                                add("illum"),
+                            }};
                         }}),
                         add(new CustomField() {{
                             description = "Employee Level";
@@ -176,9 +149,15 @@ public class Application {
                     videoConferenceId = "zoom:88120759396";
                     videoConferenceUrl = "https://us02web.zoom.us/j/88120759396";
                 }};
-            }};            
+                raw = false;
+                xApideckAppId = "error";
+                xApideckConsumerId = "deserunt";
+                xApideckServiceId = "suscipit";
+            }}            
 
-            ActivitiesAddResponse res = sdk.activities.activitiesAdd(req);
+            ActivitiesAddResponse res = sdk.activities.activitiesAdd(req, new ActivitiesAddSecurity() {{
+                apiKey = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.createActivityResponse.isPresent()) {
                 // handle response

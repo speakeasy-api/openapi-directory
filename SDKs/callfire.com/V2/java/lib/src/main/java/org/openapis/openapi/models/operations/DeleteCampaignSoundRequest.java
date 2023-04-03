@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCampaignSoundRequest {
-    
-    public DeleteCampaignSoundPathParams pathParams;
-    public DeleteCampaignSoundRequest withPathParams(DeleteCampaignSoundPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteCampaignSoundSecurity security;
-    public DeleteCampaignSoundRequest withSecurity(DeleteCampaignSoundSecurity security) {
-        this.security = security;
+    /**
+     * An id of a campaign sound
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DeleteCampaignSoundRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

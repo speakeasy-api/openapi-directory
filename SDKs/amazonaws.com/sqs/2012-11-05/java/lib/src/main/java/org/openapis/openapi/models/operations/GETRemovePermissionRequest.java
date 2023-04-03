@@ -4,27 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRemovePermissionRequest {
-    
-    public GETRemovePermissionPathParams pathParams;
-    public GETRemovePermissionRequest withPathParams(GETRemovePermissionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The AWS account number
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountNumber")
+    public Long accountNumber;
+    public GETRemovePermissionRequest withAccountNumber(Long accountNumber) {
+        this.accountNumber = accountNumber;
         return this;
     }
     
-    
-    public GETRemovePermissionQueryParams queryParams;
-    public GETRemovePermissionRequest withQueryParams(GETRemovePermissionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETRemovePermissionActionEnum action;
+    public GETRemovePermissionRequest withAction(GETRemovePermissionActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The identification of the permission to remove. This is the label added using the &lt;code&gt; &lt;a&gt;AddPermission&lt;/a&gt; &lt;/code&gt; action.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Label")
+    public String label;
+    public GETRemovePermissionRequest withLabel(String label) {
+        this.label = label;
+        return this;
+    }
     
-    public GETRemovePermissionHeaders headers;
-    public GETRemovePermissionRequest withHeaders(GETRemovePermissionHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name of the queue
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=QueueName")
+    public String queueName;
+    public GETRemovePermissionRequest withQueueName(String queueName) {
+        this.queueName = queueName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETRemovePermissionVersionEnum version;
+    public GETRemovePermissionRequest withVersion(GETRemovePermissionVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETRemovePermissionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETRemovePermissionRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETRemovePermissionRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETRemovePermissionRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETRemovePermissionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETRemovePermissionRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETRemovePermissionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserListTeamsRequest {
+    /**
+     * page size of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public UserListTeamsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public UserListTeamsQueryParams queryParams;
-    public UserListTeamsRequest withQueryParams(UserListTeamsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * page number of results to return (1-based)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public UserListTeamsRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     

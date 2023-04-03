@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkSmUserDeviceProfilesRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkSmUserDeviceProfilesRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
     
-    public GetNetworkSmUserDeviceProfilesPathParams pathParams;
-    public GetNetworkSmUserDeviceProfilesRequest withPathParams(GetNetworkSmUserDeviceProfilesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public GetNetworkSmUserDeviceProfilesRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

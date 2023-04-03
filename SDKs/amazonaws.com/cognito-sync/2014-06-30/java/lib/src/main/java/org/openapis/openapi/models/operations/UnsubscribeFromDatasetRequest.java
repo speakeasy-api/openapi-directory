@@ -4,20 +4,95 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UnsubscribeFromDatasetRequest {
-    
-    public UnsubscribeFromDatasetPathParams pathParams;
-    public UnsubscribeFromDatasetRequest withPathParams(UnsubscribeFromDatasetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the dataset from which to unsubcribe.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DatasetName")
+    public String datasetName;
+    public UnsubscribeFromDatasetRequest withDatasetName(String datasetName) {
+        this.datasetName = datasetName;
         return this;
     }
     
+    /**
+     * The unique ID generated for this device by Cognito.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DeviceId")
+    public String deviceId;
+    public UnsubscribeFromDatasetRequest withDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
     
-    public UnsubscribeFromDatasetHeaders headers;
-    public UnsubscribeFromDatasetRequest withHeaders(UnsubscribeFromDatasetHeaders headers) {
-        this.headers = headers;
+    /**
+     * Unique ID for this identity.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=IdentityId")
+    public String identityId;
+    public UnsubscribeFromDatasetRequest withIdentityId(String identityId) {
+        this.identityId = identityId;
+        return this;
+    }
+    
+    /**
+     * A name-spaced GUID (for example, us-east-1:23EC4050-6AEA-7089-A2DD-08002EXAMPLE) created by Amazon Cognito. The ID of the pool to which this identity belongs.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=IdentityPoolId")
+    public String identityPoolId;
+    public UnsubscribeFromDatasetRequest withIdentityPoolId(String identityPoolId) {
+        this.identityPoolId = identityPoolId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public UnsubscribeFromDatasetRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public UnsubscribeFromDatasetRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public UnsubscribeFromDatasetRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public UnsubscribeFromDatasetRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public UnsubscribeFromDatasetRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public UnsubscribeFromDatasetRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public UnsubscribeFromDatasetRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

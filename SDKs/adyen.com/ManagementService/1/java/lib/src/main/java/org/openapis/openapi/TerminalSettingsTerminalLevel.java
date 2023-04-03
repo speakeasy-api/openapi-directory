@@ -39,19 +39,20 @@ public class TerminalSettingsTerminalLevel {
      * * Management API\u2014Terminal settings read
      * * Management API\u2014Terminal settings read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTerminalsTerminalIdTerminalLogosResponse getTerminalsTerminalIdTerminalLogos(org.openapis.openapi.models.operations.GetTerminalsTerminalIdTerminalLogosRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTerminalsTerminalIdTerminalLogosResponse getTerminalsTerminalIdTerminalLogos(org.openapis.openapi.models.operations.GetTerminalsTerminalIdTerminalLogosRequest request, org.openapis.openapi.models.operations.GetTerminalsTerminalIdTerminalLogosSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTerminalsTerminalIdTerminalLogosPathParams.class, baseUrl, "/terminals/{terminalId}/terminalLogos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTerminalsTerminalIdTerminalLogosRequest.class, baseUrl, "/terminals/{terminalId}/terminalLogos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -91,19 +92,20 @@ public class TerminalSettingsTerminalLevel {
      * * Management API\u2014Terminal settings read
      * * Management API\u2014Terminal settings read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTerminalsTerminalIdTerminalSettingsResponse getTerminalsTerminalIdTerminalSettings(org.openapis.openapi.models.operations.GetTerminalsTerminalIdTerminalSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTerminalsTerminalIdTerminalSettingsResponse getTerminalsTerminalIdTerminalSettings(org.openapis.openapi.models.operations.GetTerminalsTerminalIdTerminalSettingsRequest request, org.openapis.openapi.models.operations.GetTerminalsTerminalIdTerminalSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTerminalsTerminalIdTerminalSettingsPathParams.class, baseUrl, "/terminals/{terminalId}/terminalSettings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTerminalsTerminalIdTerminalSettingsRequest.class, baseUrl, "/terminals/{terminalId}/terminalSettings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -145,21 +147,22 @@ public class TerminalSettingsTerminalLevel {
      * To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014Terminal settings read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchTerminalsTerminalIdTerminalLogosResponse patchTerminalsTerminalIdTerminalLogos(org.openapis.openapi.models.operations.PatchTerminalsTerminalIdTerminalLogosRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchTerminalsTerminalIdTerminalLogosResponse patchTerminalsTerminalIdTerminalLogos(org.openapis.openapi.models.operations.PatchTerminalsTerminalIdTerminalLogosRequest request, org.openapis.openapi.models.operations.PatchTerminalsTerminalIdTerminalLogosSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchTerminalsTerminalIdTerminalLogosPathParams.class, baseUrl, "/terminals/{terminalId}/terminalLogos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchTerminalsTerminalIdTerminalLogosRequest.class, baseUrl, "/terminals/{terminalId}/terminalLogos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "logo", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -202,21 +205,22 @@ public class TerminalSettingsTerminalLevel {
      * To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014Terminal settings read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchTerminalsTerminalIdTerminalSettingsResponse patchTerminalsTerminalIdTerminalSettings(org.openapis.openapi.models.operations.PatchTerminalsTerminalIdTerminalSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchTerminalsTerminalIdTerminalSettingsResponse patchTerminalsTerminalIdTerminalSettings(org.openapis.openapi.models.operations.PatchTerminalsTerminalIdTerminalSettingsRequest request, org.openapis.openapi.models.operations.PatchTerminalsTerminalIdTerminalSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchTerminalsTerminalIdTerminalSettingsPathParams.class, baseUrl, "/terminals/{terminalId}/terminalSettings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchTerminalsTerminalIdTerminalSettingsRequest.class, baseUrl, "/terminals/{terminalId}/terminalSettings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "terminalSettings", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

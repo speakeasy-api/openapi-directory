@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WorkTypeApiUpdateFormRequest {
-    
-    public WorkTypeApiUpdateFormHeaders headers;
-    public WorkTypeApiUpdateFormRequest withHeaders(WorkTypeApiUpdateFormHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
+    public org.openapis.openapi.models.shared.WorkTypeUpdateApiModel workTypeUpdateApiModel;
+    public WorkTypeApiUpdateFormRequest withWorkTypeUpdateApiModel(org.openapis.openapi.models.shared.WorkTypeUpdateApiModel workTypeUpdateApiModel) {
+        this.workTypeUpdateApiModel = workTypeUpdateApiModel;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.WorkTypeUpdateApiModel request;
-    public WorkTypeApiUpdateFormRequest withRequest(org.openapis.openapi.models.shared.WorkTypeUpdateApiModel request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
+    public String xAuthKey;
+    public WorkTypeApiUpdateFormRequest withXAuthKey(String xAuthKey) {
+        this.xAuthKey = xAuthKey;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
+    public String xAuthSecret;
+    public WorkTypeApiUpdateFormRequest withXAuthSecret(String xAuthSecret) {
+        this.xAuthSecret = xAuthSecret;
         return this;
     }
     

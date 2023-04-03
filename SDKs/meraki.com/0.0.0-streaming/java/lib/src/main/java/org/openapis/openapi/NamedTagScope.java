@@ -41,12 +41,12 @@ public class NamedTagScope {
      */
     public org.openapis.openapi.models.operations.CreateNetworkSmTargetGroupResponse createNetworkSmTargetGroup(org.openapis.openapi.models.operations.CreateNetworkSmTargetGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkSmTargetGroupPathParams.class, baseUrl, "/networks/{networkId}/sm/targetGroups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkSmTargetGroupRequest.class, baseUrl, "/networks/{networkId}/sm/targetGroups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -83,7 +83,7 @@ public class NamedTagScope {
      */
     public org.openapis.openapi.models.operations.DeleteNetworkSmTargetGroupResponse deleteNetworkSmTargetGroup(org.openapis.openapi.models.operations.DeleteNetworkSmTargetGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkSmTargetGroupPathParams.class, baseUrl, "/networks/{networkId}/sm/targetGroups/{targetGroupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkSmTargetGroupRequest.class, baseUrl, "/networks/{networkId}/sm/targetGroups/{targetGroupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -117,13 +117,13 @@ public class NamedTagScope {
      */
     public org.openapis.openapi.models.operations.GetNetworkSmTargetGroupResponse getNetworkSmTargetGroup(org.openapis.openapi.models.operations.GetNetworkSmTargetGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSmTargetGroupPathParams.class, baseUrl, "/networks/{networkId}/sm/targetGroups/{targetGroupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSmTargetGroupRequest.class, baseUrl, "/networks/{networkId}/sm/targetGroups/{targetGroupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkSmTargetGroupQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkSmTargetGroupRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -163,13 +163,13 @@ public class NamedTagScope {
      */
     public org.openapis.openapi.models.operations.GetNetworkSmTargetGroupsResponse getNetworkSmTargetGroups(org.openapis.openapi.models.operations.GetNetworkSmTargetGroupsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSmTargetGroupsPathParams.class, baseUrl, "/networks/{networkId}/sm/targetGroups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSmTargetGroupsRequest.class, baseUrl, "/networks/{networkId}/sm/targetGroups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkSmTargetGroupsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkSmTargetGroupsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -209,12 +209,12 @@ public class NamedTagScope {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSmTargetGroupResponse updateNetworkSmTargetGroup(org.openapis.openapi.models.operations.UpdateNetworkSmTargetGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSmTargetGroupPathParams.class, baseUrl, "/networks/{networkId}/sm/targetGroups/{targetGroupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSmTargetGroupRequest.class, baseUrl, "/networks/{networkId}/sm/targetGroups/{targetGroupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

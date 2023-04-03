@@ -7,31 +7,140 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest {
-    
-    public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreatePathParams pathParams;
-    public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest withPathParams(CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateQueryParams queryParams;
-    public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest withQueryParams(CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CertificateIssuanceConfigInput request;
-    public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest withRequest(org.openapis.openapi.models.shared.CertificateIssuanceConfigInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CertificateIssuanceConfigInput certificateIssuanceConfigInput;
+    public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest withCertificateIssuanceConfigInput(org.openapis.openapi.models.shared.CertificateIssuanceConfigInput certificateIssuanceConfigInput) {
+        this.certificateIssuanceConfigInput = certificateIssuanceConfigInput;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateSecurity security;
-    public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest withSecurity(CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Required. A user-provided name of the certificate config.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=certificateIssuanceConfigId")
+    public String certificateIssuanceConfigId;
+    public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest withCertificateIssuanceConfigId(String certificateIssuanceConfigId) {
+        this.certificateIssuanceConfigId = certificateIssuanceConfigId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Required. The parent resource of the certificate issuance config. Must be in the format `projects/* /locations/*`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

@@ -7,17 +7,34 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposRemoveAppAccessRestrictionsRequest {
-    
-    public ReposRemoveAppAccessRestrictionsPathParams pathParams;
-    public ReposRemoveAppAccessRestrictionsRequest withPathParams(ReposRemoveAppAccessRestrictionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public Object requestBody;
+    public ReposRemoveAppAccessRestrictionsRequest withRequestBody(Object requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public Object request;
-    public ReposRemoveAppAccessRestrictionsRequest withRequest(Object request) {
-        this.request = request;
+    /**
+     * The name of the branch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branch")
+    public String branch;
+    public ReposRemoveAppAccessRestrictionsRequest withBranch(String branch) {
+        this.branch = branch;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposRemoveAppAccessRestrictionsRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposRemoveAppAccessRestrictionsRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostWebhooksAuthRequest {
-    
-    public PostWebhooksAuthQueryParams queryParams;
-    public PostWebhooksAuthRequest withQueryParams(PostWebhooksAuthQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public PostWebhooksAuthRequestBody requestBody;
+    public PostWebhooksAuthRequest withRequestBody(PostWebhooksAuthRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PostWebhooksAuthRequestBody request;
-    public PostWebhooksAuthRequest withRequest(PostWebhooksAuthRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public PostWebhooksAuthRequest withExpand(String expand) {
+        this.expand = expand;
         return this;
     }
     

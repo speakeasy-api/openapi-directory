@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AssignPhoneNumbersSLGRequest {
-    
-    public AssignPhoneNumbersSLGPathParams pathParams;
-    public AssignPhoneNumbersSLGRequest withPathParams(AssignPhoneNumbersSLGPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public AssignPhoneNumbersSLGApplicationJSON requestBody;
+    public AssignPhoneNumbersSLGRequest withRequestBody(AssignPhoneNumbersSLGApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public AssignPhoneNumbersSLGApplicationJSON request;
-    public AssignPhoneNumbersSLGRequest withRequest(AssignPhoneNumbersSLGApplicationJSON request) {
-        this.request = request;
+    /**
+     * Unique Identifier of the Shared Line Group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sharedLineGroupId")
+    public String sharedLineGroupId;
+    public AssignPhoneNumbersSLGRequest withSharedLineGroupId(String sharedLineGroupId) {
+        this.sharedLineGroupId = sharedLineGroupId;
         return this;
     }
     

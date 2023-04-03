@@ -4,27 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FireteamGetAvailableClanFireteamsRequest {
-    
-    public FireteamGetAvailableClanFireteamsPathParams pathParams;
-    public FireteamGetAvailableClanFireteamsRequest withPathParams(FireteamGetAvailableClanFireteamsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The activity type to filter by.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=activityType")
+    public Integer activityType;
+    public FireteamGetAvailableClanFireteamsRequest withActivityType(Integer activityType) {
+        this.activityType = activityType;
         return this;
     }
     
-    
-    public FireteamGetAvailableClanFireteamsQueryParams queryParams;
-    public FireteamGetAvailableClanFireteamsRequest withQueryParams(FireteamGetAvailableClanFireteamsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The date range to grab available fireteams.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dateRange")
+    public Long dateRange;
+    public FireteamGetAvailableClanFireteamsRequest withDateRange(Long dateRange) {
+        this.dateRange = dateRange;
         return this;
     }
     
+    /**
+     * If you wish the result to exclude immediate fireteams, set this to true. Immediate-only can be forced using the dateRange enum.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=excludeImmediate")
+    public Boolean excludeImmediate;
+    public FireteamGetAvailableClanFireteamsRequest withExcludeImmediate(Boolean excludeImmediate) {
+        this.excludeImmediate = excludeImmediate;
+        return this;
+    }
     
-    public FireteamGetAvailableClanFireteamsSecurity security;
-    public FireteamGetAvailableClanFireteamsRequest withSecurity(FireteamGetAvailableClanFireteamsSecurity security) {
-        this.security = security;
+    /**
+     * The group id of the clan.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public Long groupId;
+    public FireteamGetAvailableClanFireteamsRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    
+    /**
+     * An optional language filter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=langFilter")
+    public String langFilter;
+    public FireteamGetAvailableClanFireteamsRequest withLangFilter(String langFilter) {
+        this.langFilter = langFilter;
+        return this;
+    }
+    
+    /**
+     * Zero based page
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=page")
+    public Integer page;
+    public FireteamGetAvailableClanFireteamsRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The platform filter.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=platform")
+    public Long platform;
+    public FireteamGetAvailableClanFireteamsRequest withPlatform(Long platform) {
+        this.platform = platform;
+        return this;
+    }
+    
+    /**
+     * Determines public/private filtering.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=publicOnly")
+    public Long publicOnly;
+    public FireteamGetAvailableClanFireteamsRequest withPublicOnly(Long publicOnly) {
+        this.publicOnly = publicOnly;
+        return this;
+    }
+    
+    /**
+     * Filters based on available slots
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=slotFilter")
+    public Long slotFilter;
+    public FireteamGetAvailableClanFireteamsRequest withSlotFilter(Long slotFilter) {
+        this.slotFilter = slotFilter;
         return this;
     }
     

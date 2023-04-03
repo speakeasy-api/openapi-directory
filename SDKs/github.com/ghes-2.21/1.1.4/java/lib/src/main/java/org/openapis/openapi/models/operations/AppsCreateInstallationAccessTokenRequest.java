@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsCreateInstallationAccessTokenRequest {
-    
-    public AppsCreateInstallationAccessTokenPathParams pathParams;
-    public AppsCreateInstallationAccessTokenRequest withPathParams(AppsCreateInstallationAccessTokenPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AppsCreateInstallationAccessTokenHeaders headers;
-    public AppsCreateInstallationAccessTokenRequest withHeaders(AppsCreateInstallationAccessTokenHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public AppsCreateInstallationAccessTokenRequestBody request;
-    public AppsCreateInstallationAccessTokenRequest withRequest(AppsCreateInstallationAccessTokenRequestBody request) {
-        this.request = request;
+    public AppsCreateInstallationAccessTokenRequestBody requestBody;
+    public AppsCreateInstallationAccessTokenRequest withRequestBody(AppsCreateInstallationAccessTokenRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * This API is under preview and subject to change.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=accept")
+    public String accept;
+    public AppsCreateInstallationAccessTokenRequest withAccept(String accept) {
+        this.accept = accept;
+        return this;
+    }
+    
+    /**
+     * installation_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=installation_id")
+    public Long installationId;
+    public AppsCreateInstallationAccessTokenRequest withInstallationId(Long installationId) {
+        this.installationId = installationId;
         return this;
     }
     

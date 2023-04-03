@@ -4,13 +4,63 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListDocumentsRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category.in")
+    public ListDocumentsCategoryInEnum[] categoryIn;
+    public ListDocumentsRequest withCategoryIn(ListDocumentsCategoryInEnum[] categoryIn) {
+        this.categoryIn = categoryIn;
+        return this;
+    }
     
-    public ListDocumentsQueryParams queryParams;
-    public ListDocumentsRequest withQueryParams(ListDocumentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created_at.after")
+    public OffsetDateTime createdAtAfter;
+    public ListDocumentsRequest withCreatedAtAfter(OffsetDateTime createdAtAfter) {
+        this.createdAtAfter = createdAtAfter;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created_at.before")
+    public OffsetDateTime createdAtBefore;
+    public ListDocumentsRequest withCreatedAtBefore(OffsetDateTime createdAtBefore) {
+        this.createdAtBefore = createdAtBefore;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created_at.on_or_after")
+    public OffsetDateTime createdAtOnOrAfter;
+    public ListDocumentsRequest withCreatedAtOnOrAfter(OffsetDateTime createdAtOnOrAfter) {
+        this.createdAtOnOrAfter = createdAtOnOrAfter;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created_at.on_or_before")
+    public OffsetDateTime createdAtOnOrBefore;
+    public ListDocumentsRequest withCreatedAtOnOrBefore(OffsetDateTime createdAtOnOrBefore) {
+        this.createdAtOnOrBefore = createdAtOnOrBefore;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public ListDocumentsRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entity_id")
+    public String entityId;
+    public ListDocumentsRequest withEntityId(String entityId) {
+        this.entityId = entityId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListDocumentsRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     

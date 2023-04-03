@@ -17,10 +17,9 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.MybusinessbusinessinformationAccountsLocationsCreatePathParams;
-import org.openapis.openapi.models.operations.MybusinessbusinessinformationAccountsLocationsCreateQueryParams;
 import org.openapis.openapi.models.operations.MybusinessbusinessinformationAccountsLocationsCreateRequest;
 import org.openapis.openapi.models.operations.MybusinessbusinessinformationAccountsLocationsCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.LocationInput;
 import org.openapis.openapi.models.shared.PostalAddress;
 import org.openapis.openapi.models.shared.SpecialHours;
@@ -52,7 +51,6 @@ import org.openapis.openapi.models.shared.LatLng;
 import org.openapis.openapi.models.shared.CategoriesInput;
 import org.openapis.openapi.models.shared.CategoryInput;
 import org.openapis.openapi.models.shared.AdWordsLocationExtensions;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -62,211 +60,146 @@ public class Application {
                 .build();
 
             MybusinessbusinessinformationAccountsLocationsCreateRequest req = new MybusinessbusinessinformationAccountsLocationsCreateRequest() {{
-                pathParams = new MybusinessbusinessinformationAccountsLocationsCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new MybusinessbusinessinformationAccountsLocationsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    requestId = "error";
-                    uploadType = "deserunt";
-                    uploadProtocol = "suscipit";
-                    validateOnly = false;
-                }};
-                request = new LocationInput() {{
+                dollarXgafv = "2";
+                locationInput = new LocationInput() {{
                     adWordsLocationExtensions = new AdWordsLocationExtensions() {{
-                        adPhone = "iure";
+                        adPhone = "provident";
                     }};
                     categories = new CategoriesInput() {{
                         additionalCategories = new org.openapis.openapi.models.shared.CategoryInput[]{{
                             add(new CategoryInput() {{
-                                name = "debitis";
+                                name = "quibusdam";
                             }}),
                             add(new CategoryInput() {{
-                                name = "ipsa";
+                                name = "unde";
+                            }}),
+                            add(new CategoryInput() {{
+                                name = "nulla";
                             }}),
                         }};
                         primaryCategory = new CategoryInput() {{
-                            name = "delectus";
+                            name = "corrupti";
                         }};
                     }};
                     labels = new String[]{{
+                        add("vel"),
+                        add("error"),
+                        add("deserunt"),
                         add("suscipit"),
-                        add("molestiae"),
                     }};
-                    languageCode = "minus";
+                    languageCode = "iure";
                     latlng = new LatLng() {{
-                        latitude = 8121.69;
-                        longitude = 5288.95;
+                        latitude = 2975.34;
+                        longitude = 8917.73;
                     }};
                     moreHours = new org.openapis.openapi.models.shared.MoreHours[]{{
                         add(new MoreHours() {{
-                            hoursTypeId = "excepturi";
+                            hoursTypeId = "delectus";
                             periods = new org.openapis.openapi.models.shared.TimePeriod[]{{
-                                add(new TimePeriod() {{
-                                    closeDay = "SUNDAY";
-                                    closeTime = new TimeOfDay() {{
-                                        hours = 836079;
-                                        minutes = 71036;
-                                        nanos = 337396;
-                                        seconds = 87129;
-                                    }};
-                                    openDay = "FRIDAY";
-                                    openTime = new TimeOfDay() {{
-                                        hours = 20218;
-                                        minutes = 368241;
-                                        nanos = 832620;
-                                        seconds = 957156;
-                                    }};
-                                }}),
-                                add(new TimePeriod() {{
-                                    closeDay = "SATURDAY";
-                                    closeTime = new TimeOfDay() {{
-                                        hours = 140350;
-                                        minutes = 870013;
-                                        nanos = 870088;
-                                        seconds = 978619;
-                                    }};
-                                    openDay = "WEDNESDAY";
-                                    openTime = new TimeOfDay() {{
-                                        hours = 799159;
-                                        minutes = 800911;
-                                        nanos = 461479;
-                                        seconds = 520478;
-                                    }};
-                                }}),
-                            }};
-                        }}),
-                        add(new MoreHours() {{
-                            hoursTypeId = "porro";
-                            periods = new org.openapis.openapi.models.shared.TimePeriod[]{{
-                                add(new TimePeriod() {{
-                                    closeDay = "DAY_OF_WEEK_UNSPECIFIED";
-                                    closeTime = new TimeOfDay() {{
-                                        hours = 720633;
-                                        minutes = 639921;
-                                        nanos = 582020;
-                                        seconds = 143353;
-                                    }};
-                                    openDay = "THURSDAY";
-                                    openTime = new TimeOfDay() {{
-                                        hours = 944669;
-                                        minutes = 758616;
-                                        nanos = 521848;
-                                        seconds = 105907;
-                                    }};
-                                }}),
                                 add(new TimePeriod() {{
                                     closeDay = "WEDNESDAY";
                                     closeTime = new TimeOfDay() {{
-                                        hours = 473600;
-                                        minutes = 264555;
-                                        nanos = 186332;
-                                        seconds = 774234;
+                                        hours = 477665;
+                                        minutes = 791725;
+                                        nanos = 812169;
+                                        seconds = 528895;
                                     }};
-                                    openDay = "FRIDAY";
+                                    openDay = "WEDNESDAY";
                                     openTime = new TimeOfDay() {{
-                                        hours = 456150;
-                                        minutes = 216550;
-                                        nanos = 568434;
-                                        seconds = 135218;
+                                        hours = 568045;
+                                        minutes = 392785;
+                                        nanos = 925597;
+                                        seconds = 836079;
                                     }};
                                 }}),
                                 add(new TimePeriod() {{
                                     closeDay = "DAY_OF_WEEK_UNSPECIFIED";
                                     closeTime = new TimeOfDay() {{
-                                        hours = 324141;
-                                        minutes = 617636;
-                                        nanos = 149675;
-                                        seconds = 612096;
+                                        hours = 337396;
+                                        minutes = 87129;
+                                        nanos = 648172;
+                                        seconds = 20218;
                                     }};
-                                    openDay = "MONDAY";
+                                    openDay = "TUESDAY";
                                     openTime = new TimeOfDay() {{
-                                        hours = 616934;
-                                        minutes = 386489;
-                                        nanos = 943749;
-                                        seconds = 902599;
+                                        hours = 832620;
+                                        minutes = 957156;
+                                        nanos = 778157;
+                                        seconds = 140350;
                                     }};
                                 }}),
                             }};
                         }}),
                     }};
-                    name = "fuga";
+                    name = "at";
                     openInfo = new OpenInfoInput() {{
                         openingDate = new Date() {{
-                            day = 449950;
-                            month = 359508;
-                            year = 613064;
+                            day = 870088;
+                            month = 978619;
+                            year = 473608;
                         }};
-                        status = "OPEN";
+                        status = "CLOSED_TEMPORARILY";
                     }};
                     phoneNumbers = new PhoneNumbers() {{
                         additionalPhones = new String[]{{
-                            add("quidem"),
-                            add("architecto"),
-                            add("ipsa"),
-                            add("reiciendis"),
+                            add("esse"),
+                            add("totam"),
+                            add("porro"),
+                            add("dolorum"),
                         }};
-                        primaryPhone = "est";
+                        primaryPhone = "dicta";
                     }};
                     profile = new Profile() {{
-                        description = "mollitia";
+                        description = "nam";
                     }};
                     regularHours = new BusinessHours() {{
                         periods = new org.openapis.openapi.models.shared.TimePeriod[]{{
                             add(new TimePeriod() {{
+                                closeDay = "THURSDAY";
+                                closeTime = new TimeOfDay() {{
+                                    hours = 143353;
+                                    minutes = 537373;
+                                    nanos = 944669;
+                                    seconds = 758616;
+                                }};
+                                openDay = "THURSDAY";
+                                openTime = new TimeOfDay() {{
+                                    hours = 105907;
+                                    minutes = 414662;
+                                    nanos = 473600;
+                                    seconds = 264555;
+                                }};
+                            }}),
+                            add(new TimePeriod() {{
                                 closeDay = "MONDAY";
                                 closeTime = new TimeOfDay() {{
-                                    hours = 210382;
-                                    minutes = 358152;
-                                    nanos = 128926;
-                                    seconds = 750686;
+                                    hours = 774234;
+                                    minutes = 736918;
+                                    nanos = 456150;
+                                    seconds = 216550;
                                 }};
-                                openDay = "TUESDAY";
+                                openDay = "THURSDAY";
                                 openTime = new TimeOfDay() {{
-                                    hours = 607831;
-                                    minutes = 363711;
-                                    nanos = 325047;
-                                    seconds = 570197;
+                                    hours = 135218;
+                                    minutes = 18789;
+                                    nanos = 324141;
+                                    seconds = 617636;
                                 }};
                             }}),
                             add(new TimePeriod() {{
-                                closeDay = "DAY_OF_WEEK_UNSPECIFIED";
+                                closeDay = "MONDAY";
                                 closeTime = new TimeOfDay() {{
-                                    hours = 438601;
-                                    minutes = 634274;
-                                    nanos = 988374;
-                                    seconds = 958950;
+                                    hours = 612096;
+                                    minutes = 222321;
+                                    nanos = 616934;
+                                    seconds = 386489;
                                 }};
-                                openDay = "DAY_OF_WEEK_UNSPECIFIED";
+                                openDay = "SUNDAY";
                                 openTime = new TimeOfDay() {{
-                                    hours = 652790;
-                                    minutes = 208876;
-                                    nanos = 635059;
-                                    seconds = 161309;
-                                }};
-                            }}),
-                            add(new TimePeriod() {{
-                                closeDay = "SUNDAY";
-                                closeTime = new TimeOfDay() {{
-                                    hours = 653108;
-                                    minutes = 581850;
-                                    nanos = 253291;
-                                    seconds = 414369;
-                                }};
-                                openDay = "WEDNESDAY";
-                                openTime = new TimeOfDay() {{
-                                    hours = 474697;
-                                    minutes = 244425;
-                                    nanos = 623510;
-                                    seconds = 158969;
+                                    hours = 902599;
+                                    minutes = 681820;
+                                    nanos = 449950;
+                                    seconds = 359508;
                                 }};
                             }}),
                         }};
@@ -274,111 +207,73 @@ public class Application {
                     relationshipData = new RelationshipData() {{
                         childrenLocations = new org.openapis.openapi.models.shared.RelevantLocation[]{{
                             add(new RelevantLocation() {{
-                                placeId = "vitae";
+                                placeId = "iure";
                                 relationType = "INDEPENDENT_ESTABLISHMENT_IN";
                             }}),
                             add(new RelevantLocation() {{
-                                placeId = "animi";
+                                placeId = "quidem";
                                 relationType = "RELATION_TYPE_UNSPECIFIED";
                             }}),
+                            add(new RelevantLocation() {{
+                                placeId = "ipsa";
+                                relationType = "INDEPENDENT_ESTABLISHMENT_IN";
+                            }}),
                         }};
-                        parentChain = "odit";
+                        parentChain = "est";
                         parentLocation = new RelevantLocation() {{
-                            placeId = "quo";
-                            relationType = "RELATION_TYPE_UNSPECIFIED";
+                            placeId = "mollitia";
+                            relationType = "INDEPENDENT_ESTABLISHMENT_IN";
                         }};
                     }};
                     serviceArea = new ServiceAreaBusiness() {{
-                        businessType = "CUSTOMER_AND_BUSINESS_LOCATION";
+                        businessType = "BUSINESS_TYPE_UNSPECIFIED";
                         places = new Places() {{
                             placeInfos = new org.openapis.openapi.models.shared.PlaceInfo[]{{
                                 add(new PlaceInfo() {{
-                                    placeId = "id";
-                                    placeName = "possimus";
-                                }}),
-                                add(new PlaceInfo() {{
-                                    placeId = "aut";
-                                    placeName = "quasi";
+                                    placeId = "corporis";
+                                    placeName = "explicabo";
                                 }}),
                             }};
                         }};
-                        regionCode = "error";
+                        regionCode = "nobis";
                     }};
                     serviceItems = new org.openapis.openapi.models.shared.ServiceItem[]{{
                         add(new ServiceItem() {{
                             freeFormServiceItem = new FreeFormServiceItem() {{
-                                category = "laborum";
-                                label = new Label() {{
-                                    description = "quasi";
-                                    displayName = "reiciendis";
-                                    languageCode = "voluptatibus";
-                                }};
-                            }};
-                            price = new Money() {{
-                                currencyCode = "vero";
-                                nanos = 468651;
-                                units = "praesentium";
-                            }};
-                            structuredServiceItem = new StructuredServiceItem() {{
-                                description = "voluptatibus";
-                                serviceTypeId = "ipsa";
-                            }};
-                        }}),
-                        add(new ServiceItem() {{
-                            freeFormServiceItem = new FreeFormServiceItem() {{
                                 category = "omnis";
                                 label = new Label() {{
-                                    description = "voluptate";
-                                    displayName = "cum";
-                                    languageCode = "perferendis";
+                                    description = "nemo";
+                                    displayName = "minima";
+                                    languageCode = "excepturi";
                                 }};
                             }};
                             price = new Money() {{
-                                currencyCode = "doloremque";
-                                nanos = 441711;
-                                units = "ut";
+                                currencyCode = "accusantium";
+                                nanos = 438601;
+                                units = "culpa";
                             }};
                             structuredServiceItem = new StructuredServiceItem() {{
-                                description = "maiores";
-                                serviceTypeId = "dicta";
+                                description = "doloribus";
+                                serviceTypeId = "sapiente";
                             }};
                         }}),
                         add(new ServiceItem() {{
                             freeFormServiceItem = new FreeFormServiceItem() {{
-                                category = "corporis";
+                                category = "architecto";
                                 label = new Label() {{
-                                    description = "dolore";
-                                    displayName = "iusto";
-                                    languageCode = "dicta";
+                                    description = "mollitia";
+                                    displayName = "dolorem";
+                                    languageCode = "culpa";
                                 }};
                             }};
                             price = new Money() {{
-                                currencyCode = "harum";
-                                nanos = 317983;
-                                units = "accusamus";
+                                currencyCode = "consequuntur";
+                                nanos = 995300;
+                                units = "mollitia";
                             }};
                             structuredServiceItem = new StructuredServiceItem() {{
-                                description = "commodi";
-                                serviceTypeId = "repudiandae";
-                            }};
-                        }}),
-                        add(new ServiceItem() {{
-                            freeFormServiceItem = new FreeFormServiceItem() {{
-                                category = "quae";
-                                label = new Label() {{
-                                    description = "ipsum";
-                                    displayName = "quidem";
-                                    languageCode = "molestias";
-                                }};
-                            }};
-                            price = new Money() {{
-                                currencyCode = "excepturi";
-                                nanos = 865103;
-                                units = "modi";
-                            }};
-                            structuredServiceItem = new StructuredServiceItem() {{
-                                description = "praesentium";
-                                serviceTypeId = "rem";
+                                description = "occaecati";
+                                serviceTypeId = "numquam";
                             }};
                         }}),
                     }};
@@ -386,132 +281,92 @@ public class Application {
                         specialHourPeriods = new org.openapis.openapi.models.shared.SpecialHourPeriod[]{{
                             add(new SpecialHourPeriod() {{
                                 closeTime = new TimeOfDay() {{
-                                    hours = 93940;
-                                    minutes = 921158;
-                                    nanos = 575947;
-                                    seconds = 83112;
+                                    hours = 466311;
+                                    minutes = 474697;
+                                    nanos = 244425;
+                                    seconds = 623510;
                                 }};
                                 closed = false;
                                 endDate = new Date() {{
-                                    day = 929297;
-                                    month = 277718;
-                                    year = 318569;
+                                    day = 158969;
+                                    month = 338007;
+                                    year = 110375;
                                 }};
                                 openTime = new TimeOfDay() {{
-                                    hours = 9356;
-                                    minutes = 667411;
-                                    nanos = 842342;
-                                    seconds = 131797;
+                                    hours = 674752;
+                                    minutes = 656330;
+                                    nanos = 317202;
+                                    seconds = 138183;
                                 }};
                                 startDate = new Date() {{
-                                    day = 647174;
-                                    month = 716327;
-                                    year = 841386;
+                                    day = 778346;
+                                    month = 196582;
+                                    year = 949572;
                                 }};
                             }}),
                             add(new SpecialHourPeriod() {{
                                 closeTime = new TimeOfDay() {{
-                                    hours = 289406;
-                                    minutes = 264730;
-                                    nanos = 183191;
-                                    seconds = 397821;
+                                    hours = 368725;
+                                    minutes = 662527;
+                                    nanos = 820994;
+                                    seconds = 13571;
                                 }};
                                 closed = false;
                                 endDate = new Date() {{
-                                    day = 586513;
-                                    month = 552822;
-                                    year = 20107;
+                                    day = 97101;
+                                    month = 622846;
+                                    year = 837945;
                                 }};
                                 openTime = new TimeOfDay() {{
-                                    hours = 164940;
-                                    minutes = 828940;
-                                    nanos = 369808;
-                                    seconds = 4695;
+                                    hours = 673660;
+                                    minutes = 96098;
+                                    nanos = 971945;
+                                    seconds = 976460;
                                 }};
                                 startDate = new Date() {{
-                                    day = 146441;
-                                    month = 677817;
-                                    year = 569618;
-                                }};
-                            }}),
-                            add(new SpecialHourPeriod() {{
-                                closeTime = new TimeOfDay() {{
-                                    hours = 270008;
-                                    minutes = 703737;
-                                    nanos = 735194;
-                                    seconds = 288476;
-                                }};
-                                closed = false;
-                                endDate = new Date() {{
-                                    day = 962189;
-                                    month = 433288;
-                                    year = 248753;
-                                }};
-                                openTime = new TimeOfDay() {{
-                                    hours = 756107;
-                                    minutes = 576157;
-                                    nanos = 396098;
-                                    seconds = 592042;
-                                }};
-                                startDate = new Date() {{
-                                    day = 896039;
-                                    month = 572252;
-                                    year = 638921;
-                                }};
-                            }}),
-                            add(new SpecialHourPeriod() {{
-                                closeTime = new TimeOfDay() {{
-                                    hours = 223081;
-                                    minutes = 891555;
-                                    nanos = 952749;
-                                    seconds = 680056;
-                                }};
-                                closed = false;
-                                endDate = new Date() {{
-                                    day = 447125;
-                                    month = 449198;
-                                    year = 846409;
-                                }};
-                                openTime = new TimeOfDay() {{
-                                    hours = 978571;
-                                    minutes = 699479;
-                                    nanos = 116202;
-                                    seconds = 297437;
-                                }};
-                                startDate = new Date() {{
-                                    day = 767024;
-                                    month = 813798;
-                                    year = 411820;
+                                    day = 878194;
+                                    month = 468651;
+                                    year = 509624;
                                 }};
                             }}),
                         }};
                     }};
-                    storeCode = "aliquid";
+                    storeCode = "voluptatibus";
                     storefrontAddress = new PostalAddress() {{
                         addressLines = new String[]{{
-                            add("accusamus"),
-                            add("non"),
-                            add("occaecati"),
-                        }};
-                        administrativeArea = "enim";
-                        languageCode = "accusamus";
-                        locality = "delectus";
-                        organization = "quidem";
-                        postalCode = "76559-2634";
-                        recipients = new String[]{{
                             add("omnis"),
-                            add("molestiae"),
-                            add("perferendis"),
                         }};
-                        regionCode = "nihil";
-                        revision = 301575;
-                        sortingCode = "distinctio";
-                        sublocality = "id";
+                        administrativeArea = "voluptate";
+                        languageCode = "cum";
+                        locality = "perferendis";
+                        organization = "doloremque";
+                        postalCode = "29132";
+                        recipients = new String[]{{
+                            add("dicta"),
+                            add("harum"),
+                        }};
+                        regionCode = "enim";
+                        revision = 880476;
+                        sortingCode = "commodi";
+                        sublocality = "repudiandae";
                     }};
-                    title = "Mrs.";
-                    websiteUri = "labore";
+                    title = "Mr.";
+                    websiteUri = "ipsum";
                 }};
-            }};            
+                accessToken = "quidem";
+                alt = "media";
+                callback = "excepturi";
+                fields = "pariatur";
+                key = "modi";
+                oauthToken = "praesentium";
+                parent = "rem";
+                prettyPrint = false;
+                quotaUser = "voluptates";
+                requestId = "quasi";
+                uploadType = "repudiandae";
+                uploadProtocol = "sint";
+                validateOnly = false;
+            }}            
 
             MybusinessbusinessinformationAccountsLocationsCreateResponse res = sdk.accounts.mybusinessbusinessinformationAccountsLocationsCreate(req);
 
@@ -525,7 +380,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### accounts

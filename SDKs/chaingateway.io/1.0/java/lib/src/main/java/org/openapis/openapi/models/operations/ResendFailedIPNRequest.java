@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ResendFailedIPNRequest {
-    
-    public ResendFailedIPNHeaders headers;
-    public ResendFailedIPNRequest withHeaders(ResendFailedIPNHeaders headers) {
-        this.headers = headers;
+    /**
+     * API Key
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public ResendFailedIPNRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ResendFailedIPNRequest request;
-    public ResendFailedIPNRequest withRequest(org.openapis.openapi.models.shared.ResendFailedIPNRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ResendFailedIPNRequest resendFailedIPNRequest;
+    public ResendFailedIPNRequest withResendFailedIPNRequest(org.openapis.openapi.models.shared.ResendFailedIPNRequest resendFailedIPNRequest) {
+        this.resendFailedIPNRequest = resendFailedIPNRequest;
         return this;
     }
     

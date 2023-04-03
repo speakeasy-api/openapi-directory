@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListOutpostsRequest {
-    
-    public ListOutpostsQueryParams queryParams;
-    public ListOutpostsRequest withQueryParams(ListOutpostsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filters the results by Availability Zone (for example, &lt;code&gt;us-east-1a&lt;/code&gt;).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AvailabilityZoneFilter")
+    public String[] availabilityZoneFilter;
+    public ListOutpostsRequest withAvailabilityZoneFilter(String[] availabilityZoneFilter) {
+        this.availabilityZoneFilter = availabilityZoneFilter;
         return this;
     }
     
+    /**
+     * Filters the results by AZ ID (for example, &lt;code&gt;use1-az1&lt;/code&gt;).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AvailabilityZoneIdFilter")
+    public String[] availabilityZoneIdFilter;
+    public ListOutpostsRequest withAvailabilityZoneIdFilter(String[] availabilityZoneIdFilter) {
+        this.availabilityZoneIdFilter = availabilityZoneIdFilter;
+        return this;
+    }
     
-    public ListOutpostsHeaders headers;
-    public ListOutpostsRequest withHeaders(ListOutpostsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Filters the results by the lifecycle status.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LifeCycleStatusFilter")
+    public String[] lifeCycleStatusFilter;
+    public ListOutpostsRequest withLifeCycleStatusFilter(String[] lifeCycleStatusFilter) {
+        this.lifeCycleStatusFilter = lifeCycleStatusFilter;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public Long maxResults;
+    public ListOutpostsRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public ListOutpostsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListOutpostsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListOutpostsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListOutpostsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListOutpostsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListOutpostsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListOutpostsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListOutpostsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

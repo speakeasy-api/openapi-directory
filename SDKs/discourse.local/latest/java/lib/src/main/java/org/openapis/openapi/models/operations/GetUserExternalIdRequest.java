@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUserExternalIdRequest {
-    
-    public GetUserExternalIdPathParams pathParams;
-    public GetUserExternalIdRequest withPathParams(GetUserExternalIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Key")
+    public String apiKey;
+    public GetUserExternalIdRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Username")
+    public String apiUsername;
+    public GetUserExternalIdRequest withApiUsername(String apiUsername) {
+        this.apiUsername = apiUsername;
+        return this;
+    }
     
-    public GetUserExternalIdHeaders headers;
-    public GetUserExternalIdRequest withHeaders(GetUserExternalIdHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=external_id")
+    public String externalId;
+    public GetUserExternalIdRequest withExternalId(String externalId) {
+        this.externalId = externalId;
         return this;
     }
     

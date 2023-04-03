@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNumbersBaseHexRequest {
-    
-    public GetNumbersBaseHexQueryParams queryParams;
-    public GetNumbersBaseHexRequest withQueryParams(GetNumbersBaseHexQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Base of the supplied number (Optional base 10 assumed by default)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
+    public Long from;
+    public GetNumbersBaseHexRequest withFrom(Long from) {
+        this.from = from;
         return this;
     }
     
-    
-    public GetNumbersBaseHexSecurity security;
-    public GetNumbersBaseHexRequest withSecurity(GetNumbersBaseHexSecurity security) {
-        this.security = security;
+    /**
+     * Number to convert to hex
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
+    public Long number;
+    public GetNumbersBaseHexRequest withNumber(Long number) {
+        this.number = number;
         return this;
     }
     

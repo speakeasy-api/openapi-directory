@@ -4,27 +4,105 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMapTileRequest {
-    
-    public GetMapTilePathParams pathParams;
-    public GetMapTileRequest withPathParams(GetMapTilePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The map resource to retrieve the map tiles from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=MapName")
+    public String mapName;
+    public GetMapTileRequest withMapName(String mapName) {
+        this.mapName = mapName;
         return this;
     }
     
-    
-    public GetMapTileQueryParams queryParams;
-    public GetMapTileRequest withQueryParams(GetMapTileQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The X axis value for the map tile.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=X")
+    public String x;
+    public GetMapTileRequest withX(String x) {
+        this.x = x;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetMapTileRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
     
-    public GetMapTileHeaders headers;
-    public GetMapTileRequest withHeaders(GetMapTileHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetMapTileRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetMapTileRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetMapTileRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetMapTileRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetMapTileRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetMapTileRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The Y axis value for the map tile. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Y")
+    public String y;
+    public GetMapTileRequest withY(String y) {
+        this.y = y;
+        return this;
+    }
+    
+    /**
+     * The zoom value for the map tile.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Z")
+    public String z;
+    public GetMapTileRequest withZ(String z) {
+        this.z = z;
+        return this;
+    }
+    
+    /**
+     * The optional &lt;a href="https://docs.aws.amazon.com/location/latest/developerguide/using-apikeys.html"&gt;API key&lt;/a&gt; to authorize the request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public GetMapTileRequest withKey(String key) {
+        this.key = key;
         return this;
     }
     

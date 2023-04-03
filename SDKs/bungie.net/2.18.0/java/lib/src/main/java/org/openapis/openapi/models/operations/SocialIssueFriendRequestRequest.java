@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SocialIssueFriendRequestRequest {
-    
-    public SocialIssueFriendRequestPathParams pathParams;
-    public SocialIssueFriendRequestRequest withPathParams(SocialIssueFriendRequestPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public SocialIssueFriendRequestSecurity security;
-    public SocialIssueFriendRequestRequest withSecurity(SocialIssueFriendRequestSecurity security) {
-        this.security = security;
+    /**
+     * The membership id of the user you wish to add.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipId")
+    public String membershipId;
+    public SocialIssueFriendRequestRequest withMembershipId(String membershipId) {
+        this.membershipId = membershipId;
         return this;
     }
     

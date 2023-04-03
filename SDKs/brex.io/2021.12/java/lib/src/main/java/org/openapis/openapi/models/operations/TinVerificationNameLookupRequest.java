@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TinVerificationNameLookupRequest {
-    
-    public TinVerificationNameLookupQueryParams queryParams;
-    public TinVerificationNameLookupRequest withQueryParams(TinVerificationNameLookupQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public TinVerificationNameLookupSecurity security;
-    public TinVerificationNameLookupRequest withSecurity(TinVerificationNameLookupSecurity security) {
-        this.security = security;
+    /**
+     * Nine letter TIN number with or without hyphens
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tin")
+    public String tin;
+    public TinVerificationNameLookupRequest withTin(String tin) {
+        this.tin = tin;
         return this;
     }
     

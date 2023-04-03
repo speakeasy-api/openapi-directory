@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateSignalingChannelHeaders;
 import org.openapis.openapi.models.operations.CreateSignalingChannelRequestBodyChannelTypeEnum;
 import org.openapis.openapi.models.operations.CreateSignalingChannelRequestBodySingleMasterConfiguration;
 import org.openapis.openapi.models.operations.CreateSignalingChannelRequestBody;
@@ -30,44 +29,44 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateSignalingChannelRequest req = new CreateSignalingChannelRequest() {{
-                headers = new CreateSignalingChannelHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new CreateSignalingChannelRequestBody() {{
-                    channelName = "illum";
-                    channelType = "SINGLE_MASTER";
+                requestBody = new CreateSignalingChannelRequestBody() {{
+                    channelName = "corrupti";
+                    channelType = "FULL_MESH";
                     singleMasterConfiguration = new CreateSignalingChannelRequestBodySingleMasterConfiguration() {{
-                        messageTtlSeconds = 623564;
+                        messageTtlSeconds = 715190;
                     }};
                     tags = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            key = "suscipit";
-                            value = "iure";
+                            key = "unde";
+                            value = "nulla";
                         }}),
                         add(new Tag() {{
-                            key = "magnam";
-                            value = "debitis";
+                            key = "corrupti";
+                            value = "illum";
                         }}),
                         add(new Tag() {{
-                            key = "ipsa";
-                            value = "delectus";
+                            key = "vel";
+                            value = "error";
+                        }}),
+                        add(new Tag() {{
+                            key = "deserunt";
+                            value = "suscipit";
                         }}),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "iure";
+                xAmzContentSha256 = "magnam";
+                xAmzCredential = "debitis";
+                xAmzDate = "ipsa";
+                xAmzSecurityToken = "delectus";
+                xAmzSignature = "tempora";
+                xAmzSignedHeaders = "suscipit";
+            }}            
 
             CreateSignalingChannelResponse res = sdk.createSignalingChannel(req);
 
@@ -81,7 +80,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

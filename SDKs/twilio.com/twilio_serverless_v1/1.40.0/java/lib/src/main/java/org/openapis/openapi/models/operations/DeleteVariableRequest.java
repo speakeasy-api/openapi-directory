@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteVariableRequest {
-    
-    public DeleteVariablePathParams pathParams;
-    public DeleteVariableRequest withPathParams(DeleteVariablePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Environment with the Variables to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EnvironmentSid")
+    public String environmentSid;
+    public DeleteVariableRequest withEnvironmentSid(String environmentSid) {
+        this.environmentSid = environmentSid;
         return this;
     }
     
-    
-    public DeleteVariableSecurity security;
-    public DeleteVariableRequest withSecurity(DeleteVariableSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the Service to delete the Variable resource from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public DeleteVariableRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public DeleteVariableRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Variable resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteVariableRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

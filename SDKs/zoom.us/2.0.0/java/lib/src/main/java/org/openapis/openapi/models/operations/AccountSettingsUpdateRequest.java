@@ -7,24 +7,27 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountSettingsUpdateRequest {
-    
-    public AccountSettingsUpdatePathParams pathParams;
-    public AccountSettingsUpdateRequest withPathParams(AccountSettingsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AccountSettingsUpdateQueryParams queryParams;
-    public AccountSettingsUpdateRequest withQueryParams(AccountSettingsUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public Object request;
-    public AccountSettingsUpdateRequest withRequest(Object request) {
-        this.request = request;
+    public Object requestBody;
+    public AccountSettingsUpdateRequest withRequestBody(Object requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The account ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public AccountSettingsUpdateRequest withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=option")
+    public AccountSettingsUpdateOptionEnum option;
+    public AccountSettingsUpdateRequest withOption(AccountSettingsUpdateOptionEnum option) {
+        this.option = option;
         return this;
     }
     

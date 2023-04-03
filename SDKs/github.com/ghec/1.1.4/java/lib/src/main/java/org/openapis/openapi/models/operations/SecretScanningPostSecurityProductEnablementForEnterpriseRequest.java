@@ -4,13 +4,39 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SecretScanningPostSecurityProductEnablementForEnterpriseRequest {
+    /**
+     * The action to take.
+     * 
+     * `enable_all` means to enable the specified security feature for all repositories in the enterprise.
+     * `disable_all` means to disable the specified security feature for all repositories in the enterprise.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enablement")
+    public org.openapis.openapi.models.shared.EnterpriseSecurityProductEnablementEnum enablement;
+    public SecretScanningPostSecurityProductEnablementForEnterpriseRequest withEnablement(org.openapis.openapi.models.shared.EnterpriseSecurityProductEnablementEnum enablement) {
+        this.enablement = enablement;
+        return this;
+    }
     
-    public SecretScanningPostSecurityProductEnablementForEnterprisePathParams pathParams;
-    public SecretScanningPostSecurityProductEnablementForEnterpriseRequest withPathParams(SecretScanningPostSecurityProductEnablementForEnterprisePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
+    public String enterprise;
+    public SecretScanningPostSecurityProductEnablementForEnterpriseRequest withEnterprise(String enterprise) {
+        this.enterprise = enterprise;
+        return this;
+    }
+    
+    /**
+     * The security feature to enable or disable.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=security_product")
+    public org.openapis.openapi.models.shared.EnterpriseSecurityProductEnum securityProduct;
+    public SecretScanningPostSecurityProductEnablementForEnterpriseRequest withSecurityProduct(org.openapis.openapi.models.shared.EnterpriseSecurityProductEnum securityProduct) {
+        this.securityProduct = securityProduct;
         return this;
     }
     

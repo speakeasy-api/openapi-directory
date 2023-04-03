@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateValidationRequestRequest {
-    
-    public CreateValidationRequestPathParams pathParams;
-    public CreateValidationRequestRequest withPathParams(CreateValidationRequestPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for the new caller ID resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public CreateValidationRequestRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateValidationRequestCreateValidationRequestRequest request;
-    public CreateValidationRequestRequest withRequest(CreateValidationRequestCreateValidationRequestRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateValidationRequestSecurity security;
-    public CreateValidationRequestRequest withSecurity(CreateValidationRequestSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateValidationRequestRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateValidationRequestCreateValidationRequestRequest requestBody;
+    public CreateValidationRequestRequest withRequestBody(CreateValidationRequestCreateValidationRequestRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

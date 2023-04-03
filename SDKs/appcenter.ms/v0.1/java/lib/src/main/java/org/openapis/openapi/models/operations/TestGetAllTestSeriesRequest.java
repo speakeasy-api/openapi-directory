@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestGetAllTestSeriesRequest {
-    
-    public TestGetAllTestSeriesPathParams pathParams;
-    public TestGetAllTestSeriesRequest withPathParams(TestGetAllTestSeriesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public TestGetAllTestSeriesRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public TestGetAllTestSeriesQueryParams queryParams;
-    public TestGetAllTestSeriesRequest withQueryParams(TestGetAllTestSeriesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public TestGetAllTestSeriesRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     
-    
-    public TestGetAllTestSeriesSecurity security;
-    public TestGetAllTestSeriesRequest withSecurity(TestGetAllTestSeriesSecurity security) {
-        this.security = security;
+    /**
+     * A query string to filter test series
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public TestGetAllTestSeriesRequest withQuery(String query) {
+        this.query = query;
         return this;
     }
     

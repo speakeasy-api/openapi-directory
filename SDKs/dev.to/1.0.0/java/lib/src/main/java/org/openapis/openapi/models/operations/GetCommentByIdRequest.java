@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCommentByIdRequest {
-    
-    public GetCommentByIdPathParams pathParams;
-    public GetCommentByIdRequest withPathParams(GetCommentByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Comment identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetCommentByIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

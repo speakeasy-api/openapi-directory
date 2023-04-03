@@ -4,27 +4,41 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGroupRequest {
-    
-    public GetGroupPathParams pathParams;
-    public GetGroupRequest withPathParams(GetGroupPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
+    public String ifMatch;
+    public GetGroupRequest withIfMatch(String ifMatch) {
+        this.ifMatch = ifMatch;
         return this;
     }
     
-    
-    public GetGroupQueryParams queryParams;
-    public GetGroupRequest withQueryParams(GetGroupQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
+    public String ifNoneMatch;
+    public GetGroupRequest withIfNoneMatch(String ifNoneMatch) {
+        this.ifNoneMatch = ifNoneMatch;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=_fields")
+    public String[] fields;
+    public GetGroupRequest withFields(String[] fields) {
+        this.fields = fields;
+        return this;
+    }
     
-    public GetGroupHeaders headers;
-    public GetGroupRequest withHeaders(GetGroupHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bucket_id")
+    public String bucketId;
+    public GetGroupRequest withBucketId(String bucketId) {
+        this.bucketId = bucketId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetGroupRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

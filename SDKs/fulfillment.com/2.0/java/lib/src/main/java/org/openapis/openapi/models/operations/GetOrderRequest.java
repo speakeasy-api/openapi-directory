@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrderRequest {
-    
-    public GetOrderPathParams pathParams;
-    public GetOrderRequest withPathParams(GetOrderPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Adds additional information to the response, uses a CSV format for multiple values.'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=hydrate")
+    public org.openapis.openapi.models.shared.HydrateParamEnum[] hydrate;
+    public GetOrderRequest withHydrate(org.openapis.openapi.models.shared.HydrateParamEnum[] hydrate) {
+        this.hydrate = hydrate;
         return this;
     }
     
-    
-    public GetOrderQueryParams queryParams;
-    public GetOrderRequest withQueryParams(GetOrderQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The FDC order Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetOrderRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetOrderSecurity security;
-    public GetOrderRequest withSecurity(GetOrderSecurity security) {
-        this.security = security;
+    /**
+     * Providing your `merchantId` indicates the `id` is your `merchantOrderId`. Although it is not necessary to provide this it will speed up your results when using your `merchantOrderId` however it will slow your results when using the FDC provided `id`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=merchantId")
+    public Long merchantId;
+    public GetOrderRequest withMerchantId(Long merchantId) {
+        this.merchantId = merchantId;
         return this;
     }
     

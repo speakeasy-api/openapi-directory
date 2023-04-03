@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetIntegrationsJiraServerProjectsProjectIdIssueTypesRequest {
-    
-    public GetIntegrationsJiraServerProjectsProjectIdIssueTypesPathParams pathParams;
-    public GetIntegrationsJiraServerProjectsProjectIdIssueTypesRequest withPathParams(GetIntegrationsJiraServerProjectsProjectIdIssueTypesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Jira Project Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public String projectId;
+    public GetIntegrationsJiraServerProjectsProjectIdIssueTypesRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

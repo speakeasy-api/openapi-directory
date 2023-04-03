@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VoidTransactionRequest {
-    
-    public VoidTransactionPathParams pathParams;
-    public VoidTransactionRequest withPathParams(VoidTransactionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
+    public String locationId;
+    public VoidTransactionRequest withLocationId(String locationId) {
+        this.locationId = locationId;
         return this;
     }
     
-    
-    public VoidTransactionSecurity security;
-    public VoidTransactionRequest withSecurity(VoidTransactionSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transaction_id")
+    public String transactionId;
+    public VoidTransactionRequest withTransactionId(String transactionId) {
+        this.transactionId = transactionId;
         return this;
     }
     

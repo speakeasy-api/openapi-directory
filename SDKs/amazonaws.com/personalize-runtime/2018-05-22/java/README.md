@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.GetPersonalizedRankingHeaders;
 import org.openapis.openapi.models.operations.GetPersonalizedRankingRequestBody;
 import org.openapis.openapi.models.operations.GetPersonalizedRankingRequest;
 import org.openapis.openapi.models.operations.GetPersonalizedRankingResponse;
@@ -27,42 +26,40 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GetPersonalizedRankingRequest req = new GetPersonalizedRankingRequest() {{
-                headers = new GetPersonalizedRankingHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new GetPersonalizedRankingRequestBody() {{
-                    campaignArn = "illum";
+                requestBody = new GetPersonalizedRankingRequestBody() {{
+                    campaignArn = "corrupti";
                     context = new java.util.HashMap<String, String>() {{
-                        put("error", "deserunt");
-                        put("suscipit", "iure");
+                        put("distinctio", "quibusdam");
+                        put("unde", "nulla");
+                        put("corrupti", "illum");
                     }};
-                    filterArn = "magnam";
+                    filterArn = "vel";
                     filterValues = new java.util.HashMap<String, String>() {{
-                        put("ipsa", "delectus");
-                        put("tempora", "suscipit");
-                        put("molestiae", "minus");
-                        put("placeat", "voluptatum");
+                        put("deserunt", "suscipit");
+                        put("iure", "magnam");
+                        put("debitis", "ipsa");
                     }};
                     inputList = new String[]{{
-                        add("excepturi"),
-                        add("nisi"),
+                        add("tempora"),
+                        add("suscipit"),
+                        add("molestiae"),
+                        add("minus"),
                     }};
-                    userId = "recusandae";
+                    userId = "placeat";
                 }};
-            }};            
+                xAmzAlgorithm = "voluptatum";
+                xAmzContentSha256 = "iusto";
+                xAmzCredential = "excepturi";
+                xAmzDate = "nisi";
+                xAmzSecurityToken = "recusandae";
+                xAmzSignature = "temporibus";
+                xAmzSignedHeaders = "ab";
+            }}            
 
             GetPersonalizedRankingResponse res = sdk.getPersonalizedRanking(req);
 
@@ -76,7 +73,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

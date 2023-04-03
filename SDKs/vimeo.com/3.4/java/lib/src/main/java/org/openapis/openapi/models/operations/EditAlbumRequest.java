@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EditAlbumRequest {
-    
-    public EditAlbumPathParams pathParams;
-    public EditAlbumRequest withPathParams(EditAlbumPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.album+json")
-    public EditAlbumRequestBody request;
-    public EditAlbumRequest withRequest(EditAlbumRequestBody request) {
-        this.request = request;
+    public EditAlbumRequestBody requestBody;
+    public EditAlbumRequest withRequestBody(EditAlbumRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The ID of the album.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=album_id")
+    public Double albumId;
+    public EditAlbumRequest withAlbumId(Double albumId) {
+        this.albumId = albumId;
+        return this;
+    }
     
-    public EditAlbumSecurity security;
-    public EditAlbumRequest withSecurity(EditAlbumSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public EditAlbumRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

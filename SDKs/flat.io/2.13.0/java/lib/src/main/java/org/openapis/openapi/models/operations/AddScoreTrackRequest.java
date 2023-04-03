@@ -7,24 +7,21 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddScoreTrackRequest {
-    
-    public AddScoreTrackPathParams pathParams;
-    public AddScoreTrackRequest withPathParams(AddScoreTrackPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ScoreTrackCreation request;
-    public AddScoreTrackRequest withRequest(org.openapis.openapi.models.shared.ScoreTrackCreation request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ScoreTrackCreation scoreTrackCreation;
+    public AddScoreTrackRequest withScoreTrackCreation(org.openapis.openapi.models.shared.ScoreTrackCreation scoreTrackCreation) {
+        this.scoreTrackCreation = scoreTrackCreation;
         return this;
     }
     
-    
-    public AddScoreTrackSecurity security;
-    public AddScoreTrackRequest withSecurity(AddScoreTrackSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the score document. This can be a Flat Score unique identifier (i.e. `ScoreDetails.id`) or, if the score is also a Google Drive file, the Drive file unique identifier prefixed with `drive-` (e.g. `drive-0B000000000`).
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=score")
+    public String score;
+    public AddScoreTrackRequest withScore(String score) {
+        this.score = score;
         return this;
     }
     

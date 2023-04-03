@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetASiteRequest {
-    
-    public GetASitePathParams pathParams;
-    public GetASiteRequest withPathParams(GetASitePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetASiteSecurity security;
-    public GetASiteRequest withSecurity(GetASiteSecurity security) {
-        this.security = security;
+    /**
+     * Unique Identifier of the Site.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=siteId")
+    public String siteId;
+    public GetASiteRequest withSiteId(String siteId) {
+        this.siteId = siteId;
         return this;
     }
     

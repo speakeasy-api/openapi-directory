@@ -37,10 +37,11 @@ public class ValidationAuthorities {
      * Create one validation authorities
      * Create one validation authorities
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateClientValidatorResponse createClientValidator(org.openapis.openapi.models.operations.CreateClientValidatorRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateClientValidatorResponse createClientValidator(org.openapis.openapi.models.shared.ValidationAuthority request, org.openapis.openapi.models.operations.CreateClientValidatorSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/client-validators");
         
@@ -51,7 +52,7 @@ public class ValidationAuthorities {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,19 +82,20 @@ public class ValidationAuthorities {
      * Delete one validation authorities by id
      * Delete one validation authorities by id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteClientValidatorResponse deleteClientValidator(org.openapis.openapi.models.operations.DeleteClientValidatorRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteClientValidatorResponse deleteClientValidator(org.openapis.openapi.models.operations.DeleteClientValidatorRequest request, org.openapis.openapi.models.operations.DeleteClientValidatorSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteClientValidatorPathParams.class, baseUrl, "/api/client-validators/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteClientValidatorRequest.class, baseUrl, "/api/client-validators/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -122,11 +124,10 @@ public class ValidationAuthorities {
     /**
      * Get all validation authoritiess
      * Get all validation authoritiess
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindAllClientValidatorsResponse findAllClientValidators(org.openapis.openapi.models.operations.FindAllClientValidatorsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FindAllClientValidatorsResponse findAllClientValidators() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/client-validators");
         
@@ -135,8 +136,7 @@ public class ValidationAuthorities {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -165,19 +165,20 @@ public class ValidationAuthorities {
      * Get one validation authorities by id
      * Get one validation authorities by id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindClientValidatorByIdResponse findClientValidatorById(org.openapis.openapi.models.operations.FindClientValidatorByIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FindClientValidatorByIdResponse findClientValidatorById(org.openapis.openapi.models.operations.FindClientValidatorByIdRequest request, org.openapis.openapi.models.operations.FindClientValidatorByIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FindClientValidatorByIdPathParams.class, baseUrl, "/api/client-validators/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FindClientValidatorByIdRequest.class, baseUrl, "/api/client-validators/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -207,21 +208,22 @@ public class ValidationAuthorities {
      * Update one validation authorities by id
      * Update one validation authorities by id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchClientValidatorResponse patchClientValidator(org.openapis.openapi.models.operations.PatchClientValidatorRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchClientValidatorResponse patchClientValidator(org.openapis.openapi.models.operations.PatchClientValidatorRequest request, org.openapis.openapi.models.operations.PatchClientValidatorSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchClientValidatorPathParams.class, baseUrl, "/api/client-validators/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchClientValidatorRequest.class, baseUrl, "/api/client-validators/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -251,21 +253,22 @@ public class ValidationAuthorities {
      * Update one validation authorities by id
      * Update one validation authorities by id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateClientValidatorResponse updateClientValidator(org.openapis.openapi.models.operations.UpdateClientValidatorRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateClientValidatorResponse updateClientValidator(org.openapis.openapi.models.operations.UpdateClientValidatorRequest request, org.openapis.openapi.models.operations.UpdateClientValidatorSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateClientValidatorPathParams.class, baseUrl, "/api/client-validators/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateClientValidatorRequest.class, baseUrl, "/api/client-validators/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "validationAuthority", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

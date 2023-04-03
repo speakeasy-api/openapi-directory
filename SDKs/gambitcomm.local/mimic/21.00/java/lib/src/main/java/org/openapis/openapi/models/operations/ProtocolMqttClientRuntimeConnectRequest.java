@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolMqttClientRuntimeConnectRequest {
-    
-    public ProtocolMqttClientRuntimeConnectPathParams pathParams;
-    public ProtocolMqttClientRuntimeConnectRequest withPathParams(ProtocolMqttClientRuntimeConnectPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to set MQTT behavior
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolMqttClientRuntimeConnectRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AuthAuthkeyPutRequest {
-    
-    public AuthAuthkeyPutQueryParams queryParams;
-    public AuthAuthkeyPutRequest withQueryParams(AuthAuthkeyPutQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public AuthAuthkeyPutSecurity security;
-    public AuthAuthkeyPutRequest withSecurity(AuthAuthkeyPutSecurity security) {
-        this.security = security;
+    /**
+     * auth key to logout
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=auth_key")
+    public String authKey;
+    public AuthAuthkeyPutRequest withAuthKey(String authKey) {
+        this.authKey = authKey;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContinuousProjectInvoicesRequest {
-    
-    public GetContinuousProjectInvoicesPathParams pathParams;
-    public GetContinuousProjectInvoicesRequest withPathParams(GetContinuousProjectInvoicesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public Long projectId;
+    public GetContinuousProjectInvoicesRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     

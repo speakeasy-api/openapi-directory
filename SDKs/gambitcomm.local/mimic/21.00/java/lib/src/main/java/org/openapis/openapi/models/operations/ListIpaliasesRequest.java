@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListIpaliasesRequest {
-    
-    public ListIpaliasesPathParams pathParams;
-    public ListIpaliasesRequest withPathParams(ListIpaliasesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to show the IP alias list
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ListIpaliasesRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

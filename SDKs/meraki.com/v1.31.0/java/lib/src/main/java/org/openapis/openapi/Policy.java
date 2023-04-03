@@ -40,7 +40,7 @@ public class Policy {
      */
     public org.openapis.openapi.models.operations.GetNetworkClientPolicyResponse getNetworkClientPolicy(org.openapis.openapi.models.operations.GetNetworkClientPolicyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkClientPolicyPathParams.class, baseUrl, "/networks/{networkId}/clients/{clientId}/policy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkClientPolicyRequest.class, baseUrl, "/networks/{networkId}/clients/{clientId}/policy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,12 +80,12 @@ public class Policy {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkClientPolicyResponse updateNetworkClientPolicy(org.openapis.openapi.models.operations.UpdateNetworkClientPolicyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkClientPolicyPathParams.class, baseUrl, "/networks/{networkId}/clients/{clientId}/policy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkClientPolicyRequest.class, baseUrl, "/networks/{networkId}/clients/{clientId}/policy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

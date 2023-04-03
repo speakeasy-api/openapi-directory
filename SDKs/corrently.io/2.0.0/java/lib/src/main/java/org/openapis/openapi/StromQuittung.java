@@ -43,7 +43,7 @@ public class StromQuittung {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.QuittungComitResponse quittungComit(org.openapis.openapi.models.operations.QuittungComitRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.QuittungComitResponse quittungComit(org.openapis.openapi.models.operations.QuittungComitRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/quittung/commit");
         
@@ -84,7 +84,7 @@ public class StromQuittung {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.QuittungCreateResponse quittungCreate(org.openapis.openapi.models.operations.QuittungCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.QuittungCreateResponse quittungCreate(org.openapis.openapi.models.operations.QuittungCreateRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/quittung/create");
         
@@ -128,7 +128,7 @@ public class StromQuittung {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.QuittungPrepareResponse quittungPrepare(org.openapis.openapi.models.operations.QuittungPrepareRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.QuittungPrepareResponse quittungPrepare(org.openapis.openapi.models.operations.QuittungPrepareRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/quittung/prepare");
         
@@ -177,7 +177,7 @@ public class StromQuittung {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.QuittungTSEQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.QuittungTSERequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -223,7 +223,7 @@ public class StromQuittung {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.QuittungTSEDataQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.QuittungTSEDataRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -263,7 +263,7 @@ public class StromQuittung {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.QuittungTSEsignatureQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.QuittungTSEsignatureRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -303,7 +303,7 @@ public class StromQuittung {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.QuittungZugferdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.QuittungZugferdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

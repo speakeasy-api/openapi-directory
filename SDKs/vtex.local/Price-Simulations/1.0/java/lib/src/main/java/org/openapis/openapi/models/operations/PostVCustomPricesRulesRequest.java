@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostVCustomPricesRulesRequest {
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public PostVCustomPricesRulesRequest withAccept(String accept) {
+        this.accept = accept;
+        return this;
+    }
     
-    public PostVCustomPricesRulesHeaders headers;
-    public PostVCustomPricesRulesRequest withHeaders(PostVCustomPricesRulesHeaders headers) {
-        this.headers = headers;
+    /**
+     * Describes the type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public PostVCustomPricesRulesRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostVCustomPricesRulesRequestBody request;
-    public PostVCustomPricesRulesRequest withRequest(PostVCustomPricesRulesRequestBody request) {
-        this.request = request;
+    public PostVCustomPricesRulesRequestBody requestBody;
+    public PostVCustomPricesRulesRequest withRequestBody(PostVCustomPricesRulesRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

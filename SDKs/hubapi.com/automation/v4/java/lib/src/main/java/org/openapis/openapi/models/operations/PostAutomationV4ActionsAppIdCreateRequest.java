@@ -7,27 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostAutomationV4ActionsAppIdCreateRequest {
-    
-    public PostAutomationV4ActionsAppIdCreatePathParams pathParams;
-    public PostAutomationV4ActionsAppIdCreateRequest withPathParams(PostAutomationV4ActionsAppIdCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The custom workflow action to create.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ExtensionActionDefinitionInput request;
-    public PostAutomationV4ActionsAppIdCreateRequest withRequest(org.openapis.openapi.models.shared.ExtensionActionDefinitionInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ExtensionActionDefinitionInput extensionActionDefinitionInput;
+    public PostAutomationV4ActionsAppIdCreateRequest withExtensionActionDefinitionInput(org.openapis.openapi.models.shared.ExtensionActionDefinitionInput extensionActionDefinitionInput) {
+        this.extensionActionDefinitionInput = extensionActionDefinitionInput;
         return this;
     }
     
-    
-    public PostAutomationV4ActionsAppIdCreateSecurity security;
-    public PostAutomationV4ActionsAppIdCreateRequest withSecurity(PostAutomationV4ActionsAppIdCreateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
+    public Integer appId;
+    public PostAutomationV4ActionsAppIdCreateRequest withAppId(Integer appId) {
+        this.appId = appId;
         return this;
     }
     

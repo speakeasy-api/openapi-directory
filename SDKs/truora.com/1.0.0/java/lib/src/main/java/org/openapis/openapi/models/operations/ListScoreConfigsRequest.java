@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListScoreConfigsRequest {
-    
-    public ListScoreConfigsQueryParams queryParams;
-    public ListScoreConfigsRequest withQueryParams(ListScoreConfigsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The key to start the pagination
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_key")
+    public String startKey;
+    public ListScoreConfigsRequest withStartKey(String startKey) {
+        this.startKey = startKey;
         return this;
     }
     

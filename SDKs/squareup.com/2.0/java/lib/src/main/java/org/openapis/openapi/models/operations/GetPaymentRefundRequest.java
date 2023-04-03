@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPaymentRefundRequest {
-    
-    public GetPaymentRefundPathParams pathParams;
-    public GetPaymentRefundRequest withPathParams(GetPaymentRefundPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetPaymentRefundSecurity security;
-    public GetPaymentRefundRequest withSecurity(GetPaymentRefundSecurity security) {
-        this.security = security;
+    /**
+     * The unique ID for the desired `PaymentRefund`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=refund_id")
+    public String refundId;
+    public GetPaymentRefundRequest withRefundId(String refundId) {
+        this.refundId = refundId;
         return this;
     }
     

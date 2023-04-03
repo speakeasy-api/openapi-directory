@@ -4,20 +4,17 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeprecatedRetrieveInventoryPhysicalCountRequest {
-    
-    public DeprecatedRetrieveInventoryPhysicalCountPathParams pathParams;
-    public DeprecatedRetrieveInventoryPhysicalCountRequest withPathParams(DeprecatedRetrieveInventoryPhysicalCountPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeprecatedRetrieveInventoryPhysicalCountSecurity security;
-    public DeprecatedRetrieveInventoryPhysicalCountRequest withSecurity(DeprecatedRetrieveInventoryPhysicalCountSecurity security) {
-        this.security = security;
+    /**
+     * ID of the
+     * [InventoryPhysicalCount](https://developer.squareup.com/reference/square_2021-08-18/objects/InventoryPhysicalCount) to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=physical_count_id")
+    public String physicalCountId;
+    public DeprecatedRetrieveInventoryPhysicalCountRequest withPhysicalCountId(String physicalCountId) {
+        this.physicalCountId = physicalCountId;
         return this;
     }
     

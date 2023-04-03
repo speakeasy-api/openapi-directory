@@ -4,13 +4,116 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSalesCountRequest {
+    /**
+     * The API Authentication Key. Mandatory with all API calls.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetSalesCountRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public GetSalesCountQueryParams queryParams;
-    public GetSalesCountRequest withQueryParams(GetSalesCountQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Inventory type for which sales count is to be searched, default is used
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=car_type")
+    public GetSalesCountCarTypeEnum carType;
+    public GetSalesCountRequest withCarType(GetSalesCountCarTypeEnum carType) {
+        this.carType = carType;
+        return this;
+    }
+    
+    /**
+     * City level sales count, pipe seperated like city_state=jacksonville|FL
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=city_state")
+    public String cityState;
+    public GetSalesCountRequest withCityState(String cityState) {
+        this.cityState = cityState;
+        return this;
+    }
+    
+    /**
+     * Country for which the sales records are to be searched
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public GetSalesCountCountryEnum country;
+    public GetSalesCountRequest withCountry(GetSalesCountCountryEnum country) {
+        this.country = country;
+        return this;
+    }
+    
+    /**
+     * Make for which sales count is to be searched
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=make")
+    public String make;
+    public GetSalesCountRequest withMake(String make) {
+        this.make = make;
+        return this;
+    }
+    
+    /**
+     * Make-Model for which sales count is to be searched, pipe seperated like mm=ford|f-150
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mm")
+    public String mm;
+    public GetSalesCountRequest withMm(String mm) {
+        this.mm = mm;
+        return this;
+    }
+    
+    /**
+     * State level sales count
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public String state;
+    public GetSalesCountRequest withState(String state) {
+        this.state = state;
+        return this;
+    }
+    
+    /**
+     * taxonomy_vin for which sales count is to be searched
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=taxonomy_vin")
+    public String taxonomyVin;
+    public GetSalesCountRequest withTaxonomyVin(String taxonomyVin) {
+        this.taxonomyVin = taxonomyVin;
+        return this;
+    }
+    
+    /**
+     * VIN that will be transformed to taxonomy_vin
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vin")
+    public String vin;
+    public GetSalesCountRequest withVin(String vin) {
+        this.vin = vin;
+        return this;
+    }
+    
+    /**
+     * Year-Make-Model for which sales count is to be searched, pipe seperated like ymm=2015|ford|f-150
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ymm")
+    public String ymm;
+    public GetSalesCountRequest withYmm(String ymm) {
+        this.ymm = ymm;
+        return this;
+    }
+    
+    /**
+     * Year-Make-Model-Trim for which sales count is to be searched, pipe seperated like ymmt=2015|ford|f-150|platinum
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ymmt")
+    public String ymmt;
+    public GetSalesCountRequest withYmmt(String ymmt) {
+        this.ymmt = ymmt;
         return this;
     }
     

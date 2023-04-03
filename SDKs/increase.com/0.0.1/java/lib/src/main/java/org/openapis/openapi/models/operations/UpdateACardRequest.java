@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateACardRequest {
-    
-    public UpdateACardPathParams pathParams;
-    public UpdateACardRequest withPathParams(UpdateACardPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=card_id")
+    public String cardId;
+    public UpdateACardRequest withCardId(String cardId) {
+        this.cardId = cardId;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateACardParameters request;
-    public UpdateACardRequest withRequest(org.openapis.openapi.models.shared.UpdateACardParameters request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateACardParameters updateACardParameters;
+    public UpdateACardRequest withUpdateACardParameters(org.openapis.openapi.models.shared.UpdateACardParameters updateACardParameters) {
+        this.updateACardParameters = updateACardParameters;
         return this;
     }
     

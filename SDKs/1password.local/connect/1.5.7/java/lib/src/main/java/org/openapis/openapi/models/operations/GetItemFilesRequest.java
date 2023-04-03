@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetItemFilesRequest {
-    
-    public GetItemFilesPathParams pathParams;
-    public GetItemFilesRequest withPathParams(GetItemFilesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Tells server to return the base64-encoded file contents in the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=inline_files")
+    public Boolean inlineFiles;
+    public GetItemFilesRequest withInlineFiles(Boolean inlineFiles) {
+        this.inlineFiles = inlineFiles;
         return this;
     }
     
-    
-    public GetItemFilesQueryParams queryParams;
-    public GetItemFilesRequest withQueryParams(GetItemFilesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The UUID of the Item to fetch files from
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=itemUuid")
+    public String itemUuid;
+    public GetItemFilesRequest withItemUuid(String itemUuid) {
+        this.itemUuid = itemUuid;
         return this;
     }
     
-    
-    public GetItemFilesSecurity security;
-    public GetItemFilesRequest withSecurity(GetItemFilesSecurity security) {
-        this.security = security;
+    /**
+     * The UUID of the Vault to fetch Items from
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=vaultUuid")
+    public String vaultUuid;
+    public GetItemFilesRequest withVaultUuid(String vaultUuid) {
+        this.vaultUuid = vaultUuid;
         return this;
     }
     

@@ -4,13 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposListBranchesForHeadCommitRequest {
+    /**
+     * commit_sha parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commit_sha")
+    public String commitSha;
+    public ReposListBranchesForHeadCommitRequest withCommitSha(String commitSha) {
+        this.commitSha = commitSha;
+        return this;
+    }
     
-    public ReposListBranchesForHeadCommitPathParams pathParams;
-    public ReposListBranchesForHeadCommitRequest withPathParams(ReposListBranchesForHeadCommitPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposListBranchesForHeadCommitRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposListBranchesForHeadCommitRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

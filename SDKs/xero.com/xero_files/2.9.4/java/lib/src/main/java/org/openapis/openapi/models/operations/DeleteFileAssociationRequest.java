@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteFileAssociationRequest {
-    
-    public DeleteFileAssociationPathParams pathParams;
-    public DeleteFileAssociationRequest withPathParams(DeleteFileAssociationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * File id for single object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FileId")
+    public String fileId;
+    public DeleteFileAssociationRequest withFileId(String fileId) {
+        this.fileId = fileId;
         return this;
     }
     
-    
-    public DeleteFileAssociationHeaders headers;
-    public DeleteFileAssociationRequest withHeaders(DeleteFileAssociationHeaders headers) {
-        this.headers = headers;
+    /**
+     * Object id for single object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ObjectId")
+    public String objectId;
+    public DeleteFileAssociationRequest withObjectId(String objectId) {
+        this.objectId = objectId;
         return this;
     }
     
-    
-    public DeleteFileAssociationSecurity security;
-    public DeleteFileAssociationRequest withSecurity(DeleteFileAssociationSecurity security) {
-        this.security = security;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=xero-tenant-id")
+    public String xeroTenantId;
+    public DeleteFileAssociationRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     

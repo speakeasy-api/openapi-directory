@@ -7,31 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchMarketingV3MarketingEventsEventsExternalEventIdUpdateRequest {
-    
-    public PatchMarketingV3MarketingEventsEventsExternalEventIdUpdatePathParams pathParams;
-    public PatchMarketingV3MarketingEventsEventsExternalEventIdUpdateRequest withPathParams(PatchMarketingV3MarketingEventsEventsExternalEventIdUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PatchMarketingV3MarketingEventsEventsExternalEventIdUpdateQueryParams queryParams;
-    public PatchMarketingV3MarketingEventsEventsExternalEventIdUpdateRequest withQueryParams(PatchMarketingV3MarketingEventsEventsExternalEventIdUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.MarketingEventUpdateRequestParams request;
-    public PatchMarketingV3MarketingEventsEventsExternalEventIdUpdateRequest withRequest(org.openapis.openapi.models.shared.MarketingEventUpdateRequestParams request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.MarketingEventUpdateRequestParams marketingEventUpdateRequestParams;
+    public PatchMarketingV3MarketingEventsEventsExternalEventIdUpdateRequest withMarketingEventUpdateRequestParams(org.openapis.openapi.models.shared.MarketingEventUpdateRequestParams marketingEventUpdateRequestParams) {
+        this.marketingEventUpdateRequestParams = marketingEventUpdateRequestParams;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=externalAccountId")
+    public String externalAccountId;
+    public PatchMarketingV3MarketingEventsEventsExternalEventIdUpdateRequest withExternalAccountId(String externalAccountId) {
+        this.externalAccountId = externalAccountId;
+        return this;
+    }
     
-    public PatchMarketingV3MarketingEventsEventsExternalEventIdUpdateSecurity security;
-    public PatchMarketingV3MarketingEventsEventsExternalEventIdUpdateRequest withSecurity(PatchMarketingV3MarketingEventsEventsExternalEventIdUpdateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=externalEventId")
+    public String externalEventId;
+    public PatchMarketingV3MarketingEventsEventsExternalEventIdUpdateRequest withExternalEventId(String externalEventId) {
+        this.externalEventId = externalEventId;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpcomingDfsSlateOwnershipProjectionsRequest {
-    
-    public UpcomingDfsSlateOwnershipProjectionsPathParams pathParams;
-    public UpcomingDfsSlateOwnershipProjectionsRequest withPathParams(UpcomingDfsSlateOwnershipProjectionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public UpcomingDfsSlateOwnershipProjectionsFormatEnum format;
+    public UpcomingDfsSlateOwnershipProjectionsRequest withFormat(UpcomingDfsSlateOwnershipProjectionsFormatEnum format) {
+        this.format = format;
         return this;
     }
     

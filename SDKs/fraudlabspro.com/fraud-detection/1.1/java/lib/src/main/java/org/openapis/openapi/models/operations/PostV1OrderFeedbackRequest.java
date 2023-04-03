@@ -4,13 +4,41 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV1OrderFeedbackRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=action")
+    public PostV1OrderFeedbackActionEnum action;
+    public PostV1OrderFeedbackRequest withAction(PostV1OrderFeedbackActionEnum action) {
+        this.action = action;
+        return this;
+    }
     
-    public PostV1OrderFeedbackQueryParams queryParams;
-    public PostV1OrderFeedbackRequest withQueryParams(PostV1OrderFeedbackQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public PostV1OrderFeedbackFormatEnum format;
+    public PostV1OrderFeedbackRequest withFormat(PostV1OrderFeedbackFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public PostV1OrderFeedbackRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public PostV1OrderFeedbackRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=notes")
+    public String notes;
+    public PostV1OrderFeedbackRequest withNotes(String notes) {
+        this.notes = notes;
         return this;
     }
     

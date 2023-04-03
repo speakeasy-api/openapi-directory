@@ -4,13 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTicketsRequest {
+    /**
+     * Is this abuse ticket closed?
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=closed")
+    public Boolean closed;
+    public GetTicketsRequest withClosed(Boolean closed) {
+        this.closed = closed;
+        return this;
+    }
     
-    public GetTicketsQueryParams queryParams;
-    public GetTicketsRequest withQueryParams(GetTicketsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The latest abuse ticket creation date to pull abuse tickets for
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdEnd")
+    public String createdEnd;
+    public GetTicketsRequest withCreatedEnd(String createdEnd) {
+        this.createdEnd = createdEnd;
+        return this;
+    }
+    
+    /**
+     * The earliest abuse ticket creation date to pull abuse tickets for
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdStart")
+    public String createdStart;
+    public GetTicketsRequest withCreatedStart(String createdStart) {
+        this.createdStart = createdStart;
+        return this;
+    }
+    
+    /**
+     * Number of abuse ticket numbers to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetTicketsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * The earliest result set record number to pull abuse tickets for
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetTicketsRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * The domain name or ip address the abuse originated from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sourceDomainOrIp")
+    public String sourceDomainOrIp;
+    public GetTicketsRequest withSourceDomainOrIp(String sourceDomainOrIp) {
+        this.sourceDomainOrIp = sourceDomainOrIp;
+        return this;
+    }
+    
+    /**
+     * The brand/company the abuse is targeting. ie: brand name/bank name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=target")
+    public String target;
+    public GetTicketsRequest withTarget(String target) {
+        this.target = target;
+        return this;
+    }
+    
+    /**
+     * The type of abuse.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public GetTicketsTypeEnum type;
+    public GetTicketsRequest withType(GetTicketsTypeEnum type) {
+        this.type = type;
         return this;
     }
     

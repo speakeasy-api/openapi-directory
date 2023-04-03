@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetResourcesCampaignsJsonQueryParams;
 import org.openapis.openapi.models.operations.GetResourcesCampaignsJsonRequest;
 import org.openapis.openapi.models.operations.GetResourcesCampaignsJsonResponse;
 
@@ -15,12 +14,10 @@ public class Application {
                 .build();
 
             GetResourcesCampaignsJsonRequest req = new GetResourcesCampaignsJsonRequest() {{
-                queryParams = new GetResourcesCampaignsJsonQueryParams() {{
-                    max = 548814;
-                    offset = 592845;
-                    sort = "distinctio";
-                }};
-            }};            
+                max = 548814;
+                offset = 592845;
+                sort = "distinctio";
+            }}            
 
             GetResourcesCampaignsJsonResponse res = sdk.campaigns.getResourcesCampaignsJson(req);
 

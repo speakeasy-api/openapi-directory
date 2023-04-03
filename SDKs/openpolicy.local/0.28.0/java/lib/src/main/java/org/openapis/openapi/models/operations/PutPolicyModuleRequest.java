@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutPolicyModuleRequest {
-    
-    public PutPolicyModulePathParams pathParams;
-    public PutPolicyModuleRequest withPathParams(PutPolicyModulePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutPolicyModuleQueryParams queryParams;
-    public PutPolicyModuleRequest withQueryParams(PutPolicyModuleQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=text/plain")
-    public String request;
-    public PutPolicyModuleRequest withRequest(String request) {
-        this.request = request;
+    public String requestBody;
+    public PutPolicyModuleRequest withRequestBody(String requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The name of a policy module
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutPolicyModuleRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * If true, compiler performance metrics will be returned in the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=metrics")
+    public Boolean metrics;
+    public PutPolicyModuleRequest withMetrics(Boolean metrics) {
+        this.metrics = metrics;
+        return this;
+    }
+    
+    /**
+     * If true, response will be in a human-readable format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pretty")
+    public Boolean pretty;
+    public PutPolicyModuleRequest withPretty(Boolean pretty) {
+        this.pretty = pretty;
         return this;
     }
     

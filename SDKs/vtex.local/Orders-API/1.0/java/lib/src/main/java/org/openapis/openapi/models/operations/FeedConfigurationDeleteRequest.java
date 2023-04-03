@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FeedConfigurationDeleteRequest {
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public FeedConfigurationDeleteRequest withAccept(String accept) {
+        this.accept = accept;
+        return this;
+    }
     
-    public FeedConfigurationDeleteHeaders headers;
-    public FeedConfigurationDeleteRequest withHeaders(FeedConfigurationDeleteHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public FeedConfigurationDeleteRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     

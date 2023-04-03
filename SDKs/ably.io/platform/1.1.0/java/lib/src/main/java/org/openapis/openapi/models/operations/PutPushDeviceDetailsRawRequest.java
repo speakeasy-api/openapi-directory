@@ -7,31 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutPushDeviceDetailsRawRequest {
-    
-    public PutPushDeviceDetailsRawPathParams pathParams;
-    public PutPushDeviceDetailsRawRequest withPathParams(PutPushDeviceDetailsRawPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutPushDeviceDetailsRawQueryParams queryParams;
-    public PutPushDeviceDetailsRawRequest withQueryParams(PutPushDeviceDetailsRawQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public PutPushDeviceDetailsRawHeaders headers;
-    public PutPushDeviceDetailsRawRequest withHeaders(PutPushDeviceDetailsRawHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-msgpack")
-    public byte[] request;
-    public PutPushDeviceDetailsRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public PutPushDeviceDetailsRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The version of the API you wish to use.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Ably-Version")
+    public String xAblyVersion;
+    public PutPushDeviceDetailsRawRequest withXAblyVersion(String xAblyVersion) {
+        this.xAblyVersion = xAblyVersion;
+        return this;
+    }
+    
+    /**
+     * Device's ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=device_id")
+    public String deviceId;
+    public PutPushDeviceDetailsRawRequest withDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
+    
+    /**
+     * The response format you would like
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public org.openapis.openapi.models.shared.ResponseFormatEnum format;
+    public PutPushDeviceDetailsRawRequest withFormat(org.openapis.openapi.models.shared.ResponseFormatEnum format) {
+        this.format = format;
         return this;
     }
     

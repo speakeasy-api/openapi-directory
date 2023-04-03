@@ -38,7 +38,7 @@ public class Certs {
      */
     public org.openapis.openapi.models.operations.GetNetworkSmDeviceCertsResponse getNetworkSmDeviceCerts(org.openapis.openapi.models.operations.GetNetworkSmDeviceCertsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSmDeviceCertsPathParams.class, baseUrl, "/networks/{networkId}/sm/devices/{deviceId}/certs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSmDeviceCertsRequest.class, baseUrl, "/networks/{networkId}/sm/devices/{deviceId}/certs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -34,25 +34,26 @@ public class ExternalVpnGateways {
     /**
      * Deletes the specified externalVpnGateway.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysDeleteResponse computeExternalVpnGatewaysDelete(org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysDeleteResponse computeExternalVpnGatewaysDelete(org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysDeleteRequest request, org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysDeletePathParams.class, baseUrl, "/projects/{project}/global/externalVpnGateways/{externalVpnGateway}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysDeleteRequest.class, baseUrl, "/projects/{project}/global/externalVpnGateways/{externalVpnGateway}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class ExternalVpnGateways {
     /**
      * Returns the specified externalVpnGateway. Get a list of available externalVpnGateways by making a list() request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysGetResponse computeExternalVpnGatewaysGet(org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysGetResponse computeExternalVpnGatewaysGet(org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysGetRequest request, org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysGetPathParams.class, baseUrl, "/projects/{project}/global/externalVpnGateways/{externalVpnGateway}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysGetRequest.class, baseUrl, "/projects/{project}/global/externalVpnGateways/{externalVpnGateway}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,27 +126,28 @@ public class ExternalVpnGateways {
     /**
      * Creates a ExternalVpnGateway in the specified project using the data included in the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysInsertResponse computeExternalVpnGatewaysInsert(org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysInsertResponse computeExternalVpnGatewaysInsert(org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysInsertRequest request, org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysInsertPathParams.class, baseUrl, "/projects/{project}/global/externalVpnGateways", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysInsertRequest.class, baseUrl, "/projects/{project}/global/externalVpnGateways", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "externalVpnGateway", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,25 +174,26 @@ public class ExternalVpnGateways {
     /**
      * Retrieves the list of ExternalVpnGateway available to the specified project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysListResponse computeExternalVpnGatewaysList(org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysListResponse computeExternalVpnGatewaysList(org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysListRequest request, org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysListPathParams.class, baseUrl, "/projects/{project}/global/externalVpnGateways", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysListRequest.class, baseUrl, "/projects/{project}/global/externalVpnGateways", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -216,27 +220,28 @@ public class ExternalVpnGateways {
     /**
      * Sets the labels on an ExternalVpnGateway. To learn more about labels, read the Labeling Resources documentation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysSetLabelsResponse computeExternalVpnGatewaysSetLabels(org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysSetLabelsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysSetLabelsResponse computeExternalVpnGatewaysSetLabels(org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysSetLabelsRequest request, org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysSetLabelsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysSetLabelsPathParams.class, baseUrl, "/projects/{project}/global/externalVpnGateways/{resource}/setLabels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysSetLabelsRequest.class, baseUrl, "/projects/{project}/global/externalVpnGateways/{resource}/setLabels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "globalSetLabelsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysSetLabelsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysSetLabelsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -263,27 +268,28 @@ public class ExternalVpnGateways {
     /**
      * Returns permissions that a caller has on the specified resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysTestIamPermissionsResponse computeExternalVpnGatewaysTestIamPermissions(org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysTestIamPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysTestIamPermissionsResponse computeExternalVpnGatewaysTestIamPermissions(org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysTestIamPermissionsRequest request, org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysTestIamPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysTestIamPermissionsPathParams.class, baseUrl, "/projects/{project}/global/externalVpnGateways/{resource}/testIamPermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysTestIamPermissionsRequest.class, baseUrl, "/projects/{project}/global/externalVpnGateways/{resource}/testIamPermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysTestIamPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysTestIamPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

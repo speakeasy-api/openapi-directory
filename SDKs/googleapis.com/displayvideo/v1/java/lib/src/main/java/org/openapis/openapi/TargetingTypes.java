@@ -34,25 +34,26 @@ public class TargetingTypes {
     /**
      * Gets a single targeting option.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoTargetingTypesTargetingOptionsGetResponse displayvideoTargetingTypesTargetingOptionsGet(org.openapis.openapi.models.operations.DisplayvideoTargetingTypesTargetingOptionsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoTargetingTypesTargetingOptionsGetResponse displayvideoTargetingTypesTargetingOptionsGet(org.openapis.openapi.models.operations.DisplayvideoTargetingTypesTargetingOptionsGetRequest request, org.openapis.openapi.models.operations.DisplayvideoTargetingTypesTargetingOptionsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoTargetingTypesTargetingOptionsGetPathParams.class, baseUrl, "/v1/targetingTypes/{targetingType}/targetingOptions/{targetingOptionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoTargetingTypesTargetingOptionsGetRequest.class, baseUrl, "/v1/targetingTypes/{targetingType}/targetingOptions/{targetingOptionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoTargetingTypesTargetingOptionsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoTargetingTypesTargetingOptionsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class TargetingTypes {
     /**
      * Lists targeting options of a given type.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoTargetingTypesTargetingOptionsListResponse displayvideoTargetingTypesTargetingOptionsList(org.openapis.openapi.models.operations.DisplayvideoTargetingTypesTargetingOptionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoTargetingTypesTargetingOptionsListResponse displayvideoTargetingTypesTargetingOptionsList(org.openapis.openapi.models.operations.DisplayvideoTargetingTypesTargetingOptionsListRequest request, org.openapis.openapi.models.operations.DisplayvideoTargetingTypesTargetingOptionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoTargetingTypesTargetingOptionsListPathParams.class, baseUrl, "/v1/targetingTypes/{targetingType}/targetingOptions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoTargetingTypesTargetingOptionsListRequest.class, baseUrl, "/v1/targetingTypes/{targetingType}/targetingOptions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoTargetingTypesTargetingOptionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoTargetingTypesTargetingOptionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,27 +126,28 @@ public class TargetingTypes {
     /**
      * Searches for targeting options of a given type based on the given search terms.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoTargetingTypesTargetingOptionsSearchResponse displayvideoTargetingTypesTargetingOptionsSearch(org.openapis.openapi.models.operations.DisplayvideoTargetingTypesTargetingOptionsSearchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoTargetingTypesTargetingOptionsSearchResponse displayvideoTargetingTypesTargetingOptionsSearch(org.openapis.openapi.models.operations.DisplayvideoTargetingTypesTargetingOptionsSearchRequest request, org.openapis.openapi.models.operations.DisplayvideoTargetingTypesTargetingOptionsSearchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoTargetingTypesTargetingOptionsSearchPathParams.class, baseUrl, "/v1/targetingTypes/{targetingType}/targetingOptions:search", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoTargetingTypesTargetingOptionsSearchRequest.class, baseUrl, "/v1/targetingTypes/{targetingType}/targetingOptions:search", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "searchTargetingOptionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoTargetingTypesTargetingOptionsSearchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoTargetingTypesTargetingOptionsSearchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

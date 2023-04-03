@@ -4,27 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteScoreRequest {
-    
-    public DeleteScorePathParams pathParams;
-    public DeleteScoreRequest withPathParams(DeleteScorePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * If `true`, the score deletion will be scheduled to be done ASAP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=now")
+    public Boolean now;
+    public DeleteScoreRequest withNow(Boolean now) {
+        this.now = now;
         return this;
     }
     
-    
-    public DeleteScoreQueryParams queryParams;
-    public DeleteScoreRequest withQueryParams(DeleteScoreQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public DeleteScoreSecurity security;
-    public DeleteScoreRequest withSecurity(DeleteScoreSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the score document. This can be a Flat Score unique identifier (i.e. `ScoreDetails.id`) or, if the score is also a Google Drive file, the Drive file unique identifier prefixed with `drive-` (e.g. `drive-0B000000000`).
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=score")
+    public String score;
+    public DeleteScoreRequest withScore(String score) {
+        this.score = score;
         return this;
     }
     

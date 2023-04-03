@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCompetenciesRequest {
-    
-    public GetCompetenciesPathParams pathParams;
-    public GetCompetenciesRequest withPathParams(GetCompetenciesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * provider's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=providerId")
+    public Long providerId;
+    public GetCompetenciesRequest withProviderId(Long providerId) {
+        this.providerId = providerId;
         return this;
     }
     

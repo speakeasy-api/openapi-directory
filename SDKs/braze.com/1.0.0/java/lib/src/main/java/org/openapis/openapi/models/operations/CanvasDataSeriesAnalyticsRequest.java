@@ -4,13 +4,90 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CanvasDataSeriesAnalyticsRequest {
+    /**
+     * (Required) String
+     * 
+     * Canvas API Identifier
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=canvas_id")
+    public String canvasId;
+    public CanvasDataSeriesAnalyticsRequest withCanvasId(String canvasId) {
+        this.canvasId = canvasId;
+        return this;
+    }
     
-    public CanvasDataSeriesAnalyticsQueryParams queryParams;
-    public CanvasDataSeriesAnalyticsRequest withQueryParams(CanvasDataSeriesAnalyticsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * (Required) DateTime (ISO 8601 string)
+     * 
+     * Date on which the data export should end - defaults to time of the request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ending_at")
+    public String endingAt;
+    public CanvasDataSeriesAnalyticsRequest withEndingAt(String endingAt) {
+        this.endingAt = endingAt;
+        return this;
+    }
+    
+    /**
+     * (Optional) Boolean
+     * 
+     * Whether or not to include step stats for deleted steps (defaults to false)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_deleted_step_data")
+    public String includeDeletedStepData;
+    public CanvasDataSeriesAnalyticsRequest withIncludeDeletedStepData(String includeDeletedStepData) {
+        this.includeDeletedStepData = includeDeletedStepData;
+        return this;
+    }
+    
+    /**
+     * (Optional) Boolean
+     * 
+     * Whether or not to include step stats (defaults to false)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_step_breakdown")
+    public String includeStepBreakdown;
+    public CanvasDataSeriesAnalyticsRequest withIncludeStepBreakdown(String includeStepBreakdown) {
+        this.includeStepBreakdown = includeStepBreakdown;
+        return this;
+    }
+    
+    /**
+     * (Optional) Boolean
+     * 
+     * Whether or not to include variant stats (defaults to false)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_variant_breakdown")
+    public String includeVariantBreakdown;
+    public CanvasDataSeriesAnalyticsRequest withIncludeVariantBreakdown(String includeVariantBreakdown) {
+        this.includeVariantBreakdown = includeVariantBreakdown;
+        return this;
+    }
+    
+    /**
+     * (Optional) DateTime (ISO 8601 string)
+     * 
+     * Max number of days before ending_at to include in the returned series - must be between 1 and 14 inclusive (either length or starting_at required)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=length")
+    public String length;
+    public CanvasDataSeriesAnalyticsRequest withLength(String length) {
+        this.length = length;
+        return this;
+    }
+    
+    /**
+     * (Optional) DateTime (ISO 8601 string) 
+     * 
+     * Date on which the data export should begin (either length or starting_at are required)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=starting_at")
+    public String startingAt;
+    public CanvasDataSeriesAnalyticsRequest withStartingAt(String startingAt) {
+        this.startingAt = startingAt;
         return this;
     }
     

@@ -7,17 +7,31 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSpecJsonRequest {
-    
-    public PutSpecJsonPathParams pathParams;
-    public PutSpecJsonRequest withPathParams(PutSpecJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.V1X1SpecUpdatingPO v1X1SpecUpdatingPO;
+    public PutSpecJsonRequest withV1X1SpecUpdatingPO(org.openapis.openapi.models.shared.V1X1SpecUpdatingPO v1X1SpecUpdatingPO) {
+        this.v1X1SpecUpdatingPO = v1X1SpecUpdatingPO;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.V1X1SpecUpdatingPO request;
-    public PutSpecJsonRequest withRequest(org.openapis.openapi.models.shared.V1X1SpecUpdatingPO request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public String projectId;
+    public PutSpecJsonRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spec_id")
+    public String specId;
+    public PutSpecJsonRequest withSpecId(String specId) {
+        this.specId = specId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
+    public String workgroupId;
+    public PutSpecJsonRequest withWorkgroupId(String workgroupId) {
+        this.workgroupId = workgroupId;
         return this;
     }
     

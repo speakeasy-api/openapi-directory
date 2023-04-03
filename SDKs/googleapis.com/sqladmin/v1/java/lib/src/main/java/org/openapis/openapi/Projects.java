@@ -34,25 +34,26 @@ public class Projects {
     /**
      * Get Disk Shrink Config for a given instance.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SqlProjectsInstancesGetDiskShrinkConfigResponse sqlProjectsInstancesGetDiskShrinkConfig(org.openapis.openapi.models.operations.SqlProjectsInstancesGetDiskShrinkConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SqlProjectsInstancesGetDiskShrinkConfigResponse sqlProjectsInstancesGetDiskShrinkConfig(org.openapis.openapi.models.operations.SqlProjectsInstancesGetDiskShrinkConfigRequest request, org.openapis.openapi.models.operations.SqlProjectsInstancesGetDiskShrinkConfigSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlProjectsInstancesGetDiskShrinkConfigPathParams.class, baseUrl, "/v1/projects/{project}/instances/{instance}/getDiskShrinkConfig", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlProjectsInstancesGetDiskShrinkConfigRequest.class, baseUrl, "/v1/projects/{project}/instances/{instance}/getDiskShrinkConfig", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlProjectsInstancesGetDiskShrinkConfigQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlProjectsInstancesGetDiskShrinkConfigRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,27 +80,28 @@ public class Projects {
     /**
      * Perform Disk Shrink on primary instance.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SqlProjectsInstancesPerformDiskShrinkResponse sqlProjectsInstancesPerformDiskShrink(org.openapis.openapi.models.operations.SqlProjectsInstancesPerformDiskShrinkRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SqlProjectsInstancesPerformDiskShrinkResponse sqlProjectsInstancesPerformDiskShrink(org.openapis.openapi.models.operations.SqlProjectsInstancesPerformDiskShrinkRequest request, org.openapis.openapi.models.operations.SqlProjectsInstancesPerformDiskShrinkSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlProjectsInstancesPerformDiskShrinkPathParams.class, baseUrl, "/v1/projects/{project}/instances/{instance}/performDiskShrink", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlProjectsInstancesPerformDiskShrinkRequest.class, baseUrl, "/v1/projects/{project}/instances/{instance}/performDiskShrink", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "performDiskShrinkContext", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlProjectsInstancesPerformDiskShrinkQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlProjectsInstancesPerformDiskShrinkRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,27 +128,28 @@ public class Projects {
     /**
      * Reschedules the maintenance on the given instance.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SqlProjectsInstancesRescheduleMaintenanceResponse sqlProjectsInstancesRescheduleMaintenance(org.openapis.openapi.models.operations.SqlProjectsInstancesRescheduleMaintenanceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SqlProjectsInstancesRescheduleMaintenanceResponse sqlProjectsInstancesRescheduleMaintenance(org.openapis.openapi.models.operations.SqlProjectsInstancesRescheduleMaintenanceRequest request, org.openapis.openapi.models.operations.SqlProjectsInstancesRescheduleMaintenanceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlProjectsInstancesRescheduleMaintenancePathParams.class, baseUrl, "/v1/projects/{project}/instances/{instance}/rescheduleMaintenance", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlProjectsInstancesRescheduleMaintenanceRequest.class, baseUrl, "/v1/projects/{project}/instances/{instance}/rescheduleMaintenance", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "sqlInstancesRescheduleMaintenanceRequestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlProjectsInstancesRescheduleMaintenanceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlProjectsInstancesRescheduleMaintenanceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -173,27 +176,28 @@ public class Projects {
     /**
      * Reset Replica Size to primary instance disk size.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SqlProjectsInstancesResetReplicaSizeResponse sqlProjectsInstancesResetReplicaSize(org.openapis.openapi.models.operations.SqlProjectsInstancesResetReplicaSizeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SqlProjectsInstancesResetReplicaSizeResponse sqlProjectsInstancesResetReplicaSize(org.openapis.openapi.models.operations.SqlProjectsInstancesResetReplicaSizeRequest request, org.openapis.openapi.models.operations.SqlProjectsInstancesResetReplicaSizeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlProjectsInstancesResetReplicaSizePathParams.class, baseUrl, "/v1/projects/{project}/instances/{instance}/resetReplicaSize", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlProjectsInstancesResetReplicaSizeRequest.class, baseUrl, "/v1/projects/{project}/instances/{instance}/resetReplicaSize", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlProjectsInstancesResetReplicaSizeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlProjectsInstancesResetReplicaSizeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -220,27 +224,28 @@ public class Projects {
     /**
      * Start External primary instance migration.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SqlProjectsInstancesStartExternalSyncResponse sqlProjectsInstancesStartExternalSync(org.openapis.openapi.models.operations.SqlProjectsInstancesStartExternalSyncRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SqlProjectsInstancesStartExternalSyncResponse sqlProjectsInstancesStartExternalSync(org.openapis.openapi.models.operations.SqlProjectsInstancesStartExternalSyncRequest request, org.openapis.openapi.models.operations.SqlProjectsInstancesStartExternalSyncSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlProjectsInstancesStartExternalSyncPathParams.class, baseUrl, "/v1/projects/{project}/instances/{instance}/startExternalSync", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlProjectsInstancesStartExternalSyncRequest.class, baseUrl, "/v1/projects/{project}/instances/{instance}/startExternalSync", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "sqlInstancesStartExternalSyncRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlProjectsInstancesStartExternalSyncQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlProjectsInstancesStartExternalSyncRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -267,27 +272,28 @@ public class Projects {
     /**
      * Verify External primary instance external sync settings.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SqlProjectsInstancesVerifyExternalSyncSettingsResponse sqlProjectsInstancesVerifyExternalSyncSettings(org.openapis.openapi.models.operations.SqlProjectsInstancesVerifyExternalSyncSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SqlProjectsInstancesVerifyExternalSyncSettingsResponse sqlProjectsInstancesVerifyExternalSyncSettings(org.openapis.openapi.models.operations.SqlProjectsInstancesVerifyExternalSyncSettingsRequest request, org.openapis.openapi.models.operations.SqlProjectsInstancesVerifyExternalSyncSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlProjectsInstancesVerifyExternalSyncSettingsPathParams.class, baseUrl, "/v1/projects/{project}/instances/{instance}/verifyExternalSyncSettings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SqlProjectsInstancesVerifyExternalSyncSettingsRequest.class, baseUrl, "/v1/projects/{project}/instances/{instance}/verifyExternalSyncSettings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "sqlInstancesVerifyExternalSyncSettingsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlProjectsInstancesVerifyExternalSyncSettingsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SqlProjectsInstancesVerifyExternalSyncSettingsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

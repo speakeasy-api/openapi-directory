@@ -4,13 +4,126 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNamesNearRequest {
+    /**
+     * A radius (in kilometres) around the centre point.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=distance")
+    public String distance;
+    public GetNamesNearRequest withDistance(String distance) {
+        this.distance = distance;
+        return this;
+    }
     
-    public GetNamesNearQueryParams queryParams;
-    public GetNamesNearRequest withQueryParams(GetNamesNearQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A flag to indicate whether to embed the corresponding 'feature' into each matching name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=embed")
+    public GetNamesNearEmbedEnum embed;
+    public GetNamesNearRequest withEmbed(GetNamesNearEmbedEnum embed) {
+        this.embed = embed;
+        return this;
+    }
+    
+    /**
+     * A filter to limit the search to names associated with features of a certain 'category'  The value of this parameter should be a 'featureCategoryCode' value returned by the /featureCategories resource, or an asterisk (*) to request that all feature categories be included.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=featureCategory")
+    public String featureCategory;
+    public GetNamesNearRequest withFeatureCategory(String featureCategory) {
+        this.featureCategory = featureCategory;
+        return this;
+    }
+    
+    /**
+     * A filter to limit the search to names associated with features of a certain 'class'  The value of this parameter should be a 'featureClassCode' value returned by the /featureClasses resource, or an asterisk (*) to request that all feature classes be included.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=featureClass")
+    public String featureClass;
+    public GetNamesNearRequest withFeatureClass(String featureClass) {
+        this.featureClass = featureClass;
+        return this;
+    }
+    
+    /**
+     * A geographic coordinate specifying the centre point of the search area.  Must be specified as a string of the form 'longitude,latitude' (WGS84).  e.g. -120,51
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=featurePoint")
+    public String featurePoint;
+    public GetNamesNearRequest withFeaturePoint(String featurePoint) {
+        this.featurePoint = featurePoint;
+        return this;
+    }
+    
+    /**
+     * A filter to limit the search to names associated with features of a certain 'type'  The value of this parameter should be a 'featureTypeCode' value returned by the /featureTypes resource, or an asterisk (*) to request that all feature types be included
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=featureType")
+    public String featureType;
+    public GetNamesNearRequest withFeatureType(String featureType) {
+        this.featureType = featureType;
+        return this;
+    }
+    
+    /**
+     * The number of search results to return (1-200)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=itemsPerPage")
+    public Long itemsPerPage;
+    public GetNamesNearRequest withItemsPerPage(Long itemsPerPage) {
+        this.itemsPerPage = itemsPerPage;
+        return this;
+    }
+    
+    /**
+     * The format of the output.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputFormat")
+    public GetNamesNearOutputFormatEnum outputFormat;
+    public GetNamesNearRequest withOutputFormat(GetNamesNearOutputFormatEnum outputFormat) {
+        this.outputFormat = outputFormat;
+        return this;
+    }
+    
+    /**
+     * The EPSG code of the spatial reference system (SRS) to use for output geometries.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputSRS")
+    public GetNamesNearOutputSrsEnum outputSRS;
+    public GetNamesNearRequest withOutputSRS(GetNamesNearOutputSrsEnum outputSRS) {
+        this.outputSRS = outputSRS;
+        return this;
+    }
+    
+    /**
+     * A flag indicating whether to include with each matching name a succinct list of attributes (summary), or a comprehensive list of attributes (detail)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputStyle")
+    public GetNamesNearOutputStyleEnum outputStyle;
+    public GetNamesNearRequest withOutputStyle(GetNamesNearOutputStyleEnum outputStyle) {
+        this.outputStyle = outputStyle;
+        return this;
+    }
+    
+    /**
+     * The distance to move the accessPoint away from the curb and towards the inside of the parcel (in metres). Ignored if locationDescriptor not set to accessPoint.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortBy")
+    public GetNamesNearSortByEnum sortBy;
+    public GetNamesNearRequest withSortBy(GetNamesNearSortByEnum sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    
+    /**
+     * The index of the first record to be returned (&gt;= 1)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startIndex")
+    public Long startIndex;
+    public GetNamesNearRequest withStartIndex(Long startIndex) {
+        this.startIndex = startIndex;
         return this;
     }
     

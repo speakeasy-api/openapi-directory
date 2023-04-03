@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTagsRequest {
+    /**
+     * Restrict results to those owned by this user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ownedBy")
+    public String ownedBy;
+    public GetTagsRequest withOwnedBy(String ownedBy) {
+        this.ownedBy = ownedBy;
+        return this;
+    }
     
-    public GetTagsQueryParams queryParams;
-    public GetTagsRequest withQueryParams(GetTagsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Restrict results to tags belonging to this tag set.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tagSet")
+    public String tagSet;
+    public GetTagsRequest withTagSet(String tagSet) {
+        this.tagSet = tagSet;
+        return this;
+    }
+    
+    /**
+     * Restrict results by urlWords. Should be used with ownedBy when searching for one of your own tags.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=urlWords")
+    public String urlWords;
+    public GetTagsRequest withUrlWords(String urlWords) {
+        this.urlWords = urlWords;
         return this;
     }
     

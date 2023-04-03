@@ -4,27 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetChannelCatalogMarketplacePropertiesRequest {
-    
-    public GetChannelCatalogMarketplacePropertiesPathParams pathParams;
-    public GetChannelCatalogMarketplacePropertiesRequest withPathParams(GetChannelCatalogMarketplacePropertiesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Indicates that the client accepts the following languages.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String[] acceptLanguage;
+    public GetChannelCatalogMarketplacePropertiesRequest withAcceptLanguage(String[] acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
-    
-    public GetChannelCatalogMarketplacePropertiesQueryParams queryParams;
-    public GetChannelCatalogMarketplacePropertiesRequest withQueryParams(GetChannelCatalogMarketplacePropertiesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelCatalogId")
+    public String channelCatalogId;
+    public GetChannelCatalogMarketplacePropertiesRequest withChannelCatalogId(String channelCatalogId) {
+        this.channelCatalogId = channelCatalogId;
         return this;
     }
     
-    
-    public GetChannelCatalogMarketplacePropertiesHeaders headers;
-    public GetChannelCatalogMarketplacePropertiesRequest withHeaders(GetChannelCatalogMarketplacePropertiesHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=redirectionPageUrl")
+    public String redirectionPageUrl;
+    public GetChannelCatalogMarketplacePropertiesRequest withRedirectionPageUrl(String redirectionPageUrl) {
+        this.redirectionPageUrl = redirectionPageUrl;
         return this;
     }
     

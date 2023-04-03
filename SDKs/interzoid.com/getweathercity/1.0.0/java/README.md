@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetweatherQueryParams;
 import org.openapis.openapi.models.operations.GetweatherRequest;
 import org.openapis.openapi.models.operations.GetweatherResponse;
 
@@ -28,12 +27,10 @@ public class Application {
                 .build();
 
             GetweatherRequest req = new GetweatherRequest() {{
-                queryParams = new GetweatherQueryParams() {{
-                    city = "Laruecester";
-                    license = "quibusdam";
-                    state = "unde";
-                }};
-            }};            
+                city = "Laruecester";
+                license = "quibusdam";
+                state = "unde";
+            }}            
 
             GetweatherResponse res = sdk.weatherByCityAndState.getweather(req);
 
@@ -47,7 +44,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### weatherByCityAndState

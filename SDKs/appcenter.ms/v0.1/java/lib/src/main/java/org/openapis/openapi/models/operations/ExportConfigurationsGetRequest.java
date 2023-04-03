@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExportConfigurationsGetRequest {
-    
-    public ExportConfigurationsGetPathParams pathParams;
-    public ExportConfigurationsGetRequest withPathParams(ExportConfigurationsGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public ExportConfigurationsGetRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * The id of the export configuration.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=export_configuration_id")
+    public String exportConfigurationId;
+    public ExportConfigurationsGetRequest withExportConfigurationId(String exportConfigurationId) {
+        this.exportConfigurationId = exportConfigurationId;
+        return this;
+    }
     
-    public ExportConfigurationsGetSecurity security;
-    public ExportConfigurationsGetRequest withSecurity(ExportConfigurationsGetSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public ExportConfigurationsGetRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

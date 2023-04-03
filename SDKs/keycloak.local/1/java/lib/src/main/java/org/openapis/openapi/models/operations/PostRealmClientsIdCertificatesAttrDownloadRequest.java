@@ -7,20 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRealmClientsIdCertificatesAttrDownloadRequest {
-    
-    public PostRealmClientsIdCertificatesAttrDownloadPathParams pathParams;
-    public PostRealmClientsIdCertificatesAttrDownloadRequest withPathParams(PostRealmClientsIdCertificatesAttrDownloadPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Keystore configuration as JSON
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.KeyStoreConfig request;
-    public PostRealmClientsIdCertificatesAttrDownloadRequest withRequest(org.openapis.openapi.models.shared.KeyStoreConfig request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.KeyStoreConfig keyStoreConfig;
+    public PostRealmClientsIdCertificatesAttrDownloadRequest withKeyStoreConfig(org.openapis.openapi.models.shared.KeyStoreConfig keyStoreConfig) {
+        this.keyStoreConfig = keyStoreConfig;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=attr")
+    public String attr;
+    public PostRealmClientsIdCertificatesAttrDownloadRequest withAttr(String attr) {
+        this.attr = attr;
+        return this;
+    }
+    
+    /**
+     * id of client (not client-id)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostRealmClientsIdCertificatesAttrDownloadRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PostRealmClientsIdCertificatesAttrDownloadRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

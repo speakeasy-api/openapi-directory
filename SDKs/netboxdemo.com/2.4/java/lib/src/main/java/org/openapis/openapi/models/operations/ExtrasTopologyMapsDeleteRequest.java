@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExtrasTopologyMapsDeleteRequest {
-    
-    public ExtrasTopologyMapsDeletePathParams pathParams;
-    public ExtrasTopologyMapsDeleteRequest withPathParams(ExtrasTopologyMapsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this topology map.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public ExtrasTopologyMapsDeleteRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

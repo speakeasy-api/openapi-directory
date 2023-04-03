@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCMSpageRequest {
-    
-    public GetCMSpagePathParams pathParams;
-    public GetCMSpageRequest withPathParams(GetCMSpagePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Builder ID specified in the settings of the CMS app.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=builderId")
+    public String builderId;
+    public GetCMSpageRequest withBuilderId(String builderId) {
+        this.builderId = builderId;
         return this;
     }
     
+    /**
+     * Content Type ID defined in the FastStore project.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=content-type")
+    public String contentType;
+    public GetCMSpageRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetCMSpageQueryParams queryParams;
-    public GetCMSpageRequest withQueryParams(GetCMSpageQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Document ID presented in the URL path of a CMS preview.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=document-id")
+    public String documentId;
+    public GetCMSpageRequest withDocumentId(String documentId) {
+        this.documentId = documentId;
+        return this;
+    }
+    
+    /**
+     * Release ID presented in the URL path of a CMS preview.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=releaseId")
+    public String releaseId;
+    public GetCMSpageRequest withReleaseId(String releaseId) {
+        this.releaseId = releaseId;
+        return this;
+    }
+    
+    /**
+     * Version ID presented in the URL path of a CMS preview.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=versionId")
+    public String versionId;
+    public GetCMSpageRequest withVersionId(String versionId) {
+        this.versionId = versionId;
         return this;
     }
     

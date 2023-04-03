@@ -4,20 +4,55 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WorkTypeApiSearchRequest {
-    
-    public WorkTypeApiSearchQueryParams queryParams;
-    public WorkTypeApiSearchRequest withQueryParams(WorkTypeApiSearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=queryOptions.order")
+    public WorkTypeApiSearchQueryOptionsOrderEnum queryOptionsOrder;
+    public WorkTypeApiSearchRequest withQueryOptionsOrder(WorkTypeApiSearchQueryOptionsOrderEnum queryOptionsOrder) {
+        this.queryOptionsOrder = queryOptionsOrder;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=queryOptions.orderBy")
+    public String queryOptionsOrderBy;
+    public WorkTypeApiSearchRequest withQueryOptionsOrderBy(String queryOptionsOrderBy) {
+        this.queryOptionsOrderBy = queryOptionsOrderBy;
+        return this;
+    }
     
-    public WorkTypeApiSearchHeaders headers;
-    public WorkTypeApiSearchRequest withHeaders(WorkTypeApiSearchHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=queryOptions.page")
+    public Integer queryOptionsPage;
+    public WorkTypeApiSearchRequest withQueryOptionsPage(Integer queryOptionsPage) {
+        this.queryOptionsPage = queryOptionsPage;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=queryOptions.pageSize")
+    public Integer queryOptionsPageSize;
+    public WorkTypeApiSearchRequest withQueryOptionsPageSize(Integer queryOptionsPageSize) {
+        this.queryOptionsPageSize = queryOptionsPageSize;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=queryOptions.query")
+    public String queryOptionsQuery;
+    public WorkTypeApiSearchRequest withQueryOptionsQuery(String queryOptionsQuery) {
+        this.queryOptionsQuery = queryOptionsQuery;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
+    public String xAuthKey;
+    public WorkTypeApiSearchRequest withXAuthKey(String xAuthKey) {
+        this.xAuthKey = xAuthKey;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
+    public String xAuthSecret;
+    public WorkTypeApiSearchRequest withXAuthSecret(String xAuthSecret) {
+        this.xAuthSecret = xAuthSecret;
         return this;
     }
     

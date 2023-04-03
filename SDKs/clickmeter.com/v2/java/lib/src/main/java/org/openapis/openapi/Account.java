@@ -39,7 +39,7 @@ public class Account {
      */
     public org.openapis.openapi.models.operations.AccountDeleteDomainWhitelistResponse accountDeleteDomainWhitelist(org.openapis.openapi.models.operations.AccountDeleteDomainWhitelistRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountDeleteDomainWhitelistPathParams.class, baseUrl, "/account/domainwhitelist/{whitelistId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountDeleteDomainWhitelistRequest.class, baseUrl, "/account/domainwhitelist/{whitelistId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -96,7 +96,7 @@ public class Account {
      */
     public org.openapis.openapi.models.operations.AccountDeleteGuestResponse accountDeleteGuest(org.openapis.openapi.models.operations.AccountDeleteGuestRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountDeleteGuestPathParams.class, baseUrl, "/account/guests/{guestId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountDeleteGuestRequest.class, baseUrl, "/account/guests/{guestId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -153,7 +153,7 @@ public class Account {
      */
     public org.openapis.openapi.models.operations.AccountDeleteIpBlacklistResponse accountDeleteIpBlacklist(org.openapis.openapi.models.operations.AccountDeleteIpBlacklistRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountDeleteIpBlacklistPathParams.class, baseUrl, "/account/ipblacklist/{blacklistId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountDeleteIpBlacklistRequest.class, baseUrl, "/account/ipblacklist/{blacklistId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -272,7 +272,7 @@ public class Account {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccountGetDomainWhitelistQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccountGetDomainWhitelistRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -319,7 +319,7 @@ public class Account {
      */
     public org.openapis.openapi.models.operations.AccountGetGuestResponse accountGetGuest(org.openapis.openapi.models.operations.AccountGetGuestRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountGetGuestPathParams.class, baseUrl, "/account/guests/{guestId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountGetGuestRequest.class, baseUrl, "/account/guests/{guestId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -382,7 +382,7 @@ public class Account {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccountGetGuestsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccountGetGuestsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -435,7 +435,7 @@ public class Account {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccountGetGuestsCountQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccountGetGuestsCountRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -498,7 +498,7 @@ public class Account {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccountGetIpBlacklistQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccountGetIpBlacklistRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -545,13 +545,13 @@ public class Account {
      */
     public org.openapis.openapi.models.operations.AccountGetPermissionsResponse accountGetPermissions(org.openapis.openapi.models.operations.AccountGetPermissionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountGetPermissionsPathParams.class, baseUrl, "/account/guests/{guestId}/permissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountGetPermissionsRequest.class, baseUrl, "/account/guests/{guestId}/permissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccountGetPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccountGetPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -598,13 +598,13 @@ public class Account {
      */
     public org.openapis.openapi.models.operations.AccountGetPermissionsCountResponse accountGetPermissionsCount(org.openapis.openapi.models.operations.AccountGetPermissionsCountRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountGetPermissionsCountPathParams.class, baseUrl, "/account/guests/{guestId}/permissions/count", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountGetPermissionsCountRequest.class, baseUrl, "/account/guests/{guestId}/permissions/count", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccountGetPermissionsCountQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccountGetPermissionsCountRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -717,12 +717,12 @@ public class Account {
      */
     public org.openapis.openapi.models.operations.AccountPatchPermissionsFormResponse accountPatchPermissionsForm(org.openapis.openapi.models.operations.AccountPatchPermissionsFormRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountPatchPermissionsFormPathParams.class, baseUrl, "/account/guests/{guestId}/{type}/permissions/patch", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountPatchPermissionsFormRequest.class, baseUrl, "/account/guests/{guestId}/{type}/permissions/patch", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiCoreRequestsPermissionPatchRequest", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -779,12 +779,12 @@ public class Account {
      */
     public org.openapis.openapi.models.operations.AccountPatchPermissionsJsonResponse accountPatchPermissionsJson(org.openapis.openapi.models.operations.AccountPatchPermissionsJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountPatchPermissionsJsonPathParams.class, baseUrl, "/account/guests/{guestId}/{type}/permissions/patch", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountPatchPermissionsJsonRequest.class, baseUrl, "/account/guests/{guestId}/{type}/permissions/patch", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiCoreRequestsPermissionPatchRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -841,12 +841,12 @@ public class Account {
      */
     public org.openapis.openapi.models.operations.AccountPatchPermissionsRawResponse accountPatchPermissionsRaw(org.openapis.openapi.models.operations.AccountPatchPermissionsRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountPatchPermissionsRawPathParams.class, baseUrl, "/account/guests/{guestId}/{type}/permissions/patch", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountPatchPermissionsRawRequest.class, baseUrl, "/account/guests/{guestId}/{type}/permissions/patch", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -903,12 +903,12 @@ public class Account {
      */
     public org.openapis.openapi.models.operations.AccountPostGuestFormResponse accountPostGuestForm(org.openapis.openapi.models.operations.AccountPostGuestFormRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountPostGuestFormPathParams.class, baseUrl, "/account/guests/{guestId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountPostGuestFormRequest.class, baseUrl, "/account/guests/{guestId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiCoreDtoAccountingGuest", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -965,12 +965,12 @@ public class Account {
      */
     public org.openapis.openapi.models.operations.AccountPostGuestJsonResponse accountPostGuestJson(org.openapis.openapi.models.operations.AccountPostGuestJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountPostGuestJsonPathParams.class, baseUrl, "/account/guests/{guestId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountPostGuestJsonRequest.class, baseUrl, "/account/guests/{guestId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiCoreDtoAccountingGuest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1027,12 +1027,12 @@ public class Account {
      */
     public org.openapis.openapi.models.operations.AccountPostGuestRawResponse accountPostGuestRaw(org.openapis.openapi.models.operations.AccountPostGuestRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountPostGuestRawPathParams.class, baseUrl, "/account/guests/{guestId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountPostGuestRawRequest.class, baseUrl, "/account/guests/{guestId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1087,7 +1087,7 @@ public class Account {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountPostFormResponse accountPostForm(org.openapis.openapi.models.operations.AccountPostFormRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountPostFormResponse accountPostForm(org.openapis.openapi.models.shared.ApiCoreDtoAccountingUser request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account");
         
@@ -1149,7 +1149,7 @@ public class Account {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountPostJsonResponse accountPostJson(org.openapis.openapi.models.operations.AccountPostJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountPostJsonResponse accountPostJson(org.openapis.openapi.models.shared.ApiCoreDtoAccountingUser request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account");
         
@@ -1211,7 +1211,7 @@ public class Account {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountPostRawResponse accountPostRaw(org.openapis.openapi.models.operations.AccountPostRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountPostRawResponse accountPostRaw(byte[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account");
         
@@ -1273,7 +1273,7 @@ public class Account {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountPutDomainWhitelistFormResponse accountPutDomainWhitelistForm(org.openapis.openapi.models.operations.AccountPutDomainWhitelistFormRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountPutDomainWhitelistFormResponse accountPutDomainWhitelistForm(org.openapis.openapi.models.shared.ApiCoreDtoAccountingDomainWhitelistEntry request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/domainwhitelist");
         
@@ -1335,7 +1335,7 @@ public class Account {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountPutDomainWhitelistJsonResponse accountPutDomainWhitelistJson(org.openapis.openapi.models.operations.AccountPutDomainWhitelistJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountPutDomainWhitelistJsonResponse accountPutDomainWhitelistJson(org.openapis.openapi.models.shared.ApiCoreDtoAccountingDomainWhitelistEntry request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/domainwhitelist");
         
@@ -1397,7 +1397,7 @@ public class Account {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountPutDomainWhitelistRawResponse accountPutDomainWhitelistRaw(org.openapis.openapi.models.operations.AccountPutDomainWhitelistRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountPutDomainWhitelistRawResponse accountPutDomainWhitelistRaw(byte[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/domainwhitelist");
         
@@ -1459,7 +1459,7 @@ public class Account {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountPutGuestFormResponse accountPutGuestForm(org.openapis.openapi.models.operations.AccountPutGuestFormRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountPutGuestFormResponse accountPutGuestForm(org.openapis.openapi.models.shared.ApiCoreDtoAccountingGuest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/guests");
         
@@ -1521,7 +1521,7 @@ public class Account {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountPutGuestJsonResponse accountPutGuestJson(org.openapis.openapi.models.operations.AccountPutGuestJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountPutGuestJsonResponse accountPutGuestJson(org.openapis.openapi.models.shared.ApiCoreDtoAccountingGuest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/guests");
         
@@ -1583,7 +1583,7 @@ public class Account {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountPutGuestRawResponse accountPutGuestRaw(org.openapis.openapi.models.operations.AccountPutGuestRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountPutGuestRawResponse accountPutGuestRaw(byte[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/guests");
         
@@ -1645,7 +1645,7 @@ public class Account {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountPutIpBlacklistFormResponse accountPutIpBlacklistForm(org.openapis.openapi.models.operations.AccountPutIpBlacklistFormRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountPutIpBlacklistFormResponse accountPutIpBlacklistForm(org.openapis.openapi.models.shared.ApiCoreDtoAccountingIpBlacklistEntry request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/ipblacklist");
         
@@ -1707,7 +1707,7 @@ public class Account {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountPutIpBlacklistJsonResponse accountPutIpBlacklistJson(org.openapis.openapi.models.operations.AccountPutIpBlacklistJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountPutIpBlacklistJsonResponse accountPutIpBlacklistJson(org.openapis.openapi.models.shared.ApiCoreDtoAccountingIpBlacklistEntry request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/ipblacklist");
         
@@ -1769,7 +1769,7 @@ public class Account {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountPutIpBlacklistRawResponse accountPutIpBlacklistRaw(org.openapis.openapi.models.operations.AccountPutIpBlacklistRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountPutIpBlacklistRawResponse accountPutIpBlacklistRaw(byte[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/ipblacklist");
         
@@ -1833,12 +1833,12 @@ public class Account {
      */
     public org.openapis.openapi.models.operations.PostAccountGuestsGuestIdTypePermissionsPatchFormResponse postAccountGuestsGuestIdTypePermissionsPatchForm(org.openapis.openapi.models.operations.PostAccountGuestsGuestIdTypePermissionsPatchFormRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostAccountGuestsGuestIdTypePermissionsPatchFormPathParams.class, baseUrl, "/account/guests/{guestId}/{type}/permissions/patch", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostAccountGuestsGuestIdTypePermissionsPatchFormRequest.class, baseUrl, "/account/guests/{guestId}/{type}/permissions/patch", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiCoreRequestsPermissionPatchRequest", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1895,12 +1895,12 @@ public class Account {
      */
     public org.openapis.openapi.models.operations.PostAccountGuestsGuestIdTypePermissionsPatchJsonResponse postAccountGuestsGuestIdTypePermissionsPatchJson(org.openapis.openapi.models.operations.PostAccountGuestsGuestIdTypePermissionsPatchJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostAccountGuestsGuestIdTypePermissionsPatchJsonPathParams.class, baseUrl, "/account/guests/{guestId}/{type}/permissions/patch", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostAccountGuestsGuestIdTypePermissionsPatchJsonRequest.class, baseUrl, "/account/guests/{guestId}/{type}/permissions/patch", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiCoreRequestsPermissionPatchRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1957,12 +1957,12 @@ public class Account {
      */
     public org.openapis.openapi.models.operations.PostAccountGuestsGuestIdTypePermissionsPatchRawResponse postAccountGuestsGuestIdTypePermissionsPatchRaw(org.openapis.openapi.models.operations.PostAccountGuestsGuestIdTypePermissionsPatchRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostAccountGuestsGuestIdTypePermissionsPatchRawPathParams.class, baseUrl, "/account/guests/{guestId}/{type}/permissions/patch", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostAccountGuestsGuestIdTypePermissionsPatchRawRequest.class, baseUrl, "/account/guests/{guestId}/{type}/permissions/patch", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

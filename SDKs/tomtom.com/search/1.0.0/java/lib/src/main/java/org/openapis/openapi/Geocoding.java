@@ -35,13 +35,13 @@ public class Geocoding {
      */
     public org.openapis.openapi.models.operations.GetSearchVersionNumberGeocodeQueryExtResponse getSearchVersionNumberGeocodeQueryExt(org.openapis.openapi.models.operations.GetSearchVersionNumberGeocodeQueryExtRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSearchVersionNumberGeocodeQueryExtPathParams.class, baseUrl, "/search/{versionNumber}/geocode/{query}.{ext}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSearchVersionNumberGeocodeQueryExtRequest.class, baseUrl, "/search/{versionNumber}/geocode/{query}.{ext}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSearchVersionNumberGeocodeQueryExtQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSearchVersionNumberGeocodeQueryExtRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -74,13 +74,13 @@ public class Geocoding {
      */
     public org.openapis.openapi.models.operations.GetSearchVersionNumberStructuredGeocodeExtResponse getSearchVersionNumberStructuredGeocodeExt(org.openapis.openapi.models.operations.GetSearchVersionNumberStructuredGeocodeExtRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSearchVersionNumberStructuredGeocodeExtPathParams.class, baseUrl, "/search/{versionNumber}/structuredGeocode.{ext}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSearchVersionNumberStructuredGeocodeExtRequest.class, baseUrl, "/search/{versionNumber}/structuredGeocode.{ext}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSearchVersionNumberStructuredGeocodeExtQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSearchVersionNumberStructuredGeocodeExtRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

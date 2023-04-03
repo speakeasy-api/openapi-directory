@@ -44,19 +44,20 @@ public class Workspaces {
      * Delete a webhook for a workspace
      * Deletes the specified webhook subscription from the given workspace.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceHooksUidResponse deleteWorkspacesWorkspaceHooksUid(org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceHooksUidRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceHooksUidResponse deleteWorkspacesWorkspaceHooksUid(org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceHooksUidRequest request, org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceHooksUidSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceHooksUidPathParams.class, baseUrl, "/workspaces/{workspace}/hooks/{uid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceHooksUidRequest.class, baseUrl, "/workspaces/{workspace}/hooks/{uid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -139,10 +140,11 @@ public class Workspaces {
      * Note that the query parameter values need to be URL escaped so that `=`
      * would become `%3D`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetUserPermissionsWorkspacesResponse getUserPermissionsWorkspaces(org.openapis.openapi.models.operations.GetUserPermissionsWorkspacesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetUserPermissionsWorkspacesResponse getUserPermissionsWorkspaces(org.openapis.openapi.models.operations.GetUserPermissionsWorkspacesRequest request, org.openapis.openapi.models.operations.GetUserPermissionsWorkspacesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/user/permissions/workspaces");
         
@@ -150,14 +152,14 @@ public class Workspaces {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserPermissionsWorkspacesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserPermissionsWorkspacesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -253,10 +255,11 @@ public class Workspaces {
      * **The `collaborator` role is being removed from the Bitbucket Cloud API. For more information,
      * see the [deprecation announcement](/cloud/bitbucket/deprecation-notice-collaborator-role/).**
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetWorkspacesResponse getWorkspaces(org.openapis.openapi.models.operations.GetWorkspacesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetWorkspacesResponse getWorkspaces(org.openapis.openapi.models.operations.GetWorkspacesRequest request, org.openapis.openapi.models.operations.GetWorkspacesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/workspaces");
         
@@ -264,14 +267,14 @@ public class Workspaces {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWorkspacesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWorkspacesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -307,19 +310,20 @@ public class Workspaces {
      * Get a workspace
      * Returns the requested workspace.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetWorkspacesWorkspaceResponse getWorkspacesWorkspace(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetWorkspacesWorkspaceResponse getWorkspacesWorkspace(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceRequest request, org.openapis.openapi.models.operations.GetWorkspacesWorkspaceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspacesWorkspacePathParams.class, baseUrl, "/workspaces/{workspace}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceRequest.class, baseUrl, "/workspaces/{workspace}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -355,19 +359,20 @@ public class Workspaces {
      * List webhooks for a workspace
      * Returns a paginated list of webhooks installed on this workspace.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetWorkspacesWorkspaceHooksResponse getWorkspacesWorkspaceHooks(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceHooksRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetWorkspacesWorkspaceHooksResponse getWorkspacesWorkspaceHooks(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceHooksRequest request, org.openapis.openapi.models.operations.GetWorkspacesWorkspaceHooksSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceHooksPathParams.class, baseUrl, "/workspaces/{workspace}/hooks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceHooksRequest.class, baseUrl, "/workspaces/{workspace}/hooks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -404,19 +409,20 @@ public class Workspaces {
      * Returns the webhook with the specified id installed on the given
      * workspace.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetWorkspacesWorkspaceHooksUidResponse getWorkspacesWorkspaceHooksUid(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceHooksUidRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetWorkspacesWorkspaceHooksUidResponse getWorkspacesWorkspaceHooksUid(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceHooksUidRequest request, org.openapis.openapi.models.operations.GetWorkspacesWorkspaceHooksUidSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceHooksUidPathParams.class, baseUrl, "/workspaces/{workspace}/hooks/{uid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceHooksUidRequest.class, baseUrl, "/workspaces/{workspace}/hooks/{uid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -452,19 +458,20 @@ public class Workspaces {
      * List users in a workspace
      * Returns all members of the requested workspace.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetWorkspacesWorkspaceMembersResponse getWorkspacesWorkspaceMembers(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceMembersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetWorkspacesWorkspaceMembersResponse getWorkspacesWorkspaceMembers(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceMembersRequest request, org.openapis.openapi.models.operations.GetWorkspacesWorkspaceMembersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceMembersPathParams.class, baseUrl, "/workspaces/{workspace}/members", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceMembersRequest.class, baseUrl, "/workspaces/{workspace}/members", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -502,19 +509,20 @@ public class Workspaces {
      * a `User` object for the member and a `Workspace` object
      * for the requested workspace.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetWorkspacesWorkspaceMembersMemberResponse getWorkspacesWorkspaceMembersMember(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceMembersMemberRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetWorkspacesWorkspaceMembersMemberResponse getWorkspacesWorkspaceMembersMember(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceMembersMemberRequest request, org.openapis.openapi.models.operations.GetWorkspacesWorkspaceMembersMemberSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceMembersMemberPathParams.class, baseUrl, "/workspaces/{workspace}/members/{member}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceMembersMemberRequest.class, baseUrl, "/workspaces/{workspace}/members/{member}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -608,25 +616,26 @@ public class Workspaces {
      * 
      * * `q=permission="owner"`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetWorkspacesWorkspacePermissionsResponse getWorkspacesWorkspacePermissions(org.openapis.openapi.models.operations.GetWorkspacesWorkspacePermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetWorkspacesWorkspacePermissionsResponse getWorkspacesWorkspacePermissions(org.openapis.openapi.models.operations.GetWorkspacesWorkspacePermissionsRequest request, org.openapis.openapi.models.operations.GetWorkspacesWorkspacePermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspacesWorkspacePermissionsPathParams.class, baseUrl, "/workspaces/{workspace}/permissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspacesWorkspacePermissionsRequest.class, baseUrl, "/workspaces/{workspace}/permissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWorkspacesWorkspacePermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWorkspacesWorkspacePermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -744,25 +753,26 @@ public class Workspaces {
      * Note that the query parameter values need to be URL escaped so that `=`
      * would become `%3D`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetWorkspacesWorkspacePermissionsRepositoriesResponse getWorkspacesWorkspacePermissionsRepositories(org.openapis.openapi.models.operations.GetWorkspacesWorkspacePermissionsRepositoriesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetWorkspacesWorkspacePermissionsRepositoriesResponse getWorkspacesWorkspacePermissionsRepositories(org.openapis.openapi.models.operations.GetWorkspacesWorkspacePermissionsRepositoriesRequest request, org.openapis.openapi.models.operations.GetWorkspacesWorkspacePermissionsRepositoriesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspacesWorkspacePermissionsRepositoriesPathParams.class, baseUrl, "/workspaces/{workspace}/permissions/repositories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspacesWorkspacePermissionsRepositoriesRequest.class, baseUrl, "/workspaces/{workspace}/permissions/repositories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWorkspacesWorkspacePermissionsRepositoriesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWorkspacesWorkspacePermissionsRepositoriesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -864,25 +874,26 @@ public class Workspaces {
      * Note that the query parameter values need to be URL escaped so that `=`
      * would become `%3D`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugResponse getWorkspacesWorkspacePermissionsRepositoriesRepoSlug(org.openapis.openapi.models.operations.GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugResponse getWorkspacesWorkspacePermissionsRepositoriesRepoSlug(org.openapis.openapi.models.operations.GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugRequest request, org.openapis.openapi.models.operations.GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugPathParams.class, baseUrl, "/workspaces/{workspace}/permissions/repositories/{repo_slug}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugRequest.class, baseUrl, "/workspaces/{workspace}/permissions/repositories/{repo_slug}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -918,19 +929,20 @@ public class Workspaces {
      * List projects in a workspace
      * Returns the list of projects in this workspace.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsResponse getWorkspacesWorkspaceProjects(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsResponse getWorkspacesWorkspaceProjects(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsRequest request, org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsPathParams.class, baseUrl, "/workspaces/{workspace}/projects", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsRequest.class, baseUrl, "/workspaces/{workspace}/projects", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -966,19 +978,20 @@ public class Workspaces {
      * Get a project for a workspace
      * Returns the requested project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyResponse getWorkspacesWorkspaceProjectsProjectKey(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyResponse getWorkspacesWorkspaceProjectsProjectKey(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyRequest request, org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyPathParams.class, baseUrl, "/workspaces/{workspace}/projects/{project_key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyRequest.class, baseUrl, "/workspaces/{workspace}/projects/{project_key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1043,19 +1056,20 @@ public class Workspaces {
      * 
      * Only workspace owners can install webhooks on workspaces.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostWorkspacesWorkspaceHooksResponse postWorkspacesWorkspaceHooks(org.openapis.openapi.models.operations.PostWorkspacesWorkspaceHooksRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostWorkspacesWorkspaceHooksResponse postWorkspacesWorkspaceHooks(org.openapis.openapi.models.operations.PostWorkspacesWorkspaceHooksRequest request, org.openapis.openapi.models.operations.PostWorkspacesWorkspaceHooksSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostWorkspacesWorkspaceHooksPathParams.class, baseUrl, "/workspaces/{workspace}/hooks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostWorkspacesWorkspaceHooksRequest.class, baseUrl, "/workspaces/{workspace}/hooks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1100,19 +1114,20 @@ public class Workspaces {
      * * `active`
      * * `events`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutWorkspacesWorkspaceHooksUidResponse putWorkspacesWorkspaceHooksUid(org.openapis.openapi.models.operations.PutWorkspacesWorkspaceHooksUidRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutWorkspacesWorkspaceHooksUidResponse putWorkspacesWorkspaceHooksUid(org.openapis.openapi.models.operations.PutWorkspacesWorkspaceHooksUidRequest request, org.openapis.openapi.models.operations.PutWorkspacesWorkspaceHooksUidSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutWorkspacesWorkspaceHooksUidPathParams.class, baseUrl, "/workspaces/{workspace}/hooks/{uid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutWorkspacesWorkspaceHooksUidRequest.class, baseUrl, "/workspaces/{workspace}/hooks/{uid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

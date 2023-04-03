@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetABlockedListRequest {
-    
-    public GetABlockedListPathParams pathParams;
-    public GetABlockedListRequest withPathParams(GetABlockedListPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetABlockedListSecurity security;
-    public GetABlockedListRequest withSecurity(GetABlockedListSecurity security) {
-        this.security = security;
+    /**
+     * Unique Identifier of the blocked list.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=blockedListId")
+    public String blockedListId;
+    public GetABlockedListRequest withBlockedListId(String blockedListId) {
+        this.blockedListId = blockedListId;
         return this;
     }
     

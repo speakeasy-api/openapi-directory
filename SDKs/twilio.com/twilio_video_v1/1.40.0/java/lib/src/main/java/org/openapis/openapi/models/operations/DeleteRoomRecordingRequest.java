@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRoomRecordingRequest {
-    
-    public DeleteRoomRecordingPathParams pathParams;
-    public DeleteRoomRecordingRequest withPathParams(DeleteRoomRecordingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the room with the RoomRecording resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=RoomSid")
+    public String roomSid;
+    public DeleteRoomRecordingRequest withRoomSid(String roomSid) {
+        this.roomSid = roomSid;
         return this;
     }
     
-    
-    public DeleteRoomRecordingSecurity security;
-    public DeleteRoomRecordingRequest withSecurity(DeleteRoomRecordingSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteRoomRecordingRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the RoomRecording resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteRoomRecordingRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

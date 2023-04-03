@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.ConvertcurrencyQueryParams;
 import org.openapis.openapi.models.operations.ConvertcurrencyRequest;
 import org.openapis.openapi.models.operations.ConvertcurrencyResponse;
 
@@ -15,13 +14,11 @@ public class Application {
                 .build();
 
             ConvertcurrencyRequest req = new ConvertcurrencyRequest() {{
-                queryParams = new ConvertcurrencyQueryParams() {{
-                    amount = "corrupti";
-                    from = "provident";
-                    license = "distinctio";
-                    to = "quibusdam";
-                }};
-            }};            
+                amount = "corrupti";
+                from = "provident";
+                license = "distinctio";
+                to = "quibusdam";
+            }}            
 
             ConvertcurrencyResponse res = sdk.liveCurrencyRateConversion.convertcurrency(req);
 

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CircuitsProvidersGraphsRequest {
-    
-    public CircuitsProvidersGraphsPathParams pathParams;
-    public CircuitsProvidersGraphsRequest withPathParams(CircuitsProvidersGraphsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this provider.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public CircuitsProvidersGraphsRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

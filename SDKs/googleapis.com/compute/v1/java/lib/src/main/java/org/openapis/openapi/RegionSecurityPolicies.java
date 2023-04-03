@@ -34,25 +34,26 @@ public class RegionSecurityPolicies {
     /**
      * Deletes the specified policy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesDeleteResponse computeRegionSecurityPoliciesDelete(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesDeleteResponse computeRegionSecurityPoliciesDelete(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesDeleteRequest request, org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesDeletePathParams.class, baseUrl, "/projects/{project}/regions/{region}/securityPolicies/{securityPolicy}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesDeleteRequest.class, baseUrl, "/projects/{project}/regions/{region}/securityPolicies/{securityPolicy}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class RegionSecurityPolicies {
     /**
      * List all of the ordered rules present in a single specified policy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesGetResponse computeRegionSecurityPoliciesGet(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesGetResponse computeRegionSecurityPoliciesGet(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesGetRequest request, org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesGetPathParams.class, baseUrl, "/projects/{project}/regions/{region}/securityPolicies/{securityPolicy}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesGetRequest.class, baseUrl, "/projects/{project}/regions/{region}/securityPolicies/{securityPolicy}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,27 +126,28 @@ public class RegionSecurityPolicies {
     /**
      * Creates a new policy in the specified project using the data included in the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesInsertResponse computeRegionSecurityPoliciesInsert(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesInsertResponse computeRegionSecurityPoliciesInsert(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesInsertRequest request, org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesInsertPathParams.class, baseUrl, "/projects/{project}/regions/{region}/securityPolicies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesInsertRequest.class, baseUrl, "/projects/{project}/regions/{region}/securityPolicies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "securityPolicy", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,25 +174,26 @@ public class RegionSecurityPolicies {
     /**
      * List all the policies that have been configured for the specified project and region.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesListResponse computeRegionSecurityPoliciesList(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesListResponse computeRegionSecurityPoliciesList(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesListRequest request, org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesListPathParams.class, baseUrl, "/projects/{project}/regions/{region}/securityPolicies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesListRequest.class, baseUrl, "/projects/{project}/regions/{region}/securityPolicies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -216,27 +220,28 @@ public class RegionSecurityPolicies {
     /**
      * Patches the specified policy with the data included in the request. To clear fields in the rule, leave the fields empty and specify them in the updateMask. This cannot be used to be update the rules in the policy. Please use the per rule methods like addRule, patchRule, and removeRule instead.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesPatchResponse computeRegionSecurityPoliciesPatch(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesPatchResponse computeRegionSecurityPoliciesPatch(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesPatchRequest request, org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesPatchPathParams.class, baseUrl, "/projects/{project}/regions/{region}/securityPolicies/{securityPolicy}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesPatchRequest.class, baseUrl, "/projects/{project}/regions/{region}/securityPolicies/{securityPolicy}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "securityPolicy1", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionSecurityPoliciesPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

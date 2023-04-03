@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteOutgoingCallerIdRequest {
-    
-    public DeleteOutgoingCallerIdPathParams pathParams;
-    public DeleteOutgoingCallerIdRequest withPathParams(DeleteOutgoingCallerIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the OutgoingCallerId resources to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public DeleteOutgoingCallerIdRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public DeleteOutgoingCallerIdSecurity security;
-    public DeleteOutgoingCallerIdRequest withSecurity(DeleteOutgoingCallerIdSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteOutgoingCallerIdRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the OutgoingCallerId resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteOutgoingCallerIdRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

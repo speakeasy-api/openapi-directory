@@ -40,12 +40,12 @@ public class QosRules {
      */
     public org.openapis.openapi.models.operations.CreateNetworkSwitchQosRuleResponse createNetworkSwitchQosRule(org.openapis.openapi.models.operations.CreateNetworkSwitchQosRuleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkSwitchQosRulePathParams.class, baseUrl, "/networks/{networkId}/switch/qosRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkSwitchQosRuleRequest.class, baseUrl, "/networks/{networkId}/switch/qosRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -85,7 +85,7 @@ public class QosRules {
      */
     public org.openapis.openapi.models.operations.DeleteNetworkSwitchQosRuleResponse deleteNetworkSwitchQosRule(org.openapis.openapi.models.operations.DeleteNetworkSwitchQosRuleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkSwitchQosRulePathParams.class, baseUrl, "/networks/{networkId}/switch/qosRules/{qosRuleId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkSwitchQosRuleRequest.class, baseUrl, "/networks/{networkId}/switch/qosRules/{qosRuleId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -119,7 +119,7 @@ public class QosRules {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchQosRuleResponse getNetworkSwitchQosRule(org.openapis.openapi.models.operations.GetNetworkSwitchQosRuleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchQosRulePathParams.class, baseUrl, "/networks/{networkId}/switch/qosRules/{qosRuleId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchQosRuleRequest.class, baseUrl, "/networks/{networkId}/switch/qosRules/{qosRuleId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -159,7 +159,7 @@ public class QosRules {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchQosRulesResponse getNetworkSwitchQosRules(org.openapis.openapi.models.operations.GetNetworkSwitchQosRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchQosRulesPathParams.class, baseUrl, "/networks/{networkId}/switch/qosRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchQosRulesRequest.class, baseUrl, "/networks/{networkId}/switch/qosRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -199,7 +199,7 @@ public class QosRules {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchQosRulesOrderResponse getNetworkSwitchQosRulesOrder(org.openapis.openapi.models.operations.GetNetworkSwitchQosRulesOrderRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchQosRulesOrderPathParams.class, baseUrl, "/networks/{networkId}/switch/qosRules/order", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchQosRulesOrderRequest.class, baseUrl, "/networks/{networkId}/switch/qosRules/order", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -239,12 +239,12 @@ public class QosRules {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSwitchQosRuleResponse updateNetworkSwitchQosRule(org.openapis.openapi.models.operations.UpdateNetworkSwitchQosRuleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchQosRulePathParams.class, baseUrl, "/networks/{networkId}/switch/qosRules/{qosRuleId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchQosRuleRequest.class, baseUrl, "/networks/{networkId}/switch/qosRules/{qosRuleId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -281,12 +281,12 @@ public class QosRules {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSwitchQosRulesOrderResponse updateNetworkSwitchQosRulesOrder(org.openapis.openapi.models.operations.UpdateNetworkSwitchQosRulesOrderRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchQosRulesOrderPathParams.class, baseUrl, "/networks/{networkId}/switch/qosRules/order", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchQosRulesOrderRequest.class, baseUrl, "/networks/{networkId}/switch/qosRules/order", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

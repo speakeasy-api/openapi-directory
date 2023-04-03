@@ -4,27 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatientCommunicationsReadRequest {
-    
-    public PatientCommunicationsReadPathParams pathParams;
-    public PatientCommunicationsReadRequest withPathParams(PatientCommunicationsReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public PatientCommunicationsReadRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     
-    
-    public PatientCommunicationsReadQueryParams queryParams;
-    public PatientCommunicationsReadRequest withQueryParams(PatientCommunicationsReadQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatientCommunicationsReadRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public PatientCommunicationsReadSecurity security;
-    public PatientCommunicationsReadRequest withSecurity(PatientCommunicationsReadSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
+    public Long patient;
+    public PatientCommunicationsReadRequest withPatient(Long patient) {
+        this.patient = patient;
         return this;
     }
     

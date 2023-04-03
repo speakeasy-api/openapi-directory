@@ -4,20 +4,37 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTargetsTargetIdScansRetrievePageRequest {
-    
-    public GetTargetsTargetIdScansRetrievePagePathParams pathParams;
-    public GetTargetsTargetIdScansRetrievePageRequest withPathParams(GetTargetsTargetIdScansRetrievePagePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
+    public LocalDate date;
+    public GetTargetsTargetIdScansRetrievePageRequest withDate(LocalDate date) {
+        this.date = date;
         return this;
     }
     
+    /**
+     * Number of results to return per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=length")
+    public Long length;
+    public GetTargetsTargetIdScansRetrievePageRequest withLength(Long length) {
+        this.length = length;
+        return this;
+    }
     
-    public GetTargetsTargetIdScansRetrievePageQueryParams queryParams;
-    public GetTargetsTargetIdScansRetrievePageRequest withQueryParams(GetTargetsTargetIdScansRetrievePageQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Target id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=target_id")
+    public String targetId;
+    public GetTargetsTargetIdScansRetrievePageRequest withTargetId(String targetId) {
+        this.targetId = targetId;
         return this;
     }
     

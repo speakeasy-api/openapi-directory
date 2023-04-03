@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTargetExpressionByENSGIDRequest {
-    
-    public GetTargetExpressionByENSGIDQueryParams queryParams;
-    public GetTargetExpressionByENSGIDRequest withQueryParams(GetTargetExpressionByENSGIDQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * An Ensembl gene identifier.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gene")
+    public String gene;
+    public GetTargetExpressionByENSGIDRequest withGene(String gene) {
+        this.gene = gene;
         return this;
     }
     

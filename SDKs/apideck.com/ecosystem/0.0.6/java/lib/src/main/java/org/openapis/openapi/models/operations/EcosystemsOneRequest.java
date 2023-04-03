@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EcosystemsOneRequest {
-    
-    public EcosystemsOnePathParams pathParams;
-    public EcosystemsOneRequest withPathParams(EcosystemsOnePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ecosystem_id")
+    public String ecosystemId;
+    public EcosystemsOneRequest withEcosystemId(String ecosystemId) {
+        this.ecosystemId = ecosystemId;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveNearEarthObjectByIdRequest {
-    
-    public RetrieveNearEarthObjectByIdPathParams pathParams;
-    public RetrieveNearEarthObjectByIdRequest withPathParams(RetrieveNearEarthObjectByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of Near Earth Object - (ex: 3729835)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=asteroid_id")
+    public String asteroidId;
+    public RetrieveNearEarthObjectByIdRequest withAsteroidId(String asteroidId) {
+        this.asteroidId = asteroidId;
         return this;
     }
     

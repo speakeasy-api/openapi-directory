@@ -94,7 +94,7 @@ public class Integrations {
      */
     public org.openapis.openapi.models.operations.GetTargetsTargetIdIntegrationsResponse getTargetsTargetIdIntegrations(org.openapis.openapi.models.operations.GetTargetsTargetIdIntegrationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdIntegrationsPathParams.class, baseUrl, "/targets/{target_id}/integrations/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdIntegrationsRequest.class, baseUrl, "/targets/{target_id}/integrations/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

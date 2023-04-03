@@ -36,19 +36,20 @@ public class Payments {
      * Cancels (voids) a payment. You can use this endpoint to cancel a payment with 
      * the APPROVED `status`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CancelPaymentResponse cancelPayment(org.openapis.openapi.models.operations.CancelPaymentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CancelPaymentResponse cancelPayment(org.openapis.openapi.models.operations.CancelPaymentRequest request, org.openapis.openapi.models.operations.CancelPaymentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelPaymentPathParams.class, baseUrl, "/v2/payments/{payment_id}/cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelPaymentRequest.class, baseUrl, "/v2/payments/{payment_id}/cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -86,10 +87,11 @@ public class Payments {
      * Note that if no payment with the specified idempotency key is found, no action is taken and the endpoint
      * returns successfully.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CancelPaymentByIdempotencyKeyResponse cancelPaymentByIdempotencyKey(org.openapis.openapi.models.operations.CancelPaymentByIdempotencyKeyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CancelPaymentByIdempotencyKeyResponse cancelPaymentByIdempotencyKey(org.openapis.openapi.models.shared.CancelPaymentByIdempotencyKeyRequest request, org.openapis.openapi.models.operations.CancelPaymentByIdempotencyKeySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/payments/cancel");
         
@@ -103,7 +105,7 @@ public class Payments {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -134,19 +136,20 @@ public class Payments {
      * 
      * You can use this endpoint to complete a payment with the APPROVED `status`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CompletePaymentResponse completePayment(org.openapis.openapi.models.operations.CompletePaymentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CompletePaymentResponse completePayment(org.openapis.openapi.models.operations.CompletePaymentRequest request, org.openapis.openapi.models.operations.CompletePaymentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompletePaymentPathParams.class, baseUrl, "/v2/payments/{payment_id}/complete", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompletePaymentRequest.class, baseUrl, "/v2/payments/{payment_id}/complete", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -181,10 +184,11 @@ public class Payments {
      * The endpoint creates a 
      * `Payment` object and returns it in the response.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreatePaymentResponse createPayment(org.openapis.openapi.models.operations.CreatePaymentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreatePaymentResponse createPayment(org.openapis.openapi.models.shared.CreatePaymentRequest request, org.openapis.openapi.models.operations.CreatePaymentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/payments");
         
@@ -198,7 +202,7 @@ public class Payments {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -226,19 +230,20 @@ public class Payments {
      * GetPayment
      * Retrieves details for a specific payment.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPaymentResponse getPayment(org.openapis.openapi.models.operations.GetPaymentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPaymentResponse getPayment(org.openapis.openapi.models.operations.GetPaymentRequest request, org.openapis.openapi.models.operations.GetPaymentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentPathParams.class, baseUrl, "/v2/payments/{payment_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentRequest.class, baseUrl, "/v2/payments/{payment_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -267,24 +272,25 @@ public class Payments {
      * Updates a payment with the APPROVED status.
      * You can update the `amount_money` and `tip_money` using this endpoint.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdatePaymentResponse updatePayment(org.openapis.openapi.models.operations.UpdatePaymentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdatePaymentResponse updatePayment(org.openapis.openapi.models.operations.UpdatePaymentRequest request, org.openapis.openapi.models.operations.UpdatePaymentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePaymentPathParams.class, baseUrl, "/v2/payments/{payment_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePaymentRequest.class, baseUrl, "/v2/payments/{payment_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updatePaymentRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -317,10 +323,11 @@ public class Payments {
      * 
      * The maximum results per page is 100.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetV2PaymentsResponse getV2Payments(org.openapis.openapi.models.operations.GetV2PaymentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetV2PaymentsResponse getV2Payments(org.openapis.openapi.models.operations.GetV2PaymentsRequest request, org.openapis.openapi.models.operations.GetV2PaymentsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/payments");
         
@@ -328,14 +335,14 @@ public class Payments {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV2PaymentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV2PaymentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

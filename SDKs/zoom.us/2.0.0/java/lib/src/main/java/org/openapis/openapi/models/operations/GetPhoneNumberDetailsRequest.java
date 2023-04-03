@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPhoneNumberDetailsRequest {
-    
-    public GetPhoneNumberDetailsPathParams pathParams;
-    public GetPhoneNumberDetailsRequest withPathParams(GetPhoneNumberDetailsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetPhoneNumberDetailsSecurity security;
-    public GetPhoneNumberDetailsRequest withSecurity(GetPhoneNumberDetailsSecurity security) {
-        this.security = security;
+    /**
+     * Unique Identifier of the Phone Number. This can be retrieved from the List Phone Numbers API.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=numberId")
+    public String numberId;
+    public GetPhoneNumberDetailsRequest withNumberId(String numberId) {
+        this.numberId = numberId;
         return this;
     }
     

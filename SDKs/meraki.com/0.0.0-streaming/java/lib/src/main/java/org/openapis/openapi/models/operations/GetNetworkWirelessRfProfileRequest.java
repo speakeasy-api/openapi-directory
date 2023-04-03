@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkWirelessRfProfileRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkWirelessRfProfileRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
     
-    public GetNetworkWirelessRfProfilePathParams pathParams;
-    public GetNetworkWirelessRfProfileRequest withPathParams(GetNetworkWirelessRfProfilePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rfProfileId")
+    public String rfProfileId;
+    public GetNetworkWirelessRfProfileRequest withRfProfileId(String rfProfileId) {
+        this.rfProfileId = rfProfileId;
         return this;
     }
     

@@ -45,7 +45,7 @@ public class ViewOnlyLinks {
      */
     public org.openapis.openapi.models.operations.ViewOnlyLinksNodeListResponse viewOnlyLinksNodeList(org.openapis.openapi.models.operations.ViewOnlyLinksNodeListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ViewOnlyLinksNodeListPathParams.class, baseUrl, "/view_only_links/{link_id}/nodes/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ViewOnlyLinksNodeListRequest.class, baseUrl, "/view_only_links/{link_id}/nodes/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -88,7 +88,7 @@ public class ViewOnlyLinks {
      */
     public org.openapis.openapi.models.operations.ViewOnlyLinksReadResponse viewOnlyLinksRead(org.openapis.openapi.models.operations.ViewOnlyLinksReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ViewOnlyLinksReadPathParams.class, baseUrl, "/view_only_links/{link_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ViewOnlyLinksReadRequest.class, baseUrl, "/view_only_links/{link_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

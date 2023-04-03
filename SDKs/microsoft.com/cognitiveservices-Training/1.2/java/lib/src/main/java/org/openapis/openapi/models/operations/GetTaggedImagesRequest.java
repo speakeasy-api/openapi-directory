@@ -4,27 +4,73 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTaggedImagesRequest {
-    
-    public GetTaggedImagesPathParams pathParams;
-    public GetTaggedImagesRequest withPathParams(GetTaggedImagesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
+    public String trainingKey;
+    public GetTaggedImagesRequest withTrainingKey(String trainingKey) {
+        this.trainingKey = trainingKey;
         return this;
     }
     
-    
-    public GetTaggedImagesQueryParams queryParams;
-    public GetTaggedImagesRequest withQueryParams(GetTaggedImagesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The iteration id. Defaults to workspace
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=iterationId")
+    public String iterationId;
+    public GetTaggedImagesRequest withIterationId(String iterationId) {
+        this.iterationId = iterationId;
         return this;
     }
     
+    /**
+     * The ordering. Defaults to newest
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
+    public GetTaggedImagesOrderByEnum orderBy;
+    public GetTaggedImagesRequest withOrderBy(GetTaggedImagesOrderByEnum orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
     
-    public GetTaggedImagesHeaders headers;
-    public GetTaggedImagesRequest withHeaders(GetTaggedImagesHeaders headers) {
-        this.headers = headers;
+    /**
+     * The project id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public GetTaggedImagesRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    /**
+     * Number of images to skip before beginning the image batch. Defaults to 0
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
+    public Integer skip;
+    public GetTaggedImagesRequest withSkip(Integer skip) {
+        this.skip = skip;
+        return this;
+    }
+    
+    /**
+     * An list of tags ids to filter the images. Defaults to all tagged images when null. Limited to 20
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=tagIds")
+    public String[] tagIds;
+    public GetTaggedImagesRequest withTagIds(String[] tagIds) {
+        this.tagIds = tagIds;
+        return this;
+    }
+    
+    /**
+     * Maximum number of images to return. Defaults to 50, limited to 256
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=take")
+    public Integer take;
+    public GetTaggedImagesRequest withTake(Integer take) {
+        this.take = take;
         return this;
     }
     

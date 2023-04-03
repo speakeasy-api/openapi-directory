@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConversationsFetchRequest {
-    
-    public ConversationsFetchPathParams pathParams;
-    public ConversationsFetchRequest withPathParams(ConversationsFetchPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Account to apply operations to
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public ConversationsFetchRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
-    
-    public ConversationsFetchSecurity security;
-    public ConversationsFetchRequest withSecurity(ConversationsFetchSecurity security) {
-        this.security = security;
+    /**
+     * ID of template to return
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversationId")
+    public String conversationId;
+    public ConversationsFetchRequest withConversationId(String conversationId) {
+        this.conversationId = conversationId;
         return this;
     }
     

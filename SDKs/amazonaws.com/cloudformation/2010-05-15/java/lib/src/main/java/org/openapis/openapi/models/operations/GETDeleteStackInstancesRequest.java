@@ -4,20 +4,149 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteStackInstancesRequest {
-    
-    public GETDeleteStackInstancesQueryParams queryParams;
-    public GETDeleteStackInstancesRequest withQueryParams(GETDeleteStackInstancesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * &lt;p&gt;[Self-managed permissions] The names of the Amazon Web Services accounts that you want to delete stack instances for.&lt;/p&gt; &lt;p&gt;You can specify &lt;code&gt;Accounts&lt;/code&gt; or &lt;code&gt;DeploymentTargets&lt;/code&gt;, but not both.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Accounts")
+    public String[] accounts;
+    public GETDeleteStackInstancesRequest withAccounts(String[] accounts) {
+        this.accounts = accounts;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDeleteStackInstancesActionEnum action;
+    public GETDeleteStackInstancesRequest withAction(GETDeleteStackInstancesActionEnum action) {
+        this.action = action;
+        return this;
+    }
     
-    public GETDeleteStackInstancesHeaders headers;
-    public GETDeleteStackInstancesRequest withHeaders(GETDeleteStackInstancesHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;[Service-managed permissions] Specifies whether you are acting as an account administrator in the organization's management account or as a delegated administrator in a member account.&lt;/p&gt; &lt;p&gt;By default, &lt;code&gt;SELF&lt;/code&gt; is specified. Use &lt;code&gt;SELF&lt;/code&gt; for stack sets with self-managed permissions.&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;If you are signed in to the management account, specify &lt;code&gt;SELF&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;If you are signed in to a delegated administrator account, specify &lt;code&gt;DELEGATED_ADMIN&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;Your Amazon Web Services account must be registered as a delegated administrator in the management account. For more information, see &lt;a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"&gt;Register a delegated administrator&lt;/a&gt; in the &lt;i&gt;CloudFormation User Guide&lt;/i&gt;.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CallAs")
+    public GETDeleteStackInstancesCallAsEnum callAs;
+    public GETDeleteStackInstancesRequest withCallAs(GETDeleteStackInstancesCallAsEnum callAs) {
+        this.callAs = callAs;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;[Service-managed permissions] The Organizations accounts from which to delete stack instances.&lt;/p&gt; &lt;p&gt;You can specify &lt;code&gt;Accounts&lt;/code&gt; or &lt;code&gt;DeploymentTargets&lt;/code&gt;, but not both.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DeploymentTargets")
+    public GETDeleteStackInstancesDeploymentTargets deploymentTargets;
+    public GETDeleteStackInstancesRequest withDeploymentTargets(GETDeleteStackInstancesDeploymentTargets deploymentTargets) {
+        this.deploymentTargets = deploymentTargets;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The unique identifier for this stack set operation.&lt;/p&gt; &lt;p&gt;If you don't specify an operation ID, the SDK generates one automatically.&lt;/p&gt; &lt;p&gt;The operation ID also functions as an idempotency token, to ensure that CloudFormation performs the stack set operation only once, even if you retry the request multiple times. You can retry stack set operation requests to ensure that CloudFormation successfully received them.&lt;/p&gt; &lt;p&gt;Repeating this stack set operation with a new operation ID retries all stack instances whose status is &lt;code&gt;OUTDATED&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OperationId")
+    public String operationId;
+    public GETDeleteStackInstancesRequest withOperationId(String operationId) {
+        this.operationId = operationId;
+        return this;
+    }
+    
+    /**
+     * Preferences for how CloudFormation performs this stack set operation.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OperationPreferences")
+    public GETDeleteStackInstancesOperationPreferences operationPreferences;
+    public GETDeleteStackInstancesRequest withOperationPreferences(GETDeleteStackInstancesOperationPreferences operationPreferences) {
+        this.operationPreferences = operationPreferences;
+        return this;
+    }
+    
+    /**
+     * The Amazon Web Services Regions where you want to delete stack set instances.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Regions")
+    public String[] regions;
+    public GETDeleteStackInstancesRequest withRegions(String[] regions) {
+        this.regions = regions;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Removes the stack instances from the specified stack set, but doesn't delete the stacks. You can't reassociate a retained stack or add an existing, saved stack to a new stack set.&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html#stackset-ops-options"&gt;Stack set operation options&lt;/a&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RetainStacks")
+    public Boolean retainStacks;
+    public GETDeleteStackInstancesRequest withRetainStacks(Boolean retainStacks) {
+        this.retainStacks = retainStacks;
+        return this;
+    }
+    
+    /**
+     * The name or unique ID of the stack set that you want to delete stack instances for.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StackSetName")
+    public String stackSetName;
+    public GETDeleteStackInstancesRequest withStackSetName(String stackSetName) {
+        this.stackSetName = stackSetName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDeleteStackInstancesVersionEnum version;
+    public GETDeleteStackInstancesRequest withVersion(GETDeleteStackInstancesVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDeleteStackInstancesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDeleteStackInstancesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDeleteStackInstancesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDeleteStackInstancesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDeleteStackInstancesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDeleteStackInstancesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDeleteStackInstancesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

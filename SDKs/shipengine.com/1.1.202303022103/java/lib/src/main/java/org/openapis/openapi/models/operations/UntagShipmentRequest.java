@@ -4,13 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UntagShipmentRequest {
+    /**
+     * Shipment ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shipment_id")
+    public String shipmentId;
+    public UntagShipmentRequest withShipmentId(String shipmentId) {
+        this.shipmentId = shipmentId;
+        return this;
+    }
     
-    public UntagShipmentPathParams pathParams;
-    public UntagShipmentRequest withPathParams(UntagShipmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tag_name")
+    public String tagName;
+    public UntagShipmentRequest withTagName(String tagName) {
+        this.tagName = tagName;
         return this;
     }
     

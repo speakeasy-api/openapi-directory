@@ -4,20 +4,156 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetListSellersRequest {
-    
-    public GetListSellersQueryParams queryParams;
-    public GetListSellersRequest withQueryParams(GetListSellersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetListSellersRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetListSellersRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetListSellersHeaders headers;
-    public GetListSellersRequest withHeaders(GetListSellersHeaders headers) {
-        this.headers = headers;
+    /**
+     * Name of the VTEX account that belongs to the marketplace.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
+    public String accountName;
+    public GetListSellersRequest withAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    
+    /**
+     * Environment to use. Used as part of the URL.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=environment")
+    public String environment;
+    public GetListSellersRequest withEnvironment(String environment) {
+        this.environment = environment;
+        return this;
+    }
+    
+    /**
+     * The start number of pagination, being `0` the default value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
+    public Double from;
+    public GetListSellersRequest withFrom(Double from) {
+        this.from = from;
+        return this;
+    }
+    
+    /**
+     * Groups are defined by keywords that group sellers into categories defined by the marketplace.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group ")
+    public String group;
+    public GetListSellersRequest withGroup(String group) {
+        this.group = group;
+        return this;
+    }
+    
+    /**
+     * Filters sellers by the name of who made the integration, if VTEX or an external hub. The possible values for VTEX integrations are: `vtex-sellerportal`, `vtex-seller` and `vtex-franchise`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=integration")
+    public String integration;
+    public GetListSellersRequest withIntegration(String integration) {
+        this.integration = integration;
+        return this;
+    }
+    
+    /**
+     * Enables to filter sellers that are active (`true`) or unactive (`false`) in the marketplace.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isActive")
+    public Boolean isActive;
+    public GetListSellersRequest withIsActive(Boolean isActive) {
+        this.isActive = isActive;
+        return this;
+    }
+    
+    /**
+     * The flag `isBetterScope` is used by the VTEX Checkout to simulate shopping carts, products, and shipping only in sellers with the field set as `true`, avoiding performance issues. When used as a query param, `isBetterScope` filters sellers that have the flag set as `true` or `false`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isBetterScope")
+    public Boolean isBetterScope;
+    public GetListSellersRequest withIsBetterScope(Boolean isBetterScope) {
+        this.isBetterScope = isBetterScope;
+        return this;
+    }
+    
+    /**
+     * When set as `true`, the list returned will be of sellers who have a VTEX store configured. When set as `false`, the list will be of sellers who do not have a VTEX store configured.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isVtex")
+    public Boolean isVtex;
+    public GetListSellersRequest withIsVtex(Boolean isVtex) {
+        this.isVtex = isVtex;
+        return this;
+    }
+    
+    /**
+     * Search sellers by a keyword in `sellerId` or `sellerName`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keyword")
+    public String keyword;
+    public GetListSellersRequest withKeyword(String keyword) {
+        this.keyword = keyword;
+        return this;
+    }
+    
+    /**
+     * Filters sellers available for the marketplace's sales channel (or [trade policy](https://help.vtex.com/en/tutorial/how-trade-policies-work--6Xef8PZiFm40kg2STrMkMV)) indicated in this field.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sc")
+    public String sc;
+    public GetListSellersRequest withSc(String sc) {
+        this.sc = sc;
+        return this;
+    }
+    
+    /**
+     * Filters sellers by their type, which can be regular seller (`1`) or whitelabel seller (`2`).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sellerType")
+    public Long sellerType;
+    public GetListSellersRequest withSellerType(Long sellerType) {
+        this.sellerType = sellerType;
+        return this;
+    }
+    
+    /**
+     * Narrow the search filtering by the fields: `id`, `name` or `pendingoffers`. The list retrieved can be organized in an ascending (`asc`) or descending (`desc`) order. The standardized format is `{field}:{order}`, and the default value is `id:asc`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetListSellersRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * The end number of pagination, being `100` the default value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
+    public Double to;
+    public GetListSellersRequest withTo(Double to) {
+        this.to = to;
         return this;
     }
     

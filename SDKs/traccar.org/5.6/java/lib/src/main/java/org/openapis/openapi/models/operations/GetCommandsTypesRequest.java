@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCommandsTypesRequest {
+    /**
+     * Internal device identifier. Only works if device has already reported some locations
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deviceId")
+    public Long deviceId;
+    public GetCommandsTypesRequest withDeviceId(Long deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
     
-    public GetCommandsTypesQueryParams queryParams;
-    public GetCommandsTypesRequest withQueryParams(GetCommandsTypesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Protocol name. Can be used instead of device id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=protocol")
+    public String protocol;
+    public GetCommandsTypesRequest withProtocol(String protocol) {
+        this.protocol = protocol;
+        return this;
+    }
+    
+    /**
+     * When `true` return SMS commands. If not specified or `false` return data commands
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=textChannel")
+    public Boolean textChannel;
+    public GetCommandsTypesRequest withTextChannel(Boolean textChannel) {
+        this.textChannel = textChannel;
         return this;
     }
     

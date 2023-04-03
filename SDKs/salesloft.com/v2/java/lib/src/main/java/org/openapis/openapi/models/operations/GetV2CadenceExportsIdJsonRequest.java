@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2CadenceExportsIdJsonRequest {
-    
-    public GetV2CadenceExportsIdJsonPathParams pathParams;
-    public GetV2CadenceExportsIdJsonRequest withPathParams(GetV2CadenceExportsIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Cadence ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetV2CadenceExportsIdJsonRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

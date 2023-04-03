@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequest {
-    
-    public ActionsAddCustomLabelsToSelfHostedRunnerForOrgPathParams pathParams;
-    public ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequest withPathParams(ActionsAddCustomLabelsToSelfHostedRunnerForOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequestBody requestBody;
+    public ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequest withRequestBody(ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequestBody request;
-    public ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequest withRequest(ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequestBody request) {
-        this.request = request;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
+    
+    /**
+     * Unique identifier of the self-hosted runner.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=runner_id")
+    public Long runnerId;
+    public ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequest withRunnerId(Long runnerId) {
+        this.runnerId = runnerId;
         return this;
     }
     

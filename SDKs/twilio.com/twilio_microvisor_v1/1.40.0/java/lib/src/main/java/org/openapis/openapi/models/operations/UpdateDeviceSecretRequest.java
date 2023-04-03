@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDeviceSecretRequest {
+    /**
+     * A 34-character string that uniquely identifies the Device.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DeviceSid")
+    public String deviceSid;
+    public UpdateDeviceSecretRequest withDeviceSid(String deviceSid) {
+        this.deviceSid = deviceSid;
+        return this;
+    }
     
-    public UpdateDeviceSecretPathParams pathParams;
-    public UpdateDeviceSecretRequest withPathParams(UpdateDeviceSecretPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The secret key; up to 100 characters.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Key")
+    public String key;
+    public UpdateDeviceSecretRequest withKey(String key) {
+        this.key = key;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateDeviceSecretUpdateDeviceSecretRequest request;
-    public UpdateDeviceSecretRequest withRequest(UpdateDeviceSecretUpdateDeviceSecretRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public UpdateDeviceSecretSecurity security;
-    public UpdateDeviceSecretRequest withSecurity(UpdateDeviceSecretSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateDeviceSecretRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public UpdateDeviceSecretUpdateDeviceSecretRequest requestBody;
+    public UpdateDeviceSecretRequest withRequestBody(UpdateDeviceSecretUpdateDeviceSecretRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Approves a request and returns the updated ApprovalRequest. Returns NOT_FOUND if the request does not exist. Returns FAILED_PRECONDITION if the request exists but is not in a pending state.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsApproveResponse accessapprovalProjectsApprovalRequestsApprove(org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsApproveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsApproveResponse accessapprovalProjectsApprovalRequestsApprove(org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsApproveRequest request, org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsApproveSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsApprovePathParams.class, baseUrl, "/v1/{name}:approve", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsApproveRequest.class, baseUrl, "/v1/{name}:approve", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "approveApprovalRequestMessage", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsApproveQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsApproveRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,27 +83,28 @@ public class Projects {
     /**
      * Dismisses a request. Returns the updated ApprovalRequest. NOTE: This does not deny access to the resource if another request has been made and approved. It is equivalent in effect to ignoring the request altogether. Returns NOT_FOUND if the request does not exist. Returns FAILED_PRECONDITION if the request exists but is not in a pending state.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsDismissResponse accessapprovalProjectsApprovalRequestsDismiss(org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsDismissRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsDismissResponse accessapprovalProjectsApprovalRequestsDismiss(org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsDismissRequest request, org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsDismissSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsDismissPathParams.class, baseUrl, "/v1/{name}:dismiss", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsDismissRequest.class, baseUrl, "/v1/{name}:dismiss", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsDismissQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsDismissRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -129,25 +131,26 @@ public class Projects {
     /**
      * Gets an approval request. Returns NOT_FOUND if the request does not exist.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsGetResponse accessapprovalProjectsApprovalRequestsGet(org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsGetResponse accessapprovalProjectsApprovalRequestsGet(org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsGetRequest request, org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsGetPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsGetRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,27 +177,28 @@ public class Projects {
     /**
      * Invalidates an existing ApprovalRequest. Returns the updated ApprovalRequest. NOTE: This does not deny access to the resource if another request has been made and approved. It only invalidates a single approval. Returns FAILED_PRECONDITION if the request exists but is not in an approved state.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsInvalidateResponse accessapprovalProjectsApprovalRequestsInvalidate(org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsInvalidateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsInvalidateResponse accessapprovalProjectsApprovalRequestsInvalidate(org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsInvalidateRequest request, org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsInvalidateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsInvalidatePathParams.class, baseUrl, "/v1/{name}:invalidate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsInvalidateRequest.class, baseUrl, "/v1/{name}:invalidate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsInvalidateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsInvalidateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -221,25 +225,26 @@ public class Projects {
     /**
      * Lists approval requests associated with a project, folder, or organization. Approval requests can be filtered by state (pending, active, dismissed). The order is reverse chronological.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsListResponse accessapprovalProjectsApprovalRequestsList(org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsListResponse accessapprovalProjectsApprovalRequestsList(org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsListRequest request, org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsListPathParams.class, baseUrl, "/v1/{parent}/approvalRequests", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsListRequest.class, baseUrl, "/v1/{parent}/approvalRequests", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -266,25 +271,26 @@ public class Projects {
     /**
      * Deletes the settings associated with a project, folder, or organization. This will have the effect of disabling Access Approval for the project, folder, or organization, but only if all ancestors also have Access Approval disabled. If Access Approval is enabled at a higher level of the hierarchy, then Access Approval will still be enabled at this level as the settings are inherited.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccessapprovalProjectsDeleteAccessApprovalSettingsResponse accessapprovalProjectsDeleteAccessApprovalSettings(org.openapis.openapi.models.operations.AccessapprovalProjectsDeleteAccessApprovalSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccessapprovalProjectsDeleteAccessApprovalSettingsResponse accessapprovalProjectsDeleteAccessApprovalSettings(org.openapis.openapi.models.operations.AccessapprovalProjectsDeleteAccessApprovalSettingsRequest request, org.openapis.openapi.models.operations.AccessapprovalProjectsDeleteAccessApprovalSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccessapprovalProjectsDeleteAccessApprovalSettingsPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccessapprovalProjectsDeleteAccessApprovalSettingsRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccessapprovalProjectsDeleteAccessApprovalSettingsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccessapprovalProjectsDeleteAccessApprovalSettingsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -311,27 +317,28 @@ public class Projects {
     /**
      * Updates the settings associated with a project, folder, or organization. Settings to update are determined by the value of field_mask.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccessapprovalProjectsUpdateAccessApprovalSettingsResponse accessapprovalProjectsUpdateAccessApprovalSettings(org.openapis.openapi.models.operations.AccessapprovalProjectsUpdateAccessApprovalSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccessapprovalProjectsUpdateAccessApprovalSettingsResponse accessapprovalProjectsUpdateAccessApprovalSettings(org.openapis.openapi.models.operations.AccessapprovalProjectsUpdateAccessApprovalSettingsRequest request, org.openapis.openapi.models.operations.AccessapprovalProjectsUpdateAccessApprovalSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccessapprovalProjectsUpdateAccessApprovalSettingsPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccessapprovalProjectsUpdateAccessApprovalSettingsRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "accessApprovalSettingsInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccessapprovalProjectsUpdateAccessApprovalSettingsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccessapprovalProjectsUpdateAccessApprovalSettingsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -35,24 +35,25 @@ public class Operations {
      * Flight Status at Arrival Airport
      * Status of all arrivals at a given airport up to 4 hours from the provided date time.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetResponse operationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGet(org.openapis.openapi.models.operations.OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetResponse operationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGet(org.openapis.openapi.models.operations.OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetRequest request, org.openapis.openapi.models.operations.OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetPathParams.class, baseUrl, "/operations/flightstatus/arrivals/{airportCode}/{fromDateTime}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetRequest.class, baseUrl, "/operations/flightstatus/arrivals/{airportCode}/{fromDateTime}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -61,7 +62,7 @@ public class Operations {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -89,24 +90,25 @@ public class Operations {
      * Flight Status
      * Status of a particular flight (boarding, delayed, etc.).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OperationsFlightstatusByFlightNumberAndDateGetResponse operationsFlightstatusByFlightNumberAndDateGet(org.openapis.openapi.models.operations.OperationsFlightstatusByFlightNumberAndDateGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OperationsFlightstatusByFlightNumberAndDateGetResponse operationsFlightstatusByFlightNumberAndDateGet(org.openapis.openapi.models.operations.OperationsFlightstatusByFlightNumberAndDateGetRequest request, org.openapis.openapi.models.operations.OperationsFlightstatusByFlightNumberAndDateGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OperationsFlightstatusByFlightNumberAndDateGetPathParams.class, baseUrl, "/operations/flightstatus/{flightNumber}/{date}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OperationsFlightstatusByFlightNumberAndDateGetRequest.class, baseUrl, "/operations/flightstatus/{flightNumber}/{date}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OperationsFlightstatusByFlightNumberAndDateGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OperationsFlightstatusByFlightNumberAndDateGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -115,7 +117,7 @@ public class Operations {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -143,24 +145,25 @@ public class Operations {
      * Flight Status at Departure Airport
      * Status of all departures from a given airport up to 4 hours from the provided date time.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGetResponse operationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGet(org.openapis.openapi.models.operations.OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGetResponse operationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGet(org.openapis.openapi.models.operations.OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGetRequest request, org.openapis.openapi.models.operations.OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGetPathParams.class, baseUrl, "/operations/flightstatus/departures/{airportCode}/{fromDateTime}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGetRequest.class, baseUrl, "/operations/flightstatus/departures/{airportCode}/{fromDateTime}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -169,7 +172,7 @@ public class Operations {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -197,24 +200,25 @@ public class Operations {
      * Flight Status by Route
      * Status of flights between a given origin and destination on a given date.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OperationsFlightstatusRouteDateByOriginAndDestinationGetResponse operationsFlightstatusRouteDateByOriginAndDestinationGet(org.openapis.openapi.models.operations.OperationsFlightstatusRouteDateByOriginAndDestinationGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OperationsFlightstatusRouteDateByOriginAndDestinationGetResponse operationsFlightstatusRouteDateByOriginAndDestinationGet(org.openapis.openapi.models.operations.OperationsFlightstatusRouteDateByOriginAndDestinationGetRequest request, org.openapis.openapi.models.operations.OperationsFlightstatusRouteDateByOriginAndDestinationGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OperationsFlightstatusRouteDateByOriginAndDestinationGetPathParams.class, baseUrl, "/operations/flightstatus/route/{origin}/{destination}/{date}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OperationsFlightstatusRouteDateByOriginAndDestinationGetRequest.class, baseUrl, "/operations/flightstatus/route/{origin}/{destination}/{date}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OperationsFlightstatusRouteDateByOriginAndDestinationGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OperationsFlightstatusRouteDateByOriginAndDestinationGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -223,7 +227,7 @@ public class Operations {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -251,24 +255,25 @@ public class Operations {
      * Flight Schedules
      * Scheduled flights between given airports on a given date.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OperationsSchedulesFromDateTimeByOriginAndDestinationGetResponse operationsSchedulesFromDateTimeByOriginAndDestinationGet(org.openapis.openapi.models.operations.OperationsSchedulesFromDateTimeByOriginAndDestinationGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OperationsSchedulesFromDateTimeByOriginAndDestinationGetResponse operationsSchedulesFromDateTimeByOriginAndDestinationGet(org.openapis.openapi.models.operations.OperationsSchedulesFromDateTimeByOriginAndDestinationGetRequest request, org.openapis.openapi.models.operations.OperationsSchedulesFromDateTimeByOriginAndDestinationGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OperationsSchedulesFromDateTimeByOriginAndDestinationGetPathParams.class, baseUrl, "/operations/schedules/{origin}/{destination}/{fromDateTime}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OperationsSchedulesFromDateTimeByOriginAndDestinationGetRequest.class, baseUrl, "/operations/schedules/{origin}/{destination}/{fromDateTime}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OperationsSchedulesFromDateTimeByOriginAndDestinationGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OperationsSchedulesFromDateTimeByOriginAndDestinationGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -277,7 +282,7 @@ public class Operations {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -31,8 +31,6 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatePdfSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatePdfRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatePdfResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/CertificateRequest.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeCertAuth.java
 USAGE.md

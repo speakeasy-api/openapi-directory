@@ -4,13 +4,34 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCityRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public GetCityFormatEnum format;
+    public GetCityRequest withFormat(GetCityFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public GetCityQueryParams queryParams;
-    public GetCityRequest withQueryParams(GetCityQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public GetCityRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lat")
+    public Double lat;
+    public GetCityRequest withLat(Double lat) {
+        this.lat = lat;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lng")
+    public Double lng;
+    public GetCityRequest withLng(Double lng) {
+        this.lng = lng;
         return this;
     }
     

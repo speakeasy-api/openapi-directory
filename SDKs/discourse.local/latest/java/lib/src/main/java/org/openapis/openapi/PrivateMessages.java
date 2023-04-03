@@ -36,7 +36,7 @@ public class PrivateMessages {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateTopicPostPMResponse createTopicPostPM(org.openapis.openapi.models.operations.CreateTopicPostPMRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateTopicPostPMResponse createTopicPostPM(org.openapis.openapi.models.operations.CreateTopicPostPMRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/posts.json");
         
@@ -78,7 +78,7 @@ public class PrivateMessages {
      */
     public org.openapis.openapi.models.operations.GetUserSentPrivateMessagesResponse getUserSentPrivateMessages(org.openapis.openapi.models.operations.GetUserSentPrivateMessagesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserSentPrivateMessagesPathParams.class, baseUrl, "/topics/private-messages-sent/{username}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserSentPrivateMessagesRequest.class, baseUrl, "/topics/private-messages-sent/{username}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -116,7 +116,7 @@ public class PrivateMessages {
      */
     public org.openapis.openapi.models.operations.ListUserPrivateMessagesResponse listUserPrivateMessages(org.openapis.openapi.models.operations.ListUserPrivateMessagesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListUserPrivateMessagesPathParams.class, baseUrl, "/topics/private-messages/{username}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListUserPrivateMessagesRequest.class, baseUrl, "/topics/private-messages/{username}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

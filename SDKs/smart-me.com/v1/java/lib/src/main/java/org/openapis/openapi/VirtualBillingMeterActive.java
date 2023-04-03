@@ -92,7 +92,7 @@ public class VirtualBillingMeterActive {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.VirtualBillingMeterActivePostFormResponse virtualBillingMeterActivePostForm(org.openapis.openapi.models.operations.VirtualBillingMeterActivePostFormRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.VirtualBillingMeterActivePostFormResponse virtualBillingMeterActivePostForm(org.openapis.openapi.models.shared.VMeterToActivate request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/VirtualBillingMeterActive");
         
@@ -154,7 +154,7 @@ public class VirtualBillingMeterActive {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.VirtualBillingMeterActivePostJsonResponse virtualBillingMeterActivePostJson(org.openapis.openapi.models.operations.VirtualBillingMeterActivePostJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.VirtualBillingMeterActivePostJsonResponse virtualBillingMeterActivePostJson(org.openapis.openapi.models.shared.VMeterToActivate request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/VirtualBillingMeterActive");
         
@@ -216,7 +216,7 @@ public class VirtualBillingMeterActive {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.VirtualBillingMeterActivePostRawResponse virtualBillingMeterActivePostRaw(org.openapis.openapi.models.operations.VirtualBillingMeterActivePostRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.VirtualBillingMeterActivePostRawResponse virtualBillingMeterActivePostRaw(byte[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/VirtualBillingMeterActive");
         

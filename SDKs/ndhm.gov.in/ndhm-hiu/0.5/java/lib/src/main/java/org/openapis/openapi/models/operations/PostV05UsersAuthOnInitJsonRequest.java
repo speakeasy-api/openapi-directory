@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05UsersAuthOnInitJsonRequest {
-    
-    public PostV05UsersAuthOnInitJsonHeaders headers;
-    public PostV05UsersAuthOnInitJsonRequest withHeaders(PostV05UsersAuthOnInitJsonHeaders headers) {
-        this.headers = headers;
+    /**
+     * Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostV05UsersAuthOnInitJsonRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PatientAuthInitResponse request;
-    public PostV05UsersAuthOnInitJsonRequest withRequest(org.openapis.openapi.models.shared.PatientAuthInitResponse request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PatientAuthInitResponse patientAuthInitResponse;
+    public PostV05UsersAuthOnInitJsonRequest withPatientAuthInitResponse(org.openapis.openapi.models.shared.PatientAuthInitResponse patientAuthInitResponse) {
+        this.patientAuthInitResponse = patientAuthInitResponse;
+        return this;
+    }
+    
+    /**
+     * Identifier of the health information provider to which the request was intended.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HIP-ID")
+    public String xHipId;
+    public PostV05UsersAuthOnInitJsonRequest withXHipId(String xHipId) {
+        this.xHipId = xHipId;
+        return this;
+    }
+    
+    /**
+     * Identifier of the health information user to which the request was intended.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HIU-ID")
+    public String xHiuId;
+    public PostV05UsersAuthOnInitJsonRequest withXHiuId(String xHiuId) {
+        this.xHiuId = xHiuId;
         return this;
     }
     

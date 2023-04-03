@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExportAssetsJSONRequest {
-    
-    public ExportAssetsJSONQueryParams queryParams;
-    public ExportAssetsJSONRequest withQueryParams(ExportAssetsJSONQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * an optional list of fields to export, comma-separated
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public ExportAssetsJSONRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     
-    
-    public ExportAssetsJSONSecurity security;
-    public ExportAssetsJSONRequest withSecurity(ExportAssetsJSONSecurity security) {
-        this.security = security;
+    /**
+     * an optional search string for filtering results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public ExportAssetsJSONRequest withSearch(String search) {
+        this.search = search;
         return this;
     }
     

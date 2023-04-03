@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeschedulePayoutRequest {
-    
-    public DeschedulePayoutPathParams pathParams;
-    public DeschedulePayoutRequest withPathParams(DeschedulePayoutPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of the payout
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payoutId")
+    public String payoutId;
+    public DeschedulePayoutRequest withPayoutId(String payoutId) {
+        this.payoutId = payoutId;
         return this;
     }
     

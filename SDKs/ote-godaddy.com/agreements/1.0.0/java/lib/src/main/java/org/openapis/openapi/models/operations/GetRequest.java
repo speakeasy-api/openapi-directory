@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRequest {
-    
-    public GetQueryParams queryParams;
-    public GetRequest withQueryParams(GetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Unique identifier of the Market used to retrieve/translate Legal Agreements
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Market-Id")
+    public String xMarketId;
+    public GetRequest withXMarketId(String xMarketId) {
+        this.xMarketId = xMarketId;
         return this;
     }
     
+    /**
+     * PrivateLabelId to operate as, if different from JWT
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Private-Label-Id")
+    public Long xPrivateLabelId;
+    public GetRequest withXPrivateLabelId(Long xPrivateLabelId) {
+        this.xPrivateLabelId = xPrivateLabelId;
+        return this;
+    }
     
-    public GetHeaders headers;
-    public GetRequest withHeaders(GetHeaders headers) {
-        this.headers = headers;
+    /**
+     * Keys for Agreements whose details are to be retrieved
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=keys")
+    public String[] keys;
+    public GetRequest withKeys(String[] keys) {
+        this.keys = keys;
         return this;
     }
     

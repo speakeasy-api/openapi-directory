@@ -4,20 +4,119 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETEnableAwsNetworkPerformanceMetricSubscriptionRequest {
-    
-    public GETEnableAwsNetworkPerformanceMetricSubscriptionQueryParams queryParams;
-    public GETEnableAwsNetworkPerformanceMetricSubscriptionRequest withQueryParams(GETEnableAwsNetworkPerformanceMetricSubscriptionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETEnableAwsNetworkPerformanceMetricSubscriptionActionEnum action;
+    public GETEnableAwsNetworkPerformanceMetricSubscriptionRequest withAction(GETEnableAwsNetworkPerformanceMetricSubscriptionActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The target Region or Availability Zone that the metric subscription is enabled for. For example, &lt;code&gt;eu-west-1&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Destination")
+    public String destination;
+    public GETEnableAwsNetworkPerformanceMetricSubscriptionRequest withDestination(String destination) {
+        this.destination = destination;
+        return this;
+    }
     
-    public GETEnableAwsNetworkPerformanceMetricSubscriptionHeaders headers;
-    public GETEnableAwsNetworkPerformanceMetricSubscriptionRequest withHeaders(GETEnableAwsNetworkPerformanceMetricSubscriptionHeaders headers) {
-        this.headers = headers;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETEnableAwsNetworkPerformanceMetricSubscriptionRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    /**
+     * The metric used for the enabled subscription.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Metric")
+    public GETEnableAwsNetworkPerformanceMetricSubscriptionMetricEnum metric;
+    public GETEnableAwsNetworkPerformanceMetricSubscriptionRequest withMetric(GETEnableAwsNetworkPerformanceMetricSubscriptionMetricEnum metric) {
+        this.metric = metric;
+        return this;
+    }
+    
+    /**
+     * The source Region or Availability Zone that the metric subscription is enabled for. For example, &lt;code&gt;us-east-1&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Source")
+    public String source;
+    public GETEnableAwsNetworkPerformanceMetricSubscriptionRequest withSource(String source) {
+        this.source = source;
+        return this;
+    }
+    
+    /**
+     * The statistic used for the enabled subscription.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Statistic")
+    public GETEnableAwsNetworkPerformanceMetricSubscriptionStatisticEnum statistic;
+    public GETEnableAwsNetworkPerformanceMetricSubscriptionRequest withStatistic(GETEnableAwsNetworkPerformanceMetricSubscriptionStatisticEnum statistic) {
+        this.statistic = statistic;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETEnableAwsNetworkPerformanceMetricSubscriptionVersionEnum version;
+    public GETEnableAwsNetworkPerformanceMetricSubscriptionRequest withVersion(GETEnableAwsNetworkPerformanceMetricSubscriptionVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETEnableAwsNetworkPerformanceMetricSubscriptionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETEnableAwsNetworkPerformanceMetricSubscriptionRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETEnableAwsNetworkPerformanceMetricSubscriptionRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETEnableAwsNetworkPerformanceMetricSubscriptionRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETEnableAwsNetworkPerformanceMetricSubscriptionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETEnableAwsNetworkPerformanceMetricSubscriptionRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETEnableAwsNetworkPerformanceMetricSubscriptionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

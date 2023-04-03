@@ -4,13 +4,237 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV1OrderScreenRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=amount")
+    public Double amount;
+    public PostV1OrderScreenRequest withAmount(Double amount) {
+        this.amount = amount;
+        return this;
+    }
     
-    public PostV1OrderScreenQueryParams queryParams;
-    public PostV1OrderScreenRequest withQueryParams(PostV1OrderScreenQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=avs_result")
+    public String avsResult;
+    public PostV1OrderScreenRequest withAvsResult(String avsResult) {
+        this.avsResult = avsResult;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bill_addr")
+    public String billAddr;
+    public PostV1OrderScreenRequest withBillAddr(String billAddr) {
+        this.billAddr = billAddr;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bill_city")
+    public String billCity;
+    public PostV1OrderScreenRequest withBillCity(String billCity) {
+        this.billCity = billCity;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bill_country")
+    public String billCountry;
+    public PostV1OrderScreenRequest withBillCountry(String billCountry) {
+        this.billCountry = billCountry;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bill_state")
+    public String billState;
+    public PostV1OrderScreenRequest withBillState(String billState) {
+        this.billState = billState;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bill_zip_code")
+    public String billZipCode;
+    public PostV1OrderScreenRequest withBillZipCode(String billZipCode) {
+        this.billZipCode = billZipCode;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bin_no")
+    public String binNo;
+    public PostV1OrderScreenRequest withBinNo(String binNo) {
+        this.binNo = binNo;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=card_hash")
+    public String cardHash;
+    public PostV1OrderScreenRequest withCardHash(String cardHash) {
+        this.cardHash = cardHash;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currency")
+    public String currency;
+    public PostV1OrderScreenRequest withCurrency(String currency) {
+        this.currency = currency;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cvv_result")
+    public String cvvResult;
+    public PostV1OrderScreenRequest withCvvResult(String cvvResult) {
+        this.cvvResult = cvvResult;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=department")
+    public String department;
+    public PostV1OrderScreenRequest withDepartment(String department) {
+        this.department = department;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public PostV1OrderScreenRequest withEmail(String email) {
+        this.email = email;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email_domain")
+    public String emailDomain;
+    public PostV1OrderScreenRequest withEmailDomain(String emailDomain) {
+        this.emailDomain = emailDomain;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email_hash")
+    public String emailHash;
+    public PostV1OrderScreenRequest withEmailHash(String emailHash) {
+        this.emailHash = emailHash;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=first_name")
+    public String firstName;
+    public PostV1OrderScreenRequest withFirstName(String firstName) {
+        this.firstName = firstName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=flp_checksum")
+    public String flpChecksum;
+    public PostV1OrderScreenRequest withFlpChecksum(String flpChecksum) {
+        this.flpChecksum = flpChecksum;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public PostV1OrderScreenFormatEnum format;
+    public PostV1OrderScreenRequest withFormat(PostV1OrderScreenFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ip")
+    public String ip;
+    public PostV1OrderScreenRequest withIp(String ip) {
+        this.ip = ip;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public PostV1OrderScreenRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_name")
+    public String lastName;
+    public PostV1OrderScreenRequest withLastName(String lastName) {
+        this.lastName = lastName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=password_hash")
+    public String passwordHash;
+    public PostV1OrderScreenRequest withPasswordHash(String passwordHash) {
+        this.passwordHash = passwordHash;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=payment_mode")
+    public String paymentMode;
+    public PostV1OrderScreenRequest withPaymentMode(String paymentMode) {
+        this.paymentMode = paymentMode;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quantity")
+    public Long quantity;
+    public PostV1OrderScreenRequest withQuantity(Long quantity) {
+        this.quantity = quantity;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ship_addr")
+    public String shipAddr;
+    public PostV1OrderScreenRequest withShipAddr(String shipAddr) {
+        this.shipAddr = shipAddr;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ship_city")
+    public String shipCity;
+    public PostV1OrderScreenRequest withShipCity(String shipCity) {
+        this.shipCity = shipCity;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ship_country")
+    public String shipCountry;
+    public PostV1OrderScreenRequest withShipCountry(String shipCountry) {
+        this.shipCountry = shipCountry;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ship_state")
+    public String shipState;
+    public PostV1OrderScreenRequest withShipState(String shipState) {
+        this.shipState = shipState;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ship_zip_code")
+    public String shipZipCode;
+    public PostV1OrderScreenRequest withShipZipCode(String shipZipCode) {
+        this.shipZipCode = shipZipCode;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_order_id")
+    public String userOrderId;
+    public PostV1OrderScreenRequest withUserOrderId(String userOrderId) {
+        this.userOrderId = userOrderId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_order_memo")
+    public String userOrderMemo;
+    public PostV1OrderScreenRequest withUserOrderMemo(String userOrderMemo) {
+        this.userOrderMemo = userOrderMemo;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_phone")
+    public String userPhone;
+    public PostV1OrderScreenRequest withUserPhone(String userPhone) {
+        this.userPhone = userPhone;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username_hash")
+    public String usernameHash;
+    public PostV1OrderScreenRequest withUsernameHash(String usernameHash) {
+        this.usernameHash = usernameHash;
         return this;
     }
     

@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CertificateRenewRequest {
-    
-    public CertificateRenewPathParams pathParams;
-    public CertificateRenewRequest withPathParams(CertificateRenewPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The renew request info
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CertificateRenew request;
-    public CertificateRenewRequest withRequest(org.openapis.openapi.models.shared.CertificateRenew request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CertificateRenew certificateRenew;
+    public CertificateRenewRequest withCertificateRenew(org.openapis.openapi.models.shared.CertificateRenew certificateRenew) {
+        this.certificateRenew = certificateRenew;
+        return this;
+    }
+    
+    /**
+     * Certificate id to renew
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=certificateId")
+    public String certificateId;
+    public CertificateRenewRequest withCertificateId(String certificateId) {
+        this.certificateId = certificateId;
         return this;
     }
     

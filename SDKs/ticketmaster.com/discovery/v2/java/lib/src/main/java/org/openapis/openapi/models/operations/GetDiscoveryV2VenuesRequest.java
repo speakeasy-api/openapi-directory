@@ -4,13 +4,166 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDiscoveryV2VenuesRequest {
+    /**
+     * Filter venues by country code
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=countryCode")
+    public String countryCode;
+    public GetDiscoveryV2VenuesRequest withCountryCode(String countryCode) {
+        this.countryCode = countryCode;
+        return this;
+    }
     
-    public GetDiscoveryV2VenuesQueryParams queryParams;
-    public GetDiscoveryV2VenuesRequest withQueryParams(GetDiscoveryV2VenuesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * filter events by geoHash
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=geoPoint")
+    public String geoPoint;
+    public GetDiscoveryV2VenuesRequest withGeoPoint(String geoPoint) {
+        this.geoPoint = geoPoint;
+        return this;
+    }
+    
+    /**
+     * Filter entities by its id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public GetDiscoveryV2VenuesRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Yes if you want to display licensed content
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeLicensedContent")
+    public GetDiscoveryV2VenuesIncludeLicensedContentEnum includeLicensedContent;
+    public GetDiscoveryV2VenuesRequest withIncludeLicensedContent(GetDiscoveryV2VenuesIncludeLicensedContentEnum includeLicensedContent) {
+        this.includeLicensedContent = includeLicensedContent;
+        return this;
+    }
+    
+    /**
+     * yes, to include spell check suggestions in the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeSpellcheck")
+    public GetDiscoveryV2VenuesIncludeSpellcheckEnum includeSpellcheck;
+    public GetDiscoveryV2VenuesRequest withIncludeSpellcheck(GetDiscoveryV2VenuesIncludeSpellcheckEnum includeSpellcheck) {
+        this.includeSpellcheck = includeSpellcheck;
+        return this;
+    }
+    
+    /**
+     * True if you want to have entities flag as test in the response. Only, if you only wanted test entities
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeTest")
+    public GetDiscoveryV2VenuesIncludeTestEnum includeTest;
+    public GetDiscoveryV2VenuesRequest withIncludeTest(GetDiscoveryV2VenuesIncludeTestEnum includeTest) {
+        this.includeTest = includeTest;
+        return this;
+    }
+    
+    /**
+     * Keyword to search on
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keyword")
+    public String keyword;
+    public GetDiscoveryV2VenuesRequest withKeyword(String keyword) {
+        this.keyword = keyword;
+        return this;
+    }
+    
+    /**
+     * Filter events by latitude and longitude, this filter is deprecated and maybe removed in a future release, please use geoPoint instead
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=latlong")
+    public String latlong;
+    public GetDiscoveryV2VenuesRequest withLatlong(String latlong) {
+        this.latlong = latlong;
+        return this;
+    }
+    
+    /**
+     * The locale in ISO code format. Multiple comma-separated values can be provided. When omitting the country part of the code (e.g. only 'en' or 'fr') then the first matching locale is used. When using a '*' it matches all locales. '*' can only be used at the end (e.g. 'en-us,en,*') 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
+    public String locale;
+    public GetDiscoveryV2VenuesRequest withLocale(String locale) {
+        this.locale = locale;
+        return this;
+    }
+    
+    /**
+     * Page number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public String page;
+    public GetDiscoveryV2VenuesRequest withPage(String page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Radius of the area in which we want to search for events.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=radius")
+    public String radius;
+    public GetDiscoveryV2VenuesRequest withRadius(String radius) {
+        this.radius = radius;
+        return this;
+    }
+    
+    /**
+     * Page size of the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
+    public String size;
+    public GetDiscoveryV2VenuesRequest withSize(String size) {
+        this.size = size;
+        return this;
+    }
+    
+    /**
+     * Sorting order of the search result. Allowable Values: 'name,asc', 'name,desc', 'relevance,asc', 'relevance,desc', 'distance,asc', 'distance,desc'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetDiscoveryV2VenuesRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Filter entities by its source name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
+    public GetDiscoveryV2VenuesSourceEnum source;
+    public GetDiscoveryV2VenuesRequest withSource(GetDiscoveryV2VenuesSourceEnum source) {
+        this.source = source;
+        return this;
+    }
+    
+    /**
+     * Filter venues by state / province code
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stateCode")
+    public String stateCode;
+    public GetDiscoveryV2VenuesRequest withStateCode(String stateCode) {
+        this.stateCode = stateCode;
+        return this;
+    }
+    
+    /**
+     * Unit of the radius
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unit")
+    public GetDiscoveryV2VenuesUnitEnum unit;
+    public GetDiscoveryV2VenuesRequest withUnit(GetDiscoveryV2VenuesUnitEnum unit) {
+        this.unit = unit;
         return this;
     }
     

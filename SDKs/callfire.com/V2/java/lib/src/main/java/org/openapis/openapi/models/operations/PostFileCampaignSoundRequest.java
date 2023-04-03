@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostFileCampaignSoundRequest {
-    
-    public PostFileCampaignSoundQueryParams queryParams;
-    public PostFileCampaignSoundRequest withQueryParams(PostFileCampaignSoundQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PostFileCampaignSoundRequestBody request;
-    public PostFileCampaignSoundRequest withRequest(PostFileCampaignSoundRequestBody request) {
-        this.request = request;
+    public PostFileCampaignSoundRequestBody requestBody;
+    public PostFileCampaignSoundRequest withRequestBody(PostFileCampaignSoundRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public PostFileCampaignSoundSecurity security;
-    public PostFileCampaignSoundRequest withSecurity(PostFileCampaignSoundSecurity security) {
-        this.security = security;
+    /**
+     * Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public PostFileCampaignSoundRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     

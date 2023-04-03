@@ -39,7 +39,7 @@ public class Push {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateDeviceResponse createDevice(org.openapis.openapi.models.operations.CreateDeviceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateDeviceResponse createDevice(org.openapis.openapi.models.shared.CreateDeviceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/devices");
         
@@ -159,7 +159,7 @@ public class Push {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpsertPushProviderResponse upsertPushProvider(org.openapis.openapi.models.operations.UpsertPushProviderRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpsertPushProviderResponse upsertPushProvider(org.openapis.openapi.models.shared.UpsertPushProviderRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/push_providers");
         

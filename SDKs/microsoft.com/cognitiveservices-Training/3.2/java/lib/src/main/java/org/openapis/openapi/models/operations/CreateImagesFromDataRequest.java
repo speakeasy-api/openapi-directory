@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateImagesFromDataRequest {
-    
-    public CreateImagesFromDataPathParams pathParams;
-    public CreateImagesFromDataRequest withPathParams(CreateImagesFromDataPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CreateImagesFromDataQueryParams queryParams;
-    public CreateImagesFromDataRequest withQueryParams(CreateImagesFromDataQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public CreateImagesFromDataRequestBody request;
-    public CreateImagesFromDataRequest withRequest(CreateImagesFromDataRequestBody request) {
-        this.request = request;
+    public CreateImagesFromDataRequestBody requestBody;
+    public CreateImagesFromDataRequest withRequestBody(CreateImagesFromDataRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public CreateImagesFromDataRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    /**
+     * The tags ids with which to tag each image. Limited to 20.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=tagIds")
+    public String[] tagIds;
+    public CreateImagesFromDataRequest withTagIds(String[] tagIds) {
+        this.tagIds = tagIds;
         return this;
     }
     

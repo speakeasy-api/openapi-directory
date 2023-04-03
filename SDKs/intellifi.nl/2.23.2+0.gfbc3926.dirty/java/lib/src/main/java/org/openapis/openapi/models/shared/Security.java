@@ -7,23 +7,23 @@ package org.openapis.openapi.models.shared;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Security {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=cookie")
-    public SchemeCookieSid cookieSid;
-    public Security withCookieSid(SchemeCookieSid cookieSid) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=cookie,name=brain.sid")
+    public String cookieSid;
+    public Security withCookieSid(String cookieSid) {
         this.cookieSid = cookieSid;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public SchemeHeaderAPIKey headerApiKey;
-    public Security withHeaderApiKey(SchemeHeaderAPIKey headerApiKey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Api-Key")
+    public String headerApiKey;
+    public Security withHeaderApiKey(String headerApiKey) {
         this.headerApiKey = headerApiKey;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query")
-    public SchemeQueryAPIKey queryApiKey;
-    public Security withQueryApiKey(SchemeQueryAPIKey queryApiKey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=key")
+    public String queryApiKey;
+    public Security withQueryApiKey(String queryApiKey) {
         this.queryApiKey = queryApiKey;
         return this;
     }

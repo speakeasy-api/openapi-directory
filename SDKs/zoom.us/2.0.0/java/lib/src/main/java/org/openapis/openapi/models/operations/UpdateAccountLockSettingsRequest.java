@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateAccountLockSettingsRequest {
-    
-    public UpdateAccountLockSettingsPathParams pathParams;
-    public UpdateAccountLockSettingsRequest withPathParams(UpdateAccountLockSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public Object request;
-    public UpdateAccountLockSettingsRequest withRequest(Object request) {
-        this.request = request;
+    public Object requestBody;
+    public UpdateAccountLockSettingsRequest withRequestBody(Object requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateAccountLockSettingsSecurity security;
-    public UpdateAccountLockSettingsRequest withSecurity(UpdateAccountLockSettingsSecurity security) {
-        this.security = security;
+    /**
+     * Unique Identifier of the account. To retrieve locked settings of the master account or a regular account, provide "me" as the value of this field. &lt;br&gt; To retrieve locked settings of a sub account, provide the Account ID of the sub account in this field.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public UpdateAccountLockSettingsRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     

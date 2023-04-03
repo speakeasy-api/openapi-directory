@@ -7,38 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateMemberRequest {
-    
-    public UpdateMemberPathParams pathParams;
-    public UpdateMemberRequest withPathParams(UpdateMemberPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateMemberHeaders headers;
-    public UpdateMemberRequest withHeaders(UpdateMemberHeaders headers) {
-        this.headers = headers;
+    /**
+     * The SID of the [Channel](https://www.twilio.com/docs/chat/channels) the Member resource to update belongs to. This value can be the Channel resource's `sid` or `unique_name`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChannelSid")
+    public String channelSid;
+    public UpdateMemberRequest withChannelSid(String channelSid) {
+        this.channelSid = channelSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateMemberUpdateMemberRequest request;
-    public UpdateMemberRequest withRequest(UpdateMemberUpdateMemberRequest request) {
-        this.request = request;
+    public UpdateMemberUpdateMemberRequest requestBody;
+    public UpdateMemberRequest withRequestBody(UpdateMemberUpdateMemberRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateMemberSecurity security;
-    public UpdateMemberRequest withSecurity(UpdateMemberSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to update the Member resource in.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public UpdateMemberRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
+    /**
+     * The SID of the Member resource to update. This value can be either the Member's `sid` or its `identity` value.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateMemberRequest withSid(String sid) {
+        this.sid = sid;
+        return this;
+    }
     
-    public String serverURL;
-    public UpdateMemberRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The X-Twilio-Webhook-Enabled HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Twilio-Webhook-Enabled")
+    public org.openapis.openapi.models.shared.MemberEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled;
+    public UpdateMemberRequest withXTwilioWebhookEnabled(org.openapis.openapi.models.shared.MemberEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled) {
+        this.xTwilioWebhookEnabled = xTwilioWebhookEnabled;
         return this;
     }
     

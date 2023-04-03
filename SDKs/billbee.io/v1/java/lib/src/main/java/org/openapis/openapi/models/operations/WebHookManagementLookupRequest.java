@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WebHookManagementLookupRequest {
-    
-    public WebHookManagementLookupPathParams pathParams;
-    public WebHookManagementLookupRequest withPathParams(WebHookManagementLookupPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public WebHookManagementLookupRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

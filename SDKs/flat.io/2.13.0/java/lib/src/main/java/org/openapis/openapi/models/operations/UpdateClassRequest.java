@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateClassRequest {
-    
-    public UpdateClassPathParams pathParams;
-    public UpdateClassRequest withPathParams(UpdateClassPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Details of the Class
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ClassUpdate request;
-    public UpdateClassRequest withRequest(org.openapis.openapi.models.shared.ClassUpdate request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ClassUpdate classUpdate;
+    public UpdateClassRequest withClassUpdate(org.openapis.openapi.models.shared.ClassUpdate classUpdate) {
+        this.classUpdate = classUpdate;
         return this;
     }
     
-    
-    public UpdateClassSecurity security;
-    public UpdateClassRequest withSecurity(UpdateClassSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the class
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=class")
+    public String class_;
+    public UpdateClassRequest withClass(String class_) {
+        this.class_ = class_;
         return this;
     }
     

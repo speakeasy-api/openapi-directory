@@ -34,18 +34,18 @@ public class Gdpr {
 		this._genVersion = genVersion;
 	}
 
-    public org.openapis.openapi.models.operations.DataSubjectRightCancelDeleteRequestResponse dataSubjectRightCancelDeleteRequest(org.openapis.openapi.models.operations.DataSubjectRightCancelDeleteRequestRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataSubjectRightCancelDeleteRequestResponse dataSubjectRightCancelDeleteRequest(org.openapis.openapi.models.operations.DataSubjectRightCancelDeleteRequestRequest request, org.openapis.openapi.models.operations.DataSubjectRightCancelDeleteRequestSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataSubjectRightCancelDeleteRequestPathParams.class, baseUrl, "/v0.1/user/dsr/delete/{token}/cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataSubjectRightCancelDeleteRequestRequest.class, baseUrl, "/v0.1/user/dsr/delete/{token}/cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -87,16 +87,16 @@ public class Gdpr {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DataSubjectRightCancelExportRequestResponse dataSubjectRightCancelExportRequest(org.openapis.openapi.models.operations.DataSubjectRightCancelExportRequestRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataSubjectRightCancelExportRequestResponse dataSubjectRightCancelExportRequest(org.openapis.openapi.models.operations.DataSubjectRightCancelExportRequestRequest request, org.openapis.openapi.models.operations.DataSubjectRightCancelExportRequestSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataSubjectRightCancelExportRequestPathParams.class, baseUrl, "/v0.1/user/dsr/export/{token}/cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataSubjectRightCancelExportRequestRequest.class, baseUrl, "/v0.1/user/dsr/export/{token}/cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -138,7 +138,7 @@ public class Gdpr {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DataSubjectRightDeleteRequestResponse dataSubjectRightDeleteRequest(org.openapis.openapi.models.operations.DataSubjectRightDeleteRequestRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataSubjectRightDeleteRequestResponse dataSubjectRightDeleteRequest() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/user/dsr/delete");
         
@@ -147,8 +147,7 @@ public class Gdpr {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -181,22 +180,22 @@ public class Gdpr {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DataSubjectRightDeleteStatusRequestResponse dataSubjectRightDeleteStatusRequest(org.openapis.openapi.models.operations.DataSubjectRightDeleteStatusRequestRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataSubjectRightDeleteStatusRequestResponse dataSubjectRightDeleteStatusRequest(org.openapis.openapi.models.operations.DataSubjectRightDeleteStatusRequestRequest request, org.openapis.openapi.models.operations.DataSubjectRightDeleteStatusRequestSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataSubjectRightDeleteStatusRequestPathParams.class, baseUrl, "/v0.1/user/dsr/delete/{token}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataSubjectRightDeleteStatusRequestRequest.class, baseUrl, "/v0.1/user/dsr/delete/{token}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataSubjectRightDeleteStatusRequestQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataSubjectRightDeleteStatusRequestRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -228,7 +227,7 @@ public class Gdpr {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DataSubjectRightExportRequestResponse dataSubjectRightExportRequest(org.openapis.openapi.models.operations.DataSubjectRightExportRequestRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataSubjectRightExportRequestResponse dataSubjectRightExportRequest() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.1/user/dsr/export");
         
@@ -237,8 +236,7 @@ public class Gdpr {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -271,16 +269,16 @@ public class Gdpr {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DataSubjectRightExportStatusRequestResponse dataSubjectRightExportStatusRequest(org.openapis.openapi.models.operations.DataSubjectRightExportStatusRequestRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataSubjectRightExportStatusRequestResponse dataSubjectRightExportStatusRequest(org.openapis.openapi.models.operations.DataSubjectRightExportStatusRequestRequest request, org.openapis.openapi.models.operations.DataSubjectRightExportStatusRequestSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataSubjectRightExportStatusRequestPathParams.class, baseUrl, "/v0.1/user/dsr/export/{token}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataSubjectRightExportStatusRequestRequest.class, baseUrl, "/v0.1/user/dsr/export/{token}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

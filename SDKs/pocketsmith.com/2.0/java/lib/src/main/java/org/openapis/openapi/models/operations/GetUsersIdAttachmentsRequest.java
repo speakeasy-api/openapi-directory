@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersIdAttachmentsRequest {
-    
-    public GetUsersIdAttachmentsPathParams pathParams;
-    public GetUsersIdAttachmentsRequest withPathParams(GetUsersIdAttachmentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetUsersIdAttachmentsRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetUsersIdAttachmentsQueryParams queryParams;
-    public GetUsersIdAttachmentsRequest withQueryParams(GetUsersIdAttachmentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * If set, returns unassigned attachments, that are available for assigning to a transaction.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unassigned")
+    public Long unassigned;
+    public GetUsersIdAttachmentsRequest withUnassigned(Long unassigned) {
+        this.unassigned = unassigned;
         return this;
     }
     

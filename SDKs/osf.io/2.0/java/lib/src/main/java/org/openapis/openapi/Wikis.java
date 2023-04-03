@@ -38,7 +38,7 @@ public class Wikis {
      */
     public org.openapis.openapi.models.operations.WikiContentResponse wikiContent(org.openapis.openapi.models.operations.WikiContentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WikiContentPathParams.class, baseUrl, "/wikis/{wiki_id}/content/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WikiContentRequest.class, baseUrl, "/wikis/{wiki_id}/content/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -76,7 +76,7 @@ public class Wikis {
      */
     public org.openapis.openapi.models.operations.WikiReadResponse wikiRead(org.openapis.openapi.models.operations.WikiReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WikiReadPathParams.class, baseUrl, "/wikis/{wiki_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WikiReadRequest.class, baseUrl, "/wikis/{wiki_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

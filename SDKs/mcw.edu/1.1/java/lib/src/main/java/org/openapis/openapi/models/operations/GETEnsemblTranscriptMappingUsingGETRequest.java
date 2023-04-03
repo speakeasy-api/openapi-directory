@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETEnsemblTranscriptMappingUsingGETRequest {
-    
-    public GETEnsemblTranscriptMappingUsingGETPathParams pathParams;
-    public GETEnsemblTranscriptMappingUsingGETRequest withPathParams(GETEnsemblTranscriptMappingUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * RGD ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rgdId")
+    public Integer rgdId;
+    public GETEnsemblTranscriptMappingUsingGETRequest withRgdId(Integer rgdId) {
+        this.rgdId = rgdId;
         return this;
     }
     

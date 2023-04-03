@@ -40,13 +40,13 @@ public class Strings {
      */
     public org.openapis.openapi.models.operations.ClearTranslationCacheResponse clearTranslationCache(org.openapis.openapi.models.operations.ClearTranslationCacheRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClearTranslationCachePathParams.class, baseUrl, "/continuous_projects/{projectId}/strings/cached", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ClearTranslationCacheRequest.class, baseUrl, "/continuous_projects/{projectId}/strings/cached", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClearTranslationCacheQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ClearTranslationCacheRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -86,7 +86,7 @@ public class Strings {
      */
     public org.openapis.openapi.models.operations.GetContinuousProjectFileStringsResponse getContinuousProjectFileStrings(org.openapis.openapi.models.operations.GetContinuousProjectFileStringsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContinuousProjectFileStringsPathParams.class, baseUrl, "/continuous_projects/{projectId}/documents/{documentId}/strings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContinuousProjectFileStringsRequest.class, baseUrl, "/continuous_projects/{projectId}/documents/{documentId}/strings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -126,7 +126,7 @@ public class Strings {
      */
     public org.openapis.openapi.models.operations.GetContinuousProjectStringsResponse getContinuousProjectStrings(org.openapis.openapi.models.operations.GetContinuousProjectStringsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContinuousProjectStringsPathParams.class, baseUrl, "/continuous_projects/{projectId}/strings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContinuousProjectStringsRequest.class, baseUrl, "/continuous_projects/{projectId}/strings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -166,7 +166,7 @@ public class Strings {
      */
     public org.openapis.openapi.models.operations.GetDocumentTranslationsResponse getDocumentTranslations(org.openapis.openapi.models.operations.GetDocumentTranslationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDocumentTranslationsPathParams.class, baseUrl, "/projects/{projectId}/documents/{documentId}/translations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDocumentTranslationsRequest.class, baseUrl, "/projects/{projectId}/documents/{documentId}/translations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -206,7 +206,7 @@ public class Strings {
      */
     public org.openapis.openapi.models.operations.GetDocumentTranslationsForLanguageResponse getDocumentTranslationsForLanguage(org.openapis.openapi.models.operations.GetDocumentTranslationsForLanguageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDocumentTranslationsForLanguagePathParams.class, baseUrl, "/projects/{projectId}/documents/{documentId}/translations/{language}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDocumentTranslationsForLanguageRequest.class, baseUrl, "/projects/{projectId}/documents/{documentId}/translations/{language}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -246,7 +246,7 @@ public class Strings {
      */
     public org.openapis.openapi.models.operations.GetProjectStringsResponse getProjectStrings(org.openapis.openapi.models.operations.GetProjectStringsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectStringsPathParams.class, baseUrl, "/projects/{projectId}/strings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectStringsRequest.class, baseUrl, "/projects/{projectId}/strings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -286,7 +286,7 @@ public class Strings {
      */
     public org.openapis.openapi.models.operations.GetProjectStringsForLanguageResponse getProjectStringsForLanguage(org.openapis.openapi.models.operations.GetProjectStringsForLanguageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectStringsForLanguagePathParams.class, baseUrl, "/projects/{projectId}/strings/{language}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectStringsForLanguageRequest.class, baseUrl, "/projects/{projectId}/strings/{language}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -325,7 +325,7 @@ public class Strings {
      */
     public org.openapis.openapi.models.operations.GetProjectTranslationsResponse getProjectTranslations(org.openapis.openapi.models.operations.GetProjectTranslationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectTranslationsPathParams.class, baseUrl, "/projects/{projectId}/translations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectTranslationsRequest.class, baseUrl, "/projects/{projectId}/translations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -364,7 +364,7 @@ public class Strings {
      */
     public org.openapis.openapi.models.operations.GetProjectTranslationsForLanguageResponse getProjectTranslationsForLanguage(org.openapis.openapi.models.operations.GetProjectTranslationsForLanguageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectTranslationsForLanguagePathParams.class, baseUrl, "/projects/{projectId}/translations/{language}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectTranslationsForLanguageRequest.class, baseUrl, "/projects/{projectId}/translations/{language}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -410,7 +410,7 @@ public class Strings {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetStringsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetStringsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -450,13 +450,13 @@ public class Strings {
      */
     public org.openapis.openapi.models.operations.GetTranslationCacheResponse getTranslationCache(org.openapis.openapi.models.operations.GetTranslationCacheRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTranslationCachePathParams.class, baseUrl, "/continuous_projects/{projectId}/strings/cached", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTranslationCacheRequest.class, baseUrl, "/continuous_projects/{projectId}/strings/cached", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTranslationCacheQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTranslationCacheRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -496,13 +496,13 @@ public class Strings {
      */
     public org.openapis.openapi.models.operations.PackageProjectTranslationMemoryResponse packageProjectTranslationMemory(org.openapis.openapi.models.operations.PackageProjectTranslationMemoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackageProjectTranslationMemoryPathParams.class, baseUrl, "/projects/{projectId}/strings/package", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackageProjectTranslationMemoryRequest.class, baseUrl, "/projects/{projectId}/strings/package", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PackageProjectTranslationMemoryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PackageProjectTranslationMemoryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -547,13 +547,13 @@ public class Strings {
      */
     public org.openapis.openapi.models.operations.PackageProjectTranslationMemoryForLanguageResponse packageProjectTranslationMemoryForLanguage(org.openapis.openapi.models.operations.PackageProjectTranslationMemoryForLanguageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackageProjectTranslationMemoryForLanguagePathParams.class, baseUrl, "/projects/{projectId}/strings/{languageCode}/package", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackageProjectTranslationMemoryForLanguageRequest.class, baseUrl, "/projects/{projectId}/strings/{languageCode}/package", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PackageProjectTranslationMemoryForLanguageQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PackageProjectTranslationMemoryForLanguageRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -598,13 +598,13 @@ public class Strings {
      */
     public org.openapis.openapi.models.operations.PackageProjectTranslationMemoryForLanguageStatusResponse packageProjectTranslationMemoryForLanguageStatus(org.openapis.openapi.models.operations.PackageProjectTranslationMemoryForLanguageStatusRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackageProjectTranslationMemoryForLanguageStatusPathParams.class, baseUrl, "/projects/{projectId}/strings/{languageCode}/package/status", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackageProjectTranslationMemoryForLanguageStatusRequest.class, baseUrl, "/projects/{projectId}/strings/{languageCode}/package/status", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PackageProjectTranslationMemoryForLanguageStatusQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PackageProjectTranslationMemoryForLanguageStatusRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -644,13 +644,13 @@ public class Strings {
      */
     public org.openapis.openapi.models.operations.PackageProjectTranslationMemoryStatusResponse packageProjectTranslationMemoryStatus(org.openapis.openapi.models.operations.PackageProjectTranslationMemoryStatusRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackageProjectTranslationMemoryStatusPathParams.class, baseUrl, "/projects/{projectId}/strings/package/status", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackageProjectTranslationMemoryStatusRequest.class, baseUrl, "/projects/{projectId}/strings/package/status", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PackageProjectTranslationMemoryStatusQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PackageProjectTranslationMemoryStatusRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -690,13 +690,13 @@ public class Strings {
      */
     public org.openapis.openapi.models.operations.PackageUserTranslationMemoryResponse packageUserTranslationMemory(org.openapis.openapi.models.operations.PackageUserTranslationMemoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackageUserTranslationMemoryPathParams.class, baseUrl, "/strings/{languageCode}/package", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackageUserTranslationMemoryRequest.class, baseUrl, "/strings/{languageCode}/package", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PackageUserTranslationMemoryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PackageUserTranslationMemoryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -741,13 +741,13 @@ public class Strings {
      */
     public org.openapis.openapi.models.operations.PackageUserTranslationMemoryForLanguageStatusResponse packageUserTranslationMemoryForLanguageStatus(org.openapis.openapi.models.operations.PackageUserTranslationMemoryForLanguageStatusRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackageUserTranslationMemoryForLanguageStatusPathParams.class, baseUrl, "/strings/{languageCode}/package/status", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackageUserTranslationMemoryForLanguageStatusRequest.class, baseUrl, "/strings/{languageCode}/package/status", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PackageUserTranslationMemoryForLanguageStatusQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PackageUserTranslationMemoryForLanguageStatusRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -786,12 +786,12 @@ public class Strings {
      */
     public org.openapis.openapi.models.operations.PostContinuousProjectFileStringsResponse postContinuousProjectFileStrings(org.openapis.openapi.models.operations.PostContinuousProjectFileStringsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostContinuousProjectFileStringsPathParams.class, baseUrl, "/continuous_projects/{projectId}/documents/strings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostContinuousProjectFileStringsRequest.class, baseUrl, "/continuous_projects/{projectId}/documents/strings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "continuousProjectDocumentStringsBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -826,7 +826,7 @@ public class Strings {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostStringsResponse postStrings(org.openapis.openapi.models.operations.PostStringsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostStringsResponse postStrings(org.openapis.openapi.models.shared.DeprecatedStringTranslationContent request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/strings");
         
@@ -870,13 +870,13 @@ public class Strings {
      */
     public org.openapis.openapi.models.operations.RecacheTranslationsResponse recacheTranslations(org.openapis.openapi.models.operations.RecacheTranslationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecacheTranslationsPathParams.class, baseUrl, "/continuous_projects/{projectId}/strings/recache-tms", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecacheTranslationsRequest.class, baseUrl, "/continuous_projects/{projectId}/strings/recache-tms", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecacheTranslationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecacheTranslationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -914,7 +914,7 @@ public class Strings {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateTranslationMemoryUnitResponse updateTranslationMemoryUnit(org.openapis.openapi.models.operations.UpdateTranslationMemoryUnitRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateTranslationMemoryUnitResponse updateTranslationMemoryUnit(org.openapis.openapi.models.shared.TranslationMemoryUnit request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/strings");
         

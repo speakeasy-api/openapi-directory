@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiCatalogSystemPubProductsOffersProductIdRequest {
-    
-    public GetApiCatalogSystemPubProductsOffersProductIdPathParams pathParams;
-    public GetApiCatalogSystemPubProductsOffersProductIdRequest withPathParams(GetApiCatalogSystemPubProductsOffersProductIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetApiCatalogSystemPubProductsOffersProductIdRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetApiCatalogSystemPubProductsOffersProductIdRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetApiCatalogSystemPubProductsOffersProductIdHeaders headers;
-    public GetApiCatalogSystemPubProductsOffersProductIdRequest withHeaders(GetApiCatalogSystemPubProductsOffersProductIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * Product unique number identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
+    public String productId;
+    public GetApiCatalogSystemPubProductsOffersProductIdRequest withProductId(String productId) {
+        this.productId = productId;
         return this;
     }
     

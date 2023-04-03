@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateInstructions2Request {
-    
-    public UpdateInstructions2PathParams pathParams;
-    public UpdateInstructions2Request withPathParams(UpdateInstructions2PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated instructions of a given project.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.InstructionsDTO request;
-    public UpdateInstructions2Request withRequest(org.openapis.openapi.models.shared.InstructionsDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.InstructionsDTO instructionsDTO;
+    public UpdateInstructions2Request withInstructionsDTO(org.openapis.openapi.models.shared.InstructionsDTO instructionsDTO) {
+        this.instructionsDTO = instructionsDTO;
+        return this;
+    }
+    
+    /**
+     * quote's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=quoteId")
+    public String quoteId;
+    public UpdateInstructions2Request withQuoteId(String quoteId) {
+        this.quoteId = quoteId;
         return this;
     }
     

@@ -39,13 +39,13 @@ public class AcmeChallengeSets {
      */
     public org.openapis.openapi.models.operations.AcmednsAcmeChallengeSetsGetResponse acmednsAcmeChallengeSetsGet(org.openapis.openapi.models.operations.AcmednsAcmeChallengeSetsGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AcmednsAcmeChallengeSetsGetPathParams.class, baseUrl, "/v1/acmeChallengeSets/{rootDomain}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AcmednsAcmeChallengeSetsGetRequest.class, baseUrl, "/v1/acmeChallengeSets/{rootDomain}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AcmednsAcmeChallengeSetsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AcmednsAcmeChallengeSetsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -83,15 +83,15 @@ public class AcmeChallengeSets {
      */
     public org.openapis.openapi.models.operations.AcmednsAcmeChallengeSetsRotateChallengesResponse acmednsAcmeChallengeSetsRotateChallenges(org.openapis.openapi.models.operations.AcmednsAcmeChallengeSetsRotateChallengesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AcmednsAcmeChallengeSetsRotateChallengesPathParams.class, baseUrl, "/v1/acmeChallengeSets/{rootDomain}:rotateChallenges", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AcmednsAcmeChallengeSetsRotateChallengesRequest.class, baseUrl, "/v1/acmeChallengeSets/{rootDomain}:rotateChallenges", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "rotateChallengesRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AcmednsAcmeChallengeSetsRotateChallengesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AcmednsAcmeChallengeSetsRotateChallengesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

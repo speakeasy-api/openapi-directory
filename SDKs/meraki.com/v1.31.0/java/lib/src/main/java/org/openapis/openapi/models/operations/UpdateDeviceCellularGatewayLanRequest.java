@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDeviceCellularGatewayLanRequest {
-    
-    public UpdateDeviceCellularGatewayLanPathParams pathParams;
-    public UpdateDeviceCellularGatewayLanRequest withPathParams(UpdateDeviceCellularGatewayLanPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateDeviceCellularGatewayLanRequestBody requestBody;
+    public UpdateDeviceCellularGatewayLanRequest withRequestBody(UpdateDeviceCellularGatewayLanRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateDeviceCellularGatewayLanRequestBody request;
-    public UpdateDeviceCellularGatewayLanRequest withRequest(UpdateDeviceCellularGatewayLanRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public UpdateDeviceCellularGatewayLanRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBusinessGroupsIdSpacesRequest {
-    
-    public GetBusinessGroupsIdSpacesPathParams pathParams;
-    public GetBusinessGroupsIdSpacesRequest withPathParams(GetBusinessGroupsIdSpacesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Name of the space
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Name")
+    public String name;
+    public GetBusinessGroupsIdSpacesRequest withName(String name) {
+        this.name = name;
         return this;
     }
     
-    
-    public GetBusinessGroupsIdSpacesQueryParams queryParams;
-    public GetBusinessGroupsIdSpacesRequest withQueryParams(GetBusinessGroupsIdSpacesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * registration number of the space
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RegistrationNumber")
+    public String registrationNumber;
+    public GetBusinessGroupsIdSpacesRequest withRegistrationNumber(String registrationNumber) {
+        this.registrationNumber = registrationNumber;
         return this;
     }
     
+    /**
+     * Type of the space
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Type")
+    public GetBusinessGroupsIdSpacesTypeEnum type;
+    public GetBusinessGroupsIdSpacesRequest withType(GetBusinessGroupsIdSpacesTypeEnum type) {
+        this.type = type;
+        return this;
+    }
     
-    public GetBusinessGroupsIdSpacesSecurity security;
-    public GetBusinessGroupsIdSpacesRequest withSecurity(GetBusinessGroupsIdSpacesSecurity security) {
-        this.security = security;
+    /**
+     * Id of the group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetBusinessGroupsIdSpacesRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

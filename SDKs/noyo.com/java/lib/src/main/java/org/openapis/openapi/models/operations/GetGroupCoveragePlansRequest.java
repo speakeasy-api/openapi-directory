@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGroupCoveragePlansRequest {
-    
-    public GetGroupCoveragePlansPathParams pathParams;
-    public GetGroupCoveragePlansRequest withPathParams(GetGroupCoveragePlansPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the group coverage.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_coverage_id")
+    public String groupCoverageId;
+    public GetGroupCoveragePlansRequest withGroupCoverageId(String groupCoverageId) {
+        this.groupCoverageId = groupCoverageId;
         return this;
     }
     

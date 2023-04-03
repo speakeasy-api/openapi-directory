@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAdRequest {
-    
-    public DeleteAdPathParams pathParams;
-    public DeleteAdRequest withPathParams(DeleteAdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Identifier of an ad. This ID was generated when the ad was created.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ad_id")
+    public String adId;
+    public DeleteAdRequest withAdId(String adId) {
+        this.adId = adId;
         return this;
     }
     
-    
-    public DeleteAdSecurity security;
-    public DeleteAdRequest withSecurity(DeleteAdSecurity security) {
-        this.security = security;
+    /**
+     * A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created.&lt;br /&gt;&lt;br /&gt;&lt;span class="tablenote"&gt;&lt;b&gt;Note:&lt;/b&gt; You can retrieve the campaign IDs for a specified seller using the &lt;a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns"&gt;getCampaigns&lt;/a&gt; method.&lt;/span&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=campaign_id")
+    public String campaignId;
+    public DeleteAdRequest withCampaignId(String campaignId) {
+        this.campaignId = campaignId;
         return this;
     }
     

@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSettingValueRequest {
-    
-    public UpdateSettingValuePathParams pathParams;
-    public UpdateSettingValueRequest withPathParams(UpdateSettingValuePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateSettingValueQueryParams queryParams;
-    public UpdateSettingValueRequest withQueryParams(UpdateSettingValueQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.JsonPatchInput request;
-    public UpdateSettingValueRequest withRequest(org.openapis.openapi.models.shared.JsonPatchInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.JsonPatchInput jsonPatchInput;
+    public UpdateSettingValueRequest withJsonPatchInput(org.openapis.openapi.models.shared.JsonPatchInput jsonPatchInput) {
+        this.jsonPatchInput = jsonPatchInput;
+        return this;
+    }
+    
+    /**
+     * The identifier of the Environment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environmentId")
+    public String environmentId;
+    public UpdateSettingValueRequest withEnvironmentId(String environmentId) {
+        this.environmentId = environmentId;
+        return this;
+    }
+    
+    /**
+     * The reason note for the Audit Log if the Product's "Config changes require a reason" preference is turned on.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reason")
+    public String reason;
+    public UpdateSettingValueRequest withReason(String reason) {
+        this.reason = reason;
+        return this;
+    }
+    
+    /**
+     * The id of the Setting.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=settingId")
+    public Integer settingId;
+    public UpdateSettingValueRequest withSettingId(Integer settingId) {
+        this.settingId = settingId;
         return this;
     }
     

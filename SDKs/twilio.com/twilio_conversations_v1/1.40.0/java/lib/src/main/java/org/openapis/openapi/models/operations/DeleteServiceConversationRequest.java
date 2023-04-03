@@ -4,34 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteServiceConversationRequest {
-    
-    public DeleteServiceConversationPathParams pathParams;
-    public DeleteServiceConversationRequest withPathParams(DeleteServiceConversationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Conversation resource is associated with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChatServiceSid")
+    public String chatServiceSid;
+    public DeleteServiceConversationRequest withChatServiceSid(String chatServiceSid) {
+        this.chatServiceSid = chatServiceSid;
         return this;
     }
     
-    
-    public DeleteServiceConversationHeaders headers;
-    public DeleteServiceConversationRequest withHeaders(DeleteServiceConversationHeaders headers) {
-        this.headers = headers;
+    /**
+     * A 34 character string that uniquely identifies this resource. Can also be the `unique_name` of the Conversation.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteServiceConversationRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public DeleteServiceConversationSecurity security;
-    public DeleteServiceConversationRequest withSecurity(DeleteServiceConversationSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteServiceConversationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The X-Twilio-Webhook-Enabled HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Twilio-Webhook-Enabled")
+    public org.openapis.openapi.models.shared.ServiceConversationEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled;
+    public DeleteServiceConversationRequest withXTwilioWebhookEnabled(org.openapis.openapi.models.shared.ServiceConversationEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled) {
+        this.xTwilioWebhookEnabled = xTwilioWebhookEnabled;
         return this;
     }
     

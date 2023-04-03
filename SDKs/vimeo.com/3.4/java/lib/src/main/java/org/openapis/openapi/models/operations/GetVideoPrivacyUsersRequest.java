@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVideoPrivacyUsersRequest {
-    
-    public GetVideoPrivacyUsersPathParams pathParams;
-    public GetVideoPrivacyUsersRequest withPathParams(GetVideoPrivacyUsersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetVideoPrivacyUsersRequest withPage(Double page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetVideoPrivacyUsersRequest withPerPage(Double perPage) {
+        this.perPage = perPage;
+        return this;
+    }
     
-    public GetVideoPrivacyUsersQueryParams queryParams;
-    public GetVideoPrivacyUsersRequest withQueryParams(GetVideoPrivacyUsersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public GetVideoPrivacyUsersRequest withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

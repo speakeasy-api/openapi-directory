@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RecordConversationRequest {
-    
-    public RecordConversationPathParams pathParams;
-    public RecordConversationRequest withPathParams(RecordConversationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Record Conversation Request Payload Object
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public RecordConversationRequestBody request;
-    public RecordConversationRequest withRequest(RecordConversationRequestBody request) {
-        this.request = request;
+    public RecordConversationRequestBody requestBody;
+    public RecordConversationRequest withRequestBody(RecordConversationRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public String serverURL;
-    public RecordConversationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Conversation ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversation_id")
+    public String conversationId;
+    public RecordConversationRequest withConversationId(String conversationId) {
+        this.conversationId = conversationId;
         return this;
     }
     

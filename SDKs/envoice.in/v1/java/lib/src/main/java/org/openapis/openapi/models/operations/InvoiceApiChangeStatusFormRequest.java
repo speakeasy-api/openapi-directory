@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InvoiceApiChangeStatusFormRequest {
-    
-    public InvoiceApiChangeStatusFormHeaders headers;
-    public InvoiceApiChangeStatusFormRequest withHeaders(InvoiceApiChangeStatusFormHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
+    public org.openapis.openapi.models.shared.ChangeStatusApiModel changeStatusApiModel;
+    public InvoiceApiChangeStatusFormRequest withChangeStatusApiModel(org.openapis.openapi.models.shared.ChangeStatusApiModel changeStatusApiModel) {
+        this.changeStatusApiModel = changeStatusApiModel;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.ChangeStatusApiModel request;
-    public InvoiceApiChangeStatusFormRequest withRequest(org.openapis.openapi.models.shared.ChangeStatusApiModel request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
+    public String xAuthKey;
+    public InvoiceApiChangeStatusFormRequest withXAuthKey(String xAuthKey) {
+        this.xAuthKey = xAuthKey;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
+    public String xAuthSecret;
+    public InvoiceApiChangeStatusFormRequest withXAuthSecret(String xAuthSecret) {
+        this.xAuthSecret = xAuthSecret;
         return this;
     }
     

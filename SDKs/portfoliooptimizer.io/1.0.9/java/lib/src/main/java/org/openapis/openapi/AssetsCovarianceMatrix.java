@@ -44,7 +44,7 @@ public class AssetsCovarianceMatrix {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAssetsCovarianceMatrixResponse postAssetsCovarianceMatrix(org.openapis.openapi.models.operations.PostAssetsCovarianceMatrixRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAssetsCovarianceMatrixResponse postAssetsCovarianceMatrix(Object request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/assets/covariance/matrix");
         
@@ -93,7 +93,7 @@ public class AssetsCovarianceMatrix {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAssetsCovarianceMatrixEffectiveRankResponse postAssetsCovarianceMatrixEffectiveRank(org.openapis.openapi.models.operations.PostAssetsCovarianceMatrixEffectiveRankRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAssetsCovarianceMatrixEffectiveRankResponse postAssetsCovarianceMatrixEffectiveRank(org.openapis.openapi.models.operations.PostAssetsCovarianceMatrixEffectiveRankRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/assets/covariance/matrix/effective-rank");
         
@@ -142,7 +142,7 @@ public class AssetsCovarianceMatrix {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAssetsCovarianceMatrixExponentiallyWeightedResponse postAssetsCovarianceMatrixExponentiallyWeighted(org.openapis.openapi.models.operations.PostAssetsCovarianceMatrixExponentiallyWeightedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAssetsCovarianceMatrixExponentiallyWeightedResponse postAssetsCovarianceMatrixExponentiallyWeighted(org.openapis.openapi.models.operations.PostAssetsCovarianceMatrixExponentiallyWeightedRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/assets/covariance/matrix/exponentially-weighted");
         
@@ -191,7 +191,7 @@ public class AssetsCovarianceMatrix {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAssetsCovarianceMatrixValidationResponse postAssetsCovarianceMatrixValidation(org.openapis.openapi.models.operations.PostAssetsCovarianceMatrixValidationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAssetsCovarianceMatrixValidationResponse postAssetsCovarianceMatrixValidation(org.openapis.openapi.models.operations.PostAssetsCovarianceMatrixValidationRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/assets/covariance/matrix/validation");
         

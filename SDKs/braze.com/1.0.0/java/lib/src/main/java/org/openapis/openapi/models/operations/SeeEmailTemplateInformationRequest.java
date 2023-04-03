@@ -4,13 +4,18 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SeeEmailTemplateInformationRequest {
-    
-    public SeeEmailTemplateInformationQueryParams queryParams;
-    public SeeEmailTemplateInformationRequest withQueryParams(SeeEmailTemplateInformationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * (Required) String
+     * 
+     * Your email template's API Identifier.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email_template_id")
+    public String emailTemplateId;
+    public SeeEmailTemplateInformationRequest withEmailTemplateId(String emailTemplateId) {
+        this.emailTemplateId = emailTemplateId;
         return this;
     }
     

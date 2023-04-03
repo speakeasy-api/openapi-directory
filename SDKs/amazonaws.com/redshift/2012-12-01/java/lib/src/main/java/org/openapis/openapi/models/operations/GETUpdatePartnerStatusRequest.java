@@ -4,20 +4,129 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETUpdatePartnerStatusRequest {
-    
-    public GETUpdatePartnerStatusQueryParams queryParams;
-    public GETUpdatePartnerStatusRequest withQueryParams(GETUpdatePartnerStatusQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The Amazon Web Services account ID that owns the cluster.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AccountId")
+    public String accountId;
+    public GETUpdatePartnerStatusRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETUpdatePartnerStatusActionEnum action;
+    public GETUpdatePartnerStatusRequest withAction(GETUpdatePartnerStatusActionEnum action) {
+        this.action = action;
+        return this;
+    }
     
-    public GETUpdatePartnerStatusHeaders headers;
-    public GETUpdatePartnerStatusRequest withHeaders(GETUpdatePartnerStatusHeaders headers) {
-        this.headers = headers;
+    /**
+     * The cluster identifier of the cluster whose partner integration status is being updated.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
+    public String clusterIdentifier;
+    public GETUpdatePartnerStatusRequest withClusterIdentifier(String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+        return this;
+    }
+    
+    /**
+     * The name of the database whose partner integration status is being updated.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DatabaseName")
+    public String databaseName;
+    public GETUpdatePartnerStatusRequest withDatabaseName(String databaseName) {
+        this.databaseName = databaseName;
+        return this;
+    }
+    
+    /**
+     * The name of the partner whose integration status is being updated.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PartnerName")
+    public String partnerName;
+    public GETUpdatePartnerStatusRequest withPartnerName(String partnerName) {
+        this.partnerName = partnerName;
+        return this;
+    }
+    
+    /**
+     * The value of the updated status.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Status")
+    public GETUpdatePartnerStatusStatusEnum status;
+    public GETUpdatePartnerStatusRequest withStatus(GETUpdatePartnerStatusStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * The status message provided by the partner.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StatusMessage")
+    public String statusMessage;
+    public GETUpdatePartnerStatusRequest withStatusMessage(String statusMessage) {
+        this.statusMessage = statusMessage;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETUpdatePartnerStatusVersionEnum version;
+    public GETUpdatePartnerStatusRequest withVersion(GETUpdatePartnerStatusVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETUpdatePartnerStatusRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETUpdatePartnerStatusRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETUpdatePartnerStatusRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETUpdatePartnerStatusRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETUpdatePartnerStatusRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETUpdatePartnerStatusRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETUpdatePartnerStatusRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

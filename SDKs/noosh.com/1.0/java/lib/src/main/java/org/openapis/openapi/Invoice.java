@@ -38,7 +38,7 @@ public class Invoice {
      */
     public org.openapis.openapi.models.operations.GetInvoiceResponse getInvoice(org.openapis.openapi.models.operations.GetInvoiceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInvoicePathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/invoices/{invoice_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInvoiceRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/invoices/{invoice_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -157,7 +157,7 @@ public class Invoice {
      */
     public org.openapis.openapi.models.operations.GetInvoiceFilesResponse getInvoiceFiles(org.openapis.openapi.models.operations.GetInvoiceFilesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInvoiceFilesPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/invoices/{invoice_id}/files", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInvoiceFilesRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/invoices/{invoice_id}/files", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -276,7 +276,7 @@ public class Invoice {
      */
     public org.openapis.openapi.models.operations.GetInvoicesResponse getInvoices(org.openapis.openapi.models.operations.GetInvoicesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInvoicesPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/invoices/orders/{order_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInvoicesRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/invoices/orders/{order_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

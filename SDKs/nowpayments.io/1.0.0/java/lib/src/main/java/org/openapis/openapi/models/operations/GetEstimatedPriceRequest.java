@@ -4,20 +4,34 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEstimatedPriceRequest {
-    
-    public GetEstimatedPriceQueryParams queryParams;
-    public GetEstimatedPriceRequest withQueryParams(GetEstimatedPriceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=amount")
+    public String amount;
+    public GetEstimatedPriceRequest withAmount(String amount) {
+        this.amount = amount;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currency_from")
+    public String currencyFrom;
+    public GetEstimatedPriceRequest withCurrencyFrom(String currencyFrom) {
+        this.currencyFrom = currencyFrom;
+        return this;
+    }
     
-    public GetEstimatedPriceHeaders headers;
-    public GetEstimatedPriceRequest withHeaders(GetEstimatedPriceHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currency_to")
+    public String currencyTo;
+    public GetEstimatedPriceRequest withCurrencyTo(String currencyTo) {
+        this.currencyTo = currencyTo;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public GetEstimatedPriceRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

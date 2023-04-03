@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CheckTokenRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tokenId")
+    public String tokenId;
+    public CheckTokenRequest withTokenId(String tokenId) {
+        this.tokenId = tokenId;
+        return this;
+    }
     
-    public CheckTokenPathParams pathParams;
-    public CheckTokenRequest withPathParams(CheckTokenPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tokenName")
+    public String tokenName;
+    public CheckTokenRequest withTokenName(String tokenName) {
+        this.tokenName = tokenName;
         return this;
     }
     

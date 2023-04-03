@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsListArtifactsForRepoRequest {
-    
-    public ActionsListArtifactsForRepoPathParams pathParams;
-    public ActionsListArtifactsForRepoRequest withPathParams(ActionsListArtifactsForRepoPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filters artifacts by exact match on their name field.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public ActionsListArtifactsForRepoRequest withName(String name) {
+        this.name = name;
         return this;
     }
     
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ActionsListArtifactsForRepoRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public ActionsListArtifactsForRepoQueryParams queryParams;
-    public ActionsListArtifactsForRepoRequest withQueryParams(ActionsListArtifactsForRepoQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ActionsListArtifactsForRepoRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ActionsListArtifactsForRepoRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ActionsListArtifactsForRepoRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

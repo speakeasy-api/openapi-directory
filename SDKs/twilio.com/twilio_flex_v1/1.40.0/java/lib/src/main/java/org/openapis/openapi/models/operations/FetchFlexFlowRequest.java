@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchFlexFlowRequest {
-    
-    public FetchFlexFlowPathParams pathParams;
-    public FetchFlexFlowRequest withPathParams(FetchFlexFlowPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchFlexFlowSecurity security;
-    public FetchFlexFlowRequest withSecurity(FetchFlexFlowSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchFlexFlowRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Flex Flow resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchFlexFlowRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

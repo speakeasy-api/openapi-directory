@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostUsersIdUnlockRequest {
-    
-    public PostUsersIdUnlockPathParams pathParams;
-    public PostUsersIdUnlockRequest withPathParams(PostUsersIdUnlockPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * User ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PostUsersIdUnlockRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

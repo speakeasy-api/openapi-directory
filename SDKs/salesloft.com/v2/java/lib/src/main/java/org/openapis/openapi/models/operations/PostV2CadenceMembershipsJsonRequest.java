@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV2CadenceMembershipsJsonRequest {
+    /**
+     * ID of the cadence to create a cadence membership for
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cadence_id")
+    public Long cadenceId;
+    public PostV2CadenceMembershipsJsonRequest withCadenceId(Long cadenceId) {
+        this.cadenceId = cadenceId;
+        return this;
+    }
     
-    public PostV2CadenceMembershipsJsonQueryParams queryParams;
-    public PostV2CadenceMembershipsJsonRequest withQueryParams(PostV2CadenceMembershipsJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * ID of the person to create a cadence membership for
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=person_id")
+    public Long personId;
+    public PostV2CadenceMembershipsJsonRequest withPersonId(Long personId) {
+        this.personId = personId;
+        return this;
+    }
+    
+    /**
+     * ID of the step on which the person should start the cadence. Start on first step is the default behavior without this parameter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=step_id")
+    public Long stepId;
+    public PostV2CadenceMembershipsJsonRequest withStepId(Long stepId) {
+        this.stepId = stepId;
+        return this;
+    }
+    
+    /**
+     * ID of the user to create a cadence membership for. The associated cadence must be owned by the user, or it must be a team cadence
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
+    public Long userId;
+    public PostV2CadenceMembershipsJsonRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

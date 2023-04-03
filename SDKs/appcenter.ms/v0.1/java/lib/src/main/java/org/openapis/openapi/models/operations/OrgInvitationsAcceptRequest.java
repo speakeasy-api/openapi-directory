@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgInvitationsAcceptRequest {
-    
-    public OrgInvitationsAcceptPathParams pathParams;
-    public OrgInvitationsAcceptRequest withPathParams(OrgInvitationsAcceptPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * allow empty body for custom http-client lib
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public OrgInvitationsAcceptRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public OrgInvitationsAcceptRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public OrgInvitationsAcceptSecurity security;
-    public OrgInvitationsAcceptRequest withSecurity(OrgInvitationsAcceptSecurity security) {
-        this.security = security;
+    /**
+     * The app invitation token that was sent to the user
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=invitation_token")
+    public String invitationToken;
+    public OrgInvitationsAcceptRequest withInvitationToken(String invitationToken) {
+        this.invitationToken = invitationToken;
         return this;
     }
     

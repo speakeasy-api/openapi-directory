@@ -7,24 +7,37 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddrecurrenceitemRequest {
-    
-    public AddrecurrenceitemPathParams pathParams;
-    public AddrecurrenceitemRequest withPathParams(AddrecurrenceitemPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public AddrecurrenceitemRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public AddrecurrenceitemHeaders headers;
-    public AddrecurrenceitemRequest withHeaders(AddrecurrenceitemHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public AddrecurrenceitemRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AddrecurrenceitemRequest[] request;
-    public AddrecurrenceitemRequest withRequest(org.openapis.openapi.models.shared.AddrecurrenceitemRequest[] request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AddrecurrenceitemRequest[] requestBody;
+    public AddrecurrenceitemRequest withRequestBody(org.openapis.openapi.models.shared.AddrecurrenceitemRequest[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=recurrenceId")
+    public String recurrenceId;
+    public AddrecurrenceitemRequest withRecurrenceId(String recurrenceId) {
+        this.recurrenceId = recurrenceId;
         return this;
     }
     

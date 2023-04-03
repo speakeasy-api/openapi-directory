@@ -7,24 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssueCreateIssueCommentAttachmentRequest {
-    
-    public IssueCreateIssueCommentAttachmentPathParams pathParams;
-    public IssueCreateIssueCommentAttachmentRequest withPathParams(IssueCreateIssueCommentAttachmentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public IssueCreateIssueCommentAttachmentQueryParams queryParams;
-    public IssueCreateIssueCommentAttachmentRequest withQueryParams(IssueCreateIssueCommentAttachmentQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public IssueCreateIssueCommentAttachmentRequestBody request;
-    public IssueCreateIssueCommentAttachmentRequest withRequest(IssueCreateIssueCommentAttachmentRequestBody request) {
-        this.request = request;
+    public IssueCreateIssueCommentAttachmentRequestBody requestBody;
+    public IssueCreateIssueCommentAttachmentRequest withRequestBody(IssueCreateIssueCommentAttachmentRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * id of the comment
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public IssueCreateIssueCommentAttachmentRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * name of the attachment
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public IssueCreateIssueCommentAttachmentRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssueCreateIssueCommentAttachmentRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssueCreateIssueCommentAttachmentRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

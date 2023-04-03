@@ -7,17 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostOrganisationsPartyIdRolesRequest {
-    
-    public PostOrganisationsPartyIdRolesPathParams pathParams;
-    public PostOrganisationsPartyIdRolesRequest withPathParams(PostOrganisationsPartyIdRolesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostOrganisationsPartyIdRolesHeaders headers;
-    public PostOrganisationsPartyIdRolesRequest withHeaders(PostOrganisationsPartyIdRolesHeaders headers) {
-        this.headers = headers;
+    /**
+     * The API key.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public PostOrganisationsPartyIdRolesRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
@@ -25,9 +21,19 @@ public class PostOrganisationsPartyIdRolesRequest {
      * Role resource
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PartyRoleInput request;
-    public PostOrganisationsPartyIdRolesRequest withRequest(org.openapis.openapi.models.shared.PartyRoleInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PartyRoleInput partyRoleInput;
+    public PostOrganisationsPartyIdRolesRequest withPartyRoleInput(org.openapis.openapi.models.shared.PartyRoleInput partyRoleInput) {
+        this.partyRoleInput = partyRoleInput;
+        return this;
+    }
+    
+    /**
+     * The party identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=partyId")
+    public String partyId;
+    public PostOrganisationsPartyIdRolesRequest withPartyId(String partyId) {
+        this.partyId = partyId;
         return this;
     }
     

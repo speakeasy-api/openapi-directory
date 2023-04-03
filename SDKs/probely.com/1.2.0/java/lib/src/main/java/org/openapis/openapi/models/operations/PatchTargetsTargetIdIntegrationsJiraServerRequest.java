@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchTargetsTargetIdIntegrationsJiraServerRequest {
-    
-    public PatchTargetsTargetIdIntegrationsJiraServerPathParams pathParams;
-    public PatchTargetsTargetIdIntegrationsJiraServerRequest withPathParams(PatchTargetsTargetIdIntegrationsJiraServerPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.JiraScope jiraScope;
+    public PatchTargetsTargetIdIntegrationsJiraServerRequest withJiraScope(org.openapis.openapi.models.shared.JiraScope jiraScope) {
+        this.jiraScope = jiraScope;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.JiraScope request;
-    public PatchTargetsTargetIdIntegrationsJiraServerRequest withRequest(org.openapis.openapi.models.shared.JiraScope request) {
-        this.request = request;
+    /**
+     * Target id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=target_id")
+    public String targetId;
+    public PatchTargetsTargetIdIntegrationsJiraServerRequest withTargetId(String targetId) {
+        this.targetId = targetId;
         return this;
     }
     

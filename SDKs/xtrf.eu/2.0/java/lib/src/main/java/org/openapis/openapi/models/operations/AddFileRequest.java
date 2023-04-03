@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddFileRequest {
-    
-    public AddFilePathParams pathParams;
-    public AddFileRequest withPathParams(AddFilePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.FileDTO fileDTO;
+    public AddFileRequest withFileDTO(org.openapis.openapi.models.shared.FileDTO fileDTO) {
+        this.fileDTO = fileDTO;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.FileDTO request;
-    public AddFileRequest withRequest(org.openapis.openapi.models.shared.FileDTO request) {
-        this.request = request;
+    /**
+     * task's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taskId")
+    public String taskId;
+    public AddFileRequest withTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
     

@@ -4,20 +4,119 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyTransitGatewayVpcAttachmentRequest {
-    
-    public GETModifyTransitGatewayVpcAttachmentQueryParams queryParams;
-    public GETModifyTransitGatewayVpcAttachmentRequest withQueryParams(GETModifyTransitGatewayVpcAttachmentQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyTransitGatewayVpcAttachmentActionEnum action;
+    public GETModifyTransitGatewayVpcAttachmentRequest withAction(GETModifyTransitGatewayVpcAttachmentActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The IDs of one or more subnets to add. You can specify at most one subnet per Availability Zone.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AddSubnetIds")
+    public String[] addSubnetIds;
+    public GETModifyTransitGatewayVpcAttachmentRequest withAddSubnetIds(String[] addSubnetIds) {
+        this.addSubnetIds = addSubnetIds;
+        return this;
+    }
     
-    public GETModifyTransitGatewayVpcAttachmentHeaders headers;
-    public GETModifyTransitGatewayVpcAttachmentRequest withHeaders(GETModifyTransitGatewayVpcAttachmentHeaders headers) {
-        this.headers = headers;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETModifyTransitGatewayVpcAttachmentRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    /**
+     * The new VPC attachment options.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Options")
+    public GETModifyTransitGatewayVpcAttachmentOptions options;
+    public GETModifyTransitGatewayVpcAttachmentRequest withOptions(GETModifyTransitGatewayVpcAttachmentOptions options) {
+        this.options = options;
+        return this;
+    }
+    
+    /**
+     * The IDs of one or more subnets to remove.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RemoveSubnetIds")
+    public String[] removeSubnetIds;
+    public GETModifyTransitGatewayVpcAttachmentRequest withRemoveSubnetIds(String[] removeSubnetIds) {
+        this.removeSubnetIds = removeSubnetIds;
+        return this;
+    }
+    
+    /**
+     * The ID of the attachment.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TransitGatewayAttachmentId")
+    public String transitGatewayAttachmentId;
+    public GETModifyTransitGatewayVpcAttachmentRequest withTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
+        this.transitGatewayAttachmentId = transitGatewayAttachmentId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyTransitGatewayVpcAttachmentVersionEnum version;
+    public GETModifyTransitGatewayVpcAttachmentRequest withVersion(GETModifyTransitGatewayVpcAttachmentVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyTransitGatewayVpcAttachmentRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyTransitGatewayVpcAttachmentRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyTransitGatewayVpcAttachmentRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyTransitGatewayVpcAttachmentRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyTransitGatewayVpcAttachmentRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyTransitGatewayVpcAttachmentRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyTransitGatewayVpcAttachmentRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

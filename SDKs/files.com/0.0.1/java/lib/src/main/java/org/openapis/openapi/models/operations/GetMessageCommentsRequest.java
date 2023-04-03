@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMessageCommentsRequest {
+    /**
+     * Used for pagination.  When a list request has more records available, cursors are provided in the response headers `X-Files-Cursor-Next` and `X-Files-Cursor-Prev`.  Send one of those cursor value here to resume an existing list from the next available record.  Note: many of our SDKs have iterator methods that will automatically handle cursor-based pagination.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public GetMessageCommentsRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
     
-    public GetMessageCommentsQueryParams queryParams;
-    public GetMessageCommentsRequest withQueryParams(GetMessageCommentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Message comment to return comments for.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=message_id")
+    public Integer messageId;
+    public GetMessageCommentsRequest withMessageId(Integer messageId) {
+        this.messageId = messageId;
+        return this;
+    }
+    
+    /**
+     * Number of records to show per page.  (Max: 10,000, 1,000 or less is recommended).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetMessageCommentsRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * User ID.  Provide a value of `0` to operate the current session's user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
+    public Integer userId;
+    public GetMessageCommentsRequest withUserId(Integer userId) {
+        this.userId = userId;
         return this;
     }
     

@@ -29,9 +29,7 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/PostDisableRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostDisableResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostListRecurringDetailsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostListRecurringDetailsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/DisableResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/RecurringDetail.java

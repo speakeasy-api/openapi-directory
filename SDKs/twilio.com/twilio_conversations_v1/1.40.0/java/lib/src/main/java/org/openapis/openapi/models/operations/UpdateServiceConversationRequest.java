@@ -7,38 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateServiceConversationRequest {
-    
-    public UpdateServiceConversationPathParams pathParams;
-    public UpdateServiceConversationRequest withPathParams(UpdateServiceConversationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateServiceConversationHeaders headers;
-    public UpdateServiceConversationRequest withHeaders(UpdateServiceConversationHeaders headers) {
-        this.headers = headers;
+    /**
+     * The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Conversation resource is associated with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChatServiceSid")
+    public String chatServiceSid;
+    public UpdateServiceConversationRequest withChatServiceSid(String chatServiceSid) {
+        this.chatServiceSid = chatServiceSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateServiceConversationUpdateServiceConversationRequest request;
-    public UpdateServiceConversationRequest withRequest(UpdateServiceConversationUpdateServiceConversationRequest request) {
-        this.request = request;
+    public UpdateServiceConversationUpdateServiceConversationRequest requestBody;
+    public UpdateServiceConversationRequest withRequestBody(UpdateServiceConversationUpdateServiceConversationRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateServiceConversationSecurity security;
-    public UpdateServiceConversationRequest withSecurity(UpdateServiceConversationSecurity security) {
-        this.security = security;
+    /**
+     * A 34 character string that uniquely identifies this resource. Can also be the `unique_name` of the Conversation.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateServiceConversationRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public String serverURL;
-    public UpdateServiceConversationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The X-Twilio-Webhook-Enabled HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Twilio-Webhook-Enabled")
+    public org.openapis.openapi.models.shared.ServiceConversationEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled;
+    public UpdateServiceConversationRequest withXTwilioWebhookEnabled(org.openapis.openapi.models.shared.ServiceConversationEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled) {
+        this.xTwilioWebhookEnabled = xTwilioWebhookEnabled;
         return this;
     }
     

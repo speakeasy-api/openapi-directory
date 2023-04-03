@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchUsersUserEmailRequest {
-    
-    public PatchUsersUserEmailPathParams pathParams;
-    public PatchUsersUserEmailRequest withPathParams(PatchUsersUserEmailPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.User user;
+    public PatchUsersUserEmailRequest withUser(org.openapis.openapi.models.shared.User user) {
+        this.user = user;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.User request;
-    public PatchUsersUserEmailRequest withRequest(org.openapis.openapi.models.shared.User request) {
-        this.request = request;
+    /**
+     * user's email
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userEmail")
+    public String userEmail;
+    public PatchUsersUserEmailRequest withUserEmail(String userEmail) {
+        this.userEmail = userEmail;
         return this;
     }
     

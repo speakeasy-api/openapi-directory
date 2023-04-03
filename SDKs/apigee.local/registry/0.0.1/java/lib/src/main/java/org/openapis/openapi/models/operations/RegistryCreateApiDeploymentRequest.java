@@ -7,24 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryCreateApiDeploymentRequest {
-    
-    public RegistryCreateApiDeploymentPathParams pathParams;
-    public RegistryCreateApiDeploymentRequest withPathParams(RegistryCreateApiDeploymentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RegistryCreateApiDeploymentQueryParams queryParams;
-    public RegistryCreateApiDeploymentRequest withQueryParams(RegistryCreateApiDeploymentQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ApiDeploymentInput request;
-    public RegistryCreateApiDeploymentRequest withRequest(org.openapis.openapi.models.shared.ApiDeploymentInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ApiDeploymentInput apiDeploymentInput;
+    public RegistryCreateApiDeploymentRequest withApiDeploymentInput(org.openapis.openapi.models.shared.ApiDeploymentInput apiDeploymentInput) {
+        this.apiDeploymentInput = apiDeploymentInput;
+        return this;
+    }
+    
+    /**
+     * The api id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api")
+    public String api;
+    public RegistryCreateApiDeploymentRequest withApi(String api) {
+        this.api = api;
+        return this;
+    }
+    
+    /**
+     * Required. The ID to use for the deployment, which will become the final component of the deployment's resource name. This value should be 4-63 characters, and valid characters are /[a-z][0-9]-/. Following AIP-162, IDs must not have the form of a UUID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=apiDeploymentId")
+    public String apiDeploymentId;
+    public RegistryCreateApiDeploymentRequest withApiDeploymentId(String apiDeploymentId) {
+        this.apiDeploymentId = apiDeploymentId;
+        return this;
+    }
+    
+    /**
+     * The location id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
+    public String location;
+    public RegistryCreateApiDeploymentRequest withLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public RegistryCreateApiDeploymentRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

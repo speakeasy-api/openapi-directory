@@ -7,20 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OptimiseByCategoryRequest {
-    
-    public OptimiseByCategoryPathParams pathParams;
-    public OptimiseByCategoryRequest withPathParams(OptimiseByCategoryPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The channel identifier list concerned by this optimisation
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public String[] request;
-    public OptimiseByCategoryRequest withRequest(String[] request) {
-        this.request = request;
+    public String[] requestBody;
+    public OptimiseByCategoryRequest withRequestBody(String[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=actionName")
+    public org.openapis.openapi.models.shared.OptimisationActionNameGeneralParametersEnum actionName;
+    public OptimiseByCategoryRequest withActionName(org.openapis.openapi.models.shared.OptimisationActionNameGeneralParametersEnum actionName) {
+        this.actionName = actionName;
+        return this;
+    }
+    
+    /**
+     * The category identifier concerned by this optimisation
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=catalogCategoryId")
+    public String catalogCategoryId;
+    public OptimiseByCategoryRequest withCatalogCategoryId(String catalogCategoryId) {
+        this.catalogCategoryId = catalogCategoryId;
+        return this;
+    }
+    
+    /**
+     * Your store identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public OptimiseByCategoryRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

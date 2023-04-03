@@ -39,7 +39,7 @@ public class CategoriesVideos {
      */
     public org.openapis.openapi.models.operations.CheckCategoryForVideoResponse checkCategoryForVideo(org.openapis.openapi.models.operations.CheckCategoryForVideoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CheckCategoryForVideoPathParams.class, baseUrl, "/categories/{category}/videos/{video_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CheckCategoryForVideoRequest.class, baseUrl, "/categories/{category}/videos/{video_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -86,13 +86,13 @@ public class CategoriesVideos {
      */
     public org.openapis.openapi.models.operations.GetCategoryVideosResponse getCategoryVideos(org.openapis.openapi.models.operations.GetCategoryVideosRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCategoryVideosPathParams.class, baseUrl, "/categories/{category}/videos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCategoryVideosRequest.class, baseUrl, "/categories/{category}/videos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCategoryVideosQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCategoryVideosRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -139,7 +139,7 @@ public class CategoriesVideos {
      */
     public org.openapis.openapi.models.operations.GetVideoCategoriesResponse getVideoCategories(org.openapis.openapi.models.operations.GetVideoCategoriesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVideoCategoriesPathParams.class, baseUrl, "/videos/{video_id}/categories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVideoCategoriesRequest.class, baseUrl, "/videos/{video_id}/categories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -183,24 +183,25 @@ public class CategoriesVideos {
      * With this method, you can suggest up to two categories and one subcategory for a video. Vimeo makes the final determination about whether the video
      * belongs in these categories.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SuggestVideoCategoryResponse suggestVideoCategory(org.openapis.openapi.models.operations.SuggestVideoCategoryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SuggestVideoCategoryResponse suggestVideoCategory(org.openapis.openapi.models.operations.SuggestVideoCategoryRequest request, org.openapis.openapi.models.operations.SuggestVideoCategorySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SuggestVideoCategoryPathParams.class, baseUrl, "/videos/{video_id}/categories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SuggestVideoCategoryRequest.class, baseUrl, "/videos/{video_id}/categories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

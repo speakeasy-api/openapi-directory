@@ -7,16 +7,16 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddBatchWebinarRegistrantsSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeBearer bearer;
-    public AddBatchWebinarRegistrantsSecurity withBearer(org.openapis.openapi.models.shared.SchemeBearer bearer) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Authorization")
+    public String bearer;
+    public AddBatchWebinarRegistrantsSecurity withBearer(String bearer) {
         this.bearer = bearer;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeOAuth oAuth;
-    public AddBatchWebinarRegistrantsSecurity withOAuth(org.openapis.openapi.models.shared.SchemeOAuth oAuth) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String oAuth;
+    public AddBatchWebinarRegistrantsSecurity withOAuth(String oAuth) {
         this.oAuth = oAuth;
         return this;
     }

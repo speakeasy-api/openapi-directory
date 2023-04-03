@@ -29,16 +29,10 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/GetForecastQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetForecastHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetForecastRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetForecastResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetProtectionQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetProtectionHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetProtectionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetProtectionResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetUvQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetUvHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetUvRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetUvResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Forecast.java

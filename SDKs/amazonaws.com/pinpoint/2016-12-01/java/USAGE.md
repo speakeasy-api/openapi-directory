@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateAppHeaders;
 import org.openapis.openapi.models.operations.CreateAppRequestBodyCreateApplicationRequest;
 import org.openapis.openapi.models.operations.CreateAppRequestBody;
 import org.openapis.openapi.models.operations.CreateAppRequest;
@@ -15,32 +14,29 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateAppRequest req = new CreateAppRequest() {{
-                headers = new CreateAppHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new CreateAppRequestBody() {{
+                requestBody = new CreateAppRequestBody() {{
                     createApplicationRequest = new CreateAppRequestBodyCreateApplicationRequest() {{
-                        name = "illum";
+                        name = "corrupti";
                         tags = new java.util.HashMap<String, String>() {{
-                            put("error", "deserunt");
-                            put("suscipit", "iure");
+                            put("distinctio", "quibusdam");
+                            put("unde", "nulla");
+                            put("corrupti", "illum");
                         }};
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "vel";
+                xAmzContentSha256 = "error";
+                xAmzCredential = "deserunt";
+                xAmzDate = "suscipit";
+                xAmzSecurityToken = "iure";
+                xAmzSignature = "magnam";
+                xAmzSignedHeaders = "debitis";
+            }}            
 
             CreateAppResponse res = sdk.createApp(req);
 

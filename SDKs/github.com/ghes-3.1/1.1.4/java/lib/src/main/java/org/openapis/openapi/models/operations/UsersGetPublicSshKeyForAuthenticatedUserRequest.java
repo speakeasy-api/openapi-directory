@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UsersGetPublicSshKeyForAuthenticatedUserRequest {
-    
-    public UsersGetPublicSshKeyForAuthenticatedUserPathParams pathParams;
-    public UsersGetPublicSshKeyForAuthenticatedUserRequest withPathParams(UsersGetPublicSshKeyForAuthenticatedUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the key.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key_id")
+    public Long keyId;
+    public UsersGetPublicSshKeyForAuthenticatedUserRequest withKeyId(Long keyId) {
+        this.keyId = keyId;
         return this;
     }
     

@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsListRequest {
-    
-    public TeamsListQueryParams queryParams;
-    public TeamsListRequest withQueryParams(TeamsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Results limit value. By default will return maximum 25 results. Maximum of 100 results allowed per request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public TeamsListRequest withLimit(Integer limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * Results offset. The default value is 0. Use this param to manage pagination.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public TeamsListRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
     
-    public TeamsListSecurity security;
-    public TeamsListRequest withSecurity(TeamsListSecurity security) {
-        this.security = security;
+    /**
+     * Order result by ASC or DESC order.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderType")
+    public String orderType;
+    public TeamsListRequest withOrderType(String orderType) {
+        this.orderType = orderType;
+        return this;
+    }
+    
+    /**
+     * Search term to filter your list results. Max length: 256 chars.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public TeamsListRequest withSearch(String search) {
+        this.search = search;
         return this;
     }
     

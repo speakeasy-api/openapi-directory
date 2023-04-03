@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEventRequest {
-    
-    public GetEventPathParams pathParams;
-    public GetEventRequest withPathParams(GetEventPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A header used to specify the eBay marketplace ID.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
+    public String xEbayCMarketplaceId;
+    public GetEventRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
+        this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
     }
     
-    
-    public GetEventHeaders headers;
-    public GetEventRequest withHeaders(GetEventHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetEventSecurity security;
-    public GetEventRequest withSecurity(GetEventSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier for the eBay event.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=event_id")
+    public String eventId;
+    public GetEventRequest withEventId(String eventId) {
+        this.eventId = eventId;
         return this;
     }
     

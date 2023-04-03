@@ -4,34 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteConversationMessageRequest {
-    
-    public DeleteConversationMessagePathParams pathParams;
-    public DeleteConversationMessageRequest withPathParams(DeleteConversationMessagePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this message.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConversationSid")
+    public String conversationSid;
+    public DeleteConversationMessageRequest withConversationSid(String conversationSid) {
+        this.conversationSid = conversationSid;
         return this;
     }
     
-    
-    public DeleteConversationMessageHeaders headers;
-    public DeleteConversationMessageRequest withHeaders(DeleteConversationMessageHeaders headers) {
-        this.headers = headers;
+    /**
+     * A 34 character string that uniquely identifies this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteConversationMessageRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public DeleteConversationMessageSecurity security;
-    public DeleteConversationMessageRequest withSecurity(DeleteConversationMessageSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteConversationMessageRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The X-Twilio-Webhook-Enabled HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Twilio-Webhook-Enabled")
+    public org.openapis.openapi.models.shared.ConversationMessageEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled;
+    public DeleteConversationMessageRequest withXTwilioWebhookEnabled(org.openapis.openapi.models.shared.ConversationMessageEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled) {
+        this.xTwilioWebhookEnabled = xTwilioWebhookEnabled;
         return this;
     }
     

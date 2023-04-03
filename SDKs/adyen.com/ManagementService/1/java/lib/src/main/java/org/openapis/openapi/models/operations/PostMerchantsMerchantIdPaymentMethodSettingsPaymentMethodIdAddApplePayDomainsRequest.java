@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdAddApplePayDomainsRequest {
-    
-    public PostMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdAddApplePayDomainsPathParams pathParams;
-    public PostMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdAddApplePayDomainsRequest withPathParams(PostMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdAddApplePayDomainsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ApplePayInfo request;
-    public PostMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdAddApplePayDomainsRequest withRequest(org.openapis.openapi.models.shared.ApplePayInfo request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ApplePayInfo applePayInfo;
+    public PostMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdAddApplePayDomainsRequest withApplePayInfo(org.openapis.openapi.models.shared.ApplePayInfo applePayInfo) {
+        this.applePayInfo = applePayInfo;
         return this;
     }
     
+    /**
+     * The unique identifier of the merchant account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
+    public String merchantId;
+    public PostMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdAddApplePayDomainsRequest withMerchantId(String merchantId) {
+        this.merchantId = merchantId;
+        return this;
+    }
     
-    public PostMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdAddApplePayDomainsSecurity security;
-    public PostMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdAddApplePayDomainsRequest withSecurity(PostMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdAddApplePayDomainsSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the payment method.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=paymentMethodId")
+    public String paymentMethodId;
+    public PostMerchantsMerchantIdPaymentMethodSettingsPaymentMethodIdAddApplePayDomainsRequest withPaymentMethodId(String paymentMethodId) {
+        this.paymentMethodId = paymentMethodId;
         return this;
     }
     

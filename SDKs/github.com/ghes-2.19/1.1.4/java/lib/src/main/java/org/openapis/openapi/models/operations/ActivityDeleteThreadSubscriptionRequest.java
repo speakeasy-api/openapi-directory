@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActivityDeleteThreadSubscriptionRequest {
-    
-    public ActivityDeleteThreadSubscriptionPathParams pathParams;
-    public ActivityDeleteThreadSubscriptionRequest withPathParams(ActivityDeleteThreadSubscriptionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * thread_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=thread_id")
+    public Long threadId;
+    public ActivityDeleteThreadSubscriptionRequest withThreadId(Long threadId) {
+        this.threadId = threadId;
         return this;
     }
     

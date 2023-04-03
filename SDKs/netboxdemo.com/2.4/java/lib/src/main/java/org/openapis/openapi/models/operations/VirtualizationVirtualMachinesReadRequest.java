@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VirtualizationVirtualMachinesReadRequest {
-    
-    public VirtualizationVirtualMachinesReadPathParams pathParams;
-    public VirtualizationVirtualMachinesReadRequest withPathParams(VirtualizationVirtualMachinesReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this virtual machine.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public VirtualizationVirtualMachinesReadRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

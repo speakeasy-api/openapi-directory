@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateLifecyclePolicyHeaders;
 import org.openapis.openapi.models.operations.CreateLifecyclePolicyRequestBodyPolicyDetails;
 import org.openapis.openapi.models.operations.CreateLifecyclePolicyRequestBodyStateEnum;
 import org.openapis.openapi.models.operations.CreateLifecyclePolicyRequestBody;
@@ -43,159 +42,171 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateLifecyclePolicyRequest req = new CreateLifecyclePolicyRequest() {{
-                headers = new CreateLifecyclePolicyHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new CreateLifecyclePolicyRequestBody() {{
-                    description = "illum";
-                    executionRoleArn = "vel";
+                requestBody = new CreateLifecyclePolicyRequestBody() {{
+                    description = "corrupti";
+                    executionRoleArn = "provident";
                     policyDetails = new CreateLifecyclePolicyRequestBodyPolicyDetails() {{
                         actions = new org.openapis.openapi.models.shared.Action[]{{
                             add(new Action() {{
                                 crossRegionCopy = new org.openapis.openapi.models.shared.CrossRegionCopyAction[]{{
                                     add(new CrossRegionCopyAction() {{
                                         encryptionConfiguration = new EncryptionConfiguration() {{
-                                            cmkArn = "suscipit";
+                                            cmkArn = "unde";
                                             encrypted = false;
                                         }};
                                         retainRule = new CrossRegionCopyRetainRule() {{
-                                            interval = 437587;
-                                            intervalUnit = "WEEKS";
+                                            interval = 857946;
+                                            intervalUnit = "MONTHS";
                                         }};
-                                        target = "debitis";
+                                        target = "illum";
                                     }}),
                                     add(new CrossRegionCopyAction() {{
                                         encryptionConfiguration = new EncryptionConfiguration() {{
-                                            cmkArn = "ipsa";
+                                            cmkArn = "vel";
                                             encrypted = false;
                                         }};
                                         retainRule = new CrossRegionCopyRetainRule() {{
-                                            interval = 963663;
-                                            intervalUnit = "WEEKS";
+                                            interval = 623564;
+                                            intervalUnit = "MONTHS";
                                         }};
                                         target = "suscipit";
                                     }}),
                                     add(new CrossRegionCopyAction() {{
                                         encryptionConfiguration = new EncryptionConfiguration() {{
-                                            cmkArn = "molestiae";
+                                            cmkArn = "iure";
                                             encrypted = false;
                                         }};
                                         retainRule = new CrossRegionCopyRetainRule() {{
-                                            interval = 791725;
+                                            interval = 297534;
                                             intervalUnit = "YEARS";
                                         }};
-                                        target = "voluptatum";
+                                        target = "ipsa";
+                                    }}),
+                                    add(new CrossRegionCopyAction() {{
+                                        encryptionConfiguration = new EncryptionConfiguration() {{
+                                            cmkArn = "delectus";
+                                            encrypted = false;
+                                        }};
+                                        retainRule = new CrossRegionCopyRetainRule() {{
+                                            interval = 272656;
+                                            intervalUnit = "WEEKS";
+                                        }};
+                                        target = "molestiae";
                                     }}),
                                 }};
-                                name = "iusto";
+                                name = "minus";
                             }}),
                             add(new Action() {{
                                 crossRegionCopy = new org.openapis.openapi.models.shared.CrossRegionCopyAction[]{{
                                     add(new CrossRegionCopyAction() {{
                                         encryptionConfiguration = new EncryptionConfiguration() {{
-                                            cmkArn = "nisi";
+                                            cmkArn = "voluptatum";
                                             encrypted = false;
                                         }};
                                         retainRule = new CrossRegionCopyRetainRule() {{
-                                            interval = 925597;
-                                            intervalUnit = "YEARS";
-                                        }};
-                                        target = "ab";
-                                    }}),
-                                    add(new CrossRegionCopyAction() {{
-                                        encryptionConfiguration = new EncryptionConfiguration() {{
-                                            cmkArn = "quis";
-                                            encrypted = false;
-                                        }};
-                                        retainRule = new CrossRegionCopyRetainRule() {{
-                                            interval = 87129;
+                                            interval = 479977;
                                             intervalUnit = "MONTHS";
                                         }};
-                                        target = "perferendis";
+                                        target = "nisi";
                                     }}),
                                     add(new CrossRegionCopyAction() {{
                                         encryptionConfiguration = new EncryptionConfiguration() {{
-                                            cmkArn = "ipsam";
+                                            cmkArn = "recusandae";
                                             encrypted = false;
                                         }};
                                         retainRule = new CrossRegionCopyRetainRule() {{
-                                            interval = 832620;
+                                            interval = 836079;
+                                            intervalUnit = "DAYS";
+                                        }};
+                                        target = "quis";
+                                    }}),
+                                    add(new CrossRegionCopyAction() {{
+                                        encryptionConfiguration = new EncryptionConfiguration() {{
+                                            cmkArn = "veritatis";
+                                            encrypted = false;
+                                        }};
+                                        retainRule = new CrossRegionCopyRetainRule() {{
+                                            interval = 648172;
+                                            intervalUnit = "DAYS";
+                                        }};
+                                        target = "ipsam";
+                                    }}),
+                                    add(new CrossRegionCopyAction() {{
+                                        encryptionConfiguration = new EncryptionConfiguration() {{
+                                            cmkArn = "repellendus";
+                                            encrypted = false;
+                                        }};
+                                        retainRule = new CrossRegionCopyRetainRule() {{
+                                            interval = 957156;
                                             intervalUnit = "YEARS";
                                         }};
-                                        target = "quo";
+                                        target = "odit";
                                     }}),
                                 }};
-                                name = "odit";
+                                name = "at";
                             }}),
                             add(new Action() {{
                                 crossRegionCopy = new org.openapis.openapi.models.shared.CrossRegionCopyAction[]{{
                                     add(new CrossRegionCopyAction() {{
                                         encryptionConfiguration = new EncryptionConfiguration() {{
-                                            cmkArn = "at";
+                                            cmkArn = "maiores";
                                             encrypted = false;
                                         }};
                                         retainRule = new CrossRegionCopyRetainRule() {{
-                                            interval = 978619;
-                                            intervalUnit = "WEEKS";
+                                            interval = 473608;
+                                            intervalUnit = "YEARS";
                                         }};
                                         target = "quod";
                                     }}),
                                     add(new CrossRegionCopyAction() {{
                                         encryptionConfiguration = new EncryptionConfiguration() {{
-                                            cmkArn = "quod";
+                                            cmkArn = "esse";
                                             encrypted = false;
                                         }};
                                         retainRule = new CrossRegionCopyRetainRule() {{
-                                            interval = 461479;
-                                            intervalUnit = "MONTHS";
+                                            interval = 520478;
+                                            intervalUnit = "YEARS";
                                         }};
-                                        target = "porro";
+                                        target = "dolorum";
                                     }}),
                                     add(new CrossRegionCopyAction() {{
                                         encryptionConfiguration = new EncryptionConfiguration() {{
-                                            cmkArn = "dolorum";
+                                            cmkArn = "dicta";
                                             encrypted = false;
                                         }};
                                         retainRule = new CrossRegionCopyRetainRule() {{
-                                            interval = 118274;
+                                            interval = 720633;
                                             intervalUnit = "MONTHS";
                                         }};
-                                        target = "officia";
+                                        target = "occaecati";
                                     }}),
                                     add(new CrossRegionCopyAction() {{
                                         encryptionConfiguration = new EncryptionConfiguration() {{
-                                            cmkArn = "occaecati";
+                                            cmkArn = "fugit";
                                             encrypted = false;
                                         }};
                                         retainRule = new CrossRegionCopyRetainRule() {{
-                                            interval = 143353;
-                                            intervalUnit = "MONTHS";
+                                            interval = 537373;
+                                            intervalUnit = "YEARS";
                                         }};
-                                        target = "hic";
+                                        target = "optio";
                                     }}),
                                 }};
-                                name = "optio";
+                                name = "totam";
                             }}),
                         }};
                         eventSource = new EventSource() {{
                             parameters = new EventParameters() {{
-                                descriptionRegex = "totam";
+                                descriptionRegex = "beatae";
                                 eventType = "shareSnapshot";
                                 snapshotOwner = new String[]{{
-                                    add("commodi"),
+                                    add("molestiae"),
+                                    add("modi"),
                                 }};
                             }};
                             type = "MANAGED_CWE";
@@ -203,10 +214,6 @@ public class Application {
                         parameters = new Parameters() {{
                             excludeBootVolume = false;
                             excludeDataVolumeTags = new org.openapis.openapi.models.shared.Tag[]{{
-                                add(new Tag() {{
-                                    key = "modi";
-                                    value = "qui";
-                                }}),
                                 add(new Tag() {{
                                     key = "impedit";
                                     value = "cum";
@@ -471,7 +478,14 @@ public class Application {
                         put("dolorum", "excepturi");
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "tempora";
+                xAmzContentSha256 = "facilis";
+                xAmzCredential = "tempore";
+                xAmzDate = "labore";
+                xAmzSecurityToken = "delectus";
+                xAmzSignature = "eum";
+                xAmzSignedHeaders = "non";
+            }}            
 
             CreateLifecyclePolicyResponse res = sdk.createLifecyclePolicy(req);
 

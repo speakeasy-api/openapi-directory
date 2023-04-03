@@ -7,31 +7,27 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDeployedDevicesCertificateRequest {
-    
-    public UpdateDeployedDevicesCertificatePathParams pathParams;
-    public UpdateDeployedDevicesCertificateRequest withPathParams(UpdateDeployedDevicesCertificatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FleetSid")
+    public String fleetSid;
+    public UpdateDeployedDevicesCertificateRequest withFleetSid(String fleetSid) {
+        this.fleetSid = fleetSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateDeployedDevicesCertificateUpdateDeployedDevicesCertificateRequest request;
-    public UpdateDeployedDevicesCertificateRequest withRequest(UpdateDeployedDevicesCertificateUpdateDeployedDevicesCertificateRequest request) {
-        this.request = request;
+    public UpdateDeployedDevicesCertificateUpdateDeployedDevicesCertificateRequest requestBody;
+    public UpdateDeployedDevicesCertificateRequest withRequestBody(UpdateDeployedDevicesCertificateUpdateDeployedDevicesCertificateRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateDeployedDevicesCertificateSecurity security;
-    public UpdateDeployedDevicesCertificateRequest withSecurity(UpdateDeployedDevicesCertificateSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateDeployedDevicesCertificateRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Provides a 34 character string that uniquely identifies the requested Certificate credential resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateDeployedDevicesCertificateRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

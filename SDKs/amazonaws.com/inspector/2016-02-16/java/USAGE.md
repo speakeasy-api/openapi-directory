@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AddAttributesToFindingsXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AddAttributesToFindingsHeaders;
 import org.openapis.openapi.models.operations.AddAttributesToFindingsRequest;
 import org.openapis.openapi.models.operations.AddAttributesToFindingsResponse;
 import org.openapis.openapi.models.shared.AddAttributesToFindingsRequest;
@@ -16,50 +15,42 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AddAttributesToFindingsRequest req = new AddAttributesToFindingsRequest() {{
-                headers = new AddAttributesToFindingsHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "InspectorService.AddAttributesToFindings";
-                }};
-                request = new AddAttributesToFindingsRequest() {{
+                addAttributesToFindingsRequest = new AddAttributesToFindingsRequest() {{
                     attributes = new org.openapis.openapi.models.shared.Attribute[]{{
                         add(new Attribute() {{
-                            key = "vel";
-                            value = "error";
+                            key = "provident";
+                            value = "distinctio";
                         }}),
                         add(new Attribute() {{
-                            key = "deserunt";
-                            value = "suscipit";
+                            key = "quibusdam";
+                            value = "unde";
                         }}),
                         add(new Attribute() {{
-                            key = "iure";
-                            value = "magnam";
-                        }}),
-                        add(new Attribute() {{
-                            key = "debitis";
-                            value = "ipsa";
+                            key = "nulla";
+                            value = "corrupti";
                         }}),
                     }};
                     findingArns = new String[]{{
-                        add("tempora"),
+                        add("vel"),
+                        add("error"),
+                        add("deserunt"),
                         add("suscipit"),
-                        add("molestiae"),
-                        add("minus"),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "iure";
+                xAmzContentSha256 = "magnam";
+                xAmzCredential = "debitis";
+                xAmzDate = "ipsa";
+                xAmzSecurityToken = "delectus";
+                xAmzSignature = "tempora";
+                xAmzSignedHeaders = "suscipit";
+                xAmzTarget = "InspectorService.AddAttributesToFindings";
+            }}            
 
             AddAttributesToFindingsResponse res = sdk.addAttributesToFindings(req);
 

@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class QueryRecipientsRequest {
-    
-    public QueryRecipientsQueryParams queryParams;
-    public QueryRecipientsRequest withQueryParams(QueryRecipientsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:serialization=json,name=payload")
+    public org.openapis.openapi.models.shared.QueryRecipientsRequest payload;
+    public QueryRecipientsRequest withPayload(org.openapis.openapi.models.shared.QueryRecipientsRequest payload) {
+        this.payload = payload;
         return this;
     }
     

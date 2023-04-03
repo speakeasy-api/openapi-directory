@@ -43,7 +43,7 @@ public class Partner {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreatePartnerResponse createPartner(org.openapis.openapi.models.operations.CreatePartnerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreatePartnerResponse createPartner(org.openapis.openapi.models.shared.PartnerUpsert request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/partners");
         
@@ -122,7 +122,7 @@ public class Partner {
      */
     public org.openapis.openapi.models.operations.DeletePartnerResponse deletePartner(org.openapis.openapi.models.operations.DeletePartnerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePartnerPathParams.class, baseUrl, "/partners/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePartnerRequest.class, baseUrl, "/partners/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -178,7 +178,7 @@ public class Partner {
      */
     public org.openapis.openapi.models.operations.GetPartnerResponse getPartner(org.openapis.openapi.models.operations.GetPartnerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPartnerPathParams.class, baseUrl, "/partners/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPartnerRequest.class, baseUrl, "/partners/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -256,7 +256,7 @@ public class Partner {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListPartnerQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListPartnerRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -328,12 +328,12 @@ public class Partner {
      */
     public org.openapis.openapi.models.operations.UpdatePartnerResponse updatePartner(org.openapis.openapi.models.operations.UpdatePartnerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePartnerPathParams.class, baseUrl, "/partners/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePartnerRequest.class, baseUrl, "/partners/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "partnerUpsert", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeprovisionPublicIpv4PoolCidrRequest {
-    
-    public GETDeprovisionPublicIpv4PoolCidrQueryParams queryParams;
-    public GETDeprovisionPublicIpv4PoolCidrRequest withQueryParams(GETDeprovisionPublicIpv4PoolCidrQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDeprovisionPublicIpv4PoolCidrActionEnum action;
+    public GETDeprovisionPublicIpv4PoolCidrRequest withAction(GETDeprovisionPublicIpv4PoolCidrActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The CIDR you want to deprovision from the pool. Enter the CIDR you want to deprovision with a netmask of &lt;code&gt;/32&lt;/code&gt;. You must rerun this command for each IP address in the CIDR range. If your CIDR is a &lt;code&gt;/24&lt;/code&gt;, you will have to run this command to deprovision each of the 256 IP addresses in the &lt;code&gt;/24&lt;/code&gt; CIDR.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Cidr")
+    public String cidr;
+    public GETDeprovisionPublicIpv4PoolCidrRequest withCidr(String cidr) {
+        this.cidr = cidr;
+        return this;
+    }
     
-    public GETDeprovisionPublicIpv4PoolCidrHeaders headers;
-    public GETDeprovisionPublicIpv4PoolCidrRequest withHeaders(GETDeprovisionPublicIpv4PoolCidrHeaders headers) {
-        this.headers = headers;
+    /**
+     * A check for whether you have the required permissions for the action without actually making the request and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETDeprovisionPublicIpv4PoolCidrRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    /**
+     * The ID of the pool that you want to deprovision the CIDR from.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PoolId")
+    public String poolId;
+    public GETDeprovisionPublicIpv4PoolCidrRequest withPoolId(String poolId) {
+        this.poolId = poolId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDeprovisionPublicIpv4PoolCidrVersionEnum version;
+    public GETDeprovisionPublicIpv4PoolCidrRequest withVersion(GETDeprovisionPublicIpv4PoolCidrVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDeprovisionPublicIpv4PoolCidrRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDeprovisionPublicIpv4PoolCidrRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDeprovisionPublicIpv4PoolCidrRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDeprovisionPublicIpv4PoolCidrRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDeprovisionPublicIpv4PoolCidrRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDeprovisionPublicIpv4PoolCidrRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDeprovisionPublicIpv4PoolCidrRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangeClassificationPoliciesConfigRequest {
-    
-    public ChangeClassificationPoliciesConfigHeaders headers;
-    public ChangeClassificationPoliciesConfigRequest withHeaders(ChangeClassificationPoliciesConfigHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.UpdateClassificationPoliciesConfig updateClassificationPoliciesConfig;
+    public ChangeClassificationPoliciesConfigRequest withUpdateClassificationPoliciesConfig(org.openapis.openapi.models.shared.UpdateClassificationPoliciesConfig updateClassificationPoliciesConfig) {
+        this.updateClassificationPoliciesConfig = updateClassificationPoliciesConfig;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateClassificationPoliciesConfig request;
-    public ChangeClassificationPoliciesConfigRequest withRequest(org.openapis.openapi.models.shared.UpdateClassificationPoliciesConfig request) {
-        this.request = request;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public ChangeClassificationPoliciesConfigRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     

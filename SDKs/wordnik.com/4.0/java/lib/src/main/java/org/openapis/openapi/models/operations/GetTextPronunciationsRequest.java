@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTextPronunciationsRequest {
-    
-    public GetTextPronunciationsPathParams pathParams;
-    public GetTextPronunciationsRequest withPathParams(GetTextPronunciationsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Maximum number of results to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetTextPronunciationsRequest withLimit(Integer limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * Get from a single dictionary
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sourceDictionary")
+    public GetTextPronunciationsSourceDictionaryEnum sourceDictionary;
+    public GetTextPronunciationsRequest withSourceDictionary(GetTextPronunciationsSourceDictionaryEnum sourceDictionary) {
+        this.sourceDictionary = sourceDictionary;
+        return this;
+    }
     
-    public GetTextPronunciationsQueryParams queryParams;
-    public GetTextPronunciationsRequest withQueryParams(GetTextPronunciationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Text pronunciation type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=typeFormat")
+    public GetTextPronunciationsTypeFormatEnum typeFormat;
+    public GetTextPronunciationsRequest withTypeFormat(GetTextPronunciationsTypeFormatEnum typeFormat) {
+        this.typeFormat = typeFormat;
+        return this;
+    }
+    
+    /**
+     * If true will try to return a correct word root ('cats' -&gt; 'cat'). If false returns exactly what was requested.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=useCanonical")
+    public GetTextPronunciationsUseCanonicalEnum useCanonical;
+    public GetTextPronunciationsRequest withUseCanonical(GetTextPronunciationsUseCanonicalEnum useCanonical) {
+        this.useCanonical = useCanonical;
+        return this;
+    }
+    
+    /**
+     * Word to get pronunciations for
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=word")
+    public String word;
+    public GetTextPronunciationsRequest withWord(String word) {
+        this.word = word;
         return this;
     }
     

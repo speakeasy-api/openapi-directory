@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteOauthV1RefreshTokensTokenArchiveRequest {
-    
-    public DeleteOauthV1RefreshTokensTokenArchivePathParams pathParams;
-    public DeleteOauthV1RefreshTokensTokenArchiveRequest withPathParams(DeleteOauthV1RefreshTokensTokenArchivePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=token")
+    public String token;
+    public DeleteOauthV1RefreshTokensTokenArchiveRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

@@ -44,7 +44,7 @@ public class V2 {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AveragesV2GetV2AveragesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AveragesV2GetV2AveragesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -96,7 +96,7 @@ public class V2 {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CitiesGetV2CitiesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CitiesGetV2CitiesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -142,13 +142,13 @@ public class V2 {
      */
     public org.openapis.openapi.models.operations.CountriesGetV2CountriesCountryIdGetResponse countriesGetV2CountriesCountryIdGet(org.openapis.openapi.models.operations.CountriesGetV2CountriesCountryIdGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CountriesGetV2CountriesCountryIdGetPathParams.class, baseUrl, "/v2/countries/{country_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CountriesGetV2CountriesCountryIdGetRequest.class, baseUrl, "/v2/countries/{country_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CountriesGetV2CountriesCountryIdGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CountriesGetV2CountriesCountryIdGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -200,7 +200,7 @@ public class V2 {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CountriesGetV2CountriesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CountriesGetV2CountriesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -282,13 +282,13 @@ public class V2 {
      */
     public org.openapis.openapi.models.operations.GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetResponse getMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGet(org.openapis.openapi.models.operations.GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetPathParams.class, baseUrl, "/v2/locations/tiles/mobile-generalized/{z}/{x}/{y}.pbf", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetRequest.class, baseUrl, "/v2/locations/tiles/mobile-generalized/{z}/{x}/{y}.pbf", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -328,13 +328,13 @@ public class V2 {
      */
     public org.openapis.openapi.models.operations.GetMobiletileV2LocationsTilesMobileZXYPbfGetResponse getMobiletileV2LocationsTilesMobileZXYPbfGet(org.openapis.openapi.models.operations.GetMobiletileV2LocationsTilesMobileZXYPbfGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMobiletileV2LocationsTilesMobileZXYPbfGetPathParams.class, baseUrl, "/v2/locations/tiles/mobile/{z}/{x}/{y}.pbf", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMobiletileV2LocationsTilesMobileZXYPbfGetRequest.class, baseUrl, "/v2/locations/tiles/mobile/{z}/{x}/{y}.pbf", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMobiletileV2LocationsTilesMobileZXYPbfGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMobiletileV2LocationsTilesMobileZXYPbfGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -374,13 +374,13 @@ public class V2 {
      */
     public org.openapis.openapi.models.operations.GetTileV2LocationsTilesZXYPbfGetResponse getTileV2LocationsTilesZXYPbfGet(org.openapis.openapi.models.operations.GetTileV2LocationsTilesZXYPbfGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTileV2LocationsTilesZXYPbfGetPathParams.class, baseUrl, "/v2/locations/tiles/{z}/{x}/{y}.pbf", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTileV2LocationsTilesZXYPbfGetRequest.class, baseUrl, "/v2/locations/tiles/{z}/{x}/{y}.pbf", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTileV2LocationsTilesZXYPbfGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTileV2LocationsTilesZXYPbfGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -420,13 +420,13 @@ public class V2 {
      */
     public org.openapis.openapi.models.operations.LatestGetV2LatestLocationIdGetResponse latestGetV2LatestLocationIdGet(org.openapis.openapi.models.operations.LatestGetV2LatestLocationIdGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LatestGetV2LatestLocationIdGetPathParams.class, baseUrl, "/v2/latest/{location_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LatestGetV2LatestLocationIdGetRequest.class, baseUrl, "/v2/latest/{location_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LatestGetV2LatestLocationIdGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LatestGetV2LatestLocationIdGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -478,7 +478,7 @@ public class V2 {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LatestGetV2LatestGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LatestGetV2LatestGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -524,13 +524,13 @@ public class V2 {
      */
     public org.openapis.openapi.models.operations.LocationsGetV2LocationsLocationIdGetResponse locationsGetV2LocationsLocationIdGet(org.openapis.openapi.models.operations.LocationsGetV2LocationsLocationIdGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LocationsGetV2LocationsLocationIdGetPathParams.class, baseUrl, "/v2/locations/{location_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LocationsGetV2LocationsLocationIdGetRequest.class, baseUrl, "/v2/locations/{location_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LocationsGetV2LocationsLocationIdGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LocationsGetV2LocationsLocationIdGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -582,7 +582,7 @@ public class V2 {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LocationsGetV2LocationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LocationsGetV2LocationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -634,7 +634,7 @@ public class V2 {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MeasurementsGetV2MeasurementsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MeasurementsGetV2MeasurementsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -834,7 +834,7 @@ public class V2 {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ParametersGetV2ParametersGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ParametersGetV2ParametersGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -880,13 +880,13 @@ public class V2 {
      */
     public org.openapis.openapi.models.operations.ProjectsGetV2ProjectsProjectIdGetResponse projectsGetV2ProjectsProjectIdGet(org.openapis.openapi.models.operations.ProjectsGetV2ProjectsProjectIdGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsGetV2ProjectsProjectIdGetPathParams.class, baseUrl, "/v2/projects/{project_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectsGetV2ProjectsProjectIdGetRequest.class, baseUrl, "/v2/projects/{project_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProjectsGetV2ProjectsProjectIdGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProjectsGetV2ProjectsProjectIdGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -938,7 +938,7 @@ public class V2 {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProjectsGetV2ProjectsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProjectsGetV2ProjectsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -984,7 +984,7 @@ public class V2 {
      */
     public org.openapis.openapi.models.operations.ReadmeGetV2SourcesReadmeSlugGetResponse readmeGetV2SourcesReadmeSlugGet(org.openapis.openapi.models.operations.ReadmeGetV2SourcesReadmeSlugGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReadmeGetV2SourcesReadmeSlugGetPathParams.class, baseUrl, "/v2/sources/readme/{slug}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReadmeGetV2SourcesReadmeSlugGetRequest.class, baseUrl, "/v2/sources/readme/{slug}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1036,7 +1036,7 @@ public class V2 {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SourcesGetV2SourcesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SourcesGetV2SourcesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

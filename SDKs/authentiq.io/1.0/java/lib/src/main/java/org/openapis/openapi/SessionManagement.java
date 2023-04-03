@@ -41,7 +41,7 @@ public class SessionManagement {
      */
     public org.openapis.openapi.models.operations.AuthorizeIframeResponse authorizeIframe(org.openapis.openapi.models.operations.AuthorizeIframeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AuthorizeIframePathParams.class, baseUrl, "/{client_id}/iframe", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AuthorizeIframeRequest.class, baseUrl, "/{client_id}/iframe", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

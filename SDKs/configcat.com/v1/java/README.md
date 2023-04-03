@@ -17,9 +17,7 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.GetAuditlogsPathParams;
 import org.openapis.openapi.models.operations.GetAuditlogsAuditLogTypeEnum;
-import org.openapis.openapi.models.operations.GetAuditlogsQueryParams;
 import org.openapis.openapi.models.operations.GetAuditlogsRequest;
 import org.openapis.openapi.models.operations.GetAuditlogsResponse;
 
@@ -28,25 +26,19 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    basic = new SchemeBasic() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
+                    password = "YOUR_PASSWORD_HERE";
+                    username = "YOUR_USERNAME_HERE";
                 }})
                 .build();
 
             GetAuditlogsRequest req = new GetAuditlogsRequest() {{
-                pathParams = new GetAuditlogsPathParams() {{
-                    productId = "89bd9d8d-69a6-474e-8f46-7cc8796ed151";
-                }};
-                queryParams = new GetAuditlogsQueryParams() {{
-                    auditLogType = "organizationAdminLeft";
-                    configId = "05dfc2dd-f7cc-478c-a1ba-928fc816742c";
-                    environmentId = "b7392059-2939-46fe-a759-6eb10faaa235";
-                    fromUtcDateTime = "2022-04-01T23:59:21.675Z";
-                    toUtcDateTime = "2022-05-24T03:24:11.703Z";
-                }};
-            }};            
+                auditLogType = "integrationLinkAdded";
+                configId = "9bd9d8d6-9a67-44e0-b467-cc8796ed151a";
+                environmentId = "05dfc2dd-f7cc-478c-a1ba-928fc816742c";
+                fromUtcDateTime = "2022-02-02T00:14:45.467Z";
+                productId = "39205929-396f-4ea7-996e-b10faaa2352c";
+                toUtcDateTime = "2022-05-24T03:24:11.703Z";
+            }}            
 
             GetAuditlogsResponse res = sdk.auditLogs.getAuditlogs(req);
 
@@ -60,7 +52,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### auditLogs

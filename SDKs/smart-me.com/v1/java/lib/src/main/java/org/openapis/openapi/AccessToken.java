@@ -35,7 +35,7 @@ public class AccessToken {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccessTokenPutFormResponse accessTokenPutForm(org.openapis.openapi.models.operations.AccessTokenPutFormRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccessTokenPutFormResponse accessTokenPutForm(org.openapis.openapi.models.shared.AccessTokenToPut request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/AccessToken");
         
@@ -93,7 +93,7 @@ public class AccessToken {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccessTokenPutJsonResponse accessTokenPutJson(org.openapis.openapi.models.operations.AccessTokenPutJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccessTokenPutJsonResponse accessTokenPutJson(org.openapis.openapi.models.shared.AccessTokenToPut request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/AccessToken");
         
@@ -151,7 +151,7 @@ public class AccessToken {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccessTokenPutRawResponse accessTokenPutRaw(org.openapis.openapi.models.operations.AccessTokenPutRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccessTokenPutRawResponse accessTokenPutRaw(byte[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/AccessToken");
         

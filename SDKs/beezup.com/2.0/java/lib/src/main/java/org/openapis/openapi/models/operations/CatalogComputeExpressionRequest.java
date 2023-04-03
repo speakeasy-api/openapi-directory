@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CatalogComputeExpressionRequest {
-    
-    public CatalogComputeExpressionPathParams pathParams;
-    public CatalogComputeExpressionRequest withPathParams(CatalogComputeExpressionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ComputeExpressionRequest computeExpressionRequest;
+    public CatalogComputeExpressionRequest withComputeExpressionRequest(org.openapis.openapi.models.shared.ComputeExpressionRequest computeExpressionRequest) {
+        this.computeExpressionRequest = computeExpressionRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ComputeExpressionRequest request;
-    public CatalogComputeExpressionRequest withRequest(org.openapis.openapi.models.shared.ComputeExpressionRequest request) {
-        this.request = request;
+    /**
+     * Your store identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public CatalogComputeExpressionRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

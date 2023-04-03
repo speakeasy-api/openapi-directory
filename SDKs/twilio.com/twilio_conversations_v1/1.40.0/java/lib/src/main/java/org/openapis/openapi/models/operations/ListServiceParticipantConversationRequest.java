@@ -4,34 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListServiceParticipantConversationRequest {
-    
-    public ListServiceParticipantConversationPathParams pathParams;
-    public ListServiceParticipantConversationRequest withPathParams(ListServiceParticipantConversationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique string identifier for the conversation participant who's not a Conversation User. This parameter could be found in messaging_binding.address field of Participant resource. It should be url-encoded.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Address")
+    public String address;
+    public ListServiceParticipantConversationRequest withAddress(String address) {
+        this.address = address;
         return this;
     }
     
-    
-    public ListServiceParticipantConversationQueryParams queryParams;
-    public ListServiceParticipantConversationRequest withQueryParams(ListServiceParticipantConversationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Participant Conversations resource is associated with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChatServiceSid")
+    public String chatServiceSid;
+    public ListServiceParticipantConversationRequest withChatServiceSid(String chatServiceSid) {
+        this.chatServiceSid = chatServiceSid;
         return this;
     }
     
-    
-    public ListServiceParticipantConversationSecurity security;
-    public ListServiceParticipantConversationRequest withSecurity(ListServiceParticipantConversationSecurity security) {
-        this.security = security;
+    /**
+     * A unique string identifier for the conversation participant as [Conversation User](https://www.twilio.com/docs/conversations/api/user-resource). This parameter is non-null if (and only if) the participant is using the Conversations SDK to communicate. Limited to 256 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Identity")
+    public String identity;
+    public ListServiceParticipantConversationRequest withIdentity(String identity) {
+        this.identity = identity;
         return this;
     }
     
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListServiceParticipantConversationRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public String serverURL;
-    public ListServiceParticipantConversationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListServiceParticipantConversationRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListServiceParticipantConversationRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UploadUserProfilePictureMultipartRequest {
-    
-    public UploadUserProfilePictureMultipartPathParams pathParams;
-    public UploadUserProfilePictureMultipartRequest withPathParams(UploadUserProfilePictureMultipartPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public org.openapis.openapi.models.shared.ProfilePictureUpload1 request;
-    public UploadUserProfilePictureMultipartRequest withRequest(org.openapis.openapi.models.shared.ProfilePictureUpload1 request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ProfilePictureUpload1 profilePictureUpload1;
+    public UploadUserProfilePictureMultipartRequest withProfilePictureUpload1(org.openapis.openapi.models.shared.ProfilePictureUpload1 profilePictureUpload1) {
+        this.profilePictureUpload1 = profilePictureUpload1;
         return this;
     }
     
-    
-    public UploadUserProfilePictureMultipartSecurity security;
-    public UploadUserProfilePictureMultipartRequest withSecurity(UploadUserProfilePictureMultipartSecurity security) {
-        this.security = security;
+    /**
+     * User ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public Long userId;
+    public UploadUserProfilePictureMultipartRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

@@ -34,25 +34,26 @@ public class TargetingTemplates {
     /**
      * Gets one targeting template by ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingTargetingTemplatesGetResponse dfareportingTargetingTemplatesGet(org.openapis.openapi.models.operations.DfareportingTargetingTemplatesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingTargetingTemplatesGetResponse dfareportingTargetingTemplatesGet(org.openapis.openapi.models.operations.DfareportingTargetingTemplatesGetRequest request, org.openapis.openapi.models.operations.DfareportingTargetingTemplatesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingTargetingTemplatesGetPathParams.class, baseUrl, "/userprofiles/{profileId}/targetingTemplates/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingTargetingTemplatesGetRequest.class, baseUrl, "/userprofiles/{profileId}/targetingTemplates/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingTargetingTemplatesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingTargetingTemplatesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,27 +80,28 @@ public class TargetingTemplates {
     /**
      * Inserts a new targeting template.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingTargetingTemplatesInsertResponse dfareportingTargetingTemplatesInsert(org.openapis.openapi.models.operations.DfareportingTargetingTemplatesInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingTargetingTemplatesInsertResponse dfareportingTargetingTemplatesInsert(org.openapis.openapi.models.operations.DfareportingTargetingTemplatesInsertRequest request, org.openapis.openapi.models.operations.DfareportingTargetingTemplatesInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingTargetingTemplatesInsertPathParams.class, baseUrl, "/userprofiles/{profileId}/targetingTemplates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingTargetingTemplatesInsertRequest.class, baseUrl, "/userprofiles/{profileId}/targetingTemplates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "targetingTemplate", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingTargetingTemplatesInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingTargetingTemplatesInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,25 +128,26 @@ public class TargetingTemplates {
     /**
      * Retrieves a list of targeting templates, optionally filtered. This method supports paging.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingTargetingTemplatesListResponse dfareportingTargetingTemplatesList(org.openapis.openapi.models.operations.DfareportingTargetingTemplatesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingTargetingTemplatesListResponse dfareportingTargetingTemplatesList(org.openapis.openapi.models.operations.DfareportingTargetingTemplatesListRequest request, org.openapis.openapi.models.operations.DfareportingTargetingTemplatesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingTargetingTemplatesListPathParams.class, baseUrl, "/userprofiles/{profileId}/targetingTemplates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingTargetingTemplatesListRequest.class, baseUrl, "/userprofiles/{profileId}/targetingTemplates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingTargetingTemplatesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingTargetingTemplatesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,27 +174,28 @@ public class TargetingTemplates {
     /**
      * Updates an existing targeting template. This method supports patch semantics.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingTargetingTemplatesPatchResponse dfareportingTargetingTemplatesPatch(org.openapis.openapi.models.operations.DfareportingTargetingTemplatesPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingTargetingTemplatesPatchResponse dfareportingTargetingTemplatesPatch(org.openapis.openapi.models.operations.DfareportingTargetingTemplatesPatchRequest request, org.openapis.openapi.models.operations.DfareportingTargetingTemplatesPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingTargetingTemplatesPatchPathParams.class, baseUrl, "/userprofiles/{profileId}/targetingTemplates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingTargetingTemplatesPatchRequest.class, baseUrl, "/userprofiles/{profileId}/targetingTemplates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "targetingTemplate", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingTargetingTemplatesPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingTargetingTemplatesPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -218,27 +222,28 @@ public class TargetingTemplates {
     /**
      * Updates an existing targeting template.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingTargetingTemplatesUpdateResponse dfareportingTargetingTemplatesUpdate(org.openapis.openapi.models.operations.DfareportingTargetingTemplatesUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingTargetingTemplatesUpdateResponse dfareportingTargetingTemplatesUpdate(org.openapis.openapi.models.operations.DfareportingTargetingTemplatesUpdateRequest request, org.openapis.openapi.models.operations.DfareportingTargetingTemplatesUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingTargetingTemplatesUpdatePathParams.class, baseUrl, "/userprofiles/{profileId}/targetingTemplates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingTargetingTemplatesUpdateRequest.class, baseUrl, "/userprofiles/{profileId}/targetingTemplates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "targetingTemplate", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingTargetingTemplatesUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingTargetingTemplatesUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

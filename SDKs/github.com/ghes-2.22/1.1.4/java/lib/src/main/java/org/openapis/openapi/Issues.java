@@ -47,12 +47,12 @@ public class Issues {
      */
     public org.openapis.openapi.models.operations.IssuesAddAssigneesResponse issuesAddAssignees(org.openapis.openapi.models.operations.IssuesAddAssigneesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesAddAssigneesPathParams.class, baseUrl, "/repos/{owner}/{repo}/issues/{issue_number}/assignees", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesAddAssigneesRequest.class, baseUrl, "/repos/{owner}/{repo}/issues/{issue_number}/assignees", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -88,12 +88,12 @@ public class Issues {
      */
     public org.openapis.openapi.models.operations.IssuesAddLabelsResponse issuesAddLabels(org.openapis.openapi.models.operations.IssuesAddLabelsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesAddLabelsPathParams.class, baseUrl, "/repos/{owner}/{repo}/issues/{issue_number}/labels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesAddLabelsRequest.class, baseUrl, "/repos/{owner}/{repo}/issues/{issue_number}/labels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -150,7 +150,7 @@ public class Issues {
      */
     public org.openapis.openapi.models.operations.IssuesCheckUserCanBeAssignedResponse issuesCheckUserCanBeAssigned(org.openapis.openapi.models.operations.IssuesCheckUserCanBeAssignedRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesCheckUserCanBeAssignedPathParams.class, baseUrl, "/repos/{owner}/{repo}/assignees/{assignee}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesCheckUserCanBeAssignedRequest.class, baseUrl, "/repos/{owner}/{repo}/assignees/{assignee}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -194,12 +194,12 @@ public class Issues {
      */
     public org.openapis.openapi.models.operations.IssuesCreateResponse issuesCreate(org.openapis.openapi.models.operations.IssuesCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesCreatePathParams.class, baseUrl, "/repos/{owner}/{repo}/issues", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesCreateRequest.class, baseUrl, "/repos/{owner}/{repo}/issues", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -265,12 +265,12 @@ public class Issues {
      */
     public org.openapis.openapi.models.operations.IssuesCreateCommentResponse issuesCreateComment(org.openapis.openapi.models.operations.IssuesCreateCommentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesCreateCommentPathParams.class, baseUrl, "/repos/{owner}/{repo}/issues/{issue_number}/comments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesCreateCommentRequest.class, baseUrl, "/repos/{owner}/{repo}/issues/{issue_number}/comments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -327,12 +327,12 @@ public class Issues {
      */
     public org.openapis.openapi.models.operations.IssuesCreateLabelResponse issuesCreateLabel(org.openapis.openapi.models.operations.IssuesCreateLabelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesCreateLabelPathParams.class, baseUrl, "/repos/{owner}/{repo}/labels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesCreateLabelRequest.class, baseUrl, "/repos/{owner}/{repo}/labels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -389,12 +389,12 @@ public class Issues {
      */
     public org.openapis.openapi.models.operations.IssuesCreateMilestoneResponse issuesCreateMilestone(org.openapis.openapi.models.operations.IssuesCreateMilestoneRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesCreateMilestonePathParams.class, baseUrl, "/repos/{owner}/{repo}/milestones", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesCreateMilestoneRequest.class, baseUrl, "/repos/{owner}/{repo}/milestones", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -451,7 +451,7 @@ public class Issues {
      */
     public org.openapis.openapi.models.operations.IssuesDeleteCommentResponse issuesDeleteComment(org.openapis.openapi.models.operations.IssuesDeleteCommentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesDeleteCommentPathParams.class, baseUrl, "/repos/{owner}/{repo}/issues/comments/{comment_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesDeleteCommentRequest.class, baseUrl, "/repos/{owner}/{repo}/issues/comments/{comment_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -484,7 +484,7 @@ public class Issues {
      */
     public org.openapis.openapi.models.operations.IssuesDeleteLabelResponse issuesDeleteLabel(org.openapis.openapi.models.operations.IssuesDeleteLabelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesDeleteLabelPathParams.class, baseUrl, "/repos/{owner}/{repo}/labels/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesDeleteLabelRequest.class, baseUrl, "/repos/{owner}/{repo}/labels/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -517,7 +517,7 @@ public class Issues {
      */
     public org.openapis.openapi.models.operations.IssuesDeleteMilestoneResponse issuesDeleteMilestone(org.openapis.openapi.models.operations.IssuesDeleteMilestoneRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesDeleteMilestonePathParams.class, baseUrl, "/repos/{owner}/{repo}/milestones/{milestone_number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesDeleteMilestoneRequest.class, baseUrl, "/repos/{owner}/{repo}/milestones/{milestone_number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -569,7 +569,7 @@ public class Issues {
      */
     public org.openapis.openapi.models.operations.IssuesGetResponse issuesGet(org.openapis.openapi.models.operations.IssuesGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesGetPathParams.class, baseUrl, "/repos/{owner}/{repo}/issues/{issue_number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesGetRequest.class, baseUrl, "/repos/{owner}/{repo}/issues/{issue_number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -618,7 +618,7 @@ public class Issues {
      */
     public org.openapis.openapi.models.operations.IssuesGetCommentResponse issuesGetComment(org.openapis.openapi.models.operations.IssuesGetCommentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesGetCommentPathParams.class, baseUrl, "/repos/{owner}/{repo}/issues/comments/{comment_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesGetCommentRequest.class, baseUrl, "/repos/{owner}/{repo}/issues/comments/{comment_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -665,7 +665,7 @@ public class Issues {
      */
     public org.openapis.openapi.models.operations.IssuesGetEventResponse issuesGetEvent(org.openapis.openapi.models.operations.IssuesGetEventRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesGetEventPathParams.class, baseUrl, "/repos/{owner}/{repo}/issues/events/{event_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesGetEventRequest.class, baseUrl, "/repos/{owner}/{repo}/issues/events/{event_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -712,7 +712,7 @@ public class Issues {
      */
     public org.openapis.openapi.models.operations.IssuesGetLabelResponse issuesGetLabel(org.openapis.openapi.models.operations.IssuesGetLabelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesGetLabelPathParams.class, baseUrl, "/repos/{owner}/{repo}/labels/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesGetLabelRequest.class, baseUrl, "/repos/{owner}/{repo}/labels/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -759,7 +759,7 @@ public class Issues {
      */
     public org.openapis.openapi.models.operations.IssuesGetMilestoneResponse issuesGetMilestone(org.openapis.openapi.models.operations.IssuesGetMilestoneRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesGetMilestonePathParams.class, baseUrl, "/repos/{owner}/{repo}/milestones/{milestone_number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesGetMilestoneRequest.class, baseUrl, "/repos/{owner}/{repo}/milestones/{milestone_number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -821,7 +821,7 @@ public class Issues {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IssuesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IssuesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -881,13 +881,13 @@ public class Issues {
      */
     public org.openapis.openapi.models.operations.IssuesListAssigneesResponse issuesListAssignees(org.openapis.openapi.models.operations.IssuesListAssigneesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesListAssigneesPathParams.class, baseUrl, "/repos/{owner}/{repo}/assignees", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesListAssigneesRequest.class, baseUrl, "/repos/{owner}/{repo}/assignees", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IssuesListAssigneesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IssuesListAssigneesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -937,13 +937,13 @@ public class Issues {
      */
     public org.openapis.openapi.models.operations.IssuesListCommentsResponse issuesListComments(org.openapis.openapi.models.operations.IssuesListCommentsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesListCommentsPathParams.class, baseUrl, "/repos/{owner}/{repo}/issues/{issue_number}/comments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesListCommentsRequest.class, baseUrl, "/repos/{owner}/{repo}/issues/{issue_number}/comments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IssuesListCommentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IssuesListCommentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -993,13 +993,13 @@ public class Issues {
      */
     public org.openapis.openapi.models.operations.IssuesListCommentsForRepoResponse issuesListCommentsForRepo(org.openapis.openapi.models.operations.IssuesListCommentsForRepoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesListCommentsForRepoPathParams.class, baseUrl, "/repos/{owner}/{repo}/issues/comments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesListCommentsForRepoRequest.class, baseUrl, "/repos/{owner}/{repo}/issues/comments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IssuesListCommentsForRepoQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IssuesListCommentsForRepoRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1056,13 +1056,13 @@ public class Issues {
      */
     public org.openapis.openapi.models.operations.IssuesListEventsResponse issuesListEvents(org.openapis.openapi.models.operations.IssuesListEventsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesListEventsPathParams.class, baseUrl, "/repos/{owner}/{repo}/issues/{issue_number}/events", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesListEventsRequest.class, baseUrl, "/repos/{owner}/{repo}/issues/{issue_number}/events", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IssuesListEventsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IssuesListEventsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1111,13 +1111,13 @@ public class Issues {
      */
     public org.openapis.openapi.models.operations.IssuesListEventsForRepoResponse issuesListEventsForRepo(org.openapis.openapi.models.operations.IssuesListEventsForRepoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesListEventsForRepoPathParams.class, baseUrl, "/repos/{owner}/{repo}/issues/events", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesListEventsForRepoRequest.class, baseUrl, "/repos/{owner}/{repo}/issues/events", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IssuesListEventsForRepoQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IssuesListEventsForRepoRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1166,13 +1166,13 @@ public class Issues {
      */
     public org.openapis.openapi.models.operations.IssuesListEventsForTimelineResponse issuesListEventsForTimeline(org.openapis.openapi.models.operations.IssuesListEventsForTimelineRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesListEventsForTimelinePathParams.class, baseUrl, "/repos/{owner}/{repo}/issues/{issue_number}/timeline", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesListEventsForTimelineRequest.class, baseUrl, "/repos/{owner}/{repo}/issues/{issue_number}/timeline", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IssuesListEventsForTimelineQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IssuesListEventsForTimelineRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1233,7 +1233,7 @@ public class Issues {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IssuesListForAuthenticatedUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IssuesListForAuthenticatedUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1290,13 +1290,13 @@ public class Issues {
      */
     public org.openapis.openapi.models.operations.IssuesListForOrgResponse issuesListForOrg(org.openapis.openapi.models.operations.IssuesListForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesListForOrgPathParams.class, baseUrl, "/orgs/{org}/issues", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesListForOrgRequest.class, baseUrl, "/orgs/{org}/issues", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IssuesListForOrgQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IssuesListForOrgRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1351,13 +1351,13 @@ public class Issues {
      */
     public org.openapis.openapi.models.operations.IssuesListForRepoResponse issuesListForRepo(org.openapis.openapi.models.operations.IssuesListForRepoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesListForRepoPathParams.class, baseUrl, "/repos/{owner}/{repo}/issues", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesListForRepoRequest.class, baseUrl, "/repos/{owner}/{repo}/issues", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IssuesListForRepoQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IssuesListForRepoRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1414,13 +1414,13 @@ public class Issues {
      */
     public org.openapis.openapi.models.operations.IssuesListLabelsForMilestoneResponse issuesListLabelsForMilestone(org.openapis.openapi.models.operations.IssuesListLabelsForMilestoneRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesListLabelsForMilestonePathParams.class, baseUrl, "/repos/{owner}/{repo}/milestones/{milestone_number}/labels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesListLabelsForMilestoneRequest.class, baseUrl, "/repos/{owner}/{repo}/milestones/{milestone_number}/labels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IssuesListLabelsForMilestoneQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IssuesListLabelsForMilestoneRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1461,13 +1461,13 @@ public class Issues {
      */
     public org.openapis.openapi.models.operations.IssuesListLabelsForRepoResponse issuesListLabelsForRepo(org.openapis.openapi.models.operations.IssuesListLabelsForRepoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesListLabelsForRepoPathParams.class, baseUrl, "/repos/{owner}/{repo}/labels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesListLabelsForRepoRequest.class, baseUrl, "/repos/{owner}/{repo}/labels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IssuesListLabelsForRepoQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IssuesListLabelsForRepoRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1516,13 +1516,13 @@ public class Issues {
      */
     public org.openapis.openapi.models.operations.IssuesListLabelsOnIssueResponse issuesListLabelsOnIssue(org.openapis.openapi.models.operations.IssuesListLabelsOnIssueRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesListLabelsOnIssuePathParams.class, baseUrl, "/repos/{owner}/{repo}/issues/{issue_number}/labels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesListLabelsOnIssueRequest.class, baseUrl, "/repos/{owner}/{repo}/issues/{issue_number}/labels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IssuesListLabelsOnIssueQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IssuesListLabelsOnIssueRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1571,13 +1571,13 @@ public class Issues {
      */
     public org.openapis.openapi.models.operations.IssuesListMilestonesResponse issuesListMilestones(org.openapis.openapi.models.operations.IssuesListMilestonesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesListMilestonesPathParams.class, baseUrl, "/repos/{owner}/{repo}/milestones", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesListMilestonesRequest.class, baseUrl, "/repos/{owner}/{repo}/milestones", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IssuesListMilestonesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IssuesListMilestonesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1629,12 +1629,12 @@ public class Issues {
      */
     public org.openapis.openapi.models.operations.IssuesLockResponse issuesLock(org.openapis.openapi.models.operations.IssuesLockRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesLockPathParams.class, baseUrl, "/repos/{owner}/{repo}/issues/{issue_number}/lock", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesLockRequest.class, baseUrl, "/repos/{owner}/{repo}/issues/{issue_number}/lock", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1680,7 +1680,7 @@ public class Issues {
      */
     public org.openapis.openapi.models.operations.IssuesRemoveAllLabelsResponse issuesRemoveAllLabels(org.openapis.openapi.models.operations.IssuesRemoveAllLabelsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesRemoveAllLabelsPathParams.class, baseUrl, "/repos/{owner}/{repo}/issues/{issue_number}/labels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesRemoveAllLabelsRequest.class, baseUrl, "/repos/{owner}/{repo}/issues/{issue_number}/labels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1722,12 +1722,12 @@ public class Issues {
      */
     public org.openapis.openapi.models.operations.IssuesRemoveAssigneesResponse issuesRemoveAssignees(org.openapis.openapi.models.operations.IssuesRemoveAssigneesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesRemoveAssigneesPathParams.class, baseUrl, "/repos/{owner}/{repo}/issues/{issue_number}/assignees", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesRemoveAssigneesRequest.class, baseUrl, "/repos/{owner}/{repo}/issues/{issue_number}/assignees", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1764,7 +1764,7 @@ public class Issues {
      */
     public org.openapis.openapi.models.operations.IssuesRemoveLabelResponse issuesRemoveLabel(org.openapis.openapi.models.operations.IssuesRemoveLabelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesRemoveLabelPathParams.class, baseUrl, "/repos/{owner}/{repo}/issues/{issue_number}/labels/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesRemoveLabelRequest.class, baseUrl, "/repos/{owner}/{repo}/issues/{issue_number}/labels/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1812,12 +1812,12 @@ public class Issues {
      */
     public org.openapis.openapi.models.operations.IssuesSetLabelsResponse issuesSetLabels(org.openapis.openapi.models.operations.IssuesSetLabelsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesSetLabelsPathParams.class, baseUrl, "/repos/{owner}/{repo}/issues/{issue_number}/labels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesSetLabelsRequest.class, baseUrl, "/repos/{owner}/{repo}/issues/{issue_number}/labels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1870,7 +1870,7 @@ public class Issues {
      */
     public org.openapis.openapi.models.operations.IssuesUnlockResponse issuesUnlock(org.openapis.openapi.models.operations.IssuesUnlockRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesUnlockPathParams.class, baseUrl, "/repos/{owner}/{repo}/issues/{issue_number}/lock", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesUnlockRequest.class, baseUrl, "/repos/{owner}/{repo}/issues/{issue_number}/lock", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1912,12 +1912,12 @@ public class Issues {
      */
     public org.openapis.openapi.models.operations.IssuesUpdateResponse issuesUpdate(org.openapis.openapi.models.operations.IssuesUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesUpdatePathParams.class, baseUrl, "/repos/{owner}/{repo}/issues/{issue_number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesUpdateRequest.class, baseUrl, "/repos/{owner}/{repo}/issues/{issue_number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1977,12 +1977,12 @@ public class Issues {
      */
     public org.openapis.openapi.models.operations.IssuesUpdateCommentResponse issuesUpdateComment(org.openapis.openapi.models.operations.IssuesUpdateCommentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesUpdateCommentPathParams.class, baseUrl, "/repos/{owner}/{repo}/issues/comments/{comment_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesUpdateCommentRequest.class, baseUrl, "/repos/{owner}/{repo}/issues/comments/{comment_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -2029,12 +2029,12 @@ public class Issues {
      */
     public org.openapis.openapi.models.operations.IssuesUpdateLabelResponse issuesUpdateLabel(org.openapis.openapi.models.operations.IssuesUpdateLabelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesUpdateLabelPathParams.class, baseUrl, "/repos/{owner}/{repo}/labels/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesUpdateLabelRequest.class, baseUrl, "/repos/{owner}/{repo}/labels/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -2070,12 +2070,12 @@ public class Issues {
      */
     public org.openapis.openapi.models.operations.IssuesUpdateMilestoneResponse issuesUpdateMilestone(org.openapis.openapi.models.operations.IssuesUpdateMilestoneRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesUpdateMilestonePathParams.class, baseUrl, "/repos/{owner}/{repo}/milestones/{milestone_number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IssuesUpdateMilestoneRequest.class, baseUrl, "/repos/{owner}/{repo}/milestones/{milestone_number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

@@ -4,34 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchWirelessUsageRequest {
-    
-    public FetchWirelessUsagePathParams pathParams;
-    public FetchWirelessUsageRequest withPathParams(FetchWirelessUsagePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=End")
+    public String end;
+    public FetchWirelessUsageRequest withEnd(String end) {
+        this.end = end;
         return this;
     }
     
-    
-    public FetchWirelessUsageQueryParams queryParams;
-    public FetchWirelessUsageRequest withQueryParams(FetchWirelessUsageQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=SimSid")
+    public String simSid;
+    public FetchWirelessUsageRequest withSimSid(String simSid) {
+        this.simSid = simSid;
         return this;
     }
     
-    
-    public FetchWirelessUsageSecurity security;
-    public FetchWirelessUsageRequest withSecurity(FetchWirelessUsageSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchWirelessUsageRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Start")
+    public String start;
+    public FetchWirelessUsageRequest withStart(String start) {
+        this.start = start;
         return this;
     }
     

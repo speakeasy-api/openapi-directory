@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DistributionGroupsCreateForOrgRequest {
-    
-    public DistributionGroupsCreateForOrgPathParams pathParams;
-    public DistributionGroupsCreateForOrgRequest withPathParams(DistributionGroupsCreateForOrgPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The attributes to update for the distribution group
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public DistributionGroupsCreateForOrgRequestBody request;
-    public DistributionGroupsCreateForOrgRequest withRequest(DistributionGroupsCreateForOrgRequestBody request) {
-        this.request = request;
+    public DistributionGroupsCreateForOrgRequestBody requestBody;
+    public DistributionGroupsCreateForOrgRequest withRequestBody(DistributionGroupsCreateForOrgRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public DistributionGroupsCreateForOrgSecurity security;
-    public DistributionGroupsCreateForOrgRequest withSecurity(DistributionGroupsCreateForOrgSecurity security) {
-        this.security = security;
+    /**
+     * The organization's name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_name")
+    public String orgName;
+    public DistributionGroupsCreateForOrgRequest withOrgName(String orgName) {
+        this.orgName = orgName;
         return this;
     }
     

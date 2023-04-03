@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoryPostFileJsonRequest {
-    
-    public StoryPostFileJsonQueryParams queryParams;
-    public StoryPostFileJsonRequest withQueryParams(StoryPostFileJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * A json-formatted object that includes a base64 encoded file (file encoded utf-8)
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.FileUpload request;
-    public StoryPostFileJsonRequest withRequest(org.openapis.openapi.models.shared.FileUpload request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.FileUpload fileUpload;
+    public StoryPostFileJsonRequest withFileUpload(org.openapis.openapi.models.shared.FileUpload fileUpload) {
+        this.fileUpload = fileUpload;
+        return this;
+    }
+    
+    /**
+     * Determines whether a repsonse including story objects should include the story outline.  Defaults to true. Useful for speeding up processing times.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_outline")
+    public Boolean includeOutline;
+    public StoryPostFileJsonRequest withIncludeOutline(Boolean includeOutline) {
+        this.includeOutline = includeOutline;
         return this;
     }
     

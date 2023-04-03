@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEditorialLivefeedListRequest {
-    
-    public GetEditorialLivefeedListQueryParams queryParams;
-    public GetEditorialLivefeedListRequest withQueryParams(GetEditorialLivefeedListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Returns only livefeeds that are available for distribution in a certain country
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public String country;
+    public GetEditorialLivefeedListRequest withCountry(String country) {
+        this.country = country;
         return this;
     }
     
+    /**
+     * Page number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetEditorialLivefeedListRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetEditorialLivefeedListSecurity security;
-    public GetEditorialLivefeedListRequest withSecurity(GetEditorialLivefeedListSecurity security) {
-        this.security = security;
+    /**
+     * Number of results per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetEditorialLivefeedListRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
         return this;
     }
     

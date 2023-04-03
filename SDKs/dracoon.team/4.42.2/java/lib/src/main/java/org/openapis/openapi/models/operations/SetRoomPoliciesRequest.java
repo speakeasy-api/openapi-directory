@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetRoomPoliciesRequest {
-    
-    public SetRoomPoliciesPathParams pathParams;
-    public SetRoomPoliciesRequest withPathParams(SetRoomPoliciesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public SetRoomPoliciesHeaders headers;
-    public SetRoomPoliciesRequest withHeaders(SetRoomPoliciesHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RoomPoliciesRequest request;
-    public SetRoomPoliciesRequest withRequest(org.openapis.openapi.models.shared.RoomPoliciesRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.RoomPoliciesRequest roomPoliciesRequest;
+    public SetRoomPoliciesRequest withRoomPoliciesRequest(org.openapis.openapi.models.shared.RoomPoliciesRequest roomPoliciesRequest) {
+        this.roomPoliciesRequest = roomPoliciesRequest;
+        return this;
+    }
+    
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public SetRoomPoliciesRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
+        return this;
+    }
+    
+    /**
+     * Room ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=room_id")
+    public Long roomId;
+    public SetRoomPoliciesRequest withRoomId(Long roomId) {
+        this.roomId = roomId;
         return this;
     }
     

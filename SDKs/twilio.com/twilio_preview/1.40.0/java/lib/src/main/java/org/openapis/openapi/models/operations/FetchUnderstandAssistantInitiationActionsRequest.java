@@ -4,27 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchUnderstandAssistantInitiationActionsRequest {
-    
-    public FetchUnderstandAssistantInitiationActionsPathParams pathParams;
-    public FetchUnderstandAssistantInitiationActionsRequest withPathParams(FetchUnderstandAssistantInitiationActionsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchUnderstandAssistantInitiationActionsSecurity security;
-    public FetchUnderstandAssistantInitiationActionsRequest withSecurity(FetchUnderstandAssistantInitiationActionsSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchUnderstandAssistantInitiationActionsRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public FetchUnderstandAssistantInitiationActionsRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     

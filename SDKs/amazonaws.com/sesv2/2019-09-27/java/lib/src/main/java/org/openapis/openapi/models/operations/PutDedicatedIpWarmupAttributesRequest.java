@@ -7,24 +7,69 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutDedicatedIpWarmupAttributesRequest {
-    
-    public PutDedicatedIpWarmupAttributesPathParams pathParams;
-    public PutDedicatedIpWarmupAttributesRequest withPathParams(PutDedicatedIpWarmupAttributesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutDedicatedIpWarmupAttributesHeaders headers;
-    public PutDedicatedIpWarmupAttributesRequest withHeaders(PutDedicatedIpWarmupAttributesHeaders headers) {
-        this.headers = headers;
+    /**
+     * The dedicated IP address that you want to update the warm-up attributes for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=IP")
+    public String ip;
+    public PutDedicatedIpWarmupAttributesRequest withIp(String ip) {
+        this.ip = ip;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PutDedicatedIpWarmupAttributesRequestBody request;
-    public PutDedicatedIpWarmupAttributesRequest withRequest(PutDedicatedIpWarmupAttributesRequestBody request) {
-        this.request = request;
+    public PutDedicatedIpWarmupAttributesRequestBody requestBody;
+    public PutDedicatedIpWarmupAttributesRequest withRequestBody(PutDedicatedIpWarmupAttributesRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public PutDedicatedIpWarmupAttributesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public PutDedicatedIpWarmupAttributesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public PutDedicatedIpWarmupAttributesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public PutDedicatedIpWarmupAttributesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public PutDedicatedIpWarmupAttributesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public PutDedicatedIpWarmupAttributesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public PutDedicatedIpWarmupAttributesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

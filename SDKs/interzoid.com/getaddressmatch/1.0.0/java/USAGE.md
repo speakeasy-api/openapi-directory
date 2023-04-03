@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetaddressmatchQueryParams;
 import org.openapis.openapi.models.operations.GetaddressmatchRequest;
 import org.openapis.openapi.models.operations.GetaddressmatchResponse;
 
@@ -15,11 +14,9 @@ public class Application {
                 .build();
 
             GetaddressmatchRequest req = new GetaddressmatchRequest() {{
-                queryParams = new GetaddressmatchQueryParams() {{
-                    address = "5786 Little Streets";
-                    license = "vel";
-                }};
-            }};            
+                address = "5786 Little Streets";
+                license = "vel";
+            }}            
 
             GetaddressmatchResponse res = sdk.streetAddressSimilarityKey.getaddressmatch(req);
 

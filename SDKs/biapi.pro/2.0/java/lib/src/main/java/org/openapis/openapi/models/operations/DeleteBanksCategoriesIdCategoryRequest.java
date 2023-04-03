@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteBanksCategoriesIdCategoryRequest {
-    
-    public DeleteBanksCategoriesIdCategoryPathParams pathParams;
-    public DeleteBanksCategoriesIdCategoryRequest withPathParams(DeleteBanksCategoriesIdCategoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public DeleteBanksCategoriesIdCategoryRequest withExpand(String expand) {
+        this.expand = expand;
         return this;
     }
     
-    
-    public DeleteBanksCategoriesIdCategoryQueryParams queryParams;
-    public DeleteBanksCategoriesIdCategoryRequest withQueryParams(DeleteBanksCategoriesIdCategoryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_category")
+    public Long idCategory;
+    public DeleteBanksCategoriesIdCategoryRequest withIdCategory(Long idCategory) {
+        this.idCategory = idCategory;
         return this;
     }
     

@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteImageTagsRequest {
-    
-    public DeleteImageTagsPathParams pathParams;
-    public DeleteImageTagsRequest withPathParams(DeleteImageTagsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API key.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
+    public String trainingKey;
+    public DeleteImageTagsRequest withTrainingKey(String trainingKey) {
+        this.trainingKey = trainingKey;
         return this;
     }
     
-    
-    public DeleteImageTagsQueryParams queryParams;
-    public DeleteImageTagsRequest withQueryParams(DeleteImageTagsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Image ids. Limited to 64 images.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=imageIds")
+    public String[] imageIds;
+    public DeleteImageTagsRequest withImageIds(String[] imageIds) {
+        this.imageIds = imageIds;
         return this;
     }
     
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public DeleteImageTagsRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
     
-    public DeleteImageTagsHeaders headers;
-    public DeleteImageTagsRequest withHeaders(DeleteImageTagsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Tags to be deleted from the specified images. Limited to 20 tags.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=tagIds")
+    public String[] tagIds;
+    public DeleteImageTagsRequest withTagIds(String[] tagIds) {
+        this.tagIds = tagIds;
         return this;
     }
     

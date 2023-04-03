@@ -4,20 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PoolListRequest {
-    
-    public PoolListQueryParams queryParams;
-    public PoolListRequest withQueryParams(PoolListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * An OData $expand clause.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$expand")
+    public String dollarExpand;
+    public PoolListRequest withDollarExpand(String dollarExpand) {
+        this.dollarExpand = dollarExpand;
         return this;
     }
     
+    /**
+     * An OData $filter clause.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$filter")
+    public String dollarFilter;
+    public PoolListRequest withDollarFilter(String dollarFilter) {
+        this.dollarFilter = dollarFilter;
+        return this;
+    }
     
-    public PoolListHeaders headers;
-    public PoolListRequest withHeaders(PoolListHeaders headers) {
-        this.headers = headers;
+    /**
+     * An OData $select clause.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$select")
+    public String dollarSelect;
+    public PoolListRequest withDollarSelect(String dollarSelect) {
+        this.dollarSelect = dollarSelect;
+        return this;
+    }
+    
+    /**
+     * Client API Version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public PoolListRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
+    
+    /**
+     * The caller-generated request identity, in the form of a GUID with no decoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
+    public String clientRequestId;
+    public PoolListRequest withClientRequestId(String clientRequestId) {
+        this.clientRequestId = clientRequestId;
+        return this;
+    }
+    
+    /**
+     * The maximum number of items to return in the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxresults")
+    public Integer maxresults;
+    public PoolListRequest withMaxresults(Integer maxresults) {
+        this.maxresults = maxresults;
+        return this;
+    }
+    
+    /**
+     * The time the request was issued. If not specified, this header will be automatically populated with the current system clock time.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
+    public String ocpDate;
+    public PoolListRequest withOcpDate(String ocpDate) {
+        this.ocpDate = ocpDate;
+        return this;
+    }
+    
+    /**
+     * Whether the server should return the client-request-id identifier in the response.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
+    public Boolean returnClientRequestId;
+    public PoolListRequest withReturnClientRequestId(Boolean returnClientRequestId) {
+        this.returnClientRequestId = returnClientRequestId;
+        return this;
+    }
+    
+    /**
+     * The maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
+    public Integer timeout;
+    public PoolListRequest withTimeout(Integer timeout) {
+        this.timeout = timeout;
         return this;
     }
     

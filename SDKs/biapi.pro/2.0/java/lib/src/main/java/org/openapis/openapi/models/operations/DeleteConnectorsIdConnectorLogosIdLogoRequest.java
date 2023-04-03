@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteConnectorsIdConnectorLogosIdLogoRequest {
-    
-    public DeleteConnectorsIdConnectorLogosIdLogoPathParams pathParams;
-    public DeleteConnectorsIdConnectorLogosIdLogoRequest withPathParams(DeleteConnectorsIdConnectorLogosIdLogoPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public DeleteConnectorsIdConnectorLogosIdLogoRequest withExpand(String expand) {
+        this.expand = expand;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connector")
+    public Long idConnector;
+    public DeleteConnectorsIdConnectorLogosIdLogoRequest withIdConnector(Long idConnector) {
+        this.idConnector = idConnector;
+        return this;
+    }
     
-    public DeleteConnectorsIdConnectorLogosIdLogoQueryParams queryParams;
-    public DeleteConnectorsIdConnectorLogosIdLogoRequest withQueryParams(DeleteConnectorsIdConnectorLogosIdLogoQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_logo")
+    public Long idLogo;
+    public DeleteConnectorsIdConnectorLogosIdLogoRequest withIdLogo(Long idLogo) {
+        this.idLogo = idLogo;
         return this;
     }
     

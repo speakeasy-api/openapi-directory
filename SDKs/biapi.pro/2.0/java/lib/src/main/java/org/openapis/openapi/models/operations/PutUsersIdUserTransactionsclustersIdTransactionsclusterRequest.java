@@ -4,20 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutUsersIdUserTransactionsclustersIdTransactionsclusterRequest {
-    
-    public PutUsersIdUserTransactionsclustersIdTransactionsclusterPathParams pathParams;
-    public PutUsersIdUserTransactionsclustersIdTransactionsclusterRequest withPathParams(PutUsersIdUserTransactionsclustersIdTransactionsclusterPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public PutUsersIdUserTransactionsclustersIdTransactionsclusterRequest withExpand(String expand) {
+        this.expand = expand;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_transactionscluster")
+    public Long idTransactionscluster;
+    public PutUsersIdUserTransactionsclustersIdTransactionsclusterRequest withIdTransactionscluster(Long idTransactionscluster) {
+        this.idTransactionscluster = idTransactionscluster;
+        return this;
+    }
     
-    public PutUsersIdUserTransactionsclustersIdTransactionsclusterQueryParams queryParams;
-    public PutUsersIdUserTransactionsclustersIdTransactionsclusterRequest withQueryParams(PutUsersIdUserTransactionsclustersIdTransactionsclusterQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Hint: you can use 'me' or 'all'
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
+    public String idUser;
+    public PutUsersIdUserTransactionsclustersIdTransactionsclusterRequest withIdUser(String idUser) {
+        this.idUser = idUser;
         return this;
     }
     

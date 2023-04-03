@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UnassignMemberFromCallQueueRequest {
-    
-    public UnassignMemberFromCallQueuePathParams pathParams;
-    public UnassignMemberFromCallQueueRequest withPathParams(UnassignMemberFromCallQueuePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique Identifier of the Call Queue from which the member needs to be unassigned.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=callQueueId")
+    public String callQueueId;
+    public UnassignMemberFromCallQueueRequest withCallQueueId(String callQueueId) {
+        this.callQueueId = callQueueId;
         return this;
     }
     
-    
-    public UnassignMemberFromCallQueueSecurity security;
-    public UnassignMemberFromCallQueueRequest withSecurity(UnassignMemberFromCallQueueSecurity security) {
-        this.security = security;
+    /**
+     * Unique Identifier of the member who needs to be unassigned.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=memberId")
+    public String memberId;
+    public UnassignMemberFromCallQueueRequest withMemberId(String memberId) {
+        this.memberId = memberId;
         return this;
     }
     

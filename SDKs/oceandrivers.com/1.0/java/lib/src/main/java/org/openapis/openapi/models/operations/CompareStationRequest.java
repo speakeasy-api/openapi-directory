@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CompareStationRequest {
-    
-    public CompareStationPathParams pathParams;
-    public CompareStationRequest withPathParams(CompareStationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Weather station to compare, values: cnareanl|rcnp | cmsap|boyaenderrocat|areopuertopalma | EWXXX
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=stationName")
+    public String stationName;
+    public CompareStationRequest withStationName(String stationName) {
+        this.stationName = stationName;
         return this;
     }
     

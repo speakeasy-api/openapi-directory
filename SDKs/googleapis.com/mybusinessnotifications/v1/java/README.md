@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.MybusinessnotificationsAccountsGetNotificationSettingPathParams;
-import org.openapis.openapi.models.operations.MybusinessnotificationsAccountsGetNotificationSettingQueryParams;
 import org.openapis.openapi.models.operations.MybusinessnotificationsAccountsGetNotificationSettingRequest;
 import org.openapis.openapi.models.operations.MybusinessnotificationsAccountsGetNotificationSettingResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -31,23 +29,19 @@ public class Application {
                 .build();
 
             MybusinessnotificationsAccountsGetNotificationSettingRequest req = new MybusinessnotificationsAccountsGetNotificationSettingRequest() {{
-                pathParams = new MybusinessnotificationsAccountsGetNotificationSettingPathParams() {{
-                    name = "corrupti";
-                }};
-                queryParams = new MybusinessnotificationsAccountsGetNotificationSettingQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-            }};            
+                dollarXgafv = "2";
+                accessToken = "provident";
+                alt = "proto";
+                callback = "quibusdam";
+                fields = "unde";
+                key = "nulla";
+                name = "corrupti";
+                oauthToken = "illum";
+                prettyPrint = false;
+                quotaUser = "vel";
+                uploadType = "error";
+                uploadProtocol = "deserunt";
+            }}            
 
             MybusinessnotificationsAccountsGetNotificationSettingResponse res = sdk.accounts.mybusinessnotificationsAccountsGetNotificationSetting(req);
 
@@ -61,7 +55,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### accounts

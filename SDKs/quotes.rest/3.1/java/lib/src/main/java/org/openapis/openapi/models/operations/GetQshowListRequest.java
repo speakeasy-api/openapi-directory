@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetQshowListRequest {
-    
-    public GetQshowListQueryParams queryParams;
-    public GetQshowListRequest withQueryParams(GetQshowListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Should include public qshows or not in the list
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=public")
+    public Boolean public_;
+    public GetQshowListRequest withPublic(Boolean public_) {
+        this.public_ = public_;
         return this;
     }
     
-    
-    public GetQshowListSecurity security;
-    public GetQshowListRequest withSecurity(GetQshowListSecurity security) {
-        this.security = security;
+    /**
+     * Response is paged. This parameter controls where response starts the listing at
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public Integer start;
+    public GetQshowListRequest withStart(Integer start) {
+        this.start = start;
         return this;
     }
     

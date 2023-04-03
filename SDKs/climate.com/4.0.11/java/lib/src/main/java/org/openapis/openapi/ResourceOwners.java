@@ -38,19 +38,20 @@ public class ResourceOwners {
      * Retrieve a resource owner by ID
      * Retrieve a resource owner for the given `resourceOwnerId`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetResourceOwnerResponse getResourceOwner(org.openapis.openapi.models.operations.GetResourceOwnerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetResourceOwnerResponse getResourceOwner(org.openapis.openapi.models.operations.GetResourceOwnerRequest request, org.openapis.openapi.models.operations.GetResourceOwnerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourceOwnerPathParams.class, baseUrl, "/v4/resourceOwners/{resourceOwnerId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourceOwnerRequest.class, baseUrl, "/v4/resourceOwners/{resourceOwnerId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

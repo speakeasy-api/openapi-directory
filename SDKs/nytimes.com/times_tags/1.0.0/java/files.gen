@@ -30,9 +30,7 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetTimestagsFilterEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetTimestagsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTimestagsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTimestagsResponse.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeApikey.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

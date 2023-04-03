@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DataPointsPostRequest {
-    
-    public DataPointsPostPathParams pathParams;
-    public DataPointsPostRequest withPathParams(DataPointsPostPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The body of the datapoint
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ApiCoreDtoDatapointsDatapoint request;
-    public DataPointsPostRequest withRequest(org.openapis.openapi.models.shared.ApiCoreDtoDatapointsDatapoint request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ApiCoreDtoDatapointsDatapoint apiCoreDtoDatapointsDatapoint;
+    public DataPointsPostRequest withApiCoreDtoDatapointsDatapoint(org.openapis.openapi.models.shared.ApiCoreDtoDatapointsDatapoint apiCoreDtoDatapointsDatapoint) {
+        this.apiCoreDtoDatapointsDatapoint = apiCoreDtoDatapointsDatapoint;
+        return this;
+    }
+    
+    /**
+     * The id of the datapoint
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DataPointsPostRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBadgeRequest {
-    
-    public GetBadgeQueryParams queryParams;
-    public GetBadgeRequest withQueryParams(GetBadgeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The URL to retrieve the OpenAPI 3.0.x definition from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=url")
+    public String url;
+    public GetBadgeRequest withUrl(String url) {
+        this.url = url;
         return this;
     }
     

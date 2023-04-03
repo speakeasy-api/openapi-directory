@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.AddShortlinkRequest;
 import org.openapis.openapi.models.operations.AddShortlinkResponse;
 import org.openapis.openapi.models.shared.ShortlinkRequest;
 
@@ -27,12 +26,10 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            AddShortlinkRequest req = new AddShortlinkRequest() {{
-                request = new ShortlinkRequest() {{
-                    keyid = "corrupti";
-                    shortlink = "provident";
-                }};
-            }};            
+            org.openapis.openapi.models.shared.ShortlinkRequest req = new ShortlinkRequest() {{
+                keyid = "corrupti";
+                shortlink = "provident";
+            }}            
 
             AddShortlinkResponse res = sdk.addShortlink.addShortlink(req);
 
@@ -46,7 +43,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### addShortlink

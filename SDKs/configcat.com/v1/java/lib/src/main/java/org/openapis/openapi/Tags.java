@@ -43,12 +43,12 @@ public class Tags {
      */
     public org.openapis.openapi.models.operations.CreateTagResponse createTag(org.openapis.openapi.models.operations.CreateTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateTagPathParams.class, baseUrl, "/v1/products/{productId}/tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateTagRequest.class, baseUrl, "/v1/products/{productId}/tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createTagModel", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -96,7 +96,7 @@ public class Tags {
      */
     public org.openapis.openapi.models.operations.DeleteTagResponse deleteTag(org.openapis.openapi.models.operations.DeleteTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteTagPathParams.class, baseUrl, "/v1/tags/{tagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteTagRequest.class, baseUrl, "/v1/tags/{tagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -131,7 +131,7 @@ public class Tags {
      */
     public org.openapis.openapi.models.operations.GetSettingsByTagResponse getSettingsByTag(org.openapis.openapi.models.operations.GetSettingsByTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSettingsByTagPathParams.class, baseUrl, "/v1/tags/{tagId}/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSettingsByTagRequest.class, baseUrl, "/v1/tags/{tagId}/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -180,7 +180,7 @@ public class Tags {
      */
     public org.openapis.openapi.models.operations.GetTagResponse getTag(org.openapis.openapi.models.operations.GetTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagPathParams.class, baseUrl, "/v1/tags/{tagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagRequest.class, baseUrl, "/v1/tags/{tagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -229,7 +229,7 @@ public class Tags {
      */
     public org.openapis.openapi.models.operations.GetTagsResponse getTags(org.openapis.openapi.models.operations.GetTagsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsPathParams.class, baseUrl, "/v1/products/{productId}/tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsRequest.class, baseUrl, "/v1/products/{productId}/tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -277,12 +277,12 @@ public class Tags {
      */
     public org.openapis.openapi.models.operations.UpdateTagResponse updateTag(org.openapis.openapi.models.operations.UpdateTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateTagPathParams.class, baseUrl, "/v1/tags/{tagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateTagRequest.class, baseUrl, "/v1/tags/{tagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateTagModel", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

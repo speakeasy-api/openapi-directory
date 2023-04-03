@@ -38,13 +38,13 @@ public class FareEstimate {
      */
     public org.openapis.openapi.models.operations.FareEstimateGetFareEstimateByZoneResponse fareEstimateGetFareEstimateByZone(org.openapis.openapi.models.operations.FareEstimateGetFareEstimateByZoneRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FareEstimateGetFareEstimateByZonePathParams.class, baseUrl, "/v3/fare_estimate/min_zone/{minZone}/max_zone/{maxZone}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FareEstimateGetFareEstimateByZoneRequest.class, baseUrl, "/v3/fare_estimate/min_zone/{minZone}/max_zone/{maxZone}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FareEstimateGetFareEstimateByZoneQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FareEstimateGetFareEstimateByZoneRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

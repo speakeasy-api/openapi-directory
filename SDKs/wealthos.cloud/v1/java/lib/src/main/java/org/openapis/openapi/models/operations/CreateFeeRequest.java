@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateFeeRequest {
-    
-    public CreateFeeHeaders headers;
-    public CreateFeeRequest withHeaders(CreateFeeHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateFeeRootTypeForFee request;
-    public CreateFeeRequest withRequest(CreateFeeRootTypeForFee request) {
-        this.request = request;
+    public CreateFeeRootTypeForFee requestBody;
+    public CreateFeeRequest withRequestBody(CreateFeeRootTypeForFee requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateFeeSecurity security;
-    public CreateFeeRequest withSecurity(CreateFeeSecurity security) {
-        this.security = security;
+    /**
+     * ApiSecretKey
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public CreateFeeRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

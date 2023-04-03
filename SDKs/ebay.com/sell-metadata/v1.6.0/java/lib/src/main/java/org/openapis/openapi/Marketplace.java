@@ -33,25 +33,26 @@ public class Marketplace {
     /**
      * This method returns the eBay policies that define how to list automotive-parts-compatibility items in the categories of a specific marketplace.  &lt;br&gt;&lt;br&gt;By default, this method returns the entire category tree for the specified marketplace. You can limit the size of the result set by using the &lt;b&gt;filter&lt;/b&gt; query parameter to specify only the category IDs you want to review.&lt;br /&gt;&lt;br /&gt;&lt;span class="tablenote"&gt;&lt;span style="color:#478415"&gt;&lt;strong&gt;Tip:&lt;/strong&gt;&lt;/span&gt; This method can potentially return a very large response payload. eBay recommends that the response payload be compressed by passing in the &lt;b&gt;Accept-Encoding&lt;/b&gt; request header and setting the value to &lt;code&gt;application/gzip&lt;/code&gt;.&lt;/span&gt;
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAutomotivePartsCompatibilityPoliciesResponse getAutomotivePartsCompatibilityPolicies(org.openapis.openapi.models.operations.GetAutomotivePartsCompatibilityPoliciesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetAutomotivePartsCompatibilityPoliciesResponse getAutomotivePartsCompatibilityPolicies(org.openapis.openapi.models.operations.GetAutomotivePartsCompatibilityPoliciesRequest request, org.openapis.openapi.models.operations.GetAutomotivePartsCompatibilityPoliciesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAutomotivePartsCompatibilityPoliciesPathParams.class, baseUrl, "/marketplace/{marketplace_id}/get_automotive_parts_compatibility_policies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAutomotivePartsCompatibilityPoliciesRequest.class, baseUrl, "/marketplace/{marketplace_id}/get_automotive_parts_compatibility_policies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAutomotivePartsCompatibilityPoliciesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAutomotivePartsCompatibilityPoliciesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -80,25 +81,26 @@ public class Marketplace {
     /**
      * This method returns the Extended Producer Responsibility policies for one, multiple, or all eBay categories in an eBay marketplace.&lt;br /&gt;&lt;br /&gt;The identifier of the eBay marketplace is passed in as a path parameter, and unless one or more eBay category IDs are passed in through the filter query parameter, this method will return metadata on every applicable category for the specified marketplace.&lt;br /&gt;&lt;br /&gt;&lt;span class="tablenote"&gt;&lt;span style="color:#004680"&gt;&lt;strong&gt;Note:&lt;/strong&gt;&lt;/span&gt; Currently, the Extended Producer Responsibility policies are only applicable to a limited number of categories, and only in the EBAY_FR marketplace.&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span class="tablenote"&gt;&lt;span style="color:#478415"&gt;&lt;strong&gt;Tip:&lt;/strong&gt;&lt;/span&gt; This method can potentially return a very large response payload. eBay recommends that the response payload be compressed by passing in the &lt;b&gt;Accept-Encoding&lt;/b&gt; request header and setting the value to &lt;code&gt;application/gzip&lt;/code&gt;.&lt;/span&gt;
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetExtendedProducerResponsibilityPoliciesResponse getExtendedProducerResponsibilityPolicies(org.openapis.openapi.models.operations.GetExtendedProducerResponsibilityPoliciesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetExtendedProducerResponsibilityPoliciesResponse getExtendedProducerResponsibilityPolicies(org.openapis.openapi.models.operations.GetExtendedProducerResponsibilityPoliciesRequest request, org.openapis.openapi.models.operations.GetExtendedProducerResponsibilityPoliciesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetExtendedProducerResponsibilityPoliciesPathParams.class, baseUrl, "/marketplace/{marketplace_id}/get_extended_producer_responsibility_policies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetExtendedProducerResponsibilityPoliciesRequest.class, baseUrl, "/marketplace/{marketplace_id}/get_extended_producer_responsibility_policies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetExtendedProducerResponsibilityPoliciesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetExtendedProducerResponsibilityPoliciesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,19 +129,20 @@ public class Marketplace {
     /**
      * This method returns hazardous materials label information for the specified eBay marketplace. The information includes IDs, descriptions, and URLs (as applicable) for the available signal words, statements, and pictograms. The returned statements are localized for the default langauge of the marketplace. If a marketplace does not support hazardous materials label information, an error is returned.&lt;p&gt;This information is used by the seller to add hazardous materials label related information to their listings (see &lt;a href='/api-docs/sell/static/metadata/feature-regulatorhazmatcontainer.html'&gt;Specifying hazardous material related information&lt;/a&gt;).&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetHazardousMaterialsLabelsResponse getHazardousMaterialsLabels(org.openapis.openapi.models.operations.GetHazardousMaterialsLabelsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetHazardousMaterialsLabelsResponse getHazardousMaterialsLabels(org.openapis.openapi.models.operations.GetHazardousMaterialsLabelsRequest request, org.openapis.openapi.models.operations.GetHazardousMaterialsLabelsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetHazardousMaterialsLabelsPathParams.class, baseUrl, "/marketplace/{marketplace_id}/get_hazardous_materials_labels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetHazardousMaterialsLabelsRequest.class, baseUrl, "/marketplace/{marketplace_id}/get_hazardous_materials_labels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -168,25 +171,26 @@ public class Marketplace {
     /**
      * This method returns item condition metadata on one, multiple, or all eBay categories on an eBay marketplace. This metadata consists of the different item conditions (with IDs) that an eBay category supports, and a boolean to indicate if an eBay category requires an item condition. &lt;br&gt;&lt;br&gt;The identifier of the eBay marketplace is passed in as a path parameter, and unless one or more eBay category IDs are passed in through the &lt;b&gt;filter&lt;/b&gt; query parameter, this method will return metadata on every single category for the specified marketplace. If you only want to view item condition metadata for one eBay category or a select group of eBay categories, you can pass in up to 50 eBay category ID through the &lt;b&gt;filter&lt;/b&gt; query parameter.&lt;br /&gt;&lt;br /&gt;&lt;span class="tablenote"&gt;&lt;span style="color:#FF0000"&gt;&lt;strong&gt;Important:&lt;/strong&gt;&lt;/span&gt; &lt;b&gt;Certified - Refurbished&lt;/b&gt;-eligible sellers, and sellers who are eligible to list with the new values (EXCELLENT_REFURBISHED, VERY_GOOD_REFURBISHED, and GOOD_REFURBISHED) must use an OAuth token created with the &lt;a href="/api-docs/static/oauth-authorization-code-grant.html" target="_blank"&gt;authorization code grant flow&lt;/a&gt; and &lt;b&gt;https://api.ebay.com/oauth/api_scope/sell.inventory&lt;/b&gt; scope in order to retrieve the refurbished conditions for the relevant categories.&lt;br/&gt;&lt;br/&gt;See the &lt;a href="/api-docs/sell/static/metadata/condition-id-values.html#Category " target="_blank"&gt;eBay Refurbished Program - Category and marketplace support&lt;/a&gt; topic for the categories and marketplaces that support these refurbished conditions&lt;br/&gt;&lt;br/&gt;These restricted item conditions will not be returned if an OAuth token created with the &lt;a href="/api-docs/static/oauth-client-credentials-grant.html" target="_blank"&gt;client credentials grant flow&lt;/a&gt; and &lt;b&gt;https://api.ebay.com/oauth/api_scope&lt;/b&gt; scope is used, or if any seller is not eligible to list with that item condition. &lt;br/&gt;&lt;br/&gt; See the &lt;a href="/api-docs/static/oauth-scopes.html" target="_blank"&gt;Specifying OAuth scopes&lt;/a&gt; topic for more information about specifying scopes.&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span class="tablenote"&gt;&lt;span style="color:#478415"&gt;&lt;strong&gt;Tip:&lt;/strong&gt;&lt;/span&gt; This method can potentially return a very large response payload. eBay recommends that the response payload be compressed by passing in the &lt;b&gt;Accept-Encoding&lt;/b&gt; request header and setting the value to &lt;code&gt;application/gzip&lt;/code&gt;.&lt;/span&gt;
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetItemConditionPoliciesResponse getItemConditionPolicies(org.openapis.openapi.models.operations.GetItemConditionPoliciesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetItemConditionPoliciesResponse getItemConditionPolicies(org.openapis.openapi.models.operations.GetItemConditionPoliciesRequest request, org.openapis.openapi.models.operations.GetItemConditionPoliciesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetItemConditionPoliciesPathParams.class, baseUrl, "/marketplace/{marketplace_id}/get_item_condition_policies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetItemConditionPoliciesRequest.class, baseUrl, "/marketplace/{marketplace_id}/get_item_condition_policies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetItemConditionPoliciesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetItemConditionPoliciesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -215,25 +219,26 @@ public class Marketplace {
     /**
      * This method returns the eBay policies that define the allowed listing structures for the categories of a specific marketplace. The listing-structure policies currently pertain to whether or not you can list items with variations.  &lt;br&gt;&lt;br&gt;By default, this method returns the entire category tree for the specified marketplace. You can limit the size of the result set by using the &lt;b&gt;filter&lt;/b&gt; query parameter to specify only the category IDs you want to review.&lt;br /&gt;&lt;br /&gt;&lt;span class="tablenote"&gt;&lt;span style="color:#478415"&gt;&lt;strong&gt;Tip:&lt;/strong&gt;&lt;/span&gt; This method can potentially return a very large response payload. eBay recommends that the response payload be compressed by passing in the &lt;b&gt;Accept-Encoding&lt;/b&gt; request header and setting the value to &lt;code&gt;application/gzip&lt;/code&gt;.&lt;/span&gt;
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetListingStructurePoliciesResponse getListingStructurePolicies(org.openapis.openapi.models.operations.GetListingStructurePoliciesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetListingStructurePoliciesResponse getListingStructurePolicies(org.openapis.openapi.models.operations.GetListingStructurePoliciesRequest request, org.openapis.openapi.models.operations.GetListingStructurePoliciesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetListingStructurePoliciesPathParams.class, baseUrl, "/marketplace/{marketplace_id}/get_listing_structure_policies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetListingStructurePoliciesRequest.class, baseUrl, "/marketplace/{marketplace_id}/get_listing_structure_policies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetListingStructurePoliciesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetListingStructurePoliciesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -262,25 +267,26 @@ public class Marketplace {
     /**
      * This method returns the eBay policies that define the supported negotiated price features (like "best offer") for the categories of a specific marketplace.  &lt;br&gt;&lt;br&gt;By default, this method returns the entire category tree for the specified marketplace. You can limit the size of the result set by using the &lt;b&gt;filter&lt;/b&gt; query parameter to specify only the category IDs you want to review.&lt;br /&gt;&lt;br /&gt;&lt;span class="tablenote"&gt;&lt;span style="color:#478415"&gt;&lt;strong&gt;Tip:&lt;/strong&gt;&lt;/span&gt; This method can potentially return a very large response payload. eBay recommends that the response payload be compressed by passing in the &lt;b&gt;Accept-Encoding&lt;/b&gt; request header and setting the value to &lt;code&gt;application/gzip&lt;/code&gt;.&lt;/span&gt;
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetNegotiatedPricePoliciesResponse getNegotiatedPricePolicies(org.openapis.openapi.models.operations.GetNegotiatedPricePoliciesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetNegotiatedPricePoliciesResponse getNegotiatedPricePolicies(org.openapis.openapi.models.operations.GetNegotiatedPricePoliciesRequest request, org.openapis.openapi.models.operations.GetNegotiatedPricePoliciesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNegotiatedPricePoliciesPathParams.class, baseUrl, "/marketplace/{marketplace_id}/get_negotiated_price_policies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNegotiatedPricePoliciesRequest.class, baseUrl, "/marketplace/{marketplace_id}/get_negotiated_price_policies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNegotiatedPricePoliciesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNegotiatedPricePoliciesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -309,25 +315,26 @@ public class Marketplace {
     /**
      * This method returns the eBay policies that define whether or not you must include a return policy for the items you list in the categories of a specific marketplace, plus the guidelines for creating domestic and international return policies in the different eBay categories.  &lt;br&gt;&lt;br&gt;By default, this method returns the entire category tree for the specified marketplace. You can limit the size of the result set by using the &lt;b&gt;filter&lt;/b&gt; query parameter to specify only the category IDs you want to review.&lt;br /&gt;&lt;br /&gt;&lt;span class="tablenote"&gt;&lt;span style="color:#478415"&gt;&lt;strong&gt;Tip:&lt;/strong&gt;&lt;/span&gt; This method can potentially return a very large response payload. eBay recommends that the response payload be compressed by passing in the &lt;b&gt;Accept-Encoding&lt;/b&gt; request header and setting the value to &lt;code&gt;application/gzip&lt;/code&gt;.&lt;/span&gt;
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetReturnPoliciesResponse getReturnPolicies(org.openapis.openapi.models.operations.GetReturnPoliciesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetReturnPoliciesResponse getReturnPolicies(org.openapis.openapi.models.operations.GetReturnPoliciesRequest request, org.openapis.openapi.models.operations.GetReturnPoliciesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetReturnPoliciesPathParams.class, baseUrl, "/marketplace/{marketplace_id}/get_return_policies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetReturnPoliciesRequest.class, baseUrl, "/marketplace/{marketplace_id}/get_return_policies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetReturnPoliciesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetReturnPoliciesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

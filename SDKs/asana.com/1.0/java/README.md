@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateAttachmentForObjectQueryParams;
 import org.openapis.openapi.models.operations.CreateAttachmentForObjectRequest;
 import org.openapis.openapi.models.operations.CreateAttachmentForObjectResponse;
 import org.openapis.openapi.models.shared.AttachmentRequestFile;
@@ -29,33 +28,30 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }})
                 .build();
 
             CreateAttachmentForObjectRequest req = new CreateAttachmentForObjectRequest() {{
-                queryParams = new CreateAttachmentForObjectQueryParams() {{
-                    optFields = new String[]{{
-                        add("provident"),
-                        add("distinctio"),
-                        add("quibusdam"),
-                    }};
-                    optPretty = false;
-                }};
-                request = new AttachmentRequest() {{
+                attachmentRequest = new AttachmentRequest() {{
                     connectToApp = false;
                     file = new AttachmentRequestFile() {{
-                        content = "unde".getBytes();
-                        file = "nulla";
+                        content = "corrupti".getBytes();
+                        file = "provident";
                     }};
-                    name = "corrupti";
-                    parent = "illum";
+                    name = "distinctio";
+                    parent = "quibusdam";
                     resourceSubtype = "external";
-                    url = "vel";
+                    url = "unde";
                 }};
-            }};            
+                optFields = new String[]{{
+                    add("corrupti"),
+                    add("illum"),
+                    add("vel"),
+                    add("error"),
+                }};
+                optPretty = false;
+            }}            
 
             CreateAttachmentForObjectResponse res = sdk.attachments.createAttachmentForObject(req);
 
@@ -69,7 +65,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### attachments

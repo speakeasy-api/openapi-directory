@@ -38,13 +38,13 @@ public class Copyrights {
      */
     public org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsFormatResponse getMapVersionNumberCopyrightsFormat(org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsFormatPathParams.class, baseUrl, "/map/{versionNumber}/copyrights.{format}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsFormatRequest.class, baseUrl, "/map/{versionNumber}/copyrights.{format}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -78,13 +78,13 @@ public class Copyrights {
      */
     public org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsCaptionFormatResponse getMapVersionNumberCopyrightsCaptionFormat(org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsCaptionFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsCaptionFormatPathParams.class, baseUrl, "/map/{versionNumber}/copyrights/caption.{format}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsCaptionFormatRequest.class, baseUrl, "/map/{versionNumber}/copyrights/caption.{format}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsCaptionFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsCaptionFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -120,13 +120,13 @@ public class Copyrights {
      */
     public org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatResponse getMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormat(org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatPathParams.class, baseUrl, "/map/{versionNumber}/copyrights/{minLon}/{minLat}/{maxLon}/{maxLat}.{format}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest.class, baseUrl, "/map/{versionNumber}/copyrights/{minLon}/{minLat}/{maxLon}/{maxLat}.{format}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -162,13 +162,13 @@ public class Copyrights {
      */
     public org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsZoomXYFormatResponse getMapVersionNumberCopyrightsZoomXYFormat(org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsZoomXYFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsZoomXYFormatPathParams.class, baseUrl, "/map/{versionNumber}/copyrights/{zoom}/{X}/{Y}.{format}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsZoomXYFormatRequest.class, baseUrl, "/map/{versionNumber}/copyrights/{zoom}/{X}/{Y}.{format}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsZoomXYFormatQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsZoomXYFormatRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

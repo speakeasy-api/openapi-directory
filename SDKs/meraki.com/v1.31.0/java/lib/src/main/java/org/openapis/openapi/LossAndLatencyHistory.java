@@ -40,13 +40,13 @@ public class LossAndLatencyHistory {
      */
     public org.openapis.openapi.models.operations.GetDeviceLossAndLatencyHistoryResponse getDeviceLossAndLatencyHistory(org.openapis.openapi.models.operations.GetDeviceLossAndLatencyHistoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceLossAndLatencyHistoryPathParams.class, baseUrl, "/devices/{serial}/lossAndLatencyHistory", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceLossAndLatencyHistoryRequest.class, baseUrl, "/devices/{serial}/lossAndLatencyHistory", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceLossAndLatencyHistoryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceLossAndLatencyHistoryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

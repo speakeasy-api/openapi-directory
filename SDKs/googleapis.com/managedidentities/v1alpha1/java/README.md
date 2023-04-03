@@ -18,19 +18,15 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustSecurity;
-import org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustPathParams;
-import org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustQueryParams;
 import org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustRequest;
 import org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.AttachTrustRequest;
 import org.openapis.openapi.models.shared.TrustStateEnum;
 import org.openapis.openapi.models.shared.TrustTrustDirectionEnum;
 import org.openapis.openapi.models.shared.TrustTrustTypeEnum;
 import org.openapis.openapi.models.shared.Trust;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -39,50 +35,44 @@ public class Application {
                 .build();
 
             ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustRequest req = new ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustRequest() {{
-                security = new ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustPathParams() {{
-                    name = "corrupti";
-                }};
-                queryParams = new ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new AttachTrustRequest() {{
+                dollarXgafv = "2";
+                attachTrustRequest = new AttachTrustRequest() {{
                     trust = new Trust() {{
-                        createTime = "suscipit";
-                        lastKnownTrustConnectedHeartbeatTime = "iure";
+                        createTime = "provident";
+                        lastKnownTrustConnectedHeartbeatTime = "distinctio";
                         selectiveAuthentication = false;
-                        state = "CREATING";
-                        stateDescription = "debitis";
+                        state = "DISCONNECTED";
+                        stateDescription = "unde";
                         targetDnsIpAddresses = new String[]{{
-                            add("delectus"),
+                            add("corrupti"),
+                            add("illum"),
+                            add("vel"),
+                            add("error"),
                         }};
-                        targetDomainName = "tempora";
+                        targetDomainName = "deserunt";
                         trustDirection = "INBOUND";
-                        trustHandshakeSecret = "molestiae";
-                        trustType = "EXTERNAL";
-                        updateTime = "placeat";
+                        trustHandshakeSecret = "iure";
+                        trustType = "TRUST_TYPE_UNSPECIFIED";
+                        updateTime = "debitis";
                     }};
                 }};
-            }};            
+                accessToken = "ipsa";
+                alt = "proto";
+                callback = "tempora";
+                fields = "suscipit";
+                key = "molestiae";
+                name = "minus";
+                oauthToken = "placeat";
+                prettyPrint = false;
+                quotaUser = "voluptatum";
+                uploadType = "iusto";
+                uploadProtocol = "excepturi";
+            }}            
 
-            ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustResponse res = sdk.projects.managedidentitiesProjectsLocationsGlobalDomainsAttachTrust(req);
+            ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustResponse res = sdk.projects.managedidentitiesProjectsLocationsGlobalDomainsAttachTrust(req, new ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.operation.isPresent()) {
                 // handle response
@@ -94,7 +84,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### projects

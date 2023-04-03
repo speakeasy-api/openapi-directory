@@ -4,27 +4,186 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesRequest {
-    
-    public DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesPathParams pathParams;
-    public DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesRequest withPathParams(DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesQueryParams queryParams;
-    public DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesRequest withQueryParams(DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesSecurity security;
-    public DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesRequest withSecurity(DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesSecurity security) {
-        this.security = security;
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Request a specific commit ID. If not specified, the entities from the latest commit are returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=commitId")
+    public String commitId;
+    public DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesRequest withCommitId(String commitId) {
+        this.commitId = commitId;
+        return this;
+    }
+    
+    /**
+     * Required. Name of the conversion workspace resource whose database entities are described. Must be in the form of: projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversionWorkspace")
+    public String conversionWorkspace;
+    public DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesRequest withConversionWorkspace(String conversionWorkspace) {
+        this.conversionWorkspace = conversionWorkspace;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Filter the returned entities based on AIP-160 standard.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * The maximum number of entities to return. The service may return fewer entities than the value specifies.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The nextPageToken value received in the previous call to conversionWorkspace.describeDatabaseEntities, used in the subsequent request to retrieve the next page of results. On first call this should be left blank. When paginating, all other parameters provided to conversionWorkspace.describeDatabaseEntities must match the call that provided the page token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * The tree to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tree")
+    public DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesTreeEnum tree;
+    public DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesRequest withTree(DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesTreeEnum tree) {
+        this.tree = tree;
+        return this;
+    }
+    
+    /**
+     * Whether to retrieve the latest committed version of the entities or the latest version. This field is ignored if a specific commit_id is specified.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uncommitted")
+    public Boolean uncommitted;
+    public DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesRequest withUncommitted(Boolean uncommitted) {
+        this.uncommitted = uncommitted;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

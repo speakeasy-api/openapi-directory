@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountRequest {
-    
-    public GetAccountQueryParams queryParams;
-    public GetAccountRequest withQueryParams(GetAccountQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Access Token for the request
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-access-token")
+    public String evAccessToken;
+    public GetAccountRequest withEvAccessToken(String evAccessToken) {
+        this.evAccessToken = evAccessToken;
         return this;
     }
     
+    /**
+     * API Key required for the request
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-api-key")
+    public String evApiKey;
+    public GetAccountRequest withEvApiKey(String evApiKey) {
+        this.evApiKey = evApiKey;
+        return this;
+    }
     
-    public GetAccountHeaders headers;
-    public GetAccountRequest withHeaders(GetAccountHeaders headers) {
-        this.headers = headers;
+    /**
+     * Related records to include in the response. Valid option is **masterUser**
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include")
+    public String include;
+    public GetAccountRequest withInclude(String include) {
+        this.include = include;
         return this;
     }
     

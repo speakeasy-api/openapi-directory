@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryListApiSpecsRequest {
-    
-    public RegistryListApiSpecsPathParams pathParams;
-    public RegistryListApiSpecsRequest withPathParams(RegistryListApiSpecsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The api id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api")
+    public String api;
+    public RegistryListApiSpecsRequest withApi(String api) {
+        this.api = api;
         return this;
     }
     
+    /**
+     * An expression that can be used to filter the list. Filters use the Common Expression Language and can refer to all message fields except contents.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public RegistryListApiSpecsRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
     
-    public RegistryListApiSpecsQueryParams queryParams;
-    public RegistryListApiSpecsRequest withQueryParams(RegistryListApiSpecsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The location id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
+    public String location;
+    public RegistryListApiSpecsRequest withLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    
+    /**
+     * The maximum number of specs to return. The service may return fewer than this value. If unspecified, at most 50 values will be returned. The maximum is 1000; values above 1000 will be coerced to 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public RegistryListApiSpecsRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * A page token, received from a previous `ListApiSpecs` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListApiSpecs` must match the call that provided the page token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public RegistryListApiSpecsRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public RegistryListApiSpecsRequest withProject(String project) {
+        this.project = project;
+        return this;
+    }
+    
+    /**
+     * The version id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public String version;
+    public RegistryListApiSpecsRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

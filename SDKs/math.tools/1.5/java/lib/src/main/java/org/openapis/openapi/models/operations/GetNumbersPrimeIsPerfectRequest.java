@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNumbersPrimeIsPerfectRequest {
-    
-    public GetNumbersPrimeIsPerfectQueryParams queryParams;
-    public GetNumbersPrimeIsPerfectRequest withQueryParams(GetNumbersPrimeIsPerfectQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetNumbersPrimeIsPerfectSecurity security;
-    public GetNumbersPrimeIsPerfectRequest withSecurity(GetNumbersPrimeIsPerfectSecurity security) {
-        this.security = security;
+    /**
+     * Number to check
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
+    public Long number;
+    public GetNumbersPrimeIsPerfectRequest withNumber(Long number) {
+        this.number = number;
         return this;
     }
     

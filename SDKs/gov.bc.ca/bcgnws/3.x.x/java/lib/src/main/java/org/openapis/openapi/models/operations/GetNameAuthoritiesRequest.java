@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNameAuthoritiesRequest {
-    
-    public GetNameAuthoritiesQueryParams queryParams;
-    public GetNameAuthoritiesRequest withQueryParams(GetNameAuthoritiesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The format of the output.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputFormat")
+    public GetNameAuthoritiesOutputFormatEnum outputFormat;
+    public GetNameAuthoritiesRequest withOutputFormat(GetNameAuthoritiesOutputFormatEnum outputFormat) {
+        this.outputFormat = outputFormat;
         return this;
     }
     

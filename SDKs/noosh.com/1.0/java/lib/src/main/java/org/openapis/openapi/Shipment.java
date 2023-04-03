@@ -39,7 +39,7 @@ public class Shipment {
      */
     public org.openapis.openapi.models.operations.GetShipmentResponse getShipment(org.openapis.openapi.models.operations.GetShipmentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetShipmentPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/shipments/{shipment_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetShipmentRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/shipments/{shipment_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -158,7 +158,7 @@ public class Shipment {
      */
     public org.openapis.openapi.models.operations.GetShipmentListResponse getShipmentList(org.openapis.openapi.models.operations.GetShipmentListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetShipmentListPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/shipments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetShipmentListRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/shipments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -277,12 +277,12 @@ public class Shipment {
      */
     public org.openapis.openapi.models.operations.PostShipmentJsonResponse postShipmentJson(org.openapis.openapi.models.operations.PostShipmentJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostShipmentJsonPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/shipments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostShipmentJsonRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/shipments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "shipmentLocationPostPersistVO", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -398,12 +398,12 @@ public class Shipment {
      */
     public org.openapis.openapi.models.operations.PostShipmentRawResponse postShipmentRaw(org.openapis.openapi.models.operations.PostShipmentRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostShipmentRawPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/shipments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostShipmentRawRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/shipments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
         
@@ -519,12 +519,12 @@ public class Shipment {
      */
     public org.openapis.openapi.models.operations.PutShipmentLocationJsonResponse putShipmentLocationJson(org.openapis.openapi.models.operations.PutShipmentLocationJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutShipmentLocationJsonPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/shipments/{shipment_id}/locations/{location_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutShipmentLocationJsonRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/shipments/{shipment_id}/locations/{location_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "shipmentLocationPersistVO", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -596,12 +596,12 @@ public class Shipment {
      */
     public org.openapis.openapi.models.operations.PutShipmentLocationRawResponse putShipmentLocationRaw(org.openapis.openapi.models.operations.PutShipmentLocationRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutShipmentLocationRawPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/shipments/{shipment_id}/locations/{location_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutShipmentLocationRawRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/shipments/{shipment_id}/locations/{location_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
         

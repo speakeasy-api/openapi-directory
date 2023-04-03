@@ -34,19 +34,20 @@ public class ChannelsVideos {
     /**
      * Add a specific video to a channel
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddVideoToChannelResponse addVideoToChannel(org.openapis.openapi.models.operations.AddVideoToChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddVideoToChannelResponse addVideoToChannel(org.openapis.openapi.models.operations.AddVideoToChannelRequest request, org.openapis.openapi.models.operations.AddVideoToChannelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoToChannelPathParams.class, baseUrl, "/channels/{channel_id}/videos/{video_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoToChannelRequest.class, baseUrl, "/channels/{channel_id}/videos/{video_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -75,24 +76,25 @@ public class ChannelsVideos {
     /**
      * Add a list of videos to a channel
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddVideosToChannelResponse addVideosToChannel(org.openapis.openapi.models.operations.AddVideosToChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddVideosToChannelResponse addVideosToChannel(org.openapis.openapi.models.operations.AddVideosToChannelRequest request, org.openapis.openapi.models.operations.AddVideosToChannelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideosToChannelPathParams.class, baseUrl, "/channels/{channel_id}/videos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideosToChannelRequest.class, baseUrl, "/channels/{channel_id}/videos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -121,19 +123,20 @@ public class ChannelsVideos {
     /**
      * Remove a specific video from a channel
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteVideoFromChannelResponse deleteVideoFromChannel(org.openapis.openapi.models.operations.DeleteVideoFromChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteVideoFromChannelResponse deleteVideoFromChannel(org.openapis.openapi.models.operations.DeleteVideoFromChannelRequest request, org.openapis.openapi.models.operations.DeleteVideoFromChannelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVideoFromChannelPathParams.class, baseUrl, "/channels/{channel_id}/videos/{video_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVideoFromChannelRequest.class, baseUrl, "/channels/{channel_id}/videos/{video_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -167,7 +170,7 @@ public class ChannelsVideos {
      */
     public org.openapis.openapi.models.operations.GetAvailableVideoChannelsResponse getAvailableVideoChannels(org.openapis.openapi.models.operations.GetAvailableVideoChannelsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAvailableVideoChannelsPathParams.class, baseUrl, "/videos/{video_id}/available_channels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAvailableVideoChannelsRequest.class, baseUrl, "/videos/{video_id}/available_channels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -215,7 +218,7 @@ public class ChannelsVideos {
      */
     public org.openapis.openapi.models.operations.GetChannelVideoResponse getChannelVideo(org.openapis.openapi.models.operations.GetChannelVideoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelVideoPathParams.class, baseUrl, "/channels/{channel_id}/videos/{video_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelVideoRequest.class, baseUrl, "/channels/{channel_id}/videos/{video_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -262,13 +265,13 @@ public class ChannelsVideos {
      */
     public org.openapis.openapi.models.operations.GetChannelVideosResponse getChannelVideos(org.openapis.openapi.models.operations.GetChannelVideosRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelVideosPathParams.class, baseUrl, "/channels/{channel_id}/videos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelVideosRequest.class, baseUrl, "/channels/{channel_id}/videos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetChannelVideosQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetChannelVideosRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -312,24 +315,25 @@ public class ChannelsVideos {
     /**
      * Remove a list of videos from a channel
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RemoveVideosFromChannelResponse removeVideosFromChannel(org.openapis.openapi.models.operations.RemoveVideosFromChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RemoveVideosFromChannelResponse removeVideosFromChannel(org.openapis.openapi.models.operations.RemoveVideosFromChannelRequest request, org.openapis.openapi.models.operations.RemoveVideosFromChannelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemoveVideosFromChannelPathParams.class, baseUrl, "/channels/{channel_id}/videos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemoveVideosFromChannelRequest.class, baseUrl, "/channels/{channel_id}/videos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

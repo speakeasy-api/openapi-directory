@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSIPPhoneRequest {
-    
-    public UpdateSIPPhonePathParams pathParams;
-    public UpdateSIPPhoneRequest withPathParams(UpdateSIPPhonePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateSIPPhoneApplicationJSON request;
-    public UpdateSIPPhoneRequest withRequest(UpdateSIPPhoneApplicationJSON request) {
-        this.request = request;
+    public UpdateSIPPhoneApplicationJSON requestBody;
+    public UpdateSIPPhoneRequest withRequestBody(UpdateSIPPhoneApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateSIPPhoneSecurity security;
-    public UpdateSIPPhoneRequest withSecurity(UpdateSIPPhoneSecurity security) {
-        this.security = security;
+    /**
+     * Unique Identifier of the SIP Phone. This can be retrieved from the List SIP Phones API.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=phoneId")
+    public String phoneId;
+    public UpdateSIPPhoneRequest withPhoneId(String phoneId) {
+        this.phoneId = phoneId;
         return this;
     }
     

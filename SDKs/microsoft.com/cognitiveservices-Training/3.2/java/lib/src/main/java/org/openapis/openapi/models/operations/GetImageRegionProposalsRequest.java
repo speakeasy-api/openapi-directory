@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetImageRegionProposalsRequest {
+    /**
+     * The image id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=imageId")
+    public String imageId;
+    public GetImageRegionProposalsRequest withImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
     
-    public GetImageRegionProposalsPathParams pathParams;
-    public GetImageRegionProposalsRequest withPathParams(GetImageRegionProposalsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public GetImageRegionProposalsRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

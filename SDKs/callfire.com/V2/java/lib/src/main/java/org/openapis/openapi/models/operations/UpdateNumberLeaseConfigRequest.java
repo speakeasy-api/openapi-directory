@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNumberLeaseConfigRequest {
-    
-    public UpdateNumberLeaseConfigPathParams pathParams;
-    public UpdateNumberLeaseConfigRequest withPathParams(UpdateNumberLeaseConfigPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The configuration of a number lease object. There are two available types of configuration: IVR, TRACKING 
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.NumberConfig request;
-    public UpdateNumberLeaseConfigRequest withRequest(org.openapis.openapi.models.shared.NumberConfig request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.NumberConfig numberConfig;
+    public UpdateNumberLeaseConfigRequest withNumberConfig(org.openapis.openapi.models.shared.NumberConfig numberConfig) {
+        this.numberConfig = numberConfig;
         return this;
     }
     
-    
-    public UpdateNumberLeaseConfigSecurity security;
-    public UpdateNumberLeaseConfigRequest withSecurity(UpdateNumberLeaseConfigSecurity security) {
-        this.security = security;
+    /**
+     * A phone number in E.164 format (11-digit) which needs to be verified. Example: 12132000384
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=number")
+    public String number;
+    public UpdateNumberLeaseConfigRequest withNumber(String number) {
+        this.number = number;
         return this;
     }
     

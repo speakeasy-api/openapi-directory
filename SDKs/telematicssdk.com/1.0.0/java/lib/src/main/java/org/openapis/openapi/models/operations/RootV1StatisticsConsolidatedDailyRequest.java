@@ -4,13 +4,55 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RootV1StatisticsConsolidatedDailyRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AppId")
+    public String appId;
+    public RootV1StatisticsConsolidatedDailyRequest withAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
     
-    public RootV1StatisticsConsolidatedDailyQueryParams queryParams;
-    public RootV1StatisticsConsolidatedDailyRequest withQueryParams(RootV1StatisticsConsolidatedDailyQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CompanyId")
+    public String companyId;
+    public RootV1StatisticsConsolidatedDailyRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DeviceToken")
+    public String deviceToken;
+    public RootV1StatisticsConsolidatedDailyRequest withDeviceToken(String deviceToken) {
+        this.deviceToken = deviceToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndDate")
+    public String endDate;
+    public RootV1StatisticsConsolidatedDailyRequest withEndDate(String endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceId")
+    public String instanceId;
+    public RootV1StatisticsConsolidatedDailyRequest withInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StartDate")
+    public String startDate;
+    public RootV1StatisticsConsolidatedDailyRequest withStartDate(String startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Tag")
+    public String tag;
+    public RootV1StatisticsConsolidatedDailyRequest withTag(String tag) {
+        this.tag = tag;
         return this;
     }
     

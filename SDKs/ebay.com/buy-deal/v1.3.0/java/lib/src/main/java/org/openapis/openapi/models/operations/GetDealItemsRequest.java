@@ -4,27 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDealItemsRequest {
-    
-    public GetDealItemsQueryParams queryParams;
-    public GetDealItemsRequest withQueryParams(GetDealItemsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A header used to specify the eBay marketplace ID.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
+    public String xEbayCMarketplaceId;
+    public GetDealItemsRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
+        this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
     }
     
-    
-    public GetDealItemsHeaders headers;
-    public GetDealItemsRequest withHeaders(GetDealItemsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The unique identifier of the eBay category for the search.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category_ids")
+    public String categoryIds;
+    public GetDealItemsRequest withCategoryIds(String categoryIds) {
+        this.categoryIds = categoryIds;
         return this;
     }
     
+    /**
+     * A filter for commissionable deals. Restriction: This filter is currently only supported for the US marketplace.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=commissionable")
+    public String commissionable;
+    public GetDealItemsRequest withCommissionable(String commissionable) {
+        this.commissionable = commissionable;
+        return this;
+    }
     
-    public GetDealItemsSecurity security;
-    public GetDealItemsRequest withSecurity(GetDealItemsSecurity security) {
-        this.security = security;
+    /**
+     * A filter for items that can be shipped to the specified country.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=delivery_country")
+    public String deliveryCountry;
+    public GetDealItemsRequest withDeliveryCountry(String deliveryCountry) {
+        this.deliveryCountry = deliveryCountry;
+        return this;
+    }
+    
+    /**
+     * The maximum number of items, from the current result set, returned on a single page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public String limit;
+    public GetDealItemsRequest withLimit(String limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * The number of items that will be skipped in the result set. This is used with the limit field to control the pagination of the output. For example, if the offset is set to 0 and the limit is set to 10, the method will retrieve items 1 through 10 from the list of items returned. If the offset is set to 10 and the limit is set to 10, the method will retrieve items 11 through 20 from the list of items returned. Default: 0
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public String offset;
+    public GetDealItemsRequest withOffset(String offset) {
+        this.offset = offset;
         return this;
     }
     

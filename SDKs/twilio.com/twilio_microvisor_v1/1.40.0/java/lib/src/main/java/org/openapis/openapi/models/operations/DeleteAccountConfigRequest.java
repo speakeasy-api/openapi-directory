@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAccountConfigRequest {
-    
-    public DeleteAccountConfigPathParams pathParams;
-    public DeleteAccountConfigRequest withPathParams(DeleteAccountConfigPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteAccountConfigSecurity security;
-    public DeleteAccountConfigRequest withSecurity(DeleteAccountConfigSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteAccountConfigRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The config key; up to 100 characters.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Key")
+    public String key;
+    public DeleteAccountConfigRequest withKey(String key) {
+        this.key = key;
         return this;
     }
     

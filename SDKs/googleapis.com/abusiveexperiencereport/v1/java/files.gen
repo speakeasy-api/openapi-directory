@@ -31,11 +31,8 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/AbusiveexperiencereportSitesGetPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/AbusiveexperiencereportSitesGetQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/AbusiveexperiencereportSitesGetRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/AbusiveexperiencereportSitesGetResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/AbusiveexperiencereportViolatingSitesListQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/AbusiveexperiencereportViolatingSitesListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/AbusiveexperiencereportViolatingSitesListResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/SiteSummaryResponseAbusiveStatusEnum.java

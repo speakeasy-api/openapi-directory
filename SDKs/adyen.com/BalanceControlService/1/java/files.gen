@@ -31,7 +31,6 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/PostBalanceTransferSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostBalanceTransferRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostBalanceTransferResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/BalanceTransferResponseStatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/BalanceTransferResponseTypeEnum.java
@@ -39,6 +38,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/BalanceTransferResponse.jav
 lib/src/main/java/org/openapis/openapi/models/shared/Amount.java
 lib/src/main/java/org/openapis/openapi/models/shared/BalanceTransferRequestTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/BalanceTransferRequest.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKeyAuth.java
 lib/src/main/java/org/openapis/openapi/models/shared/SchemeBasicAuth.java
 USAGE.md

@@ -7,34 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddCallBroadcastRecipientsRequest {
-    
-    public AddCallBroadcastRecipientsPathParams pathParams;
-    public AddCallBroadcastRecipientsRequest withPathParams(AddCallBroadcastRecipientsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AddCallBroadcastRecipientsQueryParams queryParams;
-    public AddCallBroadcastRecipientsRequest withQueryParams(AddCallBroadcastRecipientsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * A list of CallRecipient objects
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Recipient[] request;
-    public AddCallBroadcastRecipientsRequest withRequest(org.openapis.openapi.models.shared.Recipient[] request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Recipient[] requestBody;
+    public AddCallBroadcastRecipientsRequest withRequestBody(org.openapis.openapi.models.shared.Recipient[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AddCallBroadcastRecipientsRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
     
-    public AddCallBroadcastRecipientsSecurity security;
-    public AddCallBroadcastRecipientsRequest withSecurity(AddCallBroadcastRecipientsSecurity security) {
-        this.security = security;
+    /**
+     * An id of a call broadcast
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public AddCallBroadcastRecipientsRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Turns on strict validation for recipients. System will reply with BAD_REQUEST(400) if strictValidation = true and one of numbers didn't pass validation
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=strictValidation")
+    public Boolean strictValidation;
+    public AddCallBroadcastRecipientsRequest withStrictValidation(Boolean strictValidation) {
+        this.strictValidation = strictValidation;
         return this;
     }
     

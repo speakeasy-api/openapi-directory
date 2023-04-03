@@ -33,25 +33,26 @@ public class VerificationCodes {
     /**
      * Generates new backup verification codes for the user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DirectoryVerificationCodesGenerateResponse directoryVerificationCodesGenerate(org.openapis.openapi.models.operations.DirectoryVerificationCodesGenerateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DirectoryVerificationCodesGenerateResponse directoryVerificationCodesGenerate(org.openapis.openapi.models.operations.DirectoryVerificationCodesGenerateRequest request, org.openapis.openapi.models.operations.DirectoryVerificationCodesGenerateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryVerificationCodesGeneratePathParams.class, baseUrl, "/admin/directory/v1/users/{userKey}/verificationCodes/generate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryVerificationCodesGenerateRequest.class, baseUrl, "/admin/directory/v1/users/{userKey}/verificationCodes/generate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryVerificationCodesGenerateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryVerificationCodesGenerateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -72,25 +73,26 @@ public class VerificationCodes {
     /**
      * Invalidates the current backup verification codes for the user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DirectoryVerificationCodesInvalidateResponse directoryVerificationCodesInvalidate(org.openapis.openapi.models.operations.DirectoryVerificationCodesInvalidateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DirectoryVerificationCodesInvalidateResponse directoryVerificationCodesInvalidate(org.openapis.openapi.models.operations.DirectoryVerificationCodesInvalidateRequest request, org.openapis.openapi.models.operations.DirectoryVerificationCodesInvalidateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryVerificationCodesInvalidatePathParams.class, baseUrl, "/admin/directory/v1/users/{userKey}/verificationCodes/invalidate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryVerificationCodesInvalidateRequest.class, baseUrl, "/admin/directory/v1/users/{userKey}/verificationCodes/invalidate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryVerificationCodesInvalidateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryVerificationCodesInvalidateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -111,25 +113,26 @@ public class VerificationCodes {
     /**
      * Returns the current set of valid backup verification codes for the specified user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DirectoryVerificationCodesListResponse directoryVerificationCodesList(org.openapis.openapi.models.operations.DirectoryVerificationCodesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DirectoryVerificationCodesListResponse directoryVerificationCodesList(org.openapis.openapi.models.operations.DirectoryVerificationCodesListRequest request, org.openapis.openapi.models.operations.DirectoryVerificationCodesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryVerificationCodesListPathParams.class, baseUrl, "/admin/directory/v1/users/{userKey}/verificationCodes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DirectoryVerificationCodesListRequest.class, baseUrl, "/admin/directory/v1/users/{userKey}/verificationCodes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryVerificationCodesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DirectoryVerificationCodesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

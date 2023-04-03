@@ -43,7 +43,7 @@ public class StoryCollaborators {
      */
     public org.openapis.openapi.models.operations.StoryIdCollaboratorsGetResponse storyIdCollaboratorsGet(org.openapis.openapi.models.operations.StoryIdCollaboratorsGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdCollaboratorsGetPathParams.class, baseUrl, "/{id}/collaborators", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdCollaboratorsGetRequest.class, baseUrl, "/{id}/collaborators", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -90,12 +90,12 @@ public class StoryCollaborators {
      */
     public org.openapis.openapi.models.operations.StoryIdCollaboratorsInactivePostResponse storyIdCollaboratorsInactivePost(org.openapis.openapi.models.operations.StoryIdCollaboratorsInactivePostRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdCollaboratorsInactivePostPathParams.class, baseUrl, "/{id}/collaborators/inactive", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdCollaboratorsInactivePostRequest.class, baseUrl, "/{id}/collaborators/inactive", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "modifyInactiveCollaborator", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -144,12 +144,12 @@ public class StoryCollaborators {
      */
     public org.openapis.openapi.models.operations.StoryIdCollaboratorsPostResponse storyIdCollaboratorsPost(org.openapis.openapi.models.operations.StoryIdCollaboratorsPostRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdCollaboratorsPostPathParams.class, baseUrl, "/{id}/collaborators", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdCollaboratorsPostRequest.class, baseUrl, "/{id}/collaborators", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "addNewCollaboratorRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -196,7 +196,7 @@ public class StoryCollaborators {
      */
     public org.openapis.openapi.models.operations.StoryIdCollaboratorsUseridDeleteResponse storyIdCollaboratorsUseridDelete(org.openapis.openapi.models.operations.StoryIdCollaboratorsUseridDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdCollaboratorsUseridDeletePathParams.class, baseUrl, "/{id}/collaborators/{story_collaborator_userid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdCollaboratorsUseridDeleteRequest.class, baseUrl, "/{id}/collaborators/{story_collaborator_userid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -237,7 +237,7 @@ public class StoryCollaborators {
      */
     public org.openapis.openapi.models.operations.StoryIdCollaboratorsUseridGetResponse storyIdCollaboratorsUseridGet(org.openapis.openapi.models.operations.StoryIdCollaboratorsUseridGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdCollaboratorsUseridGetPathParams.class, baseUrl, "/{id}/collaborators/{story_collaborator_userid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdCollaboratorsUseridGetRequest.class, baseUrl, "/{id}/collaborators/{story_collaborator_userid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -284,12 +284,12 @@ public class StoryCollaborators {
      */
     public org.openapis.openapi.models.operations.StoryIdCollaboratorsUseridPutResponse storyIdCollaboratorsUseridPut(org.openapis.openapi.models.operations.StoryIdCollaboratorsUseridPutRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdCollaboratorsUseridPutPathParams.class, baseUrl, "/{id}/collaborators/{story_collaborator_userid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdCollaboratorsUseridPutRequest.class, baseUrl, "/{id}/collaborators/{story_collaborator_userid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "storyCollaborator", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

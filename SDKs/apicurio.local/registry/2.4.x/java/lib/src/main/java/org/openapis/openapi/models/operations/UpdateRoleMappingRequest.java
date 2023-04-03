@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateRoleMappingRequest {
-    
-    public UpdateRoleMappingPathParams pathParams;
-    public UpdateRoleMappingRequest withPathParams(UpdateRoleMappingPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.UpdateRole updateRole;
+    public UpdateRoleMappingRequest withUpdateRole(org.openapis.openapi.models.shared.UpdateRole updateRole) {
+        this.updateRole = updateRole;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateRole request;
-    public UpdateRoleMappingRequest withRequest(org.openapis.openapi.models.shared.UpdateRole request) {
-        this.request = request;
+    /**
+     * Unique id of a principal (typically either a user or service account).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=principalId")
+    public String principalId;
+    public UpdateRoleMappingRequest withPrincipalId(String principalId) {
+        this.principalId = principalId;
         return this;
     }
     

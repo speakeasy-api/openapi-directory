@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UsersGetGpgKeyForAuthenticatedRequest {
-    
-    public UsersGetGpgKeyForAuthenticatedPathParams pathParams;
-    public UsersGetGpgKeyForAuthenticatedRequest withPathParams(UsersGetGpgKeyForAuthenticatedPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * gpg_key_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=gpg_key_id")
+    public Long gpgKeyId;
+    public UsersGetGpgKeyForAuthenticatedRequest withGpgKeyId(Long gpgKeyId) {
+        this.gpgKeyId = gpgKeyId;
         return this;
     }
     

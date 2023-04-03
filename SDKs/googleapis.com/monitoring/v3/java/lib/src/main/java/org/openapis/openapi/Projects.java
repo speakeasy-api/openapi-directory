@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Creates a new alerting policy.Design your application to single-thread API calls that modify the state of alerting policies in a single project. This includes calls to CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringProjectsAlertPoliciesCreateResponse monitoringProjectsAlertPoliciesCreate(org.openapis.openapi.models.operations.MonitoringProjectsAlertPoliciesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringProjectsAlertPoliciesCreateResponse monitoringProjectsAlertPoliciesCreate(org.openapis.openapi.models.operations.MonitoringProjectsAlertPoliciesCreateRequest request, org.openapis.openapi.models.operations.MonitoringProjectsAlertPoliciesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsAlertPoliciesCreatePathParams.class, baseUrl, "/v3/{name}/alertPolicies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsAlertPoliciesCreateRequest.class, baseUrl, "/v3/{name}/alertPolicies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "alertPolicy", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsAlertPoliciesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsAlertPoliciesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,25 +83,26 @@ public class Projects {
     /**
      * Lists the existing alerting policies for the workspace.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringProjectsAlertPoliciesListResponse monitoringProjectsAlertPoliciesList(org.openapis.openapi.models.operations.MonitoringProjectsAlertPoliciesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringProjectsAlertPoliciesListResponse monitoringProjectsAlertPoliciesList(org.openapis.openapi.models.operations.MonitoringProjectsAlertPoliciesListRequest request, org.openapis.openapi.models.operations.MonitoringProjectsAlertPoliciesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsAlertPoliciesListPathParams.class, baseUrl, "/v3/{name}/alertPolicies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsAlertPoliciesListRequest.class, baseUrl, "/v3/{name}/alertPolicies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsAlertPoliciesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsAlertPoliciesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,27 +129,28 @@ public class Projects {
     /**
      * Cloud Monitoring Agent only: Creates a new time series.This method is only for use by the Cloud Monitoring Agent. Use projects.timeSeries.create instead.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringProjectsCollectdTimeSeriesCreateResponse monitoringProjectsCollectdTimeSeriesCreate(org.openapis.openapi.models.operations.MonitoringProjectsCollectdTimeSeriesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringProjectsCollectdTimeSeriesCreateResponse monitoringProjectsCollectdTimeSeriesCreate(org.openapis.openapi.models.operations.MonitoringProjectsCollectdTimeSeriesCreateRequest request, org.openapis.openapi.models.operations.MonitoringProjectsCollectdTimeSeriesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsCollectdTimeSeriesCreatePathParams.class, baseUrl, "/v3/{name}/collectdTimeSeries", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsCollectdTimeSeriesCreateRequest.class, baseUrl, "/v3/{name}/collectdTimeSeries", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createCollectdTimeSeriesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsCollectdTimeSeriesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsCollectdTimeSeriesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,27 +177,28 @@ public class Projects {
     /**
      * Creates a new group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringProjectsGroupsCreateResponse monitoringProjectsGroupsCreate(org.openapis.openapi.models.operations.MonitoringProjectsGroupsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringProjectsGroupsCreateResponse monitoringProjectsGroupsCreate(org.openapis.openapi.models.operations.MonitoringProjectsGroupsCreateRequest request, org.openapis.openapi.models.operations.MonitoringProjectsGroupsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsGroupsCreatePathParams.class, baseUrl, "/v3/{name}/groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsGroupsCreateRequest.class, baseUrl, "/v3/{name}/groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "group", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsGroupsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsGroupsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -221,25 +225,26 @@ public class Projects {
     /**
      * Lists the existing groups.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringProjectsGroupsListResponse monitoringProjectsGroupsList(org.openapis.openapi.models.operations.MonitoringProjectsGroupsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringProjectsGroupsListResponse monitoringProjectsGroupsList(org.openapis.openapi.models.operations.MonitoringProjectsGroupsListRequest request, org.openapis.openapi.models.operations.MonitoringProjectsGroupsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsGroupsListPathParams.class, baseUrl, "/v3/{name}/groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsGroupsListRequest.class, baseUrl, "/v3/{name}/groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsGroupsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsGroupsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -266,25 +271,26 @@ public class Projects {
     /**
      * Lists the monitored resources that are members of a group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringProjectsGroupsMembersListResponse monitoringProjectsGroupsMembersList(org.openapis.openapi.models.operations.MonitoringProjectsGroupsMembersListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringProjectsGroupsMembersListResponse monitoringProjectsGroupsMembersList(org.openapis.openapi.models.operations.MonitoringProjectsGroupsMembersListRequest request, org.openapis.openapi.models.operations.MonitoringProjectsGroupsMembersListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsGroupsMembersListPathParams.class, baseUrl, "/v3/{name}/members", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsGroupsMembersListRequest.class, baseUrl, "/v3/{name}/members", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsGroupsMembersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsGroupsMembersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -311,27 +317,28 @@ public class Projects {
     /**
      * Updates an existing group. You can change any group attributes except name.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringProjectsGroupsUpdateResponse monitoringProjectsGroupsUpdate(org.openapis.openapi.models.operations.MonitoringProjectsGroupsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringProjectsGroupsUpdateResponse monitoringProjectsGroupsUpdate(org.openapis.openapi.models.operations.MonitoringProjectsGroupsUpdateRequest request, org.openapis.openapi.models.operations.MonitoringProjectsGroupsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsGroupsUpdatePathParams.class, baseUrl, "/v3/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsGroupsUpdateRequest.class, baseUrl, "/v3/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "group", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsGroupsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsGroupsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -358,27 +365,28 @@ public class Projects {
     /**
      * Creates a new metric descriptor. The creation is executed asynchronously. User-created metric descriptors define custom metrics (https://cloud.google.com/monitoring/custom-metrics). The metric descriptor is updated if it already exists, except that metric labels are never removed.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringProjectsMetricDescriptorsCreateResponse monitoringProjectsMetricDescriptorsCreate(org.openapis.openapi.models.operations.MonitoringProjectsMetricDescriptorsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringProjectsMetricDescriptorsCreateResponse monitoringProjectsMetricDescriptorsCreate(org.openapis.openapi.models.operations.MonitoringProjectsMetricDescriptorsCreateRequest request, org.openapis.openapi.models.operations.MonitoringProjectsMetricDescriptorsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsMetricDescriptorsCreatePathParams.class, baseUrl, "/v3/{name}/metricDescriptors", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsMetricDescriptorsCreateRequest.class, baseUrl, "/v3/{name}/metricDescriptors", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "metricDescriptor", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsMetricDescriptorsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsMetricDescriptorsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -405,25 +413,26 @@ public class Projects {
     /**
      * Lists metric descriptors that match a filter.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringProjectsMetricDescriptorsListResponse monitoringProjectsMetricDescriptorsList(org.openapis.openapi.models.operations.MonitoringProjectsMetricDescriptorsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringProjectsMetricDescriptorsListResponse monitoringProjectsMetricDescriptorsList(org.openapis.openapi.models.operations.MonitoringProjectsMetricDescriptorsListRequest request, org.openapis.openapi.models.operations.MonitoringProjectsMetricDescriptorsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsMetricDescriptorsListPathParams.class, baseUrl, "/v3/{name}/metricDescriptors", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsMetricDescriptorsListRequest.class, baseUrl, "/v3/{name}/metricDescriptors", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsMetricDescriptorsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsMetricDescriptorsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -450,25 +459,26 @@ public class Projects {
     /**
      * Lists monitored resource descriptors that match a filter.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringProjectsMonitoredResourceDescriptorsListResponse monitoringProjectsMonitoredResourceDescriptorsList(org.openapis.openapi.models.operations.MonitoringProjectsMonitoredResourceDescriptorsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringProjectsMonitoredResourceDescriptorsListResponse monitoringProjectsMonitoredResourceDescriptorsList(org.openapis.openapi.models.operations.MonitoringProjectsMonitoredResourceDescriptorsListRequest request, org.openapis.openapi.models.operations.MonitoringProjectsMonitoredResourceDescriptorsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsMonitoredResourceDescriptorsListPathParams.class, baseUrl, "/v3/{name}/monitoredResourceDescriptors", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsMonitoredResourceDescriptorsListRequest.class, baseUrl, "/v3/{name}/monitoredResourceDescriptors", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsMonitoredResourceDescriptorsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsMonitoredResourceDescriptorsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -495,25 +505,26 @@ public class Projects {
     /**
      * Lists the descriptors for supported channel types. The use of descriptors makes it possible for new channel types to be dynamically added.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelDescriptorsListResponse monitoringProjectsNotificationChannelDescriptorsList(org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelDescriptorsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelDescriptorsListResponse monitoringProjectsNotificationChannelDescriptorsList(org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelDescriptorsListRequest request, org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelDescriptorsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelDescriptorsListPathParams.class, baseUrl, "/v3/{name}/notificationChannelDescriptors", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelDescriptorsListRequest.class, baseUrl, "/v3/{name}/notificationChannelDescriptors", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelDescriptorsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelDescriptorsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -540,27 +551,28 @@ public class Projects {
     /**
      * Creates a new notification channel, representing a single notification endpoint such as an email address, SMS number, or PagerDuty service.Design your application to single-thread API calls that modify the state of notification channels in a single project. This includes calls to CreateNotificationChannel, DeleteNotificationChannel and UpdateNotificationChannel.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsCreateResponse monitoringProjectsNotificationChannelsCreate(org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsCreateResponse monitoringProjectsNotificationChannelsCreate(org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsCreateRequest request, org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsCreatePathParams.class, baseUrl, "/v3/{name}/notificationChannels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsCreateRequest.class, baseUrl, "/v3/{name}/notificationChannels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "notificationChannel", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -587,27 +599,28 @@ public class Projects {
     /**
      * Requests a verification code for an already verified channel that can then be used in a call to VerifyNotificationChannel() on a different channel with an equivalent identity in the same or in a different project. This makes it possible to copy a channel between projects without requiring manual reverification of the channel. If the channel is not in the verified state, this method will fail (in other words, this may only be used if the SendNotificationChannelVerificationCode and VerifyNotificationChannel paths have already been used to put the given channel into the verified state).There is no guarantee that the verification codes returned by this method will be of a similar structure or form as the ones that are delivered to the channel via SendNotificationChannelVerificationCode; while VerifyNotificationChannel() will recognize both the codes delivered via SendNotificationChannelVerificationCode() and returned from GetNotificationChannelVerificationCode(), it is typically the case that the verification codes delivered via SendNotificationChannelVerificationCode() will be shorter and also have a shorter expiration (e.g. codes such as "G-123456") whereas GetVerificationCode() will typically return a much longer, websafe base 64 encoded string that has a longer expiration time.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsGetVerificationCodeResponse monitoringProjectsNotificationChannelsGetVerificationCode(org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsGetVerificationCodeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsGetVerificationCodeResponse monitoringProjectsNotificationChannelsGetVerificationCode(org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsGetVerificationCodeRequest request, org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsGetVerificationCodeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsGetVerificationCodePathParams.class, baseUrl, "/v3/{name}:getVerificationCode", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsGetVerificationCodeRequest.class, baseUrl, "/v3/{name}:getVerificationCode", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "getNotificationChannelVerificationCodeRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsGetVerificationCodeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsGetVerificationCodeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -634,25 +647,26 @@ public class Projects {
     /**
      * Lists the notification channels that have been created for the project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsListResponse monitoringProjectsNotificationChannelsList(org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsListResponse monitoringProjectsNotificationChannelsList(org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsListRequest request, org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsListPathParams.class, baseUrl, "/v3/{name}/notificationChannels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsListRequest.class, baseUrl, "/v3/{name}/notificationChannels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -679,27 +693,28 @@ public class Projects {
     /**
      * Causes a verification code to be delivered to the channel. The code can then be supplied in VerifyNotificationChannel to verify the channel.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsSendVerificationCodeResponse monitoringProjectsNotificationChannelsSendVerificationCode(org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsSendVerificationCodeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsSendVerificationCodeResponse monitoringProjectsNotificationChannelsSendVerificationCode(org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsSendVerificationCodeRequest request, org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsSendVerificationCodeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsSendVerificationCodePathParams.class, baseUrl, "/v3/{name}:sendVerificationCode", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsSendVerificationCodeRequest.class, baseUrl, "/v3/{name}:sendVerificationCode", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsSendVerificationCodeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsSendVerificationCodeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -726,27 +741,28 @@ public class Projects {
     /**
      * Verifies a NotificationChannel by proving receipt of the code delivered to the channel as a result of calling SendNotificationChannelVerificationCode.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsVerifyResponse monitoringProjectsNotificationChannelsVerify(org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsVerifyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsVerifyResponse monitoringProjectsNotificationChannelsVerify(org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsVerifyRequest request, org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsVerifySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsVerifyPathParams.class, baseUrl, "/v3/{name}:verify", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsVerifyRequest.class, baseUrl, "/v3/{name}:verify", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "verifyNotificationChannelRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsVerifyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsNotificationChannelsVerifyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -773,27 +789,28 @@ public class Projects {
     /**
      * Creates a Snooze that will prevent alerts, which match the provided criteria, from being opened. The Snooze applies for a specific time interval.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringProjectsSnoozesCreateResponse monitoringProjectsSnoozesCreate(org.openapis.openapi.models.operations.MonitoringProjectsSnoozesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringProjectsSnoozesCreateResponse monitoringProjectsSnoozesCreate(org.openapis.openapi.models.operations.MonitoringProjectsSnoozesCreateRequest request, org.openapis.openapi.models.operations.MonitoringProjectsSnoozesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsSnoozesCreatePathParams.class, baseUrl, "/v3/{parent}/snoozes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsSnoozesCreateRequest.class, baseUrl, "/v3/{parent}/snoozes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "snooze", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsSnoozesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsSnoozesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -820,25 +837,26 @@ public class Projects {
     /**
      * Lists the Snoozes associated with a project. Can optionally pass in filter, which specifies predicates to match Snoozes.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringProjectsSnoozesListResponse monitoringProjectsSnoozesList(org.openapis.openapi.models.operations.MonitoringProjectsSnoozesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringProjectsSnoozesListResponse monitoringProjectsSnoozesList(org.openapis.openapi.models.operations.MonitoringProjectsSnoozesListRequest request, org.openapis.openapi.models.operations.MonitoringProjectsSnoozesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsSnoozesListPathParams.class, baseUrl, "/v3/{parent}/snoozes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsSnoozesListRequest.class, baseUrl, "/v3/{parent}/snoozes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsSnoozesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsSnoozesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -865,27 +883,28 @@ public class Projects {
     /**
      * Creates or adds data to one or more time series. The response is empty if all time series in the request were written. If any time series could not be written, a corresponding failure message is included in the error response.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringProjectsTimeSeriesCreateResponse monitoringProjectsTimeSeriesCreate(org.openapis.openapi.models.operations.MonitoringProjectsTimeSeriesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringProjectsTimeSeriesCreateResponse monitoringProjectsTimeSeriesCreate(org.openapis.openapi.models.operations.MonitoringProjectsTimeSeriesCreateRequest request, org.openapis.openapi.models.operations.MonitoringProjectsTimeSeriesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsTimeSeriesCreatePathParams.class, baseUrl, "/v3/{name}/timeSeries", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsTimeSeriesCreateRequest.class, baseUrl, "/v3/{name}/timeSeries", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createTimeSeriesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsTimeSeriesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsTimeSeriesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -912,27 +931,28 @@ public class Projects {
     /**
      * Creates or adds data to one or more service time series. A service time series is a time series for a metric from a Google Cloud service. The response is empty if all time series in the request were written. If any time series could not be written, a corresponding failure message is included in the error response. This endpoint rejects writes to user-defined metrics. This method is only for use by Google Cloud services. Use projects.timeSeries.create instead.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringProjectsTimeSeriesCreateServiceResponse monitoringProjectsTimeSeriesCreateService(org.openapis.openapi.models.operations.MonitoringProjectsTimeSeriesCreateServiceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringProjectsTimeSeriesCreateServiceResponse monitoringProjectsTimeSeriesCreateService(org.openapis.openapi.models.operations.MonitoringProjectsTimeSeriesCreateServiceRequest request, org.openapis.openapi.models.operations.MonitoringProjectsTimeSeriesCreateServiceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsTimeSeriesCreateServicePathParams.class, baseUrl, "/v3/{name}/timeSeries:createService", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsTimeSeriesCreateServiceRequest.class, baseUrl, "/v3/{name}/timeSeries:createService", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createTimeSeriesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsTimeSeriesCreateServiceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsTimeSeriesCreateServiceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -959,25 +979,26 @@ public class Projects {
     /**
      * Lists time series that match a filter.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringProjectsTimeSeriesListResponse monitoringProjectsTimeSeriesList(org.openapis.openapi.models.operations.MonitoringProjectsTimeSeriesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringProjectsTimeSeriesListResponse monitoringProjectsTimeSeriesList(org.openapis.openapi.models.operations.MonitoringProjectsTimeSeriesListRequest request, org.openapis.openapi.models.operations.MonitoringProjectsTimeSeriesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsTimeSeriesListPathParams.class, baseUrl, "/v3/{name}/timeSeries", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsTimeSeriesListRequest.class, baseUrl, "/v3/{name}/timeSeries", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsTimeSeriesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsTimeSeriesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1004,27 +1025,28 @@ public class Projects {
     /**
      * Queries time series using Monitoring Query Language.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringProjectsTimeSeriesQueryResponse monitoringProjectsTimeSeriesQuery(org.openapis.openapi.models.operations.MonitoringProjectsTimeSeriesQueryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringProjectsTimeSeriesQueryResponse monitoringProjectsTimeSeriesQuery(org.openapis.openapi.models.operations.MonitoringProjectsTimeSeriesQueryRequest request, org.openapis.openapi.models.operations.MonitoringProjectsTimeSeriesQuerySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsTimeSeriesQueryPathParams.class, baseUrl, "/v3/{name}/timeSeries:query", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsTimeSeriesQueryRequest.class, baseUrl, "/v3/{name}/timeSeries:query", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "queryTimeSeriesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsTimeSeriesQueryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsTimeSeriesQueryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1051,27 +1073,28 @@ public class Projects {
     /**
      * Creates a new Uptime check configuration.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringProjectsUptimeCheckConfigsCreateResponse monitoringProjectsUptimeCheckConfigsCreate(org.openapis.openapi.models.operations.MonitoringProjectsUptimeCheckConfigsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringProjectsUptimeCheckConfigsCreateResponse monitoringProjectsUptimeCheckConfigsCreate(org.openapis.openapi.models.operations.MonitoringProjectsUptimeCheckConfigsCreateRequest request, org.openapis.openapi.models.operations.MonitoringProjectsUptimeCheckConfigsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsUptimeCheckConfigsCreatePathParams.class, baseUrl, "/v3/{parent}/uptimeCheckConfigs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsUptimeCheckConfigsCreateRequest.class, baseUrl, "/v3/{parent}/uptimeCheckConfigs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "uptimeCheckConfig", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsUptimeCheckConfigsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsUptimeCheckConfigsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1098,25 +1121,26 @@ public class Projects {
     /**
      * Lists the existing valid Uptime check configurations for the project (leaving out any invalid configurations).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringProjectsUptimeCheckConfigsListResponse monitoringProjectsUptimeCheckConfigsList(org.openapis.openapi.models.operations.MonitoringProjectsUptimeCheckConfigsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringProjectsUptimeCheckConfigsListResponse monitoringProjectsUptimeCheckConfigsList(org.openapis.openapi.models.operations.MonitoringProjectsUptimeCheckConfigsListRequest request, org.openapis.openapi.models.operations.MonitoringProjectsUptimeCheckConfigsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsUptimeCheckConfigsListPathParams.class, baseUrl, "/v3/{parent}/uptimeCheckConfigs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsUptimeCheckConfigsListRequest.class, baseUrl, "/v3/{parent}/uptimeCheckConfigs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsUptimeCheckConfigsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsUptimeCheckConfigsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

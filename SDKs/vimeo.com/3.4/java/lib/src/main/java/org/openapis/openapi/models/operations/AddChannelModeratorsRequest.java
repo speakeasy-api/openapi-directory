@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddChannelModeratorsRequest {
-    
-    public AddChannelModeratorsPathParams pathParams;
-    public AddChannelModeratorsRequest withPathParams(AddChannelModeratorsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public AddChannelModeratorsRequestBody request;
-    public AddChannelModeratorsRequest withRequest(AddChannelModeratorsRequestBody request) {
-        this.request = request;
+    public AddChannelModeratorsRequestBody requestBody;
+    public AddChannelModeratorsRequest withRequestBody(AddChannelModeratorsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public AddChannelModeratorsSecurity security;
-    public AddChannelModeratorsRequest withSecurity(AddChannelModeratorsSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel_id")
+    public Double channelId;
+    public AddChannelModeratorsRequest withChannelId(Double channelId) {
+        this.channelId = channelId;
         return this;
     }
     

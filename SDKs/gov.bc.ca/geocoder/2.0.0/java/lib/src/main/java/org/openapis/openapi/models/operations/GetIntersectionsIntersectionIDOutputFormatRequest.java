@@ -4,20 +4,38 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetIntersectionsIntersectionIDOutputFormatRequest {
-    
-    public GetIntersectionsIntersectionIDOutputFormatPathParams pathParams;
-    public GetIntersectionsIntersectionIDOutputFormatRequest withPathParams(GetIntersectionsIntersectionIDOutputFormatPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique intersection identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=intersectionID")
+    public String intersectionID;
+    public GetIntersectionsIntersectionIDOutputFormatRequest withIntersectionID(String intersectionID) {
+        this.intersectionID = intersectionID;
         return this;
     }
     
+    /**
+     * Results format. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank"&gt;outputFormat&lt;/a&gt;. 
+     * 
+     * Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=outputFormat")
+    public GetIntersectionsIntersectionIDOutputFormatOutputFormatEnum outputFormat;
+    public GetIntersectionsIntersectionIDOutputFormatRequest withOutputFormat(GetIntersectionsIntersectionIDOutputFormatOutputFormatEnum outputFormat) {
+        this.outputFormat = outputFormat;
+        return this;
+    }
     
-    public GetIntersectionsIntersectionIDOutputFormatQueryParams queryParams;
-    public GetIntersectionsIntersectionIDOutputFormatRequest withQueryParams(GetIntersectionsIntersectionIDOutputFormatQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The EPSG code of the spatial reference system (SRS) to use for output geometries. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank"&gt;outputSRS&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputSRS")
+    public GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum outputSRS;
+    public GetIntersectionsIntersectionIDOutputFormatRequest withOutputSRS(GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum outputSRS) {
+        this.outputSRS = outputSRS;
         return this;
     }
     

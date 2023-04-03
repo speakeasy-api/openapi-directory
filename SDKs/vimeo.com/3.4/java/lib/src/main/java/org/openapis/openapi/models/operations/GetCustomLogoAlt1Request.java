@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCustomLogoAlt1Request {
-    
-    public GetCustomLogoAlt1PathParams pathParams;
-    public GetCustomLogoAlt1Request withPathParams(GetCustomLogoAlt1PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the custom logo.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=logo_id")
+    public Double logoId;
+    public GetCustomLogoAlt1Request withLogoId(Double logoId) {
+        this.logoId = logoId;
         return this;
     }
     

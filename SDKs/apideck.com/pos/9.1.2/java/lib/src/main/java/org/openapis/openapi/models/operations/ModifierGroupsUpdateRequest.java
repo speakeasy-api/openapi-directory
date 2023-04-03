@@ -7,38 +7,60 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ModifierGroupsUpdateRequest {
-    
-    public ModifierGroupsUpdatePathParams pathParams;
-    public ModifierGroupsUpdateRequest withPathParams(ModifierGroupsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ModifierGroupsUpdateQueryParams queryParams;
-    public ModifierGroupsUpdateRequest withQueryParams(ModifierGroupsUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ModifierGroupsUpdateHeaders headers;
-    public ModifierGroupsUpdateRequest withHeaders(ModifierGroupsUpdateHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ModifierGroupInput request;
-    public ModifierGroupsUpdateRequest withRequest(org.openapis.openapi.models.shared.ModifierGroupInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ModifierGroupInput modifierGroupInput;
+    public ModifierGroupsUpdateRequest withModifierGroupInput(org.openapis.openapi.models.shared.ModifierGroupInput modifierGroupInput) {
+        this.modifierGroupInput = modifierGroupInput;
         return this;
     }
     
+    /**
+     * ID of the record you are acting upon.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public ModifierGroupsUpdateRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public ModifierGroupsUpdateSecurity security;
-    public ModifierGroupsUpdateRequest withSecurity(ModifierGroupsUpdateSecurity security) {
-        this.security = security;
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
+    public Boolean raw;
+    public ModifierGroupsUpdateRequest withRaw(Boolean raw) {
+        this.raw = raw;
+        return this;
+    }
+    
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public ModifierGroupsUpdateRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
+        return this;
+    }
+    
+    /**
+     * ID of the consumer which you want to get or push data from
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-consumer-id")
+    public String xApideckConsumerId;
+    public ModifierGroupsUpdateRequest withXApideckConsumerId(String xApideckConsumerId) {
+        this.xApideckConsumerId = xApideckConsumerId;
+        return this;
+    }
+    
+    /**
+     * Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-service-id")
+    public String xApideckServiceId;
+    public ModifierGroupsUpdateRequest withXApideckServiceId(String xApideckServiceId) {
+        this.xApideckServiceId = xApideckServiceId;
         return this;
     }
     

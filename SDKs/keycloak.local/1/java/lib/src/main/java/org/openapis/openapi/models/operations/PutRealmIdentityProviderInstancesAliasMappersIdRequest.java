@@ -7,17 +7,37 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutRealmIdentityProviderInstancesAliasMappersIdRequest {
-    
-    public PutRealmIdentityProviderInstancesAliasMappersIdPathParams pathParams;
-    public PutRealmIdentityProviderInstancesAliasMappersIdRequest withPathParams(PutRealmIdentityProviderInstancesAliasMappersIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.IdentityProviderMapperRepresentation identityProviderMapperRepresentation;
+    public PutRealmIdentityProviderInstancesAliasMappersIdRequest withIdentityProviderMapperRepresentation(org.openapis.openapi.models.shared.IdentityProviderMapperRepresentation identityProviderMapperRepresentation) {
+        this.identityProviderMapperRepresentation = identityProviderMapperRepresentation;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.IdentityProviderMapperRepresentation request;
-    public PutRealmIdentityProviderInstancesAliasMappersIdRequest withRequest(org.openapis.openapi.models.shared.IdentityProviderMapperRepresentation request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=alias")
+    public String alias;
+    public PutRealmIdentityProviderInstancesAliasMappersIdRequest withAlias(String alias) {
+        this.alias = alias;
+        return this;
+    }
+    
+    /**
+     * Mapper id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutRealmIdentityProviderInstancesAliasMappersIdRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PutRealmIdentityProviderInstancesAliasMappersIdRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

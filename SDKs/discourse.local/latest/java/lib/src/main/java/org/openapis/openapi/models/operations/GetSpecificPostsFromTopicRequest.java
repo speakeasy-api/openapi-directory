@@ -7,24 +7,31 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpecificPostsFromTopicRequest {
-    
-    public GetSpecificPostsFromTopicPathParams pathParams;
-    public GetSpecificPostsFromTopicRequest withPathParams(GetSpecificPostsFromTopicPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Key")
+    public String apiKey;
+    public GetSpecificPostsFromTopicRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
-    
-    public GetSpecificPostsFromTopicHeaders headers;
-    public GetSpecificPostsFromTopicRequest withHeaders(GetSpecificPostsFromTopicHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Username")
+    public String apiUsername;
+    public GetSpecificPostsFromTopicRequest withApiUsername(String apiUsername) {
+        this.apiUsername = apiUsername;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public GetSpecificPostsFromTopicRequestBody request;
-    public GetSpecificPostsFromTopicRequest withRequest(GetSpecificPostsFromTopicRequestBody request) {
-        this.request = request;
+    public GetSpecificPostsFromTopicRequestBody requestBody;
+    public GetSpecificPostsFromTopicRequest withRequestBody(GetSpecificPostsFromTopicRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSpecificPostsFromTopicRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

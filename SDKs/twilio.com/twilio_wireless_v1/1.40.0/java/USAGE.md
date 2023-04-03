@@ -7,10 +7,8 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.operations.CreateCommandSecurity;
 import org.openapis.openapi.models.operations.CreateCommandCreateCommandRequestCallbackMethodEnum;
 import org.openapis.openapi.models.operations.CreateCommandCreateCommandRequest;
-import org.openapis.openapi.models.operations.CreateCommandRequest;
 import org.openapis.openapi.models.operations.CreateCommandResponse;
 import org.openapis.openapi.models.shared.CommandEnumCommandModeEnum;
-import org.openapis.openapi.models.shared.SchemeAccountSidAuthToken;
 
 public class Application {
     public static void main(String[] args) {
@@ -18,25 +16,20 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CreateCommandRequest req = new CreateCommandRequest() {{
-                security = new CreateCommandSecurity() {{
-                    accountSidAuthToken = new SchemeAccountSidAuthToken() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
-                }};
-                request = new CreateCommandCreateCommandRequest() {{
-                    callbackMethod = "PATCH";
-                    callbackUrl = "https://salty-stag.name";
-                    command = "nulla";
-                    commandMode = "binary";
-                    deliveryReceiptRequested = false;
-                    includeSid = "illum";
-                    sim = "vel";
-                }};
-            }};            
+            CreateCommandCreateCommandRequest req = new CreateCommandCreateCommandRequest() {{
+                callbackMethod = "PATCH";
+                callbackUrl = "https://salty-stag.name";
+                command = "nulla";
+                commandMode = "binary";
+                deliveryReceiptRequested = false;
+                includeSid = "illum";
+                sim = "vel";
+            }}            
 
-            CreateCommandResponse res = sdk.createCommand(req);
+            CreateCommandResponse res = sdk.createCommand(req, new CreateCommandSecurity() {{
+                password = "YOUR_PASSWORD_HERE";
+                username = "YOUR_USERNAME_HERE";
+            }});
 
             if (res.wirelessV1Command.isPresent()) {
                 // handle response

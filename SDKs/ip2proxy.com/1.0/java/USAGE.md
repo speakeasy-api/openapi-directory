@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GetFormatEnum;
-import org.openapis.openapi.models.operations.GetQueryParams;
 import org.openapis.openapi.models.operations.GetRequest;
 import org.openapis.openapi.models.operations.GetResponse;
 
@@ -16,13 +15,11 @@ public class Application {
                 .build();
 
             GetRequest req = new GetRequest() {{
-                queryParams = new GetQueryParams() {{
-                    format = "xml";
-                    ip = "provident";
-                    key = "distinctio";
-                    package_ = "quibusdam";
-                }};
-            }};            
+                format = "xml";
+                ip = "provident";
+                key = "distinctio";
+                package_ = "quibusdam";
+            }}            
 
             GetResponse res = sdk.get(req);
 

@@ -7,29 +7,25 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateShiftRequest {
-    
-    public UpdateShiftPathParams pathParams;
-    public UpdateShiftRequest withPathParams(UpdateShiftPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * An object containing the fields to POST for the request.
      * 
      * See the corresponding object definition for field details.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateShiftRequest request;
-    public UpdateShiftRequest withRequest(org.openapis.openapi.models.shared.UpdateShiftRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateShiftRequest updateShiftRequest;
+    public UpdateShiftRequest withUpdateShiftRequest(org.openapis.openapi.models.shared.UpdateShiftRequest updateShiftRequest) {
+        this.updateShiftRequest = updateShiftRequest;
         return this;
     }
     
-    
-    public UpdateShiftSecurity security;
-    public UpdateShiftRequest withSecurity(UpdateShiftSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the object being updated.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UpdateShiftRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

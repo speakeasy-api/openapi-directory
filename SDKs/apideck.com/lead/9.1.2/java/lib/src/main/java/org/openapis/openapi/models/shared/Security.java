@@ -7,23 +7,23 @@ package org.openapis.openapi.models.shared;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Security {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public SchemeAPIKey apiKey;
-    public Security withApiKey(SchemeAPIKey apiKey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Authorization")
+    public String apiKey;
+    public Security withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public SchemeApplicationID applicationId;
-    public Security withApplicationId(SchemeApplicationID applicationId) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=x-apideck-app-id")
+    public String applicationId;
+    public Security withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public SchemeConsumerID consumerId;
-    public Security withConsumerId(SchemeConsumerID consumerId) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=x-apideck-consumer-id")
+    public String consumerId;
+    public Security withConsumerId(String consumerId) {
         this.consumerId = consumerId;
         return this;
     }

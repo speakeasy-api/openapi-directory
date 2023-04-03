@@ -39,14 +39,23 @@ public class Monitoring {
 
     /**
      * Get consent request status
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetV05HeartbeatResponse getV05Heartbeat(org.openapis.openapi.models.operations.GetV05HeartbeatRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetV05HeartbeatResponse getV05Heartbeat() throws Exception {
+        return this.getV05Heartbeat(null);
+    }
+
+    /**
+     * Get consent request status
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.GetV05HeartbeatResponse getV05Heartbeat(String serverURL) throws Exception {
         String baseUrl = GET_V05_HEARTBEAT_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.5/heartbeat");

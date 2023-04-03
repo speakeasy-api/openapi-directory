@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVodBackgroundsRequest {
-    
-    public GetVodBackgroundsPathParams pathParams;
-    public GetVodBackgroundsRequest withPathParams(GetVodBackgroundsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the On Demand.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ondemand_id")
+    public Double ondemandId;
+    public GetVodBackgroundsRequest withOndemandId(Double ondemandId) {
+        this.ondemandId = ondemandId;
         return this;
     }
     
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetVodBackgroundsRequest withPage(Double page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetVodBackgroundsQueryParams queryParams;
-    public GetVodBackgroundsRequest withQueryParams(GetVodBackgroundsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetVodBackgroundsRequest withPerPage(Double perPage) {
+        this.perPage = perPage;
         return this;
     }
     

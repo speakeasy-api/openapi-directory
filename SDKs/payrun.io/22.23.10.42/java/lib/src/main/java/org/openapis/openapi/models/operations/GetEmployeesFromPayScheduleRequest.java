@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEmployeesFromPayScheduleRequest {
-    
-    public GetEmployeesFromPaySchedulePathParams pathParams;
-    public GetEmployeesFromPayScheduleRequest withPathParams(GetEmployeesFromPaySchedulePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The version of the api to target. Omit or set as &amp;apos;default&amp;apos; to target the current api version.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Version")
+    public String apiVersion;
+    public GetEmployeesFromPayScheduleRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
+    /**
+     * The OAuth 1 authorization header. &amp;apos;Auto&amp;apos; enables auto complete.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public GetEmployeesFromPayScheduleRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
+        return this;
+    }
     
-    public GetEmployeesFromPayScheduleHeaders headers;
-    public GetEmployeesFromPayScheduleRequest withHeaders(GetEmployeesFromPayScheduleHeaders headers) {
-        this.headers = headers;
+    /**
+     * The employers' unique identifier. E.g ER001
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EmployerId")
+    public String employerId;
+    public GetEmployeesFromPayScheduleRequest withEmployerId(String employerId) {
+        this.employerId = employerId;
+        return this;
+    }
+    
+    /**
+     * The pay schedules' unique identifier. E.g SCH001
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=PayScheduleId")
+    public String payScheduleId;
+    public GetEmployeesFromPayScheduleRequest withPayScheduleId(String payScheduleId) {
+        this.payScheduleId = payScheduleId;
         return this;
     }
     

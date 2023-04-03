@@ -7,37 +7,37 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCommunicationPreferencesV3UnsubscribeUnsubscribeSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query")
-    public org.openapis.openapi.models.shared.SchemeHapikey hapikey;
-    public PostCommunicationPreferencesV3UnsubscribeUnsubscribeSecurity withHapikey(org.openapis.openapi.models.shared.SchemeHapikey hapikey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=hapikey")
+    public String hapikey;
+    public PostCommunicationPreferencesV3UnsubscribeUnsubscribeSecurity withHapikey(String hapikey) {
         this.hapikey = hapikey;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeOauth2Legacy oauth2Legacy;
-    public PostCommunicationPreferencesV3UnsubscribeUnsubscribeSecurity withOauth2Legacy(org.openapis.openapi.models.shared.SchemeOauth2Legacy oauth2Legacy) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String oauth2Legacy;
+    public PostCommunicationPreferencesV3UnsubscribeUnsubscribeSecurity withOauth2Legacy(String oauth2Legacy) {
         this.oauth2Legacy = oauth2Legacy;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeOauth2Legacy oauth2Legacy1;
-    public PostCommunicationPreferencesV3UnsubscribeUnsubscribeSecurity withOauth2Legacy1(org.openapis.openapi.models.shared.SchemeOauth2Legacy oauth2Legacy1) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String oauth2Legacy1;
+    public PostCommunicationPreferencesV3UnsubscribeUnsubscribeSecurity withOauth2Legacy1(String oauth2Legacy1) {
         this.oauth2Legacy1 = oauth2Legacy1;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemePrivateAppsLegacy privateAppsLegacy;
-    public PostCommunicationPreferencesV3UnsubscribeUnsubscribeSecurity withPrivateAppsLegacy(org.openapis.openapi.models.shared.SchemePrivateAppsLegacy privateAppsLegacy) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=private-app-legacy")
+    public String privateAppsLegacy;
+    public PostCommunicationPreferencesV3UnsubscribeUnsubscribeSecurity withPrivateAppsLegacy(String privateAppsLegacy) {
         this.privateAppsLegacy = privateAppsLegacy;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemePrivateAppsLegacy privateAppsLegacy1;
-    public PostCommunicationPreferencesV3UnsubscribeUnsubscribeSecurity withPrivateAppsLegacy1(org.openapis.openapi.models.shared.SchemePrivateAppsLegacy privateAppsLegacy1) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=private-app-legacy")
+    public String privateAppsLegacy1;
+    public PostCommunicationPreferencesV3UnsubscribeUnsubscribeSecurity withPrivateAppsLegacy1(String privateAppsLegacy1) {
         this.privateAppsLegacy1 = privateAppsLegacy1;
         return this;
     }

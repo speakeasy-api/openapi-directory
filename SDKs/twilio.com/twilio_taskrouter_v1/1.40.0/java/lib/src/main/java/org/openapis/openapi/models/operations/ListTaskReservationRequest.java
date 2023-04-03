@@ -4,34 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListTaskReservationRequest {
-    
-    public ListTaskReservationPathParams pathParams;
-    public ListTaskReservationRequest withPathParams(ListTaskReservationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListTaskReservationRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListTaskReservationQueryParams queryParams;
-    public ListTaskReservationRequest withQueryParams(ListTaskReservationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListTaskReservationRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
-    
-    public ListTaskReservationSecurity security;
-    public ListTaskReservationRequest withSecurity(ListTaskReservationSecurity security) {
-        this.security = security;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListTaskReservationRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     
+    /**
+     * Returns the list of reservations for a task with a specified ReservationStatus.  Can be: `pending`, `accepted`, `rejected`, or `timeout`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ReservationStatus")
+    public org.openapis.openapi.models.shared.TaskReservationEnumStatusEnum reservationStatus;
+    public ListTaskReservationRequest withReservationStatus(org.openapis.openapi.models.shared.TaskReservationEnumStatusEnum reservationStatus) {
+        this.reservationStatus = reservationStatus;
+        return this;
+    }
     
-    public String serverURL;
-    public ListTaskReservationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the reserved Task resource with the TaskReservation resources to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TaskSid")
+    public String taskSid;
+    public ListTaskReservationRequest withTaskSid(String taskSid) {
+        this.taskSid = taskSid;
+        return this;
+    }
+    
+    /**
+     * The SID of the reserved Worker resource to read.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=WorkerSid")
+    public String workerSid;
+    public ListTaskReservationRequest withWorkerSid(String workerSid) {
+        this.workerSid = workerSid;
+        return this;
+    }
+    
+    /**
+     * The SID of the Workspace with the TaskReservation resources to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkspaceSid")
+    public String workspaceSid;
+    public ListTaskReservationRequest withWorkspaceSid(String workspaceSid) {
+        this.workspaceSid = workspaceSid;
         return this;
     }
     

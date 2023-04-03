@@ -47,7 +47,7 @@ public class Pac {
      */
     public org.openapis.openapi.models.operations.UserPACsResponse userPACs(org.openapis.openapi.models.operations.UserPACsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UserPACsPathParams.class, baseUrl, "/users/{userId}/pac", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UserPACsRequest.class, baseUrl, "/users/{userId}/pac", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupsGetGroupMembersRequest {
-    
-    public GroupsGetGroupMembersPathParams pathParams;
-    public GroupsGetGroupMembersRequest withPathParams(GroupsGetGroupMembersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Client API version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public GroupsGetGroupMembersRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
+    /**
+     * The object ID of the group whose members should be retrieved.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=objectId")
+    public String objectId;
+    public GroupsGetGroupMembersRequest withObjectId(String objectId) {
+        this.objectId = objectId;
+        return this;
+    }
     
-    public GroupsGetGroupMembersQueryParams queryParams;
-    public GroupsGetGroupMembersRequest withQueryParams(GroupsGetGroupMembersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The tenant ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tenantID")
+    public String tenantID;
+    public GroupsGetGroupMembersRequest withTenantID(String tenantID) {
+        this.tenantID = tenantID;
         return this;
     }
     

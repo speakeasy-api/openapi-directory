@@ -4,27 +4,77 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListRoomRequest {
-    
-    public ListRoomQueryParams queryParams;
-    public ListRoomRequest withQueryParams(ListRoomQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Read only rooms that started on or after this date, given as `YYYY-MM-DD`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DateCreatedAfter")
+    public OffsetDateTime dateCreatedAfter;
+    public ListRoomRequest withDateCreatedAfter(OffsetDateTime dateCreatedAfter) {
+        this.dateCreatedAfter = dateCreatedAfter;
         return this;
     }
     
-    
-    public ListRoomSecurity security;
-    public ListRoomRequest withSecurity(ListRoomSecurity security) {
-        this.security = security;
+    /**
+     * Read only rooms that started before this date, given as `YYYY-MM-DD`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DateCreatedBefore")
+    public OffsetDateTime dateCreatedBefore;
+    public ListRoomRequest withDateCreatedBefore(OffsetDateTime dateCreatedBefore) {
+        this.dateCreatedBefore = dateCreatedBefore;
         return this;
     }
     
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListRoomRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public String serverURL;
-    public ListRoomRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListRoomRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListRoomRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Read only the rooms with this status. Can be: `in-progress` (default) or `completed`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Status")
+    public org.openapis.openapi.models.shared.RoomEnumRoomStatusEnum status;
+    public ListRoomRequest withStatus(org.openapis.openapi.models.shared.RoomEnumRoomStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * Read only rooms with the this `unique_name`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UniqueName")
+    public String uniqueName;
+    public ListRoomRequest withUniqueName(String uniqueName) {
+        this.uniqueName = uniqueName;
         return this;
     }
     

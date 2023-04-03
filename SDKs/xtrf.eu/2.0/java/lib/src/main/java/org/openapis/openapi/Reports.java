@@ -42,7 +42,7 @@ public class Reports {
      */
     public org.openapis.openapi.models.operations.Delete11Response delete11(org.openapis.openapi.models.operations.Delete11Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Delete11PathParams.class, baseUrl, "/reports/{reportId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Delete11Request.class, baseUrl, "/reports/{reportId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -76,7 +76,7 @@ public class Reports {
      */
     public org.openapis.openapi.models.operations.Duplicate1Response duplicate1(org.openapis.openapi.models.operations.Duplicate1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Duplicate1PathParams.class, baseUrl, "/reports/{reportId}/duplicate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Duplicate1Request.class, baseUrl, "/reports/{reportId}/duplicate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -108,7 +108,7 @@ public class Reports {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportToXMLResponse exportToXML(org.openapis.openapi.models.operations.ExportToXMLRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportToXMLResponse exportToXML(org.openapis.openapi.models.shared.ExportRequestDTO request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/reports/export/xml");
         
@@ -155,7 +155,7 @@ public class Reports {
      */
     public org.openapis.openapi.models.operations.GenerateCSVResponse generateCSV(org.openapis.openapi.models.operations.GenerateCSVRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GenerateCSVPathParams.class, baseUrl, "/reports/{reportId}/result/csv", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GenerateCSVRequest.class, baseUrl, "/reports/{reportId}/result/csv", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -195,7 +195,7 @@ public class Reports {
      */
     public org.openapis.openapi.models.operations.GeneratePrinterFriendlyResponse generatePrinterFriendly(org.openapis.openapi.models.operations.GeneratePrinterFriendlyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GeneratePrinterFriendlyPathParams.class, baseUrl, "/reports/{reportId}/result/printerFriendly", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GeneratePrinterFriendlyRequest.class, baseUrl, "/reports/{reportId}/result/printerFriendly", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -233,7 +233,7 @@ public class Reports {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ImportFromXMLResponse importFromXML(org.openapis.openapi.models.operations.ImportFromXMLRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ImportFromXMLResponse importFromXML(org.openapis.openapi.models.shared.ImportRequestDTO request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/reports/import/xml");
         
@@ -280,12 +280,12 @@ public class Reports {
      */
     public org.openapis.openapi.models.operations.SetPreferredResponse setPreferred(org.openapis.openapi.models.operations.SetPreferredRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetPreferredPathParams.class, baseUrl, "/reports/{reportId}/preferred", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetPreferredRequest.class, baseUrl, "/reports/{reportId}/preferred", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "preferredRequestDTO", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDisassociateNatGatewayAddressRequest {
-    
-    public GETDisassociateNatGatewayAddressQueryParams queryParams;
-    public GETDisassociateNatGatewayAddressRequest withQueryParams(GETDisassociateNatGatewayAddressQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDisassociateNatGatewayAddressActionEnum action;
+    public GETDisassociateNatGatewayAddressRequest withAction(GETDisassociateNatGatewayAddressActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The association IDs of EIPs that have been associated with the NAT gateway.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AssociationId")
+    public String[] associationId;
+    public GETDisassociateNatGatewayAddressRequest withAssociationId(String[] associationId) {
+        this.associationId = associationId;
+        return this;
+    }
     
-    public GETDisassociateNatGatewayAddressHeaders headers;
-    public GETDisassociateNatGatewayAddressRequest withHeaders(GETDisassociateNatGatewayAddressHeaders headers) {
-        this.headers = headers;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETDisassociateNatGatewayAddressRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    /**
+     * The maximum amount of time to wait (in seconds) before forcibly releasing the IP addresses if connections are still in progress. Default value is 350 seconds.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxDrainDurationSeconds")
+    public Long maxDrainDurationSeconds;
+    public GETDisassociateNatGatewayAddressRequest withMaxDrainDurationSeconds(Long maxDrainDurationSeconds) {
+        this.maxDrainDurationSeconds = maxDrainDurationSeconds;
+        return this;
+    }
+    
+    /**
+     * The NAT gateway ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NatGatewayId")
+    public String natGatewayId;
+    public GETDisassociateNatGatewayAddressRequest withNatGatewayId(String natGatewayId) {
+        this.natGatewayId = natGatewayId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDisassociateNatGatewayAddressVersionEnum version;
+    public GETDisassociateNatGatewayAddressRequest withVersion(GETDisassociateNatGatewayAddressVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDisassociateNatGatewayAddressRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDisassociateNatGatewayAddressRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDisassociateNatGatewayAddressRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDisassociateNatGatewayAddressRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDisassociateNatGatewayAddressRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDisassociateNatGatewayAddressRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDisassociateNatGatewayAddressRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

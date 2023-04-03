@@ -37,19 +37,20 @@ public class Me {
     /**
      * Deletes a user who is followed by the authenticated user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteMeFollowingsUserIdResponse deleteMeFollowingsUserId(org.openapis.openapi.models.operations.DeleteMeFollowingsUserIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteMeFollowingsUserIdResponse deleteMeFollowingsUserId(org.openapis.openapi.models.operations.DeleteMeFollowingsUserIdRequest request, org.openapis.openapi.models.operations.DeleteMeFollowingsUserIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteMeFollowingsUserIdPathParams.class, baseUrl, "/me/followings/{user_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteMeFollowingsUserIdRequest.class, baseUrl, "/me/followings/{user_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -85,11 +86,10 @@ public class Me {
 
     /**
      * Returns the authenticated user\u2019s information.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMeResponse getMe(org.openapis.openapi.models.operations.GetMeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMeResponse getMe() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me");
         
@@ -98,8 +98,7 @@ public class Me {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -133,10 +132,11 @@ public class Me {
     /**
      * Returns the authenticated user's activities.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMeActivitiesResponse getMeActivities(org.openapis.openapi.models.operations.GetMeActivitiesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMeActivitiesResponse getMeActivities(org.openapis.openapi.models.operations.GetMeActivitiesRequest request, org.openapis.openapi.models.operations.GetMeActivitiesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me/activities");
         
@@ -144,14 +144,14 @@ public class Me {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMeActivitiesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMeActivitiesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -186,10 +186,11 @@ public class Me {
     /**
      * Recent the authenticated user's activities.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMeActivitiesAllOwnResponse getMeActivitiesAllOwn(org.openapis.openapi.models.operations.GetMeActivitiesAllOwnRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMeActivitiesAllOwnResponse getMeActivitiesAllOwn(org.openapis.openapi.models.operations.GetMeActivitiesAllOwnRequest request, org.openapis.openapi.models.operations.GetMeActivitiesAllOwnSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me/activities/all/own");
         
@@ -197,14 +198,14 @@ public class Me {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMeActivitiesAllOwnQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMeActivitiesAllOwnRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -239,10 +240,11 @@ public class Me {
     /**
      * Returns the authenticated user's recent track related activities.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMeActivitiesTracksResponse getMeActivitiesTracks(org.openapis.openapi.models.operations.GetMeActivitiesTracksRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMeActivitiesTracksResponse getMeActivitiesTracks(org.openapis.openapi.models.operations.GetMeActivitiesTracksRequest request, org.openapis.openapi.models.operations.GetMeActivitiesTracksSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me/activities/tracks");
         
@@ -250,14 +252,14 @@ public class Me {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMeActivitiesTracksQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMeActivitiesTracksRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -292,10 +294,11 @@ public class Me {
     /**
      * Returns a list of the authenticated user's connected social accounts.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMeConnectionsResponse getMeConnections(org.openapis.openapi.models.operations.GetMeConnectionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMeConnectionsResponse getMeConnections(org.openapis.openapi.models.operations.GetMeConnectionsRequest request, org.openapis.openapi.models.operations.GetMeConnectionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me/connections");
         
@@ -303,14 +306,14 @@ public class Me {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMeConnectionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMeConnectionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -345,19 +348,20 @@ public class Me {
     /**
      * Returns the authenticated user's connected social account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMeConnectionsConnectionIdResponse getMeConnectionsConnectionId(org.openapis.openapi.models.operations.GetMeConnectionsConnectionIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMeConnectionsConnectionIdResponse getMeConnectionsConnectionId(org.openapis.openapi.models.operations.GetMeConnectionsConnectionIdRequest request, org.openapis.openapi.models.operations.GetMeConnectionsConnectionIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMeConnectionsConnectionIdPathParams.class, baseUrl, "/me/connections/{connection_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMeConnectionsConnectionIdRequest.class, baseUrl, "/me/connections/{connection_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -400,10 +404,11 @@ public class Me {
     /**
      * Returns user\u2019s favorites ids. (use /me/likes/tracks instead to fetch the authenticated user's likes)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMeFavoritesIdsResponse getMeFavoritesIds(org.openapis.openapi.models.operations.GetMeFavoritesIdsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMeFavoritesIdsResponse getMeFavoritesIds(org.openapis.openapi.models.operations.GetMeFavoritesIdsRequest request, org.openapis.openapi.models.operations.GetMeFavoritesIdsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me/favorites/ids");
         
@@ -411,14 +416,14 @@ public class Me {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMeFavoritesIdsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMeFavoritesIdsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -439,10 +444,11 @@ public class Me {
     /**
      * Returns a list of users who are following the authenticated user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMeFollowersResponse getMeFollowers(org.openapis.openapi.models.operations.GetMeFollowersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMeFollowersResponse getMeFollowers(org.openapis.openapi.models.operations.GetMeFollowersRequest request, org.openapis.openapi.models.operations.GetMeFollowersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me/followers");
         
@@ -450,14 +456,14 @@ public class Me {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMeFollowersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMeFollowersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -492,19 +498,20 @@ public class Me {
     /**
      * Returns a user who is following the authenticated user. (use /users/{user_id} instead, to fetch the user details)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMeFollowersFollowerIdResponse getMeFollowersFollowerId(org.openapis.openapi.models.operations.GetMeFollowersFollowerIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMeFollowersFollowerIdResponse getMeFollowersFollowerId(org.openapis.openapi.models.operations.GetMeFollowersFollowerIdRequest request, org.openapis.openapi.models.operations.GetMeFollowersFollowerIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMeFollowersFollowerIdPathParams.class, baseUrl, "/me/followers/{follower_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMeFollowersFollowerIdRequest.class, baseUrl, "/me/followers/{follower_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -539,10 +546,11 @@ public class Me {
     /**
      * Returns a list of users who are followed by the authenticated user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMeFollowingsResponse getMeFollowings(org.openapis.openapi.models.operations.GetMeFollowingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMeFollowingsResponse getMeFollowings(org.openapis.openapi.models.operations.GetMeFollowingsRequest request, org.openapis.openapi.models.operations.GetMeFollowingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me/followings");
         
@@ -550,14 +558,14 @@ public class Me {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMeFollowingsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMeFollowingsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -592,10 +600,11 @@ public class Me {
     /**
      * Returns a list of recent tracks from users followed by the authenticated user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMeFollowingsTracksResponse getMeFollowingsTracks(org.openapis.openapi.models.operations.GetMeFollowingsTracksRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMeFollowingsTracksResponse getMeFollowingsTracks(org.openapis.openapi.models.operations.GetMeFollowingsTracksRequest request, org.openapis.openapi.models.operations.GetMeFollowingsTracksSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me/followings/tracks");
         
@@ -603,14 +612,14 @@ public class Me {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMeFollowingsTracksQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMeFollowingsTracksRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -645,19 +654,20 @@ public class Me {
     /**
      * Returns a user who is followed by the authenticated user. (use /users/{user_id} instead, to fetch the user details)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMeFollowingsUserIdResponse getMeFollowingsUserId(org.openapis.openapi.models.operations.GetMeFollowingsUserIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMeFollowingsUserIdResponse getMeFollowingsUserId(org.openapis.openapi.models.operations.GetMeFollowingsUserIdRequest request, org.openapis.openapi.models.operations.GetMeFollowingsUserIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMeFollowingsUserIdPathParams.class, baseUrl, "/me/followings/{user_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMeFollowingsUserIdRequest.class, baseUrl, "/me/followings/{user_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -700,10 +710,11 @@ public class Me {
     /**
      * Returns a list of favorited or liked tracks of the authenticated user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMeLikesTracksResponse getMeLikesTracks(org.openapis.openapi.models.operations.GetMeLikesTracksRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMeLikesTracksResponse getMeLikesTracks(org.openapis.openapi.models.operations.GetMeLikesTracksRequest request, org.openapis.openapi.models.operations.GetMeLikesTracksSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me/likes/tracks");
         
@@ -711,14 +722,14 @@ public class Me {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMeLikesTracksQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMeLikesTracksRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -754,10 +765,11 @@ public class Me {
      * Returns user\u2019s playlists (sets).
      * Returns playlist info, playlist tracks and tracks owner info.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMePlaylistsResponse getMePlaylists(org.openapis.openapi.models.operations.GetMePlaylistsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMePlaylistsResponse getMePlaylists(org.openapis.openapi.models.operations.GetMePlaylistsRequest request, org.openapis.openapi.models.operations.GetMePlaylistsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me/playlists");
         
@@ -765,14 +777,14 @@ public class Me {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMePlaylistsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMePlaylistsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -815,19 +827,20 @@ public class Me {
     /**
      * Returns playlist. (use /playlists/{playlist_id} instead, to fetch the playlist details)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMePlaylistsPlaylistIdResponse getMePlaylistsPlaylistId(org.openapis.openapi.models.operations.GetMePlaylistsPlaylistIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMePlaylistsPlaylistIdResponse getMePlaylistsPlaylistId(org.openapis.openapi.models.operations.GetMePlaylistsPlaylistIdRequest request, org.openapis.openapi.models.operations.GetMePlaylistsPlaylistIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMePlaylistsPlaylistIdPathParams.class, baseUrl, "/me/playlists/{playlist_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMePlaylistsPlaylistIdRequest.class, baseUrl, "/me/playlists/{playlist_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -854,10 +867,11 @@ public class Me {
     /**
      * Returns a list of user's tracks.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMeTracksResponse getMeTracks(org.openapis.openapi.models.operations.GetMeTracksRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMeTracksResponse getMeTracks(org.openapis.openapi.models.operations.GetMeTracksRequest request, org.openapis.openapi.models.operations.GetMeTracksSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me/tracks");
         
@@ -865,14 +879,14 @@ public class Me {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMeTracksQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMeTracksRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -907,19 +921,20 @@ public class Me {
     /**
      * Returns a specified track. (use /tracks/{track_id} instead, to fetch the track details)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMeTracksTrackIdResponse getMeTracksTrackId(org.openapis.openapi.models.operations.GetMeTracksTrackIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMeTracksTrackIdResponse getMeTracksTrackId(org.openapis.openapi.models.operations.GetMeTracksTrackIdRequest request, org.openapis.openapi.models.operations.GetMeTracksTrackIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMeTracksTrackIdPathParams.class, baseUrl, "/me/tracks/{track_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMeTracksTrackIdRequest.class, baseUrl, "/me/tracks/{track_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -946,19 +961,20 @@ public class Me {
     /**
      * Follows a user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutMeFollowingsUserIdResponse putMeFollowingsUserId(org.openapis.openapi.models.operations.PutMeFollowingsUserIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutMeFollowingsUserIdResponse putMeFollowingsUserId(org.openapis.openapi.models.operations.PutMeFollowingsUserIdRequest request, org.openapis.openapi.models.operations.PutMeFollowingsUserIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutMeFollowingsUserIdPathParams.class, baseUrl, "/me/followings/{user_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutMeFollowingsUserIdRequest.class, baseUrl, "/me/followings/{user_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

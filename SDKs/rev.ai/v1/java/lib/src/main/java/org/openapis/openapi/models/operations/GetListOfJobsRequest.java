@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetListOfJobsRequest {
+    /**
+     * Limits the number of jobs returned, default is 100, max is 1000
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetListOfJobsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetListOfJobsQueryParams queryParams;
-    public GetListOfJobsRequest withQueryParams(GetListOfJobsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * If specified, returns transcription jobs submitted before the job with this id, exclusive (job with this id is not included)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=starting_after")
+    public String startingAfter;
+    public GetListOfJobsRequest withStartingAfter(String startingAfter) {
+        this.startingAfter = startingAfter;
         return this;
     }
     

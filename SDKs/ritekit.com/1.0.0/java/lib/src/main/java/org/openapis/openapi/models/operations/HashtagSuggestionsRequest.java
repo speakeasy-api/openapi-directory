@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class HashtagSuggestionsRequest {
-    
-    public HashtagSuggestionsQueryParams queryParams;
-    public HashtagSuggestionsRequest withQueryParams(HashtagSuggestionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Topic
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
+    public String text;
+    public HashtagSuggestionsRequest withText(String text) {
+        this.text = text;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetQuoteForDocumentRequest {
+    /**
+     * Document ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=documentId")
+    public Long documentId;
+    public GetQuoteForDocumentRequest withDocumentId(Long documentId) {
+        this.documentId = documentId;
+        return this;
+    }
     
-    public GetQuoteForDocumentPathParams pathParams;
-    public GetQuoteForDocumentRequest withPathParams(GetQuoteForDocumentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Continuous project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetQuoteForDocumentRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

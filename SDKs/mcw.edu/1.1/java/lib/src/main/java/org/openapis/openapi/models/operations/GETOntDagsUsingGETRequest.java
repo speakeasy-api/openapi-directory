@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETOntDagsUsingGETRequest {
-    
-    public GETOntDagsUsingGETPathParams pathParams;
-    public GETOntDagsUsingGETRequest withPathParams(GETOntDagsUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Accession ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accId")
+    public String accId;
+    public GETOntDagsUsingGETRequest withAccId(String accId) {
+        this.accId = accId;
         return this;
     }
     

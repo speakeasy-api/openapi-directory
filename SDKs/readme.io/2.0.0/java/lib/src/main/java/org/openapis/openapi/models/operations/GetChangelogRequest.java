@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetChangelogRequest {
-    
-    public GetChangelogPathParams pathParams;
-    public GetChangelogRequest withPathParams(GetChangelogPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetChangelogSecurity security;
-    public GetChangelogRequest withSecurity(GetChangelogSecurity security) {
-        this.security = security;
+    /**
+     * Slug of changelog
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=slug")
+    public String slug;
+    public GetChangelogRequest withSlug(String slug) {
+        this.slug = slug;
         return this;
     }
     

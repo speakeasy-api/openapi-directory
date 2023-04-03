@@ -4,20 +4,216 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchTracksRequest {
-    
-    public SearchTracksQueryParams queryParams;
-    public SearchTracksRequest withQueryParams(SearchTracksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Show tracks with one of the specified artist names or IDs
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=artists")
+    public String[] artists;
+    public SearchTracksRequest withArtists(String[] artists) {
+        this.artists = artists;
         return this;
     }
     
+    /**
+     * (Deprecated; use bpm_from and bpm_to instead) Show tracks with the specified beats per minute
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bpm")
+    public Long bpm;
+    public SearchTracksRequest withBpm(Long bpm) {
+        this.bpm = bpm;
+        return this;
+    }
     
-    public SearchTracksSecurity security;
-    public SearchTracksRequest withSecurity(SearchTracksSecurity security) {
-        this.security = security;
+    /**
+     * Show tracks with the specified beats per minute or faster
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bpm_from")
+    public Long bpmFrom;
+    public SearchTracksRequest withBpmFrom(Long bpmFrom) {
+        this.bpmFrom = bpmFrom;
+        return this;
+    }
+    
+    /**
+     * Show tracks with the specified beats per minute or slower
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bpm_to")
+    public Long bpmTo;
+    public SearchTracksRequest withBpmTo(Long bpmTo) {
+        this.bpmTo = bpmTo;
+        return this;
+    }
+    
+    /**
+     * Show tracks with the specified duration in seconds
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=duration")
+    public Long duration;
+    public SearchTracksRequest withDuration(Long duration) {
+        this.duration = duration;
+        return this;
+    }
+    
+    /**
+     * Show tracks with the specified duration or longer in seconds
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=duration_from")
+    public Long durationFrom;
+    public SearchTracksRequest withDurationFrom(Long durationFrom) {
+        this.durationFrom = durationFrom;
+        return this;
+    }
+    
+    /**
+     * Show tracks with the specified duration or shorter in seconds
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=duration_to")
+    public Long durationTo;
+    public SearchTracksRequest withDurationTo(Long durationTo) {
+        this.durationTo = durationTo;
+        return this;
+    }
+    
+    /**
+     * Fields to display in the response; see the documentation for the fields parameter in the overview section
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public SearchTracksRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Show tracks with each of the specified genres; to get the list of genres, use `GET /v2/audio/genres`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=genre")
+    public String[] genre;
+    public SearchTracksRequest withGenre(String[] genre) {
+        this.genre = genre;
+        return this;
+    }
+    
+    /**
+     * Show tracks with each of the specified instruments; to get the list of instruments, use `GET /v2/audio/instruments`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=instruments")
+    public String[] instruments;
+    public SearchTracksRequest withInstruments(String[] instruments) {
+        this.instruments = instruments;
+        return this;
+    }
+    
+    /**
+     * Show instrumental music only
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_instrumental")
+    public Boolean isInstrumental;
+    public SearchTracksRequest withIsInstrumental(Boolean isInstrumental) {
+        this.isInstrumental = isInstrumental;
+        return this;
+    }
+    
+    /**
+     * Which language to search in
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public String language;
+    public SearchTracksRequest withLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    
+    /**
+     * Which library to search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=library")
+    public SearchTracksLibraryEnum library;
+    public SearchTracksRequest withLibrary(SearchTracksLibraryEnum library) {
+        this.library = library;
+        return this;
+    }
+    
+    /**
+     * Show tracks with each of the specified moods; to get the list of moods, use `GET /v2/audio/moods`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=moods")
+    public String[] moods;
+    public SearchTracksRequest withMoods(String[] moods) {
+        this.moods = moods;
+        return this;
+    }
+    
+    /**
+     * Page number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public SearchTracksRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Number of results per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public SearchTracksRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * One or more search terms separated by spaces
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public SearchTracksRequest withQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    
+    /**
+     * Sort by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public SearchTracksSortEnum sort;
+    public SearchTracksRequest withSort(SearchTracksSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Sort order
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_order")
+    public SearchTracksSortOrderEnum sortOrder;
+    public SearchTracksRequest withSortOrder(SearchTracksSortOrderEnum sortOrder) {
+        this.sortOrder = sortOrder;
+        return this;
+    }
+    
+    /**
+     * Amount of detail to render in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
+    public SearchTracksViewEnum view;
+    public SearchTracksRequest withView(SearchTracksViewEnum view) {
+        this.view = view;
+        return this;
+    }
+    
+    /**
+     * Show tracks with the specified vocal description (male, female)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vocal_description")
+    public String vocalDescription;
+    public SearchTracksRequest withVocalDescription(String vocalDescription) {
+        this.vocalDescription = vocalDescription;
         return this;
     }
     

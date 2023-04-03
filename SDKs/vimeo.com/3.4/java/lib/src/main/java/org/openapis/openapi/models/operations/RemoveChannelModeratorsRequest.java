@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveChannelModeratorsRequest {
-    
-    public RemoveChannelModeratorsPathParams pathParams;
-    public RemoveChannelModeratorsRequest withPathParams(RemoveChannelModeratorsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.user+json")
-    public RemoveChannelModeratorsRequestBody request;
-    public RemoveChannelModeratorsRequest withRequest(RemoveChannelModeratorsRequestBody request) {
-        this.request = request;
+    public RemoveChannelModeratorsRequestBody requestBody;
+    public RemoveChannelModeratorsRequest withRequestBody(RemoveChannelModeratorsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public RemoveChannelModeratorsSecurity security;
-    public RemoveChannelModeratorsRequest withSecurity(RemoveChannelModeratorsSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel_id")
+    public Double channelId;
+    public RemoveChannelModeratorsRequest withChannelId(Double channelId) {
+        this.channelId = channelId;
         return this;
     }
     

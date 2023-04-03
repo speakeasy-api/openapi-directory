@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLocationRuleByIdRequest {
-    
-    public GetLocationRuleByIdPathParams pathParams;
-    public GetLocationRuleByIdRequest withPathParams(GetLocationRuleByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetLocationRuleByIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

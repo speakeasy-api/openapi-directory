@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.DriverDetailsFormatEnum;
-import org.openapis.openapi.models.operations.DriverDetailsPathParams;
 import org.openapis.openapi.models.operations.DriverDetailsRequest;
 import org.openapis.openapi.models.operations.DriverDetailsResponse;
 
@@ -27,18 +26,14 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    apiKeyHeader = new SchemeAPIKeyHeader() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    apiKeyHeader = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             DriverDetailsRequest req = new DriverDetailsRequest() {{
-                pathParams = new DriverDetailsPathParams() {{
-                    driverid = "corrupti";
-                    format = "json";
-                }};
-            }};            
+                driverid = "corrupti";
+                format = "json";
+            }}            
 
             DriverDetailsResponse res = sdk.driverDetails(req);
 
@@ -52,7 +47,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

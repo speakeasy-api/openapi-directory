@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMediaDataByKeyRequest {
-    
-    public GetMediaDataByKeyPathParams pathParams;
-    public GetMediaDataByKeyRequest withPathParams(GetMediaDataByKeyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Media file type, available types: bmp, gif, jpg, m4a, mp3, mp4, png, wav
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=extension")
+    public String extension;
+    public GetMediaDataByKeyRequest withExtension(String extension) {
+        this.extension = extension;
         return this;
     }
     
-    
-    public GetMediaDataByKeySecurity security;
-    public GetMediaDataByKeyRequest withSecurity(GetMediaDataByKeySecurity security) {
-        this.security = security;
+    /**
+     * A hash-key of a media resource
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
+    public String key;
+    public GetMediaDataByKeyRequest withKey(String key) {
+        this.key = key;
         return this;
     }
     

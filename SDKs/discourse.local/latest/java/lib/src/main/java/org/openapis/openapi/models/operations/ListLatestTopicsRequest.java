@@ -4,20 +4,41 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListLatestTopicsRequest {
-    
-    public ListLatestTopicsQueryParams queryParams;
-    public ListLatestTopicsRequest withQueryParams(ListLatestTopicsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Key")
+    public String apiKey;
+    public ListLatestTopicsRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Username")
+    public String apiUsername;
+    public ListLatestTopicsRequest withApiUsername(String apiUsername) {
+        this.apiUsername = apiUsername;
+        return this;
+    }
     
-    public ListLatestTopicsHeaders headers;
-    public ListLatestTopicsRequest withHeaders(ListLatestTopicsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Defaults to `desc`, add `ascending=true` to sort asc
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ascending")
+    public String ascending;
+    public ListLatestTopicsRequest withAscending(String ascending) {
+        this.ascending = ascending;
+        return this;
+    }
+    
+    /**
+     * Enum: `default`, `created`, `activity`, `views`, `posts`, `category`,
+     * `likes`, `op_likes`, `posters`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public String order;
+    public ListLatestTopicsRequest withOrder(String order) {
+        this.order = order;
         return this;
     }
     

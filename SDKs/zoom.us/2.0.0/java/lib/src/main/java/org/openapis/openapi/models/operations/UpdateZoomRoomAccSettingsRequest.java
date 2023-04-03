@@ -7,24 +7,22 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateZoomRoomAccSettingsRequest {
-    
-    public UpdateZoomRoomAccSettingsQueryParams queryParams;
-    public UpdateZoomRoomAccSettingsRequest withQueryParams(UpdateZoomRoomAccSettingsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public Object request;
-    public UpdateZoomRoomAccSettingsRequest withRequest(Object request) {
-        this.request = request;
+    public Object requestBody;
+    public UpdateZoomRoomAccSettingsRequest withRequestBody(Object requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateZoomRoomAccSettingsSecurity security;
-    public UpdateZoomRoomAccSettingsRequest withSecurity(UpdateZoomRoomAccSettingsSecurity security) {
-        this.security = security;
+    /**
+     * The type of setting that you would like to update.&lt;br&gt; `alert`: Alert Settings applied on the Zoom Rooms Account.&lt;br&gt;
+     * `meeting`: Meeting settings of the Zoom Rooms Account.&lt;br&gt;
+     * `signage`: View digital signage settings of the Zoom Rooms Account.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=setting_type")
+    public String settingType;
+    public UpdateZoomRoomAccSettingsRequest withSettingType(String settingType) {
+        this.settingType = settingType;
         return this;
     }
     

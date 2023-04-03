@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesSpaceIdFoldersIdSocialContractsMultipartRequest {
-    
-    public PostSpacesSpaceIdFoldersIdSocialContractsMultipartPathParams pathParams;
-    public PostSpacesSpaceIdFoldersIdSocialContractsMultipartRequest withPathParams(PostSpacesSpaceIdFoldersIdSocialContractsMultipartPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Social contract to add (either DocumentId either (File,Name,Content64Encoded,Title) is mandatory)
      */
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PostSpacesSpaceIdFoldersIdSocialContractsMultipartFormData1 request;
-    public PostSpacesSpaceIdFoldersIdSocialContractsMultipartRequest withRequest(PostSpacesSpaceIdFoldersIdSocialContractsMultipartFormData1 request) {
-        this.request = request;
+    public PostSpacesSpaceIdFoldersIdSocialContractsMultipartFormData1 requestBody;
+    public PostSpacesSpaceIdFoldersIdSocialContractsMultipartRequest withRequestBody(PostSpacesSpaceIdFoldersIdSocialContractsMultipartFormData1 requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Id of the folder employee
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSpacesSpaceIdFoldersIdSocialContractsMultipartRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PostSpacesSpaceIdFoldersIdSocialContractsMultipartSecurity security;
-    public PostSpacesSpaceIdFoldersIdSocialContractsMultipartRequest withSecurity(PostSpacesSpaceIdFoldersIdSocialContractsMultipartSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PostSpacesSpaceIdFoldersIdSocialContractsMultipartRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

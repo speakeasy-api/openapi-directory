@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SymbolUploadsCompleteRequest {
-    
-    public SymbolUploadsCompletePathParams pathParams;
-    public SymbolUploadsCompleteRequest withPathParams(SymbolUploadsCompletePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The symbol information
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public SymbolUploadsCompleteRequestBody request;
-    public SymbolUploadsCompleteRequest withRequest(SymbolUploadsCompleteRequestBody request) {
-        this.request = request;
+    public SymbolUploadsCompleteRequestBody requestBody;
+    public SymbolUploadsCompleteRequest withRequestBody(SymbolUploadsCompleteRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public SymbolUploadsCompleteRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public SymbolUploadsCompleteSecurity security;
-    public SymbolUploadsCompleteRequest withSecurity(SymbolUploadsCompleteSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public SymbolUploadsCompleteRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
+    
+    /**
+     * The ID of the symbol upload
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=symbol_upload_id")
+    public String symbolUploadId;
+    public SymbolUploadsCompleteRequest withSymbolUploadId(String symbolUploadId) {
+        this.symbolUploadId = symbolUploadId;
         return this;
     }
     

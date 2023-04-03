@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposMergeUpstreamRequest {
-    
-    public ReposMergeUpstreamPathParams pathParams;
-    public ReposMergeUpstreamRequest withPathParams(ReposMergeUpstreamPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ReposMergeUpstreamRequestBody requestBody;
+    public ReposMergeUpstreamRequest withRequestBody(ReposMergeUpstreamRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ReposMergeUpstreamRequestBody request;
-    public ReposMergeUpstreamRequest withRequest(ReposMergeUpstreamRequestBody request) {
-        this.request = request;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposMergeUpstreamRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposMergeUpstreamRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

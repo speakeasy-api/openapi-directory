@@ -4,27 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListCustomerProfileRequest {
-    
-    public ListCustomerProfileQueryParams queryParams;
-    public ListCustomerProfileRequest withQueryParams(ListCustomerProfileQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The string that you assigned to describe the resource.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FriendlyName")
+    public String friendlyName;
+    public ListCustomerProfileRequest withFriendlyName(String friendlyName) {
+        this.friendlyName = friendlyName;
         return this;
     }
     
-    
-    public ListCustomerProfileSecurity security;
-    public ListCustomerProfileRequest withSecurity(ListCustomerProfileSecurity security) {
-        this.security = security;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListCustomerProfileRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListCustomerProfileRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public String serverURL;
-    public ListCustomerProfileRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListCustomerProfileRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * The unique string of a policy that is associated to the Customer-Profile resource.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PolicySid")
+    public String policySid;
+    public ListCustomerProfileRequest withPolicySid(String policySid) {
+        this.policySid = policySid;
+        return this;
+    }
+    
+    /**
+     * The verification status of the Customer-Profile resource.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Status")
+    public org.openapis.openapi.models.shared.CustomerProfileEnumStatusEnum status;
+    public ListCustomerProfileRequest withStatus(org.openapis.openapi.models.shared.CustomerProfileEnumStatusEnum status) {
+        this.status = status;
         return this;
     }
     

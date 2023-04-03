@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CreateConversationRequestBody;
-import org.openapis.openapi.models.operations.CreateConversationRequest;
 import org.openapis.openapi.models.operations.CreateConversationResponse;
 import org.openapis.openapi.models.shared.ConversationProperties;
 
@@ -14,22 +13,18 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    bearerAuth = new SchemeBearerAuth() {{
-                        authorization = "Bearer YOUR_BEARER_TOKEN_HERE";
-                    }};
+                    bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
-            CreateConversationRequest req = new CreateConversationRequest() {{
-                request = new CreateConversationRequestBody() {{
-                    displayName = "Customer Chat";
-                    imageUrl = "https://example.com/image.png";
-                    name = "customer_chat";
-                    properties = new ConversationProperties() {{
-                        ttl = 60;
-                    }};
+            CreateConversationRequestBody req = new CreateConversationRequestBody() {{
+                displayName = "Customer Chat";
+                imageUrl = "https://example.com/image.png";
+                name = "customer_chat";
+                properties = new ConversationProperties() {{
+                    ttl = 60;
                 }};
-            }};            
+            }}            
 
             CreateConversationResponse res = sdk.conversation.createConversation(req);
 

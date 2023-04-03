@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContainersJsonRequest {
-    
-    public GetContainersJsonQueryParams queryParams;
-    public GetContainersJsonRequest withQueryParams(GetContainersJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The unique ID of your organization space where you want to create or work with your containers. Run `cf space &lt;space_name&gt; --guid`, where `&lt;space_name&gt;` is the name of your space, to retrieve your space ID.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Project-Id")
+    public String xAuthProjectId;
+    public GetContainersJsonRequest withXAuthProjectId(String xAuthProjectId) {
+        this.xAuthProjectId = xAuthProjectId;
         return this;
     }
     
+    /**
+     * The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Token")
+    public String xAuthToken;
+    public GetContainersJsonRequest withXAuthToken(String xAuthToken) {
+        this.xAuthToken = xAuthToken;
+        return this;
+    }
     
-    public GetContainersJsonHeaders headers;
-    public GetContainersJsonRequest withHeaders(GetContainersJsonHeaders headers) {
-        this.headers = headers;
+    /**
+     * By default, the `GET /containers/json` endpoint returns a list of all single containers in a space that are in a running state. To request a list of all containers independent of their current state, set the `all` query parameter to true. Allowed values are: `all=true`, `all=True`, and `all=1`. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=all")
+    public String all;
+    public GetContainersJsonRequest withAll(String all) {
+        this.all = all;
+        return this;
+    }
+    
+    /**
+     * You can filter your containers by any environment variable key or value that is listed in the `Env` section of your CLI/ API response when you run the `cf ic inspect &lt;container&gt;` command, or call the `GET /containers/{id}/json` endpoint. Your search criteria does not need to be an exact match. It can also be a part of the key or value you are looking for. For example, to filter all containers with an environment variable that contains `id` in one of their environment variables, use `filter=id`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filters")
+    public String filters;
+    public GetContainersJsonRequest withFilters(String filters) {
+        this.filters = filters;
         return this;
     }
     

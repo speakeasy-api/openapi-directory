@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetItemSnapshotFeedRequest {
-    
-    public GetItemSnapshotFeedQueryParams queryParams;
-    public GetItemSnapshotFeedRequest withQueryParams(GetItemSnapshotFeedQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The formats that the client accepts for the response.&lt;br&gt;&lt;br&gt;A successful call will always return a TSV.GZIP file; however, unsuccessful calls generate error codes that are returned in JSON format.&lt;br&gt;&lt;br&gt;&lt;b&gt;Default:&lt;/b&gt; &lt;code&gt;application/json,text/tab-separated-values&lt;/code&gt;
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetItemSnapshotFeedRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public GetItemSnapshotFeedHeaders headers;
-    public GetItemSnapshotFeedRequest withHeaders(GetItemSnapshotFeedHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;a name="range-header"&gt;&lt;/a&gt;This header specifies the range in bytes of the chunks of the gzip file being returned. &lt;br&gt;&lt;br&gt;&lt;b&gt; Format:&lt;/b&gt; &lt;code&gt;bytes=&lt;em&gt;startpos&lt;/em&gt;-&lt;em&gt;endpos&lt;/em&gt;&lt;/code&gt;&lt;br&gt;&lt;br&gt;  For example, the following retrieves the first 10 MBs of the feed file. &lt;br&gt;&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;code&gt;Range bytes=0-10485760&lt;/code&gt; &lt;br&gt;&lt;br&gt;For more information about using this header, see &lt;a href="/api-docs/buy/static/api-feed_beta.html#retrv-gzip"&gt;Retrieving a gzip feed file&lt;/a&gt;. &lt;br&gt;&lt;br&gt;&lt;b&gt;Maximum:&lt;/b&gt; 100 MB (10MB in the Sandbox)
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Range")
+    public String range;
+    public GetItemSnapshotFeedRequest withRange(String range) {
+        this.range = range;
         return this;
     }
     
+    /**
+     * The ID of the eBay marketplace where the item is hosted. &lt;b&gt;Note: &lt;/b&gt; This value is case sensitive.&lt;br&gt;&lt;br&gt;For example: &lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;code&gt;X-EBAY-C-MARKETPLACE-ID = EBAY_US&lt;/code&gt;  &lt;br&gt;&lt;br&gt; For a list of supported sites see, &lt;a href="/api-docs/buy/feed/overview.html#API"&gt;API Restrictions&lt;/a&gt;.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
+    public String xEbayCMarketplaceId;
+    public GetItemSnapshotFeedRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
+        this.xEbayCMarketplaceId = xEbayCMarketplaceId;
+        return this;
+    }
     
-    public GetItemSnapshotFeedSecurity security;
-    public GetItemSnapshotFeedRequest withSecurity(GetItemSnapshotFeedSecurity security) {
-        this.security = security;
+    /**
+     * An eBay top-level category ID  of the items to be returned in the feed file.&lt;br&gt; &lt;br&gt;The list of eBay category IDs changes over time and category IDs are not the same across all the eBay marketplaces. To get a list of the top-level categories for a marketplace, you can use the Taxonomy API &lt;a href="/api-docs/commerce/taxonomy/resources/category_tree/methods/getCategoryTree"&gt;getCategoryTree&lt;/a&gt; method. This method retrieves the complete category tree for the marketplace. The top-level categories are identified by the &lt;b&gt;categoryTreeNodeLevel&lt;/b&gt; field.&lt;br&gt;&lt;br&gt;&lt;b&gt;For example:&lt;/b&gt;&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;code&gt;"categoryTreeNodeLevel": 1&lt;/code&gt; &lt;br&gt;&lt;br&gt;For details see &lt;a href="/api-docs/buy/buy-categories.html"&gt;Get Categories for Buy APIs&lt;/a&gt;.&lt;/li&gt;  &lt;/ul&gt; &lt;br&gt;&lt;br&gt;   &lt;b&gt;Restriction:&lt;/b&gt; Must be a top-level category other than Real Estate. Items listed under Real Estate L1 categories are excluded from all feeds in all marketplaces.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category_id")
+    public String categoryId;
+    public GetItemSnapshotFeedRequest withCategoryId(String categoryId) {
+        this.categoryId = categoryId;
+        return this;
+    }
+    
+    /**
+     * The date and hour of the snapshot feed file you want. Each file contains the items that changed within the hour in the specified category. So, the 9AM file contains the items that changed between 9AM and 9:59AM on the day specified.  It takes 2 hours to generate a snapshot file, which means to get the file for 9AM the earliest you could submit the call is at 11AM.&lt;br&gt;&lt;br&gt;There are 7 days of &lt;b&gt; Hourly Snapshot&lt;/b&gt; feed files available.&lt;p&gt;&lt;span class="tablenote"&gt;&lt;b&gt;Note: &lt;/b&gt; The Feed API uses GMT, so you must convert your local time to GMT. For example, if you lived in California and wanted the September 15th 7pm file, you would submit the following call: &lt;br&gt; &lt;br&gt;&lt;code&gt;item_snapshot?category_id=625&amp;snapshot_date=2017-09-16T02:00:00.000Z&lt;/code&gt; &lt;/span&gt;&lt;/p&gt;  &lt;b&gt;Format: &lt;/b&gt;UTC &lt;code&gt;yyyy-MM-ddThh:00:00.000Z&lt;/code&gt; &lt;br&gt;&lt;br&gt;Files are generated on the hour, so minutes and seconds are &lt;em&gt; always&lt;/em&gt; zeros.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=snapshot_date")
+    public String snapshotDate;
+    public GetItemSnapshotFeedRequest withSnapshotDate(String snapshotDate) {
+        this.snapshotDate = snapshotDate;
         return this;
     }
     

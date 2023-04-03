@@ -4,27 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteResourcePolicyStatementRequest {
-    
-    public DeleteResourcePolicyStatementPathParams pathParams;
-    public DeleteResourcePolicyStatementRequest withPathParams(DeleteResourcePolicyStatementPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DeleteResourcePolicyStatementRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public DeleteResourcePolicyStatementQueryParams queryParams;
-    public DeleteResourcePolicyStatementRequest withQueryParams(DeleteResourcePolicyStatementQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DeleteResourcePolicyStatementRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DeleteResourcePolicyStatementRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public DeleteResourcePolicyStatementHeaders headers;
-    public DeleteResourcePolicyStatementRequest withHeaders(DeleteResourcePolicyStatementHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DeleteResourcePolicyStatementRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DeleteResourcePolicyStatementRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DeleteResourcePolicyStatementRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DeleteResourcePolicyStatementRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The identifier of the revision of the policy to delete the statement from. If this revision ID doesn't match the current revision ID, Amazon Lex throws an exception.&lt;/p&gt; &lt;p&gt;If you don't specify a revision, Amazon Lex removes the current contents of the statement. &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expectedRevisionId")
+    public String expectedRevisionId;
+    public DeleteResourcePolicyStatementRequest withExpectedRevisionId(String expectedRevisionId) {
+        this.expectedRevisionId = expectedRevisionId;
+        return this;
+    }
+    
+    /**
+     * The Amazon Resource Name (ARN) of the bot or bot alias that the resource policy is attached to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=resourceArn")
+    public String resourceArn;
+    public DeleteResourcePolicyStatementRequest withResourceArn(String resourceArn) {
+        this.resourceArn = resourceArn;
+        return this;
+    }
+    
+    /**
+     * The name of the statement (SID) to delete from the policy.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=statementId")
+    public String statementId;
+    public DeleteResourcePolicyStatementRequest withStatementId(String statementId) {
+        this.statementId = statementId;
         return this;
     }
     

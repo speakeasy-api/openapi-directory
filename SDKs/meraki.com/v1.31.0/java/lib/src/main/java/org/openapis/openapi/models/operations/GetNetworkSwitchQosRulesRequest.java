@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkSwitchQosRulesRequest {
-    
-    public GetNetworkSwitchQosRulesPathParams pathParams;
-    public GetNetworkSwitchQosRulesRequest withPathParams(GetNetworkSwitchQosRulesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkSwitchQosRulesRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

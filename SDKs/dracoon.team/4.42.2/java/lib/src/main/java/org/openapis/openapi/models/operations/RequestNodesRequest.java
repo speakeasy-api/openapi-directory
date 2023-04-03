@@ -4,20 +4,110 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestNodesRequest {
-    
-    public RequestNodesQueryParams queryParams;
-    public RequestNodesRequest withQueryParams(RequestNodesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestNodesRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public RequestNodesXSdsDateFormatEnum xSdsDateFormat;
+    public RequestNodesRequest withXSdsDateFormat(RequestNodesXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
+        return this;
+    }
     
-    public RequestNodesHeaders headers;
-    public RequestNodesRequest withHeaders(RequestNodesHeaders headers) {
-        this.headers = headers;
+    /**
+     * * `0` - top level nodes only
+     * 
+     * * `n` (any positive number) - include `n` levels starting from the current node
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=depth_level")
+    public Integer depthLevel;
+    public RequestNodesRequest withDepthLevel(Integer depthLevel) {
+        this.depthLevel = depthLevel;
+        return this;
+    }
+    
+    /**
+     * Filter string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public RequestNodesRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
+    
+    /**
+     * Range limit.
+     * 
+     * Maximum 500.
+     * 
+     *  For more results please use paging (`offset` + `limit`).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public RequestNodesRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Range offset
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public RequestNodesRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Parent node ID.
+     * 
+     * Only rooms and folders can be parents.
+     * 
+     * Parent ID `0` or empty is the root node.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parent_id")
+    public Long parentId;
+    public RequestNodesRequest withParentId(Long parentId) {
+        this.parentId = parentId;
+        return this;
+    }
+    
+    /**
+     * Show all rooms for management perspective.
+     * 
+     * Only possible for _Rooms Managers_ / _Room Admins_.
+     * 
+     * For all other users, it will be ignored.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=room_manager")
+    public Boolean roomManager;
+    public RequestNodesRequest withRoomManager(Boolean roomManager) {
+        this.roomManager = roomManager;
+        return this;
+    }
+    
+    /**
+     * Sort string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public RequestNodesRequest withSort(String sort) {
+        this.sort = sort;
         return this;
     }
     

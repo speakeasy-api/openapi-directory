@@ -37,19 +37,20 @@ public class VBADocuments {
      * Download zip of "what the server sees"
      * An endpoint that will allow you to see exactly what the server sees. We split apart all submitted docs and metadata and zip the file to make it available to you to help with debugging purposes. Files are deleted after 10 days. Only available in testing environments, not production.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetBenefitsDocumentUploadDownloadResponse getBenefitsDocumentUploadDownload(org.openapis.openapi.models.operations.GetBenefitsDocumentUploadDownloadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetBenefitsDocumentUploadDownloadResponse getBenefitsDocumentUploadDownload(org.openapis.openapi.models.operations.GetBenefitsDocumentUploadDownloadRequest request, org.openapis.openapi.models.operations.GetBenefitsDocumentUploadDownloadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBenefitsDocumentUploadDownloadPathParams.class, baseUrl, "/uploads/{id}/download", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBenefitsDocumentUploadDownloadRequest.class, baseUrl, "/uploads/{id}/download", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -115,19 +116,20 @@ public class VBADocuments {
     /**
      * Get status for a previous benefits document upload
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetBenefitsDocumentUploadStatusResponse getBenefitsDocumentUploadStatus(org.openapis.openapi.models.operations.GetBenefitsDocumentUploadStatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetBenefitsDocumentUploadStatusResponse getBenefitsDocumentUploadStatus(org.openapis.openapi.models.operations.GetBenefitsDocumentUploadStatusRequest request, org.openapis.openapi.models.operations.GetBenefitsDocumentUploadStatusSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBenefitsDocumentUploadStatusPathParams.class, baseUrl, "/uploads/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBenefitsDocumentUploadStatusRequest.class, baseUrl, "/uploads/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -194,10 +196,11 @@ public class VBADocuments {
     /**
      * Get a bulk status report for a list of previous uploads
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetBenefitsDocumentUploadStatusReportResponse getBenefitsDocumentUploadStatusReport(org.openapis.openapi.models.operations.GetBenefitsDocumentUploadStatusReportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetBenefitsDocumentUploadStatusReportResponse getBenefitsDocumentUploadStatusReport(org.openapis.openapi.models.shared.DocumentUploadStatusGuidList request, org.openapis.openapi.models.operations.GetBenefitsDocumentUploadStatusReportSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/uploads/report");
         
@@ -211,7 +214,7 @@ public class VBADocuments {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -279,11 +282,10 @@ public class VBADocuments {
 
     /**
      * Get a location for subsequent document upload PUT request
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostBenefitsDocumentUploadResponse postBenefitsDocumentUpload(org.openapis.openapi.models.operations.PostBenefitsDocumentUploadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostBenefitsDocumentUploadResponse postBenefitsDocumentUpload() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/uploads");
         
@@ -292,8 +294,7 @@ public class VBADocuments {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -517,7 +518,7 @@ public class VBADocuments {
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

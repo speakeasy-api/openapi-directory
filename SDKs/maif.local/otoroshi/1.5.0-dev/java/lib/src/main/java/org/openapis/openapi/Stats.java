@@ -35,11 +35,10 @@ public class Stats {
     /**
      * Get global otoroshi stats
      * Get global otoroshi stats
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GlobalLiveStatsResponse globalLiveStats(org.openapis.openapi.models.operations.GlobalLiveStatsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GlobalLiveStatsResponse globalLiveStats() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/live");
         
@@ -48,8 +47,7 @@ public class Stats {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -78,19 +76,20 @@ public class Stats {
      * Get live feed of otoroshi stats
      * Get live feed of global otoroshi stats (global) or for a service {id}
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServiceLiveStatsResponse serviceLiveStats(org.openapis.openapi.models.operations.ServiceLiveStatsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServiceLiveStatsResponse serviceLiveStats(org.openapis.openapi.models.operations.ServiceLiveStatsRequest request, org.openapis.openapi.models.operations.ServiceLiveStatsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceLiveStatsPathParams.class, baseUrl, "/api/live/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServiceLiveStatsRequest.class, baseUrl, "/api/live/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

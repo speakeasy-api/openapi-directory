@@ -7,20 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePartnerRequest {
-    
-    public UpdatePartnerPathParams pathParams;
-    public UpdatePartnerRequest withPathParams(UpdatePartnerPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Partner object that you would like to update.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PartnerUpsert request;
-    public UpdatePartnerRequest withRequest(org.openapis.openapi.models.shared.PartnerUpsert request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PartnerUpsert partnerUpsert;
+    public UpdatePartnerRequest withPartnerUpsert(org.openapis.openapi.models.shared.PartnerUpsert partnerUpsert) {
+        this.partnerUpsert = partnerUpsert;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public UpdatePartnerRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

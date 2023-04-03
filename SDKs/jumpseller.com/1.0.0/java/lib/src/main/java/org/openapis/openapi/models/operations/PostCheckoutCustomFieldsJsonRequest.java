@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCheckoutCustomFieldsJsonRequest {
-    
-    public PostCheckoutCustomFieldsJsonQueryParams queryParams;
-    public PostCheckoutCustomFieldsJsonRequest withQueryParams(PostCheckoutCustomFieldsJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * CheckoutCustomField parameters.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CheckoutCustomFieldEdit request;
-    public PostCheckoutCustomFieldsJsonRequest withRequest(org.openapis.openapi.models.shared.CheckoutCustomFieldEdit request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CheckoutCustomFieldEdit checkoutCustomFieldEdit;
+    public PostCheckoutCustomFieldsJsonRequest withCheckoutCustomFieldEdit(org.openapis.openapi.models.shared.CheckoutCustomFieldEdit checkoutCustomFieldEdit) {
+        this.checkoutCustomFieldEdit = checkoutCustomFieldEdit;
+        return this;
+    }
+    
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public PostCheckoutCustomFieldsJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
+        return this;
+    }
+    
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public PostCheckoutCustomFieldsJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

@@ -4,13 +4,297 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchBostonCrimeRequest {
+    /**
+     * Archive change date from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.from")
+    public OffsetDateTime changedateFrom;
+    public SearchBostonCrimeRequest withChangedateFrom(OffsetDateTime changedateFrom) {
+        this.changedateFrom = changedateFrom;
+        return this;
+    }
     
-    public SearchBostonCrimeQueryParams queryParams;
-    public SearchBostonCrimeRequest withQueryParams(SearchBostonCrimeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Archive change date to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.to")
+    public OffsetDateTime changedateTo;
+    public SearchBostonCrimeRequest withChangedateTo(OffsetDateTime changedateTo) {
+        this.changedateTo = changedateTo;
+        return this;
+    }
+    
+    /**
+     * Archive create date from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.from")
+    public OffsetDateTime createdateFrom;
+    public SearchBostonCrimeRequest withCreatedateFrom(OffsetDateTime createdateFrom) {
+        this.createdateFrom = createdateFrom;
+        return this;
+    }
+    
+    /**
+     * Archive create date to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.to")
+    public OffsetDateTime createdateTo;
+    public SearchBostonCrimeRequest withCreatedateTo(OffsetDateTime createdateTo) {
+        this.createdateTo = createdateTo;
+        return this;
+    }
+    
+    /**
+     * Search description
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
+    public String description;
+    public SearchBostonCrimeRequest withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    
+    /**
+     * File suffix
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filesuffix")
+    public String filesuffix;
+    public SearchBostonCrimeRequest withFilesuffix(String filesuffix) {
+        this.filesuffix = filesuffix;
+        return this;
+    }
+    
+    /**
+     * From date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
+    public OffsetDateTime fromdate;
+    public SearchBostonCrimeRequest withFromdate(OffsetDateTime fromdate) {
+        this.fromdate = fromdate;
+        return this;
+    }
+    
+    /**
+     * Parent entry
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
+    public String group;
+    public SearchBostonCrimeRequest withGroup(String group) {
+        this.group = group;
+        return this;
+    }
+    
+    /**
+     * Max number of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
+    public Long max;
+    public SearchBostonCrimeRequest withMax(Long max) {
+        this.max = max;
+        return this;
+    }
+    
+    /**
+     * Northern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlatitude")
+    public Float maxlatitude;
+    public SearchBostonCrimeRequest withMaxlatitude(Float maxlatitude) {
+        this.maxlatitude = maxlatitude;
+        return this;
+    }
+    
+    /**
+     * Eastern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlongitude")
+    public Float maxlongitude;
+    public SearchBostonCrimeRequest withMaxlongitude(Float maxlongitude) {
+        this.maxlongitude = maxlongitude;
+        return this;
+    }
+    
+    /**
+     * Southern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlatitude")
+    public Float minlatitude;
+    public SearchBostonCrimeRequest withMinlatitude(Float minlatitude) {
+        this.minlatitude = minlatitude;
+        return this;
+    }
+    
+    /**
+     * Western bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlongitude")
+    public Float minlongitude;
+    public SearchBostonCrimeRequest withMinlongitude(Float minlongitude) {
+        this.minlongitude = minlongitude;
+        return this;
+    }
+    
+    /**
+     * Search name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public SearchBostonCrimeRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Day Of Week
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boston_crime.day_of_week")
+    public String searchDbBostonCrimeDayOfWeek;
+    public SearchBostonCrimeRequest withSearchDbBostonCrimeDayOfWeek(String searchDbBostonCrimeDayOfWeek) {
+        this.searchDbBostonCrimeDayOfWeek = searchDbBostonCrimeDayOfWeek;
+        return this;
+    }
+    
+    /**
+     * District
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boston_crime.district")
+    public String searchDbBostonCrimeDistrict;
+    public SearchBostonCrimeRequest withSearchDbBostonCrimeDistrict(String searchDbBostonCrimeDistrict) {
+        this.searchDbBostonCrimeDistrict = searchDbBostonCrimeDistrict;
+        return this;
+    }
+    
+    /**
+     * Hour
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boston_crime.hour")
+    public Double searchDbBostonCrimeHour;
+    public SearchBostonCrimeRequest withSearchDbBostonCrimeHour(Double searchDbBostonCrimeHour) {
+        this.searchDbBostonCrimeHour = searchDbBostonCrimeHour;
+        return this;
+    }
+    
+    /**
+     * Location
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boston_crime.location")
+    public String searchDbBostonCrimeLocation;
+    public SearchBostonCrimeRequest withSearchDbBostonCrimeLocation(String searchDbBostonCrimeLocation) {
+        this.searchDbBostonCrimeLocation = searchDbBostonCrimeLocation;
+        return this;
+    }
+    
+    /**
+     * Month
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boston_crime.month")
+    public Double searchDbBostonCrimeMonth;
+    public SearchBostonCrimeRequest withSearchDbBostonCrimeMonth(Double searchDbBostonCrimeMonth) {
+        this.searchDbBostonCrimeMonth = searchDbBostonCrimeMonth;
+        return this;
+    }
+    
+    /**
+     * Offense
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boston_crime.offense")
+    public String searchDbBostonCrimeOffense;
+    public SearchBostonCrimeRequest withSearchDbBostonCrimeOffense(String searchDbBostonCrimeOffense) {
+        this.searchDbBostonCrimeOffense = searchDbBostonCrimeOffense;
+        return this;
+    }
+    
+    /**
+     * Offense Code Group
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boston_crime.offense_code_group")
+    public String searchDbBostonCrimeOffenseCodeGroup;
+    public SearchBostonCrimeRequest withSearchDbBostonCrimeOffenseCodeGroup(String searchDbBostonCrimeOffenseCodeGroup) {
+        this.searchDbBostonCrimeOffenseCodeGroup = searchDbBostonCrimeOffenseCodeGroup;
+        return this;
+    }
+    
+    /**
+     * Offense Description
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boston_crime.offense_description")
+    public String searchDbBostonCrimeOffenseDescription;
+    public SearchBostonCrimeRequest withSearchDbBostonCrimeOffenseDescription(String searchDbBostonCrimeOffenseDescription) {
+        this.searchDbBostonCrimeOffenseDescription = searchDbBostonCrimeOffenseDescription;
+        return this;
+    }
+    
+    /**
+     * Reporting Area
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boston_crime.reporting_area")
+    public String searchDbBostonCrimeReportingArea;
+    public SearchBostonCrimeRequest withSearchDbBostonCrimeReportingArea(String searchDbBostonCrimeReportingArea) {
+        this.searchDbBostonCrimeReportingArea = searchDbBostonCrimeReportingArea;
+        return this;
+    }
+    
+    /**
+     * Shooting
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boston_crime.shooting")
+    public String searchDbBostonCrimeShooting;
+    public SearchBostonCrimeRequest withSearchDbBostonCrimeShooting(String searchDbBostonCrimeShooting) {
+        this.searchDbBostonCrimeShooting = searchDbBostonCrimeShooting;
+        return this;
+    }
+    
+    /**
+     * Street
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boston_crime.street")
+    public String searchDbBostonCrimeStreet;
+    public SearchBostonCrimeRequest withSearchDbBostonCrimeStreet(String searchDbBostonCrimeStreet) {
+        this.searchDbBostonCrimeStreet = searchDbBostonCrimeStreet;
+        return this;
+    }
+    
+    /**
+     * Year
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boston_crime.year")
+    public Double searchDbBostonCrimeYear;
+    public SearchBostonCrimeRequest withSearchDbBostonCrimeYear(Double searchDbBostonCrimeYear) {
+        this.searchDbBostonCrimeYear = searchDbBostonCrimeYear;
+        return this;
+    }
+    
+    /**
+     * Number to skip
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
+    public Long skip;
+    public SearchBostonCrimeRequest withSkip(Long skip) {
+        this.skip = skip;
+        return this;
+    }
+    
+    /**
+     * Search text
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
+    public String text;
+    public SearchBostonCrimeRequest withText(String text) {
+        this.text = text;
+        return this;
+    }
+    
+    /**
+     * To date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
+    public OffsetDateTime todate;
+    public SearchBostonCrimeRequest withTodate(OffsetDateTime todate) {
+        this.todate = todate;
         return this;
     }
     

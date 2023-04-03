@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSipIpAccessControlListRequest {
-    
-    public UpdateSipIpAccessControlListPathParams pathParams;
-    public UpdateSipIpAccessControlListRequest withPathParams(UpdateSipIpAccessControlListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public UpdateSipIpAccessControlListRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateSipIpAccessControlListUpdateSipIpAccessControlListRequest request;
-    public UpdateSipIpAccessControlListRequest withRequest(UpdateSipIpAccessControlListUpdateSipIpAccessControlListRequest request) {
-        this.request = request;
+    public UpdateSipIpAccessControlListUpdateSipIpAccessControlListRequest requestBody;
+    public UpdateSipIpAccessControlListRequest withRequestBody(UpdateSipIpAccessControlListUpdateSipIpAccessControlListRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateSipIpAccessControlListSecurity security;
-    public UpdateSipIpAccessControlListRequest withSecurity(UpdateSipIpAccessControlListSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateSipIpAccessControlListRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * A 34 character string that uniquely identifies the resource to udpate.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateSipIpAccessControlListRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

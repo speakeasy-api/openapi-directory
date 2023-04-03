@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRevokeClusterSecurityGroupIngressRequest {
-    
-    public GETRevokeClusterSecurityGroupIngressQueryParams queryParams;
-    public GETRevokeClusterSecurityGroupIngressRequest withQueryParams(GETRevokeClusterSecurityGroupIngressQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETRevokeClusterSecurityGroupIngressActionEnum action;
+    public GETRevokeClusterSecurityGroupIngressRequest withAction(GETRevokeClusterSecurityGroupIngressActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The IP range for which to revoke access. This range must be a valid Classless Inter-Domain Routing (CIDR) block of IP addresses. If &lt;code&gt;CIDRIP&lt;/code&gt; is specified, &lt;code&gt;EC2SecurityGroupName&lt;/code&gt; and &lt;code&gt;EC2SecurityGroupOwnerId&lt;/code&gt; cannot be provided. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CIDRIP")
+    public String cidrip;
+    public GETRevokeClusterSecurityGroupIngressRequest withCidrip(String cidrip) {
+        this.cidrip = cidrip;
+        return this;
+    }
     
-    public GETRevokeClusterSecurityGroupIngressHeaders headers;
-    public GETRevokeClusterSecurityGroupIngressRequest withHeaders(GETRevokeClusterSecurityGroupIngressHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name of the security Group from which to revoke the ingress rule.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterSecurityGroupName")
+    public String clusterSecurityGroupName;
+    public GETRevokeClusterSecurityGroupIngressRequest withClusterSecurityGroupName(String clusterSecurityGroupName) {
+        this.clusterSecurityGroupName = clusterSecurityGroupName;
+        return this;
+    }
+    
+    /**
+     * The name of the EC2 Security Group whose access is to be revoked. If &lt;code&gt;EC2SecurityGroupName&lt;/code&gt; is specified, &lt;code&gt;EC2SecurityGroupOwnerId&lt;/code&gt; must also be provided and &lt;code&gt;CIDRIP&lt;/code&gt; cannot be provided. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EC2SecurityGroupName")
+    public String ec2SecurityGroupName;
+    public GETRevokeClusterSecurityGroupIngressRequest withEc2SecurityGroupName(String ec2SecurityGroupName) {
+        this.ec2SecurityGroupName = ec2SecurityGroupName;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The Amazon Web Services account number of the owner of the security group specified in the &lt;code&gt;EC2SecurityGroupName&lt;/code&gt; parameter. The Amazon Web Services access key ID is not an acceptable value. If &lt;code&gt;EC2SecurityGroupOwnerId&lt;/code&gt; is specified, &lt;code&gt;EC2SecurityGroupName&lt;/code&gt; must also be provided. and &lt;code&gt;CIDRIP&lt;/code&gt; cannot be provided. &lt;/p&gt; &lt;p&gt;Example: &lt;code&gt;111122223333&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EC2SecurityGroupOwnerId")
+    public String ec2SecurityGroupOwnerId;
+    public GETRevokeClusterSecurityGroupIngressRequest withEc2SecurityGroupOwnerId(String ec2SecurityGroupOwnerId) {
+        this.ec2SecurityGroupOwnerId = ec2SecurityGroupOwnerId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETRevokeClusterSecurityGroupIngressVersionEnum version;
+    public GETRevokeClusterSecurityGroupIngressRequest withVersion(GETRevokeClusterSecurityGroupIngressVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETRevokeClusterSecurityGroupIngressRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETRevokeClusterSecurityGroupIngressRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETRevokeClusterSecurityGroupIngressRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETRevokeClusterSecurityGroupIngressRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETRevokeClusterSecurityGroupIngressRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETRevokeClusterSecurityGroupIngressRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETRevokeClusterSecurityGroupIngressRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

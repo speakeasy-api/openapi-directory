@@ -4,13 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolSnmpv3AccessAddRequest {
+    /**
+     * Agent to add the SNMPv3 access
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolSnmpv3AccessAddRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolSnmpv3AccessAddPathParams pathParams;
-    public ProtocolSnmpv3AccessAddRequest withPathParams(ProtocolSnmpv3AccessAddPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * SNMPv3 access context match
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=contextMatch")
+    public String contextMatch;
+    public ProtocolSnmpv3AccessAddRequest withContextMatch(String contextMatch) {
+        this.contextMatch = contextMatch;
+        return this;
+    }
+    
+    /**
+     * SNMPv3 access name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupName")
+    public String groupName;
+    public ProtocolSnmpv3AccessAddRequest withGroupName(String groupName) {
+        this.groupName = groupName;
+        return this;
+    }
+    
+    /**
+     * SNMPv3 access notify view
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=notifyView")
+    public String notifyView;
+    public ProtocolSnmpv3AccessAddRequest withNotifyView(String notifyView) {
+        this.notifyView = notifyView;
+        return this;
+    }
+    
+    /**
+     * SNMPv3 prefix
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=prefix")
+    public String prefix;
+    public ProtocolSnmpv3AccessAddRequest withPrefix(String prefix) {
+        this.prefix = prefix;
+        return this;
+    }
+    
+    /**
+     * SNMPv3 access read view
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=readView")
+    public String readView;
+    public ProtocolSnmpv3AccessAddRequest withReadView(String readView) {
+        this.readView = readView;
+        return this;
+    }
+    
+    /**
+     * SNMPv3 access security level
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=securityLevel")
+    public String securityLevel;
+    public ProtocolSnmpv3AccessAddRequest withSecurityLevel(String securityLevel) {
+        this.securityLevel = securityLevel;
+        return this;
+    }
+    
+    /**
+     * SNMPv3 access security model
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=securityModel")
+    public String securityModel;
+    public ProtocolSnmpv3AccessAddRequest withSecurityModel(String securityModel) {
+        this.securityModel = securityModel;
+        return this;
+    }
+    
+    /**
+     * SNMPv3 access write view
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=writeView")
+    public String writeView;
+    public ProtocolSnmpv3AccessAddRequest withWriteView(String writeView) {
+        this.writeView = writeView;
         return this;
     }
     

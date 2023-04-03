@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteChangelogRequest {
-    
-    public DeleteChangelogPathParams pathParams;
-    public DeleteChangelogRequest withPathParams(DeleteChangelogPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteChangelogSecurity security;
-    public DeleteChangelogRequest withSecurity(DeleteChangelogSecurity security) {
-        this.security = security;
+    /**
+     * Slug of changelog
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=slug")
+    public String slug;
+    public DeleteChangelogRequest withSlug(String slug) {
+        this.slug = slug;
         return this;
     }
     

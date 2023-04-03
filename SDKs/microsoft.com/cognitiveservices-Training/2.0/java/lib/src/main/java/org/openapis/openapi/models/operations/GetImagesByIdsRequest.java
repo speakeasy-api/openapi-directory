@@ -4,27 +4,43 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetImagesByIdsRequest {
-    
-    public GetImagesByIdsPathParams pathParams;
-    public GetImagesByIdsRequest withPathParams(GetImagesByIdsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
+    public String trainingKey;
+    public GetImagesByIdsRequest withTrainingKey(String trainingKey) {
+        this.trainingKey = trainingKey;
         return this;
     }
     
-    
-    public GetImagesByIdsQueryParams queryParams;
-    public GetImagesByIdsRequest withQueryParams(GetImagesByIdsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The list of image ids to retrieve. Limited to 256
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=imageIds")
+    public String[] imageIds;
+    public GetImagesByIdsRequest withImageIds(String[] imageIds) {
+        this.imageIds = imageIds;
         return this;
     }
     
+    /**
+     * The iteration id. Defaults to workspace
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=iterationId")
+    public String iterationId;
+    public GetImagesByIdsRequest withIterationId(String iterationId) {
+        this.iterationId = iterationId;
+        return this;
+    }
     
-    public GetImagesByIdsHeaders headers;
-    public GetImagesByIdsRequest withHeaders(GetImagesByIdsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The project id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public GetImagesByIdsRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

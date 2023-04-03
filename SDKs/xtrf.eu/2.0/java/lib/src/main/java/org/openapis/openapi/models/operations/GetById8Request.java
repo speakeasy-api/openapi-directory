@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetById8Request {
-    
-    public GetById8PathParams pathParams;
-    public GetById8Request withPathParams(GetById8PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * list of adittional fields which should be embedded in the response (ie. tasks)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=embed")
+    public String embed;
+    public GetById8Request withEmbed(String embed) {
+        this.embed = embed;
         return this;
     }
     
-    
-    public GetById8QueryParams queryParams;
-    public GetById8Request withQueryParams(GetById8QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * quote's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=quoteId")
+    public String quoteId;
+    public GetById8Request withQuoteId(String quoteId) {
+        this.quoteId = quoteId;
         return this;
     }
     

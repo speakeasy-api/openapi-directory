@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateVariableRequest {
-    
-    public CreateVariablePathParams pathParams;
-    public CreateVariableRequest withPathParams(CreateVariablePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Environment in which the Variable resource exists.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EnvironmentSid")
+    public String environmentSid;
+    public CreateVariableRequest withEnvironmentSid(String environmentSid) {
+        this.environmentSid = environmentSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateVariableCreateVariableRequest request;
-    public CreateVariableRequest withRequest(CreateVariableCreateVariableRequest request) {
-        this.request = request;
+    public CreateVariableCreateVariableRequest requestBody;
+    public CreateVariableRequest withRequestBody(CreateVariableCreateVariableRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateVariableSecurity security;
-    public CreateVariableRequest withSecurity(CreateVariableSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateVariableRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Service to create the Variable resource under.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public CreateVariableRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

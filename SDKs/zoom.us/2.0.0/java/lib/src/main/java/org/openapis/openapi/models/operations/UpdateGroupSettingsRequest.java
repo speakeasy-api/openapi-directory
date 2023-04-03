@@ -7,24 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateGroupSettingsRequest {
-    
-    public UpdateGroupSettingsPathParams pathParams;
-    public UpdateGroupSettingsRequest withPathParams(UpdateGroupSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateGroupSettingsQueryParams queryParams;
-    public UpdateGroupSettingsRequest withQueryParams(UpdateGroupSettingsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public Object request;
-    public UpdateGroupSettingsRequest withRequest(Object request) {
-        this.request = request;
+    public Object requestBody;
+    public UpdateGroupSettingsRequest withRequestBody(Object requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Provide the name of the field by which you would like to filter the response. For example, if you provide "host_video" as the value of this field, you will get a response similar to the following:&lt;br&gt;
+     * {
+     *     "schedule_meeting": {
+     *         "host_video": false
+     *     }
+     * }
+     * &lt;br&gt;You can provide multiple values by separating them with commas(example: "host_video,participant_video\u201d).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=custom_query_fields")
+    public String customQueryFields;
+    public UpdateGroupSettingsRequest withCustomQueryFields(String customQueryFields) {
+        this.customQueryFields = customQueryFields;
+        return this;
+    }
+    
+    /**
+     * Id of the group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public String groupId;
+    public UpdateGroupSettingsRequest withGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=option")
+    public UpdateGroupSettingsOptionEnum option;
+    public UpdateGroupSettingsRequest withOption(UpdateGroupSettingsOptionEnum option) {
+        this.option = option;
         return this;
     }
     

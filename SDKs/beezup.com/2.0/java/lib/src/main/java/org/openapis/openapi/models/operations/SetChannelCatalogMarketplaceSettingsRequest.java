@@ -7,10 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetChannelCatalogMarketplaceSettingsRequest {
-    
-    public SetChannelCatalogMarketplaceSettingsPathParams pathParams;
-    public SetChannelCatalogMarketplaceSettingsRequest withPathParams(SetChannelCatalogMarketplaceSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Channel Catalog Id to query
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelCatalogId")
+    public String channelCatalogId;
+    public SetChannelCatalogMarketplaceSettingsRequest withChannelCatalogId(String channelCatalogId) {
+        this.channelCatalogId = channelCatalogId;
         return this;
     }
     
@@ -18,9 +21,9 @@ public class SetChannelCatalogMarketplaceSettingsRequest {
      * Settings to save
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SetChannelCatalogMarketplaceSettingsRequest request;
-    public SetChannelCatalogMarketplaceSettingsRequest withRequest(org.openapis.openapi.models.shared.SetChannelCatalogMarketplaceSettingsRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SetChannelCatalogMarketplaceSettingsRequest setChannelCatalogMarketplaceSettingsRequest;
+    public SetChannelCatalogMarketplaceSettingsRequest withSetChannelCatalogMarketplaceSettingsRequest(org.openapis.openapi.models.shared.SetChannelCatalogMarketplaceSettingsRequest setChannelCatalogMarketplaceSettingsRequest) {
+        this.setChannelCatalogMarketplaceSettingsRequest = setChannelCatalogMarketplaceSettingsRequest;
         return this;
     }
     

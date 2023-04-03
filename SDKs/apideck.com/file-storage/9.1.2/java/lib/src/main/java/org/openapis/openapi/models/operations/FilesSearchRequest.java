@@ -7,31 +7,60 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FilesSearchRequest {
-    
-    public FilesSearchQueryParams queryParams;
-    public FilesSearchRequest withQueryParams(FilesSearchQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public FilesSearchHeaders headers;
-    public FilesSearchRequest withHeaders(FilesSearchHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.FilesSearch request;
-    public FilesSearchRequest withRequest(org.openapis.openapi.models.shared.FilesSearch request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.FilesSearch filesSearch;
+    public FilesSearchRequest withFilesSearch(org.openapis.openapi.models.shared.FilesSearch filesSearch) {
+        this.filesSearch = filesSearch;
         return this;
     }
     
+    /**
+     * The 'fields' parameter allows API users to specify the fields they want to include in the API response. If this parameter is not present, the API will return all available fields. If this parameter is present, only the fields specified in the comma-separated string will be included in the response. Nested properties can also be requested by using a dot notation. &lt;br /&gt;&lt;br /&gt;Example: `fields=name,email,addresses.city`&lt;br /&gt;&lt;br /&gt;In the example above, the response will only include the fields "name", "email" and "addresses.city". If any other fields are available, they will be excluded.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public FilesSearchRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
     
-    public FilesSearchSecurity security;
-    public FilesSearchRequest withSecurity(FilesSearchSecurity security) {
-        this.security = security;
+    /**
+     * Optional unmapped key/values that will be passed through to downstream as query parameters
+     */
+    @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=pass_through")
+    public java.util.Map<String, Object> passThrough;
+    public FilesSearchRequest withPassThrough(java.util.Map<String, Object> passThrough) {
+        this.passThrough = passThrough;
+        return this;
+    }
+    
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public FilesSearchRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
+        return this;
+    }
+    
+    /**
+     * ID of the consumer which you want to get or push data from
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-consumer-id")
+    public String xApideckConsumerId;
+    public FilesSearchRequest withXApideckConsumerId(String xApideckConsumerId) {
+        this.xApideckConsumerId = xApideckConsumerId;
+        return this;
+    }
+    
+    /**
+     * Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-service-id")
+    public String xApideckServiceId;
+    public FilesSearchRequest withXApideckServiceId(String xApideckServiceId) {
+        this.xApideckServiceId = xApideckServiceId;
         return this;
     }
     

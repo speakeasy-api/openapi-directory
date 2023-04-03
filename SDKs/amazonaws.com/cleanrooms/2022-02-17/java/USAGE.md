@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.BatchGetSchemaPathParams;
-import org.openapis.openapi.models.operations.BatchGetSchemaHeaders;
 import org.openapis.openapi.models.operations.BatchGetSchemaRequestBody;
 import org.openapis.openapi.models.operations.BatchGetSchemaRequest;
 import org.openapis.openapi.models.operations.BatchGetSchemaResponse;
@@ -15,32 +13,27 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             BatchGetSchemaRequest req = new BatchGetSchemaRequest() {{
-                pathParams = new BatchGetSchemaPathParams() {{
-                    collaborationIdentifier = "corrupti";
-                }};
-                headers = new BatchGetSchemaHeaders() {{
-                    xAmzAlgorithm = "provident";
-                    xAmzContentSha256 = "distinctio";
-                    xAmzCredential = "quibusdam";
-                    xAmzDate = "unde";
-                    xAmzSecurityToken = "nulla";
-                    xAmzSignature = "corrupti";
-                    xAmzSignedHeaders = "illum";
-                }};
-                request = new BatchGetSchemaRequestBody() {{
+                requestBody = new BatchGetSchemaRequestBody() {{
                     names = new String[]{{
-                        add("error"),
-                        add("deserunt"),
+                        add("provident"),
+                        add("distinctio"),
+                        add("quibusdam"),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "unde";
+                xAmzContentSha256 = "nulla";
+                xAmzCredential = "corrupti";
+                xAmzDate = "illum";
+                xAmzSecurityToken = "vel";
+                xAmzSignature = "error";
+                xAmzSignedHeaders = "deserunt";
+                collaborationIdentifier = "suscipit";
+            }}            
 
             BatchGetSchemaResponse res = sdk.batchGetSchema(req);
 

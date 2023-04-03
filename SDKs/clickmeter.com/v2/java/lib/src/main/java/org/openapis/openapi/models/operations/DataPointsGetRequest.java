@@ -4,13 +4,116 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DataPointsGetRequest {
+    /**
+     * Exclude datapoints created before this date (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAfter")
+    public String createdAfter;
+    public DataPointsGetRequest withCreatedAfter(String createdAfter) {
+        this.createdAfter = createdAfter;
+        return this;
+    }
     
-    public DataPointsGetQueryParams queryParams;
-    public DataPointsGetRequest withQueryParams(DataPointsGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Exclude datapoints created after this date (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdBefore")
+    public String createdBefore;
+    public DataPointsGetRequest withCreatedBefore(String createdBefore) {
+        this.createdBefore = createdBefore;
+        return this;
+    }
+    
+    /**
+     * Maximum elements to retrieve. Default to 20 if not specified.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public DataPointsGetRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Where to start when retrieving elements. Default is 0 if not specified.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public DataPointsGetRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Filter fields by favourite status
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onlyFavorites")
+    public Boolean onlyFavorites;
+    public DataPointsGetRequest withOnlyFavorites(Boolean onlyFavorites) {
+        this.onlyFavorites = onlyFavorites;
+        return this;
+    }
+    
+    /**
+     * Field to sort by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortBy")
+    public String sortBy;
+    public DataPointsGetRequest withSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    
+    /**
+     * Direction of sort "asc" or "desc"
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortDirection")
+    public DataPointsGetSortDirectionEnum sortDirection;
+    public DataPointsGetRequest withSortDirection(DataPointsGetSortDirectionEnum sortDirection) {
+        this.sortDirection = sortDirection;
+        return this;
+    }
+    
+    /**
+     * Status of the datapoint
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public DataPointsGetStatusEnum status;
+    public DataPointsGetRequest withStatus(DataPointsGetStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * A comma separated list of tags you want to filter with.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
+    public String tags;
+    public DataPointsGetRequest withTags(String tags) {
+        this.tags = tags;
+        return this;
+    }
+    
+    /**
+     * Filter fields by this pattern
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=textSearch")
+    public String textSearch;
+    public DataPointsGetRequest withTextSearch(String textSearch) {
+        this.textSearch = textSearch;
+        return this;
+    }
+    
+    /**
+     * Type of the datapoint ("tp"/"tl")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public DataPointsGetTypeEnum type;
+    public DataPointsGetRequest withType(DataPointsGetTypeEnum type) {
+        this.type = type;
         return this;
     }
     

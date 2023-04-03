@@ -34,10 +34,11 @@ public class InstantPayouts {
      * Make an instant card payout
      * With this call, you can pay out to your customers, and funds will be made available within 30 minutes on the cardholder's bank account (this is dependent on whether the issuer supports this functionality). Instant card payouts are only supported for Visa and Mastercard cards.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPayoutResponse postPayout(org.openapis.openapi.models.operations.PostPayoutRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPayoutResponse postPayout(org.openapis.openapi.models.shared.PayoutRequest request, org.openapis.openapi.models.operations.PostPayoutSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/payout");
         
@@ -48,7 +49,7 @@ public class InstantPayouts {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

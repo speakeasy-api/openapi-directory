@@ -4,20 +4,176 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPathwayDiseaseAssociationsRequest {
-    
-    public GetPathwayDiseaseAssociationsPathParams pathParams;
-    public GetPathwayDiseaseAssociationsRequest withPathParams(GetPathwayDiseaseAssociationsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Set true to only include direct associations, and false to include inferred (via subclass or subclass|part of), default=False
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direct")
+    public Boolean direct;
+    public GetPathwayDiseaseAssociationsRequest withDirect(Boolean direct) {
+        this.direct = direct;
         return this;
     }
     
+    /**
+     * Set true to exclude inferred taxa
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direct_taxon")
+    public Boolean directTaxon;
+    public GetPathwayDiseaseAssociationsRequest withDirectTaxon(Boolean directTaxon) {
+        this.directTaxon = directTaxon;
+        return this;
+    }
     
-    public GetPathwayDiseaseAssociationsQueryParams queryParams;
-    public GetPathwayDiseaseAssociationsRequest withQueryParams(GetPathwayDiseaseAssociationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Object id, e.g. ECO:0000501 (for IEA; Includes inferred by default) or a specific publication or other supporting object, e.g. ZFIN:ZDB-PUB-060503-2
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=evidence")
+    public String evidence;
+    public GetPathwayDiseaseAssociationsRequest withEvidence(String evidence) {
+        this.evidence = evidence;
+        return this;
+    }
+    
+    /**
+     * If true, excludes associations that involve IEAs (ECO:0000501)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_automatic_assertions")
+    public Boolean excludeAutomaticAssertions;
+    public GetPathwayDiseaseAssociationsRequest withExcludeAutomaticAssertions(Boolean excludeAutomaticAssertions) {
+        this.excludeAutomaticAssertions = excludeAutomaticAssertions;
+        return this;
+    }
+    
+    /**
+     * Enable faceting
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=facet")
+    public Boolean facet;
+    public GetPathwayDiseaseAssociationsRequest withFacet(Boolean facet) {
+        this.facet = facet;
+        return this;
+    }
+    
+    /**
+     * Fields to facet on
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=facet_fields")
+    public String[] facetFields;
+    public GetPathwayDiseaseAssociationsRequest withFacetFields(String[] facetFields) {
+        this.facetFields = facetFields;
+        return this;
+    }
+    
+    /**
+     * If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fetch_objects")
+    public Boolean fetchObjects;
+    public GetPathwayDiseaseAssociationsRequest withFetchObjects(Boolean fetchObjects) {
+        this.fetchObjects = fetchObjects;
+        return this;
+    }
+    
+    /**
+     * CURIE any pathway element. E.g. REACT:R-HSA-5387390
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetPathwayDiseaseAssociationsRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Query string to filter documents
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public GetPathwayDiseaseAssociationsRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    /**
+     * A relation CURIE to filter associations
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=relation")
+    public String relation;
+    public GetPathwayDiseaseAssociationsRequest withRelation(String relation) {
+        this.relation = relation;
+        return this;
+    }
+    
+    /**
+     * number of rows
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rows")
+    public Long rows;
+    public GetPathwayDiseaseAssociationsRequest withRows(Long rows) {
+        this.rows = rows;
+        return this;
+    }
+    
+    /**
+     * Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slim")
+    public String[] slim;
+    public GetPathwayDiseaseAssociationsRequest withSlim(String[] slim) {
+        this.slim = slim;
+        return this;
+    }
+    
+    /**
+     * Sorting responses &lt;field&gt; &lt;desc,asc&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetPathwayDiseaseAssociationsRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * beginning row
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public Long start;
+    public GetPathwayDiseaseAssociationsRequest withStart(Long start) {
+        this.start = start;
+        return this;
+    }
+    
+    /**
+     * One or more taxon CURIE to filter associations by subject taxon; includes inferred associations by default
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=taxon")
+    public String[] taxon;
+    public GetPathwayDiseaseAssociationsRequest withTaxon(String[] taxon) {
+        this.taxon = taxon;
+        return this;
+    }
+    
+    /**
+     * If true, excludes evidence objects in response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unselect_evidence")
+    public Boolean unselectEvidence;
+    public GetPathwayDiseaseAssociationsRequest withUnselectEvidence(Boolean unselectEvidence) {
+        this.unselectEvidence = unselectEvidence;
+        return this;
+    }
+    
+    /**
+     * If true, returns results in compact associations format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=use_compact_associations")
+    public Boolean useCompactAssociations;
+    public GetPathwayDiseaseAssociationsRequest withUseCompactAssociations(Boolean useCompactAssociations) {
+        this.useCompactAssociations = useCompactAssociations;
         return this;
     }
     

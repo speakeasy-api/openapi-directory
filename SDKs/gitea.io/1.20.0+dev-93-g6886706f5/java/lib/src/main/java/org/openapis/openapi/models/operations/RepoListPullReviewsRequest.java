@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoListPullReviewsRequest {
-    
-    public RepoListPullReviewsPathParams pathParams;
-    public RepoListPullReviewsRequest withPathParams(RepoListPullReviewsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * index of the pull request
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=index")
+    public Long index;
+    public RepoListPullReviewsRequest withIndex(Long index) {
+        this.index = index;
         return this;
     }
     
+    /**
+     * page size of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public RepoListPullReviewsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public RepoListPullReviewsQueryParams queryParams;
-    public RepoListPullReviewsRequest withQueryParams(RepoListPullReviewsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoListPullReviewsRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * page number of results to return (1-based)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public RepoListPullReviewsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoListPullReviewsRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

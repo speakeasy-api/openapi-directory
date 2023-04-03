@@ -7,17 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposUpdateDeploymentBranchPolicyRequest {
-    
-    public ReposUpdateDeploymentBranchPolicyPathParams pathParams;
-    public ReposUpdateDeploymentBranchPolicyRequest withPathParams(ReposUpdateDeploymentBranchPolicyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the branch policy.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branch_policy_id")
+    public Long branchPolicyId;
+    public ReposUpdateDeploymentBranchPolicyRequest withBranchPolicyId(Long branchPolicyId) {
+        this.branchPolicyId = branchPolicyId;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DeploymentBranchPolicyNamePattern request;
-    public ReposUpdateDeploymentBranchPolicyRequest withRequest(org.openapis.openapi.models.shared.DeploymentBranchPolicyNamePattern request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.DeploymentBranchPolicyNamePattern deploymentBranchPolicyNamePattern;
+    public ReposUpdateDeploymentBranchPolicyRequest withDeploymentBranchPolicyNamePattern(org.openapis.openapi.models.shared.DeploymentBranchPolicyNamePattern deploymentBranchPolicyNamePattern) {
+        this.deploymentBranchPolicyNamePattern = deploymentBranchPolicyNamePattern;
+        return this;
+    }
+    
+    /**
+     * The name of the environment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environment_name")
+    public String environmentName;
+    public ReposUpdateDeploymentBranchPolicyRequest withEnvironmentName(String environmentName) {
+        this.environmentName = environmentName;
+        return this;
+    }
+    
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposUpdateDeploymentBranchPolicyRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposUpdateDeploymentBranchPolicyRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

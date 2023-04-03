@@ -7,31 +7,110 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DrivePropertiesPatchRequest {
-    
-    public DrivePropertiesPatchPathParams pathParams;
-    public DrivePropertiesPatchRequest withPathParams(DrivePropertiesPatchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DrivePropertiesPatchQueryParams queryParams;
-    public DrivePropertiesPatchRequest withQueryParams(DrivePropertiesPatchQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Property request;
-    public DrivePropertiesPatchRequest withRequest(org.openapis.openapi.models.shared.Property request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Property property;
+    public DrivePropertiesPatchRequest withProperty(org.openapis.openapi.models.shared.Property property) {
+        this.property = property;
         return this;
     }
     
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DrivePropertiesPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public DrivePropertiesPatchSecurity security;
-    public DrivePropertiesPatchRequest withSecurity(DrivePropertiesPatchSecurity security) {
-        this.security = security;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DrivePropertiesPatchRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * The ID of the file.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileId")
+    public String fileId;
+    public DrivePropertiesPatchRequest withFileId(String fileId) {
+        this.fileId = fileId;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DrivePropertiesPatchRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DrivePropertiesPatchRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DrivePropertiesPatchRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * The key of the property.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=propertyKey")
+    public String propertyKey;
+    public DrivePropertiesPatchRequest withPropertyKey(String propertyKey) {
+        this.propertyKey = propertyKey;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DrivePropertiesPatchRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public DrivePropertiesPatchRequest withUserIp(String userIp) {
+        this.userIp = userIp;
+        return this;
+    }
+    
+    /**
+     * The visibility of the property. Allowed values are PRIVATE and PUBLIC. (Default: PRIVATE)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=visibility")
+    public String visibility;
+    public DrivePropertiesPatchRequest withVisibility(String visibility) {
+        this.visibility = visibility;
         return this;
     }
     

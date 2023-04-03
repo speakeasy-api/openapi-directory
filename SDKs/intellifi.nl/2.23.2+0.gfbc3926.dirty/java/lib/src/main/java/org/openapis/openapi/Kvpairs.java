@@ -44,7 +44,7 @@ public class Kvpairs {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddKvPairsResponse addKvPairs(org.openapis.openapi.models.operations.AddKvPairsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddKvPairsResponse addKvPairs(org.openapis.openapi.models.shared.KeyValuePairInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/kvpairs");
         
@@ -90,7 +90,7 @@ public class Kvpairs {
      */
     public org.openapis.openapi.models.operations.DeleteKvPairResponse deleteKvPair(org.openapis.openapi.models.operations.DeleteKvPairRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteKvPairPathParams.class, baseUrl, "/kvpairs/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteKvPairRequest.class, baseUrl, "/kvpairs/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -135,7 +135,7 @@ public class Kvpairs {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetKvPairsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetKvPairsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -174,7 +174,7 @@ public class Kvpairs {
      */
     public org.openapis.openapi.models.operations.GetKvPairsByIdResponse getKvPairsById(org.openapis.openapi.models.operations.GetKvPairsByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetKvPairsByIdPathParams.class, baseUrl, "/kvpairs/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetKvPairsByIdRequest.class, baseUrl, "/kvpairs/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -213,12 +213,12 @@ public class Kvpairs {
      */
     public org.openapis.openapi.models.operations.UpdateKvPairResponse updateKvPair(org.openapis.openapi.models.operations.UpdateKvPairRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateKvPairPathParams.class, baseUrl, "/kvpairs/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateKvPairRequest.class, baseUrl, "/kvpairs/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "keyValuePairUpdate", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

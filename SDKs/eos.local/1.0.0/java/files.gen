@@ -30,17 +30,13 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/ConnectRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/ConnectRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ConnectResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ConnectionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Connections200ApplicationJSONLastHandshake.java
 lib/src/main/java/org/openapis/openapi/models/operations/Connections200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/ConnectionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DisconnectRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/DisconnectRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DisconnectResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/StatusRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/StatusRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Status200ApplicationJSONLastHandshake.java
 lib/src/main/java/org/openapis/openapi/models/operations/Status200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/StatusResponse.java

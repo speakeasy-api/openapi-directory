@@ -4,20 +4,38 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSnippetsWorkspaceEncodedIdFilesPathRequest {
-    
-    public GetSnippetsWorkspaceEncodedIdFilesPathPathParams pathParams;
-    public GetSnippetsWorkspaceEncodedIdFilesPathRequest withPathParams(GetSnippetsWorkspaceEncodedIdFilesPathPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The snippet id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=encoded_id")
+    public String encodedId;
+    public GetSnippetsWorkspaceEncodedIdFilesPathRequest withEncodedId(String encodedId) {
+        this.encodedId = encodedId;
         return this;
     }
     
+    /**
+     * Path to the file.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
+    public String path;
+    public GetSnippetsWorkspaceEncodedIdFilesPathRequest withPath(String path) {
+        this.path = path;
+        return this;
+    }
     
-    public GetSnippetsWorkspaceEncodedIdFilesPathSecurity security;
-    public GetSnippetsWorkspaceEncodedIdFilesPathRequest withSecurity(GetSnippetsWorkspaceEncodedIdFilesPathSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetSnippetsWorkspaceEncodedIdFilesPathRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

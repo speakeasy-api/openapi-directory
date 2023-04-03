@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CollectionsLinkedNodesRelationshipsRequest {
-    
-    public CollectionsLinkedNodesRelationshipsPathParams pathParams;
-    public CollectionsLinkedNodesRelationshipsRequest withPathParams(CollectionsLinkedNodesRelationshipsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public java.util.Map<String, Object> requestBody;
+    public CollectionsLinkedNodesRelationshipsRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public CollectionsLinkedNodesRelationshipsRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    /**
+     * A short id for that collection
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection_id")
+    public String collectionId;
+    public CollectionsLinkedNodesRelationshipsRequest withCollectionId(String collectionId) {
+        this.collectionId = collectionId;
         return this;
     }
     

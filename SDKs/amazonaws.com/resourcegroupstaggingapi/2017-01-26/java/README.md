@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.DescribeReportCreationXAmzTargetEnum;
-import org.openapis.openapi.models.operations.DescribeReportCreationHeaders;
 import org.openapis.openapi.models.operations.DescribeReportCreationRequest;
 import org.openapis.openapi.models.operations.DescribeReportCreationResponse;
 
@@ -27,30 +26,25 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             DescribeReportCreationRequest req = new DescribeReportCreationRequest() {{
-                headers = new DescribeReportCreationHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "ResourceGroupsTaggingAPI_20170126.DescribeReportCreation";
+                requestBody = new java.util.HashMap<String, Object>() {{
+                    put("provident", "distinctio");
+                    put("quibusdam", "unde");
+                    put("nulla", "corrupti");
                 }};
-                request = new java.util.HashMap<String, Object>() {{
-                    put("vel", "error");
-                    put("deserunt", "suscipit");
-                    put("iure", "magnam");
-                    put("debitis", "ipsa");
-                }};
-            }};            
+                xAmzAlgorithm = "illum";
+                xAmzContentSha256 = "vel";
+                xAmzCredential = "error";
+                xAmzDate = "deserunt";
+                xAmzSecurityToken = "suscipit";
+                xAmzSignature = "iure";
+                xAmzSignedHeaders = "magnam";
+                xAmzTarget = "ResourceGroupsTaggingAPI_20170126.DescribeReportCreation";
+            }}            
 
             DescribeReportCreationResponse res = sdk.describeReportCreation(req);
 
@@ -64,7 +58,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

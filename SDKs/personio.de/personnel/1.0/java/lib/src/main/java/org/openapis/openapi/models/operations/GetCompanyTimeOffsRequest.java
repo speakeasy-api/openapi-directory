@@ -4,13 +4,77 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCompanyTimeOffsRequest {
+    /**
+     * A list of Personio employee identifiers to filter the results. Only those employees specified here will be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=employees")
+    public Long[] employees;
+    public GetCompanyTimeOffsRequest withEmployees(Long[] employees) {
+        this.employees = employees;
+        return this;
+    }
     
-    public GetCompanyTimeOffsQueryParams queryParams;
-    public GetCompanyTimeOffsRequest withQueryParams(GetCompanyTimeOffsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Last day of the period to be queried. It is inclusive, so the day specified as end_date will also be considered on the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
+    public LocalDate endDate;
+    public GetCompanyTimeOffsRequest withEndDate(LocalDate endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    
+    /**
+     * Pagination attribute to limit how many attendances will be returned per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetCompanyTimeOffsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Pagination attribute to identify which page you are requesting, by the form of telling an offset from the first record that would be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetCompanyTimeOffsRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * First day of the period to be queried. It is inclusive, so the day specified as start_date will also be considered on the results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
+    public LocalDate startDate;
+    public GetCompanyTimeOffsRequest withStartDate(LocalDate startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    
+    /**
+     * Datetime from when the queried periods have been updated. It is inclusive, so the day specified as updated_from will also be considered on the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_from")
+    public String updatedFrom;
+    public GetCompanyTimeOffsRequest withUpdatedFrom(String updatedFrom) {
+        this.updatedFrom = updatedFrom;
+        return this;
+    }
+    
+    /**
+     * Datetime until when the queried periods have been updated. It is inclusive, so the day specified as updated_to will also be considered on the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_to")
+    public String updatedTo;
+    public GetCompanyTimeOffsRequest withUpdatedTo(String updatedTo) {
+        this.updatedTo = updatedTo;
         return this;
     }
     

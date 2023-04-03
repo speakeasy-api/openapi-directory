@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPushSubscriptionsOnChannelsRequest {
-    
-    public GetPushSubscriptionsOnChannelsQueryParams queryParams;
-    public GetPushSubscriptionsOnChannelsRequest withQueryParams(GetPushSubscriptionsOnChannelsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The version of the API you wish to use.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Ably-Version")
+    public String xAblyVersion;
+    public GetPushSubscriptionsOnChannelsRequest withXAblyVersion(String xAblyVersion) {
+        this.xAblyVersion = xAblyVersion;
         return this;
     }
     
+    /**
+     * Filter to restrict to subscriptions associated with that channel.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=channel")
+    public String channel;
+    public GetPushSubscriptionsOnChannelsRequest withChannel(String channel) {
+        this.channel = channel;
+        return this;
+    }
     
-    public GetPushSubscriptionsOnChannelsHeaders headers;
-    public GetPushSubscriptionsOnChannelsRequest withHeaders(GetPushSubscriptionsOnChannelsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Optional filter to restrict to devices associated with that clientId. Cannot be used with deviceId.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientId")
+    public String clientId;
+    public GetPushSubscriptionsOnChannelsRequest withClientId(String clientId) {
+        this.clientId = clientId;
+        return this;
+    }
+    
+    /**
+     * Optional filter to restrict to devices associated with that deviceId. Cannot be used with clientId.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deviceId")
+    public String deviceId;
+    public GetPushSubscriptionsOnChannelsRequest withDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
+    
+    /**
+     * The response format you would like
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public org.openapis.openapi.models.shared.ResponseFormatEnum format;
+    public GetPushSubscriptionsOnChannelsRequest withFormat(org.openapis.openapi.models.shared.ResponseFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * The maximum number of records to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetPushSubscriptionsOnChannelsRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     

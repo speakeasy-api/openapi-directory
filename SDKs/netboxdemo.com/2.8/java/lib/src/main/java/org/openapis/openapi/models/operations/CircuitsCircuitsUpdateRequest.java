@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CircuitsCircuitsUpdateRequest {
-    
-    public CircuitsCircuitsUpdatePathParams pathParams;
-    public CircuitsCircuitsUpdateRequest withPathParams(CircuitsCircuitsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.WritableCircuitInput writableCircuitInput;
+    public CircuitsCircuitsUpdateRequest withWritableCircuitInput(org.openapis.openapi.models.shared.WritableCircuitInput writableCircuitInput) {
+        this.writableCircuitInput = writableCircuitInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WritableCircuitInput request;
-    public CircuitsCircuitsUpdateRequest withRequest(org.openapis.openapi.models.shared.WritableCircuitInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this circuit.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public CircuitsCircuitsUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

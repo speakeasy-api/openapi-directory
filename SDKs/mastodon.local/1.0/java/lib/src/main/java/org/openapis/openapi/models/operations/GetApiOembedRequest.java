@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiOembedRequest {
+    /**
+     * height of the iframe. Defaults to null
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxheight")
+    public Long maxheight;
+    public GetApiOembedRequest withMaxheight(Long maxheight) {
+        this.maxheight = maxheight;
+        return this;
+    }
     
-    public GetApiOembedQueryParams queryParams;
-    public GetApiOembedRequest withQueryParams(GetApiOembedQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * width of the iframe. Defaults to 400
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxwidth")
+    public Long maxwidth;
+    public GetApiOembedRequest withMaxwidth(Long maxwidth) {
+        this.maxwidth = maxwidth;
+        return this;
+    }
+    
+    /**
+     * URL of a status
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=url")
+    public String url;
+    public GetApiOembedRequest withUrl(String url) {
+        this.url = url;
         return this;
     }
     

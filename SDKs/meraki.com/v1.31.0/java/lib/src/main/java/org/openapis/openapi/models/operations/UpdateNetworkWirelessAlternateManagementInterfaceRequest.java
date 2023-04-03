@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkWirelessAlternateManagementInterfaceRequest {
-    
-    public UpdateNetworkWirelessAlternateManagementInterfacePathParams pathParams;
-    public UpdateNetworkWirelessAlternateManagementInterfaceRequest withPathParams(UpdateNetworkWirelessAlternateManagementInterfacePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkWirelessAlternateManagementInterfaceRequestBody requestBody;
+    public UpdateNetworkWirelessAlternateManagementInterfaceRequest withRequestBody(UpdateNetworkWirelessAlternateManagementInterfaceRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkWirelessAlternateManagementInterfaceRequestBody request;
-    public UpdateNetworkWirelessAlternateManagementInterfaceRequest withRequest(UpdateNetworkWirelessAlternateManagementInterfaceRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkWirelessAlternateManagementInterfaceRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

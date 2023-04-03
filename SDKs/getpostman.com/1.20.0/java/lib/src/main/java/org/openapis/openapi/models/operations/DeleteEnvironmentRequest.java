@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteEnvironmentRequest {
-    
-    public DeleteEnvironmentPathParams pathParams;
-    public DeleteEnvironmentRequest withPathParams(DeleteEnvironmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environment_uid")
+    public String environmentUid;
+    public DeleteEnvironmentRequest withEnvironmentUid(String environmentUid) {
+        this.environmentUid = environmentUid;
         return this;
     }
     

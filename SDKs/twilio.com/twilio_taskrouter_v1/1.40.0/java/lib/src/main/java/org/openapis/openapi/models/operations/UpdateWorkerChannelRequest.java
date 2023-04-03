@@ -7,31 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateWorkerChannelRequest {
-    
-    public UpdateWorkerChannelPathParams pathParams;
-    public UpdateWorkerChannelRequest withPathParams(UpdateWorkerChannelPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateWorkerChannelUpdateWorkerChannelRequest request;
-    public UpdateWorkerChannelRequest withRequest(UpdateWorkerChannelUpdateWorkerChannelRequest request) {
-        this.request = request;
+    public UpdateWorkerChannelUpdateWorkerChannelRequest requestBody;
+    public UpdateWorkerChannelRequest withRequestBody(UpdateWorkerChannelUpdateWorkerChannelRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateWorkerChannelSecurity security;
-    public UpdateWorkerChannelRequest withSecurity(UpdateWorkerChannelSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the WorkerChannel to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateWorkerChannelRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
+    /**
+     * The SID of the Worker with the WorkerChannel to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkerSid")
+    public String workerSid;
+    public UpdateWorkerChannelRequest withWorkerSid(String workerSid) {
+        this.workerSid = workerSid;
+        return this;
+    }
     
-    public String serverURL;
-    public UpdateWorkerChannelRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Workspace with the WorkerChannel to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkspaceSid")
+    public String workspaceSid;
+    public UpdateWorkerChannelRequest withWorkspaceSid(String workspaceSid) {
+        this.workspaceSid = workspaceSid;
         return this;
     }
     

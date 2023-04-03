@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFormEntriesRequest {
-    
-    public GetFormEntriesPathParams pathParams;
-    public GetFormEntriesRequest withPathParams(GetFormEntriesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Access token required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-access-token")
+    public String evAccessToken;
+    public GetFormEntriesRequest withEvAccessToken(String evAccessToken) {
+        this.evAccessToken = evAccessToken;
         return this;
     }
     
-    
-    public GetFormEntriesQueryParams queryParams;
-    public GetFormEntriesRequest withQueryParams(GetFormEntriesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * API Key required to make the API call. 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-api-key")
+    public String evApiKey;
+    public GetFormEntriesRequest withEvApiKey(String evApiKey) {
+        this.evApiKey = evApiKey;
         return this;
     }
     
+    /**
+     * ID of the form to retrieve entries for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetFormEntriesRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetFormEntriesHeaders headers;
-    public GetFormEntriesRequest withHeaders(GetFormEntriesHeaders headers) {
-        this.headers = headers;
+    /**
+     * Limit of records to be returned (for pagination)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetFormEntriesRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Current offset of records (for pagination)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetFormEntriesRequest withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     

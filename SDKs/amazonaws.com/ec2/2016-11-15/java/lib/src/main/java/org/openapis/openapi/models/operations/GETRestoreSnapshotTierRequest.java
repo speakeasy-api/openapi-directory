@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRestoreSnapshotTierRequest {
-    
-    public GETRestoreSnapshotTierQueryParams queryParams;
-    public GETRestoreSnapshotTierRequest withQueryParams(GETRestoreSnapshotTierQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETRestoreSnapshotTierActionEnum action;
+    public GETRestoreSnapshotTierRequest withAction(GETRestoreSnapshotTierActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETRestoreSnapshotTierRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
     
-    public GETRestoreSnapshotTierHeaders headers;
-    public GETRestoreSnapshotTierRequest withHeaders(GETRestoreSnapshotTierHeaders headers) {
-        this.headers = headers;
+    /**
+     * Indicates whether to permanently restore an archived snapshot. To permanently restore an archived snapshot, specify &lt;code&gt;true&lt;/code&gt; and omit the &lt;b&gt;RestoreSnapshotTierRequest$TemporaryRestoreDays&lt;/b&gt; parameter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PermanentRestore")
+    public Boolean permanentRestore;
+    public GETRestoreSnapshotTierRequest withPermanentRestore(Boolean permanentRestore) {
+        this.permanentRestore = permanentRestore;
+        return this;
+    }
+    
+    /**
+     * The ID of the snapshot to restore.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SnapshotId")
+    public String snapshotId;
+    public GETRestoreSnapshotTierRequest withSnapshotId(String snapshotId) {
+        this.snapshotId = snapshotId;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Specifies the number of days for which to temporarily restore an archived snapshot. Required for temporary restores only. The snapshot will be automatically re-archived after this period.&lt;/p&gt; &lt;p&gt;To temporarily restore an archived snapshot, specify the number of days and omit the &lt;b&gt;PermanentRestore&lt;/b&gt; parameter or set it to &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TemporaryRestoreDays")
+    public Long temporaryRestoreDays;
+    public GETRestoreSnapshotTierRequest withTemporaryRestoreDays(Long temporaryRestoreDays) {
+        this.temporaryRestoreDays = temporaryRestoreDays;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETRestoreSnapshotTierVersionEnum version;
+    public GETRestoreSnapshotTierRequest withVersion(GETRestoreSnapshotTierVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETRestoreSnapshotTierRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETRestoreSnapshotTierRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETRestoreSnapshotTierRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETRestoreSnapshotTierRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETRestoreSnapshotTierRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETRestoreSnapshotTierRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETRestoreSnapshotTierRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

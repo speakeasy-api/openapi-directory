@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AssignVendorRequest {
-    
-    public AssignVendorPathParams pathParams;
-    public AssignVendorRequest withPathParams(AssignVendorPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Assigned vendor to a job in a project.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AssignVendorDTO request;
-    public AssignVendorRequest withRequest(org.openapis.openapi.models.shared.AssignVendorDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AssignVendorDTO assignVendorDTO;
+    public AssignVendorRequest withAssignVendorDTO(org.openapis.openapi.models.shared.AssignVendorDTO assignVendorDTO) {
+        this.assignVendorDTO = assignVendorDTO;
+        return this;
+    }
+    
+    /**
+     * job's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
+    public String jobId;
+    public AssignVendorRequest withJobId(String jobId) {
+        this.jobId = jobId;
         return this;
     }
     

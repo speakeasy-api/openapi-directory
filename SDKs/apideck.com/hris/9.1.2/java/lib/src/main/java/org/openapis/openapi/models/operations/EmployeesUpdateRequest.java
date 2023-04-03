@@ -7,38 +7,60 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EmployeesUpdateRequest {
-    
-    public EmployeesUpdatePathParams pathParams;
-    public EmployeesUpdateRequest withPathParams(EmployeesUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public EmployeesUpdateQueryParams queryParams;
-    public EmployeesUpdateRequest withQueryParams(EmployeesUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public EmployeesUpdateHeaders headers;
-    public EmployeesUpdateRequest withHeaders(EmployeesUpdateHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.EmployeeInput request;
-    public EmployeesUpdateRequest withRequest(org.openapis.openapi.models.shared.EmployeeInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.EmployeeInput employeeInput;
+    public EmployeesUpdateRequest withEmployeeInput(org.openapis.openapi.models.shared.EmployeeInput employeeInput) {
+        this.employeeInput = employeeInput;
         return this;
     }
     
+    /**
+     * ID of the record you are acting upon.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public EmployeesUpdateRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public EmployeesUpdateSecurity security;
-    public EmployeesUpdateRequest withSecurity(EmployeesUpdateSecurity security) {
-        this.security = security;
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
+    public Boolean raw;
+    public EmployeesUpdateRequest withRaw(Boolean raw) {
+        this.raw = raw;
+        return this;
+    }
+    
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public EmployeesUpdateRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
+        return this;
+    }
+    
+    /**
+     * ID of the consumer which you want to get or push data from
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-consumer-id")
+    public String xApideckConsumerId;
+    public EmployeesUpdateRequest withXApideckConsumerId(String xApideckConsumerId) {
+        this.xApideckConsumerId = xApideckConsumerId;
+        return this;
+    }
+    
+    /**
+     * Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-service-id")
+    public String xApideckServiceId;
+    public EmployeesUpdateRequest withXApideckServiceId(String xApideckServiceId) {
+        this.xApideckServiceId = xApideckServiceId;
         return this;
     }
     

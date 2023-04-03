@@ -34,27 +34,28 @@ public class Media {
     /**
      * Creates an enterprise file from the content provided by user. Returns a public download url for end user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChromepolicyMediaUploadResponse chromepolicyMediaUpload(org.openapis.openapi.models.operations.ChromepolicyMediaUploadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChromepolicyMediaUploadResponse chromepolicyMediaUpload(org.openapis.openapi.models.operations.ChromepolicyMediaUploadRequest request, org.openapis.openapi.models.operations.ChromepolicyMediaUploadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromepolicyMediaUploadPathParams.class, baseUrl, "/v1/{customer}/policies/files:uploadPolicyFile", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChromepolicyMediaUploadRequest.class, baseUrl, "/v1/{customer}/policies/files:uploadPolicyFile", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromepolicyMediaUploadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChromepolicyMediaUploadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRealmClientsRequest {
-    
-    public GetRealmClientsPathParams pathParams;
-    public GetRealmClientsRequest withPathParams(GetRealmClientsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * filter by clientId
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientId")
+    public String clientId;
+    public GetRealmClientsRequest withClientId(String clientId) {
+        this.clientId = clientId;
         return this;
     }
     
+    /**
+     * the first result
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=first")
+    public Integer first;
+    public GetRealmClientsRequest withFirst(Integer first) {
+        this.first = first;
+        return this;
+    }
     
-    public GetRealmClientsQueryParams queryParams;
-    public GetRealmClientsRequest withQueryParams(GetRealmClientsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * the max results to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
+    public Integer max;
+    public GetRealmClientsRequest withMax(Integer max) {
+        this.max = max;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public GetRealmClientsRequest withRealm(String realm) {
+        this.realm = realm;
+        return this;
+    }
+    
+    /**
+     * whether this is a search query or a getClientById query
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public Boolean search;
+    public GetRealmClientsRequest withSearch(Boolean search) {
+        this.search = search;
+        return this;
+    }
+    
+    /**
+     * filter clients that cannot be viewed in full by admin
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=viewableOnly")
+    public Boolean viewableOnly;
+    public GetRealmClientsRequest withViewableOnly(Boolean viewableOnly) {
+        this.viewableOnly = viewableOnly;
         return this;
     }
     

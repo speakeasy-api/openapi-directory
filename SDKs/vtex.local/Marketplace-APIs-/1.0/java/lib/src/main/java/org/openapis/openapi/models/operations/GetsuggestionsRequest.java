@@ -4,20 +4,116 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetsuggestionsRequest {
-    
-    public GetsuggestionsQueryParams queryParams;
-    public GetsuggestionsRequest withQueryParams(GetsuggestionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetsuggestionsRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetsuggestionsRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetsuggestionsHeaders headers;
-    public GetsuggestionsRequest withHeaders(GetsuggestionsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Define your pagination range, by adding the pagination starting value. Values should be bigger than 0, with a maximum of 50 records per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_from")
+    public Integer from;
+    public GetsuggestionsRequest withFrom(Integer from) {
+        this.from = from;
+        return this;
+    }
+    
+    /**
+     * Define your pagination range, by adding the pagination ending value. Values should be bigger than 0, with a maximum of 50 records per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_to")
+    public Integer to;
+    public GetsuggestionsRequest withTo(Integer to) {
+        this.to = to;
+        return this;
+    }
+    
+    /**
+     * Name of the VTEX account. Used as part of the URL
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
+    public String accountName;
+    public GetsuggestionsRequest withAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    
+    /**
+     * This field allows you to filter SKUs that have mapping or not. Insert `true` to filter SKUs that have mapping, or `false` to retrieve SKUs that aren't mapped.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hasmapping")
+    public String hasmapping;
+    public GetsuggestionsRequest withHasmapping(String hasmapping) {
+        this.hasmapping = hasmapping;
+        return this;
+    }
+    
+    /**
+     * Identifies the matching entity. It can be either VTEX's matcher, or an external matcher developed by partners, for example. The `matcherId`'s value can be obtained through the [Get SKU Suggestion by ID](https://developers.vtex.com/vtex-rest-api/reference/getsuggestion) endpoint.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=matcherid")
+    public String matcherid;
+    public GetsuggestionsRequest withMatcherid(String matcherid) {
+        this.matcherid = matcherid;
+        return this;
+    }
+    
+    /**
+     * This field allows you to customize your search. You can fill in this query param if you want to narrow down your search using the available filters on Received SKU modules.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public GetsuggestionsRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    /**
+     * A string that identifies the seller in the marketplace. This ID must be created by the marketplace and informed to the seller so it can call this endpoint.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=seller")
+    public String seller;
+    public GetsuggestionsRequest withSeller(String seller) {
+        this.seller = seller;
+        return this;
+    }
+    
+    /**
+     * Narrow down you search, filtering by status. Values allowed on this field include: `accepted`, `pending` and `denied.`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public String status;
+    public GetsuggestionsRequest withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * This field allows users to filter SKU suggestions, by searching only the new suggestions that were just sent, and suggestions that have already been sent, but were updated. Possible values for this field include `new` and `update`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public GetsuggestionsRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

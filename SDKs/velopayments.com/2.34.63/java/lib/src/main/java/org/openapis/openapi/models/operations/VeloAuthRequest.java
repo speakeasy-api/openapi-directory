@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VeloAuthRequest {
-    
-    public VeloAuthQueryParams queryParams;
-    public VeloAuthRequest withQueryParams(VeloAuthQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public VeloAuthSecurity security;
-    public VeloAuthRequest withSecurity(VeloAuthSecurity security) {
-        this.security = security;
+    /**
+     * OAuth grant type. Should use 'client_credentials'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=grant_type")
+    public String grantType;
+    public VeloAuthRequest withGrantType(String grantType) {
+        this.grantType = grantType;
         return this;
     }
     

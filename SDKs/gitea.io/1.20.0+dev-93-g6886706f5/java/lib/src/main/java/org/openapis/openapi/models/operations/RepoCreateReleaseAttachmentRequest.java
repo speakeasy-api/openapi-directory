@@ -7,24 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoCreateReleaseAttachmentRequest {
-    
-    public RepoCreateReleaseAttachmentPathParams pathParams;
-    public RepoCreateReleaseAttachmentRequest withPathParams(RepoCreateReleaseAttachmentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RepoCreateReleaseAttachmentQueryParams queryParams;
-    public RepoCreateReleaseAttachmentRequest withQueryParams(RepoCreateReleaseAttachmentQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public RepoCreateReleaseAttachmentRequestBody request;
-    public RepoCreateReleaseAttachmentRequest withRequest(RepoCreateReleaseAttachmentRequestBody request) {
-        this.request = request;
+    public RepoCreateReleaseAttachmentRequestBody requestBody;
+    public RepoCreateReleaseAttachmentRequest withRequestBody(RepoCreateReleaseAttachmentRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * id of the release
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public RepoCreateReleaseAttachmentRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * name of the attachment
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public RepoCreateReleaseAttachmentRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoCreateReleaseAttachmentRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoCreateReleaseAttachmentRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

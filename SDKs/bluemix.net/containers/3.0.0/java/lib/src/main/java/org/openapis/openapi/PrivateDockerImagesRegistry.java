@@ -44,7 +44,7 @@ public class PrivateDockerImagesRegistry {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -95,13 +95,13 @@ public class PrivateDockerImagesRegistry {
      */
     public org.openapis.openapi.models.operations.GetRegistryNamespacesNamespaceResponse getRegistryNamespacesNamespace(org.openapis.openapi.models.operations.GetRegistryNamespacesNamespaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRegistryNamespacesNamespacePathParams.class, baseUrl, "/registry/namespaces/{namespace}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRegistryNamespacesNamespaceRequest.class, baseUrl, "/registry/namespaces/{namespace}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -152,13 +152,13 @@ public class PrivateDockerImagesRegistry {
      */
     public org.openapis.openapi.models.operations.PutRegistryNamespacesNamespaceResponse putRegistryNamespacesNamespace(org.openapis.openapi.models.operations.PutRegistryNamespacesNamespaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRegistryNamespacesNamespacePathParams.class, baseUrl, "/registry/namespaces/{namespace}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRegistryNamespacesNamespaceRequest.class, baseUrl, "/registry/namespaces/{namespace}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

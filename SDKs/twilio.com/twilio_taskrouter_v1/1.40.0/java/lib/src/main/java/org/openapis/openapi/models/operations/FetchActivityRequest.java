@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchActivityRequest {
-    
-    public FetchActivityPathParams pathParams;
-    public FetchActivityRequest withPathParams(FetchActivityPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Activity resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchActivityRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public FetchActivitySecurity security;
-    public FetchActivityRequest withSecurity(FetchActivitySecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchActivityRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Workspace with the Activity resources to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkspaceSid")
+    public String workspaceSid;
+    public FetchActivityRequest withWorkspaceSid(String workspaceSid) {
+        this.workspaceSid = workspaceSid;
         return this;
     }
     

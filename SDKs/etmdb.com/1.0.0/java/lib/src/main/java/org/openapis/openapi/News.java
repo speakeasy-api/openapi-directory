@@ -42,7 +42,7 @@ public class News {
      */
     public org.openapis.openapi.models.operations.NewsSearchReadResponse newsSearchRead(org.openapis.openapi.models.operations.NewsSearchReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NewsSearchReadPathParams.class, baseUrl, "/api/v1/news/search/{title}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NewsSearchReadRequest.class, baseUrl, "/api/v1/news/search/{title}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletePadUsingGETRequest {
-    
-    public DeletePadUsingGETQueryParams queryParams;
-    public DeletePadUsingGETRequest withQueryParams(DeletePadUsingGETQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=padID")
+    public String padID;
+    public DeletePadUsingGETRequest withPadID(String padID) {
+        this.padID = padID;
         return this;
     }
     

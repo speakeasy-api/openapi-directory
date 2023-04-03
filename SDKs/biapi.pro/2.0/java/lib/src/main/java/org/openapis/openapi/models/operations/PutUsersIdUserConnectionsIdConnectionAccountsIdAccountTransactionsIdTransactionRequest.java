@@ -7,24 +7,48 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsIdTransactionRequest {
-    
-    public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsIdTransactionPathParams pathParams;
-    public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsIdTransactionRequest withPathParams(PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsIdTransactionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsIdTransactionQueryParams queryParams;
-    public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsIdTransactionRequest withQueryParams(PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsIdTransactionQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsIdTransactionRequestBody request;
-    public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsIdTransactionRequest withRequest(PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsIdTransactionRequestBody request) {
-        this.request = request;
+    public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsIdTransactionRequestBody requestBody;
+    public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsIdTransactionRequest withRequestBody(PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsIdTransactionRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsIdTransactionRequest withExpand(String expand) {
+        this.expand = expand;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_account")
+    public Long idAccount;
+    public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsIdTransactionRequest withIdAccount(Long idAccount) {
+        this.idAccount = idAccount;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connection")
+    public Long idConnection;
+    public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsIdTransactionRequest withIdConnection(Long idConnection) {
+        this.idConnection = idConnection;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_transaction")
+    public Long idTransaction;
+    public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsIdTransactionRequest withIdTransaction(Long idTransaction) {
+        this.idTransaction = idTransaction;
+        return this;
+    }
+    
+    /**
+     * Hint: you can use 'me' or 'all'
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
+    public String idUser;
+    public PutUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsIdTransactionRequest withIdUser(String idUser) {
+        this.idUser = idUser;
         return this;
     }
     

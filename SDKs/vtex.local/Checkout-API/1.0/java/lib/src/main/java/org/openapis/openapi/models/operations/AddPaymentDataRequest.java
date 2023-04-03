@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddPaymentDataRequest {
-    
-    public AddPaymentDataPathParams pathParams;
-    public AddPaymentDataRequest withPathParams(AddPaymentDataPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public AddPaymentDataRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public AddPaymentDataHeaders headers;
-    public AddPaymentDataRequest withHeaders(AddPaymentDataHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public AddPaymentDataRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public AddPaymentDataRequestBody request;
-    public AddPaymentDataRequest withRequest(AddPaymentDataRequestBody request) {
-        this.request = request;
+    public AddPaymentDataRequestBody requestBody;
+    public AddPaymentDataRequest withRequestBody(AddPaymentDataRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * ID of the orderForm that will receive client profile information.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderFormId")
+    public String orderFormId;
+    public AddPaymentDataRequest withOrderFormId(String orderFormId) {
+        this.orderFormId = orderFormId;
         return this;
     }
     

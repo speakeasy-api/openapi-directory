@@ -7,17 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutOrganisationsPartyIdBusinessNamesProductIdRequest {
-    
-    public PutOrganisationsPartyIdBusinessNamesProductIdPathParams pathParams;
-    public PutOrganisationsPartyIdBusinessNamesProductIdRequest withPathParams(PutOrganisationsPartyIdBusinessNamesProductIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutOrganisationsPartyIdBusinessNamesProductIdHeaders headers;
-    public PutOrganisationsPartyIdBusinessNamesProductIdRequest withHeaders(PutOrganisationsPartyIdBusinessNamesProductIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * The API key.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public PutOrganisationsPartyIdBusinessNamesProductIdRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
@@ -25,9 +21,29 @@ public class PutOrganisationsPartyIdBusinessNamesProductIdRequest {
      * Business Name resource
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.BusinessNameInput request;
-    public PutOrganisationsPartyIdBusinessNamesProductIdRequest withRequest(org.openapis.openapi.models.shared.BusinessNameInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.BusinessNameInput businessNameInput;
+    public PutOrganisationsPartyIdBusinessNamesProductIdRequest withBusinessNameInput(org.openapis.openapi.models.shared.BusinessNameInput businessNameInput) {
+        this.businessNameInput = businessNameInput;
+        return this;
+    }
+    
+    /**
+     * The party identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=partyId")
+    public String partyId;
+    public PutOrganisationsPartyIdBusinessNamesProductIdRequest withPartyId(String partyId) {
+        this.partyId = partyId;
+        return this;
+    }
+    
+    /**
+     * The product identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
+    public String productId;
+    public PutOrganisationsPartyIdBusinessNamesProductIdRequest withProductId(String productId) {
+        this.productId = productId;
         return this;
     }
     

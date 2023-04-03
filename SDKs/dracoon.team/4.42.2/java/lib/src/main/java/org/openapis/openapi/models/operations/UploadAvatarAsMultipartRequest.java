@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UploadAvatarAsMultipartRequest {
-    
-    public UploadAvatarAsMultipartHeaders headers;
-    public UploadAvatarAsMultipartRequest withHeaders(UploadAvatarAsMultipartHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public UploadAvatarAsMultipartRequestBody requestBody;
+    public UploadAvatarAsMultipartRequest withRequestBody(UploadAvatarAsMultipartRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public UploadAvatarAsMultipartRequestBody request;
-    public UploadAvatarAsMultipartRequest withRequest(UploadAvatarAsMultipartRequestBody request) {
-        this.request = request;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public UploadAvatarAsMultipartRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     

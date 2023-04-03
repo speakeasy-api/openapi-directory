@@ -43,7 +43,7 @@ public class Genre {
      */
     public org.openapis.openapi.models.operations.GenreSearchReadResponse genreSearchRead(org.openapis.openapi.models.operations.GenreSearchReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GenreSearchReadPathParams.class, baseUrl, "/api/v1/genre/search/{movie_title}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GenreSearchReadRequest.class, baseUrl, "/api/v1/genre/search/{movie_title}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -83,7 +83,7 @@ public class Genre {
      */
     public org.openapis.openapi.models.operations.GenreSearchallReadResponse genreSearchallRead(org.openapis.openapi.models.operations.GenreSearchallReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GenreSearchallReadPathParams.class, baseUrl, "/api/v1/genre/searchall/{movie_genre_type}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GenreSearchallReadRequest.class, baseUrl, "/api/v1/genre/searchall/{movie_genre_type}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

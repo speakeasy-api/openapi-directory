@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.CreateGlobalRuleRequest;
 import org.openapis.openapi.models.operations.CreateGlobalRuleResponse;
 import org.openapis.openapi.models.shared.Rule;
 import org.openapis.openapi.models.shared.RuleTypeEnum;
@@ -15,12 +14,10 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CreateGlobalRuleRequest req = new CreateGlobalRuleRequest() {{
-                request = new Rule() {{
-                    config = "corrupti";
-                    type = "VALIDITY";
-                }};
-            }};            
+            org.openapis.openapi.models.shared.Rule req = new Rule() {{
+                config = "corrupti";
+                type = "VALIDITY";
+            }}            
 
             CreateGlobalRuleResponse res = sdk.admin.createGlobalRule(req);
 

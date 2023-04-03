@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2NamespacesNamespaceRepositoriesRepositoryTagsTagRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=namespace")
+    public String namespace;
+    public GetV2NamespacesNamespaceRepositoriesRepositoryTagsTagRequest withNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
     
-    public GetV2NamespacesNamespaceRepositoriesRepositoryTagsTagPathParams pathParams;
-    public GetV2NamespacesNamespaceRepositoriesRepositoryTagsTagRequest withPathParams(GetV2NamespacesNamespaceRepositoriesRepositoryTagsTagPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repository")
+    public String repository;
+    public GetV2NamespacesNamespaceRepositoriesRepositoryTagsTagRequest withRepository(String repository) {
+        this.repository = repository;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tag")
+    public String tag;
+    public GetV2NamespacesNamespaceRepositoriesRepositoryTagsTagRequest withTag(String tag) {
+        this.tag = tag;
         return this;
     }
     

@@ -40,13 +40,13 @@ public class Snapshots {
      */
     public org.openapis.openapi.models.operations.CopySnapshotToExistingGameUsingPOST1Response copySnapshotToExistingGameUsingPOST1(org.openapis.openapi.models.operations.CopySnapshotToExistingGameUsingPOST1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CopySnapshotToExistingGameUsingPOST1PathParams.class, baseUrl, "/restv2/game/{apiKey}/admin/snapshots/{snapshotId}/copy/to/{targetApiKey}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CopySnapshotToExistingGameUsingPOST1Request.class, baseUrl, "/restv2/game/{apiKey}/admin/snapshots/{snapshotId}/copy/to/{targetApiKey}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CopySnapshotToExistingGameUsingPOST1QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CopySnapshotToExistingGameUsingPOST1Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -94,13 +94,13 @@ public class Snapshots {
      */
     public org.openapis.openapi.models.operations.CopySnapshotToNewGameUsingPOSTResponse copySnapshotToNewGameUsingPOST(org.openapis.openapi.models.operations.CopySnapshotToNewGameUsingPOSTRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CopySnapshotToNewGameUsingPOSTPathParams.class, baseUrl, "/restv2/game/{apiKey}/admin/snapshots/{snapshotId}/copy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CopySnapshotToNewGameUsingPOSTRequest.class, baseUrl, "/restv2/game/{apiKey}/admin/snapshots/{snapshotId}/copy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CopySnapshotToNewGameUsingPOSTQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CopySnapshotToNewGameUsingPOSTRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -148,12 +148,12 @@ public class Snapshots {
      */
     public org.openapis.openapi.models.operations.CreateSnapshotsUsingPOSTResponse createSnapshotsUsingPOST(org.openapis.openapi.models.operations.CreateSnapshotsUsingPOSTRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateSnapshotsUsingPOSTPathParams.class, baseUrl, "/restv2/game/{apiKey}/admin/snapshots", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateSnapshotsUsingPOSTRequest.class, baseUrl, "/restv2/game/{apiKey}/admin/snapshots", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "snapshotCreationModel", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -201,7 +201,7 @@ public class Snapshots {
      */
     public org.openapis.openapi.models.operations.DELETESnapshotUsingDELETE1Response deleteSnapshotUsingDELETE1(org.openapis.openapi.models.operations.DELETESnapshotUsingDELETE1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DELETESnapshotUsingDELETE1PathParams.class, baseUrl, "/restv2/game/{apiKey}/admin/snapshots/{snapshotId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DELETESnapshotUsingDELETE1Request.class, baseUrl, "/restv2/game/{apiKey}/admin/snapshots/{snapshotId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -241,7 +241,7 @@ public class Snapshots {
      */
     public org.openapis.openapi.models.operations.GETLiveSnapshotIdUsingGETResponse getLiveSnapshotIdUsingGET(org.openapis.openapi.models.operations.GETLiveSnapshotIdUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETLiveSnapshotIdUsingGETPathParams.class, baseUrl, "/restv2/game/{apiKey}/admin/snapshots/liveSnapshotId", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETLiveSnapshotIdUsingGETRequest.class, baseUrl, "/restv2/game/{apiKey}/admin/snapshots/liveSnapshotId", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -281,7 +281,7 @@ public class Snapshots {
      */
     public org.openapis.openapi.models.operations.GETSnapshotUsingGETResponse getSnapshotUsingGET(org.openapis.openapi.models.operations.GETSnapshotUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETSnapshotUsingGETPathParams.class, baseUrl, "/restv2/game/{apiKey}/admin/snapshots/{snapshotId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETSnapshotUsingGETRequest.class, baseUrl, "/restv2/game/{apiKey}/admin/snapshots/{snapshotId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -329,13 +329,13 @@ public class Snapshots {
      */
     public org.openapis.openapi.models.operations.GETSnapshotsUsingGETResponse getSnapshotsUsingGET(org.openapis.openapi.models.operations.GETSnapshotsUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETSnapshotsUsingGETPathParams.class, baseUrl, "/restv2/game/{apiKey}/admin/snapshots/page/{page}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETSnapshotsUsingGETRequest.class, baseUrl, "/restv2/game/{apiKey}/admin/snapshots/page/{page}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETSnapshotsUsingGETQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETSnapshotsUsingGETRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -383,13 +383,13 @@ public class Snapshots {
      */
     public org.openapis.openapi.models.operations.GETSnapshotsUsingGET1Response getSnapshotsUsingGET1(org.openapis.openapi.models.operations.GETSnapshotsUsingGET1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETSnapshotsUsingGET1PathParams.class, baseUrl, "/restv2/game/{apiKey}/admin/snapshots", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETSnapshotsUsingGET1Request.class, baseUrl, "/restv2/game/{apiKey}/admin/snapshots", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETSnapshotsUsingGET1QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETSnapshotsUsingGET1Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -437,7 +437,7 @@ public class Snapshots {
      */
     public org.openapis.openapi.models.operations.PublishSnapshotUsingPOST1Response publishSnapshotUsingPOST1(org.openapis.openapi.models.operations.PublishSnapshotUsingPOST1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PublishSnapshotUsingPOST1PathParams.class, baseUrl, "/restv2/game/{apiKey}/admin/snapshots/{snapshotId}/publish", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PublishSnapshotUsingPOST1Request.class, baseUrl, "/restv2/game/{apiKey}/admin/snapshots/{snapshotId}/publish", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -477,7 +477,7 @@ public class Snapshots {
      */
     public org.openapis.openapi.models.operations.RevertToSnapshotUsingPOSTResponse revertToSnapshotUsingPOST(org.openapis.openapi.models.operations.RevertToSnapshotUsingPOSTRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RevertToSnapshotUsingPOSTPathParams.class, baseUrl, "/restv2/game/{apiKey}/admin/snapshots/revert/to/{snapshotId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RevertToSnapshotUsingPOSTRequest.class, baseUrl, "/restv2/game/{apiKey}/admin/snapshots/revert/to/{snapshotId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -517,7 +517,7 @@ public class Snapshots {
      */
     public org.openapis.openapi.models.operations.UnpublishSnapshotUsingPOSTResponse unpublishSnapshotUsingPOST(org.openapis.openapi.models.operations.UnpublishSnapshotUsingPOSTRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnpublishSnapshotUsingPOSTPathParams.class, baseUrl, "/restv2/game/{apiKey}/admin/snapshots/{snapshotId}/unpublish", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnpublishSnapshotUsingPOSTRequest.class, baseUrl, "/restv2/game/{apiKey}/admin/snapshots/{snapshotId}/unpublish", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");

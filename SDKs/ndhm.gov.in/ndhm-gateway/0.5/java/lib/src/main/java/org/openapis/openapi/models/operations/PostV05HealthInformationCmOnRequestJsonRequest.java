@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05HealthInformationCmOnRequestJsonRequest {
-    
-    public PostV05HealthInformationCmOnRequestJsonHeaders headers;
-    public PostV05HealthInformationCmOnRequestJsonRequest withHeaders(PostV05HealthInformationCmOnRequestJsonHeaders headers) {
-        this.headers = headers;
+    /**
+     * Access token which was issued after successful login with gateway auth server.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostV05HealthInformationCmOnRequestJsonRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.HIUHealthInformationRequestResponse request;
-    public PostV05HealthInformationCmOnRequestJsonRequest withRequest(org.openapis.openapi.models.shared.HIUHealthInformationRequestResponse request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.HIUHealthInformationRequestResponse hiuHealthInformationRequestResponse;
+    public PostV05HealthInformationCmOnRequestJsonRequest withHIUHealthInformationRequestResponse(org.openapis.openapi.models.shared.HIUHealthInformationRequestResponse hiuHealthInformationRequestResponse) {
+        this.hiuHealthInformationRequestResponse = hiuHealthInformationRequestResponse;
+        return this;
+    }
+    
+    /**
+     * Identifier of the health information user to which the request was intended.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HIU-ID")
+    public String xHiuId;
+    public PostV05HealthInformationCmOnRequestJsonRequest withXHiuId(String xHiuId) {
+        this.xHiuId = xHiuId;
         return this;
     }
     

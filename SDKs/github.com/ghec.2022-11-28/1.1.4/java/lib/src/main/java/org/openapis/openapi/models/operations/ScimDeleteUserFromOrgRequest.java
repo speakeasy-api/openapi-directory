@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ScimDeleteUserFromOrgRequest {
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ScimDeleteUserFromOrgRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
     
-    public ScimDeleteUserFromOrgPathParams pathParams;
-    public ScimDeleteUserFromOrgRequest withPathParams(ScimDeleteUserFromOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the SCIM user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scim_user_id")
+    public String scimUserId;
+    public ScimDeleteUserFromOrgRequest withScimUserId(String scimUserId) {
+        this.scimUserId = scimUserId;
         return this;
     }
     

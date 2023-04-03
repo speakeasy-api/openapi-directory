@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ArticleGymArticleDetailsRequest {
+    /**
+     * indentity number(primary key) for article object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=articleId")
+    public Integer articleId;
+    public ArticleGymArticleDetailsRequest withArticleId(Integer articleId) {
+        this.articleId = articleId;
+        return this;
+    }
     
-    public ArticleGymArticleDetailsPathParams pathParams;
-    public ArticleGymArticleDetailsRequest withPathParams(ArticleGymArticleDetailsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * indentity number(primary key) for gym object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=gymId")
+    public Integer gymId;
+    public ArticleGymArticleDetailsRequest withGymId(Integer gymId) {
+        this.gymId = gymId;
         return this;
     }
     

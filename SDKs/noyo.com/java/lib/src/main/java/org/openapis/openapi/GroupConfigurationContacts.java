@@ -40,12 +40,12 @@ public class GroupConfigurationContacts {
      */
     public org.openapis.openapi.models.operations.CreateContactResponse createContact(org.openapis.openapi.models.operations.CreateContactRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateContactPathParams.class, baseUrl, "/api/v1/groups/{group_id}/contacts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateContactRequest.class, baseUrl, "/api/v1/groups/{group_id}/contacts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "contactCreateRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -84,12 +84,12 @@ public class GroupConfigurationContacts {
      */
     public org.openapis.openapi.models.operations.EditContactResponse editContact(org.openapis.openapi.models.operations.EditContactRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditContactPathParams.class, baseUrl, "/api/v1/groups/{group_id}/contacts/{contact_id}/{version}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditContactRequest.class, baseUrl, "/api/v1/groups/{group_id}/contacts/{contact_id}/{version}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "contactEditRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -128,7 +128,7 @@ public class GroupConfigurationContacts {
      */
     public org.openapis.openapi.models.operations.GetContactResponse getContact(org.openapis.openapi.models.operations.GetContactRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContactPathParams.class, baseUrl, "/api/v1/groups/{group_id}/contacts/{contact_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContactRequest.class, baseUrl, "/api/v1/groups/{group_id}/contacts/{contact_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -167,13 +167,13 @@ public class GroupConfigurationContacts {
      */
     public org.openapis.openapi.models.operations.GetContactListResponse getContactList(org.openapis.openapi.models.operations.GetContactListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContactListPathParams.class, baseUrl, "/api/v1/groups/{group_id}/contacts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContactListRequest.class, baseUrl, "/api/v1/groups/{group_id}/contacts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetContactListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetContactListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

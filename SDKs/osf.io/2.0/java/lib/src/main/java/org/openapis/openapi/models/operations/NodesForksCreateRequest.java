@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NodesForksCreateRequest {
-    
-    public NodesForksCreatePathParams pathParams;
-    public NodesForksCreateRequest withPathParams(NodesForksCreatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public NodesForksCreateNodeInput requestBody;
+    public NodesForksCreateRequest withRequestBody(NodesForksCreateNodeInput requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public NodesForksCreateNodeInput request;
-    public NodesForksCreateRequest withRequest(NodesForksCreateNodeInput request) {
-        this.request = request;
+    /**
+     * The unique identifier of the node.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=node_id")
+    public String nodeId;
+    public NodesForksCreateRequest withNodeId(String nodeId) {
+        this.nodeId = nodeId;
         return this;
     }
     

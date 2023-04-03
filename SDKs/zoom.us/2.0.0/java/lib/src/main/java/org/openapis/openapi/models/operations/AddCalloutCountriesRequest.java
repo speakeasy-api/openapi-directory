@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddCalloutCountriesRequest {
-    
-    public AddCalloutCountriesPathParams pathParams;
-    public AddCalloutCountriesRequest withPathParams(AddCalloutCountriesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public AddCalloutCountriesApplicationJSON requestBody;
+    public AddCalloutCountriesRequest withRequestBody(AddCalloutCountriesApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public AddCalloutCountriesApplicationJSON request;
-    public AddCalloutCountriesRequest withRequest(AddCalloutCountriesApplicationJSON request) {
-        this.request = request;
+    /**
+     * Unique identifier of the account. To add Call-out enabled countries to a sub account, provide the account ID of the sub account in the `accountId` path parameter. To add Call-out enabled countries to a master account, provide `me` as the value of the `accountId` path parameter.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public AddCalloutCountriesRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     

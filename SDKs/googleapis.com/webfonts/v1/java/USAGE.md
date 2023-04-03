@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.WebfontsWebfontsListSortEnum;
-import org.openapis.openapi.models.operations.WebfontsWebfontsListQueryParams;
 import org.openapis.openapi.models.operations.WebfontsWebfontsListRequest;
 import org.openapis.openapi.models.operations.WebfontsWebfontsListResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -18,21 +17,19 @@ public class Application {
                 .build();
 
             WebfontsWebfontsListRequest req = new WebfontsWebfontsListRequest() {{
-                queryParams = new WebfontsWebfontsListQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "provident";
-                    alt = "proto";
-                    callback = "quibusdam";
-                    fields = "unde";
-                    key = "nulla";
-                    oauthToken = "corrupti";
-                    prettyPrint = false;
-                    quotaUser = "illum";
-                    sort = "DATE";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-            }};            
+                dollarXgafv = "2";
+                accessToken = "provident";
+                alt = "proto";
+                callback = "quibusdam";
+                fields = "unde";
+                key = "nulla";
+                oauthToken = "corrupti";
+                prettyPrint = false;
+                quotaUser = "illum";
+                sort = "DATE";
+                uploadType = "error";
+                uploadProtocol = "deserunt";
+            }}            
 
             WebfontsWebfontsListResponse res = sdk.webfonts.webfontsWebfontsList(req);
 

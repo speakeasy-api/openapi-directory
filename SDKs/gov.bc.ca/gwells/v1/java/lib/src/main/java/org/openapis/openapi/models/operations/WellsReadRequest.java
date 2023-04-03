@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WellsReadRequest {
-    
-    public WellsReadPathParams pathParams;
-    public WellsReadRequest withPathParams(WellsReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this well.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=well_tag_number")
+    public Long wellTagNumber;
+    public WellsReadRequest withWellTagNumber(Long wellTagNumber) {
+        this.wellTagNumber = wellTagNumber;
         return this;
     }
     

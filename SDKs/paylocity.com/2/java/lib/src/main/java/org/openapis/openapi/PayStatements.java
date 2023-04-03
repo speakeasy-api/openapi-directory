@@ -34,25 +34,26 @@ public class PayStatements {
      * Get employee pay statement details data for the specified year.
      * Get pay statement details API will return employee pay statement details data currently available in Web Pay for the specified year.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearResponse getsEmployeePayStatementDetailDataBasedOnTheSpecifiedYear(org.openapis.openapi.models.operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearResponse getsEmployeePayStatementDetailDataBasedOnTheSpecifiedYear(org.openapis.openapi.models.operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearRequest request, org.openapis.openapi.models.operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearPathParams.class, baseUrl, "/v2/companies/{companyId}/employees/{employeeId}/paystatement/details/{year}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearRequest.class, baseUrl, "/v2/companies/{companyId}/employees/{employeeId}/paystatement/details/{year}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -90,25 +91,26 @@ public class PayStatements {
      * Get employee pay statement details data for the specified year and check date.
      * Get pay statement details API will return employee pay statement detail data currently available in Web Pay for the specified year and check date.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDateResponse getsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDate(org.openapis.openapi.models.operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDateResponse getsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDate(org.openapis.openapi.models.operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDateRequest request, org.openapis.openapi.models.operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDatePathParams.class, baseUrl, "/v2/companies/{companyId}/employees/{employeeId}/paystatement/details/{year}/{checkDate}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDateRequest.class, baseUrl, "/v2/companies/{companyId}/employees/{employeeId}/paystatement/details/{year}/{checkDate}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -146,25 +148,26 @@ public class PayStatements {
      * Get employee pay statement summary data for the specified year.
      * Get pay statement summary API will return employee pay statement summary data currently available in Web Pay for the specified year.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearResponse getsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYear(org.openapis.openapi.models.operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearResponse getsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYear(org.openapis.openapi.models.operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearRequest request, org.openapis.openapi.models.operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearPathParams.class, baseUrl, "/v2/companies/{companyId}/employees/{employeeId}/paystatement/summary/{year}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearRequest.class, baseUrl, "/v2/companies/{companyId}/employees/{employeeId}/paystatement/summary/{year}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -202,25 +205,26 @@ public class PayStatements {
      * Get employee pay statement summary data for the specified year and check date.
      * Get pay statement summary API will return employee pay statement summary data currently available in Web Pay for the specified year and check date.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDateResponse getsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDate(org.openapis.openapi.models.operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDateResponse getsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDate(org.openapis.openapi.models.operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDateRequest request, org.openapis.openapi.models.operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDatePathParams.class, baseUrl, "/v2/companies/{companyId}/employees/{employeeId}/paystatement/summary/{year}/{checkDate}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDateRequest.class, baseUrl, "/v2/companies/{companyId}/employees/{employeeId}/paystatement/summary/{year}/{checkDate}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

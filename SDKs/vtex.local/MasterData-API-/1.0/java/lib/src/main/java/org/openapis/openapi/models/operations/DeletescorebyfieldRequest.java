@@ -7,24 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletescorebyfieldRequest {
-    
-    public DeletescorebyfieldPathParams pathParams;
-    public DeletescorebyfieldRequest withPathParams(DeletescorebyfieldPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeletescorebyfieldHeaders headers;
-    public DeletescorebyfieldRequest withHeaders(DeletescorebyfieldHeaders headers) {
-        this.headers = headers;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public DeletescorebyfieldRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DeletescorebyfieldRequest request;
-    public DeletescorebyfieldRequest withRequest(org.openapis.openapi.models.shared.DeletescorebyfieldRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.DeletescorebyfieldRequest deletescorebyfieldRequest;
+    public DeletescorebyfieldRequest withDeletescorebyfieldRequest(org.openapis.openapi.models.shared.DeletescorebyfieldRequest deletescorebyfieldRequest) {
+        this.deletescorebyfieldRequest = deletescorebyfieldRequest;
+        return this;
+    }
+    
+    /**
+     * Two letter word that identifies the data structure
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=acronym")
+    public String acronym;
+    public DeletescorebyfieldRequest withAcronym(String acronym) {
+        this.acronym = acronym;
+        return this;
+    }
+    
+    /**
+     * Name of the field to remove score from
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=field-name")
+    public String fieldName;
+    public DeletescorebyfieldRequest withFieldName(String fieldName) {
+        this.fieldName = fieldName;
+        return this;
+    }
+    
+    /**
+     * Id of the document
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeletescorebyfieldRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

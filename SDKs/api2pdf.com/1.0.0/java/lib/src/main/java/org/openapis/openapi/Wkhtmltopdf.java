@@ -40,7 +40,7 @@ public class Wkhtmltopdf {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WkhtmltopdfFromHtmlPostResponse wkhtmltopdfFromHtmlPost(org.openapis.openapi.models.operations.WkhtmltopdfFromHtmlPostRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WkhtmltopdfFromHtmlPostResponse wkhtmltopdfFromHtmlPost(org.openapis.openapi.models.shared.WkHtmlToPdfHtmlToPdfRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/wkhtmltopdf/html");
         
@@ -91,10 +91,11 @@ public class Wkhtmltopdf {
      * ### Example
      * ``` https://v2018.api2pdf.com/wkhtmltopdf/url?url={UrlToConvert}&amp;apikey={YourApiKey} ``` 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WkhtmltopdfFromUrlGETResponse wkhtmltopdfFromUrlGET(org.openapis.openapi.models.operations.WkhtmltopdfFromUrlGETRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WkhtmltopdfFromUrlGETResponse wkhtmltopdfFromUrlGET(org.openapis.openapi.models.operations.WkhtmltopdfFromUrlGETRequest request, org.openapis.openapi.models.operations.WkhtmltopdfFromUrlGETSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/wkhtmltopdf/url");
         
@@ -102,14 +103,14 @@ public class Wkhtmltopdf {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WkhtmltopdfFromUrlGETQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WkhtmltopdfFromUrlGETRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -155,7 +156,7 @@ public class Wkhtmltopdf {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WkhtmltopdfFromUrlPostResponse wkhtmltopdfFromUrlPost(org.openapis.openapi.models.operations.WkhtmltopdfFromUrlPostRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WkhtmltopdfFromUrlPostResponse wkhtmltopdfFromUrlPost(org.openapis.openapi.models.shared.WkHtmlToPdfUrlToPdfRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/wkhtmltopdf/url");
         

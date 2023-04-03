@@ -39,7 +39,7 @@ public class Mqtt {
      */
     public org.openapis.openapi.models.operations.ProtocolMqttClientGetProtstateResponse protocolMqttClientGetProtstate(org.openapis.openapi.models.operations.ProtocolMqttClientGetProtstateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientGetProtstatePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/get/protstate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientGetProtstateRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/get/protstate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -81,7 +81,7 @@ public class Mqtt {
      */
     public org.openapis.openapi.models.operations.ProtocolMqttClientGetStateResponse protocolMqttClientGetState(org.openapis.openapi.models.operations.ProtocolMqttClientGetStateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientGetStatePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/get/state", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientGetStateRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/get/state", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -123,7 +123,7 @@ public class Mqtt {
      */
     public org.openapis.openapi.models.operations.ProtocolMqttClientMessageCardResponse protocolMqttClientMessageCard(org.openapis.openapi.models.operations.ProtocolMqttClientMessageCardRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientMessageCardPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/message/card", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientMessageCardRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/message/card", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -165,7 +165,7 @@ public class Mqtt {
      */
     public org.openapis.openapi.models.operations.ProtocolMqttClientMessageGetResponse protocolMqttClientMessageGet(org.openapis.openapi.models.operations.ProtocolMqttClientMessageGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientMessageGetPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/message/get/{msgNum}/{attr}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientMessageGetRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/message/get/{msgNum}/{attr}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -207,7 +207,7 @@ public class Mqtt {
      */
     public org.openapis.openapi.models.operations.ProtocolMqttClientMessageSetResponse protocolMqttClientMessageSet(org.openapis.openapi.models.operations.ProtocolMqttClientMessageSetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientMessageSetPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/message/set/{msgNum}/{attr}/{value}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientMessageSetRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/message/set/{msgNum}/{attr}/{value}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -249,7 +249,7 @@ public class Mqtt {
      */
     public org.openapis.openapi.models.operations.ProtocolMqttClientResubscribeResponse protocolMqttClientResubscribe(org.openapis.openapi.models.operations.ProtocolMqttClientResubscribeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientResubscribePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/resubscribe/{subNum}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientResubscribeRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/resubscribe/{subNum}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -290,7 +290,7 @@ public class Mqtt {
      */
     public org.openapis.openapi.models.operations.ProtocolMqttClientRuntimeAbortResponse protocolMqttClientRuntimeAbort(org.openapis.openapi.models.operations.ProtocolMqttClientRuntimeAbortRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientRuntimeAbortPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/runtime/abort", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientRuntimeAbortRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/runtime/abort", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -332,7 +332,7 @@ public class Mqtt {
      */
     public org.openapis.openapi.models.operations.ProtocolMqttClientRuntimeConnectResponse protocolMqttClientRuntimeConnect(org.openapis.openapi.models.operations.ProtocolMqttClientRuntimeConnectRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientRuntimeConnectPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/runtime/connect", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientRuntimeConnectRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/runtime/connect", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -374,7 +374,7 @@ public class Mqtt {
      */
     public org.openapis.openapi.models.operations.ProtocolMqttClientRuntimeDisconnectResponse protocolMqttClientRuntimeDisconnect(org.openapis.openapi.models.operations.ProtocolMqttClientRuntimeDisconnectRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientRuntimeDisconnectPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/runtime/disconnect", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientRuntimeDisconnectRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/runtime/disconnect", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -416,7 +416,7 @@ public class Mqtt {
      */
     public org.openapis.openapi.models.operations.ProtocolMqttClientSetBrokerResponse protocolMqttClientSetBroker(org.openapis.openapi.models.operations.ProtocolMqttClientSetBrokerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientSetBrokerPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/broker/{brokerAddr}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientSetBrokerRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/broker/{brokerAddr}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -458,7 +458,7 @@ public class Mqtt {
      */
     public org.openapis.openapi.models.operations.ProtocolMqttClientSetCleansessionResponse protocolMqttClientSetCleansession(org.openapis.openapi.models.operations.ProtocolMqttClientSetCleansessionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientSetCleansessionPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/cleansession/{cleanOrNot}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientSetCleansessionRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/cleansession/{cleanOrNot}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -500,7 +500,7 @@ public class Mqtt {
      */
     public org.openapis.openapi.models.operations.ProtocolMqttClientSetClientidResponse protocolMqttClientSetClientid(org.openapis.openapi.models.operations.ProtocolMqttClientSetClientidRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientSetClientidPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/clientid/{clientID}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientSetClientidRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/clientid/{clientID}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -542,7 +542,7 @@ public class Mqtt {
      */
     public org.openapis.openapi.models.operations.ProtocolMqttClientSetKeepaliveResponse protocolMqttClientSetKeepalive(org.openapis.openapi.models.operations.ProtocolMqttClientSetKeepaliveRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientSetKeepalivePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/keepalive/{aliveTime}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientSetKeepaliveRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/keepalive/{aliveTime}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -584,7 +584,7 @@ public class Mqtt {
      */
     public org.openapis.openapi.models.operations.ProtocolMqttClientSetOnDisconnectResponse protocolMqttClientSetOnDisconnect(org.openapis.openapi.models.operations.ProtocolMqttClientSetOnDisconnectRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientSetOnDisconnectPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/on_disconnect/{action}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientSetOnDisconnectRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/on_disconnect/{action}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -626,7 +626,7 @@ public class Mqtt {
      */
     public org.openapis.openapi.models.operations.ProtocolMqttClientSetPasswordResponse protocolMqttClientSetPassword(org.openapis.openapi.models.operations.ProtocolMqttClientSetPasswordRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientSetPasswordPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/password/{password}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientSetPasswordRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/password/{password}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -668,7 +668,7 @@ public class Mqtt {
      */
     public org.openapis.openapi.models.operations.ProtocolMqttClientSetPortResponse protocolMqttClientSetPort(org.openapis.openapi.models.operations.ProtocolMqttClientSetPortRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientSetPortPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/port/{port}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientSetPortRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/port/{port}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -710,7 +710,7 @@ public class Mqtt {
      */
     public org.openapis.openapi.models.operations.ProtocolMqttClientSetUsernameResponse protocolMqttClientSetUsername(org.openapis.openapi.models.operations.ProtocolMqttClientSetUsernameRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientSetUsernamePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/username/{username}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientSetUsernameRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/username/{username}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -752,7 +752,7 @@ public class Mqtt {
      */
     public org.openapis.openapi.models.operations.ProtocolMqttClientSetWillmsgResponse protocolMqttClientSetWillmsg(org.openapis.openapi.models.operations.ProtocolMqttClientSetWillmsgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientSetWillmsgPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/willmsg/{msg}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientSetWillmsgRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/willmsg/{msg}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -794,7 +794,7 @@ public class Mqtt {
      */
     public org.openapis.openapi.models.operations.ProtocolMqttClientSetWillqosResponse protocolMqttClientSetWillqos(org.openapis.openapi.models.operations.ProtocolMqttClientSetWillqosRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientSetWillqosPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/willqos/{qos}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientSetWillqosRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/willqos/{qos}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -836,7 +836,7 @@ public class Mqtt {
      */
     public org.openapis.openapi.models.operations.ProtocolMqttClientSetWillretainResponse protocolMqttClientSetWillretain(org.openapis.openapi.models.operations.ProtocolMqttClientSetWillretainRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientSetWillretainPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/willretain/{retain}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientSetWillretainRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/willretain/{retain}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -878,7 +878,7 @@ public class Mqtt {
      */
     public org.openapis.openapi.models.operations.ProtocolMqttClientSetWilltopicResponse protocolMqttClientSetWilltopic(org.openapis.openapi.models.operations.ProtocolMqttClientSetWilltopicRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientSetWilltopicPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/willtopic/{topic}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientSetWilltopicRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/set/willtopic/{topic}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -920,7 +920,7 @@ public class Mqtt {
      */
     public org.openapis.openapi.models.operations.ProtocolMqttClientSubscribeCardResponse protocolMqttClientSubscribeCard(org.openapis.openapi.models.operations.ProtocolMqttClientSubscribeCardRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientSubscribeCardPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/subscribe/card", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientSubscribeCardRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/subscribe/card", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -962,7 +962,7 @@ public class Mqtt {
      */
     public org.openapis.openapi.models.operations.ProtocolMqttClientSubscribeGetResponse protocolMqttClientSubscribeGet(org.openapis.openapi.models.operations.ProtocolMqttClientSubscribeGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientSubscribeGetPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/subscribe/get/{subNum}/{attr}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientSubscribeGetRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/subscribe/get/{subNum}/{attr}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1004,7 +1004,7 @@ public class Mqtt {
      */
     public org.openapis.openapi.models.operations.ProtocolMqttClientSubscribeSetResponse protocolMqttClientSubscribeSet(org.openapis.openapi.models.operations.ProtocolMqttClientSubscribeSetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientSubscribeSetPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/subscribe/set/{subNum}/{attr}/{value}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientSubscribeSetRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/subscribe/set/{subNum}/{attr}/{value}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -1046,7 +1046,7 @@ public class Mqtt {
      */
     public org.openapis.openapi.models.operations.ProtocolMqttClientUnsubscribeResponse protocolMqttClientUnsubscribe(org.openapis.openapi.models.operations.ProtocolMqttClientUnsubscribeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientUnsubscribePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/unsubscribe/{subNum}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttClientUnsubscribeRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/client/unsubscribe/{subNum}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -1087,7 +1087,7 @@ public class Mqtt {
      */
     public org.openapis.openapi.models.operations.ProtocolMqttGetArgsResponse protocolMqttGetArgs(org.openapis.openapi.models.operations.ProtocolMqttGetArgsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttGetArgsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/get/args", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttGetArgsRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/get/args", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1129,7 +1129,7 @@ public class Mqtt {
      */
     public org.openapis.openapi.models.operations.ProtocolMqttGetConfigResponse protocolMqttGetConfig(org.openapis.openapi.models.operations.ProtocolMqttGetConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttGetConfigPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/get/config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttGetConfigRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/get/config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1171,7 +1171,7 @@ public class Mqtt {
      */
     public org.openapis.openapi.models.operations.ProtocolMqttGetStatisticsResponse protocolMqttGetStatistics(org.openapis.openapi.models.operations.ProtocolMqttGetStatisticsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttGetStatisticsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/get/statistics", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttGetStatisticsRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/get/statistics", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1254,7 +1254,7 @@ public class Mqtt {
      */
     public org.openapis.openapi.models.operations.ProtocolMqttGetTraceResponse protocolMqttGetTrace(org.openapis.openapi.models.operations.ProtocolMqttGetTraceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttGetTracePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/get/trace", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttGetTraceRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/get/trace", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1296,7 +1296,7 @@ public class Mqtt {
      */
     public org.openapis.openapi.models.operations.ProtocolMqttSetConfigResponse protocolMqttSetConfig(org.openapis.openapi.models.operations.ProtocolMqttSetConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttSetConfigPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/set/config/{argument}/{value}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttSetConfigRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/set/config/{argument}/{value}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -1337,7 +1337,7 @@ public class Mqtt {
      */
     public org.openapis.openapi.models.operations.ProtocolMqttSetTraceResponse protocolMqttSetTrace(org.openapis.openapi.models.operations.ProtocolMqttSetTraceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttSetTracePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/set/trace/{enableOrNot}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolMqttSetTraceRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/mqtt/set/trace/{enableOrNot}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

@@ -40,7 +40,7 @@ public class WebhookSubscriptions {
      */
     public org.openapis.openapi.models.operations.DeleteV2WebhookSubscriptionsIdResponse deleteV2WebhookSubscriptionsId(org.openapis.openapi.models.operations.DeleteV2WebhookSubscriptionsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteV2WebhookSubscriptionsIdPathParams.class, baseUrl, "/v2/webhook_subscriptions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteV2WebhookSubscriptionsIdRequest.class, baseUrl, "/v2/webhook_subscriptions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -79,7 +79,7 @@ public class WebhookSubscriptions {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV2WebhookSubscriptionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV2WebhookSubscriptionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -117,7 +117,7 @@ public class WebhookSubscriptions {
      */
     public org.openapis.openapi.models.operations.GetV2WebhookSubscriptionsIdResponse getV2WebhookSubscriptionsId(org.openapis.openapi.models.operations.GetV2WebhookSubscriptionsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2WebhookSubscriptionsIdPathParams.class, baseUrl, "/v2/webhook_subscriptions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2WebhookSubscriptionsIdRequest.class, baseUrl, "/v2/webhook_subscriptions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -154,7 +154,7 @@ public class WebhookSubscriptions {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV2WebhookSubscriptionsResponse postV2WebhookSubscriptions(org.openapis.openapi.models.operations.PostV2WebhookSubscriptionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV2WebhookSubscriptionsResponse postV2WebhookSubscriptions(org.openapis.openapi.models.operations.PostV2WebhookSubscriptionsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/webhook_subscriptions");
         
@@ -200,12 +200,12 @@ public class WebhookSubscriptions {
      */
     public org.openapis.openapi.models.operations.PutV2WebhookSubscriptionsIdResponse putV2WebhookSubscriptionsId(org.openapis.openapi.models.operations.PutV2WebhookSubscriptionsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutV2WebhookSubscriptionsIdPathParams.class, baseUrl, "/v2/webhook_subscriptions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutV2WebhookSubscriptionsIdRequest.class, baseUrl, "/v2/webhook_subscriptions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         

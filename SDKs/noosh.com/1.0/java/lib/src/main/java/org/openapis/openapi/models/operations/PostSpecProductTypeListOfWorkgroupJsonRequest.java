@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpecProductTypeListOfWorkgroupJsonRequest {
-    
-    public PostSpecProductTypeListOfWorkgroupJsonPathParams pathParams;
-    public PostSpecProductTypeListOfWorkgroupJsonRequest withPathParams(PostSpecProductTypeListOfWorkgroupJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.WgSpecPrdTypeRegPersistVO wgSpecPrdTypeRegPersistVO;
+    public PostSpecProductTypeListOfWorkgroupJsonRequest withWgSpecPrdTypeRegPersistVO(org.openapis.openapi.models.shared.WgSpecPrdTypeRegPersistVO wgSpecPrdTypeRegPersistVO) {
+        this.wgSpecPrdTypeRegPersistVO = wgSpecPrdTypeRegPersistVO;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WgSpecPrdTypeRegPersistVO request;
-    public PostSpecProductTypeListOfWorkgroupJsonRequest withRequest(org.openapis.openapi.models.shared.WgSpecPrdTypeRegPersistVO request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
+    public String workgroupId;
+    public PostSpecProductTypeListOfWorkgroupJsonRequest withWorkgroupId(String workgroupId) {
+        this.workgroupId = workgroupId;
         return this;
     }
     

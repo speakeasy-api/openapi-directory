@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSslCertificatesRequest {
+    /**
+     * The number of items to skip in the resultset.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
+    public Integer skip;
+    public GetSslCertificatesRequest withSkip(Integer skip) {
+        this.skip = skip;
+        return this;
+    }
     
-    public GetSslCertificatesQueryParams queryParams;
-    public GetSslCertificatesRequest withQueryParams(GetSslCertificatesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of items to return in the resultset. The returned count can be equal or less than this number.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=take")
+    public Integer take;
+    public GetSslCertificatesRequest withTake(Integer take) {
+        this.take = take;
         return this;
     }
     

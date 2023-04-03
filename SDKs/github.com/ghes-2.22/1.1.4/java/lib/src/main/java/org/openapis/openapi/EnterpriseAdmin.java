@@ -45,7 +45,7 @@ public class EnterpriseAdmin {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EnterpriseAdminAddAuthorizedSshKeyResponse enterpriseAdminAddAuthorizedSshKey(org.openapis.openapi.models.operations.EnterpriseAdminAddAuthorizedSshKeyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EnterpriseAdminAddAuthorizedSshKeyResponse enterpriseAdminAddAuthorizedSshKey(org.openapis.openapi.models.operations.EnterpriseAdminAddAuthorizedSshKeyRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/setup/api/settings/authorized-keys");
         
@@ -94,7 +94,7 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminAddOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse enterpriseAdminAddOrgAccessToSelfHostedRunnerGroupInEnterprise(org.openapis.openapi.models.operations.EnterpriseAdminAddOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminAddOrgAccessToSelfHostedRunnerGroupInEnterprisePathParams.class, baseUrl, "/enterprises/{enterprise}/actions/runner-groups/{runner_group_id}/organizations/{org_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminAddOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest.class, baseUrl, "/enterprises/{enterprise}/actions/runner-groups/{runner_group_id}/organizations/{org_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -131,7 +131,7 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminAddSelfHostedRunnerToGroupForEnterpriseResponse enterpriseAdminAddSelfHostedRunnerToGroupForEnterprise(org.openapis.openapi.models.operations.EnterpriseAdminAddSelfHostedRunnerToGroupForEnterpriseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminAddSelfHostedRunnerToGroupForEnterprisePathParams.class, baseUrl, "/enterprises/{enterprise}/actions/runner-groups/{runner_group_id}/runners/{runner_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminAddSelfHostedRunnerToGroupForEnterpriseRequest.class, baseUrl, "/enterprises/{enterprise}/actions/runner-groups/{runner_group_id}/runners/{runner_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -172,7 +172,7 @@ public class EnterpriseAdmin {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EnterpriseAdminCreateEnterpriseServerLicenseResponse enterpriseAdminCreateEnterpriseServerLicense(org.openapis.openapi.models.operations.EnterpriseAdminCreateEnterpriseServerLicenseRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EnterpriseAdminCreateEnterpriseServerLicenseResponse enterpriseAdminCreateEnterpriseServerLicense(org.openapis.openapi.models.operations.EnterpriseAdminCreateEnterpriseServerLicenseRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/setup/api/start");
         
@@ -217,13 +217,13 @@ public class EnterpriseAdmin {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -264,12 +264,12 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminCreateImpersonationOAuthTokenResponse enterpriseAdminCreateImpersonationOAuthToken(org.openapis.openapi.models.operations.EnterpriseAdminCreateImpersonationOAuthTokenRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminCreateImpersonationOAuthTokenPathParams.class, baseUrl, "/admin/users/{username}/authorizations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminCreateImpersonationOAuthTokenRequest.class, baseUrl, "/admin/users/{username}/authorizations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -306,7 +306,7 @@ public class EnterpriseAdmin {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EnterpriseAdminCreateOrgResponse enterpriseAdminCreateOrg(org.openapis.openapi.models.operations.EnterpriseAdminCreateOrgRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EnterpriseAdminCreateOrgResponse enterpriseAdminCreateOrg(org.openapis.openapi.models.operations.EnterpriseAdminCreateOrgRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/admin/organizations");
         
@@ -350,7 +350,7 @@ public class EnterpriseAdmin {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EnterpriseAdminCreatePreReceiveEnvironmentResponse enterpriseAdminCreatePreReceiveEnvironment(org.openapis.openapi.models.operations.EnterpriseAdminCreatePreReceiveEnvironmentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EnterpriseAdminCreatePreReceiveEnvironmentResponse enterpriseAdminCreatePreReceiveEnvironment(org.openapis.openapi.models.operations.EnterpriseAdminCreatePreReceiveEnvironmentRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/admin/pre-receive-environments");
         
@@ -394,7 +394,7 @@ public class EnterpriseAdmin {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EnterpriseAdminCreatePreReceiveHookResponse enterpriseAdminCreatePreReceiveHook(org.openapis.openapi.models.operations.EnterpriseAdminCreatePreReceiveHookRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EnterpriseAdminCreatePreReceiveHookResponse enterpriseAdminCreatePreReceiveHook(org.openapis.openapi.models.operations.EnterpriseAdminCreatePreReceiveHookRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/admin/pre-receive-hooks");
         
@@ -451,7 +451,7 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminCreateRegistrationTokenForEnterpriseResponse enterpriseAdminCreateRegistrationTokenForEnterprise(org.openapis.openapi.models.operations.EnterpriseAdminCreateRegistrationTokenForEnterpriseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminCreateRegistrationTokenForEnterprisePathParams.class, baseUrl, "/enterprises/{enterprise}/actions/runners/registration-token", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminCreateRegistrationTokenForEnterpriseRequest.class, baseUrl, "/enterprises/{enterprise}/actions/runners/registration-token", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -502,7 +502,7 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminCreateRemoveTokenForEnterpriseResponse enterpriseAdminCreateRemoveTokenForEnterprise(org.openapis.openapi.models.operations.EnterpriseAdminCreateRemoveTokenForEnterpriseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminCreateRemoveTokenForEnterprisePathParams.class, baseUrl, "/enterprises/{enterprise}/actions/runners/remove-token", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminCreateRemoveTokenForEnterpriseRequest.class, baseUrl, "/enterprises/{enterprise}/actions/runners/remove-token", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -544,12 +544,12 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseResponse enterpriseAdminCreateSelfHostedRunnerGroupForEnterprise(org.openapis.openapi.models.operations.EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminCreateSelfHostedRunnerGroupForEnterprisePathParams.class, baseUrl, "/enterprises/{enterprise}/actions/runner-groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminCreateSelfHostedRunnerGroupForEnterpriseRequest.class, baseUrl, "/enterprises/{enterprise}/actions/runner-groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -591,7 +591,7 @@ public class EnterpriseAdmin {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EnterpriseAdminCreateUserResponse enterpriseAdminCreateUser(org.openapis.openapi.models.operations.EnterpriseAdminCreateUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EnterpriseAdminCreateUserResponse enterpriseAdminCreateUser(org.openapis.openapi.models.operations.EnterpriseAdminCreateUserRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/admin/users");
         
@@ -637,13 +637,13 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminDeleteGlobalWebhookResponse enterpriseAdminDeleteGlobalWebhook(org.openapis.openapi.models.operations.EnterpriseAdminDeleteGlobalWebhookRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminDeleteGlobalWebhookPathParams.class, baseUrl, "/admin/hooks/{hook_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminDeleteGlobalWebhookRequest.class, baseUrl, "/admin/hooks/{hook_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -678,7 +678,7 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminDeleteImpersonationOAuthTokenResponse enterpriseAdminDeleteImpersonationOAuthToken(org.openapis.openapi.models.operations.EnterpriseAdminDeleteImpersonationOAuthTokenRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminDeleteImpersonationOAuthTokenPathParams.class, baseUrl, "/admin/users/{username}/authorizations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminDeleteImpersonationOAuthTokenRequest.class, baseUrl, "/admin/users/{username}/authorizations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -712,7 +712,7 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminDeletePersonalAccessTokenResponse enterpriseAdminDeletePersonalAccessToken(org.openapis.openapi.models.operations.EnterpriseAdminDeletePersonalAccessTokenRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminDeletePersonalAccessTokenPathParams.class, baseUrl, "/admin/tokens/{token_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminDeletePersonalAccessTokenRequest.class, baseUrl, "/admin/tokens/{token_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -752,7 +752,7 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminDeletePreReceiveEnvironmentResponse enterpriseAdminDeletePreReceiveEnvironment(org.openapis.openapi.models.operations.EnterpriseAdminDeletePreReceiveEnvironmentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminDeletePreReceiveEnvironmentPathParams.class, baseUrl, "/admin/pre-receive-environments/{pre_receive_environment_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminDeletePreReceiveEnvironmentRequest.class, baseUrl, "/admin/pre-receive-environments/{pre_receive_environment_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -793,7 +793,7 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminDeletePreReceiveHookResponse enterpriseAdminDeletePreReceiveHook(org.openapis.openapi.models.operations.EnterpriseAdminDeletePreReceiveHookRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminDeletePreReceiveHookPathParams.class, baseUrl, "/admin/pre-receive-hooks/{pre_receive_hook_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminDeletePreReceiveHookRequest.class, baseUrl, "/admin/pre-receive-hooks/{pre_receive_hook_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -826,7 +826,7 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminDeletePublicKeyResponse enterpriseAdminDeletePublicKey(org.openapis.openapi.models.operations.EnterpriseAdminDeletePublicKeyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminDeletePublicKeyPathParams.class, baseUrl, "/admin/keys/{key_ids}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminDeletePublicKeyRequest.class, baseUrl, "/admin/keys/{key_ids}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -862,7 +862,7 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminDeleteSelfHostedRunnerFromEnterpriseResponse enterpriseAdminDeleteSelfHostedRunnerFromEnterprise(org.openapis.openapi.models.operations.EnterpriseAdminDeleteSelfHostedRunnerFromEnterpriseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminDeleteSelfHostedRunnerFromEnterprisePathParams.class, baseUrl, "/enterprises/{enterprise}/actions/runners/{runner_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminDeleteSelfHostedRunnerFromEnterpriseRequest.class, baseUrl, "/enterprises/{enterprise}/actions/runners/{runner_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -898,7 +898,7 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterpriseResponse enterpriseAdminDeleteSelfHostedRunnerGroupFromEnterprise(org.openapis.openapi.models.operations.EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterpriseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterprisePathParams.class, baseUrl, "/enterprises/{enterprise}/actions/runner-groups/{runner_group_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminDeleteSelfHostedRunnerGroupFromEnterpriseRequest.class, baseUrl, "/enterprises/{enterprise}/actions/runner-groups/{runner_group_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -934,7 +934,7 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminDeleteUserResponse enterpriseAdminDeleteUser(org.openapis.openapi.models.operations.EnterpriseAdminDeleteUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminDeleteUserPathParams.class, baseUrl, "/admin/users/{username}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminDeleteUserRequest.class, baseUrl, "/admin/users/{username}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -968,7 +968,7 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminDemoteSiteAdministratorResponse enterpriseAdminDemoteSiteAdministrator(org.openapis.openapi.models.operations.EnterpriseAdminDemoteSiteAdministratorRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminDemoteSiteAdministratorPathParams.class, baseUrl, "/users/{username}/site_admin", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminDemoteSiteAdministratorRequest.class, baseUrl, "/users/{username}/site_admin", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1000,7 +1000,7 @@ public class EnterpriseAdmin {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EnterpriseAdminEnableOrDisableMaintenanceModeResponse enterpriseAdminEnableOrDisableMaintenanceMode(org.openapis.openapi.models.operations.EnterpriseAdminEnableOrDisableMaintenanceModeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EnterpriseAdminEnableOrDisableMaintenanceModeResponse enterpriseAdminEnableOrDisableMaintenanceMode(org.openapis.openapi.models.operations.EnterpriseAdminEnableOrDisableMaintenanceModeRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/setup/api/maintenance");
         
@@ -1211,7 +1211,7 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminGetDownloadStatusForPreReceiveEnvironmentResponse enterpriseAdminGetDownloadStatusForPreReceiveEnvironment(org.openapis.openapi.models.operations.EnterpriseAdminGetDownloadStatusForPreReceiveEnvironmentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminGetDownloadStatusForPreReceiveEnvironmentPathParams.class, baseUrl, "/admin/pre-receive-environments/{pre_receive_environment_id}/downloads/latest", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminGetDownloadStatusForPreReceiveEnvironmentRequest.class, baseUrl, "/admin/pre-receive-environments/{pre_receive_environment_id}/downloads/latest", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1250,13 +1250,13 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminGetGlobalWebhookResponse enterpriseAdminGetGlobalWebhook(org.openapis.openapi.models.operations.EnterpriseAdminGetGlobalWebhookRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminGetGlobalWebhookPathParams.class, baseUrl, "/admin/hooks/{hook_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminGetGlobalWebhookRequest.class, baseUrl, "/admin/hooks/{hook_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1564,7 +1564,7 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminGetPreReceiveEnvironmentResponse enterpriseAdminGetPreReceiveEnvironment(org.openapis.openapi.models.operations.EnterpriseAdminGetPreReceiveEnvironmentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminGetPreReceiveEnvironmentPathParams.class, baseUrl, "/admin/pre-receive-environments/{pre_receive_environment_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminGetPreReceiveEnvironmentRequest.class, baseUrl, "/admin/pre-receive-environments/{pre_receive_environment_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1603,7 +1603,7 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminGetPreReceiveHookResponse enterpriseAdminGetPreReceiveHook(org.openapis.openapi.models.operations.EnterpriseAdminGetPreReceiveHookRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminGetPreReceiveHookPathParams.class, baseUrl, "/admin/pre-receive-hooks/{pre_receive_hook_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminGetPreReceiveHookRequest.class, baseUrl, "/admin/pre-receive-hooks/{pre_receive_hook_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1642,7 +1642,7 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminGetPreReceiveHookForOrgResponse enterpriseAdminGetPreReceiveHookForOrg(org.openapis.openapi.models.operations.EnterpriseAdminGetPreReceiveHookForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminGetPreReceiveHookForOrgPathParams.class, baseUrl, "/orgs/{org}/pre-receive-hooks/{pre_receive_hook_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminGetPreReceiveHookForOrgRequest.class, baseUrl, "/orgs/{org}/pre-receive-hooks/{pre_receive_hook_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1681,7 +1681,7 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminGetPreReceiveHookForRepoResponse enterpriseAdminGetPreReceiveHookForRepo(org.openapis.openapi.models.operations.EnterpriseAdminGetPreReceiveHookForRepoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminGetPreReceiveHookForRepoPathParams.class, baseUrl, "/repos/{owner}/{repo}/pre-receive-hooks/{pre_receive_hook_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminGetPreReceiveHookForRepoRequest.class, baseUrl, "/repos/{owner}/{repo}/pre-receive-hooks/{pre_receive_hook_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1799,7 +1799,7 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminGetSelfHostedRunnerForEnterpriseResponse enterpriseAdminGetSelfHostedRunnerForEnterprise(org.openapis.openapi.models.operations.EnterpriseAdminGetSelfHostedRunnerForEnterpriseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminGetSelfHostedRunnerForEnterprisePathParams.class, baseUrl, "/enterprises/{enterprise}/actions/runners/{runner_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminGetSelfHostedRunnerForEnterpriseRequest.class, baseUrl, "/enterprises/{enterprise}/actions/runners/{runner_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1841,7 +1841,7 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminGetSelfHostedRunnerGroupForEnterpriseResponse enterpriseAdminGetSelfHostedRunnerGroupForEnterprise(org.openapis.openapi.models.operations.EnterpriseAdminGetSelfHostedRunnerGroupForEnterpriseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminGetSelfHostedRunnerGroupForEnterprisePathParams.class, baseUrl, "/enterprises/{enterprise}/actions/runner-groups/{runner_group_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminGetSelfHostedRunnerGroupForEnterpriseRequest.class, baseUrl, "/enterprises/{enterprise}/actions/runner-groups/{runner_group_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1962,13 +1962,13 @@ public class EnterpriseAdmin {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EnterpriseAdminListGlobalWebhooksQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EnterpriseAdminListGlobalWebhooksRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2014,13 +2014,13 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse enterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterprise(org.openapis.openapi.models.operations.EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterprisePathParams.class, baseUrl, "/enterprises/{enterprise}/actions/runner-groups/{runner_group_id}/organizations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest.class, baseUrl, "/enterprises/{enterprise}/actions/runner-groups/{runner_group_id}/organizations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2066,7 +2066,7 @@ public class EnterpriseAdmin {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EnterpriseAdminListPersonalAccessTokensQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EnterpriseAdminListPersonalAccessTokensRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2113,7 +2113,7 @@ public class EnterpriseAdmin {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EnterpriseAdminListPreReceiveEnvironmentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EnterpriseAdminListPreReceiveEnvironmentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2158,7 +2158,7 @@ public class EnterpriseAdmin {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EnterpriseAdminListPreReceiveHooksQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EnterpriseAdminListPreReceiveHooksRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2198,13 +2198,13 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminListPreReceiveHooksForOrgResponse enterpriseAdminListPreReceiveHooksForOrg(org.openapis.openapi.models.operations.EnterpriseAdminListPreReceiveHooksForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminListPreReceiveHooksForOrgPathParams.class, baseUrl, "/orgs/{org}/pre-receive-hooks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminListPreReceiveHooksForOrgRequest.class, baseUrl, "/orgs/{org}/pre-receive-hooks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EnterpriseAdminListPreReceiveHooksForOrgQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EnterpriseAdminListPreReceiveHooksForOrgRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2244,13 +2244,13 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminListPreReceiveHooksForRepoResponse enterpriseAdminListPreReceiveHooksForRepo(org.openapis.openapi.models.operations.EnterpriseAdminListPreReceiveHooksForRepoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminListPreReceiveHooksForRepoPathParams.class, baseUrl, "/repos/{owner}/{repo}/pre-receive-hooks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminListPreReceiveHooksForRepoRequest.class, baseUrl, "/repos/{owner}/{repo}/pre-receive-hooks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EnterpriseAdminListPreReceiveHooksForRepoQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EnterpriseAdminListPreReceiveHooksForRepoRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2295,7 +2295,7 @@ public class EnterpriseAdmin {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EnterpriseAdminListPublicKeysQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EnterpriseAdminListPublicKeysRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2339,7 +2339,7 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminListRunnerApplicationsForEnterpriseResponse enterpriseAdminListRunnerApplicationsForEnterprise(org.openapis.openapi.models.operations.EnterpriseAdminListRunnerApplicationsForEnterpriseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminListRunnerApplicationsForEnterprisePathParams.class, baseUrl, "/enterprises/{enterprise}/actions/runners/downloads", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminListRunnerApplicationsForEnterpriseRequest.class, baseUrl, "/enterprises/{enterprise}/actions/runners/downloads", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -2381,13 +2381,13 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseResponse enterpriseAdminListSelfHostedRunnerGroupsForEnterprise(org.openapis.openapi.models.operations.EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminListSelfHostedRunnerGroupsForEnterprisePathParams.class, baseUrl, "/enterprises/{enterprise}/actions/runner-groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseRequest.class, baseUrl, "/enterprises/{enterprise}/actions/runner-groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2429,13 +2429,13 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminListSelfHostedRunnersForEnterpriseResponse enterpriseAdminListSelfHostedRunnersForEnterprise(org.openapis.openapi.models.operations.EnterpriseAdminListSelfHostedRunnersForEnterpriseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminListSelfHostedRunnersForEnterprisePathParams.class, baseUrl, "/enterprises/{enterprise}/actions/runners", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminListSelfHostedRunnersForEnterpriseRequest.class, baseUrl, "/enterprises/{enterprise}/actions/runners", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EnterpriseAdminListSelfHostedRunnersForEnterpriseQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EnterpriseAdminListSelfHostedRunnersForEnterpriseRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2479,13 +2479,13 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminListSelfHostedRunnersInGroupForEnterpriseResponse enterpriseAdminListSelfHostedRunnersInGroupForEnterprise(org.openapis.openapi.models.operations.EnterpriseAdminListSelfHostedRunnersInGroupForEnterpriseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminListSelfHostedRunnersInGroupForEnterprisePathParams.class, baseUrl, "/enterprises/{enterprise}/actions/runner-groups/{runner_group_id}/runners", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminListSelfHostedRunnersInGroupForEnterpriseRequest.class, baseUrl, "/enterprises/{enterprise}/actions/runner-groups/{runner_group_id}/runners", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EnterpriseAdminListSelfHostedRunnersInGroupForEnterpriseQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.EnterpriseAdminListSelfHostedRunnersInGroupForEnterpriseRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -2527,13 +2527,13 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminPingGlobalWebhookResponse enterpriseAdminPingGlobalWebhook(org.openapis.openapi.models.operations.EnterpriseAdminPingGlobalWebhookRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminPingGlobalWebhookPathParams.class, baseUrl, "/admin/hooks/{hook_id}/pings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminPingGlobalWebhookRequest.class, baseUrl, "/admin/hooks/{hook_id}/pings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2569,7 +2569,7 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminPromoteUserToBeSiteAdministratorResponse enterpriseAdminPromoteUserToBeSiteAdministrator(org.openapis.openapi.models.operations.EnterpriseAdminPromoteUserToBeSiteAdministratorRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminPromoteUserToBeSiteAdministratorPathParams.class, baseUrl, "/users/{username}/site_admin", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminPromoteUserToBeSiteAdministratorRequest.class, baseUrl, "/users/{username}/site_admin", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -2601,7 +2601,7 @@ public class EnterpriseAdmin {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EnterpriseAdminRemoveAuthorizedSshKeyResponse enterpriseAdminRemoveAuthorizedSshKey(org.openapis.openapi.models.operations.EnterpriseAdminRemoveAuthorizedSshKeyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EnterpriseAdminRemoveAuthorizedSshKeyResponse enterpriseAdminRemoveAuthorizedSshKey(org.openapis.openapi.models.operations.EnterpriseAdminRemoveAuthorizedSshKeyRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/setup/api/settings/authorized-keys");
         
@@ -2650,7 +2650,7 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminRemoveOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse enterpriseAdminRemoveOrgAccessToSelfHostedRunnerGroupInEnterprise(org.openapis.openapi.models.operations.EnterpriseAdminRemoveOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminRemoveOrgAccessToSelfHostedRunnerGroupInEnterprisePathParams.class, baseUrl, "/enterprises/{enterprise}/actions/runner-groups/{runner_group_id}/organizations/{org_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminRemoveOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest.class, baseUrl, "/enterprises/{enterprise}/actions/runner-groups/{runner_group_id}/organizations/{org_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -2684,7 +2684,7 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminRemovePreReceiveHookEnforcementForOrgResponse enterpriseAdminRemovePreReceiveHookEnforcementForOrg(org.openapis.openapi.models.operations.EnterpriseAdminRemovePreReceiveHookEnforcementForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminRemovePreReceiveHookEnforcementForOrgPathParams.class, baseUrl, "/orgs/{org}/pre-receive-hooks/{pre_receive_hook_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminRemovePreReceiveHookEnforcementForOrgRequest.class, baseUrl, "/orgs/{org}/pre-receive-hooks/{pre_receive_hook_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -2726,7 +2726,7 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminRemovePreReceiveHookEnforcementForRepoResponse enterpriseAdminRemovePreReceiveHookEnforcementForRepo(org.openapis.openapi.models.operations.EnterpriseAdminRemovePreReceiveHookEnforcementForRepoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminRemovePreReceiveHookEnforcementForRepoPathParams.class, baseUrl, "/repos/{owner}/{repo}/pre-receive-hooks/{pre_receive_hook_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminRemovePreReceiveHookEnforcementForRepoRequest.class, baseUrl, "/repos/{owner}/{repo}/pre-receive-hooks/{pre_receive_hook_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -2768,7 +2768,7 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterpriseResponse enterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterprise(org.openapis.openapi.models.operations.EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterpriseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterprisePathParams.class, baseUrl, "/enterprises/{enterprise}/actions/runner-groups/{runner_group_id}/runners/{runner_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminRemoveSelfHostedRunnerFromGroupForEnterpriseRequest.class, baseUrl, "/enterprises/{enterprise}/actions/runner-groups/{runner_group_id}/runners/{runner_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -2804,12 +2804,12 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseResponse enterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterprise(org.openapis.openapi.models.operations.EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterprisePathParams.class, baseUrl, "/enterprises/{enterprise}/actions/runner-groups/{runner_group_id}/organizations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest.class, baseUrl, "/enterprises/{enterprise}/actions/runner-groups/{runner_group_id}/organizations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -2845,12 +2845,12 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseResponse enterpriseAdminSetSelfHostedRunnersInGroupForEnterprise(org.openapis.openapi.models.operations.EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminSetSelfHostedRunnersInGroupForEnterprisePathParams.class, baseUrl, "/enterprises/{enterprise}/actions/runner-groups/{runner_group_id}/runners", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminSetSelfHostedRunnersInGroupForEnterpriseRequest.class, baseUrl, "/enterprises/{enterprise}/actions/runner-groups/{runner_group_id}/runners", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -2884,7 +2884,7 @@ public class EnterpriseAdmin {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EnterpriseAdminSetSettingsResponse enterpriseAdminSetSettings(org.openapis.openapi.models.operations.EnterpriseAdminSetSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EnterpriseAdminSetSettingsResponse enterpriseAdminSetSettings(org.openapis.openapi.models.operations.EnterpriseAdminSetSettingsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/setup/api/settings");
         
@@ -2965,7 +2965,7 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminStartPreReceiveEnvironmentDownloadResponse enterpriseAdminStartPreReceiveEnvironmentDownload(org.openapis.openapi.models.operations.EnterpriseAdminStartPreReceiveEnvironmentDownloadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminStartPreReceiveEnvironmentDownloadPathParams.class, baseUrl, "/admin/pre-receive-environments/{pre_receive_environment_id}/downloads", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminStartPreReceiveEnvironmentDownloadRequest.class, baseUrl, "/admin/pre-receive-environments/{pre_receive_environment_id}/downloads", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -3017,12 +3017,12 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminSuspendUserResponse enterpriseAdminSuspendUser(org.openapis.openapi.models.operations.EnterpriseAdminSuspendUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminSuspendUserPathParams.class, baseUrl, "/users/{username}/suspended", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminSuspendUserRequest.class, baseUrl, "/users/{username}/suspended", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -3053,7 +3053,7 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminSyncLdapMappingForTeamResponse enterpriseAdminSyncLdapMappingForTeam(org.openapis.openapi.models.operations.EnterpriseAdminSyncLdapMappingForTeamRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminSyncLdapMappingForTeamPathParams.class, baseUrl, "/admin/ldap/teams/{team_id}/sync", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminSyncLdapMappingForTeamRequest.class, baseUrl, "/admin/ldap/teams/{team_id}/sync", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -3093,7 +3093,7 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminSyncLdapMappingForUserResponse enterpriseAdminSyncLdapMappingForUser(org.openapis.openapi.models.operations.EnterpriseAdminSyncLdapMappingForUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminSyncLdapMappingForUserPathParams.class, baseUrl, "/admin/ldap/users/{username}/sync", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminSyncLdapMappingForUserRequest.class, baseUrl, "/admin/ldap/users/{username}/sync", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -3133,12 +3133,12 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminUnsuspendUserResponse enterpriseAdminUnsuspendUser(org.openapis.openapi.models.operations.EnterpriseAdminUnsuspendUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminUnsuspendUserPathParams.class, baseUrl, "/users/{username}/suspended", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminUnsuspendUserRequest.class, baseUrl, "/users/{username}/suspended", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -3169,15 +3169,15 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminUpdateGlobalWebhookResponse enterpriseAdminUpdateGlobalWebhook(org.openapis.openapi.models.operations.EnterpriseAdminUpdateGlobalWebhookRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminUpdateGlobalWebhookPathParams.class, baseUrl, "/admin/hooks/{hook_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminUpdateGlobalWebhookRequest.class, baseUrl, "/admin/hooks/{hook_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -3221,12 +3221,12 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminUpdateLdapMappingForTeamResponse enterpriseAdminUpdateLdapMappingForTeam(org.openapis.openapi.models.operations.EnterpriseAdminUpdateLdapMappingForTeamRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminUpdateLdapMappingForTeamPathParams.class, baseUrl, "/admin/ldap/teams/{team_id}/mapping", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminUpdateLdapMappingForTeamRequest.class, baseUrl, "/admin/ldap/teams/{team_id}/mapping", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -3265,12 +3265,12 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminUpdateLdapMappingForUserResponse enterpriseAdminUpdateLdapMappingForUser(org.openapis.openapi.models.operations.EnterpriseAdminUpdateLdapMappingForUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminUpdateLdapMappingForUserPathParams.class, baseUrl, "/admin/ldap/users/{username}/mapping", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminUpdateLdapMappingForUserRequest.class, baseUrl, "/admin/ldap/users/{username}/mapping", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -3309,12 +3309,12 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminUpdateOrgNameResponse enterpriseAdminUpdateOrgName(org.openapis.openapi.models.operations.EnterpriseAdminUpdateOrgNameRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminUpdateOrgNamePathParams.class, baseUrl, "/admin/organizations/{org}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminUpdateOrgNameRequest.class, baseUrl, "/admin/organizations/{org}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -3354,12 +3354,12 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminUpdatePreReceiveEnvironmentResponse enterpriseAdminUpdatePreReceiveEnvironment(org.openapis.openapi.models.operations.EnterpriseAdminUpdatePreReceiveEnvironmentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminUpdatePreReceiveEnvironmentPathParams.class, baseUrl, "/admin/pre-receive-environments/{pre_receive_environment_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminUpdatePreReceiveEnvironmentRequest.class, baseUrl, "/admin/pre-receive-environments/{pre_receive_environment_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -3403,12 +3403,12 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminUpdatePreReceiveHookResponse enterpriseAdminUpdatePreReceiveHook(org.openapis.openapi.models.operations.EnterpriseAdminUpdatePreReceiveHookRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminUpdatePreReceiveHookPathParams.class, baseUrl, "/admin/pre-receive-hooks/{pre_receive_hook_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminUpdatePreReceiveHookRequest.class, baseUrl, "/admin/pre-receive-hooks/{pre_receive_hook_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -3445,12 +3445,12 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgResponse enterpriseAdminUpdatePreReceiveHookEnforcementForOrg(org.openapis.openapi.models.operations.EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgPathParams.class, baseUrl, "/orgs/{org}/pre-receive-hooks/{pre_receive_hook_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgRequest.class, baseUrl, "/orgs/{org}/pre-receive-hooks/{pre_receive_hook_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -3487,12 +3487,12 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoResponse enterpriseAdminUpdatePreReceiveHookEnforcementForRepo(org.openapis.openapi.models.operations.EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoPathParams.class, baseUrl, "/repos/{owner}/{repo}/pre-receive-hooks/{pre_receive_hook_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminUpdatePreReceiveHookEnforcementForRepoRequest.class, baseUrl, "/repos/{owner}/{repo}/pre-receive-hooks/{pre_receive_hook_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -3531,12 +3531,12 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseResponse enterpriseAdminUpdateSelfHostedRunnerGroupForEnterprise(org.openapis.openapi.models.operations.EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterprisePathParams.class, baseUrl, "/enterprises/{enterprise}/actions/runner-groups/{runner_group_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminUpdateSelfHostedRunnerGroupForEnterpriseRequest.class, baseUrl, "/enterprises/{enterprise}/actions/runner-groups/{runner_group_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -3572,12 +3572,12 @@ public class EnterpriseAdmin {
      */
     public org.openapis.openapi.models.operations.EnterpriseAdminUpdateUsernameForUserResponse enterpriseAdminUpdateUsernameForUser(org.openapis.openapi.models.operations.EnterpriseAdminUpdateUsernameForUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminUpdateUsernameForUserPathParams.class, baseUrl, "/admin/users/{username}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnterpriseAdminUpdateUsernameForUserRequest.class, baseUrl, "/admin/users/{username}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -3617,7 +3617,7 @@ public class EnterpriseAdmin {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EnterpriseAdminUpgradeLicenseResponse enterpriseAdminUpgradeLicense(org.openapis.openapi.models.operations.EnterpriseAdminUpgradeLicenseRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EnterpriseAdminUpgradeLicenseResponse enterpriseAdminUpgradeLicense(org.openapis.openapi.models.operations.EnterpriseAdminUpgradeLicenseRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/setup/api/upgrade");
         

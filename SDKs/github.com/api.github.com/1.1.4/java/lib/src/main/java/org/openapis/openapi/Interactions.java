@@ -85,7 +85,7 @@ public class Interactions {
      */
     public org.openapis.openapi.models.operations.InteractionsGetRestrictionsForOrgResponse interactionsGetRestrictionsForOrg(org.openapis.openapi.models.operations.InteractionsGetRestrictionsForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InteractionsGetRestrictionsForOrgPathParams.class, baseUrl, "/orgs/{org}/interaction-limits", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InteractionsGetRestrictionsForOrgRequest.class, baseUrl, "/orgs/{org}/interaction-limits", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -125,7 +125,7 @@ public class Interactions {
      */
     public org.openapis.openapi.models.operations.InteractionsGetRestrictionsForRepoResponse interactionsGetRestrictionsForRepo(org.openapis.openapi.models.operations.InteractionsGetRestrictionsForRepoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InteractionsGetRestrictionsForRepoPathParams.class, baseUrl, "/repos/{owner}/{repo}/interaction-limits", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InteractionsGetRestrictionsForRepoRequest.class, baseUrl, "/repos/{owner}/{repo}/interaction-limits", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -198,7 +198,7 @@ public class Interactions {
      */
     public org.openapis.openapi.models.operations.InteractionsRemoveRestrictionsForOrgResponse interactionsRemoveRestrictionsForOrg(org.openapis.openapi.models.operations.InteractionsRemoveRestrictionsForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InteractionsRemoveRestrictionsForOrgPathParams.class, baseUrl, "/orgs/{org}/interaction-limits", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InteractionsRemoveRestrictionsForOrgRequest.class, baseUrl, "/orgs/{org}/interaction-limits", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -232,7 +232,7 @@ public class Interactions {
      */
     public org.openapis.openapi.models.operations.InteractionsRemoveRestrictionsForRepoResponse interactionsRemoveRestrictionsForRepo(org.openapis.openapi.models.operations.InteractionsRemoveRestrictionsForRepoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InteractionsRemoveRestrictionsForRepoPathParams.class, baseUrl, "/repos/{owner}/{repo}/interaction-limits", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InteractionsRemoveRestrictionsForRepoRequest.class, baseUrl, "/repos/{owner}/{repo}/interaction-limits", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -264,7 +264,7 @@ public class Interactions {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.InteractionsSetRestrictionsForAuthenticatedUserResponse interactionsSetRestrictionsForAuthenticatedUser(org.openapis.openapi.models.operations.InteractionsSetRestrictionsForAuthenticatedUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.InteractionsSetRestrictionsForAuthenticatedUserResponse interactionsSetRestrictionsForAuthenticatedUser(org.openapis.openapi.models.shared.InteractionLimit request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/user/interaction-limits");
         
@@ -319,12 +319,12 @@ public class Interactions {
      */
     public org.openapis.openapi.models.operations.InteractionsSetRestrictionsForOrgResponse interactionsSetRestrictionsForOrg(org.openapis.openapi.models.operations.InteractionsSetRestrictionsForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InteractionsSetRestrictionsForOrgPathParams.class, baseUrl, "/orgs/{org}/interaction-limits", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InteractionsSetRestrictionsForOrgRequest.class, baseUrl, "/orgs/{org}/interaction-limits", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "interactionLimit", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -372,12 +372,12 @@ public class Interactions {
      */
     public org.openapis.openapi.models.operations.InteractionsSetRestrictionsForRepoResponse interactionsSetRestrictionsForRepo(org.openapis.openapi.models.operations.InteractionsSetRestrictionsForRepoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InteractionsSetRestrictionsForRepoPathParams.class, baseUrl, "/repos/{owner}/{repo}/interaction-limits", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InteractionsSetRestrictionsForRepoRequest.class, baseUrl, "/repos/{owner}/{repo}/interaction-limits", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "interactionLimit", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

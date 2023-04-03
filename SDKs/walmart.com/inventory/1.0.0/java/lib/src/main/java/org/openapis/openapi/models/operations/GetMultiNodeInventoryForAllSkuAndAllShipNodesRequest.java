@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMultiNodeInventoryForAllSkuAndAllShipNodesRequest {
-    
-    public GetMultiNodeInventoryForAllSkuAndAllShipNodesQueryParams queryParams;
-    public GetMultiNodeInventoryForAllSkuAndAllShipNodesRequest withQueryParams(GetMultiNodeInventoryForAllSkuAndAllShipNodesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A unique ID to track the consumer request by channel. Use the Consumer Channel Type received during onboarding
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_CONSUMER.CHANNEL.TYPE")
+    public String wmConsumerChannelType;
+    public GetMultiNodeInventoryForAllSkuAndAllShipNodesRequest withWmConsumerChannelType(String wmConsumerChannelType) {
+        this.wmConsumerChannelType = wmConsumerChannelType;
         return this;
     }
     
+    /**
+     * A unique ID which identifies each API call and used to track and debug issues; use a random generated GUID for this ID
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_QOS.CORRELATION_ID")
+    public String wmQosCorrelationId;
+    public GetMultiNodeInventoryForAllSkuAndAllShipNodesRequest withWmQosCorrelationId(String wmQosCorrelationId) {
+        this.wmQosCorrelationId = wmQosCorrelationId;
+        return this;
+    }
     
-    public GetMultiNodeInventoryForAllSkuAndAllShipNodesHeaders headers;
-    public GetMultiNodeInventoryForAllSkuAndAllShipNodesRequest withHeaders(GetMultiNodeInventoryForAllSkuAndAllShipNodesHeaders headers) {
-        this.headers = headers;
+    /**
+     * The access token retrieved in the Token API call
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_SEC.ACCESS_TOKEN")
+    public String wmSecAccessToken;
+    public GetMultiNodeInventoryForAllSkuAndAllShipNodesRequest withWmSecAccessToken(String wmSecAccessToken) {
+        this.wmSecAccessToken = wmSecAccessToken;
+        return this;
+    }
+    
+    /**
+     * Walmart Service Name
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_SVC.NAME")
+    public String wmSvcName;
+    public GetMultiNodeInventoryForAllSkuAndAllShipNodesRequest withWmSvcName(String wmSvcName) {
+        this.wmSvcName = wmSvcName;
+        return this;
+    }
+    
+    /**
+     * The number of items returned. Cannot be more than 50.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public String limit;
+    public GetMultiNodeInventoryForAllSkuAndAllShipNodesRequest withLimit(String limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * String returned from initial API call to indicate pagination. Specify nextCursor value to retrieve the next 50 items.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextCursor")
+    public String nextCursor;
+    public GetMultiNodeInventoryForAllSkuAndAllShipNodesRequest withNextCursor(String nextCursor) {
+        this.nextCursor = nextCursor;
         return this;
     }
     

@@ -4,20 +4,41 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PUTEntityConnectionsDenyRequest {
-    
-    public PUTEntityConnectionsDenyPathParams pathParams;
-    public PUTEntityConnectionsDenyRequest withPathParams(PUTEntityConnectionsDenyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Entity-Ids")
+    public String zuoraEntityIds;
+    public PUTEntityConnectionsDenyRequest withZuoraEntityIds(String zuoraEntityIds) {
+        this.zuoraEntityIds = zuoraEntityIds;
         return this;
     }
     
+    /**
+     * A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+     * 
+     * The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Track-Id")
+    public String zuoraTrackId;
+    public PUTEntityConnectionsDenyRequest withZuoraTrackId(String zuoraTrackId) {
+        this.zuoraTrackId = zuoraTrackId;
+        return this;
+    }
     
-    public PUTEntityConnectionsDenyHeaders headers;
-    public PUTEntityConnectionsDenyRequest withHeaders(PUTEntityConnectionsDenyHeaders headers) {
-        this.headers = headers;
+    /**
+     * The ID of the connection that you want to deny.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connection-id")
+    public String connectionId;
+    public PUTEntityConnectionsDenyRequest withConnectionId(String connectionId) {
+        this.connectionId = connectionId;
         return this;
     }
     

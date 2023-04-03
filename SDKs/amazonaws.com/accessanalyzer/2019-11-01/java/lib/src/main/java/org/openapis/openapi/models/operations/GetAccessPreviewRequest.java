@@ -4,27 +4,75 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccessPreviewRequest {
-    
-    public GetAccessPreviewPathParams pathParams;
-    public GetAccessPreviewRequest withPathParams(GetAccessPreviewPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetAccessPreviewRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public GetAccessPreviewQueryParams queryParams;
-    public GetAccessPreviewRequest withQueryParams(GetAccessPreviewQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetAccessPreviewRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetAccessPreviewRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public GetAccessPreviewHeaders headers;
-    public GetAccessPreviewRequest withHeaders(GetAccessPreviewHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetAccessPreviewRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetAccessPreviewRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetAccessPreviewRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetAccessPreviewRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The unique ID for the access preview.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accessPreviewId")
+    public String accessPreviewId;
+    public GetAccessPreviewRequest withAccessPreviewId(String accessPreviewId) {
+        this.accessPreviewId = accessPreviewId;
+        return this;
+    }
+    
+    /**
+     * The &lt;a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-getting-started.html#permission-resources"&gt;ARN of the analyzer&lt;/a&gt; used to generate the access preview.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=analyzerArn")
+    public String analyzerArn;
+    public GetAccessPreviewRequest withAnalyzerArn(String analyzerArn) {
+        this.analyzerArn = analyzerArn;
         return this;
     }
     

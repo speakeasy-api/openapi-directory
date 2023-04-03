@@ -4,20 +4,75 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteResponseHeadersPolicy20200531Request {
-    
-    public DeleteResponseHeadersPolicy20200531PathParams pathParams;
-    public DeleteResponseHeadersPolicy20200531Request withPathParams(DeleteResponseHeadersPolicy20200531PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * &lt;p&gt;The identifier for the response headers policy that you are deleting.&lt;/p&gt; &lt;p&gt;To get the identifier, you can use &lt;code&gt;ListResponseHeadersPolicies&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Id")
+    public String id;
+    public DeleteResponseHeadersPolicy20200531Request withId(String id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The version of the response headers policy that you are deleting.&lt;/p&gt; &lt;p&gt;The version is the response headers policy's &lt;code&gt;ETag&lt;/code&gt; value, which you can get using &lt;code&gt;ListResponseHeadersPolicies&lt;/code&gt;, &lt;code&gt;GetResponseHeadersPolicy&lt;/code&gt;, or &lt;code&gt;GetResponseHeadersPolicyConfig&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
+    public String ifMatch;
+    public DeleteResponseHeadersPolicy20200531Request withIfMatch(String ifMatch) {
+        this.ifMatch = ifMatch;
+        return this;
+    }
     
-    public DeleteResponseHeadersPolicy20200531Headers headers;
-    public DeleteResponseHeadersPolicy20200531Request withHeaders(DeleteResponseHeadersPolicy20200531Headers headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DeleteResponseHeadersPolicy20200531Request withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DeleteResponseHeadersPolicy20200531Request withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DeleteResponseHeadersPolicy20200531Request withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DeleteResponseHeadersPolicy20200531Request withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DeleteResponseHeadersPolicy20200531Request withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DeleteResponseHeadersPolicy20200531Request withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DeleteResponseHeadersPolicy20200531Request withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

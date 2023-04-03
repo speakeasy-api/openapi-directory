@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListEventLogsRequest {
-    
-    public ListEventLogsPathParams pathParams;
-    public ListEventLogsRequest withPathParams(ListEventLogsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ListEventLogsQueryParams queryParams;
-    public ListEventLogsRequest withQueryParams(ListEventLogsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public ListEventLogsRequestBody request;
-    public ListEventLogsRequest withRequest(ListEventLogsRequestBody request) {
-        this.request = request;
+    public ListEventLogsRequestBody requestBody;
+    public ListEventLogsRequest withRequestBody(ListEventLogsRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Pagination limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public String maxResults;
+    public ListEventLogsRequest withMaxResults(String maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * Pagination token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
+    public String nextToken;
+    public ListEventLogsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * The name of the space.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceName")
+    public String spaceName;
+    public ListEventLogsRequest withSpaceName(String spaceName) {
+        this.spaceName = spaceName;
         return this;
     }
     

@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsDeleteForTeamDiscussionRequest {
+    /**
+     * The number that identifies the discussion.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=discussion_number")
+    public Long discussionNumber;
+    public ReactionsDeleteForTeamDiscussionRequest withDiscussionNumber(Long discussionNumber) {
+        this.discussionNumber = discussionNumber;
+        return this;
+    }
     
-    public ReactionsDeleteForTeamDiscussionPathParams pathParams;
-    public ReactionsDeleteForTeamDiscussionRequest withPathParams(ReactionsDeleteForTeamDiscussionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ReactionsDeleteForTeamDiscussionRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the reaction.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reaction_id")
+    public Long reactionId;
+    public ReactionsDeleteForTeamDiscussionRequest withReactionId(Long reactionId) {
+        this.reactionId = reactionId;
+        return this;
+    }
+    
+    /**
+     * The slug of the team name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_slug")
+    public String teamSlug;
+    public ReactionsDeleteForTeamDiscussionRequest withTeamSlug(String teamSlug) {
+        this.teamSlug = teamSlug;
         return this;
     }
     

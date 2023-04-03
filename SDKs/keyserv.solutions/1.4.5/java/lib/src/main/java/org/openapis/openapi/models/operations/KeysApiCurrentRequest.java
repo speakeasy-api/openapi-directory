@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KeysApiCurrentRequest {
-    
-    public KeysApiCurrentPathParams pathParams;
-    public KeysApiCurrentRequest withPathParams(KeysApiCurrentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public KeysApiCurrentRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

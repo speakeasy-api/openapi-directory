@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05ConsentRequestsOnInitJsonRequest {
-    
-    public PostV05ConsentRequestsOnInitJsonHeaders headers;
-    public PostV05ConsentRequestsOnInitJsonRequest withHeaders(PostV05ConsentRequestsOnInitJsonHeaders headers) {
-        this.headers = headers;
+    /**
+     * Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostV05ConsentRequestsOnInitJsonRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ConsentRequestInitResponse request;
-    public PostV05ConsentRequestsOnInitJsonRequest withRequest(org.openapis.openapi.models.shared.ConsentRequestInitResponse request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ConsentRequestInitResponse consentRequestInitResponse;
+    public PostV05ConsentRequestsOnInitJsonRequest withConsentRequestInitResponse(org.openapis.openapi.models.shared.ConsentRequestInitResponse consentRequestInitResponse) {
+        this.consentRequestInitResponse = consentRequestInitResponse;
         return this;
     }
     
-    
-    public String serverURL;
-    public PostV05ConsentRequestsOnInitJsonRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Identifier of the health information user to which the request was intended.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HIU-ID")
+    public String xHiuId;
+    public PostV05ConsentRequestsOnInitJsonRequest withXHiuId(String xHiuId) {
+        this.xHiuId = xHiuId;
         return this;
     }
     

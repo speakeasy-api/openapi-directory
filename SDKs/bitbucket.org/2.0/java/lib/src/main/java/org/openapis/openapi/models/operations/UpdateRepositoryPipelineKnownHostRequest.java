@@ -7,20 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateRepositoryPipelineKnownHostRequest {
-    
-    public UpdateRepositoryPipelineKnownHostPathParams pathParams;
-    public UpdateRepositoryPipelineKnownHostRequest withPathParams(UpdateRepositoryPipelineKnownHostPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The updated known host.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public UpdateRepositoryPipelineKnownHostRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public UpdateRepositoryPipelineKnownHostRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The UUID of the known host to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=known_host_uuid")
+    public String knownHostUuid;
+    public UpdateRepositoryPipelineKnownHostRequest withKnownHostUuid(String knownHostUuid) {
+        this.knownHostUuid = knownHostUuid;
+        return this;
+    }
+    
+    /**
+     * The repository.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public UpdateRepositoryPipelineKnownHostRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
+    
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public UpdateRepositoryPipelineKnownHostRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

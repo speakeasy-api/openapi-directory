@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateServiceNotificationRequest {
-    
-    public UpdateServiceNotificationPathParams pathParams;
-    public UpdateServiceNotificationRequest withPathParams(UpdateServiceNotificationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the Configuration applies to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChatServiceSid")
+    public String chatServiceSid;
+    public UpdateServiceNotificationRequest withChatServiceSid(String chatServiceSid) {
+        this.chatServiceSid = chatServiceSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateServiceNotificationUpdateServiceNotificationRequest request;
-    public UpdateServiceNotificationRequest withRequest(UpdateServiceNotificationUpdateServiceNotificationRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public UpdateServiceNotificationSecurity security;
-    public UpdateServiceNotificationRequest withSecurity(UpdateServiceNotificationSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateServiceNotificationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public UpdateServiceNotificationUpdateServiceNotificationRequest requestBody;
+    public UpdateServiceNotificationRequest withRequestBody(UpdateServiceNotificationUpdateServiceNotificationRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

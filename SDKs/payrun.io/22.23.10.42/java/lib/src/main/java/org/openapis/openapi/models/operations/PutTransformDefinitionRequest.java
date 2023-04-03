@@ -7,17 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutTransformDefinitionRequest {
-    
-    public PutTransformDefinitionPathParams pathParams;
-    public PutTransformDefinitionRequest withPathParams(PutTransformDefinitionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The version of the api to target. Omit or set as &amp;apos;default&amp;apos; to target the current api version.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Version")
+    public String apiVersion;
+    public PutTransformDefinitionRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
-    
-    public PutTransformDefinitionHeaders headers;
-    public PutTransformDefinitionRequest withHeaders(PutTransformDefinitionHeaders headers) {
-        this.headers = headers;
+    /**
+     * The OAuth 1 authorization header. &amp;apos;Auto&amp;apos; enables auto complete.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PutTransformDefinitionRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
@@ -25,9 +31,19 @@ public class PutTransformDefinitionRequest {
      * The transform definition object to be executed against the report data.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TransformDefinition request;
-    public PutTransformDefinitionRequest withRequest(org.openapis.openapi.models.shared.TransformDefinition request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TransformDefinition transformDefinition;
+    public PutTransformDefinitionRequest withTransformDefinition(org.openapis.openapi.models.shared.TransformDefinition transformDefinition) {
+        this.transformDefinition = transformDefinition;
+        return this;
+    }
+    
+    /**
+     * The transform definition unique identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TransformDefinitionId")
+    public String transformDefinitionId;
+    public PutTransformDefinitionRequest withTransformDefinitionId(String transformDefinitionId) {
+        this.transformDefinitionId = transformDefinitionId;
         return this;
     }
     

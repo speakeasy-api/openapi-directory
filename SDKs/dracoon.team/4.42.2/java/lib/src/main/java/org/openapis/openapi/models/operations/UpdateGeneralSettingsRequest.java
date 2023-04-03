@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateGeneralSettingsRequest {
-    
-    public UpdateGeneralSettingsHeaders headers;
-    public UpdateGeneralSettingsRequest withHeaders(UpdateGeneralSettingsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.UpdateGeneralSettings updateGeneralSettings;
+    public UpdateGeneralSettingsRequest withUpdateGeneralSettings(org.openapis.openapi.models.shared.UpdateGeneralSettings updateGeneralSettings) {
+        this.updateGeneralSettings = updateGeneralSettings;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateGeneralSettings request;
-    public UpdateGeneralSettingsRequest withRequest(org.openapis.openapi.models.shared.UpdateGeneralSettings request) {
-        this.request = request;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public UpdateGeneralSettingsRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     

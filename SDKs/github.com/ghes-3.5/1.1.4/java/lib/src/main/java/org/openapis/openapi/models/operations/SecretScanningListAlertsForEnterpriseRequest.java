@@ -4,20 +4,78 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SecretScanningListAlertsForEnterpriseRequest {
-    
-    public SecretScanningListAlertsForEnterprisePathParams pathParams;
-    public SecretScanningListAlertsForEnterpriseRequest withPathParams(SecretScanningListAlertsForEnterprisePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A cursor, as given in the [Link header](https://docs.github.com/enterprise-server@3.5/rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for results after this cursor.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=after")
+    public String after;
+    public SecretScanningListAlertsForEnterpriseRequest withAfter(String after) {
+        this.after = after;
         return this;
     }
     
+    /**
+     * A cursor, as given in the [Link header](https://docs.github.com/enterprise-server@3.5/rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for results before this cursor.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=before")
+    public String before;
+    public SecretScanningListAlertsForEnterpriseRequest withBefore(String before) {
+        this.before = before;
+        return this;
+    }
     
-    public SecretScanningListAlertsForEnterpriseQueryParams queryParams;
-    public SecretScanningListAlertsForEnterpriseRequest withQueryParams(SecretScanningListAlertsForEnterpriseQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
+    public String enterprise;
+    public SecretScanningListAlertsForEnterpriseRequest withEnterprise(String enterprise) {
+        this.enterprise = enterprise;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public SecretScanningListAlertsForEnterpriseRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * A comma-separated list of resolutions. Only secret scanning alerts with one of these resolutions are listed. Valid resolutions are `false_positive`, `wont_fix`, `revoked`, `pattern_edited`, `pattern_deleted` or `used_in_tests`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resolution")
+    public String resolution;
+    public SecretScanningListAlertsForEnterpriseRequest withResolution(String resolution) {
+        this.resolution = resolution;
+        return this;
+    }
+    
+    /**
+     * A comma-separated list of secret types to return. By default all secret types are returned.
+     * See "[Secret scanning patterns](https://docs.github.com/enterprise-server@3.5/code-security/secret-scanning/secret-scanning-patterns#supported-secrets-for-advanced-security)"
+     * for a complete list of secret types.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=secret_type")
+    public String secretType;
+    public SecretScanningListAlertsForEnterpriseRequest withSecretType(String secretType) {
+        this.secretType = secretType;
+        return this;
+    }
+    
+    /**
+     * Set to `open` or `resolved` to only list secret scanning alerts in a specific state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public org.openapis.openapi.models.shared.SecretScanningAlertStateEnum state;
+    public SecretScanningListAlertsForEnterpriseRequest withState(org.openapis.openapi.models.shared.SecretScanningAlertStateEnum state) {
+        this.state = state;
         return this;
     }
     

@@ -4,27 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCredentialRequest {
-    
-    public DeleteCredentialPathParams pathParams;
-    public DeleteCredentialRequest withPathParams(DeleteCredentialPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteCredentialSecurity security;
-    public DeleteCredentialRequest withSecurity(DeleteCredentialSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteCredentialRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteCredentialRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.CheckSpellingRussianHeaders;
 import org.openapis.openapi.models.operations.CheckSpellingRussianRequestBody;
 import org.openapis.openapi.models.operations.CheckSpellingRussianRequest;
 import org.openapis.openapi.models.operations.CheckSpellingRussianResponse;
@@ -16,14 +15,12 @@ public class Application {
                 .build();
 
             CheckSpellingRussianRequest req = new CheckSpellingRussianRequest() {{
-                headers = new CheckSpellingRussianHeaders() {{
-                    xRapidAPIKey = "corrupti";
-                }};
-                request = new CheckSpellingRussianRequestBody() {{
+                requestBody = new CheckSpellingRussianRequestBody() {{
                     langCode = "ru";
                     text = "Добрый вее!";
                 }};
-            }};            
+                xRapidAPIKey = "corrupti";
+            }}            
 
             CheckSpellingRussianResponse res = sdk.checkSpellingRussian(req);
 

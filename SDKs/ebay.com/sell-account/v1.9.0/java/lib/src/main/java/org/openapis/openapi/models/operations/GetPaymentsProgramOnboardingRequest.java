@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPaymentsProgramOnboardingRequest {
-    
-    public GetPaymentsProgramOnboardingPathParams pathParams;
-    public GetPaymentsProgramOnboardingRequest withPathParams(GetPaymentsProgramOnboardingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The eBay marketplace ID associated with the onboarding status to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=marketplace_id")
+    public String marketplaceId;
+    public GetPaymentsProgramOnboardingRequest withMarketplaceId(String marketplaceId) {
+        this.marketplaceId = marketplaceId;
         return this;
     }
     
-    
-    public GetPaymentsProgramOnboardingSecurity security;
-    public GetPaymentsProgramOnboardingRequest withSecurity(GetPaymentsProgramOnboardingSecurity security) {
-        this.security = security;
+    /**
+     * The type of payments program whose status is returned by the method.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payments_program_type")
+    public String paymentsProgramType;
+    public GetPaymentsProgramOnboardingRequest withPaymentsProgramType(String paymentsProgramType) {
+        this.paymentsProgramType = paymentsProgramType;
         return this;
     }
     

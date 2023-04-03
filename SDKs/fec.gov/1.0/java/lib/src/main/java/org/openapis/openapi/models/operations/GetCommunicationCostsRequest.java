@@ -4,13 +4,193 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCommunicationCostsRequest {
+    /**
+     * API key for https://api.data.gov. Get one at https://api.data.gov/signup.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetCommunicationCostsRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public GetCommunicationCostsQueryParams queryParams;
-    public GetCommunicationCostsRequest withQueryParams(GetCommunicationCostsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A unique identifier assigned to each candidate registered with the FEC.
+     * If a person runs for several offices, that person will have separate candidate IDs for each office.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=candidate_id")
+    public String[] candidateId;
+    public GetCommunicationCostsRequest withCandidateId(String[] candidateId) {
+        this.candidateId = candidateId;
+        return this;
+    }
+    
+    /**
+     * A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=committee_id")
+    public String[] committeeId;
+    public GetCommunicationCostsRequest withCommitteeId(String[] committeeId) {
+        this.committeeId = committeeId;
+        return this;
+    }
+    
+    /**
+     * An unique identifier for each page where the electronic or paper filing is reported.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=image_number")
+    public String[] imageNumber;
+    public GetCommunicationCostsRequest withImageNumber(String[] imageNumber) {
+        this.imageNumber = imageNumber;
+        return this;
+    }
+    
+    /**
+     * Filter for form and line number using the following format: `FORM-LINENUMBER`.  For example an argument such as `F3X-16` would filter down to all entries from form `F3X` line number `16`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=line_number")
+    public String lineNumber;
+    public GetCommunicationCostsRequest withLineNumber(String lineNumber) {
+        this.lineNumber = lineNumber;
+        return this;
+    }
+    
+    /**
+     * Filter for all amounts less than a value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_amount")
+    public String maxAmount;
+    public GetCommunicationCostsRequest withMaxAmount(String maxAmount) {
+        this.maxAmount = maxAmount;
+        return this;
+    }
+    
+    /**
+     * Maximum date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_date")
+    public LocalDate maxDate;
+    public GetCommunicationCostsRequest withMaxDate(LocalDate maxDate) {
+        this.maxDate = maxDate;
+        return this;
+    }
+    
+    /**
+     * Maxium image number of the page where the schedule item is reported
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_image_number")
+    public String maxImageNumber;
+    public GetCommunicationCostsRequest withMaxImageNumber(String maxImageNumber) {
+        this.maxImageNumber = maxImageNumber;
+        return this;
+    }
+    
+    /**
+     * Filter for all amounts greater than a value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_amount")
+    public String minAmount;
+    public GetCommunicationCostsRequest withMinAmount(String minAmount) {
+        this.minAmount = minAmount;
+        return this;
+    }
+    
+    /**
+     * Minimum date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_date")
+    public LocalDate minDate;
+    public GetCommunicationCostsRequest withMinDate(LocalDate minDate) {
+        this.minDate = minDate;
+        return this;
+    }
+    
+    /**
+     * Minium image number of the page where the schedule item is reported
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_image_number")
+    public String minImageNumber;
+    public GetCommunicationCostsRequest withMinImageNumber(String minImageNumber) {
+        this.minImageNumber = minImageNumber;
+        return this;
+    }
+    
+    /**
+     * For paginating through results, starting at page 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetCommunicationCostsRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results returned per page. Defaults to 20.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetCommunicationCostsRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Provide a field to sort by. Use `-` for descending order.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetCommunicationCostsRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Hide null values on sorted column(s).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
+    public Boolean sortHideNull;
+    public GetCommunicationCostsRequest withSortHideNull(Boolean sortHideNull) {
+        this.sortHideNull = sortHideNull;
+        return this;
+    }
+    
+    /**
+     * Toggle that filters out all rows having sort column that is non-null
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
+    public Boolean sortNullOnly;
+    public GetCommunicationCostsRequest withSortNullOnly(Boolean sortNullOnly) {
+        this.sortNullOnly = sortNullOnly;
+        return this;
+    }
+    
+    /**
+     * Toggle that sorts null values last
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
+    public Boolean sortNullsLast;
+    public GetCommunicationCostsRequest withSortNullsLast(Boolean sortNullsLast) {
+        this.sortNullsLast = sortNullsLast;
+        return this;
+    }
+    
+    /**
+     * Support or opposition
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=support_oppose_indicator")
+    public GetCommunicationCostsSupportOpposeIndicatorEnum[] supportOpposeIndicator;
+    public GetCommunicationCostsRequest withSupportOpposeIndicator(GetCommunicationCostsSupportOpposeIndicatorEnum[] supportOpposeIndicator) {
+        this.supportOpposeIndicator = supportOpposeIndicator;
         return this;
     }
     

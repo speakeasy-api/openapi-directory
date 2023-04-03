@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.DeleteResourcePermissionHeaders;
 import org.openapis.openapi.models.operations.DeleteResourcePermissionRequestBodyActionTypeEnum;
 import org.openapis.openapi.models.operations.DeleteResourcePermissionRequestBody;
 import org.openapis.openapi.models.operations.DeleteResourcePermissionRequest;
@@ -28,28 +27,24 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             DeleteResourcePermissionRequest req = new DeleteResourcePermissionRequest() {{
-                headers = new DeleteResourcePermissionHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new DeleteResourcePermissionRequestBody() {{
+                requestBody = new DeleteResourcePermissionRequestBody() {{
                     actionType = "RESTORE";
-                    resourceArn = "illum";
-                    sourceResourceArn = "vel";
+                    resourceArn = "corrupti";
+                    sourceResourceArn = "provident";
                 }};
-            }};            
+                xAmzAlgorithm = "distinctio";
+                xAmzContentSha256 = "quibusdam";
+                xAmzCredential = "unde";
+                xAmzDate = "nulla";
+                xAmzSecurityToken = "corrupti";
+                xAmzSignature = "illum";
+                xAmzSignedHeaders = "vel";
+            }}            
 
             DeleteResourcePermissionResponse res = sdk.deleteResourcePermission(req);
 
@@ -63,7 +58,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

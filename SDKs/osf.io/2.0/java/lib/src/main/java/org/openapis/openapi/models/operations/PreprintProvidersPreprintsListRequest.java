@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PreprintProvidersPreprintsListRequest {
-    
-    public PreprintProvidersPreprintsListPathParams pathParams;
-    public PreprintProvidersPreprintsListRequest withPathParams(PreprintProvidersPreprintsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the preprint provider.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=preprint_provider_id")
+    public String preprintProviderId;
+    public PreprintProvidersPreprintsListRequest withPreprintProviderId(String preprintProviderId) {
+        this.preprintProviderId = preprintProviderId;
         return this;
     }
     

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteLocksPathRequest {
-    
-    public DeleteLocksPathPathParams pathParams;
-    public DeleteLocksPathRequest withPathParams(DeleteLocksPathPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Path
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
+    public String path;
+    public DeleteLocksPathRequest withPath(String path) {
+        this.path = path;
         return this;
     }
     
-    
-    public DeleteLocksPathQueryParams queryParams;
-    public DeleteLocksPathRequest withQueryParams(DeleteLocksPathQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Lock token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public DeleteLocksPathRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

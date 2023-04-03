@@ -36,10 +36,11 @@ public class InlineScript {
     /**
      * \u30a4\u30f3\u30e9\u30a4\u30f3\u30b9\u30af\u30ea\u30d7\u30c8\u30bf\u30b0\u306e\u767b\u9332
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateInlineScriptTagResponse createInlineScriptTag(org.openapis.openapi.models.operations.CreateInlineScriptTagRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateInlineScriptTagResponse createInlineScriptTag(org.openapis.openapi.models.operations.CreateInlineScriptTagRequestBody request, org.openapis.openapi.models.operations.CreateInlineScriptTagSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/inline_script_tags.json");
         
@@ -50,7 +51,7 @@ public class InlineScript {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -77,19 +78,20 @@ public class InlineScript {
     /**
      * \u30a4\u30f3\u30e9\u30a4\u30f3\u30b9\u30af\u30ea\u30d7\u30c8\u30bf\u30b0\u306e\u524a\u9664
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteInlineScriptTagResponse deleteInlineScriptTag(org.openapis.openapi.models.operations.DeleteInlineScriptTagRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteInlineScriptTagResponse deleteInlineScriptTag(org.openapis.openapi.models.operations.DeleteInlineScriptTagRequest request, org.openapis.openapi.models.operations.DeleteInlineScriptTagSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteInlineScriptTagPathParams.class, baseUrl, "/v1/inline_script_tags/{inlineScriptTagId}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteInlineScriptTagRequest.class, baseUrl, "/v1/inline_script_tags/{inlineScriptTagId}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -110,19 +112,20 @@ public class InlineScript {
     /**
      * \u30a4\u30f3\u30e9\u30a4\u30f3\u30b9\u30af\u30ea\u30d7\u30c8\u30bf\u30b0\u306e\u53d6\u5f97
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetInlineScriptTagResponse getInlineScriptTag(org.openapis.openapi.models.operations.GetInlineScriptTagRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetInlineScriptTagResponse getInlineScriptTag(org.openapis.openapi.models.operations.GetInlineScriptTagRequest request, org.openapis.openapi.models.operations.GetInlineScriptTagSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInlineScriptTagPathParams.class, baseUrl, "/v1/inline_script_tags/{inlineScriptTagId}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInlineScriptTagRequest.class, baseUrl, "/v1/inline_script_tags/{inlineScriptTagId}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -148,11 +151,10 @@ public class InlineScript {
 
     /**
      * \u30a4\u30f3\u30e9\u30a4\u30f3\u30b9\u30af\u30ea\u30d7\u30c8\u30bf\u30b0\u306e\u53d6\u5f97
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetInlineScriptTagsResponse getInlineScriptTags(org.openapis.openapi.models.operations.GetInlineScriptTagsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetInlineScriptTagsResponse getInlineScriptTags() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/inline_script_tags.json");
         
@@ -161,8 +163,7 @@ public class InlineScript {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -188,21 +189,22 @@ public class InlineScript {
     /**
      * \u30a4\u30f3\u30e9\u30a4\u30f3\u30b9\u30af\u30ea\u30d7\u30c8\u30bf\u30b0\u306e\u66f4\u65b0
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateInlineScriptTagResponse updateInlineScriptTag(org.openapis.openapi.models.operations.UpdateInlineScriptTagRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateInlineScriptTagResponse updateInlineScriptTag(org.openapis.openapi.models.operations.UpdateInlineScriptTagRequest request, org.openapis.openapi.models.operations.UpdateInlineScriptTagSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateInlineScriptTagPathParams.class, baseUrl, "/v1/inline_script_tags/{inlineScriptTagId}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateInlineScriptTagRequest.class, baseUrl, "/v1/inline_script_tags/{inlineScriptTagId}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

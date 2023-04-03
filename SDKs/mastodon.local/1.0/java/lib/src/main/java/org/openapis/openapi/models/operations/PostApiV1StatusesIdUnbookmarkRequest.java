@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostApiV1StatusesIdUnbookmarkRequest {
-    
-    public PostApiV1StatusesIdUnbookmarkPathParams pathParams;
-    public PostApiV1StatusesIdUnbookmarkRequest withPathParams(PostApiV1StatusesIdUnbookmarkPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostApiV1StatusesIdUnbookmarkSecurity security;
-    public PostApiV1StatusesIdUnbookmarkRequest withSecurity(PostApiV1StatusesIdUnbookmarkSecurity security) {
-        this.security = security;
+    /**
+     * Local ID of a status in the database.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostApiV1StatusesIdUnbookmarkRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

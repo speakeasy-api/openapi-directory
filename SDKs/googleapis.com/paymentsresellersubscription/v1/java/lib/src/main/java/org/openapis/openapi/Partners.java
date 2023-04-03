@@ -39,13 +39,13 @@ public class Partners {
      */
     public org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersProductsListResponse paymentsresellersubscriptionPartnersProductsList(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersProductsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersProductsListPathParams.class, baseUrl, "/v1/{parent}/products", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersProductsListRequest.class, baseUrl, "/v1/{parent}/products", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersProductsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersProductsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -83,15 +83,15 @@ public class Partners {
      */
     public org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersPromotionsFindEligibleResponse paymentsresellersubscriptionPartnersPromotionsFindEligible(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersPromotionsFindEligibleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersPromotionsFindEligiblePathParams.class, baseUrl, "/v1/{parent}/promotions:findEligible", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersPromotionsFindEligibleRequest.class, baseUrl, "/v1/{parent}/promotions:findEligible", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersPromotionsFindEligibleQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersPromotionsFindEligibleRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -129,13 +129,13 @@ public class Partners {
      */
     public org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersPromotionsListResponse paymentsresellersubscriptionPartnersPromotionsList(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersPromotionsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersPromotionsListPathParams.class, baseUrl, "/v1/{parent}/promotions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersPromotionsListRequest.class, baseUrl, "/v1/{parent}/promotions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersPromotionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersPromotionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -173,15 +173,15 @@ public class Partners {
      */
     public org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsCancelResponse paymentsresellersubscriptionPartnersSubscriptionsCancel(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsCancelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsCancelPathParams.class, baseUrl, "/v1/{name}:cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsCancelRequest.class, baseUrl, "/v1/{name}:cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsCancelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsCancelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -219,15 +219,15 @@ public class Partners {
      */
     public org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsCreateResponse paymentsresellersubscriptionPartnersSubscriptionsCreate(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsCreatePathParams.class, baseUrl, "/v1/{parent}/subscriptions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsCreateRequest.class, baseUrl, "/v1/{parent}/subscriptions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudPaymentsResellerSubscriptionV1SubscriptionInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -265,15 +265,15 @@ public class Partners {
      */
     public org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsEntitleResponse paymentsresellersubscriptionPartnersSubscriptionsEntitle(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsEntitleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsEntitlePathParams.class, baseUrl, "/v1/{name}:entitle", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsEntitleRequest.class, baseUrl, "/v1/{name}:entitle", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsEntitleQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsEntitleRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -311,15 +311,15 @@ public class Partners {
      */
     public org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsExtendResponse paymentsresellersubscriptionPartnersSubscriptionsExtend(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsExtendRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsExtendPathParams.class, baseUrl, "/v1/{name}:extend", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsExtendRequest.class, baseUrl, "/v1/{name}:extend", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsExtendQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsExtendRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -357,13 +357,13 @@ public class Partners {
      */
     public org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsGetResponse paymentsresellersubscriptionPartnersSubscriptionsGet(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsGetPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsGetRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -401,15 +401,15 @@ public class Partners {
      */
     public org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsProvisionResponse paymentsresellersubscriptionPartnersSubscriptionsProvision(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsProvisionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsProvisionPathParams.class, baseUrl, "/v1/{parent}/subscriptions:provision", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsProvisionRequest.class, baseUrl, "/v1/{parent}/subscriptions:provision", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudPaymentsResellerSubscriptionV1SubscriptionInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsProvisionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsProvisionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -447,15 +447,15 @@ public class Partners {
      */
     public org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsUndoCancelResponse paymentsresellersubscriptionPartnersSubscriptionsUndoCancel(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsUndoCancelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsUndoCancelPathParams.class, baseUrl, "/v1/{name}:undoCancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsUndoCancelRequest.class, baseUrl, "/v1/{name}:undoCancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsUndoCancelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersSubscriptionsUndoCancelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

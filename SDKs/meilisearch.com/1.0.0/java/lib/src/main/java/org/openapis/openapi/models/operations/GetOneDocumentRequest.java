@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOneDocumentRequest {
-    
-    public GetOneDocumentQueryParams queryParams;
-    public GetOneDocumentRequest withQueryParams(GetOneDocumentQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public GetOneDocumentRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     

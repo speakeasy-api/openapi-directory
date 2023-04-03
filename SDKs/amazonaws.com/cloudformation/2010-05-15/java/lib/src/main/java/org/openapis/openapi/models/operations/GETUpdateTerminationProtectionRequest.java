@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETUpdateTerminationProtectionRequest {
-    
-    public GETUpdateTerminationProtectionQueryParams queryParams;
-    public GETUpdateTerminationProtectionRequest withQueryParams(GETUpdateTerminationProtectionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETUpdateTerminationProtectionActionEnum action;
+    public GETUpdateTerminationProtectionRequest withAction(GETUpdateTerminationProtectionActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Whether to enable termination protection on the specified stack.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnableTerminationProtection")
+    public Boolean enableTerminationProtection;
+    public GETUpdateTerminationProtectionRequest withEnableTerminationProtection(Boolean enableTerminationProtection) {
+        this.enableTerminationProtection = enableTerminationProtection;
+        return this;
+    }
     
-    public GETUpdateTerminationProtectionHeaders headers;
-    public GETUpdateTerminationProtectionRequest withHeaders(GETUpdateTerminationProtectionHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name or unique ID of the stack for which you want to set termination protection.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StackName")
+    public String stackName;
+    public GETUpdateTerminationProtectionRequest withStackName(String stackName) {
+        this.stackName = stackName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETUpdateTerminationProtectionVersionEnum version;
+    public GETUpdateTerminationProtectionRequest withVersion(GETUpdateTerminationProtectionVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETUpdateTerminationProtectionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETUpdateTerminationProtectionRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETUpdateTerminationProtectionRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETUpdateTerminationProtectionRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETUpdateTerminationProtectionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETUpdateTerminationProtectionRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETUpdateTerminationProtectionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

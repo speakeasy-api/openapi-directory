@@ -7,17 +7,38 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SyncRequest {
-    
-    public SyncQueryParams queryParams;
-    public SyncRequest withQueryParams(SyncQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.SyncRequest syncRequest;
+    public SyncRequest withSyncRequest(org.openapis.openapi.models.shared.SyncRequest syncRequest) {
+        this.syncRequest = syncRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SyncRequest request;
-    public SyncRequest withRequest(org.openapis.openapi.models.shared.SyncRequest request) {
-        this.request = request;
+    @SpeakeasyMetadata("queryParam:serialization=json,name=client_id")
+    public String clientId;
+    public SyncRequest withClientId(String clientId) {
+        this.clientId = clientId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:serialization=json,name=connection_id")
+    public String connectionId;
+    public SyncRequest withConnectionId(String connectionId) {
+        this.connectionId = connectionId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:serialization=json,name=watch")
+    public Boolean watch;
+    public SyncRequest withWatch(Boolean watch) {
+        this.watch = watch;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:serialization=json,name=with_inaccessible_cids")
+    public Boolean withInaccessibleCids;
+    public SyncRequest withWithInaccessibleCids(Boolean withInaccessibleCids) {
+        this.withInaccessibleCids = withInaccessibleCids;
         return this;
     }
     

@@ -4,20 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ForumGetPostAndParentRequest {
-    
-    public ForumGetPostAndParentPathParams pathParams;
-    public ForumGetPostAndParentRequest withPathParams(ForumGetPostAndParentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=childPostId")
+    public Long childPostId;
+    public ForumGetPostAndParentRequest withChildPostId(Long childPostId) {
+        this.childPostId = childPostId;
         return this;
     }
     
-    
-    public ForumGetPostAndParentQueryParams queryParams;
-    public ForumGetPostAndParentRequest withQueryParams(ForumGetPostAndParentQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * If this value is not null or empty, banned posts are requested to be returned
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showbanned")
+    public String showbanned;
+    public ForumGetPostAndParentRequest withShowbanned(String showbanned) {
+        this.showbanned = showbanned;
         return this;
     }
     

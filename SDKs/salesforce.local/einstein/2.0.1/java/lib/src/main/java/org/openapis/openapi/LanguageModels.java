@@ -38,19 +38,20 @@ public class LanguageModels {
      * Delete a Model
      * Deletes the specified model.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteModelResponse deleteModel(org.openapis.openapi.models.operations.DeleteModelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteModelResponse deleteModel(org.openapis.openapi.models.operations.DeleteModelRequest request, org.openapis.openapi.models.operations.DeleteModelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteModelPathParams.class, baseUrl, "/v2/language/models/{modelId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteModelRequest.class, baseUrl, "/v2/language/models/{modelId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,25 +79,26 @@ public class LanguageModels {
      * Get Model Learning Curve
      * Returns the metrics for each epoch in a model.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTrainedModelLearningCurveResponse getTrainedModelLearningCurve(org.openapis.openapi.models.operations.GetTrainedModelLearningCurveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTrainedModelLearningCurveResponse getTrainedModelLearningCurve(org.openapis.openapi.models.operations.GetTrainedModelLearningCurveRequest request, org.openapis.openapi.models.operations.GetTrainedModelLearningCurveSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTrainedModelLearningCurvePathParams.class, baseUrl, "/v2/language/models/{modelId}/lc", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTrainedModelLearningCurveRequest.class, baseUrl, "/v2/language/models/{modelId}/lc", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTrainedModelLearningCurveQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTrainedModelLearningCurveRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,19 +126,20 @@ public class LanguageModels {
      * Get Model Metrics
      * Returns the metrics for a model
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTrainedModelMetricsResponse getTrainedModelMetrics(org.openapis.openapi.models.operations.GetTrainedModelMetricsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTrainedModelMetricsResponse getTrainedModelMetrics(org.openapis.openapi.models.operations.GetTrainedModelMetricsRequest request, org.openapis.openapi.models.operations.GetTrainedModelMetricsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTrainedModelMetricsPathParams.class, baseUrl, "/v2/language/models/{modelId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTrainedModelMetricsRequest.class, baseUrl, "/v2/language/models/{modelId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -164,25 +167,26 @@ public class LanguageModels {
      * Get All Models
      * Returns all models for the specified dataset.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTrainedModelsResponse getTrainedModels(org.openapis.openapi.models.operations.GetTrainedModelsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTrainedModelsResponse getTrainedModels(org.openapis.openapi.models.operations.GetTrainedModelsRequest request, org.openapis.openapi.models.operations.GetTrainedModelsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTrainedModelsPathParams.class, baseUrl, "/v2/language/datasets/{datasetId}/models", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTrainedModelsRequest.class, baseUrl, "/v2/language/datasets/{datasetId}/models", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTrainedModelsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTrainedModelsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

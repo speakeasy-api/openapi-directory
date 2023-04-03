@@ -54,18 +54,19 @@ public class PaymentInitiationServicePIS {
      *   * access method is generally applicable, but further authorisation processes are needed.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CancelPaymentResponse cancelPayment(org.openapis.openapi.models.operations.CancelPaymentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CancelPaymentResponse cancelPayment(org.openapis.openapi.models.operations.CancelPaymentRequest request, org.openapis.openapi.models.operations.CancelPaymentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelPaymentPathParams.class, baseUrl, "/v1/{payment-service}/{payment-product}/{paymentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelPaymentRequest.class, baseUrl, "/v1/{payment-service}/{payment-product}/{paymentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -74,7 +75,7 @@ public class PaymentInitiationServicePIS {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -205,18 +206,19 @@ public class PaymentInitiationServicePIS {
      * This method returns the SCA status of a payment initiation's authorisation sub-resource.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPaymentCancellationScaStatusResponse getPaymentCancellationScaStatus(org.openapis.openapi.models.operations.GetPaymentCancellationScaStatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPaymentCancellationScaStatusResponse getPaymentCancellationScaStatus(org.openapis.openapi.models.operations.GetPaymentCancellationScaStatusRequest request, org.openapis.openapi.models.operations.GetPaymentCancellationScaStatusSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentCancellationScaStatusPathParams.class, baseUrl, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations/{authorisationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentCancellationScaStatusRequest.class, baseUrl, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations/{authorisationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -225,7 +227,7 @@ public class PaymentInitiationServicePIS {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -355,18 +357,19 @@ public class PaymentInitiationServicePIS {
      * Get payment information
      * Returns the content of a payment object
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPaymentInformationResponse getPaymentInformation(org.openapis.openapi.models.operations.GetPaymentInformationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPaymentInformationResponse getPaymentInformation(org.openapis.openapi.models.operations.GetPaymentInformationRequest request, org.openapis.openapi.models.operations.GetPaymentInformationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentInformationPathParams.class, baseUrl, "/v1/{payment-service}/{payment-product}/{paymentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentInformationRequest.class, baseUrl, "/v1/{payment-service}/{payment-product}/{paymentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -375,7 +378,7 @@ public class PaymentInitiationServicePIS {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -518,18 +521,19 @@ public class PaymentInitiationServicePIS {
      * This function returns an array of hyperlinks to all generated authorisation sub-resources.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPaymentInitiationAuthorisationResponse getPaymentInitiationAuthorisation(org.openapis.openapi.models.operations.GetPaymentInitiationAuthorisationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPaymentInitiationAuthorisationResponse getPaymentInitiationAuthorisation(org.openapis.openapi.models.operations.GetPaymentInitiationAuthorisationRequest request, org.openapis.openapi.models.operations.GetPaymentInitiationAuthorisationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentInitiationAuthorisationPathParams.class, baseUrl, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentInitiationAuthorisationRequest.class, baseUrl, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -538,7 +542,7 @@ public class PaymentInitiationServicePIS {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -669,18 +673,19 @@ public class PaymentInitiationServicePIS {
      * Retrieve a list of all created cancellation authorisation sub-resources.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPaymentInitiationCancellationAuthorisationInformationResponse getPaymentInitiationCancellationAuthorisationInformation(org.openapis.openapi.models.operations.GetPaymentInitiationCancellationAuthorisationInformationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPaymentInitiationCancellationAuthorisationInformationResponse getPaymentInitiationCancellationAuthorisationInformation(org.openapis.openapi.models.operations.GetPaymentInitiationCancellationAuthorisationInformationRequest request, org.openapis.openapi.models.operations.GetPaymentInitiationCancellationAuthorisationInformationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentInitiationCancellationAuthorisationInformationPathParams.class, baseUrl, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentInitiationCancellationAuthorisationInformationRequest.class, baseUrl, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -689,7 +694,7 @@ public class PaymentInitiationServicePIS {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -820,18 +825,19 @@ public class PaymentInitiationServicePIS {
      * This method returns the SCA status of a payment initiation's authorisation sub-resource.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPaymentInitiationScaStatusResponse getPaymentInitiationScaStatus(org.openapis.openapi.models.operations.GetPaymentInitiationScaStatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPaymentInitiationScaStatusResponse getPaymentInitiationScaStatus(org.openapis.openapi.models.operations.GetPaymentInitiationScaStatusRequest request, org.openapis.openapi.models.operations.GetPaymentInitiationScaStatusSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentInitiationScaStatusPathParams.class, baseUrl, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations/{authorisationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentInitiationScaStatusRequest.class, baseUrl, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations/{authorisationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -840,7 +846,7 @@ public class PaymentInitiationServicePIS {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -970,18 +976,19 @@ public class PaymentInitiationServicePIS {
      * Payment initiation status request
      * Check the transaction status of a payment initiation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPaymentInitiationStatusResponse getPaymentInitiationStatus(org.openapis.openapi.models.operations.GetPaymentInitiationStatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPaymentInitiationStatusResponse getPaymentInitiationStatus(org.openapis.openapi.models.operations.GetPaymentInitiationStatusRequest request, org.openapis.openapi.models.operations.GetPaymentInitiationStatusSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentInitiationStatusPathParams.class, baseUrl, "/v1/{payment-service}/{payment-product}/{paymentId}/status", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentInitiationStatusRequest.class, baseUrl, "/v1/{payment-service}/{payment-product}/{paymentId}/status", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -990,7 +997,7 @@ public class PaymentInitiationServicePIS {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1171,23 +1178,24 @@ public class PaymentInitiationServicePIS {
      * In these cases, first an authorisation sub-resource has to be generated following the 'startAuthorisation' link.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.InitiatePaymentJsonResponse initiatePaymentJson(org.openapis.openapi.models.operations.InitiatePaymentJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.InitiatePaymentJsonResponse initiatePaymentJson(org.openapis.openapi.models.operations.InitiatePaymentJsonRequest request, org.openapis.openapi.models.operations.InitiatePaymentJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InitiatePaymentJsonPathParams.class, baseUrl, "/v1/{payment-service}/{payment-product}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InitiatePaymentJsonRequest.class, baseUrl, "/v1/{payment-service}/{payment-product}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1196,7 +1204,7 @@ public class PaymentInitiationServicePIS {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1372,23 +1380,24 @@ public class PaymentInitiationServicePIS {
      * In these cases, first an authorisation sub-resource has to be generated following the 'startAuthorisation' link.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.InitiatePaymentMultipartResponse initiatePaymentMultipart(org.openapis.openapi.models.operations.InitiatePaymentMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.InitiatePaymentMultipartResponse initiatePaymentMultipart(org.openapis.openapi.models.operations.InitiatePaymentMultipartRequest request, org.openapis.openapi.models.operations.InitiatePaymentMultipartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InitiatePaymentMultipartPathParams.class, baseUrl, "/v1/{payment-service}/{payment-product}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InitiatePaymentMultipartRequest.class, baseUrl, "/v1/{payment-service}/{payment-product}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "periodicPaymentInitiationMultipartBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1397,7 +1406,7 @@ public class PaymentInitiationServicePIS {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1573,23 +1582,24 @@ public class PaymentInitiationServicePIS {
      * In these cases, first an authorisation sub-resource has to be generated following the 'startAuthorisation' link.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.InitiatePaymentRawResponse initiatePaymentRaw(org.openapis.openapi.models.operations.InitiatePaymentRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.InitiatePaymentRawResponse initiatePaymentRaw(org.openapis.openapi.models.operations.InitiatePaymentRawRequest request, org.openapis.openapi.models.operations.InitiatePaymentRawSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InitiatePaymentRawPathParams.class, baseUrl, "/v1/{payment-service}/{payment-product}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InitiatePaymentRawRequest.class, baseUrl, "/v1/{payment-service}/{payment-product}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1598,7 +1608,7 @@ public class PaymentInitiationServicePIS {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1761,20 +1771,21 @@ public class PaymentInitiationServicePIS {
      *   * The signing basket needs to be authorised yet.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StartPaymentAuthorisationResponse startPaymentAuthorisation(org.openapis.openapi.models.operations.StartPaymentAuthorisationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StartPaymentAuthorisationResponse startPaymentAuthorisation(org.openapis.openapi.models.operations.StartPaymentAuthorisationRequest request, org.openapis.openapi.models.operations.StartPaymentAuthorisationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StartPaymentAuthorisationPathParams.class, baseUrl, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StartPaymentAuthorisationRequest.class, baseUrl, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1783,7 +1794,7 @@ public class PaymentInitiationServicePIS {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1945,20 +1956,21 @@ public class PaymentInitiationServicePIS {
      *   * The signing basket needs to be authorised yet.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StartPaymentInitiationCancellationAuthorisationResponse startPaymentInitiationCancellationAuthorisation(org.openapis.openapi.models.operations.StartPaymentInitiationCancellationAuthorisationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StartPaymentInitiationCancellationAuthorisationResponse startPaymentInitiationCancellationAuthorisation(org.openapis.openapi.models.operations.StartPaymentInitiationCancellationAuthorisationRequest request, org.openapis.openapi.models.operations.StartPaymentInitiationCancellationAuthorisationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StartPaymentInitiationCancellationAuthorisationPathParams.class, baseUrl, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StartPaymentInitiationCancellationAuthorisationRequest.class, baseUrl, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1967,7 +1979,7 @@ public class PaymentInitiationServicePIS {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2135,20 +2147,21 @@ public class PaymentInitiationServicePIS {
      *     Maybe in a later version the access path will change.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdatePaymentCancellationPsuDataResponse updatePaymentCancellationPsuData(org.openapis.openapi.models.operations.UpdatePaymentCancellationPsuDataRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdatePaymentCancellationPsuDataResponse updatePaymentCancellationPsuData(org.openapis.openapi.models.operations.UpdatePaymentCancellationPsuDataRequest request, org.openapis.openapi.models.operations.UpdatePaymentCancellationPsuDataSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePaymentCancellationPsuDataPathParams.class, baseUrl, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations/{authorisationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePaymentCancellationPsuDataRequest.class, baseUrl, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations/{authorisationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2157,7 +2170,7 @@ public class PaymentInitiationServicePIS {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2325,20 +2338,21 @@ public class PaymentInitiationServicePIS {
      *     Maybe in a later version the access path will change.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdatePaymentPsuDataResponse updatePaymentPsuData(org.openapis.openapi.models.operations.UpdatePaymentPsuDataRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdatePaymentPsuDataResponse updatePaymentPsuData(org.openapis.openapi.models.operations.UpdatePaymentPsuDataRequest request, org.openapis.openapi.models.operations.UpdatePaymentPsuDataSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePaymentPsuDataPathParams.class, baseUrl, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations/{authorisationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePaymentPsuDataRequest.class, baseUrl, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations/{authorisationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2347,7 +2361,7 @@ public class PaymentInitiationServicePIS {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

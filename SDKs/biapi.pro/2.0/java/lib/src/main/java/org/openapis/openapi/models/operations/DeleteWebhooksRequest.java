@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteWebhooksRequest {
-    
-    public DeleteWebhooksQueryParams queryParams;
-    public DeleteWebhooksRequest withQueryParams(DeleteWebhooksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public DeleteWebhooksRequest withExpand(String expand) {
+        this.expand = expand;
         return this;
     }
     

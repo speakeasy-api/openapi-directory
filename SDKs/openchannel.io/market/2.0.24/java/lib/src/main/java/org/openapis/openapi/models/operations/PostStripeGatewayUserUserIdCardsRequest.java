@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostStripeGatewayUserUserIdCardsRequest {
-    
-    public PostStripeGatewayUserUserIdCardsPathParams pathParams;
-    public PostStripeGatewayUserUserIdCardsRequest withPathParams(PostStripeGatewayUserUserIdCardsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Set to true if this should be set to be the default credit card
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isDefault")
+    public Boolean isDefault;
+    public PostStripeGatewayUserUserIdCardsRequest withIsDefault(Boolean isDefault) {
+        this.isDefault = isDefault;
         return this;
     }
     
+    /**
+     * The Stripe token returned by the Stripe.js Stripe.card.createToken call
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public PostStripeGatewayUserUserIdCardsRequest withToken(String token) {
+        this.token = token;
+        return this;
+    }
     
-    public PostStripeGatewayUserUserIdCardsQueryParams queryParams;
-    public PostStripeGatewayUserUserIdCardsRequest withQueryParams(PostStripeGatewayUserUserIdCardsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The id of the user adding their credit card
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public PostStripeGatewayUserUserIdCardsRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

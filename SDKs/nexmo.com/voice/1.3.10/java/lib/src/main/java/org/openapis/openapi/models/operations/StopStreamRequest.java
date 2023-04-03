@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopStreamRequest {
-    
-    public StopStreamPathParams pathParams;
-    public StopStreamRequest withPathParams(StopStreamPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public StopStreamSecurity security;
-    public StopStreamRequest withSecurity(StopStreamSecurity security) {
-        this.security = security;
+    /**
+     * UUID of the Call Leg
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=uuid")
+    public String uuid;
+    public StopStreamRequest withUuid(String uuid) {
+        this.uuid = uuid;
         return this;
     }
     
